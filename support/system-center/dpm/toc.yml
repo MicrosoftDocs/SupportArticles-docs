@@ -1,5 +1,7 @@
 - name: Welcome
-  href: welcome-dpm.md
+  href: welcome-dpm.yml
+- name: DPM error codes
+  href: vnext-dpm-error-codes.md
 - name: Agents
   items:
     - name: Agent communication issues
@@ -62,14 +64,12 @@
   items:
     - name: Reporting Services Server cannot connect to the DPM database
       href: schedule-email-report-error.md
-- name: Setup, installation and secondary DPM server protection
+- name: Setup, installation，and secondary DPM server protection
   items:
     - name: Backup of deduplicated volumes fails on a secondary DPM server
       href: deduplicated-volumes-backup-fails.md
     - name: Can't upgrade to DPM 2012
       href: cannot-run-sql-instance-to-upgrade-dpm.md
-    - name: DPM error codes
-      href: vnext-dpm-error-codes.md
     - name: DPM 2010 consistency check fails
       href: consistency-check-error-0x80070005.md
     - name: DPM 2012 SP1 error codes
@@ -80,6 +80,8 @@
       href: error-4323-install-dpm-2012-r2.md
     - name: Error 832 installing DPM 2016
       href: installation-error-832.md
+    - name: Upgrade to DPM 2016 with VMware protection
+      href: upgrade-dpm-vmware-vm-protection.md
 - name: SharePoint farm protection
   items:
     - name: Can't protect a SharePoint farm
@@ -98,7 +100,7 @@
       href: new-databases-not-automatically-added.md
     - name: Protection jobs fail with errors
       href: protection-jobs-fail-errors.md
-    - name: SQL Server AlwaysOn protection fails with error 0x80990F75
+    - name: SQL Server Always On protection fails with error 0x80990F75
       href: sql-alwayson-protection-error-0x80990F75.md
     - name: Troubleshoot scheduled backup job failures
       href: troubleshoot-scheduled-backup-job-failures.md
@@ -114,3 +116,5 @@
   items:
     - name: Option isn't available to reprotect VMware VMs
       href: option-unavailable-to-reprotect-vm.md
+    - name: Remove VMware protection from DPMDB
+      href: remove-dpmdb-vmware-protection.md

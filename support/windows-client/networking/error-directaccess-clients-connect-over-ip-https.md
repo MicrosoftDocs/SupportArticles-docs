@@ -4,21 +4,21 @@ description: Describes an issue that prevents DirectAccess clients from connecti
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: ajayps, kaushika
-ms.prod-support-area-path: Remote access
+ms.custom: sap:remote-access, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # DirectAccess clients can connect over Teredo but not through IP-HTTPS
 
 This article describes an issue that prevents DirectAccess clients from connecting by using IP-HTTPS even though they can connect over Teredo.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2, Windows 10 – all editions  
-_Original KB number:_ &nbsp;2980660
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 – all editions  
+_Original KB number:_ &nbsp; 2980660
 
 ## Symptoms
 
@@ -125,4 +125,4 @@ When the client is behind a NAT device, it will try to use Teredo. Many business
 
 Having this in mind, IP-HTTPS was built to provide a backup connection that is reliable and always reachable. A DirectAccess client will make use of this when other methods (such as Teredo or 6to4) fail.
 
-More information about transition technologies can be found at [IPv6 transition technologies](https://technet.microsoft.com/library/bb726951.aspx).
+More information about transition technologies can be found at [IPv6 transition technologies](/previous-versions//bb726951(v=technet.10)).

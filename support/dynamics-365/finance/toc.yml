@@ -1,0 +1,11 @@
+- name: Dynamics 365 Finance
+  href: welcome-finance.yml
+  items:
+    - name: General ledger
+      items:
+        - name: Troubleshoot issues with the General ledger adjustments page
+          href: general-ledger/ledger-adjustments-troubleshoot.md
+    - name: Tax
+      items:
+        - name: Error 400 or 401 when setting Dataverse virtual table visibility
+          href: tax/cannot-set-dataverse-virtual-table-visibility.md

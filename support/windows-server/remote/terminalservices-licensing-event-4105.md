@@ -1,23 +1,23 @@
 ---
-title: Event ID 4105 when RD Licensing runs 
+title: Event ID 4105 when RD Licensing runs
 description: Event ID 4105 occurs on a computer running Remote Desktop Licensing (RD Licensing). This issue occurs in various scenarios for which resolutions are provided.
 ms.date: 10/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, briansi
-ms.prod-support-area-path: Remote Desktop Services (Terminal Services) licensing
+ms.custom: sap:remote-desktop-services-terminal-services-licensing, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Event ID 4105: The Terminal Services license server cannot update the license attributes for user \<UserName> in Active Directory Domain \<DomainName>
 
 This article provides a solution to an event ID 4105 that occurs on a computer that's running Remote Desktop Licensing (RD Licensing).
 
-_Original product version:_ &nbsp; Windows Server 2008 R2  
+_Applies to:_ &nbsp; Windows Server 2008 R2  
 _Original KB number:_ &nbsp; 2030310
 
 ## Symptoms

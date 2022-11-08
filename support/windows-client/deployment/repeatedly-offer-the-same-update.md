@@ -4,20 +4,20 @@ description: Describes how to troubleshoot the problem where you are repeatedly 
 ms.date: 10/13/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Servicing
+ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # Windows Update or Microsoft Update repeatedly offers the same update
 
 This article describes how to troubleshoot a problem where you are repeatedly offered the same update in Windows Update or Microsoft Update.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 910339
 
 ## Cause

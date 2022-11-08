@@ -2,29 +2,29 @@
 title: LDS service startup fails
 description: Introduce the solution for LDS Service startup failure after you manually change msDS-Behavior-Version attribute.
 ms.date: 09/25/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, sagiv, wincicadsec
-ms.prod-support-area-path: Active Directory Lightweight Directory Services (AD LDS) and Active Directory Application Mode (ADAM)
+ms.custom: sap:active-directory-lightweight-directory-services-ad-lds-and-active-directory-application-mode-adam, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # LDS service startup fails after you manually change msDS-Behavior-Version in Windows Server 2019 and 2016
 
 This article provides a solution to an error that LDS service startup fails after you manually change msDS-Behavior-Version.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 4550446
 
 ## Symptom
 
 In ADSI Edit, you change the **msDS-Behavior-Version** attribute of the Partitions container to **7** in order to raise the Active Directory (AD) Lightweight Directory Services (LDS) instance functional level to WIN2016.
 
-:::image type="content" source="./media/lds-service-startup-fails/attribute-editor.png" alt-text="Change the msDS-Behavior-Version attribute.":::
+:::image type="content" source="media/lds-service-startup-fails/attribute-editor.png" alt-text="Change the msDS-Behavior-Version attribute to 7.":::
 
 After you restart the server or stop the LDS service, the LDS service cannot be started. When you try to manually start the service, the following event errors are logged:
 
@@ -49,9 +49,10 @@ Internal ID:
 
 Additionally, you receive the following error message:
 
-> Windows could not start the \<ServiceName> LDS service on Local Computer.
+> Windows could not start the \<ServiceName> LDS service on Local Computer.  
+> Error 0xc0000025: 0xc0000025
 
-:::image type="content" source="./media/lds-service-startup-fails/error-message.png" alt-text="Receive an error message.":::
+:::image type="content" source="media/lds-service-startup-fails/error-message.png" alt-text="Error 0xc0000025 Windows could not start the L D S service on Local Computer.":::
 
 ## Cause
 
@@ -74,7 +75,7 @@ If there are multiple replica servers in that instance (for example, LDSServer1 
     server connections: **q**  
     fsmo maintenance: **seize schema master**
 
-    :::image type="content" source="./media/lds-service-startup-fails/role-seizure-confirmation-dialog.png" alt-text="A Role Seizure Confirmation Dialog displays.":::
+    :::image type="content" source="media/lds-service-startup-fails/role-seizure-confirmation-dialog.png" alt-text="A role seizure confirmation dialog displays.":::
 
 2. Connect to the configuration partition of the server that still runs the LDS instance (for example, LDSServer2), and then roll back the functionality level version by reverting the **msDS-Behavior-Version** attribute value.
 
@@ -122,12 +123,12 @@ If there are multiple replica servers in that instance (for example, LDSServer1 
     select operation target: **q**  
     metadata cleanup: **remove selected server**
 
-    :::image type="content" source="./media/lds-service-startup-fails/server-remove-confirmation-dialog.png" alt-text="Select yes in the dialog.":::
+    :::image type="content" source="media/lds-service-startup-fails/server-remove-confirmation-dialog.png" alt-text="Select Yes to remove the server object in the Server Remove Confirmation Dialog box.":::
 
 4. Log on to LDSServer1, and uninstall the instance:
 
-    :::image type="content" source="./media/lds-service-startup-fails/unstall-program.png" alt-text="Uninstall the instance.":::
+    :::image type="content" source="media/lds-service-startup-fails/uninstall-program.png" alt-text="Select the instance that you want to uninstall in Programs and features window.":::
 
-    :::image type="content" source="./media/lds-service-startup-fails/select-skip-all.png" alt-text="Active Directory Lightweight Directory Services Removal Wizard.":::
+    :::image type="content" source="media/lds-service-startup-fails/select-skip-all.png" alt-text="Select Skip All in the Active Directory Lightweight Directory Services Removal Wizard.":::
 
 5. Run the Active Directory Lightweight Directory Services Setup (C:\Windows\ADAM\adaminstall.exe) on LDSServer1 to install a replica of the existing instance from LDSServer2.

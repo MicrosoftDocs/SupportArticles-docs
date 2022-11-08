@@ -2,22 +2,22 @@
 title: RemoteFX-enabled VMs don't start
 description: Fixes an issue in which new and existing RemoteFX-enabled virtual machines cannot run on a domain server that is running the Remote Desktop Virtualization Host service in Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, or Windows Server 2008 R2 SP1.
 ms.date: 09/23/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, rkiran, jarrettr, sabinn
-ms.prod-support-area-path: Performance (audio and video) and RemoteFX
+ms.custom: sap:performance-audio-and-video-and-remotefx, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # New and existing RemoteFX-enabled VMs do not start on a DC that is running the Remote Desktop Virtualization Host service on Windows Server
 
 This article provides a solution to an issue where which new and existing RemoteFX-enabled virtual machines cannot run on a domain server.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2506417
 
 ## Symptoms

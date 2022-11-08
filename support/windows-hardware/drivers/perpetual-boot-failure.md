@@ -2,8 +2,9 @@
 title: Perpetual Boot failure with a prompt
 description: This article provides resolutions for the problem where a prompt at boot time stating that Windows did not boot properly.
 ms.date: 09/01/2020
-ms.prod-support-area-path: Windows Embedded POSReady 7
+ms.custom: sap:Windows Embedded POSReady 7
 ms.reviewer: jtanner
+ms.technology: windows-hardware-general
 ---
 # Perpetual Boot failure with 'Boot Windows Normally' prompt
 

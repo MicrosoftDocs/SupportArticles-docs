@@ -2,7 +2,6 @@
 title: Error 80070520 when deploying Operations Manager agents
 description: Fixes an issue in which you get error 0x80070520 (ERROR_NO_SUCH_LOGON_SESSION) when you deploy Operations Manager agents by using the Install-SCOMAgent cmdlet.
 ms.date: 09/02/2020
-ms.prod-support-area-path:
 ms.reviewer: timhe, adoyle, cwallen
 ---
 # Deploying Operations Manager agents using the Install-SCOMAgent cmdlet fails with error 80070520
@@ -14,7 +13,7 @@ _Original KB number:_ &nbsp; 2627700
 
 ## Symptoms
 
-Deploying agents from the Operations Manager shell using the `Install-SCOMAgent` cmdlet results in error 0x80070520 (ERROR_NO_SUCH_LOGON_SESSION), with the description **A specified logon session does not exist. It may already have been terminated**. Event ID 10612 in the Operations Manager event log is also logged:
+Deploying agents from the Operations Manager shell using the `Install-SCOMAgent` cmdlet results in error 0x80070520 (ERROR_NO_SUCH_LOGON_SESSION), with the description **A specified logon session does not exist. It may already have been terminated**. Event ID 10612 in the Operations Manager event log is also logged:
 
 > Event Type: Error  
 > Event Source: Health Service Modules  
@@ -24,13 +23,13 @@ Deploying agents from the Operations Manager shell using the `Install-SCOMAgent`
 > The Operations Manager Server failed to perform specified operation on computer MANAGEMENTSERVER.FQDN.
 >
 > Operation: Agent Install  
-> Install account: DOMAIN\ACCOUNT  
+> Install account: DOMAIN\ACCOUNT  
 > Error Code: 80070520  
 > Error Description: A specified logon session does not exist. It may already have been terminated.
 
 ## Cause
 
-The error is returned when an attempt is made to store the credentials used to deploy the agent in a context that is not permitted. This can be a result of a policy setting, or the inability to store the credentials under the LocalSystem account.
+The error is returned when an attempt is made to store the credentials used to deploy the agent in a context that is not permitted. This can be a result of a policy setting, or the inability to store the credentials under the LocalSystem account.
 
 ## Resolution
 

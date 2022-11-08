@@ -1,0 +1,74 @@
+### YamlMime:Landing
+
+title: Internet Information Services troubleshooting # < 60 chars
+summary: Welcome to Internet Information Services troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Internet Information Services. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Internet Information Services troubleshooting
+  description: Landing page for Internet Information Services troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
+  ms.prod: iis  #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author:   #Required; your GitHub user alias, with correct capitalization.
+  ms.author:  #Required; microsoft alias of author; optional team alias.
+  ms.date: 02/11/2022
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: HTTP Status Code
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: HTTP status code list
+            url: www-administration-management/http-status-code.md
+          - text: HTTP 400 - Bad Request
+            url: www-administration-management/http-bad-request-response-kerberos.md
+          - text: HTTP Error 403.14 - Forbidden
+            url: health-diagnostic-performance/http-403-14-forbidden-webpage.md
+          - text: HTTP 404 - File Not Found
+            url: health-diagnostic-performance/troubleshoot-404-file-not-found-error.md
+          - text: HTTP Error 405.0 - Method Not Allowed
+            url: health-diagnostic-performance/http-error-405-website.md
+          - text: HTTP Error 500.0 - Internal Server Error
+            url: www-administration-management/http-error-500-when-you-visit-web-site.md
+          - text: HTTP Error 500.19 - Internal Server Error
+            url: health-diagnostic-performance/http-error-500-19-webpage.md
+
+  - title: Development
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Recover a private key of a deleted certificate
+            url: development/assign-certificate-private-key.md
+          - text: Add a custom HTTP response header to a web site
+            url: development/add-http-response-header-web-site.md
+          - text: Make a GET request in C#
+            url: development/make-get-request.md
+
+  - title: Authentication and Authorization
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Default permissions and user rights
+            url: www-authentication-authorization/default-permissions-user-rights.md
+          - text: Can't import SSL private key certificate file
+            url: www-authentication-authorization/cannot-import-ssl-pfx-local-certificate.md
+          - text: Troubleshoot Kerberos failures
+            url: www-authentication-authorization/troubleshoot-kerberos-failures-ie.md
+          - text: Understand application pool identities
+            url: www-authentication-authorization/understanding-identities.md
+          - text: Configure intermediate certificates
+            url: www-authentication-authorization/configure-intermediate-certificates.md
+
+  - title: Administration and Management
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Configure the default document
+            url: www-administration-management/configure-default-document-iis.md
+          - text: Fail to request access to remote resources
+            url: www-administration-management/remote-resources-fails-requested-iis.md
+          - text: Enable SSL for customers
+            url: www-administration-management/enable-ssl-all-customers.md
+            

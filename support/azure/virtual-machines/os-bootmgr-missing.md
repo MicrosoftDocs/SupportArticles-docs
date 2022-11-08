@@ -2,8 +2,10 @@
 title: Troubleshoot Windows VM OS with missing boot manager
 description: Explains when the Windows VM boot manager is missing, and how to solve the problem.
 ms.date: 12/07/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
+ms.collection: windows
 ---
 
 # Troubleshoot Windows VM OS with missing boot manager
@@ -14,12 +16,11 @@ This article explains when the Windows VM boot manager is missing, and how to so
 
 When you pull the screenshot of the VM, the OS boot process is stopped with the error:
 
-```ps
-BOOTMGR is missing
-Press Ctrl+Alt+Del to restart
-```
+`BOOTMGR is missing`
 
-![Boot Manager is missing](./media/os-bootmgr-missing/1-bootmgr-missing.png)
+`Press Ctrl+Alt+Del to restart`
+
+:::image type="content" source="media/os-bootmgr-missing/bootmgr-missing.png" alt-text="Screenshot of the Boot Manager is missing message.":::
 
 ## Cause
 
@@ -30,6 +31,9 @@ There are several reasons this error could occur:
 - There has been a Ransomware attack.
 
 ## Solution
+
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
 ### Process overview
 
@@ -44,7 +48,10 @@ There are several reasons this error could occur:
 
 ### Create and access a repair VM
 
-1. Use steps 1-3 of the [VM Repair Commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands) to prepare a Repair VM.
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+
+1. Use steps 1-3 of the [VM Repair Commands](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands) to prepare a Repair VM.
 1. Using Remote Desktop Connection, connect to the Repair VM.
 
 ### Verify that the OS partition is active
@@ -65,7 +72,7 @@ Verify the OS partition which holds the BCD store for the disk is marked as acti
       sel disk 1
       ```
 
-      ![Disk 1](./media/os-bootmgr-missing/11-Gen2-1.png)
+      :::image type="content" source="media/os-bootmgr-missing/list-disk.png" alt-text="The diskpart window shows outputs of list disk and sel disk 1 commands. Disk 0 and Disk 1 are displayed in the table. Disk 1 is the selected disk.":::
 
    3. List all the partitions on that disk and then proceed to select the partition you want to check. Usually System Managed partitions are smaller and around 350 Mb in size. In the image below, this partition is Partition 1.
 
@@ -74,24 +81,22 @@ Verify the OS partition which holds the BCD store for the disk is marked as acti
       sel partition 1
       ```
 
-      ![Partition 1](./media/os-bootmgr-missing/12-Gen2-2.png)
+      :::image type="content" source="media/os-bootmgr-missing/list-partition.png" alt-text="The diskpart window shows outputs of list partition and sel partition 1 commands. Partition 1 is the selected disk.":::
 
    4. Check the status of the partition. In our example, Partition 1 is not active.
 
       `detail partition`
 
-      ![Detail Partition](./media/os-bootmgr-missing/13-Gen2-3.png)
+      :::image type="content" source="media/os-bootmgr-missing/detail-partition-not-active.png" alt-text="The diskpart window with output of the detail partition command where Partition 1 is not active.":::
 
-      1. If the partition isn't active:
+      If the partition isn't active, now change the Active flag and then recheck the change was done properly.
 
-         1. Now change the Active flag and then recheck the change was done properly.
+      ```ps
+      active
+      detail partition
+      ```
 
-            ```ps
-            active
-            detail partition
-            ```
-
-            ![Active Flag](./media/os-bootmgr-missing/14-Gen2-4.png)
+      :::image type="content" source="media/os-bootmgr-missing/detail-partition-active.png" alt-text="The diskpart window with output of the detail partition command where Partition 1 is active.":::
 
    5. Now exit the DISKPART tool.
 
@@ -113,7 +118,7 @@ Verify the OS partition which holds the BCD store for the disk is marked as acti
 
       2. Write down the identifier of the Windows Boot loader. This identifier is the one with the path `\windows\system32\winload.exe`.
 
-         ![Mitigation 2 - Windows Identifier 1](media/os-bootmgr-missing/6-boot-configuration-data-windows-identifier.png)
+         :::image type="content" source="media/os-bootmgr-missing/windows-identifier-generation-1.png" alt-text="Screenshot shows the output of Generation 1 VM, which lists the identifier number under Windows Boot Loader.":::
 
    2. For Generation 2 VM:
 
@@ -123,7 +128,7 @@ Verify the OS partition which holds the BCD store for the disk is marked as acti
 
       2. Write down the identifier of the Windows Boot loader. This identifier is the one with the path `\windows\system32\winload.efi`.
 
-         ![Mitigation 2 - Windows Identifier 2](./media/os-bootmgr-missing/15-default-identifier.png)
+         :::image type="content" source="media/os-bootmgr-missing/windows-identifier-generation-2.png" alt-text="Screenshot shows the output of Generation 2 VM, which lists the identifier number under Windows Boot Loader.":::
 
 3. Run the following commands:
 
@@ -166,17 +171,17 @@ Verify the OS partition which holds the BCD store for the disk is marked as acti
 
 ### Verify if a ransomware attack has occurred
 
-If the above solutions did not resolve the issue you may want to verify if a ransomware attack has occurred on your VM.
+If the above solutions did not resolve the issue, you may want to verify if a ransomware attack has occurred on your VM.
 
 1. Once the disk is attached, set the Windows Explorer view to show "Hidden items".
 
 2. View the disk and see if there are any .txt files on the root folder with instructions on how to regain access to the files of the VM:
 
-   ![Mitigation 2 - Ransomware](./media/os-bootmgr-missing/17-ransomware.png)
+   :::image type="content" source="media/os-bootmgr-missing/txt-file.png" alt-text="Screenshot shows a TXT file on the root folder.":::
 
 3. If you find a `.txt` file with content that is similar to the below example, it means that the machine was the target of a ransomware attack:
 
-   ```ps
+   ```output
    Your files are now encrypted!
     
    Your personal ID :
@@ -229,10 +234,6 @@ At this point the VM needs to be restored from backup or rebuilt.
 
 ### Rebuild the VM
 
-Use [step 5 of the VM Repair Commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to rebuild the VM.
+Use [step 5 of the VM Repair Commands](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to rebuild the VM.
 
-## Next steps
-
-If you still cannot determine the cause of the issue and need more help, you can open a support ticket with Microsoft Customer Support.
-
-If you need more help at any point in this article, you can contact the Azure experts on the [MSDN Azure and Stack Overflow forums](https://azure.microsoft.com/support/forums/). Alternatively, you can file an Azure support incident. Go to the [Azure support site](https://azure.microsoft.com/support/options/), and select **Get support**. For information about using Azure support, read the [Microsoft Azure support FAQ](https://azure.microsoft.com/support/faq/).
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

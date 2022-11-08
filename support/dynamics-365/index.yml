@@ -1,0 +1,27 @@
+### YamlMime:Hub
+title: Microsoft Dynamics 365 troubleshooting
+summary: Technical content to troubleshoot issues in Microsoft Dynamics 365
+
+metadata:
+  ms.topic: hub-page
+  services: service
+  ms.prod: dynamics-365
+
+additionalContent:
+  sections:
+    - items:
+        - title: Dynamics 365 Finance
+          summary: Troubleshooting articles for Dynamics 365 Finance
+          url: finance/welcome-finance.yml
+        - title: Dynamics 365 Fraud Protection
+          summary: Troubleshooting articles for Dynamics 365 Fraud Protection
+          url: fraud-protection/welcome-fraud-protection.yml
+        - title: Dynamics 365 Marketing
+          summary: Troubleshooting articles for Dynamics 365 Marketing
+          url: marketing/welcome-marketing.yml
+        - title: Dynamics 365 Sales
+          summary: Troubleshooting articles for Dynamics 365 Sales
+          url: sales/welcome-sales.yml
+        - title: Dynamics 365 Supply Chain Management
+          summary: Troubleshooting articles for Dynamics 365 Supply Chain Management
+          url: supply-chain/welcome-supply-chain.yml

@@ -1,23 +1,23 @@
 ---
 title: Mouse input in some games is incorrectly scaled on high-DPI devices
 description: Describes how to work around an issue in which mouse input in some games is incorrectly scaled on high-DPI devices.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DPI and Display Issues
+ms.custom: sap:dpi-and-display-issues, csstroubleshoot
 ms.technology: windows-client-shell-experience
 ---
 # Mouse input in some games is incorrectly scaled on high-DPI devices
 
 This article describes how to work around an issue in which mouse input in some games is incorrectly scaled on high-DPI devices.
 
-_Original product version:_ &nbsp; Windows 8.1  
+_Applies to:_ &nbsp; Windows 8.1  
 _Original KB number:_ &nbsp; 2907016
 
 ## Introduction

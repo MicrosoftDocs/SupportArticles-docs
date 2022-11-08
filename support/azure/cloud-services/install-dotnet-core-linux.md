@@ -1,12 +1,12 @@
 ---
 title: Install .NET Core on Linux by using an Azure Batch start task
 description: Describes how to install .NET Core in Linux by using an Azure Batch start task.
-ms.date: 08/10/2020
-ms.prod-support-area-path: 
+ms.date: 09/26/2022
 ms.reviewer: 
 author: genlin
 ms.author: genli
 ms.service: cloud-services
+ms.subservice: reference
 ---
 # Install .NET Core on Linux by using an Azure Batch start task
 
@@ -34,7 +34,7 @@ To install .NET Core in a Linux environment, follow these steps:
 
     This represents the local path on the Linux virtual machine where the script will be downloaded from the storage account.
 
-    :::image type="content" source="media/install-dotnet-core-linux/4466819_en_1.png" alt-text="Screenshot of create-Azure-Batch-Start-Task.":::
+    :::image type="content" source="media/install-dotnet-core-linux/start-task-pool.png" alt-text="Screenshot shows the Azure Batch Start task details." border="false":::
 
 ## Troubleshoot steps
 
@@ -73,13 +73,13 @@ To prevent the file format mismatch, do one of the following:
 - Create the script in a different Ubuntu environment, and upload the script to the storage explorer by using Storage Explorer for Linux.
 - If you do not have Storage Explorer in your Linux environment, get the script from the VM that was created in the previous step to your Windows environment by using the following Putty command. The Putty tool includes the executable **pscp.exe**.
 
-    :::image type="content" source="media/install-dotnet-core-linux/4466820_en_1.png" alt-text="Screenshot of Putty_pscp.":::
+    :::image type="content" source="media/install-dotnet-core-linux/putty-pscp.png" alt-text="Screenshot of the Putty command.":::
 
- After you send the file from Linux to Windows, upload the file to the storage account as is.
+ After you send the file from Linux to Windows, upload the file to the storage account as is.
  To automate the process of converting files from Windows (DOS) to UNIX format, run the following command:
 
 ```bash
-$ dos2unix dotnetcoreinstall.sh
+dos2unix dotnetcoreinstall.sh
 ```
 
 To execute this command, you must first install the **dos2unix** package. To do this, run the following command:
@@ -87,6 +87,8 @@ To execute this command, you must first install the **dos2unix** package. To do 
 ```bash
 sudo apt-get install dos2unix
 ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 

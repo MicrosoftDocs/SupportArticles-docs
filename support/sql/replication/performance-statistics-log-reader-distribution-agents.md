@@ -2,7 +2,7 @@
 title: Statistics for Log Reader and Distribution agents
 description: This article introduces the performance statistics tools for Replication Log Reader and Distribution Agent in SQL Server.
 ms.date: 12/01/2020
-ms.prod-support-area-path: Replication, change tracking, change data capture
+ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: ramakoni, syele
 ms.prod: sql
 ---
@@ -40,8 +40,7 @@ There are three state events that can be recorded:
 |1|Normal events that describe both the reader and writer thread performance.|
 |2|Raised events that occur when an agent's reader thread waits longer than the agent's `-messageinterval`  time. (By default, the time is 60 seconds.) If you notice State 2 events that are recorded for an agent, this indicates that the agent is taking a long time to write changes to the destination.|
 |3|Raised events that are generated only by the Log Reader Agent when the writer thread waits longer than the `-messageinterval` time. If you notice State 3 events that are recorded for the Log Reader Agent, this indicates that the agent is taking a long time to scan the replicated changes from the transaction log.|
-|||
-
+  
 ## Distribution Agent reader thread
 
 The following performance statistics demonstrate a situation in which there is latency in the replication topology and in which the bottleneck is the Distribution Agent reader thread. This thread queries the distribution database (< **Distribution server** >..MSdistribution_history.Comments table) for commands to apply at the subscriber.
@@ -137,18 +136,17 @@ The following is the description of each performance statistic:
 | sincelaststats\reader wait||The value represents the cumulative wait-for-writer time since the last stats event. The value shows the time that is spent waiting for the writer thread to finish using the data buffer before reader can fill the data buffer again. |
 | sincelaststats\writer||The value represents the cumulative time that writer spent since the last stats event. The time excludes the idle time and the wait-for-reader time.|
 | sincelaststats\writer wait||The value represents the wait-for-reader time since the last stats event. The value shows the time that is spent waiting for the reader thread to finish populating the data buffer before writer can apply the data buffer. |
-||||
-
+  
 ## Script to load MSlogreader_history and MSdistribution_history run statistics from XML data into a table that can be queried easily
 
 There are four script samples help you extract the performance statistics into a permanent table that can be easily queried. There is also a stored procedure that approximately correlates the Log Reader Agent performance statistics to the Distribution Agent performance statistics (that is, to the `perf_stats_tab` table).
 
 To obtain the script samples, visit [this sample](https://gallery.technet.microsoft.com/extract-the-performance-777f02b8) and click KB2892631.zip, and then uncompress file KB2892631.zip, you will see the following four script files:
 
-- Original version of the *Perf_stats_script.sql* file: *perf_stats_script.sql*
-- Revised *Usp_move_stats_to_table.sql* file: *usp_move_stats_to_table.sql*
-- Revised *Sp_endtoend_stats.sql* file: *sp_endtoend_stats.sql*
-- Another script to read the data in real time or from a distribution database backup: *Additional_Script.sql*
+- Original version of the _Perf_stats_script.sql_ file: _perf_stats_script.sql_
+- Revised _Usp_move_stats_to_table.sql_ file: _usp_move_stats_to_table.sql_
+- Revised _Sp_endtoend_stats.sql_ file: _sp_endtoend_stats.sql_
+- Another script to read the data in real time or from a distribution database backup: _Additional_Script.sql_
 
 > [!NOTE]
 >

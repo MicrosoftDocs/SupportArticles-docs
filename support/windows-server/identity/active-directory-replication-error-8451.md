@@ -1,31 +1,31 @@
 ---
-title: Active Directory Replication Error 8451 
+title: Active Directory Replication Error 8451
 description: provides a resolution for Active Directory Replication Error 8451 "The replication operation encountered a database error".
 ms.date: 10/19/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, toddmax
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Active Directory Replication Error 8451: "The replication operation encountered a database error"
 
 This article provides a resolution for Active Directory Replication Error 8451: "The replication operation encountered a database error".  
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2645996
 
 >[!NOTE]
->**Home users**: This article is intended only for technical support agents and IT professionals. If you're looking for help to resolve a problem, please [ask the Microsoft Community](https://answers.microsoft.com/en-us).
+>**Home users**: This article is intended only for technical support agents and IT professionals. If you're looking for help to resolve a problem, please [ask the Microsoft Community](https://answers.microsoft.com/en-us).
 
 ## Symptoms
 
-This article describes the symptoms and causes of situations in which Active Directory Domain Services (AD DS) operations fail and generate error 8451: "The replication operation encountered a database error." This article also provides a resolution for this problem.  
+This article describes the symptoms and causes of situations in which Active Directory Domain Services (AD DS) operations fail and generate error 8451: "The replication operation encountered a database error." This article also provides a resolution for this problem.  
 You might experience one of more of the following symptoms:  
 
 - You see one or more on-screen error messages, logged events, or diagnostic output that identifies a database error. Possible formats for that error include the following.
@@ -41,9 +41,8 @@ You might experience one of more of the following symptoms:
     |-1526|0xfffffa0a|JET_errLVCorrupted|Corruption encountered in long-value tree.|
     |-1601|0xfffff9bf|JET_errRecordNotFound|The key was not found.|
     |-1603|0xfffff9b|JET_errNoCurrentRecord|Currency not on a record.|
-    |||||
 
-- Dcpromo.exe fails and generates error 8451.  
+- Dcpromo.exe fails and generates error 8451.  
     The user interface displays the following message:  
     >The operation failed because:
     >
@@ -69,9 +68,9 @@ You might experience one of more of the following symptoms:
   - `Repadmin /showutdvec`
   - `Repadmin /syncall`
 
-    For detailed information about how to use Repadmin to troubleshoot replication problems, see [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](https://go.microsoft.com/fwlink/?LinkId=122830).
+    For detailed information about how to use Repadmin to troubleshoot replication problems, see [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](https://go.microsoft.com/fwlink/?LinkId=122830).
 
-    The following sample shows output from the `repadmin /showreps` command that indicates that inbound replication from CONTOSO-DC2 to CONTOSO-DC1 failed and generated the "replication access was denied" message.  
+    The following sample shows output from the `repadmin /showreps` command that indicates that inbound replication from CONTOSO-DC2 to CONTOSO-DC1 failed and generated the "replication access was denied" message.  
     >Default-First-Site-Name\CONTOSO-DC1  
     DSA Options: IS_GC  
     Site Options: (none)  
@@ -79,14 +78,14 @@ You might experience one of more of the following symptoms:
     DSA invocationID: b6dc8589-7e00-4a5d-b688-045aef63ec01  
     ==== INBOUND NEIGHBORS ======================================  
     DC=contoso,DC=com  
-    Default-First-Site-Name\CONTOSO-DC2 via RPC  
+    Default-First-Site-Name\CONTOSO-DC2 via RPC  
     DSA object GUID: 74fbe06c-932c-46b5-831b-af9e31f496b2  
     Last attempt @ \<date> \<time> failed, result 8451 (0x2103):  
     The replication operation encountered a database error.  
     consecutive failure(s).  
     Last success @ \<date> \<time>.  
 
-- Event Viewer lists one or more events that cite the 8451 error. The following table lists the event sources and Event IDs of common events that cite the 8451 error (in event source + event ID order).
+- Event Viewer lists one or more events that cite the 8451 error. The following table lists the event sources and Event IDs of common events that cite the 8451 error (in event source + event ID order).
 
     |Event source|Event ID|Event message|
     |---|---|---|
@@ -101,7 +100,6 @@ You might experience one of more of the following symptoms:
     |NTDS KCC|1925 with extended error 8451|The attempt to establish a replication link for the following writable directory partition failed.|
     |NTDS Replication|1084 with extended error 8451|Internal event: Active Directory could not update the following object with changes received from the following source domain controller. It is because an error occurred during the application of the changes to Active Directory on the domain controller.|
     |NTDS Replication|1699 with extended error 8451|The local domain controller failed to retrieve the changes requested for the following directory partition. As a result, it was unable to send the change requests to the domain controller at the following network address.|
-    ||||  
 
 - When you increase the NTDS diagnosing logging level on the domain controller, Event Viewer lists additional events that are related to the 8451 error. The following table lists the event sources and Event IDs of events that frequently accompany other events that contain the 8451 error.
 
@@ -111,9 +109,8 @@ You might experience one of more of the following symptoms:
     |Internal Processing|1173 with error-1075|Internal event: Active Directory has encountered the following exception and associated parameters. Exception: e0010004 Parameter: 0 Additional Data Error value: -1075 Internal ID: 205086d|
     |Internal Processing|1173 with error-1526|Internal event: Active Directory has encountered the following exception and associated parameters. Exception: e0010004 Parameter: 0 Additional Data Error value: -1526 Internal ID: 205036b|
     |Internal Processing|1173 with error-1603|Internal event: Active Directory has encountered the following exception and associated parameters. Exception: e0010004 Parameter: 0 Additional Data Error value: -1603 Internal ID: 2050344|
-    |NTDS ISAM|474 with error-1018|The database page read from the file 'E:\NTDS\Data\ntds.dit' at offset 3846455296 (0x00000000e5444000) for 8192 (0x00002000) bytes failed verification due to a page checksum mismatch.  The expected checksum was 323677604 (0x134aeda4) and the actual checksum was 2081515684 (0x7c1168a4).  The read operation will fail with error -1018 (0xfffffc06).  If this condition persists, restore the database from a previous backup.  This problem is likely due to faulty hardware. Contact your hardware vendor for further assistance diagnosing the problem.|
+    |NTDS ISAM|474 with error-1018|The database page read from the file 'E:\NTDS\Data\ntds.dit' at offset 3846455296 (0x00000000e5444000) for 8192 (0x00002000) bytes failed verification due to a page checksum mismatch.  The expected checksum was 323677604 (0x134aeda4) and the actual checksum was 2081515684 (0x7c1168a4).  The read operation will fail with error -1018 (0xfffffc06).  If this condition persists, restore the database from a previous backup.  This problem is likely due to faulty hardware. Contact your hardware vendor for further assistance diagnosing the problem.|
     |NTDS ISAM|488|NTDS (396) NTDSA: Data inconsistency detected in table datatable of database C:\WINDOWS\NTDS\ntds.dit (4621,7905).|
-    ||||
 
 - When you run the Dcdiag.exe utility, it produces output that resembles as:  
 
@@ -127,7 +124,7 @@ You might experience one of more of the following symptoms:
     The replication generated an error (8451):  
     The replication operation encountered a database error  
 
-- In Active Directory Sites and Services, when you right-click the connection object of a source DC and select **Replicate now**, the command fails and generates a message that resembles as:  
+- In Active Directory Sites and Services, when you right-click the connection object of a source DC and select **Replicate now**, the command fails and generates a message that resembles as:  
 
     >The following error occurred during the attempt to synchronize naming context <%directory partition name%> from Domain Controller \<Source DC> to Domain Controller \<Destination DC>:  
     "The replication operation encountered a database error."  
@@ -145,46 +142,46 @@ The replication operation encountered a database error.
 >C:\>err -1414  
 for decimal -1414 / hex 0xfffffa7a :  
 JET_errSecondaryIndexCorrupted &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;esent98.h  
-/* Secondary index is corrupt. The database must be  
-defragmented */  
+/*Secondary index is corrupt. The database must be
+defragmented*/  
 1 matches found for "-1414"  
 >
 >C:\>err -1526  
 for decimal -1526 / hex 0xfffffa0a :  
 JET_errLVCorrupted &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;esent98.h  
-/* Corruption encountered in long-value tree */  
+/_Corruption encountered in long-value tree_/  
 1 matches found for "-1526"  
 >
 >C:\>err  -1603  
 for decimal -1603 / hex 0xfffff9bd :  
 JET_errNoCurrentRecord &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;esent98.h  
-/* Currency not on a record */  
+/_Currency not on a record_/  
 1 matches found for "-1603"  
 >
 >C:\>err -1075  
 for decimal -1075 / hex 0xfffffbcd :  
 JET_errOutOfLongValueIDs &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;esent98.h  
-/* Long-value ID counter has reached maximum value.  
+/*Long-value ID counter has reached maximum value.
 (perform offline defrag to reclaim free/unused  
-LongValueIDs) */  
+LongValueIDs)*/  
 1 matches found for "-1075"  
 >
 >C:\>err -1601  
 for decimal -1601 / hex 0xfffff9bf :  
 JET_errRecordNotFound &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;esent98.h  
-/* The key was not found */  
+/_The key was not found_/  
 1 matches found for "-1601"  
 >
 >C:\>err -1047  
 for decimal -1047 / hex 0xfffffbe9 :  
 JET_errInvalidBufferSize &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;esent98.h  
-/* Data buffer doesn't match column size */  
+/_Data buffer doesn't match column size_/  
 1 matches found for "-1047"  
 >
 >C:\>err -1018  
 for decimal -1018 / hex 0xfffffc06 :  
 JET_errReadVerifyFailure &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;ese.h  
-/* Checksum error on a database page */  
+/_Checksum error on a database page_/  
 JET_errReadVerifyFailure &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;esent98.h  
 /\* Checksum error on a database page */  
 2 matches found for "-1018"  
@@ -192,7 +189,7 @@ JET_errReadVerifyFailure &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&
 >C:\>err -1206  
 for decimal -1206 / hex 0xfffffb4a :  
 JET_errDatabaseCorrupted &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;esent98.h  
-/* Non database file or corrupted db */  
+/_Non database file or corrupted db_/  
 1 matches found for "-1206"
 
 ## Cause
@@ -221,22 +218,22 @@ The status 8451: "The replication operation encountered a database error" has mu
 > [!Important]
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
-### How to resolve a single occurrence of the problem
+### How to resolve a single occurrence of the problem
 
-If the error occurs on only one domain controller and appears to be an isolated problem, the best and quickest resolution is to do offline defragmentation of the database on the affected server. For information about how to do it, see [How to perform offline defragmentation of the Active Directory database](https://support.microsoft.com/help/232122/how-to-perform-offline-defragmentation-of-the-active-directory-databas).  
+If the error occurs on only one domain controller and appears to be an isolated problem, the best and quickest resolution is to do offline defragmentation of the database on the affected server. For information about how to do it, see [How to perform offline defragmentation of the Active Directory database](https://support.microsoft.com/help/232122/how-to-perform-offline-defragmentation-of-the-active-directory-databas).  
 
-If offline defragmentation does not correct the issue, demote and then repromote the affected domain controller. For information about how to do it, see [Demoting Domain Controllers and Domains](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-).
+If offline defragmentation does not correct the issue, demote and then repromote the affected domain controller. For information about how to do it, see [Demoting Domain Controllers and Domains](/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-).
 
 ### How to resolve a recurring problem
 
-If the problem recurs, collect some diagnostic data.  
+If the problem recurs, collect some diagnostic data.  
 
 1. Enable NTDS diagnostic logging for Replication Events and Internal Processing at a level of 5.
 
     To increase NTDS diagnostic logging, change the following REG_DWORD values in the registry of the destination domain controller under the following registry subkey:  
  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics`  
 
-    Set the value of the following entries to **5**:  
+    Set the value of the following entries to **5**:  
    - Replication Events
    - Internal Processing  
 
@@ -253,23 +250,21 @@ If the problem recurs, collect some diagnostic data.
     |-1018|0xfffffc06|JET_errReadVerifyFailure|Checksum error on a database page|Check hardware, firmware, and drivers. Restore from backup.Demote/promote.|
     |-1047|0xfffffbe9|JET_errInvalidBufferSize|Data buffer doesn't match column size|832851 Inbound Replication Fails on Domain Controllers with Event ID: 1699, Error 8451 or jet error -1601  **Note:** This hotfix is no longer available.|
     |-1075|0xfffffbcd|JET_errOutOfLongValueIDs|Long-value ID counter has reached maximum value. (do offline defragmentation to reclaim free or unused```LongValueIDs```)|Do offline defragmentation.|
-    |-1206|0xfffffb4a|JET_errDatabaseCorrupted|Non-database file or corrupted db|Check hardware, firmware, and drivers.Run the **[Esentutl](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh875546%28v=ws.11%29)/k** command. Run the [Ntdsutil](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc753343%28v=ws.11%29) file integrity and semantic database analysis  (SDA) commands, and then do offline defragmentation.Otherwise restore from backup or demote/promote.|
+    |-1206|0xfffffb4a|JET_errDatabaseCorrupted|Non-database file or corrupted db|Check hardware, firmware, and drivers.Run the **[Esentutl](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh875546%28v=ws.11%29)/k** command. Run the [Ntdsutil](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc753343%28v=ws.11%29) file integrity and semantic database analysis  (SDA) commands, and then do offline defragmentation.Otherwise restore from backup or demote/promote.|
     |-1414|0xfffffa7a|JET_errSecondaryIndexCorrupted|Secondary index is corrupt. The database must be defragmented.|Do offline defragmentation.|
-    |-1526|0xfffffa0a|JET_errLVCorrupted|Corruption encountered in long-value tree|Check hardware, firmware, and drivers.Run the `Esentutl /k` command. Run the Ntdsutil** file integrity and SDA commands, and then do offline defragmentation. Otherwise, restore from backup or demote  and promote.|
-    |-1601|0xfffff9bf|JET_errRecordNotFound|The key was not found|Check hardware, firmware, and drivers.Run the `Esentutl /k` command. Run the **Ntdsutil** file integrity and SDA commands, and then do offline defragmentation​​​​​​​.​​​​​​​Otherwise restore from backup or demote and promote.|
-    |-1603|0xfffff9bd|JET_errNoCurrentRecord|Currency not on a record|Check hardware, firmware, and drivers.Run the `Esentutl /`k command. Run the **Ntdsutil** file integrity and SDA commands, and then do offline defragmentation​​​​​​​.​​​​​​​Otherwise restore from backup or demote and promote.|
-    |8451|0x2103|ERROR_DS_DRA_DB_ERROR|The replication operation encountered a database error|Check hardware, firmware, and drivers.Run the `Esentutl /k` command. Run the **Ntdsutil** file integrity and SDA commands, and then do offline defragmentation. Otherwise restore from backup or demote/promote.|
-    ||||||  
+    |-1526|0xfffffa0a|JET_errLVCorrupted|Corruption encountered in long-value tree|Check hardware, firmware, and drivers.Run the `Esentutl /k` command. Run the Ntdsutil** file integrity and SDA commands, and then do offline defragmentation. Otherwise, restore from backup or demote  and promote.|
+    |-1601|0xfffff9bf|JET_errRecordNotFound|The key was not found|Check hardware, firmware, and drivers.Run the `Esentutl /k` command. Run the **Ntdsutil** file integrity and SDA commands, and then do offline defragmentation​​​​​​​.​​​​​​​Otherwise restore from backup or demote and promote.|
+    |-1603|0xfffff9bd|JET_errNoCurrentRecord|Currency not on a record|Check hardware, firmware, and drivers.Run the `Esentutl /`k command. Run the **Ntdsutil** file integrity and SDA commands, and then do offline defragmentation​​​​​​​.​​​​​​​Otherwise restore from backup or demote and promote.|
+    |8451|0x2103|ERROR_DS_DRA_DB_ERROR|The replication operation encountered a database error|Check hardware, firmware, and drivers.Run the `Esentutl /k` command. Run the **Ntdsutil** file integrity and SDA commands, and then do offline defragmentation. Otherwise restore from backup or demote/promote.|
 
 4. If all these methods fail, restore the domain controller from a backup, or demote it and then repromote.
 
 ## More information
 
-Verify the vertical jet database stack from the bottom up (proceeding up to the next layer only after the underlying layer is graded as "good"), the same as you do for TCP.  
+Verify the vertical jet database stack from the bottom up (proceeding up to the next layer only after the underlying layer is graded as "good"), the same as you do for TCP.  
 
 |Layer|Ntdsutil command|Esentutl command|
 |---|---|---|
 |(1) Physical consistency|no equivalent| `Esentutl /k` |
 |(2) Extensible Storage Engine (ESE) logical consistency| **Ntdsutil**, **files**, **integrity**| **Esentutl /g** |
 |(3) Application logical consistency| **Ntdsutil**, **semantic database analysis** + **Ntdsutil**, **compact**|no equivalent for SDA  + **Esentutl /d** |
-||||

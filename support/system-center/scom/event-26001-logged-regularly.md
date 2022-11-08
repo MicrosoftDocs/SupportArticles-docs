@@ -2,7 +2,6 @@
 title: Event 26001 is logged regularly
 description: Fixes an issue in which event 26001 is logged every 30 minutes on Windows Server 2012 R2 host computers.
 ms.date: 06/30/2020
-ms.prod-support-area-path: 
 ms.reviewer: dewitth
 ---
 # Event 26001 is logged regularly on Windows Server 2012 R2 host computers

@@ -2,7 +2,7 @@
 title: Use server name parameter in a connection string
 description: This article describes how to programmatically specify the client network library in the connection string when you connect to a SQL Server database.
 ms.date: 09/25/2020
-ms.prod-support-area-path: MDAC and ADO
+ms.custom: sap:MDAC and ADO
 ms.reviewer: VIKRAMV
 ms.prod: sql
 ms.topic: how-to
@@ -117,7 +117,6 @@ The following code samples demonstrate how to use the value of the server parame
     |ncacn_np|Named Pipes|
     |ncacn_ip_tcp|Transmission Control Protocol/Internet Protocol (TCP/IP)|
     |ncalrpc|Local procedure call|
-    |||
 
 - Shared Memory:
 

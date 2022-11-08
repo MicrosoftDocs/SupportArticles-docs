@@ -4,20 +4,20 @@ description: Explains how to recover if a domain controller is incorrectly rolle
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
-ms.prod-support-area-path: Active Directory backup, restore, or disaster recovery
+ms.custom: sap:active-directory-backup-restore-or-disaster-recovery, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # A Windows Server domain controller logs Directory Services event 2095 when it encounters a USN rollback
 
 This article describes how to detect and recover if a Windows Server domain controller is incorrectly rolled back by using an image-based installation of the operating system.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 875495
 
 > [!NOTE]
@@ -29,40 +29,42 @@ This article describes a silent Active Directory replication failure that is cau
 
 When a USN rollback occurs, modifications to objects and attributes that occur on one domain controller do not replicate to other domain controllers in the forest. Because replication partners believe that they have an up-to-date copy of the Active Directory database, monitoring and troubleshooting tools such as Repadmin.exe do not report any replication errors.
 
-Domain Controllers log Directory Services Event 2095 in the Directory Services event log when they detect a USN rollback. The text of the event message directs administrators to this article to learn about recovery options.
+Domain Controllers log Directory Services Event 2095 in the Directory Services event log when they detect a USN rollback. The text of the event message directs administrators to this article to learn about recovery options.
 
 ### Example of Event 2095 log entry
 
-> Log Name:      \<Service name> Service  
-Source:        Microsoft-Windows-ActiveDirectory_DomainService  
-Date:          12/5/2014 11:02:06 AM  
-Event ID:      2095  
+```output
+Log Name:      <Service name> Service  
+Source:        Microsoft-Windows-ActiveDirectory_DomainService  
+Date:          <DateTime>
+Event ID:      2095  
 Task Category: Replication  
-Level:         Error  
-Keywords:      Classic  
-User:          \<USER NAME>  
-Computer:      `SERVER.contoso.com`  
+Level:         Error  
+Keywords:      Classic  
+User:          <USER NAME>  
+Computer:      SERVER.contoso.com  
 Description:
->
-> During an Active Directory Domain Services replication request, the local domain controller (DC) identified a remote DC which has received replication data from the local DC using already-acknowledged USN tracking numbers.
->
-> Because the remote DC believes it is has a more up-to-date Active Directory Domain Services database than the local DC, the remote DC will not apply future changes to its copy of the Active Directory Domain Services database or replicate them to its direct and transitive replication partners that originate from this local DC.
->
-> If not resolved immediately, this scenario will result in inconsistencies in the Active Directory Domain Services databases of this source DC and one or more direct and transitive replication partners. Specifically the consistency of users, computers and trust relationships, their passwords, security groups, security group memberships and other Active Directory Domain Services configuration data may vary, affecting the ability to log on, find objects of interest and perform other critical operations.
->
-> To determine if this misconfiguration exists, query this event ID using `http://support.microsoft.com` or contact your Microsoft product support.
->
-> The most probable cause of this situation is the improper restore of Active Directory Domain Services on the local domain controller.
->
-> User Actions:
->
-> If this situation occurred because of an improper or unintended restore, forcibly demote the DC.
+
+During an Active Directory Domain Services replication request, the local domain controller (DC) identified a remote DC which has received replication data from the local DC using already-acknowledged USN tracking numbers.
+
+Because the remote DC believes it is has a more up-to-date Active Directory Domain Services database than the local DC, the remote DC will not apply future changes to its copy of the Active Directory Domain Services database or replicate them to its direct and transitive replication partners that originate from this local DC.
+
+If not resolved immediately, this scenario will result in inconsistencies in the Active Directory Domain Services databases of this source DC and one or more direct and transitive replication partners. Specifically the consistency of users, computers and trust relationships, their passwords, security groups, security group memberships and other Active Directory Domain Services configuration data may vary, affecting the ability to log on, find objects of interest and perform other critical operations.
+
+To determine if this misconfiguration exists, query this event ID using http://support.microsoft.com or contact your Microsoft product support.
+
+The most probable cause of this situation is the improper restore of Active Directory Domain Services on the local domain controller.
+
+User Actions:
+
+If this situation occurred because of an improper or unintended restore, forcibly demote the DC.
+```
 
 The following topics discuss how to detect and recover from a USN rollback in a Windows Server-based domain controller.
 
 ## Supported methods to back up Active Directory on domain controllers that are running Windows Server 2012 and later versions
 
-Windows Server 2012 adds support for Hyper-Visor Generation ID (GenID). This allows the virtual guest to detect the disk volumes that have a new ID, and respond to the new GenID. In Active Directory, Directory Services reacts as if the domain controller was restored from a backup. It then generates a new Invocation ID. By using the new Invocation ID, the database instance can to safely re-enter replication in the forest.
+Windows Server 2012 adds support for Hyper-Visor Generation ID (GenID). This allows the virtual guest to detect the disk volumes that have a new ID, and respond to the new GenID. In Active Directory, Directory Services reacts as if the domain controller was restored from a backup. It then generates a new Invocation ID. By using the new Invocation ID, the database instance can safely re-enter replication in the forest.
 
 This is one of the scenarios that is covered in [Virtualized Domain Controller Deployment and Configuration](/windows-server/identity/ad-ds/get-started/virtual-dc/virtualized-domain-controller-deployment-and-configuration).
 
@@ -210,19 +212,19 @@ There are three approaches to recover from a USN rollback.
 
 - Remove the Domain Controller from the domain. To do this, follow these steps:
 
-    1. Remove Active Directory from the domain controller to force it to be a standalone server. For more information, see [Domain controllers do not demote gracefully when you use the Active Directory Installation Wizard to force demotion](/troubleshoot/windows-server/identity/domain-controllers-not-demote).
+    1. Remove Active Directory from the domain controller to force it to be a standalone server. For more information, see [Domain controllers do not demote gracefully when you use the Active Directory Installation Wizard to force demotion](/troubleshoot/windows-server/identity/domain-controllers-not-demote).
 
     2. Shut down the demoted server.
 
     3. On a healthy domain controller, clean up the metadata of the demoted domain controller. For more information, see [Clean up Active Directory Domain Controller server metadata](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup).
 
-    4. If the incorrectly restored domain controller hosts operations master roles, transfer these roles to a healthy domain controller. For more information, see [Transfer or seize FSMO roles in Active Directory Domain Services](/troubleshoot/windows-server/identity/transfer-or-seize-fsmo-roles-in-ad-ds).
+    4. If the incorrectly restored domain controller hosts operations master roles, transfer these roles to a healthy domain controller. For more information, see [Transfer or seize FSMO roles in Active Directory Domain Services](/troubleshoot/windows-server/identity/transfer-or-seize-fsmo-roles-in-ad-ds).
 
     5. Restart the demoted server.
     6. If you are required to, install Active Directory on the stand-alone server again.
-    7. If the domain controller was previously a global catalog, configure the domain controller to be a global catalog. For more information, see [How to create or move a global catalog](https://support.microsoft.com/help/313994).
+    7. If the domain controller was previously a global catalog, configure the domain controller to be a global catalog. For more information, see [How to create or move a global catalog](https://support.microsoft.com/help/313994).
 
-    8. If the domain controller previously hosted operations master roles, transfer the operations master roles back to the domain controller. For more information, see [Transfer or seize FSMO roles in Active Directory Domain Services](/troubleshoot/windows-server/identity/transfer-or-seize-fsmo-roles-in-ad-ds).
+    8. If the domain controller previously hosted operations master roles, transfer the operations master roles back to the domain controller. For more information, see [Transfer or seize FSMO roles in Active Directory Domain Services](/troubleshoot/windows-server/identity/transfer-or-seize-fsmo-roles-in-ad-ds).
 
 - Restore the system state of a good backup.
 
@@ -230,7 +232,7 @@ There are three approaches to recover from a USN rollback.
 
 - Restore the system state without system state backup.
 
-    You can use the snapshot as a source of a backup. Or you can set the database to give itself a new invocation ID by using the procedure in the [To restore a previous version of a virtual domain controller VHD without system state data backup](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd363553%28v=ws.10%29#to-restore-a-previous-version-of-a-virtual-domain-controller-vhd-without-system-state-data-backup) section of [Running Domain Controllers in Hyper-V](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd363545(v=ws.10)).
+    You can use the snapshot as a source of a backup. Or you can set the database to give itself a new invocation ID by using the procedure in the [To restore a previous version of a virtual domain controller VHD without system state data backup](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd363553%28v=ws.10%29#to-restore-a-previous-version-of-a-virtual-domain-controller-vhd-without-system-state-data-backup) section of [Running Domain Controllers in Hyper-V](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd363545(v=ws.10)).
 
 ## References
 

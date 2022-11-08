@@ -2,8 +2,9 @@
 title: Error (Failed to get address for method) when you run the Azure Active Directory Sync tool configuration wizard
 description: Describes an error message that you receive when you run the Azure Active Directory Sync tool configuration wizard. Provides a resolution.
 ms.date: 07/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: aconkle
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Error when you run the Azure Active Directory Sync tool configuration wizard: Failed to get address for method: CreateIdentityHandle2
 
@@ -25,8 +26,6 @@ This problem occurs if you're running an earlier version of the Microsoft Online
 To resolve this issue, follow these steps:
 
 1. Uninstall any versions of the Microsoft Online Services Sign-in Assistant that are currently installed on the directory synchronization computer.
-2. Install the latest version of the Microsoft Online Services Sign-In Assistant from [Microsoft Online Services Sign-In Assistant for IT Professionals RTW](https://www.microsoft.com/download/details.aspx?id=41950).
+2. Install the latest version of the Microsoft Online Services Sign-In Assistant from [Microsoft Online Services Sign-In Assistant for IT Professionals RTW](https://download.microsoft.com/download/7/1/E/71EF1D05-A42C-4A1F-8162-96494B5E615C/msoidcli_32bit.msi).
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazuread) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

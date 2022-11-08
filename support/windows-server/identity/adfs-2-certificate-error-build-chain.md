@@ -3,21 +3,21 @@ title: ADFS 2.0 certificate error
 description: Discusses that a certificate-related change in AD FS 2.0 causes certificate, SSL, and trust errors and triggers an Event 133 error. Provides a resolution.
 ms.date: 10/09/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory Federation Services (AD FS)
+ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # ADFS 2.0 certificate error: An error occurred during an attempt to build the certificate chain
 
 This article helps to fix ADFS 2.0 certificate error during an attempt to build the certificate chain.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3044974
 
 ## Summary
@@ -71,7 +71,7 @@ To resolve this problem, follow these steps in the order given. These steps will
 
 Check whether all AD FS certificates (Service communications, token-decrypting, and token-signing) are valid and have a private key associated with them. Also, make sure that the certificate is within its validity period.
 
-![The screenshot about check the certificate](./media/adfs-2-certificate-error-build-chain/check-the-certificate.jpg)
+:::image type="content" source="media/adfs-2-certificate-error-build-chain/check-the-certificate.png" alt-text="Screenshot of the Certificate window showing the validity period.":::
 
 #### Where to find the certificates
 
@@ -81,7 +81,8 @@ Check whether all AD FS certificates (Service communications, token-decrypting, 
     2. In the **Add/Remove Snap-in** dialog box, click **OK**.
     3. On the **Certificates snap-in** screen, click the **Computer account** certificate store.  
 
-        ![Open certificate store ](./media/adfs-2-certificate-error-build-chain/open-certificate-store.jpg)
+        :::image type="content" source="media/adfs-2-certificate-error-build-chain/open-certificate-store.png" alt-text="Screenshot of the Certificate snap-in window with Computer account selected.":::
+
     4. To view the properties of the Service Communications certificate, expand **Certificate (Local Computer)**, expand **Personal**, and then click **Certificates**.  
 
 - For token-signing and token-decrypting certificates:  
@@ -105,7 +106,7 @@ For more information, see [How to Determine if a Certificate is Using a CAPI1 or
 3. Locate your website (typically, it is known as "Default Web Site"), and then select it.
 4. On the **Actions** menu on the right side, click **Bindings**. Make sure that the https biding type is bound to port 443. Otherwise, click **Edit** to change the port.
 
-    ![Site Bindings ](./media/adfs-2-certificate-error-build-chain/site-bindings.png)
+    :::image type="content" source="media/adfs-2-certificate-error-build-chain/site-bindings.png" alt-text="Screenshot of the Site Bindings window which shows that the https biding type is bound to port 443.":::
 
 ### Step 4: Make sure that service communication certificate is valid, trusted, and passes a revocation check  
 
@@ -163,7 +164,7 @@ For more information, see [How to Determine if a Certificate is Using a CAPI1 or
 4. Right-click the AD FS service, point to **All Tasks**, and then click **Manage private keys**.
 5. Check whether the AD FS account has the Read permission.
 
-    ![Check the certificate permission ](./media/adfs-2-certificate-error-build-chain/certificate-permission.jpg)
+    :::image type="content" source="media/adfs-2-certificate-error-build-chain/ad-fs-account-permission.png" alt-text="Screenshot of the permission window which shows that the AD FS account has the Read permission.":::
 
 ### Step 6: Check whether ADFS AutoCertificateRollover feature is enabled for token-signing and token-decrypting certificates
 

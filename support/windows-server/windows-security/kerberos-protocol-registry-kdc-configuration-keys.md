@@ -1,30 +1,30 @@
 ---
-title: Registry entries about Kerberos protocol and KDC
-description: Lists the registry entries in Windows Server that can be used for Kerberos protocol testing and for troubleshooting Kerberos authentication issues.
+title: Registry entries about Kerberos protocol and Key Distribution Center (KDC)
+description: Lists the registry entries in Windows Server that can be used for Kerberos protocol testing and troubleshooting Kerberos authentication issues.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Kerberos authentication
+ms.custom: sap:kerberos-authentication, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # Kerberos protocol registry entries and KDC configuration keys in Windows
 
 This article describes registry entries about Kerberos version 5 authentication protocol and Key Distribution Center (KDC) configuration.
 
-_Original product version:_ &nbsp; Windows 10, version 2004, Windows 7 Service Pack 1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10, version 2004, Windows 7 Service Pack 1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 837361
 
 ## Summary
 
 Kerberos is an authentication mechanism that is used to verify user or host identity. Kerberos is the preferred authentication method for services in Windows.
 
-If you are running Windows, you can modify Kerberos parameters to help troubleshoot Kerberos authentication issues or to test the Kerberos protocol. To do this, add or modify the registry entries that are listed in the following sections.
+If you are running Windows, you can modify Kerberos parameters to help troubleshoot Kerberos authentication issues, or to test the Kerberos protocol. To do so, add or modify the registry entries that are listed in the following sections.
 
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
@@ -39,14 +39,17 @@ The registry entries that are listed in this section must be added to the follow
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Parameters`
 
 > [!NOTE]
-> If the **Parameters** key is not listed under **Kerberos**, you must create the key.
+> If the **Parameters** key isn't listed under **Kerberos**, you must create the key.
 
 - Entry: SkewTime
 
   - Type: REG_DWORD
   - Default Value: 5 (minutes)
 
-    This value is the maximum time difference that is permitted between the client computer and the server that accepts Kerberos authentication.
+    This value is the maximum time difference that's permitted between the client computer and the server that accepts Kerberos authentication or the KDC.
+
+    > [!NOTE]
+    > The SkewTime is considered in the determination of Kerberos ticket validity for reuse. A ticket is considered expired if the expiration time is less than the current time + the SkewTime. For example, if the SkewTime is set to 20 minutes and the current time is 08:00, any ticket with an expiration time before 08:20 will be considered expired.
 
 - Entry: LogLevel
 
@@ -56,7 +59,7 @@ The registry entries that are listed in this section must be added to the follow
     This value indicates whether events are logged in the system event log. If this value is set to any non-zero value, all Kerberos-related events are logged in the system event log.
 
     > [!NOTE]
-    > The events logged may include false positives where the Kerberos client retries with different request flags that then succeed. Therefore, do not assume that you have a Kerberos problem when you see an event logged based on this setting. See [How to enable Kerberos event logging](https://support.microsoft.com/help/262177) for more information.
+    > The events logged may include false positives where the Kerberos client retries with different request flags that then succeed. Therefore, do not assume that you have a Kerberos problem when you see an event logged based on this setting. For more information, see [How to enable Kerberos event logging](https://support.microsoft.com/help/262177) .
 
 - Entry: MaxPacketSize
 
@@ -102,7 +105,7 @@ The registry entries that are listed in this section must be added to the follow
     This value indicates the default encryption type for pre-authentication.
     Default value is RC4 is 23 (decimal) or 0x17 (hexadecimal)
 
-    When you want to use AES, set the value to the following:
+    When you want to use AES, set the value to one of the following values:
 
     - aes256-cts-hmac-sha1-96: 18 or 0x12
     - aes128-cts-hmac-sha1-96: 17 or 0x11
@@ -114,14 +117,14 @@ The registry entries that are listed in this section must be added to the follow
   - Type: REG_DWORD
   - Default Value: 10 (minutes)
 
-    This is the time-out value that is used to invalidate a domain controller from a different site in the domain controller cache.
+    It's the time-out value that's used to invalidate a domain controller from a different site in the domain controller cache.
 
 - Entry: NearKdcTimeout
 
   - Type: REG_DWORD
   - Default Value: 30 (minutes)
 
-    This is the time-out value that is used to invalidate a domain controller in the same site in the domain controller cache.
+    It's the time-out value that's used to invalidate a domain controller in the same site in the domain controller cache.
 
 - Entry: StronglyEncryptDatagram
 
@@ -146,7 +149,7 @@ The registry entries that are listed in this section must be added to the follow
 
     |Macro Name|Value|Note|
     |---|---|---|
-    |DEB_ERROR|0x00000001|This is the default InfoLevel for checked builds. This produces error messages across components.|
+    |DEB_ERROR|0x00000001|It's the default InfoLevel for checked builds. It produces error messages across components.|
     |DEB_WARN|0x00000002|This macro generates warning messages across components. In some cases, these messages can be ignored.|
     |DEB_TRACE|0x00000004|This macro enables general tracing events.|
     |DEB_TRACE_API|0x00000008|This macro enables user API tracing events that are logged on entry and on exit to an externally exported function that is implemented through SSPI.|
@@ -156,7 +159,7 @@ The registry entries that are listed in this section must be added to the follow
     |DEB_TRACE_TCACHE|0x00000080|Not implemented|
     |DEB_TRACE_LOGON|0x00000100|This macro enables logon tracing such as in `LsaApLogonUserEx2()`.|
     |DEB_TRACE_KDC|0x00000200|This macro enables tracing before and after calls to `KerbMakeKdcCall()`.|
-    |DEB_TRACE_CTXT2|0x00000400|This macro enables additional context tracing.|
+    |DEB_TRACE_CTXT2|0x00000400|This macro enables extra context tracing.|
     |DEB_TRACE_TIME|0x00000800|This macro enables the time skew tracing that is found in Timesync.cxx.|
     |DEB_TRACE_USER|0x00001000|This macro enables user API tracing that is used together with DEB_TRACE_API and that is found mostly in Userapi.cxx.|
     |DEB_TRACE_LEAKS|0x00002000| |
@@ -170,7 +173,6 @@ The registry entries that are listed in this section must be added to the follow
     |DEB_TRACE_U2U|0x00200000| |
     |DEB_TRACE_LOCKS|0x01000000| |
     |DEB_USE_LOG_FILE|0x02000000|Not implemented|
-    ||||
 
 - Entry: MaxTokenSize
 
@@ -213,7 +215,7 @@ The registry entries that are listed in this section must be added to the follow
   - Type: REG_DWORD
   - Default Value: Any RFC 1510 value
 
-    This value indicates whether there are additional options that must be sent as KDC options in Ticket Granting Service requests (TGS_REQ).
+    This value indicates whether there are more options that must be sent as KDC options in Ticket Granting Service requests (TGS_REQ).
 
 - Entry: ClientIpAddress
 
@@ -221,7 +223,7 @@ The registry entries that are listed in this section must be added to the follow
   - Default Value: 0 (This setting is 0 because of Dynamic Host Configuration Protocol and network address translation issues.)
   - Possible values: 0 (false) or any non-zero value (true)
 
-    This value indicates whether a client IP address will be added in AS_REQ to force the **Caddr** field to contain IP addresses in all tickets.
+    This value indicates whether a client IP address will be added in AS_REQ to force the **`Caddr`** field to contain IP addresses in all tickets.
 
 - Entry: TgtRenewalTime
 
@@ -264,7 +266,7 @@ The registry entries that are listed in this section must be added to the follow
   - Default Value: 1
   - Possible values: 0 (false) or any non-zero value (true)
 
-    This value indicates whether IP addresses for the TGS_REQ and the TGT **Caddr** field will be checked.
+    This value indicates whether IP addresses for the TGS_REQ and the TGT **`Caddr`** field will be checked.
 
 - Entry: NewConnectionTimeout
 
@@ -278,7 +280,7 @@ The registry entries that are listed in this section must be added to the follow
   - Type: REG_DWORD
   - Default Value: 1465 (decimal, bytes)
 
-    This value is the maximum UDP packet size in TGS_REP and Authentication Service Replies (AS_REP) messages. If the packet size exceeds this value, the KDC returns a **KRB_ERR_RESPONSE_TOO_BIG** message that requests that the client switch to TCP.
+    This value is the maximum UDP packet size in TGS_REP and Authentication Service Replies (AS_REP) messages. If the packet size exceeds this value, the KDC returns a **KRB_ERR_RESPONSE_TOO_BIG** message that requests that the client switches to TCP.
 
     > [!NOTE]
     > Increasing **MaxDatagramReplySize** may increase the likelihood of Kerberos UDP packets being fragmented.
@@ -292,9 +294,9 @@ The registry entries that are listed in this section must be added to the follow
   - Possible values:
 
     - 1 (decimal) or 0x1 (hexadecimal): Audit SPN unknown errors.
-    - 2 (decimal) or 0x2 (hexadecimal): Log PKINIT errors. (PKINIT is an Internet Engineering Task Force (IETF) Internet draft for *Public Key Cryptography for Initial Authentication in Kerberos*.)
+    - 2 (decimal) or 0x2 (hexadecimal): Log PKINIT errors. (PKINIT is an Internet Engineering Task Force (IETF) Internet draft for _Public Key Cryptography for Initial Authentication in Kerberos_.)
     - 4 (decimal) or 0x4 (hexadecimal): Log all KDC errors.
-    - 8 (decimal) or 0x8 (hexadecimal): Log KDC warning event 25 in the system log when user asking for S4U2Self ticket does not have sufficient access to target user.
+    - 8 (decimal) or 0x8 (hexadecimal): Log KDC warning event 25 in the system log when user asking for S4U2Self ticket doesn't have sufficient access to target user.
     - 16 (decimal) or 0x10 (hexadecimal): Log audit events on encryption type (ETYPE) and bad options errors. This value indicates what information the KDC will write to event logs and to audits.
 
 - Entry: KdcDebugLevel
@@ -304,4 +306,4 @@ The registry entries that are listed in this section must be added to the follow
 
     This value indicates whether debug logging is on (1) or off (0).
 
-    If the value is set to **0x10000000** (hexadecimal) or **268435456** (decimal), specific file or line information will be returned in the **edata** field of **KERB_ERRORS** as **PKERB_EXT_ERROR** errors during a KDC processing failure.
+    If the value is set to **0x10000000** (hexadecimal) or **268435456** (decimal), specific file or line information will be returned in the **`edata`** field of **KERB_ERRORS** as **PKERB_EXT_ERROR** errors during a KDC processing failure.

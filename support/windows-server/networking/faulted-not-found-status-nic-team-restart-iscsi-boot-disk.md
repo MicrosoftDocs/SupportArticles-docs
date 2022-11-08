@@ -3,21 +3,21 @@ title: (Faulted Not Found) status for NIC team after you restart Windows from an
 description: Describes an issue that occurs if Windows Server 2012 is configured to start from an iSCSI disk
 ms.date: 09/14/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, steved
-ms.prod-support-area-path: Windows NIC Teaming (Load Balance Failover)
+ms.custom: sap:windows-nic-teaming-load-balance-failover, csstroubleshoot
 ms.technology: networking
 ---
 # "Faulted Not Found" status for NIC team after you restart Windows from an iSCSI boot disk
 
 This article provides a resolution for the issue that it shows "Faulted Not Found" status for NIC team after you restart Windows from an iSCSI boot disk.
 
-_Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2969300
 
 ## Symptoms

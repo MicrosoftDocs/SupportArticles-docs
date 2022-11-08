@@ -4,21 +4,21 @@ description: Describes how to resolve a problem that occurs when SMB signing is 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-sanair
-ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
+ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
 ms.technology: networking
 ---
 # You cannot open file shares or Group Policy snap-ins on a domain controller
 
 This article describes how to resolve a problem that occurs when SMB signing is disabled for the Workstation or Server service on a domain controller.
 
-_Original product version:_ &nbsp;Windows Server 2003  
-_Original KB number:_ &nbsp;839499
+_Applies to:_ &nbsp; Windows Server 2003  
+_Original KB number:_ &nbsp; 839499
 
 ## Summary
 
@@ -100,7 +100,7 @@ Change the value of the enablesecuritysignature registry entry. To do this, foll
 1. On the domain controller, click **Start**, and then click **Run.**  
 2. Copy and then paste (or type) the regedit command in the Open box, and then press Enter.
 
-    ![Screenshot of typing regedit command](./media/cannot-open-file-shares-group-policy-snap-ins/type-regedit.png)
+    :::image type="content" source="media/cannot-open-file-shares-group-policy-snap-ins/type-regedit.png" alt-text="Screenshot of the Run window with regedit typed in the Open box.":::
 
 3. Locate and then click the following registry subkey: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\lanmanserver\parameters`  
 
@@ -122,8 +122,7 @@ To restart the Server service and the Workstation service, follow these steps:
 1. Click **Start**, point to **Administrative Tools**, and then click **Services**.
 2. Right-click **Server**, and then click **Restart**.
 
-    ![Screenshot of restarting Server service](./media/cannot-open-file-shares-group-policy-snap-ins/restart-server-service.png)
-
+    :::image type="content" source="media/cannot-open-file-shares-group-policy-snap-ins/restart-server-service.png" alt-text="Screenshot of the Services window with Server selected, and a menu with Restart selected.":::
 3. Right-click **Workstation**, and then click **Restart**.
 
 > [!NOTE]
@@ -151,11 +150,11 @@ After you connect to the Sysvol share on each domain controller, open the Domain
     > [!IMPORTANT]
     > If you have client computers on the network that do not support SMB signing, you must not enable the **Microsoft network server: Digitally sign communications (always)**  policy setting. If you enable this setting, you must have SMB signing for all client communication, and client computers that do not support SMB signing will not be able to connect to other computers. For example, clients that are running Apple Macintosh OS X or Microsoft Windows 95 do not support SMB signing. If your network includes clients that do not support SMB signing, set this policy to disabled.
 
-    ![Screenshot of Security Options](./media/cannot-open-file-shares-group-policy-snap-ins/click-security-option.png)
+    :::image type="content" source="media/cannot-open-file-shares-group-policy-snap-ins/click-security-option.png" alt-text="Screenshot of the Default Domain Controller Security Settings window with Security Options selected.":::
 
 4. Click to select the **Define this policy setting** check box, click **Enabled**, and then click **OK**.
 
-    ![Screenshot of setting Define this policy setting to Enable](./media/cannot-open-file-shares-group-policy-snap-ins/select-enable-for-define-this-policy-settings.png)
+    :::image type="content" source="media/cannot-open-file-shares-group-policy-snap-ins/select-enable-for-define-this-policy-settings.png" alt-text="Screenshot of the Microsoft network server window with the Define this policy setting selected and enabled.":::
 
 5. Double-click **Microsoft network server: Digitally sign communications (if client agrees)**.
 
@@ -167,7 +166,7 @@ After you connect to the Sysvol share on each domain controller, open the Domain
 8. Double-click **Microsoft network client: Digitally sign communications (always)**.
 9. Click to clear the **Define this policy setting** check box, and then click **OK**.
 
-    ![Screenshot of clearing Define this policy setting](./media/cannot-open-file-shares-group-policy-snap-ins/clear-define-this-polity-setting-checkbox.png)
+    :::image type="content" source="media/cannot-open-file-shares-group-policy-snap-ins/clear-define-this-polity-setting-checkbox.png" alt-text="Screenshot of the Microsoft network server window with the Define this policy setting check box cleared.":::
 
 10. Double-click **Microsoft network client: Digitally sign communications (if server agrees)**.
 11. Click to clear the **Define this policy setting** check box, and then click **OK**.
@@ -179,7 +178,7 @@ Run the Group Policy Update utility (Gpupdate.exe) with the force switch. To do 
 1. Click **Start**, and then click **Run**.
 2. Copy and paste (or type) the cmd command in the Open box, and then press Enter.
   
-    ![Screenshot of typing cmd](./media/cannot-open-file-shares-group-policy-snap-ins/type-cmd.png)
+    :::image type="content" source="media/cannot-open-file-shares-group-policy-snap-ins/type-cmd.png" alt-text="Screenshot of the Run window with cmd typed in the Open box.":::
 
 3. At the command prompt, type `gpupdate /force`, and then press Enter.
 
@@ -193,14 +192,14 @@ After you run the Group Policy Update utility, check the application event log t
 1. Click **Start**, point to **Administrative Tools**, and then click **Event Viewer**.
 2. In the left pane, click **Application**.
 
-    ![Screenshot of clicking Application](./media/cannot-open-file-shares-group-policy-snap-ins/click-application.png)
+    :::image type="content" source="media/cannot-open-file-shares-group-policy-snap-ins/click-application-event-viewer.png" alt-text="Screenshot of the Event Viewer window with Application selected.":::
 
 3. Double-click event ID 1704 and confirm that the Group Policy setting was applied successfully.
 
     > [!NOTE]
     > The source of the event is SceCli.
 
-    ![Screenshof of event properties](./media/cannot-open-file-shares-group-policy-snap-ins/event-properties.png)
+    :::image type="content" source="media/cannot-open-file-shares-group-policy-snap-ins/event-properties-id-1704.png" alt-text="Screenshot of the Event Properties window for event ID 1704.":::
 
 Step 7 - Check the registry values
 
@@ -215,7 +214,7 @@ If the registry values have changed after you run the Group Policy Update utilit
 
 1. Click **Start**, click **Run**, type rsop.msc in the **Open** box, and then click **OK**.
 
-    ![Screenshot of typing rsop.msc](./media/cannot-open-file-shares-group-policy-snap-ins/type-rsop-msc.png)
+    :::image type="content" source="media/cannot-open-file-shares-group-policy-snap-ins/type-rsop-msc.png" alt-text="Screenshot of the Run window with rsop.msc typed in the Open box.":::
 
 2. In the RSoP snap-in, the SMB signing settings are located in the following path: **Computer Configuration/Windows Settings/Security Settings/Local Policies/Security Options**  
 

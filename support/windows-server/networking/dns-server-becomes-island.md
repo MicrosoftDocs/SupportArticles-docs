@@ -2,22 +2,22 @@
 title: DNS Server becomes an island
 description: Describes an issue where a domain controller points to itself for the _msdcs.ForestDnsName domain.
 ms.date: 10/19/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, dsmith
-ms.prod-support-area-path: DNS
+ms.custom: sap:dns, csstroubleshoot
 ms.technology: networking
 ---
 # DNS Server becomes an island when a domain controller points to itself for the _msdcs.ForestDnsName domain
 
 This article provides a solution to an issue where DNS Server becomes an island when a domain controller points to itself for the _msdcs.ForestDnsName domain. For more information, see the [Microsoft Support Lifecycle Policy](/lifecycle/).
 
-_Original product version:_ &nbsp; Windows 2000  
+_Applies to:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 275278
 
 ## Symptoms

@@ -4,20 +4,20 @@ description: Describes an issue that causes Active Directory replication to fail
 ms.date: 09/18/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Active Directory replication error 8545: "Replication update could not be applied"
 
 This article provides a solution to an issue where Active Directory replication fails for one or more partitions with the error 8545.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3110029
 
 > [!NOTE]
@@ -67,18 +67,18 @@ As a preventive measure, consider installing Microsoft Knowledge Base article [2
 
 1. Determine the distinguished name (DN) of the naming context (NC) / partition where the object was migrated from. For more information about this, see the "More Information" section.
 2. On the destination domain controller, follow these steps to unhost this partition:
-    1. Run the following command line: Repadmin /unhost DestinationDC \<DNofObject'sOldLocation> 
-    
+    1. Run the following command line: Repadmin /unhost DestinationDC \<DNofObject'sOldLocation>
+
         For example, if the destination domain controller is DC1, and the DN for the partition where the object was migrated from is dc=corp,dc=contoso,dc=com, the command would be Repadmin /unhost DC1 dc=corp,dc=contoso,dc=com.
-        
+
         > [!NOTE]
         > Monitor the Directory Service log on the domain controller for event ID 1660. Review the event text to make sure that it says the domain controller no longer hosts the CORP NC.
     2. Event ID 1659 indicates the status of the unhost operation. Do not readd the partition until after you successfully sync the other partition.
 3. On the destination domain controller, trigger replication with the source domain controller (the one that was failing).
 4. Rehost the partition from a domain controller that has a valid read/write copy of the partition. To do this, run the following command line:
 
-    Repadmin /add DNobObject'sOldLocation DestinationDC GoodSourceDC /readonly 
-    
+    Repadmin /add DNobObject'sOldLocation DestinationDC GoodSourceDC /readonly
+
     For example, assume that the destination domain controller is DC1, the partition that you unhosted is dc=corp,dc=contoso,dc=com, and a domain controller that has a read/write copy of the Corp partition is `CorpDC1.corp.contoso.com`. In this situation, the command will be `Repadmin /add dc=corp,dc=contoso,dc=com dc1 CorpDC1.corp.contoso.com /readonly`.
     For more information about this specific scenario, see the "More Information" section.
 
@@ -98,13 +98,13 @@ First, determine whether it's the source or destination domain controller that h
 |Identify all DCs with object(s) (replication metadata)| Repadmin /showobjmeta *"<GUID=33555323-8e42-42dd-ab95-51693b54281f>" >JUSTINTUObjmeta.txt <br/><br/> Important: <br/><br/>For any DCs that you fail to obtain data from:<br/>1. Connect to each DC that you didn't obtain data from.<br/>2. Rerun the command, and substitute the DC name for the asterisk.<br/><br/>Example: repadmin /showobjmeta DC004 "<GUID=33555323-8e42-42dd-ab95-51693b54281f>" >LCTXDC004_JUSTINTUObjmeta.txt |
 |Identify all DCs with object(s) (attribute values)| Repadmin /showattr *"<GUID=33555323-8e42-42dd-ab95-51693b54281f>" /gc >JUSTINTUattr.txt <br/><br/> Important: <br/><br/>For any DCs that you fail to obtain data from:<br/>1. Connect to each DC in question.<br/>2. Rerun the command, and substitute the DC name for the asterisk.<br/><br/>Example: repadmin /showobjattr LCTXDC004 "<GUID=33555323-8e42-42dd-ab95-51693b54281f>" /gc >LCTXDC004_JUSTINTUAttr.txt |
 |Identify all DCs in forest| Repadmin /viewlist * >allDCs.txt |
-|Identify the DSA_GUID for all DCs| Repadmin /showattr *DCNAME* NCOBJ: Config: /filter:"(Objectclass=NTDSDSA)" /atts:objectGUID /subtree >ntdsa.txt <br/><br/>The preceding two commands.|
+|Identify the DSA_GUID for all DCs| Repadmin /showattr _DCNAME_ NCOBJ: Config: /filter:"(Objectclass=NTDSDSA)" /atts:objectGUID /subtree >ntdsa.txt <br/><br/>The preceding two commands.|
 |DC in source domain without object in NA partition- name||
 |DC in source domain without object in NA partition DSA_GUID||
 |Replication status for forest| Repadmin /showrepl * /csv >showrepl.csv |
-|||
-
+  
 To identify the current location of the object in the database:
+
 1. [Dump](https://support.microsoft.com/help/315098) the database of one of the destination DCs.
 2. Open the database dump file, and then search for the objectGUID that's reported in event 1084.
 3. Grab the DNT and PDNT, and [build the object hierarchy](https://blogs.technet.com/b/askpfeplat/archive/2012/07/23/mcm-core-active-directory-internals.aspx) by copying the pertinent values into a table, as follows:
@@ -119,11 +119,11 @@ To identify the current location of the object in the database:
 
 By using the database dump file, you can see this object's current location in the database on this domain controller:
 
-CN=LostAndFound,DC=Corp,DC=Contoso,DC=com 
+CN=LostAndFound,DC=Corp,DC=Contoso,DC=com
 
 You can see that the object was present in the LostAndFound container on the `corp.contoso.com` NC. However, replication is blocked on this object except for the `NA.contoso.com` NC. Because this object is already present in the database (but in the old, incorrect NC), you must remove this partition from this domain controller in order to dispose of the old object.
 
-Example scenario action plan 
+Example scenario action plan
 
 The Configuration object was migrated from the Corp partition to the NA partition. However, the NA partition fails to replicate from `NADC1.na.contoso.com` to `DC1.la.contoso.com`, and the attempt returns error 8545.
 
@@ -133,10 +133,10 @@ Source DC: `NADC1.na.contoso.com`
 
 1. As a preventive measure, consider installing KB article [2682997](https://support.microsoft.com/help/2682997) on all domain controllers that are still running Windows Server 2008 or Windows Server 2008 R2. To do this, you will have to unhost the Corp partition on the domain controller, replicate the NA partition, and then readd the CORP partition from a known good source. To do this, follow these steps:
     1. Unhost the partition from the GC by running the following commands:
-    
-        Repadmin /options the DC +disable_ntdsconn_xlate 
-        
-        Repadmin /unhost the DC dc=corp,dc=contoso,dc=com 
+
+        Repadmin /options the DC +disable_ntdsconn_xlate
+
+        Repadmin /unhost the DC dc=corp,dc=contoso,dc=com
     2. Monitor the Directory Service log on the domain controller for event ID 1660. Review the event text to verify that the domain controller no longer hosts the CORP NC.
 2. Event ID 1659 indicates the status of the unhost operation. Do not readd the partition until after you sync the NA partition, as follows:
     1. Replicate the NA partition. After the partition is successfully removed from the database: Initiate replication from `CORPDC.na.contoso.com` by running the following command:
@@ -145,6 +145,7 @@ Source DC: `NADC1.na.contoso.com`
     
         Repadmin /replicate the DC1.la.contoso.com NADC1.na.contoso.com DC=na,DC=bayer,DC=cnb
         ```
+
     2. Readd the CORP NC back to this domain controller by running the following repadmin /add commands:
 
         ```console

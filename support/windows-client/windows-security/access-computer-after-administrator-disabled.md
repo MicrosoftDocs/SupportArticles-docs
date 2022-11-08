@@ -4,20 +4,20 @@ description: Describes how to access your computer by using the Administrator ac
 ms.date: 09/23/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Account lockouts
-ms.technology: windows-client-security 
+ms.custom: sap:account-lockouts, csstroubleshoot
+ms.technology: windows-client-security
 ---
 # How to access the computer after you disable the administrator account
 
 This article describes how to access your Microsoft Windows Server 2003-based computer by using the Administrator account after you disable the local Administrator account.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 814777
 
 ## Summary

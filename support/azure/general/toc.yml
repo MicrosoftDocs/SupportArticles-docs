@@ -19,21 +19,28 @@
     href: apim-troubleshooting-series.md
   - name: Blank response is returned
     href: api-return-blank-response.md
-  - name: HTTP 403 - Forbidden issues
-    href: request-throttling-http-403.md
   - name: HTTP 404 and 500 status codes
     href: soap-based-api-return-404-http-code.md
-  - name: Performance issues in API calls
-    href: performance-hit-api-calls.md
   - name: Unauthorized errors (401)
     href: unauthorized-errors-invoke-apis.md
+  - name: Performance issues in API calls
+    href: performance-hit-api-calls.md
+  - name: HTTP 403 - Forbidden issues
+    href: request-throttling-http-403.md
 
 - name: Azure Stack
   items:
+  - name: Kernel Soft Reboot error c0000034
+    href: azure-stack-hci-kernel-soft-reboot-error-c0000034.md
   - name: Side-channel vulnerabilities protection
     href: side-channel-vulnerabilities.md
   - name: Warning message in Azure Stack
     href: pending-service-account-password-expiration.md
+
+- name: Azure Stack Edge
+  items:
+  - name: Azure Stack Edge support package and device logs
+    href: azure-stack-edge-support-package-device-logs.md
 
 - name: Cloud Platform System
   items:
@@ -60,7 +67,7 @@
   - name: Update 2.1 for Cloud Platform System Premium
     href: update-2.1-for-cloud-platform-system-premium.md
 
-- name: Azure information Protection
+- name: Azure Information Protection
   items:
   - name: Troubleshoot Azure Information Protection policy issues
     href: troubleshoot-aip-issues.md
@@ -75,13 +82,10 @@
   - name: Azure Service Fabric troubleshooter
     href: fabric-logs.md
 
-
 - name: Azure Storage
   items:
   - name: Embedded application error when install Azure backup agent
     href: unable-to-execute-the-embedded-application-error-backup-agent.md
-  - name: Data restore scenarios for Azure Storage service
-    href: data-restore-storage.md
   - name: Request body is too large error when write to file
     href: request-body-large.md
   - name: Optimize CreateFile function
@@ -89,14 +93,55 @@
   - name: Troubleshoot high CPU or disk usage issues
     href: diagnose-high-cpu-disk-perfinsights.md
 
+- name: Azure Batch
+  items:
+  - name: Access to storage account is denied
+    href: access-denied-execute-azure-batch-job.md
+  - name: AccountEncryptionKeyUnavailable error message
+    href: error-accountencryptionkeyunavailable.md
+  - name: Batch node creation delays when restarting or reimaging
+    href: batch-node-creation-delay-restart-reimage.md
+  - name: Batch pool deletion failure
+    href: azure-batch-pool-deletion-failure.md
+
+- name: CycleCloud
+  items:
+  - name: Error "Client secret key is expired"
+    href: invalid-client-secret.md
+  - name: Error "Invalid Azure credentials provided" 
+    href: error-invalid-azure-credentials-cycle-cloud.md
+
+- name: HPC Pack
+  items:
+  - name: Failed Linux compute node agent extension installation
+    href: troubleshoot-install-failure-hpc-pack-linux-node-agent.md
+  - name: HPC jobs are stuck in canceling mode, and new jobs don't start
+    href: job-stuck-canceling-mode.md
+  - name: HPC Management Service fails to start after restoring database
+    href: hpc-management-service-not-start.md
+  - name: HPC compute nodes aren't shown or are in error state
+    href: compute-node-not-shown-error-state.md
+  - name: HPC node manager service unreachable
+    href: hpc-node-manager-service-unreachable-certificate.md
+  - name: HPC Pack Excel offloading job is stalled
+    href: hpc-pack-excel-offloading-job-stalled.md
+  - name: HPC reporting database connection problem
+    href: hpc-management-reporting-database-connection-issue.md
+  - name: HPC reporting database permission problem
+    href: hpc-management-reporting-database-permission-problem.md
+
 - name: General
   items:
   - name: Associate a custom domain with Azure websites
     href: associate-custom-domain-secure-communication.md
+  - name: Azure dependency availability by country/region
+    href: dependency-availability-by-country.md
   - name: Azure region access request process
     href: region-access-request-process.md
   - name: Container support policy
     href: support-policy-containers.md
+  - name: Delete a corrupted Azure Analysis Services database
+    href: delete-corrupted-azure-analysis-services-database.md
   - name: Deploy TLS 1.2 in Azure Pack
     href: tls-support-deployment-guide.md 
   - name: Error when you try to copy content to Azure
@@ -105,11 +150,11 @@
     href: search-tips-find-troubleshooting-content.md
   - name: Use Secure File Exchange to exchange files
     href: secure-file-exchange-transfer-files.md
+  - name: Domains used by Microsoft support agents
+    href: email-domains-support-agent.md
 
 - name: Other common issues
   items:
-  - name: App Service Compliance with PCI Standards 3.0 and 3.1
-    href: app-service-compliance-wit.md
   - name: Can't load VM metrics
     href: problem-occur-loading-metrics.md
   - name: Delete button doesn't work
@@ -129,6 +174,8 @@
 
 - name:  Support Diagnostic Packages
   items:
+  - name: Diagnostic logs for Apache Spark pools
+    href: synapse-analytics-apache-spark-pools-diagnostic-logs.md
   - name: Diagnostic logs for SQL Server 
     href: sql-vm-logs.md
   - name: SQL database data collector

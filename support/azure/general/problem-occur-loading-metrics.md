@@ -2,10 +2,9 @@
 title: Can't access [Host] ConsumedCredit or [Host] Credit in Azure
 description: Discusses that you receive an error message when you are trying to access [Host] ConsumedCredit or [Host] Credit in Azure.
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
-ms.service: azure
+ms.service: azure-common-issues-support
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: scotro
 ---
 # Error when you try to access [Host] ConsumedCredit or [Host] Credit in Azure: Problem occurred loading metrics
@@ -19,14 +18,16 @@ When you access the metrics for a virtual machine in Microsoft Azure, you receiv
 
 > A problem occurred loading metrics. Please try again later.
 
-:::image type="content" source="./media/problem-occurred-loading-metrics-error/4041982_en_1.png" alt-text="Screenshot fo selecting metrics.":::
+:::image type="content" source="media/problem-occurred-loading-metrics-error/metrics.png" alt-text="Screenshot of metrics for a virtual machine in Microsoft Azure.":::
 
-:::image type="content" source="./media/problem-occurred-loading-metrics-error/4041983_en_1.png" alt-text="Screenshot of error message on portal.":::
+:::image type="content" source="media/problem-occurred-loading-metrics-error/metrics-error.png" alt-text="Screenshot of metrics error message in Microsoft Azure.":::
 
 ## Cause
 
-Microsoft has identified an issue in the Azure platform that prevents the metrics from working. 
+Microsoft has identified an issue in the Azure platform that prevents the metrics from working.
 
 ## Status
 
 Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section. A change to resolve this problem is scheduled to be deployed.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

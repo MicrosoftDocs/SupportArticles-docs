@@ -2,22 +2,22 @@
 title: Delete corrupt Event Viewer Log files
 description: Describes a method to rename or move these files for troubleshooting purposes.
 ms.date: 09/27/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, lynnroe, jwojan
-ms.prod-support-area-path: Event System
+ms.custom: sap:event-system, csstroubleshoot
 ms.technology: windows-server-application-compatibility
 ---
 # How to delete corrupt Event Viewer Log files
 
 This article describes a method to rename or move these files for troubleshooting purposes.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 172156
 
 ## Symptoms

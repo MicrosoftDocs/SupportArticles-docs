@@ -1,23 +1,23 @@
 ---
 title: Wake on LAN behavior
 description: Describes the different behaviors of the Wake on LAN (WOL) technology in Windows 7 and Windows 10.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Power Management
+ms.custom: sap:power-management, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # Wake on LAN (WOL) behavior in Windows 10
 
 This article provides information on how to enable Wake on LAN behavior in different versions of Windows.
 
-_Original product version:_ &nbsp; Windows 10, version 1903, Windows 10, version 1809, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 10, version 1903, Windows 10, version 1809, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2776718
 
 ## Summary

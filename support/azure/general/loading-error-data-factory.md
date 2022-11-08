@@ -1,16 +1,15 @@
 ---
-title: Error loading from "Contents" tab through Azure Data Factory, version 1
+title: Error loading from Contents tab through Azure Data Factory, version 1
 description: Describes an error when loading data files through Azure Data Factory, version 1. To resolve this problem, upgrade to Azure Data Factory, version 2.
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
-ms.service: data-factory
+ms.service: azure-common-issues-support
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: 
 ---
 # A loading error occurs on Contents tab in Azure Data Factory, version 1
 
-This article provides a solution to an issue in which you can't load data files through Azure Data Factory, version 1. 
+This article provides a solution to an issue in which you can't load data files through Azure Data Factory, version 1.
 
 _Original product version:_ &nbsp; Data Factory  
 _Original KB number:_ &nbsp; 4490161
@@ -31,19 +30,21 @@ message: "The gateway did not receive a response from 'Microsoft.DataFactory' wi
 
 ## Cause
 
-This problem may occur because there are duplicate assets, which cause the dispatcher service to error. For example: 
+This problem may occur because there are duplicate assets, which cause the dispatcher service to error. For example:
 
-> test-dataset 
- 
-> TEST-DATASET 
+> test-dataset
+
+> TEST-DATASET
 
 > [!NOTE]
 > Duplicate assets might be created under a specific scenario such as when duplicated objects are created at the same time in version 1.
 
 ## Resolution
 
-To fix this problem, upgrade to Azure Data Factory, version 2 to prevent the creation of duplicated objects. 
+To fix this problem, upgrade to Azure Data Factory, version 2 to prevent the creation of duplicated objects.
 
 ## Workaround
 
-To work around this problem, delete the duplicate asset. 
+To work around this problem, delete the duplicate asset.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

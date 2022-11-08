@@ -2,7 +2,6 @@
 title: Cannot access the UNIX/Linux computers view
 description: Fixes an issue in which you can't access the Unix/Linux Computers view in System Center 2012 R2 Operations Manager when the resource pool is deleted.
 ms.date: 06/30/2020
-ms.prod-support-area-path: 
 ---
 # You can't access the UNIX/Linux computers view in System Center 2012 R2 Operations Manager
 
@@ -13,7 +12,7 @@ _Original KB number:_ &nbsp; 4075004
 
 ## Symptoms
 
-You can't access the UNIX/Linux computers view in the **Administration** pane in System Center 2012 R2 Operations Manager. When this issue occurs, you receive the following error message:
+You can't access the UNIX/Linux computers view in the **Administration** pane in System Center 2012 R2 Operations Manager. When this issue occurs, you receive the following error message:
 
 > Date: <*DateTime*>  
 > Application: Operations Manager  
@@ -21,25 +20,25 @@ You can't access the UNIX/Linux computers view in the **Administration** pane in
 > Severity: Error  
 > Message:  
 > System.NullReferenceException: Object reference not set to an instance of an object.  
-   at Microsoft.SystemCenter.CrossPlatform.UI.OM.Integration.UnixComputerOperatingSystemHelper.JoinCollections(IEnumerable\`1 managementServers, IEnumerable\`1 resourcePools, IEnumerable\`1 unixcomputers, IEnumerable\`1 operatingSystems)  
-   at Microsoft.SystemCenter.CrossPlatform.UI.OM.Integration.UnixComputerOperatingSystemHelper.GetUnixComputerOperatingSystemInstances(String criteria)  
-   at Microsoft.SystemCenter.CrossPlatform.UI.OM.Integration.Administration.UnixAgentQuery.DoQuery(String criteria)  
-   at Microsoft.EnterpriseManagement.Mom.Internal.UI.Cache.Query\`1.DoQuery(String criteria, Nullable\`1 lastModified)  
-   at Microsoft.EnterpriseManagement.Mom.Internal.UI.Cache.Query\`1.FullUpdateQuery(CacheSession session, IndexTable& indexTable, Boolean forceUpdate, DateTime queryTime)  
-   at Microsoft.EnterpriseManagement.Mom.Internal.UI.Cache.Query\`1.InternalSyncQuery(CacheSession session, IndexTable indexTable, UpdateReason reason, UpdateType updateType)  
-   at Microsoft.EnterpriseManagement.Mom.Internal.UI.Cache.Query\`1.InternalQuery(CacheSession session, UpdateReason reason)  
-   at Microsoft.EnterpriseManagement.Mom.Internal.UI.Cache.Query\`1.TryDoQuery(UpdateReason reason, CacheSession session)  
-   at Microsoft.EnterpriseManagement.Mom.Internal.UI.Console.ConsoleJobExceptionHandler.ExecuteJob(IComponent component, EventHandler\`1 job, Object sender, ConsoleJobEventArgs args)
+   at Microsoft.SystemCenter.CrossPlatform.UI.OM.Integration.UnixComputerOperatingSystemHelper.JoinCollections(IEnumerable\`1 managementServers, IEnumerable\`1 resourcePools, IEnumerable\`1 unixcomputers, IEnumerable\`1 operatingSystems)  
+   at Microsoft.SystemCenter.CrossPlatform.UI.OM.Integration.UnixComputerOperatingSystemHelper.GetUnixComputerOperatingSystemInstances(String criteria)  
+   at Microsoft.SystemCenter.CrossPlatform.UI.OM.Integration.Administration.UnixAgentQuery.DoQuery(String criteria)  
+   at Microsoft.EnterpriseManagement.Mom.Internal.UI.Cache.Query\`1.DoQuery(String criteria, Nullable\`1 lastModified)  
+   at Microsoft.EnterpriseManagement.Mom.Internal.UI.Cache.Query\`1.FullUpdateQuery(CacheSession session, IndexTable& indexTable, Boolean forceUpdate, DateTime queryTime)  
+   at Microsoft.EnterpriseManagement.Mom.Internal.UI.Cache.Query\`1.InternalSyncQuery(CacheSession session, IndexTable indexTable, UpdateReason reason, UpdateType updateType)  
+   at Microsoft.EnterpriseManagement.Mom.Internal.UI.Cache.Query\`1.InternalQuery(CacheSession session, UpdateReason reason)  
+   at Microsoft.EnterpriseManagement.Mom.Internal.UI.Cache.Query\`1.TryDoQuery(UpdateReason reason, CacheSession session)  
+   at Microsoft.EnterpriseManagement.Mom.Internal.UI.Console.ConsoleJobExceptionHandler.ExecuteJob(IComponent component, EventHandler\`1 job, Object sender, ConsoleJobEventArgs args)
 
 ## Cause
 
-The issue occurs if the UNIX/Linux monitoring resource pool is deleted.
+The issue occurs if the UNIX/Linux monitoring resource pool is deleted.
 
 ## Resolution
 
 To resolve the issue, follow these steps:
 
-1. Create a resource pool for UNIX/Linux monitoring. Give the new pool a different name than the name of the deleted resource pool.
+1. Create a resource pool for UNIX/Linux monitoring. Give the new pool a different name than the name of the deleted resource pool.
 2. Add the management servers that perform UNIX/Linux monitoring to the new resource pool.
 3. Configure the UNIX/Linux Run As accounts to be distributed by the new resource pool. To do this, follow these steps:
 
@@ -58,7 +57,7 @@ To resolve the issue, follow these steps:
     Get-SCXAgent
     ```
 
-5. Verify that the agents that are associated with the deleted resource pool still exist and that the relationship remains.
+5. Verify that the agents that are associated with the deleted resource pool still exist and that the relationship remains.
 6. Run the following command to change the managing resource pool to the one that is created in step 1:
 
     ```powershell

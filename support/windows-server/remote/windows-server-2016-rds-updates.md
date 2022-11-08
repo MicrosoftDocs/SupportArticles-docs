@@ -4,21 +4,21 @@ description: Introduce recommended hotfixes and updates for Remote Desktop Servi
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Administration
+ms.custom: sap:administration, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Available Remote Desktop Services updates in Windows Server 2016
 
 This article introduces the recommended hotfixes and updates for Remote Desktop Services in Windows Server 2016.
 
-_Original product version:_ &nbsp;Windows Server 2016  
-_Original KB number:_ &nbsp;4039839
+_Applies to:_ &nbsp; Windows Server 2016  
+_Original KB number:_ &nbsp; 4039839
 
 ## Summary  
 
@@ -239,7 +239,7 @@ General OS updates
 - [KB4051033](https://support.microsoft.com/help/4051033) Addressed a token leak in **services.exe** that occurs after you apply update [3175024](https://support.microsoft.com/help/3175024). This results in a kernel session object leak that degrades system performance over time. This especially affects Terminal Server implementations, where more user logons typically occur
 - [KB4038801](https://support.microsoft.com/help/4038801) Addressed an issue in which console and RDP logons permanently stop responding at "Applying user profile settings" because of a deadlock between DPAPI/LSASS and RDR. After the deadlock occurs, new logons fail until the logon computer is restarted.
 - [KB4038801](https://support.microsoft.com/help/4038801) Addressed an issue in which the Remote Desktop's idle time-out warning doesn't appear after the idle time elapses.  
-- [KB4034661](https://support.microsoft.com/help/) Addressed an issue in which a black screen appears when launching an application on Citrix XenApp that was deployed from Windows Server 2016. For more details, see [CTX225819](https://support.citrix.com/article/CTX225819).  
+- [KB4034661](https://support.microsoft.com/help/4034661) Addressed an issue in which a black screen appears when launching an application on Citrix XenApp that was deployed from Windows Server 2016. For more details, see [CTX225819](https://support.citrix.com/article/CTX225819).  
 - [KB4025334](https://support.microsoft.com/help/4034661) Addressed an issue in which a remote desktop connection with Windows 2016 RDS server fails authentication when using smartcards.  
 - [KB4019472](https://support.microsoft.com/help/4019472) Addressed an issue that causes a device to crash every time that a user logs off from a remote session by using a Virtual Desktop Agent (VDA).  
 - [KB4013429](https://support.microsoft.com/help/4013429) Addressed an issue in which Remote Desktop Servers crash with aStop 0x27in RxSelectAndSwitchPagingFileObject when RDP clients connect and utilize redirected drives, printers, or removable USB drives.  
@@ -251,17 +251,17 @@ Device Redirection & Printing
 - [KB4057142](https://support.microsoft.com/help/4057142) Addressed an issue where RDP USB CD/DVD drive redirection fails with error "This device cannot start. (Code 10).  STATUS_DEVICE_POWER_FAILURE."
 - [KB4038801](https://support.microsoft.com/help/4038801) Addressed an issue in which redirecting multiple RemoteFX USB devices causes a Stop error.  
 - [KB4038801](https://support.microsoft.com/help/4038801) Addressed an issue in which using a smart card to log on to a Remote Desktop Server sometimes causes the server to stop responding.
-- [KB4011347](https://support.microsoft.com/help/) Addressed an issue in which l andscape print jobs submitted over RDP printer redirection are clipped in v4 print drivers.  
+- [KB4011347](https://support.microsoft.com/help/4011347) Addressed an issue in which l andscape print jobs submitted over RDP printer redirection are clipped in v4 print drivers.  
 
 Licensing  
 
-- [KB4457127](https://support.microsoft.com/help/) Addresses an issue that displays the report date as "Unknown" in the Remote Desktop License Manager.
+- [KB4457127](https://support.microsoft.com/help/4457127) Addresses an issue that displays the report date as "Unknown" in the Remote Desktop License Manager.
 - [KB4088889](https://support.microsoft.com/help/4088889) Addressed an issue where Remote Desktop License report is corrupted when it reaches greater than 4Kb size limit.
-- [KB4022723](https://support.microsoft.com/help/) Addressed an issue in which a 2012 R2 (or earlier version) Remote Desktop License Server causes the 2016 Remote Desktop Services Host to crash and stop giving sessions to clients.  
+- [KB4022723](https://support.microsoft.com/help/4022723) Addressed an issue in which a 2012 R2 (or earlier version) Remote Desktop License Server causes the 2016 Remote Desktop Services Host to crash and stop giving sessions to clients.  
 
 MultiPoint Services  
 
-- [KB4093120](https://support.microsoft.com/help/) Addresses an issue in Windows Multipoint Server 2016 that may generate the error "The MultiPoint service is not responding on this machine. To fix the issue try restarting the machine."  
+- [KB4093120](https://support.microsoft.com/help/4093120) Addresses an issue in Windows Multipoint Server 2016 that may generate the error "The MultiPoint service is not responding on this machine. To fix the issue try restarting the machine."  
 - [KB4025334](https://support.microsoft.com/help/4025334) Addressed an issue in which Windows Multipoint Server (WMS) 2016 doesn't allow you to configure per device licensing.  
 - [KB4025334](https://support.microsoft.com/help/4025334) Addressed an issue in Windows Multipoint Server 2016 where DisplayToast () fails when using a custom shell.  
 - [KB4019472](https://support.microsoft.com/help/4019472) Addressed an issue in which MultiPoint is not supporting Windows 10 resolutions.  

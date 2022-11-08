@@ -3,21 +3,21 @@ title: SMS Agent Host service not starts
 description: Describes a problem that occurs when the system path variable is incorrect on the client computer. Provides two methods to resolve the problem.
 ms.date: 10/19/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, steverac
-ms.prod-support-area-path: WMI 
+ms.custom: sap:wmi, csstroubleshoot
 ms.technology: windows-client-system-management-components
 ---
 # The SMS Agent Host service does not start after you restart a Systems Management Server 2003 client computer
 
 This article provides a resolution for the issue that SMS Agent Host service does not start after you restart a Systems Management Server 2003 client computer.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 922362
 
 >[!IMPORTANT]

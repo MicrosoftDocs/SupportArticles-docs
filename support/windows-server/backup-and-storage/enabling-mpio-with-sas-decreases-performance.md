@@ -4,20 +4,20 @@ description: After enabling MPIO when using Storage Spaces and SAS storage, stor
 ms.date: 09/16/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Multipath I/O (MPIO) and Storport
+ms.custom: sap:multipath-i/o-mpio-and-storport, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # Enabling MPIO with SAS Storage decreases performance
 
 This article provides help to solve an issue where sequential write performance of disks decreases by approximately 50% after you enable the Multipath I/O (MPIO) feature on a system using Serial Attached Storage (SAS) disks.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2744261
 
 ## Symptoms

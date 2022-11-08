@@ -3,34 +3,34 @@ title: You don't have permission error
 description: Helps to fix the error "You don't have permission" when you try to mount an ISO image.
 ms.date: 10/09/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, dewitth, ctimon
-ms.prod-support-area-path: Partition and volume management
+ms.custom: sap:partition-and-volume-management, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # "You don't have permission" error message when you try to mount an ISO image
 
 This article helps to fix the error "You don't have permission" when you try to mount an ISO image.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2993573
 
 ## Symptoms
 
 When you try to mount an ISO image in Windows Server 2012 R2, Windows Server 2012, Windows 8.1, or Windows 8, you receive the following error message:
 
->Couldn't Mount File
+> Couldn't Mount File
 >
->You don't have permission to mount the file.
+> You don't have permission to mount the file.
 
 The message window is shown in the following screenshot.
 
-![couldn't mount file error](./media/you-dont-have-permission-error-mount-iso-image/could-not-mount-file.png)
+:::image type="content" source="media/you-dont-have-permission-error-mount-iso-image/could-not-mount-file.png" alt-text="You don't have permission to mount the file error that occurs when you mount an I S O image." border="false":::
 
 This problem occurs when you perform either of the following operations:  
 

@@ -2,7 +2,6 @@
 title: The Create Virtual Machine Wizard fails if the cloud contains special characters
 description: Fixes an issue where the Create Virtual Machine Wizard fails when you try to deploy the new VM to a cloud that has special characters in its name.
 ms.date: 07/17/2020
-ms.prod-support-area-path:
 ms.reviewer: markstan
 ---
 # The Create Virtual Machine Wizard fails if the cloud contains special characters
@@ -27,7 +26,7 @@ This error can occur when attempting to deploy to a cloud that has square bracke
 
 ## Resolution
 
-To resolve this error, navigate to **VMs and Services**, and then expand **Clouds** on the upper left-hand pane of the Virtual Machine Manager console to locate the cloud with square brackets in its name. Right-click the cloud and choose **Properties**. On the **General** tab, delete the brackets in the name of the cloud.
+To resolve this error, navigate to **VMs and Services**, and then expand **Clouds** on the upper left-hand pane of the Virtual Machine Manager console to locate the cloud with square brackets in its name. Right-click the cloud and choose **Properties**. On the **General** tab, delete the brackets in the name of the cloud.
 
 ## More information
 

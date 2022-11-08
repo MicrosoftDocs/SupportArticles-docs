@@ -3,21 +3,21 @@ title: Copying .EXE files may result in a sharing violation error - Folder In Us
 description: Provides a resolution to a sharing violation error when copying .exe files.
 ms.date: 09/14/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, raackley
-ms.prod-support-area-path: Applications
+ms.custom: sap:applications, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # Copying .EXE files may result in a sharing violation error - Folder In Use
 
 This article provides a resolution to a sharing violation error that occurs when copying .exe files.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2503886
 
 ## Symptoms

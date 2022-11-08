@@ -2,7 +2,6 @@
 title: Unable to protect a SharePoint farm
 description: Trying to protect a SharePoint farm with DPM may result in errors if SQL Server aliasing is used incorrectly.
 ms.date: 07/27/2020
-ms.prod-support-area-path:
 ms.reviewer: wawhit, cbutch
 ---
 # Unable to protect a SharePoint farm with System Center Data Protection Manager
@@ -22,7 +21,7 @@ This error message can be caused by an improperly configured SQL Server alias.
 
 ## Configure 64-bit SQL Server alias
 
-1. Start cliconfg.exe from each WFE server in the farm.
+1. Start cliconfg.exe from each WFE server in the farm.
 2. Navigate to the **Alias** tab.
 3. Select **Add...**
 4. Enter the name of the alias in the **Server Alias:** window.
@@ -32,7 +31,7 @@ This error message can be caused by an improperly configured SQL Server alias.
 
 ## Configure 32-bit SQL Server alias
 
-1. On all WFE servers, open SQL Server Configuration Manager (installation of SQL Server Configuration Manager is required unless it already exists. For SharePoint 2010, install SQL Server 2008 Client Tools Connectivity).
+1. On all WFE servers, open SQL Server Configuration Manager (installation of SQL Server Configuration Manager is required unless it already exists. For SharePoint 2010, install SQL Server 2008 Client Tools Connectivity).
 2. From the SQL Server Configuration Manager, expand the **SQL Native Client 10.0 Configuration (32-bit)** and click the **Aliases**.
 3. In the right panel, right-click and select **New Alias...**
 4. For the **Alias Name**, enter the name of the alias being used.

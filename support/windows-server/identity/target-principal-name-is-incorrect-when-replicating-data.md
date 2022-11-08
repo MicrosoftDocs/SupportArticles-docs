@@ -4,20 +4,20 @@ description: Provides a solution to an error that occurs when you manually repli
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Error (Target Principal Name is incorrect) when manually replicating data between domain controllers
 
 This article provides a solution to an error that occurs when you manually replicate data between domain controllers.
 
-_Original product version:_ &nbsp; Windows 2000  
+_Applies to:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 288167
 
 > [!NOTE]
@@ -35,19 +35,23 @@ Or
 
 In addition, the following event ID messages may be logged in the system log:
 
-> Event Source: Netlogon  
+```output
+Event Source: Netlogon  
 Event Category: None  
 Event ID: 3210  
 User: N/A  
 Event Description:  
-Failed to authenticate with \\\\**DOMAINDC**, a Windows NT domain controller for domain **DOMAIN**.
+Failed to authenticate with \\DOMAINDC, a Windows NT domain controller for domain DOMAIN.
+```
 
-> Event Source: Netlogon  
+```output
+Event Source: Netlogon  
 Event ID: 5722  
 Event Category: None  
 User: N/A  
 Event Description:  
-The session setup from the computer **1** failed to authenticate. The name of the account referenced in the security database is **2**. The following error occurred: **n3**
+The session setup from the computer 1 failed to authenticate. The name of the account referenced in the security database is 2. The following error occurred: n3
+```
 
 ## Resolution
 
@@ -95,7 +99,9 @@ When this problem occurs, numerous errors may be reported in the event logs. The
 - The Sysvol folder on the domain controller was not shared out.
 - The domain controller did not have the full file structure under the **Domain_name** folder and the Policies folder that is located in %SystemRoot%\\Sysvol\\Sysvol\\**Domain_name**\\Policies. The following event is an example of an event that may be reported:
 
-    > Event ID: 3034  
-    Type: Warning  
-    Source: MRxSmb  
-    Description: The redirector was unable to initialize security context or query context attributes.
+  ```output
+  Event ID: 3034  
+  Type: Warning  
+  Source: MRxSmb  
+  Description: The redirector was unable to initialize security context or query context attributes.
+  ```

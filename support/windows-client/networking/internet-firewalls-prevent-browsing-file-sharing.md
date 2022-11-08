@@ -4,20 +4,20 @@ description: Explains that a firewall may keep you from searching or sharing fil
 ms.date: 09/22/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Windows Firewall with Advanced Security (WFAS)
+ms.custom: sap:windows-firewall-with-advanced-security-wfas, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # Internet firewalls can prevent browsing and file sharing
 
 Turning on a firewall may prevent you from searching or sharing files with other computers on a home network.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 298804
 
 ## Symptoms
@@ -50,7 +50,7 @@ A firewall is software or hardware that creates a protective barrier between you
 The following ports are associated with file sharing and server message block (SMB) communications:
 
 - Microsoft file sharing SMB: User Datagram Protocol (UDP) ports from 135 through 139 and Transmission Control Protocol (TCP) ports from 135 through 139.
-- Direct-hosted SMB traffic without a network basic input/output system (NetBIOS): port 445 (TCP and UPD).
+- Direct-hosted SMB traffic without a network basic input/output system (NetBIOS): port 445 (TCP and UDP).
 
 ### Technical support for Windows x64 editions
 

@@ -2,9 +2,9 @@
 title: An API causes an I/O not work correctly
 description: This article provides resolutions for the problem that a non-IFS LSP does not correctly support an I/O completion port when the user changes notification modes by using SetFileCompletionNotificationModes.
 ms.date: 09/24/2020
-ms.prod-support-area-path: Networking Development
+ms.custom: sap:Networking Development
 ms.reviewer: khorton, osmaner
-ms.prod: windows
+ms.technology: windows-dev-apps-networking-dev
 ---
 # SetFileCompletionNotificationModes API causes an I/O completion port not to work correctly if a non-IFS LSP is installed
 

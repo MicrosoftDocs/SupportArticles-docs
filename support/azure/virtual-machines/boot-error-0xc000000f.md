@@ -2,8 +2,10 @@
 title: Boot error code 0xC000000F in an Azure VM
 description: Fixes a Boot error code 0xc000000f that occurs on an Azure virtual machine (VM).
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: jarrettr
+ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
+ms.collection: windows
 ---
 # Boot error code 0xC000000F in an Azure VM
 
@@ -46,6 +48,9 @@ This issue occurs when one of following conditions is true:
 
 ## Resolution
 
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+
 To fix the issue, try the one of following resolutions:
 
 ### Resolution for error 1 and error 2
@@ -53,7 +58,7 @@ To fix the issue, try the one of following resolutions:
 #### Step 1: Attach the OS disk of the VM to another VM (troubleshooting VM) as a data disk
 
 1. Delete the virtual machine (VM). Make sure that you select the **Keep the disks** option when you do this.
-2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/attach-managed-disk-portal).
+2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
 3. Connect to the troubleshooting VM. Open **Computer management** > **Disk management**. Make sure that the OS disk is online and that its partitions have drive letters assigned.
 4. Identify the Boot partition and the Windows partition. If there's only one partition on the OS disk, this partition is the Boot partitionandthe Windows partition.
 
@@ -116,11 +121,13 @@ To fix the issue, try the one of following resolutions:
 
     For example, see the following screenshot.
 
-    :::image type="content" source="media/boot-error-code-0xc000000f/4015973_en_1.png" alt-text="Screenshot of Sample of the DIR command.":::
+    :::image type="content" source="media/boot-error-code-0xc000000f/dir-command-output.png" alt-text="Screenshot of the sample of the DIR command." border="false":::
 
     **Notes**:
 
-    - The screenshot shows volume E. However, the actual letter will appropriately reflect the one of the faulty drives (the OS disk attached as a data disk on the troubleshooting VM). 
+    - The screenshot shows volume E. However, the actual letter will appropriately reflect the one of the faulty drives (the OS disk attached as a data disk on the troubleshooting VM).
     - If the latest binary doesn't work, you can try the previous file version to obtain an earlier system update level on that component.
     - If the only binary that's returned in this step matches the file that you're trying to replace on the affected VM, and if both files have the same size and time stamp, you can replace the corrupted file by copying it from another working VM that has the same OS and, if possible, the same system update level.
-5. Detach the repaired disk from the troubleshooting VM. Then, [create a VM from the OS disk](https://docs.microsoft.com/azure/virtual-machines/windows/create-vm-specialized-portal).
+5. Detach the repaired disk from the troubleshooting VM. Then, [create a VM from the OS disk](/azure/virtual-machines/windows/create-vm-specialized-portal).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

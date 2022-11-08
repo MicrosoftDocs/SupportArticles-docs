@@ -3,21 +3,21 @@ title: How to download updates that include drivers and hotfixes from the Window
 description: Describes how to obtain updates, WHQL drivers, and hotfixes from the Windows Update Catalog. This information is for advanced users only.
 ms.date: 12/04/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, chughes
-ms.prod-support-area-path: Servicing
+ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # How to download updates that include drivers and hotfixes from the Windows Update Catalog
 
 This article discusses how to download updates from the Windows Update Catalog.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 323166
 
 ## Introduction
@@ -56,7 +56,7 @@ To search for updates from the Windows Update Catalog, follow these steps:
 1. In the **Search** text box, type your search terms. For example, you might type *Windows Vista Security*.
 2. Click **Search**, or press **Enter**.
 3. Browse the list that is displayed to select the updates that you want to download.
-4. Click **Download** to download the updates.
+4. Click **Download** to download the updates.
 5. To search for additional updates to download, repeat steps 2a through 2d.
 
 ### Step 3: Download updates
@@ -64,8 +64,8 @@ To search for updates from the Windows Update Catalog, follow these steps:
 To download updates from the Windows Update Catalog, follow these steps:
 
 1. Click the **Download** button under **Search** box.
-2. Click the updates link on the pop-up page and **Save** to the default path, or right-click the link and select **Save target as**  to the specified path. You can either type the full path of the folder, or you can click **Browse**  to locate the folder.
-3. Close the **Download** and the **Windows Update Catalog** Window.
+2. Click the updates link on the pop-up page and **Save** to the default path, or right-click the link and select **Save target as**  to the specified path. You can either type the full path of the folder, or you can click **Browse**  to locate the folder.
+3. Close the **Download** and the **Windows Update Catalog** Window.
 4. Find the location that you specified in step 3b.
     > [!NOTE]
     > If you have downloaded device drivers for installation, go to "Installing Drivers."
@@ -145,11 +145,9 @@ For more information about how to install multiple updates or multiple hotfixes 
 
 ### Microsoft security resources
 
-For the latest Microsoft security resources such as security tools, security bulletins, virus alerts, and general security guidance, visit the following Microsoft Web site:  
-[Microsoft Docs](https://www.microsoft.com/TechNet/Security/)
+For the latest Microsoft security resources such as security tools, security bulletins, virus alerts, and general security guidance, see [Security documentation](/security/).
 
-For more information about the Microsoft Baseline Security Analyzer tool (MBSA), visit the following Microsoft Web site:  
-[What is Microsoft Baseline Security Analyzer and its uses?](/windows/security/threat-protection/mbsa-removal-and-guidance)
+For more information about the Microsoft Baseline Security Analyzer tool (MBSA), see [What is Microsoft Baseline Security Analyzer and its uses?](/windows/security/threat-protection/mbsa-removal-and-guidance).
 
 ### The Microsoft Download Center
 

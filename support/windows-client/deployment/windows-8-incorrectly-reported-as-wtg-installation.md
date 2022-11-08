@@ -4,21 +4,21 @@ description: Discusses issues that occur when Windows 8 is improperly identified
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Setup
+ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # Multiple operations fail if Windows 8 is improperly identified as a Windows To Go installation
 
 This article discusses issues that occur when Windows 8 is improperly identified as a Windows To Go installation.
 
-_Original product version:_ &nbsp;Windows 8  
-_Original KB number:_ &nbsp;2778881
+_Applies to:_ &nbsp; Windows 8  
+_Original KB number:_ &nbsp; 2778881
 
 ## Symptoms
 

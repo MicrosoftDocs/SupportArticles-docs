@@ -2,8 +2,10 @@
 title: Running Windows Server 2003 on Microsoft Azure
 description: Provides information about Windows Server 2003 support and answers some of the most common questions about running Windows Server 2003 on Microsoft Azure.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
+ms.subservice: vm-support-statements
+ms.collection: windows
 ---
 # Running Windows Server 2003 on Microsoft Azure
 
@@ -34,7 +36,7 @@ Yes.
 
 Yes. You can create a Windows Server 2003 Azure VM from specialized VHD only, not from generalized (Syspreped) VHD.
 
-**Can I create a new Windows Server 2003 VM from the Azure Marketplace?** 
+**Can I create a new Windows Server 2003 VM from the Azure Marketplace?**
 
 For versions that are earlier than Windows Server 2008 R2, there is no Azure Marketplace support. you must provide your own specialized operating system VHD for new Windows Server 2003 VMs.
 
@@ -44,7 +46,7 @@ The Azure support team continues to offer assistance in troubleshooting issues t
 
 **Can I build custom images that contain updates provided by Microsoft through a custom support agreement?**
 
-Yes. You can create and upload [specialized VHD](https://docs.microsoft.com/azure/virtual-machines/windows/create-vm-specialized-portal)  only for your own use, including situations in which those images contain updates resulting from a custom support agreement.
+Yes. You can create and upload [specialized VHD](/azure/virtual-machines/windows/create-vm-specialized-portal)  only for your own use, including situations in which those images contain updates resulting from a custom support agreement.
 
 **Will I be able to import new Windows Server 2003 virtual machines after the end of extended support?**
   
@@ -76,3 +78,5 @@ The maximum supported VM size is two virtual processors. 64-bit OS has been repo
 **Is 32-bit version of Windows Server 2003 supported on Azure?**  
 
 A: Windows Server 2003 32-bit has the same level of support as 64-bit, but both operating systems are past their end of support date. Microsoft does not support operating systems that are past their [End of Support date](https://support.microsoft.com/lifecycle/search) without a Custom Support Agreement (CSA). However, the Azure infrastructure is supported. See [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines) for more information.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

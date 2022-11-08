@@ -2,22 +2,22 @@
 title: Deployment and operation of AD domains
 description: This article provides information about the deployment and operation of Windows member computers and domain controllers that are joined to Active Directory domains that are configured by using single-label DNS names.
 ms.date: 10/10/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
-ms.prod-support-area-path: DCPromo and the installation of domain controllers
+ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Deployment and operation of Active Directory domains that are configured by using single-label DNS names
 
 This article contains information about the deployment and operation of Active Directory (AD) domains that are configured by using single-label DNS names.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows 10, version 1809  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows 10, version 1809  
 _Original KB number:_ &nbsp; 300684
 
 ## Summary
@@ -143,7 +143,7 @@ Also without modification, an Active Directory domain member in a forest that co
     5. In the **Value data** box, type 1, and then select **OK**.
     6. Exit Registry Editor.
 
-    These configuration changes should be applied to all domain controllers and members of a domain that have single-label DNS names. If a domain that has a single-label domain name is a forest root, these configuration changes should be applied to all the domain controllers in the forest, unless the separate zones _msdcs. *ForestName*, _sites. *ForestName*, _tcp. *ForestName*, and _udp. *ForestName* are delegated from the *ForestName* zone.
+    These configuration changes should be applied to all domain controllers and members of a domain that have single-label DNS names. If a domain that has a single-label domain name is a forest root, these configuration changes should be applied to all the domain controllers in the forest, unless the separate zones _msdcs. _ForestName_, _sites. *ForestName*, _tcp. *ForestName*, and_udp. *ForestName* are delegated from the *ForestName* zone.
 
     For the changes to take effect, restart the computers where you changed the registry entries.
 
@@ -162,8 +162,7 @@ Use Group Policy to enable the Update Top Level Domain Zones policy and the Loca
 |---|---|
 |Update Top Level Domain Zones|Computer Configuration\Administrative Templates\Network\DNS Client|
 |Location of the DCs hosting a domain with single label DNS name|Computer Configuration\Administrative Templates\System\Net Logon\DC Locator DNS Records|
-|||
-
+  
 > [!NOTE]
 > These policies are supported only on Windows Server 2003-based computers and on Windows XP-based computers.
 
@@ -197,7 +196,7 @@ Root servers may be created by the DCpromo Wizard. If the "." zone exists, a roo
 
 - The Update Top Level Domain Zones policy
 
-    If this policy is specified, it creates a `REG_DWORD UpdateTopLevelDomainZones` entry under the following registry subkey: 
+    If this policy is specified, it creates a `REG_DWORD UpdateTopLevelDomainZones` entry under the following registry subkey:
         `HKLM\Software\Policies\Microsoft\Windows NT\DNSClient`  
     The following are the entry values for `UpdateTopLevelDomainZones`:
       - Enabled (0x1). A 0x1 setting means that computers may try to update the TopLevelDomain zones. That is, if the `UpdateTopLevelDomainZones` setting is enabled, computers to which this policy is applied send dynamic updates to any zone that is authoritative for the resource records that the computer must update, except for the root zone.

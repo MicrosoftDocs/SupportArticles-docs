@@ -1,0 +1,43 @@
+### YamlMime:Landing
+
+title: Power Automate troubleshooting # < 60 chars
+summary: Welcome to Power Automate troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Power Automate. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Power Automate troubleshooting
+  description: Landing page for Power Automate troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
+  ms.prod: power-platform #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: #Required; your GitHub user alias, with correct capitalization.
+  ms.author: #Required; microsoft alias of author; optional team alias.
+  ms.date: 3/31/2021
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+  # Card
+  - title: Administration
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Customize or format Date and Time values in a flow
+            url: how-to-customize-or-format-date-and-time-values-in-flow.md
+
+  # Card
+  - title: Documentation and training
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Power Automate documentation
+            url: /power-automate/
+          - text: Power Automate training
+            url: /training/powerplatform/power-automate
+
+  # Card
+  - title: Support Resources
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Power Automate support
+            url: https://powerautomate.microsoft.com/support/
+          - text: Power Automate Community forum
+            url: https://powerusers.microsoft.com/t5/Microsoft-Power-Automate/ct-p/MPACommunity

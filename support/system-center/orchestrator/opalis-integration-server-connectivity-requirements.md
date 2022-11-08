@@ -2,12 +2,11 @@
 title: Opalis Integration Server connectivity requirements
 description: Describes the connectivity requirements for the various Opalis Integration Server components to interact with each other.
 ms.date: 08/04/2020
-ms.prod-support-area-path:
 ms.reviewer: jfanjoy
 ---
 # Overview of Opalis Integration Server connectivity requirements
 
-This article outlines the connectivity requirements for the various Opalis Integration Server components to interact with each other. If firewalls exist between the various components, rules may need to be introduced in your environment in order to allow the components to communicate.
+This article outlines the connectivity requirements for the various Opalis Integration Server components to interact with each other. If firewalls exist between the various components, rules may need to be introduced in your environment in order to allow the components to communicate.
 
 _Original product version:_ &nbsp; System Center Orchestrator  
 _Original KB number:_ &nbsp; 2299893

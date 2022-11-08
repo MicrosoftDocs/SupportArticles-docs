@@ -4,21 +4,21 @@ description: This article fixes an error when you click the Reports tab in MBAM.
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: manojse, kaushika
-ms.prod-support-area-path: Bitlocker
+ms.custom: sap:bitlocker, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # Error message when you click Reports tab in MBAM: Server Error in /Reports Application
 
 This article fixes an error when you click the Reports tab in MBAM.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2, Windows 10 – all editions  
-_Original KB number:_ &nbsp;2620287
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 – all editions  
+_Original KB number:_ &nbsp; 2620287
 
 ## Symptoms
 
@@ -32,7 +32,7 @@ When you try to View Reports on Microsoft BitLocker Administration and Monitorin
 >
 > Requested URL: /reports/Pages/ReportViewer.aspx
 
-![MBAM reports error](./media/server-error-click-reports-tab-mbam/mbam-reports-error.png)
+:::image type="content" source="media/server-error-click-reports-tab-mbam/mbam-reports-error.png" alt-text="Screenshot of the BitLocker Administration and Monitoring window which shows the error message.":::
 
 ## Cause
 
@@ -59,7 +59,7 @@ If the DNS isn't able to resolve the local host correctly, you'll see the error 
 
     Now you can view the Reports in MBAM.
 
-    ![MBAM reports](./media/server-error-click-reports-tab-mbam/mbam-reports.png)
+    :::image type="content" source="media/server-error-click-reports-tab-mbam/mbam-reports.png" alt-text="Screenshot of the BitLocker Administration and Monitoring window which has the Reports option selected on the left pane.":::
 
 ## More information
 

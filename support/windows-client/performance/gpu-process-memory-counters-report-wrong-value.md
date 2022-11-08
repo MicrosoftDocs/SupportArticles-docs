@@ -1,24 +1,24 @@
 ---
 title: GPU Process Memory counters report incorrect value
 description: Discusses an issue where Graphics Processing Unit (GPU) process memory counters show memory leaks for running applications and report incorrect values.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-tea, winsrv, v-jesits
-ms.prod-support-area-path: Performance monitoring tools
+ms.custom: sap:performance-monitoring-tools, csstroubleshoot
 ms.technology: windows-client-performance
 ---
 # GPU process memory counters report incorrect values
 
 This article discusses an issue where Graphics Processing Unit (GPU) process memory counters show memory leaks for running applications and report incorrect values.
 
-_Original product version:_ &nbsp;Windows 10 - all editions  
-_Original KB number:_ &nbsp;4490156
+_Applies to:_ &nbsp; Windows 10 - all editions  
+_Original KB number:_ &nbsp; 4490156
 
 ## Symptoms
 
@@ -52,4 +52,4 @@ Graphics Processing Unit (GPU) process memory counters appear to show memory lea
 
 This is a known issue in Windows 10. To monitor dedicated GPU memory on affected systems, use the **Performance** pane of Task Manager, WPR, or WPA.
 For more information about the GPU process memory counters, see [GPUs in the Task Manager](https://devblogs.microsoft.com/directx/gpus-in-the-task-manager/).
-For more information about WPR and WPA, see [Windows Performance Toolkit](https://docs.microsoft.com/windows-hardware/test/wpt/).
+For more information about WPR and WPA, see [Windows Performance Toolkit](/windows-hardware/test/wpt/).

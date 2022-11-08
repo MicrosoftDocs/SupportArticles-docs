@@ -3,21 +3,21 @@ title: Restrict use of a computer to one domain user only
 description: Describes how to restrict use of a computer to one domain user only.
 ms.date: 09/27/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: User, computer, group, and object management
+ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # How to restrict use of a computer to one domain user only
 
 This article describes how to restrict use of a computer to one domain user only.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 555317
 
 This article was written by [Yuval Sinay](https://mvp.microsoft.com/en-US/PublicProfile/7674?fullName=Yuval%20Sinay), Microsoft MVP.
@@ -41,7 +41,7 @@ By using group policy capabilities in Windows 2000/2003 Domain, you can prevent 
 
       > [!NOTE]
       > Some services (Like Backup software services) may effect by this policy, and wouldn't function.
-       To eliminate future problems, apply this policy and use GPO security filter feather.
+       To eliminate future problems, apply this policy and use GPO security filter feature.
 
        Deny logon locally
 

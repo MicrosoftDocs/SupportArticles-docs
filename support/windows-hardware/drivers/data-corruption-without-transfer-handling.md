@@ -2,8 +2,9 @@
 title: Data corruption without special transfer handling
 description: This article provides resolutions for the problem where data corruption may occur without special handling of the transfer.
 ms.date: 09/02/2020
-ms.prod-support-area-path: Storage Driver
+ms.custom: sap:Storage Driver
 ms.reviewer: RonH
+ms.technology: windows-hardware-storage-driver
 ---
 # Data corruption without special handling of the transfer
 

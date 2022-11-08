@@ -4,21 +4,21 @@ description: Resolves an issue where error (The supplied password does not match
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, tonnyp
-ms.prod-support-area-path: Active Directory Migration Tool (ADMT)
+ms.custom: sap:active-directory-migration-tool-admt, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # ADMT 3.1 PES installation fails with error: The supplied password does not match this encryption key's password
 
 This article helps resolves an issue where an "The supplied password does not match this encryption key's password" error occurs when you configure the Password Export Server (PES) service on Active Directory Migration Tool version 3.1.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2004090
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2004090
 
 ## Symptoms
 
@@ -59,4 +59,3 @@ Whoami /groups output:
 | BUILTIN\Administrators| Alias| S-1-5-32-544| Group used for deny only |
 | BUILTIN\Users| Alias| S-1-5-32-545| Mandatory group, Enabled by default, Enabled group |
 | ....||| |
-|||||

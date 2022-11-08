@@ -2,22 +2,22 @@
 title: Run programs automatically
 description: Describes how to use group policies in Windows 2000 to configure a program to run automatically when a user signs in.
 ms.date: 09/27/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Task Scheduler
+ms.custom: sap:task-scheduler, csstroubleshoot
 ms.technology: windows-client-system-management-components
 ---
 # How to run programs automatically when a user logs on
 
 This article describes how to use group policies in Windows 2000 to configure a program to run automatically when a user signs in.
 
-_Original product version:_ &nbsp; Windows 2000  
+_Applies to:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 240791
 
 ## Summary
@@ -26,14 +26,14 @@ You can apply a policy to an individual user or to a computer, and you can use a
 
 - To configure Notepad to run when any user signs in to a specific computer:
   1. Edit the following group policy:  
-      Computer Configuration\Administrative Templates\System\Run These Programs at User Logon
+      Computer Configuration\\Administrative Templates\\System\\Logon\\Run These Programs at User Logon
 
   2. Type the full path name of the program. In this example, type the following path name:  
       `c:\%windir%\system32\notepad.exe`
 
 - To configure Notepad to run when a specific user logs on (regardless of the computer he or she uses):
   1. Edit the following group policy:  
-      User Configuration\Administrative Templates\System\Run These Programs at User Logon
+      User Configuration\\Administrative Templates\\System\\Run These Programs at User Logon
 
   2. Type the full path name of the program.
 

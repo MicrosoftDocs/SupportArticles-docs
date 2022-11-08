@@ -4,24 +4,21 @@ description: Describes the TCP Chimney offload feature in Windows Server 2008. D
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---
 # Information about the TCP Chimney Offload, Receive Side Scaling, and Network Direct Memory Access features in Windows Server 2008
 
 This article describes the TCP Chimney Offload, Receive Side Scaling (RSS), and Network Direct Memory Access (NetDMA) features that are available for the TCP/IP protocol in Windows Server 2008.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 951037
-
-> [!NOTE]
-> Not sure if this is the right fix? We've added this issue to our [memory dump diagnostic](https://home.diagnostics.support.microsoft.com/selfhelp?knowledgebasearticlefilter=2027760) which can confirm.
 
 ## TCP Chimney Offload overview
 
@@ -81,8 +78,7 @@ When the TCP Chimney Offload technology offloads TCP/IP processing for a given T
 |Network Load Balancing (NLB) service|No|If you configure the NLB service on a server, the TCP/IP stack does not offload TCP connections.|
 |Cluster service|Yes|However, note that TCP connections using the Network Fault Tolerant driver (NetFT.sys) will not be offloaded. NetFT is used for fault-tolerant inter-node cluster communication.|
 |Network Address Translation (NAT) service (also known as the Internet Connection Sharing service)|No|If this service is installed and running, the TCP/IP stack does not offload connections.|
-||||
-
+  
 ## How to determine whether TCP Chimney Offload is working
 
 When TCP Chimney Offload is enabled in the operating system and in the network adapter, the TCP/IP stack tries to offload suitable TCP connections to the network adapter. To find out which of the currently established TCP connections on the system are offloaded, follow these steps:
@@ -92,12 +88,14 @@ When TCP Chimney Offload is enabled in the operating system and in the network a
 
     You receive output that resembles the following:
 
-    > Active Connections
-    >
-    > Proto Local Address Foreign Address State Offload State
-    >
-    > TCP 127.0.0.1:52613 computer_name:52614 ESTABLISHED InHost
+    ```output
+    Active Connections
+
+    Proto Local Address Foreign Address State Offload State
+    
+    TCP 127.0.0.1:52613 computer_name:52614 ESTABLISHED InHost
     TCP 192.168.1.103:52614 computer_name:52613 ESTABLISHED Offloaded
+    ```
 
     In this output, the second connection is offloaded.
 
@@ -120,9 +118,11 @@ To determine the current status of RSS, follow these steps:
 
 When you use a command to enable RSS, you receive the following message:
 
-> TCP Global Parameters  
-\----------------------------------------------  
+```output
+TCP Global Parameters  
+----------------------------------------------  
 Receive-Side Scaling State: enabled
+```
 
 > [!NOTE]
 > By default, RSS is enabled.
@@ -131,15 +131,15 @@ Receive-Side Scaling State: enabled
 
 To enable or disable NetDMA, follow these steps:
 
-1. Click **Start**, click **Run**, type *regedit*, and then click **OK**.
+1. Click **Start**, click **Run**, type _regedit_, and then click **OK**.
 2. Locate the following registry subkey, and then click it:  
  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
 3. Double-click the **EnableTCPA** registry entry.
 
     > [!NOTE]
     > If this registry entry does not exist, right-click **Parameters**, point to **New**, click **DWORD Value**, type EnableTCPA , and then press ENTER.
-4. To enable NetDMA, type *1* in the **Value data** box, and then click **OK**.
-5. To disable NetDMA, type *0* in the **Value data** box, and then click **OK**.
+4. To enable NetDMA, type _1_ in the **Value data** box, and then click **OK**.
+5. To disable NetDMA, type _0_ in the **Value data** box, and then click **OK**.
 6. If the EnableTCPA registry entry does not exist, enable the NetDMA functionality.
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)] 
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

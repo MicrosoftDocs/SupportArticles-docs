@@ -11,11 +11,51 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 12/18/2020
+  ms.date: 8/12/2022
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
+
+ # Card
+  - title: Troubleshooting deployment failures in Cloud Services (classic)
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: InvalidModel exception
+            url: ./troubleshoot-mismatched-config.md
+          - text: Role recycle threshold exceptions
+            url: ./troubleshoot-role-recycle-swap.md
+          - text: SubscriptionPolicyCountExceeded exception
+            url: ./troubleshoot-subscription-policy.md
+          - text: VIP swap failures
+            url: ./troubleshoot-vip-swap.md
+
+ # Card
+  - title: Troubleshooting Cloud Services (extended support)
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Application pool is crashing
+            url: ./application-pool-crashes.md
+          - text: Disk partition preservation
+            url: ./disk-partition-preservation.md
+          - text: Enable HTTPS communication
+            url: ./enable-https-communication.md
+          - text: FAQ about role instance restarts due to OS upgrades
+            url: ./role-instance-restarts-faq.yml
+          - text: Gather log files for offline analysis and preservation
+            url: ./gather-log-files-offline-analysis-preservation.md
+          - text: No space on the E or F drive
+            url: ./no-space-e-f-drive.md
+          - text: Read key vault certificate secrets from an app
+            url: ./read-key-vault-certificate-secrets-from-cloud-service-app.md
+          - text: Role instance restarts due to OS upgrades
+            url: ./role-instance-restarts-os-upgrade.md
+          - text: Roles that fail to start
+            url: ./role-startup-failure.md
+          - text: Windows PaaS compute diagnostic data
+            url: ./windows-azure-paas-compute-diagnostic-data.md
 
  # Card
   - title: Troubleshooting Series for developers

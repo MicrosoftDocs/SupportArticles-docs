@@ -2,7 +2,7 @@
 title: Fix permission problem when you move MSDB database
 description: This article provides resolutions for permission problems that occur when you move MSDB database between different instances.
 ms.date: 07/22/2020
-ms.prod-support-area-path: Security Issues
+ms.custom: sap:Security Issues
 ms.reviewer: ericbu
 ms.prod: sql
 ---

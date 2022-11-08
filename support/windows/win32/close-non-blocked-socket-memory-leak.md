@@ -2,8 +2,9 @@
 title: Closing non-blocking socket causes leak
 description: Closing a non-blocking socket with linger enabled and the linger timeout set to 0 may cause a leak. This problem occurs if the other end of the connection is unresponsive.
 ms.date: 03/09/2020
-ms.prod-support-area-path: Networking development
+ms.custom: sap:Networking development
 ms.reviewer: atuck
+ms.technology: windows-dev-apps-networking-dev
 ---
 # Closing a non-blocking socket with linger enabled may cause leak
 

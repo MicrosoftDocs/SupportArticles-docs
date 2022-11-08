@@ -3,29 +3,29 @@ title: SMB features don't work with non-default cluster network name configurati
 description: Describes an issue in which some SMB features don't work correctly together with non-default cluster network name configuration in Windows Server 2012 R2.
 ms.date: 12/04/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, bhogen, v-jeffbo
-ms.prod-support-area-path: Setup and configuration of clustered services and applications
+ms.custom: sap:setup-and-configuration-of-clustered-services-and-applications, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # SMB features don't work with non-default cluster network name configuration on Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012
 
 This article describes an issue in which some SMB features don't work correctly together with non-default cluster network name configuration in Windows Server 2012 R2.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4018013
 
 ## Symptoms
 
 Consider the following scenario:
 
-- You're using a Windows Server 2012, Windows Server 2012 R2, or Windows Server 2016 cluster.
-- You changed the **Properties** for the cluster network name resource so that the **DNSName** and **Name** property are different than the **Name** of the cluster network name resource. For example, you run the following PowerShell cmdlet:
+- You're using a Windows Server 2012, Windows Server 2012 R2, or Windows Server 2016 cluster.
+- You changed the **Properties** for the cluster network name resource so that the **DNSName** and **Name** property are different than the **Name** of the cluster network name resource. For example, you run the following PowerShell cmdlet:
 
     ```powershell
     Get-ClusterResource "ClusterNetworkNameResource" | Get-ClusterParameter
@@ -37,7 +37,7 @@ Consider the following scenario:
 
 - You create a file share in this cluster group with the **CA Feature** enabled.
 
-In this scenario, the CA Feature doesn't work correctly, and you receive the following event in the SMBWitnessClient log:
+In this scenario, the CA Feature doesn't work correctly, and you receive the following event in the SMBWitnessClient log:
 
 > Log Name: WitnessClientAdmin  
 Source: Microsoft-Windows-SMBWitnessClient  
@@ -47,7 +47,7 @@ Description:
 witness client failed to register with Witness Server for notification on NetName with error (The parameter is incorrect.)
 
 > [!Note]
-> This event could also be logged with for a file share without the CA feature enabled.
+> This event could also be logged with for a file share without the CA feature enabled.
 
 ## Cause
 

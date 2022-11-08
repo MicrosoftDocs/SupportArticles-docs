@@ -1,11 +1,12 @@
 ---
-title: Access denied when you connect to Source Control 
+title: Access denied when you connect to Source Control
 description: This article discusses an access denied problem that occurs when you connect to Source Control or build components in Team Foundation Server.
-ms.prod: devops
 ms.date: 08/14/2020
-ms.prod-support-area-path: Pipelines
+ms.custom: sap:Pipelines
 ms.reviewer: manojm, georgea, ccoop, davean
 ms.topic: article
+ms.service: azure-devops
+ms.subservice: ts-pipelines
 ---
 # 'Access denied' error message for a different user when you connect to Source Control or build components in Team Foundation Server
 
@@ -36,3 +37,5 @@ In these error messages, a random user (`domain\UserX`) does not have access. Th
 ## More information
 
 You may experience this issue when you use Big-IP F5 load balancer together with the **OneConnect** option. Disable **OneConnect** to work around the problem in this scenario.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

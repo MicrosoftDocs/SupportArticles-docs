@@ -4,20 +4,20 @@ description: Discusses that you can't authenticate an account in AD FS 2.0, that
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory Federation Services (AD FS)
-ms.technology: windows-server-active-directory 
+ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
+ms.technology: windows-server-active-directory
 ---
 # ADFS 2.0 error: 401 The requested resource requires user authentication
 
 This article discusses an issue where you're prompted for credentials and event 111 is logged when you authenticate an account in Active Directory Federation Services (AD FS) 2.0.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3044976
 
 ## Summary
@@ -72,14 +72,14 @@ Locate the Federation Service Name, and check whether the name is registered und
     2. Right-click **ADFS 2.0**, and then select **Edit Federation Service Properties**.
     3. On the **General** tab, locate the Federation Service name field to see the name.
 
-        ![The screenshot for ADFS service name ](./media/adfs-error-401-requested-resource-requires-authentication/federation-service-name.jpg)
+        :::image type="content" source="media/adfs-error-401-requested-resource-requires-authentication/edit-federation-service-name.png" alt-text="Screenshot of the Federation Service Properties window where you can check the Federation Service name.":::
 
 2. Check whether HOST/**\<Federation Service Name>**  name is registered under the AD FS service account:
     1. Open the Management snap-in. To do this, click **Start**, click **All Programs**, click **Administrative Tools**, and then click **Services**.
     2. Double-click **AD FS (2.0) Windows Service**.
     3. On the **Log On** tab, note the service account that's displayed in the **This account** field.
   
-        ![The screenshout about service account ](./media/adfs-error-401-requested-resource-requires-authentication/service-account-name.jpg)
+        :::image type="content" source="media/adfs-error-401-requested-resource-requires-authentication/service-account-name.png" alt-text="Screenshot of the AD FS 2.0 Windows Service Properties (Local Computer) window, in which the service account is displayed in the This account field.":::
   
     4. Click **Start**, click **All Programs**, click **Accessories**, right-click **Command Prompt**, and then click **Run as administrator**.
     5. Run the following command:
@@ -88,7 +88,7 @@ Locate the Federation Service Name, and check whether the name is registered und
         SETSPN -L domain\<ADFS Service Account>
         ```  
 
-        ![The screenshot for the result of setspn](./media/adfs-error-401-requested-resource-requires-authentication/setspn-result.jpg)
+        :::image type="content" source="media/adfs-error-401-requested-resource-requires-authentication/setspn-result.png" alt-text="Screenshot for the result of the setspn command.":::
 
 If the Federation Service name doesn't already exist, run the following command to add the service principal name (SPN) to the AD FS account:
 
@@ -96,7 +96,7 @@ If the Federation Service name doesn't already exist, run the following command 
 SetSPN -a host/<Federation service name> <username of service account>
 ```  
 
-![The screenshot for setspn command ](./media/adfs-error-401-requested-resource-requires-authentication/setspn-command.png)
+:::image type="content" source="media/adfs-error-401-requested-resource-requires-authentication/setspn-command.png" alt-text="Screenshot for the result of the setspn command, which is to add the service principal name.":::
 
 ### Step 3: Check for duplicate SPNs
 

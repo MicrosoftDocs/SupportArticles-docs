@@ -1,10 +1,11 @@
 ---
 title: Rename the Azure DevOps Service URL
 description: This article provides the steps to rename the URL of your Azure DevOps Service.
-ms.prod: devops
-ms.date: 08/17/2020
-ms.prod-support-area-path: Client Connectivity
+ms.date: 10/15/2020
+ms.custom: sap:Client Connectivity
 ms.topic: how-to
+ms.service: azure-devops
+ms.subservice: ts-client-connectivity
 ---
 # Things to do before and after you rename the URL of your Azure DevOps Service
 
@@ -24,7 +25,7 @@ On the **Settings** tab of the Team Foundation Account Administration UI, you ca
 
 ## Things to do after you rename the URL of your Azure DevOps Service
 
-We will not set up a redirect from your old Azure DevOps Service URL to the new URL. This means that the old URL will 404, and you will have to update existing connection strings to point to the new URL. Additionally, you may have to take one or more of the following actions, depending on your specific configuration and how you use the service:
+We will not set up a redirect from your previous Azure DevOps Service URL to the new URL. This means that the previous URL will 404, and you will have to update existing connection strings to point to the new URL. Additionally, you may have to take one or more of the following actions, depending on your specific configuration and how you use the service:
 
 - Update existing connection strings in Visual Studio to point to the new Azure DevOps Service URL:
 
@@ -32,7 +33,7 @@ We will not set up a redirect from your old Azure DevOps Service URL to the new 
   2. Click **Servers**, and then click **Add**.
   3. In the **Name or URL of Team Foundation Server** field, type your new Azure DevOps Service URL (`https://yournewaccount.visualstudio.com/`), and then click **OK**.
   4. Log on by using your Azure DevOps Service (LiveID) if you are prompted.
-  5. In the **Team Foundation Server list** dialog box, highlight the old Team Foundation Service URL, and then click **Remove**.
+  5. In the **Team Foundation Server list** dialog box, highlight the previous Team Foundation Service URL, and then click **Remove**.
   6. Click **Close**.
   7. In the **Select a Team Foundation Server** dialog box, click to select your Team Project check box, and then click **Connect**.
   8. Visual Studio warns you about projects and solutions that will be closed and asks you whether you want to continue. Click **Yes**.
@@ -49,7 +50,7 @@ We will not set up a redirect from your old Azure DevOps Service URL to the new 
   8. Click **Servers**, and then click **Add**.
   9. In the **Name or URL of Team Foundation Server** field, type your new Azure DevOps Service URL (`https://yournewaccount.visualstudio.com/`), and then click **OK**.
   10. Log on by using your Azure DevOps Service (LiveID) if you are prompted.
-  11. In the **Team Foundation Server list** dialog box, highlight the old Team Foundation Service URL, and then click **Remove**.
+  11. In the **Team Foundation Server list** dialog box, highlight the previous Team Foundation Service URL, and then click **Remove**.
   12. Click **Close**.
   13. In the **Select a Team Foundation Server** dialog box, click to select your Team Project by check box, and then click **Connect**.
   14. If you are using PowerPoint, click **Close** in the **Storyboard Links** dialog box.
@@ -72,17 +73,14 @@ We will not set up a redirect from your old Azure DevOps Service URL to the new 
 - Update Git remotes:
   1. In the web user interface, click the **Clone** button and copy the new Git URL.
   2. Open a command prompt window. Change the directory to the Git repository.
-  3. Update the remote URL. Assuming that the remote is named *origin*, the command would be: `git remote set-url origin <url_copied_from_web>`.
+  3. Update the remote URL. Assuming that the remote is named _origin_, the command would be: `git remote set-url origin <url_copied_from_web>`.
 
   > [!NOTE]
   > If you use Visual Studio, you may need to refresh Team Explorer.
 
-- Reconnect on-premises build servers that pointed to the old Azure DevOps Service:
+- Remove and re-configure the self-host agents that point to the previous Azure DevOps service URL.
+  - [Remove and re-configure the self-host Windows agents](/azure/devops/pipelines/agents/v2-windows#remove-and-re-configure-an-agent).
+  - [Remove and re-configure the self-host Linux agents](/azure/devops/pipelines/agents/v2-linux#remove-and-re-configure-an-agent).
+  - [Remove and re-configure the self-host macOS agents](/azure/devops/pipelines/agents/v2-osx#remove-and-re-configure-an-agent).
 
-  1. Open the Azure DevOps Service Admin console.
-  2. Select the **Build Configuration** node.
-  3. Click **Unregister** under your build server name in the **Build Configuration** pane.
-  4. Click **Register** in the **Build Configuration** pane.
-  5. Click **Browse** in the **Build Services Properties** dialog box.
-  6. Select your server in the **Connect to Team Project Collection** dialog box.
-  7. Click **Start** to start your build server.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

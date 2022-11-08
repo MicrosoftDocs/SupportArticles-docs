@@ -4,20 +4,20 @@ description: Discusses how to restrict the use of certain cryptographic algorith
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
+ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # Restrict the use of certain cryptographic algorithms and protocols in Schannel.dll
 
 This article describes how to restrict the use of certain cryptographic algorithms and protocols in the Schannel.dll file. This information also applies to independent software vendor (ISV) applications that are written for the Microsoft Cryptographic API (CAPI).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 245030
 
 > [!NOTE]
@@ -41,7 +41,7 @@ This article contains the necessary information to configure the TLS/SSL Securit
 
 ## Cipher suites
 
-Both SSL 3.0 and TLS 1.0 (RFC2246) with INTERNET-DRAFT *56-bit Export Cipher Suites For TLS draft-ietf-tls-56-bit-ciphersuites-00.txt* provide options to use different cipher suites. Each cipher suite determines the key exchange, authentication, encryption, and MAC algorithms that are used in an SSL/TLS session. When you use RSA as both key exchange and authentication algorithms, the term **RSA** appears only one time in the corresponding cipher suite definitions.
+Both SSL 3.0 and TLS 1.0 (RFC2246) with INTERNET-DRAFT _56-bit Export Cipher Suites For TLS draft-ietf-tls-56-bit-ciphersuites-00.txt_ provide options to use different cipher suites. Each cipher suite determines the key exchange, authentication, encryption, and MAC algorithms that are used in an SSL/TLS session. When you use RSA as both key exchange and authentication algorithms, the term **RSA** appears only one time in the corresponding cipher suite definitions.
 
 The Windows NT 4.0 Service Pack 6 Microsoft TLS/SSL Security Provider supports the following SSL 3.0-defined CipherSuite when you use the Base Cryptographic Provider or the Enhanced Cryptographic Provider:
 
@@ -55,8 +55,7 @@ The Windows NT 4.0 Service Pack 6 Microsoft TLS/SSL Security Provider supports t
 |SSL_RSA_WITH_3DES_EDE_CBC_SHA|`{ 0x00,0x0A }`|
 |SSL_RSA_EXPORT1024_WITH_DES_CBC_SHA|`{ 0x00,0x62 }`|
 |SSL_RSA_EXPORT1024_WITH_RC4_56_SHA|`{ 0x00,0x64 }`|
-|||
-
+  
 > [!NOTE]
 > Neither SSL_RSA_EXPORT1024_WITH_DES_CBC_SHA nor SSL_RSA_EXPORT1024_WITH_RC4_56_SHA is defined in SSL 3.0 text. However, several SSL 3.0 vendors support them. This includes Microsoft.
 
@@ -72,8 +71,7 @@ Windows NT 4.0 Service Pack 6 Microsoft TLS/SSL Security Provider also supports 
 |TLS_RSA_WITH_3DES_EDE_CBC_SHA|`{ 0x00,0x0A }`|
 |TLS_RSA_EXPORT1024_WITH_DES_CBC_SHA|`{ 0x00,0x62 }`|
 |TLS_RSA_EXPORT1024_WITH_RC4_56_SHA|`{ 0x00,0x64 }`|
-|||
-
+  
 > [!NOTE]
 > A cipher suite that is defined by using the first byte 0x00 is non-private and is used for open interoperable communications. Therefore, the Windows NT 4.0 Service Pack 6 Microsoft TLS/SSL Security Provider follows the procedures for using these cipher suites as specified in SSL 3.0 and TLS 1.0 to make sure of interoperability.
 
@@ -179,7 +177,7 @@ Create the SCHANNEL Ciphers subkey in the format: `SCHANNEL\(VALUE)\(VALUE/VALUE
 
 **DES 56**
 
-  Ciphers subkey: `SCHANNEL\Ciphers\RC2 56/56`
+  Ciphers subkey: `SCHANNEL\Ciphers\DES 56/56`
 
   This registry key refers to 56-bit DES as specified in FIPS 46-2. Its implementation in the Rsabase.dll and Rsaenh.dll files is validated under the FIPS 140-1 Cryptographic Module Validation Program.
 

@@ -1,10 +1,11 @@
 ---
 title: Test agent configuration fails
 description: This article provides resolutions for the error that occurs when you try to configure the test agent to talk to the controller service.
-ms.prod: devops
 ms.date: 08/17/2020
-ms.prod-support-area-path: Test Plans
+ms.custom: sap:Test Plans
 ms.reviewer: georgea
+ms.service: azure-devops
+ms.subservice: ts-test-plans
 ---
 # Test agent configuration fails when you try to configure the test agent
 
@@ -76,3 +77,5 @@ Steps(on the test agent machine):
 7. Click **OK** in the **Internet Protocol Version 4** (TCP/IP v4) dialog box.
 
 Repeat the same steps on the test controller machine.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

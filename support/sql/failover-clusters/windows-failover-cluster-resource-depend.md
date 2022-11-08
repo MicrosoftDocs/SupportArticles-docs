@@ -2,7 +2,7 @@
 title: Windows Failover cluster resource dependencies
 description: This article describes the default resource dependencies in SQL Server and the restrictions on these dependencies.
 ms.date: 07/22/2020
-ms.prod-support-area-path: High Availability and Disaster Recovery features
+ms.custom: sap:High Availability and Disaster Recovery features
 ms.reviewer: ramakoni
 ms.prod: sql
 ---
@@ -23,7 +23,7 @@ When you install SQL Server on a cluster as a SQL Server failover cluster instan
 
 ## Example 1 - Default SQL Server failover cluster instance dependencies
 
-![failover1](media/windows-failover-cluster-resource-depend/2813773.png)
+:::image type="content" source="media/windows-failover-cluster-resource-depend/default-sql-server-dependencies.png" alt-text="Diagram of the default SQL Server failover cluster instance dependency tree.":::
 
 In this diagram, notice the following:
 
@@ -39,7 +39,7 @@ In this diagram, notice the following:
 
 ## Example 2 - SQL Server 2008 Analysis Services failover instance dependencies
 
-![failover2](media/windows-failover-cluster-resource-depend/2813774.png)  
+:::image type="content" source="media/windows-failover-cluster-resource-depend/sql-server-2008-analysis-services-dependencies.png" alt-text="Diagram of SQL Server 2008 Analysis Services failover instance dependency tree.":::  
 
 In this diagram, notice the following:
 
@@ -57,7 +57,7 @@ In this diagram, notice the following:
 
 ## Example 3 - SQL Server 2008 failover instance dependencies with a mount point
 
-![failover3](media/windows-failover-cluster-resource-depend/2813775.png)
+:::image type="content" source="media/windows-failover-cluster-resource-depend/sql-server-2008-dependencies-with-mount-point.png" alt-text="Diagram of SQL Server 2008 failover instance dependency tree with a mount point.":::
 
 In this diagram, notice the following:
 

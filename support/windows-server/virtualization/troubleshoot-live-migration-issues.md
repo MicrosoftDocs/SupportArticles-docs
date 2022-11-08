@@ -1,34 +1,60 @@
 ---
 title: Troubleshoot live migration issues
 description: Provides information on solving the problem of live migration in windows server 2016.
-ms.date: 09/21/2020
+ms.date: 07/29/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: adjudele, cpuckett, kaushika
-ms.prod-support-area-path: Live Migration
+ms.custom: sap:live-migration, csstroubleshoot
 ms.technology: hyper-v
 ---
 # Troubleshoot live migration issues
 
-This article provides information on solving the problem of live migration in Windows Server 2016.
+This article provides information on solving the issues when live migrating virtual machines.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server  
 _Original KB number:_ &nbsp; 4558514
 
-## Summary
+## Basic troubleshooting checklist
 
-This article lists live migration issues in Windows Server 2016.
+- Check the hosts are at the same level of patching and whether they can update to the latest rollup.
+- Update the BIOS, firmware and third party drivers.
+- Check whether the virtual machines have the latest matching integration services.
+- Check whether the migration is authorized on each side.
+- Check whether the protocol used is identical on each side.
+- Check whether the TCP Port 6600 and 3343 (for clustering) are listening on both sides.
+- Check compatibilities issues by running a `Compare-VM` command. Provide the name of the VM and the destination host. For example:
+
+  ```powershell
+  Compare-VM -Name <vm_name> -DestinationHost <host_name>
+  ```
+
+- Check whether any group policy object is preventing the migration from occurring. Verify that the following policy have at least the default settings.
+  - Open *GPEDIT.MSC* and navigate to **Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment**.  
+    Open **Create symbolic links** and check whether the following user accounts are listed:  
+    - Administrators  
+    - NT VIRTUAL MACHINE\Virtual Machines  
+    - Log on as a service  
+    - NT SERVICE\ALL SERVICES  
+    - NT VIRTUAL MACHINE\Virtual Machines
+
+- Check for the antivirus exclusions. For more information, see [Recommended antivirus exclusions for Hyper-V hosts](antivirus-exclusions-for-hyper-v-hosts.md).
+- Check the corruption of the *Registry.pol* file:  
+  Run notepad and open *C:\\Windows\\System32\\GroupPolicy\\Machine\\Registry.pol*. The file must start with the **PReg** signature.
+- Compare permissions on the folders containing the virtual machines files with a working host with the same operating system level.
+
+Next, find the event IDs that you encounter during live migration issue from the following sections.
 
 ## Event ID 21502
 
 ### Information regarding Event ID 21502
 
-#### Failed to live migrate because a virtual switch used by the VM does not exist on the destination node "Host2"
+#### Live migration failed because a virtual switch used by the VM doesn't exist on the destination node "Host2"
 
 **Description**
 
@@ -48,7 +74,7 @@ Open the **Hyper-V Manager** console and select **Virtual Switch Manager**. If t
 
 Make sure to select the correct virtual switch under the VM's settings.  
 
-#### Failed to live migrate because the action "Move" did not complete. Error Code: 0x80071398
+#### Live migration failed because the action "Move" didn't complete. Error Code: 0x80071398
 
 **Description**
 
@@ -64,7 +90,7 @@ Error Code: 0x80071398
 
 The operation failed because either the specified cluster node isn't the owner of the group, or the node isn't a possible owner of the group.
 
-![The action "Move" did not complete.](./media/troubleshoot-live-migration-issues/error-code-0x80071398.png)
+:::image type="content" source="media/troubleshoot-live-migration-issues/error-code-0x80071398.png" alt-text="Screenshot of The action Move did not complete error.":::
 
 0x1398 5016 ERROR_HOST_NODE_NOT_GROUP_OWNER
 
@@ -79,21 +105,21 @@ Open **Windows PowerShell** with **Run as administrator**, and run the following
 
 The owner node must have all cluster nodes.
 
-Alternatively, open the Failover Cluster Manager (FCM) **** under roles, select the virtual machine like shown in the following screenshot. On the bottom tab, select **Resource**, right-click "**Virtual MachineVM1**," select the **Advanced Policies** tab, and check that all nodes are selected. Perform the same operation for "**Virtual Machine Configuration VM1.** Make sure the VM has the same virtual switch on all nodes.  
+Alternatively, open the Failover Cluster Manager (FCM) under roles, select the virtual machine like shown in the following screenshot. On the bottom tab, select **Resource**, right-click **Virtual MachineVM1**, select the **Advanced Policies** tab. Check that all nodes are selected. Do the same for "**Virtual Machine Configuration VM1**. Make sure the VM has the same virtual switch on all nodes.
 
-#### Failed to get the network address for the destination node "Host2": A cluster Network is not available for this operation. (0x000013AB)  
+#### Failed to get the network address for the destination node "Host2": A cluster Network isn't available for this operation. (0x000013AB)  
 
 **Description**
 
 Live migration of "VM" failed.
 
-Failed to get the network address for the destination node "Host2": A cluster Network is not available for this operation. (0x000013AB).
+Failed to get the network address for the destination node "Host2": A cluster Network isn't available for this operation. (0x000013AB).
 
 **Action**
 
 0x13ab 5035 ERROR_NETWORK_NOT_AVAILABLE
 
-A cluster network is not available for this operation. winerror.h
+A cluster network isn't available for this operation. winerror.h
 
 **Resolution**
 
@@ -103,11 +129,11 @@ Open **Windows PowerShell** with **Run as administrator**  and run the following
 Get-ClusterNetwork
 ```  
 
-![Get-ClusterNetwork command result](./media/troubleshoot-live-migration-issues/get-clusternetwork.png)
+:::image type="content" source="media/troubleshoot-live-migration-issues/get-clusternetwork.png" alt-text="Screenshot of the Get-ClusterNetwork command result." border="false":::
 
 Make sure the cluster network isn't configured and that **Allow cluster network communication on this network** is selected. For more information, see [Configuring Network Prioritization on a Failover Cluster](https://techcommunity.microsoft.com/t5/failover-clustering/configuring-network-prioritization-on-a-failover-cluster/ba-p/371683).  
 
-#### Failed to live migrate with error code (0x8007271D)  
+#### Live migration failed with error code (0x8007271D)  
 
 **Description**
 
@@ -126,7 +152,7 @@ As Win32 error code "0x271d"
  Here's how to fix this issue:  
 
 1. Check Firewall settings and Antivirus exclusion.
-2. Check if TCP ports 6600 and 3343 (for clustering) are listening on both sides. To do this, run the following cmdlet:
+2. Check if TCP ports 6600 and 3343 (for clustering) are listening on both sides by running the following cmdlet:
 
     ```console
     C:\>netstat -ano | findstr /I /C:"6600"
@@ -156,7 +182,7 @@ Live migration of "VM" failed.
 
 Virtual machine migration operation for "VM" failed at migration destination "HYP1."
 
-"VM" Synthetic SCSI Controller: Failed to restore with Error **"** A virtual disk support provider for the specified file was not found." (0xC03A0014).
+"VM" Synthetic SCSI Controller: Failed to restore with Error "A virtual disk support provider for the specified file was not found." (0xC03A0014).
 
  "VM": Attachment "C:\ClusterStorage\library\SW_DVD9_NTRL_SQL_Svr_Standard_Edtn_2019Dec2019_64Bit_English_OEM_VL_X22-22109.ISO" failed to open because of error: "A virtual disk support provider for the specified file was not found." (0xC03A0014).  
 
@@ -166,15 +192,15 @@ Need to remove the ISO.
 
 0xc03a0014 -1069940716 ERROR_VIRTDISK_PROVIDER_NOT_FOUND
 
- A virtual disk support provider for the specified file was not found.  
+ A virtual disk support provider for the specified file wasn't found.  
 
 **Resolution**
 
 Check the VM setting under the DVD file, make sure the **None** option is selected as shown:
 
-![The None option is selected](./media/troubleshoot-live-migration-issues/select-none.png)  
+:::image type="content" source="media/troubleshoot-live-migration-issues/select-none.png" alt-text="Screenshot shows the None option is selected in the Media area.":::
 
-#### Failed to live migrate because "Test" failed at migration source "HOST3."
+#### Live migration failed because "Test" failed at migration source "HOST3."
 
 **Description**
 
@@ -200,7 +226,7 @@ An existing connection was forcibly closed by the remote host.
 
 **Resolution**
 
-Check if the TCP ports 6600 and 3343 (for clustering) are listening on both sides. To do this, run the following cmdlet:
+Check if the TCP ports 6600 and 3343 (for clustering) are listening on both sides by running the following cmdlet:
 
 ```console
 netstat -ano | findstr /I /C:"6600"
@@ -214,15 +240,15 @@ Get-ClusterNetwork
 
 For more information, see the following websites:
 
-- [Network Recommendations for a Hyper-V Cluster in Windows Server 2012](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn550728%28v=ws.11%29)  
-- [Simplified SMB Multichannel and Multi-NIC Cluster Networks](https://docs.microsoft.com/windows-server/failover-clustering/smb-multichannel)  
+- [Network Recommendations for a Hyper-V Cluster in Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn550728%28v=ws.11%29)  
+- [Simplified SMB Multichannel and Multi-NIC Cluster Networks](/windows-server/failover-clustering/smb-multichannel)  
 - [A live migration of a virtual machine by using Virtual Machine Manager fails with error 0x8007274D](https://support.microsoft.com/help/2853203)  
 
-#### Failed to live migrate because the hardware on the destination computer is not compatible with the hardware requirements of this virtual machine
+#### Live migration failed because the hardware on the destination computer isn't compatible with the hardware requirements of this virtual machine
 
 **Description**
 
-The virtual machine cannot be moved to the destination computer. The hardware on the destination computer is not compatible with the hardware requirements of this virtual machine.
+The virtual machine cannot be moved to the destination computer. The hardware on the destination computer isn't compatible with the hardware requirements of this virtual machine.
 
 **Action**
 
@@ -234,7 +260,7 @@ Here's how to fix this issue:
 
 1. Open the **Hyper-V Manager** console and select **Virtual Machine** > **Settings** > **Processor** > **Compatibility > OK.**
 
-    ![Steps to fix this issue](./media/troubleshoot-live-migration-issues/hyper-v-manager-console.png)
+    :::image type="content" source="media/troubleshoot-live-migration-issues/hyper-v-manager-console.png" alt-text="Screenshot shows the options in the Hyper-V Manager console.":::
 
 2. Open **Windows PowerShell** with **Run as administrator** and run the following cmdlet:
 
@@ -256,12 +282,12 @@ To allow for migration of this virtual machine to a server with a different proc
 
 Here's how to fix this issue:
 
-1. Check the processor compatibility is flagged. To do this, open the **Hyper-V Manager** console and select **Virtual Machine Settings** > **Processor** > **Processor Compatibility**.
+1. Check if the processor compatibility is flagged. Open the **Hyper-V Manager** console, select **Virtual Machine Settings** > **Processor** > **Processor Compatibility**.
 2. Make sure the BIOS of the host has the same settings.
-3. Make sure the **Spectre** or **Meltdown** patch exposes different features of the CPU. See [Protecting guest virtual machines from CVE-2017-5715 (branch target injection)](https://docs.microsoft.com/virtualization/hyper-v-on-windows/CVE-2017-5715-and-hyper-v-vms) for more information.
+3. Make sure the **Spectre** or **Meltdown** patch exposes different features of the CPU. For more information, see [Protecting guest virtual machines from CVE-2017-5715 (branch target injection)](/virtualization/hyper-v-on-windows/CVE-2017-5715-and-hyper-v-vms).
 4. Run the [Get-SpeculationControlSettings](https://support.microsoft.com/help/4074629) cmdlet and check the results. It should be the same on all nodes.  
 
-#### Failed to live migrate because "Virtual Machine Name" failed at migration source "Source Host Name"
+#### Live migration failed because "Virtual Machine Name" failed at migration source "Source Host Name"
 
 **Description**
 
@@ -285,7 +311,7 @@ The processing of Group Policy failed. Windows couldn't apply the registry-based
 
 In this case, restore a backup or copy the **GroupPolicy** folder in the path **C:\Windows\System32\\** to the problematic server from a working server.  
 
-#### Failed to live migrate because "vm1" could not initialize memory: Ran out of memory (0x8007000E)
+#### Live migration failed because "vm1" couldn't initialize memory: Ran out of memory (0x8007000E)
 
 **Description**
 
@@ -319,7 +345,7 @@ Virtual machine migration operation failed at migration Source. Failed to establ
 
 Here's how to fix this issue:
 
-![Step to fix this issue](./media/troubleshoot-live-migration-issues/hyper-v-settings-s2d2.png)
+ :::image type="content" source="media/troubleshoot-live-migration-issues/hyper-v-settings-s2d2.png" alt-text="Screenshot shows steps to fix this issue.":::
 
 See [Live Migration via Constrained Delegation with Kerberos in Windows Server 2016](https://techcommunity.microsoft.com/t5/virtualization/live-migration-via-constrained-delegation-with-kerberos-in/ba-p/382334) for details.  
 
@@ -341,14 +367,14 @@ Failed to establish a connection with host "DESTINATION-SERVER": The credentials
 
 Here's how to fix this issue:
 
-1. Enable Kerberos Authentication for live migrations on both Hyper-V hosts. To do this, select **Hyper-V Settings**  > **Live Migrations** **> Advanced Features >** **Use Kerberos under Authentication Protocol**.
-2. Set Constrained Delegation for both Hyper-V hosts. Here's how to do this:
-      1. Open **Active Directory Users and Computers**, find the Hyper-V host computer account, open the **Properties** dialog, and move to the **Delegation** tab.
+1. Enable Kerberos Authentication for live migrations on both Hyper-V hosts. To do so, select **Hyper-V Settings**  > **Live Migrations** > **Advanced Features** > **Use Kerberos under Authentication Protocol**.
+2. Set Constrained Delegation for both Hyper-V hosts by following these steps:
+      1. Open **Active Directory Users and Computers**, find the Hyper-V host computer account. Open the **Properties** dialog, and select the **Delegation** tab.
       2. Select the **Trust this computer for delegation to specified services only** and **Use any authentication protocol** options.
-      3. Click **Add** and select the computer account of another Hyper-V host.
+      3. Select **Add**, and select the computer account of another Hyper-V host.
       4. Add **cifs** (required to migrate storage) and **Microsoft Virtual System Migration Service** (required to migrate virtual machine).
 
-Wait up to 15 minutes for Keberos tickets to time out or run the **KLIST PURGE -li 0x3e7** cmdlet.  
+Wait up to 15 minutes for Keberos tickets to time out. Or run the **KLIST PURGE -li 0x3e7** cmdlet.  
 
 #### Failed to create Planned Virtual Machine at migration destination: Logon failure
 
@@ -358,9 +384,9 @@ Live migration of "Virtual Machine VM name" failed.
 
 Failed to create Planned Virtual Machine at migration destination: Logon failure: the user has not been granted the requested logon type at this computer. (0x80070569)
 
-Virtual Machines running on Windows Server 2012 Hyper-V hosts may fail to start and you may receive an error message that's similar to the following:
+Virtual machines running on Windows Server 2012 Hyper-V hosts may fail to start. And you may receive an error message that's similar to the following example:
 
->Error 0x80070569 ("VM_NAME" failed to start worker process: Logon Failure: The user has not been granted the requested logon type at this computer.)  
+> Error 0x80070569 ("VM_NAME" failed to start worker process: Logon Failure: The user has not been granted the requested logon type at this computer.)  
 
 **Action**
 
@@ -368,9 +394,9 @@ Virtual Machines running on Windows Server 2012 Hyper-V hosts may fail to start 
 
 Logon failure: the user has not been granted the requested logon type at this computer
 
-Additionally, when you perform a recovery checkpoint and try to convert it to a reference point by using the ConvertToReferencePoint method, the conversion may fail. You may receive an error message that's similar to the following:
+Besides, when you perform a recovery checkpoint and try to convert it to a reference point by using the ConvertToReferencePoint method, the conversion may fail. You may receive an error message that's similar to the following example:
 
-Failed to write VHD attachment "VHDX_NAME" to "VM_NAME": Account restrictions are preventing this user from signing in. For example, blank passwords aren't allowed, sign-in times are limited, or a policy restriction has been enforced. (0x8007052f)
+> Failed to write VHD attachment "VHDX_NAME" to "VM_NAME": Account restrictions are preventing this user from signing in. For example, blank passwords aren't allowed, sign-in times are limited, or a policy restriction has been enforced. (0x8007052f)
 
 0x52f 1327 ERROR_ACCOUNT_RESTRICTION Account restrictions are preventing this user from signing in. For example: blank passwords aren't allowed, sign-in times are limited, or a policy restriction has been enforced.
 
@@ -395,7 +421,7 @@ The Virtual Machine Management Service failed to establish a connection for a Vi
 Here's how to fix this issue:
 
 1. Check for various corruptions of the **Registry.pol** under the **C:\Windows\System32\GroupPolicy\Machine** path.
-2. Open the file in Notepad. It must start with **PReg** signature.  
+2. Open the file in Notepad. It must start with the **`PReg`** signature.  
 
 #### Fail to live migrate because the target principal name is incorrect. (0x80090322)  
 
@@ -439,16 +465,16 @@ HRESULT = 0x80048054
 
 **Resolution**
 
-Enable or disable oplocks and lease oplocks on a qtree. If oplocks and lease oplocks are enabled at the storage system level, enable or disable oplocks and lease oplocks on an individual qtree by running the respective cmdlets:
+Enable or disable `oplocks` and lease `oplocks` on a `qtree`. If `oplocks` and lease `oplocks` are enabled at the storage system level, enable or disable `oplocks` and lease `oplocks` on an individual `qtree` by running the respective cmdlets:
 
-- **qtree oplocks qtree_name enable**  
-- **qtree oplocks qtree_name disable**  
+- `qtree oplocks qtree_name enable`  
+- `qtree oplocks qtree_name disable`
 
-If the **cifs.oplocks.enable** option is set to **On**, the qtree oplocks cmdlet for a qtree takes effect immediately. If the **cifs.oplocks.enable** option is set to **Off**, the qtree oplocks command doesn't take effect until you change the option to **On**.
+If the **cifs.oplocks.enable** option is set to **On**, the `qtree oplocks` cmdlet for a `qtree` takes effect immediately. If the **cifs.oplocks.enable** option is set to **Off**, the `qtree oplocks` command doesn't take effect until you change the option to **On**.
 
 Here's how to fix this issue:
 
-1. Replace the **NetApp** filer with a Windows 2016 based File server. Alternatively, update the **NetApp** file to the latest Ontap 9.*. version.
+1. Replace the **NetApp** filer with a Windows 2016 based File server. Alternatively, update the **NetApp** file to the latest `Ontap` 9.*. version.
 2. Make sure that the Windows Server 2016 based Hyper-V nodes are updated with the latest cumulative update. Similar issues are resolved after you applying [CU Feb 2019](https://support.microsoft.com/help/4487044/) or a later version.  
 
 #### Failed live migration of 'Virtual Machine VM1' at migration source 'CLU8N1' with error codes 80042001 and 8007000D
@@ -505,7 +531,7 @@ The message comes from a lower performance network when you try the live migrati
 
 Make sure there's enough bandwidth available for the live migration.  
 
-Try to reduce the memory during the live migration. For more information, see [Virtual Machine Live Migration Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831435%28v=ws.11%29?redirectedfrom=MSDN).  
+Try to reduce the memory during the live migration. For more information, see [Virtual Machine Live Migration Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831435%28v=ws.11%29?redirectedfrom=MSDN).  
 
 ## Event ID 21024
 
@@ -558,7 +584,7 @@ Live migration of "VM" failed.
 
 Virtual machine migration operation for "VM" failed at migration source "Host5."
 
- Failed to perform migration on virtual machine "VM" because virtual machine migration limit "2" was reached, please wait for completion of an ongoing migration operation.  
+> Failed to perform migration on virtual machine "VM" because virtual machine migration limit "2" was reached, please wait for completion of an ongoing migration operation.  
 
 **Action**
 

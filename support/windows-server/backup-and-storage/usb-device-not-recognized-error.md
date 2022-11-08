@@ -1,19 +1,20 @@
 ---
-title: USB Device not recognized error
-description: Helps resolve the USB Device not recognized error that occurs when trying to access a USB external hard drive.
+title: '"USB Device not recognized" error'
+description: Helps resolve the "USB Device not recognized error" that occurs when trying to access a USB external hard drive.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Storage hardware
+ms.custom: sap:storage-hardware, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
+adobe-target: true
 ---
-# USB Device not recognized error when you try to access a USB external hard drive
+# "USB Device not recognized" error when you try to access a USB external hard drive
 
 This article provides methods to solve the **USB Device not recognized** error that occurs when you try to access a USB external hard drive.
 
@@ -23,7 +24,7 @@ When you try to access data on an external USB hard drive, you may receive the f
 
 > USB Device not recognized: One of the devices attached to this computer has malfunctioned and windows does not recognize it.
 
-_Original product version:_ &nbsp; Windows 10, version 1709, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 10, version 1709, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2654149
 
 ## Cause

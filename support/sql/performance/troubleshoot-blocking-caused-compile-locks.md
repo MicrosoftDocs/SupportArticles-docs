@@ -1,14 +1,13 @@
 ---
-title: Troubleshoot blocking caused by compile locks
-description: This article describes how to troubleshoot blocking caused by compile locks.
+title: Troubleshoot blocking issues caused by compile locks
+description: This article describes how to troubleshoot and resolve blocking issues caused by compile locks.
 ms.date: 09/25/2020
-ms.prod-support-area-path: Performance
-ms.topic: how-to
+ms.custom: sap:Performance
 ms.prod: sql
 ---
-# Troubleshoot blocking caused by compile locks
+# Troubleshoot blocking issues caused by compile locks
 
-This article describes how to troubleshoot blocking caused by compile locks.
+This article describes how to troubleshoot and resolve blocking issues caused by compile locks.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 263889
@@ -69,7 +68,6 @@ Stored procedure recompilation is one explanation for compile locks on a stored 
     |sql_batch_starting|mystoredproc|
     |sp_cache_hit|mystoredproc|
     |...|...|
-    |||
 
    `sp_cache_miss` occurs when the cache lookup by name fails, but then a matching cached plan was ultimately found in cache after the ambiguous object name was resolved to an object ID and there is a `sp_cache_hit` event.
 

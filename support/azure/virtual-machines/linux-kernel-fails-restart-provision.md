@@ -2,8 +2,10 @@
 title: An Azure virtual machine running an older Linux kernel fails to restart or be provisioned
 description: Discusses that an Azure virtual machine that is running an older Linux kernel version fails to restart or be provisioned. Provides a resolution.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
+ms.collection: linux
 ---
 # An Azure virtual machine running an older Linux kernel fails to restart or be provisioned
 
@@ -16,7 +18,7 @@ _Original KB number:_ &nbsp; 4041171
 
 Consider the following scenario:
 
-- You have a Microsoft Azure Linux virtual machine that is running one of the following Linux distributions. 
+- You have a Microsoft Azure Linux virtual machine that is running one of the following Linux distributions.
 
     | **Linux distribution (distro)**| **Distro version**| **Kernel version** |
     |---|---|---|
@@ -30,11 +32,10 @@ Consider the following scenario:
     |Debian|< 7| Any version |
     |Debian|8|< 4.9|
     |CoreOS|Any|< 4.9|
-    ||||
 
 - The virtual machine restarts, or a new virtual machine provisioning request is made.
 
-In this scenario, the virtual machine becomes unresponsive or provisioning times out. When this problem occurs, an entry that resembles the following is logged in the [Linux serial log](https://docs.microsoft.com/azure/virtual-machines/linux/boot-diagnostics):  
+In this scenario, the virtual machine becomes unresponsive or provisioning times out. When this problem occurs, an entry that resembles the following is logged in the [Linux serial log](/azure/virtual-machines/linux/boot-diagnostics):  
 
 ```
 [5.464091] hv_vmbus: probe failed for device vmbus_3 (-110) 
@@ -46,11 +47,11 @@ In this scenario, the virtual machine becomes unresponsive or provisioning times
 
 ## Cause
 
-This problem occurs because the Linux virtual machine  does not communicate with the Azure host. This communication failure occurs because of incompatible hyper-call timing parameters in the Hyper-V drivers that exist in older Linux kernels. 
+This problem occurs because the Linux virtual machine  does not communicate with the Azure host. This communication failure occurs because of incompatible hyper-call timing parameters in the Hyper-V drivers that exist in older Linux kernels.
 
 ## Resolution
 
-To resolve this problem, try [manually restarting](https://docs.microsoft.com/cli/azure/vm?view=azure-cli-latest&preserve-view=true#az_vm_restart) the virtual machine  after some time.  If the problem persists, [redeploy the virtual machine to a new Azure node](https://docs.microsoft.com/azure/virtual-machines/linux/redeploy-to-new-node), start the virtual machine, and then update the Linux kernel by using the following instructions. You must also perform these steps on the custom image you are using to deploy the VM.  
+To resolve this problem, try [manually restarting](/cli/azure/vm#az-vm-restart) the virtual machine  after some time.  If the problem persists, [redeploy the virtual machine to a new Azure node](/azure/virtual-machines/linux/redeploy-to-new-node), start the virtual machine, and then update the Linux kernel by using the following instructions. You must also perform these steps on the custom image you are using to deploy the VM.  
 
 | **Linux distro**| **Distro version**| **Kernel version that has the fix**| **Update instructions** |
 |---|---|---|---|
@@ -64,12 +65,13 @@ To resolve this problem, try [manually restarting](https://docs.microsoft.com/cl
 |Debian|7|None available|Upgrade to Debian 9|
 | Debian|8|4.9 +| Enable Debian backports, and then run the following command: <br/>`sudo apt-get update && sudo apt-get install linux-image-amd64 hyperv-daemons`<br/><br/>|
 | CoreOS|Any|4.9 +|Follow the instructions in [Reboot strategies on updates.](https://coreos.com/os/docs/latest/update-strategies.html) |
-|||||
-
+  
 ## More information
 
-For more information about [Endorsed Linux distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros) and open-source technologies in Azure, see [Support for Linux and open source technology in Azure](../cloud-services/support-linux-open-source-technology.md).  
+For more information about [Endorsed Linux distributions](/azure/virtual-machines/linux/endorsed-distros) and open-source technologies in Azure, see [Support for Linux and open source technology in Azure](../cloud-services/support-linux-open-source-technology.md).  
 
 **Third-party information disclaimer**
   
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

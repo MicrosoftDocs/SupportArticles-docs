@@ -2,7 +2,6 @@
 title: Error 832 when installing DPM 2016
 description: Fixes an issue in which you receive error ID 832 when you try to install System Center 2016 Data Protection Manager. 
 ms.date: 07/27/2020
-ms.prod-support-area-path:
 ms.reviewer: jarrettr, jarrettr, delhan
 ---
 # Error ID 832 when you try to install System Center 2016 Data Protection Manager

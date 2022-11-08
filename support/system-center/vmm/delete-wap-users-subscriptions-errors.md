@@ -2,7 +2,6 @@
 title: Errors when deleting users or subscriptions in WAP
 description: Describes an issue that occurs when you try to delete users or subscriptions in the Windows Azure Pack (WAP) Admin Portal.
 ms.date: 07/17/2020
-ms.prod-support-area-path:
 ms.reviewer: markstan
 ---
 # Plan Out Of Sync and Quota update failed errors in Windows Azure Pack Admin Portal
@@ -38,7 +37,7 @@ To resolve this issue, verify that the bindings for port 8090 on the SPF server 
 
 In the following screenshot, two bindings exist. The second entry for HTTPS 8090 should be removed.
 
-![Screenshot of two bindings exist](./media/delete-wap-users-subscriptions-errors/two-bindings.jpg)
+:::image type="content" source="media/delete-wap-users-subscriptions-errors/two-bindings.png" alt-text="Two bindings exist in Site Bindings dialog box.":::
 
 ## More Information
 

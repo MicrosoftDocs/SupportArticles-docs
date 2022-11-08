@@ -2,7 +2,6 @@
 title: Troubleshoot OMS onboarding issues
 description: Describes how to troubleshoot onboarding issues in integrated Operations Manager attach mode clients and Direct Agent access in Operations Management Suite (OMS).
 ms.date: 06/22/2020
-ms.prod-support-area-path:
 ---
 # Troubleshoot Operations Management Suite onboarding issues
 
@@ -71,8 +70,7 @@ Your browser requires access to the following addresses to run Log Analytics que
 |portal.loganalytics.io|Dynamic|80,443|
 |api.loganalytics.io|Dynamic|80,443|
 |docs.loganalytics.io|Dynamic|80,443|
-||||
-
+  
 ### Step 2: Configure the proxy server in the OpsMgr console
 
 1. Open the OpsMgr console.
@@ -80,12 +78,12 @@ Your browser requires access to the following addresses to run Log Analytics que
 3. Under the **System Center Advisor** node, select **Advisor Connection**.
 4. Select **Configure Proxy Server**.
 
-   ![Screenshot of Configure Proxy Server.](./media/troubleshoot-oms-onboarding-issues/configure-proxy-server.jpg)
+   :::image type="content" source="media/troubleshoot-oms-onboarding-issues/configure-proxy-server.png" alt-text="Screenshot of the Configure Proxy Server option in OpsMgr console." border="false":::
 
 5. Select the check box to use a proxy server to access the Advisor Web Service.
 6. Specify the proxy address in the `<http://proxyserver:port>` format:
 
-   ![Screenshot of proxy address.](./media/troubleshoot-oms-onboarding-issues/proxy-address.jpg)
+   :::image type="content" source="media/troubleshoot-oms-onboarding-issues/proxy-address.png" alt-text="Setting up the proxy address in the Advisor Settings Wizard." border="false":::
 
 ### Step 3: Specify credentials for OpsMgr if the proxy server requires authentication
 
@@ -95,13 +93,13 @@ If the proxy server requires authentication, you can specify one for an OpsMgr *
 2. Under the **RunAs Configuration** node, select **Profiles**.
 3. Double-click to open **System Center Advisor Run As Profile Proxy**:
 
-   :::image type="content" source="media/troubleshoot-oms-onboarding-issues/open-proxy.jpg" alt-text="Screenshot of System Center Advisor Run As Profile Proxy.":::
+   :::image type="content" source="media/troubleshoot-oms-onboarding-issues/open-proxy.png" alt-text="Open the System Center Advisor Run As Profile Proxy in Profiles under RunAs Configuration.":::
 
 4. Select **Add** to add a **RunAs Account**. You can either create one or use an existing account. This account must have sufficient permissions to pass through the proxy.
 5. Set the account to be targeted at the **Operations Manager Management Servers** group.
 6. Complete the wizard and save the changes:
 
-   ![Screenshot of the wizard.](./media/troubleshoot-oms-onboarding-issues/wizard.jpg)
+   :::image type="content" source="media/troubleshoot-oms-onboarding-issues/wizard.png" alt-text="Set the RunAs account to the Operations Manager Management Servers group." border="false":::
 
 ### Step 4: Configure the proxy server on each OpsMgr management server for managed code
 
@@ -111,7 +109,7 @@ There is an additional setting in Operations Manager that's intended for general
 2. Select **Device Management**, and then select the **Management Servers** node.
 3. Right-click, select **Properties** for each management server (one at the time), and then set the proxy on the **Proxy Settings** tab:
 
-   ![Screenshot of the Proxy Settings tab](./media/troubleshoot-oms-onboarding-issues/proxy-settings.png)
+   :::image type="content" source="media/troubleshoot-oms-onboarding-issues/proxy-settings.png" alt-text="Set the proxy on the Proxy Settings tab.":::
 
 ## Verify the deployment after registration
 
@@ -119,7 +117,7 @@ There is an additional setting in Operations Manager that's intended for general
 
 Depending on which Solutions (formerly known as Intelligence Packs) that you have enabled in the Operational Insights portal, you will see some or all of the management packs in the following screenshot. Search for keyword **Advisor** or **Solution** in their names, and make sure that the solutions that you've enabled have corresponding management packs installed.
 
-![Screenshot of searching Advisor](./media/troubleshoot-oms-onboarding-issues/advisor.png)
+:::image type="content" source="media/troubleshoot-oms-onboarding-issues/advisor.png" alt-text="Screenshot of the management packs that you installed." border="false":::
 
 You can also check for these management packs through PowerShell by using the following commands:
 
@@ -146,7 +144,7 @@ If you only see one or two of these, remove them and wait 5 to 10 minutes for Op
 
 With Direct Agents, you should see the Solution collection policy being cached under the `C:\Program Files\Microsoft Monitoring Agent\Agent\Health Service State\Management Packs` path:
 
-:::image type="content" source="media/troubleshoot-oms-onboarding-issues/solution-collection-policy.png" alt-text="Screenshot of the solution collection.":::
+:::image type="content" source="media/troubleshoot-oms-onboarding-issues/solution-collection-policy.png" alt-text="Screenshot of the solution collection policies that are cached.":::
 
 ### Step 3: Validate that data is being sent up to the Advisor service (or at least that a send is tried)
 
@@ -154,11 +152,11 @@ With Direct Agents, you should see the Solution collection policy being cached u
 2. Select **Health Service Management Groups**.
 3. Add all the counters that start with **HTTP**:
 
-   :::image type="content" source="media/troubleshoot-oms-onboarding-issues/adding-counters.jpg" alt-text="Screenshot of adding counters.":::
+   :::image type="content" source="media/troubleshoot-oms-onboarding-issues/adding-counters.png" alt-text="Adding all the counters that start with H T T P.":::
 
 4. If the configuration is correct, you should see activity for these counters as events, and other data is uploaded (based on the solutions loaded in the portal and the configured log collection policy). These counters do not necessarily have to be continuously busy. However, if you see little or no activity, it might be that you have not added many solutions, or that you have a lightweight collection policy.
 
-   ![Screenshot of activity for counters as events.](./media/troubleshoot-oms-onboarding-issues/activity.jpg)
+   :::image type="content" source="media/troubleshoot-oms-onboarding-issues/activity.png" alt-text="Screenshot of activity for counters as events." border="false":::
 
 ### Step 4: Check for errors in the management server or Direct Agent event logs
 
@@ -169,7 +167,7 @@ As a final step, if all of the preceding steps fail, check whether you have any 
 
 Most of these events apply to both types of reporting infrastructure. Open **Event Viewer** > **Application and Services** > **Operations Manager** and filter by **Event Sources: Advisor, Health Service Modules, HealthService, and Service Connector** (this last one applies to Direct Agent only).
 
-:::image type="content" source="media/troubleshoot-oms-onboarding-issues/event-sources.jpg" alt-text="Screenshot of Event Sources filter.":::
+:::image type="content" source="media/troubleshoot-oms-onboarding-issues/event-sources.png" alt-text="Use the Event Sources filter to check errors." border="false":::
 
 A few of the events that you might see when things aren't working correctly are included in the following table:
 
@@ -182,12 +180,11 @@ A few of the events that you might see when things aren't working correctly are 
 |2127|Health Service Modules|Failure sending data received error code|If it only happens once in a while this could just be a random anomaly that can be ignored. Monitor to understand how often it happens. If it happens often (every 10 minutes or so throughout the day), it's a problem. Check your network configuration and proxy settings, and then rerun the registration wizard. If it only happens sporadically (such as a couple of times per day), everything should be fine, as data will be queued and retransmitted.<br/><br/>Some of the HTTP error codes have some special meanings. For example, the first time that a MMA Direct Agent or management server tries to send data to our service, it will get a 500 error with an inner 404 error code. 404 means not found, which indicates that the storage area we'll use for this new workspace of yours isn't ready yet (it's still being provisioned). On next retry, this will be ready and flow will start working as expected.<br/><br/>A 403 error might indicate a permission or credentials issue. There is more information on the 403 error below in the [Direct Agent specific information](#direct-agent-specific-information) section.|
 |2128|Health Service Modules|DNS name resolution failed|Your server can't resolve our Internet address that is used when sending data. This might be DNS resolver settings on your computer, incorrect proxy settings, or maybe a temporary issue with DNS at your provider. Like the previous event, depending on whether it happens constantly or only once in a while, it could be an issue or not.|
 |2130|Health Service Modules|Time out|Like the previous event, depending on whether it happens constantly or only once in a while, it could be an issue or not.|
-|4511|HealthService|Cannot load module `System.PublishDataToEndPoint` - file not found|Initialization of a module of type `System.PublishDataToEndPoint` (CLSID *{D407D659-65E4-4476-BF40-924E56841465}*) failed with error **The system cannot find the file specified**.<br/><br/>This error indicates you have old DLLs on your machine that don't contain the required modules. The fix is to update your management servers to the latest Update Rollup package.|
+|4511|HealthService|Cannot load module `System.PublishDataToEndPoint` - file not found|Initialization of a module of type `System.PublishDataToEndPoint` (CLSID _{D407D659-65E4-4476-BF40-924E56841465}_) failed with error **The system cannot find the file specified**.<br/><br/>This error indicates you have old DLLs on your machine that don't contain the required modules. The fix is to update your management servers to the latest Update Rollup package.|
 |4502|HealthService|Module crashed|If you see this for workflows with names such as `CollectInstanceSpace` or `CollectTypeSpace`, it might mean the server is having issues sending data. Depending on how often it happens, it may be an issue or not. If it happens more than every hour it is definitely an issue, however if it only fails once or twice per day it will be fine and should be able to recover. Depending on how the module actually fails (the description will have more details) this could be an on-premises issue (such as to collect to DB) or an issue sending to the cloud. Verify your network and proxy settings and if it still fails, try restarting the Health Service.|
-|4501|HealthService|Module `System.PublishDataToEndPoint` crashed|A module of type `System.PublishDataToEndPoint` reported an error 87L that was running as part of rule `Microsoft.SystemCenter.CollectAlertChangeDataToCloud` running for instance **Operations Manager Management Group** with ID:*{6B1D1BE8-EBB4-B425-08DC-2385C5930B04}* in management group **SCOMTEST**.<br/><br/>You should not see this with this exact workflow, module, and error anymore. It used to be a bug but it is now fixed. It was being tracked [here](https://feedback.azure.com/forums/267889-azure-operational-insights/suggestions/6714689-alert-management-intelligence-pack-not-sending-ale).|
+|4501|HealthService|Module `System.PublishDataToEndPoint` crashed|A module of type `System.PublishDataToEndPoint` reported an error 87L that was running as part of rule `Microsoft.SystemCenter.CollectAlertChangeDataToCloud` running for instance **Operations Manager Management Group** with ID:_{6B1D1BE8-EBB4-B425-08DC-2385C5930B04}_ in management group **SCOMTEST**.<br/><br/>You should not see this with this exact workflow, module, and error anymore. It used to be a bug but it is now fixed. It was being tracked [here](https://feedback.azure.com/forums/267889-azure-operational-insights/suggestions/6714689-alert-management-intelligence-pack-not-sending-ale).|
 |4002|Service Connector|The service returned HTTP status code 403 in response to a query. Check with the service administrator for the health of the service. The query will be retried later.|You can get a 403 error during the agent's initial registration phase and you'll see a URL similar to the following:<br/><br/>https://\<YourWorkspaceID>.oms.opinsights.azure.com/ AgentService.svc/AgentTopologyRequest<br/><br/>Error code 403 means **forbidden**. This is typically a mistyped Workspace ID or key, or the clock is not synced (just like for [error 3000](#error-3000)). See more [here](https://social.msdn.microsoft.com/forums/azure/732bf3b2-f709-4067-830c-4bae214e3438/the-service-returned-http-status-code-403-in-response-to-a-query?forum=opinsights).|
-|||||
-
+  
 ### Step 5: Look for your agents to send their data and have it indexed in the portal
 
 Check in the Operational Insights portal to see whether your computers are reporting. From the **Overview** page, navigate to the large blue **SETTINGS** tile. It will be either the first or last tile depending on your configuration. In **SETTINGS**, select the **CONNECTED SOURCES** tab. Each column on this page represents a different data source type attached to OI (servers attached directly, Operations Manager management groups, and Azure storage accounts). Select the blue **X servers/mgmt groups/storage accounts connected** and it will bring you to a search with more detail. On this page, you'll also see a list of individual management groups connected. Selecting one of these management groups will also bring you to search and show you a list of the servers connected to this management group.
@@ -195,7 +192,7 @@ Check in the Operational Insights portal to see whether your computers are repor
 > [!NOTE]
 > If a data source is listed as reporting on this page it does not necessarily mean we have collected any data from the source. In this case it's possible that drilling into search from this page will show inconsistent results (for example, you will see a data source listed in **CONNNECTED SOURCES** but it won't be in search). Once data collection has started, either from an IP address or from log collection, the results in search will be consistent.
 
-:::image type="content" source="media/troubleshoot-oms-onboarding-issues/connected-sources.png" alt-text="Screenshot of connected sources.":::
+:::image type="content" source="media/troubleshoot-oms-onboarding-issues/connected-sources.png" alt-text="Screenshot of data sources that are listed in the connected sources.":::
 
 The Advisor engineering team is committed to resolving all your onboarding issues so contact us if you run into any issues. We are here to help.
 
@@ -205,7 +202,7 @@ The Advisor engineering team is committed to resolving all your onboarding issue
 
 Some customers have reported that the **Search** button in the **Computer Search** dialog box is missing. We are currently investigating this. As a temporary workaround, select the **Filter by (optional)** edit box, and then press the Tab key to get to the invisible search button. Then, you can activate the button by pressing the \<Spacebar> or \<Enter> key.
 
-![Screenshot of search button missing](./media/troubleshoot-oms-onboarding-issues/search-button-missing.jpg)
+:::image type="content" source="media/troubleshoot-oms-onboarding-issues/search-button-missing.png" alt-text="The Search button is missing from the Computer Search dialog box.":::
 
 ### IIS log collection issues
 

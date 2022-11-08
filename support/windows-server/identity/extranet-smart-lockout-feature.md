@@ -3,26 +3,26 @@ title: Extranet Smart Lockout feature in Windows Server 2016
 description: Describes the Extranet Smart Lockout feature in Windows Server 2016.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, tquerec, dougking, v-jeffbo
-ms.prod-support-area-path: Active Directory Federation Services (AD FS)
+ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Description of the Extranet Smart Lockout feature in Windows Server 2016
 
 This article describes the Extranet Smart Lockout feature in Windows Server 2016.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 4096478
 
 ## Overview
 
-As of the March 2018 update for Windows Server 2016, Active Directory Federation Services (AD FS) has a new feature that is namedExtranet Smart Lockout (ESL). In an era of increased attacks on authentication services, ESL enables AD FS t o differentiate between sign-in attempts from a valid user and sign-ins from what may be an attacker. As a result, AD FS can lock out attackers while letting valid users continue to use their accounts. This prevents denial of service for users and protects against targeted attacks against known user accounts.
+As of the March 2018 update for Windows Server 2016, Active Directory Federation Services (AD FS) has a new feature that is namedExtranet Smart Lockout (ESL). In an era of increased attacks on authentication services, ESL enables AD FS t o differentiate between sign-in attempts from a valid user and sign-ins from what may be an attacker. As a result, AD FS can lock out attackers while letting valid users continue to use their accounts. This prevents denial of service for users and protects against targeted attacks against known user accounts.
 
 The ESL feature is available for AD FS in Windows Server 2016.
 
@@ -34,7 +34,7 @@ First, make sure that all Windows Server 2016 AD FS servers are up to date as of
 
 ### Update artifact database permissions
 
-Extranet smart lockout requires the AD FS service account to have permissions to create a new table in the AD FS artifact database. Log in to any AD FS server as an AD FS admin, and then grant this permission by executing the following commands in a PowerShell Command Prompt window:
+Extranet smart lockout requires the AD FS service account to have permissions to create a new table in the AD FS artifact database. Log in to any AD FS server as an AD FS admin, and then grant this permission by executing the following commands in a PowerShell Command Prompt window:
 
 ```powershell
 $cred= Get-Credential
@@ -44,7 +44,7 @@ Update-AdfsArtifactDatabasePermission -Credential$cred
 > [!Note]
 > The $cred placeholder is an account that has AD FS administrator permissions. This should provide the write permissions to create the table.
 
-The commands above may fail due to lack of sufficient permission because your AD FS farm is using SQL Server, and the credential provided above does not have admin permission on your SQL server. In this case, you can configure database permissions manually in SQL Server Database by running the following command when you're connected to the AdfsArtifactStore database.
+The commands above may fail due to lack of sufficient permission because your AD FS farm is using SQL Server, and the credential provided above does not have admin permission on your SQL server. In this case, you can configure database permissions manually in SQL Server Database by running the following command when you're connected to the AdfsArtifactStore database.
 
 ```sql
 ALTER AUTHORIZATION ON SCHEMA::[ArtifactStore] TO [db_genevaservice]
@@ -58,7 +58,7 @@ A new parameter that is named ExtranetLockoutMode is added to support ESL. It co
 - ADFSSmartLockoutLogOnly- This is Extranet Smart Lockout. Instead of rejecting authentication requests, AD FS writes admin and audit events.
 - ADFSSmartLockoutEnforce- This is Extranet Smart Lockout with full support for blocking unfamiliar requests when thresholds are reached.
 
-We recommend that you first set the lockout provider to log-only for a short period of time (1 to 3 days) by running the following cmdlet. Review audits (see below for details) during this period to determine the number of accounts that may potentially be impacted as well as the frequency of these events. After successful evaluation of the audits, set the setting to "ADFSSmartLockoutEnforce" mode:
+We recommend that you first set the lockout provider to log-only for a short period of time (1 to 3 days) by running the following cmdlet. Review audits (see below for details) during this period to determine the number of accounts that may potentially be impacted as well as the frequency of these events. After successful evaluation of the audits, set the setting to "ADFSSmartLockoutEnforce" mode:
 
 ```powershell
 Set-AdfsProperties -ExtranetLockoutMode AdfsSmartlockoutLogOnly
@@ -85,7 +85,7 @@ If password-based authentication fails and the credentials do not come from a fa
 After the number of failed password attempts from unfamiliar locations reaches the lockout threshold, if password-based authentication from an unfamiliar location fails, the account is locked out.
 
 > [!Note]
-> Lockout continues to apply to familiar locations separately from this new unfamiliar lockout counter.
+> Lockout continues to apply to familiar locations separately from this new unfamiliar lockout counter.
 
 The threshold is set by using `Set-AdfsProperties`.
 
@@ -97,7 +97,7 @@ Set-AdfsProperties -ExtranetLockoutThreshold 10
 
 #### Observation window setting
 
-The observation window setting allows an account to automatically unlock after some time. After the account unlocks, one authentication attempt is allowed. If the authentication succeeds, the failed authentication count is reset to 0. If it fails, the system waits for another observation window before the user can try again.
+The observation window setting allows an account to automatically unlock after some time. After the account unlocks, one authentication attempt is allowed. If the authentication succeeds, the failed authentication count is reset to 0. If it fails, the system waits for another observation window before the user can try again.
 
 The observation window is set by using `Set-AdfsProperties` as in the following example command:
 
@@ -142,7 +142,7 @@ Restart-service adfssrv
 AD FS provides three cmdlets to manage user account activity data. These cmdlets automatically connect to the node in the farm that holds the master role.
 
 > [!Note]
-> This behavior can be overridden by passing the -Server parameter.
+> This behavior can be overridden by passing the -Server parameter.
 
 - `Get-ADFSAccountActivity`
   

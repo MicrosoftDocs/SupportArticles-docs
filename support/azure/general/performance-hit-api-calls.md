@@ -2,7 +2,6 @@
 title: Azure API Management Troubleshooting Scenario 4 - Performance hit in API calls
 description: Provides troubleshooting guide to an error in which some performance issues and exceptions occur while invoking the API operations.
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.service: api-management
 ms.author: genli
 author: genlin
@@ -49,7 +48,7 @@ The API **ProductStore** in APIM communicates with the backend endpoint (`https:
     "reason": "OK"  
     }
 
-- Once you have isolated that the slowness is at the backend, you need to investigate the backend application code of the Web API application. For scenarios where you don't have access to the backend, you can implement caching at APIM level like below. Read about how you can implement [caching policies](https://docs.microsoft.com/azure/api-management/api-management-howto-cache)  to improve performance in Azure API Management.
+- Once you have isolated that the slowness is at the backend, you need to investigate the backend application code of the Web API application. For scenarios where you don't have access to the backend, you can implement caching at APIM level like below. Read about how you can implement [caching policies](/azure/api-management/api-management-howto-cache)  to improve performance in Azure API Management.
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -101,3 +100,5 @@ The API **ProductStore** in APIM communicates with the backend endpoint (`https:
        <!--base: End Api scope-->
     </outbound>
     ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

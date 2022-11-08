@@ -2,7 +2,6 @@
 title: Monitor text and CSV log files in Operations Manager
 description: Describes how to configure System Center Operations Manager to monitor plain text and delimited text log files.
 ms.date: 06/22/2020
-ms.prod-support-area-path:
 ms.reviewer: lamosley
 ---
 # Monitor text and CSV log files in System Center Operations Manager
@@ -76,7 +75,7 @@ To reference the fields that were read from the log when the rule is triggered i
 
 For more information on the various settings available in the **Create a unit monitor** and **Create Rule Wizard** wizards, see [Text Log Wizard Options](/previous-versions/system-center/system-center-2012-R2/hh457567(v=sc.12)?redirectedfrom=MSDN#text-log-wizard-options).
 
-## More information
+## More information
 
 Each line of a log file must end with a new line (0x0A0x0A hex sequence) before it will be read and processed by Operations Manager.  
 
@@ -94,8 +93,8 @@ Starting with Operations Manager 2012 Service Pack 1, if a log file is cleared o
 
 When monitoring a log file, Operations Manager remembers the last line read within the file (a high water mark). It will not re-read data before this point unless the file is deleted and recreated, or renamed and recreated, which will reset the high water mark.
 
-If a log file is deleted and recreated with the same name within the same minute, the high water mark will not be reset, and log entries will be ignored until the high water mark is exceeded.
+If a log file is deleted and recreated with the same name within the same minute, the high water mark will not be reset, and log entries will be ignored until the high water mark is exceeded.
 
 An implication of this is that log files that are cleared periodically without being renamed and recreated, or deleted and recreated, will not have entries in them processed before the log is cleared until the high water mark is exceeded.
 
-Operations Manager cannot monitor circular log files (for example, log files that get to a certain size or line count, then start writing the newest entries at the beginning of the log) for the same reason. The log file must be deleted or renamed and then recreated, or the application configured to write to a new log once the current log is filled.
+Operations Manager cannot monitor circular log files (for example, log files that get to a certain size or line count, then start writing the newest entries at the beginning of the log) for the same reason. The log file must be deleted or renamed and then recreated, or the application configured to write to a new log once the current log is filled.

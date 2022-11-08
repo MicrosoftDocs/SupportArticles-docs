@@ -2,7 +2,6 @@
 title: End support SQL Server 2008 R2 (KB 4456242)
 description: SQL Server 2008 and SQL Server 2008 R2 are approaching the end of their support life cycle.
 ms.date: 02/12/2020
-ms.prod-support-area-path:
 ms.reviewer: sureshka, suehar
 ms.prod: sql
 ---
@@ -53,21 +52,14 @@ The following table concerns products for SQL Server 2008 and SQL Server 2008 R2
 | Microsoft SQL Server 2008 Standard      | 7/9/2019 |
 | Microsoft SQL Server 2008 Web           | 7/9/2019 |
 | Microsoft SQL Server 2008 Workgroup     | 7/9/2019 |
-|||
-
+  
 We recommend that you migrate to Azure SQL DB, or upgrade to the current product versions. You should take action before the support end dates. Upgrading lets you take advantage of the latest product innovations, and ensures uninterrupted support from Microsoft.
 
 ## Resources
 
-<!--
-[SQL Server 2008 and 2008 R2 EOS Site](https://www.microsoft.com/sql-server/sql-server-2008)
-Gone. Merely redirects to generic Hub page...
-https://docs.microsoft.com/sql/?view=sql-server-ver15
--->
+- [SQL Server end of support options](/sql/sql-server/end-of-support/sql-server-end-of-life-overview)
 
-- [SQL Server end of support options](/sql/sql-server/end-of-support/sql-server-end-of-life-overview?view=sql-server-ver15&preserve-view=true)
-
-- [Extend support for SQL Server 2008 and SQL Server 2008 R2 with _Azure_](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)
+- [Extend support for SQL Server 2008 and SQL Server 2008 R2 with Azure](/azure/azure-sql/virtual-machines/windows/sql-server-2008-extend-end-of-support)
 
 - [End of _Mainstream_ support for SQL Server 2008 and SQL Server 2008 R2, July 2014](/archive/blogs/sqlreleaseservices/end-of-mainstream-support-for-sql-server-2008-and-sql-server-2008-r2)
 
@@ -75,17 +67,12 @@ https://docs.microsoft.com/sql/?view=sql-server-ver15
 
 - [SQL Server 2008 documentation](/previous-versions/sql/sql-server-2008/ms130214%28v=sql.100%29)
 
-### Migration assistance with the Azure Migration Center
+### Migration assistance with the Azure Migration and Modernization Center
 
-The [Azure Migration Center](https://azure.microsoft.com/migration/) has a full range of tools available to help you:
+The [Azure Migration and Modernization Center](https://azure.microsoft.com/migration/) has a full range of tools available to help you:
 
 - Assess your current on-premises environment.
 - Migrate your workloads onto Azure.
 - Optimize your Azure usage to best suit your needs.
 
 Microsoft also works with many partners who are available to help you at every step of the journey.
-
-<!--
-ORIGINAL HTTPS URL WAS...
-https://support.microsoft.com/help/4456242/end-of-support-for-sql-server-2008-and-sql-server-2008-r2
--->

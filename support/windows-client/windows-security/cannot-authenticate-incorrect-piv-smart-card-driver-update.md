@@ -1,23 +1,23 @@
 ---
-title: Can't authenticate because of incorrect PIV 
+title: Can't authenticate because of incorrect PIV
 description: Describes how to resolve a problem that is caused by an incorrect driver update. The user can't sign in to Windows until the incorrect driver is removed.
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: ccraig, wincicadsec, kaushika
-ms.prod-support-area-path: Smart card logon
+ms.custom: sap:smart-card-logon, csstroubleshoot
 ms.technology: windows-client-security
 ---
 # Can't authenticate because of an incorrect PIV smart card driver update
 
 This article describes how to resolve a problem where users can't sign in to Windows until the incorrect driver is removed.
 
-_Original product version:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1903  
+_Applies to:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1903  
 _Original KB number:_ &nbsp; 4563240
 
 ## Summary
@@ -38,7 +38,7 @@ You observe one or more of the following symptoms:
 
 The following example shows the results of the **certutil -scinfo** command that runs on an affected computer. The certificates were generated as part of a Microsoft AD CS enrollment. However, they're no longer able to interface with the YubiKey PIV device after the xPass Smart Card driver is installed.
 
-![Output of certutil, PIV driver issue](./media/cannot-authenticate-incorrect-piv-smart-card-driver-update/certutil-scinfo-command-result.png)
+:::image type="content" source="media/cannot-authenticate-incorrect-piv-smart-card-driver-update/certutil-scinfo-command-result.png" alt-text="Screenshot of the output of certutil -scinfo command, which indicates there is a PIV Smart Card driver problem.":::
 
 ## Cause
 
@@ -56,7 +56,7 @@ To do this, you can manually delete the driver, or create and run a script to de
 
 In Settings, select **Updates & Security** > **View update history**. You should be able to identify the driver update in the list.
 
-![Driver update list in the Windows update history list](./media/cannot-authenticate-incorrect-piv-smart-card-driver-update/driver-updates.png)
+:::image type="content" source="media/cannot-authenticate-incorrect-piv-smart-card-driver-update/driver-updates.png" alt-text="Screenshot of the Driver update list in the Windows update history list." border="false":::
 
 ### Manually delete the driver
 
@@ -66,11 +66,11 @@ To manually remove the driver, follow these steps:
 2. Start Device Manager. You can start Device Manager from Control Panel, or by pressing **Windows** + **R**, and then entering **devmgmt.msc**.
 3. Select **Smart cards**, right-click **xPass Smart Card**, and then select **Uninstall device**.
 
-    ![Uninstall a smart card driver by using Device Manager.](./media/cannot-authenticate-incorrect-piv-smart-card-driver-update/uninstall-device.png)
+    :::image type="content" source="media/cannot-authenticate-incorrect-piv-smart-card-driver-update/uninstall-device.png" alt-text="Screenshot of the Uninstall device option of xPass Smard Card item in Device Manager." border="false":::
 
 4. When you're prompted, select **Delete the driver software for this device**, and then select **Uninstall**.
 
-    ![Uninstall the driver while you uninstall the device](./media/cannot-authenticate-incorrect-piv-smart-card-driver-update/select-uninstall.png)
+    :::image type="content" source="media/cannot-authenticate-incorrect-piv-smart-card-driver-update/select-uninstall.png" alt-text="Screenshot of the Delete the driver software for this device option in the Uninstall Device dialog." border="false":::
 
 ### Create a script to delete the driver
 

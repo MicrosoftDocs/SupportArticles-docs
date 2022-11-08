@@ -4,20 +4,20 @@ description: Resolve problems with Cluster Services that be caused by antivirus 
 ms.date: 10/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Setup and configuration of clustered services and applications
+ms.custom: sap:setup-and-configuration-of-clustered-services-and-applications, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # Antivirus software that isn't cluster-aware may cause problems with Cluster Services
 
 This article provides help to solve problems with Cluster Services that be caused by antivirus software that isn't cluster-aware.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2022、Windows Server 2019、Windows Server 2016、Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 250355
 
 ## Summary
@@ -42,10 +42,22 @@ Even if you are not monitoring the shared disk, the filter drivers are still loa
 
 You can run antivirus software on a SQL Server cluster. However, you must make sure that the antivirus software is cluster-aware. Contact your antivirus software vendor about cluster-aware versions and interoperability.
 
-Additionally, you should exclude the following file system locations from virus scanning on a server that is running Cluster Services:
+Additionally, you should exclude the following file system locations and the processes from virus scanning on a server that is running Cluster Services:
 
-- The path of the `\mscs` folder on the quorum hard disk. For example, exclude the `Q:\mscs` folder from virus scanning.
+### Directory
+
+- The path of the `\Cluster` folder on the quorum hard disk. For example, exclude the `Q:\Cluster` folder from virus scanning.
 - The `%Systemroot%\Cluster` folder.
-- The temp folder for the Cluster Service account. For example, exclude the `\clusterserviceaccount\Local Settings\Temp` folder from virus scanning.
+- The temp folder for the Cluster Service account. For example, exclude the `\cliusr\Local Settings\Temp` folder from virus scanning.
+
+### Process
+
+- clussvc.exe (`%systemroot%\Cluster\clussvc.exe`)
+
+    This file may have to be configured as a process exclusion within the antivirus software.
+
+- rhs.exe (`%systemroot%\Cluster\rhs.exe`)
+
+    This file may have to be configured as a process exclusion within the antivirus software.
 
 For more information about running antivirus software on servers that are running SQL Server, see [How to choose antivirus software to run on computers that are running SQL Server](https://support.microsoft.com/help/309422).

@@ -4,20 +4,20 @@ description: Provides a solution to an issue where the Event ID 37 is logged in 
 ms.date: 12/03/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Devices and Drivers
-ms.technology: windows-server-deployment 
+ms.custom: sap:devices-and-drivers, csstroubleshoot
+ms.technology: windows-server-deployment
 ---
 # Kernel processor power Event ID 37 after changing power policy in Windows Server 2016
 
 This article provides a solution to an issue where the Event ID 37 is logged in the System log after you change the power policy for a Windows Server 2016-based server.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 4043839
 
 ## Symptoms
@@ -28,7 +28,7 @@ After you change the power policy for a Windows Server 2016-based server, you re
 Source: Microsoft-Windows-Kernel-Processor-Power  
 Type: Warning  
 Description:  
-The speed of processorxin group y is being limited by system firmware. The processor has been in this reduced performance state forz seconds since the last report.
+The speed of processorxin group y is being limited by system firmware. The processor has been in this reduced performance state forz seconds since the last report.
 
 > [!NOTE]
 > The values of x, y, and z in the Event ID message can vary.

@@ -2,8 +2,8 @@
 title: Error when you try to copy content to Azure
 description: This article provides a resolution for the problem that occurs when you try to copy content to Microsoft Azure by using a Java-based tool or program.
 ms.date: 10/22/2020
-ms.prod-support-area-path: Data Factory, V2 - Azure-SSIS Integration Runtime
-ms.prod: azure
+ms.custom: sap:Data Factory, V2 - Azure-SSIS Integration Runtime
+ms.service: azure-common-issues-support
 ---
 # UserErrorJreNotFound error message when you run a copy activity to Azure
 
@@ -40,7 +40,7 @@ To fix this issue, follow these steps to verify the status of the JRE installat
      > [!NOTE]
      > The folder is not `C:\Program Files (x86)\Java\`
 
-   - JRE 7 and JRE 8 are both compatible for this copy activity. JRE 6 and v ersions that are earlier than JRE 6 have not been validated for this use.
+   - JRE 7 and JRE 8 are both compatible for this copy activity. JRE 6 and versions that are earlier than JRE 6 have not been validated for this use.
 
 2. Check the registry for the appropriate settings. To do this, follow these steps:
 
@@ -49,31 +49,25 @@ To fix this issue, follow these steps to verify the status of the JRE installat
 
       In the **Details** pane, there should be a Current Version entry that shows the JRE version (for example, 1.8).
 
-      ![Java Runtime Environment version in registry](./media/error-run-copy-activity-azure/java-runtime-environment-image.png)  
+      :::image type="content" source="media/error-run-copy-activity-azure/java-runtime-environment-image.png" alt-text="Screenshot of the Java Runtime Environment version in the registry.":::
 
    1. In the navigation pane, locate a subkey that is an exact match for the version (for example 1.8) under the JRE folder. In the details pane, there should be a **JavaHome** entry. The value of this entry is the JRE installation path.
 
-      ![Java Home Entry](./media/error-run-copy-activity-azure/java-home-entry-image.png)  
+      :::image type="content" source="media/error-run-copy-activity-azure/java-home-entry-image.png" alt-text="Screenshot of the JavaHome entry in the details pane.":::
 
 3. Locate the bin\server folder in the following path:
 
     `C:\Program Files\Java\jre1.8.0_74`
 
-    ![Bin folder of JRE](./media/error-run-copy-activity-azure/folder-of-jre.png)
+    :::image type="content" source="media/error-run-copy-activity-azure/folder-of-jre.png" alt-text="Screenshot shows the location of the bin folder.":::
 
 4. Check whether this folder contains a jvm.dll file. If it does not, check for the file in the `bin\client` folder.
 
-   ![jvm.dll file location](./media/error-run-copy-activity-azure/file-location-image.png)  
+   :::image type="content" source="media/error-run-copy-activity-azure/file-location-image.png" alt-text="Screenshot to check the jvm.dll file in the bin folder.":::
   
 > [!NOTE]
 >
 > - If any of these configurations are not as described in these steps, use the [JRE windows installer](https://go.microsoft.com/fwlink/?LinkId=808605) to fix the problems.
-> - If all the configurations in these steps are correct as described, there may be a VC++ runtime library missing in the system. You can fix this problem by installing the VC++ 2010 Redistributable Package:
->
->   - **For 32-bit**  
->
->     [Microsoft Visual C++ 2010 Redistributable Package (x86)](https://www.microsoft.com/download/details.aspx?id=5555)
->
->   - **For 64-bit**
->
->     [Microsoft Visual C++ 2010 Redistributable Package (x64)](https://www.microsoft.com/download/details.aspx?id=14632)
+> - If all the configurations in these steps are correct as described, there may be a VC++ runtime library missing in the system. You can fix this problem by installing the VC++ 2010 Redistributable Package.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -4,20 +4,20 @@ description: Event1644Reader.ps1 is a PowerShell script that extracts 1644 event
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, mingchen, nasira, jseifert, deverett, justintu, arrenc, christys
-ms.prod-support-area-path: Domain controller scalability or performance (including LDAP)
+ms.custom: sap:domain-controller-scalability-or-performance-including-ldap, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Use Event1644Reader.ps1 to analyze LDAP query performance in Windows Server
 
 This article describes a script that helps analyze Active Directory event ID 1644 in Windows Server. Review the [steps to use the script](#how-to-use-the-script) and then [analyze your problems](#scenario-analysis).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3060643
 
 ## About the Event1644Reader.ps1 script
@@ -28,13 +28,16 @@ Event1644Reader.ps1 is a Windows PowerShell script that extracts data from 1644 
 
 ## How to obtain the script
 
-You can obtain the script from the [Microsoft Script Center](https://gallery.technet.microsoft.com/scriptcenter/event-1644-reader-export-45205268).
+You can obtain the script from the Core Infrastructure and Security Blog post [How to find expensive, inefficient and long running LDAP queries in Active Directory](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/how-to-find-expensive-inefficient-and-long-running-ldap-queries/ba-p/257859).
+
+> [!NOTE]
+> The script is attached on the blog post with file name Event1644Reader.zip
 
 Script Center disclaimer  
 The sample scripts are not supported under any Microsoft standard support program or service. The sample scripts are provided AS IS without warranty of any kind. Microsoft further disclaims all implied warranties including, without limitation, any implied warranties of merchantability or of fitness for a particular purpose. The entire risk arising out of the use or performance of the sample scripts and documentation remains with you. In no event shall Microsoft, its authors, or anyone else involved in the creation, production, or delivery of the scripts be liable for any damages whatsoever (including, without limitation, damages for loss of business profits, business interruption, loss of business information, or other pecuniary loss) arising out of the use of or inability to use the sample scripts or documentation, even if Microsoft has been advised of the possibility of such damages.
 
 Online peer support  
-For online peer support, join [The Official Scripting Guys Forum!](https://social.technet.microsoft.com/forums/en/itcg/threads/) To provide feedback or report bugs in sample scripts, start a new discussion on the **Discussions** tab for this script.
+For online peer support, join [The Official Scripting Guys Forum!](https://social.technet.microsoft.com/Forums/scriptcenter/en-US/home/) To provide feedback or report bugs in sample scripts, start a new discussion on the **Discussions** tab for this script.
 
 ## How to use the script
 
@@ -42,48 +45,51 @@ To better analyze the LDAP queries that are captured in event ID 1644, follow th
 
 1. Make sure that the domain controllers that you are troubleshooting capture enhanced ** 1644 event metadata.
 
-    > [!NOTE]
-    > Windows Server 2012 R2 added enhanced 1644 event logging by recording the duration of LDAP queries and other metadata. The enhanced 1644 event logging was backported to Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008 by hotfix [2800945](https://support.microsoft.com/help/2800945).
+   > [!NOTE]
+   > Windows Server 2012 R2 added enhanced 1644 event logging by recording the duration of LDAP queries and other metadata. The enhanced 1644 event logging was backported to Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008 by hotfix [2800945](https://support.microsoft.com/help/2800945).
 
 2. Set the value of the following Field Engineering registry entry to 5: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics\Field Engineering`  
 
-    > [!NOTE]
-    > Setting field engineering log verbosity to 5 will cause other events to be logged in the directory service event log. Reset field engineering back to its default value of 0 when you are not actively collecting 1644 events. (This action does not require a restart.)
+   > [!NOTE]
+   > Setting field engineering log verbosity to 5 will cause other events to be logged in the directory service event log. Reset field engineering back to its default value of 0 when you are not actively collecting 1644 events. (This action does not require a restart.)
 
 3. If the following registry entries exist, change the values to the desired threshold in milliseconds. If a particular registry entry does not exist, create a new entry with that name, and then set its value to the desired threshold in milliseconds.
 
-    |Registry path|Data type|Default value|
-    |---|---|---|
-    |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Search Time Threshold (msecs)|DWORD|30,000|
-    |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Expensive Search Results Threshold|DWORD|10,000|
-    |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Inefficient Search Results Threshold|DWORD|1,000|
+   |Registry path|Data type|Default value|
+   |---|---|---|
+   |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Search Time Threshold (msecs)|DWORD|30,000|
+   |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Expensive Search Results Threshold|DWORD|10,000|
+   |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Inefficient Search Results Threshold|DWORD|1,000|
 
-    > [!Note]
-    >
-    > - When the Field Engineering logging level is enabled and the Search Time Threshold (msecs) registry entry is not used or is set to 0, the default value of the time threshold is 30,000 milliseconds. (This action does not require a restart.)
-    > - One strategy would be to set the registry value for both the Inefficient Search Results Threshold and Expensive Search Results Threshold registry settings, and then focus on events that are identified by Search Time hold (msecs). Start with a larger value like 100 milliseconds and then incrementally decrease the value as you optimize the queries that are occurring in your environment.
-    > - Event1644Reader.ps1 can parse events from multiple domain controllers. Configure the field engineering, search time, expensive, and inefficient registry key settings on all domain controllers on which you want to review LDAP searches.
+   > [!Note]
+   >
+   > - When the Field Engineering logging level is enabled and the Search Time Threshold (msecs) registry entry is not used or is set to 0, the default value of the time threshold is 30,000 milliseconds. (This action does not require a restart.)
+   > - One strategy would be to set the registry value for both the Inefficient Search Results Threshold and Expensive Search Results Threshold registry settings, and then focus on events that are identified by Search Time hold (msecs). Start with a larger value like 100 milliseconds and then incrementally decrease the value as you optimize the queries that are occurring in your environment.
+   > - Event1644Reader.ps1 can parse events from multiple domain controllers. Configure the field engineering, search time, expensive, and inefficient registry key settings on all domain controllers on which you want to review LDAP searches.
 
-4. Download the Event1644Reader.ps1 file from [Microsoft Script Center](https://gallery.technet.microsoft.com/scriptcenter/event-1644-reader-export-45205268) to the computer that will analyze saved Active Directory Service EVTX files that contain 1644 events.
+4. Download the Event1644Reader.ps1 file from You can obtain the script from the Core Infrastructure and Security Blog post [How to find expensive, inefficient and long running LDAP queries in Active Directory](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/how-to-find-expensive-inefficient-and-long-running-ldap-queries/ba-p/257859) to the computer that will analyze saved Active Directory Service EVTX files that contain 1644 events.
 
-    This computer should have Microsoft Excel 2010 or a later version installed and should have sufficient disk space to host the directory service event logs that the script will parse.
+   This computer should have Microsoft Excel 2010 or a later version installed and should have sufficient disk space to host the directory service event logs that the script will parse.
 
 5. Copy saved Directory Service event logs that contain 1644 events from the domain controllers where you enabled 1644 event logging to the 1644 analysis computer.
 
 6. In Windows Explorer, right-click the Event1644Reader.ps1 file, and then select **Run with PowerShell**.
-The following is the screenshot for this step:
-![The screen shot of this step.](./media/event1644reader-analyze-ldap-query-performance/run-event1644reader-file.png)
+
+   The following is the screenshot for this step:
+
+    :::image type="content" source="media/event1644reader-analyze-ldap-query-performance/run-event1644reader-file.png" alt-text="Right-click the Event1644Reader.ps1 file, and then select Run with PowerShell.":::
 
 7. Press Y to bypass PowerShell Execution Policy as required.
 8. Specify the path of the EVTX files to be parsed.
 9. When you see the prompt as the following screenshot, take the following actions:
-![The screen shot of PowerShell.](./media/event1644reader-analyze-ldap-query-performance/prompt.jpg)
 
-    - Press Enter to parse all EVTX files that are located in the same directory as the Enent1644Reader.ps1 file.
-    - Type the `drive:\path` path that contains the EVTX files to be parsed.  
+   :::image type="content" source="media/event1644reader-analyze-ldap-query-performance/event1644reader-prompt.png" alt-text="PowerShell command about running the Event1644Reader.ps1 file.":::
 
-    > [!NOTE]
-    > Event1644Reader.ps1 parses 1644 events in all up-level directory service event logs that are located in the targeted path every time that the script runs.  
+   - Press Enter to parse all EVTX files that are located in the same directory as the Enent1644Reader.ps1 file.
+   - Type the `drive:\path` path that contains the EVTX files to be parsed.  
+
+   > [!NOTE]
+   > Event1644Reader.ps1 parses 1644 events in all up-level directory service event logs that are located in the targeted path every time that the script runs.  
 10. Open the worksheet to review data and walk through the series of tabs, and then save the Excel spreadsheet as required. For more information about the tabs in the worksheet, see the [Walkthrough of the Excel spreadsheet created by 1644Reder.ps1](#walkthrough-of-the-excel-spreadsheet-that-is-created-by-event1644readerps1) section.
 
     > [!NOTE]
@@ -107,7 +113,6 @@ The following table summarizes the data that is contained in each tab:
 | **TotalSearchTime by Filters**|Lists LDAP queries in descending order of total search time. Drillthrough detail exposes the LDAP client's IP address and the date and time when each matching query was submitted.|
 | **Search time ranks**|Displays the number of LDAP queries that occurred in time-based quartiles. Slower queries are bad. Faster queries are good if they aren't issued too often. Microsoft Exchange wants LDAP queries that are issued by Exchange servers to be resolved in 50 milliseconds or less. So, the first quartile group focuses on that time "bucket."|
 | **Blank Pivot**|This is a blank pivot table that you can change as required to show the specific data for your scenario.|
-|||  
 
 ### Scenario analysis
 
@@ -126,7 +131,6 @@ The following table lists the possible optimizations for this issue.
 |Optimize the LDAP query to execute more quickly.|Query syntax may have to be restructured to execute more quickly.<br/>Moving query elements to the left or right within the filter can improve performance.<br/>Adding a double "not" may improve query performance.<br/>Consider reducing the number of objects that are visited by starting queries lower in the tree.<br/>Reduce the number of attributes that are being returned by queries.|
 |Add indexes to Active Directory attributes as required.|Adding indexes can improve query performance. This has the side effect of increasing database size and may temporarily delay Active Directory replication during index build.|
 |Determine whether a code defect exists in the query optimizer and other components.|Defects in the LDAP query optimizer and other components can reduce throughput.|
-|||  
 
 ### Known issue
 
@@ -147,9 +151,10 @@ LCID Name DisplayName
 1033 en-US English (United States)
 ```
 
-In this situation, numbers in the Excel spreadsheet are rendered as in the following screenshot:
-![screen shot for the Excel rendering](./media/event1644reader-analyze-ldap-query-performance/numbers-render-result.png)
+In this situation, numbers in the Excel spreadsheet are rendered as in the following screenshot:  
+
+:::image type="content" source="media/event1644reader-analyze-ldap-query-performance/numbers-render-result.png" alt-text="Numbers in the Excel spreadsheet issue.":::
 
 To resolve this issue, change the **Decimal symbol** to a period (.) in the **Region settings** item in Control Panel.  
 
-For more information about LDAP queries, see the following blog: [How to find expensive, inefficient, and long running LDAP queries in Active Directory](https://blogs.technet.com/b/askpfeplat/archive/2015/05/11/how-to-find-expensive-inefficient-and-long-running-ldap-queries-in-active-directory.aspx)
+For more information about LDAP queries, see the following blog: [How to find expensive, inefficient, and long running LDAP queries in Active Directory](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/how-to-find-expensive-inefficient-and-long-running-ldap-queries/ba-p/257859)

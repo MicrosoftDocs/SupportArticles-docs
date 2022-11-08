@@ -2,7 +2,6 @@
 title: The Add Object Wizard displays only 500 objects
 description: Describes an issue that prevents more than 500 objects from being displayed in System Center Operations Manager, even when there are more than 500 objects.
 ms.date: 07/13/2020
-ms.prod-support-area-path:
 ms.reviewer: viksahay, adoyle
 ---
 # The Add Object Wizard in Operations Manager displays only 500 objects even if more than 500 exist
@@ -14,7 +13,7 @@ _Original KB number:_ &nbsp; 2976809
 
 ## Symptoms
 
-When you use the **Add Groups** or **Add Object** button while creating a report in System Center Operations Manager, no more than 500 objects are displayed in the Add Object Wizard even if more than 500 exist.
+When you use the **Add Groups** or **Add Object** button while creating a report in System Center Operations Manager, no more than 500 objects are displayed in the Add Object Wizard even if more than 500 exist.
 
 ## Cause
 

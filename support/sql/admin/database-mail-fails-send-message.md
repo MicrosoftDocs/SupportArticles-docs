@@ -2,7 +2,7 @@
 title: Error when Database mail fails to send message
 description: This article provides a resolution for the problem where Database mail fails to send a message.
 ms.date: 09/10/2020
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.reviewer: nathansc
 ms.prod: sql
 ---

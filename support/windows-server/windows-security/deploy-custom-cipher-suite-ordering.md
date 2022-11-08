@@ -2,27 +2,27 @@
 title: How to deploy custom cipher suite ordering in Windows Server 2016
 description: Describes how to deploy custom cipher suite ordering in Windows Server 2016.
 ms.date: 12/03/2020
-uthor: Deland-Han
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Secure channel issues
+ms.custom: sap:secure-channel-issues, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # How to deploy custom cipher suite ordering in Windows Server 2016
 
 This article provides information to help you deploy custom cipher suite ordering for Schannel in Windows Server 2016.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 4032720
 
 ## Summary
 
-To deploy your own cipher suite ordering for Schannel in Windows, you must prioritize cipher suites that are compatible with HTTP/2 by listing these first. Cipher suites that are on the HTTP/2 ([RFC 7540](https://tools.ietf.org/html/rfc7540)) block list must appear at the bottom of your list. For example:
+To deploy your own cipher suite ordering for Schannel in Windows, you must prioritize cipher suites that are compatible with HTTP/2 by listing these first. Cipher suites that are on the HTTP/2 ([RFC 7540](https://tools.ietf.org/html/rfc7540)) block list must appear at the bottom of your list. For example:
 
 Cipher block chaining (CBC) mode cipher suites:
 
@@ -36,7 +36,7 @@ Non-PFS (perfect forward secrecy) cipher suites:
 - TLS_RSA_WITH_AES_256_GCM_SHA384
 - TLS_RSA _WITH_AES_128_GCM_SHA256
 
-If the cipher suites that are on the block list are listed toward the top of your list, HTTP/2 clients and browsers may be unable to negotiate any HTTP/2-compatible cipher suite. This results in a failure to use the protocol.
+If the cipher suites that are on the block list are listed toward the top of your list, HTTP/2 clients and browsers may be unable to negotiate any HTTP/2-compatible cipher suite. This results in a failure to use the protocol.
 
 For example, when you use Chrome, you may receive the error ERR_SPDY_INADEQUATE_TRANSPORT_SECURITY.
 

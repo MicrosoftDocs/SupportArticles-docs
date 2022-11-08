@@ -2,7 +2,6 @@
 title: DNS management pack discovery fails with event 1155
 description: Fixes an issue in which DNS management pack discovery fails and event 1155 is logged in the Operations Manager event log.
 ms.date: 07/13/2020
-ms.prod-support-area-path:
 ---
 # DNS management pack discovery fails with event ID 1155 in System Center Operations Manager
 
@@ -13,7 +12,7 @@ _Original KB number:_ &nbsp; 2589504
 
 ## Symptoms
 
-When using Microsoft System Center Operations Manager, with the DNS management pack, DNS 2008 Component Discovery may fail. The following events are logged in the Operations Manager event log on the DNS server.
+When using Microsoft System Center Operations Manager, with the DNS management pack, DNS 2008 Component Discovery may fail. The following events are logged in the Operations Manager event log on the DNS server.
 
 Event 1155
 
@@ -53,17 +52,17 @@ Event 21405
 > Instance ID: {\<GUID>}  
 > Management group: \<Management Group Name>
 >
-> If you connect to WMI \root\default:StdRegProv directly using Windows Management Instrumentation Tester (Wbemtest.exe) with required privileges you should be able to connect.
+> If you connect to WMI \root\default:StdRegProv directly using Windows Management Instrumentation Tester (Wbemtest.exe) with required privileges you should be able to connect.
 
 ## Cause
 
-The `DNS2008ComponentDiscovery.vbs` script could not connect to the WMI class `MicrosoftDNS_Zone` due to an unavailable property value in the class.
+The `DNS2008ComponentDiscovery.vbs` script could not connect to the WMI class `MicrosoftDNS_Zone` due to an unavailable property value in the class.
 
 ## Resolution
 
-To resolve this issue, recreate the WMI values for DNS by recompiling the DNS *.mof* files:
+To resolve this issue, recreate the WMI values for DNS by recompiling the DNS *.mof* files:
 
-On the DNS server, open a Command Prompt as Administrator and execute the following commands:
+On the DNS server, open a Command Prompt as Administrator and execute the following commands:
 
 ```console
 mofcomp C:\Windows\System32\wbem\dnsetw.mof
@@ -75,4 +74,4 @@ and
 mofcomp C:\Windows\System32\wbem\dnsprov.mof
 ```
 
-These commands recreate the DNS information in the WMI repository. Once this is done, the errors should no longer appear.
+These commands recreate the DNS information in the WMI repository. Once this is done, the errors should no longer appear.

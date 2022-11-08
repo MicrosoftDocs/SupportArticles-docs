@@ -3,21 +3,21 @@ title: An update is available that integrates Windows Server Update Services (WS
 description: Fixes a problem in which you cannot use the Server Manager snap-in to install WSUS, or WSUS does not appear in the Server Manager snap-in
 ms.date: 09/14/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Setup
+ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # An update is available that integrates Windows Server Update Services (WSUS) 3.0 into Server Manager
 
 This article helps to fix a problem in which you cannot use the Server Manager snap-in to install WSUS, or WSUS does not appear in the Server Manager snap-in.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 940518
 
 ## INTRODUCTION
@@ -37,7 +37,7 @@ The following files are available for download from the Microsoft Download Cente
 
 Windows Server 2008
 
-![Download ](./media/update-available-integrates-wsus-into-server-manager/download.gif)
+:::image type="icon" source="media/update-available-integrates-wsus-into-server-manager/download-icon.png":::
  [Download the update for Windows Server 2008 Server Manager (KB940518) package now.](https://www.catalog.update.microsoft.com/Search.aspx?q=940518)  
 
 For more information about how to download Microsoft support files, click the following article number to view the article in the Microsoft Knowledge Base:  

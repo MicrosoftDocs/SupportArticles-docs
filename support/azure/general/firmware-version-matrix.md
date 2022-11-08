@@ -3,9 +3,8 @@ title: Firmware version matrix for Cloud Platform System (CPS) Premium
 description: Provides a table that lists the file paths for firmware updates on Cloud Platform System (CPS) Premium. The table also describes the latest firmware version that's supported by the 1607 release of CPS Premium.
 author: genlin
 ms.author: genli
-ms.service: csp
+ms.service: cloud-platform-system
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ---
 # Firmware version matrix for Cloud Platform System (CPS) Premium
@@ -132,4 +131,5 @@ The table in the [More Information](#more-information) section describes the lat
 |Management Pack Suite|R630|Management Pack|Tools - Software||5.1.1 (X22)|CPS_P_\<Release>/Tools/Dell%20Management%20Pack%20Suite/|
 |BIOS Settings Export Import - syscfg (DTK)|R630|BIOS|Tools - Deployment||5.0.1 A00|CPS_P_\<Release>/Tools/Dell%20DTK/|
 |BMC Utility|R630|Deployment / Update / Break-Fix|Tools - Deployment||7.3|CPS_P_\<Release>/Tools/Dell%20BMC%20Utility/|
-||||||||
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

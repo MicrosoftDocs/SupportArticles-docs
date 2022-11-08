@@ -4,13 +4,13 @@ description: Describes how to install and configure a virtual private network se
 ms.date: 09/27/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: masoudh, kaushika
-ms.prod-support-area-path: Remote access
+ms.custom: sap:remote-access, csstroubleshoot
 ms.technology: networking
 ---
 # How to install and configure a virtual private network server in Windows Server 2003  
@@ -19,7 +19,7 @@ This step-by-step article describes how to install virtual private networking (V
 
 For a Microsoft Windows XP version of this article, see [314076](https://support.microsoft.com/help/314076).  
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 323441
 
 ## Summary

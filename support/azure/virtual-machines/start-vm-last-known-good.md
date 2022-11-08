@@ -2,8 +2,10 @@
 title: How to start Azure Windows VM with Last Known Good Configuration
 description: Describes how to start a VM that fails to boot by using the Last Known Good Configuration feature.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
+ms.collection: windows
 ---
 # How to start Azure Windows VM with Last Known Good Configuration
 
@@ -15,7 +17,7 @@ _Original KB number:_ &nbsp; 4016731
 ## Step 1: Attach the OS disk of the VM to another (troubleshooter) VM as a data disk
 
 1. Delete the VM. Make sure that you select the **Keep the disks** option when you do this.
-2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/attach-managed-disk-portal).
+2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
 3. Connect to the troubleshooting VM. Open **Computer management** > **Disk management**. Make sure that the OS disk is online and that its partitions have drive letters assigned.
 
 ## Step 2: Modify the registry hive on the OS disk
@@ -25,7 +27,7 @@ _Original KB number:_ &nbsp; 4016731
 3. Click the **HKEY_USERS** key, and then select **File > Load Hive** on the menu.
 4. Navigate to `\windows\system32\config\SYSTEM` type a name for the hive, such as **ProblemSystem**. After you do this, you will see the registry hive under **HKEY_USERS**.
 
-    :::image type="content" source="media/start-vm-last-known-good/4016734_en_1.png" alt-text="Screenshot of registry keys.":::
+    :::image type="content" source="media/start-vm-last-known-good/registry-editor.png" alt-text="Screenshot shows registry key ProblemSystem under HKEY_USERS." border="false":::
 
 5. Expand to `HKEY_USERS/ProblemSystem/Select`, and then modify the following values based on the OS version:
 
@@ -37,7 +39,6 @@ _Original KB number:_ &nbsp; 4016731
     | HKEY_USERS\ProblemSystem\Select\Default| 2 |
     | HKEY_USERS\ProblemSystem\Select\Failed| 1 |
     |HKEY_USERS\ProblemSystem\Select\LastKnownGood|3|
-    |||
 
     For Windows 10, Windows Server 2016, and newer versions:
 
@@ -47,9 +48,10 @@ _Original KB number:_ &nbsp; 4016731
     | HKEY_USERS\ProblemSystem\Select\Default| 2 |
     | HKEY_USERS\ProblemSystem\Select\Failed| 1 |
     |HKEY_USERS\ProblemSystem\Select\LastKnownGood|2|
-    |||
 
     > [!NOTE]
     > If the VM was restarted on a Last Known Good Configuration before, the value on Current, Default, Failed and LastKnownGood will be increased in 1.  So, to boot by using Last Known Good Configuration, add 1 to all those values. For example, you should set `HKEY_USERS\ProblemSystem\Select\Current` to **3** if the VM was restarted on a **Last Known Good Configuration** before.
 6. Select `HKEY_USERS\ProblemSystem`, and then select **Unload Hive** on the **File** menu.
-7. Detach the repaired OS disk from the troubleshooting VM. Then, [create a new VM from the OS disk](https://docs.microsoft.com/azure/virtual-machines/windows/create-vm-specialized-portal). You may have to wait about 10 minutes for Azure to release the disk.
+7. Detach the repaired OS disk from the troubleshooting VM. Then, [create a new VM from the OS disk](/azure/virtual-machines/windows/create-vm-specialized-portal). You may have to wait about 10 minutes for Azure to release the disk.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

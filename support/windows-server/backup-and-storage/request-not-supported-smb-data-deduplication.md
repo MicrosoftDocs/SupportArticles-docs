@@ -1,24 +1,24 @@
 ---
 title: The request is not supported error for SMB Read Andx requests for files managed by Data Deduplication in Windows Server 2012
 description: Fixes errors that occur in SMB Read Andx requests for files managed by Data Deduplication.
-ms.date: 09/08/2020
+ms.date: 07/19/2022
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Deduplication
+ms.custom: sap:deduplication, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # SMB Read Andx requests for files managed by Data Deduplication error in Windows Server 2012: The request is not supported
 
 This article helps fix the errors that occur in SMB Read Andx requests for files managed by Data Deduplication.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2817216
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2817216
 
 ## Symptoms
 
@@ -182,9 +182,9 @@ and
 
  **KB77623** - is currently in the pipeline and will be published within the next 5-6 working days, the KB will be updated as our investigation progresses and more details become available. It currently contains a general overview of the issue and the workaround described by MSFT.  
 
- March 19: the KB has been published and should be publicly accessible through the [McAfee Knowledgebase](https://kc.mcafee.com/corporate/index?page=home)). Investigation surrounding the value "enableecp" is on-going.  
+ March 19: the KB has been published and should be publicly accessible through the [McAfee Knowledgebase](https://kcm.trellix.com/corporate/index?page=home). Investigation surrounding the value "enableecp" is on-going.  
 
- [Windows 7 clients can't access shares on Windows Server 2012 when Data Deduplication is enabled](https://kc.mcafee.com/corporate/index?page=content&id=KB77623)  
+ [Windows 7 clients can't access shares on Windows Server 2012 when Data Deduplication is enabled](https://kcm.trellix.com/corporate/index?page=content&id=KB77623)  
 
 ## More information
 

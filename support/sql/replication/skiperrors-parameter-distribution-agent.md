@@ -2,7 +2,7 @@
 title: SkipErrors parameter in Distribution Agent
 description: This article describes the usage of -SkipErrors parameter in Distribution Agent.
 ms.date: 09/22/2020
-ms.prod-support-area-path: Replication
+ms.custom: sap:Replication
 ms.topic: article
 ms.prod: sql
 ---

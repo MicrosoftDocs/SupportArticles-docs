@@ -1,9 +1,10 @@
 ---
 title: Password isn't synced from Azure AD to the local on-premises directory after the password is changed or reset
-description: This article describes an issue in which password isn't synced from Azure AD to the local on-premises directory after the password is changed or reset. It provides a resolution. 
+description: This article describes an issue in which password isn't synced from Azure AD to the local on-premises directory after the password is changed or reset. It provides a resolution.
 ms.date: 05/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Password isn't synced from Azure AD to on-premises after the password is changed or reset
 
@@ -42,6 +43,8 @@ Before troubleshooting this issue, it's important to know which scenarios allow 
 |Admins who perform password resets by using the Azure Management Portal | Yes |
 |Admins who perform password resets by using the Microsoft 365 admin center| No  |
 |Passwords at new user creation through Azure Management Portal, Microsoft 365 admin center, or Azure AD PowerShell Module| No |
-|Admins who use the Set-MsolUserPassword cmdlet by using the Azure AD PowerShell Module|No|
+|Admins who perform password resets by using PowerShell Modules V1 (MSOnline) or V2 (AzureAD)|No|
 
-To resolve this issue, see the **Troubleshoot Password Writeback** section of [How to troubleshoot Password Management](https://docs.microsoft.com/azure/active-directory/authentication/active-directory-passwords-troubleshoot#troubleshoot-password-writeback).
+To resolve this issue, see the **Troubleshoot Password Writeback** section of [How to troubleshoot Password Management](/azure/active-directory/authentication/active-directory-passwords-troubleshoot#troubleshoot-password-writeback).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

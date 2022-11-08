@@ -3,21 +3,21 @@ title: 0x2AFC or 0x274D error when DirectAccess clients try to connect over IP-H
 description: Describes an issue that blocks DirectAccess clients from connecting to a DirectAccess server in Windows Server 2012. Error 0x2AFC or 0x274D is triggered in this situation. A resolution is provided.
 ms.date: 09/14/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---
 # 0x2AFC or 0x274D error when DirectAccess clients try to connect over IP-HTTPS
 
 This article provides a resolution to the error 0x2AFC or 0x274D that occurs when DirectAccess clients try to connect over IP-HTTPS.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3056560
 
 ## Symptoms

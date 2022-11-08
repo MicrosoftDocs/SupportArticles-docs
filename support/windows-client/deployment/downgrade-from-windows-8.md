@@ -2,20 +2,20 @@
 title: How to downgrade from Windows 8
 description: Describes the factors that determine whether you can downgrade Windows 8 to an earlier version of Windows.
 ms.date: 10/22/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, jennrowe
-ms.prod-support-area-path: Servicing
+ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # How to downgrade from Windows 8
 
-_Original product version:_ &nbsp; Windows 8  
+_Applies to:_ &nbsp; Windows 8  
 _Original KB number:_ &nbsp; 2832566
 
 ## Summary
@@ -77,7 +77,7 @@ To do the downgrade on your PC yourself, follow these steps:
 
 Volume Licensing provides the greatest flexibility as to downgrade rights. Volume Licensing allows for downgrades to additional earlier versions and editions. The following table summarizes downgrade eligibility. There are no downgrade rights to Windows 7 Ultimate.
 
-:::image type="content" source="./media/downgrade-from-windows-8/downgrade-eligibility.png" alt-text="Summarizes downgrade eligibility.":::
+:::image type="content" source="media/downgrade-from-windows-8/downgrade-eligibility.png" alt-text="Screenshot of a table that summarizes downgrade eligibility." border="false":::
 
 > [!NOTE]
 > A Windows 8 customer who has multi-language functionality cannot downgrade to Windows 7 Pro or to Windows XP Pro. This is because the multi-language functionality is exclusive to Windows 7 Enterprise and is not available for a Professional edition.

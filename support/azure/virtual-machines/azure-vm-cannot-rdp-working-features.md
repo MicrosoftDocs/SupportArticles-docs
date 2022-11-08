@@ -2,8 +2,10 @@
 title: Azure VM cannot RDP - working on features
 description: Troubleshoot Azure VM cannot RDP - working on features.
 ms.date: 12/16/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
+ms.collection: windows
 ---
 
 # Azure VM cannot RDP - working on features
@@ -16,7 +18,7 @@ ms.reviewer:
    - ##% complete
    - Don't turn off your computer
 
-   ![Error messages](./media/azure-vm-cannot-rdp-working-features/1-error.png)
+   :::image type="content" source="media/azure-vm-cannot-rdp-working-features/working-on-features-error-message.png" alt-text="Screenshot of the Working on features error message.":::
 
 ## Cause
 
@@ -35,7 +37,7 @@ Refresh the screenshot in boot diagnostics a few times to monitor if there's any
 
 ### Create and Access a Repair VM<a id="1"></a>
 
-1. Use [steps 1-3 of the VM Repair Commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to prepare a Repair VM.
+1. Use [steps 1-3 of the VM Repair Commands](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to prepare a Repair VM.
 2. Use Remote Desktop Connection connect to the Repair VM.
 
 ### Use DISM to roll back the change<a id="2"></a>
@@ -115,10 +117,6 @@ Refresh the screenshot in boot diagnostics a few times to monitor if there's any
 
 ### Rebuild the VM<a id="4"></a>
 
-Use [step 5 of the VM Repair Commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to reassemble the VM.
+Use [step 5 of the VM Repair Commands](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to reassemble the VM.
 
-## Next steps
-
-If you still cannot determine the cause of the issue and need more help, you can open a support ticket with Microsoft Customer Support.
-
-If you need more help at any point in this article, you can contact the Azure experts on the [MSDN Azure and Stack Overflow forums](https://azure.microsoft.com/support/forums/). You can also file an Azure support incident. Go to the [Azure support site](https://azure.microsoft.com/support/options/), and select **Get support**. For information about using Azure support, read the [Microsoft Azure support FAQ](https://azure.microsoft.com/support/faq/).
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

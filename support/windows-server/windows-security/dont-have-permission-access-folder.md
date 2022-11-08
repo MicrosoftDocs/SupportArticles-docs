@@ -1,23 +1,23 @@
 ---
-title: Don't have permission to access folder
-description: Describes an issue in which your user ID is added to the ACL list for a directory that you don't have permissions.
-ms.date: 09/29/2020
-author: Deland-Han 
+title: Continue dialog box for folder access in Windows Explorer when user only has access with elevated token
+description: Describes an issue in which your user ID is added to the ACL list for a directory that you don't have permissions, and you receive an access denied message when accessing a folder which you don't have read permissions with Windows Explorer.
+ms.date: 05/06/2021
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, davemid, kbsec
-ms.prod-support-area-path: Permissions, access control, and auditing
+ms.custom: sap:permissions-access-control-and-auditing, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # When you select Continue for folder access in Windows Explorer, your user account is added to the ACL for the folder
 
 This article provides a solution to an issue when you select **Continue** to gain access to a file system folder for which you don't have Read permissions.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 950934
 
 ## Introduction

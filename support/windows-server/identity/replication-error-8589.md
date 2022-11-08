@@ -4,13 +4,13 @@ description: Describes how to troubleshoot AD operations failure with Win32 erro
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, apurvash, justinha, justintu
-ms.prod-support-area-path: User, computer, group, and object management
+ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Troubleshooting AD Replication error 8589: The DS cannot derive a service principal name (SPN)
@@ -20,8 +20,8 @@ This article describes symptoms, cause, and resolution steps for cases where AD 
 > [!NOTE]
 > **Home users:** This article is only intended for technical support agents and IT professionals. If you're looking for help with a problem, please [ask the Microsoft Community](https://answers.microsoft.com/en-us).  
 
-_Original product version:_ &nbsp;Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2703028
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2703028
 
 ## Symptoms
 
@@ -73,7 +73,7 @@ You will see any of the following errors/warning when troubleshooting Active Dir
     This domain controller will be unable to replicate with the source domain controller until this problem is corrected.  
     >
     > User Action  
-    > Verify if the source domain controller is accessible or network connectivity is available. 
+    > Verify if the source domain controller is accessible or network connectivity is available.
     >
     > Additional Data  
     > Error value:  
@@ -108,7 +108,6 @@ You will see any of the following errors/warning when troubleshooting Active Dir
     |NTDS Replication / ActiveDirectory_DomainService 1411|Active Directory failed to construct a mutual authentication service principal name (SPN) for the following domain controller.|
     |NTDS Replication 2023|The local domain controller was unable to replicate changes to the following remote domain controller for the following directory partition.|
     |NTDS KCC 1925|The attempt to establish a replication link for the following writable directory partition failed.|
-    |||
 
 ## Cause
 
@@ -140,7 +139,7 @@ Verify the serverReference attribute is not missing or set to an incorrect value
     Use PowerShell to find the DC referenced. There are two PowerShell methods you can use. To do this open the "Active Directory Module for Windows PowerShell"
 
     Method 1:
-    Run the following two PowerShell cmdlets. In the first cmdlet, replace the partition name `CN=Configuration,DC=contoso,DC=com` with the DN of your Configuration partition. Replace the server name `DCSRV01.contoso.com` with the name of your domain controller. In the second cmdlet, replace the GUID *3dab7f9b-92e7-4391-b8db-71df532c1493* with the GUID in your event ID 1411.
+    Run the following two PowerShell cmdlets. In the first cmdlet, replace the partition name `CN=Configuration,DC=contoso,DC=com` with the DN of your Configuration partition. Replace the server name `DCSRV01.contoso.com` with the name of your domain controller. In the second cmdlet, replace the GUID _3dab7f9b-92e7-4391-b8db-71df532c1493_ with the GUID in your event ID 1411.
 
     ```powershell
     $list = Get-ADObject -Filter 'ObjectClass -eq "ntdsdsa"' -SearchBase '*CN=Configuration,DC=contoso,Dc=com*' -Server *DCSRV01.contoso.com*  
@@ -199,7 +198,7 @@ Verify the serverReference attribute is not missing or set to an incorrect value
     5. On left pane, expand " Configuration "
     6. Next expand " CN=Configuration,DC=contoso,DC=com "
     7. Next expand " CN=Sites "
-    8. Under CN=Sites, expand the *site* in which the server is located.
+    8. Under CN=Sites, expand the _site_ in which the server is located.
      Example: Default-First-Site-Name
     9. Under that site expand CN=Servers.
      Example: If DCSRV02 is in the Default-First-Site-Name site in Contoso.com, you should be in:
@@ -275,18 +274,18 @@ Active Directory Domain Services failed to construct a mutual authentication ser
 Error value:  
 8589 The DS cannot derive a service principal name (SPN) with which to mutually authenticate the target server because the corresponding server object in the local DS database has no serverReference attribute.
 
-![NTDS Settings Properties](./media/replication-error-8589/ntds-settings-properties.png)
+:::image type="content" source="media/replication-error-8589/ntds-settings-properties.png" alt-text="Screenshot of the Active Directory Sites and Services window with the NTDS Settings Properties window opened.":::
 
 Click Cancel and then view the properties for the server object (5thWardCorpDC in this example) select the Attribute Editor tab (Server 2008 and later) or use ADSIEDIT to edit the object on Server 2003
 
 Notice that the serverReference attribute is not set in the following image
 
-![Domain Controller Attributes](./media/replication-error-8589/serverreference-attribute-not-set.png)
+:::image type="content" source="media/replication-error-8589/serverreference-attribute-not-set.png" alt-text="Screenshot of the 5THWARDCORPDC Properties window with the serverReference attribute selected.":::
 
 Bind to the Source DC using ADSIEDIT or Active Directory Users and Computers and open up the Attribute Editor and copy the value in serverReference. Paste in the value of this attribute on the destination DCs copy of the object.
 
-![Attribute Editor ](./media/replication-error-8589/set-server-reference-attribute.png)
+:::image type="content" source="media/replication-error-8589/set-server-reference-attribute.png" alt-text="Screenshot of the Active Directory Sites and Services window with the 5THWARDCORPDC Properties window opened, and a String Attribute Editor window is opened for editing the value.":::
 
 After the serverReference attribute is set correctly for the domain controller is shows as follows:
 
-![Correct serverReference ](./media/replication-error-8589/check-serverreference-attribute.png)
+:::image type="content" source="media/replication-error-8589/check-serverreference-attribute.png" alt-text="Screenshot of the Active Directory Sites and Services window with the 5THWARDCORPDC Properties window opened, and the serverReference attribute is selected.":::

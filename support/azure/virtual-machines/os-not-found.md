@@ -2,8 +2,10 @@
 title: Windows can't boot with (An operating system wasn't found) error 
 description: Provides a solution to an issue where Windows VM doesn't start with (An operating system wasn't found) error.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
+ms.collection: windows
 ---
 # Windows boot error in an Azure VM: An operating system wasn't found
 
@@ -29,12 +31,15 @@ This issue occurs for one of the following reasons:
 
 ## Resolution
 
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+
 To fix this issue, stop (de-allocate) and restart the VM. Then, check whether the issue persists. If the issue persists, follow these steps.
 
 ### Step 1: Verify whether the Windows partition is marked as active
 
 1. Delete the VM. Make sure that you select the **Keep the disks** option when you do this.
-2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/attach-managed-disk-portal).
+2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
 3. Connect to the troubleshooting VM. Open **Computer management** > **Disk management**. Make sure that the OS disk is online and that its partitions have drive letters assigned.
 4. Identify the Boot partition and the Windows partition. If there's only one partition on the OS disk, this partition is both the Boot partition and the Windows partition.
 
@@ -71,7 +76,7 @@ To fix this issue, stop (de-allocate) and restart the VM. Then, check whether th
         sel vol <number of the volume>
         ```
 
-    4. List the partition on the disk, and then select the partition that contains the Windows folder. 
+    4. List the partition on the disk, and then select the partition that contains the Windows folder.
 
         ```console
         list partition
@@ -84,7 +89,7 @@ To fix this issue, stop (de-allocate) and restart the VM. Then, check whether th
         detail partition
         ```
 
-        :::image type="content" source="media/os-not-found/4018937_en_1.png" alt-text="Screenshot of disk partition output":::
+        :::image type="content" source="media/os-not-found/detail-partition.png" alt-text="Screenshot of disk partition output, showing partition 1 is not active.":::
 
         If the partition is active, go to "Step 2: Repair the Boot Configuration data."
 
@@ -134,3 +139,5 @@ To fix this issue, stop (de-allocate) and restart the VM. Then, check whether th
     ```
 
 4. Detach the repaired OS disk from the troubleshooting VM. Then, create a VM from the OS disk.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

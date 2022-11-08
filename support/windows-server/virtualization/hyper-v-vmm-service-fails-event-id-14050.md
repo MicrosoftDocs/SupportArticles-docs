@@ -4,21 +4,21 @@ description: Discusses that Hyper-V VMM service fails and Event ID 14050 is logg
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits, robertvi
-ms.prod-support-area-path: Installation and configuration of Hyper-V
+ms.custom: sap:installation-and-configuration-of-hyper-v, csstroubleshoot
 ms.technology: hyper-v
 ---
 # Hyper-V VMM service fails and Event ID 14050 is logged when dynamicportrange is changed
 
 This article provides a solution to issues where Hyper-V VMM service fails and event ID 14050 is logged when the dynamicportrange setting is changed.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2761899
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2761899
 
 ## Symptoms
 

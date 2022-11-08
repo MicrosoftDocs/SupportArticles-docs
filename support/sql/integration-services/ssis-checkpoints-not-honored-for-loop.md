@@ -2,7 +2,7 @@
 title: SSIS Checkpoints are not honored for For Loop items
 description: This article provides workarounds for the problem where SSIS Checkpoints are not honored for For Loop or Foreach Loop container items.
 ms.date: 09/02/2020
-ms.prod-support-area-path: Integration Services
+ms.custom: sap:Integration Services
 ms.prod: sql
 ---
 # SSIS Checkpoints are not honored for For Loop or Foreach Loop container items

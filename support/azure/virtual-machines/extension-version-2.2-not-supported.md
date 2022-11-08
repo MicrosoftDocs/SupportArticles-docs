@@ -2,8 +2,9 @@
 title: Can't enable Azure Disk Encryption
 description: Works around a problem in which you receive an Extension version '2.2' is not supported error when you enable Azure Disk Encryption.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: Ejarvi, devtiw, scotro
+ms.service: virtual-machines
+ms.subservice: vm-extensions-not-operating
 ---
 # Error when you try to enable Azure Disk Encryption: Extension version '2.2' is not supported
 
@@ -16,7 +17,7 @@ _Original KB number:_ &nbsp; 4339481
 
 When you try to enable Azure Disk Encryption on an Azure virtual machine (VM) on Windows, you receive the following error message:
 
-> Azure Disk Encryption extension version '2.2' is not supported 
+> Azure Disk Encryption extension version '2.2' is not supported
 
 ## Workaround
 
@@ -24,7 +25,7 @@ To work around this problem, use one of the following methods.
 
 ### Method 1
 
-Revert to using the Azure AD parameters in the syntax for [Set-AzureRmVmDiskEncryptionExtension](https://docs.microsoft.com/powershell/module/azurerm.compute/set-azurermvmdiskencryptionextension?view=azurermps-6.2.0&preserve-view=true).
+Revert to using the Azure AD parameters in the syntax for [Set-AzureRmVmDiskEncryptionExtension](/powershell/module/azurerm.compute/set-azurermvmdiskencryptionextension?view=azurermps-6.2.0&preserve-view=true).
 
 The parameters are the following:
 
@@ -35,7 +36,7 @@ The parameters are the following:
 
 ### Method 2
 
-Opt in to the "UnifiedDiskEncryptionForVMs" feature for your subscription by running the following script before you try again to enable encryption: 
+Opt in to the "UnifiedDiskEncryptionForVMs" feature for your subscription by running the following script before you try again to enable encryption:
 
 ```powershell
 Register-AzureRmProviderFeature -ProviderNamespace "Microsoft.Compute" -FeatureName "UnifiedDiskEncryptionForVMs" # Wait 10 minutes until state transitions to 'Registered' Register-AzureRmResourceProvider -ProviderNamespace Microsoft.Compute
@@ -65,3 +66,5 @@ At line:1 char:1
 ## Status
 
 Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

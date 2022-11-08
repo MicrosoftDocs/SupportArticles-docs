@@ -2,8 +2,9 @@
 title: Azure Active Directory Joined computers experience a three hours delay during boot if the workgroup name is the same as the on-premises AD domain NetBIOS name
 description: This article describes the three hours delay during boot if the workgroup name is the same as the on-premises AD domain NetBIOS name.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: maweeras, ntuttle, arpadg, takondo, cleng, hiyazawa, genli
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Azure Active Directory Joined computers experience a three hours delay during boot
 
@@ -32,3 +33,5 @@ This issue occurs because Windows unexpectedly evaluates a condition in which a
 ## Resolution
 
 To resolve this issue, use a workgroup name that does not match the NetBIOS name of the on-premises domain.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

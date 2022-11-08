@@ -3,21 +3,21 @@ title: System logs events that specify Event ID 640
 description: Describes a situation in which system logs many instances of Event ID 640
 ms.date: 09/21/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Data corruption and disk errors
+ms.custom: sap:data-corruption-and-disk-errors, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # System logs multiple events that specify Event ID 640
 
 This article provides some information about Event ID 640.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4577004
 
 ## Symptoms

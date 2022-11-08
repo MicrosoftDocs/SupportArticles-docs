@@ -4,20 +4,20 @@ description: Describes a problem in which Event ID 4 and Event ID 1097 are logge
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nandve
-ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
+ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
 ms.technology: networking
 ---
 # Error (Target account name is incorrect) when a domain user accesses a share on a file server that is running Windows Server 2012 R2
 
 This article provides a solution to an issue where users fail to access a share on a file server that is running Windows Server 2012 R2.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3040803
 
 ## Symptoms
@@ -30,11 +30,15 @@ Additionally when this problem occurs, Event ID 4 and Event ID 1097 are logged i
 
 - Event ID 4
 
-    > The Kerberos client received a KRB_AP_ERR_MODIFIED error from the server server_name$. The target name used was server_name$. This indicates that the target server failed to decrypt the ticket provided by the client. This can occur when the target server principal name (SPN) is registered on an account other than the account the target service is using. Please ensure that the target SPN is registered on, and only registered on, the account used by the server. This error can also happen when the target service is using a different password for the target service account than what the Kerberos Key Distribution Center (KDC) has for the target service account. Please ensure that the service on the server and the KDC are both updated to use the current password. If the server name is not fully qualified, and the target domain (DNS_prefix.dns_suffix) is different from the client domain (DNS_prefix.dns_suffix), check if there are identically named server accounts in these two domains, or use the fully-qualified name to identify the server.
+  ```output
+  The Kerberos client received a KRB_AP_ERR_MODIFIED error from the server server_name$. The target name used was server_name$. This indicates that the target server failed to decrypt the ticket provided by the client. This can occur when the target server principal name (SPN) is registered on an account other than the account the target service is using. Please ensure that the target SPN is registered on, and only registered on, the account used by the server. This error can also happen when the target service is using a different password for the target service account than what the Kerberos Key Distribution Center (KDC) has for the target service account. Please ensure that the service on the server and the KDC are both updated to use the current password. If the server name is not fully qualified, and the target domain (DNS_prefix.dns_suffix) is different from the client domain (DNS_prefix.dns_suffix), check if there are identically named server accounts in these two domains, or use the fully-qualified name to identify the server.
+  ```
 
 - Event ID 1097
 
-    > The processing of Group Policy failed. Windows could not determine the computer account to enforce Group Policy settings. This may be transient. Group Policy settings, including computer configuration, will not be enforced for this computer.
+  ```output
+  The processing of Group Policy failed. Windows could not determine the computer account to enforce Group Policy settings. This may be transient. Group Policy settings, including computer configuration, will not be enforced for this computer.
+  ```
 
 ## Cause
 

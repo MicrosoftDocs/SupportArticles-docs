@@ -3,21 +3,21 @@ title: cannot connect to mobile broadband
 description: Describes an issue that prevents your Windows 10-based device from connecting to mobile broadband. Occurs if an over-the-air update was applied directly to your modem. Resolutions are provided.
 ms.date: 10/19/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # Devices can't connect to mobile broadband after over-the-air update from mobile operator
 
 This article provides a resolution for the issue that devices can't connect to mobile broadband after over-the-air update from mobile operator.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3160433
 
 ## Symptoms
@@ -51,7 +51,8 @@ To resolve the issue that's described in the "Symptoms" section, follow these st
 
 10. Go to **Settings** -> **Network and Internet** -> **Cellular** -> **Connect**.
 11. A retry page that resembles as:
-![network and internet](./media/device-cant-connect-mobile-broadband-over-the-air/network-and-internet.jpg)
+
+:::image type="content" source="media/device-cant-connect-mobile-broadband-over-the-air/network-and-internet.png" alt-text="Screenshot of the Mobile operator network connection retry option in the Cellular page of Network and Internet settings." border="false":::
 
 12. Click **Yes**.  
 Windows can now connect by using the configuration in the modem. This modem configuration overwrites the existing configuration on the operating system.

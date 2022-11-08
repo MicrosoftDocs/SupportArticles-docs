@@ -4,21 +4,21 @@ description: Describes an issue in which profile loading fails when the ntuser.d
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
-ms.prod-support-area-path: User profiles
+ms.custom: sap:user-profiles, csstroubleshoot
 ms.technology: windows-server-user-profiles
 ---
 # Error occurs during desktop setup and desktop location is unavailable when you log on to Windows for the first time
 
 This article provides help to solve an issue where profile loading fails when the ntuser.dat or usrclass.dat file is defined as read-only, or the profile user lacks the appropriate permissions for these two .dat files.
 
-_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;3048895
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 3048895
 
 ## Symptoms  
 
@@ -42,7 +42,7 @@ Process Monitor may indicate that a **CreateFile** operation fails with an **ACC
 
 The screenshot of Process Monitor can be seen here:
 
-:::image type="content" source="./media/desktop-location-unavailable/process-monitor.jpg" alt-text="The screenshot of Process Monitor.":::
+:::image type="content" source="media/desktop-location-unavailable/process-monitor.png" alt-text="Process Monitor indicates that a CreateFile operation fails with an ACCESS DENIED result.":::
 
 See [Details of the failure that are displayed in Process Monitor](#details-of-the-failure-that-are-displayed-in-process-monitor).
 
@@ -62,9 +62,9 @@ To resolve this issue, follow these steps:
 
     The USRCLASS.DAT file is typically located along a path like C:\Documents and Settings\< **user_name** >\Local Settings\Application Data\Microsoft\Windows\UsrClass.dat or C:\Users\< **user_name** >\AppData\Local\Microsoft\Windows.
 
-    In Windows Explorer, right-click the NTUSER.DAT or USRCLASS file for the relevant default user or cached user profile. The **Read-only** check box should be cleared. It this check box is selected, it will cause profile load failures.
+    In Windows Explorer, right-click the NTUSER.DAT or USRCLASS file for the relevant default user or cached user profile. The **Read-only** check box should be cleared. If this check box is selected, it will cause profile load failures.
 
-    ![Ntuser.dat properties](./media/desktop-location-unavailable/clear-read-only--in-ntuser-properties.jpg)
+    :::image type="content" source="media/desktop-location-unavailable/clear-read-only-in-ntuser-properties.png" alt-text="Make sure the Read-only option is unselected in NTUSER.DAT Properties." border="false":::
 
 2. Check the NTFS File System permissions setting on the NTUSER.DAT or USERCLASS.DAT file in the cached profile directory that fails to load.
 
@@ -72,7 +72,7 @@ In the following screenshot, the test user, CONTOSO/testUser, has full control o
 
 |NTFS File System ACLS on DAT files|Advanced NTFS File System ACLS on DAT files|
 |---|---|
-|![UsrClass.dat Properties](./media/desktop-location-unavailable/ntfs-file-system-permissions-on-ntuser.png)<br/>|![NTFS file system](./media/desktop-location-unavailable/ntfs-file-system-permissions-on-usrclass.png)<br/>|
+|:::image type="content" source="media/desktop-location-unavailable/ntfs-file-system-permissions-on-ntuser.png" alt-text="The permission of the test user that's shown in the Security tab of UsrClass.dat Properties." border="false":::<br/>|:::image type="content" source="media/desktop-location-unavailable/ntfs-file-system-permissions-on-usrclass.png" alt-text="The permission of the test user that's shown in the Advanced Security Settings for UsrClass.dat." border="false":::|
 
 ## Status
 
@@ -89,7 +89,6 @@ Microsoft has confirmed that this is a problem in the Microsoft products that ar
 |Application|Service Control Manager|7024| **The SQL Server (MSSQLSERVER) service terminated with service-specific error 2148081668 (0x80092004).** |
 |Application|Userenv|1500| **Windows cannot log you on because your profile cannot be loaded. Check that you are connected to the network, or that your network is functioning correctly. If this problem persists, contact your network administrator. DETAIL - The system cannot find the file specified.** |
 |Application|Userenv|1502| **Windows cannot load the locally stored profile. Possible causes of this error include insufficient security rights or a corrupt local profile. If this problem persists, contact your network administrator.** |
-|||||
 
 ### Details of the failure that are displayed in Process Monitor
 
@@ -99,4 +98,4 @@ ProMon detailsThe following message is displayed in Process Monitor:
 
 The following screenshot shows the Process Monitor details:
 
-![Event Properties](./media/desktop-location-unavailable/process-monitor-details.jpg)
+:::image type="content" source="media/desktop-location-unavailable/process-monitor-details.png" alt-text="Details of the failure that are displayed in Process Monitor." border="false":::

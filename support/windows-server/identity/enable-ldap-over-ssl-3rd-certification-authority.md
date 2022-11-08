@@ -4,20 +4,20 @@ description: Describes how to enable LDAP over SSL with a third-party certificat
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: LDAP configuration and interoperability
+ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Enable LDAP over SSL with a third-party certification authority
 
 This article describes how to enable Lightweight Directory Access Protocol (LDAP) over Secure Sockets Layer (SSL) with a third-party certification authority.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 321051
 
 ## Summary
@@ -36,7 +36,7 @@ To enable LDAPS, you must install a certificate that meets the following require
 
 - The Enhanced Key Usage extension includes the Server Authentication (1.3.6.1.5.5.7.3.1) object identifier (also known as OID).
 
-- The Active Directory fully qualified domain name of the domain controller (for example, DC01.DOMAIN.COM) must appear in one of the following places:
+- The Active Directory fully qualified domain name of the domain controller (for example, dc01.contoso.com) must appear in one of the following places:
   
   - The Common Name (CN) in the Subject field.
   - DNS entry in the Subject Alternative Name extension.
@@ -90,7 +90,7 @@ To request a Server Authentication certificate that is suitable for LDAPS, follo
 
     Some third-party certification authorities may require additional information in the Subject parameter. Such information includes an e-mail address (E), organizational unit (OU), organization (O), locality, or city (L), state or province (S), and country or region (C). You can append this information to the Subject name (CN) in the Request.inf file. For example:
 
-    > Subject="E=admin@contoso.com, CN=<DC fqdn>, OU=Servers, O=Contoso, L=Redmond, S=Washington, C=US."
+    > Subject="E=admin@contoso.com, CN=\<DC fqdn\>, OU=Servers, O=Contoso, L=Redmond, S=Washington, C=US."
 
 2. Create the request file by running the following command at the command prompt:
 

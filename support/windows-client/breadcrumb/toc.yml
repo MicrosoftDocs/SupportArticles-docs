@@ -1,0 +1,16 @@
+- name: Docs
+  tocHref: /
+  topicHref: /index
+  items:
+
+  - name: Troubleshoot
+    tocHref: /troubleshoot/
+    topicHref: /troubleshoot/index
+    items:
+    - name: Windows
+      tocHref: /troubleshoot/windows/
+      topicHref: /troubleshoot/windows/index
+      items:
+      - name: Windows Client
+        tocHref: /troubleshoot/windows-server/
+        topicHref: /troubleshoot/windows-client/welcome-windows-client

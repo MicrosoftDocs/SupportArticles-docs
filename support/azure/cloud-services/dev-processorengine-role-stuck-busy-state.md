@@ -1,12 +1,12 @@
 ---
 title: ProcessorEngine role is stuck in Busy state
 description: Provide information about troubleshooting issues in which the ProcessorEngine role is stuck in Busy state when deploying cloud service application to Azure.
-ms.date: 06/22/2020
-ms.prod-support-area-path: 
+ms.date: 09/26/2022
 ms.reviewer: 
 author: genlin
 ms.author: genli
 ms.service: cloud-services
+ms.subservice: troubleshoot-dev
 ---
 # ProcessorEngine role is stuck in Busy state stating: Preparing to start role... System is initializing
 
@@ -16,7 +16,7 @@ _Original product version:_ &nbsp; API Management Service
 _Original KB number:_ &nbsp; 4464894
 
 > [!NOTE]
-> Refer to the article on [Azure Cloud Service Troubleshooting Series](https://support.microsoft.com/help/4466645), this is the fourth scenario of the lab. Make sure you have followed the lab setup instructions for **Super Convertor** application as per [this](https://github.com/prchanda/superconvertor), to recreate the problem.
+> Refer to the article on [Azure Cloud Service Troubleshooting Series](https://support.microsoft.com/help/4466645), this is the fourth scenario of the lab. Make sure you have followed the lab setup instructions for **Super Convertor** application as per [this](https://github.com/prchanda/superconvertor), to recreate the problem.
 
 ## Symptoms
 
@@ -35,7 +35,7 @@ If a role is stuck in **Busy** state, it indicates that there is something wrong
 
 The best place to start the troubleshooting is to remote connect to the instance using RDP and inspect **WaHostBootstrapper.log** file present under the path `C:\Resources`. Upon checking the folder, you might find that there is only one log file that means that **WaHostBootstrapper** has only tried to start one time and it isn't recycling due to an error. See what's inside the **WaHostBootstrapper.log** file:
 
-```
+```output
 [00003604:00002604, 2018/08/13, 03:08:21.214, ERROR] <- WapXmlReadRoleModel=0x1 [00003604:00002604, 2018/08/13, 03:08:21.979, ERROR] <- WapXmlReadContainerId=0x1 [00003604:00002604, 2018/08/13, 03:08:22.026, ERROR] <- WapGetVirtualAccountName=0x1 [00003604:00002604, 2018/08/13, 03:08:22.026, ERROR] <- WapGetAppCmdPath=0x1 [00003604:00002604, 2018/08/13, 03:08:22.026, ERROR] <- WapSetDefaultEnvironment=0x1 [00003604:00002604, 2018/08/13, 03:08:22.014, ERROR] <- WapGetAppHostConfigPath=0x1 [00003604:00002604, 2018/08/13, 03:08:22.045, ERROR] <- GetDebugger=0x1 [00003604:00002604, 2018/08/13, 03:08:22.092, ERROR] <- GetStartupTaskDebugger=0x1 [00003604:00002604, 2018/08/13, 03:08:22.389, ERROR] <- WapGetEnvironmentVariable=0x800700cb **[00003604:00002604, 2018/08/13, 03:08:22.405, WARN ] Executing Startup Task type=0 rolemodule=(null) cmd="E:\approot\.\startup.cmd"[00003604:00002604, 2018/08/13, 03:08:22.405, WARN ] Executing "E:\approot\.\startup.cmd" .**
 ```
 
@@ -43,11 +43,11 @@ From the above log, it looks like the process is stuck while running a startup s
 
 Microsoft Azure Bootstrapper event viewer log shows the same piece of information:
 
-:::image type="content" source="media/scenario-4-processorengine-role-stuck-busy-state/4464887_en_1.png" alt-text="Screenshot of event viewer log.":::
+:::image type="content" source="media/scenario-4-processorengine-role-stuck-busy-state/event-viewer-log.png" alt-text="Screenshot of the event viewer log.":::
 
 Hence the next step is to check the functionality of this startup script. the script is running an executable 'setup.exe', which takes a command line 'configuration.xml'. The output of the script processing is logged in 'StartupLog.txt' file created under RoleTemp directory.
 
-```
+```output
 REM If WINWORD.EXE and EXCEL.EXE exists, then required office binaries are already installed.
 IF "%ComputeEmulatorRunning%" == "true" (
 GOTO Finish
@@ -85,4 +85,6 @@ Navigate to the path `C:\Resources\temp\{Deployment ID}.ProcessorEngine\RoleTemp
 
 In Visual Studio, the **Copy to Output Directory** property for your startup batch file or any other dependent files should be set to **Copy Always** to be sure that your startup batch file is properly deployed to your project on Azure (**approot\bin** for Web roles, and **approot**  for worker roles). However in this case **Copy to Output Directory** was set to **Do not copy** for 'configuration.xml' file.
 
-:::image type="content" source="media/scenario-4-processorengine-role-stuck-busy-state/4464893_en_1.png" alt-text="Screenshot of configuration file.":::
+:::image type="content" source="media/scenario-4-processorengine-role-stuck-busy-state/configurationxml-file.png" alt-text="Screenshot shows the configuration.xml file properties.":::
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

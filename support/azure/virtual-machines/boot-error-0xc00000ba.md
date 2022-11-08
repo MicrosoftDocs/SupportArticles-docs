@@ -2,8 +2,10 @@
 title: Windows boot error 0xc00000ba in the Azure VM
 description: Provides a solution to an issue where Windows VM doesn't start with error code 0xc00000ba
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
+ms.collection: windows
 ---
 # Windows boot error 0xc00000ba in the Azure VM
 
@@ -34,6 +36,9 @@ The damaged system file causes absent, incorrectly linked documents, and archive
 
 ## Resolution
 
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+
 To fix the issue, follow these steps.
 
 ### Step 1 Uninstall the recently installed software or service
@@ -43,7 +48,7 @@ If the boot issue occurs after you installed software or services, try to disabl
 - To disable a service, follow these steps:
 
     1. Delete the virtual machine (VM). Make sure that you select the **Keep the disks** option when you do this.
-    2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/attach-managed-disk-portal).
+    2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
     3. Connect to the troubleshooting VM. Open **Computer management** > **Disk management**. Make sure that the OS disk is online and that its partitions have drive letters assigned.
     4. On the OS disk you attached, navigate to **\windows\system32\config**. Copy all the files as a backup in case a rollback is required.
     5. On the troubleshooting VM, open Registry Editor (regedit.exe).
@@ -57,7 +62,7 @@ If the boot issue occurs after you installed software or services, try to disabl
 ### Step 2 Repair the corrupted file system
 
 1. Delete the virtual machine (VM). Make sure that you select the **Keep the disks**  option when you do this.
-2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/attach-managed-disk-portal).
+2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
 3. Connect to the troubleshooting VM, and then open **Computer management** > **Disk management**. Make sure that the OS disk is online and that its partitions have drive letter assigned.
 4. You have two options at this point,  you can either use the recovery console images that come with every OS installation and try to use it as a repository or else you can download full ISO of the Windows version of the VM.
 
@@ -90,3 +95,5 @@ If the boot issue occurs after you installed software or services, try to disabl
 
 7. If SFC states that the corruption is fixed, detach the OS disk from the troubleshooting VM, and wait until Azure updates the disk lease (3 minutes at most).
 8. Recreate the VM.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

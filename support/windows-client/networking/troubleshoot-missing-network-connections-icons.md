@@ -3,21 +3,21 @@ title: How to troubleshoot missing network connections icons in Windows Server 2
 description: Describes how to troubleshoot missing network connections icons in Windows Server 2003 and in Windows XP.
 ms.date: 12/03/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, waltere
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # How to troubleshoot missing network connections icons in Windows Server 2003 and in Windows XP
 
 This article describes how to troubleshoot missing network connections icons in Windows Server 2003 and in Windows XP.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 825826
 
 ## Introduction
@@ -223,10 +223,7 @@ The third-party products that this article discusses are manufactured by compani
 
 Temporarily remove any teaming software. The following combination is known to be incompatible: Dual-Port Intel Pro 100+ Server Adapter with Intel Teaming Software running an SNMP component.
 
-For an updated version of the Intel SNMP agent (Ilansnmp.dll) and for more information, contact the network adapter manufacturer or the third-party software vendor. For more information, click the following article numbers to view the articles in the Microsoft Knowledge Base:  
-[811876](https://support.microsoft.com/help/811876) Network adapters disappear from the network adapters list and cluster server stops responding with the Intel SNMP agent installed
-
-[278431](https://support.microsoft.com/help/278431) Using teaming adapters with network load balancing may cause network problems
+For an updated version of the Intel SNMP agent (Ilansnmp.dll) and for more information, contact the network adapter manufacturer or the third-party software vendor.
 
 ### Method 3: Use the Group Policy Results tool to see which Group Policy objects are applied
 

@@ -1,25 +1,28 @@
 ---
 title: Fix problems in Windows Search
 description: Provides troubleshooting option for problems that affect the search results in the Windows Search feature in Windows 10.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-client
-localization_priority: medium
+localization_priority: high
 ms.reviewer: kaushika
-ms.prod-support-area-path: Cortana and Search
+ms.custom: sap:cortana-and-search, csstroubleshoot
 ms.technology: windows-client-shell-experience
 ---
 # Fix problems in Windows Search
+
+> [!div class="nextstepaction"]
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806433" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common Windows Search issues.
 
 If Windows Search is unresponsive or the search results don't appear as expected, try any of the following solutions in this article.
 
 If you're running Windows 10 May 2019 Update (version 1903) or later versions and Windows can detect a problem, we'll run the Search troubleshooter automatically. This troubleshooter will reset Windows Search back to the default experience. View your troubleshooter history under **Settings** > **Update & Security** > **Troubleshoot** > **View History**. Follow the steps below if your issue is still not resolved.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4520146
 
 ## Check for updates

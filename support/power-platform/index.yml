@@ -1,0 +1,37 @@
+### YamlMime:Hub
+title: Microsoft Power Platform troubleshooting
+summary: Technical content to troubleshoot issues in Microsoft Power Platform
+
+metadata:
+   ms.topic: hub-page
+   services: service
+   ms.service: power-platform
+
+productDirectory:
+  items:
+  - title: Power Apps
+    imageSrc: "../media/hub-landing/power-apps.svg"
+    summary: Troubleshooting articles for Power Apps
+    url: power-apps/welcome-power-apps.yml
+  - title: Power Automate
+    imageSrc: "../media/hub-landing/power-automate.svg"
+    summary: Troubleshooting articles for Power Automate
+    url: power-automate/welcome-power-automate.yml
+  - title: AI Builder
+    imageSrc: "../media/hub-landing/ai-builder.svg"
+    summary: Troubleshooting articles for AI Builder
+    url: ai-builder/welcome-ai-builder.yml
+
+additionalContent:
+# Supports up to 3 sections
+  sections:  
+  - title: See also
+    items:
+      # Card
+      - title: Microsoft Power Platform documentation
+        summary: "View the official documentation for Microsoft Power Platform"
+        url: /power-platform/
+      # Card
+      - title: Microsoft Power Platform training 
+        summary: "Check out the free training for Microsoft Power Platform"
+        url: /training/powerplatform/

@@ -1,23 +1,23 @@
 ---
-title: This property is limited to 64 values 
+title: Error (This property is limited to 64 values) when adding more than 64 logon workstations
 description: Describes a problem in which you cannot add more than 64 logon workstation entries by using the user account properties on a Windows Server 2003-based computer.
 ms.date: 09/10/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: v-jomcc, kaushika
-ms.prod-support-area-path: User, computer, group, and object management
+ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Error message when you try to add more than 64 logon workstations: "This property is limited to 64 values"
 
 This article provides a solution to an error that occurs when try to add more than 64 logon workstations.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 938458
 
 ## Symptoms
@@ -41,4 +41,4 @@ This behavior is by design.
 
 **rangeUpper** is the Ldap-Display-Name for the Range-Upper value. Range-Upper is the maximum value or the maximum length of an attribute. The User-Workstations attribute is defined in the userWorkstations property of a user. The User-Workstations attribute is a single-valued property that represents a comma-separated list of NetBIOS computer names.
 
-For more information about the User-Workstations attribute, visit the following Microsoft Web site: [https://msdn2.microsoft.com/library/ms680868.aspx](https://msdn2.microsoft.com/library/ms680868.aspx)
+For more information about the User-Workstations attribute, visit the following Microsoft Web site: [User-Workstations attribute](/windows/win32/adschema/a-userworkstations)

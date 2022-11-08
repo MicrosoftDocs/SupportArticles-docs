@@ -2,7 +2,7 @@
 title: Unable to retrieve application files error
 description: This article provides resolutions for an error that occurs when you try to start the ClickOnce version of SQL Server Report Builder.
 ms.date: 07/22/2020
-ms.prod-support-area-path: Reporting Services
+ms.custom: sap:Reporting Services
 ms.reviewer: ramakoni
 ms.prod: sql
 ---

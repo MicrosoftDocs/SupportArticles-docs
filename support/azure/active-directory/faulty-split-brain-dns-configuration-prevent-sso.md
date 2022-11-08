@@ -2,8 +2,9 @@
 title: A faulty split-brain DNS configuration can prevent a seamless SSO sign-in experience
 description: Describes the conditions in which Active Directory Federation Services (AD FS) doesn't behave as expected when you sign in to Office 365 services by using a single sign-on (SSO)-enabled user ID. Provides a resolution.
 ms.date: 06/08/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: authentication
 ---
 # A faulty split-brain DNS configuration can prevent a seamless SSO sign-in experience
 
@@ -72,4 +73,4 @@ Without this configuration, all AD FS clients will be serviced by the same IP ad
 
 To overcome this limitation, it's desirable to override the default name resolution that is given to on-premises clients by creating an identically named domain in on-premises DNS. Because the DNS distributed architecture returns the first response that is found to a forward lookup query, this effectively masks the public DNS domain advertisements for that domain for all on-premises client computer requests because their requests are handled by on-premises DNS servers first.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -4,20 +4,20 @@ description: Describes the fallback and timeout behavior that exist when one or 
 ms.date: 10/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc, dpracht, kellyv, stegag
-ms.prod-support-area-path: DNS
+ms.custom: sap:dns, csstroubleshoot
 ms.technology: networking
 ---
 # NET: DNS: Forwarders and conditional forwarders resolution timeouts
 
 This article describes the fallback and timeout behavior that exist when one or more DNS Servers IPs are configured as forwarders or conditional forwarders on a DNS server.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2834250
 
 ## Summary
@@ -64,8 +64,7 @@ When the DNS server receives a query for a record in a zone that it is not autho
 | 2 * <forwarding_timeout> +1| After <forwarding_timeout> +1 more seconds, if the second forwarder didn't reply, the DNS server queries the third forwarder. |
 | ...| ... |
 | N * <forwarding_timeout> +(N-1)| After <forwarding_timeout> + 1 more seconds, if the Nth forwarder didn't reply, the DNS server queries the (N+1)th forwarder. |
-|||
-
+  
 > [!NOTE]
 > In addition to the configured delay, there can be an additional half second delay due to system overhead.
 
@@ -123,7 +122,7 @@ Similar to forwarders, there are two key variables for Conditional Forwarders. W
 
     Since Conditional Forwarders are configured for specific zones, the **ForwarderTimeout** is zone-dependent as well.
 
-    It's saved in the registry under `HKLM\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\DNS Server\Zones\ <zone_name>\ForwarderTimeout`.
+    It's saved in the registry under `HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\DNS Server\Zones\ <zone_name>\ForwarderTimeout`.
 
     The default value is 5 seconds on Windows Server 2003, 2008, 2008R2 and 2012.
 
@@ -138,8 +137,7 @@ When the DNS server receives a query for a record in a zone that it is not autho
 | 2 * <forwarder_timeout> +1| After <forwarder_timeout> +1 more seconds, if the second conditional forwarder didn't reply, the DNS server queries the third conditional forwarder |
 | ...| ... |
 | N * <forwarder_timeout> +(N-1)| After <forwarder_timeout> +1 more seconds, if the Nth conditional forwarder didn't reply, the DNS server queries the (N+1)th conditional forwarder |
-|||
-
+  
 > [!NOTE]
 > In addition to the configured delay there can be an additional half second delay due to system overhead  
 
@@ -179,6 +177,6 @@ On a network capture we would see the following Network Monitor output (note 10.
 
 - [RecursionTimeout](/previous-versions/windows/it-pro/windows-2000-server/cc940788(v=technet.10))
 
-- [DNS: The recursion timeout must be greater than the forwarding timeout](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff807363(v=ws.10)) 
+- [DNS: The recursion timeout must be greater than the forwarding timeout](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff807363(v=ws.10))
 
 - [DNS: The forwarding timeout value should be 2 to 10 seconds](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff807396(v=ws.10))

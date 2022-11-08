@@ -2,9 +2,10 @@
 title: Data corruption on IO write
 description: This article describes data corruption on IO if the storage driver reads (write IO) the pages multiple times in a successive manor to the storage medium.
 ms.date: 09/01/2020
-ms.prod-support-area-path: Storage Driver
+ms.custom: sap:Storage Driver
 ms.reviewer: ronh
 ms.topic: article
+ms.technology: windows-hardware-storage-driver
 ---
 # Storage developer may experience what appears as data corruption on IO writes
 

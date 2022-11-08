@@ -2,8 +2,9 @@
 title: Error (Remove-MsolUser User Not Found) when you try to remove a user from the recycle bin
 description: Describes an issue that occurs when you try to remove a user from the recycle bin. Provides a resolution.
 ms.date: 06/08/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: domain-services
 ---
 # Error when you try to remove a user from the recycle bin: Remove-MsolUser User Not Found
 
@@ -34,6 +35,4 @@ Take one of the following actions:
 - Have a global admin remove the user from the recycle bin.
 - Wait 30 days. Deleted users will remain in the recycle bin for 30 days. After 30 days, they are automatically removed from the recycle bin.
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazuread) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

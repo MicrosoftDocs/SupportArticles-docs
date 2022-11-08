@@ -2,8 +2,9 @@
 title: Unable to use the New-MSOLDomain command to add a subdomain to an existing domain
 description: Discusses an error message that you receive in Office 365, Microsoft Intune, or Azure when you try to use the New-MSOLDomain command to add a subdomain to an existing domain that's set up for federated authentication. Provides a resolution.
 ms.date: 07/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Error when you try to use the New-MSOLDomain command to add a subdomain to an existing domain: New-MsolDomain: Unable to add this domain
 
@@ -24,7 +25,7 @@ This issue occurs if you try to use the New-MSOLDomain command to add a subdomai
 
 To add a subdomain to a domain that's set up for federated authentication, follow these steps:
 
-1. Connect to Azure Active Directory (Azure AD) by using Windows PowerShell. For more information, see [Connect to Azure AD Using Windows PowerShell](https://docs.microsoft.com/previous-versions/azure/jj151815(v=azure.100)?redirectedfrom=MSDN#bkmk_connect).
+1. Connect to Azure Active Directory (Azure AD) by using Windows PowerShell. For more information, see [Connect to Azure AD Using Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)?redirectedfrom=MSDN#bkmk_connect).
 2. Use the New-MSOLFederatedDomain command.
 
     The syntax to add a subdomain is as follows, where \<subdomain> is the name of the subdomain that you want to add:
@@ -33,6 +34,4 @@ To add a subdomain to a domain that's set up for federated authentication, follo
      New-MSOLFederatedDomain -DomainName:<subdomain>
      ```
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazuread) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

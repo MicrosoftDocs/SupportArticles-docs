@@ -4,20 +4,20 @@ description: Describes how to recover a deleted computer object that supports a 
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ctimon, v-vincli
-ms.prod-support-area-path: Cannot bring a resource online
+ms.custom: sap:cannot-bring-a-resource-online, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # How to recover a deleted computer object that supports a Network Name resource in a failover cluster
 
 This article describes how to recover a deleted computer object that supports a Network Name resource in a failover cluster.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 950805
 
 ## Summary

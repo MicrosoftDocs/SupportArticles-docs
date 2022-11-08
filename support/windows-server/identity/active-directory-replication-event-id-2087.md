@@ -3,26 +3,26 @@ title: Active Directory replication Event ID 2087 (DNS lookup failure caused rep
 description: Helps you diagnose and solve Active Directory replication Event ID 2087.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory replication
-ms.technology: windows-server-active-directory 
+ms.custom: sap:active-directory-replication, csstroubleshoot
+ms.technology: windows-server-active-directory
 ---
 # Active Directory replication Event ID 2087: DNS lookup failure caused replication to fail
 
 This article provides a solution to the Active Directory replication Event ID 2087 that occurs when a Domain Name System (DNS) lookup failure causes replication to fail.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4469661
 
 ## Symptoms
 
-This problem typically occurs when a Domain Name System (DNS) lookup failure causes replication to fail. When a destination domain controller receives Event ID 2087 in the Directory Service event log, attempts to resolve the globally unique identifier (GUID) in the alias (CNAME) resource record, the fully qualified domain name (FQDN), and the NetBIOS name to the IP address of the source domain controller have all failed. Failure to locate the source replication partner prevents replication with that source until the problem is fixed.
+This problem typically occurs when a Domain Name System (DNS) lookup failure causes replication to fail. When a destination domain controller receives Event ID 2087 in the Directory Service event log, attempts to resolve the globally unique identifier (GUID) in the alias (CNAME) resource record, the fully qualified domain name (FQDN), and the NetBIOS name to the IP address of the source domain controller have all failed. Failure to locate the source replication partner prevents replication with that source until the problem is fixed.
 
 The following is an example of the event text:
 
@@ -66,7 +66,7 @@ The requested name is valid, but no data of the requested type was found.
 
 Failure to resolve the current alias (CNAME) resource record of the source domain controller to an IP address can have the following causes:
 
-- The source domain controller is powered off, is offline, or resides on an isolated network, and Active Directory and DNS data for the offline domain controller has not been deleted to indicate that the domain controller is inaccessible.
+- The source domain controller is powered off, is offline, or resides on an isolated network, and Active Directory and DNS data for the offline domain controller has not been deleted to indicate that the domain controller is inaccessible.
 
 - One of the following conditions exists:
 
@@ -76,15 +76,15 @@ Failure to resolve the current alias (CNAME) resource record of the source domai
   - The DNS server that the source domain controller uses does not host the correct zones, or the zones are not configured to accept dynamic updates.
   - The direct DNS servers that the destination domain controller queries cannot resolve the IP address of the source domain controller as a result of nonexistent or invalid forwarders or delegations.
 
-- Active Directory Domain Services (AD DS) has been removed on the source domain controller and then reinstalled with the same IP address, but knowledge of the new NTDS Settings GUID has not reached the destination domain controller.
+- Active Directory Domain Services (AD DS) has been removed on the source domain controller and then reinstalled with the same IP address, but knowledge of the new NTDS Settings GUID has not reached the destination domain controller.
 
-- AD DS has been removed on the source domain controller and then reinstalled with a different IP address, but the current host address (A) resource record for the IP address of the source domain controller is either not registered or does not exist on the DNS servers that the destination domain controller queries as a result of replication latency or replication error.
+- AD DS has been removed on the source domain controller and then reinstalled with a different IP address, but the current host address (A) resource record for the IP address of the source domain controller is either not registered or does not exist on the DNS servers that the destination domain controller queries as a result of replication latency or replication error.
 
 - The operating system of the source domain controller has been reinstalled with a different computer name, but its metadata either has not been removed or has been removed and not yet inbound-replicated by the destination domain controller.
 
 ## Resolution
 
-First, [Determine whether a domain controller is functioning](#determine-whether-a-domain-controller-is-functioning). If the source domain controller is not functioning, [remove its remaining metadata from AD DS](#clean-up-domain-controller-metadata).
+First, [Determine whether a domain controller is functioning](#determine-whether-a-domain-controller-is-functioning). If the source domain controller is not functioning, [remove its remaining metadata from AD DS](#clean-up-domain-controller-metadata).
 
 If the source domain controller is functioning, continue with procedures to diagnose and solve the DNS problem, as necessary:
 
@@ -103,7 +103,7 @@ Requirements:
 
 - Tool: Net view
 
-To confirm that the domain controller is running AD DS and is accessible on the network, at a command prompt type the following command, and then press ENTER:
+To confirm that the domain controller is running AD DS and is accessible on the network, at a command prompt type the following command, and then press ENTER:
 
 ```console
 net view \\<SourceDomainControllerName>
@@ -111,15 +111,15 @@ net view \\<SourceDomainControllerName>
 
 Where \<SourceDomainControllerName> is the NetBIOS name of the domain controller.
 
-This command displays the Netlogon and SYSVOL shares, indicating that the server is functioning as a domain controller. If this test shows that the domain controller is not functioning on the network, determine the nature of the disconnection and whether the domain controller can be recovered or whether its metadata must be removed from AD DS manually. If the domain controller is not functioning and cannot be restored, use the procedure in the following section, [Clean up domain controller metadata](#clean-up-domain-controller-metadata), to delete the data that is associated with that server from AD DS.
+This command displays the Netlogon and SYSVOL shares, indicating that the server is functioning as a domain controller. If this test shows that the domain controller is not functioning on the network, determine the nature of the disconnection and whether the domain controller can be recovered or whether its metadata must be removed from AD DS manually. If the domain controller is not functioning and cannot be restored, use the procedure in the following section, [Clean up domain controller metadata](#clean-up-domain-controller-metadata), to delete the data that is associated with that server from AD DS.
 
 ### Clean up domain controller metadata
 
-If tests show that the domain controller is no longer functioning but you still see objects representing the domain controller in the Active Directory Sites and Services snap-in, replication will continue to be attempted, and you must remove these objects from AD DS manually. You must use the Ntdsutil tool to clean up (delete) the metadata for the defunct domain controller.
+If tests show that the domain controller is no longer functioning but you still see objects representing the domain controller in the Active Directory Sites and Services snap-in, replication will continue to be attempted, and you must remove these objects from AD DS manually. You must use the Ntdsutil tool to clean up (delete) the metadata for the defunct domain controller.
 
 If the defunct domain controller is the last domain controller in the domain, you should also remove the metadata for the domain. Allow sufficient time for all global catalog servers in the forest to inbound-replicate the domain deletion before you promote a new domain with the same name.
 
-The process for cleaning up metadata is improved in the version of Ntdsutil that is included with Windows Server 2003 Service Pack 1 (SP1). Instructions for cleaning up metadata with the Windows Server 2003 version of Ntdsutil and the Windows Server 2003 SP1 version of Ntdsutil are provided in the following procedure.
+The process for cleaning up metadata is improved in the version of Ntdsutil that is included with Windows Server 2003 Service Pack 1 (SP1). Instructions for cleaning up metadata with the Windows Server 2003 version of Ntdsutil and the Windows Server 2003 SP1 version of Ntdsutil are provided in the following procedure.
 
 Requirements:
 
@@ -179,7 +179,7 @@ Requirements:
 
 ### Use Dcdiag to diagnose DNS problems
 
-If the domain controller is functioning online, continue by using the Dcdiag tool to diagnose and fix DNS problems that might be interfering with Active Directory replication.
+If the domain controller is functioning online, continue by using the Dcdiag tool to diagnose and fix DNS problems that might be interfering with Active Directory replication.
 
 Use the following procedures to complete this process:
 
@@ -187,12 +187,12 @@ Use the following procedures to complete this process:
 - [Verify registration of the alias (CNAME) resource record in DNS](#verify-resource-record-registration).
 - [Verify dynamic updates](#verify-dynamic-updates) and [enable secure dynamic updates](#enable-secure-dynamic-updates).
 
-Before you begin these procedures, gather the following information, which is contained in the Event ID 2087 message text:
+Before you begin these procedures, gather the following information, which is contained in the Event ID 2087 message text:
 
 - The FQDN of the source domain controller and destination domain controller
 - The IP address of the source domain controller
 
-The updated version of Dcdiag that is included in Windows Support Tools in Windows Server 2003 SP1 contains tests that provide consolidated and improved testing of basic and advanced DNS features. You can use this tool to diagnose basic DNS functionality and dynamic updates.
+The updated version of Dcdiag that is included in Windows Support Tools in Windows Server 2003 SP1 contains tests that provide consolidated and improved testing of basic and advanced DNS features. You can use this tool to diagnose basic DNS functionality and dynamic updates.
 
 When you use the enhanced SP1 version of Dcdiag for DNS testing, there are specific requirements that do not apply to all Dcdiag tests.
 
@@ -203,21 +203,21 @@ Requirements:
 - Operating system:
   - You can run the enhanced version of Dcdiag on computers running the following operating systems:
 
-    - Windows XP Professional
-    - Windows Server 2003
-    - Windows Server 2003 with SP1
+    - Windows XP Professional
+    - Windows Server 2003
+    - Windows Server 2003 with SP1
   - You can run the new Dcdiag DNS tests against Microsoft DNS servers that are installed on domain controllers running the following operating systems:
-    - Windows 2000 Server with Service Pack 3 (SP3)
-    - Windows 2000 Server with Service Pack 4 (SP4)
-    - Windows Server 2003
-    - Windows Server 2003 with SP1
+    - Windows 2000 Server with Service Pack 3 (SP3)
+    - Windows 2000 Server with Service Pack 4 (SP4)
+    - Windows Server 2003
+    - Windows Server 2003 with SP1
 
 > [!NOTE]
 > You can use the `/f:` switch in Dcdiag commands to save the output to a text file. Use `/f: FileName` to generate the file in the location that is indicated in *FileName*, for example, `/f:c:\Test\DnsTest.txt`.
 
 #### Verify basic DNS functionality
 
-To verify the settings that might interfere with Active Directory replication, you can begin by running the basic DNS test that ensures that DNS is operating properly on the domain controller.
+To verify the settings that might interfere with Active Directory replication, you can begin by running the basic DNS test that ensures that DNS is operating properly on the domain controller.
 
 The basic DNS test checks the following:
 
@@ -233,7 +233,7 @@ The basic DNS test checks the following:
 
 - Resource record registrations: The test confirms that the host (A) resource record of each domain controller is registered on at least one of the DNS servers that is configured on the client.
 
-- Zone and start of authority (SOA): If the domain controller is running the DNS Server service, the test confirms that the Active Directory domain zone and start of authority (SOA) resource record for the Active Directory domain zone are present.
+- Zone and start of authority (SOA): If the domain controller is running the DNS Server service, the test confirms that the Active Directory domain zone and start of authority (SOA) resource record for the Active Directory domain zone are present.
 
 - Root zone: Checks whether the root (.) zone is present.
 
@@ -260,7 +260,7 @@ If the basic DNS test shows no errors, continue by verifying that resource recor
 
 #### Verify resource record registration
 
-The destination domain controller uses the DNS alias (CNAME) resource record to locate its source domain controller replication partner. Although domain controllers running Windows Server 2003 with SP1 can locate source replication partners by using FQDNs-or, if that fails, NetBIOS names-the presence of the alias (CNAME) resource record is expected and should be verified for proper DNS functioning.
+The destination domain controller uses the DNS alias (CNAME) resource record to locate its source domain controller replication partner. Although domain controllers running Windows Server 2003 with SP1 can locate source replication partners by using FQDNs-or, if that fails, NetBIOS names-the presence of the alias (CNAME) resource record is expected and should be verified for proper DNS functioning.
 
 You can use Dcdiag to verify registration of all resource records that are essential for domain controller location by using the `dcdiag /test:dns /DnsRecordRegistration` test. This test verifies registration of the following resource records in DNS:
 
@@ -274,7 +274,7 @@ As an alternative, you can use the following procedure to check for only the ali
 
 ##### Steps to verify alias (CNAME) resource record registration
 
-1. In the DNS snap-in, locate any domain controller that is running the DNS Server service, where the server hosts the DNS zone with the same name as the Active Directory domain of the domain controller.
+1. In the DNS snap-in, locate any domain controller that is running the DNS Server service, where the server hosts the DNS zone with the same name as the Active Directory domain of the domain controller.
 
 2. In the console tree, click the zone that is named *_msdcs.Dns_Domain_Name*.
 
@@ -289,7 +289,7 @@ If the alias (CNAME) resource record is not registered, verify that dynamic upda
 
 #### Verify dynamic updates
 
-If the basic DNS test shows that resource records do not exist in DNS, use the dynamic update test to diagnose why the Net Logon service did not register the resource records automatically. To verify that the Active Directory domain zone is configured to accept secure dynamic updates and to perform registration of a test record (_dcdiag_test_record), use the following procedure. The test record is deleted automatically after the test.
+If the basic DNS test shows that resource records do not exist in DNS, use the dynamic update test to diagnose why the Net Logon service did not register the resource records automatically. To verify that the Active Directory domain zone is configured to accept secure dynamic updates and to perform registration of a test record (_dcdiag_test_record), use the following procedure. The test record is deleted automatically after the test.
 
 To verify dynamic updates, at a command prompt, type the following command, and then press ENTER:
 
@@ -307,7 +307,7 @@ If secure dynamic update is not configured, use the following procedure to confi
 
 1. Open the DNS snap-in.
 2. In the console tree, right-click the applicable zone, and then click **Properties**.
-3. On the **General** tab, verify that the zone type is Active Directory-integrated.
+3. On the **General** tab, verify that the zone type is Active Directory-integrated.
 4. In **Dynamic Updates**, click **Secure only**.
 
 ### Register DNS resource records
@@ -346,11 +346,11 @@ After you complete DNS testing, use the following procedure to synchronize repli
 Requirements:
 
 - Membership in the **Domain Admins** group in the domain of the destination domain controller, or equivalent, is the minimum required to complete this procedure. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
-- Tool: Active Directory Sites and Services
+- Tool: Active Directory Sites and Services
 
 #### Steps to synchronize replication from a source domain controller
 
-1. Open Active Directory Sites and Services.
+1. Open Active Directory Sites and Services.
 2. In the console tree, double-click the **Sites** container, double-click the site of the domain controller to which you want to synchronize replication, double-click the **Servers** container, double-click the server object of the domain controller, and then click **NTDS Settings**.
 3. In the details pane, in the **From Server** column, locate the connection object that shows the name of the source domain controller.
 4. Right-click the appropriate connection object, and then click **Replicate Now**.
@@ -381,10 +381,10 @@ Requirements:
 10. Navigate to the object CN=NTDS Settings,CN=SourceServerName,CN=Servers,CN=SiteName, CN=Sites,CN=configuration,DC=ForestRootDomain.
 11. Double-click the **NTDS Settings** object. In the details pane, view the value for the attribute **objectGUID**. Right-click that value, and then copy it to Notepad.
 12. On the **Connection** menu, click **Disconnect**.
-13. Repeat steps 2 through 11, but in step 3, type the name of the source domain controller, for example, DC03.
+13. Repeat steps 2 through 11, but in step 3, type the name of the source domain controller, for example, DC03.
 14. In Notepad, compare the values of the two GUIDs.
 15. If the values do not match, the destination domain controller must receive replication of the valid GUID. Check the GUID value on other domain controllers and attempt replication on the destination domain controller with a different domain controller that has the correct GUID.
 16. If the values match, verify that the GUID matches the GUID in the Dsa_Guid._msdcs.Dns_Domain_Nameresource record for the source domain controller, as follows:
     1. Note the primary DNS servers that each domain controller identifies in the TCP/IP properties in their Network Settings. All the DNS servers that are listed in the respective TCP/IP properties should be able to indirectly or directly resolve this alias (CNAME) resource record.
     2. From the servers that are listed, identify the authoritative name server or servers for this domain zone by looking at the server names that are listed for the name server (NS) resource records at the root of the zone. (In the DNS snap-in, select the forward lookup zone for the root domain, and then view the name server (NS) records in the details pane.)
-    3. On the name server or servers obtained in step b, open the DNS snap-in, and double-click the forward lookup zone for the forest root domain name. Double-click the _msdcs folder, and note the alias (CNAME) resource records that exist for your server name.
+    3. On the name server or servers obtained in step b, open the DNS snap-in, and double-click the forward lookup zone for the forest root domain name. Double-click the _msdcs folder, and note the alias (CNAME) resource records that exist for your server name.

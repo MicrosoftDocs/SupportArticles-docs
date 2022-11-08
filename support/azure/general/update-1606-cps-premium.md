@@ -2,10 +2,9 @@
 title: Update 1606 for Cloud Platform System (CPS) Premium
 description: Discusses Update 1606 for Cloud Platform System (CPS) Premium for Windows Server, Microsoft System Center, and hardware components.
 ms.date: 10/10/2020
-ms.prod-support-area-path: 
-ms.service: azure-stack
+ms.service: cloud-platform-system
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: jameshed
 ---
 # Update 1606 for Cloud Platform System (CPS) Premium
@@ -31,6 +30,7 @@ Update 1606 for Cloud Platform System (CPS) Premium includes updates for Windows
 To install update 1606 for CPS Premium, follow these steps.
 
 > [!NOTE]
+>
 > - This update procedure assumes that you have already installed Update 1603.
 > - Any references to the CPS Premium Administrators Guide refers to Update 1603.
 > - There is no revision to the CPS Premium Administrators guide for Update 1606.
@@ -38,6 +38,7 @@ To install update 1606 for CPS Premium, follow these steps.
 ### Step 1: Install the VMM hotfixes
 
 > [!NOTE]
+>
 > - Update 1606 includes a VMM hotfix for virtual machine placement that is required in addition to the hotfix for HNV policy that was included in Update 1505. If you have already installed the HNV hotfix, you do not have to install it again, and you can skip to substep 2.
 > - The highly available VMM clustered role (**\<Prefix>** -HA-VMM) has two nodes, **\<Prefix>** -VMM-01 and **\<Prefix>** -VMM-02. In the instructions, we refer to these as Node1 and Node2.
 
@@ -109,7 +110,7 @@ To install the VMM hotfixes, follow these steps:
     - ImgLibEngine.dll (if installing the HNV hotfix)
     - Engine.Placement.ResourceModel.dll
 
-12. On the passive VMM node, run the following command to start the VMM Agent service: 
+12. On the passive VMM node, run the following command to start the VMM Agent service:
 
     ```powershell
     Start-Service SCVMMAgent
@@ -197,13 +198,13 @@ After the patching process is completed, remember to enable DPM agents if you di
 
 To run a compliance scan, pass the following flag:
 
-```
+```powershell
 \\SU1_InfrastructureShare1<CPSPU Folder Name>\Framework\PatchingUpgrade\Invoke-PURun.ps1 -PUCredential $cred -ComplianceScanOnly
 ```  
 
 The compliance scan output is written to the following location to which the update package was extracted. For example, the following output is written:
 
-```
+```output
 "PURoot"\MissingUpdates.json
 ```
 
@@ -221,15 +222,13 @@ The compliance scan output is written to the following location to which the upd
 |All|Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Client" -Name Enabled -Type DWord -Value 0|
 |All|Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server" -Name DisabledByDefault -Type DWord -Value 1|
 |All|Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server" -Name Enabled -Type DWord -Value 0|
-|||
-
-#### Updates for Windows Server 2012 R2 (from Update 1605-0) 
+  
+#### Updates for Windows Server 2012 R2 (from Update 1605-0)
 
 | KB Article| Description |
 |---|---|
 | [3138615](https://support.microsoft.com/help/3138615)|Update for Windows Server 2012 R2 (KB3138615)|
-|||
-
+  
 ### Payload for Update 1606-1
 
 #### Hardware (driver/firmware) updates
@@ -243,9 +242,8 @@ The compliance scan output is written to the following location to which the upd
 |R630|SAS HBA - Internal|6.603.07.00|
 |C6320|Chipset|10.1.2.19|
 |R630|Chipset|10.1.2.19|
-||||
-
-#### Updates for Windows Server 2012 R2 
+  
+#### Updates for Windows Server 2012 R2
 
 | KB Article| Description |
 |---|---|
@@ -337,7 +335,6 @@ The compliance scan output is written to the following location to which the upd
 | [3061512](https://support.microsoft.com/help/3061512)|MS15-069: Description of the security update for Windows: July 14, 2015|
 | [3060793](https://support.microsoft.com/help/3060793)|"0x0000001E" or "0x00000133" Stop error when you transfer data through a USB-based RNDIS device on Windows|
 | [3060383](https://support.microsoft.com/help/3060383)|Decimal symbol and digit grouping symbol are incorrect for the Swiss language locale in Windows|
-| [3059316](https://support.microsoft.com/help/3059316)|You cannot move the scrollbar on Windows by dragging the mouse|
 | [3055343](https://support.microsoft.com/help/3055343)|Stop error code 0xD1, 0x139, or 0x3B and cluster nodes go down in Windows Server 2012 R2 or Windows Server 2012|
 | [3055323](https://support.microsoft.com/help/3055323)|Update to enable a security feature in Windows 8.1 or Windows Server 2012 R2|
 | [3054464](https://support.microsoft.com/help/3054464)|Applications that use the AddEntry method may crash in Windows|
@@ -386,18 +383,16 @@ The compliance scan output is written to the following location to which the upd
 | [2989930](https://support.microsoft.com/help/2989930)|"Not Connected" status for a paired Surface Pen in Bluetooth settings on Surface Pro 3|
 | [2894852](https://support.microsoft.com/help/2894852)|Description of the security update for the .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2: December 10, 2013|
 | [890830](https://support.microsoft.com/help/890830)|The Microsoft Windows Malicious Software Removal Tool helps remove specific, prevalent malicious software from computers that are running supported versions of Windows|
-|||
-
-#### Configuration changes 
+  
+#### Configuration changes
 
 | Node| Update |
 |---|---|
 |All|Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\AutoUpdate" -Name RootDirUrl -Type String -Value $destination|
 |All|Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\SystemCertificates\AuthRoot" -Name DisableRootAutoUpdate -Type DWord -Value 0|
 |All|Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\SystemCertificates\AuthRoot" -Name EnableDisallowedCertAutoUpdate -Type DWord -Value 1|
-|||
-
-#### Updates for Windows Server 2012 R2 (from Update 1605-1) 
+  
+#### Updates for Windows Server 2012 R2 (from Update 1605-1)
 
 | KB Article| Description |
 |---|---|
@@ -453,10 +448,8 @@ The compliance scan output is written to the following location to which the upd
 | [3078601](https://support.microsoft.com/help/3078601)|MS15-080: Description of the security update for Windows: August 11, 2015|
 | [3076895](https://support.microsoft.com/help/3076895)|MS15-084: Description of the security update for Windows XML core services: August 11, 2015|
 | [3075220](https://support.microsoft.com/help/3075220)|MS15-082: Description of the security update for RDP in Windows: August 11, 2015|
-| [3074553](https://support.microsoft.com/help/3074553)|MS15-101: Description of the security update for the .NET Framework 4.6 and 4.6 RC on Windows 8.1 and Windows Server 2012 R2: September 8, 2015|
 | [3074548](https://support.microsoft.com/help/3074548)|MS15-101: Description of the security update for the .NET Framework 4.5.1 and 4.5.2 on Windows 8.1, Windows RT 8.1, and Windows Server 2012 R2: September 8, 2015|
 | [3074545](https://support.microsoft.com/help/3074545)|MS15-101: Description of the security update for the .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2: September 8, 2015|
-| [3074232](https://support.microsoft.com/help/3074232)|MS15-101: Description of the security update for the .NET Framework 4.6 and 4.6 RC on Windows 8.1 and Windows Server 2012 R2: September 8, 2015|
 | [3074228](https://support.microsoft.com/help/3074228)|MS15-101: Description of the security update for the .NET Framework 4.5.1 and 4.5.2 on Windows 8.1, Windows RT 8.1, and Windows Server 2012 R2: September 8, 2015|
 | [3072630](https://support.microsoft.com/help/3072630)|MS15-074: Vulnerability in Windows Installer service could allow elevation of privilege: July 14, 2015|
 | [3072307](https://support.microsoft.com/help/3072307)|MS15-080: Description of the security update for the .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2: August 11, 2015|
@@ -511,15 +504,13 @@ The compliance scan output is written to the following location to which the upd
 | [2538243](https://support.microsoft.com/help/2538243)|MS11-025: Description of the security update for Visual C++ 2008 SP1 Redistributable Package: June 14, 2011|
 | [2538241](https://support.microsoft.com/help/2538241)|MS11-025: Description of the security update for Visual Studio 2008 SP1: June 14, 2011|
 | [2467173](https://support.microsoft.com/help/2467173)|MS11-025: Description of the security update for Visual C++ 2010 Redistributable Package: April 12, 2011|
-|||
-
-#### Updates for SQL Server 2012 (from Update 1605-1) 
+  
+#### Updates for SQL Server 2012 (from Update 1605-1)
 
 | KB Article| Description |
 |---|---|
 | [3072779](https://support.microsoft.com/help/3072779)|SQL Server 2012 Service Pack 3 release information|
-|||
-
+  
 ### Troubleshooting
 
 #### Issue 1
@@ -539,13 +530,13 @@ In the WSUS console on a Console VM, follow these steps:
     1. Open a Windows PowerShell session, and then change directories to `C:\program files\Update Services\Tools\`.
     2. Run the following command to reset the consistency of the WSUS database:
 
-        ```
+        ```powershell
         WSUSUTIL Reset
         ```  
 
     3. Run the following command to verify consistency:
 
-        ```
+        ```powershell
         (Get-WsusServer)GetContentDownloadProgress()
         ```  
 
@@ -555,17 +546,17 @@ In the WSUS console on a Console VM, follow these steps:
 
 VMM "Perform servicing on a Service" fails. Occasionally, failures in servicing occur because of communication issues that exist between the VMM server and its agents. The P&U engine automatically reruns. However, it sometimes does not detect whether the rerun is successful.
 
-**Detection** 
+**Detection**
 
 Verify that the service template qualifies for this situation. An example of a qualified template is shown in the following screen shot.
 
-:::image type="content" source="./media/update-1606-cps-premium/3176815.png" alt-text="An example of a qualified template.":::
+:::image type="content" source="media/update-1606-cps-premium/qualified-template.png" alt-text="Screenshot of a qualified service template.":::
 
 You should see entries that indicate one or more of the following situations:
 
 - The first job failed.
 - One of the subsequent attempts succeeded.
-- One or more subsequent attempts failed. 
+- One or more subsequent attempts failed.
 
 **Resolution**
 
@@ -610,7 +601,7 @@ Verify that CAU succeeded. To do this, follow these steps:
     - < **Prefix** >-OM-SQL\SCOMDB
     - < **Prefix** >-KT-SQL\KATALDB
     - < **Prefix** >-DW-SQL\CPSDW
-    - < **Prefix** >-AS-SQL\CPSSSAS 
+    - < **Prefix** >-AS-SQL\CPSSSAS
 
 **Resolution**
 
@@ -619,3 +610,5 @@ If the CAU status shows a **Succeeded** value for all nodes, and if version info
 If the CAU status does not show as **Succeeded** for all nodes, or if version information for all instances is correct, restart the P&U process, and make no change in parameters.
 
 If the process fails again, please escalate the case through your usual support channels.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

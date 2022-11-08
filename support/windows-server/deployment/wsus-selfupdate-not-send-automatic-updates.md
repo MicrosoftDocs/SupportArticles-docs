@@ -4,20 +4,20 @@ description: Provides a resolution to a problem that occurs when a WSUS SelfUpda
 ms.date: 10/20/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, cclay
-ms.prod-support-area-path: Servicing
+ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # WSUS SelfUpdate service doesn't send automatic updates
 
 This article provides a solution to an issue where the client computers don't receive updates when you use a Microsoft Windows Server Update Services (WSUS) SelfUpdate service to send automatic updates.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 920659
 
 ## Symptoms
@@ -54,8 +54,7 @@ To resolve this problem, you must have the following minimum permissions on the 
 |System|Full Control|
 |Domain/Users or Local/Users|Read&Execute, Read, List Folders|
 |IUSR_ **ComputerName**|Read&Execute, Read, List Folders|
-|||
-
+  
 > [!NOTE]
 > IUSR_ **ComputerName** represents the host name of the server that is running IIS where WSUS is installed. If this account is a member of the Users group, you do not have to explicitly define these permissions.
 
@@ -113,7 +112,7 @@ Microsoft has confirmed that this is a problem.
 
 When you use IIS, you can move the SelfUpdate directory to a different Web site. To do this, follow these steps:
 
-1. Click **Start**, click **Run**, type *Control admintools*, and then double-click **Internet Information Services (IIS) Manager**.
+1. Click **Start**, click **Run**, type _Control admintools_, and then double-click **Internet Information Services (IIS) Manager**.
 2. Expand the **Web Sites** folder, and then click the **WSUS Administration** node.
 3. Right-click the **SelfUpdate** node, point to **All Tasks**, and then click **Save Configuration to File**.
 4. Type a name for the file and then save the file to another folder. You will use this file in steps 9 through 12.

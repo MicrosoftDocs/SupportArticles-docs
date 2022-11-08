@@ -2,7 +2,7 @@
 title: Create database permission is logged
 description: This article provides more information on why a `CREATE DATABASE` event can be logged when server audit is specified on a SQL Server instance.
 ms.date: 09/09/2020
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.reviewer: nathansc
 ms.prod: sql
 ---
@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 4502458
 
 ## Symptoms
 
-Assume that you set up an SQL Server audit to have a server audit specification that uses the `DATABASE_CHANGE_GROUP` event. When a user runs `RESTORE VERIFYONLY` on a database backup file, the `CREATE DATABASE` permission is logged to the Audit log.
+Assume that you set up a SQL Server audit to have a server audit specification that uses the `DATABASE_CHANGE_GROUP` event. When a user runs `RESTORE VERIFYONLY` on a database backup file, the `CREATE DATABASE` permission is logged to the Audit log.
 
 ## Cause
 

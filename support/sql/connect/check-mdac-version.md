@@ -2,7 +2,7 @@
 title: Check for MDAC version
 description: This article describes how to check the MDAC version.
 ms.date: 11/03/2020
-ms.prod-support-area-path: MDAC and ADO
+ms.custom: sap:MDAC and ADO
 ms.topic: how-to
 ms.prod: sql
 ---

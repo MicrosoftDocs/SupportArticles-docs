@@ -2,15 +2,15 @@
 title: Cluster IP address resources fail on both nodes of a two-node, two-site cluster when one node disconnects from the public VLAN
 description: This article describes the behavior that occurs when one node of a two-node, two-site cluster disconnects from the public cluster VLAN. In this case, the IP address resources and their corresponding cluster groups fail on both nodes.
 ms.date: 12/30/2020
-author: Teresa-Motiv
-ms.author: v-tea
-manager: dscontentpm
+author: v-tappelgate
+ms.author: v-tappelgate
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: node removed from the cluster
+ms.custom: sap:node-removed-from-the-cluster, csstroubleshoot
 ms.technology: windows-server-high-availability
 keywords: multi-site,multisite,cluster,disconnect,cross-subnet,stretched,vlan
 ---
@@ -18,7 +18,7 @@ keywords: multi-site,multisite,cluster,disconnect,cross-subnet,stretched,vlan
 
 This article describes the behavior that occurs when one node of a two-node, two-site cluster disconnects from the public cluster VLAN. In this case, the IP address resources and their corresponding cluster groups fail on both nodes.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 ## Symptoms
 
@@ -31,7 +31,7 @@ You have a two-site cluster that has one node in each site. The cluster uses a F
 
 In this scenario, one of the nodes disconnects from the public VLAN. The following figure shows the resulting configuration.
 
- :::image type="content" source=".\media\cluster-ip-resources-fail-2-node-2-site-fsw-cluster\disconnect-nodes-in-different-sites.png" alt-text="Two node cluster across two sites, with disconnected public VLAN":::
+ :::image type="content" source="media\cluster-ip-resources-fail-2-node-2-site-fsw-cluster\disconnect-nodes-in-different-sites.png" alt-text="Two node cluster across two sites, with disconnected public V L A N.":::
 
 The cluster detects the interruption and marks the public VLAN network adapter on Node 2 as "Failed." Therefore, all the cluster IP address resources on Node 2 fail. The cluster groups that are associated with those resources also fail. The cluster generates messages that resemble the following:
 
@@ -55,7 +55,7 @@ If the two cluster nodes were in the same site, a similar network disconnect wou
 
 ## Status
 
-This behavior is by design. We recommend that you use four nodes instead of two nodes for multi-site clusters. [Azure AzS HCI](https://docs.microsoft.com/azure-stack/hci/overview) clusters require four nodes.
+This behavior is by design. We recommend that you use four nodes instead of two nodes for multi-site clusters. [Azure AzS HCI](/azure-stack/hci/overview) clusters require four nodes.
 
 ## Workaround
 

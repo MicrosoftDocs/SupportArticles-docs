@@ -2,8 +2,9 @@
 title: Fail to connect to the Microsoft Azure Information Protection by using Windows PowerShell with error (The attempt to connect to the Windows Azure AD Rights Management
 description: Describes an issue in which you can't connect to the Azure Information Protection by using Windows PowerShell in Office 365. Provides a resolution.
 ms.date: 10/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Unable to connect to Azure Information Protection using Windows PowerShell
 
@@ -54,12 +55,13 @@ To resolve this issue, make sure that the following are true:
 - Make sure that you enter the correct user name and password. To check that you entered them correctly, sign in to the [Office 365 portal](https://portal.office.com).
 - You must be a global administrator to connect to Azure Information Protection.
 - To use Azure Information Protection, you must have a subscription that includes Azure Information Protection.
-- Work with the network administrator to make sure that the network meets [the requirements for connecting to Azure Information Protection](https://docs.microsoft.com/azure/information-protection/requirements#firewalls-and-network-infrastructure). The requirements are as follows:
+- Work with the network administrator to make sure that the network meets [the requirements for connecting to Azure Information Protection](/azure/information-protection/requirements#firewalls-and-network-infrastructure). The requirements are as follows:
   - Incoming and outgoing connections to `*.aadrm.com` are enabled.
   - Incoming and outgoing connections to `*.cloudapp.net` (`rmsoprod*-b-rms*.cloudapp.net`) are enabled.
   - Port 443 is open.
 
 ## More information
 
-- For more information on Azure Information Protection, visit [AIPService](https://docs.microsoft.com/powershell/module/aipservice/?view=azureipps)
-- Still need help? Visit the [Microsoft Community](https://answers.microsoft.com/).
+For more information on Azure Information Protection, visit [AIPService](/powershell/module/aipservice/).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

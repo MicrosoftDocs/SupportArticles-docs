@@ -2,22 +2,22 @@
 title: List of updates
 description: Lists the Microsoft Knowledge Base articles that describe the fixes and updates that are included in Windows Server 2003 Service Pack 2.
 ms.date: 10/21/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, trined
-ms.prod-support-area-path: Servicing
+ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # List of updates in Windows Server 2003 Service Pack 2
 
 This article lists problems that are fixed in Microsoft Windows Server 2003 Service Pack 2 (SP2).
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 914962
 
 ## Summary
@@ -49,12 +49,10 @@ For more information about the updates that are included in Microsoft Windows Se
 |[244139](https://support.microsoft.com/help/244139)|Windows feature lets you generate a memory dump file by using the keyboard|Drivers|
 |[898544](https://support.microsoft.com/help/898544)|FIX: You cannot burn a CD or a DVD on a computer that is running Windows Server 2003|Drivers|
 |[921883](https://support.microsoft.com/help/921883)|MS06-040: Vulnerability in Server service could allow remote code execution|Distributed Systems (DS)|
-|[896422](https://support.microsoft.com/help/896422)|MS05-027: Vulnerability in Server Message Block could allow remote code execution|File Systems|
 |[906866](https://support.microsoft.com/help/906866)|You may receive a "STOP 0x00000035 NO_MORE_IRP_STACK_LOCATIONS" error message when you try to log on to a domain|File Systems|
 |[922582](https://support.microsoft.com/help/922582)|Error message when you try to update a Microsoft Windows-based computer: "0x80070002"|File Systems|
 |[896358](https://support.microsoft.com/help/896358)|MS05-026: A vulnerability in HTML Help could allow remote code execution|Help|
 |[917557](https://support.microsoft.com/help/917557)|FIX: You may experience slow performance when you use Integrated Windows authentication together with the Kerberos authentication protocol in IIS 6.0|IIS 6.0|
-|[886801](https://support.microsoft.com/help/886801)|FIX: A program that calls Wininet.dll takes longer than expected to quit|Internet Explorer|
 |[896688](https://support.microsoft.com/help/896688)|MS05-052: Cumulative security update for Internet Explorer|Internet Explorer|
 |[899812](https://support.microsoft.com/help/899812)|You receive a "Internet Explorer has encountered a problem and needs to close" error when you use Internet Explorer 6 to view a Web page that hosts an ActiveX control|Internet Explorer|
 |[912812](https://support.microsoft.com/help/912812)|MS06-013: Cumulative security update for Internet Explorer|Internet Explorer|
@@ -65,6 +63,5 @@ For more information about the updates that are included in Microsoft Windows Se
 |[824995](https://support.microsoft.com/help/824995)|Windows starts and ends daylight saving time incorrectly if the time zone is set to (GMT+02:00) Cairo|Shell|
 |[901115](https://support.microsoft.com/help/901115)|A Terminal Services client computer may make beep sounds after you connect to a Windows Server 2003 Service Pack 1-based computer|Terminal Server|
 |[902346](https://support.microsoft.com/help/902346)|FIX: Error messages when you use a Windows Management Instrumentation (WMI) query to register WMI events on a computer that is running Windows Server 2003 or Windows XP: "0x80041032" and "0x80041003"|WMI|
-||||
-
+  
 This service pack also includes the fixes and the updates that are contained in Windows Server 2003 Service Pack 1 (SP1).

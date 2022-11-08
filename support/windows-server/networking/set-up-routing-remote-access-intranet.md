@@ -3,21 +3,21 @@ title: How To Set Up Routing and Remote Access
 description: Describes how to set up routing and remote access for an Intranet.
 ms.date: 10/09/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Remote access
+ms.custom: sap:remote-access, csstroubleshoot
 ms.technology: networking
 ---
 # How to set up Routing and Remote Access for an Intranet  
 
 This article describes how to set up routing and remote access for an Intranet.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 323415
 
 ## Summary

@@ -2,7 +2,7 @@
 title: Install service packs and hotfixes
 description: This article describes how to install service packs and hotfixes on an instance of SQL Server that is part of transactional replication and database mirroring topology.
 ms.date: 09/25/2020
-ms.prod-support-area-path: Replication, change tracking, change data capture
+ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: benjones
 ms.prod: sql
 ms.topic: how-to

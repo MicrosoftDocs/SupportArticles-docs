@@ -4,20 +4,20 @@ description: Describes how to improve authentication throughput on a computer th
 ms.date: 09/15/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, STEFANG
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---
 # How to configure an ISA Server computer for a large number of authentication requests
 
 This step-by-step article describes how to improve authentication throughput on a computer that is running Microsoft Internet Security and Acceleration (ISA) Server.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 326040
 
 > [!IMPORTANT]
@@ -52,9 +52,7 @@ Follow these steps to increase the number of concurrent authentication calls in 
  [975363](https://support.microsoft.com/help/975363) A time-out error occurs when many NTLM authentication requests are sent from a Domain Member for users from remote Domains in a high latency network.
 
 > [!NOTE]
-> When you increase the value of the MaxConcurrentApi entry to a value that is greater than 5, make sure that you monitor the number of requests that are sent to the domain controller. To do this, install the update that is described in the following Knowledge Base article on the servers: [928576](https://support.microsoft.com/help/928576) New performance counters for Windows Server 2003 let you monitor the performance of Netlogon authentication  
-
-This update enables you to track the use of the Netlogon calls.
+> When you increase the value of the MaxConcurrentApi entry to a value that is greater than 5, make sure that you monitor the number of requests that are sent to the domain controller.
 
 If you have a computer that is running Microsoft Windows 2000 Advanced Server, you can use the Network Load Balancing component (previously known as WLBS) of Windows 2000 Advanced Server to distribute incoming access requests among multiple IAS servers. This helps the server perform better when network traffic is high.
 
@@ -62,11 +60,9 @@ To load balance the Web requests and authentication and to increase performance,
 
 You should set the value on the resource server and all intermediate DCs handling the NTLM authentication request on the path to the user domain. In a multi-level Active Directory Forest contoso.com with domains users.contoso.com with the users and servers.contoso.com with the resource servers, this means that you have to set this on the resource servers and DCs in server.contoso.com and DCs in contoso.com.
 
-Another way to improve performance may be to authenticate the client computer by using Kerberos, but this is not supported with Internet Explorer 6 and earlier versions. earlier. For more information, click the following article number to view the article in the Microsoft Knowledge Base: [321728](https://support.microsoft.com/help/321728) Internet Explorer does not support Kerberos authentication with proxy servers
+Another way to improve performance may be to authenticate the client computer by using Kerberos, but this is not supported with Internet Explorer 6 and earlier versions. earlier.
 
 ## References
-
-For more information about a similar problem that is experienced on an Internet Authentication Server (IAS) computer, click the following article number to view the article in the Microsoft Knowledge Base: [246118](https://support.microsoft.com/help/246118) How to configure your IAS server for a large number of authentication requests  
 
 Information about the update for Windows Server 2008 R2 that increases the limit documented above:
 

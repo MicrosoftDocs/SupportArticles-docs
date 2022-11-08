@@ -2,7 +2,7 @@
 title: Configure MSOLAP data provider for Excel
 description: This article describes how to configure the correct MSOLAP data provider for Excel to connect to Analysis Services.
 ms.date: 11/05/2020
-ms.prod-support-area-path: Analysis Services
+ms.custom: sap:Analysis Services
 ms.reviewer: dyonker
 ms.topic: how-to
 ms.prod: sql
@@ -25,15 +25,14 @@ To create a data connection to an Analysis Services data source, Microsoft Excel
 | SQL Server 2014| MSOLAP.6 |
 | SQL Server 2016| MSOLAP.7 |
 | SQL Server 2017 and later versions| MSOLAP.8 (Considered evergreen)|
-|||
-
+  
 For more information about MSOLAP and other client libraries for Analysis Services, review [Analysis Services client libraries](/analysis-services/client-libraries).
 
 For more information about how to use the correct version of MSOLAP, see [Connection string properties](/analysis-services/instances/connection-string-properties-analysis-services). For legacy MSOLAP versions, please refer to [How to obtain the latest versions of MSOLAP](https://support.microsoft.com/help/2735567). For latest MSOLAP version, please refer to [Analysis Services client libraries](/analysis-services/client-libraries).
 
 Excel uses the version of the MSOLAP provider that is installed on the client device. In the following example, Excel has configured MSOLAP.5 as the data provider in the data connection string.
 
-![Connection properties](./media/configure-msolap-data-provider-excel/connection-properties-image.png)  
+:::image type="content" source="media/configure-msolap-data-provider-excel/connection-properties.png" alt-text="Screenshot of the Definition tab of the Connection Properties dialog box." border="false":::
 
 On a client device that has multiple versions of the MSOLAP provider installed, Excel uses the version that's configured in the registry.
 
@@ -74,16 +73,16 @@ To specify the version of MSOLAP that Excel uses, update the version in the regi
 
 The following is an example of Office 32-bit C2R configured to use MSOLAP.5:
 
-![MSOLAP.5](./media/configure-msolap-data-provider-excel/progid-image.png)
+:::image type="content" source="media/configure-msolap-data-provider-excel/progid.png" alt-text="Screenshot of the ProgID registry key in Registry Editor. The Data of the (Default) subkey is configured to MSOLAP.5.":::
 
 To determine whether your installation is MSI or C2R, in Excel go to **File** > **Account**. If you see an **Office Updates** section, the installation is C2R:
 
-![C2R installation](./media/configure-msolap-data-provider-excel/office-image.png)
+:::image type="content" source="media/configure-msolap-data-provider-excel/c2r-installation.png" alt-text="Screenshot of the Account page of Excel for C2R installation.":::
 
 If there's no **Office Updates** section, then it's an MSI installation:
 
-![MSI installation](./media/configure-msolap-data-provider-excel/installation-image.png)
+:::image type="content" source="media/configure-msolap-data-provider-excel/msi-installation.png" alt-text="Screenshot of the Account page of Excel for MSI installation.":::
 
 To determine whether Excel is 32-bit or 64-bit, click **About Excel** in the same Accounts screen and it will show you in the dialog box at the top:
 
-![32-bit or 64-bit](./media/configure-msolap-data-provider-excel/dialog-box.png)
+:::image type="content" source="media/configure-msolap-data-provider-excel/about-excel.png" alt-text="Screenshot of a 32-bit example in the About Microsoft Excel window.":::

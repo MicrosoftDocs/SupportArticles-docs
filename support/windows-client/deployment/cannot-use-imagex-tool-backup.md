@@ -3,21 +3,21 @@ title: Can't use ImageX.exe as backup tool
 description: Describes the reasons why you cannot use the ImageX.exe tool as a backup tool
 ms.date: 09/21/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, scottmca
-ms.prod-support-area-path: Servicing
+ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # You can't use the ImageX.exe tool as a backup tool
 
 This article describes the reasons why you can't use the ImageX.exe tool as a backup tool for a Windows computer. The ImageX.exe tool ships as part of the Windows Automated Installation Kit (WAIK).  
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 935467
 
 ## Introduction

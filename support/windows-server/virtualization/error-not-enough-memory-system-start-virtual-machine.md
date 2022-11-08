@@ -4,21 +4,21 @@ description: Describes an issue that prevents a Windows Server 2012 R2-based vir
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Virtual machine will not boot
+ms.custom: sap:virtual-machine-will-not-boot, csstroubleshoot
 ms.technology: hyper-v
 ---
 # Virtual machine that's running on Windows Server 2012 R2 doesn't start
 
 This article provides a workaround for an issue that prevents a Windows Server 2012 R2-based virtual machine from running. This issue occurs even though Task Manager indicates that there's sufficient available memory.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2962295
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2962295
 
 ## Symptoms
 

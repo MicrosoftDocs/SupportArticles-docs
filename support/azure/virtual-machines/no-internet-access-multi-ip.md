@@ -1,9 +1,11 @@
 ---
 title: No Internet access from Azure Windows VM that has multiple IP addresses
 description: Fixes an issue in which Azure Windows virtual machines that have multiple IP addresses cannot connect to the Internet or Azure services.
-ms.date: 07/21/2020
-ms.prod-support-area-path: 
+ms.date: 04/15/2022
 ms.reviewer: chadmat
+ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
+ms.collection: windows
 ---
 # No Internet access from Azure Windows VM that has multiple IP addresses
 
@@ -33,3 +35,7 @@ $netInterface = "<NIC name>"
 Set-NetIPAddress -IPAddress $primaryIP -InterfaceAlias $netInterface -SkipAsSource $false
 Set-NetIPAddress -IPAddress $IPs.IPAddress -InterfaceAlias $netInterface -SkipAsSource $true
 ```
+
+For Linux VMs with multiple IP addresses, follow the steps in [Add IP addresses to a Linux VM operating system](/azure/virtual-network/ip-services/virtual-network-multiple-ip-addresses-portal#linux-ubuntu-1416).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

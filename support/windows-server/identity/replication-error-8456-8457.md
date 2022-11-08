@@ -4,20 +4,20 @@ description: Describes how to troubleshoot replication error 8456 or 8457.
 ms.date: 10/10/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Active Directory replication error 8456 or 8457: The source | destination server is currently rejecting replication requests
 
 This article describes the symptoms, cause, and resolution steps for situations where Active Directory operations fail with error 8456 or 8457.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2023007
 
 > [!NOTE]
@@ -90,15 +90,13 @@ Active Directory operations fail with error 8456 or 8457: The source | destinati
     |NTDS Replication|2023|The local domain controller was unable to replicate changes to the following remote domain controller for the following directory partition.|
     | Microsoft-Windows-ActiveDirectory_DomainService|2095|During an Active Directory Domain Services replication request, the local domain controller (DC) identified a remote DC which has received replication data from the local DC by using already acknowledged USN tracking numbers.|
     | Microsoft-Windows-ActiveDirectory_DomainService|2103|The Active Directory Domain Services database was restored by using an unsupported restoration procedure.  Active Directory Domain Services will be unable to log on users while this condition persists. Therefore, the Net Logon service has paused. |
-    ||||
 
-    Where embedded status codes 8456 and 8457 map to the following.
+      Where embedded status codes 8456 and 8457 map to the following.
 
     | Decimal error| Hexadecimal error| Error string |
     |---|---|---|
     |8456|2108|The source server is currently rejecting replication|
     |8457|2109|The destination server is currently rejecting replication|
-    ||||
 
 5. NTDS General Event 2013 may be logged in the Directory Services event log. This indicates that a USN rollback occurred because of an unsupported rollback or restore of the Active Directory Database.
 
@@ -190,7 +188,6 @@ Do not assume that any nonzero value for **DSA not writable** or that a source o
     |NTDS General 2103|The Active Directory database was restored by using an unsupported restoration procedure. Active Directory will be unable to log on users while this condition persists. Therefore, the Net Logon service has paused. User Action See previous event logs for more information.|
     |NTDS General Event 1393|There is insufficient space on the disk.|
     |Event 2881|Not applicable|
-    |||
 
 3. Perform the recovery based on the value of **DSA not writable** or on events that are logged on the system:
 

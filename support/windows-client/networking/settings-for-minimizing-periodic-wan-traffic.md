@@ -3,21 +3,21 @@ title: Settings for minimizing periodic WAN traffic
 description: Describes the problem that occurs when a dial-on-demand link is activated by periodic WAN traffic. Includes suggested settings to help prevent or minimize this behavior.
 ms.date: 09/21/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, WalterE
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # Settings for minimizing periodic WAN traffic
 
 This article provides some suggested settings for the problem that occurs when a dial-on-demand link is activated by periodic WAN traffic.  
 
-_Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 819108
 
 ## Summary
@@ -122,7 +122,7 @@ Recommended value (seconds): 600
 
 #### The maximum password age
 
-Specifies how frequently the system changes the computer account password of the local computer. This entry is used only when the system is configured to change the computer password automatically at set intervals. That is, this entry is used only when the value of the **DisablePasswordChange** entry is **0**. For more information, see [Domain member: Disable machine account password changes](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/domain-member-disable-machine-account-password-changes).
+Specifies how frequently the system changes the computer account password of the local computer. This entry is used only when the system is configured to change the computer password automatically at set intervals. That is, this entry is used only when the value of the **DisablePasswordChange** entry is **0**. For more information, see [Domain member: Disable machine account password changes](/windows/security/threat-protection/security-policy-settings/domain-member-disable-machine-account-password-changes).
   
 Subkey: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters`  
 Entry: MaximumPasswordAge  
@@ -150,8 +150,9 @@ Entry: SyncIntervalInSeconds
 Type: DWORD  
 Default value (seconds): 3,600 (1 hour)
 
-Also review the following Microsoft Docs topic on DFS volume settings:
- [Change the amount of time that clients cache referrals](https://docs.microsoft.com/windows-server/storage/dfs-namespaces/change-the-amount-of-time-that-clients-cache-referrals)
+Also review the following technical article on DFS volume settings:
+
+- [Change the amount of time that clients cache referrals](/windows-server/storage/dfs-namespaces/change-the-amount-of-time-that-clients-cache-referrals)
 
 ### The Knowledge Consistency Checker (KCC) replication topology update
 
@@ -166,7 +167,7 @@ Default value (seconds): 900 (15 minutes)
 
 ### Group Policy settings
 
-The following policy settings control the frequency of Net Logon-based traffic and of DFS-based traffic. To locate these settings, click **Start**, click **Run**, type *gpedit.msc*, and then click **OK**. Or, edit them in a domain-based Group Policy Object.
+The following policy settings control the frequency of Net Logon-based traffic and of DFS-based traffic. To locate these settings, click **Start**, click **Run**, type _gpedit.msc_, and then click **OK**. Or, edit them in a domain-based Group Policy Object.
 
 #### Computer Configuration/Administrative Templates/System/Net Logon
 
@@ -201,7 +202,6 @@ The following table shows the packet types and their default send intervals.
 |Windows Explorer|SMB|TCP/IP|32 seconds|This value controls the frequency that the file server sends an SMB echo frame to the client as long as the client has an outstanding long-term request open.|
 |KeepAlive|NetBIOS|TCP/IP|300 seconds (5 minutes)|This entry corresponds to<br/> `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlServices\NetBT\parameters\SessionKeepAlive` |
 |KeepAlive|TCP|TCP/IP|1 second|This entry corresponds to<br/> `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TCPIP\Parameters\KeepAliveTime` |
-||||||
 
 > [!Note]
 >
@@ -226,8 +226,7 @@ For more information, see the following Knowledge Base article:
 |DFS queries for domain controllers|900 seconds (15 minutes)| |
 |GPO refresh interval|90 minutes|See Group Policy Description: [Group Policy Search](https://gpsearch.azurewebsites.net/#341) |
 |Time service (W32time)|17 minutes|This value is found in the following registry subkeys:<br/><br/> `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32time\Config\MaxPollInterval` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32time\Config\MinPollInterval` <br/><br/>Also see the Group Policy settings for Windows Time Service: [Global Configuration Settings](https://gpsearch.azurewebsites.net/#2612) [Configure Windows NTP Client](https://gpsearch.azurewebsites.net/#2613) |
-||||
-
+  
 ## References
 
 For more information, see the following Knowledge Base articles:

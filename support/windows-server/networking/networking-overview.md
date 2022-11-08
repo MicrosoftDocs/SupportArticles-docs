@@ -4,7 +4,7 @@ description: Overview of Windows Server networking troubleshooting articles.
 ms.date: 11/09/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

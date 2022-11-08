@@ -4,20 +4,20 @@ description: Describes an issue in which you can't install a shared network prin
 ms.date: 10/09/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: yongrhee, v-jomcc, kaushika
-ms.prod-support-area-path: 'Errors and troubleshooting: General issues'
+ms.custom: sap:errors-and-troubleshooting-general-issues, csstroubleshoot
 ms.technology: windows-server-printing
 ---
 # Error message when you try to install a shared network printer
 
 This article describes an issue where you can't install a shared network printer locally on a Windows Server or Windows-based computer.
 
-_Original product version:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 888046
 
 ## Symptoms
@@ -116,7 +116,7 @@ To resolve this issue, modify the Group Policy settings for the Group Policy obj
 
 ## More information
 
-When you disable the Point and Print Restrictions policy that is located under **User Configuration\Administrative Templates\Control Panel\Printers**, users can use the Point and Print functionality to select any shared printer to which they have access. For more information about this policy, see the following Microsoft Knowledge Base article: [319939](https://support.microsoft.com/help/319939) Description of the Point and Print Restrictions policy setting in Windows Server 2003 and Windows XP  
+When you disable the Point and Print Restrictions policy that is located under **User Configuration\Administrative Templates\Control Panel\Printers**, users can use the Point and Print functionality to select any shared printer to which they have access.
 
 ### How to use the registry to set the Point and Print Restrictions policy
 
@@ -145,13 +145,9 @@ Data: 0 or 1
 
 A setting of 0 disables this entry. A setting of 1 allows printers to appear in the server list dialog box.
 
-For more information about printer installation related issues in Windows XP and Windows Server 2003, click the following article numbers to view the articles in the Microsoft Knowledge Base:
+For more information about printer installation related issues, click the following article number to view the article in the Microsoft Knowledge Base:
 
-[326473](https://support.microsoft.com/help/326473) You are prompted for administrator credentials when you try to install a plug and play printer  
-
-[282011](https://support.microsoft.com/help/282011) Printer driver is not compatible if a policy is enabled on your computer  
-
-[319939](https://support.microsoft.com/help/319939) Description of the Point and Print Restrictions policy setting in Windows Server 2003 and Windows XP  
+[282011](https://support.microsoft.com/help/282011) Printer driver is not compatible if a policy is enabled on your computer
 
 ### Technical support for x64-based versions of Microsoft Windows
 

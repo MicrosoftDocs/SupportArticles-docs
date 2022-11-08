@@ -4,20 +4,20 @@ description: Describes the features and improvements in Windows Search 4.0. Prov
 ms.date: 10/19/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Windows Search
+ms.custom: sap:windows-search, csstroubleshoot
 ms.technology: windows-client-shell-experience
 ---
 # Description of Windows Search 4.0 and the Multilingual User Interface Pack for Windows Search 4.0
 
 This article discusses the availability of Windows Search 4.0 and the Multilingual User Interface Pack (MUI) for Windows Search 4.0.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 940157
 
 > [!NOTE]

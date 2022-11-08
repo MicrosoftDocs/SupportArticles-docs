@@ -2,9 +2,10 @@
 title: Change hard error popup handling
 description: This article describes how to change the hard error popup mode and give example code.
 ms.date: 03/13/2020
-ms.prod-support-area-path: Desktop app UI development
+ms.custom: sap:Desktop app UI development
 ms.reviewer: kayda
 ms.topic: article
+ms.technology: windows-dev-apps-desktop-app-ui-dev
 ---
 # How to change hard error popup handling in Windows
 

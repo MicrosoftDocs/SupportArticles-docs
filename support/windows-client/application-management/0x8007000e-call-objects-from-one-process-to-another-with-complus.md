@@ -4,20 +4,20 @@ description: Provides a solution to an issue where calling many objects from one
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: COM+ administration, configuration, and security
-ms.technology: windows-client-application-compatibility 
+ms.custom: sap:com+-administration-configuration-and-security, csstroubleshoot
+ms.technology: windows-client-application-compatibility
 ---
 # Error when you call many objects from one process to another by using COM+: Not enough storage is available to complete this operation (0x8007000e)
 
 This article provides a solution to an issue where calling many objects from one process to another by using Microsoft COM+ fails.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 890425
 
 ## Symptoms

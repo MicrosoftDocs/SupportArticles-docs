@@ -1,23 +1,23 @@
 ---
 title: Can't use Vmconnect to connect to virtual machine
-description: Describes an error message that you receive when you try to use Vmconnect.exe to connect to a virtual machine in Windows Server 2008. To resolve this error, you must verify that the required registry keys are configured to enable remote authentication.
+description: Describes an error message that you receive when you try to use Vmconnect.exe to connect to a virtual machine in Windows Server. To resolve this error, you must verify that the required registry keys are configured to enable remote authentication.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Configuration of virtual machine settings
+ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
 ms.technology: hyper-v
 ---
 # "A connection will not be made because credentials may not be sent to the remote computer" when I use the Virtual Machine Connection tool to connect to a virtual machine on a Windows Server 2008 Hyper-V-based computer
 
 This article provides help to fix an error that you receive when you try to use `Vmconnect.exe` to connect to a virtual machine.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 954357
 
 ## Error message description
@@ -63,19 +63,19 @@ The "How to create the registry entry" section describes how to create the regis
 
 #### How to create the registry entry
 
-Follow these steps, and then quit Registry Editor:
+Follow these steps, and then quit **Registry Editor**:
 
-1. Click **Start**, click **Run**, type regedit, and then click **OK**.
+1. Click **Start**, click **Run**, type *regedit*, and then click **OK**.
 
 2. Locate and then click the following key in the registry:
  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Credssp\PolicyDefaults\AllowDefaultCredentials`  
 
 3. On the **Edit** menu, point to **New**, and then click **String Value**.
-4. Type Hyper-V, and then press ENTER.
+4. Type *Hyper-V*, and then press ENTER.
 
 5. On the **Edit** menu, click **Modify**.
 
-6. Type Microsoft Virtual Console Service/*, and then click **OK**.
+6. Type *Microsoft Virtual Console Service/\**, and then click **OK**.
 
 ### Method 2: Use Group Policy settings
 

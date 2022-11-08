@@ -1,23 +1,23 @@
 ---
 title: Delete saved logs from Event Viewer
 description: Describes how to delete files under Saved Logs from the Event Viewer.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Event Viewer
+ms.custom: sap:event-viewer, csstroubleshoot
 ms.technology: windows-client-system-management-components
 ---
 # How to delete "Saved Logs" from the Event Viewer
 
 This article describes how to delete files under **Saved Logs** from the Event Viewer.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2489761
 
 ## Symptoms

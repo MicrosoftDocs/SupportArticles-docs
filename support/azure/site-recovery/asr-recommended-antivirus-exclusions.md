@@ -2,10 +2,9 @@
 title: Recommended antivirus exclusions for Azure Recovery Services
 description: Describes recommended antivirus (AV) settings for servers that have Microsoft Azure Recovery Services software installed. The various exclusion sets for each role are described.
 ms.date: 10/10/2020
-ms.prod-support-area-path: 
-ms.service: backup
+ms.service: site-recovery
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: markstan
 ---
 # Recommended antivirus exclusions for Azure Recovery Services
@@ -21,7 +20,7 @@ This article describes recommended antivirus (AV) settings for servers that have
 
 ### Azure Site Recovery SCVMM to Azure Deployment: Antivirus exclusion guidance
 
-#### System Center 2012 R2 Virtual Machine Manager (SC 2012 R2 VMM) servers 
+#### System Center 2012 R2 Virtual Machine Manager (SC 2012 R2 VMM) servers
 
 VMM servers should include all exclusions that are detailed in the following Microsoft Knowledge Base (KB) article:
 
@@ -39,7 +38,7 @@ For information about recommended exclusions for Cluster Services, see the follo
 
 #### Azure Site Recovery Hyper-V to Azure deployment: Antivirus exclusion guidance
 
-#### Hyper-V Servers (Azure Recovery Services Agent) 
+#### Hyper-V Servers (Azure Recovery Services Agent)
 
 Exclude all items that are listed in the following KB article:
 
@@ -52,7 +51,7 @@ Additionally, exclude all items from the following locations:
 
 ### Azure Site Recovery VMware to VMware deployment: Antivirus exclusion guidance
 
-#### Source servers 
+#### Source servers
 
 Exclude the following directories:
 
@@ -71,7 +70,7 @@ Exclude the following directories:
 
 ### Azure Site Recovery VMware to Azure deployment: Antivirus exclusion guidance
 
-#### Source servers (Configuration Server, Process Server, Master Target) 
+#### Source servers (Configuration Server, Process Server, Master Target)
 
 Exclude the installation path of the Azure Site Recovery agent, which is `C:\Program Files(x86)\Azure Site Recovery` by default.
 
@@ -80,3 +79,5 @@ Exclude the installation path of the Recovery Services agent, which is `C:\Progr
 #### Protected VMs  
 
 Guest virtual machines (VMs) that are protected by Azure Recovery Services should exclude the installation folder where the guest agent is installed. The default path is `C:\Program Files (x86)\Azure Site Recovery`.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

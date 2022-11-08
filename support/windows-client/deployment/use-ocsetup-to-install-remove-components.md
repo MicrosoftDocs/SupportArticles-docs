@@ -4,20 +4,20 @@ description: Describes the Windows optional component setup (Ocsetup.exe) tool.
 ms.date: 09/10/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jomcc
-ms.prod-support-area-path: Setup
+ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # How to use the Ocsetup.exe tool to install or to remove Windows optional components in Windows Vista
 
 This article describes how to use the Windows optional component setup tool (Ocsetup.exe) to install or to remove Windows optional components.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 936209
 
 ## Summary

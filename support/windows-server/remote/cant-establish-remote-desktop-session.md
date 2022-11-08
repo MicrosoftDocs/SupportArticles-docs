@@ -2,22 +2,22 @@
 title: Can't establish a Remote Desktop session
 description: Provides a solution to an error that occurs when you try to connect to the Terminal service running on one of the affected products.
 ms.date: 10/14/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, MVP
-ms.prod-support-area-path: Remote desktop sessions
+ms.custom: sap:remote-desktop-sessions, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # You can't establish a Remote Desktop session to a computer running one of the affected products
 
 This article provides a solution to an error that occurs when you try to connect to the Terminal service running on one of the affected products.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 555382
 
 ## Symptoms
@@ -33,17 +33,19 @@ OK Help
 
 Additionally, when you view System Event log on the affected server you see the following event:
 
-> Event Type: Error  
+```output
+Event Type: Error  
 Event Source: TermService  
 Event Category: None  
 Event ID: 1036  
-Date: *\<DateTime>*  
-Time: *\<DateTime>*  
+Date: <DateTime>  
+Time: <DateTime>  
 User: N/A  
 Computer: Servername  
 Description:  
 Terminal Server session creation failed. The relevant status code was 0x2740.  
-For more information, see Help and Support Center at.  
+For more information, see Help and Support Center at.
+```
 
 ## Resolution
 
@@ -80,4 +82,3 @@ Use these steps only if you can't do local sign-in to the affected server.
     Change it's data to the value you noted in step 6. If you want RDP to listen on all LAN adapters enter value of 0.
 
 [!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]
-

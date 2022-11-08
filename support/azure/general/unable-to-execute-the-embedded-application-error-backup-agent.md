@@ -4,8 +4,8 @@ description: Describes how to fix the "Unable to execute the embedded applicatio
 author: genlin
 ms.author: genli
 ms.service: storage
+ms.subservice: common
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.reviewer: shamv
 ---
 # "Unable to execute the embedded application" error when you try to install the Microsoft Azure backup agent
@@ -28,7 +28,7 @@ This problem occurs because of an issue with Microsoft .VC90.CRT. To fix the pro
 
 When this problem occurs, the following is logged in the Application log, and this indicates that Microsoft.VC90.CRT is the problem:
 
-```
+```output
 Log Name: Application
 Source: SideBySide
 Date: **date** **time**  
@@ -45,6 +45,9 @@ You may also receive the following error message:
 ERROR: Cannot resolve reference Microsoft.VC90.CRT,processorArchitecture="amd64",publicKeyToken="1fc8b3b9a1e18e3b",type="win32",version="9.0.21022.8".
 ERROR: Activation Context generation failed.
 ```
+
 ## Resolution
 
-To resolve this problem, you must install the [Microsoft Visual C++ 2008 Redistributable Package (x64)](https://www.microsoft.com/download/details.aspx?familyid=bd2a6171-e2d6-4230-b809-9a8d7548c1b6&displaylang=en). Installing the latest version of the Visual C++ runtime does not fix this problem.
+To resolve this problem, you must install the Microsoft Visual C++ 2008 Redistributable Package (x64). Installing the latest version of the Visual C++ runtime does not fix this problem.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

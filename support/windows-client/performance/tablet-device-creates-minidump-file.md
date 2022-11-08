@@ -2,22 +2,22 @@
 title: Tablet device creates a minidump file
 description: Provides a solution to an issue that prevents a complete memory dump from being written during a Stop error on a tablet device.
 ms.date: 09/24/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, steved, grahamm
-ms.prod-support-area-path: Blue Screen/Bugcheck
+ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
 ms.technology: windows-client-performance
 ---
 # Tablet device that's running Windows 10 creates only a minidump file
 
 This article provides a solution to an issue that prevents a complete memory dump from being written during a Stop error on a tablet device.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3135462
 
 ## Symptoms

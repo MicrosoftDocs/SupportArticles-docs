@@ -3,21 +3,21 @@ title: ConflictAndDeleted folder size exceeds
 description: Describes how to reduce the sizes of the ConflictAndDeleted folder and the ConflictandDeletedManifest.xml when using Windows Server DFSR.
 ms.date: 10/19/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, clandis, cdan
-ms.prod-support-area-path: DFSR
+ms.custom: sap:dfsr, csstroubleshoot
 ms.technology: networking
 ---
 # The ConflictAndDeleted folder size may exceed its configured limitation
 
 This article provides a resolution for the issue that the ConflictAndDeleted folder size may exceed its configured limitation.
 
-_Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 951010
 
 ## Symptoms
@@ -39,7 +39,7 @@ wmic /namespace:\\root\microsoftdfs path dfsrreplicatedfolderinfo where "replica
 ```
 
 > [!Note]
-> In this command, \<ReplicatedFolderName> represents the name of the replicated folder.
+> In this command, \<ReplicatedFolderName> represents the name of the replicated folder.
 
 To clean up the ConflictAndDeleted folder content of all of the replicated folders in a replication group, enter the following command:  
 
@@ -56,7 +56,7 @@ wmic /namespace:\\root\microsoftdfs path dfsrreplicatedfolderinfo where "replica
 Depending on the size of the ConflictAndDeleted folder, this process may take a few minutes. The process empties the ConflictAndDeleted folder and reduces or deletes the ConflictAndDeletedManifest.xml file.  
 
 > [!Note]
-> If any conflicts or deletions occur while **cleanupconflictdirectory** runs, the information that is related to those conflicts or deletions remains in the ConflictAndDeleted folder and the ConflictAndDeletedManifest.xml file when the process finishes.  After the cleanup, the file is much smaller, and the total size of the ConflictAndDeleted folder is less than the quota maximum mark.
+> If any conflicts or deletions occur while **cleanupconflictdirectory** runs, the information that is related to those conflicts or deletions remains in the ConflictAndDeleted folder and the ConflictAndDeletedManifest.xml file when the process finishes.  After the cleanup, the file is much smaller, and the total size of the ConflictAndDeleted folder is less than the quota maximum mark.
 
 ## Status
 

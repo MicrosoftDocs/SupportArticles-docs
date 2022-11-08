@@ -1,10 +1,11 @@
 ---
 title: Server specified can't be reached error occurs
 description: This article provides resolutions for the problem in which you can't connect to a computer that's running Release Management Server from Release Management Client.
-ms.prod: devops
 ms.date: 08/14/2020
-ms.prod-support-area-path: Client Connectivity
+ms.custom: sap:Client Connectivity
 ms.reviewer: achand, daleche, muthuk, sriramb, ronai, ans, leov
+ms.service: azure-devops
+ms.subservice: ts-client-connectivity
 ---
 # 'The server specified could not be reached' error when you try to connect through Release Management Client
 
@@ -36,3 +37,5 @@ To resolve this issue, follow these steps:
 ## References
 
 Check out [Known issues when you install Release Management for Visual Studio 2013](/troubleshoot/visualstudio/install/release-management-installation-issues).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

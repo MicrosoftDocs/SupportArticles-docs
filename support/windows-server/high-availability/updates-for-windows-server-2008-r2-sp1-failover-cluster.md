@@ -4,20 +4,20 @@ description: Describes the hotfixes for Windows Server 2008 R2 SP1 Failover Clus
 ms.date: 10/23/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: ctimon, kaushika
-ms.prod-support-area-path: Setup and configuration of clustered services and applications
+ms.custom: sap:setup-and-configuration-of-clustered-services-and-applications, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # Recommended hotfixes and updates for Windows Server 2008 R2 SP1 Failover Clusters
 
 This article documents recommended hotfixes for Windows Server 2008 R2 Service Pack 1 (SP1) Failover Clusters. Applying these fixes can improve the reliability of your high availability solution.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2545685
 
 > [!NOTE]
@@ -35,6 +35,5 @@ _Original KB number:_ &nbsp; 2545685
 |November 17, 2012| [2524478](https://support.microsoft.com/help/2524478)|The network location profile changes from Domain to Public in Windows 7 or in Windows Server 2008 R2|Ncsi.dll<br/><br/>Nlaapi.dll<br/><br/>Nlasvc.dll|Prevents loss of Cluster communication.|
 |April 25, 2012| [2559392](https://support.microsoft.com/help/2559392)|The List Running Processes test fails when you run the Failover Cluster Validation Wizard on a Windows 7-based or Windows Server 2008 R2-based cluster node|Multiple Validation DLL's|Prevents Cluster Validation failure. Passing validation is required to have a Supported Cluster configuration.|
 |June 14, 2011| [2545850](https://support.microsoft.com/help/2545850)|Users cannot access an IIS-hosted website after the computer password for the server is changed in Windows 7 or in Windows Server 2008 R2|Multiple Authentication DLL's|Prevents CNO and VCO objects from failing to register in DNS because of Kerberos authentication failure after the computer password is changed.|
-||||||
 
 To see the latest list of hotfixes for Windows Server 2008 R2 Hyper-V configurations, see [Hyper-V Update List for Windows Server 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff394763(v=ws.10)).

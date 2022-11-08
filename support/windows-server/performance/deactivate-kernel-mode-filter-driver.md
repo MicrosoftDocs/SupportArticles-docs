@@ -4,20 +4,20 @@ description: Describes how you can temporarily deactivate the kernel mode filter
 ms.date: 10/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, WalterE
-ms.prod-support-area-path: Servicing
+ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # How to temporarily deactivate the kernel mode filter driver in Windows
 
 This article describes how to deactivate the kernel mode filter driver without removing the corresponding software.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 816071
 
 > [!IMPORTANT]
@@ -39,7 +39,7 @@ When you are troubleshooting any one of these issues, frequently, you have to do
 To disable filter drivers, you must first identify third-party services and their corresponding filter drivers. After you do this, follow these steps.
 
 > [!WARNING]
-> This workaround may make your computer or your network more vulnerable to attack by malicious users or by malicious software such as viruses. We do not recommend this workaround but are providing this information so that you can implement this workaround at your own discretion. Use this workaround at your own risk. 
+> This workaround may make your computer or your network more vulnerable to attack by malicious users or by malicious software such as viruses. We do not recommend this workaround but are providing this information so that you can implement this workaround at your own discretion. Use this workaround at your own risk.
 
 > [!IMPORTANT]
 > An antivirus program is designed to help protect your computer from viruses. You must not download or open files from sources that you do not trust, visit Web sites that you do not trust, or open e-mail attachments when your antivirus program is disabled.
@@ -113,6 +113,5 @@ The following table lists valid settings and their description for the driver's 
 |Type|1 = SERVICE_KERNEL_DRIVER|Device driver.|
 |Type|2 = SERVICE_FILE_SYSTEM_DRIVER|Kernel-mode file system driver.|
 |Type|8 = SERVICE_RECOGNIZER_DRIVER|File system recognizer driver.|
-||||
-
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)] 
+  
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

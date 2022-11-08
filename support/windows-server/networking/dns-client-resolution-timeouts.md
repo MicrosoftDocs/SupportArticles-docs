@@ -2,22 +2,22 @@
 title: DNS client resolution timeouts
 description: Describes the fallback and timeout behavior that exist when one or more Domain Name System (DNS) Servers IPs are configured on a Windows DNS client.
 ms.date: 10/13/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc, dpracht
-ms.prod-support-area-path: DNS
+ms.custom: sap:dns, csstroubleshoot
 ms.technology: networking
 ---
 # NET: DNS: DNS client resolution timeouts
 
 This document describes the fallback and timeout behavior that exist when one or more Domain Name System (DNS) Servers IPs are configured on a Windows DNS client.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2834226
 
 ## Summary
@@ -40,8 +40,7 @@ The behavior is the following (tested on Windows XP, Windows 7, and Windows 8 cl
 | 4| If no response is received after 2 more seconds, client queries again the DNS server |
 | 8| If no response is received after 4 more seconds, client queries again the DNS server |
 | 10| If no response is received after 2 more seconds, client stops querying |
-|||
-
+  
 Any Name Error response by the DNS server will cause the process to stop - client doesn't retry if the response was negative.
 
 In this scenario, the client is then trying to query the same DNS server five times before timing out.
@@ -80,8 +79,7 @@ The behavior is the following (tested on Windows XP clients with a single NIC):
 |3| If no response is received after 2 more seconds, client queries again the first DNS server |
 |7| If no response is received after 4 more seconds, client queries again the first DNS server |
 |9| If no response is received after 2 more seconds, client stops querying |
-|||
-
+  
 Any Name Error response by any of the DNS servers will cause the process to stop - client doesn't retry with the next server if the response was negative. Client tries new servers only if the previous are unreachable.
 
 In this scenario, the client is then trying to query mostly the first DNS server, and the secondary once.
@@ -124,8 +122,7 @@ The behavior is the following (tested on Windows 7 and Windows 8 clients with a 
 | 4| If no response is received after 2 more seconds, client queries all the servers in the list at the same time |
 | 8| If no response is received after 4 more seconds, client queries all the servers in the list at the same time |
 | 10| If no response is received after 2 more seconds, client stops querying |
-|||
-
+  
 Any Name Error response by any of the DNS servers will cause the process to stop - client doesn't retry with the next server if the response was negative. Client tries new servers only if the previous are unreachable.
 
 Example
@@ -172,13 +169,12 @@ The behavior is the following (tested on Windows XP, Windows 7, and Windows 8 cl
 | 4| If no response is received after 2 more seconds, client queries all the servers in the list at the same time |
 | 8| If no response is received after 4 more seconds, client queries again all the servers in the list at the same time |
 | 10| If no response is received after 2 more seconds, client stops querying |
-|||
-
+  
 Any Name Error response by any of the DNS servers will cause the process to stop - client doesn't retry with the next server if the response was negative. Client tries new servers only if the previous are unreachable.
 
 If the only reachable server is in position 4 or higher, we have an expected delay of at least 4 seconds after the original query before actually trying it. This can cause issues if the application that has requested the DNS resolution has an application resolution timeout lower than this value. The only way to have this server queried earlier will be to set it in the first three positions.
 
-Example 
+Example
 
 Client with five DNS servers configured querying for Microsoft.com
 

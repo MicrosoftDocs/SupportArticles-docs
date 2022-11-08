@@ -2,29 +2,34 @@
 title: Error when you open Enterprise or Computer Compliance Reports in MBAM
 description: Provides a solution to an error that occurs when you open Enterprise or Computer Compliance Reports in MBAM.
 ms.date: 09/18/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika,  yitzhaks, manojse
-ms.prod-support-area-path: Bitlocker
+ms.custom: sap:bitlocker, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # Error when you open Enterprise or Computer Compliance Reports in MBAM
 
 This article provides a solution to an error that occurs when you open Enterprise or Computer Compliance Reports in Microsoft BitLocker Administration and Monitoring (MBAM).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2639518
 
 ## Symptoms
 
 When a user uses a specific account for SQL Server Reporting Service (SSRS) in the MBAM wizard, they may not open any reports for MBAM and it fails with the below error message.
 
-:::image type="content" source="./media/error-when-opening-reports-mbam/error-message.png" alt-text="Error message displays in BitLocker Administration and Monitoring.":::
+> An error has occurred during report processing. (rsProcessingAborted)  
+> Cannot impersonate user for data source 'MaltaDataSource'. (rsErrorImpersonatingUser)  
+> Log on failed. Ensure the user name and password are correct. (reLogonFailed)  
+> Logon failure: unknown user name or bad password
+
+:::image type="content" source="media/error-when-opening-reports-mbam/rsprocessingaborted-error.png" alt-text="Error message that is shown in BitLocker Administration and Monitoring." border="false":::
 
 ## Cause
 
@@ -43,7 +48,7 @@ To resolve this issue, follow the steps from below:
 2. Click Microsoft BitLocker Administration and Monitoring.
 3. Click **Malta Data Source** (see screenshot below).
 
-    :::image type="content" source="./media/error-when-opening-reports-mbam/malta-data-source-setting.png" alt-text="Click Malta Data Source.":::
+    :::image type="content" source="media/error-when-opening-reports-mbam/malta-data-source-setting.png" alt-text="Properties setting page of Malta Data Source.":::
 
 4. Make sure you have Windows-integrated security selected.
 5. Click **Test Connection** and then click **Apply**.

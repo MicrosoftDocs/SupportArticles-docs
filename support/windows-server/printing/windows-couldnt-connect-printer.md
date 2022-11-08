@@ -2,22 +2,22 @@
 title: Windows couldn't connect to the printer
 description: Describes an issue in Windows Server 2008 R2 and in Windows 7 in which you cannot connect to a printer by using an alias CNAME resource record for a print server or a client that hosts a printer.
 ms.date: 10/15/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jokay
-ms.prod-support-area-path: 'Errors and troubleshooting: General issues'
+ms.custom: sap:errors-and-troubleshooting-general-issues, csstroubleshoot
 ms.technology: windows-server-printing
 ---
 # Error message when you try to connect to a printer by using an alias (CNAME) resource record: Windows couldn't connect to the printer
 
 This article provides a solution to an error that occurs when you try to connect to a printer by using an alias (CNAME) resource record.
 
-_Original product version:_ &nbsp; Windows 10 - all editions,  Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions,  Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 979602
 
 ## Symptoms

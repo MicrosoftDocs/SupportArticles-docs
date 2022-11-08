@@ -2,7 +2,7 @@
 title: Recommendations to reduce allocation contention
 description: This article provides resolution for the problem where you notice severe blocking when the server is experiencing a heavy load.
 ms.date: 09/25/2020
-ms.prod-support-area-path: Performance
+ms.custom: sap:Performance
 ms.reviewer: SureshKa
 ms.prod: sql
 ---

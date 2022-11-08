@@ -1,10 +1,11 @@
 ---
 title: Pushing large files by Git client hangs
 description: This article provides resolutions for the problem that hangs when you use Git push to push large files to Team Foundation Server on Windows Server 2008 R2.
-ms.prod: devops
 ms.date: 08/14/2020
-ms.prod-support-area-path: Repos
+ms.custom: sap:Repos
 ms.reviewer: Matt Cooper
+ms.service: azure-devops
+ms.subservice: ts-repos
 ---
 # Pushing large files to Team Foundation Server by Git client hangs
 
@@ -38,3 +39,5 @@ To fix this problem, enable TLS 1.1 and TLS 1.2 on Windows Server 2008 R2. To do
 - Windows Server 2008 R2 Datacenter
 - Windows Server 2008 R2 Standard
 - Windows Server 2008 R2 Foundation
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

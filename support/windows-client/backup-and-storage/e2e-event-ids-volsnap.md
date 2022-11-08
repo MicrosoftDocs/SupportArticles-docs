@@ -1,23 +1,23 @@
 ---
-title: e2e Event IDs for Volsnap 
-description: Lists the event IDs for Volsnap 
+title: e2e Event IDs for Volsnap
+description: Lists the event IDs for Volsnap
 ms.date: 09/21/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Volume Shadow Copy Service (VSS)
+ms.custom: sap:volume-shadow-copy-service-vss, csstroubleshoot
 ms.technology: windows-client-backup-and-storage
 ---
 # e2e: Event IDs for Volsnap
 
 This article provides some information about Event IDs for Volsnap.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3081408
 
 ## Summary
@@ -42,62 +42,62 @@ For the Operational channel, the following are all the possible events.
 
 - 500 Completing a failed upper-level read request
 
-    :::image type="content" source="./media/e2e-event-ids-volsnap/event-500.png" alt-text="Event 500.":::
+    :::image type="content" source="media/e2e-event-ids-volsnap/event-500.png" alt-text="Screenshot of the General tab of Event 500, StorDiag.":::
 
-    :::image type="content" source="./media/e2e-event-ids-volsnap/event-id-500.png" alt-text="Event ID 500.":::
+    :::image type="content" source="media/e2e-event-ids-volsnap/event-id-500.png" alt-text="Screenshot of the Details tab of Event 500, StorDiag.":::
 
 - 501 Completing a failed upper-level write request
 
-    :::image type="content" source="./media/e2e-event-ids-volsnap/event-501.png" alt-text="Event 501.":::
+    :::image type="content" source="media/e2e-event-ids-volsnap/event-501.png" alt-text="Screenshot of the General tab of Event 501, StorDiag.":::
 
-    :::image type="content" source="./media/e2e-event-ids-volsnap/event-id-501.png" alt-text="Event ID 501.":::
+    :::image type="content" source="media/e2e-event-ids-volsnap/event-id-501.png" alt-text="Screenshot of the Details tab of Event 501, StorDiag.":::
 
 - 503 Completing a failed upper-level paging write request
 
-    :::image type="content" source="./media/e2e-event-ids-volsnap/event-503.png" alt-text="Event 503.":::
+    :::image type="content" source="media/e2e-event-ids-volsnap/event-503.png" alt-text="Screenshot of the General tab of Event 503, StorDiag.":::
 
-    :::image type="content" source="./media/e2e-event-ids-volsnap/event-id-503.png" alt-text="Event ID 503.":::
+    :::image type="content" source="media/e2e-event-ids-volsnap/event-id-503.png" alt-text="Screenshot of the Details tab of Event 503, StorDiag.":::
 
 - 504 Completing a failed IOCTL request
 
-    :::image type="content" source="./media/e2e-event-ids-volsnap/event-504.png" alt-text="Event 504.":::
+    :::image type="content" source="media/e2e-event-ids-volsnap/event-504.png" alt-text="Screenshot of the General tab of Event 504, StorDiag.":::
 
-    :::image type="content" source="./media/e2e-event-ids-volsnap/event-id-504.png" alt-text="Event ID 504.":::
+    :::image type="content" source="media/e2e-event-ids-volsnap/event-id-504.png" alt-text="Screenshot of the Details tab of Event 504, StorDiag.":::
 
 - 505 Completing a failed Read SCSI SRB request
 
-    :::image type="content" source="./media/e2e-event-ids-volsnap/event-505.png" alt-text="Event 505.":::
+    :::image type="content" source="media/e2e-event-ids-volsnap/event-505.png" alt-text="Screenshot of the General tab of Event 505, StorDiag.":::
 
-    :::image type="content" source="./media/e2e-event-ids-volsnap/event-id-505.png" alt-text="Event ID 505.":::
+    :::image type="content" source="media/e2e-event-ids-volsnap/event-id-505.png" alt-text="Screenshot of the Details tab of Event 505, StorDiag.":::
 
 - 506 Completing a failed Write SCSI SRB request
 
-    :::image type="content" source="./media/e2e-event-ids-volsnap/event-506.png" alt-text="Event 506.":::
+    :::image type="content" source="media/e2e-event-ids-volsnap/event-506.png" alt-text="Screenshot of the General tab of Event 506, StorDiag.":::
 
-    :::image type="content" source="./media/e2e-event-ids-volsnap/event-id-506.png" alt-text="Event ID 506.":::
+    :::image type="content" source="media/e2e-event-ids-volsnap/event-id-506.png" alt-text="Screenshot of the Details tab of Event 506, StorDiag.":::
 
 - 507 Completing a failed non-ReadWrite SCSI SRB request
 
-    :::image type="content" source="./media/e2e-event-ids-volsnap/event-507.png" alt-text="Event 507.":::
+    :::image type="content" source="media/e2e-event-ids-volsnap/event-507.png" alt-text="Screenshot of the General tab of Event 507, StorDiag.":::
 
-    :::image type="content" source="./media/e2e-event-ids-volsnap/event-id-507.png" alt-text="Event ID 507.":::
+    :::image type="content" source="media/e2e-event-ids-volsnap/event-id-507.png" alt-text="Screenshot of the Details tab of Event 507, StorDiag.":::
 
 - 508 Completing a failed non-SCSI SRB request
 
-    :::image type="content" source="./media/e2e-event-ids-volsnap/event-508.png" alt-text="Event 508.":::
+    :::image type="content" source="media/e2e-event-ids-volsnap/event-508.png" alt-text="Screenshot of the General tab of Event 508, StorDiag.":::
 
-    :::image type="content" source="./media/e2e-event-ids-volsnap/event-id-508.png" alt-text="Event ID 508.":::
+    :::image type="content" source="media/e2e-event-ids-volsnap/event-id-508.png" alt-text="Screenshot of the Details tab of Event 508, StorDiag.":::
 - 509 Completing a failed PNP request
 
-    :::image type="content" source="./media/e2e-event-ids-volsnap/event-509.png" alt-text="Event 509.":::
+    :::image type="content" source="media/e2e-event-ids-volsnap/event-509.png" alt-text="Screenshot of the General tab of Event 509, StorDiag.":::
 
-    :::image type="content" source="./media/e2e-event-ids-volsnap/event-id-509.png" alt-text="Event ID 509.":::
+    :::image type="content" source="media/e2e-event-ids-volsnap/event-id-509.png" alt-text="Screenshot of the Details tab of Event 509, StorDiag.":::
 
 - 510 Completing a failed Power request
 
-    :::image type="content" source="./media/e2e-event-ids-volsnap/event-510.png" alt-text="Event 510].":::
+    :::image type="content" source="media/e2e-event-ids-volsnap/event-510.png" alt-text="Screenshot of the General tab of Event 510, StorDiag.":::
 
-    :::image type="content" source="./media/e2e-event-ids-volsnap/event-id-510.png" alt-text="Event ID 510.":::
+    :::image type="content" source="media/e2e-event-ids-volsnap/event-id-510.png" alt-text="Screenshot of the Details tab of Event 510, StorDiag.":::
 
 - 511 Completing a failed WMI request  
 
@@ -105,7 +105,7 @@ For the Operational channel, the following are all the possible events.
 
 In earlier versions of Windows, Volsnap had limited diagnostic features. Although it can log 42 different event messages, the routines that produce them are limited to providing up to two strings that represent volume names. The messages were logged by using the older API `IoWriteErrorLogEntry`. There was also a custom logging facility that was shared between Volsnap and various other components of VSS. In this custom logging, diagnostic data was written to the registry under `HKEY_LOCAL_MACHINE\SYSTEM\CCS\Services\vss\Diag`.
 
-![Registry key image](./media/e2e-event-ids-volsnap/registry-key.png)
+:::image type="content" source="media/e2e-event-ids-volsnap/registry-key.png" alt-text="Screenshot of the Diag registry key in Registry Editor." border="false":::
 
 This mechanism was specific to the Volume Shadow Copy Service (VSS). Therefore, it required custom tools, such as VSS Reports, to extract the information. Also, it retained only the most recent instance of any given diagnostic message.
 

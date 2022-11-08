@@ -4,18 +4,18 @@ description: Describes how to effectively manage the memory and improve the perf
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Performance monitoring tools
+ms.custom: sap:performance-monitoring-tools, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # RAM, virtual memory, pagefile, and memory management in Windows
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2160852
 
 ## Summary
@@ -28,13 +28,13 @@ Virtual memory is always being used, even when the memory that is required by al
 
 ## Processes and address spaces
 
-All processes (for example, application executables) that are running under 32-bit versions of Windows are assigned virtual memory addresses (a *virtual address space*), ranging from 0 to 4,294,967,295 (2*32-1 = 4 GB), regardless of how much RAM is installed on the computer.
+All processes (for example, application executables) that are running under 32-bit versions of Windows are assigned virtual memory addresses (a _virtual address space_), ranging from 0 to 4,294,967,295 (2*32-1 = 4 GB), regardless of how much RAM is installed on the computer.
 
 In the default Windows configuration, 2 gigabytes (GB) of this virtual address space are designated for the private use of each process, and the other 2 GB is shared between all processes and the operating system. Typically, applications (for example, Notepad, Word, Excel, and Acrobat Reader) use only a fraction of the 2 GB of private address space. The operating system assigns RAM page frames only to those virtual memory pages that are being used.
 
 Physical Address Extension (PAE) is the feature of the Intel 32-bit architecture that expands the physical memory (RAM) address to 36 bits. PAE does not change the size of the virtual address space (which remains at 4 GB), but just the volume of actual RAM that can be addressed by the processor.
 
-The translation between the 32-bit virtual memory address that is used by the code that is running in a process and the 36-bit RAM address is handled automatically and transparently by the computer hardware according to *translation tables* that are maintained by the operating system. Any virtual memory page (32-bit address) can be associated with any physical RAM page (36-bit address).
+The translation between the 32-bit virtual memory address that is used by the code that is running in a process and the 36-bit RAM address is handled automatically and transparently by the computer hardware according to _translation tables_ that are maintained by the operating system. Any virtual memory page (32-bit address) can be associated with any physical RAM page (36-bit address).
 
 The following list describes how much RAM the various Windows versions and editions support (as of May 2010):
 
@@ -55,19 +55,18 @@ The following list describes how much RAM the various Windows versions and editi
 |Windows Server 2008 Enterprise|64 GB|
 |Windows Server 2008 Datacenter|64 GB|
 |Windows 7|4 GB|
-|||
-
+  
 ## Pagefile
 
-RAM is a limited resource, whereas for most practical purposes, virtual memory is unlimited. There can be many processes, and each process has its own 2 GB of private virtual address space. When the memory being used by all the existing processes exceeds the available RAM, the operating system moves pages (4-KB pieces) of one or more virtual address spaces to the computer's hard disk. This frees that RAM frame for other uses. In Windows systems, these *paged out* pages are stored in one or more files (Pagefile.sys files) in the root of a partition. There can be one such file in each disk partition. The location and size of the page file is configured in **System Properties** (click **Advanced**, click **Performance**, and then click the **Settings** button).
+RAM is a limited resource, whereas for most practical purposes, virtual memory is unlimited. There can be many processes, and each process has its own 2 GB of private virtual address space. When the memory being used by all the existing processes exceeds the available RAM, the operating system moves pages (4-KB pieces) of one or more virtual address spaces to the computer's hard disk. This frees that RAM frame for other uses. In Windows systems, these _paged out_ pages are stored in one or more files (Pagefile.sys files) in the root of a partition. There can be one such file in each disk partition. The location and size of the page file is configured in **System Properties** (click **Advanced**, click **Performance**, and then click the **Settings** button).
 
-Users frequently ask *how big should I make the pagefile?* There is no single answer to this question because it depends on the amount of installed RAM and on how much virtual memory that workload requires. If there is no other information available, the typical recommendation of 1.5 times the installed RAM is a good starting point. On server systems, you typically want to have sufficient RAM so that there is never a shortage and so that the pagefile is not used. On these systems, it may serve no useful purpose to maintain a large pagefile. On the other hand, if disk space is plentiful, maintaining a large pagefile (for example, 1.5 times the installed RAM) does not cause a problem, and this also eliminates the need to worry over how large to make it.
+Users frequently ask _how big should I make the pagefile?_ There is no single answer to this question because it depends on the amount of installed RAM and on how much virtual memory that workload requires. If there is no other information available, the typical recommendation of 1.5 times the installed RAM is a good starting point. On server systems, you typically want to have sufficient RAM so that there is never a shortage and so that the pagefile is not used. On these systems, it may serve no useful purpose to maintain a large pagefile. On the other hand, if disk space is plentiful, maintaining a large pagefile (for example, 1.5 times the installed RAM) does not cause a problem, and this also eliminates the need to worry over how large to make it.
 
 ## Performance, architectural limits, and RAM
 
 On any computer system, as the load increases (the number of users, the volume of work), performance decreases, but in a nonlinear manner. Any increase in load or demand, beyond a certain point, causes a significant decrease in performance. This means that some resource is in critically short supply and has become a bottleneck.
 
-At some point, the resource that is in short supply cannot be increased. This means that an *architectural limit* has been reached. Some frequently reported architectural limits in Windows include the following:
+At some point, the resource that is in short supply cannot be increased. This means that an _architectural limit_ has been reached. Some frequently reported architectural limits in Windows include the following:
 
 - 2 GB of shared virtual address space for the system (kernel)
 - 2 GB of private virtual address space per process (user mode)
@@ -91,7 +90,7 @@ Performance Monitor is the principle tool for monitoring system performance and 
 
     This shows how many bytes were allocated by processes and to which the operating system has committed a RAM page frame or a page slot in the pagefile (or perhaps both). As **Committed Bytes** grows greater than the available RAM, paging will increase, and the pagefile size that is being used will also increase. At some point, paging activity starts to significantly affect performance.
 
-- Process, Working Set, _Total: This counter is a measure of the virtual memory in *active* use.
+- Process, Working Set, _Total: This counter is a measure of the virtual memory in _active_ use.
 
     This counter shows how much RAM is required so that the virtual memory being used for all processes is in RAM. This value is always a multiple of 4,096, which is the page size that is used in Windows. As demand for virtual memory increases beyond the available RAM, the operating system adjusts how much of a process's virtual memory is in its Working Set to optimize available RAM usage and minimize paging.
 

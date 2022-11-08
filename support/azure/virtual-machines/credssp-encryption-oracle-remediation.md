@@ -1,10 +1,16 @@
 ---
-title: Error (CredSSP encryption oracle remediation) when you try to RDP to a Windows VM in Azure
+title: Error CredSSP encryption oracle remediation when you try to RDP to a Windows VM in Azure
 description: Fixes an issue that you receive a CredSSP encryption oracle remediation error when you try to RDP to a Windows VM in Azure.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
+ms.collection: windows
 ---
+
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+--->
+
 # Error when you try to RDP to a Windows VM in Azure: CredSSP encryption oracle remediation
 
 This article provides a solution to an issue in which you are not able to connect to a virtual machine (VM) using RDP with error: CredSSP encryption oracle remediation.
@@ -38,8 +44,7 @@ Check the **update history** for the following updates, or check the version of 
 |RS1 - Windows 10 Version 1607 / Windows Server 2016|10.0.14393.2248| [KB4103723](https://support.microsoft.com/kb/4103723) |
 |RS2 - Windows 10 Version 1703|10.0.15063.1088| [KB4103731](https://support.microsoft.com/kb/4103731) |
 |RS3 - Windows 10 1709|10.0.16299.431| [KB4103727](https://support.microsoft.com/kb/4103727) |
-||||
-
+  
 ## Cause
 
 This error occurs if you are trying to establish an insecure RDP connection, and the insecure RDP connection is blocked by an **Encryption Oracle Remediation** policy setting on the server or client. This setting defines how to build an RDP session by using CredSSP, and whether an insecure RDP is allowed.
@@ -69,18 +74,18 @@ To resolve the issue, install CredSSP updates for both client and server so that
 1. Sign in to the [Azure portal](https://portal.azure.com), select **Virtual Machine**, and then select the VM.
 2. Scroll down to the **Support + Troubleshooting** section, and then click **Serial console (Preview)**. The serial console requires Special Administrative Console (SAC) to be enabled within the Windows VM. If you do not see **SAC>** in the console (as shown in the following screenshot), go to the "[How to install this update by using Remote PowerShell](#how-to-install-this-update-by-using-remote-powershell)" section in this article.
 
-    :::image type="content" source="./media/credssp-encryption-oracle-remediation/connected-sac.png" alt-text="Screenshot of connected SAC":::
+    :::image type="content" source="media/credssp-encryption-oracle-remediation/connected-sac.svg" alt-text="Screenshot of connected SAC." border="false":::
   
 3. Type `cmd` to start a channel that has a CMD instance.
 
 4. Type `ch-si 1` to switch to the channel that is running the CMD instance. You receive the following output:
 
-    :::image type="content" source="./media/credssp-encryption-oracle-remediation/launch-cmd.png" alt-text="Screenshot of launching CMD in SAC":::
+    :::image type="content" source="media/credssp-encryption-oracle-remediation/launch-cmd.svg" alt-text="Screenshot of launching CMD in SAC." border="false":::
 
 5. Press Enter, and then enter your login credentials that have administrative permission.
 6. After you enter valid credentials, the CMD instance opens, and you will see the command at which you can start troubleshooting.
 
-    :::image type="content" source="./media/credssp-encryption-oracle-remediation/cmd-section.png" alt-text="Screenshot of CMD section in SAC":::
+    :::image type="content" source="media/credssp-encryption-oracle-remediation/cmd-section.svg" alt-text="Screenshot of CMD section in SAC." border="false":::
 
 7. To start a PowerShell instance, type `PowerShell`.
 8. In the PowerShell instance, [run the Serial console script](#azure-serial-console-scripts) based on the VM operating system. This script performs the following steps:
@@ -175,8 +180,7 @@ If the Azure Windows VM has this update installed, and it is restricted to rece
 | RS2 - Windows 10 version 1703|<br/> #Create a download location<br/> `md c:\temp`<br/><br/><br/> ##Download the KB file<br/> `$source = "http://download.windowsupdate.com/c/msdownload/update/software/secu/2018/05/windows10.0-kb4103731-x64_209b6a1aa4080f1da0773d8515ff63b8eca55159.msu"`<br/> `$destination = "c:\temp\windows10.0-kb4103731-x64_209b6a1aa4080f1da0773d8515ff63b8eca55159.msu"`<br/> `$wc = New-Object System.Net.WebClient`<br/> `$wc.DownloadFile($source,$destination)`<br/><br/><br/> #Install the KB<br/> `expand -F:* $destination C:\temp\`<br/>`dism /ONLINE /add-package /packagepath:"c:\temp\Windows10.0-KB4103731-x64.cab"`<br/><br/><br/> #Add the vulnerability key to allow unpatched clients<br/> `REG ADD "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP\Parameters" /v AllowEncryptionOracle /t REG_DWORD /d 2`<br/><br/><br/>#Restart the VM to complete the installations/settings<br/> `shutdown /r /t 0 /f`<br/><br/>|
 | RS3 - Windows 10 version 1709 / Windows Server 2016 version 1709|<br/>#Create a download location<br/> `md c:\temp`<br/><br/><br/> ##Download the KB file<br/> `$source = "http://download.windowsupdate.com/c/msdownload/update/software/secu/2018/05/windows10.0-kb4103727-x64_c217e7d5e2efdf9ff8446871e509e96fdbb8cb99.msu"`<br/> `$destination = "c:\temp\windows10.0-kb4103727-x64_c217e7d5e2efdf9ff8446871e509e96fdbb8cb99.msu"`<br/> `$wc = New-Object System.Net.WebClient`<br/> `$wc.DownloadFile($source,$destination)`<br/><br/><br/> #Install the KB<br/> `expand -F:* $destination C:\temp\`<br/>`dism /ONLINE /add-package /packagepath:"c:\temp\Windows10.0-KB4103727-x64.cab"`<br/><br/><br/> #Add the vulnerability key to allow unpatched clients<br/> `REG ADD "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP\Parameters" /v AllowEncryptionOracle /t REG_DWORD /d 2`<br/><br/><br/> #Restart the VM to complete the installations/settings<br/> `shutdown /r /t 0 /f`<br/><br/>|
 | RS4 - Windows 10 1803 / Windows Server 2016 version 1803|<br/> #Create a download location<br/> `md c:\temp`<br/><br/><br/> ##Download the KB file<br/> `$source = "http://download.windowsupdate.com/c/msdownload/update/software/secu/2018/05/windows10.0-kb4103721-x64_fcc746cd817e212ad32a5606b3db5a3333e030f8.msu"`<br/> `$destination = "c:\temp\windows10.0-kb4103721-x64_fcc746cd817e212ad32a5606b3db5a3333e030f8.msu"`<br/> `$wc = New-Object System.Net.WebClient`<br/> `$wc.DownloadFile($source,$destination)`<br/><br/><br/> #Install the KB<br/> `expand -F:* $destination C:\temp\`<br/>`dism /ONLINE /add-package /packagepath:"c:\temp\Windows10.0-KB4103721-x64.cab"`<br/><br/><br/> #Add the vulnerability key to allow unpatched clients<br/> `REG ADD "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP\Parameters" /v AllowEncryptionOracle /t REG_DWORD /d 2`<br/><br/><br/> #Restart the VM to complete the installations/settings<br/> `shutdown /r /t 0 /f`<br/><br/>|
-|||
-
+  
 ## Remote PowerShell scripts
 
 | **OS Version**| **Script** |
@@ -188,4 +192,5 @@ If the Azure Windows VM has this update installed, and it is restricted to rece
 | RS2 - Windows 10 version 1703|<br/> #Set up your variables:<br/> `$subscriptionID = "<your subscription ID>"`<br/> `$vmname = "<IP of your machine or FQDN>"`<br/> `$PSPort = "5986"` #change this variable if you customize HTTPS on PowerShell to another port<br/><br/><br/> #​​​​Log in to your subscription<br/> `Add-AzureRmAccount`<br/> `Select-AzureRmSubscription -SubscriptionID $subscriptionID`<br/> `Set-AzureRmContext -SubscriptionID $subscriptionID`<br/><br/><br/> #Connect to Remote PowerShell<br/> `$Skip = New-PSSessionOption -SkipCACheck -SkipCNCheck`<br/> `Enter-PSSession -ComputerName $vmname -port $PSPort -Credential (Get-Credential) -useSSL -SessionOption $Skip`<br/><br/><br/> #Create a download location<br/> `md c:\temp`<br/><br/><br/> ##Download the KB file<br/> `$source = "http://download.windowsupdate.com/c/msdownload/update/software/secu/2018/05/windows10.0-kb4103731-x64_209b6a1aa4080f1da0773d8515ff63b8eca55159.msu"`<br/> `$destination = "c:\temp\windows10.0-kb4103731-x64_209b6a1aa4080f1da0773d8515ff63b8eca55159.msu"`<br/> `$wc = New-Object System.Net.WebClient`<br/> `$wc.DownloadFile($source,$destination)`<br/><br/><br/> #Install the KB<br/> `expand -F:* $destination C:\temp\`<br/>`dism /ONLINE /add-package /packagepath:"c:\temp\Windows10.0-KB4103731-x64.cab"`<br/><br/><br/> #Add the vulnerability key to allow unpatched clients<br/> `REG ADD "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP\Parameters" /v AllowEncryptionOracle /t REG_DWORD /d 2`<br/><br/><br/> #Set up Azure Serial Console flags<br/> `cmd`<br/> `bcdedit /set {bootmgr} displaybootmenu yes`<br/> `bcdedit /set {bootmgr} timeout 5`<br/> `bcdedit /set {bootmgr} bootems yes`<br/> `bcdedit /ems {current} on`<br/> `bcdedit /emssettings EMSPORT:1 EMSBAUDRATE:115200`<br/><br/><br/> #Restart the VM to complete the installations/settings<br/> `shutdown /r /t 0 /f`<br/><br/>|
 | RS3 - Windows 10 version 1709 / Windows Server 2016 version 1709|<br/> #Set up your variables:<br/> `$subscriptionID = "<your subscription ID>"`<br/> `$vmname = "<IP of your machine or FQDN>"`<br/> `$PSPort = "5986"` #change this variable if you customize HTTPS on PowerShell to another port<br/><br/><br/> #​​​​Log in to your subscription<br/> `Add-AzureRmAccount`<br/> `Select-AzureRmSubscription -SubscriptionID $subscriptionID`<br/> `Set-AzureRmContext -SubscriptionID $subscriptionID`<br/><br/><br/> #Connect to Remote PowerShell<br/> `$Skip = New-PSSessionOption -SkipCACheck -SkipCNCheck`<br/> `Enter-PSSession -ComputerName $vmname -port $PSPort -Credential (Get-Credential) -useSSL -SessionOption $Skip`<br/><br/><br/> #Create a download location<br/> `md c:\temp`<br/><br/><br/> ##Download the KB file<br/> `$source = "http://download.windowsupdate.com/c/msdownload/update/software/secu/2018/05/windows10.0-kb4103727-x64_c217e7d5e2efdf9ff8446871e509e96fdbb8cb99.msu"`<br/> `$destination = "c:\temp\windows10.0-kb4103727-x64_c217e7d5e2efdf9ff8446871e509e96fdbb8cb99.msu"`<br/> `$wc = New-Object System.Net.WebClient`<br/> `$wc.DownloadFile($source,$destination)`<br/><br/><br/> #Install the KB<br/> `expand -F:* $destination C:\temp\`<br/>`dism /ONLINE /add-package /packagepath:"c:\temp\Windows10.0-KB4103727-x64.cab"`<br/><br/><br/> #Add the vulnerability key to allow unpatched clients<br/> `REG ADD "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP\Parameters" /v AllowEncryptionOracle /t REG_DWORD /d 2`<br/><br/><br/> #Set up Azure Serial Console flags<br/> `cmd`<br/> `bcdedit /set {bootmgr} displaybootmenu yes`<br/> `bcdedit /set {bootmgr} timeout 5`<br/> `bcdedit /set {bootmgr} bootems yes`<br/> `bcdedit /ems {current} on`<br/> `bcdedit /emssettings EMSPORT:1 EMSBAUDRATE:115200`<br/><br/><br/> #Restart the VM to complete the installations/settings<br/> `shutdown /r /t 0 /f`<br/><br/>|
 | RS4 - Windows 10 1803 / Windows Server 2016 version 1803|<br/> #Set up your variables:<br/> `$subscriptionID = "<your subscription ID>"`<br/> `$vmname = "<IP of your machine or FQDN>"`<br/> `$PSPort = "5986"` #change this variable if you customize HTTPS on PowerShell to another port<br/><br/><br/> #​​​​Log in to your subscription<br/> `Add-AzureRmAccount`<br/> `Select-AzureRmSubscription -SubscriptionID $subscriptionID`<br/> `Set-AzureRmContext -SubscriptionID $subscriptionID`<br/><br/><br/> #Connect to Remote PowerShell<br/> `$Skip = New-PSSessionOption -SkipCACheck -SkipCNCheck`<br/> `Enter-PSSession -ComputerName $vmname -port $PSPort -Credential (Get-Credential) -useSSL -SessionOption $Skip`<br/><br/><br/> #Create a download location<br/> `md c:\temp`<br/><br/><br/> ##Download the KB file<br/> `$source = "http://download.windowsupdate.com/c/msdownload/update/software/secu/2018/05/windows10.0-kb4103721-x64_fcc746cd817e212ad32a5606b3db5a3333e030f8.msu"`<br/> `$destination = "c:\temp\windows10.0-kb4103721-x64_fcc746cd817e212ad32a5606b3db5a3333e030f8.msu"`<br/> `$wc = New-Object System.Net.WebClient`<br/> `$wc.DownloadFile($source,$destination)`<br/><br/><br/> #Install the KB<br/> `expand -F:* $destination C:\temp\`<br/>`dism /ONLINE /add-package /packagepath:"c:\temp\Windows10.0-KB4103721-x64.cab"`<br/><br/><br/> #Add the vulnerability key to allow unpatched clients<br/> `REG ADD "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP\Parameters" /v AllowEncryptionOracle /t REG_DWORD /d 2`<br/><br/><br/> #Set up Azure Serial Console flags<br/> `cmd`<br/> `bcdedit /set {bootmgr} displaybootmenu yes`<br/> `bcdedit /set {bootmgr} timeout 5`<br/> `bcdedit /set {bootmgr} bootems yes`<br/> `bcdedit /ems {current} on`<br/> `bcdedit /emssettings EMSPORT:1 EMSBAUDRATE:115200`<br/><br/><br/> #Restart the VM to complete the installations/settings<br/> `shutdown /r /t 0 /f`<br/><br/>|
-|||
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

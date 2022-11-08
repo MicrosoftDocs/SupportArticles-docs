@@ -2,8 +2,9 @@
 title: Error (Can't connect to the service) when you try to register a device
 description: Describes a problem that triggers an error when you try to register a device in a Windows 8.1 or Windows Server 2012 R2 environment.
 ms.date: 06/08/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: hybrid
 ---
 # Error when you try to register a device: Can't connect to the service
 
@@ -52,3 +53,5 @@ To resolve this problem, follow these steps:
 For more troubleshooting information, see the following article:
 
 [Diagnostic logging for troubleshooting Workplace Join issues](https://support.microsoft.com/help/3045377)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

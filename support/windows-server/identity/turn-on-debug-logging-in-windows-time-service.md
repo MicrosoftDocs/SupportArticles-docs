@@ -4,20 +4,20 @@ description: Describes how to turn on debug logging for the Windows Time service
 ms.date: 10/12/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, tdetzner
-ms.prod-support-area-path: Windows Time Service
+ms.custom: sap:windows-time-service, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Turn on debug logging in the Windows Time Service  
 
 This article describes how to turn on debug logging for the Windows Time service (also known as W32time). If you are an administrator, you can use the debug logging feature of the Windows Time service to help troubleshoot issues.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Window 10 – all editions, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Window 10 – all editions, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 816043
 
 > [!NOTE]

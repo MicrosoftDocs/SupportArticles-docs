@@ -4,20 +4,20 @@ description: Describes how to configure Internet printing in Windows Server 2003
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: v-lanac, jamirc, kaushika
-ms.prod-support-area-path: 'Management and Configuration: Installing Print drivers'
+ms.custom: sap:management-and-configuration:-installing-print-drivers, csstroubleshoot
 ms.technology: windows-server-printing
 ---
 # Configure Internet printing
 
 This article describes how to configure Internet printing in Windows Server 2003, and how to manage and connect to printers by using a Web browser.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 323428
 
 ## Summary

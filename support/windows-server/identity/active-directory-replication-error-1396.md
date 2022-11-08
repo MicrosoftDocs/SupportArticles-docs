@@ -4,20 +4,20 @@ description: Provides help to troubleshoot Active Directory replication error 13
 ms.date: 10/20/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Justinha
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Active Directory replication error 1396: Logon Failure: The target account name is incorrect
 
 This article describes the symptoms, cause, and resolution for resolving Active Directory replication failing with Win32 error 1396.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2183411
 
 ## Symptoms
@@ -26,20 +26,20 @@ This article describes the symptoms, cause, and resolution for resolving Active 
 
 > Logon failure: The target account name is incorrect.
 
-1. DCDIAG reports that the Active Directory Replications has failed with error 1396:
+1. DCDIAG reports that the Active Directory Replications has failed with error 1396:
 
     > Logon failure: The target account name is incorrect.
 
     > Testing server: \<Site name>\<DC Name>  
-          Starting test: Replications  
-             [Replications Check,\<DC Name>] A recent replication attempt failed:  
-                From \<source DC> to \<destination DC>  
-                Naming Context: CN=\<DN path of naming context>  
-                The replication generated an error (1396):  
-                Logon Failure: The target account name is incorrect.  
-                The failure occurred at \<date> \<time>.  
-                The last success occurred at \<date> \<time>.  
-                XX failures have occurred since the last success
+          Starting test: Replications  
+             [Replications Check,\<DC Name>] A recent replication attempt failed:  
+                From \<source DC> to \<destination DC>  
+                Naming Context: CN=\<DN path of naming context>  
+                The replication generated an error (1396):  
+                Logon Failure: The target account name is incorrect.  
+                The failure occurred at \<date> \<time>.  
+                The last success occurred at \<date> \<time>.  
+                XX failures have occurred since the last success
 
 2. REPADMIN.EXE reports that replication attempt has failed with status 1396.
 
@@ -66,14 +66,14 @@ This article describes the symptoms, cause, and resolution for resolving Active 
     > DC=contoso,DC=com  
     Default-First-Site-Name\CONTOSO-DC2 via RPC  
     DSA object GUID: \<GUID>  
-    Last attempt @ \<date> \<time> failed, result 1396 (0x574):  
+    Last attempt @ \<date> \<time> failed, result 1396 (0x574):  
      Logon Failure: The target account name is incorrect.  
     <#> consecutive failure(s).  
-    Last success @ \<date> \<time>.
+    Last success @ \<date> \<time>.
 
 3. The **replicate now** command in Active Directory Sites and Services returns **Logon Failure: The target account name is incorrect**.
 
-    Right-clicking on the connection object from a source DC and choosing **replicate now** fails with **Logon Failure: The target account name is incorrect**. The on-screen error message is shown below:
+    Right-clicking on the connection object from a source DC and choosing **replicate now** fails with **Logon Failure: The target account name is incorrect**. The on-screen error message is shown below:
 
     Dialog title text: Replicate Now
 
@@ -91,13 +91,12 @@ This article describes the symptoms, cause, and resolution for resolving Active 
     |Event Source|Event ID|Event String|
     |---|---|---|
     |Microsoft-Windows-ActiveDirectory_DomainService|1125|The Active Directory Domain Services Installation Wizard (Dcpromo) was unable to establish connection with the following domain controller.|
-    |NTDS Replication (This event lists the 3-part SPN)|1645|Active Directory did not perform an authenticated remote procedure call (RPC) to another domain controller because the desired service principal name (SPN) for the destination domain controller is not registered on the Key Distribution Center (KDC) domain controller that resolves the SPN.|
-    |Microsoft-Windows-ActiveDirectory_DomainService|1655|Active Directory Domain Services attempted to communicate with the following global catalog and the attempts were unsuccessful. |
-    |Microsoft-Windows-ActiveDirectory_DomainService|2847|The Knowledge Consistency Checker located a replication connection for the local read-only directory service and attempted to update it remotely on the following directory service instance.  The operation failed.  It will be retried.|
+    |NTDS Replication (This event lists the 3-part SPN)|1645|Active Directory did not perform an authenticated remote procedure call (RPC) to another domain controller because the desired service principal name (SPN) for the destination domain controller is not registered on the Key Distribution Center (KDC) domain controller that resolves the SPN.|
+    |Microsoft-Windows-ActiveDirectory_DomainService|1655|Active Directory Domain Services attempted to communicate with the following global catalog and the attempts were unsuccessful. |
+    |Microsoft-Windows-ActiveDirectory_DomainService|2847|The Knowledge Consistency Checker located a replication connection for the local read-only directory service and attempted to update it remotely on the following directory service instance.  The operation failed.  It will be retried.|
     |NTDS KCC|1925|The attempt to establish a replication link for the following writable directory partition failed.|
     |NTDS KCC|1926|The attempt to establish a replication link to a read-only directory partition with the following parameters failed.|
     |NETLOGON|5781|Server cannot register its name in DNS|
-    ||||
 
 5. Dcpromo fails with an onscreen error:
 
@@ -108,7 +107,7 @@ This article describes the symptoms, cause, and resolution for resolving Active 
     the network credentials provided have sufficient access to add a replica.  
     "Logon Failure: The target account name is incorrect."
     >
-    > OK  
+    > OK  
 
     In this case, Event ID 1645, 1168, and 1125 are logged on the server that is being promoted.
 
@@ -121,7 +120,7 @@ This article describes the symptoms, cause, and resolution for resolving Active 
     > System error 1396 has occurred.  
     Logon Failure: The target account name is incorrect.
 
-    In this case, the server was also logging Event ID 333 in the system event log and using SQL Server was using a high amount of virtual memory.
+    In this case, the server was also logging Event ID 333 in the system event log and using SQL Server was using a high amount of virtual memory.
 
 7. The DC time is incorrect.
 
@@ -132,7 +131,7 @@ This article describes the symptoms, cause, and resolution for resolving Active 
 
 ## Cause
 
-Multiple root causes exist. Known root causes include:
+Multiple root causes exist. Known root causes include:
 
 1. The SPN does not exist on the global catalog searched by the KDC on behalf of the client attempting to authenticate using Kerberos.
 
@@ -161,7 +160,7 @@ Multiple root causes exist. Known root causes include:
 
     This should identify that GC that the KDC is performing SPN lookups against.
 
-    The GC being searched by the KDC may also be captued in Microsoft-Windows-ActiveDirectory_DomainService event 1655.
+    The GC being searched by the KDC may also be captued in Microsoft-Windows-ActiveDirectory_DomainService event 1655.
 
 3. Search for the SPN discovered in step 1 on the the global catalog discovered in step 2.
 
@@ -181,20 +180,19 @@ Multiple root causes exist. Known root causes include:
 
     Verify that the source DCs AD Replication SPN is registered only on the source DCs computer account.
 
-    If the replication SPN is missing, determine if the source DC has registered its SPN with itself,  and whether the SPN is missing on the GC used by the KDC due to simple replication latency or a replication failure
+    If the replication SPN is missing, determine if the source DC has registered its SPN with itself,  and whether the SPN is missing on the GC used by the KDC due to simple replication latency or a replication failure
 
-4. Check the secure channel health and trust health.
+4. Check the secure channel health and trust health.
 
 This table lists other symptoms, causes, and resolutions:
 
 |Symptom|Cause|Resolution|
 |---|---|---|
 |The DC is not functioning and logs Event ID 1925 and 1411 on Windows Server 2008 domain controllers and Windows Server 2003 domain controllers in the same domain that have been authoritatively restored.|These problems occur because the version number of the KRBTGT account increases when you perform an authoritative restoration. The KRBTGT account is a service account that is used by the Kerberos Key Distribution Center (KDC) service.|In this case, you might need to apply the hotfix in KB939820.|
-|Map a drive using net use<br/>C:\Documents and Settings\wschong>net use z: \\<server_name>\c$ System error 1396 has occurred.<br/>Logon Failure: The target account name is incorrect.<br/>In this case, the server was logging Event ID 333 and using high memory, with SQL Server using highest.|If the error appears while mapping a drive using net use, the cause could be that the Non Paged Memory or the Paged Pool Memory is temporarily insufficient. The system keeps recording such events until the computer is restarted, or the related hive is unloaded, even though the temporary memory insufficiency stops. For more information about SQL Server performance problems, see [Troubleshooting Performance Problems in SQL Server 2005](/previous-versions/sql/sql-server-2005/administrator/cc966540(v=technet.10)).|To prevent the system logging the event 333 continually in future, please apply the hotfix 970054 on the server and set the following registry value to 1:<ul><li>Location: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager`</li><li>Name: RegistryFlushErrorSubside</li><li>Type: REG_DWORD</li><li>Value: 1 or 2</li></ul>|
+|Map a drive using net use<br/>C:\Documents and Settings\wschong>net use z: \\<server_name>\c$ System error 1396 has occurred.<br/>Logon Failure: The target account name is incorrect.<br/>In this case, the server was logging Event ID 333 and using high memory, with SQL Server using highest.|If the error appears while mapping a drive using net use, the cause could be that the Non Paged Memory or the Paged Pool Memory is temporarily insufficient. The system keeps recording such events until the computer is restarted, or the related hive is unloaded, even though the temporary memory insufficiency stops. For more information about SQL Server performance problems, see [Troubleshooting Performance Problems in SQL Server 2005](/previous-versions/sql/sql-server-2005/administrator/cc966540(v=technet.10)).|To prevent the system logging the event 333 continually in future, please apply the hotfix 970054 on the server and set the following registry value to 1:<ul><li>Location: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager`</li><li>Name: RegistryFlushErrorSubside</li><li>Type: REG_DWORD</li><li>Value: 1 or 2</li></ul>|
 |The DC time is incorrect.|The DC is a virtual machine that was set to sync time with the VMware host, caused events 1925, 1645.|unchecked the option to sync time for virtual DC from VMWare host, so that it can sync time with the PDC.|
 |Dcpromo fails with an onscreen error: Active Directory Installation Failed. The operation failed because:<br/>The Directory Service failed to create the server object for CN=NTDS Settings,CN=ServerBeingPromoted, CN=Servers,CN=Site, CN=Sites,CN=Configuration,DC=contoso, DC=com on server ReplicationSourceDC.contoso.com. Ensure the network credentials provided have sufficient access to add a replica.<br/>Logon Failure: The target account name is incorrect.<br/><br/>In this case, Event ID 1645, 1168, and 1125 are logged on the server that is being promoted.|During dcpromo, the SPN on the helper DC (the replication source DC) is not valid.|For dcpromo error where helper DC SPN is not valid, use SetSPN to create new SPN on helper DC, in format GC/serverName.contoso.com|
-||||
-
+  
 ## More information
 
 Other causes include:
@@ -207,4 +205,4 @@ Other causes include:
 
 4. The DC is a virtual machine that was set to sync time with the VMware host, caused events 1925, 1645.
 
-5. For the RODC specific scenario where the KRBTGT account is deleted: authoritatively restore the KRBTGT_##### account using NTDSUTIL and then import the LDIFDE file to correct backlinks.  At minimum, the msDS-KrbTgtLink attribute on the RODC's computer object will need to be updated to point to the DN of the restored account.
+5. For the RODC specific scenario where the KRBTGT account is deleted: authoritatively restore the KRBTGT_##### account using NTDSUTIL and then import the LDIFDE file to correct backlinks.  At minimum, the msDS-KrbTgtLink attribute on the RODC's computer object will need to be updated to point to the DN of the restored account.

@@ -1,28 +1,28 @@
 ---
-title: Installing AD DS fails 
+title: Installing AD DS fails
 description: Provides a solution to an issue where installing Active Directory Domain Services fails.
 ms.date: 09/10/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
-ms.prod-support-area-path: DCPromo and the installation of domain controllers
+ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Installing Active Directory Domain Services Fails with Error "The specified user already exists."
 
 This article provides a solution to an issue where installing Active Directory Domain Services fails with the error: The specified user already exists.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2000622
 
 ## Symptoms
 
-When you attempt to install Active Directory Domain Services on a Windows Server 2008 or Windows Server 2008 R2 computer, you may receive the following error:
+When you attempt to install Active Directory Domain Services on a Windows Server computer, you may receive the following error:
 
 > Error Joining Domain  
 The operation failed because: The attempt to join this computer to the \<target DNS domain> failed. The specified user already exists.  

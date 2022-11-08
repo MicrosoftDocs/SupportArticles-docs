@@ -4,13 +4,13 @@ description: Helps troubleshoot Active Directory replication error 8418.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Troubleshooting AD Replication error 8418: The replication operation failed because of a schema mismatch between the servers involved
@@ -20,7 +20,7 @@ This article describes the symptoms, cause, and resolution for resolving Active 
 > [!NOTE]
 > **Home users:** This article is only intended for technical support agents and IT professionals. If you're looking for help with a problem, [ask the Microsoft Community](https://answers.microsoft.com/en-us).
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2734946
 
 ## Symptoms
@@ -42,7 +42,6 @@ Replication of any Active Directory data between domain controllers in a forest 
     |Decimal|Hex|Symbolic|Error String|
     |---|---|---|---|
     |8418|0x20e2|ERROR_DS_DRA_SCHEMA_MISMATCH|The replication operation failed because of a schema mismatch between the servers involved.|
-    |||||
 
 2. DCPromo Promotion
 
@@ -79,7 +78,6 @@ Replication of any Active Directory data between domain controllers in a forest 
     |NTDS KCC|1925 with error status 8418|The attempt to establish a replication link for the following writable directory partition failed.|
     |NTDS Replication|1203|The local domain controller could not replicate the following object from the source domain controller at the following network address because of an Active Directory schema mismatch|
     |NTDS Replication|1791 with error status 8418|Replication of Naming Context \<DN path> from source \<NTDS Settings object guid> has been aborted. Replication requires consistent schema but last attempt to sync the schema had failed. It is crucial that schema replication functions properly. See previous errors for more diagnostics. If this issue persists, contact Microsoft Product Support Services for assistance. Error 8418: The replication operation failed because of a schema mismatch between the servers involved.|
-    ||||
 
 4. Active Directory Sites and Services fail with the following error:
 
@@ -141,8 +139,7 @@ Known Issues
 |947020|Event IDs 1481, 1173, and 1203 are logged in the Directory Services log on a Windows Server 2003-based domain controller|Event ID 1481 Error 2083; DSID 31510B7<br/><br/>Event ID 1173 Param 2083 DSID 31010B7<br/><br/>Event ID 1203 "Schema Mismatch"|
 |824873|Event 1791 is logged when information is replicated from Windows 2000 to Windows Server 2003|Event ID 1791 Error 8418<br/><br/>Event ID 1481 DSID 3151030|
 |2001769|Error While Propagating Permissions: "Unable to save permission ...|Event ID 1450 DSID 3150dbe|
-||||
-
+  
 Other Blocking Issues  
 
 |Topic|KB|Key Data|
@@ -153,8 +150,7 @@ Other Blocking Issues
 |Disabled Replication<br/><br/>|[2028495](https://support.microsoft.com/help/2028495)<br/><br/>|Status 8457|
 |DNS (Name Resolution)|[2021446](https://support.microsoft.com/help/2021446)|Event ID 2023 with Status code 8524|
 |RPC|1722:<br/><br/> [2102154](https://support.microsoft.com/help/2102154) <br/><br/>1753:<br/><br/>[2089874](https://support.microsoft.com/help/2089874)|Status Code 1722<br/><br/>Status Code 1753|
-||||
-
+  
 ## Resolution
 
 In order to resolve an issue where schema mismatch is cited, it is critical to understand the scenario in which the is error is being raised as it may influence the data collected. The common scenarios are:  
@@ -199,8 +195,7 @@ Reference Schema Version Values
 |Windows Server 2012|56|
 |Windows Server 2012R2|69|
 |Windows Server 2016|87|
-|||
-
+  
 In the Registry:
 
 `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters\SystemSchemaVersion`
@@ -239,8 +234,7 @@ In the event that the resolution above is not applicable or is unsuccessful incr
 |9 Internal Processing|DWORD|5|
 |24 Schema|DWORD|5|
 |7 Internal Configuration|DWORD|5|
-||||
-
+  
 This will log additional information to the Directory Services event log that will assist in diagnosing the issue
 
 Trigger the scenario that raises the Schema Mismatch err and review the event log data collected to try to identify:
@@ -350,7 +344,7 @@ The metadata for the same object above as displayed in LDP.exe shows the Attribu
 
 The attribute ID can be used to help identify the problem attribute but requires the engagement of Microsoft Support.
 
-·         Version comparison - attributes to be replicated will have higher version numbers on the source.
+Version comparison - attributes to be replicated will have higher version numbers on the source.
 
 > [!NOTE]
 > In the DCpromo scenario, the destination object will most likely not yet exist.

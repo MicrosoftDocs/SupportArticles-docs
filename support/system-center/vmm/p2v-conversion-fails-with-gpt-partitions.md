@@ -2,7 +2,6 @@
 title: A P2V conversion fails with GPT partitions
 description: Fixes an issue in which a physical to virtual (P2V) conversion may fail if the source machine contains a GUID Partition Table formatted disk.
 ms.date: 07/15/2020
-ms.prod-support-area-path: 
 ---
 # P2V fails with GPT partitions in System Center Virtual Machine Manager
 
@@ -22,7 +21,7 @@ A P2V conversion may fail in System Center Virtual Machine Manager if the source
 > Level: Error  
 > Keywords: Classic  
 > Description:  
-> The Virtual Machine Manager P2V Agent service terminated unexpectedly. It has done this 1 time(s).  The following corrective action will be taken in 0 milliseconds: Restart the service.
+> The Virtual Machine Manager P2V Agent service terminated unexpectedly. It has done this 1 time(s).  The following corrective action will be taken in 0 milliseconds: Restart the service.
 
 > Log Name: Application  
 > Source: Application Error  
@@ -95,11 +94,11 @@ On the client, you may see a VMM trace with errors like the following examples:
 
 ## Cause
 
-This behavior is by design. VMM doesn't support GPT disks on P2V targets. To successfully migrate a machine with a GPT disk, you must first convert the disk to master boot record (MBR) format.
+This behavior is by design. VMM doesn't support GPT disks on P2V targets. To successfully migrate a machine with a GPT disk, you must first convert the disk to master boot record (MBR) format.
 
 ## Resolution
 
-To allow conversion of machines with GPT partitions, you must first convert the partition to MBR. There are two workarounds that may be used:  
+To allow conversion of machines with GPT partitions, you must first convert the partition to MBR. There are two workarounds that may be used:  
 
 ### Option 1: Back up data on the physical machine
 

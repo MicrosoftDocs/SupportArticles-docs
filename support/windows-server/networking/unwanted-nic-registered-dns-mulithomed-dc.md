@@ -4,27 +4,30 @@ description: This article provides a solution to an issue where unwanted NICs ar
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DNS
+ms.custom: sap:dns, csstroubleshoot
 ms.technology: networking
 ---
 # Steps to avoid registering unwanted NICs in DNS on a multihomed domain controller
 
 This article provides a solution to an issue where unwanted network interface controllers (NICs) are registered in Domain Name System (DNS) on a multihomed domain controller (DC).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2023004
 
 ## Symptoms
 
 On Domain Controllers with more than one NIC where each NIC is connected to separate Network, there's a possibility that the Host A DNS registration can occur for unwanted NICs.
 
-If the client queries for DC's DNS records and gets an unwanted record or the record of a different network that isn't reachable to client, the client will fail to contact the DC causing authentication and many other issues.
+If one of the following conditions is true, the client will fail to contact the DC causing authentication and many other issues:
+
+- The client queries for DC's DNS records, and gets an unwanted record.
+- The client queries for DC's DNS records, and gets a record of a different network that isn't reachable to the client.
 
 ## Cause
 
@@ -40,7 +43,7 @@ Below are the services that are responsible for Host A record registration on a 
 
 If the NIC card is configured to register the connection address in DNS, then the DHCP/DNS client service will register the record in DNS. Unwanted NIC should be configured not to register the connection address in DNS.
 
-If the DC is running DNS server service, then the DNS service will register the interface Host A record that it has set to listen on. The Zone properties, the **Name server** tab list out the IP addresses of interfaces present on the DC. If it has listed both the IPs, then DNS server will register Host A record for both the IP addresses.  
+If the DC is running DNS server service, then the DNS service will register the interface "Host A" record that it has set to listen on. The Zone properties, the **Name server** tab list out the IP addresses of interfaces present on the DC. If it has listed both the IPs, then DNS server will register "Host A" record for both the IP addresses.  
 
 We need to make sure only the required interface listens for DNS and the zone properties, name server tab has required IP address information.
 

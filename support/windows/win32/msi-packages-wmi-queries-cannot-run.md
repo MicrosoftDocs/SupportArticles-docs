@@ -2,8 +2,9 @@
 title: MSI packages with WMI queries may fail to run
 description: MSI packages that use Windows Management Instrumentation (WMI) queries might fail to run on Windows Server 2008 R2 Core. Provides a resolution.
 ms.date: 05/14/2020
-ms.prod-support-area-path: Windows administration and management development
+ms.custom: sap:Windows administration and management development
 ms.reviewer: sansom, bachoang, axelr
+ms.technology: windows-dev-apps-admin-management-dev
 ---
 # MSI packages that use WMI queries may fail on Windows Server 2008 R2 Core
 

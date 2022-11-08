@@ -1,10 +1,10 @@
 ---
 title: Selecting distinct users in identity fields
 description: This article describes the new identity control for work items and queries in Visual Studio 2015 and the web portal. This feature is available through Team Foundation Server 2015.
-ms.prod: devops
 ms.date: 08/14/2020
-ms.prod-support-area-path: Server Administration
+ms.custom: sap:Server Administration
 ms.topic: article
+ms.service: azure-devops-server
 ---
 # Client support for selecting distinct users in identity fields in Team Foundation Server 2015
 
@@ -30,8 +30,7 @@ Additionally, querying on the display name in Visual Studio 2013 or earlier vers
 | Visual Studio 2013 and earlier versions|New identity control is not available. Query results contain work items of all users who have the same display name, including active and inactive users.|
 | Visual Studio 2015|Identity control is available, and query results contain work items that are assigned to the distinct active user. Inactive users can be found only by using the `Contains` operator.|
 | Web portal|Identity control is available, and query results contain work items that are assigned to the distinct user. Inactive users can be found only by using the `Contains` operator.|
-|||
-
+  
 ## Applies to
 
 - Team Foundation Server 2015
@@ -41,3 +40,5 @@ Additionally, querying on the display name in Visual Studio 2013 or earlier vers
 - Visual Studio Express 2015 for Web
 - Visual Studio Express 2015 for Windows 10
 - Visual Studio Professional 2015
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -4,20 +4,20 @@ description: Describe a by-design behavior where Windows 7 can't automatically r
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: waltere, kaushika,v-jesits
-ms.prod-support-area-path: WebClient and WebDAV
+ms.custom: sap:webclient-and-webdav, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # Windows 7 can't automatically reconnect a DAV share when Basic Authentication is used
 
 This article describes a by-design behavior where Windows 7 can't automatically reconnect a DAV share when Basic Authentication is used.
 
-_Original product version:_ &nbsp;Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2673544
 
 ## Symptoms
@@ -89,22 +89,13 @@ It's because of this security risk that Office 2010 applications disable Basic A
 
 [2123563](https://support.microsoft.com/help/2123563) You cannot open Office file types directly from a server that supports only Basic authentication over a non-SSL connection
 
-Basic authentication in Windows 7 isn't enabled by default if you're trying to connect to HTTP resources. For HTTP access, the BasicAuthLevel=2 key (see KB 841215) must be set (2 = Basic authentication enabled for SSL and for non-SSL connections).
-
-[841215](https://support.microsoft.com/help/841215) You cannot connect to a document library in Windows SharePoint Services 3.0 or Windows SharePoint Services 2.0 by using Windows shell commands or by using Explorer View  
+Basic authentication in Windows 7 isn't enabled by default if you're trying to connect to HTTP resources. For HTTP access, the BasicAuthLevel=2 key must be set (2 = Basic authentication enabled for SSL and for non-SSL connections).
 
 If no proxy is configured, WinHTTP sends credentials only to local intranet sites. If an HTTP proxy program is running on the client, or if no proxy server entry is configured, and you try to connect to a resource by using an FQDN such as `http://server.company.com`, you should use the **AuthForwardServerList** registry key as described in [KB 943280](https://support.microsoft.com/help/943280) to explicitly list the servers that you want to be treated as internal so that you can pass credentials for them.
 
 [943280](https://support.microsoft.com/help/943280) Prompt for Credentials When Accessing FQDN Sites From a Windows Vista or Windows 7 Computer
 
 [941050](https://support.microsoft.com/help/941050) Error message on a Windows Vista-based computer when you try to access a network drive that is mapped to a Web share: "The operation being requested was not performed because the user has not been authenticated"
-
-[960646](https://support.microsoft.com/help/960646) If the "Reconnect at logon" option is selected, a network drive that is mapped to a Web share is displayed as a red X after you restart a computer that is running Windows Vista or Windows Server 2008
-
-[2560598](https://support.microsoft.com/help/2560598) "The folder you entered does not appear to be valid. Please choose another" error when you use "Add a network connection" to connect to a nested WebDAV subfolder in Windows 7 or Windows Server 2008 R2
-
-> [!Note]
-> If you follow the steps in KB 2560598, make sure that you don't activate the **[x] Reconnect at logon** option because this option doesn't work for Basic Authentication. If you've selected this option inadvertently, you should purge all saved credentials by using the Credential Manager UI.
 
 ## References
 

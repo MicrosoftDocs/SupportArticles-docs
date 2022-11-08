@@ -4,21 +4,21 @@ description: Describes the supportability of having a Windows server boot from a
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: No Boot (not BugChecks)
+ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # Support for booting from a Storage Area Network (SAN)
 
 This article describes the supportability of having a Windows server boot from a Storage Area Network (SAN).
 
-_Original product version:_ &nbsp;Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1,  Windows 10 - all editions  
-_Original KB number:_ &nbsp;305547
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1,  Windows 10 - all editions  
+_Original KB number:_ &nbsp; 305547
 
 ## More information
 

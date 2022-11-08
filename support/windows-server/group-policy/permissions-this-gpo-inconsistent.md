@@ -2,22 +2,22 @@
 title: Permissions for this GPO are inconsistent
 description: Describes a permissions issue that occurs when you run Group Policy Management Console in a Windows 2008 or Windows Server 2003 domain. A resolution is provided.
 ms.date: 09/30/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
-ms.prod-support-area-path: Group Policy management - GPMC or AGPM
+ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # "Permissions for this GPO in the SYSVOL folder are inconsistent with those in Active Directory" message when you run GPMC
 
 This article provides a solution to a permissions issue that occurs when you run Group Policy Management Console in a Windows 2008 or Windows Server 2003 domain.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2838154
 
 ## Symptoms
@@ -50,9 +50,9 @@ If you still receive the message, follow these steps:
 
 2. Check whether the List object permission is set for the Authenticated Users group and whether the Authenticated Users group is missing from the **Delegation** tab of the Group Policy Object.
 
-    :::image type="content" source="./media/permissions-this-gpo-inconsistent/authenticated-users.png" alt-text="Check whether the Authenticated Users group is missing.":::
+    :::image type="content" source="media/permissions-this-gpo-inconsistent/authenticated-users.png" alt-text="Check whether the Authenticated Users group is missing.":::
 
-    :::image type="content" source="./media/permissions-this-gpo-inconsistent/delegation.png" alt-text="Check whether the List object permission is set for the Authenticated Users group.":::
+    :::image type="content" source="media/permissions-this-gpo-inconsistent/delegation-tab.png" alt-text="Check whether the List object permission is set for the Authenticated Users group." border="false":::
 
 If these conditions are true, take one of the following actions:
 

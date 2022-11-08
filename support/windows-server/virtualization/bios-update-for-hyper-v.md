@@ -4,21 +4,21 @@ description: This article describes an issue where BIOS update is required befor
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, taylorb, vimalsh, adityah
-ms.prod-support-area-path: Installation and configuration of Hyper-V
+ms.custom: sap:installation-and-configuration-of-hyper-v, csstroubleshoot
 ms.technology: hyper-v
 ---
 # A BIOS update may be required for some computers to install the Hyper-V Role and/or start Hyper-V virtual machines
 
 This article provides help to solve issues that occur when you install the Hyper-V Role or start Hyper-V virtual machines.
 
-_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2762297
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2762297
 
 ## Symptoms
 

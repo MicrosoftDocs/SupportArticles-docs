@@ -2,8 +2,9 @@
 title: Unable to install Azure Active Directory Module for Windows PowerShell
 description: Describes an issue in which you can't install Azure Active Directory Module for Windows PowerShell. Provides a resolution.
 ms.date: 05/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Error when you try to install Azure Active Directory Module for Windows PowerShell: You must have Windows PowerShell 2.0 or greater installed
 
@@ -25,7 +26,7 @@ To resolve this issue, try one of the following methods. If one doesn't work for
 ### Method 1: Install Azure Active Directory Module for Windows PowerShell when you log on as local admin
 
 1. Log on as a local admin. (Just logging on as a domain admin may not work.)
-2. Install [Azure Active Directory Module for PowerShell](https://docs.microsoft.com/previous-versions/azure/jj151815(v=azure.100)?redirectedfrom=MSDN#install-the-azure-ad-module).
+2. Install [Azure Active Directory Module for PowerShell](/previous-versions/azure/jj151815(v=azure.100)?redirectedfrom=MSDN#install-the-azure-ad-module).
 
 ### Method 2: Make sure that Windows PowerShell 2.0 is enabled
 
@@ -33,8 +34,6 @@ To resolve this issue, try one of the following methods. If one doesn't work for
 2. In Control Panel, select **Programs and Features**, or select **Uninstall a program** under **Programs**.
 3. Select **Turn Window features on or off**.
 4. In the Windows Feature window, make sure that the **Windows PowerShell 2.0** checkbox is selected, and then select **OK**.
-5. Install [Azure Active Directory Module for PowerShell](https://docs.microsoft.com/previous-versions/azure/jj151815(v=azure.100)?redirectedfrom=MSDN#install-the-azure-ad-module).
+5. Install [Azure Active Directory Module for PowerShell](/previous-versions/azure/jj151815(v=azure.100)?redirectedfrom=MSDN#install-the-azure-ad-module).
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

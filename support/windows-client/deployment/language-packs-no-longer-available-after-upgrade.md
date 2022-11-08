@@ -3,21 +3,21 @@ title: Language packs no longer available
 description: Discusses that previously installed language packs are no longer available after you upgrade from Windows 8 to Windows 8.1. Provides a resolution.
 ms.date: 10/19/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, warrenw, jerrycif, ianham
-ms.prod-support-area-path: Setup
+ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # Language packs are no longer available after upgrading
 
 This article discusses that previously installed language packs are no longer available after you upgrade from Windows 8 to Windows 8.1.  
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2910256
 
 ## Symptoms
@@ -32,7 +32,7 @@ It is also possible that the Advanced language options are set to cause Windows 
 
 ## Resolution
 
-Follow Resolution 1 to install the language packs. If you have issues downloading or installing language packs, go to Resolution 2.  
+Follow Resolution 1 to install the language packs. If you have issues downloading or installing language packs, go to Resolution 2.  
 
 ### Resolution 1: Install the language packs
 
@@ -53,10 +53,11 @@ There are advanced language settings that may block the download of language pac
 2. Tap or click **Clock, Language and Region**. (If you are viewing Control Panel in icon display, select **Language**, and then go to step 4.)
 3. Tap or click **Language**.
 4. Tap or click **Advanced settings**.
-5. Examine the **Override for Windows display language** and **Override for default input method** lists. Make sure that the **Use language list (recommended)**  option is selected for both lists (see Figure 1). Then, tap or click **Save**.
+5. Examine the **Override for Windows display language** and **Override for default input method** lists. Make sure that the **Use language list (recommended)**  option is selected for both lists (see Figure 1). Then, tap or click **Save**.
 
-    Figure 1: Advanced settings  
-    ![Advanced settings](./media/language-packs-no-longer-available-after-upgrade/advanced-settings.jpg)
+    Figure 1: Advanced settings
+
+    :::image type="content" source="media/language-packs-no-longer-available-after-upgrade/advanced-settings.png" alt-text="Select the Use language list (recommended) options in Advanced settings.":::
 
 6. After you save the settings, you are returned to the standard language settings. In the list of previously installed languages, click **Options** next to the language you want to install.
 7. Click the download link to install the language pack (see Figure 2).
@@ -65,10 +66,11 @@ There are advanced language settings that may block the download of language pac
     > After the installation is finished, you are prompted to restart the computer.
 
     Figure 2: Start the download
-    ![Start the download](./media/language-packs-no-longer-available-after-upgrade/start-the-download.jpg)
+
+    :::image type="content" source="media/language-packs-no-longer-available-after-upgrade/start-the-download.png" alt-text="Select the download link to install the language pack.":::
 
 ## More information
 
 During the upgrade from Windows 8 to Windows 8.1, Windows Setup detects whether the display language is the localized language of the operating system. It then displays the following message window to indicate that you might have to reinstall any language packs that were previously installed.
 
-![attention screenshot](./media/language-packs-no-longer-available-after-upgrade/attention.jpg)
+:::image type="content" source="media/language-packs-no-longer-available-after-upgrade/what-needs-your-attention.png" alt-text="The message window indicates that you might have to reinstall any language packs that were previously installed." border="false":::

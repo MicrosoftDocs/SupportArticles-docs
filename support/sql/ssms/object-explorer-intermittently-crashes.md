@@ -2,7 +2,7 @@
 title: Object Explorer intermittently crashes
 description: This article provides resolution for the problem where the Object Explorer intermittently hangs when you use SQL Server Management Studio 2012 or a later version.
 ms.date: 09/10/2020
-ms.prod-support-area-path: Tools
+ms.custom: sap:Tools
 ms.reviewer: cbenkler, daleche
 ms.prod: sql
 ---
@@ -56,12 +56,12 @@ To change the SSMS connection string, follow these steps:
 
 1. In Object Explorer, click **Connect**, and then click **Database Engine**.
 
-    ![Step 1 - Object Explorer](./media/object-explorer-intermittently-crashes/database-engine.png)
+    :::image type="content" source="media/object-explorer-intermittently-crashes/database-engine.png" alt-text="Screenshot of the Connect menu of Object Explorer.":::
 
 2. In the **Connect to Server** window, click the **Options** button.
 
-    ![Step 2 - Login Details](./media/object-explorer-intermittently-crashes/connect-to-server.png)
+    :::image type="content" source="media/object-explorer-intermittently-crashes/connect-to-server.png" alt-text="Screenshot of the Connect to Server window.":::
 
 3. On the **Connection Properties** tab, enter *master* in the **Connect to database** field, and then click **Connect**.
 
-    ![Step 3: Connection Properties](./media/object-explorer-intermittently-crashes/connection-properties.png)
+    :::image type="content" source="media/object-explorer-intermittently-crashes/connection-properties.png" alt-text="Screenshot of the Connection Properties tab of the Connect to Server window.":::

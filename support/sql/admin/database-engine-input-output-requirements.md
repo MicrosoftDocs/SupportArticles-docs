@@ -1,14 +1,14 @@
 ---
 title: Database Engine Input/Output requirements
-description: This article describes the SQL Server Database Engine Input/Output requirements.
-ms.date: 09/07/2020
-ms.prod-support-area-path: Administration and Management
+description: This article describes the SQL Server Database Engine Disk I/O requirements.
+ms.date: 11/04/2022
+ms.custom: sap:Administration and Management
 ms.topic: article
 ms.prod: sql
 ---
-# SQL Server Database Engine Input/Output requirements
+# SQL Server Database Engine Disk Input/Output (I/O) requirements
 
-This article describes the SQL Server Database Engine Input/Output requirements.
+This article describes the SQL Server Database Engine Disk Input/Output (I/O) requirements.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 967576
@@ -21,8 +21,6 @@ SQL Server requires that systems support guaranteed delivery to stable media, as
 
 - [SQL Server IO Reliability Program Review Requirements](https://download.microsoft.com/download/f/1/e/f1ecc20c-85ee-4d73-baba-f87200e8dbc2/sql_server_io_reliability_program_review_requirements.pdf)
 
-  > [!NOTE]
-    > The above two documents also apply to SQL Server 2014.
 This requirement includes, but is not limited to, the following conditions:
 
 - Windows logo certification
@@ -30,7 +28,7 @@ This requirement includes, but is not limited to, the following conditions:
 - Caching stability
 - No data rewrites
 
-Systems that meet these requirements support SQL Server database storage. Systems do not have to be listed on the SQL Server storage solutions site, but they must guarantee that the requirements are met.
+Systems that meet these requirements support SQL Server database storage. Systems do not have to be listed on SQL Server storage solutions programs, but they must guarantee that the requirements are met.
 
 SQL Server maintains the atomicity, consistency, isolation, and durability (ACID) property by using the Write-Ahead Logging (WAL) protocol.
 
@@ -39,7 +37,7 @@ SQL Server maintains the atomicity, consistency, isolation, and durability (ACID
 
 ## Technical support
 
-Microsoft will provide full support for SQL Server and SQL Server-based applications. However, issues that have, or caused by, the I/O solution will be referred to the device manufacturer. Symptoms may include, but are not limited to, the following:
+Microsoft will provide full support for SQL Server and SQL Server-based applications. However, issues that are caused by the I/O solution will be referred to the device manufacturer. Symptoms may include, but are not limited to, the following:
 
 - Database corruption
 - Backup corruption
@@ -47,7 +45,7 @@ Microsoft will provide full support for SQL Server and SQL Server-based applicat
 - Missing transactions
 - Unexpected I/O performance variances
 
-Microsoft recommends use of Windows Logo certified products. To determine whether your solution supports "guaranteed delivery to stable media" as outlined under the SQL Server Always-On program, check with your vendor. We also recommend that you contact your vendor to verify that you have correctly deployed and configured the solution for transactional database use.
+To determine whether your hardware solution supports "guaranteed delivery to stable media" as outlined under the SQL Server Always-On program, check with your vendor. We also recommend that you contact your vendor to verify that you have correctly deployed and configured the solution for transactional database use.
 
 It is a common troubleshooting practice for a Microsoft Support professional to ask you to disable nonessential jobs and to disable or remove third-party components, move database files, uninstall drivers, and perform similar actions. We always try to reduce the scope of the issue while we work to identify it. After an issue is identified as unrelated to the jobs or third-party products, those jobs or third-party products may be reintroduced to production.
 
@@ -72,6 +70,6 @@ The following table provides links to additional information that is related to 
 | Diagnostics<br/>| <ul><li>[Asynchronous disk I/O appears as synchronous on Windows](/troubleshoot/windows/win32/asynchronous-disk-io-synchronous)</li><li> [SQL Server diagnostics added to detect unreported I/O problems due to stale reads or lost writes](https://support.microsoft.com/help/826433) </li><li> [MSSQLSERVER error 823](/sql/relational-databases/errors-events/mssqlserver-823-database-engine-error)<ul> <li> [Recording for Resource-based Analysis](/previous-versions/windows/it-pro/windows-8.1-and-8/hh448202(v=win.10)) of [Windows Performance Recorder](/previous-versions/windows/it-pro/windows-8.1-and-8/hh448205(v=win.10)) </li></ul></ul> Xperf resources: <ul><li>[Diagnostics in SQL Server help detect stalled and stuck I/O operations](https://support.microsoft.com/help/897284) <li> [MSSQLSERVER error 823](/sql/relational-databases/errors-events/mssqlserver-823-database-engine-error) </li><li> [Description of common causes of SQL Server error message 844 or error message 845](https://support.microsoft.com/help/310834)</li></ul>|
 | NAS (Network Attached Storage)| [Description of support for network database files in SQL Server](https://support.microsoft.com/help/304261)|
 | iSCSI| [Support for SQL Server on iSCSI technology components](https://support.microsoft.com/help/833770)|
-| Mirroring and AlwaysOn availability groups| <ul><li>[Prerequisites, Restrictions, and Recommendations for Always On availability groups](/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability) <li>Requirements for SQL Server to support remote mirroring of user databases<br/>Database Mirroring:<ul><li> [Database Mirroring in SQL Server 2005](/previous-versions/sql/sql-server-2005/administrator/cc917680(v=technet.10)) </li><li> [Database Mirroring Best Practices and Performance Considerations](https://download.microsoft.com/download/4/7/a/47a548b9-249e-484c-abd7-29f31282b04d/dbm_best_pract.doc) </li></ul></ul> These white papers also apply to Microsoft SQL Server 2008 and later versions of SQL Server.|
+| Mirroring and Always On availability groups| <ul><li>[Prerequisites, Restrictions, and Recommendations for Always On availability groups](/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability) <li>Requirements for SQL Server to support remote mirroring of user databases<br/>Database Mirroring:<ul><li> [Database Mirroring in SQL Server 2005](/previous-versions/sql/sql-server-2005/administrator/cc917680(v=technet.10)) </li><li> [Database Mirroring Best Practices and Performance Considerations](https://download.microsoft.com/download/4/7/a/47a548b9-249e-484c-abd7-29f31282b04d/dbm_best_pract.doc) </li></ul></ul> These white papers also apply to Microsoft SQL Server 2008 and later versions of SQL Server.|
 |I/O affinity| [INF: Understanding How to Set the SQL Server I/O Affinity Option](https://support.microsoft.com/help/298402)|
-|||
+  

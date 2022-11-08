@@ -1,0 +1,59 @@
+### YamlMime:Landing
+
+title: Microsoft Dynamics 365 Supply Chain Management troubleshooting # < 60 chars
+summary: Welcome to Microsoft Dynamics 365 Supply Chain Management troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Microsoft Dynamics 365 Supply Chain Management. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Microsoft Dynamics 365 Supply Chain Management troubleshooting
+  description: Landing page for Microsoft Dynamics 365 Supply Chain Management troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
+  ms.prod: dynamics-365 #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: #Required; your GitHub user alias, with correct capitalization.
+  ms.author: #Required; microsoft alias of author; optional team alias.
+  ms.date: 3/31/2021
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+  # Card
+  - title: Product management
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't delete a released product
+            url: /dynamics365/supply-chain/troubleshooting/products/cant-delete-released-prod
+          - text: Product information management FAQ
+            url: /dynamics365/supply-chain/pim/product-information-faq
+
+  # Card
+  - title: Sales order processing
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Resolve a quantity can't be reduced error when canceling a sales order
+            url: /dynamics365/supply-chain/troubleshooting/sales/quantity-cannot-be-reduced
+          - text: Sales order FAQs
+            url: /dynamics365/supply-chain/sales-marketing/sales-orders-faq
+
+  # Card
+  - title: Warehouse management
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Resolve a packing slip quantity error
+            url: /dynamics365/supply-chain/troubleshooting/warehousing/physical-remaining-q
+          - text: Resolve a certification path error when setting up app connection
+            url: /dynamics365/supply-chain/troubleshooting/warehousing/certification-path-app-connection-error
+          - text: Resolve a released quantity error when updating or deleting a load line
+            url: /dynamics365/supply-chain/troubleshooting/warehousing/released-qty-cannot-be-negative
+
+  # Card
+  - title: Documentation and training
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Supply Chain Management documentation
+            url: /dynamics365/supply-chain/
+          - text: Supply Chain Management training
+            url: /training/dynamics365/scm
+          - text: Dynamics 365 Community
+            url: https://community.dynamics.com/

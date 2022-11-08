@@ -2,8 +2,10 @@
 title: Windows boot error 0xc0000221 on an Azure VM
 description: Fixes error 0xc0000221, which occurs when you try to boot an Azure virtual machine (VM).
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
+ms.collection: windows
 ---
 # Windows boot error 0xc0000221 on an Azure VM
 
@@ -26,12 +28,15 @@ This issue occurs if the file system is corrupted.
 
 ## Resolutions
 
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+
 To fix the issue, follow these steps.
 
 ### Step 1
 
 1. Delete the virtual machine (VM). Make sure that you select the **Keep the disks** option when you do this.
-2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/attach-managed-disk-portal).
+2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
 3. Connect to the troubleshooting VM, and then open **Computer management** > **Disk management**. Make sure that the OS disk is online and that its partitions have drive letters assigned.
 4. Use the WinRE image located in every Windows installation (Recover console image) as a repository to try to fix the corruption. Volume G is the drive of the broken OS disk:
 
@@ -70,3 +75,5 @@ If the VM still doesn't boot, go to step 2.
 ### Step 3
 
 SFC checks for corruption in the registry and the file system. If SFC states that the corrupted files were found but it cannot fix them, you can [boot the VM from the Last Known Good Configuration](start-vm-last-known-good.md). This is to make sure that you have a good registry. Then, check the file system again by running SFC to identify the potentially corrupted files.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

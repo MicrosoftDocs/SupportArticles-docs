@@ -1,24 +1,24 @@
 ---
 title: HotStart buttons don't work
 description: Provides a solution to an issue where HotStart buttons doesn't work when Autoplay is disabled.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Desktop Shell
+ms.custom: sap:desktop-shell, csstroubleshoot
 ms.technology: windows-client-shell-experience
 ---
 # Disabling Autoplay through Group Policy or the registry will cause HotStart buttons to not function
 
 This article provides a solution to an issue where HotStart buttons doesn't work when Autoplay is disabled.
 
-_Original product version:_ &nbsp;Windows 7 Service Pack 1  
-_Original KB number:_ &nbsp;2328787
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
+_Original KB number:_ &nbsp; 2328787
 
 ## Symptoms
 

@@ -4,20 +4,20 @@ description: Discusses the registry settings that can be used to modify applicat
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Application compatibility
+ms.custom: sap:application-compatibility, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Terminal Server registry settings for applications
 
 This article discusses the registry settings that can be used to modify application behavior on a Terminal Server computer.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 186499
 
 ## Controlling Application Execution in Execute Mode

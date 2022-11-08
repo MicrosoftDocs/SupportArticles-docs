@@ -1,23 +1,23 @@
 ---
 title: An incorrect IP address is returned
 description: Describes an issue in which an incorrect IP address is returned when you ping a server by using its NetBIOS name.
-ms.date: 09/27/2020
+ms.date: 04/11/2022
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, danma
-ms.prod-support-area-path: IP Address Management (IPAM)
+ms.custom: sap:ip-address-management-ipam, csstroubleshoot
 ms.technology: networking
 ---
 # An incorrect IP address is returned when you ping a server by using its NetBIOS name  
 
 This article provides a resolution for the issue that an incorrect IP address is returned, when you ping a server by using its NetBIOS name.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 981953
 
 ## Symptoms
@@ -39,7 +39,7 @@ To work around this issue, you can change the adapter that the IP address is sel
 
 To change the binding order, follow these steps:
 
-1. Click **Start**![start button ](./media/incorrect-ip-address-returned-ping-netbios/vista-start-button.jpg), and then click **Control Panel**.
+1. Click **Start** :::image type="icon" source="media/incorrect-ip-address-returned-ping-netbios/vista-start-button.png" border="false":::, and then click **Control Panel**.
 2. Click **Network and Internet**, and then click **Network and Sharing Center**.
 
 3. Change the network adapter settings, depending on your operating system:
@@ -61,11 +61,10 @@ For a hidden adapter, you cannot change the binding order by using the steps in 
 
 To change the Hosts file, follow these steps:
 
-1. Click **Start**![start button ](./media/incorrect-ip-address-returned-ping-netbios/vista-start-button.jpg), and then click **All Programs**.
+1. Click **Start** :::image type="icon" source="media/incorrect-ip-address-returned-ping-netbios/vista-start-button.png" border="false":::, and then click **All Programs**.
 2. Click **Accessories**, right-click **Notepad**, and then click **Run as administrator**.
 
-3. ![UAC ](./media/incorrect-ip-address-returned-ping-netbios/security-shield.jpg)
-If you're prompted for an administrator password or for confirmation, type the password, or provide confirmation.
+3. :::image type="icon" source="media/incorrect-ip-address-returned-ping-netbios/security-shield-button.png" border="false"::: If you're prompted for an administrator password or for confirmation, type the password, or provide confirmation.
 4. At a command prompt, type the following command, and then press ENTER:  
 
     ```console  
@@ -91,4 +90,4 @@ For example, for an IP address of 10.0.0.1 for Server01, type as:
 ## More information
 
 For more information about the getaddrinfo function, visit the following MSDN Web site:  
-[The getaddrinfo function](https://msdn2.microsoft.com/library/ms738520%28vs.85%29.aspx)  
+[The getaddrinfo function](/windows/win32/api/ws2tcpip/nf-ws2tcpip-getaddrinfo)  

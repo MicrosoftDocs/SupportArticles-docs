@@ -1,4 +1,5 @@
 {
+  "build_entry_point": "docs",
   "docsets_to_publish": [
     {
       "docset_name": "support1-docset",
@@ -7,33 +8,45 @@
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
-      "open_to_public_contributors": false,
+      "xref_query_tags": [
+        "/dotnet",
+        "/power-apps/developer/data-platform/webapi/reference"
+      ],
+      "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
       },
-      "build_entry_point": "docs",
       "template_folder": "_themes"
     }
   ],
   "notification_subscribers": [
-    "genemi@microsoft.com"
+    "ramakoni@microsoft.com",
+    "luche@microsoft.com",
+    "haiyingyu@microsoft.com",
+    "delhan@microsoft.com",
+    "Lin.Gen@microsoft.com"
   ],
-  "sync_notification_subscribers": [],
+  "sync_notification_subscribers": [
+    "ramakoni@microsoft.com",
+    "kaushik.ainapure@microsoft.com",
+    "Lin.Gen@microsoft.com"
+  ],
   "branches_to_filter": [],
+  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/SupportArticles-docs",
+  "git_repository_branch_open_to_public_contributors": "main",
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
-  "contribution_branch_mappings": {},
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
       "url": "https://github.com/Microsoft/templates.docs.msft",
-      "branch": "master",
+      "branch": "main",
       "branch_mapping": {}
     },
     {
       "path_to_root": "_themes.pdf",
       "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
-      "branch": "master",
+      "branch": "main",
       "branch_mapping": {}
     }
   ],
@@ -44,13 +57,16 @@
       "Intellisense"
     ]
   },
-  "need_generate_pdf_url_template": true,
   "targets": {
     "pdf": {
       "template_folder": "_themes.pdf"
     }
   },
-  "docs_build_engine": {
-    "name": "docfx_v3"
-  }
+  "docs_build_engine": {},
+  "contribution_branch_mappings": {},
+  "redirection_files": [
+    ".openpublishing.redirection.json",
+    ".openpublishing.redirection.developer.json"
+  ],
+  "need_generate_pdf_url_template": true
 }

@@ -2,7 +2,6 @@
 title: Error when you try to migrate a virtual machine between two stand-alone hosts
 description: Error occurs when trying to migrate a virtual machine between two stand-alone hosts.
 ms.date: 07/09/2020
-ms.prod-support-area-path: 
 ---
 # The host does not have access to sufficient storage of the requested classification error when migrating a VM
 
@@ -13,7 +12,7 @@ _Original KB number:_ &nbsp; 2823834
 
 ## Symptoms
 
-When you use System Center 2016 Virtual Machine Manager (VMM 2016) or VMM 2012 to migrate a virtual machine (VM) between two stand-alone hosts, the operation fails with the following error:
+When you use System Center 2016 Virtual Machine Manager (VMM 2016) or VMM 2012 to migrate a virtual machine (VM) between two stand-alone hosts, the operation fails with the following error:
 
 > The host does not have access to sufficient storage of the requested classification for one or more virtual disks associated with virtual machine <**VM_NAME**>.
 

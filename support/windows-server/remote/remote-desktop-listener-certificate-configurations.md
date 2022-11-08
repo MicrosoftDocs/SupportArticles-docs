@@ -4,20 +4,20 @@ description: Describes the methods to configure RDP listener certificates in Win
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Remote Desktop Services (Terminal Services) licensing
-ms.technology: windows-server-rds 
+ms.custom: sap:remote-desktop-services-terminal-services-licensing, csstroubleshoot
+ms.technology: windows-server-rds
 ---
 # Remote Desktop listener certificate configurations
 
 This article describes the methods to configure listener certificates on a Windows Server 2012-based or Windows Server 2012-based server that is not part of a Remote Desktop Services (RDS) deployment.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3042780
 
 ## About Remote Desktop server listener availability
@@ -46,15 +46,15 @@ In Windows Server 2012 or Windows Server 2012 R2, this MMC snap-in does not exis
 
         The following screenshot is an example of the certificate thumbprint in the **Certificate** properties:
 
-        :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/thumbprint-property.jpg" alt-text="Screenshot of the certificate thumbprint in the Certificate properties.":::
+        :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/thumbprint-property.png" alt-text="An example of the certificate thumbprint in the Certificate properties.":::
 
         If you copy the string into Notepad, it should resemble the following screenshot:
 
-        :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/thumbprint-string-in-notepad.jpg" alt-text="Screenshot of the thumbprint string in Notepad.":::
+        :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/thumbprint-string-in-notepad.png" alt-text="Copy and paste the thumbprint string into Notepad.":::
 
         After you remove the spaces in the string, it still contains the invisible ASCII character that is only visible at the command prompt. The following screenshot is an example:
 
-        :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/ascii-character-in-command-prompt.jpg" alt-text="Screenshot of the invisible ASCII character.":::
+        :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/ascii-character-in-command-prompt.png" alt-text="The invisible ASCII character that is only shown at the command prompt." border="false":::
 
         Make sure that this ASCII character is removed before you run the command to import the certificate.
 
@@ -68,7 +68,7 @@ In Windows Server 2012 or Windows Server 2012 R2, this MMC snap-in does not exis
 
         The following screenshot is a successful example:
 
-        :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/sucessful-example-to-run-wmic-commands.jpg" alt-text="Screenshot of a successful example.":::
+        :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/successful-example-to-run-wmic-commands.png" alt-text="A successful example of running the wmic command together with the thumbprint value that you obtain in step 3." border="false":::
   
 - Method 2: Use registry editor
 

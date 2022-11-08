@@ -2,10 +2,9 @@
 title: How to manage on-premises to Azure protection network bandwidth usage
 description: Describes the steps that administrators can take to limit network bandwidth usage while using Azure Site Recovery on-premises to Microsoft Azure protection.
 ms.date: 10/10/2020
-ms.prod-support-area-path: 
-ms.service: backup
+ms.service: site-recovery
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: anbacker, markstan
 ---
 # How to manage on-premises to Azure protection network bandwidth usage
@@ -23,9 +22,9 @@ An administrator can configure individual Hyper-V hosts to use different network
 
 ## Step 1: Increase the bandwidth usage for replicating into Azure
 
-Use Registry Editor to locate the following registry key, and then add the following registry entry, or change it if the value already exists: 
+Use Registry Editor to locate the following registry key, and then add the following registry entry, or change it if the value already exists:
 
-```
+```reg
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Azure Backup\Replication  
 Value Name: UploadThreadsPerVM  
 Value Type: REG_DWORD  
@@ -37,9 +36,9 @@ Value Data: 8
 
 ## Step 2: Increase bandwidth usage during Azure to On-premises failover
 
-Use Registry Editor to locate the following registry key, and then add the following registry entry, or change it if the value already exists: 
+Use Registry Editor to locate the following registry key, and then add the following registry entry, or change it if the value already exists:
 
-```
+```reg
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Azure Backup\Replication
 Value Name: DownloadThreadsPerVM 
 Value Type: REG_DWORD 
@@ -59,9 +58,9 @@ Use one of the following methods to configure the Throttling settings.
 2. Expand the **Windows Server Backup**  tree, and then select **Backup**. In the **Actions**  pane (on the right), select **Change Properties**.
 3. There are three tabs with settings that you can change as necessary. Select the **Throttling** tab.
 
-    :::image type="content" source="./media/manage-on-premises-azure-protection-network-bandwidth-usage/3058328.png" alt-text="Screenshot of the Microsoft Azure Backup Properties window.":::
+    :::image type="content" source="media/manage-on-premises-azure-protection-network-bandwidth-usage/throttling-tab.png" alt-text="Screenshot of the Throttling tab in the Microsoft Azure Backup Properties window.":::
 
-The **Throttling** tab allows for control of network usage during specific day and time intervals. After you select the **Enable internet bandwidth usage throttling for backup operations**  check box, you can configure how the agent uses the network bandwidth when it's backing up or restoring information. 
+The **Throttling** tab allows for control of network usage during specific day and time intervals. After you select the **Enable internet bandwidth usage throttling for backup operations**  check box, you can configure how the agent uses the network bandwidth when it's backing up or restoring information.
 
 Throttling uses two settings, work hours and nonwork hours, to regulate the use of the network bandwidth during backup operations. You can define the range of work days and work hours during which the work hours bandwidth limit should be applied. The nonwork hours limit will be used at all other times. Valid bandwidth ranges from 512 kilobytes per second (Kbps) to 1023 megabytes per second (Mbps) for both limits.  
 
@@ -73,7 +72,7 @@ Examples:
 
 The following sample cmdlet throttles bandwidth on Mondays and Tuesdays from 9:00 AM to 6:00 PM:
 
-```
+```powershell
 $mon = [System.DayOfWeek]::Monday 
 
 $tue = [System.DayOfWeek]::Tuesday
@@ -83,6 +82,8 @@ Set-OBMachineSetting -WorkDay $mon, $tue -StartWorkHour "9:00:00" -EndWorkHour "
 
 The following cmdlet specifies that network bandwidth throttling will not be used by this server.
 
-```
+```powershell
 Set-OBMachineSetting -NoThrottle
 ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

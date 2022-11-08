@@ -4,8 +4,7 @@ description: Describes an issue in which Windows Azure Pack sites certificates e
 ms.date: 08/14/2020
 author: genlin
 ms.author: genli
-ms.service: azure-stack
-ms.prod-support-area-path: 
+ms.service: cloud-platform-system
 ms.reviewer: 
 ---
 # How to renew Windows Azure Pack authentication sites certificates
@@ -20,6 +19,7 @@ Assume that the default installation of Windows Azure Pack uses self-signed cert
 ## Workaround
 
 To work around this issue, renew Windows Azure Pack authentication sites certificates. To do this, run a Windows PowerShell script file on the servers where the WindowsAuthSite and the AuthSite roles are installed. The script commands are executed in the script file as in the following example:
+
 ```
 # Make sure that you run the command on the server where you have WindowsAuthSite or the AuthSite installed.
 # Note: You will have to update the $Server, $userid, $password, and $PassPhrase variables. 
@@ -93,21 +93,20 @@ Microsoft has confirmed that this is a problem in the Microsoft products that ar
 
 ### Scenarios that are experienced in this issue
 
-
 - Federation between AdminSite and WindowsAuthSite (default configuration).
 - Federation between TenantSite and AuthSite (default configuration).
 - Federation between TenantSite and Azure Active Directory Federation Services (AD FS) by using AuthSite as Identity Store.For information about AD FS for Windows Azure Pack, see [Configure Active Directory Federation Services for Windows Azure Pack](https://technet.microsoft.com/library/dn296436.aspx).
 
 After you run the script file that is mentioned in the "Workaround" section to create new certificates, you must reestablish trust between the portal and the authentication sites and then update AD FS metadata for AuthSite.
 
-Notes 
+Notes
+
 - For more information about how to reestablish trust between the portal and the authentication sites, see [Reconfigure FQDNs and Ports in Windows Azure Pack](https://technet.microsoft.com/library/dn528551.aspx).
 - To update AD FS metadata for AuthSite, open AD FS management, and then select the **Update From Federation Metadata** option.
 
-
-
 ### Scenarios that are not experienced in this issue
-
 
 - Federation between TenantSite and AD FS by using Active Directory as Identity Store
 - Federation between TenantSite and AD FS by using a third-party program as Identity Store in AD FS or federation with another federation partner
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

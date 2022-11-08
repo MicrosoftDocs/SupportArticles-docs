@@ -1,26 +1,23 @@
 ---
 title: Disable Hyper-V to run virtualization software
 description: Discusses an issue in which virtualization applications don't work together with Hyper-V, Device Guard, and Credential Guard. Provides a resolution.
-ms.data: 09/08/2020
+ms.date: 03/18/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: 1st Party Applications
+ms.custom: sap:1st-party-applications, csstroubleshoot
 ms.technology: windows-client-application-compatibility
 ---
+
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+--->
+
 # Virtualization applications don't work together with Hyper-V, Device Guard, and Credential Guard
-
-This article provides solutions to disable Hyper-V, Device Guard, and Credential Guard to help you use virtualized applications.
-
-_Original product version:_ &nbsp; Windows 10 - all editions  
-_Original KB number:_ &nbsp; 3204980
-
-## Symptoms
 
 Many third-party virtualization applications don't work together with Hyper-V. Affected applications include VMware Workstation and VirtualBox. These applications might not start virtual machines, or they may fall back to a slower, emulated mode.
 
@@ -29,15 +26,20 @@ These symptoms are introduced when the Hyper-V Hypervisor is running. Some secur
 - Device Guard
 - Credential Guard
 
+_Applies to:_ &nbsp; Windows 10 - all editions  
+_Original KB number:_ &nbsp; 3204980
+
+## Determine whether the Hyper-V hypervisor is running
+
 To determine whether the Hyper-V hypervisor is running, follow these steps:
 
 1. In the search box, type *msinfo32.exe*.
 2. Select **System Information**.
 3. In the detail window, locate the following entry:
 
-    A hypervisor has been detected. Features required for Hyper-V will not be displayed.
+   > A hypervisor has been detected. Features required for Hyper-V will not be displayed.
 
-    :::image type="content" source="media/virtualization-apps-not-work-with-hyper-v/system-information.png" alt-text="screenshot of the detail window of System Information":::
+   :::image type="content" source="media/virtualization-apps-not-work-with-hyper-v/system-information.svg" alt-text="screenshot of the detail window of System Information.":::
 
 ## Cause
 
@@ -45,11 +47,13 @@ This behavior occurs by design.
 
 Many virtualization applications depend on hardware virtualization extensions that are available on most modern processors. It includes Intel VT-x and AMD-V. Only one software component can use this hardware at a time. The hardware cannot be shared between virtualization applications.
 
-## Resolution
+To use other virtualization software, you must disable Hyper-V Hypervisor, Device Guard, and Credential Guard. If you want to disable Hyper-V Hypervisor, follow the steps in next two sections.
 
-To use other virtualization software, you must disable Hyper-V Hypervisor, Device Guard, and Credential Guard. If you're using Hyper-V to run virtual machines or containers, disable Hyper-V Hypervisor in Control Panel or by using Windows PowerShell. Use the following methods, as appropriate.
+## How to disable Hyper-V
 
-### Method 1: Disable Hyper-V in Control Panel
+You can disable Hyper-V Hypervisor either in Control Panel or by using Windows PowerShell.
+
+### Disable Hyper-V in Control Panel
 
 To disable Hyper-V in Control Panel, follow these steps:
 
@@ -57,21 +61,23 @@ To disable Hyper-V in Control Panel, follow these steps:
 2. Select **Turn Windows features on or off**.
 3. Expand **Hyper-V**, expand **Hyper-V Platform**, and then clear the **Hyper-V Hypervisor** check box.
 
-    :::image type="content" source="media/virtualization-apps-not-work-with-hyper-v/hyper-v-hypervisor.png" alt-text="screenshot of the Hyper-V Hypervisor check box" border="false":::
+    :::image type="content" source="media/virtualization-apps-not-work-with-hyper-v/hyper-v-hypervisor.svg" alt-text="screenshot of the Hyper-V Hypervisor check box." border="false":::
 
-### Method 2: Disable Hyper-V in PowerShell
+### Disable Hyper-V in PowerShell
 
 To disable Hyper-V by using Windows PowerShell, follow these steps:
 
-1. Open an elevated PowerShell Command Prompt window.
-2. At the command prompt, run the following command:
+1. Open an elevated PowerShell window.
+2. Run the following command:
 
-    ```console
+    ```powershell
     Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Hypervisor
     ```
 
-### Method 3: Disable Device Guard and Credential Guard
+## Disable Device Guard and Credential Guard
 
-Disable Device Guard and Credential Guard by using registry keys or group policy. To do it, see [Manage Windows Defender Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard-manage).
+You can disable Device Guard and Credential Guard by using registry keys or group policy. To do it, see [Manage Windows Defender Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard-manage).
+
+## More information
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

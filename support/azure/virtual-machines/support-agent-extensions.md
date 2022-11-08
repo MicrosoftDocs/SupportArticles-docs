@@ -2,8 +2,9 @@
 title: Support for VM agent extensions in Microsoft Azure
 description: Discusses support policy for the VM agent for Microsoft Azure Virtual Machines and for VM agent extensions on IaaS for Microsoft Azure.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
+ms.subservice: vm-extensions-not-operating
 ---
 # Support for VM agent extensions in Microsoft Azure
 
@@ -21,16 +22,15 @@ Support for third-party VM agent extensions is provided directly by the vendor.
 
 |VM agent extension|Reference|Microsoft Support policy|Link for support|
 |---|---|---|---|
-|DSC|Azure PowerShell DSC (Desired State Configuration) extension|Supported by Microsoft| [https://manage.windowsazure.com/?getsupport=true](https://manage.windowsazure.com/?getsupport=true) |
-|MSEnterpriseApplication|System Center Role Authoring Extension|Supported by Microsoft| [https://manage.windowsazure.com/?getsupport=true](https://manage.windowsazure.com/?getsupport=true) |
-|BGInfo|Background Info extension|Supported by Microsoft| [https://manage.windowsazure.com/?getsupport=true](https://manage.windowsazure.com/?getsupport=true) |
-|VMAccessagent|VM Extension to enable Remote Desktop and password reset|Supported by Microsoft| [https://manage.windowsazure.com/?getsupport=true](https://manage.windowsazure.com/?getsupport=true) |
+|DSC|Azure PowerShell DSC (Desired State Configuration) extension|Supported by Microsoft| [Azure support](https://azure.microsoft.com/support/) |
+|MSEnterpriseApplication|System Center Role Authoring Extension|Supported by Microsoft| [Azure support](https://azure.microsoft.com/support/) |
+|BGInfo|Background Info extension|Supported by Microsoft| [Azure support](https://azure.microsoft.com/support/) |
+|VMAccessagent|VM Extension to enable Remote Desktop and password reset|Supported by Microsoft| [Azure support](https://azure.microsoft.com/support/) |
 |Chefclient|Chef software agent|Supported by Chef software|[https://www.chef.io/support/](https://www.chef.io/support/)|
 |PuppetEnterpriseAgent|PuppetLabs agent|Supported by PuppetLabs| [https://support.puppet.com/hc/](https://support.puppet.com/hc/)|
 |Symantec Endpoint Protection|Symantec antivirus|Supported by Symantec| [http://www.symantec.com/business/support/index?page=contactsupport&key=54619](http://www.symantec.com/business/support/index?page=contactsupport&key=54619) |
 |Trend Micro Deep Security Agent|Trend Micro antivirus|Supported by Trend Micro| [http://www.trendmicro.com/us/business/saas/deep-security-as-a-service/index.html](http://www.trendmicro.com/us/business/saas/deep-security-as-a-service/index.html) |
-|||||
-
+  
 ## More information
 
 Understanding the difference between the VM agent and VM extensions helps troubleshoot problems by isolating the location of the problem.
@@ -56,7 +56,9 @@ When the agent is running, it will log a summary of extensions operations. This 
 - Enable
 - Install
 - Start
-- DisableYou can find the summary log at `C:\WindowsAzure\logs\WaAppAgent.log`.
+- Disable
+
+You can find the summary log at `C:\WindowsAzure\logs\WaAppAgent.log`.
 
 To determine which extension is failing, open the log, and then look for the word "error" in the log.
 
@@ -70,6 +72,8 @@ An example of an error in starting the VMAccess extension is as follows:
 ```
 
 Use the table that is mentioned before to request support for the extension that is failing.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
 
 [!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
 

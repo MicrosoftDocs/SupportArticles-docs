@@ -1,23 +1,23 @@
 ---
 title: How to configure WINRM for HTTPS
 description: This article describes how to configure WINRM to listen to HTTPS by loading a certificate and running commands.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, austinm
-ms.prod-support-area-path: WinRM
+ms.custom: sap:winrm, csstroubleshoot
 ms.technology: windows-client-system-management-components
 ---
 # How to configure WINRM for HTTPS
 
 This article provides a solution to configuring WINRM for HTTPS.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2019527
 
 ## Summary
@@ -57,9 +57,7 @@ winrm quickconfig
 
 ## More information
 
-By default WinRM HTTP uses port 80. On Windows 7 and higher, the default port is 5985.
-
-By default WinRM HTTPS uses port 443. On Windows 7 and higher, the default port is 5986.
+By default, on Windows 7 and later versions, WinRM HTTP uses port 5985 and WinRM HTTPS uses port 5986. On earlier versions of Windows, WinRM HTTP uses port 80 and WinRM HTTPS uses port 443.
 
 To confirm WinRM is listening on HTTPS, type the following command:
 

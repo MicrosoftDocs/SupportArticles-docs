@@ -2,7 +2,6 @@
 title: VMM console crashes with apostrophe characters
 description: Fixes an issue in which a Virtual Machine Manager console crashes when you add a custom property that contains an apostrophe character to the virtual machine.
 ms.date: 04/26/2020
-ms.prod-support-area-path: 
 ms.reviewer: markstan, jeffpatt
 ---
 # Adding a custom property with an apostrophe in SCVMM 2012 causes the VMM console to crash
@@ -14,7 +13,7 @@ _Original KB number:_ &nbsp; 2690553
 
 ## Symptoms
 
-Adding a custom property that contains an apostrophe character (e.g. fabrikam's custom property) to a virtual machine (VM) in System Center 2012 Virtual Machine Manager (VMM) causes the Virtual Machine Manager console to crash with a signature similar to the following:
+Adding a custom property that contains an apostrophe character (e.g. fabrikam's custom property) to a virtual machine (VM) in System Center 2012 Virtual Machine Manager (VMM) causes the Virtual Machine Manager console to crash with a signature similar to the following:
 
 > **Description:**
 >
@@ -37,12 +36,12 @@ Adding a custom property that contains an apostrophe character (e.g. fabrikam's 
 
 A corresponding event will be written to the Application Log:  
 
-> Log Name:      Application  
-> Source:        Windows Error Reporting  
-> Event ID:      1001  
+> Log Name:      Application  
+> Source:        Windows Error Reporting  
+> Event ID:      1001  
 > Task Category: None  
-> Level:         Information  
-> Keywords:      Classic  
+> Level:         Information  
+> Keywords:      Classic  
 > Description:  
 > Fault bucket , type 0  
 > Event Name: CLR20r3  

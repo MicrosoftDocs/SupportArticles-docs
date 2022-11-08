@@ -2,22 +2,22 @@
 title: Userenv errors occur and events are logged
 description: Describes how to troubleshoot issues where computers on your network can't connect to the Group Policy objects in the Sysvol folders on your network domain controllers.
 ms.date: 10/20/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, msadoff
-ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
+ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # Userenv errors occur and events are logged after you apply Group Policy to computers that are running Windows Server 2003, Windows XP, or Windows 2000
 
 This article provides a solution to issues where computers on your network can't connect to the Group Policy objects (GPO) in the Sysvol folders on your network domain controllers.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 887303
 
 ## Summary
@@ -456,7 +456,7 @@ For more information about how to troubleshoot the missing Sysvol and Netlogon s
 
 For more information about how to rebuild the Sysvol share in Windows Server 2003, see [How to rebuild the SYSVOL tree and its content in a domain](https://support.microsoft.com/help/315457).
 
-After you make sure that the Sysvol share is available, make sure that the Sysvol folder, the Sysvol share, and the root folder of the volume that contains the Sysvol folder are configured with the correct permissions. For more information about the permissions that are required by the Sysvol share and the Sysvol folder, see [Event ID 1000, 1001 is logged every five minutes in the Application event log](https://support.microsoft.com/help/290647).
+After you make sure that the Sysvol share is available, make sure that the Sysvol folder, the Sysvol share, and the root folder of the volume that contains the Sysvol folder are configured with the correct permissions.
 
 Additionally, on Windows 2000 Server, the Everyone group must be granted Full Control permission on the root folder of the volume that contains the Sysvol folder. On Windows Server 2003, the Everyone group must be granted the Read & Execute special permission to "This folder only," and the domain\Users group must be granted the following standard permissions:
 

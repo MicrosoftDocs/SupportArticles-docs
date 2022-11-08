@@ -2,7 +2,7 @@
 title: Considerations when using the Full-Text
 description: This article describes the considerations that apply when you use the SQL Server Full-Text Search engine for the Japanese language.
 ms.date: 01/15/2021
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.reviewer: kayokon
 ms.topic: article
 ms.prod: sql 
@@ -25,18 +25,18 @@ For example, you create a table and insert some Japanese phrases by running the 
 ```sql
 CREATE TABLE test(c1 int PRIMARY KEY,c2 nvarchar(255))
 
-INSERT test VALUES(1,N':::no-loc text="添付テスト":::')
-INSERT test VALUES(2,N':::no-loc text="Fw: テスト":::')
-INSERT test VALUES(3,N':::no-loc text="KK-Information:テスト":::')
-INSERT test VALUES(4,N':::no-loc text="[Q] ポリシーテスト":::')
-INSERT test VALUES(5,N':::no-loc text="KK-Information:タイトルフィルタテスト２":::')
-INSERT test VALUES(6,N':::no-loc text="テスト":::')
-INSERT test VALUES(7,N':::no-loc text="フィルタテスト３":::')
-INSERT test VALUES(8,N':::no-loc text="テストフィルタ１":::')
-INSERT test VALUES(9,N':::no-loc text="RE: テストメール":::')
-INSERT test VALUES(10,N':::no-loc text="テストメール":::')
-INSERT test VALUES(11,N':::no-loc text="White Listテスト":::')
-INSERT test VALUES(12,N':::no-loc text="フィルタリングテスト":::')
+INSERT test VALUES(1,N'添付テスト')
+INSERT test VALUES(2,N'Fw: テスト')
+INSERT test VALUES(3,N'KK-Information:テスト')
+INSERT test VALUES(4,N'[Q] ポリシーテスト')
+INSERT test VALUES(5,N'KK-Information:タイトルフィルタテスト２')
+INSERT test VALUES(6,N'テスト')
+INSERT test VALUES(7,N'フィルタテスト３')
+INSERT test VALUES(8,N'テストフィルタ１')
+INSERT test VALUES(9,N'RE: テストメール')
+INSERT test VALUES(10,N'テストメール')
+INSERT test VALUES(11,N'White Listテスト')
+INSERT test VALUES(12,N'フィルタリングテスト')
 
 CREATE FULLTEXT CATALOG test AS DEFAULT;
 GO
@@ -50,7 +50,7 @@ Then, you run the following three queries:
 - Query 1
 
     ```sql
-    SELECT * FROM test WHERE CONTAINS(c2, N':::no-loc text="テスト":::')
+    SELECT * FROM test WHERE CONTAINS(c2, N'テスト')
     ```
 
     The result of Query 1 is as follows:
@@ -64,7 +64,7 @@ Then, you run the following three queries:
 - Query 2
 
     ```sql
-    SELECT * FROM test WHERE CONTAINS(c2, '":::no-loc text="テスト*":::"')
+    SELECT * FROM test WHERE CONTAINS(c2, 'テスト*')
     ```
 
     The result of Query 2 is as follows:
@@ -80,7 +80,7 @@ Then, you run the following three queries:
 - Query 3
 
     ```sql
-    SELECT * FROM test WHERE CONTAINS(c2, '"*:::no-loc text="テスト":::*"')
+    SELECT * FROM test WHERE CONTAINS(c2, '*テスト*')
     ```
 
     The result of Query 3 is as follows:
@@ -104,7 +104,7 @@ Then, you run the following three queries:
 - Query 4
 
     ```sql
-    SELECT * FROM test WHERE c2 like ':::no-loc text="テスト":::%'
+    SELECT * FROM test WHERE c2 like 'テスト%'
     ```
 
     The result is as follows:
@@ -117,7 +117,7 @@ Then, you run the following three queries:
 - Query 5
 
     ```sql
-    SELECT * FROM test WHERE c2 like '%:::no-loc text="テスト":::%'
+    SELECT * FROM test WHERE c2 like '%テスト%'
     ```
 
     The result is as follows:

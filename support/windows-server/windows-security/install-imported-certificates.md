@@ -2,22 +2,22 @@
 title: Install imported certificates
 description: Describes how to import a Web site certificate into the certificate store of the local computer and assign the certificate to the Web site.
 ms.date: 09/29/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
+ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # How to install imported certificates on a Web server in Windows Server 2003
 
 This article describes how to import a Web site certificate into the certificate store of the local computer and assign the certificate to the Web site.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 816794
 
 ## Install the Certificates

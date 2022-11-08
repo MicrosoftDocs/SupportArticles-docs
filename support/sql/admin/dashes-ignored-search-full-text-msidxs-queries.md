@@ -2,9 +2,8 @@
 title: Dashes ignored in search with SQL Full-Text
 description: This article provides two workarounds for the problem that occurs when you perform a full-text search on SQL Server character data, or when you use a SQL distributed query with the Microsoft Index Server OLE DB provider (MSIDXS) and a prefix expansion search for a compound word that contains a hyphen (for example, XYZ-A*).
 ms.date: 01/15/2021
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.reviewer: 
-ms.topic: troubleshooting
 ms.prod: sql 
 ---
 # Dashes '-' ignored in search with SQL Full-Text and MSIDXS queries

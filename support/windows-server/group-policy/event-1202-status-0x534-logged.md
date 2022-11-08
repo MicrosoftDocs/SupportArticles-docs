@@ -2,22 +2,22 @@
 title: Event 1202 with status 0x534 logged
 description: Provides a solution to an event logged on domain controllers after modifying security policy.
 ms.date: 10/21/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
-ms.prod-support-area-path: Problems applying Group Policy objects to users or computers
+ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # Event 1202 with status 0x534 logged on Windows Server 2008 R2 domain controllers after modifying security policy
 
 This article provides a solution to an event logged on domain controllers after modifying security policy.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2000705
 
 ## Symptoms
@@ -38,7 +38,7 @@ Security policies were propagated with warning. 0x534 : No mapping between accou
 >
 > Advanced help for this problem is available on https://support.microsoft.com. Query for "troubleshooting 1202 events".
 >
-> Error 0x534 occurs when a user account in one or more Group Policy objects (GPOs) could not be resolved to a SID.  This error is possibly caused by a mistyped or deleted user account referenced in either the User Rights or Restricted Groups branch of a GPO.  To resolve this event, contact an administrator in the domain to perform the following actions:  
+> Error 0x534 occurs when a user account in one or more Group Policy objects (GPOs) could not be resolved to a SID.  This error is possibly caused by a mistyped or deleted user account referenced in either the User Rights or Restricted Groups branch of a GPO.  To resolve this event, contact an administrator in the domain to perform the following actions:  
 
 The WINLOGON.LOG contains the following text: 
 
@@ -51,23 +51,23 @@ Configure S-1-5-32-550.
 Configure S-1-5-9.  
 Configure WdiServiceHost.  
 Error 1332: No mapping between account names and security IDs was done.  
-  Cannot find WdiServiceHost.  
+  Cannot find WdiServiceHost.  
 Configure S-1-5-21-2125830507-553053660-2246957542-519.  
-  add SeTimeZonePrivilege.  
- User Rights configuration was completed with one or more errors.
+  add SeTimeZonePrivilege.  
+ User Rights configuration was completed with one or more errors.
 ...
 
-By default, the GPTMPL.INF policy in the Default Domain Controllers Policy looks like this:
+By default, the GPTMPL.INF policy in the Default Domain Controllers Policy looks like this:
 > SeSystemProfilePrivilege = *S-1-5-80-3139157870-2983391045-3678747466-658725712-1809340420,*S-1-5-32-544  
 
-Once an unrelated security setting is modified in the Default Domain Controllers Policy, the `SeSystemProfilePrivilege` entry in Default Domain Controllers Policy appears as below:  
+Once an unrelated security setting is modified in the Default Domain Controllers Policy, the `SeSystemProfilePrivilege` entry in Default Domain Controllers Policy appears as below:  
 > SeSystemProfilePrivilege = *S-1-5-32-544,WdiServiceHost
 
 For more information, see [SceCli 1202 events are logged every time Computer Group Policy settings are refreshed on a computer that is running Windows Server 2008 R2 or Windows 7](https://support.microsoft.com/help/974639).
 
 ## Cause
 
-When modifying any security setting in the Default Domain Controllers Policy using the Group Policy Management Console (GPMC) from the console of a Windows Server 2008 R2 domain controller, GPMC incorrectly translates the SID for the Wdiservice account in the policy to a user name that isn't recognized by the local machines where the policy is enforced.
+When modifying any security setting in the Default Domain Controllers Policy using the Group Policy Management Console (GPMC) from the console of a Windows Server 2008 R2 domain controller, GPMC incorrectly translates the SID for the Wdiservice account in the policy to a user name that isn't recognized by the local machines where the policy is enforced.
 This issue also occurs when a Windows 7 or Windows Server 2008 R2 member computer modifies any security setting in the Default Domain Controllers Policy on a Windows Server 2008 R2 domain controller.
 
 ## Workaround
@@ -76,10 +76,10 @@ As a temporary workaround, manually edit the GPTMPL.INF file by adding the **NT 
 
 This step will prevent the 1202 event from being logged until the next time security policy is modified in the Default Domain Controllers Policy by the relevant operating system versions.
 
-1. Open the GPTTMPL.INF file for the Default Domain Controllers Policy of a domain controller logging the Event ID 1202. The path to the GPTTMPL.INF file when SYSVOL is located below %SystemRoot% is:  
+1. Open the GPTTMPL.INF file for the Default Domain Controllers Policy of a domain controller logging the Event ID 1202. The path to the GPTTMPL.INF file when SYSVOL is located below %SystemRoot% is:  
     `%SystemRoot%\Sysvol\domain\Policies\{6AC1786C-016F-11D2-945F-00C04fB984F9}\MACHINE\Microsoft\Windows NT\SecEdit\GPTTMPL.INF`
 
-2. Locate the `SeSystemProfilePrivilege` entry in the GPTTMPL.INF and modify it as follows:
+2. Locate the `SeSystemProfilePrivilege` entry in the GPTTMPL.INF and modify it as follows:
 
     Before: `SeSystemProfilePrivilege` = *S-1-5-32-544,WdiServiceHost  
 
@@ -90,15 +90,15 @@ This step will prevent the 1202 event from being logged until the next time secu
 
 3. Save the changes to GPTTMPL.INF.
 
-4. From a command prompt on the console of the domain controller whose GPTTMPL.INF file was modified in Step 1, type **Gpupdate /force.**  
+4. From a command prompt on the console of the domain controller whose GPTTMPL.INF file was modified in Step 1, type **Gpupdate /force.**  
 
-5. View the Application log to see if an Event ID 1202 with status code 0x534 was logged. If so, review the WINLOGON.LOG to see if the event was caused by the WdiServiceHost security principal.
+5. View the Application log to see if an Event ID 1202 with status code 0x534 was logged. If so, review the WINLOGON.LOG to see if the event was caused by the WdiServiceHost security principal.
 
 ## More information
 
-In the Default Domain Controllers Policy on a Windows Server 2008 R2 domain controller, the SID for the Diagnostics Service Host (wdiservicehost) account is granted the `SeSystemProfilePrivilege` where it's added to the local SAM of the machine, picked up by SCE, then added to the GPTTMPL.INF.
+In the Default Domain Controllers Policy on a Windows Server 2008 R2 domain controller, the SID for the Diagnostics Service Host (wdiservicehost) account is granted the `SeSystemProfilePrivilege` where it's added to the local SAM of the machine, picked up by SCE, then added to the GPTTMPL.INF.
 
-When any security setting is modified in the Default Domain Controllers Policy on a Windows Server 2008 domain controller, a code defect causes the SID for the Wdiservicehost account to be replaced with its SAM account but fails to add the **NT Service\\** prefix required by SCECLI to resolve the account's name. (that is, NT Service\Wdiservicehost).
+When any security setting is modified in the Default Domain Controllers Policy on a Windows Server 2008 domain controller, a code defect causes the SID for the Wdiservicehost account to be replaced with its SAM account but fails to add the **NT Service\\** prefix required by SCECLI to resolve the account's name. (that is, NT Service\Wdiservicehost).
 
 1. The issue described in this policy occurs when the Group Policy Management Editor on Windows 7 or Windows Server 2008 R2 computers is used to modify security settings in Default Domain Controllers Policy on a Windows Server 2008 domain controller.
 

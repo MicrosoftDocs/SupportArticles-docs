@@ -1,38 +1,39 @@
 ---
-title: Can't perform a Workplace Join by using Device Registration Services
-description: Describes how to resolve an error when a user cannot join a device to a Workplace by using Device Registration Services.
+title: Can't join a device to a Workplace by using Device Registration Services
+description: Resolves an error when a user can't join a device to a Workplace by using Device Registration Services.
 ms.date: 06/08/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: domain-services
 ---
 # Can't perform a Workplace Join by using Device Registration Services
 
-This article describes an issue in which a user cannot join a device to a Workplace by using Device Registration Services. It provides two resolutions.
+This article describes an issue in which a user can't join a device to a Workplace by using Device Registration Services. It provides two resolutions.
 
 _Original product version:_ &nbsp; Windows 8.1 Enterprise, Windows Server 2012 R2 Datacenter, Windows Server 2012 R2 Standard, Azure Active Directory  
 _Original KB number:_ &nbsp; 3045387
 
 ## Symptoms
 
-When a user tries to perform a Workplace Join by using Device Registration Services, the user receives one of the following messages:
+When a user tries to do a Workplace Join by using Device Registration Services, the user receives one of the following messages:
 
-- The user receives the following message *before* providing the user's user name and password:
+- The user receives the following message _before_ providing the user's user name and password:
 
     > Confirm you are using the current sign-in info, and that your workplace uses this feature. Also, the connection to your workplace might not be working right now. Please wait and try again.
 
-- The user receives the following message *after*  the user provides the user's user name and password:
+- The user receives the following message _after_  the user provides the user's user name and password:
 
     > Can't connect to the service.
 
 ## Resolution
 
-To resolve either of these problems, use the method that is appropriate for the situation.
+To resolve either of these problems, use the method that's appropriate for the situation.
 
 ### Method 1
 
-To fix the problem for message 1, review the Event logs on the client computer that is trying to perform a Workplace Join to determine the correct solution.
+To fix the problem for message 1, review the Event logs on the client computer that's trying to do a Workplace Join to determine the correct solution.
 
-An administrator may see details in Event Viewer that resemble the following:
+An administrator may see details in Event Viewer that resemble the following example:
 
 |Event ID:|(See the following table for the Event ID.)|
 |---|---|
@@ -40,21 +41,19 @@ An administrator may see details in Event Viewer that resemble the following:
 |Source:|Microsoft-Windows-Workplace Join|
 |Level:|Error|
 |Description:|(See the following table for the Event ID description.)|
-|||
-
+  
 |Event ID|Description|Resolution|
 |---|---|---|
 |103|Workplace Join discovery failed. Server returned http status 404.|KB [3045386](https://support.microsoft.com/help/3045386) |
-|103|Workplace Join discovery failed. Server returned http status 503.|KB [3045388](https://support.microsoft.com/help/3045388) |
+|103|Workplace Join discovery failed. Server returned http status 503.|KB 3045388 |
 |102|Workplace Join discovery failed.<br/><br/>Exit Code: 0x80072EE7.<br/><br/>The server name or address could not be resolved. Could not connect to `'https://EnterpriseRegistration.domainTEST.com:443/EnrollmentServer/contract?api-version=1.0'`.|KB [3045385](https://support.microsoft.com/help/3045385) |
-|102|Workplace Join discovery failed.<br/><br/>Exit Code: 0x80072F19.<br/><br/>It was not possible to connect to the revocation server or a definitive response could not be obtained. Could not connect to `'https://EnterpriseRegistration.domain.com:443/EnrollmentServer/contract?api-version=1.0'`.|KB [3045384](https://support.microsoft.com/help/3045384) |
-|102|Workplace Join discovery failed.<br/><br/>Exit Code: 0x80072F8A.<br/><br/>The supplied certificate has been revoked. Could not connect to `'https://EnterpriseRegistration.domain.com:443/EnrollmentServer/contract?api-version=1.0'`.|KB [3045383](https://support.microsoft.com/help/3045383) |
-|102|Workplace Join discovery failed.<br/><br/>Exit Code: 0x80072F0D.<br/><br/>The certificate authority is invalid or incorrect. Could not connect to `'https://EnterpriseRegistration.domain.com:443/EnrollmentServer/contract?api-version=1.0'`.|KB [3045382](https://support.microsoft.com/help/3045382) |
-|102|Workplace Join discovery failed.<br/><br/>Exit Code: 0x80072EFD.<br/><br/>A connection with the server could not be established. Could not connect to `'https://EnterpriseRegistration.domain.com:443/EnrollmentServer/contract?api-version=1.0'`.|KB [3045381](https://support.microsoft.com/help/3045381) |
-|102|Workplace Join discovery failed.<br/><br/>Exit Code: 0x80004005.<br/><br/>An unknown error has occurred. Could not connect to `'https://EnterpriseRegistration.domain.com:443/EnrollmentServer/contract?api-version=1.0'`.|KB [3045380](https://support.microsoft.com/help/3045380) |
+|102|Workplace Join discovery failed.<br/><br/>Exit Code: 0x80072F19.<br/><br/>It was not possible to connect to the revocation server or a definitive response could not be obtained. Could not connect to `'https://EnterpriseRegistration.domain.com:443/EnrollmentServer/contract?api-version=1.0'`.|KB 3045384 |
+|102|Workplace Join discovery failed.<br/><br/>Exit Code: 0x80072F8A.<br/><br/>The supplied certificate has been revoked. Could not connect to `'https://EnterpriseRegistration.domain.com:443/EnrollmentServer/contract?api-version=1.0'`.|KB 3045383 |
+|102|Workplace Join discovery failed.<br/><br/>Exit Code: 0x80072F0D.<br/><br/>The certificate authority is invalid or incorrect. Could not connect to `'https://EnterpriseRegistration.domain.com:443/EnrollmentServer/contract?api-version=1.0'`.|KB 3045382 |
+|102|Workplace Join discovery failed.<br/><br/>Exit Code: 0x80072EFD.<br/><br/>A connection with the server could not be established. Could not connect to `'https://EnterpriseRegistration.domain.com:443/EnrollmentServer/contract?api-version=1.0'`.|KB 3045381|
+|102|Workplace Join discovery failed.<br/><br/>Exit Code: 0x80004005.<br/><br/>An unknown error has occurred. Could not connect to `'https://EnterpriseRegistration.domain.com:443/EnrollmentServer/contract?api-version=1.0'`.|KB 3045380 |
 |200|"The maximum number of devices that can be joined to the workplace by the user has been reached."|KB [3045379](https://support.microsoft.com/help/3045379) |
-||||
-
+  
 ### Method 2
 
 To fix the problem for message 2, see ["Can't connect to the service" error when you try to register a device](https://support.microsoft.com/help/3045378).
@@ -65,7 +64,7 @@ To quickly troubleshoot these problems, try one or more of the following things.
 
 ### Verify DNS
 
-Verify the DNS configuration by using NSlookup, and verify that the answers are correct. To do this, open a Command Prompt window, and then run the following command:
+Verify the DNS configuration by using `NSlookup`, and verify that the answers are correct. To do so, open a Command Prompt window, and then run the following command:
 
 ```console
 Nslookup enterpriseregistration.domain.com
@@ -87,40 +86,42 @@ ipconfig /FlushDNS
 
 ### Verify that Device Registration is enabled
 
-If you try to perform Workplace Join to Azure Active Directory
+If you try to do Workplace Join to Azure Active Directory:
 
-1. Sign in to Azure portal or start the Azure AD console from M365 admin center as a Company Administrator.
-2. Go to the directory where the user is trying to perform the join.
+1. Sign in to the Azure portal, or start the Azure AD console from Microsoft 365 admin center as a Company Administrator.
+2. Go to the directory where the user is trying to do the join.
 3. Go to **Configure**.
 4. Scroll down to the **Device Registration** section.
-5. Make sure that the setting that is labeled **ENABLE WORKPLACE JOIN** is toggled to **Yes**. ("Yes" will be blue.)
+5. Make sure the setting labeled **ENABLE WORKPLACE JOIN** is toggled to **Yes**. ("Yes" will be blue.)
 
-If you try to perform Workplace Join to your local Active Directory domain, take the following action:
+If you try to do Workplace Join to your local Active Directory domain, take the following actions:
 
-- Open the Active Directory Federation Services (AD FS) management console, and select **Relying Party Trusts** to determine whether the Device Registration Service trust is enabled on each node of the AD FS farm.
+- Open the Active Directory Federation Services (AD FS) management console.
+- Select **Relying Party Trusts** to determine whether the Device Registration Service trust is enabled on each node of the AD FS farm.
 
 ### Verify that the Active Directory Federation Services service and the Device Registration Services service are running
 
-If you try to perform a Workplace Join to your local Active Directory, you should log on to each node of the AD FS farm and then follow these steps:
+If you try to do a Workplace Join to your local Active Directory, you should log on to each node of the AD FS farm and then follow these steps:
 
 1. Go to **Control Panel**, **Administrative Tools**, and then **Services** (Services.msc).
 2. Locate the Active Directory Federation Services service, and verify its status.
 3. Locate the Device Registration Services service, and verify its status.
-4. If either service is not running, start the services.
+4. If either service isn't running, start the services.
 
 ### Verify that the host name bindings are registered for each node in the AD FS farm
 
-If you try to perform a Workplace Join to your local Active Directory, you should follow the steps at the following Microsoft TechNet website and make sure that the host name (such as EnterpriseRegistration. **domain_name**. **domain_extension**) is bound to port 443:
+If you try to do a Workplace Join to your local Active Directory, follow the steps at the following Microsoft TechNet website:
+
  [Configure a Host Header for a Web Site (IIS 7)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753195(v=ws.10)?redirectedfrom=MSDN)
+
+Make sure that the host name (such as EnterpriseRegistration. **domain_name**. **domain_extension**) is bound to port 443.
 
 ### Update the root certificates
 
 Run [Microsoft Update](https://update.microsoft.com/), and make sure that the [Updates for Root Certificates](https://support.microsoft.com/help/931125) are all installed
 
-### Verify date and time settings, clear SSL state, and reregister DLL files
+### Verify that traffic is enabled if you're using a third-party proxy or firewall server
 
-Try the methods that are listed in [You cannot log in to or connect to secured Web sites in Internet Explorer](https://support.microsoft.com/help/813444).
+If you try to do a Workplace Join to your local Active Directory, verify that there's a rule to enable incoming TCP connections to EnterpriseRegistration. **domain_name**. **domain_extension**. It should allow for traffic to pass through to the DRS server.
 
-### Verify that traffic is enabled if you are using a third-party proxy or firewall server
-
-If you try to perform a Workplace Join to your local Active Directory, you should verify that there is a rule to enable incoming TCP connections to EnterpriseRegistration. **domain_name**. **domain_extension**. This should allow for traffic to pass through to the DRS server.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

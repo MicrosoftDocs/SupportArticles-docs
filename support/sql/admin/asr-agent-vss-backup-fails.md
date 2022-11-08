@@ -2,7 +2,7 @@
 title: ASR Agent or non-component VSS Backup fails
 description: This article provides a workaround for the problem in which a non-component VSS Backup, such as ASR Agent, fails for a server that is hosting SQL Server 2008 R2.
 ms.date: 09/02/2020
-ms.prod-support-area-path:  Administration and Management
+ms.custom: sap:Administration and Management
 ms.reviewer: gfourrat
 ms.prod: sql
 ---
@@ -62,9 +62,9 @@ This issue was fixed in the initial release (RTM) of SQL Server 2012. Because SQ
 
 In cases in which SQL Server 2008 or SQL Server 2008 R2 is experiencing this issue, we suggest that you install a free edition of a recent SQL Server version, such as SQL Server Express Edition. (See the [More information](#more-information) section for the exact version to use, depending on the version of operating system). To do this, select **Upgrade shared features only**  on the **Select Instance** page of the SQL Server Express installation wizard.
 
-![setup](./media/asr-agent-vss-backup-fails/4508999_en_1.png)
+:::image type="content" source="media/asr-agent-vss-backup-fails/sql-server-installation-center.png" alt-text="Screenshot of the Upgrade from SQL Server 2005, SQL Server 2008, SQL Server 2008 R2 or SQL Server 2012 option in the Installation Center window.":::
 
-![instance](./media/asr-agent-vss-backup-fails/4509005_en_1.png)
+:::image type="content" source="./media/asr-agent-vss-backup-fails/select-instance.png" alt-text="Screenshot of the Upgrade shared features only option in the Select Instance page." border="false":::
 
 This method upgrades all the shared components to the SQL Server version that is being used. This means that the same SQL Server VSS Writer service that was previously running the 2008 or 2008 R2 version of the writer is now running the more recent SQL Server version from SQL Express. The more recent version is backward compatible.
 

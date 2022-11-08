@@ -2,7 +2,7 @@
 title: Support policy for clustered configurations
 description: This article describes the Microsoft support policy for clustered configurations of SQL Server with Windows Server.
 ms.date: 11/09/2020
-ms.prod-support-area-path: High Availability and Disaster Recovery Features
+ms.custom: sap:High Availability and Disaster Recovery Features
 ms.reviewer: UTTAMKP
 ms.prod: sql
 ---
@@ -54,7 +54,7 @@ For SQL Server 2008 and SQL Server 2008 R2 editions, please refer to the followi
 
 - For information about operating systems that are supported for SQL Server Failover Clustering, refer to the "Verify Your Operating System Settings" section in the following topic: [Before Installing Failover Clustering](/sql/sql-server/failover-clusters/install/before-installing-failover-clustering)
 
-  In summary, SQL Server 2008 and SQL Server 2008 R2 editions support up to 8 nodes on Windows Server 2003 and 16 nodes on Windows Server 2008 and later versions-specific details as related to AlwaysOn installations.
+  In summary, SQL Server 2008 and SQL Server 2008 R2 editions support up to 8 nodes on Windows Server 2003 and 16 nodes on Windows Server 2008 and later versions-specific details as related to Always On installations.
 
 SQL Server 2012, SQL Server 2014 and SQL Server 2016
 

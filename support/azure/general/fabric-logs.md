@@ -5,7 +5,6 @@ author: genlin
 ms.author: genli
 ms.service: service-fabric
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ---
 # Microsoft Azure Service Fabric Logs
@@ -29,4 +28,5 @@ The following log files and PerfCounter files are captured by Service Fabric and
 |Example|D:\SvcFab\Log\*.trace|
 |Service Fabric and Windows Perf Counters<br/>(recursively collected from log root)|{ServiceFabricLogsDirectory}\*.blg|
 |Example|D:\SvcFab\Log\*.blg|
-|||
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

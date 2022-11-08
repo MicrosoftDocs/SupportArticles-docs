@@ -3,21 +3,21 @@ title: Software Defined Data Center and Software Defined Networking
 description: Software Defined Data Center and Software Defined Networking
 ms.date: 09/14/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, johnmar
-ms.prod-support-area-path: Internal DNS Server for SDN
+ms.custom: sap:internal-dns-server-for-sdn, csstroubleshoot
 ms.technology: windows-server-sdn
 ---
 # Software Defined Data Center and Software Defined Networking in Windows Server
 
 This article provides some information about Software Defined Data Center and Software Defined Networking.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 4464776
 
 ## Summary

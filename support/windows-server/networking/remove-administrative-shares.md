@@ -1,28 +1,28 @@
 ---
 title: Remove administrative shares
-description: Describes how to remove administrative shares in Windows Server 2008, and how to prevent Windows Server 2008 from automatically creating administrative shares.
-ms.date: 10/12/2020
-author: Deland-Han 
+description: Describes how to remove administrative shares in Windows Server, and how to prevent Windows Server from automatically creating administrative shares.
+ms.date: 08/25/2022
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
+ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
 ms.technology: networking
 ---
-# How to remove administrative shares in Windows Server 2008
+# How to remove administrative shares in Windows Server
 
-This article describes how to remove default administrative shares, and how to prevent these shares from being automatically created in Windows Server 2008.
+This article describes how to remove default administrative shares, and how to prevent these shares from being automatically created in Windows Server.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server  
 _Original KB number:_ &nbsp; 954422
 
 ## Introduction
 
-By default, Windows Server 2008 automatically creates special hidden administrative shares that administrators, programs, and services can use to manage the computer environment or network. These special shared resources aren't visible in Windows Explorer or in My Computer. However, you can view them by using the Shared Folders tool in Computer Management. Depending on the configuration of your computer, some or all of the following special shared resources may be listed in the Shares folder in Shared Folders:
+By default, Windows Server automatically creates special hidden administrative shares that administrators, programs, and services can use to manage the computer environment or network. These special shared resources aren't visible in Windows Explorer or in My Computer. However, you can view them by using the Shared Folders tool in Computer Management. Depending on the configuration of your computer, some or all of the following special shared resources may be listed in the Shares folder in Shared Folders:
 
 - **DriveLetter**$: It's a shared root partition or volume. Shared root partitions and volumes are displayed as the drive letter name appended with the dollar sign ($). For example, when drive letters C and D are shared, they're displayed as C$ and D$.
 
@@ -89,4 +89,4 @@ Check whether the problem is fixed. If the problem is fixed, you're finished wit
 
 ## References
 
-For more information about how to manage shared resources by using Shared Folders in Windows Server 2008, see the Shared Folders Help files. To do it, select **Start**, point to **Administrative Tools**, and then select **Computer Management**. In the console tree, right-click **Shared Folders**, and then select **Help**.
+For more information about how to manage shared resources by using Shared Folders in Windows Server, see the Shared Folders Help files. To do it, select **Start**, point to **Administrative Tools**, and then select **Computer Management**. In the console tree, right-click **Shared Folders**, and then select **Help**.

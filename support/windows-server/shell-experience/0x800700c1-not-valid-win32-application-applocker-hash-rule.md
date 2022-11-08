@@ -1,35 +1,28 @@
 ---
 title: 0x800700C1 not a valid Win32 application error when you create an AppLocker hash rule for a file in Windows
-description: Describes an issue in which you can't create an AppLocker hash rule for a file in Windows 8, Windows Server 2012, Windows 7, or Windows Server 2008 R2.
-ms.date: 09/21/2020
+description: Describes an issue in which you can't create an AppLocker hash rule for a file in Windows.
+ms.date: 06/21/2022
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: danesc, kaushika
-ms.prod-support-area-path: 1st Party Applications
+ms.custom: sap:1st-party-applications, csstroubleshoot
 ms.technology: windows-server-shell-experience
 ---
 # Error when you create an AppLocker hash rule for a file in Windows: 0x800700C1: not a valid Win32 application
 
 This article describes an issue in which you can't create an AppLocker hash rule for a file in Windows.
 
-_Original product version:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2749690
 
 ## Symptoms
 
-Assume that you try to create an AppLocker hash rule for a file on a computer that is running one of the following operating systems:  
-
-- Windows 8
-- Windows Server 2012
-- Windows 7 that has security update MS12-024 installed
-- Windows Server 2008 R2 that has security update MS12-024 installed
-
-However, you can't create the rule, and you receive the following error message:
+Assume that you try to create an AppLocker hash rule for a file on a Windows computer. However, you can't create the rule, and you receive the following error message:
 > 0x800700C1: not a valid Win32 application
 
 ## Cause
@@ -51,30 +44,30 @@ If you decide to continue working with such files, you can create AppLocker path
 
 On Windows 8 and Windows Server 2012-based computers, or on Windows 7 and Windows Server 2008 R2-based computers that have security update MS12-024 installed, you can't create a hash or a publisher rule for unsigned files. You can only create path-based rules for such files. Additionally, if your AppLocker policy contains a hash or publisher rule that is based on such a file, that rule no longer works for that file. The following AppLocker policy is an example of this behavior:
 
->\<AppLockerPolicy Version="1">  
-\<RuleCollection Type="Exe" EnforcementMode="Enforced">  
-\<FileHashRule Action="Allow" UserOrGroupSid="S-1-1-0" Description="" Name="Allow Calculator"   Id="7509591f-7552-4ed0-ac56-7b727cd1f9cf">  
-\<Conditions>  
-\<FileHashCondition>  
-\<FileHash Type="SHA256" SourceFileLength="53344" SourceFileName="calculator.exe"   Data="0x2E8950C38FE3DD02D9F9A012BA9481E7E4704838BB5208E3F7086B6935520A93"/>  
-\</FileHashCondition>  
- \</Conditions>  
-\</FileHashRule>  
-\<FilePublisherRule Id="a3ab2d94-c20d-4039-8f2b-6caaff04e816" Name="Deny Contoso"   Description="Deny Games" UserOrGroupSid="S-1-1-0" Action="Deny">  
-\<Conditions>  
-\<FilePublisherCondition PublisherName="Contoso" ProductName="Attack of Zombies" BinaryName="*">  
-\<BinaryVersionRange LowSection="*" HighSection="*" />  
- \</FilePublisherCondition>  
-\</Conditions>  
- \</FilePublisherRule>  
+```xml
+<AppLockerPolicy Version="1">  
+<RuleCollection Type="Exe" EnforcementMode="Enforced">  
+<FileHashRule Action="Allow" UserOrGroupSid="S-1-1-0" Description="" Name="Allow Calculator"   Id="7509591f-7552-4ed0-ac56-7b727cd1f9cf">  
+<Conditions>  
+<FileHashCondition>  
+<FileHash Type="SHA256" SourceFileLength="53344" SourceFileName="calculator.exe"   Data="0x2E8950C38FE3DD02D9F9A012BA9481E7E4704838BB5208E3F7086B6935520A93"/>  
+</FileHashCondition>  
+              </Conditions>  
+</FileHashRule>  
+<FilePublisherRule Id="a3ab2d94-c20d-4039-8f2b-6caaff04e816" Name="Deny Contoso"   Description="Deny Games" UserOrGroupSid="S-1-1-0" Action="Deny">  
+<Conditions>  
+<FilePublisherCondition PublisherName="Contoso" ProductName="Attack of Zombies" BinaryName="*">  
+<BinaryVersionRange LowSection="*" HighSection="*" />  
+                     </FilePublisherCondition>  
+</Conditions>  
+        </FilePublisherRule>  
 ...  
 ...  
-\</AppLockerPolicy>  
+</AppLockerPolicy>  
+```
 
 In this example, the AppLocker policy has two rules. The first rule ("Allow Calculator") is a hash rule that allows Calculator.exe to run. The second rule ("Deny Contoso") is a publisher rule that blocks any file that belongs to the Attack of Zombies game that is published by Contoso. As both Calculator.exe and Zombies.exe meet one of the two conditions that were mentioned earlier, Windows Authenticode Signature verification fails. Before you apply MS12-024, Calculator.exe is allowed by the "Allow Calculator" rule, and Zombies.exe is blocked by the "Deny Contoso" rule. However, after you apply MS12-024, AppLocker can't process the SHA2 Authenticode hash for Calculator.exe and considers Zombies.exe as an unsigned file. Therefore, neither of the rules is triggered, and unexpected behavior occurs.
 
 ## References
 
-For more information about the Windows Authenticode Portable Executable file signature format, go to the following MSDN website:
-
-[General information about the Windows Authenticode Portable Executable file signature format](https://msdn.microsoft.com/windows/hardware/gg463180)
+For more information about the Windows Authenticode Portable Executable file signature format, see [General information about the Windows Authenticode Portable Executable file signature format](https://download.microsoft.com/download/9/c/5/9c5b2167-8017-4bae-9fde-d599bac8184a/Authenticode_PE.docx).

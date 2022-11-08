@@ -4,20 +4,20 @@ description: Describes the hotfixes that are currently available for Windows Ser
 ms.date: 10/23/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: cpuckett, kaushika
-ms.prod-support-area-path: Cluster-Aware Updating (CAU)
+ms.custom: sap:cluster-aware-updating-cau, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # Recommended hotfixes and updates for Windows Server 2012-based failover clusters
 
 This article describes the hotfixes that are currently available for Windows Server 2012-based failover clusters and highly recommended to be installed on each server of a failover cluster.
 
-_Original product version:_ &nbsp; Windows Server 2012  
+_Applies to:_ &nbsp; Windows Server 2012  
 _Original KB number:_ &nbsp; 2784261
 
 ## Summary
@@ -52,7 +52,6 @@ These updates are considered to be important to install to ensure the highest le
 |Jan. 23, 2013| [2803748](https://support.microsoft.com/help/2803748)|Failover Cluster Management snap-in crashes after you install update 2750149 on a Windows Server 2012-based failover cluster|Failover Cluster Management snap-in|Resolves a crash in the Failover Cluster Management snap-in after update 2750149 is installed on a Windows Server 2012-based failover cluster. Available from Windows Update or the Microsoft Download Center.|
 |Nov. 13, 2012| [2770917](https://support.microsoft.com/help/2770917)|Windows 8 and Windows Server 2012 cumulative update: November 2012|Multiple|Improves clustered server performance and reliability in Hyper-V and Scale-Out File Server scenarios. Improves SMB service and client reliability under certain stress conditions. Install update 2770917 by using Windows Update in order to receive the cumulative update as described in KB 2770917.|
 |Nov. 13, 2012| [976424](https://support.microsoft.com/help/976424)|Error code when the kpasswd protocol fails after you perform an authoritative restore: "KDC_ERROR_S_PRINCIPAL_UNKNOWN"|KDCSVC|Install on every domain controller that is running Windows Server 2008 Service Pack 2 or Windows Server 2008 R2 in order to add a Windows Server 2012 failover cluster. Otherwise, Create Cluster may fail with error message: CreateClusterNameCOIfNotExists (6783): Unable to set password on \<ClusterName$> when it tries to set the password for the cluster computer object. This hotfix is included in Windows Server 2008 R2 Service Pack 1.|
-||||||
 
 ## More information
 

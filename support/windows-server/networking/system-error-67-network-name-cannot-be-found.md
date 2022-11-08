@@ -3,21 +3,21 @@ title: System error 67 has occurred
 description: Helps to fix the error message "System error 67 has occurred. The network name cannot be found".
 ms.date: 09/27/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
+ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
 ms.technology: networking
 ---
 # You receive a "System error 67 has occurred. The network name cannot be found" error message  
 
 This article helps to fix the error message "System error 67 has occurred. The network name cannot be found".  
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 843156
 
 ## Symptoms

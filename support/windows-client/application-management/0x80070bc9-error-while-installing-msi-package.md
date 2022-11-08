@@ -1,24 +1,24 @@
 ---
 title: 0x80070BC9 error when installing MSI package
 description: Describes an issue that occurs during Windows Setup or a hotfix installation.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: MSI
+ms.custom: sap:msi, csstroubleshoot
 ms.technology: windows-client-application-compatibility
 ---
 # "HRESULT: 0x80070BC9" error message while you're installing an MSI package during Windows setup or hotfix installation
 
 This article provides help to fix the 0x80070BC9 error that occurs when you're installing an MSI package during Windows setup or hotfix installation.
 
-_Original product version:_ &nbsp;Windows 7 Service Pack 1  
-_Original KB number:_ &nbsp;3024471
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
+_Original KB number:_ &nbsp; 3024471
 
 ## Symptoms
 

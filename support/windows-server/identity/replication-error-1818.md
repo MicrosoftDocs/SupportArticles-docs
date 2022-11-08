@@ -4,13 +4,13 @@ description: Describes an issue where AD operations fail with error 1818 (The re
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Troubleshooting AD Replication error 1818: The remote procedure call was cancelled
@@ -20,7 +20,7 @@ This article describes an issue where Active Directory Replications fail with er
 > [!NOTE]
 > **Home users:** This article is only intended for technical support agents and IT professionals. If you're looking for help with a problem, [ask the Microsoft Community](https://answers.microsoft.com).  
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2694215
 
 ## Symptoms
@@ -32,7 +32,6 @@ This article describes the symptoms, cause, and resolution steps when Active Dir
     |Decimal|Hex|Symbolic|Error string|
     |---|---|---|---|
     |1818|0x71a|RPC_S_CALL_CANCELLED|The remote procedure call was cancelled.|
-    |||||
 
 2. The following events get logged
 
@@ -42,17 +41,16 @@ This article describes the symptoms, cause, and resolution steps when Active Dir
     |NTDS Replication|1188|A thread in Active Directory is waiting for the completion of a RPC made to the following domain controller.<br/>Domain controller:<br/>b8b5a0e4-92d5-4a88-a601-61971d7033af._msdcs.Contoso.com<br/>Operation:<br/>get changes<br/>Thread ID:<br/>448<br/>Timeout period (minutes):<br/>5<br/>Active Directory has attempted to cancel the call and recover this thread.<br/>User Action<br/>If this condition continues, restart the domain controller.|
     |<br/>NTDS Replication|1173 with error status 1818|Internal event: Active Directory has encountered the following exception and associated parameters. Exception: e0010002 Parameter: 0 Additional Data Error value: 1818 Internal ID: 5000ede|
     |NTDS Replication|1085 with error status 1818|Internal event: Active Directory could not synchronize the following directory partition with the domain controller at the following network address.<br/>Directory partition: \<NC><br/>Network address: \<GUID-based DC name><br/>If this error continues, the Knowledge Consistency Checker (KCC) will reconfigure the replication links and bypass the domain controller.<br/>User Action<br/>Verify that the network address can be resolved with a DNS query.<br/>Additional Data Error value: 1818 The remote procedure call was cancelled.|
-    ||||
 
     . `Repadmin /showreps` displays the following error message
 
-    > *DC=Contoso,DC=com*  
+    > _DC=Contoso,DC=com_  
     >
     > *\<Sitename>\\\<DCname> via RPC DC*  
     >
     > *DC object GUID: \<GUID> Last attempt @ 2009-11-25 10:56:55 failed, result 1818 (0x71a): Can't retrieve message string 1818*  
     >
-    > *(0x71a), error 1815. 823 consecutive failure(s). Last success @ (never).*  
+    > _(0x71a), error 1815. 823 consecutive failure(s). Last success @ (never)._  
 
 3. `Repadmin /showreps` from Domain Controller Name shows that it's failing to pull Domain NC from \<SiteName> but can pull all other NCs
 
@@ -60,17 +58,17 @@ This article describes the symptoms, cause, and resolution steps when Active Dir
     >
     > *\<Sitename>\\\<DC name>*  
     >
-    > *DC Options: IS_GC*  
+    > _DC Options: IS_GC_  
     >
-    > *Site Options: IS_INTER_SITE_AUTO_TOPOLOGY_DISABLED*  
+    > _Site Options: IS_INTER_SITE_AUTO_TOPOLOGY_DISABLED_  
     >
     > *DC object GUID: \<GUID>*  
     >
     > *DC invocationID: \<InvocationID>*  
     >
-    > *==== INBOUND NEIGHBORS =====================================*  
+    > _==== INBOUND NEIGHBORS =====================================_  
     >
-    > *DC=Contoso,DC=com*  
+    > _DC=Contoso,DC=com_  
     >
     > *\<Sitename>\\\<DCname> via RPC DC*  
     >
@@ -78,9 +76,9 @@ This article describes the symptoms, cause, and resolution steps when Active Dir
     >
     > *Last attempt @ \<DateTime> failed, result 1818 (0x71a):*  
     >
-    > *Can't retrieve message string 1818 (0x71a), error 1815. 123 consecutive*  
+    > _Can't retrieve message string 1818 (0x71a), error 1815. 123 consecutive_  
     >
-    > *failure(s). Last success @ (never).*  
+    > _failure(s). Last success @ (never)._  
 
 4. DCPromo may fail while promoting a new domain controller and you'll see the following error on the DCPROMO GUI
 
@@ -95,7 +93,7 @@ This article describes the symptoms, cause, and resolution steps when Active Dir
 
     > *\<DateTime> [INFO] EVENTLOG (Informational): NTDS General / Service Control : 1004*  
     >
-    > *Active Directory Domain Services was shut down successfully.*  
+    > _Active Directory Domain Services was shut down successfully._  
     >
     >  
     >
@@ -117,11 +115,11 @@ This article describes the symptoms, cause, and resolution steps when Active Dir
 
 5. While trying to rehost a partition on the Global catalog
 
-    > *repadmin /rehost fail with DsReplicaAdd failed with status*  
+    > _repadmin /rehost fail with DsReplicaAdd failed with status_  
     >
-    > *1818 (0x71a)>*
+    > _1818 (0x71a)>_
     >
-    > *DsReplicaAdd fails with status 1818 (0x71a)*  
+    > _DsReplicaAdd fails with status 1818 (0x71a)_  
 
 ## Cause
 
@@ -241,4 +239,4 @@ Some specific root causes for Active Directory logging `1818 \ 0x71a \ RPC_S_CAL
 
 ## More information
 
-[Active Directory changes do not replicate in Windows Server 2003](https://support.microsoft.com/default.aspx?scid=kb;EN-US;830746)
+[Active Directory changes do not replicate](/troubleshoot/windows-server/identity/active-directory-changes-not-replicate)

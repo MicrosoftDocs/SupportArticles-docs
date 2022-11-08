@@ -2,12 +2,13 @@
 title: Can't use Azure Multi-Factor Authentication to sign in to cloud services after you lose your phone or the phone number changes
 description: Describes an issue in which you don't receive the verification code for Azure Multi-Factor Authentication because you lost your phone or your phone number has changed. Therefore, you can't sign in to your cloud services account.
 ms.date: 07/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid, willfid
+ms.service: active-directory
+ms.subservice: authentication
 ---
 # Can't use Azure Multi-Factor Authentication to sign in to cloud services after you lose your phone or the phone number changes
 
-_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles),Azure Active Directory,Microsoft Intune,Azure Backup,Office 365 Identity Management  
+_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Azure Active Directory, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2834954
 
 ## Symptoms
@@ -21,9 +22,7 @@ Ask another cloud services admin to reset your Multi-Factor Authentication setti
 1. Sign in to the cloud service portal as an admin.
 2. Go to [https://account.activedirectory.windowsazure.com/usermanagement/multifactorverification.aspx](https://account.activedirectory.windowsazure.com/usermanagement/multifactorverification.aspx).
 3. Select the check box for the admin account whose Multi-Factor Authentication settings you want to reset.
-4. Click **Manage user settings**.
-5. Select the **Require selected users to provide contact methods again** check box, and then click **Save**.
+4. Select **Manage user settings**.
+5. Select the **Require selected users to provide contact methods again** check box, and then select **Save**.
 
-## MORE INFORMATION
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazuread) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -1,10 +1,10 @@
 ---
 title: Team Foundation Server 2015 known issues
 description: This article describes the known issues in Team Foundation Server 2015.
-ms.prod: devops
 ms.date: 08/14/2020
-ms.prod-support-area-path: Server Administration
+ms.custom: sap:Server Administration
 ms.topic: article
+ms.service: azure-devops-server
 ---
 # Team Foundation Server 2015 known issues
 
@@ -36,11 +36,11 @@ To discover what is new in Team Foundation Server 2015, see the [Team Foundation
   - Update the custom process template to match the `syncnamechanges` property of the `OOB` template, and upload it to a new collection.
   - Contact Customer Support to have them to provide a script to fix the conflicting fields.
 
-- Fields marked as *syncnamechanges=false* through identity rules cause issues for the client object model.
+- Fields marked as _syncnamechanges=false_ through identity rules cause issues for the client object model.
 
-    In Team Foundation Server 2015, we introduced the concept of an *identity field*. A field is considered to be an identity field if it has any rules on it that relate to identities, such as \<ValidUser />. This enables us to fix issues that involve duplicate display names. Previously, if two users had the same name, you could not differentiate between them. Now that we have identity fields, we store the DisplayPart as 'display name \<email or domain\alias>'. For example, instead of 'Sean Contoso', the DisplayPart is now stored as 'Sean Contoso \<scontoso@microsoft.com>'.
+    In Team Foundation Server 2015, we introduced the concept of an _identity field_. A field is considered to be an identity field if it has any rules on it that relate to identities, such as \<ValidUser />. This enables us to fix issues that involve duplicate display names. Previously, if two users had the same name, you could not differentiate between them. Now that we have identity fields, we store the DisplayPart as 'display name \<email or domain\alias>'. For example, instead of 'Sean Contoso', the DisplayPart is now stored as 'Sean Contoso \<scontoso@microsoft.com>'.
 
-- If *syncnamechanges=true* is set for a field, we store the Constant ID of the value instead of the actual string value for the field. If *syncnamechanges=false* is set, the string value is directly stored on the work item. For identity fields, there is an issue that affects the client object model. Because the string value is stored, we are returning that string value as-is to the client. This causes the client-side rule engine to treat the field as invalid because it is not expecting the value in the format of 'Sean Contoso \<scontoso@microsoft.com>'.
+- If _syncnamechanges=true_ is set for a field, we store the Constant ID of the value instead of the actual string value for the field. If _syncnamechanges=false_ is set, the string value is directly stored on the work item. For identity fields, there is an issue that affects the client object model. Because the string value is stored, we are returning that string value as-is to the client. This causes the client-side rule engine to treat the field as invalid because it is not expecting the value in the format of 'Sean Contoso \<scontoso@microsoft.com>'.
 
 - Workaround options:
 
@@ -59,3 +59,5 @@ To discover what is new in Team Foundation Server 2015, see the [Team Foundation
 ### Requirements and compatibility
 
 For the requirements and compatibility for Team Foundation Server 2015, see [Team Foundation Server Compatibility and Requirements Summary](https://mikefourie.files.wordpress.com/2015/08/tfs2015compat.pdf).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

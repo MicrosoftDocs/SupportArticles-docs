@@ -2,22 +2,22 @@
 title: CMAK-based VPN doesn't work
 description: Address an issue in which CMAK-based VPN client does not work after Windows is upgraded to Windows 10, version 1709 or Windows 10, version 1803.
 ms.date: 09/11/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
-ms.reviewer: kaushika
-ms.prod-support-area-path: Remote access
+ms.reviewer: kaushika, v-jeffbo
+ms.custom: sap:remote-access, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # CMAK-based VPN client doesn't work after an in-place upgrade to Windows 10
 
 This article helps fix an issue where CMAK-based VPN client does not work after Windows is upgraded to Windows 10 - all editions.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4052854
 
 ## Symptom

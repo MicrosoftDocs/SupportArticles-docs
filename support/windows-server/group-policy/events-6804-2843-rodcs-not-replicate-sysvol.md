@@ -4,20 +4,20 @@ description: Discusses an issue in which Events 6804 and 2843 are logged and ROD
 ms.date: 09/11/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
-ms.prod-support-area-path: Sysvol access or replication issues
+ms.custom: sap:sysvol-access-or-replication-issues, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # Events 6804 and 2843 are logged and RODCs do not replicate SYSVOL
 
 This article provides a solution to an issue where events 6804 and 2843 are logged when read-only domain controllers (RODC) don't replicate inbound the system volume (SYSVOL) shared directory.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 3212965
 
 ## Symptoms
@@ -72,17 +72,17 @@ To resolve this issue, follow these steps:
     > [!NOTE]
     > There may be no connections listed here, or there may be manually created connections.
 
-    ![Screenshot of NTDS Settings object](./media/events-6804-2843-rodcs-not-replicate-sysvol/ntds-settings.png)
+    :::image type="content" source="media/events-6804-2843-rodcs-not-replicate-sysvol/ntds-settings.png" alt-text="Find the NTDS Settings object in the Servers folder by expanding the Default-first-site-name folder under the Sites folder.":::
 
 4. Create a connection object, and give it the same name as the default object. For example, name the object **RODC Connection (FRS)**.
 
-    ![Screenshot of creating a connection object](./media/events-6804-2843-rodcs-not-replicate-sysvol/create-connection-object.png)
+    :::image type="content" source="media/events-6804-2843-rodcs-not-replicate-sysvol/create-connection-object.png" alt-text="Create a connection object together with the same name as the default object.":::
 
 5. Edit the new connection in Adsiedit .msc or by using the Dssite.msc **Attribute Editor** tab. Navigate to the **options** attribute, and then enter **0x40** in the **Value** field.
 
-    ![Screenshot of editing Options attribute](./media/events-6804-2843-rodcs-not-replicate-sysvol/edit-options-attribute.png)
+    :::image type="content" source="media/events-6804-2843-rodcs-not-replicate-sysvol/edit-options-attribute.png" alt-text="Edit the Options' attribute in the Attribute Editor tab.":::
 
-    ![Screenshot of Options attribute in FRS properties](./media/events-6804-2843-rodcs-not-replicate-sysvol/options-attribute-in-frs-properties.png)
+    :::image type="content" source="media/events-6804-2843-rodcs-not-replicate-sysvol/options-attribute-in-frs-properties.png" alt-text="Options' attribute shown in the Attribute Editor tab of the F R S properties dialog box." border="false":::
 
 6. Repeat steps 4 and 5 to create more connections, as necessary.
 7. Force Active Directory replication outbound from this DC to the RODCs, or wait for convergence to occur. When the DFSR service on the RODC sees these connections, SYSVOL begins to replicate again.

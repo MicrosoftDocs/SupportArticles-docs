@@ -1,0 +1,6 @@
+- name: Can't use the Scale-140 logo
+  href: ./cannot-use-scale-140-badge-logo.md
+- name: Deploy web applications with Xcopy
+  href: ./deploy-aspnet-app-xcopy-command.md
+- name: Instrumenting an signed assembly would throw warning message
+  href: ./instrumenting-signed-assembly-throw-warning-message.md

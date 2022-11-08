@@ -4,7 +4,7 @@ description: Overview of App-V troubleshooting articles for Windows clients.
 ms.date: 01/19/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

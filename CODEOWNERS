@@ -1,6 +1,6 @@
 /support/azure/*  @genlin
-/support/windows-server/*  @Deland-Han 
-/support/windows-client/*  @Deland-Han 
+/support/windows-server/*  @Deland-Han @kaushika-msft
+/support/windows-client/*  @Deland-Han @kaushika-msft
 /support/microsoft-identity-manager/* @helenclu
 /support/mem/* @helenclu
 /support/system-center/* @helenclu

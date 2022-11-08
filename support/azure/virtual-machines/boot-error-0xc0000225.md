@@ -2,8 +2,10 @@
 title: Windows boot error 0xc0000225 on an Azure VM
 description: Fixes an issue that triggers error 0xc0000225 when you try to start an Azure-based virtual machine.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: jarrettr
+ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
+ms.collection: windows
 ---
 # Windows boot error 0xc0000225 on an Azure VM
 
@@ -33,7 +35,7 @@ Info: An unexpected error has occurred.
 Status: 0xc0000225  
 Info: The operating system couldn't be loaded because a critical system driver is missing or contains errors.
 
-In this message, \<BINARY> represents the actual binary file that's found. 
+In this message, \<BINARY> represents the actual binary file that's found.
 
 ## Cause
 
@@ -45,12 +47,15 @@ This issue occurs for one of the following reasons:
 
 ## Resolution
 
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+
 To fix the issue, follow these steps, based on the error message that you received.
 
 ### Error 1: Fix the corrupted hive
 
 1. Delete the virtual machine (VM). Make sure that you select the **Keep the disks** option when you do this.
-2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/attach-managed-disk-portal).
+2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
 3. Connect to the troubleshooting VM.
 4. Open **Computer management** > **Disk management**. Make sure that the OS disk is online and that its partitions have drive letters assigned.
 5. On the OS disk that you attached, navigate to **\windows\system32\config**. Copy all the files to a backup folder in case a rollback is required.
@@ -67,7 +72,7 @@ To fix the issue, follow these steps, based on the error message that you receiv
 ### Error 2: Repair the boot configuration data
 
 1. Delete the virtual machine (VM). Make sure that you select the **Keep the disks** option when you do this.
-2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/attach-managed-disk-portal).
+2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
 3. Connect to the troubleshooting VM.
 4. Open **Computer management** > **Disk management**. Make sure that the OS disk is online and that its partitions have drive letters assigned.
 5. Identify the Boot partition and the Windows partition. If there's only one partition on the OS disk, this partition is the Boot partition and the Windows partition.
@@ -78,10 +83,10 @@ To fix the issue, follow these steps, based on the error message that you receiv
 
     The Boot partition contains a folder named "Boot." This folder is hidden by default. To see the folder, you must display the hidden files and folders and disable the **Hide protected operating system files (Recommended)** option. The boot partition is typically 300 MB~500 MB.  
 
-6. Run the following command as an administrator, and then record the identifier of Windows Boot Loader (not Windows Boot Manager). The identifier is a 32-character code and it resembles "xxxxxxxx-xxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx." You will use this identifier in the next step. 
+6. Run the following command as an administrator, and then record the identifier of Windows Boot Loader (not Windows Boot Manager). The identifier is a 32-character code and it resembles "xxxxxxxx-xxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx." You will use this identifier in the next step.
 
     ```console
-    bcdedit /store <Boot partition>:\boot\bcd /enum
+    bcdedit /store <Boot partition>:\boot\bcd /enum /v
     ```
 
 7. Repair the Boot Configuration data by running the following commands after you replace the placeholders by the actual values:
@@ -103,7 +108,7 @@ To fix the issue, follow these steps, based on the error message that you receiv
 ### Error 3: Repair the corrupted or missing binary file
 
 1. Delete the virtual machine (VM). Make sure that you select the **Keep the disks** option when you do this.
-2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/attach-managed-disk-portal).
+2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
 3. Connect to the troubleshooting VM. Open **Computer management** > **Disk management**. Make sure that the OS disk is online and that its partitions have drive letters assigned.
 4. On the attached disk, browse to the location of the binary file that's displayed in the error message.
 5. Rename the file to \<BINARY.SYS>.OLD.
@@ -117,7 +122,7 @@ To fix the issue, follow these steps, based on the error message that you receiv
 
     For example, see the following screenshot.
 
-    :::image type="content" source="media/boot-error-0xc0000225/4015973_en_1.png" alt-text="Sceenshot of sample of the DIR command":::
+    :::image type="content" source="media/boot-error-0xc0000225/dir-command-output.png" alt-text="Screenshot of the sample of the DIR command." border="false":::
 
     **Notes**:
 
@@ -125,3 +130,5 @@ To fix the issue, follow these steps, based on the error message that you receiv
     - If the latest binary doesn't work, you can try the previous file version to obtain an earlier system update level on that component.
     - If the only binary that's returned in this step matches the file that you're trying to replace on the affected VM, and if both files have the same size and time stamp, you can replace the corrupted file by copying it from another working VM that has the same OS and, if possible, the same system update level.
 7. Detach the repaired disk from the troubleshooting VM. Then, create a VM from the OS disk.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

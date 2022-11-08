@@ -4,8 +4,7 @@ description: Describes Update 1610 for Cloud Platform System (CPS) Premium and p
 ms.date: 08/14/2020
 author: genlin
 ms.author: genli
-ms.service: azure-stack
-ms.prod-support-area-path: 
+ms.service: cloud-platform-system
 ms.reviewer: ashtons
 ---
 # Update 1610 for Cloud Platform System (CPS) Premium
@@ -41,7 +40,7 @@ A new AFM firmware update was released for Update 1609. If you applied the netwo
 
 Follow the steps in the "Update network switch firmware" section of the "1609" version of the CPS Premium Administrators Guide that was provided by your account team. Do not use the instructions from an earlier version of the Administrators Guide.
 
-For the download location of the AFM files for Update 1610, see [http://poweredgec.dell.com/cps/CPS_P_1611/Tools/AFM/](http://poweredgec.dell.com/cps/CPS_P_1611/Tools/AFM/).
+For the download location of the AFM files for Update 1610, see [https://poweredgec.dell.com/cps/CPS_P_1611/Tools/AFM/](https://poweredgec.dell.com/cps/CPS_P_1611/Tools/AFM/).
 
 AFM will be updated to version 2.1(0.0)P2. The following table lists the recommended firmware versions that switches should run after the update.
 
@@ -51,8 +50,7 @@ AFM will be updated to version 2.1(0.0)P2. The following table lists the recomme
 |S3048|9.10(0.1)P8|2016|
 |S4810|9.10(0.1)P8|2014|
 |S55|8.3.5.6|2014|
-||||
-
+  
 ### Step 2: Update serial port concentrator firmware
 
 > [!NOTE]
@@ -63,7 +61,7 @@ Follow the steps in the "Update serial port concentrator firmware" section of th
 Download the following:
 
 - Avocent ACS 6000 Series
-- [Digi CM 48](http://ftp1.digi.com/support/firmware/80007070_u.bin) 
+- [Digi CM 48](https://ftp1.digi.com/support/firmware/80007070_u.bin)
 
 The following table lists the recommended firmware versions that the serial port concentrator should run after the update.
 
@@ -71,8 +69,7 @@ The following table lists the recommended firmware versions that the serial port
 |---|---|---|
 |Avocent ACS 6000 Series|3.3.0.10|2016|
 |Digi CM 48|1.9.5.3|2014|
-||||
-
+  
 ### Step 3: Install the VMM hotfixes for VM placement
 
 - If you installed the VMM hotfix for virtual machine (VM) placement that was included in Update 1606, 1607, 1608, or 1609, you do not have to install it again. If this is true, you can skip this step and go to Step 4.
@@ -241,16 +238,14 @@ The compliance scan output is written to the following location to which the upd
 |All|Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Client" -Name Enabled -Type DWord -Value 0|
 |All|Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server" -Name DisabledByDefault -Type DWord -Value 1|
 |All|Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server" -Name Enabled -Type DWord -Value 0|
-|||
-
+  
 #### Updates for Windows Server 2012 R2 (from previous updates)
 
 |KB article|Description|
 |---|---|
 | [3138615](https://support.microsoft.com/help/3138615)|Update for Windows Server 2012 R2 (KB3138615)|
 | [3173424](https://support.microsoft.com/help/3173424)|Servicing stack update for Windows 8.1 and Windows Server 2012 R2: July 12, 2016|
-|||
-
+  
 ### Payload for Update 1610-1
 
 #### Updates for Windows Server 2012 R2
@@ -261,19 +256,15 @@ The compliance scan output is written to the following location to which the upd
 | [3188743](https://support.microsoft.com/help/3188743)|MS16-120: Description of the Security and Quality Rollup for .NET Framework 3.5 for Windows 8.1 and Windows Server 2012 R2: October 11, 2016|
 | [3192392](https://support.microsoft.com/help/3192392)|October 2016 security only quality update for Windows 8.1 and Windows Server 2012 R2|
 | [3200006](https://support.microsoft.com/help/3200006)|System Center Operations Manager Management Console crashes after you install MS16-118 and MS16-126|
-|||
-
+  
 #### System Center and Windows Azure Pack updates (from previous updates)
 
 |KB article|Description|
 |---|---|
 | [3147172](https://support.microsoft.com/help/3147172)|This update fixes the problems described in KB article 3147172|
-| [3147191](https://support.microsoft.com/help/3147191)|This update fixes the problems described in KB article 3147167|
 | [3147167](https://support.microsoft.com/help/3147167)|This update fixes the problems described in KB article 3147167|
-| [3158139](https://support.microsoft.com/help/3158139)|This update fixes the problems described in KB article 3147167|
 | [3158609](https://support.microsoft.com/help/3158609)|This update fixes the problems described in KB article 3158609|
-|||
-
+  
 #### Hardware (driver and firmware) updates (from previous updates)
 
 |Component|Category|1606 Version|
@@ -285,13 +276,11 @@ The compliance scan output is written to the following location to which the upd
 |R630|SAS HBA - Internal|6.603.07.00|
 |C6320|Chipset|10.1.2.19|
 |R630|Chipset|10.1.2.19|
-||||
-
+  
 #### Updates for Windows Server 2012 R2 (from previous updates)
 
 |KB Article|Description|
 |---|---|
-| [2461484](https://support.microsoft.com/help/2461484)|Definition Update for Microsoft Endpoint Protection|
 | [3063109](https://support.microsoft.com/help/3063109)|Hyper-V integration components update for Windows virtual machines that are running on a Windows 10-based host|
 | [3153224](https://support.microsoft.com/help/3153224)|Revised March 2016 anti-malware platform update for Endpoint Protection clients|
 | [3174644](https://support.microsoft.com/help/3174644)|Microsoft security advisory: Updated support for Diffie-Hellman Key Exchange|
@@ -300,7 +289,6 @@ The compliance scan output is written to the following location to which the upd
 | [3178539](https://support.microsoft.com/help/3178539)|MS16-112: Description of the security update for Windows lock screen: September 13, 2016|
 | [3179574](https://support.microsoft.com/help/3179574)|August 2016 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2|
 | [3184122](https://support.microsoft.com/help/3184122)|MS16-116: Description of the security update for OLE Automation for VBScript Scripting Engine: September 13, 2016|
-| [3184471](https://support.microsoft.com/help/3184471)|MS16-110: Description of the security update for Windows: September 13, 2016|
 | [3184943](https://support.microsoft.com/help/3184943)|MS16-115: Description of the security update for Microsoft Windows PDF Library: September 13, 2016|
 | [3185319](https://support.microsoft.com/help/3185319)|MS16-104: Security update for Internet Explorer: September 13, 2016|
 | [3185911](https://support.microsoft.com/help/3185911)|MS16-106: Description of the security update for Microsoft Graphics Component: September 13, 2016|
@@ -404,7 +392,6 @@ The compliance scan output is written to the following location to which the upd
 | [3061512](https://support.microsoft.com/help/3061512)|MS15-069: Description of the security update for Windows: July 14, 2015|
 | [3060793](https://support.microsoft.com/help/3060793)|"0x0000001E" or "0x00000133" Stop error when you transfer data through a USB-based RNDIS device on Windows|
 | [3060383](https://support.microsoft.com/help/3060383)|Decimal symbol and digit grouping symbol are incorrect for the Swiss language locale in Windows|
-| [3059316](https://support.microsoft.com/help/3059316)|You cannot move the scrollbar on Windows by dragging the mouse|
 | [3055343](https://support.microsoft.com/help/3055343)|Stop error code 0xD1, 0x139, or 0x3B and cluster nodes go down in Windows Server 2012 R2 or Windows Server 2012|
 | [3055323](https://support.microsoft.com/help/3055323)|Update to enable a security feature in Windows 8.1 or Windows Server 2012 R2|
 | [3054464](https://support.microsoft.com/help/3054464)|Applications that use the AddEntry method may crash in Windows|
@@ -505,10 +492,8 @@ The compliance scan output is written to the following location to which the upd
 | [3078601](https://support.microsoft.com/help/3078601)|MS15-080: Description of the security update for Windows: August 11, 2015|
 | [3076895](https://support.microsoft.com/help/3076895)|MS15-084: Description of the security update for Windows XML core services: August 11, 2015|
 | [3075220](https://support.microsoft.com/help/3075220)|MS15-082: Description of the security update for RDP in Windows: August 11, 2015|
-| [3074553](https://support.microsoft.com/help/3074553)|MS15-101: Description of the security update for the .NET Framework 4.6 and 4.6 RC on Windows 8.1 and Windows Server 2012 R2: September 8, 2015|
 | [3074548](https://support.microsoft.com/help/3074548)|MS15-101: Description of the security update for the .NET Framework 4.5.1 and 4.5.2 on Windows 8.1, Windows RT 8.1, and Windows Server 2012 R2: September 8, 2015|
 | [3074545](https://support.microsoft.com/help/3074545)|MS15-101: Description of the security update for the .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2: September 8, 2015|
-| [3074232](https://support.microsoft.com/help/3074232)|MS15-101: Description of the security update for the .NET Framework 4.6 and 4.6 RC on Windows 8.1 and Windows Server 2012 R2: September 8, 2015|
 | [3074228](https://support.microsoft.com/help/3074228)|MS15-101: Description of the security update for the .NET Framework 4.5.1 and 4.5.2 on Windows 8.1, Windows RT 8.1, and Windows Server 2012 R2: September 8, 2015|
 | [3072630](https://support.microsoft.com/help/3072630)|MS15-074: Vulnerability in Windows Installer service could allow elevation of privilege: July 14, 2015|
 | [3072307](https://support.microsoft.com/help/3072307)|MS15-080: Description of the security update for the .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2: August 11, 2015|
@@ -563,15 +548,13 @@ The compliance scan output is written to the following location to which the upd
 | [2538243](https://support.microsoft.com/help/2538243)|MS11-025: Description of the security update for Visual C++ 2008 SP1 Redistributable Package: June 14, 2011|
 | [2538241](https://support.microsoft.com/help/2538241)|MS11-025: Description of the security update for Visual Studio 2008 SP1: June 14, 2011|
 | [2467173](https://support.microsoft.com/help/2467173)|MS11-025: Description of the security update for Visual C++ 2010 Redistributable Package: April 12, 2011|
-|||
-
+  
 #### Updates for SQL Server 2012 (from previous updates)
 
 |KB article|Description|
 |---|---|
 | [3072779](https://support.microsoft.com/help/3072779)|SQL Server 2012 Service Pack 3 release information|
-|||
-
+  
 ## Troubleshooting
 
 ### Issue 1
@@ -602,7 +585,7 @@ Verify the SQL Server version. To do this, follow these steps:
 1. Open SQL Server Management Studio.
 2. Connect to the **\<Prefix>** -SH-SQL\SCSHAREDDB instance.
 3. Click **New Query**.
-4. Run the following command: 
+4. Run the following command:
 
     ```
     SELECT @@VERSION
@@ -650,9 +633,9 @@ In the VMM console, look for one or more failed "Perform servicing on a Service"
 > Error (22655)
 >
 > VMM is unable to retrieve status from computer
-> 
+>
 > Recommended Action
-> 
+>
 > Check if the computer is running and the VM guest agent is in a healthy state.
 
 ### Resolution
@@ -668,5 +651,7 @@ To resolve this problem, follow these steps:
 2. Restart the P&U process.  
 
 **Third-party information disclaimer**
- 
+
 Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

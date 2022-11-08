@@ -2,7 +2,6 @@
 title: Unsupported VM Configuration status
 description: Describes an unsupported scenario that virtual hard disks are attached to an IDE bus on a VMware host, and provides a resolution.
 ms.date: 07/15/2020
-ms.prod-support-area-path: 
 ---
 # Unsupported VM Configuration status on VMware virtual machines in Virtual Machine Manager
 

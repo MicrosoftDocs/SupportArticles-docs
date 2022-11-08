@@ -4,20 +4,20 @@ description: Helps fix the system error 1331 that occurs when you connect to a s
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
+ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
 ms.technology: networking
 ---
 # "Logon failure: account currently disabled" and "System error 1331" error messages
 
 This article provides a solution to the system error 1331 that occurs when you connect to a share.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 263936
 
 ## Symptoms
@@ -33,9 +33,9 @@ The computer may also display a "System error 1331" error message, which is the 
 
 ## Cause
 
-This problem can occur when you attempt to access a share that is located on a computer in a Windows 2000-based domain (either parent or child) from another Windows 2000-based domain, when you attempt to gain access to a share between a Windows NT 4.0-based domain and a Windows 2000-based domain with a two-way trust, or when you attempt to gain access to a share that is located in the same domain.
+This problem can occur when you attempt to access a share that is located on a computer in a domain (either parent or child) from another domain, or when you attempt to gain access to a share that is located in the same domain.
 
-This problem occurs most commonly when a Windows NT 4.0-based or Windows 2000-based computer that has been a member of one domain is moved to another domain. The computer account for the computer that has been moved displays a red "X". For this problem to occur in a single-domain environment, the computer account had to have been set to disabled.
+This problem occurs most commonly when a Windows computer that has been a member of one domain is moved to another domain. The computer account for the computer that has been moved displays a red "X". For this problem to occur in a single-domain environment, the computer account had to have been set to disabled.
 
 ## Resolution
 

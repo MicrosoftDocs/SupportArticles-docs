@@ -1,0 +1,81 @@
+- name: Power Apps Troubleshooting
+  href: welcome-power-apps.yml
+  items:
+    - name: App creation
+      items:
+        - name: Filter expression returns extra blank records in results
+          href: filter-blank-records.md
+    - name: App Management
+      items:
+        - name: Troubleshoot wrap issues
+          href: wrap-issues.md
+    - name: Common issues
+      items:
+        - name: Common issues and resolutions
+          href: common-issues-and-resolutions.md
+        - name: Troubleshoot startup issues for Power Apps
+          href: troubleshooting-startup-issues.md
+        - name: Troubleshoot Power Query
+          href: troubleshoot-power-query-issues.md
+    - name: Connections
+      items:
+        - name: Best practices when updating a flow
+          href: best-practices-when-updating-a-flow.md
+        - name: Refresh URL isn't displayed for custom connectors
+          href: custom-connectors-not-show-refresh-url.md
+    - name: Dataverse Web API
+      items:
+        - name: Web API client errors
+          href: web-api-client-errors.md
+    - name: Isolate issues
+      items:
+        - name: General Power Apps debugging strategies
+          href: isolate-common-issues.md
+        - name: Isolate issues in canvas apps
+          href: isolate-canvas-app-issues.md
+        - name: Create a minimal repro canvas app
+          href: minimal-canvas-app-repro.md
+        - name: Isolate issues in model-driven apps
+          href: isolate-model-app-issues.md
+    - name: Ribbons and commanding
+      items:
+        - name: Ribbon issues
+          href: ribbon-issues.md
+        - name: Button is hidden
+          href: ribbon-issues-button-hidden.md
+        - name: Button is visible
+          href: ribbon-issues-button-visible.md
+        - name: Button isn't working correctly
+          href: ribbon-issues-button-not-working-correctly.md
+        - name: Regenerate ribbon metadata
+          href: regenerate-ribbon-metadata.md
+    - name: Solutions
+      items:
+        - name: Can't import solutions or publish changes
+          href: cannot-import-solutions-publish-changes.md
+        - name: Data source references not updated after solution import
+          href: dataverse-environment-variables.md
+        - name: Required fields are missing in Dataverse records
+          href: dataverse-records-missing-required-fields.md
+    - name: Unified Interface
+      items:
+        - name: '"Blocked a frame with origin" error'
+          href: blocked-frame-with-origin-uci.md
+        - name: Cookies or pop-up blocker errors
+          href: cookies-pop-up-blocker-error.md
+        - name: No response with back button
+          href: no-navigation-when-selecting-button.md
+    - name: Others
+      items:
+        - name: Custom pages and SDK script don't load
+          href: custom-pages-sdk-script-not-load.md
+        - name: Lookup doesn't filter records for particular entity
+          href: lookup-does-not-filter-entity-records.md
+    - name: Support resources
+      items:
+        - name: Power Apps support
+          href: https://powerapps.microsoft.com/support
+        - name: Power Apps Community forum
+          href: https://powerusers.microsoft.com/t5/Forums/ct-p/PA_Comm_Forums
+        - name: Power Apps Ideas forum
+          href: https://powerusers.microsoft.com/t5/Power-Apps-Ideas/idb-p/PowerAppsIdeas

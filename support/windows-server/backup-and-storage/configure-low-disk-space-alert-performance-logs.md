@@ -3,21 +3,21 @@ title: Configure a Low Disk Space Alert
 description: Describes how to configure a Low Disk Space Alert by using the Performance Logs and Alerts Feature.
 ms.date: 10/09/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Partition and volume management
+ms.custom: sap:partition-and-volume-management, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # Configure a Low Disk Space Alert by Using the Performance Logs and Alerts Feature
 
 This article describes how to configure a Low Disk Space Alert by using the Performance Logs and Alerts Feature.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 324796
 
 ## Summary

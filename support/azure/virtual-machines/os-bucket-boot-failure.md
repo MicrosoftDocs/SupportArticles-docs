@@ -2,8 +2,10 @@
 title: Troubleshoot Windows VM OS boot failure
 description: Explains why a Windows VM cannot boot and how to solve the problem.
 ms.date: 12/07/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
+ms.collection: windows
 ---
 
 # Troubleshoot Windows VM OS boot failure
@@ -16,7 +18,7 @@ When you pull the screenshot of the virtual machine (VM), the screenshot shows t
 
 `Boot failure. Reboot and Select proper Boot device or Insert Boot Media in selected Boot device`
 
-![Boot Failure screen](./media/os-bucket-boot-failure/1-boot-failure.png)
+:::image type="content" source="media/os-bucket-boot-failure/boot-failure.png" alt-text="Screenshot of the Boot Failure message.":::
 
 ## Causes
 
@@ -27,6 +29,9 @@ There are several causes for this error:
 - The OS is unable to boot due to the boot sector not being found.
 
 ## Solution
+
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
 ### Process overview
 
@@ -40,7 +45,7 @@ There are several causes for this error:
 
 ### Create and access a repair VM
 
-1. Use steps 1-3 of the [VM Repair Commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands) to prepare a Repair VM.
+1. Use steps 1-3 of the [VM Repair Commands](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands) to prepare a Repair VM.
 1. Using Remote Desktop Connection, connect to the Repair VM.
 
 ### Verify that the OS partition is active
@@ -61,7 +66,7 @@ Verify the OS partition that holds the BCD store for the disk is marked as activ
       sel disk 1
       ```
 
-      ![Disk 1](media/os-bucket-boot-failure/11-Gen2-1.png)
+      :::image type="content" source="media/os-bucket-boot-failure/list-disk.png" alt-text="The diskpart window shows outputs of list disk and sel disk 1 commands. Disk 0 and Disk 1 are displayed in the table. Disk 1 is the selected disk.":::
 
    3. List all of the partitions on the disk and then proceed to select the partition you want to check. Usually System Managed partitions are smaller and around 350 Mb in size. In the image below, this partition is Partition 1.
 
@@ -70,24 +75,22 @@ Verify the OS partition that holds the BCD store for the disk is marked as activ
       sel partition 1
       ```
 
-      ![Partition 1](media/os-bucket-boot-failure/12-Gen2-2.png)
+      :::image type="content" source="media/os-bucket-boot-failure/list-partition.png" alt-text="The diskpart window shows outputs of list partition and sel partition 1 commands. Partition 1 is the selected disk.":::
 
    4. Check the status of the partition. In our example, Partition 1 is not active.
 
       `detail partition`
 
-      ![Detail Partition](media/os-bucket-boot-failure/13-Gen2-3.png)
+      :::image type="content" source="media/os-bucket-boot-failure/detail-partition-not-active.png" alt-text="The diskpart window with output of the detail partition command where Partition 1 is not active.":::
 
-      1. If the partition isn't active:
+      If the partition isn't active, set the Active flag and then recheck that the change was done properly.
 
-         1. Set the Active flag and then recheck that the change was done properly.
+      ```ps
+      active
+      detail partition
+      ```
 
-            ```ps
-            active
-            detail partition
-            ```
-
-            ![Active Flag](media/os-bucket-boot-failure/14-Gen2-4.png)
+      :::image type="content" source="media/os-bucket-boot-failure/detail-partition-active.png" alt-text="The diskpart window with output of the detail partition command where Partition 1 is active.":::
 
    5. Now exit the DISKPART tool.
 
@@ -109,7 +112,7 @@ Verify the OS partition that holds the BCD store for the disk is marked as activ
 
       2. Write down the identifier of the Windows Boot loader. This identifier is the one with the path `\windows\system32\winload.efi`.
 
-         ![Mitigation 2 - Windows Identifier 1](media/os-bucket-boot-failure/6-boot-configuration-data-windows-identifier.png)
+         :::image type="content" source="media/os-bucket-boot-failure/windows-identifier-generation-1.png" alt-text="Screenshot shows the output of Generation 1 VM, which lists the identifier number under Windows Boot Loader.":::
 
    2. For Generation 2 VM:
 
@@ -119,7 +122,7 @@ Verify the OS partition that holds the BCD store for the disk is marked as activ
 
       2. Write down the identifier of the Windows Boot loader. This is the one with the path `\windows\system32\winload.efi`.
 
-         ![Mitigation 2 - Windows Identifier 2](media/os-bucket-boot-failure/15-default-identifier.png)
+         :::image type="content" source="media/os-bucket-boot-failure/windows-identifier-generation-2.png" alt-text="Screenshot shows the output of Generation 2 VM, which lists the identifier number under Windows Boot Loader.":::
 
 3. Run the following commands:
 
@@ -162,10 +165,6 @@ Verify the OS partition that holds the BCD store for the disk is marked as activ
 
 ### Rebuild the VM
 
-Use [step 5 of the VM Repair Commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to rebuild the VM.
+Use [step 5 of the VM Repair Commands](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to rebuild the VM.
 
-## Next steps
-
-If you still cannot determine the cause of the issue and need more help, you can open a support ticket with Microsoft Customer Support.
-
-If you need more help at any point in this article, you can contact the Azure experts on the [MSDN Azure and Stack Overflow forums](https://azure.microsoft.com/support/forums/). Alternatively, you can file an Azure support incident. Go to the [Azure support site](https://azure.microsoft.com/support/options/), and select **Get support**. For information about using Azure support, read the [Microsoft Azure support FAQ](https://azure.microsoft.com/support/faq/).
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

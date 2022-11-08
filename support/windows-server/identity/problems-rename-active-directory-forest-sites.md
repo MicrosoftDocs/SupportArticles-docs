@@ -4,20 +4,20 @@ description: Describes the problems that you may experience when you rename site
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory topology (sites, subnets, and connection objects)
+ms.custom: sap:active-directory-topology-sites-subnets-and-connection-objects, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # You may experience problems when you rename sites in the Active Directory forest
 
 This article describes the problems that you may experience when you rename sites in the Active Directory forest.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 920718
 
 ## More information
@@ -51,4 +51,4 @@ Because of the different time intervals that are used to update site-related inf
 
     For more information about DFS, visit the following Microsoft Web site:
 
-    [Distributed File System](https://docs.microsoft.com/windows/win32/dfs/distributed-file-system)
+    [Distributed File System](/windows/win32/dfs/distributed-file-system)

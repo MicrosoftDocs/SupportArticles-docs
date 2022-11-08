@@ -1,23 +1,23 @@
 ---
 title: Security alert when connecting to wireless network
 description: Fixes an issue where a Windows Security alert appears when you connect to a wireless network on a workgroup machine.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Wireless networking and 802.1X authentication
+ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # Windows Security Alert appears when connecting to a wireless network on a workgroup machine
 
 This article helps fix an issue where a Windows Security alert appears when you connect to a wireless network on a workgroup machine.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2518158
 
 ## Symptoms

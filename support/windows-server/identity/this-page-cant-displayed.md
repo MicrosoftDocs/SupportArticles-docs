@@ -1,23 +1,23 @@
 ---
 title: This page can't be displayed
 description: Discusses that you receive a "This page cannot be displayed" error message when you try to access an application on a website that uses AD FS 2.0. Provides a resolution.
-ms.date: 10/13/2020
-author: Deland-Han 
+ms.date: 09/10/2021
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, fszita, maweeras, timccu, abizerh
-ms.prod-support-area-path: Active Directory Federation Services (AD FS)
+ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # ADFS 2.0 error: This page cannot be displayed
 
 This article provides a solution to an error when you try to access an application on a website that uses AD FS 2.0.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3044971
 
 ## Summary
@@ -62,7 +62,7 @@ To resolve this problem, follow these steps in the order. These steps will help 
 
     In the following screenshot, the first URL is for the web application, and the second URL is for the AD FS service.
 
-    :::image type="content" source="./media/this-page-cant-displayed/error-displays-ie-developer-tool.png" alt-text="The screenshot for IE Developer tool.":::
+    :::image type="content" source="./media/this-page-cant-displayed/error-displays-ie-developer-tool.png" alt-text="The web application url and the A D F S service url listed in the developer tools." border="false":::
 
 - How to fix
 
@@ -86,7 +86,7 @@ To resolve this problem, follow these steps in the order. These steps will help 
     Nslookup sts.contoso.com
     ```  
 
-    :::image type="content" source="./media/this-page-cant-displayed/command-prompt.png" alt-text="The screenshot for nslookup command.":::
+    :::image type="content" source="./media/this-page-cant-displayed/nslookup-command-prompt.png" alt-text="The output returned after running the nslookup command." border="false":::
 
 - How to fix
 
@@ -98,7 +98,7 @@ To resolve this problem, follow these steps in the order. These steps will help 
 
     Use Telnet or [PortQryUI - User Interface for the PortQry Command Line Port Scanner](https://www.microsoft.com/download/details.aspx?id=24009) to query the connectivity of port 443 on the AD FS server. Make sure that 443 port is listening.
 
-    :::image type="content" source="./media/this-page-cant-displayed/query-result.png" alt-text="The screenshot for Port query result.":::
+    :::image type="content" source="./media/this-page-cant-displayed/port-443-query-result.png" alt-text="The Port query result of checking the connectivity of port 443 on the A D F S server." border="false":::
 
 - How to fix
 
@@ -115,12 +115,13 @@ To resolve this problem, follow these steps in the order. These steps will help 
     Start Internet Explorer, and then browse to the following web address. If you receive a certificate warning when you try to open this page, select **Continue**.
 
     http://\<YourADFSServiceName>/adfs/ls/idpinitiatedsignon.aspx
+
     > [!NOTE]
     > In this URL, *\<YourADFSServiceName>* represents the actual AD FS service name.
 
     Typically, you access a sign-in screen, and then you can sign in by using your credentials.
 
-    :::image type="content" source="./media/this-page-cant-displayed/sign-in-page.png" alt-text="The screenshot of ADFS sign-on page.":::
+    :::image type="content" source="./media/this-page-cant-displayed/sign-in-page.png" alt-text="Screenshot of the A D F S sign-in page." border="false":::
 
 - How to fix
 
@@ -131,6 +132,4 @@ To resolve this problem, follow these steps in the order. These steps will help 
       1. Collect Fiddler Web Debugger trace and network capture information while you're accessing the `IDPInitiatedsignon` page. For more information, see [AD FS 2.0: How to Use Fiddler Web Debugger to Analyze a WS-Federation Passive Sign-In](https://social.technet.microsoft.com/wiki/contents/articles/3286.ad-fs-2-0-how-to-use-fiddler-web-debugger-to-analyze-a-ws-federation-passive-sign-in.aspx).
       2. Collect network traces from the client computer to check whether the SSL handshake completed successfully, whether there's an encrypted message, whether you're accessing the correct IP address, and so on. For more information, see [How to enable Schannel event logging in Windows and Windows Server](https://support.microsoft.com/help/260729).
 
-### Third-party information disclaimer
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

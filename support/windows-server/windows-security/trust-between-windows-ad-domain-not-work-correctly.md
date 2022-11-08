@@ -4,21 +4,21 @@ description: Describes trust configuration issues between a Windows NT 4.0-based
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: slight, kaushika
-ms.prod-support-area-path: Domain and forest trusts
+ms.custom: sap:domain-and-forest-trusts, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # Trust between a Windows NT domain and an Active Directory domain can't be established or it doesn't work as expected
 
 This article describes the trust configuration issues between a Windows NT 4.0-based domain and an Active Directory-based domain.
 
-_Original product version:_ &nbsp;Windows 10 – all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;889030
+_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 889030
 
 ## Symptoms
 
@@ -69,7 +69,6 @@ To do this, use the following methods.
 #### Step 1: Create an LMHOSTS file
 
 Create an LMHOSTS file on the primary domain controllers to provide cross-domain name resolution capability. The LMHOSTS file is a text file that you can edit with any text editor, such as Notepad. The LMHOSTS file on each domain controller must contain the TCP/IP address, the domain name, and the \0x1b entry of the other domain controller.
- For more information about how to create the LMHOSTS file, click the following article number to view the article in the Microsoft Knowledge Base: [180094](https://support.microsoft.com/help/180094) How to write an LMHOSTS file for domain validation  
 
 After you create the LMHOSTS file, follow these steps:
 
@@ -459,8 +458,6 @@ The following list of Group Policy objects (GPOs) provides the location of the c
 ### Windows Server 2008
 
 On a domain controller that is running Windows Server 2008, the default behavior of the Allow cryptography algorithms compatible with Windows NT 4.0 policy setting may cause a problem. This setting prevents both Windows operating systems and third-party clients from using weak cryptography algorithms to establish NETLOGON security channels to Windows Server 2008-based domain controllers.
-For more information, click the following article number to view the article in the Microsoft Knowledge Base:  
-[942564](https://support.microsoft.com/help/942564) When a Windows NT 4.0-based computer tries to use the NETLOGON service to establish a security channel to a Windows Server 2008-based domain controller, the operation may fail  
 
 ## References
 

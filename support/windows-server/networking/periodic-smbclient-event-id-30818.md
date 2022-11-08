@@ -4,21 +4,21 @@ description: Resolves an issue in which event ID 30818 is logged when the RDMA c
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: steved, delhan, christys, kaushika
-ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
+ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
 ms.technology: networking
 ---
 # Periodic SMBClient event ID 30818 is logged on Windows Server 2012 R2
 
 This article helps resolve an issue in which event ID 30818 is logged when the RDMA connections fail back to TCP. This issue occurs in Windows Server 2012 R2.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;3052127
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 3052127
 
 ## Symptoms
 

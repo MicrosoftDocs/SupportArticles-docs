@@ -3,21 +3,21 @@ title: Error messages when a cluster group online
 description: Describes how to resolve the error messages when you try to bring a cluster group online after a cluster stops.
 ms.date: 10/09/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Cannot bring a resource online
+ms.custom: sap:cannot-bring-a-resource-online, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # Error messages occur if you try to bring a cluster group online after a cluster stops
 
 This article describes how to resolve the error messages when you try to bring a cluster group online after a cluster stops.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 313882
 
 ## Symptoms

@@ -2,7 +2,6 @@
 title: Can't add unenumerated disks to a DPM disk pool
 description: Describes an issue that occurs when you try to add disks that are physically attached to a server running System Center 2012 Data Protection Manager to the DPM disk pool.
 ms.date: 07/27/2020
-ms.prod-support-area-path:
 ---
 # Some disks aren't enumerated when you add them to a Data Protection Manager disk pool
 
@@ -78,7 +77,7 @@ DISKPART> clean all
 
 Use the **Reset Disk** option, as shown here:
 
-:::image type="content" source="media/disks-not-enumeratd-fail-to-add/reset-disk.jpg" alt-text="Screenshot of the Reset Disk option.":::
+:::image type="content" source="media/disks-not-enumeratd-fail-to-add/reset-disk-option.png" alt-text="Select the Reset Disk option by using the Server Manager interface.":::
 
 ## More information
 

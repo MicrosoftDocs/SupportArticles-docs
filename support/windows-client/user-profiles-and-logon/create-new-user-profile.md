@@ -4,20 +4,20 @@ description: Describes how to determine whether a user profile is damaged and ho
 ms.date: 12/03/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: User profiles
+ms.custom: sap:user-profiles, csstroubleshoot
 ms.technology: windows-client-user-profiles
 ---
 # Identify a damaged user profile and create a new profile in Windows Server 2003
 
 This article describes how to determine whether a user profile is damaged and how to create a new profile if the profile is damaged.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 816593
 
 ## Summary

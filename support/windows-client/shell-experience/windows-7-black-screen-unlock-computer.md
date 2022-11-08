@@ -4,21 +4,21 @@ description: Describes an issue about Windows black screen when unlocking a comp
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: robsmi, kaushika
-ms.prod-support-area-path: Desktop Shell
+ms.custom: sap:desktop-shell, csstroubleshoot
 ms.technology: windows-client-shell-experience
 ---
 # Windows 7 black screen on computer unlock
 
 This article provides a solution to an issue where Windows black screen when unlocking a computer.
 
-_Original product version:_ &nbsp;Windows 7 Service Pack 1  
-_Original KB number:_ &nbsp;2431700
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
+_Original KB number:_ &nbsp; 2431700
 
 ## Symptoms
 
@@ -69,7 +69,7 @@ A problem with some layer of security software causes the Desktop Window Manager
     5. In some cases, you may be offered updated video drivers by running Windows Update.
     6. If you are not sure of which drivers to install, contact the vendor of your computer hardware for assistance in locating an updated display driver package.
 
-3. The final solution is to discover what layer of security software is causing the temporary blocking, which renders the screen black and therefore unusable. That layer of software would need to be uninstalled or updated to prevent the blocking condition in the Desktop Window Manager.
+3. Another solution is to discover what layer of security software is causing the temporary blocking, which renders the screen black and therefore unusable. That layer of software would need to be uninstalled or updated to prevent the blocking condition in the Desktop Window Manager.
 
 ## More information
 

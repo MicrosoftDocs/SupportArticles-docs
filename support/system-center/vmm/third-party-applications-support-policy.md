@@ -2,7 +2,6 @@
 title: Support policy for third-party applications running in Server App-V
 description: Describes the support policy for third-party applications that are running in a Microsoft Server Application Virtualization (Server App-V) environment
 ms.date: 07/17/2020
-ms.prod-support-area-path: 
 ms.reviewer: jeffpatt
 ---
 # Support policy for third-party applications running in a Server App-V environment

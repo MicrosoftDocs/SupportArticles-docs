@@ -2,7 +2,6 @@
 title: Performance views still show deleted counters 
 description: Fixes an issue in which performance views still show counters when performance collection rules are disabled in Microsoft System Center Operations Manager.
 ms.date: 07/07/2020
-ms.prod-support-area-path: 
 ms.reviewer: adoyle, nicholad
 ---
 # Performance views still show counters when performance collection rules are disabled in Operations Manager

@@ -2,7 +2,7 @@
 title: activation tasks run over limit
 description: This article provides resolutions for the error that occurs when more activation tasks run in Service Broker than the limit set by the Max_Queue_Readers property.
 ms.date: 08/04/2020
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.reviewer: akbarf, ramakoni
 ms.prod: sql
 ---

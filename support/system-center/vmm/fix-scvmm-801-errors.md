@@ -2,7 +2,6 @@
 title: Troubleshoot 801 errors in VMM console 
 description: Describes an issue that causes a refresh of virtual machines in Virtual Machine Manager to fail and to trigger a 801 error that indicates VMM cannot find the Virtual hard disk object. Occurs because of orphaned object information in the database. A resolution is provided.
 ms.date: 04/29/2020
-ms.prod-support-area-path:
 ms.reviewer: brenth, DPM-VMM
 ---
 # 801 Missing %ObjectType and VmmAdminUI has stopped working errors in VMM
@@ -26,12 +25,11 @@ The following are common errors that are logged in the **Jobs** view in the Virt
   |Error|Description|Recommended action|
   |---|---|---|
   |801|VMM cannot find %ObjectType; object %FriendlyName;.|Make sure that the library object is valid, and then try the operation again. |
-  ||||
   
   For example:
 
   > Error (801)  
-  > VMM cannot find VM object *ObjectID*.  
+  > VMM cannot find VM object _ObjectID_.  
   > Recommended Action  
   > Ensure the library object is valid, and then try the operation again.
 
@@ -43,23 +41,25 @@ The following are common errors that are logged in the **Jobs** view in the Virt
 
   - VMM cannot find VM object:
 
-    ![VMM cannot find VM object](./media/fix-scvmm-801-errors/4016595_en_2.png)
+    :::image type="content" source="media/fix-scvmm-801-errors/vmm-cannot-find-vm-object-error.png" alt-text="Details of the VMM cannot find VM object error." border="false":::
 
   - VMM cannot find ISO object:
 
-    ![VMM cannot find ISO object](./media/fix-scvmm-801-errors/4016596_en_2.png)
+    :::image type="content" source="media/fix-scvmm-801-errors/vmm-cannot-find-iso-object-error.png" alt-text="Details of the VMM cannot find ISO object error." border="false":::
 
   - VMM cannot find VirtualHardDisk object:
 
-    ![VMM cannot find VirtualHardDisk object](./media/fix-scvmm-801-errors/4016597_en_2.png)
+    :::image type="content" source="media/fix-scvmm-801-errors/vmm-cannot-find-virtualharddisk-object-error.png" alt-text="Details of the VMM cannot find VirtualHardDisk object error." border="false":::
 
 - You receive the following error message when you try to open the properties of a VM that has an 801 issue:
 
-  ![VmmAdminUI has stopped working](./media/fix-scvmm-801-errors/4016598_en_1.png)
+  > VmmAdminUI has stopped working
+
+   :::image type="content" source="media/fix-scvmm-801-errors/vmmadminui-has-stopped-working-error.png" alt-text="Details of the VmmAdminUI has stopped working error." border="false":::
 
   The following information is displayed when you view problem details for the error or when you view the Windows Error Reporting log in MSINFO32:
 
-  ![Windows Error Reporting logging in MSINFO32](./media/fix-scvmm-801-errors/4016599_en_1.png)
+   :::image type="content" source="media/fix-scvmm-801-errors/event-clr20r3.png" alt-text="Details of Windows Error Reporting logging in MSINFO32.":::
 
   > [!NOTE]
   > When a virtual machine is in a failed state via an 801 error, you cannot delete it from the console.
@@ -99,7 +99,7 @@ To resolve this issue, delete the orphaned objects from the database by followin
 
    To determine where the SCVMM database is being hosted from, go to **Settings**, and then click **General**. The database connection is shown as follows:
 
-   ![Database connection](./media/fix-scvmm-801-errors/4016612_en_1.png)
+   :::image type="content" source="media/fix-scvmm-801-errors/database-connection.png" alt-text="Details of database connection information.":::
 
 3. In SQL Server Management Studio on the SQL server that hosts the SCVMM database, open the SQL instance. In the Databases folder on the left, select **VirtualManagerDB** (or whatever the database was renamed as), and make sure that the name of the database is listed in the drop-down list on the toolbar. Select **New Query**, and then paste the following script into the query field:
 
@@ -218,9 +218,9 @@ To resolve this issue, delete the orphaned objects from the database by followin
     COMMIT TRANSACTION T1
     ```
 
-    The only modification that you have to make in this script is in the fourth line, where you'll change *VMNAME* to the name of the VM you want to remove, still using single quotation marks. Then, you can run the script, and it will return a series of rows that are affected as follows.
+    The only modification that you have to make in this script is in the fourth line, where you'll change _VMNAME_ to the name of the VM you want to remove, still using single quotation marks. Then, you can run the script, and it will return a series of rows that are affected as follows.
 
-    ![Object Explorer](./media/fix-scvmm-801-errors/4016601_en_1.png)  
+    :::image type="content" source="media/fix-scvmm-801-errors/change-vmname.png" alt-text="Change the name of V M in Object Explorer.":::
 
     > [!NOTE]
     > This does not delete the VM files.

@@ -2,7 +2,7 @@
 title: You cannot toggle the results pane
 description: This article provides a workaround for the problem in which you cannot toggle the results pane in SQL Server Management Studio in SQL Server.
 ms.date: 09/25/2020
-ms.prod-support-area-path: Management Studio
+ms.custom: sap:Management Studio
 ms.reviewer: ramakoni
 ms.prod: sql
 ---
@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 2860024
 
 When you use SQL Server Management Studio (SSMS) in SQL Server 2012 or later versions, the ability to toggle the results pane may be missing. Therefore, you will not see the **Hide Results Pane**  shortcut or the **Show Results Pane**  shortcut on the **Window**  menu. Additionally, when you press Ctrl+R, the visibility of the results pane does not toggle.
 
-![Image 2](./media/cannot-toggle-results-pane/2861823.png)
+:::image type="content" source="media/cannot-toggle-results-pane/window-menu.png" alt-text="Screenshot of the Window menu in SQL Server Management Studio." border="false":::
 
 > [!NOTE]
 > When you press Ctrl+R, you receive the following message in the status bar:
@@ -48,4 +48,4 @@ To work around this issue, reset the default keyboard-mapping scheme. To do this
 5. In the dialog box that appears, click **Yes**.
 6. Click **OK**.
 
-![Image 1 ](./media/cannot-toggle-results-pane/2861824.png)
+:::image type="content" source="media/cannot-toggle-results-pane/keyboard-options.png" alt-text="Screenshot of the Keyboard settings in Options of SQL Server Management Studio.":::

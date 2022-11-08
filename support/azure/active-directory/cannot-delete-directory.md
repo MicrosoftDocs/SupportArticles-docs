@@ -1,11 +1,12 @@
 ---
 title: Can't delete a B2C directory in Azure AD
-description: Describes an issue in which an error occurs when you try to delete a B2C directory in Azure AD. Provides a solution.
+description: Describes an issue in which an error occurs when you try to delete a B2C directory in Azure AD. Provides a solution. 
 ms.date: 05/28/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid, chricas
+ms.service: active-directory
+ms.subservice: B2C
 ---
-# Error when you try to delete a B2C directory in Azure AD: Cannot delete '\<contoso>' 
+# Error when you try to delete a B2C directory in Azure AD: Cannot delete '\<contoso>'
 
 This article describes an issue in which an error occurs when you try to delete a B2C directory in Azure Active Directory.
 
@@ -32,29 +33,31 @@ To fix this issue, use the Azure portal.
 
 To do this, follow these steps:
 
-1. Sign in [Azure portal](https://portal.azure.com/)  as an administrator who has access to the Azure AD B2C directory.
+1. Sign in [Azure portal](https://portal.azure.com/) as an administrator who has access to the Azure AD B2C directory.
 2. Select your display name in the upper-right corner, and then select the directory that's your B2C directory.
 
     > [!NOTE]
-    >  If you have only one directory, your Azure AD B2C directory will already be selected.
+    > If you have only one directory, your Azure AD B2C directory will already be selected.
 
-3. To find the Azure AD B2C blade, select the More Services **(>)**  button in the lower-left corner, and then search on "B2C".
+3. To find the Azure AD B2C blade, select the More Services **(>)** button in the lower-left corner, and then search on "B2C".
 4. Select **Azure AD B2C**.
 5. Select **All Settings**, and then select **Applications**.
 
-    :::image type="content" source="./media/cant-delete-b2c-directory-azure-ad/4049362_en_1.png" alt-text="Screenshot of applications setting.":::
+    :::image type="content" source="media/cannot-delete-directory/applications-in-azure-ad-b2c.png" alt-text="Screenshot of applications setting.":::
 
-6. Delete all applications. To do this, select the application, select **Properties**, and then select the **Delete** button.
+6. Delete all applications. To do this, select the application, select **Properties**, and then select the **Delete** button.
 
-    :::image type="content" source="./media/cant-delete-b2c-directory-azure-ad/4010255_en_3.png" alt-text="Screenshot of deleting an app.":::
+    :::image type="content" source="media/cannot-delete-directory/delete-applications.png" alt-text="Screenshot shows how to delete an app.":::
 
-### Step 2: Delete the Azure AD B2C tenant
+### Step 2: Delete the Azure AD B2C tenant
 
 To do this, follow these steps:
 
-1. In the Azure AD B2C directory, locate and select the **Azure Active Directory** blade in the Azure portal.
+1. In the Azure AD B2C directory, locate and select the **Azure Active Directory** blade in the Azure portal.
 2. On the **Overview** menu, select **Delete Directory**.
 
-    :::image type="content" source="./media/cant-delete-b2c-directory-azure-ad/4049363_en_1.png" alt-text="Screenshot of overview menu.":::
+    :::image type="content" source="media/cannot-delete-directory/overview.png" alt-text="Screenshot shows the Delete Directory option on the Overview menu." border="false":::
 
 3. Follow the instructions in the portal.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -1,28 +1,28 @@
 ---
-title: View and set LDAP policy by using Ntdsutil
+title: View and set Lightweight Directory Access Protocol (LDAP) policy with Ntdsutil
 description: The article describes the most important LDAP query policy limits.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: LDAP configuration and interoperability
+ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # View and set LDAP policy in Active Directory by using Ntdsutil.exe
 
 This article describes how to manage Lightweight Directory Access Protocol (LDAP) policies by using the Ntdsutil.exe tool.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 315071
 
 ## Summary
 
-To make sure that domain controllers can support service-level guarantees, you must specify operational limits for a number of LDAP operations. These limits prevent specific operations from adversely affecting the performance of the server, and also make the server more resilient to some types of attacks.
+To make sure that domain controllers can support service-level guarantees, you must specify operational limits for many LDAP operations. These limits prevent specific operations from adversely affecting the performance of the server. They also make the server more resilient to some types of attacks.
 
 LDAP policies are implemented by using objects of the `queryPolicy` class. Query Policy objects can be created in the Query Policies container, which is a child of the Directory Service container in the configuration naming context. For example, cn=Query-Policies,cn=Directory Service,cn=Windows NT,cn=Services **configuration naming context**.
 
@@ -55,11 +55,11 @@ The LDAP administration limits are:
 
     Default value: 4,096 bytes
 
-- MaxNotificationPerConnection - The Maximum number of outstanding notification requests that are permitted on a single connection. When this limit is reached the server returns a **busy** error to any new notification searches that are performed on that connection.
+- MaxNotificationPerConnection - The Maximum number of outstanding notification requests that are permitted on a single connection. When this limit is reached, the server returns a **busy** error to any new notification searches that are performed on that connection.
 
     Default value: 5
 
-- MaxPageSize - This value controls the maximum number of objects that are returned in a single search result, independent of how large each returned object is. To perform a search where the result might exceed this number of objects, the client must specify the paged search control. This is to group the returned results in groups that are no larger than the MaxPageSize value. To summarize, MaxPageSize controls the number of objects that are returned in a single search result.
+- MaxPageSize - This value controls the maximum number of objects that are returned in a single search result, independent of how large each returned object is. To perform a search where the result might exceed this number of objects, the client must specify the paged search control. It's to group the returned results in groups that are no larger than the MaxPageSize value. To summarize, MaxPageSize controls the number of objects that are returned in a single search result.
 
     Default value: 1,000
 
@@ -75,7 +75,7 @@ The LDAP administration limits are:
 
     Default value: 120 seconds
 
-- MaxTempTableSize - While a query is processed, the dblayer may try to create a temporary database table to sort and select intermediate results from. The MaxTempTableSize limit controls how large this temporary database table can be. If the temporary database table would contain more objects than the value for MaxTempTableSize, the dblayer performs a much less efficient parsing of the complete DS database and of all the objects in the DS database.
+- MaxTempTableSize - While a query is processed, the `dblayer` may try to create a temporary database table to sort and select intermediate results from. The MaxTempTableSize limit controls how large this temporary database table can be. If the temporary database table would contain more objects than the value for MaxTempTableSize, the `dblayer` performs a much less efficient parsing of the complete DS database and of all the objects in the DS database.
 
     Default value: 10,000 records
 
@@ -126,13 +126,13 @@ If you change the values for the query policy that a domain controller is curren
 
 ## Considerations for changing query values
 
-To maintain domain server resiliency, we do not recommend that you increase the timeout value of 120 seconds. Forming more efficient queries is a preferred solution. For more information about creating efficient queries, see [
-Creating More Efficient Microsoft Active Directory-Enabled Applications](/previous-versions/ms808539(v=msdn.10)).
+To maintain domain server resiliency, we do not recommend that you increase the timeout value of 120 seconds. Forming more efficient queries is a preferred solution. For more information about creating efficient queries, see [Creating More Efficient Microsoft Active Directory-Enabled Applications](/previous-versions/ms808539(v=msdn.10)).
 
-However, if changing the query is not an option, increase the timeout value only on one domain controller or only on one site. For instructions, see the next section. If the setting is applied to one domain controller, reduce the DNS LDAP priority on the domain controller so that clients less likely use the server for authentication. On the domain controller with the increase priority, use the following registry setting to set `LdapSrvPriority`:  
+However, if changing the query isn't an option, increase the timeout value only on one domain controller or only on one site. For instructions, see the next section. If the setting is applied to one domain controller, reduce the DNS LDAP priority on the domain controller, so that clients less likely use the server for authentication. On the domain controller with the increase priority, use the following registry setting to set `LdapSrvPriority`:
+
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters`
 
-On the **Edit** menu, click **Add Value**, and then add the following registry value:
+On the **Edit** menu, select **Add Value**, and then add the following registry value:
 
 - Entry name: LdapSrvPriority
 - Data type: REG_DWORD
@@ -152,7 +152,7 @@ For more information, see [How to optimize the location of a domain controller o
 
 ## Sample script
 
-You can use the following text to create a Ldifde file. You can import this file to create the policy with a timeout value of 10 minutes. Copy this text to Ldappolicy.ldf, and then run the following command, where **forest root** is the distinguished name of your forest root. Leave DC=X as-is. This is a constant that will be replaced by the forest root name when the script runs. The constant X does not indicate a domain controller name.
+You can use the following text to create a Ldifde file. You can import this file to create the policy with a timeout value of 10 minutes. Copy this text to Ldappolicy.ldf, and then run the following command, where **forest root** is the distinguished name of your forest root. Leave DC=X as-is. It's a constant that will be replaced by the forest root name when the script runs. The constant X doesn't indicate a domain controller name.
 
 ```console
 ldifde -i -f ldappolicy.ldf -v -c DC=X DC= forest root
@@ -160,7 +160,8 @@ ldifde -i -f ldappolicy.ldf -v -c DC=X DC= forest root
 
 ### Start Ldifde script
 
-> dn: CN=Extended Timeout,CN=Query-Policies,CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=X  
+```output
+dn: CN=Extended Timeout,CN=Query-Policies,CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=X  
 changetype: add  
 instanceType: 4  
 lDAPAdminLimits: MaxReceiveBuffer=10485760  
@@ -177,16 +178,19 @@ lDAPAdminLimits: InitRecvTimeout=120
 lDAPAdminLimits: MaxConnections=5000  
 objectClass: queryPolicy  
 showInAdvancedViewOnly: TRUE
+```
 
 After you import the file, you can change the query values by using Adsiedit.msc or Ldp.exe. The MaxQueryDuration setting in this script is 5 minutes.
 
 To link the policy to a DC, use an LDIF import file like this:
 
-> dn: CN=NTDS  
+```output
+dn: CN=NTDS  
 Settings,CN=DC1,CN=Servers,CN=site1,CN=Sites,CN=Configuration, DC=X  
 changetype: modify  
 add: queryPolicyobject  
 queryPolicyobject: CN=Extended Timeout,CN=Query-Policies,CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=X
+```
 
 Import it by using the following command:
 
@@ -196,10 +200,12 @@ ldifde -i -f link-policy-dc.ldf -v -c DC=X DC= **forest root**
 
 For a site, the LDIF import file would contain:
 
-> dn: CN=NTDS Site Settings,CN=site1,CN=Sites,CN=Configuration, DC=X  
+```output
+dn: CN=NTDS Site Settings,CN=site1,CN=Sites,CN=Configuration, DC=X  
 changetype: modify  
 add: queryPolicyobject  
 queryPolicyobject: CN=Extended Timeout,CN=Query-Policies,CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=X
+```
 
 > [!NOTE]
 > Ntdsutil.exe only displays the value in the default query policy. If any custom policies are defined, they are not displayed by Ntdsutil.exe.

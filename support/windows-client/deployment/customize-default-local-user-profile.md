@@ -1,23 +1,23 @@
 ---
 title: Customize default local user profile
 description: Describes how to customize a default user profile or a mandatory user profile in Windows 7.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Setup
+ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # Customize the default local user profile when you prepare an image of Windows
 
 This article describes how to customize the default local user profile settings when you create an image in Windows 7.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 973289
 
 ## Summary
@@ -99,7 +99,7 @@ For more information about Windows AIK, see [Windows Automated Installation Kit 
 >
 > - You must use the `/generalize` switch with sysprep.exe so that the Copy Profile parameter can be used. The `/unattend` option is used to point to the desired Unattend.xml file. Therefore, in this example, the Unattend.xml file is located in the `c:\answerfile` folder.
 > - The built-in administrator account profile is deleted when you perform a clean Windows installation or when you run the Sysprep tool. The CopyProfile setting is processed before the built-in administrator account is deleted. Therefore, any customizations that you make will appear in the new user account profile. This includes the built-in administrator account profile settings.
-> - If there are multiple user profiles, Windows sysprep may select an unexpected profile to copy to the default user profile. For more information, see [All customizations to default user profile lost](https://support.microsoft.com/help/2101557).
+> - If there are multiple user profiles, Windows sysprep may select an unexpected profile to copy to the default user profile.
 > - Not all customizations will propagate to new profiles. Some settings are reset by the new user logon process. To configure those settings, use Group Policy settings or scripting.
 
 ## What to consider if you use automated image build and deployment systems

@@ -4,20 +4,20 @@ description: Describes an issue in which clients are disconnected from Remote De
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Remote desktop sessions
+ms.custom: sap:remote-desktop-sessions, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Remote Desktop sessions may be disconnected during Group Policy updates in Windows Server
 
 This article provides a solution to an issue where clients are disconnected from Remote Desktop sessions during Group Policy updates.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2083411
 
 ## Symptoms

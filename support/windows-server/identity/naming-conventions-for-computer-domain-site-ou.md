@@ -4,20 +4,20 @@ description: Describes how to name computers, domains, sites, and organizational
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: User, computer, group, and object management
-ms.technology: windows-server-active-directory 
+ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
+ms.technology: windows-server-active-directory
 ---
 # Naming conventions in Active Directory for computers, domains, sites, and OUs
 
 This article describes the naming conventions for computer accounts in Windows, NetBIOS domain names, DNS domain names, Active Directory sites, and organizational units (OUs) that are defined in the Active Directory directory service.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 909264
 
 ## Summary
@@ -125,7 +125,7 @@ In that article, this naming convention applies to computer, OU, and site names.
   - All characters preserve their case formatting except for American Standard Code for Information Interchange (ASCII) characters.
   - The first character must be alphabetical or numeric.
   - The last character must not be a minus sign or a period.
-  - Two-character SDDL user strings that are listed in [well-known SIDs list](/windows/win32/secauthz/sid-strings) can't be used. Otherwise, *import*, *export*, and *take control* operations fail.
+  - Two-character SDDL user strings that are listed in [well-known SIDs list](/windows/win32/secauthz/sid-strings) can't be used. Otherwise, _import_, _export_, and _take control_ operations fail.
 
     In Windows 2000 and later versions of Windows, computers that are members of an Active Directory domain can't have names that are composed completely of numbers. This restriction is because of DNS restrictions.
 
@@ -280,7 +280,7 @@ Here are details for NetBIOS domain names and DNS domain names.
 
 - Single-label domain namespaces
 
-    Single-label DNS names are names that don't contain a suffix, such as `.com`, `.corp`, `.net`, `.org`, or *`companyname`*. For example, *host* is a single-label DNS name. Most Internet registrars don't allow the registration of single-label DNS names.
+    Single-label DNS names are names that don't contain a suffix, such as `.com`, `.corp`, `.net`, `.org`, or *`companyname`*. For example, _host_ is a single-label DNS name. Most Internet registrars don't allow the registration of single-label DNS names.
 
     Generally, we recommend that you register DNS names for internal and external namespaces with an Internet registrar. This includes the DNS names of Active Directory domains, unless such names are subdomains of DNS names that are registered by your organization name. For example, `corp.example.com` is a subdomain of `example.com`. Registering your DNS name with an Internet registrar may help prevent a name collision. A name collision may occur if another organization tries to register the same DNS name, or if your organization merges with another organization that uses the same DNS name.
 
@@ -311,7 +311,7 @@ A disjointed namespace occurs when a computer's primary DNS suffix doesn't match
 
 **Effects of a disjointed namespace:**
 
-Suppose a domain controller named *DC1* resides  in a Windows NT 4.0 domain whose NetBIOS domain name is contoso. This domain controller is upgraded to Windows 2000. When this upgrade occurs, the DNS domain is renamed `contoso.com`. In the original release version of Windows 2000, the upgrade routine clears the check box that links the primary DNS suffix of the domain controller to its DNS domain name. So, the primary DNS suffix of the domain controller is the Windows NT 4.0 DNS suffix that was defined in the Windows NT 4.0 suffix search list. In this example, the DNS name is `DC1.northamerica.contoso.com`.
+Suppose a domain controller named _DC1_ resides  in a Windows NT 4.0 domain whose NetBIOS domain name is contoso. This domain controller is upgraded to Windows 2000. When this upgrade occurs, the DNS domain is renamed `contoso.com`. In the original release version of Windows 2000, the upgrade routine clears the check box that links the primary DNS suffix of the domain controller to its DNS domain name. So, the primary DNS suffix of the domain controller is the Windows NT 4.0 DNS suffix that was defined in the Windows NT 4.0 suffix search list. In this example, the DNS name is `DC1.northamerica.contoso.com`.
 
 The domain controller dynamically registers its service location (SRV) records in the DNS zone that corresponds to its DNS domain name. However, the domain controller registers its host records in the DNS zone that corresponds to its primary DNS suffix.
 
@@ -421,7 +421,7 @@ We recommend that you use a valid DNS name when you create a new site name. Othe
 
 ### Special issues
 
-When the OU at the domain root level has the same name as a future child domain, you might experience database problems. Consider a scenario where you delete an OU named *marketing* to create a child domain with the same name, for example, `marketing.contoso.com` (leftmost label of the child domain FQDN name has the same name).
+When the OU at the domain root level has the same name as a future child domain, you might experience database problems. Consider a scenario where you delete an OU named _marketing_ to create a child domain with the same name, for example, `marketing.contoso.com` (leftmost label of the child domain FQDN name has the same name).
 
 The OU is deleted and during the tombstone lifetime of the OU you create a child domain that has the same name is created, deleted, and created again. In this scenario, a duplicate record name in the ESE database causes a phantom-phantom name collision when the child domain is re-created. This problem prevents the configuration container from replicating.
 
@@ -430,38 +430,38 @@ The OU is deleted and during the tombstone lifetime of the OU you create a child
 
 ## Table of reserved words
 
-|Reserved words for names|Windows NT 4.0|Windows 2000|Windows Server 2003 and later|
-|---|---|---|---|
-|ANONYMOUS|X|X|X|
-|AUTHENTICATED USER||X|X|
-|BATCH|X|X|X|
-|BUILTIN|X|X|X|
-|CREATOR GROUP|X|X|X|
-|CREATOR GROUP SERVER|X|X|X|
-|CREATOR OWNER|X|X|X|
-|CREATOR OWNER SERVER|X|X|X|
-|DIALUP|X|X|X|
-|DIGEST AUTH|||X|
-|INTERACTIVE|X|X|X|
-|INTERNET||X|X|
-|LOCAL|X|X|X|
-|LOCAL SYSTEM|||X|
-|NETWORK|X|X|X|
-|NETWORK SERVICE|||X|
-|NT AUTHORITY|X|X|X|
-|NT DOMAIN|X|X|X|
-|NTLM AUTH|||X|
-|NULL|X|X|X|
-|PROXY||X|X|
-|REMOTE INTERACTIVE|||X|
-|RESTRICTED||X|X|
-|SCHANNEL AUTH|||X|
-|SELF||X|X|
-|SERVER||X|X|
-|SERVICE|X|X|X|
-|SYSTEM|X|X|X|
-|TERMINAL SERVER||X|X|
-|THIS ORGANIZATION|||X|
-|USERS|||X|
-|WORLD|X|X|X|
-|||||
+|Reserved words for names|Windows NT 4.0|Windows 2000|Windows Server 2003|Windows Server 2008 and later|
+|---|---|---|---|---|
+|ANONYMOUS|X|X|X|X|
+|AUTHENTICATED USER||X|X|X|
+|BATCH|X|X|X|X|
+|BUILTIN|X|X|X|X|
+|CREATOR GROUP|X|X|X|X|
+|CREATOR GROUP SERVER|X|X|X|X|
+|CREATOR OWNER|X|X|X|X|
+|CREATOR OWNER SERVER|X|X|X|X|
+|DIALUP|X|X|X|X|
+|DIGEST AUTH|||X|X|
+|INTERACTIVE|X|X|X|X|
+|ENTERPRISE||| |X|
+|INTERNET||X|X|X|
+|LOCAL|X|X|X|X|
+|LOCAL SYSTEM|||X|X|
+|NETWORK|X|X|X|X|
+|NETWORK SERVICE|||X|X|
+|NT AUTHORITY|X|X|X|X|
+|NT DOMAIN|X|X|X|X|
+|NTLM AUTH|||X|X|
+|NULL|X|X|X|X|
+|PROXY||X|X|X|
+|REMOTE INTERACTIVE|||X|X|
+|RESTRICTED||X|X|X|
+|SCHANNEL AUTH|||X|X|
+|SELF||X|X|X|
+|SERVER||X|X|X|
+|SERVICE|X|X|X|X|
+|SYSTEM|X|X|X|X|
+|TERMINAL SERVER||X|X|X|
+|THIS ORGANIZATION|||X|X|
+|USERS|||X|X|
+|WORLD|X|X|X|X|

@@ -3,21 +3,21 @@ title: Third-party backup warnings after you install a servicing update in Windo
 description: You receive a warning when using a third-party backup application after you install a Windows Servicing Stack Update.
 ms.date: 12/04/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jeffbo
-ms.prod-support-area-path: Volume Shadow Copy Service (VSS)
+ms.custom: sap:volume-shadow-copy-service-vss, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # Third-party backup warnings after you install a servicing update in Windows Server 2016
 
 This article provides a solution to the third-party backup warnings that occurs after you install a servicing update in Windows Server 2016.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 4052556
 
 ## Symptom
@@ -29,7 +29,7 @@ Consider the following scenario:
 - The older-version folder under C:\\Windows\\servicing is emptied. For example, the following files are removed:  
     C:\\Windows\\servicing\\Version\\10.0.14393.0\\amd64_installed  
     C:\\Windows\\servicing\\Version\\10.0.14393.0\\x86_installed
-- You run `diskshadow /l output.txt`, and then `list writers detailed` at the diskshadow prompt.
+- You run `diskshadow /l output.txt`, and then `list writers detailed` at the diskshadow prompt.
 
 In this scenario, when you examine the system writer metadata in output.txt, you find the amd64_installed and x86_installed files are listed in the old version folder path that no longer exists.
 

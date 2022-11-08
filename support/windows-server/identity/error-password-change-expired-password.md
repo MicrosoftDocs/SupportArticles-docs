@@ -4,21 +4,21 @@ description: Fixes an error that occurs when processing the password change for 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: User, computer, group, and object management
+ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Password change for expired password failing for workgroup scenario
 
 This article helps fix an error that occurs when processing the password change for a user where the password is expired or set to change at next logon.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2879424
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2879424
 
 ## Symptoms
 
@@ -26,7 +26,7 @@ You have a server in a DMZ that's not member of a domain. For administration, yo
 
 When you add a new user on the server for administration, you set an initial password and set "User must change password at next logon". The user logs on to the server through Remote Desktop Services. The user is prompted to change the password, and after entering it, the user receives an error message "Not enough storage is available to process this command":
 
-![Error on password change](./media/error-password-change-expired-password/error-pwd-change.jpg)
+:::image type="content" source="media/error-password-change-expired-password/error-pwd-change.png" alt-text="Screenshot of the error message which is Not enough storage is available to process this command.":::
 
 If the RDS server has NLA enabled the attempt to log on to the server fails with the expired password showing the error:
 
@@ -36,7 +36,7 @@ Remote Desktop Connection[Content]
 > An authentication error has occured.  
 The Local Security Authority cannot be contacted
 >
-> Remote computer: win-go9uqjhk1ic  
+> Remote computer: \<Computer Name>  
 This could be due to an expired password.  
 Please update your password if it has expired.  
 For assistance, contact your administrator or technical support.  
@@ -45,7 +45,7 @@ For assistance, contact your administrator or technical support.
 
 The error dialog looks like this:
 
-![Error with NLA enabled](./media/error-password-change-expired-password/error-nla.jpg)
+:::image type="content" source="media/error-password-change-expired-password/error-nla.png" alt-text="Screenshot of the Remote Desktop Connection window  which shows the error message with NLA enabled.":::
 
 ## Cause
 

@@ -3,21 +3,21 @@ title: MPIO option not available in Disk Management in Windows Server 2019
 description: Describes a change in Windows Server 2019, in which MPIO option is no longer available in Disk Management.
 ms.date: 12/04/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Multipath I/O (MPIO) and Storport
+ms.custom: sap:multipath-i/o-mpio-and-storport, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # MPIO option not in Disk Management in Windows Server 2019
 
 This article describes a change in Windows Server 2019, in which MPIO option is no longer available in Disk Management.
 
-_Original product version:_ &nbsp; Windows Server 2019  
+_Applies to:_ &nbsp; Windows Server 2019  
 _Original KB number:_ &nbsp; 4477064
 
 ## Symptom  

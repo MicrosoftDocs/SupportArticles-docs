@@ -2,8 +2,9 @@
 title: Error (Could not load file or assembly) when you run DirSyncConfigShell.psc1 in Windows Server 2008 R2
 description: Describes a scenario in which you receive an error when you run DirSyncConfigShell.psc1 after you install version 6765.0006 of the Directory Sync tool on a Windows Server 2008 R2-based computer.
 ms.date: 05/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: arrenc, willfid
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Error when you run DirSyncConfigShell.psc1 in Windows Server 2008 R2: Could not load file or assembly
 
@@ -30,6 +31,4 @@ Do one of the following:
 - Install Windows Management Framework 3.0 on the Windows Server 2008 R2-based computer. For more information, see [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595).
 - Run the Directory Sync tool from a Windows Server 2012 R2-based computer. To install the Directory Sync tool, see [Install or upgrade the Directory Sync tool](/azure/active-directory/hybrid/whatis-hybrid-identity).
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

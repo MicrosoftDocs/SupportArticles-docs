@@ -4,20 +4,25 @@ description: Describes how to examine the small memory dump files that are creat
 ms.date: 09/22/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Blue Screen/Bugcheck
+ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
 ms.technology: windows-client-performance
+adobe-target: true
 ---
+
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+--->
+
 # How to read the small memory dump file that is created by Windows if a crash occurs
 
 This article describes how to examine a small memory dump file. A small memory dump file can help you determine why your computer crashed.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 315263
 
 > [!NOTE]
@@ -49,9 +54,9 @@ To configure startup and recovery options to use the small memory dump file, fol
 1. Click **Start**, and then click **Control Panel**.
 2. Double-click **System**, and then click **Advanced system settings**.
 3. Click the **Advanced** tab, and then click **Settings** under **Startup and Recovery**.
-4. In the **Write debugging information** list, click **Small memory dump (64k)**.
+4. In the **Write debugging information** list, click **Small memory dump (256k)**.
 
-    ![Startup and Recovery - Small Memory Dump dialog box](./media/read-small-memory-dump-file/small-memory-dump-option.png)  
+    :::image type="content" source="media/read-small-memory-dump-file/small-memory-dump-option.gif" alt-text="Screenshot of the Small memory dump (256k) option in the Write debugging information list in the Startup and Recovery window." border="false":::
 
 To change the folder location for the small memory dump files, type a new path in the **Dump File** box or in the **Small dump directory** box, depending on your version of Windows).
 
@@ -68,7 +73,7 @@ For more information about how to use Dump Check Utility in Windows XP, Windows 
 
 Or, you can use the Windows Debugger (WinDbg.exe) tool or the Kernel Debugger (KD.exe) tool to read small memory dump files. WinDbg and KD.exe are included with the latest version of the Debugging Tools for Windows package.
 
-To install the debugging tools, see the [Download and Install Debugging Tools for Windows](/windows-hardware/drivers/download-the-wdk) webpage. Select the Typical installation. By default, the installer installs the debugging tools in the following folder:
+To install the debugging tools, see the [Download and Install Debugging Tools for Windows](/windows-hardware/drivers/debugger/debugger-download-tools) webpage. Select the Typical installation. By default, the installer installs the debugging tools in the following folder:
 
 `C:\Program Files\Debugging Tools for Windows`
 
@@ -106,8 +111,7 @@ The following table explains the use of the placeholders that are used in these 
 | **SymbolPath**|Either the local path where the symbol files have been downloaded or the symbol server path, including a cache folder. Because a small memory dump file contains limited information, the actual binary files must be loaded together with the symbols for the dump file to be correctly read.|
 | **ImagePath**|The path of these files. The files are contained in the I386 folder on the Windows XP CD-ROM. For example, the path may be `C:\Windows\I386`.|
 | **DumpFilePath**|The path and file name for the dump file that you are examining.|
-|||
-
+  
 ### Sample commands
 
 You can use the following sample commands to open the dump file. These commands assume the following:

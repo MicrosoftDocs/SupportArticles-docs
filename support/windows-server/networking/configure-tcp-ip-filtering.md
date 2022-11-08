@@ -2,22 +2,22 @@
 title: Configure TCP/IP Filtering
 description: Describes how to configure TCP/IP filtering on Microsoft Windows 2003-based computers.
 ms.date: 10/19/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---
 # How to configure TCP/IP Filtering in Windows Server 2003
 
 This article describes how to configure TCP/IP filtering on Microsoft Windows 2003-based computers.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 816792
 
 ## Summary
@@ -93,5 +93,3 @@ TCP/IP Filtering can filter only inbound traffic. This feature doesn't affect ou
 ## References
 
 For more information about TCP and UDP port numbers, see [Service Name and Transport Protocol Port Number Registry](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml).
-
-For more information about IPSec Policies, see [How To Configure IPSec Tunneling in Windows Server 2003](https://support.microsoft.com/help/816514).

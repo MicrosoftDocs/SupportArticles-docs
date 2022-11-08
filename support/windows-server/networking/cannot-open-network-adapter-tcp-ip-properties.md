@@ -4,20 +4,20 @@ description: Resolve an error that occurs when you open the TCP/IP properties of
 ms.date: 10/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, MASOUDH
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---
 # Error message: In order to configure TCP/IP, you must install and enable a network adapter card
 
 This article provides help to resolve an error that occurs when you open the TCP/IP properties of your network adapter.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 308939
 
 ## Symptoms

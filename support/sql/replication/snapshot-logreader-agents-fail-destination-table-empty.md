@@ -2,7 +2,7 @@
 title: Snapshot or Logreader agents fail
 description: This article provides a workaround for the problem that Snapshot or Logreader agents fail when a destination table is empty.
 ms.date: 07/22/2020
-ms.prod-support-area-path: Replication, change tracking, change data capture
+ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: rvrosa
 ms.prod: sql
 ---
@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 3144065
 
 ## Symptoms
 
-In a transactional replication in Microsoft SQL Server, an article in an SQL query has an empty string in a destination table (@destination_table = N"") in a Transact-SQL statement. In this situation, you may receive the following error messages in the specified locations:
+In a transactional replication in Microsoft SQL Server, an article in a SQL query has an empty string in a destination table (@destination_table = N"") in a Transact-SQL statement. In this situation, you may receive the following error messages in the specified locations:
 
 - In the Snapshot agent:
 

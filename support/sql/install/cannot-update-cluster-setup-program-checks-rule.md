@@ -2,7 +2,7 @@
 title: Can't update cluster if Setup program checks rule
 description: This article provides a resolution for the problem that occurs when the Setup program checks the Cluster_IsOnlineIfClustered rule.
 ms.date: 10/23/2020
-ms.prod-support-area-path: Database Engine 
+ms.custom: sap:Database Engine 
 ms.reviewer: ramakoni, clivec
 ms.prod: sql
 ---

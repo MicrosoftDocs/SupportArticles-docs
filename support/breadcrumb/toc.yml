@@ -26,28 +26,28 @@
         topicHref: /troubleshoot/windows-hardware/drivers/welcome-windowshardware
 
     - name: Browsers
-      tocHref: /troubleshoot/browsers/
-      topicHref: /troubleshoot/browsers/welcome-browsers
+      tocHref: /troubleshoot/developer/browsers/
+      topicHref: /troubleshoot/developer/browsers/welcome-browsers
 
     - name: BizTalk Server
-      tocHref: /troubleshoot/biztalk/
-      topicHref: /troubleshoot/biztalk/welcome-biztalk-server
+      tocHref: /troubleshoot/developer/biztalk/
+      topicHref: /troubleshoot/developer/biztalk/welcome-biztalk-server
       
     - name: .NET
-      tocHref: /troubleshoot/dotnet/
-      topicHref: /troubleshoot/dotnet/welcome-dotnet
+      tocHref: /troubleshoot/developer/dotnet/
+      topicHref: /troubleshoot/developer/dotnet/welcome-dotnet
 
     - name: Host Integration Server
-      tocHref: /troubleshoot/host-integration-server/
-      topicHref: /troubleshoot/host-integration-server/welcome-host-integration-server
+      tocHref: /troubleshoot/developer/host-integration-server/
+      topicHref: /troubleshoot/developer/host-integration-server/welcome-host-integration-server
 
     - name: Visual Studio
-      tocHref: /troubleshoot/visualstudio/
-      topicHref: /troubleshoot/visualstudio/welcome-visual-studio
+      tocHref: /troubleshoot/developer/visualstudio/
+      topicHref: /troubleshoot/developer/visualstudio/welcome-visual-studio
 
     - name: Web Apps
-      tocHref: /troubleshoot/webapps/
-      topicHref: /troubleshoot/webapps/welcome-webapps
+      tocHref: /troubleshoot/developer/webapps/
+      topicHref: /troubleshoot/developer/webapps/welcome-webapps
 
     - name: SQL Server
       tocHref: /troubleshoot/sql/
@@ -110,3 +110,54 @@
       - name: Virtual Machines
         tocHref: /troubleshoot/azure/virtual-machines/
         topicHref: /troubleshoot/azure/virtual-machines/welcome-virtual-machines
+      - name: Virtual Machine Scale Sets
+        tocHref: /troubleshoot/azure/virtual-machine-scale-sets/
+        topicHref: /troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets
+      - name: Azure Kubernetes Service
+        tocHref: /troubleshoot/azure/azure-kubernetes/
+        topicHref: /troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes
+      - name: Azure App Service
+        tocHref: /troubleshoot/azure/app-service/
+        topicHref: /troubleshoot/azure/app-service/welcome-app-service
+      - name: Azure Monitor
+        tocHref: /troubleshoot/azure/azure-monitor/
+        topicHref: /troubleshoot/azure/azure-monitor/welcome-azure-monitor
+      - name: Azure Synapse Analytics
+        tocHref: /troubleshoot/azure/synapse-analytics
+        topicHref: /troubleshoot/azure/synapse-analytics/welcome-synapse-analytics
+
+    - name: Microsoft Dynamics 365
+      tocHref: /troubleshoot/dynamics-365/
+      topicHref: /troubleshoot/dynamics-365/
+      items:
+      - name: Dynamics 365 Fraud Protection
+        tocHref: /troubleshoot/dynamics-365/fraud-protection/
+        topicHref: /troubleshoot/dynamics-365/fraud-protection/welcome-fraud-protection
+      - name: Dynamics 365 Marketing
+        tocHref: /troubleshoot/dynamics-365/marketing/
+        topicHref: /troubleshoot/dynamics-365/marketing/welcome-marketing
+      - name: Dynamics 365 Sales
+        tocHref: /troubleshoot/dynamics-365/sales/
+        topicHref: /troubleshoot/dynamics-365/sales/welcome-sales
+      - name: Dynamics 365 Supply Chain Management
+        tocHref: /troubleshoot/dynamics-365/supply-chain/
+        topicHref: /troubleshoot/dynamics-365/supply-chain/welcome-supply-chain
+
+    - name: Microsoft Power Platform
+      tocHref: /troubleshoot/power-platform/
+      topicHref: /troubleshoot/power-platform/
+      items:
+      - name: Power Apps
+        tocHref: /troubleshoot/power-platform/power-apps/
+        topicHref: /troubleshoot/power-platform/power-apps/welcome-power-apps
+      - name: Power Automate
+        tocHref: /troubleshoot/power-platform/power-automate/
+        topicHref: /troubleshoot/power-platform/power-automate/welcome-power-automate
+
+    - name: Microsoft Dynamics
+      tocHref: /troubleshoot/dynamics/
+      topicHref: /troubleshoot/dynamics/
+      items:
+      - name: Microsoft Dynamics GP
+        tocHref: /troubleshoot/dynamics/gp/
+        topicHref: /troubleshoot/dynamics/gp/welcome-gp

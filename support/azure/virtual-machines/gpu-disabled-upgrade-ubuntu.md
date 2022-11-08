@@ -2,8 +2,10 @@
 title: GPU is disabled after you upgrade Ubuntu 16.04 LTS to 4.4.0-75 kernel on an Azure VM
 description: Describes an issue with Ubuntu 16.04 kernel 4.4.0-75.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: virtual-machines
+ms.subservice: vm-common-errors-issues
+ms.collection: linux
 ---
 # GPU is disabled after you upgrade Ubuntu 16.04 LTS to 4.4.0-75 kernel on an Azure VM
 
@@ -89,3 +91,5 @@ The Marketplace image for Ubuntu 16.04 LTS with the 4.4.0-77 kernel is published
 **Third-party information disclaimer**
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

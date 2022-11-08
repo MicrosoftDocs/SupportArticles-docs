@@ -2,9 +2,10 @@
 title: Win32_NetworkAdapterConfiguration class is unable to retrieve information
 description: This article provides a resolution for the problem where he Win32_NetworkAdapterConfiguration class is unable to retrieve information about PPPoE (Point-to-point protocol over Ethernet) and VPN (Virtual Private Network).
 ms.date: 01/04/2021
-ms.prod-support-area-path: Networking Development
+ms.custom: sap:Networking Development
 ms.reviewer: koichm
 ms.topic: troubleshooting
+ms.technology: windows-dev-apps-networking-dev
 ---
 # The Win32_NetworkAdapterConfiguration class is unable to retrieve information about PPPoE (Point-to-point protocol over Ethernet) and VPN (Virtual Private Network)
 

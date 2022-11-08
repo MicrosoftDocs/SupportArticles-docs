@@ -2,22 +2,22 @@
 title: The computer stops responding or the Applying computer settings screen appears for longer than you expect
 description: Describes how to resolve an issue where the computer stops responding or the Applying computer settings screen appears for longer than you expect.
 ms.date: 09/14/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, cbutch, v-jomcc
-ms.prod-support-area-path: System Hang
+ms.custom: sap:system-hang, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # When you restart a computer, the computer stops responding, or the "Applying computer settings" screen appears for longer than you expect
 
 This article provides a solution to an issue where the computer stops responding or the "Applying computer settings" screen appears for longer than you expect.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 905716
 
 ## Symptoms

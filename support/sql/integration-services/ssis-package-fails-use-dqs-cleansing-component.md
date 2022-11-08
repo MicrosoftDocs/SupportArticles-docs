@@ -2,7 +2,7 @@
 title: SSIS package fails to use DQS Cleansing Component
 description: This article provides a workaround for the problem that occurs when the SSIS package uses the Data Quality Client Cleansing Component to cleanse dataflow data in a SQL Server environment.
 ms.date: 09/21/2020
-ms.prod-support-area-path: Integration Services
+ms.custom: sap:Integration Services
 ms.reviewer: jasonh
 ms.prod: sql
 ---

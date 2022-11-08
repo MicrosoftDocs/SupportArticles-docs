@@ -4,20 +4,20 @@ description: Provides a solution to the issue a Microsoft Application Virtualiza
 ms.date: 12/04/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, gautama
-ms.prod-support-area-path: 
+ms.custom: sap:application-does-not-load-or-run, csstroubleshoot
 ms.technology: windows-client-application-virtualization-app-v
 ---
 # An App-V v5 virtualized application fails to start with error 0xc0000142
 
 This article provides a solution to the issue a Microsoft Application Virtualization version 5 (App-V) virtualized application fails to start with an application error 0xc0000142.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2777003
 
 ## Symptoms

@@ -4,20 +4,20 @@ description: Explains how to optimize the location of a domain controller or glo
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory topology (sites, subnets, and connection objects)
+ms.custom: sap:active-directory-topology-sites-subnets-and-connection-objects, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # How to optimize the location of a domain controller or global catalog that resides outside of a client's site
 
 This article provides the steps to optimize the location of a domain controller or global catalog that resides outside of a client's site.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 306602
 
 ## Summary
@@ -89,7 +89,7 @@ Domain controller-specific records
 |Rfc1510Kpwd|SRV|_kpasswd._tcp.\<DnsDomainName>|
 |Rfc1510UdpKpwd|SRV|_kpasswd._udp.\<DnsDomainName>|
 
- Global catalog-specific records  
+Global catalog-specific records  
 
 |Mnemonic|Type|DNS Record|
 |---|---|---|

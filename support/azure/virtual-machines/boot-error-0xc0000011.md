@@ -2,8 +2,10 @@
 title: Boot error code 0xc0000011 on an Azure VM
 description: Provides the resolution for the error code 0xc0000011 in the Azure VM.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: jarrettr
+ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
+ms.collection: windows
 ---
 # Boot error code 0xc0000011 on an Azure VM
 
@@ -28,12 +30,15 @@ This issue occurs because of a file version mismatch between the binary file tha
 
 ## Resolution
 
+> [!TIP]
+> If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+
 To fix the issue, follow these steps.
 
 ### Step 1: Attach the OS disk of the VM to another VM as a data disk
 
 1. Delete the virtual machine (VM). Make sure that you select the **Keep the disks** option when you do this.
-2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/attach-managed-disk-portal).
+2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
 3. Connect to the troubleshooting VM. Open **Computer management** > **Disk management**. Make sure that the OS disk is online and that its partitions have drive letters assigned.
 
 ### Step 2: Replace the corrupted file
@@ -54,7 +59,7 @@ To fix the issue, follow these steps.
 
     For example, see the following screenshot.
 
-    :::image type="content" source="media/boot-error-code-0xc0000011/4015973_en_1.png" alt-text="Screenshot of sample of the DIR command.":::
+    :::image type="content" source="media/boot-error-code-0xc0000011/dir-command-output.png" alt-text="Screenshot of the sample of the DIR command." border="false":::
 
     **Notes**:  
 
@@ -62,3 +67,5 @@ To fix the issue, follow these steps.
     - If the latest binary doesn't work, you can try the previous file version to obtain an earlier system update level on that component.
     - If the only binary that's returned in this step matches the file that you're trying to replace on the affected VM, and if both files have the same size and time stamp, you can replace the corrupted file by copying it from another working VM that has the same OS and, if possible, the same system update level.
 4. Detach the repaired disk from the troubleshooting VM. Then, create a VM from the OS disk.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -2,7 +2,6 @@
 title: The IP Address page is missing when creating a cluster
 description: Fixes an issue where the IP Address page is missing in the cluster creation wizard.
 ms.date: 07/17/2020
-ms.prod-support-area-path:
 ms.reviewer: alvinm
 ---
 # The IP Address page in the System Center 2012 Virtual Machine Manager cluster creation wizard is missing
@@ -14,11 +13,11 @@ _Original KB number:_ &nbsp; 2679673
 
 ## Symptoms
 
-When creating a cluster using System Center 2012 Virtual Machine Manager, you don't get the cluster IP Address page during the cluster creation wizard.
+When creating a cluster using System Center 2012 Virtual Machine Manager, you don't get the cluster IP Address page during the cluster creation wizard.
 
 ## Cause
 
-This can occur if the default gateway is missing. Because the interfaces in the clusters are set with static IP addresses but they do not have a default gateway specified, validation doesn't recognize the interfaces as candidates for client traffic.
+This can occur if the default gateway is missing. Because the interfaces in the clusters are set with static IP addresses but they do not have a default gateway specified, validation doesn't recognize the interfaces as candidates for client traffic.
 
 ## Resolution
 

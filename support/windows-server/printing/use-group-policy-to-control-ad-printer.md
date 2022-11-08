@@ -4,20 +4,20 @@ description: Describes the policies specific to managing printers and how to ena
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: 'Management and Configuration: Printers via Group Policy'
-ms.technology: windows-server-printing 
+ms.custom: sap:management-and-configuration:-printers-via-group-policy, csstroubleshoot
+ms.technology: windows-server-printing
 ---
 # Use Group Policy settings to control printers in Active Directory
 
 This article describes the policies specific to managing printers and how to use Group Policy settings to manage printers in Active Directory.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 234270
 
 ## Summary
@@ -162,11 +162,9 @@ If you enable this policy setting, the print spooler will ignore the Driver Isol
 
   - The **Users can only point and print to computers in their forest** setting applies only to Windows Server 2003 and Windows XP SP1 (and later service packs).
 
-    For more information about Point and Print, see the following articles:
+    For more information about Point and Print, see the following article:
 
-  - [Windows Hardware Dev Center Archive](/previous-versions/windows/hardware/download/dn550976(v=vs.85))
-  
-  - [Description of the Point and Print Restrictions policy setting in Windows Server 2003 and Windows XP](https://support.microsoft.com/help/319939)
+    [Windows Hardware Dev Center Archive](/previous-versions/windows/hardware/download/dn550976(v=vs.85))
 
 ## Configure printer-specific settings for users
 

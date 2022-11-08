@@ -2,22 +2,22 @@
 title: Reliability Monitor shows no information
 description: Describes a behavior that is by design in Windows Server 2008 and in Windows Server 2008 R2. This behavior causes no information to be displayed in Reliability Monitor.
 ms.date: 09/23/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, subheetr
-ms.prod-support-area-path: Performance monitoring tools
+ms.custom: sap:performance-monitoring-tools, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # Reliability Monitor displays no information in Windows Server
 
 This article provides a solution to an issue that Reliability Monitor displays no information when you open Reliability Monitor on a computer.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 983386
 
 ## Symptoms

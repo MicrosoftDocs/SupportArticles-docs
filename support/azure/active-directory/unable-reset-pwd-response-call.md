@@ -2,8 +2,9 @@
 title: Unable to reset password in Azure, Office 365, or Intune
 description: Describes a problem in which you receive an error message when you try to reset your password in Microsoft Azure, Office 365, or Microsoft Intune. Provides how to resolve this problem.
 ms.date: 05/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: authentication
 ---
 # Error when trying to reset password in Azure, Office 365, or Intune: We did not receive your response in time, or you hung up the call
 
@@ -45,3 +46,5 @@ To resolve this problem, work with your administrator to update your telephone n
 
 > [!NOTE]
 > If available, try to use another method such as using your mobile phone, office telephone, or mobile app.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

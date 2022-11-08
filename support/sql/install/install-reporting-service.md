@@ -2,7 +2,7 @@
 title: Install SQL Server 2008 Reporting services
 description: This article introduces that how to install SQL Server 2008 X64 and SQL Server 2008 Reporting services X86 side by side on Windows 2008 X64.
 ms.date: 07/22/2020
-ms.prod-support-area-path: Installation, Patching and Upgrade
+ms.custom: sap:Installation, Patching and Upgrade
 ms.topic: how-to
 ms.prod: sql
 ---
@@ -23,8 +23,7 @@ In this scenario, if you try to install x86 version of the SQL Server 2008 Repor
 |Rule|Status|
 |---|---|
 |Same architecture installation|Failed|
-|||
-
+  
 If you click on the **Failed** status, you will see the following message:
 
 > Rule "same architecture installation" failed.  

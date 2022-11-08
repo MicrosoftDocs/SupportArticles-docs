@@ -2,22 +2,22 @@
 title: Event ID 8193 when you perform a backup
 description: Describes an issue that triggers event ID 8193 when you try to perform a VSS backup in Windows Server 2012 and earlier versions of Windows. A resolution is provided.
 ms.date: 09/17/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Configuring and using Backup software
+ms.custom: sap:configuring-and-using-backup-software, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # "VSS Error XML document is too long. hr = 0x80070018" error when you perform a backup in Windows
 
 This article provides a solution to an error that occurs when you perform a backup in Windows.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3098315
 
 ## Symptoms

@@ -1,28 +1,28 @@
 ---
 title: Spooler.xml file growth and high CPU in spoolsv.exe process on print server
 description: Resolves an issue where you experience higher CPU utilization in the spoolsv.exe process and the spooler.xml file grows in size.
-ms.date: 09/14/2020
+ms.date: 04/15/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: 'Errors and troubleshooting: General issues'
+ms.custom: sap:errors-and-troubleshooting-general-issues, csstroubleshoot
 ms.technology: windows-server-printing
 ---
 # Spooler.xml file growth and high CPU in spoolsv.exe process on print server
 
 This article helps resolve an issue where you experience higher CPU utilization in the spoolsv.exe process and the spooler.xml file grows in size.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;960919
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 960919
 
 ## Symptoms
 
-Windows Server 2008 print server may experience higher than normal CPU utilization in the spoolsv.exe process. The spooler.xml file located in %systemroot%\\system32\\spool\\ folder will also grow in size and may exhaust all available disk space.
+Windows Server print server may experience higher than normal CPU utilization in the spoolsv.exe process. The spooler.xml file located in %systemroot%\\system32\\spool\\ folder will also grow in size and may exhaust all available disk space.
 
 ## Cause
 

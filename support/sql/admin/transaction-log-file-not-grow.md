@@ -2,7 +2,7 @@
 title: Transaction log file doesn't grow
 description: This article provides resolutions for the problem where the SQL Server database transaction log file doesn't grow by the configured file growth value.
 ms.date: 07/23/2020
-ms.prod-support-area-path: Administration and management
+ms.custom: sap:Administration and management
 ms.reviewer: SureshKa
 ms.prod: sql
 ---
@@ -55,6 +55,5 @@ For more information about the products or tools that automatically check for fi
 |Rule software|Rule title|Rule description|Product versions against which the rule is evaluated|
 |---|---|---|---|
 |System Center Advisor|SQL Server database file might not grow using the configured growth value|System Center Advisor determines whether the SQL Server database transaction log file is configured for a growth value of 4 GB or multiples thereof and generates a warning if this is the case. Review the information that is provided in the **Information Collected** section of the warning, and make the necessary changes to the transaction log that is affected.|SQL Server 2008, SQL Server 2008 R2|
-|||||
-
+  
 If you have large number of virtual log files in the transaction log, you will encounter long database recovery. For more information, see [Database operations take a long time to complete, or they trigger errors when the transaction log has numerous virtual log files](https://support.microsoft.com/help/2028436).

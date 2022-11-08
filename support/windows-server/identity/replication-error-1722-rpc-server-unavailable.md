@@ -4,20 +4,20 @@ description: Fixes error 1722 of Active Directory replication in Windows Server 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory replication
-ms.technology: windows-server-active-directory 
+ms.custom: sap:active-directory-replication, csstroubleshoot
+ms.technology: windows-server-active-directory
 ---
 # Active Directory replication error 1722: The RPC server is unavailable
 
 This article helps fix the error 1722 of Active Directory replication.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2102154
 
 ## Symptoms
@@ -30,22 +30,26 @@ This article describes the symptoms, cause, and resolution for resolving Active 
 
     Dialog Message text:
 
-    > The operation failed because: Active Directory Domain Services could not create the NTDS Settings object for this Active Directory Domain Controller CN=NTDS Settings,CN=\<Name of DC being promoted),CN=Servers,CN=\<site name>,CN=Sites,CN=Configuration,DC=\<forest root domain> on the remote AD DC \<helper DC>.\<domain name>.\<top level domain>. Ensure the provided network credentials have sufficient permissions. "The RPC server is unavailable."
+    ```output
+    The operation failed because: Active Directory Domain Services could not create the NTDS Settings object for this Active Directory Domain Controller CN=NTDS Settings,CN=<Name of DC being promoted),CN=Servers,CN=<site name>,CN=Sites,CN=Configuration,DC=<forest root domain> on the remote AD DC <helper DC>.<domain name>.<top level domain>. Ensure the provided network credentials have sufficient permissions. "The RPC server is unavailable."
+    ```
 
 1. DCDIAG reports that the Active Directory Replications test has failed with error 1722: The RPC Server is unavailable.
 
-    > [Replications Check,\<DC Name>] A recent replication attempt failed:
-    >    From \<source DC> to \<destination DC>  
-    >    Naming Context: \<DN path of directory partition>  
-    >    The replication generated an error (1722):  
-    >    The RPC server is unavailable.  
-    >    The failure occurred at \<date> \<time>.  
-    >    The last success occurred at \<date> \<time>.  
-    >    \<X> failures have occurred since the last success.  
-    >    [\<dc name>] DsBindWithSpnEx() failed with error 1722,  
-    >    The RPC server is unavailable..  
-    >    Printing RPC Extended Error Info:  
-    >    \<snip>
+    ```output
+    [Replications Check,<DC Name>] A recent replication attempt failed:
+    From <source DC> to <destination DC>  
+    Naming Context: <DN path of directory partition>  
+    The replication generated an error (1722):  
+    The RPC server is unavailable.  
+    The failure occurred at <date> <time>.  
+    The last success occurred at <date> <time>.  
+    <X> failures have occurred since the last success.  
+    [<dc name>] DsBindWithSpnEx() failed with error 1722,  
+    The RPC server is unavailable..  
+    Printing RPC Extended Error Info:  
+    <snip>
+    ```
 
 1. REPADMIN.EXE reports that replication attempt has failed with status 1722 (0x6ba).
 
@@ -104,7 +108,6 @@ This article describes the symptoms, cause, and resolution for resolving Active 
     |NTDS KCC|1865|The Knowledge Consistency Checker (KCC) was unable to form a complete spanning tree network topology. As a result, the following list of sites cannot be reached from the local site.|
     |NTDS KCC|1925|The attempt to establish a replication link for the following writable directory partition failed.|
     |NTDS Replication|1960|Internal event: The following domain controller received an exception from a remote procedure call (RPC) connection. The operation may have failed.|
-    ||||
 
 ## Cause
 
@@ -137,7 +140,6 @@ The OS version will determine the correct values for the source and destination 
 |Remote Procedure Call (RPC)|Started / Automatic|Started / Automatic|Started / Automatic|Started / Automatic|
 |Remote Procedure Call (RPC) Locator|Started / Automatic (Domain Controllers)<br/> <br/>Not  started / Manual(Member Servers)|Not  started / Manual|Not  started / Manual|Not  started / Manual|
 |Kerberos Key Distribution Center (KDC)|Started / Automatic (Domain Controllers)<br/> <br/>Not started / Disabled(Member Servers)|Started / Automatic (Domain Controllers)<br/> <br/>Not started / Disabled(Member Servers)|Started / Automatic (Domain Controllers)<br/> <br/>Not started / Disabled(Member Servers)|Started / Automatic (Domain Controllers)<br/> <br/>Not started / Disabled(Member Servers) |
-||||||
 
 If you make any changes to match the settings above, restart the machine. Verify both the startup value and service status match the values documented in the table above.
 
@@ -149,8 +151,7 @@ If you make any changes to match the settings above, restart the machine. Verify
 | ncacn_ip_tcp| REG_SZ| rpcrt4.dll|
 | ncacn_np| REG_SZ| rpcrt4.dll|
 | ncacn_ip_udp| REG_SZ| rpcrt4.dll|
-||||
-
+  
 If the **ClientProtocols** key or any of the four default values are missing, import the key from a known good server.
 
 ### Verify DNS is working
@@ -174,10 +175,11 @@ There are a few tools to use to help identify DNS errors:
 
     Sample output:
 
-    > TEST: Authentication (Auth)  
+    ```output
+    TEST: Authentication (Auth)  
     Authentication test: Successfully completed
-    >
-    > TEST: Basic (Basc)  
+
+    TEST: Basic (Basc)  
     Microsoft(R) Windows(R) Server 2003, Enterprise Edition (Service Pack level: 2.0) is supported  
     NETLOGON service is running  
     kdc service is running  
@@ -188,33 +190,35 @@ There are a few tools to use to help identify DNS errors:
     Adapter [00000009] Microsoft Virtual Machine Bus Network Adapter:  
     MAC address is 00:15:5D:40:CF:92  
     IP address is static  
-    IP address: \<IP Address>  
+    IP address: <IP Address>  
     DNS servers:  
-    \<DNS IP Address> (DC.domain.com.) [Valid]  
+    <DNS IP Address> (DC.domain.com.) [Valid]  
     The A record for this DC was found  
     The SOA record for the Active Directory zone was found  
     The Active Directory zone on this DC/DNS server was found (primary)  
     Root zone on this DC/DNS server was not found  
-    \<omitted other tests for readability>
+    <omitted other tests for readability>
+    ```
 
     Summary of DNS test results:
 
-    > Auth Basc Forw Del  Dyn  RReg Ext
-    >
-    >
-    > Domain: `fragale.contoso.com`
-    > DC1 PASS PASS FAIL PASS PASS PASS n/a  
-    > Domain: `child.fragale.contoso.com`  
-    > DC2 PASS PASS n/a  n/a  n/a  PASS n/a  
-    >
-    > Enterprise DNS infrastructure test results:  
-    > For parent domain domain.com and subordinate domain child:  
-    > Forwarders or root hints are not misconfigured from parent domain to subordinate domain  
-    > Error: Forwarders are configured from subordinate to parent domain but some of them failed DNS server tests  
-    >
-    > (See DNS servers section for error details)  
-    > Delegation is configured properly from parent to subordinate domain  
-    > ......................... domain.com failed test DNS
+    ```output
+    Auth Basc Forw Del  Dyn  RReg Ext
+
+    Domain: fragale.contoso.com
+    DC1 PASS PASS FAIL PASS PASS PASS n/a  
+    Domain: child.fragale.contoso.com  
+    DC2 PASS PASS n/a  n/a  n/a  PASS n/a  
+    
+    Enterprise DNS infrastructure test results:  
+    For parent domain domain.com and subordinate domain child:  
+    Forwarders or root hints are not misconfigured from parent domain to subordinate domain  
+    Error: Forwarders are configured from subordinate to parent domain but some of them failed DNS server tests  
+    
+    (See DNS servers section for error details)  
+    Delegation is configured properly from parent to subordinate domain  
+    ......................... domain.com failed test DNS
+    ```
 
     The summary provides remediation steps for the more common failures from this test.
 
@@ -222,19 +226,21 @@ There are a few tools to use to help identify DNS errors:
 
 - `NLTEST /DSGETDC:<netbios or DNS domain name>`
 
-    `Nltest /dsgetdc` is used to exercise the dc locator process. Thus `/dsgetdc:<domain name>` tries to find the domain controller for the domain. Using the force flag forces domain controller location rather than using the cache. You can also specify options such as **/gc** or **/pdc** to locate a Global Catalog or a primary domain controller emulator. For finding the Global Catalog, you must specify a *tree name*, which is the DNS domain name of the root domain.
+    `Nltest /dsgetdc` is used to exercise the dc locator process. Thus `/dsgetdc:<domain name>` tries to find the domain controller for the domain. Using the force flag forces domain controller location rather than using the cache. You can also specify options such as **/gc** or **/pdc** to locate a Global Catalog or a primary domain controller emulator. For finding the Global Catalog, you must specify a _tree name_, which is the DNS domain name of the root domain.
 
     Sample output:
 
-    > DC: [\\`DC.fabrikam.com`]  
-    > Address: \\\\\<IP Address>  
-    > Dom Guid: 5499c0e6-2d33-429d-aab3-f45f6a06922b  
-    > Dom Name: `fabrikam.com`  
-    > Forest Name: `fabrikam.com`  
-    > Dc Site Name: Default-First-Site-Name  
-    > Our Site Name: Default-First-Site-Name  
-    > Flags: PDC GC DS LDAP KDC TIMESERV WRITABLE DNS_DC DNS_DOMAIN DNS_FOREST CLOSE_SITE  
-    > The command completed successfully
+    ```output
+    DC: [\DC.fabrikam.com]  
+    Address: \\<IP Address>  
+    Dom Guid: 5499c0e6-2d33-429d-aab3-f45f6a06922b  
+    Dom Name: fabrikam.com  
+    Forest Name: fabrikam.com  
+    Dc Site Name: Default-First-Site-Name  
+    Our Site Name: Default-First-Site-Name  
+    Flags: PDC GC DS LDAP KDC TIMESERV WRITABLE DNS_DC DNS_DOMAIN DNS_FOREST CLOSE_SITE  
+    The command completed successfully
+    ```
 
 - `Netdiag -v`
 
@@ -242,20 +248,22 @@ There are a few tools to use to help identify DNS errors:
 
     Sample output for the DNS test:
 
-    > DNS test . . . . . . . . . . . . . : Passed  
-    >       Interface {34FDC272-55DC-4103-B4B7-89234BC30C4A}  
-    >         DNS Domain:  
-    >         DNS Servers: \<DNS Server Ip address>  
-    >         IP Address:         Expected registration with PDN (primary DNS domain name):  
-    >           Hostname: `DC.fabrikam.com`.  
-    >           Authoritative zone: `fabrikam.com`.  
-    >           Primary DNS server: `DC.fabrikam.com` \<Ip Address>  
-    >           Authoritative NS:\<Ip Address>  
-    > Check the DNS registration for DCs entries on DNS server \<DNS Server Ip address>  
-    > The Record is correct on DNS server '\<DNS Server Ip address>'.  
-    > (You will see this line repeated several times for every entry for this DC.  Including srv records.)  
-    > The Record is correct on DNS server '\<DNS Server Ip address>'.  
-    > PASS - All the DNS entries for DC are registered on DNS server '\<DNS Server Ip address>'.
+    ```output
+    DNS test . . . . . . . . . . . . . : Passed  
+    Interface {34FDC272-55DC-4103-B4B7-89234BC30C4A}  
+    DNS Domain:  
+    DNS Servers: <DNS Server Ip address>  
+    IP Address:         Expected registration with PDN (primary DNS domain name):  
+    Hostname: DC.fabrikam.com.  
+    Authoritative zone: fabrikam.com.  
+    Primary DNS server: DC.fabrikam.com <Ip Address>  
+    Authoritative NS:<Ip Address>  
+    Check the DNS registration for DCs entries on DNS server <DNS Server Ip address>  
+    The Record is correct on DNS server '<DNS Server Ip address>'.  
+    (You will see this line repeated several times for every entry for this DC.  Including srv records.)  
+    The Record is correct on DNS server '<DNS Server Ip address>'.  
+    PASS - All the DNS entries for DC are registered on DNS server '<DNS Server Ip address>'.
+    ```
 
 - `ping -a <IP_of_problem_server>`
 
@@ -267,20 +275,24 @@ There are a few tools to use to help identify DNS errors:
 
     **DNS server: localhost**
 
-    > IP Address: 127.0.0.1  
-    > UDP port 53 responding to queries: YES  
-    > TCP port 53 responding to queries: Not tested  
-    > Answering authoritatively for domain: NO  
+    ```output
+    IP Address: 127.0.0.1  
+    UDP port 53 responding to queries: YES  
+    TCP port 53 responding to queries: Not tested  
+    Answering authoritatively for domain: NO
+    ```
 
     **SOA record data from server:**
 
-    > Authoritative name server: DC.domain.com  
-    > Hostmaster: hostmaster  
-    > Zone serial number: 14  
-    > Zone expires in: 1.00 day(s)  
-    > Refresh period: 900 seconds  
-    > Retry delay: 600 seconds  
-    > Default (minimum) TTL: 3600 seconds
+    ```output
+    Authoritative name server: DC.domain.com  
+    Hostmaster: hostmaster  
+    Zone serial number: 14  
+    Zone expires in: 1.00 day(s)  
+    Refresh period: 900 seconds  
+    Retry delay: 600 seconds  
+    Default (minimum) TTL: 3600 seconds
+    ```
 
 - Additional authoritative (NS) records from server: `DC2.fabrikam.com <IP Address>`
 
@@ -312,8 +324,7 @@ The endpoint mapper (listening on port 135) tells the client which randomly assi
 |NAT-T|UDP|4500|
 |RPC|TCP|135|
 |RPC randomly allocated high TCP ports¹|TCP|1024 - 5000<br/>49152 - 65535*|
-||||
-
+  
 `*` This is the range in Windows Server 2008, Windows Vista, Windows 7, and Windows 2008 R2.
 
 Portqry can be used to identify if a port is blocked from a Dc when targeting another DC. It can be downloaded at [PortQry Command Line Port Scanner Version 2.0](https://www.microsoft.com/download/details.aspx?id=17148).
@@ -330,13 +341,9 @@ If the Dynamic Port range has ports being blocked, use the below links to config
 Additional important links for configuration and working with Firewalls and Domain Controllers:
 
 - [HOWTO: Configure RPC Dynamic Port Allocation to Work with Firewall](https://support.microsoft.com/help/154596)
-
 - [Restricting Active Directory Replication Traffic to a Specific Port](https://support.microsoft.com/help/224196)
-
 - [How to Configure a Firewall for Domains and Trusts](https://support.microsoft.com/help/179442)
-
 - [A List of the Windows Server Domain Controller Default Ports](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772723(v=ws.10))
-
 - [Port Requirements for the Microsoft Windows Server System](https://support.microsoft.com/help/832017)
 
 ### Bad NIC drivers
@@ -371,19 +378,17 @@ Additional Troubleshooting:
 
 If the above don't provide a solution to the 1722, use the following Diagnostic logging to gather more information:
 
-> Windows Server 2003 SP2 computers logs extended RPC Server info in NTDS Replication events 1960, 1961, 1962 and 1963.  
-> Crank up NTDS Diagnostic logging
->
-> 1 = basic, 2 and 3 add continually verbose info and 5 logs extended info.
+```output
+Windows Server 2003 SP2 computers logs extended RPC Server info in NTDS Replication events 1960, 1961, 1962 and 1963.  
+Crank up NTDS Diagnostic logging
+
+1 = basic, 2 and 3 add continually verbose info and 5 logs extended info.
+```
 
 ## References
 
 - [RPC Return Values](/windows/win32/rpc/rpc-return-values)
-
 - [Understanding Extended Error Information](/windows/win32/rpc/understanding-extended-error-information)
-
 - [Extended error information detection locations](/windows/win32/rpc/extended-error-information-detection-locations)
-
 - [Enabling Extended error information](/windows/win32/rpc/enabling-extended-error-information)
-
 - [Network Connectivity](/previous-versions/windows/it-pro/windows-2000-server/cc961803(v=technet.10))

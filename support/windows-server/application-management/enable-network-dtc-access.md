@@ -1,23 +1,23 @@
 ---
 title: How to enable network DTC access
 description: Describes the procedures that you follow to enable network Distributed Transaction Coordinator (DTC) access
-ms.date: 09/21/2020
+ms.date: 04/11/2022
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DTC startup, configuration, connectivity, and cluster
+ms.custom: sap:dtc-startup-configuration-connectivity-and-cluster, csstroubleshoot
 ms.technology: windows-server-application-compatibility
 ---
 # How to enable network DTC access
 
 This article describes the procedures that you follow to enable network Distributed Transaction Coordinator (DTC) access.  
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 817064
 
 ## Summary
@@ -66,4 +66,4 @@ If you are running Windows Server 2003 Service Pack 1 (SP1), you must follow the
 ## References
 
 For more information about what is new in Microsoft COM+ 1.5, visit the following Microsoft Developer Network (MSDN) Web site:  
-[What's New in COM+ 1.5](https://msdn2.microsoft.com/library/ms687608.aspx)
+[What's New in COM+ 1.5](/windows/win32/cossdk/what-s-new-in-com--1-5)

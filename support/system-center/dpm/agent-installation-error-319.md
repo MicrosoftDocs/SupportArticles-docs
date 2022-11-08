@@ -2,7 +2,6 @@
 title: Error 319 when installing DPM agent
 description: Fixes an issue in which your receive error 319 when installing the Data Protection Manager agent.
 ms.date: 07/24/2020
-ms.prod-support-area-path: 
 ms.reviewer: slight, cbutch, anjanik, delhan
 ---
 # System Center Data Protection Manager agent installation fails with error 319
@@ -16,13 +15,13 @@ _Original KB number:_ &nbsp; 2981833
 
 When you install the Microsoft System Center 2012 Data Protection Manager or later version agent on a destination computer, the installation fails and you receive the following error message:
 
-> Install protection agent on *name.contoso.com* failed:  
-> Error 319: The agent operation failed because of a communication error with the DPM Agent Coordinator service on *name.contoso.com*.  
+> Install protection agent on _name.contoso.com_ failed:  
+> Error 319: The agent operation failed because of a communication error with the DPM Agent Coordinator service on _name.contoso.com_.  
 > Error details: The RPC server is unavailable (0x800706BA)  
 > Recommended action:
 >
-> 1) Verify that *name.contoso.com* is remotely accessible from the DPM server.
-> 2) If a firewall is enabled on *name.contoso.com*, make sure that it is not blocking requests from the DPM server. Refer to the DPM Deployment Guide for more information on configuring the firewall for DPM.
+> 1) Verify that _name.contoso.com_ is remotely accessible from the DPM server.
+> 2) If a firewall is enabled on _name.contoso.com_, make sure that it is not blocking requests from the DPM server. Refer to the DPM Deployment Guide for more information on configuring the firewall for DPM.
 
 ## Cause
 
@@ -39,7 +38,7 @@ If you cannot disable the firewall, or if you have many servers and do not want 
 These commands must be run from an elevated command prompt (**Run as administrator**) and should be run on all target computers that have the firewall enabled.
 
 > [!NOTE]
-> DPM version information has to reflect your current DPM installation version. A sample path follows. (Replace \<*DPMVersion*> with the correct DPM major version number in the form x.x.xxxx.x. DPM 2016 paths may be different.)
+> DPM version information has to reflect your current DPM installation version. A sample path follows. (Replace \<_DPMVersion_> with the correct DPM major version number in the form x.x.xxxx.x. DPM 2016 paths may be different.)
 >
 > - DPM 2010: version 3.0.7696.0
 > - DPM 2012: version 4.0.1908.0
@@ -79,15 +78,14 @@ The following ports are required for the DPM agent installation. Again, be aware
 |TCP|RPC Dynamic|%ProgramFiles%\Microsoft Data Protection Manager\DPM\ProtectionAgents\AC\3.0.7696.0\dpmac.exe|
 |TCP|5718|%ProgramFiles%\Microsoft Data Protection Manager\DPM\bin\DPMRA.exe|
 |TCP|RPC Dynamic|%ProgramFiles%\Microsoft Data Protection Manager\DPM\bin\DPMRA.exe|
-||||
-
+  
 For a list of all required ports that are used for DPM, see [Configure firewall settings for DPM](/previous-versions/system-center/system-center-2012-R2/hh757794(v=sc.12)?redirectedfrom=MSDN).  
 
 Enabling Windows Firewall logging (default location: `%windir%\System32\LogFiles\Firewall`) may list no blocked packets.
 
 In some instances, the initial attempt to push the agent to the protected server will fail with the following error, and successive installations will fail with the 319 error:
 
-> Install protection agent on *name.contoso.com* failed:  
-> Error 347: An error occurred when the agent operation attempted to create the DPM Agent Coordinator service on *name.contoso.com*.  
+> Install protection agent on _name.contoso.com_ failed:  
+> Error 347: An error occurred when the agent operation attempted to create the DPM Agent Coordinator service on _name.contoso.com_.  
 > Error details: Security must be initialized before any interfaces are marshalled or unmarshalled. It cannot be changed one initialized.  
-> Recommended action: Verify that the Agent Coordinator service on *name.contoso.com* is responding, if it is present. Review the error details, take the appropriate action, and then retry the agent operation.
+> Recommended action: Verify that the Agent Coordinator service on _name.contoso.com_ is responding, if it is present. Review the error details, take the appropriate action, and then retry the agent operation.

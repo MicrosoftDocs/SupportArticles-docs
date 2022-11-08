@@ -2,22 +2,22 @@
 title: Multipoint Manager error during startup
 description: Address an issue in which an error occurs when opening MultiPoint Manager or MultiPoint Dashboard crashes on Windows Server 2016.
 ms.date: 09/25/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Desktop Shell
+ms.custom: sap:desktop-shell, csstroubleshoot
 ms.technology: windows-server-shell-experience
 ---
 # Error when you start Multipoint Manager in Windows Server 2016
 
 This article provides a solution to an error that occurs when you open MultiPoint Manager or MultiPoint Dashboard crashes in Windows Server 2016.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 4051516
 
 ## Symptom

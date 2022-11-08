@@ -4,20 +4,20 @@ description: Lists the previously released updates that will be reoffered for sy
 ms.date: 09/18/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Servicing
+ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # Previously released Windows updates are reoffered for some systems
 
 This article lists the previously released updates that will be reoffered for systems and provides a solution to this issue.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3037986
 
 ## Symptoms
@@ -36,8 +36,7 @@ When systems that were built by using media that contains update rollup [3000850
 | [2976536](https://support.microsoft.com/help/2976536)|November 2014 anti-malware platform update for Windows Defender in Windows 8.1 and Windows 8|
 | [2990967](https://support.microsoft.com/help/2990967)|Some versions of the OneDrive desktop app for Windows do not update automatically|
 | [2998174](https://support.microsoft.com/help/2998174)|Active camera is switched unexpectedly when you review photos in Camera app in Windows 8.1 or Windows Server 2012 R2|
-|||
-
+  
 ## Cause
 
 The updates that are listed here were not included in the stand-alone November 2014 update package or released in conjunction with that update package.
@@ -76,16 +75,16 @@ To integrate packages into an image by using the DISM method, follow these steps
 2. Create a new directory to expand the update package.
 3. Extract the update package by using the following command:
 
-    expand -f:* < **path to .msu** > < **destination** > 
+    expand -f:* < **path to .msu** > < **destination** >
 
     For example, the following command expands update 2959977 to the C:\Cabs folder:
 
-    expand -f:* Windows8.1-KB2959977-x64.msu c:\cabs 
+    expand -f:* Windows8.1-KB2959977-x64.msu c:\cabs
 
 4. Integrate the expanded cabinet (.cab) file into the image from the expanded package by using the following command:
 
-    DISM /Online /Add-Package /PackagePath:< **path to extracted .cab file from step 3** > 
-    
+    DISM /Online /Add-Package /PackagePath:< **path to extracted .cab file from step 3** >
+
     For example, the command to integrate the update 2959977 .cab file would be as follows:
-    
-    DISM /Online /Add-Package /PackagePath:c:\cabs\Windows8.1-KB2959977-x64.cab 
+
+    DISM /Online /Add-Package /PackagePath:c:\cabs\Windows8.1-KB2959977-x64.cab

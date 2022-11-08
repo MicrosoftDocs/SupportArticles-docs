@@ -4,31 +4,31 @@ description: Discusses that you receive a 0x80004027-CO_E_CLASS_DISABLED error w
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: COM+ administration, configuration, and security
+ms.custom: sap:com+-administration-configuration-and-security, csstroubleshoot
 ms.technology: windows-server-application-compatibility
 ---
-# 0x80004027 error when you try to remotely access COM+ object after you upgrade to Windows Server 2016
+# 0x80004027 error when you try to remotely access COM+ object after you upgrade to Windows Server 2016 or later versions
 
-This article provides a solution to the 0x80004027-CO_E_CLASS_DISABLED error that occurs when you remotely access COM+ object after you upgrade to Windows Server 2016.
+This article provides a solution to the 0x80004027-CO_E_CLASS_DISABLED error that occurs when you remotely access COM+ object after you upgrade to Windows Server 2016 or later versions.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows Server 2022  
 _Original KB number:_ &nbsp; 3182294
 
 ## Symptoms
 
-After you upgrade from an earlier release of Windows Server to Windows Server 2016, applications cannot remotely access a COM+ object, and you receive the following error message:
+After you upgrade from an earlier release of Windows Server to Windows Server 2016 or later versions, applications cannot remotely access a COM+ object, and you receive the following error message:
 
 > 0x80004027-CO_E_CLASS_DISABLED
 
 ## Cause
 
-This problem occurs because support for the Application Server role was removed from Windows Server 2016. This change blocks applications that rely on COM+ remote access.
+This problem occurs because support for the Application Server role was removed from Windows Server 2016 or later versions. This change blocks applications that rely on COM+ remote access.
 
 ## Resolution
 
@@ -41,7 +41,7 @@ To resolve this problem and enable COM+ remote access, follow these steps:
 
 2. In the **Allowed apps and features** list, select the **COM+ Network Access** check box, and then select the appropriate scope that's required for your application. For enterprises, this is typically Domain. However, your application may require additional settings, depending on the scenario.
 
-    ![Allowed apps dialog box](./media/0x80004027-remotely-access-com-plus-object/com-plus-network-access-option.png)
+    :::image type="content" source="media/0x80004027-remotely-access-com-plus-object/com-plus-network-access-option.png" alt-text="The COM+ Network Access check box in the Allowed apps and features list.":::
 
 3. Set the registry value that allows COM+ remote access. To do this, follow these steps:
 

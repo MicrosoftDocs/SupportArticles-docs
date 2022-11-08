@@ -4,20 +4,20 @@ description: This article describes an overview of memory dump file options for 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Blue Screen/Bugcheck
+ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # Overview of memory dump file options for Windows
 
 This article describes memory dump file options for Windows.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 254649
 
 ## Summary
@@ -27,7 +27,7 @@ You can configure the following operating systems to write debugging information
 - Windows 7
 - Windows Server 2012 R2
 
-The debugging information can be written to different file formats (also known as memory dump files) when your computer stops unexpectedly because of a **Stop** error (also known as a *blue screen*, system crash, or bug check). You can also configure Windows not to write debugging information to a memory dump file.
+The debugging information can be written to different file formats (also known as memory dump files) when your computer stops unexpectedly because of a **Stop** error (also known as a _blue screen_, system crash, or bug check). You can also configure Windows not to write debugging information to a memory dump file.
 
 Windows can generate any one of the following memory dump file types:
 
@@ -42,7 +42,10 @@ A complete memory dump records all the contents of system memory when your compu
 
 If you select the **Complete memory dump** option, you must have a paging file on the boot volume that is sufficient to hold all the physical RAM plus 1 megabyte (MB).
 
-If a second problem occurs and another complete memory dump (or kernel memory dump) file is created, the previous file is overwritten.
+If the following conditions are true, the previous file is overwritten.
+
+- A second problem occurs.
+- Another complete memory dump (or kernel memory dump) file is created.
 
 > [!NOTE]
 >
@@ -52,11 +55,19 @@ If a second problem occurs and another complete memory dump (or kernel memory du
 
 ## Kernel memory dump
 
-A kernel memory dump records only the kernel memory. This speeds up the process of recording information in a log when your computer stops unexpectedly. You must have a pagefile large enough to accommodate your kernel memory. For 32-bit systems, kernel memory is usually between 150 MB and 2 GB.
+A kernel memory dump records only the kernel memory. It speeds up the process of recording information in a log when your computer stops unexpectedly. You must have a pagefile large enough to accommodate your kernel memory. For 32-bit systems, kernel memory is usually between 150 MB and 2 GB.
 
-This dump file does not include unallocated memory or any memory that is allocated to User-mode programs. It includes only memory that is allocated to the kernel and hardware abstraction layer (HAL) in Windows 2000 and later, and memory allocated to Kernel-mode drivers and other Kernel-mode programs. For most purposes, this dump file is the most useful. It is smaller than the complete memory dump file, but it omits only those parts of memory that are unlikely to have been involved in the problem.
+This dump file doesn't include unallocated memory or any memory that's allocated to User-mode programs. It includes:
 
-If a second problem occurs and another kernel memory dump file (or a complete memory dump file) is created, the previous file is overwritten when the **Overwrite any existing file** setting is checked.
+- Memory that's allocated to the kernel and hardware abstraction layer (HAL) in Windows 2000 and later.
+- Memory that's allocated to Kernel-mode drivers and other Kernel-mode programs.
+
+For most purposes, this dump file is the most useful. It's smaller than the complete memory dump file. But it omits only those parts of memory that are unlikely to have been involved in the problem.
+
+If the following conditions are true, the previous file is overwritten when the **Overwrite any existing file** setting is checked.
+
+- A second problem occurs.
+- Another kernel memory dump file (or a complete memory dump file) is created.
 
 ## Small memory dump
 
@@ -73,7 +84,12 @@ This dump file type includes the following information:
 
 This kind of dump file can be useful when space is limited. However, because of the limited information included, errors that were not directly caused by the thread that was running at the time of the problem may not be discovered by an analysis of this file.
 
-If a second problem occurs and a second small memory dump file is created, the previous file is preserved. Each additional file is given a distinct name. The date is encoded in the file name. For example, Mini022900-01.dmp is the first memory dump generated on February 29, 2000. A list of all small memory dump files is kept in the `%SystemRoot%\Minidump` folder.
+If the following conditions are true, the previous file is preserved.
+
+- A second problem occurs.
+- A second small memory dump file is created.
+
+Each additional file is given a distinct name. The date is encoded in the file name. For example, Mini022900-01.dmp is the first memory dump generated on February 29, 2000. A list of all small memory dump files is kept in the `%SystemRoot%\Minidump` folder.
 
 ## Configure the dump type
 
@@ -97,9 +113,9 @@ Load small memory dumps by using Dumpchk.exe. You can also use Dumpchk.exe to ve
 
 ## Volume definitions
 
-- Boot volume: The volume that contains the Windows operating system and its support files. The boot volume can be, but does not have to be, the same as the system volume.
+- Boot volume: The volume that contains the Windows operating system and its support files. The boot volume can be, but doesn't have to be, the same as the system volume.
 
-- System volume: The volume that contains the hardware-specific files that you must have to load Windows. The system volume can be, but does not have to be, the same as the boot volume. The Boot.ini, `Ntdetect.com`, and Ntbootdd.sys files are examples of files that are located on the system volume.
+- System volume: The volume that contains the hardware-specific files that you must have to load Windows. The system volume can be, but doesn't have to be, the same as the boot volume. The Boot.ini, `Ntdetect.com`, and Ntbootdd.sys files are examples of files that are located on the system volume.
 
 ## Registry values for startup and recovery
 
@@ -108,7 +124,7 @@ The following registry value is used under `HKEY_LOCAL_MACHINE\System\CurrentCon
 - CrashDumpEnabled REG_DWORD 0x0 = None
 - CrashDumpEnabled REG_DWORD 0x1 = Complete memory dump
 - CrashDumpEnabled REG_DWORD 0x2 = Kernel memory dump
-- CrashDumpEnabled REG_DWORD 0x3 = Small memory dump (64KB)
+- CrashDumpEnabled REG_DWORD 0x3 = Small memory dump (64 KB)
 - CrashDumpEnabled REG_DWORD 0x7 = [Automatic memory dump](/windows-hardware/drivers/debugger/automatic-memory-dump)
 
 Additional registry values for CrashControl:
@@ -144,7 +160,6 @@ Maximum paging file size is limited as follows:
 |Maximum size of a paging file|4 gigabytes (non-PAE)<br/>16 terabytes (PAE)|16 terabytes|32 terabytes|
 |Maximum number of paging files|16|16|16|
 |Total paging file size|64 gigabytes (non-PAE)<br/>256 terabytes (PAE)|256 terabytes|512 terabytes|
-|||||
 
 ## Technical support for x64-based versions of Windows
 

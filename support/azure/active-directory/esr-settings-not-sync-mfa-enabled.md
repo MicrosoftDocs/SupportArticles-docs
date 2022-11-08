@@ -2,8 +2,9 @@
 title: Enterprise State Roaming settings do not sync with multi-factor authentication enabled
 description: Describes a problem in which settings configured to sync between devices with Enterprise State Roaming don't sync, and Event ID 1098 is logged with the description.
 ms.date: 06/08/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: authentication
 ---
 # ESR settings don't sync with multi-factor authentication enabled
 
@@ -55,4 +56,6 @@ Sync can fail if the Azure AD Administrator configures the Active Directory Fede
 
 Microsoft is investigating how to improve the experience with Enterprise State Roaming and MFA authorization enabled on the device.
 
-For more information, see [Settings and data roaming FAQ](https://azure.microsoft.com/documentation/articles/active-directory-windows-enterprise-state-roaming-faqs/).
+For more information, see [Settings and data roaming FAQ](/azure/active-directory/devices/enterprise-state-roaming-faqs).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

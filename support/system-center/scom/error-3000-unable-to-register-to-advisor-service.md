@@ -2,7 +2,6 @@
 title: Unable to register to Advisor Service
 description: Fixes an issue that prevents you from registering to the Advisor Service in System Center 2012 R2 Operations Manager.
 ms.date: 07/06/2020
-ms.prod-support-area-path:
 ---
 # Error 3000: Unable to register to Advisor Service in System Center 2012 R2 Operations Manager
 
@@ -42,14 +41,12 @@ The following domains and URLs must be accessible through the firewall or proxy 
 |---|---|
 |service.systemcenteradvisor.com|Port 443|
 |scadvisor.accesscontrol.windows.net|Port 443|
-|scadvisorservice.accesscontrol.windows.net*|Port 443|
-|.blob.core.windows.net/|Port 443|
-|*data.systemcenteradvisor.com|Port 443|
-|ods.systemcenteradvisor.com|Port 443|
-|*.ods.opinsights.azure.com|Port 443|
-|*.systemcenteradvisor.com|Port 443|
-|||
-
+|scadvisorservice.accesscontrol.windows.net|Port 443|
+|\*.blob.core.windows.net\/\*|Port 443|
+|data.systemcenteradvisor.com|Port 443|
+|\*.ods.opinsights.azure.com|Port 443|
+|\*.systemcenteradvisor.com|Port 443|
+  
 #### Large volume scenarios, intelligence packs, and Operations Manager agents
 
 > [!NOTE]
@@ -57,9 +54,8 @@ The following domains and URLs must be accessible through the firewall or proxy 
 
 |URL|Ports|
 |---|---|
-|*.ods.opinsights.azure.com|Port 443|
-|||
-
+|\*.ods.opinsights.azure.com|Port 443|
+  
 > [!NOTE]
 > The proxy setting that's specified in step 2 in this section will be automatically propagated to Operations Manager agents.
 
@@ -69,13 +65,12 @@ The following domains and URLs must be accessible through the firewall in order 
 
 |Resource|Ports|
 |---|---|
-|*.systemcenteradvisor.com|Ports 80 and 443|
-|*.live.com|Ports 80 and 443|
-|*.microsoft.com|Ports 80 and 443|
-|*.microsoftonline.com|Ports 80 and 443|
+|\*.systemcenteradvisor.com|Ports 80 and 443|
+|\*.live.com|Ports 80 and 443|
+|\*.microsoft.com|Ports 80 and 443|
+|\*.microsoftonline.com|Ports 80 and 443|
 |login.windows.net|Ports 80 and 443|
-|||
-
+  
 Also, make sure that the Internet Explorer proxy is set correctly on the computer that you try to sign in with. It's particularly valuable to test whether you can connect to an SSL-enabled website, such as [https://www.bing.com](https://www.bing.com/). If the HTTPS connection doesn't work from a browser, it probably won't work in the Operations Manager console and in the server modules that talk to the web services in the cloud.
 
 ### Step 2: Configure the proxy server in the Operations Manager console

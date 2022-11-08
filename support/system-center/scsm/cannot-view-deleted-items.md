@@ -2,7 +2,6 @@
 title: Can't view deleted items in the Service Manager console
 description: Describes an issue in which you can't view deleted items in the System Center Service Manager console and receive SQL Server error 8623 in the event log.
 ms.date: 08/04/2020
-ms.prod-support-area-path:
 ---
 # You can't view deleted items in the System Center Service Manager console
 
@@ -17,11 +16,11 @@ In the System Center Service Manager console, when you select **Administration**
 
 > Message: An error occurred while loading the items.  
 > Microsoft.EnterpriseManagement.UI.ViewFramework.AdvancedListSupportException: The Full adapter threw an exception. See the FullUpdate property to see the exception.  
-   at Microsoft.EnterpriseManagement.UI.ViewFramework.AdvancedListSupportAdapter.DoAction(DataQueryBase query, IList\`1 dataSources, IDictionary\`2 parameters, IList\`1 inputs, String outputCollectionName)  
-   at Microsoft.EnterpriseManagement.UI.DataModel.QueryQueue.StartExecuteQuery(Object sender, ConsoleJobEventArgs e)  
-   at Microsoft.EnterpriseManagement.ServiceManager.UI.Console.ConsoleJobExceptionHandler.ExecuteJob(IComponent component, EventHandler\`1 job, Object sender, ConsoleJobEventArgs args)  
+   at Microsoft.EnterpriseManagement.UI.ViewFramework.AdvancedListSupportAdapter.DoAction(DataQueryBase query, IList\`1 dataSources, IDictionary\`2 parameters, IList\`1 inputs, String outputCollectionName)  
+   at Microsoft.EnterpriseManagement.UI.DataModel.QueryQueue.StartExecuteQuery(Object sender, ConsoleJobEventArgs e)  
+   at Microsoft.EnterpriseManagement.ServiceManager.UI.Console.ConsoleJobExceptionHandler.ExecuteJob(IComponent component, EventHandler\`1 job, Object sender, ConsoleJobEventArgs args)  
 
-Additionally, the following SQL Server error is recorded in the event log:
+Additionally, the following SQL Server error is recorded in the event log:
 
 > \- Msg 8623, Level 16, State 1, Line 3  
 > The query processor ran out of internal resources and could not produce a query plan. This is a rare event and only expected for extremely complex queries or queries that reference a very large number of tables or partitions. Please simplify the query. If you believe you have received this message in error, contact Customer Support Services for more information.
@@ -50,7 +49,7 @@ ViewsDerivedFromConfigurationItem.sql
 Back up the databases, and then run the following PowerShell scripts in a management server to simulate the **Deleted Items** view.
 
 > [!NOTE]
-> RemoveDeletedItem.ps1 removes only one deleted item. RestoreDeletedItems.ps1 restores multiple items at the same time.
+> RemoveDeletedItem.ps1 removes only one deleted item. RestoreDeletedItems.ps1 restores multiple items at the same time.
 
 ### RemoveDeletedItem.ps1
 
@@ -196,9 +195,9 @@ else
 Create special console views by following these steps:
 
 1. Create a new console view inside the **Configuration Items** wunderbar.
-2. Look for a specific class type other than **Configuration Items**, for example **Windows Computer**. You can refer to the **Class** column that's returned by RestoreDeletedItems.ps1 for available class types.
-3. Change criteria to **[Configuration Item].Object Status equals Pending Delete**.
-4. In the **Display** section, select at least the **Name** and **Path** columns. You can also select other columns that are specific to the class type.
+2. Look for a specific class type other than **Configuration Items**, for example **Windows Computer**. You can refer to the **Class** column that's returned by RestoreDeletedItems.ps1 for available class types.
+3. Change criteria to **[Configuration Item].Object Status equals Pending Delete**.
+4. In the **Display** section, select at least the **Name** and **Path** columns. You can also select other columns that are specific to the class type.
 5. Remove or restore the listed deleted items.
 
 ## Resolution 3

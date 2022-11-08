@@ -2,7 +2,8 @@
 title: Send data segment over TCP by using Winsock
 description: This article provides a series of recommendations for sending small data packets efficiently from a Winsock application.
 ms.date: 02/27/2020
-ms.prod-support-area-path: Networking development
+ms.custom: sap:Networking development
+ms.technology: windows-dev-apps-networking-dev
 ---
 # Design issues - Sending small data segments over TCP with Winsock
 

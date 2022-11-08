@@ -4,20 +4,20 @@ description: Describes how to use the Burflags registry value to rebuild each do
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Sysvol access or replication issues
+ms.custom: sap:sysvol-access-or-replication-issues, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # How to rebuild the SYSVOL tree and its content in a domain
 
 The article describes how to use the Burflags registry entry to rebuild each domain controller's copy of the system volume (SYSVOL) tree on all domain controllers in a common Active Directory directory service domain.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 315457
 
 ## Introduction
@@ -169,16 +169,22 @@ On each domain controller in the domain, follow these steps:
 2. Type `net start ntfrs` to start the File Replication service.
 3. Type `ntfrsutl ds |findstr /i "root stage"`, and then press ENTER. The NTFRSUTIL command returns the current root directory for the SYSVOL replica set that is referred to as the "replica set root" and the staging folder. For example, this command returns:
 
-    > Root: C:\\WINNT\\SYSVOL\\domain  
-    Stage: C:\\WINNT\\SYSVOL\\staging\\domain
+    ```output
+    Root: C:\WINNT\SYSVOL\domain  
+    Stage: C:\WINNT\SYSVOL\staging\domain
+    ```
 
 4. Type `Linkd %systemroot%\SYSVOL\SYSVOL\DNS Domain name`, and then press ENTER. The LINKD command returns the following information:
 
-    > Source **DNS Domain Name** is linked to %systemroot%\\SYSVOL\\domain
+    ```output
+    Source DNS Domain Name is linked to %systemroot%\SYSVOL\domain
+    ```
 
 5. Type `linkd "%systemroot%\SYSVOL\staging areas\DNS Domain Name"`, and then press ENTER. This command returns the following information:
 
-    > Source **DNS Domain Name** is linked to %systemroot%\\SYSVOL\\Staging\\domain
+    ```output
+    Source DNS Domain Name is linked to %systemroot%\SYSVOL\Staging\domain
+    ```
 
     > [!NOTE]
     > The path that is reported by the LINKD command varies depending on the location of the SYSVOL\\SYSVOL\\**DNS Domain Name** folder. If the SYSVOL folder is in the default location in the %systemroot%\\SYSVOL folder, use the commands that are listed. Otherwise, type the actual path of the SYSVOL folders.
@@ -191,8 +197,10 @@ On each domain controller in the domain, follow these steps:
 
     Output:
 
-    > Root: C:\\windows\\sysvol\\domain  
-     Stage: C:\\windows\\sysvol\\staging\\domain
+    ```output
+    Root: C:\windows\sysvol\domain  
+    Stage: C:\windows\\sysvol\staging\domain
+    ```
 
     ```console
     C:\>Linkd %systemroot%\SYSVOL\SYSVOL\Contoso.com
@@ -200,7 +208,9 @@ On each domain controller in the domain, follow these steps:
 
     Output:
 
-    > Source domain.com is linked to C:\\WINDOWS\\SYSVOL\\domain
+    ```output
+    Source domain.com is linked to C:\WINDOWS\SYSVOL\domain
+    ```
 
     ```console
     C:\>linkd "%systemroot%\SYSVOL\<staging areas>\Contoso.com
@@ -208,7 +218,9 @@ On each domain controller in the domain, follow these steps:
 
     Output:
 
-    > Source domain.com is linked to C:\\WINDOWS\\SYSVOL\\staging\\domain
+    ```output
+    Source domain.com is linked to C:\WINDOWS\SYSVOL\staging\domain
+    ```
 
     To re-create the junction points if the LINKD command reports missing or invalid junction points, follow these steps:
 

@@ -1,28 +1,28 @@
 ---
-title: Unable to log on to a domain in Windows 7 or Windows Server 2008 R2
-description: Fixes an error that occurs when you try to log on to your domain in Windows 7 or Windows Server 2008 R2.
-ms.date: 10/23/2020
+title: Unable to log on to a domain in Windows
+description: Fixes an error that occurs when you try to log on to your domain in Windows.
+ms.date: 05/12/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: lindakup, kaushika
-ms.prod-support-area-path: Kerberos authentication
+ms.custom: sap:kerberos-authentication, csstroubleshoot
 ms.technology: windows-server-security
 ---
-# Error on a computer that's running Windows 7 or Windows Server 2008 R2: Trust relationship between this workstation and the primary domain failed
+# "Trust relationship between this workstation and the primary domain failed" error in Windows
 
-This article provides a solution to an error that occurs when you try to log on to your domain in Windows 7 or Windows Server 2008 R2.
+This article provides a solution to an error that occurs when you try to log on to your domain in Windows.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2914474
 
 ## Symptoms
 
-You may be intermittently unable to log on to your domain in Windows 7 or Windows Server 2008 R2. In this situation, you receive the following error message:
+You may be intermittently unable to log on to your domain in Windows. In this situation, you receive the following error message:
 
 > The trust relationship between this workstation and the primary domain failed.
 

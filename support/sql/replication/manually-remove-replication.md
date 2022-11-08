@@ -2,7 +2,7 @@
 title: Manually remove replication
 description: This article explains how to manually remove replication in SQL Server.
 ms.date: 09/22/2020
-ms.prod-support-area-path: Replication
+ms.custom: sap:Replication
 ms.prod: sql
 ---
 # Manually remove replication in SQL Server
@@ -211,7 +211,7 @@ You can also use the following stored procedures when you remove the replication
 
 For more information, see the following topics in SQL Server Books Online:
 
-- [Disable Publishing and Distribution](https://docs.microsoft.com/sql/relational-databases/replication/disable-publishing-and-distribution)
-- [Delete a Publication](https://docs.microsoft.com/sql/relational-databases/replication/publish/delete-a-publication)
-- [Delete a Push Subscription](https://docs.microsoft.com/sql/relational-databases/replication/delete-a-push-subscription)
-- [Delete a Pull Subscription](https://docs.microsoft.com/sql/relational-databases/replication/delete-a-pull-subscription)
+- [Disable Publishing and Distribution](/sql/relational-databases/replication/disable-publishing-and-distribution)
+- [Delete a Publication](/sql/relational-databases/replication/publish/delete-a-publication)
+- [Delete a Push Subscription](/sql/relational-databases/replication/delete-a-push-subscription)
+- [Delete a Pull Subscription](/sql/relational-databases/replication/delete-a-pull-subscription)

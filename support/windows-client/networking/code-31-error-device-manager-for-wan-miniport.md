@@ -1,30 +1,30 @@
 ---
 title: Code 31 error for WAN Miniport device
-description: Describes an error that's returned in Device Manager for the WAN Miniport (Network monitor) device. Occurs after you install Windows 8 or Windows Server 2012. A resolution is provided.
-ms.data: 09/08/2020
+description: Describes an error that's returned in Device Manager for the WAN Miniport (Network monitor) device. Occurs after you install Windows. A resolution is provided.
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Wireless networking and 802.1X authentication
-ms.technology: windows-client-networking 
+ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
+ms.technology: windows-client-networking
 ---
-# Code 31 error in Device Manager for WAN Miniport (Network monitor) device in Windows 8 or Windows Server 2012
+# Code 31 error in Device Manager for WAN Miniport (Network monitor) device in Windows
 
 This article provides a workaround for an issue where Device Manager displays a yellow exclamation mark next to the WAN Miniport (Network monitor) device.
 
-_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2871372
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2871372
 
 ## Symptoms
 
 Consider the following scenario:
 
-- You install Windows 8 or Windows Server 2012.
+- You are installing Windows.
 - You open Device Manager after the installation is complete.
 
 In this scenario, Device Manager displays a yellow exclamation mark next to the WAN Miniport (Network monitor) device. Additionally, the **Details** tab of the device properties window displays the following message:

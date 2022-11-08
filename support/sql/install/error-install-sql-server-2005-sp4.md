@@ -2,7 +2,7 @@
 title: Error when you install SQL Server 2005 SP4
 description: This article provides resolutions for the problem that occurs when you install a Cumulative Update or a Service Pack for a SQL Server instance.
 ms.date: 09/25/2020
-ms.prod-support-area-path: Installation, Patching and Upgrade
+ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: lramirez
 ms.prod: sql
 ---

@@ -2,7 +2,7 @@
 title: Block remote use of local accounts in Windows
 description: This article describes how to block remote use of local accounts in Windows.
 ms.date: 10/30/2020
-ms.prod-support-area-path: Security Issues
+ms.custom: sap:Security Issues
 ms.reviewer: chrissk, delhan
 ms.topic: how-to
 ms.prod: sql
@@ -43,9 +43,8 @@ Although we could keep the guidance unchanged and add a "special case" footnote 
 | **Policy Name**| Deny access to this computer from the network |
 | **Original Value**| Guests, Local account* |
 | **New Value**| Guests, Local account, and members of Administrators group* |
-|||
-
-* This guidance also recommends that you add Domain Administrators (DA) and Enterprise Administrators (EA) to these restrictions. The exception is on domain controllers and dedicated administration workstations. DA and EA are domain-specific and can't be specified in generic Group Policy Object (GPO) baselines.
+  
+- This guidance also recommends that you add Domain Administrators (DA) and Enterprise Administrators (EA) to these restrictions. The exception is on domain controllers and dedicated administration workstations. DA and EA are domain-specific and can't be specified in generic Group Policy Object (GPO) baselines.
 
 > [!NOTE]
 >
@@ -79,11 +78,11 @@ This local "user" account isn't an administrative account or domain account. Thi
 
 This account is the CLIUSR account. It is identified by its description in the Computer Management snap-in.
 
-![CLIUSR account](./media/block-remote-use-local-accounts/cliusr-image.jpg)
+:::image type="content" source="media/block-remote-use-local-accounts/cliusr-properties.png" alt-text="Screenshot of CLIUSR Properties in Computer Management.":::
 
 A frequent question is whether the CLIUSR account can be deleted. From a security standpoint, additional local accounts (not default) may be flagged during audits. If the network administrator isn't sure what this account is for (that is, they don't read the description of "Failover Cluster Local Identity"), they may delete it without understanding the ramifications. For Failover Clustering to function correctly, this account is necessary for authentication.
 
-![Passing CLIUSR credentials](./media/block-remote-use-local-accounts/passing-cliusr-credentials-image.jpg)
+:::image type="content" source="media/block-remote-use-local-accounts/passing-cliusr-credentials.png" alt-text="Screenshot shows CLIUSR credentials passing between Running Cluster and Joining Node.":::
 
 1. Joining node starts the Cluster Service, and passes the CLIUSR credentials across.
 

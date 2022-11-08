@@ -1,6 +1,46 @@
 {
   "redirections": [
     {
+      "source_path": "support/windows/win32/change-windows-active-directory-user-password.md",
+      "redirect_url": "/troubleshoot/windows-server/identity/change-windows-active-directory-user-password",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/warehousing/scale-unit-warehouse-workload-installation-issues.md",
+      "redirect_url": "/dynamics365/supply-chain/cloud-edge/cloud-edge-landing-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/portqry-exe-command-line-utility.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/portqry-command-line-port-scanner-v2",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/active-directory/remove-duplicate-mobile-device-management.md",
+      "redirect_url": "/troubleshoot/mem/intune/remove-duplicate-mobile-device-management",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/active-directory/installation-issues.md",
+      "redirect_url": "/troubleshoot/azure/active-directory/welcome-azure-ad",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/virtual-machines/troubleshoot-deploy-vm-linux.md",
+      "redirect_url": "/troubleshoot/azure/virtual-machines/troubleshoot-deployment-new-vm-linux",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/virtual-machines/troubleshoot-deploy-vm-windows.md",
+      "redirect_url": "/troubleshoot/azure/virtual-machines/troubleshoot-deployment-new-vm-windows",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/gpo-processing-failures-across-foreast.md",
+      "redirect_url": "/troubleshoot/windows-server/identity/rsop-not-supported-across-multiple-forests",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/azure/general/sdp-321382d70-df1d-4c0c-bdc6-9ba62752e851-asr.md",
       "redirect_url": "/troubleshoot/azure/site-recovery/sdp-321382d70-df1d-4c0c-bdc6-9ba62752e851-asr",
       "redirect_document_id": true
@@ -19,7 +59,7 @@
       "source_path": "support/dotnet/framework/manifest-definitions-dont-match-reference.md",
       "redirect_url": "/troubleshoot/dotnet/framework/manifest-definitions-do-not-match-reference",
       "redirect_document_id": true
-    },  
+    },
     {
       "source_path": "support/windows-server/networking/dns-chame-alias-cannot-access-smb-file-server-share.md",
       "redirect_url": "/troubleshoot/windows-server/networking/dns-cname-alias-cannot-access-smb-file-server-share",
@@ -188,6 +228,11 @@
     {
       "source_path": "support/previous-versions/msxml/display-html-xsl-style-sheet.md",
       "redirect_url": "/previous-versions/troubleshoot/msxml/display-html-xsl-style-sheet",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/active-directory/manage-sub-parent-domain.md",
+      "redirect_url": "/azure/active-directory/enterprise-users/domains-manage",
       "redirect_document_id": false
     },
     {
@@ -491,8 +536,113 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/mem/intune/open-in-protection-unenrolled-devices.md",
+      "redirect_url": "/mem/intune/apps/data-transfer-between-apps-manage-ios",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/mem/intune/index.md",
       "redirect_url": "/support/mem/intune/welcome-intune",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/set-up-app-protection-policies-ios-device.md",
+      "redirect_url": "/mem/intune/apps/app-protection-policies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/exchange-connector-version-not-supported.md",
+      "redirect_url": "/microsoft-365/enterprise/hybrid-modern-auth-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/fails-moving-intune-exchange-connector.md",
+      "redirect_url": "/microsoft-365/enterprise/hybrid-modern-auth-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/set-mdm-authority.md",
+      "redirect_url": "/mem/intune/fundamentals/mdm-authority-set",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/restrict-usb-with-administrative-template.md",
+      "redirect_url": "/mem/intune/configuration/administrative-templates-restrict-usb",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-software-updates-in-microsoft-intune.md",
+      "redirect_url": "/mem/intune/protect/windows-update-for-business-configure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/scep-pkcs-certificate-comparison.md",
+      "redirect_url": "/mem/intune/protect/certificates-configure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/grouping-targeting-migration-blockers.md",
+      "redirect_url": "/mem/intune/fundamentals/setup-steps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/create-feature-update-hold-co-managed-devices.md",
+      "redirect_url": "/mem/intune/protect/windows-10-feature-updates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/intune-account-portal-retired.md",
+      "redirect_url": "/mem/intune/fundamentals/setup-steps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/assignmentfilter-permissions.md",
+      "redirect_url": "/mem/intune/fundamentals/create-custom-role#custom-role-permissions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/enroll-devices-in-intune-tip.md",
+      "redirect_url": "/mem/intune/enrollment/windows-enrollment-methods",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/app-protection-options-access-denied.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-mam",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/configure-app-protection-access-denied.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-mam",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/device-enroll-intune-app-management-error.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-mam",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/lob-app-versioning.md",
+      "redirect_url": "/mem/intune/developer/apps-lob-app-versioning",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/integrate-cisco-ise-intune.md",
+      "redirect_url": "https://community.cisco.com/t5/security-documents/how-to-integrate-cisco-ise-mdm-with-microsoft-intune/ta-p/4187375",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/look-up-intune-licenses.md",
+      "redirect_url": "/mem/intune/fundamentals/licenses-assign",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-exchange-connector-common-problems.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-exchange-connector",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/deploy-windows-update-packages-as-win32-apps.md",
+      "redirect_url": "/mem/intune/apps/apps-win32-deploy-update-package",
       "redirect_document_id": false
     },
     {
@@ -572,12 +722,12 @@
     },
     {
       "source_path": "support/azure/virtual-machines/index.md",
-      "redirect_url": "/support/azure/virtual-machines/welcome-virtual-machines.md",
+      "redirect_url": "/support/azure/virtual-machines/welcome-virtual-machines",
       "redirect_document_id": false
     },
     {
       "source_path": "support/azure/general/index.md",
-      "redirect_url": "/support/azure/virtual-machines/welcome-general.md",
+      "redirect_url": "/support/azure/virtual-machines/welcome-general",
       "redirect_document_id": false
     },
     {
@@ -672,7 +822,7 @@
     },
     {
       "source_path": "support/azure/general/capture-debug-stream.md",
-      "redirect_url": "https://docs.microsoft.com/azure/automation/troubleshoot/runbooks",
+      "redirect_url": "/azure/automation/troubleshoot/runbooks",
       "redirect_document_id": false
     },
     {
@@ -791,9 +941,3354 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/azure/active-directory/connection-adfs-failed-set-msoladfscontex.md",
+      "redirect_url": "/troubleshoot/windows-server/identity/connection-adfs-failed-set-msoladfscontex",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/active-directory/convert-domain-federated.md",
+      "redirect_url": "/troubleshoot/windows-server/identity/convert-domain-federated",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/active-directory-services-domains-part-one.md",
+      "redirect_url": "/troubleshoot/windows-server/identity/active-directory-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/identity/troubleshoot-directory-services-issues.md",
+      "redirect_url": "/troubleshoot/windows-server/identity/active-directory-overview",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-client/deployment/unattended-setup-parameters-for-unattend-dot-txt.md",
       "redirect_url": "/windows-hardware/manufacture/desktop/update-windows-settings-and-scripts-create-your-own-answer-file-sxs",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/troubleshoot-startup-issues-in-power-apps-web-authoring.md",
+      "redirect_url": "/powerapps/troubleshooting-startup-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/shell-experience/toggle-full-mode-and-windows-mode.md",
+      "redirect_url": "/troubleshoot/windows-client/welcome-windows-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/deployment/windows-oobe-fails-start-new-computer.md",
+      "redirect_url": "https://support.microsoft.com/topic/c4ed5186-9266-de16-24a5-9bd1818b9df5",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/deployment/compute-md5sha-1-cryptographic-hash-value.md",
+      "redirect_url": "https://support.microsoft.com/topic/d92a713f-d793-7bd8-b0a4-4db811e29559",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/identity/security-identifiers-in-windows.md",
+      "redirect_url": "/windows/security/identity-protection/access-control/security-identifiers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/lt2p-ipsec-ras-vpn-connections-fail.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/rras-vpn-connections-fail-ms-chapv2-authentication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/remote/remote-desktop-ip-virtualization-not-work.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/remote-desktop-ip-virtualization",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/general/sql-server-windows-8-later-versions.md",
+      "redirect_url": "/troubleshoot/sql/general/use-sql-server-in-windows",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-hardware/drivers/index.md",
+      "redirect_url": "/support/windows-hardware/drivers/welcome-windowshardware",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/index.md",
+      "redirect_url": "/support/power-platform/power-apps/welcome-power-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/index.md",
+      "redirect_url": "/support/power-platform/power-automate/welcome-power-automate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/fraud-protection/index.md",
+      "redirect_url": "/support/dynamics-365/fraud-protection/welcome-fraud-protection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/index.md",
+      "redirect_url": "/support/dynamics-365/sales/welcome-sales",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/marketing/index.md",
+      "redirect_url": "/support/dynamics-365/marketing/welcome-marketing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/index.md",
+      "redirect_url": "/support/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/performance/performance-consistency-issues.md",
+      "redirect_url": "/troubleshoot/sql/performance/performance-consistency-issues-filter-drivers-modules",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/filter-drivers-lead-to-sql-performance-consistency.md",
+      "redirect_url": "/troubleshoot/sql/performance/performance-consistency-issues-filter-drivers-modules",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/admin/error-password-service-account-changed.md",
+      "redirect_url": "/troubleshoot/sql/admin/error-1069-service-cannot-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/1450-and-665-errors-running-dbcc.md",
+      "redirect_url": "/troubleshoot/sql/admin/1450-and-665-errors-running-dbcc-checkdb",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/17053-and-926-errors-running-dbcc.md",
+      "redirect_url": "/troubleshoot/sql/admin/17053-and-926-errors-running-dbcc-check",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/8967-8921-errors-running-dbcc.md",
+      "redirect_url": "/troubleshoot/sql/admin/8967-8921-errors-running-dbcc-checkdb",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/latch-timeout-running-dbcc.md",
+      "redirect_url": "/troubleshoot/sql/admin/latch-timeout-running-dbcc-checkdb",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/troubleshoot-dbcc-errors.md",
+      "redirect_url": "/troubleshoot/sql/admin/troubleshoot-dbcc-checkdb-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/software-distribution-best-practices.md",
+      "redirect_url": "/mem/intune/fundamentals/intune-legacy-pc-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/flow-extension-package-shows-installation-failed.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/flow-extension-package-shows-installation-failed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/networking/description-dnslint-utility.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/description-dnslint-utility",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/performance/high-cpu-use-occurs-queries.md",
+      "redirect_url": "/troubleshoot/sql/performance/decreased-perf-high-cpu-optimized-nested-loop",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-365-marketing-entitlement-does-not-match-your-tenant.md",
+      "redirect_url": "/troubleshoot/dynamics-365/marketing/dynamics-365-marketing-entitlement-does-not-match-your-tenant",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-365-marketing-problem-with-deployment.md",
+      "redirect_url": "/troubleshoot/dynamics-365/marketing/dynamics-365-marketing-problem-with-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/sales/404-error-when-accessing-organization.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/adapter-is-not-of-type-gpadapter-error-when-activating-map-in-the-connector.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/alerts-occur-when-you-go-offline.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/appdata-redirect-causes-lookup-fields-to-break.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/appointments-do-not-sync-exchange.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/business-object-not-found-error-when-running-account-to-customer-map.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-add-a-new-deployment-administrator.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-add-crm-add-in-to-favorites-pane-in-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-authenticate-your-credentials-error-when-configuring-dynamics-crm-for-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-configure-crm-2011-outlook-client.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-configure-dynamics-crm-client.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-connect-dynamics-crm-server-because-credentials.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-go-offline-configure-crm-client.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-load-counter-name-data.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-resynchronize-contacts-from-dynamics-crm-to-outlook-after-being-removed.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-sign-in-to-office-365-services-crm-organization.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-track-email-after-it-is-sent-and-moved-to-alternative-folder.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/change-that-limits-editable-crm-forms.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/chrome-becomes-unresponsive.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/configuration-outlook-client-fails-with-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/configuration-tool-creates-duplicate-configuration-file.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/contacts-duplicated-if-recreate-deleted-contact.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/convert-lead-dialog-box-no-longer-shows-duriing-lead-qualification.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/could-not-establish-trust-relationship-for-the-ssltls-secure-channel-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/crm-app-crash-internet-explorer-reloads.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/crm-mobile-client-offline-online-access-modes.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/crm-rule-deployment-wizard-fails-to-apply-rules-to-users.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/currency-data-type-not-available-import-data-wizard.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/welcome-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-access-dynamics-crm-website-after-repair.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/cannot-access-dynamics-crm-website-after-repair",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-add-crm-application-pool-account-as-a-user.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/cannot-add-crm-application-pool-account-as-a-user",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-open-database-requested-by-the-login-error-when-signing-in.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/cannot-open-database-requested-by-the-login-error-when-signing-in",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-occurs-when-accessing-internal-url-with-claims-based-authentication.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-occurs-when-accessing-internal-url-with-claims-based-authentication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/http-503-service-unavailable-error-when-accessing-federation-metadata-url.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/http-503-service-unavailable-error-when-accessing-federation-metadata-url",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/problems-that-occur-when-crmapppool-user-account-is-dynamics-crm-user.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/problems-that-occur-when-crmapppool-user-account-is-dynamics-crm-user",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/company-news-timeline-version-1-0-1-0-for-dynamics-365-release.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/company-news-timeline-version-1-0-1-0-for-dynamics-365-release",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/compatibility-dynamics-crm-2016.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/compatibility-dynamics-crm-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/compatibility-with-dynamics-crm-2011.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/compatibility-with-dynamics-crm-2011",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/compatibility-with-dynamics-crm-2013.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/compatibility-with-dynamics-crm-2013",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/compatibility-with-dynamics-crm-2015.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/compatibility-with-dynamics-crm-2015",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/database-cannot-be-started-in-this-edition-of-sql-error-when-restoring.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/database-cannot-be-started-in-this-edition-of-sql-error-when-restoring",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/how-to-enable-and-disable-scheduled-tracing.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/how-to-enable-and-disable-scheduled-tracing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/how-to-enable-tracing-in-dynamics-crm.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/how-to-enable-tracing-in-dynamics-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/an-item-with-same-key-has-been-added.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/an-item-with-same-key-has-been-added",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/access-is-denied-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/access-is-denied-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/alerts-about-mailbox-requires-approval-by-office-365-administrator.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/alerts-about-mailbox-requires-approval-by-office-365-administrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/an-impersonation-error-occurred-when-connecting-dynamics-365-to-exchange.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/an-impersonation-error-occurred-when-connecting-dynamics-365-to-exchange",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/an-unknown-error-occurred-while-synchronizing-data-to-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/an-unknown-error-occurred-while-synchronizing-data-to-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/automatic-record-creation-rules-fail.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/automatic-record-creation-rules-fail",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/blank-page-appears.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/blank-page-appears",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-access-these-records.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/cannot-access-these-records",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-connect-to-dynamics-crm-server-because-we-cannot-authenticate-credentials.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/cannot-connect-to-dynamics-crm-server-because-we-cannot-authenticate-credentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-track-emails-in-crm-app-for-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/cannot-track-emails-in-crm-app-for-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/communication-was-blocked-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/communication-was-blocked-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/could-not-load-file.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/could-not-load-file",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/culture-not-supported-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/culture-not-supported-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-cannot-be-received-because-associated-user-does-not-have-valid-license-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/email-cannot-be-received-because-associated-user-does-not-have-valid-license-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-cannot-be-sent.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/email-cannot-be-sent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/401-unauthorized-access-is-denied.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/401-unauthorized-access-is-denied",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-connect-dynamics-365-online.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/cannot-connect-dynamics-365-online",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/custom-code-that-is-allowed-use.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/custom-code-that-is-allowed-use",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/data-collected-by-dynamics-crm-for-outlook-configuration-collector.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/data-collected-by-dynamics-crm-for-outlook-configuration-collector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/data-collected-by-dynamics-crm-for-outlook-diagnostic-tool.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/data-collected-by-dynamics-crm-for-outlook-diagnostic-tool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/data-collected-by-dynamics-crm-iis-memory-dump-diagnostic.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/data-collected-by-dynamics-crm-iis-memory-dump-diagnostic",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/data-collected-by-dynamics-crm-performance-diagnostic-tool.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/data-collected-by-dynamics-crm-performance-diagnostic-tool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/database-file-cannot-be-found-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/database-file-cannot-be-found-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/document-management-features-script-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/document-management-features-script-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-365-email-setup-configuration.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-365-email-setup-configuration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-365-portal-solution-update.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-365-portal-solution-update",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-connector-does-not-handle-null-strings-and-dates-correctly.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-connector-does-not-handle-null-strings-and-dates-correctly",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-crm-claims-ifd-collector.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-crm-claims-ifd-collector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-crm-email-router-collector.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-crm-email-router-collector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-crm-for-office-outlook-installation-fails-during-initializing-orgnization.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-crm-for-office-outlook-installation-fails-during-initializing-orgnization",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-crm-for-outlook-client-preview-pane-not-showing.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-crm-for-outlook-client-preview-pane-not-showing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-crm-for-outlook-configuration-wizard-error-80044501.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-crm-for-outlook-configuration-wizard-error-80044501",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-crm-for-outlook-not-installed.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-crm-for-outlook-not-installed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-crm-for-outlook-personal-options-convert-to-online-options.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-crm-for-outlook-personal-options-convert-to-online-options",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-crm-for-outlook-support-with-multiple-crm-deployments.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-crm-for-outlook-support-with-multiple-crm-deployments",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-crm-for-phone-and-tablets-cannot-connect-to-organization.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-crm-for-phone-and-tablets-cannot-connect-to-organization",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-crm-ipv6-supportability.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-crm-ipv6-supportability",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-crm-outlook-configuration-wizard-error-80044505.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-crm-outlook-configuration-wizard-error-80044505",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-crm-outlook-fails-to-configure-if-using-app-passwords-for-authentication.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-crm-outlook-fails-to-configure-if-using-app-passwords-for-authentication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-crm-outlook-fails-to-set-to-external-ifd-web-address.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-crm-outlook-fails-to-set-to-external-ifd-web-address",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-crm-outlook-is-not-enabled.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-crm-outlook-is-not-enabled",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-crm-preview-form-region-shows-no-data.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-crm-preview-form-region-shows-no-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-crm-supportability-with-internet-explorer-11.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-crm-supportability-with-internet-explorer-11",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-gp-company-not-appearing-in-available-companies.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-gp-company-not-appearing-in-available-companies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/edit-button-not-appear-read-optimized-forms.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/edit-button-not-appear-read-optimized-forms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-fails-sent-received.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/email-fails-sent-received",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-fails-synchronize-dynamics-365.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/email-fails-synchronize-dynamics-365",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-not-tracked-dynamics-crm.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/email-not-tracked-dynamics-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-router-service-configuration-parameter-emailuser-is-missing-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/email-router-service-configuration-parameter-emailuser-is-missing-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-server-error-code-crm-80042f09-usernotassignedroles.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/email-server-error-code-crm-80042f09-usernotassignedroles",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/email-shows-received-or-incoming.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/email-shows-received-or-incoming",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/emails-not-synced-because-email-is-configured-for-another-organization-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/emails-not-synced-because-email-is-configured-for-another-organization-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-80044311-crm-organization-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-80044311-crm-organization-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-after-installing-dynamics-crm-phone.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-after-installing-dynamics-crm-phone",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-after-planned-system-maintenance.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-after-planned-system-maintenance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-code-80044500.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-code-80044500",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-complete-mail-merge.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-complete-mail-merge",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-configure-dynamics-crm-office-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-configure-dynamics-crm-office-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-configure-dynamics-crm-online-client-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-configure-dynamics-crm-online-client-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-create-service-activities-service-calendar.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-create-service-activities-service-calendar",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-install-dynamics-crm-2011-splash-screen.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-install-dynamics-crm-2011-splash-screen",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-install-dynamics-crm.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-install-dynamics-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-logging-into-dynamics-crm.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-logging-into-dynamics-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-message-dynamics-crm-2011-accessed.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-message-dynamics-crm-2011-accessed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-no-organization-specified-configuration-file.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-no-organization-specified-configuration-file",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-occurred-loading-dynamics-crm-functionality-try-restarting.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-occurred-loading-dynamics-crm-functionality-try-restarting",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-occurs-child-business-units.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-occurs-child-business-units",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-occurs-during-loading-outlook-profile-of-configuration-wizard.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-occurs-during-loading-outlook-profile-of-configuration-wizard",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-occurs-when-configuring-dynamics-crm-for-outlook-due-to-wrong-time-setting.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-occurs-when-configuring-dynamics-crm-for-outlook-due-to-wrong-time-setting",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-occurs-when-connecting-crm-app.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-occurs-when-connecting-crm-app",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-occurs-when-running-sync.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-occurs-when-running-sync",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-occurs-when-signing-in-via-ifd-and-2007-sdk-endpoints.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-occurs-when-signing-in-via-ifd-and-2007-sdk-endpoints",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-occurs-when-synchronizing-outlook-with-dynamics-crm-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-occurs-when-synchronizing-outlook-with-dynamics-crm-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-occurs-when-tracking-outgoing-email-in-dynamics-crm-for-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-occurs-when-tracking-outgoing-email-in-dynamics-crm-for-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-retrieve-data-odata-endpoint.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-retrieve-data-odata-endpoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-send-tracked-email-message-another-user.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-send-tracked-email-message-another-user",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-set-relationship-behavior-cascade-active.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-set-relationship-behavior-cascade-active",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-underscore-message-underscore-0x80070000.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-underscore-message-underscore-0x80070000",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-upgrade-dynamics-crm-2011.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-upgrade-dynamics-crm-2011",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-user-tries-go-offline.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-user-tries-go-offline",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-users-navigate-office-groups-ie11.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-users-navigate-office-groups-ie11",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-configuring-crm-2011-client.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-when-configuring-crm-2011-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-configuring-crm-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-when-configuring-crm-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-configuring-dynamics-crm-client.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-when-configuring-dynamics-crm-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-connector-plugin-executes.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-when-connector-plugin-executes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-installing-dynamics-crm-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-when-installing-dynamics-crm-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-opening-xml-formatted-file-downloaded-from-dynamics-crm-in-excel.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-when-opening-xml-formatted-file-downloaded-from-dynamics-crm-in-excel",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-selecting-track-crm-email.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-when-selecting-track-crm-email",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-uninstalling-managed-solution.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-when-uninstalling-managed-solution",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-you-synchronize-appointments.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-you-synchronize-appointments",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/errors-occur-after-migrating-from-dynamics-crm-online-to-on-premise.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/errors-occur-after-migrating-from-dynamics-crm-online-to-on-premise",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/errors-occur-when-sending-on-behalf-of-or-send-as-another-user-via-crm-email-router.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/errors-occur-when-sending-on-behalf-of-or-send-as-another-user-via-crm-email-router",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/exchange-mapi-subsystem-is-not-installed-on-this-system-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/exchange-mapi-subsystem-is-not-installed-on-this-system-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/failed-to-add-user-using-distinguishedname-error-when-importing-organization.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/failed-to-add-user-using-distinguishedname-error-when-importing-organization",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/failure-when-selecting-test-enable-mailbox.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/failure-when-selecting-test-enable-mailbox",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/filenotfoundexception-occurs.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/filenotfoundexception-occurs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/fips-140-2-compliancy-with-dynamics-crm.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/fips-140-2-compliancy-with-dynamics-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/fips-140-2-compliancy.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/fips-140-2-compliancy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/firefox-or-chrome-users-repeatedly-prompted-credentials.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/firefox-or-chrome-users-repeatedly-prompted-credentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/generalincomingemailservererror-when-installing-dynamics-crm-for-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/generalincomingemailservererror-when-installing-dynamics-crm-for-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/generic-sql-error-after-applying-update-rollup-12.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/generic-sql-error-after-applying-update-rollup-12",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/how-to-change-audience-and-type-of-dynamics-365-portal.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/how-to-change-audience-and-type-of-dynamics-365-portal",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/how-to-change-incoming-or-outgoing-exchange-server-settings-after-installation.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/how-to-change-incoming-or-outgoing-exchange-server-settings-after-installation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/how-to-determine-the-version-of-dynamics-crm-portals-installed.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/how-to-determine-the-version-of-dynamics-crm-portals-installed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/how-to-enable-tracing-for-dynamics-crm-for-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/how-to-enable-tracing-for-dynamics-crm-for-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/http-error-401-unauthorized-when-accessing-dynamics-crm-using-nlb-address.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/http-error-401-unauthorized-when-accessing-dynamics-crm-using-nlb-address",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/http-server-returned-404-notfound-exception.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/http-server-returned-404-notfound-exception",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/icons-in-queue-views-do-not-appear-after-update.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/icons-in-queue-views-do-not-appear-after-update",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/incoming-status-failure-the-remote-server-returned-an-error-440-login-timeout.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/incoming-status-failure-the-remote-server-returned-an-error-440-login-timeout",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/installation-cannot-proceed-error-when-installing-crm-2011-for-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/installation-cannot-proceed-error-when-installing-crm-2011-for-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/installation-cannot-proceed-error-when-installing-dynamics-crm-for-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/installation-cannot-proceed-error-when-installing-dynamics-crm-for-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/installation-configuration-issue.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/installation-configuration-issue",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/installpstaction-failed-error-when-installing-dynamics-crm-for-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/installpstaction-failed-error-when-installing-dynamics-crm-for-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/integrated-authentication-firefox-update-rollup-12.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/integrated-authentication-firefox-update-rollup-12",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/integration-crm-sharepoint-online.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/integration-crm-sharepoint-online",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/internet-accessible-urls.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/internet-accessible-urls",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/internetsetcookie-failed-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/internetsetcookie-failed-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/invalid-argument-error-after-installing-crm-2011-update-rollup-10.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/invalid-argument-error-after-installing-crm-2011-update-rollup-10",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/invalid-argument-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/invalid-argument-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/list-component-case-sensitive.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/list-component-case-sensitive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/list-does-not-support-this-operation.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/list-does-not-support-this-operation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/logged-on-user-does-not-have-appropriate-security-permissions-after-upgrading.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/logged-on-user-does-not-have-appropriate-security-permissions-after-upgrading",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/mailbox-not-have-valid-email-address-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/mailbox-not-have-valid-email-address-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/make-sure-credentials-specified-in-mailbox-correct-and-have-sufficient-permission.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/make-sure-credentials-specified-in-mailbox-correct-and-have-sufficient-permission",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/mscrmsandboxclient-errors-event-viewer.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/mscrmsandboxclient-errors-event-viewer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/mspinstallaction-failed.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/mspinstallaction-failed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/navigation-bars-not-function-record-form.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/navigation-bars-not-function-record-form",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/new-button-unavailable-after-publishing.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/new-button-unavailable-after-publishing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/no-expected-data-after-exporting-dynamics-worksheets-or-pivot-tables.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/no-expected-data-after-exporting-dynamics-worksheets-or-pivot-tables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/no-option-add-entities-favorites.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/no-option-add-entities-favorites",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/no-organization-appear-list.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/no-organization-appear-list",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/object-reference-not-set-instance.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/object-reference-not-set-instance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/office-2016-support-crm-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/office-2016-support-crm-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/offline-synchronization-fails-in-dynamics-crm-for-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/offline-synchronization-fails-in-dynamics-crm-for-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/one-or-more-duplicate-records-were-found-in-dynamics-365-when-saving-item-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/one-or-more-duplicate-records-were-found-in-dynamics-365-when-saving-item-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/only-administrative-read-only-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/only-administrative-read-only-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/organization-not-updated-rtm.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/organization-not-updated-rtm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/out-of-memory-and-network-disconnections-with-many-pst-files-loaded.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/out-of-memory-and-network-disconnections-with-many-pst-files-loaded",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/outdated-client-id-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/outdated-client-id-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/outlook-become-unresponsive-non-admin-mode.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/outlook-become-unresponsive-non-admin-mode",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/outlook-client-configuration-fails-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/outlook-client-configuration-fails-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/outlook-client-language-packs-cannot-installed.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/outlook-client-language-packs-cannot-installed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/outlook-crashes-when-you-track-an-email.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/outlook-crashes-when-you-track-an-email",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/outlook-has-stopped-working.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/outlook-has-stopped-working",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/outlook-keyboard-shortcuts-not-responding-if-crm-add-in-enabled.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/outlook-keyboard-shortcuts-not-responding-if-crm-add-in-enabled",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/outlook-ribbon-disappears.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/outlook-ribbon-disappears",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/portal-entity-permission-enhancement.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/portal-entity-permission-enhancement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/prompted-for-user-name-and-password-when-opening-dynamics-crm.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/prompted-for-user-name-and-password-when-opening-dynamics-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/queue-views-perform-poorly-fail-load.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/queue-views-perform-poorly-fail-load",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/quick-find-outlook-client-displays-unexpected-results.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/quick-find-outlook-client-displays-unexpected-results",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/quick-find-varies-between-web-crm.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/quick-find-varies-between-web-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/recipient-does-not-receive-emails-sent-from-dynamics-crm-web-client.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/recipient-does-not-receive-emails-sent-from-dynamics-crm-web-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/records-not-written-to-workflowlogbase-for-single-step-workflows.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/records-not-written-to-workflowlogbase-for-single-step-workflows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/ribbon-buttons-overlap-left-navigation-pane-form.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/ribbon-buttons-overlap-left-navigation-pane-form",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/server-might-be-unavailable-1-0-error-when-configuring-dynamics-crm-for-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/server-might-be-unavailable-1-0-error-when-configuring-dynamics-crm-for-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/signed-in-user-not-have-appropriate-security-permissions-to-view-records-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/signed-in-user-not-have-appropriate-security-permissions-to-view-records-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/silverlight-web-resources-cannot-be-viewed.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/silverlight-web-resources-cannot-be-viewed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/slow-performance-crm-2011-client.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/slow-performance-crm-2011-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/slow-performance-with-mcafee-antivirus.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/slow-performance-with-mcafee-antivirus",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/solution-update-fails-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/solution-update-fails-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/some-buttons-and-tabs-are-missing-from-web-client.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/some-buttons-and-tabs-are-missing-from-web-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/sorry-something-went-wrong-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/sorry-something-went-wrong-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/sorry-something-went-wrong-while-initializing-the-app.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/sorry-something-went-wrong-while-initializing-the-app",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/support-dynamics-crm-2011-office-2013.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/support-dynamics-crm-2011-office-2013",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/support-for-dynamics-crm-with-sql-server-2012.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/support-for-dynamics-crm-with-sql-server-2012",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/support-legacy-adxstudio-365-portals.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/support-legacy-adxstudio-365-portals",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/support-with-dynamics-crm-2011-and-internet-explorer-10.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/support-with-dynamics-crm-2011-and-internet-explorer-10",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/supportability-dynamics-crm.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/supportability-dynamics-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/sync-private-property-from-outlook-appointment.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/sync-private-property-from-outlook-appointment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-crm-for-outlook-button-appears-after-update-rollup-7-installed.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/the-crm-for-outlook-button-appears-after-update-rollup-7-installed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-import-a-solution-is-unsuccessful.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/the-import-a-solution-is-unsuccessful",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-server-address-is-not-valid.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/the-server-address-is-not-valid",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-specified-subscription-does-not-exist-error-when-going-offline.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/the-specified-subscription-does-not-exist-error-when-going-offline",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-specified-user-is-either-disabled.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/the-specified-user-is-either-disabled",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/thresholddate-set-back-after-upgrade.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/thresholddate-set-back-after-upgrade",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/time-stamp-of-reminder-is-wrong-when-creating-phone-call-or-task-activity.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/time-stamp-of-reminder-is-wrong-when-creating-phone-call-or-task-activity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/timeout-administrator-changes-user-record.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/timeout-administrator-changes-user-record",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/tracking-email-cannot-resolve-associated-record.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/tracking-email-cannot-resolve-associated-record",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/type-namespace-does-not-exist-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/type-namespace-does-not-exist-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/unable-add-crm-app-outlook-due-missing-email.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/unable-add-crm-app-outlook-due-missing-email",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/unable-complete-purchasing-process.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/unable-complete-purchasing-process",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/unable-configure-crm-email-router.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/unable-configure-crm-email-router",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/unable-connect-sharepoint-through-integration.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/unable-connect-sharepoint-through-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/unable-connect-the-remote-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/unable-connect-the-remote-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/unable-create-external-relying-party-trust.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/unable-create-external-relying-party-trust",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/unable-install-crm-2011-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/unable-install-crm-2011-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/unable-install-dynamics-crm-update-rollups.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/unable-install-dynamics-crm-update-rollups",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/unable-integrate-yammer.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/unable-integrate-yammer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/unable-open-entity-records-using-ipad.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/unable-open-entity-records-using-ipad",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/unable-to-configure-the-dynamics-crm-2011.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/unable-to-configure-the-dynamics-crm-2011",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/unable-to-connect-to-dynamics-crm-organization-because-it-is-disabled-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/unable-to-connect-to-dynamics-crm-organization-because-it-is-disabled-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/unable-to-open-records-after-upgrade-to-dynamics-365-version-8-2.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/unable-to-open-records-after-upgrade-to-dynamics-365-version-8-2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/update-client-app-registration-ad-fs.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/update-client-app-registration-ad-fs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/update-rollup-12-changes-quick-find-search.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/update-rollup-12-changes-quick-find-search",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/users-redirected-mobile-express.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/users-redirected-mobile-express",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/validation-error-when-setting-server-based-sharepoint-integration-for-crm.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/validation-error-when-setting-server-based-sharepoint-integration-for-crm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/visual-studio-2015-stops-working.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/visual-studio-2015-stops-working",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/warning-message-when-opening-the-file-exported-from-crm-to-excel.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/warning-message-when-opening-the-file-exported-from-crm-to-excel",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/wcf-failures-occur-when-dynamics-365-is-set-up-behind-load-balancer.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/wcf-failures-occur-when-dynamics-365-is-set-up-behind-load-balancer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/windows-nt-user-or-group-not-found-error-when-importing-organization.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/windows-nt-user-or-group-not-found-error-when-importing-organization",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/windows-within-dynamics-crm-outlook-do-not-render-correctly.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/windows-within-dynamics-crm-outlook-do-not-render-correctly",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/you-are-not-authorized-to-view-this-page-error-when-accessing-crm-web-site.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/you-are-not-authorized-to-view-this-page-error-when-accessing-crm-web-site",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/you-do-not-have-a-license-error-when-configuring-dynamics-crm-for-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/you-do-not-have-a-license-error-when-configuring-dynamics-crm-for-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/you-do-not-have-permission-to-access-these-records-error-during-configuration.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/you-do-not-have-permission-to-access-these-records-error-during-configuration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/you-do-not-have-permission-to-access-these-records-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/you-do-not-have-permission-to-access-these-records-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/sales/you-do-not-see-get-crm-outlook-button.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/you-do-not-see-get-crm-outlook-button",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/marketing/the-campaign-activity-can-be-distributed-only-once-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/the-campaign-activity-can-be-distributed-only-once-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/sharepoint-site-not-listed-in-trigger-or-action.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/dropdown-does-not-list-items-in-trigger-or-action",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows/win32/kb841927.md",
+      "redirect_url": "/troubleshoot/windows/win32/addin-components-core-os-processes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/connect/resolving-connectivity-errors.md",
+      "redirect_url": "/troubleshoot/sql/connect/resolve-connectivity-errors-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/build-software-inventory-power-bi.md",
+      "redirect_url": "/mem/intune/fundamentals/reports#app-install-status-report-operational",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/connect/kerberos-configuration-manager-available.md",
+      "redirect_url": "/troubleshoot/sql/connect/using-kerberosmngr-sqlserver",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-hardware/drivers/istidevicecontrol-getmydeviceportname-incorrect-port-name-multiple-usb.md",
+      "redirect_url": "/troubleshoot/windows-hardware/drivers/getmydeviceportname-returns-incorrect-port-name-usb-scanner",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-hardware/drivers/cant-scan-from-usb-scanner-after-win11-restarts.md",
+      "redirect_url": "/troubleshoot/windows-hardware/drivers/cant-scan-usb-scanner-after-win11-restarts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/user-profiles-and-logon/windows-identity-foundation.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/windows-identity-foundation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/device-licenses-introduction.md",
+      "redirect_url": "/mem/intune/fundamentals/licenses",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/small-file-handling-high-latency.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/web-apps-performance-faqs.md",
+      "redirect_url": "/troubleshoot/azure/app-service/web-apps-performance-faqs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/app-service-compliance-wit.md",
+      "redirect_url": "/troubleshoot/azure/app-service/app-service-compliance-wit",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/backing-up-restoring-and-cloning-microsoft-azure-app-services.md",
+      "redirect_url": "/troubleshoot/azure/app-service/backing-up-restoring-and-cloning-microsoft-azure-app-services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/web-apps-configuration-and-management-faqs.md",
+      "redirect_url": "/troubleshoot/azure/app-service/web-apps-configuration-and-management-faqs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/faqs-app-service-linux.md",
+      "redirect_url": "/troubleshoot/azure/app-service/faqs-app-service-linux",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/web-apps-open-source-technologies-faqs.md",
+      "redirect_url": "/troubleshoot/azure/app-service/web-apps-open-source-technologies-faqs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/temporary-storage-for-azure-app-service.md",
+      "redirect_url": "/troubleshoot/azure/app-service/temporary-storage-for-azure-app-service",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/troubleshoot-instance-related-issues-on-azure-app-service.md",
+      "redirect_url": "/troubleshoot/azure/app-service/troubleshoot-instance-related-issues-on-azure-app-service",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/web-apps-deployment-faqs.md",
+      "redirect_url": "/troubleshoot/azure/app-service/web-apps-deployment-faqs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/app-service/index.md",
+      "redirect_url": "/troubleshoot/azure/app-service/welcome-app-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/quote-exceeded-during-creation-upgrade.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/quota-exceeded-during-creation-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/data-restore-storage.md",
+      "redirect_url": "/azure/storage/blobs/data-protection-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/performance/winsock-lsp-network-problem.md",
+      "redirect_url": "/troubleshoot/sql/connect/winsock-lsp-network-problem",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/slow-query-performance-ssis-etl.md",
+      "redirect_url": "/troubleshoot/sql/performance/slow-query-performance-ssis-etl",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-monitor/index.yml",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/virtual-machines/rdp.md",
+      "redirect_url": "/troubleshoot/azure/virtual-machines/troubleshoot-rdp-connection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/log-analytics/welcome-log-analytics.yml",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-monitor/app-insights/welcome-application-insights.yml",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/log-analytics/erased-proxy-settings-microsoft-monitoring-agent.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/erased-proxy-settings-microsoft-monitoring-agent",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/error-code-0x80090016-keyset-does-not-exist.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/error-code-0x80090016-keyset-does-not-exist",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/linux-agent-missing-heartbeats.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/linux-agent-missing-heartbeats",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/linux-agent-performance-counter-missing.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/linux-agent-performance-counter-missing",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/mma-troubleshoot-basics.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/mma-troubleshoot-basics",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/resolve-windows-agent-installation-issues.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/resolve-windows-agent-installation-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/ssl-connectivity-mma-windows-powershell.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/ssl-connectivity-mma-windows-powershell",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/windows-could-not-start-mma.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/windows-could-not-start-mma",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/workspace-data-export-faq.yml",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/workspace-data-export-faq",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/troubleshoot-upgrade-errors.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-monitor/app-insights/troubleshoot-availability.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/diagnose-ping-test-failure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/reinstall-the-intune-connector.md",
+      "redirect_url": "/mem/intune/protect/certificate-connector-install",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-monitor/app-insights/snapshot-debugger-troubleshooting.md",
+      "redirect_url": "/azure/azure-monitor/snapshot-debugger/snapshot-debugger-troubleshoot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/atl-service-not-start.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/libraries/atl-service-not-start",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/debuggers/idebugaddress-getaddress-crash.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/debuggers/idebugaddress-getaddress-crash",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/language-compilers/no-warning-event-obsolete.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/no-warning-event-obsolete",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/mfc-enable-tablet-press-and-hold-gesture.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/mfc-enable-tablet-press-and-hold-gesture",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/project-build/cpp-2010-support-dotnet-4-target.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/project-build/cpp-2010-support-dotnet-4-target",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/debuggers/concurrency-visualizer-lost-kernel-user-mode-event.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/debuggers/concurrency-visualizer-lost-kernel-user-mode-event",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/bi-project-not-open-after-upgrade.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/general/bi-project-not-open-after-upgrade",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/help-viewer-power-tool.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/general/help-viewer-power-tool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/windows-automation-api-3-improve-visual-studio.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/general/windows-automation-api-3-improve-visual-studio",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/language-compilers/cannot-compile-32-bit-app-x64-machine.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/cannot-compile-32-bit-app-x64-machine",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/language-compilers/linker-fatal-error-out-of-memory.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/linker-fatal-error-out-of-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/language-compilers/building-solution-with-multiple-projects-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/building-solution-with-multiple-projects-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/ide/adjust-visual-experience-settings.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/ide/adjust-visual-experience-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/ide/atl-control-font-stock-not-update.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/ide/atl-control-font-stock-not-update",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/project-build/setup-project-depend-dotnet-framework.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/project-build/setup-project-depend-dotnet-framework",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/installation/known-issues-in-windows-8.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/install/known-issues-in-windows-8",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/installation/setup-issues-readme-file.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/install/setup-issues-readme-file",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/subscriptions/opt-out-of-dev-essentials.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/subscriptions/opt-out-of-dev-essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/vsa-tlb-not-loaded.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/general/vsa-tlb-not-loaded",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/application-exception-0xc0000094-vmware.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/application-exception-0xc0000094-vmware",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/drm-protected-subtitles-not-supported.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/drm-protected-subtitles-not-supported",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/playback-protected-video-content-fail-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/playback-protected-video-content-fail-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/run-configuration-tool.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/run-configuration-tool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/silverlight-not-work-google-chrome.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/silverlight-not-work-google-chrome",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/slsvcutil-tool-crashes.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/slsvcutil-tool-crashes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/type-characters-into-silverlight-textbox-richtextbox.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/type-characters-into-silverlight-textbox-richtextbox",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/update-available.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/update-available",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/app-management.yml",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/app-management",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/app-install-error-codes.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/app-install-error-codes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-app-install.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/troubleshoot-app-install",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-win32-app-install.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/troubleshoot-win32-app-install",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/app-installation-failed-error.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/app-installation-failed-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/apps-appear-unavailable.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/apps-appear-unavailable",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/develop-deliver-working-win32-app-via-intune.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/develop-deliver-working-win32-app-via-intune",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/corporate-data-unsaved-in-wip-allowed-apps.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/corporate-data-unsaved-in-wip-allowed-apps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/cannot-uninstall-apple-app-store-apps.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/cannot-uninstall-apple-app-store-apps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/onedrive-attaches-corporate-protected-data-imessage.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/onedrive-attaches-corporate-protected-data-imessage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/mismatch-error-configuration-value-ampersand.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/mismatch-error-configuration-value-ampersand",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/saving-images-locally-not-restricted.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/saving-images-locally-not-restricted",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/macos-lob-apps-not-deployed.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/macos-lob-apps-not-deployed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/error-0x87d13ba2-deploy-macos-lob-app.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/error-0x87d13ba2-deploy-macos-lob-app",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/cannot-install-macos-apps-and-run-shell-scripts.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/cannot-install-macos-apps-and-run-shell-scripts",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/application-could-not-be-wrapped.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/application-could-not-be-wrapped",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/removed-data-associated-with-app-error.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/removed-data-associated-with-app-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/discovered-apps-list-personal-apps.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/discovered-apps-list-personal-apps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/android-enterprise-enrolled-devices-fails-attaching-photo.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/android-enterprise-enrolled-devices-fails-attaching-photo",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/creating-message-action-not-allowed.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/creating-message-action-not-allowed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-google-apps.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/troubleshoot-google-apps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/invalid-address-open-web-app.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/invalid-address-open-web-app",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/managed-browser-policy-triggers-error-0x87d1fde8.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/managed-browser-policy-triggers-error-0x87d1fde8",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/only-one-app-policy-applied-edge-managed-browser.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/only-one-app-policy-applied-edge-managed-browser",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/save-application-failed-error.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/save-application-failed-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/apps-fail-sync-to-intune.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/apps-fail-sync-to-intune",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-app-protection-policy-deployment.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-protection-policies/troubleshoot-app-protection-policy-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-mam.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-protection-policies/troubleshoot-mam",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-data-transfer.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-protection-policies/troubleshoot-data-transfer",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/data-transfer-scenarios.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-protection-policies/data-transfer-scenarios",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/no-prompt-for-fingerprint-identity.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-protection-policies/no-prompt-for-fingerprint-identity",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-scep-certificate-profiles.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/troubleshoot-scep-certificate-profiles",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-scep-certificate-profile-deployment.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/troubleshoot-scep-certificate-profile-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-scep-certificate-delivery.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/troubleshoot-scep-certificate-delivery",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/cannot-assign-scep-certificates.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/cannot-assign-scep-certificates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/ios-scep-failure-no-getcacaps.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/ios-scep-failure-no-getcacaps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/certificateregistrationsvc-verify-request-error.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/certificateregistrationsvc-verify-request-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/devices-receive-scep-certificates-error-0x80094800.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/devices-receive-scep-certificates-error-0x80094800",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/scep-deployment-to-win10-devices-fails.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/scep-deployment-to-win10-devices-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/error-0x80090014-installing-ndes-certificate.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/error-0x80090014-installing-ndes-certificate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/fix-connectivity-issues.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/fix-connectivity-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/scep-certificate-request-fails.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/scep-certificate-request-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-scep-certificate-device-to-ndes.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/troubleshoot-scep-certificate-device-to-ndes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-scep-certificate-ndes-policy-module.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/troubleshoot-scep-certificate-ndes-policy-module",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-scep-certificate-reporting.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/troubleshoot-scep-certificate-reporting",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/verify-ndes-configuration.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/verify-ndes-configuration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-pkcs-certificate-profiles.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/troubleshoot-pkcs-certificate-profiles",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-certificate-connector-events.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/troubleshoot-certificate-connector-events",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/connector-setup-wizard-ends-prematurely.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/connector-setup-wizard-ends-prematurely",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/ndes-connector-signin-error-80004003.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/ndes-connector-signin-error-80004003",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/intune-connector-for-ad-not-appear.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/intune-connector-for-ad-not-appear",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/intune-connector-signin-unexpected-error.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/intune-connector-signin-unexpected-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-co-management-auto-enrolling.md",
+      "redirect_url": "/troubleshoot/mem/intune/comanage-configmgr/troubleshoot-co-management-auto-enrolling",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-co-management-bootstrap.md",
+      "redirect_url": "/troubleshoot/mem/intune/comanage-configmgr/troubleshoot-co-management-bootstrap",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-co-management-workloads.md",
+      "redirect_url": "/troubleshoot/mem/intune/comanage-configmgr/troubleshoot-co-management-workloads",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-policies-in-microsoft-intune.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-email-profiles-in-microsoft-intune.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/troubleshoot-email-profiles-in-microsoft-intune",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-wi-fi-profiles.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/troubleshoot-wi-fi-profiles",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/password-expiration-setting-not-working.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/password-expiration-setting-not-working",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-csp-custom-settings.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/troubleshoot-csp-custom-settings",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/deploy-oma-uris-to-target-csp-via-intune.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/deploy-oma-uris-to-target-csp-via-intune",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/device-configuration-profile-reports-error-2016281112.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/device-configuration-profile-reports-error-2016281112",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/enterprise-mode-site-list-not-deployed-win10.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/enterprise-mode-site-list-not-deployed-win10",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/users-cannot-logon-windows-multi-app-kiosk.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/users-cannot-logon-windows-multi-app-kiosk",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/windows-feature-updates-never-offered.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/windows-feature-updates-never-offered",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/2016341112-ios-device-is-currently-busy.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/2016341112-ios-device-is-currently-busy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/restriction-policy-not-blocking-personal-hotspot.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/restriction-policy-not-blocking-personal-hotspot",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/no-password-prompt-after-password-change.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/no-password-prompt-after-password-change",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/factory-reset-protection-emails-not-enforced.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/factory-reset-protection-emails-not-enforced",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/sip-address-password-not-saved.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/sip-address-password-not-saved",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/assign-password-setting-android-fully-managed.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/assign-password-setting-android-fully-managed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-device-enrollment-in-intune.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/troubleshoot-device-enrollment-in-intune",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/cannot-update-enrollment.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/cannot-update-enrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/devices-enroll-canceled-intune-subscription.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/devices-enroll-canceled-intune-subscription",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-android-enrollment.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/troubleshoot-android-enrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-android-certificates.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/troubleshoot-android-certificates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/device-ownership-changed-to-corporate.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/device-ownership-changed-to-corporate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/configure-android-enterprise-devices-intune.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/configure-android-enterprise-devices-intune",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-ios-enrollment-errors.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/troubleshoot-ios-enrollment-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/ios-devices-inactive.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/ios-devices-inactive",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/device-stuck-in-enrollment.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/device-stuck-in-enrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/profile-installation-failed.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/profile-installation-failed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/apple-dep-device-fails-auto-enrollment.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/apple-dep-device-fails-auto-enrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/dep-enrollment-xpc-type-error.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/dep-enrollment-xpc-type-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-macos-vm-enrollment.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/troubleshoot-macos-vm-enrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/keychain-error-enrolling-macos-devices.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/keychain-error-enrolling-macos-devices",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/understand-troubleshoot-esp.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/understand-troubleshoot-esp",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/azure-ad-device-registration-autopilot.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/azure-ad-device-registration-autopilot",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/import-windows-autopilot-device-csv-files-errors.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/import-windows-autopilot-device-csv-files-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/cannot-delete-autopilot-deployment-profile.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/cannot-delete-autopilot-deployment-profile",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-windows-enrollment-errors.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/troubleshoot-windows-enrollment-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/windows-user-cannot-enroll.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/windows-user-cannot-enroll",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-windows-work-school.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/troubleshoot-windows-work-school",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-windows-auto-enrollment.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/troubleshoot-windows-auto-enrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/windows10-enroll-error-80180002b.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/windows10-enroll-error-80180002b",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/no-permission-to-enroll-windows-devices.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/no-permission-to-enroll-windows-devices",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/mdm-enrollment-error-0xcaa9001f.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/mdm-enrollment-error-0xcaa9001f",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-sysprep-windows-10-device-enrolled-mdm.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/troubleshoot-sysprep-windows-10-device-enrolled-mdm",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/windows-failed-to-apply-mdm-policy.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/windows-failed-to-apply-mdm-policy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-device-actions.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-management/troubleshoot-device-actions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/remove-duplicate-mobile-device-management.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-management/remove-duplicate-mobile-device-management",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/orphaned-device-upn-shown-as-none.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-management/orphaned-device-upn-shown-as-none",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/help-desk-operator-fails-remote-tasks.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-management/help-desk-operator-fails-remote-tasks",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/intune-managed-ios-device-backup-encrypted.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-management/intune-managed-ios-device-backup-encrypted",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/remotewipe-fails-sending-dowipe-command.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-management/remotewipe-fails-sending-dowipe-command",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/cannot-sync-windows-10-devices.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-management/cannot-sync-windows-10-devices",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-conditional-access.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/troubleshoot-conditional-access",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-exchange-connector.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/troubleshoot-exchange-connector",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-exchange-connector-common-errors.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/troubleshoot-exchange-connector-common-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/could-not-retrieve-access-token.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/could-not-retrieve-access-token",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-jamf.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/troubleshoot-jamf",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/unable-to-connect-send-inventory-information.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/unable-to-connect-send-inventory-information",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-bitlocker-policies.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/troubleshoot-bitlocker-policies",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-bitlocker-admin-center.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/troubleshoot-bitlocker-admin-center",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/bitlocker-encrypted-device-not-compliant.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/bitlocker-encrypted-device-not-compliant",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/secure-boot-enabled-device-shows-not-compliant.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/secure-boot-enabled-device-shows-not-compliant",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/win10-devices-show-incorrect-compliance-status.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/win10-devices-show-incorrect-compliance-status",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/cannot-access-company-resources-on-dep.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/cannot-access-company-resources-on-dep",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/error-deploying-password-policy.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/error-deploying-password-policy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/intune-licensed-users-prompted-to-enroll.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/intune-licensed-users-prompted-to-enroll",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/intune-synced-attributes-list.md",
+      "redirect_url": "/troubleshoot/mem/intune/general/intune-synced-attributes-list",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-company-resource-access-problems.md",
+      "redirect_url": "/troubleshoot/mem/intune/general/troubleshoot-company-resource-access-problems",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-endpoint-protection-in-microsoft-intune.md",
+      "redirect_url": "/troubleshoot/mem/intune/general/troubleshoot-endpoint-protection-in-microsoft-intune",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/script-error-intune-setup.md",
+      "redirect_url": "/troubleshoot/mem/intune/general/script-error-intune-setup",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/error-query-intune-data-warehouse.md",
+      "redirect_url": "/troubleshoot/mem/intune/general/error-query-intune-data-warehouse",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/403-error-graph-explorer-query.md",
+      "redirect_url": "/troubleshoot/mem/intune/general/403-error-graph-explorer-query",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/nac-integration-errors.md",
+      "redirect_url": "/troubleshoot/mem/intune/general/nac-integration-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/before-you-call-intune-support.md",
+      "redirect_url": "/troubleshoot/mem/intune/get-support/before-you-call-intune-support",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/cannot-load-help-and-support-blade.md",
+      "redirect_url": "/troubleshoot/mem/intune/get-support/cannot-load-help-and-support-blade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshooting-blade-fails-loading.md",
+      "redirect_url": "/troubleshoot/mem/intune/get-support/troubleshooting-blade-fails-loading",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/long-line-causes-log-truncated.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/alerts-reports-queries/long-line-causes-log-truncated",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/cannot-edit-reports.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/alerts-reports-queries/cannot-edit-reports",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/obtain-error-code-descriptions.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/alerts-reports-queries/obtain-error-code-descriptions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/reports-not-run-as-expected.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/alerts-reports-queries/reports-not-run-as-expected",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/reporting-stops-working.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/alerts-reports-queries/reporting-stops-working",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/rsprocessingaborted-error-run-reports.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/alerts-reports-queries/rsprocessingaborted-error-run-reports",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/sql-query-times-out-or-console-slow-performance.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/alerts-reports-queries/sql-query-times-out-or-console-slow-performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/applications-not-deployed-to-users.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/app-management/applications-not-deployed-to-users",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/applications-not-deployed-to-windows10-arm64.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/app-management/applications-not-deployed-to-windows10-arm64",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/app-v-application-changes-not-included.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/app-management/app-v-application-changes-not-included",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/contributor-role-not-assigned-for-web-app.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/app-management/contributor-role-not-assigned-for-web-app",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/deploy-language-pack.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/app-management/deploy-language-pack",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/deployment-type-changes-deployed-unexpectedly.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/app-management/deployment-type-changes-deployed-unexpectedly",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshoot-microsoft-store-for-business-integration.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/app-management/troubleshoot-microsoft-store-for-business-integration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshoot-application-deployment.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/app-management/troubleshoot-application-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/install-configmgr-client-error-1603.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-installation/install-configmgr-client-error-1603",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/client-installation-error-1603.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-installation/client-installation-error-1603",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/client-installation-fails-without-bits.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-installation/client-installation-fails-without-bits",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/client-piloting-package-fails-after-site-expansion.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-installation/client-piloting-package-fails-after-site-expansion",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/configmgr-clients-reinstall-every-five-hours.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-installation/configmgr-clients-reinstall-every-five-hours",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/client-agent-installation-error-80041002.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-installation/client-agent-installation-error-80041002",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/mac-client-enrollment-fails.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-installation/mac-client-enrollment-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/mac-client-registration-fails.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-installation/mac-client-registration-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/policyagentinstanceprovider-warning-install-client.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-installation/policyagentinstanceprovider-warning-install-client",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/software-update-installations-stop-responding.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-installation/software-update-installations-stop-responding",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/support-for-mac-linux-and-unix-clients.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-installation/support-for-mac-linux-and-unix-clients",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/client-installation-fails-with-policyagentprovider-dll.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-installation/client-installation-fails-with-policyagentprovider-dll",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/configmgr-client-left-in-provisioning-mode.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/configmgr-client-left-in-provisioning-mode",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/inactive-clients-not-send-inventory.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/inactive-clients-not-send-inventory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/clients-not-receive-policy-data.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/clients-not-receive-policy-data",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/cannot-download-content-from-cmg.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/cannot-download-content-from-cmg",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/cmg-communication-error-403.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/cmg-communication-error-403",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/tenant-attach-component-not-connect-to-gateway.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/tenant-attach-component-not-connect-to-gateway",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/multiple-instances-of-unknown-computers-collection.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/multiple-instances-of-unknown-computers-collection",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/invalid-data-error-import-mof-file.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/invalid-data-error-import-mof-file",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/hardware-inventory-fails.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/hardware-inventory-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/remote-control-fails-error-c000012.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/remote-control-fails-error-c000012",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/sms-agent-host-not-automatically-restarted.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/sms-agent-host-not-automatically-restarted",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/software-metering-failed-start-prepdriver.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/software-metering-failed-start-prepdriver",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/turn-on-debuglogging-key.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/turn-on-debuglogging-key",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/upgrade-readiness-data-downloaded-continuously.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/upgrade-readiness-data-downloaded-continuously",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/console-stops-responding.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/console-management/console-stops-responding",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/console-crash-after-upgrade.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/console-management/console-crash-after-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/dcom-hardening-change-effect.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/console-management/dcom-hardening-change-effect",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/internal-error-2711-lp3076-during-console-installation.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/console-management/internal-error-2711-lp3076-during-console-installation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/unhandled-exception-launch-console.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/console-management/unhandled-exception-launch-console",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/windows-10-servicing-dashboard-empty.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/console-management/windows-10-servicing-dashboard-empty",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/configure-peer-cache.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/configure-peer-cache",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/deployment-property-change-not-saved.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/deployment-property-change-not-saved",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/anonymous-authentication-disabled.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/anonymous-authentication-disabled",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/app-v-apps-not-streamed-from-dp.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/app-v-apps-not-streamed-from-dp",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/boot-image-distribution-fails.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/boot-image-distribution-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/deployment-package-distribution-fails.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/deployment-package-distribution-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/content-distribution-error-80070070.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/content-distribution-error-80070070",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/content-distribution-idispatch-error.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/content-distribution-idispatch-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/use-neighbor-boundary-group-dp.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/use-neighbor-boundary-group-dp",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/slow-dp-installation-upgrade.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/slow-dp-installation-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/duplicate-rows-in-distributioncontentversion.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/duplicate-rows-in-distributioncontentversion",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/hash-mismatch-error-download-contentinfo-tar.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/hash-mismatch-error-download-contentinfo-tar",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/package-distribution-to-remote-dp-fails.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/package-distribution-to-remote-dp-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/windows-installer-source-list-update-fails.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/windows-installer-source-list-update-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/content-distribution-introduction.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/content-distribution-introduction",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/components-and-threads.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/components-and-threads",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/dp-installation-upgrade-configuration.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/dp-installation-upgrade-configuration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/content-library.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/content-library",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/understand-package-actions.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/understand-package-actions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshoot-content-distribution.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/troubleshoot-content-distribution",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/advanced-troubleshooting-tips.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/advanced-troubleshooting-tips",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/drs-performance-issue-after-installing-hotfix-3125525.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/data-transfer-sites/drs-performance-issue-after-installing-hotfix-3125525",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshoot-database-replication-service-issues.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/data-transfer-sites/troubleshoot-database-replication-service-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/diagnostics-sdp.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/diagnostics/diagnostics-sdp",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/failed-devices-client-health-dashboard.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/diagnostics/failed-devices-client-health-dashboard",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/lastlogontimestamp-not-accurate.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/discovery/lastlogontimestamp-not-accurate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/resource-domain-changes.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/discovery/resource-domain-changes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/incorrect-endpoint-definition-status.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/endpoint-protection/incorrect-endpoint-definition-status",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/antimalware-definition-files-not-updated.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/endpoint-protection/antimalware-definition-files-not-updated",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/install-endpoint-protection-for-linux.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/endpoint-protection/install-endpoint-protection-for-linux",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/microsoft-network-inspection-service-stopped.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/endpoint-protection/microsoft-network-inspection-service-stopped",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/configmgr-console-shows-out-of-date-values.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/endpoint-protection/configmgr-console-shows-out-of-date-values",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/recommended-antivirus-exclusions.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/endpoint-protection/recommended-antivirus-exclusions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/support-policies-for-azure-virtual-machines.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/endpoint-protection/support-policies-for-azure-virtual-machines",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshooting-reference.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/mdt/troubleshooting-reference",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/mobile-device-management-installation-errors.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/mdm/mobile-device-management-installation-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/communication-continues-after-subscription-removal.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/mdm/communication-continues-after-subscription-removal",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/initialize-ca-error-edit-device-enrollment-profile.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/mdm/initialize-ca-error-edit-device-enrollment-profile",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/custom-port-settings-not-added-to-boot-media.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/custom-port-settings-not-added-to-boot-media",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/not-enough-memory-resources-create-media.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/not-enough-memory-resources-create-media",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/scheduled-updates-fails-error-0x800700a1.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/scheduled-updates-fails-error-0x800700a1",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/error-managing-boot-images.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/error-managing-boot-images",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/windows-11-image-capture-fail.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/windows-11-image-capture-fail",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/configure-operating-system-deployment.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/configure-operating-system-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/fail-to-import-drivers.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/fail-to-import-drivers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/insufficient-permissions-to-migrate-driver-package.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/insufficient-permissions-to-migrate-driver-package",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/signed-drivers-shown-as-unsigned.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/signed-drivers-shown-as-unsigned",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/pxe-enabled-dp-generates-many-files.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/pxe-enabled-dp-generates-many-files",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/advanced-troubleshooting-pxe-boot.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/advanced-troubleshooting-pxe-boot",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/boot-from-pxe-server.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/boot-from-pxe-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/certificate-not-updated-on-pxe-dp.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/certificate-not-updated-on-pxe-dp",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/pxe-boot-not-work.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/pxe-boot-not-work",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshoot-pxe-boot-issues.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/troubleshoot-pxe-boot-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/understand-pxe-boot.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/understand-pxe-boot",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/pxe-boot-causes-wds-crash.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/pxe-boot-causes-wds-crash",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/pxe-enabled-remote-dp-not-start-wds.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/pxe-enabled-remote-dp-not-start-wds",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/unknown-computer-object-guid-stolen.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/unknown-computer-object-guid-stolen",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/active-users-groups-unexpectedly-deleted.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/active-users-groups-unexpectedly-deleted",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/cannot-create-mdt-task-sequence.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/cannot-create-mdt-task-sequence",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/in-place-upgrade-task-sequence-not-continue.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/in-place-upgrade-task-sequence-not-continue",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/apply-driver-package-task-error-80070057.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/apply-driver-package-task-error-80070057",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/computer-hangs-task-sequence-debug-mode.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/computer-hangs-task-sequence-debug-mode",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/dynamic-media-cannot-get-mp-locations.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/dynamic-media-cannot-get-mp-locations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/enable-bitlocker-task-fails-error-80070057.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/enable-bitlocker-task-fails-error-80070057",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/capture-user-state-task-fails.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/capture-user-state-task-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/get-network-captures-from-task-sequence.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/get-network-captures-from-task-sequence",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/no-mouse-cursor-during-osd-task-sequence.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/no-mouse-cursor-during-osd-task-sequence",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/osdresults-not-display-installed-applications.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/osdresults-not-display-installed-applications",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/sending-with-winhttp-failed-80072f8f-error.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/sending-with-winhttp-failed-80072f8f-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/slow-task-sequence-with-earlier-client-version.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/slow-task-sequence-with-earlier-client-version",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/task-sequence-fails-multiple-restarts.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/task-sequence-fails-multiple-restarts",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/osd-task-sequence-fails-error-80070005.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/osd-task-sequence-fails-error-80070005",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/task-sequence-fails-error-0x87d01004.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/task-sequence-fails-error-0x87d01004",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/task-sequence-stops-after-in-place-upgrade.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/task-sequence-stops-after-in-place-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment-task-sequence-not-continue.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/os-deployment-task-sequence-not-continue",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/debug-deployment-not-displayed.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/debug-deployment-not-displayed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshoot-install-application-step.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/troubleshoot-install-application-step",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/required-versions-windows-deployment.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/required-versions-windows-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/mbam-setup-fails-with-prerequisite-check.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/mbam-setup-fails-with-prerequisite-check",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/not-found-error-editing-maintenance-task.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/not-found-error-editing-maintenance-task",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/central-administration-site-setup-fails.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/central-administration-site-setup-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/connectivity-issues-digicert-global-root-g2-not-installed.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/connectivity-issues-digicert-global-root-g2-not-installed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/enable-mfa-for-sms-provider-calls.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/enable-mfa-for-sms-provider-calls",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/management-points-stop-responding.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/management-points-stop-responding",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/management-points-fail-http-500-errors.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/management-points-fail-http-500-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/service-connection-point-not-download-updates.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/service-connection-point-not-download-updates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/state-message-processing-performance.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/state-message-processing-performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/sms-executive-service-crashes.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/sms-executive-service-crashes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/cannot-create-software-update-package.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/cannot-create-software-update-package",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/failed-to-find-folder-or-file-error.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/failed-to-find-folder-or-file-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/function-sequence-error.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/function-sequence-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/site-system-installation-account-used-for-db-connection.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/site-system-installation-account-used-for-db-connection",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/sql-cus-must-be-installed-on-secondary-sites.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/sql-cus-must-be-installed-on-secondary-sites",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/support-policy-for-manual-database-changes.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/support-policy-for-manual-database-changes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/smsdbmon-repeatedly-logs-warnings.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/smsdbmon-repeatedly-logs-warnings",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/changes-to-built-in-collections-overwritten.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/changes-to-built-in-collections-overwritten",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/clients-automatically-upgrade.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/clients-automatically-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/service-connection-tool-not-download-updates.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/service-connection-tool-not-download-updates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/offline-servicing-lcu-may-fail.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/offline-servicing-lcu-may-fail",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/site-upgrade-blocked-in-database-update.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/site-upgrade-blocked-in-database-update",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/upgrade-to-configmgr-2012-sp1.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/upgrade-to-configmgr-2012-sp1",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/understand-troubleshoot-updates-servicing.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/understand-troubleshoot-updates-servicing",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/maintenance-tasks-default-settings.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/maintenance-tasks-default-settings",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/bad-gateway-error-deploy-software-updates.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/bad-gateway-error-deploy-software-updates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/clients-not-get-software-updates.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/clients-not-get-software-updates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/different-software-updates-results-displayed.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/different-software-updates-results-displayed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/errors-servicing-server-group.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/errors-servicing-server-group",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/error-0x800f0831-installing-update.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/error-0x800f0831-installing-update",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/dotnet-framework-updates-fail-to-sync.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/dotnet-framework-updates-fail-to-sync",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/adr-updates-download-failure.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/adr-updates-download-failure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/state-messaging-description.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/state-messaging-description",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/software-updates-introduction.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/software-updates-introduction",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/software-update-maintenance.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/software-update-maintenance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/software-update-point-installation-configuration.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/software-update-point-installation-configuration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/wsus-configuration-manager.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/wsus-configuration-manager",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/track-software-update-synchronization.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/track-software-update-synchronization",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/track-software-update-compliance-assessment.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/track-software-update-compliance-assessment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/track-software-update-deployment-process.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/track-software-update-deployment-process",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/enable-verbose-logging.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/enable-verbose-logging",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshoot-software-update-management.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/troubleshoot-software-update-management",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshoot-software-update-synchronization.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/troubleshoot-software-update-synchronization",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshoot-software-update-scan-failures.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/troubleshoot-software-update-scan-failures",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshoot-software-update-deployments.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/troubleshoot-software-update-deployments",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/decline-superseded-updates.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/decline-superseded-updates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/deploy-definition-updates-using-wsus.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/deploy-definition-updates-using-wsus",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/error-80244007-when-wsus-client-scans-updates.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/error-80244007-when-wsus-client-scans-updates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/high-network-bandwidth-usage.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/high-network-bandwidth-usage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/optimize-wsus-client-performance.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/optimize-wsus-client-performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/reindex-the-wsus-database.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/reindex-the-wsus-database",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/spdeleteupdate-slow-performance.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/spdeleteupdate-slow-performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshoot-issues-with-wsus-client-agents.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/troubleshoot-issues-with-wsus-client-agents",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshoot-wsus-connection-failures.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/troubleshoot-wsus-connection-failures",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshoot-wsus-server-high-cpu-usage.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/troubleshoot-wsus-server-high-cpu-usage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshoot-wsus-import-sync-issues.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/troubleshoot-wsus-import-sync-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/wsus-and-windows-update-agent-diagnostics.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/wsus-and-windows-update-agent-diagnostics",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/windows-server-update-services-best-practices.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/windows-server-update-services-best-practices",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/wsus-client-computers-restart-automatically.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/wsus-client-computers-restart-automatically",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/wsus-client-long-time-finish-update-scan.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/wsus-client-long-time-finish-update-scan",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/wsus-console-crashes.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/wsus-console-crashes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/wsus-maintenance-guide.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/wsus-maintenance-guide",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/wsus-not-sync-with-certificate-error-800B0109.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/wsus-not-sync-with-certificate-error-800B0109",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/wsus-synchronization-fails-with-soapexception.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/wsus-synchronization-fails-with-soapexception",
+      "redirect_document_id": true
     }
   ]
 }

@@ -1,9 +1,10 @@
 ---
 title: Azure Cloud Service Troubleshooting Series
 description: Azure Cloud Service Troubleshooting Series
-ms.date: 07/06/2020
-ms.prod-support-area-path: 
+ms.date: 09/26/2022
 ms.reviewer: 
+ms.service: cloud-services
+ms.subservice: troubleshoot-dev
 ---
 # Azure Cloud Service Troubleshooting Series
 
@@ -12,7 +13,7 @@ _Original KB number:_ &nbsp; 4466645
 
 ## Summary
 
-Cloud service is one of most popular Azure PaaS service among web developers. These [blog series](https://docs.microsoft.com/archive/blogs/kwill/windows-azure-paas-compute-diagnostics-data) includes some of the common problems faced by the customers while dealing with cloud service and how to troubleshoot those issues using various tools and logs. This blog focuses on some more common scenarios that you may face while developing and deploying cloud service solution to Azure.
+Cloud service is one of most popular Azure PaaS service among web developers. These [blog series](/archive/blogs/kwill/windows-azure-paas-compute-diagnostics-data) includes some of the common problems faced by the customers while dealing with cloud service and how to troubleshoot those issues using various tools and logs. This blog focuses on some more common scenarios that you may face while developing and deploying cloud service solution to Azure.
 
 In order to simulate the issues we have developed three cloud service applications and below are the links for instructions that you need to follow to set up the labs for each application:
 
@@ -30,3 +31,5 @@ Let's deep dive into the troubleshooting series on Azure Cloud Service:
 - [Scenario 6 : Can't RDP to only 'HealthMonitor' worker role instance](https://support.microsoft.com/help/4464850).
 - [Scenario 7 : Can't access the website, although all role instances are in running state](https://support.microsoft.com/help/4464839).
 - [Scenario 8 : ASP.NET SignalR application is not working](https://support.microsoft.com/help/4464827).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

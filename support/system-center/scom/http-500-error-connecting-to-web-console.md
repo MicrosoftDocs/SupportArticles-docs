@@ -2,7 +2,6 @@
 title: HTTP 500 error connecting to the OpsMgr web console
 description: Fixes an issue in which you receive HTTP 500 error when you remotely connect to a stand-alone Operations Manager web console.
 ms.date: 06/30/2020
-ms.prod-support-area-path: 
 ---
 # HTTP 500 error when you connect to the Operations Manager web console
 
@@ -33,7 +32,7 @@ To fix the issue, verify the following settings, and then connect to the web con
          setspn -L DOMAIN\sdkdomainaccount
          ```
 
-      Here is sample output in which there are two management servers, *SCOM1* and *SCOM2*, and the SDK service is running under domain service account *CONTOSO\SCOMSdk*:
+      Here is sample output in which there are two management servers, *SCOM1* and *SCOM2*, and the SDK service is running under domain service account *CONTOSO\SCOMSdk*:
 
       > Registered ServicePrincipalNames for CN= SCOMSdk,OU=SCOMAccounts,DC= CONTOSO,DC=COM:  
       > MSOMSdkSvc/SCOM1  
@@ -84,7 +83,7 @@ To fix the issue, verify the following settings, and then connect to the web con
     > HTTP/serverFQDN  
     > HTTP/serverNETBIOSname
 
-3. The delegation for the web console is configured correctly in Active Directory. To do this, follow these steps:
+3. The delegation for the web console is configured correctly in Active Directory. To do this, follow these steps:
 
       1. Start the **Active Directory Users and Computers** MMC.
       2. In the console tree, select **Computers**.
@@ -92,13 +91,13 @@ To fix the issue, verify the following settings, and then connect to the web con
       4. Select the **Delegation** tab.
       5. Select **Trust this computer for delegation to specified services only**, select **Use any authentication protocol**, and then select **Add**.
 
-          :::image type="content" source="media/http-500-error-connecting-to-web-console/delegation.png" alt-text="screenshot of the options on Delegation ":::
+          :::image type="content" source="media/http-500-error-connecting-to-web-console/delegation.png" alt-text="Screenshot of the options on the Delegation tab.":::
 
       6. In the **Add Services** dialog box, select **Users or Computers**.
 
       7. In the **Select Users or Computers** dialog box, specify the domain account that the SDK service is running under, and then click **OK**.
   
-      8. In the **Add Services** dialog box, select service type `MSOMSdkSvc`, and then click **OK**.
+      8. In the **Add Services** dialog box, select service type `MSOMSdkSvc`, and then click **OK**.
   
       9. If you have multiple management servers, verify that MSOMSdkSvc SPNs for all management servers are listed.
   

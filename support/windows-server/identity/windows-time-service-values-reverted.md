@@ -1,22 +1,22 @@
 ---
-title: Windows Time Service settings aren't preserved 
+title: Windows Time Service settings aren't preserved
 description: Describes an issue in which Windows Time service settings are disabled in the registry after you upgrade to Windows Server 2016 or Windows 10 Version 1607.
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Windows Time Service
+ms.custom: sap:windows-time-service, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Windows Time Service settings aren't preserved during an in-place upgrade to Windows Server 2016 or Windows 10 Version 1607
 
 This article describes an issue in which Windows Time service settings are disabled in the registry after you upgrade to Windows Server 2016 or Windows 10 Version 1607.
 
-_Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3201265
 
 ## Symptoms
@@ -27,8 +27,7 @@ When you do an in-place upgrade on the following operating systems upgrade paths
 |---|---|
 |Windows Server 2012 or Windows Server 2012 R2|Windows Server 2016|
 |Windows 7, Windows 8, or Windows 8.1|Windows 10 Version 1607|
-|||
-
+  
 ### Affected roles
 
 After the in-place upgrade is completed, the following roles may be affected.
@@ -39,13 +38,13 @@ The domain controllers (DC) that hosts the PDC emulator role is the default auth
 
 After you do an in-place upgrade, the PDC loses its connection to the external time server that it's configured to sync with. It also no longer announces that it's a time server.
 
-Also, all other DCs in the domain no longer announce they're time servers, and they no longer use the domain hierarchy to sync their time. Therefore, their time setting may no longer be in sync with the setting for their peers, and domain members can no longer sync their time.
+All other DCs in the domain no longer announce that they're time servers, and they no longer use the domain hierarchy to sync their time. Therefore, their time setting may no longer be in sync with the setting for their peers, and domain members can no longer sync their time.
 
 You may notice the following warning in the DCDIAG output:
 
 > Warning: \<DCNAME> is not advertising as a time server
 
-You may also notice that the DC doesn't respond to NTP client requests. This includes failures that occur when you test the NTP server availability by using the `w32tm.exe /stripchart` tool. For example, the text output may resemble the following output:
+You may also notice that the DC doesn't respond to NTP client requests. It includes failures that occur when you test the NTP server availability by using the `w32tm.exe /stripchart` tool. For example, the text output may resemble the following output:
 
 > c:>w32tm /stripchart /computer: \<DCName> Tracking \<DCName> [10.1.1.100:123]. The current time is 10/28/2016 9:00:00 AM. 09:00:00 error: 0x800705B4:
 
@@ -57,7 +56,7 @@ Domain member servers and computers that are upgraded are no longer configured t
 
 Windows computers that are manually configured as an Authoritative Time Server lose their configuration. Therefore, devices that are configured to use these computers to synchronize their time may not sync.
 
-You may also notice that the Authoritative NTP server doesn't respond to NTP client requests. This includes failures that occur when you test the NTP server availability by using the `w32tm.exe /stripchart` tool. For example, the text output may resemble the following output:
+You may also notice that the Authoritative NTP server doesn't respond to NTP client requests. It includes failures that occur when you test the NTP server availability by using the `w32tm.exe /stripchart` tool. For example, the text output may resemble the following output:
 
 > c:>w32tm /stripchart /computer:\<myAuthoritativeTimeServer> Tracking \<myAuthoritativeTimeServer> [10.1.1.100:123]. The current time is *\<DateTime>*. *\<DateTime>* error: 0x800705B4:
 
@@ -70,7 +69,7 @@ You may also notice that the Authoritative NTP server doesn't respond to NTP cli
 
 ## Cause
 
-This is a known issue in the Windows upgrade paths that are listed in the "Symptoms" section. This issue occurs because the registry values for the Windows Time service aren't preserved during an upgrade. Therefore, all Windows Time service values are reverted to the default state of a Workgroup Member Server or a stand-alone computer.
+It's a known issue in the Windows upgrade paths that are listed in the "Symptoms" section. This issue occurs because the registry values for the Windows Time service aren't preserved during an upgrade. Therefore, all Windows Time service values are reverted to the default state of a Workgroup Member Server or a stand-alone computer.
 
 ## Workaround
 
@@ -85,17 +84,17 @@ To work around this issue, use one of the following methods.
 
 ### Method 1
 
-Before you upgrade to Windows 10 Version 1607 or Windows Server 2016, manually back up the contents under the **w32time** registry key. To do this, follow these steps:
+Before you upgrade to Windows 10 Version 1607 or Windows Server 2016, manually back up the contents under the **w32time** registry key. To do so, follow these steps:
 
-1. Open the **Run** box. To do this, press the Windows logo key‌+R.
+1. Open the **Run** box by pressing the Windows logo key‌+R.
 2. Type regedit, and then press Enter.
-3. Locate and then click the following registry entry:
- `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\`  
+3. Locate and then select the following registry entry:  
+   `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\`  
 
-4. Click **File** > **Export**.
+4. Select **File** > **Export**.
 5. In the **Export Registry File** dialog box, select the location where you want to save the backup copy, and then type a name for the backup file in the **File name** field.
-6. Click **Save**.
-7. Save the W32time configuration for validation. To do this, run the following commands at an elevated command prompt:
+6. Select **Save**.
+7. Save the W32time configuration for validation by running the following commands at an elevated command prompt:
 
     ```console
     Net start w32time w32tm /query /configuration /verbose > PreUpgradeW32timeConfiguration.txt
@@ -103,12 +102,12 @@ Before you upgrade to Windows 10 Version 1607 or Windows Server 2016, manually b
 
 You can now upgrade the computer to Windows Server 2016 or Windows 10 Version 1607. After the upgrade is completed, follow these steps to restore the contents under the w32time registry key:
 
-1. Open the **Run** box. To do this, press the Windows logo key‌+R.
+1. Open the **Run** box by pressing the Windows logo key‌+R.
 2. Type regedit, and then press Enter.
-3. Open the **Run** box. To do this, press the Windows logo key‌+R.
+3. Open the **Run** box by pressing the Windows logo key‌+R.
 4. Type regedit, and then press Enter.
-5. In Registry Editor, click **File** > **Import**.
-6. In the **Import Registry File** dialog box, select the location where you saved the backup copy, select the backup file, and then click **Open**.
+5. In Registry Editor, select **File** > **Import**.
+6. In the **Import Registry File** dialog box, select the location where you saved the backup copy, select the backup file, and then select **Open**.
 7. Exit Registry Editor.
 8. Run the following command to remove a deprecated service trigger:
 
@@ -116,7 +115,7 @@ You can now upgrade the computer to Windows Server 2016 or Windows 10 Version 16
     reg delete HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TriggerInfo\1 /f
     ```  
 
-9. Restart W32time service to enable it to use the new configuration. To do this, run the following commands at an elevated command prompt:
+9. Restart W32time service to enable it to use the new configuration. To do so, run the following commands at an elevated command prompt:
 
     ```console
     net stop w32time
@@ -145,14 +144,14 @@ net start w32time
 
 ### Method 3
 
-If you are experiencing issues that affect the Windows Time Service after you upgrade to Windows Server 2016 or Windows 10 Version 1607, follow these steps to restore your settings from the Windows.old folder.
+If you're experiencing issues that affect the Windows Time Service after you upgrade to Windows Server 2016 or Windows 10 Version 1607, follow these steps to restore your settings from the Windows.old folder.
 
 > [!IMPORTANT]
 > The following steps should be done only by advanced users.
 
 1. Export the registry key from Windows.old folder.
 
-    1. Open the Windows Run box. To do this, press the Windows logo key+R.
+    1. Open the Windows Run box by pressing the Windows logo key+R.
     2. Type regedit and then press Enter.
     3. Locate and then click `HKEY_LOCAL_MACHINE`.
     4. On the **File** menu, click **Load Hive**.
@@ -203,14 +202,14 @@ If you are experiencing issues that affect the Windows Time Service after you up
 To verify that the Windows Time service can now preserve its configuration, follow these steps:
 
 1. Run DCDiag.exe on DCs to make sure that they're advertising as a time server.
-2. Make sure that DCs or Authoritative NTP Servers respond to NTP client requests without errors. For example, the command output resembles the following:
+2. Make sure that DCs or Authoritative NTP Servers respond to NTP client requests without errors. For example, the command output resembles the following one:
 
     > c:\<w32tm /stripchart /computer:\<myTimeServer>  
     Tracking \<myTimeServer> [10.1.1.100:123].  
     The current time is *\<DateTime>*.  
     *\<DateTime>* d:+00.0013494s o:-00.0891868s [ * ]  
 
-3. For advanced users, query the W32time configuration, and make sure that the time providers are configured as expected. If you used Method 1 as the workaround, you can compare the post-upgrade configuration to the saved pre-configuration data. For example, the command output resembles the following:
+3. For advanced users, query the W32time configuration, and make sure that the time providers are configured as expected. If you used Method 1 as the workaround, you can compare the post-upgrade configuration to the saved pre-configuration data. For example, the command output resembles the following one:
 
     > c:\ >w32tm /query /configuration /verbose > PostUpgradeW32timeConfiguration.txt
 

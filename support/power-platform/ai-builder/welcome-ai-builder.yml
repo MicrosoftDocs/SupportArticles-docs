@@ -1,0 +1,46 @@
+### YamlMime:Landing
+
+title: AI Builder troubleshooting # < 60 chars
+summary: Welcome to AI Builder troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use AI Builder. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: AI Builder troubleshooting
+  description: Landing page for AI Builder troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: aibuilder #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: #Required; your GitHub user alias, with correct capitalization.
+  ms.author: #Required; microsoft alias of author; optional team alias.
+  ms.date: 3/31/2022
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+  # Card
+  - title: Administration and licensing
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Actions are disabled or deactivated
+            url: aibuilder-actions-are-disabled-deactivated.md
+          - text: Current environment doesn't meet the minimum requirements
+            url: the-current-environment-donot-meet-the-minimum-requirements-error-message.md  
+
+  # Card
+  - title: Models
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: AI models fail to be imported in a new environment
+            url: aimodels-fail-to-be-imported-in-a-new-environment.md
+          - text: Document processing isn't extracting tables
+            url: aibuilder-form-processing-is-not-extracting-tables-that-span-across-multiple-pages.md
+
+
+ # Card
+  - title: Documentation and training
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: AI Builder documentation
+            url: /ai-builder/
+          - text: AI Builder training
+            url: /training/browse/?expanded=power-platform&products=ai-builder

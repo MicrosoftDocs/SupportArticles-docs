@@ -22,6 +22,8 @@
     href: analysis-services/enable-snapshot-transaction-isolation-level.md
   - name: Error 1032 in the application log
     href: analysis-services/error-1032-application-log.md
+  - name: Error and MDX query fails in SSAS multidimensional instance
+    href: analysis-services/error-mdx-query-fails-ssas-multidimensional-instance.md
   - name: Error when you connect to a named instance
     href: analysis-services/error-connect-named-instance.md
   - name: Error when you process a database or a cube
@@ -32,6 +34,8 @@
     href: analysis-services/error-use-powerpivot-excel-workbook.md
   - name: MDX query contains Aggregate returns error
     href: analysis-services/mdx-query-contains-aggregate-returns-error.md
+  - name: MDX query with calculated measure runs slowly
+    href: analysis-services/mdx-query-calculated-measure-run-slow.md
   - name: No properties and members of Dimension Hierarchy
     href: analysis-services/no-dimension-hierarchy-properties.md
   - name: Perform a distributed query with OLAP Server
@@ -45,16 +49,56 @@
   - name: WMI Provider Error and 0x80004005 code
     href: analysis-services/wmi-provider-error-0x80004005-code.md
 
+- name: Azure SQL virtual machine
+  items:
+  - name: FCI installation fails with error on Azure VM
+    href: azure-sql/fci-installation-fails-error-azure-vm.md
+
+- name: Data Quality Services
+  items:
+  - name: DQS Export to 64-bit Excel file fails with error
+    href: data-quality-services/dqs-export-64-bit-excel-file-fails-error.md
+  - name: DQSInstaller may fail accessing temp folder
+    href: data-quality-services/dqsinstaller-may-fail-accessing-tmp-folder.md
+  - name: Error when you run the DQS Cleansing transformation
+    href: data-quality-services/error-you-run-dqs-cleansing-transformation.md
+
 - name: Database Engine
   items:
   - name: Administration and Management
     items:
-    - name: 1450 and 665 errors when running DBCC
-      href: admin/1450-and-665-errors-running-dbcc.md
-    - name: 17053 and 926 errors when running DBCC
-      href: admin/17053-and-926-errors-running-dbcc.md
-    - name: 8967 and 8921 errors when running DBCC
-      href: admin/8967-8921-errors-running-dbcc.md
+    - name: SQL Server startup issues
+      items:
+      - name: SQL Server startup errors
+        href: admin/sql-server-startup-errors.md
+      - name: Access is denied error and SQL Server doesn't start
+        href: admin/event-id-7000-access-denied.md
+      - name: Error 17113 when you start SQL Server service
+        href: admin/error-17113-start-service.md
+      - name: Error 17182 when you start SQL Server service
+        href: admin/error-17182-protocols-disabled-start-failure.md
+      - name: Error 1068 when starting SQL Server
+        href: admin/agent-service-fails-start-stand-alone-server.md
+      - name: Error 1069 when starting SQL Server
+        href: admin/error-1069-service-cannot-start.md
+      - name: Event ID 17058 and SQL Server doesn't start
+        href: admin/event-id-17058-start-sql-server.md
+      - name: Event ID 1814 and SQL Server doesn't start
+        href: admin/event-id-1814-fail-start.md
+      - name: Event ID 33565 and SQL Server doesn't start
+        href: admin/event-id-33565-start-sql-server.md
+      - name: Event ID 33566 and SQL Server doesn't start
+        href: admin/event-id-33566-start-sql-server.md
+      - name: Event ID 7000 and SQL Server doesn't start
+        href: admin/event-id-7000-fail-start.md
+    - name: 1450 and 665 errors when running DBCC CHECKDB
+      href: admin/1450-and-665-errors-running-dbcc-checkdb.md
+    - name: Generate a script to create a statistics-only database
+      href: admin/stats-only-db-script.md
+    - name: 17053 and 926 errors when running DBCC CHECK
+      href: admin/17053-and-926-errors-running-dbcc-check.md
+    - name: 8967 and 8921 errors when running DBCC CHECKDB
+      href: admin/8967-8921-errors-running-dbcc-checkdb.md
     - name: A nonrecoverable I/O error when you use Backup to URL
       href: admin/nonrecoverable-io-error-backup-url.md
     - name: A TDE-enabled database may not recover
@@ -75,8 +119,6 @@
       href: admin/revocery-jobs-fail-servers.md
     - name: Back up a database using a VSS backup application
       href: admin/backup-database-using-vss-backup-application.md
-    - name: Troubleshooting Backup and Restore
-      href: admin/backup-restore-operations.md
     - name: Backup operation in the backupset history table
       href: admin/backup-operation-backup-history-table.md
     - name: Compressed backups behavior
@@ -99,10 +141,14 @@
       href: admin/defragmenting-database-disk-drives.md
     - name: Error 0x80040e97 when using full-text search
       href: admin/error-0x80040e97-using-full-text-search.md
+    - name: Error 3156 when you restore a database
+      href: admin/error-3156-restore-database.md           
     - name: Error after you perform TDE certificate or key rotation
       href: admin/error-after-perform-tde-certificate-key-rotation.md
     - name: Error when backing up in-memory database
       href: admin/error-backing-up-memory-database.md
+    - name: Error when you create a snapshot
+      href: admin/error-when-you-create-a-snapshot.md
     - name: Error when you run CLR object or create assembly
       href: admin/error-run-clr-object-create-assembly.md
     - name: Full-text index doesn't index attribute values
@@ -113,24 +159,32 @@
       href: admin/io-subsystem-requirements-tempdb.md
     - name: Improve the performance of full-text queries
       href: admin/improve-performance-full-text-queries.md
-    - name: Latch timeout when running DBCC
-      href: admin/latch-timeout-running-dbcc.md
+    - name: Latch timeout when running DBCC CHECKDB
+      href: admin/latch-timeout-running-dbcc-checkdb.md
     - name: Logging and data storage algorithms
       href: admin/logging-data-storage-algorithms.md
     - name: Manage the error log
       href: admin/manage-error-log.md
+    - name: Memory-optimized temppdb metadata out-of-memory errors
+      href: admin/memory-optimized-tempdb-out-of-memory.md
+    - name: Non-yielding error if the lock pages in memory option is disabled
+      href: admin/non-yielding-error-lock-pages-disable.md
     - name: Pass a variable to a linked server query
       href: admin/pass-variable-linked-server-query.md
     - name: Performance issues when using Columstore indexes with large pages
       href: admin/performance-issues-using-columstore-indexes-large-pages.md
     - name: Policy-Based Management generates alerts
       href: admin/34052-error-pbm-generates-alerts.md
+    - name: Restore or recovery may fail
+      href: admin/restore-recovery-may-fail.md
     - name: Run a DLL-based COM object
       href: admin/run-dll-based-com-object.md
     - name: Schedule and automate Backups of databases
       href: admin/schedule-automate-backup-database.md
     - name: Set up and troubleshoot a linked server to an Oracle database
       href: admin/set-up-troubleshoot-linked-server.md
+    - name: Space used by a table is not released
+      href: admin/space-table-uses-not-released.md
     - name: Support for databases on compressed volumes
       href: admin/support-databases-compressed-volumes.md
     - name: Support for network database files
@@ -141,28 +195,58 @@
       href: admin/database-mail-fails-send-message.md
     - name: Transaction log file doesn't grow
       href: admin/transaction-log-file-not-grow.md
-    - name: Troubleshoot DBCC errors
-      href: admin/troubleshoot-dbcc-errors.md
+    - name: Troubleshoot backup and restore operation issues
+      href: admin/backup-restore-operations.md
+    - name: Troubleshoot DBCC CHECKDB errors
+      href: admin/troubleshoot-dbcc-checkdb-errors.md
     - name: Unable to begin a distributed transaction
       href: admin/error-message-ole-db-provider.md
     - name: Virtual host drivers lead to data consistency problems
       href: admin/virtual-host-driver-lead-data-consistency.md
     - name: Words are not returned by an English word breaker
       href: admin/words-not-returned-by-english-word-breaker.md
+    - name: Error 33111 when restoring backups that use SQL Server Connector for Key Vault
+      href: admin/error-33111-restore-issues-sql-connector.md
   - name: Client Application Development
     items:
     - name: Can't uninstall ODBC driver completely
       href: connect/odbc-driver-uninstall-incomplete.md
   - name: Connection issues
     items:
-    - name: Can't connect remotely using TCP/IP
+    - name: Common Connection Issues
+      href: connect/resolve-connectivity-errors-overview.md
+    - name: The certificate chain was issued by an authority that isn’t trusted
+      href: connect/certificate-chain-not-trusted.md
+    - name: Pre-reqs for connectivity troubleshooting
+      href: connect/resolve-connectivity-errors-checklist.md
+    - name: Cannot generate SSPI context
+      href: connect/cannot-generate-sspi-context-error.md
+    - name: Existing connection forcibly closed
+      href: connect/tls-exist-connection-closed.md
+    - name: Login failed for user
+      href: connect/login-failed-for-user.md
+    - name: Network-related or instance-specific error
+      href: connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md
+    - name: Timeout expired errors
+      href: connect/timeout-expired-error.md
+    - name: Token-based server access validation failed
       href: connect/cannot-connect-remotely.md
-    - name: Kerberos Configuration Manager is available
-      href: connect/kerberos-configuration-manager-available.md
-    - name: Resolving connectivity errors
-      href: connect/resolving-connectivity-errors.md
     - name: Untrusted certificate authority error
       href: connect/error-message-when-you-connect.md
+    - name: Winsock LSP results in network or stability issues
+      href: connect/winsock-lsp-network-problem.md      
+    - name: Connectivity How Tos
+      items:
+      - name: Configuring firewalls
+        href: /sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access?context=/troubleshoot/sql/context/context
+      - name: Dynamic vs Static ports
+        href: connect/static-or-dynamic-port-config.md
+      - name: Kerberos Configuration Manager
+        href: connect/using-kerberosmngr-sqlserver.md
+      - name: Testing using UDL file 
+        href: connect/test-oledb-connectivity-use-udl-file.md
+      - name: Using PortQryUI tool 
+        href: connect/using-portqrytool-sqlserver.md
   - name: Database Design and Development
     items:
     - name: Can't make a remote connection from a CLR trigger
@@ -185,6 +269,8 @@
       href: database-design/remove-duplicate-rows-sql-server-tab.md
     - name: Rotate a table
       href: database-design/rotate-table.md
+    - name: Timeout issues when you deploy SQL CLR objects
+      href: database-design/timeout-issues-deploy-clr-objects.md
     - name: Use extended or SP_OA stored procedure to load CLR
       href: database-design/use-extended-sp-oa-stored-procedure.md
   - name: High Availability and Disaster Recovery features
@@ -193,16 +279,22 @@
       items:
       - name: 9002 error on primary replica
         href: availability-groups/error-9002-transaction-log-large.md
-      - name: AlwaysOn DB in recovery pending or suspect state
+      - name: Always On DB in recovery pending or suspect state
         href: availability-groups/alwayson-availability-databases-recovery-pending-suspect.md
+      - name: Error 2767 on secondary replica
+        href: availability-groups/error-2767-query-secondary-replica-fails.md
+      - name: Issues after changing the hostname 
+        href: availability-groups/error-41041-change-hostname.md
       - name: Listener connection times out in multi-subnet
         href: availability-groups/listener-connection-times-out.md
       - name: Query performance degradation on secondary replicas
         href: availability-groups/query-performance-degradation.md
       - name: Troubleshooting automatic failover problems
         href: availability-groups/troubleshooting-automatic-failover-problems.md
-      - name: Troubleshooting on AlwaysOn issues
+      - name: Troubleshooting on Always On issues
         href: availability-groups/troubleshooting-alwayson-issues.md
+      - name: Error 41131 when creating availability group
+        href: availability-groups/error-41131-create-availability-group.md
     - name: Database Mirroring
       items:
       - name: Mirrored databases are disconnected
@@ -235,6 +327,8 @@
       href: install/understanding-dotnet-framework-requirements.md
     - name: Attempted to perform an unauthorized operation error
       href: install/error-set-up-update-instances.md
+    - name: Cannot install on Windows case-sensitive servers
+      href: install/sql-server-not-supported-in-windows-os-where-case-sensitivity-enabled.md
     - name: Description of the Update Cache folder
       href: install/description-update-cache-folder.md
     - name: Different errors when installing SQL Server 2008 R2
@@ -271,6 +365,8 @@
       href: install/issues-install-sql-server.md
     - name: SQL Server 2008 R2 and SQL Server 2008 Setup issues 
       href: install/sql-server-2008-setup-issues.md
+    - name: Troubleshoot common SQL Server Cumulative Update installation issues
+      href: install/sqlserver-patching-issues.md
     - name: SQL Server 2012 Setup issues
       href: install/sql-server-2012-setup-issues.md
     - name: SxS install of X64 and X86 version of SSRS 2008
@@ -283,46 +379,80 @@
       href: install/error-upgrade-cluster-node.md
     - name: Warning about network binding order
       href: install/warning-about-network-binding.md
+    - name: Troubleshoot errors related to system disk sector size greater than 4 KB
+      href: admin/troubleshoot-os-4kb-disk-sector-size.md
   - name: Machine Learning Services (in database)
     items:
     - name: Inconsistent results in MKL computations
       href: machine-learning/inconsistent-results-mkl-computations-missing-variable.md
   - name: Performance
     items:
-    - name: Decreased performance when using TOP, MAX or MIN
-      href: performance/decreased-performance-run-aggregating-clause.md
-    - name: External modules can cause performance issues
-      href: performance/performance-consistency-issues.md
-    - name: Filter drivers cause performance and consistency issues
-      href: performance/filter-drivers-lead-to-sql-performance-consistency.md
-    - name: Non-yielding Resource Monitor
-      href: performance/resource-monitor-nonyielding-condition.md
-    - name: Performance degradation with new CE
-      href: performance/cardinality-estimator-degrades-query-performance.md
-    - name: Reducing allocation contention in tempdb
-      href: performance/recommendations-reduce-allocation-contention.md
-    - name: Resolve blocking problems caused by lock escalation
-      href: performance/resolve-blocking-problems-caused-lock-escalation.md
-    - name: Resolve last-page insert PAGELATCH_EX contention
-      href: performance/resolve-pagelatch-ex-contention.md
-    - name: SchemaMgr Store entries degrade performance 
-      href: performance/schemamgr-store-degrades-performance.md
-    - name: Troubleshoot blocking caused by compile locks
-      href: performance/troubleshoot-blocking-caused-compile-locks.md
     - name: Troubleshoot slow-running queries
       href: performance/troubleshoot-slow-running-queries.md
+    - name: Troubleshoot entire SQL Server or application appears slow
+      href: performance/troubleshoot-entire-sqlserver-slow.md
+    - name: Troubleshoot high-CPU-usage issues
+      href: performance/troubleshoot-high-cpu-usage-issues.md
+    - name: Troubleshoot SQL Server slow performance caused by IO
+      href: performance/troubleshoot-sql-io-performance.md
+    - name: TokenAndPermUserStore related performance issues
+      href: performance/token-and-perm-user-store-perf-issue.md
+    - name: Troubleshoot query time-out errors
+      href: performance/troubleshoot-query-timeouts.md
+    - name: Different query performance between two SQL Servers
+      href: performance/troubleshoot-query-perf-between-servers.md
+    - name: Slower query in database application than in SSMS
+      href: performance/troubleshoot-application-slow-ssms-fast.md      
+    - name: Decreased query performance after upgrade
+      href: performance/decreased-query-perf-after-upgrade.md
     - name: Understand and resolve blocking problems
       href: performance/understand-resolve-blocking.md
-    - name: Updates and configuration options for high-performance workloads (SQL 2016 and SQL 2014)
+    - name: Updates and configuration options for high-performance workloads (SQL Server 2014 and 2012)
       href: performance/recommended-updates-configuration-options.md
-    - name: Updates and configuration options for high-performance workloads (SQL 2017 and SQL 2016)
+    - name: Updates and configuration options for high-performance workloads (SQL Server 2017 and 2016)
       href: performance/recommended-updates-configuration-workloads.md
+    - name: Resolve last-page insert PAGELATCH_EX contention
+      href: performance/resolve-pagelatch-ex-contention.md
+    - name: Troubleshoot out of memory issues in SQL Server
+      href: performance/troubleshoot-memory-issues.md
+    - name: Troubleshoot queries that seem to never end
+      href: performance/troubleshoot-never-ending-query.md
+    - name: Troubleshoot ASYNC_NETWORK_IO issues
+      href: performance/troubleshoot-query-async-network-io.md
+    - name: Operations that trigger buffer pool scan may run slowly on large-memory computers
+      href: performance/buffer-pool-scan-runs-slowly-large-memory-machines.md
+    - name: Reducing allocation contention in tempdb
+      href: performance/recommendations-reduce-allocation-contention.md
+    - name: Troubleshoot blocking caused by compile locks
+      href: performance/troubleshoot-blocking-caused-compile-locks.md
+    - name: Resolve blocking problems caused by lock escalation
+      href: performance/resolve-blocking-problems-caused-lock-escalation.md
+    - name: Blocked column is populated for latch waits
+      href: performance/blocked-column-populated-latch-waits.md
+    - name: Troubleshoot slow SSIS or ELT jobs query performance
+      href: performance/slow-query-performance-ssis-etl.md      
+    - name: Decreased performance when using EFS to encrypt database files
+      href: performance/decreased-performance-use-efs.md
+    - name: Decreased performance when querying view across linked servers
+      href: performance/decreased-performance-linkedserver-views.md            
+    - name: Decreased performance when using TOP, MAX or MIN
+      href: performance/decreased-performance-run-aggregating-clause.md
+    - name: External modules and filter drivers cause performance issues
+      href: performance/performance-consistency-issues-filter-drivers-modules.md
+    - name: High CPU or high memory grants with queries that use optimized nested loops
+      href: performance/decreased-perf-high-cpu-optimized-nested-loop.md
+    - name: Non-yielding Resource Monitor
+      href: performance/resource-monitor-nonyielding-condition.md
+    - name: Performance degradation with new CE join containment assumption
+      href: performance/cardinality-estimator-degrades-query-performance.md
+    - name: SchemaMgr Store entries degrade performance 
+      href: performance/schemamgr-store-degrades-performance.md
     - name: Upgrading compatibility level degrades performance for spatial queries
       href: performance/upgrade-compatibility-level-degrades-performance.md
     - name: Use DBCC MEMORYSTATUS to monitor memory usage
       href: performance/dbcc-memorystatus-monitor-memory-usage.md
-    - name: Winsock LSP results in network or stability issues
-      href: performance/winsock-lsp-network-problem.md
+    - name: Troubleshoot performance issues with narrow and wide plans
+      href: performance/troubleshoot-performance-narrow-vs-wide-plans.md
   - name: Replication, change tracking, change data capture
     items:
     - name: 102 and incorrect syntax error with peer-to-peer replication
@@ -339,12 +469,18 @@
       href: replication/error-replication-monitor.md
     - name: Apply SQL hotfixes in a replication topology
       href: replication/apply-hotfix-sql-replication-topology.md
+    - name: ASCII function returns different results
+      href: replication/ascii-function-returns-different-results-publisher-subscriber.md
     - name: Cannot use rowguidcol in filter definition in merge replication
       href: replication/rowguidcol-not-supported-merge-replication.md
+    - name: CDC capture job fails when processing changes
+      href: replication/cdc-capture-job-fails-processing-changes-table.md
     - name: CDC for Oracle results in transaction log growth
       href: replication/sql-transaction-log-grows.md
     - name: Duplicate key rows from sys.syscommittab table
       href: replication/duplicate-keys-sys-syscommittab-table.md
+    - name: Error message when you run the Distribution Agent
+      href: replication/error-run-distribution-agent.md
     - name: Fail to enumerate subscription properties
       href: replication/enumerate-subscription-properties.md
     - name: Install service packs and hotfixes
@@ -355,12 +491,16 @@
       href: replication/manually-remove-replication.md
     - name: Merge replication doesn't support centralized subscriber topologies
       href: replication/merge-replication-cannot-support-centralized-subscriber-topologies.md
+    - name: Non-convergence when SQL Server processes child generations
+      href: replication/non-convergence-when-processes-child-generations.md
     - name: ORACDC517E - Oracle Call Interface (OCI) method failed
       href: replication/error-use-change-data-capture-service.md
     - name: Oracle publication triggers send data for non-published columns
       href: replication/oracle-publication-triggers-sends-data.md
     - name: Performance statistics for Log Reader and Distribution Agents
       href: replication/performance-statistics-log-reader-distribution-agents.md
+    - name: Pull subscriptions do not show up in Windows Synchronization Manager
+      href: replication/subscriptions-do-not-show-up-windows-sync-manager.md
     - name: Replication agents can't run
       href: replication/sql-replication-agents-not-run.md
     - name: Script failed error when creating merge publication snapshot
@@ -375,6 +515,8 @@
       href: replication/sql-merge-replication-synchronization-fails.md
     - name: The subscription does not exist
       href: replication/subscription-does-not-exist-error.md
+    - name: Understand merge Replication article processing order
+      href: replication/understand-merge-replication-article-process.md
     - name: Update is replicated as DELETE/INSERT pairs
       href: replication/update-statements-replicated-as-delete-insert.md
 
@@ -384,14 +526,12 @@
       href: security/block-remote-use-local-accounts.md
     - name: Decryption Failed error working with Always-Encrypted-enabled database
       href: security/always-encrypted-database-connection-fail.md
-    - name: Error 1068 when starting SQL Server or SQL Agent
-      href: security/agent-service-fails-start-stand-alone-server.md
-    - name: Error 1069 when starting SQL service
-      href: security/error-password-service-account-changed.md
     - name: Errors when you disable the guest user
       href: security/error-disable-guest-user.md
     - name: Fix permission problem when you move MSDB database
       href: security/fix-permission-issues-move-msdb.md
+    - name: Fails to start with error 17182
+      href: security/fails-start-error-17182.md
     - name: SQL Service cannot start after configuring SSL certificate
       href: security/service-cannot-start.md
     - name: Transfer logins and passwords between instances
@@ -407,6 +547,8 @@
 
 - name: General Troubleshooting Information
   items:
+  - name: Answers questions about the MSDT
+    href: general/answers-questions-msdt.md
   - name: Connectivity Diagnostics Collector
     href: general/connectivity-diagnostics-collector.md
   - name: Determine the version, edition, and update level
@@ -415,6 +557,8 @@
     href: general/issue-detours-similar-techniques.md
   - name: End of support for SQL Server 2008
     href: general/end-support-sql-server-2008.md
+  - name: Information about MATS and SDP
+    href: general/information-mats-sdp.md
   - name: RS Diagnostics Collector collects information
     href: general/rs-diagnostics-collector-information.md
   - name: Setup data collection diagnostic tool
@@ -422,7 +566,7 @@
   - name: SQL Base Diagnostics Collector
     href: general/sql-base-diagnostics-collector.md
   - name: SQL Server in Windows operating system
-    href: general/sql-server-windows-8-later-versions.md
+    href: general/use-sql-server-in-windows.md
   - name: Support policy for hardware virtualization product
     href: general/support-policy-hardware-virtualization-product.md
   - name: Support policy for SQL Server
@@ -454,6 +598,13 @@
     href: integration-services/ssis-package-fails-use-dqs-cleansing-component.md
   - name: Use encryption and network packet size
     href: integration-services/use-encryption-network-packet-size.md
+
+- name: Master Data Services
+  items:
+  - name: MDS entity-based staging may fail
+    href: master-data-services/mds-entity-based-staging-fail.md
+  - name: MDS Validate Version command fails
+    href: master-data-services/mds-validate-version-command-fails.md
 
 - name: MDAC and ADO
   items:
@@ -488,6 +639,8 @@
     href: analytics-platform-system/error-cetas-to-blob-storage.md
   - name: Evaluate PDW statistics accuracy
     href: analytics-platform-system/evaluate-pdw-statistics-accuracy.md
+  - name: Msg 104381 when you run a statement with ORDER BY clause
+    href: analytics-platform-system/msg-104381-running-statement-order-by.md
   - name: Operations Manager can't monitor APS appliance
     href: analytics-platform-system/operations-manager-cannot-monitor-aps.md
 
@@ -501,6 +654,8 @@
     href: reporting-services/cannot-start-reporting-services.md
   - name: Deadlocks occur when you view an SSRS report
     href: reporting-services/deadlocks-occur-view-ssrs-report.md
+  - name: Error when you load custom extensions in Data Tools
+    href: reporting-services/error-load-custom-extensions-data-tools.md
   - name: Exported report contains hidden rows and columns
     href: reporting-services/workbook-hidden-rows-columns.md
   - name: Key not valid for use in specified state
@@ -513,6 +668,8 @@
     href: reporting-services/error-unable-retrieve-application-files.md
   - name: Warning message when adding a RS assembly
     href: reporting-services/warning-message-add-reporting-services.md
+  - name: .Net Framework assemblies in SQL 2014
+    href: reporting-services/net-framework-assemblies-sql-2014.md
 
 - name: SQL Server on Linux
   items:
@@ -520,6 +677,10 @@
     href: linux/choosing-licensing-model-using-mssql-conf.md
   - name: Core dump on RHEL 7.4 when you run mssql-conf
     href: linux/core-dump-rhel-7-4-run-mssql-conf.md
+  - name: Restore operation fails on Linux servers
+    href: linux/database-restore-operation-fails-linux-server.md
+  - name: mssql-conf setup fails with python module error
+    href: linux/mssql-conf-setup-fails-with-python-module-error.md
 
 - name: Tools
   items:
@@ -537,7 +698,7 @@
       href: ssms/exception-you-execute-query.md
     - name: Saving changes is not permitted error message
       href: ssms/error-when-you-save-table.md
-    - name: Unable to mody table - Timeout Expired
+    - name: Unable to modify table - Timeout Expired
       href: ssms/error-modify-large-table-using-ssms.md
     - name: Uninstall SQL Server Management Studio
       href: ssms/uninstall-management-studio.md
@@ -549,6 +710,8 @@
       href: tools/error-message-when-you-open-configuration-manager.md
     - name: MSDB database grows
       href: tools/msdb-database-grows.md
+    - name: Description of the Replay Markup Language Utilities for SQL Server
+      href: tools/replay-markup-language-utility.md
     - name: New data isn't uploaded to MDW database after configuring collection set
       href: tools/data-collector-collection-set-upload-fail.md
     - name: PowerShell issue when RemoteSigned is not set
@@ -559,8 +722,13 @@
       href: tools/error-use-configuration-manager-restart-agent-service.md
     - name: The SQLDMO Application object failed to initialize when using Sqlmaint
       href: tools/error-you-run-sqlmaint-utility.md
+    - name: Troubleshoot Database Mail issues
+      href: tools/troubleshoot-database-mail-issues.md
     - name: Use Sqldumper to generate dump files
       href: tools/use-sqldumper-generate-dump-file.md
-    - name: Using SQLIOSim utility to simulate SQL Server disk activity
+    - name: Use SQLIOSim utility to simulate SQL Server disk activity
       href: tools/sqliosim-utility-simulate-activity-disk-subsystem.md
-
+    - name: Use SQLIOSim utility on Linux
+      href: tools/sqliosim-utility-simulate-activity-disk-subsystem-linux.md
+    - name: Visual Studio 2010 Shell is installed with SQL Server 2014 and 2012
+      href: tools/visual-studio-2010-shell-installed-sql-server-2014-2012.md

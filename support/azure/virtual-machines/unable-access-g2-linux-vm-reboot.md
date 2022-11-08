@@ -2,10 +2,11 @@
 title: Unable to Access Generation 2 Linux VM after a reboot
 description: How to mitigate being locked out of Generation 2 Linux VM after a reboot.
 ms.date: 10/10/2020
-ms.prod-support-area-path: 
-ms.service: virtual-machines-linux
+ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
+ms.collection: linux
 ms.author: genli
-author: genli
+author: genlin
 ms.reviewer: 
 ---
 # Can't access Generation 2 Linux VM after a reboot
@@ -26,7 +27,7 @@ This only affects Gen2 images (custom or Azure Marketplace) that were provisione
 The Azure Marketplace already offers Ubuntu Server Gen 2 images with cloud-init, and the image versions below include cloud-init 19.4.
 
 - 16.04 - Canonical:UbuntuServer:16_04-lts-gen2:16.04.202001290
-- 18.04 - Canonical:UbuntuServer:18_04-lts-gen2:18.04.202001291 
+- 18.04 - Canonical:UbuntuServer:18_04-lts-gen2:18.04.202001291
 To check the version of cloud-init is in the image, run the following script:
 
     ```
@@ -38,8 +39,8 @@ To check the version of cloud-init is in the image, run the following script:
 If you cannot connect to the VM with the user it was created with, you will need to reset the password using the Azure VM Access extension or the Azure portal:
 
 1. Go to the VM.
-2. In the VM Blade, scroll to 'Support + troubleshooting' 
-3. Select 'Password Reset', then select 'Reset password', with the username that cannot access the VM. 
+2. In the VM Blade, scroll to **Help**.
+3. Select **Password Reset**, then select 'Reset password', with the username that cannot access the VM.
 
 ## Prevention
 
@@ -62,3 +63,5 @@ sudo apt-get upgrade cloud-init
 
 **Q:** Could this happen on every reboot?  
  **A:** No. This will not happen on every reboot, it will occur once.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

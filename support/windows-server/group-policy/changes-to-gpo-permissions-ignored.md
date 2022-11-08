@@ -1,23 +1,23 @@
 ---
 title: Changes to GPO permissions through AGPM aren't saved
 description: Describes an issue that blocks you from changing Group Policy object permissions in Advanced Group Policy Management (AGPM). A workaround is provided.
-ms.date: 09/17/2020
+ms.date: 11/11/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, lindakup, arrenc, ajayps, dnats, herbertm
-ms.prod-support-area-path: Group Policy management - GPMC or AGPM
+ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # Changes to Group Policy object permissions through AGPM are ignored
 
 This article provides a workaround for an issue where changes to Group Policy object permissions that's controlled in Advanced Group Policy Management (AGPM) aren't saved as expected.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3174540
 
 ## Symptoms
@@ -32,7 +32,7 @@ This behavior is by design in AGPM 4.0 Service Pack 3 (SP3) and earlier versions
 
 To work around this issue, follow these steps:
 
-1. Install the [September 2016 servicing release for Microsoft Desktop Optimization Pack](https://support.microsoft.com/help/3168628) on the AGPM server.
+1. Install the [Microsoft Desktop Optimization Pack March 2017 Servicing Release](https://www.microsoft.com/download/details.aspx?id=54967) on the AGPM server.
 2. Set the following registry key and values on the AGPM server.
 
     - Path: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Agpm`
@@ -45,9 +45,6 @@ To work around this issue, follow these steps:
 If OverrideRemovePermissionsWithoutReadandApply is set to **1**, read permissions are saved after the policy is checked in to AGPM, but write permissions are removed.
 
 If OverrideRemovePermissionsWithoutReadAndApply is not set or is set to any value other than **1**, AGPM behaves in the way that's described in the [Symptoms](#symptoms) section.
-
-> [!IMPORTANT]
-> After you set this registry key, you must also apply the hotfix in [September 2016 servicing release for Microsoft Desktop Optimization Pack](https://support.microsoft.com/help/3168628).
 
 ## References
 

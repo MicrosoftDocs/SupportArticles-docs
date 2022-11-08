@@ -1,35 +1,37 @@
 ---
 title: WMI-Activity Event 5858 ResultCode 0x80041032
 description: WMI-Activity Event ID 5858 is logged with ResultCode 0x80041032 when applications issue WMI queries.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, steved, cmyu, ssutari
-ms.prod-support-area-path: WMI 
+ms.custom: sap:wmi, csstroubleshoot
 ms.technology: windows-client-system-management-components
 ---
 # WMI-Activity Event 5858 logged frequently with ResultCode 0x80041032
 
 This article provides a resolution to solve the WMI-Activity event ID 5858 that's logged with ResultCode = 0x80041032 in Windows Server 2012 R2.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3124914
 
 ## Symptoms
 
 When using Windows Server 2012 R2 with applications that issue WMI queries using `IWbemServices:ExecQuery`, the administrator may observe the following event in Event Viewer:
 
-> Log Name:  Microsoft-Windows-WMI-Activity/Operational  
-Source:    WMI-Activity  
-Event ID:  5858  
-Level:     Error  
-Id = {guid}; ClientMachine = \<computer>; User = \<user>; ClientProcessId = \<process ID>; Component = Unknown; Operation = Start IWbemServices::ExecQuery - \<WMI namespace>: \<Select Query Statement>; ResultCode = 0x80041032; PossibleCause = Unknown  
+```output
+Log Name:  Microsoft-Windows-WMI-Activity/Operational
+Source:    WMI-Activity
+Event ID:  5858
+Level:     Error
+Id = {guid}; ClientMachine = <computer>; User = <user>; ClientProcessId = <process ID>; Component = Unknown; Operation = Start IWbemServices::ExecQuery - <WMI namespace>: <Select Query Statement>; ResultCode = 0x80041032; PossibleCause = Unknown
 where 0x80041032 indicates WBEM_E_CALL_CANCELLED.
+```
 
 > [!NOTE]
 > This event can occur with many different ResultCode values. The problem described in this article only applies when `ResultCode = 0x80041032 (WBEM_E_CALL_CANCELLED)`.

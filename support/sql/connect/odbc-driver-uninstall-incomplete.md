@@ -2,8 +2,8 @@
 title: ODBC driver uninstall is incomplete
 description: On a Windows computer with both ODBC 17 and ODBC 13 drivers installed, uninstalling either of the driver still leaves the remnants of the uninstalled version. This article provides more information about the problem and the resolution for the same.
 ms.date: 02/17/2020
-ms.prod-support-area-path: Client Application Development
-ms.prod: sql
+ms.custom: sap:Client Application Development
+ms.technology: sql-engine-clientapp-development
 ---
 # Driver uninstall leaves remnants when ODBC 13(.1)/17(.1) are both installed on Windows
 
@@ -27,7 +27,7 @@ This problem occurs because of an ODBC 17/17.1 installer issue.
 This issue has been fixed in the ODBC 17.2 driver. To fix this issue:
 
 1. Uninstall the ODBC 17/17.1 driver.
-2. Install [ODBC 17.2 or a later version of the driver](https://www.microsoft.com/download/details.aspx?id=56567).
+2. Install [ODBC 17.2 or a later version of the driver](/sql/connect/odbc/download-odbc-driver-for-sql-server).
 
 ## Reference
 

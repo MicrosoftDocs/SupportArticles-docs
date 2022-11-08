@@ -5,7 +5,6 @@ author: genlin
 ms.author: genli
 ms.service: site-recovery
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.reviewer: mabisth
 ---
 # Unsupported Features and Platforms post upgrade to Azure Recovery Services Scout 8.0.1
@@ -18,7 +17,7 @@ Azure Recovery Services Scout 8.0.1 removed support for all Application Protecti
 The Azure Recovery Services Scout 8.0.1 feature set is equivalent of the InMage vContinuum feature set. For a complete list of the Azure Recovery Services Scout 8.0.1 feature set, see the [compatibility matrix](https://download.microsoft.com/download/c/d/a/cda1221b-74e4-4ccf-8f77-f785e71423c0/inmage_scout_standard_compatibility_matrix.pdf).
 Microsoft has stopped distributing all versions of ScoutOS ISOs. Users need to download the required CentOS ISO from the internet and install required packages before installing RX.
 
-EOL of Support from previous releases: 
+EOL of Support from previous releases:
 
 ### Deprecated Solutions (Not Supported)
 
@@ -59,3 +58,5 @@ EOL of Support from previous releases:
 Maximum supported retention size is up to 15 days  
 
 Appliances using InMage Scout products are no longer supported
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

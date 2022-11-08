@@ -4,20 +4,20 @@ description: Describes a problem where event ID 10000 is logged in the Applicati
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Connecting to a session or desktop
+ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Event ID 10000 is logged in the Application log on a Windows Server 2003-based computer that has Terminal Server enabled
 
 This article provides a solution to an issue where event ID 10000 is logged in the Application log when you use a Terminal Server computer that is running Windows Server 2003.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 914052
 
 > [!IMPORTANT]
@@ -54,6 +54,5 @@ This issue occurs when registry entries that are required for Winlogon notificat
     |---|---|---|
     |Logoff|REG_SZ|TSEventLogoff|
     |Logon|REG_SZ|TSEventLogon|
-    ||||
 
 4. Restart the Terminal Server computer.

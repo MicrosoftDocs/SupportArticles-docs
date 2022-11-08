@@ -2,7 +2,6 @@
 title: Errors occur when using SoFS shares
 description: Errors occur when you use Scale-Out File Server shares after you upgrade to System Center 2016 Virtual Machine Manager. Provides a resolution.
 ms.date: 05/07/2020
-ms.prod-support-area-path:
 ms.reviewer: delhan, paulw, brenth
 ---
 # Errors occur when using SoFS shares after upgrading to System Center 2016 Virtual Machine Manager
@@ -39,11 +38,11 @@ You use Scale-Out File Server (SoFS) shares in System Center 2012 R2 Virtual Mac
 
   > System.Data.SqlClient.SqlException (0x80131904): The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_tbl_WLC_PhysicalObject_tbl_ADHC_HostVolume".
   >
-  > The conflict occurred in database "VirtualManagerDB", table "dbo.tbl_ADHC_HostVolume", column 'VolumeID'.  The statement has been terminated.
+  > The conflict occurred in database "VirtualManagerDB", table "dbo.tbl_ADHC_HostVolume", column 'VolumeID'.  The statement has been terminated.
 
 >[!NOTE]
 >
-> - This issue can also cause you to be unable to get host ratings for any host that uses one of the affected SoFS shares.
+> - This issue can also cause you to be unable to get host ratings for any host that uses one of the affected SoFS shares.
 > - This issue does not occur in a fresh (not upgraded) System Center 2016 Virtual Machine Manager environment.
 
 ## Cause
@@ -52,8 +51,8 @@ This issue occurs because the database is put into an inconsistent state in the 
 
 1. You add a SoFS server and shares to System Center Virtual Machine Manager.
 2. The SoFS shares are managed by System Center Virtual Machine Manager.
-3. You assign the SoFS shares to one or more hosts.
-4. You remove the **Storage Provider** entry that was created for the SoFS server but don't remove the individual shares before removing the entry. This may occur if you remove the SoFS server by using the user interface or you execute the `Remove-SCStorageProvider` PowerShell cmdlet.
+3. You assign the SoFS shares to one or more hosts.
+4. You remove the **Storage Provider** entry that was created for the SoFS server but don't remove the individual shares before removing the entry. This may occur if you remove the SoFS server by using the user interface or you execute the `Remove-SCStorageProvider` PowerShell cmdlet.
 
 When these steps are done in this listed order, the System Center Virtual Machine Manager database table `tbl_ST_StorageFileShare` doesn't have the `AssociatedVolumeID` column set to **NULL** for SoFS shares. In System Center 2012 R2, this issue did not have any effect. However, System Center 2016 Virtual Machine Manager is more dependent on this setting.
 

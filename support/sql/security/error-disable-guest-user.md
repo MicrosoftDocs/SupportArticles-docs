@@ -2,7 +2,7 @@
 title: Error when you disable the guest user
 description: This article describes various issues that can occur when you disable the guest user in the msdb database in SQL Server.
 ms.date: 11/19/2020
-ms.prod-support-area-path: Security Issues
+ms.custom: sap:Security Issues
 ms.prod: sql
 ---
 # You should not disable the guest user in the msdb database in SQL Server
@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 2539091
 
 ## Symptoms when the guest user is disabled in the msdb database
 
-In order for some Microsoft SQL Server features to work, the guest user *must* be enabled in the msdb database. This article describes some issues that you may experience if you disable the guest user in the msdb database. The article also provides information about how to resolve those issues.
+In order for some Microsoft SQL Server features to work, the guest user _must_ be enabled in the msdb database. This article describes some issues that you may experience if you disable the guest user in the msdb database. The article also provides information about how to resolve those issues.
 
 When the guest user is disabled in the msdb database, you may receive error [MSSQLSERVER_916](/sql/relational-databases/errors-events/mssqlserver-916-database-engine-error) when user expands Databases node in Management Studio expands or when a server application tries to connect to SQL Server. You may experience one or more of the following symptoms in your environment when this issue occurs.
 
@@ -70,7 +70,6 @@ If you receive a result set that resembles the following, the guest user has the
 |grantee_name|class|class_desc|major_id|minor_id|grantee_principal_id|grantor_principal_id|type|permission_name|state|state_desc|
 |---|---|---|---|---|---|---|---|---|---|---|
 |guest|0|DATABASE|0|0|2|1|CO|CONNECT|G|GRANT|
-||||||||||||
 
 If you receive either an empty result set or if the `state_desc` shows DENY in the result set that is mentioned here, the guest user is disabled in the msdb database. You may receive error 916 when you connect to a database.
 
@@ -91,4 +90,3 @@ GO
 - [Guest Permissions on User Databases](/sql/relational-databases/policy-based-management/guest-permissions-on-user-databases)
 
 - [Securing SQL Server](/sql/relational-databases/security/securing-sql-server)
-

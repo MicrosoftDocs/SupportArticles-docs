@@ -2,7 +2,7 @@
 title: Configure security for SQL Server log shipping
 description: This article describes how to configure security for SQL Server log shipping and provides information about the problem that may occur when you are configuring security for SQL Server log shipping.
 ms.date: 11/03/2020
-ms.prod-support-area-path: Log Shipping
+ms.custom: sap:Log Shipping
 ms.reviewer: PANKAJA
 ms.topic: how-to
 ms.prod: sql

@@ -2,11 +2,11 @@
 title: Troubleshooting automatic failover problems
 description: This article provides the troubleshooting steps for the problems that occur during automatic failover in SQL Server.
 ms.date: 11/05/2020
-ms.prod-support-area-path: Availability Groups
+ms.custom: sap:Availability Groups
 ms.reviewer: ramakoni, cmathews
 ms.prod: sql
 ---
-# Troubleshooting automatic failover problems in SQL Server 2012 AlwaysOn environments
+# Troubleshooting automatic failover problems in SQL Server Always On environments
 
 This article helps you resolve the problems that occur during automatic failover in SQL Server.
 
@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 2833707
 
 ## Summary  
 
-Microsoft SQL Server 2012 AlwaysOn availability groups can be configured for automatic failover. Therefore, if a health issue is detected on the instance of SQL Server that is hosting the primary replica, the primary role can be transitioned to the automatic failover partner (secondary replica). However, the secondary replica cannot always be transitioned to the primary role, instead being transitioned only to the resolving role. Unless the primary replica returns to a healthy state, there is no replica in the primary role. Additionally, the availability databases are inaccessible.
+Microsoft SQL Server Always On availability groups can be configured for automatic failover. Therefore, if a health issue is detected on the instance of SQL Server that is hosting the primary replica, the primary role can be transitioned to the automatic failover partner (secondary replica). However, the secondary replica cannot always be transitioned to the primary role, instead being transitioned only to the resolving role. Unless the primary replica returns to a healthy state, there is no replica in the primary role. Additionally, the availability databases are inaccessible.
 
 This article lists some common causes of unsuccessful automatic failover. Additionally, this article discusses the steps that you can perform in order to diagnose the cause of these failures.
 
@@ -26,7 +26,7 @@ When an automatic failover is triggered on the instance of SQL Server that is ho
 > The state of the local availability replica in availability group '\<Group name>' has changed from 'RESOLVING_NORMAL' to 'PRIMARY_PENDING'  
 The state of the local availability replica in availability group '\<Group name>' has changed from 'PRIMARY_PENDING' to 'PRIMARY_NORMAL'
 
-![Error log](./media/troubleshooting-automatic-failover-problems/error-log-notepad.png)
+:::image type="content" source="media/troubleshooting-automatic-failover-problems/error-log-notepad.png" alt-text="Screenshot of the error log when an automatic failover is triggered successfully.":::
 
 > [!NOTE]
 > The secondary replica transitions successfully from a **RESOLVING_NORMAL** status to a **PRIMARY_NORMAL** status.
@@ -37,7 +37,7 @@ If an automatic failover event is not successful, the secondary replica does not
 
 For example, in the following image, SQL Server Management Studio reports that the secondary replica is in Resolving status because the automatic failover process was unable to transition the secondary replica into the primary role:
 
-![Availability Replicas](./media/troubleshooting-automatic-failover-problems/availability-replicas.png)
+:::image type="content" source="media/troubleshooting-automatic-failover-problems/availability-replicas.png" alt-text="Screenshot of the availability replicas in SQL Server Management Studio.":::
 
 This article describes several possible reasons that automatic failover may not succeed, and how to diagnose each cause.  
 
@@ -55,7 +55,7 @@ To investigate and diagnose whether this is the cause of unsuccessful failover, 
       Get-ClusterLog -Node <SQL Server node name> -TimeSpan 15
       ```
 
-      ![Windows PowerShell](./media/troubleshooting-automatic-failover-problems/windows-powershell-image.png)
+      :::image type="content" source="media/troubleshooting-automatic-failover-problems/windows-powershell.png" alt-text="Screenshot of the Windows cluster log in Windows PowerShell." border="false":::
 
       > [!NOTE]
       >
@@ -68,7 +68,7 @@ To investigate and diagnose whether this is the cause of unsuccessful failover, 
 
       > Not failing over group \<Resource name>, failoverCount 3, failoverThresholdSetting \<Number>, computedFailoverThreshold 2
 
-      ![Cluster Notepad](./media/troubleshooting-automatic-failover-problems/cluster-notepad-image.png)
+      :::image type="content" source="media/troubleshooting-automatic-failover-problems/cluster-notepad.png" alt-text="Screenshot of Cluster.log file in Notepad.":::
 
 - Step 2: Check the Maximum Failures in the Specified Period property
 
@@ -77,7 +77,7 @@ To investigate and diagnose whether this is the cause of unsuccessful failover, 
    3. In the **Roles** pane, right-click the clustered resource, and then click **Properties**.
    4. Click the **Failover** tab, and check the **Maximum Failures in the Specified Period** value.
 
-      ![Maximum Failures in the Specified Period](./media/troubleshooting-automatic-failover-problems/properties-image.png)
+      :::image type="content" source="media/troubleshooting-automatic-failover-problems/properties.png" alt-text="Screenshot of the Maximum Failures in the Specified Period property.":::
 
       > [!NOTE]
       > The default behavior specifies that if the clustered resource fails three times in a six hour period, it should remain in the failed state. For an availability group, this means the replica is left in the RESOLVING state.
@@ -109,7 +109,7 @@ If the NT AUTHORITY\SYSTEM login account lacks any of these permissions on the a
       Get-ClusterLog -Node <SQL Server node name> -TimeSpan 15
       ```
 
-      ![PowerShell window](./media/troubleshooting-automatic-failover-problems/windows-powershell-image.png)
+      :::image type="content" source="media/troubleshooting-automatic-failover-problems/windows-powershell.png" alt-text="Screenshot of the Windows cluster log in Windows PowerShell in Case 2." border="false":::
 
    2. Open the Cluster.log file in Notepad in order to review the Windows cluster log.
    3. You can find error messages that resemble the following:
@@ -117,7 +117,7 @@ If the NT AUTHORITY\SYSTEM login account lacks any of these permissions on the a
       > Failed to run diagnostics command.
       The user does not have permission to perform this action.
 
-      ![Error messages](./media/troubleshooting-automatic-failover-problems/error-messages-image.png)
+      :::image type="content" source="media/troubleshooting-automatic-failover-problems/error-messages.png" alt-text="Screenshot of Cluster.log file in Notepad in Case 2." border="false":::
 
 Conclusion
 
@@ -137,7 +137,7 @@ To investigate and diagnose whether this is the cause of unsuccessful failover, 
 
 One or more databases are not synchronized or have not joined the availability group
 
-![ERRORLOG Notepad Image](./media/troubleshooting-automatic-failover-problems/error-log-image.png)
+:::image type="content" source="media/troubleshooting-automatic-failover-problems/error-log.png" alt-text="Screenshot of the SQL Server error log in Case 3." border="false":::
 
 To check whether the availability databases were in the SYNCHRONIZED status, follow these steps:
 
@@ -151,9 +151,25 @@ To check whether the availability databases were in the SYNCHRONIZED status, fol
     Select database_name, is_failover_ready from sys.dm_hadr_database_replica_cluster_states where replica_id in (select replica_id from sys.dm_hadr_availability_replica_states)
     ```
 
-   ![Query Image](./media/troubleshooting-automatic-failover-problems/sql-query.png)
+   :::image type="content" source="media/troubleshooting-automatic-failover-problems/sql-query.png" alt-text="Screenshot of SQL query in Case 3.":::
 
 Conclusion
 
-A successful automatic failover of the availability group requires all availability databases be in the SYNCHRONIZED status. For more information about availability modes, see [Differences between availability modes for an Always On availability group](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups).
+A successful automatic failover of the availability group requires all availability databases be in the `SYNCHRONIZED` status. For more information about availability modes, review the following link:
 
+[Availability modes in Always On availability groups](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups)
+
+## Case 4: Unable to failover, 'Force Protocol Encryption' configuration has been selected for the client protocols
+
+To check for this configuration:  
+
+1. Launch SQL Server Configuration Manager.  
+1. In **left** pane, right-click the **SQL Native Client 11.0 Configuration** and choose **Properties**.  
+1. In dialog check **Force Encryption**, if set to **Yes**, change to **No**.
+1. Retest failover.  
+
+:::image type="content" source="media/troubleshooting-automatic-failover-problems/sql-config.png" alt-text="Screenshot of the SQL Native Client 11.0 Configuration properties in SQL Server Configuration Manager." border="false":::
+
+Conclusion
+
+SQL Server Always On health monitoring uses a local ODBC connection to monitor SQL Server health. **Force Protocol Encryption** should only be enabled in the Client Configuration section of SQL Server Configuration Manager, if SQL Server itself has been configured to Force Encryptions in SQL Server Configuration Manager under the S**QL Server Network Configuration** section. For more information, see: [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine).

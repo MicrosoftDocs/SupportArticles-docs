@@ -3,21 +3,21 @@ title: Error when burning files to disc
 description: Provides a resolution to an error that occurs when burning files to disc
 ms.date: 09/14/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, match
-ms.prod-support-area-path: File Explorer/Windows Explorer
+ms.custom: sap:file-explorer/windows-explorer, csstroubleshoot
 ms.technology: windows-client-shell-experience
 ---
 # You may receive an error when burning files to disc
 
 This article provides a resolution to an error that occurs when burning files to disc.
 
-_Original product version:_ &nbsp; Windows 8  
+_Applies to:_ &nbsp; Windows 8  
 _Original KB number:_ &nbsp; 2748977
 
 ## Symptoms
@@ -35,7 +35,7 @@ Consider the following scenario:
   
 After you do this, you receive the following error message:
 
-![Screenshot of error message](./media/error-when-burning-files-to-disc/burn-to-disc.PNG)
+:::image type="content" source="media/error-when-burning-files-to-disc/burn-to-disc.png" alt-text="Screenshot of the error message: There was a problem burning this disc. The disc might no longer be usable." border="false":::
 
 ## Cause
 

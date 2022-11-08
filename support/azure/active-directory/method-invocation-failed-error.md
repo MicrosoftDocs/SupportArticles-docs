@@ -2,8 +2,9 @@
 title: Method invocation failed error when you run Azure PowerShell cmdlets
 description: Discusses that you receive an error message when you run Azure PowerShell cmdlets. Provides a resolution.
 ms.date: 05/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: domain-services
 ---
 # Error when you run Azure PowerShell cmdlets: Method invocation failed
 
@@ -31,3 +32,5 @@ To resolve this problem, do either of the following:
 
 - Install the latest version of Azure PowerShell. To upgrade the program, see [How to install and configure Azure PowerShell](/powershell/azure).
 - Make sure that you are using the correct method name.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

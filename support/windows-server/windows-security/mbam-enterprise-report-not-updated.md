@@ -4,20 +4,20 @@ description: pProvides a solution to an issue where Microsoft BitLocker Administ
 ms.date: 09/18/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: manojse, kaushika
-ms.prod-support-area-path: Bitlocker
+ms.custom: sap:bitlocker, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # MBAM Enterprise Reports aren't updated
 
 This article provides a solution to an issue where Microsoft BitLocker Administration and Monitoring (MBAM) Enterprise Reports aren't updated as expected.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2620269
 
 ## Symptoms
@@ -32,13 +32,13 @@ There is always latency based on how often the MBAM client talks to the MBAM ser
 
 To get updated reports, open SQL Management Studio on the MBAM Server. Under **SQL Server Agent**, click **Jobs** and then click **Create Cache**. Right-click on **Create Cache** and click **Start Job at Step...**.
 
-![Screenshot of the Start Job at Step option](./media/mbam-enterprise-report-not-updated/start-job-at-sept.png)
+:::image type="content" source="media/mbam-enterprise-report-not-updated/start-job-at-sept.png" alt-text="Screenshot of the Microsoft SQL Server Management Studio window, in which CreateCache is selected under the Jobs folder.":::
 
 Once the Job is completed, refresh the web page for MBAM Enterprise Reports and you will see all the computers listed.
 
-![Screenshot of job status](./media/mbam-enterprise-report-not-updated/jobs-status.png)
+:::image type="content" source="media/mbam-enterprise-report-not-updated/jobs-status.png" alt-text="Screenshot of the Start Jobs window, in which Start Job CreateCache and Execute job CreateCache are in Success status.":::
 
-![Screenshot of MBAM Enterprise Reports](./media/mbam-enterprise-report-not-updated/mbam-enterprise-report.png)
+:::image type="content" source="media/mbam-enterprise-report-not-updated/mbam-enterprise-report.png" alt-text="Screenshot of the MBAM Enterprise Reports in the BitLocker Administration and Monitoring window.":::
 
 ## References
 

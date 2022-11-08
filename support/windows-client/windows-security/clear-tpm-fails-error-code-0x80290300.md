@@ -1,24 +1,24 @@
 ---
 title: Clear TPM fails with error code 0x80290300
 description: Fixes the error code 0x80290300 that occurs when you clear TPM information.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Secure Boot and UEFI
+ms.custom: sap:secure-boot-and-uefi, csstroubleshoot
 ms.technology: windows-client-security
 ---
 # Clear TPM fails with error code: 0x80290300
 
 This article helps fix the error code 0x80290300 that occurs when you try to clear the TPM information.
 
-_Original product version:_ &nbsp;Window 10 – all editions  
-_Original KB number:_ &nbsp;2561178
+_Applies to:_ &nbsp; Window 10 – all editions  
+_Original KB number:_ &nbsp; 2561178
 
 ## Symptoms
 
@@ -26,7 +26,7 @@ On certain laptops or notebooks, when you attempt to clear TPM information you m
 
 > 0x80290300: A general error was detected when attempting to acquire the BIOS's response to a Physical Presence command.
 
-![Can't clear the TPM error.](./media/clear-tpm-fails-error-code-0x80290300/clear-tpm.png)
+:::image type="content" source="media/clear-tpm-fails-error-code-0x80290300/clear-tpm.png" alt-text="Screenshot of the Cannot clear the TPM error." border="false":::
 
 ## Cause
 

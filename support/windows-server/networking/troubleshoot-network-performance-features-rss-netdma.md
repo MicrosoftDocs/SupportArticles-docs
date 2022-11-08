@@ -4,21 +4,21 @@ description: Some networking improvements that were first released in the Window
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: whall, kaushika
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---
 # How to troubleshoot advanced network performance features such as RSS and NetDMA
 
 This article troubleshoots some networking improvements that were first released in the Windows Server 2003 Scalable Networking Pack. Because they may cause slow or intermittent network performance if the network drivers that are being used are old or don't support the new features.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2643970
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2643970
 
 ## Summary
 
@@ -78,7 +78,7 @@ You can find the date and version of the network driver. To do this, follow thes
 
 The **Driver**  tab has the following information:
 
-![Network adapter driver information ](./media/troubleshoot-network-performance-features-rss-netdma/driver-tab-info.jpg)
+:::image type="content" source="media/troubleshoot-network-performance-features-rss-netdma/driver-tab-info.png" alt-text="Screenshot of the Device Manager pane under Computer Management with a network adapter properties window opened, which shows the Driver information.":::
 
 For Windows Server 2003, follow these steps to access Device Manager:
 
@@ -88,11 +88,11 @@ For Windows Server 2003, follow these steps to access Device Manager:
 
 If updating the network drivers doesn't work, you might want to try disabling the improved features and see whether the issue resolves. Use this as a last resort or a troubleshooting step and not as the solution unless your network adapter was confirmed not to support the features in question. The improved networking features can be enabled or disabled in the operating system and also in the network adapter's advanced settings. Here you can see the **Advanced** tab in the network adapter properties that shows the TCP Connection Offload and Receive Side Scaling (RSS) settings.
 
-![TCP Connection Offload- RSS settings ](./media/troubleshoot-network-performance-features-rss-netdma/tcp-connection-offload-rss-settings.png)
+:::image type="content" source="media/troubleshoot-network-performance-features-rss-netdma/tcp-connection-offload-rss-settings.png" alt-text="Screenshot of the Server Manager window with a network adapter properties window opened, which shows the TCP Connection Offload and Receive Side Scaling (RSS) settings in the Advanced tab." border="false":::
 
 To see the settings for the operating system, use net shell command `netsh interface tcp show global` command as follows:
 
-![netsh global command ](./media/troubleshoot-network-performance-features-rss-netdma/netsh-interface-tcp-show-global-cmd.png)
+:::image type="content" source="media/troubleshoot-network-performance-features-rss-netdma/netsh-interface-tcp-show-global-cmd.png" alt-text="Screenshot of the output of the netsh interface tcp show global command." border="false":::
 
 You can check the following two other settings that affect TCPchimney offloading:
 
@@ -105,7 +105,7 @@ These commands enable TCP offloading to be set up specifically for a certain app
 > [!NOTE]
 > This operation requires elevated privileges (Run as administrator).
 
-![chimney settings ](./media/troubleshoot-network-performance-features-rss-netdma/netsh-cmd-output.png)
+:::image type="content" source="media/troubleshoot-network-performance-features-rss-netdma/netsh-cmd-output.png" alt-text="Screenshot of the netsh command output which shows the chimney settings." border="false":::
 
 If they're blank, no applications or ports were added to the chimney offload settings.
 

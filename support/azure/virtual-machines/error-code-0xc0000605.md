@@ -2,8 +2,10 @@
 title: Winload.exe error code 0xc0000605 on an Azure VM
 description: Describes a Winload.exe error (0xc0000605) that occurs on an Azure virtual machine (VM).
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: jarrettr
+ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
+ms.collection: windows
 ---
 # Winload.exe error code 0xc0000605 on an Azure VM
 
@@ -31,4 +33,6 @@ Unfortunately, there's no way to fix this issue. You must redeploy the VM with t
 
 For the images provided in Azure Marketplace, you can find the trial period information in the description of the image:
 
-:::image type="content" source="media/error-code-0xc0000605/4016729_en_2.png" alt-text="Screenshot of Azure Marketplace":::
+:::image type="content" source="media/error-code-0xc0000605/trial-period-information.png" alt-text="Screenshot shows the trial period information of SharePoint Server 2016 in Azure Marketplace." border="false":::
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

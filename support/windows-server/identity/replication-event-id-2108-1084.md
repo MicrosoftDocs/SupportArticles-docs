@@ -4,20 +4,20 @@ description: Documents steps to troubleshoot and to resolve two specific events 
 ms.date: 10/16/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Active Directory replication event IDs 2108 and 1084 occur during inbound replication of Active Directory Domain Services
 
 This article provides a solution to an issue where you get event IDs 2108 and 1084 when inbound replication of the Active Directory Domain Services (AD DS) occurs.
 
-_Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 837932
 
 ## Symptoms

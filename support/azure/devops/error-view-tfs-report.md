@@ -2,8 +2,8 @@
 title: Error when you view a report
 description: This article provides a resolution for the problem that occurs when you attempt to view a TFS report in SQL Server Reporting Services.
 ms.date: 09/25/2020
-ms.prod-support-area-path: Server Administration
-ms.prod: devops
+ms.custom: sap:Server Administration
+ms.service: azure-devops-server
 ---
 # Error browsing Microsoft Team Foundation Server reports
 
@@ -66,6 +66,8 @@ Using the SSRS web site, ensure the two TFS Data Sources point to the proper Dat
 
 > [!NOTE]
 > You will need to provide the password for the credentials being used by each Data Source before you can apply any changes made.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
 
 ## Disclaimer
 

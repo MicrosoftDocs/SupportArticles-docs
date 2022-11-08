@@ -1,24 +1,24 @@
 ---
-title: Error when you access an administrative share on a Windows Vista-based computer 
+title: Error when you access an administrative share on a Windows Vista-based computer
 description: Describes a logon unsuccessful behavior when you try to access an administrative share on a Windows Vista-based computer from another Windows Vista-based computer that's a member of a workgroup.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
-ms.technology: windows-client-networking 
+ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
+ms.technology: windows-client-networking
 ---
 # Error when you try to access an administrative share on a Windows Vista-based computer from another Windows Vista-based computer that's a member of a workgroup: Logon unsuccessful: Windows is unable to log you on
 
 This article describes a logon unsuccessful behavior when you try to access an administrative share on a Windows Vista-based computer from another Windows Vista-based computer that's a member of a workgroup.
 
-_Original product version:_ &nbsp;Windows Vista  
-_Original KB number:_ &nbsp;947232
+_Applies to:_ &nbsp; Windows Vista  
+_Original KB number:_ &nbsp; 947232
 
 Support for Windows Vista without any service packs installed ended on April 13, 2010. To continue receiving security updates for Windows, make sure you're running Windows Vista with Service Pack 2 (SP2). For more information, see this Microsoft web page: [Support is ending for some versions of Windows](https://windows.microsoft.com/windows/help/end-support-windows-xp-sp2-windows-vista-without-service-packs).
 

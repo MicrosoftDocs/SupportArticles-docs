@@ -3,29 +3,29 @@ title: Some .CHM files may not render properly on Windows Vista and Windows 7
 description: This article describes the fixing steps for some .CHM file not render properly.
 ms.date: 09/10/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: File Explorer/Windows Explorer
+ms.custom: sap:file-explorer/windows-explorer, csstroubleshoot
 ms.technology: windows-client-shell-experience
 ---
 # Some .CHM files may not render properly on Windows Vista and Windows 7
 
 This article provides the steps for fixing the issue that some .CHM files do not render properly.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2021383
 
 ## Symptoms
 
 When attempting to open a Compiled HTML Help (.CHM) file on Windows Vista or Windows 7, the file may open but display one of the following messages instead of the expected content:
 
-- Navigation to the webpage was canceled.
-- Action canceled.
+- > Navigation to the webpage was canceled.
+- > Action canceled.
 
 ## Cause
 
@@ -35,9 +35,9 @@ This will occur if the .CHM file has been flagged as downloaded from an untruste
 
 To resolve this issue, carry out the following steps:
 
-1. Right-click the .CHM file and choose Properties
-2. On the General tab, click the button labeled "Unblock"
-3. Click OK
+1. Right-click the .CHM file and choose **Properties**.
+2. On the **General** tab, click the button labeled **Unblock**.
+3. Click **OK**.
 
 ## More information
 

@@ -2,8 +2,9 @@
 title: Troubleshoot account lockout in AD FS on Windows Server
 description: Fixes the account lockout issue that occurs in Microsoft Active Directory Federation Services (AD FS) on Windows Server.
 ms.date: 06/08/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: authentication
 ---
 # Troubleshoot account lockout in AD FS on Windows Server
 
@@ -29,23 +30,22 @@ Refer to the information in [this article](/azure/active-directory/connect-healt
 
 To collect event logs, you first must configure AD FS servers for auditing. If you have a load balancer for your AD FS farm, you must enable auditing on each AD FS server in the farm. Auditing does not have to be configured on the Web Application Proxy servers.
 
-To configure AD FS servers for auditing, you can use the one of the following methods:
+To configure AD FS servers for auditing, you can use the following method:
 
-- [Use AD FS Scenario Auditing (AD FSReproAuditing.ps1)](https://gallery.technet.microsoft.com/scriptcenter/ADFS-Scenario-Auditing-01722fbc?redir=0)
 - [Manually configure AD FS servers for auditing](https://technet.microsoft.com/library/cc738766%28v=ws.10%29.aspx)
 
 ### Step 2: Search the AD FS logs
 
 For Windows Server 2012 R2 or Windows Server 2016 AD FS, search all AD FS Servers' security event logs for "Event ID 411 Source AD FS Auditing" events. Be aware of the following information about "411 events":
 
-- You can download the [AD FS Account Lockout and Bad Cred Search (AD FSBadCredsSearch.ps1)](https://gallery.technet.microsoft.com/scriptcenter/ADFS-Account-Lockout-and-2d9a9a90) PowerShell script to search your AD FS servers for "411" events. The script provides a CSV file that contains the UserPrincipalName, IP address of the submitter, and time of all bad credential submissions to your AD FS farm. Open the CSV file in Excel, and quickly filter by user name, IP address, or time.
+- You can download the [ADFS Account Lockout and Bad Cred Search (AD FSBadCredsSearch.ps1)](#adfs-account-lockout-and-bad-cred-search)PowerShell script to search your AD FS servers for "411" events. The script provides a CSV file that contains the UserPrincipalName, IP address of the submitter, and time of all bad credential submissions to your AD FS farm. Open the CSV file in Excel, and quickly filter by user name, IP address, or time.
 - These events contain the user principal name (UPN) of the targeted user.
 - These events contain a message "token validation failed" message that states whether the event indicates a bad password attempt or an account lockout.
 - If the server has "411" events displayed but the IP address field isn't in the event, make sure that you have the latest AD FS hotfix applied to your servers. For more information, see [MS16-020: Security update for Active Directory Federation Services to address denial of service: February 9, 2016](https://support.microsoft.com/help/3134222/ms16-020-security-update-for-active-directory-federation-services-to-a).
 
 For Windows Server 2008 R2 or Windows Server 2012 AD FS, you won't have the necessary Event 411 details. Instead, download and run the following PowerShell script to correlate security events 4625 (bad password attempts) and 501 (AD FS audit details) to find the details about the affected users.
 
-- You can download the [ADFS Security Audit Events Parser (ADFSSecAuditParse.ps1](https://gallery.technet.microsoft.com/scriptcenter/ADFS-Security-Audit-Events-81c207cf?redir=0)) PowerShell script to search your AD FS servers for events. The script provides a CSV file that contains the UserPrincipalName, IP address of the submitter, and time of all bad credential submissions to your AD FS farm.
+- You can download the [ADFS Security Audit Events Parser (ADFSSecAuditParse.ps1)](#adfs-security-audit-events-parser) PowerShell script to search your AD FS servers for events. The script provides a CSV file that contains the UserPrincipalName, IP address of the submitter, and time of all bad credential submissions to your AD FS farm.
 - You can also use this method to investigate which connections are successful for the users in the "411" events. You can search the AD FS "501" events for more details.
 - When you run the PowerShell script to search the events, pass the UPN of the user who is identified in the "411" events, or search by account lockout reports.
 - The IP address of the malicious submitters is displayed in one of two fields in the "501" events.
@@ -89,9 +89,9 @@ Make sure that extranet lockout and internal lockout thresholds are configured c
 
 We recommend that you enable modern authentication, certificate-based authentication, and the other features that are listed in this step to lower the risk of brute force attacks.
 
-**Deploy modern authentication** 
+**Deploy modern authentication**
 
-In addition to removing one of the attack vectors that are currently being used through Exchange Online, deploying modern authentication for your Office client applications enables your organization to benefit from multi-factor authentication. Modern authentication is supported by all the latest Office applications across the Windows, iOS, and Android platforms.
+In addition to removing one of the attack vectors that are currently being used through Exchange Online, deploying modern authentication for your Office client applications enables your organization to benefit from multifactor authentication. Modern authentication is supported by all the latest Office applications across the Windows, iOS, and Android platforms.
 
 For more information, see [How to deploy modern authentication for Office 365](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a#bk_getstarted).
 
@@ -118,7 +118,6 @@ The following non-password-based authentication types are available for AD FS an
     |---|---|
     |Using Azure MFA as additional authentication over the extranet|Adding Azure MFA or any additional authentication provider to AD FS and requiring that the additional method be used for extranet requests protects your accounts from access by using a stolen or brute-forced password. This can be done in AD FS 2012 R2 and 2016.|
     |Using Azure MFA as primary authentication|This is a new capability in AD FS 2016 to enable password-free access by using Azure MFA instead of the password. This guards against both password breaches and lockouts.|
-    |||
 
     For more information about how to configure Azure MFA by using AD FS, see [Configure AD FS 2016 and Azure MFA](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/configure-ad-fs-2016-and-azure-mfa)
 
@@ -126,7 +125,7 @@ The following non-password-based authentication types are available for AD FS an
 
     Windows Hello for Business is available in Windows 10. Windows Hello for Business enables password-free access from the extranet, based on strong cryptographic keys that are tied to both the user and the device.
 
-    Hello for Business is supported by AD FS in Windows Server 2016. see [Authenticating identities without passwords through Windows Hello for Business](/azure/active-directory/active-directory-azureadjoin-passport).  
+    Windows Hello for Business is supported by AD FS in Windows Server 2016. See [Authenticating identities without passwords through Windows Hello for Business](/azure/active-directory/active-directory-azureadjoin-passport).  
 
 ##### Step 3: Disable legacy authentication and unused endpoints
 
@@ -148,3 +147,128 @@ To resolve this issue, check the service account configuration in the service or
 ## Clear cached credentials in the application
 
 If user credentials are cached in one of the applications, repeated authentication attempts can cause the account to become locked. To resolve this issue, clear the cached credentials in the application. Check whether the issue is resolved.
+
+## ADFS Account Lockout and Bad Cred Search
+
+```
+PARAM ($PastDays = 1, $PastHours)
+#************************************************
+# ADFSBadCredsSearch.ps1
+# Version 1.0
+# Date: 6-20-2016
+# Author: Tim Springston [MSFT]
+# Description: This script will parse the ADFS server's (not proxy) security ADFS
+#  for events which indicate an incorrectly entered username or password. The script can specify a
+#  past period to search the log for and it defaults to the past 24 hours. Results will be placed into a CSV for 
+#  review of UPN, IP address of submitter, and timestamp.
+#************************************************
+
+cls
+if ($PastHours -gt 0)
+ {$PastPeriod = (Get-Date).AddHours(-($PastHours))}
+ else
+  {$PastPeriod = (Get-Date).AddDays(-($PastDays)) }
+$Outputfile = $Pwd.path + "\BadCredAttempts.csv"
+$CS = get-wmiobject -class win32_computersystem
+$Hostname = $CS.Name + '.' + $CS.Domain
+$Instances = @{}
+$OSVersion = gwmi win32_operatingsystem
+[int]$BN = $OSVersion.Buildnumber 
+if ($BN -lt 9200){$ADFSLogName = "AD FS 2.0/Admin"}
+ else {$ADFSLogName = "AD FS/Admin"}
+
+$Users = @()
+$IPAddresses = @()
+$Times = @()
+$AllInstances = @()
+Write-Host "Searching event log for bad credential events..."
+if ($BN -ge 9200) {Get-Winevent  -FilterHashTable @{LogName= "Security"; StartTime=$PastPeriod; ID=411} -ErrorAction SilentlyContinue | Where-Object  {$_.Message -match "The user name or password is incorrect"} |  % {
+ $Instance = New-Object PSObject
+ $UPN = $_.Properties[2].Value
+ $UPN = $UPN.Split("-")[0]
+ $IPAddress = $_.Properties[4].Value
+ $Users += $UPN
+ $IPAddresses += $IPAddress
+ $Times += $_.TimeCreated
+ add-member -inputobject $Instance -membertype noteproperty -name "UserPrincipalName" -value $UPN
+ add-member -inputobject $Instance -membertype noteproperty -name "IP Address" -value $IPAddress
+ add-member -inputobject $Instance -membertype noteproperty -name "Time" -value ($_.TimeCreated).ToString()
+ $AllInstances += $Instance
+ $Instance = $null
+ }
+}
+
+
+$AllInstances | select * | Export-Csv -Path $Outputfile -append -force -NoTypeInformation 
+Write-Host "Data collection finished. The output file can be found at $outputfile`."
+$AllInstances = $null
+
+
+```
+
+## ADFS Security Audit Events Parser
+
+```
+PARAM ($SearchCriteria, $PastDays = 1, $PastHours)
+#************************************************
+# ADFSSecAuditParse.ps1
+# Version 1.0
+# Date: 2-2-2016
+# Author: Tim Springston [MSFT]
+# Description: This script will parse an ADFS Security event log file (EVTX)
+#  and search for audit events related to a specific user or other criteria.
+#  The script will work for the each ADFS login instance for a given criteria during a stated time frame.
+#  If you need to locate a second then filter and save the event log to focus in.
+# Return an array of initial instance IDs with the criteria, run the search function against each and output
+# a unique text file for each.
+#************************************************
+
+cls
+if ($PastHours -gt 0)
+ {
+ $PastPeriod = (Get-Date).AddHours(-($PastHours))
+ }
+ else
+  {$PastPeriod = $PastDays}
+ 
+$CS = get-wmiobject -class win32_computersystem
+$Hostname = $CS.Name + '.' + $CS.Domain
+$Instances = @()
+Get-Winevent -ComputerName $Hostname -LogName Security  | Where-Object {(($_.ID -eq 501) `
+-and ($_.Properties.Value -contains $SearchCriteria) -and ($_.TimeCreated -gt $PastPeriod))} | % { $Instances += $_.Properties[0].Value}
+
+function FindADFSAuditEvents  { 
+ param ($valuetomatch, $counter, $instance, $PastPeriod)
+  $Results = $pwd.Path + "\" + $SearchCriteria + "-ADFSSecAudit" + '-' + $Counter + ".txt" 
+  $SearchString = $SearchCriteria + " and instance " + $Instance + " in Security event log."
+  "Security Audit Events which match $SearchString" | Out-File $Results -Encoding UTF8 
+  Get-WinEvent -ComputerName $Hostname -LogName Security  -WarningAction SilentlyContinue | `
+  Where-Object -ErrorAction SilentlyContinue {($_.TimeCreated -gt $PastPeriod) -and (($_.Properties -contains $ValueToMatch) -or ($_.Properties[0].Value -match $Instance))}  | % {
+  $Event = New-object PSObject
+  add-member -inputobject $Event -membertype noteproperty -name "Event ID" -value $_.ID
+  add-member -inputobject $Event -membertype noteproperty -name "Provider" -value $_.ProviderName
+  add-member -inputobject $Event -membertype noteproperty -name "Machine Name" -value $_.MachineName
+  add-member -inputobject $Event -membertype noteproperty -name "User ID" -value $_.UserID
+  add-member -inputobject $Event -membertype noteproperty -name "Time Created " -value $_.TimeCreated  
+  $Event | FL *
+  $Event | Out-File $Results -Encoding UTF8  -Append
+  $_.Properties | FL *
+  $_.Properties | Out-File $Results -Encoding UTF8  -Append
+  $DateTimeExport = $_.TimeCreated
+  }
+ $DateTime = (($DateTimeExport.ToShortDateString()).Replace('/','-') + '@' + (($DateTimeExport.ToShortTimeString()).Replace(' ','')))
+ $DateTime = $DateTime.Replace(':','')
+ $Results2 = $pwd.Path + "\" + $SearchCriteria + '-' + $DateTime + "-ADFSSecAudit" + $Counter + ".txt"
+ Rename-Item -Path $Results -NewName $Results2
+ } 
+
+$Counter = 1
+foreach ($instance in $Instances)
+ {
+ FindADFSAuditEvents -ValueToMatch $SearchCriteria  -Instance $Instance -PastPeriod $PastPeriod -Counter $Counter
+ $Counter++
+ }
+
+```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
