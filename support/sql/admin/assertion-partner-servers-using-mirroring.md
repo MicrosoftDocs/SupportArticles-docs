@@ -1,9 +1,10 @@
 ---
 title: You might encounter a result == LCK_OK assertion on a SQL Server mirror server  
 description: This article provides a workaround for the problem that can occur on a partner server when using SQL Server mirroring architecture.
-ms.date: 11/07/2022
+ms.date: 11/08/2022
 ms.custom: sap:Administration and Management
 author: ramakoni1
+ms.author: v-jayaramanp
 ms.prod: sql
 ---
 
