@@ -69,6 +69,8 @@
     items:
     - name: SQL Server startup issues
       items:
+      - name: SQL Agent may not start or crash 
+        href: sql-server-agent-crashes-upon-start.md
       - name: SQL Server startup errors
         href: admin/sql-server-startup-errors.md
       - name: Access is denied error and SQL Server doesn't start
