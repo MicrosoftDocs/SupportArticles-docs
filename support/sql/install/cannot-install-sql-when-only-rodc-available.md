@@ -17,17 +17,21 @@ This article discusses an issue in which you can't install SQL Server when only 
 Consider the following scenario:
 - You have a perimeter network (also known as a DMZ, demilitarized zone, and a screened subnet) that only has an RODC available.
 - You have a member server in the perimeter network.
-You try to install  SQL Server on the member server and use an Active Directory service account for the SQL Server service.
+You try to install SQL Server on the member server and use an Active Directory service account for the SQL Server service.
 
 In this scenario, the installation wizard fails when the installation program validates your account.
 
 ## Cause
 
-When you log on to a computer for the first time and try to encrypt data , the operating system creates a preferred Data Protection Application Programming Interface (DPAPI) MasterKey, which is based on your current password. During the creation of the DPAPI MasterKey, an attempt is made to back up this master key by contacting an RWDC. If the backup fails, the MasterKey cannot be created, and this results in failure.
+When you log on to a computer for the first time and try to encrypt data, the operating system creates a preferred Data Protection Application Programming Interface (DPAPI) MasterKey, which is based on your current password. During the creation of the DPAPI MasterKey, an attempt is made to back up this master key by contacting an RWDC. If the backup fails, the MasterKey can't be created, and this results in failure.
 
 ## Workaround
 
-To work around this issue, use the built-in account to install SQL Server. Then, change the account that is used for the services to an Active Directory service account. For other resolutions and additional information, see [DPAPI MasterKey backup failures](../../windows-server/identity/dpapi-masterkey-backup-failures.md).
+To work around this issue perform the following:
+1. Use the built-in account to install SQL Server.
+1. Change the account that is used for the services to an Active Directory service account.
+
+For other resolutions and additional information, see [DPAPI MasterKey backup failures](../../windows-server/identity/dpapi-masterkey-backup-failures.md).
 
 ## References
 
