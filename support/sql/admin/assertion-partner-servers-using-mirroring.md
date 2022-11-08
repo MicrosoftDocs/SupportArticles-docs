@@ -19,7 +19,7 @@ _Original KB number:_ &nbsp; 2729953
 
 In SQL Server mirroring architecture, you might encounter a SQL Server assertion check failure on the partner (mirror) server. In such a case, check the SQL Server error log for details. In the log, you will find an error message that resembles the following message. This error usually means that you must rebuild the mirror pair.
 
-> SQL Server Assertion: File: loglock.cpp, line=834 Failed Assertion = 'result == LCK_OK' . This error may be timing related. If the error persists after re-running the statement, use DBCC CHECKDB to check the database for structural integrity, or restart the server to ensure in-memory data structures are not corrupted. 
+> SQL Server Assertion: File: loglock.cpp, line=834 Failed Assertion = 'result == LCK_OK' . This error may be timing related. If the error persists after re-running the statement, use DBCC CHECKDB to check the database for structural integrity, or restart the server to ensure in-memory data structures are not corrupted.
 >
 > Error: 3624, Severity: 20, State: 1.
 
