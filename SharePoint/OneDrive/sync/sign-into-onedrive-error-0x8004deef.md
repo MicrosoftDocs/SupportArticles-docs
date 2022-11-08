@@ -17,11 +17,11 @@ search.appverid:
   - MET150
 ms.date: 11/3/2022
 ---
-# Error 0x8004deef when signing in to OneDrive
+# "0x8004deef" error when signing in to OneDrive
 
 ## Symptoms
 
-You can't sign in to Microsoft OneDrive, and receive the following error message:  
+When you try to sign in to Microsoft OneDrive, you can't sign in, and you receive the following error message:  
 
 > You don't have access to this service. For help, contact your IT department. (Error code: 0x8004deef)
 
@@ -35,7 +35,7 @@ To resolve this issue, try the following methods. 
 
 ### Method 1: Make sure that the account has a valid license assigned
 
-Depending on how your organization purchased OneDrive for users, you might no longer have a OneDrive license assigned, or the license might have expired.
+Depending on how your organization purchased OneDrive for users, you might no longer have a OneDrive license assigned, or the license might be expired.
 
 **Note:** The following steps must be completed by a Microsoft 365 administrator in your organization.  
 
@@ -45,7 +45,7 @@ Depending on how your organization purchased OneDrive for users, you might no lo
 1. Expand the **Licenses** section, and make sure that a OneDrive license is assigned to the user.  
 
 > [!NOTE]
-> If multiple users experience the issue, it means that the subscription might have expired. To check the subscription status, open the [Microsoft 365 admin center](https://admin.microsoft.com/AdminPortal/Home#/subscriptions), and then select **Billing** > **Your products**.  
+> If multiple users experience the issue, it means that the subscription might be expired. To check the subscription status, open the [Microsoft 365 admin center](https://admin.microsoft.com/AdminPortal/Home#/subscriptions), and then select **Billing** > **Your products**.  
 
 ### Method 2: Remove the cached account identities
 
