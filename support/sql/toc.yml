@@ -369,12 +369,15 @@
       href: replication/skiperrors-parameter-distribution-agent.md
     - name: Snapshot or Logreader agents fail
       href: replication/snapshot-logreader-agents-fail-destination-table-empty.md
+    - name: Subscription Streams
+      href: replication/configure-troubleshoot-subscriptionstreamsof-distribution-agent.md
     - name: Synchronization for merge replication fails
       href: replication/sql-merge-replication-synchronization-fails.md
     - name: The subscription does not exist
       href: replication/subscription-does-not-exist-error.md
     - name: Update is replicated as DELETE/INSERT pairs
       href: replication/update-statements-replicated-as-delete-insert.md
+
   - name: Security Issues
     items:
     - name: Block remote use of local accounts in Windows
