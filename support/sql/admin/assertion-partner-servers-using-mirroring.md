@@ -1,5 +1,5 @@
 ---
-title: You might encounter a result == LCK_OK assertion on a SQL Server mirror server  
+title: An assertion failure occurs on a SQL Server mirror server  
 description: This article provides a workaround for the problem that can occur on a partner server when using SQL Server mirroring architecture.
 ms.date: 11/08/2022
 ms.custom: sap:Administration and Management
@@ -8,7 +8,7 @@ ms.author: v-jayaramanp
 ms.prod: sql
 ---
 
-# You might encounter a 'result == LCK_OK' assertion on a SQL Server mirror server
+# Assertion failure on a mirror server when using SQL Server mirroring architecture
 
 This article discusses a Microsoft SQL Server assertion failure that can occur on a partner server when using SQL Server mirroring architecture.
 
@@ -30,7 +30,7 @@ Typically, an assertion failure is caused by a software bug or data corruption. 
 
 ## Cause
 
-This issue may occur in different scenarios. Each scenario has a different cause and resolution, and each scenario may cause the same error message and assertion.
+This issue may occur in different scenarios. Each scenario has a different cause and resolution, and each scenario may cause the same error message and assertion failure.
 
 > [!NOTE]
 > - Although the error signature seems to be very specific, the actual error is caused by an assertion that failed. For example, the error could be caused by an assertion that performs a proactive check in the SQL Server code that validates *healthy* conditions to fail as cleanly as possible instead of causing a process-wide crash.
