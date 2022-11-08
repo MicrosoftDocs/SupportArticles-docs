@@ -32,7 +32,7 @@ Outlook supports event reminders for a mailbox only if you add the Microsoft Exc
 
 ## Workaround
 
-To enable event reminders for the mailbox, follow these steps:
+To enable event reminders, follow these steps:
 
 1. Remove the automapped or additional mailbox from your Outlook profile:
 
