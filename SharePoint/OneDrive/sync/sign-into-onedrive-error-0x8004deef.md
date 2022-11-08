@@ -69,7 +69,7 @@ Depending on how your organization purchased OneDrive for users, you might no lo
 If you still experience the issue, follow these steps to remove the folders that contain cached credentials:
 
 1. Sign out of OneDrive.
-2. Remove all folders in the following locations:  
+2. Remove all subfolders in the following folders：
 
     - *%localappdata%/Microsoft/OneAuth*
     - *%localappdata%/Microsoft/IdentityCache*
