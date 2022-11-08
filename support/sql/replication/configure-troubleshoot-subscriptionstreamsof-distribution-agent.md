@@ -13,13 +13,13 @@ ms.prod: sql
 _Original product version:_ &nbsp; SQL Server (all supported versions)  
 _Original KB number:_ &nbsp; 953199
 
-This article provides more information about this parameter, best practices when using this parameter, and associated troubleshooting.
+This article provides more information about the parameter `SubscriptionStreams`, best practices when using this parameter, and associated troubleshooting.
 
 ## Introduction
 
-The parameter `SubscriptionStreams` can be used to control the number of connections. In a transactional replication in Microsoft SQL Server, you can use the parameter to enable multiple connections that the Distribution Agent uses to apply batches of changes in parallel to a subscriber. This operation greatly enhances replication throughput. At the same time, the Distribution Agent can still maintain many of the same transactional characteristics as when the Distribution Agent uses a single connection to apply the changes. If one of the connections fails to execute or commit, all connections will abort the current batch, and the agent will use a single stream to retry the failed batches. Before this retry phase completes, there can be temporary transactional inconsistencies at the Subscriber. After the failed batches are successfully committed, the Subscriber is brought back to a state of transactional consistency.
+The parameter `SubscriptionStreams` can be used to control the number of connections. In a transactional replication in Microsoft SQL Server, you can use the parameter to enable multiple connections that the Distribution Agent uses to apply batches of changes in parallel to a Subscriber. This operation greatly enhances replication throughput. At the same time, the Distribution Agent can still maintain many of the same transactional characteristics as when the Distribution Agent uses a single connection to apply the changes. If one of the connections fails to execute or commit, all connections will abort the current batch, and the agent will use a single stream to retry the failed batches. Before this retry phase completes, there can be temporary transactional inconsistencies at the Subscriber. After the failed batches are successfully committed, the Subscriber is brought back to a state of transactional consistency.
 
-When you specify a value of 2 or greater for the parameter `SubscriptionStreams`, the order in which transactions are received at the subscriber may differ from the order in which they were made at the publisher. If this behavior causes constraint violations during synchronization, you should use the `NOT FOR REPLICATION` option to disable the enforcement of constraints during synchronization. For more information, see [Control Behavior of Triggers and Constraints in Synchronization](/sql/relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization).
+When you specify a value of 2 or greater for the parameter `SubscriptionStreams`, the order in which transactions are received at the Subscriber may differ from the order in which they were made at the publisher. If this behavior causes constraint violations during synchronization, you should use the `NOT FOR REPLICATION` option to disable the enforcement of constraints during synchronization. For more information, see [Control Behavior of Triggers and Constraints in Synchronization](/sql/relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization).
 
 ## Factors to consider before enabling SubscriptionStreams
 
@@ -27,17 +27,13 @@ When you specify a value of 2 or greater for the parameter `SubscriptionStream
 
 Latency from Distributor to Subscriber can be caused by many reasons like, but not limited to, the following ones:
 
-- Blocking either at Distributor or at Subscriber
-
-- Any bottleneck, either on Distributor or Subscriber, like slow disk drives, slow network bandwidth, and stale statistics  
-
+- Blocking either at Distributor or Subscriber
+- Any bottleneck, either at Distributor or Subscriber, like slow disk drives, slow network bandwidth, and stale statistics  
 - Bulk transactions coming from Publisher
-
 - Rate of incoming transactions from Publisher is too high
-
 - Triggers or unnecessary indexes in the subscribed database
 
-The Database Administrator (DBA) needs to take a call and test whether `SubscriptionStreams` is going to help them or not. For example, in case of blocking at Subscriber, increasing the number of concurrent connections won't help but might make the situation worse. Whereas in situations like, for example, the incoming transaction rate from Publisher is too high, you may deem that one single thread for the Distribution agent can't cope with the incoming load. In this case, consider increasing the value of the parameter SubscriptionStreams to >=2. Whereas in situations like the incoming transaction rate from Publisher is too high and you feel that one single thread for the Distribution Agent is unable to cope with the incoming load, you can consider increasing the value of the parameter `SubscriptionStreams` to >=2. It might also help in slow network and slow disk situations. Ideally, the max value for this parameter is 64, but the recommended value (or a good value to start with) equals the number of physical processors at the Destination (Subscriber).
+The Database Administrator (DBA) needs to take a call and test whether `SubscriptionStreams` is going to help them or not. For example, in case of blocking at Subscriber, increasing the number of concurrent connections won't help but might make the situation worse. Whereas in situations like the incoming transaction rate from Publisher is too high and you feel that one single thread for the Distribution Agent is unable to cope with the incoming load, you can consider increasing the value of the parameter `SubscriptionStreams` to >=2. It might also help in slow network and slow disk situations. Ideally, the max value for this parameter is 64, but the recommended value (or a good value to start with) equals the number of physical processors at the Destination (Subscriber).
 
 ## How to configure the parameter SubscriptionStreams
 
@@ -45,7 +41,7 @@ The Database Administrator (DBA) needs to take a call and test whether `Subscrip
 
 1. Open Replication Monitor, expand **My Publisher**, and select your publication in the left pane window. In the right pane window, under the **All Subscriptions** section, you'll see the list of all the subscribers to this publication.
 
-1. Right-click on the Subscriber that you want to enable the parameter `SubscriptionStreams` parameter and select **View Details**. A new window will pop up with the Distribution Agent session details.
+1. Right-click on the Subscriber that you want to enable the parameter `SubscriptionStreams` and select **View Details**. A new window will pop up with the Distribution Agent session details.
 
 1. On this new window, select **Action** in the menu bar at top and select **Distribution Agent Job Properties**. This will open the **Job Properties** window for the Distribution Agent.
 
@@ -66,15 +62,12 @@ We recommend that you perform load testing against the publication and subscript
 You should perform the performance baseline testing to understand the expected throughput of the disk subsystem. Before you perform each test, apply many changes to create a load at the Publisher. When creating the load, make sure that Distribution Agent doesn't run. When the replication has sufficient latency, run the Distribution Agent to test the performance for the following configurations:
 
 - Don't use the parameter `SubscriptionStreams`.
-
 - Set the value of `SubscriptionStreams` to be equal to the number of processors on the server. For example, if the server has eight processors, set the value of `SubscriptionStreams` to 8.
-
 - Specify different values for `SubscriptionStreams` to obtain the optimal configuration.
 
 When you perform the test, you can monitor the following performance counters of the Distribution Agent:
 
 - **Dist: Delivered Cmds/sec**
-
 - **Dist: Delivery Latency**
 
 ## Behavior of the Distribution Agent after you specify the parameter SubscriptionStreams
@@ -102,11 +95,8 @@ The Distribution Agent may switch to using only one session for many reasons. Th
 We highly recommend that you don't use the following database objects in the subscriber database:
 
 - Foreign key constraints
-
 - Unique nonclustered indexes
-
 - Indexed views
-
 - DML triggers that can cause blocking between sessions
 
 ## How to determine whether the Distribution Agent has switched to using only one session
@@ -118,13 +108,13 @@ To do this, use one of the following methods:
 
 - Method 1
 
-    Query the [sys.dm_exec_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql) Dynamic Management View (DMV) for the connection sessions to the subscription database. If you see only one connection session, the Distribution Agent may have switched to using one session. If you see more than one connection session, the Distribution Agent is still using the specified number of sessions.
+    Query the Dynamic Management View (DMV) [sys.dm_exec_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql) for the connection sessions to the subscription database. If you see only one connection session, the Distribution Agent may have switched to using one session. If you see more than one connection session, the Distribution Agent is still using the specified number of sessions.
 
     To confirm that the Distribution Agent has switched to using one session, use Method 2 or Method 3.
 
 - Method 2
 
-    Query the comments column of the [msdistribution_history](/sql/relational-databases/system-tables/msdistribution-history-transact-sql) table in the distribution database. If the result of the query contains the following entry, the Distribution Agent has switched to using one session:
+    Query the column `comments` of the table [msdistribution_history](/sql/relational-databases/system-tables/msdistribution-history-transact-sql) in the distribution database. If the result of the query contains the following entry, the Distribution Agent has switched to using one session:
 
     > The process failed to complete last batch in multi-streaming mode., Iit has been reset to single connection mode and is retrying the operation.
 
@@ -180,7 +170,7 @@ To do this, use one of the following methods:
 
 ## How to troubleshoot a Distribution Agent that switches to using only one session
 
-1. Run the SQL Server Profiler on the Subscriber to capture the Blocked process report event and the Exception event. These events record blocking and errors that occur when the Distribution Agent applies changes.
+1. Run the SQL Server Profiler at the Subscriber to capture the Blocked process report event and the Exception event. These events record blocking and errors that occur when the Distribution Agent applies changes.
 
     > [!NOTE]
     > The Exception event can be caused by any kind of error that may be associated with the problem. For example, the error may be caused by a foreign key constraint violation.
@@ -191,7 +181,7 @@ To do this, use one of the following methods:
 
 1. From the output file of the Distribution Agent or from the column `start_time` of the table [msdistribution_history](/sql/relational-databases/system-tables/msdistribution-history-transact-sql), obtain the time stamp of the following entry:
 
-   > The process failed to complete the last batch in multi-streaming mode., Iit has been reset to single connection mode and is retrying the operation.
+   > The process failed to complete last batch in multi-streaming mode., Iit has been reset to single connection mode and is retrying the operation.
 
 1. Open the trace (.trc) file from the Subscriber. Locate a blocking script or an exception event whose time stamp is the same as or very close to the time stamp that you obtained in Step 4.
 
@@ -224,11 +214,11 @@ To do this, use one of the following methods:
 
     The blocking script records a blocked session and a blocking session. The blocked session starts from the tag `<blocked-process>`. The blocking session starts from the tag `<blocking-process>`.
 
-1. Locate the `Object ID` of the `Proc` object in the blocked session and in the blocking session.
+1. Locate the `Object Id` of the object `Proc` in the blocked session and in the blocking session.
 
-    In the sample blocking script, the `Object ID` of the object `Proc` in the blocked session is `2000986455`. The `Object ID` of `Proc` in the blocking session is `1172459501`.
+    In the sample blocking script, the `Object Id` of `Proc` in the blocked session is `2000986455`. The `Object Id` of `Proc` in the blocking session is `1172459501`.
 
-1. In the subscription database, query the view [sys.objects](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql) by specifying the column `object_id` to be equal to the object IDs that you obtained in Step 7. When you do this, you can determine the object names.
+1. In the subscription database, query the view [sys.objects](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql) by specifying the column `object_id` to be equal to the Object Ids that you obtained in Step 7. When you do this, you can determine the object names.
 
     For example, run the following query in the context of the subscription database:
 
@@ -242,7 +232,6 @@ To do this, use one of the following methods:
     > [!NOTE]
     >
     > - The  placeholder `<SubDBName>` represents the name of the subscription database.
-    >
     > - Usually, these objects are stored procedures that are used in the replication.
 
 1. Determine the index or the indexed view that causes blocking. To do this, follow these steps:
