@@ -20,7 +20,7 @@ _Original KB number:_ &nbsp; 2795690
 A SQL Server agent crashes when you try to start it or takes longer than expected to start. Additionally, you may experience one or more of the following scenarios:
 
 - **Scenario 1**: The following error message is logged in the System event log:
-    The service did not respond to the start or control request in a timely fashion.
+    The service didn't respond to the start or control request in a timely fashion.
 - **Scenario 2**: The status of the agent displays as "Starting" in the Control Panel, and the following error message is logged in the SQLAgent.log file:
     An idle CPU condition has not been defined - OnIdle job schedules will have no effect.
 
@@ -75,11 +75,13 @@ This issue occurs because there are multiple job entries in SQL Server.
 > The issue can also occur if you unintentionally set up multiple subscriptions for your reports in the Reporting Services Configuration Manager.
 
 ## Workaround
+
 To work around this issue, delete the jobs that you don't require.
 
 > [!NOTE]
 > If there are many job entries because you unintentionally set up many subscriptions, delete the unnecessary subscriptions by using Reporting Services Configuration Manager.
 
-## More Information
-For more information about how to delete a job, see [Delete One or More Jobs](/sql/ssms/agent/delete-one-or-more-jobs?view=sql-server-ver16).
-For more information on managing your reporting services subscriptions, see [Create and Manage Subscriptions for Native Mode Report Servers](/sql/reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers?redirectedfrom=MSDN&view=sql-server-ver16).
+## More information
+
+For more information about how to delete a job, see [Delete One or More Jobs](/sql/ssms/agent/delete-one-or-more-jobs?view=sql-server-ver16&preserve-view=true).
+For more information on managing your reporting services subscriptions, see [Create and Manage Subscriptions for Native Mode Report Servers](/sql/reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers?redirectedfrom=MSDN&view=sql-server-ver16&preserve-view=true).

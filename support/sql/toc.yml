@@ -92,7 +92,7 @@
       - name: Event ID 7000 and SQL Server doesn't start
         href: admin/event-id-7000-fail-start.md
     - name: SQL Agent may not start or crash 
-      href: sql-server-agent-crashes-upon-start.md
+      href: admin/sql-server-agent-crashes-upon-start.md
     - name: 1450 and 665 errors when running DBCC CHECKDB
       href: admin/1450-and-665-errors-running-dbcc-checkdb.md
     - name: Generate a script to create a statistics-only database
