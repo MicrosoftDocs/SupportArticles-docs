@@ -21,10 +21,10 @@ A SQL Server agent crashes when you try to start it or takes longer than expecte
 
 - **Scenario 1**: The following error message is logged in the System event log:
     The service didn't respond to the start or control request in a timely fashion.
-- **Scenario 2**: The status of the agent displays as "Starting" in the Control Panel, and the following error message is logged in the SQLAgent.log file:
+- **Scenario 2**: The status of the agent displays as "Starting" in the Control Panel, and the following error message is logged in the *SQLAgent.log* file:
     An idle CPU condition has not been defined - OnIdle job schedules will have no effect.
 
-    Additionally, the following entries may be logged in the SQLAgent.log file:
+    Additionally, the following entries may be logged in the *SQLAgent.log* file:
 
     ```output
     <Time Stamp> - ? [431] Populating subsystems cache... \
