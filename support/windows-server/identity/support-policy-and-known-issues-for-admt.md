@@ -69,7 +69,7 @@ This section lists the most common issues that you may experience while using AD
 [Manage Windows Defender Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard-manage) provides a script that disables Credential Guard. In addition to running the script, disable the **Computer Configuration\\Administrative Templates\\System\\Device Guard\\Secure Launch Configuration** group policy object (GPO). Otherwise, the computer will re-enable Credential Guard the next time it restarts.
 
 > [!NOTE]  
-> On devices that run Windows Server, version 22H2, Credential Guard is enabled when the GPO described previously is set to **Not Configured**.
+> On devices that run Windows Server 2022, Credential Guard is enabled when the GPO described previously is set to **Not Configured**.
 
 ### Domain controllers can't use unconstrained delegation
 
