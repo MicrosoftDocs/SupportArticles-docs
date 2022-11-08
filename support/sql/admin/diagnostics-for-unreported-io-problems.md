@@ -1,13 +1,13 @@
 ---
 title: SQL Server diagnostics detects unreported I/O problems
 description: This article helps you resolve the errors 605, 823, 3448, and 3456 using the SQL Server Diagnostics.
-ms.date: 11/07/2022
+ms.date: 11/08/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: svccauto
 ms.prod: sql
 ---
 
-# SQL Server diagnostics detect unreported I/O problems due to stale reads or lost writes
+# SQL Server diagnostics detects unreported I/O problems due to stale reads or lost writes
 
 This article explains how SQL Server Diagnostics helps detect unreported input or output problems that occur due to stale reads or lost writes.
 
