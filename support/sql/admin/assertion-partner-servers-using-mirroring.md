@@ -19,14 +19,14 @@ _Original KB number:_ &nbsp; 2729953
 
 In SQL Server mirroring architecture, you might encounter a SQL Server assertion check failure on the partner (mirror) server. In such a case, check the SQL Server error log for details. In the log, you will find an error message that resembles the following message. This error usually means that you must rebuild the mirror pair.
 
-> SQL Server Assertion: File: loglock.cpp, line=834 Failed Assertion = 'result == LCK_OK' . This error may be timing related. If the error persists after re-running the statement, use DBCC CHECKDB to check the database for structural integrity, or restart the server to ensure in-memory data structures are not corrupted.
+> SQL Server Assertion: File: loglock.cpp, line=834 Failed Assertion = 'result == LCK_OK' . This error may be timing related. If the error persists after re-running the statement, use DBCC CHECKDB to check the database for structural integrity, or restart the server to ensure in-memory data structures are not corrupted. 
 >
 > Error: 3624, Severity: 20, State: 1.
 
-Typically, an assertion failure is caused by a software bug or data corruption. To check for database corruption, consider running `DBCC CHECKDB`. If you agree to send dumps to Microsoft during setup, a Mini-dump will be sent to Microsoft. An update might be available from Microsoft in the latest Service Pack or in a QFE from Technical Support.
+Typically, an assertion failure is caused by a software bug or data corruption. To check for database corruption, consider running `DBCC CHECKDB`. If you agree to send dumps to Microsoft during setup, a minidump will be sent to Microsoft. An update might be available from Microsoft in the latest Service Pack or in a QFE from Technical Support.
 
 > [!NOTE]
-> When this issue occurs, a Mini-dump file is generated in the SQL Server error log folder. This file has a name that resembles the *SQLDumpnnnn.mdmp* file name.
+> When this issue occurs, a minidump file is generated in the SQL Server error log folder. This file has a name that resembles the *SQLDumpnnnn.mdmp* file name.
 
 ## Cause
 
