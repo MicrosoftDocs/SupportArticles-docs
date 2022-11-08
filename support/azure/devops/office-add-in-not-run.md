@@ -4,7 +4,8 @@ description: This article provides resolutions for the error that occurs where t
 ms.date: 08/18/2020
 ms.custom: sap:Client Connectivity
 ms.reviewer: beccam
-ms.service: az-devops-project
+ms.service: azure-devops
+ms.subservice: ts-client-connectivity
 ---
 # Team Foundation Server Office Integration add-in doesn't run
 

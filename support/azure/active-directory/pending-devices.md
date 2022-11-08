@@ -20,7 +20,7 @@ When you configure a **Hybrid Azure AD join** task in the Azure AD Connect Sync 
 
 For more information about how to troubleshoot pending devices, see the following video:
 
-> [!VIDEO <https://www.youtube-nocookie.com/embed/QBR1c81kaxA>]
+> [!VIDEO https://www.youtube-nocookie.com/embed/QBR1c81kaxA]
 
 ## How a device gets stuck in a pending state
 
