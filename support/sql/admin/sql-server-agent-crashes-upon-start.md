@@ -2,18 +2,18 @@
 title: SQL Server agent crashes when you try to start it
 description: This article discusses the issues experienced by SQL Server agent service when you create multiple jobs in your SQL server instance.
 ms.date: 11/08/2022
-author: shwetasohu
+author: ramakoni1
 ms.author: v-shwetasohu
-ms.reviewer: ramakoni
 ms.prod: sql
 ms.custom: sap:Administration and Management
 ---
 
-# SQL Server agent crashes when you try to start it or takes longer than expected to start
+# SQL Server agent crashes when you try to start it
 
 This article discusses the issues experienced by SQL Server agent service when you create multiple jobs in your SQL server instance.
 
-_Original KB number:_ &nbsp;2795690
+_Original product version:_ &nbsp; SQL Server 
+_Original KB number:_ &nbsp; 2795690
 
 ## Symptoms
 
@@ -26,6 +26,7 @@ A SQL Server agent crashes when you try to start it or takes longer than expecte
 
     Additionally, the following entries may be logged in the SQLAgent.log file:
 
+    ```output
     <Time Stamp> - ? [431] Populating subsystems cache... \
     <Time Stamp> - ? [432] There are 7 subsystems in the subsystems cache \
     <Time Stamp> - ? [124] Subsystem 'ActiveScripting' successfully loaded (maximum concurrency: 40)\
@@ -59,11 +60,12 @@ A SQL Server agent crashes when you try to start it or takes longer than expecte
     <Time Stamp> - ? [128] Subsystem 'PowerShell' stopped (exit code 1)\
     <Time Stamp> - ? [128] Subsystem 'SSIS' stopped (exit code 1)\
     <Time Stamp> - ? [175] Job scheduler engine stopped\
-- **Scenario 3**: The database engine server displays a SQL Server process ID (SPID) from the "SQLAgent - Generic Refresher" service. Additionally, the following job is displayed as running in the input buffer of the SPID:
-EXECUTE msdb.dbo.sp_sqlagent_refresh_job
+    ``` 
+- **Scenario 3**: The database engine server displays a SQL Server process ID (SPID) from the "SQLAgent - Generic Refresher" service. Additionally, the following job is displayed as running in the input buffer of the SPID: \
+`EXECUTE msdb.dbo.sp_sqlagent_refresh_job`
 
-> [!NOTE]
-> The SPID is in the RUNNABLE state and regularly waits for the PREEMPTIVE_OS_LOOKUPACCOUNTSID wait type, or the SPID is in a waiting state for the ASYNC_NETWORKIO wait type.
+    > [!NOTE]
+    > The SPID is in the RUNNABLE state and regularly waits for the PREEMPTIVE_OS_LOOKUPACCOUNTSID wait type, or the SPID is in a waiting state for the ASYNC_NETWORKIO wait type.
 
 ## Cause
 
