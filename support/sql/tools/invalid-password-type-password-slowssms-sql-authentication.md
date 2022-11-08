@@ -26,9 +26,9 @@ This issue occurs because the Windows Data Protection API can't back up a Master
 
 To work around this issue:
 
-1. Use Windows authentication instead of SQL authentication.
-1. Log in to Windows using a local account instead of a domain account, or
-1. Follow the steps in the "Resolution" section in [DPAPI MasterKey backup failures when RWDC isn't available](../../windows-server/identity/dpapi-masterkey-backup-failures.md#resolution).
+- Use Windows authentication instead of SQL authentication.
+- Log in to Windows using a local account instead of a domain account, or
+- Follow the steps in the "Resolution" section in [DPAPI MasterKey backup failures when RWDC isn't available](../../windows-server/identity/dpapi-masterkey-backup-failures.md#resolution).
 
 ## Resolution
 
