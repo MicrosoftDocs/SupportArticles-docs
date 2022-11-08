@@ -5,7 +5,6 @@ ms.date: 08/19/2020
 ms.reviewer: ramakoni
 ms.author: v-sidong
 author: sevend2
-ms.topic: article
 ms.prod: sql
 ---
 
