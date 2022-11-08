@@ -58,9 +58,11 @@ Trace flag 818 enables an in-memory ring buffer that is used for tracking the la
 
 The following message indicates that SQL Server didn't receive an error from the WriteFile API call or the ReadFile API call. However, when the LSN was reviewed, the value wasn't correct:
 
-> SQL Server has detected an unreported OS/hardware level read or write problem on Page (1:75007) of database 12
- LSN returned (63361:16876:181), LSN expected (63361:16876:500)
- Contact the hardware vendor and consider disabling caching mechanisms to correct the problem
+```output
+SQL Server has detected an unreported OS/hardware level read or write problem on Page (1:75007) of database 12
+LSN returned (63361:16876:181), LSN expected (63361:16876:500)
+Contact the hardware vendor and consider disabling caching mechanisms to correct the problem
+```
 
 Starting with SQL Server 2005, the error message will be displayed as:
 
@@ -86,7 +88,7 @@ Microsoft has also noted conditions that don't meet the criteria for error 605 o
 
 Some scenarios are outlined in more detail in the following lists:
 
-```sql
+```output
 LSN SequenceAction
 1Checkpoint
 2Begin Transaction
@@ -97,7 +99,7 @@ LSN SequenceAction
 7Rollback of transaction initiated
 ```
 
-```sql
+```output
 LSN SequenceAction
 1Checkpoint
 2Begin Transaction
@@ -112,7 +114,7 @@ SQL Server `sort` operators perform I/O activities, primarily to and from the `t
 
 Microsoft has noted that the root cause for the following sort read failures is generally a stale read or a lost write:
 
-```sql
+```output
 2003-04-01 20:13:31.38 spid122 SQL Server Assertion: File: <p:\sql\ntdbms\storeng\drs\include\record.inl>, line=1447 Failed Assertion = 'm_SizeRec > 0 && m_SizeRec <= MAXDATAROW'.
 
 2003-03-29 09:51:41.12 spid57 Sort read failure (bad page ID). pageid = (0x1:0x13e9), dbid = 2, file = e:\program files\Microsoft SQL Server\mssql\data\tempdb.mdf. Retrying.
