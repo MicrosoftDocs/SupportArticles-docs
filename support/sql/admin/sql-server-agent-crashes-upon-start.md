@@ -1,6 +1,6 @@
 ---
 title: SQL Server agent crashes when you try to start it
-description: This article discusses the issues experienced by SQL Server agent service when you create multiple jobs in your SQL server instance.
+description: This article discusses the issues experienced by SQL Server agent service when you create multiple jobs in your SQL Server instance.
 ms.date: 11/08/2022
 author: ramakoni1
 ms.author: v-shwetasohu
@@ -10,9 +10,9 @@ ms.custom: sap:Administration and Management
 
 # SQL Server agent crashes when you try to start it
 
-This article discusses the issues experienced by SQL Server agent service when you create multiple jobs in your SQL server instance.
+This article discusses the issues experienced by SQL Server agent service when you create multiple jobs in your SQL Server instance.
 
-_Original product version:_ &nbsp; SQL Server 
+_Original product version:_ &nbsp; SQL Server  \
 _Original KB number:_ &nbsp; 2795690
 
 ## Symptoms
@@ -20,9 +20,9 @@ _Original KB number:_ &nbsp; 2795690
 A SQL Server agent crashes when you try to start it or takes longer than expected to start. Additionally, you may experience one or more of the following scenarios:
 
 - **Scenario 1**: The following error message is logged in the System event log:
-    The service didn't respond to the start or control request in a timely fashion.
+    >The service didn't respond to the start or control request in a timely fashion.
 - **Scenario 2**: The status of the agent displays as "Starting" in the Control Panel, and the following error message is logged in the *SQLAgent.log* file:
-    An idle CPU condition has not been defined - OnIdle job schedules will have no effect.
+    >An idle CPU condition has not been defined - OnIdle job schedules will have no effect.
 
     Additionally, the following entries may be logged in the *SQLAgent.log* file:
 
@@ -61,8 +61,10 @@ A SQL Server agent crashes when you try to start it or takes longer than expecte
     <Time Stamp> - ? [128] Subsystem 'SSIS' stopped (exit code 1)\
     <Time Stamp> - ? [175] Job scheduler engine stopped\
     ``` 
-- **Scenario 3**: The database engine server displays a SQL Server process ID (SPID) from the "SQLAgent - Generic Refresher" service. Additionally, the following job is displayed as running in the input buffer of the SPID: \
-`EXECUTE msdb.dbo.sp_sqlagent_refresh_job`
+- **Scenario 3**: The database engine server displays a SQL Server process ID (SPID) from the "SQLAgent - Generic Refresher" service. Additionally, the following job is displayed as running in the input buffer of the SPID: 
+```sql
+EXECUTE msdb.dbo.sp_sqlagent_refresh_job
+```
 
     > [!NOTE]
     > The SPID is in the RUNNABLE state and regularly waits for the PREEMPTIVE_OS_LOOKUPACCOUNTSID wait type, or the SPID is in a waiting state for the ASYNC_NETWORKIO wait type.
