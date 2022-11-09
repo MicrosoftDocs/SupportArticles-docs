@@ -17,7 +17,7 @@ search.appverid:
   - MET150
 ms.date: 11/3/2022
 ---
-# "0x8004deef" error when signing in to OneDrive
+# Error 0x8004deef when signing in to OneDrive
 
 ## Symptoms
 
