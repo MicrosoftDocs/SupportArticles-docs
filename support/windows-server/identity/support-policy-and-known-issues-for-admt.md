@@ -1,6 +1,6 @@
-﻿---
-title: Support policy and Known Issues for ADMT
-description: Learn Support policy and Known Issues for Active Directory Migration Tool.
+---
+title: Support policy and known issues for ADMT
+description: Learn Support policy and known issues for Active Directory Migration Tool.
 ms.date: 11/9/2022
 author: kaushika-msft
 ms.author: kaushika
@@ -15,14 +15,14 @@ ms.technology: windows-server-active-directory
 ---
 # Support policy and known issues for Active Directory Migration Tool
 
-This article describes information about the current level of support for Active Directory Migration Tool (ADMT) on current Windows Client and Windows Server operating systems. This article also lists known issues that administrators may encounter when they attempt to migrate user profiles, security principals, passwords, or sIDHistory data between Active Directory domains and forests.
+This article discusses information about the current level of support for Active Directory Migration Tool (ADMT) on current Windows Client and Windows Server operating systems. This article also lists known issues that administrators might experience when they try to migrate user profiles, security principals, passwords, or security identifier (SID) History data between Active Directory domains and forests.
 
 _Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4089459
 
 ## Microsoft support by operating system
 
-ADMT was released as a free download to support the migration to Windows 2000 and Windows Server 2003-era operating systems.  
+ADMT was released as a free download to support the migration to Windows 2000/Windows Server 2003-era operating systems.  
 
 ADMT hasn't been updated to support the following operating systems:
 
@@ -34,18 +34,18 @@ ADMT hasn't been updated to support the following operating systems:
 - Windows Server 2016
 - Windows Server 2012 R2
 
-You may encounter the following known issues when you run ADMT on operating systems that aren't supported:
+When you run ADMT on operating systems that aren't supported, you might experience the following known issues:
 
-- ADMT can't migrate user profiles from operating systems that are newer than Windows 7 or Windows Server 2008 R2 to other operating systems. You also can't migrate user profiles to operating systems that are newer than Windows 7 or Windows Server 2008 R2 from older operating systems.
+- ADMT can't migrate user profiles from operating systems that are later than Windows 7 or Windows Server 2008 R2 to other operating systems. ADMT also can't migrate user profiles to operating systems that are later than Windows 7 or Windows Server 2008 R2 from older operating systems.
 - ADMT isn't compatible with the secure defaults that modern operating systems use.
-- ADMT hasn't been tested together with newer versions of SQL Server. If you use ADMT in such circumstances, you may see incompatibilities or issues.
+- ADMT hasn't been tested together with later versions of Microsoft SQL Server. If you use ADMT in such circumstances, you might see incompatibilities or other issues.
 
-> [!NOTE]  
-> Your experience with ADMT depends on many factors, including the Windows version that you are migrating from and the Windows version that you are migrating to. Use the tool at your own risk.
+> [!IMPORTANT]  
+> Your experience in using ADMT depends on many factors, including the Windows version that you are migrating from and the Windows version that you are migrating to. Use the tool at your own risk.
 
 ## Commercial Windows support case policy
 
-Microsoft addresses support cases for ADMT issues completely on a "best effort" basis. Support cases may not be escalated to the product teams. Microsoft can't guarantee that issues will be resolved.
+Microsoft handles support cases for ADMT issues completely on a "best effort" basis. Support cases might not be escalated to the product teams. Microsoft can't guarantee that issues will be resolved.
 
 ## Code-level support policy
 
@@ -53,10 +53,10 @@ The ADMT 3.2 code base has been deprecated. Microsoft has officially halted any 
 
 ## Common support scenarios and known issues
 
-This section lists the most common issues that you may experience while using ADMT.
+This section lists the most common issues that you might experience when you use ADMT.
 
 > [!IMPORTANT]  
-> Many of these issues occur because of changes that have improved the functionality or security of Windows. Some solutions to these issues involve making *temporary* changes to Windows that nullify these improvements. Use such solutions at your own risk.
+> Many of these issues occur because of changes that have improved the functionality or security of Windows. Some solutions to these issues involve making temporary changes to Windows that nullify these improvements. Use these solutions at your own risk.
 
 ### ADMT won't run on devices that have Windows Defender Credential Guard enabled
 
@@ -67,12 +67,12 @@ This section lists the most common issues that you may experience while using AD
 **Solution**: Temporarily disable Credential Guard on the ADMT server.
 
 > [!IMPORTANT]  
-> Please consult your security team before changing the Credential Guard configuration. Back up the ADMT server before you make any changes.
+> Consult your security team before you change the Credential Guard configuration. Back up the ADMT server before you make any changes.
 
-[Manage Windows Defender Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard-manage) provides a script that disables Credential Guard. In addition to running the script, disable the **Computer Configuration\\Administrative Templates\\System\\Device Guard\\Secure Launch Configuration** group policy object (GPO). Otherwise, the computer will re-enable Credential Guard the next time it restarts.
+The [Manage Windows Defender Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard-manage) topic provides a script that disables Credential Guard. In addition to running the script, disable the **Computer Configuration\\Administrative Templates\\System\\Device Guard\\Secure Launch Configuration** Group Policy Object (GPO). Otherwise, the computer will re-enable Credential Guard the next time that it starts.
 
 > [!NOTE]  
-> On devices that run Windows Server 2022, Credential Guard is enabled when the GPO described previously is set to **Not Configured**.
+> On devices that run Windows Server 2022, Credential Guard is enabled if the GPO that's described here is set to **Not Configured**.
 
 ### Domain controllers can't use unconstrained delegation
 
@@ -80,19 +80,19 @@ This section lists the most common issues that you may experience while using AD
 
 **Solution**: Install and run ADMT apps on the target domain controller. This configuration removes the need for delegation.
 
-### Modern apps fail to start for a user who uses a migrated user profile
+### Modern apps don't start for a user who uses a migrated user profile
 
-**Issue**: When you use ADMT 3.2 to migrate a user profile to a Windows Client computer and then run the Security Translation wizard to update the profile, modern applications don't run. These apps include both built-in apps (such as the Windows Start menu and Search) and apps that were installed from the Windows Store.
+**Issue**: When you use ADMT 3.2 to migrate a user profile to a Windows Client computer, and then you run the Security Translation wizard to update the profile, modern applications don't run. These apps include both built-in apps (such as the Windows Start menu and Search) and apps that are installed from the Windows Store.
 
-Intra-forest migrations are most at risk for this behavior, because intra-forest migrated user accounts can't be restored back to the original source domain.
+Intra-forest migrations are most at risk for this behavior. This is because intra-forest migrated user accounts can't be restored to the original source domain.
 
-**Solution**: After you complete the migration, uninstall the modern apps and then reinstall them from the Windows Store.
+**Solution**: After you complete the migration, uninstall the modern apps, and then reinstall them from the Windows Store.
 
 For more information about this issue, see [Windows App cannot start after ADMT 3.2 security translation runs in Windows 8, Windows 8.1 and Windows 10](/windows-app-cant-start)
 
 ### Security translation resets file associations
 
-**Issue**: You migrate a user profile and then run the security translation wizard in Add mode. When you sign in to the computer for the first time after the migration, you use the original (source) user credentials instead of the migrated (target) user credentials. The file associations reset to their default values, and any custom associations are lost.
+**Issue**: You migrate a user profile, and then you run the security translation wizard in Add mode. When you sign in to the computer for the first time after the migration, you use the original (source) user credentials instead of the migrated (target) user credentials. The file associations reset to their default values, and any custom associations are lost.
 
 In Windows 10, a custom file association is protected from unwanted modifications by using a hash that's based in part on the user's security identifier (SID). The custom file association and the hash are stored in the registry. When the user is migrated to a new domain, the new user account receives a new SID. All file association hashes must be updated accordingly.
 
@@ -100,18 +100,18 @@ In Windows 10, a custom file association is protected from unwanted modification
 
 ### Objects that have child objects aren't migrated
 
-**Issue**: When ADMT tries to migrate an object that has a child object, the migration fails and ADMT generates the following message in the migration error log:
+**Issue**: When ADMT tries to migrate an object that has a child object, the migration fails, and ADMT logs the following entry in the migration error log:
 
 > **Error 7422**: Failed to move source object CN=\<_object name_>. hr=0x8007208c The operation cannot be performed because child objects exist. This operation can only be performed on a child object.
 
-A few examples of child objects that block migration include but aren't limited to the following:
+A few examples of child objects that block migration include, but aren't limited to, the following:
 
 - Exchange Active Sync
 - Microsoft Dynamic GP
 - TermSrvLicensing
 - Citrix SSOSecret and SSOConfig
 
-**Solution**: You have to delete the child object (also known as a leaf object) to migrate the parent object. For example, you would have to delete the Exchange ActiveSync object. Otherwise, there is no known workaround.
+**Solution**: You have to delete the child object (also known as a leaf object) in order to migrate the parent object. For example, you would have to delete the Exchange ActiveSync object. Otherwise, there's no known workaround.
 
 ### Computer migration fails on devices that have custom DNS suffixes
 
@@ -127,20 +127,20 @@ To check this configuration, open the **System** properties on the computer. To 
 
 **Solution**: Try one of the following methods:
 
-- **Manual configuration**. After you join the computer to the target domain, remove the SPNs from the account in the source domain. As an alternative, you can delete the computer account in the source domain.
+- **Manual configuration**. After you join the computer to the target domain, remove the SPNs from the account in the source domain. Alternatively, you can delete the computer account in the source domain.
 
-- **Answer file configuration**. Use [SyncDomainWithMembership](/windows-hardware/customize/desktop/unattend/microsoft-windows-workstationservice-syncdomainwithmembership). Setting `SyncDomainWithMembership` to **1** is the equivalent of enabling **Change primary DNS suffix when domain membership changes**. Then during migration, the computer registers SPNs that match the new domain and doesn't conflict anymore.
+- **Answer file configuration**. Use [SyncDomainWithMembership](/windows-hardware/customize/desktop/unattend/microsoft-windows-workstationservice-syncdomainwithmembership). You can set `SyncDomainWithMembership` to **1**. This is the equivalent of enabling **Change primary DNS suffix when domain membership changes**. Then during migration, the computer registers SPNs that match the new domain and doesn't conflict anymore.
 
-### ADMT 3.2 fails to start if TLS 1.0 is disabled on the SQL Server database host
+### ADMT 3.2 doesn't start if TLS 1.0 is disabled on the SQL Server database host
 
-**Issue**: On a device that hosts a SQL Server database, ADMT 3.2 fails to start and displays SSL Security errors if TLS 1.0 has been disabled. This occurs even if ADMT is installed on the same computer as the SQL Server instance. The error message resembles the following:
+**Issue**: On a device that hosts a SQL Server database, ADMT 3.2 doesn't start, and it displays SSL Security errors if TLS 1.0 was disabled. This occurs even if ADMT is installed on the same computer as the SQL Server instance. The error message resembles the following:
 
 > The system cannot find the file specified.
 
-**Solution**: On the computer where ADMT is installed, temporarily enable TLS 1.0. ADMT works even if TLS 1.0 is disabled on the domain controller.
+**Solution**: On the computer on which ADMT is installed, temporarily enable TLS 1.0. ADMT works even if TLS 1.0 is disabled on the domain controller.
 
 > [!IMPORTANT]  
-> Please consult your security team before enabling TLS 1.0.
+> Consult your security team before you enable TLS 1.0.
 
 ### Password Export Server (PES) fails if LSA Protection is enabled
 
@@ -148,10 +148,10 @@ To check this configuration, open the **System** properties on the computer. To 
 
 > Unable to establish a session with the password export server. The RPC server is unavailable.
 
-**Solution**: ADMT Password Migration only works if LSA protection is disabled.
+**Solution**: ADMT Password Migration works only if LSA protection is disabled.
 
 > [!IMPORTANT]  
-> Please consult your security team before changing the LSA Protection configuration. Back up the computer before you make any changes.
+> Consult your security team before you change the LSA Protection configuration. Back up the computer before you make any changes.
 
 ### Local profiles aren't migrated
 
