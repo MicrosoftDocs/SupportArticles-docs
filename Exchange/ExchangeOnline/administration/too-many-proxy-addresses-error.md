@@ -22,23 +22,23 @@ _Original KB number:_ &nbsp; 3196424
 
 ## Problem
 
-When you try to add or remove email addresses from an Exchange Online recipient in the Exchange admin center, you receive the following error message, where \<X> represents a number that's greater than 200:
+When you try to add or remove email addresses from an Exchange Online recipient in the Exchange admin center, you receive the following error message, where \<X> represents a number that's greater than 300:
 
-> There are too many proxy addresses: \<X>, and maximum supported number of recipient proxy addresses is 200
+> There are too many proxy addresses: \<X>, and maximum supported number of recipient proxy addresses is 300
 
-Additionally, when you view the properties of the recipient in the Exchange admin center, you may see the following message, where \<X> represents a number that's greater than 200:
+Additionally, when you view the properties of the recipient in the Exchange admin center, you may see the following message, where \<X> represents a number that's greater than 300:
 
 > Warning
 >
 > The object \<Name of Recipient> has been corrupted or isn't compatible with Microsoft support requirements, and it's in an inconsistent state. The following validation errors happened:
 >
-> There are too many proxy addresses: \<X>, and maximum supported number of recipient proxy addresses is 200.
+> There are too many proxy addresses: \<X>, and maximum supported number of recipient proxy addresses is 300.
 
 ## Cause
 
 The number of proxy addresses on the recipient is more than the current limit.
 
-The current limit is set to a maximum of 200 email addresses per object. This limit is documented in [Exchange Online limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits).
+The current limit is set to a maximum of 300 email addresses per object. This limit is documented in [Exchange Online limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits).
 
 ## Solution
 
