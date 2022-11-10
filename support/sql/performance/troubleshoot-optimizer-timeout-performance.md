@@ -136,7 +136,7 @@ Multiply all these above, we can get the number of possible plans: 2\*n!\*12<sup
 
 ## Why do I see an Optimizer Timeout with a simple query?
 
-Nothing with Query Optimizer is simple. There are so many possible scenarios and its complexity is so high that it's hard to grasp all of the possibilities. The Query Optimizer may dynamically set the timeout threshold based on the cost of the plan found at a certain stage. For example, if a plan that appears relatively cheap is found, the task limit to search for a better plan may be reduced. Therefore, underestimated cardinality estimation (CE) may be one scenario for hitting an Optimizer Timeout early. In this case, the focus of investigation is CE. It's a rarer case compared with the scenario about running a complex query that's discussed in the previous section, but it's possible.
+Nothing with Query Optimizer is simple. There are so many possible scenarios and its complexity is so high that it's hard to grasp all of the possibilities. The Query Optimizer may dynamically set the timeout threshold based on the cost of the plan found at a certain stage. For example, if a plan that appears relatively efficient is found, the task limit to search for a better plan may be reduced. Therefore, underestimated cardinality estimation (CE) may be one scenario for hitting an Optimizer Timeout early. In this case, the focus of investigation is CE. It's a rarer case compared with the scenario about running a complex query that's discussed in the previous section, but it's possible.
 
 ## Resolutions
 
