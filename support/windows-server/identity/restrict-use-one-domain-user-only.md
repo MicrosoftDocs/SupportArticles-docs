@@ -41,7 +41,7 @@ By using group policy capabilities in Windows 2000/2003 Domain, you can prevent 
 
       > [!NOTE]
       > Some services (Like Backup software services) may effect by this policy, and wouldn't function.
-       To eliminate future problems, apply this policy and use GPO security filter feather.
+       To eliminate future problems, apply this policy and use GPO security filter feature.
 
        Deny logon locally
 
