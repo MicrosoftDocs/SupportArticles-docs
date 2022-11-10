@@ -102,7 +102,7 @@ While the following factors will reduce the number of access methods considered,
 
 ### Example of how the factors are considered
 
-To illustrate, we take an example of a join between three tables (`t1`, `t2` and `t3`) and each table has a clustered index and a nonclustered index.
+To illustrate, let's take an example of a join between three tables (`t1`, `t2` and `t3`) and each table has a clustered index and a nonclustered index.
 
 First, consider the physical join types. There are two joins involved here. And, because there are three physical join possibilities (NJ, HJ and MJ), the query can be performed in 3<sup>2</sup> = 9 ways.
 
@@ -116,7 +116,7 @@ First, consider the physical join types. There are two joins involved here. And,
 1. MJ - HJ
 1. MJ - MJ
 
-Then, consider the join order. The order of the first two tables doesn't matter, so there can be P(3,1) = 3 possibilities:
+Then, consider the join order which is calculated using Permutations: P (n, r). The order of the first two tables doesn't matter, so there can be P(3,1) = 3 possibilities:
 
 - Join `t1` with `t2` and then with `t3`
 - Join `t1` with `t3` and then with `t2`
@@ -133,7 +133,7 @@ Now, let's assume there are n tables joined in the query and each table has a cl
 - Different index types with seek and scan methods: 4<sup>n</sup>
 
 Multiply all these above, we can get the number of possible plans: 2\*n!\*12<sup>n-1</sup>. When n = 4, the number is 82,944. When n = 6, the number is 358,318,080. So, with the increase of the number of the tables involved in a query, the number of possible plans increases geometrically. Further, if you include the possibility of parallelism and other factors, you can imagine how many possible plans will be considered. Therefore, a query with lots of joins is more likely to reach the optimizer timeout threshold than one with fewer joins.
-
+Note that the above calculations illustrate the worst-case scenario; as we pointed out there are factors that will reduce the number of possibilities  - filter predicates, statistics, constraints. For example a filter predicate and updated statistics will reduce the number of physical access methods because it may be more efficient to use an index seek than a scan. This will also lead to a smaller selection of joins and so on.
 ## Why do I see an Optimizer Timeout with a simple query?
 
 Nothing with Query Optimizer is simple. There are so many possible scenarios and its complexity is so high that it's hard to grasp all of the possibilities. The Query Optimizer may dynamically set the timeout threshold based on the cost of the plan found at a certain stage. For example, if a plan that appears relatively efficient is found, the task limit to search for a better plan may be reduced. Therefore, underestimated cardinality estimation (CE) may be one scenario for hitting an Optimizer Timeout early. In this case, the focus of investigation is CE. It's a rarer case compared with the scenario about running a complex query that's discussed in the previous section, but it's possible.
