@@ -1,10 +1,10 @@
 ---
 title: An assertion failure occurs on a SQL Server mirror server  
 description: This article provides a workaround for the assertion failure that can occur on a partner server when using SQL Server mirroring architecture.
-ms.date: 11/08/2022
+ms.date: 11/10/2022
 ms.custom: sap:Administration and Management
-author: ramakoni1
 ms.author: v-jayaramanp
+ms.reviewer: ramakoni1
 ms.prod: sql
 ---
 
@@ -33,6 +33,7 @@ Typically, an assertion failure is caused by a software bug or data corruption. 
 This issue may occur in different scenarios. Each scenario has a different cause and resolution, and each scenario may cause the same error message and assertion failure.
 
 > [!NOTE]
+>
 > - Although the error signature seems to be very specific, the actual error is caused by an assertion that failed. For example, the error could be caused by an assertion that performs a proactive check in the SQL Server code that validates *healthy* conditions to fail as cleanly as possible instead of causing a process-wide crash.
 > - You can't easily determine the actual cause. Microsoft Customer Support Services usually determines the cause. It is usually done by collecting the principal database full backup file and the transaction log backups that cover the time of the issue. Additionally, a full process dump file of the mirror may be required to reproduce the problem in specific settings.
 
