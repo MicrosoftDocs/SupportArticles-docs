@@ -1,10 +1,8 @@
 ---
 title: Troubleshoot slow queries due to query optimizer timeout
-description: Introduces what Optimizer Timeout is and how it can affect query performance in SQL Server.
-ms.date: 10/29/2022
+description: Introduces how Optimizer Timeout can affect query performance and how to optimize the performance.
+ms.date: 11/10/2022
 ms.custom: sap:Performance
-ms.topic: troubleshooting
-ms.prod: sql
 author: PijoCoder 
 ms.author: jopilov
 ---
@@ -13,7 +11,7 @@ ms.author: jopilov
 
 _Applies to:_ &nbsp; SQL Server
 
-This article introduces what Optimizer Timeout is and how it can affect query performance in SQL Server.
+This article introduces what Optimizer Timeout is, how it can affect query performance and how to optimize the performance.
 
 ## What is Optimizer Timeout?
 
@@ -60,7 +58,7 @@ There's no simple way to determine what conditions would cause the optimizer thr
 
 - In what order to join tables
 
-  Here's an example of the execute options of three table joins (`Table1`, `Table2`, `Table3`)
+  Here's an example of the execute options of three-table joins (`Table1`, `Table2`, `Table3`)
 
   - Join `Table1` with `Table2` and the result with `Table3`
   - Join `Table1` with `Table3` and the result with `Table2`
@@ -94,13 +92,13 @@ There's no simple way to determine what conditions would cause the optimizer thr
 
   For more information, see [Parallel query processing](/sql/relational-databases/query-processing-architecture-guide#parallel-query-processing)
 
-While, the following factors will reduce the number of access methods considered, and thus the possibilities considered.
+While the following factors will reduce the number of access methods considered, and thus the possibilities considered:
 
 - Query predicates (filters in the `WHERE` clause)
 - Existences of constraints
 - Combinations of well-designed and up-to-date statistics
 
-Note that QO stopped at the threshold doesn't mean it will end up with a slower query. Just in some cases, you may see a slower query execution.
+**Note:** QO stops at the threshold doesn't mean it will end up with a slower query. Just in some cases, you may see a slower query execution.
 
 ### Example of how the factors are considered
 
@@ -124,11 +122,11 @@ Then, consider the join order. The order of the first two tables doesn't matter,
 - Join `t1` with `t3` and then with `t2`
 - Join `t2` with `t3` and then with `t1`
 
-Next, consider that either the clustered or non-clustered index could be used for data retrieval. Also, for each index we have two access methods, seek or scan. That means, for each table there're 2<sup>2</sup> = 4 choices. We have 3 tables, so there can be 4<sup>3</sup> = 64 choices.
+Next, consider that either the clustered or non-clustered index could be used for data retrieval. Also, for each index we have two access methods, seek or scan. That means, for each table there are 2<sup>2</sup> = 4 choices. We have three tables, so there can be 4<sup>3</sup> = 64 choices.
 
 Finally, considering all these conditions, there can be 9\*3\*64 = 1728 possible plans.
 
-Now, let's assume there're n tables joined in the query and each table has a clustered index and a nonclustered index. Consider the following factors:
+Now, let's assume there are n tables joined in the query and each table has a clustered index and a nonclustered index. Consider the following factors:
 
 - Join orders: P(n,n-2) = n!/2
 - Join types: 3<sup>n-1</sup>
@@ -138,17 +136,17 @@ Multiply all these above, we can get the number of possible plans: 2\*n!\*12<sup
 
 ## Why do I see an Optimizer Timeout with a simple query?
 
-Nothing with Query Optimizer is simple. There are so many possible scenarios and its complexity is so high that it's hard to grasp all of the possibilities. The Query Optimizer may dynamically set the timeout threshold based on the cost of the plan found at a certain stage. For example, if a plan that appears relatively cheap is found, the task limit to search for a better plan may be reduced. Therefore, underestimated cardinality estimation may be one scenario for hitting an Optimizer Timeout early. In this case, the focus of investigation is cardinality estimation. It's a rarer case compared with the scenario about running a complex query that's discussed in the previous section, but it's possible.
+Nothing with Query Optimizer is simple. There are so many possible scenarios and its complexity is so high that it's hard to grasp all of the possibilities. The Query Optimizer may dynamically set the timeout threshold based on the cost of the plan found at a certain stage. For example, if a plan that appears relatively cheap is found, the task limit to search for a better plan may be reduced. Therefore, underestimated cardinality estimation (CE) may be one scenario for hitting an Optimizer Timeout early. In this case, the focus of investigation is CE. It's a rarer case compared with the scenario about running a complex query that's discussed in the previous section, but it's possible.
 
 ## Resolutions
 
-An Optimizer Timeout appearing in a query plan, doesn't necessarily mean that it's the cause of the poor query performance. In most cases, you may have to do nothing about this situation. The query plan that SQL Server ends up with may be reasonable and the query you're running may be performing well. You may not ever know that you've encountered an Optimizer Timeout.
+An Optimizer Timeout appearing in a query plan doesn't necessarily mean that it's the cause of the poor query performance. In most cases, you may have to do nothing about this situation. The query plan that SQL Server ends up with may be reasonable and the query you're running may be performing well. You may not ever know that you've encountered an Optimizer Timeout.
 
 Try the following steps if you find the need to tune and optimize.
 
 ### Step 1: Establish a baseline
 
-Check if you can execute the same query with the same data set on a different build of SQL Server, or using a different Cardinality Estimation configuration or on a different system (hardware specifications). A guiding principle in performance tuning is "There's no performance problem without a baseline". Therefore it would be important to establish a base line for the same query.
+Check if you can execute the same query with the same data set on a different build of SQL Server, or using a different CE configuration or on a different system (hardware specifications). A guiding principle in performance tuning is "There's no performance problem without a baseline". Therefore it would be important to establish a base line for the same query.
 
 ### Step 2: Look for "hidden" conditions that lead to the Optimizer Timeout
 
@@ -160,7 +158,7 @@ Examine your query in detail to determine its complexity. Upon initial examinati
 - [Common table expressions (CTEs)](/sql/t-sql/queries/with-common-table-expression-transact-sql)
 - [UNION operators](/sql/t-sql/language-elements/set-operators-union-transact-sql)
 
-For all of these scenarios, the most common resolution would be to re-write the query and break it up into multiple queries. See [Method 7: Rewrite the query](#method-7-rewrite-the-query) for more details.
+For all of these scenarios, the most common resolution would be to rewrite the query and break it up into multiple queries. See [Step 7: Refine the query](#step-7-refine-the-query) for more details.
 
 #### Subqueries or derived tables
 
@@ -190,7 +188,7 @@ AND derived_table1.Co2 = derived_table2.Co20
 
 #### Common table expressions (CTEs)
 
-Using multiple common table expressions (CTEs) isn't an appropriate solution to simplify a query and avoid the Optimizer Timeout. Multiple CTEs will only increase the complexity of the query. Therefore, it's counterproductive to use CTEs when solving optimizer timeouts. CTEs look like to break a query logically, but they will be combined into a single query and optimized as a single large join of tables.
+Using multiple common table expressions (CTEs) isn't an appropriate solution to simplify a query and avoid the Optimizer Timeout. Multiple CTEs will only increase the complexity of the query. Therefore, it's counterproductive to use CTEs when solving optimizer timeouts. CTEs look like to break a query logically, but they'll be combined into a single query and optimized as a single large join of tables.
 
 Here's an example of a CTE, which will be compiled as a single query with many joins. It may appear that the query against the my_cte is a two-object simple join, but in fact, there are seven other tables joined in the CTE.
 
@@ -213,7 +211,7 @@ SELECT ...
 
 #### Views
 
-Make sure that you have checked the view definitions and gotten all tables involved. Similar to CTEs and derived tables, joins can be hidden inside views. For example, a join between two views may ultimately be a single query with eight tables involved:
+Make sure that you've checked the view definitions and gotten all tables involved. Similar to CTEs and derived tables, joins can be hidden inside views. For example, a join between two views may ultimately be a single query with eight tables involved:
 
 ```sql
 CREATE VIEW V1 AS 
@@ -308,7 +306,7 @@ If you determine that a particular baseline plan you get from [Step 1](#step-1-e
 
 ### Step 4: Reduce plans choices
 
-Try to reduce the possibilities that QO needs to consider in choosing a plan and then fore reducing the chance of an Optimizer Timeout. This process involves testing the query with different [hint options](/sql/t-sql/queries/hints-transact-sql). As is with most decisions with QO, the choices aren't always deterministic on the surface because there's a large variety of factors to be considered. Therefore, there isn't a single guaranteed successful strategy, and the selected plan may improve or decrease the performance of the selected query.
+To reduce the chance of an Optimizer Timeout, try to reduce the possibilities that QO needs to consider in choosing a plan. This process involves testing the query with different [hint options](/sql/t-sql/queries/hints-transact-sql). As is with most decisions with QO, the choices aren't always deterministic on the surface because there's a large variety of factors to be considered. Therefore, there isn't a single guaranteed successful strategy, and the selected plan may improve or decrease the performance of the selected query.
 
 #### Force a JOIN order
 
@@ -325,9 +323,11 @@ OPTION (FORCE ORDER)
 
 #### Reduce the JOIN possibilities
 
-If other alternatives haven't helped, try to reduce the query plan combinations by limiting the choices of physical joins operators with [join hints](/sql/t-sql/queries/hints-transact-sql-query#-loop--merge--hash--join). For examples: `OPTION (HASH JOIN, MERGE JOIN)`, `OPTION (HASH JOIN, LOOP JOIN)` or `OPTION (MERGE JOIN)`. Note that you should be very careful when using these hints.
+If other alternatives haven't helped, try to reduce the query plan combinations by limiting the choices of physical joins operators with [join hints](/sql/t-sql/queries/hints-transact-sql-query#-loop--merge--hash--join). For examples: `OPTION (HASH JOIN, MERGE JOIN)`, `OPTION (HASH JOIN, LOOP JOIN)` or `OPTION (MERGE JOIN)`.
 
-In some cases, limiting the optimizer with fewer join choices may cause the best join option not available and may actually slow down the query. Also in some cases, a specific join is required by an optimizer (for example, [row goal](https://support.microsoft.com/topic/kb4051361-optimizer-row-goal-information-in-query-execution-plan-added-in-sql-server-2014-2016-and-2017-ec130d21-1adc-3d3d-95a5-cdb075722269)), and the query may fail to generate a plan if that join isn't an option. Therefore, after you target join hints for a specific query, check if you find a combination that offers better performance and eliminates the Optimizer Timeout.
+**Note:** You should be careful when using these hints.
+
+In some cases, limiting the optimizer with fewer join choices may cause the best join option not available and may actually slow down the query. Also in some cases, a specific join is required by an optimizer (for example, [row goal](https://support.microsoft.com/topic/kb4051361-optimizer-row-goal-information-in-query-execution-plan-added-in-sql-server-2014-2016-and-2017-ec130d21-1adc-3d3d-95a5-cdb075722269)), and the query may fail to generate a plan if that join isn't an option. Therefore, after you target the join hints for a specific query, check if you find a combination that offers better performance and eliminates the Optimizer Timeout.
 
 Here are two examples of how to use such hints:
 
@@ -354,7 +354,7 @@ Here are two examples of how to use such hints:
       JOIN t5 ON ...
     ```
 
-### Step 5: Change Cardinality Estimation (CE) configuration
+### Step 5: Change CE configuration
 
 Try to change the CE configuration by switching between Legacy CE and New CE. Changing the CE configuration can result the QO to pick a different path when SQL Server evaluates and creates query plans. So, even if an Optimizer Timeout issue occurs, it's possible that you end up with a plan that performs more optimally than the one selected using the alternate CE configuration. For more information, see [How to activate the best query plan (Cardinality Estimation)](/sql/relational-databases/performance/cardinality-estimation-sql-server#how-to-activate-the-best-query-plan).
 

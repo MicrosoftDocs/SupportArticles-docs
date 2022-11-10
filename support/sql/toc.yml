@@ -401,6 +401,8 @@
       href: performance/troubleshoot-query-timeouts.md
     - name: Different query performance between two SQL Servers
       href: performance/troubleshoot-query-perf-between-servers.md
+    - name: Troubleshoot slow queries affected by Optimizer Timeout
+      href: performance/troubleshoot-optimizer-timeout-performance.md
     - name: Slower query in database application than in SSMS
       href: performance/troubleshoot-application-slow-ssms-fast.md      
     - name: Decreased query performance after upgrade
