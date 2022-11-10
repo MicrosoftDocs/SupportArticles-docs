@@ -50,7 +50,7 @@ Here are symptoms that indicate an Optimizer Timeout:
 
   - Check the properties of the left-most plan operator in Microsoft SQL Server Management Studio, you can see the value of **Reason For Early Termination of Statement Optimization** is **TimeOut**.
 
-    :::image type="content" source="media/optimizer-timeout/opitmizer-timeout-in-query-plan-ssms.png" alt-text="optimizer timeout in query plan when you view in SSMS":::
+    :::image type="content" source="media/troubleshoot-optimizer-timeout-performance/opitmizer-timeout-in-query-plan-ssms.png" alt-text="optimizer timeout in query plan in SSMS":::
 
 ## What causes an Optimizer Timeout?
 
