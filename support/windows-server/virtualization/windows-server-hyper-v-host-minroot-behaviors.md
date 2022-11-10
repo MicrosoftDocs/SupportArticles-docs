@@ -17,7 +17,7 @@ keywords: Hyper-V, minroot, minimum root, CPPC, P-state
 
 # Windows Server 2019 Hyper-V host behavior running in the minroot configuration
 
-This article describes the behavior that's specific to the Windows Server 2019 Hyper-V host Minimum Root (minroot) configuration. This article also and provides links to more information about this behavior.
+This article describes the behavior that's specific to the Windows Server 2019 Hyper-V host Minimum Root (minroot) configuration. This article also provides links to more information about this behavior.
 
 _Applies to:_ &nbsp; Windows Server 2019
 
