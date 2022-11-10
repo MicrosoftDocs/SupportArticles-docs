@@ -2702,7 +2702,7 @@
       href: ./virtualization/support-policy-nic-teaming.md
     - name: Upgrade computers with Hyper-V role installed
       href: ./virtualization/upgrade-computers-hyper-v-role.md
-    - name: Windows Server 2019 Hyper-V host minroot behaviors
+    - name: Windows Server 2019 Hyper-V host minroot behavior
       href: ./virtualization/windows-server-hyper-v-host-minroot-behaviors.md
   - name: Integration components
     items:
