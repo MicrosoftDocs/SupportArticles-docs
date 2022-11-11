@@ -24,7 +24,7 @@ In this scenario, the installation wizard fails when the installation program va
 
 ## Cause
 
-When you log on to a computer for the first time and try to encrypt data, the operating system creates a preferred Data Protection Application Programming Interface (DPAPI) MasterKey, which is based on your current password. During the creation of the DPAPI MasterKey, an attempt is made to back up this master key by contacting an RWDC. If the backup fails, the MasterKey can't be created, and this results in failure.
+When you log on to a computer for the first time and try to encrypt data, the operating system creates a preferred Data Protection Application Programming Interface (DPAPI) MasterKey, which is based on your current password. During the creation of the DPAPI MasterKey, an attempt is made to back up this master key by contacting a Read Write Domain Controller (RWDC). If the backup fails, the MasterKey can't be created, and this results in failure.
 
 ## Workaround
 
