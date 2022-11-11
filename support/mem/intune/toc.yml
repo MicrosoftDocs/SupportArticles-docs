@@ -199,6 +199,8 @@ items:
       href: device-enrollment/device-ownership-changed-to-corporate.md
     - name: End-to-end guide for configuring Android enterprise devices
       href: device-enrollment/configure-android-enterprise-devices-intune.md
+    - name: Microsoft Edge in Android 13 ignores PAC setting in VPN profile
+      href: device-enrollment/edge-ignore-pac-android-vpn-profile.md
   - name: iOS/iPadOS enrollment
     items:
     - name: Troubleshoot iOS/iPadOS enrollment errors
