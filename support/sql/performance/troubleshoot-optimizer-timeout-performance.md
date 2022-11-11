@@ -241,7 +241,7 @@ SELECT ...
 
 #### Table valued functions (TVFs)
 
-Some joins may be hidden inside TFVs. Check the following example. The following sample shows what appears as a join between two TFVs and a table may be a nine-table join.
+Some joins may be hidden inside TFVs. The following sample shows what appears as a join between two TFVs, and a table may be a nine-table join.
 
 ```sql
 CREATE FUNCTION tvf1() RETURNS TABLE
@@ -272,7 +272,7 @@ SELECT ...
 
 #### Union
 
-Union operators combine the results of multiple queries into a single result set. They also combine the multiple queries into a single query. Then you may get a single, complex query. The following example will end up with a single query plan that involves 12 tables.
+Union operators combine the results of multiple queries into a single result set. They also combine multiple queries into a single query. Then you may get a single, complex query. The following example will end up with a single query plan that involves 12 tables.
 
 ```sql
 SELECT ...
@@ -325,11 +325,11 @@ OPTION (FORCE ORDER)
 
 #### Reduce the JOIN possibilities
 
-If other alternatives haven't helped, try to reduce the query plan combinations by limiting the choices of physical joins operators with [join hints](/sql/t-sql/queries/hints-transact-sql-query#-loop--merge--hash--join). For examples: `OPTION (HASH JOIN, MERGE JOIN)`, `OPTION (HASH JOIN, LOOP JOIN)` or `OPTION (MERGE JOIN)`.
+If other alternatives haven't helped, try to reduce the query plan combinations by limiting the choices of physical joins operators with [join hints](/sql/t-sql/queries/hints-transact-sql-query#-loop--merge--hash--join). For example: `OPTION (HASH JOIN, MERGE JOIN)`, `OPTION (HASH JOIN, LOOP JOIN)` or `OPTION (MERGE JOIN)`.
 
 **Note:** You should be careful when using these hints.
 
-In some cases, limiting the optimizer with fewer join choices may cause the best join option not available and may actually slow down the query. Also in some cases, a specific join is required by an optimizer (for example, [row goal](https://support.microsoft.com/topic/kb4051361-optimizer-row-goal-information-in-query-execution-plan-added-in-sql-server-2014-2016-and-2017-ec130d21-1adc-3d3d-95a5-cdb075722269)), and the query may fail to generate a plan if that join isn't an option. Therefore, after you target the join hints for a specific query, check if you find a combination that offers better performance and eliminates the Optimizer Timeout.
+In some cases, limiting the optimizer with fewer join choices may cause the best join option not to be available and may actually slow down the query. Also, in some cases, a specific join is required by an optimizer (for example, [row goal](https://support.microsoft.com/topic/kb4051361-optimizer-row-goal-information-in-query-execution-plan-added-in-sql-server-2014-2016-and-2017-ec130d21-1adc-3d3d-95a5-cdb075722269)), and the query may fail to generate a plan if that join isn't an option. Therefore, after you target the join hints for a specific query, check if you find a combination that offers better performance and eliminates the Optimizer Timeout.
 
 Here are two examples of how to use such hints:
 
@@ -358,7 +358,7 @@ Here are two examples of how to use such hints:
 
 ### Step 5: Change CE configuration
 
-Try to change the CE configuration by switching between Legacy CE and New CE. Changing the CE configuration can result the QO to pick a different path when SQL Server evaluates and creates query plans. So, even if an Optimizer Timeout issue occurs, it's possible that you end up with a plan that performs more optimally than the one selected using the alternate CE configuration. For more information, see [How to activate the best query plan (Cardinality Estimation)](/sql/relational-databases/performance/cardinality-estimation-sql-server#how-to-activate-the-best-query-plan).
+Try to change the CE configuration by switching between Legacy CE and New CE. Changing the CE configuration can result in the QO picking a different path when SQL Server evaluates and creates query plans. So, even if an Optimizer Timeout issue occurs, it's possible that you end up with a plan that performs more optimally than the one selected using the alternate CE configuration. For more information, see [How to activate the best query plan (Cardinality Estimation)](/sql/relational-databases/performance/cardinality-estimation-sql-server#how-to-activate-the-best-query-plan).
 
 ### Step 6: Enable Optimizer fixes
 
@@ -367,7 +367,7 @@ If you haven't enabled Query Optimizer fixes, consider enabling them by using on
 - Server level: use trace flag [T4199](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf4199)
 - Database level: use `ALTER DATABASE SCOPED CONFIGURATION ..QUERY_OPTIMIZER_HOTFIXES = ON` or change database compatibility levels for SQL Server 2016 and later versions
 
-The QO fixes may cause the optimizer to take a different path in plan exploration, therefore it may choose a more optimal query plan. For more information, see [SQL Server query optimizer hotfix trace flag 4199 servicing model](https://support.microsoft.com/topic/kb974006-sql-server-query-optimizer-hotfix-trace-flag-4199-servicing-model-cd3ebf5c-465c-6dd8-7178-d41fdddccc28).
+The QO fixes may cause the optimizer to take a different path in plan exploration. Therefore it may choose a more optimal query plan. For more information, see [SQL Server query optimizer hotfix trace flag 4199 servicing model](https://support.microsoft.com/topic/kb974006-sql-server-query-optimizer-hotfix-trace-flag-4199-servicing-model-cd3ebf5c-465c-6dd8-7178-d41fdddccc28).
 
 ### Step 7: Refine the query
 
