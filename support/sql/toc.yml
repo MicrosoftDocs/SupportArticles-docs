@@ -369,7 +369,7 @@
       href: install/sqlserver-patching-issues.md
     - name: SQL Server 2012 Setup issues
       href: install/sql-server-2012-setup-issues.md
-    - name: SQL Setup fails in DMZ
+    - name: SQL Server setup fails in DMZ
       href: install/cannot-install-sql-when-only-rodc-available.md
     - name: SxS install of X64 and X86 version of SSRS 2008
       href: install/install-reporting-service.md

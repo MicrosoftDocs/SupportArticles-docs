@@ -2,8 +2,9 @@
 title: Can't install SQL Server when only an RODC is reachable
 description: This article discusses an issue in which you can't install SQL Server when only a read-only domain controller (RODC) is available.
 ms.date: 11/8/2022
-author: ramakoni1
+author: shwetasohu
 ms.author: v-shwetasohu
+ms.reviewer: ramakoni1
 ms.prod: sql
 ms.custom: sap:Database Engine
 ---
@@ -15,7 +16,7 @@ This article discusses an issue in which you can't install SQL Server when only 
 ## Symptoms
 
 Consider the following scenario:
-- You have a perimeter network (also known as a DMZ, demilitarized zone, and a screened subnet) that only has an RODC available.
+- You have a perimeter network (also known as a demilitarized zone (DMZ), and a screened subnet) that only has an RODC available.
 - You have a member server in the perimeter network.
 You try to install SQL Server on the member server and use an Active Directory service account for the SQL Server service.
 
@@ -27,7 +28,7 @@ When you log on to a computer for the first time and try to encrypt data, the op
 
 ## Workaround
 
-To work around this issue perform the following:
+To work around this issue, perform the following:
 1. Use the built-in account to install SQL Server.
 1. Change the account that is used for the services to an Active Directory service account.
 
@@ -35,4 +36,4 @@ For other resolutions and additional information, see [DPAPI MasterKey backup fa
 
 ## References
 
-[Installing SQL Server on a domain controller](/sql/sql-server/install/security-considerations-for-a-sql-server-installation?view=sql-server-ver15&preserve-view=true)
+[Installing SQL Server on a domain controller](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)
