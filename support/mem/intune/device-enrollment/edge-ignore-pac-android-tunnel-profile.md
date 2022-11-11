@@ -32,7 +32,3 @@ To work around this issue, use one of the following methods:
     > If the VPN has **Always-on VPN** set to **Enable**, users won't be able to disconnect and reconnect to the VPN. In this case, users can force a VPN reconnection by resetting the network of the device. To reset the network of the device, disable and enable the airplane mode or use **Reset network settings** under **Settings**.
 
 - Postpone the Android 13 upgrade.
-
-## Status
-
-Microsoft is investigating this issue and will post more information in this article when a fix becomes available.
