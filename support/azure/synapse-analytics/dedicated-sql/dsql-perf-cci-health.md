@@ -24,7 +24,7 @@ jupyter:
 # Assess and correct clustered columnstore index health on dedicated SQL pool
 
 > [!NOTE]
->Before attempting to open this notebook, check that Azure Data Studio is installed on your local machine. To install, go to [Learn how to install Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver16).
+>Before attempting to open this notebook, check that Azure Data Studio is installed on your local machine. To install, go to [Learn how to install Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
 
 > [!div class="nextstepaction"]
 > [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/synapse-support/main/dedicated-sql-pool/dsql-perf-cci-health.ipynb)
@@ -386,5 +386,5 @@ To gain a more in-depth understanding and acquire additional assessment tools fo
 - [Indexes on dedicated SQL pool tables in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index)
 - [Columnstore indexes: Overview](/sql/relational-databases/indexes/columnstore-indexes-overview?toc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Ftoc.json&bc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Fbreadcrumb%2Ftoc.json&view=azure-sqldw-latest&preserve-view=true)
 - [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci)
-- [Columnstore indexes - Design guidance](/sql/relational-databases/indexes/columnstore-indexes-design-guidance?view=sql-server-ver16)
+- [Columnstore indexes - Design guidance](/sql/relational-databases/indexes/columnstore-indexes-design-guidance)
 <!-- #endregion -->
