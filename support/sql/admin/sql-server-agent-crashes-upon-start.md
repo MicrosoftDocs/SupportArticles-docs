@@ -69,7 +69,7 @@ EXECUTE msdb.dbo.sp_sqlagent_refresh_job
 ```
 
    > [!NOTE]
-   > The SPID is in the RUNNABLE state and regularly waits for the `PREEMPTIVE_OS_LOOKUPACCOUNTSID` wait type, or the SPID is in a waiting state for the `ASYNC_NETWORKIO` wait type.
+   > The SPID is in the RUNNABLE state and regularly waits for the `PREEMPTIVE_OS_LOOKUPACCOUNTSID` wait type, or the SPID is in a waiting state for the `ASYNC_NETWORK_IO` wait type.
 
 ## Cause
 
