@@ -2,8 +2,9 @@
 title: SQL Server agent crashes when you try to start it
 description: This article discusses the issues experienced by SQL Server agent service when you create multiple jobs in your SQL Server instance.
 ms.date: 11/08/2022
-author: ramakoni1
+author: shwetasohu
 ms.author: v-shwetasohu
+ms.reviewer: ramakoni1
 ms.prod: sql
 ms.custom: sap:Administration and Management
 ---
@@ -68,7 +69,7 @@ EXECUTE msdb.dbo.sp_sqlagent_refresh_job
 ```
 
    > [!NOTE]
-   > The SPID is in the RUNNABLE state and regularly waits for the PREEMPTIVE_OS_LOOKUPACCOUNTSID wait type, or the SPID is in a waiting state for the ASYNC_NETWORKIO wait type.
+   > The SPID is in the RUNNABLE state and regularly waits for the `PREEMPTIVE_OS_LOOKUPACCOUNTSID` wait type, or the SPID is in a waiting state for the `ASYNC_NETWORKIO` wait type.
 
 ## Cause
 
@@ -86,5 +87,5 @@ To work around this issue, delete the jobs that you don't require.
 
 ## More information
 
-- For more information about how to delete a job, see [Delete One or More Jobs](/sql/ssms/agent/delete-one-or-more-jobs?view=sql-server-ver16&preserve-view=true).
+- For more information about how to delete a job, see [Delete One or More Jobs](/sql/ssms/agent/delete-one-or-more-jobs?view=sql-server-ver16).
 - For more information on managing your reporting services subscriptions, see [Create and Manage Subscriptions for Native Mode Report Servers](/sql/reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers?redirectedfrom=MSDN&view=sql-server-ver16&preserve-view=true).
