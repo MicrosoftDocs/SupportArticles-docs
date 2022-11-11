@@ -113,6 +113,8 @@
       href: admin/assembly-name-cannot-migrated-error.md
     - name: Assertion when you execute Bulk Insert or BCP 
       href: admin/assertion-execute-bulk-insert-bcp.md
+    - name: Assertion failure on partner servers when using mirroring
+      href: admin/assertion-partner-servers-using-mirroring.md
     - name: ASR Agent or non-component VSS Backup fails
       href: admin/asr-agent-vss-backup-fails.md
     - name: Azure Site Recovery jobs fail on servers hosting SQL servers
