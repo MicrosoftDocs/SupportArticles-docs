@@ -116,7 +116,7 @@ To do this, use one of the following methods:
 
     Query the column `comments` of the table [msdistribution_history](/sql/relational-databases/system-tables/msdistribution-history-transact-sql) in the distribution database. If the result of the query contains the following entry, the Distribution Agent has switched to using one session:
 
-    > The process failed to complete last batch in multi-streaming mode., Iit has been reset to single connection mode and is retrying the operation.
+    > The process failed to complete last batch in multi-streaming mode, it has been reset to single connection mode and is retrying the operation.
 
 - Method 3
 
@@ -181,7 +181,7 @@ To do this, use one of the following methods:
 
 1. From the output file of the Distribution Agent or from the column `start_time` of the table [msdistribution_history](/sql/relational-databases/system-tables/msdistribution-history-transact-sql), obtain the time stamp of the following entry:
 
-   > The process failed to complete last batch in multi-streaming mode., Iit has been reset to single connection mode and is retrying the operation.
+   > The process failed to complete last batch in multi-streaming mode, it has been reset to single connection mode and is retrying the operation.
 
 1. Open the trace (.trc) file from the Subscriber. Locate a blocking script or an exception event whose time stamp is the same as or very close to the time stamp that you obtained in Step 4.
 
