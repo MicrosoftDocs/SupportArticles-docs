@@ -98,7 +98,7 @@ While the following factors will reduce the number of access methods considered,
 - Existences of constraints
 - Combinations of well-designed and up-to-date statistics
 
-**Note:** QO stops at the threshold doesn't mean it will end up with a slower query. Just in some cases, you may see a slower query execution.
+**Note:** The fact that QO reaches the threshold doesn't mean it will end up with a slower query. In most cases the query will perform well, but in some cases, you may see a slower query execution.
 
 ### Example of how the factors are considered
 
@@ -136,7 +136,7 @@ Multiply all these above, we can get the number of possible plans: 2\*n!\*12<sup
 Note that the above calculations illustrate the worst-case scenario; as we pointed out there are factors that will reduce the number of possibilities  - filter predicates, statistics, constraints. For example a filter predicate and updated statistics will reduce the number of physical access methods because it may be more efficient to use an index seek than a scan. This will also lead to a smaller selection of joins and so on.
 ## Why do I see an Optimizer Timeout with a simple query?
 
-Nothing with Query Optimizer is simple. There are so many possible scenarios and its complexity is so high that it's hard to grasp all of the possibilities. The Query Optimizer may dynamically set the timeout threshold based on the cost of the plan found at a certain stage. For example, if a plan that appears relatively efficient is found, the task limit to search for a better plan may be reduced. Therefore, underestimated cardinality estimation (CE) may be one scenario for hitting an Optimizer Timeout early. In this case, the focus of investigation is CE. It's a rarer case compared with the scenario about running a complex query that's discussed in the previous section, but it's possible.
+Nothing with Query Optimizer is simple. There are so many possible scenarios and its complexity is so high that it's hard to grasp all of the possibilities. The Query Optimizer may dynamically set the timeout threshold based on the cost of the plan found at a certain stage. For example, if a plan that appears relatively efficient is found, the task limit to search for a better plan may be reduced. Therefore, underestimated [cardinality estimation](/sql/relational-databases/performance/cardinality-estimation-sql-server) (CE) may be one scenario for hitting an Optimizer Timeout early. In this case, the focus of investigation is CE. It's a rarer case compared with the scenario about running a complex query that's discussed in the previous section, but it's possible.
 
 ## Resolutions
 
