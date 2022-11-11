@@ -8,7 +8,7 @@ ms.service: microsoft-intune
 ms.subservice: intune-device-enrollment
 ms.reviewer: kaushika, ochukwunyere, intunecic
 ---
-# Microsoft Edge in Android 13 ignores a PAC setting in a Microsoft Intune VPN profile
+# Microsoft Edge in Android 13 ignores PAC setting in Microsoft Intune VPN profile
 
 This article provides a workaround for an issue where Microsoft Edge in Android 13 ignores a Proxy Auto-Configuration (PAC) setting configured in a per-app VPN profile in Microsoft Intune.
 
