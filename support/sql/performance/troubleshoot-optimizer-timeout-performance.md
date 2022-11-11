@@ -11,15 +11,15 @@ ms.author: jopilov
 
 _Applies to:_ &nbsp; SQL Server
 
-This article introduces what Optimizer Timeout is, how it can affect query performance and how to optimize the performance.
+This article introduces Optimizer Timeout, how it can affect query performance, and how to optimize the performance.
 
 ## What is Optimizer Timeout?
 
-SQL Server uses a cost-based _Query Optimizer_ (QO). For information on QO, see [Query processing architecture guide](/sql/relational-databases/query-processing-architecture-guide). A cost-based Query Optimizer selects a query execution plan with the lowest cost after it has built and assessed multiple query plans. One of the objectives of the SQL Server Query Optimizer is to spend a reasonable time in query optimization as compared to query execution. Optimizing a query is to be much faster than executing it. To accomplish this target, QO has a built-in threshold of tasks to consider before it stops the optimization process. When the threshold is reached before QO has considered all the possible plans, it reaches the Optimizer Timeout limit. An Optimizer Timeout event is reported in the query plan as **TimeOut** under **Reason For Early Termination of Statement Optimization**. It's important to understand that this threshold isn't based on clock time but on the number of possibilities considered by the optimizer. In current SQL Server QO versions, over a half million tasks are considered before a time out is reached.
+SQL Server uses a cost-based _Query Optimizer_ (QO). For information on QO, see [Query processing architecture guide](/sql/relational-databases/query-processing-architecture-guide). A cost-based Query Optimizer selects a query execution plan with the lowest cost after it has built and assessed multiple query plans. One of the objectives of SQL Server Query Optimizer is to spend a reasonable time in query optimization as compared to query execution. Optimizing a query is to be much faster than executing it. To accomplish this target, QO has a built-in threshold of tasks to consider before it stops the optimization process. When the threshold is reached before QO has considered all the possible plans, it reaches the Optimizer Timeout limit. An Optimizer Timeout event is reported in the query plan as **TimeOut** under **Reason For Early Termination of Statement Optimization**. It's important to understand that this threshold isn't based on clock time but on the number of possibilities considered by the optimizer. In current SQL Server QO versions, over a half million tasks are considered before a timeout is reached.
 
-The Optimizer Timeout is designed into SQL Server and in many cases it isn't a factor affecting query performance. However, in some cases the SQL query plan choice may be negatively affected by the Optimizer Timeout and slower query performance could result. When you encounter such issues, understanding the Optimizer Timeout mechanism and how complex queries can be affected, can help you troubleshoot and improve your query speed.
+The Optimizer Timeout is designed into SQL Server, and in many cases, it isn't a factor affecting query performance. However, in some cases, the SQL query plan choice may be negatively affected by the Optimizer Timeout, and slower query performance could result. When you encounter such issues, understanding the Optimizer Timeout mechanism and how complex queries can be affected can help you troubleshoot and improve your query speed.
 
-The result of reaching the Optimizer Timeout threshold is that SQL Server hasn't considered the entire set of possibilities for optimization. That is, it may have missed plans that could produce shorter execution times. QO will stop at the threshold and consider the least-cost query plan at that point, even though there may be better, unexplored options. Keep in mind that the plan selected after an Optimizer Timeout is reached can produce a reasonable execution duration for the query. However, in some cases the selected plan might result in a query execution that's suboptimal.
+The result of reaching the Optimizer Timeout threshold is that SQL Server hasn't considered the entire set of possibilities for optimization. That is, it may have missed plans that could produce shorter execution times. QO will stop at the threshold and consider the least-cost query plan at that point, even though there may be better, unexplored options. Keep in mind that the plan selected after an Optimizer Timeout is reached can produce a reasonable execution duration for the query. However, in some cases, the selected plan might result in a query execution that's suboptimal.
 
 ## How to detect an Optimizer Timeout?
 
@@ -30,7 +30,7 @@ Here are symptoms that indicate an Optimizer Timeout:
   You have a complex query that involves lots of joined tables (for example, eight or more tables are joined).
 - **Slow query**
 
-  The query may run slowly or slower than when you compare it to another SQL Server version or another system.
+  The query may run slowly or slower than it runs on another SQL Server version or system.
 - **Query plan shows StatementOptmEarlyAbortReason=Timeout**
 
   - The query plan shows `StatementOptmEarlyAbortReason="TimeOut"` in the XML query plan.
@@ -48,13 +48,13 @@ Here are symptoms that indicate an Optimizer Timeout:
     <BatchSequence>
     ```
 
-  - Check the properties of the left-most plan operator in Microsoft SQL Server Management Studio, you can see the value of **Reason For Early Termination of Statement Optimization** is **TimeOut**.
+  - Check the properties of the left-most plan operator in Microsoft SQL Server Management Studio. You can see the value of **Reason For Early Termination of Statement Optimization** is **TimeOut**.
 
-    :::image type="content" source="media/troubleshoot-optimizer-timeout-performance/opitmizer-timeout-in-query-plan-ssms.png" alt-text="optimizer timeout in query plan in SSMS":::
+    :::image type="content" source="media/troubleshoot-optimizer-timeout-performance/opitmizer-timeout-in-query-plan-ssms.png" alt-text="Screenshot that shows the optimizer timeout in query plan in SSMS.":::
 
 ## What causes an Optimizer Timeout?
 
-There's no simple way to determine what conditions would cause the optimizer threshold to be reached or exceeded. The following sections are some factors that affect how many plans are explored by QO when looking for a best plan.
+There's no simple way to determine what conditions would cause the optimizer threshold to be reached or exceeded. The following sections are some factors that affect how many plans are explored by QO when looking for the best plan.
 
 - In what order to join tables
 
@@ -86,25 +86,25 @@ There's no simple way to determine what conditions would cause the optimizer thr
   - Merge join (MJ)
   - Adaptive join (starting with SQL Server 2017 (14.x))
 
-  For more information, see [Joins](/sql/relational-databases/performance/joins)
+  For more information, see [Joins](/sql/relational-databases/performance/joins).
 
 - Execute parts of the query in parallel or serially?
 
-  For more information, see [Parallel query processing](/sql/relational-databases/query-processing-architecture-guide#parallel-query-processing)
+  For more information, see [Parallel query processing](/sql/relational-databases/query-processing-architecture-guide#parallel-query-processing).
 
-While the following factors will reduce the number of access methods considered, and thus the possibilities considered:
+While the following factors will reduce the number of access methods considered and thus the possibilities considered:
 
 - Query predicates (filters in the `WHERE` clause)
 - Existences of constraints
 - Combinations of well-designed and up-to-date statistics
 
-**Note:** The fact that QO reaches the threshold doesn't mean it will end up with a slower query. In most cases the query will perform well, but in some cases, you may see a slower query execution.
+**Note:** The fact that QO reaches the threshold doesn't mean it will end up with a slower query. In most cases, the query will perform well, but in some cases, you may see a slower query execution.
 
 ### Example of how the factors are considered
 
-To illustrate, let's take an example of a join between three tables (`t1`, `t2` and `t3`) and each table has a clustered index and a nonclustered index.
+To illustrate, let's take an example of a join between three tables (`t1`, `t2`, and `t3`) and each table has a clustered index and a nonclustered index.
 
-First, consider the physical join types. There are two joins involved here. And, because there are three physical join possibilities (NJ, HJ and MJ), the query can be performed in 3<sup>2</sup> = 9 ways.
+First, consider the physical join types. There are two joins involved here. And, because there are three physical join possibilities (NJ, HJ, and MJ), the query can be performed in 3<sup>2</sup> = 9 ways.
 
 1. NJ - NJ
 1. NJ - HJ
@@ -116,43 +116,43 @@ First, consider the physical join types. There are two joins involved here. And,
 1. MJ - HJ
 1. MJ - MJ
 
-Then, consider the join order which is calculated using Permutations: P (n, r). The order of the first two tables doesn't matter, so there can be P(3,1) = 3 possibilities:
+Then, consider the join order, which is calculated using Permutations: P (n, r). The order of the first two tables doesn't matter, so there can be P(3,1) = 3 possibilities:
 
 - Join `t1` with `t2` and then with `t3`
 - Join `t1` with `t3` and then with `t2`
 - Join `t2` with `t3` and then with `t1`
 
-Next, consider that either the clustered or non-clustered index could be used for data retrieval. Also, for each index we have two access methods, seek or scan. That means, for each table there are 2<sup>2</sup> = 4 choices. We have three tables, so there can be 4<sup>3</sup> = 64 choices.
+Next, consider whether the clustered or non-clustered index could be used for data retrieval. Also, for each index, we have two access methods, seek or scan. That means, for each table, there are 2<sup>2</sup> = 4 choices. We have three tables, so there can be 4<sup>3</sup> = 64 choices.
 
 Finally, considering all these conditions, there can be 9\*3\*64 = 1728 possible plans.
 
-Now, let's assume there are n tables joined in the query and each table has a clustered index and a nonclustered index. Consider the following factors:
+Now, let's assume there are n tables joined in the query, and each table has a clustered index and a nonclustered index. Consider the following factors:
 
 - Join orders: P(n,n-2) = n!/2
 - Join types: 3<sup>n-1</sup>
 - Different index types with seek and scan methods: 4<sup>n</sup>
 
-Multiply all these above, we can get the number of possible plans: 2\*n!\*12<sup>n-1</sup>. When n = 4, the number is 82,944. When n = 6, the number is 358,318,080. So, with the increase of the number of the tables involved in a query, the number of possible plans increases geometrically. Further, if you include the possibility of parallelism and other factors, you can imagine how many possible plans will be considered. Therefore, a query with lots of joins is more likely to reach the optimizer timeout threshold than one with fewer joins.
+Multiply all these above, we can get the number of possible plans: 2\*n!\*12<sup>n-1</sup>. When n = 4, the number is 82,944. When n = 6, the number is 358,318,080. So, with the increase in the number of tables involved in a query, the number of possible plans increases geometrically. Further, if you include the possibility of parallelism and other factors, you can imagine how many possible plans will be considered. Therefore, a query with lots of joins is more likely to reach the optimizer timeout threshold than one with fewer joins.
 
-Note that the above calculations illustrate the worst-case scenario, as we have pointed out there are factors that will reduce the number of possibilities - filter predicates, statistics, constraints. For example, a filter predicate and updated statistics will reduce the number of physical access methods because it may be more efficient to use an index seek than a scan. This will also lead to a smaller selection of joins and so on.
+Note that the above calculations illustrate the worst-case scenario. As we have pointed out, there are factors that will reduce the number of possibilities - filter predicates, statistics, and constraints. For example, a filter predicate and updated statistics will reduce the number of physical access methods because it may be more efficient to use an index seek than a scan. This will also lead to a smaller selection of joins and so on.
 
 ## Why do I see an Optimizer Timeout with a simple query?
 
-Nothing with Query Optimizer is simple. There are so many possible scenarios and its complexity is so high that it's hard to grasp all of the possibilities. The Query Optimizer may dynamically set the timeout threshold based on the cost of the plan found at a certain stage. For example, if a plan that appears relatively efficient is found, the task limit to search for a better plan may be reduced. Therefore, underestimated [cardinality estimation](/sql/relational-databases/performance/cardinality-estimation-sql-server) (CE) may be one scenario for hitting an Optimizer Timeout early. In this case, the focus of investigation is CE. It's a rarer case compared with the scenario about running a complex query that's discussed in the previous section, but it's possible.
+Nothing with Query Optimizer is simple. There are many possible scenarios, and its complexity is so high that it's hard to grasp all the possibilities. The Query Optimizer may dynamically set the timeout threshold based on the cost of the plan found at a certain stage. For example, if a plan that appears relatively efficient is found, the task limit to search for a better plan may be reduced. Therefore, underestimated [cardinality estimation](/sql/relational-databases/performance/cardinality-estimation-sql-server) (CE) may be one scenario for hitting an Optimizer Timeout early. In this case, the focus of the investigation is CE. It's a rarer case compared with the scenario about running a complex query that's discussed in the previous section, but it's possible.
 
 ## Resolutions
 
-An Optimizer Timeout appearing in a query plan doesn't necessarily mean that it's the cause of the poor query performance. In most cases, you may have to do nothing about this situation. The query plan that SQL Server ends up with may be reasonable and the query you're running may be performing well. You may not ever know that you've encountered an Optimizer Timeout.
+An Optimizer Timeout appearing in a query plan doesn't necessarily mean that it's the cause of the poor query performance. In most cases, you may not need to do anything about this situation. The query plan that SQL Server ends up with may be reasonable, and the query you're running may be performing well. You may not ever know that you've encountered an Optimizer Timeout.
 
 Try the following steps if you find the need to tune and optimize.
 
 ### Step 1: Establish a baseline
 
-Check if you can execute the same query with the same data set on a different build of SQL Server, or using a different CE configuration or on a different system (hardware specifications). A guiding principle in performance tuning is "There's no performance problem without a baseline". Therefore it would be important to establish a base line for the same query.
+Check if you can execute the same query with the same data set on a different build of SQL Server, using a different CE configuration, or on a different system (hardware specifications). A guiding principle in performance tuning is "there's no performance problem without a baseline." Therefore it would be important to establish a baseline for the same query.
 
 ### Step 2: Look for "hidden" conditions that lead to the Optimizer Timeout
 
-Examine your query in detail to determine its complexity. Upon initial examination, it may not be obvious that the query is complex and involves many joins. A common scenario here's that views or table-valued functions are involved. For example, on the surface, the query may appear to be simple because it joins two views. But when you examine the queries inside the views, you may find that each view joins seven tables and as a result when the two views are joined, you end up with a 14-table join. If your query uses the following objects, drill down into each object to see what the underlying queries inside it look like:
+Examine your query in detail to determine its complexity. Upon initial examination, it may not be obvious that the query is complex and involves many joins. A common scenario here is that views or table-valued functions are involved. For example, on the surface, the query may appear to be simple because it joins two views. But when you examine the queries inside the views, you may find that each view joins seven tables. As a result, when the two views are joined, you end up with a 14-table join. If your query uses the following objects, drill down into each object to see what the underlying queries inside it look like:
 
 - [Views](/sql/relational-databases/views/create-views)
 - [Table-valued functions (TFVs)](/sql/relational-databases/user-defined-functions/create-user-defined-functions-database-engine#TVF)
@@ -164,7 +164,7 @@ For all of these scenarios, the most common resolution would be to rewrite the q
 
 #### Subqueries or derived tables
 
-The following query is an example that joins two separate sets of queries (derived tables) with 4-5 joins in each. However, after parsing by SQL Server, it will be compiled to a single query with eight tables joined.
+The following query is an example that joins two separate sets of queries (derived tables) with 4-5 joins in each. However, after parsing by SQL Server, it will be compiled into a single query with eight tables joined.
 
 ```sql
 SELECT ...
@@ -192,7 +192,7 @@ AND derived_table1.Co2 = derived_table2.Co20
 
 Using multiple common table expressions (CTEs) isn't an appropriate solution to simplify a query and avoid the Optimizer Timeout. Multiple CTEs will only increase the complexity of the query. Therefore, it's counterproductive to use CTEs when solving optimizer timeouts. CTEs look like to break a query logically, but they'll be combined into a single query and optimized as a single large join of tables.
 
-Here's an example of a CTE, which will be compiled as a single query with many joins. It may appear that the query against the my_cte is a two-object simple join, but in fact, there are seven other tables joined in the CTE.
+Here's an example of a CTE that will be compiled as a single query with many joins. It may appear that the query against the my_cte is a two-object simple join, but in fact, there are seven other tables joined in the CTE.
 
 ```sql
 WITH my_cte AS (
