@@ -1,6 +1,6 @@
 ---
 title: PAC setting in per-app VPN profile is ignored by Microsoft Edge in Android 13
-description: Provides a workaround to an issue where Microsoft Edge in Android 13 ignores a PAC setting in per-app VPN profile that's created in Microsoft Intune.
+description: Provides a workaround for an issue where Microsoft Edge in Android 13 ignores a PAC setting in a per-app VPN profile that's created in Microsoft Intune.
 ms.date: 11/02/2022
 author: AmandaAZ
 ms.author: v-weizhu
@@ -8,9 +8,9 @@ ms.service: microsoft-intune
 ms.subservice: intune-device-enrollment
 ms.reviewer: kaushika, ochukwunyere, intunecic
 ---
-# Microsoft Edge in Android 13 ignores PAC setting in Microsoft Intune VPN profile
+# Microsoft Edge in Android 13 ignores a PAC setting in a Microsoft Intune VPN profile
 
-This article works around an issue where Microsoft Edge in Android 13 ignores a Proxy Auto-Configuration (PAC) setting that's configured in a per-app VPN profile in Microsoft Intune.
+This article provides a workaround for an issue where Microsoft Edge in Android 13 ignores a Proxy Auto-Configuration (PAC) setting configured in a per-app VPN profile in Microsoft Intune.
 
 ## Symptoms
 
@@ -29,6 +29,6 @@ To work around this issue, use one of the following methods:
 - While Microsoft Edge is running, disconnect and reconnect to the VPN.
 
     > [!NOTE]
-    > If the VPN has **Always-on VPN** set to **Enable**, users won't be able to disconnect and reconnect to the VPN. In this case, users can force a VPN reconnection by resetting the network of the device. To reset the network of the device, disable and enable the airplane mode or use **Reset network settings** under **Settings**.
+    > If the VPN has **Always-on VPN** set to **Enable**, users won't be able to disconnect and reconnect to the VPN. In this case, users can force a VPN reconnection by resetting the network of the device. To reset the network of the device, disable and enable airplane mode or use **Reset network settings** under **Settings**.
 
 - Postpone the Android 13 upgrade.
