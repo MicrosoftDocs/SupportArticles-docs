@@ -37,9 +37,11 @@ The SQL Server team uses a scheduled delivery model for releasing fixes and prod
 ### On-demand fixes(OD)
 
 - Contains critical fix requests that satisfy all these conditions:
-   - Cannot wait for the scheduled Cumulative Update release
-   - There is no reasonable mitigation or workaround
-   - The problem causes significant impact to product or application functionality
+
+   - Can't wait for the scheduled Cumulative Update release.
+   - There is no reasonable mitigation or workaround.
+   - The problem causes significant impact to product or application functionality.
+
 - The hotfix can be requested by any customer, regardless of their support offering.
 
 - The hotfix is released on or before a mutually agreed-upon date based on the customer's need. The hotfix is targeted for a specific baseline like a Cumulative Update or a Service Pack.
