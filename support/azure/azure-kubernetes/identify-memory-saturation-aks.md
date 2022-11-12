@@ -78,7 +78,7 @@ In the following example, a container named **myapp-maxmem** inside of the **max
 
 ## Check node memory
 
-Memory is another resource to troubleshoot because most applications use a portion of memory. You can use the [free](https://man7.org/linux/man-pages/man1/free.1.html) and [top](https://man7.org/linux/man-pages/man1/top.1.html) commands to review overall memory usage and determine which processes are running and how much memory they're consuming.
+Memory is another resource to troubleshoot, because most applications use a portion of memory. You can use the [free](https://man7.org/linux/man-pages/man1/free.1.html) and [top](https://man7.org/linux/man-pages/man1/top.1.html) commands to review overall memory usage and determine which processes are running and how much memory they're consuming.
 
 ```console
 [root@rhel78 ~]# free -m
