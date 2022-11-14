@@ -91,6 +91,8 @@
         href: admin/event-id-33566-start-sql-server.md
       - name: Event ID 7000 and SQL Server doesn't start
         href: admin/event-id-7000-fail-start.md
+    - name: SQL Server agent may not start or crash 
+      href: admin/sql-server-agent-crashes-upon-start.md
     - name: 1450 and 665 errors when running DBCC CHECKDB
       href: admin/1450-and-665-errors-running-dbcc-checkdb.md
     - name: Diagnostics for unreported I/O problems
@@ -115,6 +117,8 @@
       href: admin/assembly-name-cannot-migrated-error.md
     - name: Assertion when you execute Bulk Insert or BCP 
       href: admin/assertion-execute-bulk-insert-bcp.md
+    - name: Assertion failure on partner servers when using mirroring
+      href: admin/assertion-partner-servers-using-mirroring.md
     - name: ASR Agent or non-component VSS Backup fails
       href: admin/asr-agent-vss-backup-fails.md
     - name: Azure Site Recovery jobs fail on servers hosting SQL servers
@@ -371,6 +375,8 @@
       href: install/sqlserver-patching-issues.md
     - name: SQL Server 2012 Setup issues
       href: install/sql-server-2012-setup-issues.md
+    - name: SQL Server setup fails in DMZ
+      href: install/cannot-install-sql-when-only-rodc-available.md
     - name: SxS install of X64 and X86 version of SSRS 2008
       href: install/install-reporting-service.md
     - name: Update fails on Cluster_IsOnlineIfClustered rule
@@ -511,6 +517,8 @@
       href: replication/skiperrors-parameter-distribution-agent.md
     - name: Snapshot or Logreader agents fail
       href: replication/snapshot-logreader-agents-fail-destination-table-empty.md
+    - name: Subscription Streams
+      href: replication/configure-troubleshoot-subscriptionstreamsof-distribution-agent.md
     - name: Synchronization for merge replication fails
       href: replication/sql-merge-replication-synchronization-fails.md
     - name: The subscription does not exist
@@ -519,6 +527,7 @@
       href: replication/understand-merge-replication-article-process.md
     - name: Update is replicated as DELETE/INSERT pairs
       href: replication/update-statements-replicated-as-delete-insert.md
+
   - name: Security Issues
     items:
     - name: Block remote use of local accounts in Windows
