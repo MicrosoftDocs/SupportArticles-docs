@@ -222,6 +222,8 @@
       href: connect-linux-vm-sshconnection.md
     - name: SSH troubleshooting
       href: troubleshoot-ssh-connection.md
+    - name: SUSE VM connectivity and registration issues
+      href: suse-public-cloud-connectivity-registration-issues.md
     - name: Troubleshoot file system errors
       href: linux-recovery-cannot-start-file-system-errors.md
     - name: Recover LVM configured VMs and no boot 
@@ -316,15 +318,12 @@
   - name: Application access issues
     href: troubleshoot-app-connection.md
 
-- name: Linux VM package management
-  items:
-  - name: SUSE VM connectivity and registration issues
-    href: suse-public-cloud-connectivity-registration-issues.md
-
 - name: Linux VM setup and configuration
   items:
   - name: Configure multiple NICs
     href: linux-vm-multiple-virtual-network-interfaces-configuration.md
+  - name: Create SWAP file
+    href: create-swap-file-linux-vm.md
 
 - name: VM extensions troubleshooting
   items:

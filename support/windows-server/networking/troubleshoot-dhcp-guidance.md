@@ -15,6 +15,9 @@ ms.technology: networking
 ---
 # DHCP troubleshooting guidance
 
+> [!div class="nextstepaction"]
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806271" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common DHCP issues.
+
 Devices must be assigned an IP address to be able to operate in a network. You can assign an IP address manually or automatically. The automatic assignment is handled by the Dynamic Host Configuration Protocol (DHCP) service (Microsoft or third-party server).
 
 DHCP is a standard protocol that's defined by RFC 1541 (which is superseded by RFC 2131). DHCP enables a server to dynamically distribute IP addressing and configuration information to clients. Usually, the DHCP server provides at least the following basic information to the client:

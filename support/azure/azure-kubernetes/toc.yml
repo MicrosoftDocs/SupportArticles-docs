@@ -101,29 +101,49 @@
   - name: Node not ready but then recovers
     href: node-not-ready-then-recovers.md
 
-- name: Cannot connect to application hosted on AKS cluster
+- name: Troubleshoot inbound connections
   items:
-  - name: Basic troubleshooting
-    href: connection-issues-application-hosted-aks-cluster.md
-  - name: Custom NSG blocks traffic
-    href: custom-nsg-blocks-traffic.md
-  - name: Get and analyze HTTP response codes
-    href: get-and-analyze-http-response-codes.md
-  - name: Intermittent timeouts or server issues
-    href: intermittent-timeouts-or-server-issue.md
+  - name: Cannot connect to application hosted on AKS cluster
+    items:
+    - name: Basic troubleshooting
+      href: connection-issues-application-hosted-aks-cluster.md
+    - name: Custom NSG blocks traffic
+      href: custom-nsg-blocks-traffic.md
+    - name: Failures in the "az aks command invoke" command
+      href: resolve-az-aks-command-invoke-failures.md
+    - name: Get and analyze HTTP response codes
+      href: get-and-analyze-http-response-codes.md
+    - name: Intermittent timeouts or server issues
+      href: intermittent-timeouts-or-server-issue.md
+  - name: Cannot connect to AKS cluster through API server
+    items:
+    - name: Basic troubleshooting
+      href: troubleshoot-cluster-connection-issues-api-server.md
+    - name: Client IP address can't access API server
+      href: client-ip-address-cannot-access-api-server.md
+    - name: Config file isn't available when connecting
+      href: config-file-is-not-available-when-connecting.md
+    - name: Tunnel connectivity issues
+      href: tunnel-connectivity-issues.md
+    - name: User can't get cluster resources
+      href: user-cannot-get-cluster-resources.md
 
-- name: Cannot connect to AKS cluster through API server
+- name: Troubleshoot outbound connections
   items:
-  - name: Basic troubleshooting
-    href: troubleshoot-cluster-connection-issues-api-server.md
-  - name: Client IP address can't access API server
-    href: client-ip-address-cannot-access-api-server.md
-  - name: Config file isn't available when connecting
-    href: config-file-is-not-available-when-connecting.md
-  - name: Tunnel connectivity issues
-    href: tunnel-connectivity-issues.md
-  - name: User can't get cluster resources
-    href: user-cannot-get-cluster-resources.md
+  - name: Basic network flow and troubleshooting
+    href: basic-troubleshooting-outbound-connections.md
+  - name: Scenario-based troubleshooting
+    items:
+    - name: Can't connect to pods and services in same cluster
+      href: troubleshoot-connection-pods-services-same-cluster.md
+    - name: Can't connect to endpoints in same virtual network
+      href: troubleshoot-connections-endpoints-same-virtual-network.md
+    - name: Can't connect to endpoints outside virtual network (public internet)
+      href: troubleshoot-connections-endpoints-outside-virtual-network.md
+    - name: DNS resolution failure from within pod but not from worker node
+      href: troubleshoot-dns-failure-from-pod-but-not-from-worker-node.md
+    - name: Traffic between node pools is blocked by custom NSG
+      href: traffic-between-node-pools-is-blocked.md
 
 - name: Data collection guide
   items:
@@ -215,9 +235,12 @@
 
 - name: Extensions and add-ons
   items:
+  - name: Troubleshoot Azure Key Vault Provider for Secrets Store CSI Driver
+    href: troubleshoot-key-vault-csi-secrets-store-csi-driver.md
+  - name: Troubleshoot Dapr extension installation errors
+    href: troubleshoot-dapr-extension-installation-errors.md
   - name: Troubleshoot the KEDA add-on
     href: troubleshoot-kubernetes-event-driven-autoscaling-add-on.md
 
 - name: Can't pull images from container registry to cluster
   href: cannot-pull-image-from-acr-to-aks-cluster.md
-

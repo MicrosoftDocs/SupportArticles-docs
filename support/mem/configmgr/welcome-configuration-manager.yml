@@ -21,4 +21,4 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot content distribution
-            url: troubleshoot-content-distribution.md
+            url: content-management/troubleshoot-content-distribution.md
