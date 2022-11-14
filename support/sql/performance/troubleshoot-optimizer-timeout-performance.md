@@ -56,7 +56,7 @@ Here are symptoms that indicate an Optimizer Timeout:
 
 There's no simple way to determine what conditions would cause the optimizer threshold to be reached or exceeded. The following sections are some factors that affect how many plans are explored by QO when looking for the best plan.
 
-- In what order to join tables
+- In what order should tables be joined?
 
   Here's an example of the execute options of three-table joins (`Table1`, `Table2`, `Table3`):
 
@@ -132,9 +132,9 @@ Now, let's assume there are n tables joined in the query, and each table has a c
 - Join types: 3<sup>n-1</sup>
 - Different index types with seek and scan methods: 4<sup>n</sup>
 
-Multiply all these above, we can get the number of possible plans: 2\*n!\*12<sup>n-1</sup>. When n = 4, the number is 82,944. When n = 6, the number is 358,318,080. So, with the increase in the number of tables involved in a query, the number of possible plans increases geometrically. Further, if you include the possibility of parallelism and other factors, you can imagine how many possible plans will be considered. Therefore, a query with lots of joins is more likely to reach the optimizer timeout threshold than one with fewer joins.
+Multiply all these above, and we can get the number of possible plans: 2\*n!\*12<sup>n-1</sup>. When n = 4, the number is 82,944. When n = 6, the number is 358,318,080. So, with the increase in the number of tables involved in a query, the number of possible plans increases geometrically. Further, if you include the possibility of parallelism and other factors, you can imagine how many possible plans will be considered. Therefore, a query with lots of joins is more likely to reach the optimizer timeout threshold than one with fewer joins.
 
-Note that the above calculations illustrate the worst-case scenario. As we have pointed out, there are factors that will reduce the number of possibilities - filter predicates, statistics, and constraints. For example, a filter predicate and updated statistics will reduce the number of physical access methods because it may be more efficient to use an index seek than a scan. This will also lead to a smaller selection of joins and so on.
+Note that the above calculations illustrate the worst-case scenario. As we have pointed out, there are factors that will reduce the number of possibilities, such as filter predicates, statistics, and constraints. For example, a filter predicate and updated statistics will reduce the number of physical access methods because it may be more efficient to use an index seek than a scan. This will also lead to a smaller selection of joins and so on.
 
 ## Why do I see an Optimizer Timeout with a simple query?
 
@@ -190,7 +190,7 @@ AND derived_table1.Co2 = derived_table2.Co20
 
 #### Common table expressions (CTEs)
 
-Using multiple common table expressions (CTEs) isn't an appropriate solution to simplify a query and avoid the Optimizer Timeout. Multiple CTEs will only increase the complexity of the query. Therefore, it's counterproductive to use CTEs when solving optimizer timeouts. CTEs look like to break a query logically, but they'll be combined into a single query and optimized as a single large join of tables.
+Using multiple common table expressions (CTEs) isn't an appropriate solution to simplify a query and avoid Optimizer Timeout. Multiple CTEs will only increase the complexity of the query. Therefore, it's counterproductive to use CTEs when solving optimizer timeouts. CTEs look like to break a query logically, but they'll be combined into a single query and optimized as a single large join of tables.
 
 Here's an example of a CTE that will be compiled as a single query with many joins. It may appear that the query against the my_cte is a two-object simple join, but in fact, there are seven other tables joined in the CTE.
 
@@ -364,8 +364,8 @@ Try to change the CE configuration by switching between Legacy CE and New CE. Ch
 
 If you haven't enabled Query Optimizer fixes, consider enabling them by using one of the following two methods:
 
-- Server level: use trace flag [T4199](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf4199)
-- Database level: use `ALTER DATABASE SCOPED CONFIGURATION ..QUERY_OPTIMIZER_HOTFIXES = ON` or change database compatibility levels for SQL Server 2016 and later versions
+- Server level: use trace flag [T4199](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf4199).
+- Database level: use `ALTER DATABASE SCOPED CONFIGURATION ..QUERY_OPTIMIZER_HOTFIXES = ON` or change database compatibility levels for SQL Server 2016 and later versions.
 
 The QO fixes may cause the optimizer to take a different path in plan exploration. Therefore it may choose a more optimal query plan. For more information, see [SQL Server query optimizer hotfix trace flag 4199 servicing model](https://support.microsoft.com/topic/kb974006-sql-server-query-optimizer-hotfix-trace-flag-4199-servicing-model-cd3ebf5c-465c-6dd8-7178-d41fdddccc28).
 
