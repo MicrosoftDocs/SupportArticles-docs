@@ -59,5 +59,3 @@ In systems running Windows Server 2019 with the Hyper-V virtualization feature e
 * Task Manager in the root partition does not show CPU utilization accounting for virtual machines’ workloads.
 * The operating system does not use Collaborative Processor Performance Control (CPPC) for processor power management despite CPPC being set to enable in BIOS.
 * The root partition may not utilize all maximum 320 logical processors available when running Minroot configuration.
-
-For details, see [Windows Server 2019 Hyper-V host behavior running in the Minroot configuration](https://learn.microsoft.com/en-us/troubleshoot/windows-server/virtualization/windows-server-hyper-v-host-minroot-behaviors)
