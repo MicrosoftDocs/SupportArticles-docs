@@ -1,13 +1,13 @@
 ### YamlMime:Hub
 
-title: Office troubleshooting for admins and IT professionals # < 60 chars
-summary: Microsoft Office provides online services and server products for your business with solutions for small to enterprise scale. This page provides guidance for troubleshooting issues with these products and services. # < 160 chars
+title: Microsoft 365 troubleshooting for admins and IT professionals # < 60 chars
+summary: Microsoft 365 provides online services and server products for your business with solutions for small to enterprise scale. This page provides guidance for troubleshooting issues with these products and services. # < 160 chars
 # brand: aspnet | azure | dotnet | dynamics | m365 | ms-graph | office | power-platform | sql | sql-server | vs | visual-studio | windows | xamarin
-brand: office
+brand: m365
 
 metadata:
-  title: Office troubleshooting for admins and IT professionals # Required; page title displayed in search results. Include the brand. < 60 chars.
-  description: Microsoft Office provides online services and server products for your business with solutions for small to enterprise scale. This page provides guidance for troubleshooting issues with these products and services. # < 160 chars
+  title: Microsoft 365 troubleshooting for admins and IT professionals # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Microsoft 365 provides online services and server products for your business with solutions for small to enterprise scale. This page provides guidance for troubleshooting issues with these products and services. # < 160 chars
   ms.service: o365-administration #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: hub-page # Required
   audience: ITPro
@@ -95,6 +95,22 @@ productDirectory:
       links:
         - url: /sharepoint/support/onedrive-welcome
           text: OneDrive for Business
+   # Card
+    - title: Microsoft Viva
+      imageSrc: /support/media/hub-landing/microsoft-logo.svg
+      links:
+        - url: /viva/learning/
+          text: Microsoft Viva Learning
+        - url: /viva/connections/viva-connections-overview
+          text: Microsoft Viva Connections       
+    # Card
+    - title: Endpoint management
+      imageSrc: /support/media/hub-landing/microsoft-logo.svg
+      links:
+        - url: /troubleshoot/mem/configmgr/welcome-configuration-manager
+          text: Configuration Manager
+        - url: /troubleshoot/mem/intune/welcome-intune
+          text: Microsoft Intune
 
 # additionalContent section (optional)
 # Card with summary style
