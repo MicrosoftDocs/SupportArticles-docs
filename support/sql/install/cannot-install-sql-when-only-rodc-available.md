@@ -13,6 +13,9 @@ ms.custom: sap:Database Engine
 
 This article discusses an issue in which you can't install SQL Server when only a read-only domain controller (RODC) is available.
 
+_Original product version:_ &nbsp; SQL Server  \
+_Original KB number:_ &nbsp; 2962968
+
 ## Symptoms
 
 Consider the following scenario:
