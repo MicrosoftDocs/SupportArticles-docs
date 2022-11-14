@@ -86,6 +86,8 @@
   items:
   - name: Embedded application error when install Azure backup agent
     href: unable-to-execute-the-embedded-application-error-backup-agent.md
+  - name: Invalid blob or block content, or invalid block list
+    href: invalid-blob-or-block-content-or-invalid-block-list.md
   - name: Request body is too large error when write to file
     href: request-body-large.md
   - name: Optimize CreateFile function
