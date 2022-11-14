@@ -1,8 +1,10 @@
 ---
 title: SQL Server diagnostics detects unreported I/O problems
 description: This article helps you resolve the errors 605, 823, 3448, and 3456 using the SQL Server Diagnostics.
-ms.date: 11/08/2022
+ms.date: 11/14/2022
 ms.custom: sap:Administration and Management
+author: padmajayaraman
+ms.author: v-jayaramanp
 ms.reviewer: svccauto
 ms.prod: sql
 ---
