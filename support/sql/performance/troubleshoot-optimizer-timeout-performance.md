@@ -15,7 +15,7 @@ This article introduces Optimizer Timeout, how it can affect query performance, 
 
 ## What is Optimizer Timeout?
 
-SQL Server uses a cost-based _Query Optimizer_ (QO). For information on QO, see [Query processing architecture guide](/sql/relational-databases/query-processing-architecture-guide). A cost-based Query Optimizer selects a query execution plan with the lowest cost after it has built and assessed multiple query plans. One of the objectives of SQL Server Query Optimizer is to spend a reasonable time in query optimization as compared to query execution. Optimizing a query is to be much faster than executing it. To accomplish this target, QO has a built-in threshold of tasks to consider before it stops the optimization process. When the threshold is reached before QO has considered all the possible plans, it reaches the Optimizer Timeout limit. An Optimizer Timeout event is reported in the query plan as **TimeOut** under **Reason For Early Termination of Statement Optimization**. It's important to understand that this threshold isn't based on clock time but on the number of possibilities considered by the optimizer. In current SQL Server QO versions, over a half million tasks are considered before a timeout is reached.
+SQL Server uses a cost-based _Query Optimizer_ (QO). For information on QO, see [Query processing architecture guide](/sql/relational-databases/query-processing-architecture-guide). A cost-based Query Optimizer selects a query execution plan with the lowest cost after it has built and assessed multiple query plans. One of the objectives of SQL Server Query Optimizer is to spend a reasonable time in query optimization compared to query execution. Optimizing a query should be much faster than executing it. To accomplish this target, QO has a built-in threshold of tasks to consider before it stops the optimization process. When the threshold is reached before QO has considered all the possible plans, it reaches the Optimizer Timeout limit. An Optimizer Timeout event is reported in the query plan as **TimeOut** under **Reason For Early Termination of Statement Optimization**. It's important to understand that this threshold isn't based on clock time but on the number of possibilities considered by the optimizer. In current SQL Server QO versions, over a half million tasks are considered before a timeout is reached.
 
 The Optimizer Timeout is designed into SQL Server, and in many cases, it isn't a factor affecting query performance. However, in some cases, the SQL query plan choice may be negatively affected by the Optimizer Timeout, and slower query performance could result. When you encounter such issues, understanding the Optimizer Timeout mechanism and how complex queries can be affected can help you troubleshoot and improve your query speed.
 
@@ -122,7 +122,7 @@ Then, consider the join order, which is calculated using Permutations: P (n, r).
 - Join `t1` with `t3` and then with `t2`
 - Join `t2` with `t3` and then with `t1`
 
-Next, consider whether the clustered or non-clustered index could be used for data retrieval. Also, for each index, we have two access methods, seek or scan. That means, for each table, there are 2<sup>2</sup> = 4 choices. We have three tables, so there can be 4<sup>3</sup> = 64 choices.
+Next, consider the clustered and nonclustered indexes that could be used for data retrieval. Also, for each index, we have two access methods, seek or scan. That means, for each table, there are 2<sup>2</sup> = 4 choices. We have three tables, so there can be 4<sup>3</sup> = 64 choices.
 
 Finally, considering all these conditions, there can be 9\*3\*64 = 1728 possible plans.
 
@@ -138,11 +138,11 @@ Note that the above calculations illustrate the worst-case scenario. As we have 
 
 ## Why do I see an Optimizer Timeout with a simple query?
 
-Nothing with Query Optimizer is simple. There are many possible scenarios, and its complexity is so high that it's hard to grasp all the possibilities. The Query Optimizer may dynamically set the timeout threshold based on the cost of the plan found at a certain stage. For example, if a plan that appears relatively efficient is found, the task limit to search for a better plan may be reduced. Therefore, underestimated [cardinality estimation](/sql/relational-databases/performance/cardinality-estimation-sql-server) (CE) may be one scenario for hitting an Optimizer Timeout early. In this case, the focus of the investigation is CE. It's a rarer case compared with the scenario about running a complex query that's discussed in the previous section, but it's possible.
+Nothing with Query Optimizer is simple. There are many possible scenarios, and the degree of complexity is so high that it's hard to grasp all the possibilities. The Query Optimizer may dynamically set the timeout threshold based on the cost of the plan found at a certain stage. For example, if a plan that appears relatively efficient is found, the task limit to search for a better plan may be reduced. Therefore, underestimated [cardinality estimation](/sql/relational-databases/performance/cardinality-estimation-sql-server) (CE) may be one scenario for hitting an Optimizer Timeout early. In this case, the focus of the investigation is CE. It's a rarer case compared with the scenario about running a complex query that's discussed in the previous section, but it's possible.
 
 ## Resolutions
 
-An Optimizer Timeout appearing in a query plan doesn't necessarily mean that it's the cause of the poor query performance. In most cases, you may not need to do anything about this situation. The query plan that SQL Server ends up with may be reasonable, and the query you're running may be performing well. You may not ever know that you've encountered an Optimizer Timeout.
+An Optimizer Timeout appearing in a query plan doesn't necessarily mean that it's the cause of the poor query performance. In most cases, you may not need to do anything about this situation. The query plan that SQL Server ends up with may be reasonable, and the query you're running may be performing well. You may never know that you've encountered an Optimizer Timeout.
 
 Try the following steps if you find the need to tune and optimize.
 
@@ -239,7 +239,7 @@ SELECT ...
   JOIN V2 ON ...
 ```
 
-#### Table valued functions (TVFs)
+#### Table-valued functions (TVFs)
 
 Some joins may be hidden inside TFVs. The following sample shows what appears as a join between two TFVs, and a table may be a nine-table join.
 
