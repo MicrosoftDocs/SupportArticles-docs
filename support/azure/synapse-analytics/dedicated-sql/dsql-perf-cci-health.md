@@ -33,16 +33,16 @@ jupyter:
 
 _Applies to:_ &nbsp; Azure Synapse Analytics
 
-In this assessment, we introduce a slightly different approach to asssessing clustered columnstore index (CCI) health. In general, there are two major factors that impact the quality of a CCI:
+In this assessment, we introduce a slightly different approach to assessing clustered columnstore index (CCI) health. In general, there are two major factors that impact the quality of a CCI:
 
 * __Compact rowgroups and metadata__: meaning the actual rowgroup count is close to the ideal count for the number of rows in the rowgroup.
 * __Compressed rowgroups__: referring to rowgroups that are using columnstore compression
 
-There are other conditions, such as small tables, over-partitioned tables, or under-partitioned tables, which could be argued to be of poor quality/health.  However, these are better classified as design improvement opportunities which can be assessed in [Step 4](#step-4-check-for-design-improvement-opportunities) below.
+There are other conditions, such as small tables, over-partitioned tables, or under-partitioned tables, which could be argued to be of poor quality/health.  However, these conditions are better classified as design improvement opportunities that can be assessed in [Step 4](#step-4-check-for-design-improvement-opportunities) below.
 
 ## Step 1: Analyze a summary of your CCI health
 
-Use the following query to get a single-row of metrics to help get an overview of of the CCI health for your dedicated SQL pool.  This information isn't directly actionable, but does help you gain perspective on how closely your maintenance routines keep you to an ideal state.
+Use the following query to get a single-row of metrics to help get an overview of the CCI health for your dedicated SQL pool.  This information isn't directly actionable, but does help you gain perspective on how closely your maintenance routines keep you to an ideal state.
 
 | Column name | Description |
 | --- | --- |
@@ -50,7 +50,7 @@ Use the following query to get a single-row of metrics to help get an overview o
 | partitions\_assessed\_count | Count of partitions; note: non-partitioned tables will be counted as 1 |
 | actual\_rowgroup\_count | Physical count of rowgroups |
 | ideal\_rowgroup\_count | Calculated number of rowgroups that would be ideal for the number of rows |
-| uncompressed\_rowgroup\_count | Number of rowgroups that contain uncompressed data. (aka: OPEN rows) |
+| uncompressed\_rowgroup\_count | Number of rowgroups that contain uncompressed data. (Also known as: OPEN rows) |
 | actual\_size\_in\_mb | Physical size of CCI data in MB |
 | uncompressed\_size\_in\_mb | Physical size of uncompressed data in MB |
 | excess\_pct | Percent of rowgroups that could be further optimized |
@@ -98,7 +98,7 @@ If you so choose, create the following function on your dedicated SQL pool in or
 | Parameter name | Required | Description |
 |----------------|:--------:|-------------|
 | @object_id     | Y | `object_id` of the table to target |
-| @partition_number | Y | `partition_number` from `sys.partitions` to target.  If the table is not partitioned, specify 1 |
+| @partition_number | Y | `partition_number` from `sys.partitions` to target.  If the table isn't partitioned, specify 1 |
 
 ### Output
 
@@ -106,7 +106,7 @@ If you so choose, create the following function on your dedicated SQL pool in or
 |-------------|-------------|
 | rebuild_script | Generated `ALTER INDEX ALL ... REBUILD` statement for the given table/partition. Non-partitioned heaps will return `NULL`.|
 | reorganize_script | Generated `ALTER INDEX ALL ... REORGANIZE` statement for the given table/partition. Non-partitioned heaps will return `NULL`. |
-| partition_switch_script | Applies only to partitioned tables; will be `NULL` if table is not partitioned or if an invalid partition number is specified.  If the CCI was create with an ORDER clause, this will be rendered.
+| partition_switch_script | Applies only to partitioned tables; will be `NULL` if table isn't partitioned or if an invalid partition number is specified.  If the CCI was created with an ORDER clause, it will be rendered.
 
 <!-- #endregion -->
 
@@ -246,7 +246,7 @@ go
 <!-- #region language="sql" azdata_cell_guid="c03de33e-db66-416a-9734-b083b782d4d7" -->
 ## Step 2: Analyze detailed CCI information
 
-The following query provides detailed report of which table partitions are candidates for rebuilding. This view of CCI detail provides three metrics to help identify and prioritize which tables/partitions would benefit most from maintenance. Set the appropriate threshold values for these metrics in the `WHERE` clause and then `ORDER BY` the metric(s) which are of most interest to you:
+The following query provides detailed report of which table partitions are candidates for rebuilding. This view of CCI detail provides three metrics to help identify and prioritize which tables/partitions would benefit most from maintenance. Set the appropriate threshold values for these metrics in the `WHERE` clause and then `ORDER BY` the metric(s) that are of most interest to you:
 
 | Column name | Quality characteristic | Description |
 | --- | --- | --- |
@@ -311,7 +311,7 @@ ORDER BY calc_excess.[excess_size_in_mb] DESC;
 
 There are conditions under which performing maintenance on a table/partition may result in:
 
-- excess\_rowgroup\_pct or excess\_size\_in\_mb is larger than it was before maintenane or
+- excess\_rowgroup\_pct or excess\_size\_in\_mb is larger than it was before maintenance or
 - the maintenance statement fails with insufficient memory
 
 ### Typical Causes
@@ -338,7 +338,7 @@ Though not comprehensive, the below query can help you identify potential opport
 |-------------------|-------------|-----------------|
 | Small table       | Table contains fewer than 15M rows | Consider changing the index from CCI to: <ul><li>heap if used as a staging table</li><li>standard clustered index (rowstore) if dimension or other small lookup</li></ul> |
 | Partitioning opportunity | Calculated ideal rowgroup count is greater than 180 (or ~188M rows) | Implement a partitioning strategy that reduces the number of rows per partition to be less than 188M (approximately 3 row groups per partition per distribution) |
-| Over-partitioned table | Table contains fewer than 15M rows for the largest partition | Consider <ul><li>changing the index from CCI to standard clustered index (rowstore)</li><li>changing the partition grain so that thaere are closer to 60M+ rows per partition</ul> |
+| Over-partitioned table | Table contains fewer than 15M rows for the largest partition | Consider <ul><li>changing the index from CCI to standard clustered index (rowstore)</li><li>changing the partition grain to be closer to 60M+ rows per partition</ul> |
 | Partitioning opportunity | Calculated ideal rowgroup count is greater than 180 (or ~188M rows) | Change the partitioning strategy to reduce the number of rows per partition to be less than 188M (approximately 3 row groups per partition per distribution) |
 <!-- #endregion -->
 
@@ -378,9 +378,9 @@ GROUP BY object_id
 ```
 
 <!-- #region language="sql" azdata_cell_guid="c92a4ee2-fb51-4238-9c6f-5bc9ca94b359" -->
-## Additional Resources
+## More Resources
 
-To gain a more in-depth understanding and acquire additional assessment tools for of CCI on the dedicated SQL pool, visit the following Microsoft resources:
+To gain a more in-depth understanding and acquire extra assessment tools for of CCI on the dedicated SQL pool, visit the following Microsoft resources:
 
 - [Azure Synapse Toolbox](https://github.com/microsoft/Azure_Synapse_Toolbox)
 - [Indexes on dedicated SQL pool tables in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index)
