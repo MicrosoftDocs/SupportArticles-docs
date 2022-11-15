@@ -21,7 +21,7 @@ productDirectory:
     # Card
     - title: Microsoft 365
       # imageSrc should be square in ratio with no whitespace
-      imageSrc: /media/logos/logo_office.svg
+      imageSrc: /media/logos/logo-ms-social.png
       links:
         - url: /microsoft-365/troubleshoot/o365-enterprise-welcome
           text: Microsoft 365 Enterprise
@@ -97,7 +97,7 @@ productDirectory:
           text: OneDrive for Business
    # Card
     - title: Microsoft Viva
-      imageSrc: /support/media/hub-landing/microsoft-logo.svg
+      imageSrc: /media/logos/logo-ms-social.png
       links:
         - url: /viva/learning/
           text: Microsoft Viva Learning
@@ -105,7 +105,7 @@ productDirectory:
           text: Microsoft Viva Connections       
     # Card
     - title: Endpoint management
-      imageSrc: /support/media/hub-landing/microsoft-logo.svg
+      imageSrc: /media/logos/logo-ms-social.png
       links:
         - url: /troubleshoot/mem/configmgr/welcome-configuration-manager
           text: Configuration Manager
