@@ -50,7 +50,7 @@ If you receive any of the error messages that are listed in the [Symptoms](#symp
 
 For example, Microsoft has confirmed scenarios where a WriteFile API call returns as successful, but an immediate, successful read of the same data block returns older data, including data that is likely stored in a hardware read cache. Sometimes, this problem occurs because of a read cache problem. In other cases, the write data is never written to the physical disk.
 
-To enable additional diagnostics for these types of problems, SQL Server has added trace flag 818. You can specify trace flag [818](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql?view=sql-server-ver16&preserve-view=true) as a startup parameter, -T818, for the computer that's running SQL Server, or you can run the following statement:
+Additional diagnostics to detect these problems are enabled by default in SQL Server 2017 and later versions. But in SQL Server 2016 and earlier versions these diagnostics can only be enabled by used trace flag 818. You can specify trace flag [818](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql?view=sql-server-ver16&preserve-view=true) as a startup parameter, -T818, for the computer that's running SQL Server, or you can run the following statement:
 
 ```sql
 DBCC TRACEON(818, -1)
