@@ -400,6 +400,8 @@
       href: ./identity/event1644reader-analyze-ldap-query-performance.md
   - name: Domain join issues
     items:
+    - name: 'Troubleshooting guidance: Active Directory domain join'
+      href: ./identity/active-directory-domain-join-troubleshooting-guidance.md
     - name: '"The account is not authorized to login from this station" error'
       href: ./identity/account-not-authorized-login-from-this-station.md
     - name: Active Directory installation fails
