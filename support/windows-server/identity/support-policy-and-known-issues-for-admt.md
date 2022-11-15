@@ -88,7 +88,7 @@ Intra-forest migrations are most at risk for this behavior. This is because intr
 
 **Solution**: After you complete the migration, uninstall the modern apps, and then reinstall them from the Windows Store.
 
-For more information about this issue, see [Windows App cannot start after ADMT 3.2 security translation runs in Windows 8, Windows 8.1 and Windows 10](windows-app-cant-start.md)
+For more information about this issue, see [Windows App cannot start after ADMT 3.2 security translation runs in Windows 8, Windows 8.1 and Windows 10](windows-app-cant-start.md).
 
 ### Security translation resets file associations
 
