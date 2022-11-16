@@ -120,8 +120,8 @@ WITH cci_info AS(
 )
 , calc_excess AS(
     SELECT * ,
-          CAST(round((total_rowgroup_count / ideal_rowgroup_count) - 1.0, 4) AS decimal(9, 4)) AS [excess_rowgroup_pct] ,
-          CAST(round((total_rowgroup_count / ideal_rowgroup_count) - 1.0, 4) AS decimal(19, 4)) * size_in_mb AS [excess_size_in_mb]
+          CAST(round((total_rowgroup_count / ideal_rowgroup_count) - 1.0, 4) AS DECIMAL(9, 4)) AS [excess_rowgroup_pct] ,
+          CAST(round((total_rowgroup_count / ideal_rowgroup_count) - 1.0, 4) AS DECIMAL(19, 4)) * size_in_mb AS [excess_size_in_mb]
    FROM cci_info
 )
 SELECT calc_excess.* 
@@ -171,7 +171,7 @@ WITH cci_info AS (
           MAX(t.name) AS [table_name],
           rg.partition_number AS [partition_number],
           SUM(rg.[total_rows]) AS [row_count_total],
-          CEILING ((SUM(rg.[total_rows]) - sum(rg.[deleted_rows]))/COUNT(DISTINCT rg.distribution_id)/1048576.) * COUNT(DISTINCT rg.distribution_id) AS [ideal_rowgroup_count]
+          CEILING ((SUM(rg.[total_rows]) - SUM(rg.[deleted_rows]))/COUNT(DISTINCT rg.distribution_id)/1048576.) * COUNT(DISTINCT rg.distribution_id) AS [ideal_rowgroup_count]
    FROM sys.[pdw_nodes_column_store_row_groups] rg
    JOIN sys.[pdw_nodes_tables] nt ON rg.[object_id] = nt.[object_id]
        AND rg.[pdw_node_id] = nt.[pdw_node_id]
@@ -243,10 +243,10 @@ RETURN(
                         + '(' + string_agg(
                         CASE
                             WHEN i.type IN (1, 5) 
-                                AND (ic.key_ordinal != 0 or ic.column_store_order_ordinal != 0)
+                                AND (ic.key_ordinal != 0 OR ic.column_store_order_ordinal != 0)
                                 THEN c.name + CASE WHEN ic.is_descending_key = 1 THEN ' DESC' ELSE '' END
                         END
-                        , ',') WITHIN group(ORDER BY ic.column_store_order_ordinal, ic.key_ordinal) + ')' AS index_cols
+                        , ',') WITHIN GROUP(ORDER BY ic.column_store_order_ordinal, ic.key_ordinal) + ')' AS index_cols
                     , MAX(i.type_desc)
                         + CASE
                             WHEN MAX(i.type) IN (1, 5) THEN ' INDEX'
@@ -273,7 +273,7 @@ RETURN(
                 WHEN typ.name LIKE '%date%' THEN 1
                 WHEN typ.name = 'uniqueidentifier' THEN 1
                 ELSE 0
-            END AS bit) AS use_quotes_on_values_flag
+            END AS BIT) AS use_quotes_on_values_flag
         FROM sys.partition_parameters pp
             JOIN sys.types typ ON pp.user_type_id = typ.user_type_id
     )
@@ -287,10 +287,10 @@ RETURN(
             , CASE
                 WHEN pdt.use_quotes_on_values_flag = 1 THEN '''' + CAST(
                     CASE pdt.data_type_name
-                        WHEN 'date' THEN convert(char(10), prv.value, 120)
-                        WHEN 'smalldatetime' THEN convert(VARCHAR, prv.value, 120)
-                        WHEN 'datetime' THEN convert(VARCHAR, prv.value, 121)
-                        WHEN 'datetime2' THEN convert(VARCHAR, prv.value, 121)
+                        WHEN 'date' THEN CONVERT(char(10), prv.value, 120)
+                        WHEN 'smalldatetime' THEN CONVERT(VARCHAR, prv.value, 120)
+                        WHEN 'datetime' THEN CONVERT(VARCHAR, prv.value, 121)
+                        WHEN 'datetime2' THEN CONVERT(VARCHAR, prv.value, 121)
                         ELSE prv.value
                     END    
                     AS VARCHAR(32)) + ''''
@@ -309,12 +309,12 @@ RETURN(
     , partition_clause AS (
         SELECT
             object_id
-            , count(*) - 1 -- should always be the 2nd to last partition in stage table
+            , COUNT(*) - 1 -- should always be the 2nd to last partition in stage table
                 + CASE WHEN MAX([partition_number]) = @partition_number THEN 1 ELSE 0 END -- except when last partition
                 AS [source_partition_number]
             , 'WHERE ' + MAX(partition_column_name)
                 + CASE WHEN MAX(CAST(boundary_value_on_right AS TINYINT)) = 1 THEN 
-                    ' >= ' + min(CASE WHEN [partition_number] = @partition_number THEN boundary_value END)
+                    ' >= ' + MIN(CASE WHEN [partition_number] = @partition_number THEN boundary_value END)
                     ELSE 
                     ' <= ' + MAX(CASE WHEN [partition_number] = @partition_number THEN boundary_value END)
                 END
@@ -322,7 +322,7 @@ RETURN(
                 + CASE WHEN MAX(CAST(boundary_value_on_right AS TINYINT)) = 1 THEN 
                     ' < ' + MAX(boundary_value)
                     ELSE
-                    ' > ' + min(boundary_value)
+                    ' > ' + MIN(boundary_value)
                 END AS filter_clause
             , ', PARTITION (' + MAX(partition_column_name) + ' RANGE ' 
                 + CASE WHEN MAX(CAST(boundary_value_on_right AS TINYINT)) = 1 THEN 'RIGHT' ELSE 'LEFT' END 
@@ -357,6 +357,6 @@ To gain a more in-depth understanding and acquire extra assessment tools for of 
 
 - [Azure Synapse Toolbox](https://github.com/microsoft/Azure_Synapse_Toolbox)
 - [Indexes on dedicated SQL pool tables in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index)
-- [Columnstore indexes: Overview](/sql/relational-databases/indexes/columnstore-indexes-overview?view=azure-sqldw-latest)
+- [Columnstore indexes: Overview](/sql/relational-databases/indexes/columnstore-indexes-overview?view=azure-sqldw-latest&preserve-view=true)
 - [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci)
 - [Columnstore indexes - Design guidance](/sql/relational-databases/indexes/columnstore-indexes-design-guidance)
