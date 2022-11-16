@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 2001221
 
 ## Symptoms
 
-In SQL Server, when executing a large batch of remote procedure call (RPC) - for example, tens of thousands of inserts in a single batch, the operation may fail with the following errors reported in SQL Server error log:
+In SQL Server, when executing a large batch of remote procedure calls (RPC) (for example, tens of thousands of inserts in a single [batch](/previous-versions/sql/sql-server-2008-r2/ms175502(v=sql.105))), the operation may fail with the following errors reported in SQL Server error log:
 
 ```Output
 2020-07-04 13:30:45.78 spid56 Error: 701, Severity: 17, State: 193. 
@@ -76,7 +76,7 @@ To solve the error, use one of the following methods:
 - Reduce batch sizes.
 - Change parameter types. For example, replace `sql_variant` with other types.
 
-The `USERSTORE_SXC` cache is used for connection management level allocations, such as RPC parameters and the memory that is associated with prepared handles. When a client sends a request containing a large batch of RPC calls, each potentially using a large number of certain types of parameters like `sql_variant`, it could result in a large number of allocations from this cache, thereby exhausting all the available memory.
+The `USERSTORE_SXC` cache is used for connection management level allocations, such as RPC parameters and the memory that is associated with prepared handles. When a client sends a request containing a large batch of RPC calls, each potentially using a large number of certain types of parameters like `sql_variant`, it could result in excessive allocations from this cache, thereby exhausting all the available memory.
 
 The application should also be monitored to ensure we're closing prepared handles in a timely fashion. When you don't close these handles in a timely manner, it will prevent SQL Server from releasing memory for the associated objects on the server side.
 
