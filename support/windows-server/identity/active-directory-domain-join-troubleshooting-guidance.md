@@ -63,9 +63,9 @@ The 0x534 error code is commonly logged as a transient error when domain join se
 
 > The remote procedure call failed and did not execute.
 
-This error occurs when a network device (router, firewall, or VPN device) is rejecting network packets between the client being joined and the DC.
+This error occurs when a network device (router, firewall, or VPN device) rejects network packets between the client being joined and the DC.
 
-Make sure the following items:
+Make sure of the following items:
 
 - Verify the connectivity between the client being joined and the target DC over the required ports and protocols.
 - Disable bind time feature negotiation.
