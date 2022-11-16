@@ -30,5 +30,5 @@ additionalContent:
       items:
         # Card
         - title: Dynamics 365 documentation and training modules
-          summary: "View the official documentation for Microsoft Dynamics 365"
+          summary: "View the official documentation for Dynamics 365"
           url: /dynamics365/
