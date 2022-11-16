@@ -1,11 +1,11 @@
 ---
 title: SQL Server diagnostics detects unreported I/O problems
 description: This article helps you resolve the errors 605, 823, 3448, and 3456 using the SQL Server Diagnostics.
-ms.date: 11/14/2022
+ms.date: 11/16/2022
 ms.custom: sap:Administration and Management
 author: padmajayaraman
 ms.author: v-jayaramanp
-ms.reviewer: svccauto
+ms.reviewer: ramakoni1
 ms.prod: sql
 ---
 
@@ -38,6 +38,7 @@ If operating system, driver, or hardware problems cause lost write or stale read
 
 2010-02-06 15:57:24.14 spid17s Error: 3456, Severity: 21, State: 1.
 2010-02-06 15:57:24.14 spid17s Could not redo log record (58997:5252:28), for transaction ID (0:109000187), on page (1:480946), database 'MyDatabase' (database ID 17). Page: LSN = (58997:5234:17), type = 3. Log: OpCode = 2, context 5, PrevPageLSN: (58997:5243:17). Restore from a backup of the database, or repair the database.
+```
 
 ## More information
 
@@ -63,11 +64,10 @@ Trace flag 818 enables an in-memory ring buffer that is used for tracking the la
 
 The following message indicates that SQL Server didn't receive an error from the WriteFile API call or the ReadFile API call. However, when the LSN was reviewed, the value wasn't correct:
 
-
 Starting with SQL Server 2005, the error message displayed is:
 
 > SQL Server detected a logical consistency-based I/O error: Stale Read. It occurred during a `<<Read/Write>>` of page `<<PAGEID>>` in database ID `<<DBID>>` at offset `<<PHYSICAL OFFSET>>` in file `<<FILE NAME>>`. Additional messages in the SQL Server error log or system event log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors. For more information, see SQL Server Books Online.
-For more information on error 824 see [MSSQLSERVER_824](/sql/relational-databases/errors-events/mssqlserver-824-database-engine-error)
+For more information on error 824, see [MSSQLSERVER_824](/sql/relational-databases/errors-events/mssqlserver-824-database-engine-error).
 At this point, either the read cache contains an older version of the page, or the data wasn't correctly written to the physical disk. In either case (a lost write or a stale read), SQL Server reports an external problem with the operating system, the driver, or the hardware layers.
 
 If error 3448 occurs when you try to rollback a transaction that has error 605 or 823, the computer running SQL Server automatically closes the database and tries to open and recover the database. The first page that experiences error 605 or 823 is considered a bad page, and the page ID is kept by the computer running SQL Server. During recovery (before the redo phase) when the bad page ID is read, the primary details about the page header are logged in the SQL Server error log. This action is important because it helps to distinguish between Lost Write and Stale Read scenarios.
