@@ -41,7 +41,7 @@ If operating system, driver, or hardware problems cause lost write or stale read
 
 ## More information
 
-Microsoft introduced extended tracking capabilities starting with SQL Server 2000 Service Pack 4 and these diagnostics have been part of the product in SQL Server 2005 and later versions. These capabilities are designed to help detect I/O related external problems and to troubleshoot the error messages described in the [Symptoms](#symptoms) section.
+SQL Server introduced additional I/O diagnostic capabilities starting with SQL Server 2000 Service Pack 4 and these diagnostics have been part of the product. These capabilities are designed to help detect I/O related external problems and to troubleshoot the error messages described in the [Symptoms](#symptoms) section.
 
 If you receive any of the error messages that are listed in the [Symptoms](#symptoms) section and they aren't explained by an event like a physical drive failure, then review any known problems with SQL Server, the operating system, the drivers, and the hardware. The diagnostics try to provide information about the following two conditions:
 
