@@ -20,22 +20,23 @@ _Original KB number:_ &nbsp; 826433
 
 If operating system, driver, or hardware problems cause lost write or stale read conditions, you may see data integrity-related error messages such as errors 605, 823, 3448, and 3456. You may receive error messages that are similar to the following examples:
 
-> 2003-07-24 16:43:04.57 spid63 Getpage: bstat=0x9, sstat=0x800, cache
+```output
+2003-07-24 16:43:04.57 spid63 Getpage: bstat=0x9, sstat=0x800, cache
 2003-07-24 16:43:04.57 spid63 pageno is/should be: objid is/should be:
 2003-07-24 16:43:04.57 spid63 (1:7040966)/(1:7040966) 2093354622/2039782424
 
-> 2003-07-24 16:43:04.57 spid63 ... IAM indicates that page is allocated to this object
+2003-07-24 16:43:04.57 spid63 ... IAM indicates that page is allocated to this object
 
-> 2003-07-24 16:52:37.67 spid63 Error: 605, Severity: 21, State: 1
+2003-07-24 16:52:37.67 spid63 Error: 605, Severity: 21, State: 1
 2003-07-24 16:52:37.67 spid63 Attempt to fetch logical page (1:7040966) in database 'pubs' belongs to object 'authors', not to object 'titles'..
 
-> 2003-07-24 16:52:40.99 spid63 Error: 3448, Severity: 21, State: 1
+2003-07-24 16:52:40.99 spid63 Error: 3448, Severity: 21, State: 1
 2003-07-24 16:52:40.99 spid63 Could not undo log record (63361:16876:181), for transaction ID (0:159696956), on page (1:7040977), database 'pubs' (database ID 12). Page information: LSN = (63192:958360:10), type = 2. Log information: OpCode = 2, context 1..
 
-> 2003-07-09 14:31:35.92 spid66 Error: 823, Severity: 24, State: 2
+2003-07-09 14:31:35.92 spid66 Error: 823, Severity: 24, State: 2
 2003-07-09 14:31:35.92 spid66 I/O error (bad page ID) detected during read at offset 0x00000016774000 in file 'h:\sql\MSSQL\data\tempdb.mdf'..
 
-> 2010-02-06 15:57:24.14 spid17s Error: 3456, Severity: 21, State: 1.
+2010-02-06 15:57:24.14 spid17s Error: 3456, Severity: 21, State: 1.
 2010-02-06 15:57:24.14 spid17s Could not redo log record (58997:5252:28), for transaction ID (0:109000187), on page (1:480946), database 'MyDatabase' (database ID 17). Page: LSN = (58997:5234:17), type = 3. Log: OpCode = 2, context 5, PrevPageLSN: (58997:5243:17). Restore from a backup of the database, or repair the database.
 
 ## More information
