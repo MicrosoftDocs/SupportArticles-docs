@@ -161,7 +161,7 @@ Though not comprehensive, the following query can help you identify potential op
 | Opportunity title | Description | Recommendations |
 |-------------------|-------------|-----------------|
 | Small table       | Table contains fewer than 15M rows | Consider changing the index from CCI to: <ul><li>Heap for staging tables</li><li>Standard clustered index (rowstore) for dimension or other small lookups</li></ul> |
-| Partitioning opportunity | Calculated ideal rowgroup count is greater than 180 (or ~188M rows) | Implement a partitioning strategy that reduces the number of rows per partition to less than 188M (approximately 3 row groups per partition per distribution) |
+| Partitioning opportunity | Calculated ideal rowgroup count is greater than 180 (or ~188M rows) | Implement a partitioning strategy or change the existing partitioning strategy to reduce the number of rows per partition to less than 188M (approximately 3 row groups per partition per distribution) |
 | Over-partitioned table | Table contains fewer than 15M rows for the largest partition | Consider: <ul><li>Changing the index from CCI to standard clustered index (rowstore)</li><li>Changing the partition grain to be closer to 60M rows per partition</ul> |
 
 ```sql
