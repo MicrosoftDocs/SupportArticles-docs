@@ -29,6 +29,6 @@ additionalContent:
     - title: See also
       items:
         # Card
-        - title: Microsoft Dynamics 365 documentation and training modules
+        - title: Dynamics 365 documentation and training modules
           summary: "View the official documentation for Microsoft Dynamics 365"
           url: /dynamics365/
