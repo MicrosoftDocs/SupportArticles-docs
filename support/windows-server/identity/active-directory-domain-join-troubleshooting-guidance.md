@@ -39,7 +39,7 @@ For more information, see [KB5020276—Netjoin: Domain join hardening changes](h
 
 ## Common issues and solutions
 
-### Error Code 0x569
+### Error code 0x569
 
 > The user has not been granted the requested logon type at this computer.
   
@@ -49,7 +49,7 @@ Error 0x569 is logged when the domain join user lacks the **Access this computer
 - The default domain controllers policy is linked to the OU that hosts the DC computer account that's servicing the domain join operation.
 - The DC servicing the domain join operation successfully applies the policy, specifically the user rights settings defined in the default domain controllers policy.
 
-### Error Code 0x534
+### Error code 0x534
 
 > No mapping between account names and security IDs was done.
   
@@ -59,7 +59,7 @@ In another scenario, the 0x534 error code is logged when you attempt to change t
 
 The 0x534 error code is commonly logged as a transient error when domain join searches the target domain. The searching determines whether a matching computer account was pre-created or whether the join operation needs to dynamically create a computer account on the target domain. Check the bit flags in the join options and whether the type of join being performed is relying on a pre-created or newly created computer account.
 
-### Error Code 0x6BF or 0xC002001C
+### Error code 0x6BF or 0xC002001C
 
 > The remote procedure call failed and did not execute.
 
@@ -71,7 +71,7 @@ Make sure of the following items:
 - Disable bind time feature negotiation.
 - Disable TCP Chimney Offload and IP offload.
 
-### Error Code 0x6D9
+### Error code 0x6D9
 
 > There are no more endpoints available from the endpoint mapper.
   
@@ -83,7 +83,7 @@ To resolve this error, follow these steps:
 2. Verify that the joining client has network connectivity to the DC over the required ports and protocols used by the applicable operating system (OS) versions. Domain join clients connect a helper DC over TCP port 135 by the dynamically assigned port in the range between 49152 and 65535.
 3. Ensure that the OS, software and hardware routers, firewalls, and switches allow connectivity over the required ports and protocols.
 
-### Error Code 0xA8B
+### Error code 0xA8B
 
 > An attempt to resolve the DNS name of a DC in the domain being joined has failed. Please verify this client is configured to reach a DNS server that can resolve DNS names in the target domain.
   
@@ -119,7 +119,7 @@ To resolve this error, follow these steps:
    - A broken Network Interface Card (NIC) on the client computer or the target DC
    - A broken network switch that drops network packets between the client and target DC
 
-### Error Code 0x40
+### Error code 0x40
 
 > Cannot join a host into domain.
 
