@@ -135,6 +135,8 @@
       href: ./teams-im-presence/messages-unexpectedly-deleted-retention-policy.md 
   - name: Meetings
     items:
+    - name: External participants are blocked from joining Meetings
+      href: ./meeting/external-participants-join-meeting-blocked.md
     - name: External users appear as Unknown
       href: ./meetings/external-user-shown-as-unknown.md
     - name: Issues with meeting chat
