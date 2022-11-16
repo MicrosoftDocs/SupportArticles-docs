@@ -29,6 +29,7 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 
 ### Windows versions supported for in-place system upgrades
 
+- Windows Server 2022, all editions, all versions
 - Windows 10 single-session, all editions, all versions
 - Windows 10 Enterprise multi-session, all versions
 
