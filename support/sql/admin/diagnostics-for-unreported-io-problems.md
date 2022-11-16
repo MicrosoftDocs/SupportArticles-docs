@@ -67,7 +67,7 @@ The following message indicates that SQL Server didn't receive an error from the
 Starting with SQL Server 2005, the error message displayed is:
 
 > SQL Server detected a logical consistency-based I/O error: Stale Read. It occurred during a `<<Read/Write>>` of page `<<PAGEID>>` in database ID `<<DBID>>` at offset `<<PHYSICAL OFFSET>>` in file `<<FILE NAME>>`. Additional messages in the SQL Server error log or system event log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors. For more information, see SQL Server Books Online.
-
+For more information on error 824 see [MSSQLSERVER_824](/sql/relational-databases/errors-events/mssqlserver-824-database-engine-error)
 At this point, either the read cache contains an older version of the page, or the data wasn't correctly written to the physical disk. In either case (a lost write or a stale read), SQL Server reports an external problem with the operating system, the driver, or the hardware layers.
 
 If error 3448 occurs when you try to rollback a transaction that has error 605 or 823, the computer running SQL Server automatically closes the database and tries to open and recover the database. The first page that experiences error 605 or 823 is considered a bad page, and the page ID is kept by the computer running SQL Server. During recovery (before the redo phase) when the bad page ID is read, the primary details about the page header are logged in the SQL Server error log. This action is important because it helps to distinguish between Lost Write and Stale Read scenarios.
