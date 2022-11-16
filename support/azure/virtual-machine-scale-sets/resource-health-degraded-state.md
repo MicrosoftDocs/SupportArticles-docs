@@ -5,6 +5,7 @@ ms.date: 04/07/2022
 author: genlin
 ms.author: genli
 ms.service: virtual-machine-scale-sets
+ms.subservice: troubleshoot-compute-health
 ms.reviewer: macla, pudesira
 ---
 # Resource health state is "Degraded" in Azure Virtual Machine Scale Set
