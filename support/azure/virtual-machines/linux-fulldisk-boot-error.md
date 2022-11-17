@@ -93,7 +93,7 @@ If this resolution doesn't work or isn't appropriate for your environment, see t
 
 ## Scenario 2: VM disk is resized in Azure, but OS can't be resized and VM doesn't fully boot
 
-After a full disk is identified, and the VM has been shut down to resize the OS disk, the VM may not boot successfully. This scenario may be confusing on some distributions where the OS will attempt to automatically resize the root (`/`) filesystem on reboot. If the disk is completely full, the resize operation may fail because the process requires a small amount of free spaces to expand the filesystem. Having no free space can cause cloud-init to fail, and subsequently the VM won't finish booting.
+After a full disk is identified, and the VM has been shut down to resize the OS disk, the VM may not boot successfully. This scenario may be confusing on some distributions where the OS will attempt to automatically resize the root (`/`) filesystem on reboot. If the disk is completely full, the resize operation may fail because the process requires a small number of free spaces to expand the filesystem. Having no free space can cause cloud-init to fail, and subsequently the VM won't finish booting.
 
 To identify this issue, review the boot logs in the serial console and check if lines like the following are present:
 
@@ -109,7 +109,7 @@ To resolve this issue, [clear unneeded data](#resolution1) to free disk space.
 
 ## Scenario 3: VM boots but is inaccessible due to service failures
 
-A VM which seems to boot completely may show service issues during the boot, the Azure Agent may not show available, connections to the VM may fail or the VM may appear to be offline according to applications. During the boot, multiple messages such as "[Errno 28] No space left on device" or other formats of messages indicate that the root filesystem is full.
+A VM that seems to boot completely may show service issues during the boot, the Azure Agent may not show available, connections to the VM may fail or the VM may appear to be offline according to applications. During the boot, multiple messages such as "[Errno 28] No space left on device" or other formats of messages indicate that the root filesystem is full.
 
 If a VM boots but appears unavailable, check the serial log in boot diagnostics to view the boot messages, or use the [serial console](/azure/virtual-machines/boot-diagnostics) to interact with the VM. If the space is insufficient, [clear unneeded data](#resolution1) to free spaces or [expand the disks](#resolution2).
 
@@ -129,9 +129,9 @@ The following resolutions apply to any of the scenarios above.
     
     - `ls -altSr /var/log` - List the contents of a directory, ordered by size, with the largest at the end.
     
-    - `find / -size +500M -exec ls -alFh {} \;` - Find large individual files. Adjust the `500M` value to a number of Megabytes or Gigabytes as necessary to locate the most effective files to prune.
+    - `find / -size +500M -exec ls -alFh {} \;` - Find large individual files. Adjust the `500M` value to a number of megabytes or gigabytes as necessary to locate the most effective files to prune.
     
-3. Remove any files which can be identified as unnecessary, such as old logs, forgotten backups, and similar files.
+3. Remove any files that can be identified as unnecessary, such as old logs, forgotten backups, and similar files.
 
 4. Once a suitable amount of space is cleared, target around 10% free disk, reboot the system.
 
