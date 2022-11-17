@@ -89,7 +89,7 @@ To disable HALT conditions temporarily, follow these steps:
 > [!IMPORTANT]
 > Be sure to revert the contents in the */etc/audit/auditd.conf* file to the original values and reboot the VM.
 
-If this resolution doesn't work or isn't appropriate for your environment, follow the [resolutions](#general-resolutions).
+If this resolution doesn't work or isn't appropriate for your environment, see the [Resolution](#resolution) section.
 
 ## Scenario 2: VM disk is resized in Azure, but OS can't be resized and VM doesn't fully boot
 
