@@ -25,6 +25,8 @@ The listed resources in this article can help you resolve issues that you experi
 
 ## Troubleshoot Remote Access VPN issues
 
+- [Microsoft Edge ignores PAC setting](edge-ignore-pac-android-vpn-profile.md) - Microsoft Edge in Android 13 ignores a Proxy Auto-Configuration (PAC) setting configured in a per-app VPN profile in Microsoft Intune.
+
 - [Event ID: 20227 with error code 720](troubleshoot-error-720-when-establishing-a-vpn-connection.md) - VPN clients don't complete a VPN connection because the WAN Miniport (IP) adapter is not bound correctly.
 
 - [L2TP VPN fails with error 787](l2tp-vpn-fails-with-error-787.md) - Occurs when an L2TP VPN connection to a Remote Access server fails. The Internet Protocol Security (IPSec) security association (SA) establishment for the Layer Two Tunneling Protocol (L2TP) connection fails because the server uses the wildcard certificate or a certificate from a different Certificate Authority as the computer certificate that's configured on the clients. Routing and Remote Access (RRAS) is choosing the first certificate it can find in the computer certificate store. L2TP behaves differently in this regard from Secure Socket Tunneling Protocol (SSTP) or IP-HTTPS or any other manually configured IPsec rule. For L2TP, you rely on the RRAS built-in mechanism for choosing a certificate. You can't change this condition.
