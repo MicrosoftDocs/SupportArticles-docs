@@ -6,40 +6,6 @@
           "**/*.md",
           "**/*.yml"
         ],
-        "src": "Hub",
-        "dest": ".",
-        "exclude": [
-          "**/obj/**",
-          "**/includes/**",
-          "README.md",
-          "LICENSE",
-          "LICENSE-CODE",
-          "ThirdPartyNotices"
-        ]
-      },
-      {
-        "files": [
-          "**/*.md",
-          "**/*.yml"
-        ],
-        "src": "Connections",
-        "dest": ".",
-        "exclude": [
-          "**/obj/**",
-          "**/includes/**",
-          "README.md",
-          "LICENSE",
-          "LICENSE-CODE",
-          "ThirdPartyNotices"
-        ]
-      },
-      {
-        "files": [
-          "**/*.md",
-          "**/*.yml"
-        ],
-        "src": "Learning",
-        "dest": ".",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
