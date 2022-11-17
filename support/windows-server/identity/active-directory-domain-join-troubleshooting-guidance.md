@@ -2,8 +2,8 @@
 title: Active Directory domain join troubleshooting guidance
 description: Provides guidance to troubleshoot domain join issues.
 ms.date: 11/15/2022
-author: kaushika-msft
-ms.author: kaushika
+author: v-lianna
+ms.author: v-lianna
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -28,8 +28,8 @@ This guide provides you with the fundamental concepts used when troubleshooting 
   - The domain name, domain controllers (DCs), and DNS servers can be pinged.
   - Check for DNS record conflicts for the specific server.
 
-- *Netsetup.log*: The *Netsetup.log* file is a valuable resource when you troubleshoot a domain join issue. The *netsetup.log* file is located at *C:\\WindowsDebugnetsetup.log*.
-- Network trace: During an AD domain join, multiple types of traffic occur between the client and some DNS servers and then between the client and some DCs. If you see an error in any of the above traffic, follow the corresponding troubleshooting steps of that protocol or component to narrow it down.
+- *Netsetup.log*: The *Netsetup.log* file is a valuable resource when you troubleshoot a domain join issue. The *netsetup.log* file is located at *C:\\Windows\\Debug\\netsetup.log*.
+- Network trace: During an AD domain join, multiple types of traffic occur between the client and some DNS servers and then between the client and some DCs. If you see an error in any of the above traffic, follow the corresponding troubleshooting steps of that protocol or component to narrow it down. For more information, see [Using Netsh to Manage Traces](/windows/win32/ndf/using-netsh-to-manage-traces).
 - Domain join hardening changes: Windows updates released on and after October 11, 2022, contain additional protections introduced by [CVE-2022-38042](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-38042). These protections intentionally prevent domain join operations from reusing an existing computer account in the target domain unless one of the following conditions:
 
   - The user attempting the operation is the creator of the existing account.
@@ -42,7 +42,17 @@ For more information, see [KB5020276—Netjoin: Domain join hardening changes](h
 ### Error code 0x569
 
 > The user has not been granted the requested logon type at this computer.
-  
+
+Here's an example from the *netsetup.log* file:
+
+```output
+mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: failed to find a DC having account <computer name>$': 0x525
+mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: found DC '\\<DC name>.<domain>.<tld>' in the specified domain
+mm/dd/yyyy hh:mm:ss:ms NetUseAdd to \\<DC name>.<domain>.<tld>\IPC$ returned 1385
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomain: status of connecting to dc '\\<DC Name>.<Domain>.<tld>': 0x569
+mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x569
+```
+
 Error 0x569 is logged when the domain join user lacks the **Access this computer from the network** user right. Make sure of the following items:
 
 - Verify that the user account performing the domain join operation (or the security group that owns the member of the domain join user) has been granted the **Access this computer from the network** right in the default domain controllers policy.
@@ -52,6 +62,17 @@ Error 0x569 is logged when the domain join user lacks the **Access this computer
 ### Error code 0x534
 
 > No mapping between account names and security IDs was done.
+
+Here's an example from the *netsetup.log* file:
+
+```output
+mm/dd/yyyy hh:mm:ss:ms NetpCreateComputerObjectInDs: NetpGetComputerObjectDn failed: 0x534
+mm/dd/yyyy hh:mm:ss:ms NetpProvisionComputerAccount: LDAP creation failed: 0x534
+mm/dd/yyyy hh:mm:ss:ms ldap_unbind status: 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: Function exits with status of: 0x534
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: status of disconnecting from '\\<DC name>': 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x534
+```
   
 The domain join graphical user interface (GUI) can call the `NetJoinDomain` API twice to join a computer to a domain. The first call is made without the "create" flag being specified to locate a pre-created computer account in the target domain. If no account is found, a second `NetJoinDomain` API call may be made with the "create" flag specified.
   
@@ -62,6 +83,16 @@ The 0x534 error code is commonly logged as a transient error when domain join se
 ### Error code 0x6BF or 0xC002001C
 
 > The remote procedure call failed and did not execute.
+
+Here's an example from the *netsetup.log* file:
+
+```output
+mm/dd/yyyy hh:mm:ss:ms NetpGetLsaHandle: LsaOpenPolicy on \\<DC name>.<domain>.<tld> failed: 0xc002001c
+mm/dd/yyyy hh:mm:ss:ms NetpGetLsaPrimaryDomain: status: 0xc002001c
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomain: initiaing a rollback due to earlier errors
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomain: status of disconnecting from '\\<DC name>.<domain>.<tld>': 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x6bf
+```
 
 This error occurs when a network device (router, firewall, or VPN device) rejects network packets between the client being joined and the DC.
 
@@ -74,6 +105,31 @@ Make sure of the following items:
 ### Error code 0x6D9
 
 > There are no more endpoints available from the endpoint mapper.
+
+Here's an example from the *netsetup.log* file:
+
+```output
+mm/dd/yyyy hh:mm:ss:ms NetpGetDnsHostName: Read NV Hostname: <hostname>
+mm/dd/yyyy hh:mm:ss:ms NetpGetDnsHostName: PrimaryDnsSuffix defaulted to DNS domain name: <DNS domain>.<TLD>
+mm/dd/yyyy hh:mm:ss:ms NetpLsaOpenSecret: status: 0xc0000034
+mm/dd/yyyy hh:mm:ss:ms NetpGetLsaPrimaryDomain: status: 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpLsaOpenSecret: status: 0xc0000034
+mm/dd/yyyy hh:mm:ss:ms NetpManageMachineAccountWithSid: NetUserAdd on \\<hostname>.<domain> for <computername>$ failed: 0x8b0
+mm/dd/yyyy hh:mm:ss:ms NetpManageMachineAccountWithSid: status of attempting to set password on \\<DC name>.<domain>.<tld> for <hostname>$: 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomain: status of creating account: 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpGetComputerObjectDn: Unable to bind to DS on \\<DC name>.<domain>.<tld>: 0x6d9
+mm/dd/yyyy hh:mm:ss:ms NetpSetDnsHostNameAndSpn: NetpGetComputerObjectDn failed: 0x6d9
+mm/dd/yyyy hh:mm:ss:ms ldap_unbind status: 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomain: status of setting DnsHostName and SPN: 0x6d9
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomain: initiaing a rollback due to earlier errors
+mm/dd/yyyy hh:mm:ss:ms NetpGetLsaPrimaryDomain: status: 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpManageMachineAccountWithSid: status of disabling account <hostname>$ on \\<DC name>.<domain>.<tld>: 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomain: rollback: status of deleting computer account: 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpLsaOpenSecret: status: 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomain: rollback: status of deleting secret: 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomain: status of disconnecting from \\<DC name>.<domain>.<tld>: 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x6d9
+```
   
 Error 0x6D9 is logged when network connectivity is blocked between the joining client and the helper DC. The network connectivity services the domain join operation over port 135 or a port in the ephemeral range between 1025 to 5000 or 49152 to 65535. For more information, see [Service overview and network port requirements for Windows](../networking/service-overview-and-network-port-requirements.md).  
 
@@ -86,6 +142,16 @@ To resolve this error, follow these steps:
 ### Error code 0xA8B
 
 > An attempt to resolve the DNS name of a DC in the domain being joined has failed. Please verify this client is configured to reach a DNS server that can resolve DNS names in the target domain.
+
+Here's an example from the *netsetup.log* file:
+
+```output
+mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: status of verifying DNS A record name resolution for '<DC name>.<domain>.<tld>': 0x2746
+mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: failed to find a DC in the specified domain: 0xa8b, last error is 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpDsGetDcName returned: 0xa8b
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: Function exits with status of: 0xa8b
+mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0xa8b
+```
   
 Error 0xA8B occurs if:
 
@@ -122,6 +188,14 @@ To resolve this error, follow these steps:
 ### Error code 0x40
 
 > Cannot join a host into domain.
+
+Here's an example from the *netsetup.log* file:
+
+```output
+mm/dd/yyyy hh:mm:ss:ms NetUseAdd to \\<DC name>.<domain>.<tld>\IPC$ returned 64
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: status of connecting to dc '\\<DC name>.<domain>.<tld>': 0x40
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: Function exits with status of: 0x40
+```
 
 The issue is related to Server Message Block (SMB). A firewall device between the client and the DC intercepted the Key Distribution Center (KDC) request packet and altered some data in it. As a result, the DC cannot process the request properly.
 
