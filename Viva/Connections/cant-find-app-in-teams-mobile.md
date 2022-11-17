@@ -5,7 +5,7 @@ author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
 audience: ITPro 
-ms.topic: troubleshooting 
+ms.topic: troubleshooting
 ms.service: viva
 ms.subservice: viva-connections
 localization_priority: Normal
@@ -13,6 +13,7 @@ ms.custom:
 - CI 159609
 - CSSTroubleshoot
 ms.reviewer: bpeterse
+ms.date: 02/12/2022
 search.appverid: 
 - MET150
 ---
@@ -32,7 +33,7 @@ You should see information that resembles the following screenshot:
 
 If your organization wants to use a Viva Connections app that is available for both the desktop and mobile environments for Teams, you can enable the first-party Viva Connections app in the Microsoft Teams admin center:
 
-1. Use the steps in [this guide](/connections/guide-to-setting-up-viva-connections#step-6-enable-the-viva-connections-app-in-the-microsoft-teams-admin-center) to set up the first-party Viva Connections app.
+1. Use the steps in [this guide](/viva/connections/guide-to-setting-up-viva-connections#step-6-enable-the-viva-connections-app-in-the-microsoft-teams-admin-center) to set up the first-party Viva Connections app.
 2. By default, the first-party Viva Connections app is blocked. Leave it set to **Blocked** and complete all the other requirements.
 3. Toggle the **Status** option for the first-party Viva Connections app from **Blocked** to **Allowed**.
 4. Delete and uninstall the custom line of business Viva Connections desktop app.

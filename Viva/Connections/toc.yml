@@ -1,8 +1,10 @@
-- name: Viva Connections Troubleshooting
+- name: Viva Connections troubleshooting
   href: viva-connections-welcome.md
   items:
     - name: Can't find app in Teams mobile
       href: cant-find-app-in-teams-mobile.md
+    - name: Can't find the app in the Teams admin center
+      href: cant-find-app-in-teams-admin-center.md  
     - name: Can't update app details
       href: cant-update-app-details.md
     - name: Can't upload package

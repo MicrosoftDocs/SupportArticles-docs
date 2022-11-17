@@ -11,6 +11,7 @@ ms.custom:
 - CI 159609
 - CSSTroubleshoot
 ms.reviewer: bpeterse
+ms.date: 04/12/2022
 search.appverid: 
 - MET150
 ---
@@ -29,11 +30,11 @@ When you select Additional problem information in the error message, you see the
 
 :::image type="content" source="media/error-accessing-app-from-teams-desktop/error-accessing-app.png" alt-text="Screenshot of error message with additional information.":::
 
-**Note:** This issue occurs only when you access the Viva Connections app from the Teams desktop client. You will not see this error if you access the Viva Connections app from the Teams web client.
+**Note:** This issue occurs only when you access the Viva Connections app from the Teams desktop client. You won't see this error if you access the Viva Connections app from the Teams web client.
 
 ## Cause
 
-This error occurs if a SharePoint Framework (SPFx) web part is added to Viva Connections. Because of the web part addition, the **SharePoint Online Client Extensibility Web Application Principal** object that's available under **Azure Active Directory** > **App Registrations** is not configured correctly to trust the Teams desktop client.
+This error occurs if a SharePoint Framework (SPFx) web part is added to Viva Connections. Because of the web part addition, the **SharePoint Online Client Extensibility Web Application Principal** object that's available under **Azure Active Directory** > **App Registrations** isn't configured correctly to trust the Teams desktop client.
 
 ## Resolution
 
