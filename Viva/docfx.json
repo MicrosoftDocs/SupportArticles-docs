@@ -4,36 +4,64 @@
       {
         "files": [
           "**/*.md",
-          "**/*.yml"
+          "**/**.yml"
         ],
+        "src": "Hub",
+        "dest": ".",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
-          "_themes/**",
-          "_themes.pdf/**",
-          "**/docfx.json",
-          "_repo.en-us/**",
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
-          "ThirdPartyNotices.md",
-          "SECURITY.md"
+          "ThirdPartyNotices"
         ]
-      }
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "Connections",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "Learning",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      }      
     ],
     "resource": [
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.pdf",
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
-          "**/includes/**",
-          "_themes/**",
-          "_themes.pdf/**",
-          "**/docfx.json",
-          "_repo.en-us/**"
+          "**/includes/**"
         ]
       }
     ],
@@ -42,10 +70,25 @@
     "globalMetadata": {
       "breadcrumb_path": "/viva/troubleshoot/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None"
+      "recommendations": true,
+      "feedback_system": "none",
+      "titleSuffix": "Viva",
+      "hideEdit": true,
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
+      "searchScope": ["Viva Support"] 
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "ms.service": {
+        "Learning/**/*.md": "viva",
+        "Connections/**/*.md": "viva"        
+      },
+      "ms.subservice": {
+        "Connections/**/*.md": "viva-connections",
+        "Learning/**/*.md": "viva-learning"
+      }
+    },
     "template": [],
-    "dest": "OfficeDocs-Support-Viva"
+    "dest": "OfficeDocs-Support-Viva",
+    "markdownEngineName": "markdig"
   }
 }
