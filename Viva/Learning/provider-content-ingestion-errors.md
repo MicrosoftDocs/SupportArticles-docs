@@ -27,6 +27,6 @@ The following table provides a list of the error codes or messages that you migh
 
 |Content provider |Error code/Error message |Error description |
 |:----------------|:----------|:----------------------|
-|All providers |USR_ERROR_INVALID_RESOURCE_CREDENTIALS |The authentication credentials you provided are invalid. <br/><br/>**Next steps:** Make sure you enter the correct credentials. If they're correct, [contact Microsoft customer support](help-support.md) for more details.|
+|All providers |USR_ERROR_INVALID_RESOURCE_CREDENTIALS |The authentication credentials you provided are invalid. <br/><br/>**Next steps:** Make sure you enter the correct credentials. If they're correct, [contact Microsoft customer support](/viva/learning/help-support) for more details.|
 |All providers |USR_ERROR_ACCESS_DENIED |Access denied by partner. <br/><br/>**Next steps:** Confirm that the credentials you entered are correct or contact the content provider's support team. |
 |All providers |Changes not saved |**Next steps:** Make sure that you've entered the correct configuration details.|
