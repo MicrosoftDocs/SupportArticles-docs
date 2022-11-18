@@ -1,6 +1,6 @@
 ---
 title: External participants are blocked from joining a Teams meeting
-description: External participants receive a "Only people with access to this org can join its meetings" message when they try to join a Teams meeting. This behavior is caused by anonymous join and external access settings.
+description: External participants receive an "Only people with access to this org can join its meetings" message when they try to join a Teams meeting. This behavior is caused by anonymous join and external access settings.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -29,13 +29,13 @@ External participants who are invited to a Teams meeting that's scheduled by use
 
 ## Cause
 
-This behavior occurs because of the organization meeting settings that control anonymous join and the external access functionality.
+This behavior occurs because of the settings that control anonymous join and external access.
 
-- If external participants aren't signed in by using a Teams work or school account but try to join the meeting as anonymous users, they receive the message in one of the following situations:
+- If an external participant isn't signed in with a Teams work or school account and tries to join the meeting (as an anonymous user),, they receive the message in one of the following situations:
 
-  - The [Anonymous users can join a meeting](/microsoftteams/meeting-settings-in-teams#using-the-microsoft-teams-admin-center-to-configure-organization-wide-policy) setting is turned off. If this setting is turned off, anonymous users can't join meetings that are organized by any users in your organization.
-  - The [Anonymous users can join a meeting](/microsoftteams/meeting-settings-in-teams#using-the-microsoft-teams-admin-center-to-configure-organization-wide-policy) setting is turned on. However, in the meeting policies that are assigned to the meeting organizer, the [Let anonymous people join a meeting](/microsoftteams/meeting-policies-participants-and-guests?WT.mc_id=TeamsAdminCenterCSH#let-anonymous-people-join-a-meeting) setting is turned off. This prevents anonymous users from joining meetings that are scheduled by that organizer.
-- If an external participant is signed in by using a Teams work or school account, and tries to join the meeting as an authenticated user, the participant receives the message in one of the following situations:
+  - The organization meeting setting [Anonymous users can join a meeting](/microsoftteams/meeting-settings-in-teams#using-the-microsoft-teams-admin-center-to-configure-organization-wide-policy) is turned off. If this setting is turned off, anonymous users can't join meetings that are organized by any users in your organization.
+  - The organization meeting setting [Anonymous users can join a meeting](/microsoftteams/meeting-settings-in-teams#using-the-microsoft-teams-admin-center-to-configure-organization-wide-policy) is turned on. However, in the meeting policies that are assigned to the meeting organizer, the [Let anonymous people join a meeting](/microsoftteams/meeting-policies-participants-and-guests?WT.mc_id=TeamsAdminCenterCSH#let-anonymous-people-join-a-meeting) setting is turned off. This prevents anonymous users from joining meetings that are scheduled by that organizer.
+- If an external participant is signed in with a Teams work or school account and tries to join the meeting (as an authenticated user), they receive the message in one of the following situations:
 
   - In the [external access](/microsoftteams/manage-external-access#allow-or-block-domains) setting of your organization, the external participant's domain is blocked or not allowed. Also, anonymous join is disabled* in your organization.
   - The external participant's domain isn't blocked or is allowed. However, in the external access setting of the external participant's organization, the meeting organizer's domain is blocked or not allowed. Also, anonymous join is disabled* in your organization.
@@ -49,7 +49,7 @@ This behavior occurs because of the organization meeting settings that control a
 
 To allow external participants to join Teams meetings, select the correct settings according to your needs based on the following example situations.
 
-### Allow all external participants to join meetings (if signed in by using a Teams work or school account)
+### Allow all external participants (regardless of whether they are signed in with a Teams work or school account) to join meetings
 
 - Enable anonymous join in the [organization meeting setting](/microsoftteams/meeting-settings-in-teams#using-the-microsoft-teams-admin-center-to-configure-organization-wide-policy).
 - Enable anonymous join in the [meeting policies](/microsoftteams/meeting-policies-participants-and-guests?WT.mc_id=TeamsAdminCenterCSH#let-anonymous-people-join-a-meeting) that are assigned to all users in your organization.
@@ -66,7 +66,7 @@ To allow external participants to join Teams meetings, select the correct settin
 - Disable anonymous join in the [organization meeting setting](/microsoftteams/meeting-settings-in-teams#using-the-microsoft-teams-admin-center-to-configure-organization-wide-policy).
 - [Block external access](/microsoftteams/manage-external-access).
 
-### Allow only external participants to join meetings as authenticated users (if signed in by using a Teams work or school account)
+### Allow only external participants to join meetings as authenticated users (signed in by using a Teams work or school account)
 
 - Disable anonymous join in the [organization meeting setting](/microsoftteams/meeting-settings-in-teams#using-the-microsoft-teams-admin-center-to-configure-organization-wide-policy).
 - In the external access setting, make sure that the external participants' domains [aren't blocked or are allowed](/microsoftteams/manage-external-access#allow-or-block-domains).
