@@ -82,7 +82,7 @@ To disable HALT conditions temporarily, follow these steps:
     disk_error_action = SUSPEND
     ```
 
-- If you're using a recovery VM, follow the instructions in [Unmount and detach original virtual hard disk](/troubleshoot/azure/virtual-machines/troubleshoot-recovery-disks-portal-linux#unmount-and-detach-original-virtual-hard-disk) to swap the OS disk back to the problematic VM, and try to boot the VM normally. If you're using single-user mode, exit, and the VM will reboot.
+- If you're using a recovery VM, follow the instructions in [Unmount and detach original virtual hard disk](/troubleshoot/azure/virtual-machines/troubleshoot-recovery-disks-portal-linux#unmount-and-detach-original-virtual-hard-disk) to swap the OS disk back to the problematic VM, and try to boot the VM normally. If you're using single user mode, exit, and the VM will reboot.
 
 - Once the VM is fully booted, browse the filesystem and free some spaces by using command-line tools such as `df` and `du`. Around 10% of the filesystem containing the */var/log/audit* directory should be a good initial target.
 
