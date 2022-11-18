@@ -35,7 +35,7 @@ This guide provides you with the fundamental concepts used when troubleshooting 
   - The user attempting the operation is the creator of the existing account.
   - The computer was created by a member of domain administrators.
 
-For more information, see [KB5020276—Netjoin: Domain join hardening changes](https://support.microsoft.com/topic/kb5020276-netjoin-domain-join-hardening-changes-2b65a0f3-1f4c-42ef-ac0f-1caaf421baf8).
+   For more information, see [KB5020276—Netjoin: Domain join hardening changes](https://support.microsoft.com/topic/kb5020276-netjoin-domain-join-hardening-changes-2b65a0f3-1f4c-42ef-ac0f-1caaf421baf8).
 
 ## Common issues and solutions
 
