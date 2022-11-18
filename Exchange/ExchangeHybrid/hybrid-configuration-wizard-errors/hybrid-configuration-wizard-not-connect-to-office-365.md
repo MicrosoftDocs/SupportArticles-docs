@@ -55,6 +55,8 @@ To enable TLS 1.2 in the WinHTTP component, follow these steps:
 
 1. Add a registry key to enable TLS 1.2 in the WinHTTP component:
 
+    [!INCLUDE [Important registry alert](../../../includes/registry-important-alert.md)]
+
     1. Run regedit.
 
     1. Navigate to `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp`.
