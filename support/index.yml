@@ -22,7 +22,7 @@ metadata:
 productDirectory:
   items:
   - title: Windows
-    imageSrc: "media/hub-landing/windows.svg"
+    imageSrc: "media/hub-landing/windows-log.png"
     summary: Troubleshooting articles for Windows
     url: windows/index.yml
 
@@ -76,8 +76,8 @@ productDirectory:
     summary: Troubleshooting articles for Azure 
     url: azure/index.yml
       
-  - title: Office
-    imageSrc: "/media/logos/logo_office.svg"
+  - title: Microsoft 365
+    imageSrc: "media/hub-landing/microsoft-365-logo.png"
     summary: Troubleshooting articles for Office
     url: /office/troubleshoot
 
