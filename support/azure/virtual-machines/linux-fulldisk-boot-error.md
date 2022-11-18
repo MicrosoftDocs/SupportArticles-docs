@@ -71,7 +71,7 @@ To disable HALT conditions temporarily, follow these steps:
 
 2. Gain access to the configuration file by using [az vm repair](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) commands, a manual [recovery VM](troubleshoot-recovery-disks-portal-linux.md), or [single user mode](serial-console-grub-single-user-mode.md).
 
-3. Take note of the current configuration, as there may not be space available to take a backup of the file in the VM.
+3. Take note of the current configuration, as there may not be space available to backup the file in the VM.
 
 4. Change the configurations above in the */etc/audit/auditd.conf* file from `HALT` to any other valid value except `SINGLE`. In this scenario, the values can be `IGNORE`, `SUSPEND`, or any other values listed in the Linux `man` page for the *auditd.conf* file, which will give the appropriate parameters for the versions of software used in the VM.
 
