@@ -25,7 +25,7 @@ The listed resources in this article can help you resolve issues that you experi
 
 ## Troubleshoot Remote Access VPN issues
 
-- [Microsoft Edge ignores PAC setting](edge-ignore-pac-android-vpn-profile.md) - Microsoft Edge in Android 13 ignores a Proxy Auto-Configuration (PAC) setting configured in a per-app VPN profile in Microsoft Intune.
+- [Microsoft Edge ignores PAC setting](../../mem/intune/device-enrollment/edge-ignore-pac-android-vpn-profile.md) - Microsoft Edge in Android 13 ignores a Proxy Auto-Configuration (PAC) setting configured in a per-app VPN profile in Microsoft Intune.
 
 - [Event ID: 20227 with error code 720](troubleshoot-error-720-when-establishing-a-vpn-connection.md) - VPN clients don't complete a VPN connection because the WAN Miniport (IP) adapter is not bound correctly.
 
