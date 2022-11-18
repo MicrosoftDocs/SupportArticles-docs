@@ -63,4 +63,4 @@ Ref. [Chapter 11 - NetBIOS over TCP/IP - Microsoft TechNet: Resources](https://t
 ## More information
 
 ATQ (Active Thread Queue) Performance Counter monitoring:
-"Monitoring Your Branch Office Environment", [https://technet.microsoft.com/library/dd736504(WS.10).aspx](https://technet.microsoft.com/library/dd736504%28WS.10%29.aspx)
+"Monitoring Your Branch Office Environment", [https://technet.microsoft.com/library/dd736504(WS.10).aspx](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd736504(v=ws.10))
