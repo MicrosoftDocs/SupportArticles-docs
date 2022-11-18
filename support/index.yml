@@ -22,7 +22,7 @@ metadata:
 productDirectory:
   items:
   - title: Windows
-    imageSrc: "media/hub-landing/windows-log.png"
+    imageSrc: "media/hub-landing/windows-logo.png"
     summary: Troubleshooting articles for Windows
     url: windows/index.yml
 
