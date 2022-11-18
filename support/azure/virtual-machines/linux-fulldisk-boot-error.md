@@ -10,7 +10,7 @@ ms.collection: linux
 ---
 # Troubleshoot Azure Linux virtual machine boot issues due to full OS disk
 
-Under certain circumstances and configurations, a full operating system (OS) disk may lead to Linux virtual machine (VM) boot issues. This article provides some causes and solutions for the boot issues.
+Under certain circumstances and configurations, a full operating system (OS) disk may lead to Azure Linux virtual machine (VM) boot issues. This article provides some causes and solutions for the boot issues.
 
 ## Symptoms
 
@@ -44,13 +44,13 @@ Many security hardening practices can lead to difficulties in maintaining system
 
 - Check the system shutdown messages in the [serial console](/azure/virtual-machines/boot-diagnostics) log.
 
-    If the system is booted, a "Starting Security Auditing Service…" message is displayed. This message doesn't indicate that the service started. Instead, the VM immediately transitions to shut down, and a "power down" message is displayed. If the system is running and unexpectedly shuts down, the serial console may show an orderly shutdown process ending in a "Power down" message. See the following screenshots as an example:
+    If the system is booted, a "Starting Security Auditing Service…" message is displayed. This message doesn't indicate that the service started. Instead, the VM immediately transitions to shut down, and a "Power down" message is displayed. If the system is running and unexpectedly shuts down, the serial console may show an orderly shutdown process ending in a "Power down" message. See the following screenshots as an example:
 
     :::image type="content" source="media/linux-fulldisk-boot-error/fulldisk-secaud-starting.png" alt-text="Screenshot of the 'Starting Security Auditing Service' message in the serial console.":::
     
     :::image type="content" source="media/linux-fulldisk-boot-error/fulldisk-secaud-poweroff.png" alt-text="Screenshot of the 'Power-off' message in the serial console.":::
 
-- Mount the OS disk by using [az vm repair](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) commands, a manual [recovery VM](troubleshoot-recovery-disks-portal-linux.md), or [single user mode](serial-console-grub-single-user-mode.md). Then, examine the disk utilization by using the `df` command and check if the disk containing the */var/log/audit* directory is near 100% utilization.
+- Mount the OS disk by using [az vm repair](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) commands, a manual [recovery VM](troubleshoot-recovery-disks-portal-linux.md), or [single user mode](serial-console-grub-single-user-mode.md). Then, examine the disk utilization by using the `df` command-line tool and check if the disk containing the */var/log/audit* directory is near 100% utilization.
 
 - Access the OS filesystem by using [az vm repair](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) commands, a manual [recovery VM](troubleshoot-recovery-disks-portal-linux.md), or [single user mode](serial-console-grub-single-user-mode.md), and verify if the */etc/audit/auditd.conf* file contains the following configurations:
 
