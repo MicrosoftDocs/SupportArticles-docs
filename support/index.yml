@@ -61,9 +61,9 @@ productDirectory:
     summary: Troubleshooting articles for SQL Server
     url: sql/welcome-sql-server.md
 
-  - title: Microsoft Endpoint Manager
+  - title: Endpoint management
     imageSrc: "media/hub-landing/microsoft-logo.svg"
-    summary: Troubleshooting articles for Microsoft Endpoint Manager
+    summary: Troubleshooting articles for Endpoint management
     url: mem/index.yml
 
   - title: System Center
