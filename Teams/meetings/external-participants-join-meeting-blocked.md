@@ -31,7 +31,7 @@ External participants who are invited to a Teams meeting that's scheduled by use
 
 This behavior occurs because of the settings that control anonymous join and external access.
 
-- If an external participant isn't signed in with a Teams work or school account and tries to join the meeting (as an anonymous user),, they receive the message in one of the following situations:
+- If an external participant isn't signed in with a Teams work or school account and tries to join the meeting (as an anonymous user), they receive the message in one of the following situations:
 
   - The organization meeting setting [Anonymous users can join a meeting](/microsoftteams/meeting-settings-in-teams#using-the-microsoft-teams-admin-center-to-configure-organization-wide-policy) is turned off. If this setting is turned off, anonymous users can't join meetings that are organized by any users in your organization.
   - The organization meeting setting [Anonymous users can join a meeting](/microsoftteams/meeting-settings-in-teams#using-the-microsoft-teams-admin-center-to-configure-organization-wide-policy) is turned on. However, in the meeting policies that are assigned to the meeting organizer, the [Let anonymous people join a meeting](/microsoftteams/meeting-policies-participants-and-guests?WT.mc_id=TeamsAdminCenterCSH#let-anonymous-people-join-a-meeting) setting is turned off. This prevents anonymous users from joining meetings that are scheduled by that organizer.
