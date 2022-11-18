@@ -78,7 +78,7 @@ productDirectory:
       
   - title: Microsoft 365
     imageSrc: "media/hub-landing/microsoft-365-logo.png"
-    summary: Troubleshooting articles for Office
+    summary: Troubleshooting articles for Microsoft 365
     url: /office/troubleshoot
 
   - title: Microsoft Dynamics
