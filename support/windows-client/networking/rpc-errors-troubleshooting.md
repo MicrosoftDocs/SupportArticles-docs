@@ -1,22 +1,22 @@
 ---
-title: RPC errors troubleshooting
-description: Learn how to troubleshoot Remote Procedure Call (RPC) errors when connecting to Windows Management Instrumentation (WMI), SQL Server, or during a remote connection.
-ms.date: 08/23/2022
+title: RPC error troubleshooting
+description: Learn how to troubleshoot Remote Procedure Call (RPC) errors that occur during computer-to-computer communication. Such communication can involve Windows Management Instrumentation (WMI), SQL Server, Active Directory operations, or remote connections.
+ms.date: 11/23/2022
 ms.prod: windows-client
 ms.topic: troubleshooting
-author: dansimp
-ms.author: dansimp
+author: v-tappelgate
+ms.author: v-tappelgate
 manager: dcscontentpm
 ms.collection: highpri
 ms.technology: windows-client-networking
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.reviewer: dansimp
+ms.reviewer: kaushika
 audience: itpro
 localization_priority: medium
 ---
 # Troubleshoot Remote Procedure Call (RPC) errors
 
-_Applies to:_ &nbsp; Windows 10
+_Applies to:_ &nbsp; Windows 11, Windows 10
 
 You might encounter an RPC server unavailable error when connecting to Windows Management Instrumentation (WMI), SQL Server, during a remote connection, or for some Microsoft Management Console (MMC) snap-ins. The following image is an example of an RPC error.
 
