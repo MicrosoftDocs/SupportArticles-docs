@@ -58,8 +58,10 @@ If CPU (worker) time is very close to the overall elapsed duration, the query sp
 - Identify and resolve [SARG-ability issues](troubleshoot-high-cpu-usage-issues.md#step-6-investigate-and-resolve-sargability-issues)
 - Identify and resolve [Row goal](/archive/blogs/queryoptteam/row-goals-in-action) issues where long-running nested loops can be caused by TOP, EXISTS, IN, FAST, SET ROWCOUNT, OPTION (FAST N). For more information, see [Row Goals Gone Rogue](/archive/blogs/bartd/row-goals-gone-rogue) and [Showplan enhancements - Row Goal EstimateRowsWithoutRowGoal](https://techcommunity.microsoft.com/t5/sql-server-blog/more-showplan-enhancements-8211-row-goal/ba-p/385839)
 - Assess and resolve [cardinality estimation](/sql/relational-databases/performance/cardinality-estimation-sql-server) issues. For more information, see [Decreased query performance after upgrade from SQL Server 2012 or earlier to 2014 or later](decreased-query-perf-after-upgrade.md)
+- Identify and resolve quries that seem no never complete, see [Troubleshoot queries that seem to never end in SQL Server](troubleshoot-never-ending-query?tabs=2008-2014)
 - Identify and resolve [slow queries affected by optimizer timeout ](troubleshoot-optimizer-timeout-performance.md)
 - Identify high CPU performance issues. For more information, see [Troubleshoot high-CPU-usage issues in SQL Server](troubleshoot-high-cpu-usage-issues.md)
+- [Troubleshoot a query that shows a significant performance difference between two servers](troubleshoot-query-perf-between-servers.md)
 - Increase computing resources on the system (CPUs)
 - [Troubleshoot UPDATE performance issues with narrow and wide plans](troubleshoot-performance-narrow-vs-wide-plans.md)
 
