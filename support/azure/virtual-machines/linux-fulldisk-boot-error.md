@@ -21,19 +21,19 @@ During normal system operations, if the OS disk or critical system partitions be
 
 ## Prerequisites
 
-To troubleshoot the boot issues and complete system repairs, the following requirements should be met:
+To troubleshoot the boot issues and to complete system repairs, the following requirements should be met:
 
 - Permissions to create a disk snapshot or operate some backup and restore tools.
 
-    In this article, data or disks will be altered, so having the ability to revert the VM to a previous state is a critical component of the safe system administration.
+    In this article, data or disks will be altered, so having the ability to revert the VM to a previous state is a critical component of safe system administration.
 
 - [Boot diagnostics](/azure/virtual-machines/boot-diagnostics) should be enabled and configured.
 
-    Having this configuration in place will allow for future reviewing the storage of the console log, and interacting with the serial console interface of the VM.
+    Having this configuration in place will allow for future reviewing of the storage of the console log, and interaction with the serial console interface of the VM.
 
-- Permissions to create a VM, in case a rescue VM is needed at any point.
+- Permissions to create a VM in case a rescue VM is needed at any point.
 
-- Permissions to create, detach and attach disks, in case swapping disks is required.
+- Permissions to create, detach, and attach disks in case swapping disks is required.
 
 > [!NOTE]
 > Not all requirements apply to every issue scenario below.
@@ -44,13 +44,13 @@ Many security hardening practices can lead to difficulties in maintaining system
 
 - Check the system shutdown messages in the [serial console](/azure/virtual-machines/boot-diagnostics) log.
 
-    If the system is booted, a "Starting Security Auditing Service…" message is displayed. This message doesn't indicate that the service is started. Instead, the VM immediately transitions to shut down, and a "power down" message is displayed. If the system is running and unexpectedly shuts down, the serial console may show an orderly shutdown process ending in a "Power down" message. See the following screenshots as an example:
+    If the system is booted, a "Starting Security Auditing Service…" message is displayed. This message doesn't indicate that the service started. Instead, the VM immediately transitions to shut down, and a "power down" message is displayed. If the system is running and unexpectedly shuts down, the serial console may show an orderly shutdown process ending in a "Power down" message. See the following screenshots as an example:
 
     :::image type="content" source="media/linux-fulldisk-boot-error/fulldisk-secaud-starting.png" alt-text="Screenshot of the 'Starting Security Auditing Service…' message in the serial console.":::
     
     :::image type="content" source="media/linux-fulldisk-boot-error/fulldisk-secaud-poweroff.png" alt-text="Screenshot of the 'Power-off' message in the serial console.":::
 
-- Mount the OS disk by using [az vm repair](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) commands, a manual [recovery VM](troubleshoot-recovery-disks-portal-linux.md), or [single user mode](serial-console-grub-single-user-mode.md), examine the disk utilization by using the `df` command, and then check if the disk containing the */var/log/audit* directory is near 100% utilization.
+- Mount the OS disk by using [az vm repair](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) commands, a manual [recovery VM](troubleshoot-recovery-disks-portal-linux.md), or [single user mode](serial-console-grub-single-user-mode.md). Then, examine the disk utilization by using the `df` command and check if the disk containing the */var/log/audit* directory is near 100% utilization.
 
 - Access the OS filesystem by using [az vm repair](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) commands, a manual [recovery VM](troubleshoot-recovery-disks-portal-linux.md), or [single user mode](serial-console-grub-single-user-mode.md), and verify if the */etc/audit/auditd.conf* file contains the following configurations:
 
@@ -63,7 +63,7 @@ Many security hardening practices can lead to difficulties in maintaining system
 
 ### Resolution: Disable HALT conditions temporarily 
 
-If the auditd configuration causes the system shutdown on audit log failures, temporarily disable the `HALT` configuration will allow the VM to boot to the full OS for remediation. Once the system is booted, use normal OS tools to check the filesystem utilization, or expand the disk if needed. Once the issue is resolved, revert the configuration file to the previous state as soon as possible. 
+If the auditd configuration causes the system shutdown on audit log failures, temporarily disabling the `HALT` configuration will allow the VM to boot to the full OS for remediation. Once the system is booted, use normal OS tools to check the filesystem utilization or expand the disk if needed. Once the issue is resolved, revert the configuration file to the previous state as soon as possible. 
 
 To disable HALT conditions temporarily, follow these steps:
 
@@ -73,7 +73,7 @@ To disable HALT conditions temporarily, follow these steps:
 
 3. Take note of the current configuration, as there may not be space available to take a backup of the file in the VM.
 
-4. Change the configurations above in the */etc/audit/auditd.conf* file from `HALT` to any of other valid values except `SINGLE`. In this scenario, the values can be `IGNORE`, `SUSPEND`, or any other values listed in the Linux `man` page for the *auditd.conf* file, which will give the appropriate parameters for the versions of softwares used in the VM.
+4. Change the configurations above in the */etc/audit/auditd.conf* file from `HALT` to any other valid value except `SINGLE`. In this scenario, the values can be `IGNORE`, `SUSPEND`, or any other values listed in the Linux `man` page for the *auditd.conf* file, which will give the appropriate parameters for the versions of software used in the VM.
 
     ```output
     [root@linux /]# grep action /etc/audit/auditd.conf
@@ -82,18 +82,18 @@ To disable HALT conditions temporarily, follow these steps:
     disk_error_action = SUSPEND
     ```
 
-- If you're using a recovery VM, follow the instructions in [Unmount and detach original virtual hard disk](/troubleshoot/azure/virtual-machines/troubleshoot-recovery-disks-portal-linux#unmount-and-detach-original-virtual-hard-disk) to swap the OS disk back to the problematic VM, and try to boot the VM normally. If you're using single user mode, exit and the VM will reboot.
+- If you're using a recovery VM, follow the instructions in [Unmount and detach original virtual hard disk](/troubleshoot/azure/virtual-machines/troubleshoot-recovery-disks-portal-linux#unmount-and-detach-original-virtual-hard-disk) to swap the OS disk back to the problematic VM, and try to boot the VM normally. If you're using single-user mode, exit, and the VM will reboot.
 
-- Once the VM is booted fully, browse the filesystem and free some spaces by using command-line tools such as `df` and `du`. Around 10% of the filesystem containing the */var/log/audit* directory should be a good initial target.
+- Once the VM is fully booted, browse the filesystem and free some spaces by using command-line tools such as `df` and `du`. Around 10% of the filesystem containing the */var/log/audit* directory should be a good initial target.
 
 > [!IMPORTANT]
 > Be sure to revert the contents in the */etc/audit/auditd.conf* file to the original values and reboot the VM.
 
 If this resolution doesn't work or isn't appropriate for your environment, see the [Resolution](#resolution) section.
 
-## Scenario 2: VM disk is resized in Azure, but OS can't be resized and VM doesn't fully boot
+## Scenario 2: VM disk is resized in Azure, but OS can't be resized, and VM doesn't fully boot
 
-After a full disk is identified, and the VM has been shut down to resize the OS disk, the VM may not boot successfully. This scenario may be confusing on some distributions where the OS will attempt to automatically resize the root (`/`) filesystem on reboot. If the disk is completely full, the resize operation may fail because the process requires a small number of free spaces to expand the filesystem. Having no free space can cause cloud-init to fail, and subsequently the VM won't finish booting.
+After a full disk is identified and the VM has been shut down to resize the OS disk, the VM may not boot successfully. This scenario may be confusing on some distributions where the OS will attempt to automatically resize the root (`/`) filesystem on reboot. If the disk is completely full, the resize operation may fail because the process requires a small number of free spaces to expand the filesystem. Having no free space can cause cloud-init to fail, and subsequently, the VM won't finish booting.
 
 To identify this issue, review the boot logs in the serial console and check if lines like the following are present:
 
