@@ -63,7 +63,7 @@ Many security hardening practices can lead to difficulties in maintaining system
 
 ### Resolution: Disable HALT configuration temporarily
 
-If the auditd configuration causes the system shutdown on audit log failures, temporarily disabling the `HALT` configuration will allow the VM to boot to the full OS for remediation. Once the system is booted, use normal OS tools to check the filesystem utilization or expand the disk if needed. Once the issue is resolved, revert the configuration file to the previous state as soon as possible.
+If the auditd configuration causes the system shutdown on audit log failures, temporarily disabling the `HALT` configuration will allow the VM to boot to the full OS for remediation.
 
 1. Take a snapshot of the OS disk to provide a recovery state.
 
@@ -103,11 +103,11 @@ To identify this issue, review the boot logs in the serial console and check if 
 
 Because the specific cloud-init messages may not be the most visible message returned, look for other lines containing the "[Errno 28] No space left on device" text or similar "no space" messages.
 
-To resolve this issue, [clear unneeded data](#resolution1) to free disk spaces.
+To resolve this issue, [clear unneeded data](#resolution1) to free a small amount of disk space, after doing this procedure continue with the process to [expand the filesystem](#resolution1).
 
 ## Scenario 3: VM boots but is inaccessible due to service failures
 
-A VM that seems to boot completely may have the following issues:
+A VM which seems to boot completely may have the following issues:
 
 - Service issues occur during the boot.
 - The Azure Agent may not appear available.
