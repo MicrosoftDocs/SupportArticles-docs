@@ -46,7 +46,7 @@ Many security hardening practices can lead to difficulties in maintaining system
 
     If the system is booted, a "Starting Security Auditing Service…" message is displayed. This message doesn't indicate that the service started. Instead, the VM immediately transitions to shut down, and a "power down" message is displayed. If the system is running and unexpectedly shuts down, the serial console may show an orderly shutdown process ending in a "Power down" message. See the following screenshots as an example:
 
-    :::image type="content" source="media/linux-fulldisk-boot-error/fulldisk-secaud-starting.png" alt-text="Screenshot of the 'Starting Security Auditing Service…' message in the serial console.":::
+    :::image type="content" source="media/linux-fulldisk-boot-error/fulldisk-secaud-starting.png" alt-text="Screenshot of the 'Starting Security Auditing Service' message in the serial console.":::
     
     :::image type="content" source="media/linux-fulldisk-boot-error/fulldisk-secaud-poweroff.png" alt-text="Screenshot of the 'Power-off' message in the serial console.":::
 
@@ -113,7 +113,7 @@ A VM that seems to boot completely may show service issues during the boot, the 
 
 If a VM boots but appears unavailable, check the serial log in boot diagnostics to view the boot messages, or use the [serial console](/azure/virtual-machines/boot-diagnostics) to interact with the VM. If the space is insufficient, [clear unneeded data](#resolution1) to free spaces or [expand the disks](#resolution2).
 
-If the console log contains many messages stating "ERROR ExtHandler /proc/net/route contains no routes", a full OS disk may be the cause as well, as the networking services are unable to completely start.
+If the console log contains many messages stating "ERROR ExtHandler /proc/net/route contains no routes", a full OS disk may be the cause as well, as the networking services are unable to start completely.
 
 ## <a id="resolution"></a>Resolution
 
@@ -133,7 +133,7 @@ The following resolutions apply to any of the scenarios above.
     
 3. Remove any files that can be identified as unnecessary, such as old logs, forgotten backups, and similar files.
 
-4. Once a suitable amount of space is cleared, target around 10% free disk, reboot the system.
+4. Once a suitable amount of space is cleared, target around 10% free disk, and reboot the system.
 
 ### <a id="resolution2"></a> Resolution 2: Expand OS filesystem
 
@@ -141,6 +141,6 @@ If no data can be cleared from the OS filesystem, we recommend expanding the dis
 
 ## Next steps
 
-In case the specific boot error isn't a Linux boot issue due to full OS disk, refer to the [Troubleshoot Azure Linux Virtual Machines boot errors](boot-error-troubleshoot-linux.md) for further troubleshooting.
+In case the specific boot error isn't a Linux boot issue due to a full OS disk, refer to the [Troubleshoot Azure Linux Virtual Machines boot errors](boot-error-troubleshoot-linux.md) for further troubleshooting.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
