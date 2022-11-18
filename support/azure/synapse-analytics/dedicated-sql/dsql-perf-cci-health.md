@@ -1,13 +1,13 @@
 ---
-title: Assess and correct clustered columnstore index health on dedicated SQL pool
-description: Provides methods of assessment and maintenance for CCIs on an Azure Synapse Analytics dedicated SQL pool.
+title: Assess and correct clustered columnstore index health in a dedicated SQL pool
+description: Provides methods of assessment and maintenance for CCIs in an Azure Synapse Analytics dedicated SQL pool.
 ms.date: 11/16/2022
 author: scott-epperly
 ms.author: scepperl
 ms.reviewer: scepperl
 ---
 
-# Assess and correct clustered columnstore index health on dedicated SQL pool
+# Assess and correct clustered columnstore index health in a dedicated SQL pool
 
 _Applies to:_ &nbsp; Azure Synapse Analytics
 
@@ -29,7 +29,7 @@ Other conditions, such as small tables, over-partitioned tables, or under-partit
 
 ## Step 1: Analyze a summary of your CCI health
 
-Use the following query to get a single-row of metrics.
+Use the following query to get a single row of metrics.
 
 ```sql
 WITH cci_detail AS (
@@ -80,7 +80,7 @@ From the result, you can get an overview of the CCI health for your dedicated SQ
 The following query provides a detailed report of which table partitions are candidates for rebuilding. This view of CCI details provides three metrics to help identify and prioritize which tables/partitions would benefit most from maintenance. Set the appropriate threshold values for these metrics in the `WHERE` clause, and then `ORDER BY` the metrics that are of most interest to you. The detailed information can also be useful to determine whether your dedicated SQL pool is being impacted by a large number of small, fragmented tables, which can lead to [delays in compilation](/troubleshoot/azure/synapse-analytics/dedicated-sql/troubleshoot-dsql-perf-slow-query#unhealthy-ccis-generally).
 
 > [!NOTE]
-> The commented `fnMs_GenerateIndexMaintenanceScript` function is a table-valued function (TVF) that can generate common scripts for maintaining indexes. If you want to get the maintenance scripts in the result, uncomment line 37 and 39. And, before you run the query, use the script in the section [Generate index maintenance scripts](#generate-index-maintenance-scripts) to create the function. When running the maintenance script that you get from the result, be sure to use an appropriately-sized [resource class](/azure/synapse-analytics/sql-data-warehouse/resource-classes-for-workload-management), such as largerc or xlargerc.
+> The commented `fnMs_GenerateIndexMaintenanceScript` function is a table-valued function (TVF) that can generate common scripts for maintaining indexes. If you want to get the maintenance scripts in the result, uncomment lines 37 and 39. And before you run the query, use the script in the section [Generate index maintenance scripts](#generate-index-maintenance-scripts) to create the function. When running the maintenance script you get from the result, be sure to use an appropriately-sized [resource class](/azure/synapse-analytics/sql-data-warehouse/resource-classes-for-workload-management), such as largerc or xlargerc.
 
 | Column name | Quality characteristic | Description |
 | --- | --- | --- |
@@ -144,9 +144,9 @@ Performing maintenance on a table/partition may result in one of the following s
 
 ### Typical Causes
 
-- Insufficient resources
-- Insufficient service level (DWU)
-- Table is large and not partitioned
+- Insufficient resources.
+- Insufficient service level (DWU).
+- Table is large and not partitioned.
 
 ### Recommended mitigations
 
@@ -156,7 +156,7 @@ Performing maintenance on a table/partition may result in one of the following s
 
 ## Step 4: Check for design improvement opportunities
 
-Though not comprehensive, the following query can help you identify potential opportunities that are commonly found to cause performance or maintenance issues as it pertains to CCIs.
+Though not comprehensive, the following query can help you identify potential opportunities commonly found to cause performance or maintenance issues concerning CCIs.
 
 | Opportunity title | Description | Recommendations |
 |-------------------|-------------|-----------------|
@@ -201,7 +201,7 @@ GROUP BY object_id
 
 ## Generate index maintenance scripts
 
-Run the following query to create `dbo.fnMs_GenerateIndexMaintenanceScript` function on your dedicated SQL pool. This function generates scripts to optimize your CCI in three ways. You can use this function to maintain not only CCIs, but also clustered (rowstore) indexes.
+Run the following query to create `dbo.fnMs_GenerateIndexMaintenanceScript` function on your dedicated SQL pool. This function generates scripts to optimize your CCI in three ways. You can use this function to maintain not only CCIs but also clustered (rowstore) indexes.
 
 **Parameters**
 
@@ -353,7 +353,7 @@ GO
 
 ## More Information
 
-To gain a more in-depth understanding and acquire extra assessment tools for of CCI on the dedicated SQL pool, see:
+To gain a more in-depth understanding and acquire extra assessment tools for CCI on the dedicated SQL pool, see:
 
 - [Azure Synapse Toolbox](https://github.com/microsoft/Azure_Synapse_Toolbox)
 - [Indexes on dedicated SQL pool tables in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index)
