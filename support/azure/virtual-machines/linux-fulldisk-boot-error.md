@@ -61,11 +61,9 @@ Many security hardening practices can lead to difficulties in maintaining system
     disk_error_action = HALT
     ```
 
-### Resolution: Disable HALT conditions temporarily 
+### Resolution: Disable HALT configuration temporarily
 
-If the auditd configuration causes the system shutdown on audit log failures, temporarily disabling the `HALT` configuration will allow the VM to boot to the full OS for remediation. Once the system is booted, use normal OS tools to check the filesystem utilization or expand the disk if needed. Once the issue is resolved, revert the configuration file to the previous state as soon as possible. 
-
-To disable HALT conditions temporarily, follow these steps:
+If the auditd configuration causes the system shutdown on audit log failures, temporarily disabling the `HALT` configuration will allow the VM to boot to the full OS for remediation. Once the system is booted, use normal OS tools to check the filesystem utilization or expand the disk if needed. Once the issue is resolved, revert the configuration file to the previous state as soon as possible.
 
 1. Take a snapshot of the OS disk to provide a recovery state.
 
@@ -105,7 +103,7 @@ To identify this issue, review the boot logs in the serial console and check if 
 
 Because the specific cloud-init messages may not be the most visible message returned, look for other lines containing the "[Errno 28] No space left on device" text or similar "no space" messages.
 
-To resolve this issue, [clear unneeded data](#resolution1) to free disk space.
+To resolve this issue, [clear unneeded data](#resolution1) to free disk spaces.
 
 ## Scenario 3: VM boots but is inaccessible due to service failures
 
