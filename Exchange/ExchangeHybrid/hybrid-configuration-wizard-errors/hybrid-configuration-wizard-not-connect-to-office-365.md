@@ -65,7 +65,7 @@ To enable TLS 1.2 in the WinHTTP component, follow these steps:
 
     1. On x64-based computers, also add the `DefaultSecureProtocols` entry (use the same value for `DefaultSecureProtocols` as in the previous step) to the `Wow6432Node` path: `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp`.
 
-To enable TLS 1.2 at the OS level, follow the [Enabling TLS 1.2](/exchange/exchange-tls-configuration#enabling-tls-12) procedures.
+To enable TLS 1.2 at the OS level, follow the procedures that are described in [Enabling TLS 1.2](/exchange/exchange-tls-configuration#enabling-tls-12).
 
 Additionally, run `inetcpl.cpl` to make sure that TLS 1.2 is enabled on the **Advanced** tab of **Internet Options**, as shown in the following screenshot.
 
