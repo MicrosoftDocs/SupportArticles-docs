@@ -36,7 +36,7 @@ To troubleshoot the boot issues and to complete system repairs, the following re
 - Permissions to create, detach, and attach disks in case swapping disks is required.
 
 > [!NOTE]
-> Not all requirements apply to every issue scenario below.
+> Not all requirements apply to every scenario below.
 
 ## Scenario 1: VM shuts down unexpectedly and fails to boot
 
@@ -109,7 +109,14 @@ To resolve this issue, [clear unneeded data](#resolution1) to free disk space.
 
 ## Scenario 3: VM boots but is inaccessible due to service failures
 
-A VM that seems to boot completely may show service issues during the boot, the Azure Agent may not show available, connections to the VM may fail or the VM may appear to be offline according to applications. During the boot, multiple messages such as "[Errno 28] No space left on device" or other formats of messages indicate that the root filesystem is full.
+A VM that seems to boot completely may have the following issues:
+
+- Service issues occur during the boot.
+- The Azure Agent may not appear available.
+- Connections to the VM may fail.
+- The VM may appear to be offline according to applications.
+
+During the boot, multiple messages such as "[Errno 28] No space left on device" or other types of messages indicate that the root filesystem is full.
 
 If a VM boots but appears unavailable, check the serial log in boot diagnostics to view the boot messages, or use the [serial console](/azure/virtual-machines/boot-diagnostics) to interact with the VM. If the space is insufficient, [clear unneeded data](#resolution1) to free spaces or [expand the disks](#resolution2).
 
