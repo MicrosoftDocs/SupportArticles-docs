@@ -11,7 +11,7 @@ ms.reviewer: scepperl
 
 _Applies to:_ &nbsp; Azure Synapse Analytics
 
-In this article, we introduce a slightly different approach to assessing clustered columnstore index (CCI) health. Follow the steps in the following sections or execute the steps in the notebook via Azure Data Studio.
+This article introduces a slightly different approach to assessing clustered columnstore index (CCI) health. Follow the steps in the following sections or execute the steps in the notebook via Azure Data Studio.
 
 > [!NOTE]
 > Before attempting to open this notebook, check that Azure Data Studio is installed on your local machine. To install, go to [Learn how to install Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
@@ -19,13 +19,13 @@ In this article, we introduce a slightly different approach to assessing cluster
 > [!div class="nextstepaction"]
 > [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/synapse-support/main/dedicated-sql-pool/dsql-perf-cci-health.ipynb)
 
-In general, there are two major factors that affect the quality of a CCI:
+In general, two major factors that affect the quality of a CCI:
 
 - **Compact rowgroups and metadata** - The actual rowgroup count is close to the ideal count for the number of rows in the rowgroup.
 
 - **Compressed rowgroups** - Rowgroups are using columnstore compression.
 
-There are other conditions, such as small tables, over-partitioned tables, or under-partitioned tables, that could be argued to be of poor quality/health. However, these conditions are better classified as design improvement opportunities that can be assessed in [Step 4](#step-4-check-for-design-improvement-opportunities).
+Other conditions, such as small tables, over-partitioned tables, or under-partitioned tables, are arguably of poor quality or health. However, these conditions are better classified as design improvement opportunities that can be assessed in [Step 4](#step-4-check-for-design-improvement-opportunities).
 
 ## Step 1: Analyze a summary of your CCI health
 
@@ -61,7 +61,7 @@ SELECT COUNT(DISTINCT object_id) AS tables_assessed_count ,
 FROM cci_detail
 ```
 
-From the result, you can get an overview of the CCI health for your dedicated SQL pool. This information isn't directly actionable, but helps you gain perspective on how closely your maintenance routines keep you to an ideal state.
+From the result, you can get an overview of the CCI health for your dedicated SQL pool. This information isn't directly actionable but helps you gain perspective on how closely your maintenance routines keep you to an ideal state.
 
 | Column name | Description |
 | --- | --- |
@@ -77,7 +77,7 @@ From the result, you can get an overview of the CCI health for your dedicated SQ
 
 ## Step 2: Analyze detailed CCI information
 
-The following query provides detailed report of which table partitions are candidates for rebuilding. This view of CCI details provides three metrics to help identify and prioritize which tables/partitions would benefit most from maintenance. Set the appropriate threshold values for these metrics in the `WHERE` clause, and then `ORDER BY` the metrics that are of most interest to you. The detailed information can also be useful to determine whether your dedicated SQL pool is being impacted by a large number of small, fragmented tables, which can lead to [delays in compilation](/troubleshoot/azure/synapse-analytics/dedicated-sql/troubleshoot-dsql-perf-slow-query#unhealthy-ccis-generally).
+The following query provides a detailed report of which table partitions are candidates for rebuilding. This view of CCI details provides three metrics to help identify and prioritize which tables/partitions would benefit most from maintenance. Set the appropriate threshold values for these metrics in the `WHERE` clause, and then `ORDER BY` the metrics that are of most interest to you. The detailed information can also be useful to determine whether your dedicated SQL pool is being impacted by a large number of small, fragmented tables, which can lead to [delays in compilation](/troubleshoot/azure/synapse-analytics/dedicated-sql/troubleshoot-dsql-perf-slow-query#unhealthy-ccis-generally).
 
 > [!NOTE]
 > The commented `fnMs_GenerateIndexMaintenanceScript` function is a table-valued function (TVF) that can generate common scripts for maintaining indexes. If you want to get the maintenance scripts in the result, uncomment line 37 and 39. And, before you run the query, use the script in the section [Generate index maintenance scripts](#generate-index-maintenance-scripts) to create the function. When running the maintenance script that you get from the result, be sure to use an appropriately-sized [resource class](/azure/synapse-analytics/sql-data-warehouse/resource-classes-for-workload-management), such as largerc or xlargerc.
