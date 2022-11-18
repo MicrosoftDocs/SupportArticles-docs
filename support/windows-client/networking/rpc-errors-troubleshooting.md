@@ -56,35 +56,27 @@ The article also lists the RPC servers and which RPC servers can be configured t
 
 Some firewalls also allow for UUID filtering where it learns from an RPC Endpoint Mapper request for an RPC interface UUID. The response has the server port number, and a subsequent RPC Bind on this port is then allowed to pass.
 
-With Registry Editor, you can modify the following parameters for RPC. The RPC Port key values discussed below are all located in the following key in the registry:
+By using Registry Editor, you can modify the following parameters for RPC. The RPC port values discussed in the following table are all located under the following registry subkey:
 
-`HKEY_LOCAL_MACHINE\Software\Microsoft\Rpc\Internet\ Entry name Data Type`
+`HKEY_LOCAL_MACHINE\Software\Microsoft\Rpc\Internet\ <Entry name> <Data type>`
 
-- Ports REG_MULTI_SZ
-
-  Specifies a set of IP port ranges consisting of either all the ports available from the Internet or all the ports not available from the Internet. Each string represents a single port or an inclusive set of ports. For example, a single port may be represented by **5984**, and a set of ports may be represented by **5000-5100**. If any entries are outside the range of 0 to 65535, or if any string can't be interpreted, the RPC runtime treats the entire configuration as invalid.
-
-- PortsInternetAvailable REG_SZ Y or N (not case-sensitive)
-
-  If Y, the ports listed in the Ports key are all the Internet-available ports on that computer. If N, the ports listed in the Ports key are all those ports that aren't Internet-available.
-
-- UseInternetPorts REG_SZ ) Y or N (not case-sensitive)
-
-  - Specifies the system default policy.
-  - If Y, the processes using the default will be assigned ports from the set of Internet-available ports, as defined previously.
-  - If N, the processes using the default will be assigned ports from the set of intranet-only ports.
+| Key | Data type | Values | Comments |
+| - | - | - | - |
+| `Ports` | REG_MULTI_SZ | **0** - **65535** | Specifies a set of IP port ranges that consists of either one of the following:<ul><li>All the ports that are available from the internet</li><li>All the ports that are not available from the internet.</li></ul>Each string represents a single port or an inclusive set of ports. For example, **5984** represents a single port, and **5000-5100** represents a set of ports. If any values are outside the range of **0** to **65535**, or if any value can't be interpreted, the RPC runtime treats the entire configuration as invalid. |
+| `PortsInternetAvailable` | REG_SZ | **Y** or **N** (not case-sensitive) | <ul><li>**Y**. The ports listed in the `Ports` key represent all the available ports on that computer.</li><li>**N**. The ports listed in the `Ports` key represent all ports that aren't available.</li><ul> |
+| `UseInternetPorts` | REG_SZ | **Y** or **N** (not case-sensitive) | Specifies the system default policy.<ul>**Y**. The processes that use the default will be assigned ports from the set of internet-available ports, as defined previously.</li><li>**N**. The processes that use the default will be assigned ports from the set of intranet-only ports.</li></ul>
 
 Example:
 
-In this example, ports 5000 through 6000 inclusive have been arbitrarily selected to help illustrate how the new registry key can be configured. This example isn't a recommendation of a minimum number of ports needed for any particular system.
+In this example, ports 5000 through 6000 (inclusive) have been arbitrarily selected to help illustrate how the new registry keys can be configured. This example isn't a recommendation of a minimum number of ports needed for any particular system.
 
 1. Add the Internet key under: `HKEY_LOCAL_MACHINE\Software\Microsoft\Rpc`
-2. Under the Internet key, add the values "Ports" (MULTI_SZ), "PortsInternetAvailable" (REG_SZ), and "UseInternetPorts" (REG_SZ).
+2. Under the Internet key, add the values "Ports" (MULTI_SZ), "PortsInternetAvailable" (REG_SZ), and "UseInternetPorts" (REG_SZ).  
 
-    For example, the new registry key appears as follows:
-    Ports: REG_MULTI_SZ: 5000-6000
-    PortsInternetAvailable: REG_SZ: Y
-    UseInternetPorts: REG_SZ: Y
+    For example, the new registry key appears as follows:  
+    Ports: REG_MULTI_SZ: 5000-6000  
+    PortsInternetAvailable: REG_SZ: Y  
+    UseInternetPorts: REG_SZ: Y  
 3. Restart the server. All applications that use RPC dynamic port allocation use ports 5000 through 6000, inclusive.
 
 You should open up a range of ports above port 5000. Port numbers below 5000 may already be in use by other applications and could cause conflicts with your DCOM application(s). Furthermore, previous experience shows that a minimum of 100 ports should be opened, because several system services rely on these RPC ports to communicate with each other.
@@ -149,7 +141,7 @@ You can run the commands below to use Windows inbuilt `netsh` captures, to colle
   Netsh trace start scenario=netconnection capture=yes tracefile=c:\client_nettrace.etl maxsize=512 overwrite=yes report=yes
   ```
 
-- On the Server
+- On the server
 
   ```console
   Netsh trace start scenario=netconnection capture=yes tracefile=c:\server_nettrace.etl maxsize=512 overwrite=yes report=yes
