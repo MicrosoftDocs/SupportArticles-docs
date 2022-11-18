@@ -19,7 +19,7 @@ This article introduces a slightly different approach to assessing clustered col
 > [!div class="nextstepaction"]
 > [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/synapse-support/main/dedicated-sql-pool/dsql-perf-cci-health.ipynb)
 
-In general, two major factors that affect the quality of a CCI:
+In general, two major factors affect the quality of a CCI:
 
 - **Compact rowgroups and metadata** - The actual rowgroup count is close to the ideal count for the number of rows in the rowgroup.
 
