@@ -134,10 +134,10 @@ Using ephemeral source port
 Querying Endpoint Mapper Database...
 Server's response:
 UUID: d95afe70-a6d5-4259-822e-2c84da1ddb0d
-ncacn_ip_tcp:169.254.0.10<strong>[49664]</strong>
+ncacn_ip_tcp:169.254.0.2[49664]
 ```
 
-The one in bold is the ephemeral port number that you made a connection to successfully.
+Note the number that is enclosed in square brackets. It's the ephemeral port number that you successfully connected to.
 
 ### Netsh
 
@@ -169,11 +169,11 @@ Open the traces in [Microsoft Network Monitor 3.4](collect-data-using-network-mo
 
 - Now check if you're getting a response from the server. If you get a response, note the dynamic port number that you've been allocated to use.
 
-    :::image type="content" source="media/rpc-errors-troubleshooting/dynamic-port-number.png" alt-text="Screenshot of Network Monitor with dynamic port highlighted." border="false":::
+  :::image type="content" source="media/rpc-errors-troubleshooting/dynamic-port-number.png" alt-text="Screenshot of Network Monitor with dynamic port highlighted." border="false":::
 
 - Check if we're connecting successfully to this Dynamic port successfully.
 
-- The filter should be something like this: `tcp.port==<dynamic-port-allocated>` and `ipv4.address==<server-ip>` 
+- The filter should be something like this: `tcp.port==<dynamic-port-allocated>` and `ipv4.address==<server-ip>`  
 
     :::image type="content" source="media/rpc-errors-troubleshooting/filtered-trace.png" alt-text="Screenshot of Network Monitor with filter applied." border="false":::
 
