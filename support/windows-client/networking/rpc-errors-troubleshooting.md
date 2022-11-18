@@ -16,7 +16,7 @@ localization_priority: medium
 ---
 # Troubleshoot Remote Procedure Call (RPC) errors
 
-_Applies to:_ &nbsp; Windows 11, Windows 10
+_Applies to:_ &nbsp; Windows 11, Windows 10, Windows 8.1, Windows 7, Windows Vista, Windows XP
 
 You might encounter an RPC server unavailable error when connecting to Windows Management Instrumentation (WMI), SQL Server, during a remote connection, or for some Microsoft Management Console (MMC) snap-ins. The following image is an example of an RPC error.
 
@@ -34,7 +34,7 @@ Before getting in to troubleshooting the RPC server unavailable error, let's fir
 - Port – the communication endpoints for the client and server applications.
 - Stub data – the information given to functions and data exchanged between the client and server. This data is the payload, the important part.
 
->[!NOTE]
+>[!NOTE]  
 > A lot of the above information is used in troubleshooting, the most important is the Dynamic RPC port number you get while talking to EPM.
 
 ## How the connection works
@@ -89,10 +89,10 @@ In this example, ports 5000 through 6000 inclusive have been arbitrarily selecte
 
 You should open up a range of ports above port 5000. Port numbers below 5000 may already be in use by other applications and could cause conflicts with your DCOM application(s). Furthermore, previous experience shows that a minimum of 100 ports should be opened, because several system services rely on these RPC ports to communicate with each other.
 
-> [!NOTE]
+> [!NOTE]  
 > The minimum number of ports required may differ from computer to computer. Computers with higher traffic may run into a port exhaustion situation if the RPC dynamic ports are restricted. Take this into consideration when restricting the port range.
 
-> [!WARNING]
+> [!WARNING]  
 > If there is an error in the port configuration or there are insufficient ports in the pool, the Endpoint Mapper Service will not be able to register RPC servers with dynamic endpoints. When there is a configuration error, the error code will be 87 (0x57) ERROR_INVALID_PARAMETER. This can affect Windows RPC servers as well, such as Netlogon. It will log event 5820 in this case:
 >
 > Log Name: System  
@@ -115,13 +115,13 @@ The best thing to always troubleshoot RPC issues before even getting in to trace
 Portqry.exe -n <ServerIP> -e 135
 ```
 
-This command would give you much of the output to look for, but you should be looking for `*ip_tcp-` and the port number in the brackets, which tells whether you were successfully able to get a dynamic port from EPM and also make a connection to it. If the above fails, you can typically start collecting simultaneous network traces. Something like this from the output of "PortQry":
+This command would give you much of the output to look for, but you should be looking for `*ip_tcp-` and the port number in the brackets, which tells whether you were successfully able to get a dynamic port from EPM and also make a connection to it. If the above fails, you can typically start collecting simultaneous network traces. Something like this from the output of "PortQry":  
 
 ```console
 Portqry.exe -n 169.254.0.2 -e 135
 ```
 
-Partial output below:
+Partial output below:  
 
 ```output
 Querying target system called:
@@ -161,9 +161,7 @@ Now try to reproduce your issue from the client machine and as soon as you feel 
 Netsh trace stop
 ```
 
-Open the traces in [Microsoft Network Monitor 3.4](collect-data-using-network-monitor.md) or Message Analyzer and filter the trace for
-
-- `Ipv4.address==<client-ip>` and `ipv4.address==<server-ip>` and `tcp.port==135` or just `tcp.port==135` should help.
+Open the traces in [Microsoft Network Monitor 3.4](collect-data-using-network-monitor.md) or Message Analyzer and filter the trace for `Ipv4.address==<client-ip>` and `ipv4.address==<server-ip>` and `tcp.port==135` or just `tcp.port==135` should help.
 
 - Look for the "EPM" Protocol Under the **Protocol** column.
 
