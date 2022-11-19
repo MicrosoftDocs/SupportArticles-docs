@@ -84,10 +84,9 @@ If the auditd configuration causes the system shutdown on audit log failures, te
 
 - Once the VM is fully booted, browse the filesystem and free some spaces by using command-line tools such as `df` and `du`. Around 10% of the filesystem containing the */var/log/audit* directory should be a good initial target.
 
-> [!IMPORTANT]
-> Be sure to revert the contents in the */etc/audit/auditd.conf* file to the original values and reboot the VM.
+Once the issue is resolved, revert the contents in the */etc/audit/auditd.conf* file to the original values and reboot the VM.
 
-If this resolution doesn't work or isn't appropriate for your environment, see the [Resolution](#resolution) section.
+If this resolution doesn't work or isn't appropriate for your environment, go to the [Resolution](#resolution) section.
 
 ## Scenario 2: VM disk is resized in Azure, but OS can't be resized, and VM doesn't fully boot
 
@@ -103,7 +102,7 @@ To identify this issue, review the boot logs in the serial console and check if 
 
 Because the specific cloud-init messages may not be the most visible message returned, look for other lines containing the "[Errno 28] No space left on device" text or similar "no space" messages.
 
-To resolve this issue, [clear unneeded data](#resolution1) to free a small amount of disk space, after doing this procedure continue with the process to [expand the filesystem](#resolution1).
+To resolve this issue, [clear unneeded data](#resolution1) to free a small amount of disk space and then [expand the filesystem](#resolution2).
 
 ## Scenario 3: VM boots but is inaccessible due to service failures
 
