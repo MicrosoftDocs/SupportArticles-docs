@@ -18,66 +18,90 @@ localization_priority: medium
 
 _Applies to:_ &nbsp; Windows 11, Windows 10, Windows 8.1, Windows 7, Windows Vista, Windows XP
 
-You might encounter an RPC server unavailable error when connecting to Windows Management Instrumentation (WMI), SQL Server, during a remote connection, or for some Microsoft Management Console (MMC) snap-ins. The following image is an example of an RPC error.
+You might encounter an "RPC server unavailable" error when you connect to Windows Management Instrumentation (WMI), SQL Server, during a remote connection, or for some Microsoft Management Console (MMC) snap-ins. The following image is an example of a Remote Procedure Call (RPC) error.
 
 :::image type="content" source="media/rpc-errors-troubleshooting/rpc-error.png" alt-text="Screenshot of an error message window showing the following error has occurred: the RPC server is unavailable." border="false":::
 
-This message is a commonly encountered error message in the networking world and one can lose hope fast without trying to understand much, as to what is happening 'under the hood'.
+This message is a commonly encountered error message in the networking world and if one doesn't understand what is happening 'under the hood," one can lose hope fast.
 
-Before getting in to troubleshooting the RPC server unavailable error, let's first understand basics about the error. There are a few important terms to understand:
+Before getting in to troubleshooting the "RPC server unavailable" error, let's first understand basics about the error. There are a few important terms to understand:
 
-- Endpoint mapper – a service listening on the server, which guides client apps to server apps by port and UUID.
-- Tower – describes the RPC protocol, to allow the client and server to negotiate a connection.
-- Floor – the contents of a tower with specific data like ports, IP addresses, and identifiers.
-- UUID – a well-known GUID that identifies the RPC application. The UUID is what you use to see a specific kind of RPC application conversation, as there are likely to be many.
-- Opnum – the identifier of a function that the client wants the server to execute. It's just a hexadecimal number, but a good network analyzer will translate the function for you. If neither knows, your application vendor must tell you.
-- Port – the communication endpoints for the client and server applications.
-- Stub data – the information given to functions and data exchanged between the client and server. This data is the payload, the important part.
-
->[!NOTE]  
-> A lot of the above information is used in troubleshooting, the most important is the Dynamic RPC port number you get while talking to EPM.
+- **Endpoint mapper (EPM)**. A service that listens on the server, which guides client apps to server apps by using port and UUID information.
+- **Tower**. Describes the RPC protocol to allow the client and server to negotiate a connection.
+- **Floors**. The layers of contents within a tower that contain specific data like ports, IP addresses, and identifiers.
+- **UUID** A well-known GUID that identifies an RPC application. During troubleshooting you can use the UUID to track the RPC conversations of a single type of application (among the many types that occur on a single computer at one time).
+- **Opnum** Identifies a function that the client wants the server to perform. It's just a hexadecimal number, but a good network analyzer will translate the function for you. If neither knows, contact your application vendor.
+- **Port**. The communication endpoint for client or server application. The EPM allocates dynamic ports (also known as high ports or ephemeral ports) for clients and servers to use.
+  > [!NOTE]  
+  > Typically the port number is the most important information that you'll use for troubleshooting.
+- **Stub data**. The data exchanged between the functions on the client and the functions on the server. This data is the payload, the important part of the communication.
 
 ## How the connection works
 
-Client A wants to execute some functions or wants to make use of a service running on the remote server, will first establish the connection with the Remote Server by doing a three-way handshake.  
+The following diagram shows a client connecting to a server to perform a remote operation. The client initially contacts TCP port 135 on the server, then negotiates with EPM for a dynamic port number. After EPM assigns a port, the client disconnects and then uses the dynamic port to connect to the server.  
 
-:::image type="content" source="media/rpc-errors-troubleshooting/rpc-flow.png" alt-text="Diagram illustrating connection to remote server." border="false":::
+:::image type="content" source="media/rpc-errors-troubleshooting/rpc-flow.png" alt-text="Diagram that shows how a client makes an RPC connection to a remote server." border="true":::
 
-RPC ports can be given from a specific range as well.
+### Configure how RPC allocates dynamic ports
 
-### Configure RPC dynamic port allocation
+By default, EPM allocates dynamic ports randomly from the range that's configured for TCP and UDP (based on the implementation of the operating system used).
 
-Remote Procedure Call (RPC) dynamic port allocation is used by server applications and remote administration applications such as Dynamic Host Configuration Protocol (DHCP) Manager, Windows Internet Name Service (WINS) Manager, and so on. RPC dynamic port allocation will instruct the RPC program to use a particular random port in the range configured for TCP and UDP, based on the implementation of the operating system used.
-
-Customers using firewalls may want to control which ports RPC is using so that their firewall router can be configured to forward only these Transmission Control Protocol (UDP and TCP) ports. Many RPC servers in Windows let you specify the server port in custom configuration items such as registry entries. When you can specify a dedicated server port, you know what traffic flows between the hosts across the firewall, and you can define what traffic is allowed in a more directed manner.
+Alternatively, you can define a range for dynamic ports. For example, you may want to limit the range of ports that you allow through a firewall. Many RPC servers in Windows let you specify the server port in custom configuration items such as registry entries. When you can specify a dedicated server port, you know what traffic flows between the hosts across the firewall, and you can define what traffic is allowed in a more directed manner.
 
 As a server port, choose a port outside of the range you may want to specify below. You can find a comprehensive list of server ports that are used in Windows and major Microsoft products in the article [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements).
 The article also lists the RPC servers and which RPC servers can be configured to use custom server ports beyond the facilities the RPC runtime offers.
 
 Some firewalls also allow for UUID filtering where it learns from an RPC Endpoint Mapper request for an RPC interface UUID. The response has the server port number, and a subsequent RPC Bind on this port is then allowed to pass.
 
-By using Registry Editor, you can modify the following parameters for RPC. The RPC port values discussed in the following table are all located under the following registry subkey:
+By using Registry Editor, you can modify the following parameters for RPC. 
 
-`HKEY_LOCAL_MACHINE\Software\Microsoft\Rpc\Internet\ <Entry name> <Data type>`
+The RPC port values discussed in the following table are all located under the following registry subkey:
 
-| Key | Data type | Values | Comments |
-| - | - | - | - |
-| `Ports` | REG_MULTI_SZ | **0** - **65535** | Specifies a set of IP port ranges that consists of either one of the following:<ul><li>All the ports that are available from the internet</li><li>All the ports that are not available from the internet.</li></ul>Each string represents a single port or an inclusive set of ports. For example, **5984** represents a single port, and **5000-5100** represents a set of ports. If any values are outside the range of **0** to **65535**, or if any value can't be interpreted, the RPC runtime treats the entire configuration as invalid. |
-| `PortsInternetAvailable` | REG_SZ | **Y** or **N** (not case-sensitive) | <ul><li>**Y**. The ports listed in the `Ports` key represent all the available ports on that computer.</li><li>**N**. The ports listed in the `Ports` key represent all ports that aren't available.</li><ul> |
-| `UseInternetPorts` | REG_SZ | **Y** or **N** (not case-sensitive) | Specifies the system default policy.<ul>**Y**. The processes that use the default will be assigned ports from the set of internet-available ports, as defined previously.</li><li>**N**. The processes that use the default will be assigned ports from the set of intranet-only ports.</li></ul>
+**HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Rpc\\Internet**
+
+You can configure the following entries under the **Internet** key:
+
+- **Ports**  
+  Data type: REG_MULTI_SZ  
+  Value range: **0** - **65535**  
+
+  Specifies a set of IP port ranges that consists of either one of the following:
+  - All the ports that are available from the internet
+  - All the ports that are not available from the internet  
+  
+  You can specify a single port or an inclusive set of ports. For example, **5984** represents a single port, and **5000-5100** represents a set of ports. If any values are outside the range of **0** to **65535**, or if any value can't be interpreted, the RPC runtime treats the entire configuration as invalid.
+
+- **PortsInternetAvailable**
+  Data type: REG_SZ  
+  Values: **Y** or **N** (not case-sensitive)  
+
+  - **Y**. The ports listed in the **Ports** entry represent all the available ports on that computer.
+  - **N**. The ports listed in the** Ports** entry represent all ports that aren't available.
+
+- **UseInternetPorts**  
+  Data type: REG_SZ  
+  Values: **Y** or **N** (not case-sensitive)  
+
+  Specifies the default system policy.  
+
+  - **Y**. The processes that use the default will be assigned ports from the set of internet-available ports, as defined previously.
+  - **N**. The processes that use the default will be assigned ports from the set of intranet-only ports.
 
 Example:
 
 In this example, ports 5000 through 6000 (inclusive) have been arbitrarily selected to help illustrate how the new registry keys can be configured. This example isn't a recommendation of a minimum number of ports needed for any particular system.
 
-1. Add the Internet key under: `HKEY_LOCAL_MACHINE\Software\Microsoft\Rpc`
-2. Under the Internet key, add the values "Ports" (MULTI_SZ), "PortsInternetAvailable" (REG_SZ), and "UseInternetPorts" (REG_SZ).  
+1. Add the **Internet** key under **HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Rpc**.  
+1. Under the **Internet** key, add the following values:  
+   - **Ports** (MULTI_SZ)
+   - **PortsInternetAvailable** (REG_SZ)
+   - **UseInternetPorts** (REG_SZ)
 
     For example, the new registry key appears as follows:  
-    Ports: REG_MULTI_SZ: 5000-6000  
-    PortsInternetAvailable: REG_SZ: Y  
-    UseInternetPorts: REG_SZ: Y  
-3. Restart the server. All applications that use RPC dynamic port allocation use ports 5000 through 6000, inclusive.
+    **Ports**: REG_MULTI_SZ: 5000-6000  
+    **PortsInternetAvailable**: REG_SZ: Y  
+    **UseInternetPorts**: REG_SZ: Y  
+1. Restart the server. All applications that use RPC dynamic port allocation use ports 5000 through 6000 (inclusive).
 
 You should open up a range of ports above port 5000. Port numbers below 5000 may already be in use by other applications and could cause conflicts with your DCOM application(s). Furthermore, previous experience shows that a minimum of 100 ports should be opened, because several system services rely on these RPC ports to communicate with each other.
 
