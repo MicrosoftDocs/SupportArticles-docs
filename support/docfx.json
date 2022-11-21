@@ -289,8 +289,6 @@
         "dynamics-365/supply-chain/transportation/**.*": "d365-scm-transportation-manage",
         "dynamics-365/supply-chain/warehousing/**.*": "d365-scm-warehouse",
         "dynamics-365/finance/tax/**.*": "d365-finance-tax",
-        "dynamics-365/finance/india/**.*": "d365-finance-tax",
-        "dynamics-365/finance/sales-tax/**.*": "d365-finance-tax",
         "dynamics-365/finance/budgeting/**.*": "d365-finance-budgeting",
         "dynamics-365/finance/general-ledger/**.*": "d365-finance-general-ledger",
         "mem/intune/app-management/*.md": "intune-app-management",
