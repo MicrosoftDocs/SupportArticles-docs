@@ -104,7 +104,7 @@ productDirectory:
         - url: /viva/connections/viva-connections-overview
           text: Microsoft Viva Connections 
     # Card
-    - title: Microsoft Endpoint Manager
+    - title: Endpoint management
       imageSrc: /media/logos/logo-ms-social.png
       links:
         - url: /troubleshoot/mem/configmgr/welcome-configuration-manager
