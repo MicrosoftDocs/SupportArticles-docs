@@ -37,7 +37,7 @@ WITH cci_detail AS (
           rg.partition_number,
           COUNT(*) AS total_rowgroup_count,
           SUM(CASE WHEN rg.state = 1 THEN 1 END) AS open_rowgroup_count,
-          CEILING ((SUM(rg.[total_rows]) - SUM(rg.deleted_rows))/COUNT(DISTINCT rg.distribution_id)/1048576.) * COUNT(DISTINCT rg.distribution_id) AS [ideal_rowgroup_count],
+          CEILING((SUM(rg.[total_rows]) - SUM(rg.deleted_rows))/COUNT(DISTINCT rg.distribution_id)/1048576.) * COUNT(DISTINCT rg.distribution_id) AS [ideal_rowgroup_count],
           SUM(rg.size_in_bytes/1024/1024.) AS size_in_mb,
           SUM(CASE WHEN rg.state = 1 THEN rg.size_in_bytes END /1024/1024.) AS open_size_in_mb
    FROM sys.pdw_nodes_column_store_row_groups rg
@@ -98,7 +98,7 @@ WITH cci_info AS(
           SUM(rg.size_in_bytes/1024/1024) AS [size_in_mb],
           SUM(rg.[total_rows]) AS [row_count_total],
           COUNT(*) AS [total_rowgroup_count],
-          CEILING ((SUM(rg.[total_rows]) - SUM(rg.[deleted_rows]))/COUNT(DISTINCT rg.distribution_id)/1048576.) * COUNT(DISTINCT rg.distribution_id) AS [ideal_rowgroup_count],
+          CEILING((SUM(rg.[total_rows]) - SUM(rg.[deleted_rows]))/COUNT(DISTINCT rg.distribution_id)/1048576.) * COUNT(DISTINCT rg.distribution_id) AS [ideal_rowgroup_count],
           SUM(CASE WHEN rg.[State] = 1 THEN 1 ELSE 0 END) AS [OPEN_rowgroup_count],
           SUM(CASE WHEN rg.[State] = 1 THEN rg.[total_rows] ELSE 0 END) AS [OPEN_rowgroup_rows],
           CAST(SUM(CASE WHEN rg.[State] = 1 THEN rg.[size_in_bytes]/1024./1024. ELSE 0 END) AS DECIMAL(19, 4)) AS [OPEN_rowgroup_size_in_mb],
@@ -171,7 +171,7 @@ WITH cci_info AS (
           MAX(t.name) AS [table_name],
           rg.partition_number AS [partition_number],
           SUM(rg.[total_rows]) AS [row_count_total],
-          CEILING ((SUM(rg.[total_rows]) - SUM(rg.[deleted_rows]))/COUNT(DISTINCT rg.distribution_id)/1048576.) * COUNT(DISTINCT rg.distribution_id) AS [ideal_rowgroup_count]
+          CEILING((SUM(rg.[total_rows]) - SUM(rg.[deleted_rows]))/COUNT(DISTINCT rg.distribution_id)/1048576.) * COUNT(DISTINCT rg.distribution_id) AS [ideal_rowgroup_count]
    FROM sys.[pdw_nodes_column_store_row_groups] rg
    JOIN sys.[pdw_nodes_tables] nt ON rg.[object_id] = nt.[object_id]
        AND rg.[pdw_node_id] = nt.[pdw_node_id]
