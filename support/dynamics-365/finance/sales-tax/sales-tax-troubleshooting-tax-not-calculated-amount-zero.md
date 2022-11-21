@@ -5,6 +5,7 @@ title: Tax isn't calculated or tax amount is zero
 description: Provides troubleshooting information that can help when the tax amount is 0 (zero) or tax isn't calculated.
 author: shtao
 ms.date: 10/31/2022
+ms.subservice: d365-finance-tax
 
 # optional metadata
 

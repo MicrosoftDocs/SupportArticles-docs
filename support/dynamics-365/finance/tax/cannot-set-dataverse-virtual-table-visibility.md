@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: hshi
 ms.search.validFrom: 2022-07-26
 ms.dyn365.ops.version: 10.0.30
+ms.subservice: d365-finance-tax
 ---
 
 # Error 400 or 401 when you set Dataverse virtual table visibility
@@ -55,7 +56,7 @@ This issue occurs if the Open Authorization (OAuth) URL or tenant ID is incorrec
 2. Confirm that the OAuth URL and tenant ID are correct. For more information, see [Configure the virtual entity data source](/dynamics365/fin-ops-core/dev-itpro/power-platform/admin-reference#configure-the-virtual-entity-data-source).
 
     - The OAuth URL is a hard-coded value: `https://login.windows.net/`.
-    - To find the correct tenant ID, sign in to the [Azure portal](https://portal.azure.com) by using the same account that you use to sign in to Dataverse and RCS. Select **Azure Active Directory**, and then select your instance of Azure Active Directory (Azure AD). The tenant ID or primary domain appears in the **Tenant** field. 
+    - To find the correct tenant ID, sign in to the [Azure portal](https://portal.azure.com) by using the same account that you use to sign in to Dataverse and RCS. Select **Azure Active Directory**, and then select your instance of Azure Active Directory (Azure AD). The tenant ID or primary domain appears in the **Tenant** field.
 
 ## Error 400 with "Application with identifier {ApplicationId} not found"
 
@@ -97,7 +98,7 @@ The 401 "Unauthorized" error occurs if the "Check connection" process for connec
 ### Resolution
 
 1. In the RCS environment, go to **Electronic reporting** \> **Connected applications** \> **Dataverse application record**.
-2. The **Application** field shows the URL of the database instance. Confirm that you can sign in to that Dataverse instance by using the same account that you use to sign in to the RCS environment. 
+2. The **Application** field shows the URL of the database instance. Confirm that you can sign in to that Dataverse instance by using the same account that you use to sign in to the RCS environment.
 3. Confirm that the **Tenant** field is set to your account's tenant ID (for example, **d335a570-a05b-4bc5-8eb3-c42c65f9560d**) or tenant URL (for example, `taxserviceint.onmicrosoft.com`).
 3. Select **Check connection**. The process should be successful.
 

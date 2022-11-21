@@ -5,6 +5,7 @@ title: Troubleshoot issues with tax engine (GTE)
 description: Provides information about the issues you might encounter while using the tax engine (GTE) and explains how to fix them.
 author: EricWangChen
 ms.date: 10/21/2022
+ms.subservice: d365-finance-tax
 
 # optional metadata
 

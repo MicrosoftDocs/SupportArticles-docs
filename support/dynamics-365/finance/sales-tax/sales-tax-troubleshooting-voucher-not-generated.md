@@ -5,6 +5,7 @@ title: Voucher isn't created on Voucher transactions
 description: Provides troubleshooting information that can help when a voucher should be generated on the Voucher transactions page but isn't.
 author: qire
 ms.date: 10/31/2022
+ms.subservice: d365-finance-tax
 
 # optional metadata
 
