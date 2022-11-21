@@ -61,7 +61,7 @@ SELECT COUNT(DISTINCT object_id) AS tables_assessed_count ,
 FROM cci_detail
 ```
 
-From the result, you can get an overview of the CCI health for your dedicated SQL pool. This information isn't directly actionable but helps you gain perspective on how closely your maintenance routines keep you to an ideal state.
+From the result, you can get an overview of the CCI health for your dedicated SQL pool. This information isn't directly actionable but helps you understand the importance of maintenance routines for achieving an ideal state.
 
 | Column name | Description |
 | --- | --- |
