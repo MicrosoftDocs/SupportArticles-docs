@@ -42,50 +42,36 @@ The following diagram shows a client connecting to a server to perform a remote 
 
 :::image type="content" source="media/rpc-errors-troubleshooting/rpc-flow.png" alt-text="Diagram that shows how a client makes an RPC connection to a remote server." border="true":::
 
+> [!IMPORTANT]  
+> When a firewall separates the client and the server, the firewall has to allow communication on port 135 and on the dynamic ports that EPM assigns. One approach to managing this issue is to specify ports or ranges of ports for EPM to use. For more information, see [Configure how RPC allocates dynamic ports](#configure-how-rpc-allocates-dynamic-ports).
+>  
+> Some firewalls also allow UUID filtering. In UUID filtering, when an RPC request uses port 135 to cross the firewall and contact EPM, the firewall notes the UUID that's associated with the request. When EPM responds and sends a dynamic port number for that UUID, the firewall notes the port number as well. Subsequently, the firewall allows RPC bind operations for that UUID and port.
+
 ### Configure how RPC allocates dynamic ports
 
-By default, EPM allocates dynamic ports randomly from the range that's configured for TCP and UDP (based on the implementation of the operating system used).
+By default, EPM allocates dynamic ports randomly from the range that's configured for TCP and UDP (based on the implementation of the operating system used). However, this approach might not be practical, especially when the client and server must communicate through a firewall. An alternative is to specify a port number or range of port numbers for EPM to use, and open those ports in the firewall.
 
-Alternatively, you can define a range for dynamic ports. For example, you may want to limit the range of ports that you allow through a firewall. Many RPC servers in Windows let you specify the server port in custom configuration items such as registry entries. When you can specify a dedicated server port, you know what traffic flows between the hosts across the firewall, and you can define what traffic is allowed in a more directed manner.
+Many Windows server applications that rely on RPC provide options (such as registry keys) to customize the allowed ports. Windows itself uses the **HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Rpc\\Internet** subkey for this purpose.
 
-As a server port, choose a port outside of the range you may want to specify below. You can find a comprehensive list of server ports that are used in Windows and major Microsoft products in the article [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements).
-The article also lists the RPC servers and which RPC servers can be configured to use custom server ports beyond the facilities the RPC runtime offers.
+When you specify a port or port range, use ports outside of the range of commonly-used ports. You can find a comprehensive list of server ports that are used in Windows and major Microsoft products in [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements). This article also lists RPC server applications and which RPC server applications can be configured to use custom server ports beyond the capabilities of the RPC runtime.
 
-Some firewalls also allow for UUID filtering where it learns from an RPC Endpoint Mapper request for an RPC interface UUID. The response has the server port number, and a subsequent RPC Bind on this port is then allowed to pass.
+[!INCLUDE [Registry warning](./registry-important-alert.md)]
 
-By using Registry Editor, you can modify the following parameters for RPC. 
+The **Internet** key does not exist by default. You have to create it. Under the **Internet** key, you can configure the following entries:
 
-The RPC port values discussed in the following table are all located under the following registry subkey:
+- **Ports REG_MULTI_SZ**. Specifies a port or inclusive range of ports. The other entries under **Internet** control whether these are the ports to use or the ports to exclude from use.
+  - Value range: **0** - **65535**  
+    For example, **5984** represents a single port, and **5000-5100** represents a set of ports. If any values are outside the range of **0** to **65535**, or if any value can't be interpreted, the RPC runtime treats the entire configuration as invalid.
 
-**HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Rpc\\Internet**
+- **PortsInternetAvailable REG_SZ**. Specifies whether the **Ports** value represent ports to include or ports to exclude.
+  - Values: **Y** or **N** (not case-sensitive)  
+    - **Y**. The ports listed in the **Ports** entry represent all the ports on that computer that're available to EPM.
+    - **N**. The ports listed in the **Ports** entry represent all ports that aren't available to EPM.
 
-You can configure the following entries under the **Internet** key:
-
-- **Ports**  
-  Data type: REG_MULTI_SZ  
-  Value range: **0** - **65535**  
-
-  Specifies a set of IP port ranges that consists of either one of the following:
-  - All the ports that are available from the internet
-  - All the ports that are not available from the internet  
-  
-  You can specify a single port or an inclusive set of ports. For example, **5984** represents a single port, and **5000-5100** represents a set of ports. If any values are outside the range of **0** to **65535**, or if any value can't be interpreted, the RPC runtime treats the entire configuration as invalid.
-
-- **PortsInternetAvailable**
-  Data type: REG_SZ  
-  Values: **Y** or **N** (not case-sensitive)  
-
-  - **Y**. The ports listed in the **Ports** entry represent all the available ports on that computer.
-  - **N**. The ports listed in the** Ports** entry represent all ports that aren't available.
-
-- **UseInternetPorts**  
-  Data type: REG_SZ  
-  Values: **Y** or **N** (not case-sensitive)  
-
-  Specifies the default system policy.  
-
-  - **Y**. The processes that use the default will be assigned ports from the set of internet-available ports, as defined previously.
-  - **N**. The processes that use the default will be assigned ports from the set of intranet-only ports.
+- **UseInternetPorts REG_SZ**. Specifies the default system policy.  
+  - Values: **Y** or **N** (not case-sensitive)  
+    - **Y**. The processes that use the default system policy are assigned ports from the set of internet-available ports, as defined previously.
+    - **N**. The processes that use the default system policy are assigned ports from the set of intranet-only ports.
 
 Example:
 
