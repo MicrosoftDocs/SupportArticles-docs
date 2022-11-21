@@ -63,6 +63,9 @@ Many security hardening practices can lead to difficulties in maintaining system
 
 ### Resolution: Disable HALT configuration temporarily
 
+> [!NOTE]
+> If this resolution doesn't work or isn't appropriate for your environment, go to the [Resolution](#resolution) section.
+
 If the auditd configuration causes the system shutdown on audit log failures, temporarily disabling the `HALT` configuration will allow the VM to boot to the full OS for remediation.
 
 1. Take a snapshot of the OS disk to provide a recovery state.
@@ -80,13 +83,11 @@ If the auditd configuration causes the system shutdown on audit log failures, te
     disk_error_action = SUSPEND
     ```
 
-- If you're using a recovery VM, follow the instructions in [Unmount and detach original virtual hard disk](/troubleshoot/azure/virtual-machines/troubleshoot-recovery-disks-portal-linux#unmount-and-detach-original-virtual-hard-disk) to swap the OS disk back to the problematic VM, and try to boot the VM normally. If you're using single user mode, exit, and the VM will reboot.
+- If you're using a recovery VM, follow the instructions in [Unmount and detach original virtual hard disk](troubleshoot-recovery-disks-portal-linux.md#unmount-and-detach-original-virtual-hard-disk) to swap the OS disk back to the problematic VM, and try to boot the VM normally. If you're using single user mode, exit, and the VM will reboot.
 
 - Once the VM is fully booted, browse the filesystem and free some spaces by using command-line tools such as `df` and `du`. Around 10% of the filesystem containing the */var/log/audit* directory should be a good initial target.
 
 Once the issue is resolved, revert the contents in the */etc/audit/auditd.conf* file to the original values and reboot the VM.
-
-If this resolution doesn't work or isn't appropriate for your environment, go to the [Resolution](#resolution) section.
 
 ## Scenario 2: VM disk is resized in Azure, but OS can't be resized, and VM doesn't fully boot
 
