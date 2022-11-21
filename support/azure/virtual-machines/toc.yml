@@ -102,6 +102,8 @@
         href: linux-vm-not-start-kernel-lis.md
       - name: Troubleshoot Linux VM UEFI boot failures
         href: azure-linux-vm-uefi-boot-failures.md
+      - name: Linux VM fails to boot due to full OS disk
+        href: linux-fulldisk-boot-error.md
     - name: Windows
       href: boot-error-troubleshoot.md
       items:

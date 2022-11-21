@@ -4294,6 +4294,106 @@
       "source_path": "support/mem/configmgr/wsus-synchronization-fails-with-soapexception.md",
       "redirect_url": "/troubleshoot/mem/configmgr/update-management/wsus-synchronization-fails-with-soapexception",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/india/apac-ind-gst-troubleshooting-default-value-in-tax-information-not-expected.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/apac-ind-gst-troubleshooting-default-value-in-tax-information-not-expected",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/india/apac-ind-gst-troubleshooting-setoff-rule-activate-take-long-time.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/apac-ind-gst-troubleshooting-setoff-rule-activate-take-long-time",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/india/apac-ind-gst-troubleshooting-field-value-incorrect-gstr-report-result.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/apac-ind-gst-troubleshooting-field-value-incorrect-gstr-report-result",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/india/apac-ind-gst-troubleshooting-invoice-journal-wrong.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/apac-ind-gst-troubleshooting-invoice-journal-wrong",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/india/apac-ind-gst-troubleshooting-open-designer-current-used-tax-configuration.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/apac-ind-gst-troubleshooting-open-designer-current-used-tax-configuration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/india/apac-ind-gst-troubleshooting-ledger-account-voucher-wrong.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/apac-ind-gst-troubleshooting-ledger-account-voucher-wrong",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/india/apac-ind-gst-troubleshooting-records-fields-not-showing-gstr-report.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/apac-ind-gst-troubleshooting-records-fields-not-showing-gstr-report",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/india/apac-ind-gst-troubleshooting-setoff-rule-error-transactions-on-voucher-not-balance.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/apac-ind-gst-troubleshooting-setoff-rule-error-transactions-on-voucher-not-balance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/india/troubleshoot-tax-engine-gte-issues.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/troubleshoot-tax-engine-gte-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/india/apac-ind-gst-troubleshooting-tax-amount-wrong-after-calculation.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/apac-ind-gst-troubleshooting-tax-amount-wrong-after-calculation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/india/apac-ind-gst-troubleshooting-tax-configuration-errors.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/apac-ind-gst-troubleshooting-tax-configuration-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/india/apac-ind-gst-troubleshooting-tax-not-calculated.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/apac-ind-gst-troubleshooting-tax-not-calculated",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/india/apac-ind-gst-troubleshooting-taxtrans-or-voucher-not-generated.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/apac-ind-gst-troubleshooting-taxtrans-or-voucher-not-generated",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/india/apac-ind-gst-troubleshooting-tax-transaction-id-incorrect.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/apac-ind-gst-troubleshooting-tax-transaction-id-incorrect",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/sales-tax/sales-tax-troubleshooting-field-value-taxtrans-incorrect.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/sales-tax-troubleshooting-field-value-taxtrans-incorrect",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/sales-tax/sales-tax-troubleshooting-tax-not-calculated-amount-zero.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/sales-tax-troubleshooting-tax-not-calculated-amount-zero",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/sales-tax/sales-tax-troubleshooting-tax-calculation-bad-performance.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/sales-tax-troubleshooting-tax-calculation-bad-performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/sales-tax/sales-tax-troubleshooting-taxtrans-record-not-generated.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/sales-tax-troubleshooting-taxtrans-record-not-generated",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/sales-tax/sales-tax-troubleshooting-tax-posted-to-wrong-ledger-account.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/sales-tax-troubleshooting-tax-posted-to-wrong-ledger-account",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/sales-tax/sales-tax-troubleshooting-voucher-not-generated.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/sales-tax-troubleshooting-voucher-not-generated",
+      "redirect_document_id": true
     }
   ]
 }
