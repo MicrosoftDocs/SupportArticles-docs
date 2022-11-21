@@ -55,7 +55,7 @@ Many Windows server applications that rely on RPC provide options (such as regis
 
 When you specify a port or port range, use ports outside of the range of commonly-used ports. You can find a comprehensive list of server ports that are used in Windows and major Microsoft products in [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements). This article also lists RPC server applications and which RPC server applications can be configured to use custom server ports beyond the capabilities of the RPC runtime.
 
-[!INCLUDE [Registry warning](../../../../registry-important-alert.md)]
+[!INCLUDE [Registry warning](../../../../includes/registry-important-alert.md)]
 
 The **Internet** key does not exist by default. You have to create it. Under the **Internet** key, you can configure the following entries:
 
