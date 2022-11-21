@@ -37,6 +37,7 @@ Each of the following links provides information for all of the applicable produ
 
   |Version|Latest Service Pack|Latest GDR|Latest cumulative update|Complete version information|General Guidance|
   |---|---|---|---|---|---|
+  |SQL Server 2022|None| | | |[SQL Server 2022 Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver16&preserve-view=true)|
   |SQL Server 2019|None|[GDR](https://support.microsoft.com/help/5014356) (15.0.2095.3 - June 2022)|[CU18 for 2019](https://support.microsoft.com/help/5017593) (15.0.4261.1 - September 2022)</br>[CU16 + GDR](https://support.microsoft.com/help/5014353) (15.0.4236.7 - June 2022)|[SQL Server 2019 builds](https://support.microsoft.com/help/4518398)|[SQL Server 2019 Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|
   |SQL Server 2017|None|[GDR](https://support.microsoft.com/help/5014354) (14.0.2042.3 - June 2022)|[CU31 for 2017](https://support.microsoft.com/help/5016884) (14.0.3456.2 - September 2022)</br>[CU29 + GDR](https://support.microsoft.com/help/5014553) (14.0.3445.2 - June 2022)|[SQL Server 2017 builds](https://support.microsoft.com/help/4047329)|[SQL Server 2017 Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|
   |SQL Server 2016|[Azure Connect pack](https://support.microsoft.com/help/5014242) (13.0.7000.253 - May 2022)</br>[SP3](https://support.microsoft.com/help/5003279) (13.0.6300.2 - September 2021)</br>[SP2](https://support.microsoft.com/help/4052908) (13.0.5026.0 - April 2018)</br>[SP1](https://support.microsoft.com/help/3182545) (13.0.4001.0 - November 2016)|[GDR for Azure Connect pack](https://support.microsoft.com/help/5015371) (13.0.7016.1 - June 2022)</br>[GDR for SP3](https://support.microsoft.com/help/5014355) (13.0.6419.1 - June 2022)</br>[GDR for SP2](https://support.microsoft.com/help/5014365) (13.0.5108.50 - June 2022)</br>[GDR for SP1](https://support.microsoft.com/help/4505219) (13.0.4259.0 - July 2019)</br>[GDR for RTM](https://support.microsoft.com/help/4058560) (13.0.1745.2 - January 2018)|[CU17 + GDR for SP2](https://support.microsoft.com/help/5014351) (13.0.5893.48 - June 2022)</br>[CU17 for 2016 SP2](https://support.microsoft.com/help/5001092) (13.0.5888.11 - March 2021)</br>[CU15 + GDR for SP1](https://support.microsoft.com/help/4505221) (13.0.4604.0 - July 2019)</br>[CU15 for SP1](https://support.microsoft.com/help/4495257) (13.0.4574.0 - May 2019)</br>[CU9 for RTM](https://support.microsoft.com/help/4037357) (13.0.2216.0 - November 2017)|[SQL Server 2016 builds](https://support.microsoft.com/help/3177312)|[SQL Server 2016 Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|
@@ -373,6 +374,7 @@ apt-get list --installed | --grep mssql
 
 |Version pattern|SQL Product|
 |---|---|
+|16.0.x.x|SQL Server 2022|
 |15.0.x.x|SQL Server 2019|
 |14.0.x.x|SQL Server 2017|
 |13.0.x.x|SQL Server 2016|
@@ -419,6 +421,12 @@ For more information, go to the following websites:
 
 > [!NOTE]
 > These tables use the following format and are ordered by the build number.
+
+### SQL Server 2022
+
+|Build number or version|Service pack|Update|KB article|Release date|
+|---|---|---|---|---|
+|16.0.1000.6|None| RTM|NA|November 16, 2022|
 
 ### SQL Server 2019
 
