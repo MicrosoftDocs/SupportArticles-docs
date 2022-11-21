@@ -5,7 +5,6 @@ title: Open the designer for the current tax configuration
 description: Introduces how to open the designer for the tax configuration that is currently used.
 author: yungu
 ms.date: 10/28/2022
-ms.subservice: d365-finance-tax
 
 # optional metadata
 

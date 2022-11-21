@@ -11,7 +11,6 @@ ms.search.region: Global
 ms.author: rcarlson
 ms.search.validFrom: 2022-08-30
 ms.dyn365.ops.version: 10.0.30
-ms.subservice: d365-finance-general-ledger
 ---
 
 # Troubleshoot issues with the General ledger adjustments page

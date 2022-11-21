@@ -5,7 +5,6 @@ title: Incorrect tax amount after calculation
 description: Provides troubleshooting information that can help when the calculated tax amount is incorrect.
 author: peter-xu
 ms.date: 10/28/2022
-ms.subservice: d365-finance-tax
 
 # optional metadata
 

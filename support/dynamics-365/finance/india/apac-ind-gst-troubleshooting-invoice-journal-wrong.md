@@ -5,7 +5,6 @@ title: Incorrect field value in invoice journal or voucher
 description: Provides troubleshooting information that can help when a field value in an invoice journal or voucher is incorrect.
 author: yungu
 ms.date: 11/02/2022
-ms.subservice: d365-finance-tax
 
 # optional metadata
 

@@ -5,7 +5,6 @@ title: Position budgeting troubleshooting
 description: Provides answers to frequently asked questions related to position budgeting and how to create budget cost elements, compensation groups, and compensation grids. 
 author: panolte
 ms.date: 11/02/2022
-ms.subservice: d365-finance-budgeting
 
 # optional metadata
 

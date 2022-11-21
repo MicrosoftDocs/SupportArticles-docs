@@ -5,7 +5,6 @@ title: Incorrect ledger account in the voucher
 description: Provides troubleshooting information that can help when the ledger account in the voucher is incorrect.
 author: yungu
 ms.date: 11/01/2022
-ms.subservice: d365-finance-tax
 
 # optional metadata
 

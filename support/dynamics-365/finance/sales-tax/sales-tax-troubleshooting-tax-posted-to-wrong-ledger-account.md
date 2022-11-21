@@ -5,7 +5,6 @@ title: Tax is posted to the wrong ledger account in the voucher
 description: Provides troubleshooting information that can help when tax is posted to the wrong ledger account in the voucher.
 author: qire
 ms.date: 10/31/2022
-ms.subservice: d365-finance-tax
 
 # optional metadata
 

@@ -6,7 +6,6 @@ description: Provides troubleshooting information that can help fix the setoff r
 author: yungu
 manager: beya
 ms.date: 10/28/2022
-ms.subservice: d365-finance-tax
 
 # optional metadata
 

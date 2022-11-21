@@ -5,7 +5,6 @@ title: TaxTrans record isn't created
 description: Provides troubleshooting information that can help when a TaxTrans record isn't generated.
 author: qire
 ms.date: 10/31/2022
-ms.subservice: d365-finance-tax
 
 # optional metadata
 

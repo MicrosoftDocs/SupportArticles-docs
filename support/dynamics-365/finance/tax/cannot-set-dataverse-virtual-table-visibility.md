@@ -11,7 +11,6 @@ ms.search.region: Global
 ms.author: hshi
 ms.search.validFrom: 2022-07-26
 ms.dyn365.ops.version: 10.0.30
-ms.subservice: d365-finance-tax
 ---
 
 # Error 400 or 401 when you set Dataverse virtual table visibility
