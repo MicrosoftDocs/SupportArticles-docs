@@ -33,12 +33,12 @@ Use the following query to get a single row of metrics.
 
 ```sql
 WITH cci_detail AS (
-    SELECT t.object_id ,
-          rg.partition_number ,
-          COUNT(*) AS total_rowgroup_count ,
-          SUM(CASE WHEN rg.state = 1 THEN 1 END) AS open_rowgroup_count ,
-          CEILING ((SUM(rg.[total_rows]) - SUM(rg.deleted_rows))/COUNT(DISTINCT rg.distribution_id)/1048576.) * COUNT(DISTINCT rg.distribution_id) AS [ideal_rowgroup_count] ,
-          SUM(rg.size_in_bytes/1024/1024.) AS size_in_mb ,
+    SELECT t.object_id,
+          rg.partition_number,
+          COUNT(*) AS total_rowgroup_count,
+          SUM(CASE WHEN rg.state = 1 THEN 1 END) AS open_rowgroup_count,
+          CEILING ((SUM(rg.[total_rows]) - SUM(rg.deleted_rows))/COUNT(DISTINCT rg.distribution_id)/1048576.) * COUNT(DISTINCT rg.distribution_id) AS [ideal_rowgroup_count],
+          SUM(rg.size_in_bytes/1024/1024.) AS size_in_mb,
           SUM(CASE WHEN rg.state = 1 THEN rg.size_in_bytes END /1024/1024.) AS open_size_in_mb
    FROM sys.pdw_nodes_column_store_row_groups rg
    JOIN sys.pdw_nodes_tables nt ON rg.object_id = nt.object_id
@@ -46,17 +46,17 @@ WITH cci_detail AS (
        AND rg.distribution_id = nt.distribution_id
    JOIN sys.pdw_table_mappings mp ON nt.name = mp.physical_name
    JOIN sys.tables t ON mp.object_id = t.object_id
-   GROUP BY t.object_id ,
+   GROUP BY t.object_id,
             rg.partition_number
 )
-SELECT COUNT(DISTINCT object_id) AS tables_assessed_count ,
-       COUNT(*) AS partitions_assessed_count ,
-       SUM(total_rowgroup_count) AS actual_rowgroup_count ,
-       SUM(ideal_rowgroup_count) AS ideal_rowgroup_count ,
-       SUM(open_rowgroup_count) AS uncompressed_rowgroup_count ,
-       CAST(SUM(size_in_mb) AS DECIMAL(19, 4)) AS actual_size_in_mb ,
-       CAST(SUM(open_size_in_mb) AS DECIMAL(19, 4)) AS uncompressed_size_in_mb ,
-       CAST(((SUM(total_rowgroup_count)/SUM(ideal_rowgroup_count)) - 1.0) * 100 AS DECIMAL(9, 4)) AS excess_pct ,
+SELECT COUNT(DISTINCT object_id) AS tables_assessed_count,
+       COUNT(*) AS partitions_assessed_count,
+       SUM(total_rowgroup_count) AS actual_rowgroup_count,
+       SUM(ideal_rowgroup_count) AS ideal_rowgroup_count,
+       SUM(open_rowgroup_count) AS uncompressed_rowgroup_count,
+       CAST(SUM(size_in_mb) AS DECIMAL(19, 4)) AS actual_size_in_mb,
+       CAST(SUM(open_size_in_mb) AS DECIMAL(19, 4)) AS uncompressed_size_in_mb,
+       CAST(((SUM(total_rowgroup_count)/SUM(ideal_rowgroup_count)) - 1.0) * 100 AS DECIMAL(9, 4)) AS excess_pct,
        SUM(size_in_mb) * CAST(((SUM(total_rowgroup_count)/SUM(ideal_rowgroup_count)) - 1.0) AS DECIMAL(19, 4)) AS excess_size_in_mb
 FROM cci_detail
 ```
@@ -90,24 +90,24 @@ The following query provides a detailed report of which table partitions are can
 
 ```sql
 WITH cci_info AS(
-    SELECT t.object_id AS [object_id] ,
-          MAX(schema_name(t.schema_id)) AS [schema_name] ,
-          MAX(t.name) AS [table_name] ,
-          rg.partition_number AS [partition_number] ,
-          COUNT(DISTINCT rg.distribution_id) AS [distribution_count] ,
-          SUM(rg.size_in_bytes/1024/1024) AS [size_in_mb] ,
-          SUM(rg.[total_rows]) AS [row_count_total] ,
-          COUNT(*) AS [total_rowgroup_count] ,
-          CEILING ((SUM(rg.[total_rows]) - SUM(rg.[deleted_rows]))/COUNT(DISTINCT rg.distribution_id)/1048576.) * COUNT(DISTINCT rg.distribution_id) AS [ideal_rowgroup_count] ,
-          SUM(CASE WHEN rg.[State] = 1 THEN 1 ELSE 0 END) AS [OPEN_rowgroup_count] ,
-          SUM(CASE WHEN rg.[State] = 1 THEN rg.[total_rows] ELSE 0 END) AS [OPEN_rowgroup_rows] ,
-          CAST(SUM(CASE WHEN rg.[State] = 1 THEN rg.[size_in_bytes]/1024./1024. ELSE 0 END) AS DECIMAL(19, 4)) AS [OPEN_rowgroup_size_in_mb] ,
-          SUM(CASE WHEN rg.[State] = 2 THEN 1 ELSE 0 END) AS [CLOSED_rowgroup_count] ,
-          SUM(CASE WHEN rg.[State] = 2 THEN rg.[total_rows] ELSE 0 END) AS [CLOSED_rowgroup_rows] ,
-          CAST(SUM(CASE WHEN rg.[State] = 2 THEN rg.[size_in_bytes]/1024./1024. ELSE 0 END) AS DECIMAL(19, 4)) AS [CLOSED_size_in_mb] ,
-          SUM(CASE WHEN rg.[State] = 3 THEN 1 ELSE 0 END) AS [COMPRESSED_rowgroup_count] ,
-          SUM(CASE WHEN rg.[State] = 3 THEN rg.[total_rows] ELSE 0 END) AS [COMPRESSED_rowgroup_rows] ,
-          CAST(SUM(CASE WHEN rg.[State] = 3 THEN rg.[size_in_bytes]/1024./1024. ELSE 0 END) AS DECIMAL(19, 4)) AS [COMPRESSED_size_in_mb] ,
+    SELECT t.object_id AS [object_id],
+          MAX(schema_name(t.schema_id)) AS [schema_name],
+          MAX(t.name) AS [table_name],
+          rg.partition_number AS [partition_number],
+          COUNT(DISTINCT rg.distribution_id) AS [distribution_count],
+          SUM(rg.size_in_bytes/1024/1024) AS [size_in_mb],
+          SUM(rg.[total_rows]) AS [row_count_total],
+          COUNT(*) AS [total_rowgroup_count],
+          CEILING ((SUM(rg.[total_rows]) - SUM(rg.[deleted_rows]))/COUNT(DISTINCT rg.distribution_id)/1048576.) * COUNT(DISTINCT rg.distribution_id) AS [ideal_rowgroup_count],
+          SUM(CASE WHEN rg.[State] = 1 THEN 1 ELSE 0 END) AS [OPEN_rowgroup_count],
+          SUM(CASE WHEN rg.[State] = 1 THEN rg.[total_rows] ELSE 0 END) AS [OPEN_rowgroup_rows],
+          CAST(SUM(CASE WHEN rg.[State] = 1 THEN rg.[size_in_bytes]/1024./1024. ELSE 0 END) AS DECIMAL(19, 4)) AS [OPEN_rowgroup_size_in_mb],
+          SUM(CASE WHEN rg.[State] = 2 THEN 1 ELSE 0 END) AS [CLOSED_rowgroup_count],
+          SUM(CASE WHEN rg.[State] = 2 THEN rg.[total_rows] ELSE 0 END) AS [CLOSED_rowgroup_rows],
+          CAST(SUM(CASE WHEN rg.[State] = 2 THEN rg.[size_in_bytes]/1024./1024. ELSE 0 END) AS DECIMAL(19, 4)) AS [CLOSED_size_in_mb],
+          SUM(CASE WHEN rg.[State] = 3 THEN 1 ELSE 0 END) AS [COMPRESSED_rowgroup_count],
+          SUM(CASE WHEN rg.[State] = 3 THEN rg.[total_rows] ELSE 0 END) AS [COMPRESSED_rowgroup_rows],
+          CAST(SUM(CASE WHEN rg.[State] = 3 THEN rg.[size_in_bytes]/1024./1024. ELSE 0 END) AS DECIMAL(19, 4)) AS [COMPRESSED_size_in_mb],
           SUM(CASE WHEN rg.[State] = 3 THEN rg.[deleted_rows] ELSE 0 END) AS [COMPRESSED_rowgroup_rows_DELETED]
    FROM sys.[pdw_nodes_column_store_row_groups] rg
    JOIN sys.[pdw_nodes_tables] nt ON rg.[object_id] = nt.[object_id]
@@ -119,9 +119,9 @@ WITH cci_info AS(
             rg.partition_number
 )
 , calc_excess AS(
-    SELECT * ,
-          CAST(round((total_rowgroup_count / ideal_rowgroup_count) - 1.0, 4) AS DECIMAL(9, 4)) AS [excess_rowgroup_pct] ,
-          CAST(round((total_rowgroup_count / ideal_rowgroup_count) - 1.0, 4) AS DECIMAL(19, 4)) * size_in_mb AS [excess_size_in_mb]
+    SELECT *,
+          CAST(ROUND((total_rowgroup_count / ideal_rowgroup_count) - 1.0, 4) AS DECIMAL(9, 4)) AS [excess_rowgroup_pct],
+          CAST(ROUND((total_rowgroup_count / ideal_rowgroup_count) - 1.0, 4) AS DECIMAL(19, 4)) * size_in_mb AS [excess_size_in_mb]
    FROM cci_info
 )
 SELECT calc_excess.* 
@@ -167,7 +167,7 @@ Though not comprehensive, the following query can help you identify potential op
 ```sql
 WITH cci_info AS (
     SELECT t.object_id AS [object_id],
-          MAX(schema_name(t.schema_id)) AS [schema_name],
+          MAX(SCHEMA_NAME(t.schema_id)) AS [schema_name],
           MAX(t.name) AS [table_name],
           rg.partition_number AS [partition_number],
           SUM(rg.[total_rows]) AS [row_count_total],
@@ -181,12 +181,12 @@ WITH cci_info AS (
    GROUP BY t.object_id,
             rg.partition_number
 )
-SELECT object_id ,
-       MAX(SCHEMA_NAME) ,
-       MAX(TABLE_NAME) ,
-       COUNT(*) AS number_of_partitions ,
-       MAX(row_count_total) AS max_partition_row_count ,
-       MAX(ideal_rowgroup_count) partition_ideal_row_count ,
+SELECT object_id,
+       MAX(SCHEMA_NAME),
+       MAX(TABLE_NAME),
+       COUNT(*) AS number_of_partitions,
+       MAX(row_count_total) AS max_partition_row_count,
+       MAX(ideal_rowgroup_count) partition_ideal_row_count,
        CASE
            -- non-partitioned tables
            WHEN COUNT(*) = 1 AND MAX(row_count_total) < 15000000 THEN 'Small table'
@@ -226,7 +226,7 @@ RETURN(
     WITH base_info AS (
         SELECT
             t.object_id
-            , schema_name(t.schema_id) AS [schema_name]
+            , SCHEMA_NAME(t.schema_id) AS [schema_name]
             , t.name AS table_name
             , i.index_type
             , i.index_cols
@@ -240,7 +240,7 @@ RETURN(
                     , i.index_id
                     , MAX(i.type) AS index_type
                     , MAX(CASE WHEN i.type = 5 AND ic.column_store_order_ordinal != 0 THEN ' ORDER ' ELSE '' END)
-                        + '(' + string_agg(
+                        + '(' + STRING_AGG(
                         CASE
                             WHEN i.type IN (1, 5) 
                                 AND (ic.key_ordinal != 0 OR ic.column_store_order_ordinal != 0)
@@ -326,7 +326,7 @@ RETURN(
                 END AS filter_clause
             , ', PARTITION (' + MAX(partition_column_name) + ' RANGE ' 
                 + CASE WHEN MAX(CAST(boundary_value_on_right AS TINYINT)) = 1 THEN 'RIGHT' ELSE 'LEFT' END 
-                + ' FOR VALUES(' + string_agg(boundary_value, ',') + '))' AS [partition_clause]
+                + ' FOR VALUES(' + STRING_AGG(boundary_value, ',') + '))' AS [partition_clause]
         FROM boundary
         WHERE [partition_number] BETWEEN @partition_number - 1 AND @partition_number + 1
         GROUP BY object_id
@@ -337,7 +337,7 @@ RETURN(
         , CASE WHEN index_type IN (1, 5) THEN 'ALTER INDEX ALL ON [' + [schema_name] + '].[' + [table_name] + '] REORGANIZE' 
             + CASE WHEN partition_clause.[object_id] IS NOT NULL THEN ' PARTITION = ' + CAST(@partition_number AS VARCHAR(16)) ELSE '' END
             + CASE WHEN index_type = 5 THEN ' WITH (COMPRESS_ALL_ROW_GROUPS = ON)' ELSE '' END + ';' END AS [reorganize_script]
-        , 'CREATE TABLE [' + schema_name + '].[' + table_name + '_p' + CAST(@partition_number AS VARCHAR(16)) + '_tmp] WITH(' + index_type_desc + isnull(index_cols, '')
+        , 'CREATE TABLE [' + schema_name + '].[' + table_name + '_p' + CAST(@partition_number AS VARCHAR(16)) + '_tmp] WITH(' + index_type_desc + ISNULL(index_cols, '')
             + ', DISTRIBUTION = ' + distribution_policy_desc + CASE WHEN distribution_policy_desc = 'HASH' THEN '(' + hash_distribution_column_name + ')' ELSE '' END
             + partition_clause.partition_clause + ') AS SELECT * FROM [' + [schema_name] + '].[' + [table_name] + '] ' + filter_clause + CASE WHEN index_type = 5 AND index_cols IS NOT NULL THEN ' OPTION(MAXDOP 1)' ELSE '' END +  ';'
             + ' ALTER TABLE [' + schema_name + '].[' + table_name + '_p' + CAST(@partition_number AS VARCHAR(16)) + '_tmp] SWITCH PARTITION ' + CAST(source_partition_number AS VARCHAR(16))
