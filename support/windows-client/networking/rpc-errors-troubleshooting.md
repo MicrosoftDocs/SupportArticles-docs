@@ -55,7 +55,7 @@ Many Windows server applications that rely on RPC provide options (such as regis
 
 When you specify a port or port range, use ports outside of the range of commonly-used ports. You can find a comprehensive list of server ports that are used in Windows and major Microsoft products in [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements). This article also lists RPC server applications and which RPC server applications can be configured to use custom server ports beyond the capabilities of the RPC runtime.
 
-[!INCLUDE [Registry warning](../../registry-important-alert.md)]
+[!INCLUDE [Registry warning](../../../registry-important-alert.md)]
 
 The **Internet** key does not exist by default. You have to create it. Under the **Internet** key, you can configure the following entries:
 
@@ -92,10 +92,10 @@ In this example, ports 5000 through 6000 (inclusive) have been arbitrarily selec
 You should open up a range of ports above port 5000. Port numbers below 5000 may already be in use by other applications and could cause conflicts with your DCOM application(s). Furthermore, previous experience shows that a minimum of 100 ports should be opened, because several system services rely on these RPC ports to communicate with each other.
 
 > [!NOTE]  
-> The minimum number of ports required may differ from computer to computer. Computers with higher traffic may run into a port exhaustion situation if the RPC dynamic ports are restricted. Take this into consideration when restricting the port range.
+> The minimum number of ports required may differ from computer to computer. Computers that support more traffic may run into a port exhaustion situation if the RPC dynamic ports are restricted. Take this into consideration when restricting the port range.
 
 > [!WARNING]  
-> If there is an error in the port configuration or there are insufficient ports in the pool, the Endpoint Mapper Service will not be able to register RPC servers with dynamic endpoints. When there is a configuration error, the error code will be 87 (0x57) ERROR_INVALID_PARAMETER. This can affect Windows RPC servers as well, such as Netlogon. It will log event 5820 in this case:
+> If there is an error in the port configuration or there aren't enough ports in the pool, EPM can't register RPC server applications that use dynamic endpoints. When there is a configuration error, the error code is **87 (0x57) ERROR_INVALID_PARAMETER**. This can affect Windows RPC servers as well, such as Netlogon. It will log event 5820 in this case:
 >
 > Log Name: System  
 > Source: NETLOGON  
