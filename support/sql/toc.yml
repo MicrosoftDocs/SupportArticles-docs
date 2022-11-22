@@ -461,6 +461,8 @@
       href: performance/dbcc-memorystatus-monitor-memory-usage.md
     - name: Troubleshoot performance issues with narrow and wide plans
       href: performance/troubleshoot-performance-narrow-vs-wide-plans.md
+    - name: 701 error with large batches
+      href: performance/701-error-large-batches.md
   - name: Replication, change tracking, change data capture
     items:
     - name: 102 and incorrect syntax error with peer-to-peer replication

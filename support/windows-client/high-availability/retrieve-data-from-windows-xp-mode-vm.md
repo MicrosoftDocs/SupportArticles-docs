@@ -1,7 +1,7 @@
 ---
 title: Retrieve data from Windows XP Mode VM
 description: When you upgrade from Windows 7 to Windows 8, Windows XP Mode is installed on your machine, however Windows Virtual PC isn't present anymore. This issue occurs because Windows Virtual PC isn't supported on Windows 8. To retrieve data from the Windows XP Mode virtual machine, perform the steps listed in this article.
-ms.date: 09/08/2020
+ms.date: 11/18/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -43,7 +43,7 @@ Copy the Windows XP Mode virtual hard disks to another Windows 7 machine, and us
 
 1. Copy your Windows XP Mode virtual hard disk (Default location: %LocalAppData%/Microsoft/Windows Virtual PC/Virtual Machines/Windows XP Mode.vhd), and the base virtual hard disk (default location: %ProgramFiles%\Windows XP Mode\Windows XP Mode base.vhd) from the Windows 10 PC to another Windows 7 PC.  
 2. Ensure the base disk is copied to the exact same location as it existed on the previous Windows 7 PC (for example, C:\Program Files\Windows XP Mode\Windows XP Mode base.vhd).  
-3. [Create a new virtual machine with Windows Virtual PC](https://technet.microsoft.com/library/ee449426%28v=ws.10%29). Then point to your Windows XP Mode virtual hard disk as the disk for the new virtual machine.  
+3. [Create a new virtual machine with Windows Virtual PC](/previous-versions/windows/it-pro/windows-7/ee449426(v=ws.10)). Then point to your Windows XP Mode virtual hard disk as the disk for the new virtual machine.  
 4. Start the virtual machine, login, and copy any required data from the virtual machine to another location.  
 5. Delete the virtual machine, and uninstall Windows XP Mode when all data is retrieved.  
 
