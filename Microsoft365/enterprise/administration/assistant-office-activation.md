@@ -32,7 +32,7 @@ Select the following button:
 
 For complete details about how to run the Enterprise version of the Assistant, see [Enterprise version of Microsoft Support and Recovery Assistant](sara-command-line-version.md).
 
-## Available switches for this scenario
+## Available switches for the Office Activation scenario
 
 The following switches are available for this scenario. They aren't case-sensitive. The switches, unless noted as optional, are required to run the scenario. You can use more than one optional switch.
 
