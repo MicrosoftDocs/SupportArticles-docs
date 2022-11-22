@@ -13,8 +13,7 @@ _Applies to:_ &nbsp; Azure Synapse Analytics
 
 This article introduces a slightly different approach to assessing clustered columnstore index (CCI) health. Follow the steps in the following sections or execute the steps in the notebook via Azure Data Studio.
 
-> [!NOTE]
-> Before attempting to open this notebook, check that Azure Data Studio is installed on your local machine. To install, go to [Learn how to install Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
+[!INCLUDE [Install Azure Data Studio note](../../../includes/install-azure-data-studio-note.md)]
 
 > [!div class="nextstepaction"]
 > [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/synapse-support/main/dedicated-sql-pool/dsql-perf-cci-health.ipynb)
@@ -142,7 +141,7 @@ Performing maintenance on a table/partition may result in one of the following s
 - `excess_rowgroup_pct` or `excess_size_in_mb` is larger than it was before maintenance.
 - The maintenance statement fails with insufficient memory.
 
-### Typical Causes
+### Typical causes
 
 - Insufficient resources.
 - Insufficient service level (DWU).
@@ -161,7 +160,7 @@ Though not comprehensive, the following query can help you identify potential op
 | Opportunity title | Description | Recommendations |
 |-------------------|-------------|-----------------|
 | Small table       | Table contains fewer than 15M rows | Consider changing the index from CCI to: <ul><li>Heap for staging tables</li><li>Standard clustered index (rowstore) for dimension or other small lookups</li></ul> |
-| Partitioning opportunity | Calculated ideal rowgroup count is greater than 180 (or ~188M rows) | Implement a partitioning strategy or change the existing partitioning strategy to reduce the number of rows per partition to less than 188M (approximately 3 row groups per partition per distribution) |
+| Partitioning opportunity | Calculated ideal rowgroup count is greater than 180M (or ~188M rows) | Implement a partitioning strategy or change the existing partitioning strategy to reduce the number of rows per partition to less than 188M (approximately three row groups per partition per distribution) |
 | Over-partitioned table | Table contains fewer than 15M rows for the largest partition | Consider: <ul><li>Changing the index from CCI to standard clustered index (rowstore)</li><li>Changing the partition grain to be closer to 60M rows per partition</ul> |
 
 ```sql
@@ -207,16 +206,16 @@ Run the following query to create `dbo.fnMs_GenerateIndexMaintenanceScript` func
 
 | Parameter name | Required | Description |
 |---|:-:|---|
-| @object_id | Y | `object_id` of the table to target |
-| @partition_number | Y | `partition_number` from `sys.partitions` to target. If the table isn't partitioned, specify 1 |
+| `@object_id` | Y | `object_id` of the table to target |
+| `@partition_number` | Y | `partition_number` from `sys.partitions` to target. If the table isn't partitioned, specify 1. |
 
 **Output table**
 
 | Column name | Description |
 |---|---|
-| rebuild_script | Generated `ALTER INDEX ALL ... REBUILD` statement for the given table/partition. Non-partitioned heaps will return `NULL`. |
-| reorganize_script | Generated `ALTER INDEX ALL ... REORGANIZE` statement for the given table/partition. Non-partitioned heaps will return `NULL`. |
-| partition_switch_script | Applies only to partitioned tables; will be `NULL` if the table isn't partitioned or if an invalid partition number is specified. If the CCI was created with an `ORDER` clause, it will be rendered. |
+| `rebuild_script` | Generated `ALTER INDEX ALL ... REBUILD` statement for the given table/partition. Non-partitioned heaps will return `NULL`. |
+| `reorganize_script` | Generated `ALTER INDEX ALL ... REORGANIZE` statement for the given table/partition. Non-partitioned heaps will return `NULL`. |
+| `partition_switch_script` | Applies only to partitioned tables; will be `NULL` if the table isn't partitioned or if an invalid partition number is specified. If the CCI was created with an `ORDER` clause, it will be rendered. |
 
 ```sql
 CREATE FUNCTION dbo.fnMs_GenerateIndexMaintenanceScript (@object_id INT, @partition_number INT = 1)
@@ -351,7 +350,7 @@ RETURN(
 GO
 ```
 
-## More Information
+## More information
 
 To gain a more in-depth understanding and acquire extra assessment tools for CCI on the dedicated SQL pool, see:
 
