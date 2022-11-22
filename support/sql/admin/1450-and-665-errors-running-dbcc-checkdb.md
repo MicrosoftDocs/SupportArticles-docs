@@ -67,6 +67,8 @@ For a complete background of how SQL Server Engine uses NTFS sparse files and al
 
 ## Resolution
 
+Consider using one or more of the options below to resolve this issue:
+
 1. Place the database files on an [Resilient File System (ReFS)](/windows-server/storage/refs/refs-overview) volume, which doesn't have the same `ATTRIBUTE_LIST_ENTRY` limits that NTFS presents. If you want to use the current NTFS volume, you must reformat using ReFS, after moving your database files elsewhere temporarily. Using ReFS may be the best long-term solution to deal with this issue. 
 
    > [!NOTE]
@@ -90,16 +92,15 @@ For a complete background of how SQL Server Engine uses NTFS sparse files and al
 
 1. Reduce the lifetime of `DBCC CHECK` commands by using the performance enhancements and thus avoid the 665 errors: [Improvements for the DBCC CHECKDB command may result in faster performance when you use the PHYSICAL_ONLY option](https://support.microsoft.com/kb/2634571). Keep in mind that running DBCC CHECKDB with PHYSICAL_ONLY switch doesn't provide a guarantee that you'll avoid this error, but it will reduce the likelihood in many cases.
 
-1. If you're performing database backups across many files (stripe set), carefully plan number of files, MAXTRANSFERSIZE and BLOCKSIZE (see [BACKUP](/sql/t-sql/statements/backup-transact-sql)). The goal is to reduce the fragments on the file system. You may consider striping the files across multiple volumes for faster performance and reduction of fragmentation.
+1. If you're performing database backups across many files (stripe set), carefully plan number of files, MAXTRANSFERSIZE and BLOCKSIZE (see [BACKUP](/sql/t-sql/statements/backup-transact-sql)). The goal is to reduce the fragments on the file system; larger byte chunks written together to a file will generally do that. You may consider striping the files across multiple volumes for faster performance and reduction of fragmentation.
 
-1. If you're using BCP to write multiple files simultaneously, adjust utility write sizes, for example increase the BCP batch size. Also consider writing multiple streams to different volumes to avoid fragmentation, or reduce the number of parallel writes.
-
-1. [FIX: OS error 665 when you execute DBCC CHECKDB command for database that contains columnstore index in SQL Server 2014](https://support.microsoft.com/kb/3029977/EN-US)
+1. If you're using BCP to write multiple files simultaneously, adjust utility write sizes, for example increase the BCP [batch size](/sql/tools/bcp-utility). Also consider writing multiple streams to different volumes to avoid fragmentation, or reduce the number of parallel writes.
 
 1. In the case of running DBCC CHECKDB, you can consider setting up an Availability Group or Log Shipping/Standby server, or use a second server where you can run the DBCC CHECKDB commands as a way to offload the work and also avoid running into the issues caused by the heavy fragmentation. 
 
 1. In the case of running DBCC CHECKDB, if you run the command at a time when there's little activity on the database server, then the sparse files will be lightly populated. The fewer writes to the files will reduce the likelihood of exhausting attributes on the NTFS. Less activity is another reason you may consider running DBCC CHECKDB on a second, read-only server, when possible. 
 
+1. If you are running SQL Server 2014, upgrade to the latest Service Pack. For more information, see [FIX: OS error 665 when you execute DBCC CHECKDB command for database that contains columnstore index in SQL Server 2014](https://support.microsoft.com/kb/3029977/EN-US)
 
 ## More information:
 
