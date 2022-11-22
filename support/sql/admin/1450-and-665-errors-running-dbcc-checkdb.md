@@ -1,11 +1,11 @@
 ---
-title: OS errors 1450 and 665 are reported
+title: OS errors 665 and 1450 are reported
 description: This article provides resolutions for the problem where OS errors 1450 and 665 are reported for database files 
 ms.date: 10/01/2022
 ms.custom: sap:Administration and Management
 ms.prod: sql
 ---
-# OS errors 1450 and 665 are reported for database files
+# OS errors 665 and 1450 are reported for SQL Server files
 
 
 _Original product version:_ &nbsp; SQL Server 2008 - 2022
@@ -100,7 +100,7 @@ Consider using one or more of the options below to resolve this issue:
 
 1. In the case of running DBCC CHECKDB, if you run the command at a time when there's little activity on the database server, then the sparse files will be lightly populated. The fewer writes to the files will reduce the likelihood of exhausting attributes on the NTFS. Less activity is another reason you may consider running DBCC CHECKDB on a second, read-only server, when possible. 
 
-1. If you are running SQL Server 2014, upgrade to the latest Service Pack. For more information, see [FIX: OS error 665 when you execute DBCC CHECKDB command for database that contains columnstore index in SQL Server 2014](https://support.microsoft.com/kb/3029977/EN-US)
+1. If you're running SQL Server 2014, upgrade to the latest Service Pack. For more information, see [FIX: OS error 665 when you execute DBCC CHECKDB command for database that contains columnstore index in SQL Server 2014](https://support.microsoft.com/kb/3029977/EN-US)
 
 ## More information:
 
