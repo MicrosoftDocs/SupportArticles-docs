@@ -13,8 +13,7 @@ _Applies to:_ &nbsp; Azure Synapse Analytics
 
 This article introduces a slightly different approach to assessing clustered columnstore index (CCI) health. Follow the steps in the following sections or execute the steps in the notebook via Azure Data Studio.
 
-> [!NOTE]
-> Before attempting to open this notebook, check that Azure Data Studio is installed on your local machine. To install, go to [Learn how to install Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
+[!INCLUDE [Install Azure Data Studio note](../../../includes/install-azure-data-studio-note.md)]
 
 > [!div class="nextstepaction"]
 > [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/synapse-support/main/dedicated-sql-pool/dsql-perf-cci-health.ipynb)
