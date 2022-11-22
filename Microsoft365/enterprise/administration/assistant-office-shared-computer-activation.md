@@ -9,7 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
-ms.reviewer: zebamehdi; brandisi
+ms.reviewer: gregmans; zebamehdi
 appliesto: 
   - Microsoft 365
 search.appverid: MET150
@@ -17,18 +17,18 @@ ms.date: 10/25/2022
 ---
 # Scenario: Office Shared Computer Activation
 
-The Office Shared Computer Activation scenario automates checks and recoveries to enable or disable shared computer activation configuration on a device. For more information, see [Overview of shared computer activation for Microsoft 365 Apps](/deployoffice/overview-shared-computer-activation).
+The Office Shared Computer Activation scenario automates checks and recoveries to enable or disable shared computer activation on a device. For more information, see [Overview of shared computer activation for Microsoft 365 Apps](/deployoffice/overview-shared-computer-activation).
 
-In the full version of the Assistant, the equivalent scenario entry point is *Office & Office Apps \ I want to setup Office with shared computer activation on a computer or server in my organization*.
+In the full version of the Assistant, the equivalent entry point for this scenario is *Office & Office Apps \ I want to setup Office with shared computer activation on a computer or server in my organization*.
 
 **Note** This scenario requires an elevated command prompt. To open an elevated Command Prompt window, select **Start**, enter *cmd*, right-click **Command Prompt** in the results, and then select **Run as administrator**.
 
 ## Download the Assistant
 
-Download the Assistant by selecting the button below:
+Download the Enterprise version of the Assistant by selecting the button below:
 
 > [!div class="nextstepaction"]
-> [Download the Assistant (Enterprise version)](https://aka.ms/SaRA_EnterpriseVersionFiles)
+> [Download the Assistant](https://aka.ms/SaRA_EnterpriseVersionFiles)
 
 For complete details about how to run the Enterprise version of the Assistant, see [Enterprise version of Microsoft Support and Recovery Assistant](sara-command-line-version.md).
 
