@@ -64,7 +64,7 @@ When running the **ScanState** and LoadState tools on Windows 7, Windows 8, or W
 
 3. Select **Run as administrator**.
 
-4. Specify the `LoadState.exe` or `ScanState.exe` command.
+4. Specify the *LoadState.exe* or *ScanState.exe* command.
 
 If you don't run USMT in Administrator mode, only the user profile that is logged on will be included in the migration.
 
@@ -88,7 +88,7 @@ Any user accounts on the computer that haven't been used won't be migrated. For 
 
 **Resolution:** To delete a user profile, use the **User Accounts** item in Control Panel. To correct an incomplete deletion of a user profile:
 
-1. Open the registry editor by typing `regedit` at an elevated command prompt.
+1. Open the registry editor by typing *regedit.exe* at an elevated command prompt.
 
 2. Navigate to `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList`.
 
@@ -121,7 +121,7 @@ The following sections describe common command-line problems. Expand the section
 
 ### I received the following error message: "Usage Error: You can't specify a file path with any of the command-line options that exceeds 256 characters."
 
-**Cause:** You might receive this error message in some cases even if you don't specify a long store or file path, because the path length is calculated based on the absolute path. For example, if you run the `**ScanState**.exe /o store` command from `C:\Program Files\USMT40`, then each character in "`C:\Program Files\USMT40`" will be added to the length of "store" to get the length of the path.
+**Cause:** You might receive this error message in some cases even if you don't specify a long store or file path, because the path length is calculated based on the absolute path. For example, if you run the `**ScanState**.exe /o store` command from *C:\Program Files\USMT40*, then each character in *C:\Program Files\USMT40* will be added to the length of "store" to get the length of the path.
 
 **Resolution:** Ensure that the total path length doesn't exceed 256 characters. The total path length includes the store path plus the current directory.
 
@@ -135,11 +135,11 @@ The following sections describe common command-line problems. Expand the section
 
 The following sections describe common XML file problems. Expand the section to see recommended solutions.
 
-### I used the `/genconfig` option to create a `Config.xml` file, but I see only a few applications and components that are in `MigApp.xml`. Why does `Config.xml` not contain all of the same applications?
+### I used the `/genconfig` option to create a Config.xml file, but I see only a few applications and components that are in MigApp.xml. Why does Config.xml not contain all of the same applications?
 
-**Cause:** `Config.xml` will contain only operating system components, applications, and the user document sections that are in both of the .xml files and are installed on the computer when you run the `/genconfig` option. Otherwise, these applications and components won't appear in the `Config.xml` file.
+**Cause:** *Config.xml* will contain only operating system components, applications, and the user document sections that are in both of the .xml files and are installed on the computer when you run the `/genconfig` option. Otherwise, these applications and components won't appear in the *Config.xml* file.
 
-**Resolution:** Install all of the desired applications on the computer before running the `/genconfig` option. Then run `ScanState.exe` with all of the .xml files. For example, run the following command:
+**Resolution:** Install all of the desired applications on the computer before running the `/genconfig` option. Then run *ScanState.exe* with all of the .xml files. For example, run the following command:
 
 ```cmd
 ScanState.exe /genconfig:Config.xml /i:MigDocs.xml /i:MigApp.xml /v:5 /l:ScanState.log
@@ -147,7 +147,7 @@ ScanState.exe /genconfig:Config.xml /i:MigDocs.xml /i:MigApp.xml /v:5 /l:ScanSta
 
 ### I'm having problems with a custom .xml file that I authored, and I can't verify that the syntax is correct
 
-**Resolution:** You can load the XML schema file `MigXML.xsd` into your XML authoring tool. `MigXML.xsd` is included with USMT. For examples, see the [Visual Studio Development Center](https://go.microsoft.com/fwlink/p/?LinkId=74513). Then, load your .xml file in the authoring tool to see if there's a syntax error. For more information about using the XML elements, see [USMT XML Reference](/windows/deployment/usmt/usmt-xml-reference).
+**Resolution:** You can load the XML schema file *MigXML.xsd* into your XML authoring tool. *MigXML.xsd* is included with USMT. For examples, see the [Visual Studio Development Center](https://go.microsoft.com/fwlink/p/?LinkId=74513). Then, load your .xml file in the authoring tool to see if there's a syntax error. For more information about using the XML elements, see [USMT XML Reference](/windows/deployment/usmt/usmt-xml-reference).
 
 ### I'm using a MigXML helper function, but the migration isn't working the way I expected it to.  How do I troubleshoot this issue?
 
@@ -169,7 +169,7 @@ The following sections describe common migration problems. Expand the section to
 
 **Cause:** There might be an error in the XML syntax.
 
-**Resolution:** You can use the USMT XML schema (`MigXML.xsd`) to write and validate migration .xml files. Also see the XML examples in the following articles:
+**Resolution:** You can use the USMT XML schema (*MigXML.xsd*) to write and validate migration .xml files. Also see the XML examples in the following articles:
 
 [Conflicts and precedence](/windows/deployment/usmt/usmt-conflicts-and-precedence)
 
@@ -202,9 +202,9 @@ REMOVING THIS SECTION SINCE IT ONLY PERTAINS TO WINDOWS VERSIONS THAT HAVE BEEN 
 **Resolution:** Run the **ScanState** and **LoadState** tools from within an account with administrative credentials.
  --->
 
-### I included `MigApp.xml` in the migration, but some `PST` files aren't migrating
+### I included MigApp.xml in the migration, but some PST files aren't migrating
 
-**Cause:** The `MigApp.xml` file migrates only the PST files that are linked to Outlook profiles.
+**Cause:** The *MigApp.xml* file migrates only the PST files that are linked to Outlook profiles.
 
 **Resolution:** To migrate PST files that aren't linked to Outlook profiles, you must create a separate migration rule to capture these files.
 

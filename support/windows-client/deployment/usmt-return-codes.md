@@ -35,7 +35,7 @@ Return codes are grouped into the following broad categories that describe their
 
 - Fatal Errors
 
-As a best practice, we recommend that you set verbosity level to 5, `v:5`, on the `ScanState.exe`, `LoadState.exe`, and `UsmtUtils.exe` command lines so that the most detailed reporting is available in the respective USMT logs. You can use a higher verbosity level if you want the log files output to go to a debugger.
+As a best practice, we recommend that you set verbosity level to 5, `v:5`, on the *ScanState.exe*, *LoadState.exe*, and *UsmtUtils.exe* command lines so that the most detailed reporting is available in the respective USMT logs. You can use a higher verbosity level if you want the log files output to go to a debugger.
 
 ## USMT error messages
 
@@ -158,7 +158,7 @@ The following information lists each return code by numeric value, along with th
 | Error message | Troubleshooting, mitigation, workarounds |
 | --- |  --- |
 | **Multiple Windows installations found** | Listfiles.txt couldn't be created. Verify that the location you specified for the creation of this file is valid. |
-| **Software malfunction or unknown exception** | Check all loaded .xml files for errors, common error when using `/i` to load the `Config.xml` file. |
+| **Software malfunction or unknown exception** | Check all loaded .xml files for errors, common error when using `/i` to load the *Config.xml* file. |
 | **Unable to find a valid Windows directory to proceed with requested offline operation; Check if offline input file is present and has valid entries** | Verify that the offline input file is present and that it has valid entries. USMT couldn't find valid offline operating system. Verify your offline directory mapping. |
 
 ### 27: USMT_INVALID_STORE_LOCATION
@@ -182,7 +182,7 @@ The following information lists each return code by numeric value, along with th
 
 | Error message | Troubleshooting, mitigation, workarounds |
 | --- |  --- |
-| **Script file is invalid for /i** | Check all specified migration .xml files for errors. This error is common when using `/i` to load the `Config.xml` file. |
+| **Script file is invalid for /i** | Check all specified migration .xml files for errors. This error is common when using `/i` to load the *Config.xml* file. |
 | **Unable to find a script file specified by /i** | Verify the location of your script files, and ensure that the command-line options are correct. |
 
 ### 29: USMT_FAILED_MIGSTARTUP
@@ -274,8 +274,8 @@ The following information lists each return code by numeric value, along with th
 
 | Error message | Troubleshooting, mitigation, workarounds |
 | --- |  --- |
-| **Error reading Config.xml** | Review ScanState log or LoadState log for details about command-line errors in the `Config.xml` file. |
-| **File argument is invalid for /config** | Check the command line you used to load the `Config.xml` file. You can use online Help by typing `/?` on the command line. |
+| **Error reading Config.xml** | Review ScanState log or LoadState log for details about command-line errors in the *Config.xml* file. |
+| **File argument is invalid for /config** | Check the command line you used to load the *Config.xml* file. You can use online Help by typing `/?` on the command line. |
 
 ### 40: USMT_ERROR_UNABLE_CREATE_PROGRESS_LOG
 
