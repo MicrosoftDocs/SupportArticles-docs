@@ -9,7 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
-ms.reviewer: zebamehdi; brandisi
+ms.reviewer: gregmans; zebamehdi
 appliesto: 
   - Microsoft 365
 search.appverid: MET150
@@ -17,48 +17,40 @@ ms.date: 10/25/2022
 ---
 # Scenario: Outlook Calendar Scan
 
-The Outlook Calendar Scan scenario scans an Outlook calendar to identify and report issues such as permissions, free or busy publishing, delegate configuration, and automatic booking. For more information, see [Scan Outlook calendar by using Microsoft Support and Recovery Assistant](/outlook/troubleshoot/calendaring/scan-outlook-calendar-using-sara).
+The Outlook Calendar Scan scenario scans a Microsoft Outlook calendar to identify and report issues that involve general settings such as permissions, free/busy publishing, delegate configuration, and automatic conference room booking. For more information, see [Scan Outlook calendar by using Microsoft Support and Recovery Assistant](/outlook/troubleshoot/calendaring/scan-outlook-calendar-using-sara).
 
-In the full version of the Assistant, the equivalent scenario entry point is *Advanced diagnostics \ Outlook \ Create a detailed scan of my Outlook Calendar to identify and resolve issues*.
+In the full version of the Assistant, the equivalent entry point for this scenario is *Advanced diagnostics \ Outlook \ Create a detailed scan of my Outlook Calendar to identify and resolve issues*.
 
 **Note** This scenario doesn't require an elevated command prompt.
 
-## Download the Assistant
+## Download the Enterprise version of the Assistant
 
-Download the Assistant by selecting the button below:
+Select the following button:
 
 > [!div class="nextstepaction"]
-> [Download the Assistant (Enterprise version)](https://aka.ms/SaRA_EnterpriseVersionFiles)
+> [Download the Assistant](https://aka.ms/SaRA_EnterpriseVersionFiles)
 
 For complete details about how to run the Enterprise version of the Assistant, see [Enterprise version of Microsoft Support and Recovery Assistant](sara-command-line-version.md).
 
-## Available switches for this scenario
+## Available switches for the Outlook Calendar Scan scenario
 
-The following switches are available for this scenario. They aren't case-sensitive. The switches, unless noted as optional, are required to run the scenario. And more than one optional switch can be used.
-
-|Switch \<parameter\>|Details|Required/Optional|
-|---|---|---|
-|`-S <scenarioname>`|Use the `-S` switch to specify the scenario that you want to run. For the Outlook Calendar Scan scenario, use `OutlookCalendarCheckTask` as the value of `scenarioname`.|Required|
-|`-AcceptEula`|The End User License Agreement (EULA) must be accepted before a scenario can be run.|Required|
-|`-P <Profile Name>`|`Profile Name` identifies the Outlook profile that's scanned by the scenario.|Optional|
-|`-LogFolder <Output Path>`|The `-LogFolder` switch forces *SaraCmd.exe* to output scenario-specific logs to the folder that's specified by \<Output Path\>.|Optional|
-|`-HideProgress`|The `-HideProgress` switch hides the progress display for this scenario. The default feature of the Assistant is to always display the progress of tasks in the console.|Optional|
-
-The following switches are available for all scenarios.
+The following switches are available for this scenario. They aren't case-sensitive. The switches, unless noted as optional, are required to run the scenario. You can use more than one optional switch.
 
 |Switch \<parameter\>|Details|Required/Optional|
 |---|---|---|
-|`-DisplayEULA <file path>`|Use the `-DisplayEULA` switch to display the EULA. You can save the EULA text to a file by specifying a path to the file with the switch.|Optional|
-|`-Help`|The `-Help` switch displays a link to online content for additional information. If you use the `-Help` switch along with other switches, it will override all the others except the `-?` switch.|Optional|
-|`-?`|Use the `-?` switch to display the functions of all the switches that are available for *SaRAcmd.exe*. If you use the `-?` switch along with other switches, it will override the others.|Optional|
+|`-S <scenarioname>`|Specify this switch and `OutlookCalendarCheckTask` as the value for the `scenarioname` parameter to run this scenario.|Required|
+|`-AcceptEula`|Specify this switch to accept the End User License Agreement (EULA) and run this scenario.|Required|
+|`-P <Profile Name>`|Specify this switch and use the `<Profile Name>` parameter to identify the Outlook profile that the scenario needs to scan.|Optional|
+|`-LogFolder <Output Path>`|Specify this switch to force *SaraCmd.exe* to output scenario-specific logs to the folder that's specified by the `<Output Path>` parameter.|Optional|
+|`-HideProgress`|Specify this switch to hide the progress display for this scenario. The default feature of the Assistant is to always display the progress of tasks in the console.|Optional|
 
 ## Sample commands
 
-Here is a sample combination of switches to run this scenario:
+Here are some sample combinations of switches to run this scenario:
 
 - Sample 1
 
-  To scan a calendar for the profile that's used in the open instance of Outlook, run the following command from a non-elevated command prompt.
+  To scan a calendar for the active profile in the instance of Outlook that's running, run the following command from a non-elevated command prompt.
   
   **Note** If Outlook isn't running, the calendar for the default Outlook profile will be scanned.
 
@@ -68,7 +60,7 @@ Here is a sample combination of switches to run this scenario:
 
 - Sample 2
 
-  To scan a calendar for the profile called *MyProfile* that's used for the running instance of Outlook, run the following command from a non-elevated command prompt.
+  To scan a calendar for the profile named *MyProfile* in the instance of Outlook that's running, run the following command from a non-elevated command prompt.
 
   > [!NOTE]
   >
@@ -81,7 +73,7 @@ Here is a sample combination of switches to run this scenario:
 
 - Sample 3
 
-  To scan a calendar for the profile that's used in the open instance of Outlook and output log files to the *C:\temp* folder, run the following command from a non-elevated command prompt.
+  To scan a calendar for the active profile in the instance of Outlook that's running, and output log files to the *C:\temp* folder, run the following command from a non-elevated command prompt.
 
   **Note** The folder that's specified with the `-LogFolder` switch must exist and be writeable.
 
@@ -91,7 +83,7 @@ Here is a sample combination of switches to run this scenario:
 
 - Sample 4
 
-  To scan a calendar for the profile called *MyProfile* that's used for the running instance of Outlook and hide the progress display in the console, run the following command from a non-elevated command prompt.
+  To scan a calendar for the profile named *MyProfile* in the instance of Outlook that's running and hide the progress display in the console, run the following command from a non-elevated command prompt.
 
   ```console
   SaRAcmd.exe -S OutlookCalendarCheckTask -AcceptEula -P MyProfile -HideProgress
@@ -99,7 +91,7 @@ Here is a sample combination of switches to run this scenario:
 
 ## Detected conditions and results
 
-When you run a scenario by using the Enterprise version of the Assistant, you don't receive any prompts. It's a different experience from the full version of the Assistant. The following table describes the actions that the Enterprise version of the Assistant takes for each condition encountered by this scenario, and the corresponding output that it displays.
+When you run the Outlook Calendar Scan scenario by using the Enterprise version of the Assistant, you don't receive any prompts. It's a different experience from the full version of the Assistant. The following table describes the actions that the Enterprise version of the Assistant takes for each condition encountered by this scenario, and the corresponding output that it displays.
 
 |Condition|Action taken by the Enterprise version|Output shown in the command prompt window|
 |---|---|---|
