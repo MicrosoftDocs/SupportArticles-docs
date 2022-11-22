@@ -43,11 +43,11 @@ The following diagram shows a client connecting to a server to perform a remote 
 :::image type="content" source="media/rpc-errors-troubleshooting/rpc-flow.png" alt-text="Diagram that shows how a client makes an RPC connection to a remote server." border="true":::
 
 > [!IMPORTANT]  
-> When a firewall separates the client and the server, the firewall has to allow communication on port 135 and on the dynamic ports that EPM assigns. One approach to managing this issue is to specify ports or ranges of ports for EPM to use. For more information, see [Configure **how** `RPC` *allocates* dynamic ports](#configure-how-rpc-allocates-dynamic-ports).
+> When a firewall separates the client and the server, the firewall has to allow communication on port 135 and on the dynamic ports that EPM assigns. One approach to managing this issue is to specify ports or ranges of ports for EPM to use. For more information, see [Configure how RPC allocates dynamic ports](#configure-how-rpc-allocates-dynamic-ports).
 >  
 > Some firewalls also allow UUID filtering. In UUID filtering, when an RPC request uses port 135 to cross the firewall and contact EPM, the firewall notes the UUID that's associated with the request. When EPM responds and sends a dynamic port number for that UUID, the firewall notes the port number as well. Subsequently, the firewall allows RPC bind operations for that UUID and port.
 
-### Configure **how** `RPC` *allocates* dynamic ports
+### Configure how RPC allocates dynamic ports
 
 By default, EPM allocates dynamic ports randomly from the range that's configured for TCP and UDP (based on the implementation of the operating system used). However, this approach might not be practical, especially when the client and server must communicate through a firewall. An alternative is to specify a port number or range of port numbers for EPM to use, and open those ports in the firewall.
 
