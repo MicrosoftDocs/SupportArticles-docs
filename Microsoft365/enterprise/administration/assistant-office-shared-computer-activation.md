@@ -23,9 +23,9 @@ In the full version of the Assistant, the equivalent entry point for this scenar
 
 **Note** This scenario requires an elevated command prompt. To open an elevated Command Prompt window, select **Start**, enter *cmd*, right-click **Command Prompt** in the results, and then select **Run as administrator**.
 
-## Download the Assistant
+## Download the Enterprise version of the Assistant
 
-Download the Enterprise version of the Assistant by selecting the button below:
+Select the following button:
 
 > [!div class="nextstepaction"]
 > [Download the Assistant](https://aka.ms/SaRA_EnterpriseVersionFiles)
