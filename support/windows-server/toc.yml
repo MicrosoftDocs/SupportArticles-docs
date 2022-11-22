@@ -438,6 +438,8 @@
       href: ./identity/enable-ldap-signing-in-windows-server.md
     - name: How to turn on debug logging of the LDAP client
       href: ./identity/turn-on-debug-logging-ldap-client.md
+    - name: LDAP connection fails with event ID 36884
+      href: ./identity/ldap-connection-fails-with-event-id-36884.md
     - name: LDAP paged queries with subordinate referrals are not chased properly
       href: ./identity/ldap-paged-queries-subordinate-referrals-not-chased.md
     - name: LDAP queries return partial attribute list
