@@ -29,6 +29,7 @@ _Original KB number:_ &nbsp; 321185
 
 |Version pattern|SQL Product|
 |---|---|
+|16.0.x.x|SQL Server 2022|
 |15.0.x.x|SQL Server 2019|
 |14.0.x.x|SQL Server 2017|
 |13.0.x.x|SQL Server 2016|
