@@ -23,12 +23,12 @@ In the full version of the Assistant, the equivalent entry point for this scenar
 
 **Note** This scenario requires an elevated command prompt. To open an elevated Command Prompt window, select **Start**, enter *cmd*, right-click **Command Prompt** in the results, and then select **Run as administrator**.
 
-## Download the Assistant
+## Download the Enterprise version of the Assistant
 
-Download the Assistant by selecting the button below:
+Select the following button:
 
 > [!div class="nextstepaction"]
-> [Download the Assistant (Enterprise version)](https://aka.ms/SaRA_EnterpriseVersionFiles)
+> [Download the Assistant](https://aka.ms/SaRA_EnterpriseVersionFiles)
 
 For complete details about how to run the Enterprise version of the Assistant, see [Enterprise version of Microsoft Support and Recovery Assistant](sara-command-line-version.md).
 
@@ -38,10 +38,10 @@ The following switches are available for this scenario. They aren't case-sensiti
 
 |Switch \<parameter\>|Details|Required/Optional|
 |---|---|---|
-|`-S <scenarioname>`|Specify the `-S` switch and `OfficeActivationScenario` as the value for `scenarioname` to run this scenario.|Required|
-|`-AcceptEula`|Accept the End User License Agreement (EULA) to run this scenario.|Required|
+|`-S <scenarioname>`|Specify this switch and `OfficeActivationScenario` as the value for the `scenarioname` parameter to run this scenario.|Required|
+|`-AcceptEula`|Specify this switch to accept the End User License Agreement (EULA) and run this scenario.|Required|
 |`-CloseOffice`|Specify this switch to close all Office apps that're running .|Required|
-|`-RemoveSCA`|Use this switch if you need to remove Shared Computer Activation (SCA) and configure non-SCA activation for Office.|Optional|
+|`-RemoveSCA`|Specify this switch to remove Shared Computer Activation (SCA) and configure non-SCA activation for Office.|Optional|
 
 ## Sample commands
 
@@ -57,7 +57,7 @@ Here are some sample combinations of switches to run the Office Activation scena
 
 - Sample 2
 
-  To perform the same steps as in sample 1 and remove Office SCA if enabled, run the following command from an elevated Command Prompt window:
+  To perform the same steps as in sample 1 and remove SCA if enabled, run the following command from an elevated Command Prompt window:
 
   ```console
   SaRAcmd.exe -S OfficeActivationScenario -AcceptEula -CloseOffice -RemoveSCA
