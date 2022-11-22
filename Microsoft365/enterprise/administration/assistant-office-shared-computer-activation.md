@@ -32,32 +32,24 @@ Download the Enterprise version of the Assistant by selecting the button below:
 
 For complete details about how to run the Enterprise version of the Assistant, see [Enterprise version of Microsoft Support and Recovery Assistant](sara-command-line-version.md).
 
-## Available switches for this scenario
+## Available switches for the Office Shared Computer Activation scenario
 
-The following switches are available for this scenario. They aren't case-sensitive. The switches, unless noted as optional, are required to run the scenario. And more than one optional switch can be used.
-
-|Switch \<parameter\>|Details|Required/Optional|
-|---|---|---|
-|`-S <scenarioname>`|Use the `-S` switch to specify the scenario that you want to run. For the Office Shared Computer Activation scenario, use `OfficeSharedComputerScenario` as the value of `scenarioname`.|Required|
-|`-AcceptEula`|The End User License Agreement (EULA) must be accepted before a scenario can be run.|Required|
-|`-CloseOffice`|The `-CloseOffice` switch closes all running Office apps.|Required|
-|`-RemoveSCA`|The `-RemoveSCA` switch removes Shared Computer Activation (SCA) and configures non-SCA activation for Office.|Optional|
-
-The following switches are available for all scenarios.
+The following switches are available for this scenario. They aren't case-sensitive. The switches, unless noted as optional, are required to run the scenario. You can use more than one optional switch.
 
 |Switch \<parameter\>|Details|Required/Optional|
 |---|---|---|
-|`-DisplayEULA <file path>`|Use the `-DisplayEULA` switch to display the EULA. You can save the EULA text to a file by specifying a path to the file with the switch.|Optional|
-|`-Help`|The `-Help` switch displays a link to online content for additional information. If you use the `-Help` switch along with other switches, it will override all the others except the `-?` switch.|Optional|
-|`-?`|Use the `-?` switch to display the functions of all the switches that are available for *SaRAcmd.exe*. If you use the `-?` switch along with other switches, it will override the others.|Optional|
+|`-S <scenarioname>`|Specify this switch and `OfficeSharedComputerScenario` as the value of the `scenarioname` parameter to run this scenario.|Required|
+|`-AcceptEula`|Specify this switch to accept the End User License Agreement (EULA) and run this scenario.|Required|
+|`-CloseOffice`|Specify this switch to close all Office apps that're running.|Required|
+|`-RemoveSCA`|Specify this switch to remove Shared Computer Activation (SCA) and configure non-SCA activation for Office.|Optional|
 
 ## Sample commands
 
-Here are sample combinations of switches to run this scenario:
+Here are some sample combinations of switches to run the Office Shared Computer Activation scenario:
 
 - Sample 1
 
-  To enable Shared Computer Activation (SCA) on the machine, run the following command from an elevated Command Prompt window:
+  To enable SCA on a computer, run the following command from an elevated Command Prompt window:
 
   ```console
   SaRAcmd.exe -S OfficeSharedComputerScenario -AcceptEula -CloseOffice
@@ -65,7 +57,7 @@ Here are sample combinations of switches to run this scenario:
 
 - Sample 2
 
-  To remove Shared Computer Activation (if it's enabled) and configure non-SCA activation for Office, run the following command from an elevated Command Prompt window:
+  To remove SCA if it's enabled, and configure non-SCA activation for Office, run the following command from an elevated Command Prompt window:
 
   ```console
   SaRAcmd.exe -S OfficeSharedComputerScenario -AcceptEula -CloseOffice -RemoveSCA
@@ -73,7 +65,7 @@ Here are sample combinations of switches to run this scenario:
 
 ## Detected conditions and results
 
-When you run a scenario by using the Enterprise version of the Assistant, you don't receive any prompts. It's a different experience from the full version of the Assistant. The following table describes the actions that the Enterprise version of the Assistant takes for each condition encountered by this scenario, and the corresponding output that it displays.
+When you run the Office Shared Computer Activation scenario by using the Enterprise version of the Assistant, you don't receive any prompts. It's a different experience from the full version of the Assistant. The following table describes the actions that the Enterprise version of the Assistant takes for each condition encountered by this scenario, and the corresponding output that it displays.
 
 |Condition|Action taken by the Enterprise version|Output shown in the command prompt window|
 |---|---|---|
