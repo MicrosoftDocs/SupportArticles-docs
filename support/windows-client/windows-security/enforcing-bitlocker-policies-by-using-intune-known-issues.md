@@ -98,7 +98,7 @@ This issue can be resolved by verifying the configuration of the disk partitions
 
 #### Step 1: Verify the configuration of the disk partitions
 
-The procedures described in this section depend on the default disk partitions that Windows configures during installation. Windows 11 and Windows 10 automatically create a recovery partition that contains the **`Winre.wim`** file. The partition configuration resembles the following.
+The procedures described in this section depend on the default disk partitions that Windows configures during installation. Windows 11 and Windows 10 automatically create a recovery partition that contains the *Winre.wim* file. The partition configuration resembles the following.
 
 ![Screenshot of the default disk partitions, including the recovery partition.](media/enforcing-bitlocker-policies-by-using-intune-known-issues/disk-partition-configuration.png)
 
@@ -135,7 +135,7 @@ reagentc.exe /enable
 
 #### Step 3: Verify the Windows Boot Loader configuration
 
-If the partition status is healthy, but the **`reagentc.exe /enable`** command results in an error, verify whether the Windows Boot Loader contains the recovery sequence GUID by running the following command in an elevated Command Prompt window:
+If the partition status is healthy, but the *reagentc.exe /enable* command results in an error, verify whether the Windows Boot Loader contains the recovery sequence GUID by running the following command in an elevated Command Prompt window:
 
 ```cmd
 bcdedit.exe /enum all

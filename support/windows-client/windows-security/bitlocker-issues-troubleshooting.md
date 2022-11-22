@@ -37,7 +37,7 @@ Additionally, review the **Windows Logs** > **System** log for events that were 
 
 To filter and display or export logs, the [wevtutil.exe](/windows-server/administration/windows-commands/wevtutil) command-line tool or the [Get-WinEvent](/powershell/module/microsoft.powershell.diagnostics/get-winevent?view=powershell-6&preserve-view=true) PowerShell cmdlet can be used.
 
-For example, to use `wevtutil.exe` to export the contents of the operational log from the BitLocker-API folder to a text file that is named `BitLockerAPIOpsLog.txt`, open a Command Prompt window, and run the following command:
+For example, to use *wevtutil.exe* to export the contents of the operational log from the BitLocker-API folder to a text file that is named *BitLockerAPIOpsLog.txt*, open a Command Prompt window, and run the following command:
 
 ```cmd
 wevtutil.exe qe "Microsoft-Windows-BitLocker/BitLocker Operational" /f:text > BitLockerAPIOpsLog.txt
@@ -116,9 +116,9 @@ Open an elevated Windows PowerShell window, and run each of the following comman
 
 Common settings that can cause issues for BitLocker include the following scenarios:
 
-- The TPM must be unlocked. Check the output of the **`get-tpm`** PowerShell cmdlet command for the status of the TPM.
+- The TPM must be unlocked. Check the output of the *get-tpm* PowerShell cmdlet command for the status of the TPM.
 
-- Windows RE must be enabled. Check the output of the **`reagentc.exe`** command for the status of WindowsRE.
+- Windows RE must be enabled. Check the output of the *reagentc.exe* command for the status of WindowsRE.
 
 - The system-reserved partition must use the correct format.
 

@@ -80,7 +80,7 @@ Consider the following scenario:
 
 ### Cause of not being able to access the volume after BitLocker encryption on a Hyper-V Gen 2 VM
 
-This issue occurs because the third-party filter driver `Stcvsm.sys` (from StorageCraft) is installed on the VM.
+This issue occurs because the third-party filter driver *Stcvsm.sys* (from StorageCraft) is installed on the VM.
 
 ### Resolution for not being able to access the volume after BitLocker encryption on a Hyper-V Gen 2 VM
 

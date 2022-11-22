@@ -51,9 +51,9 @@ You can use either of the following methods to manually back up or synchronize a
 
    For example, to back up all of the recovery information for the C: drive to AD DS, open an elevated Command Prompt window and run the following command:
 
-   ```cmd
+   ***cmd
    manage-bde.exe -protectors -adbackup C:
-   ```
+   ***
 
 > [!NOTE]
 > BitLocker does not automatically manage this backup process.  
@@ -64,16 +64,16 @@ Consider the following scenario:
 
 BitLocker recovery needs to be tested on a tablet or slate device by running the following command:
 
-```cmd
+***cmd
 manage-bde.exe -forcerecovery
-```
+***
 
 However, after entering the recovery password, the device can't start.
 
 ### Cause of tablet devices don't support using `manage-bde.exe -forcerecovery` to test recovery mode
 
 > [!IMPORTANT]
-> Tablet devices do not support the **`manage-bde.exe -forcerecovery`** command.
+> Tablet devices do not support the `manage-bde.exe -forcerecovery` command.
 
 This issue occurs because the Windows Boot Manager can't process touch-input during the pre-boot phase of startup. If Boot Manager detects that the device is a tablet, it redirects the startup process to the Windows Recovery Environment (WinRE), which can process touch-input.
 
@@ -94,7 +94,6 @@ To resolve the restart loop, follow these steps:
    ```cmd
    manage-bde.exe -unlock C: -rp <48-digit BitLocker recovery password>
    manage-bde.exe -protectors -disable C:
-
    ```
 
 4. Close the Command Prompt window.
@@ -303,11 +302,11 @@ If the device is already in this state, Windows can be successfully started afte
 
 5. In the Command Prompt window, run the following commands:
 
-   ```cmd
+   ***cmd
    manage-bde.exe -unlock c: -rp <48 digit numerical recovery password separated by "-" in 6 digit group>
    manage-bde.exe -protectors -disable c:
    exit
-   ```
+   ***
 
    These commands unlock the drive and then suspend BitLocker by disabling the TPM protectors on the drive. The final command closes the Command Prompt window.
 
@@ -318,18 +317,18 @@ If the device is already in this state, Windows can be successfully started afte
 
 7. After Windows has started, open an elevated Command Prompt window and run the following command:
 
-   ```cmd
+   ***cmd
    manage-bde.exe -protectors -enable c:
-   ```
+   ***
 
 > [!IMPORTANT]
 > Unless BitLocker is suspended before restarting the device, this issue recurs.
 
 To temporarily suspend BitLocker just before restarting the device, open an elevated Command Prompt window and run the following command:
 
-```cmd
+***cmd
 manage-bde.exe -protectors -disable c: -rc 1
-```
+***
 
 ### Resolution
 
