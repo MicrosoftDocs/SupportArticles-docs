@@ -59,11 +59,10 @@ Additionally, you may also notice blocking when you view various dynamic managem
 
 This problem occurs if a large number of `ATTRIBUTE_LIST_ENTRY` instances are needed to maintain a heavily fragmented file in NFTS.   If the space is next to a cluster that is already tracked by the file system, then the attributes are compressed into a single entry.  However, if the space is fragmented, it has to be tracked with multiple attributes. Thus, heavy file fragmentation can lead to attribute exhaustion and the resulting 665 error. This behavior is explained in the following KB article: [A heavily fragmented file in an NTFS volume may not grow beyond a certain size](https://support.microsoft.com/help/967351)
 
-The sparse files created by SQL Server for the database snapshots can get fragmented to these levels when large amounts of data modifications happen for the life of these snapshot files.
+Both regular and sparse files created by SQL Server or other applications can get fragmented to these levels when large amounts of data modifications happen for the life of these snapshot files.
 
 For a complete background of how SQL Server Engine uses NTFS sparse files and alternate data streams, refer to the [Usage of sparse files section](#usage-of-sparse-files-in-sql-server-databases).
 
-Regular database files may also be affected by heavy fragmentation.
 
 ## Resolution
 
@@ -74,13 +73,13 @@ Regular database files may also be affected by heavy fragmentation.
 1. Place the database files on an [Resilient File System (ReFS)](/windows-server/storage/refs/refs-overview) volume, which doesn't have the same `ATTRIBUTE_LIST_ENTRY` limits that NTFS presents. You must reformat the current NTFS volume using ReFS. Using ReFS may be the best long-term solution to deal with this issue. 
 
    > [!NOTE]
-   > SQL Server 2012 and earlier versions used named [file streams](/windows/win32/fileio/file-streams) instead of sparce files to create CHECKDB snapshots. ReFS does not support file streams. Running DBCC CHECKDB on SQL Server 2012 files placed on ReFS may result in errors. For more information, see the Note in How (DBCC CHECKDB creates an internal snapshot database beginning with SQL Server 2014](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql#how-dbcc-checkdb-creates-an-internal-snapshot-database-beginning-with-sql-server-2014)
+   > SQL Server 2012 and earlier versions used named [file streams](/windows/win32/fileio/file-streams) instead of sparse files to create CHECKDB snapshots. ReFS does not support file streams. Running DBCC CHECKDB on SQL Server 2012 files placed on ReFS may result in errors. For more information, see the note in [How DBCC CHECKDB creates an internal snapshot database beginning with SQL Server 2014](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql#how-dbcc-checkdb-creates-an-internal-snapshot-database-beginning-with-sql-server-2014)
 
-1. Defragment the volume where the database files reside.  Be sure your defragmentation utility is transactional; see [Precautions when you defragment SQL Server database drives and Recommendations](defragmenting-database-disk-drives.md). You must shut SQL Server down to perform this operation on the files. Defragmentation works differently on SSD media and typically doesn't address the problem. Copying the file(s) and allowing the SSD firmware to repack the physical storage is often a better solution. For more information, see [Operating System Error (665 - File System Limitation) Not just for DBCC Anymore](/archive/blogs/psssql/operating-system-error-665-file-system-limitation-not-just-for-dbcc-anymore).
+1. De-fragment the volume where the database files reside.  Be sure your defragmentation utility is transactional; see [Precautions when you defragment SQL Server database drives and Recommendations](defragmenting-database-disk-drives.md). You must shut SQL Server down to perform this operation on the files. Defragmentation works differently on SSD media and typically doesn't address the problem. Copying the file(s) and allowing the SSD firmware to repack the physical storage is often a better solution. For more information, see [Operating System Error (665 - File System Limitation) Not just for DBCC Anymore](/archive/blogs/psssql/operating-system-error-665-file-system-limitation-not-just-for-dbcc-anymore).
 
-1. File copy - performing a copy of the file may allow better space acquisition because the bytes may be tightly packed together in the process. Copying the file may reduce attribute usage and may prevent the OS error 665.
+1. File copy - performing a copy of the file may allow better space acquisition because the bytes may be tightly packed together in the process. Copying the file may reduce attribute usage and may prevent the OS error 665. One way to resolve the issue is to copy one or more database files to another drive which will pack the file bytes together. You may leave the file on the new volume or copy it back to the original volume.  
 
-1. Adjust the auto [growth increment](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options#:~:text=to%20FILESTREAM%20filegroups.-,growth_increment%20Is,-the%20amount%20of) database setting to acquire sizes conducive for production performance and packing of NTFS attributes. The less frequent the auto growths occurrences and the larger the growth increment size, the less likely is the possibility of file fragmentation.
+1. Database Auto-grow settings: Adjust the auto [growth increment](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options#:~:text=to%20FILESTREAM%20filegroups.-,growth_increment%20Is,-the%20amount%20of) database setting to acquire sizes conducive for production performance and packing of NTFS attributes. The less frequent the auto growths occurrences and the larger the growth increment size, the less likely is the possibility of file fragmentation.
 
 1. Format the NTFS volume by using the **/L** option to obtain large FRS. This may provide relief of this problem because it makes the ATTRIBUTE_LIST_ENTRY larger. This may not be helpful when using DBCC CHECKDB because the latter creates a sparse file for the database snapshot.
 
@@ -93,9 +92,9 @@ Regular database files may also be affected by heavy fragmentation.
 
 1. If you're performing database backups across many files (stripe set), carefully plan number of files, MAXTRANSFERSIZE and BLOCKSIZE (see [BACKUP](/sql/t-sql/statements/backup-transact-sql)). The goal is to reduce the fragments on the file system. You may consider striping the files across multiple volumes for faster performance and reduction of fragmentation.
 
-1. If you're using BCP to write multiple files simultaneously, adjust utility write sizes, for example increase the BCP batch size. Also if consider writing multiple streams to different volumes to avoid fragmentation, or reduce the number of parallel writes.
+1. If you're using BCP to write multiple files simultaneously, adjust utility write sizes, for example increase the BCP batch size. Also consider writing multiple streams to different volumes to avoid fragmentation, or reduce the number of parallel writes.
 
-## More information: 
+## More information:
 
 ### Usage of sparse files in SQL Server databases
 
