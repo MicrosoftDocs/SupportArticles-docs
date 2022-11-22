@@ -7,5 +7,65 @@
           href: general-ledger/ledger-adjustments-troubleshoot.md
     - name: Tax
       items:
-        - name: Error 400 or 401 when setting Dataverse virtual table visibility
-          href: tax/cannot-set-dataverse-virtual-table-visibility.md
+        - name: Tax Calculation service
+          items:
+            - name: Error 400 or 401 when setting Dataverse virtual table visibility
+              href: tax/cannot-set-dataverse-virtual-table-visibility.md
+            - name: '"Failed to access tax service" error'
+              href: tax/tcs-troubleshooting-failed-access-tax-service.md
+            - name: How to enable debug mode in Tax Calculation
+              href: tax/tcs-troubleshooting-enable-debug-mode.md
+            - name: '"No matching result could be found" error'
+              href: tax/tcs-troubleshooting-no-matching-result.md
+            - name: Tax features list is empty in Tax calculation parameters
+              href: tax/tcs-troubleshooting-tax-feature-list-empty-tax-calculation-parameter.md
+            - name: '"Tax code cannot be determined" error'
+              href: tax/tcs-troubleshooting-tax-code-cannot-be-determined.md
+        - name: Sales tax
+          items:
+            - name: Incorrect field value in TaxTrans
+              href: tax/sales-tax-troubleshooting-field-value-taxtrans-incorrect.md
+            - name: Tax isn't calculated or the tax amount is zero
+              href: tax/sales-tax-troubleshooting-tax-not-calculated-amount-zero.md
+            - name: Tax calculation performance affects transactions
+              href: tax/sales-tax-troubleshooting-tax-calculation-bad-performance.md
+            - name: TaxTrans record isn't created
+              href: tax/sales-tax-troubleshooting-taxtrans-record-not-generated.md
+            - name: Tax is posted to the wrong ledger account in the voucher
+              href: tax/sales-tax-troubleshooting-tax-posted-to-wrong-ledger-account.md
+            - name: Voucher isn't created on Voucher transactions
+              href: tax/sales-tax-troubleshooting-voucher-not-generated.md
+        - name: India
+          items:
+            - name: Activating the setoff rule takes a long time
+              href: tax/apac-ind-gst-troubleshooting-setoff-rule-activate-take-long-time.md
+            - name: Default value in tax information fields isn't as expected
+              href: tax/apac-ind-gst-troubleshooting-default-value-in-tax-information-not-expected.md
+            - name: Field values are incorrect on the GSTR report
+              href: tax/apac-ind-gst-troubleshooting-field-value-incorrect-gstr-report-result.md
+            - name: Field value is incorrect in an invoice journal or voucher
+              href: tax/apac-ind-gst-troubleshooting-invoice-journal-wrong.md
+            - name: How to open the designer for the current tax configuration
+              href: tax/apac-ind-gst-troubleshooting-open-designer-current-used-tax-configuration.md
+            - name: Ledger account in the voucher is incorrect
+              href: tax/apac-ind-gst-troubleshooting-ledger-account-voucher-wrong.md
+            - name: Records and fields don't show on the GSTR report
+              href: tax/apac-ind-gst-troubleshooting-records-fields-not-showing-gstr-report.md
+            - name: Setoff rule error when running a tax settlement
+              href: tax/apac-ind-gst-troubleshooting-setoff-rule-error-transactions-on-voucher-not-balance.md
+            - name: Troubleshoot issues with tax engine (GTE)
+              href: tax/troubleshoot-tax-engine-gte-issues.md
+            - name: The calculated tax amount is incorrect
+              href: tax/apac-ind-gst-troubleshooting-tax-amount-wrong-after-calculation.md
+            - name: Tax configuration errors
+              href: tax/apac-ind-gst-troubleshooting-tax-configuration-errors.md
+            - name: Tax isn't calculated on tax documents
+              href: tax/apac-ind-gst-troubleshooting-tax-not-calculated.md
+            - name: TaxTrans or voucher isn't generated
+              href: tax/apac-ind-gst-troubleshooting-taxtrans-or-voucher-not-generated.md
+            - name: Tax transaction ID is incorrect
+              href: tax/apac-ind-gst-troubleshooting-tax-transaction-id-incorrect.md
+    - name: Budgeting
+      items:
+        - name: Frequently asked questions about position budgeting
+          href: budgeting/position-budgeting-set-up-issues.md
