@@ -190,6 +190,9 @@ There are three typical causes for this issue.
 **Resolution:** To fix this issue, sign out, and then log back on to see the migrated desktop background.
 
 <!--- 
+
+REMOVING THIS SECTION SINCE IT ONLY PERTAINS TO WINDOWS VERSIONS THAT HAVE BEEN OUT OF SUPPORT FOR SEVERAL YEARS
+
 **Cause \#2:** If the source computer was running Windows® XP and the desktop background was stored in the *Drive*:\\WINDOWS\\Web\\Wallpaper folder—the default folder where desktop backgrounds are stored in Windows XP—the desktop background won't be migrated. Instead, the destination computer will have the default Windows® desktop background. This issue will occur even if the desktop background was a custom picture that was added to the \\WINDOWS\\Web\\Wallpaper folder. However, if the end user sets a picture as the desktop background that was saved in another location, for example, My Pictures, then the desktop background will migrate.
 
 **Resolution:** Ensure that the desktop background images that you want to migrate aren't in the \\WINDOWS\\Web\\Wallpaper folder on the source computer.
