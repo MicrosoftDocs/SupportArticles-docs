@@ -11,21 +11,21 @@ metadata:
 productDirectory:
   items:
   - title: Windows Server
-    imageSrc: "../media/hub-landing/windows.svg"
+    imageSrc: "media/hub-landing/windows-logo.png"
     summary: Troubleshooting articles for Windows Server
     url: ../windows-server/welcome-windows-server.yml
 
   - title: Windows Client
-    imageSrc: "../media/hub-landing/windows.svg"
+    imageSrc: "media/hub-landing/windows-logo.png"
     summary: Troubleshooting articles for Windows clients
     url: ../windows-client/welcome-windows-client.yml
     
   - title:  Application Developer
-    imageSrc: "../media/hub-landing/windows.svg"
+    imageSrc: "media/hub-landing/windows-logo.png"
     summary: Troubleshooting articles for Windows application developers
     url: win32/welcome-windowsdeveloper.md
 
   - title:  Hardware Developer
-    imageSrc: "../media/hub-landing/windows.svg"
+    imageSrc: "media/hub-landing/windows-logo.png"
     summary: Troubleshooting articles for Windows hardware developers
     url: ../windows-hardware/drivers/welcome-windowshardware.md
