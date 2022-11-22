@@ -5,7 +5,7 @@ ms.reviewer: dougeby
 manager: dcscontentpm
 ms.author: aaroncz
 ms.prod: windows-client
-ms.date: 08/18/2022
+ms.date: 11/22/2022
 author: aczechowski
 ms.topic: troubleshooting
 ms.technology: windows-client-deployment

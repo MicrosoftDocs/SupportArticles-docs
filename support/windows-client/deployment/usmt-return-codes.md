@@ -6,7 +6,7 @@ manager: dcscontentpm
 ms.author: aaroncz
 ms.prod: windows-client
 author: aczechowski
-ms.date: 08/18/2022
+ms.date: 11/22/2022
 ms.topic: troubleshooting
 ms.technology: windows-client-deployment
 ms.custom: sap:usmt, csstroubleshoot
