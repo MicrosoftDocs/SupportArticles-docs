@@ -80,7 +80,7 @@ Regular database files may also be affected by heavy fragmentation.
 
 1. File copy - performing a copy of the file may allow better space acquisition because the bytes may be tightly packed together in the process. Copying the file may reduce attribute usage and may prevent the OS error 665.
 
-1. Adjust the auto [growth increment](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options?view=sql-server-ver15#:~:text=to%20FILESTREAM%20filegroups.-,growth_increment%20Is,-the%20amount%20of) database setting to acquire sizes conducive for production performance and packing of NTFS attributes. The less frequent the auto growths occurrences and the larger the growth increment size, the less likely is the possibility of file fragmentation.
+1. Adjust the auto [growth increment](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options#:~:text=to%20FILESTREAM%20filegroups.-,growth_increment%20Is,-the%20amount%20of) database setting to acquire sizes conducive for production performance and packing of NTFS attributes. The less frequent the auto growths occurrences and the larger the growth increment size, the less likely is the possibility of file fragmentation.
 
 1. Format the NTFS volume by using the **/L** option to obtain large FRS. This may provide relief of this problem because it makes the ATTRIBUTE_LIST_ENTRY larger. This may not be helpful when using DBCC CHECKDB because the latter creates a sparse file for the database snapshot.
 
