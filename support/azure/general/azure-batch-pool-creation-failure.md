@@ -1,7 +1,7 @@
 ---
 title: Azure batch pool creation failure
 description: An Azure batch pool creation failure occurs. You can review the symptoms, understand the causes, and apply solutions to this problem.
-ms.date: 22/11/2022
+ms.date: 11/22/2022
 author: AmandaAZ
 ms.author: v-weizhu
 ms.reviewer: biny
@@ -85,7 +85,7 @@ In this section, assume that the Batch account endpoint is "testbatchdoc.eastus2
 
     1. Select the private endpoint.
 
-        :::image type="content" source="media/azure-batch-pool-creation-failure/select-private-endpoint.png" alt-text="Screenshot of the private endpoint.":::
+        :::image type="content" source="media/azure-batch-pool-creation-failure/select-private-endpoint.png" alt-text="Screenshot of selecting the private endpoint.":::
 
     2. Navigate to the DNS configuration of the private endpoint and find the private IP address of the FQDN "testbatchdoc.eastus2.batch.azure.com".
 
@@ -99,7 +99,7 @@ In this section, assume that the Batch account endpoint is "testbatchdoc.eastus2
 
         Here is a command output example:
 
-        :::image type="content" source="media/azure-batch-pool-creation-failure/nslookup-command-output.png" alt-text="Screenshot of the nslookup command output.":::
+        :::image type="content" source="media/azure-batch-pool-creation-failure/nslookup-command-output.png" alt-text="Screenshot of the first nslookup command output.":::
 
         The command output indicates that the FQDN doesn't resolve to the private IP address 10.2.0.15. It means that no private DNS zone is configured for the private endpoint.
 
@@ -115,7 +115,7 @@ In this section, assume that the Batch account endpoint is "testbatchdoc.eastus2
 
     Here is a command output example.
 
-    :::image type="content" source="media/azure-batch-pool-creation-failure/second-nslookup-command-output.png" alt-text="Screenshot of the nslookup command output.":::
+    :::image type="content" source="media/azure-batch-pool-creation-failure/second-nslookup-command-output.png" alt-text="Screenshot of the second nslookup command output.":::
 
     The command output indicates that the FQDN is resolved to the private IP address. Now, the Batch connectivity for the pool creation should be allowed.
 
@@ -209,6 +209,6 @@ If your Batch account is located in the following regions, to use the pool witho
 - Government: USGov Arizona, USGov Virginia, USGov Texas.
 - China: China North 3.
 
-Once you enable the simplified compute node communication mode, [create a simplified compute node communication pool without public IP addresses](2/azure/batch/simplified-node-communication-pool-no-public-ip). It will have the same functionalities as the pool without public IP addresses, but the simplified compute node communication mode can support more regions.
+Once you enable the simplified compute node communication mode, [create a simplified compute node communication pool without public IP addresses](/azure/batch/simplified-node-communication-pool-no-public-ip). It will have the same functionalities as the pool without public IP addresses, but the simplified compute node communication mode can support more regions.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
