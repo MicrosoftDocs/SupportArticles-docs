@@ -25,7 +25,7 @@ ms.date: 11/23/2022
 
 When you select a Microsoft Teams meeting link in Microsoft Outlook to join a meeting, Outlook opens a page in your browser that provides multiple options to join the meeting. If you have the Teams desktop app installed on your computer, and you want to use the app to join all Teams meetings, you can set your meeting preference so that Outlook opens the meeting directly in the Teams app instead of asking for your preference each time.
 
-## Set the Teams meeting preference in your browser
+## Set your Teams meeting preference in the browser
 
 1. Select the **Join Online** button in the Microsoft Outlook meeting reminder or select **Click here to join the meeting** in your email invitation.
 
@@ -33,7 +33,7 @@ When you select a Microsoft Teams meeting link in Microsoft Outlook to join a me
 
 The browser will store your preference and open the meeting in your Teams desktop app. For all future Teams meetings, Outlook will send your meeting join request to the Teams desktop app when you select the meeting link.
 
-## Set the Teams meeting preference in the Windows registry
+## Set your Teams meeting preference in the Windows registry
 
 Use this method if you can't set your Teams meeting preference in the browser, or if you want to set the preference on behalf of your users.
 
