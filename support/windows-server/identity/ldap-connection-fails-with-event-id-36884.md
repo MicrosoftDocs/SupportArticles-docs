@@ -13,7 +13,7 @@ ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot
 
 This article introduces how to troubleshoot event ID 36884 issue that occurs when you try to build a Lightweight Directory Access Protocol (LDAP) connection.
 
-## Symptoms
+## Issue scenario and event log
 
 Consider the following scenario:
 
@@ -46,7 +46,7 @@ The SSPI client process is ldp (PID: 5148).
 
 LDAP is looking for myldapserver.contoso.com to be associated with it. However, myldapserver.contoso.com isn't covered by the SAN entries. Therefore, a server name match isn't made and the connection is dropped.
 
-## Resolutions
+## How to fix the issue
 
 To fix this issue, use one of the following solutions:
 
