@@ -17,7 +17,7 @@ ms.date: 10/25/2022
 ---
 # Scenario: Reset Office Activation
 
-The Reset Office Activation scenario automates all of the checks and scripts that are described and provided in [Reset activation state for Microsoft 365 Apps for enterprise](/office/troubleshoot/activation/reset-office-365-proplus-activation-state).
+The Reset Office Activation scenario automates all of the checks described and scripts provided in [Reset activation state for Microsoft 365 Apps for enterprise](/office/troubleshoot/activation/reset-office-365-proplus-activation-state).
 
 This scenario isn't available in the full version of the Assistant.
 
@@ -25,7 +25,7 @@ This scenario isn't available in the full version of the Assistant.
 
 ## Download the Enterprise version of the Assistant
 
-Download the Assistant by selecting the button below:
+Select the following button:
 
 > [!div class="nextstepaction"]
 > [Download the Assistant](https://aka.ms/SaRA_EnterpriseVersionFiles)
@@ -54,7 +54,7 @@ Here is a sample combination of switches to run this scenario:
 
 ## Detected conditions and results
 
-When you run the Reset Office Activation scenario by using the Enterprise version of the Assistant, you don't receive any prompts. It's a different experience from the full version of the Assistant. The following table describes the actions that the Enterprise version of the Assistant takes for each condition encountered by this scenario, and the corresponding output that it displays.
+When you run the Reset Office Activation scenario by using the Enterprise version of the Assistant, you don't receive any prompts. The following table describes the actions that the Assistant takes for each condition encountered by this scenario, and the corresponding output that it displays.
 
 > [!div class="mx-tdBreakAll"]
 > |Condition|Action taken by the Enterprise version|Output shown in the command prompt window|
