@@ -164,15 +164,15 @@ To collect simultaneous network traces, open elevated Command Prompt windows on 
 
 On the client, run the following command:
 
-  ```console
-  Netsh trace start scenario=netconnection capture=yes tracefile=c:\client_nettrace.etl maxsize=512 overwrite=yes report=yes
-  ```
+```console
+Netsh trace start scenario=netconnection capture=yes tracefile=c:\client_nettrace.etl maxsize=512 overwrite=yes report=yes
+```
 
-- On the server, run the following command:
+On the server, run the following command:
 
-  ```console
-  Netsh trace start scenario=netconnection capture=yes tracefile=c:\server_nettrace.etl maxsize=512 overwrite=yes report=yes
-  ```
+```console
+Netsh trace start scenario=netconnection capture=yes tracefile=c:\server_nettrace.etl maxsize=512 overwrite=yes report=yes
+```
 
 Now try to reproduce your issue from the client computer. Afterwards, run the following command at both command prompts to stop the traces:
 
