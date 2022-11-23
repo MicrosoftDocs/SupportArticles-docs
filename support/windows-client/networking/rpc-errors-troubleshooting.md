@@ -218,11 +218,11 @@ Before you contact Microsoft support, we recommend that you gather information a
 
 ### Prerequisites
 
-These procedures use the [TroubleShootingScript Version 2 (TSSv2)](./windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2) toolset. To use this toolset, you have to be aware of the following prerequisites:
+These procedures use the [TroubleShootingScript Version 2 (TSSv2)](/windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2) toolset. To use this toolset, you have to be aware of the following prerequisites:
 
 - You have to have Administrator-level permission on the local computer.
 - The first time that you run the toolset you have to accept a EULA.
-- Make sure that the Windows PowerShell script execution policy for the computer is set to `RemoteSigned`. For more information about PowerShell execution policy, see [about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2).
+- Make sure that the Windows PowerShell script execution policy for the computer is set to `RemoteSigned`. For more information about PowerShell execution policy, see [about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
   > [!NOTE]  
   > If your environment prevents you from using `RemoteSigned` at the computer level, you can temporarily set it at the process level. To do this, run the following cmdlet before you start the tool in an elevated Powershell Command Prompt window:
