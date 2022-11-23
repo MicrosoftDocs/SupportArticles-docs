@@ -17,40 +17,32 @@ ms.date: 10/25/2022
 ---
 # Scenario: Outlook Scan
 
-The Outlook Scan scenario scans and creates a detailed report of Outlook, Office, Windows and mailbox configurations.
+The Outlook Scan scenario scans and creates a detailed report about Microsoft Outlook, Microsoft Office, Windows, and mailbox configurations.
 
-In the full version of the Assistant, the equivalent scenario entry point is *Advanced diagnostics \ Outlook \ Create a detailed report of my Outlook, Office, Windows, and mailbox configuration*.
+In the full version of the Assistant, the equivalent entry point for the scenario is *Advanced diagnostics \ Outlook \ Create a detailed report of my Outlook, Office, Windows, and mailbox configuration*.
 
 **Note** This scenario doesn't require an elevated command prompt.
 
-## Download the Assistant
+## Download the Enterprise version of the Assistant
 
-Download the Assistant by selecting the button below:
+Select the following button:
 
 > [!div class="nextstepaction"]
-> [Download the Assistant (Enterprise version)](https://aka.ms/SaRA_EnterpriseVersionFiles)
+> [Download the Assistant](https://aka.ms/SaRA_EnterpriseVersionFiles)
 
 For complete details about how to run the Enterprise version of the Assistant, see [Enterprise version of Microsoft Support and Recovery Assistant](sara-command-line-version.md).
 
-## Available switches for this scenario
+## Available switches for the Outlook Scan scenario
 
 The following switches are available for this scenario. They aren't case-sensitive. The switches, unless noted as optional, are required to run the scenario. And more than one optional switch can be used.
 
 |Switch \<parameter\>|Details|Required/Optional|
 |---|---|---|
-|`-S <scenarioname>`|Use the `-S` switch to specify the scenario that you want to run. For the Outlook Scan scenario, use `ExpertExperienceAdminTask` as the value of `scenarioname`.|Required|
-|`-AcceptEula`|The End User License Agreement (EULA) must be accepted before a scenario can be run.|Required|
-|`-LogFolder <Output Path>`|The `-LogFolder` switch forces *SaraCmd.exe* to output scenario-specific logs to the folder that's specified by \<Output Path\>.|Optional|
-|`-HideProgress`|The `-HideProgress` switch hides the progress display for this scenario. The default feature of the Assistant is to always display the progress of tasks in the console.|Optional|
-|`-OfflineScan`|This switch forces Outlook to be scanned as an offline scan while the Outlook application is running.|Optional|
-
-The following switches are available for all scenarios.
-
-|Switch \<parameter\>|Details|Required/Optional|
-|---|---|---|
-|`-DisplayEULA <file path>`|Use the `-DisplayEULA` switch to display the EULA. You can save the EULA text to a file by specifying a path to the file with the switch.|Optional|
-|`-Help`|The `-Help` switch displays a link to online content for additional information. If you use the `-Help` switch along with other switches, it will override all the others except the `-?` switch.|Optional|
-|`-?`|Use the `-?` switch to display the functions of all the switches that are available for *SaRAcmd.exe*. If you use the `-?` switch along with other switches, it will override the others.|Optional|
+|`-S <scenarioname>`|Specify this switch and `ExpertExperienceAdminTask` as the value for the `scenarioname` parameter to run this scenario.|Required|
+|`-AcceptEula`|Specify this switch to accept the End User License Agreement (EULA) and run this scenario.|Required|
+|`-LogFolder <Output Path>`|Specify this switch to force *SaraCmd.exe* to output scenario-specific logs to the folder that's specified by the `<Output Path>` parameter.|Optional|
+|`-HideProgress`|Specify this switch to hide the progress display for this scenario. The default feature of the Assistant is to always display the progress of tasks in the console.|Optional|
+|`-OfflineScan`|Specify this switch to perform an offline scan of Outlook while the Outlook application is running.|Optional|
 
 ## Sample commands
 
@@ -90,7 +82,7 @@ Here are some sample combinations of switches to run this scenario:
 
 ## Detected conditions and results
 
-When you run a scenario by using the Enterprise version of the Assistant, you don't receive any prompts. It's a different experience from the full version of the Assistant. The following table describes the actions that the Enterprise version of the Assistant takes for each condition encountered by this scenario, and the corresponding output that it displays.
+When you run the Outlook Scan scenario by using the Enterprise version of the Assistant, you don't receive any prompts. It's a different experience from the full version of the Assistant. The following table describes the actions that the Enterprise version of the Assistant takes for each condition encountered by this scenario, and the corresponding output that it displays.
 
 |Condition|Action taken by the Enterprise version|Output shown in the command prompt window|
 |---|---|---|
