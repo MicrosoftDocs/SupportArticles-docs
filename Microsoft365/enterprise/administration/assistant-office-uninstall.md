@@ -44,7 +44,7 @@ The following switches are available for this scenario. They aren't case-sensiti
 
 ## Sample commands
 
-Here are some sample combination of switches to run this scenario:
+Here are some sample combinations of switches to run this scenario:
 
 - Sample 1
 
