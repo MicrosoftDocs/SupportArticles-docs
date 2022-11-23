@@ -69,7 +69,7 @@ When you run the Office Activation scenario by using the Enterprise version of t
 
 |Condition|Action taken by the Enterprise version|Output shown in the command prompt window|
 |---|---|---|
-|User doesn't include the `-CloseOffice` switch|Exit the scenario|01: This scenario requires the `-CloseOffice` switch. Note, if Office is running, the `-CloseOffice` switch closes Office applications. For additional information, please visit [https://aka.ms/SaRA_CommandLineVersion](https://aka.ms/SaRA_CommandLineVersion).|
+|User didn't include the `-CloseOffice` switch|Exit the scenario|01: This scenario requires the `-CloseOffice` switch. Note, if Office is running, the `-CloseOffice` switch closes Office applications. For additional information, please visit [https://aka.ms/SaRA_CommandLineVersion](https://aka.ms/SaRA_CommandLineVersion).|
 |Office isn't installed|Exit the scenario|30: Could not find an installed version of Office |
 |Office subscription not found|Exit the scenario|31: Could not find a subscription version of Office. Please see [https://aka.ms/SaRA-Cmdline-NoSubscriptionFoun](https://aka.ms/SaRA-Cmdline-NoSubscriptionFound) for troubleshooting information.|
 |Device subscription detected.|Exit the scenario|32: Device subscription detected. See [https://aka.ms/SaRA_DeviceActivationDetectedCmd](https://aka.ms/SaRA_DeviceActivationDetectedCmd) for troubleshooting and configuration information.|
