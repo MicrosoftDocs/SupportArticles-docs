@@ -26,3 +26,4 @@ This behavior is by design.
 
 Teams has a caching scheme that is designed for capacity and performance optimization. The Teams service caches general user information for up to three days. The Teams client also caches general user information locally. Some data, such as display name and telephone number, can be cached up to 28 days in the client. Profile photos can be cached up to 60 days.
 
+To clear the cache and receive updated information, sign out of Teams, and then sign back in. Or, manually [clear Teams cache](/microsoftteams/troubleshoot/teams-administration/clear-teams-cache).

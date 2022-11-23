@@ -1,6 +1,6 @@
 ---
-title: SaRA command-line version
-description: Describes the command-line version of Microsoft Support and Recovery Assistant.
+title: SaRA Enterprise version
+description: Describes the Enterprise version of Microsoft Support and Recovery Assistant.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -17,13 +17,13 @@ appliesto:
 search.appverid: MET150
 ms.date: 4/26/2022
 ---
-# Command-line version of Microsoft Support and Recovery Assistant
+# Enterprise version of Microsoft Support and Recovery Assistant
 
-The command-line version of Microsoft Support and Recovery Assistant is a self-contained enterprise-ready diagnostic tool that you can use to troubleshoot specific client issues with Office, Teams, and Outlook. This verson of the Assistant runs either at a command line or through a script such as PowerShell. It is useful when administrators need to run the Assistant on computers in their organization remotely.
+The Enterprise version of Microsoft Support and Recovery Assistant is a self-contained enterprise-ready diagnostic tool that you can use to troubleshoot specific client issues with Office, Teams, Outlook and Advance Diagnostics. This version of the Assistant runs either at a command-line or through a script such as PowerShell. It is useful when administrators need to run the Assistant on computers in their organization remotely.
 
-## Download and run the command-line version of the Assistant
+## Download and run the Enterprise version of the Assistant
 
-1. Download the Assistant from [https://aka.ms/SaRA_CommandLineVersionFiles](https://aka.ms/SaRA_CommandLineVersionFiles) .
+1. Download the Assistant from [https://aka.ms/SaRA_EnterpriseVersionFiles](https://aka.ms/SaRA_EnterpriseVersionFiles) .
 1. In the downloaded .zip file, extract the files to a folder that you can access from the computer on which you'll run the Assistant.
 1. On the user's computer, select **Start**, enter *cmd*, and then press Enter to open a Command Prompt window.
 
@@ -33,7 +33,7 @@ The command-line version of Microsoft Support and Recovery Assistant is a self-c
 1. Run the command-line version of the Assistant by using one or more switches that are discussed in the "[Supported switches](#supported-switches)" section.
 
    > [!IMPORTANT]
-   > Updates to the command-line version of the Assistant are released on a regular basis. To make sure that you're using the latest version that has the most features and highest stability, each build of the application will stop working 90 days after the **Created** date listed for SaRAcmd.exe. Use the link provided in step 1 to download the latest version.
+   > Updates to the Enterprise version of the Assistant are released on a regular basis. To make sure that you're using the latest version that has the most features and highest stability, each build of the application will stop working 90 days after the **Created** date listed for SaRAcmd.exe. Use the link provided in step 1 to download the latest version.
 
 ## Supported switches
 
@@ -49,7 +49,7 @@ The following switches are available to control SaRAcmd.exe.
 
    Currently, the following values for `Scenarioname` are supported with the `-S` switch.
 
-   |`Scenarioname` value|Equivalent scenario entry point in the full (UI) version of SaRA (for reference)|Elevated Command Prompt window required|
+   |Scenarioname value|Equivalent scenario entry point in the full (UI) version of SaRA (for reference)|Elevated Command Prompt window required|
    |---|---|:-:|
    |`ExpertExperienceAdminTask`|Advanced Diagnostics \ Outlook| No |
    |`OfficeScrubScenario`|Office \ I have Office installed, but I'm having trouble uninstalling it| Yes |
@@ -139,13 +139,13 @@ The following switches are available to control SaRAcmd.exe.
 
     Use the `-?` switch to display the functions of all the switches that are available for SaRAcmd.exe. If you use `-?` together with other switches, `-?` will override the other switches.
 
-## Conditions addressed by the command-line scenarios
+## Conditions addressed by the Enterprise (command-line) version of SaRA
 
-When you run a scenario by using the command-line version of the Assistant, you receive no prompts. It is a different experience from the full version of the Assistant. The following table describes the actions that the command-line version of the Assistant takes, and the output that the tool displays for each condition within a scenario.
+When you run a scenario by using the Enterprise version of the Assistant, you receive no prompts. It is a different experience from the full version of the Assistant. The following table describes the actions that the Enterprise version of the Assistant takes, and the output that the tool displays for each condition within a scenario.
 
 - `ExpertExperienceAdminTask`
 
-  |Condition|Action taken by the command-line version|Output in the Command Prompt window|
+  |Condition|Action taken by the Enterprise version|Output in the Command Prompt window|
   |---|---|---|
   |Outlook isn't running|Run an Offline scan of Outlook|*01:* An Offline scan was performed because Outlook is either not running or it is running elevated (as Administrator). See \<filename> in *%localappdata%\saralogs\UploadLogs*.|
   |Outlook is running|Run a full scan of Outlook|*02:* A Full scan was performed. See \<filename> in *%localappdata%\saralogs\UploadLogs*.|
@@ -159,7 +159,7 @@ When you run a scenario by using the command-line version of the Assistant, you 
 
 - `OfficeScrubScenario`
 
-  |Condition|Action taken by the command-line version|Output shown in the command-prompt window|
+  |Condition|Action taken by the Enterprise version|Output shown in the command-prompt window|
   |---|---|---|
   |Office removed successfully|None|*00:* Successfully completed this scenario.</br></br>**Note:** We recommend you restart the computer to finish any remaining cleanup tasks.|
   |Office program found .exe files running: `lync, winword, excel, msaccess, mstore, infopath, setlang, msouc, ois, onenote, outlook, powerpnt, mspub, groove, visio, winproj, graph, teams`|Exit the scenario|*06:* Office programs are running. Please close all open Office programs and then rerun this scenario.|
@@ -172,7 +172,7 @@ When you run a scenario by using the command-line version of the Assistant, you 
   
 - `TeamsAddinScenario`
 
-  |Condition|Action taken by the command-line version|Output shown in the command-prompt window|
+  |Condition|Action taken by the Enterprise version|Output shown in the command-prompt window|
   |---|---|---|
   |Scan completed successfully|None|*00:* Scenario completed successfully. Please exit and restart Outlook.|
   |User doesn't include the `-CloseOutlook` switch|Exit the scenario|*01:* This scenario requires the -CloseOutlook switch. Note, if Outlook is running, the -CloseOutlook switch closes Outlook. For additional information, please visit [https://aka.ms/SaRA_CommandLineVersion](https://aka.ms/SaRA_CommandLineVersion)|
@@ -186,7 +186,7 @@ When you run a scenario by using the command-line version of the Assistant, you 
 
 - `OutlookCalendarCheckTask`
 
-  |Condition|Action taken by the command-line version|Output shown in the command-prompt window|
+  |Condition|Action taken by the Enterprise version|Output shown in the command-prompt window|
   |---|---|---|
   |Scan completed successfully |Exit the scenario|43: A complete Outlook Calendar scan was performed. See the Outlook configuration details at %localappdata%\saralogs\uploadlogs location.|
   |Scan completed successfully with custom location (-LogFolder)|Exit the scenario|43: A complete Outlook Calendar scan was performed. See the Outlook configuration details at the location specified by you. |
@@ -198,7 +198,7 @@ When you run a scenario by using the command-line version of the Assistant, you 
 
 - `OfficeActivationScenario`
 
-  |Condition|Action taken by the command-line version|Output shown in the command-prompt window|
+  |Condition|Action taken by the Enterprise version|Output shown in the command-prompt window|
   |---|---|---|
   |User doesn't include -CloseOffice switch|Exit the scenario| 01: This scenario requires the -CloseOffice switch. Note, if Office is running, the -CloseOffice switch closes Office applications. For additional information, please visit https://aka.ms/SaRA_CommandLineVersion.|
   |Office isn't installed|Exit the scenario| 30: Could not find an installed version of Office|
@@ -215,7 +215,7 @@ When you run a scenario by using the command-line version of the Assistant, you 
 
 - `OfficeSharedActivationScenario`
 
-  |Condition|Action taken by the command-line version|Output shown in the command-prompt window|
+  |Condition|Action taken by the Enterprise version|Output shown in the command-prompt window|
   |---|---|---|
   |Scan completed successfully|Exit the scenario| 63: Scenario completed successfully.  Please exit and restart Windows and sign back in as an end-user that needs to use Office.|
   |User doesn't include -CloseOffice switch|Exit the scenario| 01: This scenario requires the -CloseOffice switch. Note, if Office is running, the -CloseOffice switch closes Office applications. For additional information, please visit https://aka.ms/SaRA_CommandLineVersion.|
@@ -229,28 +229,30 @@ When you run a scenario by using the command-line version of the Assistant, you 
   
  - `ResetOfficeActivation`
 
-  |Condition|Action taken by the command-line version|Output shown in the command-prompt window|
+  |Condition|Action taken by the Enterprise version|Output shown in the command-prompt window|
   |---|---|---|
   |Scan completed successfully|Exit the scenario| 80: Successful run. Start any Office app and sign-in to activate.|
   |User doesn't include -CloseOffice switch|Exit the scenario|01: This scenario requires the -CloseOffice switch. Note, if Office is running, the -CloseOffice switch closes Office applications. For additional information, please visit https://aka.ms/SaRA_CommandLineVersion.|
   |Error performing any action(s)|Exit the scenario| 71: We ran into a problem. Please run the Office Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeActivation-Cmdline.|
   |Command-prompt not elevated|Exit the scenario| 72: The scenario requires an elevated command-prompt.|
-  |Failure to run the OLicenseCleanup script|Exit the scenario|73: We ran into a problem running OLicenseCleanup.vbs. See `https://docs.microsoft.com/office/troubleshoot/activation/reset-office-365-proplus-activation-state` for manual reset steps.|
-  |Failure running Dsregcmd|Exit the scenario| 74: We ran into a problem running Dsregcmd. See `https://docs.microsoft.com/office/troubleshoot/activation/reset-office-365-proplus-activation-state` for manual reset steps.|
-  |Windows build requirement not met|Exit the scenario| 75: Windows is not at least Windows 10 version 1803. See `https://docs.microsoft.com/office/troubleshoot/activation/reset-office-365-proplus-activation-state` for manual reset steps|
-  |Failure to run the SignOutOfWamAccounts script|Exit the scenario| 76: We ran into a problem running SignOutOfWamAccounts.ps1. See `https://docs.microsoft.com/office/troubleshoot/activation/reset-office-365-proplus-activation-state` for manual reset steps.|
-  |WPJCleanup script requirements not met|Exit the scenario| 78: WorkplaceJoined=True, but Windows 10 is not at least version 1809. See `https://docs.microsoft.com/office/troubleshoot/activation/reset-office-365-proplus-activation-state` for manual reset steps.|
-  |Failure to run the WPJCleanup script|Exit the scenario| 79: We ran into a problem running WPJCleanup. See `https://docs.microsoft.com/office/troubleshoot/activation/reset-office-365-proplus-activation-state` for manual reset steps.|
+  |Failure to run the OLicenseCleanup script|Exit the scenario|73: We ran into a problem running OLicenseCleanup.vbs. See `https://learn.microsoft.com/office/troubleshoot/activation/reset-office-365-proplus-activation-state` for manual reset steps.|
+  |Failure running Dsregcmd|Exit the scenario| 74: We ran into a problem running Dsregcmd. See `https://learn.microsoft.com/office/troubleshoot/activation/reset-office-365-proplus-activation-state` for manual reset steps.|
+  |Windows build requirement not met|Exit the scenario| 75: Windows is not at least Windows 10 version 1803. See `https://learn.microsoft.com/office/troubleshoot/activation/reset-office-365-proplus-activation-state` for manual reset steps|
+  |Failure to run the SignOutOfWamAccounts script|Exit the scenario| 76: We ran into a problem running SignOutOfWamAccounts.ps1. See `https://learn.microsoft.com/office/troubleshoot/activation/reset-office-365-proplus-activation-state` for manual reset steps.|
+  |WPJCleanup script requirements not met|Exit the scenario| 78: WorkplaceJoined=True, but Windows 10 is not at least version 1809. See `https://learn.microsoft.com/office/troubleshoot/activation/reset-office-365-proplus-activation-state` for manual reset steps.|
+  |Failure to run the WPJCleanup script|Exit the scenario| 79: We ran into a problem running WPJCleanup. See `https://learn.microsoft.com/office/troubleshoot/activation/reset-office-365-proplus-activation-state` for manual reset steps.|
 
 
-## SaRA command-line version history
+## SaRA Enterprise version history
 
-Throughout the year, a new build of the command-line version of the Assistant is available through the download link that's provided at the beginning of this article. Because each build stops working after 90 days, we recommend that you keep the Assistant updated by replacing the files you have with the latest version.
+Throughout the year, a new build of the Enterprise version of the Assistant is available through the download link that's provided at the beginning of this article. Because each build stops working after 90 days, we recommend that you keep the Assistant updated by replacing the files you have with the latest version.
 
 The following table lists the versions of SaRA that were released on the specified date.
 
-|Release date|SaRACmd.exe version|
+|Release date|SaRA Enterprise version|
 |----------|-----------|
+|October 28, 2022|17.00.9246.000 |
+|September 13, 2022|17.00.9001.001 |
 |July 8, 2022|17.00.8713.001 |
 |May 18, 2022|17.00.8433.005 |
 |April 7, 2022|17.00.8256.000|

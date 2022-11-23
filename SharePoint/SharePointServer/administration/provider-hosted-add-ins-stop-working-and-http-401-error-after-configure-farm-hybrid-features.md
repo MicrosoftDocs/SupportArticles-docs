@@ -11,6 +11,8 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
+  - SharePoint Server Subscription Edition
+  - SharePoint Server 2019
   - SharePoint Server 2016
   - SharePoint Server 2013
 ms.date: 3/31/2022

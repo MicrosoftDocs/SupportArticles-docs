@@ -1,5 +1,5 @@
 - name: Office Products Troubleshooting
-  href: ../office-client-welcome.md
+  href: ../office-client-welcome.yml
   items:
     - name: Access
       items:
@@ -451,6 +451,8 @@
           href: ../excel/data-collected-by-excel-support-diagnostic.md
         - name: Excel data doesn't retain formatting in mail merge
           href: ../excel/excel-data-not-retain-formatting-mail-merge.md  
+        - name: Excel workbook shows old property values
+          href: ../excel/excel-workbook-shows-old-property-values.md
         - name: Date format is incorrect when converting a CSV text file with macros
           href: ../excel/incorrect-date-format-converted-csv-file.md
         - name: Delete cells with a "For Each...Next" loop
@@ -863,7 +865,7 @@
           href: ../office-suite-issues/office-suite-setup-not-restart.md
         - name: Office End User License Agreement always appears
           href: ../office-suite-issues/office-end-user-license-agreement.md
-        - name: Office error “could not create the work file”
+        - name: Office error "could not create the work file"
           href: ../office-suite-issues/no-file-previews-file-explorer-switching-to-32-bit.md
         - name: Office files with RMS protection crash
           href: ../office-suite-issues/rms-protected-files-crash.md
@@ -1139,8 +1141,6 @@
           href: ../word/issues-when-start-or-use-word.md
         - name: Mail merge issue
           href: ../word/mail-merge-error.md
-        - name: Merge multiple Word documents into one
-          href: ../word/merge-word-documents.md
         - name: Object may not appear in Word 2010
           href: ../word/object-not-appear-in-word-2010.md
         - name: Operating parameter limitations and specifications

@@ -1,9 +1,9 @@
-- name: Hybrid Deployment Troubleshooting 
-  href: ../skype-hybrid-welcome.md
+- name: Skype for Business hybrid troubleshooting
+  href: ../skype-hybrid-welcome.yml
   items:
   - name: Conferencing
     items:
-    - name: Issue after run New-CSHostingProvider cmdlet
+    - name: Error after running New-CSHostingProvider cmdlet
       href: ../hybrid-conferencing/there-is-a-duplicate-key-sequence.md
     - name: Lync administrators can't connect to Remote PowerShell 
       href: ../hybrid-conferencing/cant-connect-to-sfb-remote-powershell.md
@@ -21,7 +21,7 @@
     items:
     - name: Online users can't present content in on-premises meetings
       href: ../hybrid-meetings/present-content-on-premises-meeting.md
-  - name: Moving to Skype for Business Online
+  - name: Move to Skype for Business Online
     items:
     - name: Cannot move users from different AD domain
       href: ../hybrid-move-sfb-online/cannot-move-users-from-different-ad-domain.md

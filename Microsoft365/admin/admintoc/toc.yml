@@ -135,6 +135,8 @@
       href: ../diagnostic-logs/office-sign-in-and-auth-diagnostic.md
     - name: Use Fiddler trace logs for MFA
       href: ../diagnostic-logs/fiddler-trace-logs-for-mfa.md
+    - name: Use MSOAID for authentication issues
+      href: ../diagnostic-logs/use-msoaid-for-authentication-issues.md
   - name: Domain Management
     items:
     - name: '"Add domain" option is missing'
@@ -171,7 +173,7 @@
       href: ../administration/setup-in-progress-office-365-portal.md
     - name: Enable or disable hyperlink warning messages
       href: ../administration/enable-disable-hyperlink-warning.md
-    - name: Issue when remove a domain
+    - name: Issue when removing a domain
       href: ../administration/error-remove-domain-from-office-365.md
     - name: SupportMultipleDomain switch when managing SSO
       href: ../administration/supportmultipledomain-switch-when-manage-sso.md
