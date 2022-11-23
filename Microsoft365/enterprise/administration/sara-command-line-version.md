@@ -11,7 +11,7 @@ ms.custom:
   - CI 148047
   - CSSTroubleshoot
   - CI 163053
-ms.reviewer: zebamehdi; gregmans
+ms.reviewer: gregmans; zebamehdi
 appliesto: 
   - Microsoft 365
 search.appverid: MET150
