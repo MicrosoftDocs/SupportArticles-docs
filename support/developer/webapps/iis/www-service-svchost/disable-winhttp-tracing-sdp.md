@@ -72,7 +72,7 @@ To disable WinHTTP tracing manually, follow the steps below based on the operati
 
 - [Information about Microsoft Automated Troubleshooting Services and Support Diagnostic Platform](https://support.microsoft.com/help/2598970)
 
-- [Collect WinHTTP traces](https://learn.microsoft.com/windows/win32/winhttp/collect-traces)
+- [Collect WinHTTP traces](/windows/win32/winhttp/collect-traces)
 
 - [Netsh Commands for Windows Hypertext Transfer Protocol (WINHTTP)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131(v=ws.10))
 
