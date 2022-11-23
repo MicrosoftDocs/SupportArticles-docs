@@ -98,7 +98,7 @@ productDirectory:
           text: OneDrive for Business
     # Card
     - title: Microsoft Viva
-      imageSrc: /support/media/hub-landing/logo-viva.svg
+      imageSrc: /support/media/hub-landing/logo-viva.png
       links:
         - url: /viva/learning/
           text: Microsoft Viva Learning
