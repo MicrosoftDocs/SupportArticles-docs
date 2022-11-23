@@ -9,7 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
-ms.reviewer: zebamehdi; brandisi
+ms.reviewer: gregmans; zebamehdi
 appliesto: 
   - Microsoft 365
 search.appverid: MET150
@@ -34,7 +34,7 @@ For complete details about how to run the Enterprise version of the Assistant, s
 
 ## Available switches for the Outlook Scan scenario
 
-The following switches are available for this scenario. They aren't case-sensitive. The switches, unless noted as optional, are required to run the scenario. And more than one optional switch can be used.
+The following switches are available for this scenario. They aren't case-sensitive. The switches, unless noted as optional, are required to run the scenario. You can use more than one optional switch.
 
 |Switch \<parameter\>|Details|Required/Optional|
 |---|---|---|
