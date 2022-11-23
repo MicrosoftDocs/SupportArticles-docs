@@ -22,7 +22,7 @@ metadata:
 productDirectory:
   items:
   - title: Windows
-    imageSrc: "media/hub-landing/windows.svg"
+    imageSrc: "media/hub-landing/windows-logo.png"
     summary: Troubleshooting articles for Windows
     url: windows/index.yml
 
@@ -61,9 +61,9 @@ productDirectory:
     summary: Troubleshooting articles for SQL Server
     url: sql/welcome-sql-server.md
 
-  - title: Microsoft Endpoint Manager
-    imageSrc: "media/hub-landing/microsoft-logo.svg"
-    summary: Troubleshooting articles for Microsoft Endpoint Manager
+  - title: Endpoint management
+    imageSrc: "media/hub-landing/microsoft.png"
+    summary: Troubleshooting articles for Endpoint management
     url: mem/index.yml
 
   - title: System Center
@@ -76,13 +76,13 @@ productDirectory:
     summary: Troubleshooting articles for Azure 
     url: azure/index.yml
       
-  - title: Office
-    imageSrc: "/media/logos/logo_office.svg"
-    summary: Troubleshooting articles for Office
+  - title: Microsoft 365
+    imageSrc: "media/hub-landing/microsoft-365-logo.png"
+    summary: Troubleshooting articles for Microsoft 365
     url: /office/troubleshoot
 
   - title: Microsoft Dynamics
-    imageSrc: "media/hub-landing/microsoft-logo.svg"
+    imageSrc: "media/hub-landing/microsoft.png"
     summary: Troubleshooting articles for Microsoft Dynamics
     url: dynamics/index.yml
 
@@ -92,12 +92,12 @@ productDirectory:
     url: dynamics-365/index.yml
       
   - title: Microsoft Power Platform
-    imageSrc: "media/hub-landing/microsoft-logo.svg"
+    imageSrc: "media/hub-landing/microsoft.png"
     summary: Troubleshooting articles for Microsoft Power Platform
     url: power-platform/index.yml
 
   - title: Previous Versions
-    imageSrc: "media/hub-landing/microsoft-logo.svg"
+    imageSrc: "media/hub-landing/microsoft.png"
     summary: Troubleshooting articles for previous versions of products
     url: /previous-versions/troubleshoot/
 
