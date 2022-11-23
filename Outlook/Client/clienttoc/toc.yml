@@ -61,6 +61,8 @@
           href: ../calendaring/cannot-add-an-internet-calendar.md
         - name: Configure rooms and workspaces for Room Finder
           href: ../calendaring/configure-room-finder-rooms-workspaces.md
+        - name: Configure Teams meeting links to open in Teams desktop app
+          href: ../calendaring/open-teams-meetings-in-desktop-app.md
         - name: Create and book a workspace in Outlook
           href: /exchange/troubleshoot/outlook-issues/create-book-workspace-outlook?context=/outlook/troubleshoot/context/client-context
         - name: Create online meeting failed error
