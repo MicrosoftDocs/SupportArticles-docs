@@ -212,33 +212,40 @@ This behavior indicates that one of the following is blocking communication:
 - A middle device is dropping the packets.
 - The destination server is dropping the packets. This issue could be caused by the configurations such as [Windows Filtering Platform (WFP) packet drop](/windows/security/threat-protection/auditing/audit-filtering-platform-packet-drop), Network Interface Card (NIC) packet drop, or [filter driver](/windows-hardware/drivers/network/sending-data-from-a-filter-driver) modifications.
 
-## Data collection
+## Collecting data for deeper troubleshooting
 
-Before contacting Microsoft support, you can gather information about your issue.
+Before you contact Microsoft support, we recommend that you gather information about your issue.
 
 ### Prerequisites
 
-1. TSSv2 must be run by accounts with administrator privileges on the local system, and EULA must be accepted (once EULA is accepted, TSSv2 won't prompt again).
-2. We recommend the local machine `RemoteSigned` PowerShell execution policy.
+These procedures use the [TroubleShootingScript Version 2 (TSSv2)](./windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2) toolset. To use this toolset, you have to be aware of the following prerequisites:
 
-> [!NOTE]
-> If the current PowerShell execution policy doesn't allow running TSSv2, take the following actions:
->
-> - Set the `RemoteSigned` execution policy for the process level by running the cmdlet `PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`.
-> - To verify if the change takes effect, run the cmdlet `PS C:\> Get-ExecutionPolicy -List`.
-> - Because the process level permissions only apply to the current PowerShell session, once the given PowerShell window in which TSSv2 runs is closed, the assigned permission for the process level will also go back to the previously configured state.
+- You have to have Administrator-level permission on the local computer.
+- The first time that you run the toolset you have to accept a EULA.
+- Make sure that the Windows PowerShell script execution policy for the computer is set to `RemoteSigned`. For more information about PowerShell execution policy, see [about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2).
+
+  > [!NOTE]  
+  > If your environment prevents you from using `RemoteSigned` at the computer level, you can temporarily set it at the process level. To do this, run the following cmdlet before you start the tool in an elevated Powershell Command Prompt window:
+  >  
+  > ```powershell
+  > PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned
+  > ```
+  >  
+  > To verify if the change takes effect, run the cmdlet `PS C:\> Get-ExecutionPolicy -List`.
+  >  
+  > The process-level permissions only apply to the current PowerShell session. After you close the PowerShell window, the execution policy reverts to the original setting.
 
 ### Gather key information before contacting Microsoft support
 
-1. Download [TSSv2](https://aka.ms/getTSSv2) on all nodes and unzip it in the *C:\\tss_tool* folder.
-2. Open the *C:\\tss_tool* folder from an elevated PowerShell command prompt.
-3. Start the following traces on the problem computer by using the following cmdlet:
+1. Download [TSSv2](https://aka.ms/getTSSv2) on all nodes and unzip it in the _C:\\tss\_tool_ folder.
+1. Open the _C:\\tss\_tool_ folder from an elevated PowerShell command prompt.
+1. Start the following traces on the problem computer by running the following cmdlet:
 
-    ```PowerShell
+    ```powershell
     TSSv2.ps1 -Start -Scenario NET_RPC
     ```
 
-4. Respond to the EULA prompt.
-5. Repro the issue using event viewer or wbemtest tool
-6. Stop the data collection immediately after the issue is reproduced.
-7. Wait until the automated scripts finish collecting the required data.
+1. Respond to the EULA prompt.
+1. Reproduce the issue. You can use tools such as Event Viewer or [wbemtest](/mem/configmgr/develop/core/understand/introduction-to-wbemtest) to monitor or test the issue.
+1. After you reproduce the issue, immediately stop collecting data.
+1. After the automated scripts finish collecting the required data, attach the data to your support request.
