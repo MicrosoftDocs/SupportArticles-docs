@@ -40,7 +40,7 @@ productDirectory:
     # Card
     - title: Microsoft 365 apps
       # imageSrc should be square in ratio with no whitespace
-      imageSrc: ../media/logo-m365-app.png
+      imageSrc: /support/media/hub-landing/logo-m365-app.png
       links:
         - url: /office/troubleshoot/office-client-welcome
           text: Microsoft 365 apps (Office products)
@@ -98,7 +98,7 @@ productDirectory:
           text: OneDrive for Business
     # Card
     - title: Microsoft Viva
-      imageSrc: ../media/logo-viva.svg
+      imageSrc: /support/media/hub-landing/logo-viva.svg
       links:
         - url: /viva/learning/
           text: Microsoft Viva Learning
