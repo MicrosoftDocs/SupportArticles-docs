@@ -3,9 +3,9 @@ title: USMT return codes
 description: Learn about User State Migration Tool (USMT) 10.0 return codes and error messages. Also view a list of USMT return codes and their associated migration steps.
 ms.reviewer: dougeby
 manager: dcscontentpm
-ms.author: aaroncz
+ms.author: delhan
 ms.prod: windows-client
-author: aczechowski
+author: Deland-Han
 ms.date: 11/22/2022
 ms.topic: troubleshooting
 ms.technology: windows-client-deployment
