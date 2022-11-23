@@ -1,7 +1,7 @@
 ---
 title: Verify first-party Microsoft applications in sign-in reports
 description: Describes how to verify first-party Microsoft applications in sign-in reports
-ms.date: 07/12/2022
+ms.date: 11/22/2022
 ms.reviewer: bernaw
 ms.service: active-directory
 ms.subservice: compliance
@@ -136,6 +136,7 @@ The following table lists some, but not all, first party Microsoft applications.
 |OneNote|2d4d3d8e-2be3-4bef-9f87-7875a61c29de|
 |Outlook Mobile|27922004-5251-4030-b22d-91ecd9a37ea4|
 |Partner Customer Delegated Admin Offline Processor|a3475900-ccec-4a69-98f5-a65cd5dc5306|
+|Password Breach Authenticator|bdd48c81-3a58-4ea9-849c-ebea7f6b6360|
 |Power BI Service|00000009-0000-0000-c000-000000000000|
 |SharedWithMe|ffcb16e8-f789-467c-8ce9-f826a080d987|
 |SharePoint Online Web Client Extensibility|08e18876-6177-487e-b8b5-cf950c1e598c|
