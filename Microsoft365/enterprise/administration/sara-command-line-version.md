@@ -44,7 +44,7 @@ You can use the Enterprise version of the Assistant to resolve issues for the fo
 
 1. Download the Assistant by selecting the button below:
    > [!div class="nextstepaction"]
-   > [Download the Assistant (Enterprise version)](https://aka.ms/SaRA_EnterpriseVersionFiles)
+   > [Download the Assistant](https://aka.ms/SaRA_EnterpriseVersionFiles)
 1. In the downloaded *.zip* file, extract the files to a folder that you can access from the user's computer on which you'll run the Assistant.
 1. On the user's computer, select **Start**, enter *cmd*, and then press Enter to open a Command Prompt window.
 
@@ -56,31 +56,31 @@ You can use the Enterprise version of the Assistant to resolve issues for the fo
 > [!IMPORTANT]
 > Updates to the Enterprise version of the Assistant are released on a regular basis. To make sure that you're using the latest version that has the most features and highest stability, each build of the application will stop working 90 days after the **Created** date listed for the SaRAcmd.exe file. Use the link provided in step 1 to always download the latest version available.
 
-## Available switches for all scenarios
+## Switches available for all scenarios
 
-The following switches are available for the Enterprise version of the Assistant. They aren't case-sensitive. The switches, unless noted as optional, are required to run the scenario. And more than one optional switch can be used.
+The following switches are available for the Enterprise version of the Assistant. They aren't case-sensitive. The switches, unless noted as optional, are required to run the scenario. You can use more than one optional switch.
 
 |Switch \<parameter\>|Details|Required/Optional|Applicable scenarios|
 |---|---|---|---|
-|`-?`|Use the `-?` switch to display the functions of all the switches that are available for SaRAcmd.exe. If you use the `-?` switch along with other switches, it will override the others.|Optional|All|
+|`-?`|Use the `-?` switch to display the functions of all the switches that are available for SaRAcmd.exe. If you use the `-?` switch along with other switches, it will override the other switches.|Optional|All|
 |`-Help`|The `-Help` switch displays a link to online content for additional information. If you use the `-Help` switch along with other switches, it will override all the others except the `-?` switch.|Optional|All|
-|`-DisplayEULA <file path>`|Use the `-DisplayEULA` switch to display the EULA. You can save the EULA text to a file by specifying a path to the file with the switch.|Optional|All|
+|`-DisplayEULA <file path>`|Use the `-DisplayEULA` switch to display the EULA. You can save the EULA text to a file by specifying a path to the file with the switch. If you use the `-DisplayEULA` switch along with other switches, it will override the other switches. |Optional|All|
 |`-S <scenarioname>`|Use the `-S` switch to specify the scenario that you want to run.|Required|All|
-|`-AcceptEula`|The End User License Agreement (EULA) must be accepted before a scenario can be run.|Required|All|
+|`-AcceptEula`|Use the `-AcceptEula` switch to accept the End User License Agreement (EULA) which is required before a scenario can be run.|Required|All|
 |`-LogFolder <Output Path>`| Use the `-LogFolder` switch to force SaraCmd.exe to output scenario-specific logs to the folder that's specified by \<Output Path\>.|Optional|`ExpertExperienceAdminTask`<br/>`OutlookCalendarCheckTask`|
-|`-HideProgress`|The default feature is to always display the progress of the scenario. Use this switch to hide the progress display for the listed scenarios.|Optional|`ExpertExperienceAdminTask`<br/>`OutlookCalendarCheckTask`|
-|`-OfflineScan`|This switch forces Outlook to be scanned as an offline scan while the Outlook application is running.|Optional|`ExpertExperienceAdminTask`|
-|`-OfficeVersion`|Using this switch only removes the Office version that's specified by the parameter. If you use **All** as a parameter, it removes all Office versions from your machine.|Optional|`OfficeScrubScenario`|
-|`-RemoveSCA`|This switch removes Shared Computer Activation (SCA) and configures non-SCA activation for Office.|Optional|`OfficeActivationScenario`<br/>`OfficeSharedComputerScenario`|
-|`-CloseOffice`|Closes any open Office apps.|Required|`OfficeActivationScenario`<br/>`OfficeSharedComputerScenario`<br/>`ResetOfficeActivation`|
-|`-CloseOutlook`|Closes Outlook if it's opened.|Required|`TeamsAddinScenario`|
-|`-P <profile name>`|\<Profile name\> is the Outlook profile that's scanned by the `OutlookCalendarCheckTask` scenario.|Optional|`OutlookCalendarCheckTask`|
+|`-HideProgress`|The default feature is to always display the progress of the scenario. Use `-HideProgress` switch to hide the progress display for the listed scenarios.|Optional|`ExpertExperienceAdminTask`<br/>`OutlookCalendarCheckTask`|
+|`-OfflineScan`|Use the `-OfflineScan` switch to specify an offline scan of Outlook while the Outlook application is running.|Optional|`ExpertExperienceAdminTask`|
+|`-OfficeVersion`|Use the `-OfficeVersion` switch to only remove the Office version that's specified by the `<version>` parameter. If you use **All** as a parameter, all Office versions will be removed from your machine.|Optional|`OfficeScrubScenario`|
+|`-RemoveSCA`|Use the `-RemoveSCA` switch to remove Shared Computer Activation (SCA) and configure non-SCA activation for Office.|Optional|`OfficeActivationScenario`<br/>`OfficeSharedComputerScenario`|
+|`-CloseOffice`|Use the `-CloseOffice` switch to close all Office apps that're open.|Required|`OfficeActivationScenario`<br/>`OfficeSharedComputerScenario`<br/>`ResetOfficeActivation`|
+|`-CloseOutlook`|Use the `-CloseOutlook` switch to close Outlook if it's open.|Required|`TeamsAddinScenario`|
+|`-P <profile name>`|Use the `-P` switch with the \<Profile name\> parameter to specify the Outlook profile that you want the `OutlookCalendarCheckTask` scenario to scan.|Optional|`OutlookCalendarCheckTask`|
 
-## Version history of the Assistant
+## Version history of the Enterprise version of the Assistant
 
 Throughout the year, a new build of the Enterprise version of the Assistant is available through the download link that's provided in [Download and run the command-line version of the Assistant](#download-and-run-the-enterprise-version-of-the-assistant). Because each build stops working after 90 days, we recommend that you keep the Assistant updated by replacing the files you have with the latest version.
 
-The following table provides the versions of the Assistant that were made available on the specified date.
+The following table provides the versions of the Enterprise version of the Assistant that were made available on the specified date.
 
 |Release date|Version|
 |----------|-----------|
