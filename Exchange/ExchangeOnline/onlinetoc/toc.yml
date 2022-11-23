@@ -521,7 +521,7 @@
           href: ../public-folders/public-folders-display-gal-clean-up.md
         - name: SizeExceeds error in migration of public folders
           href: ../public-folders/public-folder-size-exceeds.md
-        - name: The mailbox is not found in the local forest
+        - name: Public folder mailbox not found in multi-geo environment
           href: ../public-folders/mailbox-not-found-local-forest-public-folder.md
         - name: Troubleshoot public folder permission issues
           href: ../public-folders/public-folder-permission-issues.md

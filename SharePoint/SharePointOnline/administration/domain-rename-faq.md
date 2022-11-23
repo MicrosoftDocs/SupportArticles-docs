@@ -84,7 +84,7 @@ No, you must schedule the rename for more than 24 hours and less than 30 days fr
 <details>
 <summary><b>Can we rename a tenant more than once?</b></summary>
 
-Yes, but only after six months from the previous rename.  
+No, you can rename a tenant only once. If you need more renaming, submit a support request by selecting [Rename a Tenant more than once](https://admin.microsoft.com/AdminPortal/?searchSolutions=Rename%20a%20SharePoint%20Tenant%20more%20than%20once). 
 
 </details>
 <br/>
@@ -98,7 +98,7 @@ It depends on the number of sites and how busy the service is at that time. A do
 <details>
 <summary><b>How long does the site redirection last?</b></summary>
 
-As of today, Microsoft won't delete any redirected sites that were created as part of a tenant rename but this may change in the future.
+In the past, we haven't removed any redirected sites that were created as part of a tenant renaming, but this may change in the future. Site redirections will last for one year from the time your renaming is completed. Make sure to remove all URLs that use the old domain name during this time.
 
 </details>
 <br/>
