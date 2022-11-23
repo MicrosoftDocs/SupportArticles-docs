@@ -97,7 +97,7 @@ When you run the Outlook Calendar Scan scenario by using the Enterprise version 
 |---|---|---|
 |Scan completed successfully|Exit the scenario|43: A complete Outlook Calendar scan was performed. See the Outlook configuration details at *%localappdata%\saralogs\uploadlogs* location.|
 |Scan completed successfully with custom location (`-LogFolder`)|Exit the scenario|43: A complete Outlook Calendar scan was performed. See the Outlook configuration details at the location specified by you.|
-|User doesn't include the `-AcceptEULA` switch|Exit the scenario|01: Please provide `-AcceptEula` to continue with this scenario. For additional information, please visit [https://aka.ms/SaRA_CommandLineVersion](https://aka.ms/SaRA_CommandLineVersion).|
+|User didn't include the `-AcceptEULA` switch|Exit the scenario|01: Please provide `-AcceptEula` to continue with this scenario. For additional information, please visit [https://aka.ms/SaRA_CommandLineVersion](https://aka.ms/SaRA_CommandLineVersion).|
 |Outlook isn't installed|Exit the scenario|40: To run diagnostics for this scenario, please download and install Microsoft Outlook. For additional information, please visit [https://aka.ms/SaRA-CalCheckDocs](https://aka.ms/SaRA-CalCheckDocs).|
 |Unable to identify user's profile|Exit the scenario|41: Unable to complete this scenario as Microsoft Outlook profile is missing. For additional information, please visit [https://aka.ms/SaRA-CalCheckDocs](https://aka.ms/SaRA-CalCheckDocs).|
 |Failure to complete the scenario (for any reason)|Exit the scenario|42: An error occurred while running this scenario. You can also try using the full SaRA version. For additional information, please see this article [https://aka.ms/SaRA-CalCheckDocs](https://aka.ms/SaRA-CalCheckDocs).|
