@@ -29,7 +29,7 @@ When you select a Microsoft Teams meeting link in Microsoft Outlook to join a me
 
 1. Select the **Join Online** button in the Microsoft Outlook meeting reminder or select **Click here to join the meeting** in your email invitation.
 
-2. On the Teams start page that displays, select **Always allow teams.microsoft.com to open links of this type in the associated app**, and then select **Open**.
+2. On the Teams start page that opens in your browser, select **Always allow teams.microsoft.com to open links of this type in the associated app**, and then select **Open**.
 
 The browser will store your preference and open the meeting in your Teams desktop app. For all future Teams meetings, Outlook will send your meeting join request to the Teams desktop app when you select the meeting link.
 
