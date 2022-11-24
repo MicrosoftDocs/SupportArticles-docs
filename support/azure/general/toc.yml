@@ -103,10 +103,10 @@
     href: error-accountencryptionkeyunavailable.md
   - name: Batch node creation delays when restarting or reimaging
     href: batch-node-creation-delay-restart-reimage.md
-  - name: Batch pool deletion failure
-    href: azure-batch-pool-deletion-failure.md
   - name: Batch pool creation failure
     href: azure-batch-pool-creation-failure.md
+  - name: Batch pool deletion failure
+    href: azure-batch-pool-deletion-failure.md
   - name: Use managed identities in a Batch account or a Batch pool
     href: use-managed-identities-azure-batch-account-pool.md
 

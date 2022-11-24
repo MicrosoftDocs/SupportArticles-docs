@@ -19,9 +19,9 @@ When you create an Azure Batch account, one of the following three options can b
 - **Selected networks**
 - **Disabled**
 
-Depending on the selected option, you may encounter different errors at the pool creation.
-
 :::image type="content" source="media/azure-batch-pool-creation-failure/public-network-access-options.png" alt-text="Screenshot that shows three options of public network access.":::
+
+Depending on the selected option, you may encounter different errors at the pool creation.
 
 ### Symptom for Scenario 1
 
@@ -51,7 +51,7 @@ This error occurs when you create a Batch account with **Public network access**
 
 ### Solution 2: Add specified IP addresses
 
-To resolve the issue, add the IP addresses from which you would like to access the Batch account under **Address range**.
+To resolve the issue, add the IP addresses from which you would like to access the Batch account.
 
 See the following screenshot as an example:
 
@@ -107,7 +107,7 @@ In this section, assume that the Batch account endpoint is "testbatchdoc.eastus2
 
     :::image type="content" source="media/azure-batch-pool-creation-failure/add-private-zone.png" alt-text="Screenshot of the added private DNS zone.":::
 
-3. Once the private DNS zone is configured, select the private DNS zone "eastus2.privatelink.batch.azure.com" in the screenshot in step 2 or search for the private DNS zone, and check if the record set "testbatchdoc" is added for the FQDN.
+3. Once the private DNS zone "eastus2.privatelink.batch.azure.com" is configured, select it or search for the private DNS zone, and check if the record set "testbatchdoc" is added for the FQDN.
 
     :::image type="content" source="media/azure-batch-pool-creation-failure/record-set.png" alt-text="Screenshot of the record set." lightbox="media/azure-batch-pool-creation-failure/record-set.png":::
 
@@ -123,9 +123,7 @@ In this section, assume that the Batch account endpoint is "testbatchdoc.eastus2
 
 ### Symptom for Scenario 2
 
-When you create a Batch pool with a virtual network, the operation fails immediately. The activity log or notification will contain an error message that indicates an issue about the subnet settings.
-
-The following error message appears in the activity log or in the notification:
+When you create a Batch pool with a virtual network, the operation fails immediately. The following error message appears in the activity log or in the notification, which indicates a subnet setting issue:
 
 > InvalidPropertyValue: The value provided for one of the properties in the request body is invalid.  
 > RequestId:6886b8ad-3c3d-4de5-adc8-f0d10795939c Time:0000-00-00T00:00:00.Z  
@@ -152,15 +150,15 @@ When you create a new Batch pool without data disk encryption (**Disk Encryption
 
 :::image type="content" source="media/azure-batch-pool-creation-failure/disk-encryption-configuration-set-to-none.png" alt-text="Screenshot of the Disk Encryption Configuration setting." lightbox="media/azure-batch-pool-creation-failure/disk-encryption-configuration-set-to-none.png":::
 
-The following error message appears in the notification or the activity log:
+The following error message appears in the notification or in the activity log:
 
 :::image type="content" source="media/azure-batch-pool-creation-failure/resource-disallowed-by-policy.png" alt-text="Screenshot of the error message in the activity log.":::
 
 ### Cause: Azure policy blocks Batch pool creation
 
-There is a built-in policy called "Azure Batch pools should have disk encryption enabled". It has a policy assignment that deny the creation of a new Batch pool that doesn't disk encryption.
+There is a built-in policy called "Azure Batch pools should have disk encryption enabled". It has a policy assignment that denies the creation of a new Batch pool that doesn't have disk encryption.
 
-The pool creation may be blocked by other Azure policies, and the error message would be similar as shown in the activity log.
+The pool creation may be blocked by other Azure policies, and the error message would be similar as shown in the activity log or in the notification.
 
 ### Solution: Modify policy or enable disk encryption for Batch pool
 
@@ -185,7 +183,7 @@ When you create a Batch pool without public IP addresses, the following message 
 
 :::image type="content" source="media/azure-batch-pool-creation-failure/nopublicipaddress-feature-disabled.png" alt-text="Screenshot of the error message in the notification." lightbox="media/azure-batch-pool-creation-failure/nopublicipaddress-feature-disabled.png":::
 
-You also can see the same error in the Activity Log:
+You also can see the same error in the activity log:
 
 :::image type="content" source="media/azure-batch-pool-creation-failure/feature-disabled-error.png" alt-text="Screenshot of the 'Feature is disabled' error message in the activity log." lightbox="media/azure-batch-pool-creation-failure/feature-disabled-error.png":::
 
@@ -197,18 +195,18 @@ If your Batch account isn't located in those regions, when you create the Batch 
 
 For more information, see [Create an Azure Batch pool without public IP addresses (preview)](/azure/batch/batch-pool-no-public-ip-address).
 
-### Solution 1: Create Batch account in supported region
+### Solution 1: Create Batch account in region that supports pools without public IP addresses
 
 To use a Batch pool without public IP addresses, create a Batch account located in the following regions: France Central, East Asia, West Central US, South Central US, West US 2, East US, North Europe, East US 2, Central US, West Europe, North Central US, West US, Australia East, Japan East, Japan West.
 
-### Solution 2: Enable simplified compute node communication mode
+### Solution 2: Enable simplified compute node communication
 
-If your Batch account is located in the following regions, to use the pool without public IP addresses, raise a support ticket to enable the [simplified compute node communication mode](/azure/batch/simplified-compute-node-communication#supported-regions):
+If your Batch account is located in the following regions, to use the pool without public IP addresses, raise a support ticket to enable the [simplified compute node communication](/azure/batch/simplified-compute-node-communication#supported-regions):
 
 - Public: Central US EUAP, East US 2 EUAP, West Central US, North Central US, South Central US, East US, East US 2, West US 2, West US, Central US, West US 3, East Asia, South East Asia, Australia East, Australia Southeast, Brazil Southeast, Brazil South, Canada Central, Canada East, North Europe, West Europe, Central India, South India, Japan East, Japan West, Korea Central, Korea South, Sweden Central, Sweden South, Switzerland North, Switzerland West, UK West, UK South, UAE North, France Central, Germany West Central, Norway East, South Africa North.
 - Government: USGov Arizona, USGov Virginia, USGov Texas.
 - China: China North 3.
 
-Once you enable the simplified compute node communication mode, [create a simplified compute node communication pool without public IP addresses](/azure/batch/simplified-node-communication-pool-no-public-ip). It will have the same functionalities as the pool without public IP addresses, but the simplified compute node communication mode can support more regions.
+Once you enable the simplified compute node communication, [create a simplified compute node communication pool without public IP addresses](/azure/batch/simplified-node-communication-pool-no-public-ip). It will have the same functionalities as the pool without public IP addresses, but the simplified compute node communication can support more regions.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
