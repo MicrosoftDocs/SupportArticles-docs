@@ -37,12 +37,13 @@ productDirectory:
       links:
         - url: /microsoftteams/troubleshoot/teams-welcome
           text: Microsoft Teams
-    - title: Office
+    # Card      
+    - title: Microsoft 365 apps
       # imageSrc should be square in ratio with no whitespace
-      imageSrc: /media/logos/logo_office.svg
+      imageSrc: /support/media/hub-landing/logo-m365-app.png
       links:
         - url: /office/troubleshoot/office-client-welcome
-          text: Office products
+          text: Microsoft 365 apps (Office products)
         - url: /office/troubleshoot/office-experts-welcome
           text: From the Office Experts
     # Card
@@ -97,7 +98,7 @@ productDirectory:
           text: OneDrive for Business
    # Card
     - title: Microsoft Viva
-      imageSrc: /media/logos/logo-ms-social.png
+      imageSrc: /support/media/hub-landing/logo-viva.png
       links:
         - url: /viva/learning/
           text: Microsoft Viva Learning
