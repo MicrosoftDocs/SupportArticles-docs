@@ -23,7 +23,7 @@ When you create an Azure Batch account, one of the following three options can b
 
 Depending on the selected option, you may encounter different errors at the pool creation.
 
-### Symptom for Scenario 1
+### Symptom 1 for Scenario 1
 
 During the Batch pool creation, when you select the **Image Type**, you may get the following error:
 
@@ -57,7 +57,7 @@ See the following screenshot as an example:
 
 :::image type="content" source="media/azure-batch-pool-creation-failure/add-ip-ranges-to-allow-access.png" alt-text="Screenshot that shows the added IP address under Address range." lightbox="media/azure-batch-pool-creation-failure/add-ip-ranges-to-allow-access.png":::
 
-### Symptom 2
+### Symptom 2 for Scenario 1
 
 Consider the following scenario:
 
