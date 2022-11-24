@@ -1,7 +1,7 @@
 ---
 title: USMT common issues
 description: Learn about common issues that you might see when you run the User State Migration Tool (USMT) 10.0 tools.
-ms.reviewer: dougeby
+ms.reviewer: frankroj
 manager: dcscontentpm
 ms.author: delhan
 ms.prod: windows-client
