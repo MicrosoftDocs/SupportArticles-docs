@@ -40,11 +40,11 @@ The following switches are available for this scenario. They aren't case-sensiti
 |---|---|---|
 |`-S <scenarioname>`|Specify this switch and `OfficeSharedComputerScenario` as the value of the `scenarioname` parameter to run this scenario.|Required|
 |`-AcceptEula`|Specify this switch to accept the End User License Agreement (EULA) and run this scenario.|Required|
-|`-CloseOutlook`|Specify this switch to close Outlook if it is running.|Required|
+|`-CloseOutlook`|Specify this switch to close Outlook if it's running.|Required|
 
 ## Sample commands
 
-Here is a sample combination of switches to run this scenario:
+Here's a sample combination of switches to run this scenario:
 
 - To resolve issues with the Teams meeting add-in for Outlook, run the following command from a non-elevated command prompt.
 
