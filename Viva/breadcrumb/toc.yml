@@ -1,0 +1,16 @@
+items:
+- name: Learn
+  tocHref: /
+  topicHref: /
+  items:
+  - name: Viva
+    tocHref: /viva/troubleshoot
+    topicHref: /viva/troubleshoot/index
+    items:
+    - name: Viva Connections
+      tocHref: /viva/troubleshoot/connections
+      topicHref: /viva/troubleshoot/connections/viva-connections-welcome
+    - name: Viva Learning
+      tocHref: /viva/troubleshoot/learning/
+      topicHref: /viva/troubleshoot/learning/viva-learning-welcome
+

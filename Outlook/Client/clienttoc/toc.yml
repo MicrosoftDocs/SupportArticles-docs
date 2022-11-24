@@ -61,6 +61,8 @@
           href: ../calendaring/cannot-add-an-internet-calendar.md
         - name: Configure rooms and workspaces for Room Finder
           href: ../calendaring/configure-room-finder-rooms-workspaces.md
+        - name: Configure Teams meeting links to open in Teams desktop app
+          href: ../calendaring/open-teams-meetings-in-desktop-app.md
         - name: Create and book a workspace in Outlook
           href: /exchange/troubleshoot/outlook-issues/create-book-workspace-outlook?context=/outlook/troubleshoot/context/client-context
         - name: Create online meeting failed error
@@ -115,6 +117,8 @@
           href: ../calendaring/outlook-not-showing-more-than-12-months-of-free-busy-data.md
         - name: No available rooms for meetings outside working hours
           href: ../calendaring/no-available-rooms-for-meeting-outside-working-hours.md
+        - name: No event reminders for automapped or additional mailboxes
+          href: ../calendaring/no-event-reminders-for-automapped-additional-mailboxes.md
         - name: Organizer's meeting outdated after delegate sends update
           href: ../calendaring/organizers-meeting-outdated-after-delegate-sends-update.md
         - name: Outlook crashes when opening a meeting that contains Lync meeting details

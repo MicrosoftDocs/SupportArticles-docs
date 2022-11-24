@@ -303,6 +303,8 @@
       href: ../sharing-and-permissions/issue-when-you-click-new-site-on-followed-sites-page.md
   - name: Sites
     items:
+    - name: '"Header Field Too Long" error'
+      href: ../Sites/header-field-too-long-error.md
     - name: '"HTTP request is unauthorized" error'
       href: ../Sites/calendar-overlay-unsupported.md
     - name: '"This site cant be reached" and ERR_INVALID_RESPONSE error when accessing SharePoint site'

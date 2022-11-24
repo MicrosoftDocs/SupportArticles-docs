@@ -1,0 +1,60 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.md",
+          "**/*.yml"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      }      
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.pdf",
+          "**/*.svg"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
+      }
+    ],
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {
+      "breadcrumb_path": "/viva/troubleshoot/breadcrumb/toc.json",
+      "extendBreadcrumb": true,
+      "recommendations": true,
+      "feedback_system": "none",
+      "titleSuffix": "Viva",
+      "hideEdit": true,
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
+      "searchScope": ["Viva Support"] 
+    },
+    "fileMetadata": {
+      "ms.service": {
+        "Learning/**/*.md": "viva",
+        "Connections/**/*.md": "viva"        
+      },
+      "ms.subservice": {
+        "Connections/**/*.md": "viva-connections",
+        "Learning/**/*.md": "viva-learning"
+      }
+    },
+    "template": [],
+    "dest": "OfficeDocs-Support-Viva",
+    "markdownEngineName": "markdig"
+  }
+}
