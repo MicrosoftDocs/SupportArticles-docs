@@ -22,15 +22,15 @@ ms.date: 10/26/2022
 > [!NOTE]
 > This article is for Microsoft 365 administrators only. For help to diagnose and fix issues with Office, Microsoft 365 or Outlook on your computer, see [About the Microsoft Support and Recovery Assistant](https://aka.ms/SaRA_Home).
 
-The Enterprise version of Microsoft Support and Recovery Assistant is a self-contained enterprise-ready diagnostic tool that you can use to troubleshoot specific client issues with Office, Teams, Outlook or through Advanced Diagnostics. This version of the Assistant runs at a command-line or through a script such as PowerShell. It's useful when administrators need to run the Assistant on computers in their organization remotely.
+The Enterprise version of Microsoft Support and Recovery Assistant is a self-contained enterprise-ready diagnostic tool that you can use to troubleshoot specific client issues with Microsoft 365 apps, such as Microsoft Teams and Microsoft Outlook. This version of the Assistant runs at a command line or through a script such as PowerShell. Administrators will find this version of the Assistant useful when they have to run it on computers in their organization remotely.
 
-To fix issues on a single computer, we recommend that you use the [full version of the Assistant](https://aka.ms/SaRA_Home). If multiple devices are impacted by an issue, the Enterprise version of the Assistant is recommended.
+To fix issues on a single computer, we recommend that you use the [full version of the Assistant](https://aka.ms/SaRA_Home). If multiple devices are impacted by an issue, use the Enterprise version of the Assistant.
 
 ## Supported scenarios
 
-You can use the Enterprise version of the Assistant to resolve issues for the following scenarios. The Assistant requires specific switches to run these scenarios. Select a scenario to learn about the switches that are available for it. Then run the Enterprise version of the Assistant by using the appropriate switches for the scenario to resolve your issue.
+You can use the Enterprise version of the Assistant to resolve issues for the following scenarios. Select a scenario for details about how to run it.
 
-|Scenario|Description|Command-line scenario name (specified with the `-S` switch)|
+|Scenario|Description|\<Scenarioname\> (specified with the `-S` switch)|
 |---|---|---|
 |[Outlook Scan](assistant-outlook-scan.md)|Scans Outlook for known issues and generates a comprehensive configuration report for Outlook, Office, and Windows. A full or offline scan can be run.|`ExpertExperienceAdminTask`|
 |[Office Uninstall](assistant-office-uninstall.md)|Scrubs any version of Office from a device. Use when you can't fully remove Office through Control Panel.|`OfficeScrubScenario`|
