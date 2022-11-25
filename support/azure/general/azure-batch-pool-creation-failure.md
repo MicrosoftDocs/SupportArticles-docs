@@ -13,6 +13,8 @@ This article describes how to resolve an Azure batch pool creation failure.
 
 ## Scenario 1: Batch account public network access related issue
 
+### Symptom 1 for Scenario 1
+
 When you create an Azure Batch account, one of the following three options can be selected for the **Public network access**:
 
 - **All networks**
@@ -21,11 +23,7 @@ When you create an Azure Batch account, one of the following three options can b
 
 :::image type="content" source="media/azure-batch-pool-creation-failure/public-network-access-options.png" alt-text="Screenshot that shows three options of public network access.":::
 
-Depending on the selected option, you may encounter different errors at the pool creation.
-
-### Symptom 1 for Scenario 1
-
-During the Batch pool creation, when you select the **Image Type**, you may get the following error:
+When you select the **Image Type** during the Batch pool creation, you may encounter the following error message:
 
 > Failed to retrieve supported OS image information
 >
@@ -33,9 +31,9 @@ During the Batch pool creation, when you select the **Image Type**, you may get 
 > message : This request is not authorized to perform this operation.
 > RequestId:22b29112-fd1b-4376-bbd9-8036aa722e43 Time:2022-10-24T04:17:03.5602162Z
 
-### Cause 1: Public network access is disabled
+### Cause 1: Public network access is disabled and Batch account doesn't have private endpoint
 
-This error occurs when the **Public network access** is set to **Disabled**. This setting causes that the access from the public network is disabled. If the Batch account doesn't have a private endpoint, the connection to the Batch account will be restricted.
+When you create a Batch account with the **Public network access** is set to **Disabled**, the access from the public network is removed. If the Batch account doesn't have a private endpoint, the connection to the Batch account will be restricted.
 
 ### Solution 1: Create private endpoint for Batch account
 
@@ -45,9 +43,9 @@ This error occurs when the **Public network access** is set to **Disabled**. Thi
 
 2. Create a virtual machine (VM) in the same virtual network as the Batch account private endpoint where you won't see the error during the pool creation.
 
-### Cause 2: Public access is only allowed from selected networks
+### Cause 2: Public access is only allowed from selected networks but IP addresses aren't specified
 
-This error occurs when you create a Batch account with **Public network access** set to **Selected networks**. This setting causes that the Batch account will be accessible only from the specified IP addresses.
+When you create a Batch account with the **Public network access** set to **Selected networks**, the Batch account is accessible only from the specified IP addresses. However, the specified IP addresses aren't added, which causes the error.
 
 ### Solution 2: Add specified IP addresses
 
@@ -97,7 +95,7 @@ In this section, assume that the Batch account endpoint is "testbatchdoc.eastus2
         nslookup testbatchdoc.eastus2.batch.azure.com
         ```
 
-        Here is a command output example:
+        Here's a command output example:
 
         :::image type="content" source="media/azure-batch-pool-creation-failure/nslookup-command-output.png" alt-text="Screenshot of the first nslookup command output.":::
 
@@ -107,13 +105,13 @@ In this section, assume that the Batch account endpoint is "testbatchdoc.eastus2
 
     :::image type="content" source="media/azure-batch-pool-creation-failure/add-private-zone.png" alt-text="Screenshot of the added private DNS zone.":::
 
-3. Once the private DNS zone "eastus2.privatelink.batch.azure.com" is configured, select it or search for the private DNS zone, and check if the record set "testbatchdoc" is added for the FQDN.
+3. Once the private DNS zone "eastus2.privatelink.batch.azure.com" is configured, select it or search it, and check if the record set "testbatchdoc" is added for the FQDN.
 
     :::image type="content" source="media/azure-batch-pool-creation-failure/record-set.png" alt-text="Screenshot of the record set." lightbox="media/azure-batch-pool-creation-failure/record-set.png":::
 
 4. Run the `nslookup <FQDN>` command.
 
-    Here is a command output example.
+    Here's a command output example.
 
     :::image type="content" source="media/azure-batch-pool-creation-failure/second-nslookup-command-output.png" alt-text="Screenshot of the second nslookup command output.":::
 
@@ -134,7 +132,7 @@ When you create a Batch pool with a virtual network, the operation fails immedia
 
 ### Cause: Private endpoint network policy is enabled
 
-This issue occurs when the subnet that you are using has the **Private endpoint network policy** set to **Enabled**. The network policy prevents the pool creation operations from being completed.
+This issue occurs when the subnet that you're using has the **Private endpoint network policy** set to **Enabled**. The network policy prevents the pool creation operations from being completed.
 
 ### Solution: Disable Private endpoint network policy
 
@@ -156,7 +154,7 @@ The following error message appears in the notification or in the activity log:
 
 ### Cause: Azure policy blocks Batch pool creation
 
-There is a built-in policy called "Azure Batch pools should have disk encryption enabled". It has a policy assignment that denies the creation of a new Batch pool that doesn't have disk encryption.
+There's a built-in policy called "Azure Batch pools should have disk encryption enabled". It has a policy assignment that denies the creation of a new Batch pool that doesn't have disk encryption.
 
 The pool creation may be blocked by other Azure policies, and the error message would be similar as shown in the activity log or in the notification.
 
@@ -191,7 +189,7 @@ You also can see the same error in the activity log:
 
 Support for pools without public IP addresses in Azure Batch is currently in public preview for the following regions: France Central, East Asia, West Central US, South Central US, West US 2, East US, North Europe, East US 2, Central US, West Europe, North Central US, West US, Australia East, Japan East, Japan West.
 
-If your Batch account isn't located in those regions, when you create the Batch pool without public IP addresses, you will encounter the "FeatureDisabled" error.
+If your Batch account isn't located in those regions, when you create the Batch pool without public IP addresses, you'll encounter the "FeatureDisabled" error.
 
 For more information, see [Create an Azure Batch pool without public IP addresses (preview)](/azure/batch/batch-pool-no-public-ip-address).
 
