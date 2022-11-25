@@ -26,7 +26,7 @@ On an SQL Server computer, assume that you perform one of the following actions:
 > SQL Server uses [sparse files](/windows/win32/fileio/sparse-files) for these operations: database snapshot and `DBCC CHECKDB`.
 
 - Backup or restore of databases.
-- You [BCP](/sql/tools/bcp-utility) of data out to multiple files using parallel BCP executions and writing to the same volume.
+- You perform bulk copy via [BCP](/sql/tools/bcp-utility) to multiple files using parallel BCP executions and writing to the same volume.
 
 As a result of these operations, you might notice one or more of these errors reported in the SQL Server Error log depending on the environment SQL Server is running on.
 
@@ -58,7 +58,7 @@ This problem occurs if a large number of `ATTRIBUTE_LIST_ENTRY` instances are ne
 
 Both regular and sparse files created by SQL Server or other applications can get fragmented to these levels when large amounts of data modifications happen for the life of these snapshot files.
 
-If you perform database backups across a stripe set of files all located on the same volume, or if you're BCP-ing data out to multiple files on the same volume, the writes may leap from each other on the same physical media leading to fragmentation. Each of the backup files or BCP output streams can exhaust the attribute storage as none of them get adjacent storage.
+If you perform database backups across a stripe set of files all located on the same volume, or if you're bulk copying (BCP-ing) data out to multiple files on the same volume, the writes may end up in adjacent locations but belonging to different files. For example, one stream writes to offset between 201 and 400, the other stream writes from 401 to 600 , the third stream can write from 601 to 800 and so on. This will lead to file fragmentation on the same physical media. Each of the backup files or BCP output streams can exhaust the attribute storage as none of them get adjacent storage.
 
 For a complete background of how SQL Server Engine uses NTFS sparse files and alternate data streams, see [Usage of sparse files section](#usage-of-sparse-files-in-sql-server-databases).
 
