@@ -13,8 +13,6 @@ This article describes how to resolve an Azure batch pool creation failure.
 
 ## Scenario 1: Batch account public network access related issue
 
-### Symptom 1 for Scenario 1
-
 When you create an Azure Batch account, one of the following three options can be selected for the **Public network access**:
 
 - **All networks**
@@ -22,6 +20,10 @@ When you create an Azure Batch account, one of the following three options can b
 - **Disabled**
 
 :::image type="content" source="media/azure-batch-pool-creation-failure/public-network-access-options.png" alt-text="Screenshot that shows three options of public network access.":::
+
+Depending on the selected option, you may come across issues at the Batch pool creation.
+
+### Symptom 1 for Scenario 1
 
 When you select the **Image Type** during the Batch pool creation, you may encounter the following error message:
 
@@ -31,9 +33,9 @@ When you select the **Image Type** during the Batch pool creation, you may encou
 > message : This request is not authorized to perform this operation.
 > RequestId:22b29112-fd1b-4376-bbd9-8036aa722e43 Time:2022-10-24T04:17:03.5602162Z
 
-### Cause 1: Public network access is disabled and Batch account doesn't have private endpoint
+### Cause 1: Public network access is disabled but Batch account doesn't have private endpoint
 
-When you create a Batch account with the **Public network access** is set to **Disabled**, the access from the public network is removed. If the Batch account doesn't have a private endpoint, the connection to the Batch account will be restricted.
+You create a Batch account with the **Public network access** is set to **Disabled**. This setting make the access from the public network to be removed. If the Batch account doesn't have a private endpoint, the connection to the Batch account will be restricted.
 
 ### Solution 1: Create private endpoint for Batch account
 
@@ -45,7 +47,7 @@ When you create a Batch account with the **Public network access** is set to **D
 
 ### Cause 2: Public access is only allowed from selected networks but IP addresses aren't specified
 
-When you create a Batch account with the **Public network access** set to **Selected networks**, the Batch account is accessible only from the specified IP addresses. However, the specified IP addresses aren't added, which causes the error.
+You create a Batch account with the **Public network access** set to **Selected networks**. This setting make the Batch account accessible only from the specified IP addresses. However, the specified IP addresses aren't added.
 
 ### Solution 2: Add specified IP addresses
 
