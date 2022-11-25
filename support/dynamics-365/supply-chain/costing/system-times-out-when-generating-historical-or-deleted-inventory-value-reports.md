@@ -8,7 +8,7 @@ audience: Application User
 ms.reviewer: yanansong
 ms.search.region: Global
 ms.author: yanansong
-ms.search.validFrom: 2022-11-22
+ms.search.validFrom: 2022-11-25
 ms.dyn365.ops.version: 
 ---
 # System times out when generating historical or deleted inventory value reports
