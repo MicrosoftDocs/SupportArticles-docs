@@ -43,11 +43,14 @@ In a typical scenario, the impersonating account would be a service account assi
 
 There are three types of delegation using Kerberos:
 
-- Full delegation (unconstrained delegation)  
+- Full delegation (unconstrained delegation)
+
   Full delegation should be avoided as much as possible. The user, front-end and back-end user can be located in different domains and also in different forests.
-- Constrained delegation (Kerberos only and protocol transition)  
+- Constrained delegation (Kerberos only and protocol transition)
+
   The user can be from any domain or forest, but the front-end and the back-end services should be running in the same domain.
-- Resource based constrained delegation (RBCD)  
+- Resource based constrained delegation (RBCD)
+
   The user can be from any domain, front-end and back-end resources can be from any domain or forest.
 
 ### Most common Kerberos delegation troubleshooting
