@@ -1,7 +1,9 @@
 ---
-title: OS errors 665 and 1450 are reported
-description: This article provides resolutions for the problem where OS errors 1450 and 665 are reported for database files 
-ms.date: 11/24/2022
+title: Operating System errors 665 and 1450 are reported for database files
+description: This article provides resolutions for the problem where OS errors 1450 and 665 are reported for SQL Server database files.
+author: PiJoCoder 
+ms.author: v-jayaramanp
+ms.date: 11/25/2022
 ms.custom: sap:Administration and Management
 ms.prod: sql
 ---
@@ -10,15 +12,15 @@ ms.prod: sql
 _Original product version:_ &nbsp; SQL Server 2008 - 2022
 _Original KB number:_ &nbsp; 2002606
 
-This article helps you resolve the problem where OS errors 1450 and 665 are reported for database files during `DBCC CHECKDB` or Database Snapshot Creation, or file growth.
+This article helps you resolve the problem where OS errors 1450 and 665 are reported for database files while executing `DBCC CHECKDB`, creating a Database Snapshot, or file growth.
 
 ## Symptoms
 
-On a SQL Server computer, assume that you perform one of the following actions:
+On an SQL Server computer, assume that you perform one of the following actions:
 
-- You create a database snapshot on a large database. Then you perform numerous data modification operations or maintenance operations in the source database.
+- You create a database snapshot on a large database. Then, you perform numerous data modification operations or maintenance operations in the source database.
 - You create a database snapshot on a mirror database.
-- You execute `DBCC CHECKDB` family of commands to check the consistency of a large database and you also perform a large number of data changes in that database.
+- You execute the `DBCC CHECKDB` family of commands to check the consistency of a large database and you also perform a large number of data changes in that database.
 
 > [!NOTE]
 > SQL Server uses [sparse files](/windows/win32/fileio/sparse-files) for these operations: database snapshot and `DBCC CHECKDB`.
@@ -36,7 +38,7 @@ The operating system returned error 665(The requested operation could not be com
 The operating system returned error 1450 (Insufficient system resources exist to complete the requested service.) to SQL Server during a write at offset 0x00002a3ef96000 in file with handle 0x0000000000000D5C. This is usually a temporary condition and the SQL Server will keep retrying the operation. If the condition persists, then immediate action must be taken to correct it.`
 ```
 
-In addition to these errors, you may also notice the following **Latch Timeout** errors:
+In addition to these errors, you may also notice the following Latch Timeout errors:
 
 ```output
 Timeout occurred while waiting for latch: class *'DBCC_MULTIOBJECT_SCANNER'*, id 000000002C61DF40, type 4, Task 0x00000000038089B8 : 16, waittime 600, flags 0x1a, owning task 0x0000000006A09828. Continuing to wait.  
