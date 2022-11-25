@@ -33,7 +33,7 @@ For a quick overview of the tax engine, see [Tax engine overview (YouTube video)
 
 Familiarity with the tax engine's debug mode can help you to identify the root causes of issues that are related to the tax engine.
 
-To turn on debug mode, add **&debug=vs%2CconfirmExit&** to the end of the URL for Microsoft Dynamics 365 Finance.
+To turn on debug mode, add *&debug=vs%2CconfirmExit&* to the end of the URL for Microsoft Dynamics 365 Finance.
 
 :::image type="content" source="media/troubleshoot-tax-engine-gte-issues/turn-on-gte-debug-mode.png" alt-text="An example of how to turn on debug mode by changing the URL." lightbox="media/troubleshoot-tax-engine-gte-issues/turn-on-gte-debug-mode.png":::
 

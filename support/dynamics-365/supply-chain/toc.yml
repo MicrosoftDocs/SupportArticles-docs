@@ -15,6 +15,8 @@
           href: costing/posting-to-purchase-accrual-with-zero-if-posted-receipt-has-zero.md
         - name: Physically received purchase orders don't appear in the inventory closing report
           href: costing/check-open-quantities-not-show-physically-received-purchase-orders.md
+        - name: System times out when generating historical or deleted inventory value reports
+          href: costing/system-times-out-when-generating-historical-or-deleted-inventory-value-reports.md
         - name: The Indirect costs in process report includes deleted production orders
           href: costing/indirect-costs-process-report-has-deleted-orders.md
         - name: There is no From date on the Active prices tab of the Item price page
