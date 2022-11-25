@@ -33,11 +33,11 @@ To resolve this issue, disable the subnet delegation by using the Azure portal, 
 
 For more information, see [Add or remove a subnet delegation in an Azure virtual network](/azure/virtual-network/manage-subnet-delegation#remove-subnet-delegation-from-an-azure-service).
 
-## Scenario 2: Selected VM size doesn't support Generation 2 image
+## Scenario 2: Selected VM size doesn't support generation 2 image
 
 ### Symptom for Scenario 2
 
-After you access the warning, the following appears:
+After you access the warning, the following error message appears:
 
 > **Code:** AllocationFailed  
 > **Message:**  
@@ -57,7 +57,7 @@ This error occurs because the selected image and VM size aren't compatible.
 
 In this scenario, the selected image has Hypervisor Generation 2 while the selected VM size doesn't support Hypervisor Generation 2.
 
-Some VM sizes only support Generation 2 images. When you select an image with Hypervisor Generation 1 and a VM size supporting only Hypervisor Generation 2, a similar error occurs.
+Some VM sizes only support generation 2 images. When you select an image with Hypervisor Generation 1 and a VM size supporting only Hypervisor Generation 2, a similar error occurs.
 
 ### Solution 1: Select VM size that matches Hypervisor Generation of VM image or vice versa
 
@@ -69,9 +69,9 @@ If the image you want to use doesn't support the VM size that you plan to use, c
 
 For more information, see [Tutorial - Create custom VM images with the Azure CLI](/azure/virtual-machines/linux/tutorial-custom-images).  
 
-When you create the image definition, the image is created from Generation 1 by default.
+When you create the image definition, the image is created from generation 1 by default.
 
-If you want to use Generation 2, specify it by using the `az sig image-definition create` command as the following example:
+If you want to use generation 2, specify it by using the `az sig image-definition create` command as the following example:
 
 ```azurecli
 az sig image-definition create --resource-group myGalleryRG --gallery-name myGallery --gallery-image-definition myImageDefinition --publisher myPublisher --offer myOffer --sku mySKU --os-type Linux --os-state specialized --hyper-v-generation V2
