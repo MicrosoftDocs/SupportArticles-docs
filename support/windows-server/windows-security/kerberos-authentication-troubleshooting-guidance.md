@@ -61,9 +61,9 @@ There are three types of delegation using Kerberos:
 
 For more information, see:
 
-- [Constrained delegation for CIFS fails with ACCESS_DENIED error](https://learn.microsoft.com/troubleshoot/windows-server/windows-security/constrained-delegation-access-denied)
-- [Configure constrained delegation for a custom service account](https://learn.microsoft.com/troubleshoot/windows-server/identity/configure-kerberos-constrained-delegation#scenario-1-configure-constrained-delegation-for-a-custom-service-account)
-- [Configure constrained delegation on the NetworkService account](https://learn.microsoft.com/troubleshoot/windows-server/identity/configure-kerberos-constrained-delegation#scenario-2-configure-constrained-delegation-on-the-networkservice-account)
+- [Constrained delegation for CIFS fails with ACCESS_DENIED error](constrained-delegation-access-denied.md)
+- [Configure constrained delegation for a custom service account](../identity/configure-kerberos-constrained-delegation.md#scenario-1-configure-constrained-delegation-for-a-custom-service-account)
+- [Configure constrained delegation on the NetworkService account](../identity/configure-kerberos-constrained-delegation.md#scenario-2-configure-constrained-delegation-on-the-networkservice-account)
 
 ### Single sign-on (SSO) broken and prompting for authentication once
 
@@ -144,4 +144,4 @@ Here are examples of such error messages:
 #### Troubleshooting steps
 
 1. Run the `nslookup` command to identify any DNS misconfigurations.
-2. Open required ports between the client and the domain controller. For more information, see [How to configure a firewall for Active Directory domains and trusts](https://learn.microsoft.com/troubleshoot/windows-server/identity/config-firewall-for-ad-domains-and-trusts).
+2. Open required ports between the client and the domain controller. For more information, see [How to configure a firewall for Active Directory domains and trusts](../identity/config-firewall-for-ad-domains-and-trusts.md).
