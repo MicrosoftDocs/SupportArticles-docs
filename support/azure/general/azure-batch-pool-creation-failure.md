@@ -35,7 +35,7 @@ When you select the **Image Type** during the Batch pool creation, you may encou
 
 ### Cause 1: Public network access is disabled but Batch account doesn't have private endpoint
 
-You create a Batch account with the **Public network access** is set to **Disabled**. This setting make the access from the public network to be removed. If the Batch account doesn't have a private endpoint, the connection to the Batch account will be restricted.
+You create a Batch account with the **Public network access** set to **Disabled**. This setting makes the access from the public network to be removed. If the Batch account doesn't have a private endpoint, the connection to the Batch account will be restricted.
 
 ### Solution 1: Create private endpoint for Batch account
 
@@ -47,7 +47,7 @@ You create a Batch account with the **Public network access** is set to **Disabl
 
 ### Cause 2: Public access is only allowed from selected networks but IP addresses aren't specified
 
-You create a Batch account with the **Public network access** set to **Selected networks**. This setting make the Batch account accessible only from the specified IP addresses. However, the specified IP addresses aren't added.
+You create a Batch account with the **Public network access** set to **Selected networks**. This setting makes the Batch account accessible only from the specified IP addresses. However, the specified IP addresses aren't added.
 
 ### Solution 2: Add specified IP addresses
 
@@ -134,11 +134,11 @@ When you create a Batch pool with a virtual network, the operation fails immedia
 
 ### Cause: Private endpoint network policy is enabled
 
-This issue occurs when the subnet that you're using has the **Private endpoint network policy** set to **Enabled**. The network policy prevents the pool creation operations from being completed.
+The subnet that you're using has the **Private endpoint network policy** set to **Enabled**. This network policy prevents the pool creation operations from being completed.
 
 ### Solution: Disable Private endpoint network policy
 
-To resolve this issue, before you create the batch pool, disable the **Private endpoint network policy** by using the Azure portal, PowerShell, Azure CLI or Azure Resource Manager Template in the subnet.
+To resolve this issue, before you create the Batch pool, disable the **Private endpoint network policy** by using the Azure portal, PowerShell, Azure CLI or Azure Resource Manager Template in the subnet.
 
 For more information, see [Disable network policies for Azure Private Link service source IP address](/azure/private-link/disable-private-link-service-network-policy).
 
