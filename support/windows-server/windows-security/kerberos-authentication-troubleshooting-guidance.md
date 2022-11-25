@@ -1,4 +1,4 @@
-﻿---
+---
 title: Kerberos authentication troubleshooting guidance
 description: Provides guidance to troubleshoot Kerberos authentication issues.
 ms.date: 11/25/2022
