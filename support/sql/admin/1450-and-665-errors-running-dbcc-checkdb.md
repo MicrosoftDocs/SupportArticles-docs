@@ -3,7 +3,7 @@ title: Operating System errors 665 and 1450 are reported for database files
 description: This article provides resolutions for the problem where OS errors 1450 and 665 are reported for SQL Server database files.
 author: PiJoCoder 
 ms.author: v-jayaramanp
-ms.date: 11/25/2022
+ms.date: 11/28/2022
 ms.custom: sap:Administration and Management
 ms.prod: sql
 ---
@@ -58,9 +58,9 @@ This problem occurs if a large number of `ATTRIBUTE_LIST_ENTRY` instances are ne
 
 Both regular and sparse files created by SQL Server or other applications can get fragmented to these levels when large amounts of data modifications happen for the life of these snapshot files.
 
-If you perform database backups across a stripe set of files all located on the same volume, or if you're bulk copying (BCP-ing) data out to multiple files on the same volume, the writes may end up in adjacent locations but belonging to different files. For example, one stream writes to offset between 201 and 400, the other stream writes from 401 to 600 , the third stream can write from 601 to 800 and so on. This will lead to file fragmentation on the same physical media. Each of the backup files or BCP output streams can exhaust the attribute storage as none of them get adjacent storage.
+If you perform database backups across a stripe set of files all located on the same volume, or if you're bulk copying (BCP-ing) data out to multiple files on the same volume, the writes may end up in adjacent locations but belonging to different files. For example, one stream writes to offset between 201 and 400, the other stream writes from 401 to 600, the third stream can write from 601 to 800 and so on. This will lead to file fragmentation on the same physical media. Each of the backup files or BCP output streams can exhaust the attribute storage as none of them get adjacent storage.
 
-For a complete background of how SQL Server Engine uses NTFS sparse files and alternate data streams, see [Usage of sparse files section](#usage-of-sparse-files-in-sql-server-databases).
+For a complete background of how SQL Server Engine uses NTFS sparse files and alternate data streams, see [More information](#more-information).
 
 ## Resolution
 
