@@ -84,7 +84,7 @@ Integrated Windows authentication is broken on the user level or the machine lev
 
 #### Troubleshooting methods
 
-- Review the client configuration for an integrated authentication setting, which can be enabled either at an application level or machine level. For example, all HTTP-based applications would look for the site to be in a Trusted zone when trying to perform integrated authentication.  
+- Review the client configuration for an integrated authentication setting, which can be enabled at an application or machine level. For example, all HTTP-based applications would look for the site to be in a Trusted zone when trying to perform integrated authentication.  
 
   Open *inetcpl.cpl* (**Internet Options**), which all HTTP-based applications use for Internet Explorer configurations, and review if the website is configured as **Local intranet**.
 - Applications also have a configuration to perform Integrated Windows authentication.
