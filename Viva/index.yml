@@ -100,9 +100,9 @@ productDirectory:
     - title: Microsoft Viva
       imageSrc: /support/media/hub-landing/logo-viva.png
       links:
-        - url: /viva/learning/
+        - url: ./learning/viva-learning-welcome.md
           text: Microsoft Viva Learning
-        - url: /viva/connections/viva-connections-overview
+        - url: ./connections/viva-connections-overview.md
           text: Microsoft Viva Connections 
     # Card
     - title: Endpoint management
