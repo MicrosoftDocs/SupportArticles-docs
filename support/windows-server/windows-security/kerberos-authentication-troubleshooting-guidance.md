@@ -60,7 +60,7 @@ There are three types of delegation using Kerberos:
 - Large Kerberos tickets (MaxTokenSize) and environment not set up properly
 - Ports being blocked by firewalls or routers
 - Service account not given appropriate privileges (User Rights Assignment)
-- Front-end or back-end services not in the same domain and constrained delegation set up
+- Front-end or back-end services not in the same domain and constrained delegation setup
 
 For more information, see:
 
@@ -73,20 +73,20 @@ For more information, see:
 Consider the following scenarios:
 
 - A client and server application like Microsoft Edge and Internet Information Services (IIS) server. The IIS server is configured with Windows Authentication (Negotiate).
-- A client and server application like SMB client and SMB server. By default, SMB server is configured with Negotiate Security Support Provider Interface (SSPI).
+- A client and server application like an SMB client and SMB server. By default, the SMB server is configured with Negotiate Security Support Provider Interface (SSPI).
 
-A User opens Microsoft Edge and browses an internal website `http://webserver.contoso.com`. The website is configured with Negotiate and this website prompts for authentication. After the user manually enters the username and password, the user gets authentication and the website works as expected.
+A User opens Microsoft Edge and browses an internal website `http://webserver.contoso.com`. The website is configured with Negotiate, and this website prompts for authentication. After the user manually enters the username and password, the user gets authentication, and the website works as expected.
 
 > [!NOTE]
-> This scenario is an example of client and server. The troubleshooting technique is the same for any client and server configured with Integrated Windows authentication.
+> This scenario is an example of a client and server. The troubleshooting technique is the same for any client and server configured with Integrated Windows authentication.
 
 Integrated Windows authentication is broken on the user level or the machine level.
 
 #### Troubleshooting methods
 
-- Review the client configuration for an integrated authentication setting, which can be enabled either at an application level or machine level. For example, all HTTP based applications would look for the site to be in Trusted zone when trying to perform integrated authentication.  
+- Review the client configuration for an integrated authentication setting, which can be enabled either at an application level or machine level. For example, all HTTP-based applications would look for the site to be in a Trusted zone when trying to perform integrated authentication.  
 
-  Open *inetcpl.cpl* (**Internet Options**) which all HTTP based applications use for Internet Explorer configurations and review if the website is configured as **Local intranet**.
+  Open *inetcpl.cpl* (**Internet Options**), which all HTTP-based applications use for Internet Explorer configurations, and review if the website is configured as **Local intranet**.
 - Applications also have a configuration to perform Integrated Windows authentication.
 
   Microsoft Edge or Internet Explorer has a setting **Enable Integrated Windows Authentication** to be enabled.
@@ -106,7 +106,7 @@ Integrated Windows authentication is broken on the user level or the machine lev
     klist failed with 0xc000018b/-1073741429: The SAM database on the Windows Server does not have a computer account for this workstation trust relationship.
     ```
 
-  Identify and add the respective SPNs to the appropriate user, service or machine accounts.
+  Identify and add the respective SPNs to the appropriate user, service, or machine accounts.
 
 - If you've identified that the SPNs can be retrieved, you can verify if they're registered on the correct account by using the following command:
 
@@ -118,7 +118,7 @@ Integrated Windows authentication is broken on the user level or the machine lev
 
 Application servers configured with Integrated Windows authentication need domain controllers (DCs) to authenticate the user/computer and service.
 
-Inability for contacting a domain controller during the authentication process would lead to an error 1355:
+The inability to contact a domain controller during the authentication process leads to error 1355:
 
 > The specified domain either does not exist or could not be contacted
 
@@ -138,7 +138,7 @@ Here are examples of such error messages:
 
 - DNS misconfiguration on the client
 
-  You can run the `ipconfig /all` command and review DNS servers list.
+  You can run the `ipconfig /all` command and review the DNS servers list.
 - DNS misconfiguration on the domain controllers in a trusted domain or forest
 - Network ports blocked between the client and domain controllers
 
