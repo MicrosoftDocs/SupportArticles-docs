@@ -6,7 +6,6 @@ ms.topic: troubleshooting
 ms.date: 10/21/2021
 author: David-Pack
 ms.author: rashb
-ms.subservice: powerapps-others
 ---
 # Custom pages and client SDK script don't load for Power Apps
 

@@ -20,19 +20,19 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Best practices when updating a flow
-            url: best-practices-when-updating-a-flow.md
+            url: connections/best-practices-when-updating-a-flow.md
           - text: Common issues and resolutions for Power Apps
-            url: common-issues-and-resolutions.md
+            url: isolate-and-troubleshoot-common-issues/common-issues-and-resolutions.md
           - text: General Power Apps debugging strategies
-            url: isolate-common-issues.md
+            url: isolate-and-troubleshoot-common-issues/isolate-common-issues.md
           - text: Isolate issues in canvas apps
-            url: isolate-canvas-app-issues.md
+            url: isolate-and-troubleshoot-common-issues/isolate-canvas-app-issues.md
           - text: Isolate issues in model-driven app
-            url: isolate-model-app-issues.md
+            url: isolate-and-troubleshoot-common-issues/isolate-model-app-issues.md
           - text: Troubleshoot startup issues for Power Apps
-            url: troubleshooting-startup-issues.md
+            url: isolate-and-troubleshoot-common-issues/troubleshooting-startup-issues.md
           - text: Troubleshoot Power Query issues
-            url: troubleshoot-power-query-issues.md
+            url: isolate-and-troubleshoot-common-issues/troubleshoot-power-query-issues.md
 
   # Card
   - title: Ribbons and commanding
@@ -40,9 +40,9 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Ribbon issues
-            url: ribbon-issues.md
+            url: create-and-use-apps/ribbon-issues.md
           - text: Regenerate ribbon metadata
-            url: regenerate-ribbon-metadata.md
+            url: create-and-use-apps/regenerate-ribbon-metadata.md
 
   # Card
   - title: Documentation and training

@@ -6,7 +6,6 @@ ms.topic: troubleshooting
 ms.date: 10/19/2021
 author: David-Pack
 ms.author: rashb
-ms.subservice: powerapps-unified-interface
 ---
 # Third-party cookies or pop-up blocker errors when accessing Unified Interface apps in a web browser
 
