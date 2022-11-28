@@ -75,7 +75,7 @@ Consider using one or more of the following options to resolve this issue:
 
 1. File copy - performing a copy of the file may allow better space acquisition because the bytes might be tightly packed together in the process. Copying the file (or moving it to a different volume) may reduce attribute usage and may prevent the OS error 665. Copy one or more of the database files to another drive. Then, you may leave the file on the new volume if you prefer or copy it back to the original volume.
 
-1. Format the NTFS volume by using the **/L** option to obtain large FRS. This choice may provide relief of this problem because it makes the `ATTRIBUTE_LIST_ENTRY` larger. This choice might not be helpful when using `DBCC CHECKDB` because the latter creates a sparse file for the database snapshot.
+1. Format the NTFS volume by using the **/L** option to obtain large FRS. This choice may provide relief to this problem because it makes the `ATTRIBUTE_LIST_ENTRY` larger. This choice might not be helpful when using `DBCC CHECKDB` because the latter creates a sparse file for the database snapshot.
 
     > [!NOTE]
     > For systems running Windows Server 2008 R2 and Vista, you first need to apply the hotfix from the [KB article 967351](https://support.microsoft.com/topic/a-heavily-fragmented-file-in-an-ntfs-volume-may-not-grow-beyond-a-certain-size-da1c0dfd-a5a1-90b4-4bf7-b65b13ef9d35) before using the `/L` option with the `format` command.
@@ -89,7 +89,7 @@ Consider using one or more of the following options to resolve this issue:
 
 1. Reduce the lifetime of `DBCC CHECK` commands using the performance enhancements and thus avoid the 665 errors: [Improvements for the DBCC CHECKDB command may result in faster performance when you use the PHYSICAL_ONLY option](https://support.microsoft.com/kb/2634571). Keep in mind that running `DBCC CHECKDB` with `PHYSICAL_ONLY` switch doesn't provide a guarantee that you'll avoid this error, but it will reduce the likelihood in many cases.
 
-1. If you're performing database backups across many files (stripe set), carefully plan number of files, `MAXTRANSFERSIZE` and `BLOCKSIZE` (see [BACKUP](/sql/t-sql/statements/backup-transact-sql)). The goal is to reduce the fragments on the file system; larger byte chunks written together to a file will generally do that. You might consider striping the files across multiple volumes for faster performance and reduction of fragmentation.
+1. If you're performing database backups across many files (stripe set), carefully plan the  number of files, `MAXTRANSFERSIZE` and `BLOCKSIZE` (see [BACKUP](/sql/t-sql/statements/backup-transact-sql)). The goal is to reduce the fragments on the file system; larger byte chunks written together to a file will generally do that. You might consider striping the files across multiple volumes for faster performance and reduction of fragmentation.
 
 1. If you're using BCP to write multiple files simultaneously, adjust utility write sizes, for example, increase the BCP [batch size](/sql/tools/bcp-utility). Also consider writing multiple streams to different volumes to avoid fragmentation, or reduce the number of parallel writes.
 
