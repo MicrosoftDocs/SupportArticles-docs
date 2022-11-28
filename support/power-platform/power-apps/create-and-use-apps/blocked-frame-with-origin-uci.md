@@ -46,4 +46,4 @@ Chrome should automatically update your Android-based device based on your Play 
 1. Under **Updates available**, locate **Chrome**.
 1. Next to **Chrome**, tap **Update**.
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
