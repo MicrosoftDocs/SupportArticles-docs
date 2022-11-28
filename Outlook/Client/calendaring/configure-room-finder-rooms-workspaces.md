@@ -58,7 +58,7 @@ Room Finder displays room lists as the values for the **Building** filter. It do
 To add information about features in the rooms and workspaces that are specific to your organization, such as coffee makers and conference tables, use the **Tags** property. The tags that you define will display in the drop-down menu for the **Features** filter in Room Finder.
 
 > [!NOTE]
-> It will take 24 to 48 hours for these settings to take effect after you either configure or modify them. During this period Room Finder might not show the expected results.
+> It will take 24 to 48 hours for these settings to take effect after you either configure or modify them. During this period, Room Finder might not show the expected results.
 
 ### List of tasks to set up rooms and workspaces
 
