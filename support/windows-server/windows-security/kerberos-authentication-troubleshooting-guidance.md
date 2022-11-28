@@ -20,20 +20,20 @@ This guide provides you with the fundamental concepts used when troubleshooting 
 ## Troubleshooting checklist
 
 - A Kerberos-related error is a symptom of another service failing. The Kerberos protocol relies on many services that must be available and functioning properly for any authentication to take place.
-- To determine whether a problem is occurring with Kerberos authentication, check the System event log for errors from any services such as Kerberos, kdc, LsaSrv, or Netlogon on the client, target server or domain controller that provide authentication. If any such errors exist, there might be errors associated with the Kerberos protocol as well.
+- To determine whether a problem is occurring with Kerberos authentication, check the System event log for errors from any services (such as Kerberos, kdc, LsaSrv, or Netlogon) on the client, target server, or domain controller that provide authentication. If any such errors exist, there might be errors associated with the Kerberos protocol as well.
 - Failure audits on the target server's Security event log might show that the Kerberos protocol was being used when a logon failure occurred.
 - Before you inspect the Kerberos protocol, make sure that the following services or conditions are functioning properly:
 
-  - The network infrastructure is functioning properly and that all computers and services can communicate.
+  - The network infrastructure is functioning properly, and all computers and services can communicate.
   - The domain controller is accessible. You can run the command `nltest /dsgetdc:<Domain Name> /force /kdc` (for example, `nltest /dsgetdc:contoso.com /force /kdc`) on the client or target server.
-  - Domain Name System (DNS) is configured properly and resolving host names and services appropriately.
+  - Domain Name System (DNS) is configured properly and resolves host names and services appropriately.
   - The clocks are synchronized across the domain.
   - All critical updates and security updates for Windows Server are installed.
   - All software, including non-Microsoft software, is updated.
   - The computer is restarted if you're running a server operating system.
   - The required services and server are available. The Kerberos authentication protocol requires a functioning domain controller, DNS infrastructure, and network to work properly. Verify that you can access these resources before you begin troubleshooting the Kerberos protocol.
 
-If you've examined all these conditions and are still having authentication problems or Kerberos errors, you need to look further for the solution. The problems can be caused by the way the Kerberos protocol is configured or by the way other technologies that work with the Kerberos protocol are configured.
+If you've examined all these conditions and are still having authentication problems or Kerberos errors, you need to look further for a solution. The problems can be caused by how the Kerberos protocol is configured or by how other technologies that work with the Kerberos protocol are configured.
 
 ## Common issues and solutions
 
@@ -45,13 +45,13 @@ There are three types of delegation using Kerberos:
 
 - Full delegation (unconstrained delegation)
 
-  Full delegation should be avoided as much as possible. The user, front-end and back-end user can be located in different domains and also in different forests.
+  Full delegation should be avoided as much as possible. The user (front-end user and back-end user) can be located in different domains and also in different forests.
 - Constrained delegation (Kerberos only and protocol transition)
 
   The user can be from any domain or forest, but the front-end and the back-end services should be running in the same domain.
-- Resource based constrained delegation (RBCD)
+- Resource-based constrained delegation (RBCD)
 
-  The user can be from any domain, front-end and back-end resources can be from any domain or forest.
+  The user can be from any domain, and front-end and back-end resources can be from any domain or forest.
 
 ### Most common Kerberos delegation troubleshooting
 
