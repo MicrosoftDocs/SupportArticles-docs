@@ -102,7 +102,7 @@ productDirectory:
       links:
         - url: ./learning/viva-learning-welcome.md
           text: Microsoft Viva Learning
-        - url: ./connections/viva-connections-overview.md
+        - url: ./connections/viva-connections-welcome.md
           text: Microsoft Viva Connections 
     # Card
     - title: Endpoint management
