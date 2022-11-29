@@ -17,11 +17,6 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2013
   - Exchange Online
-  - Outlook on the web
-  - Outlook LTSC 2021
-  - Outlook 2019
-  - Outlook 2016
-  - Outlook 2013
 search.appverid: MET150
 ms.date: 11/29/2022
 ---
