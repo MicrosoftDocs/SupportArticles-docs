@@ -55,7 +55,7 @@ To resolve the issue, add the IP addresses from which you would like to access t
 
 See the following screenshot as an example:
 
-:::image type="content" source="media/azure-batch-pool-creation-failure/add-ip-ranges-to-allow-access.png" alt-text="Screenshot that shows the added IP address under Address range." lightbox="media/azure-batch-pool-creation-failure/add-ip-ranges-to-allow-access.png":::
+:::image type="content" source="media/azure-batch-pool-creation-failure/add-ip-ranges-to-allow-access.png" alt-text="Screenshot that shows the added IP address under Address range.":::
 
 ### Symptom 2 for Scenario 1
 
@@ -148,7 +148,7 @@ For more information, see [Disable network policies for Azure Private Link servi
 
 When you create a new Batch pool without data disk encryption (**Disk Encryption Configuration** is set to **None**), the operation fails immediately.
 
-:::image type="content" source="media/azure-batch-pool-creation-failure/disk-encryption-configuration-set-to-none.png" alt-text="Screenshot of the Disk Encryption Configuration setting." lightbox="media/azure-batch-pool-creation-failure/disk-encryption-configuration-set-to-none.png":::
+:::image type="content" source="media/azure-batch-pool-creation-failure/disk-encryption-configuration-set-to-none.png" alt-text="Screenshot of the Disk Encryption Configuration setting.":::
 
 The following error message appears in the notification or in the activity log:
 
