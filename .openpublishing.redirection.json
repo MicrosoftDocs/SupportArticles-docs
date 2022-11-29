@@ -4399,11 +4399,6 @@
       "source_path": "support/dynamics-365/finance/sales-tax/sales-tax-troubleshooting-voucher-not-generated.md",
       "redirect_url": "/troubleshoot/dynamics-365/finance/tax/sales-tax-troubleshooting-voucher-not-generated",
       "redirect_document_id": true
-    },
-    {
-      "source_path": "support/dotnet/framework/language-compilers/build-fails-deploy-component-system-text-encoding.md",
-      "redirect_url": "/troubleshoot/developer/dotnet/framework/general/build-fails-deploy-component-system-text-encoding",
-      "redirect_document_id": true
     }
   ]
 }
