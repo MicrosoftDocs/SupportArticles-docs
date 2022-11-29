@@ -1,72 +1,74 @@
 ---
-title: Troubleshooting data exemptions to data transfer policies
-description: Steps to help troubleshoot when Microsoft Intune app protection policies (APP) to not control data transfer as expected.
-ms.date: 09/28/2022
-ms.reviewer: kaushika, roblane-msft
+title: Troubleshooting exemptions to data transfer policies
+description: Troubleshooting guidance for scenarios when an exemption to Microsoft Intune app protection policies (APP) does not work as expected.
+ms.date: 11/30/2022
+ms.reviewer: chauntain, roblane-msft, kkreh
 search.appverid: MET150
 ---
-# Troubleshooting data transfer between apps
+# Troubleshooting exemptions to data transfer policies
 
-This article gives troubleshooting guidance for scenarios where a Microsoft Intune app protection policy (APP) designed to allow data transfer doesn't work as intended.The most common uses of the Intune APP are for data protection, to control the transfer of corporate data between APP managed applications (apps), and to restrict data transfer to unmanaged apps. For example, users can transfer corporate data from the Microsoft Outlook app to the Microsoft Excel app (both policy-managed) but not to the Dropbox mobile app (an unmanaged app).
+This article gives troubleshooting guidance for scenarios where an exemption to a Microsoft Intune app protection policy (APP) doesn’t work as intended. While data transfer settings enable you to limit the transfer of corporate data to Intune APP-managed apps, there may be scenarios where you want to allow users to transfer data to unmanaged apps. For example, if you wished to allow one of your managed applications to pass data to an unmanaged calendar app your users used.
 
-When applying Intune APP for data protection, a major unexpected behavior would be seeing your users cannot transfer data between managed apps, such as Outlook and Teams. In such scenarios, use the troubleshooting steps in this article to help diagnose and resolve the problem. For general APP troubleshooting, see [Troubleshooting app protection policy deployment in Intune](troubleshoot-app-protection-policy-deployment.md).
+**Warning**
 
-## Confirm you're using supported platforms, OS versions, and apps
+You’re responsible for making changes to the data transfer exception policy. Additions to this policy allow unmanaged apps (apps that are not managed by Intune) to access data protected by managed apps. This access to protected data may result in data security leaks. Only add data transfer exceptions for apps that your organization must use, but that do not support Intune APP. Additionally, only add exceptions for apps that you do not consider to be data leak risks.
 
-Confirm that you've met the prerequisites for using app protection policies. There are some requirements for supported platforms, operating system (OS) versions, and apps.
+When you have configured app exemptions or universal link exemptions you may run into a scenario that you are still unable to transfer data from your managed app to your exempted unmanaged apps. In such scenarios use the troubleshooting steps in this article to help diagnose and resolve the problem. For general APP troubleshooting, see [Troubleshooting app protection policy deployment in Intune](/troubleshoot/mem/intune/app-protection-policies/troubleshoot-app-protection-policy-deployment).
 
-- **Supported platforms:** App protection policies are supported on iOS, iPadOS, and Android. However, [Shared iPad devices](/mem/intune/enrollment/device-enrollment-shared-ipad) and [Android Enterprise dedicated devices](/mem/intune/apps/app-protection-policy#app-protection-experience-for-android-devices) aren't supported.
+## Confirm the behavior you're testing
 
-- **Supported OS versions:** Check that you're working with a supported OS and version. Note any special version requirements for app protection policies as described in [Supported operating systems and browsers in Intune](/mem/intune/fundamentals/supported-devices-browsers). Supported operating systems will change over time and older versions will become non-supported. Also, ensure your OS meets the requirements of each app you use, as well.
+Data can be transferred between applications on both iOS and Android in multiple ways, and it’s important to understand what an exemption does and does not affect.
 
-- **Supported apps:** Apps need to be integrated with the [Microsoft Intune App SDK](/mem/intune/developer/app-sdk-get-started) to support app protection policies. For a list of supported Microsoft and partner applications, see [Microsoft Intune protected apps](/mem/intune/apps/apps-supported-intune-apps).
+- **Scenario:** You have exempted an unmanaged app but still cannot copy and paste data from a managed app to your unmanaged app.
 
-## Verify that the account is a corporate account and that the file is corporate data
+  - Cut, copy, and paste restrictions cannot have exemptions and are separate from “send org data to other app” restrictions.
 
-The scope of Intune app protection policies (APP) covers corporate accounts and data only. You cannot use APP to protect personal accounts or manage the transfer of personal data. To apply APP correctly, you need to ensure the account you're using to sign into the managed app is a corporate account and the data you're trying to share is corporate data. Review the following:
+- **Scenario:** You have exempted an unmanaged app but still don’t see it as a sharing option within your managed app.
 
-- **Corporate accounts:** User accounts belong to your company's Azure Active Directory (Azure AD) tenant and are considered corporate accounts. These accounts can be synced with on-premises Active Directory using Azure AD Connect. You must assign Intune licenses to your users to use APP.
+  - Use the **Apps to exempt** setting to transfer data between using the operating system’s (OS) “Share” functionality.
+  - For this scenario, continue onto the Verifying Apps to Exempt section of this document.
 
-- **Corporate data:** The data stored in managed locations, such as OneDrive for Business or SharePoint Online, are considered corporate data. Data stored in personal, local storage locations are not treated as corporate data. Files created with managed Microsoft Office apps (such as Word or Excel), are considered corporate data only when saved to a managed location (OneDrive for Business and SharePoint Online). If you save Office files to OneDrive for Business, they'll be treated as corporate data. Files saved to local storage or in other non-managed locations are treated as personal data and not protected by APP. Draft, sent, and received emails in the Microsoft Outlook app are treated as corporate data if they were created while signed in with a corporate account.
+- **Scenario:** The unmanaged app shows up in the managed app’s shared menu, but data is not successfully transferred to the unmanaged app.
 
-- **Multi-identity apps:** Some applications, such as Outlook and OneDrive, support multi-identity, allowing  you to add both corporate and personal accounts to the apps at the same time. In this scenario, files, emails, and documents under corporate accounts are treated as corporate data and protected by APP. For example, files stored in the OneDrive for Business and Outlook emails and attachments are treated as corporate data. You can restrict the transfer data of this data using APP. On the other hand, OneDrive files and Outlook emails under personal accounts are treated as personal data and are not protected by APP. You cannot restrict data transfer for these accounts with APP.
+  - Review the “Confirm that the managed application supports sharing data to the targeted unmanaged app.” section. If the problem persists, speak to the app developer (of the sending app) about integration with Intune App SDK. Refer to the Intune App SDK Developer Guides for more details on SDK integration.
+    - [Intune App SDK for iOS Developer Guide](/mem/intune/developer/app-sdk-ios)
+    - [Intune App SDK for Android Developer Guide](/mem/intune/developer/app-sdk-android)
 
-## For Android, check that the apps are in the work profile
+- **Scenario:** You have exempted an unmanaged app but are unable to use the iOS “Open-in” functionality to open data in your unmanaged app.
 
-If you're using [Android work profile devices](/mem/intune/user-help/enroll-device-android-work-profile), make sure your users are using work profile apps when working with corporate data. To apply Intune APP to these devices, you must install the Intune Company Portal app in the work profile. For information about installing the Company Portal app, see [Add the Windows 10 Company Portal app by using Microsoft Intune](/mem/intune/apps/store-apps-company-portal-app).
+  - Data transfer exemptions do not apply to iOS Open-In functionality. For more information about iOS Open-In functionality, see [Use app protection with iOS apps](/mem/intune/apps/data-transfer-between-apps-manage-ios#use-open-in-management-to-protect-ios-apps-and-data).
 
-Apps in the work profile are identified with a briefcase badge on the app icons.
+## Verifying apps to exempt
 
-:::image type="content" source="media/troubleshoot-data-transfer/android-work-profile-icons.png" alt-text="Android work profile app icons showing a briefcase badge.":::
+A number of apps and services are exempted by default. To learn more about these apps, see [iOS/iPadOS app protection policy settings - Data transfer exemptions](/mem/intune/apps/app-protection-policy-settings-ios#data-transfer-exemptions) and [Android app protection policy settings - Data transfer exemptions](/mem/intune/apps/app-protection-policy-settings-android#data-transfer-exemptions).
 
-For more information on Android work profile, see [Introduction to Android work profile](/mem/intune/user-help/what-happens-when-you-create-a-work-profile-android).
+## Confirm the apps support data sharing
 
-## Confirm the expected APP settings are applied to the apps
+Verify that the managed app that you are trying to send data from supports sending data to the receiving unmanaged app. If the sending app does not support sending data to the unmanaged app, then exempting the app will not change that behavior. For example, Microsoft Word cannot send a text document to a music streaming app.
 
-Check app protection policy settings in both Intune and on those configured on the device side. The table in the Review APP settings in Endpoint Manager section of this document provides general guidelines to confirm that you've correctly configured settings in the admin center.  Once confirmed, verify that the same settings are applied to apps on the devices.
+Determine whether the data transfer is possible by ensuring both apps are not being managed by Intune and then testing the data transfer between them. Also, check the documentation provided by each apps' developer to confirm what data sharing options are supported.
 
-### Review APP settings in Endpoint Manager
+Ensure that the receiving app not only shows up in the share menu, but also that a transfer can successfully occur when both apps are unmanaged.
 
-In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can create and manage your app protection policies under **Apps** > **App protection policies**. The **Data protection** section includes important settings for data-transfer scenarios, which you should review if you're seeing unexpected behavior. The following table lists common APP settings for data protection and their use cases.
+## Confirm that the apps to exempt are formatted correctly for the OS type
 
-|Setting name   |OS   |Setting value   |Use case   |
+App exemption policy is handled differently between iOS and Android due to the different methods that the operating systems handle their share functionality. If your app exemptions are not the correct form for the respective OS, they won't work.
+
+|Operating system   |App to exempt   |Value type   |Value   |
 |------------|-----|------|-----------------|
-|Send org data to other apps|Android|Policy managed apps|Restrict data transfer to policy managed apps. Data can be transferred to unmanaged apps but the data is encrypted and can't be opened.|
-||iOS/iPadOS|Policy managed apps with OS sharing|SData transfer may be restricted to policy managed and unmanaged apps by applying "IntuneMAMUPN" app configuration policy. Refer to [iOS/iPadOS security app configuration policies](/mem/intune/enrollment/ios-ipados-app-configuration-policies) and [How to manage data transfer between iOS apps in Microsoft Intune](/mem/intune/apps/data-transfer-between-apps-manage-ios).|
-||iOS|Policy managed app with Open-In/Share filtering|Restrict data transfer by filtering apps displayed in sharing extensions. Sharing files with this setting restricts the available apps to those that support Intune APP only.|
-|Select apps to exempt|iOS|Custom URI schemes|Allow data transfer to specific unmanaged apps.|
-||Android|App packageIDs|Allow data transfer to specific unmanaged apps.|
-|Select universal links to exempt|iOS/iPadOS|URL strings|Specify unmanaged apps to open URL links instead of Microsoft Edge.|
-|Select managed universal links|iOS/iPadOS|URL strings|Specify managed apps to open URL links instead of Microsoft Edge.|
-|Save copies of org data|All|Block|Block or restrict file save locations.|
-|Allow user to save copies to selected services|All|OneDrive for Business, SharePoint, Box, Local Storage, Photo Library|Specify managed file save locations. Other locations are blocked or data is kept encrypted.|
-|Receive data from other apps|All|All apps|Allow managed apps to receive data from any app, including unmanaged apps.|
-||iOS/iPadOS|All apps with incoming org data|Allow managed apps to receive data from any app, including unmanaged apps.|
-||All|Policy managed apps|Allow apps to Receive data only from policy managed apps.|
-||All|None|Block incoming data from any app.|
-|Open data into Org documents|All|Allow|Allow opening data from any data sources.|
-||All|Block|Restrict opening data from specific data sources.|
-|Allow users to open data from selected services|All|OneDrive for Business, SharePoint, Camera, Photo Library|Select data sources apps are allowed to open data from.|
-|Restrict web content transfer with other apps|All|Microsoft Edge|Specify the policy-managed Microsoft Edge app to open URL links.|
+|Android|Microsoft Word|App Package ID|com.microsoft.office.word|
+|iOS|Microsoft Word|URL protocol|ms-word|
 
-For more information, see [iOS/iPadOS app protection policy settings](/mem/intune/apps/app-protection-policy-settings-ios#data-protection) and [Android app protection policy settings](/mem/intune/apps/app-protection-policy-settings-android#data-protection).
+Browse the Google Play store to find the package ID of an app. The package ID is contained in the URL of the app's page. For example, the Google Play Store address for Microsoft Word is https://play.google.com/store/apps/details?id=com.microsoft.office.word, and the package ID of the Microsoft Word app is com.microsoft.office.word.
+
+Check the documentation provided by the developer of the app to find information about supported URL protocols for iOS apps.
+
+## Verifying Universal Links to exempt (iOS)
+
+In addition to the iOS URL protocol used to transfer data between apps, iOS and Intune APP allow you to manage the universal links, which enable users to directly launch an application with a normal web link. If you have configured the **App protection policy** > **Restrict web content** transfer with other app settings to either “Microsoft Edge” or “Unmanaged browser,” you may need to manually configure the Universal Links to exempt.
+
+- **Scenario:** You have configured Restrict web content transfer with other apps and have added a URL into the Exempt Universal link setting list, but the browser is still being launched when you click on a link.
+
+  - Verify with the app developer to determine the correct universal link for their application.
+  - Ensure that the app is installed on the device.
+  - Confirm that the formatting of the link in your application matches the formatting provided by the app developer.
