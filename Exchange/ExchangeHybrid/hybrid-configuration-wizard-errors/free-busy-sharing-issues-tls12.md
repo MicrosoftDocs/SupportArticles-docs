@@ -18,6 +18,7 @@ appliesto:
   - Exchange Server 2013
   - Exchange Online
   - Outlook on the web
+  - Outlook LTSC 2021
   - Outlook 2019
   - Outlook 2016
   - Outlook 2013
@@ -59,7 +60,7 @@ HCW logs this error in the HCW log file. If you use EMS, you encounter this erro
 
 > New-AuthServer -Name "WindowsAzureACS" -AuthMetadataUrl "https://accounts.accesscontrol.windows.net/contoso.com/metadata/json/1" Cannot acquire auth metadata document from 'https://accounts.accesscontrol.windows.net/contoso.com/metadata/json/1'. Error: The underlying connection was closed: An unexpected error occurred on a receive.
 
-You encounter this error when you run the [New-AuthServer](/powershell/module/exchange/new-authserver) cmdlet in EMS.
+HCW logs this error in the HCW log file. If you use EMS, you encounter this error when you run the [New-AuthServer](/powershell/module/exchange/new-authserver) cmdlet in EMS.
 
 ### Error when testing OAuth connectivity in HCW or EMS
 
