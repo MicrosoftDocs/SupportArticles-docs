@@ -39,7 +39,7 @@ Use this method if you can't set your Teams meeting preference in the browser, o
 
 [!INCLUDE [Important registry alert](../../../includes/registry-important-alert.md)]
 
-1. Create a text file that's named **teams-desktop.reg**.
+1. Create a text file that's named *teams-desktop.reg*.
 
 2. Copy and paste the following text into the file:
 
@@ -53,12 +53,12 @@ Use this method if you can't set your Teams meeting preference in the browser, o
    "minStableTeamsDeepLinkUrlProtocolVersion"="1.0.0.0"
    ```
 
-3. Save the **teams-desktop.reg** file.
+3. Save the *teams-desktop.reg* file.
 
-4. Double-click **teams-desktop.reg** to run it.
+4. Double-click *teams-desktop.reg* to run it.
 
 5. When you are prompted for your approval, select **Yes**.
 
-If you have to set the meeting preference for a specific user, replace the second line in **teams-desktop.reg** with the following registry subkey: `[HKEY_USERS\<user SSID>\SOFTWARE\Microsoft\Office\Teams]`
+If you have to set the meeting preference for a specific user, replace the second line in *teams-desktop.reg* with the following registry subkey: `[HKEY_USERS\<user SSID>\SOFTWARE\Microsoft\Office\Teams]`
 
 The Windows registry will store your preference. For all future Teams meetings, Outlook will send your meeting join request to the Teams desktop app when you select the meeting link.
