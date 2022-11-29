@@ -33,11 +33,11 @@ After you set up a hybrid Microsoft Exchange environment, the following issues m
 
 - When a user who has an on-premises mailbox drafts a message to a user who has an Exchange Online mailbox, [MailTips](/exchange/clients-and-mobile-in-exchange-online/mailtips/mailtips) aren't displayed. This issue can occur in Outlook or Outlook on the web.
 
-## Federation trust and authorization errors in HCW or EMS
+## Federation trust and authorization errors
 
 When you try to configure the components that are required for free/busy sharing by using Hybrid Configuration wizard (HCW) or the Exchange Management Shell (EMS), you might encounter any of the following errors.
 
-### Errors when adding a domain to a federation trust in HCW or EMS
+### Errors when creating a federation trust
 
 > PowerShell failed to invoke 'Set-FederatedOrganizationIdentifier': An error occurred while attempting to provision Exchange to the Partner STS. Detailed Information "An error occurred accessing Windows Live. Detailed information: "The underlying connection was closed: An unexpected error occurred on a receive."."
 
@@ -45,19 +45,19 @@ When you try to configure the components that are required for free/busy sharing
 
 HCW logs these errors in the HCW log file. If you use EMS, you encounter these errors when you run the [Set-FederatedOrganizationIdentifier](/powershell/module/exchange/set-federatedorganizationidentifier) cmdlet.
 
-### Errors when adding a domain to a federation trust in HCW or EMS
+### Errors when adding a domain to a federation trust
 
 > PowerShell failed to invoke 'Add-FederatedDomain': Unable to reserve the URI "contoso.com" for the domain "contoso.com" on application identifier \<application ID\>. Detailed information: "An error occurred accessing Windows Live. Detailed information: "The underlying connection was closed: An unexpected error occurred on a send."."
 
 HCW logs this error in the HCW log file. If you use EMS, you encounter this error when you run the [Add-FederatedDomain](/powershell/module/exchange/add-federateddomain) cmdlet.
 
-### Error when creating authorization server objects in HCW or EMS
+### Error when creating authorization server objects
 
 > New-AuthServer -Name "WindowsAzureACS" -AuthMetadataUrl "https://accounts.accesscontrol.windows.net/contoso.com/metadata/json/1" Cannot acquire auth metadata document from 'https://accounts.accesscontrol.windows.net/contoso.com/metadata/json/1'. Error: The underlying connection was closed: An unexpected error occurred on a receive.
 
 HCW logs this error in the HCW log file. If you use EMS, you encounter this error when you run the [New-AuthServer](/powershell/module/exchange/new-authserver) cmdlet in EMS.
 
-### Error when testing OAuth connectivity in HCW or EMS
+### Error when testing OAuth connectivity
 
 > System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a send.
 > System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host.
