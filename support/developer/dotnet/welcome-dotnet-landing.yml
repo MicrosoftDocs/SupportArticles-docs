@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: sevend2 #Required; your GitHub user alias, with correct capitalization.
   ms.author: v-sidong #Required; microsoft alias of author; optional team alias.
-  ms.date: 3/31/2021
+  ms.date: 11/29/2022
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -41,7 +41,7 @@ landingContent:
   # Card
   - title: Documentation, training, and support
     linkLists:
-      - linkListType: how-to-guide
+      - linkListType: reference
         links:
           - text: .NET documentation
             url: /dotnet/
