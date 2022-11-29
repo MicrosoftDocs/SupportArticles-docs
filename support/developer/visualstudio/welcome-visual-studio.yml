@@ -38,6 +38,16 @@ landingContent:
             url: /visualstudio/windows#language-documentation
           - text: Use C# to read from and write to text file
             url: ./csharp/language-compilers/read-write-text-file.md
+          - text: Use C# to manage custom information from a .config file
+            url: ./csharp/language-compilers/store-custom-information-config-file.md
+          - text: Use C# to read XML data from a URL
+            url: ./csharp/language-compilers/read-xml-data-from-url.md
+          - text: Use C# to serialize an object to XML
+            url: ./csharp/language-compilers/serialize-object-xml.md
+          - text: Use C# applications to create and manage threads
+            url: ./csharp/language-compilers/create-thread.md
+          - text: I/O operations in Visual C++
+            url: ./cpp/language-compilers/basic-file-io-operation.md
   - title: C and C++ Libraries
     linkLists:
       - linkListType: how-to-guide
