@@ -165,23 +165,23 @@
 - name: Installation and Deployment
   items:
   - name: Can't deploy applications in Terminal Server
-    href: ./framwork/installation/clickonce-cannot-deploy-app-terminal-server.md
+    href: ./framework/installation/clickonce-cannot-deploy-app-terminal-server.md
   - name: Can't run .NET Framework based applications
-    href: ./framwork/installation/cannot-run-dotnet-framework-based-applications.md
+    href: ./framework/installation/cannot-run-dotnet-framework-based-applications.md
   - name: ClickOnce applications fail to update
-    href: ./framwork/installation/clickonce-application-fails-update.md
+    href: ./framework/installation/clickonce-application-fails-update.md
   - name: ClickOnce deployment isn't supported with Roaming Profiles
-    href: ./framwork/installation/clickonce-not-support-roaming-profiles.md
+    href: ./framework/installation/clickonce-not-support-roaming-profiles.md
   - name: Deploy applications
-    href: ./framwork/installation/deploy-applications.md
+    href: ./framework/installation/deploy-applications.md
   - name: ClickOnce Manifest signing is required
-    href: ./framwork/installation/require-clickonce-manifest-signing.md
+    href: ./framework/installation/require-clickonce-manifest-signing.md
   - name: Published ClickOnce applications fail to install
-    href: ./framwork/installation/clickonce-app-install-launch-fail.md
+    href: ./framework/installation/clickonce-app-install-launch-fail.md
   - name: Setup diagnostics
-    href: ./framwork/installation/setup-diagnostics.md
+    href: ./framework/installation/setup-diagnostics.md
   - name: Setup fails when rollback is disabled
-    href: ./framwork/installation/enable-rollback-continue-setup.md
+    href: ./framework/installation/enable-rollback-continue-setup.md
 
 - name: WCF
   items:
