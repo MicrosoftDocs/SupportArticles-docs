@@ -17,4 +17,4 @@ ms.date: 11/07/2022
 
 # Viva Connections troubleshooting
 
-Welcome to Viva Connections! Here's a collection of information on how to identify and fix errors that you may run into when you use this product.
+Welcome to Viva Connections troubleshooting! Here's a collection of information on how to identify and fix errors that you may run into when you use [Viva Connections](/viva/connections/viva-connections-overview).

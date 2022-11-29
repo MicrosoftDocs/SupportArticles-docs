@@ -17,4 +17,4 @@ ms.date: 11/07/2022
 
 # Viva Learning troubleshooting
 
-Welcome to Viva Learning! Here's a collection of information on how to identify and fix errors that you may run into when you use this product.
+Welcome to Viva Learning troubleshooting! Here's a collection of information on how to identify and fix errors that you may run into when you use [Viva Learning](/viva/learning/).
