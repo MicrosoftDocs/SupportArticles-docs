@@ -143,6 +143,8 @@
           href: ../hybrid-configuration-wizard-errors/execution-failed-configure-legacy-exchange-support-error.md
         - name: External IP addresses were not properly cleared
           href: ../hybrid-configuration-wizard-errors/hcw8018-external-ip-addresses-not-cleared.md
+        - name: Resolve free/busy sharing issues
+          href: ../hybrid-configuration-wizard-errors/free-busy-sharing-issues-tls12.md
         - name: Get-HybridEmail DeliveryDatacenterIPs is not recognized error
           href: ../hybrid-configuration-wizard-errors/term-get-hybridmailflowdatacenterips-is-not-recognized-error.md
         - name: Get-WebServicesVirtualDirectory cmdlet error
