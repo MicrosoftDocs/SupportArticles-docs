@@ -20,11 +20,11 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Determine which .NET Framework versions are installed
-            url: /dotnet/framework/general/determine-dotnet-versions-service-pack-levels
+            url: /troubleshoot/developer/dotnet/framework/general/determine-dotnet-versions-service-pack-levels
           - text: Repair existing installation of .NET Framework
-            url: /dotnet/framework/general/repair-installation
+            url: /troubleshoot/developer/dotnet/framework/general/repair-installation
           - text: .NET Framework Developer and Language Packs
-            url: /dotnet/framework/general/developer-language-pack
+            url: /troubleshoot/developer/dotnet/framework/general/developer-language-pack
 
   # Card
   - title: Troubleshoot common issues
@@ -32,11 +32,11 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Open SQL database by VB .NET
-            url: /dotnet/framework/general/open-database-by-sql-server-dotnet-data-provider
+            url: /troubleshoot/developer/dotnet/framework/general/open-database-by-sql-server-dotnet-data-provider
           - text: WPF render thread failures
-            url: /dotnet/framework/general/wpf-render-thread-failures
+            url: /troubleshoot/developer/dotnet/framework/general/wpf-render-thread-failures
           - text: Out of memory exception in a managed app
-            url: /dotnet/framework/general/out-of-memory-dotnet-framework-461
+            url: /troubleshoot/developer/dotnet/framework/general/out-of-memory-dotnet-framework-461
 
   # Card
   - title: Documentation, training, and support
