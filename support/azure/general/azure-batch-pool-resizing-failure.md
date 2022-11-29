@@ -9,11 +9,9 @@ ms.service: batch
 ---
 # Azure batch pool resizing failure
 
-When you create a Batch pool, the operation succeeds. However, no nodes are provisioned and you see a warning in the **Overview** pane of the created pool. The warning indicates that the desired number of dedicated nodes could not be allocated.
+When you create a Batch pool, the operation succeeds. However, no nodes are provisioned and you see a warning in the **Overview** pane of the created pool (See the following screenshot as an example). The warning indicates that the desired number of dedicated nodes could not be allocated. This article describes how to resolve such Azure batch pool resizing failure.
 
 :::image type="content" source="media/azure-batch-pool-resizing-failure/allocation-failure-warning.png" alt-text="Screenshot of the allocation failure warning.":::
-
-This article describes how to resolve such Azure batch pool resizing failure.
 
 ## Scenario 1: Batch pool virtual network related issue
 
