@@ -1,11 +1,55 @@
----
-title: Troubleshooting documentation
-description: This article lists Knowledge Base (KB) and other Support articles for .NET.
-ms.topic: article
-ms.date: 07/08/2020
----
-# .NET troubleshooting
+### YamlMime:Landing
 
-Welcome to .NET troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use .NET.
+title: .NET troubleshooting documentation
+summary: Welcome to .NET troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use .NET. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: .NET troubleshooting documentation
+  description: Welcome to .NET troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use .NET. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+  ms.prod:
+  ms.topic: landing-page
+  author: sevend2
+  ms.author: v-sidong
+  ms.date: 11/29/2022
 
-In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+  # Card
+  - title: Installation and Deployment
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Determine which .NET Framework versions are installed
+            url: framework/general/determine-dotnet-versions-service-pack-levels.md
+          - text: Repair existing installation of .NET Framework
+            url: framework/general/repair-installation.md
+          - text: .NET Framework Developer and Language Packs
+            url: framework/general/developer-language-pack.md
+
+  # Card
+  - title: Troubleshoot common issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Open SQL database by VB .NET
+            url: framework/general/open-database-by-sql-server-dotnet-data-provider.md
+          - text: WPF render thread failures
+            url: framework/general/wpf-render-thread-failures.md
+          - text: Out of memory exception in a managed app
+            url: framework/general/out-of-memory-dotnet-framework-461.md
+
+  # Card
+  - title: Documentation, training, and support
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: .NET documentation
+            url: /dotnet/
+          - text: .NET Framework documentation
+            url: /dotnet/framework/
+          - text: Learning resources
+            url: https://dotnet.microsoft.com/learn
+          - text: .NET Developer Community
+            url: https://dotnet.microsoft.com/platform/community
+          - text: Support resources
+            url: https://dotnet.microsoft.com/platform/support
