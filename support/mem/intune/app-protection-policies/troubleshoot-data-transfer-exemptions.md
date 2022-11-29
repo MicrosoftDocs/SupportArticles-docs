@@ -7,11 +7,11 @@ search.appverid: MET150
 ---
 # Troubleshooting exemptions to data transfer policies
 
-This article gives troubleshooting guidance for scenarios where an exemption to a Microsoft Intune app protection policy (APP) doesn’t work as intended. While data transfer settings enable you to limit the transfer of corporate data to Intune APP-managed apps, there may be scenarios where you want to allow users to transfer data to unmanaged apps. For example, if you wished to allow one of your managed applications to pass data to an unmanaged calendar app your users used.
+This article gives troubleshooting guidance for scenarios where an exemption to a Microsoft Intune app protection policy (APP) doesn’t work as intended. While data transfer settings enable you to limit the transfer of corporate data to Intune APP-managed apps, there may be scenarios where you want to allow users to transfer data to unmanaged apps. An example scenario would include when you wish to allow one of your managed applications to pass data to an unmanaged calendar app your users use. In this situation, a data transfer exception, or more commonly called an exemption, may be necessary.
 
-**Warning:** You’re responsible for making changes to the data transfer exception policy. Additions to this policy allow unmanaged apps (apps that are not managed by Intune) to access data protected by managed apps. This access to protected data may result in data security leaks. Only add data transfer exceptions for apps that your organization must use, but that do not support Intune APP. Additionally, only add exceptions for apps that you do not consider to be data leak risks.
+**Warning:** You’re responsible for making changes to the data transfer exception policy. Additions to this policy allow unmanaged apps (apps that are not managed by Intune) to access data protected by managed apps. This access to protected data may result in data security leaks. Only add exemptions for non-Intune managed apps that your organization must use. Additionally, only add exemptions for apps that you do not consider to be data leak risks.
 
-When you have configured app exemptions or universal link exemptions you may run into a scenario that you are still unable to transfer data from your managed app to your exempted unmanaged apps. In such scenarios use the troubleshooting steps in this article to help diagnose and resolve the problem. For general APP troubleshooting, see [Troubleshooting app protection policy deployment in Intune](/troubleshoot/mem/intune/app-protection-policies/troubleshoot-app-protection-policy-deployment).
+When you have configured app exemptions, or universal link exemptions, you may run into a scenario where you're still unable to transfer data from your managed app to your exempted, unmanaged apps. In such scenarios, use the troubleshooting steps in this article to help diagnose and resolve the problem. For general APP troubleshooting, see [Troubleshooting app protection policy deployment in Intune](/troubleshoot/mem/intune/app-protection-policies/troubleshoot-app-protection-policy-deployment).
 
 ## Confirm the behavior you're testing
 
@@ -36,11 +36,9 @@ Data can be transferred between applications on both iOS and Android in multiple
 
   - Data transfer exemptions do not apply to iOS Open-In functionality. For more information about iOS Open-In functionality, see [Use app protection with iOS apps](/mem/intune/apps/data-transfer-between-apps-manage-ios#use-open-in-management-to-protect-ios-apps-and-data).
 
-## Verifying apps to exempt
+## Confirm the apps support data sharing
 
 A number of apps and services are exempted by default. To learn more about these apps, see [iOS/iPadOS app protection policy settings - Data transfer exemptions](/mem/intune/apps/app-protection-policy-settings-ios#data-transfer-exemptions) and [Android app protection policy settings - Data transfer exemptions](/mem/intune/apps/app-protection-policy-settings-android#data-transfer-exemptions).
-
-## Confirm the apps support data sharing
 
 Verify that the managed app that you are trying to send data from supports sending data to the receiving unmanaged app. If the sending app does not support sending data to the unmanaged app, then exempting the app will not change that behavior. For example, Microsoft Word cannot send a text document to a music streaming app.
 
