@@ -54,14 +54,4 @@ landingContent:
           - text: Support resources
             url: https://dotnet.microsoft.com/platform/support
 
-landingContent:
-  # Card
-  - title: Product management
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Can't delete a released product
-            url: /dynamics365/supply-chain/troubleshooting/products/cant-delete-released-prod
-          - text: Product information management FAQ
-            url: /dynamics365/supply-chain/pim/product-information-faq
 
