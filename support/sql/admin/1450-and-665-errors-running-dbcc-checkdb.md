@@ -3,7 +3,7 @@ title: Operating System errors 665 and 1450 are reported for database files
 description: This article provides resolutions for the problem where OS errors 1450 and 665 are reported for SQL Server database files.
 author: PiJoCoder 
 ms.author: v-jayaramanp
-ms.date: 11/28/2022
+ms.date: 11/29/2022
 ms.custom: sap:Administration and Management
 ms.prod: sql
 ---
