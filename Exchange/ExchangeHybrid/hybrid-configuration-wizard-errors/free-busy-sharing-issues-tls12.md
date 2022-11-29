@@ -70,16 +70,14 @@ Any of the listed issues and errors can occur if TLS 1.2 isn't fully enabled and
 
 ## More information
 
-- To check a server's SSL/TLS configuration, use the [Microsoft SSL Server Test](https://testconnectivity.microsoft.com/tests/SslServer/input) or [Qualys SSL Server Test](https://www.ssllabs.com/ssltest/).
+- To diagnose free/busy issues in Outlook and Outlook on the web, see [Demystifying hybrid free/busy](https://techcommunity.microsoft.com/t5/exchange-team-blog/demystifying-hybrid-free-busy-finding-errors-and-troubleshooting/ba-p/607727) and [Free/busy sharing fails if TLS 1.2 is misconfigured](https://techcommunity.microsoft.com/t5/exchange/tls-1-2-is-coming-to-exchange-on-premises-using-hybrid-and-free/m-p/3260911).
 
 - To check the TLS configuration in Exchange Server, use the [Exchange Server Health Checker](https://microsoft.github.io/CSS-Exchange/Diagnostics/HealthChecker/).
+
+- To check a server's SSL/TLS configuration, use the [Microsoft SSL Server Test](https://testconnectivity.microsoft.com/tests/SslServer/input) or [Qualys SSL Server Test](https://www.ssllabs.com/ssltest/).
 
 - To check the TLS version of network traffic for a specific issue, trigger the issue while you use a network protocol analyzer to capture the network traffic. The following screenshot shows the TLS version of a [ClientHello](https://www.rfc-editor.org/rfc/rfc5246#section-7.4.1.2) handshake that was captured by using [Wireshark](https://www.wireshark.org/).
 
   :::image type="content" source="./media/free-busy-sharing-issues-tls12/wireshark-client-hello-tls.png" border="true" alt-text="Screenshot of a Wireshark capture of network traffic.":::
 
-- To diagnose free/busy issues in Outlook and Outlook on the web, see [Demystifying hybrid free/busy](https://techcommunity.microsoft.com/t5/exchange-team-blog/demystifying-hybrid-free-busy-finding-errors-and-troubleshooting/ba-p/607727) and [Free/busy sharing fails if TLS 1.2 is misconfigured](https://techcommunity.microsoft.com/t5/exchange/tls-1-2-is-coming-to-exchange-on-premises-using-hybrid-and-free/m-p/3260911).
-
-[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
-
-[!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
+> [!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
