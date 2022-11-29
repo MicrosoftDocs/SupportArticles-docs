@@ -1,6 +1,6 @@
 ---
-title: LDAP connection fails with event ID 36884
-description: Introduce how to troubleshoot event ID 36884 that occurs during LDAP connections.
+title: LDAPS connection fails with event ID 36884
+description: Introduce how to troubleshoot event ID 36884 that occurs during LDAPS connections.
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
@@ -9,7 +9,7 @@ ms.prod: windows-server
 ms.technology: windows-server-active-directory
 ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot
 ---
-# Event ID 36884 when you try to connect to an LDAP server
+# Event ID 36884 when you try to connect to an LDAPS server
 
 This article introduces how to troubleshoot event ID 36884 issue that occurs when you try to build a Lightweight Directory Access Protocol (LDAP) connection.
 
@@ -17,15 +17,15 @@ This article introduces how to troubleshoot event ID 36884 issue that occurs whe
 
 Consider the following scenario:
 
-- You installed a certificate on an LDAP connection point.
+- You installed a certificate on an LDAPS connection point.
 - The certificate has the following characteristics:  
   Subject: ldap.contoso.com  
-  Subject Alternate Name (SAN): *.contoso.com, ldap.contoso.com
+  Subject Alternate Name (SAN): ldap.contoso.com
 - In DNS server, you have the following entries:  
   ldap.contoso.com CNAME myldapserver.contoso.com  
   myldapserver.contoso.com HOST 10.0.0.1
 
-When you try to connect to the LDAP connection point, the connection is dropped, and you receive event ID 36884.
+When you try to connect to the LDAPS connection point, the connection is dropped, and you receive event ID 36884.
 
 ```output
 Log Name:      System
@@ -44,7 +44,7 @@ The SSPI client process is ldp (PID: 5148).
 
 ## Cause
 
-LDAP is looking for myldapserver.contoso.com to be associated with it. However, myldapserver.contoso.com isn't covered by the SAN entries. Therefore, a server name match isn't made and the connection is dropped.
+LDAPS is looking for myldapserver.contoso.com to be associated with it. However, myldapserver.contoso.com isn't covered by the SAN entries. Therefore, a server name match isn't made and the connection is dropped.
 
 ## How to fix the issue
 
