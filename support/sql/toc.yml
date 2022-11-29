@@ -738,7 +738,7 @@
     href: releases/faq-acronyms.md
   - name: SQL Server on Linux Release History
     items:
-    - name: SQL Server 2022 Preview
+    - name: SQL Server 2022
       href: /sql/linux/sql-server-linux-release-history-2022
     - name: SQL Server 2019
       href: /sql/linux/sql-server-linux-release-history-2019
