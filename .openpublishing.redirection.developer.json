@@ -4245,7 +4245,7 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/dotnet/framework/language-compilers/build-fails-deploy-component-system-text-encoding.md",
+      "source_path": "support/developer/dotnet/framework/language-compilers/build-fails-deploy-component-system-text-encoding.md",
       "redirect_url": "/troubleshoot/developer/dotnet/framework/general/build-fails-deploy-component-system-text-encoding",
       "redirect_document_id": true
     }
