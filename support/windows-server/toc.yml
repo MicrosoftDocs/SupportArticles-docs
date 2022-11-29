@@ -188,8 +188,8 @@
       href: ./identity/admt-3dot2-installation-incomplete.md
     - name: Issues when you migrate to domain with ADMT 3.1
       href: ./identity/issues-admt-3dot1-migrate-to-domain.md
-    - name: Support information for ADMT and PES
-      href: ./identity/support-for-admt-and-pes.md
+    - name: Support policy and known issues for ADMT
+      href: ./identity/support-policy-and-known-issues-for-admt.md
     - name: Troubleshoot intra-forest password migrations
       href: ./identity/inter-forest-password-migration-with-admtv2.md
     - name: Troubleshoot sIDHistory migration with ADMTv2
@@ -400,6 +400,8 @@
       href: ./identity/event1644reader-analyze-ldap-query-performance.md
   - name: Domain join issues
     items:
+    - name: 'Troubleshooting guidance: Active Directory domain join'
+      href: ./identity/active-directory-domain-join-troubleshooting-guidance.md
     - name: '"The account is not authorized to login from this station" error'
       href: ./identity/account-not-authorized-login-from-this-station.md
     - name: Active Directory installation fails
@@ -2698,10 +2700,14 @@
       href: ./virtualization/scvmm-p2v-fails-with-error-2910.md
     - name: Specifications for supported emulated and synthetic hardware
       href: ./virtualization/emulated-synthetic-hardware-specification.md
+    - name: Support and installation instructions for AMD EPYC 9004 Series server processors
+      href: ./virtualization/support-and-installation-instructions-for-amd-epyc-9004-series-server-processors.md
     - name: Support Policy for NIC Teaming with Hyper-V
       href: ./virtualization/support-policy-nic-teaming.md
     - name: Upgrade computers with Hyper-V role installed
       href: ./virtualization/upgrade-computers-hyper-v-role.md
+    - name: Windows Server 2019 Hyper-V host minroot behavior
+      href: ./virtualization/windows-server-hyper-v-host-minroot-behaviors.md
   - name: Integration components
     items:
     - name: Degraded integration services message for non-Windows guests

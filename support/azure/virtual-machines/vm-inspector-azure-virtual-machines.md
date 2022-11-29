@@ -1,7 +1,7 @@
 ---
 title: VM Inspector for Azure Virtual Machines (Preview)
 description: Describes the VM Inspector tool for Azure virtual machines for troubleshooting issues on Windows or Linux virtual machines.
-ms.date: 6/6/2022
+ms.date: 11/14/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.service: virtual-machines
@@ -27,6 +27,7 @@ VM Inspector is supported on the following operating systems:
 - Windows Server 2012
 - Windows Server 2008 R2
 - Windows Server 2008
+- Windows 11
 - Windows 10
 - Windows 8.1
 - Windows 8
@@ -453,6 +454,10 @@ The following analysis scenarios are available to run from the Azure portal. Cho
 |diagnostic|`/etc/HOSTNAME`|
 |diagnostic|`/etc/hostname`|
 </details>
+
+## Review the privacy policy and legal terms, and select the check box to acknowledge (required)
+
+To run the diagnostics, you must agree to the legal terms and accept privacy policy.
 
 ## Change the VM Inspector settings
 

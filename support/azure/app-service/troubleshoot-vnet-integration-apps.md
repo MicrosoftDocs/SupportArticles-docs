@@ -5,7 +5,7 @@ ms.date: 10/21/2022
 ms.service: app-service
 author: hepiet
 ms.author: hepiet
-ms.reviewer: amymcel, amehrot, jugonza
+ms.reviewer: jugonza
 ---
 # Troubleshoot virtual network integration with Azure App Service
 
@@ -65,7 +65,11 @@ To test DNS functionality, you can use **nameresolver.exe**. The syntax is:
 nameresolver.exe hostname [optional:DNS Server]
 ```
 
-You can use **nameresolver** to check the hostnames that your app depends on. This way, you can test if you have anything misconfigured with your DNS or perhaps don't have access to your DNS server. 
+You can use **nameresolver** to check the hostnames that your app depends on. This way, you can test if you have anything misconfigured with your DNS or perhaps don't have access to your DNS server. You can see the DNS server that your app uses in the console by looking at the environmental variables WEBSITE_DNS_SERVER and WEBSITE_DNS_ALT_SERVER.
+
+> [!NOTE]
+> * The nameresolver.exe tool currently doesn’t work in custom Windows containers.
+
 
 To test TCP connectivity to a host and port combination, you can use **tcpping**. The syntax is.
 

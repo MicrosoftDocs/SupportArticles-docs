@@ -24,7 +24,7 @@ Before you start troubleshooting, it's best to verify that everything is configu
 
   - Verify that **MDM user scope** is set to **All** to allow all users to enroll a device in Intune.
   - Verify that **MAM User scope** is set to **None**. Otherwise, this setting will have precedence over the MDM scope and cause issues.
-  - Verify that **MDM discovery URL** is set to **`https://enrollment.manage.microsoft.com/enrollmentserver/discovery`**.
+  - Verify that **MDM discovery URL** is set to **`https://enrollment.manage.microsoft.com/enrollmentserver/discovery.svc`**.
 
 - Verify that the device is running Windows 10, version 1709 or a later version.
 

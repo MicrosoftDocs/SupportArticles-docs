@@ -17,8 +17,6 @@
           href: aimodels-fail-to-be-imported-in-a-new-environment.md
         - name: Fields couldn't be loaded for this document error
           href: fields-could-not-be-loaded-for-this-document-error-in-form-processing.md
-        - name: Document processing isn't extracting tables
-          href: aibuilder-form-processing-is-not-extracting-tables-that-span-across-multiple-pages.md
         - name: Training document isn't displayed
           href: the-training-document-is-not-displayed-on-the-form-processing-model-details-page.md
     - name: Use in Power Automate

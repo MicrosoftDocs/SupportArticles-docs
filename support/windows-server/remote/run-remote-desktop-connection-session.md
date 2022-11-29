@@ -26,11 +26,11 @@ Running a Remote Desktop Connection session within another Remote Desktop Connec
 
 |Client Computer version|Remote Desktop version|Nested Remote Desktop version|Supported RDP feature for the nested Remote Desktop connection|Supported Remote Desktop connection type|
 |---|---|---|---|---|
-|<ul><li>Windows 11 </li><li>Windows 10 </li> <li>Windows Server 2012 </li>|<ul><li>Windows 11 </li><li>Windows 10 </li> <li>Windows Server 2012 </li>|<ul><li>Windows 11 </li><li>Windows 10 </li> <li>Windows Server 2012 </li>|<ul><li>Basic graphics (Display) </li> <li>Keyboard and mouse input</li>|<ul><li>Full Remote Desktop</li> <li>RemoteApp</li>|
+|<ul><li>Windows 11 </li><li>Windows 10 </li> <li>Windows Server 2012 R2 </li>|<ul><li>Windows 11 </li><li>Windows 10 </li> <li>Windows Server 2012 R2 </li>|<ul><li>Windows 11 </li><li>Windows 10 </li> <li>Windows Server 2012 R2 </li>|<ul><li>Basic graphics (Display) </li> <li>Keyboard and mouse input</li>|<ul><li>Full Remote Desktop</li> <li>RemoteApp</li>|
 
 For example, the following scenarios are supported for basic graphics and keyboard and mouse input:
 
-1. Users connecting to a Windows Server 2012 Remote Desktop Session Host (RD Session Host) server for their desktop environment, and then connecting to another Windows Server 2012 RD Session Host server for RemoteApp programs.
+1. Users connecting to a Windows Server 2016 Remote Desktop Session Host (RD Session Host) server for their desktop environment, and then connecting to another Windows Server 2016 RD Session Host server for RemoteApp programs.
 2. Users connecting to a Windows 11 or Windows 10 virtual desktop for their desktop environment, and then connecting to a Windows Server 2012 RD Session Host server for RemoteApp programs.
 
 ## More information
