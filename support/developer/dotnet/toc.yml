@@ -1,7 +1,7 @@
 - name: Welcome
   href: welcome-dotnet.md
 - name: .NET troubleshooting documentation
-  href: welcome-dotnet.yml
+  href: welcome-dotnet-landing.yml
 - name: General Troubleshooting
   items:
   - name: Printing a range of pages may fail when you use a WPF application
