@@ -1,4 +1,4 @@
-- name: .NET troubleshooting documentation
+- name: Welcome
   href: welcome-dotnet-landing.yml
 - name: General Troubleshooting
   items:

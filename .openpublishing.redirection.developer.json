@@ -4248,6 +4248,11 @@
       "source_path": "support/developer/dotnet/framework/language-compilers/build-fails-deploy-component-system-text-encoding.md",
       "redirect_url": "/troubleshoot/developer/dotnet/framework/general/build-fails-deploy-component-system-text-encoding",
       "redirect_document_id": true
-    }
+    },
+    {
+      "source_path": "support/developer/dotnet/welcome-dotnet.md",
+      "redirect_url": "/troubleshoot/developer/dotnet/welcome-dotnet-landing",
+      "redirect_document_id": true
+    }  
   ]
 }
