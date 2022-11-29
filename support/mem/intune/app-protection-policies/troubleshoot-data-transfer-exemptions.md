@@ -9,9 +9,7 @@ search.appverid: MET150
 
 This article gives troubleshooting guidance for scenarios where an exemption to a Microsoft Intune app protection policy (APP) doesn’t work as intended. While data transfer settings enable you to limit the transfer of corporate data to Intune APP-managed apps, there may be scenarios where you want to allow users to transfer data to unmanaged apps. For example, if you wished to allow one of your managed applications to pass data to an unmanaged calendar app your users used.
 
-**Warning**
-
-You’re responsible for making changes to the data transfer exception policy. Additions to this policy allow unmanaged apps (apps that are not managed by Intune) to access data protected by managed apps. This access to protected data may result in data security leaks. Only add data transfer exceptions for apps that your organization must use, but that do not support Intune APP. Additionally, only add exceptions for apps that you do not consider to be data leak risks.
+**Warning:** You’re responsible for making changes to the data transfer exception policy. Additions to this policy allow unmanaged apps (apps that are not managed by Intune) to access data protected by managed apps. This access to protected data may result in data security leaks. Only add data transfer exceptions for apps that your organization must use, but that do not support Intune APP. Additionally, only add exceptions for apps that you do not consider to be data leak risks.
 
 When you have configured app exemptions or universal link exemptions you may run into a scenario that you are still unable to transfer data from your managed app to your exempted unmanaged apps. In such scenarios use the troubleshooting steps in this article to help diagnose and resolve the problem. For general APP troubleshooting, see [Troubleshooting app protection policy deployment in Intune](/troubleshoot/mem/intune/app-protection-policies/troubleshoot-app-protection-policy-deployment).
 
@@ -52,14 +50,12 @@ Ensure that the receiving app not only shows up in the share menu, but also that
 
 ## Confirm that the apps to exempt are formatted correctly for the OS type
 
-App exemption policy is handled differently between iOS and Android due to the different methods that the operating systems handle their share functionality. If your app exemptions are not the correct form for the respective OS, they won't work.
+App exemption policy is handled differently between iOS and Android due to the different methods that the operating systems handle their share functionality. If your app exemptions are not the correct form for the respective OS, they won't work. Browse the Google Play store to find the package ID of an app. The package ID is contained in the URL of the app's page. Refer to the table for the URL data applicable to your OS type.
 
 |Operating system   |App to exempt   |Value type   |Value   |
 |------------|-----|------|-----------------|
 |Android|Microsoft Word|App Package ID|com.microsoft.office.word|
 |iOS|Microsoft Word|URL protocol|ms-word|
-
-Browse the Google Play store to find the package ID of an app. The package ID is contained in the URL of the app's page. For example, the Google Play Store address for Microsoft Word is https://play.google.com/store/apps/details?id=com.microsoft.office.word, and the package ID of the Microsoft Word app is com.microsoft.office.word.
 
 Check the documentation provided by the developer of the app to find information about supported URL protocols for iOS apps.
 
