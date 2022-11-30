@@ -39,7 +39,7 @@ productDirectory:
   - title: .NET
     imageSrc: "media/hub-landing/logo_NET.svg"
     summary: Troubleshooting articles for .NET
-    url: developer/dotnet/welcome-dotnet.md
+    url: developer/dotnet/welcome-dotnet-landing.yml
       
   - title: Visual Studio
     imageSrc: "media/hub-landing/logo_vs-ide.svg"
