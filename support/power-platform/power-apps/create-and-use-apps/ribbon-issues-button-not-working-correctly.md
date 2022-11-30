@@ -4,7 +4,6 @@ description: Fixes an issue in which a button in the command bar is not working 
 ms.reviewer: krgoldie, srihas
 ms.topic: troubleshooting
 ms.date: 05/20/2021
-ms.subservice: powerapps-ribbons-commanding
 ---
 # A button in the command bar is not working correctly
 
@@ -90,7 +89,7 @@ Please select one of the following repair options.
 
 <!-- ###### Delete the command with the invalid JavaScriptFunction declaration in the unmanaged Active solution -->
 
-To delete a command in the **Active** unmanaged solution layer, you will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import a new version of this solution where this command has been removed in order to delete the component. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
+To delete a command in the **Active** unmanaged solution layer, you will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the _customizations.xml_ file, and then import a new version of this solution where this command has been removed in order to delete the component. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
 
 ###### The command is entity-specific
 
@@ -106,7 +105,7 @@ Based on the example scenario, you determined that the entity is **account**, th
 1. Select **Save**.
 1. Select **Export Solution**, and export the unmanaged solution.
 1. Extract the .zip file.
-1. Open the *customizations.xml* file.
+1. Open the _customizations.xml_ file.
 1. Locate the `<Entity>` node child of the entity node that you want to edit, and locate its child `<RibbonDiffXml>` node.
 1. Locate the `<CommandDefinition>` node. (In the example, the ID of the `<CommandDefinition>` node is `Mscrm.DeletePrimaryRecord`. Therefore, you would locate the following node.)
 
@@ -116,8 +115,8 @@ Based on the example scenario, you determined that the entity is **account**, th
 
     :::image type="content" source="media/ribbon-issues-button-not-working-correctly/delete-node.png" alt-text="Screenshot to delete the CommandDefinition node.":::
 
-1. Save the *customizations.xml* file.
-1. Restore the modified *customizations.xml* file to the solution .zip file.
+1. Save the _customizations.xml_ file.
+1. Restore the modified _customizations.xml_ file to the solution .zip file.
 1. Import the solution file.
 1. Select **Publish All Customizations**.
 
@@ -134,12 +133,12 @@ If the command is not entity-specific but, instead, is applicable to "All Entiti
 1. Select **Save**.
 1. Select **Export Solution**, and export the unmanaged solution.
 1. Extract the .zip file.
-1. Open the *customizations.xml* file.
+1. Open the _customizations.xml_ file.
 1. Locate the root `<RibbonDiffXml>` node.
 1. Locate the `<CommandDefinition>` node.
 1. Edit the `<RibbonDiffXml>`, and remove the `<CommandDefinition>` node that has the ID of the command that you want to delete. Make sure that you don't unintentionally delete other `<CommandDefinition>` nodes that might be present.
-1. Save the *customizations.xml* file.
-1. Restore the modified *customizations.xml* file to the compressed solution .zip file.
+1. Save the _customizations.xml_ file.
+1. Restore the modified _customizations.xml_ file to the compressed solution .zip file.
 1. Import the solution file.
 1. Select **Publish All Customizations**.
 
@@ -151,6 +150,7 @@ If the command is not entity-specific but, instead, is applicable to "All Entiti
 <!-- ###### Delete a command from a custom-managed solution -->
 
 To delete a command that was installed by a custom-managed solution that you created, follow these steps:
+
 1. In your separate development organization that has the unmanaged source version of your custom solution, complete the steps listed above for the **The command is in the unmanaged Active solution** option.
 1. Increment the Version of your custom solution.
 1. Export solution as managed.
@@ -174,7 +174,7 @@ To delete a command that was installed by a custom-managed solution that was cre
 
 <!-- ###### Fix the command JavaScriptFunction declaration in the unmanaged Active solution -->
 
-To fix a command in the **Active** unmanaged solution layer, you will export an unmanaged solution that contains the entity or Application ribbon, edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import a new version of this solution that contains the fixed command definition. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
+To fix a command in the **Active** unmanaged solution layer, you will export an unmanaged solution that contains the entity or Application ribbon, edit the `<RibbonDiffXml>` node in the _customizations.xml_ file, and then import a new version of this solution that contains the fixed command definition. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
 
 > [!WARNING]
 > Do not remove `Mscrm.HideOnModern` display rule from a command to force a button to appear in the Unified Interface. Commands that have the `Mscrm.HideOnModern` display rule are intended for the legacy Web Client interface and are not supported in the Unified Interface, and might not work correctly.
@@ -193,7 +193,7 @@ Based on the example scenario, you determined that the entity is **account**, th
 1. Select **Save**.
 1. Select **Export Solution**, and export the unmanaged solution.
 1. Extract the .zip file.
-1. Open the *customizations.xml* file.
+1. Open the _customizations.xml_ file.
 1. Locate the `<Entity>` node child of the entity node that you want to edit, and locate its child `<RibbonDiffXml>` node.
 1. Locate the `<CommandDefinition>` node. (In the example, the ID of the `<CommandDefinition>` node is `Mscrm.DeletePrimaryRecord`. Therefore, you would locate the following node.)
 
@@ -203,7 +203,7 @@ Based on the example scenario, you determined that the entity is **account**, th
 
     :::image type="content" source="media/ribbon-issues-button-not-working-correctly/modify-node.png" alt-text="Screenshot to modify the CommandDefinition node's JavaScriptFunction by setting the FunctionName value.":::
 
-1. Restore the modified *customizations.xml* file to the solution .zip file.
+1. Restore the modified _customizations.xml_ file to the solution .zip file.
 1. Import the solution file.
 1. Select **Publish All Customizations**.
 
@@ -220,12 +220,12 @@ If the command is not entity-specific but, instead, is applicable to "All Entiti
 1. Select **Save**.
 1. Select **Export Solution** and export the unmanaged solution.
 1. Extract the .zip file.
-1. Open the *customizations.xml* file.
+1. Open the _customizations.xml_ file.
 1. Locate the root `<RibbonDiffXml>` node.
 1. Locate the `<CommandDefinition>`.
 1. Edit the `<RibbonDiffXml>` node to make the necessary changes to the `<CommandDefinition>` node that will enable the command to function correctly under the correct circumstances to fix the command. For more information about how to declare commands, see [Define ribbon commands](/powerapps/developer/model-driven-apps/define-ribbon-commands), and [Define ribbon actions](/powerapps/developer/model-driven-apps/define-ribbon-actions).
-1. Save the *customizations.xml* file.
-1. Restore the modified *customizations.xml* file to the compressed solution .zip file.
+1. Save the _customizations.xml_ file.
+1. Restore the modified _customizations.xml_ file to the compressed solution .zip file.
 1. Import the solution file.
 1. Select **Publish All Customizations**.
 
@@ -290,7 +290,7 @@ Once the Command Checker tool has been enabled, within the application in each o
 
 1. Select the **Command Properties** tab to display the details of the command for this button. This will display the **Actions** and JavaScriptFunction declaration, and any enable or display the rules together with the result (**True**, **False**, **Skipped**) of each rule evaluation.
 
-    Expand **JavaScriptFunction**, by selecting the "chevron" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/chevron-icon.png"::: icon to view the details of the function declaration. The Library property must be a JavaScript web resource and be prefixed with `$webresource:`. The following example shows that the Library property is */_static/_common/scripts/RibbonActions.js*. This is not a path to a valid JavaScript web resource. You should next review the solution layers of the command to try to identify the correct value to fix the issue.
+    Expand **JavaScriptFunction**, by selecting the "chevron" :::image type="icon" source="media/ribbon-issues-button-not-working-correctly/chevron-icon.png"::: icon to view the details of the function declaration. The Library property must be a JavaScript web resource and be prefixed with `$webresource:`. The following example shows that the Library property is _/_static/_common/scripts/RibbonActions.js_. This is not a path to a valid JavaScript web resource. You should next review the solution layers of the command to try to identify the correct value to fix the issue.
 
     :::image type="content" source="media/ribbon-issues-button-not-working-correctly/library-property.png" alt-text="Screenshot shows an example of the Library property.":::
 
@@ -312,7 +312,7 @@ Once the Command Checker tool has been enabled, within the application in each o
 
     :::image type="content" source="media/ribbon-issues-button-not-working-correctly/compare-comparison.png" alt-text="Screenshot to select the top two rows and select the Compare option to view a comparison of the definitions.":::
 
-1. The comparison between command definitions will show any differences that might exist between the two layers. The following example clearly shows that the Library value is different. The unmanaged entry from the Active solution is set to an incorrect path */_static/_common/scripts/RibbonActions.js* (your specific path might be slightly different), and the default definition from Microsoft has set the library to `$webresoure:Main_system_library.js`. This is a supported path for this particular command (this value might be different, depending on your particular command). The only supported path is one that begins with `$webresource:` and ends with the name of a valid JavaScript web resource.
+1. The comparison between command definitions will show any differences that might exist between the two layers. The following example clearly shows that the Library value is different. The unmanaged entry from the Active solution is set to an incorrect path _/_static/_common/scripts/RibbonActions.js_ (your specific path might be slightly different), and the default definition from Microsoft has set the library to `$webresoure:Main_system_library.js`. This is a supported path for this particular command (this value might be different, depending on your particular command). The only supported path is one that begins with `$webresource:` and ends with the name of a valid JavaScript web resource.
 
     :::image type="content" source="media/ribbon-issues-button-not-working-correctly/comparison-library-value.png" alt-text="Screenshot shows an example where the Library value is different.":::
 
@@ -332,7 +332,7 @@ Please select the option that reflects your scenario:
 
   <!-- **Fix Script Error Invalid JavaScript Action Library from the unmanaged Active solution - Delete Layer** -->
 
-    To delete a command in the **Active** unmanaged solution layer, you will export an unmanaged solution that contains the entity or Application Ribbon, edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import a new version of this solution where this command has been removed in order to delete the component. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
+    To delete a command in the **Active** unmanaged solution layer, you will export an unmanaged solution that contains the entity or Application Ribbon, edit the `<RibbonDiffXml>` node in the _customizations.xml_ file, and then import a new version of this solution where this command has been removed in order to delete the component. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
 
     **The command is entity-specific**
 
@@ -348,7 +348,7 @@ Please select the option that reflects your scenario:
     1. Select **Save**.
     1. Select **Export Solution**, and export the unmanaged solution.
     1. Extract the .zip file.
-    1. Open the *customizations.xml* file.
+    1. Open the _customizations.xml_ file.
     1. Locate the `<Entity>` node child of the entity node that you want to edit, and locate its child `<RibbonDiffXml>` node.
     1. Locate the `<CommandDefinition>` node (In the example, ID of the `<CommandDefinition>` is `Mscrm.NewRecordFromForm`. Therefore, you would locate the following node.)
 
@@ -358,8 +358,8 @@ Please select the option that reflects your scenario:
 
         :::image type="content" source="media/ribbon-issues-button-not-working-correctly/delete-node-example.png" alt-text="Screenshot shows an example to delete the CommandDefinition node.":::
 
-    1. Save the *customizations.xml* file.
-    1. Restore the modified *customizations.xml* file to the solution .zip file.
+    1. Save the _customizations.xml_ file.
+    1. Restore the modified _customizations.xml_ file to the solution .zip file.
     1. Import the solution file.
     1. Select **Publish All Customizations**.
 
@@ -376,12 +376,12 @@ Please select the option that reflects your scenario:
     1. Select **Save**.
     1. Select **Export Solution**, and export the unmanaged solution.
     1. Extract the .zip file.
-    1. Open the *customizations.xml* file.
+    1. Open the _customizations.xml_ file.
     1. Locate the root `<RibbonDiffXml>` node.
     1. Locate the `<CommandDefinition>` node.
     1. Edit `<RibbonDiffXml>` to remove the `<CommandDefinition>` node that has the matching ID of the command that you want to delete. Make sure that you don't unintentionally delete other `<CommandDefinition>` nodes that might be present.
-    1. Save the *customizations.xml* file.
-    1. Restore the modified *customizations.xml* file to the compressed solution .zip file.
+    1. Save the _customizations.xml_ file.
+    1. Restore the modified _customizations.xml_ file to the compressed solution .zip file.
     1. Import the solution file.
     1. Select **Publish All Customizations**.
 
@@ -392,7 +392,7 @@ Please select the option that reflects your scenario:
 
   <!-- **Fix Script Error "Invalid JavaScript Action Library" from the unmanaged Active solution** -->
 
-    To fix a command in the **Active** unmanaged solution layer, you will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import a new version of this solution containing the fixed command definition. See Export, prepare to edit, and import the ribbon
+    To fix a command in the **Active** unmanaged solution layer, you will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the _customizations.xml_ file, and then import a new version of this solution containing the fixed command definition. See Export, prepare to edit, and import the ribbon
 
     > [!WARNING]
     > Do not remove `Mscrm.HideOnModern` display rule from a command to force a button to appear in the Unified Interface. Commands that have the `Mscrm.HideOnModern` display rule are intended for the legacy Web Client interface and are not supported in the Unified Interface, and might not work correctly.
@@ -411,7 +411,7 @@ Please select the option that reflects your scenario:
     1. Select **Save**.
     1. Select **Export Solution**, and export the unmanaged solution.
     1. Extract the .zip file.
-    1. Open the *customizations.xml* file
+    1. Open the _customizations.xml_ file
     1. Locate the `<Entity>` node child of the entity node you want to edit, and locate its child `<RibbonDiffXml>` node.
     1. Locate the `<CommandDefinition>` node. (In the example, the ID of the `<CommandDefinition>` node is `Mscrm.NewRecordFromForm`. Therefore, you would locate the following node.)
 
@@ -421,8 +421,8 @@ Please select the option that reflects your scenario:
 
         :::image type="content" source="media/ribbon-issues-button-not-working-correctly/modify-node-value-match.png" alt-text="Screenshot to modify the CommandDefinition node, and then make sure that the FunctionName value matches.":::
 
-    1. Save the *customizations.xml* file.
-    1. Restore the modified *customizations.xml* file to the solution .zip file.
+    1. Save the _customizations.xml_ file.
+    1. Restore the modified _customizations.xml_ file to the solution .zip file.
     1. Import the solution file.
     1. Select **Publish All Customizations**.
 
@@ -439,12 +439,12 @@ Please select the option that reflects your scenario:
     1. Select **Save**.
     1. Select **Export Solution**, and export the unmanaged solution.
     1. Extract the .zip file.
-    1. Open the *customizations.xml* file.
+    1. Open the _customizations.xml_ file.
     1. Locate the root `<RibbonDiffXml>` node.
     1. Locate the `<CommandDefinition>` node.
     1. Edit the `<RibbonDiffXml>` node to make the necessary changes to the `<CommandDefinition>` node that will enable the command to function correctly under the correct circumstances to fix the command. For more information about how to declare commands, see [Define ribbon commands](/powerapps/developer/model-driven-apps/define-ribbon-commands), and [Define ribbon actions](/powerapps/developer/model-driven-apps/define-ribbon-actions).
-    1. Save the *customizations.xml* file.
-    1. Restore the modified *customizations.xml* file to the compressed solution .zip file.
+    1. Save the _customizations.xml_ file.
+    1. Restore the modified _customizations.xml_ file to the compressed solution .zip file.
     1. Import the solution file.
     1. Select **Publish All Customizations**.
 
@@ -545,7 +545,7 @@ Please select one of the following repair options.
 
 <!-- **Delete the command with the invalid JavaScriptFunction declaration in the unmanaged Active solution** -->
 
-To delete a command in the **Active** unmanaged solution layer, you will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import a new version of this solution where this command has been removed in order to delete the component. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
+To delete a command in the **Active** unmanaged solution layer, you will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the _customizations.xml_ file, and then import a new version of this solution where this command has been removed in order to delete the component. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
 
 **The command is entity-specific**
 
@@ -561,7 +561,7 @@ Based on the example scenario, you determined that the entity is **account**, th
 1. Select **Save**.
 1. Select **Export Solution**, and export the unmanaged solution.
 1. Extract the .zip file.
-1. Open the *customizations.xml* file.
+1. Open the _customizations.xml_ file.
 1. Locate the `<Entity>` node child of the entity node that you want to edit, and then locate its child `<RibbonDiffXml>` node.
 1. Locate the `<CommandDefinition>` node. (In the example, the ID of the `<CommandDefinition>` node is `Mscrm.DeletePrimaryRecord`. Therefore, you would locate the following node.)
 
@@ -571,8 +571,8 @@ Based on the example scenario, you determined that the entity is **account**, th
 
     :::image type="content" source="media/ribbon-issues-button-not-working-correctly/delete-node.png" alt-text="Screenshot to delete the CommandDefinition node in which the ID is Mscrm.DeletePrimaryRecord.":::
 
-1. Save the *customizations.xml* file.
-1. Restore the modified *customizations.xml* file to the solution .zip file.
+1. Save the _customizations.xml_ file.
+1. Restore the modified _customizations.xml_ file to the solution .zip file.
 1. Import the solution file.
 1. Select **Publish All Customizations**.
 
@@ -589,12 +589,12 @@ If the command is not entity-specific but, instead, is applicable to "All entiti
 1. Select **Save**.
 1. Select **Export Solution**, and export the unmanaged solution.
 1. Extract the .zip file.
-1. Open the *customizations.xml* file.
+1. Open the _customizations.xml_ file.
 1. Locate the root `<RibbonDiffXml>` node.
 1. Locate the `<CommandDefinition>` node.
 1. Edit the `<RibbonDiffXml>` and remove the `<CommandDefinition>` node that has the ID of the command that you want to delete. Make sure that you don't unintentionally delete other `<CommandDefinition>` nodes that might be present.
-1. Save the *customizations.xml* file.
-1. Restore the modified *customizations.xml* file to the compressed solution .zip file.
+1. Save the _customizations.xml_ file.
+1. Restore the modified _customizations.xml_ file to the compressed solution .zip file.
 1. Import the solution file.
 1. Select **Publish All Customizations**.
 
@@ -630,7 +630,7 @@ To delete a command that was installed by a custom-managed solution that was cre
 
 <!-- **Fix the command JavaScriptFunction declaration in the unmanaged Active solution** -->
 
-To fix a command in the **Active** unmanaged solution layer, you will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import a new version of this solution containing the fixed command definition. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
+To fix a command in the **Active** unmanaged solution layer, you will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the _customizations.xml_ file, and then import a new version of this solution containing the fixed command definition. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
 
 > [!WARNING]
 > Do not remove `Mscrm.HideOnModern` display rule from a command to force a button to appear in the Unified Interface. Commands that have the `Mscrm.HideOnModern` display rule are intended for the legacy Web Client interface and are not supported in the Unified Interface, and might not work correctly.
@@ -649,7 +649,7 @@ Based on the example scenario, you determined that the entity is **account**, th
 1. Select **Save**.
 1. Select **Export Solution**, and export the unmanaged solution.
 1. Extract the .zip file.
-1. Open the *customizations.xml* file.
+1. Open the _customizations.xml_ file.
 1. Locate the `<Entity>` node child of the entity node that you want to edit, and locate its child `<RibbonDiffXml>` node.
 1. Locate the `<CommandDefinition>` node. (In the example, the ID of the `<CommandDefinition>` node is `Mscrm.DeletePrimaryRecord`. Therefore, you would locate the following node.)
 
@@ -659,7 +659,7 @@ Based on the example scenario, you determined that the entity is **account**, th
 
     :::image type="content" source="media/ribbon-issues-button-not-working-correctly/modify-node.png" alt-text="Screenshot to modify the CommandDefinition node's JavaScriptFunction by setting the FunctionName value.":::
 
-1. Restore the modified *customizations.xml* file to the solution .zip file.
+1. Restore the modified _customizations.xml_ file to the solution .zip file.
 1. Import the solution file.
 1. Select **Publish All Customizations**.
 
@@ -676,12 +676,12 @@ If the command is not entity-specific but, instead, applicable to "All Entities"
 1. Select **Save**.
 1. Select **Export Solution**, and export the unmanaged solution.
 1. Extract the .zip file.
-1. Open the *customizations.xml* file.
+1. Open the _customizations.xml_ file.
 1. Locate the root `<RibbonDiffXml>` node.
 1. Locate the `<CommandDefinition>`.
 1. Edit the `<RibbonDiffXml>` node to make the necessary changes to the `<CommandDefinition>` node that will enable the command to function correctly under the correct circumstances to fix the command. For more information about how to declare commands, see [Define ribbon commands](/powerapps/developer/model-driven-apps/define-ribbon-commands), and [Define ribbon actions](/powerapps/developer/model-driven-apps/define-ribbon-actions).
-1. Save the *customizations.xml* file.
-1. Restore the modified *customizations.xml* file to the compressed solution .zip file.
+1. Save the _customizations.xml_ file.
+1. Restore the modified _customizations.xml_ file to the compressed solution .zip file.
 1. Import the solution file.
 1. Select **Publish All Customizations**.
 

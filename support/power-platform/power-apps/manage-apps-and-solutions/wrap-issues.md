@@ -4,7 +4,6 @@ description: Provides resolutions for issues related to the wrap feature in Powe
 ms.reviewer: makolomi
 ms.topic: troubleshooting
 ms.date: 10/08/2022
-ms.subservice: 
 ---
 # Troubleshoot issues with the wrap feature in Power Apps
 
