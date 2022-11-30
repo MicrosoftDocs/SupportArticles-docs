@@ -203,7 +203,7 @@ Here are examples of such error messages:
 ### Network Monitor analysis of the workflow
 
 > [!NOTE]
-You need to be a user of the local Administrators group to perform below activities.
+> You need to be a user of the local Administrators group to perform below activities.
 
 1. Install [Microsoft Network Monitor](https://www.microsoft.com/download/4865) on the client machine (`Client1.contoso.com`).
 2. Run the following command in an elevated command prompt window (*cmd.exe*):
