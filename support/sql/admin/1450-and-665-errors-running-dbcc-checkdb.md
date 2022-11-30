@@ -66,7 +66,7 @@ For a complete background of how SQL Server Engine uses NTFS sparse files and al
 
 Consider using one or more of the following options to resolve this issue:
 
-1. Place the database files on a [Resilient File System (ReFS)](/windows-server/storage/refs/refs-overview) volume, which doesn't have the same `ATTRIBUTE_LIST_ENTRY` limits that NTFS presents. If you want to use the current NTFS volume, you must reformat using ReFS after moving your database files elsewhere temporarily. Using ReFS is the best long-term solution to deal with this issue.
+1. Place the database files on a [Resilient File System (ReFS)](/windows-server/storage/refs/refs-overview) volume, which doesn't have the same `ATTRIBUTE_LIST_ENTRY` limits that New Technology File System (NTFS) presents. If you want to use the current NTFS volume, you must reformat using ReFS after moving your database files elsewhere temporarily. Using ReFS is the best long-term solution to deal with this issue.
 
    > [!NOTE]
    > SQL Server 2012 and earlier versions used named [file streams](/windows/win32/fileio/file-streams) instead of sparse files to create `CHECKDB` snapshots. ReFS doesn't support file streams. Running `DBCC CHECKDB` on SQL Server 2012 files in ReFS might result in errors. For more information, see the note in [How DBCC CHECKDB creates an internal snapshot database beginning with SQL Server 2014](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql#how-dbcc-checkdb-creates-an-internal-snapshot-database-beginning-with-sql-server-2014).
