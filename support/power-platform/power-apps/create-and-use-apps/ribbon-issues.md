@@ -4,7 +4,6 @@ description: Provides a resolution for ribbon issues in Power Apps.
 ms.reviewer: krgoldie, srihas
 ms.topic: troubleshooting
 ms.date: 05/15/2021
-ms.subservice: powerapps-ribbons-commanding
 ---
 # Troubleshooting ribbon issues in Power Apps
 

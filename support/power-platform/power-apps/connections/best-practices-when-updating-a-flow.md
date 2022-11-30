@@ -4,7 +4,6 @@ description: This article describes best practices around updating Microsoft Flo
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
-ms.subservice: powerapps-connections
 ---
 # Best practices when updating a Flow used by a Power App
 

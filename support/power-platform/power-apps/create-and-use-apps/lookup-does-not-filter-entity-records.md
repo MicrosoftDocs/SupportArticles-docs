@@ -4,7 +4,6 @@ description: Provides workarounds to an issue in which the lookup displays all r
 ms.reviewer: krgoldie, srihas
 ms.topic: troubleshooting
 ms.date: 4/12/2021
-ms.subservice: powerapps-others
 ---
 # Lookup doesn't filter records as expected for particular entity in Dynamics 365
 

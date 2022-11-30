@@ -6,7 +6,6 @@ ms.topic: troubleshooting
 ms.date: 10/19/2021
 author: David-Pack
 ms.author: rashb
-ms.subservice: powerapps-unified-interface
 ---
 # Third-party cookies or pop-up blocker errors when accessing Unified Interface apps in a web browser
 
@@ -34,4 +33,4 @@ These issues occur because third-party cookies are blocked in the web browser.
 
 To check what browser you are using and the browser settings, go to [WhatIsMyBrowser](https://www.whatismybrowser.com/). Then, enable third-party cookies, and make sure that the related sites are not blocked for cookies. For instructions for web browsers and iOS devices, see [troubleshooting startup issues for Power Apps](/powerapps/troubleshooting-startup-issues#enable-storage-of-third-party-cookies-and-local-data-in-your-browser-or-app).
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]

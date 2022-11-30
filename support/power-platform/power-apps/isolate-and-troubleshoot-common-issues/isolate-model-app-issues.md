@@ -109,13 +109,12 @@ If you suspect that a script is causing an issue, follow these steps:
 
 ## Next steps
 
-- [Troubleshoot commands](ribbon-issues.md)
+- [Troubleshoot commands](/create-and-use-apps/ribbon-issues.md)
 - [Troubleshoot forms](/power-apps/developer/model-driven-apps/troubleshoot-forms)
 - [Troubleshoot plug-ins](/power-apps/developer/data-platform/troubleshoot-plug-in)
 - [Troubleshoot permission issues with Microsoft Dataverse](/power-platform/admin/troubleshooting-user-needs-read-write-access-organization)
 - [Debugging model-driven apps with Monitor](/power-apps/maker/monitor-modelapps)
 - [Debugging model-driven apps forms with Monitor](/power-apps/maker/model-driven-apps/monitor-form-checker)
-- [Isolate issues in Custom pages](isolate-common-issues.md)
 
 ### See also
 

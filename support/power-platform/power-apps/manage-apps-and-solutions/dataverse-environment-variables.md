@@ -5,7 +5,6 @@ ms.reviewer: tapanm
 ms.date: 6/30/2022
 author: lancedMicrosoft
 ms.author: lanced
-ms.subservice: powerapps-solutions
 search.audienceType: 
   - maker
 search.app: 

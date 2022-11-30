@@ -4,7 +4,6 @@ description: Describes how to start the regeneration ribbon metadata operation a
 ms.reviewer: krgoldie, srihas
 ms.topic: troubleshooting
 ms.date: 05/19/2021
-ms.subservice: powerapps-ribbons-commanding
 ---
 # How to regenerate ribbon metadata
 
