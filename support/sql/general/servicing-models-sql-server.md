@@ -73,7 +73,7 @@ The SQL Server team uses a scheduled delivery model for releasing fixes and prod
 
 - Service packs include hotfixes and fixes to issues that are reported through the Microsoft SQL Server community. Service packs can also include product and feature improvements.
 
-- They're typically released on a yearly schedule.
+- Service packs are typically released on a yearly schedule.
 
 - Service packs may also include issues that our support organization feels must be addressed. The most common items included impact customer support cases and customer satisfaction. These updates and components are conveniently bundled for easy downloading.
 
