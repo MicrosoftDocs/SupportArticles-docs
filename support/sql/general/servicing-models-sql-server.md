@@ -48,7 +48,7 @@ The SQL Server team uses a scheduled delivery model for releasing fixes and prod
 
 - This hotfix build can contain one or more fixes.
 
-- They don't have a defined frequency.
+- Doesn't have a defined frequency.
 
 - Example: [KB4510083 - On-demand hotfix update package 2 for SQL Server 2017 CU15](https://support.microsoft.com/topic/kb4510083-on-demand-hotfix-update-package-2-for-sql-server-2017-cu15-5a04ceb8-b93d-43d7-c767-e96e307744e4)
 
