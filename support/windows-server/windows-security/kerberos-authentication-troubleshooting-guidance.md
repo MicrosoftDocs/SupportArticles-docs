@@ -155,10 +155,10 @@ Here are examples of such error messages:
 
 - Client machine
 
-    Client1.contoso.com (a Windows11 machine) joins to the domain Contoso.com.
+    `Client1.contoso.com` (a Windows11 machine) joins to the domain `Contoso.com`.
 - User Didar
 
-    The user belongs to Contoso.com and sign in on the  client machine.
+    The user belongs to `Contoso.com` and sign in on the client machine.
 - Internet options on the client machine
 
     All the  websites are a part of the local intranet zone.
@@ -167,7 +167,7 @@ Here are examples of such error messages:
 
 - Server
 
-    IISServer.contoso.com (Windows Sever 2019) joins to the domain Contoso.com.
+    `IISServer.contoso.com` (Windows Sever 2019) joins to the domain `Contoso.com`.
 - Authentication configuration
 
     **Windows Authentication** is **Enabled**.
