@@ -6,6 +6,7 @@ ms.author: genli
 author: genlin
 ms.reviewer: malachma
 ms.service: virtual-machines
+ms.subservice: vm-linux-setup-configuration
 ms.collection: linux
 ---
 # Configure multiple network interfaces in Azure Linux virtual machines
@@ -312,6 +313,7 @@ If you encounter some issues, restart the VM by using the `reboot` command, and 
         eth0: inet 10.0.1.4/24 brd 10.0.1.255 scope global eth0    
         eth1: inet 10.0.1.5/24 brd 10.0.1.255 scope global eth1
         ```
+
 1. Add two routing tables to */etc/iproute2/rt_tables* by running the following commands:
 
     ```bash
@@ -327,14 +329,14 @@ If you encounter some issues, restart the VM by using the `reboot` command, and 
     vi /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
     ```
 
-    ```yml
+    ```yaml
     network:
        config: disabled
     ```
 
 1. Modify the netplan configuration file */etc/netplan/50-cloud-init.yaml*, and include the following routes and policy-routing blocks in each network interface section:
 
-    ```yml
+    ```yaml
     routes:
      - to: <subnet>/24
        via: <gatewayIP>
@@ -358,7 +360,7 @@ If you encounter some issues, restart the VM by using the `reboot` command, and 
     vi /etc/netplan/50-cloud-init.yaml
     ```
 
-    ```yml
+    ```yaml
     network:
         ethernets:
             eth0:
@@ -442,6 +444,7 @@ If you encounter some issues, restart the VM by using the `reboot` command, and 
         eth0: inet 10.0.1.4/24 brd 10.0.1.255 scope global eth0    
         eth1: inet 10.0.1.5/24 brd 10.0.1.255 scope global eth1
         ```
+
 1. Add two routing tables to */etc/iproute2/rt_tables* by running the following commands:
 
     ```bash
@@ -470,6 +473,7 @@ If you encounter some issues, restart the VM by using the `reboot` command, and 
     up /usr/sbin/ip rule add from 10.24.1.4/32 table eth1-rt
     up /usr/sbin/ip rule add to 10.24.1.4/32 table eth1-rt
     ```
+
 1. Activate the new configuration:
 
     ```bash
@@ -497,6 +501,7 @@ If you encounter some issues, restart the VM by using the `reboot` command, and 
         eth0: inet 10.0.1.4/24 brd 10.0.1.255 scope global eth0    
         eth1: inet 10.0.1.5/24 brd 10.0.1.255 scope global eth1
         ```
+
 1. Add two routing tables to */etc/iproute2/rt_tables* by running the following commands:
 
     ```bash
@@ -560,7 +565,7 @@ If you encounter some issues, restart the VM by using the `reboot` command, and 
         ```
 
     Adjust the Network and IP address information accordingly. If there are more than two NICs, make sure that the corresponding IP rules and IP routes are included for each one.
-    
+  
 1. Provide execution permissions to both scripts:
 
     ```bash
@@ -573,11 +578,11 @@ If you encounter some issues, restart the VM by using the `reboot` command, and 
     ```Configuration
     POST_UP_SCRIPT='compat:suse:/etc/sysconfig/network/scripts/ifup-route.eth#'
     ```
-    
+  
     For SLES 11, exclude `compat:suse` from the following line: `POST_UP_SCRIPT='/etc/sysconfig/network/scripts/ifup-route.eth#'`.
-    
+  
     Here's a sample of both configuration files:
-    
+  
     ```bash
     vi /etc/sysconfig/network/ifcfg-eth0
     

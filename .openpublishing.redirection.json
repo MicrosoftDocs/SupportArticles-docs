@@ -2706,6 +2706,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/sql/general/determine-version-edition-update-level.md",
+      "redirect_url": "/troubleshoot/sql/releases/download-and-install-latest-updates",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/mem/intune/app-management.yml",
       "redirect_url": "/troubleshoot/mem/intune/app-management/app-management",
       "redirect_document_id": true
