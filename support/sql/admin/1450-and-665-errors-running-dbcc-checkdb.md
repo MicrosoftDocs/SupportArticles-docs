@@ -83,7 +83,7 @@ Consider using one or more of the following options to resolve this issue:
 1. Break up large database into smaller files. For example, if you have one 8-TB data file, you can break it up into eight 1-TB data files. This option might help because fewer modifications would happen on smaller files thus less likely to introduce attribute exhaustion. Also, in the process of moving data around, the files will be organized compactly and fragmentation would be reduced. The following are high-level steps, which outline the process:
    1. Add the seven new 1-TB files to the same file group.
    1. Rebuild the clustered indexes of the existing tables and this will automatically spread the data of each table among the eight files. If a table doesn't have a clustered index, then create one and drop it to accomplish the same.
-   1. Shrink the original 8-TB file. Now that's about 12-15% full.
+   1. Shrink the original 8-TB file which is now about 12% full.
 
 1. Database Auto-grow settings: Adjust the auto [growth increment](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options#:~:text=to%20FILESTREAM%20filegroups.-,growth_increment%20Is,-the%20amount%20of) database setting to acquire sizes conducive for production performance and packing of NTFS attributes. The less frequent the auto growths occurrences and the larger the growth increment size, the less likely is the possibility of file fragmentation.
 
