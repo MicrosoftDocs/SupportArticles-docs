@@ -17,7 +17,7 @@ ms.date: 10/25/2022
 ---
 # Scenario: Outlook Scan
 
-The Outlook Scan scenario scans and creates a detailed report about Microsoft Outlook, Microsoft Office, Windows, and mailbox configurations.
+The Outlook Scan scenario scans your device and creates a detailed report about Microsoft Outlook, Microsoft Office, Windows, and mailbox configurations.
 
 In the full version of the Assistant, the equivalent entry point for the scenario is *Advanced diagnostics \ Outlook \ Create a detailed report of my Outlook, Office, Windows, and mailbox configuration*.
 
