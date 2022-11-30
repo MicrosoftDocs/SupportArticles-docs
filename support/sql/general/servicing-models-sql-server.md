@@ -17,7 +17,7 @@ This article provides more information regarding servicing channels for currentl
 
 For determining the version, edition, and the latest updates of your SQL Server instance, review [Determine the version, edition, and update level of SQL Server and its components](determine-version-edition-update-level.md). For details on the support cycle for each product, check [mainstream lifecycle](/lifecycle/products/?products=sql-server). To understand various options that are available for SQL Server products that have reached the end of support, review [SQL Server end of support options](/sql/sql-server/end-of-support/sql-server-end-of-support-overview).
 
-## Delivery mechanisms for SQL Server Updates
+## Delivery mechanisms for SQL Server updates
 
 The SQL Server team uses a scheduled delivery model for releasing fixes and product updates. In the scheduled delivery model, a customer can receive a fix to address their most critical situations in a reasonable time. Additionally, a customer can receive a fix that has undergone rigorous testing and that is released on a scheduled basis. Therefore, the SQL Server team has created the following delivery mechanisms:
 
