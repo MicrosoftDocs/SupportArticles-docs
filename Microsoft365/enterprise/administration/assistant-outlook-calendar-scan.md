@@ -17,7 +17,7 @@ ms.date: 10/25/2022
 ---
 # Scenario: Outlook Calendar Scan
 
-The Outlook Calendar Scan scenario scans a Microsoft Outlook calendar to identify and report issues that involve general settings such as permissions, free/busy publishing, delegate configuration, and automatic conference room booking. For more information, see [Scan Outlook calendar by using Microsoft Support and Recovery Assistant](/outlook/troubleshoot/calendaring/scan-outlook-calendar-using-sara).
+The Outlook Calendar Scan scenario scans a Microsoft Outlook calendar to identify and report issues that involve general settings such as permissions, free/busy publishing, delegate configuration, and Direct Booking settings. For more information, see [Scan Outlook calendar by using Microsoft Support and Recovery Assistant](/outlook/troubleshoot/calendaring/scan-outlook-calendar-using-sara).
 
 In the full version of the Assistant, the equivalent entry point for this scenario is *Advanced diagnostics \ Outlook \ Create a detailed scan of my Outlook Calendar to identify and resolve issues*.
 
