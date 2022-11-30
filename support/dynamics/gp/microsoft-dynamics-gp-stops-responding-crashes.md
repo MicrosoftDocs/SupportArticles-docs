@@ -3,7 +3,7 @@ title: Microsoft Dynamics GP stops responding or crashes
 description: This article describes how to use the System Configuration Utility tool (Msconfig.exe) to troubleshoot problems that cause Microsoft Dynamics GP to stop responding or to crash.
 ms.reviewer: 
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 11/29/2022
 ---
 # Troubleshoot problems that cause Microsoft Dynamics GP to stop responding or to crash
 
@@ -71,3 +71,12 @@ If you cannot reproduce the problem, there is a conflict between Microsoft Dynam
 10. If the problem persists, repeat steps 5 through 9 in this section. In step 7, click to select the check box of the item that you previously cleared, and then click to clear the check box of the next item. Continue in this manner until you can find the program that conflicts with Microsoft Dynamics GP.
 
 The Msconfig tool is installed together with Windows Vista, Windows Server 2003, Windows XP, Microsoft Windows Millennium Edition, and Microsoft Windows 98. By default, the Msconfig tool is not installed together with Microsoft Windows 2000. However, you can install the tool for use with Windows 2000.
+
+## Other Information to verify when Dynamics GP is crashing / not responding
+
+1. If this is happening during printing of a report, rule out the report.dic and form.dic causing issues.
+2. If this is a modified report try to print the original to verify it is not a corrupt report.
+3. Review blog [Troubleshooting the error "Microsoft Dynamics GP has stopped working", causing the application to crash/close](https://community.dynamics.com/gp/b/dynamicsgp/posts/troubleshooting-the-error-microsoft-dynamics-gp-has-stopped-working-causing-the-application-to-crash-close)
+4. If you have [VBA in your install it may cause crashing](https://community.dynamics.com/gp/b/dynamicsgp/posts/vba-causing-issues-in-dynamics-gp-here-s-a-possible-solution)
+5. Make sure you have a default printer set up that is a current fuctioning printer.  From the Microsoft Dynamics GP menu choose Print Setup. 
+6. 
