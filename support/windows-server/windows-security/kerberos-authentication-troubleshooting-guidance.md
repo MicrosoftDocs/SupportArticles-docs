@@ -440,7 +440,7 @@ Use one of the following methods to troubleshoot the issue.
                 Kdc Called: DCA.contoso.com
         ```
 
-        You will find that you get a Kerberos ticket for the SPN http/IISServer.contoso.com in the Cached Ticket (2) column.
+        You will find that you get a Kerberos ticket for the SPN `http/IISServer.contoso.com` in the Cached Ticket (2) column.
 
 - Verify if the IIS web service is running on the IIS server using the default credentials.
 
