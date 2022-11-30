@@ -240,7 +240,7 @@ Here are possible causes for this error:
 - [Cause 1: Kubernetes secret doesn't reference the correct storage account name or key](#secretnotusecorrectstorageaccountkey)
 - [Cause 2: AKS's VNET and subnet aren't allowed for the storage account](#akssubnetnotallowed)
 - [Cause 3: Connectivity is via a private link but nodes and the private endpoint are in different VNETs](#aksnotawareprivateipaddress)
-- [Cause 4: Storage account is set to require encryption that the client doesn't support](#akssmbencryption)
+- [Cause 4: Storage account uses encryption algorithm that client doesn't support](#akssmbencryption)
 
 > [!NOTE]
 >
