@@ -6,7 +6,6 @@ ms.topic: troubleshooting
 ms.date: 06/18/2021
 author: squassina
 ms.author: risquass
-ms.subservice: powerapps-solutions
 ---
 # Can't import solutions or publish unmanaged changes in Power Platform
 

@@ -4,7 +4,6 @@ description: Fixes an issue in which a button in the command bar is hidden when 
 ms.reviewer: krgoldie, srihas
 ms.topic: troubleshooting
 ms.date: 05/18/2021
-ms.subservice: powerapps-ribbons-commanding
 ---
 # A button on the command bar is hidden when it should be visible
 
@@ -43,7 +42,7 @@ Once the Command Checker tool has been enabled, within the application in each o
 
     > [!NOTE]
     > If the button is still hidden when all rules evaluate to **True**, it may be due to [context sensitive commands in grids](https://support.microsoft.com/topic/1100b6b5-ab64-6047-82c5-924a2b38296a). When records are selected on a grid, all buttons without a `SelectionCountRule` element will be considered not relevant to the selected record(s). And they're hidden even if their rule evaluation is **True**. Note that flyouts aren't affected since flyout children might still have record based commands.
- 
+
 1. Click the **Command Properties** tab to display the details of the command for this button. This will show the enable rules and display rules, along with the result (**True**, **False**, **Skipped**) of each rule evaluation. The following example shows the **New (hidden)** button's command to be `Mscrm.NewRecordFromGrid` and there is an enable rule named `new.contact.EnableRule.EntityRule` that has evaluated to **False**, as a result the button will be hidden.
 
     :::image type="content" source="media/ribbon-issues-button-hidden/command-properties-new-hidden.png" alt-text="Screenshot shows the Command properties details of the command for the New (hidden) button.":::
@@ -96,7 +95,7 @@ Select one of the following options that matches your particular scenario:
 
 <!-- ##### Delete a command from an unmanaged Active solution layer -->
 
-To delete a command in the **Active** unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import a new version of this solution where this command has been removed in order to delete the component. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
+To delete a command in the **Active** unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the _customizations.xml_ file, and then import a new version of this solution where this command has been removed in order to delete the component. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
 
 ###### The command is entity-specific
 
@@ -112,7 +111,7 @@ Based on our example scenario, we identified the entity is **contact** and the c
 1. Click **Save**.
 1. Click **Export Solution** and export unmanaged solution.
 1. Extract the .zip file.
-1. Open the *customizations.xml* file.
+1. Open the _customizations.xml_ file.
 1. Locate the `<Entity>` node child of the entity node you wish to edit and locate its child `<RibbonDiffXml>` node.
 1. Locate the `<CommandDefinition>` node. (In our example, ID of the `<CommandDefinition>` node is `Mscrm.NewRecordFromGrid`, so we would locate the following node)
 
@@ -122,8 +121,8 @@ Based on our example scenario, we identified the entity is **contact** and the c
 
     :::image type="content" source="media/ribbon-issues-button-hidden/delete-node.png" alt-text="Screenshot to delete the CommandDefinition node.":::
 
-1. Save the *customizations.xml* file.
-1. Add the modified *customizations.xml* file back to the solution .zip file.
+1. Save the _customizations.xml_ file.
+1. Add the modified _customizations.xml_ file back to the solution .zip file.
 1. Import the solution file.
 1. Click **Publish All Customizations**.
 
@@ -140,12 +139,12 @@ If the command is not entity-specific, rather it is applicable to "All Entities"
 1. Click **Save**.
 1. Click **Export Solution** and export unmanaged solution.
 1. Extract the .zip file.
-1. Open the *customizations.xml* file.
+1. Open the _customizations.xml_ file.
 1. Locate the root `<RibbonDiffXml>` node.
 1. Locate the `<CommandDefinition>` node.
 1. Edit the `<RibbonDiffXml>` node and remove the `<CommandDefinition>` node that has the ID of the command you wish to delete. Make sure you don't unintentionally delete other `<CommandDefinitions>` nodes that may be present.
-1. Save the *customizations.xml* file.
-1. Add the modified *customizations.xml* file back to the compressed solution .zip file.
+1. Save the _customizations.xml_ file.
+1. Add the modified _customizations.xml_ file back to the compressed solution .zip file.
 1. Import the solution file.
 1. Click **Publish All Customizations**.
 
@@ -203,7 +202,7 @@ Select one of the following options that matches your particular scenario:
 
 <!-- ##### Fix an enable/display rule from an unmanaged Active solution layer -->
 
-To fix an enable/display rule in the **Active** unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import the new version of this solution containing the fixed enable/display rule definition. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
+To fix an enable/display rule in the **Active** unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the _customizations.xml_ file, and then import the new version of this solution containing the fixed enable/display rule definition. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
 
 ###### The enable/display rule is entity-specific
 
@@ -219,7 +218,7 @@ Based on our example scenario, we identified the entity is **contact** and the e
 1. Click **Save**.
 1. Click **Export Solution** and export unmanaged solution.
 1. Extract the .zip file.
-1. Open the *customizations.xml* file.
+1. Open the _customizations.xml_ file.
 1. Locate the `<Entity>` node child of the entity node you wish to edit and locate its child `<RibbonDiffXml>` node.
 1. Locate the enable/display rule. (In our example, ID of the enable rule is `new.contact.EnableRule.EntityRule`, so we would locate the following node)
 
@@ -229,7 +228,7 @@ Based on our example scenario, we identified the entity is **contact** and the e
 
     :::image type="content" source="media/ribbon-issues-button-hidden/change-rule-definition.png" alt-text="Screenshot shows an example to change the rule definition.":::
 
-1. Add the modified *customizations.xml* file back to the solution .zip file.
+1. Add the modified _customizations.xml_ file back to the solution .zip file.
 1. Import the solution file.
 1. Click **Publish All Customizations**.
 
@@ -246,11 +245,11 @@ If the enable/display rule is not entity-specific, rather it is applicable to "A
 1. Click **Save**.
 1. Click **Export Solution** and export unmanaged solution.
 1. Extract the .zip file.
-1. Open the *customizations.xml* file.
+1. Open the _customizations.xml_ file.
 1. Locate the root `<RibbonDiffXml>` node.
 1. Locate the enable/display rule.
 1. Edit the `<RibbonDiffXml>` node and make the necessary changes to the enable/display rule that will permit the rule to evaluate to True under the correct circumstances to fix the rule. For more help about declaring rules, see [Define ribbon enable rules](/powerapps/developer/model-driven-apps/define-ribbon-enable-rules), and [Define ribbon display rules](/powerapps/developer/model-driven-apps/define-ribbon-display-rules).
-1. Add the modified *customizations.xml* file back to the solution .zip file.
+1. Add the modified _customizations.xml_ file back to the solution .zip file.
 1. Import the solution file.
 1. Click **Publish All Customizations**.
 
@@ -319,7 +318,7 @@ Select one of the following options that matches your particular scenario:
 
 <!-- ##### Fix a command from an unmanaged Active solution layer -->
 
-To fix a command in the Active unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the *customizations.xml* file, and then import a new version of this solution containing the fixed command definition. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
+To fix a command in the Active unmanaged solution layer, we will export an unmanaged solution containing the entity or Application Ribbon and edit the `<RibbonDiffXml>` node in the _customizations.xml_ file, and then import a new version of this solution containing the fixed command definition. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
 
 > [!WARNING]
 > Do not remove the `Mscrm.HideOnModern` display rule from a command to force a button to appear in the Unified Interface. Commands that have the `Mscrm.HideOnModern` display rule are intended for the legacy Web Client interface and are not supported in the Unified Interface, and may not work correctly.
@@ -338,7 +337,7 @@ Based on our example scenario, we identified the entity is **contact** and the c
 1. Click **Save**.
 1. Click **Export Solution** and export unmanaged solution.
 1. Extract the .zip file.
-1. Open the *customizations.xml* file.
+1. Open the _customizations.xml_ file.
 1. Locate the `<Entity>` node child of the entity node you wish to edit and locate its child `<RibbonDiffXml>` node.
 1. Locate the `<CommandDefinition>` node. (In our example, ID of the `<CommandDefinition>` node is `Mscrm.NewRecordFromGrid`, so we would locate the following node)
 
@@ -348,7 +347,7 @@ Based on our example scenario, we identified the entity is **contact** and the c
 
     :::image type="content" source="media/ribbon-issues-button-hidden/modify-node.png" alt-text="Screenshot shows an example to modify the CommandDefinition node.":::
 
-1. Add the modified *customizations.xml* file back to the solution .zip file
+1. Add the modified _customizations.xml_ file back to the solution .zip file
 1. Import the solution file.
 1. Click **Publish All Customizations**.
 
@@ -365,11 +364,11 @@ If the command is not entity-specific, rather it is applicable to "All Entities"
 1. Click **Save**.
 1. Click **Export Solution** and export unmanaged solution.
 1. Extract the .zip file.
-1. Open the *customizations.xml* file.
+1. Open the _customizations.xml_ file.
 1. Locate the root `<RibbonDiffXml>` node.
 1. Locate the `<CommandDefinition>` node.
 1. Edit the `<RibbonDiffXml>` node and make the necessary changes to the `<CommandDefinition>` node that will permit the command to function properly under the correct circumstances to fix the command. For more help about declaring commands, see [Define ribbon commands](/powerapps/developer/model-driven-apps/define-ribbon-commands).
-1. Add the modified *customizations.xml* file back to the solution .zip file.
+1. Add the modified _customizations.xml_ file back to the solution .zip file.
 1. Import the solution file.
 1. Click **Publish All Customizations**.
 
