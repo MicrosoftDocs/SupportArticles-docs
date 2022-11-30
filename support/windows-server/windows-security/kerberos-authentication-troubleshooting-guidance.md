@@ -148,3 +148,354 @@ Here are examples of such error messages:
 
 1. Run the `nslookup` command to identify any DNS misconfigurations.
 2. Open required ports between the client and the domain controller. For more information, see [How to configure a firewall for Active Directory domains and trusts](../identity/config-firewall-for-ad-domains-and-trusts.md).
+
+## Log analysis test scenario
+
+### Environment and configuration
+
+- Client machine
+
+    Client1.contoso.com (a Windows11 machine) joins to the domain Contoso.com.
+- User Didar
+
+    The user belongs to Contoso.com and sign in on the  client machine.
+- Internet options on the client machine
+
+    All the  websites are a part of the local intranet zone.
+
+    :::image type="content" source="media/kerberos-authentication-troubleshooting-guidance/internet-options-local-intranet-zone.png" alt-text="Screenshot of Internet Properties, which shows all the websites are a part of the local intranet zone.":::
+
+- Server
+
+    IISServer.contoso.com (Windows Sever 2019) joins to the domain Contoso.com.
+- Authentication configuration
+
+    **Windows Authentication** is **Enabled**.
+
+    :::image type="content" source="media/kerberos-authentication-troubleshooting-guidance/windows-authentication-enabled.png" alt-text="Screenshot of the Internet Information Services (IIS) Manager window showing Windows Authentication is Enabled.":::
+
+- Authentication Providers: Negotiate
+
+    Enabled providers are set as follows:
+
+    :::image type="content" source="media/kerberos-authentication-troubleshooting-guidance/enabled-providers-negotiate.png" alt-text="Screenshot of the Providers window showing the Enabled Providers includes Negotiate.":::
+
+### Authentication flow
+
+:::image type="content" source="media/kerberos-authentication-troubleshooting-guidance/authentication-flow.png" alt-text="Screenshot of an authentication flow.":::
+
+1. User Didar signs into `Client1.contoso.com`, opens a Microsoft Edge browser and connects to `IISServer.contoso.com`.
+2. Client machine will perform below steps: (Step1 in the above diagram)
+    1. DNS resolver cache for `IISServer.contoso.com` to verify if this information is already cached.
+    2. DNS resolver checks the HOSTS file for any mapping of `IISServer.contoso.com` located in *C:\\Windows\\System32\\drivers\\etc\\Hosts*.
+    3. Send a DNS query to the preferred DNS server (configured on the IP configuration settings) which is also a domain controller in the environment.
+3. DNS service running on the domain controller will look into its configured zones and resolve the Host A record and responds back with an IP address of `IISServer.contoso.com` (Step2 in the above diagram).
+4. Client machine will perform a TCP three-way handshake on TCP port 80 to the `IISServer.contoso.com`.
+5. Client machine will send an anonymous HTTP request to the `IISServer.contoso.com`.
+6. The IIS server listening on port 80 will receive the request from `Client1.contoso.com`, look into the IIS servers authentication configuration and send back an HTTP 401 challenge response to the client machine with Negotiate as the authentication configuration (Step3 on the above diagram).
+7. The Edge process running on the `Client1.contoso.com` will know that the IIS server is configured with Negotiate and will verify if the website is a part of the local intranet zone. If the website is in local intranet zone, then the Edge process will call into *LSASS.exe* to get a Kerberos ticket with an SPN `HTTP\IISServer.contoso.com` (Step5 in the above diagram).
+8. Domain controller (KDC service) will receive the request from `Client1.contoso.com`, search its database for the SPN `HTTP\IISServer.contoso.com` and find the `IISServer.contoso.com` is configured with this SPN.
+9. Domain controller will respond back with a TGS response with the ticket for the IIS server (Step6 in the above diagram).
+10. The Edge process on the client machine will send a Kerberos Application Protocol (AP) request to the IIS web server with the Kerberos TGS ticket issued by the domain controller.
+11. The IIS process will call into *LSASS.exe* on the web server to decrypt the ticket and create a token with SessionID and Users group membership for authorization.
+12. IIS process will get a handle from *LSASS.exe* to the token to make authorization decisions and allow the User to connect with an AP response.
+
+### Network Monitor analysis of the workflow
+
+> [!NOTE]
+You need to be a user of the local Administrators group to perform below activities.
+
+1. Install [Microsoft Network Monitor](https://www.microsoft.com/download/4865) on the client machine (`Client1.contoso.com`).
+2. Run the following command in an elevated command prompt window (*cmd.exe*):
+
+    ```console
+    ipconfig /flushdns
+    ```
+
+3. Start the Network Monitor.
+4. Open Edge browser and type `http://iisserver.contoso.com`.
+5. Network trace analysis:
+    1. DNS query to the domain controller for a Host A record: `IISServer.contoso.com`.
+
+        ```output
+        3005    00:59:30.0738430    Client1.contoso.com    DCA.contoso.com    DNS    DNS:QueryId = 0x666A, QUERY (Standard query), Query  for iisserver.contoso.com of type Host Addr on class Internet
+        ```
+
+    2. DNS response from the DNS service on the domain controller.
+
+        ```output
+        3006    00:59:30.0743438    DCA.contoso.com    Client1.contoso.com    DNS    DNS:QueryId = 0x666A, QUERY (Standard query), Response - Success, 192.168.2.104
+        ```
+
+    3. Edge process on `Client1.contoso.com` connecting to the IIS web server `IISServer.contoso.com` (anonymous connection).
+
+        ```output
+        3027    00:59:30.1609409    Client1.contoso.com    iisserver.contoso.com    HTTP    HTTP:Request, GET /
+        Host:  iisserver.contoso.com
+        ```
+
+    4. IIS server responds back with HTTP response 401 : Negotiate and NTLM (configuration performed on the IIS server).
+
+        ```output
+        3028    00:59:30.1633647    iisserver.contoso.com    Client1.contoso.com    HTTP    HTTP:Response, HTTP/1.1, Status: Unauthorized, URL: /favicon.ico Using Multiple Authetication Methods, see frame details
+
+        WWWAuthenticate: Negotiate
+        WWWAuthenticate: NTLM
+        ```
+
+    5. Kerberos request from `Client1.contoso.com` goes to the domain controller `DCA.contoso.com` with an SPN: `HTTP/iisserver.contoso.com`.
+
+        ```output
+        3034    00:59:30.1834048    Client1.contoso.com    DCA.contoso.com    KerberosV5    KerberosV5:TGS Request Realm: CONTOSO.COM Sname: HTTP/iisserver.contoso.com
+        ```
+
+    6. Domain controller `DCA.contoso.com` responds back with the Kerberos request, which has an TGS response with a Kerberos ticket.
+
+        ```output
+        3036    00:59:30.1848687    DCA.contoso.com    Client1.contoso.com    KerberosV5    KerberosV5:TGS Response Cname: Didar 
+        Ticket: Realm: CONTOSO.COM, Sname: HTTP/iisserver.contoso.com
+        Sname: HTTP/iisserver.contoso.com
+        ```
+
+    7. Edge process on `Client1.contoso.com` now goes to the IIS server with a Kerberos AP request:
+
+        ```output
+        3040    00:59:30.1853262    Client1.contoso.com    iisserver.contoso.com    HTTP    HTTP:Request, GET /favicon.ico , Using GSS-API Authorization
+        Authorization: Negotiate
+        Authorization:  Negotiate YIIHGwYGKwYBBQUCoIIHDzCCBwugMDAuBgkqhkiC9xIBAgIGCSqGSIb3EgECAgYKKwYBBAGCNwICHgYKKwYBBAGCNwICCqKCBtUEggbRYIIGzQYJKoZIhvcSAQICAQBugga8MIIGuKADAgEFoQMCAQ6iBwMFACAAAACjggTvYYIE6zCCBOegAwIBBaENGwtDT05UT1NPLkNPTaIoMCagAwIBAqEfMB0bBEhUVFAbF
+        SpnegoToken: 0x1
+        NegTokenInit: 
+        ApReq: KRB_AP_REQ (14)
+        Ticket: Realm: CONTOSO.COM, Sname: HTTP/iisserver.contoso.com
+        ```
+
+    8. IIS server responds back with a response that the authentication is complete.
+
+        ```output
+        3044    00:59:30.1875763    iisserver.contoso.com    Client1.contoso.com    HTTP    HTTP:Response, HTTP/1.1, Status: Not found, URL: / , Using GSS-API Authentication
+        WWWAuthenticate: Negotiate oYG2MIGzoAMKAQChCwYJKoZIgvcSAQICooGeBIGbYIGYBgkqhkiG9xIBAgICAG+BiDCBhaADAgEFoQMCAQ+ieTB3oAMCARKicARuIF62dHj2/qKDRV5XjGKmyFl2/z6b9OHTCTKigAatXS1vZTVC1dMvtNniSN8GpXJspqNvEfbETSinF0ee7KLaprxNgTYwTrMVMnd95SoqBkm/FuY7WbTAuPvyRmUuBY3EKZEy
+        NegotiateAuthorization: 
+        GssAPI: 0x1
+        NegTokenResp: 
+        ApRep: KRB_AP_REP (15)
+        ```
+
+6. Run the `klist tickets` command to review Kerberos ticket in the command output on `Client1.contoso.com`.
+
+    ```output
+    Client: Didar @ CONTOSO.COM
+    Server: HTTP/iisserver.contoso.com @ CONTOSO.COM
+    KerbTicket Encryption Type: AES-256-CTS-HMAC-SHA1-96
+    Ticket Flags 0x40a10000 -> forwardable renewable pre_authent name_canonicalize
+    Start Time: 11/28/2022 0:59:30 (local)
+    End Time:   11/28/2022 10:58:56 (local)
+    Renew Time: 12/5/2022 0:58:56 (local)
+    Session Key Type: AES-256-CTS-HMAC-SHA1-96
+    Cache Flags: 0
+    Kdc Called: DCA.contoso.com
+    ```
+
+7. Review Event ID 4624 on the IIS server showing the Success:
+
+- By default, the Success or Failure audits is enabled on all server operating system of Windows. You can verify if the auditing is enabled or not by using the following command.
+- If you find auditing is not enabled, then enable the auditing. Review the logon category in the below list. As you can observe, the logon subcategory is enabled with Success and Failure.
+
+    ```console
+    C:\>auditpol /get /Subcategory:"logon"
+    System audit policy
+    Category/Subcategory                      Setting
+    Logon/Logoff
+      Logon                                   Success and Failure
+    ```
+
+    If you don't observe logon with Success and Failure, then run the command to enable it:
+
+    ```console
+    C:\>auditpol /set /subcategory:"Logon" /Success:enable /Failure:enable
+    The command was successfully executed.
+    ```
+
+### Reviewing the success security Event ID 4624 on the IISServer.contoso.com
+
+Observe the following fields:
+
+- Logon type: 3 (network logon)
+- Security ID in New Logon field: Contoso\Didar
+- Source Network Address: IP address of the client machine
+- Logon Process and Authentication Package: Kerberos
+
+```output
+Log Name:      Security
+Source:        Microsoft-Windows-Security-Auditing
+Date:          11/28/2022 12:59:30 AM
+Event ID:      4624
+Task Category: Logon
+Level:         Information
+Keywords:      Audit Success
+User:          N/A
+Computer:      IISServer.contoso.com
+Description:
+An account was successfully logged on.
+
+Subject:
+    Security ID:        NULL SID
+    Account Name:        -
+    Account Domain:        -
+    Logon ID:        0x0
+
+Logon Information:
+    Logon Type:        3
+    Restricted Admin Mode:    -
+    Virtual Account:        No
+    Elevated Token:        No
+
+Impersonation Level:        Impersonation
+
+New Logon:
+    Security ID:        CONTOSO\Didar
+    Account Name:        Didar
+    Account Domain:        CONTOSO.COM
+    Logon ID:        0x1B64449
+    Linked Logon ID:        0x0
+    Network Account Name:    -
+    Network Account Domain:    -
+    Logon GUID:        {d53d67d9-4718-8837-e299-632ab049ad64}
+
+Process Information:
+    Process ID:        0x0
+    Process Name:        -
+
+Network Information:
+    Workstation Name:    -
+    Source Network Address:    192.168.2.101
+    Source Port:        52655
+
+Detailed Authentication Information:
+    Logon Process:        Kerberos
+    Authentication Package:    Kerberos
+```
+
+### Troubleshooting authentication workflow
+
+Use one of the following methods to troubleshoot the issue.
+
+- Verify if you can resolve the name of the IIS web server (`IISServer.contoso.com`) from `Client1.contoso.com`.
+- Verify if the DNS server is responding back to the correct IIS server IP address by using the following cmdlet:
+
+    ```powershell
+    PS C:\> Resolve-DnsName -Name IISServer.contoso.com
+    
+    Name                                           Type   TTL   Section    IPAddress
+    ----                                           ----   ---   -------    ---------
+    IISServer.contoso.com                          A      1200  Answer     192.168.2.104
+    ```
+
+- Verify if the network ports are opened between the client machine and the IIS web server (`IISServer.contoso.com`) by using the following cmdlet:
+
+    ```powershell
+    PS C:\> Test-NetConnection -Port 80 IISServer.contoso.com                                                               
+    
+    ComputerName     : IISServer.contoso.com
+    RemoteAddress    : 192.168.2.104
+    RemotePort       : 80
+    InterfaceAlias   : Ethernet 2
+    SourceAddress    : 192.168.2.101
+    TcpTestSucceeded : True
+    ```
+
+- Verify if you are getting a Kerberos ticket from the domain controller.
+
+    1. Open a normal Command Prompt (not an administrator Command Prompt) in the context of the user who is trying to access the website.
+    2. Run the `klist purge` command.
+    3. Run the `klist get http/iisserver.contoso.com` command as follows:
+
+        ```console
+        PS C:\> klist get http/iisserver.contoso.com
+        
+        Current LogonId is 0:0xa8a98b
+        A ticket to http/iisserver.contoso.com has been retrieved successfully.
+        
+        Cached Tickets: (2)
+        
+        #0>     Client: Didar @ CONTOSO.COM
+                Server: krbtgt/CONTOSO.COM @ CONTOSO.COM
+                KerbTicket Encryption Type: AES-256-CTS-HMAC-SHA1-96
+                Ticket Flags 0x40e10000 -> forwardable renewable initial pre_authent name_canonicalize
+                Start Time: 11/28/2022 1:28:11 (local)
+                End Time:   11/28/2022 11:28:11 (local)
+                Renew Time: 12/5/2022 1:28:11 (local)
+                Session Key Type: AES-256-CTS-HMAC-SHA1-96
+                Cache Flags: 0x1 -> PRIMARY
+                Kdc Called: DCA.contoso.com
+        
+        #1>     Client: Didar @ CONTOSO.COM
+                Server: http/iisserver.contoso.com @ CONTOSO.COM
+                KerbTicket Encryption Type: AES-256-CTS-HMAC-SHA1-96
+                Ticket Flags 0x40a10000 -> forwardable renewable pre_authent name_canonicalize
+                Start Time: 11/28/2022 1:28:11 (local)
+                End Time:   11/28/2022 11:28:11 (local)
+                Renew Time: 12/5/2022 1:28:11 (local)
+                Session Key Type: AES-256-CTS-HMAC-SHA1-96
+                Cache Flags: 0
+                Kdc Called: DCA.contoso.com
+        ```
+
+        You will find that you get a Kerberos ticket for the SPN http/IISServer.contoso.com in the Cached Ticket (2) column.
+
+- Verify if the IIS web service is running on the IIS server using the default credentials.
+
+    Open a normal PowerShell Prompt (not an administrator PowerShell Prompt) in the context of the user who is trying to access the website.
+
+    ```powershell
+    PS C:\> invoke-webrequest -Uri http://IIsserver.contoso.com -UseDefaultCredentials
+    PS C:\> invoke-webrequest -Uri http://IIsserver.contoso.com -UseDefaultCredentials
+    
+    
+    StatusCode        : 200
+    StatusDescription : OK
+    Content           : <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+                        <html xmlns="http://www.w3.org/1999/xhtml">
+                        <head>
+                        <meta http-equiv="Content-Type" cont...
+    RawContent        : HTTP/1.1 200 OK
+                        Persistent-Auth: true
+                        Accept-Ranges: bytes
+                        Content-Length: 703
+                        Content-Type: text/html
+                        Date: Mon, 28 Nov 2022 09:31:40 GMT
+                        ETag: "3275ea8a1d91:0"
+                        Last-Modified: Fri, 25 Nov 2022...
+    ```
+
+- Review the Security event log on the IIS server:
+  - Success event log 4624
+  - Error event log 4625
+
+- Process of isolation: You can use below troubleshooting steps to verify if other services on the IIS server is able to process Kerberos authentication.
+
+  Prerequisites:
+  - IIS server should be running a server version of Windows.
+  - IIS server should have port opened for services like SMB (port 445).
+  - Create a new share or provide the user Didar with permissions to Read on one of the Folders (for example, Software$) that is already shared on the machine.
+
+    1. Sign in to `Client1.contoso.com`.
+    2. Open Windows Explorer.
+    3. Type *\\IISServer.contoso.com \\Software$*.
+    4. Open Security events on `IISServer.contoso.com` and verify if you observe Event ID 4624.
+    5. Open a normal Command Prompt on `Client1.contoso.com` as the user Didar. Run the `klist tickets` command and review for the ticket `CIFS/IISServer.contoso.com`.
+
+        ```output
+        #1>     Client: Didar @ CONTOSO.COM
+                Server: cifs/iisserver.contoso.com @ CONTOSO.COM
+                KerbTicket Encryption Type: AES-256-CTS-HMAC-SHA1-96
+                Ticket Flags 0x40a10000 -> forwardable renewable pre_authent name_canonicalize
+                Start Time: 11/28/2022 1:40:22 (local)
+                End Time:   11/28/2022 11:28:11 (local)
+                Renew Time: 12/5/2022 1:28:11 (local)
+                Session Key Type: AES-256-CTS-HMAC-SHA1-96
+                Cache Flags: 0
+                Kdc Called: DCA.contoso.com
+        ```
+
+    6. Collect network traces on `Client1.contoso.com`. Review the network traces to observe which step fails, so that you can further narrow down on the steps and troubleshoot the issue.
