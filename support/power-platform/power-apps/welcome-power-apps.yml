@@ -35,11 +35,11 @@ landingContent:
             url: isolate-and-troubleshoot-common-issues/troubleshoot-power-query-issues.md
 
   # Card
-  - title: Ribbons and commanding
+  - title: Create and use apps
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Ribbon issues
+          - text: Troubleshoot ribbon issues
             url: create-and-use-apps/ribbon-issues.md
           - text: Regenerate ribbon metadata
             url: create-and-use-apps/regenerate-ribbon-metadata.md
