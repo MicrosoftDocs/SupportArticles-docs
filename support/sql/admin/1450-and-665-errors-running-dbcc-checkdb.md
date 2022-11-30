@@ -9,7 +9,7 @@ ms.prod: sql
 ---
 # OS errors 665 and 1450 are reported for SQL Server files
 
-_Original product version:_ &nbsp; SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008   
+_Original product version:_ &nbsp; SQL Server 2022, SQL Server 2019, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008   
 _Original KB number:_ &nbsp; 2002606
 
 This article helps you resolve the problem where OS errors 1450 and 665 are reported for database files while executing `DBCC CHECKDB`, creating a Database Snapshot, or file growth.
@@ -71,7 +71,7 @@ Consider using one or more of the following options to resolve this issue:
    > [!NOTE]
    > SQL Server 2012 and earlier versions used named [file streams](/windows/win32/fileio/file-streams) instead of sparse files to create `CHECKDB` snapshots. ReFS doesn't support file streams. Running `DBCC CHECKDB` on SQL Server 2012 files in ReFS might result in errors. For more information, see the note in [How DBCC CHECKDB creates an internal snapshot database beginning with SQL Server 2014](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql#how-dbcc-checkdb-creates-an-internal-snapshot-database-beginning-with-sql-server-2014).
 
-1. De-fragment the volume where the database files reside. Be sure your defragmentation utility is transactional. For more information on defragmenting database disk drives, see [Precautions when you defragment SQL Server database drives and Recommendations](defragmenting-database-disk-drives.md). You must close SQL Server to perform this operation on the files. We recommend that you create full database backups before you defragment the files as a safety measure. Defragmentation works differently on solid-state drives (SSD) media and typically doesn't address the problem. Copying the file(s) and allowing the SSD firmware to repack the physical storage is often a better solution. For more information, see [Operating System Error (665 - File System Limitation) Not just for DBCC Anymore](/archive/blogs/psssql/operating-system-error-665-file-system-limitation-not-just-for-dbcc-anymore).
+1. De-fragment the volume where the database files reside. Be sure your defragmentation utility is transactional. For more information on defragmenting drives where SQL Server files reside, see [Precautions when you defragment SQL Server database drives and Recommendations](defragmenting-database-disk-drives.md). You must close SQL Server to perform this operation on the files. We recommend that you create full database backups before you defragment the files as a safety measure. Defragmentation works differently on solid-state drives (SSD) media and typically doesn't address the problem. Copying the file(s) and allowing the SSD firmware to repack the physical storage is often a better solution. For more information, see [Operating System Error (665 - File System Limitation) Not just for DBCC Anymore](/archive/blogs/psssql/operating-system-error-665-file-system-limitation-not-just-for-dbcc-anymore).
 
 1. File copy - performing a copy of the file may allow better space acquisition because the bytes might be tightly packed together in the process. Copying the file (or moving it to a different volume) may reduce attribute usage and may prevent the OS error 665. Copy one or more of the database files to another drive. Then, you may leave the file on the new volume or copy it back to the original volume.
 
@@ -89,7 +89,7 @@ Consider using one or more of the following options to resolve this issue:
 
 1. Reduce the lifetime of `DBCC CHECK` commands using the performance enhancements and thus avoid the 665 errors: [Improvements for the DBCC CHECKDB command may result in faster performance when you use the PHYSICAL_ONLY option](https://support.microsoft.com/kb/2634571). Keep in mind that running `DBCC CHECKDB` with `PHYSICAL_ONLY` switch doesn't provide a guarantee that you'll avoid this error, but it will reduce the likelihood in many cases.
 
-1. If you're performing database backups across many files (stripe set), carefully plan the  number of files, `MAXTRANSFERSIZE` and `BLOCKSIZE` (see [BACKUP](/sql/t-sql/statements/backup-transact-sql)). The goal is to reduce the fragments on the file system which is generally taken care by writing the larger byte chunks together to a file. You might consider striping the files across multiple volumes for faster performance and reduction of fragmentation.
+1. If you're performing database backups across many files (stripe set), carefully plan the  number of files, `MAXTRANSFERSIZE` and `BLOCKSIZE` (see [BACKUP](/sql/t-sql/statements/backup-transact-sql)). The goal is to reduce the fragments on the file system which is generally accomplished by writing the larger byte chunks together to a file. You might consider striping the files across multiple volumes for faster performance and reduction of fragmentation.
 
 1. If you're using BCP to write multiple files simultaneously, adjust utility write sizes, for example increase the BCP [batch size](/sql/tools/bcp-utility). Also, consider writing multiple streams to different volumes to avoid fragmentation, or reduce the number of parallel writes.
 
