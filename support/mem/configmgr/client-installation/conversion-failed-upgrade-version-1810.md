@@ -2,7 +2,7 @@
 title: Conversion failed when upgrading to Configuration Manager version 1810
 description: Fixes an error that you receive when you try to upgrade to Configuration Manager version 1810.
 ms.date: 11/30/2022
-ms.reviewer: kaushika
+ms.reviewer: kaushika, luche
 ---
 # Conversion failed when you upgrade to Configuration Manager version 1810
 
