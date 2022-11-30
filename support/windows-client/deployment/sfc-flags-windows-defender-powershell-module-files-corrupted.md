@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
-ms.reviewer: kaushika, v-isboua
+ms.reviewer: kaushika
 ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
@@ -17,7 +17,7 @@ ms.technology: windows-client-deployment
 
 This article describes an issue where System File Checker incorrectly flags Windows Defender PowerShell module files as corrupted.
 
-_Applies to:_ &nbsp; Microsoft Defender Antivirus  
+_Applies to:_ &nbsp; Windows Client  
 _Original KB number:_ &nbsp; 4513240
 
 ## Symptoms
