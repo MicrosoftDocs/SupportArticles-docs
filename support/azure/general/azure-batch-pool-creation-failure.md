@@ -181,11 +181,11 @@ Here are the steps about how to modify a policy:
 
 When you create a Batch pool without public IP addresses, the following message prompts out and informs you the Batch pool creation is failed due to the "NoPublicIPAddress" feature being disabled.
 
-:::image type="content" source="media/azure-batch-pool-creation-failure/nopublicipaddress-feature-disabled.png" alt-text="Screenshot of the error message in the notification." lightbox="media/azure-batch-pool-creation-failure/nopublicipaddress-feature-disabled.png":::
+:::image type="content" source="media/azure-batch-pool-creation-failure/feature-nopublicipaddress-disabled-error.png" alt-text="Screenshot of the error message in the notification.":::
 
 You also can see the same error in the activity log:
 
-:::image type="content" source="media/azure-batch-pool-creation-failure/feature-disabled-error.png" alt-text="Screenshot of the 'Feature is disabled' error message in the activity log." lightbox="media/azure-batch-pool-creation-failure/feature-disabled-error.png":::
+:::image type="content" source="media/azure-batch-pool-creation-failure/error-activity-log.png" alt-text="Screenshot of the 'Feature is disabled' error message in the activity log.":::
 
 ### Cause: Batch account's region doesn't support pools without public IP addresses
 
