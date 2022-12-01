@@ -190,11 +190,11 @@ Here are examples of such error messages:
     2. The DNS resolver checks the HOSTS file for any mapping of `IISServer.contoso.com` located in *C:\\Windows\\System32\\drivers\\etc\\Hosts*.
     3. Send a DNS query to the preferred DNS server (configured on the IP configuration settings), which is also a domain controller in the environment.
 3. The DNS service running on the domain controller will look into its configured zones, resolve the Host A record, and respond back with an IP address of `IISServer.contoso.com` (Step 2 in the above diagram).
-4. The client machine will perform a TCP three-way handshake on TCP port 80 to the `IISServer.contoso.com`.
-5. The client machine will send an anonymous HTTP request to the `IISServer.contoso.com`.
+4. The client machine will perform a TCP three-way handshake on TCP port 80 to `IISServer.contoso.com`.
+5. The client machine will send an anonymous HTTP request to `IISServer.contoso.com`.
 6. The IIS server listening on port 80 will receive the request from `Client1.contoso.com`, look into the IIS servers authentication configuration and send back an HTTP 401 challenge response to the client machine with Negotiate as the authentication configuration (Step 3 in the above diagram).
-7. The Microsoft Edge process running on the `Client1.contoso.com` will know that the IIS server is configured with Negotiate and will verify if the website is a part of the local intranet zone. If the website is in the local intranet zone, then the Microsoft Edge process will call into *LSASS.exe* to get a Kerberos ticket with an SPN `HTTP\IISServer.contoso.com` (Step 5 in the above diagram).
-8. The domain controller (KDC service) will receive the request from `Client1.contoso.com`, search its database for the SPN `HTTP\IISServer.contoso.com` and find the `IISServer.contoso.com` is configured with this SPN.
+7. The Microsoft Edge process running on `Client1.contoso.com` will know that the IIS server is configured with Negotiate and will verify if the website is a part of the local intranet zone. If the website is in the local intranet zone, then the Microsoft Edge process will call into *LSASS.exe* to get a Kerberos ticket with an SPN `HTTP\IISServer.contoso.com` (Step 5 in the above diagram).
+8. The domain controller (KDC service) will receive the request from `Client1.contoso.com`, search its database for the SPN `HTTP\IISServer.contoso.com` and find `IISServer.contoso.com` is configured with this SPN.
 9. The domain controller will respond back with a TGS response with the ticket for the IIS server (Step 6 in the above diagram).
 10. The Microsoft Edge process on the client machine will send a Kerberos Application Protocol (AP) request to the IIS web server with the Kerberos TGS ticket issued by the domain controller.
 11. The IIS process will call into *LSASS.exe* on the web server to decrypt the ticket and create a token with SessionID and Users group membership for authorization.
@@ -315,7 +315,7 @@ Here are examples of such error messages:
     The command was successfully executed.
     ```
 
-### Review the success security Event ID 4624 on the IISServer.contoso.com
+### Review the success security Event ID 4624 on IISServer.contoso.com
 
 Observe the following fields:
 
