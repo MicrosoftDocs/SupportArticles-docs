@@ -6,83 +6,83 @@ items:
 - name: App management
   items:
   - name: App management overview
-    href: app-management.yml   
+    href: app-management/app-management.yml
   - name: App installation
     items:
     - name: App installation error codes
-      href: app-install-error-codes.md
+      href: app-management/app-install-error-codes.md
     - name: Troubleshoot app installation issues
-      href: troubleshoot-app-install.md
+      href: app-management/troubleshoot-app-install.md
     - name: Troubleshoot Win32 app installation
-      href: troubleshoot-win32-app-install.md
+      href: app-management/troubleshoot-win32-app-install.md
     - name: Android APK app installation fails
-      href: app-installation-failed-error.md
+      href: app-management/app-installation-failed-error.md
   - name: Windows apps
     items:
     - name: Company Portal apps don't appear as available
-      href: apps-appear-unavailable.md
+      href: app-management/apps-appear-unavailable.md
     - name: Deployment, delivery, and processing of a Win32 application
-      href: develop-deliver-working-win32-app-via-intune.md
+      href: app-management/develop-deliver-working-win32-app-via-intune.md
     - name: Can't save corporate data in WIP-allowed apps
-      href: corporate-data-unsaved-in-wip-allowed-apps.md
+      href: app-management/corporate-data-unsaved-in-wip-allowed-apps.md
   - name: iOS apps
     items:
     - name: Can't uninstall apps installed from the Apple App Store
-      href: cannot-uninstall-apple-app-store-apps.md
+      href: app-management/cannot-uninstall-apple-app-store-apps.md
     - name: Protected data is attached to an iMessage
-      href: onedrive-attaches-corporate-protected-data-imessage.md
+      href: app-management/onedrive-attaches-corporate-protected-data-imessage.md
     - name: Mismatch between value type and configuration value
-      href: mismatch-error-configuration-value-ampersand.md
+      href: app-management/mismatch-error-configuration-value-ampersand.md
     - name: Saving images locally not restricted
-      href: saving-images-locally-not-restricted.md
+      href: app-management/saving-images-locally-not-restricted.md
   - name: macOS apps
     items:
     - name: macOS LOB apps aren't deployed
-      href: macos-lob-apps-not-deployed.md
+      href: app-management/macos-lob-apps-not-deployed.md
     - name: Error 0x87D13BA2 when you deploy a macOS LOB app
-      href: error-0x87d13ba2-deploy-macos-lob-app.md  
+      href: app-management/error-0x87d13ba2-deploy-macos-lob-app.md
     - name: Can't install apps and run shell scripts in macOS
-      href: cannot-install-macos-apps-and-run-shell-scripts.md
+      href: app-management/cannot-install-macos-apps-and-run-shell-scripts.md
   - name: Android apps
     items:
     - name: Can't wrap Android LOB app with Intune App Wrapping Tool
-      href: application-could-not-be-wrapped.md
+      href: app-management/application-could-not-be-wrapped.md
     - name: Data associated with an app is removed
-      href: removed-data-associated-with-app-error.md
+      href: app-management/removed-data-associated-with-app-error.md
     - name: Personal apps listed in Discovered apps list
-      href: discovered-apps-list-personal-apps.md
+      href: app-management/discovered-apps-list-personal-apps.md
     - name: Can't attach photos because of IO error
-      href: android-enterprise-enrolled-devices-fails-attaching-photo.md
+      href: app-management/android-enterprise-enrolled-devices-fails-attaching-photo.md
     - name: Can't create messages in Outlook for Android
-      href: creating-message-action-not-allowed.md
+      href: app-management/creating-message-action-not-allowed.md
     - name: Troubleshoot Managed Google Play apps
-      href: troubleshoot-google-apps.md
+      href: app-management/troubleshoot-google-apps.md
   - name: Managed Edge
     items:
     - name: Error when you open a web app on iOS 
-      href: invalid-address-open-web-app.md
+      href: app-management/invalid-address-open-web-app.md
     - name: Managed Browser policy triggers error 0x87D1FDE8
-      href: managed-browser-policy-triggers-error-0x87d1fde8.md
+      href: app-management/managed-browser-policy-triggers-error-0x87d1fde8.md
     - name: Only one app configuration policy applied to Edge
-      href: only-one-app-policy-applied-edge-managed-browser.md
+      href: app-management/only-one-app-policy-applied-edge-managed-browser.md
   - name: General troubleshooting
     items:
     - name: Save application failed error
-      href: save-application-failed-error.md
+      href: app-management/save-application-failed-error.md
     - name: Can't sync Microsoft Store for Business apps to Intune
-      href: apps-fail-sync-to-intune.md
+      href: app-management/apps-fail-sync-to-intune.md
 - name: App protection policies (APP)
   items:   
     - name: Troubleshoot APP deployment
-      href: troubleshoot-app-protection-policy-deployment.md
+      href: app-protection-policies/troubleshoot-app-protection-policy-deployment.md
     - name: Troubleshoot APP user issues
-      href: troubleshoot-mam.md
+      href: app-protection-policies/troubleshoot-mam.md
     - name: Troubleshoot data transfer between apps
-      href: troubleshoot-data-transfer.md
+      href: app-protection-policies/troubleshoot-data-transfer.md
     - name: Common data transfer issues
-      href: data-transfer-scenarios.md
+      href: app-protection-policies/data-transfer-scenarios.md
     - name: Fingerprint authentication on Samsung Note 4
-      href: no-prompt-for-fingerprint-identity.md
+      href: app-protection-policies/no-prompt-for-fingerprint-identity.md
 - name: Certificates
   items:
   - name: SCEP certificates
@@ -90,238 +90,240 @@ items:
     - name: SCEP deployment
       items:
       - name: Troubleshoot SCEP certificate profiles
-        href: troubleshoot-scep-certificate-profiles.md
+        href: certificates/troubleshoot-scep-certificate-profiles.md
       - name: Troubleshoot SCEP profile deployment
-        href: troubleshoot-scep-certificate-profile-deployment.md
+        href: certificates/troubleshoot-scep-certificate-profile-deployment.md
       - name: Troubleshoot SCEP delivery to devices
-        href: troubleshoot-scep-certificate-delivery.md
+        href: certificates/troubleshoot-scep-certificate-delivery.md
       - name: Can't assign SCEP certificates to devices
-        href: cannot-assign-scep-certificates.md
+        href: certificates/cannot-assign-scep-certificates.md
       - name: iOS SCEP failure - no GetCACaps request generated
-        href: ios-scep-failure-no-getcacaps.md
+        href: certificates/ios-scep-failure-no-getcacaps.md
       - name: CertificateRegistrationSvc verify request error
-        href: certificateregistrationsvc-verify-request-error.md
+        href: certificates/certificateregistrationsvc-verify-request-error.md
       - name: Devices fail to obtain SCEP certificates
-        href: devices-receive-scep-certificates-error-0x80094800.md
+        href: certificates/devices-receive-scep-certificates-error-0x80094800.md
       - name: Certificate deployment to Windows 10 device fails
-        href: scep-deployment-to-win10-devices-fails.md
+        href: certificates/scep-deployment-to-win10-devices-fails.md
       - name: NDES certificate not installed
-        href: error-0x80090014-installing-ndes-certificate.md
+        href: certificates/error-0x80090014-installing-ndes-certificate.md
       - name: Connectivity issues due to root certificates
-        href: fix-connectivity-issues.md
+        href: certificates/fix-connectivity-issues.md
     - name: SCEP functionality
       items:
       - name: SCEP certificate request fails on CRP
-        href: scep-certificate-request-fails.md
+        href: certificates/scep-certificate-request-fails.md
       - name: Troubleshoot device to NDES server communication
-        href: troubleshoot-scep-certificate-device-to-ndes.md
+        href: certificates/troubleshoot-scep-certificate-device-to-ndes.md
       - name: Troubleshoot NDES operations
-        href: troubleshoot-scep-certificate-ndes-policy-module.md
+        href: certificates/troubleshoot-scep-certificate-ndes-policy-module.md
       - name: Troubleshoot NDES reporting
-        href: troubleshoot-scep-certificate-reporting.md
+        href: certificates/troubleshoot-scep-certificate-reporting.md
       - name: Verify on-premises NDES configuration
-        href: verify-ndes-configuration.md
+        href: certificates/verify-ndes-configuration.md
   - name: Troubleshoot PKCS certificate deployment
-    href: troubleshoot-pkcs-certificate-profiles.md
+    href: certificates/troubleshoot-pkcs-certificate-profiles.md
   - name: Intune Certificate Connector events and diagnostic codes
-    href: troubleshoot-certificate-connector-events.md  
+    href: certificates/troubleshoot-certificate-connector-events.md
   - name: Intune Connector Setup Wizard ended prematurely
-    href: connector-setup-wizard-ends-prematurely.md
+    href: certificates/connector-setup-wizard-ends-prematurely.md
   - name: Sign in to Intune NDES Connector error 0x80004003
-    href: ndes-connector-signin-error-80004003.md
+    href: certificates/ndes-connector-signin-error-80004003.md
   - name: Intune Connector for AD doesn't appear
-    href: intune-connector-for-ad-not-appear.md
+    href: certificates/intune-connector-for-ad-not-appear.md
   - name: Unexpected error signing in to Intune Connector
-    href: intune-connector-signin-unexpected-error.md
+    href: certificates/intune-connector-signin-unexpected-error.md
 - name: Co-management with Configuration Manager
   items:
   - name: Troubleshoot co-management auto-enroll
-    href: troubleshoot-co-management-auto-enrolling.md
+    href: comanage-configmgr/troubleshoot-co-management-auto-enrolling.md
   - name: Troubleshoot co-management bootstrap
-    href: troubleshoot-co-management-bootstrap.md
+    href: comanage-configmgr/troubleshoot-co-management-bootstrap.md
   - name: Troubleshoot co-management workloads
-    href: troubleshoot-co-management-workloads.md
+    href: comanage-configmgr/troubleshoot-co-management-workloads.md
 - name: Device configuration
   items:
-  - name: Troubleshoot email profile issues
-    href: troubleshoot-email-profiles-in-microsoft-intune.md
   - name: Troubleshoot policies and profiles
-    href: troubleshoot-policies-in-microsoft-intune.md
+    href: device-configuration/troubleshoot-policies-in-microsoft-intune.md
+  - name: Troubleshoot email profile issues
+    href: device-configuration/troubleshoot-email-profiles-in-microsoft-intune.md
   - name: Troubleshoot VPN profiles
     href: troubleshoot-vpn-profiles.md
   - name: Troubleshoot Wi-Fi profiles
-    href: troubleshoot-wi-fi-profiles.md
+    href: device-configuration/troubleshoot-wi-fi-profiles.md
   - name: Password expiration setting doesn't work
-    href: password-expiration-setting-not-working.md
+    href: device-configuration/password-expiration-setting-not-working.md
   - name: Windows devices
     items:
     - name: Troubleshoot CSP custom settings
-      href: troubleshoot-csp-custom-settings.md
+      href: device-configuration/troubleshoot-csp-custom-settings.md
     - name: Deploy OMA-URIs to target a CSP through Intune
-      href: deploy-oma-uris-to-target-csp-via-intune.md
+      href: device-configuration/deploy-oma-uris-to-target-csp-via-intune.md
     - name: Device configuration profile error 2016281112
-      href: device-configuration-profile-reports-error-2016281112.md
+      href: device-configuration/device-configuration-profile-reports-error-2016281112.md
     - name: Enterprise Mode site list not deployed
-      href: enterprise-mode-site-list-not-deployed-win10.md
+      href: device-configuration/enterprise-mode-site-list-not-deployed-win10.md
     - name: Users can't log on to Windows 10 computers with multi-app kiosk profile assigned
-      href: users-cannot-logon-windows-multi-app-kiosk.md
+      href: device-configuration/users-cannot-logon-windows-multi-app-kiosk.md
     - name: Windows feature updates are not offered
-      href: windows-feature-updates-never-offered.md
+      href: device-configuration/windows-feature-updates-never-offered.md
   - name: iOS devices
     items:
     - name: 2016341112 iOS device is currently busy
-      href: 2016341112-ios-device-is-currently-busy.md
+      href: device-configuration/2016341112-ios-device-is-currently-busy.md
     - name: Device restriction policy doesn't block iOS Personal Hotspot
-      href: restriction-policy-not-blocking-personal-hotspot.md
+      href: device-configuration/restriction-policy-not-blocking-personal-hotspot.md
     - name: No password prompt after iOS email password change
-      href: no-password-prompt-after-password-change.md
+      href: device-configuration/no-password-prompt-after-password-change.md
   - name: Android devices
     items:
     - name: Factory reset protection emails setting doesn't work
-      href: factory-reset-protection-emails-not-enforced.md
+      href: device-configuration/factory-reset-protection-emails-not-enforced.md
     - name: SIP address and password can't be saved
-      href: sip-address-password-not-saved.md
+      href: device-configuration/sip-address-password-not-saved.md
     - name: Assign device password settings to Android Enterprise fully managed devices
-      href: assign-password-setting-android-fully-managed.md
+      href: device-configuration/assign-password-setting-android-fully-managed.md
 - name: Device enrollment
   items:
   - name: Troubleshoot device enrollment
-    href: troubleshoot-device-enrollment-in-intune.md
+    href: device-enrollment/troubleshoot-device-enrollment-in-intune.md
   - name: Can't update enrollment
-    href: cannot-update-enrollment.md
+    href: device-enrollment/cannot-update-enrollment.md
   - name: Devices try to enroll in a canceled Intune subscription
-    href: devices-enroll-canceled-intune-subscription.md
+    href: device-enrollment/devices-enroll-canceled-intune-subscription.md
   - name: Android enrollment
     items:
     - name: Troubleshoot Android Enterprise device enrollment
-      href: troubleshoot-android-enrollment.md
+      href: device-enrollment/troubleshoot-android-enrollment.md
     - name: Troubleshoot missing Android certificate
-      href: troubleshoot-android-certificates.md
+      href: device-enrollment/troubleshoot-android-certificates.md
     - name: Device ownership is changed to Corporate
-      href: device-ownership-changed-to-corporate.md
+      href: device-enrollment/device-ownership-changed-to-corporate.md
     - name: End-to-end guide for configuring Android enterprise devices
-      href: configure-android-enterprise-devices-intune.md
+      href: device-enrollment/configure-android-enterprise-devices-intune.md
+    - name: Microsoft Edge in Android 13 ignores PAC setting in VPN profile
+      href: device-enrollment/edge-ignore-pac-android-vpn-profile.md
   - name: iOS/iPadOS enrollment
     items:
     - name: Troubleshoot iOS/iPadOS enrollment errors
-      href: troubleshoot-ios-enrollment-errors.md
+      href: device-enrollment/troubleshoot-ios-enrollment-errors.md
     - name: iOS/iPadOS devices aren't checking in
-      href: ios-devices-inactive.md
+      href: device-enrollment/ios-devices-inactive.md
     - name: Device stuck on enrollment screen
-      href: device-stuck-in-enrollment.md
+      href: device-enrollment/device-stuck-in-enrollment.md
     - name: Profile installation failed
-      href: profile-installation-failed.md
+      href: device-enrollment/profile-installation-failed.md
     - name: Auto-enrollment doesn't start on Apple ADE devices
-      href: apple-dep-device-fails-auto-enrollment.md
+      href: device-enrollment/apple-dep-device-fails-auto-enrollment.md
     - name: ADE enrollment error XPC_TYPE_ERROR
-      href: dep-enrollment-xpc-type-error.md
+      href: device-enrollment/dep-enrollment-xpc-type-error.md
   - name: macOS enrollment
     items:
     - name: Troubleshoot macOS virtual machine enrollment
-      href: troubleshoot-macos-vm-enrollment.md
+      href: device-enrollment/troubleshoot-macos-vm-enrollment.md
     - name: Keychain error -25244 during enrollment
-      href: keychain-error-enrolling-macos-devices.md
+      href: device-enrollment/keychain-error-enrolling-macos-devices.md
   - name: Windows enrollment
     items:
     - name: Windows Autopilot
       items:
       - name: Troubleshoot the Enrollment Status Page
-        href: understand-troubleshoot-esp.md
+        href: device-enrollment/understand-troubleshoot-esp.md
       - name: Troubleshoot Azure AD device registration and Windows Autopilot
-        href: azure-ad-device-registration-autopilot.md
+        href: device-enrollment/azure-ad-device-registration-autopilot.md
       - name: Error importing Windows Autopilot CSV files
-        href: import-windows-autopilot-device-csv-files-errors.md
+        href: device-enrollment/import-windows-autopilot-device-csv-files-errors.md
       - name: Can't delete Windows Autopilot deployment profile
-        href: cannot-delete-autopilot-deployment-profile.md
+        href: device-enrollment/cannot-delete-autopilot-deployment-profile.md
     - name: Troubleshoot Windows enrollment errors
-      href: troubleshoot-windows-enrollment-errors.md
+      href: device-enrollment/troubleshoot-windows-enrollment-errors.md
     - name: Windows user not authorized to enroll
-      href: windows-user-cannot-enroll.md
+      href: device-enrollment/windows-user-cannot-enroll.md
     - name: '"Set up for work or school" enrollment is blocked'
-      href: troubleshoot-windows-work-school.md
+      href: device-enrollment/troubleshoot-windows-work-school.md
     - name: Troubleshoot Windows 10 group policy-based auto-enrollment
-      href: troubleshoot-windows-auto-enrollment.md
+      href: device-enrollment/troubleshoot-windows-auto-enrollment.md
     - name: 80180002b during Windows 10 Group Policy-based auto-enrollment
-      href: windows10-enroll-error-80180002b.md
+      href: device-enrollment/windows10-enroll-error-80180002b.md
     - name: Can't enroll devices with a non-administrator account
-      href: no-permission-to-enroll-windows-devices.md
+      href: device-enrollment/no-permission-to-enroll-windows-devices.md
     - name: Error 0xcaa9001f in MDM enrollment
-      href: mdm-enrollment-error-0xcaa9001f.md
+      href: device-enrollment/mdm-enrollment-error-0xcaa9001f.md
     - name: Sysprep will not run correctly on MDM enrolled Windows 10 devices
-      href: troubleshoot-sysprep-windows-10-device-enrolled-mdm.md
+      href: device-enrollment/troubleshoot-sysprep-windows-10-device-enrolled-mdm.md
     - name: Windows failed to apply the MDM Policy settings
-      href: windows-failed-to-apply-mdm-policy.md
+      href: device-enrollment/windows-failed-to-apply-mdm-policy.md
 - name: Device management
   items:
   - name: Troubleshoot device actions
-    href: troubleshoot-device-actions.md
+    href: device-management/troubleshoot-device-actions.md
   - name: Remove duplicate mobile device management objects
-    href: remove-duplicate-mobile-device-management.md
+    href: device-management/remove-duplicate-mobile-device-management.md
   - name: Remove disabled Azure AD user's device from Intune
-    href: orphaned-device-upn-shown-as-none.md
+    href: device-management/orphaned-device-upn-shown-as-none.md
   - name: Help desk operators can't perform remote tasks
-    href: help-desk-operator-fails-remote-tasks.md
+    href: device-management/help-desk-operator-fails-remote-tasks.md
   - name: iTunes automatically turns on backup encryption
-    href: intune-managed-ios-device-backup-encrypted.md
+    href: device-management/intune-managed-ios-device-backup-encrypted.md
   - name: RemoteWipe CSP fails to execute
-    href: remotewipe-fails-sending-dowipe-command.md
+    href: device-management/remotewipe-fails-sending-dowipe-command.md
   - name: Windows 10 devices can't sync with Intune
-    href: cannot-sync-windows-10-devices.md
+    href: device-management/cannot-sync-windows-10-devices.md
 - name: Device protection
   items:
   - name: Conditional Access
     items:
     - name: Troubleshoot Conditional Access
-      href: troubleshoot-conditional-access.md
+      href: device-protection/troubleshoot-conditional-access.md
     - name: Troubleshoot the Exchange Connector
-      href: troubleshoot-exchange-connector.md
+      href: device-protection/troubleshoot-exchange-connector.md
     - name: Common errors with the Exchange Connector
-      href: troubleshoot-exchange-connector-common-errors.md
+      href: device-protection/troubleshoot-exchange-connector-common-errors.md
     - name: Could not retrieve access token for Graph API
-      href: could-not-retrieve-access-token.md
+      href: device-protection/could-not-retrieve-access-token.md
     - name: Troubleshoot Jamf Pro integration
-      href: troubleshoot-jamf.md
+      href: device-protection/troubleshoot-jamf.md
     - name: Unable to connect Jamf console to Intune
-      href: unable-to-connect-send-inventory-information.md
+      href: device-protection/unable-to-connect-send-inventory-information.md
   - name: Troubleshoot encryption on client side
-    href: troubleshoot-bitlocker-policies.md
+    href: device-protection/troubleshoot-bitlocker-policies.md
   - name: Troubleshoot encryption in Intune
-    href: troubleshoot-bitlocker-admin-center.md
+    href: device-protection/troubleshoot-bitlocker-admin-center.md
   - name: BitLocker-encrypted device shows as Not compliant
-    href: bitlocker-encrypted-device-not-compliant.md
+    href: device-protection/bitlocker-encrypted-device-not-compliant.md
   - name: Secure boot enabled device shows as Not Compliant
-    href: secure-boot-enabled-device-shows-not-compliant.md
+    href: device-protection/secure-boot-enabled-device-shows-not-compliant.md
   - name: Windows 10 devices show incorrect compliance status
-    href: win10-devices-show-incorrect-compliance-status.md
+    href: device-protection/win10-devices-show-incorrect-compliance-status.md
   - name: Can't access company resources on ADE devices
-    href: cannot-access-company-resources-on-dep.md
+    href: device-protection/cannot-access-company-resources-on-dep.md
   - name: Error 2016281112 deploying a password policy
-    href: error-deploying-password-policy.md
+    href: device-protection/error-deploying-password-policy.md
   - name: Users are prompted to enroll when accessing Microsoft 365 resources
-    href: intune-licensed-users-prompted-to-enroll.md
+    href: device-protection/intune-licensed-users-prompted-to-enroll.md
 - name: Additional guidance
   items:
   - name: Attributes synced from AD DS to Intune
-    href: intune-synced-attributes-list.md
+    href: general/intune-synced-attributes-list.md
   - name: Common company resource access error codes
-    href: troubleshoot-company-resource-access-problems.md
+    href: general/troubleshoot-company-resource-access-problems.md
   - name: Endpoint protection common errors
-    href: troubleshoot-endpoint-protection-in-microsoft-intune.md
+    href: general/troubleshoot-endpoint-protection-in-microsoft-intune.md
   - name: Script error during Intune setup process
-    href: script-error-intune-setup.md
+    href: general/script-error-intune-setup.md
   - name: Can't query the Intune Data Warehouse
-    href: error-query-intune-data-warehouse.md
+    href: general/error-query-intune-data-warehouse.md
   - name: Error 403 inspecting Intune objects in Graph Explorer
-    href: 403-error-graph-explorer-query.md
+    href: general/403-error-graph-explorer-query.md
   - name: Troubleshoot 503 errors for Intune NAC integration
-    href: nac-integration-errors.md
+    href: general/nac-integration-errors.md
 - name: Getting support
   items:
   - name: Things to try before calling Intune support
-    href: before-you-call-intune-support.md
+    href: get-support/before-you-call-intune-support.md
   - name: Get support in Endpoint Manager
     href: /mem/get-support
   - name: Help and support blade doesn't load
-    href: cannot-load-help-and-support-blade.md
+    href: get-support/cannot-load-help-and-support-blade.md
   - name: Troubleshooting blade fails to load
-    href: troubleshooting-blade-fails-loading.md
+    href: get-support/troubleshooting-blade-fails-loading.md

@@ -6,6 +6,7 @@ ms.author: adelgadohell
 ms.topic: troubleshooting
 ms.date: 05/19/2022
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: linux
 ---
 

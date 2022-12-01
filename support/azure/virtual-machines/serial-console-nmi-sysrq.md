@@ -1,5 +1,5 @@
 ---
-title: Azure Serial Console for SysRq and NMI calls | Microsoft Docs
+title: Azure Serial Console for SysRq and NMI calls
 description: Using Serial Console for SysRq and NMI calls in Azure virtual machines.
 services: virtual-machines
 documentationcenter: ''
@@ -7,6 +7,7 @@ author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-troubleshooting-tools
 ms.collection: linux
 ms.topic: article
 ms.tgt_pltfrm: vm-linux

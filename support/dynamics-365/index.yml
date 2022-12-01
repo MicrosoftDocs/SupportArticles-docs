@@ -25,3 +25,10 @@ additionalContent:
         - title: Dynamics 365 Supply Chain Management
           summary: Troubleshooting articles for Dynamics 365 Supply Chain Management
           url: supply-chain/welcome-supply-chain.yml
+
+    - title: See also
+      items:
+        # Card
+        - title: Dynamics 365 documentation and training modules
+          summary: "View the official documentation for Dynamics 365"
+          url: /dynamics365/

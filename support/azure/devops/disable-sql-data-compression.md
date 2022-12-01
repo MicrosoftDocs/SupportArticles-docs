@@ -5,7 +5,7 @@ ms.date: 08/18/2020
 ms.custom: sap:Installation, Migration, and Move
 ms.reviewer: chandrur
 ms.topic: how-to
-ms.service: az-devops-project
+ms.service: azure-devops-server
 ---
 # Disabling SQL Server Data Compression in Azure DevOps Server databases
 

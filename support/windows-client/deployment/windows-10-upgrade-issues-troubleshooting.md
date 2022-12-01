@@ -25,7 +25,7 @@ localization_priority: medium
 If a Windows 10 upgrade isn't successful, it can be helpful to understand when an error occurred in the upgrade process.
 
 > [!IMPORTANT]
-> Use the [SetupDiag](setupdiag-tool-for-windows-10-upgrade.md) tool before you begin manually troubleshooting an upgrade error. SetupDiag automates log file analysis, detecting and reporting details on many different types of known upgrade issues.
+> Use the [SetupDiag](/windows/deployment/upgrade/setupdiag) tool before you begin manually troubleshooting an upgrade error. SetupDiag automates log file analysis, detecting and reporting details on many different types of known upgrade issues.
 
 _Applies to:_ &nbsp; Windows 10
 
@@ -54,7 +54,7 @@ These phases are explained in greater detail [below](#the-windows-10-upgrade-pro
 
 4. Second boot phase: In this phase, the system is running under the target OS with new drivers. Boot failures are most commonly due to anti-virus software or filter drivers. Disconnect all peripheral devices except for the mouse, keyboard, and display. Obtain and install updated device drivers, temporarily uninstall anti-virus software, then retry the upgrade.
 
-If the general troubleshooting techniques described above or the [quick fixes](windows-10-upgrade-quick-fixes.md) detailed below don't resolve your issue, you can attempt to analyze [log files](windows-10-upgrade-log-files.md) and interpret [upgrade error codes](windows-10-upgrade-error-codes.md). You can also [Submit Windows 10 upgrade errors using Feedback Hub](/windows/deployment/upgrade/submit-errors) so that Microsoft can diagnose your issue.
+If the general troubleshooting techniques described above or the [quick fixes](windows-10-upgrade-quick-fixes.md) detailed below don't resolve your issue, you can attempt to analyze [log files](/windows/deployment/upgrade/log-files) and interpret [upgrade error codes](windows-10-upgrade-error-codes.md). You can also [Submit Windows 10 upgrade errors using Feedback Hub](/windows/deployment/upgrade/submit-errors) so that Microsoft can diagnose your issue.
 
 ## The Windows 10 upgrade process
 

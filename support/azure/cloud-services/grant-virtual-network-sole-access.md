@@ -1,12 +1,13 @@
 ---
 title: Grant a virtual network sole access to Azure Cloud Services
 description: Learn how to grant access to Azure Cloud Services (extended support) to only a specified virtual network.
-ms.date: 8/12/2022
+ms.date: 09/26/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: v-maallu, zhangjerry
-ms.service: cloud-services-extended-support
+ms.service: cloud-services
+ms.subservice: troubleshoot-extended-support
 ms.topic: how-to
 #Customer intent: As an Azure Cloud Services (extended support) user, I want to restrict cloud service to only a specified virtual network so that I can make my cloud service more secure.
 ---

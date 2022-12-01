@@ -7,15 +7,23 @@ metadata:
   title: Troubleshoot Azure Kubernetes Services issues
   description: Documentation for troubleshooting common issues with Azure Kubernetes Services. # Required; article description that is displayed in search results. < 160 chars.
   services: cloud-services
-  ms.service: cloud-services #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: azure-kubernetes-service #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 7/14/2022
+  ms.date: 10/21/2022
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
+
+# Card
+  - title: Learn how to use AKS with these quickstarts, tutorials, and samples
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: AKS documentation
+            url: /azure/aks/   
 
  # Card
   - title: Troubleshoot create operations
@@ -80,6 +88,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Common issues with running or scaling large AKS clusters
+            url: ./aks-at-scale-troubleshoot-guide.md
           - text: Failed to fix node group sizes
             url: ./cluster-autoscaler-fails-to-scale.md
 
@@ -108,6 +118,8 @@ landingContent:
             url: ./connection-issues-application-hosted-aks-cluster.md
           - text: Custom NSG blocks traffic
             url: ./custom-nsg-blocks-traffic.md
+          - text: Failures in the "az aks command invoke" command
+            url: ./resolve-az-aks-command-invoke-failures.md
           - text: Get and analyze HTTP response codes
             url: ./get-and-analyze-http-response-codes.md
           - text: Intermittent timeouts or server issues
@@ -150,6 +162,7 @@ landingContent:
             url: ./identify-high-cpu-consuming-containers-aks.md
           - text: Identify memory saturation in AKS clusters
             url: ./identify-memory-saturation-aks.md
+     
 
 
 

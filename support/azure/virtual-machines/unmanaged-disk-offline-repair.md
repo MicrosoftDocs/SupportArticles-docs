@@ -4,6 +4,7 @@ description: This article describes how to attach an unmanaged disk to a repair 
 ms.author: genli
 ms.date: 05/17/2022
 ms.service: virtual-machines
+ms.subservice: vm-backup-restore
 ms.topic: troubleshooting
 title: Attach an unmanaged disk to a VM for offline repair
 ---

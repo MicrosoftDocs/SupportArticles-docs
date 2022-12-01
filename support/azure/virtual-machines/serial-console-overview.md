@@ -1,5 +1,5 @@
 ---
-title: Azure Serial Console | Microsoft Docs
+title: Azure Serial Console
 description: The Azure Serial Console allows you to connect to your VM when SSH or RDP are not available.
 services: virtual-machines
 documentationcenter: ''
@@ -7,6 +7,7 @@ author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-troubleshooting-tools
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: vm

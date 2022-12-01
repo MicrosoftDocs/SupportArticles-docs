@@ -3,7 +3,7 @@ title: Console shows projects in Deleting state
 description: This article provides resolutions for problem that projects in the Team Foundation Server Administration Console are displayed in Deleting state.
 ms.date: 08/14/2020
 ms.custom: sap:Installation, Migration, and Move
-ms.service: az-devops-project
+ms.service: azure-devops-server
 ---
 # Administration Console shows projects in 'Deleting' state after Team Foundation Server 2015 upgrade
 

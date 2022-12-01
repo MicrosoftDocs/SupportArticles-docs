@@ -1,13 +1,13 @@
 ---
-title: Troubleshoot storage resource deletion errors on Linux VMs in Azure | Microsoft Docs
+title: Troubleshoot storage resource deletion errors on Linux VMs in Azure
 description: Learn how to troubleshoot problems on Linux VMs when deleting storage resources containing attached VHDs.
 keywords: 
 services: virtual-machines
 author: genlin
 manager: dcscontentpm
 tags: top-support-issue,azure-service-management,azure-resource-manager
-
 ms.service: virtual-machines
+ms.subservice: vm-disk
 ms.collection: linux
 ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting

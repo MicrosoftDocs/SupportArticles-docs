@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Windows virtual machine activation problems in Azure| Microsoft Docs
+title: Troubleshoot Windows virtual machine activation problems in Azure
 description: Provides the troubleshoot steps for fixing Windows virtual machine activation problems in Azure
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
@@ -7,6 +7,7 @@ author: genlin
 manager: dcscontentpm
 tags: top-support-issue, azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-windows-activation
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
@@ -23,7 +24,7 @@ If you have trouble when activating Azure Windows virtual machine (VM) that is c
 Azure uses different endpoints for KMS (Key Management Services) activation depending on the cloud region where the VM resides. When using this troubleshooting guide, use the appropriate KMS endpoint that applies to your region.
 
 - Azure public cloud regions: kms.core.windows.net:1688 or azkms.core.windows.net:1688
-- Azure China 21Vianet national cloud regions: kms.core.chinacloudapi.cn:1688
+- Azure China 21Vianet national cloud regions: kms.core.chinacloudapi.cn:1688 or azkms.core.chinacloudapi.cn:1688
 - Azure Germany national cloud regions: kms.core.cloudapi.de:1688
 - Azure US Gov national cloud regions: kms.core.usgovcloudapi.net:1688
 
@@ -40,7 +41,7 @@ Generally, Azure VM activation issues occur if the Windows VM is not configured 
 ## Solution
 
 >[!NOTE]
->If you are using a site-to-site VPN and forced tunneling, see [Use Azure custom routes to enable KMS activation with forced tunneling](/azure/vpn-gateway/vpn-gateway-about-forced-tunneling).
+>If you are using a site-to-site VPN and forced tunneling, see [Use Azure custom routes to enable KMS activation with forced tunneling](custom-routes-enable-kms-activation.md).
 >
 >If you are using ExpressRoute and you have a default route published, see [Can I block Internet connectivity to virtual networks connected to ExpressRoute circuits?](/azure/expressroute/expressroute-faqs).
 

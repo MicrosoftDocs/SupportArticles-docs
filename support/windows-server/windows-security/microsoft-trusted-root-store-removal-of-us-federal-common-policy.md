@@ -17,7 +17,7 @@ ms.date: 04/28/2022
 
 This article discusses the removal of the U.S. Federal Common Policy CA root certificate in the May 24, 2022 Microsoft Root certificate update. This article also provides solutions to avoid or resolve issues that will occur if enterprises haven't transitioned to the Federal Common Policy CA G2 root certificate before the removal of the Federal Common Policy CA root certificate from the Microsoft Certificate Trust List (CTL) by May 24, 2022.
 
-> [!Note]
+> [!NOTE]
 > The root certificate that's being removed by the Microsoft Root Certificate Update is named "Federal Common Policy CA" and is commonly referred to as the "G1" root certificate even though "G1" does not appear in the certificate name.
 >
 > The root certificate that replaces the "G1" root certificate is named "Federal Common Policy CA G2" and is commonly referred to as the "G2" root certificate.
@@ -38,7 +38,7 @@ Applications and operations that depend on the "G1" root certificate will fail o
 |---|---|
 |Federal Common Policy CA G2|99B4251E2EEE05D8292E8397A90165293D116028|
 
-> [!Note]
+> [!NOTE]
 > The "G2" root certificate can be downloaded directly from ["G2" root certificate crt file download](http://repo.fpki.gov/fcpca/fcpcag2.crt).
 
 ## Potential issues
@@ -66,7 +66,7 @@ The following error messages may be displayed in pop-up windows and dialog boxes
 2. After you use the [test configuration setup](#test-configuration-setup) section to verify that all relevant scenarios work, follow the steps in the "[Production configuration setup](#production-configuration-setup)" section in your production configuration.
 3. If you experience outages that are caused by the removal of the "G1" root certificates, manually download the "G2" root certificate by using the steps in [Migrate to the Federal Common Policy CA G2](https://playbooks.idmanagement.gov/fpki/common/migrate/).
 
-> [!Note]
+> [!NOTE]
 > Application-as-service scenarios such as Azure SQL or Azure App Service that chain to the "G1" root certificate will fail after the "G1" root certificate is removed.
 
 ### Test configuration setup
@@ -89,12 +89,12 @@ Before the release of the update, administrators can use the following steps to 
 
 4. Delete the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates` subkey. This step deletes all stored root certificates.
 
-   > [!Note]
+   > [!NOTE]
    > By deleting all stored root certificates from `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates`, you can make sure that all stored root certificates are removed. This operation forces Windows to download new root certificates if associated public key infrastructure (PKI) chains are used that have new properties (if modified). Because the "G1" root certificate is being removed, this root certificate will not be downloaded.
 
 5. Verify all scenarios that chain to the "G1" root certificate, including those that are listed in [Potential issues](#potential-issues).
 
-> [!Note]
+> [!NOTE]
 > The link to the test site never changes. However, the changes that are staged on the test site change from month to month.
 
 ### Production configuration setup
@@ -121,7 +121,7 @@ Administrators should configure the "G2" root certificate per the following inst
 1. Follow the guidance in [Obtain and verify a copy of the Federal Common Policy CA G2 certificate](https://playbooks.idmanagement.gov/fpki/common/obtain-and-verify) to download and install the "G2" root certificate on all Windows workgroup, member, and domain controller computers.
 2. There are multiple ways to deploy the root store to enterprise devices. See the "Microsoft Solutions" section in [Distribute the certificate to operating systems](https://playbooks.idmanagement.gov/fpki/common/distribute-os/).
 
-> [!Note]
+> [!NOTE]
 > In enterprises that have cross-certification dependencies for smart card logons or other scenarios on Windows devices but do not have internet access, see the "Do I Need to Distribute the Intermediate CA Certificates?" and "Certificates Issued by the Federal Common Policy CA G2" sections of [Distribute the CA certificates issued by the Federal Common Policy CA G2](https://playbooks.idmanagement.gov/fpki/common/certificates/).
 >
 > Many federal enterprises must have either the U.S. Treasury CA certificates or the Entrust Managed Services CA certificates. Both CA certificates are documented in the "Distribute the CA certificates" article, as follows:
@@ -137,7 +137,7 @@ For disconnected environments in which Windows devices are not allowed to access
    2. When you select the **trustedcerts.sst** file, this should open the Certificate Manager snap-in to display the complete CTL.
 2. Download Certificate Disallowed List:
    1. Run `certutil -syncwithwu c:\roots`.
-   2. Run `certutil -verifyctl -v c:\rootsdisallowedstl.cab c:\roots\disallowedcert.sst`.
+   2. Run `certutil -verifyctl -v c:\roots\disallowedstl.cab c:\roots\disallowedcert.sst`.
    3. When you select disallowedcert.sst, this should open the Certificate Manager snap-in to display all roots in the Disallowed list.
 3. To evaluate settings that are not shown in the UI, convert the SST file to a text file. To do this, run `certutil -dump -gmt -v c:\roots\trustedcerts.sst > c:\roots\trustedcerts.txt`.
 4. Download and add the "G2" root certificate to your personal CTL.

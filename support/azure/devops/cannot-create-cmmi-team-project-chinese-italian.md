@@ -3,7 +3,7 @@ title: Can't create CMMI team project in Chinese or Italian
 description: This article provides workarounds for the problem that you can't create CMMI team project in Simplified Chinese or Italian in Team Foundation Server 2017 RTW.
 ms.date: 08/14/2020
 ms.custom: sap:Server Administration
-ms.service: az-devops-project
+ms.service: azure-devops-server
 ---
 # Cannot create CMMI team project in Simplified Chinese or Italian in Team Foundation Server 2017 RTW
 

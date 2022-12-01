@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot slow SQL Server performance caused by I/O issues
-description: Provides a methodology to isolate and troubleshoot SQL performance problems caused by slow disk I/O 
-ms.date: 02/16/2022
+description: Provides a methodology to isolate and troubleshoot SQL performance problems caused by slow disk I/O.
+ms.date: 09/28/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
 ms.prod: sql
@@ -10,6 +10,8 @@ ms.author: v-jayaramanp
 ---
 
 # Troubleshoot slow SQL Server performance caused by I/O issues
+
+_Applies to:_ &nbsp; SQL Server
 
 This article provides guidance on what I/O issues cause slow SQL Server performance and how to troubleshoot the issues.
 
@@ -38,8 +40,7 @@ You can choose one of following two options to resolve the problem:
 
 ### Option 1: Execute the steps directly in a notebook via Azure Data Studio
 
-> [!NOTE]
-> Before attempting to open this notebook, make sure that Azure Data Studio is installed on your local machine. To install it, go to [Learn how to install Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
+[!INCLUDE [Install Azure Data Studio note](../../includes/install-azure-data-studio-note.md)]
 
 > [!div class="nextstepaction"]
 > [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/mssql-support/master/sample-scripts/DOCs-to-Notebooks/T-shooting-SQL-Slow-IO.ipynb)

@@ -1,5 +1,5 @@
 ---
-title: Azure Serial Console errors | Microsoft Docs
+title: Azure Serial Console errors
 description: Common errors within the Azure Serial Console
 services: virtual-machines
 documentationcenter: ''
@@ -7,6 +7,7 @@ author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-troubleshooting-tools
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: vm

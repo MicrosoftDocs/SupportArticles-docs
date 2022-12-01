@@ -79,8 +79,7 @@ You can choose one of following two options to resolve the problem.
 
 ### Option 1: Execute the steps directly in a notebook via Azure Data Studio
 
-> [!NOTE]
-> Before attempting to open this notebook, make sure that Azure Data Studio is installed on your local machine. To install it, go to [Learn how to install Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
+[!INCLUDE [Install Azure Data Studio note](../../includes/install-azure-data-studio-note.md)]
 
 > [!div class="nextstepaction"]
 > [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/mssql-support/master/sample-scripts/DOCs-to-Notebooks/T-shooting_PagelatchEX_LastPageInsert.ipynb)
@@ -171,7 +170,7 @@ BEGIN
         CLOSE get_command
         DEALLOCATE get_command
 
-        SELECT 'Follow https://docs.microsoft.com/troubleshoot/sql/performance/resolve-pagelatch-ex-contention for resolution recommendations that fits your environment best' Step3_Apply_KB_article
+        SELECT 'Follow https://learn.microsoft.com/troubleshoot/sql/performance/resolve-pagelatch-ex-contention for resolution recommendations that fits your environment best' Step3_Apply_KB_article
         
     END
     ELSE

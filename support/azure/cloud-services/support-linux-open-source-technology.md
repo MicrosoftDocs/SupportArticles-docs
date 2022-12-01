@@ -1,11 +1,12 @@
 ---
 title: Support for Linux and open-source technology in Azure
 description: Describes support for Linux images in Microsoft Azure.
-ms.date: 07/06/2020
+ms.date: 11/01/2022
 ms.reviewer: patcatun
 author: genlin
 ms.author: genli
 ms.service: cloud-services
+ms.subservice: reference
 ---
 # Support for Linux and open-source technology in Azure
 
@@ -47,8 +48,7 @@ Microsoft offers Linux support for [endorsed Linux distributions](/azure/virtual
 - Scenarios related to security aren't supported. They include but aren't limited to:
 
   - compromised virtual machines
-  - security forensics
-  - DDoS
+  - security incident response investigations
   - intrusion-prevention assistance
 
 ## Open-source technology support matrix

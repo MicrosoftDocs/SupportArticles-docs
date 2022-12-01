@@ -4,6 +4,7 @@ description: Describes how to work around the unsupported in-place system upgrad
 ms.date: 06/29/2021
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-common-errors-issues
 ms.collection: windows
 ---
 # Steps for in-place system upgrades for supported Windows 10 Azure VMs and workarounds for unsupported versions
@@ -36,6 +37,7 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 
 ### Windows versions not yet supported for in-place system upgrades (consider using a workaround)
 
+- Windows Server 2022
 - Windows Server 2019
 - Windows Server 2016
 - Windows Server 2012 R2 Datacenter
