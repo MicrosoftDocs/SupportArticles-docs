@@ -34,7 +34,7 @@ The SQL Server team uses a scheduled delivery model for releasing fixes and prod
 > [!NOTE]
 > The update can be requested by any customer, regardless of their support offering.
 
-### On-demand fixes(OD)
+### On-demand fixes (OD)
 
 - Contains critical fix requests that satisfy all these conditions:
 
