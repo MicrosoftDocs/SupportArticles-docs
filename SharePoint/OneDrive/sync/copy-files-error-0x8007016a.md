@@ -47,7 +47,7 @@ To resolve this issue, try the following options. If one option doesn't work, mo
 
        :::image type="content" source="media/copy-files-error-0x8007016a/new-files-on-demand-ui.png" alt-text="Screenshot of the latest OneDrive settings page in which Download all OneDrive files option is highlighted.":::
 
-3. Reset OneDrive.  
+3. [Reset OneDrive](https://support.microsoft.com/office/reset-onedrive-34701e00-bf7b-42db-b960-84905399050c).  
 4. (Optional) After resetting OneDrive, [turn on Files On-Demand](https://support.microsoft.com/office/save-disk-space-with-onedrive-files-on-demand-for-windows-0e6860d3-d9f3-4971-b321-7092438fb38e#bkmk_turnonfond) if you need it.  
 5. Try to copy files in OneDrive again.  
 
