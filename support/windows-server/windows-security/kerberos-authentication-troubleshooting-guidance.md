@@ -155,19 +155,19 @@ Here are examples of such error messages:
 
 - Client machine
 
-    `Client1.contoso.com` (a Windows11 machine) joins to the domain `Contoso.com`.
+    `Client1.contoso.com` (a Windows11 machine) joins the domain `Contoso.com`.
 - User Didar
 
-    The user belongs to `Contoso.com` and sign in on the client machine.
+    The user belongs to `Contoso.com` and signs in on the client machine.
 - Internet options on the client machine
 
-    All the  websites are a part of the local intranet zone.
+    All the websites are a part of the local intranet zone.
 
     :::image type="content" source="media/kerberos-authentication-troubleshooting-guidance/internet-options-local-intranet-zone.png" alt-text="Screenshot of Internet Properties, which shows all the websites are a part of the local intranet zone.":::
 
 - Server
 
-    `IISServer.contoso.com` (Windows Sever 2019) joins to the domain `Contoso.com`.
+    `IISServer.contoso.com` (Windows Server 2019) joins the domain `Contoso.com`.
 - Authentication configuration
 
     **Windows Authentication** is **Enabled**.
@@ -184,18 +184,18 @@ Here are examples of such error messages:
 
 :::image type="content" source="media/kerberos-authentication-troubleshooting-guidance/authentication-flow.png" alt-text="Screenshot of an authentication flow.":::
 
-1. User Didar signs into `Client1.contoso.com`, opens a Microsoft Edge browser and connects to `IISServer.contoso.com`.
-2. Client machine will perform below steps: (Step1 in the above diagram)
-    1. DNS resolver cache for `IISServer.contoso.com` to verify if this information is already cached.
-    2. DNS resolver checks the HOSTS file for any mapping of `IISServer.contoso.com` located in *C:\\Windows\\System32\\drivers\\etc\\Hosts*.
-    3. Send a DNS query to the preferred DNS server (configured on the IP configuration settings) which is also a domain controller in the environment.
-3. DNS service running on the domain controller will look into its configured zones and resolve the Host A record and responds back with an IP address of `IISServer.contoso.com` (Step2 in the above diagram).
-4. Client machine will perform a TCP three-way handshake on TCP port 80 to the `IISServer.contoso.com`.
-5. Client machine will send an anonymous HTTP request to the `IISServer.contoso.com`.
-6. The IIS server listening on port 80 will receive the request from `Client1.contoso.com`, look into the IIS servers authentication configuration and send back an HTTP 401 challenge response to the client machine with Negotiate as the authentication configuration (Step3 on the above diagram).
-7. The Edge process running on the `Client1.contoso.com` will know that the IIS server is configured with Negotiate and will verify if the website is a part of the local intranet zone. If the website is in local intranet zone, then the Edge process will call into *LSASS.exe* to get a Kerberos ticket with an SPN `HTTP\IISServer.contoso.com` (Step5 in the above diagram).
-8. Domain controller (KDC service) will receive the request from `Client1.contoso.com`, search its database for the SPN `HTTP\IISServer.contoso.com` and find the `IISServer.contoso.com` is configured with this SPN.
-9. Domain controller will respond back with a TGS response with the ticket for the IIS server (Step6 in the above diagram).
+1. User Didar signs in to `Client1.contoso.com`, opens a Microsoft Edge browser and connects to `IISServer.contoso.com`.
+2. The client machine will perform the below steps (Step 1 in the above diagram): 
+    1. The DNS resolver caches `IISServer.contoso.com` to verify if this information is already cached.
+    2. The DNS resolver checks the HOSTS file for any mapping of `IISServer.contoso.com` located in *C:\\Windows\\System32\\drivers\\etc\\Hosts*.
+    3. Send a DNS query to the preferred DNS server (configured on the IP configuration settings), which is also a domain controller in the environment.
+3. The DNS service running on the domain controller will look into its configured zones, resolve the Host A record, and respond back with an IP address of `IISServer.contoso.com` (Step 2 in the above diagram).
+4. The client machine will perform a TCP three-way handshake on TCP port 80 to the `IISServer.contoso.com`.
+5. The client machine will send an anonymous HTTP request to the `IISServer.contoso.com`.
+6. The IIS server listening on port 80 will receive the request from `Client1.contoso.com`, look into the IIS servers authentication configuration and send back an HTTP 401 challenge response to the client machine with Negotiate as the authentication configuration (Step 3 in the above diagram).
+7. The Edge process running on the `Client1.contoso.com` will know that the IIS server is configured with Negotiate and will verify if the website is a part of the local intranet zone. If the website is in the local intranet zone, then the Edge process will call into *LSASS.exe* to get a Kerberos ticket with an SPN `HTTP\IISServer.contoso.com` (Step 5 in the above diagram).
+8. The domain controller (KDC service) will receive the request from `Client1.contoso.com`, search its database for the SPN `HTTP\IISServer.contoso.com` and find the `IISServer.contoso.com` is configured with this SPN.
+9. The domain controller will respond back with a TGS response with the ticket for the IIS server (Step 6 in the above diagram).
 10. The Edge process on the client machine will send a Kerberos Application Protocol (AP) request to the IIS web server with the Kerberos TGS ticket issued by the domain controller.
 11. The IIS process will call into *LSASS.exe* on the web server to decrypt the ticket and create a token with SessionID and Users group membership for authorization.
 12. IIS process will get a handle from *LSASS.exe* to the token to make authorization decisions and allow the User to connect with an AP response.
@@ -203,7 +203,7 @@ Here are examples of such error messages:
 ### Network Monitor analysis of the workflow
 
 > [!NOTE]
-> You need to be a user of the local Administrators group to perform below activities.
+> You need to be a user of the local Administrators group to perform the below activities.
 
 1. Install [Microsoft Network Monitor](https://www.microsoft.com/download/4865) on the client machine (`Client1.contoso.com`).
 2. Run the following command in an elevated command prompt window (*cmd.exe*):
@@ -234,7 +234,7 @@ Here are examples of such error messages:
         Host:  iisserver.contoso.com
         ```
 
-    4. IIS server responds back with HTTP response 401 : Negotiate and NTLM (configuration performed on the IIS server).
+    4. IIS server responds back with HTTP response 401: Negotiate and NTLM (configuration performed on the IIS server).
 
         ```output
         3028    00:59:30.1633647    iisserver.contoso.com    Client1.contoso.com    HTTP    HTTP:Response, HTTP/1.1, Status: Unauthorized, URL: /favicon.ico Using Multiple Authetication Methods, see frame details
@@ -249,7 +249,7 @@ Here are examples of such error messages:
         3034    00:59:30.1834048    Client1.contoso.com    DCA.contoso.com    KerberosV5    KerberosV5:TGS Request Realm: CONTOSO.COM Sname: HTTP/iisserver.contoso.com
         ```
 
-    6. Domain controller `DCA.contoso.com` responds back with the Kerberos request, which has an TGS response with a Kerberos ticket.
+    6. Domain controller `DCA.contoso.com` responds back with the Kerberos request, which has a TGS response with a Kerberos ticket.
 
         ```output
         3036    00:59:30.1848687    DCA.contoso.com    Client1.contoso.com    KerberosV5    KerberosV5:TGS Response Cname: Didar 
@@ -280,7 +280,7 @@ Here are examples of such error messages:
         ApRep: KRB_AP_REP (15)
         ```
 
-6. Run the `klist tickets` command to review Kerberos ticket in the command output on `Client1.contoso.com`.
+6. Run the `klist tickets` command to review the Kerberos ticket in the command output on `Client1.contoso.com`.
 
     ```output
     Client: Didar @ CONTOSO.COM
@@ -297,7 +297,7 @@ Here are examples of such error messages:
 
 7. Review Event ID 4624 on the IIS server showing the Success:
 
-- By default, the Success or Failure audits is enabled on all server operating system of Windows. You can verify if the auditing is enabled or not by using the following command.
+- By default, the Success or Failure audits is enabled on all server operating system of Windows. You can verify whether the auditing is enabled by the following command.
 - If you find auditing is not enabled, then enable the auditing. Review the logon category in the below list. As you can observe, the logon subcategory is enabled with Success and Failure.
 
     ```console
@@ -405,7 +405,7 @@ Use one of the following methods to troubleshoot the issue.
 
 - Verify if you are getting a Kerberos ticket from the domain controller.
 
-    1. Open a normal Command Prompt (not an administrator Command Prompt) in the context of the user who is trying to access the website.
+    1. Open a normal Command Prompt (not an administrator Command Prompt) in the context of the user trying to access the website.
     2. Run the `klist purge` command.
     3. Run the `klist get http/iisserver.contoso.com` command as follows:
 
@@ -444,7 +444,7 @@ Use one of the following methods to troubleshoot the issue.
 
 - Verify if the IIS web service is running on the IIS server using the default credentials.
 
-    Open a normal PowerShell Prompt (not an administrator PowerShell Prompt) in the context of the user who is trying to access the website.
+    Open a normal PowerShell Prompt (not an administrator PowerShell Prompt) in the context of the user trying to access the website.
 
     ```powershell
     PS C:\> invoke-webrequest -Uri http://IIsserver.contoso.com -UseDefaultCredentials
@@ -472,11 +472,11 @@ Use one of the following methods to troubleshoot the issue.
   - Success event log 4624
   - Error event log 4625
 
-- Process of isolation: You can use below troubleshooting steps to verify if other services on the IIS server is able to process Kerberos authentication.
+- Process of isolation: You can use the troubleshooting steps below to verify if other services on the IIS server can process Kerberos authentication.
 
   Prerequisites:
-  - IIS server should be running a server version of Windows.
-  - IIS server should have port opened for services like SMB (port 445).
+  - The IIS server should be running a server version of Windows.
+  - The IIS server should have a port opened for services like SMB (port 445).
   - Create a new share or provide the user Didar with permissions to Read on one of the Folders (for example, Software$) that is already shared on the machine.
 
     1. Sign in to `Client1.contoso.com`.
