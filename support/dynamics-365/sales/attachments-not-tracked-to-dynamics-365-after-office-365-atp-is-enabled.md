@@ -23,6 +23,6 @@ The Server-Side Synchronization feature will only track emails with the same mes
 
 ## Resolution
 
-Use the **Replace** policy in ATP safe attachment configuration.
+Use a different option such as the **Block** policy in the ATP safe attachment configuration.
 
 For more information about ATP Safe Attachments policy options, see [Set up Safe Attachments policies in Microsoft Defender for Office 365](/microsoft-365/security/office-365-security/set-up-atp-safe-attachments-policies?view=o365-worldwide#step-3-learn-about-atp-safe-attachments-policy-options&preserve-view=true).
