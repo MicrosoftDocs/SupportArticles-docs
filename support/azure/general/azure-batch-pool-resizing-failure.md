@@ -79,4 +79,62 @@ If you want to use generation 2, specify it by using the `az sig image-definitio
 az sig image-definition create --resource-group myGalleryRG --gallery-name myGallery --gallery-image-definition myImageDefinition --publisher myPublisher --offer myOffer --sku mySKU --os-type Linux --os-state specialized --hyper-v-generation V2
 ```
 
+## Scenario 3: Insufficient core quota
+
+Azure Batch account is limited in the number of cores that it can allocate across all pools. Batch stops allocating nodes once that quota has been reached. This scenario helps you understand different kinds of core quota and how you can raise quota requests to correct teams so that Batch can allocate more nodes.
+
+### Symptom for Scenario 3
+
+After you access the warning, one of the following errors appears:
+
+- "AccountCoreQuotaReached"
+
+    :::image type="content" source="media/azure-batch-pool-resizing-failure/accountcorequotareached-error.png" alt-text="Screenshot of the 'AccountCoreQuotaReached' error code.":::
+
+    This error means the quota for total dedicated vCPUs is reached.
+
+- "AccountLowPriorityCoreQuotaReached"
+
+    :::image type="content" source="media/azure-batch-pool-resizing-failure/accountLowprioritycorequotareached-error.png" alt-text="Screenshot of the 'AccountLowPriorityCoreQuotaReached' error code.":::
+
+    This error means the quota for dedicated vCPUs per VM Series is reached.
+
+- "AccountVMSeriesCoreQuotaReached"
+
+    This error means the quota for Spot/Low-priority vCPUs is reached.
+
+### Cause
+
+Azure Batch has different core limits and quotas at different levels: Spot/low-priority vCPUs, Total dedicated vCPUs and Dedicated vCPUs per VM Series. You can check your current core quotas via Batch quota as shown below:
+
+:::image type="content" source="media/azure-batch-pool-resizing-failure/batch-account-quotas.png" alt-text="Screenshot that shows how to check core quotas.":::
+
+As mentioned in the warning in this screenshot, when allocating dedicated nodes, both the total dedicated vCPU quota and the dedicated vCPU per VM Series quotas are enforced.
+
+For Spot/Low-priority nodes, Batch enforces only a total core quota for the Batch account without any distinction between different VM series.
+
+If you created a Batch account with pool allocation mode set to **user subscription**, Batch VMs and other resources are created directly in your subscription when a pool is created or resized. The Azure Batch core quotas don't apply and the quotas in your subscription for regional compute cores, per-series compute cores, and other resources are used and enforced. To learn more about these quotas, see [Azure subscription and service limits, quotas, and constraints](/azure/azure-resource-manager/management/azure-subscription-service-limits).
+
+### Solution
+
+1. Check the Batch account quotas in the Azure portal:
+
+    1. Sign in to the [Azure portal](https://portal.azure.com/).
+    2. Select or search for Batch accounts.
+    3. On the **Batch accounts** page, select the Batch account that you want to review.
+    4. On the Batch account's menu, under **Settings**, select **Quotas**.
+    5. Review the quotas currently applied to the Batch account.
+
+2. Based on the quota requirements, request a quota increase for your Batch account or your subscription [by using the Azure portal](/azure/batch/batch-quota-limit#request-in-azure-portal) or [by using the Azure Quota REST API](/rest/api/support/quota-payload#azure-batch).
+
+    The type of quota increase depends on the pool allocation mode of your Batch account. To request a quota increase, you must include the VM series for which you would like to increase the quota. When the quota increase is applied, it's applied to all series of VMs.
+
+    When you create your request, you can select the following two quota types:
+
+    - Select **Per Batch account** to request quota increases for a single Batch account. These quota increases can include dedicated and Spot cores, and the number of jobs and pools. If you select this option, specify the Batch account to which this request applies. Then, select the quota(s) you'd like to update. Provide the new limit you're requesting for each resource. The Spot quota is a single value across all VM series. If you need constrained SKUs, select Spot cores and include the VM families to request.
+
+    - Select **All accounts in this region** to request quota increases that apply to all Batch accounts in a region. For example, use this option to increase the number of Batch accounts per region per subscription.
+
+    After you submit your support request, Azure support will contact you. Quota requests may be completed within a few minutes or up to two business days. Once the quota request is completed/fulfilled, the pool resizing should be successful.
+
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
