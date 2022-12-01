@@ -185,7 +185,7 @@ When you create a Batch pool without public IP addresses, the following message 
 
 You also can see the same error in the activity log:
 
-:::image type="content" source="media/azure-batch-pool-creation-failure/error-activity-log.png" alt-text="Screenshot of the 'Feature is disabled' error message in the activity log.":::
+:::image type="content" source="media/azure-batch-pool-creation-failure/error-activity-log.png" alt-text="Screenshot of the 'Feature is disabled' error message in the activity log." lightbox="media/azure-batch-pool-creation-failure/error-activity-log.png":::
 
 ### Cause: Batch account's region doesn't support pools without public IP addresses
 
