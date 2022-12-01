@@ -156,7 +156,7 @@ Here are examples of such error messages:
 - Client machine
 
     `Client1.contoso.com` (a Windows11 machine) joins the domain `Contoso.com`.
-- User Didar
+- User John
 
     The user belongs to `Contoso.com` and signs in on the client machine.
 - Internet options on the client machine
@@ -184,8 +184,8 @@ Here are examples of such error messages:
 
 :::image type="content" source="media/kerberos-authentication-troubleshooting-guidance/authentication-flow.png" alt-text="Screenshot of an authentication flow.":::
 
-1. User Didar signs in to `Client1.contoso.com`, opens a Microsoft Edge browser and connects to `IISServer.contoso.com`.
-2. The client machine will perform the below steps (Step 1 in the above diagram): 
+1. User John signs in to `Client1.contoso.com`, opens a Microsoft Edge browser and connects to `IISServer.contoso.com`.
+2. The client machine will perform the below steps (Step 1 in the above diagram):
     1. The DNS resolver caches `IISServer.contoso.com` to verify if this information is already cached.
     2. The DNS resolver checks the HOSTS file for any mapping of `IISServer.contoso.com` located in *C:\\Windows\\System32\\drivers\\etc\\Hosts*.
     3. Send a DNS query to the preferred DNS server (configured on the IP configuration settings), which is also a domain controller in the environment.
@@ -252,7 +252,7 @@ Here are examples of such error messages:
     6. Domain controller `DCA.contoso.com` responds back with the Kerberos request, which has a TGS response with a Kerberos ticket.
 
         ```output
-        3036    00:59:30.1848687    DCA.contoso.com    Client1.contoso.com    KerberosV5    KerberosV5:TGS Response Cname: Didar 
+        3036    00:59:30.1848687    DCA.contoso.com    Client1.contoso.com    KerberosV5    KerberosV5:TGS Response Cname: John 
         Ticket: Realm: CONTOSO.COM, Sname: HTTP/iisserver.contoso.com
         Sname: HTTP/iisserver.contoso.com
         ```
@@ -283,7 +283,7 @@ Here are examples of such error messages:
 6. Run the `klist tickets` command to review the Kerberos ticket in the command output on `Client1.contoso.com`.
 
     ```output
-    Client: Didar @ CONTOSO.COM
+    Client: John @ CONTOSO.COM
     Server: HTTP/iisserver.contoso.com @ CONTOSO.COM
     KerbTicket Encryption Type: AES-256-CTS-HMAC-SHA1-96
     Ticket Flags 0x40a10000 -> forwardable renewable pre_authent name_canonicalize
@@ -320,7 +320,7 @@ Here are examples of such error messages:
 Observe the following fields:
 
 - Logon type: 3 (network logon)
-- Security ID in New Logon field: Contoso\Didar
+- Security ID in New Logon field: Contoso\John
 - Source Network Address: IP address of the client machine
 - Logon Process and Authentication Package: Kerberos
 
@@ -352,8 +352,8 @@ Logon Information:
 Impersonation Level:        Impersonation
 
 New Logon:
-    Security ID:        CONTOSO\Didar
-    Account Name:        Didar
+    Security ID:        CONTOSO\John
+    Account Name:        John
     Account Domain:        CONTOSO.COM
     Logon ID:        0x1B64449
     Linked Logon ID:        0x0
@@ -417,7 +417,7 @@ Use one of the following methods to troubleshoot the issue.
         
         Cached Tickets: (2)
         
-        #0>     Client: Didar @ CONTOSO.COM
+        #0>     Client: John @ CONTOSO.COM
                 Server: krbtgt/CONTOSO.COM @ CONTOSO.COM
                 KerbTicket Encryption Type: AES-256-CTS-HMAC-SHA1-96
                 Ticket Flags 0x40e10000 -> forwardable renewable initial pre_authent name_canonicalize
@@ -428,7 +428,7 @@ Use one of the following methods to troubleshoot the issue.
                 Cache Flags: 0x1 -> PRIMARY
                 Kdc Called: DCA.contoso.com
         
-        #1>     Client: Didar @ CONTOSO.COM
+        #1>     Client: John @ CONTOSO.COM
                 Server: http/iisserver.contoso.com @ CONTOSO.COM
                 KerbTicket Encryption Type: AES-256-CTS-HMAC-SHA1-96
                 Ticket Flags 0x40a10000 -> forwardable renewable pre_authent name_canonicalize
@@ -477,16 +477,16 @@ Use one of the following methods to troubleshoot the issue.
   Prerequisites:
   - The IIS server should be running a server version of Windows.
   - The IIS server should have a port opened for services like SMB (port 445).
-  - Create a new share or provide the user Didar with permissions to Read on one of the Folders (for example, Software$) that is already shared on the machine.
+  - Create a new share or provide the user John with permissions to Read on one of the Folders (for example, Software$) that is already shared on the machine.
 
     1. Sign in to `Client1.contoso.com`.
     2. Open Windows Explorer.
     3. Type *\\IISServer.contoso.com \\Software$*.
     4. Open Security events on `IISServer.contoso.com` and verify if you observe Event ID 4624.
-    5. Open a normal Command Prompt on `Client1.contoso.com` as the user Didar. Run the `klist tickets` command and review for the ticket `CIFS/IISServer.contoso.com`.
+    5. Open a normal Command Prompt on `Client1.contoso.com` as the user John. Run the `klist tickets` command and review for the ticket `CIFS/IISServer.contoso.com`.
 
         ```output
-        #1>     Client: Didar @ CONTOSO.COM
+        #1>     Client: John @ CONTOSO.COM
                 Server: cifs/iisserver.contoso.com @ CONTOSO.COM
                 KerbTicket Encryption Type: AES-256-CTS-HMAC-SHA1-96
                 Ticket Flags 0x40a10000 -> forwardable renewable pre_authent name_canonicalize
