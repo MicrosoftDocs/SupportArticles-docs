@@ -11,7 +11,7 @@ ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot
 ---
 # Event ID 36884 when you try to connect to an LDAPS server
 
-This article introduces how to troubleshoot event ID 36884 issue that occurs when you try to build a Lightweight Directory Access Protocol (LDAP) connection.
+This article introduces how to troubleshoot the event ID 36884 issue that occurs when you try to build a Lightweight Directory Access Protocol (LDAP) connection.
 
 ## Issue scenario and event log
 
@@ -21,7 +21,7 @@ Consider the following scenario:
 - The certificate has the following characteristics:  
   - Subject: ldap.contoso.com  
   - Subject Alternate Name (SAN): ldap.contoso.com
-- In DNS server, you have the following entries:  
+- In the DNS server, you have the following entries:  
   - ldap.contoso.com CNAME myldapserver.contoso.com  
   - myldapserver.contoso.com HOST 10.0.0.1
 
@@ -44,7 +44,7 @@ The SSPI client process is ldp (PID: 5148).
 
 ## Cause
 
-LDAPS is looking for myldapserver.contoso.com to be associated with it. However, myldapserver.contoso.com isn't covered by the SAN entries. Therefore, a server name match isn't made and the connection is dropped.
+LDAPS is looking for myldapserver.contoso.com to be associated with it. However, myldapserver.contoso.com isn't covered by the SAN entries. Therefore, a server name match isn't made, and the connection is dropped.
 
 ## How to fix the issue
 
@@ -63,4 +63,4 @@ To fix this issue, use one of the following solutions:
   3. Create a new **REG_DWORD** value that is named **UseHostnameAsAlias**, and set the value to anything other than zero.
   4. Exit Registry Editor, and then restart the computer.
 
-  After the registry value is configured, the client computer uses ldap.contoso.com to make the match. It's covered by the certificate SANs so the connection is allowed.
+  After the registry value is configured, the client computer uses ldap.contoso.com to make the match. It's covered by the certificate SANs, so the connection is allowed.
