@@ -17,13 +17,13 @@ search.appverid:
   - MET150
 ms.date: 11/16/2022
 ---
-# External participants receive "Only people with access to this org can join its meetings"
+# External participants receive "Sign in to Teams to join, or contact the meeting organizer"
 
 ## Symptoms
 
 External participants who are invited to a Teams meeting that's scheduled by users in your organization can't join the meeting. Instead, they receive the following message:
 
-> Only people with access to this org can join its meetings
+> Sign in to Teams to join, or contact the meeting organizer
 
 :::image type="content" source="media/external-participants-join-meeting-blocked/message-join-meeting.png" alt-text="Screenshot of the message when external participants try to join a Teams meeting.":::
 
