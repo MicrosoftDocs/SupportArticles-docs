@@ -3,6 +3,7 @@ title: Known issues with Microsoft Intune
 description: Learn about known issues with Microsoft Intune, including workarounds and updated fixes.
 ms.date: 09/16/2022
 search.appverid: MET150
+ms.reviewer: kaushika
 ---
 # Known issues
 
@@ -29,7 +30,7 @@ There is a known issue (originally posted on the Service Health Dashboard as IT3
 
 - **Status:** Active
 
-Android 12 introduced a toast notification when an application accesses the clipboard, regardless of whether the device is MDM enrolled or if apps are protected by app protection policies. Users running Android Company Portal version 5.0.5450.0 or later may notice an unexpected toast notification when using apps, such as Outlook. An example notification reads “Outlook pasted from your clipboard.”
+Android 12 introduced a toast notification when an application accesses the clipboard, regardless of whether the device is MDM enrolled or if apps are protected by app protection policies. Users running Android Company Portal version 5.0.5450.0 or later may notice an unexpected toast notification when using apps, such as Outlook. An example notification reads "Outlook pasted from your clipboard."
 
 > [!NOTE]
 > The clipboard data is never stored locally or transmitted to Microsoft.
@@ -149,7 +150,7 @@ Intune shared a known issue in MC203629, whereby approximately 1% of devices Int
 - **Status:** Active
 - **Blog post:** [Known Issue: Profile error enrolling iOS devices with Apple Configurator](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-profile-error-enrolling-ios-devices-with-apple/ba-p/294412)
 
-We are aware of an issue when [enrolling and iOS devices with Apple Configurator](/mem/intune/enrollment/apple-configurator-enroll-ios) for Setup Assistant enrollment. After accepting **Apply configuration** on the device, you might see the error: “Invalid Profile: The configuration for your iPad/iPhone could not be downloaded from [Your Organization Name].” This is due to an invalid enrollment URL. For more information and a workaround, see [Known Issue: Profile error enrolling iOS devices with Apple Configurator](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-profile-error-enrolling-ios-devices-with-apple/ba-p/294412) on the Intune Customer Success blog.
+We are aware of an issue when [enrolling and iOS devices with Apple Configurator](/mem/intune/enrollment/apple-configurator-enroll-ios) for Setup Assistant enrollment. After accepting **Apply configuration** on the device, you might see the error: "Invalid Profile: The configuration for your iPad/iPhone could not be downloaded from [Your Organization Name]." This is due to an invalid enrollment URL. For more information and a workaround, see [Known Issue: Profile error enrolling iOS devices with Apple Configurator](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-profile-error-enrolling-ios-devices-with-apple/ba-p/294412) on the Intune Customer Success blog.
 
 ## iOS certificate-based authentication issue with Pulse Secure 7.0.0 and Check Point Capsule Connect versions 1.600
 
@@ -161,9 +162,9 @@ There are issues with certificate-based authentication when using the Pulse Secu
 ## "Rename device" setting disabled for hybrid Azure AD joined Windows devices
 
 - **Status:** Feature disabled
-- **Blog post:** [Known issue with “Rename device” setting for Windows 10 devices in the Intune console](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-with-rename-device-setting-for-windows-10-devices-in/ba-p/390868)
+- **Blog post:** [Known issue with "Rename device" setting for Windows 10 devices in the Intune console](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-with-rename-device-setting-for-windows-10-devices-in/ba-p/390868)
 
-In the Endpoint Manager admin center, we’ve disabled the "Rename device setting" for Windows devices that are hybrid Azure AD joined. This is to prevent device single sign-on errors that might occur after a user changes their password. Device renaming is available for co-managed devices that are Azure AD joined. For details, see [Known issue with “Rename device” setting for Windows 10 devices in the Intune console](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-with-rename-device-setting-for-windows-10-devices-in/ba-p/390868) on the Intune Customer Success blog.
+In the Endpoint Manager admin center, we've disabled the "Rename device setting" for Windows devices that are hybrid Azure AD joined. This is to prevent device single sign-on errors that might occur after a user changes their password. Device renaming is available for co-managed devices that are Azure AD joined. For details, see [Known issue with "Rename device" setting for Windows 10 devices in the Intune console](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-with-rename-device-setting-for-windows-10-devices-in/ba-p/390868) on the Intune Customer Success blog.
 
 ## iOS/iPadOS or macOS device unenrollment through management profile deletion may not be reflected in Microsoft Endpoint Manager
 

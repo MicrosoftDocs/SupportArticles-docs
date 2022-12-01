@@ -18,7 +18,7 @@ ms.technology: windows-server-user-profiles
 
 This article describes how to configure Windows to automate the logon process by storing your password and other pertinent information in the registry database. By using this feature, other users can start your computer and use the account that you establish to automatically log on.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 11  
 _Original KB number:_ &nbsp; 324737
 
 > [!IMPORTANT]

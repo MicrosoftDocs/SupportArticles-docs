@@ -15,8 +15,7 @@ This article helps you identify the reasons and apply mitigations for common per
 
 Follow the steps to troubleshoot the issue or execute the steps in the notebook via Azure Data Studio. The first three steps walk you through collecting telemetry, which describes the lifecycle of a query. The references at the end of the article help you analyze potential opportunities found in the data collected.
 
-> [!NOTE]
-> Before attempting to open this notebook, make sure that Azure Data Studio is installed on your local machine. To install it, go to [Learn how to install Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
+[!INCLUDE [Install Azure Data Studio note](../../../includes/install-azure-data-studio-note.md)]
 
 > [!div class="nextstepaction"]
 > [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/synapse-support/main/dedicated-sql-pool/dsql-tshoot-perf-slow-query.ipynb)
@@ -212,7 +211,7 @@ Being blocked for resource allocation means that your query is waiting to execut
 **Mitigations**
 
 - Wait for the blocking session to complete.
-- Evaluate the [resource class choice](/azure/synapse-analytics/sql-data-warehouseresource-classes-for-workload-management#example-code-for-finding-the-best-resource-class). For more information, see [concurrency limits](/azure/synapse-analytics/sql-data-warehouse/memory-concurrency-limits).
+- Evaluate the [resource class choice](/azure/synapse-analytics/sql-data-warehouse/resource-classes-for-workload-management#example-code-for-finding-the-best-resource-class). For more information, see [concurrency limits](/azure/synapse-analytics/sql-data-warehouse/memory-concurrency-limits).
 - Evaluate if it's preferable to [Kill the blocking session](/sql/t-sql/language-elements/kill-transact-sql).
 
 </details>
@@ -229,7 +228,7 @@ Though these scenarios are atypical, you have options to attempt to override the
 **Mitigations**
 
 - Use ANSI-92 style joins.
-- Add query hints: `OPTION(FORCE ORDER, USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'))`. For more information, see [FORCE ORDER](/sqlt-sql/queries/hints-transact-sql-query#force-order) and [Cardinality Estimation (SQL Server)](/sql/relational-databases/performancecardinality-estimation-sql-server).
+- Add query hints: `OPTION(FORCE ORDER, USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'))`. For more information, see [FORCE ORDER](/sql/t-sql/queries/hints-transact-sql-query#force-order) and [Cardinality Estimation (SQL Server)](/sql/relational-databases/performance/cardinality-estimation-sql-server).
 - Break the query into multiple, less complex steps.
 
 </details>

@@ -94,6 +94,8 @@ If the [Azure serial console](serial-console-linux.md) doesn't work in the speci
 
     :::image type="content" source="media/kernel-related-boot-issues/boot-previous-kernel.gif" alt-text="Animated GIF that shows the process of interrupting the boot process at GRUB menu level to select an older kernel to boot the system on." lightbox="media/kernel-related-boot-issues/boot-previous-kernel.gif":::
 
+4. Change the `GRUB_DEFAULT` variable in the */etc/default/grub* file as instructed in [Change default kernel version manually](#bootingup-differentkernel-ARVMManual). This is a persistent change.
+
 > [!NOTE]
 > If there's only one kernel version listed in the GRUB menu, follow the [Offline troubleshooting](#offline-troubleshooting) approach to troubleshoot this issue from a repair VM.
 
@@ -184,11 +186,19 @@ To modify the default kernel version from a repair VM (inside chroot) or on a ru
     1. List the available kernels in the GRUB configuration file by running the following command:
 
         - **Gen1 VMs:**
-    
+            
+          - **SLES 12/15**:
+            
             ```bash
             cat /boot/grub2/grub.cfg | grep menuentry
             ```
-    
+            
+          - **Ubuntu 18.04/20.04**:
+            
+            ```bash
+            cat /boot/grub/grub.cfg | grep menuentry
+            ```
+            
         - **Gen2 VMs:**
     
             ```bash

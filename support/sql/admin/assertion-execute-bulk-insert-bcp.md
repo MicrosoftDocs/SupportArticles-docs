@@ -1,14 +1,14 @@
 ---
 title: Assertion when you execute Bulk Insert or BCP 
-description: This article provides a workaround for the problem that occurs when you try to execute a Bulk Insert or BCP operation.
-ms.date: 12/01/2020
+description: This article provides a workaround for the problem that occurs when you try to execute a BULK INSERT or BCP operation.
+ms.date: 09/23/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: nathansc
 ms.prod: sql
 ---
 # SQL Server assertion error when you try to execute a Bulk Insert or BCP statement
 
-This article helps you resolve the problem that occurs when you try to execute a `Bulk Insert` or `BCP` operation.
+This article helps you resolve the problem that occurs when you try to execute a `BULK INSERT` or `BCP` operation.
 
 _Original product version:_ &nbsp; SQL Server 2008 R2 Enterprise, SQL Server 2008 Enterprise  
 _Original KB number:_ &nbsp; 2700641
@@ -33,17 +33,17 @@ In this scenario, an assertion occurs on the mirror server. Therefore, a mini-du
 
 ## Cause
 
-This issue occurs because the lock compatibility information in the transaction log of the principal database is not transferred to the mirror server.
+This issue occurs because the lock compatibility information in the transaction log of the principal database isn't transferred to the mirror server.
 
 ## Workaround
 
-To work around this issue, execute the `BULK INSERT` or `BCP` statement on the principal database by using the `CHECK_CONSTRAINTS` ON option.
+To work around this issue, execute the `BULK INSERT` or `BCP` statement on the principal database by using the `CHECK_CONSTRAINTS` option.
 
 > [!NOTE]
-> The `CHECK_CONSTRAINTS` ON option causes slower performance. However, the lock assert on the mirror server does not occur.
+> The `CHECK_CONSTRAINTS` option causes slower performance. However, the lock assert on the mirror server doesn't occur.
 
-## More Information
+## More information
 
 During a `BULK INSERT` or `BCP` operation, a child transaction turns off the `CHECK_CONSTRAINTS` option. This child transaction uses a lock that is compatible with the parent transaction locks. The compatibility information is stored in the transaction log of the principal database. Therefore, the child transaction lock request is granted on the principal database.
 
-However, this compatibility information is not transferred to the mirror server. Therefore, the child transaction lock request is incompatible with the parent transaction locks on the mirror server. This scenario causes the assert on the mirror server.
+However, this compatibility information isn't transferred to the mirror server. Therefore, the child transaction lock request is incompatible with the parent transaction locks on the mirror server. This scenario causes the assert on the mirror server.

@@ -4,7 +4,8 @@ description: This article provides a workaround for the problem that the other c
 ms.date: 08/14/2020
 ms.custom: sap:Pipelines
 ms.reviewer: achand, daleche
-ms.service: az-devops-project
+ms.service: azure-devops
+ms.subservice: ts-pipelines
 ---
 # The other Release Management component does not work after you uninstall the client or server
 

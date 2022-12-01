@@ -86,6 +86,8 @@
   items:
   - name: Embedded application error when install Azure backup agent
     href: unable-to-execute-the-embedded-application-error-backup-agent.md
+  - name: Invalid blob or block content, or invalid block list
+    href: invalid-blob-or-block-content-or-invalid-block-list.md
   - name: Request body is too large error when write to file
     href: request-body-large.md
   - name: Optimize CreateFile function
@@ -93,32 +95,46 @@
   - name: Troubleshoot high CPU or disk usage issues
     href: diagnose-high-cpu-disk-perfinsights.md
 
-- name: HPC    
+- name: Azure Batch
   items:
-  - name: Azure Batch
-    items:
-    - name: AccountEncryptionKeyUnavailable error message
-      href: error-accountencryptionkeyunavailable.md
-    - name: Access to storage account is denied
-      href: access-denied-execute-azure-batch-job.md
-      items:
-  - name: CycleCloud
-    items:
-    - name: Error "Client secret key is expired"
-      href: invalid-client-secret.md
-      items:
-  - name: HPC Pack
-    items:
-    - name: Failed Linux compute node agent extension installation
-      href: troubleshoot-install-failure-hpc-pack-linux-node-agent.md
-    - name: HPC jobs are stuck in canceling mode, and new jobs don't start
-      href: job-stuck-canceling-mode.md
-    - name: HPC Management Service fails to start after restoring database
-      href: hpc-management-service-not-start.md
-    - name: HPC compute nodes aren't shown or are in error state
-      href: compute-node-not-shown-error-state.md
-    - name: HPC node manager service unreachable
-      href: hpc-node-manager-service-unreachable-certificate.md
+  - name: Access to storage account is denied
+    href: access-denied-execute-azure-batch-job.md
+  - name: AccountEncryptionKeyUnavailable error message
+    href: error-accountencryptionkeyunavailable.md
+  - name: Batch node creation delays when restarting or reimaging
+    href: batch-node-creation-delay-restart-reimage.md
+  - name: Batch pool deletion failure
+    href: azure-batch-pool-deletion-failure.md
+  - name: Use managed identities in a Batch account or a Batch pool
+    href: use-managed-identities-azure-batch-account-pool.md
+
+- name: CycleCloud
+  items:
+  - name: Error "Client secret key is expired"
+    href: invalid-client-secret.md
+  - name: Error "Invalid Azure credentials provided" 
+    href: error-invalid-azure-credentials-cycle-cloud.md
+
+- name: HPC Pack
+  items:
+  - name: Failed Linux compute node agent extension installation
+    href: troubleshoot-install-failure-hpc-pack-linux-node-agent.md
+  - name: HPC jobs are stuck in canceling mode, and new jobs don't start
+    href: job-stuck-canceling-mode.md
+  - name: HPC Management Service fails to start after restoring database
+    href: hpc-management-service-not-start.md
+  - name: HPC compute nodes aren't shown or are in error state
+    href: compute-node-not-shown-error-state.md
+  - name: HPC node manager service unreachable
+    href: hpc-node-manager-service-unreachable-certificate.md
+  - name: HPC Pack Excel offloading job is stalled
+    href: hpc-pack-excel-offloading-job-stalled.md
+  - name: HPC reporting database connection problem
+    href: hpc-management-reporting-database-connection-issue.md
+  - name: HPC reporting database permission problem
+    href: hpc-management-reporting-database-permission-problem.md
+  - name: Error "No virtual network found" when you enter the application ID
+    href: error-no-virtual-network-found.md
 
 - name: General
   items:
