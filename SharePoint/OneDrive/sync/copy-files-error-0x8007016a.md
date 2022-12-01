@@ -51,8 +51,8 @@ To resolve this issue, try the following options. If one option doesn't work, mo
 4. (Optional) After resetting OneDrive, [turn on Files On-Demand](https://support.microsoft.com/office/save-disk-space-with-onedrive-files-on-demand-for-windows-0e6860d3-d9f3-4971-b321-7092438fb38e#bkmk_turnonfond) if you need it.  
 5. Try to copy files in OneDrive again.  
 
-### Option 2: Install available Windows Updates
+### Option 2: Install available Windows updates
 
 1. Select **Start** (:::image type="icon" source="media/copy-files-error-0x8007016a/windows-icon.png":::), type *updates*, and then select [Check for updates](https://aka.ms/WindowsSettingsLaunch).  
-2. Install all available Windows Updates.
+2. Install all available Windows updates.
 3. Try to copy files in OneDrive again.  
