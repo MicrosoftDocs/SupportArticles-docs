@@ -172,7 +172,7 @@ Here are examples of such error messages:
 
     **Windows Authentication** is **Enabled**.
 
-    :::image type="content" source="media/kerberos-authentication-troubleshooting-guidance/windows-authentication-enabled.png" alt-text="Screenshot of the Internet Information Services (IIS) Manager window showing Windows Authentication is Enabled.":::
+    :::image type="content" source="media/kerberos-authentication-troubleshooting-guidance/windows-authentication-enabled.png" alt-text="Screenshot of the Internet Information Services Manager window showing Windows Authentication is Enabled.":::
 
 - Authentication Providers: Negotiate
 
@@ -498,4 +498,4 @@ Use one of the following methods to troubleshoot the issue.
                 Kdc Called: DCA.contoso.com
         ```
 
-    6. Collect network traces on `Client1.contoso.com`. Review the network traces to observe which step fails, so that you can further narrow down on the steps and troubleshoot the issue.
+    6. Collect network traces on `Client1.contoso.com`. Review the network traces to observe which step fails so that you can further narrow down the steps and troubleshoot the issue.
