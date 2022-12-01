@@ -47,6 +47,8 @@ items:
       href: client-installation/client-piloting-package-fails-after-site-expansion.md
     - name: Clients reinstall every five hours
       href: client-installation/configmgr-clients-reinstall-every-five-hours.md
+    - name: Conversion failed when upgrading to version 1810
+      href: client-installation/conversion-failed-upgrade-version-1810.md
     - name: Error 80041002 when installing client agent
       href: client-installation/client-agent-installation-error-80041002.md
     - name: Mac client enrollment fails

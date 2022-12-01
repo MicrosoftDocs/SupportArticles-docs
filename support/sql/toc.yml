@@ -742,7 +742,6 @@
       href: tools/sqliosim-utility-simulate-activity-disk-subsystem-linux.md
     - name: Visual Studio 2010 Shell is installed with SQL Server 2014 and 2012
       href: tools/visual-studio-2010-shell-installed-sql-server-2014-2012.md
-
 - name: Product Updates and Release Notes
   items:
   - name: Latest updates and version history
@@ -753,11 +752,27 @@
     href: releases/components-client-tools-versions.md
   - name: Frequently asked questions and acronyms
     href: releases/faq-acronyms.md
+  - name: SQL Server 2019
+    items:
+    - name: SQL Server 2019 build versions
+      href: releases/sqlserver-2019/build-versions.md
+  - name: SQL Server 2017
+    items:
+    - name: SQL Server 2017 build versions
+      href: releases/sqlserver-2017/build-versions.md
+  - name: SQL Server 2016
+    items:
+    - name: SQL Server 2016 build versions
+      href: releases/sqlserver-2016/build-versions.md
+  - name: SQL Server 2014
+    items:
+    - name: SQL Server 2014 build versions
+      href: releases/sqlserver-2014/build-versions.md
   - name: SQL Server on Linux Release History
     items:
     - name: SQL Server 2022
-      href: /sql/linux/sql-server-linux-release-history-2022
+      href: /sql/linux/sql-server-linux-release-history-2022?context=/troubleshoot/sql/context/context
     - name: SQL Server 2019
-      href: /sql/linux/sql-server-linux-release-history-2019
+      href: /sql/linux/sql-server-linux-release-history-2019?context=/troubleshoot/sql/context/context
     - name: SQL Server 2017
-      href: /sql/linux/sql-server-linux-release-history-2017
+      href: /sql/linux/sql-server-linux-release-history-2017?context=/troubleshoot/sql/context/context
