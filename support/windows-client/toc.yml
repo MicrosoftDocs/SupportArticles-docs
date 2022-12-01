@@ -320,6 +320,8 @@
       href: ./deployment/missing-windows-installer-cache.md
     - name: SFC detects Opencl.dll as corrupted
       href: ./deployment/sfc-detects-opencl-dot-dll-corrupted.md
+    - name: SFC flags Windows Defender files as corrupted
+      href: ./deployment/sfc-flags-windows-defender-powershell-module-files-corrupted.md
     - name: Standard terminology that defines software updates
       href: ./deployment/standard-terminology-software-updates.md
     - name: Switches with Xcopy and Xcopy32 commands
