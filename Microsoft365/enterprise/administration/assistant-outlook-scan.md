@@ -21,7 +21,7 @@ The Outlook Scan scenario scans your device and creates a detailed report about 
 
 In the full version of the Assistant, the equivalent entry point for the scenario is *Advanced diagnostics \ Outlook \ Create a detailed report of my Outlook, Office, Windows, and mailbox configuration*.
 
-**Note** This scenario doesn't require an elevated command prompt.
+**Note:** This scenario doesn't require an elevated command prompt.
 
 ## Download the Enterprise version of the Assistant
 
@@ -68,7 +68,7 @@ Here are some sample combinations of switches to run this scenario:
 
   To scan Outlook and output log files to the *C:\temp* folder, run the following command from a non-elevated command prompt.
 
-  **Note** The folder that's specified with the `-LogFolder` switch must exist and be writeable.
+  **Note:** The folder that's specified with the `-LogFolder` switch must exist and be writeable.
 
   ```console
   SaRAcmd.exe -S ExpertExperienceAdminTask -AcceptEula -LogFolder C:\temp

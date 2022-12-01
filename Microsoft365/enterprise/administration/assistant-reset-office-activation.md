@@ -19,9 +19,10 @@ ms.date: 10/25/2022
 
 The Reset Office Activation scenario automates all of the checks described and scripts provided in [Reset activation state for Microsoft 365 Apps for enterprise](/office/troubleshoot/activation/reset-office-365-proplus-activation-state).
 
-This scenario isn't available in the full version of the Assistant.
+> [!NOTE]
+> This scenario isn't available in the full version of the Assistant.
 
-**Note** This scenario requires an elevated command prompt. To open an elevated Command Prompt window, select **Start**, enter *cmd*, right-click **Command Prompt** in the results, and then select **Run as administrator**.
+**Note:** This scenario requires an elevated command prompt. To open an elevated Command Prompt window, select **Start**, enter *cmd*, right-click **Command Prompt** in the results, and then select **Run as administrator**.
 
 ## Download the Enterprise version of the Assistant
 

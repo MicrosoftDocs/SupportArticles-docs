@@ -21,7 +21,7 @@ The Teams Meeting Add-in for Outlook scenario automates all of the checks (excep
 
 In the full version of the Assistant, the equivalent entry point for this scenario is *Teams \ The Teams meeting option isn't shown or the Teams Meeting add-in doesn't load in Outlook*.
 
-**Note** This scenario doesn't require an elevated command prompt.
+**Note:** This scenario doesn't require an elevated command prompt.
 
 ## Download the Enterprise version of the Assistant
 

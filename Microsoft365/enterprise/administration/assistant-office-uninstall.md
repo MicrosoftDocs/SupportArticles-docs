@@ -21,7 +21,7 @@ The Office Uninstall scenario removes any version of Office from a device. This 
 
 In the full version of the Assistant, the equivalent entry point for this scenario is *Office & Office Apps \ I have Office installed, but I'm having trouble uninstalling it*.
 
-**Note** This scenario requires an elevated command prompt. To open an elevated Command Prompt window, select **Start**, enter *cmd*, right-click **Command Prompt** in the results, and then select **Run as administrator**.
+**Note:** This scenario requires an elevated command prompt. To open an elevated Command Prompt window, select **Start**, enter *cmd*, right-click **Command Prompt** in the results, and then select **Run as administrator**.
 
 ## Download the Enterprise version of the Assistant
 
@@ -84,9 +84,9 @@ When you run the Office Uninstall scenario by using the Enterprise version of th
 
 |Condition|Action taken by the Enterprise version|Output shown in the command prompt window|
 |---|---|---|
-|Office is removed successfully|None|00: Successfully completed this scenario.<br/><br/>**Note**: We recommend you restart the computer to finish any remaining cleanup tasks.|
+|Office is removed successfully|None|00: Successfully completed this scenario.<br/><br/>**Note:**: We recommend you restart the computer to finish any remaining cleanup tasks.|
 |Office program found .exe files running: `lync`, `winword`, `excel`, `msaccess`, `mstore`, `infopath`, `setlang`, `msouc`, `ois`, `onenote`, `outlook`, `powerpnt`, `mspub`, `groove`, `visio`, `winproj`, `graph`, `teams`|Exit the scenario|06: Office programs are running. Please close all open Office programs and then rerun this scenario.|
-|No Office products found and the `-OfficeVersion` switch isn't used|Exit the scenario|68: We could not find any Office version. Please rerun this scenario specifying the correct Office version that is installed on your machine. You can also run this scenario using the full UI version of SaRA. For additional information, please visit [https://aka.ms/SaRA_CommandLineVersion](https://aka.ms/SaRA_CommandLineVersion).<br/><br/>**Note**: For SaRA command line users with version 17.00.8256.000 or earlier, the error displayed is:<br/><br/>-07: No installed Office versions were found. Please use the full SaRA version.|
+|No Office products found and the `-OfficeVersion` switch isn't used|Exit the scenario|68: We could not find any Office version. Please rerun this scenario specifying the correct Office version that is installed on your machine. You can also run this scenario using the full UI version of SaRA. For additional information, please visit [https://aka.ms/SaRA_CommandLineVersion](https://aka.ms/SaRA_CommandLineVersion).<br/><br/>**Note:**: For SaRA command line users with version 17.00.8256.000 or earlier, the error displayed is:<br/><br/>-07: No installed Office versions were found. Please use the full SaRA version.|
 |Multiple Office versions are detected as installed and the `-OfficeVersion` switch isn't used|Exit the scenario|08: Multiple Office versions were found. Please use the full SaRA version.|
 |Failure to remove Office|Exit the scenario|09: Failure to remove Office. Please use the full SaRA version.|
 |The Assistant isn't elevated|Exit the scenario|10: SaRA needs to run elevated for this scenario. Please use an elevated command-prompt.|

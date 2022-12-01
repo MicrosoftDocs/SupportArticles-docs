@@ -21,7 +21,7 @@ The Outlook Calendar Scan scenario scans a Microsoft Outlook calendar to identif
 
 In the full version of the Assistant, the equivalent entry point for this scenario is *Advanced diagnostics \ Outlook \ Create a detailed scan of my Outlook Calendar to identify and resolve issues*.
 
-**Note** This scenario doesn't require an elevated command prompt.
+**Note:** This scenario doesn't require an elevated command prompt.
 
 ## Download the Enterprise version of the Assistant
 
@@ -52,7 +52,7 @@ Here are some sample combinations of switches to run this scenario:
 
   To scan a calendar for the active profile in the instance of Outlook that's running, run the following command from a non-elevated command prompt.
   
-  **Note** If Outlook isn't running, the calendar for the default Outlook profile will be scanned.
+  **Note:** If Outlook isn't running, the calendar for the default Outlook profile will be scanned.
 
   ```console
   SaRAcmd.exe -S OutlookCalendarCheckTask -AcceptEula
@@ -62,10 +62,10 @@ Here are some sample combinations of switches to run this scenario:
 
   To scan a calendar for the profile named *MyProfile* in the instance of Outlook that's running, run the following command from a non-elevated command prompt.
 
-  > [!NOTE]
-  >
-  > - If Outlook is running and the active profile isn't called *MyProfile*, the scenario will return an error result.
-  > - If Outlook isn't running, the profile called *MyProfile* must exist.
+  **Note:**
+
+  - If Outlook is running and the active profile isn't called *MyProfile*, the scenario will return an error result.
+  - If Outlook isn't running, the profile called *MyProfile* must exist.
 
   ```console
   SaRAcmd.exe -S OutlookCalendarCheckTask -AcceptEula -P MyProfile
@@ -75,7 +75,7 @@ Here are some sample combinations of switches to run this scenario:
 
   To scan a calendar for the active profile in the instance of Outlook that's running, and output log files to the *C:\temp* folder, run the following command from a non-elevated command prompt.
 
-  **Note** The folder that's specified with the `-LogFolder` switch must exist and be writeable.
+  **Note:** The folder that's specified with the `-LogFolder` switch must exist and be writeable.
 
   ```console
   SaRAcmd.exe -S OutlookCalendarCheckTask -AcceptEula -LogFolder C:\temp

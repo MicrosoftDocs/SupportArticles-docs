@@ -30,7 +30,7 @@ To fix issues on a single computer, we recommend that you use the [full versio
 
 You can use the Enterprise version of the Assistant to resolve issues for the following scenarios. Select a scenario for details about how to run it.
 
-|Scenario|Description|\<Scenarioname\> (specified with the `-S` switch)|
+|Scenario|Description|\<Scenarioname\>|
 |---|---|---|
 |[Outlook Scan](assistant-outlook-scan.md)|Scans Outlook for known issues and generates a comprehensive configuration report for Outlook, Office, and Windows. A full or offline scan can be run.|`ExpertExperienceAdminTask`|
 |[Office Uninstall](assistant-office-uninstall.md)|Scrubs any version of Office from a device. Use when you can't fully remove Office through Control Panel.|`OfficeScrubScenario`|
@@ -48,7 +48,7 @@ You can use the Enterprise version of the Assistant to resolve issues for the fo
 1. In the downloaded *.zip* file, extract the files to a folder that you can access from the user's computer on which you'll run the Assistant.
 1. On the user's computer, select **Start**, enter *cmd*, and then press Enter to open a Command Prompt window.
 
-   **Note** If the scenario you want to run requires an elevated command prompt, select **Start**, enter *cmd*, right-click **Command Prompt** in the results, and then select **Run as administrator**.
+   **Note:** If the scenario you want to run requires an elevated command prompt, select **Start**, enter *cmd*, right-click **Command Prompt** in the results, and then select **Run as administrator**.
 
 1. In the Command Prompt window, navigate to the folder in which you extracted the files from step 2.
 1. Run the Assistant by using the appropriate switches for the scenario.

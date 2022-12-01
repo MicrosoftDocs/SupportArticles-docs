@@ -21,7 +21,7 @@ The Office Shared Computer Activation scenario automates checks and recoveries t
 
 In the full version of the Assistant, the equivalent entry point for this scenario is *Office & Office Apps \ I want to setup Office with shared computer activation on a computer or server in my organization*.
 
-**Note** This scenario requires an elevated command prompt. To open an elevated Command Prompt window, select **Start**, enter *cmd*, right-click **Command Prompt** in the results, and then select **Run as administrator**.
+**Note:** This scenario requires an elevated command prompt. To open an elevated Command Prompt window, select **Start**, enter *cmd*, right-click **Command Prompt** in the results, and then select **Run as administrator**.
 
 ## Download the Enterprise version of the Assistant
 
