@@ -1,5 +1,5 @@
 ---
-title: An existing connection was forcibly closed
+title: An existing connection was forcibly closed (OS error 10054)
 description: Describes scenarios in which an existing connection was forcibly closed by the remote host and provides resolutions for these scenarios
 ms.date: 11/14/2021
 ms.custom: sap:Connection issues
@@ -7,7 +7,7 @@ author: HaiyingYu
 ms.author: haiyingyu
 ms.prod: sql
 ---
-# An existing connection was forcibly closed by the remote host
+# An existing connection was forcibly closed by the remote host (OS error 10054)
 
 _Applies to:_ &nbsp; SQL Server
 
@@ -18,6 +18,8 @@ This article details various causes and provides resolutions for the following e
 
 - > A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - An existing connection was forcibly closed by the remote host.)
 - > A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.)
+
+Operating system error 10054 is raised in the sockets layer in Windows. For more information see [WSAECONNRESET 10054](/windows/win32/winsock/windows-sockets-error-codes-2#:~:text=WSAECONNRESET,10054)
 
 ## When do you see the error?
 
