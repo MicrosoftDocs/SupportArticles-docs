@@ -19,11 +19,11 @@ Consider the following scenario:
 
 - You installed a certificate on an LDAPS connection point.
 - The certificate has the following characteristics:  
-  Subject: ldap.contoso.com  
-  Subject Alternate Name (SAN): ldap.contoso.com
+  - Subject: ldap.contoso.com  
+  - Subject Alternate Name (SAN): ldap.contoso.com
 - In DNS server, you have the following entries:  
-  ldap.contoso.com CNAME myldapserver.contoso.com  
-  myldapserver.contoso.com HOST 10.0.0.1
+  - ldap.contoso.com CNAME myldapserver.contoso.com  
+  - myldapserver.contoso.com HOST 10.0.0.1
 
 When you try to connect to the LDAPS connection point, the connection is dropped, and you receive event ID 36884.
 
