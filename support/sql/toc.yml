@@ -569,6 +569,8 @@
     href: general/information-mats-sdp.md
   - name: RS Diagnostics Collector collects information
     href: general/rs-diagnostics-collector-information.md
+  - name: Servicing model
+    href: general/servicing-models-sql-server.md
   - name: Setup data collection diagnostic tool
     href: general/setup-data-collection-diagnostic-tool.md
   - name: SQL Base Diagnostics Collector
