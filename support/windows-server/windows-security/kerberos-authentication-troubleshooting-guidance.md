@@ -155,8 +155,8 @@ Here are examples of such error messages:
 
 - Client machine
 
-    `Client1.contoso.com` (a Windows11 machine) joins the domain `Contoso.com`.
-- User John
+    `Client1.contoso.com` (a Windows 11 machine) joins the domain `Contoso.com`.
+- User `John`
 
     The user belongs to `Contoso.com` and signs in on the client machine.
 - Internet options on the client machine
@@ -184,7 +184,7 @@ Here are examples of such error messages:
 
 :::image type="content" source="media/kerberos-authentication-troubleshooting-guidance/authentication-flow.png" alt-text="Screenshot of an authentication flow.":::
 
-1. User John signs in to `Client1.contoso.com`, opens a Microsoft Edge browser and connects to `IISServer.contoso.com`.
+1. User `John` signs in to `Client1.contoso.com`, opens a Microsoft Edge browser and connects to `IISServer.contoso.com`.
 2. The client machine will perform the below steps (Step 1 in the above diagram):
     1. The DNS resolver caches `IISServer.contoso.com` to verify if this information is already cached.
     2. The DNS resolver checks the HOSTS file for any mapping of `IISServer.contoso.com` located in *C:\\Windows\\System32\\drivers\\etc\\Hosts*.
@@ -193,10 +193,10 @@ Here are examples of such error messages:
 4. The client machine will perform a TCP three-way handshake on TCP port 80 to the `IISServer.contoso.com`.
 5. The client machine will send an anonymous HTTP request to the `IISServer.contoso.com`.
 6. The IIS server listening on port 80 will receive the request from `Client1.contoso.com`, look into the IIS servers authentication configuration and send back an HTTP 401 challenge response to the client machine with Negotiate as the authentication configuration (Step 3 in the above diagram).
-7. The Edge process running on the `Client1.contoso.com` will know that the IIS server is configured with Negotiate and will verify if the website is a part of the local intranet zone. If the website is in the local intranet zone, then the Edge process will call into *LSASS.exe* to get a Kerberos ticket with an SPN `HTTP\IISServer.contoso.com` (Step 5 in the above diagram).
+7. The Microsoft Edge process running on the `Client1.contoso.com` will know that the IIS server is configured with Negotiate and will verify if the website is a part of the local intranet zone. If the website is in the local intranet zone, then the Microsoft Edge process will call into *LSASS.exe* to get a Kerberos ticket with an SPN `HTTP\IISServer.contoso.com` (Step 5 in the above diagram).
 8. The domain controller (KDC service) will receive the request from `Client1.contoso.com`, search its database for the SPN `HTTP\IISServer.contoso.com` and find the `IISServer.contoso.com` is configured with this SPN.
 9. The domain controller will respond back with a TGS response with the ticket for the IIS server (Step 6 in the above diagram).
-10. The Edge process on the client machine will send a Kerberos Application Protocol (AP) request to the IIS web server with the Kerberos TGS ticket issued by the domain controller.
+10. The Microsoft Edge process on the client machine will send a Kerberos Application Protocol (AP) request to the IIS web server with the Kerberos TGS ticket issued by the domain controller.
 11. The IIS process will call into *LSASS.exe* on the web server to decrypt the ticket and create a token with SessionID and Users group membership for authorization.
 12. IIS process will get a handle from *LSASS.exe* to the token to make authorization decisions and allow the User to connect with an AP response.
 
@@ -213,7 +213,7 @@ Here are examples of such error messages:
     ```
 
 3. Start the Network Monitor.
-4. Open Edge browser and type `http://iisserver.contoso.com`.
+4. Open Microsoft Edge browser and type `http://iisserver.contoso.com`.
 5. Network trace analysis:
     1. DNS query to the domain controller for a Host A record: `IISServer.contoso.com`.
 
@@ -227,7 +227,7 @@ Here are examples of such error messages:
         3006    00:59:30.0743438    DCA.contoso.com    Client1.contoso.com    DNS    DNS:QueryId = 0x666A, QUERY (Standard query), Response - Success, 192.168.2.104
         ```
 
-    3. Edge process on `Client1.contoso.com` connecting to the IIS web server `IISServer.contoso.com` (anonymous connection).
+    3. The Microsoft Edge process on `Client1.contoso.com` connects to the IIS web server `IISServer.contoso.com` (anonymous connection).
 
         ```output
         3027    00:59:30.1609409    Client1.contoso.com    iisserver.contoso.com    HTTP    HTTP:Request, GET /
@@ -257,7 +257,7 @@ Here are examples of such error messages:
         Sname: HTTP/iisserver.contoso.com
         ```
 
-    7. Edge process on `Client1.contoso.com` now goes to the IIS server with a Kerberos AP request:
+    7. The Microsoft Edge process on `Client1.contoso.com` now goes to the IIS server with a Kerberos AP request.
 
         ```output
         3040    00:59:30.1853262    Client1.contoso.com    iisserver.contoso.com    HTTP    HTTP:Request, GET /favicon.ico , Using GSS-API Authorization
@@ -295,10 +295,10 @@ Here are examples of such error messages:
     Kdc Called: DCA.contoso.com
     ```
 
-7. Review Event ID 4624 on the IIS server showing the Success:
+7. Review Event ID 4624 on the IIS server showing the `Success` audit:
 
-- By default, the Success or Failure audits is enabled on all server operating system of Windows. You can verify whether the auditing is enabled by the following command.
-- If you find auditing is not enabled, then enable the auditing. Review the logon category in the below list. As you can observe, the logon subcategory is enabled with Success and Failure.
+- By default, the `Success` or `Failure` audits is enabled on all server operating system of Windows. You can verify whether the auditing is enabled by the following command.
+- If you find auditing is not enabled, then enable the auditing. Review the logon category in the below list. As you can observe, the logon subcategory is enabled with `Success and Failure`.
 
     ```console
     C:\>auditpol /get /Subcategory:"logon"
@@ -308,21 +308,21 @@ Here are examples of such error messages:
       Logon                                   Success and Failure
     ```
 
-    If you don't observe logon with Success and Failure, then run the command to enable it:
+    If you don't observe logon with `Success and Failure`, then run the command to enable it:
 
     ```console
     C:\>auditpol /set /subcategory:"Logon" /Success:enable /Failure:enable
     The command was successfully executed.
     ```
 
-### Reviewing the success security Event ID 4624 on the IISServer.contoso.com
+### Review the success security Event ID 4624 on the IISServer.contoso.com
 
 Observe the following fields:
 
-- Logon type: 3 (network logon)
-- Security ID in New Logon field: Contoso\John
-- Source Network Address: IP address of the client machine
-- Logon Process and Authentication Package: Kerberos
+- `Logon type`: 3 (network logon)
+- `Security ID` in `New Logon` field: `Contoso\John`
+- `Source Network Address`: IP address of the client machine
+- `Logon Process` and `Authentication Package`: `Kerberos`
 
 ```output
 Log Name:      Security
@@ -359,7 +359,7 @@ New Logon:
     Linked Logon ID:        0x0
     Network Account Name:    -
     Network Account Domain:    -
-    Logon GUID:        {d53d67d9-4718-8837-e299-632ab049ad64}
+    Logon GUID:        {<GUID>}
 
 Process Information:
     Process ID:        0x0
@@ -375,7 +375,7 @@ Detailed Authentication Information:
     Authentication Package:    Kerberos
 ```
 
-### Troubleshooting authentication workflow
+### Troubleshoot authentication workflow
 
 Use one of the following methods to troubleshoot the issue.
 
@@ -440,7 +440,7 @@ Use one of the following methods to troubleshoot the issue.
                 Kdc Called: DCA.contoso.com
         ```
 
-        You will find that you get a Kerberos ticket for the SPN `http/IISServer.contoso.com` in the Cached Ticket (2) column.
+        You will find that you get a Kerberos ticket for the SPN `http/IISServer.contoso.com` in the `Cached Ticket (2)` column.
 
 - Verify if the IIS web service is running on the IIS server using the default credentials.
 
@@ -477,13 +477,13 @@ Use one of the following methods to troubleshoot the issue.
   Prerequisites:
   - The IIS server should be running a server version of Windows.
   - The IIS server should have a port opened for services like SMB (port 445).
-  - Create a new share or provide the user John with permissions to Read on one of the Folders (for example, Software$) that is already shared on the machine.
+  - Create a new share or provide the user `John` with permissions to Read on one of the Folders (for example, *Software$*) that is already shared on the machine.
 
     1. Sign in to `Client1.contoso.com`.
     2. Open Windows Explorer.
     3. Type *\\IISServer.contoso.com \\Software$*.
     4. Open Security events on `IISServer.contoso.com` and verify if you observe Event ID 4624.
-    5. Open a normal Command Prompt on `Client1.contoso.com` as the user John. Run the `klist tickets` command and review for the ticket `CIFS/IISServer.contoso.com`.
+    5. Open a normal Command Prompt on `Client1.contoso.com` as the user `John`. Run the `klist tickets` command and review for the ticket `CIFS/IISServer.contoso.com`.
 
         ```output
         #1>     Client: John @ CONTOSO.COM
