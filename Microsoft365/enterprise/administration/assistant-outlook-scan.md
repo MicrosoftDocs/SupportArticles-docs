@@ -66,7 +66,7 @@ Here are some sample combinations of switches to run this scenario:
 
 - Sample 3
 
-  To scan Outlook and output log files to the *C:\temp* folder, run the following command from a non-elevated command prompt.
+  To scan Outlook and output the log files to the *C:\temp* folder, run the following command from a non-elevated command prompt.
 
   **Note:** The folder that's specified with the `-LogFolder` switch must exist and be writeable.
 
@@ -74,7 +74,9 @@ Here are some sample combinations of switches to run this scenario:
   SaRAcmd.exe -S ExpertExperienceAdminTask -AcceptEula -LogFolder C:\temp
   ```
 
-- Sample 4 (all optional switches are used)
+- Sample 4 
+
+  To run an offline scan of Outlook, output the log files to the *C:\temp* folder, and hide the progress display in the console, run the following command from a non-elevated command prompt.
 
   ```console
   SaRAcmd.exe -S ExpertExperienceAdminTask -AcceptEula -LogFolder C:\temp -HideProgress -OfflineScan
