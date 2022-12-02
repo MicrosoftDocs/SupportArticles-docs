@@ -135,6 +135,6 @@ If you created a Batch account with pool allocation mode set to **user subscript
 
     - Select **All accounts in this region** to request quota increases that apply to all Batch accounts in a region. For example, use this option to increase the number of Batch accounts per region per subscription.
 
-    After you submit your support request, Azure support will contact you. Quota requests may be completed within a few minutes or up to two business days. Once the quota request is completed/fulfilled, the pool resizing should be successful.
+    After you submit your support request, Azure support will contact you. Quota requests may be completed within a few minutes or up to two business days. Once the quota request is completed/fulfilled, the pool creation should be successful.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
