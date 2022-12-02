@@ -78,6 +78,5 @@ When you run the Office Activation scenario by using the Enterprise version of t
 |Failure to complete the scenario (for any reason)|Exit the scenario|35: We ran into a problem. Please run the Office Activation scenario in the full UI version of SaRA. You can download SaRA from [https://aka.ms/SaRA-OfficeActivation-CmdLine](https://aka.ms/SaRA-OfficeActivation-CmdLine).|
 |Scan completed successfully|Exit the scenario|36: Successful run. Start any Office app and sign-in to activate.|
 |Office is already activated|Exit the scenario|37: It looks like Microsoft Office is already activated. If you don't think this is correct, please run the full UI version of SaRA. You can download SaRA from [https://aka.ms/SaRA-OfficeActivation-CmdLine](https://aka.ms/SaRA-OfficeActivation-CmdLine). |
-|Failure to complete the scenario (for any reason)|Exit the scenario|38: \<message depends on the ReasonCode\> |
+|Unable to successfully activate Office|Exit the scenario|38: The message varies depending on the reason for the failure to activate Office.|
 |Unable to activate Office|Exit the scenario|39: Office may not be activated. Please run the Office Activation scenario in the full UI version of SaRA. You can download SaRA from [https://aka.ms/SaRA-OfficeActivation-CmdLine](https://aka.ms/SaRA-OfficeActivation-CmdLine).|
-|Failure to complete the scenario|Exit the scenario|40: Cannot reach all endpoints required for activation. Please run the full UI version of SaRA.|
