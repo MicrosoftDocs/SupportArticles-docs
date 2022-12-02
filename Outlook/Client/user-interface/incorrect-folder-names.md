@@ -127,7 +127,7 @@ If this option isn't available or doesn't work, use Option 2.
 
 You can use the MFCMAPI tool to bring the **Junk Email** folder back under the **Top of Information Store**, or at the same level as the other default mailbox folders.
 
-1. Download and install the latest version of MFCMAPI from [GitHub](https://github.com/stephenegriffin/mfcmapi/releases).
+1. Download and install the latest version of [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases).
 
     **Notes:**
 
