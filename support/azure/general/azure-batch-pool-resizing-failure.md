@@ -103,7 +103,7 @@ After you access the warning, one of the following errors appears:
 
 ### Cause：Core quotas are insufficient
 
-Azure Batch account is limited in the number of cores that it can allocate across all pools. Batch stops allocating nodes once that quota has been reached. 
+Azure Batch account is limited in the number of cores that it can allocate across all pools. Batch stops allocating nodes once that quota has been reached.
 
 Azure Batch has different core limits and quotas at different levels: Spot/low-priority vCPUs, Total dedicated vCPUs and Dedicated vCPUs per VM Series. You can check your current core quotas via Batch quota as shown below:
 
