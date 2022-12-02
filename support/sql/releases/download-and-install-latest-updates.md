@@ -551,3 +551,8 @@ Use the version number in the following table to identify the product or service
 |6.50.240|SQL Server 6.5 Service Pack 2|
 |6.50.213|SQL Server 6.5 Service Pack 1|
 |6.50.201|SQL Server 6.5 RTM|
+
+## See also
+
+- [Determine version information of SQL Server components and client tools](components-client-tools-versions.md)
+- [Determine which version and edition of SQL Server Database Engine is running](find-my-sql-version.md)

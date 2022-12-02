@@ -98,3 +98,8 @@ To determine the version of SQL Server, you can use any of the following methods
   A snapshot of a sample report is as follows:
 
   :::image type="content" source="media/find-my-sql-version/sample-report.svg" alt-text="Screenshot shows a sample SQL Server 2016 Setup Discovery report." border="false":::
+
+## See also
+
+- [Determine version information of SQL Server components and client tools](components-client-tools-versions.md)
+- [Latest updates and version history for SQL Server](download-and-install-latest-updates.md)

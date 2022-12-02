@@ -46,6 +46,8 @@ Customers who [add Conditional Access to user flows in Azure Active Directory B2
 
 ## Next steps
 
+We'll keep this article updated. Here's a short link you can use to come back for updated and new information: [https://aka.ms/azureadipv6](https://aka.ms/azureadipv6).
+
 - [Using the location condition in a Conditional Access policy](/azure/active-directory/conditional-access/location-condition)
 - [Conditional Access: Block access by location](/azure/active-directory/conditional-access/howto-conditional-access-policy-location)
 - [Find help and get support for Azure Active Directory](/azure/active-directory/fundamentals/how-to-get-support)
