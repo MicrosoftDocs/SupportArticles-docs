@@ -66,10 +66,10 @@ By default, the **Internet** key doesn't exist. Therefore, you have to create it
     - **Y**: The ports that are listed in the **Ports** entry represent all the ports on that computer that are available to EPM.
     - **N**: The ports that are listed in the **Ports** entry represent all ports that aren't available to EPM.
 
-- **UseInternetPorts REG_SZ**. Specifies the default system policy.  
+- **UseInternetPorts REG_SZ**: Specifies the default system policy.  
   - Values: **Y** or **N** (not case-sensitive)  
-    - **Y**. The processes that use the default system policy are assigned ports from the set of internet-available ports, as defined previously.
-    - **N**. The processes that use the default system policy are assigned ports from the set of intranet-only ports.
+    - **Y**: The processes that use the default system policy are assigned ports from the set of internet-available ports, as defined previously.
+    - **N**: The processes that use the default system policy are assigned ports from the set of intranet-only ports.
 
 You should open a range of ports that are greater than port 5000. Port numbers that are less than 5000 might already be in use by other applications, and they could cause conflicts with your DCOM applications. Furthermore, previous experience shows that a minimum of 100 ports should be opened. This is because several system services rely on these RPC ports to communicate with one another.
 
