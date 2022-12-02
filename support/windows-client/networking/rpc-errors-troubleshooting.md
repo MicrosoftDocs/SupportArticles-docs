@@ -150,7 +150,7 @@ By examining this output, you can determine the following information:
 
 If any of these steps fail, you can usually start collecting simultaneous network traces, as described in the next section.
 
-For more information about PortQry, see [Using the PortQry command-line tool](/troubleshoot/windows-client/networking/portqry-command-line-port-scanner-v2).
+For more information about PortQry, see [Using the PortQry command-line tool](/troubleshoot/windows-server/networking/portqry-command-line-port-scanner-v2).
 
 ### Netsh
 
