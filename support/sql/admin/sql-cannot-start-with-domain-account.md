@@ -1,6 +1,6 @@
 ---
 title: SQL Server services using domain credentials fail to start 
-description: 
+description: This article provides a workaround to troubleshoot an issue when SQL Server fails to start when the startup account doesn't have the right permissions.
 ms.date: 12/02/2022
 ms.custom: sap:Administration and Management
 author: padmajayaraman
@@ -11,7 +11,7 @@ ms.prod: sql
 
 # SQL Server services using domain credentials fail to start
 
-This article discusses an issue wherein SQL server fails to start when the startup account doesn't have the required permissions.
+This article discusses an issue wherein SQL Server fails to start when the startup account doesn't have the required permissions.
 
 _Original product version:_ &nbsp; Microsoft SQL Server  
 _Original KB number:_ &nbsp; 3006856
@@ -49,7 +49,7 @@ The issue occurs because the usual permissions granted to a SQL Service account 
 
 - Replace a process-level token (SeAssignPrimaryTokenPrivilege).
 
-For more information about service permissions, see the [Service Permissions](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#service-permissions) section in the article [Configure Windows Service Accounts and Permissions](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?view=sql-server-2017).
+For more information about service permissions, see the [Service Permissions](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#service-permissions) section in the article [Configure Windows Service Accounts and Permissions](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?view=sql-server-2017&preserve-view=true).
 
 ## Resolution
 
