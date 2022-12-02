@@ -7,7 +7,7 @@ author: HaiyingYu
 ms.author: haiyingyu
 ms.prod: sql
 ---
-# An existing connection was forcibly closed by the remote host  (OS error 10054)
+# An existing connection was forcibly closed by the remote host (OS error 10054)
 
 _Applies to:_ &nbsp; SQL Server
 
@@ -19,7 +19,8 @@ This article details various causes and provides resolutions for the following e
 - > A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - An existing connection was forcibly closed by the remote host.)
 - > A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.)
 
-  Operating system error 10054 is raised in the Windows sockets layer. For more information see Windows socker error codes: [WSAECONNRESET 10054](/windows/win32/winsock/windows-sockets-error-codes-2#:~:text=WSAECONNRESET,10054)
+Operating system error 10054 is raised in the Windows sockets layer. For more information, see [Windows Sockets Error Codes: WSAECONNRESET 10054](/windows/win32/winsock/windows-sockets-error-codes-2#:~:text=WSAECONNRESET,10054).
+
 ## When do you see the error?
 
 Secure Channel, also known as [Schannel](/windows/win32/com/schannel), is a [Security Support Provider](/windows/win32/rpc/security-support-providers-ssps-) (SSP). It contains a set of security protocols that provide identity authentication and secure, private communication through encryption. One function of Schannel SSP is to implement different versions of the [Transport Layer Security (TLS) protocol](/windows-server/security/tls/transport-layer-security-protocol). This protocol is an industry standard that is designed to protect the privacy of information communicated over the Internet.
