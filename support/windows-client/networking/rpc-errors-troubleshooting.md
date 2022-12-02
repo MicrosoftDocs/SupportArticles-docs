@@ -150,7 +150,7 @@ By examining this output, you can determine the following information:
 
 If any of these steps fail, you can usually start collecting simultaneous network traces, as described in the next section.
 
-For more information about PortQry, see [Using the PortQry command-line tool](/windows-server/networking/portqry-command-line-port-scanner-v2).
+For more information about PortQry, see [Using the PortQry command-line tool](/troubleshooting/windows-server/networking/portqry-command-line-port-scanner-v2).
 
 ### Netsh
 
@@ -176,7 +176,7 @@ Now, try to reproduce your issue on the client computer. Then, run the following
 Netsh trace stop
 ```
 
-Open the trace files in [Microsoft Network Monitor 3.4](collect-data-using-network-monitor.md) or Message Analyzer, and filter the trace data for the IP address of the server or client computers and TCP port 135. For example, use filter strings such as the following:
+Open the trace files in [Microsoft Network Monitor 3.4](/troubleshoot/windows-client/networking/collect-data-using-network-monitor) or Message Analyzer, and filter the trace data for the IP address of the server or client computers and TCP port 135. For example, use filter strings such as the following:
 
 - **Ipv4.address==\<_client-ip_> and ipv4.address==\<_server-ip_> and tcp.port==135**  
   
