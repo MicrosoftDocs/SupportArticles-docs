@@ -79,9 +79,7 @@ If you want to use generation 2, specify it by using the `az sig image-definitio
 az sig image-definition create --resource-group myGalleryRG --gallery-name myGallery --gallery-image-definition myImageDefinition --publisher myPublisher --offer myOffer --sku mySKU --os-type Linux --os-state specialized --hyper-v-generation V2
 ```
 
-## Scenario 3: Insufficient core quota
-
-Azure Batch account is limited in the number of cores that it can allocate across all pools. Batch stops allocating nodes once that quota has been reached. This scenario helps you understand different kinds of core quota and how you can raise quota requests to correct teams so that Batch can allocate more nodes.
+## Scenario 3: Batch account quotas related issue
 
 ### Symptom for Scenario 3
 
@@ -103,7 +101,9 @@ After you access the warning, one of the following errors appears:
 
     This error means the quota for Spot/Low-priority vCPUs is reached.
 
-### Cause
+### Cause：Core quotas are insufficient
+
+Azure Batch account is limited in the number of cores that it can allocate across all pools. Batch stops allocating nodes once that quota has been reached. 
 
 Azure Batch has different core limits and quotas at different levels: Spot/low-priority vCPUs, Total dedicated vCPUs and Dedicated vCPUs per VM Series. You can check your current core quotas via Batch quota as shown below:
 
@@ -115,7 +115,7 @@ For Spot/Low-priority nodes, Batch enforces only a total core quota for the Batc
 
 If you created a Batch account with pool allocation mode set to **user subscription**, Batch VMs and other resources are created directly in your subscription when a pool is created or resized. The Azure Batch core quotas don't apply and the quotas in your subscription for regional compute cores, per-series compute cores, and other resources are used and enforced. To learn more about these quotas, see [Azure subscription and service limits, quotas, and constraints](/azure/azure-resource-manager/management/azure-subscription-service-limits).
 
-### Solution
+### Solution: Request quota increase
 
 1. Check the Batch account quotas in the Azure portal:
 
