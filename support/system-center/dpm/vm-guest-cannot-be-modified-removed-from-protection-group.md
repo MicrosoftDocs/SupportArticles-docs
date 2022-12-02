@@ -23,4 +23,4 @@ This issue is due to duplicate entries in the DPM database. The duplicate entrie
 
 ## Resolution
 
-To fix this issue, contact [Microsoft Support](ms-contact-support://IA/?searchkey=Contact%20Microsoft%20Support) for help removing the duplicate entries. To prevent future occurrences, enable live migration. To do this, see [Set up protection for live migration](/previous-versions/system-center/system-center-2012-R2/jj656643(v=sc.12)).
+To fix this issue, contact [Microsoft Support](https://support.microsoft.com/) for help removing the duplicate entries. To prevent future occurrences, enable live migration. To do this, see [Set up protection for live migration](/previous-versions/system-center/system-center-2012-R2/jj656643(v=sc.12)).
