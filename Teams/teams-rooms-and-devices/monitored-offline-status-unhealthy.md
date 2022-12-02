@@ -36,19 +36,18 @@ If a device is unmonitored or offline, the Teams Rooms Pro Management portal can
 If the **Monitored** signal is **Unhealthy**, you can use the Teams Rooms Pro agent test tool to diagnose common causes:
 
 1. [Switch to Admin mode](/microsoftteams/rooms/rooms-operations#admin-mode-and-device-management).
-2. Open the Microsoft Edge browser, enter *[https://aka.ms/mmr/agenttesttool](https://aka.ms/mmr/agenttesttool)*, and then download the Microsoft Teams Rooms Pro agent test tool *MTRPAgentCheck.zip* file.
-
+2. Open the Microsoft Edge browser, enter *[https://aka.ms/mtrp/agenttesttoolv2](https://aka.ms/mtrp/agenttesttoolv2)*, and then download the Microsoft Teams Rooms Pro agent test tool *MTRProAgentCheckv2.zip* file.
+ 
    > [!NOTE]
    >
    > If you can't download directly from the device because of network access restrictions, use another device to download the file, and then copy the file to the affected device by using a USB drive.
-3. Extract the contents of the .zip file to *c:\rigel\MTRProAgentTestTool*.
-4. Open File Explorer, and then browse to *c:\rigel\MTRProAgentTestTool*.
-5. Tap the *RunMeAsAdministrator_MTRP_AgentTest.bat* file, long press it, and then tap **Run as Administrator** from the context menu.
+3. Open the zip file and double-click/tap the *MTRPro.AgentTestTool.exe* executable. When prompted for extraction, choose **Run** to execute directly.
+4. On the *User Account Control* dialog, select **Yes** to continue.
 
-After the agent test tool finishes, it generates the following items:
+After the agent test tool completes, a brief summary of the tool's results is displayed in the PowerShell console. Press *ENTER* to continue, and the following information is made available: 
 
-- A summary of the tool's results in the PowerShell console. You should review the summary and address any failures that are reported.
-- The following file: *c:\rigel\Downloads\AgentCheckResults.zip*. This file contains additional information that's required by Microsoft Support during investigation.
+- A detailed report (HTML format) of the tests executed and their results.
+- A ZIP file with additional details/logs generated in the directory *C:\Rigel\MTRProAgentTestTool*. This ZIP file contains additional information that's required by Microsoft Support during investigation.
 
 ### Check whether TPM is enabled
 
