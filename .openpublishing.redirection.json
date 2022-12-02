@@ -16,6 +16,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/power-platform/ai-builder/aibuilder-form-processing-is-not-extracting-tables-that-span-across-multiple-pages.md",
+      "redirect_url": "/ai-builder/create-form-processing-model#multipage-tables",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-server/networking/portqry-exe-command-line-utility.md",
       "redirect_url": "/troubleshoot/windows-server/networking/portqry-command-line-port-scanner-v2",
       "redirect_document_id": true
@@ -2701,6 +2706,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/sql/general/determine-version-edition-update-level.md",
+      "redirect_url": "/troubleshoot/sql/releases/download-and-install-latest-updates",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/mem/intune/app-management.yml",
       "redirect_url": "/troubleshoot/mem/intune/app-management/app-management",
       "redirect_document_id": true
@@ -4293,6 +4303,131 @@
     {
       "source_path": "support/mem/configmgr/wsus-synchronization-fails-with-soapexception.md",
       "redirect_url": "/troubleshoot/mem/configmgr/update-management/wsus-synchronization-fails-with-soapexception",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/best-practices-when-updating-a-flow.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/connections/best-practices-when-updating-a-flow",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/custom-connectors-not-show-refresh-url.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/connections/custom-connectors-not-show-refresh-url",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/blocked-frame-with-origin-uci.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/blocked-frame-with-origin-uci",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/cookies-pop-up-blocker-error.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/cookies-pop-up-blocker-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/custom-pages-sdk-script-not-load.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/custom-pages-sdk-script-not-load",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/filter-blank-records.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/filter-blank-records",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/lookup-does-not-filter-entity-records.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/lookup-does-not-filter-entity-records",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/no-navigation-when-selecting-button.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/no-navigation-when-selecting-button",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/regenerate-ribbon-metadata.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/regenerate-ribbon-metadata",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/ribbon-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/ribbon-issues-button-hidden.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues-button-hidden",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/ribbon-issues-button-not-working-correctly.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues-button-not-working-correctly",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/ribbon-issues-button-visible.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues-button-visible",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/web-api-client-errors.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/dataverse-web-api/web-api-client-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/common-issues-and-resolutions.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/isolate-and-troubleshoot-common-issues/common-issues-and-resolutions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-canvas-app-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-canvas-app-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-common-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-common-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-model-app-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-model-app-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/minimal-canvas-app-repro.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/isolate-and-troubleshoot-common-issues/minimal-canvas-app-repro",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/troubleshooting-startup-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/isolate-and-troubleshoot-common-issues/troubleshooting-startup-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/troubleshoot-power-query-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/isolate-and-troubleshoot-common-issues/troubleshoot-power-query-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/cannot-import-solutions-publish-changes.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/manage-apps-and-solutions/cannot-import-solutions-publish-changes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/dataverse-environment-variables.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/manage-apps-and-solutions/dataverse-environment-variables",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/dataverse-records-missing-required-fields.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/manage-apps-and-solutions/dataverse-records-missing-required-fields",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/wrap-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/manage-apps-and-solutions/wrap-issues",
       "redirect_document_id": true
     },
     {
