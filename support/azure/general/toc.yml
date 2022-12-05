@@ -107,6 +107,8 @@
     href: azure-batch-pool-creation-failure.md
   - name: Batch pool deletion failure
     href: azure-batch-pool-deletion-failure.md
+  - name: Batch pool resizing failure
+    href: azure-batch-pool-resizing-failure.md
   - name: Use managed identities in a Batch account or a Batch pool
     href: use-managed-identities-azure-batch-account-pool.md
 
