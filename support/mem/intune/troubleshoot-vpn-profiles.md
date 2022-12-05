@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot VPN profile issues
-description: Understand and troubleshoot VPN profile issues on Android, iOS, and Windows devices in Microsoft Intune. Review logs, and see some common issues and possible resolutions.
+description: Understand and troubleshoot VPN profile issues on Android, iOS, and Windows devices in Microsoft Intune. Review logs and see some common issues and resolutions.
 ms.date: 11/26/2021
 ms.reviewer: jarrettr
 ---
@@ -26,7 +26,7 @@ For example, if you want to configure all iOS devices with the required settings
 You can create VPN profiles by using different VPN connection types.
 
 > [!NOTE]
-> Before you can use VPN profiles that are assigned to a device, you must install the applicable VPN app for the profile.
+> Before you can use VPN profiles assigned to a device, you must install the applicable VPN app for the profile.
 
 ## How to create VPN profiles
 
@@ -141,7 +141,7 @@ The VPN connection is listed in **Network Connections**.
 
 On an Android device, the *Omadmlog.log* file logs detailed activities of the VPN profile when it's processed on the device. Depending on how long the Company Portal app has been installed, you may have up to five *Omadmlog.log* files, and the timestamp of the last sync can help you find the related entries.
 
-The following example uses [CMTrace](/mem/configmgr/core/support/cmtrace) to read the logs, and searches for `android.vpn.client`.
+The following example uses [CMTrace](/mem/configmgr/core/support/cmtrace) to read the logs and searches for `android.vpn.client`.
 
 :::image type="content" source="media/troubleshoot-vpn-profiles/cmtrace-android.png" alt-text="Screenshot that shows an example that uses CMTrace to read logs, and searches for android.vpn.client.":::
 
@@ -309,7 +309,7 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
 1. Verify that the VPN profile is assigned to the correct group.
 
-    In the Intune portal, select **Device configuration** > **Profiles**, select the profile, and then select **Assignments** to verify the selected groups.
+    In the Intune portal, select **Device configuration** > **Profiles**, then select the profile, and then select **Assignments** to verify the selected groups.
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/assign-vpn-profile-windows.png" alt-text="Screenshot that shows the assigned VPN profile of a group for Windows.":::
 
