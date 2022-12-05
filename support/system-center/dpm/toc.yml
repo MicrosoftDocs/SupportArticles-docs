@@ -60,6 +60,8 @@
       href: configure-cluster-networks.md
     - name: Hyper-V backup fails with error 30112
       href: hyper-v-backup-fails-error-30112.md
+    - name: VM guest can't be modified or removed from protection group
+      href: vm-guest-cannot-be-modified-removed-from-protection-group.md
 - name: Reports
   items:
     - name: Reporting Services Server cannot connect to the DPM database
