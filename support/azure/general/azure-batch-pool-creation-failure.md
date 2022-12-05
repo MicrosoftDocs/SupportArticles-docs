@@ -33,11 +33,11 @@ When you select the **Image Type** during the Batch pool creation, you may encou
 > message : This request is not authorized to perform this operation.
 > RequestId:22b29112-fd1b-4376-bbd9-8036aa722e43 Time:2022-10-24T04:17:03.5602162Z
 
-### Cause 1: Public network access is disabled, but the Batch account doesn't have a private endpoint
+### Cause 1: Public network access is disabled, but Batch account doesn't have private endpoint
 
 You create a Batch account with the **Public network access** set to **Disabled**. This setting makes access from the public network be removed. If the Batch account doesn't have a private endpoint, the connection to the Batch account will be restricted.
 
-### Solution 1: Create a private endpoint for the Batch account
+### Solution 1: Create private endpoint for Batch account
 
 1. Create a [private endpoint for the Batch account](/azure/batch/private-connectivity). By enabling a private endpoint, you're bringing the Batch account into the virtual network of the private endpoint. Access from the virtual network will be available.
 
@@ -75,7 +75,7 @@ In this scenario, you may get the following error message:
 
 The creation of the private endpoint will assign a private IP address from the selected virtual network. To connect privately with your private endpoint, you need a DNS record.
 
-### Solution: Configure a private DNS zone for the private endpoint
+### Solution: Configure private DNS zone for private endpoint
 
 In this section, assume that the Batch account endpoint is "testbatchdoc.eastus2.batch.azure.com".
 
@@ -99,7 +99,7 @@ In this section, assume that the Batch account endpoint is "testbatchdoc.eastus2
 
         Here's a command output example:
 
-        :::image type="content" source="media/azure-batch-pool-creation-failure/nslookup-command-output.png" alt-text="Screenshot of the first NS lookup command output.":::
+        :::image type="content" source="media/azure-batch-pool-creation-failure/nslookup-command-output.png" alt-text="Screenshot of the first nslookup command output.":::
 
         The command output indicates that the FQDN doesn't resolve to the private IP address 10.2.0.15. It means that no private DNS zone is configured for the private endpoint.
 
@@ -115,7 +115,7 @@ In this section, assume that the Batch account endpoint is "testbatchdoc.eastus2
 
     Here's a command output example.
 
-    :::image type="content" source="media/azure-batch-pool-creation-failure/second-nslookup-command-output.png" alt-text="Screenshot of the second NS lookup command output.":::
+    :::image type="content" source="media/azure-batch-pool-creation-failure/second-nslookup-command-output.png" alt-text="Screenshot of the second nslookup command output.":::
 
     The command output indicates that the FQDN is resolved to the private IP address. Now, the Batch connectivity for the pool creation should be allowed.
 
@@ -195,7 +195,7 @@ If your Batch account isn't located in those regions, when you create the Batch 
 
 For more information, see [Create an Azure Batch pool without public IP addresses (preview)](/azure/batch/batch-pool-no-public-ip-address).
 
-### Solution 1: Create a Batch account in a region that supports pools without public IP addresses
+### Solution 1: Create Batch account in a region that supports pools without public IP addresses
 
 To use a Batch pool without public IP addresses, create a Batch account located in the following regions: France Central, East Asia, West Central US, South Central US, West US 2, East US, North Europe, East US 2, Central US, West Europe, North Central US, West US, Australia East, Japan East, and Japan West.
 
