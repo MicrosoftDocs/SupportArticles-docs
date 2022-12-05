@@ -15,14 +15,14 @@ _Original KB number:_ &nbsp; 4018988
 
 ## Symptoms
 
-When you try to modify a protection group that contains Hyper-V Virtual Machine (VM) guests or you try to remove a VM from a protection group, you receive an error message that resembles the following:
+When you try to modify a protection group that contains Hyper-V Virtual Machine (VM) guests, or you try to remove a VM from a protection group, you receive an error message that resembles the following:
 
 > Removing Guest_Name failed:  
 > Error 157: Guest_Name cannot be added to protection because it is already a member of a protection group.
 
 ## Cause
 
-This issue is due to duplicate entries in the DPM database. The duplicate entries may occur after a protected virtual machine is migrated from one Hyper-V cluster to a different Hyper-V cluster and then that VM is re-protected on the new cluster.
+This issue is due to duplicate entries in the DPM database. The duplicate entries may occur after a protected virtual machine is migrated from one Hyper-V cluster to a different Hyper-V cluster, and then that VM is re-protected on the new cluster.
 
 ## Resolution
 
