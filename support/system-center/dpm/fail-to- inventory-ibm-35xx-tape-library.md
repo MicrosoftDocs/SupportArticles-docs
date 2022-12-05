@@ -51,11 +51,11 @@ The `RSMCompatMode` registry value is used to specify multiple flags for DPM. Th
 
 - 8 = RSM_COMPAT_CLEANER_EXCEPTION
 
-To do this, follow these steps:
+To add this registry value, follow these steps:
 
 1. Stop the DPM Library Agent (DPMLA) service. To do this, follow these steps:
 
-    1. Select **Start** > **All Programs** > **Accessories**, and then select **Command Prompt** from the list of programs.
+    1. Select **Start** > **All Programs** > **Accessories**, and then select **Command Prompt**.
 
     2. Run Command Prompt as administrator.
 
@@ -81,7 +81,7 @@ To do this, follow these steps:
 
 9. Start the DPMLA service. To do this, follow these steps:
 
-    1. Select **Start** > **All Programs** > **Accessories**, and then select **Command Prompt** from the list of programs.
+    1. Select **Start** > **All Programs** > **Accessories**, and then select **Command Prompt**.
 
     2. Run Command Prompt as administrator.
 
