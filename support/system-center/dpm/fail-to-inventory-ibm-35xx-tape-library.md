@@ -19,11 +19,11 @@ When you try to perform a fast inventory with the Microsoft System Center Data P
 >
 > Status: Failed
 >
-> Description: DPM failed to inventory the Tape Library IBM 35XX Tape Library. This is possibly due to a hardware issue. (ID 25011 Details: Internal error code: 0x80990C1B)
+> Description: DPM failed to inventory the Tape Library IBM 35**XX** Tape Library. This is possibly due to a hardware issue. (ID 25011 Details: Internal error code: 0x80990C1B)
 >
-> End time: MM/DD/YYYYh:mm:ssAM_PM  
-> Start time: MM/DD/YYYYh:mm:ssAM_PM  
-> Library: IBM 35XX Tape Library
+> End time: **MM/DD/YYYYh:mm:ssAM_PM**
+> Start time: **MM/DD/YYYYh:mm:ssAM_PM**
+> Library: IBM 35**XX** Tape Library
 
 ## Cause
 
@@ -55,9 +55,9 @@ To add this registry value, follow these steps:
 
 1. Stop the DPM Library Agent (DPMLA) service. To do this, follow these steps:
 
-    1. Select **Start** > **All Programs** > **Accessories**, and then select **Command Prompt**.
+    1. Select **Start** > **All Programs** > **Accessories**, and then right-click **Command Prompt**.
 
-    2. Run Command Prompt as administrator.
+    2. Select **Run as administrator**.
 
         If you are prompted for an administrator password or for confirmation, type the password, or provide confirmation.
 
@@ -81,9 +81,9 @@ To add this registry value, follow these steps:
 
 9. Start the DPMLA service. To do this, follow these steps:
 
-    1. Select **Start** > **All Programs** > **Accessories**, and then select **Command Prompt**.
+    1. Select **Start** > **All Programs** > **Accessories**, and then right-click **Command Prompt**.
 
-    2. Run Command Prompt as administrator.
+    2. Select **Run as administrator**.
 
         If you are prompted for an administrator password or for confirmation, type the password, or provide confirmation.
 
