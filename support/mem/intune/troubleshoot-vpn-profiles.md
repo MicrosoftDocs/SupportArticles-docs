@@ -19,9 +19,9 @@ The examples in this guide use Simple Certificate Enrollment Protocol (SCEP) cer
 
 ## Overview of VPN profiles
 
-Virtual private networks (VPNs) give users secure remote access to the organization network. Devices use a VPN connection profile to start a connection with the VPN server. In Intune, VPN profiles assign VPN settings to users and devices in the organization. Then, the users can easily and securely connect to the organizational network.
+Virtual private networks (VPNs) give users secure remote access to an organization's network. Devices use a VPN connection profile to start a connection with the VPN server. In Intune, VPN profiles assign VPN settings to users and devices in the organization. Then, the users can easily and securely connect to the organizational network.
 
-For example, if you want to configure all iOS devices with the required settings to connect to a file share on the organization network, you can create a VPN profile that includes these settings, and assign this profile to all users who have iOS devices. After that, the users can see the VPN connection in the list of available networks and connect with minimal effort.
+For example, if you want to configure all iOS devices with the required settings to connect to a file share on the organization's network, you can create a VPN profile that includes these settings and assign this profile to all users who have iOS devices. After that, the users can see the VPN connection in the list of available networks and connect with minimal effort.
 
 You can create VPN profiles by using different VPN connection types.
 
@@ -35,19 +35,19 @@ To create a VPN profile, follow the steps in [Create a device profile](/intune/v
 For examples, see the following screenshots:
 
 > [!NOTE]
-> In the examples, the connection type for Android and iOS VPN profile is Cisco AnyConnect, and the one for Windows 10 is Automatic. And the VPN profile is linked to the SCEP profile.
+> In the examples, the connection type for Android and iOS VPN profiles is Cisco AnyConnect, and the one for Windows 10 is Automatic. The VPN profile is linked to the SCEP profile.
 
 ### [Android (Personally owned work profile)](#tab/android)
 
-:::image type="content" source="media/troubleshoot-vpn-profiles/create-vpn-profile-android.png" alt-text="Screenshot shows how to create a VPN profile for Android.":::
+:::image type="content" source="media/troubleshoot-vpn-profiles/create-vpn-profile-android.png" alt-text="Screenshot that shows how to create a VPN profile for Android.":::
 
 ### [iOS](#tab/ios)
 
-:::image type="content" source="media/troubleshoot-vpn-profiles/create-vpn-profile-ios.png" alt-text="Screenshot shows how to create a VPN profile for iOS.":::
+:::image type="content" source="media/troubleshoot-vpn-profiles/create-vpn-profile-ios.png" alt-text="Screenshot that shows how to create a VPN profile for iOS.":::
 
 ### [Windows](#tab/windows)
 
-:::image type="content" source="media/troubleshoot-vpn-profiles/create-vpn-profile-windows.png" alt-text="Screenshot shows how to create a VPN profile for Windows.":::
+:::image type="content" source="media/troubleshoot-vpn-profiles/create-vpn-profile-windows.png" alt-text="Screenshot that shows how to create a VPN profile for Windows.":::
 
 For information about how to create an Extensible Authentication Protocol (EAP) configuration XML for the VPN profile, see [EAP configuration](/windows/client-management/mdm/eap-configuration).
 
@@ -58,11 +58,11 @@ For information about how to create an Extensible Authentication Protocol (EAP) 
 After you create a VPN profile, [assign the profile](/intune/device-profile-assign#assign-a-device-profile) to selected groups.
 
 > [!NOTE]
-> Group type deployment (user group or device group) is important, and it must be consistent across all the policies involving this resource policy (Trusted Certificates, SCEP and VPN). It will depend on the type of certificate you’re deploying. If you’re deploying a user certificate, then all the deployments should be to a user group, and vice versa. If the certificate deployed is a device type one, then use a device group.
+> Group-type deployment (user group or device group) is important, and it must be consistent across all the policies involving this resource policy (Trusted Certificates, SCEP, and VPN). It will depend on the type of certificate you’re deploying. If you’re deploying a user certificate, all the deployments should be to a user group and vice versa. If the certificate deployed is a device type one, use a device group.
 
 For examples, see the following screenshot:
 
-:::image type="content" source="media/troubleshoot-vpn-profiles/assign-vpn-profile.png" alt-text="Screenshot shows how to assign a profile.":::
+:::image type="content" source="media/troubleshoot-vpn-profiles/assign-vpn-profile.png" alt-text="Screenshot that shows how to assign a profile.":::
 
 ## What successful VPN profiles look like
 
@@ -72,19 +72,19 @@ This scenario uses an Android device enrolled as Personally owned work profile. 
 
 1. You receive a notification to install the corporate VPN profile:
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/notification-install-vpn-profile-android.png" alt-text="Screenshot shows the notification to install the VPN profile.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/notification-install-vpn-profile-android.png" alt-text="Screenshot that shows the notification to install the VPN profile.":::
 
 1. In the AnyConnect app, tap the **Change Settings** button to enable the **External Control** option.
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/change-settings-android.png" alt-text="Screenshot shows the Change Settings button.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/change-settings-android.png" alt-text="Screenshot that shows the Change Settings button.":::
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/external-control-setting.png" alt-text="Screenshot shows the External Control option.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/external-control-setting.png" alt-text="Screenshot that shows the External Control option.":::
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/external-control-setting-enabled.png" alt-text="Screenshot shows that the External Control option is enabled.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/external-control-setting-enabled.png" alt-text="Screenshot that shows that the External Control option is enabled.":::
 
 1. Select the SCEP certificate in the AnyConnect app:
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/choose-certificate.png" alt-text="Screenshot shows the page to choose certificates.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/choose-certificate.png" alt-text="Screenshot that shows the page to choose certificates.":::
 
     > [!NOTE]
     > When using a device administrator-managed Android device, there may be multiple certificates, because the certificates aren't revoked or removed when a certificate profile is changed or removed. In this scenario, select the newest certificate. It's usually the last certificate displayed in the list.
@@ -99,39 +99,39 @@ This scenario uses an Android device enrolled as Personally owned work profile. 
 
 After the VPN profile is installed on the device, it's displayed in **Management Profile**:
 
-:::image type="content" source="media/troubleshoot-vpn-profiles/vpn-profile-management-profile.png" alt-text="Screenshot shows that Management Profile has the VPN profile.":::
+:::image type="content" source="media/troubleshoot-vpn-profiles/vpn-profile-management-profile.png" alt-text="Screenshot that shows that Management Profile has the VPN profile.":::
 
-:::image type="content" source="media/troubleshoot-vpn-profiles/vpn-profile-setting-management-profile.png" alt-text="Screenshot shows that the VPN profile is listed in Management Profile.":::
+:::image type="content" source="media/troubleshoot-vpn-profiles/vpn-profile-setting-management-profile.png" alt-text="Screenshot that shows that the VPN profile is listed in Management Profile.":::
 
-:::image type="content" source="media/troubleshoot-vpn-profiles/vpn-profile-service-name.png" alt-text="Screenshot shows the service name of the VPN profile in Management Profile.":::
+:::image type="content" source="media/troubleshoot-vpn-profiles/vpn-profile-service-name.png" alt-text="Screenshot that shows the service name of the VPN profile in Management Profile.":::
 
 The VPN connection is displayed in **Settings** > **General** > **VPN**:
 
-:::image type="content" source="media/troubleshoot-vpn-profiles/vpn-status-not-connected.png" alt-text="Screenshot shows that the VPN status is Not Connected in iOS.":::
+:::image type="content" source="media/troubleshoot-vpn-profiles/vpn-status-not-connected.png" alt-text="Screenshot that shows that the VPN status is Not Connected in iOS.":::
 
-:::image type="content" source="media/troubleshoot-vpn-profiles/created-vpn-status-not-connected.png" alt-text="Screenshot shows that the created VPN isn't connected.":::
+:::image type="content" source="media/troubleshoot-vpn-profiles/created-vpn-status-not-connected.png" alt-text="Screenshot that shows that the created VPN isn't connected.":::
 
 The VPN connection is displayed in the AnyConnect app:
 
-:::image type="content" source="media/troubleshoot-vpn-profiles/vpn-connection-anyconnect.png" alt-text="Screenshot shows the VPN connection in the AnyConnect app.":::
+:::image type="content" source="media/troubleshoot-vpn-profiles/vpn-connection-anyconnect.png" alt-text="Screenshot that shows the VPN connection in the AnyConnect app.":::
 
 ### [Windows](#tab/windows)
 
 After the VPN profile is installed on the device, select **Settings** > **Accounts** > **Access work or school**, select the work or school account, and then select **Info**.
 
-:::image type="content" source="media/troubleshoot-vpn-profiles/installed-vpn-profile-windows.png" alt-text="Screenshot shows the installed VPN profile in Windows.":::
+:::image type="content" source="media/troubleshoot-vpn-profiles/installed-vpn-profile-windows.png" alt-text="Screenshot that shows the installed VPN profile in Windows.":::
 
 You can see **VPN** is listed under **Areas managed by Microsoft**.
 
-:::image type="content" source="media/troubleshoot-vpn-profiles/areas-managed-by-microsoft-vpn.png" alt-text="Screenshot shows the VPN under Areas managed by Microsoft.":::
+:::image type="content" source="media/troubleshoot-vpn-profiles/areas-managed-by-microsoft-vpn.png" alt-text="Screenshot that shows the VPN under Areas managed by Microsoft.":::
 
 The VPN profile is listed under **Settings** > **Network & Internet** > **VPN**.
 
-:::image type="content" source="media/troubleshoot-vpn-profiles/vpn-profile-windows.png" alt-text="Screenshot shows the VPN profile in Network & Internet.":::
+:::image type="content" source="media/troubleshoot-vpn-profiles/vpn-profile-windows.png" alt-text="Screenshot that shows the VPN profile in Network & Internet.":::
 
 The VPN connection is listed in **Network Connections**.
 
-:::image type="content" source="media/troubleshoot-vpn-profiles/network-connections-vpn.png" alt-text="Screenshot shows the VPN connection in Network Connections.":::
+:::image type="content" source="media/troubleshoot-vpn-profiles/network-connections-vpn.png" alt-text="Screenshot that shows the VPN connection in Network Connections.":::
 
 ---
 
@@ -143,7 +143,7 @@ On an Android device, the *Omadmlog.log* file logs detailed activities of the VP
 
 The following example uses [CMTrace](/mem/configmgr/core/support/cmtrace) to read the logs, and searches for `android.vpn.client`.
 
-:::image type="content" source="media/troubleshoot-vpn-profiles/cmtrace-android.png" alt-text="Screenshot shows an example that uses CMTrace to read logs, and searches for android.vpn.client.":::
+:::image type="content" source="media/troubleshoot-vpn-profiles/cmtrace-android.png" alt-text="Screenshot that shows an example that uses CMTrace to read logs, and searches for android.vpn.client.":::
 
 Sample log:
 
@@ -162,7 +162,7 @@ On an iOS device, Company Portal logs don't contain any information about VPN pr
 1. Connect the iOS device to Mac, and then select **Applications** > **Utilities** to open the Console app.
 1. Under **Action**, check the **Include Info Messages** and **Include Debug Messages** options.
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/action-menu-ios.png" alt-text="Screenshot shows that the Include Info Messages and Include Debug Messages options are checked.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/action-menu-ios.png" alt-text="Screenshot that shows that the Include Info Messages and Include Debug Messages options are checked.":::
 
 1. Reproduce the scenario, and save the logs to a text file:
 
@@ -242,11 +242,11 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
     In the Intune portal, select **Device configuration** > **Profiles**, select the profile, and then select **Assignments** to verify the selected groups.
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/assign-vpn-profile-android.png" alt-text="Screenshot shows the assigned VPN profile of a group for Android.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/assign-vpn-profile-android.png" alt-text="Screenshot that shows the assigned VPN profile of a group for Android.":::
 
 1. Verify that the device can sync with Intune by checking the **LAST CHECK IN** time on the **Troubleshoot** pane.
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/troubleshoot-pane-android.png" alt-text="Screenshot shows the LAST CHECK IN time on the Troubleshoot pane for Android.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/troubleshoot-pane-android.png" alt-text="Screenshot that shows the LAST CHECK IN time on the Troubleshoot pane for Android.":::
 
 1. If the VPN profile is linked to the Trusted Root and SCEP profiles, verify that both profiles have been deployed to the device. The VPN profile has a dependency on these profiles.
 
@@ -271,17 +271,17 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
     The following sample shows that the SCEP profile has the option of **Any Purpose** EKU specified. However, it isn't specified in the certificate template on the certificate authority (CA). To fix the issue, add the **Any Purpose** option to the certificate template, or remove the **Any Purpose** option from the SCEP profile.
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/any-purpose-option.png" alt-text="Screenshot shows how to add the Any Purpose option.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/any-purpose-option.png" alt-text="Screenshot that shows how to add the Any Purpose option.":::
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/any-purpose-option-vpn-profile.png" alt-text="Screenshot shows that the Any Purpose option is displayed.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/any-purpose-option-vpn-profile.png" alt-text="Screenshot that shows that the Any Purpose option is displayed.":::
 
 1. Verify that the **External Control** option of AnyConnect is enabled.
 
     The **External Control** option must be enabled before the profile is created. When the profile is pushed to the device, the user is prompted to enable the **External Control** option.
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/external-control-setting.png" alt-text="Screenshot shows how to check the External Control option.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/external-control-setting.png" alt-text="Screenshot that shows how to check the External Control option.":::
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/external-control-setting-enabled.png" alt-text="Screenshot shows the External Control option is enabled.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/external-control-setting-enabled.png" alt-text="Screenshot that shows the External Control option is enabled.":::
 
 1. Verify that all required certificates in the complete certificate chain are on the device. Otherwise, you see the following entry in the Company Portal log file (*Omadmlog.log*):
 
@@ -295,13 +295,13 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
     In the Intune portal, select **Device configuration** > **Profiles**, select the profile, and then select **Assignments** to verify the selected groups.
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/assign-vpn-profile-ios.png" alt-text="Screenshot shows the assigned VPN profile of a group for iOS.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/assign-vpn-profile-ios.png" alt-text="Screenshot that shows the assigned VPN profile of a group for iOS.":::
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/assignments-ios.png" alt-text="Screenshot shows the assignment information on the Troubleshoot pane for iOS":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/assignments-ios.png" alt-text="Screenshot that shows the assignment information on the Troubleshoot pane for iOS":::
 
 1. Verify that the device can sync with Intune by checking the **LAST CHECK IN** time on the **Troubleshoot** pane.
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/troubleshoot-pane-ios.png" alt-text="Screenshot shows the LAST CHECK IN time on the Troubleshoot pane for iOS.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/troubleshoot-pane-ios.png" alt-text="Screenshot that shows the LAST CHECK IN time on the Troubleshoot pane for iOS.":::
 
 1. If the VPN profile is linked to the Trusted Root and SCEP profiles, verify that both profiles have been deployed to the device. The VPN profile has a dependency on these profiles.
 
@@ -311,11 +311,11 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
     In the Intune portal, select **Device configuration** > **Profiles**, select the profile, and then select **Assignments** to verify the selected groups.
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/assign-vpn-profile-windows.png" alt-text="Screenshot shows the assigned VPN profile of a group for Windows.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/assign-vpn-profile-windows.png" alt-text="Screenshot that shows the assigned VPN profile of a group for Windows.":::
 
 1. Verify that the device can sync with Intune by checking the **LAST CHECK IN** time on the **Troubleshoot** pane.
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/troubleshoot-pane-windows.png" alt-text="Screenshot shows the LAST CHECK IN time on the Troubleshoot pane for Windows.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/troubleshoot-pane-windows.png" alt-text="Screenshot that shows the LAST CHECK IN time on the Troubleshoot pane for Windows.":::
 
 1. If the VPN profile is linked to the Trusted Root and SCEP profiles, verify that both profiles have been deployed to the device. The VPN profile has a dependency on these profiles.
 
@@ -324,13 +324,13 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
     1. [Download the MDM Diagnostic Information log](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10#download-the-mdm-diagnostic-information-log-from-windows-10-pcs)
     1. To check the report, navigate to the *C:\Users\Public\Documents\MDMDiagnostics* folder.
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/mdmdiagnostics-folder.png" alt-text="Screenshot shows the MDMDiagnostics folder.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/mdmdiagnostics-folder.png" alt-text="Screenshot that shows the MDMDiagnostics folder.":::
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/mdm-diagnostic-information.png" alt-text="Screenshot shows the MDM Diagnostic information.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/mdm-diagnostic-information.png" alt-text="Screenshot that shows the MDM Diagnostic information.":::
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/mdm-diagnostic-information-configuration-source.png" alt-text="Screenshot shows the MDM Diagnostic information for configuration resource.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/mdm-diagnostic-information-configuration-source.png" alt-text="Screenshot that shows the MDM Diagnostic information for configuration resource.":::
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/mdm-connection-vpn-profiles.png" alt-text="Screenshot shows the VPN profiles that are managed by the MDM connection.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/mdm-connection-vpn-profiles.png" alt-text="Screenshot that shows the VPN profiles that are managed by the MDM connection.":::
 
 ---
 
@@ -358,25 +358,25 @@ To view logs, see the following two examples for Android and iOS devices.
 
 1. Select **Menu** > **Diagnostics**.
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/diagnostics-function.png" alt-text="Screenshot shows the Diagnostics function.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/diagnostics-function.png" alt-text="Screenshot that shows the Diagnostics function.":::
 
 1. To view certificates, select **Certificate Management** .
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/diagnostics-certificate-management.png" alt-text="Screenshot shows the Certificate Management function.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/diagnostics-certificate-management.png" alt-text="Screenshot that shows the Certificate Management function.":::
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/diagnostics-certificate-information.png" alt-text="Screenshot shows the certificate information.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/diagnostics-certificate-information.png" alt-text="Screenshot that shows the certificate information.":::
 
 1. To view logs to analyze AnyConnect issues, select **Logging and System Information** > **Debug** .
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/logging-and-system-information.png" alt-text="Screenshot shows the Logging and System Information function.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/logging-and-system-information.png" alt-text="Screenshot that shows the Logging and System Information function.":::
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/debug-information.png" alt-text="Screenshot shows the debug information.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/debug-information.png" alt-text="Screenshot that shows the debug information.":::
 
 1. To send logs, select **Menu** > **Send Logs** > **Report to Administrator**.
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/send-logs.png" alt-text="Screenshot shows the Send Logs function.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/send-logs.png" alt-text="Screenshot that shows the Send Logs function.":::
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/report-to-administrator.png" alt-text="Screenshot shows the Report to Administrator function.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/report-to-administrator.png" alt-text="Screenshot that shows the Report to Administrator function.":::
 
 1. After you get the debug logs, check the *debug_logs_unfiltered.txt* file for profile creation and connection information.
 
@@ -408,22 +408,22 @@ Sample log for VPN connection failure:
 
 1. To view user certificate, select **Diagnostics** > **Certificates**.
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/diagnostics-certificates.png" alt-text="Screenshot shows imported certificates.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/diagnostics-certificates.png" alt-text="Screenshot that shows imported certificates.":::
 
 1. To view log messages, select **Diagnostics**, enable the **VPN Debug Logs** option to enable logging, and then select **Logs**.
 
     - To display the service debug log messages, select **Service**.
     - To display the application debug log messages, select **App**.
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/vpn-dubug-logs.png" alt-text="Screenshot shows the VPN Debug Logs option.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/vpn-dubug-logs.png" alt-text="Screenshot that shows the VPN Debug Logs option.":::
 
 1. To send logs, select **Share Logs** in the **Diagnostics** window, enter the information about the problem, and then select **Send**.
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/share-logs.png" alt-text="Screenshot shows the Share Logs function.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/share-logs.png" alt-text="Screenshot that shows the Share Logs function.":::
 
 1. After you get the debug logs, check the files for profile creation and connection information.
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/debug-log-files.png" alt-text="Screenshot shows the folder that has the debug log files.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/debug-log-files.png" alt-text="Screenshot that shows the folder that has the debug log files.":::
 
 Sample log of the *AnyConnect_App_Debug_Logs.txt* file that shows the VPN profile:
 
