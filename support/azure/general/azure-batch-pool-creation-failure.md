@@ -158,7 +158,7 @@ The following error message appears in the notification or the activity log:
 
 There's a built-in policy called "Azure Batch pools should have disk encryption enabled." It has a policy assignment that denies the creation of a new Batch pool that doesn't have disk encryption.
 
-The pool creation may be blocked by other Azure policies, and the error message would be similar as shown in the activity log or in the notification.
+The pool creation may be blocked by other Azure policies, and the error message would be similar to the one in the activity log or the notification.
 
 ### Solution: Modify policy or enable disk encryption for the Batch pool
 
@@ -197,7 +197,7 @@ For more information, see [Create an Azure Batch pool without public IP addresse
 
 ### Solution 1: Create a Batch account in a region that supports pools without public IP addresses
 
-To use a Batch pool without public IP addresses, create a Batch account located in the following regions: France Central, East Asia, West Central US, South Central US, West US 2, East US, North Europe, East US 2, Central US, West Europe, North Central US, West US, Australia East, Japan East, abd Japan West.
+To use a Batch pool without public IP addresses, create a Batch account located in the following regions: France Central, East Asia, West Central US, South Central US, West US 2, East US, North Europe, East US 2, Central US, West Europe, North Central US, West US, Australia East, Japan East, and Japan West.
 
 ### Solution 2: Enable simplified compute node communication
 
