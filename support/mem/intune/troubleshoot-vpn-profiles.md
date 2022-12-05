@@ -68,7 +68,7 @@ For examples, see the following screenshot:
 
 ### [Android](#tab/android)
 
-This scenario uses an Android device enrolled as Personally owned work profile. Since the Trusted Root and SCEP profiles are already installed on the device, you won't be prompted to install the SCEP certificates.
+This scenario uses an Android device enrolled as a Personally owned work profile. Since the Trusted Root and SCEP profiles are already installed on the device, you won't be prompted to install the SCEP certificates.
 
 1. You receive a notification to install the corporate VPN profile:
 
@@ -87,7 +87,7 @@ This scenario uses an Android device enrolled as Personally owned work profile. 
     :::image type="content" source="media/troubleshoot-vpn-profiles/choose-certificate.png" alt-text="Screenshot that shows the page to choose certificates.":::
 
     > [!NOTE]
-    > When using a device administrator-managed Android device, there may be multiple certificates, because the certificates aren't revoked or removed when a certificate profile is changed or removed. In this scenario, select the newest certificate. It's usually the last certificate displayed in the list.
+    > When using a device administrator-managed Android device, there may be multiple certificates because the certificates aren't revoked or removed when a certificate profile is changed or removed. In this scenario, select the newest certificate. It's usually the last certificate displayed in the list.
 
     This situation doesn't occur on Android Enterprise and Samsung Knox devices. For more information, see [Manage Android work profile devices with Intune](/intune/android-enterprise-overview) and [Remove SCEP and PKCS certificates in Microsoft Intune](/intune/remove-certificates#android-knox-devices).
 
@@ -117,7 +117,7 @@ The VPN connection is displayed in the AnyConnect app:
 
 ### [Windows](#tab/windows)
 
-After the VPN profile is installed on the device, select **Settings** > **Accounts** > **Access work or school**, select the work or school account, and then select **Info**.
+After the VPN profile is installed on the device, select **Settings** > **Accounts** > **Access work or school**, then select the work or school account, and then select **Info**.
 
 :::image type="content" source="media/troubleshoot-vpn-profiles/installed-vpn-profile-windows.png" alt-text="Screenshot that shows the installed VPN profile in Windows.":::
 
@@ -139,7 +139,7 @@ The VPN connection is listed in **Network Connections**.
 
 ### [Android](#tab/android)
 
-On an Android device, the *Omadmlog.log* file logs detailed activities of the VPN profile when it's processed on the device. Depending on how long the Company Portal app has been installed, you may have up to five *Omadmlog.log* files and the timestamp of the last sync can help you find the related entries.
+On an Android device, the *Omadmlog.log* file logs detailed activities of the VPN profile when it's processed on the device. Depending on how long the Company Portal app has been installed, you may have up to five *Omadmlog.log* files, and the timestamp of the last sync can help you find the related entries.
 
 The following example uses [CMTrace](/mem/configmgr/core/support/cmtrace) to read the logs, and searches for `android.vpn.client`.
 
@@ -157,7 +157,7 @@ Sample log:
 
 ### [iOS](#tab/ios)
 
-On an iOS device, Company Portal logs don't contain any information about VPN profiles. To see installation details of the VPN profiles, check console or device logs as follows:
+On an iOS device, Company Portal logs don't contain any information about VPN profiles. To see installation details of the VPN profiles, check the console or device logs as follows:
 
 1. Connect the iOS device to Mac, and then select **Applications** > **Utilities** to open the Console app.
 1. Under **Action**, check the **Include Info Messages** and **Include Debug Messages** options.
@@ -240,7 +240,7 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
 1. Verify that the VPN profile is assigned to the correct group.
 
-    In the Intune portal, select **Device configuration** > **Profiles**, select the profile, and then select **Assignments** to verify the selected groups.
+    In the Intune portal, select **Device configuration** > **Profiles**, then select the profile, and then select **Assignments** to verify the selected groups.
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/assign-vpn-profile-android.png" alt-text="Screenshot that shows the assigned VPN profile of a group for Android.":::
 
@@ -250,12 +250,12 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
 1. If the VPN profile is linked to the Trusted Root and SCEP profiles, verify that both profiles have been deployed to the device. The VPN profile has a dependency on these profiles.
 
-    If the Trusted Root and SCEP profiles aren't installed on the device, you see the following entry in the Company Portal log file (*Omadmlog.log*):
+    If the Trusted Root and SCEP profiles aren't installed on the device, you will see the following entry in the Company Portal log file (*Omadmlog.log*):
 
     `<Date Time>    INFO    com.microsoft.omadm.platforms.android.vpn.client.IntentVpnProfileProvisionStateMachine    14210    00948    Waiting for required certificates for vpn profile 'androidVPN'.`
 
     > [!NOTE]
-    > It's possible that even though the Trusted Root and SCEP profiles are on the device and they are compliant, the VPN profile is still not on the device. This issue occurs when the `CertificateSelector` provider from the Company Portal app doesn't find a certificate that matches the specified criteria. The specific criteria can be in the certificate template or in the SCEP profile. If the matching certificate isn't found, the certificates on the device will be excluded. Therefore, the VPN profile will be skipped because it doesn't have the correct certificate. In this scenario, you see the following entry in the Company Portal log file (*Omadmlog.log*):
+    > It's possible that even though the Trusted Root and SCEP profiles are on the device and compliant, the VPN profile is still not on the device. This issue occurs when the `CertificateSelector` provider from the Company Portal app doesn't find a certificate that matches the specified criteria. The specific criteria can be in the certificate template or the SCEP profile. If the matching certificate isn't found, the certificates on the device will be excluded. Therefore, the VPN profile will be skipped because it doesn't have the correct certificate. In this scenario, you see the following entry in the Company Portal log file (*Omadmlog.log*):
     >
     > `Waiting for required certificates for vpn profile 'androidVPN'.`
 
@@ -269,7 +269,7 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
     <Date Time>    INFO     com.microsoft.omadm.platforms.android.vpn.client.IntentVpnProfileProvisionStateMachine       14210     00948    Waiting for required certificates for vpn profile '<profile name>'.
     ```
 
-    The following sample shows that the SCEP profile has the option of **Any Purpose** EKU specified. However, it isn't specified in the certificate template on the certificate authority (CA). To fix the issue, add the **Any Purpose** option to the certificate template, or remove the **Any Purpose** option from the SCEP profile.
+    The following sample shows that the SCEP profile has the option of **Any Purpose** EKU specified. However, it isn't specified in the certificate template on the certificate authority (CA). To fix the issue, add the **Any Purpose** option to the certificate template or remove the **Any Purpose** option from the SCEP profile.
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/any-purpose-option.png" alt-text="Screenshot that shows how to add the Any Purpose option.":::
 
@@ -283,7 +283,7 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/external-control-setting-enabled.png" alt-text="Screenshot that shows the External Control option is enabled.":::
 
-1. Verify that all required certificates in the complete certificate chain are on the device. Otherwise, you see the following entry in the Company Portal log file (*Omadmlog.log*):
+1. Verify that all required certificates in the complete certificate chain are on the device. Otherwise, you will see the following entry in the Company Portal log file (*Omadmlog.log*):
 
     `Waiting for required certificates for vpn profile 'androidVPN'.`
 
@@ -293,7 +293,7 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
 1. Verify that the VPN profile is assigned to the correct group.
 
-    In the Intune portal, select **Device configuration** > **Profiles**, select the profile, and then select **Assignments** to verify the selected groups.
+    In the Intune portal, select **Device configuration** > **Profiles**, then select the profile, and then select **Assignments** to verify the selected groups.
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/assign-vpn-profile-ios.png" alt-text="Screenshot that shows the assigned VPN profile of a group for iOS.":::
 
@@ -321,7 +321,7 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
 1. For Windows 10 devices, check the MDM Diagnostic Information log.
 
-    1. [Download the MDM Diagnostic Information log](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10#download-the-mdm-diagnostic-information-log-from-windows-10-pcs)
+    1. [Download the MDM Diagnostic Information log](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10#download-the-mdm-diagnostic-information-log-from-windows-10-pcs).
     1. To check the report, navigate to the *C:\Users\Public\Documents\MDMDiagnostics* folder.
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/mdmdiagnostics-folder.png" alt-text="Screenshot that shows the MDMDiagnostics folder.":::
@@ -336,7 +336,7 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
 ### Issue 2: The VPN profile is deployed to the device, but the device can't connect to the network
 
-Typically, this connectivity issue isn't an Intune issue and there can be many causes. The following items may help you understand and troubleshoot the issue:
+Typically, this connectivity issue isn't an Intune issue, and there can be many causes. The following items may help you understand and troubleshoot the issue:
 
 - Can you manually connect to the network by using a certificate that has the same criteria in the VPN profile?
 
@@ -360,7 +360,7 @@ To view logs, see the following two examples for Android and iOS devices.
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/diagnostics-function.png" alt-text="Screenshot that shows the Diagnostics function.":::
 
-1. To view certificates, select **Certificate Management** .
+1. To view certificates, select **Certificate Management**.
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/diagnostics-certificate-management.png" alt-text="Screenshot that shows the Certificate Management function.":::
 
@@ -406,7 +406,7 @@ Sample log for VPN connection failure:
 
 ### Example 2: View logs on iOS devices
 
-1. To view user certificate, select **Diagnostics** > **Certificates**.
+1. To view the user certificate, select **Diagnostics** > **Certificates**.
 
     :::image type="content" source="media/troubleshoot-vpn-profiles/diagnostics-certificates.png" alt-text="Screenshot that shows imported certificates.":::
 
@@ -464,7 +464,7 @@ Sample log of the *AnyConnect_Plugin_Debug_Logs.txt* file that shows VPN connect
 
 ## More Information
 
-If you're still looking for a solution to a related issue, or if you want more information about Microsoft Intune, post a question in the [Microsoft Intune forum](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod%2Cwindowsintuneprod&filter=alltypes&sort=lastpostdesc). Many support engineers, MVPs, and members of the development team visit the forums. So, there's a good chance that you can find someone who has the information that you need.
+If you're still looking for a solution to a related issue, or if you want more information about Microsoft Intune, post a question in the [Microsoft Intune forum](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod%2Cwindowsintuneprod&filter=alltypes&sort=lastpostdesc). Many support engineers, MVPs, and members of the development team visit the forums. So, there's a good chance you can find someone with the information you need.
 
 If you want to open a support request to the Microsoft Intune product support team, see [How to get support for Microsoft Intune](/intune/get-support).
 
