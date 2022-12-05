@@ -61,7 +61,7 @@ In this scenario, the selected image has Hypervisor Generation 2, while the sele
 
 Some VM sizes only support generation 2 images. When you select an image with Hypervisor Generation 1 and a VM size supporting only Hypervisor Generation 2, a similar error occurs.
 
-### Solution 1: Select a VM size that matches Hypervisor Generation of the VM image or vice versa
+### Solution 1: Select a VM size that matches the Hypervisor Generation of the VM image or vice versa
 
 To resolve this issue, select a VM size that matches the Hypervisor Generation of the VM image or vice versa. Some VM sizes support both Hypervisor Generation 1 and 2. For more information, see [Azure support for generation 2 VMs](/azure/virtual-machines/generation-2).
 
