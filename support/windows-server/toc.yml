@@ -2906,6 +2906,8 @@
       href: ./windows-security/rpc-endpoint-mapper-prevents-users-added-to-trust-forest.md
   - name: Kerberos authentication
     items:
+    - name: 'Troubleshooting guidance: Kerberos authentication'
+      href: ./windows-security/kerberos-authentication-troubleshooting-guidance.md
     - name: Authentication failure on NTLM and Kerberos servers
       href: ./windows-security/authentication-fails-non-windows-ntlm-kerberos-server.md
     - name: Constrained delegation for CIFS fails with ACCESS_DENIED
