@@ -87,13 +87,13 @@ After you access the warning, one of the following errors appears:
 
 - "AccountCoreQuotaReached"
 
-    :::image type="content" source="media/azure-batch-pool-resizing-failure/accountcorequotareached-error.png" alt-text="Screenshot of the 'Account Core Quota Reached' error code.":::
+    :::image type="content" source="media/azure-batch-pool-resizing-failure/accountcorequotareached-error.png" alt-text="Screenshot of the 'AccountCoreQuotaReached' error code.":::
 
     This error means the quota for total dedicated vCPUs is reached.
 
 - "AccountLowPriorityCoreQuotaReached"
 
-    :::image type="content" source="media/azure-batch-pool-resizing-failure/accountLowprioritycorequotareached-error.png" alt-text="Screenshot of the 'Account Low Priority Core Quota Reached' error code.":::
+    :::image type="content" source="media/azure-batch-pool-resizing-failure/accountLowprioritycorequotareached-error.png" alt-text="Screenshot of the 'AccountLowPriorityCoreQuotaReached' error code.":::
 
     This error means the quota for dedicated vCPUs per VM Series is reached.
 
@@ -103,7 +103,7 @@ After you access the warning, one of the following errors appears:
 
 ### Cause: Core quotas are insufficient
 
-Azure Batch account is limited in the number of cores it can allocate across all pools. The batch stops allocating nodes once that quota has been reached.
+Azure Batch account is limited in the number of cores it can allocate across all pools. Batch stops allocating nodes once that quota has been reached.
 
 Azure Batch has different core limits and quotas at different levels: Spot/low-priority vCPUs, Total dedicated vCPUs, and Dedicated vCPUs per VM Series. You can check your current core quotas via the Batch quota as shown below:
 
