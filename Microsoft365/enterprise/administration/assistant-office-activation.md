@@ -1,6 +1,6 @@
 ---
 title: Office activation with Microsoft Support and Recovery Assistant
-description: Describes available switches and conditions when using the enterprise version of Microsoft Support and Recovery Assistant to activate Office.
+description: Describes available switches and conditions when using the Enterprise version of Microsoft Support and Recovery Assistant to activate Office.
 author: helenclu    
 ms.author: luche
 manager: dcscontentpm
