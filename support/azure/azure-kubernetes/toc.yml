@@ -239,6 +239,8 @@
     href: troubleshoot-key-vault-csi-secrets-store-csi-driver.md
   - name: Troubleshoot Dapr extension installation errors
     href: troubleshoot-dapr-extension-installation-errors.md
+  - name: Troubleshoot deployment failures of Azure Marketplace offers
+    href: troubleshoot-failed-kubernetes-deployment-offer.md
   - name: Troubleshoot the KEDA add-on
     href: troubleshoot-kubernetes-event-driven-autoscaling-add-on.md
 
