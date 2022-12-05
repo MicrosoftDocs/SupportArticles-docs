@@ -21,8 +21,8 @@ When you try to perform a fast inventory with the Microsoft System Center Data P
 >
 > Description: DPM failed to inventory the Tape Library IBM 35**XX** Tape Library. This is possibly due to a hardware issue. (ID 25011 Details: Internal error code: 0x80990C1B)
 >
-> End time: **MM/DD/YYYYh:mm:ssAM_PM**
-> Start time: **MM/DD/YYYYh:mm:ssAM_PM**
+> End time: **MM/DD/YYYYh:mm:ssAM_PM**  
+> Start time: **MM/DD/YYYYh:mm:ssAM_PM**  
 > Library: IBM 35**XX** Tape Library
 
 ## Cause
