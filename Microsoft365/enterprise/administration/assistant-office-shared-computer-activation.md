@@ -1,6 +1,6 @@
 ---
 title: Office shared computer activation with Microsoft Support and Recovery Assistant
-description: Describes available switches and conditions when using the enterprise version of Microsoft Support and Recovery Assistant for Office shared computer activation.
+description: Describes available switches and conditions when using the Enterprise version of Microsoft Support and Recovery Assistant for Office shared computer activation.
 author: helenclu    
 ms.author: luche
 manager: dcscontentpm
