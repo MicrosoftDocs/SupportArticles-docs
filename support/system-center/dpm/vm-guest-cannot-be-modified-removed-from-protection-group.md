@@ -8,7 +8,7 @@ ms.reviewer: jarrettr, scdpmcsscontent
 ---
 # VM guest can't be modified or removed from a protection group in Data Protection Manager
 
-This article provide a solution for an error that occurs when you modify a protection group or remove a VM from a protection group.
+This article provides a solution for an error that occurs when you modify a protection group or remove a VM from a protection group.
 
 _Original product version:_ &nbsp; System Center 2016 Data Protection Manager  
 _Original KB number:_ &nbsp; 4018988
