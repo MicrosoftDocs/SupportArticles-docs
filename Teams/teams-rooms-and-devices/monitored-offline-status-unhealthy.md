@@ -41,13 +41,13 @@ If the **Monitored** signal is **Unhealthy**, you can use the Teams Rooms Pro ag
    > [!NOTE]
    >
    > If you can't download directly from the device because of network access restrictions, use another device to download the file, and then copy the file to the affected device by using a USB drive.
-3. Open the zip file and double-click/tap the *MTRPro.AgentTestTool.exe* executable. When prompted for extraction, choose **Run** to execute directly.
-4. On the *User Account Control* dialog, select **Yes** to continue.
+3. Open the .zip file, and then double-click or tap the *MTRPro.AgentTestTool.exe* executable. When you're prompted to extract the file, select **Run** to execute it directly.
+4. On the **User Account Control** dialog, select **Yes** to continue.
 
-After the agent test tool completes, a brief summary of the tool's results is displayed in the PowerShell console. Press *ENTER* to continue, and the following information is made available: 
+After the agent test tool completes, a brief summary of the tool's results is displayed in the PowerShell console. Press **ENTER** to continue, and the following information is available:
 
-- A detailed report (HTML format) of the tests executed and their results.
-- A ZIP file with additional details/logs generated in the directory *C:\Rigel\MTRProAgentTestTool*. This ZIP file contains additional information that's required by Microsoft Support during investigation.
+- A detailed report (in HTML format) of the tests that are performed and their results.
+- A .zip file containing additional details and logs is generated in the *C:\Rigel\MTRProAgentTestTool* directory. This .zip file contains additional information that's required by Microsoft Support during investigation.
 
 ### Check whether TPM is enabled
 
@@ -146,7 +146,7 @@ The following log files provide additional information about monitoring issues:
 For additional help, follow these steps:
 
 1. [Run the Teams Rooms Pro agent test tool](#run-the-teams-rooms-pro-agent-test-tool).
-2. [Create a support request](get-support-teams-rooms-pro-management.md#create-a-support-request), and make sure that you attach the *AgentCheckResults.zip* file that's collected in step 1.
+2. [Create a support request](get-support-teams-rooms-pro-management.md#create-a-support-request), and make sure that you attach the .zip file that's collected in step 1.
 
 ## Resolve offline status
 
