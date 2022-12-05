@@ -113,7 +113,7 @@
     - name: Tape is labeled as Unrecognized
       href: tape-labeled-as-unrecognized.md
     - name: DPM fails to inventory IBM 35XX Tape Library
-      href: fail-to- inventory-ibm-35xx-tape-library.md
+      href: fail-to-inventory-ibm-35xx-tape-library.md
 - name: VMware protection
   items:
     - name: Option isn't available to reprotect VMware VMs
