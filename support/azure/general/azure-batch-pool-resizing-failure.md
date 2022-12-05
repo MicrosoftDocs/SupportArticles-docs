@@ -9,11 +9,11 @@ ms.service: batch
 ---
 # Azure batch pool resizing failure
 
-When you create a Batch pool, the operation succeeds. However, no nodes are provisioned and you see a warning in the **Overview** pane of the created pool (See the following screenshot as an example). The warning indicates that the desired number of dedicated nodes could not be allocated. This article describes how to resolve such Azure batch pool resizing failure.
+When you create a Batch pool, the operation succeeds. However, no nodes are provisioned, and you see a warning in the **Overview** pane of the created pool (see the following screenshot as an example). The warning indicates that the desired number of dedicated nodes could not be allocated. This article describes how to resolve such Azure batch pool resizing failures.
 
 :::image type="content" source="media/azure-batch-pool-resizing-failure/allocation-failure-warning.png" alt-text="Screenshot of the allocation failure warning.":::
 
-## Scenario 1: Batch pool virtual network related issue
+## Scenario 1: Batch pool virtual network-related issue
 
 ### Symptom for Scenario 1
 
@@ -25,13 +25,13 @@ After you access the warning, the following error message appears:
 > **Values:**
 > Reason - Allocation failed as subnet has delegation to external resources.
 
-### Cause: Subnet has delegation to service resource
+### Cause: Subnet has delegation to a service resource
 
 This error occurs because the subnet that you're using has delegation to a service. This network property allows you to deploy dedicated Azure Services in the virtual network to communicate with the service resources privately through private IP addresses. However, this feature is still not supported by the Azure Batch Service.
 
 ### Solution: Disable subnet delegation
 
-To resolve this issue, disable the subnet delegation by using the Azure portal, PowerShell, Azure CLI or Azure Resource Manager Template. Then you'll be able to allocate Batch nodes.
+To resolve this issue, disable the subnet delegation by using the Azure portal, PowerShell, Azure CLI, or Azure Resource Manager Template. Then you'll be able to allocate Batch nodes.
 
 For more information, see [Add or remove a subnet delegation in an Azure virtual network](/azure/virtual-network/manage-subnet-delegation#remove-subnet-delegation-from-an-azure-service).
 
@@ -57,15 +57,15 @@ After you access the warning, the following error message appears:
 
 This error occurs because the selected image and VM size aren't compatible.
 
-In this scenario, the selected image has Hypervisor Generation 2 while the selected VM size doesn't support Hypervisor Generation 2.
+In this scenario, the selected image has Hypervisor Generation 2, while the selected VM size doesn't support Hypervisor Generation 2.
 
 Some VM sizes only support generation 2 images. When you select an image with Hypervisor Generation 1 and a VM size supporting only Hypervisor Generation 2, a similar error occurs.
 
-### Solution 1: Select VM size that matches Hypervisor Generation of VM image or vice versa
+### Solution 1: Select a VM size that matches Hypervisor Generation of the VM image or vice versa
 
 To resolve this issue, select a VM size that matches the Hypervisor Generation of the VM image or vice versa. Some VM sizes support both Hypervisor Generation 1 and 2. For more information, see [Azure support for generation 2 VMs](/azure/virtual-machines/generation-2).
 
-### Solution 2: Create custom image
+### Solution 2: Create a custom image
 
 If the image you want to use doesn't support the VM size that you plan to use, create and use a custom image of the VM that supports the Hypervisor Generation.
 
@@ -73,13 +73,13 @@ For more information, see [Tutorial - Create custom VM images with the Azure CLI
 
 When you create the image definition, the image is created from generation 1 by default.
 
-If you want to use generation 2, specify it by using the `az sig image-definition create` command as the following example:
+If you want to use generation 2, specify it by using the `az sig image-definition create` command, as shown in the following example:
 
 ```azurecli
 az sig image-definition create --resource-group myGalleryRG --gallery-name myGallery --gallery-image-definition myImageDefinition --publisher myPublisher --offer myOffer --sku mySKU --os-type Linux --os-state specialized --hyper-v-generation V2
 ```
 
-## Scenario 3: Batch account quotas related issue
+## Scenario 3: Batch account quotas-related issue
 
 ### Symptom for Scenario 3
 
@@ -87,13 +87,13 @@ After you access the warning, one of the following errors appears:
 
 - "AccountCoreQuotaReached"
 
-    :::image type="content" source="media/azure-batch-pool-resizing-failure/accountcorequotareached-error.png" alt-text="Screenshot of the 'AccountCoreQuotaReached' error code.":::
+    :::image type="content" source="media/azure-batch-pool-resizing-failure/accountcorequotareached-error.png" alt-text="Screenshot of the 'Account Core Quota Reached' error code.":::
 
     This error means the quota for total dedicated vCPUs is reached.
 
 - "AccountLowPriorityCoreQuotaReached"
 
-    :::image type="content" source="media/azure-batch-pool-resizing-failure/accountLowprioritycorequotareached-error.png" alt-text="Screenshot of the 'AccountLowPriorityCoreQuotaReached' error code.":::
+    :::image type="content" source="media/azure-batch-pool-resizing-failure/accountLowprioritycorequotareached-error.png" alt-text="Screenshot of the 'Account Low Priority Core Quota Reached' error code.":::
 
     This error means the quota for dedicated vCPUs per VM Series is reached.
 
@@ -101,11 +101,11 @@ After you access the warning, one of the following errors appears:
 
     This error means the quota for Spot/Low-priority vCPUs is reached.
 
-### Cause：Core quotas are insufficient
+### Cause: Core quotas are insufficient
 
-Azure Batch account is limited in the number of cores that it can allocate across all pools. Batch stops allocating nodes once that quota has been reached.
+Azure Batch account is limited in the number of cores it can allocate across all pools. The batch stops allocating nodes once that quota has been reached.
 
-Azure Batch has different core limits and quotas at different levels: Spot/low-priority vCPUs, Total dedicated vCPUs and Dedicated vCPUs per VM Series. You can check your current core quotas via Batch quota as shown below:
+Azure Batch has different core limits and quotas at different levels: Spot/low-priority vCPUs, Total dedicated vCPUs, and Dedicated vCPUs per VM Series. You can check your current core quotas via the Batch quota as shown below:
 
 :::image type="content" source="media/azure-batch-pool-resizing-failure/batch-account-quotas.png" alt-text="Screenshot that shows how to check core quotas.":::
 
@@ -113,7 +113,7 @@ As mentioned in the warning in this screenshot, when allocating dedicated nodes,
 
 For Spot/Low-priority nodes, Batch enforces only a total core quota for the Batch account without any distinction between different VM series.
 
-If you created a Batch account with pool allocation mode set to **user subscription**, Batch VMs and other resources are created directly in your subscription when a pool is created or resized. The Azure Batch core quotas don't apply and the quotas in your subscription for regional compute cores, per-series compute cores, and other resources are used and enforced. To learn more about these quotas, see [Azure subscription and service limits, quotas, and constraints](/azure/azure-resource-manager/management/azure-subscription-service-limits).
+If you created a Batch account with pool allocation mode set to **user subscription**, Batch VMs and other resources are created directly in your subscription when a pool is created or resized. The Azure Batch core quotas don't apply, and the quotas in your subscription for regional compute cores, per-series compute cores, and other resources are used and enforced. To learn more about these quotas, see [Azure subscription and service limits, quotas, and constraints](/azure/azure-resource-manager/management/azure-subscription-service-limits).
 
 ### Solution: Request quota increase
 
@@ -131,10 +131,10 @@ If you created a Batch account with pool allocation mode set to **user subscript
 
     When you create your request, you can select the following two quota types:
 
-    - Select **Per Batch account** to request quota increases for a single Batch account. These quota increases can include dedicated and Spot cores, and the number of jobs and pools. If you select this option, specify the Batch account to which this request applies. Then, select the quota(s) you'd like to update. Provide the new limit you're requesting for each resource. The Spot quota is a single value across all VM series. If you need constrained SKUs, select Spot cores and include the VM families to request.
+    - Select **Per Batch account** to request quota increases for a single Batch account. These quota increases can include dedicated and Spot cores and the number of jobs and pools. If you select this option, specify the Batch account to which this request applies. Then, select the quota(s) you'd like to update and provide the new limit you're requesting for each resource. The Spot quota is a single value across all VM series. If you need constrained SKUs, select Spot cores and include the VM families to request.
 
     - Select **All accounts in this region** to request quota increases that apply to all Batch accounts in a region. For example, use this option to increase the number of Batch accounts per region per subscription.
 
-    After you submit your support request, Azure support will contact you. Quota requests may be completed within a few minutes or up to two business days. Once the quota request is completed/fulfilled, the pool creation should be successful.
+    After you submit your support request, Azure support will contact you. Quota requests may be completed within a few minutes or up to two business days. Once the quota request is completed or fulfilled, the pool creation should be successful.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
