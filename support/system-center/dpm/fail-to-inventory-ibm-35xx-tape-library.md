@@ -3,6 +3,8 @@ title: DPM fails to inventory IBM 35XX Tape Library
 description: Works around an issue that occurs when you perform a fast inventory with Data Protection Manager.
 ms.date: 12/05/2022
 ms.reviewer: jarrettr, scdpmcsscontent
+author: AmandaAZ
+ms.author: v-weizhu
 ---
 # Fast inventory fails when you use IBM 35XX Series mainframe with Data Protection Manager
 
