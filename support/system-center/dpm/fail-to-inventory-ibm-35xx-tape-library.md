@@ -36,10 +36,9 @@ This issue occurs when you have tape cleaner media in an IBM 35XX series library
 
 ## Workaround
 
-> [!IMPORTANT]
-> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information, see [How to back up and restore the registry in Windows](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692).
+[!INCLUDE [Registry important alert](../../includes/registry-important-alert.md)]
 
-To work around this issue, on the DPM server that contains the tape library, you can add `RSMCompatMode` as a DWORD Value to the following registry subkey:
+To work around this issue, on the DPM server that contains the tape library, you can add `RSMCompatMode` as a DWORD value to the following registry subkey:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Data Protection Manager\Agent`
 
@@ -75,7 +74,7 @@ To add this registry value, follow these steps:
 
 6. On the **Edit** menu, select **Modify**.
 
-7. Type 8 or 13 (decimal), and then select **OK**.
+7. Type *8* or *13* (decimal), and then select **OK**.
 
 8. Exit Registry Editor.
 
