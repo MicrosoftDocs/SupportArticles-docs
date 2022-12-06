@@ -5,6 +5,8 @@ ms.date: 10/12/2022
 ms.custom: KB4518398
 appliesto:
 - SQL Server 2019
+author: simonxjx
+ms.author: v-six
 ---
 # KB4518398 - SQL Server 2019 build versions
 
@@ -19,7 +21,7 @@ This article lists the Microsoft SQL Server 2019 builds that were released after
 | CU16| 15.0.4223.1| 2019.150.4223.1| 15.0.35.23| 2018.150.35.23 | [KB5011644](https://support.microsoft.com/help/5011644) | April 18, 2022 |
 | CU15| 15.0.4198.2| 2019.150.4198.2| 15.0.35.22| 2018.150.35.22 | [KB5008996](https://support.microsoft.com/help/5008996) | January 27, 2022 |
 | CU14| 15.0.4188.2| 2019.150.4188.2| 15.0.35.19| 2018.150.35.19 | [KB5007182](https://support.microsoft.com/help/5007182) | November 22, 2021|
-| CU13| 15.0.4178.1| 2019.150.4178.1| 15.0.35.15| 2018.150.35.15 | [KB5005679](https://support.microsoft.com/help/xx5005679x) | October 05, 2021 |
+| CU13| 15.0.4178.1| 2019.150.4178.1| 15.0.35.15| 2018.150.35.15 | [KB5005679](https://support.microsoft.com/help/5005679) | October 05, 2021 |
 | CU12| 15.0.4153.1| 2019.150.4153.1| 15.0.35.15| 2018.150.35.15 | [KB5004524](https://support.microsoft.com/help/5004524) | August 04, 2021|
 | CU11| 15.0.4138.2| 2019.150.4138.2| 15.0.35.9 | 2018.150.35.9| [KB5003249](https://support.microsoft.com/help/5003249) | June 10, 2021|
 | CU10| 15.0.4123.1| 2019.150.4123.1| 15.0.35.0 | 2018.150.35.0| [KB5001090](https://support.microsoft.com/help/5001090) | April 06, 2021 |
