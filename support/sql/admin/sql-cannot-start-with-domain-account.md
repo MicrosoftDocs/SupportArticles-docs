@@ -1,7 +1,7 @@
 ---
 title: SQL Server services using domain credentials fail to start 
 description: This article provides a workaround to troubleshoot an issue when SQL Server fails to start when the startup account doesn't have the right permissions.
-ms.date: 12/02/2022
+ms.date: 12/06/2022
 ms.custom: sap:Administration and Management
 author: padmajayaraman
 ms.author: v-jayaramanp
@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 3006856
 
 ## Symptoms
 
-When you try to start or restart a SQL Server service, it fails to do so, and the following messages are logged in the SQL Server Errorlog:
+When you try to start or restart a SQL Server service, it fails to do so, and the following messages are logged in the SQL Server error log:
 
 ```output
 <Time stamp> spid9s Error: 17182, Severity: 16, State: 1.
