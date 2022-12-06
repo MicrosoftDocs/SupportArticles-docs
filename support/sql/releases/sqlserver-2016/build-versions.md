@@ -5,6 +5,8 @@ ms.date: 10/12/2022
 ms.custom: KB3177312
 appliesto:
 - SQL Server 2016
+author: simonxjx
+ms.author: v-six
 ---
 # KB3177312 - SQL Server 2016 build versions
 
