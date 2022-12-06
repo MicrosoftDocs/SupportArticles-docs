@@ -47,10 +47,11 @@ External pressure refers to high memory utilization coming from a component outs
 
 There are three broad categories of problems that can cause OS memory pressure:
 
-- Application-Related Issues: All applications together have exhausted the available physical memory. The OS will respond by trying to free some memory for new application requests for resources. The common approach here is to find what applications are exhausting the memory and take necessary steps to balance the memory among them without leading to RAM exhaustion.
+- Application-Related Issues: One or many applications together have exhausted the available physical memory. The OS will respond by trying to free some memory for new application requests for resources. The common approach here is to find which applications are exhausting the memory and take necessary steps to balance the memory among them without leading to RAM exhaustion.
 - Device Driver Issues: Device Drivers may cause working set paging of all processes if the driver calls a memory allocation function incorrectly.
 - Operation System product issues
-For detailed explanation of these and troubleshooting steps, refer to [MSSQLSERVER_17890](/sql/relational-databases/errors-events/mssqlserver-17890-database-engine-error)
+
+  For detailed explanation of these and troubleshooting steps, refer to [MSSQLSERVER_17890](/sql/relational-databases/errors-events/mssqlserver-17890-database-engine-error)
 
 
 ### Cause 2: Internal memory pressure, not coming from SQL Server
