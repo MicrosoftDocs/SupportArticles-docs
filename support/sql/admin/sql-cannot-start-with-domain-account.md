@@ -13,7 +13,7 @@ ms.prod: sql
 
 This article discusses an issue wherein SQL Server fails to start when the startup account doesn't have the required permissions.
 
-_Original product version:_ &nbsp; Microsoft SQL Server  
+_Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 3006856
 
 ## Symptoms
