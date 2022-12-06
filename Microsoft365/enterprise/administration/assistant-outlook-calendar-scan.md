@@ -93,7 +93,7 @@ Here are some sample combinations of switches to run this scenario.
 
 When you run the Outlook Calendar Scan scenario by using the Enterprise version of the Assistant, you don't receive any prompts. This is a different experience from the full version of the Assistant. The following table describes the actions that the Enterprise version of the Assistant takes for each condition that's encountered by this scenario, and the corresponding output that's displayed.
 
-|Condition|Action taken by the Enterprise version|Output shown in the command prompt window|
+|Condition|Action taken by the Enterprise version|Output shown in the Command Prompt window|
 |---|---|---|
 |Scan completed successfully|Exit the scenario|43: A complete Outlook Calendar scan was performed. See the Outlook configuration details at *%localappdata%\saralogs\uploadlogs* location.|
 |Scan completed successfully by using a custom location (`-LogFolder`)|Exit the scenario|43: A complete Outlook Calendar scan was performed. See the Outlook configuration details at the location specified by you.|
