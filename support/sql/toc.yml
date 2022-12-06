@@ -71,6 +71,8 @@
       items:
       - name: SQL Server startup errors
         href: admin/sql-server-startup-errors.md
+      - name: SQL can't start with a domain account
+        href: admin/sql-cannot-start-with-domain-account.md
       - name: Access is denied error and SQL Server doesn't start
         href: admin/event-id-7000-access-denied.md
       - name: Error 17113 when you start SQL Server service
