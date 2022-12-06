@@ -49,7 +49,7 @@ The issue occurs because the usual permissions granted to a SQL Service account 
 
 - Replace a process-level token (SeAssignPrimaryTokenPrivilege).
 
-For more information about service permissions, see the [Service Permissions](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#service-permissions) section in the article [Configure Windows Service Accounts and Permissions](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?view=sql-server-2017&preserve-view=true).
+For more information, see [Service Permissions](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#service-permissions).
 
 ## Resolution
 
