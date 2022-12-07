@@ -251,7 +251,7 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
 1. Verify that the device can sync with Intune by checking the **LAST CHECK IN** time on the **Troubleshoot** pane.
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/troubleshoot-pane-android.png" alt-text="Screenshot that shows the LAST CHECK IN time on the Troubleshoot pane for Android.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/troubleshoot-pane-android.png" alt-text="Screenshot that shows the LAST CHECK IN time on the Troubleshoot pane for Android." lightbox="media/troubleshoot-vpn-profiles/troubleshoot-pane-android.png":::
 
 1. If the VPN profile is linked to the Trusted Root and SCEP profiles, verify that both profiles have been deployed to the device. The VPN profile has a dependency on these profiles.
 
@@ -276,9 +276,9 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
     The following sample shows that the SCEP profile has the option of **Any Purpose** EKU specified. However, it isn't specified in the certificate template on the certificate authority (CA). To fix the issue, add the **Any Purpose** option to the certificate template or remove the **Any Purpose** option from the SCEP profile.
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/any-purpose-option.png" alt-text="Screenshot that shows how to add the Any Purpose option.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/any-purpose-option.png" alt-text="Screenshot that shows how to add the Any Purpose option." lightbox="media/troubleshoot-vpn-profiles/any-purpose-option.png":::
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/any-purpose-option-vpn-profile.png" alt-text="Screenshot that shows that the Any Purpose option is displayed.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/any-purpose-option-vpn-profile.png" alt-text="Screenshot that shows that the Any Purpose option is displayed." lightbox="media/troubleshoot-vpn-profiles/any-purpose-option-vpn-profile.png":::
 
 1. Verify that the **External Control** option of AnyConnect is enabled.
 
@@ -320,7 +320,7 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
 1. Verify that the device can sync with Intune by checking the **LAST CHECK IN** time on the **Troubleshoot** pane.
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/troubleshoot-pane-windows.png" alt-text="Screenshot that shows the LAST CHECK IN time on the Troubleshoot pane for Windows.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/troubleshoot-pane-windows.png" alt-text="Screenshot that shows the LAST CHECK IN time on the Troubleshoot pane for Windows." lightbox="media/troubleshoot-vpn-profiles/troubleshoot-pane-windows.png":::
 
 1. If the VPN profile is linked to the Trusted Root and SCEP profiles, verify that both profiles have been deployed to the device. The VPN profile has a dependency on these profiles.
 
