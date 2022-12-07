@@ -1,10 +1,15 @@
 ---
 title: Troubleshoot VPN profile issues
 description: Understand and troubleshoot VPN profile issues on Android, iOS, and Windows devices in Microsoft Intune. Review logs and see some common issues and resolutions.
-ms.date: 11/26/2021
+ms.date: 12/06/2022
 ms.reviewer: jarrettr
+author: simonxjx
+ms.author: v-six
 ---
 # Troubleshooting VPN profile issues in Microsoft Intune
+
+_Original product version:_ &nbsp; Microsoft Intune  
+_Original KB number:_ &nbsp; 4519426
 
 ## Introduction
 
@@ -58,7 +63,7 @@ For information about how to create an Extensible Authentication Protocol (EAP) 
 After you create a VPN profile, [assign the profile](/intune/device-profile-assign#assign-a-device-profile) to selected groups.
 
 > [!NOTE]
-> Group-type deployment (user group or device group) is important, and it must be consistent across all the policies involving this resource policy (Trusted Certificates, SCEP, and VPN). It will depend on the type of certificate you’re deploying. If you’re deploying a user certificate, all the deployments should be to a user group and vice versa. If the certificate deployed is a device type one, use a device group.
+> Group-type deployment (user group or device group) is important, and it must be consistent across all the policies involving this resource policy (Trusted Certificates, SCEP, and VPN). It will depend on the type of certificate you're deploying. If you're deploying a user certificate, all the deployments should be to a user group and vice versa. If the certificate deployed is a device type one, use a device group.
 
 For examples, see the following screenshot:
 
