@@ -124,11 +124,11 @@ Principals that are enclosed by double hash marks (##) are created from certific
 
 Applications such as SQL Server that use Windows Installer technology for the setup process will store critical files in the Windows Installer cache. The default installer cache location is *C:\Windows\Installer*. These files are required for uninstalling and updating applications. They're unique to that computer. If these files are either inadvertently deleted or otherwise compromised, application updates that require these files will fail. To resolve this condition use one of the following methods that are detailed in [Restore the missing Windows Installer cache files](restore-missing-windows-installer-cache-files.md):
 
-- Repair the SQL Server installation
-- Use the [FixMissingMSI tool](https://github.com/suyouquan/SQLSetupTools/releases/)
+- Repair the SQL Server installation.
+- Use the [FixMissingMSI tool](https://github.com/suyouquan/SQLSetupTools/releases/).
 - Use the [FindSQLInstalls.vbs script](https://raw.githubusercontent.com/suyouquan/SQLSetupTools/master/FixMissingMSI/FindSQLInstalls.vbs).
-- Manually restore the files
-- Restore files from system state backups
+- Manually restore the files.
+- Restore files from system state backups.
 review and implement the procedures that are described in [Restore the missing Windows Installer cache files](restore-missing-windows-installer-cache-files.md).
 
 ## Setup fails because of incorrect data or log location in registry
