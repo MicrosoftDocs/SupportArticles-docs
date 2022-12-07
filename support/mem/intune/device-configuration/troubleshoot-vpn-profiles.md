@@ -479,7 +479,7 @@ For more information about VPN profiles in Intune, see the following articles:
 - [Configure VPN settings on iOS devices in Microsoft Intune](/intune/vpn-settings-ios)
 - [Windows 10 and Windows Holographic device settings to add VPN connections using Intune](/intune/vpn-settings-windows-10)
 - [Support Tip - How to configure NDES for SCEP certificate deployments in Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-How-to-configure-NDES-for-SCEP-certificate/ba-p/455125)
-- [Troubleshooting SCEP certificate profile deployment in Microsoft Intune](troubleshoot-scep-certificate-profiles.md)
+- [Troubleshooting SCEP certificate profile deployment in Microsoft Intune](../certificates/troubleshoot-scep-certificate-profiles.md)
 - [Troubleshooting NDES configuration for use with Microsoft Intune certificate profiles](/mem/intune/protect/certificates-scep-configure)
 
 For all the latest news, information, and tech tips, visit the official blogs:
