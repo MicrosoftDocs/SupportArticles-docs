@@ -1,10 +1,10 @@
 ---
 title: Troubleshoot common SQL Server cumulative update (CU) installation issues
-description: This article helps you to troubleshoot common SQL Server update issues.
-author: prmadhes-msft
+description: This article helps you to troubleshoot common SQL Server cumulative update issues.
+author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: pijocoder
-ms.date: 12/03/2022
+ms.date: 12/07/2022
 ms.prod: sql
 ms.topic: troubleshooting
 ms.custom: sap:Connection Issues
@@ -25,7 +25,7 @@ This section provides information about CU and SP installations.
 
 - For Microsoft SQL Server 2016 and earlier versions:
   - Before you install a CU, make sure that your SQL Server instance is at the right SP level for that CU. For example, you can't apply CU17 for SQL 2016 SP2 before you apply SP2 for the SQL Server 2016 instance.
-  - You can always apply the latest CU for a given SP baseline without applying previous CUs for that service pack. For example, to apply CU17 for SQL Server 2016 SP2 instance, you can skip applying to CU14, CU15, and CU16 and go to CU17 directly.
+  - You can always apply the latest CU for a given SP baseline without applying previous CUs for that service pack. For example, to apply CU17 for SQL Server 2016 SP2 instance, you can skip applying to CU14, CU15, and CU16, and go to CU17 directly.
 - For Microsoft SQL Server 2017 and later versions, you can always apply the latest CU available (no service packs exist in SQL Server 2017 and later).
 - Before you apply a CU or SP, make sure that the instance being updated meets the following requirement. The SQL Server program files and data files can't be installed on:
     - A removable disk drive
@@ -41,7 +41,7 @@ Isolate the error by following these steps:
 
    1. In the **Failure** screen of the setup process, select **Details**.
    1. In the *%programfiles%\Microsoft SQL Server\nnn\Setup Bootstrap\Log* folder, check *Summary.txt* under the *Product features discovered* section and see if any of the features there report a failure. If it does, you can focus on resolving issues with that feature.
-   1. Go into the subfolder titled *yyyyMMdd_HHmmss* (for example *20220618_174947*) that corresponds to the failure time you're focusing on. Here the goal is to examine the feature-specific files, ERRORLOG files and Details.txt, if needed.
+   1. Go into the subfolder titled *yyyyMMdd_HHmmss* (for example *20220618_174947*) that corresponds to the failure time you're focusing on. Here the goal is to examine the feature-specific files, ERRORLOG files and *Details.txt*, if needed.
    1. Go to the \MSSQLSERVER subfolder and locate the log files specific to the feature that failed. For example, you may look at *sql_engine_core_inst_Cpu64_1.log*
    1. For Upgrade script failures, it will be beneficial to examine the *SQLServer_ERRORLOG_date_time.txt* files that correspond to the time of the upgrade failure.
    1. Open the *Details.txt* log and search for the keyword "Failed". Not every failure is considered critical.
@@ -67,10 +67,9 @@ The following scenarios list some of the common causes of upgrade script failure
 
 If your SQL Server Integration Services catalog database (SSISDB) has been added to an Always ON availability group (AG), script upgrade can fail. For more information, see the [Upgrading SSISDB in an availability group](/sql/integration-services/catalog/ssis-catalog#Upgrade) section. To resolve:
 
-1. Remove SSISDB from the AG
-1. Perform the CU upgrade
-1. After the upgrade finishes, add SSISDB back to the Always On availability group.
-
+1. Remove `SSISDB` from the AG.
+1. Perform the CU upgrade.
+1. After the upgrade finishes, add `SSISDB` back to the Always On availability group.
 
 ### Misconfigured System user/role in `msdb` database
 
@@ -80,7 +79,7 @@ This section provides steps to resolve a misconfigured system user or role in th
 
 These are used in multi-server environments. By default, the *TargetServersRole* security role is owned by the *dbo*, and the role owns the *TargetServersRole* schema. If you inadvertently change this association, and the update that you're installing includes changes to either of these, the upgrade may fail and return error ID 2714: `There is already an object named 'TargetServersRole' in the database.` To resolve this error, follow these steps after you start SQL Server trace flag `902`:
 
-1. Stop and then start SQL Server using [T902](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf902)
+1. Stop and then start SQL Server using [T902](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf902).
 
    **For a default instance:**
 
@@ -114,12 +113,12 @@ These are used in multi-server environments. By default, the *TargetServersRole*
 
 Principals that are enclosed by double hash marks (##) are created from certificates when SQL Server is installed. These are to be treated as system-created principals. They must not be mapped to database principals who own user objects in `msdb` or other databases. If the error logs indicate a failure that is related to any of these logins:
 
-1. Start SQL Server by using [trace flag 902](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf902)
-1. Change the ownership of the affected objects to a different user
+1. Start SQL Server by using [trace flag 902](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf902).
+1. Change the ownership of the affected objects to a different user.
 1. Restart SQL Server without trace flag `902` so that the upgrade script can finish running.
 
   > [!NOTE]  
-  >Although a failure to run upgrade scripts is one of the common causes of the "Wait on Database Engine recovery handle failed" error, this error can also occur for other reasons. The error means that the update installer could not start the service or bring it online after the update was installed. In either case, troubleshooting involves a review of error logs and Setup logs to determine the cause of the failure and take appropriate action.
+  > Although a failure to run upgrade scripts is one of the common causes of the "Wait on Database Engine recovery handle failed" error, this error can also occur for other reasons. The error means that the update installer couldn't start the service or bring it online after the update was installed. In either case, troubleshooting involves a review of error logs and Setup logs to determine the cause of the failure and take appropriate action.
 
 ## Setup errors caused by missing installer files in Windows cache
 
@@ -132,7 +131,6 @@ Applications such as SQL Server that use Windows Installer technology for the se
 - Restore files from system state backups
 review and implement the procedures that are described in [Restore the missing Windows Installer cache files](restore-missing-windows-installer-cache-files.md).
 
-
 ## Setup fails because of incorrect data or log location in registry
 
 The default database and log file paths that you specify during installation is saved in the registry at *HKEY_LOCAL_MACHINE\HKLM\Software\Microsoft\MicrosoftSQL Server\MSSQL{nn}.MyInstance*. When you install a CU or SP, these locations are validated by the Setup process. If the validation fails, you might receive errors that resemble the following messages:
@@ -142,9 +140,9 @@ The default database and log file paths that you specify during installation is 
 
 To fix this issue, do the following steps:
 
-1. Connect to the SQL Server instance by using SQL Server Management Studio (SSMS)
+1. Connect to the SQL Server instance by using SQL Server Management Studio (SSMS).
 1. Open **Properties** for the SQL Server instance and select **Database Settings** page on the left side.
-1. Under **Database Default locations** ensure that `Data` and `Log` are the correct folders. 
+1. Under **Database Default locations** ensure that `Data` and `Log` are the correct folders.
 1. Then, retry the CU or SP installation.
 
 ## Misconfigured Windows Server Failover Clustering (WSFC) nodes
@@ -156,7 +154,7 @@ For smooth functioning and maintenance of a SQL Server Failover Cluster Instance
    - The update takes a long time to run or doesn't respond. Setup logs don't reveal any progress.
    - Setup logs contain messages such as the following: `The network path was not found.` , `System.UnauthorizedAccessException: Attempted to perform an unauthorized operation.`
 
-## Additional information:
+## Additional information
 
 - For a complete list of currently available updates for your SQL Server version and download locations, see [Determine the version, edition, and update level - SQL Server](../general/determine-version-edition-update-level.md).
 - For more information about supportability and servicing timelines for your SQL Server version, see [Microsoft Product Lifecycle Page](/lifecycle/products/?terms=sql).
