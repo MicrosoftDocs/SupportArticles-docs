@@ -9,8 +9,8 @@ search.appverid: MET150
 
 This article gives troubleshooting guidance for scenarios where an exemption to a Microsoft Intune app protection policy (APP) doesn’t work as intended. While data transfer settings enable you to limit the transfer of corporate data to Intune APP-managed apps, there may be scenarios where you want to allow users to transfer data to unmanaged apps. An example scenario would include when you wish to allow one of your managed applications to pass data to an unmanaged calendar app your users use. In this situation, a data transfer exception, or more commonly called an exemption, may be necessary.
 
-[!Warning]
-You’re responsible for making changes to the data transfer exception policy. Additions to this policy allow unmanaged apps (apps that are not managed by Intune) to access data protected by managed apps. This access to protected data may result in data security leaks. Only add exemptions for non-Intune managed apps that your organization must use, but do not support Intune APP. Additionally, only add exemptions for apps that you do not consider to be data leak risks.
+> [!WARNING]
+> You’re responsible for making changes to the data transfer exception policy. Additions to this policy allow unmanaged apps (apps that are not managed by Intune) to access data protected by managed apps. This access to protected data may result in data security leaks. Only add exemptions for non-Intune managed apps that your organization must use, but do not support Intune APP. Additionally, only add exemptions for apps that you do not consider to be data leak risks.
 
 When you have configured app exemptions, or universal link exemptions, you may run into a scenario where you're still unable to transfer data from your managed app to your exempted, unmanaged apps. In such scenarios, use the troubleshooting steps in this article to help diagnose and resolve the issue. Refer to [Troubleshooting data transfer between apps](/troubleshoot/mem/intune/app-protection-policies/troubleshoot-data-transfer) for additional information.
 
