@@ -17,11 +17,11 @@ ms.date: 10/25/2022
 ---
 # Scenario: Office Activation
 
-The Office Activation scenario for the Microsoft Support and Recovery Assistant automates check and recovery activity to reset activation-related settings and successfully activate a subscription version of Office.
+The Office Activation scenario automates checks and recovery activities to reset activation-related settings and successfully activate a subscription version of Office.
 
 In the full version of the Assistant, the equivalent entry point for this scenario is *Office & Office Apps \ I've installed a subscription version of Office, but I can't activate it*.
 
-**Note:** This scenario requires that you open an elevated Command Prompt window. To do this, select **Start**, enter *cmd*, right-click **Command Prompt** in the results, and then select **Run as administrator**.
+**Note:** This scenario requires that you use an elevated Command Prompt window. To do this, select **Start**, enter *cmd*, right-click **Command Prompt** in the results, and then select **Run as administrator**.
 
 ## Download the Enterprise version of the Assistant
 
@@ -34,7 +34,7 @@ For complete details about how to run the Enterprise version of the Assistant, s
 
 ## Available switches for the Office Activation scenario
 
-The following switches are available for this scenario. They aren't case-sensitive. Unless they are noted as optional, the switches are required to run the scenario. You can use more than one optional switch.
+The following switches are available for this scenario. They aren't case-sensitive. Unless noted as optional, the switches are required to run the scenario. You can use more than one optional switch.
 
 |Switch \<parameter\>|Details|Required/Optional|
 |---|---|---|

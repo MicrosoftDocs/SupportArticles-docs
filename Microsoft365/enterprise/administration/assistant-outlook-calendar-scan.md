@@ -21,7 +21,7 @@ The Outlook Calendar Scan scenario scans a Microsoft Outlook calendar to identif
 
 In the full version of the Microsoft Support and Recovery Assistant, the equivalent entry point for this scenario is *Advanced diagnostics \ Outlook \ Create a detailed scan of my Outlook Calendar to identify and resolve issues*.
 
-**Note:** This scenario doesn't require that you sue an elevated Command Prompt window.
+**Note:** This scenario doesn't require that you use an elevated Command Prompt window.
 
 ## Download the Enterprise version of the Assistant
 
@@ -42,7 +42,7 @@ The following switches are available for this scenario. They aren't case-sensiti
 |`-AcceptEula`|Specify this switch to accept the End User License Agreement (EULA) and to run this scenario.|Required|
 |`-P <Profile Name>`|Specify this switch and use the `<Profile Name>` parameter to identify the Outlook profile that the scenario has to scan.|Optional|
 |`-LogFolder <Output Path>`|Specify this switch to force *SaraCmd.exe* to output scenario-specific logs to the folder that's specified by the `<Output Path>` parameter.|Optional|
-|`-HideProgress`|Specify this switch to hide the progress display for this scenario. By default, the Assistant always display the progress of tasks in the console.|Optional|
+|`-HideProgress`|Specify this switch to hide the progress display for this scenario. By default, the Assistant always displays the progress of tasks in the console.|Optional|
 
 ## Sample commands
 

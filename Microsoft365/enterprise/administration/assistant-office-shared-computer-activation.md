@@ -17,7 +17,7 @@ ms.date: 10/25/2022
 ---
 # Scenario: Office Shared Computer Activation
 
-The Office Shared Computer Activation scenario for the Microsoft Support and Recovery Assistant automates check and recovery activity to enable or disable shared computer activation on a device. Shared computer activation for Office is supported for specific subscription plans. For more information, see [Overview of shared computer activation for Microsoft 365 Apps](/deployoffice/overview-shared-computer-activation).
+The Office Shared Computer Activation scenario automates checks and recovery activities to enable or disable shared computer activation on a device. Shared computer activation for Office is supported for specific subscription plans. For more information, see [Overview of shared computer activation for Microsoft 365 Apps](/deployoffice/overview-shared-computer-activation).
 
 In the full version of the Assistant, the equivalent entry point for this scenario is *Office & Office Apps \ I want to setup Office with shared computer activation on a computer or server in my organization*.
 
