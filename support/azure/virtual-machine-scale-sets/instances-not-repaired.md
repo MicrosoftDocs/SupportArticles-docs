@@ -80,7 +80,9 @@ Confirm the `serviceState` of your automatic repairs policy. To do this, see [Vi
 
 If the `serviceState` is `Suspended`, resume automatic repairs by updating the `serviceState` back to `Running` by using the `setOrchestrationServiceState` API and cmdlet examples in [Viewing and updating the service state of automatic instance repairs policy](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-instance-repairs#viewing-and-updating-the-service-state-of-automatic-instance-repairs-policy).
 
-## Resolution 5
+## Resolution 5: Repairs start once grace period is completed
+
+If none of the resolutions above are applicable to the issue, the instance could be in grace period.
 
 The grace period is the amount of time automatic repairs will wait after any state change on the instance before performing repairs, which helps avoid any premature or accidental repairs. The repair action should happen once the grace period is completed for the instance. For more information on the grace period setting for automatic repairs, see [Grace Period](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-instance-repairs#grace-period).
 
