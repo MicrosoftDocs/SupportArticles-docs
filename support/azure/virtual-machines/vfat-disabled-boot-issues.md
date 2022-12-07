@@ -239,7 +239,7 @@ The serial console is the fastest method to resolve this issue. It allows you to
     3. Restart the system.
 
 > [!NOTE]
-> If the VM is Gen1 and it's not encrypted, you could also simply comment out the `/boot/efi` entry from */etc/fstab* as `/boot/efi` isn't needed in Gen1 VMs. For more information, see [Troubleshoot Linux VM starting issues due to fstab errors](/azure/virtual-machines/linux-virtual-machine-cannot-start-fstab-errors).
+> If the VM is Gen1 and it's not encrypted, you could also simply comment out the `/boot/efi` entry from */etc/fstab* as `/boot/efi` isn't needed in Gen1 VMs. For more information, see [Troubleshoot Linux VM starting issues due to fstab errors](linux-virtual-machine-cannot-start-fstab-errors.md ).
 
 ### <a id="online-troubleshooting-encrypted"></a>ADE encrypted VMs fail to boot up
 
