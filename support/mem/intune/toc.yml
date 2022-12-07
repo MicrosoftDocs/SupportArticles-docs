@@ -147,6 +147,8 @@ items:
     href: device-configuration/troubleshoot-policies-in-microsoft-intune.md
   - name: Troubleshoot email profile issues
     href: device-configuration/troubleshoot-email-profiles-in-microsoft-intune.md
+  - name: Troubleshoot VPN profiles
+    href: troubleshoot-vpn-profiles.md
   - name: Troubleshoot Wi-Fi profiles
     href: device-configuration/troubleshoot-wi-fi-profiles.md
   - name: Password expiration setting doesn't work

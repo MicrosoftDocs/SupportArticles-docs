@@ -18,7 +18,7 @@ This article is a basic guide for troubleshooting Microsoft Monitoring Agent (MM
 
 - For supported operating systems, see [Log Analytics Agent support operating systems](/azure/azure-monitor/platform/log-analytics-agent#supported-windows-operating-systems).
 
-- For networking requirements, see [Log Analytics Agent TLS 1.2 protocol](/azure/azure-monitor/platform/log-analytics-agent#tls-12-protocol) and [Network firewall requirements](/azure/azure-monitor/platform/log-analytics-agent#network-firewall-requirements).
+- For networking requirements, see [Log Analytics Agent TLS 1.2 protocol](/azure/azure-monitor/platform/log-analytics-agent#tls-12-protocol) and [Network requirements](/azure/azure-monitor/platform/log-analytics-agent#network-requirements).
 
 - Your Workspace ID must be configured for the Monitoring Agent when you connect to the Log Analytics workspace.
 
