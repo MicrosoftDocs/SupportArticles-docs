@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting exemptions to data transfer policies
 description: Troubleshooting guidance for scenarios when an exemption to Microsoft Intune app protection policies (APP) does not work as expected.
-ms.date: 11/30/2022
+ms.date: 12/10/2022
 ms.reviewer: chauntain, roblane-msft, kkreh
 search.appverid: MET150
 ---
@@ -12,7 +12,7 @@ This article gives troubleshooting guidance for scenarios where an exemption to 
 [!Warning]
 You’re responsible for making changes to the data transfer exception policy. Additions to this policy allow unmanaged apps (apps that are not managed by Intune) to access data protected by managed apps. This access to protected data may result in data security leaks. Only add exemptions for non-Intune managed apps that your organization must use, but do not support Intune APP. Additionally, only add exemptions for apps that you do not consider to be data leak risks.
 
-When you have configured app exemptions, or universal link exemptions, you may run into a scenario where you're still unable to transfer data from your managed app to your exempted, unmanaged apps. In such scenarios, use the troubleshooting steps in this article to help diagnose and resolve the problem. Refer to [Troubleshooting data transfer between apps](/troubleshoot/mem/intune/app-protection-policies/troubleshoot-data-transfer) for additional information.
+When you have configured app exemptions, or universal link exemptions, you may run into a scenario where you're still unable to transfer data from your managed app to your exempted, unmanaged apps. In such scenarios, use the troubleshooting steps in this article to help diagnose and resolve the issue. Refer to [Troubleshooting data transfer between apps](/troubleshoot/mem/intune/app-protection-policies/troubleshoot-data-transfer) for additional information.
 
 ## Confirm the behavior you're testing
 
@@ -58,7 +58,7 @@ App exemption policy is handled differently between iOS and Android due to the d
 
 ## Verifying universal links to exempt (iOS)
 
-While the URL protocol for iOS may be used to transfer data between apps, iOS also supports universal links to allow the user to directly launch an application associated with a web address instead of a protected browser specified by the **Restrict web content transfer with other apps** setting. For example, if a user is sent a link to a OneDrive file, when they click the link, the file opens in the OneDrive app on their device rather than on a browser window. Refer to [iOS settings, Universal links | Microsoft Learn](mem/intune/apps/app-protection-policy-settings-ios#universal-links) for more information about universal link exemptions. Note that if you have configured the **App protection policy** > **Restrict web content transfer with other apps** settings to either “Microsoft Edge” or “Unmanaged browser,” you may need to manually configure the universal links to exempt.
+While the URL protocol for iOS may be used to transfer data between apps, iOS also supports universal links to allow the user to directly launch an application associated with a web address instead of a protected browser specified by the **Restrict web content transfer with other apps** setting. For example, if a user is sent a link to a OneDrive file, when they click the link, the file opens in the OneDrive app on their device rather than on a browser window. Refer to [iOS settings, Universal links](mem/intune/apps/app-protection-policy-settings-ios#universal-links) for more information about universal link exemptions. Note that if you have configured the **App protection policy** > **Restrict web content transfer with other apps** settings to either “Microsoft Edge” or “Unmanaged browser,” you may need to manually configure the universal links to exempt.
 
 - **Scenario:** You have configured **Restrict web content transfer with other apps** and have added a URL into the **Exempt universal link** setting list, but the browser is still being launched when you click on a link.
 

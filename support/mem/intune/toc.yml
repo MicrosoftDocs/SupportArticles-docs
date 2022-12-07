@@ -79,6 +79,8 @@ items:
       href: app-protection-policies/troubleshoot-mam.md
     - name: Troubleshoot data transfer between apps
       href: app-protection-policies/troubleshoot-data-transfer.md
+    - name: Troubleshoot exemptions to data transfer policies
+      href: app-protection-policies/troubleshoot-data-transfer-exemptions.md
     - name: Common data transfer issues
       href: app-protection-policies/data-transfer-scenarios.md
     - name: Fingerprint authentication on Samsung Note 4
