@@ -111,7 +111,7 @@ These are used in multi-server environments. By default, the *TargetServersRole*
 
 #### Certificate-based principals that own user objects
 
-Principals that are enclosed by double hash marks (##) are created from certificates when SQL Server is installed. These are to be treated as system-created principals. They must not be mapped to database principals who own user objects in `msdb` or other databases. If the error logs indicate a failure that is related to any of these logins:
+Principals that're enclosed by double hash marks (##) are created from certificates when SQL Server is installed. These are to be treated as system-created principals. They mustn't be mapped to database principals who own user objects in `msdb` or other databases. If the error logs indicate a failure that's related to any of these logins:
 
 1. Start SQL Server by using [trace flag 902](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf902).
 1. Change the ownership of the affected objects to a different user.
