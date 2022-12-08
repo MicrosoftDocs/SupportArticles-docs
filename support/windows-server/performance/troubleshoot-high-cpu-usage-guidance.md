@@ -81,7 +81,7 @@ If a svchost process consumes high CPU usage, and the svchost process contains m
 2. Break out each service into its own svchost process if it's a shared svchost process. To do this, run the following command:
 
    ```console
-   sc config <service name> type= ow
+   sc config <service name> type= own
    ```
 
    > [!NOTE]
