@@ -56,7 +56,7 @@ SELECT COUNT(DISTINCT object_id) AS tables_assessed_count,
        CAST(SUM(size_in_mb) AS DECIMAL(19, 4)) AS actual_size_in_mb,
        CAST(SUM(open_size_in_mb) AS DECIMAL(19, 4)) AS uncompressed_size_in_mb,
        CAST(((SUM(total_rowgroup_count) - SUM(ideal_rowgroup_count)) / SUM(total_rowgroup_count)) * 100. AS DECIMAL(9,4)) as excess_pct,
-	   CAST(((SUM(total_rowgroup_count) - SUM(ideal_rowgroup_count)) / SUM(total_rowgroup_count)) * 1. as DECIMAL(9,4)) * SUM(size_in_mb) as excess_size_in_mb
+       CAST(((SUM(total_rowgroup_count) - SUM(ideal_rowgroup_count)) / SUM(total_rowgroup_count)) * 1. as DECIMAL(9,4)) * SUM(size_in_mb) as excess_size_in_mb
 FROM cci_detail
 ```
 
