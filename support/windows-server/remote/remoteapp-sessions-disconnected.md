@@ -30,10 +30,14 @@ When all active application windows and all user-launched notification area icon
 
 Leaving the session in a disconnected state allows subsequent RemoteApps to launch much more quickly. When a new RemoteApp is launched the session is reconnected instead of incurring the overhead of starting a new one.
 
-By default disconnected RemoteApp sessions will remain in a disconnected state indefinitely. This behavior can be modified by a new Group Policy setting introduced in Windows Server 2008, **Set time limit for logoff of RemoteApp sessions**. This setting is located in Group Policy under both Computer Configuration and User Configuration:
+By default disconnected RemoteApp sessions will remain in a disconnected state indefinitely. This behavior can be modified by a new Group Policy setting introduced in Windows Server 2008, **Set time limit for logoff of RemoteApp sessions**. This setting is located in Group Policy under:
 
-- Computer Configuration\Administrative Templates\Windows Components\Terminal Services\Terminal Server\Session Time Limits
-- User Configuration\Administrative Templates\Windows Components\Terminal Services\Terminal Server\Session Time Limits
+- Computer Configuration:
+  - `Computer Configuration\Administrative Templates\Windows Components\Terminal Services\Terminal Server\Session Time Limits` or 
+  - `Computer Configuration\Administrative Templates\Windows Components\Remote Desktop Services\Remote Desktop Session Host\Session Time Limits`
+- User Configuration:
+  - `User Configuration\Administrative Templates\Windows Components\Terminal Services\Terminal Server\Session Time Limits` or 
+  - `User Configuration\Administrative Templates\Windows Components\Remote Desktop Services\Remote Desktop Session Host\Session Time Limits`
 
 To enable and configure the policy setting:
 
