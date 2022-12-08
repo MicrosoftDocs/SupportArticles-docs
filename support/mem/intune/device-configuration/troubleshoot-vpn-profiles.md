@@ -1,10 +1,15 @@
 ---
 title: Troubleshoot VPN profile issues
 description: Understand and troubleshoot VPN profile issues on Android, iOS, and Windows devices in Microsoft Intune. Review logs and see some common issues and resolutions.
-ms.date: 11/26/2021
+ms.date: 12/06/2022
 ms.reviewer: jarrettr
+author: simonxjx
+ms.author: v-six
 ---
 # Troubleshooting VPN profile issues in Microsoft Intune
+
+_Original product version:_ &nbsp; Microsoft Intune  
+_Original KB number:_ &nbsp; 4519426
 
 ## Introduction
 
@@ -58,7 +63,7 @@ For information about how to create an Extensible Authentication Protocol (EAP) 
 After you create a VPN profile, [assign the profile](/intune/device-profile-assign#assign-a-device-profile) to selected groups.
 
 > [!NOTE]
-> Group-type deployment (user group or device group) is important, and it must be consistent across all the policies involving this resource policy (Trusted Certificates, SCEP, and VPN). It will depend on the type of certificate you’re deploying. If you’re deploying a user certificate, all the deployments should be to a user group and vice versa. If the certificate deployed is a device type one, use a device group.
+> Group-type deployment (user group or device group) is important, and it must be consistent across all the policies involving this resource policy (Trusted Certificates, SCEP, and VPN). It will depend on the type of certificate you're deploying. If you're deploying a user certificate, all the deployments should be to a user group and vice versa. If the certificate deployed is a device type one, use a device group.
 
 For examples, see the following screenshot:
 
@@ -246,7 +251,7 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
 1. Verify that the device can sync with Intune by checking the **LAST CHECK IN** time on the **Troubleshoot** pane.
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/troubleshoot-pane-android.png" alt-text="Screenshot that shows the LAST CHECK IN time on the Troubleshoot pane for Android.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/troubleshoot-pane-android.png" alt-text="Screenshot that shows the LAST CHECK IN time on the Troubleshoot pane for Android." lightbox="media/troubleshoot-vpn-profiles/troubleshoot-pane-android.png":::
 
 1. If the VPN profile is linked to the Trusted Root and SCEP profiles, verify that both profiles have been deployed to the device. The VPN profile has a dependency on these profiles.
 
@@ -271,9 +276,9 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
     The following sample shows that the SCEP profile has the option of **Any Purpose** EKU specified. However, it isn't specified in the certificate template on the certificate authority (CA). To fix the issue, add the **Any Purpose** option to the certificate template or remove the **Any Purpose** option from the SCEP profile.
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/any-purpose-option.png" alt-text="Screenshot that shows how to add the Any Purpose option.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/any-purpose-option.png" alt-text="Screenshot that shows how to add the Any Purpose option." lightbox="media/troubleshoot-vpn-profiles/any-purpose-option.png":::
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/any-purpose-option-vpn-profile.png" alt-text="Screenshot that shows that the Any Purpose option is displayed.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/any-purpose-option-vpn-profile.png" alt-text="Screenshot that shows that the Any Purpose option is displayed." lightbox="media/troubleshoot-vpn-profiles/any-purpose-option-vpn-profile.png":::
 
 1. Verify that the **External Control** option of AnyConnect is enabled.
 
@@ -315,7 +320,7 @@ MDM ConfigurationManager: CSP Node Operation. Configuration Source ID: (ID), Enr
 
 1. Verify that the device can sync with Intune by checking the **LAST CHECK IN** time on the **Troubleshoot** pane.
 
-    :::image type="content" source="media/troubleshoot-vpn-profiles/troubleshoot-pane-windows.png" alt-text="Screenshot that shows the LAST CHECK IN time on the Troubleshoot pane for Windows.":::
+    :::image type="content" source="media/troubleshoot-vpn-profiles/troubleshoot-pane-windows.png" alt-text="Screenshot that shows the LAST CHECK IN time on the Troubleshoot pane for Windows." lightbox="media/troubleshoot-vpn-profiles/troubleshoot-pane-windows.png":::
 
 1. If the VPN profile is linked to the Trusted Root and SCEP profiles, verify that both profiles have been deployed to the device. The VPN profile has a dependency on these profiles.
 
@@ -474,7 +479,7 @@ For more information about VPN profiles in Intune, see the following articles:
 - [Configure VPN settings on iOS devices in Microsoft Intune](/intune/vpn-settings-ios)
 - [Windows 10 and Windows Holographic device settings to add VPN connections using Intune](/intune/vpn-settings-windows-10)
 - [Support Tip - How to configure NDES for SCEP certificate deployments in Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-How-to-configure-NDES-for-SCEP-certificate/ba-p/455125)
-- [Troubleshooting SCEP certificate profile deployment in Microsoft Intune](troubleshoot-scep-certificate-profiles.md)
+- [Troubleshooting SCEP certificate profile deployment in Microsoft Intune](../certificates/troubleshoot-scep-certificate-profiles.md)
 - [Troubleshooting NDES configuration for use with Microsoft Intune certificate profiles](/mem/intune/protect/certificates-scep-configure)
 
 For all the latest news, information, and tech tips, visit the official blogs:

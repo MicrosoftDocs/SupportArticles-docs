@@ -29,7 +29,7 @@ _Original KB number:_ &nbsp; 307288
 
 - Issue 3: On a domain member server, the MSSQLSERVER service may not start during the server start, and you receive the following error message:
 
-  > The MSSQLSERVER service was unable to log on as domain\mssqlsvc with the currently configured password due to the following error: Source: NetLogon Description: There are currently no logon servers available to service the logon request. The MSSQLSERVER service terminated unexpectedly.
+  > An error 7038 - The MSSQLSERVER service was unable to log on as domain\mssqlsvc with the currently configured password due to the following error: Source: NetLogon Description: There are currently no logon servers available to service the logon request. The MSSQLSERVER service terminated unexpectedly.
 
 This problem occurs when all the following conditions are true:
 
