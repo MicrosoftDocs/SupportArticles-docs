@@ -14,6 +14,7 @@ ms.custom:
 ms.reviewer: gregmans, gbratton, tasitae, martinca
 appliesto: 
   - Outlook for Microsoft 365
+  - Outlook 2021
   - Outlook 2019
   - Outlook 2016
   - Outlook 2013
@@ -130,4 +131,4 @@ To view the item count in an Outlook Calendar when using Cached Exchange Mode, u
 
 Outlook uses an `.ost` file only if the Exchange email account is configured to use Cached Exchange Mode. When Outlook is configured to connect to the Exchange mailbox in Online mode, an `.ost` file is not used.
 
-If your Outlook client is connected to Exchange in Online mode, and you don't have high-item-count folders in a .pst file, any performance issues that you experience might be occurring on the server. See [You may experience application pauses if you have a large Outlook data file](/outlook/troubleshoot/performance/application-pauses-if-you-have-large-data-file) for more information.
+If your Outlook client is connected to Exchange in Online mode, and you don't have high-item-count folders in a .pst file, any performance issues that you experience might be occurring on the server. See [You may experience application pauses if you have a large Outlook data file](https://support.microsoft.com/help/2759052) for more information.
