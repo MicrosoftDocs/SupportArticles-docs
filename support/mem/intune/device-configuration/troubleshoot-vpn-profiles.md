@@ -467,7 +467,7 @@ Sample log of the *AnyConnect_Plugin_Debug_Logs.txt* file that shows VPN connect
 [<Date Time>] Info: Message type error sent to the user: Connection attempt has timed out. Please verify Internet connectivity.
 ```
 
-## More Information
+## More information
 
 If you're still looking for a solution to a related issue, or if you want more information about Microsoft Intune, post a question in the [Microsoft Intune forum](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod%2Cwindowsintuneprod&filter=alltypes&sort=lastpostdesc). Many support engineers, MVPs, and members of the development team visit the forums. So, there's a good chance you can find someone with the information you need.
 
