@@ -37,7 +37,7 @@ To fix the issue, follow these steps:
 
 1. Add the redirect URI to the appropriate platform configuration. This might be the web, single page app, or some public/native client platform. Make sure to save the input after the redirect URI is added.
 
-1. Wait three to five minutes to let the change take effect, and then send the log-in request again. You should now be able to sign in to the application.
+1. Wait three to five minutes for the changes to take effect, and then send the log-in request again. You should now be able to sign in to the application.
 
 >[!Note]
 >The redirect URI is also known as the reply URL. These values depend on which protocol is used. OIDC and OAuth2 protocols refer to this value as a redirect URI.
