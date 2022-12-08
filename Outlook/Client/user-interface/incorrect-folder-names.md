@@ -30,11 +30,11 @@ You experience any of the following issues that affect default folders in Micros
 
 - Folder names appear in a language other than the default language.
 
-    This issue occurs if a mobile device or a third-party server application synchronizes with the Microsoft Exchange Server mailbox. To resolve this issue, try Method 1.
+    This issue occurs if a mobile device or a third-party server application synchronizes with the Microsoft Exchange Server mailbox. To resolve this issue, try Method 1. If that doesn't work, try Method 2 or Method 3.
 
 - Folder names are switched. For example, the **Inbox** and **Outbox** folder names are switched.  
 
-  This issue might occur after a maintenance cycle is run for the Exchange Server mailbox. To resolve this issue, try Method 1 first. If that doesn't work, try Method 2 or Method 3.
+  This issue might occur after a maintenance cycle is run for the Exchange Server mailbox. To resolve this issue, try Method 2 or Method 3.
 
 - Folder names become incorrect after you run the `Outlook.exe /ResetFolderNames` command to reset the default folder names.
 
@@ -142,7 +142,7 @@ You can use the MFCMAPI tool to bring the **Junk Email** folder back under the *
 1. Double-click the name of the affected mailbox, and then expand **Root Container**.
 1. Expand **Top of Information Store**.  
 
-    **Note:** If the mailbox is set to a language other than English, the name of this folder is different.
+    **Note:** If the mailbox is set to a language other than English, the name of this folder will be in the default language.
 
 1. Select the **Inbox** folder, and then locate the **PR_ADDITIONAL_REN_ENTRYIDS** property that has the **0x36D81102** tag.
 
