@@ -140,7 +140,7 @@ The default database and log file paths that you specify during installation are
 To fix this issue, follow these steps:
 
 1. Connect to the SQL Server instance by using SQL Server Management Studio (SSMS).
-1. Open **Properties** for the SQL Server instance, and select **Database Settings** page on the left side.
+1. Right-click on SQL Server instance in the Object Browser and choose **Properties**, and select **Database Settings** page on the left side.
 1. Under **Database Default locations**, make sure that `Data` and `Log` are the correct folders.
 1. Retry the CU or SP installation.
 
