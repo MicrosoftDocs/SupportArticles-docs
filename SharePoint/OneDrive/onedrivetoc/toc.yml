@@ -59,6 +59,8 @@
       href: ../sync/cannot-sync-shortcut-folder.md
     - name: Enable co-authoring for OneDrive-synced files
       href: ../sync/enable-co-authoring-for-onedrive-synced-file.md
+    - name: Error 0x8007016a when copying files in OneDrive
+      href: ../sync/copy-files-error-0x8007016a.md
     - name: Error Code 0x8004de40 when signing in to OneDrive
       href: ../sync/error-0x8004de40-in-onedrive.md
     - name: Error when deleting OneDrive synced file locally
