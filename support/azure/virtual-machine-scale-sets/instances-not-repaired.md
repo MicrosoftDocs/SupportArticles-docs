@@ -9,13 +9,7 @@ ms.service: virtual-machine-scale-sets
 ---
 # Azure Virtual Machine Scale Set instances aren't repaired even when automatic repairs policy is enabled
 
-This article provides solutions for an issue where Azure Virtual Machine Scale Set (VMSS) instances aren't repaired even when the automatic repairs policy is enabled.
-
-## Symptoms
-
 Azure VMSS instances remain in an "Unhealthy" state and aren't repaired even when the automatic repairs policy is enabled.
-
-## Cause
 
 Here are possible causes for the issue:
 
@@ -25,6 +19,8 @@ Here are possible causes for the issue:
 - Automatic repairs have been suspended in the scale set due to too many failed repairs.
 - The instance is in its grace period.
 
+This article provides solutions for this issue. See the following sections.
+ 
 ## Resolution 1: Enable automatic repairs in the scale set
 
 Confirm that your VMSS is opted into automatic repairs by [viewing its service state](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-instance-repairs#viewing-and-updating-the-service-state-of-automatic-instance-repairs-policy).
@@ -80,18 +76,10 @@ Confirm the `serviceState` of your automatic repairs policy. To do this, see [Vi
 
 If the `serviceState` is `Suspended`, resume automatic repairs by updating the `serviceState` back to `Running` by using the `setOrchestrationServiceState` API and cmdlet examples in [Viewing and updating the service state of automatic instance repairs policy](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-instance-repairs#viewing-and-updating-the-service-state-of-automatic-instance-repairs-policy).
 
-## Resolution 5: Repairs start once grace period is completed
+## Resolution 5: Wait until the grace period is completed
 
 If none of the resolutions above are applicable to the issue, the instance could be in grace period.
 
 The grace period is the amount of time automatic repairs will wait after any state change on the instance before performing repairs, which helps avoid any premature or accidental repairs. The repair action should happen once the grace period is completed for the instance. For more information on the grace period setting for automatic repairs, see [Grace Period](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-instance-repairs#grace-period).
-
-## Next steps
-
-If you don't see your problem or can't resolve your issue, try one of the following channels for more support:
-
-- Get answers from Azure experts through [Azure Forums](https://azure.microsoft.com/support/forums/).
-- Connect on [@AzureSupport](https://twitter.com/azuresupport), the official Microsoft Azure account for improving customer experience.
-- File an Azure support. Go to the [Azure support site](https://azure.microsoft.com/support/options/) and select **Get Support**.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
