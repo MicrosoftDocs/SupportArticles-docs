@@ -47,12 +47,11 @@ External pressure refers to high memory utilization coming from a component outs
 
 There are three broad categories of problems that can cause OS memory pressure:
 
-- Application-Related Issues: One or many applications together have exhausted the available physical memory. The OS will respond by trying to free some memory for new application requests for resources. The common approach here is to find which applications are exhausting the memory and take necessary steps to balance the memory among them without leading to RAM exhaustion.
-- Device Driver Issues: Device Drivers may cause working set paging of all processes if the driver calls a memory allocation function incorrectly.
-- Operation System product issues
+- Application-related issues: One or many applications together exhaust the available physical memory. The OS will respond to new application requests for resources by trying to free some memory. The common approach is to find which applications are exhausting the memory and take necessary steps to balance the memory among them without leading to RAM exhaustion.
+- Device driver issues: Device drivers may cause working set paging of all processes if the driver calls a memory allocation function incorrectly.
+- Operation system product issues.
 
-  For detailed explanation of these and troubleshooting steps, refer to [MSSQLSERVER_17890](/sql/relational-databases/errors-events/mssqlserver-17890-database-engine-error)
-
+For detailed explanation of these and troubleshooting steps, refer to [MSSQLSERVER_17890](/sql/relational-databases/errors-events/mssqlserver-17890-database-engine-error).
 
 ### Cause 2: Internal memory pressure, not coming from SQL Server
 
@@ -203,7 +202,7 @@ To diagnose internal memory pressure coming from components inside SQL Server en
 - If you identify a clear offender among the memory clerks, focus on addressing the specifics of memory consumption for that component. Here are several examples:
 
   - If the memory clerk `MEMORYCLERK_SQLQERESERVATIONS` is consuming memory, identify queries that are using huge memory grants and optimize them via indexes, rewrite them (remove `ORDER by`, for example), or apply memory grant query hints (see [min_grant_percent and max_grant_percent hints](https://support.microsoft.com/topic/kb3107401-new-query-memory-grant-options-are-available-min-grant-percent-and-max-grant-percent-in-sql-server-2012-74c4c363-5f65-faa2-5cba-68cc1d689cd5) ). You can also [create a resource governor pool](/sql/relational-databases/resource-governor/create-a-resource-pool) to control the usage of memory grant memory.
-  - If a large number of ad-hoc query plans are cached, the `CACHESTORE_SQLCP` memory clerk would use large amounts of memory. Identify non-parameterized queries whose query plans can’t be reused and parameterize them by either converting to stored procedures, or by using `sp_executesql`, or by using FORCED parameterization. If you have enabled [trace flag 174](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf174), you may disable it to see if this resolves the problem.
+  - If a large number of ad-hoc query plans are cached, the `CACHESTORE_SQLCP` memory clerk would use large amounts of memory. Identify non-parameterized queries whose query plans can't be reused and parameterize them by either converting to stored procedures, or by using `sp_executesql`, or by using FORCED parameterization. If you have enabled [trace flag 174](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf174), you may disable it to see if this resolves the problem.
   - If the object plan cache store `CACHESTORE_OBJCP` is consuming too much memory, identify which stored procedures, functions, or triggers are using large amounts of memory and possibly redesign the application. Commonly, this may happen due to large amounts of databases or schemas with hundreds of procedures in each.
   - If the `OBJECTSTORE_LOCK_MANAGER` memory clerk shows large memory allocations, identify queries that apply many locks and optimize them by using indexes. Shorten transactions that cause locks not to be released for long periods in certain isolation levels or check if lock escalation is disabled.
   - If you observe very large TokenAndPermUserStore (`select type, name, pages_kb from sys.dm_os_memory_clerks where name = 'TokenAndPermUserStore'`), you can use [trace flag 4618](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf4618) to limit the sizeof the cache.
@@ -233,7 +232,7 @@ For read-only workloads, consider moving them to a read-only secondary replica i
 
 ### Ensure proper memory configuration for virtual machines
 
-If you're running SQL Server on a virtual machine (VM), ensure the memory for the VM isn't overcommitted. For ideas on how to configure memory for VMs, see [Virtualization – Overcommitting memory and how to detect it within the VM](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/virtualization-8211-overcommitting-memory-and-how-to-detect-it/ba-p/367623) and [Troubleshooting ESX/ESXi virtual machine performance issues (memory overcommitment)](https://kb.vmware.com/s/article/2001003#Memory).
+If you're running SQL Server on a virtual machine (VM), ensure the memory for the VM isn't overcommitted. For ideas on how to configure memory for VMs, see [Virtualization - Overcommitting memory and how to detect it within the VM](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/virtualization-8211-overcommitting-memory-and-how-to-detect-it/ba-p/367623) and [Troubleshooting ESX/ESXi virtual machine performance issues (memory overcommitment)](https://kb.vmware.com/s/article/2001003#Memory).
 
 ### Release memory inside SQL Server
 
