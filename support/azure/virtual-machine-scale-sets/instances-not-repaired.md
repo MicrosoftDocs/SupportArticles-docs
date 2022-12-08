@@ -9,16 +9,18 @@ ms.service: virtual-machine-scale-sets
 ---
 # Azure Virtual Machine Scale Set instances aren't repaired even when automatic repairs policy is enabled
 
-Azure VMSS instances remain in an "Unhealthy" state and aren't repaired even when the automatic repairs policy is enabled. This article lists possible causes for this issue and provides solutions.
+Azure VMSS instances remain in an "Unhealthy" state and aren't repaired even when the automatic repairs policy is enabled.
 
-## Cause
+Here are possible causes for this issue:
 
 - The automatic repairs policy isn't correctly enabled in the scale set.
 - Health monitoring isn't correctly configured in the scale set.
 - The instance is marked unhealthy due to a provisioning failure.
 - Automatic repairs have been suspended in the scale set due to too many failed repairs.
 - The instance is in its grace period.
- 
+
+To resolve this issue, use one of the following solutions.
+
 ## Resolution 1: Enable automatic repairs in the scale set
 
 Confirm that your VMSS is opted into automatic repairs by [viewing its service state](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-instance-repairs#viewing-and-updating-the-service-state-of-automatic-instance-repairs-policy).
