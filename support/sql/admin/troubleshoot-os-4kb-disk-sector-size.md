@@ -10,11 +10,11 @@ ms.author: wiassaf
 ---
 # Troubleshoot errors related to system disk sector size greater than 4 KB
 
-This article provides solutions for troubleshooting errors during installation or starting SQL Server on Windows 11 related to system disk sector size greater than 4 KB.
+This article provides solutions for troubleshooting errors during installation or starting SQL Server on Windows 11. These errors are related to system disk sector size greater than 4 KB.
 
 ## Symptoms
 
-**Scenario #1:** You install SQL Server 2022, SQL Server 2019, SQL Server 2017, or SQL Server 2016 on a Windows 11 device and you see errors similar to the following for the Database Engine Services component of SQL Server:
+**Scenario #1:** You install SQL Server 2022, SQL Server 2019, SQL Server 2017, or SQL Server 2016 on a Windows 11 device. Then, you see errors similar to the following for the Database Engine Services component of SQL Server:
 
 ```output
 Feature: Database Engine Services 
@@ -65,7 +65,7 @@ Source             : SQLLocalDB 11.0
 
 ## Cause
 
-During service startup, SQL Server begins the database recovery process to ensure database consistency. Part of this database recovery process involves consistency checks on the underlying filesystem before attempting the activity of opening system and user database files.  
+During service startup, SQL Server begins the database recovery process to ensure database consistency. Part of this database recovery process involves consistency checks on the underlying filesystem before you try to open system and user database files.  
 
 On systems running Windows 11, some new storage devices and device drivers will expose a disk sector size greater than the supported 4-KB sector size.
   
@@ -98,7 +98,7 @@ Consider _one_ of the following solutions:
 
 - If you have multiple drives on this system, you can specify a different location for the database files after installation of SQL Server is complete. Make sure that drive reflects a supported sector size when querying the `fsutil` commands. SQL Server currently supports sector storage sizes of 512 bytes and 4096 bytes.
 
-- You can add a registry key which will cause the behavior of Windows 11 and later to be similar to Windows 10. This will force the sector size to be emulated as 4 KB in size. To add the `ForcedPhysicalSectorSizeInBytes` registry key, use the Registry Editor, or you can run one of the following commands in Windows command prompt or PowerShell, executed as an administrator.
+- You can add a registry key, which will cause the behavior of Windows 11 and later to be similar to Windows 10. This will force the sector size to be emulated as 4 KB in size. To add the `ForcedPhysicalSectorSizeInBytes` registry key, use the Registry Editor, or you can run one of the following commands in Windows command prompt or PowerShell, executed as an administrator.
   
   > [!IMPORTANT]
   > This section contains steps that tell you how to modify the Windows registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see the [How to back up and restore the registry in Windows](/troubleshoot/windows-server/performance/windows-registry-advanced-users#back-up-the-registry) article.
