@@ -26,7 +26,7 @@ Follow the steps to troubleshoot the issue or execute the steps in the notebook 
 > - Outdated statistics
 > - Unhealthy clustered columnstore indexes (CCIs)
 >
-> To save troubleshooting time, make sure that the statistics are [created and up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics) and [CCIs have been rebuilt](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index#rebuild-indexes-to-improve-segment-quality).
+> To save troubleshooting time, make sure that the statistics are [created and up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics) and [CCIs have been rebuilt](/troubleshoot/azure/synapse-analytics/dedicated-sql/dsql-perf-cci-health).
 
 ## Step 1: Identify the request_id (aka QID)
 
@@ -250,7 +250,7 @@ Poor clustered columnstore index (CCI) health requires extra metadata, which can
 
 **Mitigations**
 
-[Rebuild clustered columnstore indexes](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-memory-optimizations-for-columnstore-compression).
+[Assess and correct clustered columnstore index health in a dedicated SQL pool](/troubleshoot/azure/synapse-analytics/dedicated-sql/dsql-perf-cci-health).
 
 <br/>
 </details>
@@ -287,19 +287,14 @@ Manually [create the statistics](/azure/synapse-analytics/sql/develop-tables-sta
    | 1. `@ShowActiveOnly` = 0 <br/> 2. High or unexpected number of steps (`step_index`) is observed. <br/> 3. Data types of joiner columns aren't identical between tables. | [Mismatched data type/size](#mismatched-data-type-size) |
    | 1. The `Description` value indicates `HadoopBroadcastOperation`, `HadoopRoundRobinOperation` or `HadoopShuffleOperation`. <br/> 2. The `total_elapsed_time` value of a given `step_index` is inconsistent between executions. | [Ad hoc external table queries](#ad-hoc-external-table-queries) |
 
-- Check the `total_elapsed_time` value obtained in [Step 3](#step-3-review-step-details). If it's significantly higher in a few distributions in a given step, follow these steps to determine the possible mitigation:
-
-    1. Determine the table involved in the query that has the smallest distribution. Assume the table name is `min_dis_table`.
-    1. Determine the table involved in the query that has the largest distribution. Assume the table name is `max_dis_table`.
-    1. Run the following script to get the space used by the two tables. Note down the result as `space_min` and `space_max`.
+- Check the `total_elapsed_time` value obtained in [Step 3](#step-3-review-step-details). If it's significantly higher in a few distributions in a given step, check the data distribution for every table referenced in the `TSQL` field for associated `step_id` by running the following command against each:
 
         ```sql
-        DBCC PDW_SHOWSPACEUSED(min_dis_table); -- space_min
-        DBCC PDW_SHOWSPACEUSED(max_dis_table); -- space_max
+        DBCC PDW_SHOWSPACEUSED(<table>);
         ```
 
-    1. If `space_min`/`space_max` > 0.1, go to [Data skew (stored)](#data-skew-stored).
-    1. Otherwise, go to [In-flight data skew](#in-flight-data-skew).
+    1. If `minimum rows value`/`maximum rows value` > 0.1, go to [Data skew (stored)](#data-skew-stored).
+    2. Otherwise, go to [In-flight data skew](#in-flight-data-skew).
 
 <details><summary id="inaccurate-estimates"><b>Inaccurate estimates</b></summary>
 
@@ -362,6 +357,7 @@ In-flight data skew is a variant of the [data skew (stored)](#data-skew-stored) 
 
 **Mitigations**
 
+- Make sure that statistics are [created and up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics)
 - Change the order of your `GROUP BY` columns to lead with a higher-cardinality column.
 - Create multi-column statistics if joins cover multiple columns.
 - Add query hint `OPTION(FORCE_ORDER)` to your query.
@@ -419,6 +415,7 @@ If the issue persists, then:
 
 Unhealthy CCIs contribute to increased IO, CPU, and memory allocation, which, in turn, negatively impacts the query performance. To mitigate this issue, try one of the following methods:
 
+- [Assess and correct clustered columnstore index health in a dedicated SQL pool](/troubleshoot/azure/synapse-analytics/dedicated-sql/dsql-perf-cci-health)
 - Run and review the output of the query listed at [Optimizing clustered columnstore indexes](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index#optimizing-clustered-columnstore-indexes) to get a baseline.
 - Follow the steps to [rebuild indexes](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index#rebuild-indexes-to-improve-segment-quality) to improve segment quality, targeting the tables involved in the example problem query.
 
@@ -441,7 +438,7 @@ Your overall workload may be reading large amounts of data. Synapse dedicated SQ
 
 | Scenario | Mitigation |
 |----------|------------|
-| Poor CCI Health| [Rebuild clustered columnstore indexes](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-memory-optimizations-for-columnstore-compression) using at least a larger resource class |
+| Poor CCI Health| [Assess and correct clustered columnstore index health in a dedicated SQL pool](/troubleshoot/azure/synapse-analytics/dedicated-sql/dsql-perf-cci-health) |
 | User queries contain transformations | Move all formatting and other transformation logic into ETL processes so the formatted versions are stored |
 | Workload improperly prioritized | Implement [workload isolation](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-workload-isolation) |
 | Insufficient DWU for workload | Consider [increasing compute resources](/azure/synapse-analytics/sql-data-warehouse/quickstart-scale-compute-portal) |
