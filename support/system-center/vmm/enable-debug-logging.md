@@ -8,7 +8,7 @@ ms.reviewer: bicheria, jarrettr
 ---
 # How to enable debug logging in Virtual Machine Manager
 
-This article describes how to enable debug logging in Microsoft System Center Virtual Machine Manager (VMM). VMM Event Trace Log (ETL) files provide useful debug logging for troubleshooting many different VMM issues.
+This article describes how to enable debug logging in Microsoft System Center 2012 Virtual Machine Manager (SC 2012 VMM) Service Pack 1 (SP1) and System Center 2012 R2 Virtual Machine Manager (SC 2012 R2 VMM). VMM Event Trace Log (ETL) files provide useful debug logging for troubleshooting many different VMM issues.
 
 _Original product version:_ &nbsp; Microsoft System Center 2012 Virtual Machine Manager Service Pack 1, Microsoft System Center 2012 R2 Virtual Machine Manager   
 _Original KB number:_ &nbsp; 2913445
@@ -50,4 +50,4 @@ _Original KB number:_ &nbsp; 2913445
     Netsh trace convert <filename>
     ```
 
-    In this command, the placeholder \<filename> represents the name of the ETL that you find in step 5. The converted trace file will have a name in the format \<filename>.txt.
+    In this command, the placeholder \<filename> represents the name of the ETL file that you find in step 5. The converted trace file will have a name in the format \<filename>.txt.
