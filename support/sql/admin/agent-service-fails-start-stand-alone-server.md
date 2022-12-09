@@ -27,9 +27,9 @@ _Original KB number:_ &nbsp; 307288
   - The server computer is in a workgroup and not part of a domain.
   - Both the MSSQLSERVER and SQLServerAgent services are set to use a domain account for the startup.
 
-- Issue 3: On a domain member server, the MSSQLSERVER service may not start during the server start, and you receive the following error message:
+- Issue 3: On a domain member server, the MSSQLSERVER service may not start during the server start, and you receive the following message in [Event Viewer](/shows/inside/event-viewer) with event id 7038:
 
-  > An error 7038 - The MSSQLSERVER service was unable to log on as domain\mssqlsvc with the currently configured password due to the following error: Source: NetLogon Description: There are currently no logon servers available to service the logon request. The MSSQLSERVER service terminated unexpectedly.
+  > The MSSQLSERVER service was unable to log on as domain\mssqlsvc with the currently configured password due to the following error: Source: NetLogon Description: There are currently no logon servers available to service the logon request. The MSSQLSERVER service terminated unexpectedly.
 
 This problem occurs when all the following conditions are true:
 
