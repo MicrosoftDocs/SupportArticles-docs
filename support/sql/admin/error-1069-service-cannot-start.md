@@ -191,7 +191,7 @@ To fix this issue, follow these steps:
 
       To identify the issue and resolve, follow the steps below:
   
-      1. Verify the account you are using is a gMSA account by [checking the account](https://learn.microsoft.com/en-us/virtualization/windowscontainers/manage-containers/gmsa-troubleshooting#check-the-gmsa-account). Proceed only after confirming gMSA.
+      1. Verify the account you are using is a gMSA account by [checking the account](../../virtualization/windowscontainers/manage-containers/gmsa-troubleshooting.md). Proceed only after confirming gMSA.
       2. Run the command below in Command Prompt and check the status of IsManagedAccount. The desired outcome is true. If false, proceed further.
          ```
          sc qmanagedaccount <YourSQLServiceName>
