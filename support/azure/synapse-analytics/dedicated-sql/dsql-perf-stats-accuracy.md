@@ -99,7 +99,7 @@ ORDER BY stats_last_updated_date
 
 After identifying candidate tables in the previous steps, you can run the statement(s) generated in the `update_stats_stmt` column of the queries to update the statistics.
 
-> **Note:** We don't recommend updating individual statistics, even when user-created. By running `UPDATE STATISTICS` without specifying a statistics name, all statistics associated to the table, as well as the control node row count, will be updated. You may need to consider overriding the default scan percentage by using `WITH FULLSCAN` or `WITH SAMPLE n PERCENT` to achieve appropriate accuracy for large tables. See [UPDATE STATISTICS (Transact-SQL)](https://learn.microsoft.com/en-us/sql/t-sql/statements/update-statistics-transact-sql?view=sql-server-ver16) for the full syntax.
+> **Note:** We don't recommend updating individual statistics, even when user-created. By running `UPDATE STATISTICS` without specifying a statistics name, all statistics associated to the table, as well as the control node row count, will be updated. You may need to consider overriding the default scan percentage by using `WITH FULLSCAN` or `WITH SAMPLE n PERCENT` to achieve appropriate accuracy for large tables. See [UPDATE STATISTICS (Transact-SQL)](/sql/t-sql/statements/update-statistics-transact-sql) for the full syntax.
 
 Example:
 
@@ -111,5 +111,5 @@ After updating statistics, rerun the problem query to determine if the statistic
 
 ### More resources for statistics maintenance
 
-* [Statistics in Synapse SQL](https://learn.microsoft.com/azure/synapse-analytics/sql/develop-tables-statistics)
-* [Best practices for dedicated SQL pools in Azure Synapse Analytics](https://learn.microsoft.com/azure/synapse-analytics/sql/best-practices-dedicated-sql-pool#maintain-statistics)
+* [Statistics in Synapse SQL](/azure/synapse-analytics/sql/develop-tables-statistics)
+* [Best practices for dedicated SQL pools in Azure Synapse Analytics](/azure/synapse-analytics/sql/best-practices-dedicated-sql-pool#maintain-statistics)
