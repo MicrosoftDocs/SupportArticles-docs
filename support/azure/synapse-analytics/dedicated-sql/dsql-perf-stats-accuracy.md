@@ -1,13 +1,13 @@
 ---
-title: Assess and correct clustered columnstore index health in a dedicated SQL pool
-description: Provides methods of assessment and maintenance for CCIs in an Azure Synapse Analytics dedicated SQL pool.
+title: Check statistics accuracy on a dedicated SQL pool
+description: Provides methods of assessing statistics accuracy on a dedicated SQL pool
 ms.date: 12/09/2022
 author: scott-epperly
 ms.author: scepperl
 ms.reviewer: scepperl
 ---
 
-# Check Statistics Accuracy on a dedicated SQL pool
+# Check statistics accuracy on a dedicated SQL pool
 
 _Applies to:_ &nbsp; Azure Synapse Analytics
 
