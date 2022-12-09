@@ -9,19 +9,15 @@ ms.service: virtual-machine-scale-sets
 ---
 # Azure Virtual Machine Scale Set instances aren't repaired even when automatic repairs policy is enabled
 
-Azure VMSS instances remain in an "Unhealthy" state and aren't repaired even when the automatic repairs policy is enabled.
+Azure VMSS instances remain in an "Unhealthy" state and aren't repaired even when the automatic repairs policy is enabled. This article provides possible causes and corresponding solutions for this issue:
 
-Here are possible causes for this issue:
+- [Automatic repairs policy isn't correctly enabled in the scale set](#automatic-repairs-not-enabled).
+- [Health monitoring isn't correctly configured in the scale set](#health-monitoring-not-configured).
+- [The instance is marked unhealthy due to a provisioning failure](#instance-marked-unhealthy).
+- [Automatic repairs have been suspended in the scale set due to too many failed repairs](#automatic-repairs-suspended).
+- [The instance is in its grace period](#instance-in-grace-period).
 
-- The automatic repairs policy isn't correctly enabled in the scale set.
-- Health monitoring isn't correctly configured in the scale set.
-- The instance is marked unhealthy due to a provisioning failure.
-- Automatic repairs have been suspended in the scale set due to too many failed repairs.
-- The instance is in its grace period.
-
-To resolve this issue, use one of the following solutions.
-
-## Resolution 1: Enable automatic repairs in the scale set
+## <a id="automatic-repairs-not-enabled"></a>Automatic repairs policy isn't correctly enabled in the scale set
 
 Confirm that your VMSS is opted into automatic repairs by [viewing its service state](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-instance-repairs#viewing-and-updating-the-service-state-of-automatic-instance-repairs-policy).
 
@@ -31,7 +27,7 @@ If the `serviceState` is `NotRunning` or the automatic repairs policy doesn't sh
 
 If the `serviceState` is `Suspended`, go to [Resolution 4: Resume automatic repairs by updating serviceState back to "Running"](#resolution4).
 
-## Resolution 2: Ensure the application emits expected HTTP/HTTPS/TCP responses to configured endpoints
+## <a id="health-monitoring-not-configured"></a>Health monitoring isn't correctly configured in the scale set
 
 If all the instances in the scale set show up as "Unhealthy", it could be a sign that your health monitoring probe isn't configured correctly during setup. Make sure that your application emits the expected HTTP/HTTPS/TCP responses to the configured endpoints.
 
@@ -41,7 +37,7 @@ For more information about the expected TCP/HTTP(S) responses for load balancer 
 
 For more information about the expected TCP/HTTP(S) responses for application health extension probes, see the "Configure endpoint to provide health status" section in [Requirements for using automatic instance repairs](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-instance-repairs#requirements-for-using-automatic-instance-repairs).
 
-## Resolution 3: Delete failed instance and add a new instance to the scale set
+## <a id="instance-marked-unhealthy"></a>The instance is marked unhealthy due to a provisioning failure
 
 Use [Get Instance View](/rest/api/compute/virtual-machine-scale-sets/get-instance-view?tabs=HTTP) with the API version 2019-12-01 or higher for the VMSS to view the provisioning state of the instances under `statusesSummary` from the `virtualMachine` property.
 
@@ -68,7 +64,7 @@ To remove the failed instance from your scale set, see [Remove VMs from a scale 
 
 To add a new instance to your scale set, see [Change the capacity of a scale set](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-manage-powershell#change-the-capacity-of-a-scale-set).
 
-## <a id="resolution4"></a>Resolution 4: Resume automatic repairs by updating serviceState to "Running"
+## <a id="automatic-repairs-suspended"></a>Automatic repairs have been suspended in the scale set due to too many failed repairs
 
 If your application continues to emit an "Unhealthy" signal after repeated repair attempts, the platform will eventually suspend instance repairs as a safety measure by changing the `serviceState` for automatic repairs to `Suspended`.
 
@@ -76,9 +72,9 @@ Confirm the `serviceState` of your automatic repairs policy. To do this, see [Vi
 
 If the `serviceState` is `Suspended`, resume automatic repairs by updating the `serviceState` back to `Running` by using the `setOrchestrationServiceState` API and cmdlet examples in [Viewing and updating the service state of automatic instance repairs policy](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-instance-repairs#viewing-and-updating-the-service-state-of-automatic-instance-repairs-policy).
 
-## Resolution 5: Wait until the grace period is completed
+## <a id="instance-in-grace-period"></a>The instance is in its grace period
 
-If none of the resolutions above are applicable to the issue, the instance could be in grace period.
+If none of the causes above are applicable to the issue, the instance could be in grace period.
 
 The grace period is the amount of time automatic repairs will wait after any state change on the instance before performing repairs, which helps avoid any premature or accidental repairs. The repair action should happen once the grace period is completed for the instance. For more information on the grace period setting for automatic repairs, see [Grace Period](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-instance-repairs#grace-period).
 
