@@ -41,15 +41,15 @@ When you try to start or restart a SQL Server service, it fails to do so, and th
 
 The issue occurs because the usual permissions granted to a SQL Service account are missing. The user rights for the SQL Server startup account that must be present are as follows:
 
-- Adjust memory quotas for a process (SeIncreaseQuotaPrivilege).
+- Adjust memory quotas for a process (**SeIncreaseQuotaPrivilege**).
 
-- Bypass traverse checking (SeChangeNotifyPrivilege).
+- Bypass traverse checking (**SeChangeNotifyPrivilege**).
 
-- Log on as a service (SeServiceLogonRight).
+- Log on as a service (**SeServiceLogonRight**).
 
-- Replace a process-level token (SeAssignPrimaryTokenPrivilege).
+- Replace a process-level token (**SeAssignPrimaryTokenPrivilege**).
 
-For more information, see [Service Permissions](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#service-permissions).
+For more information, see [Service Permissions](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Serv_Perm).
 
 ## Resolution
 
