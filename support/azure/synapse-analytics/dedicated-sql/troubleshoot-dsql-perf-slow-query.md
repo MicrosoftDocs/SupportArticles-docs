@@ -133,19 +133,19 @@ DECLARE @QID VARCHAR(16) = '<request_id>', @StepIndex INT = <StepIndex>, @ShowAc
 WITH dists
 AS (SELECT request_id, step_index, 'sys.dm_pdw_sql_requests' AS source_dmv,
        distribution_id, pdw_node_id, spid, 'NativeSQL' AS [type], [status],
-       start_time, end_time, total_elapsed_time
+       start_time, end_time, total_elapsed_time, row_count
     FROM sys.dm_pdw_sql_requests
     WHERE request_id = @QID AND step_index = @StepIndex
     UNION ALL
     SELECT request_id, step_index, 'sys.dm_pdw_dms_workers' AS source_dmv,
        distribution_id, pdw_node_id, sql_spid AS spid, [type],
-       [status], start_time, end_time, total_elapsed_time
+       [status], start_time, end_time, total_elapsed_time, rows_processed as row_count
     FROM sys.dm_pdw_dms_workers
     WHERE request_id = @QID AND step_index = @StepIndex
    )
 SELECT sr.step_index, sr.distribution_id, sr.pdw_node_id, sr.spid,
        sr.type, sr.status, sr.start_time, sr.end_time,
-       sr.total_elapsed_time, owt.wait_type, owt.wait_time
+       sr.total_elapsed_time, sr.row_count, owt.wait_type, owt.wait_time
 FROM dists sr
    LEFT JOIN sys.dm_pdw_nodes_exec_requests owt
       ON sr.pdw_node_id = owt.pdw_node_id
