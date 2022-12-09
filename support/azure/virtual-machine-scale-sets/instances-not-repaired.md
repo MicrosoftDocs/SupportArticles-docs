@@ -25,7 +25,7 @@ Under the `orchestrationServices` property, if the `serviceState` for automatic 
 
 If the `serviceState` is `NotRunning` or the automatic repairs policy doesn't show up under the `orchestrationServices` property, you must enable the automatic repairs policy in the scale set. For more information, see [Enabling automatic repairs policy when updating an existing scale set](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-instance-repairs#enabling-automatic-repairs-policy-when-updating-an-existing-scale-set).
 
-If the `serviceState` is `Suspended`, go to [Resolution 4: Resume automatic repairs by updating serviceState back to "Running"](#resolution4).
+If the `serviceState` is `Suspended`, go to [Automatic repairs have been suspended in the scale set due to too many failed repairs](#automatic-repairs-suspended).
 
 ## <a id="health-monitoring-not-configured"></a>Health monitoring isn't correctly configured in the scale set
 
