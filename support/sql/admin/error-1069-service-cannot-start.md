@@ -37,7 +37,7 @@ The resolutions for event ID 7041 and event ID 7038 are different. Note the even
 <br></br>
 
 ### Event ID: 7041
-<hr style="height:1px;border-width:0;color:gray;background-color:gray"></hr>
+<hr></hr>
 
 In the log entry that is event ID 7041 related, you may find the following error message:
 
@@ -81,7 +81,7 @@ To fix this issue, check which permissions are assigned to the \<Account Name> s
 
 <br></br>
 ### Event ID: 7038
-<hr style="height:1px;border-width:0;color:gray;background-color:gray"></hr>
+<hr></hr>
 
 In the log entries that are event ID 7038 related, you may find the following error message:
 
