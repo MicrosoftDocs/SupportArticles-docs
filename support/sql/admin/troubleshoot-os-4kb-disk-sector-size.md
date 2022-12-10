@@ -14,7 +14,7 @@ This article provides solutions for troubleshooting errors during installation o
 
 ## Symptoms
 
-**Scenario #1:** You install SQL Server 2022, SQL Server 2019, SQL Server 2017, or SQL Server 2016 on a Windows 11 device. Then, you see errors similar to the following for the Database Engine Services component of SQL Server:
+**Scenario #1:** You install SQL Server 2016 or later on a Windows 11 device. Then, you see errors similar to the following for the Database Engine Services component of SQL Server:
 
 ```output
 Feature: Database Engine Services 
