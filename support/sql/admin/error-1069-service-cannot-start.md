@@ -187,7 +187,7 @@ To fix this issue, follow these steps:
 ##### Scenario 2: gMSA IsManagedAccount Flag Set Improperly
 
     
-1. If you are using a gMSA account to run the SQL Server Service and the IsManagedAccount flag for the given service is set to false, you will receive error 7038 as soon as the cached secret is invalid.
+1. If you are using a group Managed Service Accounts (gMSA) account to run the SQL Server Service and the IsManagedAccount flag for the given service is set to **false**, you may receive a Service Control Manager event ID 7038 as soon as the cached secret is invalid.
 
       To identify the issue and resolve, follow the steps below:
   
