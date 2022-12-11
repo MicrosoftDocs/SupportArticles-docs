@@ -2,17 +2,9 @@
 
 
 
-## Week of August 29, 2022
+## Week of December 05, 2022
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 9/2/2022 | [Office troubleshooting for admins and IT professionals # < 60 chars](/sharepoint/troubleshoot/index) | modified |
-
-
-## Week of August 22, 2022
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 8/25/2022 | [Frequently asked questions about SharePoint Domain renames](/sharepoint/troubleshoot/administration/domain-rename-faq) | modified |
+| 12/7/2022 | [Error 0x8007016a when copying files in OneDrive](https://learn.microsoft.com/en-us/sharepoint/troubleshoot/sync/copy-files-error-0x8007016a) | added |
