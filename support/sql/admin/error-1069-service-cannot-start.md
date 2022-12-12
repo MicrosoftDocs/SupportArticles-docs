@@ -18,7 +18,7 @@ When you try to restart Microsoft SQL Server or the SQL Server Agent, the servic
 
 - By using the Services applet:
   
-    > Windows could not start the SQL Server Service on Local Computer.  
+    > Windows could not start the SQL Server service on Local Computer.  
     Error 1069: The service did not start due to a logon failure.
 
 - By using a command prompt:
@@ -74,7 +74,7 @@ To fix this issue, check which permissions are assigned to the \<Account Name> s
 
 1. Verify these rights per the Server permissions. For more information, see [Windows Privileges and Rights](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Windows). Manually assign any missing permissions.
 
-1. Review the service account to learn whether it was assigned any **Deny** permissions. Remove any **Deny** permissions from the SQL Service service account and then retest.
+1. Review the service account to learn whether it was assigned any **Deny**\* permissions. Remove any **Deny**\* permissions from the SQL Service service account and then retest.
 
    For example, if the service account was assigned **[Deny log on as a service](/windows/security/threat-protection/security-policy-settings/deny-log-on-as-a-service)** `SeDenyServiceLogonRight` along with **[Log on as a service](/windows/security/threat-protection/security-policy-settings/log-on-as-a-service)** `SeServiceLogonRight`, revoke the `SeDenyServiceLogonRight` right for the logon and restart SQL Server.
 
