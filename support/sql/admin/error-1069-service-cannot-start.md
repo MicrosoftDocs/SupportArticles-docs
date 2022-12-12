@@ -18,7 +18,7 @@ When you try to restart Microsoft SQL Server or the SQL Server Agent, the servic
 
 - By using the Services applet:
   
-    > Windows could not start the SQL Server Service on Local Computer.  
+    > Windows could not start the SQL Server service on Local Computer.  
     Error 1069: The service did not start due to a logon failure.
 
 - By using a command prompt:
