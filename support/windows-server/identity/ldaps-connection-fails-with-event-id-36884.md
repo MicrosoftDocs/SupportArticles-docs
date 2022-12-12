@@ -6,6 +6,7 @@ ms.author: delhan
 ms.topic: troubleshooting
 ms.date: 12/5/2022
 ms.prod: windows-server
+ms.reviewer: garymu
 ms.technology: windows-server-active-directory
 ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot
 ---
