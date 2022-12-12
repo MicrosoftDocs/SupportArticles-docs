@@ -1,11 +1,11 @@
 ---
 title: SQL Server services using domain credentials fail to start 
 description: This article provides a workaround to troubleshoot an issue when SQL Server fails to start when the startup account doesn't have the right permissions.
-ms.date: 12/06/2022
+ms.date: 12/12/2022
 ms.custom: sap:Administration and Management
 author: padmajayaraman
 ms.author: v-jayaramanp
-ms.reviewer: ramakoni1
+ms.reviewer: ramakoni
 ms.prod: sql
 ---
 
@@ -41,13 +41,13 @@ When you try to start or restart a SQL Server service, it fails to do so, and th
 
 The issue occurs because the usual permissions granted to a SQL Service account are missing. The user rights for the SQL Server startup account that must be present are as follows:
 
-- Adjust memory quotas for a process (**SeIncreaseQuotaPrivilege**).
+- **Adjust memory quotas for a process** (SeIncreaseQuotaPrivilege).
 
-- Bypass traverse checking (**SeChangeNotifyPrivilege**).
+- **Bypass traverse checking** (SeChangeNotifyPrivilege).
 
-- Log on as a service (**SeServiceLogonRight**).
+- **Log on as a service** (SeServiceLogonRight).
 
-- Replace a process-level token (**SeAssignPrimaryTokenPrivilege**).
+- **Replace a process-level token** (SeAssignPrimaryTokenPrivilege).
 
 For more information, see [Service Permissions](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Serv_Perm).
 
