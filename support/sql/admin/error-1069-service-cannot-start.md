@@ -34,7 +34,10 @@ This problem occurs because there is an issue either with the service account it
 
 The resolutions for event ID 7041 and event ID 7038 are different. Note the event ID and description of the event that's associated with the failure in the system event log. Then, use the corresponding information to fix the issue.
 
+<br></br>
+
 ### Event ID: 7041
+<hr></hr>
 
 In the log entry that is event ID 7041 related, you may find the following error message:
 
@@ -76,7 +79,9 @@ To fix this issue, check which permissions are assigned to the \<Account Name> s
 
 1. Review the service account to learn whether it was assigned any Deny* permissions. Remove any Deny* permissions from the SQL Service service account and then retest.  For example, if the service account was assigned Deny Service Logon `SeDenyServiceLogonRight` along with `SeServiceLogonRight`, revoke the `SeDenyServiceLogonRight` right for the logon and restart SQL Server.
 
+<br></br>
 ### Event ID: 7038
+<hr></hr>
 
 In the log entries that are event ID 7038 related, you may find the following error message:
 
@@ -164,13 +169,51 @@ To ensure that the service is configured properly, use the Services snap-in in M
 
 To fix this issue, follow these steps:
 
+##### Scenario 1: Incorrect password
+
 1. The error message entry indicates that the current login name or password set is incorrect. To verify the same, you can use the Run-As Windows option to open a Windows Command Prompt window, and then provide the same credentials. If that works without any issues, carefully type the credentials in SQL Server Configuration Manager.
 
 1. If step 1 fails and reports the same issue, you must reset the password for the Windows logon. If the SQL Server Startup account is a Local User Account on the computer, open Computer Management (compmgmt.msc), and reset the password of the local user. If the SQL Server Startup account is a Windows Domain Account, open Active Directory Users and Computers, and then change the credentials. After the credentials are updated, return to SQL Server Configuration Manager, enter the same credentials, and then start the service.
 
-Type the correct password in the SQL Server service account on the SQL Server host computer. To do this, follow the procedures from [SCM Services - Change the Password of the Accounts Used](/sql/database-engine/configure-windows/scm-services-change-the-password-of-the-accounts-used).
+    Type the correct password in the SQL Server service account on the SQL Server host computer. To do this, follow the procedures from [SCM Services - Change the Password of the Accounts Used](/sql/database-engine/configure-windows/scm-services-change-the-password-of-the-accounts-used).
+
+##### Scenario 2: gMSA IsManagedAccount Flag is set improperly
+    
+If you are using a group Managed Service Accounts (gMSA) account to run the SQL Server Service and the IsManagedAccount flag for the given service is set to **false**, you may receive a Service Control Manager event ID 7038 as soon as the cached secret is invalid.
+
+To identify and resolve the issue, follow these steps:
+  
+1. Verify the account you are using is a gMSA account by [checking the account](/virtualization/windowscontainers/manage-containers/gmsa-troubleshooting). Proceed only after confirming gMSA.
+
+1. Run the following command in **Command Prompt** and check the status of IsManagedAccount. The desired outcome is true. If false, proceed further.
+
+  ```cmd
+  sc qmanagedaccount <YourSQLServiceName>
+  ```
+
+  An example for a SQL Server named instance SQLPROD:
+
+  ```cmd
+  sc qmanagedaccount MSSQL$SQLPROD
+  ```
+      
+1. Set the flag to true as is desired.
+
+  ```cmd
+  sc managedaccount <YourSQLServiceName> TRUE
+  ```
+
+  An example for a SQL Server named instance SQLPROD:
+
+  ```cmd
+  sc managedaccount MSSQL$SQLPROD TRUE
+  ```
+
+1. Attempt to start the service again.
+     
 
 #### The referenced account is currently locked out and may not be logged on to
+
 
 The complete message entry in event log should resemble the following:
 
