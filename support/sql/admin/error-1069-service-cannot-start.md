@@ -90,9 +90,7 @@ In the log entries that are event ID 7038 related, you may find the following er
 - [The user name or password is incorrect](#the-user-name-or-password-is-incorrect).
 - [The referenced account is currently locked out and may not be logged on to](#the-referenced-account-is-currently-locked-out-and-may-not-be-logged-on-to).
 
-
 #### This user can't sign in because this account is currently disabled
-
 
 The complete message entry in event log should resemble the following:
 
@@ -119,9 +117,7 @@ To fix this issue, follow these steps:
 
 1. If SQL Server Startup account is a Windows Domain Account, check whether the account is disabled in Active Directory Users and Computers. If it is disabled, enable the account, and restart the SQL Server service.
 
-
 #### The user's password must be changed before signing in
-
 
 The complete message entry in event log should resemble the following:
 
@@ -150,9 +146,7 @@ To fix this issue, follow these steps:
 
 1. If the property in step 2 is enabled, you must either clear this option or log in interactively to a Windows client, and then set a new password, then, update the new password for the SQL Server Service by using the SQL Server Configuration Manager tool.
 
-
 #### The user name or password is incorrect
-
 
 The complete message entry in event log should resemble the following:
 
@@ -177,39 +171,45 @@ To fix this issue, follow these steps:
 
 ##### Scenario 1: Incorrect password
 
-
 1. The error message entry indicates that the current login name or password set is incorrect. To verify the same, you can use the Run-As Windows option to open a Windows Command Prompt window, and then provide the same credentials. If that works without any issues, carefully type the credentials in SQL Server Configuration Manager.
 
 1. If step 1 fails and reports the same issue, you must reset the password for the Windows logon. If the SQL Server Startup account is a Local User Account on the computer, open Computer Management (compmgmt.msc), and reset the password of the local user. If the SQL Server Startup account is a Windows Domain Account, open Active Directory Users and Computers, and then change the credentials. After the credentials are updated, return to SQL Server Configuration Manager, enter the same credentials, and then start the service.
 
     Type the correct password in the SQL Server service account on the SQL Server host computer. To do this, follow the procedures from [SCM Services - Change the Password of the Accounts Used](/sql/database-engine/configure-windows/scm-services-change-the-password-of-the-accounts-used).
 
-##### Scenario 2: gMSA IsManagedAccount Flag Set Improperly
-
+##### Scenario 2: gMSA IsManagedAccount Flag is set improperly
     
-1. If you are using a group Managed Service Accounts (gMSA) account to run the SQL Server Service and the IsManagedAccount flag for the given service is set to **false**, you may receive a Service Control Manager event ID 7038 as soon as the cached secret is invalid.
+If you are using a group Managed Service Accounts (gMSA) account to run the SQL Server Service and the IsManagedAccount flag for the given service is set to **false**, you may receive a Service Control Manager event ID 7038 as soon as the cached secret is invalid.
 
-      To identify the issue and resolve, follow the steps below:
+To identify and resolve the issue, follow these steps:
   
-      1. Verify the account you are using is a gMSA account by [checking the account](/virtualization/windowscontainers/manage-containers/gmsa-troubleshooting). Proceed only after confirming gMSA.
-      2. Run the command below in Command Prompt and check the status of IsManagedAccount. The desired outcome is true. If false, proceed further.
-         ```
-         sc qmanagedaccount <YourSQLServiceName>
-          ```
-            An example for SQL named instance SQLPROD:
-             ```
-              sc qmanagedaccount MSSQL$SQLPROD
-             ```
+1. Verify the account you are using is a gMSA account by [checking the account](/virtualization/windowscontainers/manage-containers/gmsa-troubleshooting). Proceed only after confirming gMSA.
+
+1. Run the following command in **Command Prompt** and check the status of IsManagedAccount. The desired outcome is true. If false, proceed further.
+
+  ```cmd
+  sc qmanagedaccount <YourSQLServiceName>
+  ```
+
+  An example for a SQL Server named instance SQLPROD:
+
+  ```cmd
+  sc qmanagedaccount MSSQL$SQLPROD
+  ```
       
-      3. Set the flag to true as is desired.
-          ```
-         sc managedaccount <YourSQLServiceName> TRUE
-         ```
-           An example for SQL named instance SQLPROD:
-             ```
-              sc managedaccount MSSQL$SQLPROD TRUE
-             ```
-      4. Attempt to start the service again.
+1. Set the flag to true as is desired.
+
+  ```cmd
+  sc managedaccount <YourSQLServiceName> TRUE
+  ```
+
+  An example for a SQL Server named instance SQLPROD:
+
+  ```cmd
+  sc managedaccount MSSQL$SQLPROD TRUE
+  ```
+
+1. Attempt to start the service again.
      
 
 #### The referenced account is currently locked out and may not be logged on to
