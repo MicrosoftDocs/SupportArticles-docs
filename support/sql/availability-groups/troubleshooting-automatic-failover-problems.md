@@ -175,3 +175,47 @@ Conclusion
 SQL Server Always On health monitoring uses a local ODBC connection to monitor SQL Server health. **Force Protocol Encryption** should only be enabled in the Client Configuration section of SQL Server Configuration Manager, if SQL Server itself has been configured to Force Encryptions in SQL Server Configuration Manager under the S**QL Server Network Configuration** section. For more information, see: [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine).
 
 ## Troubleshoot other failed failover events
+
+During failover, AlwaysOn health monitoring must locally connect to the SQL Server instance transitioning to the primary role, in order to monitor health of the new primary replica.
+
+Besides more common reasons covered in this document, there are myriad reasons this connection attempt may fail. You can investigate this by reviewing the Cluster log on the failover partner (the replica you were unable to failover to) after a failed failover attempt.
+
+1.	Use Windows PowerShell to generate the Windows cluster log on the cluster node. To do this, run the following cmdlet in an elevated PowerShell window on the instance of SQL Server that is hosting the secondary replica that did not transition into the primary role:
+
+   ```powershell
+   Get-ClusterLog -Node <SQL Server node name> -TimeSpan 15
+   ```
+
+2.	Open the Cluster.log file in Notepad in order to review the Windows cluster log.
+
+3.	Search for the string ‘Connect to SQL Server’ that falls in the time of the failed failover event.
+
+4.	Review the subsequent login messages using the thread ide (see picture below) to correlate the events tied to login.
+
+Here we have an example, searching for ‘Connect to SQL Server’ and using the thread id (left side) to locate the additional diagnostics that describe why.
+
+:::image type="content" source="media/troubleshooting-automatic-failover-problems/cluster-log-example.png" alt-text="Screenshot of the cluster log showing connect to SQL and the threadID.":::
+
+Examples of connection failures to the new primary replica:
+
+```
+**ERROR** [hadrag] ODBC Error: [08001] [Microsoft][SQL Server Native Client 11.0]SQL Server Network Interfaces: No client protocols are enabled and no protocol was specified in the connection string [xFFFFFFFF]. (268435455)
+
+RESOLUTION Launch SQL Server Configuration Manager and confirm Shared Memory or TCPIP are enabled under the Client Protocols for the SQL Native Client Configuration.
+```
+
+```
+**ERROR** [hadrag] ODBC Error: [08001] [Microsoft][SQL Server Native Client 11.0]SQL Server Network Interfaces: Server doesn't support requested protocol [xFFFFFFFF]. (268435455)
+
+**RESOLUTION** Launch SQL Server Configuration Manager and confirm Shared Memory or TCPIP are enabled under the Client Protocols for the SQL Native Client Configuration.
+```
+
+```
+**ERROR** 000010b8.00001764::2020/12/02-16:52:49.808 ERR [RES] SQL Server Availability Group : [hadrag] ODBC Error: [42000] [Microsoft][SQL Server Native Client 11.0][SQL Server]Cannot alter the availability group 'ag', because it does not exist or you do not have permission. (15151)
+
+**ERROR** 000010b8.00000fd0::2020/12/02-17:01:14.821 ERR [RES] SQL Server Availability Group: [hadrag] ODBC Error: [42000] [Microsoft][SQL Server Native Client 11.0][SQL Server]The user does not have permission to perform this action. (297)
+
+**ERROR** 000010b8.00001838::2020/12/02-17:10:04.427 ERR [RES] SQL Server Availability Group : [hadrag] ODBC Error: [42000] [Microsoft][SQL Server Native Client 11.0][SQL Server]Login failed for user 'SQLREPRO\NODE2$'. Reason: The account is disabled. (18470)
+
+**RESOLUTION** Review the Case 'Insufficient NT Authority, SYSTEM account permissions'
+```
