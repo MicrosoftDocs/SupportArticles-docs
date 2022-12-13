@@ -2,8 +2,8 @@
 title: Common issues in Visual Studio setup
 description: This article describes common issues during Visual Studio installation and provides suggested workarounds.
 ms.date: 07/27/2022
-author: shwetasohu
-ms.author: v-shwetasohu
+author: padmajayaraman
+ms.author: v-jayaramanp
 ms.custom: sap:Installation
 ---
 # Common issues and workarounds in Visual Studio setup
