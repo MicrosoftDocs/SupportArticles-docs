@@ -24,4 +24,4 @@ While its possible to include a local copy of the SDK in your application or web
 
 ## What do I do if the widget fails to load?
 
-If the widget fails to load ensure that you are using the latest version of the SDK, followed by checking the widget parameters to ensure the settings passed to the widget are accurate.
+If the widget fails to load ensure that you are using the latest version of the SDK, followed by checking the widget parameters to ensure the settings passed to the widget are accurate. As of January 17th 2022, there is a required version update which can cause widgets using local copies to fail. Please ensure the widget SDK is up to date to ensure that it functions correctly.
