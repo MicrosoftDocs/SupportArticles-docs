@@ -10,13 +10,13 @@ ms.author: wiassaf
 ---
 # Troubleshoot errors related to system disk sector size greater than 4 KB
 
-This article provides solutions for troubleshooting errors during installation or starting an instance of SQL Server on Windows 11. This applies to versions of SQL Server starting with SQL Server 2016. 
+This article provides solutions for troubleshooting errors during installation or starting an instance of SQL Server on Windows 11. This applies to versions of SQL Server starting with SQL Server 2016.
 
 The errors discussed in this article are related to system disk sector size greater than 4 KB.
 
 ## Symptoms
 
-**Scenario #1:** You install SQL Server 2016 or later versions on a Windows 11 device. Then, you see errors similar to the following for the Database Engine Services component of SQL Server:
+**Scenario #1:** You install SQL Server 2016 or later versions on a Windows 11 device. Then, you see errors similar to the following message for the Database Engine Services component of SQL Server:
 
 ```output
 Feature: Database Engine Services 
