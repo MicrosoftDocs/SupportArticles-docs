@@ -26,13 +26,13 @@ Component error code: 0x851A001A
 Error description: Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes. 
 ```
 
-**Scenario #2:** You install SQL Server 2022, SQL Server 2019, SQL Server 2017, or SQL Server 2016 on a Windows 10 device. Then, you upgrade the OS on the device to Windows 11. When you try to start SQL Server 2022, SQL Server 2019, SQL Server 2017, or SQL Server 2016 on a Windows 11 device, the service fails to start and in the SQL Server error log, you notice entries similar to:
+**Scenario #2:** You install SQL Server 2016 or later on a Windows 10 device. Then, you upgrade the OS on the device to Windows 11. When you try to start SQL Server 2022, SQL Server 2019, SQL Server 2017, or SQL Server 2016 on a Windows 11 device, the service fails to start and in the SQL Server error log, you notice entries similar to:
 
 ```output
 2021-11-05 23:42:47.14 spid9s There have been 256 misaligned log IOs which required falling back to synchronous IO. The current IO is on file C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\master.mdf. 
 ```
 
-**Scenario #3:** You install SQL Server 2022, SQL Server 2019, SQL Server 2017, or SQL Server 2016 on a Windows 10 device. Then, you upgrade the OS on the device to Windows 11. When you try to start SQL Server 2022, SQL Server 2019, SQL Server 2017, or SQL Server 2016 on a Windows 11 device, the service fails to start. In the SQL Server error log, you notice entries similar to:
+**Scenario #3:** You install SQL Server 2016 or later on a Windows 10 device. Then, you upgrade the OS on the device to Windows 11. When you try to start SQL Server 2022, SQL Server 2019, SQL Server 2017, or SQL Server 2016 on a Windows 11 device, the service fails to start. In the SQL Server error log, you notice entries similar to:
 
 ```output
 Faulting application name: sqlservr.exe, version: 2019.150.2000.5, time stamp: 0x5d8a9215 
@@ -98,7 +98,7 @@ Consider _one_ of the following solutions:
 
 - If you have multiple drives on this system, you can specify a different location for the database files after installation of SQL Server is complete. Make sure that drive reflects a supported sector size when querying the `fsutil` commands. SQL Server currently supports sector storage sizes of 512 bytes and 4096 bytes.
 
-- You can add a registry key, which will cause the behavior of Windows 11 and later to be similar to Windows 10. This will force the sector size to be emulated as 4 KB. To add the `ForcedPhysicalSectorSizeInBytes` registry key, use the [Registry Editor](#registryeditor) as described in the next following sections or run commands as describe in PowerShell as Administrator.
+- You can add a registry key, which will cause the behavior of Windows 11 and later to be similar to Windows 10. This will force the sector size to be emulated as 4 KB. To add the `ForcedPhysicalSectorSizeInBytes` registry key, use the [Registry Editor](#registryeditor) as described in the next following sections or run commands as described in the [PowerShell as Administrator](#powershellasadmin) section.
   
   > [!IMPORTANT]
   > This section contains steps that tell you how to modify the Windows registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see the [How to back up and restore the registry in Windows](/troubleshoot/windows-server/performance/windows-registry-advanced-users#back-up-the-registry) article.
@@ -123,7 +123,7 @@ Consider _one_ of the following solutions:
     REG QUERY "HKLM\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device" /v "ForcedPhysicalSectorSizeInBytes"
     ```
   
-    **PowerShell as Administrator**
+    <a id="powershellasadmin"></a>**PowerShell as Administrator**
 
     1. Add the key.
 
