@@ -98,18 +98,18 @@ Consider _one_ of the following solutions:
 
 - If you have multiple drives on this system, you can specify a different location for the database files after installation of SQL Server is complete. Make sure that drive reflects a supported sector size when querying the `fsutil` commands. SQL Server currently supports sector storage sizes of 512 bytes and 4096 bytes.
 
-- You can add a registry key, which will cause the behavior of Windows 11 and later to be similar to Windows 10. This will force the sector size to be emulated as 4 KB in size. To add the `ForcedPhysicalSectorSizeInBytes` registry key, use the Registry Editor, or you can run one of the following commands in Windows command prompt or PowerShell, executed as an administrator.
+- You can add a registry key, which will cause the behavior of Windows 11 and later to be similar to Windows 10. This will force the sector size to be emulated as 4 KB. To add the `ForcedPhysicalSectorSizeInBytes` registry key, use the [Registry Editor](#registryeditor) as described in the next following sections or run commands as describe in PowerShell as Administrator.
   
   > [!IMPORTANT]
   > This section contains steps that tell you how to modify the Windows registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see the [How to back up and restore the registry in Windows](/troubleshoot/windows-server/performance/windows-registry-advanced-users#back-up-the-registry) article.
   
-    **Registry Editor**
+    <a id="registryeditor"></a>**Registry Editor**
   
     1. Navigate to `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device`.
     1. On the **Edit** menu, point to **New**, and then select **Multi-String value**. Name it `ForcedPhysicalSectorSizeInBytes`.
     1. Modify the new value, type in `* 4095`. Click **OK** and close the Registry editor.
   
-    **Command Prompt as Administrator**
+    <a id="commandpromptadmin"></a>**Command Prompt as Administrator**
 
     1. Add the key.
   
