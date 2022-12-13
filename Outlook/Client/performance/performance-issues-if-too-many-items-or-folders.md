@@ -55,7 +55,7 @@ Not all calendar items have an equal effect on performance. One-time meetings ha
 
 **Method 2**: **Enable shared calendar improvements**
 
-Use the **Turn on shared calendar improvements** option for primary calendar users and users who have delegated access to improve performance. When you enable this option, calendar actions are sent directly to the server instead of having to be synchronized from local storage. Therefore, conflict resolution can be done more efficiently.
+Use the **Turn on shared calendar improvements** option for users who have edit permissions to a shared calendar to improve performance. When you enable this option, calendar actions are sent directly to the server instead of having to be synchronized from local storage. Therefore, conflict resolution can be done more efficiently.
 
 For more information about how to activate and manage the shared calendar improvements, see [How to enable and disable the Outlook calendar sharing updates](https://support.microsoft.com/office/how-to-enable-and-disable-the-outlook-calendar-sharing-updates-c3aec5d3-55ce-4cea-84b0-80aab6d8dc26)
 
