@@ -217,14 +217,14 @@
           href: ../contacts/outlook-displays-incorrect-search-results-gal.md
         - name: How to hide columns in Address Book
           href: ../contacts/how-to-hide-columns-in-address-book.md
-        - name: Information about the Outlook AutoComplete list
-          href: ../contacts/information-about-the-outlook-autocomplete-list.md
         - name: LinkedIn is no longer available in Outlook Social Connector
           href: ../contacts/linkedin-is-no-longer-available-in-outlook-social-connector.md
         - name: No permission error when adding contacts
           href: ../contacts/you-donnot-have-permission-to-create-an-entry-error.md
         - name: No Offline Address Book is downloaded
           href: ../contacts/error-0x80070057-no-offline-address-book-download.md
+        - name: The Outlook AutoComplete list
+          href: ../contacts/information-about-the-outlook-autocomplete-list.md          
         - name: Unknown is displayed in group name when expanding
           href: ../contacts/cannot-expand-nested-contact-groups-unknown-shown.md
     - name: Data Files
