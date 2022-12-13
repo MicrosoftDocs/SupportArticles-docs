@@ -24,8 +24,6 @@ ms.date: 3/31/2022
 
 # Issues with default folders in Outlook
 
-## Symptoms
-
 You experience any of the following issues that affect default folders in Microsoft Outlook:
 
 - Folder names appear in a language other than the default language.
