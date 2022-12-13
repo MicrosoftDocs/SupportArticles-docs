@@ -287,14 +287,15 @@ Manually [create the statistics](/azure/synapse-analytics/sql/develop-tables-sta
    | 1. `@ShowActiveOnly` = 0 <br/> 2. High or unexpected number of steps (`step_index`) is observed. <br/> 3. Data types of joiner columns aren't identical between tables. | [Mismatched data type/size](#mismatched-data-type-size) |
    | 1. The `Description` value indicates `HadoopBroadcastOperation`, `HadoopRoundRobinOperation` or `HadoopShuffleOperation`. <br/> 2. The `total_elapsed_time` value of a given `step_index` is inconsistent between executions. | [Ad hoc external table queries](#ad-hoc-external-table-queries) |
 
-- Check the `total_elapsed_time` value obtained in [Step 3](#step-3-review-step-details). If it's significantly higher in a few distributions in a given step, check the data distribution for every table referenced in the `TSQL` field for associated `step_id` by running the following command against each:
+- Check the `total_elapsed_time` value obtained in [Step 3](#step-3-review-step-details). If it's significantly higher in a few distributions in a given step, follow the these steps:
+   
+   1. Check the data distribution for every table referenced in the `TSQL` field for associated `step_id` by running the following command against each:
 
-        ```sql
-        DBCC PDW_SHOWSPACEUSED(<table>);
-        ```
-
-    1. If `minimum rows value`/`maximum rows value` > 0.1, go to [Data skew (stored)](#data-skew-stored).
-    2. Otherwise, go to [In-flight data skew](#in-flight-data-skew).
+       ```sql
+       DBCC PDW_SHOWSPACEUSED(<table>);
+       ```
+   1. If \<minimum rows value>/\<maximum rows value> > 0.1, go to [Data skew (stored)](#data-skew-stored).
+   1. Otherwise, go to [In-flight data skew](#in-flight-data-skew).
 
 <details><summary id="inaccurate-estimates"><b>Inaccurate estimates</b></summary>
 
@@ -357,7 +358,7 @@ In-flight data skew is a variant of the [data skew (stored)](#data-skew-stored) 
 
 **Mitigations**
 
-- Make sure that statistics are [created and up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics)
+- Make sure that statistics are [created and up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics).
 - Change the order of your `GROUP BY` columns to lead with a higher-cardinality column.
 - Create multi-column statistics if joins cover multiple columns.
 - Add query hint `OPTION(FORCE_ORDER)` to your query.
@@ -415,7 +416,7 @@ If the issue persists, then:
 
 Unhealthy CCIs contribute to increased IO, CPU, and memory allocation, which, in turn, negatively impacts the query performance. To mitigate this issue, try one of the following methods:
 
-- [Assess and correct clustered columnstore index health in a dedicated SQL pool](/troubleshoot/azure/synapse-analytics/dedicated-sql/dsql-perf-cci-health)
+- [Assess and correct clustered columnstore index health in a dedicated SQL pool](/troubleshoot/azure/synapse-analytics/dedicated-sql/dsql-perf-cci-health).
 - Run and review the output of the query listed at [Optimizing clustered columnstore indexes](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index#optimizing-clustered-columnstore-indexes) to get a baseline.
 - Follow the steps to [rebuild indexes](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index#rebuild-indexes-to-improve-segment-quality) to improve segment quality, targeting the tables involved in the example problem query.
 
