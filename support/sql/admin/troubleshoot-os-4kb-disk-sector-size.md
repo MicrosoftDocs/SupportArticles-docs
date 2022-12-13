@@ -143,7 +143,7 @@ Consider _one_ of the following solutions:
 
 ## More information
 
-Windows 11 native NVMe drivers were updated to include the actual sector size reported directly by the NVMe storage devices, rather than relying on the information that's emulated from the filesystem drivers.  
+Windows 11 native NVMe drivers were updated to include the actual sector size reported directly by the NVMe storage devices. This was done rather than relying on the information that's emulated from the filesystem drivers.  
 
 The Windows 10 drivers don't report the source sector size of the physical storage.  
 
