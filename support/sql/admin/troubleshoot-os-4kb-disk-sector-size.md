@@ -10,7 +10,9 @@ ms.author: wiassaf
 ---
 # Troubleshoot errors related to system disk sector size greater than 4 KB
 
-This article provides solutions for troubleshooting errors during installation or starting SQL Server on Windows 11. These errors are related to system disk sector size greater than 4 KB.
+This article provides solutions for troubleshooting errors during installation or starting an instance of SQL Server on Windows 11. This applies to versions of SQL Server starting with SQL Server 2016. 
+
+The errors discussed in this article are related to system disk sector size greater than 4 KB.
 
 ## Symptoms
 
