@@ -26,7 +26,7 @@ Follow the steps to troubleshoot the issue or execute the steps in the notebook 
 > - Outdated statistics
 > - Unhealthy clustered columnstore indexes (CCIs)
 >
-> To save troubleshooting time, make sure that the statistics are [created and up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics) and [CCIs have been rebuilt](/troubleshoot/azure/synapse-analytics/dedicated-sql/dsql-perf-cci-health).
+> To save troubleshooting time, make sure that the statistics are [created and up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics) and [CCIs have been rebuilt](dsql-perf-cci-health.md).
 
 ## Step 1: Identify the request_id (aka QID)
 
@@ -250,7 +250,7 @@ Poor clustered columnstore index (CCI) health requires extra metadata, which can
 
 **Mitigations**
 
-[Assess and correct clustered columnstore index health in a dedicated SQL pool](/troubleshoot/azure/synapse-analytics/dedicated-sql/dsql-perf-cci-health).
+[Assess and correct clustered columnstore index health in a dedicated SQL pool](dsql-perf-cci-health.md).
 
 <br/>
 </details>
@@ -416,7 +416,7 @@ If the issue persists, then:
 
 Unhealthy CCIs contribute to increased IO, CPU, and memory allocation, which, in turn, negatively impacts the query performance. To mitigate this issue, try one of the following methods:
 
-- [Assess and correct clustered columnstore index health in a dedicated SQL pool](/troubleshoot/azure/synapse-analytics/dedicated-sql/dsql-perf-cci-health).
+- [Assess and correct clustered columnstore index health in a dedicated SQL pool](dsql-perf-cci-health.md).
 - Run and review the output of the query listed at [Optimizing clustered columnstore indexes](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index#optimizing-clustered-columnstore-indexes) to get a baseline.
 - Follow the steps to [rebuild indexes](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index#rebuild-indexes-to-improve-segment-quality) to improve segment quality, targeting the tables involved in the example problem query.
 
@@ -439,7 +439,7 @@ Your overall workload may be reading large amounts of data. Synapse dedicated SQ
 
 | Scenario | Mitigation |
 |----------|------------|
-| Poor CCI Health| [Assess and correct clustered columnstore index health in a dedicated SQL pool](/troubleshoot/azure/synapse-analytics/dedicated-sql/dsql-perf-cci-health) |
+| Poor CCI Health| [Assess and correct clustered columnstore index health in a dedicated SQL pool](dsql-perf-cci-health.md) |
 | User queries contain transformations | Move all formatting and other transformation logic into ETL processes so the formatted versions are stored |
 | Workload improperly prioritized | Implement [workload isolation](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-workload-isolation) |
 | Insufficient DWU for workload | Consider [increasing compute resources](/azure/synapse-analytics/sql-data-warehouse/quickstart-scale-compute-portal) |
