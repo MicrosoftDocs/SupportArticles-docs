@@ -391,7 +391,7 @@ After the virtual network link is added, the FQDN should be resolved via a priva
 
 :::image type="content" source="media/fail-to-mount-azure-file-share/private-ip-address-resolved.png" alt-text="Screenshot shows private ip address is resolved.":::
 
-### <a id="akssmbencryption"></a>Cause 4: Storage account uses encryption algorithm that client doesn't support
+### <a id="akssmbencryption"></a>Cause 4: Storage account is set to require encryption that the client doesn't support
 
 [Azure Files Security Settings](/azure/storage/files/files-smb-protocol?tabs=azure-portal#smb-security-settings) contain a number of options for controlling the security and encryption settings on storage accounts. Restricting allowed methods and algorithms can prevent clients from connecting.
 
