@@ -7,7 +7,7 @@ ms.author: v-weizhu
 ms.reviewer: hilarywang, azurevmlnxcic, azurevmcptcic
 ms.service: virtual-machine-scale-sets
 ---
-# Azure Virtual Machine Scale Set instances aren't repaired even when automatic repairs policy is enabled
+# Azure Virtual Machine Scale Set instances aren't repaired even when the automatic repairs policy is enabled
 
 Azure VMSS instances remain in an "Unhealthy" state and aren't repaired even when the automatic repairs policy is enabled. This article provides possible causes and corresponding solutions for this issue:
 
@@ -31,7 +31,7 @@ If the `serviceState` is `Suspended`, go to [Automatic repairs have been suspend
 
 If all the instances in the scale set show up as "Unhealthy", it could be a sign that your health monitoring probe isn't configured correctly during setup. Make sure that your application emits the expected HTTP/HTTPS/TCP responses to the configured endpoints.
 
-In order to achieve a "Healthy" status, the application health extension probes or load balancer health probes require at minimum a 2xx HTTP(S) response or a successful TCP handshake from your application at the configured endpoint. If the expected response isn't received, an "Unhealthy" status will be reported. Make sure that the correct health signals are emitted by your application to the provided endpoint.
+In order to achieve a "Healthy" status, the application health extension probes or load balancer health probes require, at minimum, a 2xx HTTP(S) response or a successful TCP handshake from your application at the configured endpoint. If the expected response isn't received, an "Unhealthy" status will be reported. Make sure that the correct health signals are emitted by your application to the provided endpoint.
 
 For more information about the expected TCP/HTTP(S) responses for load balancer health probes, see [Load Balancer Custom Probes](/azure/load-balancer/load-balancer-custom-probe-overview#tcp-probe).
 
@@ -74,7 +74,7 @@ If the `serviceState` is `Suspended`, resume automatic repairs by updating the `
 
 ## <a id="instance-in-grace-period"></a>The instance is in its grace period
 
-If none of the causes above are applicable to the issue, the instance could be in grace period.
+If none of the causes above are applicable to the issue, the instance could be in its grace period.
 
 The grace period is the amount of time automatic repairs will wait after any state change on the instance before performing repairs, which helps avoid any premature or accidental repairs. The repair action should happen once the grace period is completed for the instance. For more information on the grace period setting for automatic repairs, see [Grace Period](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-instance-repairs#grace-period).
 
