@@ -198,34 +198,36 @@ Here we have an example, searching for ‘Connect to SQL Server’ and using the
 
 Examples of connection failures to the new primary replica:
 
-```
-**ERROR** [hadrag] ODBC Error: [08001] [Microsoft][SQL Server Native Client 11.0]SQL Server Network 
+### Example Set 1
+[hadrag] ODBC Error: [08001] [Microsoft][SQL Server Native Client 11.0]SQL Server Network 
 Interfaces: No client protocols are enabled and no protocol was specified in the connection 
 string [xFFFFFFFF]. (268435455)
 
-RESOLUTION Launch SQL Server Configuration Manager and confirm Shared Memory or TCPIP are enabled 
+**Resolution**
+Launch SQL Server Configuration Manager and confirm Shared Memory or TCPIP are enabled 
 under the Client Protocols for the SQL Native Client Configuration.
-```
 
-```
-**ERROR** [hadrag] ODBC Error: [08001] [Microsoft][SQL Server Native Client 11.0]SQL Server Network 
+### Example Set 2
+[hadrag] ODBC Error: [08001] [Microsoft][SQL Server Native Client 11.0]SQL Server Network 
 Interfaces: Server doesn't support requested protocol [xFFFFFFFF]. (268435455)
 
-**RESOLUTION** Launch SQL Server Configuration Manager and confirm Shared Memory or TCPIP are enabled 
+**Resolution** 
+Launch SQL Server Configuration Manager and confirm Shared Memory or TCPIP are enabled 
 under the Client Protocols for the SQL Native Client Configuration.
-```
 
-```
-**ERROR** 000010b8.00001764::2020/12/02-16:52:49.808 ERR [RES] SQL Server Availability Group : [hadrag] 
+
+### Example Set 3
+000010b8.00001764::2020/12/02-16:52:49.808 ERR [RES] SQL Server Availability Group : [hadrag] 
 ODBC Error: [42000] [Microsoft][SQL Server Native Client 11.0][SQL Server]Cannot alter the availability 
 group 'ag', because it does not exist or you do not have permission. (15151)
 
-**ERROR** 000010b8.00000fd0::2020/12/02-17:01:14.821 ERR [RES] SQL Server Availability Group: [hadrag] 
+000010b8.00000fd0::2020/12/02-17:01:14.821 ERR [RES] SQL Server Availability Group: [hadrag] 
 ODBC Error: [42000] [Microsoft][SQL Server Native Client 11.0][SQL Server]The user does not have permission to perform this action. (297)
 
-**ERROR** 000010b8.00001838::2020/12/02-17:10:04.427 ERR [RES] SQL Server Availability Group : [hadrag] 
+000010b8.00001838::2020/12/02-17:10:04.427 ERR [RES] SQL Server Availability Group : [hadrag] 
 ODBC Error: [42000] [Microsoft][SQL Server Native Client 11.0][SQL Server]Login failed for user 
 'SQLREPRO\NODE2$'. Reason: The account is disabled. (18470)
 
-**RESOLUTION** Review the Case 'Insufficient NT Authority, SYSTEM account permissions'
-```
+**Resolution** 
+Review the Case 'Insufficient NT Authority, SYSTEM account permissions'
+
