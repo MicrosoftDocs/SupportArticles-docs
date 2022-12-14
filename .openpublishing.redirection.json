@@ -4536,7 +4536,7 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "/support/sql/connect/login-failed-for-user.md",
+      "source_path": "support/sql/connect/login-failed-for-user.md",
       "redirect_url": "/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error",
       "redirect_document_id": false
     }
