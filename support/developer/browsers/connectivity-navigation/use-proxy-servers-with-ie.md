@@ -72,7 +72,7 @@ To bypass servers, use an asterisk ("*") as a wildcard to replace actual charact
 
 - Enter a wildcard in the middle of an Internet address, IP address, or domain name that has a common beginning and ending. For example, the entry **www.*.com** matches any entry that starts as **www** and ends as **com**.
 
-- Enter a wildcard at the end of an Internet address, IP address, or domain name that has a common beginning. For example, use **www.microsoft.*** to bypass any entries that begin as **www.microsoft**，such as `www.microsoft.com`, `www.microsoft.org`, and `www.microsoftcorporation.com`.
+- Enter a wildcard at the end of an Internet address, IP address, or domain name that has a common beginning. For example, use **www.microsoft.*** to bypass any entries that begin as **www.microsoft**，such as `www.microsoft.com`, `www.microsoft.org`.
 
 To bypass addresses that have similar patterns, use multiple wildcards. For example, use 123.1*.66.* to bypass addresses such as 123.144.66.12, 123.133.66.15, and 123.187.66.13.
 
