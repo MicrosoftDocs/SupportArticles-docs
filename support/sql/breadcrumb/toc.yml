@@ -11,8 +11,8 @@
       tocHref: /sql/sql-server/
       topicHref: /troubleshoot/sql/welcome-sql-server
     - name: SQL Server
-      tocHref: /sql/relational-databases/
+      tocHref: /sql/linux/
       topicHref: /troubleshoot/sql/welcome-sql-server
     - name: SQL Server
-      tocHref: /sql/linux/
+      tocHref: /sql/relational-databases/
       topicHref: /troubleshoot/sql/welcome-sql-server
