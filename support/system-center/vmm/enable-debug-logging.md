@@ -8,7 +8,7 @@ ms.reviewer: bicheria, jarrettr
 ---
 # How to enable debug logging in Virtual Machine Manager
 
-This article describes how to enable debug logging in Microsoft System Center 2016 Virtual Machine Manager (SC 2016 VMM), System Center 2019 Virtual Machine Manager (SC 2019 VMM) and System Center 2022 Virtual Machine Manager (SC 2022 VMM). VMM Event Trace Log (ETL) files provide useful debug logging for troubleshooting many different VMM issues.
+This article describes how to enable debug logging in Microsoft System Center 2016 Virtual Machine Manager (SC 2016 VMM), System Center 2019 Virtual Machine Manager (SC 2019 VMM), and System Center 2022 Virtual Machine Manager (SC 2022 VMM). VMM Event Trace Log (ETL) files provide useful debug logging for troubleshooting many different VMM issues.
 
 _Original product version:_ &nbsp; Microsoft System Center 2012 Virtual Machine Manager Service Pack 1, Microsoft System Center 2012 R2 Virtual Machine Manager   
 _Original KB number:_ &nbsp; 2913445
@@ -23,7 +23,7 @@ _Original KB number:_ &nbsp; 2913445
     logman delete VMM
     ```
 
-    The command above deletes any existing definitions of the trace. You can safely ignore any "Data Collector Set was not found" errors that you receive.
+    The command above deletes any existing definitions of the trace. You can safely ignore any "Data Collector Set was not found" errors you receive.
     
     ```powershell
     logman create trace VMM -v mmddhhmm -o $env:SystemDrive\VMMlogs\VMMLog_$env:computername.ETL -cnf 01:00:00 -p Microsoft-VirtualMachineManager-Debug -nb 10 250 -bs 16 -max 512
@@ -44,7 +44,7 @@ _Original KB number:_ &nbsp; 2913445
     > [!NOTE]
     > You can find the ETL file in *C:\vmmlogs*.
 
-6. To convert the trace file, running the following command from a command prompt:
+6. To convert the trace file, run the following command from a command prompt:
 
     ```console
     Netsh trace convert <filename>
