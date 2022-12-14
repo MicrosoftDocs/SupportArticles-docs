@@ -60,13 +60,13 @@ To allow external participants to join Teams meetings, select the correct settin
 
   > [!NOTE]
   > If the meeting organizer's domain is blocked or not allowed in the external access setting of the external participants' organizations, the external participants can join meetings only as anonymous users.
-- Turn on guest access. To do so, in the [Microsoft Teams admin center](https://admin.teams.microsoft.com/), select **Users** > **Guest access**, and then set **Allow guest access in Teams** to **On**. 
+- Turn on [guest access](/microsoftteams/guest-access). To do so, in the [Microsoft Teams admin center](https://admin.teams.microsoft.com/), select **Users** > **Guest access**, and then set **Allow guest access in Teams** to **On**. 
 
 ### Block all external participants from joining meetings
 
 - Disable anonymous join in the [organization meeting setting](/microsoftteams/meeting-settings-in-teams#using-the-microsoft-teams-admin-center-to-configure-organization-wide-policy).
 - [Block external access](/microsoftteams/manage-external-access).
-- Turn off guest access. To do so, in the [Microsoft Teams admin center](https://admin.teams.microsoft.com/), select **Users** > **Guest access**, and then set **Allow guest access in Teams** to **Off**. 
+- Turn off [guest access](/microsoftteams/guest-access). To do so, in the [Microsoft Teams admin center](https://admin.teams.microsoft.com/), select **Users** > **Guest access**, and then set **Allow guest access in Teams** to **Off**. 
 
 ### Allow only external participants to join meetings as authenticated users (signed in by using a Teams work or school account)
 
