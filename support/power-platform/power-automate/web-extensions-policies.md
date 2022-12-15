@@ -89,7 +89,9 @@ This article provides a resolution to issues related to Power Automate browser e
 
             :::image type="content" source="media/web-extensions-policies/registry-keys.png" alt-text="Screenshot of the created policy.":::
 
-    1. Check for **NativeMessagingUserLevelHosts**. By default, if **NativeMessagingUserLevelHosts** is disabled, Power Automate for desktop registers the extension in both HKLM and HKCU hence, and it shouldn't prevent the extension from running. If native messaging is explicitly blocked at the system level via the **NativeMessagingBlocklist** policy, make sure that **com.robin.messagehost** or **com.microsoft.pad.messagehost** are added to your **NativeMessagingAllowlist** policy in HKLM.
+    1. Check for **NativeMessagingUserLevelHosts**. By default, if **NativeMessagingUserLevelHosts** is disabled, Power Automate for desktop registers the extension in both HKLM and HKCU hence, and it shouldn't prevent the extension from running.
+
+        If native messaging is explicitly blocked at the system level via the **NativeMessagingBlocklist** policy, make sure that **com.robin.messagehost** or **com.microsoft.pad.messagehost** are added to your **NativeMessagingAllowlist** policy in HKLM.
 
 1. Check if the message host points to the right location:
 
@@ -99,7 +101,8 @@ This article provides a resolution to issues related to Power Automate browser e
 
     1. Navigate to:
 
-        - For the Microsoft Power Automate (Legacy) browser extension: **Computer\HKEY_CURRENT_USER \SOFTWARE\Google\Chrome\NativeMessagingHosts\com.robin.messagehost**  
+        - For the Microsoft Power Automate (Legacy) browser extension: **Computer\HKEY_CURRENT_USER \SOFTWARE\Google\Chrome\NativeMessagingHosts\com.robin.messagehost**
+
         - For the Microsoft Power Automate browser extension: **Computer\HKEY_CURRENT_USER \SOFTWARE\Google\Chrome\NativeMessagingHosts\com.microsoft.pad.messagehost**
 
     1. Check the value of the registry key. The correct value is:
