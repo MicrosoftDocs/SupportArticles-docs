@@ -60,6 +60,8 @@
       href: configure-cluster-networks.md
     - name: Hyper-V backup fails with error 30112
       href: hyper-v-backup-fails-error-30112.md
+    - name: VM guest can't be modified or removed from protection group
+      href: vm-guest-cannot-be-modified-removed-from-protection-group.md
 - name: Reports
   items:
     - name: Reporting Services Server cannot connect to the DPM database
@@ -112,6 +114,8 @@
   items:
     - name: Tape is labeled as Unrecognized
       href: tape-labeled-as-unrecognized.md
+    - name: DPM fails to inventory IBM 35XX Tape Library
+      href: fail-to-inventory-ibm-35xx-tape-library.md
 - name: VMware protection
   items:
     - name: Option isn't available to reprotect VMware VMs

@@ -438,6 +438,8 @@
       href: ./identity/enable-ldap-signing-in-windows-server.md
     - name: How to turn on debug logging of the LDAP client
       href: ./identity/turn-on-debug-logging-ldap-client.md
+    - name: LDAPS connection fails with event ID 36884
+      href: ./identity/ldaps-connection-fails-with-event-id-36884.md
     - name: LDAP paged queries with subordinate referrals are not chased properly
       href: ./identity/ldap-paged-queries-subordinate-referrals-not-chased.md
     - name: LDAP queries return partial attribute list
@@ -2904,6 +2906,8 @@
       href: ./windows-security/rpc-endpoint-mapper-prevents-users-added-to-trust-forest.md
   - name: Kerberos authentication
     items:
+    - name: 'Troubleshooting guidance: Kerberos authentication'
+      href: ./windows-security/kerberos-authentication-troubleshooting-guidance.md
     - name: Authentication failure on NTLM and Kerberos servers
       href: ./windows-security/authentication-fails-non-windows-ntlm-kerberos-server.md
     - name: Constrained delegation for CIFS fails with ACCESS_DENIED

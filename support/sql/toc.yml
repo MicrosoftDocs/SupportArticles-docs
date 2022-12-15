@@ -71,6 +71,8 @@
       items:
       - name: SQL Server startup errors
         href: admin/sql-server-startup-errors.md
+      - name: SQL can't start with a domain account
+        href: admin/sql-cannot-start-with-domain-account.md
       - name: Access is denied error and SQL Server doesn't start
         href: admin/event-id-7000-access-denied.md
       - name: Error 17113 when you start SQL Server service
@@ -228,7 +230,7 @@
     - name: Existing connection forcibly closed
       href: connect/tls-exist-connection-closed.md
     - name: Login failed for user
-      href: connect/login-failed-for-user.md
+      href: /sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context
     - name: Network-related or instance-specific error
       href: connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md
     - name: Timeout expired errors
@@ -561,8 +563,6 @@
     href: general/answers-questions-msdt.md
   - name: Connectivity Diagnostics Collector
     href: general/connectivity-diagnostics-collector.md
-  - name: Determine the version, edition, and update level
-    href: general/determine-version-edition-update-level.md
   - name: Detours or similar techniques cause issues
     href: general/issue-detours-similar-techniques.md
   - name: End of support for SQL Server 2008
@@ -571,6 +571,8 @@
     href: general/information-mats-sdp.md
   - name: RS Diagnostics Collector collects information
     href: general/rs-diagnostics-collector-information.md
+  - name: Servicing model
+    href: general/servicing-models-sql-server.md
   - name: Setup data collection diagnostic tool
     href: general/setup-data-collection-diagnostic-tool.md
   - name: SQL Base Diagnostics Collector
@@ -744,3 +746,37 @@
       href: tools/sqliosim-utility-simulate-activity-disk-subsystem-linux.md
     - name: Visual Studio 2010 Shell is installed with SQL Server 2014 and 2012
       href: tools/visual-studio-2010-shell-installed-sql-server-2014-2012.md
+- name: Product Updates and Release Notes
+  items:
+  - name: Latest updates and version history
+    href: releases/download-and-install-latest-updates.md
+  - name: Version and edition of SQL Server engine
+    href: releases/find-my-sql-version.md
+  - name: Version and edition of SQL components
+    href: releases/components-client-tools-versions.md
+  - name: Frequently asked questions and acronyms
+    href: releases/faq-acronyms.md
+  - name: SQL Server 2019
+    items:
+    - name: SQL Server 2019 build versions
+      href: releases/sqlserver-2019/build-versions.md
+  - name: SQL Server 2017
+    items:
+    - name: SQL Server 2017 build versions
+      href: releases/sqlserver-2017/build-versions.md
+  - name: SQL Server 2016
+    items:
+    - name: SQL Server 2016 build versions
+      href: releases/sqlserver-2016/build-versions.md
+  - name: SQL Server 2014
+    items:
+    - name: SQL Server 2014 build versions
+      href: releases/sqlserver-2014/build-versions.md
+  - name: SQL Server on Linux Release History
+    items:
+    - name: SQL Server 2022
+      href: /sql/linux/sql-server-linux-release-history-2022?context=/troubleshoot/sql/context/context
+    - name: SQL Server 2019
+      href: /sql/linux/sql-server-linux-release-history-2019?context=/troubleshoot/sql/context/context
+    - name: SQL Server 2017
+      href: /sql/linux/sql-server-linux-release-history-2017?context=/troubleshoot/sql/context/context
