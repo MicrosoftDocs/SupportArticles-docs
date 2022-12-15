@@ -29,7 +29,7 @@ For commercial Power Automate (all geos), approval emails may come from any IP i
 v=spf1 ip4:52.165.175.144 ip4:52.247.53.144 ip4:157.55.254.216 ip4:13.74.143.28 ip4:104.214.25.77 ip4:207.46.225.107 ip4:51.137.58.21 ip4:138.91.172.26 ip4:52.250.107.196 ip4:13.92.31.129 ip4:40.77.102.222 ip4:51.144.100.179 ip4:52.160.39.140 ip4:52.244.206.214 ip4:13.72.50.45 ip4:20.118.139.208/30 ip4:20.98.194.68/30 ip4:20.83.222.104/30 ip4:20.88.157.184/30 ip4:20.59.80.4/30 ip4:20.51.6.32/30 ip4:20.97.34.220/30 ip4:20.107.239.64/30 ip4:20.105.209.76/30 ~all
 ```
 
-All approval emails will be sent with a sender address of `maccount@microsoft.com`.
+All approval emails will be sent with a sender address of `maccount@microsoft.com` or `flow-noreply@microsoft.com`.
 
 ## GCC (Government)
 
