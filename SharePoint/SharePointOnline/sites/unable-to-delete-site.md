@@ -21,15 +21,15 @@ description: Troubleshooting SharePoint sites that can't be deleted.
 
 # Unable to delete a SharePoint site
 
-When trying to delete a SharePoint site, you might get an error stating the site can’t be deleted, such as:
+When trying to delete a SharePoint site, you might get an error stating the site can't be deleted, such as:
 
-> Can’t delete site
+- Can't delete site
+- This site has a compliance policy set to block deletion
+- The requested operation is not supported for site
 
-> This site has a compliance policy set to block deletion
+The above errors are a sample of the possible errors. There are several other errors that will state the site can't be deleted.
 
-The above errors are a sample of the possible errors. There are several other errors that will state the site can’t be deleted.
-
-Microsoft 365 admins can use the following diagnostic tool to help determine why the site can’t be deleted.
+Microsoft 365 admins can use the following diagnostic tool to help determine why the site can't be deleted.
 
 > [!NOTE]
 > This feature requires a Microsoft 365 administrator account. This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
