@@ -71,10 +71,9 @@ You can also use PowerShell cmdlets to set the `AuthenticationLevel` and `Except
 Invoke-CimMethod -Namespace 'root\sms\site_<site code>' -ClassName 'SMS_Site' -MethodName 'SetAuthenticationLevel' -Arguments @{AuthenticationLevel=$AuthenticationLevel;ExceptionList=$ExceptionList}
 ```
 
-#### Example 2: Set the authentication level and remove any entries from the exception list
+#### Example 2: Set the authentication level to default and remove any entries from the exception list
 
 ```powershell
-[array]$ExceptionList=@()
-[uint32]$AuthenticationLevel=<Authentication level value>
-Invoke-CimMethod -Namespace 'root\sms\site_<site code>' -ClassName 'SMS_Site' -MethodName 'SetAuthenticationLevel' -Arguments @{AuthenticationLevel=$AuthenticationLevel;ExceptionList=$ExceptionList}
+[uint32]$AuthenticationLevel=0
+Invoke-CimMethod -Namespace 'root\sms\site_<site code>' -ClassName 'SMS_Site' -MethodName 'SetAuthenticationLevel' -Arguments @{AuthenticationLevel=$AuthenticationLevel}
 ```
