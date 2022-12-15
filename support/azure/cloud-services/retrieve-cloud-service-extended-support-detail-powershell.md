@@ -1,6 +1,6 @@
 ---
-title:
-description: 
+title: Retrieve Cloud Service Extended Support detail via PowerShell
+description: Describes how to get the Cloud Service Extended Support (CSES) configuration data via PowerShell and REST API.
 ms.date: 12/15/2022
 ms.reviewer: 
 author: AmandaAZ
@@ -29,7 +29,7 @@ PowerShell commands example:
 
 ```powershell
 Connect-AzAccount
-$cses = Get-AzCloudService -ResourceGroupName "xxx" -CloudServiceName "xxx"
+$cses = Get-AzCloudService -ResourceGroupName "resource-group-name" -CloudServiceName "cloud-service-name"
 [xml]$xml = $cses.Configuration
 ```
 
@@ -37,7 +37,7 @@ $cses = Get-AzCloudService -ResourceGroupName "xxx" -CloudServiceName "xxx"
 
 ## PowerShell command to send out REST API request to get the CSES configuration
 
-To use the [Cloud Services - Get](/rest/api/compute/cloud-services/get) REST API to get the CSES configuration data by sending out REST API request in PowerShell, follow these steps:
+To use the [Cloud Services - Get](/rest/api/compute/cloud-services/get) REST API to get the CSES configuration data by sending out a REST API request in PowerShell, follow these steps:
 
 1. Use command [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) to login.
 2. Use command [Invoke-AzRestMethod](/powershell/module/az.accounts/invoke-azrestmethod) to send out the REST API request.
