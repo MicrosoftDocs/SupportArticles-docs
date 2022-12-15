@@ -121,6 +121,8 @@
       items:
         - name: Can't automate webpage with iframes
           href: cannot-automate-webpage-with-iframes.md
+        - name: Handle issues with Power Automate browser extensions
+          href: web-extensions-policies.md
         - name: Can't interact with web elements on runtime
           href: web-automation-action-fails-runtime.md
         - name: Can't record in a VDI environment
