@@ -20,7 +20,7 @@ This article provides a resolution to issues related to Power Automate browser e
 
 ## Symptoms
 
-- An action of browser automation group fails at runtime with error **Failed to assume control of Chrome (Internal error or communication failure)**.
+- An action of browser automation group fails at runtime with error **Failed to assume control of browser (Internal error or communication failure)**.
 
 - During design time, when launching the UI element picker or the recorder and hovering the mouse over a webpage, the following message is displayed:
 
