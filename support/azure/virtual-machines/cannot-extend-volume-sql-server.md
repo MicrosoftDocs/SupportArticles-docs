@@ -3,7 +3,8 @@ title: Can't extend volume on a SQL Server-based standalone server virtual machi
 description: Troubleshoot an issue that prevents you from extending the volume on a SQL Server-based standalone server virtual machine that was deployed from Azure Marketplace.
 author: DennisLee-DennisLee
 ms.author: v-dele
-ms.date: 12/6/2022
+ms.reviewer: kirangowda,shasankp,glimoli,clandis,tatec
+ms.date: 12/12/2022
 ms.service: virtual-machines
 ms.subservice: vm-disk
 ---
@@ -30,11 +31,11 @@ You can extend these volumes from the Azure portal through the SQL Server config
 1. In the left pane, select **Storage Configuration** under **Settings**.
 1. Select **Configure** under **Configure drive**, and then extend the Data, Log, and temporary db (database) volume.
 
-   :::image type="content" source="./media/cannot-extend-volume-sql-server/sql-server-storage-configuration-ui.png" alt-text="A screenshot of the SQL Server Configuration window. Storage Configuration is highlighted in the left pane." lightbox="./media/cannot-extend-volume-sql-server/sql-server-storage-configuration-ui.png":::
+   :::image type="content" source="./media/cannot-extend-volume-sql-server/sql-server-storage-configuration-ui.png" alt-text="Azure portal screenshot of the SQL Server Configuration page. Storage Configuration is highlighted in the navigation pane." lightbox="./media/cannot-extend-volume-sql-server/sql-server-storage-configuration-ui.png":::
 
 1. Select the disk size, enter the number of new disks that have to be added to the existing storage pool, and then select **Apply**.
 
-   :::image type="content" source="./media/cannot-extend-volume-sql-server/extend-data-drive-ui.png" alt-text="A screenshot of the Extend Data Drive window.":::
+   :::image type="content" source="./media/cannot-extend-volume-sql-server/extend-data-drive-ui.png" alt-text="Azure portal screenshot of the Extend Data Drive page for a SQL virtual machine.":::
 
 > [!IMPORTANT]
 > Extending the disk volume will add disks on the VM. It will also extend the storage pool (and the volume that's created from that storage pool) without any user input from within the VM. 
