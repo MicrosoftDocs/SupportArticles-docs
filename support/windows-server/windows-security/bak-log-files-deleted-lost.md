@@ -19,7 +19,7 @@ _Applies to:_ &nbsp; Supported versions of Windows Server and Windows Client
 
 Assume that you're using the options of the following components to get text-based log files (`.log` files).
 
-- Security Account Manager component (*sam.log*) 
+- Security Account Manager component (*sam.log*)
 - Netlogon service (*netlogon.log*)
 - Group Policy Client service (*gpsvc.log*)
 - SID-Name mapping (*lsp.log*)
@@ -32,4 +32,3 @@ To retain the old `.bak` files, use a PowerShell [script](https://cesdiagtools.b
 
 > [!NOTE]
 > If you run this script on a regular basis, archive the logs to prevent an overuse of hard disk space.
- 
