@@ -13,15 +13,15 @@ This article introduces how to retrieve the Cloud Service Extended Support (CSES
 
 ## Prerequisites
 
-No matter PowerShell command or Rest API request will be used to get the information, the Azure Az PowerShell module is necessary. For the installation details, refer to [Install the Azure Az PowerShell module](/powershell/azure/install-az-ps).
+No matter PowerShell commands or a Rest API request will be used to get the information, the Azure Az PowerShell module is necessary. For the installation details, refer to [Install the Azure Az PowerShell module](/powershell/azure/install-az-ps).
 
-## PowerShell command to get the CSES configuration
+## PowerShell commands to get the CSES configuration
 
 To use [Get-AzCloudService](/powershell/module/az.cloudservice/get-azcloudservice) to get the CSES configuration data, follow these steps:
 
-1. Use command [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) to login.
+1. Use [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) to login.
 
-2. Use command [Get-AzCloudService](/powershell/module/az.cloudservice/get-azcloudservice) to get the full picture of your CSES resource and save it into a PowerShell variable such as `$cses` in the following example.
+2. Use [Get-AzCloudService](/powershell/module/az.cloudservice/get-azcloudservice) to get the full picture of your CSES resource and save it into a PowerShell variable such as `$cses` in the following example.
 
 3. Convert the configuration of the CSES into XML format.
 
@@ -35,15 +35,17 @@ $cses = Get-AzCloudService -ResourceGroupName "resource-group-name" -CloudServic
 
 :::image type="content" source="media/retrieve-cloud-service-extended-support-detail-powershell/command-get-cses-configuration.png" alt-text="Screenshot of PowerShell commands to get the CSES configuration.":::
 
-## PowerShell command to send out REST API request to get the CSES configuration
+## PowerShell commands to send out REST API request to get the CSES configuration
 
-To use the [Cloud Services - Get](/rest/api/compute/cloud-services/get) REST API to get the CSES configuration data by sending out a REST API request in PowerShell, follow these steps:
+To use the [Cloud Services - Get](/rest/api/compute/cloud-services/get) REST API to get the CSES configuration data by sending out a REST API request from PowerShell, follow these steps:
 
-1. Use command [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) to login.
-2. Use command [Invoke-AzRestMethod](/powershell/module/az.accounts/invoke-azrestmethod) to send out the REST API request.
+1. Use [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) to login.
+2. Use [Invoke-AzRestMethod](/powershell/module/az.accounts/invoke-azrestmethod) to send out the REST API request.
 
-    The path in the command will be the same for every user except the value such as your own subscription ID, resource group name and CSES resource name. Once we get the response, we can use some other PowerShell functions like `convertfrom-json` to proceed the data and then save it into a PowerShell variable such as `$csesapi` in the following example.
+    The path in the command will be the same for every user except the value such as your own subscription ID, resource group name and CSES resource name. Once you get the response, you can use some other PowerShell cmdlets like `convertfrom-json` to proceed the data and then save it into a PowerShell variable such as `$csesapi` in the following example.
 3. Convert the configuration of the CSES into XML format.
+
+PowerShell commands example:
 
 ```powershell
 Connect-AzAccount 
@@ -53,11 +55,11 @@ $csesapi = (Invoke-AzRestMethod -Path "/subscriptions/{subscription-id}/resource
 
 Example of a REST API request:
 
-:::image type="content" source="media/retrieve-cloud-service-extended-support-detail-powershell/send-rest-api-to-get-cses-configuration.png" alt-text="Screenshot of REST API request to get the CSES configuration.":::
+:::image type="content" source="media/retrieve-cloud-service-extended-support-detail-powershell/send-rest-api-to-get-cses-configuration.png" alt-text="Screenshot of REST API request to get the CSES configuration." lightbox="media/retrieve-cloud-service-extended-support-detail-powershell/send-rest-api-to-get-cses-configuration.png":::
 
 ## Sample about how to get OS Family, OS Version and any other data
 
-No matter a PowerShell command or REST API is used with the instructions above, the `$xml` from both ways will be the same.
+No matter PowerShell commands or a REST API is used with the instructions above, the `$xml` from both ways will be the same.
 
 Here's a CSES configuration data sample:
 
@@ -65,7 +67,7 @@ Here's a CSES configuration data sample:
 
 The `$xml` is the whole configuration file in XML format. To get the data, such as `osFamily`, `osVersion` or `VirtualNetworkSite`, follow the construction of this XML file to add related names to identify the data of which level is needed.
 
-For example, for `osVersion`/`osFamily`, the path to it will be `ServiceConfiguration` > `osVersion`/`osFamily`. So the expression to get the data in PowerShell will be `$xml.ServiceConfiguration.osVersion` / `$xml.ServiceConfiguration.osFamily`.
+For example, for `osVersion`/`osFamily`, the path to it will be `ServiceConfiguration` > `osVersion`/`osFamily`. So the expression to use in PowerShell to get the data will be `$xml.ServiceConfiguration.osVersion` / `$xml.ServiceConfiguration.osFamily`.
 
 :::image type="content" source="media/retrieve-cloud-service-extended-support-detail-powershell/osfamily-osversion-expression-example.png" alt-text="Screenshot of an osFamily/osVersion expression example.":::
 
