@@ -1,7 +1,7 @@
 ---
 title: Find the current Active Directory Schema Version
 description: Describes how to find the current Schema Version.
-ms.date: 10/09/2020
+ms.date: 12/15/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -83,10 +83,18 @@ To find the current Exchange Schema Version, you can use one of the following me
 
 ### Method 2
 
-Ues **DSQuery** command line:
+Use **DSQuery** command line:
 
 ```console
 dsquery * "CN=ms-Exch-Schema-Version-Pt,cn=schema,cn=configuration,dc=contoso,dc=local" -scope base -attr rangeUpper
+```
+
+### Method 3
+
+Run the `Get-ItemProperty` PowerShell cmdlet:
+
+```powershell
+Get-ItemProperty "AD:\CN=ms-Exch-Schema-Version-Pt,cn=schema,cn=configuration,$((get-addomain).DistinguishedName)" -Name rangeUpper
 ```
 
 ### Some "rangeUpper" attribute map
