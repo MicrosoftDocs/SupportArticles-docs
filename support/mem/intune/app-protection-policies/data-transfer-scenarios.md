@@ -33,7 +33,7 @@ In this scenario, a user needs to transfer files to unmanaged apps even though y
 
     :::image type="content" source="media/data-transfer-scenarios/select-apps-to-exempt.png" alt-text="A screenshot of the 'Select apps to exempt' setting under 'Send org data to other apps'.":::
 
-Refer to [Troubleshooting exemptions to data transfer policies](troubleshoot-data-transfer-exemptions.md) for more information.
+For more information, see [Troubleshooting exemptions to data transfer policies](troubleshoot-data-transfer-exemptions.md).
 
 ## Users cannot save corporate files to local storage
 
