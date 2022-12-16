@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting operating system disk sector size greater than 4 KB
 description: This article troubleshoots SQL Server installation or startup failures related to some new storage devices and device drivers exposing a disk sector size greater than the supported 4-KB sector size.
-ms.date: 12/22/2021
+ms.date: 12/16/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: ramakoni, dplessMSFT, briancarrig, suresh-kandoth 
 ms.prod: sql
@@ -87,7 +87,7 @@ For example, to analyze the E: volume, run the following command:
 fsutil fsinfo sectorinfo E:
 ```
 
-Look for the value `PhysicalBytesPerSectorForAtomicity`, returned in bytes. A value of 4096 indicates a sector storage size of 4 KB.
+Look for the values `PhysicalBytesPerSectorForAtomicity` and `PhysicalBytesPerSectorForPerformance`, returned in bytes, and if they're different, retain the _largest_ one to ascertain the disk sector size. A value of 4096 indicates a sector storage size of 4 KB.
 
 Additionally, be aware of the Windows support policy for file system and storage sector size support. For more information, see the [Microsoft support policy for 4-KB sector hard drives in Windows](../../windows-server/backup-and-storage/support-policy-4k-sector-hard-drives.md) article.
 
@@ -153,7 +153,7 @@ The Windows 10 drivers don't report the source sector size of the physical stora
 
 The improved Windows 11 drivers disregard the emulation that common NVMe storage devices are using. As an example, `fsutil` displays a sector size of 8 KB or 16 KB, rather than emulating the required 4-KB sector size required by Windows.
 
-The following table provides a comparison of the sector sizes reported by the operating systems. This example illustrates the differences between Windows 10 and Windows 11 using the same storage device. For the value of `PhysicalBytesPerSectorForAtomicity`, Windows 10 displays 4 KB and Windows 11 displays 16 KB.
+The following table provides a comparison of the sector sizes reported by the operating systems. This example illustrates the differences between Windows 10 and Windows 11 using the same storage device. For the values of `PhysicalBytesPerSectorForAtomicity` and `PhysicalBytesPerSectorForPerformance`, Windows 10 displays 4 KB and Windows 11 displays 16 KB.
 
 **Sample output of `fsutil fsinfo sectorinfo <volume pathname>`**
 
