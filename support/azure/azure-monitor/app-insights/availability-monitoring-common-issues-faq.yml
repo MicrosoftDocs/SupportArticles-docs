@@ -43,6 +43,11 @@ sections:
           This error indicates that you have to add firewall exceptions to allow the availability agents to test your target URL. For a full list of agent IP addresses to allow, see the [IP exception article](/azure/azure-monitor/app/ip-addresses#availability-tests).
 
       - question: |
+          Why do I see "Other values" in my web test telemetry?
+        answer: |
+          Application Insights [limits availability tests](/azure/azure-resource-manager/management/azure-subscription-service-limits#application-insights) to 100 per Application Insights resource. If you create custom web test results by calling the `TrackAvailability()` API, you could attempt to exceed that limit. For any availability test name, location, or other field values where the cardinality exceeds 100, its value will be replaced with "Other values". If you need more than 100 different web test names or locations, you can use a second Application Insights component. 
+ 
+      - question: |
           Why don't I see any related server-side telemetry to diagnose test failures?
         answer: |
           This situation might exist if you have Application Insights set up for your server-side application and [sampling](/azure/azure-monitor/app/sampling) is in operation. Select a different availability result.

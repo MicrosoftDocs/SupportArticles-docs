@@ -8,6 +8,8 @@
 
 - name: Troubleshoot compute health
   items:
+  - name: VMSS instances remain in "Unhealthy" state and aren't repaired
+    href: instances-not-repaired.md
   - name: Resource Health shows Degraded state in VMSS
     href: resource-health-degraded-state.md
   - name: VM is unavailable for 15 minutes

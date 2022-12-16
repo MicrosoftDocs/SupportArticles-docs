@@ -4534,6 +4534,11 @@
       "source_path": "support/dynamics-365/finance/sales-tax/sales-tax-troubleshooting-voucher-not-generated.md",
       "redirect_url": "/troubleshoot/dynamics-365/finance/tax/sales-tax-troubleshooting-voucher-not-generated",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/connect/login-failed-for-user.md",
+      "redirect_url": "/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error",
+      "redirect_document_id": false
     }
   ]
 }
