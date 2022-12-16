@@ -203,7 +203,15 @@ If you're using a group Managed Service Accounts (gMSA) account to run the SQL S
 
 To identify and resolve the issue, follow these steps:
   
-1. Verify the account you're using is a gMSA account by [checking the account](/virtualization/windowscontainers/manage-containers/gmsa-troubleshooting#check-the-gmsa-account). Proceed only after confirming gMSA.
+1. Verify the account you're using is a gMSA account. Proceed only after confirming gMSA. 
+   - If the following command succeeds against the account, then you are using a gMSG account.
+   - If it fails with `Cannot find an object with identity: 'account'`, then the serivce account is not a gMSA account.
+
+   ```powershell
+   Get-ADServiceAccount -Identity 'yourGmsaName' -Properties PasswordLastSet
+   ```
+
+   For more information see [Check the gMSA account](/virtualization/windowscontainers/manage-containers/gmsa-troubleshooting#check-the-gmsa-account). 
 
 1. Run the following command in **Command Prompt** and check the status of IsManagedAccount. The desired outcome is true. If false, proceed further.
 
