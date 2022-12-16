@@ -15,11 +15,11 @@ ms.technology: windows-server-active-directory
 ---
 # Outdated cached credentials are used when you run an elevated task
 
-This article helps to resolve the issue in which the outdated cached credentials are used when you run an elevated task.
+This article helps to resolve the issue in which outdated cached credentials are used when you run an elevated task.
 
 _Applies to:_ &nbsp; Supported versions of Windows Server and Windows Client  
 
-You log on to a Windows computer by using a non-administrator account, and run an elevated task by selecting the **Run as Administrator** option. Then, you are prompted for an administrator credential, and you enter an administrator account credential to continue the operation.
+You log on to a Windows computer using a non-administrator account and run an elevated task by selecting the **Run as Administrator** option. Then, you are prompted for an administrator credential, and you enter an administrator account credential to continue the operation.
 
 > [!NOTE]
 > When you use an administrator account for the first time on the computer, the administrator group membership and password are cached locally on the computer.
@@ -45,9 +45,9 @@ To resolve this issue, you can create a registry entry for authenticating the us
 
     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System`
 3. On the **Edit** menu, point to **New**, and then select **DWORD (32-bit) Value**.
-4. Type *InteractiveLogonFirst*, and then press Enter.
-5. Right-click **InteractiveLogonFirst**, and then select **Modify**.
-6. Type *1* in the **Value data** box, and then select **OK**.
+4. Type *InteractiveLogonFirst* and press Enter.
+5. Right-click **InteractiveLogonFirst** and select **Modify**.
+6. Type *1* in the **Value data** box and select **OK**.
 7. Exit Registry Editor.
 
 > [!NOTE]
