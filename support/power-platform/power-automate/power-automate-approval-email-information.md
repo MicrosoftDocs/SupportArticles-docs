@@ -37,6 +37,8 @@ For GCC and GCC High Power Automate, approval emails may come from any of the fo
 
 - 131.253.121.20
 - 131.253.121.52
+- 52.244.206.214
+- 13.72.50.45
 
 Approval emails will be sent in these environments with a sender address of `flow-noreply@microsoft.com`.
 
@@ -50,5 +52,7 @@ Approval emails may come from any of the following IPs:
 - 42.159.163.81
 - 42.159.163.82
 - 42.159.163.83
+- 40.73.102.218
+- 139.217.96.195
 
 All approval emails will be sent with a sender address of `maccount@microsoft.com` or `flow-noreply@microsoft.com`.
