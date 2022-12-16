@@ -1,9 +1,10 @@
 ---
 title: Error 1069 when starting SQL Server service
 description: Provides resolutions for the error 1069 when starting the SQL Server or the SQL Server Agent service. The resolutions for event ID 7041 and event ID 7038 are different.
-ms.date: 10/29/2021
-ms.custom: sap:Administration and Management
+ms.reviewer: pijocoder
+ms.date: 12/15/2022
 ms.prod: sql
+ms.custom: sap:Administration and Management
 ---
 # Error 1069 occurs when you start SQL Server service
 
@@ -17,7 +18,7 @@ _Original KB number:_ &nbsp; 282254
 When you try to restart Microsoft SQL Server or the SQL Server Agent, the service doesn't start, and you receive the following error message, depending on how you try to start the service:
 
 - By using the Services applet:
-  
+
     > Windows could not start the SQL Server service on Local Computer.  
     Error 1069: The service did not start due to a logon failure.
 
@@ -26,37 +27,35 @@ When you try to restart Microsoft SQL Server or the SQL Server Agent, the servic
     > System error 1069 has occurred.  
       The service did not start due to a logon failure.
 
+You may find addition messages logged as events in the Application Event Log. Examples include 7041 and 7038.
+
 ## Cause
 
 This problem occurs because there is an issue either with the service account itself or the information that is currently saved for the service account.
 
-## Resolution
+## Resolution for Event ID 7041
 
-The resolutions for event ID 7041 and event ID 7038 are different. Note the event ID and description of the event that's associated with the failure in the system event log. Then, use the corresponding information to fix the issue.
-
-### Event ID: 7041
-
-In the log entry that is event ID 7041 related, you may find the following error message:
+In the log entry in the Event log that is related to event ID 7041, you may find the following error message:
 
 > Logon failure: the user has not been granted the requested logon type at this computer.
 
-The complete message entry in event log should resemble the following:
+The complete message entry in event log should resemble the following in the Application Event log:
 
 ```output
-Log Name:      System  
-Source:        Service Control Manager  
-Date:          <Datetime> 
-Event ID:      7041  
-Task Category: None  
-Level:         Error  
-Keywords:      Classic  
-User:          N/A  
-Computer:      <Server name>  
+Log Name:      System
+Source:        Service Control Manager
+Date:          <Datetime>
+Event ID:      7041
+Task Category: None
+Level:         Error
+Keywords:      Classic
+User:          N/A
+Computer:      <Server name>
 Description:
-The MSSQLSERVER service was unable to log on as NT Service\MSSQLSERVER with the currently configured password due to the following error:  
+The MSSQLSERVER service was unable to log on as NT Service\MSSQLSERVER with the currently configured password due to the following error:
 Logon failure: the user has not been granted the requested logon type at this computer.
 
-Service: MSSQLSERVER  
+Service: MSSQLSERVER
 Domain and account: <Account name>
 
 This service account does not have the required user right "Log on as a service."
@@ -76,7 +75,7 @@ To fix this issue, check which permissions are assigned to the \<Account Name> s
 
 1. Review the service account to learn whether it was assigned any Deny* permissions. Remove any Deny* permissions from the SQL Service service account and then retest.  For example, if the service account was assigned Deny Service Logon `SeDenyServiceLogonRight` along with `SeServiceLogonRight`, revoke the `SeDenyServiceLogonRight` right for the logon and restart SQL Server.
 
-### Event ID: 7038
+## Resolution for Event ID 7038
 
 In the log entries that are event ID 7038 related, you may find the following error message:
 
@@ -85,23 +84,23 @@ In the log entries that are event ID 7038 related, you may find the following er
 - [The user name or password is incorrect](#the-user-name-or-password-is-incorrect).
 - [The referenced account is currently locked out and may not be logged on to](#the-referenced-account-is-currently-locked-out-and-may-not-be-logged-on-to).
 
-#### This user can't sign in because this account is currently disabled
+### This user can't sign in because this account is currently disabled
 
 The complete message entry in event log should resemble the following:
 
 ```output
-Log Name:      System  
-Source:        Service Control Manager  
-Date:          <Datetime>  
-Event ID:      7038  
-Task Category: None  
-Level:         Error  
-Keywords:      Classic  
-User:          N/A  
-Computer:      <Server name>  
+Log Name:      System
+Source:        Service Control Manager
+Date:          <Datetime>
+Event ID:      7038
+Task Category: None
+Level:         Error
+Keywords:      Classic
+User:          N/A
+Computer:      <Server name>
 Description:
-The MSSQLSERVER service was unable to log on as .\sqlsrvlogin with the currently configured password due to the following error:  
-This user can't sign in because this account is currently disabled.  
+The MSSQLSERVER service was unable to log on as .\sqlsrvlogin with the currently configured password due to the following error:
+This user can't sign in because this account is currently disabled.
 
 To ensure that the service is configured properly, use the Services snap-in in Microsoft Management Console (MMC).
 ```
@@ -112,23 +111,23 @@ To fix this issue, follow these steps:
 
 1. If SQL Server Startup account is a Windows Domain Account, check whether the account is disabled in Active Directory Users and Computers. If it is disabled, enable the account, and restart the SQL Server service.
 
-#### The user's password must be changed before signing in
+### The user's password must be changed before signing in
 
 The complete message entry in event log should resemble the following:
 
 ```output
-Log Name:      System  
-Source:        Service Control Manager  
-Date:          <Datetime>  
-Event ID:      7038  
-Task Category: None  
-Level:         Error  
-Keywords:      Classic  
-User:          N/A  
-Computer:      <Server name>  
+Log Name:      System
+Source:        Service Control Manager
+Date:          <Datetime>
+Event ID:      7038
+Task Category: None
+Level:         Error
+Keywords:      Classic
+User:          N/A
+Computer:      <Server name>
 Description:
-The MSSQLSERVER service was unable to log on as .\sqlsrvlogin with the currently configured password due to the following error:  
-The user's password must be changed before signing in.  
+The MSSQLSERVER service was unable to log on as .\sqlsrvlogin with the currently configured password due to the following error:
+The user's password must be changed before signing in.
 
 To ensure that the service is configured properly, use the Services snap-in in Microsoft Management Console (MMC).
 ```
@@ -141,23 +140,23 @@ To fix this issue, follow these steps:
 
 1. If the property in step 2 is enabled, you must either clear this option or log in interactively to a Windows client, and then set a new password, then, update the new password for the SQL Server Service by using the SQL Server Configuration Manager tool.
 
-#### The user name or password is incorrect
+### The user name or password is incorrect
 
 The complete message entry in event log should resemble the following:
 
 ```output
-Log Name:      System  
-Source:        Service Control Manager  
-Date:          <Datetime>  
-Event ID:      7038  
-Task Category: None  
-Level:         Error  
-Keywords:      Classic  
-User:          N/A  
-Computer:      <Server name>  
+Log Name:      System
+Source:        Service Control Manager
+Date:          <Datetime>
+Event ID:      7038
+Task Category: None
+Level:         Error
+Keywords:      Classic
+User:          N/A
+Computer:      <Server name>
 Description:
-The MSSQLSERVER service was unable to log on as .\sqlsrvlogin with the currently configured password due to the following error:  
-The user name or password is incorrect.  
+The MSSQLSERVER service was unable to log on as .\sqlsrvlogin with the currently configured password due to the following error:
+The user name or password is incorrect.
 
 To ensure that the service is configured properly, use the Services snap-in in Microsoft Management Console (MMC).
 ```
@@ -175,18 +174,18 @@ Type the correct password in the SQL Server service account on the SQL Server ho
 The complete message entry in event log should resemble the following:
 
 ```output
-Log Name:      System  
-Source:        Service Control Manager  
-Date:          <Datetime>  
-Event ID:      7038  
-Task Category: None  
-Level:         Error  
-Keywords:      Classic  
-User:          N/A  
-Computer:      <Server name>  
+Log Name:      System
+Source:        Service Control Manager
+Date:          <Datetime>
+Event ID:      7038
+Task Category: None
+Level:         Error
+Keywords:      Classic
+User:          N/A
+Computer:      <Server name>
 Description:
-The MSSQLSERVER service was unable to log on as .\sqlsrvlogin with the currently configured password due to the following error:  
-The referenced account is currently locked out and may not be logged on to.  
+The MSSQLSERVER service was unable to log on as .\sqlsrvlogin with the currently configured password due to the following error:
+The referenced account is currently locked out and may not be logged on to.
 
 To ensure that the service is configured properly, use the Services snap-in in Microsoft Management Console (MMC).
 ```
