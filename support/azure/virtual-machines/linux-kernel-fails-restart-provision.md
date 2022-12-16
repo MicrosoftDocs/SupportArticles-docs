@@ -64,7 +64,7 @@ To resolve this problem, try [manually restarting](/cli/azure/vm#az-vm-restart) 
 |Red Hat Enterprise Linux, CentOS, Oracle<br/>Linux|7.x|3.10.0-514.16+| Run the following command: <br/>`yum -y update kernel`<br/><br/>|
 |Debian|7|None available|Upgrade to Debian 9|
 | Debian|8|4.9 +| Enable Debian backports, and then run the following command: <br/>`sudo apt-get update && sudo apt-get install linux-image-amd64 hyperv-daemons`<br/><br/>|
-| CoreOS|Any|4.9 +|Follow the instructions in [Reboot strategies on updates.](https://coreos.com/os/docs/latest/update-strategies.html) |
+| CoreOS|Any|4.9 +|Follow the instructions in [Reboot strategies on updates.](https://github.com/coreos/docs/blob/master/os/update-strategies.md) |
   
 ## More information
 
