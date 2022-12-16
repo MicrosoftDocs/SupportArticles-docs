@@ -99,7 +99,7 @@ ORDER BY stats_last_updated_date
 After identifying candidate tables in the previous steps, run the statement(s) generated in the `update_stats_stmt` column of the queries to update the statistics.
 
 > [!NOTE]
-> We don't recommend updating individual statistics, even when user-created. By running `UPDATE STATISTICS` without specifying a statistics name, all statistics associated to the table, as well as the control node row count, will be updated. You may need to consider overriding the default scan percentage by using `WITH FULLSCAN` or `WITH SAMPLE <SamplePercent> PERCENT` to achieve appropriate accuracy for large tables. See [UPDATE STATISTICS (Transact-SQL)](/sql/t-sql/statements/update-statistics-transact-sql) for the full syntax.
+> We don't recommend updating individual statistics, even when user-created. By running `UPDATE STATISTICS` without specifying a statistics name, all statistics associated with the table, as well as the control node row count, will be updated. You may consider overriding the default scan percentage by using `WITH FULLSCAN` or `WITH SAMPLE <SamplePercent> PERCENT` to achieve appropriate accuracy for large tables. See [UPDATE STATISTICS (Transact-SQL)](/sql/t-sql/statements/update-statistics-transact-sql) for the full syntax.
 
 For example:
 
