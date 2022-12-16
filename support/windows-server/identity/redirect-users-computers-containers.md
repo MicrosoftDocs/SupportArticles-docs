@@ -50,13 +50,11 @@ B:32:A9D1CA15768811D1ADED00C04FD8D5CD:CN=Users,DC=GPN,DC=COM;
 
 For example, the following operations use earlier-version APIs, which rely on the paths defined in the WellKnownObjects attribute:
 
-| Operation| Operating system versions |
-|---|---|
-|Domain Join UI|Windows NT version4.0<br/><br/>Windows 2000<br/><br/>Windows XP Professional<br/>Windows XP Ultimate<br/><br/>Windows Server 2003<br/>Windows Server 2003 R2<br/><br/>Windows Vista<br/><br/>Windows Server 2008<br/><br/>Windows 7<br/><br/>Windows Server 2008 R2<br/>|
-|NET COMPUTER|All versions|
-|NET GROUP|All versions|
-|NET USER|All versions|
-|NETDOM ADD, where the /ou command is either not specified or supported|All versions|
+- Domain Join UI
+- NET COMPUTER
+- NET GROUP
+- NET USER
+- NETDOM ADD, where the `/ou` command is either not specified or supported
   
 It's helpful to make the default container for user, computer, and security groups an OU for several reasons, including:
 
@@ -83,17 +81,19 @@ If you're redirecting the CN=Users and CN=Computers folders, be aware of the fol
 
     A scripted option is documented in [Script to Protect Organizational Units (OUs) from Accidental Deletion](https://gallery.technet.microsoft.com/scriptcenter/c307540f-bd91-485f-b27e-995ae5cea1e2).
 
+- Redirecting CN=USERS affects the default location for new users, groups and trust user accounts. Trust user accounts are hidden in most UI admin tools, but you can show and move them in tools like LDIFDE and LDP. The CN of the account is \<downlevel domain name>$, for example "contoso$".
+
 - Exchange Server 2000 and 2003 `setup /domainprep` fails with errors.
 
 ## Redirect CN=Users to an administrator-specified OU
 
-1. Log on with domain administrator credentials in the z domain where the CN=Users container is being redirected.
+1. Log on with domain administrator credentials in the domain where the CN=Users container is being redirected.
 
 2. Transition the domain to the Windows Server 2003 domain functional level or newer in either the Active Directory Users and Computers snap-in (Dsa.msc) or the Domains and Trusts (Domains.msc) snap-in. For more information about increasing the domain functional level, see [How to raise domain and forest functional levels](https://support.microsoft.com/help/322692).
 
-3. Create the OU container where you want users who are created with earlier-version APIs to be located, if the OU container that you want doesn't exist.
+3. Create the OU container where you want users and groups who are created with earlier-version APIs to be located, if the OU container that you want doesn't exist.
 
-4. Run Redirusr.exe at the command prompt by using the following syntax. In the command, _container-dn_ is the distinguished name of the OU that will become the default location for newly created user objects created by down-level APIs:
+4. Run Redirusr.exe at the command prompt by using the following syntax. In the command, _container-dn_ is the distinguished name of the OU that will become the default location for newly created user and group objects created by down-level APIs:
 
     ```console
     c:\windows\system32\redirusr container-dn
@@ -124,7 +124,9 @@ If you're redirecting the CN=Users and CN=Computers folders, be aware of the fol
     ```
 
     > [!NOTE]
-    > When Redircmp.exe is run to redirect the CN=Computers container to an OU specified by an administrator, the CN=Computers container will no longer be a protected object. This means that the Computers container can now be moved, deleted, or renamed. If you use ADSIEDIT to view attributes on the CN=Computers container, you will see that the systemflags attribute was changed from **-1946157056** to **0**. This is by design.
+    > When Redircmp.exe is run to redirect the CN=Users container to an OU specified by an administrator, the CN=Users container will no longer be a protected object. This means that the Users container can now be moved, deleted, or renamed. If you use ADSIEDIT to view attributes on the CN=Users container, you will see that the systemflags attribute was changed from **-1946157056** to **0**. This is by design.
+    >
+    > To delete the container, you have to move out the default users and groups to other OUs and containers, and also the trust user accounts. These trust accounts are shown using tools like LDIFDE and LDP, and can also be moved using these tools. We recommend to keep the container unchanged and the default accounts in place for consistency.
 
 ## Description of error messages
 
