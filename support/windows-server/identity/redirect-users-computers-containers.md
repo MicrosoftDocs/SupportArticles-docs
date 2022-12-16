@@ -102,6 +102,10 @@ If you're redirecting the CN=Users and CN=Computers folders, be aware of the fol
     Redirusr is installed in the `%SystemRoot%\System32` folder on Windows Server 2003-based or newer computers. For example, to change the default location for users who are created with down-level APIs such as Net User to the OU=MYUsers OU container in the `CONTOSO.COM` domain, use the following syntax:
 
     `c:\windows\system32>redirusr ou=myusers,DC=contoso,dc=com`
+    > [!NOTE]
+    > When Redirusr.exe is run to redirect the CN=Users container to an OU specified by an administrator, the CN=Users container will no longer be a protected object. This means that the Users container can now be moved, deleted, or renamed. If you use ADSIEDIT to view attributes on the CN=Users container, you will see that the systemflags attribute was changed from **-1946157056** to **0**. This is by design.
+    >
+    > To delete the container, you have to move out the default users and groups to other OUs and containers, and also the trust user accounts. These trust accounts are shown using tools like LDIFDE and LDP, and can also be moved using these tools. We recommend to keep the container unchanged and the default accounts in place for consistency.
 
 ## Redirect CN=Computers to an administrator-specified OU
 
@@ -124,9 +128,7 @@ If you're redirecting the CN=Users and CN=Computers folders, be aware of the fol
     ```
 
     > [!NOTE]
-    > When Redircmp.exe is run to redirect the CN=Users container to an OU specified by an administrator, the CN=Users container will no longer be a protected object. This means that the Users container can now be moved, deleted, or renamed. If you use ADSIEDIT to view attributes on the CN=Users container, you will see that the systemflags attribute was changed from **-1946157056** to **0**. This is by design.
-    >
-    > To delete the container, you have to move out the default users and groups to other OUs and containers, and also the trust user accounts. These trust accounts are shown using tools like LDIFDE and LDP, and can also be moved using these tools. We recommend to keep the container unchanged and the default accounts in place for consistency.
+    > When Redircmp.exe is run to redirect the CN=Computers container to an OU specified by an administrator, the CN=Computers container will no longer be a protected object. This means that the Computers container can now be moved, deleted, or renamed. If you use ADSIEDIT to view attributes on the CN=Computers container, you will see that the systemflags attribute was changed from -1946157056 to 0. This is by design.
 
 ## Description of error messages
 
