@@ -51,4 +51,4 @@ Approval emails may come from any of the following IPs:
 - 42.159.163.82
 - 42.159.163.83
 
-All approval emails will be sent with a sender address of `maccount@microsoft.com`.
+All approval emails will be sent with a sender address of `maccount@microsoft.com` or `flow-noreply@microsoft.com`.
