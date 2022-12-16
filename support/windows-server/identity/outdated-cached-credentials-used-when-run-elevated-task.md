@@ -28,7 +28,7 @@ When you run an elevated task by selecting the **Run as Administrator** option a
 
 ## The cached credentials aren't updated
 
-The cached credentials aren't updated when you run an elevated task. The cached credentials are not updated on the computer even when the group membership for the administrator account is changed in the domain environment. Therefore, the cached group membership is used on the computer.
+The cached credentials aren't updated when you run an elevated task. The cached credentials aren't updated on the computer even when the group membership for the administrator account is changed in the domain environment. Therefore, the cached group membership is used on the computer.
 
 ## Create a registry entry for authenticating the user credentials at a domain controller first
 
