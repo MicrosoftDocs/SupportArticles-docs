@@ -37,3 +37,11 @@ The first workaround reverts the National Language Support (NLS) sorting rule to
 > If you haven't installed KB4586853 or later on the computer, setting an invalid value in this registry might prevent the computer from starting.
 
 The second workaround sets the NLS sorting rule to version 6.4, which is the same as Windows 11. To do this, you must apply KB5014023 or a later update, and upgrade the version to *.1741 or higher. In this case, version 22H2 is already applied and doesn't need to be updated.
+
+1. Apply KB5014023 or a later update for versions 2004, 20H2, 21H1, and 21H2.
+1. Open the Command Prompt window (cmd.exe) with administrator privileges.
+1. Run `reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Nls\Sorting\Versions /ve /d 00060403 /f`
+1. Restart the computer or processes to see the full effect.
+
+Changing registry values can cause problems such as the system not booting. Make changes to the registry in case of unforeseen circumstances, such as creating a system backup.
+
