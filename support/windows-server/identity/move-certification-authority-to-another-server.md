@@ -30,7 +30,7 @@ Certification authorities (CAs) are the central component of the public key infr
 > [!NOTE]
 > To move a CA from a server that is running Windows 2000 Server to a server that is running Windows Server 2003, you must first upgrade the CA server that is running Windows 2000 Server to Windows Server 2003. Then you can follow the steps that are outlined in this article.
 
-Make sure that the %Systemroot% of the target server matches the %Systemroot% of the server from which the system state backup is taken.
+Make sure that the _%Systemroot%_ of the target server matches the _%Systemroot%_ of the server from which the system state backup is taken.
 
 You must change the path of the CA files when you install the CA server components so that they match the location of the backup. For example, if you back up from the _D:\\Winnt\\System32\\Certlog_ folder, you must restore the backup to the _D:\\Winnt\\System32\\Certlog_ folder. You cannot restore the backup to the _C:\\Winnt\\System32\\Certlog_ folder. After you restore the backup, you can move the CA database files to the default location.
 
@@ -78,10 +78,10 @@ An x64-based version of Windows Server 2003 R2 CD2 only updates 64-bit versions 
     4. Save the registry file in the CA backup folder that you defined in step 2d.
 
     > [!NOTE]
-    > By default, Active Directory Certificate Services (AD CS) is configured with certificate revocation list (CRL) Distribution Point extensions that include the CA computer host name in the path. This means any certificates issued by the CA before migration may contain certificate validation paths with the old host name. These paths may no longer be valid after the migration. To avoid revocation checking errors, the new CA must be configured to publish CRLs to the old (pre-migration) paths as well as the new paths. If you have to delete the old CA permanently, you can add a [second computer name to the new CA](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc835082(v=ws.11)). Before you can do that, the old computer name needs to be available in Active Directory. At this point, you can add the CRL Distribution Points to the new CA.
-4. Check the CRL Distribution Point on the old CA. These settings have to be configured in the new one.
+    > By default, Active Directory Certificate Services (AD CS) is configured with certificate revocation list (CRL) Distribution Point extensions that include the CA computer host name in the path. This means that any certificates issued by the CA before the migration may contain certificate validation paths with the old host name. These paths may no longer be valid after the migration. To avoid revocation checking errors, the new CA must be configured to publish CRLs to the old (pre-migration) paths and the new paths. If you have to delete the old CA permanently, you can add a [second computer name to the new CA](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc835082(v=ws.11)). Before you can do that, the old computer name needs to be available in Active Directory. At this point, you can add the CRL Distribution Points to the new CA.
+4. Check the CRL Distribution Point on the old CA. These settings have to be configured in the new CA.
     1. Open *cmd.exe* in the old CA.
-    2. Input `pkiview`.
+    2. Enter `pkiview`.
     3. Export the configuration.
 
 5. Remove Certificate Services from the old server.
@@ -106,7 +106,7 @@ An x64-based version of Windows Server 2003 R2 CD2 only updates 64-bit versions 
     8. Accept the Certificate Database Settings default settings, click **Next**, and then click **Finish** to complete the Certificate Services installation.
 
     > [!IMPORTANT]
-    > If the new server **has a different computer name** then follow these steps:
+    > If the new server **has a different computer name**, then follow these steps:
 
     1. In Control Panel, double-click **Add or Remove Programs**.
     2. Click **Add/Remove Windows Components**, click **Certificate Services** in the Windows Components Wizard, and then click **Next**.
@@ -124,7 +124,7 @@ An x64-based version of Windows Server 2003 R2 CD2 only updates 64-bit versions 
 
 8. Stop the Certificate Services service.
 
-9. Locate the registry file that you saved in step 3, and then double-click it to import the registry settings. If the path that is shown in the registry export from the old CA differs from the new path, you must adjust your registry export accordingly. By default, the new path is C:\\Windows in Windows Server 2003.
+9. Locate the registry file that you saved in step 3, and then double-click it to import the registry settings. If the path that is shown in the registry export from the old CA differs from the new path, you must adjust your registry export accordingly. By default, the new path is _C:\\\Windows_ in Windows Server 2003.
 
 10. Use the Certification Authority snap-in to restore the CA database. To do this, follow these steps:
 
@@ -197,9 +197,9 @@ An x64-based version of Windows Server 2003 R2 CD2 only updates 64-bit versions 
     3. Click **Configuration**, and then click **Export Registry File** on the **Registry** menu.
     4. Save the registry file in the CA backup folder that you defined in step 2d.
 
-4. Check the CRL Distribution Point on the old CA. These settings have to be configured in the new one.
+4. Check the CRL Distribution Point on the old CA. These settings have to be configured in the new CA.
     1. Open *cmd.exe* in the old CA.
-    2. Input `pkiview`.
+    2. Enter `pkiview`.
     3. Export the configuration.
 
 5. Remove Certificate Services from the old server.
