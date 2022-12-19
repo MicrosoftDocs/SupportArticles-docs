@@ -14,11 +14,11 @@ This article provides solutions for troubleshooting errors during installation o
 
 The errors discussed in this article are related to system disk sector size greater than 4 KB.
 
-_Applies to_: &nbsp; SQL Server  
+_Applies to_: &nbsp; SQL Server all versions
 
 ## Symptoms
 
-**Scenario #1:** You install SQL Server 2016 or an earlier version on a Windows 11 device. Then, you see errors similar to the following message for the Database Engine Services component of SQL Server:
+**Scenario #1:** You install any version of SQL Server on a Windows 11 device. Then, you see errors similar to the following message for the Database Engine Services component of SQL Server:
 
 ```output
 Feature: Database Engine Services 
@@ -30,13 +30,13 @@ Component error code: 0x851A001A
 Error description: Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes. 
 ```
 
-**Scenario #2:** You install SQL Server on a Windows 10 device. Then, you upgrade the OS on the device to Windows 11. When you try to start SQL Server 2016 or later versions on a Windows 11 device, the service fails to start and in the SQL Server error log, you notice entries similar to:
+**Scenario #2:** You install any version of SQL Server on a Windows 10 device. Then, you upgrade the OS on the device to Windows 11. When you try to start SQL Server on a Windows 11 device, the service fails to start and in the SQL Server error log, you notice entries similar to:
 
 ```output
 2021-11-05 23:42:47.14 spid9s There have been 256 misaligned log IOs which required falling back to synchronous IO. The current IO is on file C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\master.mdf. 
 ```
 
-**Scenario #3:** You install SQL Server 2016 or later versions on a Windows 10 device. Then, you upgrade the OS on the device to Windows 11. When you try to start SQL Server 2016 or later versions on a Windows 11 device, the service fails to start. In the SQL Server error log, you notice entries similar to:
+**Scenario #3:** You install any version of SQL Server on a Windows 10 device. Then, you upgrade the OS on the device to Windows 11. When you try to start SQL Server on a Windows 11 device, the service fails to start. In the SQL Server error log, you notice entries similar to:
 
 ```output
 Faulting application name: sqlservr.exe, version: 2019.150.2000.5, time stamp: 0x5d8a9215 
