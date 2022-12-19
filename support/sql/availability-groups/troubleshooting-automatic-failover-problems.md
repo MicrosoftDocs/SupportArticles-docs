@@ -177,13 +177,13 @@ SQL Server Always On health monitoring uses a local ODBC connection to monitor S
 
 ## Troubleshoot other failed failover events
 
-During failover, to monitor health of the new primary replica, AlwaysOn health monitoring must locally connect to the SQL Server instance transitioning to the primary role.
+During failover, to monitor the health of the new primary replica, AlwaysOn health monitoring must locally connect to the SQL Server instance transitioning to the primary role.
 
-Besides more common reasons covered in this document, there are myriad reasons this connection attempt may fail. To investigate the reasons, review the Cluster log on the failover partner (the replica you were unable to fail over to) after a failed failover attempt.
+Besides the more common reasons covered in this document, there are multiple other reasons this connection attempt may fail. To investigate the reasons, review the Cluster log on the failover partner (the replica you were unable to fail over to) after a failed failover attempt.
 
 1. Use Windows PowerShell to generate the Windows Cluster log on the cluster node.
 
-   To do this, run the following cmdlet in an elevated PowerShell window on the instance of SQL Server that is hosting the secondary replica that didn't transition into the primary role. A Cluster log will be generated for the last 60 minutes of activity.
+   To do this, run the following cmdlet in an elevated PowerShell window on the instance of SQL Server that's hosting the secondary replica that didn't transition into the primary role. A Cluster log will be generated for the last 60 minutes of activity.
 
    ```powershell
    Get-ClusterLog -Node <SQLServerNodeName> -TimeSpan 60
@@ -191,7 +191,7 @@ Besides more common reasons covered in this document, there are myriad reasons t
 
 1. Open the _Cluster.log_ file in Notepad to review the Windows Cluster log.
 
-1. Search for the string "Connect to SQL Server" that falls in the time of the failed failover event.
+1. Search for the string "Connect to SQL Server" that falls during the failed failover event.
 
 1. Review the subsequent login messages using the thread id (see the following picture) to correlate the events tied to login.
 
@@ -209,7 +209,7 @@ string [xFFFFFFFF]. (268435455)
 
 Resolution
 
-Launch SQL Server Configuration Manager and confirm Shared Memory or TCPIP are enabled
+Launch SQL Server Configuration Manager and confirm Shared Memory or TCPIP is enabled
 under the Client Protocols for the SQL Native Client Configuration.
 
 ### Example Set 2
@@ -219,7 +219,7 @@ Interfaces: Server doesn't support requested protocol [xFFFFFFFF]. (268435455)
 
 Resolution
 
-Launch SQL Server Configuration Manager and confirm Shared Memory or TCPIP are enabled
+Launch SQL Server Configuration Manager and confirm Shared Memory or TCPIP is enabled
 under the Client Protocols for the SQL Native Client Configuration.
 
 ### Example Set 3
