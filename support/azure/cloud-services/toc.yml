@@ -58,7 +58,7 @@
     href: intermittent-connection-failures-rdp.md
   - name: Read key vault certificate secrets from an app
     href: read-key-vault-certificate-secrets-from-cloud-service-app.md
-  - name: Retrieve Cloud Service Extended Support detail via PowerShell
+  - name: Retrieve Cloud Service (extended support) detail via PowerShell
     href: retrieve-cloud-service-extended-support-detail-powershell.md
   - name: Role instance restarts due to OS upgrades
     href: role-instance-restarts-os-upgrade.md
