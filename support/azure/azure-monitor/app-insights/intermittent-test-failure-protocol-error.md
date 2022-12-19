@@ -2,8 +2,8 @@
 title: Resolve an intermittent test failure and protocol violation error
 description: This article describes how to resolve an intermittent test failure and protocol violation error in Application Insights availability monitoring.
 ms.date: 9/12/2022
-author: kelleyguiney22
-ms.author: v-kegui
+author: DennisLee-DennisLee
+ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: aaronmax
 ms.service: azure-monitor
