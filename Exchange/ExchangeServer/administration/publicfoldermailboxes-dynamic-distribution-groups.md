@@ -1,6 +1,6 @@
 ---
 title: Unexpected PublicFolderMailBoxes groups are created
-description: After you install cumulative update 6, unexpected PublicFolderMailBoxes distribution groups exist in Exchange Server 2016.
+description: After you install cumulative update 6, unexpected PublicFolderMailBoxes distribution groups exist in Exchange Server 2016/2019.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -14,11 +14,11 @@ ms.custom:
 search.appverid: 
   - MET150
 appliesto: 
-  - Exchange Server 2016 Standard Edition
-  - Exchange Server 2016 Enterprise Edition
+  - Exchange Server 2016
+  - Exchange Server 2019
 ms.date: 3/31/2022
 ---
-# Unexpected PublicFolderMailBoxes dynamic distribution groups in Exchange Server 2016
+# Unexpected PublicFolderMailBoxes dynamic distribution groups in Exchange Server 2016/2019
 
 _Original KB number:_ &nbsp; 4035952
 
@@ -27,8 +27,8 @@ _Original KB number:_ &nbsp; 4035952
 Consider the following scenario:
 
 - You have an Active Directory site that has more than one domain controller.
-- The Exchange Server 2016 server in the site has Cumulative Update 6 installed.
-- The first public folder mailbox is created on Exchange Server 2016.
+- The Exchange Server 2016 server in the site has Cumulative Update 6 or later installed.
+- The first public folder mailbox is created on Exchange Server 2016/2019.
 
 In this scenario, multiple dynamic distribution groups are created unexpectedly. The names of these dynamic distribution groups begin with PublicFolderMailboxes.
 
@@ -36,7 +36,7 @@ In this scenario, multiple dynamic distribution groups are created unexpectedly.
 
 ## Cause
 
-Exchange Server 2016 creates a dynamic distribution group for hierarchy sync of public folders. In an environment that has multiple domain controllers, the entry for the dynamic distribution group is created in one of the domain controllers. Immediately, a process looks up the dynamic distribution group from a different domain controller to verify whether the dynamic distribution group exists. Because Active Directory replication hasn't happened yet, the dynamic distribution group is not replicated. Therefore, it is not found and is created again. Until replication occurs, a new dynamic distribution group is created each time that the process runs.
+Exchange Server creates a dynamic distribution group for hierarchy sync of public folders. In an environment that has multiple domain controllers, the entry for the dynamic distribution group is created in one of the domain controllers. Immediately, a process looks up the dynamic distribution group from a different domain controller to verify whether the dynamic distribution group exists. Because Active Directory replication hasn't happened yet, the dynamic distribution group is not replicated. Therefore, it is not found and is created again. Until replication occurs, a new dynamic distribution group is created each time that the process runs (typically every 24 hours).
 
 ## Workaround
 
@@ -45,7 +45,7 @@ To work around this issue, hard code a domain controller on the Exchange Server 
 1. Remove the unexpected dynamic distribution groups by running the following command in the Exchange Management Shell:
 
     ```powershell
-    Get-DynamicDistributionGroup -IncludeSystemObjects PublicFolderMailboxes* | Remove- DynamicDistributionGroup
+    Get-DynamicDistributionGroup -IncludeSystemObjects PublicFolderMailboxes* | Remove-DynamicDistributionGroup
     ```
 
 2. In the Application log in Event Viewer, filter the log to show **Event ID 2080**.
