@@ -20,6 +20,8 @@
     href: dev-asp-net-signair-app-cannot-access.md
   - name: Webapp can't work when TryWebSockets is disabled
     href: dev-aspnet-signalr-application-not-work.md
+  - name: Use Azure DevOps to publish Cloud Services (extended support)
+    href: azure-devops-publish-cloud-service-extended.md
 - name: Remote Desktop Protocol doesn't work with Cloud Services (classic) resource
   href: rdp-not-working-cloud-service.md
 
