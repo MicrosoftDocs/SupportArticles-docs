@@ -1,19 +1,19 @@
 ---
-title: Retrieve Cloud Service (extended support) detail via PowerShell
-description: Describes how to get the Cloud Service (extended support) configuration data via PowerShell and REST API.
+title: Retrieve Azure Cloud Service (extended support) detail via PowerShell
+description: Describes how to get the Azure Cloud Service (extended support) configuration data via PowerShell and REST API.
 ms.date: 12/15/2022
 ms.reviewer: 
 author: AmandaAZ
 ms.author: v-weizhu
 ms.service: cloud-services
 ---
-# Retrieve Cloud Service Extended Support detail via PowerShell
+# Retrieve Azure Cloud Service (extended support) detail via PowerShell
 
 This article introduces how to retrieve the Cloud Service (extended support) configuration via PowerShell and REST API.
 
 ## Prerequisites
 
-No matter PowerShell commands or a Rest API request will be used to get the information, the Azure Az PowerShell module is necessary. For the installation details, refer to [Install the Azure Az PowerShell module](/powershell/azure/install-az-ps).
+No matter PowerShell commands or a Rest API request will be used to get the information, the Azure Az PowerShell module is necessary. For the installation details, see [Install the Azure Az PowerShell module](/powershell/azure/install-az-ps).
 
 ## PowerShell commands to get Cloud Service (extended support) configuration
 
