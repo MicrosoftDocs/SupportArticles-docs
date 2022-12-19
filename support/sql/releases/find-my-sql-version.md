@@ -21,6 +21,9 @@ _Original KB number:_ &nbsp; 321185
 
 To determine the version of SQL Server, you can use any of the following methods.
 
+> [!NOTE]  
+>  The version information follows *major.minor.build.revision* pattern. The revision inforamtion is not typically used when checking version of SQL server.
+
 - **Method 1:** Connect to the server by using Object Explorer in SQL Server Management Studio. After Object Explorer is connected, it will show the version information in parentheses, together with the user name that is used to connect to the specific instance of SQL Server.
 
 - **Method 2:** Look at the first few lines of the Errorlog file for that instance. By default, the error log is located at `Program Files\Microsoft SQL Server\MSSQL.n\MSSQL\LOG\ERRORLOG` and _ERRORLOG.n_ files. The entries may resemble the following:
