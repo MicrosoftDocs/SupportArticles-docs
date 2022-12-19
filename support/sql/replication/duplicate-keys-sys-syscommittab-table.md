@@ -75,7 +75,6 @@ If you're running SQL Server 2014, you must grant the per-Service SID full contr
 ### Transact-SQL script
 
 ```sql
-/*
 --Create a temporary database to store the necessary rows required to remove the duplicate data 
 
 IF EXISTS(SELECT 1 FROM sys.databases WHERE name = 'dbChangeTrackingMetadata')
