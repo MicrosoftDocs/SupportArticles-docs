@@ -43,5 +43,5 @@ The second workaround sets the NLS sorting rule to version 6.4, which is the sam
 1. Run `reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Nls\Sorting\Versions /ve /d 00060403 /f`
 1. Restart the computer or processes to see the full effect.
 
-Changing registry values can cause problems such as the system not booting. Make changes to the registry in case of unforeseen circumstances, such as creating a system backup.
+Changing registry values can cause problems such as the system not booting. Modify  the registry only in case of unforeseen circumstances, such as creating a system backup.
 
