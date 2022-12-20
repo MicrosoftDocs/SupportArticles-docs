@@ -34,7 +34,7 @@ The command output displays the installed version of KEDA:
 
 ```output
 APP
-2.7.0
+2.8.1
 ```
 
 ### Make sure that the cluster firewall is configured correctly
@@ -63,7 +63,7 @@ runtime.main
 In the metric server section, you might discover that KEDA can't start:
 
 ```output
-I0607 09:53:05.297924 1 main.go:147] keda_metrics_adapter "msg"="KEDA Version: 2.7.1"
+I0607 09:53:05.297924 1 main.go:147] keda_metrics_adapter "msg"="KEDA Version: 2.8.1"
 I0607 09:53:05.297979 1 main.go:148] keda_metrics_adapter "msg"="KEDA Commit: "
 I0607 09:53:05.297996 1 main.go:149] keda_metrics_adapter "msg"="Go Version: go1.17.9"
 I0607 09:53:05.298006 1 main.go:150] keda_metrics_adapter "msg"="Go OS/Arch: linux/amd64"
