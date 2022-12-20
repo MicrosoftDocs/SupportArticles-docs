@@ -1,6 +1,6 @@
 ---
 title: Unexpected PublicFolderMailBoxes groups are created
-description: After you install cumulative update 6, unexpected PublicFolderMailBoxes distribution groups exist in Exchange Server 2016/2019.
+description: After you install cumulative update 6, unexpected PublicFolderMailBoxes distribution groups exist in Exchange Server 2016 or 2019.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -18,7 +18,7 @@ appliesto:
   - Exchange Server 2019
 ms.date: 3/31/2022
 ---
-# Unexpected PublicFolderMailBoxes dynamic distribution groups in Exchange Server 2016/2019
+# Unexpected PublicFolderMailBoxes dynamic distribution groups in Exchange Server 2016 or 2019
 
 _Original KB number:_ &nbsp; 4035952
 
@@ -28,7 +28,7 @@ Consider the following scenario:
 
 - You have an Active Directory site that has more than one domain controller.
 - The Exchange Server 2016 server in the site has Cumulative Update 6 or later installed.
-- The first public folder mailbox is created on Exchange Server 2016/2019.
+- The first public folder mailbox is created on Exchange Server 2016 or 2019.
 
 In this scenario, multiple dynamic distribution groups are created unexpectedly. The names of these dynamic distribution groups begin with PublicFolderMailboxes.
 
