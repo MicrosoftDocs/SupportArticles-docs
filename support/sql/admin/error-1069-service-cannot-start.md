@@ -265,9 +265,9 @@ To fix this issue, use one of the following methods based on your scenario:
 
 - If the SQL Server Startup account is a Local User Account on the computer:
 
-  1. Open **Computer Management** (compmgmt.msc) and go to **Local Users and Groups**, then **Users**
-  1. Clear the **Account is Locked Out** checkbox for the SQL Server Startup Account under **Local Users & Groups** and press **OK**
-  1. Restart the SQL Server Service
+  1. Open **Computer Management** (compmgmt.msc) and go to **Local Users and Groups**, then **Users**.
+  1. Clear the **Account is Locked Out** checkbox for the SQL Server Startup Account under **Local Users & Groups** and press **OK**.
+  1. Restart the SQL Server Service.
 
 - If the SQL Server Startup account is a Windows Domain Account:
 
