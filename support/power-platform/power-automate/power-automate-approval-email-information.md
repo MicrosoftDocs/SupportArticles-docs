@@ -2,7 +2,7 @@
 title: Power Automate approval email information
 description: Describes the information about Power Automate approval emails.
 ms.reviewer: sranjan, hamenon
-ms.date: 10/08/2022
+ms.date: 12/16/2022
 ms.subservice: power-automate-flows
 ---
 # Power Automate approval email delivery information
@@ -29,7 +29,7 @@ For commercial Power Automate (all geos), approval emails may come from any IP i
 v=spf1 ip4:52.165.175.144 ip4:52.247.53.144 ip4:157.55.254.216 ip4:13.74.143.28 ip4:104.214.25.77 ip4:207.46.225.107 ip4:51.137.58.21 ip4:138.91.172.26 ip4:52.250.107.196 ip4:13.92.31.129 ip4:40.77.102.222 ip4:51.144.100.179 ip4:52.160.39.140 ip4:52.244.206.214 ip4:13.72.50.45 ip4:20.118.139.208/30 ip4:20.98.194.68/30 ip4:20.83.222.104/30 ip4:20.88.157.184/30 ip4:20.59.80.4/30 ip4:20.51.6.32/30 ip4:20.97.34.220/30 ip4:20.107.239.64/30 ip4:20.105.209.76/30 ~all
 ```
 
-All approval emails will be sent with a sender address of `maccount@microsoft.com`.
+All approval emails will be sent with a sender address of `maccount@microsoft.com` or `flow-noreply@microsoft.com`.
 
 ## GCC (Government)
 
@@ -37,6 +37,8 @@ For GCC and GCC High Power Automate, approval emails may come from any of the fo
 
 - 131.253.121.20
 - 131.253.121.52
+- 52.244.206.214
+- 13.72.50.45
 
 Approval emails will be sent in these environments with a sender address of `flow-noreply@microsoft.com`.
 
@@ -50,5 +52,7 @@ Approval emails may come from any of the following IPs:
 - 42.159.163.81
 - 42.159.163.82
 - 42.159.163.83
+- 40.73.102.218
+- 139.217.96.195
 
-All approval emails will be sent with a sender address of `maccount@microsoft.com`.
+All approval emails will be sent with a sender address of `maccount@microsoft.com` or `flow-noreply@microsoft.com`.
