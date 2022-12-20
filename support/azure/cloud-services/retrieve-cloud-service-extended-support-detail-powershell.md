@@ -33,8 +33,6 @@ $cses = Get-AzCloudService -ResourceGroupName "resource-group-name" -CloudServic
 [xml]$xml = $cses.Configuration
 ```
 
-:::image type="content" source="media/retrieve-cloud-service-extended-support-detail-powershell/command-get-cses-configuration.png" alt-text="Screenshot of PowerShell commands to get the Cloud Service (extended support) configuration.":::
-
 ## PowerShell commands to send out REST API request to get Cloud Service (extended support) configuration
 
 To use the [Cloud Services - Get](/rest/api/compute/cloud-services/get) REST API to get the Cloud Service (extended support) configuration data by sending out a REST API request from PowerShell, follow these steps:
@@ -53,27 +51,43 @@ $csesapi = (Invoke-AzRestMethod -Path "/subscriptions/{subscription-id}/resource
 [xml]$xml = $csesapi.properties.configuration 
 ```
 
-Example of a REST API request:
-
-:::image type="content" source="media/retrieve-cloud-service-extended-support-detail-powershell/send-rest-api-to-get-cses-configuration.png" alt-text="Screenshot of REST API request to get the Cloud Service (extended support) configuration." lightbox="media/retrieve-cloud-service-extended-support-detail-powershell/send-rest-api-to-get-cses-configuration.png":::
-
 ## Sample about how to get OS Family, OS Version and any other data
 
 No matter PowerShell commands or a REST API is used with the instructions above, the `$xml` from both ways will be the same.
 
 Here's a Cloud Service (extended support) configuration data sample:
 
-:::image type="content" source="media/retrieve-cloud-service-extended-support-detail-powershell/cses-configuration-data-example.png" alt-text="Screenshot of Cloud Service (extended support) configuration data example.":::
+```xml
+<?xml version="1.0" encoding="utf-16"?>
+<ServiceConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" serviceName="CSESOneWebRoleAI" osFamily="6" osVersion="*" schemaVers
+ion="2015-04.2.6" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration">
+  <Role name="WebRole1">
+    <ConfigurationSettings>
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="af542f03-xxxx-xxxx-xxxx-ac17701a8152" />
+    </ConfigurationSettings>
+    <Instances count="1" />
+    <Certificates>
+      <Certificate name="cert1" thumbprint="500Dxxxxxxxxxxxx9D5754" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <NetworkConfiguration>
+    <VirtualNetworkSite name="jerrycses-vnet" />
+    <AddressAssignments>
+      <InstanceAddress roleName="WebRole1">
+        <Subnets>
+          <Subnet name="webrole1" />
+        </Subnets>
+      </InstanceAddress>
+    </AddressAssignments>
+  </NetworkConfiguration>
+</ServiceConfiguration>
+```
 
 The `$xml` is the whole configuration file in XML format. To get the data, such as `osFamily`, `osVersion` or `VirtualNetworkSite`, follow the construction of this XML file to add related names to identify the data of which level is needed.
 
 For example, for `osVersion`/`osFamily`, the path to it will be `ServiceConfiguration` > `osVersion`/`osFamily`. So the expression to use in PowerShell to get the data will be `$xml.ServiceConfiguration.osVersion` / `$xml.ServiceConfiguration.osFamily`.
 
-:::image type="content" source="media/retrieve-cloud-service-extended-support-detail-powershell/osfamily-osversion-expression-example.png" alt-text="Screenshot of an osFamily/osVersion expression example.":::
-
 And for the `VirtualNetworkSite`, the path to it will be `ServiceConfiguration` > `NetworkConfiguration` > `VirtualNetworkSite` > `name`. So the expression to use in PowerShell to get the data will be `$xml.ServiceConfiguration.NetworkConfiguration.VirtualNetworkSite.name`.
-
-:::image type="content" source="media/retrieve-cloud-service-extended-support-detail-powershell/virtual-network-name-expression.png" alt-text="Screenshot of a VirtualNetworkSite name expression example.":::
 
 > [!NOTE]
 > It's possible that you have more than one role in your configuration, the expression to locate a role which isn't the first role will be `$xml.ServiceConfiguration.Role[1]`. The number "1" here means the second role in the configuration data because this counter starts from 0. If there are two roles in same configuration data, the expression `$xml.ServiceConfiguration.Role[1].Instances.count` will be able to return how many instances there are for the second role.
