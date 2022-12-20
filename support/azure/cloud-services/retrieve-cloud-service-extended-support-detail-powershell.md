@@ -9,7 +9,7 @@ ms.service: cloud-services
 ---
 # Retrieve Azure Cloud Service (extended support) detail via PowerShell
 
-This article introduces how to retrieve the Cloud Service (extended support) configuration via PowerShell and REST API.
+This article introduces how to retrieve the Azure Cloud Service (extended support) configuration via PowerShell and REST API.
 
 ## Prerequisites
 
