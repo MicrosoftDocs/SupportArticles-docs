@@ -536,6 +536,8 @@
       href: ./identity/net-add-not-support-names-exceeding-20-characters.md
     - name: Netlogon service doesn't start
       href: ./identity/netlogon-service-not-start-event-2112-7024.md
+    - name: Outdated cached credentials are used when running an elevated task
+      href: ./identity/outdated-cached-credentials-used-when-run-elevated-task.md
     - name: Password change for expired password fails
       href: ./identity/error-password-change-expired-password.md
     - name: Password Reset fails with error
