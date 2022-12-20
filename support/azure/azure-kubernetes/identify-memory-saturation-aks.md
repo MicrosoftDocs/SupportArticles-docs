@@ -2,8 +2,8 @@
 title: Identify memory saturation in AKS clusters
 description: Learn how to identify  memory saturation in AKS clusters across namespaces and containers and how to identify the hosting node.
 ms.date: 11/08/2022
-author: kelleyguiney22
-ms.author: v-kegui
+author: DennisLee-DennisLee
+ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: chiragpa
 ms.service: azure-kubernetes-service
