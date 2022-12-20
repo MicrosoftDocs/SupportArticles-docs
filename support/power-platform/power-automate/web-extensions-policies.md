@@ -14,13 +14,15 @@ This article provides a resolution to issues related to Power Automate browser e
 
 - Ensure that the Power Automate web extension is installed and enabled in your browser.
 
-- Ensure that the correct Power Automate web extension is installed and enabled in your browser. Only one of them can be installed:
+- Ensure that the correct Power Automate web extension is installed and enabled in your browser. Only one of them should be installed:
 
-    For Power Automate for desktop v2.27 or later, you need the **Microsoft Power Automate** extension. For Power Automate for desktop v2.26 or earlier, you need the **Microsoft Power Automate (Legacy)** extension.
+    For Power Automate for desktop v2.27 or later, you need the **Microsoft Power Automate** extension.
+
+    For Power Automate for desktop v2.26 or earlier, you need the **Microsoft Power Automate (Legacy)** extension.
 
 ## Symptoms
 
-- An action of browser automation group fails at runtime with error **Failed to assume control of browser (Internal error or communication failure)**.
+- An action of browser automation group fails at runtime with error **Failed to assume control of browser (Internal error or communication failure)**, where **browser** is replaced with the name of the browser, for example Microsoft Edge or Google Chrome.
 
 - During design time, when launching the UI element picker or the recorder and hovering the mouse over a webpage, the following message is displayed:
 
@@ -32,7 +34,7 @@ This article provides a resolution to issues related to Power Automate browser e
 
     1. Close all open browser windows.
 
-    1. Launch the browser you use in your desktop flows.
+    1. Launch the browser you use in your desktop flow.
 
     1. Launch the Windows Task Manager.
 
@@ -65,45 +67,151 @@ This article provides a resolution to issues related to Power Automate browser e
         - Microsoft Edge: [edge://policy/](edge://policy/)
         - Google Chrome: [chrome://policy/](chrome://policy/)
 
-    1. Check for **NativeMessagingBlocklist**. If this policy is enabled for all native messaging hosts, add the Power Automate for desktop native messaging host to the **NativeMessagingAllowlist** policy.
+    1. Check for **NativeMessagingBlocklist**. If this policy is enabled for all native messaging hosts, then proceed with the following steps:
 
-    1. For remediation:
+        1. Add the Power Automate for desktop native messaging host to the **NativeMessagingAllowlist** policy:
 
-        1. Type **Registry Editor** in Windows search to launch the Registry Editor.
+            1. Type **Registry Editor** in Windows search to launch the Registry Editor.
 
-        1. For the Microsoft Power Automate (Legacy) browser extension, create the **NativeMessagingAllowlist** policy, if it doesn't already exist, and add the Power Automate for desktop native messaging host:
+            1. For the Microsoft Power Automate (Legacy) browser extension, create the **NativeMessagingAllowlist** policy, if it doesn't already exist, and add the Power Automate for desktop native messaging host.
 
-            ```Registry
-            Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist
-            Name = {number}
-            Data = com.robin.messagehost
-            ```
+                - Microsoft Edge:
 
-        1. For the Microsoft Power Automate browser extension, there will be a different naming for the messaging host to avoid conflicts with the previous one:
+                    For adding policy in Local Machine level:
 
-            ```Registry
-            Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist
-            Name = {number}
-            Data = com.microsoft.pad.messagehost
-            ```
+                    ```Registry
+                    Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist
+                    Name = {number}
+                    Data = com.robin.messagehost
+                    ```
 
-            :::image type="content" source="media/web-extensions-policies/registry-keys.png" alt-text="Screenshot of the created policy.":::
+                    For adding policy in Current User level:
 
-    1. Check for **NativeMessagingUserLevelHosts**. By default, if **NativeMessagingUserLevelHosts** is disabled, Power Automate for desktop registers the extension in both HKLM and HKCU hence, and it shouldn't prevent the extension from running.
+                    ```Registry
+                    Computer\HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist
+                    Name = {number}
+                    Data = com.robin.messagehost
+                    ```
 
-        If native messaging is explicitly blocked at the system level via the **NativeMessagingBlocklist** policy, make sure that **com.robin.messagehost** or **com.microsoft.pad.messagehost** are added to your **NativeMessagingAllowlist** policy in HKLM.
+                - Google Chrome:
+
+                    For adding policy in Local Machine level:
+
+                    ```Registry
+                    Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome\NativeMessagingAllowlist
+                    Name = {number}
+                    Data = com.robin.messagehost
+                    ```
+
+                    For adding policy in Current User level:
+
+                    ```Registry
+                    Computer\HKEY_CURRENT_USER\SOFTWARE\Policies\Google\Chrome\NativeMessagingAllowlist
+                    Name = {number}
+                    Data = com.robin.messagehost
+                    ```
+
+                - Mozilla Firefox:
+
+                    For adding policy in Local Machine level:
+
+                    ```Registry
+                    Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Mozilla\NativeMessagingAllowlist
+                    Name = {number}
+                    Data = com.robin.messagehost
+                    ```
+
+                    For adding policy in Current User level:
+
+                    ```Registry
+                    Computer\HKEY_CURRENT_USER\SOFTWARE\Policies\Mozilla\NativeMessagingAllowlist
+                    Name = {number}
+                    Data = com.robin.messagehost
+                    ```
+
+            1. For the Microsoft Power Automate browser extension, there will be a different naming for the messaging host to avoid conflicts with the previous one:
+
+                - Microsoft Edge:
+
+                    For adding policy in Local Machine level:
+
+                    ```Registry
+                    Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist
+                    Name = {number}
+                    Data = com.microsoft.pad.messagehost
+                    ```
+
+                    For adding policy in Current User level:
+
+                    ```Registry
+                    Computer\HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist
+                    Name = {number}
+                    Data = com.microsoft.pad.messagehost
+                    ```
+
+                - Google Chrome:
+
+                    For adding policy in Local Machine level:
+
+                    ```Registry
+                    Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome\NativeMessagingAllowlist
+                    Name = {number}
+                    Data = com.microsoft.pad.messagehost
+                    ```
+
+                    For adding policy in Current User level:
+
+                    ```Registry
+                    Computer\HKEY_CURRENT_USER\SOFTWARE\Policies\Google\Chrome\NativeMessagingAllowlist
+                    Name = {number}
+                    Data = com.microsoft.pad.messagehost
+                    ```
+
+                - Mozilla Firefox:
+
+                    For adding policy in Local Machine level:
+
+                    ```Registry
+                    Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Mozilla\NativeMessagingAllowlist
+                    Name = {number}
+                    Data = com.microsoft.pad.messagehost
+                    ```
+
+                    For adding policy in Current User level:
+
+                    ```Registry
+                    Computer\HKEY_CURRENT_USER\SOFTWARE\Policies\Mozilla\NativeMessagingAllowlist
+                    Name = {number}
+                    Data = com.microsoft.pad.messagehost
+                    ```
+
+            1. Check for **NativeMessagingUserLevelHosts** policies. If **NativeMessagingUserLevelHosts** is enabled, either disable it or make sure that **com.robin.messagehost** for legacy browser extension or **com.microsoft.pad.messagehost** for default browser extension are added to your **NativeMessagingAllowlist** policy in HKLM (Local Machine level).
 
 1. Check if the message host points to the right location:
 
-    1. Close and launch again Power Automate for desktop (Also, close the Power Automate console from the Windows task bar).
+    1. Close and launch again Power Automate for desktop (Also, close the Power Automate console from the Windows task bar before launching it again).
 
     1. Launch the Registry Editor.
 
     1. Navigate to:
 
-        - For the Microsoft Power Automate (Legacy) browser extension: **Computer\HKEY_CURRENT_USER \SOFTWARE\Google\Chrome\NativeMessagingHosts\com.robin.messagehost**
+        - Microsoft Edge:
+  
+            For the Microsoft Power Automate (Legacy) browser extension: **Computer\HKEY_CURRENT_USER \SOFTWARE\Microsoft\Edge\NativeMessagingHosts\com.robin.messagehost**
 
-        - For the Microsoft Power Automate browser extension: **Computer\HKEY_CURRENT_USER \SOFTWARE\Google\Chrome\NativeMessagingHosts\com.microsoft.pad.messagehost**
+            For the Microsoft Power Automate browser extension: **Computer\HKEY_CURRENT_USER \SOFTWARE\Microsoft\Edge\NativeMessagingHosts\com.microsoft.pad.messagehost**
+
+        - Google Chrome:
+  
+            For the Microsoft Power Automate (Legacy) browser extension: **Computer\HKEY_CURRENT_USER \SOFTWARE\Google\Chrome\NativeMessagingHosts\com.robin.messagehost**
+
+            For the Microsoft Power Automate browser extension: **Computer\HKEY_CURRENT_USER \SOFTWARE\Google\Chrome\NativeMessagingHosts\com.microsoft.pad.messagehost**
+
+        - Mozilla Firefox:
+  
+            For the Microsoft Power Automate (Legacy) browser extension: **Computer\HKEY_CURRENT_USER \SOFTWARE\Mozilla\NativeMessagingHosts\com.robin.messagehost**
+
+            For the Microsoft Power Automate browser extension: **Computer\HKEY_CURRENT_USER \SOFTWARE\Mozilla\NativeMessagingHosts\com.microsoft.pad.messagehost**
 
     1. Check the value of the registry key. The correct value is:
 
@@ -148,4 +256,4 @@ If web automation with Power Automate for desktop isn't possible, you may have s
 
 By default, Power Automate for desktop registers the extension both in HKLM and HKCU hence, if the **NativeMessagingUserLevelHosts** policy is disabled, and it shouldn't prevent the extension from running.
 
-If native messaging is explicitly blocked at system level via the **NativeMessagingBlocklist** policy, make sure that **com.robin.messagehost** or **com.microsoft.pad.messagehost** are added to your **NativeMessagingAllowlist** policy in HKLM.
+If native messaging is explicitly blocked at system level via the **NativeMessagingBlocklist** policy, ensure that **com.robin.messagehost** or **com.microsoft.pad.messagehost** are added to your **NativeMessagingAllowlist** policy in HKLM.
