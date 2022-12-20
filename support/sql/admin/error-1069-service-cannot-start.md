@@ -181,21 +181,22 @@ To fix this issue, follow these steps:
 
 The error message entry indicates that the current login name or password set is incorrect. To verify and solve the issue, follow these steps:
 
-1. Use the **runas** option to test the service account credentials.
-1. Open a Windows Command Prompt.
-1. Run the following command:
+1. Use the `runas` option to test the service account credentials:
 
-   ```console
-   runas /user:<localmachine>\<SQLSerivceAccount> cmd
-   ```
+   1. Open a Windows Command Prompt.
+   1. Run the following command:
 
-1. If these steps succeed, carefully type the same credentials in **SQL Server Configuration Manager**, **Services**, **SQL Server** service, and **This account**.
-1. If step 3 fails and reports the same issue, you must reset the password for the Windows logon.
+      ```console
+      runas /user:<localmachine>\<SQLSerivceAccount> cmd
+      ```
+
+1. If the command succeeds, carefully type the same credentials in **SQL Server Configuration Manager**, **Services**, **SQL Server** service, and **This account**.
+1. If the command fails and reports the same issue, you must reset the password for the Windows logon.
 1. If the SQL Server Startup account is a Local User Account on the computer, open Computer Management (compmgmt.msc), and reset the password of the local user.
 1. If the SQL Server Startup account is a Windows Domain Account, open **Active Directory Users and Computers**, and then update the password for the account under **Users**. After the credentials are updated, return to the **SQL Server Configuration Manager**, **Services**, **SQL Server** and enter the same credentials.
-1. Then restart the SQL Server service.
+1. Restart the SQL Server service.
 
-      To type the correct password in the SQL Server Service account on the SQL Server host computer, follow the procedures from [SCM Services - Change the Password of the Accounts Used](/sql/database-engine/configure-windows/scm-services-change-the-password-of-the-accounts-used).
+   To type the correct password in the SQL Server Service account on the SQL Server host computer, follow the procedures from [SCM Services - Change the Password of the Accounts Used](/sql/database-engine/configure-windows/scm-services-change-the-password-of-the-accounts-used).
 
 #### Scenario 2: gMSA IsManagedAccount Flag is set improperly
 
