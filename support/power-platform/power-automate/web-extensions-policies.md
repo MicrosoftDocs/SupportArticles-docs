@@ -185,7 +185,9 @@ This article provides a resolution to issues related to Power Automate browser e
                     Data = com.microsoft.pad.messagehost
                     ```
 
-            1. Check for **NativeMessagingUserLevelHosts** policies. If **NativeMessagingUserLevelHosts** is enabled, either disable it or make sure that **com.robin.messagehost** for legacy browser extension or **com.microsoft.pad.messagehost** for default browser extension are added to your **NativeMessagingAllowlist** policy in HKLM (Local Machine level).
+            1. Check for **NativeMessagingUserLevelHosts** policies.
+
+                If **NativeMessagingUserLevelHosts** is enabled, disable it or ensure that **com.robin.messagehost** for legacy browser extension or **com.microsoft.pad.messagehost** for default browser extension are added to your **NativeMessagingAllowlist** policy in HKLM (Local Machine level).
 
 1. Check if the message host points to the right location:
 
