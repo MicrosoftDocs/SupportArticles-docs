@@ -2,8 +2,8 @@
 title: Troubleshoot PublicIPCountLimitReached error code
 description: Learn how to troubleshoot the PublicIPCountLimitReached error when you try to upgrade an Azure Kubernetes Service cluster.
 ms.date: 7/28/2022
-author: kelleyguiney22
-ms.author: v-kegui
+author: DennisLee-DennisLee
+ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: chiragpa
 ms.service: azure-kubernetes-service
