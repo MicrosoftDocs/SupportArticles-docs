@@ -2,7 +2,7 @@
 title: Handle issues with Power Automate browser extensions
 description: Provides a resolution for issues related to Power Automate browser extensions.
 ms.reviewer: nimoutzo
-ms.date: 12/15/2022
+ms.date: 12/21/2022
 ms.subservice: power-automate-desktop-flows
 ---
 
@@ -129,7 +129,7 @@ This article provides a resolution to issues related to Power Automate browser e
                     Data = com.robin.messagehost
                     ```
 
-            1. For the Microsoft Power Automate browser extension, there will be a different naming for the messaging host to avoid conflicts with the previous one:
+            1. For the Microsoft Power Automate browser extension, create the **NativeMessagingAllowlist** policy, if it doesn't already exist, and add the Power Automate for desktop native messaging host with the following entries:
 
                 - Microsoft Edge:
 
@@ -247,15 +247,3 @@ This article provides a resolution to issues related to Power Automate browser e
     1. In the tree on the left side, go to **Event Viewer (Local)** > **Windows Logs** > **Application**.
 
     1. Look for errors related to Power Automate for desktop.
-
-## More details about group policies
-
-There are cases where web automation isn't possible with Power Automate for desktop due to group policies applied in Microsoft Edge and Google Chrome browsers.
-
-You can view the list of the policies applied on your machine by navigating to [edge://policy](edge://policy) in Microsoft Edge or [chrome://policy](chrome://policy) for Google Chrome.
-
-If web automation with Power Automate for desktop isn't possible, you may have set **NativeMessagingBlocklist** to block all native messaging. In this case, you need to exclude Power Automate for desktop native message host (**com.robin.messagehost**) by setting the **NativeMessagingAllowlist** policy.  
-
-By default, Power Automate for desktop registers the extension both in HKLM and HKCU hence, if the **NativeMessagingUserLevelHosts** policy is disabled, and it shouldn't prevent the extension from running.
-
-If native messaging is explicitly blocked at system level via the **NativeMessagingBlocklist** policy, ensure that **com.robin.messagehost** or **com.microsoft.pad.messagehost** are added to your **NativeMessagingAllowlist** policy in HKLM.
