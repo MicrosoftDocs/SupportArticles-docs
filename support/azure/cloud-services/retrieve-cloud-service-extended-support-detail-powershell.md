@@ -13,7 +13,7 @@ This article introduces how to retrieve the Azure Cloud Service (extended suppor
 
 ## Prerequisites
 
-Whether you use PowerShell commands or a Rest API request to get the information, the Azure Az PowerShell module is required. For the installation details, see [Install the Azure Az PowerShell module](/powershell/azure/install-az-ps).
+Whether you use PowerShell commands or a REST API request to get the information, the Azure Az PowerShell module is required. For the installation details, see [Install the Azure Az PowerShell module](/powershell/azure/install-az-ps).
 
 ## PowerShell commands to get Cloud Service (extended support) configuration
 
