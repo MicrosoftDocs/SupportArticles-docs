@@ -83,7 +83,7 @@ If you're redirecting the CN=Users and CN=Computers folders, be aware of the fol
 
 - Redirecting CN=USERS affects the default location for new users, groups and trust user accounts. Trust user accounts are hidden in most UI admin tools, but you can show and move them in tools like LDIFDE and LDP. The CN of the account is \<downlevel domain name>$, for example "contoso$".
 
-- Exchange Server 2000 and 2003 `setup /domainprep` fails with errors.
+- If you face Exchange Server Active Directory preparations failures, ensure you are running the latest cumulative update and security update.
 
 ## Redirect CN=Users to an administrator-specified OU
 
