@@ -1,7 +1,7 @@
 ---
 title: Half-width and full-width Japanese characters are treated as different characters
 description: This article resolves a problem that prevents certain half-width and full-width Katakana and Hiragana characters that have a consonant mark from being compared correctly by .NET Framework 4.x applications.
-ms.date: 03/12/2020
+ms.date: 12/21/2022
 ms.custom: sap:Desktop app UI development
 author: jun-yo
 ms.author: v-jayaramanp
@@ -17,7 +17,7 @@ _Applies to:_ &nbsp; Windows 10 version 2004, Windows 10 version 20H2, Windows 1
 
 ## Symptoms
 
-Certain Japanese half-width and full-width Katakana and Hiragana characters that have a consonant mark aren't interpreted as the same character. When you use the `ComapreInfo.IndexOf` method and the `IgnoreKataType` or `IgnoreWidth` options as `CompareOptions` to make a comparison, these characters are evaluated as different because of an issue in the sorting rule.
+Certain Japanese half-width and full-width Katakana and Hiragana characters that have a consonant mark aren't interpreted as the same character. When you use the `CompareInfo.IndexOf` method and the `IgnoreKanaType` or `IgnoreWidth` options as `CompareOptions` to make a comparison, these characters are evaluated as different because of an issue in the sorting rule.
 
 ## Cause
 
@@ -30,7 +30,7 @@ Starting in version 2004, Windows 10 updated the version of National Language Su
 
 ### Workaround 1
 
-Revert the NLS sorting rule to version 6.2. This version is used in Windows 10, version 1909 and earlier versions. When you have to share data between systems, consider applying the workaround consistently. If you use this workaround, do sufficient testing and evaluations to mitigate problems that are caused by different sorting rule versions on multiple systems. 
+Revert the NLS sorting rule to version 6.2. This version is used in Windows 10, version 1909 and earlier versions. When you have to share data between systems, consider applying the workaround consistently. If you use this workaround, do sufficient testing and evaluations to mitigate problems that are caused by different sorting rule versions on multiple systems.
 
 To use this workaround, follow these steps:
 
