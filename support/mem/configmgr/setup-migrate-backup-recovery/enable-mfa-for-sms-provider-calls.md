@@ -16,6 +16,9 @@ _Original KB number:_ &nbsp; 4042963
 > [!IMPORTANT]
 > You must be a member of the Full Administrator role that has access to the All scope to set and change MFA setting for SMS Provider calls.
 
+> [!NOTE]
+> You can enable MFA from any server that hosts the SMS Provider because it is a global setting.
+
 To enable MFA, follow these steps:
 
 1. Open WBEMTEST.
@@ -55,6 +58,12 @@ To enable MFA, follow these steps:
      > Users in the `ExceptionList` can't call the `SetAuthenticationLevel` method.
 
 1. select **Execute!**, and then select **Dismiss**.
+
+You can run the following SQL query to check whether MFA is enabled. If MFA is enabled, the query output shows the value of the `Value3` property is `10`.
+
+```sql
+select * from vSMS_SC_GlobalProperty where PropertyName='{3B1F3900-A186-11d0-BDA9-00A0C909FDD7} Authentication'
+```
 
 ### Use PowerShell cmdlets to set the AuthenticationLevel and ExceptionList properties
 
