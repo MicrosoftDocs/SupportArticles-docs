@@ -5,7 +5,7 @@ ms.date: 12/21/2022
 ms.custom: sap:Desktop app UI development
 author: padmajayaraman
 ms.author: v-jayaramanp
-ms.reviewer: jun-yo
+ms.reviewer: junyoshi
 ms.technology: windows-dev-apps-system-services-dev
 ---
 
