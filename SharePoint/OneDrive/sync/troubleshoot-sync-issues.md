@@ -43,7 +43,7 @@ Sometimes a conflict is detected between the local and server copies of files yo
 
 When a conflict is detected, you may see a sync error notification briefly. After that, the OneDrive for Business icon will display an error indicator in your system tray.
 
-:::image type="content" source="media/troubleshoot-sync-issues/error-indicator.png" alt-text="Screenshot of the OneDrive for Business error indicator." border="false":::
+:::image type="icon" source="media/troubleshoot-sync-issues/sync-error-icon.png":::
 
 To resolve the conflict, right-click or press and hold the OneDrive for Business icon, and then choose **Resolve**. You will see the options available for your conflict.
 
