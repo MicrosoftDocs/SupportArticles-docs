@@ -31,6 +31,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/mem/intune/troubleshoot-vpn-profiles.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/troubleshoot-vpn-profiles",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/azure/active-directory/installation-issues.md",
       "redirect_url": "/troubleshoot/azure/active-directory/welcome-azure-ad",
       "redirect_document_id": false
@@ -4529,6 +4534,11 @@
       "source_path": "support/dynamics-365/finance/sales-tax/sales-tax-troubleshooting-voucher-not-generated.md",
       "redirect_url": "/troubleshoot/dynamics-365/finance/tax/sales-tax-troubleshooting-voucher-not-generated",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/connect/login-failed-for-user.md",
+      "redirect_url": "/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error",
+      "redirect_document_id": false
     }
   ]
 }

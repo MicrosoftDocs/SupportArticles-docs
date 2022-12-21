@@ -71,6 +71,8 @@
       items:
       - name: SQL Server startup errors
         href: admin/sql-server-startup-errors.md
+      - name: SQL can't start with a domain account
+        href: admin/sql-cannot-start-with-domain-account.md
       - name: Access is denied error and SQL Server doesn't start
         href: admin/event-id-7000-access-denied.md
       - name: Error 17113 when you start SQL Server service
@@ -228,7 +230,7 @@
     - name: Existing connection forcibly closed
       href: connect/tls-exist-connection-closed.md
     - name: Login failed for user
-      href: connect/login-failed-for-user.md
+      href: /sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context
     - name: Network-related or instance-specific error
       href: connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md
     - name: Timeout expired errors

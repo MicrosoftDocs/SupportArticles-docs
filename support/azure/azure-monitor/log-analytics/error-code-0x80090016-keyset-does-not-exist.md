@@ -2,8 +2,8 @@
 title: Error code 0x80090016 Keyset does not exist in event viewer or agent logs
 description: Resolve error code 0x80090016 "Keyset does not exist" when you try to connect to your event viewer or agent logs.
 ms.date: 01/12/2022
-author: kelleyguiney22
-ms.author: v-kegui
+author: DennisLee-DennisLee
+ms.author: v-dele
 ms.reviewer: irfanr
 editor: v-jsitser
 ms.service: azure-monitor

@@ -1,21 +1,18 @@
 --- 
 title: IPv6 Support in Azure AD
 description: Bringing IPv6 support to Azure Active Directory
-services: active-directory
 ms.service: active-directory
 ms.subservice: aad-general
-ms.topic: conceptual
 ms.date: 11/22/2022
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: amycolannino
-ms.reviewer: lhuangnorth, gautama
+ms.author: v-dele
+author: DennisLee-DennisLee
+ms.reviewer: lhuangnorth, gautama, amycolannino, joflore
 ms.collection: M365-identity-device-management
 ---
 
 # IPv6 Support in Azure Active Directory
 
-We’re excited to bring IPv6 support to Azure Active Directory (Azure AD), to support customers with increased mobility, and help reduce spending on fast-depleting, expensive IPv4 addresses. For more information about how this change might affect Microsoft 365, see [IPv6 support in Microsoft 365 services](/microsoft-365/enterprise/ipv6-support).
+We're excited to bring IPv6 support to Azure Active Directory (Azure AD), to support customers with increased mobility, and help reduce spending on fast-depleting, expensive IPv4 addresses. For more information about how this change might affect Microsoft 365, see [IPv6 support in Microsoft 365 services](/microsoft-365/enterprise/ipv6-support).
 
 If your organization's networks don't support IPv6 today, you can safely ignore this information until such time that they do.
 

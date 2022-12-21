@@ -2,8 +2,8 @@
 title: AccountEncryptionKeyUnavailable error message in Azure Batch
 description: This article describes a known issue in Azure Batch that causes an AccountEncryptionKeyUnavailable error message.  
 ms.date: 9/21/2022
-author: kelleyguiney22
-ms.author: v-kegui
+author: DennisLee-DennisLee
+ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: biny
 ms.service: batch
