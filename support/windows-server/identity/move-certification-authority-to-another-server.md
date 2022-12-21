@@ -124,7 +124,7 @@ An x64-based version of Windows Server 2003 R2 CD2 only updates 64-bit versions 
 
 8. Stop the Certificate Services service.
 
-9. Locate the registry file that you saved in step 3, and then double-click it to import the registry settings. If the path that is shown in the registry export from the old CA differs from the new path, you must adjust your registry export accordingly. By default, the new path is _C:\\\Windows_ in Windows Server 2003.
+9. Locate the registry file that you saved in step 3, and then double-click it to import the registry settings. If the path that is shown in the registry export from the old CA differs from the new path, you must adjust your registry export accordingly. By default, the new path is _C:\\Windows_ in Windows Server 2003.
 
 10. Use the Certification Authority snap-in to restore the CA database. To do this, follow these steps:
 
