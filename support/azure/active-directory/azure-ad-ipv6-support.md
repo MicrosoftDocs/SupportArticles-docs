@@ -4,8 +4,8 @@ description: Bringing IPv6 support to Azure Active Directory
 ms.service: active-directory
 ms.subservice: aad-general
 ms.date: 11/22/2022
-ms.author: v-kegui
-author: kelleyguiney22
+ms.author: v-dele
+author: DennisLee-DennisLee
 ms.reviewer: lhuangnorth, gautama, amycolannino, joflore
 ms.collection: M365-identity-device-management
 ---

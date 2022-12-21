@@ -2,8 +2,8 @@
 title: Troubleshoot Azure Monitor Change Analysis
 description: Learn how to troubleshoot resource provider problems when you're using Azure Monitor's Change Analysis.
 ms.date: 6/22/2022
-author: kelleyguiney22
-ms.author: v-kegui
+author: DennisLee-DennisLee
+ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: aaronmax
 ms.service: azure-monitor
