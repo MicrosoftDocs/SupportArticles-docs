@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 2913445
 
 1. Create a folder that's named *C:\vmmlogs*.
 
-2. Open an elevated Windows PowerShell window on the VMM server or host computer, and then run the following commands:
+2. Open an elevated Windows PowerShell window on the VMM server or host computer, and then run the following command:
 
     ```powershell
     logman delete VMM
@@ -51,4 +51,4 @@ _Original KB number:_ &nbsp; 2913445
     Netsh trace convert <filename>
     ```
 
-    In this command, the placeholder \<filename> represents the name of the ETL file that you find in step 5. The converted trace file will have a name in the format \<filename>.txt.
+    In this command, the placeholder \<filename> represents the name of the ETL file that you find in step 5. The converted trace file will have a name in the format *\<filename>.txt*.
