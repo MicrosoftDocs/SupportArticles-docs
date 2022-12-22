@@ -38,118 +38,118 @@ Although these fixes prevent duplicate key rows from continuing to appear, they 
 ## Disable and enable change tracking to remove duplicate rows
 
 1. Disable change tracking on the affected tables and database.
-2. Issue a manual database Checkpoint.
-3. Enable change tracking on the affected database and tables.
+1. Issue a manual database Checkpoint.
+1. Enable change tracking on the affected database and tables.
 
 For more information about change tracking, see [Enable and disable change tracking](/sql/relational-databases/track-changes/enable-and-disable-change-tracking-sql-server). For issuing a manual Checkpoint, see [CHECKPOINT (Transact-SQL)](/sql/t-sql/language-elements/checkpoint-transact-sql).
 
 ## Manually delete the duplicate rows
 
-1. Copy the Transact-SQL script at the end of the **Transact-SQL script** section into a text editor.
-2. Locate the `<AFFECTED_DB>` placeholder in the script, and replace it with the name of the affected database.
-3. Save the modified script to your hard disk as a .sql file. For example, `C:\temp\remove_duplicates.sql`.
+1. Copy the [Transact-SQL script](#transact-sql-script) from the **Transact-SQL script** section into a text editor.
+1. Locate the `<AFFECTED_DB>` placeholder in the script, and replace it with the name of the affected database.
+1. Save the modified script to your hard disk as a .sql file. For example, `C:\temp\remove_duplicates.sql`.
 
 If you're running SQL Server 2014, you must grant the per-Service SID full control to the `mssqlsystemresource.ldf` and `mssqlsystemresource.mdf` files. To do this, follow these steps:
 
 1. Navigate to the Bin directory that corresponds to your Instance ID. For example:  
 `C:\Program Files\Microsoft SQL Server\<Instance ID>\MSSQL\Binn`
 
-2. Open the properties for `mssqlsystemresource.ldf` and `mssqlsystemresource.mdf`, and then click the **Security** tab.
-3. Locate the SQL Server service per-Service SID, and note the default permissions:
+1. Open the properties for `mssqlsystemresource.ldf` and `mssqlsystemresource.mdf`, and then select the **Security** tab.
+1. Locate the SQL Server service per-Service SID, and note the default permissions:
 
-    - `*Read & execute`
-    - `*Read`
+   - `*Read & execute`
+   - `*Read`
 
-4. Grant the SQL Server service per-Service SID Full Control, and then close the permissions dialog boxes.
-5. Start SQL Server in Single-User mode. For more information, see [Start SQL Server in Single-User mode](/sql/database-engine/configure-windows/start-sql-server-in-single-user-mode).
-6. Use a `sqlcmd` command line to connect to SQL Server under the Dedicated Administrator Connection (DAC). For example:
+1. Grant the SQL Server service per-Service SID Full Control, and then close the permissions dialog boxes.
+1. Start SQL Server in Single-User mode. For more information, see [Start SQL Server in Single-User mode](/sql/database-engine/configure-windows/start-sql-server-in-single-user-mode).
+1. Use a `sqlcmd` command line to connect to SQL Server under the Dedicated Administrator Connection (DAC). For example:
 
-    ```console
-    sqlcmd -S PRODSERV1\MSSQLSERVER -A -E -i c:\temp\remove_duplicates.sql
-    ```
+   ```console
+   sqlcmd -S PRODSERV1\MSSQLSERVER -A -E -i c:\temp\remove_duplicates.sql
+   ```
 
    Then, execute the modified Transact-SQL script.
 
-7. [Restart SQL Server in Multi-User mode](/sql/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services), and then verify that backup and CHECKPOINT operations against the affected database complete successfully. If step 4 was used, revert the permissions to the default values.
+1. [Restart SQL Server in Multi-User mode](/sql/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services), and then verify that backup and CHECKPOINT operations against the affected database complete successfully. If step 4 was used, revert the permissions to the default values.
 
-## Transact-SQL script
+### Transact-SQL script
 
 ```sql
-/*
-Create a temporary database to store the necessary rows
-required to remove the duplicate data
-*/
-if exists(select 1 from sys.databases where name = 'dbChangeTrackingMetadata')
-begin
-drop database dbChangeTrackingMetadata
-end
-go
-create database dbChangeTrackingMetadata
-go
+--Create a temporary database to store the necessary rows required to remove the duplicate data 
+USE master
+GO
+IF EXISTS(SELECT 1 FROM sys.databases WHERE name = 'dbChangeTrackingMetadata')
+BEGIN
+  DROP DATABASE dbChangeTrackingMetadata
+END
+GO
+CREATE DATABASE dbChangeTrackingMetadata
+GO
 
 --Table to store the contents of the SYSCOMMITTABLE
-use dbChangeTrackingMetadata
-go
-create table dbo.t_SYSCOMMITTABLE (
-commit_ts bigint
-,xdes_id bigint
-,commit_lbn bigint
-,commit_csn bigint
-,commit_time datetime
+USE dbChangeTrackingMetadata
+GO
+CREATE TABLE dbo.t_SYSCOMMITTABLE (
+commit_ts BIGINT
+,xdes_id BIGINT
+,commit_lbn BIGINT
+,commit_csn BIGINT
+,commit_time DATETIME
 )
-go
+GO
 
-/*Table to store the duplicate rows to be removed from the
- sys.syscommittab table
-*/
-create table dbo.t_syscommittab (
-commit_ts bigint
-,xdes_id bigint
-,commit_lbn bigint
-,commit_csn bigint
-,commit_time datetime
-,dbfragid int
+--Table to store the duplicate rows to be removed from the sys.syscommittab table
+
+CREATE TABLE dbo.t_syscommittab (
+commit_ts BIGINT
+,xdes_id BIGINT
+,commit_lbn BIGINT
+,commit_csn BIGINT
+,commit_time DATETIME
+,dbfragid INT
 )
-go
+GO
 
 --Enable the usage of OPENROWSET
-exec sys.sp_setbuildresource 1
-go
+EXEC sys.sp_setbuildresource 1
+GO
 
 --Change <AFFECTED_DB> to the database that contains the duplicate values
 USE <AFFECTED DB>
-go
-declare @rowcount bigint
+GO
+DECLARE @rowcount BIGINT
 SET @rowcount = 0
 
---Copy all rows from the SYSCOMMITTABLE into the temporary database
-insert into dbChangeTrackingMetadata.dbo.t_SYSCOMMITTABLE
+--Copy all rows from the SYSCOMMITTABLE INTo the temporary database
+INSERT INTO dbChangeTrackingMetadata.dbo.t_SYSCOMMITTABLE
 SELECT commit_ts, xdes_id, commit_lbn, commit_csn, commit_time
-FROM OpenRowset (table SYSCOMMITTABLE, db_id (), 0, 0)
+FROM OPENROWSET (table SYSCOMMITTABLE, db_id (), 0, 0)
 
---Save the duplicate values into the temporary database
-insert into dbChangeTrackingMetadata.dbo.t_syscommittab
-select ondisk_ct.* from sys.syscommittab as ondisk_ct
-join dbChangeTrackingMetadata.dbo.t_SYSCOMMITTABLE as inmem_ct
-on ondisk_ct.xdes_id = inmem_ct.xdes_id
+--Save the duplicate values INTo the temporary database
+INSERT INTO dbChangeTrackingMetadata.dbo.t_syscommittab
+SELECT ondisk_ct.* 
+FROM sys.syscommittab as ondisk_ct
+JOIN dbChangeTrackingMetadata.dbo.t_SYSCOMMITTABLE as inmem_ct
+ ON ondisk_ct.xdes_id = inmem_ct.xdes_id
 
 --Delete the duplicate values
-delete from sys.syscommittab
-where xdes_id in ( select xdes_id from dbChangeTrackingMetadata.dbo.t_syscommittab )
-set @rowcount = @@rowcount
-if (@rowcount > 0)
-begin
-print ''
-print 'DELETED '+CAST(@rowcount as NVARCHAR(10))+
-' rows from sys.syscommittab that were also stored in SYSCOMMITTABLE'
-print ''
-end
-else
-begin
-print ''
-print 'Failed to DELETE DUP rows from sys.syscommittab'
-print ''
-end
-exec sys.sp_setbuildresource 0
-go
+DELETE FROM sys.syscommittab
+WHERE xdes_id in ( SELECT xdes_id from dbChangeTrackingMetadata.dbo.t_syscommittab )
+
+SET @rowcount = @@rowcount
+
+IF (@rowcount > 0)
+BEGIN
+  PRINT ''
+  PRINT 'DELETED '+CAST(@rowcount as NVARCHAR(10))+' rows from sys.syscommittab that were also stored in SYSCOMMITTABLE'
+PRINT ''
+END
+ELSE
+BEGIN
+  PRINT ''
+  PRINT 'Failed to DELETE DUP rows from sys.syscommittab'
+  PRINT ''
+END
+EXEC sys.sp_setbuildresource 0
+GO
 ```
