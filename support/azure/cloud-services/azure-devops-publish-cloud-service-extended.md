@@ -6,52 +6,53 @@ ms.reviewer: piw, maheshallu
 author: AmandaAZ
 ms.author: v-weizhu
 ms.service: cloud-services
+ms.topic: how-to
 ---
 # How to use Azure DevOps to publish Cloud Services (extended support)
 
-This article provides a guide on how to use the [Azure Resource Manager (ARM)](/azure/azure-resource-manager/management/overview) template to create or update the Azure Cloud Services (extended support) deployment.
+This article provides guidance on how to use the [Azure Resource Manager (ARM)](/azure/azure-resource-manager/management/overview) template to create or update the Azure Cloud Services (extended support) deployment.
 
 ## Background
 
-Azure Cloud Services (extended support) is a new ARM-based deployment model for [Azure Cloud Services](https://azure.microsoft.com/products/cloud-services/). Cloud Services (extended support) has the primary benefit of providing regional resiliency along with feature parity with Azure Cloud Services deployed using Azure Service Manager. It also offers some ARM capabilities such as role-based access and control (RBAC), tags, policy, and supports deployment templates.
+Azure Cloud Services (extended support) is a new ARM-based deployment model for [Azure Cloud Services](https://azure.microsoft.com/products/cloud-services/). Cloud Services (extended support) has the primary benefit of providing regional resiliency along with feature parity with Azure Cloud Services deployed using Azure Service Manager. It also offers some ARM capabilities such as role-based access and control (RBAC), tags, policies, and supports deployment templates.
 
-For the classic Cloud Service, Azure DevOps built-in pipeline task [AzureCloudPowerShellDeployment@1](/azure/devops/pipelines/tasks/reference/azure-cloud-powershell-deployment-v1) can help to manage the CI/CD progress easily. But the task for Cloud Services (extended support) isn't ready yet.
+For classic Cloud Services, the Azure DevOps built-in pipeline task [AzureCloudPowerShellDeployment@1](/azure/devops/pipelines/tasks/reference/azure-cloud-powershell-deployment-v1) can help manage the CI/CD progress easily. But the task for Cloud Services (extended support) isn't ready yet.
 
 ## Main points for publishing Cloud Services (extended support)
 
-1. Define couple of variables for the storage account to prepare the ARM template deployment.
+1. Define some variables for the storage account to prepare for the ARM template deployment.
 2. Use the [VSBuild@1 - Visual Studio build v1 task](/azure/devops/pipelines/tasks/reference/vsbuild-v1) to build the cloud service project and output the cloud service package file or configuration file.
 3. Use the built-in [AzureFileCopy@5 - Azure file copy v5 task](/azure/devops/pipelines/tasks/reference/azure-file-copy-v5) to upload a build directory to the blob storage.
-4. Use the storage reference including the access key to generate a SAS token by [AzurePowerShell@5 - Azure PowerShell v5 task](/azure/devops/pipelines/tasks/reference/azure-powershell-v5), and output to a variable which will be used in the next task.
-5. Use the output of the previous task and utilize the value for the [AzureResourceManagerTemplateDeployment@3 - ARM template deployment v3 task](/azure/devops/pipelines/tasks/reference/azure-resource-manager-template-deployment-v3).
+4. Use the storage reference including the access key to generate a SAS token by [AzurePowerShell@5 - Azure PowerShell v5 task](/azure/devops/pipelines/tasks/reference/azure-powershell-v5), and output the token to a variable that will be used in the next task.
+5. Use the output of the previous task and the value for the [AzureResourceManagerTemplateDeployment@3 - ARM template deployment v3 task](/azure/devops/pipelines/tasks/reference/azure-resource-manager-template-deployment-v3).
 
 :::image type="content" source="media/azure-devops-publish-cloud-service-extended/recently-run-pipelines.png" alt-text="Screenshot of recently run pipelines.":::
 
-## Steps to publish Cloud Service Extended Support
+## Steps to publish Cloud Services (extended support)
 
-1. Create a starter pipeline and prepare the upload to the storage account. The following variables can help on the following further operations.
+1. Create a starter pipeline and prepare to upload to the storage account. These variables can help with the following further operations.
 
     - stg_account       \<the name of storage account>
     - stg_key              \<access key of storage account>
     - stg_container    \<container name of storage account>
-    - stg_prefix          \$[format('{0:yyyyMMddHHmm}', pipeline.startTime)]        
+    - stg_prefix          \$[format('{0:yyyyMMddHHmm}', pipeline.startTime)]
     - stg_url               `https://$(stg_account).blob.core.windows.net/$(stg_container)`
     - cscfg_name       \<the name of the configuration file>
     - cspkg_name      \<the name of the package file>
     - url_cscfg            \$(stg_url)/\$(stg_prefix)/\$(cscfg_name)
     - url_cspkg           \$(stg_url)/\$(stg_prefix)/\$(cspkg_name)
 
-    :::image type="content" source="media/azure-devops-publish-cloud-service-extended/variables.png" alt-text="Screenshot of variables." lightbox="media/azure-devops-publish-cloud-service-extended/variables.png":::
+    :::image type="content" source="media/azure-devops-publish-cloud-service-extended/variables.png" alt-text="Screenshot of variables.":::
 
-2. Use the Visual Studio build task to build your task based on your cloud service project solution file and output to the local path on the agent. For more details, see [MSBuild](/visualstudio/msbuild/msbuild).
+2. Use the Visual Studio build task to build your task based on your cloud service project solution file and output it to a local path on the agent. For more information, see [MSBuild](/visualstudio/msbuild/msbuild).
 
     :::image type="content" source="media/azure-devops-publish-cloud-service-extended/cloud-service-project-solution-file-example.png" alt-text="Screenshot of a cloud service project solution file example.":::
 
     Here's the YAML file to build a project:
 
     ```yml
-    # Build you project under your repository.
-    # 1. Restore the NuGet dependency
+    # Build your project under your repository.
+    # 1. Restore the NuGet dependency.
     
     - task: NuGetCommand@2
       inputs:
@@ -60,14 +61,14 @@ For the classic Cloud Service, Azure DevOps built-in pipeline task [AzureCloudPo
         feedsToUse: 'select'
         vstsFeed: xxx
 
-    # 2. Use MS build to output the cloud service project configuration and package to the local agent temporary location.
+    # 2. Use MS build to output the cloud service project configuration and package to the temporary location of the local agent.
 
     - task: VSBuild@1
       inputs:
         solution: '**\*.sln'
         msbuildArgs: '/t:Publish /p:DeployOnBuild=true /p:AutomatedBuild=True /p:configuration=release /p:TargetProfile=Cloud /p:PublishDir=%SYSTEM_DEFAULTWORKINGDIRECTORY%/Debug/publish'
 
-    # 3. Copy the configuration and package file to the local path on the agent where any artifacts locate.
+    # 3. Copy the configuration and package files to the local path on the agent where any artifacts locate.
 
     - task: CopyFiles@2
       inputs:
@@ -75,7 +76,7 @@ For the classic Cloud Service, Azure DevOps built-in pipeline task [AzureCloudPo
         Contents: '**'
         TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
-    # 4. Copy definition file to the local path on the agent where any artifacts locate.
+    # 4. Copy the definition file to the local path on the agent where any artifacts locate.
 
     - task: CopyFiles@2
       inputs:
@@ -84,9 +85,9 @@ For the classic Cloud Service, Azure DevOps built-in pipeline task [AzureCloudPo
         TargetFolder: '$(Build.ArtifactStagingDirectory)'
     ```
 
-3. Use the pipeline task [AzureFileCopy@4 - Azure file copy v4 task](/azure/devops/pipelines/tasks/reference/azure-file-copy-v4) to upload configuration, definition and package file of cloud service. The task supports authentication based on Azure Active Directory. Authentication using a service principal and managed identity are available. You can assign the permission Contributor and Storage Blob Data Contributor to allow the access of [service connections](/azure/devops/pipelines/library/service-endpoints).
+3. Use the pipeline task [AzureFileCopy@4 - Azure file copy v4 task](/azure/devops/pipelines/tasks/reference/azure-file-copy-v4) to upload the configuration, definition, and package files of the cloud service. The task supports authentication based on Azure Active Directory. Authentication can be done using a service principal and managed identity. You can assign the permission Contributor and Storage Blob Data Contributor to allow the access of [service connections](/azure/devops/pipelines/library/service-endpoints).
 
-    Find the service principle in the project setting:
+    Find the service principle in the project settings:
 
     :::image type="content" source="media/azure-devops-publish-cloud-service-extended/service-connection-type.png" alt-text="Screenshot of a service connection type example." lightbox="media/azure-devops-publish-cloud-service-extended/service-connection-type.png":::
 
@@ -107,11 +108,11 @@ For the classic Cloud Service, Azure DevOps built-in pipeline task [AzureCloudPo
         AdditionalArgumentsForBlobCopy: '--recursive'              # recursively copy the files in this directory
     ```
 
-    After copying the file, you will see the cloud service package copied in the storage.
+    After copying the file, you'll see the copied cloud service package in the storage.
 
     :::image type="content" source="media/azure-devops-publish-cloud-service-extended/cloud-service-package.png" alt-text="Screenshot of a cloud service package that's copied in the storage." lightbox="media/azure-devops-publish-cloud-service-extended/cloud-service-package.png":::
 
-4. Use the Azure powershell pipeline task to generate a temporary SAS token for 5 minutes.
+4. Use the Azure PowerShell pipeline task to generate a temporary SAS token for five minutes.
 
     ```yml
     # Generate temp SAS token for 5 mins
@@ -151,15 +152,15 @@ For the classic Cloud Service, Azure DevOps built-in pipeline task [AzureCloudPo
         deploymentMode: 'Incremental'
     ```
 
-6. After deployment, you should see the task result like below and the cloud service with the tag below. You can update the code and configuration to make update to the current deployment.
+6. After the deployment is complete, you should see the following task results and the cloud service with the tag. You can change the code and configuration to update the current deployment.
 
     :::image type="content" source="media/azure-devops-publish-cloud-service-extended/task-result.png" alt-text="Screenshot of a task result example." lightbox="media/azure-devops-publish-cloud-service-extended/task-result.png":::
 
-In the Azure portal, you can find the deployment result in the cloud service resource group.
+In the Azure portal, you can find the deployment results in the cloud service resource group.
 
 :::image type="content" source="media/azure-devops-publish-cloud-service-extended/deployment-result.png" alt-text="Screenshot of a deployment result example." lightbox="media/azure-devops-publish-cloud-service-extended/deployment-result.png":::
 
-The deployment label should be the same as your defined timestamp.
+The deployment label should be the same as the timestamp you defined.
 
 :::image type="content" source="media/azure-devops-publish-cloud-service-extended/deployment-label.png" alt-text="Screenshot of a deployment label example." lightbox="media/azure-devops-publish-cloud-service-extended/deployment-label.png":::
 
