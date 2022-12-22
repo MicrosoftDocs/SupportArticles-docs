@@ -4,6 +4,7 @@ description: Description of the recommended usage of the Power Automate's JavaSc
 ms.reviewer: hamenon, rymacdow
 ms.date: 12/12/2022
 ms.subservice: power-automate-flows
+ms.topic: how-to
 ---
 # How to use Power Automate's JavaScript Software Developer Kit
 
