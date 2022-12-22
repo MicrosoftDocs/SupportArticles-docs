@@ -81,9 +81,9 @@ If you're redirecting the CN=Users and CN=Computers folders, be aware of the fol
 
     A scripted option is documented in [Script to Protect Organizational Units (OUs) from Accidental Deletion](https://gallery.technet.microsoft.com/scriptcenter/c307540f-bd91-485f-b27e-995ae5cea1e2).
 
-- Redirecting CN=USERS affects the default location for new users, groups and trust user accounts. Trust user accounts are hidden in most UI admin tools, but you can show and move them in tools like LDIFDE and LDP. The CN of the account is \<downlevel domain name>$, for example "contoso$".
+- Redirecting CN=USERS affects the default location for new users, groups, and trust user accounts. Trust user accounts are hidden in most UI admin tools, but you can show and move them in tools like LDIFDE and LDP. The CN of the account is \<downlevel domain name>$, for example, "contoso$".
 
-- If you face Exchange Server Active Directory preparations failures, ensure you are running the latest cumulative update and security update.
+- If you experience Exchange Server Active Directory preparation failures, make sure you're running the latest cumulative update and security update.
 
 ## Redirect CN=Users to an administrator-specified OU
 
@@ -105,7 +105,7 @@ If you're redirecting the CN=Users and CN=Computers folders, be aware of the fol
     > [!NOTE]
     > When *Redirusr.exe* is run to redirect the CN=Users container to an OU specified by an administrator, the CN=Users container will no longer be a protected object. This means that the Users container can now be moved, deleted, or renamed. If you use ADSIEDIT to view attributes on the CN=Users container, you will see that the systemflags attribute was changed from **-1946157056** to **0**. This is by design.
     >
-    > To delete the container, you have to move out the default users and groups to other OUs and containers, and also the trust user accounts. These trust accounts are shown using tools like LDIFDE and LDP, and can also be moved using these tools. We recommend to keep the container unchanged and the default accounts in place for consistency.
+    > To delete the container, you have to move out the default users and groups to other OUs and containers, and also the trust user accounts. These trust accounts can be shown and moved using tools like LDIFDE and LDP. We recommend keeping the container unchanged and the default accounts in place for consistency.
 
 ## Redirect CN=Computers to an administrator-specified OU
 
@@ -150,7 +150,7 @@ Redircmp and Redirusr change the wellKnownObjects attribute on the primary domai
     >  
     > Error, could not locate the Primary Domain Controller for the current domain: The specified domain either does not exist or could not be contacted. Redirection was NOT successful.
 
-### Error messages that you receive if the domain functional level is not Windows Server 2003
+### Error messages that you receive if the domain functional level isn't Windows Server 2003
 
 You try to redirect the users or computer OU in a domain that hasn't transitioned to the Windows Server 2003 domain functional level. In this situation, you receive the following error messages:
 
