@@ -34,6 +34,8 @@
       href: desktop-bridge-app-fail-start-run-as-administrator.md
     - name: East Asian first character isn't recognized
       href: east-asian-first-character-not-recognized.md
+    - name: Half-width and full-width Japanese characters are treated as different characters
+      href: half-width-full-width-katakana-hiragana-characters.md
     - name: GetMessage ignores messages
       href: getmessage-ignores-posted-messages.md
     - name: SystemParametersInfo works incorrectly

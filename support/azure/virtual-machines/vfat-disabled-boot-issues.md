@@ -249,7 +249,7 @@ The serial console is the fastest method to resolve this issue. It allows you to
 
 - **VM with only data disks encrypted fails to boot due to /etc/fstab issues:**
 
-  1. If only VM data disks are encrypted (the OS disk isn't encrypted), to boot up the system, add the `nofail` mount option to the corresponding entries in */etc/fstab* [from single-user mode](/troubleshoot/azure/virtual-machines/serial-console-grub-single-user-mode) by using the Azure serial console. For more information, see [Troubleshoot Linux VM starting issues due to fstab errors](/azure/virtual-machines/linux-virtual-machine-cannot-start-fstab-errors).
+  1. If only VM data disks are encrypted (the OS disk isn't encrypted), to boot up the system, add the `nofail` mount option to the corresponding entries in */etc/fstab* [from single-user mode](/troubleshoot/azure/virtual-machines/serial-console-grub-single-user-mode) by using the Azure serial console. For more information, see [Troubleshoot Linux VM starting issues due to fstab errors](linux-virtual-machine-cannot-start-fstab-errors.md).
 
   2. Once the VM is booted up, [re-enable VFAT](#reenable-vfat) and restart the VM.
 
