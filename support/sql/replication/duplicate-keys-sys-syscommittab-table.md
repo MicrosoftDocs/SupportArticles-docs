@@ -38,39 +38,39 @@ Although these fixes prevent duplicate key rows from continuing to appear, they 
 ## Disable and enable change tracking to remove duplicate rows
 
 1. Disable change tracking on the affected tables and database.
-2. Issue a manual database Checkpoint.
-3. Enable change tracking on the affected database and tables.
+1. Issue a manual database Checkpoint.
+1. Enable change tracking on the affected database and tables.
 
 For more information about change tracking, see [Enable and disable change tracking](/sql/relational-databases/track-changes/enable-and-disable-change-tracking-sql-server). For issuing a manual Checkpoint, see [CHECKPOINT (Transact-SQL)](/sql/t-sql/language-elements/checkpoint-transact-sql).
 
 ## Manually delete the duplicate rows
 
-1. Copy the [Transact-SQL script](#transact-sql-script) at from the **Transact-SQL script** section into a text editor.
-2. Locate the `<AFFECTED_DB>` placeholder in the script, and replace it with the name of the affected database.
-3. Save the modified script to your hard disk as a .sql file. For example, `C:\temp\remove_duplicates.sql`.
+1. Copy the [Transact-SQL script](#transact-sql-script) from the **Transact-SQL script** section into a text editor.
+1. Locate the `<AFFECTED_DB>` placeholder in the script, and replace it with the name of the affected database.
+1. Save the modified script to your hard disk as a .sql file. For example, `C:\temp\remove_duplicates.sql`.
 
 If you're running SQL Server 2014, you must grant the per-Service SID full control to the `mssqlsystemresource.ldf` and `mssqlsystemresource.mdf` files. To do this, follow these steps:
 
 1. Navigate to the Bin directory that corresponds to your Instance ID. For example:  
 `C:\Program Files\Microsoft SQL Server\<Instance ID>\MSSQL\Binn`
 
-2. Open the properties for `mssqlsystemresource.ldf` and `mssqlsystemresource.mdf`, and then click the **Security** tab.
-3. Locate the SQL Server service per-Service SID, and note the default permissions:
+1. Open the properties for `mssqlsystemresource.ldf` and `mssqlsystemresource.mdf`, and then select the **Security** tab.
+1. Locate the SQL Server service per-Service SID, and note the default permissions:
 
-    - `*Read & execute`
-    - `*Read`
+   - `*Read & execute`
+   - `*Read`
 
-4. Grant the SQL Server service per-Service SID Full Control, and then close the permissions dialog boxes.
-5. Start SQL Server in Single-User mode. For more information, see [Start SQL Server in Single-User mode](/sql/database-engine/configure-windows/start-sql-server-in-single-user-mode).
-6. Use a `sqlcmd` command line to connect to SQL Server under the Dedicated Administrator Connection (DAC). For example:
+1. Grant the SQL Server service per-Service SID Full Control, and then close the permissions dialog boxes.
+1. Start SQL Server in Single-User mode. For more information, see [Start SQL Server in Single-User mode](/sql/database-engine/configure-windows/start-sql-server-in-single-user-mode).
+1. Use a `sqlcmd` command line to connect to SQL Server under the Dedicated Administrator Connection (DAC). For example:
 
-    ```console
-    sqlcmd -S PRODSERV1\MSSQLSERVER -A -E -i c:\temp\remove_duplicates.sql
-    ```
+   ```console
+   sqlcmd -S PRODSERV1\MSSQLSERVER -A -E -i c:\temp\remove_duplicates.sql
+   ```
 
    Then, execute the modified Transact-SQL script.
 
-7. [Restart SQL Server in Multi-User mode](/sql/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services), and then verify that backup and CHECKPOINT operations against the affected database complete successfully. If step 4 was used, revert the permissions to the default values.
+1. [Restart SQL Server in Multi-User mode](/sql/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services), and then verify that backup and CHECKPOINT operations against the affected database complete successfully. If step 4 was used, revert the permissions to the default values.
 
 ### Transact-SQL script
 
