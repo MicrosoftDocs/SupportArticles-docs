@@ -115,7 +115,6 @@ The following information provides a mapping between the **rangeUpper** attribut
 |Exchange Server 2019 CU8, CU9|17002|
 |Exchange Server 2019 CU2, CU3, CU4, CU5, CU6, CU7|17001|
 |Exchange Server 2019 RTM, CU1|17000|
-|Exchange Server 2019 Preview|15332|
 |Exchange Server 2016 CU21|15334|
 |Exchange Server 2016 CU19, CU20|1533|
 |Exchange Server 2016 CU7, CU8, CU9, CU10, CU11, CU12, CU13, CU14, CU15, CU16, CU17|15332|
@@ -123,7 +122,6 @@ The following information provides a mapping between the **rangeUpper** attribut
 |Exchange Server 2016 CU3, CU4, CU5|15326|
 |Exchange Server 2016 CU2|15325|
 |Exchange Server 2016 CU1|15323|
-|Exchange Server 2016 RTM, Preview|15317|
 |Exchange Server 2013 CU7, CU8, CU9, CU10, CU11, CU12, CU13, CU14, CU15, CU16, CU17, CU18, CU19, CU20, CU21, CU22, CU23 with (KB5004778)|15312|
 |Exchange Server 2013 CU6|15303|
 |Exchange Server 2013 CU5|15300|
