@@ -2,7 +2,7 @@
 title: Publish Cloud Services (extended support) via Azure DevOps
 description: Describes how to publish Cloud Services (extended support) by using Azure DevOps.
 ms.date: 12/16/2022
-ms.reviewer: piw
+ms.reviewer: piw, maheshallu
 author: AmandaAZ
 ms.author: v-weizhu
 ms.service: cloud-services
@@ -98,7 +98,7 @@ For the classic Cloud Service, Azure DevOps built-in pipeline task [AzureCloudPo
     # Upload the cloud service via Azure File Copy
     - task: AzureFileCopy@5
       inputs:
-        SourcePath: ‘$(Build.ArtifactsStagingDirectory) /*'        # you can set $(Build.ArtifactsStagingDirectory) as Build part for output of
+        SourcePath: '$(Build.ArtifactsStagingDirectory) /*'        # you can set $(Build.ArtifactsStagingDirectory) as Build part for output of
         azureSubscription: xxx                                     # the name of service connector
         Destination: 'AzureBlob'
         storage: $(stg_account)                                    # variable stg_account
