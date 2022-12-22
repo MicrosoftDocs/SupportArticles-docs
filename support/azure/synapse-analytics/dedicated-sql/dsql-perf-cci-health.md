@@ -55,8 +55,8 @@ SELECT COUNT(DISTINCT object_id) AS tables_assessed_count,
        SUM(open_rowgroup_count) AS uncompressed_rowgroup_count,
        CAST(SUM(size_in_mb) AS DECIMAL(19, 4)) AS actual_size_in_mb,
        CAST(SUM(open_size_in_mb) AS DECIMAL(19, 4)) AS uncompressed_size_in_mb,
-       CAST(((SUM(total_rowgroup_count)/SUM(ideal_rowgroup_count)) - 1.0) * 100 AS DECIMAL(9, 4)) AS excess_pct,
-       SUM(size_in_mb) * CAST(((SUM(total_rowgroup_count)/SUM(ideal_rowgroup_count)) - 1.0) AS DECIMAL(19, 4)) AS excess_size_in_mb
+       CAST(((SUM(total_rowgroup_count) - SUM(ideal_rowgroup_count)) / SUM(total_rowgroup_count)) * 100. AS DECIMAL(9, 4)) AS excess_pct,
+       CAST(((SUM(total_rowgroup_count) - SUM(ideal_rowgroup_count)) / SUM(total_rowgroup_count)) * 1. AS DECIMAL(9, 4)) * SUM(size_in_mb) AS excess_size_in_mb
 FROM cci_detail
 ```
 
@@ -119,8 +119,8 @@ WITH cci_info AS(
 )
 , calc_excess AS(
     SELECT *,
-          CAST(ROUND((total_rowgroup_count / ideal_rowgroup_count) - 1.0, 4) AS DECIMAL(9, 4)) AS [excess_rowgroup_pct],
-          CAST(ROUND((total_rowgroup_count / ideal_rowgroup_count) - 1.0, 4) AS DECIMAL(19, 4)) * size_in_mb AS [excess_size_in_mb]
+        CAST(((total_rowgroup_count - ideal_rowgroup_count) / total_rowgroup_count) * 100. AS DECIMAL(9, 4)) AS [excess_pct],
+        CAST(((total_rowgroup_count - ideal_rowgroup_count) / total_rowgroup_count) * 1. AS DECIMAL(9, 4)) * size_in_mb AS [excess_size_in_mb]
    FROM cci_info
 )
 SELECT calc_excess.* 
@@ -160,7 +160,7 @@ Though not comprehensive, the following query can help you identify potential op
 | Opportunity title | Description | Recommendations |
 |-------------------|-------------|-----------------|
 | Small table       | Table contains fewer than 15M rows | Consider changing the index from CCI to: <ul><li>Heap for staging tables</li><li>Standard clustered index (rowstore) for dimension or other small lookups</li></ul> |
-| Partitioning opportunity | Calculated ideal rowgroup count is greater than 180M (or ~188M rows) | Implement a partitioning strategy or change the existing partitioning strategy to reduce the number of rows per partition to less than 188M (approximately three row groups per partition per distribution) |
+| Partitioning opportunity or under-partitioned table | Calculated ideal rowgroup count is greater than 180M (or ~188M rows) | Implement a partitioning strategy or change the existing partitioning strategy to reduce the number of rows per partition to less than 188M (approximately three row groups per partition per distribution) |
 | Over-partitioned table | Table contains fewer than 15M rows for the largest partition | Consider: <ul><li>Changing the index from CCI to standard clustered index (rowstore)</li><li>Changing the partition grain to be closer to 60M rows per partition</ul> |
 
 ```sql

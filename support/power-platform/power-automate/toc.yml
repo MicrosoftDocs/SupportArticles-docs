@@ -65,6 +65,8 @@
           href: flow-runtime-errors-recommendations.md
         - name: How to use Flow to copy items between two data sources
           href: how-to-copy-items-between-two-sharepoint-lists-via-flow.md
+        - name: How to use Power Automate's JavaScript Software Developer Kit
+          href: flow-embed-sdk.md
         - name: Issues triggering emails with attachments from shared mailbox
           href: issues-triggering-emails-with-attachments-from-shared-mailbox.md
         - name: Issues with flow approval emails in Outlook Desktop and Web
