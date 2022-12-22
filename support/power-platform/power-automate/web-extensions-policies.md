@@ -1,5 +1,5 @@
 ---
-title: Issues with Power Automate browser extensions
+title: Troubleshoot issues with Power Automate browser extensions
 description: Provides a resolution for the Failed to assume control of browser (Internal error or communication failure) error or Get Extension message.
 ms.reviewer: nimoutzo, gtrantzas
 ms.date: 12/21/2022
@@ -20,7 +20,7 @@ This article provides a resolution to the issues related to Power Automate brows
 
 ## Symptoms
 
-- An action of browser automation group fails at runtime with error **Failed to assume control of browser (Internal error or communication failure)**, where **browser** is replaced with the name of the browser, for example Microsoft Edge or Google Chrome.
+- An action of browser automation group fails at runtime with error "Failed to assume control of _browser_ (Internal error or communication failure)", where _browser_ is replaced with the name of the browser, for example Microsoft Edge or Google Chrome.
 - During design time, when opening the UI element picker or the recorder and hovering the mouse over a webpage, the following message is displayed:
 
     :::image type="content" source="media/web-extensions-policies/get-extension-message.png" alt-text="Screenshot of the Get Extension message that reminds you to install the Power Automate extension.":::
@@ -49,7 +49,7 @@ This article provides a resolution to the issues related to Power Automate brows
 
     1. Check for any errors in the **Console** tab.
 
-        The error **Access to the native messaging host was disabled by the system administrator** indicates that the policy **NativeMessagingBlocklist** is enabled for the Power Automate for desktop native messaging host or all native messaging hosts.
+        The error "Access to the native messaging host was disabled by the system administrator" indicates that the policy **NativeMessagingBlocklist** is enabled for the Power Automate for desktop native messaging host or all native messaging hosts.
 
 1. Check for policies blocking the message host:
 
@@ -74,13 +74,13 @@ This article provides a resolution to the issues related to Power Automate brows
               Data = com.robin.messagehost
               ```
 
-               For adding policy in Current User level:
+              For adding policy in Current User level:
 
-                ```console
-                Computer\HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist
-                Name = {number}
-                Data = com.robin.messagehost
-                ```
+              ```console
+              Computer\HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist
+              Name = {number}
+              Data = com.robin.messagehost
+              ```
 
             - Google Chrome:
 
@@ -240,3 +240,5 @@ This article provides a resolution to the issues related to Power Automate brows
     1. Search for **Event Viewer** in Windows search box and open **Event Viewer**.
     1. In the tree on the left side, go to **Event Viewer (Local)** > **Windows Logs** > **Application**.
     1. Look for the errors related to Power Automate for desktop.
+
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
