@@ -3,9 +3,9 @@ title: Half-width and full-width Japanese characters are treated as different ch
 description: This article resolves a problem that prevents certain half-width and full-width Katakana and Hiragana characters that have a consonant mark from being compared correctly by .NET Framework 4.x applications.
 ms.date: 12/21/2022
 ms.custom: sap:Desktop app UI development
-author: jun-yo
+author: padmajayaraman
 ms.author: v-jayaramanp
-ms.reviewer: jun-yo
+ms.reviewer: junyoshi
 ms.technology: windows-dev-apps-system-services-dev
 ---
 
@@ -34,7 +34,7 @@ Revert the NLS sorting rule to version 6.2. This version is used in Windows 10, 
 
 To use this workaround, follow these steps:
 
-1. Open a Command Prompt window (cmd.exe) as an administrator.
+1. Open a Command Prompt window (*cmd.exe*) as an administrator.
 1. Run the following command:
 
    > `reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Nls\Sorting\Versions /ve /d 0006020F /f`
@@ -48,7 +48,7 @@ To use this workaround, follow these steps:
 Set the NLS sorting rule to version 6.4. This version is used in Windows 11. To do this, you must apply KB5014023 or a later update, and upgrade the version to version 1741 or a later version. In this case, version 22H2 is already applied and doesn't have to be updated.
 
 1. Apply KB5014023 or a later update for Windows 10 versions 2004, 20H2, 21H1, and 21H2.
-1. Open the Command Prompt window (cmd.exe) as an administrator.
+1. Open the Command Prompt window (*cmd.exe*) as an administrator.
 1. Run the following command:
 
    > `reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Nls\Sorting\Versions /ve /d 00060403 /f`
