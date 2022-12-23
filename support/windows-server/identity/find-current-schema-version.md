@@ -131,4 +131,9 @@ The following information provides a mapping between the **rangeUpper** attribut
 |Exchange Server 2013 CU1|15254|
 |Exchange Server 2013 RTM|15137|
 
+For more information, see:
+
+- [Exchange 2016 Active Directory versions](https://learn.microsoft.com/exchange/plan-and-deploy/prepare-ad-and-domains?view=exchserver-2016#exchange-2016-active-directory-versions)
+- [Exchange 2019 Active Directory versions](https://learn.microsoft.com/exchange/plan-and-deploy/prepare-ad-and-domains?view=exchserver-2019#exchange-2019-active-directory-versions)
+
 [!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]
