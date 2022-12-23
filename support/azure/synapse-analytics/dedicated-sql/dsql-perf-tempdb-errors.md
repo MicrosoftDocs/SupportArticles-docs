@@ -34,7 +34,7 @@ order by total_elapsed_time desc;
 
 Once you have a reasonable suspect query, choose whether to proceed to:
 
-- [kill](/sql/t-sql/language-elements/kill-transact-sql?view=sql-server-ver15) the statement
+- [kill](/sql/t-sql/language-elements/kill-transact-sql) the statement
 - attempt to prevent any other workload from further consuming tempdb space so that the long-runner can complete.
 
 ### Step 2: Prevent reoccurrence
@@ -77,7 +77,7 @@ After identifying clients that are holding open transactions, work with the user
 * driver configuration (for example: JDBC AutoCommit off which sets `IMPLICIT_TRANSACTIONS = ON`) and/or 
 * ad hoc query behaviors (for example: executing `BEGIN TRAN` without `COMMIT`/`ROLLBACK`)
 
-Alternatively, you may consider creating an automated process to periodically detect this scenario and [kills](/sql/t-sql/language-elements/kill-transact-sql?view=sql-server-ver15) any potentially problematic sessions.
+Alternatively, you may consider creating an automated process to periodically detect this scenario and [kills](/sql/t-sql/language-elements/kill-transact-sql) any potentially problematic sessions.
 
 ## Resources
 
