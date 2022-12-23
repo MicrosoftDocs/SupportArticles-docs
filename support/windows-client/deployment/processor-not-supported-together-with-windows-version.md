@@ -1,7 +1,7 @@
 ---
 title: The processor is not supported together with the Windows version error
-description: Discusses an issue in which you receive "The processor is not supported together with the Windows version that you are currently using" error when you scan or download Windows updates.
-ms.date: 09/10/2021
+description: Discusses issues in which you receive "The processor is not supported together with the Windows version that you are currently using" error or "80240037" erro code when you scan or download Windows updates.
+ms.date: 12/26/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -18,12 +18,11 @@ adobe-target: true
 <!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
 --->
 
-# "The processor is not supported together with the Windows version that you are currently using" error when you scan or download Windows updates
+# Windows Update "Processor Not Supported" Errors
 
-This article discusses an issue in which you receive "The processor is not supported together with the Windows version that you are currently using" error when you scan or download Windows updates.
+This article discusses errors "Processor not supported error" and "80240037" encountered during Windows Update.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
-_Original KB number:_ &nbsp; 4012982
+_Original KB number:_ 4012982
 
 ## Symptoms
 
@@ -39,17 +38,23 @@ An error occurred while checking for new updates for your computer.
 Error(s) found:  
 Code 80240037 Windows Update encountered an unknown error.  
 
-## Cause
+## Solution
 
-This error occurs when Windows detects an incompatible processor.
+Since these errors occur when Windows detects an incompatible processor, ensure that Windows is compatible with the processor you are using. Refer to the following documentation for the latest processor generations and models which are supported Windows Edition:
 
-## Resolution
+- For supported [Windows Client Processors](/windows-hardware/design/minimum/windows-processor-requirements#windows-client-edition-processors)
 
-To ensure that Windows is compatible with the processor you are using, please refer to the following documentation: ["Windows Processor Requirements"](/windows-hardware/design/minimum/windows-processor-requirements)
+- For supported [Windows Server Processors](/windows-hardware/design/minimum/windows-processor-requirements#windows-server-processors)
 
-## References
+- For supported [Windows IoT Core Processors](/windows-hardware/design/minimum/windows-processor-requirements#windows-iot-core-processors)
 
-[Lifecycle support policy FAQ -Windows Products](/lifecycle/faq/windows#%2Fhelp%2F18581%2Flifecycle-support-policy-faq-windows-products%23b4)  
-[Windows 10 Embracing Silicon Innovation](https://blogs.windows.com/windowsexperience/2016/01/15/windows-10-embracing-silicon-innovation)  
+
+## Additional Resources
+
+
+[Windows Processor Requirements](/windows-hardware/design/minimum/windows-processor-requirements).  
+[Windows Server support and installation instructions for the AMD EPYC 7000 Series server processors](/troubleshoot/windows-server/deployment/windows-server-support-installation-for-amd-role-family-processor).  
+[Lifecycle support policy FAQ -Windows Products](/lifecycle/faq/windows#%2Fhelp%2F18581%2Flifecycle-support-policy-faq-windows-products%23b4).  
+
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
