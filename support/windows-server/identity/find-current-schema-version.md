@@ -99,7 +99,7 @@ Get-ItemProperty "AD:\CN=ms-Exch-Schema-Version-Pt,cn=schema,cn=configuration,$(
 
 ### Some "rangeUpper" attribute map
 
-The following articles provides a mapping between the **rangeUpper** attribute value, to the Exchange Schema commutability:
+The following articles provide a mapping between the **rangeUpper** attribute value, to the Exchange Schema commutability:
 
 - [Exchange 2016 Active Directory versions](/exchange/plan-and-deploy/prepare-ad-and-domains?view=exchserver-2016&preserve-view=true#exchange-2016-active-directory-versions)
 - [Exchange 2019 Active Directory versions](/exchange/plan-and-deploy/prepare-ad-and-domains?view=exchserver-2019&preserve-view=true#exchange-2019-active-directory-versions)
