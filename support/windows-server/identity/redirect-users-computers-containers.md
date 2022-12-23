@@ -1,7 +1,7 @@
 ---
 title: Redirect users and computers containers
 description: Describes how to use redirusr and redircmp to redirect user, computer, and group accounts in Active Directory domains.
-ms.date: 09/08/2020
+ms.date: 12/15/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -48,15 +48,13 @@ B:32:AA312825768811D1ADED00C04FD8D5CD:CN=Computers,DC=CONTOSO,DC=COM;
 B:32:A9D1CA15768811D1ADED00C04FD8D5CD:CN=Users,DC=GPN,DC=COM;
 ```
 
-For example, the following operations use earlier-version APIs, which reply on the paths defined in the WellKnownObjects attribute:
+For example, the following operations use earlier-version APIs, which rely on the paths defined in the WellKnownObjects attribute:
 
-| Operation| Operating system versions |
-|---|---|
-|Domain Join UI|Windows NT version4.0<br/><br/>Windows 2000<br/><br/>Windows XP Professional<br/>Windows XP Ultimate<br/><br/>Windows Server 2003<br/>Windows Server 2003 R2<br/><br/>Windows Vista<br/><br/>Windows Server 2008<br/><br/>Windows 7<br/><br/>Windows Server 2008 R2<br/>|
-|NET COMPUTER|All versions|
-|NET GROUP|All versions|
-|NET USER|All versions|
-|NETDOM ADD, where the /ou command is either not specified or supported|All versions|
+- Domain Join UI
+- NET COMPUTER
+- NET GROUP
+- NET USER
+- NETDOM ADD, where the `/ou` command is either not specified or supported
   
 It's helpful to make the default container for user, computer, and security groups an OU for several reasons, including:
 
@@ -83,25 +81,31 @@ If you're redirecting the CN=Users and CN=Computers folders, be aware of the fol
 
     A scripted option is documented in [Script to Protect Organizational Units (OUs) from Accidental Deletion](https://gallery.technet.microsoft.com/scriptcenter/c307540f-bd91-485f-b27e-995ae5cea1e2).
 
-- Exchange Server 2000 and 2003 `setup /domainprep` fails with errors.
+- Redirecting CN=USERS affects the default location for new users, groups, and trust user accounts. Trust user accounts are hidden in most UI admin tools, but you can show and move them in tools like LDIFDE and LDP. The CN of the account is \<downlevel domain name>$, for example, "contoso$".
+
+- If you experience Exchange Server Active Directory preparation failures, make sure you're running the latest cumulative update and security update.
 
 ## Redirect CN=Users to an administrator-specified OU
 
-1. Log on with domain administrator credentials in the z domain where the CN=Users container is being redirected.
+1. Log on with domain administrator credentials in the domain where the CN=Users container is being redirected.
 
 2. Transition the domain to the Windows Server 2003 domain functional level or newer in either the Active Directory Users and Computers snap-in (Dsa.msc) or the Domains and Trusts (Domains.msc) snap-in. For more information about increasing the domain functional level, see [How to raise domain and forest functional levels](https://support.microsoft.com/help/322692).
 
-3. Create the OU container where you want users who are created with earlier-version APIs to be located, if the OU container that you want doesn't exist.
+3. Create the OU container where you want users and groups who are created with earlier-version APIs to be located, if the OU container that you want doesn't exist.
 
-4. Run Redirusr.exe at the command prompt by using the following syntax. In the command, _container-dn_ is the distinguished name of the OU that will become the default location for newly created user objects created by down-level APIs:
+4. Run *Redirusr.exe* at the command prompt by using the following syntax. In the command, _container-dn_ is the distinguished name of the OU that will become the default location for newly created user and group objects created by down-level APIs:
 
     ```console
-    c:\windows\system32\redirusr <DN path to alternate OU>
+    c:\windows\system32\redirusr container-dn
     ```
 
     Redirusr is installed in the `%SystemRoot%\System32` folder on Windows Server 2003-based or newer computers. For example, to change the default location for users who are created with down-level APIs such as Net User to the OU=MYUsers OU container in the `CONTOSO.COM` domain, use the following syntax:
 
     `c:\windows\system32>redirusr ou=myusers,DC=contoso,dc=com`
+    > [!NOTE]
+    > When *Redirusr.exe* is run to redirect the CN=Users container to an OU specified by an administrator, the CN=Users container will no longer be a protected object. This means that the Users container can now be moved, deleted, or renamed. If you use ADSIEDIT to view attributes on the CN=Users container, you will see that the systemflags attribute was changed from **-1946157056** to **0**. This is by design.
+    >
+    > To delete the container, you have to move out the default users and groups to other OUs and containers, and also the trust user accounts. These trust accounts can be shown and moved using tools like LDIFDE and LDP. We recommend keeping the container unchanged and the default accounts in place for consistency.
 
 ## Redirect CN=Computers to an administrator-specified OU
 
@@ -111,20 +115,20 @@ If you're redirecting the CN=Users and CN=Computers folders, be aware of the fol
 
 3. Create the OU container where you want computers that are created with earlier-version APIs to be located, if the desired OU container doesn't exist.
 
-4. Run Redircmp.exe at a command prompt by using the following syntax. In the command, _container-dn_ is the distinguished name of the OU that will become the default location for newly created computer objects that are created by down-level APIs:
+4. Run *Redircmp.exe* at a command prompt by using the following syntax. In the command, _container-dn_ is the distinguished name of the OU that will become the default location for newly created computer objects that are created by down-level APIs:
 
     ```console
-    redircmp container-dn container-dn
+    redircmp container-dn
     ```
 
-    Redircmp.exe is installed in the `%Systemroot%\System32` folder in Windows Server 2003 or later versions. To change the default location for a computer created with earlier-version APIs, such as Net User, to the OU=mycomputers container in the CONTOSO.COM domain, use the following syntax:
+    *Redircmp.exe* is installed in the `%Systemroot%\System32` folder in Windows Server 2003 or later versions. To change the default location for a computer created with earlier-version APIs, such as Net Computer, to the OU=MyComputers container in the CONTOSO.COM domain, use the following syntax:
 
     ```console
     C:\windows\system32>redircmp ou=mycomputers,DC=contoso,dc=com
     ```
 
     > [!NOTE]
-    > When Redircmp.exe is run to redirect the CN=Computers container to an OU specified by an administrator, the CN=Computers container will no longer be a protected object. This means that the Computers container can now be moved, deleted, or renamed. If you use ADSIEDIT to view attributes on the CN=Computers container, you will see that the systemflags attribute was changed from **-1946157056** to **0**. This is by design.
+    > When *Redircmp.exe* is run to redirect the CN=Computers container to an OU specified by an administrator, the CN=Computers container will no longer be a protected object. This means that the Computers container can now be moved, deleted, or renamed. If you use ADSIEDIT to view attributes on the CN=Computers container, you will see that the systemflags attribute was changed from **-1946157056** to **0**. This is by design.
 
 ## Description of error messages
 
@@ -136,15 +140,17 @@ Redircmp and Redirusr change the wellKnownObjects attribute on the primary domai
 
 - Error message 1:
 
-    > D:\>redirusr OU=userOU,DC=udc,dc=jkcertcontoso,dc=loc com  
+    > C:\>redirusr OU=userOU,DC=udc,dc=jkcertcontoso,dc=loc com
+    >  
     > Error, could not locate the Primary Domain Controller for the current domain: The specified domain either does not exist or could not be contacted. Redirection was NOT successful.
 
 - Error message 2:
 
-    > D:\>redircmp OU=computerOU,DC=contoso,dc=com DC=udc,dc=jkcert,dc=loc  
+    > C:\>redircmp OU=computerOU,DC=contoso,dc=com DC=udc,dc=jkcert,dc=loc
+    >  
     > Error, could not locate the Primary Domain Controller for the current domain: The specified domain either does not exist or could not be contacted. Redirection was NOT successful.
 
-### Error messages that you receive if the domain functional level is not Windows Server 2003
+### Error messages that you receive if the domain functional level isn't Windows Server 2003
 
 You try to redirect the users or computer OU in a domain that hasn't transitioned to the Windows Server 2003 domain functional level. In this situation, you receive the following error messages:
 
@@ -152,11 +158,11 @@ You try to redirect the users or computer OU in a domain that hasn't transitione
 
     > C:\>redirusr OU=usersou,DC=contoso,dc=comDC=company,DC=com
     >
-    >Error, unable to modify the wellKnownObjects attribute. Verify that the domain functional level of the domain is at least Windows Server 2003: Unwilling To Perform Redirection was NOT successful.
+    > Error, unable to modify the wellKnownObjects attribute. Verify that the domain functional level of the domain is at least Windows Server 2003: Unwilling To Perform Redirection was NOT successful.
 
 - Error message 2:
 
-    > C:\>REDIRCMP ou=computersou,DC=contoso,dc=comdc=company,dc=com
+    > C:\>redircmp ou=computersou,DC=contoso,dc=comdc=company,dc=com
     >
     > Error, unable to modify the wellKnownObjects attribute. Verify that the domain functional level of the domain is at least Windows Server 2003: Unwilling To Perform
 
@@ -166,7 +172,7 @@ If you try to redirect the users or computer OU by using incorrect credentials i
 
 - Error message 1
 
-    > C:>REDIRCMP OU=computersou,DC=contoso,dc=comDC=company,DC=com
+    > C:>redircmp OU=computersou,DC=contoso,dc=comDC=company,DC=com
     >
     > Error, unable to modify the wellKnownObjects attribute. Verify that the domain functional level of the domain is at least Windows Server 2003: Insufficient Rights Redirection was NOT successful.
 
@@ -182,7 +188,7 @@ You try to redirect the users or computer OU to an OU that doesn't exist. In thi
 
 - Error message 1:
 
-    > C:\>REDIRCMP OU=nonexistantou,DC=contoso,dc=com dc=rendom,dc=com
+    > C:\>redircmp OU=nonexistantou,DC=contoso,dc=com dc=rendom,dc=com
     >
     > Error, unable to modify the wellKnownObjects attribute. Verify that the domain functional level of the domain is at least Windows Server 2003: No Such Object Redirection was NOT successful.
 
