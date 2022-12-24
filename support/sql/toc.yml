@@ -327,12 +327,7 @@
         href: failover-clusters/support-policy-clustered-configurations.md
       - name: Windows Failover cluster resource dependencies
         href: failover-clusters/windows-failover-cluster-resource-depend.md
-    - name: Log Shipping
-      items:
-      - name: Configure security for log shipping
-        href: log-shipping/configure-security-log-shipping.md
-      - name: Logshipping monitor raises 14420 error
-        href: log-shipping/logshipping-monitor-14420-error.md
+    
   - name: Installation, Patching and Upgrade
     items:
     - name: .Net Framework requirements for SQL Server
