@@ -18,7 +18,7 @@ This article describes how to handle a performance issue that database applicati
 
 To establish that you have query performance issues on your SQL Server instance, start by examining queries by their execution time (elapsed time). Check if the time exceeds a threshold you have set (in milliseconds) based on an established performance baseline. For example, in a stress testing environment, you may have established a threshold for your workload to be no longer than 300 ms, and you can use this threshold. Then, you can identify all queries that exceed that threshold, focusing on each individual query and its pre-established performance baseline duration. Ultimately, business users care about the overall duration of database queries; therefore, the main focus is on execution duration. Other metrics like CPU time and logical reads are gathered to help with narrowing down the investigation.
 
-[!INCLUDE [collect query data and logical reads](../includes/performance/collect-cpu-time-elapsed-time-logical-reads.md)]
+[!INCLUDE [collect query data and logical reads](../../includes/performance/collect-cpu-time-elapsed-time-logical-reads.md)]
 
 ## Running vs. Waiting: why are queries slow?
 
@@ -40,13 +40,13 @@ A query can be running for some time and waiting for some time in its lifetime (
 
 If you established that your queries of interest are waiters, your next step is to focus on resolving bottleneck issues. Otherwise, go to step 4: [Diagnose and resolve running queries](#diagnose-and-resolve-running-queries).
 
-[!INCLUDE [diagnose waits](../includes/performance/diagnose-waits-or-bottlenecks.md)]
+[!INCLUDE [diagnose waits](../../includes/performance/diagnose-waits-or-bottlenecks.md)]
 
 ## Diagnose and resolve running queries
 
 If CPU (worker) time is very close to the overall elapsed duration, the query spends most of its lifetime executing. Typically, when the SQL Server engine drives high CPU usage, the high CPU usage is coming from queries that drive a large number of logical reads (the most common reason).
 
-[!INCLUDE [identify cpu bound queries](../includes/performance/identify-cpu-bound-queries.md)]
+[!INCLUDE [identify cpu bound queries](../../includes/performance/identify-cpu-bound-queries.md)]
 
 ### Common methods to resolve long-running, CPU-bound queries
 
