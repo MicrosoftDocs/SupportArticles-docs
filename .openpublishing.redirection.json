@@ -4659,8 +4659,152 @@
       "source_path": "support/sql/performance/troubleshoot-slow-running-queries.md",
       "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-slow-running-queries",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-high-cpu-usage-issues.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-high-cpu-usage-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-sql-io-performance.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-sql-io-performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/token-and-perm-user-store-perf-issue.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/token-and-perm-user-store-perf-issue",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/filtered-index-with-column-is-null.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/filtered-index-with-column-is-null",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-query-timeouts.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-query-timeouts",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-query-perf-between-servers.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-query-perf-between-servers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-application-slow-ssms-fast.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-application-slow-ssms-fast",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/decreased-query-perf-after-upgrade.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/decreased-query-perf-after-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/understand-resolve-blocking.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/understand-resolve-blocking",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/recommended-updates-configuration-options.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/recommended-updates-configuration-options",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/recommended-updates-configuration-workloads.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/recommended-updates-configuration-workloads",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/resolve-pagelatch-ex-contention.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/resolve-pagelatch-ex-contention",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-memory-issues.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-memory-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-never-ending-query.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-never-ending-query",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-query-async-network-io.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-query-async-network-io",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/buffer-pool-scan-runs-slowly-large-memory-machines.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/buffer-pool-scan-runs-slowly-large-memory-machines",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/recommendations-reduce-allocation-contention.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/recommendations-reduce-allocation-contention",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-blocking-caused-compile-locks.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-blocking-caused-compile-locks",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/resolve-blocking-problems-caused-lock-escalation.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/resolve-blocking-problems-caused-lock-escalation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/blocked-column-populated-latch-waits.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/blocked-column-populated-latch-waits",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/decreased-performance-use-efs.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/decreased-performance-use-efs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/decreased-performance-run-aggregating-clause.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/decreased-performance-run-aggregating-clause",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/performance-consistency-issues-filter-drivers-modules.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/performance-consistency-issues-filter-drivers-modules",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/decreased-perf-high-cpu-optimized-nested-loop.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/decreased-perf-high-cpu-optimized-nested-loop",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/resource-monitor-nonyielding-condition.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/resource-monitor-nonyielding-condition",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/cardinality-estimator-degrades-query-performance.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/resource-monitor-nonyielding-condition",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/schemamgr-store-degrades-performance.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/schemamgr-store-degrades-performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/upgrade-compatibility-level-degrades-performance.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/upgrade-compatibility-level-degrades-performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/dbcc-memorystatus-monitor-memory-usage.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/dbcc-memorystatus-monitor-memory-usage",
+      "redirect_document_id": true
     }
-
 
 ]
 }

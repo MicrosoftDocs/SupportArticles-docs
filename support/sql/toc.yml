@@ -115,6 +115,63 @@
        href: database-engine/performance/performance-issues-using-columstore-indexes-large-pages.md
      - name: Filtered index not used in queries
        href: database-engine/performance/filtered-index-with-column-is-null.md
+      - name: Troubleshoot slow-running queries
+        href: database-engine/performance/troubleshoot-slow-running-queries.md
+     - name: Troubleshoot high-CPU-usage issues
+       href: database-engine/performance/troubleshoot-high-cpu-usage-issues.md
+     - name: Troubleshoot SQL Server slow performance caused by IO
+       href: database-engine/performance/troubleshoot-sql-io-performance.md
+     - name: TokenAndPermUserStore related performance issues
+       href: database-engine/performance/token-and-perm-user-store-perf-issue.md
+     - name: Troubleshoot query time-out errors
+       href: database-engine/performance/troubleshoot-query-timeouts.md
+     - name: Different query performance between two SQL Servers
+       href: database-engine/performance/troubleshoot-query-perf-between-servers.md
+     - name: Slower query in database application than in SSMS
+       href: database-engine/performance/troubleshoot-application-slow-ssms-fast.md
+     - name: Decreased query performance after upgrade
+       href: database-engine/performance/decreased-query-perf-after-upgrade.md
+     - name: Understand and resolve blocking problems
+       href: database-engine/performance/understand-resolve-blocking.md
+     - name: Updates and configuration options for high-performance workloads (SQL Server 2014 and 2012)
+       href: database-engine/performance/recommended-updates-configuration-options.md
+     - name: Updates and configuration options for high-performance workloads (SQL Server 2017 and 2016)
+       href: database-engine/performance/recommended-updates-configuration-workloads.md
+     - name: Resolve last-page insert PAGELATCH_EX contention
+       href: database-engine/performance/resolve-pagelatch-ex-contention.md
+     - name: Troubleshoot out of memory issues in SQL Server
+       href: database-engine/performance/troubleshoot-memory-issues.md
+     - name: Troubleshoot queries that seem to never end
+       href: database-engine/performance/troubleshoot-never-ending-query.md
+     - name: Troubleshoot ASYNC_NETWORK_IO issues
+       href: database-engine/performance/troubleshoot-query-async-network-io.md
+     - name: Operations that trigger buffer pool scan may run slowly on large-memory computers
+       href: database-engine/performance/buffer-pool-scan-runs-slowly-large-memory-machines.md
+     - name: Reducing allocation contention in tempdb
+       href: database-engine/performance/recommendations-reduce-allocation-contention.md
+     - name: Troubleshoot blocking caused by compile locks
+       href: database-engine/performance/troubleshoot-blocking-caused-compile-locks.md
+     - name: Resolve blocking problems caused by lock escalation
+       href: database-engine/performance/resolve-blocking-problems-caused-lock-escalation.md
+     - name: Blocked column is populated for latch waits
+       href: database-engine/performance/blocked-column-populated-latch-waits.md
+     - name: Decreased performance when using EFS to encrypt database files
+       href: database-engine/performance/decreased-performance-use-efs.md
+     - name: Decreased performance when using TOP, MAX, or MIN
+       href: database-engine/performance/decreased-performance-run-aggregating-clause.md
+     - name: External modules and filter drivers cause performance issues
+       href: database-engine/performance/performance-consistency-issues-filter-drivers-modules.md
+     - name: High CPU or high memory grants with queries that use optimized nested loops
+       href: database-engine/performance/decreased-perf-high-cpu-optimized-nested-loop.md
+     - name: Non-yielding Resource Monitor
+       href: database-engine/performance/resource-monitor-nonyielding-condition.md
+     - name: Performance degradation with new CE join containment assumption
+       href: database-engine/performance/cardinality-estimator-degrades-query-performance.md
+     - name: SchemaMgr Store entries degrade performance
+       href: database-engine/performance/schemamgr-store-degrades-performance.md
+     - name: Upgrading compatibility level degrades performance for spatial queries
+       href: database-engine/performance/upgrade-compatibility-level-degrades-performance.md
+
 
   - name: Administration and Management
     items:
@@ -408,40 +465,15 @@
       href: machine-learning/inconsistent-results-mkl-computations-missing-variable.md
   - name: Performance
     items:
-    - name: Troubleshoot slow-running queries
-      href: performance/troubleshoot-slow-running-queries.md
+    
     - name: Troubleshoot entire SQL Server or application appears slow
       href: performance/troubleshoot-entire-sqlserver-slow.md
-    - name: Troubleshoot high-CPU-usage issues
-      href: performance/troubleshoot-high-cpu-usage-issues.md
-    - name: Troubleshoot SQL Server slow performance caused by IO
-      href: performance/troubleshoot-sql-io-performance.md
-    - name: TokenAndPermUserStore related performance issues
-      href: performance/token-and-perm-user-store-perf-issue.md
     - name: Troubleshoot query time-out errors
       href: performance/troubleshoot-query-timeouts.md
     - name: Different query performance between two SQL Servers
       href: performance/troubleshoot-query-perf-between-servers.md
     - name: Troubleshoot slow queries affected by Optimizer Timeout
       href: performance/troubleshoot-optimizer-timeout-performance.md
-    - name: Slower query in database application than in SSMS
-      href: performance/troubleshoot-application-slow-ssms-fast.md      
-    - name: Decreased query performance after upgrade
-      href: performance/decreased-query-perf-after-upgrade.md
-    - name: Understand and resolve blocking problems
-      href: performance/understand-resolve-blocking.md
-    - name: Updates and configuration options for high-performance workloads (SQL Server 2014 and 2012)
-      href: performance/recommended-updates-configuration-options.md
-    - name: Updates and configuration options for high-performance workloads (SQL Server 2017 and 2016)
-      href: performance/recommended-updates-configuration-workloads.md
-    - name: Resolve last-page insert PAGELATCH_EX contention
-      href: performance/resolve-pagelatch-ex-contention.md
-    - name: Troubleshoot out of memory issues in SQL Server
-      href: performance/troubleshoot-memory-issues.md
-    - name: Troubleshoot queries that seem to never end
-      href: performance/troubleshoot-never-ending-query.md
-    - name: Troubleshoot ASYNC_NETWORK_IO issues
-      href: performance/troubleshoot-query-async-network-io.md
     - name: Operations that trigger buffer pool scan may run slowly on large-memory computers
       href: performance/buffer-pool-scan-runs-slowly-large-memory-machines.md
     - name: Reducing allocation contention in tempdb
