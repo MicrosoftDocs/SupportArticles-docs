@@ -85,6 +85,8 @@
         href: database-engine/startup-shutdown/error-1069-service-cannot-start.md
       - name: Event ID 17058 and SQL Server doesn't start
         href: database-engine/startup-shutdown/event-id-17058-start-sql-server.md
+      - name: Event ID 1814 and SQL Server doesn't start
+        href: database-engine/startup-shutdown/event-id-1814-fail-start.md
 
 
   - name: Administration and Management
