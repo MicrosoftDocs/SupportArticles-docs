@@ -87,8 +87,22 @@
         href: database-engine/startup-shutdown/event-id-17058-start-sql-server.md
       - name: Event ID 1814 and SQL Server doesn't start
         href: database-engine/startup-shutdown/event-id-1814-fail-start.md
-
-
+      - name: Event ID 33565 and SQL Server doesn't start
+        href: database-engine/startup-shutdown/event-id-33565-start-sql-server.md
+      - name: Event ID 33566 and SQL Server doesn't start
+        href: database-engine/startup-shutdown/event-id-33566-start-sql-server.md
+      - name: Event ID 7000 and SQL Server doesn't start
+        href: database-engine/startup-shutdown/event-id-7000-fail-start.md
+      - name: Manage the error log
+        href: database-engine/startup-shutdown/manage-error-log.md
+      - name: Fails to start with error 17182
+        href: database-engine/startup-shutdown/fails-start-error-17182.md
+      - name: SQL Service cannot start after configuring SSL certificate
+        href: database-engine/startup-shutdown/service-cannot-start.md
+      - name: SQL can't start with a domain account
+        href: database-engine/startup-shutdown/sql-cannot-start-with-domain-account.md
+      - name: SQL Server agent may not start or crash 
+        href: database-engine/sql-server-agent-crashes-upon-start.md
   - name: Administration and Management
     items:
     - name: SQL Server startup issues
@@ -100,12 +114,6 @@
 
       - name: Event ID 17058 and SQL Server doesn't start
         href: admin/event-id-17058-start-sql-server.md
-      - name: Event ID 1814 and SQL Server doesn't start
-        href: admin/event-id-1814-fail-start.md
-      - name: Event ID 33565 and SQL Server doesn't start
-        href: admin/event-id-33565-start-sql-server.md
-      - name: Event ID 33566 and SQL Server doesn't start
-        href: admin/event-id-33566-start-sql-server.md
       - name: Event ID 7000 and SQL Server doesn't start
         href: admin/event-id-7000-fail-start.md
     - name: SQL Server agent may not start or crash 
@@ -552,8 +560,6 @@
       href: security/error-disable-guest-user.md
     - name: Fix permission problem when you move MSDB database
       href: security/fix-permission-issues-move-msdb.md
-    - name: Fails to start with error 17182
-      href: security/fails-start-error-17182.md
     - name: SQL Service cannot start after configuring SSL certificate
       href: security/service-cannot-start.md
     - name: Transfer logins and passwords between instances

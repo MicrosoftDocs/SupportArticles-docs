@@ -4584,7 +4584,51 @@
       "source_path": "support/sql/admin/event-id-17058-start-sql-server.md",
       "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/event-id-17058-start-sql-server",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/event-id-1814-fail-start.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/event-id-1814-fail-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/event-id-33565-start-sql-server.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/event-id-33565-start-sql-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/event-id-33566-start-sql-server.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/event-id-33566-start-sql-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/event-id-7000-fail-start.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/event-id-7000-fail-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/manage-error-log.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/manage-error-log",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/fails-start-error-17182.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/fails-start-error-17182",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/service-cannot-start.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/service-cannot-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/sql-cannot-start-with-domain-account.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/sql-cannot-start-with-domain-account",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/sql-server-agent-crashes-upon-start.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/sql-server-agent-crashes-upon-start",
+      "redirect_document_id": true
     }
-
 ]
 }
