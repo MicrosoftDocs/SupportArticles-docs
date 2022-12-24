@@ -4639,7 +4639,18 @@
       "source_path": "support/sql/admin/performance-issues-using-columstore-indexes-large-pages.md",
       "redirect_url": "/troubleshoot/sql/database-engine/performance/performance-issues-using-columstore-indexes-large-pages",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/memory-optimized-tempdb-out-of-memory.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/memory-optimized-tempdb-out-of-memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/non-yielding-error-lock-pages-disable.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/non-yielding-error-lock-pages-disable",
+      "redirect_document_id": true
     }
+
 
 ]
 }

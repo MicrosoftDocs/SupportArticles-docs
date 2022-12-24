@@ -107,26 +107,23 @@
     items: 
      - name: Generate a script to create a statistics-only database
        href: database-engine/performance/stats-only-db-script.md
+     - name: Memory-optimized temppdb metadata out-of-memory errors
+       href: database-engine/performance/memory-optimized-tempdb-out-of-memory.md
+     - name: Non-yielding error if the lock pages in memory option is disabled
+       href: database-engine/performance/non-yielding-error-lock-pages-disable.md
      - name: Performance issues when using Columstore indexes with large pages
        href: database-engine/performance/performance-issues-using-columstore-indexes-large-pages.md
-
-
 
   - name: Administration and Management
     items:
     - name: SQL Server startup issues
       items:
-      - name: SQL can't start with a domain account
-        href: admin/sql-cannot-start-with-domain-account.md
       - name: Error 17182 when you start SQL Server service
         href: admin/error-17182-protocols-disabled-start-failure.md
-
       - name: Event ID 17058 and SQL Server doesn't start
         href: admin/event-id-17058-start-sql-server.md
       - name: Event ID 7000 and SQL Server doesn't start
         href: admin/event-id-7000-fail-start.md
-    - name: Generate a script to create a statistics-only database
-      href: admin/stats-only-db-script.md
     - name: 17053 and 926 errors when running DBCC CHECK
       href: admin/17053-and-926-errors-running-dbcc-check.md
     - name: 8967 and 8921 errors when running DBCC CHECKDB
@@ -197,16 +194,8 @@
       href: admin/latch-timeout-running-dbcc-checkdb.md
     - name: Logging and data storage algorithms
       href: admin/logging-data-storage-algorithms.md
-    - name: Manage the error log
-      href: admin/manage-error-log.md
-    - name: Memory-optimized temppdb metadata out-of-memory errors
-      href: admin/memory-optimized-tempdb-out-of-memory.md
-    - name: Non-yielding error if the lock pages in memory option is disabled
-      href: admin/non-yielding-error-lock-pages-disable.md
     - name: Pass a variable to a linked server query
       href: admin/pass-variable-linked-server-query.md
-    - name: Performance issues when using Columstore indexes with large pages
-      href: admin/performance-issues-using-columstore-indexes-large-pages.md
     - name: Policy-Based Management generates alerts
       href: admin/34052-error-pbm-generates-alerts.md
     - name: Restore or recovery may fail
