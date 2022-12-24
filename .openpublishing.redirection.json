@@ -4543,13 +4543,19 @@
     {
       "source_path": "support/sql/log-shipping/configure-security-log-shipping.md",
       "redirect_url": "/troubleshoot/sql/database-engine/log-shipping/configure-security-log-shipping",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/sql/log-shipping/logshipping-monitor-14420-error.md",
       "redirect_url": "/troubleshoot/sql/database-engine/log-shipping/logshipping-monitor-14420-error",
-      "redirect_document_id": false
+      "redirect_document_id": true
+    },
+    { 
+      "source_path": "support/sql/admin/sql-server-startup-errors.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/sql-server-startup-errors",
+      "redirect_document_id": true
     }
+ 
 
 ]
 }

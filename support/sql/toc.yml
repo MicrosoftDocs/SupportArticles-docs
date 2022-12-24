@@ -71,12 +71,14 @@
       href: database-engine/log-shipping/configure-security-log-shipping.md
     - name: Logshipping monitor raises 14420 error
       href: database-engine/log-shipping/logshipping-monitor-14420-error.md
+  - name: Startup, shutdown, restart issues (instance or database)
+    items:
+      - name: SQL Server startup errors
+        href: database-engine/startup-shutdown/sql-server-startup-errors.md
   - name: Administration and Management
     items:
     - name: SQL Server startup issues
       items:
-      - name: SQL Server startup errors
-        href: admin/sql-server-startup-errors.md
       - name: SQL can't start with a domain account
         href: admin/sql-cannot-start-with-domain-account.md
       - name: Access is denied error and SQL Server doesn't start
