@@ -102,7 +102,8 @@
       - name: SQL can't start with a domain account
         href: database-engine/startup-shutdown/sql-cannot-start-with-domain-account.md
       - name: SQL Server agent may not start or crash 
-        href: database-engine/sql-server-agent-crashes-upon-start.md
+        href: database-engine/startup-shutdown/sql-server-agent-crashes-upon-start.md
+
   - name: Administration and Management
     items:
     - name: SQL Server startup issues
@@ -116,10 +117,6 @@
         href: admin/event-id-17058-start-sql-server.md
       - name: Event ID 7000 and SQL Server doesn't start
         href: admin/event-id-7000-fail-start.md
-    - name: SQL Server agent may not start or crash 
-      href: admin/sql-server-agent-crashes-upon-start.md
-    - name: 1450 and 665 errors when running DBCC CHECKDB
-      href: admin/1450-and-665-errors-running-dbcc-checkdb.md
     - name: Generate a script to create a statistics-only database
       href: admin/stats-only-db-script.md
     - name: 17053 and 926 errors when running DBCC CHECK
@@ -560,8 +557,6 @@
       href: security/error-disable-guest-user.md
     - name: Fix permission problem when you move MSDB database
       href: security/fix-permission-issues-move-msdb.md
-    - name: SQL Service cannot start after configuring SSL certificate
-      href: security/service-cannot-start.md
     - name: Transfer logins and passwords between instances
       href: security/transfer-logins-passwords-between-instances.md
     - name: Use PFX-formatted certificates
