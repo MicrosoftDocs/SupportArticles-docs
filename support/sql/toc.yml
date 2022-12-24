@@ -113,6 +113,8 @@
        href: database-engine/performance/non-yielding-error-lock-pages-disable.md
      - name: Performance issues when using Columstore indexes with large pages
        href: database-engine/performance/performance-issues-using-columstore-indexes-large-pages.md
+     - name: Filtered index not used in queries
+       href: database-engine/performance/filtered-index-with-column-is-null.md
 
   - name: Administration and Management
     items:
@@ -278,8 +280,7 @@
       href: database-design/error-556-insert-exec-failed.md
     - name: Execution of CLR fails with TypeInitializationException
       href: database-design/execution-clr-fails-typeInitializationexception.md
-    - name: Filtered index not used in queries
-      href: database-design/filtered-index-with-column-is-null.md
+
     - name: Improvements in handling some data types and uncommon operations
       href: database-design/sql-server-azure-sql-database-improvements.md
     - name: Iterate through result set using T-SQL

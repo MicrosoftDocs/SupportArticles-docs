@@ -4649,6 +4649,16 @@
       "source_path": "support/sql/admin/non-yielding-error-lock-pages-disable.md",
       "redirect_url": "/troubleshoot/sql/database-engine/performance/non-yielding-error-lock-pages-disable",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/filtered-index-with-column-is-null.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/filtered-index-with-column-is-null",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-slow-running-queries.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-slow-running-queries",
+      "redirect_document_id": true
     }
 
 
