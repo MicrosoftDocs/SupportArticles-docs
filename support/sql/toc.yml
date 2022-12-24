@@ -103,6 +103,14 @@
         href: database-engine/startup-shutdown/sql-cannot-start-with-domain-account.md
       - name: SQL Server agent may not start or crash 
         href: database-engine/startup-shutdown/sql-server-agent-crashes-upon-start.md
+  - name: SQL Server resource usage (CPU, Memory, Storage) and Configuration
+    items: 
+     - name: Generate a script to create a statistics-only database
+       href: database-engine/performance/stats-only-db-script.md
+     - name: Performance issues when using Columstore indexes with large pages
+       href: database-engine/performance/performance-issues-using-columstore-indexes-large-pages.md
+
+
 
   - name: Administration and Management
     items:
