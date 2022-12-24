@@ -75,22 +75,27 @@
     items:
       - name: SQL Server startup errors
         href: database-engine/startup-shutdown/sql-server-startup-errors.md
+      - name: Access is denied error and SQL Server doesn't start
+        href: database-engine/startup-shutdown/event-id-7000-access-denied.md
+      - name: Error 17113 when you start SQL Server service
+        href: database-engine/startup-shutdown/error-17113-start-service.md
+      - name: Error 1068 when starting SQL Server
+        href: database-engine/startup-shutdown/agent-service-fails-start-stand-alone-server.md
+      - name: Error 1069 when starting SQL Server
+        href: database-engine/startup-shutdown/error-1069-service-cannot-start.md
+      - name: Event ID 17058 and SQL Server doesn't start
+        href: database-engine/startup-shutdown/event-id-17058-start-sql-server.md
+
+
   - name: Administration and Management
     items:
     - name: SQL Server startup issues
       items:
       - name: SQL can't start with a domain account
         href: admin/sql-cannot-start-with-domain-account.md
-      - name: Access is denied error and SQL Server doesn't start
-        href: admin/event-id-7000-access-denied.md
-      - name: Error 17113 when you start SQL Server service
-        href: admin/error-17113-start-service.md
       - name: Error 17182 when you start SQL Server service
         href: admin/error-17182-protocols-disabled-start-failure.md
-      - name: Error 1068 when starting SQL Server
-        href: admin/agent-service-fails-start-stand-alone-server.md
-      - name: Error 1069 when starting SQL Server
-        href: admin/error-1069-service-cannot-start.md
+
       - name: Event ID 17058 and SQL Server doesn't start
         href: admin/event-id-17058-start-sql-server.md
       - name: Event ID 1814 and SQL Server doesn't start

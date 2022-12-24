@@ -4559,6 +4559,32 @@
       "source_path": "support/sql/admin/event-id-7000-access-denied.md",
       "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/event-id-7000-access-denied",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-17113-start-service.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/error-17113-start-service",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-17182-protocols-disabled-start-failure.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/error-17182-protocols-disabled-start-failure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/agent-service-fails-start-stand-alone-server.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/agent-service-fails-start-stand-alone-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-1069-service-cannot-start.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/error-1069-service-cannot-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/event-id-17058-start-sql-server.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/event-id-17058-start-sql-server",
+      "redirect_document_id": true
     }
+
 ]
 }
