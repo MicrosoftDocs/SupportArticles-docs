@@ -4554,8 +4554,11 @@
       "source_path": "support/sql/admin/sql-server-startup-errors.md",
       "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/sql-server-startup-errors",
       "redirect_document_id": true
+    },
+    { 
+      "source_path": "support/sql/admin/event-id-7000-access-denied.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/event-id-7000-access-denied",
+      "redirect_document_id": true
     }
- 
-
 ]
 }
