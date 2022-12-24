@@ -65,6 +65,12 @@
 
 - name: Database Engine
   items:
+  - name: Log Shipping
+    items:
+    - name: Configure security for log shipping
+      href: database-engine/log-shipping/configure-security-log-shipping.md
+    - name: Logshipping monitor raises 14420 error
+      href: database-engine/log-shipping/logshipping-monitor-14420-error.md
   - name: Administration and Management
     items:
     - name: SQL Server startup issues
