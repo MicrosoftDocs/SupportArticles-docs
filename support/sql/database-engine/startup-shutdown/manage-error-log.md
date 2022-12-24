@@ -50,4 +50,4 @@ For more information on configuring these values using T-SQL, see the following 
 
 ## Third-party information disclaimer
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
