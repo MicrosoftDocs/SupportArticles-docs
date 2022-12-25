@@ -154,7 +154,7 @@ Use the following steps to troubleshoot the issue:
 1. Redesign or tune the head blocking query to run faster, or reduce the number of queries inside a transaction.
 1. Examine the transaction isolation used in the query and adjust.
 
-For detailed troubleshooting of blocking scenarios, see [Understand and resolve SQL Server blocking problems](../performance/understand-resolve-blocking.mdunderstand-resolve-blocking.md#detailed-blocking-scenarios).
+For detailed troubleshooting of blocking scenarios, see [Understand and resolve SQL Server blocking problems](../performance/understand-resolve-blocking.md#detailed-blocking-scenarios).
 
 ## Step 8: Troubleshoot scheduler issues (non-yielding, deadlocked scheduler, non-yielding IOCP listener, resource monitor)
 

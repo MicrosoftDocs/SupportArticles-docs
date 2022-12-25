@@ -4817,7 +4817,7 @@
     },
     {
       "source_path": "support/sql/performance/cardinality-estimator-degrades-query-performance.md",
-      "redirect_url": "support/sql/database-engine/performance/resource-monitor-nonyielding-condition",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/resource-monitor-nonyielding-condition",
       "redirect_document_id": true
     }
 
