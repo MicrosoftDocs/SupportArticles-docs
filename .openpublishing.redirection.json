@@ -4854,6 +4854,21 @@
       "source_path": "support/sql/availability-groups/error-41131-create-availability-group.md",
       "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/error-41131-create-availability-group",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/assertion-execute-bulk-insert-bcp.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-mirroring/assertion-execute-bulk-insert-bcp",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-mirroring/mirrored-databases-disconnected.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-mirroring/mirrored-databases-disconnected",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/assertion-partner-servers-using-mirroring.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-mirroring/assertion-partner-servers-using-mirroring",
+      "redirect_document_id": true
     }
 
 ]

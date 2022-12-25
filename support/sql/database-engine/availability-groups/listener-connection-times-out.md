@@ -6,6 +6,7 @@ ms.custom: sap:High Availability and Disaster Recovery features
 ms.reviewer: ramakoni
 ms.prod: sql
 ---
+
 # Timeout occurs when you connect to an Always On listener in multi-subnet environment
 
 This article helps you resolve the problem that occurs when you connect to a SQL Server Always On availability group listener in a multi-subnet environment.

@@ -197,9 +197,8 @@
         href: database-engine/availability-groups/troubleshooting-automatic-failover-problems.md
       - name: Troubleshooting on Always On issues
         href: database-engine/availability-groups/troubleshooting-alwayson-issues.md
-
-
-
+      - name: Error 41131 when creating availability group
+        href: database-engine/availability-groups/error-41131-create-availability-group.md
   - name: Administration and Management
     items:
     - name: SQL Server startup issues
@@ -379,32 +378,14 @@
       href: database-design/timeout-issues-deploy-clr-objects.md
     - name: Use extended or SP_OA stored procedure to load CLR
       href: database-design/use-extended-sp-oa-stored-procedure.md
-  - name: High Availability and Disaster Recovery features
+  - name: Database Mirroring (DBM)
     items:
-    - name: Availability Groups
-      items:
-      - name: 9002 error on primary replica
-        href: availability-groups/error-9002-transaction-log-large.md
-      - name: Always On DB in recovery pending or suspect state
-        href: availability-groups/alwayson-availability-databases-recovery-pending-suspect.md
-      - name: Error 2767 on secondary replica
-        href: availability-groups/error-2767-query-secondary-replica-fails.md
-      - name: Issues after changing the hostname 
-        href: availability-groups/error-41041-change-hostname.md
-      - name: Listener connection times out in multi-subnet
-        href: availability-groups/listener-connection-times-out.md
-      - name: Query performance degradation on secondary replicas
-        href: availability-groups/query-performance-degradation.md
-      - name: Troubleshooting automatic failover problems
-        href: availability-groups/troubleshooting-automatic-failover-problems.md
-      - name: Troubleshooting on Always On issues
-        href: availability-groups/troubleshooting-alwayson-issues.md
-      - name: Error 41131 when creating availability group
-        href: availability-groups/error-41131-create-availability-group.md
-    - name: Database Mirroring
-      items:
-      - name: Mirrored databases are disconnected
-        href: database-mirroring/mirrored-databases-disconnected.md
+     - name: Assertion when you execute Bulk Insert or BCP 
+       href: database-engine/database-mirroring/assertion-execute-bulk-insert-bcp.md
+     - name: Mirrored databases are disconnected
+       href: database-engine/database-mirroring/mirrored-databases-disconnected.md
+     - name: Assertion failure on partner servers when using mirroring
+       href: database-engine/assertion-partner-servers-using-mirroring.md
     - name: Failover Clusters
       items:
       - name: Cluster resource in Failed state
