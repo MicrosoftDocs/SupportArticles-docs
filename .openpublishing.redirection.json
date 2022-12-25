@@ -4653,7 +4653,7 @@
     {
       "source_path": "support/sql/database-design/filtered-index-with-column-is-null.md",
       "redirect_url": "/troubleshoot/sql/database-engine/performance/filtered-index-with-column-is-null",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/sql/performance/troubleshoot-slow-running-queries.md",
@@ -4673,11 +4673,6 @@
     {
       "source_path": "support/sql/performance/token-and-perm-user-store-perf-issue.md",
       "redirect_url": "/troubleshoot/sql/database-engine/performance/token-and-perm-user-store-perf-issue",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "support/sql/database-design/filtered-index-with-column-is-null.md",
-      "redirect_url": "/troubleshoot/sql/database-engine/performance/filtered-index-with-column-is-null",
       "redirect_document_id": true
     },
     {
@@ -4786,11 +4781,6 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/sql/performance/cardinality-estimator-degrades-query-performance.md",
-      "redirect_url": "/troubleshoot/sql/database-engine/performance/resource-monitor-nonyielding-condition",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "support/sql/performance/schemamgr-store-degrades-performance.md",
       "redirect_url": "/troubleshoot/sql/database-engine/performance/schemamgr-store-degrades-performance",
       "redirect_document_id": true
@@ -4803,6 +4793,26 @@
     {
       "source_path": "support/sql/performance/dbcc-memorystatus-monitor-memory-usage.md",
       "redirect_url": "/troubleshoot/sql/database-engine/performance/dbcc-memorystatus-monitor-memory-usage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-entire-sqlserver-slow.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-entire-sqlserver-slow",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-optimizer-timeout-performance.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-optimizer-timeout-performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-performance-narrow-vs-wide-plans.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-performance-narrow-vs-wide-plans",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/701-error-large-batches.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/701-error-large-batches",
       "redirect_document_id": true
     }
 

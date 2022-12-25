@@ -171,8 +171,16 @@
        href: database-engine/performance/schemamgr-store-degrades-performance.md
      - name: Upgrading compatibility level degrades performance for spatial queries
        href: database-engine/performance/upgrade-compatibility-level-degrades-performance.md
-
-
+     - name: Use DBCC MEMORYSTATUS to monitor memory usage
+       href: database-engine/performance/dbcc-memorystatus-monitor-memory-usage.md
+     - name: Troubleshoot entire SQL Server or application appears slow
+       href: database-engine/performance/troubleshoot-entire-sqlserver-slow.md
+     - name: Troubleshoot slow queries affected by Optimizer Timeout
+       href: database-engine/performance/troubleshoot-optimizer-timeout-performance.md
+     - name: Troubleshoot performance issues with narrow and wide plans
+       href: database-engine/performance/troubleshoot-performance-narrow-vs-wide-plans.md
+     - name: 701 error with large batches
+        href: database-engine/performance/701-error-large-batches.md
   - name: Administration and Management
     items:
     - name: SQL Server startup issues
