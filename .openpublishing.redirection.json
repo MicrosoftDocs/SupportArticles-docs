@@ -4814,6 +4814,11 @@
       "source_path": "support/sql/performance/701-error-large-batches.md",
       "redirect_url": "/troubleshoot/sql/database-engine/performance/701-error-large-batches",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/cardinality-estimator-degrades-query-performance.md",
+      "redirect_url": "support/sql/database-engine/performance/resource-monitor-nonyielding-condition",
+      "redirect_document_id": true
     }
 
 ]
