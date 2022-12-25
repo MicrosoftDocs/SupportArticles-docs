@@ -4615,14 +4615,14 @@
       "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/fails-start-error-17182",
       "redirect_document_id": true
     },
-    {
-      "source_path": "support/sql/admin/service-cannot-start.md",
-      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/service-cannot-start",
+     {
+      "source_path": "support/sql/admin/sql-cannot-start-with-domain-account.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/sql-cannot-start-with-domain-account",
       "redirect_document_id": true
     },
     {
-      "source_path": "support/sql/admin/sql-cannot-start-with-domain-account.md",
-      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/sql-cannot-start-with-domain-account",
+      "source_path": "support/sql/admin/service-cannot-start.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/service-cannot-start",
       "redirect_document_id": true
     },
     {
