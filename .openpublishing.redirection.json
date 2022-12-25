@@ -4816,8 +4816,43 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/sql/performance/cardinality-estimator-degrades-query-performance.md",
-      "redirect_url": "/troubleshoot/sql/database-engine/performance/resource-monitor-nonyielding-condition",
+      "source_path": "support/sql/availability-groups/error-9002-transaction-log-large.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/error-9002-transaction-log-large",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/availability-groups/alwayson-availability-databases-recovery-pending-suspect.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/alwayson-availability-databases-recovery-pending-suspect",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/availability-groups/error-2767-query-secondary-replica-fails.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/error-2767-query-secondary-replica-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/availability-groups/error-41041-change-hostname.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/error-41041-change-hostname",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/availability-groups/query-performance-degradation.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/query-performance-degradation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/availability-groups/troubleshooting-automatic-failover-problems.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/troubleshooting-automatic-failover-problems",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/availability-groups/troubleshooting-alwayson-issues.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/troubleshooting-alwayson-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/availability-groups/error-41131-create-availability-group.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/error-41131-create-availability-group",
       "redirect_document_id": true
     }
 

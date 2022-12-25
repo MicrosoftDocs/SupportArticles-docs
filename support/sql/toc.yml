@@ -181,6 +181,25 @@
        href: database-engine/performance/troubleshoot-performance-narrow-vs-wide-plans.md
      - name: 701 error with large batches
        href: database-engine/performance/701-error-large-batches.md
+  - name: Always On Availability Groups (AG)
+    items:
+      - name: 9002 error on primary replica
+        href: database-engine/availability-groups/error-9002-transaction-log-large.md
+      - name: Always On DB in recovery pending or suspect state
+        href: database-engine/availability-groups/alwayson-availability-databases-recovery-pending-suspect.md    
+      - name: Error 2767 on secondary replica
+        href: database-engine/availability-groups/error-2767-query-secondary-replica-fails.md
+      - name: Issues after changing the hostname
+        href: database-engine/availability-groups/error-41041-change-hostname.md
+      - name: Query performance degradation on secondary replicas
+        href: database-engine/availability-groups/query-performance-degradation.md
+      - name: Troubleshooting automatic failover problems
+        href: database-engine/availability-groups/troubleshooting-automatic-failover-problems.md
+      - name: Troubleshooting on Always On issues
+        href: database-engine/availability-groups/troubleshooting-alwayson-issues.md
+
+
+
   - name: Administration and Management
     items:
     - name: SQL Server startup issues
@@ -267,8 +286,6 @@
       href: admin/34052-error-pbm-generates-alerts.md
     - name: Restore or recovery may fail
       href: admin/restore-recovery-may-fail.md
-    - name: Run a DLL-based COM object
-      href: admin/run-dll-based-com-object.md
     - name: Schedule and automate Backups of databases
       href: admin/schedule-automate-backup-database.md
     - name: Set up and troubleshoot a linked server to an Oracle database
