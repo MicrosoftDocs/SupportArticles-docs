@@ -115,8 +115,8 @@
        href: database-engine/performance/performance-issues-using-columstore-indexes-large-pages.md
      - name: Filtered index not used in queries
        href: database-engine/performance/filtered-index-with-column-is-null.md
-      - name: Troubleshoot slow-running queries
-        href: database-engine/performance/troubleshoot-slow-running-queries.md
+     - name: Troubleshoot slow-running queries
+       href: database-engine/performance/troubleshoot-slow-running-queries.md
      - name: Troubleshoot high-CPU-usage issues
        href: database-engine/performance/troubleshoot-high-cpu-usage-issues.md
      - name: Troubleshoot SQL Server slow performance caused by IO
@@ -180,7 +180,7 @@
      - name: Troubleshoot performance issues with narrow and wide plans
        href: database-engine/performance/troubleshoot-performance-narrow-vs-wide-plans.md
      - name: 701 error with large batches
-        href: database-engine/performance/701-error-large-batches.md
+       href: database-engine/performance/701-error-large-batches.md
   - name: Administration and Management
     items:
     - name: SQL Server startup issues
