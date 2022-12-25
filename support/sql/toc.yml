@@ -199,6 +199,14 @@
         href: database-engine/availability-groups/troubleshooting-alwayson-issues.md
       - name: Error 41131 when creating availability group
         href: database-engine/availability-groups/error-41131-create-availability-group.md
+  - name: Database Mirroring (DBM)
+    items:
+     - name: Assertion when you execute Bulk Insert or BCP 
+       href: database-engine/database-mirroring/assertion-execute-bulk-insert-bcp.md
+     - name: Mirrored databases are disconnected
+       href: database-engine/database-mirroring/mirrored-databases-disconnected.md
+     - name: Assertion failure on partner servers when using mirroring
+       href: database-engine/assertion-partner-servers-using-mirroring.md
   - name: Administration and Management
     items:
     - name: SQL Server startup issues
@@ -361,7 +369,6 @@
       href: database-design/error-556-insert-exec-failed.md
     - name: Execution of CLR fails with TypeInitializationException
       href: database-design/execution-clr-fails-typeInitializationexception.md
-
     - name: Improvements in handling some data types and uncommon operations
       href: database-design/sql-server-azure-sql-database-improvements.md
     - name: Iterate through result set using T-SQL
@@ -378,15 +385,7 @@
       href: database-design/timeout-issues-deploy-clr-objects.md
     - name: Use extended or SP_OA stored procedure to load CLR
       href: database-design/use-extended-sp-oa-stored-procedure.md
-  - name: Database Mirroring (DBM)
-    items:
-     - name: Assertion when you execute Bulk Insert or BCP 
-       href: database-engine/database-mirroring/assertion-execute-bulk-insert-bcp.md
-     - name: Mirrored databases are disconnected
-       href: database-engine/database-mirroring/mirrored-databases-disconnected.md
-     - name: Assertion failure on partner servers when using mirroring
-       href: database-engine/assertion-partner-servers-using-mirroring.md
-    - name: Failover Clusters
+  - name: Failover Clusters
       items:
       - name: Cluster resource in Failed state
         href: failover-clusters/cluster-resource-goes-failed-state.md
@@ -402,7 +401,6 @@
         href: failover-clusters/support-policy-clustered-configurations.md
       - name: Windows Failover cluster resource dependencies
         href: failover-clusters/windows-failover-cluster-resource-depend.md
-    
   - name: Installation, Patching and Upgrade
     items:
     - name: .Net Framework requirements for SQL Server
