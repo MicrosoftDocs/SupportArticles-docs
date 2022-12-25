@@ -109,7 +109,7 @@ The following list helps you to identify the filter drivers and modules that can
 - [Types of WDM Drivers](/windows-hardware/drivers/kernel/types-of-wdm-drivers)
 - [How to temporarily deactivate the kernel mode filter driver in Windows](../../../windows-server/performance/deactivate-kernel-mode-filter-driver.md)
 - [Detours or similar techniques may cause unexpected behaviors with SQL Server](../../general/issue-detours-similar-techniques.md)
-- [How to run a DLL-based COM object outside the SQL Server process](../admin/run-dll-based-com-object.md)
+- [How to run a DLL-based COM object outside the SQL Server process](../development/run-dll-based-com-object.md)
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 

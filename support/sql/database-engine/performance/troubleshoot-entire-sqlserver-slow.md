@@ -18,7 +18,7 @@ When you run queries against a SQL Server instance or a particular application, 
 Check the application layer. Take a query from the application, run it manually on a SQL Server instance, and see how it runs. Test several queries this way. If queries are faster on the SQL Server instance, the problem could be on the application or application servers' layer.
 
 > [!NOTE]
-> Be mindful of the [query performance differences between database application and SSMS](../performance/troubleshoot-application-slow-ssms-fast).
+> Be mindful of the [query performance differences between database application and SSMS](../performance/troubleshoot-application-slow-ssms-fast.md).
 
 If the application is running on a different server, check the performance of the application server (see [Step 2: Troubleshoot the OS issues](#step-2-troubleshoot-os-issues) for troubleshooting). You may need to engage the application development team to check for any issues with the application.
 
