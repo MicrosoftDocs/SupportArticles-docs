@@ -473,51 +473,10 @@
       href: machine-learning/inconsistent-results-mkl-computations-missing-variable.md
   - name: Performance
     items:
-    
-    - name: Troubleshoot entire SQL Server or application appears slow
-      href: performance/troubleshoot-entire-sqlserver-slow.md
-    - name: Troubleshoot query time-out errors
-      href: performance/troubleshoot-query-timeouts.md
-    - name: Different query performance between two SQL Servers
-      href: performance/troubleshoot-query-perf-between-servers.md
-    - name: Troubleshoot slow queries affected by Optimizer Timeout
-      href: performance/troubleshoot-optimizer-timeout-performance.md
-    - name: Operations that trigger buffer pool scan may run slowly on large-memory computers
-      href: performance/buffer-pool-scan-runs-slowly-large-memory-machines.md
-    - name: Reducing allocation contention in tempdb
-      href: performance/recommendations-reduce-allocation-contention.md
-    - name: Troubleshoot blocking caused by compile locks
-      href: performance/troubleshoot-blocking-caused-compile-locks.md
-    - name: Resolve blocking problems caused by lock escalation
-      href: performance/resolve-blocking-problems-caused-lock-escalation.md
-    - name: Blocked column is populated for latch waits
-      href: performance/blocked-column-populated-latch-waits.md
     - name: Troubleshoot slow SSIS or ELT jobs query performance
       href: performance/slow-query-performance-ssis-etl.md      
-    - name: Decreased performance when using EFS to encrypt database files
-      href: performance/decreased-performance-use-efs.md
     - name: Decreased performance when querying view across linked servers
-      href: performance/decreased-performance-linkedserver-views.md            
-    - name: Decreased performance when using TOP, MAX or MIN
-      href: performance/decreased-performance-run-aggregating-clause.md
-    - name: External modules and filter drivers cause performance issues
-      href: performance/performance-consistency-issues-filter-drivers-modules.md
-    - name: High CPU or high memory grants with queries that use optimized nested loops
-      href: performance/decreased-perf-high-cpu-optimized-nested-loop.md
-    - name: Non-yielding Resource Monitor
-      href: performance/resource-monitor-nonyielding-condition.md
-    - name: Performance degradation with new CE join containment assumption
-      href: performance/cardinality-estimator-degrades-query-performance.md
-    - name: SchemaMgr Store entries degrade performance 
-      href: performance/schemamgr-store-degrades-performance.md
-    - name: Upgrading compatibility level degrades performance for spatial queries
-      href: performance/upgrade-compatibility-level-degrades-performance.md
-    - name: Use DBCC MEMORYSTATUS to monitor memory usage
-      href: performance/dbcc-memorystatus-monitor-memory-usage.md
-    - name: Troubleshoot performance issues with narrow and wide plans
-      href: performance/troubleshoot-performance-narrow-vs-wide-plans.md
-    - name: 701 error with large batches
-      href: performance/701-error-large-batches.md
+      href: performance/decreased-performance-linkedserver-views.md
   - name: Replication, change tracking, change data capture
     items:
     - name: 102 and incorrect syntax error with peer-to-peer replication
