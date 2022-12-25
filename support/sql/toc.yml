@@ -206,7 +206,7 @@
      - name: Mirrored databases are disconnected
        href: database-engine/database-mirroring/mirrored-databases-disconnected.md
      - name: Assertion failure on partner servers when using mirroring
-       href: database-engine/assertion-partner-servers-using-mirroring.md
+       href: database-engine/database-mirroring/assertion-partner-servers-using-mirroring.md
   - name: Administration and Management
     items:
     - name: SQL Server startup issues

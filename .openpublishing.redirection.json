@@ -4856,6 +4856,12 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/sql/availability-groups/listener-connection-times-out.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/listener-connection-times-out",
+      "redirect_document_id": true
+    },
+
+    {
       "source_path": "support/sql/admin/assertion-execute-bulk-insert-bcp.md",
       "redirect_url": "/troubleshoot/sql/database-engine/database-mirroring/assertion-execute-bulk-insert-bcp",
       "redirect_document_id": true
@@ -4868,6 +4874,16 @@
     {
       "source_path": "support/sql/admin/assertion-partner-servers-using-mirroring.md",
       "redirect_url": "/troubleshoot/sql/database-engine/database-mirroring/assertion-partner-servers-using-mirroring",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/run-dll-based-com-object.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/development/run-dll-based-com-object",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/cardinality-estimator-degrades-query-performance.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/cardinality-estimator-degrades-query-performance",
       "redirect_document_id": true
     }
 
