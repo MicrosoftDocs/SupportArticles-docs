@@ -386,7 +386,7 @@
     - name: Use extended or SP_OA stored procedure to load CLR
       href: database-design/use-extended-sp-oa-stored-procedure.md
   - name: Failover Clusters
-      items:
+    items:
       - name: Cluster resource in Failed state
         href: failover-clusters/cluster-resource-goes-failed-state.md
       - name: Cluster validation rule failure
