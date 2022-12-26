@@ -207,7 +207,7 @@ Follow these steps to troubleshoot these issues:
       * ********************************************
       ```
 
-1. If you locate one of these errors, identify which version (Cumulative Update) of SQL Server you are on, and see if there are any fixed issues in Cumulative updates shipped after your current CU. For the SQL Server fixes, see [Latest updates available for currently supported versions of SQL Server](/troubleshoot/sql/general/determine-version-edition-update-level#latest-updates-available-for-currently-supported-versions-of-sql-server). For a detailed fix list, you can download this [Excel file](https://download.microsoft.com/download/d/6/5/d6583d78-9956-45c1-901d-eff8b5270896/SQL%20Server%20Builds%20V4.xlsx).
+1. If you locate one of these errors, identify which version (Cumulative Update) of SQL Server you are on, and see if there are any fixed issues in Cumulative updates shipped after your current CU. For the SQL Server fixes, see [Latest updates available for currently supported versions of SQL Server](/troubleshoot/sql/general/determine-version-edition-update-level#latest-updates-available-for-currently-supported-versions-of-sql-server). For a detailed fix list, you can download this [Excel file](https://download.microsoft.com/download/d/3/e/d3e28f3d-6a4f-47ce-aaa5-9d74c5590ed6/SQLServerBuilds.xlsx).
 
 1. Use [Troubleshooting SQL Server Scheduling and Yielding](https://techcommunity.microsoft.com/t5/sql-server-support-blog/troubleshooting-sql-server-scheduling-and-yielding/ba-p/319148) for more ideas.
 

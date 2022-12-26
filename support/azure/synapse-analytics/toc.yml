@@ -7,3 +7,5 @@
     href: dedicated-sql/troubleshoot-dsql-perf-slow-query.md
   - name: Assess and correct clustered columnstore index health in a dedicated SQL pool
     href: dedicated-sql/dsql-perf-cci-health.md
+  - name: Check statistics accuracy on a dedicated SQL pool
+    href: dedicated-sql/dsql-perf-stats-accuracy.md

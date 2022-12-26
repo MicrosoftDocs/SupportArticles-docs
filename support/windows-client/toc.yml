@@ -574,7 +574,7 @@
       href: ./networking/windows-connection-manager-disconnects-wlan.md
   - name: TCP/IP communications
     items:
-    - name: RPC errors troubleshooting
+    - name: RPC error troubleshooting guidance
       href: ./networking/rpc-errors-troubleshooting.md
     - name: TCP/IP port exhaustion troubleshooting
       href: ./networking/tcp-ip-port-exhaustion-troubleshooting.md
