@@ -4948,7 +4948,7 @@
     },
     {
       "source_path": "support/sql/admin/restore-recovery-may-fail.md",
-      "redirect_url": "/troubleshoot/troubleshoot/sql/database-engine/backup-restore/restore-recovery-may-fail",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/restore-recovery-may-fail",
       "redirect_document_id": true
     },
     {
