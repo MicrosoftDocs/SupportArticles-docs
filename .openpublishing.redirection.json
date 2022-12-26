@@ -5195,6 +5195,11 @@
       "source_path": "support/sql/security/sql-2016-fips-140-2-compliant-mode.md",
       "redirect_url": "/troubleshoot/sql/database-engine/security/sql-2016-fips-140-2-compliant-mode",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/instructions-in-fips-140-2-compliant-mode.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/instructions-in-fips-140-2-compliant-mode",
+      "redirect_document_id": true
     }
 
 ]
