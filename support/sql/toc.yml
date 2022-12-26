@@ -237,6 +237,19 @@
        href: database-engine/backup-restore/backup-restore-operations.md
      - name: Error 33111 when restoring backups that use SQL Server Connector for Key Vault
        href: database-engine/backup-restore/error-33111-restore-issues-sql-connector.md
+  - name: Database Connectivity and Authentication
+    items:
+     - name: Common Connection Issues
+       href: database-engine/connect/resolve-connectivity-errors-overview.md
+     - name: The certificate chain was issued by an authority that isn't trusted
+       href: database-engine/connect/certificate-chain-not-trusted.md
+      - name: Pre-reqs for connectivity troubleshooting
+        href: database-engine/connect/resolve-connectivity-errors-checklist.md
+      - name: Cannot generate SSPI context
+        href: database-engine/connect/cannot-generate-sspi-context-error.md
+      - name: Existing connection forcibly closed
+        href: database-engine/connect/tls-exist-connection-closed.md
+
   - name: SQL Server startup issues
     items:
     - name: Error 17182 when you start SQL Server service
@@ -323,16 +336,7 @@
       href: connect/odbc-driver-uninstall-incomplete.md
   - name: Connection issues
     items:
-    - name: Common Connection Issues
-      href: connect/resolve-connectivity-errors-overview.md
-    - name: The certificate chain was issued by an authority that isn’t trusted
-      href: connect/certificate-chain-not-trusted.md
-    - name: Pre-reqs for connectivity troubleshooting
-      href: connect/resolve-connectivity-errors-checklist.md
-    - name: Cannot generate SSPI context
-      href: connect/cannot-generate-sspi-context-error.md
-    - name: Existing connection forcibly closed
-      href: connect/tls-exist-connection-closed.md
+
     - name: Login failed for user
       href: /sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context
     - name: Network-related or instance-specific error

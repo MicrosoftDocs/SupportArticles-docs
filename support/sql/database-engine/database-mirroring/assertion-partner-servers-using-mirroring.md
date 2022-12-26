@@ -50,7 +50,7 @@ To resolve this issue, obtain the latest fix for your version of SQL Server. For
 
 > [!NOTE]
 > - In the preceding table, the last column lists only the first build that contains the fix. Because SQL Server builds are cumulative, later builds, such as SQL Server 2014 SP1 contains those fixes. However, those builds aren't listed in the table.
-> - For more information about how to obtain the latest service pack for your version of SQL Server, see [Determine the version, edition, and update level](../../general/determine-version-edition-update-level.md).
+> - For more information about how to obtain the latest service pack for your version of SQL Server, see [Determine the version, edition, and update level](../../releases/download-and-install-latest-updates.md).
 The BCP/Bulk Insert scenario is a common scenario that remains unfixed for SQL Server 2008 and SQL Server 2008 R2, and it's the most probable known cause of *lck_ok* assertions on those versions. The issue was first fixed in SQL Server 2012. The reason for not fixing this in the earlier versions is that it requires a re-architecture of SQL Server transaction log internals. Such a change can be included only with a major release of SQL Server.
 
 ## See also

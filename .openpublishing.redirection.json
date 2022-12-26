@@ -4965,7 +4965,32 @@
       "source_path": "support/sql/admin/error-33111-restore-issues-sql-connector.md",
       "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/error-33111-restore-issues-sql-connector",
       "redirect_document_id": true
-    }
+    },
+    {
+      "source_path": "support/sql/connect/resolve-connectivity-errors-overview.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/resolve-connectivity-errors-overview",
+      "redirect_document_id": true
+    },   
+    {
+      "source_path": "support/sql/connect/certificate-chain-not-trusted.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/certificate-chain-not-trusted",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/sql/connect/resolve-connectivity-errors-checklist.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/resolve-connectivity-errors-checklist",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/sql/connect/cannot-generate-sspi-context-error.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/cannot-generate-sspi-context-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/connect/tls-exist-connection-closed.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/tls-exist-connection-closed",
+      "redirect_document_id": true
+    }, 
 
 ]
 }
