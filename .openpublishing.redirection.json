@@ -5200,7 +5200,36 @@
       "source_path": "support/sql/admin/database-mail-fails-send-message.md",
       "redirect_url": "/troubleshoot/sql/database-engine/database-mail/database-mail-fails-send-message",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/configure-permissions-access-remote-data.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/linked-servers/configure-permissions-access-remote-data",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/crashes-run-oracle-linked-server-query.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/linked-servers/crashes-run-oracle-linked-server-query",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/pass-variable-linked-server-query.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/linked-servers/pass-variable-linked-server-query",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/set-up-troubleshoot-linked-server.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/set-up-troubleshoot-linked-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-message-ole-db-provider.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/error-message-ole-db-provider",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/decreased-performance-linkedserver-views.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/decreased-performance-linkedserver-views",
+      "redirect_document_id": true
     }
-
 ]
 }
