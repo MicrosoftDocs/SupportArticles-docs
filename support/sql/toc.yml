@@ -243,12 +243,34 @@
        href: database-engine/connect/resolve-connectivity-errors-overview.md
      - name: The certificate chain was issued by an authority that isn't trusted
        href: database-engine/connect/certificate-chain-not-trusted.md
-      - name: Pre-reqs for connectivity troubleshooting
-        href: database-engine/connect/resolve-connectivity-errors-checklist.md
-      - name: Cannot generate SSPI context
-        href: database-engine/connect/cannot-generate-sspi-context-error.md
-      - name: Existing connection forcibly closed
-        href: database-engine/connect/tls-exist-connection-closed.md
+     - name: Pre-reqs for connectivity troubleshooting
+       href: database-engine/connect/resolve-connectivity-errors-checklist.md
+     - name: Cannot generate SSPI context
+       href: database-engine/connect/cannot-generate-sspi-context-error.md
+     - name: Existing connection forcibly closed
+       href: database-engine/connect/tls-exist-connection-closed.md
+     - name: Network-related or instance-specific error
+       href: database-engine/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md
+     - name: Timeout expired errors
+       href: database-engine/connect/timeout-expired-error.md
+     - name: Token-based server access validation failed
+       href: database-engine/connect/cannot-connect-remotely.md
+     - name: Untrusted certificate authority error
+       href: database-engine/connect/error-message-when-you-connect.md
+     - name: Winsock LSP results in network or stability issues
+       href: database-engine/connect/winsock-lsp-network-problem.md
+     - name: Login failed for user
+       href: /sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context
+   - name: Connectivity How Tos
+     items:
+       - name: Dynamic vs Static ports
+         href: database-engine/connect/static-or-dynamic-port-config.md
+       - name: Kerberos Configuration Manager
+         href: database-engine/connect/using-kerberosmngr-sqlserver.md
+       - name: Testing using UDL file 
+         href: database-engine/connect/test-oledb-connectivity-use-udl-file.md
+       - name: Using PortQryUI tool
+         href: database-engine/connect/using-portqrytool-sqlserver.md
 
   - name: SQL Server startup issues
     items:
@@ -337,8 +359,7 @@
   - name: Connection issues
     items:
 
-    - name: Login failed for user
-      href: /sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context
+
     - name: Network-related or instance-specific error
       href: connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md
     - name: Timeout expired errors
