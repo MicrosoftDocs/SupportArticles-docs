@@ -5107,11 +5107,6 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/sql/database-design/servicing-models-sql-server.md",
-      "redirect_url": "/troubleshoot/sql/database-engine/general/servicing-models-sql-server",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "support/sql/machine-learning/inconsistent-results-mkl-computations-missing-variable.md",
       "redirect_url": "/troubleshoot/sql/database-engine/machine-learning/inconsistent-results-mkl-computations-missing-variable",
       "redirect_document_id": true
@@ -5199,6 +5194,11 @@
     {
       "source_path": "support/sql/security/instructions-in-fips-140-2-compliant-mode.md",
       "redirect_url": "/troubleshoot/sql/database-engine/security/instructions-in-fips-140-2-compliant-mode",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/database-mail-fails-send-message.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-mail/database-mail-fails-send-message",
       "redirect_document_id": true
     }
 

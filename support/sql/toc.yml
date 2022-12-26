@@ -347,6 +347,10 @@
        href: database-engine/security/sql-2016-fips-140-2-compliant-mode.md
      - name: Using SQL Server 2008 in FIPS 140-2-compliant mode
        href: database-engine/security/instructions-in-fips-140-2-compliant-mode.md
+  - name: Database Mail
+    items:
+      - name: The Transaction not longer valid when using Database Mail
+        href: database-engine/database-mail/database-mail-fails-send-message.md
   - name: SQL Server startup issues
     items:
     - name: Error 17182 when you start SQL Server service
@@ -593,6 +597,8 @@
   items:
   - name: AG remains in the resolving state
     href: integration-services/ag-remains-resolving-state.md
+  - name: Troubleshoot slow SSIS or ELT jobs query performance
+    href: integration-services/slow-query-performance-ssis-etl.md
   - name: Create a dynamic subject for the Send Mail task
     href: integration-services/create-dynamic-subject-send-mail-task.md
   - name: Error 0xC0202009 occurs when SSIS converts parameter
