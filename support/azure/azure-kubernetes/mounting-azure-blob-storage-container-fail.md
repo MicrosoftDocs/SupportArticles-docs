@@ -29,7 +29,7 @@ However, the pod stays in the **ContainerCreating** status. When you run the `ku
 ### NFS 3.0 related errors
 
 - [NFS 3.0 error 1: Exit status 32. No such file or directory](#nfs-error1)
-- [NFS 3.0 error 2: Exit status 32. access denied by server while mounting](#nfs-error2)
+- [NFS 3.0 error 2: Exit status 32, access denied by server while mounting](#nfs-error2)
 - [NFS 3.0 error 3: Context deadline exceeded/An operation with the given Volume ID <…> already exists](#nfs-error3)
 
 See the following sections for possible causes and solutions.
@@ -49,7 +49,7 @@ To check if the Blob container exists, follow these steps:
 
 1. Select **Containers** under **Data storage** in the storage account and check if the associated PersistentVolume (PV) exists in **Containers**. To see the Persistent Volume (PV), see the Persistent Volume Claim (PVC) associated with the pod in the yaml file then see which Persistent Volume (PV) is associated with that Persistent Volume Claim (PVC).
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/persistent-volume-claim.png" alt-text="Screenshot that shows the Persistent Volume Claim in Containers." lightbox="media/media/mounting-azure-blob-storage-container-fail/persistent-volume-claim.png":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/persistent-volume-claim.png" alt-text="Screenshot that shows the Persistent Volume Claim in Containers." lightbox="media/mounting-azure-blob-storage-container-fail/persistent-volume-claim.png":::
 
 ### Solution: Ensure container exists
 
