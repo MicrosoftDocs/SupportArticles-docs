@@ -52,7 +52,7 @@ Get-ItemProperty 'AD:\CN=Schema,CN=Configuration,DC=contoso,DC=local' -Name obje
 
 ### "objectVersion" attribute to Operating System
 
-The following information provides a mapping between the **objectVersion** attribute value to the Active Directory Schema commutability:
+The following information provides a mapping between the **objectVersion** attribute value and the Active Directory Schema commutability:
 
 | Version | Operating System |
 |---|---|
@@ -76,7 +76,7 @@ To find the current Exchange Schema Version, you can use one of the following me
 
 ### Method 1
 
-1. Use *ADSIEdit.msc* or *LDP.exe* tools to navigate to  
+1. Use *ADSIEdit.msc* or *LDP.exe* to navigate to:  
    **CN=ms-Exch-Schema-Version-Pt, CN=Schema,CN=Configuration,DC=contoso,DC=local**
 
 2. Review the current **rangeUpper** attribute.
@@ -99,7 +99,7 @@ Get-ItemProperty "AD:\CN=ms-Exch-Schema-Version-Pt,cn=schema,cn=configuration,$(
 
 ### Some "rangeUpper" attribute map
 
-The following articles provide a mapping between the **rangeUpper** attribute value to the Exchange Schema commutability:
+The following articles provide a mapping between the **rangeUpper** attribute value and the Exchange Schema commutability:
 
 - [Exchange 2016 Active Directory versions](/exchange/plan-and-deploy/prepare-ad-and-domains?view=exchserver-2016&preserve-view=true#exchange-2016-active-directory-versions)
 - [Exchange 2019 Active Directory versions](/exchange/plan-and-deploy/prepare-ad-and-domains?view=exchserver-2019&preserve-view=true#exchange-2019-active-directory-versions)
