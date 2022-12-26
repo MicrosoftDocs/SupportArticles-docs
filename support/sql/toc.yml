@@ -325,7 +325,33 @@
         href: database-engine/search/improve-performance-full-text-queries.md
       - name: Words are not returned by an English word breaker
         href: database-engine/search/words-not-returned-by-english-word-breaker.md
-  - name: SQL Server startup issues
+  - name: Security, Encryption, Auditing, Authorization
+    items: 
+     - name: Create database permission is logged
+       href: database-engine/security/create-database-permission-logged.md
+     - name: Block remote use of local accounts in Windows
+       href: database-engine/security/block-remote-use-local-accounts.md
+     - name: Decryption Failed error working with Always-Encrypted-enabled database
+       href: database-engine/security/always-encrypted-database-connection-fail.md
+     - name: Errors when you disable the guest user
+       href: database-engine/security/error-disable-guest-user.md
+     - name: Fix permission problem when you move MSDB database
+       href: database-engine/security/fix-permission-issues-move-msdb.md
+     - name: Transfer logins and passwords between instances
+       href: database-engine/security/transfer-logins-passwords-between-instances.md
+     - name: Use PFX-formatted certificates
+       href: database-engine/security/use-pfx-formatted-certificates.md
+     - name: Using SQL Server 2014 in the FIPS 140-2-compliant mode
+       href: database-engine/security/sql-2014-fips-140-2-compliant-mode.md
+     - name: Using SQL Server 2016 in the FIPS 140-2-compliant mode
+       href: database-engine/security/sql-2016-fips-140-2-compliant-mode.md
+     - name: Using SQL Server 2008 in FIPS 140-2-compliant mode
+       href: database-engine/security/instructions-in-fips-140-2-compliant-mode.md
+
+
+
+
+   - name: SQL Server startup issues
     items:
     - name: Error 17182 when you start SQL Server service
       href: admin/error-17182-protocols-disabled-start-failure.md
@@ -349,8 +375,6 @@
       href: admin/considerations-autogrow-autoshrink.md
     - name: Crashes when you run an Oracle linked server query
       href: admin/crashes-run-oracle-linked-server-query.md
-    - name: Create database permission is logged
-      href: admin/create-database-permission-logged.md
     - name: Database Engine Input/Output requirements
       href: admin/database-engine-input-output-requirements.md
     - name: Defragmenting database disk drives

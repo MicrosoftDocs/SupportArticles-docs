@@ -5143,7 +5143,57 @@
     },
     {
       "source_path": "support/sql/admin/improve-performance-full-text-queries.md",
-      "redirect_url": "//troubleshoot/sql/database-engine/search/improve-performance-full-text-queries",
+      "redirect_url": "/troubleshoot/sql/database-engine/search/improve-performance-full-text-queries",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/words-not-returned-by-english-word-breaker.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/search/words-not-returned-by-english-word-breaker",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/block-remote-use-local-accounts.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/block-remote-use-local-accounts",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/create-database-permission-logged.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/create-database-permission-logged",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/always-encrypted-database-connection-fail.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/always-encrypted-database-connection-fail",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/error-disable-guest-user.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/error-disable-guest-user",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/fix-permission-issues-move-msdb.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/fix-permission-issues-move-msdb",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/transfer-logins-passwords-between-instances.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/transfer-logins-passwords-between-instances",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/use-pfx-formatted-certificates.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/use-pfx-formatted-certificates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/sql-2014-fips-140-2-compliant-mode.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/sql-2014-fips-140-2-compliant-mode",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/sql-2016-fips-140-2-compliant-mode.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/sql-2016-fips-140-2-compliant-mode",
       "redirect_document_id": true
     }
 
