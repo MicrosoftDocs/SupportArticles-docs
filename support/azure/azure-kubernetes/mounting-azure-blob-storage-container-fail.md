@@ -22,22 +22,22 @@ However, the pod stays in the **ContainerCreating** status. When you run the `ku
 
 ### BlobFuse related errors
 
-- BlobFuse error 1: Exit status 255. Unable to start blobfuse, errno=404, Unable to start blobfuse due to authentication or connectivity issues.
-- BlobFuse error 2: Exit status 255. Unable to start blobfuse, errno=403, Unable to start blobfuse due to authentication or connectivity issues.
-- BlobFuse error 3: Context deadline exceeded/An operation with the given Volume ID <…> already exists
+- [BlobFuse error 1: Exit status 255. Unable to start blobfuse, errno=404. Unable to start blobfuse due to authentication or connectivity issues](#blobfuse-error1)
+- [BlobFuse error 2: Exit status 255. Unable to start blobfuse, errno=403. Unable to start blobfuse due to authentication or connectivity issues](#blobfuse-error2)
+- [BlobFuse error 3: Context deadline exceeded/An operation with the given Volume ID <…> already exists](#blobfuse-error3)
 
 ### NFS 3.0 related errors
 
-- NFS 3.0 error 1: Exit status 32, No such file or directory
-- NFS 3.0 error 2: Exit status 32, access denied by server while mounting
-- NFS 3.0 error 3: Context deadline exceeded / An operation with the given Volume ID <…> already exists
+- [NFS 3.0 error 1: Exit status 32. No such file or directory](#nfs-error1)
+- [NFS 3.0 error 2: Exit status 32. access denied by server while mounting](#nfs-error2)
+- [NFS 3.0 error 3: Context deadline exceeded/An operation with the given Volume ID <…> already exists](#nfs-error3)
 
 See the following sections for possible causes and solutions.
 
 > [!NOTE]
 > Even if, for some scenarios, the cause of an issue may be similar, the error may not be the same because of BlobFuse and NFS 3.0 protocols different nature.
 
-## BlobFuse error 1: Exit status 255 Unable to start blobfuse, errno=404, Unable to start blobfuse due to authentication or connectivity issues
+## <a id="blobfuse-error1"></a>BlobFuse error 1: Exit status 255 Unable to start blobfuse, errno=404, Unable to start blobfuse due to authentication or connectivity issues
 
 ### Cause: The Blob container doesn't exist
 
@@ -45,17 +45,17 @@ To check if the Blob container exists, follow these steps:
 
 1. Search Storage accounts in the Azure portal and access your storage account.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/access-storage-account.png" alt-text="Screenshot that shows how to find a storage account.":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/access-storage-account.png" alt-text="Screenshot that shows how to find a storage account." lightbox="media/mounting-azure-blob-storage-container-fail/access-storage-account.png":::
 
 1. Select **Containers** under **Data storage** in the storage account and check if the associated PersistentVolume (PV) exists in **Containers**. To see the Persistent Volume (PV), see the Persistent Volume Claim (PVC) associated with the pod in the yaml file then see which Persistent Volume (PV) is associated with that Persistent Volume Claim (PVC).
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/persistent-volume-claim.png" alt-text="Screenshot that shows the Persistent Volume Claim in Containers.":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/persistent-volume-claim.png" alt-text="Screenshot that shows the Persistent Volume Claim in Containers." lightbox="media/media/mounting-azure-blob-storage-container-fail/persistent-volume-claim.png":::
 
 ### Solution: Ensure container exists
 
 To resolve this issue, make sure that the Blob container that's associated with the PV/PVC exists.
 
-## BlobFuse error 2: Exit status 255 Unable to start blobfuse, errno=403, Unable to start blobfuse due to authentication or connectivity issues
+## <a id="blobfuse-error2"></a>BlobFuse error 2: Exit status 255 Unable to start blobfuse, errno=403, Unable to start blobfuse due to authentication or connectivity issues
 
 Here are the possible causes for this error:
 
@@ -84,15 +84,15 @@ To verify the mismatch, follow these steps:
 
 1. Search and access the storage account in the Azure portal. Select **Access keys** > **Show keys** in the storage account. You'll see the storage account name and associated keys.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/storage-account-name-associated-keys.png" alt-text="Screenshot that shows the storage account name and associated keys.":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/storage-account-name-associated-keys.png" alt-text="Screenshot that shows the storage account name and associated keys." lightbox="media/mounting-azure-blob-storage-container-fail/storage-account-name-associated-keys.png":::
 
 2. Go to the AKS cluster, select **Configuration** > **Secrets**, and then search and access the associated secret.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/access-secret.png" alt-text="Screenshot that shows the associated secret.":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/access-secret.png" alt-text="Screenshot that shows the associated secret." lightbox="media/mounting-azure-blob-storage-container-fail/access-secret.png":::
 
 3. Select **Show** (the eye icon) and compare the values of the storage account name and associated key with the values in Step 1.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/storage-account-name-key-values .png" alt-text="Screenshot that shows the values of the storage account name and associated key.":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/storage-account-name-key-values.png" alt-text="Screenshot that shows the values of the storage account name and associated key." lightbox="media/mounting-azure-blob-storage-container-fail/storage-account-name-key-values.png":::
 
     Before you select **Show**, the values of the storage account name and associated key are encoded into base64 strings. After you select **Show**, the values are decoded.
 
@@ -112,7 +112,7 @@ If you don't have access to the AKS cluster in the Azure portal, perform Step 2 
     echo -n '<storage account name>' | base64 --decode ;echo
     ```
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/command-decode-storage-account-name.png" alt-text="Screenshot of command that decodes storage account name.":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/command-decode-storage-account-name.png" alt-text="Screenshot of command that decodes storage account name." lightbox="media/mounting-azure-blob-storage-container-fail/command-decode-storage-account-name.png":::
 
 #### Solution: Adjust the Kubernetes secret and re-create the pods
 
@@ -148,25 +148,25 @@ If the storage account's network is limited to selected networks, but the VNET a
 
     Check the node from the command output:
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/kubectl-get-pod-command-output.png" alt-text="Screenshot of command that can identity node and output.":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/kubectl-get-pod-command-output.png" alt-text="Screenshot of command that can identity node and output." lightbox="media/mounting-azure-blob-storage-container-fail/kubectl-get-pod-command-output.png":::
 
 2. Go to the AKS cluster in the Azure portal, select **Properties** > **Infrastructure resource group**, access the VMSS associated with the node, and then check **Virtual network/subnet** to identify the VNET and subnet.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/identify-vnet-subnet.png" alt-text="Screenshot of the VNET and subnet.":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/identify-vnet-subnet.png" alt-text="Screenshot of the VNET and subnet." lightbox="media/mounting-azure-blob-storage-container-fail/identify-vnet-subnet.png":::
 
 3. Access the storage account in the Azure portal. Select **Networking**. If **Public network access** is set to **Enabled from selected virtual networks** or **Disabled** and connectivity is not via the private endpoint, check if the VNET and subnet of the AKS cluster are allowed under **Firewalls and virtual networks**.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/firewalls-and-virtual-networks-settings.png" alt-text="Screenshot of Firewalls and virtual networks settings.":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/firewalls-and-virtual-networks-settings.png" alt-text="Screenshot of Firewalls and virtual networks settings." lightbox="media/mounting-azure-blob-storage-container-fail/firewalls-and-virtual-networks-settings.png":::
 
     If the VNET and subnet of the AKS cluster aren't added, select **Add existing virtual network**. On the **Add networks** page, type the VNET and subnet of the AKS cluster, and then select **Add** > **Save**.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/add-networks.png" alt-text="Screenshot of the 'Add networks' dialog.":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/add-networks.png" alt-text="Screenshot of the 'Add networks' dialog." lightbox="media/mounting-azure-blob-storage-container-fail/add-networks.png":::
 
     It may take a few moments for the changes to take effect. After the VNET and subnet are added, check if the pod status changes from **ContainerCreating** to **Running**.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/pod-status-running.png" alt-text="Screenshot that shows the pod status 'Running'.":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/pod-status-running.png" alt-text="Screenshot that shows the pod status 'Running'." lightbox="media/mounting-azure-blob-storage-container-fail/pod-status-running.png":::
 
-## BlobFuse error 3: Context deadline exceeded/An operation with the given Volume ID <…> already exists
+## <a id="blobfuse-error3"></a>BlobFuse error 3: Context deadline exceeded/An operation with the given Volume ID <…> already exists
 
 Here are possible causes for this error:
 
@@ -242,7 +242,7 @@ After you add the route, test the connectivity by using the `nc` or `telnet` com
 
 If the mounting operation succeeds, we recommend that you consult your networking team to make sure that the Virtual Appliance can allow traffic between the AKS cluster and storage account on port 443.
 
-## NFS 3.0 error 1: Exit status 32, No such file or directory
+## <a id="nfs-error1"></a>NFS 3.0 error 1: Exit status 32. No such file or directory
 
 ### Cause: Blob container doesn't exist
 
@@ -250,17 +250,17 @@ To check if the Blob container exists, follow these steps:
 
 1. Search **Storage accounts** in the Azure portal and access your storage account.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/access-storage-account.png" alt-text="Screenshot that shows how to search a storage account.":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/access-storage-account.png" alt-text="Screenshot that shows how to search a storage account." lightbox="media/mounting-azure-blob-storage-container-fail/access-storage-account.png":::
 
 2. Select **Containers** under **Data storage** in the storage account and check if the associated PersistentVolume (PV) exists in **Containers**. To see the Persistent Volume (PV), see the Persistent Volume Claim (PVC) associated with the pod in the yaml file then see which Persistent Volume (PV) is associated with that Persistent Volume Claim (PVC).
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/nfs-persistent-volume-claim.png" alt-text="Screenshot that shows the Persistent Volume Claim (PVC).":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/nfs-persistent-volume-claim.png" alt-text="Screenshot that shows the Persistent Volume Claim (PVC)." lightbox="media/mounting-azure-blob-storage-container-fail/nfs-persistent-volume-claim.png":::
 
 ### Solution: Ensure Blob container exists
 
 To resolve this issue, make sure that the Blob container that's associated with the PV/PVC exists.
 
-## NFS 3.0 error 2: Exit status 32, access denied by server while mounting
+## <a id="nfs-error2"></a>NFS 3.0 error 2: Exit status 32, access denied by server while mounting
 
 ### Cause: AKS's VNET and subnet aren't allowed for storage account
 
@@ -276,25 +276,25 @@ If the storage account's network is limited to selected networks, but the VNET a
     
     Check the node from the command output:
     
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/nfs-kubectl-get-pod-command-output.png" alt-text="Screenshot that shows the 'kubectl get pod' command output.":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/nfs-kubectl-get-pod-command-output.png" alt-text="Screenshot that shows the 'kubectl get pod' command output." lightbox="media/mounting-azure-blob-storage-container-fail/nfs-kubectl-get-pod-command-output.png":::
 
 2. Go to the AKS cluster in the Azure portal, select **Properties** > **Infrastructure resource group**, access the VMSS associated with the node, and then check **Virtual network/subnet** to identify the VNET and subnet.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/identify-vnet-subnet.png" alt-text="Screenshot of the VNET and subnet.":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/identify-vnet-subnet.png" alt-text="Screenshot of the VNET and subnet." lightbox="media/mounting-azure-blob-storage-container-fail/identify-vnet-subnet.png":::
 
 3. Access the storage account in the Azure portal. Select **Networking**. If **Public network access** is set to **Enabled from selected virtual networks** or **Disabled** and connectivity is not via a private endpoint, check if the VNET and subnet of the AKS cluster are allowed under **Firewalls and virtual networks**.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/nfs-firewalls-and-virtual-networks-settings.png" alt-text="Screenshot of the settings under 'Firewalls and virtual networks'.":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/nfs-firewalls-and-virtual-networks-settings.png" alt-text="Screenshot of the settings under 'Firewalls and virtual networks'." lightbox="media/mounting-azure-blob-storage-container-fail/nfs-firewalls-and-virtual-networks-settings.png":::
 
     If the VNET and subnet of the AKS cluster aren't added, select **Add existing virtual network**. On the **Add networks** page, type the VNET and subnet of the AKS cluster, and then select **Add** > **Save**.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/add-networks.png" alt-text="Screenshot of the 'Add networks' dialog.":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/add-networks.png" alt-text="Screenshot of the 'Add networks' dialog." lightbox="media/mounting-azure-blob-storage-container-fail/add-networks.png":::
 
     It may take a few moments for the changes to take effect. After the VNET and subnet are added, check if the pod status changes from **ContainerCreating** to **Running**.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/nfs-pod-status-running.png" alt-text="Screenshot of the pod status.":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/nfs-pod-status-running.png" alt-text="Screenshot of the pod status." lightbox="media/mounting-azure-blob-storage-container-fail/nfs-pod-status-running.png":::
 
-## NFS 3.0 error 3: context deadline exceeded / An operation with the given Volume ID <…> already exists
+## <a id="nfs-error3"></a>NFS 3.0 error 3: context deadline exceeded / An operation with the given Volume ID <…> already exists
 
 Here are possible causes for this error:
 
