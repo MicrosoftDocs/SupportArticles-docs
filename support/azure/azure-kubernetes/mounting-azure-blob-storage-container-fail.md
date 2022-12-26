@@ -45,8 +45,7 @@ To check if the Blob container exists, follow these steps:
 
 1. Search Storage accounts in the Azure portal and access your storage account.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail
-/access-storage-account.png" alt-text="Screenshot that shows how to find a storage account.":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/access-storage-account.png" alt-text="Screenshot that shows how to find a storage account.":::
 
 1. Select **Containers** under **Data storage** in the storage account and check if the associated PersistentVolume (PV) exists in **Containers**. To see the Persistent Volume (PV), see the Persistent Volume Claim (PVC) associated with the pod in the yaml file then see which Persistent Volume (PV) is associated with that Persistent Volume Claim (PVC).
 
@@ -251,7 +250,7 @@ To check if the Blob container exists, follow these steps:
 
 1. Search **Storage accounts** in the Azure portal and access your storage account.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/access-storage-account.png" alt-text="Screenshot that shows how to find a storage account.":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/access-storage-account.png" alt-text="Screenshot that shows how to search a storage account.":::
 
 2. Select **Containers** under **Data storage** in the storage account and check if the associated PersistentVolume (PV) exists in **Containers**. To see the Persistent Volume (PV), see the Persistent Volume Claim (PVC) associated with the pod in the yaml file then see which Persistent Volume (PV) is associated with that Persistent Volume Claim (PVC).
 
