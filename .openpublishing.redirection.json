@@ -5018,22 +5018,22 @@
     },
     {
       "source_path": "support/sql/connect/static-or-dynamic-port-config.md",
-      "redirect_url": "support/sql/database-engine/connect/static-or-dynamic-port-config",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/static-or-dynamic-port-config",
       "redirect_document_id": true
     },
     {
       "source_path": "support/sql/connect/using-kerberosmngr-sqlserver.md",
-      "redirect_url": "support/sql/database-engine/connect/using-kerberosmngr-sqlserver",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/using-kerberosmngr-sqlserver",
       "redirect_document_id": true
     },
     {
       "source_path": "support/sql/connect/test-oledb-connectivity-use-udl-file.md",
-      "redirect_url": "support/sql/database-engine/connect/test-oledb-connectivity-use-udl-file",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/test-oledb-connectivity-use-udl-file",
       "redirect_document_id": true
     },
     {
       "source_path": "support/sql/connect/using-portqrytool-sqlserver.md",
-      "redirect_url": "support/sql/database-engine/connect/using-portqrytool-sqlserver",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/using-portqrytool-sqlserver",
       "redirect_document_id": true
     }
 
