@@ -84,7 +84,7 @@ To verify the mismatch, follow these steps:
 
 1. Search and access the storage account in the Azure portal. Select **Access keys** > **Show keys** in the storage account. You'll see the storage account name and associated keys.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/storage-account-name-associated-keys.png" alt-text="Screenshot that shows the storage account name and associated keys." lightbox="media/mounting-azure-blob-storage-container-fail/storage-account-name-associated-keys.png":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/storage-account-name-associated-keys.png" alt-text="Screenshot that shows the storage account name and associated keys.":::
 
 2. Go to the AKS cluster, select **Configuration** > **Secrets**, and then search and access the associated secret.
 
@@ -112,7 +112,7 @@ If you don't have access to the AKS cluster in the Azure portal, perform Step 2 
     echo -n '<storage account name>' | base64 --decode ;echo
     ```
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/command-decode-storage-account-name.png" alt-text="Screenshot of command that decodes storage account name." lightbox="media/mounting-azure-blob-storage-container-fail/command-decode-storage-account-name.png":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/command-decode-storage-account-name.png" alt-text="Screenshot of command that decodes storage account name.":::
 
 #### Solution: Adjust the Kubernetes secret and re-create the pods
 
@@ -152,7 +152,7 @@ If the storage account's network is limited to selected networks, but the VNET a
 
 2. Go to the AKS cluster in the Azure portal, select **Properties** > **Infrastructure resource group**, access the VMSS associated with the node, and then check **Virtual network/subnet** to identify the VNET and subnet.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/identify-vnet-subnet.png" alt-text="Screenshot of the VNET and subnet." lightbox="media/mounting-azure-blob-storage-container-fail/identify-vnet-subnet.png":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/identify-vnet-subnet.png" alt-text="Screenshot of the VNET and subnet.":::
 
 3. Access the storage account in the Azure portal. Select **Networking**. If **Public network access** is set to **Enabled from selected virtual networks** or **Disabled** and connectivity is not via the private endpoint, check if the VNET and subnet of the AKS cluster are allowed under **Firewalls and virtual networks**.
 
@@ -160,7 +160,7 @@ If the storage account's network is limited to selected networks, but the VNET a
 
     If the VNET and subnet of the AKS cluster aren't added, select **Add existing virtual network**. On the **Add networks** page, type the VNET and subnet of the AKS cluster, and then select **Add** > **Save**.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/add-networks.png" alt-text="Screenshot of the 'Add networks' dialog." lightbox="media/mounting-azure-blob-storage-container-fail/add-networks.png":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/add-networks.png" alt-text="Screenshot of the 'Add networks' dialog.":::
 
     It may take a few moments for the changes to take effect. After the VNET and subnet are added, check if the pod status changes from **ContainerCreating** to **Running**.
 
@@ -280,7 +280,7 @@ If the storage account's network is limited to selected networks, but the VNET a
 
 2. Go to the AKS cluster in the Azure portal, select **Properties** > **Infrastructure resource group**, access the VMSS associated with the node, and then check **Virtual network/subnet** to identify the VNET and subnet.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/identify-vnet-subnet.png" alt-text="Screenshot of the VNET and subnet." lightbox="media/mounting-azure-blob-storage-container-fail/identify-vnet-subnet.png":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/identify-vnet-subnet.png" alt-text="Screenshot of the VNET and subnet.":::
 
 3. Access the storage account in the Azure portal. Select **Networking**. If **Public network access** is set to **Enabled from selected virtual networks** or **Disabled** and connectivity is not via a private endpoint, check if the VNET and subnet of the AKS cluster are allowed under **Firewalls and virtual networks**.
 
@@ -288,7 +288,7 @@ If the storage account's network is limited to selected networks, but the VNET a
 
     If the VNET and subnet of the AKS cluster aren't added, select **Add existing virtual network**. On the **Add networks** page, type the VNET and subnet of the AKS cluster, and then select **Add** > **Save**.
 
-    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/add-networks.png" alt-text="Screenshot of the 'Add networks' dialog." lightbox="media/mounting-azure-blob-storage-container-fail/add-networks.png":::
+    :::image type="content" source="media/mounting-azure-blob-storage-container-fail/add-networks.png" alt-text="Screenshot of the 'Add networks' dialog.":::
 
     It may take a few moments for the changes to take effect. After the VNET and subnet are added, check if the pod status changes from **ContainerCreating** to **Running**.
 
