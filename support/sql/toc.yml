@@ -261,7 +261,7 @@
        href: database-engine/connect/winsock-lsp-network-problem.md
      - name: Login failed for user
        href: /sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context
-  - name: Connectivity How Tos
+    - name: Connectivity How Tos
     items:
       - name: Dynamic vs Static ports
         href: database-engine/connect/static-or-dynamic-port-config.md
@@ -275,7 +275,26 @@
     items: 
       - name: Activation tasks run over limit
         href: database-engine/development/activation-runs-over-limit.md
-
+      - name: Assembly cannot be migrated to SQL Server 2017 error
+        href: database-engine/development/assembly-name-cannot-migrated-error.md
+      - name: Error when you run CLR object or create assembly
+        href: database-engine/development/error-run-clr-object-create-assembly.md
+      - name: Can't make a remote connection from a CLR trigger
+        href: database-engine/development/cannot-make-remote-connection-clr-trigger.md
+      - name: Execution of CLR fails with TypeInitializationException
+        href: database-engine/development/execution-clr-fails-typeInitializationexception.md
+      - name: Iterate through result set using T-SQL
+        href: database-engine/development/iterate-through-result-set.md
+      - name: Query returns incorrect results
+        href: database-engine/development/query-typecasts-a-unicode-column.md
+      - name: Remove duplicate rows from table
+        href: database-engine/development/remove-duplicate-rows-sql-server-tab.md
+      - name: Rotate a table
+        href: database-engine/development/rotate-table.md
+      - name: Timeout issues when you deploy SQL CLR objects
+        href: database-engine/development/timeout-issues-deploy-clr-objects.md
+      - name: Use extended or SP_OA stored procedure to load CLR
+        href: database-engine/development/use-extended-sp-oa-stored-procedure.md
 
   - name: SQL Server startup issues
     items:
@@ -289,12 +308,8 @@
       href: admin/17053-and-926-errors-running-dbcc-check.md
     - name: 8967 and 8921 errors when running DBCC CHECKDB
       href: admin/8967-8921-errors-running-dbcc-checkdb.md
-    - name: Activation tasks run over limit
-      href: admin/activation-runs-over-limit.md
     - name: Agent job may fail with error 65535
       href: admin/agent-job-fail-error-65535-782-7437.md
-    - name: Assembly cannot be migrated to SQL Server 2017 error
-      href: admin/assembly-name-cannot-migrated-error.md
     - name: Assertion when you execute Bulk Insert or BCP 
       href: admin/assertion-execute-bulk-insert-bcp.md
     - name: Assertion failure on partner servers when using mirroring
@@ -317,8 +332,6 @@
       href: admin/defragmenting-database-disk-drives.md
     - name: Error 0x80040e97 when using full-text search
       href: admin/error-0x80040e97-using-full-text-search.md
-    - name: Error when you run CLR object or create assembly
-      href: admin/error-run-clr-object-create-assembly.md
     - name: Full-text index doesn't index attribute values
       href: admin/full-text-index-do-not-index-attribute-values.md
     - name: Full-text indexes stop populating
@@ -361,56 +374,16 @@
     items:
     - name: Can't uninstall ODBC driver completely
       href: connect/odbc-driver-uninstall-incomplete.md
-  - name: Connection issues
-    items:
 
-
-    - name: Network-related or instance-specific error
-      href: connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md
-    - name: Timeout expired errors
-      href: connect/timeout-expired-error.md
-    - name: Token-based server access validation failed
-      href: connect/cannot-connect-remotely.md
-    - name: Untrusted certificate authority error
-      href: connect/error-message-when-you-connect.md
-    - name: Winsock LSP results in network or stability issues
-      href: connect/winsock-lsp-network-problem.md      
-    - name: Connectivity How Tos
-      items:
-      - name: Configuring firewalls
-        href: /sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access?context=/troubleshoot/sql/context/context
-      - name: Dynamic vs Static ports
-        href: connect/static-or-dynamic-port-config.md
-      - name: Kerberos Configuration Manager
-        href: connect/using-kerberosmngr-sqlserver.md
-      - name: Testing using UDL file 
-        href: connect/test-oledb-connectivity-use-udl-file.md
-      - name: Using PortQryUI tool 
-        href: connect/using-portqrytool-sqlserver.md
   - name: Database Design and Development
     items:
-    - name: Can't make a remote connection from a CLR trigger
-      href: database-design/cannot-make-remote-connection-clr-trigger.md
     - name: Error 556 insert exec failed
       href: database-design/error-556-insert-exec-failed.md
-    - name: Execution of CLR fails with TypeInitializationException
-      href: database-design/execution-clr-fails-typeInitializationexception.md
     - name: Improvements in handling some data types and uncommon operations
       href: database-design/sql-server-azure-sql-database-improvements.md
-    - name: Iterate through result set using T-SQL
-      href: database-design/iterate-through-result-set.md
     - name: Policy for untested .NET Framework assemblies
       href: database-design/policy-untested-net-framework-assemblies.md
-    - name: Query returns incorrect results
-      href: database-design/query-typecasts-a-unicode-column.md
-    - name: Remove duplicate rows from table
-      href: database-design/remove-duplicate-rows-sql-server-tab.md
-    - name: Rotate a table
-      href: database-design/rotate-table.md
-    - name: Timeout issues when you deploy SQL CLR objects
-      href: database-design/timeout-issues-deploy-clr-objects.md
-    - name: Use extended or SP_OA stored procedure to load CLR
-      href: database-design/use-extended-sp-oa-stored-procedure.md
+
   - name: Failover Clusters
     items:
       - name: Cluster resource in Failed state
