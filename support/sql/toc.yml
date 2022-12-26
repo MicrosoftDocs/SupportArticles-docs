@@ -589,8 +589,7 @@
     href: general/support-policy-hardware-virtualization-product.md
   - name: Support policy for SQL Server
     href: general/support-policy-sql-server.md
-
-- name: Integration Services
+- name: Integration Services (SSIS)
   items:
   - name: AG remains in the resolving state
     href: integration-services/ag-remains-resolving-state.md

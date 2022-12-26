@@ -5057,37 +5057,37 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/sql/admin/execution-clr-fails-typeInitializationexception.md",
+      "source_path": "support/sql/database-design/execution-clr-fails-typeInitializationexception.md",
       "redirect_url": "/troubleshoot/sql/database-engine/development/execution-clr-fails-typeInitializationexception",
       "redirect_document_id": true
     },
     {
-      "source_path": "support/sql/admin/iterate-through-result-set.md",
+      "source_path": "support/sql/database-design/iterate-through-result-set.md",
       "redirect_url": "/troubleshoot/sql/database-engine/development/iterate-through-result-set",
       "redirect_document_id": true
     },
     {
-      "source_path": "support/sql/admin/query-typecasts-a-unicode-column.md",
+      "source_path": "support/sql/database-design/query-typecasts-a-unicode-column.md",
       "redirect_url": "/troubleshoot/sql/database-engine/development/query-typecasts-a-unicode-column",
       "redirect_document_id": true
     },
     {
-      "source_path": "support/sql/admin/remove-duplicate-rows-sql-server-tab.md",
+      "source_path": "support/sql/database-design/remove-duplicate-rows-sql-server-tab.md",
       "redirect_url": "/troubleshoot/sql/database-engine/development/remove-duplicate-rows-sql-server-tab",
       "redirect_document_id": true
     },
     {
-      "source_path": "support/sql/admin/rotate-table.md",
+      "source_path": "support/sql/database-design/rotate-table.md",
       "redirect_url": "/troubleshoot/sql/database-engine/development/rotate-table",
       "redirect_document_id": true
     },
     {
-      "source_path": "support/sql/admin/timeout-issues-deploy-clr-objects.md",
+      "source_path": "support/sql/database-design/timeout-issues-deploy-clr-objects.md",
       "redirect_url": "/troubleshoot/sql/database-engine/development/timeout-issues-deploy-clr-objects",
       "redirect_document_id": true
     },
     {
-      "source_path": "support/sql/admin/use-extended-sp-oa-stored-procedure.md",
+      "source_path": "support/sql/database-design/use-extended-sp-oa-stored-procedure.md",
       "redirect_url": "/troubleshoot/sql/database-engine/development/use-extended-sp-oa-stored-procedure",
       "redirect_document_id": true
     },
