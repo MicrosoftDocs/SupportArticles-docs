@@ -6,6 +6,7 @@ ms.custom: sap:Security Issues
 ms.reviewer: Milu
 ms.prod: sql
 ---
+
 # SQL Server service cannot start after you configure an instance to use a Secure Sockets Layer certificate
 
  This article provides resolution for the problem that occurs after you configure a SSL certificate that uses Microsoft Enhanced Cryptographic Provider 1.0.

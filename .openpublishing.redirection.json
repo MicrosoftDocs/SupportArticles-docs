@@ -5125,6 +5125,26 @@
       "source_path": "support/sql/admin/dashes-ignored-search-full-text-msidxs-queries.md",
       "redirect_url": "/troubleshoot/sql/database-engine/search/dashes-ignored-search-full-text-msidxs-queries",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-0x80040e97-using-full-text-search.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/search/error-0x80040e97-using-full-text-search",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/full-text-index-do-not-index-attribute-values.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/search/full-text-index-do-not-index-attribute-values",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/full-text-indexes-populate-slowly.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/search/full-text-indexes-populate-slowly",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/improve-performance-full-text-queries.md",
+      "redirect_url": "//troubleshoot/sql/database-engine/search/improve-performance-full-text-queries",
+      "redirect_document_id": true
     }
 
 ]

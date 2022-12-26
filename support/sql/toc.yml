@@ -314,6 +314,16 @@
         href: database-engine/search/full-text-search-engine-japanese-language.md
       - name: Dashes ignored in search with SQL Full-Text
         href: database-engine/search/dashes-ignored-search-full-text-msidxs-queries.md
+      - name: Error 0x80040e97 when using full-text search
+        href: database-engine/search/error-0x80040e97-using-full-text-search.md
+      - name: Full-text index doesn't index attribute values
+        href: database-engine/search/full-text-index-do-not-index-attribute-values.md
+      - name: Full-text indexes stop populating
+        href: database-engine/search/full-text-indexes-populate-slowly.md
+      - name: Improve the performance of full-text queries
+        href: database-engine/search/improve-performance-full-text-queries.md
+      - name: Words are not returned by an English word breaker
+        href: database-engine/search/words-not-returned-by-english-word-breaker.md
 
   - name: SQL Server startup issues
     items:
