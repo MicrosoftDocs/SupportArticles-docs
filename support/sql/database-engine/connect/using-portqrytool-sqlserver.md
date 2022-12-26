@@ -12,7 +12,7 @@ ms.prod: sql
 
 PortQry is a command-line tool that you can use to help troubleshoot TCP/IP connectivity issues. The tool reports the status of target TCP and User Datagram Protocol (UDP) ports on a local or remote computer. *PortQryUI.exe* enables you to use the UI instead of the command line for PortQry.
 
-This article discusses how to use the PortQryUI tool when you troubleshoot connectivity issues that affect Microsoft SQL Server. For more information about the PortQry command-line tool, see [Using the PortQry command-line tool](../../windows-server/networking/portqry-command-line-port-scanner-v2.md).
+This article discusses how to use the PortQryUI tool when you troubleshoot connectivity issues that affect Microsoft SQL Server. For more information about the PortQry command-line tool, see [Using the PortQry command-line tool](../../../windows-server/networking/portqry-command-line-port-scanner-v2.md).
 
 > [!NOTE]
 > Since PortQryUI is intended to be used as a troubleshooting tool, you should have sufficient knowledge of your computing environment to be able to use the tool effectively.

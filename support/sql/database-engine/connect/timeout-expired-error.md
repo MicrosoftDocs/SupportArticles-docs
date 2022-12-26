@@ -12,7 +12,7 @@ ms.prod: sql
 _Applies to:_ &nbsp; SQL Server
 
 > [!NOTE]
-> Before you start troubleshooting, check the [prerequisites](resolve-connectivity-errors-checklist.md) and go through the checklist.
+> Before you start troubleshooting, check the [prerequisites](../connect/resolve-connectivity-errors-checklist.md) and go through the checklist.
 
 A timeout error means that a certain operation takes longer than needed. The client application stops the operation (instead of waiting indefinitely), which may block other operations and suspend an application. This article provides resolutions for "command-timeout" and "connection-timeout" errors you receive when you connect to SQL Server.
 
@@ -136,4 +136,4 @@ The following table lists typical causes and resolutions for timeout expired err
 
 ## See also
 
-- [Troubleshoot connectivity issues in SQL Server](resolve-connectivity-errors-overview.md)
+- [Troubleshoot connectivity issues in SQL Server](../connect/resolve-connectivity-errors-overview.md)

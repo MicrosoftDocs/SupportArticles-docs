@@ -13,7 +13,7 @@ _Applies to:_ &nbsp; SQL Server
 _Original KB number:_ 811889
 
 > [!NOTE]
-> Before you start troubleshooting, we recommend that you check the [prerequisites](resolve-connectivity-errors-checklist.md) and go through the checklist.
+> Before you start troubleshooting, we recommend that you check the [prerequisites](../database-engine/connect/resolve-connectivity-errors-checklist.md) and go through the checklist.
 
 When you use Windows authentication to connect a SQL Server instance remotely, you receive the following error message:
 
@@ -179,7 +179,7 @@ Verify that the domain you sign in to can communicate with the domain of the ser
 
 ### Step 3: Verify SQL Server SPNs using SQLCheck and Setspn tools
 
-If you can sign in locally to the SQL Server computer and have administrator access, use SQLCheck from the [Microsoft SQL Networking GitHub repository](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki). SQLCheck provides most of the information required for troubleshooting in one file. For more information on how to use the tool and what information it gathers, review the tool's home page. You can also check the recommended [prerequisites](resolve-connectivity-errors-checklist.md) and checklist page. Once you generate the output file, review SPN configuration for your SQL Server instance under the **SQL Server Information** section of the output file.
+If you can sign in locally to the SQL Server computer and have administrator access, use SQLCheck from the [Microsoft SQL Networking GitHub repository](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki). SQLCheck provides most of the information required for troubleshooting in one file. For more information on how to use the tool and what information it gathers, review the tool's home page. You can also check the recommended [prerequisites](../../sql/database-engine/connect/resolve-connectivity-errors-checklist.md) and checklist page. Once you generate the output file, review SPN configuration for your SQL Server instance under the **SQL Server Information** section of the output file.
 
 Example output:
 

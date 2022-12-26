@@ -19,17 +19,17 @@ There are various causes for connectivity issues in SQL Server. This article ser
 
 ## Preparation
 
-Before you start troubleshooting, check [Recommended prerequisites and checklist for troubleshooting connectivity issues](resolve-connectivity-errors-checklist.md) for logs that you should collect to assist with troubleshooting. There's also a list of quick actions to avoid common connectivity errors when working with SQL Server.
+Before you start troubleshooting, check [Recommended prerequisites and checklist for troubleshooting connectivity issues](../connect/resolve-connectivity-errors-checklist.md) for logs that you should collect to assist with troubleshooting. There's also a list of quick actions to avoid common connectivity errors when working with SQL Server.
 
 ## Common connectivity issues
 
 Use the list below to navigate to the appropriate article page for detailed troubleshooting steps for your scenario:
 
-- [A network-related or instance-specific error occurred while establishing a connection to SQL Server](network-related-or-instance-specific-error-occurred-while-establishing-connection.md)
+- [A network-related or instance-specific error occurred while establishing a connection to SQL Server](../connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md)
 
 - [Cannot generate SSPI context](cannot-generate-sspi-context-error.md)
 
-- [Login failed for user](login-failed-for-user.md)
+- [Login failed for user](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context)
 
   Covers the following Login errors:
   - "Login failed for user 'NT AUTHORITY\ANONYMOUS LOGON'"
@@ -38,13 +38,13 @@ Use the list below to navigate to the appropriate article page for detailed trou
   - "Login failed for user '\<username\>'"
   - "Login failed for user '\<domain>\\\<username>'"
 
-- [Timeout expired. The timeout period elapsed prior to completion of the operation or the server is not responding](timeout-expired-error.md)
+- [Timeout expired. The timeout period elapsed prior to completion of the operation or the server is not responding](../connect/timeout-expired-error.md)
 
-- [An existing connection was forcibly closed by the remote host](tls-exist-connection-closed.md)
+- [An existing connection was forcibly closed by the remote host](../connect/tls-exist-connection-closed.md)
 
-- [Token-based server access validation failed with an infrastructure error. Check for previous errors](cannot-connect-remotely.md)
+- [Token-based server access validation failed with an infrastructure error. Check for previous errors](../connect/cannot-connect-remotely.md)
 
-- [The certificate chain was issued by an authority that is not trusted](error-message-when-you-connect.md)
+- [The certificate chain was issued by an authority that is not trusted](../connect/error-message-when-you-connect.md)
 
 ## Tools and methods that help you troubleshoot connectivity issues
 
@@ -54,19 +54,19 @@ The following articles provide details for various tools and procedures to troub
 
   Describes how to configure Windows firewall for successful connections to instances.
 
-- [Test connections to SQL Server by using Universal Data Link (UDL) files](test-oledb-connectivity-use-udl-file.md)
+- [Test connections to SQL Server by using Universal Data Link (UDL) files](../connect/test-oledb-connectivity-use-udl-file.md)
   
   Describes how to test connections between SQL Server and clients using UDL files.
 
-- [Use PortQryUI tool with SQL Server](network-related-or-instance-specific-error-occurred-while-establishing-connection.md#named-instance-of-sql-server)
+- [Use PortQryUI tool with SQL Server](../connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md)
 
   Describes how to use the PortQryUI tool (a graphical user interface (GUI) port scanner) to help troubleshoot connectivity issues.
 
-- [Check whether SQL Server is listening on dynamic or static ports](static-or-dynamic-port-config.md)
+- [Check whether SQL Server is listening on dynamic or static ports](../connect/static-or-dynamic-port-config.md)
 
   Provides steps to check whether SQL Server is listening on dynamic or static ports.
 
-- [Use Kerberos Configuration Manager to fix SPN issues](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended)
+- [Use Kerberos Configuration Manager to fix SPN issues](../connect/cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended)
 
   Describes how to use Kerberos Configuration Manager to fix Service Principal Name (SPN) issues.
 

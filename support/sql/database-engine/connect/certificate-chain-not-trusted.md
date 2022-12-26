@@ -68,7 +68,7 @@ The error occurs because of a change in the default behavior of the client drive
 
 - [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine)
 
-- [The certificate received from the remote server was issued by an untrusted certificate authority error when you connect to SQL Server](error-message-when-you-connect.md)
+- [The certificate received from the remote server was issued by an untrusted certificate authority error when you connect to SQL Server](../connect/error-message-when-you-connect.md)
 
 - [Support Policies for SQL Server Native Client](/sql/relational-databases/native-client/applications/support-policies-for-sql-server-native-client)
 

@@ -12,7 +12,7 @@ ms.prod: sql
 _Applies to:_ &nbsp; SQL Server
 
 > [!NOTE]
-> Before you start troubleshooting, check the [prerequisites](resolve-connectivity-errors-checklist.md) and go through the checklist.
+> Before you start troubleshooting, check the [prerequisites](../connect/resolve-connectivity-errors-checklist.md) and go through the checklist.
 
 This article describes how to create a Universal Data Link (UDL) file and use different providers to test the connection to a SQL Server instance through the file.
 
@@ -121,4 +121,4 @@ For each of the above methods, if one combination works and another fails, it co
 [Universal Data Link (UDL) configuration](/sql/connect/oledb/help-topics/data-link-pages)
 
 > [!NOTE]
-> If this article hasn't resolved your issue, you can check [Troubleshoot connectivity issues in SQL Server](resolve-connectivity-errors-overview.md#common-connectivity-issues) for more help.
+> If this article hasn't resolved your issue, you can check [Troubleshoot connectivity issues in SQL Server](../connect/resolve-connectivity-errors-overview.md#common-connectivity-issues) for more help.

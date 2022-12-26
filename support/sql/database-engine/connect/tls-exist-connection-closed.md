@@ -12,7 +12,7 @@ ms.prod: sql
 _Applies to:_ &nbsp; SQL Server
 
 > [!NOTE]
-> Before you start troubleshooting, we recommend that you check the [prerequisites](resolve-connectivity-errors-checklist.md) and go through the checklist.
+> Before you start troubleshooting, we recommend that you check the [prerequisites](../connect/resolve-connectivity-errors-checklist.md) and go through the checklist.
 
 This article details various causes and provides resolutions for the following errors:
 
@@ -94,17 +94,17 @@ To resolve the issue, follow these steps:
 
 ## Scenario 4: The client and the server are using TLS_DHE cipher suite for TLS handshake, but one of the systems doesn't have leading zero fixes for the TLS_DHE installed
 
-For more information about this scenario, see [Applications experience forcibly closed TLS connection errors when connecting SQL Servers in Windows](../../windows-server/identity/apps-forcibly-closed-tls-connection-errors.md).
+For more information about this scenario, see [Applications experience forcibly closed TLS connection errors when connecting SQL Servers in Windows](../../../windows-server/identity/apps-forcibly-closed-tls-connection-errors.md).
 
 > [!NOTE]
-> If this article has not resolved your issue, you can check if the [common connectivity issues articles](resolve-connectivity-errors-overview.md#common-connectivity-issues) can help.
+> If this article has not resolved your issue, you can check if the [common connectivity issues articles](../connect/resolve-connectivity-errors-overview.md#common-connectivity-issues) can help.
 
 ## See also
 
-- [Troubleshoot connectivity issues in SQL Server](resolve-connectivity-errors-overview.md)
+- [Troubleshoot connectivity issues in SQL Server](../connect/resolve-connectivity-errors-overview.md)
 
-- [Error for SSIS packages on SQL servers configured to use encryption and network packet size](/troubleshoot/sql/integration-services/use-encryption-network-packet-size)
+- [Error for SSIS packages on SQL servers configured to use encryption and network packet size](../../integration-services/use-encryption-network-packet-size.md)
 
-- [Recommended prerequisites and checklist for troubleshooting connectivity issues](resolve-connectivity-errors-checklist.md)
+- [Recommended prerequisites and checklist for troubleshooting connectivity issues](../connect/resolve-connectivity-errors-checklist.md)
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
