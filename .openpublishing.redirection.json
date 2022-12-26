@@ -4885,6 +4885,86 @@
       "source_path": "support/sql/performance/cardinality-estimator-degrades-query-performance.md",
       "redirect_url": "/troubleshoot/sql/database-engine/performance/cardinality-estimator-degrades-query-performance",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/nonrecoverable-io-error-backup-url.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/nonrecoverable-io-error-backup-url",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/tde-enabled-database-not-recover.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/tde-enabled-database-not-recover",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/access-violations-memory-dump-files.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/access-violations-memory-dump-files",
+      "redirect_document_id": true
+    },   
+    {
+      "source_path": "support/sql/admin/asr-agent-vss-backup-fails.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/asr-agent-vss-backup-fails",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/sql/admin/revocery-jobs-fail-servers.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/revocery-jobs-fail-servers",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/sql/admin/backup-database-using-vss-backup-application.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/backup-database-using-vss-backup-application",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/sql/admin/backup-operation-backup-history-table.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/backup-operation-backup-history-table",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/behavior-compressed-backups.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/behavior-compressed-backups",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-3156-restore-database.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/error-3156-restore-database",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-after-perform-tde-certificate-key-rotation.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/error-after-perform-tde-certificate-key-rotation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-backing-up-memory-database.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/error-backing-up-memory-database",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-when-you-create-a-snapshot.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/error-when-you-create-a-snapshot",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/restore-recovery-may-fail.md",
+      "redirect_url": "/troubleshoot/troubleshoot/sql/database-engine/backup-restore/restore-recovery-may-fail",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/schedule-automate-backup-database.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/schedule-automate-backup-database",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/backup-restore-operations.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/backup-restore-operations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-33111-restore-issues-sql-connector.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/error-33111-restore-issues-sql-connector",
+      "redirect_document_id": true
     }
 
 ]

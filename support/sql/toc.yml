@@ -207,8 +207,36 @@
        href: database-engine/database-mirroring/mirrored-databases-disconnected.md
      - name: Assertion failure on partner servers when using mirroring
        href: database-engine/database-mirroring/assertion-partner-servers-using-mirroring.md
-  - name: Administration and Management
+  - name: Database Backup and Restore
     items:
+     - name: A nonrecoverable I/O error when you use Backup to URL
+       href: database-engine/backup-restore/nonrecoverable-io-error-backup-url.md
+     - name: A TDE-enabled database may not recover
+       href: database-engine/backup-restore/tde-enabled-database-not-recover.md
+     - name: ASR Agent or non-component VSS Backup fails
+       href: database-engine/backup-restore/asr-agent-vss-backup-fails.md
+     - name: Azure Site Recovery jobs fail on servers hosting SQL servers
+       href: database-engine/backup-restore/revocery-jobs-fail-servers.md
+     - name: Back up a database using a VSS backup application
+       href: database-engine/backup-restore/backup-database-using-vss-backup-application.md
+     - name: Backup operation in the backupset history table
+       href: database-engine/backup-restore/backup-operation-backup-history-table.md
+     - name: Error 3156 when you restore a database
+       href: database-engine/backup-restore/error-3156-restore-database.md
+     - name: Error after you perform TDE certificate or key rotation
+       href: database-engine/backup-restore/error-after-perform-tde-certificate-key-rotation.md
+     - name: Error when backing up in-memory database
+       href: database-engine/backup-restore/error-backing-up-memory-database.md
+     - name: Error when you create a snapshot
+       href: database-engine/backup-restore/error-when-you-create-a-snapshot.md
+     - name: Restore or recovery may fail
+       href: database-engine/backup-restore/restore-recovery-may-fail.md
+     - name: Schedule and automate Backups of databases
+       href: database-engine/backup-restore/schedule-automate-backup-database.md
+     - name: Troubleshoot backup and restore operation issues
+       href: database-engine/backup-restore/backup-restore-operations.md
+     - name: Error 33111 when restoring backups that use SQL Server Connector for Key Vault
+       href: database-engine/backup-restore/error-33111-restore-issues-sql-connector.md
     - name: SQL Server startup issues
       items:
       - name: Error 17182 when you start SQL Server service
@@ -221,12 +249,6 @@
       href: admin/17053-and-926-errors-running-dbcc-check.md
     - name: 8967 and 8921 errors when running DBCC CHECKDB
       href: admin/8967-8921-errors-running-dbcc-checkdb.md
-    - name: A nonrecoverable I/O error when you use Backup to URL
-      href: admin/nonrecoverable-io-error-backup-url.md
-    - name: A TDE-enabled database may not recover
-      href: admin/tde-enabled-database-not-recover.md
-    - name: Access violations and memory dump files
-      href: admin/access-violations-memory-dump-files.md
     - name: Activation tasks run over limit
       href: admin/activation-runs-over-limit.md
     - name: Agent job may fail with error 65535
@@ -237,16 +259,6 @@
       href: admin/assertion-execute-bulk-insert-bcp.md
     - name: Assertion failure on partner servers when using mirroring
       href: admin/assertion-partner-servers-using-mirroring.md
-    - name: ASR Agent or non-component VSS Backup fails
-      href: admin/asr-agent-vss-backup-fails.md
-    - name: Azure Site Recovery jobs fail on servers hosting SQL servers
-      href: admin/revocery-jobs-fail-servers.md
-    - name: Back up a database using a VSS backup application
-      href: admin/backup-database-using-vss-backup-application.md
-    - name: Backup operation in the backupset history table
-      href: admin/backup-operation-backup-history-table.md
-    - name: Compressed backups behavior
-      href: admin/behavior-compressed-backups.md
     - name: Configuring permissions to access remote data
       href: admin/configure-permissions-access-remote-data.md
     - name: Considerations for the autogrow and autoshrink
@@ -265,14 +277,6 @@
       href: admin/defragmenting-database-disk-drives.md
     - name: Error 0x80040e97 when using full-text search
       href: admin/error-0x80040e97-using-full-text-search.md
-    - name: Error 3156 when you restore a database
-      href: admin/error-3156-restore-database.md           
-    - name: Error after you perform TDE certificate or key rotation
-      href: admin/error-after-perform-tde-certificate-key-rotation.md
-    - name: Error when backing up in-memory database
-      href: admin/error-backing-up-memory-database.md
-    - name: Error when you create a snapshot
-      href: admin/error-when-you-create-a-snapshot.md
     - name: Error when you run CLR object or create assembly
       href: admin/error-run-clr-object-create-assembly.md
     - name: Full-text index doesn't index attribute values
@@ -291,10 +295,6 @@
       href: admin/pass-variable-linked-server-query.md
     - name: Policy-Based Management generates alerts
       href: admin/34052-error-pbm-generates-alerts.md
-    - name: Restore or recovery may fail
-      href: admin/restore-recovery-may-fail.md
-    - name: Schedule and automate Backups of databases
-      href: admin/schedule-automate-backup-database.md
     - name: Set up and troubleshoot a linked server to an Oracle database
       href: admin/set-up-troubleshoot-linked-server.md
     - name: Space used by a table is not released
@@ -309,8 +309,6 @@
       href: admin/database-mail-fails-send-message.md
     - name: Transaction log file doesn't grow
       href: admin/transaction-log-file-not-grow.md
-    - name: Troubleshoot backup and restore operation issues
-      href: admin/backup-restore-operations.md
     - name: Troubleshoot DBCC CHECKDB errors
       href: admin/troubleshoot-dbcc-checkdb-errors.md
     - name: Unable to begin a distributed transaction
@@ -319,8 +317,6 @@
       href: admin/virtual-host-driver-lead-data-consistency.md
     - name: Words are not returned by an English word breaker
       href: admin/words-not-returned-by-english-word-breaker.md
-    - name: Error 33111 when restoring backups that use SQL Server Connector for Key Vault
-      href: admin/error-33111-restore-issues-sql-connector.md
   - name: Client Application Development
     items:
     - name: Can't uninstall ODBC driver completely
