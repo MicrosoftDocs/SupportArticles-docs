@@ -5035,6 +5035,16 @@
       "source_path": "support/sql/connect/using-portqrytool-sqlserver.md",
       "redirect_url": "/troubleshoot/sql/database-engine/connect/using-portqrytool-sqlserver",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/activation-runs-over-limit.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/development/activation-runs-over-limit",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/assembly-name-cannot-migrated-error.md",
+      "redirect_url": "support/sql/database-engine/development/assembly-name-cannot-migrated-error",
+      "redirect_document_id": true
     }
 
 ]
