@@ -295,7 +295,16 @@
         href: database-engine/development/timeout-issues-deploy-clr-objects.md
       - name: Use extended or SP_OA stored procedure to load CLR
         href: database-engine/development/use-extended-sp-oa-stored-procedure.md
-
+  - name: General Troubleshooting Information
+    items:
+      - name: Error 556 insert exec failed
+        href: database-engine/general/error-556-insert-exec-failed.md
+      - name: Improvements in handling some data types and uncommon operations
+        href: database-engine/general/sql-server-azure-sql-database-improvements.md
+      - name: Policy for untested .NET Framework assemblies
+        href: database-engine/general/policy-untested-net-framework-assemblies.md
+      - name: Servicing model
+        href: database-engine/general/servicing-models-sql-server.md
   - name: SQL Server startup issues
     items:
     - name: Error 17182 when you start SQL Server service
@@ -374,16 +383,6 @@
     items:
     - name: Can't uninstall ODBC driver completely
       href: connect/odbc-driver-uninstall-incomplete.md
-
-  - name: Database Design and Development
-    items:
-    - name: Error 556 insert exec failed
-      href: database-design/error-556-insert-exec-failed.md
-    - name: Improvements in handling some data types and uncommon operations
-      href: database-design/sql-server-azure-sql-database-improvements.md
-    - name: Policy for untested .NET Framework assemblies
-      href: database-design/policy-untested-net-framework-assemblies.md
-
   - name: Failover Clusters
     items:
       - name: Cluster resource in Failed state

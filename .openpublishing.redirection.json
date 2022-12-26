@@ -5090,6 +5090,26 @@
       "source_path": "support/sql/admin/use-extended-sp-oa-stored-procedure.md",
       "redirect_url": "/troubleshoot/sql/database-engine/development/use-extended-sp-oa-stored-procedure",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/error-556-insert-exec-failed.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/general/error-556-insert-exec-failed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/sql-server-azure-sql-database-improvements.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/general/sql-server-azure-sql-database-improvements",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/policy-untested-net-framework-assemblies.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/general/policy-untested-net-framework-assemblies",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/servicing-models-sql-server.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/general/servicing-models-sql-server",
+      "redirect_document_id": true
     }
 ]
 }
