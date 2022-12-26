@@ -20,16 +20,49 @@ adobe-target: true
 
 # Fix Windows Update errors by using the DISM or System Update Readiness tool
 
-_Applies to:_ &nbsp; Windows 10, version 1809 and later versions, Windows 8.1, Windows Server 2012 R2, Windows 7, Windows Server 2008 R2  
-_Original KB number:_ &nbsp; 947821
+This article offers you advanced manual methods using the System Update Readiness Tool or the DISM tool to fix problems that prevent Windows Update from installing successfully.
 
-## Symptom
+> [!NOTE]
+> This article is intended for use by support agents and IT professionals. If you are home users and looking for more information about fixing Windows update errors, see [Fix Windows Update errors](https://support.microsoft.com/help/10164).
 
-Windows updates and service packs may fail to install if there are [corruption errors](#description-of-the-common-corruption-errors). For example, an update might not install if a system file is damaged. The DISM or [System Update Readiness tool](#what-does-the-system-update-readiness-tool-do) may help you to fix some Windows corruption errors.
+_Original KB number:_ 947821
 
-This article is intended for Support agents and IT professionals. If you are home users and looking for more information about fixing Windows update errors, see [Fix Windows Update errors](https://support.microsoft.com/help/10164).
 
-## Resolution for Windows 8.1, Windows 10 and Windows Server 2012 R2
+## Common corruption errors
+Windows updates may fail to install if there are corruption errors. The following table lists the possible error code with Windows Update for your reference:
+
+|Code|Error|Description|
+|---|---|---|
+|0x80070002|ERROR_FILE_NOT_FOUND|The system cannot find the file specified.|
+|0x8007000D|ERROR_INVALID_DATA|The data is invalid.|
+|0x800F081F|CBS_E_SOURCE_MISSING|The source for the package or file not found.|
+|0x80073712|ERROR_SXS_COMPONENT_STORE_CORRUPT|The component store is in an inconsistent state.|
+|0x800736CC|ERROR_SXS_FILE_HASH_MISMATCH|A component's file does not match the verification information present in the component manifest.|
+|0x800705B9|ERROR_XML_PARSE_ERROR|Unable to parse the requested XML data.|
+|0x80070246|ERROR_ILLEGAL_CHARACTER|An invalid character was encountered.|
+|0x8007370D|ERROR_SXS_IDENTITY_PARSE_ERROR|An identity string is malformed.|
+|0x8007370B|ERROR_SXS_INVALID_IDENTITY_ATTRIBUTE_NAME|The name of an attribute in an identity is not within the valid range.|
+|0x8007370A|ERROR_SXS_INVALID_IDENTITY_ATTRIBUTE_VALUE|The value of an attribute in an identity is not within the valid range.|
+|0x80070057|ERROR_INVALID_PARAMETER|The parameter is incorrect.|
+|0x800B0100|TRUST_E_NOSIGNATURE|No signature was present in the subject.|
+|0x80092003|CRYPT_E_FILE_ERROR|An error occurred while Windows Update reads or writes to a file.|
+|0x800B0101|CERT_E_EXPIRED|A required certificate is not within its validity period when verifying against the current system clock or the time stamp in the signed file.|
+|0x8007371B|ERROR_SXS_TRANSACTION_CLOSURE_INCOMPLETE|One or more required members of the transaction are not present.|
+|0x80070490|ERROR_NOT_FOUND|Windows could not search for new updates.|
+|0x800f0984|PSFX_E_MATCHING_BINARY_MISSING|Matching component directory exist but binary missing|
+|0x800f0986|PSFX_E_APPLY_FORWARD_DELTA_FAILED|Applying forward delta failed|
+|0x800f0982|PSFX_E_MATCHING_COMPONENT_NOT_FOUND|Can't identify matching component for hydration|
+
+
+For example, an update might not install if a system file is damaged. The DISM or [System Update Readiness tool](#what-does-the-system-update-readiness-tool-do) may help you to fix some Windows corruption errors.
+
+Visit this page for [Windows Update troubleshooting scenarios](/troubleshoot/windows-client/deployment/troubleshoot-windows-update-issues).  
+
+## Solution using DISM
+
+> [!NOTE]
+> The solution mentioned below applies to Modern Windows versions like Windows 11, Windows 10, Windows Server 2016 or newer. 
+> For Windows 7 and Windows Server 2008 R2, check Use the [System Update Readiness tool](#solution-using-system-update-readiness-tool)
 
 To resolve this problem, use the inbox Deployment Image Servicing and Management (DISM) tool. Then, install the Windows update or service pack again.
 
@@ -57,7 +90,11 @@ To resolve this problem, use the inbox Deployment Image Servicing and Management
 
 DISM creates a log file (%windir%/Logs/CBS/CBS.log) that captures any issues that the tool found or fixed. %windir% is the folder in which Windows is installed. For example, the %windir% folder is C:\Windows.
 
-## Resolution for Windows 7 and Windows Server 2008 R2
+## Solution using System Update Readiness tool
+
+> [!NOTE]
+> The solution mentioned below is applicable for Windows 7 and Windows Server 2008 R2.
+> For Modern Windows versions like Windows 11, Windows 10, Windows Server 2016 or newer, check [Solution using Dism](#solution-using-dism).
 
 To resolve this problem, use the System Update Readiness tool. Then, install the Windows update or service pack again.
 
@@ -86,9 +123,9 @@ To resolve this problem, use the System Update Readiness tool. Then, install the
 
 5. Reinstall the update or service pack you were trying to install previously.
 
-To manually fix corruption errors that the tool detects but can't be fixed, see [How to fix errors that are found in the CheckSUR log file](#how-to-fix-errors-that-are-found-in-the-checksur-log-file).
+To manually fix corruption errors that the tool detects but can't be fixed, see [How to fix errors that are found in the CheckSUR log file](#fix-errors-found-in-the-checksur-log-file).
 
-## Resolution - Download the package from Microsoft Update Catalog directly
+## Solution using Microsoft Update Catalog
 
 You can also try to directly download the update package from [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/home.aspx), and then install the update package manually.
 
@@ -106,34 +143,7 @@ For example, you may have problems when you try to install updates from Windows 
 4. Select **Close** after the download process is done. Then, you can find a folder that contains the update package in the location that you specified.
 5. Open the folder, and then double-select the update package to install the update.
 
-If the Windows update or service pack installed successfully, you are finished. If the problem is not fixed, or if System Update Readiness Tool cannot find the cause, [contact us for more help](https://support.microsoft.com/contactus/).
 
-## Description of the common corruption errors
-
-The following table lists the possible error code with Windows Update for your reference:
-
-|Code|Error|Description|
-|---|---|---|
-|0x80070002|ERROR_FILE_NOT_FOUND|The system cannot find the file specified.|
-|0x8007000D|ERROR_INVALID_DATA|The data is invalid.|
-|0x800F081F|CBS_E_SOURCE_MISSING|The source for the package or file not found.|
-|0x80073712|ERROR_SXS_COMPONENT_STORE_CORRUPT|The component store is in an inconsistent state.|
-|0x800736CC|ERROR_SXS_FILE_HASH_MISMATCH|A component's file does not match the verification information present in the component manifest.|
-|0x800705B9|ERROR_XML_PARSE_ERROR|Unable to parse the requested XML data.|
-|0x80070246|ERROR_ILLEGAL_CHARACTER|An invalid character was encountered.|
-|0x8007370D|ERROR_SXS_IDENTITY_PARSE_ERROR|An identity string is malformed.|
-|0x8007370B|ERROR_SXS_INVALID_IDENTITY_ATTRIBUTE_NAME|The name of an attribute in an identity is not within the valid range.|
-|0x8007370A|ERROR_SXS_INVALID_IDENTITY_ATTRIBUTE_VALUE|The value of an attribute in an identity is not within the valid range.|
-|0x80070057|ERROR_INVALID_PARAMETER|The parameter is incorrect.|
-|0x800B0100|TRUST_E_NOSIGNATURE|No signature was present in the subject.|
-|0x80092003|CRYPT_E_FILE_ERROR|An error occurred while Windows Update reads or writes to a file.|
-|0x800B0101|CERT_E_EXPIRED|A required certificate is not within its validity period when verifying against the current system clock or the time stamp in the signed file.|
-|0x8007371B|ERROR_SXS_TRANSACTION_CLOSURE_INCOMPLETE|One or more required members of the transaction are not present.|
-|0x80070490|ERROR_NOT_FOUND|Windows could not search for new updates.|
-|0x800f0984|PSFX_E_MATCHING_BINARY_MISSING|Matching component directory exist but binary missing|
-|0x800f0986|PSFX_E_APPLY_FORWARD_DELTA_FAILED|Applying forward delta failed|
-|0x800f0982|PSFX_E_MATCHING_COMPONENT_NOT_FOUND|Can't identify matching component for hydration|
-  
 ## What does the System Update Readiness tool do
 
 ### Verify the integrity of resources
@@ -159,7 +169,7 @@ The System Update Readiness tool creates a log file that captures any issues tha
 - %SYSTEMROOT%\Logs\CBS\CheckSUR.log
 - %SYSTEMROOT%\Logs\CBS\CheckSUR.persist.log
 
-## How to fix errors that are found in the CheckSUR log file
+## Fix errors found in the CheckSUR log file
 
 To manually fix corruption errors that the System Update Readiness tool detects but can't fix, follow these steps:
 
@@ -189,4 +199,4 @@ To manually fix corruption errors that the System Update Readiness tool detects 
 4. Copy the package (.msu) to the `%SYSTEMROOT%\CheckSUR\packages` directory. By default, this directory doesn't exist and you need to create the directory.
 5. Rerun the System Update Readiness tool.
 
-If you are a technical professional, see [How to fix errors found in the CheckSUR.log](https://support.microsoft.com/help/2700601) for a more option on fixing errors in the CheckSUR.log.
+If you are a technical professional, see [How to fix errors found in the CheckSUR.log](/troubleshoot/windows-client/deployment/errors-in-checksur-log) for a more option on fixing errors in the CheckSUR.log.
