@@ -1,7 +1,7 @@
 ---
 title: Fix problems in Windows Search
-description: Provides troubleshooting option for problems that affect the search results in the Windows Search feature in Windows 10.
-ms.date: 09/08/2020
+description: Provides troubleshooting option for problems that affect the search results in the Windows Search feature in Windows 11 and Windows 10.
+ms.date: 12/26/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -20,20 +20,17 @@ ms.technology: windows-client-shell-experience
 
 If Windows Search is unresponsive or the search results don't appear as expected, try any of the following solutions in this article.
 
-If you're running Windows 10 May 2019 Update (version 1903) or later versions and Windows can detect a problem, we'll run the Search troubleshooter automatically. This troubleshooter will reset Windows Search back to the default experience. View your troubleshooter history under **Settings** > **Update & Security** > **Troubleshoot** > **View History**. Follow the steps below if your issue is still not resolved.
+_Original KB number:_ 4520146
 
-_Applies to:_ &nbsp; Windows 10 - all editions  
-_Original KB number:_ &nbsp; 4520146
+## Solution: Check for updates
 
-## Check for updates
+Windows 11 and Windows 10 lets you choose when and how to get the latest updates to keep your device running smoothly and securely. To manage your options and see any available updates, select the **Start** button, and then go to **Settings** > **Update & Security** > **Windows Update** > **Check for updates**. Install any available updates, and then restart your computer if the updates require it.
 
-Windows 10 lets you choose when and how to get the latest updates to keep your device running smoothly and securely. To manage your options and see any available updates, select the **Start** button, and then go to **Settings** > **Update & Security** > **Windows Update** > **Check for updates**. Install any available updates, and then restart your computer if the updates require it.
+For more information, see [Update Windows](https://support.microsoft.com/help/4027667).
 
-For more information, see [Update Windows 10](https://support.microsoft.com/help/4027667).
+## Solution: Search and Indexing troubleshooter
 
-## Run the Search and Indexing troubleshooter
-
-Your PC automatically indexes content to deliver faster search results. [Learn more about Search indexing in Windows 10](https://support.microsoft.com/help/4098843).
+Your PC automatically indexes content to deliver faster search results. If you're running Windows 10, version 1903 (May 2019 Update) or later versions and Windows can detect a problem, we'll run the Search troubleshooter automatically. This troubleshooter will reset Windows Search back to the default experience. View your troubleshooter history under **Settings** > **Update & Security** > **Troubleshoot** > **View History**. Follow the solutions below if your issue is still not resolved.  
 
 Use the Windows **Search and Indexing** troubleshooter to try to fix any problems that may arise. To use the troubleshooter, follow these steps:
 
@@ -47,7 +44,13 @@ You can also use a command prompt to open the troubleshooter. Press Windows logo
 msdt.exe -ep WindowsHelp id SearchDiagnostic
 ```
 
-## Restart Windows Search or your device
+Vist the below articles for more information Search and Indexing:  
+
+- Vist this page for more information on [performance issues that affect Windows Search and Search indexing](/troubleshoot/windows-client/shell-experience/windows-search-performance-issues).  
+- Check FAQs on [Search indexing in Windows 10](https://support.microsoft.com/help/4098843).  
+
+
+## Solution: Restart Windows Search
 
 End the **SearchUI** process to restart Windows Search by following these steps:
 
@@ -64,7 +67,7 @@ If this solution doesn't fix your problem, try restarting your device. Restartin
 > [!NOTE]
 > You may want to bookmark this page before you restart.
 
-## Reset Windows Search
+## Solution: Reset Windows Search
 
 Try resetting Windows Search by using the method that's appropriate for your version of Windows.
 
@@ -84,9 +87,9 @@ If the Windows 10 October 2018 Update or an earlier update is installed, reset C
 1. Select **Start**, right-click **Cortana**, select **More**, and then select **App settings**.
 2. In the Cortana settings, select **Reset**.
 
-### Windows 10, version 1903 and later
+### Windows 11 and Windows 10, version 1903 and later
 
-If the Windows 10 May 2019 Update or a later update is installed, use Windows PowerShell to reset Windows Search by following these steps:
+If Windows 11 and the Windows 10 May 2019 Update or a later update is installed, use Windows PowerShell to reset Windows Search by following these steps:
 
 > [!IMPORTANT]
 > You must have administrator permissions to run this script.
@@ -145,12 +148,6 @@ If the Windows 10 May 2019 Update or a later update is installed, use Windows Po
 > [!IMPORTANT]
 > If your organization has disabled the ability to run scripts, contact your administrator for help.
 
-## Help us improve Search in Windows 10
+## Help us improve Search in Windows
 
 If the previous suggestions don't fix the problem, let us know by sending feedback in the Feedback Hub. Provide details, such as a description of the problem, screenshots, log files, and any other information that might be helpful. In the Feedback Hub, select the appropriate category and subcategory. In this case, submit your feedback in the **Cortana and Search** category.
-
-## More information
-
-- [Search indexing in Windows 10: FAQ](https://support.microsoft.com/help/4098843)
-- [Fix problems with Start menu](https://support.microsoft.com/help/12385)
-- [Windows Update: FAQ](https://support.microsoft.com/help/12373)
