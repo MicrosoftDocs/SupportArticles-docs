@@ -5115,6 +5115,16 @@
       "source_path": "support/sql/machine-learning/inconsistent-results-mkl-computations-missing-variable.md",
       "redirect_url": "/troubleshoot/sql/database-engine/machine-learning/inconsistent-results-mkl-computations-missing-variable",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/full-text-search-engine-japanese-language.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/search/full-text-search-engine-japanese-language",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/dashes-ignored-search-full-text-msidxs-queries.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/search/dashes-ignored-search-full-text-msidxs-queries",
+      "redirect_document_id": true
     }
 
 ]
