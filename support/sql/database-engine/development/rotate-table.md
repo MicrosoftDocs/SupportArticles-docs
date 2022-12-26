@@ -6,6 +6,7 @@ ms.custom: sap:Database Design and Development
 ms.topic: how-to
 ms.prod: sql
 ---
+
 # Rotate a table in SQL Server
 
 This article describes how to rotate a table in SQL Server.

@@ -5,6 +5,7 @@ ms.date: 09/25/2020
 ms.custom: sap:Database Design and Development
 ms.prod: sql
 ---
+
 # Using extended stored procedures or SP_OA stored procedures to load CLR in SQL Server is not supported
 
 _Original product version:_ &nbsp; SQL Server  

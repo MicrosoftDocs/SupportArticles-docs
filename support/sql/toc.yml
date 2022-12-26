@@ -294,6 +294,7 @@
         href: database-engine/development/timeout-issues-deploy-clr-objects.md
       - name: Use extended or SP_OA stored procedure to load CLR
         href: database-engine/development/use-extended-sp-oa-stored-procedure.md
+
   - name: General Troubleshooting Information
     items:
       - name: Error 556 insert exec failed
@@ -324,7 +325,6 @@
         href: database-engine/search/improve-performance-full-text-queries.md
       - name: Words are not returned by an English word breaker
         href: database-engine/search/words-not-returned-by-english-word-breaker.md
-
   - name: SQL Server startup issues
     items:
     - name: Error 17182 when you start SQL Server service
@@ -393,8 +393,6 @@
       href: admin/error-message-ole-db-provider.md
     - name: Virtual host drivers lead to data consistency problems
       href: admin/virtual-host-driver-lead-data-consistency.md
-    - name: Words are not returned by an English word breaker
-      href: admin/words-not-returned-by-english-word-breaker.md
   - name: Client Application Development
     items:
     - name: Can't uninstall ODBC driver completely
@@ -475,7 +473,6 @@
       href: install/warning-about-network-binding.md
     - name: Troubleshoot errors related to system disk sector size greater than 4 KB
       href: admin/troubleshoot-os-4kb-disk-sector-size.md
-  
   - name: Performance
     items:
     - name: Troubleshoot slow SSIS or ELT jobs query performance
