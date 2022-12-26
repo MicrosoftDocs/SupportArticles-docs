@@ -5110,6 +5110,12 @@
       "source_path": "support/sql/database-design/servicing-models-sql-server.md",
       "redirect_url": "/troubleshoot/sql/database-engine/general/servicing-models-sql-server",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/machine-learning/inconsistent-results-mkl-computations-missing-variable.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/machine-learning/inconsistent-results-mkl-computations-missing-variable",
+      "redirect_document_id": true
     }
+
 ]
 }

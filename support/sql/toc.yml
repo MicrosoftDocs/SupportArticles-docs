@@ -62,7 +62,6 @@
     href: data-quality-services/dqsinstaller-may-fail-accessing-tmp-folder.md
   - name: Error when you run the DQS Cleansing transformation
     href: data-quality-services/error-you-run-dqs-cleansing-transformation.md
-
 - name: Database Engine
   items:
   - name: Log Shipping
@@ -261,7 +260,7 @@
        href: database-engine/connect/winsock-lsp-network-problem.md
      - name: Login failed for user
        href: /sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context
-    - name: Connectivity How Tos
+  - name: Connectivity How Tos
     items:
       - name: Dynamic vs Static ports
         href: database-engine/connect/static-or-dynamic-port-config.md
@@ -272,7 +271,7 @@
       - name: Using PortQryUI tool
         href: database-engine/connect/using-portqrytool-sqlserver.md
   - name: Database Development
-    items: 
+    items:
       - name: Activation tasks run over limit
         href: database-engine/development/activation-runs-over-limit.md
       - name: Assembly cannot be migrated to SQL Server 2017 error
@@ -305,6 +304,10 @@
         href: database-engine/general/policy-untested-net-framework-assemblies.md
       - name: Servicing model
         href: database-engine/general/servicing-models-sql-server.md
+  - name: Machine Learning Services (in database)
+    items:
+    - name: Inconsistent results in MKL computations
+      href: machine-learning/inconsistent-results-mkl-computations-missing-variable.md
   - name: SQL Server startup issues
     items:
     - name: Error 17182 when you start SQL Server service
@@ -427,8 +430,6 @@
       href: install/error-install-sql-server-2005-sp4.md
     - name: Naming schema and Fix areas for SQL updates
       href: install/naming-schema-and-fix-area.md
-    - name: New MU Servicing Model
-      href: install/new-mu-servicing-model.md
     - name: Permission error when you use a volume mount point
       href: install/permission-error-use-volume-mount-point.md
     - name: Remove a partial installation of SQL server
@@ -461,10 +462,7 @@
       href: install/warning-about-network-binding.md
     - name: Troubleshoot errors related to system disk sector size greater than 4 KB
       href: admin/troubleshoot-os-4kb-disk-sector-size.md
-  - name: Machine Learning Services (in database)
-    items:
-    - name: Inconsistent results in MKL computations
-      href: machine-learning/inconsistent-results-mkl-computations-missing-variable.md
+  
   - name: Performance
     items:
     - name: Troubleshoot slow SSIS or ELT jobs query performance
@@ -572,8 +570,6 @@
     href: general/information-mats-sdp.md
   - name: RS Diagnostics Collector collects information
     href: general/rs-diagnostics-collector-information.md
-  - name: Servicing model
-    href: general/servicing-models-sql-server.md
   - name: Setup data collection diagnostic tool
     href: general/setup-data-collection-diagnostic-tool.md
   - name: SQL Base Diagnostics Collector
