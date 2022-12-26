@@ -209,8 +209,8 @@ SQL Server provides a Virtual Backup Device Interface (VDI) tool. This API enabl
 - Always use the latest version of SSMS to make sure that you don't encounter any known issues that are related to configuration of jobs and maintenance plans.
 - Do a test run of your jobs to make sure that the backups are created successfully. Always add logic to [verify your backups](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql).
 - If you plan to move system databases from one server to another, review [Move System Databases](/sql/relational-databases/databases/move-system-databases).
-- If you notice intermittent backup failures, check whether you're experiencing an issue that's already fixed in the latest update for your SQL Server version. For more information, see [SQL Server Versions and updates](../general/determine-version-edition-update-level.md).
-- To schedule and automate backups for SQL Express editions, see [Schedule and automate backups of SQL Server databases in SQL Server Express](schedule-automate-backup-database.md).
+- If you notice intermittent backup failures, check whether you're experiencing an issue that's already fixed in the latest update for your SQL Server version. For more information, see [SQL Server Versions and updates](../../releases/download-and-install-latest-updates.md).
+- To schedule and automate backups for SQL Express editions, see [Schedule and automate backups of SQL Server databases in SQL Server Express](../backup-restore/schedule-automate-backup-database.md).
 
 ## Reference topics for SQL Server backup and restore operations
 

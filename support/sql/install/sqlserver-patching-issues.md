@@ -157,7 +157,7 @@ For smooth functioning and maintenance of a SQL Server Failover Cluster Instance
 
 ## Additional information
 
-- For a complete list of currently available updates for your SQL Server version and download locations, see [Determine the version, edition, and update level - SQL Server](../general/determine-version-edition-update-level.md).
+- For a complete list of currently available updates for your SQL Server version and download locations, see [Determine the version, edition, and update level - SQL Server](../releases/download-and-install-latest-updates.md).
 - For more information about supportability and servicing timelines for your SQL Server version, see [Microsoft Product Lifecycle Page](/lifecycle/products/?terms=sql).
 - For information about servicing models for different versions of SQL Server, see [Incremental Servicing Model for SQL Server Updates](https://support.microsoft.com/topic/an-incremental-servicing-model-is-available-from-the-sql-server-team-to-deliver-hotfixes-for-reported-problems-6209f7b4-20a5-1a45-5042-5df411263e8b) and [Modern Servicing Model for SQL 2017 and later versions](/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server).
 - For general information about how to update SQL Server, see [Install SQL Server Servicing Updates](/sql/database-engine/install-windows/install-sql-server-servicing-updates?view=sql-server-ver15&preserve-view=true).

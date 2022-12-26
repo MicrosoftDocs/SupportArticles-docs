@@ -44,7 +44,7 @@ This issue is fixed in the following service pack for SQL Server:
 
 Service packs are cumulative. Each new service pack contains all the fixes that are in previous service packs, together with any new fixes. We recommend that you apply the latest service pack and the latest cumulative update for that service pack. You do not have to install a previous service pack before you install the latest service pack. Refer to Table 1 in the following article for more information about the latest service pack and latest cumulative update:
 
-[How to determine the version, edition and update level of SQL Server and its components](../general/determine-version-edition-update-level.md)
+[How to determine the version, edition and update level of SQL Server and its components](../releases/download-and-install-latest-updates.md)
 
 ## Workaround
 
