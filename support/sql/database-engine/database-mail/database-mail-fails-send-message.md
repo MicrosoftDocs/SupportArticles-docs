@@ -6,6 +6,7 @@ ms.custom: sap:Administration and Management
 ms.reviewer: nathansc
 ms.prod: sql
 ---
+
 # 'The transaction not longer valid' error when Database mail fails to send a message in SQL Server
 
 This article helps you resolve the problem where Database mail fails to send a message.
