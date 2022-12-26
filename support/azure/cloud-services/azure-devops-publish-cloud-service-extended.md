@@ -99,7 +99,7 @@ For classic Cloud Services, the Azure DevOps built-in pipeline task [AzureCloudP
     # Upload the cloud service via Azure File Copy
     - task: AzureFileCopy@5
       inputs:
-        SourcePath: '$(Build.ArtifactsStagingDirectory) /*'        # you can set $(Build.ArtifactsStagingDirectory) as Build part for output of
+        SourcePath: '$(Build.ArtifactsStagingDirectory) /*'        # you can set $(Build.ArtifactsStagingDirectory) as Build part for output of the MSBuild.
         azureSubscription: xxx                                     # the name of service connector
         Destination: 'AzureBlob'
         storage: $(stg_account)                                    # variable stg_account
