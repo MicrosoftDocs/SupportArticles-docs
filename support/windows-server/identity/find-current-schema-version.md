@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 558112
 To find the current Active Directory Schema Version, you can use one of the following methods:  
 
 > [!Note]
-> The internal root domain that we use in this demo is: **contoso.local**.
+> The internal root domain that we use in this demo is **contoso.local**.
 
 ### Method 1
 
@@ -57,7 +57,7 @@ The following information provides a mapping between the **objectVersion** attri
 | Version | Operating System |
 |---|---|
 |13|Windows 2000 Server|
-|30|Windows Server 2003 RTM, Windows 2003 Service Pack 1, Windows 2003 Service Pack 2| 
+|30|Windows Server 2003 RTM, Windows 2003 Service Pack 1, Windows 2003 Service Pack 2|
 |31|Windows Server 2003 R2|
 |44|Windows Server 2008 RTM|
 |47|Windows Server 2008 R2|
@@ -72,18 +72,18 @@ The following information provides a mapping between the **objectVersion** attri
 To find the current Exchange Schema Version, you can use one of the following methods:  
 
 >[!Note]
->The internal root domain that we use in this demo is: **contoso.local**.
+>The internal root domain that we use in this demo is **contoso.local**.
 
 ### Method 1
 
 1. Use *ADSIEdit.msc* or *LDP.exe* tools to navigate to  
    **CN=ms-Exch-Schema-Version-Pt, CN=Schema,CN=Configuration,DC=contoso,DC=local**
 
-2. Review the current "**rangeUpper**" attribute.
+2. Review the current **rangeUpper** attribute.
 
 ### Method 2
 
-Use **DSQuery** command line:
+Use the `DSQuery` command line:
 
 ```console
 dsquery * "CN=ms-Exch-Schema-Version-Pt,cn=schema,cn=configuration,dc=contoso,dc=local" -scope base -attr rangeUpper
@@ -99,7 +99,7 @@ Get-ItemProperty "AD:\CN=ms-Exch-Schema-Version-Pt,cn=schema,cn=configuration,$(
 
 ### Some "rangeUpper" attribute map
 
-The following articles provide a mapping between the **rangeUpper** attribute value, to the Exchange Schema commutability:
+The following articles provide a mapping between the **rangeUpper** attribute value to the Exchange Schema commutability:
 
 - [Exchange 2016 Active Directory versions](/exchange/plan-and-deploy/prepare-ad-and-domains?view=exchserver-2016&preserve-view=true#exchange-2016-active-directory-versions)
 - [Exchange 2019 Active Directory versions](/exchange/plan-and-deploy/prepare-ad-and-domains?view=exchserver-2019&preserve-view=true#exchange-2019-active-directory-versions)
