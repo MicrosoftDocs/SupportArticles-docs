@@ -101,9 +101,7 @@ If Windows 11, Windows 10 May 2019 Update, or a later update is installed, use W
     > Do you want to allow this app to make changes to your device?
 
 4. The PowerShell script resets the Windows Search feature. When the word **Done** appears, close the PowerShell window.
-5. If you receive the "Cannot be loaded because running scripts is disabled on this system" error message,
-
-   enter the following command on the command line of the PowerShell window, and then press Enter:
+5. If you receive the "Cannot be loaded because running scripts is disabled on this system" error message, enter the following command on the command line of the PowerShell window, and then press Enter:
 
     ```powershell
     Get-ExecutionPolicy
