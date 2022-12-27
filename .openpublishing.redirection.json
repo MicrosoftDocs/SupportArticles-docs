@@ -5310,6 +5310,11 @@
       "source_path": "support/sql/admin/defragmenting-database-disk-drives.md",
       "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/defragmenting-database-disk-drives",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/troubleshoot-os-4kb-disk-sector-size.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/troubleshoot-os-4kb-disk-sector-size",
+      "redirect_document_id": true
     }
 
 ]
