@@ -5315,7 +5315,53 @@
       "source_path": "support/sql/admin/troubleshoot-os-4kb-disk-sector-size.md",
       "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/troubleshoot-os-4kb-disk-sector-size",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/failover-clusters/cluster-resource-goes-failed-state.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/failover-clusters/cluster-resource-goes-failed-state",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/failover-clusters/error-install-sql-server-windows-server-cluster.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/failover-clusters/error-install-sql-server-windows-server-cluster",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/failover-clusters/create-databases-change-disk-file-locations.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/failover-clusters/create-databases-change-disk-file-locations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/failover-clusters/install-sql-server-2016-on-a-csv-disk-fails.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/failover-clusters/install-sql-server-2016-on-a-csv-disk-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/failover-clusters/manually-re-create-resource-specific-registry-keys.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/failover-clusters/manually-re-create-resource-specific-registry-keys",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/failover-clusters/support-policy-clustered-configurations.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/failover-clusters/support-policy-clustered-configurations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/failover-clusters/windows-failover-cluster-resource-depend.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/failover-clusters/windows-failover-cluster-resource-depend",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/cannot-update-cluster-setup-program-checks-rule.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/failover-clusters/cannot-update-cluster-setup-program-checks-rule",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/warning-about-network-binding.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/failover-clusters/warning-about-network-binding",
+      "redirect_document_id": true
     }
+
 
 ]
 }
