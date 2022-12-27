@@ -423,7 +423,7 @@
     items:
     - name: Can't uninstall ODBC driver completely
       href: connect/odbc-driver-uninstall-incomplete.md
-  - name: Failover Clusters
+  - name: Always On Failover Cluster Instance (FCI)
     items:
       - name: Cluster resource in Failed state
         href: failover-clusters/cluster-resource-goes-failed-state.md
