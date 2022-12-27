@@ -5505,6 +5505,142 @@
       "source_path": "support/sql/replication/update-statements-replicated-as-delete-insert.md",
       "redirect_url": "/troubleshoot/sql/database-engine/replication/update-statements-replicated-as-delete-insert",
       "redirect_document_id": true
-    }
+    },
+    {
+      "source_path": "support/sql/install/understanding-dotnet-framework-requirements.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/understanding-dotnet-framework-requirements",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/error-set-up-update-instances.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/error-set-up-update-instances",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/sql-server-not-supported-in-windows-os-where-case-sensitivity-enabled.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sql-server-not-supported-in-windows-os-where-case-sensitivity-enabled",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/description-update-cache-folder.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/description-update-cache-folder",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/error-install-sql-server-2008-r2.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/error-install-sql-server-2008-r2",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/error-code-1642-update-applied.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/error-code-1642-update-applied",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/error-change-path-shared-component-directory.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/error-change-path-shared-component-directory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/evaluation-period-has-expired.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/evaluation-period-has-expired",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/fusion-atl-rule-check-fails.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/fusion-atl-rule-check-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/cu-apply-installation.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/cu-apply-installation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/installation-fails-if-remove-user-right.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/installation-fails-if-remove-user-right",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/error-install-sql-server-2005-sp4.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/error-install-sql-server-2005-sp4",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/naming-schema-and-fix-area.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/naming-schema-and-fix-area",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/new-mu-servicing-model.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/new-mu-servicing-model",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/permission-error-use-volume-mount-point.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/permission-error-use-volume-mount-point",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/remove-partial-installation.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/remove-partial-installation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/restore-missing-windows-installer-cache-files.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/restore-missing-windows-installer-cache-files",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/service-not-start-after-patch-installed.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/service-not-start-after-patch-installed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/setup-stops-responding-upgrade.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/setup-stops-responding-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/issues-install-sql-server.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/issues-install-sql-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/sql-server-2008-setup-issues.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sql-server-2008-setup-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/sqlserver-patching-issues.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sqlserver-patching-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/install-reporting-service.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sql-server-2012-setup-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/update-or-slipstream-installation.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/update-or-slipstream-installation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/error-upgrade-cluster-node.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/error-upgrade-cluster-node",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/agent-job-fail-error-65535-782-7437.md",
+      "redirect_url": "/troubleshoot/sql/ssms/agent/agent-job-fail-error-65535-782-7437",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/34052-error-pbm-generates-alerts.md",
+      "redirect_url": "/troubleshoot/sql/ssms/agent/34052-error-pbm-generates-alerts",
+      "redirect_document_id": true
+    },
+
 ]
 }
