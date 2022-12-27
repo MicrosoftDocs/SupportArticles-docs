@@ -89,7 +89,7 @@ fsutil fsinfo sectorinfo E:
 
 Look for the values `PhysicalBytesPerSectorForAtomicity` and `PhysicalBytesPerSectorForPerformance`, returned in bytes, and if they're different, retain the _largest_ one to ascertain the disk sector size. A value of 4096 indicates a sector storage size of 4 KB.
 
-Additionally, be aware of the Windows support policy for file system and storage sector size support. For more information, see the [Microsoft support policy for 4-KB sector hard drives in Windows](../../windows-server/backup-and-storage/support-policy-4k-sector-hard-drives.md) article.
+Additionally, be aware of the Windows support policy for file system and storage sector size support. For more information, see the [Microsoft support policy for 4-KB sector hard drives in Windows](../../../windows-server/backup-and-storage/support-policy-4k-sector-hard-drives.md) article.
 
 > [!NOTE]
 > There's no released version of SQL Server compatible with sector sizes greater than 4 KB. For more information, see the [Hard disk drive sector-size support boundaries in SQL Server](https://support.microsoft.com/topic/hard-disk-drive-sector-size-support-boundaries-in-sql-server-4d5b73fa-7dc4-1d8a-2735-556e6b60d046) article.

@@ -35,7 +35,7 @@ To work around this issue, perform the following:
 1. Use the built-in account to install SQL Server.
 1. Change the account that is used for the services to an Active Directory service account.
 
-For other resolutions and additional information, see [DPAPI MasterKey backup failures](../../windows-server/identity/dpapi-masterkey-backup-failures.md).
+For other resolutions and additional information, see [DPAPI MasterKey backup failures](../../../windows-server/identity/dpapi-masterkey-backup-failures.md).
 
 ## References
 
