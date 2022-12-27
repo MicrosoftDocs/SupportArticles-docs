@@ -2487,7 +2487,7 @@
     },
     {
       "source_path": "support/sql/admin/slow-query-performance-ssis-etl.md",
-      "redirect_url": "/troubleshoot/sql/performance/slow-query-performance-ssis-etl",
+      "redirect_url": "/troubleshoot/sql/integration-services/slow-query-performance-ssis-etl",
       "redirect_document_id": true
     },
     {
