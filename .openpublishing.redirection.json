@@ -5360,8 +5360,151 @@
       "source_path": "support/sql/install/warning-about-network-binding.md",
       "redirect_url": "/troubleshoot/sql/database-engine/failover-clusters/warning-about-network-binding",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/peer-to-peer-replication-fails.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/peer-to-peer-replication-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/error-1205-configure-transactional-replication.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/error-1205-configure-transactional-replication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/error-replication-log-reader-agent-fails.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/error-replication-log-reader-agent-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/troubleshoot-error-20598.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/troubleshoot-error-20598",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/error-replication-monitor.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/error-replication-monitor",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/apply-hotfix-sql-replication-topology.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/apply-hotfix-sql-replication-topology",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/ascii-function-returns-different-results-publisher-subscriber.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/ascii-function-returns-different-results-publisher-subscriber",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/rowguidcol-not-supported-merge-replication.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/rowguidcol-not-supported-merge-replication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/sql-transaction-log-grows.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/sql-transaction-log-grows",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/duplicate-keys-sys-syscommittab-table.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/duplicate-keys-sys-syscommittab-table",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/error-run-distribution-agent.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/error-run-distribution-agent",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/enumerate-subscription-properties.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/enumerate-subscription-properties",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/install-service-packs-hotfixes.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/install-service-packs-hotfixes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/problem-use-custom-business-logic-handler.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/problem-use-custom-business-logic-handler",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/manually-remove-replication.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/manually-remove-replication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/merge-replication-cannot-support-centralized-subscriber-topologies.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/merge-replication-cannot-support-centralized-subscriber-topologies",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/non-convergence-when-processes-child-generations.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/non-convergence-when-processes-child-generations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/error-use-change-data-capture-service.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/error-use-change-data-capture-service",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/oracle-publication-triggers-sends-data.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/oracle-publication-triggers-sends-data",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/performance-statistics-log-reader-distribution-agents.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/performance-statistics-log-reader-distribution-agents",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/subscriptions-do-not-show-up-windows-sync-manager.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/subscriptions-do-not-show-up-windows-sync-manager",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/sql-replication-agents-not-run.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/sql-replication-agents-not-run",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/script-failed-error-merge-publication-snapshot.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/script-failed-error-merge-publication-snapshot",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/skiperrors-parameter-distribution-agent.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/skiperrors-parameter-distribution-agent",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/snapshot-logreader-agents-fail-destination-table-empty.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/snapshot-logreader-agents-fail-destination-table-empty",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/sql-merge-replication-synchronization-fails.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/sql-merge-replication-synchronization-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/subscription-does-not-exist-error.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/subscription-does-not-exist-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/understand-merge-replication-article-process.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/understand-merge-replication-article-process",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/update-statements-replicated-as-delete-insert.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/update-statements-replicated-as-delete-insert",
+      "redirect_document_id": true
     }
-
-
 ]
 }

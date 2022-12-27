@@ -421,8 +421,66 @@
         href: database-engine/failover-clusters/cannot-update-cluster-setup-program-checks-rule.md
       - name: Warning about network binding order
         href: database-engine/failover-clusters/warning-about-network-binding.md
-
-
+  - name: Replication, Change Tracking, Change Data Capture
+    items: 
+      - name: 102 and incorrect syntax error with peer-to-peer replication
+        href: database-engine/replication/peer-to-peer-replication-fails.md
+      - name: 1205 error when you configure transactional replication
+        href: database-engine/replication/error-1205-configure-transactional-replication.md
+      - name: 20011 error the process could not execute sp_replcmds
+        href: database-engine/replication/error-replication-log-reader-agent-fails.md
+      - name: 20598 error the row was not found at the Subscriber when applying the replicated command 
+        href: database-engine/replication/troubleshoot-error-20598.md
+      - name: 213 error when attaching CDC enabled database
+        href: database-engine/replication/attach-change-data-capture-database.md
+      - name: An error occurred while retrieving the publication data
+        href: database-engine/replication/error-replication-monitor.md
+      - name: Apply SQL hotfixes in a replication topology
+        href: database-engine/replication/apply-hotfix-sql-replication-topology.md
+      - name: ASCII function returns different results
+        href: database-engine/replication/ascii-function-returns-different-results-publisher-subscriber.md
+      - name: Cannot use rowguidcol in filter definition in merge replication
+        href: database-engine/replication/rowguidcol-not-supported-merge-replication.md
+      - name: CDC capture job fails when processing changes
+        href: database-engine/replication/cdc-capture-job-fails-processing-changes-table.md
+      - name: CDC for Oracle results in transaction log growth
+        href: database-engine/replication/sql-transaction-log-grows.md
+      - name: Duplicate key rows from sys.syscommittab table
+        href: database-engine/replication/duplicate-keys-sys-syscommittab-table.md
+      - name: Error message when you run the Distribution Agent
+        href: database-engine/replication/error-run-distribution-agent.md
+      - name: Fail to enumerate subscription properties
+        href: database-engine/replication/enumerate-subscription-properties.md
+      - name: Install service packs and hotfixes
+        href: database-engine/replication/install-service-packs-hotfixes.md
+      - name: Issue with custom business logic handler
+        href: database-engine/replication/problem-use-custom-business-logic-handler.md
+      - name: Manually remove replication
+        href: database-engine/replication/manually-remove-replication.md
+      - name: Merge replication doesn't support centralized subscriber topologies
+        href: database-engine/replication/merge-replication-cannot-support-centralized-subscriber-topologies.md
+      - name: Non-convergence when SQL Server processes child generations
+        href: database-engine/replication/non-convergence-when-processes-child-generations.md
+      - name: ORACDC517E - Oracle Call Interface (OCI) method failed
+        href: database-engine/replication/error-use-change-data-capture-service.md
+      - name: Oracle publication triggers send data for non-published columns
+        href: database-engine/replication/oracle-publication-triggers-sends-data.md
+      - name: Performance statistics for Log Reader and Distribution Agents
+        href: database-engine/replication/performance-statistics-log-reader-distribution-agents.md
+      - name: Pull subscriptions do not show up in Windows Synchronization Manager
+        href: database-engine/replication/subscriptions-do-not-show-up-windows-sync-manager.md
+      - name: Replication agents can't run
+        href: database-engine/replication/sql-replication-agents-not-run.md
+      - name: Script failed error when creating merge publication snapshot
+        href: database-engine/replication/script-failed-error-merge-publication-snapshot.md
+      - name: SkipErrors parameter in Distribution Agent
+        href: database-engine/replication/skiperrors-parameter-distribution-agent.md
+      - name: Snapshot or Logreader agents fail
+        href: database-engine/replication/snapshot-logreader-agents-fail-destination-table-empty.md
+      - name: Synchronization for merge replication fails
+        href: database-engine/replication/sql-merge-replication-synchronization-fails.md
+      - name: The subscription does not exist
+        href: database-engine/replication/subscription-does-not-exist-error.md
   - name: SQL Server startup issues
     items:
     - name: Error 17182 when you start SQL Server service
@@ -509,72 +567,6 @@
       href: install/warning-about-network-binding.md
     - name: Troubleshoot errors related to system disk sector size greater than 4 KB
       href: admin/troubleshoot-os-4kb-disk-sector-size.md
-  - name: Replication, change tracking, change data capture
-    items:
-    - name: 102 and incorrect syntax error with peer-to-peer replication
-      href: replication/peer-to-peer-replication-fails.md
-    - name: 1205 error when you configure transactional replication
-      href: replication/error-1205-configure-transactional-replication.md
-    - name: 20011 error the process could not execute sp_replcmds
-      href: replication/error-replication-log-reader-agent-fails.md
-    - name: 20598 error the row was not found at the Subscriber when applying the replicated command 
-      href: replication/troubleshoot-error-20598.md
-    - name: 213 error when attaching CDC enabled database
-      href: replication/attach-change-data-capture-database.md
-    - name: An error occurred while retrieving the publication data  
-      href: replication/error-replication-monitor.md
-    - name: Apply SQL hotfixes in a replication topology
-      href: replication/apply-hotfix-sql-replication-topology.md
-    - name: ASCII function returns different results
-      href: replication/ascii-function-returns-different-results-publisher-subscriber.md
-    - name: Cannot use rowguidcol in filter definition in merge replication
-      href: replication/rowguidcol-not-supported-merge-replication.md
-    - name: CDC capture job fails when processing changes
-      href: replication/cdc-capture-job-fails-processing-changes-table.md
-    - name: CDC for Oracle results in transaction log growth
-      href: replication/sql-transaction-log-grows.md
-    - name: Duplicate key rows from sys.syscommittab table
-      href: replication/duplicate-keys-sys-syscommittab-table.md
-    - name: Error message when you run the Distribution Agent
-      href: replication/error-run-distribution-agent.md
-    - name: Fail to enumerate subscription properties
-      href: replication/enumerate-subscription-properties.md
-    - name: Install service packs and hotfixes
-      href: replication/install-service-packs-hotfixes.md
-    - name: Issue with custom business logic handler
-      href: replication/problem-use-custom-business-logic-handler.md
-    - name: Manually remove replication
-      href: replication/manually-remove-replication.md
-    - name: Merge replication doesn't support centralized subscriber topologies
-      href: replication/merge-replication-cannot-support-centralized-subscriber-topologies.md
-    - name: Non-convergence when SQL Server processes child generations
-      href: replication/non-convergence-when-processes-child-generations.md
-    - name: ORACDC517E - Oracle Call Interface (OCI) method failed
-      href: replication/error-use-change-data-capture-service.md
-    - name: Oracle publication triggers send data for non-published columns
-      href: replication/oracle-publication-triggers-sends-data.md
-    - name: Performance statistics for Log Reader and Distribution Agents
-      href: replication/performance-statistics-log-reader-distribution-agents.md
-    - name: Pull subscriptions do not show up in Windows Synchronization Manager
-      href: replication/subscriptions-do-not-show-up-windows-sync-manager.md
-    - name: Replication agents can't run
-      href: replication/sql-replication-agents-not-run.md
-    - name: Script failed error when creating merge publication snapshot
-      href: replication/script-failed-error-merge-publication-snapshot.md
-    - name: SkipErrors parameter in Distribution Agent
-      href: replication/skiperrors-parameter-distribution-agent.md
-    - name: Snapshot or Logreader agents fail
-      href: replication/snapshot-logreader-agents-fail-destination-table-empty.md
-    - name: Subscription Streams
-      href: replication/configure-troubleshoot-subscriptionstreamsof-distribution-agent.md
-    - name: Synchronization for merge replication fails
-      href: replication/sql-merge-replication-synchronization-fails.md
-    - name: The subscription does not exist
-      href: replication/subscription-does-not-exist-error.md
-    - name: Understand merge Replication article processing order
-      href: replication/understand-merge-replication-article-process.md
-    - name: Update is replicated as DELETE/INSERT pairs
-      href: replication/update-statements-replicated-as-delete-insert.md
 - name: General Troubleshooting Information
   items:
   - name: Answers questions about the MSDT
