@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4047327
 >- SQL Server 2019: None
 >- All security releases through 2020
 
-For information about the updates to the detection logic for newer CU releases and future security releases, see [Updates to the Microsoft Update detection logic for SQL Server servicing](../../install/windows/new-mu-servicing-model.md).
+For information about the updates to the detection logic for newer CU releases and future security releases, see [Updates to the Microsoft Update detection logic for SQL Server servicing](../windows/new-mu-servicing-model.md).
 
 ## Symptoms
 
