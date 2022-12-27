@@ -7,7 +7,7 @@ ms.reviewer: maheshallu, piw
 author: AmandaAZ
 ms.author: v-weizhu
 ms.service: cloud-services
-Contributor: zhangjerry
+contributor: JerryZhangMS
 ---
 # Retrieve Azure Cloud Service (extended support) detail via PowerShell
 
