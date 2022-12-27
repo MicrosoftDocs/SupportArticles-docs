@@ -365,6 +365,44 @@
         href: database-engine/linked-servers/error-message-ole-db-provider.md
       - name: Decreased performance when querying view across linked servers
         href: database-engine/linked-servers/decreased-performance-linkedserver-views.md
+  - name: File, Filegroup, Database Operations, or Corruption
+    items: 
+     - name: 1450 and 665 errors when running DBCC CHECKDB
+       href: database-engine/database-file-operations/1450-and-665-errors-running-dbcc-checkdb.md
+     - name: 17053 and 926 errors when running DBCC CHECK
+       href: database-engine/database-file-operations/17053-and-926-errors-running-dbcc-check.md
+     - name: 8967 and 8921 errors when running DBCC CHECKDB
+       href: database-engine/database-file-operations/8967-8921-errors-running-dbcc-checkdb.md
+     - name: Considerations for the autogrow and autoshrink
+       href: database-engine/database-file-operations/considerations-autogrow-autoshrink.md
+     - name: Database Engine Input/Output requirements
+       href: database-engine/database-file-operations/database-engine-input-output-requirements.md
+     - name: Defragmenting database disk drives
+       href: database-engine/database-file-operations/defragmenting-database-disk-drives.md
+     - name: Latch timeout when running DBCC CHECKDB
+       href: database-engine/database-file-operations/latch-timeout-running-dbcc-checkdb.md
+     - name: Logging and data storage algorithms
+       href: database-engine/database-file-operations/logging-data-storage-algorithms.md
+     - name: I/O subsystem requirements for the tempdb
+       href: database-engine/database-file-operations/io-subsystem-requirements-tempdb.md
+     - name: Space used by a table is not released
+       href: database-engine/database-file-operations/space-table-uses-not-released.md
+     - name: Support for databases on compressed volumes
+       href: database-engine/database-file-operations/support-databases-compressed-volumes.md
+     - name: Support for network database files
+       href: database-engine/database-file-operations/support-network-database-files.md
+     - name: Support on iSCSI technology components
+       href: database-engine/database-file-operations/support-iscsi-technology-components.md
+     - name: Transaction log file doesn't grow
+       href: database-engine/database-file-operations/transaction-log-file-not-grow.md
+     - name: Troubleshoot DBCC CHECKDB errors
+       href: database-engine/database-file-operations/troubleshoot-dbcc-checkdb-errors.md
+     - name: Virtual host drivers lead to data consistency problems
+       href: database-engine/database-file-operations/virtual-host-driver-lead-data-consistency.md
+     - name: Troubleshoot errors related to system disk sector size greater than 4 KB
+       href: database-engine/database-file-operations/troubleshoot-os-4kb-disk-sector-size.md
+
+
   - name: SQL Server startup issues
     items:
     - name: Error 17182 when you start SQL Server service
@@ -373,10 +411,6 @@
       href: admin/event-id-17058-start-sql-server.md
     - name: Event ID 7000 and SQL Server doesn't start
       href: admin/event-id-7000-fail-start.md
-    - name: 17053 and 926 errors when running DBCC CHECK
-      href: admin/17053-and-926-errors-running-dbcc-check.md
-    - name: 8967 and 8921 errors when running DBCC CHECKDB
-      href: admin/8967-8921-errors-running-dbcc-checkdb.md
     - name: Agent job may fail with error 65535
       href: admin/agent-job-fail-error-65535-782-7437.md
     - name: Assertion when you execute Bulk Insert or BCP 
