@@ -62,6 +62,7 @@
     href: data-quality-services/dqsinstaller-may-fail-accessing-tmp-folder.md
   - name: Error when you run the DQS Cleansing transformation
     href: data-quality-services/error-you-run-dqs-cleansing-transformation.md
+
 - name: Database Engine
   items:
   - name: Log Shipping
@@ -294,7 +295,6 @@
         href: database-engine/development/timeout-issues-deploy-clr-objects.md
       - name: Use extended or SP_OA stored procedure to load CLR
         href: database-engine/development/use-extended-sp-oa-stored-procedure.md
-
   - name: General Troubleshooting Information
     items:
       - name: Error 556 insert exec failed
@@ -307,8 +307,8 @@
         href: database-engine/general/servicing-models-sql-server.md
   - name: Machine Learning Services (in database)
     items:
-    - name: Inconsistent results in MKL computations
-      href: machine-learning/inconsistent-results-mkl-computations-missing-variable.md
+      - name: Inconsistent results in MKL computations
+        href: machine-learning/inconsistent-results-mkl-computations-missing-variable.md
   - name: Full-Text Search, Semantic Search
     items:
       - name: Considerations when using the Full-Text to search
@@ -481,29 +481,7 @@
         href: database-engine/replication/sql-merge-replication-synchronization-fails.md
       - name: The subscription does not exist
         href: database-engine/replication/subscription-does-not-exist-error.md
-  - name: SQL Server startup issues
-    items:
-    - name: Error 17182 when you start SQL Server service
-      href: admin/error-17182-protocols-disabled-start-failure.md
-    - name: Event ID 17058 and SQL Server doesn't start
-      href: admin/event-id-17058-start-sql-server.md
-    - name: Event ID 7000 and SQL Server doesn't start
-      href: admin/event-id-7000-fail-start.md
-    - name: Agent job may fail with error 65535
-      href: admin/agent-job-fail-error-65535-782-7437.md
-    - name: Assertion when you execute Bulk Insert or BCP 
-      href: admin/assertion-execute-bulk-insert-bcp.md
-    - name: Assertion failure on partner servers when using mirroring
-      href: admin/assertion-partner-servers-using-mirroring.md
-    - name: Improve the performance of full-text queries
-      href: admin/improve-performance-full-text-queries.md
-    - name: Logging and data storage algorithms
-      href: admin/logging-data-storage-algorithms.md
-    - name: Policy-Based Management generates alerts
-      href: admin/34052-error-pbm-generates-alerts.md
-    - name: Space used by a table is not released
-      href: admin/space-table-uses-not-released.md
-  - name: Client Application Development
+  - name: Database Client Programming
     items:
     - name: Can't uninstall ODBC driver completely
       href: connect/odbc-driver-uninstall-incomplete.md
