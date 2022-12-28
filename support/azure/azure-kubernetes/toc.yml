@@ -165,6 +165,8 @@
   items:
   - name: Errors when mounting file share
     href: fail-to-mount-azure-file-share.md
+  - name: Errors when mounting blob container
+    href: mounting-azure-blob-storage-container-fail.md 
   - name: Errors when mounting disk volumes
     href: fail-to-mount-azure-disk-volume.md
   - name: Can't set the uid and gid mounting options on an Azure disk
