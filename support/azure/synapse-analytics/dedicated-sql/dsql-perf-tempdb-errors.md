@@ -25,7 +25,7 @@ If you have no existing connection to identify any problematic connection or que
 
 Make sure that you identify the query that fills up the tempdb database while the query is executing, unless you've implemented a logging component to your ETL framework or auditing of your dedicated SQL pool statements. In most cases, not always, the longest-running query that executed in the timeframe of the issue occurring is the reason for the tempdb out of space errors. Run the following query to get a list of long running queries:
 
-```
+```sql
 SELECT TOP 5 *
 FROM sys.dm_pdw_exec_requests
 WHERE status = 'running'
@@ -47,7 +47,7 @@ After you identify and take action against the responsible query, consider imple
 | Poor clustered columnstore index (CCI) health | It consumes the tempdb space due to memory spills. | [Rebuild CCIs](/troubleshoot/azure/synapse-analytics/dedicated-sql/dsql-perf-cci-health) and ensure they're maintained on a regular schedule. |
 | Large transactions | Large volume `CREATE TABLE AS SELECT (CTAS)` or `INSERT SELECT` statements fill the tempdb during data movement operations. | Break your `CTAS` or `INSERT SELECT` statement into multiple, smaller transactions. |
 | Insufficient memory allocation | Queries with insufficient memory allocated (via resource class or workload group) can spill into `tempdb`. | Execute your queries with a larger [resource class](/azure/synapse-analytics/sql-data-warehouse/resource-classes-for-workload-management) or a [workload group](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-workload-isolation) with more resources. |
-| End-user external table queries | Queries against external tables aren't optimal for end-user queries because the engine will need to read the entire files into `tempdb` before processing the data. |  [Load the data](/azure/sql-data-warehouse/sql-data-warehouse-best-practices#load-then-query-external-tables) to a permanent table and then direct user queries there. 
+| End-user external table queries | Queries against external tables aren't optimal for end-user queries because the engine will need to read the entire files into `tempdb` before processing the data. |  [Load the data](/azure/sql-data-warehouse/sql-data-warehouse-best-practices#load-then-query-external-tables) to a permanent table and then direct user queries there. |
 | Insufficient overall resources | You may find that your dedicated SQL pool is close to maxing out its tempdb capacity during high activity. | Consider scaling up your dedicated SQL pool in combination with any of the mitigations above. |
 
 ## Troubleshoot full tempdb transaction log files
@@ -61,7 +61,7 @@ The tempdb transaction log typically only fills due to a client/user either:
 
 The problematic connections may be from clients who have an open transaction but are in an Idle status. Run the following query to help identify this scenario:
 
-```
+```sql
 SELECT *
 FROM sys.dm_pdw_exec_sessions
 WHERE is_transactional = 1
@@ -81,4 +81,4 @@ Alternatively, you may consider creating an automated process to periodically de
 
 ## Resources
 
-- Query the DMV [sys.dm_pdw_errors](/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql?view=azure-sqldw-latest) for errors.
+- Query the DMV [sys.dm_pdw_errors](/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql?view=azure-sqldw-latest&preserve-view=true) for errors.
