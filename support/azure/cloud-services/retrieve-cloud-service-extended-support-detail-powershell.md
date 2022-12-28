@@ -4,10 +4,9 @@ description: Describes how to get the Azure Cloud Service (extended support) con
 ms.date: 12/15/2022
 ms.topic: how-to
 ms.reviewer: maheshallu, piw
-author: AmandaAZ
 ms.author: v-weizhu
 ms.service: cloud-services
-contributor: JerryZhangMS
+author: JerryZhangMS
 ---
 # Retrieve Azure Cloud Service (extended support) detail via PowerShell
 
