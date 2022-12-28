@@ -5643,7 +5643,7 @@
     }, 
     {
       "source_path": "support/sql/replication/configure-troubleshoot-subscriptionstreamsof-distribution-agent.md",
-      "redirect_url": "support/sql/database-engine/performance/configure-troubleshoot-subscriptionstreamsof-distribution-agent",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/configure-troubleshoot-subscriptionstreamsof-distribution-agent",
       "redirect_document_id": true
     }
 
