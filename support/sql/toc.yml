@@ -304,7 +304,7 @@
       - name: Policy for untested .NET Framework assemblies
         href: database-engine/general/policy-untested-net-framework-assemblies.md
       - name: Servicing model
-        href: database-engine/general/servicing-models-sql-server.md
+        href: general/servicing-models-sql-server.md
   - name: Machine Learning Services (in database)
     items:
       - name: Inconsistent results in MKL computations
