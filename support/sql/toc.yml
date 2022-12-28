@@ -261,8 +261,8 @@
        href: database-engine/connect/winsock-lsp-network-problem.md
      - name: Login failed for user
        href: /sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context
-  - name: Connectivity How Tos
-    items:
+   - name: Connectivity How Tos
+     items:
       - name: Dynamic vs Static ports
         href: database-engine/connect/static-or-dynamic-port-config.md
       - name: Kerberos Configuration Manager
