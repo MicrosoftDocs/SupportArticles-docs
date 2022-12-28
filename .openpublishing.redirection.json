@@ -2486,7 +2486,7 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/sql/admin/slow-query-performance-ssis-etl.md",
+      "source_path": "support/sql/performance/slow-query-performance-ssis-etl.md",
       "redirect_url": "/troubleshoot/sql/integration-services/slow-query-performance-ssis-etl",
       "redirect_document_id": true
     },
@@ -5618,7 +5618,7 @@
     },
     {
       "source_path": "support/sql/install/install-reporting-service.md",
-      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sql-server-2012-setup-issues",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/install-reporting-service",
       "redirect_document_id": true
     },
     {
