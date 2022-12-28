@@ -5367,6 +5367,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/sql/replication/attach-change-data-capture-database.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/attach-change-data-capture-database",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/sql/replication/error-1205-configure-transactional-replication.md",
       "redirect_url": "/troubleshoot/sql/database-engine/replication/error-1205-configure-transactional-replication",
       "redirect_document_id": true
