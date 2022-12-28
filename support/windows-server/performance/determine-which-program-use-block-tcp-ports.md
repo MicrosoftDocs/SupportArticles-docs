@@ -48,4 +48,4 @@ To obtain additional information about the Netstat.exe utility, follow these ste
 
 1. Click **Start** > **Run**.
 2. In the **Open** box, type *cmd*, and then click **OK**.
-3. At a command prompt, type*netstat /?*.
+3. At a command prompt, type *netstat /?*.
