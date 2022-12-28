@@ -4621,7 +4621,7 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/sql/admin/service-cannot-start.md",
+      "source_path": "support/sql/security/service-cannot-start.md",
       "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/service-cannot-start",
       "redirect_document_id": true
     },
@@ -5372,6 +5372,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/sql/replication/cdc-capture-job-fails-processing-changes-table.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/cdc-capture-job-fails-processing-changes-table",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/sql/replication/error-replication-log-reader-agent-fails.md",
       "redirect_url": "/troubleshoot/sql/database-engine/replication/error-replication-log-reader-agent-fails",
       "redirect_document_id": true
@@ -5506,6 +5511,7 @@
       "redirect_url": "/troubleshoot/sql/database-engine/replication/update-statements-replicated-as-delete-insert",
       "redirect_document_id": true
     },
+
     {
       "source_path": "support/sql/install/understanding-dotnet-framework-requirements.md",
       "redirect_url": "/troubleshoot/sql/database-engine/install/windows/understanding-dotnet-framework-requirements",
