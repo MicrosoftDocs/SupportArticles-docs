@@ -149,7 +149,7 @@ To fix this issue, follow these steps:
 For smooth functioning and maintenance of a SQL Server Failover Cluster Instance (FCI), follow the best practices that are described in [Before Installing Failover Clustering](/sql/sql-server/failover-clusters/install/before-installing-failover-clustering?view=sql-server-ver15&preserve-view=true) and [Failover Cluster Instance administration & maintenance](/sql/sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance?view=sql-server-ver15&preserve-view=true). If you experience errors when you apply a CU or an SP, check the following conditions:
 
 1. Make sure that the **Remote Registry** service is active and running on all nodes of the WSFC cluster.
-1. If the service account for SQL Server isn't an administrator in your Windows cluster, make sure that administrative shares (C$ and so on) are enabled on all the nodes. For more information, see [Overview of problems that may occur when administrative shares are missing](../../windows-server/networking/problems-administrative-shares-missing.md). If these shares aren't configured correctly, you might notice one or more of the following symptoms when you try to install a CU or SP:
+1. If the service account for SQL Server isn't an administrator in your Windows cluster, make sure that administrative shares (C$ and so on) are enabled on all the nodes. For more information, see [Overview of problems that may occur when administrative shares are missing](../../../../windows-server/networking/problems-administrative-shares-missing.md). If these shares aren't configured correctly, you might notice one or more of the following symptoms when you try to install a CU or SP:
    - The update takes a long time to run or doesn't respond. Setup logs don't reveal any progress.
    - Setup logs contain messages such as the following:  
       - `The network path was not found.`
@@ -157,7 +157,7 @@ For smooth functioning and maintenance of a SQL Server Failover Cluster Instance
 
 ## Additional information
 
-- For a complete list of currently available updates for your SQL Server version and download locations, see [Determine the version, edition, and update level - SQL Server](../releases/download-and-install-latest-updates.md).
+- For a complete list of currently available updates for your SQL Server version and download locations, see [Determine the version, edition, and update level - SQL Server](../../../releases/download-and-install-latest-updates.md).
 - For more information about supportability and servicing timelines for your SQL Server version, see [Microsoft Product Lifecycle Page](/lifecycle/products/?terms=sql).
 - For information about servicing models for different versions of SQL Server, see [Incremental Servicing Model for SQL Server Updates](https://support.microsoft.com/topic/an-incremental-servicing-model-is-available-from-the-sql-server-team-to-deliver-hotfixes-for-reported-problems-6209f7b4-20a5-1a45-5042-5df411263e8b) and [Modern Servicing Model for SQL 2017 and later versions](/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server).
 - For general information about how to update SQL Server, see [Install SQL Server Servicing Updates](/sql/database-engine/install-windows/install-sql-server-servicing-updates?view=sql-server-ver15&preserve-view=true).

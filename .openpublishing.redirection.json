@@ -5227,7 +5227,7 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/sql/admin/decreased-performance-linkedserver-views.md",
+      "source_path": "support/sql/performance/decreased-performance-linkedserver-views.md",
       "redirect_url": "/troubleshoot/sql/database-engine/linked-servers/decreased-performance-linkedserver-views",
       "redirect_document_id": true
     },
@@ -5627,8 +5627,18 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/sql/install/sql-server-2012-setup-issues.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sql-server-2012-setup-issues",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/sql/install/error-upgrade-cluster-node.md",
       "redirect_url": "/troubleshoot/sql/database-engine/install/windows/error-upgrade-cluster-node",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/cannot-install-sql-when-only-rodc-available.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/cannot-install-sql-when-only-rodc-available",
       "redirect_document_id": true
     },
     {
