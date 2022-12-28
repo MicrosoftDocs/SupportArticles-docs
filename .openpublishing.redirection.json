@@ -5218,17 +5218,17 @@
     },
     {
       "source_path": "support/sql/admin/set-up-troubleshoot-linked-server.md",
-      "redirect_url": "/troubleshoot/sql/database-engine/set-up-troubleshoot-linked-server",
+      "redirect_url": "/troubleshoot/sql/database-engine/linked-servers/set-up-troubleshoot-linked-server",
       "redirect_document_id": true
     },
     {
       "source_path": "support/sql/admin/error-message-ole-db-provider.md",
-      "redirect_url": "/troubleshoot/sql/database-engine/error-message-ole-db-provider",
+      "redirect_url": "/troubleshoot/sql/database-engine/linked-servers/error-message-ole-db-provider",
       "redirect_document_id": true
     },
     {
       "source_path": "support/sql/admin/decreased-performance-linkedserver-views.md",
-      "redirect_url": "/troubleshoot/sql/database-engine/decreased-performance-linkedserver-views",
+      "redirect_url": "/troubleshoot/sql/database-engine/linked-servers/decreased-performance-linkedserver-views",
       "redirect_document_id": true
     },
     {
@@ -5640,7 +5640,12 @@
       "source_path": "support/sql/admin/34052-error-pbm-generates-alerts.md",
       "redirect_url": "/troubleshoot/sql/ssms/agent/34052-error-pbm-generates-alerts",
       "redirect_document_id": true
-    },
+    }, 
+    {
+      "source_path": "support/sql/replication/configure-troubleshoot-subscriptionstreamsof-distribution-agent.md",
+      "redirect_url": "support/sql/database-engine/performance/configure-troubleshoot-subscriptionstreamsof-distribution-agent",
+      "redirect_document_id": true
+    }
 
 ]
 }
