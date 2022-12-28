@@ -96,7 +96,7 @@ To verify the mismatch, follow these steps:
 
     Before you select **Show**, the values of the storage account name and associated key are encoded into base64 strings. After you select **Show**, the values are decoded.
 
-If you don't have access to the AKS cluster in the Azure portal, perform step 2 at the Kubernetes secret level:
+If you don't have access to the AKS cluster in the Azure portal, perform step 2 at the kubectl level:
 
 1. Get the YAML file of the Kubernetes secret, and then run the following command to get the values of the storage account name and the key from the output:
 
