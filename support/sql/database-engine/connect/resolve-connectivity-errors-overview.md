@@ -58,7 +58,7 @@ The following articles provide details for various tools and procedures to troub
   
   Describes how to test connections between SQL Server and clients using UDL files.
 
-- [Use PortQryUI tool with SQL Server](../connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md)
+- [Use PortQryUI tool with SQL Server](../connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md#named-instance-of-sql-server)
 
   Describes how to use the PortQryUI tool (a graphical user interface (GUI) port scanner) to help troubleshoot connectivity issues.
 
