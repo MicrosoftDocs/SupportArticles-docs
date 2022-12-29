@@ -489,32 +489,6 @@
         href: database-engine/replication/sql-merge-replication-synchronization-fails.md
       - name: The subscription does not exist
         href: database-engine/replication/subscription-does-not-exist-error.md
-- name: Database Client Programming
-  items:
-    - name: Can't uninstall ODBC driver completely
-      href: connect/odbc-driver-uninstall-incomplete.md
-    - name: 80020009 error when you retrieve data
-      href: connect/80020009-error-retrieve-data.md
-    - name: Can't correctly translate character data
-      href: connect/cannot-correctly-translate-character-data.md
-    - name: Check for MDAC version
-      href: connect/check-mdac-version.md
-    - name: Error when you use client cursor to add record
-      href: connect/error-when-you-use-client-cursor-add-record.md
-    - name: Fail to run a large batch of SQL statements
-      href: connect/fail-run-large-batch-sql-statements.md
-    - name: ODBC Admin displays 32 bit and 64 bit user DSNs
-      href: connect/odbc-tool-displays-32-bit-64-bit.md
-    - name: Open ADO connection and Recordset objects
-      href: connect/open-ado-connection-recordset-objects.md
-    - name: Retrieve values in Stored Procedures with ADO
-      href: connect/retrieve-values-stored-procedure.md
-    - name: SQL Server clients may change protocols
-      href: connect/clients-change-protocols-when-connect-instance.md
-    - name: SQLDescribeCol returns the wrong column length
-      href: connect/sqldescribecol-return-wrong-column-length.md
-    - name: Use server name parameter in a connection string
-      href: connect/use-server-name-parameter-connection-string.md
   - name: Installation, Patching, Upgrade, Uninstall
     items:
     - name: .Net Framework requirements for SQL Server
@@ -575,6 +549,32 @@
       href: database-engine/install/windows/error-upgrade-cluster-node.md
     - name: Warning about network binding order
       href: install/warning-about-network-binding.md
+- name: Database Client Programming
+  items:
+    - name: Can't uninstall ODBC driver completely
+      href: connect/odbc-driver-uninstall-incomplete.md
+    - name: 80020009 error when you retrieve data
+      href: connect/80020009-error-retrieve-data.md
+    - name: Can't correctly translate character data
+      href: connect/cannot-correctly-translate-character-data.md
+    - name: Check for MDAC version
+      href: connect/check-mdac-version.md
+    - name: Error when you use client cursor to add record
+      href: connect/error-when-you-use-client-cursor-add-record.md
+    - name: Fail to run a large batch of SQL statements
+      href: connect/fail-run-large-batch-sql-statements.md
+    - name: ODBC Admin displays 32 bit and 64 bit user DSNs
+      href: connect/odbc-tool-displays-32-bit-64-bit.md
+    - name: Open ADO connection and Recordset objects
+      href: connect/open-ado-connection-recordset-objects.md
+    - name: Retrieve values in Stored Procedures with ADO
+      href: connect/retrieve-values-stored-procedure.md
+    - name: SQL Server clients may change protocols
+      href: connect/clients-change-protocols-when-connect-instance.md
+    - name: SQLDescribeCol returns the wrong column length
+      href: connect/sqldescribecol-return-wrong-column-length.md
+    - name: Use server name parameter in a connection string
+      href: connect/use-server-name-parameter-connection-string.md
 - name: General Troubleshooting Information
   items:
   - name: Answers questions about the MSDT
