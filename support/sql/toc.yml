@@ -483,8 +483,8 @@
         href: database-engine/replication/sql-merge-replication-synchronization-fails.md
       - name: The subscription does not exist
         href: database-engine/replication/subscription-does-not-exist-error.md
-  - name: Database Client Programming
-    items:
+- name: Database Client Programming
+  items:
     - name: Can't uninstall ODBC driver completely
       href: connect/odbc-driver-uninstall-incomplete.md
   - name: Installation, Patching, Upgrade, Uninstall
@@ -643,7 +643,7 @@
   - name: Operations Manager can't monitor APS appliance
     href: analytics-platform-system/operations-manager-cannot-monitor-aps.md
 
-- name: Reporting Services
+- name: Reporting Services (SSRS)
   items:
   - name: A call to AuthzInitializeContextFromSid fails
     href: reporting-services/call-authzinitializecontextfromsid-api-fails.md
