@@ -541,14 +541,10 @@
       href: database-engine/install/windows/cannot-install-sql-when-only-rodc-available.md
     - name: SxS install of X64 and X86 version of SSRS 2008
       href: database-engine/install/windows/install-reporting-service.md
-    - name: Update fails on Cluster_IsOnlineIfClustered rule
-      href: install/cannot-update-cluster-setup-program-checks-rule.md
     - name: Update or Slipstream installation for SQL Server 2008
       href: database-engine/install/windows/update-or-slipstream-installation.md
     - name: Upgrade failures on Windows Server 2012
       href: database-engine/install/windows/error-upgrade-cluster-node.md
-    - name: Warning about network binding order
-      href: install/warning-about-network-binding.md
 - name: Database Client Programming
   items:
     - name: Can't uninstall ODBC driver completely
