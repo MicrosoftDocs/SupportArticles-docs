@@ -278,7 +278,7 @@ If the [Azure serial console](serial-console-linux.md) doesn't work in the speci
     3. Validate if the VM is able to boot up by taking a look at the Azure serial console or by trying to connect to the VM.
 
 > [!NOTE]
-> If the VM is Gen1 and it's not encrypted, you could also simply comment out the `/boot/efi` entry from */etc/fstab* as `/boot/efi` isn't needed in Gen1 VMs. For more information, see [Troubleshoot Linux VM starting issues due to fstab errors](/azure/virtual-machines/linux-virtual-machine-cannot-start-fstab-errors).
+> If the VM is Gen1 and it's not encrypted, you could also simply comment out the `/boot/efi` entry from */etc/fstab* as `/boot/efi` isn't needed in Gen1 VMs. For more information, see [Troubleshoot Linux VM starting issues due to fstab errors](linux-virtual-machine-cannot-start-fstab-errors.md).
 
 ### <a id="offline-troubleshooting-encrypted"></a>ADE encrypted VMs fail to boot
 
