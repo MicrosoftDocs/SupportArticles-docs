@@ -97,6 +97,8 @@
         href: database-engine/startup-shutdown/manage-error-log.md
       - name: Fails to start with error 17182
         href: database-engine/startup-shutdown/fails-start-error-17182.md
+      - name: Error 17182 when you start SQL Server service
+        href: database-engine/startup-shutdown/error-17182-protocols-disabled-start-failure.md
       - name: SQL Service cannot start after configuring SSL certificate
         href: database-engine/startup-shutdown/service-cannot-start.md
       - name: SQL can't start with a domain account
@@ -147,20 +149,20 @@
        href: database-engine/performance/schemamgr-store-degrades-performance.md
      - name: Use DBCC MEMORYSTATUS to monitor memory usage
        href: database-engine/performance/dbcc-memorystatus-monitor-memory-usage.md
-     - name: Troubleshoot entire SQL Server or application appears slow
-       href: database-engine/performance/troubleshoot-entire-sqlserver-slow.md
-     - name: Troubleshoot slow queries affected by Optimizer Timeout
-       href: database-engine/performance/troubleshoot-optimizer-timeout-performance.md
-     - name: Troubleshoot performance issues with narrow and wide plans
-       href: database-engine/performance/troubleshoot-performance-narrow-vs-wide-plans.md
      - name: 701 error with large batches
        href: database-engine/performance/701-error-large-batches.md
   - name: Slow query performance
     items: 
-     - name: Troubleshoot slow-running queries
-       href: database-engine/performance/troubleshoot-slow-running-queries.md
      - name: Different query performance between two SQL Servers
        href: database-engine/performance/troubleshoot-query-perf-between-servers.md
+     - name: Troubleshoot slow queries affected by Optimizer Timeout
+       href: database-engine/performance/troubleshoot-optimizer-timeout-performance.md
+     - name: Troubleshoot entire SQL Server or application appears slow
+       href: database-engine/performance/troubleshoot-entire-sqlserver-slow.md
+     - name: Troubleshoot slow-running queries
+       href: database-engine/performance/troubleshoot-slow-running-queries.md
+     - name: Troubleshoot performance issues with narrow and wide plans
+       href: database-engine/performance/troubleshoot-performance-narrow-vs-wide-plans.md
      - name: Slower query in database application than in SSMS
        href: database-engine/performance/troubleshoot-application-slow-ssms-fast.md
      - name: Decreased query performance after upgrade
@@ -189,6 +191,8 @@
         href: database-engine/availability-groups/error-9002-transaction-log-large.md
       - name: Always On DB in recovery pending or suspect state
         href: database-engine/availability-groups/alwayson-availability-databases-recovery-pending-suspect.md    
+      - name: Listener connection times out in multi-subnet
+        href: database-engine/availability-groups/listener-connection-times-out.md
       - name: Error 2767 on secondary replica
         href: database-engine/availability-groups/error-2767-query-secondary-replica-fails.md
       - name: Issues after changing the hostname
@@ -277,6 +281,8 @@
     items:
       - name: Activation tasks run over limit
         href: database-engine/development/activation-runs-over-limit.md
+      - name: Run a DLL-based COM object
+        href: database-engine/development/run-dll-based-com-object.md
       - name: Assembly cannot be migrated to SQL Server 2017 error
         href: database-engine/development/assembly-name-cannot-migrated-error.md
       - name: Error when you run CLR object or create assembly
@@ -487,6 +493,28 @@
   items:
     - name: Can't uninstall ODBC driver completely
       href: connect/odbc-driver-uninstall-incomplete.md
+    - name: 80020009 error when you retrieve data
+      href: connect/80020009-error-retrieve-data.md
+    - name: Can't correctly translate character data
+      href: connect/cannot-correctly-translate-character-data.md
+    - name: Check for MDAC version
+      href: connect/check-mdac-version.md
+    - name: Error when you use client cursor to add record
+      href: connect/error-when-you-use-client-cursor-add-record.md
+    - name: Fail to run a large batch of SQL statements
+      href: connect/fail-run-large-batch-sql-statements.md
+    - name: ODBC Admin displays 32 bit and 64 bit user DSNs
+      href: connect/odbc-tool-displays-32-bit-64-bit.md
+    - name: Open ADO connection and Recordset objects
+      href: connect/open-ado-connection-recordset-objects.md
+    - name: Retrieve values in Stored Procedures with ADO
+      href: connect/retrieve-values-stored-procedure.md
+    - name: SQL Server clients may change protocols
+      href: connect/clients-change-protocols-when-connect-instance.md
+    - name: SQLDescribeCol returns the wrong column length
+      href: connect/sqldescribecol-return-wrong-column-length.md
+    - name: Use server name parameter in a connection string
+      href: connect/use-server-name-parameter-connection-string.md
   - name: Installation, Patching, Upgrade, Uninstall
     items:
     - name: .Net Framework requirements for SQL Server
@@ -505,6 +533,8 @@
       href: database-engine/install/windows/error-change-path-shared-component-directory.md
     - name: Evaluation period has expired when you use SSMS
       href: database-engine/install/windows/evaluation-period-has-expired.md
+    - name: New MU Servicing Model
+      href: database-engine/install/windows/new-mu-servicing-model.md
     - name: Fusion ATL rule check fails
       href: database-engine/install/windows/fusion-atl-rule-check-fails.md
     - name: Inapplicable CUs listed in WSUS, MU or SCM
@@ -604,32 +634,6 @@
     href: master-data-services/mds-entity-based-staging-fail.md
   - name: MDS Validate Version command fails
     href: master-data-services/mds-validate-version-command-fails.md
-
-- name: MDAC and ADO
-  items:
-  - name: 80020009 error when you retrieve data
-    href: connect/80020009-error-retrieve-data.md
-  - name: Can't correctly translate character data
-    href: connect/cannot-correctly-translate-character-data.md
-  - name: Check for MDAC version
-    href: connect/check-mdac-version.md
-  - name: Error when you use client cursor to add record
-    href: connect/error-when-you-use-client-cursor-add-record.md
-  - name: Fail to run a large batch of SQL statements
-    href: connect/fail-run-large-batch-sql-statements.md
-  - name: ODBC Admin displays 32 bit and 64 bit user DSNs
-    href: connect/odbc-tool-displays-32-bit-64-bit.md
-  - name: Open ADO connection and Recordset objects
-    href: connect/open-ado-connection-recordset-objects.md
-  - name: Retrieve values in Stored Procedures with ADO
-    href: connect/retrieve-values-stored-procedure.md
-  - name: SQL Server clients may change protocols
-    href: connect/clients-change-protocols-when-connect-instance.md
-  - name: SQLDescribeCol returns the wrong column length
-    href: connect/sqldescribecol-return-wrong-column-length.md
-  - name: Use server name parameter in a connection string
-    href: connect/use-server-name-parameter-connection-string.md
-
 - name: Parallel Data Warehouse (APS)
   items:
   - name: Detect skew on distribution key values
