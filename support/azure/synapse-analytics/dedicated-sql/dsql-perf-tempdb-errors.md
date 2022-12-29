@@ -74,7 +74,7 @@ AND status = 'Idle';
 
 After identifying which clients are holding open transactions, work with the users to change either or both:
 
-- Driver configuration (for example: JDBC AutoCommit setting to `off` will set `IMPLICIT_TRANSACTIONS = ON`)
+- Driver configuration (for example: JDBC AutoCommit setting to `off`, which sets `IMPLICIT_TRANSACTIONS = ON`)
 - Ad hoc query behaviors (for example: incorrectly executing `BEGIN TRAN` without `COMMIT`/`ROLLBACK`)
 
 Alternatively, you may consider creating an automated process to periodically detect this scenario and [kill](/sql/t-sql/language-elements/kill-transact-sql) any potentially problematic sessions.
