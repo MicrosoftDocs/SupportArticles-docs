@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 323352
 
 ## Summary
 
-The Netstat.exe utility has a new switch, the `-o` switch, that can display the process identifier (ID) that is associated with each connection. This information can be used to determine which process (program) listens on a particular port. For example, the `netstat -ano` command can produce the following output:
+The *Netstat.exe* utility has a new switch, the `-o` switch, that can display the process identifier (ID) that is associated with each connection. This information can be used to determine which process (program) listens on a particular port. For example, the `netstat -ano` command can produce the following output:
 
 ```output
 Proto Local Address Foreign Address State PID  
@@ -44,7 +44,7 @@ To match the process ID to a program, follow these steps:
 
 ## How to obtain additional information about the Netstat.exe utility
 
-To obtain additional information about the Netstat.exe utility, follow these steps:
+To obtain additional information about the *Netstat.exe* utility, follow these steps:
 
 1. Select **Start** > **Run**.
 2. In the **Open** box, type *cmd*, and then select **OK**.
