@@ -55,7 +55,7 @@ After you've identified and taken action against the responsible query, consider
 The tempdb transaction log typically only fills up when a client/user either:
 
 - Opens an explicit transaction but never issues a `COMMIT` or `ROLLBACK`.
-- Has `SET IMPLICIT_TRANSACTION = ON` (especially for JDBC clients and tools that use AutoCommit features).
+- Sets `IMPLICIT_TRANSACTION = ON` (especially for JDBC clients and tools that use AutoCommit features).
 
 ### Step 1: Identify open transactions
 
