@@ -217,6 +217,8 @@
     items:
      - name: A nonrecoverable I/O error when you use Backup to URL
        href: database-engine/backup-restore/nonrecoverable-io-error-backup-url.md
+     - name: Access violations and memory dump files
+       href: database-engine/backup-restore/access-violations-memory-dump-files.md
      - name: A TDE-enabled database may not recover
        href: database-engine/backup-restore/tde-enabled-database-not-recover.md
      - name: ASR Agent or non-component VSS Backup fails
@@ -489,6 +491,10 @@
         href: database-engine/replication/sql-merge-replication-synchronization-fails.md
       - name: The subscription does not exist
         href: database-engine/replication/subscription-does-not-exist-error.md
+      - name: Understand merge Replication article processing order
+        href: database-engine/replication/understand-merge-replication-article-process.md
+      - name: Update is replicated as DELETE/INSERT pairs
+        href: database-engine/replication/update-statements-replicated-as-delete-insert.md
   - name: Installation, Patching, Upgrade, Uninstall
     items:
     - name: .Net Framework requirements for SQL Server
