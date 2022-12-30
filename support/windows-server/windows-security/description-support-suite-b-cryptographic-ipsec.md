@@ -61,8 +61,7 @@ Suite B is a set of standards that are specified by the National Security Agency
 
 FIPS is a set of guidelines and standards that govern federal computing resources. All Suite B algorithms are FIPS-approved.
 
-For more information, visit the following Web site:  
-[http://www.itl.nist.gov/fipspubs/geninfo.htm](http://www.itl.nist.gov/fipspubs/geninfo.htm) 
+For more information, see [Information Technology Laboratory](http://www.itl.nist.gov/fipspubs/geninfo.htm).
 
 - NIST 
 
@@ -79,13 +78,13 @@ For more information, visit the following Web site:
 
   This is an abbreviation for the term "Internet Protocol security."
 
-  For more information about IPsec, visit the following Microsoft Web site: [https://technet.microsoft.com/network/bb531150.aspx](https://technet.microsoft.com/network/bb531150.aspx) 
+  For more information about IPsec, see [What Is IPSec?](https://technet.microsoft.com/network/bb531150.aspx)
 
 - Elliptic Curve Digital Signature Algorithm (ECDSA) 
 
   Elliptic curve (EC) is a variant of the digital signature algorithm that operates on EC groups. The EC variant provides smaller key sizes for the same security level.
 
-  This algorithm is described in FIPS publication 186-2. To view this publication, visit the following Web site: [http://csrc.nist.gov/publications/fips/archive/fips186-2/fips186-2.pdf](http://csrc.nist.gov/publications/fips/archive/fips186-2/fips186-2.pdf) 
+  This algorithm is described in FIPS publication 186-2. To view this publication, see [Digital Signature Standard (DSS)](http://csrc.nist.gov/publications/fips/archive/fips186-2/fips186-2.pdf).
 
 - Certification authority (CA) 
 
@@ -534,6 +533,6 @@ The combinations that are described in the following table are not supported.
 |AH+ESP|AES-GMAC 192|AES-GMAC 192|Any supported encryption algorithm|
 |AH+ESP|AES-GMAC 256|AES-GMAC 256|Any supported encryption algorithm|
 
-For more information about Suite B, visit the following Web site: [Commercial National Security Algorithm Suite](https://media.defense.gov/2021/Sep/27/2002862527/-1/-1/0/CNSS%20WORKSHEET.PDF)
+For more information about Suite B, see [Commercial National Security Algorithm Suite](https://media.defense.gov/2021/Sep/27/2002862527/-1/-1/0/CNSS%20WORKSHEET.PDF).
 
-For more information about IPsec and connection security rules, visit the following Microsoft Web site: [https://go.microsoft.com/fwlink/?linkid=96525](https://go.microsoft.com/fwlink/?linkid=96525)
+For more information about IPsec and connection security rules, see [Windows Firewall with Advanced Security and IPsec](https://go.microsoft.com/fwlink/?linkid=96525).
