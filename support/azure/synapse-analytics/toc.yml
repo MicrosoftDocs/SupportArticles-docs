@@ -9,3 +9,5 @@
     href: dedicated-sql/dsql-perf-cci-health.md
   - name: Check statistics accuracy on a dedicated SQL pool
     href: dedicated-sql/dsql-perf-stats-accuracy.md
+  - name: Troubleshoot tempdb errors on a dedicated SQL pool
+    href: dedicated-sql/dsql-perf-tempdb-errors.md
