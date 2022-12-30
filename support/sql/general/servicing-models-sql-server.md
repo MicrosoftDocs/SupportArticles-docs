@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 935897
 
 This article provides more information regarding servicing channels for currently supported versions of SQL Server. The criteria for fixes includes workaround availability, customer effect, reproducibility, the complexity of the code that must be changed, and so on.  
 
-For determining the version, edition, and the latest updates of your SQL Server instance, review [Determine the version, edition, and update level of SQL Server and its components](determine-version-edition-update-level.md). For details on the support cycle for each product, check [mainstream lifecycle](/lifecycle/products/?products=sql-server). To understand various options that are available for SQL Server products that have reached the end of support, review [SQL Server end of support options](/sql/sql-server/end-of-support/sql-server-end-of-support-overview).
+For determining the version, edition, and the latest updates of your SQL Server instance, review [Determine the version, edition, and update level of SQL Server and its components](../releases/download-and-install-latest-updates.md). For details on the support cycle for each product, check [mainstream lifecycle](/lifecycle/products/?products=sql-server). To understand various options that are available for SQL Server products that have reached the end of support, review [SQL Server end of support options](/sql/sql-server/end-of-support/sql-server-end-of-support-overview).
 
 ## Delivery mechanisms for SQL Server updates
 

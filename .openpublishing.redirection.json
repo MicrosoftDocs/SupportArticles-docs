@@ -2486,8 +2486,8 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/sql/admin/slow-query-performance-ssis-etl.md",
-      "redirect_url": "/troubleshoot/sql/performance/slow-query-performance-ssis-etl",
+      "source_path": "support/sql/performance/slow-query-performance-ssis-etl.md",
+      "redirect_url": "/troubleshoot/sql/integration-services/slow-query-performance-ssis-etl",
       "redirect_document_id": true
     },
     {
@@ -4539,6 +4539,1134 @@
       "source_path": "support/sql/connect/login-failed-for-user.md",
       "redirect_url": "/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/log-shipping/configure-security-log-shipping.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/log-shipping/configure-security-log-shipping",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/log-shipping/logshipping-monitor-14420-error.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/log-shipping/logshipping-monitor-14420-error",
+      "redirect_document_id": true
+    },
+    { 
+      "source_path": "support/sql/admin/sql-server-startup-errors.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/sql-server-startup-errors",
+      "redirect_document_id": true
+    },
+    { 
+      "source_path": "support/sql/admin/event-id-7000-access-denied.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/event-id-7000-access-denied",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-17113-start-service.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/error-17113-start-service",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-17182-protocols-disabled-start-failure.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/error-17182-protocols-disabled-start-failure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/agent-service-fails-start-stand-alone-server.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/agent-service-fails-start-stand-alone-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-1069-service-cannot-start.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/error-1069-service-cannot-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/event-id-17058-start-sql-server.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/event-id-17058-start-sql-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/event-id-1814-fail-start.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/event-id-1814-fail-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/event-id-33565-start-sql-server.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/event-id-33565-start-sql-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/event-id-33566-start-sql-server.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/event-id-33566-start-sql-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/event-id-7000-fail-start.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/event-id-7000-fail-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/manage-error-log.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/manage-error-log",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/fails-start-error-17182.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/fails-start-error-17182",
+      "redirect_document_id": true
+    },
+     {
+      "source_path": "support/sql/admin/sql-cannot-start-with-domain-account.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/sql-cannot-start-with-domain-account",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/service-cannot-start.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/service-cannot-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/sql-server-agent-crashes-upon-start.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/sql-server-agent-crashes-upon-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/stats-only-db-script.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/stats-only-db-script",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/performance-issues-using-columstore-indexes-large-pages.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/performance-issues-using-columstore-indexes-large-pages",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/memory-optimized-tempdb-out-of-memory.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/memory-optimized-tempdb-out-of-memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/non-yielding-error-lock-pages-disable.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/non-yielding-error-lock-pages-disable",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/filtered-index-with-column-is-null.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/filtered-index-with-column-is-null",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-slow-running-queries.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-slow-running-queries",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-high-cpu-usage-issues.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-high-cpu-usage-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-sql-io-performance.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-sql-io-performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/token-and-perm-user-store-perf-issue.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/token-and-perm-user-store-perf-issue",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-query-timeouts.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-query-timeouts",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-query-perf-between-servers.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-query-perf-between-servers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-application-slow-ssms-fast.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-application-slow-ssms-fast",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/decreased-query-perf-after-upgrade.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/decreased-query-perf-after-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/understand-resolve-blocking.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/understand-resolve-blocking",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/recommended-updates-configuration-options.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/recommended-updates-configuration-options",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/recommended-updates-configuration-workloads.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/recommended-updates-configuration-workloads",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/resolve-pagelatch-ex-contention.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/resolve-pagelatch-ex-contention",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-memory-issues.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-memory-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-never-ending-query.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-never-ending-query",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-query-async-network-io.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-query-async-network-io",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/buffer-pool-scan-runs-slowly-large-memory-machines.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/buffer-pool-scan-runs-slowly-large-memory-machines",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/recommendations-reduce-allocation-contention.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/recommendations-reduce-allocation-contention",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-blocking-caused-compile-locks.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-blocking-caused-compile-locks",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/resolve-blocking-problems-caused-lock-escalation.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/resolve-blocking-problems-caused-lock-escalation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/blocked-column-populated-latch-waits.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/blocked-column-populated-latch-waits",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/decreased-performance-use-efs.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/decreased-performance-use-efs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/decreased-performance-run-aggregating-clause.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/decreased-performance-run-aggregating-clause",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/performance-consistency-issues-filter-drivers-modules.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/performance-consistency-issues-filter-drivers-modules",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/decreased-perf-high-cpu-optimized-nested-loop.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/decreased-perf-high-cpu-optimized-nested-loop",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/resource-monitor-nonyielding-condition.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/resource-monitor-nonyielding-condition",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/schemamgr-store-degrades-performance.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/schemamgr-store-degrades-performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/upgrade-compatibility-level-degrades-performance.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/upgrade-compatibility-level-degrades-performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/dbcc-memorystatus-monitor-memory-usage.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/dbcc-memorystatus-monitor-memory-usage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-entire-sqlserver-slow.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-entire-sqlserver-slow",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-optimizer-timeout-performance.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-optimizer-timeout-performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-performance-narrow-vs-wide-plans.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-performance-narrow-vs-wide-plans",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/701-error-large-batches.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/701-error-large-batches",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/availability-groups/error-9002-transaction-log-large.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/error-9002-transaction-log-large",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/availability-groups/alwayson-availability-databases-recovery-pending-suspect.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/alwayson-availability-databases-recovery-pending-suspect",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/availability-groups/error-2767-query-secondary-replica-fails.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/error-2767-query-secondary-replica-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/availability-groups/error-41041-change-hostname.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/error-41041-change-hostname",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/availability-groups/query-performance-degradation.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/query-performance-degradation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/availability-groups/troubleshooting-automatic-failover-problems.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/troubleshooting-automatic-failover-problems",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/availability-groups/troubleshooting-alwayson-issues.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/troubleshooting-alwayson-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/availability-groups/error-41131-create-availability-group.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/error-41131-create-availability-group",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/availability-groups/listener-connection-times-out.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/listener-connection-times-out",
+      "redirect_document_id": true
+    },
+
+    {
+      "source_path": "support/sql/admin/assertion-execute-bulk-insert-bcp.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-mirroring/assertion-execute-bulk-insert-bcp",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-mirroring/mirrored-databases-disconnected.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-mirroring/mirrored-databases-disconnected",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/assertion-partner-servers-using-mirroring.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-mirroring/assertion-partner-servers-using-mirroring",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/run-dll-based-com-object.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/development/run-dll-based-com-object",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/cardinality-estimator-degrades-query-performance.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/cardinality-estimator-degrades-query-performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/nonrecoverable-io-error-backup-url.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/nonrecoverable-io-error-backup-url",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/tde-enabled-database-not-recover.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/tde-enabled-database-not-recover",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/access-violations-memory-dump-files.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/access-violations-memory-dump-files",
+      "redirect_document_id": true
+    },   
+    {
+      "source_path": "support/sql/admin/asr-agent-vss-backup-fails.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/asr-agent-vss-backup-fails",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/sql/admin/revocery-jobs-fail-servers.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/revocery-jobs-fail-servers",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/sql/admin/backup-database-using-vss-backup-application.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/backup-database-using-vss-backup-application",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/sql/admin/backup-operation-backup-history-table.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/backup-operation-backup-history-table",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/behavior-compressed-backups.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/behavior-compressed-backups",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-3156-restore-database.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/error-3156-restore-database",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-after-perform-tde-certificate-key-rotation.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/error-after-perform-tde-certificate-key-rotation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-backing-up-memory-database.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/error-backing-up-memory-database",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-when-you-create-a-snapshot.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/error-when-you-create-a-snapshot",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/restore-recovery-may-fail.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/restore-recovery-may-fail",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/schedule-automate-backup-database.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/schedule-automate-backup-database",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/backup-restore-operations.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/backup-restore-operations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-33111-restore-issues-sql-connector.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/error-33111-restore-issues-sql-connector",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/connect/resolve-connectivity-errors-overview.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/resolve-connectivity-errors-overview",
+      "redirect_document_id": true
+    },   
+    {
+      "source_path": "support/sql/connect/certificate-chain-not-trusted.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/certificate-chain-not-trusted",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/sql/connect/resolve-connectivity-errors-checklist.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/resolve-connectivity-errors-checklist",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/sql/connect/cannot-generate-sspi-context-error.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/cannot-generate-sspi-context-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/connect/tls-exist-connection-closed.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/tls-exist-connection-closed",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/connect/timeout-expired-error.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/timeout-expired-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/connect/cannot-connect-remotely.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/cannot-connect-remotely",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/connect/error-message-when-you-connect.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/error-message-when-you-connect",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/connect/winsock-lsp-network-problem.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/winsock-lsp-network-problem",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/connect/static-or-dynamic-port-config.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/static-or-dynamic-port-config",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/connect/using-kerberosmngr-sqlserver.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/using-kerberosmngr-sqlserver",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/connect/test-oledb-connectivity-use-udl-file.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/test-oledb-connectivity-use-udl-file",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/connect/using-portqrytool-sqlserver.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/using-portqrytool-sqlserver",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/activation-runs-over-limit.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/development/activation-runs-over-limit",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/assembly-name-cannot-migrated-error.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/development/assembly-name-cannot-migrated-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-run-clr-object-create-assembly.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/development/error-run-clr-object-create-assembly",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/cannot-make-remote-connection-clr-trigger.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/development/cannot-make-remote-connection-clr-trigger",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/execution-clr-fails-typeInitializationexception.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/development/execution-clr-fails-typeInitializationexception",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/iterate-through-result-set.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/development/iterate-through-result-set",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/query-typecasts-a-unicode-column.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/development/query-typecasts-a-unicode-column",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/remove-duplicate-rows-sql-server-tab.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/development/remove-duplicate-rows-sql-server-tab",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/rotate-table.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/development/rotate-table",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/timeout-issues-deploy-clr-objects.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/development/timeout-issues-deploy-clr-objects",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/use-extended-sp-oa-stored-procedure.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/development/use-extended-sp-oa-stored-procedure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/error-556-insert-exec-failed.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/general/error-556-insert-exec-failed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/sql-server-azure-sql-database-improvements.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/general/sql-server-azure-sql-database-improvements",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/policy-untested-net-framework-assemblies.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/general/policy-untested-net-framework-assemblies",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/machine-learning/inconsistent-results-mkl-computations-missing-variable.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/machine-learning/inconsistent-results-mkl-computations-missing-variable",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/full-text-search-engine-japanese-language.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/search/full-text-search-engine-japanese-language",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/dashes-ignored-search-full-text-msidxs-queries.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/search/dashes-ignored-search-full-text-msidxs-queries",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-0x80040e97-using-full-text-search.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/search/error-0x80040e97-using-full-text-search",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/full-text-index-do-not-index-attribute-values.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/search/full-text-index-do-not-index-attribute-values",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/full-text-indexes-populate-slowly.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/search/full-text-indexes-populate-slowly",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/improve-performance-full-text-queries.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/search/improve-performance-full-text-queries",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/words-not-returned-by-english-word-breaker.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/search/words-not-returned-by-english-word-breaker",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/block-remote-use-local-accounts.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/block-remote-use-local-accounts",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/create-database-permission-logged.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/create-database-permission-logged",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/always-encrypted-database-connection-fail.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/always-encrypted-database-connection-fail",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/error-disable-guest-user.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/error-disable-guest-user",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/fix-permission-issues-move-msdb.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/fix-permission-issues-move-msdb",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/transfer-logins-passwords-between-instances.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/transfer-logins-passwords-between-instances",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/use-pfx-formatted-certificates.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/use-pfx-formatted-certificates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/sql-2014-fips-140-2-compliant-mode.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/sql-2014-fips-140-2-compliant-mode",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/sql-2016-fips-140-2-compliant-mode.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/sql-2016-fips-140-2-compliant-mode",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/instructions-in-fips-140-2-compliant-mode.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/instructions-in-fips-140-2-compliant-mode",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/database-mail-fails-send-message.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-mail/database-mail-fails-send-message",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/configure-permissions-access-remote-data.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/linked-servers/configure-permissions-access-remote-data",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/crashes-run-oracle-linked-server-query.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/linked-servers/crashes-run-oracle-linked-server-query",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/pass-variable-linked-server-query.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/linked-servers/pass-variable-linked-server-query",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/set-up-troubleshoot-linked-server.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/linked-servers/set-up-troubleshoot-linked-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-message-ole-db-provider.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/linked-servers/error-message-ole-db-provider",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/decreased-performance-linkedserver-views.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/linked-servers/decreased-performance-linkedserver-views",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/io-subsystem-requirements-tempdb.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/io-subsystem-requirements-tempdb",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/latch-timeout-running-dbcc-checkdb.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/latch-timeout-running-dbcc-checkdb",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/logging-data-storage-algorithms.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/logging-data-storage-algorithms",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/space-table-uses-not-released.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/space-table-uses-not-released",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/support-databases-compressed-volumes.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/support-databases-compressed-volumes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/support-network-database-files.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/support-network-database-files",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/support-iscsi-technology-components.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/support-iscsi-technology-components",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/transaction-log-file-not-grow.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/transaction-log-file-not-grow",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/troubleshoot-dbcc-checkdb-errors.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/troubleshoot-dbcc-checkdb-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/virtual-host-driver-lead-data-consistency.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/virtual-host-driver-lead-data-consistency",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/1450-and-665-errors-running-dbcc-checkdb.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/1450-and-665-errors-running-dbcc-checkdb",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/17053-and-926-errors-running-dbcc-check.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/17053-and-926-errors-running-dbcc-check",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/8967-8921-errors-running-dbcc-checkdb.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/8967-8921-errors-running-dbcc-checkdb",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/considerations-autogrow-autoshrink.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/considerations-autogrow-autoshrink",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/database-engine-input-output-requirements.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/database-engine-input-output-requirements",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/defragmenting-database-disk-drives.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/defragmenting-database-disk-drives",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/troubleshoot-os-4kb-disk-sector-size.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/troubleshoot-os-4kb-disk-sector-size",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/failover-clusters/cluster-resource-goes-failed-state.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/failover-clusters/cluster-resource-goes-failed-state",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/failover-clusters/error-install-sql-server-windows-server-cluster.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/failover-clusters/error-install-sql-server-windows-server-cluster",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/failover-clusters/create-databases-change-disk-file-locations.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/failover-clusters/create-databases-change-disk-file-locations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/failover-clusters/install-sql-server-2016-on-a-csv-disk-fails.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/failover-clusters/install-sql-server-2016-on-a-csv-disk-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/failover-clusters/manually-re-create-resource-specific-registry-keys.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/failover-clusters/manually-re-create-resource-specific-registry-keys",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/failover-clusters/support-policy-clustered-configurations.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/failover-clusters/support-policy-clustered-configurations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/failover-clusters/windows-failover-cluster-resource-depend.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/failover-clusters/windows-failover-cluster-resource-depend",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/cannot-update-cluster-setup-program-checks-rule.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/failover-clusters/cannot-update-cluster-setup-program-checks-rule",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/warning-about-network-binding.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/failover-clusters/warning-about-network-binding",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/peer-to-peer-replication-fails.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/peer-to-peer-replication-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/attach-change-data-capture-database.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/attach-change-data-capture-database",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/error-1205-configure-transactional-replication.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/error-1205-configure-transactional-replication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/cdc-capture-job-fails-processing-changes-table.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/cdc-capture-job-fails-processing-changes-table",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/error-replication-log-reader-agent-fails.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/error-replication-log-reader-agent-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/troubleshoot-error-20598.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/troubleshoot-error-20598",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/error-replication-monitor.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/error-replication-monitor",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/apply-hotfix-sql-replication-topology.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/apply-hotfix-sql-replication-topology",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/ascii-function-returns-different-results-publisher-subscriber.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/ascii-function-returns-different-results-publisher-subscriber",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/rowguidcol-not-supported-merge-replication.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/rowguidcol-not-supported-merge-replication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/sql-transaction-log-grows.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/sql-transaction-log-grows",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/duplicate-keys-sys-syscommittab-table.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/duplicate-keys-sys-syscommittab-table",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/error-run-distribution-agent.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/error-run-distribution-agent",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/enumerate-subscription-properties.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/enumerate-subscription-properties",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/install-service-packs-hotfixes.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/install-service-packs-hotfixes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/problem-use-custom-business-logic-handler.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/problem-use-custom-business-logic-handler",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/manually-remove-replication.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/manually-remove-replication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/merge-replication-cannot-support-centralized-subscriber-topologies.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/merge-replication-cannot-support-centralized-subscriber-topologies",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/non-convergence-when-processes-child-generations.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/non-convergence-when-processes-child-generations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/error-use-change-data-capture-service.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/error-use-change-data-capture-service",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/oracle-publication-triggers-sends-data.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/oracle-publication-triggers-sends-data",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/performance-statistics-log-reader-distribution-agents.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/performance-statistics-log-reader-distribution-agents",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/subscriptions-do-not-show-up-windows-sync-manager.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/subscriptions-do-not-show-up-windows-sync-manager",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/sql-replication-agents-not-run.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/sql-replication-agents-not-run",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/script-failed-error-merge-publication-snapshot.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/script-failed-error-merge-publication-snapshot",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/skiperrors-parameter-distribution-agent.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/skiperrors-parameter-distribution-agent",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/snapshot-logreader-agents-fail-destination-table-empty.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/snapshot-logreader-agents-fail-destination-table-empty",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/sql-merge-replication-synchronization-fails.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/sql-merge-replication-synchronization-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/subscription-does-not-exist-error.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/subscription-does-not-exist-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/understand-merge-replication-article-process.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/understand-merge-replication-article-process",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/update-statements-replicated-as-delete-insert.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/update-statements-replicated-as-delete-insert",
+      "redirect_document_id": true
+    },
+
+    {
+      "source_path": "support/sql/install/understanding-dotnet-framework-requirements.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/understanding-dotnet-framework-requirements",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/error-set-up-update-instances.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/error-set-up-update-instances",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/sql-server-not-supported-in-windows-os-where-case-sensitivity-enabled.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sql-server-not-supported-in-windows-os-where-case-sensitivity-enabled",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/description-update-cache-folder.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/description-update-cache-folder",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/error-install-sql-server-2008-r2.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/error-install-sql-server-2008-r2",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/error-code-1642-update-applied.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/error-code-1642-update-applied",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/error-change-path-shared-component-directory.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/error-change-path-shared-component-directory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/evaluation-period-has-expired.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/evaluation-period-has-expired",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/fusion-atl-rule-check-fails.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/fusion-atl-rule-check-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/cu-apply-installation.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/cu-apply-installation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/installation-fails-if-remove-user-right.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/installation-fails-if-remove-user-right",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/error-install-sql-server-2005-sp4.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/error-install-sql-server-2005-sp4",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/naming-schema-and-fix-area.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/naming-schema-and-fix-area",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/new-mu-servicing-model.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/new-mu-servicing-model",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/permission-error-use-volume-mount-point.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/permission-error-use-volume-mount-point",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/remove-partial-installation.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/remove-partial-installation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/restore-missing-windows-installer-cache-files.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/restore-missing-windows-installer-cache-files",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/service-not-start-after-patch-installed.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/service-not-start-after-patch-installed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/setup-stops-responding-upgrade.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/setup-stops-responding-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/issues-install-sql-server.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/issues-install-sql-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/sql-server-2008-setup-issues.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sql-server-2008-setup-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/sqlserver-patching-issues.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sqlserver-patching-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/install-reporting-service.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/install-reporting-service",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/update-or-slipstream-installation.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/update-or-slipstream-installation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/sql-server-2012-setup-issues.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sql-server-2012-setup-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/error-upgrade-cluster-node.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/error-upgrade-cluster-node",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/cannot-install-sql-when-only-rodc-available.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/cannot-install-sql-when-only-rodc-available",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/agent-job-fail-error-65535-782-7437.md",
+      "redirect_url": "/troubleshoot/sql/ssms/agent/agent-job-fail-error-65535-782-7437",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/34052-error-pbm-generates-alerts.md",
+      "redirect_url": "/troubleshoot/sql/ssms/agent/34052-error-pbm-generates-alerts",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/sql/replication/configure-troubleshoot-subscriptionstreamsof-distribution-agent.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/configure-troubleshoot-subscriptionstreamsof-distribution-agent",
+      "redirect_document_id": true
     }
-  ]
+
+]
 }

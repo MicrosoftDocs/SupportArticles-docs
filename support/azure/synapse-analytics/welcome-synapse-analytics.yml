@@ -24,3 +24,9 @@ landingContent:
         links:
           - text: Troubleshoot a slow query on a dedicated SQL pool
             url: ./dedicated-sql/troubleshoot-dsql-perf-slow-query.md
+          - text: Assess and correct clustered columnstore index health on a dedicated SQL pool
+            url: ./dedicated-sql/dsql-perf-cci-health.md
+          - text: Check statistics accuracy on a dedicated SQL pool
+            url: ./dedicated-sql/dsql-perf-stats-accuracy.md
+          - text: Troubleshoot tempdb errors on a dedicated SQL pool
+            url: ./dedicated-sql/dsql-perf-tempdb-errors.md
