@@ -39,9 +39,32 @@ This issue occurs because the update that can't be installed requires the manife
 
 ## Resolution
 
-To fix the issue, follow these steps:
+To fix the issue, follow one of the methods from below:
+
+### Method 1: Repair the component store with Dism commands
+
+To repair component store using the Dism RestoreHealth command, follow these steps: 
+1. From an elevated command prompt and run these commands:
+```
+DISM /ONLINE /CLEANUP-IMAGE /SCANHEALTH
+```
+```
+DISM /ONLINE /CLEANUP-IMAGE /CHECKHEALTH
+```
+```
+DISM /ONLINE /CLEANUP-IMAGE /RESTOREHEALTH
+```
+```
+Sfc /Scannow
+```
+2. Restart the device.
+
+### Method 2: Manually repair with the payload from the partially installed component:
 
 1. Go to [Microsoft Update Catalog](https://catalog.update.microsoft.com/).
 2. In the **Search** box, enter the package ID of the \<Missing_Package>.
-3. Download the package and then install it.
-4. Reinstall the \<Failed_Package>.
+3. Find the update that applies to your operating system appropriately in the search results, and then select the Download button.
+4. Microsoft Update Catalog select the Download button.
+5. Select the link of the file to download the update.
+6. Select Close after the download process is done. Then, you can find a folder that contains the update package in the location that you specified.
+7. Open the folder, and then double-select the update package to install the update.
