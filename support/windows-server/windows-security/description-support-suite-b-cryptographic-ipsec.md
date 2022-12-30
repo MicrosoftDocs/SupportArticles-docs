@@ -1,7 +1,7 @@
 ---
 title: Description of the support for Suite B cryptographic algorithms that was added to IPsec
 description: Describes the support for Suite B cryptographic algorithms that was added to IPsec. Also describes the IPsec policy configuration syntax that uses Suite B algorithms.
-ms.date: 09/21/2020
+ms.date: 12/30/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -534,6 +534,6 @@ The combinations that are described in the following table are not supported.
 |AH+ESP|AES-GMAC 192|AES-GMAC 192|Any supported encryption algorithm|
 |AH+ESP|AES-GMAC 256|AES-GMAC 256|Any supported encryption algorithm|
 
-For more information about Suite B, visit the following Web site: [Commercial National Security Algorithm Suite](https://apps.nsa.gov/iaarchive/programs/iad-initiatives/cnsa-suite.cfm)
+For more information about Suite B, visit the following Web site: [Commercial National Security Algorithm Suite](https://media.defense.gov/2021/Sep/27/2002862527/-1/-1/0/CNSS%20WORKSHEET.PDF)
 
 For more information about IPsec and connection security rules, visit the following Microsoft Web site: [https://go.microsoft.com/fwlink/?linkid=96525](https://go.microsoft.com/fwlink/?linkid=96525)
