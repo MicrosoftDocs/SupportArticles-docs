@@ -13,7 +13,7 @@ ms.author: luche
 appliesto: 
   - Microsoft Teams
   - Skype for Business Online
-ms.date: 3/31/2022
+ms.date: 12/30/2022
 adobe-target: true
 ---
 
@@ -47,8 +47,15 @@ Locate your browser among the following sections, and follow the provided steps.
 
 To change the settings by using  a GPO, follow these steps:
 
-1. [Download and install the Microsoft Edge administrative template](/deployedge/configure-microsoft-edge#1-download-and-install-the-microsoft-edge-administrative-template).
-2. Add the sites that are listed in step 2 under "Microsoft Edge" to **Content settings** > **CookiesAllowedForUrls** by having either a mandatory or recommended policy. For more information, see [Set mandatory or recommended policies](/deployedge/configure-microsoft-edge#2-set-mandatory-or-recommended-policies) and [CookiesAllowedForUrls setting](/deployedge/microsoft-edge-policies#cookiesallowedforurls).
+1. Go to the [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise) to download the Microsoft Edge policy templates file and extract the contents.
+2. Add the sites that are listed here in [step 2 under "Microsoft Edge"](/deployedge/configure-microsoft-edge#2-set-mandatory-or-recommended-policies) to **Content settings** > **CookiesAllowedForUrls** by having either a mandatory or recommended policy. 
+ 
+For more information on configuring Microsoft Edge group policy settings, visit following articles:
+
+- [Configure Microsoft Edge policy settings on Windows devices](/deployedge/configure-microsoft-edge)
+- [Add the administrative template to Active Directory](/deployedge/configure-microsoft-edge#add-the-administrative-template-to-active-directory)
+- [Set mandatory or recommended policies](/deployedge/configure-microsoft-edge#2-set-mandatory-or-recommended-policies) 
+- [CookiesAllowedForUrls setting](/deployedge/microsoft-edge-policies#cookiesallowedforurls)
 
 ## Google Chrome
 
@@ -65,8 +72,25 @@ To change the settings by using  a GPO, follow these steps:
 
 To change the settings by using GPO:
 
-1. [Download and install the Chrome administrative template](https://support.google.com/chrome/a/answer/187202/set-chrome-browser-policies-on-managed-pcs).
-2. Add the sites that are listed in step 2 under "Microsoft Edge" to the **Content settings** > **CookiesAllowedForUrls** setting.
+There are two types of policy templates: an ADM and an ADMX template. Verify which type you can use on your network. The templates show which registry keys you can set to configure Chrome, and what the acceptable values are. Chrome looks at the values set in these registry keys to determine how to act.
+
+1. Download [Chrome administrative template](https://enterprise.google.com/chrome/chrome-browser/#download)
+2. Open Group Policy editor by navigating to **Start > Run: gpedit.msc**
+3. Navigate to **Local Computer Policy > Computer Configuration > Administrative Templates**.
+4. Right-click **Administrative Templates**, and select **Add/Remove Templates**.
+5. Add the **chrome.adm** template via the dialog.
+6. Once complete, a Google / Google Chrome folder will appear under Administrative Templates if it's not already there. If you added the ADM template on Windows 7 or 10, it will appear under Classic Administrative Templates / Google / Google Chrome.
+7. Configure policies by opening the template that just added and change the configuration settings. The most commonly-modified policies are:
+    - **Set the home page** - The URL that Chrome opens when a user launches the browser or clicks the Home button.
+    - **Send anonymous usage statistics and crash information** - To turn off sending any crash information or anonymous statistics to Google, change this setting to be False.
+    - **Turn off auto-updates** - Although not normally recommended, you can turn off auto-updates.
+    Apply the policies to the target machines. Depending on your network's configuration, this may require time for the policy to propagate, or you may need to propagate those policies manually via administrator tools.
+
+8. Add the sites that are listed in step 2 under "Microsoft Edge" to the **Content settings** > **CookiesAllowedForUrls** setting.
+
+For more information on [Set Chrome Browser policies on managed PCs](https://support.google.com/chrome/a/answer/187202/set-chrome-browser-policies-on-managed-pcs).
+
+You can also download the templates separately and view common policy documentation for all operating systems here: [Zip file of Google Chrome templates and documentation](https://dl.google.com/dl/edgedl/chrome/policy/policy_templates.zip)
 
 ## Mozilla Firefox
 
@@ -85,8 +109,10 @@ To change the settings by using GPO:
 
 To change the settings by using a GPO:
 
-1. Download and install [the Firefox administrative template](https://support.mozilla.org/kb/customizing-firefox-using-group-policy-windows).
+1. Download and install [the Firefox administrative template](https://github.com/mozilla/policy-templates/releases).
 2. Add the sites that are listed under "Microsoft Edge" to **Cookies** > **Allowed Sites**.
+
+For more information on [Customizing Firefox Using Group Policy](https://support.mozilla.org/kb/customizing-firefox-using-group-policy-windows).
 
 ## Safari
 
@@ -96,7 +122,7 @@ Teams support for Safari is currently in preview. Update the following setting, 
 2. Clear the **Prevent cross-site tracking** checkbox.
 3. Close Safari, reopen the browser, and then navigate to teams.microsoft.com.
 
-For more information, see [Teams preview won't open in Safari](https://support.microsoft.com/office/1aac0a7c-35a8-42c1-a7df-f674afe234df).
+For more information, see [Limits and specifications for Teams](/microsoftteams/limits-specifications-teams#browsers).
 
 ## Internet Explorer
 
