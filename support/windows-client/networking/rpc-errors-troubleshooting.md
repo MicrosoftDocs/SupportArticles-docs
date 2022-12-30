@@ -1,7 +1,7 @@
 ---
 title: RPC error troubleshooting guidance
 description: Learn how to troubleshoot Remote Procedure Call (RPC) errors that occur during computer-to-computer communication. Such communication can involve Windows Management Instrumentation (WMI), SQL Server, Active Directory operations, or remote connections.
-ms.date: 11/23/2022
+ms.date: 12/30/2022
 ms.prod: windows-client
 ms.topic: troubleshooting
 author: v-tappelgate
@@ -214,7 +214,7 @@ Before you contact Microsoft support, we recommend that you gather information a
 
 ### Prerequisites
 
-These procedures use the [TroubleShootingScript Version 2 (TSSv2)](/windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2) toolset. To use this toolset, you should be aware of the following prerequisites:
+These procedures use the [TroubleShootingScript Version 2 (TSSv2)](../windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md) toolset. To use this toolset, you should be aware of the following prerequisites:
 
 - You must have Administrator-level permission on the local computer.
 - The first time that you run the toolset, you have to accept a EULA.
