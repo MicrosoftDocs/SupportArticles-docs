@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 826433
 
 ## Symptoms
 
-If operating system, driver, or hardware problems cause lost write or stale read conditions, you may see data integrity-related error messages such as errors 605, 823, 3448, and 3456. You may receive error messages that are similar to the following examples:
+If operating system, driver, or hardware problems cause lost write or stale read conditions in the I/O path, you may see data integrity-related error messages such as errors 605, 823, 3448, and 3456 in SQL Server. You may receive error messages that are similar to the following examples:
 
 ```output
 2003-07-24 16:43:04.57 spid63 Getpage: bstat=0x9, sstat=0x800, cache
@@ -42,7 +42,7 @@ If operating system, driver, or hardware problems cause lost write or stale read
 
 ## More information
 
-SQL Server introduced additional I/O diagnostic capabilities starting with SQL Server 2000 Service Pack 4 and these diagnostics have been part of the product. These capabilities are designed to help detect I/O related external problems and to troubleshoot the error messages described in the [Symptoms](#symptoms) section.
+SQL Server introduced new I/O diagnostic capabilities starting with SQL Server 2000 Service Pack 4 and these diagnostics have been part of the product since then. These capabilities are designed to help detect external I/O related problems and to troubleshoot the error messages described in the [Symptoms](#symptoms) section.
 
 If you receive any of the error messages that are listed in the [Symptoms](#symptoms) section and they aren't explained by an event like a physical drive failure, then review any known problems with SQL Server, the operating system, the drivers, and the hardware. The diagnostics try to provide information about the following two conditions:
 
@@ -50,19 +50,21 @@ If you receive any of the error messages that are listed in the [Symptoms](#symp
 
 - *Stale Read*: A successful call to the ReadFile API, but the operating system, a driver, or the caching controller incorrectly returns an older version of the data.
 
-For example, Microsoft has confirmed scenarios where a WriteFile API call returns as successful, but an immediate, successful read of the same data block returns older data, including data that is likely stored in a hardware read cache. Sometimes, this problem occurs because of a read cache problem. In other cases, the write data is never written to the physical disk.
+To illustrate, Microsoft has confirmed scenarios where a WriteFile API call returns a status of success, but an immediate, successful read of the same data block returns older data, including data that is likely stored in a hardware read cache. Sometimes, this problem occurs because of a read cache problem. In other cases, the write data is never written to the physical disk.
 
 ### How to enable the diagnostics
 
-In SQL Server 2017 and later versions, this diagnostic capability is enabled by default. In SQL Server 2016 and earlier versions these diagnostics can only be enabled by using trace flag 818. You can specify trace flag [818](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql?view=sql-server-ver16&preserve-view=true) as a startup parameter, -T818, for the computer that's running SQL Server, or you can run the following statement:
+In SQL Server 2017 and later versions, this diagnostic capability is enabled by default. In SQL Server 2016 and earlier versions these diagnostics can only be enabled by using trace flag 818. You can specify trace flag [818](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql?view=sql-server-ver16&preserve-view=true) as a startup parameter, -T818, for the SQL Server instance, or you can run the following T-SQL statement to enable them at runtime:
+
 
 ```sql
 DBCC TRACEON(818, -1)
 ```
 
-Trace flag 818 enables an in-memory ring buffer that is used for tracking the last 2,048 successful write operations that are performed by the computer running SQL Server, not including sort and workfile I/Os. When errors such as 605, 823, or 3448 occur, the incoming buffer's log sequence number (LSN) value is compared to the recent write list. If the LSN that's retrieved during the read operation is older than the one specified during the write operation, a new error message is logged in the SQL Server error log. Most SQL Server write operations occur as checkpoints or as lazy writes. A lazy write is a background task that uses asynchronous I/O. The implementation of the ring buffer is lightweight, thereby making the performance affect on the system negligible.
+Trace flag 818 enables an in-memory ring buffer that is used for tracking the last 2,048 successful write operations that are performed by the computer running SQL Server, not including sort and workfile I/Os. When errors such as 605, 823, or 3448 occur, the incoming buffer's log sequence number (LSN) value is compared to the recent write list. If the LSN that's retrieved during the read operation is older than the one used in the write operation, a new error message is logged in the SQL Server error log. Most SQL Server write operations occur as checkpoints or as lazy writes (a lazy write is a background task that uses asynchronous I/O). The implementation of the ring buffer is lightweight and the performance effect on the system is negligible.
 
-The following message indicates that SQL Server didn't receive an error from the WriteFile API call or the ReadFile API call. However, when the LSN was reviewed, the value wasn't correct:
+### Details about the message in the error log
+The following message does not show any explicit errors from the WriteFile API or the ReadFile API calls that SQL Server. Instead, it shows a logical I/O error that resulted when the LSN was reviewed, and its expected value wasn't correct:
 
 Starting with SQL Server 2005, the error message displayed is:
 
@@ -70,8 +72,9 @@ Starting with SQL Server 2005, the error message displayed is:
 For more information on error 824, see [MSSQLSERVER_824](/sql/relational-databases/errors-events/mssqlserver-824-database-engine-error).
 At this point, either the read cache contains an older version of the page, or the data wasn't correctly written to the physical disk. In either case (a lost write or a stale read), SQL Server reports an external problem with the operating system, the driver, or the hardware layers.
 
-If error 3448 occurs when you try to rollback a transaction that has error 605 or 823, the computer running SQL Server automatically closes the database and tries to open and recover the database. The first page that experiences error 605 or 823 is considered a bad page, and the page ID is kept by the computer running SQL Server. During recovery (before the redo phase) when the bad page ID is read, the primary details about the page header are logged in the SQL Server error log. This action is important because it helps to distinguish between Lost Write and Stale Read scenarios.
+If error 3448 occurs when you try to rollback a transaction that has error 605 or 823, the SQL Server instance automatically closes the database and tries to open and recover it. The first page that experiences error 605 or 823 is considered a bad page, and the page ID is kept by the computer running SQL Server. During recovery (before the redo phase) when the bad page ID is read, the primary details about the page header are logged in the SQL Server error log. This action is important because it helps to distinguish between Lost Write and Stale Read scenarios.
 
+### Behavior observed with stale reads and lost writes
 You may see the following two common behaviors in stale read scenarios:
 
 - If the database files are closed and then opened, the correct and most recently written data is returned during recovery.
@@ -82,6 +85,7 @@ The behaviors mentioned in the preceding paragraph indicate a read caching probl
 
 Sometimes, the problem may not be specific to a hardware cache. It may be a problem with a filter driver. In such cases, review your software, including backup utilities and antivirus software, and then see if there are problems with the filter driver.
 
+### Description of various stale reads and lost writes scenarios
 Microsoft has also noted conditions that don't meet the criteria for error 605 or 823 but are caused by the same stale read or lost write activity. In some instances, a page appears to be updated twice but with the same LSN value. This behavior may occur if the Object ID and the Page ID are correct (page already allocated to the object), and a change is made to the page and flushed to the disk. The next page retrieval returns an older image, and then a second change is made. The SQL Server transaction log shows that the page was updated twice with the same LSN value. This action becomes a problem when you try to restore a transaction log sequence or with data consistency problems, such as foreign key failures or missing data entries. The following error message illustrates one example of this condition:
 
 > Error: 3456, Severity: 21, State: 1 Could not redo log record (276666:1664:19), for transaction ID (0:825853240), on page (1:1787100), database 'authors' (7). Page: LSN = (276658:4501:9), type = 1. Log: OpCode = 4, context 2, PrevPageLSN: (275565:3959:31)..
@@ -90,27 +94,27 @@ Some scenarios are outlined in more detail in the following lists:
 
 ```output
 LSN SequenceAction
-1Checkpoint
-2Begin Transaction
-3Table created or truncated
-4Inserts (Pages allocated)
-5Newly allocated page written to disk by Lazy Writer
-6Select from table - Scans IAM chain, newly allocated page read back from disk (LRU | HASHED = 0x9 in getpage message), encounters Error 605 - Invalid Object ID
-7Rollback of transaction initiated
+1   Checkpoint
+2   Begin Transaction
+3   Table created or truncated
+4   Inserts (Pages allocated)
+5   Newly allocated page written to disk by Lazy Writer
+6   Select from table - Scans IAM chain, newly allocated page read back from disk (LRU | HASHED = 0x9 in getpage message), encounters Error 605 - Invalid Object ID
+7   Rollback of transaction initiated
 ```
 
 ```output
 LSN SequenceAction
-1Checkpoint
-2Begin Transaction
-3Page Modification
-4Page written to disk by Lazy Writer
-5Page read in for another modification (stale image returned)
-6Page Modified for a second time but because of stale image does not see first modification 
-7Rollback - Fails - Transaction Log shows two different log records with the same PREV LSN for the page
+1   Checkpoint
+2   Begin Transaction
+3   Page Modification
+4   Page written to disk by Lazy Writer
+5   Page read in for another modification (stale image returned)
+6   Page Modified for a second time but because of stale image does not see first modification 
+7   Rollback - Fails - Transaction Log shows two different log records with the same PREV LSN for the page
 ```
 
-SQL Server `sort` operators perform I/O activities, primarily to and from the `tempdb` database. These I/O operations are similar to the buffer I/O operations; however, they've already been designed to use read retry logic to try to resolve similar issues. The additional diagnostics explained in this article don't apply to these I/O operations.
+SQL Server `sort` operators perform I/O activities, commonly in the `tempdb` database. These I/O operations are similar to the buffer I/O operations; however, they've already been designed to use read retry logic to try to resolve similar issues. The additional diagnostics explained in this article don't apply to these I/O operations.
 
 Microsoft has noted that the root cause for the following sort read failures is generally a stale read or a lost write:
 
