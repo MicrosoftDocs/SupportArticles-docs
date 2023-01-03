@@ -2,8 +2,8 @@
 title: Common issues when you run or scale large AKS clusters FAQ
 description: Review common issues when you run or scale large AKS clusters. The article includes troubleshooting tips for resolving these issues.
 ms.date: 10/21/2022
-author: kelleyguiney22
-ms.author: v-kegui
+author: DennisLee-DennisLee
+ms.author: v-dele
 ms.reviewer: paahluwalia
 editor: v-jsitser
 ms.service: azure-kubernetes-service

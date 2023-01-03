@@ -3,7 +3,7 @@ title: Error code occurs when running an attended or unattended desktop flow
 description: Provides mitigation steps for the error codes that occur when running attended or unattended desktop flows.
 ms.reviewer: cefriant
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 12/15/2022
 ms.subservice: power-automate-flows
 ---
 # Error code occurs when running an attended or unattended desktop flow
@@ -44,3 +44,4 @@ _Original KB number:_ &nbsp; 4555406
 |NoCandidateMachine|400|Attended</br>Unattended|The run has exceeded the queue waiting time limit.</br>Consider allocating more machines or spreading desktop flow runs to optimize wait time in the queue.|
 |DesktopFlowsActionThrottled|429|Attended</br>Unattended|The desktop flow action failed because of throttling. This error code appears when too many desktop flows use the same connection.</br>Check your connection usage and assign your desktop flows to multiple connections.|
 |DesktopFlowsActionTimeout|400|Attended</br>Unattended|The execution of the desktop flow action exceeded maximum duration.</br>Increase the time-out value that's set on the action or split the desktop flow into several shorter desktop flows.|
+|OnPremiseDataGatewayNotAvailable|502|Attended</br>Unattended|This error code only occurs when using an on-premises data gateway (deprecated) to connect to the machine. Check that the targeted machine and the data gateway on that machine are up and running.|

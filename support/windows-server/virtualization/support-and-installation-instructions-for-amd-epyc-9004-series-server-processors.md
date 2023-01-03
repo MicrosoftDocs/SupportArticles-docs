@@ -45,12 +45,12 @@ To use earlier OS media releases prior to aforementioned releases, use one of th
   4. Set the CCD setting to back to the original value in BIOS
 
   > [!NOTE]
-  > Availability of this BIOS setting depends on your system.  Consult BIOS documentation provided by OEM for your system.
+  > Availability of this BIOS setting depends on your system. Consult BIOS documentation provided by OEM for your system.
 
 * Option 2: Update OS Installation Media Images
 
   1. Download Windows Server Latest Cumulative Update packages and prerequisite packages. For details, see [Microsoft Windows Server 2019 Update Site](https://support.microsoft.com/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059) and [Microsoft Windows Server 2022 Update Site](https://support.microsoft.com/topic/windows-server-2022-update-history-e1caa597-00c5-4ab9-9f3e-8212fe80b2ee).
-  2. Add prerequisite packages followed by the Latest Cumulative Update package to the boot.wim and install.wim image files in the OS installation media.  For details, see [Add Packages Offline using DISM](/windows-hardware/manufacture/desktop/add-or-remove-packages-offline-using-dism).
+  2. Add prerequisite packages followed by the Latest Cumulative Update package to the boot.wim and install.wim image files in the OS installation media. For details, see [Add Packages Offline using DISM](/windows-hardware/manufacture/desktop/add-or-remove-packages-offline-using-dism).
 
 ## Known Issues and Limitations
 
@@ -59,3 +59,5 @@ In systems running Windows Server 2019 with the Hyper-V virtualization feature e
 * Task Manager in the root partition does not show CPU utilization accounting for virtual machines’ workloads.
 * The operating system does not use Collaborative Processor Performance Control (CPPC) for processor power management despite CPPC being set to enable in BIOS.
 * The root partition may not utilize all maximum 320 logical processors available when running Minroot configuration.
+
+For more information, see [Windows Server 2019 Hyper-V host behavior running in the Minroot configuration](windows-server-hyper-v-host-minroot-behaviors.md).

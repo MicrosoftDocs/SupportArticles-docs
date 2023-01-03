@@ -103,8 +103,14 @@
     href: error-accountencryptionkeyunavailable.md
   - name: Batch node creation delays when restarting or reimaging
     href: batch-node-creation-delay-restart-reimage.md
+  - name: Batch pool creation failure
+    href: azure-batch-pool-creation-failure.md
   - name: Batch pool deletion failure
     href: azure-batch-pool-deletion-failure.md
+  - name: Batch pool resizing failure
+    href: azure-batch-pool-resizing-failure.md
+  - name: Use managed identities in a Batch account or a Batch pool
+    href: use-managed-identities-azure-batch-account-pool.md
 
 - name: CycleCloud
   items:
@@ -131,6 +137,8 @@
     href: hpc-management-reporting-database-connection-issue.md
   - name: HPC reporting database permission problem
     href: hpc-management-reporting-database-permission-problem.md
+  - name: Error "No virtual network found" when you enter the application ID
+    href: error-no-virtual-network-found.md
 
 - name: General
   items:

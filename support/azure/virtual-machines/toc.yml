@@ -102,6 +102,8 @@
         href: linux-vm-not-start-kernel-lis.md
       - name: Troubleshoot Linux VM UEFI boot failures
         href: azure-linux-vm-uefi-boot-failures.md
+      - name: Linux VM fails to boot due to full OS disk
+        href: linux-fulldisk-boot-error.md
     - name: Windows
       href: boot-error-troubleshoot.md
       items:
@@ -401,6 +403,8 @@
     href: /azure/virtual-machines/faq-for-disks?context=/troubleshoot/azure/virtual-machines/context/context
   - name: Cannot extend an encrypted OS volume in Windows
     href: cannot-extend-encrypted-os-volume.md
+  - name: Cannot extend volume on a SQL standalone server virtual machine
+    href: cannot-extend-volume-sql-server.md
   - name: Errors when deleting storage resources
     href: storage-resource-deletion-errors.md
   - name: Errors when deleting classic storage resources

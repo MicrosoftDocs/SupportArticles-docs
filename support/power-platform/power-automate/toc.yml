@@ -65,6 +65,8 @@
           href: flow-runtime-errors-recommendations.md
         - name: How to use Flow to copy items between two data sources
           href: how-to-copy-items-between-two-sharepoint-lists-via-flow.md
+        - name: How to use Power Automate's JavaScript Software Developer Kit
+          href: flow-embed-sdk.md
         - name: Issues triggering emails with attachments from shared mailbox
           href: issues-triggering-emails-with-attachments-from-shared-mailbox.md
         - name: Issues with flow approval emails in Outlook Desktop and Web
@@ -73,8 +75,6 @@
           href: key-and-mouse-click-combo-not-working.md
         - name: Known issues when using Power Apps V2 trigger
           href: known-issues-power-apps-v2-trigger.md
-        - name: Known limitations of Selenium IDE
-          href: known-limitations-selenium-ide.md
         - name: Manage orphan flows when the owner leaves the organization
           href: manage-orphan-flow-when-owner-leaves-org.md
         - name: Microsoft Flow Extension Package shows Installation failed
@@ -161,6 +161,8 @@
           href: how-to-get-power-automate-desktop-installer-logs.md
         - name: '"Invalid Private key file" error in Open secure FTP connection action'
           href: invalid-private-key-file-error.md
+        - name: Known limitations of Selenium IDE
+          href: known-limitations-selenium-ide.md
         - name: Module or action wasn't found error
           href: module-action-wasnt-found-error.md
         - name: Power Automate for desktop console doesn't show any flows

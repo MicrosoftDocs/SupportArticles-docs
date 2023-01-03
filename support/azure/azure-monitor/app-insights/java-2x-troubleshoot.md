@@ -3,8 +3,8 @@ title: Troubleshoot Application Insights in a Java web project
 description: Learn how to troubleshooting issues that occur when you monitor live Java apps with Application Insights.
 ms.topic: conceptual
 ms.date: 6/22/2022
-author: kelleyguiney22
-ms.author: v-kegui
+author: DennisLee-DennisLee
+ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: aaronmax
 ms.service: azure-monitor

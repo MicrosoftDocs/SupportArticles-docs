@@ -103,7 +103,7 @@ For distribution-specific documentation on SysRq and steps to configure Linux to
 
 #### CoreOS ####
 
-- [Collecting crash logs](https://coreos.com/os/docs/latest/collecting-crash-logs.html)
+- [Collecting crash logs](https://github.com/coreos/docs/blob/master/os/collecting-crash-logs.md)
 
 ## Non-Maskable Interrupt (NMI)
 
@@ -140,7 +140,7 @@ For more information on Linux kernel configurations, including `unknown_nmi_pani
 
 ### CoreOS
 
-- [Collecting crash logs](https://coreos.com/os/docs/latest/collecting-crash-logs.html)
+- [Collecting crash logs](https://github.com/coreos/docs/blob/master/os/collecting-crash-logs.md)
 
 ## Next steps
 
