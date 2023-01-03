@@ -19,20 +19,21 @@ adobe-target: true
 
 # Teams web client is stuck in a login loop
 
-When you try to sign in to Microsoft Teams in Microsoft Edge, Google Chrome, Mozilla Firefox, Safari, or Internet Explorer, the site continually loops, and you're not able to sign in.
+When you try to sign in to Microsoft Teams in Microsoft Edge, Google Chrome, Mozilla Firefox, Safari, or Internet Explorer, the Teams site continually loops, and you can't sign in.
 
 This issue occurs if you use the **Trusted Sites** feature in your browser and you don't add the URLs for Microsoft Teams to the list of sites that your browser should trust. In this situation, the Teams web client can't sign in.
 
-To resolve this issue, update the settings for your browser. You must have administrative rights to make the updates. If you're the administrator for your organization, you can use a Group Policy Object (GPO) to make the updates.
+To resolve this issue, update the settings for your browser. To do this, follow the steps in the appropriate section for your browser.
 
-Locate your browser among the following sections, and follow the provided steps.
+> [!NOTE]  
+> You must have administrative rights to make the updates. If you're the administrator for your organization, you can use a Group Policy Object (GPO) to make the updates.
 
 ## Microsoft Edge
 
 1. In the Edge **Settings** window, select **Cookies and site permissions** > **Cookies and data stored** > **Manage and delete cookies and site data**.
 2. Turn on **Allow sites to save and read cookie data (recommended)**, and make sure that **Block third-party cookies** is turned off.
 
-   Or, iIf you have to keep third-party cookies blocked, do this instead in the same window:
+   Alternatively, if you have to keep third-party cookies blocked, do this instead in the same window:
 
    Under **Allow**, select **Add** to add the following sites:
 
@@ -43,14 +44,14 @@ Locate your browser among the following sections, and follow the provided steps.
     - [*.]sfbassets.com
     - [*.]skypeforbusiness.com
 
-    :::image type="content" source="media/sign-in-loop/edge-cookies-site-permissions.png" alt-text="Screenshot of settings window in edge, showing options under the Cookies and site permissions item and sites added.":::
+    :::image type="content" source="media/sign-in-loop/edge-cookies-site-permissions.png" alt-text="Screenshot of the settings window in edge showing options added under cookies and site permissions.":::
 
-To change the settings by using  a GPO, follow these steps:
+To change the settings by using a GPO:
 
 1. Go to the [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise) to download the Microsoft Edge policy templates file and extract the contents.
-2. Add the sites that are listed here in [step 2 under "Microsoft Edge"](/deployedge/configure-microsoft-edge#2-set-mandatory-or-recommended-policies) to **Content settings** > **CookiesAllowedForUrls** by having either a mandatory or recommended policy. 
+2. Add the sites that are listed in [step 2](/deployedge/configure-microsoft-edge#2-set-mandatory-or-recommended-policies) to **Content settings** > **CookiesAllowedForUrls** by having either a mandatory or recommended policy. 
  
-For more information on configuring Microsoft Edge group policy settings, visit following articles:
+For more information about how to configure Microsoft Edge Group Policy settings, see the following articles:
 
 - [Configure Microsoft Edge policy settings on Windows devices](/deployedge/configure-microsoft-edge)
 - [Add the administrative template to Active Directory](/deployedge/configure-microsoft-edge#add-the-administrative-template-to-active-directory)
@@ -59,7 +60,7 @@ For more information on configuring Microsoft Edge group policy settings, visit 
 
 ## Google Chrome
 
-1. In the Chrome **Settings** window, on the **Privacy and security** tab, select **Cookies and other site data**.
+1. In the Chrome **Settings** window, open the **Privacy and security** tab, and then select **Cookies and other site data**.
 2. Under **Sites that can always use cookies**, select **Add**, and then select the **Including third-party cookies on this site** checkbox.
 3. Add the following sites:
 
@@ -70,33 +71,32 @@ For more information on configuring Microsoft Edge group policy settings, visit 
     - [*.]sfbassets.com
     - [*.]skypeforbusiness.com
 
-To change the settings by using GPO:
+To change the settings by using a GPO:
 
-There are two types of policy templates: an ADM and an ADMX template. Verify which type you can use on your network. The templates show which registry keys you can set to configure Chrome, and what the acceptable values are. Chrome looks at the values set in these registry keys to determine how to act.
+There are two types of policy templates: an ADM and an ADMX template. Verify which type you can use on your network. The templates show which registry keys you can set to configure Chrome and what the acceptable values are. Chrome accesses the values that are set in these registry keys to determine how to act.
 
-1. Download [Chrome administrative template](https://enterprise.google.com/chrome/chrome-browser/#download)
-2. Open Group Policy editor by navigating to **Start > Run: gpedit.msc**
+1. Download [Chrome administrative template](https://enterprise.google.com/chrome/chrome-browser/#download).
+2. Open Group Policy editor by navigating to **Start > Run: gpedit.msc**.
 3. Navigate to **Local Computer Policy > Computer Configuration > Administrative Templates**.
 4. Right-click **Administrative Templates**, and select **Add/Remove Templates**.
-5. Add the **chrome.adm** template via the dialog.
-6. Once complete, a Google / Google Chrome folder will appear under Administrative Templates if it's not already there. If you added the ADM template on Windows 7 or 10, it will appear under Classic Administrative Templates / Google / Google Chrome.
-7. Configure policies by opening the template that just added and change the configuration settings. The most commonly-modified policies are:
-    - **Set the home page** - The URL that Chrome opens when a user launches the browser or clicks the Home button.
-    - **Send anonymous usage statistics and crash information** - To turn off sending any crash information or anonymous statistics to Google, change this setting to be False.
-    - **Turn off auto-updates** - Although not normally recommended, you can turn off auto-updates.
-    Apply the policies to the target machines. Depending on your network's configuration, this may require time for the policy to propagate, or you may need to propagate those policies manually via administrator tools.
+5. Add the **chrome.adm** template through the dialog box. A *Google* > *Google Chrome* folder appears under *Administrative Templates* if it's not there already. If you add the ADM template on Windows 10 or 7, the folder appears under *Classic Administrative Templates*/*Google*/*Google Chrome*.
+7. Configure policies by opening the template that you just added, and then change the configuration settings. The most commonly modified policies are:
+    - **Set the home page**: The URL that Chrome opens when a user opens the browser or selects the **Home** button.
+    - **Send anonymous usage statistics and crash information**: To turn off sending any crash information or anonymous statistics to Google, change this setting to **False**.
+    - **Turn off auto-updates**: Although we don't usually recommended it, you can turn off auto-updates.
+    Apply the policies to the target computers. Depending on your network configuration, the policy might require some time to propagate. You might have to propagate the policies manually through the administrator tools.
 
 8. Add the sites that are listed in step 2 under "Microsoft Edge" to the **Content settings** > **CookiesAllowedForUrls** setting.
 
-For more information on [Set Chrome Browser policies on managed PCs](https://support.google.com/chrome/a/answer/187202/set-chrome-browser-policies-on-managed-pcs).
+For more information, see [Set Chrome Browser policies on managed PCs](https://support.google.com/chrome/a/answer/187202/set-chrome-browser-policies-on-managed-pcs).
 
-You can also download the templates separately and view common policy documentation for all operating systems here: [Zip file of Google Chrome templates and documentation](https://dl.google.com/dl/edgedl/chrome/policy/policy_templates.zip)
+You can also download the templates separately and view common policy documentation for all operating systems by referring to [Zip file of Google Chrome templates and documentation](https://dl.google.com/dl/edgedl/chrome/policy/policy_templates.zip)
 
 ## Mozilla Firefox
 
 1. In the Firefox **Settings** window, select the **Privacy & Security** tab.
 2. Under **Cookies and Site Data**, select **Manage Exceptions**.
-3. In the **Address of website** text box, enter the following URLs, and then select **Allow**.
+3. In the **Address of website** text box, enter the following URLs, and then select **Allow**:
 
     - `https://microsoft.com`
     - `https://microsoftonline.com`
@@ -112,11 +112,11 @@ To change the settings by using a GPO:
 1. Download and install [the Firefox administrative template](https://github.com/mozilla/policy-templates/releases).
 2. Add the sites that are listed under "Microsoft Edge" to **Cookies** > **Allowed Sites**.
 
-For more information on [Customizing Firefox Using Group Policy](https://support.mozilla.org/kb/customizing-firefox-using-group-policy-windows).
+For more information, see [Customizing Firefox Using Group Policy](https://support.mozilla.org/kb/customizing-firefox-using-group-policy-windows).
 
 ## Safari
 
-Teams support for Safari is currently in preview. Update the following setting, and then try to access the Teams web client:
+Teams support for Safari is currently in preview. Update the following setting, and then try again to access the Teams web client:
 
 1. Select **Preferences** > **Privacy**.
 2. Clear the **Prevent cross-site tracking** checkbox.
@@ -127,17 +127,17 @@ For more information, see [Limits and specifications for Teams](/microsoftteams/
 ## Internet Explorer
 
 > [!Note]
-> Starting on November 30, 2020, the Microsoft Teams web client no longer supports Internet Explorer 11. For more information, go [here](https://aka.ms/AA97tsw).
+> Starting on November 30, 2020, the Microsoft Teams web client no longer supports Internet Explorer 11. For more information, see [this Microsoft 365 Blog article](https://aka.ms/AA97tsw).
 
 1. In Windows Control Panel, open **Internet Options**.
-2. In the Internet Options window, select **Privacy** and **Advanced**.
+2. In the Internet Options window, select the **Privacy** tab, and then select **Advanced**.
 3. Select **Accept** for **First-party Cookies** and **Third-party Cookies**, and then select the **Always allow session cookies** checkbox.
 
-    :::image type="content" source="media/sign-in-loop/ie-advanced-privacy-settings.png" alt-text="Screenshot of Advanced Privacy Settings dialog. First and Third party Cookies are selected as accept, and Always allow session cookies is selected":::
+    :::image type="content" source="media/sign-in-loop/ie-advanced-privacy-settings.png" alt-text="Screenshot of the advanced privacy settings dialog box showing that first and third party cookies are selected as accept and always allow session cookies is selected":::
 
-    Alternatively, follow steps 4 and 5:
-4. In the **Internet Options** window, select **Security** > **Trusted Sites** > **Sites**.
-5. Add the following sites:
+    Alternatively, follow these steps:
+1. In the **Internet Options** window, select **Security** > **Trusted Sites** > **Sites**.
+2. Add the following sites:
 
     - `https://*.microsoft.com`
     - `https://*.microsoftonline.com`
