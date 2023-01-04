@@ -50,7 +50,7 @@ If you receive any of the error messages that are listed in the [Symptoms](#symp
 
 - *Stale Read*: A successful call to the ReadFile API, but the operating system, a driver, or the caching controller incorrectly returns an older version of the data.
 
-To illustrate, Microsoft has confirmed scenarios where a WriteFile API call returns a status of success, but an immediate, successful read of the same data block returns older data, including data that is likely stored in a hardware read cache. Sometimes, this problem occurs because of a read cache problem. In other cases, the write data is never written to the physical disk.
+To illustrate, Microsoft has confirmed scenarios where a WriteFile API call returns a status of success, but an immediate, successful read of the same data block returns older data, including data that's likely stored in a hardware read cache. Sometimes, this problem occurs because of a read cache problem. In other cases, the write data is never written to the physical disk.
 
 ### How to enable the diagnostics
 
@@ -61,11 +61,11 @@ In SQL Server 2017 and later versions, this diagnostic capability is enabled by 
 DBCC TRACEON(818, -1)
 ```
 
-Trace flag 818 enables an in-memory ring buffer that is used for tracking the last 2,048 successful write operations that are performed by the computer running SQL Server, not including sort and workfile I/Os. When errors such as 605, 823, or 3448 occur, the incoming buffer's log sequence number (LSN) value is compared to the recent write list. If the LSN that's retrieved during the read operation is older than the one used in the write operation, a new error message is logged in the SQL Server error log. Most SQL Server write operations occur as checkpoints or as lazy writes (a lazy write is a background task that uses asynchronous I/O). The implementation of the ring buffer is lightweight and the performance effect on the system is negligible.
+Trace flag 818 enables an in-memory ring buffer that's used for tracking the last 2,048 successful write operations that're performed by the computer running SQL Server, not including sort and workfile I/Os. When errors such as 605, 823, or 3448 occur, the incoming buffer's log sequence number (LSN) value is compared to the recent write list. If the LSN that's retrieved during the read operation is older than the one used in the write operation, a new error message is logged in the SQL Server error log. Most SQL Server write operations occur as checkpoints or as lazy writes (a lazy write is a background task that uses asynchronous I/O). The implementation of the ring buffer is lightweight and the performance effect on the system is negligible.
 
 ### Details about the message in the error log
 
-The following message does not show any explicit errors from the WriteFile API or the ReadFile API calls that SQL Server. Instead, it shows a logical I/O error that resulted when the LSN was reviewed, and its expected value wasn't correct:
+The following message doesn't show any explicit errors from the WriteFile API or the ReadFile API calls that SQL Server. Instead, it shows a logical I/O error that resulted when the LSN was reviewed, and its expected value wasn't correct:
 
 Starting with SQL Server 2005, the error message displayed is:
 
@@ -80,17 +80,19 @@ At the point or reporting this error, either the read cache contains an older ve
 If error 3448 occurs when you try to rollback a transaction that has error 605 or 823, the SQL Server instance automatically closes the database and tries to open and recover it. The first page that experiences error 605 or 823 is considered a bad page, and the page ID is kept by the computer running SQL Server. During recovery (before the redo phase) when the bad page ID is read, the primary details about the page header are logged in the SQL Server error log. This action is important because it helps to distinguish between Lost Write and Stale Read scenarios.
 
 ### Behavior observed with stale reads and lost writes
+
 You may see the following two common behaviors in stale read scenarios:
 
 - If the database files are closed and then opened, the correct and most recently written data is returned during recovery.
 
 - When you issue a checkpoint and run the `DBCC DROPCLEANBUFFERS` statement (to remove all database pages from the memory), and then run the `DBCC CHECKDB` statement on the database, the most recently written data is returned.
 
-The behaviors mentioned in the preceding paragraph indicate a read caching problem and they're frequently solved by disabling the read cache. The actions that are outlined in the preceding paragraph typically force a cache invalidation and the successful reads that occur show that the physical media is correctly updated. The lost write behavior occurs when the page that's read back is still the older version of the data, even after a forced flush of the caching mechanisms.
+The behaviors mentioned in the preceding paragraph indicate a read caching problem and they're frequently solved by disabling the read cache. The actions that're outlined in the preceding paragraph typically force a cache invalidation and the successful reads that occur show that the physical media is correctly updated. The lost write behavior occurs when the page that's read back is still the older version of the data, even after a forced flush of the caching mechanisms.
 
 Sometimes, the problem may not be specific to a hardware cache. It may be a problem with a filter driver. In such cases, review your software, including backup utilities and antivirus software, and then see if there are problems with the filter driver.
 
 ### Description of various stale reads and lost writes scenarios
+
 Microsoft has also noted conditions that don't meet the criteria for error 605 or 823 but are caused by the same stale read or lost write activity. In some instances, a page appears to be updated twice but with the same LSN value. This behavior may occur if the Object ID and the Page ID are correct (page already allocated to the object), and a change is made to the page and flushed to the disk. The next page retrieval returns an older image, and then a second change is made. The SQL Server transaction log shows that the page was updated twice with the same LSN value. This action becomes a problem when you try to restore a transaction log sequence or with data consistency problems, such as foreign key failures or missing data entries. The following error message illustrates one example of this condition:
 
 > Error: 3456, Severity: 21, State: 1 Could not redo log record (276666:1664:19), for transaction ID (0:825853240), on page (1:1787100), database 'authors' (7). Page: LSN = (276658:4501:9), type = 1. Log: OpCode = 4, context 2, PrevPageLSN: (275565:3959:31)..
@@ -148,7 +150,7 @@ Because a stale read or a lost write results in data storage that isn't expected
 Some customers have reported missing rows after they perform row count activities. This problem occurs because of a lost write. Perhaps, the page was supposed to be linked to the clustered index page chain. If the write was physically lost, the data is also lost.
 
 > [!IMPORTANT]
-> If you experience any of the behaviors, or if you are suspicious of similar problems together with disabling caching mechanisms, Microsoft strongly recommends that you obtain the latest update for SQL Server and the latest SQL Server I/O Stress Simulator. Microsoft also strongly encourages that you perform a strict review of your operating system and its associated configurations.
+> If you experience any of the behaviors, or if you're suspicious of similar problems together with disabling caching mechanisms, Microsoft strongly recommends that you obtain the latest update for SQL Server and the latest SQL Server I/O Stress Simulator. Microsoft also strongly encourages that you perform a strict review of your operating system and its associated configurations.
 
 Note that Microsoft has confirmed that under rare and heavy I/O loads, some hardware platforms can return a stale read. If the extended diagnostics indicate a possible stale read or lost write condition, contact your hardware vendor for immediate follow-up and test with the [SQLIOSim](../../tools/sqliosim-utility-simulate-activity-disk-subsystem.md) utility.
 
