@@ -145,7 +145,7 @@ Some customers have reported missing rows after they perform row count activitie
 > [!IMPORTANT]
 > If you experience any of the behaviors, or if you are suspicious of similar problems together with disabling caching mechanisms, Microsoft strongly recommends that you obtain the latest update for SQL Server and the latest SQL Server I/O Stress Simulator. Microsoft also strongly encourages that you perform a strict review of your operating system and its associated configurations.
 
-Note that Microsoft has confirmed that under rare and heavy I/O loads, some hardware platforms can return a stale read. If the extended diagnostics indicate a possible stale read or lost write condition, contact your hardware vendor for immediate follow-up and test with the [SQLIOSim](../tools/sqliosim-utility-simulate-activity-disk-subsystem.md) utility.
+Note that Microsoft has confirmed that under rare and heavy I/O loads, some hardware platforms can return a stale read. If the extended diagnostics indicate a possible stale read or lost write condition, contact your hardware vendor for immediate follow-up and test with the [SQLIOSim](../../tools/sqliosim-utility-simulate-activity-disk-subsystem.md) utility.
 
 SQL Server requires systems to support guaranteed delivery to stable media as outlined under the [SQL Server I/O Reliability Program Requirements](https://support.microsoft.com/topic/kb826433-sql-server-diagnostics-added-to-detect-unreported-i-o-problems-due-to-stale-reads-or-lost-writes-ca3f00af-2ee2-04e3-e6dc-e09169328982?preview=true). For more information about the input and output requirements for the SQL Server database engine, see [Microsoft SQL Server Database Engine Input/Output Requirements](database-engine-input-output-requirements.md).
 

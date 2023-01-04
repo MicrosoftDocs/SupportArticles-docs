@@ -499,14 +499,6 @@
     items:
     - name: .Net Framework requirements for SQL Server
       href: database-engine/install/windows/understanding-dotnet-framework-requirements.md
-    - name: SQL Server upgrade failed with error code 4860
-      href: database-engine/install/windows/sql-server-upgrade-failed-error-4860-upgrade-script.md
-    - name: SQL Server upgrade failed with error 17182
-      href: database-engine/install/windows/sql-server-upgrade-failed-error-17182-upgrade-script.md
-    - name: SQL Server upgrade failed with error 15173
-      href: database-engine/install/windows/sql-server-upgrade-failed-error-15173-upgrade-script.md
-    - name: SQL Server upgrade failed with error 912
-      href: database-engine/install/windows/sql-server-upgrade-failed-error-912-upgrade-script.md
     - name: Attempted to perform an unauthorized operation error
       href: database-engine/install/windows/error-set-up-update-instances.md
     - name: Cannot install on Windows case-sensitive servers
