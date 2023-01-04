@@ -22,13 +22,13 @@ _Original KB number:_ &nbsp; 932455
 
 ## Symptoms
 
-On a Microsoft Windows Server 2003-based or a Windows Server 2008-based domain controller, non-administrator users may experience one or more of the following symptoms:
+On a domain controller, non-administrator users may experience one or more of the following symptoms:
 
 - After a specific user or a specific group is provided with the permission to add or to remove computer objects to the domain on an organizational unit (OU) through the Delegation Wizard, users can't add some of the computers to the domain. When the user tries to join a computer to a domain, users may receive the following error message:
     > Access is denied.
     > [!NOTE]
     > Administrators can join computers to the domain without any issues.
-- Users who are members of the Account Operators group or who have been delegated control can't create new user accounts or reset passwords when they sign in locally or when they sign in through terminal services to the domain controller.
+- Users who are members of the Account Operators group or who have been delegated control can't create new user accounts or reset passwords when they sign in locally or when they sign in through Remote Desktop to the domain controller.
 
     When users try to reset a password, they may receive the following error message:
    > Windows cannot complete the password change for **username** because: Access is denied.
@@ -77,6 +77,6 @@ To resolve the issue in which users can't reset passwords, follow these steps:
 5. In the **Group or user names** list, select **Account Operators**.
 6. Under **Permissions for Account Operators**, click to select the **Allow** check box for the **Read** permission, and then select **OK**.
 
-    > [!NOTE]
-    > If you want to use a group or a user other than the Account Operators group, repeat steps 5 and 6 for that group or that user.
+   > [!NOTE]
+   > If you want to use a group or a user other than the Account Operators group, repeat steps 5 and 6 for that group or that user.
 7. Close the "Active Directory Users and Computers" MMC snap-in.
