@@ -64,14 +64,18 @@ DBCC TRACEON(818, -1)
 Trace flag 818 enables an in-memory ring buffer that is used for tracking the last 2,048 successful write operations that are performed by the computer running SQL Server, not including sort and workfile I/Os. When errors such as 605, 823, or 3448 occur, the incoming buffer's log sequence number (LSN) value is compared to the recent write list. If the LSN that's retrieved during the read operation is older than the one used in the write operation, a new error message is logged in the SQL Server error log. Most SQL Server write operations occur as checkpoints or as lazy writes (a lazy write is a background task that uses asynchronous I/O). The implementation of the ring buffer is lightweight and the performance effect on the system is negligible.
 
 ### Details about the message in the error log
+
 The following message does not show any explicit errors from the WriteFile API or the ReadFile API calls that SQL Server. Instead, it shows a logical I/O error that resulted when the LSN was reviewed, and its expected value wasn't correct:
 
 Starting with SQL Server 2005, the error message displayed is:
 
 ```output
 SQL Server detected a logical consistency-based I/O error: Stale Read. It occurred during a `<<Read/Write>>` of page `<<PAGEID>>` in database ID `<<DBID>>` at offset `<<PHYSICAL OFFSET>>` in file `<<FILE NAME>>`. Additional messages in the SQL Server error log or system event log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors. For more information, see SQL Server Books Online.
+```
 
-At this point, either the read cache contains an older version of the page, or the data wasn't correctly written to the physical disk. In either case (a lost write or a stale read), SQL Server reports an external problem with the operating system, the driver, or the hardware layers.
+For more information on error 824, see [MSSQLSERVER_824](/sql/relational-databases/errors-events/mssqlserver-824-database-engine-error).
+
+At the point or reporting this error, either the read cache contains an older version of the page, or the data wasn't correctly written to the physical disk. In either case (a lost write or a stale read), SQL Server reports an external problem with the operating system, the driver, or the hardware layers.
 
 If error 3448 occurs when you try to rollback a transaction that has error 605 or 823, the SQL Server instance automatically closes the database and tries to open and recover it. The first page that experiences error 605 or 823 is considered a bad page, and the page ID is kept by the computer running SQL Server. During recovery (before the redo phase) when the bad page ID is read, the primary details about the page header are logged in the SQL Server error log. This action is important because it helps to distinguish between Lost Write and Stale Read scenarios.
 
