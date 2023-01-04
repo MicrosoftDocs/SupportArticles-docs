@@ -8,7 +8,7 @@ ms.author: v-jayaramanp
 ms.topic: article
 ms.prod: sql
 ---
-# Description of Replay Markup Language Utilities for SQL Server
+# Replay Markup Language (RML) Utilities for SQL Server
 
 This article describes a group of tools that are used by support professionals to troubleshoot Microsoft SQL Server.
 
