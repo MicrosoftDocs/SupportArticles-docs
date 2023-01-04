@@ -7,6 +7,24 @@
       href: ../administration/com-net-errors-after-migration.md
     - name: Can't insert scriptable ActiveX controls
       href: ../administration/insert-scriptable-activex-control.md
+    - name: Enterprise version of Microsoft Support and Recovery Assistant
+      items:
+      - name: Overview
+        href: ../administration/sara-command-line-version.md
+      - name: 'Scenario: Outlook Scan'
+        href: ../administration/assistant-outlook-scan.md
+      - name: 'Scenario: Office Uninstall'
+        href: ../administration/assistant-office-uninstall.md
+      - name: 'Scenario: Office Activation'
+        href: ../administration/assistant-office-activation.md
+      - name: 'Scenario: Office Shared Computer Activation'
+        href: ../administration/assistant-office-shared-computer-activation.md
+      - name: 'Scenario: Outlook Calendar Scan'
+        href: ../administration/assistant-outlook-calendar-scan.md
+      - name: 'Scenario: Teams Meeting Add-in for Outlook'
+        href: ../administration/assistant-teams-meeting-add-in-outlook.md
+      - name: 'Scenario: Reset Office Activation'
+        href: ../administration/assistant-reset-office-activation.md      
     - name: Format of the CSV file isn't correct error
       href: ../administration/format-of-the-csv-file-not-correct-error-when-importing-contacts.md
     - name: Issue on devices with App-V enabled
@@ -14,9 +32,7 @@
     - name: Office applications crash or can't start
       href: ../administration/office-crash-or-cannot-start.md
     - name: Office for iOS requires HTTPS for server resources
-      href: ../administration/office-ios-requires-https.md
-    - name: SaRA command-line version
-      href: ../administration/sara-command-line-version.md
+      href: ../administration/office-ios-requires-https.md    
   - name: Authentication
     items:
     - name: '"Invalid provider specified" with using Office 2016'

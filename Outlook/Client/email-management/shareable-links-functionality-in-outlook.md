@@ -85,13 +85,20 @@ In this screenshot, the recipient is determined to be outside the organization a
 - **Attach as a copy**: Attach the file as a copy if you have the required permissions to access its location.
 - **Ignore**: Ignore the error so that the link appears functional and no warnings are displayed when you try to send the message.
 
-If you don't left-click the link to see the cause of the access issue, you won't see these three options. When you try to send the message, Outlook will display the following warning:
+You can also access these options by using the following methods:
+
+- Right-click the link.
+- Use the keyboard to access the context menu while the cursor is on the link.
+
+If you don't take steps to fix the access issue, then Outlook will display the following warning when you try to send the message:
 
 > Some recipients don't have access to links in your message.
 
 :::image type="content" source="media/shareable-links-functionality-in-outlook/link-permission-checking-warning-before-sending.png" alt-text="Error message that states that some recipients don't have access to links in your message.":::
 
-This provides you an opportunity to fix your recipient list before you send the message to make sure that everyone can access the link.
+This provides you another opportunity to fix your recipient list before you send the message to make sure that everyone can access the link.
+
+**Tip**: If there are multiple links in your email message that have access issues, use Ctrl+Alt+F1 to navigate between them.
 
 ### Result: Recipient access can't be verified
 

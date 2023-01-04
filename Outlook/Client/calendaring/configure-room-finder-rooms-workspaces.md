@@ -57,7 +57,8 @@ Room Finder displays room lists as the values for the **Building** filter. It do
 
 To add information about features in the rooms and workspaces that are specific to your organization, such as coffee makers and conference tables, use the **Tags** property. The tags that you define will display in the drop-down menu for the **Features** filter in Room Finder.
 
-**Note:** It will take 24 to 48 hours for these settings to take effect after you either configure or modify them.  
+> [!NOTE]
+> It will take 24 to 48 hours for these settings to take effect after you either configure or modify them. During this period, Room Finder might not show the expected results.
 
 ### List of tasks to set up rooms and workspaces
 
@@ -130,13 +131,18 @@ The displayed name in Room Finder will be Building A-Floor 1.
 
 If a room or workspace that's configured doesn't display in the results in Room Finder, verify that it's configured properly.
 
-Run the following cmdlets on the room list that the room mailbox or workspace mailbox belongs to:
+Run the following commands on the room list that the room mailbox or workspace mailbox belongs to:
 
 ```powershell
 $FormatEnumerationLimit=-1
-Get-DistributionGroup -Identity "BuildingA@contoso.com"
-Get-DistributionGroupMember -Identity "BuildingA@contoso.com"
-$members=Get-DistributionGroupMember -Identity "BuildingA@contoso.com" | select Name $members | % {Get-Place -Identity $_.Name | fl}
+
+Get-DistributionGroup -Identity BuildingA@contoso.com
+
+Get-DistributionGroupMember -Identity BuildingA@contoso.com
+
+$members = Get-DistributionGroupMember -Identity BuildingA@contoso.com | select Name | foreach {Get-Place -Identity $_.Name | Format-List}
+
+$members
 ```
 
 If you see the following results in the output from these cmdlets, then the room or workplace is set up correctly:

@@ -17,13 +17,13 @@ search.appverid:
   - MET150
 ms.date: 11/16/2022
 ---
-# External participants receive "Only people with access to this org can join its meetings"
+# External participants receive "Sign in to Teams to join, or contact the meeting organizer"
 
 ## Symptoms
 
 External participants who are invited to a Teams meeting that's scheduled by users in your organization can't join the meeting. Instead, they receive the following message:
 
-> Only people with access to this org can join its meetings
+> Sign in to Teams to join, or contact the meeting organizer
 
 :::image type="content" source="media/external-participants-join-meeting-blocked/message-join-meeting.png" alt-text="Screenshot of the message when external participants try to join a Teams meeting.":::
 
@@ -60,11 +60,13 @@ To allow external participants to join Teams meetings, select the correct settin
 
   > [!NOTE]
   > If the meeting organizer's domain is blocked or not allowed in the external access setting of the external participants' organizations, the external participants can join meetings only as anonymous users.
+- Turn on [guest access](/microsoftteams/guest-access). To do so, in the [Microsoft Teams admin center](https://admin.teams.microsoft.com/), select **Users** > **Guest access**, and then set **Allow guest access in Teams** to **On**. 
 
 ### Block all external participants from joining meetings
 
 - Disable anonymous join in the [organization meeting setting](/microsoftteams/meeting-settings-in-teams#using-the-microsoft-teams-admin-center-to-configure-organization-wide-policy).
 - [Block external access](/microsoftteams/manage-external-access).
+- Turn off [guest access](/microsoftteams/guest-access). To do so, in the [Microsoft Teams admin center](https://admin.teams.microsoft.com/), select **Users** > **Guest access**, and then set **Allow guest access in Teams** to **Off**. 
 
 ### Allow only external participants to join meetings as authenticated users (signed in by using a Teams work or school account)
 

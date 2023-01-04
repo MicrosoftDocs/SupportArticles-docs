@@ -49,10 +49,10 @@ To fix this issue, follow these steps as a Global Admin:
 
    - **Short name**: This is the display name of the Viva Connections app in your tenant. In the following example, it's **Contoso App**.
   
-     :::image type="content" source="media/cant-find-app-in-teams-admin-center/app-details.png" alt-text="Screenshot of the app details":::
+     :::image type="content" source="media/cant-find-app-in-teams-admin-center/app-details.png" alt-text="Screenshot of the app details.":::
    - **Short name from publisher**: This value should be **Viva Connections**.
    - **Publisher**: This value should be **Microsoft Corporation**.
 1. In the Teams admin center, return to **Teams apps** > **Manage apps**.
 1. Search for the Viva Connections app by using the short name that's identified in step 4.
 
-   :::image type="content" source="media/cant-find-app-in-teams-admin-center/search-short-name.png" alt-text="Screenshot of the app search results":::
+   :::image type="content" source="media/cant-find-app-in-teams-admin-center/search-short-name.png" alt-text="Screenshot of the app search results.":::
