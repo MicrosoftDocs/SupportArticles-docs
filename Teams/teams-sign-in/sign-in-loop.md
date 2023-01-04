@@ -79,14 +79,13 @@ There are two types of policy templates: an ADM and an ADMX template. Verify whi
 2. Open Group Policy editor by navigating to **Start > Run: gpedit.msc**.
 3. Navigate to **Local Computer Policy > Computer Configuration > Administrative Templates**.
 4. Right-click **Administrative Templates**, and select **Add/Remove Templates**.
-5. Add the **chrome.adm** template through the dialog box. A *Google* > *Google Chrome* folder appears under *Administrative Templates* if it's not there already. If you add the ADM template on Windows 10 or 7, the folder appears under *Classic Administrative Templates*/*Google*/*Google Chrome*.
-7. Configure policies by opening the template that you just added, and then change the configuration settings. The most commonly modified policies are:
+5. Add the **chrome.adm** template through the dialog box. A *Google*/*Google Chrome* folder appears under **Administrative Templates** if it's not there already. If you add the ADM template on Windows 10 or 7, the folder appears under *Classic Administrative Templates*/*Google*/*Google Chrome*.
+6. Configure policies by opening the template that you just added, and then change the configuration settings. The most commonly modified policies are:
     - **Set the home page**: The URL that Chrome opens when a user opens the browser or selects the **Home** button.
     - **Send anonymous usage statistics and crash information**: To turn off sending any crash information or anonymous statistics to Google, change this setting to **False**.
     - **Turn off auto-updates**: Although we don't usually recommended it, you can turn off auto-updates.
-    Apply the policies to the target computers. Depending on your network configuration, the policy might require some time to propagate. You might have to propagate the policies manually through the administrator tools.
-
-8. Add the sites that are listed in step 2 under "Microsoft Edge" to the **Content settings** > **CookiesAllowedForUrls** setting.
+    Apply the policies to the target computers. Depending on your network configuration, the policy might require some time to propagate. Or, you might have to propagate the policies manually through the administrator tools.
+7. Add the sites that are listed in step 2 under [Microsoft Edge](#microsoft-edge) to the **Content settings** > **CookiesAllowedForUrls** setting.
 
 For more information, see [Set Chrome Browser policies on managed PCs](https://support.google.com/chrome/a/answer/187202/set-chrome-browser-policies-on-managed-pcs).
 
