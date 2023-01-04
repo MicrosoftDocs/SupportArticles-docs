@@ -31,6 +31,16 @@ If there's still no log file generated, check to make sure that your Java applic
 If there's still no log file generated, check the `stdout` log from your Java application for errors. Application Insights Java 3.x
 should log any errors that would prevent it from logging to its normal location to the `stdout` log.
 
+## Troubleshoot connectivity issues
+
+Application Insights SDKs and agents send telemetry to get ingested as REST calls to our ingestion endpoints. You can test connectivity from your web server or application host machine to the ingestion service endpoints by using raw REST clients from PowerShell or curl commands. See [Troubleshoot missing application telemetry in Azure Monitor Application Insights](investigate-missing-telemetry.md).
+
+The connectivity issue may also come from the Application Insights Java agent. In this case:
+1) [You can verify the Application Insights configuration of the connection string](/azure/azure-monitor/app/java-standalone-config#connection-string).
+2) From Application Insights 3.4.6, you can verify that the Java keystore contains a required certificate. To do this, [enable the self-diagnostics feature at the TRACE level](/azure/azure-monitor/app/java-standalone-config#self-diagnostics). In the Application Insights logs, if you notice `TRACE c.m.applicationinsights.agent - Application Insights root certificate in the Java keystore: false`, then you need to import a root certificate
+   in the Java keystore by following [these instructions](https://go.microsoft.com/fwlink/?linkid=2151450).
+3) If you use `-Djsse.enableSNIExtension=false`, please try without it. From Application Insights 3.4.5, with`-Djsse.enableSNIExtension=false`, the `WARN  c.m.applicationinsights.agent - System property -Djsse.enableSNIExtension=false is detected. If you have connection issues with Application Insights, please remove this.` message appears in the logs.
+
 ## Java virtual machine (JVM) fails to start
 
 If the Java virtual machine (JVM) fails to start, it might return an "Error opening zip file or JAR manifest missing" message. That error means that the agent jar file might have been corrupted during file transfer. Try redownloading the agent jar file.
