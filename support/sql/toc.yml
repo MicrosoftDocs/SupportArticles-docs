@@ -545,6 +545,8 @@
       href: database-engine/install/windows/sql-server-2012-setup-issues.md
     - name: SQL Server setup fails in DMZ
       href: database-engine/install/windows/cannot-install-sql-when-only-rodc-available.md
+    - name: SQL Server upgrade fails with error code 574
+      href: database-engine/install/windows/upgrade-fails-error-code-574.md
     - name: SQL Server upgrade fails with error code 2714
       href: database-engine/install/windows/upgrade-fails-error-code-2714.md
     - name: SxS install of X64 and X86 version of SSRS 2008

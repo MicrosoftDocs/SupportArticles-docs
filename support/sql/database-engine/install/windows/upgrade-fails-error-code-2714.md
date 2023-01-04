@@ -37,7 +37,7 @@ Restore master from a full backup, repair it, or rebuild it. For more informatio
 
 ## Cause
 
-This error occurs when the upgrade script fails to recreate the **DatabaseMailUserRole** schema in the MSDB database. This error also can happen when the **DatabaseMailUserRole** schema isn't owned by the **DatabaseMailUserRole** role. For example, if the schema is owned by `dbo`.  
+This error occurs when the upgrade script fails to recreate the **DatabaseMailUserRole** schema in the MSDB database. This issue can happen when the **DatabaseMailUserRole** schema isn't owned by the **DatabaseMailUserRole** role. For example, the schema is owned by `dbo`.  
 
 For more information about database upgrade scripts that are executed during CU or SP installation, see <link to the landing page>.
 
@@ -47,17 +47,19 @@ Follow these steps to solve the issue:
 
 1. Start SQL Server with [trace flag 902](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf902). For more information, see <Steps to start SQL with trace flag 902>.
 
-1. Open SQL Server Management Studio, connect to the SQL instance, and back up the MSDB database.
+1. Open SQL Server Management Studio, connect to the SQL Server instance, and back up the `msdb` database.
 
 1. Expand **Databases** > **System Databases** > **msdb** > **Security** > **Schemas** > **DatabaseMailuserRole**.  
 
 1. Delete the schema named **DatabaseMailuserRole**.  
 
-1. Remove trace flag 902 from the startup parameters and restart SQL Server.
+1. Remove trace flag 902 from the item **Startup Parameters** and restart SQL Server.
 
 Once SQL Server starts without trace flag 902, the upgrade script will be executed again, and the **DatabaseMailUserRole** schema is recreated.
 
 - If the SP/CU upgrade script completes successfully, you can check the SQL Server error log and bootstrap folder to verify.
 - If the upgrade script fails again, check the SQL Server error log for other errors and troubleshoot the new errors.
 
-For more information, see the [TargetServersRole schema and security role](sqlserver-patching-issues.md#targetserversrole-schema-and-security-role).
+## More information
+
+For more information on how to solve the error 2714 `There is already an object named 'TargetServersRole' in the database`, see [TargetServersRole schema and security role](sqlserver-patching-issues.md#targetserversrole-schema-and-security-role).
