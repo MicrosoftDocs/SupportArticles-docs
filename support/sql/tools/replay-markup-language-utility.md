@@ -38,8 +38,9 @@ After you capture a trace for an instance of SQL Server, you can use RML Utiliti
 
 |Version number|Description|
 |---|---|
-|9.04.0100| Indicates the current web release that's available from the Microsoft Download Center. It supports all released versions of SQL Server (SQL Server 2019, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Server 2000).|
-|9.04.0098| Indicates the current release package, which includes the Database Experimentation Assistant tool. It supports all the released versions of SQL Server.|
+|[09.04.0102](https://www.microsoft.com/download/details.aspx?id=104868)| Indicates the current web release that's available from the Microsoft Download Center. It supports all released versions of SQL Server (SQL Server 2022, SQL Server 2019, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008).|
+|[9.04.0100](https://www.microsoft.com/download/details.aspx?id=103126)| Is the previous web release that's available from the Microsoft Download Center. It supports all released versions of SQL Server (SQL Server 2019, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Server 2000).|
+|[9.04.0098](https://www.microsoft.com/download/details.aspx?id=54090)| Indicates the current release package, which is included with the Database Experimentation Assistant tool. It supports all the released versions of SQL Server.|
 |9.04.0097| Indicates current release available from the SQL Nexus site that supports all released versions of SQL Server.|
 |9.04.0051| Is the previous web release that's available from the Microsoft Download Center that supports SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Server 2000.|
 |9.04.0004| Is the previous web release that supports SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Server 2000.|
@@ -51,11 +52,9 @@ The current version of RML Utilities for SQL Server supersedes any earlier versi
 
 ## Obtain the RML Utilities for SQL Server
 
-After you install the [Database Experimentation Assistant](https://www.microsoft.com/download/details.aspx?id=54090), you will find the RML tools (`ReadTrace` and `OStress`) present in the `C:\Program Files (x86)\Microsoft Corporation\Database Experimentation Assistant\Dependencies\X64\` folder.
+- RML Utilities for SQL Server is available for download from the [Microsoft Download Center](https://download.microsoft.com/download/a/a/d/aad67239-30df-403b-a7f1-976a4ac46403/RMLSetup.msi).
 
-If you're using the RML tools together with the [SQL Nexus](https://github.com/microsoft/SqlNexus/wiki) tool, you can obtain `ReadTrace` and `ostress` from <https://github.com/microsoft/SqlNexus/releases/tag/09.04.0097>.
-
-RML Utilities for SQL Server is available for download from the [Microsoft Download Center](https://download.microsoft.com/download/7/A/D/7ADE5D8B-47AB-4E94-BAD0-5416D6B6D383/RMLSetup.msi).
+- After you install the [Database Experimentation Assistant](https://www.microsoft.com/download/details.aspx?id=54090), you will find the RML tools (`ReadTrace` and `OStress`) present in the `C:\Program Files (x86)\Microsoft Corporation\Database Experimentation Assistant\Dependencies\X64\` folder.
 
 > [!NOTE]
 > Microsoft provides RML Utilities for SQL Server as is. Microsoft Customer Support Services (CSS) does not provide support or updates for the RML Utilities for SQL Server. If you have a suggestion or you want to report a bug, you can use the e-mail address in the "Problems and Assistance" topic in the Help file (_RML Help.pdf_). The Help file is included together with the RML Utilities for SQL Server.
@@ -125,6 +124,14 @@ You can obtain these DLLs from the respective software packages of the vendors.
 - <https://www.7-zip.org/a/7z1900-x64.exe>
 
 - <https://www.nuget.org/packages/Xceed.Products.Zip.Full/>
+
+## Known issues and fixes
+
+|Issue|Resolution|
+|----|----|
+|ReadTrace encounters "ERROR: Event runtime check:  Detected missing column [cached_text] in event [sp_cache_remove] at event sequence 209494"|Fixed in version 09.04.0102. As a workaround you can add the trace flags (-T28 -T29) to the ReadTrace command line.|
+|Reporter encounters "Could not load file or assembly 'Reporter, Version=9.4.10000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. Strong name validation failed. (Exception from HRESULT: 0x8013141A)"|Fixed in version 09.04.0102. As a workaround you can create this registry key to override the strong name verification. HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\StrongName\Verification\Reporter,31BF3856AD364E35.|
+
 
 ## Examples
 
