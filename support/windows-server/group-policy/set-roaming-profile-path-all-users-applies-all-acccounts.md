@@ -44,19 +44,19 @@ So you're assigned a default temporary profile because you don't have access to 
 
 The following roaming profile policy settings are currently available in Windows Server:
 
-- **Set path for TS Roaming User Profile**
+- **Set path for Remote Desktop Services Roaming User Profile**
 - **Set roaming profile path for all users logging onto this computer**
 
-### Set path for TS Roaming User Profile
+### Set path for Remote Desktop Services Roaming User Profile
 
-The **Set path for TS Roaming User Profile** Group Policy setting lets you specify the network path that Terminal Services uses for roaming user profiles.
+The **Set path for Remote Desktop Services Roaming User Profile** Group Policy setting lets you specify the network path that Remote Desktop Services (RDS) uses for roaming user profiles.
 
-By default, Terminal Services stores all user profiles locally on the terminal server. You can use the **Set path for TS Roaming User Profile** Group Policy setting to specify a network share where user profiles can be centrally stored. When profiles are centrally stored, users can access the same profile for sessions on all terminal servers that are configured to use the network share for user profiles.
+By default, RDS stores all user profiles locally on the RDS server. You can use the **Set path for Remote Desktop Services Roaming User Profile** Group Policy setting to specify a network share where user profiles can be centrally stored. When profiles are centrally stored, users can access the same profile for sessions on all RDS servers that are configured to use the network share for user profiles.
 
-> [!Note]  
+> [!NOTE]
 >
-> - The roaming user profiles that are enabled by the **Set path for TS Roaming User Profile** Group Policy setting apply only to Terminal Services connections. You may also have a Windows roaming user profile that is configured. The Terminal Services roaming user profile always takes precedence in a Terminal Services session.
-> - If you configure the **Set path for TS Roaming User Profile** Group Policy setting, each user who logs on by using a terminal session uses the path that is specified as the roaming profile location.
+> - The roaming user profiles that are enabled by the **Set path for Remote Desktop Services Roaming User Profile** Group Policy setting apply only to RDS connections. You may also have a Windows roaming user profile that is configured. The RDS roaming user profile always takes precedence in a RDS session.
+> - If you configure the **Set path for Remote Desktop Services Roaming User Profile** Group Policy setting, each user who logs on by using a RDS session uses the path that is specified as the roaming profile location.
 
 ### Set roaming profile path for all users logging onto this computer
 
@@ -72,8 +72,8 @@ If you enable the **Set roaming profile path for all users logging onto this com
 > - If you use a local user account, the profile path may fail because of lack of permissions.
 > - There are four ways to configure a roaming profile for a user. Windows reads profile configuration in the following order, and Windows uses the first configured setting that it reads:  
 >
->   - The Terminal Services roaming profile path that is specified by Terminal Services policy  
->   - The Terminal Services roaming profile path that is specified by the user object  
+>   - The RDS roaming profile path that is specified by RDS policy  
+>   - The RDS roaming profile path that is specified by the user object  
 >   - A per-computer roaming profile path that is specified in the **Set roaming profile path for all users logging onto this computer** Group Policy setting  
 >   - A per-user roaming profile path that is specified in the user object
 > - If you configure the **Set roaming profile path for all users logging onto this computer** Group Policy setting, each user who logs on to the member server uses the path that is specified as the roaming profile location.
