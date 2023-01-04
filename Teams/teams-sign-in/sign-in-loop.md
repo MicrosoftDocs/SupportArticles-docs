@@ -84,6 +84,7 @@ There are two types of policy templates: an ADM and an ADMX template. Verify whi
     - **Set the home page**: The URL that Chrome opens when a user opens the browser or selects the **Home** button.
     - **Send anonymous usage statistics and crash information**: To turn off sending any crash information or anonymous statistics to Google, change this setting to **False**.
     - **Turn off auto-updates**: Although we don't usually recommended it, you can turn off auto-updates.
+    
     Apply the policies to the target computers. Depending on your network configuration, the policy might require some time to propagate. Or, you might have to propagate the policies manually through the administrator tools.
 7. Add the sites that are listed in step 2 under [Microsoft Edge](#microsoft-edge) to the **Content settings** > **CookiesAllowedForUrls** setting.
 
