@@ -1,6 +1,6 @@
 ---
 title: SQL Server upgrade fails with error code 2714
-description: This article troubleshoots and solves an issue where a Cumulative Update (CU) or Service Pack (SP) for SQL Server reports error 2714 when you execute database upgrade scripts.
+description: Troubleshoots and solves an issue where a Cumulative Update (CU) or Service Pack (SP) for SQL Server reports error 2714 when you execute database upgrade scripts.
 ms.date: 01/04/2023
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: ramakoni
@@ -11,15 +11,15 @@ ms.prod: sql
 
 # SQL Server upgrade fails with error code 2714 when executing update database scripts
 
-This article helps you troubleshoot and solve the issue where a Cumulative Update (CU) or Service Pack (SP) for SQL Server reports error 2714 when you execute database upgrade scripts.
+This article helps you troubleshoot and solve an issue where a Cumulative Update (CU) or Service Pack (SP) for SQL Server reports error 2714 when you execute database upgrade scripts.
 
 ## Symptoms
 
 When you apply a CU or SP, the setup program may report the following error:  
 
-> "Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes".  
+> Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes.  
 
-When you review SQL Server Errorlog, you may notice an error like the following one:
+When you review the SQL Server error log, you may notice an error like the following one:
 
 ```Output
 2021-07-27 14:08:44.31 spid6s      Error: 2714, Severity: 16, State: 6.
@@ -37,9 +37,9 @@ Restore master from a full backup, repair it, or rebuild it. For more informatio
 
 ## Cause
 
-This error occurs when the upgrade script fails to recreate **DatabaseMailUserRole** schema in MSDB database. This error can happen when **DatabaseMailUserRole** schema isn't owned by **DatabaseMailUserRole** role. For example, if the schema is owned by `dbo`.  
+This error occurs when the upgrade script fails to recreate the **DatabaseMailUserRole** schema in the MSDB database. This error also can happen when the **DatabaseMailUserRole** schema isn't owned by the **DatabaseMailUserRole** role. For example, if the schema is owned by `dbo`.  
 
-For more information about database upgrade scripts that are executed during CU or SP installation process, see <link to the landing page>.
+For more information about database upgrade scripts that are executed during CU or SP installation, see <link to the landing page>.
 
 ## Resolution
 
@@ -47,17 +47,17 @@ Follow these steps to solve the issue:
 
 1. Start SQL Server with [trace flag 902](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf902). For more information, see <Steps to start SQL with trace flag 902>.
 
-1. Open SQL Server Management Studio, Connect to the SQL instance, and back up the MSDB database.
+1. Open SQL Server Management Studio, connect to the SQL instance, and back up the MSDB database.
 
 1. Expand **Databases** > **System Databases** > **msdb** > **Security** > **Schemas** > **DatabaseMailuserRole**.  
 
 1. Delete the schema named **DatabaseMailuserRole**.  
 
-1. Remove trace flag 902 from startup parameters and restart SQL Server.
+1. Remove trace flag 902 from the startup parameters and restart SQL Server.
 
 Once SQL Server starts without trace flag 902, the upgrade script will be executed again, and the **DatabaseMailUserRole** schema is recreated.
 
 - If the SP/CU upgrade script completes successfully, you can check the SQL Server error log and bootstrap folder to verify.
-- If the upgrade script fails again, check the SQL Server Error log for other errors and troubleshoot the new error.
+- If the upgrade script fails again, check the SQL Server error log for other errors and troubleshoot the new errors.
 
-For more information, see [TargetServersRole schema and security role](sqlserver-patching-issues.md#targetserversrole-schema-and-security-role).
+For more information, see the [TargetServersRole schema and security role](sqlserver-patching-issues.md#targetserversrole-schema-and-security-role).
