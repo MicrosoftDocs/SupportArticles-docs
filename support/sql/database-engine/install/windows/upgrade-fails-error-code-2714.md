@@ -19,7 +19,7 @@ When you apply a CU or SP, the setup program may report the following error:
 
 > Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes.  
 
-When you review the SQL Server error log, you may notice an error like the following one:
+When you review the SQL Server error log, you may notice the following error messages:
 
 ```Output
 2021-07-27 14:08:44.31 spid6s      Error: 2714, Severity: 16, State: 6.

@@ -19,7 +19,7 @@ When you apply a CU or SP, the setup program may report the following error:
 
 > Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes.  
 
-When you review SQL Server error log, you may notice errors like the following one:
+When you review the SQL Server error log, you may notice the following error messages:
 
 ```Output
 Error: 5133, Severity: 16, State: 1
@@ -34,28 +34,28 @@ Cannot recover the master database. SQL Server is unable to run. Restore master 
 
 ## Cause
 
-SQL Server reports error 598 when it runs into an error when executing [CREATE](/sql/t-sql/statements/create-database-transact-sql) or [ALTER](/sql/t-sql/statements/alter-database-transact-sql) DATABASE statements.
+SQL Server reports error 598 when it runs into an error while executing [CREATE DATABASE](/sql/t-sql/statements/create-database-transact-sql) or [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) statements.
 
 > [!NOTE]
 > From [Database Engine events and errors](/sql/relational-databases/errors-events/database-engine-events-and-errors), you can see `Error 598: An error occurred while executing CREATE/ALTER DB. Please look at the previous error for more information`.  
-> Reviewing entries prior to the error 598 provides more information on the cause of failure. For example, in this scenario, the preceding error is 1802, which in turn occurred because the upgrade script is unable to create a [tempdb](/sql/relational-databases/databases/tempdb-database) database in the default data path. The `tempdb` database is used by setup for various operations it runs during the update process. For more information about database upgrade scripts that are executed during CU or SP installation process, see [Troubleshooting upgrade script failures when applying an update](troubleshoot-upgrade-script-failures-apply-update.md).
+> Entries prior to error 598 can provide more information about the cause of the failure. For example, in this article, the preceding error is 1802, which occurs because the upgrade script is unable to create a [tempdb](/sql/relational-databases/databases/tempdb-database) database in the default data path. The `tempdb` database is used by the setup program for various operations it runs during the update process. For more information about database upgrade scripts that are executed during CU or SP installation, see see [Troubleshooting upgrade script failures when applying an update](troubleshoot-upgrade-script-failures-apply-update.md).
 
 ## Resolution
 
-1. Verify that the configured value of the property **Data Path** is valid and correct in SQL Server.
+1. Verify that the **Data Path** property is configured with a valid and correct value in SQL Server.
 
-1. Open SQL Server Configuration Manager, select **SQL Server Services**.
+1. Open SQL Server Configuration Manager and select **SQL Server Services**.
 
 1. Right-click the SQL Server instance and select **Properties**.
 
-1. Select the **Advanced** tab and verify that the value of **Data Path** is correct and doesn't have any typos or extra characters. (To validate, you can copy out the value of **Data Path** and try to access it with Windows Explorer.)
+1. Select the **Advanced** tab and verify that the value of **Data Path** is correct and doesn't have any typos or extra characters. (To validate the value, you can copy it and try to access it with Windows Explorer.)
 
-1. In **Search** box on the taskbar, type *regedit* to open **Registry Editor**.
+1. In the **Search** box on the taskbar, type *regedit* to open **Registry Editor**.
 
-1. Navigate to the registry key for the default data path and validate that the path is correct with no extra spaces or characters. The registry key for the default data path is `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL10.<Instance Name>\Setup\SQLDataRoot`.
+1. Navigate to the registry key for the default data path. Then, validate that the path is correct and has no extra spaces or characters. The registry key for the default data path is `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL10.<Instance Name>\Setup\SQLDataRoot`.
 
-   If the registry key has the correct data path and you continue to receive the error, follow these steps:
+   If the registry key has the correct data path, and you continue to receive the error, follow these steps:
 
    1. Navigate to the registry key: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL10.<Instance Name>\MSSQLServer\Parameters`.
 
-   1. Review and change the value to match the value from `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL10.<Instance Name>\Setup\SQLDataRoot`.
+   1. Review and change the value of **Data Path** to match the value in `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL10.<Instance Name>\Setup\SQLDataRoot`.
