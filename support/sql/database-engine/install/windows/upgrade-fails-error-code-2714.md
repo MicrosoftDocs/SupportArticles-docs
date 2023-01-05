@@ -39,7 +39,7 @@ Restore master from a full backup, repair it, or rebuild it. For more informatio
 
 This error occurs when the upgrade script fails to recreate the **DatabaseMailUserRole** schema in the MSDB database. This issue can happen when the **DatabaseMailUserRole** schema isn't owned by the **DatabaseMailUserRole** role. For example, the schema is owned by `dbo`.  
 
-For more information about database upgrade scripts that are executed during CU or SP installation, see [Troubleshooting upgrade script failures when applying an update](troubleshoot-upgrade-script-failures-applying-update.md).
+For more information about database upgrade scripts that are executed during CU or SP installation, see [Troubleshooting upgrade script failures when applying an update](troubleshoot-upgrade-script-failures-apply-update.md).
 
 ## Resolution
 
