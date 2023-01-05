@@ -41,7 +41,12 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 - Windows 7 Enterprise
 - Windows Server, version 1709
 - Windows Server, version 1803
-
+- Windows Server 2012 R2 Datacenter
+-	Windows Server 2012 R2 Standard
+-	Windows Server 2012 Datacenter
+-	Windows Server 2012 Standard
+-	Windows Server 2008 R2 Datacenter
+-	Windows Server 2008 R2 Standard
 
 ## In-place system upgrade process for a Windows 10 VM
 
@@ -61,10 +66,6 @@ This process requires 45-60 minutes to complete and for the VM to restart. To do
 8. The update will download and install. User settings and data will be preserved, and the VM will restart automatically.
 
 If you have general questions about this procedure, post to [Microsoft Q&A](/answers/topics/azure-virtual-machines.html) and add the `azure-virtual-machines` tag to your question.
-
-## In-place system upgrade process for Windows Server 2016 and higher
-
-Azure supports in-place upgrade to Windows Server 2019 or Windows Server 2022.  For more information on creating upgrade media in Azure and performing an in-place upgrade, see https://review.learn.microsoft.com/en-us/azure/virtual-machines/windows-in-place-upgrade?branch=pr-en-us-222834 
 
 ## Workaround
 
