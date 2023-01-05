@@ -127,8 +127,6 @@ To configure the public folder to accept messages from external senders, follow 
     - Clear the check box for **Require that all senders are authenticated**.
     - Select **All senders**.
 
-   ![Public folder delivery restrictions to help fix DSN 5.7.135.](../../media/0b1eed9e-0da4-4c75-a0e5-17ce93ae0663.png)
-
    :::image type="content" source="media/fix-error-code-550-5-7-1-in-exchange-online/delivery-restrictions.png" alt-text="Screenshot of the Message Delivery Restrictions page. The Require that all senders are authenticated check box is cleared." border="false":::
 
 4. Click **Save**.

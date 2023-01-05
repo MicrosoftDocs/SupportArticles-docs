@@ -222,7 +222,7 @@
         - name: NDR
           items:
             - name: Fix email delivery issues for error code 5.1.8
-              href: ../../email-delivery/ndr/fix-error-code-5-1-8-in-exchange-online.md
+              href: ../email-delivery/ndr/fix-error-code-5-1-8-in-exchange-online.md
         - name: 5.7.1. Unable To Relay NDR
           href: ../email-delivery/unable-to-relay-blocked-by-allow-list.md
         - name: 550 5.1.1 ExRecipNotFound NDR
