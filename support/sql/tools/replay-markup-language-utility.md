@@ -57,7 +57,7 @@ The current version of RML Utilities for SQL Server supersedes any earlier versi
 - After you install the [Database Experimentation Assistant](https://www.microsoft.com/download/details.aspx?id=54090), you will find the RML tools (`ReadTrace` and `OStress`) present in the `C:\Program Files (x86)\Microsoft Corporation\Database Experimentation Assistant\Dependencies\X64\` folder.
 
 > [!NOTE]
-> Microsoft provides RML Utilities for SQL Server as is. Microsoft Customer Support Services (CSS) doesn't provide support or updates for the RML Utilities for SQL Server. If you have a suggestion or you want to report a bug, you can use the e-mail address in the "Problems and Assistance" topic in the Help file (_RML Help.pdf_). The Help file is included together with the RML Utilities for SQL Server.
+> Microsoft provides RML Utilities for SQL Server as is. Microsoft Customer Support Services (CSS) doesn't provide support or updates. If you have a suggestion or you want to report a bug, you can use the e-mail address in the "Problems and Assistance" topic in the Help file (_RML Help.pdf_). The Help file is included together with the RML Utilities for SQL Server.
 
 ## Benefits of RML Utilities for SQL Server
 
