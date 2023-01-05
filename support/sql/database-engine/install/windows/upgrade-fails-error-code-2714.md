@@ -53,7 +53,7 @@ Follow these steps to solve the issue:
 
 1. Delete the schema named **DatabaseMailuserRole**.  
 
-1. Remove trace flag 902 from the item **Startup Parameters** and restart SQL Server.
+1. Remove trace flag 902 from the **Startup Parameters** item and restart SQL Server.
 
 Once SQL Server starts without trace flag 902, the upgrade script will be executed again, and the **DatabaseMailUserRole** schema is recreated.
 
