@@ -73,7 +73,7 @@ Once SQL Server starts without trace flag 902, the upgrade script will execute a
 
 ## Potential causes and resolutions
 
-- User options causing transactions to fail.
+- User options causing transactions to fail
 
    Connect to SQL Server, use [Configure the user options Server Configuration Option](/sql/database-engine/configure-windows/configure-the-user-options-server-configuration-option) to identify what option(s) may cause the issue, and remove the conflicting setting.
 
@@ -86,7 +86,7 @@ Once SQL Server starts without trace flag 902, the upgrade script will execute a
    GO
    ```
 
-- Orphaned users causing transactions to fail:
+- Orphaned users causing transactions to fail
 
    Check for orphaned users by using a query like the following one:
 
@@ -101,7 +101,7 @@ Once SQL Server starts without trace flag 902, the upgrade script will execute a
 
    More information on troubleshooting orphaned users, see [Troubleshoot orphaned users (SQL Server)](/sql/sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server).
 
-- 
+- Orphaned jobs causing transactions to fail
 
    Check for orphaned jobs by using a query like the following one:
 
