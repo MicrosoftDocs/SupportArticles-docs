@@ -37,7 +37,7 @@ MSOAID is a tool that you can use to diagnose authentication issues. You can rep
 1. Select **Next**, and follow the prompts until MSOAID indicates that the diagnostic collection has started.
 1. Reproduce the issue that you have to troubleshoot in Office or Windows.  
 1. Select **Finish**, and wait for MSOAID to stop collecting diagnostics.
-1. To copy the location of the diagnostics that are collected by MSOAID, select **Copy Path**. The file is usually saved to the *%TEMP%* folder in Windows.
+1. To copy the location of the diagnostics that are collected by MSOAID, select **Copy Path**. The file is usually saved to the *%TEMP%* folder of the administrator account that you use to run MSOAID.
 
     :::image type="content" source="media/use-msoaid-for-authentication-issues/copy-path.png" alt-text="Screenshot of the Microsoft Office Authentication/Identity Diagnostic window that lists the filepath to which the collected diagnostics are saved." border="false":::
 
