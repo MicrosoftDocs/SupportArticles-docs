@@ -32,9 +32,9 @@ Script level upgrade for database 'master' failed because upgrade step 'msdb110_
 
 ## Cause
 
-The update process may run some upgrade scripts within a transaction. These update scripts are designed with an assumption that users don't make changes to system objects and associated permissions. If you inadvertently make any changes to system objects or permissions, some of these scripts may fail and the associated transaction may become orphaned and left open. In this scenario, when setup executes an upgrade script that sets some configuration value using `sp_configure`, the error 574 occurs. The actual cause of setup failure should be determined by reviewing entries that are logged before the error 574.
+The update process may run some upgrade scripts within a transaction. These update scripts are designed with an assumption that users don't make changes to system objects and associated permissions. If you inadvertently make any changes to system objects or permissions, some of these scripts may fail, and the associated transaction may become orphaned and remain open. In this scenario, when the setup program executes an upgrade script that uses `sp_configure` to set some configuration values, error 574 occurs. The actual cause of the setup failure should be determined by reviewing entries that are logged before error 574.
 
-For example, a script like the following one can result in the error 574:
+For example, a script like the following one can result in error 574:
 
 ```sql
 BEGIN TRAN
@@ -50,16 +50,16 @@ COMMIT TRAN
 To solve the issue, follow these steps:
 
 1. Start SQL Server with [trace flag 902](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf902). For more information, see <Steps to start SQL with trace flag 902>.
-1. Open the SQL Server error log and review messages prior to the occurrence of the error 574 to identify the failing transaction (see the following example pattern).
-1. Fix the cause of the issue.
-1. Remove trace flag 902 from the item **Startup Parameters** and restart SQL Server.
+1. Open the SQL Server error log and review the messages prior to error 574 to identify the failed transaction (see the following [example pattern](#example-pattern-issues-granting-permissions-to-system-role)).
+1. Fix the failed transaction according to the information in the [Potential causes and solutions](#potential-causes-and-solutions) section.
+1. Remove trace flag 902 from the **Startup Parameters** item and restart SQL Server.
 
-Once SQL Server starts without trace flag 902, the upgrade script will execute again.
+Once SQL Server starts without trace flag 902, the upgrade script will be executed again.
 
 - If the SP/CU upgrade script completes successfully, you can check the SQL Server error log and bootstrap folder to verify.
 - If the upgrade script fails again, check the SQL Server error log for other errors and troubleshoot the new errors.
 
-## Example pattern: issues granting permissions to system role
+### Example pattern: Issues granting permissions to system role
 
 ```Output
 2020-08-17 09:38:12.09 spid11s Adding user 'hostname\svc_sqlagent' to SQLAgentUserRole msdb role...
@@ -71,13 +71,13 @@ Once SQL Server starts without trace flag 902, the upgrade script will execute a
 2020-08-17 09:38:12.10 spid11s Adding user '##MS_SSISServerCleanupJobLogin##' to SQLAgentUserRole msdb role...
 ```
 
-## Potential causes and resolutions
+## Potential causes and solutions
 
-- User options causing transactions to fail
+- User options cause transactions to fail.
 
-   Connect to SQL Server, use [Configure the user options Server Configuration Option](/sql/database-engine/configure-windows/configure-the-user-options-server-configuration-option) to identify what option(s) may cause the issue, and remove the conflicting setting.
+   **Solution**: Connect to SQL Server, [configure the user options Server Configuration Option](/sql/database-engine/configure-windows/configure-the-user-options-server-configuration-option) to identify options that may cause the issue, and remove the conflicting setting.
 
-   For example, Microsoft support had seen instances where the setting [IMPLICIT_TRANSACTIONS](/sql/t-sql/statements/set-implicit-transactions-transact-sql) causes setup to fail. Alternately, if you're unable to identify the conflicting user option, remove all the user options by using the following script in SQL Server Management Studio (SSMS):
+   For example, Microsoft support has seen instances where the setting for [IMPLICIT_TRANSACTIONS](/sql/t-sql/statements/set-implicit-transactions-transact-sql) causes the setup to fail. Alternately, if you can't identify the conflicting user option, remove all the user options by using the following script in SQL Server Management Studio (SSMS):
 
    ```sql
    EXEC sp_configure 'user options', '0'
@@ -86,9 +86,9 @@ Once SQL Server starts without trace flag 902, the upgrade script will execute a
    GO
    ```
 
-- Orphaned users causing transactions to fail
+- Orphaned users cause transactions to fail.
 
-   Check for orphaned users by using a query like the following one:
+   **Solution**: Check for orphaned users by using a query like the following one:
 
    ```sql
    SELECT dp.type_desc, dp.SID, dp.name AS user_name
@@ -99,11 +99,11 @@ Once SQL Server starts without trace flag 902, the upgrade script will execute a
        AND authentication_type_desc = 'INSTANCE';
    ```
 
-   More information on troubleshooting orphaned users, see [Troubleshoot orphaned users (SQL Server)](/sql/sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server).
+   For more information on how to resolve orphaned users, see [Troubleshoot orphaned users (SQL Server)](/sql/sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server).
 
-- Orphaned jobs causing transactions to fail
+- Orphaned jobs cause transactions to fail.
 
-   Check for orphaned jobs by using a query like the following one:
+   **Solution**: Check for orphaned jobs by using a query like the following one:
 
    ```sql
    SELECT sj.name AS Job_Name,
