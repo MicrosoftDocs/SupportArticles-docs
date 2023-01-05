@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article describes a workaround for independent software vendors (ISVs) of remote display protocols to change the frame rate limit in a remote session.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows 11 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2885213
 
 ## Workaround
