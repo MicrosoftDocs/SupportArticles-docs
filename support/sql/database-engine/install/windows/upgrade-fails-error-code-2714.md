@@ -39,13 +39,13 @@ Restore master from a full backup, repair it, or rebuild it. For more informatio
 
 This error occurs when the upgrade script fails to recreate the **DatabaseMailUserRole** schema in the MSDB database. This issue can happen when the **DatabaseMailUserRole** schema isn't owned by the **DatabaseMailUserRole** role. For example, the schema is owned by `dbo`.  
 
-For more information about database upgrade scripts that are executed during CU or SP installation, see <link to the landing page>.
+For more information about database upgrade scripts that are executed during CU or SP installation, see [Troubleshooting upgrade script failures when applying an update](troubleshoot-upgrade-script-failures-applying-update.md).
 
 ## Resolution
 
 Follow these steps to solve the issue:
 
-1. Start SQL Server with [trace flag 902](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf902). For more information, see <Steps to start SQL with trace flag 902>.
+1. Start SQL Server with [trace flag 902](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf902). For more information, see [Steps to start SQL Server with trace flag 902](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error#steps-to-start-sql-server-with-trace-flag-902).
 
 1. Open SQL Server Management Studio, connect to the SQL Server instance, and back up the `msdb` database.
 
