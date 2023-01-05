@@ -283,12 +283,36 @@
           href: ../email-delivery/property-length-too-long-error.md
         - name: Messages with attachments not delivered
           href: ../email-delivery/messages-with-attachments-are-not-delivered.md
-        - name: Non-delivery report error codes
-          href: ../email-delivery/mail-issues.md
         - name: NDR
           items:
+            - name: 5.7.1. Unable To Relay NDR
+              href: ../email-delivery/ndr/unable-to-relay-blocked-by-allow-list.md
+            - name: 550 5.1.1 ExRecipNotFound NDR
+              href: ../email-delivery/ndr/exrecipnotfound-ndr.md
+            - name: 550 5.1.10 RecipientNotFound NDR
+              href: ../email-delivery/ndr/recipientnotfound-ndr.md
+            - name: 550 5.2.0 BadPrimary NDR
+              href: ../email-delivery/ndr/badprimary-ndr.md
+            - name: 550 5.7.64 TenantAttribution
+              href: ../email-delivery/ndr/relay-access-denied-smtp.md
+            - name: 550 5.7.64 TenantAttribution NDR
+              href: ../email-delivery/ndr/tenantattribution-ndr.md
+            - name: 550 x-dg-ref header is too long NDR
+              href: ../email-delivery/ndr/550-x-dg-ref-header-too-long-ndr.md
+            - name: 550 5.6.0 APPROVAL.InvalidExpiry error
+              href: ../email-delivery/ndr/550-5-6-0-approval-invalidexpiry-cannot-read-expiry-poilcy-error.md
+            - name: 554 4.3.2 mailbox busy
+              href: ../email-delivery/ndr/remote-server-returned-mailbox-busy.md
+            - name: 554 5.2.0 STOREDRV.Deliver.Exception
+              href: ../email-delivery/ndr/mapiexceptionnotfound-ndr.md
+            - name: 554 5.2.2 mailbox full NDR
+              href: ../email-delivery/ndr/cannot-send-mail-mepf.md
+            - name: 554 5.6.0 Invalid message NDR
+              href: ../email-delivery/ndr/invalid-message-ndr.md
             - name: Fix email delivery issues for error code 550 5.1.10
               href: ../email-delivery/ndr/fix-error-code-550-5-1-10-in-exchange-online.md
+            - name: Non-delivery report error codes
+              href: ../email-delivery/ndr/mail-issues.md
     - name: Groups and Distribution Lists
       items:
         - name: A MailTip displays wrong number of recipients
