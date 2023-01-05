@@ -39,17 +39,17 @@ Then, create the SWAP file under the resource disk path or a custom path.
 
 ## Create a SWAP file under the resource disk path
 
-1. Create a new file named swap.sh under `/var/lib/cloud/scripts/per-boot` with the following script:
+1. Create a new file named swap.sh under `/var/lib/cloud/scripts/per-boot` with the following script ('bc' should be installed on VM):
 
     ```bash
     #!/bin/sh
-    size=`df -h --output=target, avail | grep -i ^\/mnt | awk '{print $2}' | cut -b1,2`
+    size=`df -h --output=target,avail | grep -i ^\/mnt | awk '{print $2}' | cut -b1,2`
     swapsize=`echo "scale=0; ($size*0.3)/1" | bc`
     echo $swapsize
     dd if=/dev/zero of=/mnt/swapfile bs=1073741824 count=$swapsize
     chmod 0600 /mnt/swapfile
     mkswap /mnt/swapfile
-    swapon /mnt/resource/swapfile
+    swapon /mnt/swapfile
     swapon -a
     ```
 
@@ -85,7 +85,7 @@ Then, create the SWAP file under the resource disk path or a custom path.
 
     ```bash
     #!/bin/sh
-    size=`df -h --output=target, avail | grep -i azure\/resource | awk '{print $2}' | cut -b1,2`
+    size=`df -h --output=target,avail | grep -i azure\/resource | awk '{print $2}' | cut -b1,2`
     swapsize=`echo "scale=0; ($size*0.3)/1" | bc`
     echo $swapsize
     dd if=/dev/zero of=/azure/resource/swapfile bs=1073741824 count=$swapsize
