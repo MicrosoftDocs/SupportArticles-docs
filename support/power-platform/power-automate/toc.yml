@@ -173,6 +173,8 @@
           href: troubleshooting-tips-sql-queries.md
         - name: Troubleshoot direct connectivity issues
           href: troubleshoot-direct-connectivity-issues.md
+        - name: Troubleshoot issues with Power Automate browser extensions
+          href: web-extensions-policies.md
     - name: Solutions
       items:
         - name: Can't import solutions or publish changes
