@@ -2,7 +2,7 @@
 title: How to fix error code 5.1.8 (550 5.1.8 Access denied) in Exchange Online
 ms.author: v-six
 author: simonxjx
-manager: serdars
+manager: dcscontentpm
 ms.reviewer: 
 audience: Admin
 ms.topic: troubleshooting
@@ -27,7 +27,7 @@ Getting an error message that means the mail you sent wasn't delivered is frustr
 
 |&nbsp;|&nbsp;|&nbsp;|&nbsp;|
 |---|---|---|---|
-|![Email user icon.](media/fix-error-code-5-1-8-in-exchange-online/email-user-icon.png)|[I got this bounce message. How do I fix it?](#i-got-this-bounce-message-how-do-i-fix-it)|![Email admin icon](media/fix-error-code-5-1-8-in-exchange-online/email-admin-icon.png)|[I'm an email admin. How do I fix this email delivery issue?](#im-an-email-admin-how-do-i-fix-this-email-delivery-issue)|
+|:::image type="icon" source="media/email-user-icon.png":::|[I got this bounce message. How do I fix it?](#i-got-this-bounce-message-how-do-i-fix-it)|:::image type="icon" source="media/email-admin-icon.png":::|[I'm an email admin. How do I fix this email delivery issue?](#im-an-email-admin-how-do-i-fix-this-email-delivery-issue)|
 
 ## What is 550 5.1.8 and why did I get this bounce message?
 
@@ -51,11 +51,11 @@ The sending account might be compromised. You'll need to:
 
 ## Still need help with error code 5.1.8?
 
-[![Get help from the community forums.](media/fix-error-code-5-1-8-in-exchange-online/community-forum-icon.png)](https://answers.microsoft.com/)
+[:::image type="icon" source="media/community-forum-icon.png":::](https://answers.microsoft.com/)
 
-[![Admins: Sign in and create a service request.](media/fix-error-code-5-1-8-in-exchange-online/create-service-request-icon.png)](https://admin.microsoft.com/AdminPortal/Home#/support)
+[:::image type="icon" source="media/create-service-request-icon.png":::](https://admin.microsoft.com/AdminPortal/Home#/support)
 
-[![Admins: Call Support.](media/fix-error-code-5-1-8-in-exchange-online/call-support-icon.png)](/microsoft-365/Admin/contact-support-for-business-products)
+[:::image type="icon" source="media/call-support-icon.png":::](/microsoft-365/Admin/contact-support-for-business-products)
 
 ## See also
 
