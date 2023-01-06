@@ -9,6 +9,7 @@ manager: dcscontentpm
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
+  - CI 167832
 localization_priority: Normal
 search.appverid: 
   - MET150
@@ -69,7 +70,7 @@ Make sure that the new certificate is sent from on-premises Exchange to Exchange
 2. At this point, you can locate the matching inbound connector in Microsoft 365 and verify that the certificate value matches. In this example, the `TlsSenderCertificateName` value must be set to *.contoso.com.
 
     > [!NOTE]
-    > To relay messages through Microsoft 365, the domain of the sender or the domain of contoso.com must be verified in the Microsoft 365 tenant. Otherwise, you may see an error similar to that described in Symptoms but also an explicit ATT36 error. (For information about the ATT36 error, see [Configure a certificate-based connector to relay email messages through Microsoft 365](./office-365-notice.md).)
+    > To relay messages through Microsoft 365, the domain of the sender or the domain of contoso.com must be verified in the Microsoft 365 tenant. Otherwise, you may see an error similar to that described in Symptoms but also an explicit ATT36 error. (For information about the ATT36 error, see [Configure a certificate-based connector to relay email messages through Microsoft 365](../office-365-notice.md).)
 
 ## More information
 

@@ -10,6 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
+  - CI 167832
 ms.reviewer: scottlan
 appliesto: 
   - Exchange Online Protection
@@ -39,7 +40,7 @@ For moderated distribution groups in your Exchange organization, you must create
 
 To set the retention policy tag, do the following:
 
-1. From a PowerShell prompt, open Exchange Online PowerShell. For more information, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
+1. From a PowerShell prompt, open Exchange Online PowerShell. For more information, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 1. Run the following cmdlets:
 
@@ -48,4 +49,4 @@ To set the retention policy tag, do the following:
     New-RetentionPolicyTag -IsDefaultModeratedRecipientsPolicyTag -Name TagforModeration -AgeLimitForRetention 90
     ```
 
-This creates *Personal* retention tag on the retention policy. For more information on retention tag types, see [Retention tags and retention policies in Exchange Server](/Exchange/policy-and-compliance/mrm/retention-tags-and-retention-policies?view=exchserver-2019&preserve-view=true).
+This creates *Personal* retention tag on the retention policy. For more information on retention tag types, see [Retention tags and retention policies in Exchange Server](/Exchange/policy-and-compliance/mrm/retention-tags-and-retention-policies).
