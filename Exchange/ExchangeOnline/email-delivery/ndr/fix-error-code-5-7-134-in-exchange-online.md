@@ -67,7 +67,7 @@ To open the Classic EAC, click **Classic Exchange admin center** on the left pan
 
 #### Classic EAC
 
-1. In the Classic EAC, go to **Recipients** \> **Mailboxes** > select the mailbox from the list, and then click **Edit** :::image type="icon" source="media/fix-error-code-5-7-134-in-exchange-online/edit-icon.png":::.
+1. In the Classic EAC, go to **Recipients** \> **Mailboxes** > select the mailbox from the list, and then click **Edit** :::image type="icon" source="media/edit-icon.png":::.
 
    :::image type="content" source="media/fix-error-code-5-7-134-in-exchange-online/mailbox.png" alt-text="Screenshot of the mailbox tab in which you can find mailboxes in Exchange admin center.":::
 
@@ -131,7 +131,7 @@ To configure the mailbox's allowed senders list, do the following steps:
 
 #### Classic EAC
 
-1. In the Classic EAC, go to **Recipients** \> **Mailboxes** > select the mailbox from the list, and then click **Edit** :::image type="icon" source="media/fix-error-code-5-7-134-in-exchange-online/edit-icon.png":::.
+1. In the Classic EAC, go to **Recipients** \> **Mailboxes** > select the mailbox from the list, and then click **Edit** :::image type="icon" source="media/edit-icon.png":::.
 
    :::image type="content" source="media/fix-error-code-5-7-134-in-exchange-online/mailbox.png" alt-text="Screenshot of the mailbox tab in which you can find mailboxes in Exchange admin center.":::
 
@@ -139,7 +139,7 @@ To configure the mailbox's allowed senders list, do the following steps:
 
 3. In the **Message delivery restrictions** dialog box that opens, configure the following settings in the **Accept messages from** section:
    - Clear the check box for **Require that all senders are authenticated**.
-   - Select **Only senders in the following list**, and then click **Add** :::image type="icon" source="media/fix-error-code-5-7-134-in-exchange-online/add-icon.png":::. In the **Select Members** dialog box that opens, select the external senders and the "all internal users" group.
+   - Select **Only senders in the following list**, and then click **Add** :::image type="icon" source="media/add-icon.png":::. In the **Select Members** dialog box that opens, select the external senders and the "all internal users" group.
    - Add the external senders and the "all internal users" group.
    - When you're finished, click **OK**.
 

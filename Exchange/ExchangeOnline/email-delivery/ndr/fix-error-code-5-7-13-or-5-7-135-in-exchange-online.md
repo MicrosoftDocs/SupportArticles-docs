@@ -45,7 +45,7 @@ To open the Exchange admin center (EAC), see [Exchange admin center in Exchange 
 
 1. Navigate to **Public folders** \> **Public folders**.
 
-2. Choose a public folder from the list, and then click **Edit** :::image type="icon" source="media/fix-error-code-5-7-13-or-5-7-135-in-exchange-online/edit-icon.png":::. The public folder properties screen appears.
+2. Choose a public folder from the list, and then click **Edit** :::image type="icon" source="media/edit-icon.png":::. The public folder properties screen appears.
 
     :::image type="content" source="media/fix-error-code-5-7-13-or-5-7-135-in-exchange-online/editing-a-public-folder.png" alt-text="The screen on which the details of a public folder can be edited.":::
 
@@ -63,7 +63,7 @@ To open the Exchange admin center (EAC), see [Exchange admin center in Exchange 
 
 **In Classic EAC** 
 
-1. In the Classic EAC, go to **Public folders** \> **Public folders** \> select the public folder from the list, and then click **Edit** :::image type="icon" source="media/fix-error-code-5-7-13-or-5-7-135-in-exchange-online/edit-icon.png":::.
+1. In the Classic EAC, go to **Public folders** \> **Public folders** \> select the public folder from the list, and then click **Edit** :::image type="icon" source="media/edit-icon.png":::.
 
    :::image type="content" source="media/fix-error-code-5-7-13-or-5-7-135-in-exchange-online/public-folder.png" alt-text="Screenshot of the public folder lists." border="false":::
 
@@ -95,7 +95,7 @@ To configure the public folder's allowed senders list, open the EAC do the follo
 
 1. Navigate to **Public folders** \> **Public folders**.
 
-2. Choose a public folder from the list, and then click **Edit** :::image type="icon" source="media/fix-error-code-5-7-13-or-5-7-135-in-exchange-online/edit-icon.png":::. The public folder properties screen appears.
+2. Choose a public folder from the list, and then click **Edit** :::image type="icon" source="media/edit-icon.png":::. The public folder properties screen appears.
 
     :::image type="content" source="media/fix-error-code-5-7-13-or-5-7-135-in-exchange-online/editing-a-public-folder.png" alt-text="The screen on which the details of a public folder can be edited.":::
 
@@ -119,7 +119,7 @@ To configure the public folder's allowed senders list, open the EAC do the follo
  
 **In Classic EAC** 
 
-1. In the Classic EAC, go to **Public folders** \> **Public folders** \> select the public folder from the list, and then click **Edit** :::image type="icon" source="media/fix-error-code-5-7-13-or-5-7-135-in-exchange-online/edit-icon.png":::.
+1. In the Classic EAC, go to **Public folders** \> **Public folders** \> select the public folder from the list, and then click **Edit** :::image type="icon" source="media/edit-icon.png":::.
 
    :::image type="content" source="media/fix-error-code-5-7-13-or-5-7-135-in-exchange-online/public-folder.png" alt-text="Screenshot of the public folder lists." border="false":::
 
@@ -127,7 +127,7 @@ To configure the public folder's allowed senders list, open the EAC do the follo
 
    - Clear the check box for **Require that all senders are authenticated**.
 
-   - Select **Only senders in the following list**, and then click **Add** :::image type="icon" source="media/fix-error-code-5-7-13-or-5-7-135-in-exchange-online/add-icon.png":::. In the **Select Members** dialog box that opens, select the external senders and the "all internal users" group.
+   - Select **Only senders in the following list**, and then click **Add** :::image type="icon" source="media/add-icon.png":::. In the **Select Members** dialog box that opens, select the external senders and the "all internal users" group.
    - Add the external senders and the "all internal users" group to the allowed senders list.
    - When you're finished, click **OK**.
 

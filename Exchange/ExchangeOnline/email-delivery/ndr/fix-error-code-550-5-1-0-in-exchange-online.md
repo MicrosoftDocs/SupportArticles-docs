@@ -77,7 +77,7 @@ You can only clear your Auto-Complete list in the light version of Outlook on th
 
 - Configure your Outlook on the web settings to only use the light version of Outlook on the web (the change takes effect the next time you open the mailbox):
 
-   1. In Outlook on the web, click **Settings** :::image type="icon" source="media/fix-error-code-550-5-1-0-in-exchange-online/setting-icon.png":::.
+   1. In Outlook on the web, click **Settings** :::image type="icon" source="media/setting-icon.png":::.
 
    2. In the **Search all settings** box, type **light** and select **Outlook on the web version** in the results.
 

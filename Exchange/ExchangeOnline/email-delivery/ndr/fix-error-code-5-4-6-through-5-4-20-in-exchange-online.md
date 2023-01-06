@@ -90,7 +90,7 @@ To fix the problem, configure a dedicated connector to be used for hybrid. This 
 
 4. Click the **connectors** tab. 
 
-5. Select the connector that's used for hybrid, and click **Edit** :::image type="icon" source="media/fix-error-code-5-4-6-through-5-4-20-in-exchange-online/edit-icon.png":::.
+5. Select the connector that's used for hybrid, and click **Edit** :::image type="icon" source="media/edit-icon.png":::.
 
 6. Go to **How do you want to route email messages** screen.
 
@@ -117,7 +117,7 @@ To fix the problem, configure a dedicated connector (from Office 365 to your org
 
 2. In the EAC, click **Mail Flow** \> **Connectors**.
 
-3. Select the connector that's used for hybrid, and then click **Edit** :::image type="icon" source="media/fix-error-code-5-4-6-through-5-4-20-in-exchange-online/edit-icon.png":::. Verify the following information:
+3. Select the connector that's used for hybrid, and then click **Edit** :::image type="icon" source="media/edit-icon.png":::. Verify the following information:
    - **General**: Verify that the **On-premises** option is selected.
    - **Scope**: Verify that the  **Accepted domains** option is empty with no data.
 

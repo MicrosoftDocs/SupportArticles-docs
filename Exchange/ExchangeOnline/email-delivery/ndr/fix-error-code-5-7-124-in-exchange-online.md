@@ -77,9 +77,9 @@ To open the Exchange admin center (EAC), see [Exchange admin center in Exchange 
 
 #### Classic EAC
 
-1. In the Classic EAC, go to **Recipients** \> **Groups** \> select the group from the list, and then click **Edit** :::image type="icon" source="media/fix-error-code-5-7-124-in-exchange-online/edit-icon.png":::.
+1. In the Classic EAC, go to **Recipients** \> **Groups** \> select the group from the list, and then click **Edit** :::image type="icon" source="media/edit-icon.png":::.
 
-2. In the group properties dialog box that opens, go to **Delivery management** and then click **Add** :::image type="icon" source="media/fix-error-code-5-7-124-in-exchange-online/add-icon.png":::.
+2. In the group properties dialog box that opens, go to **Delivery management** and then click **Add** :::image type="icon" source="media/add-icon.png":::.
 
    :::image type="content" source="media/fix-error-code-5-7-124-in-exchange-online/delivery-management.png" alt-text="Screenshot of the delivery management page in which the add icon is highlighted.":::
 
@@ -118,13 +118,13 @@ If you decide that you don't need to restrict the message senders to this group,
 
 #### Classic EAC
 
-1. In the EAC, go to **Recipients** \> **Groups** \> select the group from the list, and then click **Edit** :::image type="icon" source="media/fix-error-code-5-7-124-in-exchange-online/edit-icon.png":::.
+1. In the EAC, go to **Recipients** \> **Groups** \> select the group from the list, and then click **Edit** :::image type="icon" source="media/edit-icon.png":::.
 
 2. In the group properties dialog box that opens, go to **Delivery management**.
 
 3. In the **Distribution Group** box, select **Delivery management** and configure the following settings:
 
-   - Remove any entries in the allowed senders list by selecting one entry, pressing CTRL + A to select all entries, and then clicking **Remove** :::image type="icon" source="media/fix-error-code-5-7-124-in-exchange-online/remove-icon.png":::.
+   - Remove any entries in the allowed senders list by selecting one entry, pressing CTRL + A to select all entries, and then clicking **Remove** :::image type="icon" source="media/remove-icon.png":::.
 
      :::image type="content" source="media/fix-error-code-5-7-124-in-exchange-online/remove-senders.png" alt-text="Screenshot of the delivery management page in which the removing icon is highlighted.":::
 

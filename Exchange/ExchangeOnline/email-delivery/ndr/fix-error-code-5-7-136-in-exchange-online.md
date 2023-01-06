@@ -46,7 +46,7 @@ To open the Classic EAC, click **Classic Exchange admin center** on the left pan
 
 ### Method 1: Allow all internal and external senders to send messages to this mail user
 
-1. Go to **Recipients** \> **Contacts** > select the mail user from the list, and then click **Edit** :::image type="icon" source="media/fix-error-code-5-7-136-in-exchange-online/edit-icon.png":::.
+1. Go to **Recipients** \> **Contacts** > select the mail user from the list, and then click **Edit** :::image type="icon" source="media/edit-icon.png":::.
 
    :::image type="content" source="media/fix-error-code-5-7-136-in-exchange-online/contacts.png" alt-text="Screenshot of the contacts tab in which you can see mail users.":::
 
@@ -76,7 +76,7 @@ Instead of allowing all external senders to send messages to this mail user, you
 
 To configure the mail user's allowed senders list, open the Classic EAC do the following steps:
 
-1. Go to **Recipients** \> **Contacts** > select the mail user from the list, and then click **Edit** :::image type="icon" source="media/fix-error-code-5-7-136-in-exchange-online/edit-icon.png":::.
+1. Go to **Recipients** \> **Contacts** > select the mail user from the list, and then click **Edit** :::image type="icon" source="media/edit-icon.png":::.
 
    :::image type="content" source="media/fix-error-code-5-7-136-in-exchange-online/contacts.png" alt-text="Screenshot of the contacts tab in which you can see mail users.":::
 
@@ -88,7 +88,7 @@ To configure the mail user's allowed senders list, open the Classic EAC do the f
 
 3. Configure the following settings in the **Accept messages from** section:
    - Clear the check box for **Require that all senders are authenticated**.
-   - Select **Only senders in the following list**, and then click **Add** :::image type="icon" source="media/fix-error-code-5-7-136-in-exchange-online/add-icon.png":::. In the **Select Members** dialog box that opens, select the external senders and the "all internal users" group. 
+   - Select **Only senders in the following list**, and then click **Add** :::image type="icon" source="media/add-icon.png":::. In the **Select Members** dialog box that opens, select the external senders and the "all internal users" group. 
    - Add the external senders and the "all internal users" group to the allowed senders list.
    - When you're finished, click **OK**.
 

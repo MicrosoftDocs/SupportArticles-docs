@@ -63,7 +63,7 @@ To open the Exchange admin center (EAC), see [Exchange admin center in Exchange 
 
 #### Classic EAC
 
-1. In the EAC, go to **Recipients** \> **Groups** \> select the group from the list, and then click **Edit** :::image type="icon" source="media/fix-error-code-5-7-133-in-exchange-online/edit-icon.png":::.
+1. In the EAC, go to **Recipients** \> **Groups** \> select the group from the list, and then click **Edit** :::image type="icon" source="media/edit-icon.png":::.
 
     :::image type="content" source="media/fix-error-code-5-7-133-in-exchange-online/groups.png" alt-text="Screenshot of the group lists.":::
 
@@ -111,12 +111,12 @@ To configure the group's allowed senders list, perform the following steps:
 
 #### Classic EAC
 
-1. Go to **Recipients** \> **Groups** \> select the group from the list, and then click **Edit** :::image type="icon" source="media/fix-error-code-5-7-133-in-exchange-online/edit-icon.png":::.
+1. Go to **Recipients** \> **Groups** \> select the group from the list, and then click **Edit** :::image type="icon" source="media/edit-icon.png":::.
 
 2. In the group properties dialog box that opens, go to **Delivery management** and configure the following settings:
    - Select **Senders inside and outside of my organization**.
 
-   - Click **Add** :::image type="icon" source="media/fix-error-code-5-7-133-in-exchange-online/add-icon.png":::. In the **Select Allowed Senders** dialog box, select and add the external senders and the "all internal users" group. When you're finished, click **OK**.
+   - Click **Add** :::image type="icon" source="media/add-icon.png":::. In the **Select Allowed Senders** dialog box, select and add the external senders and the "all internal users" group. When you're finished, click **OK**.
 
      :::image type="content" source="media/fix-error-code-5-7-133-in-exchange-online/option-to-add-sender.png" alt-text="The screen on which the option to add a sender is displayed.":::
 

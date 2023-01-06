@@ -63,7 +63,7 @@ Open the EAC and use one of the following procedures based on the recipient type
 
 1. Go to **Recipients** \> **Mailboxes**.
 
-2. Select the mailbox from the list, and then click **Edit** :::image type="icon" source="media/fix-error-code-5-7-12-in-exchange-online/edit-icon.png":::. The mailbox properties screen appears.
+2. Select the mailbox from the list, and then click **Edit** :::image type="icon" source="media/edit-icon.png":::. The mailbox properties screen appears.
 
 3. Go to **Mailbox features** \> **Message Delivery Restrictions** \> and then click **View details**. The **message delivery restrictions** screen appears.
 
@@ -89,7 +89,7 @@ Open the EAC and use one of the following procedures based on the recipient type
 
 ##### Groups in the classic EAC
 
-1. Go to **Recipients** \> **Groups** \> select the group from the list, and then click **Edit** :::image type="icon" source="media/fix-error-code-5-7-12-in-exchange-online/edit-icon.png":::. The group properties screen appears.
+1. Go to **Recipients** \> **Groups** \> select the group from the list, and then click **Edit** :::image type="icon" source="media/edit-icon.png":::. The group properties screen appears.
 
 2. On the left pane, click **Delivery management**.
 
@@ -104,7 +104,7 @@ Open the EAC and use one of the following procedures based on the recipient type
 
 1. Go to **Recipients** \> **Contacts**.
 
-2. Select the mail user from the list, and then click **Edit** :::image type="icon" source="media/fix-error-code-5-7-12-in-exchange-online/edit-icon.png":::. The mail user properties screen appears.
+2. Select the mail user from the list, and then click **Edit** :::image type="icon" source="media/edit-icon.png":::. The mail user properties screen appears.
 
 3. Go to **Mailbox flow settings** \> **Message Delivery Restrictions** and click **View details**. The **Message delivery restrictions** screen appears.
 
@@ -132,7 +132,7 @@ Open the EAC and use one of the following procedures based on the recipient type
 
 1. Go to **Recipients** \> **Mailboxes**.
 
-2. Select a shared mailbox from the list, and then click **Edit** :::image type="icon" source="media/fix-error-code-5-7-12-in-exchange-online/edit-icon.png":::. The shared mailbox properties screen appears.
+2. Select a shared mailbox from the list, and then click **Edit** :::image type="icon" source="media/edit-icon.png":::. The shared mailbox properties screen appears.
 
 3. Go to **Mailbox features** \> **Message Delivery Restrictions** \> and then click **View details**. The **Message delivery restrictions** screen appears.
 
@@ -186,13 +186,13 @@ To configure the recipient's allowed senders list, open the EAC and use one of t
 
 1. Go to **Recipients** \> **Mailboxes**.
 
-2. Select the mailbox from the list, and then click **Edit** :::image type="icon" source="media/fix-error-code-5-7-12-in-exchange-online/edit-icon.png":::. The mailbox properties screen appears.
+2. Select the mailbox from the list, and then click **Edit** :::image type="icon" source="media/edit-icon.png":::. The mailbox properties screen appears.
 
 3. Go to **Mailbox features** \> **Message Delivery Restrictions** \> and then click **View details**. The **message delivery restrictions** screen appears.
 
 4. Configure the following settings in the **Accept messages from** section:
    - Clear the check box for **Require that all senders are authenticated**.
-   - Select **Only senders in the following list**, and then click **Add** :::image type="icon" source="media/fix-error-code-5-7-12-in-exchange-online/add-icon.png":::. In the **Select Members** dialog box that opens, select external senders and the "all internal users" group. 
+   - Select **Only senders in the following list**, and then click **Add** :::image type="icon" source="media/add-icon.png":::. In the **Select Members** dialog box that opens, select external senders and the "all internal users" group. 
    - Add the external senders and the "all internal users" group to the list of the allowed senders of the recipient.
    - When you're finished, click **OK**.
 

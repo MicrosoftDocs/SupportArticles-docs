@@ -101,7 +101,7 @@ To configure the public folder to accept messages from external senders, follow 
 
 2. Go to **Public folders** \> **Public folders**.
 
-3. Choose a public folder from the list, and then click **Edit** :::image type="icon" source="media/fix-error-code-550-5-7-1-in-exchange-online/edit-icon.png":::.
+3. Choose a public folder from the list, and then click **Edit** :::image type="icon" source="media/edit-icon.png":::.
 
    :::image type="content" source="media/fix-error-code-550-5-7-1-in-exchange-online/editing-a-public-folder.png" alt-text="The screen on which the details of a public folder can be edited.":::
 
@@ -119,7 +119,7 @@ To configure the public folder to accept messages from external senders, follow 
 
 1. Open the Exchange admin center (EAC). For more information, see [exchange admin center in exchange online](/Exchange/exchange-admin-center).
 
-2. In the EAC, go to **Public folders** \> **Public folders** \> select the public folder from the list, and then click **Edit** :::image type="icon" source="media/fix-error-code-550-5-7-1-in-exchange-online/edit-icon.png":::.
+2. In the EAC, go to **Public folders** \> **Public folders** \> select the public folder from the list, and then click **Edit** :::image type="icon" source="media/edit-icon.png":::.
 
    :::image type="content" source="media/fix-error-code-550-5-7-1-in-exchange-online/public-folders.png" alt-text="Screenshot of public folder lists under the Public folders tab." border="false":::
 
