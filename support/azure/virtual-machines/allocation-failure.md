@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting Azure VM allocation failures
-description: Troubleshoot allocation failures when you create, restart, or resize a VM in Azure
+description: Troubleshoot allocation failures when you create, or resize a VM in Azure
 services: virtual-machines
 documentationcenter: ''
 author: genlin
@@ -107,3 +107,5 @@ When an allocation request is pinned to a cluster, there's a higher chance of fa
 :::image type="content" source="media/virtual-machines-common-allocation-failure/allocation-failed-at-pinned-cluster.png" alt-text="Diagram 3 shows allocation failed at pinned cluster: No free resource available and Diagram 4 shows allocation failed at pinned cluster: Size not supported.":::
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+
+Description needs a change: Restart needs to be removed from the description as Restart process does not release cores as the container does not get destroyed during restart.
