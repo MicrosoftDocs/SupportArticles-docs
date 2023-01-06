@@ -271,9 +271,9 @@
               href: ../email-delivery/ndr/fix-error-code-550-5-1-10-in-exchange-online.md   
             - name: 550 5.2.0 RESOLVER.ADR.BadPrimary
               href: ../email-delivery/ndr/badprimary-ndr.md
-            - name: 550 5.7.64 TenantAttribution
+            - name: 550 5.7.64 TenantAttribution when sending emails externally
               href: ../email-delivery/ndr/relay-access-denied-smtp.md
-            - name: 550 5.7.64 TenantAttribution; Relay Access Denied SMTP
+            - name: 550 5.7.64 TenantAttribution when sending emails through EOP
               href: ../email-delivery/ndr/tenantattribution-ndr.md
             - name: 550 x-dg-ref header is too long
               href: ../email-delivery/ndr/550-x-dg-ref-header-too-long-ndr.md
@@ -287,7 +287,7 @@
               href: ../email-delivery/ndr/cannot-send-mail-mepf.md
             - name: 554 5.6.0 Invalid message content
               href: ../email-delivery/ndr/invalid-message-ndr.md
-            - name: AggregateGroupMailbox full
+            - name: AggregateGroupMailbox is full
               href: ../email-delivery/ndr/ndr-received-send-emails-microsoft365-groups.md  
     - name: Groups and Distribution Lists
       items:

@@ -1,5 +1,5 @@
 ---
-title: Mail delivery issues
+title: Non-delivery report (NDR) error codes
 ms.author: v-six
 author: simonxjx
 manager: dcscontentpm
@@ -22,7 +22,7 @@ ROBOTS: NOINDEX
 description: Get help for solving email connection and delivery problems.
 ms.date: 3/31/2022
 ---
-# Non-delivery report error codes
+# Non-delivery report (NDR) error codes
 
 When Microsoft 365 can't deliver email you sent, you'll receive an email notification called a [non-delivery report](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/non-delivery-reports-in-exchange-online). Find your error code for specific help with getting your email delivered:
 

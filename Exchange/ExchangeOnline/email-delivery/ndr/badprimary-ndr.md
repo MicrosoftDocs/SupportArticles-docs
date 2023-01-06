@@ -17,7 +17,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# (Remote Server returned 550 5.2.0 RESOLVER.ADR.BadPrimary) error when an Exchange Online user sends mail to an external contact
+# "550 5.2.0 RESOLVER.ADR.BadPrimary" when an Exchange Online user sends mail to an external contact
 
 _Original KB number:_&nbsp; 3076419
 
@@ -27,7 +27,7 @@ When an Exchange Online user tries to send email messages to an external contact
 
 > Delivery has failed to these recipients or groups:
 >
-> \<Recipient email address>
+> \<Recipient email address\>
 >
 > There's a problem with the recipient's mailbox. Please try resending the message. If the problem continues, please contact your email admin.
 >
