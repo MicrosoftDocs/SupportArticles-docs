@@ -1,5 +1,5 @@
 ---
-title: "Fix email delivery issues for error code 550 5.1.10 in Exchange Online"
+title: Fix email delivery issues for error code 550 5.1.10 in Exchange Online
 ms.author: v-six
 author: simonxjx
 manager: dcscontentpm
@@ -18,7 +18,7 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 5a04a25a-a34f-476b-afc6-007fb92f86a1
-description: "Learn how to fix email issues for error code 550 5.1.10 in Exchange Online (invalid recipient or backscatter)."
+description: Learn how to fix email issues for error code 550 5.1.10 in Exchange Online (invalid recipient or backscatter).
 ---
 
 # Fix email delivery issues for error code 550 5.1.10 in Exchange Online
