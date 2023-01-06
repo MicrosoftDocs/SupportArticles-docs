@@ -219,8 +219,6 @@
           href: ../email-alias/remove-an-email-alias.md
     - name: Email Delivery
       items:
-        - name: AggregateGroupMailbox full NDR
-          href: ../email-delivery/ndr-received-send-emails-microsoft365-groups.md
         - name: Administrative limit for this request was exceeded error
           href: ../email-delivery/administrative-limit-for-this-request-was-exceeded-error.md
         - name: Automatically forward email in transport rule
@@ -285,6 +283,8 @@
               href: ../email-delivery/ndr/cannot-send-mail-mepf.md
             - name: 554 5.6.0 Invalid message NDR
               href: ../email-delivery/ndr/invalid-message-ndr.md
+            - name: AggregateGroupMailbox full NDR
+              href: ../email-delivery/ndr/ndr-received-send-emails-microsoft365-groups.md
             - name: Fix email delivery issues for error code 550 5.1.10
               href: ../email-delivery/ndr/fix-error-code-550-5-1-10-in-exchange-online.md
             - name: Non-delivery report error codes
