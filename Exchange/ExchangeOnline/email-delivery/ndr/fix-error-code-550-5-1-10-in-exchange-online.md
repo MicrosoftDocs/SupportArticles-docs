@@ -1,5 +1,5 @@
 ---
-title: Fix email delivery issues for error code 550 5.1.10 in Exchange Online
+title: Fix NDR error 550 5.1.10 in Exchange Online
 ms.author: v-six
 author: simonxjx
 manager: dcscontentpm
@@ -21,7 +21,7 @@ ms.assetid: 5a04a25a-a34f-476b-afc6-007fb92f86a1
 description: Learn how to fix email issues for error code 550 5.1.10 in Exchange Online (invalid recipient or backscatter).
 ---
 
-# Fix email delivery issues for error code 550 5.1.10 in Exchange Online
+# Fix NDR error "550 5.1.10" in Exchange Online
 
 > [!IMPORTANT]
 > Mail flow rules are now available in the new Exchange admin center. [Try it now](https://admin.exchange.microsoft.com/#/transportrules)!
