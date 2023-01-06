@@ -549,6 +549,8 @@
       items:
         - name: Can't create modern public folders
           href: ../public-folders/cannot-create-modern-public-folders.md
+        - name: Export-ModernPublicFolderStatistics.ps1 script fails
+          href: ../public-folders/export-modernpublicfolderstatistics-script-fails.md
         - name: How to disable conflict message
           href: ../public-folders/disable-conflict-message.md
         - name: No active public folder mailboxes were found
