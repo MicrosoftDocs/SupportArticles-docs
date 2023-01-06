@@ -17,7 +17,7 @@ Each update for SQL Server includes scripts to update the system databases.
 
 - Starting from SQL Server 2008, when you upgrade or apply a patch on SQL Server, the update only upgrades the binaries, not the database and its objects.  
 
-- Once the upgrade completes and the service restarts for the first time, it starts the database upgrade using the script *msdb110_upgrade.sql* that's located in the folder: *C:\Program Files\Microsoft SQL Server\MSSQLXX.YYYY\MSSQL\Install\\*.
+- Once the upgrade completes and the service restarts for the first time, it starts the database upgrade using the script *msdb110_upgrade.sql* in the folder: *C:\Program Files\Microsoft SQL Server\MSSQLXX.YYYY\MSSQL\Install\\*.
 
 These scripts ensure that the system databases are ready for new fixes/features delivered as part of the corresponding Cumulative Updates (CU) or Service Packs (SP). A complete installation of CU and SP requires the successful execution of the database upgrade script. Failure to do so can cause unexpected issues with your SQL Server instance. Upgrade script execution failure is a common cause of CU and SP installation failures. This troubleshooting series covers common failures in this category and the steps you can take to solve them.
 
