@@ -219,6 +219,8 @@
           href: ../email-alias/remove-an-email-alias.md
     - name: Email Delivery
       items:
+        - name: AggregateGroupMailbox full NDR
+          href: ../email-delivery/ndr-received-send-emails-microsoft365-groups.md
         - name: Administrative limit for this request was exceeded error
           href: ../email-delivery/administrative-limit-for-this-request-was-exceeded-error.md
         - name: Automatically forward email in transport rule
@@ -257,38 +259,36 @@
           href: ../email-delivery/property-length-too-long-error.md
         - name: Messages with attachments not delivered
           href: ../email-delivery/messages-with-attachments-are-not-delivered.md
-        - name: NDR
+        - name: Non-delivery report (NDR)
           items:
-            - name: 5.7.1. Unable To Relay NDR
+            - name: NDR error codes
+              href: ../email-delivery/ndr/mail-issues.md
+            - name: 5.7.1. Unable To Relay
               href: ../email-delivery/ndr/unable-to-relay-blocked-by-allow-list.md
-            - name: 550 5.1.1 ExRecipNotFound NDR
+            - name: 550 5.1.1 RESOLVER.ADR.ExRecipNotFound
               href: ../email-delivery/ndr/exrecipnotfound-ndr.md
-            - name: 550 5.1.10 RecipientNotFound NDR
+            - name: 550 5.1.10 RESOLVER.ADR.RecipientNotFound
               href: ../email-delivery/ndr/recipientnotfound-ndr.md
-            - name: 550 5.2.0 BadPrimary NDR
+            - name: Fix email delivery issues for error 550 5.1.10
+              href: ../email-delivery/ndr/fix-error-code-550-5-1-10-in-exchange-online.md   
+            - name: 550 5.2.0 RESOLVER.ADR.BadPrimary
               href: ../email-delivery/ndr/badprimary-ndr.md
             - name: 550 5.7.64 TenantAttribution
               href: ../email-delivery/ndr/relay-access-denied-smtp.md
-            - name: 550 5.7.64 TenantAttribution NDR
+            - name: 550 5.7.64 TenantAttribution; Relay Access Denied SMTP
               href: ../email-delivery/ndr/tenantattribution-ndr.md
-            - name: 550 x-dg-ref header is too long NDR
+            - name: 550 x-dg-ref header is too long
               href: ../email-delivery/ndr/550-x-dg-ref-header-too-long-ndr.md
-            - name: 550 5.6.0 APPROVAL.InvalidExpiry error
+            - name: 550 5.6.0 APPROVAL.InvalidExpiry
               href: ../email-delivery/ndr/550-5-6-0-approval-invalidexpiry-cannot-read-expiry-poilcy-error.md
             - name: 554 4.3.2 mailbox busy
               href: ../email-delivery/ndr/remote-server-returned-mailbox-busy.md
             - name: 554 5.2.0 STOREDRV.Deliver.Exception
               href: ../email-delivery/ndr/mapiexceptionnotfound-ndr.md
-            - name: 554 5.2.2 mailbox full NDR
+            - name: 554 5.2.2 mailbox full
               href: ../email-delivery/ndr/cannot-send-mail-mepf.md
-            - name: 554 5.6.0 Invalid message NDR
-              href: ../email-delivery/ndr/invalid-message-ndr.md
-            - name: AggregateGroupMailbox full NDR
-              href: ../email-delivery/ndr/ndr-received-send-emails-microsoft365-groups.md
-            - name: Fix email delivery issues for error code 550 5.1.10
-              href: ../email-delivery/ndr/fix-error-code-550-5-1-10-in-exchange-online.md
-            - name: Non-delivery report error codes
-              href: ../email-delivery/ndr/mail-issues.md
+            - name: 554 5.6.0 Invalid message content
+              href: ../email-delivery/ndr/invalid-message-ndr.md                       
     - name: Groups and Distribution Lists
       items:
         - name: A MailTip displays wrong number of recipients
