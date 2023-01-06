@@ -1,5 +1,5 @@
 ---
-title: "Fix email delivery issues for error code 550 5.1.0 in Exchange Online"
+title: Fix NDR error 550 5.1.0 in Exchange Online
 ms.author: v-six
 author: simonxjx
 manager: dcscontentpm
@@ -18,10 +18,10 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 477289e6-9150-4627-afce-f61fc7c4605b
-description: "Learn how to fix email issues for error code 550 5.5.0 or address rejected: SPF Permanent Error in Exchange Online (the destination email server won't accept messages from the sender or for the recipient)."
+description: Learn how to fix email issues for error code 550 5.5.0 or address rejected "SPF Permanent Error in Exchange Online" (the destination email server won't accept messages from the sender or for the recipient).
 ---
 
-# Fix email delivery issues for error code 550 5.1.0 in Exchange Online
+# Fix NDR error "550 5.1.0" in Exchange Online
 
 It's frustrating when you get an error after sending an email message. This topic describes what you can do if you see error code 550 5.1.0 or 5.1.0 in a non-delivery report (also known as an NDR, bounce message, delivery status notification, or DSN).
 

@@ -283,53 +283,53 @@
           href: ../email-delivery/property-length-too-long-error.md
         - name: Messages with attachments not delivered
           href: ../email-delivery/messages-with-attachments-are-not-delivered.md
-        - name: NDR
+        - name: Non-delivery report (NDR)
           items:
-            - name: Email non-delivery reports
+            - name: NDR in Exchange Online
               href: ../email-delivery/ndr/non-delivery-reports-in-exchange-online.md
-            - name: Fix email delivery issues for error code 5.1.8
+            - name: 550 5.1.8 Access denied
               href: ../email-delivery/ndr/fix-error-code-5-1-8-in-exchange-online.md
-            - name: Fix email delivery issues for error code 5.4.6 or 5.4.14
+            - name: 5.4.6 or 5.4.14
               href: ../email-delivery/ndr/fix-error-code-5-4-6-through-5-4-20-in-exchange-online.md
-            - name: Fix email delivery issues for error code 5.7.12
+            - name: 550 5.7.12 or 5.7.12
               href: ../email-delivery/ndr/fix-error-code-5-7-12-in-exchange-online.md
-            - name: Fix email delivery issues for error code 5.7.13 or 5.7.135
+            - name: 550 5.7.13 or 550 5.7.135
               href: ../email-delivery/ndr/fix-error-code-5-7-13-or-5-7-135-in-exchange-online.md
-            - name: Fix email delivery issues for error code 5.7.23
+            - name: 550 5.7.23
               href: ../email-delivery/ndr/fix-error-code-5-7-23-in-exchange-online.md
-            - name: Fix email delivery issues for error code 5.7.57
-              href: ../email-delivery/ndr/fix-error-code-5-7-13-or-5-7-135-in-exchange-online.md
-            - name: Fix email delivery issues for error code 5.7.64
+            - name: 550 5.7.57
+              href: ../email-delivery/ndr/fix-error-code-5-7-57-in-exchange-online.md
+            - name: 550 5.7.64
               href: ../email-delivery/ndr/fix-error-code-5-7-64-in-exchange-online.md
-            - name: Fix email delivery issues for error code 5.7.124
+            - name: 550 5.7.124 or 5.7.124
               href: ../email-delivery/ndr/fix-error-code-5-7-124-in-exchange-online.md
-            - name: Fix email delivery issues for error code 5.7.133
+            - name: 550 5.7.133
               href: ../email-delivery/ndr/fix-error-code-5-7-133-in-exchange-online.md
-            - name: Fix email delivery issues for error code 5.7.134
+            - name: 550 5.7.134
               href: ../email-delivery/ndr/fix-error-code-5-7-134-in-exchange-online.md
-            - name: Fix email delivery issues for error code 5.7.136
+            - name: 550 5.7.136
               href: ../email-delivery/ndr/fix-error-code-5-7-136-in-exchange-online.md
-            - name: Fix email delivery issues for error codes 5.7.700 through 5.7.750
+            - name: 550 5.7.700 through 550 5.7.750
               href: ../email-delivery/ndr/fix-error-code-5-7-700-through-5-7-750.md
-            - name: Fix email delivery issues for error code 451 4.7.500-699 (ASxxx)
+            - name: 451 4.7.500-699 (ASxxx)
               href: ../email-delivery/ndr/fix-error-code-451-4-7-500-699-asxxx-in-exchange-online.md
-            - name: Fix email delivery issues for error code 550 4.4.7
+            - name: 550 4.4.7
               href: ../email-delivery/ndr/fix-error-code-550-4-4-7-in-exchange-online.md
-            - name: Fix email delivery issues for error code 550 5.0.350
+            - name: 550 5.0.350
               href: ../email-delivery/ndr/fix-error-code-550-5-0-350-in-exchange-online.md
-            - name: Fix email delivery issues for error code 550 5.1.0
+            - name: 550 5.1.0
               href: ../email-delivery/ndr/fix-error-code-550-5-1-0-in-exchange-online.md
-            - name: Fix email delivery issues for error code 550 5.1.1 through 5.1.20
+            - name: 550 5.1.1 through 550 5.1.20
               href: ../email-delivery/ndr/fix-error-code-550-5-1-1-through-5-1-20-in-exchange-online.md
-            - name: Fix email delivery issues for error code 550 5.1.10
+            - name: 550 5.1.10
               href: ../email-delivery/ndr/fix-error-code-550-5-1-10-in-exchange-online.md
-            - name: Fix email delivery issues for error code 550 5.4.1
+            - name: 550 5.4.1
               href: ../email-delivery/ndr/fix-error-code-550-5-4-1-in-exchange-online.md
-            - name: Fix email delivery issues for error code 550 5.6.11
+            - name: 550 5.6.11
               href: ../email-delivery/ndr/fix-error-code-550-5-6-11-in-exchange-online.md
-            - name: Fix email delivery issues for error code 550 5.7.1
+            - name: 550 5.7.1
               href: ../email-delivery/ndr/fix-error-code-550-5-7-1-in-exchange-online.md
-            - name: Fix email delivery issues for error 'the sender's submission quota was exceeded'
+            - name: Error 'the sender's submission quota was exceeded'
               href: ../email-delivery/ndr/fix-error-for-submission-quota-exceeded-in-exchange-online.md
         - name: Non-delivery report error codes
           href: ../email-delivery/mail-issues.md

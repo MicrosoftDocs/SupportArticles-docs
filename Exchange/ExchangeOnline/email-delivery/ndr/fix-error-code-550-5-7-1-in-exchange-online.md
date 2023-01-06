@@ -1,5 +1,5 @@
 ---
-title: "Fix email delivery issues for error code 550 5.7.1 in Exchange Online"
+title: Fix NDR error 550 5.7.1 in Exchange Online
 ms.author: v-six
 author: simonxjx
 manager: dcscontentpm
@@ -18,10 +18,10 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: da1ff375-f88f-4a3e-b81f-06cdb6ecae3c
-description: "Learn how to fix email issues for error code 5.7.1 (and also 5.7.0 to 5.7.999) in Exchange Online (the recipient is configured to reject email from the sender)."
+description: Learn how to fix email issues for error code 5.7.1 (and also 5.7.0 to 5.7.999) in Exchange Online (the recipient is configured to reject email from the sender).
 ---
 
-# Fix email delivery issues for error code 550 5.7.1 in Exchange Online
+# Fix NDR error "550 5.7.1" in Exchange Online
 
 > [!IMPORTANT]
 > Mail flow rules are now available in the new Exchange admin center. [Try it now](https://admin.exchange.microsoft.com/#/transportrules)!

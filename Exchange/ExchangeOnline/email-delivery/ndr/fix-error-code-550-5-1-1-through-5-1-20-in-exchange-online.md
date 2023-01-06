@@ -1,5 +1,5 @@
 ---
-title: "Fix email delivery issues for error code 550 5.1.1 through 5.1.20 in Exchange Online"
+title: Fix NDR error 550 5.1.1 through 5.1.20 in Exchange Online
 ms.author: v-six
 author: simonxjx
 manager: dcscontentpm
@@ -18,10 +18,10 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 79e91ade-5c83-405b-a37d-d99c7d069b13
-description: "Learn how to fix email issues for error code 5.1.1 through 5.1.20 in Exchange Online (the recipient doesn't exist or your Auto-Complete list entry for the recipient is bad)."
+description: Learn how to fix email issues for error code 5.1.1 through 5.1.20 in Exchange Online (the recipient doesn't exist or your Auto-Complete list entry for the recipient is bad).
 ---
 
-# Fix email delivery issues for error code 550 5.1.1 through 5.1.20 in Exchange Online
+# Fix NDR error code "550 5.1.1" through "550 5.1.20" in Exchange Online
 
 > [!IMPORTANT]
 > Mail flow rules are now available in the new Exchange admin center. [Try it now](https://admin.exchange.microsoft.com/#/transportrules)!

@@ -1,5 +1,5 @@
 ---
-title: "Fix email delivery issues for error code 5.7.124 in Exchange Online"
+title: Fix NDR error 5.7.124 in Exchange Online
 ms.author: v-six
 author: simonxjx
 manager: dcscontentpm
@@ -21,7 +21,7 @@ ms.assetid: 3269ef55-dabe-4710-9921-a3753c66b2c9
 description: "Learn how to fix email issues for error code 5.7.124 in Exchange Online (the sender isn't in the recipient group's allowed senders list)."
 ---
 
-# Fix email delivery issues for error code 5.7.124 in Exchange Online
+# Fix NDR error "550 5.7.124" or "5.7.124" in Exchange Online
 
 It's frustrating when you get an error after sending an email message. This topic describes what the remedies if you see status code 550 5.7.124 or 5.7.124 in a non-delivery report.
 > [!NOTE]
