@@ -127,10 +127,6 @@
       href: ../online-meeting-broadcast/attendees-of-a-broadcast-cant-see-annotations.md
     - name: Bandwidth for Skype Meeting Broadcast
       href: ../online-meeting-broadcast/bandwidth-for-skype-meeting-broadcast.md
-    - name: Can't add someone to Meeting Broadcast as Event team member
-      href: ../online-meeting-broadcast/cant-add-someone-to-skype-meeting-broadcast.md
-    - name: Can't add yourself to Members list in "Event team"
-      href: ../online-meeting-broadcast/cant-add-yourself-to-members-list.md
     - name: Can't join Meeting Broadcast as Event team member on Mac
       href: ../online-meeting-broadcast/cannot-join-broadcast-as-event-team-mac.md
     - name: Can't join Meeting Broadcast as Event team member
@@ -139,14 +135,10 @@
       href: ../online-meeting-broadcast/unsupported-video-type-or-invalid-file-path.md
     - name: Event Team members repeatedly prompted for password 
       href: ../online-meeting-broadcast/event-team-members-repeatedly-prompted.md
-    - name: Issue after click Skype Meeting Broadcast portal
-      href: ../online-meeting-broadcast/click-hyperlink-skype-meeting-broadcast.md
     - name: Issue when joining a meeting broadcast
       href: ../online-meeting-broadcast/issue-join-meeting-broadcast.md
     - name: No permission to create Meeting Broadcast
       href: ../online-meeting-broadcast/no-permission-create-meeting-broadcast.md
-    - name: Skype Meeting Broadcast portal not load 
-      href: ../online-meeting-broadcast/meeting-broadcast-portal-not-load.md
   - name: Phone System
     items:
     - name: Add normalization rules to change Japanese dial plans
