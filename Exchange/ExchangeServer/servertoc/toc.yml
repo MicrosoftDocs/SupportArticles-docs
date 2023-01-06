@@ -467,6 +467,8 @@
           href: ../mailflow/cannot-send-receive-email-behind-cisco-firewall.md
         - name: Can't view Microsoft 365 IRM-encrypted messages
           href: ../mailflow/cannot-open-irm-email-dynamic-distribution-group.md
+        - name: Connector remote IP address limit is exceeded
+          href: ../mailflow/connector-remote-ip-address-limit-exceeded.md
         - name: Delayed mail delivery in Exchange
           href: ../mailflow/mail-delivery-delay-exchange.md
         - name: DNS query failed error when email stuck in Draft
