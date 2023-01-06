@@ -12,5 +12,3 @@ The "**Show Chart**", "**Create view**", "**Show as**" and "**Open Dashboards**"
 
 > [!NOTE]
 > The button with id `Mscrm.HomepageGrid.{!EntityLogicalName}.ChangeDataSetControlButton` is a button intended only for Web Client interface that is now deprecated and this is intentionally disabled in the Unified Interface. Any attempts to modify this button is not supported.
-
-You can hide the "**Show as**" button for a specific entity by **disabling** the **editable grid** for that entity. See [https://docs.microsoft.com/dynamics365/customer-engagement/customize/make-grids-lists-editable-custom-control](https://docs.microsoft.com/dynamics365/customer-engagement/customize/make-grids-lists-editable-custom-control)
