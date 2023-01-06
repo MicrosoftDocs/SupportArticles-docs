@@ -1,5 +1,5 @@
 ---
-title: "Email non-delivery reports and SMTP errors in Exchange Online"
+title: Email non-delivery report (NDR) and SMTP errors in Exchange Online
 ms.author: v-six
 author: simonxjx
 manager: dcscontentpm
@@ -17,7 +17,7 @@ search.appverid:
 - MET150
 - MOP150
 ms.assetid: 51daa6b9-2e35-49c4-a0c9-df85bf8533c3
-description: "Admins can learn about SMTP errors and non-delivery reports (also known as NDRs or bounce messages) that are generated in Exchange Online."
+description: Admins can learn about SMTP errors and non-delivery reports (also known as NDRs or bounce messages) that are generated in Exchange Online.
 ---
 
 # Email non-delivery reports and SMTP errors in Exchange Online

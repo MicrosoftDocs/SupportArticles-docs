@@ -1,5 +1,5 @@
 ---
-title: "Fix email delivery issues for error codes 5.7.700 through 5.7.750 in Exchange Online"
+title: Fix NDR error 5.7.700 through 5.7.750 in Exchange Online
 ms.author: v-six
 author: simonxjx
 manager: dcscontentpm
@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 
-description: "Learn how to fix email issues for error code 5.7.700 through 5.7.750 in Exchange Online."
+description: Learn how to fix email issues for error code 5.7.700 through 5.7.750 in Exchange Online.
 ---
 
-# Fix email delivery issues for error codes 5.7.700 through 5.7.750 in Exchange Online
+# Fix NDR error "550 5.7.700" through "550 5.7.750" in Exchange Online
 
-It's frustrating when you get an error after sending an email message. This topic describes what you can do if you see error codes 550 5.7.700 through 5.7.750 in a non-delivery report (also known as an NDR, bounce message, delivery status notification, or DSN).
+It's frustrating when you get an error after sending an email message. This topic describes what you can do if you see error codes 550 5.7.700 through 550 5.7.750 in a non-delivery report (also known as an NDR, bounce message, delivery status notification, or DSN).
 
 Use the information in the NDR to help you decide how to fix the problem.
 

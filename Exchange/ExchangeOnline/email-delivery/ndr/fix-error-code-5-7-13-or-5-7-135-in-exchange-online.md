@@ -1,5 +1,5 @@
 ---
-title: "Fix email delivery issues for error code 5.7.13 or 5.7.135 in Exchange Online"
+title: Fix NDR error 5.7.13 or 5.7.135 in Exchange Online
 ms.author: v-six
 author: simonxjx
 manager: dcscontentpm
@@ -18,10 +18,10 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: fc1ea7e0-3680-4778-ad96-4328c60d517c
-description: "Learn how to fix email issues for error code 550 5.7.13 or 5.7.135 in Exchange Online (the public folder recipient is configured to reject messages from external or unauthenticated senders)."
+description: Learn how to fix email issues for error code 550 5.7.13 or 5.7.135 in Exchange Online (the public folder recipient is configured to reject messages from external or unauthenticated senders).
 ---
 
-# Fix email delivery issues for error code 5.7.13 or 5.7.135 in Exchange Online
+# Fix NDR error "550 5.7.13" or "550 5.7.135" in Exchange Online
 
 It's frustrating when you get an error after sending an email message. This topic describes what you can do if you see error code 550 5.7.13 or 550 5.7.135 in a non-delivery report (also known as an NDR, bounce message, delivery status notification, or DSN). You'll see this automated notification when the recipient is a public folder that's configured to reject messages from external senders (senders from outside the organization).
 

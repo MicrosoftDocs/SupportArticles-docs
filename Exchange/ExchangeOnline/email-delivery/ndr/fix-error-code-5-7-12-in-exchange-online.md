@@ -1,5 +1,5 @@
 ---
-title: "Fix email delivery issues for error code 5.7.12 in Exchange Online"
+title: Fix NDR error 5.7.12 in Exchange Online
 ms.author: v-six
 author: simonxjx
 manager: dcscontentpm
@@ -18,10 +18,10 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 08793285-463d-4198-9626-60794835a3b5
-description: "Learn how to fix email issues for error code 5.7.12 in Exchange Online (the recipient rejects messages from external or unauthenticated senders)."
+description: Learn how to fix email issues for error code 5.7.12 in Exchange Online (the recipient rejects messages from external or unauthenticated senders).
 ---
 
-# Fix email delivery issues for error code 5.7.12 in Exchange Online
+# Fix NDR error "550 5.7.12" in Exchange Online
 
 It's frustrating when you get an error after sending an email message. This topic describes what you can do if you see status code 550 5.7.12 or 5.7.12 in a non-delivery report (also known as an NDR, bounce message, delivery status notification, or DSN). You'll see this automated notification when the recipient is configured to reject messages that are sent from outside of its organization.
 

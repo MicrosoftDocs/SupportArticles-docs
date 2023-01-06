@@ -1,5 +1,5 @@
 ---
-title: "Fix email delivery issues for error code 5.7.136 in Exchange Online"
+title: Fix NDR error 5.7.136 in Exchange Online
 ms.author: v-six
 author: simonxjx
 manager: dcscontentpm
@@ -18,10 +18,10 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: f171e842-9fdb-4e68-8f3d-53fcd9e43c62
-description: "Learn how to fix email issues for error code 5.7.136 in Exchange Online (the mail user recipient is configured to reject messages from external or unauthenticated senders)."
+description: Learn how to fix email issues for error code 5.7.136 in Exchange Online (the mail user recipient is configured to reject messages from external or unauthenticated senders).
 ---
 
-# Fix email delivery issues for error code 5.7.136 in Exchange Online
+# Fix NDR error "550 5.7.136" in Exchange Online
 
 It's frustrating when you get an error after sending an email message. This topic describes what you can do if you see error code 550 5.7.136 in a non-delivery report, also known as an NDR, bounce message, delivery status notification, or DSN. You'll see this automated notification when the recipient is a mail user that's configured to reject messages from external senders, that is, senders from outside the organization.
 

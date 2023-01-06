@@ -1,5 +1,5 @@
 ---
-title: "Fix email delivery issues for error code 451 4.7.500-699 (ASxxx) in Exchange Online"
+title: Fix NDR error 451 4.7.500-699 (ASxxx) in Exchange Online
 ms.author: v-six
 author: simonxjx
 manager: dcscontentpm
@@ -20,10 +20,10 @@ search.appverid:
 - MBS150
 - MET150
 ms.assetid: 51356082-9fef-4639-a18a-fc7c5beae0c8
-description: "Learn how to fix email issues for error code 451 4.7.500-699 (ASxxx) in Exchange Online (IP throttling)."
+description: Learn how to fix email issues for error code 451 4.7.500-699 (ASxxx) in Exchange Online (IP throttling).
 ---
 
-# Fix email delivery issues for error code 451 4.7.500-699 (ASxxx) in Exchange Online
+# Fix NDR error code "451 4.7.500-699 (ASxxx)" in Exchange Online
 
 It's frustrating when you get an error after sending an email message. This topic describes what you can do if you see error code 451 4.7.500-699 (ASxxx) in a non-delivery report (also known as an NDR, bounce message, delivery status notification, or DSN).
 

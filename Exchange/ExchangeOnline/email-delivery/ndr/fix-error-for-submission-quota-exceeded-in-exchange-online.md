@@ -1,5 +1,5 @@
 ---
-title: "Fix 'sender's submission quota exceeded' errors in Exchange Online"
+title: Fix error "sender's submission quota exceeded" in Exchange Online
 ms.author: v-six
 author: simonxjx
 manager: dcscontentpm
@@ -18,10 +18,10 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid:
-description: "Learn how to fix email issues for the error, 'the sender's submission quota was exceeded' in Exchange Online."
+description: Learn how to fix email issues for the error, 'the sender's submission quota was exceeded' in Exchange Online.
 ---
 
-# Fix email delivery issues for error 'the sender's submission quota was exceeded' in Exchange Online
+# Fix NDR error "the sender's submission quota was exceeded" in Exchange Online
 
 It's frustrating when you get an error after sending an email message. This topic describes what you can do if you see the error:
 

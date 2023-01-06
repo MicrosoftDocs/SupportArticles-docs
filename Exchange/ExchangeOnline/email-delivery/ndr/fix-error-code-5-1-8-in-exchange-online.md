@@ -1,5 +1,5 @@
 ---
-title: How to fix error code 5.1.8 (550 5.1.8 Access denied) in Exchange Online
+title: Fix 550 5.1.8 Access denied in Exchange Online
 ms.author: v-six
 author: simonxjx
 manager: dcscontentpm
@@ -18,10 +18,10 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 303238b8-658d-46b6-8f45-a789acd2173b
-description: "Learn how to fix email delivery for error code 5.1.8 (550 5.1.8 Access denied) in Exchange Online (the account has been blocked for sending too much spam), when mail is not delivered."
+description: Learn how to fix email delivery for error code 5.1.8 (550 5.1.8 Access denied) in Exchange Online (the account has been blocked for sending too much spam), when mail is not delivered.
 ---
 
-# Fix email delivery issues for error code 5.1.8 (550 5.1.8 Access denied) in Exchange Online
+# Fix NDR error "550 5.1.8 Access denied" in Exchange Online
 
 Getting an error message that means the mail you sent wasn't delivered is frustrating. This topic tells you what to do if you get error code 550 5.1.8 Access denied in a non-delivery report (also known as an NDR, bounce message, delivery status notification, or DSN), and mail isn't delivered.
 

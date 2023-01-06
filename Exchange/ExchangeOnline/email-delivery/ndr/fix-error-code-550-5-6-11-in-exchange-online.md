@@ -1,5 +1,5 @@
 ---
-title: "Fix email delivery issues for error code 550 5.6.11 in Exchange Online"
+title: Fix NDR error 550 5.6.11 in Exchange Online
 ms.author: v-six
 author: simonxjx
 manager: dcscontentpm
@@ -17,10 +17,10 @@ search.appverid:
 - BCS160
 - MET150
 ms.assetid: 81dafee7-26af-4d79-b174-8f78980dfafb
-description: "Learn how to fix email issues for error code 5.6.11 in Exchange Online (the destination email server rejects messages with bare line feeds)."
+description: Learn how to fix email issues for error code 5.6.11 in Exchange Online (the destination email server rejects messages with bare line feeds).
 ---
 
-# Fix email delivery issues for error code 550 5.6.11 in Exchange Online
+# Fix NDR error "550 5.6.11" in Exchange Online
 
 It's frustrating when you get an error after sending an email message. This topic describes what you can do if you see error code 5.6.11 in a non-delivery report (also known as an NDR, bounce message, delivery status notification, or DSN).
 

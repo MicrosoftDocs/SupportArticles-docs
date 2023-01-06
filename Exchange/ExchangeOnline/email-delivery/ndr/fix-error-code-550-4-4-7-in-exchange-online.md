@@ -1,5 +1,5 @@
 ---
-title: "Fix email delivery issues for error code 550 4.4.7 in Exchange Online"
+title: Fix NDR error 550 4.4.7 in Exchange Online
 ms.author: v-six
 author: simonxjx
 manager: dcscontentpm
@@ -22,10 +22,10 @@ search.appverid:
 - ZOL160
 - MET150
 ms.assetid: 2fda59a8-84f8-4eb0-96e1-49187fbe7ff9
-description: "Learn how to fix email issues for error code 550 4.4.7 in Exchange Online (the destination email server won't or can't accept the message)."
+description: Learn how to fix email issues for error code 550 4.4.7 in Exchange Online (the destination email server won't or can't accept the message).
 ---
 
-# Fix email delivery issues for error code 550 4.4.7 in Exchange Online
+# Fix NDR error "550 4.4.7" in Exchange Online
 
 > [!IMPORTANT]
 > Mail flow rules are now available in the new Exchange admin center. [Try it now](https://admin.exchange.microsoft.com/#/transportrules)!
