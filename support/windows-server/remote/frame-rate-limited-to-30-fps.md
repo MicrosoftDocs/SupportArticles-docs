@@ -1,7 +1,7 @@
 ---
 title: Frame rate is limited to 30 FPS in remote sessions
 description: Provides a workaround for independent software vendors (ISVs) of remote display protocols to change the frame rate limit in a remote session.
-ms.date: 10/20/2020
+ms.date: 01/06/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -13,11 +13,10 @@ ms.reviewer: kaushika, shenry, yuqinwu
 ms.custom: sap:performance-audio-and-video-and-remotefx, csstroubleshoot
 ms.technology: windows-server-rds
 ---
-# Frame rate is limited to 30 FPS in Windows 8 and Windows Server 2012 remote sessions
+# Frame rate is limited to 30 FPS in Windows-based remote sessions
 
 This article describes a workaround for independent software vendors (ISVs) of remote display protocols to change the frame rate limit in a remote session.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2885213
 
 ## Workaround
