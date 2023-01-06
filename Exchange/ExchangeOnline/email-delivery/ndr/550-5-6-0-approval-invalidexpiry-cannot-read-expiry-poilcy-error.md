@@ -1,5 +1,5 @@
 ---
-title: 550 5.6.0 APPROVAL.InvalidExpiry error
+title: NDR error 550 5.6.0 APPROVAL.InvalidExpiry
 description: If a retention policy tag with IsDefaultModeratedRecipientsPolicyTag isn't set for a moderated distribution group, you can't send messages to the group.
 author: simonxjx
 ms.author: v-six
@@ -17,7 +17,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# 550 5.6.0 APPROVAL.InvalidExpiry Cannot read expiry policy when sending messages to moderated distribution group
+# "550 5.6.0 APPROVAL.InvalidExpiry" when sending messages to a moderated distribution group
 
 _Original KB number:_ &nbsp; 4492048
 

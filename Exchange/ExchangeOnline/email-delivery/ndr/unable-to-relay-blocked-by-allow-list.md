@@ -1,5 +1,5 @@
 ---
-title: 5.7.1. Unable To Relay NDR
+title: NDR error 5.7.1. Unable To Relay
 description: Fixes an issue that occurs when a sender uses an external email server whose IP address was added to a blocklist.
 author: simonxjx
 ms.author: v-six
@@ -18,13 +18,13 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# Sender receives an NDR: 5.7.1 Unable to Relay: Blocked by Customer Allow List
+# 5.7.1 Unable to Relay: Blocked by Customer Allow List
 
 _Original KB number:_ &nbsp; 3013740
 
 ## Problem
 
-An external email server can't connect to Microsoft Exchange Online Protection because its IP address was added to a blocklist. When a sender tries to send mail through that server, the sender receives a nondelivery report (NDR) that contains the following error message. (The message doesn't include the name of the specific blocklist.)
+An external email server can't connect to Microsoft Exchange Online Protection because its IP address was added to a blocklist. When a sender tries to send mail through that server, the sender receives a non-delivery report (NDR) that contains the following error message. (The message doesn't include the name of the specific blocklist.)
 
 > 5.7.1. Unable To Relay: Blocked by Customer Allow list
 

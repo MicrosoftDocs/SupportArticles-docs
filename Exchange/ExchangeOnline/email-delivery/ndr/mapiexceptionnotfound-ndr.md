@@ -1,5 +1,5 @@
 ---
-title: "STOREDRV.Deliver.Exception:ObjectNotFoundException.MapiExceptionNotFound"
+title: NDR errror 554 5.2.0 STOREDRV.Deliver.Exception
 description: Describes an issue that returns a 554.5.2.0 Cannot get ID from name nondelivery report when users send mail to a distribution group in Exchange Online. Provides a workaround.
 author: simonxjx
 audience: ITPro
@@ -17,7 +17,7 @@ appliesto:
   - Exchange Online
 ms.date: 3/31/2022
 ---
-# (554 5.2.0 STOREDRV.Deliver.Exception:ObjectNotFoundException.MapiExceptionNotFound) NDR when users send mail in Exchange Online
+# "554 5.2.0 STOREDRV.Deliver.Exception" when sending emails in Exchange Online
 
 ## Problem
 
