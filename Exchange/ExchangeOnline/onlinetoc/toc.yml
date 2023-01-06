@@ -267,7 +267,7 @@
               href: ../email-delivery/ndr/exrecipnotfound-ndr.md
             - name: 550 5.1.10 RESOLVER.ADR.RecipientNotFound
               href: ../email-delivery/ndr/recipientnotfound-ndr.md
-            - name: Fix email delivery issues for error 550 5.1.10
+            - name: Fix NDR error 550 5.1.10
               href: ../email-delivery/ndr/fix-error-code-550-5-1-10-in-exchange-online.md   
             - name: 550 5.2.0 RESOLVER.ADR.BadPrimary
               href: ../email-delivery/ndr/badprimary-ndr.md
