@@ -219,6 +219,30 @@
           href: ../email-alias/remove-an-email-alias.md
     - name: Email Delivery
       items:
+        - name: 5.7.1. Unable To Relay NDR
+          href: ../email-delivery/unable-to-relay-blocked-by-allow-list.md
+        - name: 550 5.1.1 ExRecipNotFound NDR
+          href: ../email-delivery/exrecipnotfound-ndr.md
+        - name: 550 5.1.10 RecipientNotFound NDR
+          href: ../email-delivery/recipientnotfound-ndr.md
+        - name: 550 5.2.0 BadPrimary NDR
+          href: ../email-delivery/badprimary-ndr.md
+        - name: 550 5.7.64 TenantAttribution
+          href: ../email-delivery/relay-access-denied-smtp.md
+        - name: 550 5.7.64 TenantAttribution NDR
+          href: ../email-delivery/tenantattribution-ndr.md
+        - name: 550 x-dg-ref header is too long NDR
+          href: ../email-delivery/550-x-dg-ref-header-too-long-ndr.md
+        - name: 550 5.6.0 APPROVAL.InvalidExpiry error
+          href: ../email-delivery/550-5-6-0-approval-invalidexpiry-cannot-read-expiry-poilcy-error.md
+        - name: 554 4.3.2 mailbox busy
+          href: ../email-delivery/remote-server-returned-mailbox-busy.md
+        - name: 554 5.2.0 STOREDRV.Deliver.Exception
+          href: ../email-delivery/mapiexceptionnotfound-ndr.md
+        - name: 554 5.2.2 mailbox full NDR
+          href: ../email-delivery/cannot-send-mail-mepf.md
+        - name: 554 5.6.0 Invalid message NDR
+          href: ../email-delivery/invalid-message-ndr.md
         - name: AggregateGroupMailbox full NDR
           href: ../email-delivery/ndr-received-send-emails-microsoft365-groups.md
         - name: Administrative limit for this request was exceeded error
@@ -261,30 +285,6 @@
           href: ../email-delivery/messages-with-attachments-are-not-delivered.md
         - name: NDR
           items:
-            - name: 5.7.1. Unable To Relay NDR
-              href: ../email-delivery/ndr/unable-to-relay-blocked-by-allow-list.md
-            - name: 550 5.1.1 ExRecipNotFound NDR
-              href: ../email-delivery/ndr/exrecipnotfound-ndr.md
-            - name: 550 5.1.10 RecipientNotFound NDR
-              href: ../email-delivery/ndr/recipientnotfound-ndr.md
-            - name: 550 5.2.0 BadPrimary NDR
-              href: ../email-delivery/ndr/badprimary-ndr.md
-            - name: 550 5.7.64 TenantAttribution
-              href: ../email-delivery/ndr/relay-access-denied-smtp.md
-            - name: 550 5.7.64 TenantAttribution NDR
-              href: ../email-delivery/ndr/tenantattribution-ndr.md
-            - name: 550 x-dg-ref header is too long NDR
-              href: ../email-delivery/ndr/550-x-dg-ref-header-too-long-ndr.md
-            - name: 550 5.6.0 APPROVAL.InvalidExpiry error
-              href: ../email-delivery/ndr/550-5-6-0-approval-invalidexpiry-cannot-read-expiry-poilcy-error.md
-            - name: 554 4.3.2 mailbox busy
-              href: ../email-delivery/ndr/remote-server-returned-mailbox-busy.md
-            - name: 554 5.2.0 STOREDRV.Deliver.Exception
-              href: ../email-delivery/ndr/mapiexceptionnotfound-ndr.md
-            - name: 554 5.2.2 mailbox full NDR
-              href: ../email-delivery/ndr/cannot-send-mail-mepf.md
-            - name: 554 5.6.0 Invalid message NDR
-              href: ../email-delivery/ndr/invalid-message-ndr.md
             - name: Email non-delivery reports
               href: ../email-delivery/ndr/non-delivery-reports-in-exchange-online.md
             - name: Fix email delivery issues for error code 5.1.8
@@ -331,8 +331,8 @@
               href: ../email-delivery/ndr/fix-error-code-550-5-7-1-in-exchange-online.md
             - name: Fix email delivery issues for error 'the sender's submission quota was exceeded'
               href: ../email-delivery/ndr/fix-error-for-submission-quota-exceeded-in-exchange-online.md
-            - name: Non-delivery report error codes
-              href: ../email-delivery/ndr/mail-issues.md
+        - name: Non-delivery report error codes
+          href: ../email-delivery/mail-issues.md
     - name: Groups and Distribution Lists
       items:
         - name: A MailTip displays wrong number of recipients
