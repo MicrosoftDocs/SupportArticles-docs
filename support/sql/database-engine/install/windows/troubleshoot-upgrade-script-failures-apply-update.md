@@ -23,7 +23,7 @@ These scripts ensure that the system databases are ready for new fixes/features 
 
 ## Start SQL Server with trace flag 902
 
-As noted in [MSSQLSERVER_912](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error), when upgrade scripts fail, the installation wizard reports the error message "Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes." The SQL Server error log will have entries for 912 and 3417 error messages. Errors 912 and 3417 are generic errors associated with database upgrade script failures. And the messages preceding error 912 usually provide information on what exactly failed during the execution of these scripts. Troubleshooting and fixing these errors will require you to start SQL Server with trace flag 902.
+As noted in [MSSQLSERVER_912](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error), when upgrade scripts fail, the installation wizard reports the error message "Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes". The SQL Server error log will have entries for 912 and 3417 error messages. Errors 912 and 3417 are generic errors associated with database upgrade script failures. And the messages preceding error 912 usually provide information on what exactly failed during the execution of these scripts. Troubleshooting and fixing these errors will require you to start SQL Server with trace flag 902.
 
 > [!NOTE]
 > Starting SQL Server with trace flag 902 is part of troubleshooting and fixing upgrade script errors. It's applicable to all the scenarios where a CU or SP fails during the execution of the database upgrade script. To start your SQL Server instance using trace flag 902, see [Steps to start SQL Server with trace flag 902](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error#steps-to-start--with-trace-flag-902).
@@ -37,7 +37,8 @@ Once you start SQL Server with trace flag 902, you can select one of the followi
 - [MSSQLSERVER_912](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error)
 - [Error 2714: Object already exists](upgrade-fails-error-code-2714.md)
 - [Error 574: Config statement can't be used inside a transaction](upgrade-fails-error-code-574.md)
-- [Error 4860: File name does not exist](link)
+- [Error 4860: File name does not exist](sql-server-upgrade-failed-error-4860-upgrade-script.md)
 - [Error 1802: Create temporary database failed](upgrade-fails-errors-598-1802.md)
-- [Error 15173: Issues dropping server principals](link)
-- [Error 17182: TLS 1.0 disabled](link)
+- [Error 15173: Issues dropping server principals](sql-server-upgrade-failed-error-15173-upgrade-script.md)
+- [Error 17182: TLS 1.0 disabled](sql-server-upgrade-failed-error-17182-upgrade-script.md)
+- [Error 912: Script level upgrade for database 'master' failed](sql-server-upgrade-failed-error-912-upgrade-script.md)

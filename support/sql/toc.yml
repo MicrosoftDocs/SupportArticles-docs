@@ -545,20 +545,32 @@
       href: database-engine/install/windows/sql-server-2012-setup-issues.md
     - name: SQL Server setup fails in DMZ
       href: database-engine/install/windows/cannot-install-sql-when-only-rodc-available.md
-    - name: Troubleshooting upgrade script failures when applying an update
-      href: database-engine/install/windows/troubleshoot-upgrade-script-failures-apply-update.md
-    - name: SQL Server upgrade fails with error code 574
-      href: database-engine/install/windows/upgrade-fails-error-code-574.md
-    - name: SQL Server upgrade fails with errors 598 and 1802
-      href: database-engine/install/windows/upgrade-fails-errors-598-1802.md
-    - name: SQL Server upgrade fails with error code 2714
-      href: database-engine/install/windows/upgrade-fails-error-code-2714.md
     - name: SxS install of X64 and X86 version of SSRS 2008
       href: database-engine/install/windows/install-reporting-service.md
     - name: Update or Slipstream installation for SQL Server 2008
       href: database-engine/install/windows/update-or-slipstream-installation.md
     - name: Upgrade failures on Windows Server 2012
       href: database-engine/install/windows/error-upgrade-cluster-node.md
+    - name: Wait on the Database Engine recovery handle failed
+      items:
+      - name: Troubleshoot upgrade script failures when applying an update
+        href: database-engine/install/windows/troubleshoot-upgrade-script-failures-apply-update.md
+      - name: MSSQLSERVER_912
+        href: /sql/relational-databases/errors-events/mssqlserver-912-database-engine-error?context=/troubleshoot/sql/context/context
+      - name: SQL Server upgrade fails with error code 574
+        href: database-engine/install/windows/upgrade-fails-error-code-574.md
+      - name: SQL Server upgrade fails with errors 598 and 1802
+        href: database-engine/install/windows/upgrade-fails-errors-598-1802.md
+      - name: SQL Server upgrade fails with error code 2714
+        href: database-engine/install/windows/upgrade-fails-error-code-2714.md
+      - name: SQL Server upgrade failed with error code 4860
+        href: database-engine/install/windows/sql-server-upgrade-failed-error-4860-upgrade-script.md
+      - name: SQL Server upgrade failed with error 17182
+        href: database-engine/install/windows/sql-server-upgrade-failed-error-17182-upgrade-script.md
+      - name: SQL Server upgrade failed with error 15173
+        href: database-engine/install/windows/sql-server-upgrade-failed-error-15173-upgrade-script.md
+      - name: SQL Server upgrade failed with error 912
+        href: database-engine/install/windows/sql-server-upgrade-failed-error-912-upgrade-script.md
 - name: Database Client Programming
   items:
     - name: Can't uninstall ODBC driver completely
