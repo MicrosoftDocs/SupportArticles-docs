@@ -19,10 +19,7 @@ This article describes a workaround for independent software vendors (ISVs) of r
 
 _Original KB number:_ &nbsp; 2885213
 
-## Workaround
-
-> [!IMPORTANT]
-> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
+[!INCLUDE [Registry important alert](../../includes/registry-important-alert.md)]
 
 To work around the issue, create a `DWMFRAMEINTERVAL` entry in registry subkey `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations` to change the maximum frame rate limit on the remote session host. To do this, follow these steps:
 
