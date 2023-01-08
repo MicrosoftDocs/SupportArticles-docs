@@ -2,9 +2,12 @@
 
 
 
-## Week of August 29, 2022
+## Week of January 02, 2023
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 9/2/2022 | [Office troubleshooting for admins and IT professionals # < 60 chars](/skypeforbusiness/troubleshoot/index) | modified |
+| 1/5/2023 | Can't add someone to Skype Meeting Broadcast as Event team member or attendee | removed |
+| 1/5/2023 | Can't add yourself to Members list in the Event team area | removed |
+| 1/5/2023 | Server Error after you click the hyperlink for Skype Meeting Broadcast portal | removed |
+| 1/5/2023 | Skype Meeting Broadcast portal doesn't load completely in the browser | removed |
