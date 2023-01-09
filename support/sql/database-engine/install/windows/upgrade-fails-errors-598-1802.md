@@ -44,18 +44,24 @@ SQL Server reports error 598 when it runs into an error while executing [CREATE 
 
 1. Verify that the **Data Path** property is configured with a valid and correct value in SQL Server.
 
-1. Open SQL Server Configuration Manager and select **SQL Server Services**.
+   - From SQL Server Configuration Manager:
 
-1. Right-click the SQL Server instance and select **Properties**.
+     1. Open SQL Server Configuration Manager and select **SQL Server Services**.
 
-1. Select the **Advanced** tab and verify that the value of **Data Path** is correct and doesn't have any typos or extra characters. (To validate the value, you can copy it and try to access it with Windows Explorer.)
+     1. Right-click the SQL Server instance and select **Properties**.
 
-1. In the **Search** box on the taskbar, type *regedit* to open **Registry Editor**.
+     1. Select the **Advanced** tab and verify that the value of **Data Path** is correct and doesn't have any typos or extra characters. (To validate the value, you can copy it and try to access it with Windows Explorer.)
 
-1. Navigate to the registry key for the default data path. Then, validate that the path is correct and has no extra spaces or characters. The registry key for the default data path is `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL10.<Instance Name>\Setup\SQLDataRoot`.
+   - From Windows Registry Editor:
 
-   If the registry key has the correct data path, and you continue to receive the error, follow these steps:
+     1. In the **Search** box on the taskbar, type *regedit* to open **Registry Editor**.
 
-   1. Navigate to the registry key: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL10.<Instance Name>\MSSQLServer\Parameters`.
+     1. Navigate to the registry key for the default data path. Then, validate that the path is correct and has no extra spaces or characters. The registry key for the default data path is `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL10.<Instance Name>\Setup\SQLDataRoot`.
 
-   1. Review and change the value of **Data Path** to match the value in `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL10.<Instance Name>\Setup\SQLDataRoot`.
+        If the registry key has the correct data path, and you continue to receive the error, follow these steps:
+
+        1. Navigate to the registry key: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL10.<Instance Name>\MSSQLServer\Parameters`.
+
+        1. Review and change the value of **Data Path** to match the value in `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL10.<Instance Name>\Setup\SQLDataRoot`.
+
+1. Remove trace flag 902 from the **Startup Parameters** item and restart SQL Server.
