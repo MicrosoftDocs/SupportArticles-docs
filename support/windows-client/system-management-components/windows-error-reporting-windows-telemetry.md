@@ -50,7 +50,7 @@ Follow below steps depending on the OS version:
 2. Double-click the **Allow Diagnostic Data** policy.
 3. Select **Enabled** and select the **Send optional diagnostic data** option from the **Options** drop-down list.
 
-    :::image type="content" source="media/windows-error-reporting-windows-telemetry/allow-diagnostic-data.png" alt-text="ddd":::
+    :::image type="content" source="media/windows-error-reporting-windows-telemetry/allow-diagnostic-data.png" alt-text="Screenshot of the Allow Diagnostic Data window with the Send optional diagnostic data option selected.":::
 
     For more information about the level of data being sent, see [Diagnostics, feedback, and privacy in Windows](https://support.microsoft.com/windows/diagnostics-feedback-and-privacy-in-windows-28808a2b-a31b-dd73-dcd3-4559a5199319).
 
@@ -122,7 +122,7 @@ For Windows 11 and Windows 10 (version 1909 and later):
 1. Go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Data Collection and Preview Builds**.
 2. Double-click the **Limit Dump Collection** policy.
 
-    :::image type="content" source="media/windows-error-reporting-windows-telemetry/limit-dump-collection.png" alt-text="ddd":::
+    :::image type="content" source="media/windows-error-reporting-windows-telemetry/limit-dump-collection.png" alt-text="Screenshot of the Limit Dump Collection window with Enabled selected.":::
 
 3. Select **Enabled** > **Apply** >**OK**.
 4. Double-click the **Limit Diagnostic Log Collection** policy.
