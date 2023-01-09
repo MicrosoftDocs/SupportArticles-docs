@@ -1,6 +1,6 @@
 ---
 title: Frame rate is limited to 30 FPS in remote sessions
-description: Provides guidance for remote desltop protocols to change the frame rate limit in a remote session.
+description: Provides guidance for remote desktop protocols to change the frame rate limit in a remote session.
 ms.date: 01/06/2023
 author: Deland-Han
 ms.author: delhan
@@ -19,7 +19,7 @@ This article provides a solution for remote desktop protocols to change the fram
 
 _Original KB number:_ &nbsp; 2885213
 
-## Setting Frame Rates
+## Setting frame rates
 
 [!INCLUDE [Registry important alert](../../includes/registry-important-alert.md)]
 
@@ -37,8 +37,7 @@ To work around the issue, create a `DWMFRAMEINTERVAL` entry in registry subkey `
     > This registry entry sets the maximum frame rate limit that the remote display protocol can deliver to the remote session client. This setting does not set the actual frame rate for the remote session client. The actual frame rate in the remote session depends on other factors such as application and computer hardware resources. Additionally, not all remote display protocols support a frame rate that is greater than 30 FPS. For example, Remote Desktop Protocol (RDP) limits the frame rate to 30 FPS. Please contact the remote display protocol providers for more information.
 7. Exit Registry Editor, and then restart the computer.
 
-
-## Frame Rate mapping
+## Frame rate mapping
 
 - 15 decimal = 60 frames
 - 10 decimal = 40 frames
