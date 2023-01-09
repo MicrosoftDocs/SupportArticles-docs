@@ -461,6 +461,8 @@
           href: /outlook/troubleshoot/user-interface/empty-email-body-esetnod32-4x-installed
         - name: Can't attach large files in OWA
           href: ../mailflow/owa-cannot-attach-large-files.md
+        - name: Can't remove an installed certificate
+          href: ../mailflow/cannot-remove-installed-certificate.md
         - name: Can't send an email with full access
           href: ../mailflow/cannot-send-email-with-full-access.md
         - name: Can't send or receive emails behind a Cisco PIX or ASA firewall
