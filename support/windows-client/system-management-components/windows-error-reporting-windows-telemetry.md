@@ -193,10 +193,10 @@ You've completed the previous steps, but your Microsoft contact reports that Wat
     3. Run the script `CheckTelemetryStatus.cmd`.
     4. The script will output the various registry keys to the screen. Clip the results and share them with Microsoft contact.
 5. Capturing the WER settings.
-    a. Open an elevated command prompt.  
-    b. Change the directory to where the diagnostic tools were downloaded (in step 3). For example, `cd c:\users\<username>\downloads\wer`.
-    c. Run the script `Werdiag.cmd`.
-    d. Share the `.CAB` file that is created on your desktop with Microsoft contact.
+    1. Open an elevated command prompt.  
+    2. Change the directory to where the diagnostic tools were downloaded (in step 3). For example, `cd c:\users\<username>\downloads\wer`.
+    3. Run the script `Werdiag.cmd`.
+    4. Share the `.CAB` file that is created on your desktop with Microsoft contact.
 6. Collecting a trace.
     1. Open an elevated command prompt.
     2. Change the directory to where the diagnostic tools were downloaded (in Step 3). For example, `cd c:\users\<username>\downloads\wer`.
