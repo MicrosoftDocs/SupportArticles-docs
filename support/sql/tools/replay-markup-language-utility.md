@@ -1,10 +1,11 @@
 ---
 title: Replay Markup Language Utilities
 description: This article discusses a group of tools that are used by support professionals to troubleshoot SQL Server.
-ms.date: 01/04/2023
+ms.date: 01/09/2023
 ms.custom: sap:Tools
-ms.reviewer: sureshka, jopilov, toddhayn, troymoen
+author: padmajayaraman
 ms.author: v-jayaramanp
+ms.reviewer: sureshka, jopilov, toddhayn, troymoen
 ms.topic: article
 ms.prod: sql
 ---
