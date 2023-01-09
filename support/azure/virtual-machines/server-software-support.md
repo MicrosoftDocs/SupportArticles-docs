@@ -54,7 +54,7 @@ Microsoft Dynamics CRM 2015 and Microsoft Dynamics CRM 2016 are supported.
 
 ### Microsoft Dynamics 365
 
-Dynamics 365 Server Version 9.1 and later versions are supported.
+Microsoft Dynamics 365 Server version 9.1 and later versions are supported.
 
 ### Microsoft Exchange
 
