@@ -186,7 +186,7 @@ You've completed the previous steps, but your Microsoft contact reports that Wat
         > [!IMPORTANT]
         > Steps 3-5 are only supported if you have been asked by your Microsoft contact to perform them for deeper troubleshooting.
 
-3. Select the WER folder (and contents) from here and download to a convenient directory on the device being tested .
+3. Select the WER folder (and contents) from here and download to a convenient directory on the device being tested.
 4. Capture the Windows Telemetry settings.
     1. Open an elevated command prompt.
     2. Change the directory to where the diagnostic tools were downloaded (in step 3). For example, `cd c:\users\<username>\downloads\wer`.
