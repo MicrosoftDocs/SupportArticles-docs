@@ -1,5 +1,5 @@
 ---
-title: You can't remove a certificate that's installed in Exchange
+title: Can't remove a certificate that's installed in Exchange Server
 description: Provides a resolution for an error that occurs when you try to remove a certificate that's installed in Exchange Server.
 author: v-trisshores
 ms.author: v-trisshores
@@ -20,13 +20,13 @@ search.appverid: MET150
 ms.date: 01/09/2023
 ---
 
-# You can't remove a certificate that's installed in Exchange
+# Can't remove a certificate that's installed in Exchange Server
 
 ## Symptoms
 
 Consider the following scenario:
 
-- You assign a [renewed certificate](/exchange/architecture/client-access/renew-certificates) to one or more Exchange Server services.
+- You assign a [renewed certificate](/exchange/architecture/client-access/renew-certificates) to one or more Microsoft [Exchange Server services](/exchange/architecture/client-access/assign-certificates-to-services).
 
 - You try to remove the old certificate in the Exchange admin center (EAC) or by using the [Remove-ExchangeCertificate](/powershell/module/exchange/remove-exchangecertificate) PowerShell cmdlet.
 
@@ -52,7 +52,7 @@ To remove the old certificate, use the following steps. Unless noted otherwise, 
    Get-ExchangeCertificate | Format-List FriendlyName,Subject,Issuer,CertificateDomains,Thumbprint,NotBefore,NotAfter
    ```
 
-2. For each Send connector that's reported in the error message, run the following command to build an aggregated list of associated [source transport servers](/powershell/module/exchange/set-sendconnector#-sourcetransportservers):
+2. For each Send connector that's reported in the error message, use the [Get-SendConnector](/powershell/module/exchange/get-sendconnector) cmdlet to build an aggregated list of associated [source transport servers](/powershell/module/exchange/set-sendconnector#-sourcetransportservers):
 
    ```powershell
    Get-SendConnector -Identity <connector name> | Format-List SourceTransportServers
@@ -79,7 +79,7 @@ To remove the old certificate, use the following steps. Unless noted otherwise, 
    > [!NOTE]
    > After you stop the transport service, mail flow on each source transport server is stopped until you restart the Microsoft Exchange Transport service in the final step of this procedure. For more information about mail flow in Exchange Server, see [Queues and messages in queues](/exchange/mail-flow/queues/queues-and-messages-in-powershell).
 
-4. For each Send connector that's reported in the error message, run the following command to clear its `TlsCertificateName` property:
+4. For each Send connector that's reported in the error message, use the [Set-SendConnector](/powershell/module/exchange/set-sendconnector) cmdlet to clear its `TlsCertificateName` property:
 
    ```powershell
    Set-SendConnector -Identity <connector name> -TlsCertificateName $Null
@@ -148,8 +148,4 @@ To determine which certificate a Send or Receive connector is using, follow thes
    Get-ExchangeCertificate | Format-List Subject,Issuer,SerialNumber,Thumbprint,NotBefore,NotAfter,CertificateDomains
    ```
 
-## References
-
 For more information about certificate management, see [Certificate procedures in Exchange Server](/exchange/architecture/client-access/certificate-procedures).
-
-For more information about the PowerShell cmdlets to view and configure Send connectors, see [Get-SendConnector](/powershell/module/exchange/get-sendconnector) and [Set-SendConnector](/powershell/module/exchange/set-sendconnector).
