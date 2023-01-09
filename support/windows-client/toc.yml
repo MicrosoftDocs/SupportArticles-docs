@@ -1048,6 +1048,10 @@
       href: ./system-management-components/task-scheduler-task-only-runs-in-background.md
     - name: Use the at command to schedule tasks
       href: ./system-management-components/use-at-command-to-schedule-tasks.md
+  - name: WER
+    items:
+    - name: Setup and troubleshooting guidance on Windows Error Reporting and Windows Telemetry
+      href: ./system-management-components/windows-error-reporting-windows-telemetry.md
   - name: WinRM
     items:
     - name: Errors when you run WinRM commands
