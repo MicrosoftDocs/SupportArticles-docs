@@ -34,7 +34,6 @@ Once you start SQL Server with trace flag 902, you can select one of the followi
 
 "Wait on the Database Engine recovery handle failed" is the common error message for the following errors:
 
-- [MSSQLSERVER_912](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error)
 - [Error 2714: Object already exists](upgrade-fails-error-code-2714.md)
 - [Error 574: Config statement can't be used inside a transaction](upgrade-fails-error-code-574.md)
 - [Error 4860: File name does not exist](sql-server-upgrade-failed-error-4860-upgrade-script.md)

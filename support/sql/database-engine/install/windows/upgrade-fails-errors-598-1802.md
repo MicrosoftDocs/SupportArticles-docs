@@ -38,7 +38,7 @@ SQL Server reports error 598 when it runs into an error while executing [CREATE 
 
 > [!NOTE]
 > From [Database Engine events and errors](/sql/relational-databases/errors-events/database-engine-events-and-errors), you can see `Error 598: An error occurred while executing CREATE/ALTER DB. Please look at the previous error for more information`.  
-> Entries prior to error 598 can provide more information about the cause of the failure. For example, in this article, the preceding error is 1802, which occurs because the upgrade script is unable to create a [tempdb](/sql/relational-databases/databases/tempdb-database) database in the default data path. The `tempdb` database is used by the setup program for various operations it runs during the update process. For more information about database upgrade scripts that are executed during CU or SP installation, see see [Troubleshooting upgrade script failures when applying an update](troubleshoot-upgrade-script-failures-apply-update.md).
+> Entries prior to error 598 can provide more information about the cause of the failure. For example, in this article, the preceding error is 1802, which occurs because the upgrade script is unable to create a temporary database in the default data path. The temporary database is used by the setup program for various operations it runs during the update process. For more information about database upgrade scripts that are executed during CU or SP installation, see see [Troubleshooting upgrade script failures when applying an update](troubleshoot-upgrade-script-failures-apply-update.md).
 
 ## Resolution
 
