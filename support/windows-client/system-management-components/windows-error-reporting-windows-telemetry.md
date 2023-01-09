@@ -77,7 +77,7 @@ Follow below steps depending on the OS version:
     |:::image type="content" source="media/windows-error-reporting-windows-telemetry/allow-telemetry-windows-optional.png" alt-text="Screenshot of the Allow Telemetry window with Optional option selected.":::     |:::image type="content" source="media/windows-error-reporting-windows-telemetry/allow-telemetry-windows-full.png" alt-text="Screenshot of the Allow Telemetry window with Full option selected.":::         |
 
    > [!NOTE]  
-   > Choose a minimum of **Enhanced** so that we can have enough actionable insights (for Windows 10,version 1903 or later. For more information about the level of data collected, see [Diagnostic data settings](https://learn.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings).
+   > Choose a minimum of **Enhanced** so that we can have enough actionable insights (for Windows 10,version 1903 or later. For more information about the level of data collected, see [Diagnostic data settings](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings).
 
 5. Select **Apply** > **OK**.
 
