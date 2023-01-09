@@ -128,7 +128,7 @@
       "ms.prod": {
         "developer/biztalk/**/*.md": "biztalk-server",
         "developer/dotnet/**/*.md": ".net",
-        "developer/webapps/**/*.md": "web-apps-server",
+        "developer/webapps/**/*.md": "office-online-server",
         "developer/webapps/aspnet/**/*.md": "asp.net",
         "developer/webapps/aspnetcore/**/*.md": "aspnet-core",
         "developer/webapps/iis/**/*.md": "iis",
