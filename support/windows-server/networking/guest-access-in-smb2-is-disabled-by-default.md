@@ -21,7 +21,7 @@ _Original KB number:_ &nbsp; 4046019
 
 ## Symptoms
 
-Starting in Windows 10, version 1709 and Windows Server 2019, SMB2 and SMB3 clients no longer allow the following actions by default:
+Starting from Windows 10, version 1709 and Windows Server 2019, SMB2 and SMB3 clients no longer allow the following actions by default:
 
 - Guest account access to a remote server.
 - Fall back to the Guest account after invalid credentials are provided.
@@ -126,7 +126,7 @@ To set the value without using Group Policy, set the following DWORD registry va
 > [!NOTE]
 > As usual, the value setting in Group Policy will override the value setting in the non-Group Policy registry value.
 
-Starting from Windows 11 Insider Preview Build 25267, Pro editions, like Enterprise and Education editions, disable insecure guest authentication by default.
+Starting from Windows 11 Insider Preview Build 25267, Pro editions disable insecure guest authentication by default like Enterprise and Education editions.
 
 On Windows 10 1709, Windows 10 1803, Windows 10 1903, Windows 10 1909, and Windows Server 2019, guest authentication is disabled if `AllowInsecureGuestAuth` exists with a value of 0 in `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters] AllowInsecureGuestAuth`.
 
