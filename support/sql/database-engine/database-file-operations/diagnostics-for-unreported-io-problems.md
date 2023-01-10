@@ -150,7 +150,7 @@ Because a stale read or a lost write results in data storage that isn't expected
 Some customers have reported missing rows after they perform row count activities. This problem occurs because of a lost write. Perhaps, the page was supposed to be linked to the clustered index page chain. If the write was physically lost, the data is also lost.
 
 > [!IMPORTANT]
-> If you experience any of the behaviors, or if you're suspicious of similar problems together with disabling caching mechanisms, Microsoft strongly recommends that you obtain the latest update for SQL Server and the latest SQL Server I/O Stress Simulator. Microsoft also strongly encourages that you perform a strict review of your operating system and its associated configurations.
+> If you experience any of the behaviors, or if you're suspicious of similar problems together with disabling caching mechanisms, Microsoft strongly recommends that you obtain the latest update for SQL Server. Microsoft also strongly encourages that you perform a strict review of your operating system and its associated configurations.
 
 Note that Microsoft has confirmed that under rare and heavy I/O loads, some hardware platforms can return a stale read. If the extended diagnostics indicate a possible stale read or lost write condition, contact your hardware vendor for immediate follow-up and test with the [SQLIOSim](../../tools/sqliosim-utility-simulate-activity-disk-subsystem.md) utility.
 
