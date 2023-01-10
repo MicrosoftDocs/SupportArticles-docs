@@ -127,6 +127,7 @@ For Windows 11 and Windows 10 (version 1909 and later):
 3. Select **Enabled** > **Apply** >**OK**.
 4. Double-click the **Limit Diagnostic Log Collection** policy.
 5. Select **Enabled** > **Apply** > **OK**.
+    :::image type="content" source="media/windows-error-reporting-windows-telemetry/limit-diagnostic-log-collection.png" alt-text="Screenshot of the Limit Diagnostic Log Collection window with Enabled selected.":::
 
 For more information, see [Configure types of dump to be collected](/windows/win32/wer/collecting-user-mode-dumps).
 
