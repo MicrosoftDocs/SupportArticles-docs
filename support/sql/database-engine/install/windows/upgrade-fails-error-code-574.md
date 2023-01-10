@@ -49,7 +49,7 @@ COMMIT TRAN
 
 To solve the issue, follow these steps:
 
-1. Start SQL Server with [trace flag 902](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf902). For more information, see [Steps to start SQL Server with trace flag 902](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error#steps-to-start-sql-server-with-trace-flag-902).
+1. Start SQL Server with [trace flag 902](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf902). For more information, see [Steps to start SQL Server with trace flag 902](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error#steps-to-start--with-trace-flag-902).
 1. Open the SQL Server error log and review the messages prior to error 574 to identify the failed transaction (see the following [example pattern](#example-pattern-issues-granting-permissions-to-system-role)).
 1. Fix the failed transaction according to the information in the [Potential causes and solutions](#potential-causes-and-solutions) section.
 1. Remove trace flag 902 from the **Startup Parameters** item and restart SQL Server.
