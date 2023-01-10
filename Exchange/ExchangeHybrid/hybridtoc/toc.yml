@@ -261,6 +261,8 @@
       items:
         - name: Can't access legacy on-premises public folders
           href: ../public-folders/cannot-access-legacy-on-premises-public-folders.md
+        - name: Can't access on-premises PFs from Outlook for Mac
+          href: ../public-folders/outlook-for-mac-unable-access-public-folders.md
         - name: Credential prompt when accessing on-premises PFs
           href: ../public-folders/credential-prompt-access-on-premises-public-folders.md
         - name: It is not possible to expand the folder error
