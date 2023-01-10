@@ -63,7 +63,7 @@ When you check the SQL Server error log, you notice one of the following error e
 
 ## Cause
 
-SQL Server 2017 release to manufacture (RTM) upgrade script includes a dynamic link library (DLL) that runs online index operations for all editions of SQL Server although only the Enterprise and Developer editions support this feature. For more information about database upgrade scripts, see [Troubleshoot upgrade script failures when applying an update](../../database-engine/install/windows/troubleshoot-upgrade-script-failures-apply-update.md).
+SQL Server 2017 release to manufacture (RTM) upgrade script includes a dynamic link library (DLL) that runs online index operations for all editions of SQL Server although only the Enterprise and Developer editions support this feature. For more information about database upgrade scripts, see [Troubleshoot upgrade script failures when applying an update](troubleshoot-upgrade-script-failures-apply-update.md).
 
 ## Resolution
 

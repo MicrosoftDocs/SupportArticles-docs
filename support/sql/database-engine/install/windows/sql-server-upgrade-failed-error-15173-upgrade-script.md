@@ -54,7 +54,7 @@ SQL Trace was stopped due to server shutdown. Trace ID = '1'. This is an informa
 
 This problem occurs because an upgrade script stops running because it can't drop the server principal (either `##MS_PolicyEventProcessingLogin##` or `##MS_AgentSigningCertificate##`). This error occurs because a user is mapped to the server principal.
 
-For more information about database upgrade scripts that run during the CU or SP installation, see [Troubleshoot upgrade script failures when applying an update](../../database-engine/install/windows/troubleshoot-upgrade-script-failures-apply-update.md).
+For more information about database upgrade scripts that run during the CU or SP installation, see [Troubleshoot upgrade script failures when applying an update](troubleshoot-upgrade-script-failures-apply-update.md).
 
 ## Resolution
 
