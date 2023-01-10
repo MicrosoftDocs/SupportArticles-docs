@@ -37,7 +37,7 @@ Cannot recover the master database. SQL Server is unable to run. Restore master 
 
 ## Cause
 
-This error occurs if a bulk load operation fails when you apply a CU or SP. This error occurs because of a missing support installation files. For more information about the database upgrade scripts that run during the CU or SP installation, see [Troubleshoot upgrade script failures when applying an update](../../database-engine/install/windows/troubleshoot-upgrade-script-failures-apply-update.md).
+This error occurs if a bulk load operation fails when you apply a CU or SP. This error occurs because of a missing support installation files. For more information about the database upgrade scripts that run during the CU or SP installation, see [Troubleshoot upgrade script failures when applying an update](troubleshoot-upgrade-script-failures-apply-update.md).
 
 For example, if Setup can't find *SqlTraceCollect.dtsx*, it reports an error that resembles the following entry:
 
