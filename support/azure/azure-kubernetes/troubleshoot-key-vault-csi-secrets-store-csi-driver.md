@@ -4,7 +4,7 @@ description: Troubleshoot and resolve common problems when you're using the Azur
 author: DennisLee-DennisLee
 ms.author: v-dele
 editor: v-jsitser
-ms.service: container-service
+ms.service: azure-kubernetes-service
 ms.date: 12/20/2022
 ms.reviewer: nickoman
 ---
