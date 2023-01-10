@@ -25,7 +25,10 @@ When you review the SQL Server error log, you may notice the following error mes
 Error: 574, Severity: 16, State: 0.
 CONFIG statement cannot be used inside a user transaction.
 Error: 912, Severity: 21, State: 2.
-Script level upgrade for database 'master' failed because upgrade step 'sqlagent100_msdb_upgrade.sql' encountered error 574, state 0, severity 16. This is a serious error condition which might interfere with regular operation and the database will be taken offline. If the error happened during upgrade of the 'master' database, it will prevent the entire SQL Server instance from starting. Examine the previous errorlog entries for errors, take the appropriate corrective actions and re-start the database so that the script upgrade steps run to completion.
+Script level upgrade for database 'master' failed because upgrade step 'sqlagent100_msdb_upgrade.sql' encountered error 574, state 0, severity 16.
+This is a serious error condition which might interfere with regular operation and the database will be taken offline.
+If the error happened during upgrade of the 'master' database, it will prevent the entire SQL Server instance from starting.
+Examine the previous errorlog entries for errors, take the appropriate corrective actions and re-start the database so that the script upgrade steps run to completion.
 Error: 3417, Severity: 21, State: 3.
 Script level upgrade for database 'master' failed because upgrade step 'msdb110_upgrade.sql' encountered error 15173, state 1, severity 16
 ```

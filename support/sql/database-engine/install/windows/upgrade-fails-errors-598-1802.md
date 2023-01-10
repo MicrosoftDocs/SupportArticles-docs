@@ -27,7 +27,10 @@ Directory lookup for the file "<path>\MSSQL10.<Instancename>\MSSQL\Data\temp_MS_
 Error: 1802, Severity: 16, State: 1.
 CREATE DATABASE failed. Some file names listed could not be created. Check related errors.
 Error: 912, Severity: 21, State: 2.
-Script level upgrade for database 'master' failed because upgrade step 'sqlagent100_msdb_upgrade.sql' encountered error 598, state 1, severity 25.This is a serious error condition which might interfere with regular operation and the database will be taken offline.If the error happened during upgrade of the 'master' database, it will prevent the entire SQL Server instance from starting. Examine the previous errorlog entries for errors, take the appropriate corrective actions and re-start the database so that the script upgrade steps run to completion.
+Script level upgrade for database 'master' failed because upgrade step 'sqlagent100_msdb_upgrade.sql' encountered error 598, state 1, severity 25.
+This is a serious error condition which might interfere with regular operation and the database will be taken offline.
+If the error happened during upgrade of the 'master' database, it will prevent the entire SQL Server instance from starting.
+Examine the previous errorlog entries for errors, take the appropriate corrective actions and re-start the database so that the script upgrade steps run to completion.
 Error: 3417, Severity: 21, State: 3.
 Cannot recover the master database. SQL Server is unable to run. Restore master from a full backup, repair it, or rebuild it. For more information about how to rebuild the master database, see SQL Server Books Online.
 ```
