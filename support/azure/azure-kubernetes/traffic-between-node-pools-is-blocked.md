@@ -5,7 +5,7 @@ ms.date: 11/4/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: chiragpa, rissing
-ms.service: container-service
+ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to fix a scenario in which traffic between node pools is blocked by a network security group (NSG) so that I don't experience outbound connection issues from an Azure Kubernetes Service (AKS) cluster.
 ---
 # Traffic between node pools is blocked by a custom network security group
