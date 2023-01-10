@@ -6,7 +6,7 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: chiragpa, rissing
 editor: v-jsitser
-ms.service: container-service
+ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to perform basic troubleshooting of outbound connections from an Azure Kubernetes Service (AKS) cluster so that I don't experience connection issues when I use AKS.
 ---
 # Basic troubleshooting of outbound connections from an AKS cluster
