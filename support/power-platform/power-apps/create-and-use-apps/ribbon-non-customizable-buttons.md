@@ -11,4 +11,4 @@ _Applies to:_ &nbsp; Power Apps
 The **Show Chart**, **Create view**, **Show as**, and **Open Dashboards** buttons on grids in the Unified Interface aren't implemented by ribbon customizations. The buttons are hardcoded by grid control code and unfortunately aren't customizable. Therefore, they aren't visible in Ribbon Workbench.
 
 > [!NOTE]
-> The button with id `Mscrm.HomepageGrid.{!EntityLogicalName}.ChangeDataSetControlButton` is a button intended only for Web Client interface that is now deprecated and this is intentionally disabled in the Unified Interface. Any attempts to modify this button is not supported.
+> The button with ID `Mscrm.HomepageGrid.{!EntityLogicalName}.ChangeDataSetControlButton` is a button intended only for Web client interface that is now deprecated and this is intentionally disabled in the Unified Interface. Any attempts to modify this button is not supported.
