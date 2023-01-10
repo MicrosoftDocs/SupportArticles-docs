@@ -16,8 +16,9 @@ appliesto:
   - Outlook 2016
   - Outlook 2013
   - Outlook 2010
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # You can't expand a nested contact group and Unknown is displayed in the group name in Outlook
 

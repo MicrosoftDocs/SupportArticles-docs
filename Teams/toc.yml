@@ -1,5 +1,5 @@
 - name: Teams Troubleshooting
-  href: teams-welcome.md
+  href: teams-welcome.yml
   items:
   - name: Administration
     items:
@@ -50,7 +50,7 @@
     - name: A channel can't be recreated after deletion
       href: ./channels/channel-cannot-be-recreated-after-deletion.md
     - name: Channel notifications settings don't update
-      href: ./channels/notifications-cannot-manage.md
+      href: ./channels/notifications-cannot-manage.md    
     - name: Logon re-enabled user doesn't see previous joined teams
       href: ./channels/logon-reenabled-user-not-see-previous-joined-teams.md
   - name: Conferencing
@@ -87,8 +87,6 @@
       href: ./teams-conferencing/teams-meetings-not-available.md
     - name: No audio while sharing content during a live event
       href: ./teams-conferencing/no-audio-when-sharing-content-in-meeting.md
-    - name: Team member maximum of 5000
-      href: ./teams-conferencing/teams-member-max-5000.md
     - name: Teams is slow during video meetings on laptops docked to 4K/HDR monitors
       href: ./teams-conferencing/teams-slow-video-meetings-laptops-4k.md
     - name: '"The following application instance is not present in BVD" error when assigning a phone number to a resource accounts'
@@ -133,8 +131,12 @@
       href: ./teams-im-presence/deleted-messages-send-notifications-with-link.md
     - name: Issues with presence status in Outlook
       href: ./teams-im-presence/issues-with-presence-in-outlook.md
+    - name: Messages are unexpectedly deleted by retention policies
+      href: ./teams-im-presence/messages-unexpectedly-deleted-retention-policy.md 
   - name: Meetings
     items:
+    - name: External participants are blocked from joining meetings
+      href: ./meetings/external-participants-join-meeting-blocked.md
     - name: External users appear as Unknown
       href: ./meetings/external-user-shown-as-unknown.md
     - name: Issues with meeting chat
@@ -143,6 +145,8 @@
       href: ./meetings/troubleshoot-meeting-recording-issues.md
     - name: Issues with webinars
       href: ./meetings/issues-with-webinars.md
+    - name: Resolve Teams Meeting add-in issues
+      href: ./meetings/resolve-teams-meeting-add-in-issues.md
   - name: Mobile
     items:
     - name: A website with Conditional Access doesn't display when viewed on the Website tab 
@@ -166,13 +170,17 @@
     - name: Temporary change to file size download limit in OneNote
       href: /office/troubleshoot/onenote/temp-change-onenote-file-size-download?context=/MicrosoftTeams/troubleshoot/context/context
   - name: Phone System
-    items: 
+    items:
+    - name: Issues when using SIP devices
+      href: ./phone-system/sip-gateway-issues.md
     - name: Dial Plans
       items: 
       - name: Errors when trying to manage dial plans
         href: ./phone-system/dial-plans/errors-managing-dial-plans.md
     - name: Direct Routing
       items:
+      - name: Diagnose issues with Direct Routing
+        href: ./phone-system/direct-routing/diagnose-direct-routing-issues.md
       - name: Issues with call transfers
         href: ./phone-system/direct-routing/issues-with-call-transfers.md
       - name: Issues with LMO
@@ -181,6 +189,8 @@
         href: ./phone-system/direct-routing/issues-with-outbound-calls.md
       - name: Issues with SBC connectivity
         href: ./phone-system/direct-routing/sip-options-tls-certificate-issues.md
+      - name: Microsoft and SIP response codes
+        href: ./phone-system/direct-routing/microsoft-sip-response-codes.md
   - name: Provisioning
     items:
     - name: Can't create a team 
@@ -205,7 +215,7 @@
       href: ./teams-sign-in/teams-doesnt-automatically-update.md
     - name: Using a symlink or mapping a drive to C:\users causes Teams to start with a white screen
       href: ./teams-sign-in/symlink-or-drivemap-causes-white-screen.md
-    - name: You're missing out
+    - name: Error "You're missing out" during sign-in
       href: ./teams-sign-in/error-missing-out-sign-in-teams.md
   - name: Sites
     items:
@@ -229,17 +239,49 @@
       href: ./tabs/task-buckets-do-not-appear-in-planner.md
     - name: Teams website tabs lead to customer confusion
       href: ./tabs/website-tabs-cause-confusion-teams.md
-  - name: Teams devices and rooms
+  - name: Teams Rooms and devices
     items:
     - name: Collect Android Teams device logs
-      href: ./Teams-devices-and-rooms/collect-device-logs.md
-    - name: Issues when using SIP devices
-      href: ./Teams-devices-and-rooms/sip-gateway-issues.md
-    - name: Known issues in Rooms
-      href: ./Teams-devices-and-rooms/rooms-known-issues.md
+      href: ./teams-rooms-and-devices/collect-device-logs.md
+    - name: Conditional Access-related issues on Teams Android devices
+      href: ./teams-rooms-and-devices/teams-android-devices-conditional-access-issues.md
+    - name: Known issues
+      href: ./teams-rooms-and-devices/rooms-known-issues.md
+    - name: Signed out of Teams Android devices
+      href: ./teams-rooms-and-devices/signed-out-of-teams-android-devices.md
+    - name: Teams Rooms devices can't fetch calendar
+      href: ./teams-rooms-and-devices/mtr-device-cannot-fetch-calendar.md
+    - name: Teams Rooms Pro Management
+      items:
+      - name: Get support for Teams Rooms Pro Management
+        href: ./teams-rooms-and-devices/get-support-teams-rooms-pro-management.md
+      - name: Black or blank screen or no system response
+        href: ./teams-rooms-and-devices/black-blank-screen.md
+      - name: Camera status is unhealthy
+        href: ./teams-rooms-and-devices/camera-status-unhealthy.md
+      - name: Default Credentials status is unhealthy
+        href: ./teams-rooms-and-devices/default-credentials-status-unhealthy.md
+      - name: Disk Space status is unhealthy
+        href: ./teams-rooms-and-devices/disk-space-status-unhealthy.md
+      - name: Display status is unhealthy
+        href: ./teams-rooms-and-devices/display-status-unhealthy.md
+      - name: HDMI ingest status is unhealthy
+        href: ./teams-rooms-and-devices/hdmi-ingest-status-unhealthy.md
+      - name: Meeting app status is unhealthy
+        href: ./teams-rooms-and-devices/meeting-app-status-unhealthy.md  
+      - name: Microphone or speaker status is unhealthy
+        href: ./teams-rooms-and-devices/microphone-speaker-status-unhealthy.md
+      - name: Monitored or Offline status is Unhealthy
+        href: ./teams-rooms-and-devices/monitored-offline-status-unhealthy.md  
+      - name: OS Edition status is Unhealthy
+        href: ./teams-rooms-and-devices/os-edition-status-unhealthy.md      
+      - name: Resolve Teams Rooms resource account sign-in issues
+        href: ./teams-rooms-and-devices/teams-rooms-resource-account-sign-in-issues.md
+      - name: Resolve Windows Update issues on Teams Rooms Pro devices
+        href: ./teams-rooms-and-devices/teams-rooms-device-windows-update-issues.md
   - name: Teams on Linux
     items: 
-    - name: Known issues at Linux
+    - name: Known issues on Linux
       href: ./teams-on-linux/linux-known-issues.md
   - name: Teams on Mac
     items:

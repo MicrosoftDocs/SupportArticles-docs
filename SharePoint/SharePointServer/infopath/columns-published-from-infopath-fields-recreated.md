@@ -16,6 +16,7 @@ appliesto:
   - SharePoint Server 2016
   - SharePoint Server 2019
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Columns published from InfoPath fields are recreated when the same InfoPath form template is republished
 

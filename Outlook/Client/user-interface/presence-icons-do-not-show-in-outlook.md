@@ -17,8 +17,9 @@ appliesto:
   - Outlook 2016
   - Outlook 2013
   - Microsoft Outlook 2010
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Presence icons do not appear in Outlook
 
@@ -48,7 +49,7 @@ DWORD: Enabled
 Value: 0 (turn off presence icons in email messages, but leave them on in the contact card)
 
 > [!NOTE]
-> The <x.0> placeholder represents your version of Office (16.0 = Outlook 2016, Outlook 2019, Outlook LTSC 2021, or Outlook for Office 365, 15.0 = Office 2013, 14.0 = Office 2010).
+> The <x.0> placeholder represents your version of Office (16.0 = Outlook 2016, Outlook 2019, Outlook LTSC 2021, or Outlook for Microsoft 365, 15.0 = Office 2013, 14.0 = Office 2010).
 
 ## Resolution
 
@@ -71,4 +72,4 @@ DWORD: Enabled
 Value: 1
 
 > [!NOTE]
-> The *x.0* placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Office 365, 15.0 = Office 2013, 14.0 = Office 2010).
+> The *x.0* placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Microsoft 365, 15.0 = Office 2013, 14.0 = Office 2010).

@@ -20,6 +20,8 @@ ms.custom:
 ---
 # Resolve eDiscovery hold errors
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 This article discusses common issues that may occur with eDiscovery holds and how to resolve them. The article also includes recommended practices to help you mitigate or avoid these issues.
 
 ## Recommended practices
@@ -83,7 +85,7 @@ Running the `Set-CaseHoldPolicy -Identity "policyname" -RetryDistribution` will 
    Set-CaseHoldPolicy "policyname" -RetryDistribution
    ```
 
-Also in the case hold page in the Microsoft 365 compliance center, you can redeploy the policy by clicking **Retry**.
+Also in the case hold page in the Microsoft Purview compliance portal, you can redeploy the policy by clicking **Retry**.
 
 :::image type="content" source="media/resolve-ediscovery-hold-issues/retry-case-hold.png" alt-text="Screenshot to click Retry option in the case hold page.":::
 
@@ -91,7 +93,7 @@ Also in the case hold page in the Microsoft 365 compliance center, you can redep
 
 If you see this error in the **ResultCode: PolicyNotifyError** and the following error message, a datacenter issue interrupted the policy sync.
 
-> Policy cannot be deployed to the content source due to a temporary Office 365 datacenter issue. The current policy is not applied to any content in the source, so there's no impact from the blocked deployment. To fix this issue, please try redeploying the policy.
+> Policy cannot be deployed to the content source due to a temporary Microsoft 365 datacenter issue. The current policy is not applied to any content in the source, so there's no impact from the blocked deployment. To fix this issue, please try redeploying the policy.
 
 ### Resolution
 
@@ -101,7 +103,7 @@ Running the `Set-CaseHoldPolicy -Identity "policyname" -RetryDistribution` will 
    Set-CaseHoldPolicy "policyname" -RetryDistribution
    ```
 
-Also in the case hold page in the Microsoft 365 compliance center, you can redeploy the policy by clicking **Retry**.
+Also in the case hold page in the Microsoft Purview compliance portal, you can redeploy the policy by clicking **Retry**.
 
 :::image type="content" source="./media/resolve-ediscovery-hold-issues/retry-case-hold.png" alt-text="Screenshot to retry a case hold.":::
 
@@ -109,7 +111,7 @@ Also in the case hold page in the Microsoft 365 compliance center, you can redep
 
 If you see this error in the **ResultCode: InternalError** and the following error message, this issue has to be resolved by Microsoft.
 
-> Policy deployment has been interrupted by an unexpected Office 365 datacenter issue. Please contact Microsoft support to fix the deployment issue.
+> Policy deployment has been interrupted by an unexpected Microsoft 365 datacenter issue. Please contact Microsoft support to fix the deployment issue.
 
 ### Resolution
 
@@ -163,7 +165,7 @@ After more storage quota has been added to the site the policy will need to be r
    Set-CaseHoldPolicy "policyname" -RetryDistribution
    ```
 
-Also in the case hold page in the Microsoft 365 compliance center, you can redeploy the policy by clicking **Retry**.
+Also in the case hold page in the Microsoft Purview compliance portal, you can redeploy the policy by clicking **Retry**.
 
 :::image type="content" source="./media/resolve-ediscovery-hold-issues/retry-case-hold.png" alt-text="Screenshot to retry a case hold.":::
 

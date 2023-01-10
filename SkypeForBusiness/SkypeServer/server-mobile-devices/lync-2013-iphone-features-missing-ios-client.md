@@ -12,6 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business for iOS
+ms.date: 3/31/2022
 ---
 
 # Some Lync 2013 for iPhone/iPad features are missing in Skype for Business for iOS

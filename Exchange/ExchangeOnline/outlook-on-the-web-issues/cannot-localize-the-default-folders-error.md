@@ -14,6 +14,7 @@ ms.reviewer: kunalsh, adipuli
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Cannot localize the default folders error when changing default folder names to another language in Outlook on the web
 

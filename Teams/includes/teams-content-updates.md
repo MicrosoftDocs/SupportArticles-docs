@@ -2,19 +2,9 @@
 
 
 
-## Week of January 10, 2022
+## Week of January 02, 2023
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 1/11/2022 | [Self-help diagnostics for Teams administrators](/microsoftteams/troubleshoot/teams-administration/admin-self-help-diagnostics) | modified |
-| 1/14/2022 | [Resolve sign-in errors in Teams](/microsoftteams/troubleshoot/teams-sign-in/resolve-sign-in-errors) | modified |
-
-
-## Week of December 20, 2021
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 12/20/2021 | [Desktop app option is missing when editing Office files in Teams](/microsoftteams/troubleshoot/files/desktop-app-option-missing) | added |
-| 12/21/2021 | [Issues with meeting recordings](/microsoftteams/troubleshoot/meetings/troubleshoot-meeting-recording-issues) | modified |
+| 1/4/2023 | [Teams web client is stuck in a login loop](/microsoftteams/troubleshoot/teams-sign-in/sign-in-loop) | modified |

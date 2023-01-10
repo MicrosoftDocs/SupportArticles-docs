@@ -1,6 +1,6 @@
 ---
-title: Users can't see free/busy information after a mailbox is moved to Office 365
-description: Describes an issue in which on-premises users can't see free/busy information for a mailbox that is moved to Office 365. Provides a workaround.
+title: Users can't see free/busy information after a mailbox is moved to Microsoft 365
+description: Describes an issue in which on-premises users can't see free/busy information for a mailbox that is moved to Microsoft 365. Provides a workaround.
 author: simonxjx
 audience: ITPro
 ms.topic: troubleshooting
@@ -14,12 +14,13 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
-# Users can't see free/busy information after a mailbox is moved to Office 365
+# Users can't see free/busy information after a mailbox is moved to Microsoft 365
 
 ## Symptoms
 
-After a mailbox is moved to Microsoft Office 365, an on-premises user can't see the free/busy information for the mailbox in Scheduling Assistant.
+After a mailbox is moved to Microsoft 365, an on-premises user can't see the free/busy information for the mailbox in Scheduling Assistant.
 
 :::image type="content" source="./media/cannot-see-free-busy-information/scheduling-assistant-without-data.png" alt-text="Screenshot shows an on-premises user can't see the free/busy information for the mailbox in Scheduling Assistant.":::
 
@@ -66,7 +67,7 @@ The remote user (Test User 1) can now see the mailbox Calendar folder:
 
 For more information about cross-forest free/busy configuration, click the following article number to view the article in the Microsoft Knowledge Base:
 
-[3079932](https://support.microsoft.com/help/3079932) Users can see only basic free/busy mailbox information in a remote forest in Office 365
+[3079932](https://support.microsoft.com/help/3079932) Users can see only basic free/busy mailbox information in a remote forest in Microsoft 365
 
 There are some differences with contributor permissions when you set the default calendar permissions or when you explicitly grant a user calendar permission. When the default calendar permissions are set, the **Free/busy setting** uses **None**.
 

@@ -13,6 +13,7 @@ ms.author: luche
 appliesto: 
   - PowerPoint 2010
 ms.reviewer: kemille
+ms.date: 3/31/2022
 ---
 # The save as webpage options are not available in PowerPoint 2010
 

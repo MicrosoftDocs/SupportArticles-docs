@@ -17,6 +17,7 @@ appliesto:
   - Skype for Business 2019
   - Skype for Business 2016
   - Skype for Business 2015
+ms.date: 3/31/2022
 ---
 
 # Chat history doesn't show in conversation window in Skype for Business 

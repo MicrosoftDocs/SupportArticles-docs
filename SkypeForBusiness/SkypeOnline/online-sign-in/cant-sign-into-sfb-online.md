@@ -17,13 +17,14 @@ appliesto:
   - Skype for Business Online
   - Lync 2013
   - Lync 2010
+ms.date: 3/31/2022
 ---
 
 # You can't sign in to Skype for Business Online because the certificate can't be acquired or validated
 
 ## Problem
 
-When an Office 365 user tries to sign in to Skype for Business Online (formerly Lync Online) by using Lync 2010 or Lync 2013, the user receives the following error message: 
+When a Microsoft 365 user tries to sign in to Skype for Business Online (formerly Lync Online) by using Lync 2010 or Lync 2013, the user receives the following error message: 
 
 ```adoc
 There was a problem acquiring a personal certificate required to sign in. If the problem continues, please contact your support team.
@@ -59,7 +60,7 @@ During the sign in process, Lync 2013 caches your credentials and other informat
 
 ### Resolution for Lync 2010
 
-1. Update the Lync client to the latest version that's available on the Downloads page of the Office 365 portal.
+1. Update the Lync client to the latest version that's available on the Downloads page of the Microsoft 365 portal.
 2. Make sure that **Microsoft Online Services Sign-in Assistant** is running on Windows Services by following these steps:  
   (These steps are for Windows 10)
 
@@ -118,7 +119,7 @@ If the steps earlier in this article don't resolve the issue, try the following 
 
 #### Resolution for Skype for Business Online administrators: Validate the certificate chain
 
-End-users may receive an error stating that the certificate can't be validated, and this usually happens because one of the certificates in the chain is untrusted and can't be validated. This typically occurs for customers who use single sign-on in Office 365 or for customers who have Lync hybrid deployments.
+End-users may receive an error stating that the certificate can't be validated, and this usually happens because one of the certificates in the chain is untrusted and can't be validated. This typically occurs for customers who use single sign-on in Microsoft 365 or for customers who have Lync hybrid deployments.
 
 For more information about certificate validation with Lync, see [Lync Mobile users cannot sign in after they update to client version 5.4](https://support.microsoft.com/help/2965499).
 
@@ -127,7 +128,7 @@ For more information about certificate validation with Lync, see [Lync Mobile us
 
 ## More Information
 
-If the issue persists after you perform these troubleshooting steps, contact Microsoft Office 365 technical support or the Microsoft Office 365 Community forums. In certain cases, the Active Directory Domain Services user account may be incomplete or corrupted. Therefore, Skype for Business Online can't generate a personal certificate. This may not affect all of a tenant's accounts because the effect depends on the state of the server when the user account was created. 
+If the issue persists after you perform these troubleshooting steps, contact Microsoft 365 technical support or the Microsoft 365 Community forums. In certain cases, the Active Directory Domain Services user account may be incomplete or corrupted. Therefore, Skype for Business Online can't generate a personal certificate. This may not affect all of a tenant's accounts because the effect depends on the state of the server when the user account was created. 
 
 To narrow the issue, determine whether the issue occurs for multiple user accounts on the same computer. Then, try to sign in to Skype for Business Online from the same computer by using multiple user accounts. This process indicates whether the problem is related to the configuration of the computer or an issue with the Skype for Business Online user account.
 

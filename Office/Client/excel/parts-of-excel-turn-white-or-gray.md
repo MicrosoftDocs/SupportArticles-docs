@@ -13,11 +13,10 @@ search.appverid:
   - MET150
 appliesto: 
   - Excel 2013
+ms.date: 3/31/2022
 ---
 
 # Parts of Excel turn white or gray when you run VBA code in Excel 2013
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

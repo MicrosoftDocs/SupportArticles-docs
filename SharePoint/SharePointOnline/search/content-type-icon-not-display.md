@@ -13,6 +13,7 @@ ms.author: luche
 appliesto: 
   - SharePoint Online
   - SharePoint Server
+ms.date: 3/31/2022
 ---
 
 # The document preview and content type icon aren't displayed when you change the search result types display template
@@ -21,7 +22,7 @@ appliesto:
 
 Consider the following scenario:
 
-- In Microsoft SharePoint Server 2013 or Microsoft SharePoint Online in Office 365, you change your search result types by specifying a display template other than the default template.
+- In Microsoft SharePoint Server 2013 or Microsoft SharePoint Online in Microsoft 365, you change your search result types by specifying a display template other than the default template.
 
 - You perform a search and then view the results that are returned.
 

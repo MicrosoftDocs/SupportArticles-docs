@@ -1,9 +1,9 @@
-- name: Hybrid Deployment Troubleshooting 
-  href: ../skype-hybrid-welcome.md
+- name: Skype for Business hybrid troubleshooting
+  href: ../skype-hybrid-welcome.yml
   items:
   - name: Conferencing
     items:
-    - name: Issue after run New-CSHostingProvider cmdlet
+    - name: Error after running New-CSHostingProvider cmdlet
       href: ../hybrid-conferencing/there-is-a-duplicate-key-sequence.md
     - name: Lync administrators can't connect to Remote PowerShell 
       href: ../hybrid-conferencing/cant-connect-to-sfb-remote-powershell.md
@@ -15,13 +15,13 @@
       href: ../hybrid-exchange-integration/repeatedly-prompted-for-credentials.md
   - name: IM and Presence
     items:
-    - name: Office 365 domain user can't IM
+    - name: Microsoft 365 domain user can't IM
       href: ../hybrid-im-presence/sfb-online-users-cant-im.md
   - name: Meetings
     items:
     - name: Online users can't present content in on-premises meetings
       href: ../hybrid-meetings/present-content-on-premises-meeting.md
-  - name: Moving to Skype for Business Online
+  - name: Move to Skype for Business Online
     items:
     - name: Cannot move users from different AD domain
       href: ../hybrid-move-sfb-online/cannot-move-users-from-different-ad-domain.md
@@ -31,13 +31,13 @@
       href: ../hybrid-move-sfb-online/move-csuser--hostedmigration-fault.md
     - name: "Move-CsUser:HostedMigration fault: Error=(507)"
       href: ../hybrid-move-sfb-online/move-csuser-hostedmigration-fault-507.md
-    - name: Skype for Business 2016 isn't installed in Office 365
+    - name: Skype for Business 2016 isn't installed in Microsoft 365
       href: ../hybrid-move-sfb-online/sfb-is-not-installed-office-365.md
   - name: Phone System
     items:
     - name: Incoming call fails in Cloud Connector Edition
       href: ../hybrid-phone-system/incoming-call-fails-cloud-connector.md
-    - name: Issue when configure Office 365 call queue
+    - name: Issue when configure Microsoft 365 call queue
       href: ../hybrid-phone-system/issue-configure-call-queue.md
     - name: Telephone contact number isn't updated
       href: ../hybrid-phone-system/phone-contact-number-not-updated.md

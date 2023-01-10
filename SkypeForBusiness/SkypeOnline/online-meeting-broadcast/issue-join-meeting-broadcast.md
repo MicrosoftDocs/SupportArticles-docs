@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.author: v-six
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # "This release of Lync cannot be used in a Skype Meeting Broadcast" error when you join a Skype Meeting Broadcast as an "Event team" member

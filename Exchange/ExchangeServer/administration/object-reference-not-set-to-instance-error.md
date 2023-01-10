@@ -16,6 +16,7 @@ appliesto:
   - Exchange Server 2013
   - Exchange Server 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Object reference not set to an instance of an object error and message trace fails in an Exchange hybrid environment
 
@@ -39,4 +40,4 @@ This is by design. Exchange Server does not support tracing a message that's sen
 
 ## Workaround
 
-To work around this problem, run the message trace from Office 365 to get a partial trace on the cloud side. Be aware that this does not show the on-premises path.
+To work around this problem, run the message trace from Microsoft 365 to get a partial trace on the cloud side. Be aware that this does not show the on-premises path.

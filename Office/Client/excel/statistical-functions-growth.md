@@ -14,11 +14,10 @@ appliesto:
   - Microsoft Office Excel 2007
   - Microsoft Office Excel 2003
   - Excel 2004 for Mac
+ms.date: 3/31/2022
 ---
 
 # Excel statistical functions: GROWTH
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

@@ -17,6 +17,7 @@ appliesto:
   - Microsoft Word 2013
   - Microsoft Word 2010
 ms.reviewer: 
+ms.date: 3/31/2022
 ---
 # How to create table of contents entries without a page number in Word
 

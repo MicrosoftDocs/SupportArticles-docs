@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: seemarah; corbinm; mshaikh
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
 
 # Calls to UM Auto Attendant fail when custom greetings are used

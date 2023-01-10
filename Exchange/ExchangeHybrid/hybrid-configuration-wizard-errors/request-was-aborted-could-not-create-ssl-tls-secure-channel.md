@@ -16,6 +16,7 @@ appliesto:
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2013 Enterprise
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Could not create SSL/TLS secure channel error when running Hybrid Configuration wizard
 
@@ -36,7 +37,7 @@ This issue can occur if firewall settings or proxy server settings are configure
 
 ## Resolution
 
-1. Configure the settings on the proxy server to allow access to the endpoints that are used by the service. For a list of IP addresses and URLs that are used by Exchange Online, see the Exchange Online section of [Office 365 URLs and IP addresses](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#bkmk_exo&preserve-view=true).
+1. Configure the settings on the proxy server to allow access to the endpoints that are used by the service. For a list of IP addresses and URLs that are used by Exchange Online, see the Exchange Online section of [Microsoft 365 URLs and IP addresses](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#bkmk_exo&preserve-view=true).
 
 2. Make sure that proxy settings are configured correctly on the Exchange servers in your environment by doing the following:
 

@@ -1,26 +1,31 @@
 ---
-title: Site storage notification emails for group-connected sites not received 
-description: This article describes an issue that prevents site storage notification email messages for group-connected sites from being received.
-author: PramodBalusu
+title: Notifications sent to SharePoint sites connected to Microsoft 365 groups aren’t received
+description: Provides a fix for an issue when notifications aren't received by the group that's connected to a SharePoint site.
 manager: dcscontentpm
+author: cloud-writer
+ms.author: meerak
 localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-matthamer
+ms.reviewer: prbalusu; salarson
 ms.custom: 
-- CSSTroubleshoot
-- CI 161041
+  - CSSTroubleshoot
+  - CI 161041
+  - CI 164597
 appliesto: 
   - SharePoint Online
+ms.date: 6/27/2022
 ---
 
-# Site storage notifications for group-connected SharePoint sites aren't received
+# Notifications sent to SharePoint sites connected to Microsoft 365 groups aren’t received
 
-Site storage notification email messages that are sent to group-connected SharePoint sites are sent from 'no-reply@sharepointonline.com'. Microsoft 365 treats this address as external. By default, Microsoft 365 groups don’t allow email messages from external addresses. Therefore, the groups block these notifications.
+As part of routine administration activities, email messages about requests for access to the site and notifications about the storage limit of the site are sent to the owners of a SharePoint site. If the SharePoint site is connected to a Microsoft 365 group, these email messages are sent to the group's email address.
 
-To make sure that site storage notification email messages are received, change your Microsoft 365 group settings to allow email to be sent from an external address:
+The email messages are sent from a mail-enabled security group such as 'no-reply@sharepointonline.com'. When a Microsoft 365 group receives a message from such a security group, it treats the address as external and blocks it. This blocking occurs because Microsoft 365 groups aren’t allowed to receive email messages from external addresses by default.
+
+To resolve the issue of blocked email messages, change the settings of the Microsoft 365 group to allow email messages from external addresses:
 
 1. Open the [Microsoft 365 admin center](https://admin.microsoft.com).
 
@@ -32,11 +37,8 @@ To make sure that site storage notification email messages are received, change 
 
 1. Under **General settings**, select **Allow external senders to email this group**.
 
+    **Note:** This setting will allow email messages from any external address to be sent to the group.
+
 1. Select **Save**.
 
-**Notes:**
-
-- This change to enable external senders will allow mail from any external address to be sent to the group.
-
-- Make sure that you check your Junk mail folder in case the external messages are marked as junk.
- 
+**Note:**: If the members of the group subscribe to receive copies of all the email messages that are received by the group, they can see the notifications either in their **Inbox** or in their **Junk Mail** folder depending on their individual mailbox settings.

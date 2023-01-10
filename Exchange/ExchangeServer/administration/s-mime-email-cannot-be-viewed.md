@@ -14,6 +14,7 @@ ms.reviewer: benwinz, wduff, bradhugh
 appliesto: 
   - Exchange Server 2010 Service Pack 2
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # A recipient cannot view an email message that is encoded by using S/MIME
 

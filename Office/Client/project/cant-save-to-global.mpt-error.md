@@ -18,11 +18,10 @@ appliesto:
   - Project Standard 2010
   - Project Professional 2013
   - Project 2013 Standard
+ms.date: 3/31/2022
 ---
 
 # "Cannot save to Global.mpt" when exiting Microsoft Project
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

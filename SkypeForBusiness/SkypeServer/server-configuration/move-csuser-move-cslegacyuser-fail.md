@@ -13,6 +13,7 @@ ms.reviewer: miadkins
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Lync Server
+ms.date: 3/31/2022
 ---
 
 # Lync Server Move-CsUser and Move-CsLegacyUser commands fail with error - SetMoveResourceData failed because the user is not provisioned

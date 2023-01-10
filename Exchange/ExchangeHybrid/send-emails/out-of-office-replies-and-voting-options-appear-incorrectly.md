@@ -18,11 +18,12 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Out-of-office replies and voting options in email between on-premises and Exchange Online users appear incorrectly
 
 > [!NOTE]
-> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Office 365 Hybrid Configuration wizard that's available at [https://aka.ms/HybridWizard](https://aka.ms/hybridwizard). For more information, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://blogs.technet.com/b/exchange/archive/2016/02/17/office-365-hybrid-configuration-wizard-for-exchange-2010.aspx).
+> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Microsoft 365 Hybrid Configuration wizard that's available at [https://aka.ms/HybridWizard](https://aka.ms/hybridwizard). For more information, see [Microsoft 365 Hybrid Configuration wizard for Exchange 2010](https://blogs.technet.com/b/exchange/archive/2016/02/17/office-365-hybrid-configuration-wizard-for-exchange-2010.aspx).
 
 _Original KB number:_ &nbsp; 3070442
 
@@ -30,7 +31,7 @@ _Original KB number:_ &nbsp; 3070442
 
 Consider the following scenario:
 
-- You have a hybrid deployment of on-premises Microsoft Exchange Server and Exchange Online in Office 365.
+- You have a hybrid deployment of on-premises Microsoft Exchange Server and Exchange Online in Microsoft 365.
 - The on-premises environment includes both Exchange Server 2013-based servers and Exchange Server 2010-based servers.
 - An Exchange Online user sends an email message to an on-premises user or an on-premises user sends an email message to an Exchange Online user.
 
@@ -45,7 +46,7 @@ This problem may occur if remote domain settings are missing or are set incorrec
 
 ## Resolution
 
-To resolve this problem, update the remote domain settings in Office 365. To do this, use the procedure for either or both of the following scenarios, as appropriate for your situation.
+To resolve this problem, update the remote domain settings in Microsoft 365. To do this, use the procedure for either or both of the following scenarios, as appropriate for your situation.
 
 ### Scenario 1 - Exchange Online users can't view out-of-office replies and voting options of on-premises users
 
@@ -60,17 +61,7 @@ To resolve this problem, update the remote domain settings in Office 365. To do 
 
 ### Scenario 2 - On-premises users can't view out-of-office replies and voting options of Exchange Online users
 
-This scenario occurs because Exchange Online strips out the Transport Neutral Encapsulation Format (TNEF) content (specifically, the voting buttons). To prevent Exchange Online from removing the TNEF content when an email message is sent to an on-premises user, enable TNEF on the remote domains. To do this, use the one or both of following methods.
-
-#### Method 1
-
-Run the following PowerShell command in Exchange Online, wait 30 minutes, and then test again.
-
-```powershell
-Set-RemoteDomain "default" -TNEFEnabled $true -AllowedOOFType "InternalLegacy"
-```
-
-#### Method 2
+This scenario occurs because Exchange Online strips out the Transport Neutral Encapsulation Format (TNEF) content (specifically, the voting buttons). To prevent Exchange Online from removing the TNEF content when an email message is sent to an on-premises user, enable TNEF on the remote domain.
 
 Create remote domains for each of your on-premises domains that have to use TNEF-based features. Then, set the **TNEFEnabled** parameter on those specific remote on-premises domains. To do this, run the following commands in Exchange Online:
 

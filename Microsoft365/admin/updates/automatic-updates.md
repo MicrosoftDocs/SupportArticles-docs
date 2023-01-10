@@ -23,11 +23,10 @@ appliesto:
   - Office Professional 2013
   - Office Professional Plus 2013
   - Office Standard 2013
+ms.date: 3/31/2022
 ---
 
 # Automatic updating for Microsoft Office is not enabled
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

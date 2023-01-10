@@ -14,11 +14,10 @@ ms.reviewer: of12sstr
 appliesto: 
   - Office 2010
   - Office 2007
+ms.date: 3/31/2022
 ---
 
 # How to manage templates in 2007 Office programs and in 2010 Office programs
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Introduction
 

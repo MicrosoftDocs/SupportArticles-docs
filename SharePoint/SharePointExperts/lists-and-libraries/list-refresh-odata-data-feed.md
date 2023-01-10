@@ -9,9 +9,11 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: sap:spsexperts, CSSTroubleshoot
-ms.author: zakirh
+ms.author: luche
+ms.reviwer: zakirh
 appliesto: 
   - SharePoint Server 2013
+ms.date: 3/31/2022
 ---
 
 # PowerPivot scheduled data refresh from a SharePoint list by using OData data feed connection (PowerPivot 2012 SP1 for SharePoint 2013)

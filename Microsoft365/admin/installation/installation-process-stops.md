@@ -1,6 +1,6 @@
 ---
-title: Office 365 or Office 2013 installation process stops at the 10% - Configuring stage
-description: Resolves an issue in which the Office 365 or Office 2013 installation process stops at the 10% - Configuring stage.
+title: Microsoft 365 or Office 2013 installation process stops at the 10% - Configuring stage
+description: Resolves an issue in which the Microsoft 365 or Office 2013 installation process stops at the 10% - Configuring stage.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -13,15 +13,14 @@ ms.author: v-maqiu
 ms.reviewer: mmaxey, tomol, doakm, trevormc, bobbied, swebster, andyfel
 appliesto: 
   - Office 2013
+ms.date: 3/31/2022
 ---
 
-# Office 365 or Office 2013 installation process stops at the "10% - Configuring" stage
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+# Microsoft 365 or Office 2013 installation process stops at the "10% - Configuring" stage
 
 ## Symptoms
 
-Assume that you access the Internet by using a proxy server. When you try to install Microsoft Office 365 or Microsoft Office 2013 Click-to-Run, the installation process stops at the "10% - Configuring" stage.
+Assume that you access the Internet by using a proxy server. When you try to install Microsoft 365 or Microsoft Office 2013 Click-to-Run, the installation process stops at the "10% - Configuring" stage.
 
 ## Cause
 
@@ -41,7 +40,7 @@ To download the Psexec tool, go to [PsExec v2.2](/sysinternals/downloads/psexec)
 
 ### Method 2
 
-Use the Office Deployment Tool to download the Office 365 Click-to-Run source. For more information about how to use the Office Deployment Tool, see [Overview of the Office Deployment Tool](/deployoffice/overview-office-deployment-tool).
+Use the Office Deployment Tool to download the Microsoft 365 Click-to-Run source. For more information about how to use the Office Deployment Tool, see [Overview of the Office Deployment Tool](/deployoffice/overview-office-deployment-tool).
 
 ### Method 3
 

@@ -9,16 +9,17 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- CSSTroubleshoot
+- CI 169809
 appliesto: 
-  - Excel for Office 365
+  - Excel for Microsoft 365
   - Excel 2019
   - Excel 2016
+ms.date: 3/31/2022
 ---
 
 # Macros in embedded Excel workbook are blocked from running
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptom
 
@@ -34,10 +35,10 @@ Macros in this document have been disabled by your enterprise administrator for 
 
 ## Cause
 
-This issue occurs if the embedded Excel workbook isn't from a trusted location, or the new workbook isn't saved to a trusted location. 
+This issue occurs if the embedded Excel workbook isn't from a trusted location, or the new workbook isn't saved to a trusted location.
 
 ## Resolution
 
 To work around the issue, save the embedded or new workbook to a trusted location.
 
-For more information about the **Block macros from running in Office files from the Internet** Group Policy setting, see [New feature in Office 2016 can block macros and help prevent infection](https://cloudblogs.microsoft.com/microsoftsecure/2016/03/22/new-feature-in-office-2016-can-block-macros-and-help-prevent-infection/?source=mmpc).
+For more information about the **Block macros from running in Office files from the Internet** Group Policy setting, see [New feature in Office 2016 can block macros and help prevent infection](https://www.microsoft.com/security/blog/2016/03/22/new-feature-in-office-2016-can-block-macros-and-help-prevent-infection/).

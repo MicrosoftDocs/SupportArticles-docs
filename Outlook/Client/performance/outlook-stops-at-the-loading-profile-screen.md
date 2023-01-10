@@ -14,6 +14,7 @@ ms.reviewer: gregmans, aruiz
 appliesto: 
   - Outlook 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook 2013 stops at the Loading Profile screen
 

@@ -9,9 +9,11 @@ search.appverid:
 audience: ITPro
 ms.custom: sap:office-experts, CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: thempel
+ms.author: v-maqiu
+ms.reviewer: thempel
 appliesto: 
   - Excel Online
+ms.date: 3/31/2022
 ---
 
 # "Request Was Taking Too Long" when you open a workbook in Excel Online

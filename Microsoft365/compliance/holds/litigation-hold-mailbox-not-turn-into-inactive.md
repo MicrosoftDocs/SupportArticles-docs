@@ -14,9 +14,12 @@ ms.reviewer: kellybos, lindabr, meerak
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # A mailbox that's on Litigation Hold or assigned to a retention policy doesn't turn into an inactive mailbox after license removal
+
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 ## Symptoms
 

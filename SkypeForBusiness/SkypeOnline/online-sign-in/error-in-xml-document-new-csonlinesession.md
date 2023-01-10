@@ -12,6 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # "There is an error in XML document (5,2)" when you run the New-CsOnlineSession cmdlet to connect to Skype for Business Online
@@ -37,7 +38,7 @@ $O365Session = New-CsOnlineSession -Credential $credential –OverridePowershell
 ```
 
 > [!NOTE]
-> To determine the Skype for Business Administration center URL, see the "To determine the Hosted Migration Service URL for your Office 365 tenant" section of [Administering users in a hybrid Lync Server 2013 deployment](/previous-versions/office/lync-server-2013/lync-server-2013-administering-users-in-a-hybrid-deployment).
+> To determine the Skype for Business Administration center URL, see the "To determine the Hosted Migration Service URL for your Microsoft 365 tenant" section of [Administering users in a hybrid Lync Server 2013 deployment](/previous-versions/office/lync-server-2013/lync-server-2013-administering-users-in-a-hybrid-deployment).
 
 ## More Information
 

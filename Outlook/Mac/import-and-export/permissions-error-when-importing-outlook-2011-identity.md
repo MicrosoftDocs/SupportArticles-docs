@@ -13,8 +13,9 @@ ms.custom:
 ms.reviewer: tasitae
 appliesto: 
   - Outlook 2016 for Mac
-  - Outlook for Mac for Office 365
+  - Outlook for Microsoft 365 for Mac
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Permissions error when you import an Outlook 2011 identity
 
@@ -49,24 +50,3 @@ To resolve this issue, follow these steps:
     > If you do not know your Identity name, you can type LS in Terminal and then press Enter for a list of the Identity names.
 
 This should set the correct permissions for your identity. You should now be able to launch Outlook and import your 2011 identity by selecting **Import** on the **File** menu.
-
-## More information
-
-Outlook 2016 for Mac is available with the following subscriptions:
-
-- Office 365 Home
-- Office 365 Personal
-- Office 365 University
-- Office 365 Business
-- Office 365 Business Premium
-- Office 365 Small Business Premium
-- Office 365 Midsize Business
-- Office 365 Enterprise E3
-- Office 365 Enterprise E4
-- Microsoft 365 Apps for enterprise
-- Office 365 Government G3
-- Office 365 Government G4
-- Office 365 Education A3
-- Office 365 Education A4
-- Microsoft 365 Apps for enterprise for Students
-- Microsoft 365 Apps for enterprise A for Students

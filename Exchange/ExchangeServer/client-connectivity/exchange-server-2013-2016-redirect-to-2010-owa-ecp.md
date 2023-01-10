@@ -19,6 +19,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Exchange Server 2013 or Exchange Server 2016 redirects to Exchange 2010 for OWA, Outlook on the web, and ECP
 

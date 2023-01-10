@@ -12,11 +12,10 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Microsoft Excel
+ms.date: 3/31/2022
 ---
 
 # The SpecialCells(xlCellTypeBlanks) VBA function does not work as expected in Excel
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

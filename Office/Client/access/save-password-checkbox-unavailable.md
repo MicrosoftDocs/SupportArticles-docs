@@ -6,7 +6,9 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
+  - CI 162524
 localization_priority: Normal
 ms.reviewer: 
 search.appverid: 
@@ -14,8 +16,9 @@ search.appverid:
 appliesto: 
   - Access 2016
   - Access 2013
-  - Access for Office 365
+  - Access for Microsoft 365
   - Access 2019
+ms.date: 3/31/2022
 ---
 
 # Save Password check box is unavailable when you link ODBC tables
@@ -80,9 +83,5 @@ If you are administering an SQL Database that uses Microsoft Access as the front
 - It can optimize how Access performs background population of records during idle time by setting the number of rows of data that are retrieved at one time and the number of seconds of delay between each retrieval.
 
 ## References
-
-For additional information about using the MSysConf table to prevent the storage of logon IDs and passwords locally, click the article number below to view the article in the Microsoft Knowledge Base:  
-
-[209502](https://support.microsoft.com/help/209502) ACC2000: Storing SQL Database Login IDs and Passwords Locally
 
 For more information about the MSysConf table, click Microsoft Access Help on the Help menu, type use the MSysConf table in a Microsoft Access database with linked SQL Databases in the Office Assistant or the Answer Wizard, and then click Search to view the topic.

@@ -15,8 +15,9 @@ appliesto:
   - Outlook 2016
   - Outlook 2013
   - Outlook 2010
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # How to scan Outlook by using the Microsoft Support and Recovery Assistant
 
@@ -40,7 +41,7 @@ The following operating systems are supported:
 
 The Outlook program in any of the following Office versions can be scanned:
 
-- Microsoft Office 365 (2016 or 2013, 32-bit or 64-bit)
+- Microsoft 365
 - Microsoft Office 2016 (32-bit or 64-bit; Click-to-Run or MSI installations)
 - Microsoft Office 2013 (32-bit or 64-bit; Click-to-Run or MSI installations)
 - Microsoft Office 2010 (32-bit or 64-bit)
@@ -72,25 +73,25 @@ The Microsoft Support and Recovery Assistant can resolve issues in many programs
 
    :::image type="content" source="media/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant/confirm-affected-machine.png" alt-text="Confirm that you are using the affected machine." border="false":::
 
-4. After your account is validated in Office 365, the scan automatically begins.
+4. After your account is validated in Microsoft 365, the scan automatically begins.
 
    > [!NOTE]
    > The scan may take several minutes to run.
 
    :::image type="content" source="media/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant/scan-begins.png" alt-text="Scan automatically begins." border="false":::
 
-    You see the following error message if your account is in Office 365 and SaRA cannot validate your credentials.
+    You see the following error message if your account is in Microsoft 365 and SaRA cannot validate your credentials.
 
    :::image type="content" source="media/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant/error-message.png" alt-text="Error message details." border="false":::
 
-   If you select **Back** to reenter your credentials, and you see this same error, select **Back** again, and then use the following sample credentials to mimic a non-Office 365 account:
+   If you select **Back** to reenter your credentials, and you see this same error, select **Back** again, and then use the following sample credentials to mimic a non-Microsoft 365 account:
 
    - **Email address**: `juliet@contoso.com`
    - **Password**: \<any password that you want to use>
 
    :::image type="content" source="media/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant/sign-in-using-non-office-account.png" alt-text="Sign in account example." border="false":::
 
-   Any non-Office 365 account will not be authenticated through the Office 365 service. In this case, SaRA gives you an option to continue. Select the **Next** button to continue.
+   Any non-Microsoft 365 account will not be authenticated through the Microsoft 365 service. In this case, SaRA gives you an option to continue. Select the **Next** button to continue.
 
    The scan is complete when you see **We're done collecting your Outlook configuration details**.
 
@@ -156,9 +157,9 @@ After you review your scan results, select **Next**. The next screen provides an
 > [!NOTE]
 > The scan file is ConfigurationDetails_{CorrelationId}.html. It's located in the ***%localappdata%\saralogs\UploadLogs*** folder, for example, *C:\users\\\<username>\AppData\Local\saralogs\UploadLogs*.
 
-#### Users who have an Office 365 account
+#### Users who have a Microsoft 365 account
 
-If you sign in to SaRA by using an account in Office 365, you also see an option to send your files to Microsoft. This option is helpful if you are working with a Microsoft support engineer. Select **Send** to have your log files securely uploaded.
+If you sign in to SaRA by using an account in Microsoft 365, you also see an option to send your files to Microsoft. This option is helpful if you are working with a Microsoft support engineer. Select **Send** to have your log files securely uploaded.
 
 :::image type="content" source="media/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant/upload-files.png" alt-text="Select Send to have your log files securely uploaded." border="false":::
 
@@ -169,9 +170,9 @@ Select **Don't send** if you don't want to upload your log files. If you have to
 > [!NOTE]
 > If you select **Send**, only the .json file is uploaded to Microsoft.
 
-#### Users who do not have an Office 365 account
+#### Users who do not have a Microsoft 365 account
 
-If you sign in to SaRA by using an account that is not in Office 365, there is no option to send your files to Microsoft.
+If you sign in to SaRA by using an account that is not in Microsoft 365, there is no option to send your files to Microsoft.
 
 :::image type="content" source="media/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant/no-option-to-send.png" alt-text="Screenshot shows no option to send your files to Microsoft." border="false":::
 

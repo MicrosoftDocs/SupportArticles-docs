@@ -14,11 +14,10 @@ appliesto:
   - Excel 2010
   - Microsoft Office Excel 2007
   - Microsoft Office Excel 2003
+ms.date: 3/31/2022
 ---
 
 # Description of the Auto-Recover functions in Excel
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

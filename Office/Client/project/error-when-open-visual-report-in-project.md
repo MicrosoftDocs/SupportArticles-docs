@@ -14,11 +14,10 @@ appliesto:
   - Project 2010
   - Office 2013
   - Visio 2013
+ms.date: 3/31/2022
 ---
 
 # Error when opening a Visual Report in Project 2010 with Office 2013
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

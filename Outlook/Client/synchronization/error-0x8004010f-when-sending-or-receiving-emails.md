@@ -15,6 +15,7 @@ appliesto:
   - Outlook 2013
   - Microsoft Outlook 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Error 0x8004010F when you try to send or receive email in Outlook 2010 or Outlook 2013
 

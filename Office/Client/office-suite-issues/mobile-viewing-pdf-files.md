@@ -12,11 +12,10 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Office Online Server
+ms.date: 3/31/2022
 ---
 
 # Mobile viewing PDF files with Office Web Apps
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

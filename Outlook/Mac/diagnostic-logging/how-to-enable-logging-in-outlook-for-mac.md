@@ -13,8 +13,9 @@ ms.custom:
 ms.reviewer: pawankap, tasitae
 appliesto: 
   - Outlook 2016 for Mac
-  - Outlook for Mac for Office 365
+  - Outlook for Microsoft 365 for Mac
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # How to enable logging in Outlook for Mac
 
@@ -78,8 +79,7 @@ Depending on the edition and version of Outlook for Mac in which the log is bein
 |Outlook for Mac 2011|14.0.0 - 14.2.4|~/Desktop/|Microsoft Outlook_Troubleshooting_0.log|
 |Outlook for Mac 2011|14.2.5 - current|~/Desktop/OfficeLogging/|Microsoft Outlook_Troubleshooting_#.csv|
 |Outlook 2016 for Mac|15.3 - 15.11.2|~/Library/Group Containers/ UBF8T346G9.Office/OfficeLogging/|Microsoft Outlook_Troubleshooting_#.csv|
-|Outlook 2016 for Mac|15.12.3 - Current|~/Library/Containers/com.microsoft.Outlook/Data/Library/Logs/|Microsoft outlook-\<date>-\<time>.log|
-|||||
+|Outlook 2016 for Mac|15.12.3 - Current|~/Library/Containers/com.microsoft.Outlook/Data/Library/Logs/ or ~/Library/Containers/Microsoft Outlook/Data/Library/Logs/|Microsoft outlook-\<date>-\<time>.log|
 
 > [!NOTE]
 > The character combination "~/" in the **Location** column in this table refers to the Home folder of the user. This folder is located under the Users folder on the root of the hard disk.
@@ -104,7 +104,6 @@ In the Outlook for Mac log collected for Outlook for Mac 2011 and Outlook 2016 f
 |Exchange (folder and item synchronization)|Outlook Exchange Web Services|
 |Exchange Calendar|Outlook Calendar|
 |LDAP transactions|Outlook LDAP|
-|||
 
 In Outlook 2016 for Mac version 15.12.3 and later versions, the log file opens in the Console and you can view it while Outlook is running. Each entry has a name that identifies the feature that is being logged. The following table lists the label for each feature.
 
@@ -120,7 +119,6 @@ In Outlook 2016 for Mac version 15.12.3 and later versions, the log file opens i
 |Import|outlook.import|
 |Upgrade|outlook.database.upgrade|
 |Sync|outlook.sync|
-|||
 
 > [!NOTE]
 > The log file may also contain user information. This includes user name, sender and receiver's email addresses, and the contents of the user's email messages, notes, tasks, calendar, and contacts. Microsoft does not use this information to contact users without their consent. If you are concerned that the data file contains sensitive or confidential information, you may review the contents of the data file by using text-editing software and then remove the information from the file before you send the data file to support professionals. Authentication information is not included in the log files.

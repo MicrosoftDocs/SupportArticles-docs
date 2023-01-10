@@ -19,6 +19,7 @@ appliesto:
   - Office Professional Plus 2013
   - Office Standard 2013
   - Office Home and Student 2013 RT
+ms.date: 3/31/2022
 ---
 
 # The Slide Library toolbar on a SharePoint Slide Library site is unavailable for certain Office 2013 installations

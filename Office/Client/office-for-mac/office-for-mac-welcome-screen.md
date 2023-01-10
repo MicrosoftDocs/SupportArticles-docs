@@ -12,11 +12,10 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Office for Mac
+ms.date: 3/31/2022
 ---
 
 # Cannot pass the Welcome Screen in Office for Mac
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

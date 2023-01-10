@@ -13,11 +13,10 @@ ms.author: luche
 ms.reviewer: wbrandt, abraeg
 appliesto: 
   - Office 2007
+ms.date: 3/31/2022
 ---
 
 # Loss of image quality after you save in Word, Excel, or PowerPoint 2007
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

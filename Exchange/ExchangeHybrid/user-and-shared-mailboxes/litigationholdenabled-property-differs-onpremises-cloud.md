@@ -2,7 +2,7 @@
 title: LitigationHoldEnabled property differs between on-premises and Exchange Online
 description: After you onboard an on-premises mailbox to Exchange Online, you notice that the LitigationHoldEnabled value for a mailbox does not match.
 author: simonxjx
-ms.author: alinastr
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -16,6 +16,7 @@ appliesto:
   - Exchange Online
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 # LitigationHoldEnabled property differs between on-premises and Exchange Online
 
@@ -47,4 +48,4 @@ This behavior is by design. When the mailbox is moved from Exchange Server to Ex
 
 ## More information
 
-For more information about attributes that are written from on-premises to Office 365 and from Azure Active Directory (Azure AD) to on-premises, see [Azure AD Connect sync: Attributes synchronized to Azure Active Directory](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized).
+For more information about attributes that are written from on-premises to Microsoft 365 and from Azure Active Directory (Azure AD) to on-premises, see [Azure AD Connect sync: Attributes synchronized to Azure Active Directory](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized).

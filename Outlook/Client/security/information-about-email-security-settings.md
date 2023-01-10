@@ -14,6 +14,7 @@ ms.reviewer: twalker
 appliesto: 
   - Microsoft Office Outlook 2007
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Information for administrators about e-mail security settings in Outlook 2007
 

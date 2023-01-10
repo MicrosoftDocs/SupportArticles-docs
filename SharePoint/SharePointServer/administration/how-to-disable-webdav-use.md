@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2010
+ms.date: 3/31/2022
 ---
 
 # How to disable WebDAV use in SharePoint  

@@ -12,17 +12,18 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Can't transfer numbers from one tenant to another in Skype for Business Online
 
 ## Summary
 
-You have telephone numbers that are assigned to users in an Office 365 tenant for your organization. You want to transfer those numbers to a different Office 365 tenant for your organization, but you can't find that option in the Skype for Business Online admin center.
+You have telephone numbers that are assigned to users in a Microsoft 365 tenant for your organization. You want to transfer those numbers to a different Microsoft 365 tenant for your organization, but you can't find that option in the Skype for Business Online admin center.
 
 ## More information
 
-Currently, transferring telephone numbers from one Office 365 tenant to another Office 365 tenant isn't supported outside the United States and Puerto Rico. Local number porting is available only with supported service providers or carriers.  
+Currently, transferring telephone numbers from one Microsoft 365 tenant to another Microsoft 365 tenant isn't supported outside the United States and Puerto Rico. Local number porting is available only with supported service providers or carriers.  
 
 For more information about number porting in Skype for Business Online, go to the following Microsoft websites:
 

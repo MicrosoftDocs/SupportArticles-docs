@@ -14,6 +14,7 @@ appliesto:
   - SharePoint Server 2013
   - SharePoint Foundation 2013
   - Project Server 2013
+ms.date: 3/31/2022
 ---
 
 # Setup error if the .NET Framework 4.6 is installed  

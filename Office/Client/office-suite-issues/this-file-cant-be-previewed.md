@@ -20,11 +20,10 @@ appliesto:
   - PowerPoint 2013
   - PowerPoint 2010
   - Microsoft Office PowerPoint 2007
+ms.date: 3/31/2022
 ---
 
 # "This file can't be previewed" error in Word, Excel, or PowerPoint
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

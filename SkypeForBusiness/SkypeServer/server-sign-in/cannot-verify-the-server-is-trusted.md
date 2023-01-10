@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Lync 2013
   - Lync Server 2013
+ms.date: 3/31/2022
 ---
 
 # Lync can't verify that the server is trusted for your sign-in address" message during client sign-in
@@ -23,9 +24,9 @@ This article describes two scenarios that occur when the Microsoft Lync client c
 
 ### Scenario 1
 
-When a user tries to sign in to Microsoft Lync in a Lync Server 2013 environment for the first time, she receives the following message in a dialog box: 
- 
-```AsciiDoc
+When users try to sign in to Microsoft Lync in a Lync Server 2013 environment for the first time, they receive the following message in a dialog box:
+
+```output
 Lync is attempting to connect to:
 <Fully qualified domain name (FQDN) of a server>
 Lync cannot verify that the server is trusted for your sign-in address. Connect anyway? 

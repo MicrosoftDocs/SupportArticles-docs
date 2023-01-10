@@ -13,11 +13,10 @@ ms.author: luche
 ms.reviewer: lauraho
 appliesto: 
   - Excel 2013
+ms.date: 3/31/2022
 ---
 
 # Cannot modify the oData connections in an Excel 2013 PowerPivot workbook
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

@@ -1,53 +1,54 @@
 ### YamlMime:Hub
 
-title: Office troubleshooting for admins and IT professionals # < 60 chars
-summary: Microsoft Office provides online services and server products for your business with solutions for small to enterprise scale. This page provides guidance for troubleshooting issues with these products and services. # < 160 chars
+title: Microsoft 365 troubleshooting for admins and IT professionals # < 60 chars
+summary: Microsoft 365 provides online services and server products for your business with solutions for small to enterprise scale. This page provides guidance for troubleshooting issues with these products and services. # < 160 chars
 # brand: aspnet | azure | dotnet | dynamics | m365 | ms-graph | office | power-platform | sql | sql-server | vs | visual-studio | windows | xamarin
-brand: office
+brand: m365
 
 metadata:
-  title: Office troubleshooting for admins and IT professionals # Required; page title displayed in search results. Include the brand. < 60 chars.
-  description: Microsoft Office provides online services and server products for your business with solutions for small to enterprise scale. This page provides guidance for troubleshooting issues with these products and services. # < 160 chars
+  title: Microsoft 365 troubleshooting for admins and IT professionals # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Microsoft 365 provides online services and server products for your business with solutions for small to enterprise scale. This page provides guidance for troubleshooting issues with these products and services. # < 160 chars
   ms.prod: office-perpetual-itpro
   ms.topic: hub-page # Required
   audience: ITPro
-  author: samanro #Required; your GitHub user alias, with correct capitalization.
-  ms.author: samanro #Required; microsoft alias of author; optional team alias.
+  author: helenclu #Required; your GitHub user alias, with correct capitalization.
+  ms.author: luche #Required; microsoft alias of author; optional team alias.
   ms.date: 07/03/2019 #Required; mm/dd/yyyy format.
 
 # productDirectory section (optional)
 productDirectory:
   items:
     # Card
-    - title: Office 365
+    - title: Microsoft 365
       # imageSrc should be square in ratio with no whitespace
-      imageSrc: https://docs.microsoft.com/media/logos/logo_office.svg
+      imageSrc: /media/logos/logo-ms-social.png
       links:
-        - url: /office365/troubleshoot/o365-enterprise-welcome
-          text: Office 365 Enterprise
-        - url: /office365/troubleshoot/o365-admin-welcome
-          text: Office 365 Admin Center
-        - url: /office365/troubleshoot/microsoft-365-compliance-welcome
-          text: Microsoft 365 Compliance
-        - url: /office365/troubleshoot/microsoft-365-security-welcome
+        - url: /microsoft-365/troubleshoot/o365-enterprise-welcome
+          text: Microsoft 365 Enterprise
+        - url: /microsoft-365/troubleshoot/o365-admin-welcome
+          text: Microsoft 365 admin center
+        - url: /microsoft-365/troubleshoot/microsoft-365-compliance-welcome
+          text: Microsoft Purview
+        - url: /microsoft-365/troubleshoot/microsoft-365-security-welcome
           text: Microsoft 365 Security
     # Card
     - title: Microsoft Teams
-      imageSrc: https://docs.microsoft.com/media/logos/logo_MSTeams.svg
+      imageSrc: /media/logos/logo_MSTeams.svg
       links:
         - url: /microsoftteams/troubleshoot/teams-welcome
           text: Microsoft Teams
-    - title: Office
+    # Card      
+    - title: Microsoft 365 apps
       # imageSrc should be square in ratio with no whitespace
-      imageSrc: https://docs.microsoft.com/media/logos/logo_office.svg
+      imageSrc: /support/media/hub-landing/logo-m365-app.png
       links:
         - url: /office/troubleshoot/office-client-welcome
-          text: Office products
+          text: Microsoft 365 apps (Office products)
         - url: /office/troubleshoot/office-experts-welcome
           text: From the Office Experts
     # Card
     - title: SharePoint
-      imageSrc: https://docs.microsoft.com/media/logos/logo_sharepoint.svg
+      imageSrc: /media/logos/logo_sharepoint.svg
       links:
         - url: /sharepoint/support/sharepoint-server-welcome
           text: SharePoint Server
@@ -59,7 +60,7 @@ productDirectory:
           text: From the SharePoint Experts
     # Card
     - title: Exchange
-      imageSrc: https://docs.microsoft.com/media/logos/logo_Exchange.svg
+      imageSrc: /media/logos/logo_Exchange.svg
       links:
         - url: /exchange/troubleshoot/exchange-server-welcome
           text: Exchange Server
@@ -69,7 +70,7 @@ productDirectory:
           text: Exchange Hybrid
     # Card
     - title: Skype for Business
-      imageSrc: https://docs.microsoft.com/media/logos/logo_Skype_for_Business.svg
+      imageSrc: /media/logos/logo_Skype_for_Business.svg
       links:
         - url: /skypeforbusiness/troubleshoot/skype-server-welcome
           text: Skype for Business Server
@@ -81,7 +82,7 @@ productDirectory:
           text: From the Skype for Business Experts
     # Card
     - title: Microsoft Outlook
-      imageSrc: https://docs.microsoft.com/media/logos/logo-outlook.svg
+      imageSrc: /media/logos/logo-outlook.svg
       links:
         - url: /outlook/troubleshoot/outlook-client-welcome
           text: Outlook for Windows
@@ -89,14 +90,28 @@ productDirectory:
           text: Outlook for Mac
         - url: /outlook/troubleshoot/outlook-mobile-welcome
           text: Outlook for iOS and Android
-        - url: /outlook/troubleshoot/outlook-experts-welcome
-          text: From the Outlook Experts
     # Card
     - title: OneDrive
-      imageSrc: https://docs.microsoft.com/office/media/logos/logo-onedriveforbusiness.svg
+      imageSrc: /office/media/logos/logo-onedriveforbusiness.svg
       links:
         - url: /sharepoint/support/onedrive-welcome
           text: OneDrive for Business
+    # Card
+    - title: Microsoft Viva
+      imageSrc: /support/media/hub-landing/logo-viva.png
+      links:
+        - url: /viva/troubleshoot/learning/viva-learning-welcome
+          text: Microsoft Viva Learning
+        - url: /viva/troubleshoot/connections/viva-connections-welcome
+          text: Microsoft Viva Connections       
+    # Card
+    - title: Endpoint management
+      imageSrc: /media/logos/logo-ms-social.png 
+      links:
+        - url: /troubleshoot/mem/configmgr/welcome-configuration-manager
+          text: Configuration Manager
+        - url: /troubleshoot/mem/intune/welcome-intune
+          text: Microsoft Intune 
 
 # additionalContent section (optional)
 # Card with summary style
@@ -115,7 +130,7 @@ additionalContent:
           url: https://go.microsoft.com/fwlink/?linkid=787131
         # Card
         - title: Business owners
-          summary: Find help, training, and technical support for business owners who use Office 365.
+          summary: Find help, training, and technical support for business owners who use Microsoft 365.
           url: /office365/smallbusiness/build-your-small-business/build-your-small-business
         # Card
         - title: Educators IT

@@ -13,8 +13,9 @@ ms.custom:
 ms.reviewer: tasitae
 appliesto: 
   - Outlook 2016 for Mac
-  - Outlook for Mac for Office 365
+  - Outlook for Microsoft 365 for Mac
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook cannot open the file because it is not associated with the default identity error occurs
 

@@ -13,6 +13,7 @@ ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # URL for meetings in Skype for Business Online doesn't use the custom domain that you created
@@ -21,8 +22,8 @@ appliesto:
 
 Consider the following scenario.
 
-- You set up an account in Office 365 by using the abc.onmicrosoft.com domain. 
-- Later, you decide to use litwareinc.com as your custom domain in Office 365. 
+- You set up an account in Microsoft 365 by using the abc.onmicrosoft.com domain. 
+- Later, you decide to use litwareinc.com as your custom domain in Microsoft 365. 
 - You create a user who has a sign-in address of user1@litwareinc.com.   
 - When user1@litwareinc.com creates a Skype for Business Online (formerly Lync Online) meeting, the meeting URL still reflects the old domain (abc.onmicrosoft.com), and the meeting URL resembles the following:
 
@@ -40,7 +41,7 @@ For more information about the **Update-CsTenantMeetingUrl** cmdlet, see [Update
 
 ## More Information
 
-The **update-CsTenantMeetingUrl** cmdlet updates the Skype for Business Online meeting URL to a simpler and more standardized format. This eliminates problems that may occasionally occur with the original meeting URL. For example, assume that an organization sets up an Office 365 domain that has the name contoso.onmicrosoft.com. In this situation, the organization meetings have URLs that resemble the following:
+The **update-CsTenantMeetingUrl** cmdlet updates the Skype for Business Online meeting URL to a simpler and more standardized format. This eliminates problems that may occasionally occur with the original meeting URL. For example, assume that an organization sets up a Microsoft 365 domain that has the name contoso.onmicrosoft.com. In this situation, the organization meetings have URLs that resemble the following:
 
 https://meet.lync.com/onmicrosoft/contoso/user1/45GZFH99
 

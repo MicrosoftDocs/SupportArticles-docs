@@ -14,8 +14,9 @@ ms.reviewer: tasitae
 appliesto: 
   - Outlook 2019
   - Outlook 2016
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook crashes and returns event ID 1000 crash signatures after RSS feeds are added
 
@@ -34,7 +35,6 @@ Microsoft Outlook 2016 crashes, and you see one or more of the following crash s
 |Outlook.exe|16.0.7167.2040|Outlook.exe|16.0.7167.2040|0x00000000015244eb|
 |Outlook.exe|16.0.7369.2038|Outlook.exe|16.0.7369.2038|0x00fc31fd|
 |Outlook.exe|16.0.7528.1000|Outlook.exe|16.0.7528.1000|0x01005bff|
-||||||
 
 > [!NOTE]
 >

@@ -1,6 +1,6 @@
 ---
 title: 405 error in a hybrid deployment
-description: Fixes an issue that occurs when you create the organization relationship by using the Autodiscover option or when you run the Get-FederationInformation Windows PowerShell cmdlet in a hybrid deployment in Office 365.
+description: Fixes an issue that occurs when you create the organization relationship by using the Autodiscover option or when you run the Get-FederationInformation Windows PowerShell cmdlet in a hybrid deployment in Microsoft 365.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -16,23 +16,24 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # FederationInformation could not be received or 405 Method Not Allowed in a hybrid deployment
 
 _Original KB number:_ &nbsp; 2773628
 
 > [!NOTE]
-> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the [Office 365 Hybrid Configuration wizard](https://aka.ms/hybridwizard). For more information, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
+> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the [Microsoft 365 Hybrid Configuration wizard](https://aka.ms/hybridwizard). For more information, see [Microsoft 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
 
 ## Problem
 
-In a hybrid deployment of Exchange Online in Office 365 and your on-premises Exchange Server 2010 environment, you experience one or more of the following symptoms:
+In a hybrid deployment of Exchange Online in Microsoft 365 and your on-premises Exchange Server 2010 environment, you experience one or more of the following symptoms:
 
-- When you create the organization relationship from the Office 365 organization by using the Autodiscover option, you get the following error message:
+- When you create the organization relationship from the Microsoft 365 organization by using the Autodiscover option, you get the following error message:
 
     > Federation Information could not be received from the external organization
 
-- When an Office 365 user tries to look up the free/busy information for an on-premises user, no free/busy information is displayed.
+- When a Microsoft 365 user tries to look up the free/busy information for an on-premises user, no free/busy information is displayed.
 - When you run the `Get-FederationInformation` Windows PowerShell cmdlet, you get the following error message:
 
     > HTTP Error  

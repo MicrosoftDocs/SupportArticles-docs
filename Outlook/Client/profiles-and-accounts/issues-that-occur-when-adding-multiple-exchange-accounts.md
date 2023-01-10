@@ -1,6 +1,6 @@
 ---
-title: Issues when adding multiple accounts in a profile
-description: Outlook 2010 introduced a new feature that lets you add multiple Exchange accounts to the same messaging profile. This article describes three distinct scenarios in which this can cause unexpected behavior.
+title: Issues that can occur when you add multiple Exchange accounts to the same Outlook profile
+description: This article describes scenarios in which adding multiple accounts can cause unexpected behavior.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -16,50 +16,47 @@ appliesto:
   - Outlook 2016
   - Outlook 2013
   - Microsoft Outlook 2010
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
-# Issues that can occur when you add multiple Exchange accounts in the same Outlook profile
+# Issues that can occur when you add multiple Exchange accounts to the same Outlook profile
 
 _Original KB number:_ &nbsp; 981245
 
-## Introduction
+In Microsoft Outlook 2010, Outlook 2013, Outlook 2016, Outlook 2019 and Outlook for Microsoft 365, you can add multiple Microsoft Exchange accounts to the same profile if one of the following conditions is true:
 
-Microsoft Outlook 2010, Outlook 2013, Outlook 2016, Outlook 2019 and Outlook for Office 365 let you add multiple Microsoft Exchange accounts to the same profile. You can add an additional Exchange account if one of the following conditions is true:
+- You have Full Access permission to the additional Exchange mailboxes.
+- You have the credentials to access the additional Exchange mailboxes if you don't have Full Access permission to them.
 
-- You have Full Access permission to the additional Exchange mailbox.
-- You do not have Full Access permission to the Exchange mailbox. However, you know the credentials to access the additional Exchange mailbox.
+This article describes the following two scenarios in which this feature can cause unexpected behavior, and provides alternate steps that you can use to set up the scenario.
 
-This article describes two distinct scenarios in which this feature can cause unexpected behavior:
+1. [You add both the manager and delegate mailbox accounts to the same Outlook profile](#scenario-1-the-manager-and-delegate-mailboxes-are-added-to-the-same-profile).
+2. [You manually add another mailbox account, and the Exchange Server 2010 Service Pack 1 (SP1) Auto Mapping feature adds it at the same time](#scenario-2-the-mailbox-that-you-add-manually-is-also-added-by-exchange-server-2010-sp1-auto-mapping).
 
-1. [You add both the manager and delegate mailbox accounts in the same Outlook profile](#scenario-1-the-manager-and-delegate-mailboxes-are-added-to-the-same-profile).
-2. [You manually add another mailbox account, and the Exchange Server 2010 Service Pack 1 (SP1) Auto Mapping feature adds it at the same time](#scenario-2-the-mailbox-that-you-add-is-also-added-by-exchange-server-2010-sp1-auto-mapping).
+## Scenario 1: The manager and delegate mailboxes are added to the same profile
 
-## More information
+In Outlook 2010, Outlook 2013, and Outlook 2016, Outlook 2019, and Outlook for Microsoft 365 a manager can add a delegate's account to their profile and the delegate can add the manager's account to their profile. This type of profile configuration isn't supported, however there is no warning or error message displayed when this scenario is set up.
 
-This section describes the two scenarios in which unexpected behavior can occur when you use the Outlook feature that lets you add multiple Exchange accounts to the same profile. Additionally, this section provides the steps that you can follow to resolve or to work around these issues.
-
-### Scenario 1: The manager and delegate mailboxes are added to the same profile
-
-Outlook 2010, Outlook 2013, and Outlook 2016, Outlook 2019, and Outlook for Office 365 let you add your delegate's account to your own profile and lets your delegate add your account to their profile. However, although there is no warning message or error, this profile configuration is not supported. For example, the following screenshot shows an Outlook 2010 profile that has two Exchange accounts.
+In the following example, an Outlook 2010 profile displays two Exchange accounts that have been added to it.
 
 :::image type="content" source="media/issues-that-occur-when-adding-multiple-exchange-accounts/example-of-email-account-settings.png" alt-text="Screenshot shows the two accounts under Email tab.":::
 
-In this example, the manager is Corey Gray. The delegate has added the mailbox account of Corey Gray to their own Outlook profile.
+In this example, the manager is Corey Gray. The delegate has added Corey Gray's account to their own Outlook profile. This configuration is not supported.
 
-If the manager and delegate mailboxes have to be accessed in the same Outlook profile, follow these steps:
+To set up a configuration in which a manager and their delegate's mailboxes can be accessed from the same Outlook profile, follow these steps instead.
 
-1. Remove the second Exchange account from your profile. For example, if you are a delegate, remove your manager's account from your profile. To do this, follow these steps:
+1. Remove the second Exchange account from your profile. For example, if you're a delegate, remove your manager's account from your profile.
    1. On the **File** menu, select **Info**.
    2. Select **Account Settings**, and then select **Account Settings**.
    3. Select the account that you want to remove, and then select **Remove**.
 
       :::image type="content" source="media/issues-that-occur-when-adding-multiple-exchange-accounts/remove-email-account.png" alt-text="Screenshot highlights the Remove button after selecting an Exchange account.":::
 
-   4. Select **Yes** when you are prompted to confirm that you want to remove the account.
+   4. Select **Yes** when you're prompted to confirm that you want to remove the account.
    5. In the **Account Settings** dialog box, select **Close**.
 
-2. Add the second mailbox as an additional mailbox. (This differs from a second account). To do this, follow these steps:
+2. Add the other user's mailbox as an additional mailbox. (This is not the same as adding a second account).
    1. On the **File** menu, select **Info**.
    2. Select **Account Settings,** and then select **Account Settings**.
    3. Select your primary account, and then select **Change**.
@@ -67,7 +64,7 @@ If the manager and delegate mailboxes have to be accessed in the same Outlook pr
    5. On the **Advanced** tab, select **Add**.
    6. Enter the name of the mailbox, and then select **OK**.
 
-      After you make this change, the additional mailbox is listed on the **Advanced** tab in the **Microsoft Exchange** dialog box.
+      After you make this change, you'll see the additional mailbox listed on the **Advanced** tab in the **Microsoft Exchange** dialog box.
 
       :::image type="content" source="media/issues-that-occur-when-adding-multiple-exchange-accounts/advanced-tab.png" alt-text="Screenshot shows the Advanced tab in Microsoft Exchange dialog." border="false":::
 
@@ -77,47 +74,46 @@ If the manager and delegate mailboxes have to be accessed in the same Outlook pr
 
 In this configuration, you can access any folders in the second mailbox for which you have permissions.
 
-The following steps demonstrate two problems that may occur if manager and delegate accounts are added to the same profile by using the Outlook multiple Exchange accounts functionality. There may be other situations in which this unsupported configuration may cause problems, and this article may be updated in the future to include additional problems.
+The following steps demonstrate two problems that may occur if manager and delegate accounts are added to the same profile. There might be other situations too in which this unsupported configuration can cause problems.
 
-> [!NOTE]
-> In this scenario, you are considered the manager account.
+**Note**: The Calendar sharing improvements introduced in Outlook for Microsoft 365 that are based on the REST protocol don't prevent such problems.
 
-1. Using an Outlook 2010, Outlook 2013, Outlook 2016, Outlook 2019 or Outlook for Office 365 profile for your mailbox, configure a delegate for your mailbox, and use default delegate settings.
+1. In Outlook 2010, Outlook 2013, Outlook 2016, Outlook 2019 or Outlook for Microsoft 365, use a profile for a manager's mailbox to configure a delegate for the manager's mailbox with default settings.
 
-    > [!NOTE]
-    > Default delegate settings do not let the delegate see items that are owned by the manager and that are marked as private.
+    **Note**: The default delegate settings don't provide the delegate access to items that are owned by the manager and marked as private.
 
-2. Add an appointment to your calendar, and then enable the **Private** option on the **Tags** section of the Ribbon.
-3. Exit Outlook.
-4. Start Outlook by using a profile for the delegate.
-5. On the **File** tab, select **Add Account** on the **Info** tab.
-6. In the **Add New Account** dialog box, enter your account information, and then select **Next**.
-7. Select **Finish** after your account is successfully added.
-8. Select **OK** to the prompt that instructs you to restart Outlook.
-9. Exit Outlook, and then restart Outlook by using the delegate's profile.
-10. Enter any credentials if you are prompted.
-11. In the navigation pane, select the **Calendar** module.
-12. Under **My Calendars**, cancel the selection of the manager's calendar.
-13. Select **Open Calendar** on the Ribbon, and then select **Open Shared Calendar**.
-14. Enter the name of the manager's mailbox, and then select **OK**.
-15. In the manager's calendar, double-select the appointment that you created in step 2.
+1. Add an appointment to the manager's calendar, and then enable the **Private** option on the **Tags** section of the Ribbon.
+1. Exit Outlook.
+1. Start Outlook by using a profile for the delegate.
+1. On the **File** tab, select **Add Account** on the **Info** tab.
+1. In the **Add New Account** dialog box, enter the manager's account information, and then select **Next**.
+1. Select **Finish** after the account is added successfully.
+1. Select **OK** at the prompt that instructs you to restart Outlook.
+1. Exit Outlook, and then restart it by using the delegate's profile.
+1. Enter the delegate's credentials if prompted.
+1. In the navigation pane, select the **Calendar** module.
+1. Under **My Calendars**, cancel the selection of the manager's calendar.
+1. Select **Open Calendar** on the Ribbon, and then select **Open Shared Calendar**.
+1. Enter the name of the manager's mailbox, and then select **OK**.
+1. In the manager's calendar, open the appointment created in step 2.
 
-    The appointment opens and the delegate can view the item. In the default delegate configuration, the delegate should be unable to open a private item.
-16. Right-select any space on the manager's calendar, and then select **New Meeting Request**.
-17. Examine the account in the **From** field.
+    The appointment opens and the delegate is able to view the private item. However, this should not have been possible because of the default delegate settings used to configure the delegate for the manager's mailbox.
 
-    The account that is listed is the manager's account. The account that is shown should be the delegate's account, because the delegate is creating the meeting on behalf of the manager.
+1. Right-click anywhere on the manager's calendar and select **New Meeting Request**.
+1. Examine the account in the **From** field.
 
-### Scenario 2: The mailbox that you add is also added by Exchange Server 2010 SP1 Auto Mapping
+    The account that is listed is the manager's account. However, this should have been the delegate's account, because the delegate is creating the meeting on behalf of the manager.
 
-In Exchange Server 2010 Service Pack 1 (SP1), the new Auto Mapping feature automatically adds mailboxes to the Outlook Navigation Pane if you have Full Access permission to the mailboxes. Outlook manages these additional mailboxes by using a specific permission set. If you previously configured these same mailboxes as multiple Exchange accounts in one Outlook profile, you may experience unexpected behavior when you send mail by using those other mailboxes. This is because mailboxes that are accessed by using the Outlook multiple Exchange accounts functionality use a different permissions set from those mailboxes that are added by Exchange Auto Mapping. Outlook tries to use both permission sets at the same time. This profile configuration is not supported.
+### Scenario 2: The mailbox that you add manually is also added by Exchange Server 2010 SP1 Auto-Mapping
+
+In Exchange Server 2010 Service Pack 1 (SP1), the Auto-Mapping feature automatically adds mailboxes to the Outlook Navigation Pane if you have Full Access permission to the mailboxes. Outlook manages these additional mailboxes by using a specific permission set. If you previously configured these mailboxes as multiple Exchange accounts in the same Outlook profile, you may experience unexpected behavior when you send mail by using these mailboxes. This is because the mailboxes that are accessed by using the multiple Exchange accounts functionality in Outlook use a different permissions set from the mailboxes that are added by Exchange Auto-Mapping. Outlook tries to use both permission sets at the same time which is not a supported functionality.
 
 To prevent this issue, use one of the following methods:
 
-#### Disable Auto Mapping for the shared Exchange mailboxes
+### Disable Auto-Mapping for shared Exchange mailboxes
 
-Exchange Server 2010 Service Pack 2 (SP2) extended the Auto Mapping feature to also let an administrator disable Auto Mapping for specific mailboxes. To disable the Auto Mapping feature for specific Exchange mailboxes, the Exchange administrator must use the Exchange Management Shell. For more information about how to disable Auto Mapping for Exchange mailboxes, see [Disable Outlook Auto-Mapping with Full Access Mailboxes](/previous-versions/office/exchange-server-2010/hh529943(v=exchg.141)).
+Exchange Server 2010 Service Pack 2 (SP2) extends the AutoMapping feature so that an administrator can disable Auto-Mapping for specific Exchange mailboxes. The administrator must use Exchange Management Shell to disable Auto-Mapping. For information about how to disable Auto-Mapping for Exchange mailboxes, see [Disable Outlook Auto-Mapping with Full Access Mailboxes](/previous-versions/office/exchange-server-2010/hh529943(v=exchg.141)).
 
-#### Remove the auto-mapped mailboxes from your profile
+### Remove the auto-mapped mailboxes from your profile
 
-To remove the auto-mapped mailboxes from your profile, use the **Account Settings** dialog box. Because these mailboxes are automatically added through Auto Mapping, you do not have to also add them as additional Exchange accounts.
+To remove the auto-mapped mailboxes from your profile, use the **Account Settings** dialog box. Because these mailboxes are  added automatically through Auto-Mapping, you don't have to add them manually as additional Exchange accounts.

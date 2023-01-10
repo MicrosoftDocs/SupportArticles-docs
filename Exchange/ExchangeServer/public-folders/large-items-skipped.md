@@ -19,6 +19,7 @@ appliesto:
   - Exchange Server 2019
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Large items are skipped during public folder migration
 

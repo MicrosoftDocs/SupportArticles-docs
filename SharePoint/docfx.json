@@ -121,6 +121,7 @@
       "recommendations": true,
       "feedback_system": "none",
       "hideEdit": true,
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
       "searchScope": "SharePoint Support",
       "titleSuffix": "SharePoint"
     },
@@ -186,10 +187,7 @@
         "OneDrive/sharing-and-permissions/**/*.md": "sharing-and-permissions",
         "OneDrive/storage/**/*.md": "storage",
         "OneDrive/sync/**/*.md": "synchronization"
-      },      
-      "feedback_product_url": {
-        "OneDrive/**.md": "https://onedrive.uservoice.com/"
-      }
+      }      
     },
     "template": [],
     "dest": "OfficeDocs-Support-SharePoint",

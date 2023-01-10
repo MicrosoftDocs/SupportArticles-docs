@@ -18,6 +18,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Delivery has failed and 550 5.1.1 RESOLVER.ADR.RecipNotFound NDR after a mailbox is moved to Microsoft 365
 

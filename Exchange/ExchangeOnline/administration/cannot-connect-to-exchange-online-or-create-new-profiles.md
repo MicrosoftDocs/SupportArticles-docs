@@ -14,6 +14,7 @@ ms.reviewer:
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook can't connect to Exchange Online or a user can't create new Outlook profiles in Microsoft 365
 

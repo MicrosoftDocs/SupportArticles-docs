@@ -14,6 +14,7 @@ ms.reviewer:
 appliesto: 
   - Outlook
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # How to use the Cdosys.dll library to send an e-mail message with attachments
 

@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2013
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # SharePoint Online content isn't displayed in a SharePoint on-premises search
@@ -45,7 +46,7 @@ To resolve this issue, determine whether the Search Service Application Proxy wa
 
 **NOTES**
 
-- Office 365 doesn't support incoming Hybrid Search queries when the on-premises Search Service Application Proxy is deployed in partitioned mode.
+- Microsoft 365 doesn't support incoming Hybrid Search queries when the on-premises Search Service Application Proxy is deployed in partitioned mode.
 
 - Follow best operational practices and perform a backup before you follow these steps. For more information, go to [Back up Search service applications in SharePoint Server](/SharePoint/administration/back-up-a-search-service-application).
 

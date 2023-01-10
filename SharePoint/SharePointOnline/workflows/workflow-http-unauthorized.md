@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # "SharePoint 2013 workflow HTTP Unauthorized" error occurs
@@ -39,7 +40,7 @@ To resolve this issue, follow these steps:
 3. Under the **Control access based on network location** setting, clear the **Only allow access from specific IP address locations** check box.
 
 > [!NOTE]
-> Currently, there are no persistent lists of the Office 365 Azure Workflow Service endpoints to add to the Allow list.
+> Currently, there are no persistent lists of the Microsoft 365 Azure Workflow Service endpoints to add to the Allow list.
 
 ## More information
 

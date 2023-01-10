@@ -13,11 +13,10 @@ search.appverid:
   - MET150
 appliesto: 
   - Office 2013
+ms.date: 3/31/2022
 ---
 
 # "Error 25004. The product key you entered cannot be used on this machine" when you install Office 2013
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

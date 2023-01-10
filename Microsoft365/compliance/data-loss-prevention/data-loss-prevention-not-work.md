@@ -1,5 +1,5 @@
 ---
-title: Changes to a data loss prevention policy don't take effect in Outlook 2013 in Office 365
+title: Changes to a data loss prevention policy don't take effect in Outlook 2013 in Microsoft 365
 description: Describes an issue in which policy tips aren't displayed correctly and messages aren't appropriately blocked by the policy. Provides a workaround.
 author: MaryQiu1987
 ms.author: v-maqiu
@@ -13,17 +13,18 @@ appliesto:
   - Exchange Online
   - Exchange Online Protection
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
-# Changes to a data loss prevention policy don't take effect in Outlook 2013 in Office 365
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+# Changes to a data loss prevention policy don't take effect in Outlook 2013 in Microsoft 365
 
 _Original KB number:_&nbsp;2823261
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Problem
 
-After you make a change to a data loss prevention (DLP) policy, the change doesn't take effect in Microsoft Outlook 2013 in Office 365. For example, you experience one or more of the following symptoms:
+After you make a change to a data loss prevention (DLP) policy, the change doesn't take effect in Microsoft Outlook 2013 in Microsoft 365. For example, you experience one or more of the following symptoms:
 
 - Policy tips aren't displayed correctly when the conditions in the DLP policy are met.
 - Messages aren't appropriately blocked by the DLP policy.

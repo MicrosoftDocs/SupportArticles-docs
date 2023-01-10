@@ -15,6 +15,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Certificate status could not be determined because revocation check failed when importing third-party certificate
 

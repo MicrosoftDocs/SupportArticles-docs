@@ -1,6 +1,6 @@
 ---
 title: Connect-MsolService Exception of type was thrown
-description: Describes an issue in which you can't connect to a Microsoft cloud service such as Office 365, Azure, or Microsoft Intune. Occurs when you use the connect-MSOLService cmdlet in the Azure Active Directory Module for Windows PowerShell.
+description: Describes an issue in which you can't connect to a Microsoft cloud service such as Microsoft 365, Azure, or Microsoft Intune. Occurs when you use the connect-MSOLService cmdlet in the Azure Active Directory Module for Windows PowerShell.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -15,18 +15,17 @@ appliesto:
   - Azure Active Directory
   - Microsoft Intune
   - Azure Backup
-  - Office 365 Identity Management
+  - Microsoft 365
+ms.date: 3/31/2022
 ---
 
-# "Connect-MsolService: Exception of type was thrown" when you use the connect-MSOLService to connect to Office 365, Azure, or Intune
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+# "Connect-MsolService: Exception of type was thrown" when you use the connect-MSOLService to connect to Microsoft 365, Azure, or Intune
 
 ## Problem
 
-When you try to use the connect-MSOLService cmdlet in the Microsoft Azure Active Directory Module for Windows PowerShell to connect to a Microsoft cloud service such as Office 365, Azure, or Microsoft Intune, your attempt is unsuccessful. You may also receive the following error message:
+When you try to use the connect-MSOLService cmdlet in the Microsoft Azure Active Directory Module for Windows PowerShell to connect to a Microsoft cloud service such as Microsoft 365, Azure, or Microsoft Intune, your attempt is unsuccessful. You may also receive the following error message:
 
-```adoc
+```output
 Connect-MsolService: Exception of type 'Microsoft.Online.Administration.Automation.MicrosoftOnlineException' was thrown.
 ```
 
@@ -41,8 +40,8 @@ This issue may occur for one or more of the following reasons:
 
 To resolve this issue, follow these steps:
 
-1. Troubleshoot Office 365 rich client connectivity. For more information, see [How to troubleshoot non-browser apps that can't sign in to Office 365, Azure, or Intune](https://support.microsoft.com/help/2637629).     
-2. Troubleshoot common client configuration issues that limit SSO authentication. For more information, see [Signing in to Office 365, Azure, or Intune by using single sign-on doesn't work from some devices](https://support.microsoft.com/help/2530713).    
+1. Troubleshoot Microsoft 365 rich client connectivity. For more information, see [How to troubleshoot non-browser apps that can't sign in to Microsoft 365, Azure, or Intune](https://support.microsoft.com/help/2637629).     
+2. Troubleshoot common client configuration issues that limit SSO authentication. For more information, see [Signing in to Microsoft 365, Azure, or Intune by using single sign-on doesn't work from some devices](https://support.microsoft.com/help/2530713).    
 
 ## More information
 

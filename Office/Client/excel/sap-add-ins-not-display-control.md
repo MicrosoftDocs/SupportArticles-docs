@@ -11,14 +11,13 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
-  - Excel for Office 365
-  - PowerPoint for Office 365
-  - Word for Office 365
+  - Excel for Microsoft 365
+  - PowerPoint for Microsoft 365
+  - Word for Microsoft 365
+ms.date: 3/31/2022
 ---
 
 # SAP add-ins don't display controls after update to Office 1806 or higher
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

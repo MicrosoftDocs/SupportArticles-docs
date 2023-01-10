@@ -20,6 +20,7 @@ appliesto:
   - Microsoft Exchange Server 2007 Service Pack 3 (SP3) Update Rollup 6 and later versions
   - Microsoft Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Cross-forest or Hybrid free/busy availability lookups fail in Exchange Server
 
@@ -38,7 +39,7 @@ This issue occurs in these product versions:
 - Microsoft Exchange Online
 
 > [!NOTE]
-> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Office 365 Hybrid Configuration wizard that's available at [Office 365 Hybrid Configuration wizard](https://aka.ms/hybridwizard).
+> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Microsoft 365 Hybrid Configuration wizard that's available at [Microsoft 365 Hybrid Configuration wizard](https://aka.ms/hybridwizard).
 
 ## Cause
 

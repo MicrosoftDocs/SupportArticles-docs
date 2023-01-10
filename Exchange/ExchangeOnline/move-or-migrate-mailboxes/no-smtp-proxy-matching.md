@@ -14,12 +14,13 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
 # Target mailbox doesn't have an smtp proxy matching in a mailbox migration
 
 ## Problem
 
-Assume that you have a hybrid deployment of on-premises Microsoft Exchange Server and Exchange Online in Office 365. When you try to move mailboxes from your on-premises environment to Exchange Online, you receive the following error message:  
+Assume that you have a hybrid deployment of on-premises Microsoft Exchange Server and Exchange Online in Microsoft 365. When you try to move mailboxes from your on-premises environment to Exchange Online, you receive the following error message:  
 
 > The target mailbox doesn't have an smtp proxy matching '\<domain>.mail.onmicrosoft.com'
 
@@ -28,7 +29,7 @@ Assume that you have a hybrid deployment of on-premises Microsoft Exchange Serve
 This issue may occur if one of the following conditions is true:
 
 - The source mailbox isn't stamped to have a \<domain>.mail.onmicrosoft.com smtp address.
-- The proxy address \<domain>.mail.onmicrosoft.com is not synced to Office 365 on the corresponding cloud mail-user object.
+- The proxy address \<domain>.mail.onmicrosoft.com is not synced to Microsoft 365 on the corresponding cloud mail-user object.
 
 ## Solution
 
@@ -87,20 +88,20 @@ If the on-premises mailbox doesn't have an email address policy applied (that is
 
 ### Scenario 2: \<domain>.mail.onmicrosoft.com email address is stamped on the on-premises source mailbox but is missing from the cloud mail-user object (Exchange Online PowerShell)
 
-In this case, you probably have a synchronization issue. Determine whether the directory synchronization works and whether you have any synchronization errors that are reported in the Azure Active Directory (Azure AD) Connect tool or Office 365 admin center. For more information about how to do this, see [View directory synchronization errors in Office 365](/office365/enterprise/identify-directory-synchronization-errors).  
+In this case, you probably have a synchronization issue. Determine whether the directory synchronization works and whether you have any synchronization errors that are reported in the Azure Active Directory (Azure AD) Connect tool or Microsoft 365 admin center. For more information about how to do this, see [View directory synchronization errors in Microsoft 365](/office365/enterprise/identify-directory-synchronization-errors).  
 
 You may also have a user validation error, if you already have a cloud user object on which the user@domain.mail.onmicrosoft.com email address is stamped.
 
-To see this error, you have to connect to [Office 365 PowerShell](/office365/enterprise/powershell/connect-to-office-365-powershell) and then run one of the following commands, depending whether you connect to MSOnline (MSOL) service or Azure AD for Windows PowerShell:
+To see this error, you have to connect to [Microsoft 365 PowerShell](/office365/enterprise/powershell/connect-to-office-365-powershell) and then run one of the following commands, depending whether you connect to MSOnline (MSOL) service or Azure AD for Windows PowerShell:
 
 ```powershell
 (Get-MsolUser -UserPrincipalName <AffectedUserUPN>).Errors.ErrorDetail.ObjectErrors.ErrorRecord.ErrorDescription
 (Get-AzureADUser -ObjectId <AffectedUserUPN>).Errors.ErrorDetail.ObjectErrors.ErrorRecord.ErrorDescription
 ```
 
-For more information, refer to [You see validation errors for users in the Office 365 portal or in the Azure Active Directory Module for Windows PowerShell](https://support.microsoft.com/help/2741233/you-see-validation-errors-for-users-in-the-office-365-portal-or-in-the).  
+For more information, refer to [You see validation errors for users in the Microsoft 365 portal or in the Azure Active Directory Module for Windows PowerShell](https://support.microsoft.com/help/2741233/you-see-validation-errors-for-users-in-the-office-365-portal-or-in-the).  
 
-Then, in Office 365 PowerShell, check whether the proxy addresses in Azure AD contain the email address user@domain.mail.onmicrosoft.com. To do this, run one of the following commands:
+Then, in Microsoft 365 PowerShell, check whether the proxy addresses in Azure AD contain the email address user@domain.mail.onmicrosoft.com. To do this, run one of the following commands:
 
 ```powershell
 (Get-MsolUser -UserPrincipalName <AffectedUserUPN>).ProxyAddresses
@@ -109,7 +110,7 @@ Then, in Office 365 PowerShell, check whether the proxy addresses in Azure AD co
 
 If you find the user@domain.mail.onmicrosoft.com smtp address for the user in the command result, but you still don't have this email address in Exchange Online PowerShell by using the `Get-MailUser` command, this means that the Directory Synchronization tool brought the address successfully into Azure AD, and you probably have a synchronization issue between Azure AD and Exchange Online.
 
-Another cause may be if the domain.mail.onmicrosoft.com smtp domain  that is stamped on the on-premises user is incorrect. For example, the domain doesn't exist in your Office 365 tenant or Exchange Online accepted domains. For more information about accepted domains, see [View accepted domains](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains#view-accepted-domains).  
+Another cause may be if the domain.mail.onmicrosoft.com smtp domain  that is stamped on the on-premises user is incorrect. For example, the domain doesn't exist in your Microsoft 365 tenant or Exchange Online accepted domains. For more information about accepted domains, see [View accepted domains](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains#view-accepted-domains).  
 
 If you cannot determine the cause of the issue, open a support case with Microsoft Support team to investigate further.  
 

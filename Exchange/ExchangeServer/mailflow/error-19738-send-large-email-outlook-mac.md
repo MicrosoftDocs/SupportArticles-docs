@@ -13,11 +13,12 @@ ms.custom:
 ms.reviewer: tasitae
 appliesto: 
   - Outlook 2016 for Mac
-  - Outlook for Mac for Office 365
+  - Outlook for Microsoft 365 for Mac
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2013 Enterprise
   - Exchange Server 2010 Enterprise
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Error code 19738 when you use Outlook for Mac to send a large email message through Exchange Server
 

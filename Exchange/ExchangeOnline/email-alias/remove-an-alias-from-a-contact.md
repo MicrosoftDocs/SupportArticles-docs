@@ -1,25 +1,26 @@
 ---
 title: Troubleshoot Remove an alias from a contact
-ms.author: kwekua
-author: kwekua
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
-f1_keywords:
-- 'O365P_AdminMailContact_TSAlias'
-- 'O365E_AdminMailContact_TSAlias'
-- 'AdminMailContact_TSAlias'
+  - Exchange Online
+  - CSSTroubleshoot
+f1_keywords: 
+  - 'O365P_AdminMailContact_TSAlias'
+  - 'O365E_AdminMailContact_TSAlias'
+  - 'AdminMailContact_TSAlias'
 localization_priority: None
 ms.collection: Adm_O365
-search.appverid:
-- BCS160
-- MET150
-- MOE150
+search.appverid: 
+  - BCS160
+  - MET150
+  - MOE150
 ms.assetid: 0baf335d-ea9b-428c-9573-d0878126f014
 description: Learn how to remove an email alias from a contact using Exchange Online PowerShell.
+ms.date: 3/31/2022
 ---
 # Troubleshoot: Remove an alias from a contact
 

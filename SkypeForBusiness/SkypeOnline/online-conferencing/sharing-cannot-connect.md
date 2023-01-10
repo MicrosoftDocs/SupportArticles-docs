@@ -12,6 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Desktop or Application sharing can't connect in a Skype for Business Online conference
@@ -34,7 +35,7 @@ To resolve this issue, follow these steps:
  
 1. Try to reproduce the issue by using one contact or multiple contacts. If the issue occurs for only one contact, determine whether anyone else can reproduce the issue with the same contact. If the issue occurs for multiple contacts, check for commonalities among the group of contacts.    
 2. > [!IMPORTANT]
-   > This step applies only to the Office 365 for enterprises and the Office 365 for professionals and businesses plans. This step doesn't apply to Office 365 dedicated subscription plans. Don't use this step to troubleshoot this issue if you have an Office 365 dedicated plan.
+   > This step doesn't apply to Office 365 dedicated subscription plans. Don't use this step to troubleshoot this issue if you have an Office 365 dedicated plan.
 
    Make sure that your network meets all the requirements for the best experience with Skype for Business Online. For more information, go to the following Microsoft Knowledge Base article:
 

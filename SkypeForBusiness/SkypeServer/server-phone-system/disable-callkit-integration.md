@@ -12,6 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business iOS
+ms.date: 3/31/2022
 ---
 
 # How to disable CallKit integration for Skype for Business iOS

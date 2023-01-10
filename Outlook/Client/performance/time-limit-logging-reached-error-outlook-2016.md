@@ -13,9 +13,10 @@ ms.custom:
 ms.reviewer: tasitae, shabbirh, sfellman, gbratton, almah
 appliesto: 
   - Outlook 2016
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
   - Outlook 2019
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Error when starting Outlook 2016: The time limit for logging on was reached while waiting for system resources
 
@@ -105,7 +106,6 @@ To determine whether your Office 2016 installation is Click-to-Run or MSI-based,
 |Click-to-Run Office 2016 installation|MSI-based Office 2016 installation|
 |---|---|
 |:::image type="content" source="./media/time-limit-logging-reached-error-outlook-2016/click-to-run-version.png" alt-text="Screenshot of the Office Account page of Click-to-Run Office 2016 installations." border="false":::|:::image type="content" source="./media/time-limit-logging-reached-error-outlook-2016/msi-version.png" alt-text="Screenshot of the Office Account page of MSI-based Office 2016 installations." border="false":::|
-|||
 
 ## Status
 

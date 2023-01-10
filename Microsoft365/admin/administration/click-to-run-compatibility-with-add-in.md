@@ -13,13 +13,12 @@ search.appverid:
   - MET150
 appliesto: 
   - Office 2010
+ms.date: 3/31/2022
 ---
 
 # Office 2010 Click-to-Run compatibility with add-ins
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
-##  Summary
+## Summary
 
 Because Microsoft Office 2010 Click-to-Run is in its own virtualized application space, some applications, such as add-ins, cannot access and or work correctly with Office 2010 applications.
 

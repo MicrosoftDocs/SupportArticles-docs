@@ -14,6 +14,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
   - Skype for Business Server 2015
+ms.date: 3/31/2022
 ---
 
 # "HostedMigration fault: Error =(506)" when you move users from Skype for Business Online to on-premises Skype for Business Server

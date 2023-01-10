@@ -15,6 +15,7 @@ appliesto:
   - Lync 2013 for iPad
   - Lync 2013 for iPhone
   - Skype for Business for iOS
+ms.date: 3/31/2022
 ---
 
 # You can't join a meeting from outside Lync 2013, Lync 2010, or Skype for Business on iOS 10.0 and later

@@ -16,9 +16,10 @@ appliesto:
   - Outlook 2010 with Business Contact Manager
   - Outlook 2013
   - Outlook 2016
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
   - Outlook 2019
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Leave a copy of the message on the server is missing in Outlook
 

@@ -15,6 +15,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Microsoft Lync 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Unable to open Outlook items from Windows Search results after installing Lync 2013
 

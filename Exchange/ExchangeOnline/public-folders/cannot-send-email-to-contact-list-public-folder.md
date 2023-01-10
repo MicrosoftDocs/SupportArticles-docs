@@ -18,6 +18,7 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2019
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Can't send email to a contact list in a public folder in Outlook on the web

@@ -17,13 +17,12 @@ appliesto:
   - Visio Premium 2010
   - Visio Professional 2010
   - Visio Standard 2010
+ms.date: 3/31/2022
 ---
 
 # You cannot add the Microsoft Visio 2010 or 2013 drawing control to a Windows Form application in Visual Studio if you have the 64-bit version of Visio installed
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
-##  Symptoms
+## Symptoms
 
 You experience one of the following problems on a computer that has the 64-bit version of Microsoft Visio 2010 or 2013 installed:
 
@@ -34,12 +33,11 @@ You experience one of the following problems on a computer that has the 64-bit v
 
 **Note** AxVisOcx is the ActiveX control wrapper assembly that enables the drawing control to be embedded in a Windows Form application. When you receive this error message, you receive other error messages that are caused by this problem. These error messages discuss the AxMicrosoft namespace.    
 
-
-##  Cause
+## Cause
 
 These problems occur because the Visual Studio designer does not support 64-bit ActiveX controls and because the 64-bit version of Visio only works with the 64-bit version of the Microsoft Office Visio drawing control. Therefore, the drawing control cannot be instantiated. 
 
-##  Workaround
+## Workaround
 
 To work around this problem, follow these steps:
 

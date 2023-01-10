@@ -37,13 +37,13 @@ Listed below are ways to resolve this issue.
 
 See the Microsoft Knowledge Base article ["Setting up..." messages in the Microsoft 365 admin center](https://support.microsoft.com/help/2635238/setting-up-messages-in-the-office-365-admin-center) to verify if any of Microsoft's services (in this case OneDrive and SharePoint Online) are experiencing problems.
 
-If the health of all affected services appears valid, and if more than 24 hours have passed since you first saw this issue, contact Office 365 Technical Support after performing the other actions in this article.
+If the health of all affected services appears valid, and if more than 24 hours have passed since you first saw this issue, contact Microsoft 365 Technical Support after performing the other actions in this article.
 
 ### Remove and read licenses
 
 In some situations, the user's license might not have been assigned correctly. This reason alone can cause the behavior. We recommend that you remove and readd the OneDrive and/or SharePoint license assigned to the user. To do so perform the below steps:
 1.	Sign in to portal.office.com with an admin account.
-2.	Select **Admin** to open the Office 365 admin center.
+2.	Select **Admin** to open the Microsoft 365 admin center.
 3.	Within the **Admin Center**, navigate to **Users** and then to **Active users**.
 4.	Search for the user with the issue and select the profile.
 5.	Go to **Licenses and Apps**.
@@ -60,12 +60,12 @@ Due to the connection between OneDrive and SharePoint, it is necessary for users
 To verify if the user has a current profile created within SharePoint, perform the following steps:
 
 1.	Sign in to portal.office.com with an admin account.
-2.	Select **Admin** to open the Office 365 admin center.
+2.	Select **Admin** to open the Microsoft 365 admin center.
 3.	Go to the **Admin Center** and open **SharePoint**.
 4.	Select **More features** and then **User profiles**.
 5.	Select **Manage User Profiles**.
 6.	Search for the user with the issue and verify that the profile appears.
-If the profile doesn't exist, perform a sync from the Active Directory. You can also contact Office 365 Technical Support for additional help. 
+If the profile doesn't exist, perform a sync from the Active Directory. You can also contact Microsoft 365 Technical Support for additional help. 
 
 ### Check Personal Site Capabilities
 
@@ -73,7 +73,7 @@ Another reason for provisioning issues on OneDrive sites is the lack of enough c
 
 To perform this verification and/or change of the value follow the below steps:
 1.	Sign in to portal.office.com with an admin account.
-2.	Select **Admin** to open the Office 365 admin center.
+2.	Select **Admin** to open the Microsoft 365 admin center.
 3.	Go to the **Admin Center** and open **SharePoint**.
 4.	Select **More features** and then **User profiles**.
 5.	Select **Manage User Profiles**.
@@ -90,7 +90,7 @@ The Personal Site Capabilities explained in the previous section are determined 
 In order to verify if everything is set correctly, follow these steps:
 
 1.	Sign in to portal.office.com with an admin account.
-2.	Select **Admin** to open the Office 365 admin center.
+2.	Select **Admin** to open the Microsoft 365 admin center.
 3.	Go to the **Admin Center** and open **SharePoint**.
 4.	Select **More features** and then **User profiles**.
 5.	Select **Manage User Permissions**.

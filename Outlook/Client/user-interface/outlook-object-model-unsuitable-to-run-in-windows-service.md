@@ -16,6 +16,7 @@ appliesto:
   - Outlook 2013
   - Outlook 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # The Outlook Object Model is unsuitable to run in a Windows service
 

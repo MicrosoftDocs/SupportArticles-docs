@@ -9,9 +9,10 @@ search.appverid:
 audience: ITPro
 ms.custom: sap:spsexperts, CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: arhinesm
+ms.author: luche
 appliesto: 
   - Microsoft SharePoint
+ms.date: 3/31/2022
 ---
 
 # Additional credential prompts when opening Office documents from a web server by persistent cookies

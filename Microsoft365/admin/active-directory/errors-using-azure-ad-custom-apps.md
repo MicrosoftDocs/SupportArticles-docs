@@ -1,26 +1,25 @@
 ---
 title: Errors using Azure Active Directory Graph API custom applications
-description: Describes an issue in which you receive error messages when you try to use Azure Active Directory Graph API custom applications in Office 365. Provides a resolution.
+description: Describes an issue in which you receive error messages when you try to use Azure Active Directory Graph API custom applications in Microsoft 365. Provides a resolution.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
-appliesto:
-- Azure Active Directory
+appliesto: 
+  - Azure Active Directory
+ms.date: 3/31/2022
 ---
 
-# Error messages when using Azure Active Directory Graph API custom applications in Office 365
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+# Error messages when using Azure Active Directory Graph API custom applications in Microsoft 365
 
 ## Symptoms
 
-When you try to use Microsoft Azure Active Directory Graph API custom applications in Office 365, you may receive one of the following messages:
+When you try to use Microsoft Azure Active Directory Graph API custom applications in Microsoft 365, you may receive one of the following messages:
 
 - **Cannot find custom tool 'DataServicesCoreClientGenerator' on this system**
 - **Could not resolve this reference. Could not locate the assembly Microsoft.Data.Odata**

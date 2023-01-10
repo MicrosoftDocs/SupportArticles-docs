@@ -16,17 +16,18 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Execution failed Configure Legacy Exchange Support error when you run the Hybrid Configuration wizard
 
 _Original KB number:_ &nbsp; 2816904
 
 > [!NOTE]
-> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Office 365 Hybrid Configuration wizard that's available at [https://aka.ms/HybridWizard](https://aka.ms/hybridwizard). For more information, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
+> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Microsoft 365 Hybrid Configuration wizard that's available at [https://aka.ms/HybridWizard](https://aka.ms/hybridwizard). For more information, see [Microsoft 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
 
 ## Symptoms
 
-When you try to run the Hybrid Configuration wizard to enable a hybrid configuration in Microsoft Office 365, you receive the following error message:
+When you try to run the Hybrid Configuration wizard to enable a hybrid configuration in Microsoft 365, you receive the following error message:
 
 > Hybrid Configuration Failed with error "execution failed: Configure Legacy Exchange Support"
 
@@ -98,7 +99,7 @@ Then, in the output, look for a folder that has the following Identity:
 The External Schedule+ Free Busy folder is used in hybrid scenarios when Exchange Server 2003 or Microsoft Office Outlook 2003 is used on premises. This external folder is installed on the Exchange 2010 public folder server so that the server can do the following:
 
 - Intercept free/busy requests
-- Send the requests to Office 365 for lookup
+- Send the requests to Microsoft 365 for lookup
 
 This process is performed only for the accounts that are migrated from on-premises installations to the cloud. Exchange Server 2003 users still have calendaring functionality.
 

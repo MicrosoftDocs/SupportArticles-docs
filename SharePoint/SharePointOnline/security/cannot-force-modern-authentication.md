@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # Cannot force Modern Authentication when using Connect-SPOService cmdlet in SharePoint Online Management Shell

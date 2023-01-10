@@ -13,6 +13,7 @@ ms.author: v-six
 ms.reviewer: landerl, jasco, corbinm, pthota, nmurav, lynnroe, cbland, rischwen, Leonarwo, msp, romanma
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # PSTN callers can't join a Skype for Business dial-in conference call

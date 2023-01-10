@@ -1,6 +1,6 @@
 ---
-title: Can't set up Office 365 account in Outlook
-description: Fixes an issue in which a user can't set up an Office 365 account in Outlook.
+title: Can't set up Microsoft 365 account in Outlook
+description: Fixes an issue in which a user can't set up a Microsoft 365 account in Outlook.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -18,14 +18,15 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
   - Outlook 2013
+ms.date: 3/31/2022
 ---
-# You can't set up an Office 365 account in Outlook
+# You can't set up a Microsoft 365 account in Outlook
 
 _Original KB number:_ &nbsp; 4493666
 
 ## Symptoms
 
-You can't successfully set up an Office 365 Exchange Online email account in Outlook.
+You can't successfully set up a Microsoft 365 Exchange Online email account in Outlook.
 
 ## Cause
 
@@ -35,12 +36,12 @@ When this issue occurs, the server returns an HTTP 456 authentication error.
 
 ## Resolution
 
-To fix this issue, disable MFA for the account in the Office 365 admin center. To do this, follow these steps.
+To fix this issue, disable MFA for the account in the Microsoft 365 admin center. To do this, follow these steps.
 
 > [!NOTE]
 > You might have to contact your Exchange administrator to disable the MFA .
 
-1. Browse to the [Office 365 portal](https://portal.office.com), and sign in to your Office 365 subscription by using your Global Administrator account.
+1. Browse to the [Microsoft 365 portal](https://portal.office.com), and sign in to your Microsoft 365 subscription by using your Global Administrator account.
 2. On the main portal page, select **Admin**.
 3. In the navigation pane, select **Users** > **Active users**.
 4. In the **Active users** pane, select **More** > **Multi-factor authentication setup**.

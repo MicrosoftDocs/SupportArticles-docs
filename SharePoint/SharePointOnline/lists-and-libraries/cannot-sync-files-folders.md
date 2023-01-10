@@ -13,9 +13,10 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
   - OneDrive for Business
+ms.date: 3/31/2022
 ---
 
-# You can't sync files or folders in Office 365, or receive errors when you open files in Office Online
+# You can't sync files or folders in Microsoft 365, or receive errors when you open files in Office Online
 
 > [!NOTE]
 > This article applies only to the previous OneDrive for Business sync client (groove.exe). In most cases, we recommend that you [use the newer OneDrive sync client](https://support.office.com/article/sync-files-with-the-onedrive-sync-client-in-windows-615391c4-2bd3-4aae-a42a-858262e42a49) (onedrive.exe) instead. [Which version of OneDrive am I using?](https://support.office.com/article/which-version-of-onedrive-am-i-using-19246eae-8a51-490a-8d97-a645c151f2ba)

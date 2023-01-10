@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # Error when an external user accepts a SharePoint Online invitation by using another account
@@ -27,10 +28,14 @@ You receive one of the following error messages when trying to access an externa
 
 ## Solution
 
-To resolve this issue, determine which account accepted the invitation, remove the incorrect account and the correct account, and then re-invite the user to the resource.
+To resolve this issue, follow these steps:
+
+1. Determine which account accepted the invitation.
+1. Remove the incorrect account and the correct account.
+1. Reinvite the user to the resource.
 
 > [!NOTE]
-> Many examples in this article use \<contoso> as a placeholder. In your scenario, replace \<contoso> with the domain that you use for your organization.
+> Many examples in this article use \<contoso\> as a placeholder. In your scenario, replace \<contoso\> with the domain that you use for your organization.
 
 ### Determine which account has access as an external user
 
@@ -70,11 +75,11 @@ If you can't access the site as the incorrect external user, follow these steps:
 
 ### Remove the incorrect external user account
 
-External users are managed from a site collection by site collection basis. An external user account will have to be removed from each site collection to which the account was given access. You can do this from the SharePoint Online user interface or through the SharePoint Online Management Shell, depending on your version of Office 365.
+External users are managed from a site collection by site collection basis. An external user account will have to be removed from each site collection to which the account was given access. You can do so from the SharePoint Online user interface or through the SharePoint Online Management Shell, depending on your version of Microsoft 365.
 
-For Office 365 Small Business subscriptions, use the SharePoint Online UI. To do this, follow these steps:
+For Microsoft 365 for Business subscriptions, use the SharePoint Online UI:
 
-1. Browse to the Office 365 admin center at https://portal.office.com.
+1. Browse to the Microsoft 365 admin center at https://portal.office.com.
 
 2. In **service settings**, click **Manage Organization-wide settings**.
 
@@ -118,9 +123,9 @@ All other subscriptions must use the SharePoint Online Management Shell by follo
    Remove-SPOExternalUser -UniqueIDs @($ExtUser.UniqueId)
    ```
 
-The steps below remove the external user's ability to access SharePoint Online. However, the user will still appear in any people searches and within the SharePoint Online Management Shell Get-SPOUser cmdlet. To remove the user completely from SharePoint Online, you'll have to remove the user from the UserInfo list. There are two ways to achieve this.
+The steps below remove the external user's ability to access SharePoint Online. However, the user will still appear in any people searches and within the SharePoint Online Management Shell Get-SPOUser cmdlet. To remove the user completely from SharePoint Online, you'll have to remove the user from the UserInfo list. There are two ways.
 
-1. Use the SharePoint Online UI. To do this, browse to each site collection to which the user previously had access, and then follow these steps:
+1. Use the SharePoint Online UI. To do so, browse to each site collection to which the user previously had access, and then follow these steps:
 
    1. At the site collection, edit the URL by adding the following string to the end of the URL:
 
@@ -159,7 +164,7 @@ The steps below remove the external user's ability to access SharePoint Online. 
       Connect-SPOService -Url https://<contoso>-admin.sharepoint.com -Credential $cred
       ```
 
-   4. Remove the user from each site collection. To do this, type the following cmdlet:
+   4. Remove the user from each site collection by typing the following cmdlet:
   
       ```powershell
       Get-SPOUser -Site https://<contoso>.sharepoint.com | FT –a
@@ -176,7 +181,7 @@ The steps below remove the external user's ability to access SharePoint Online. 
    > [!NOTE]
    > Replace live.com#jondoe@company.com with the user in your scenario.
 
-Next, you have to remove the account from Azure Active Directory. To do this, follow these steps:
+Next, you have to remove the account from Azure Active Directory:
 
 1. Download and install the Azure Active Directory PowerShell Module and its prerequisites. To this, go to [Manage Azure AD using Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)).
 
@@ -203,19 +208,19 @@ Next, you have to remove the account from Azure Active Directory. To do this, fo
 
 ### Clear the browser cache
 
-SharePoint Online uses browser caching in several scenarios, including the in the People Picker. Even though a user was fully removed from the system, he or she may still remain in the browser cache. Clearing the browser cache resolves this issue. To do this for Internet Explorer, follow the steps given in [Viewing and deleting your browsing history](https://support.microsoft.com/help/17438).
+SharePoint Online uses browser caching in several scenarios, including the People Picker. Even though a user was fully removed from the system, the user may still remain in the browser cache. Clearing the browser cache resolves this issue. To do so for Internet Explorer, follow the steps given in [Viewing and deleting your browsing history](https://support.microsoft.com/help/17438).
 
 When you clear the cache, make sure that you also select the **Cookies and website data** option.
 
-### Re-invite the external user
+### Reinvite the external user
 
-After you follow these steps, re-invite the external user to the site by using the desired email address. To make sure that the end-user accepts with the appropriate email address, it is a best practice to copy the link in the invitation and then paste it into an InPrivate Browsing session. This makes sure that no cached credentials are used to accept the invitation.
+After you follow these steps, reinvite the external user to the site by using the desired email address. To make sure that the end-user accepts with the appropriate email address, it's a best practice to copy the link in the invitation and then paste it into an InPrivate Browsing session. Doing so makes sure that no cached credentials are used to accept the invitation.
 
 ## More information
 
-An external user invitation doesn't require that it be accepted by the email address to which it was first sent. It is a one-time invite. If another user accepts the invitation, or if the user who accepts the invitation signs up by using an account other than the email address to which the invitation was sent, you may encounter an access denied message.
+An external user invitation doesn't require to be accepted by the email address to which it was first sent. It's a one-time invitation. If another user accepts the invitation, or if the user who accepts the invitation signs up by using an account other than the email address to which the invitation was sent, you may encounter an access denied message.
 
-For example, a user is signed in through a browser by using a Microsoft account, and the user receives an email invitation to the user's external user account in the user's email application. Then, the user clicks the link to accept the invite. However, based on the user's browser cookies, the user accidentally accepts the invite by using the incorrect identity.
+For example, a user is signed in through a browser by using a Microsoft account, and the user receives an email invitation to the user's external user account in the user's email application. Then, the user selects the link to accept the invite. However, based on the user's browser cookies, the user accidentally accepts the invite by using the incorrect identity.
 
 When the user signs in to the resource by using the user's external user account, the user receives the error that the user isn't found in the directory.
 

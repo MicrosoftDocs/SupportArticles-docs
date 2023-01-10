@@ -15,6 +15,7 @@ appliesto:
   - Exchange Online
   - Microsoft 365 Apps for enterprise
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Unable to open default folders-you do not have permissions to logon error when accessing another user's mailbox folder
 
@@ -22,7 +23,7 @@ _Original KB number:_ &nbsp; 2796317
 
 ## Symptoms
 
-An Office 365 user tries to open another user's Microsoft Outlook mailbox folder to which the user was granted access. However, the mailbox folder doesn't open. Instead, the user receives the following error message:
+A Microsoft 365 user tries to open another user's Microsoft Outlook mailbox folder to which the user was granted access. However, the mailbox folder doesn't open. Instead, the user receives the following error message:
 
 > Unable to open default folders-you do not have permissions to logon
 
@@ -47,6 +48,6 @@ For more information about how to manage another user's mailbox data in your Out
 
 ## More information
 
-In Office 365, Exchange Online admins can also grant mailbox folder permissions by using Exchange Online PowerShell. The `Add-MailboxFolderPermission` cmdlet can be used to grant access to specific folders in a user's mailbox. For more information about how to use this cmdlet, see [Add-MailboxFolderPermission](/powershell/module/exchange/add-mailboxfolderpermission?view=exchange-ps&preserve-view=true).
+In Microsoft 365, Exchange Online admins can also grant mailbox folder permissions by using Exchange Online PowerShell. The `Add-MailboxFolderPermission` cmdlet can be used to grant access to specific folders in a user's mailbox. For more information about how to use this cmdlet, see [Add-MailboxFolderPermission](/powershell/module/exchange/add-mailboxfolderpermission?view=exchange-ps&preserve-view=true).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

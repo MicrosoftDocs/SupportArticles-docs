@@ -16,6 +16,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # HCW8004, HCW8009, HCW8016, HCW8017, HCW8029, or HCW8030 error when running the HCW
 
@@ -31,7 +32,7 @@ When you run the Hybrid Configuration wizard (HCW), you receive one of the follo
 
 > HCW8016 Hybrid domain Contoso.com isn't an accepted domain in the on-premises organization.
 
-> HCW8017 Hybrid domain Contoso.com isn't an accepted domain in the Office 365 tenant.
+> HCW8017 Hybrid domain Contoso.com isn't an accepted domain in the Microsoft 365 tenant.
 
 > HCW8029 No hybrid domains specified.
 

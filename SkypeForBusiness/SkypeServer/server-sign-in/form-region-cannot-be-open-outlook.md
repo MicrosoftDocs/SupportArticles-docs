@@ -13,6 +13,7 @@ ms.author: v-six
 appliesto: 
   - Skype for Business 2016
   - Outlook 2010
+ms.date: 3/31/2022
 ---
 
 # "Form region cannot be open" error in the Outlook 2010 preview pane

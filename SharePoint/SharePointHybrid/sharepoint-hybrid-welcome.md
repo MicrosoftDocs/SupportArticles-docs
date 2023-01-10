@@ -1,5 +1,5 @@
 ---
-title: Listing some issues for SharePoint hybrid.
+title: Troubleshoot issues for SharePoint hybrid deployments
 description: This article lists SharePoint hybrid related issues.
 author: helenclu
 manager: dcscontentpm
@@ -12,11 +12,12 @@ ms.custom:
 appliesto: 
   - SharePoint Online
   - SharePoint Server
+ms.date: 3/31/2022
 ---
 
-# Hybrid deployment troubleshooting
+# SharePoint hybrid deployment troubleshooting
 
-Welcome to a Hybrid deployment of an on-premises and a cloud solution! Here's a collection of information on how to identify and fix errors that you may run into when you use a combination of the two products.
+Welcome to a hybrid deployment of on-premises SharePoint Server and SharePoint in Microsoft 365! Here's a collection of information on how to identify and fix errors that you may run into when you use SharePoint hybrid deployments.
 
 ## Still need help
 

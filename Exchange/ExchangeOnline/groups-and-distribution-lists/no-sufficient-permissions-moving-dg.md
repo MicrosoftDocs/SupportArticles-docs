@@ -18,12 +18,13 @@ appliesto:
   - Exchange Server 2016 Standard Edition
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
+ms.date: 3/31/2022
 ---
 # (You don't have sufficient permissions) error when you try to remove or make a change to a distribution group
 
 ## Problem
 
-You try to remove or make a change to a distribution group by using the Exchange admin center in Microsoft Exchange Online for Microsoft Office 365 or in on-premises Microsoft Exchange Server. In this situation, you receive the following error message: You don't have sufficient permissions. This operation can only be performed by a manager of the group.
+You try to remove or make a change to a distribution group by using the Exchange admin center in Microsoft Exchange Online for Microsoft 365 or in on-premises Microsoft Exchange Server. In this situation, you receive the following error message: You don't have sufficient permissions. This operation can only be performed by a manager of the group.
 
 ## Cause
 
@@ -103,6 +104,6 @@ For more information about the `Set-DistributionGroup` cmdlet, see [Set-Distribu
 
 ## References
 
-To learn about managing distribution groups that are synced to Office 365 from the on-premises environment, see [Owners of an on-premises distribution group synced to O365 can't manage the distribution group in Exchange Online](../../ExchangeHybrid/groups-and-distribution-lists/cannot-manage-dg.md).
+To learn about managing distribution groups that are synced to Microsoft 365 from the on-premises environment, see [Owners of an on-premises distribution group synced to O365 can't manage the distribution group in Exchange Online](../../ExchangeHybrid/groups-and-distribution-lists/cannot-manage-dg.md).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](/answers/topics/office-exchange-server-itpro.html).

@@ -2,7 +2,7 @@
 title: Focused Inbox disappears when you switch folders in Outlook
 description: When you switch from the inbox to other folders, the Focused Inbox option disappears. Follow this article to fix this issue.
 author: helenclu
-ms.author: geob
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -13,22 +13,23 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: geob
 appliesto: 
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 
 # Focused Inbox disappears when you switch folders in Outlook
 
 ## Symptoms
 
-You set up an Office 365 account in Microsoft Outlook. When you switch from the **Inbox** to other folders, such as the **Sent Items** folder, and then you return to **Inbox**, the **Focused Inbox** option disappears. Additionally, the option on the **View** tab to turn on or off the **Focused Inbox** also disappears.
+You set up a Microsoft 365 account in Microsoft Outlook. When you switch from the **Inbox** to other folders, such as the **Sent Items** folder, and then you return to **Inbox**, the **Focused Inbox** option disappears. Additionally, the option on the **View** tab to turn on or off the **Focused Inbox** also disappears.
 
 ## Cause
 
-This issue occurs because the Autodiscover process that's used by Outlook did not retrieve the XML from Office 365, and received an unexpected result from a third-party web server that uses IMAP settings from either `https://<Rootdomain>/autodiscover/autodiscover.xml` or `https://autodiscover.<Rootdomain>/autodiscover/autodiscover.xml`.
+This issue occurs because the Autodiscover process that's used by Outlook did not retrieve the XML from Microsoft 365, and received an unexpected result from a third-party web server that uses IMAP settings from either `https://<Rootdomain>/autodiscover/autodiscover.xml` or `https://autodiscover.<Rootdomain>/autodiscover/autodiscover.xml`.
 
-Typically in this situation, the lookup fails and Outlook eventually performs an Autodiscover lookup against `https://outlook.office365/AutoDiscover/AutoDiscover.xml`. However, because Outlook receives a successful Autodiscover response that has IMAP settings, it marks the account as a non-Office 365 account, and then stores the Autodiscover URL as the Last Known Good URL in the profile.
+Typically in this situation, the lookup fails and Outlook eventually performs an Autodiscover lookup against `https://outlook.office365/AutoDiscover/AutoDiscover.xml`. However, because Outlook receives a successful Autodiscover response that has IMAP settings, it marks the account as a non-Microsoft 365 account, and then stores the Autodiscover URL as the Last Known Good URL in the profile.
 
 To verify you're experiencing this issue, use [Microsoft Remote Connectivity Analyzer](https://testconnectivity.microsoft.com/) to test the Outlook Autodiscover process, and then search the text in the test results for the "IMAP" text string. Typically, "IMAP" doesn't appear in the test results unless a third-party web server is responding to Autodiscover requests.
 

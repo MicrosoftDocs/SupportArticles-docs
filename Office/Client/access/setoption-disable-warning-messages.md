@@ -17,11 +17,10 @@ appliesto:
   - Access 2007
   - Access 2003
   - Access 2002
+ms.date: 3/31/2022
 ---
 
 # How to use SetOption to disable warning messages in an Access Application
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 Moderate: Requires basic macro, coding, and interoperability skills.
 

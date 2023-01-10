@@ -12,11 +12,10 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft Excel
+ms.date: 3/31/2022
 ---
 
 # How to set up and use the RTD function in Excel
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

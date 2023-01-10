@@ -15,6 +15,7 @@ appliesto:
   - Exchange Server 2016 Standard Edition
   - Exchange Server 2016 Enterprise Edition
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # 1009 errors flood Application log for lagged database copies in Exchange Server 2016
 

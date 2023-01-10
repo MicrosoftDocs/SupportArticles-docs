@@ -14,14 +14,15 @@ ms.reviewer: jeknight
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
-# DataStrings.InvalidSmtpDomainName(domain) error when running Office 365 Hybrid Configuration wizard
+# DataStrings.InvalidSmtpDomainName(domain) error when running Microsoft 365 Hybrid Configuration wizard
 
 _Original KB number:_ &nbsp; 3132123
 
 ## Problem
 
-When you run the [Office 365 Hybrid Configuration wizard](https://aka.ms/HybridWizard), you receive the following error message when the wizard tries to connect to your on-premises Exchange environment:
+When you run the [Microsoft 365 Hybrid Configuration wizard](https://aka.ms/HybridWizard), you receive the following error message when the wizard tries to connect to your on-premises Exchange environment:
 
 > DataStrings.InvalidSmtpDomainName(domain)
 
@@ -64,7 +65,7 @@ Use ADSI Edit to remove the Exchange server from the domain configuration:
 
     Make sure that the server is no longer listed in the output. You may have to wait for Active Directory replication to complete.
 
-5. Rerun the Office 365 Hybrid Configuration wizard.
+5. Rerun the Microsoft 365 Hybrid Configuration wizard.
 
 ## More information
 

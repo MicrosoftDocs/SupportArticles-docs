@@ -16,6 +16,7 @@ appliesto:
   - Lync 2010
   - Skype for Business
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # How to use Configuration Information in Office Communicator R2, Lync Server 2013, Lync Server 2010, or Skype for Business clients
 

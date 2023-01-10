@@ -11,17 +11,16 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
-  - Excel for Office 365
+  - Excel for Microsoft 365
   - Excel 2019
+ms.date: 3/31/2022
 ---
 
-# Security settings for Dynamic Data Exchange in Excel Trust Center in Office 365
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+# Security settings for Dynamic Data Exchange in Excel Trust Center in Microsoft 365
 
 ## Summary
 
-Two new security options are now included in the Excel Trust Center in Office 365 under the **Security Settings for Dynamic Data Exchange** heading:
+Two new security options are now included in the Excel Trust Center in Microsoft 365 under the **Security Settings for Dynamic Data Exchange** heading:
 
 - Enable Dynamic Data Exchange Server Lookup
 - Enable Dynamic Data Exchange Server Launch (not recommended)

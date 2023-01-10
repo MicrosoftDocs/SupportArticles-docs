@@ -14,6 +14,7 @@ appliesto:
   - Microsoft Office Outlook 2007
 search.appverid: MET150
 ms.reviewer: baijun, sgriffin
+ms.date: 3/31/2022
 ---
 # MAPI Advise() call returns 0x8007000E (E_OUTOFMEMORY)
 

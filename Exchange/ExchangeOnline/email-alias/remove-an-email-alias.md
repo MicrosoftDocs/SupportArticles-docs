@@ -1,28 +1,29 @@
 ---
 title: Troubleshoot Remove an email alias from a user
-ms.author: kwekua
-author: kwekua
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
-f1_keywords:
-- 'O365P_AdminUsers_TSAlias'
-- 'O365M_AdminUsers_TSAlias'
-- 'O365E_AdminUsers_TSAlias'
-- 'AdminUsers_TSAlias'
+  - Exchange Online
+  - CSSTroubleshoot
+f1_keywords: 
+  - 'O365P_AdminUsers_TSAlias'
+  - 'O365M_AdminUsers_TSAlias'
+  - 'O365E_AdminUsers_TSAlias'
+  - 'AdminUsers_TSAlias'
 localization_priority: None
 ms.collection: 
-- M365-subscription-management 
-- Adm_O365
-search.appverid:
-- BCS160
-- MET150
-- MOE150
+  - M365-subscription-management
+  - Adm_O365
+search.appverid: 
+  - BCS160
+  - MET150
+  - MOE150
 ms.assetid: dde511e8-0719-4b7a-8e56-d4dad0c308b3
 description: Learn how to remove an email alias from a user in the admin center.
+ms.date: 3/31/2022
 ---
 # Troubleshoot: Remove an email alias from a user
 

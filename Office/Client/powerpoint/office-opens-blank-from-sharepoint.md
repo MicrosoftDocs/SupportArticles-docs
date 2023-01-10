@@ -20,11 +20,10 @@ appliesto:
   - Office Professional Plus 2010
   - SharePoint Foundation 2010
   - SharePoint Server 2010
+ms.date: 3/31/2022
 ---
 
 # Office applications open blank from SharePoint WebDAV or sites
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 When this problem occurs, you may also experience the following additional symptoms: 
  

@@ -1,6 +1,6 @@
 ---
 title: Can't add and verify a domain in hybrid
-description: Fixes an issue that prevents you from verifying a domain in Office 365 when you have an Exchange hybrid deployment.
+description: Fixes an issue that prevents you from verifying a domain in Microsoft 365 when you have an Exchange hybrid deployment.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -18,17 +18,18 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # An error occurred while working on your domain when you verify your domain in a hybrid deployment
 
 _Original KB number:_ &nbsp; 3089230
 
 > [!NOTE]
-> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the [Office 365 Hybrid Configuration wizard](https://aka.ms/hybridwizard). For more information, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
+> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the [Microsoft 365 Hybrid Configuration wizard](https://aka.ms/hybridwizard). For more information, see [Microsoft 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
 
 ## Problem
 
-You have a hybrid deployment of on-premises Exchange Server and Exchange Online in Office 365. When you try to add and verify a domain in the Microsoft 365 admin center, you receive the following error message after you add the TXT record or MX record:
+You have a hybrid deployment of on-premises Exchange Server and Exchange Online in Microsoft 365. When you try to add and verify a domain in the Microsoft 365 admin center, you receive the following error message after you add the TXT record or MX record:
 
 > An error occurred while working on your domain. Please go back to the Domains page to restart the process.
 
@@ -36,10 +37,10 @@ When you go to the **Domains** page, you're redirected to the **Domain Setup** p
 
 ## Cause
 
-The domain name that you're trying to add to Office 365 is already being used in the on-premises Exchange federation trust as the primary federation organization identifier (`ApplicationUri`).
+The domain name that you're trying to add to Microsoft 365 is already being used in the on-premises Exchange federation trust as the primary federation organization identifier (`ApplicationUri`).
 
 > [!NOTE]
-> To confirm that this is the cause of the issue, open the Exchange Management Shell, and then run the `Get-FederationTrust` cmdlet to locate the `ApplicationUri` attribute. Confirm that the `ApplicationUri` attribute is set to the domain name that you're trying to verify in Office 365.
+> To confirm that this is the cause of the issue, open the Exchange Management Shell, and then run the `Get-FederationTrust` cmdlet to locate the `ApplicationUri` attribute. Confirm that the `ApplicationUri` attribute is set to the domain name that you're trying to verify in Microsoft 365.
 
 ## Solution
 
@@ -49,7 +50,7 @@ To resolve this issue, follow these steps:
    - In Exchange Server 2013: [Remove a federation trust](/exchange/remove-a-federation-trust-exchange-2013-help).
    - In Exchange Server 2010: [Remove a Federation Trust](/previous-versions/office/exchange-server-2010/dd297972(v=exchg.141)).
 
-2. Add and verify the domain in Office 365. For more info, see [Add a domain to Microsoft 365](/microsoft-365/admin/setup/add-domain).
+2. Add and verify the domain in Microsoft 365. For more info, see [Add a domain to Microsoft 365](/microsoft-365/admin/setup/add-domain).
 
 3. Re-create the on-premises federation trust. For more info, see the following:
    - In Exchange Server 2013: [Configure a federation trust](/exchange/configure-a-federation-trust-exchange-2013-help).

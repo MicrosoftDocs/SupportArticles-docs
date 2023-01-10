@@ -11,13 +11,14 @@ ms.topic: troubleshooting
 ms.custom: sap:office-experts, CSSTroubleshoot
 ms.author: luche
 appliesto: 
-  - Excel for Office 365
+  - Excel for Microsoft 365
   - Excel 2019
   - Excel 2016
   - Excel 2013
   - Excel 2010
   - Excel 2007
   - Excel 2003
+ms.date: 3/31/2022
 ---
 
 # Step by step: Rename Excel sheet with cell contents by using Macro
@@ -26,7 +27,7 @@ This article was written by [Raddini Rahayu](https://mvp.microsoft.com/en-US/mvp
 
 ## Case
 
-Here are weekly sales activity reports. In example, there are 15 people in this case. Nancy, the admin reports, she is assigned summarizing each sales data into one file where all sales are separated on each sheet. For easily arranging data, each sheet she gave the name matches the sales name on that sheet. At first, Nancy feels comfortable with this, but as more data and demands rapid processing, she was so overwhelmed. To overcome this, Nancy wants to the name sheets changed automatically according to the sales name on each sheet without manually rename it.
+Here are weekly sales activity reports. In example, there are 15 people in this case. Nancy, the admin reports, is assigned summarizing each sales data into one file where all sales are separated on each sheet. For easily arranging data, each sheet Nancy gave the name matches the sales name on that sheet. At first, Nancy feels comfortable with this, but as more data and demands rapid processing, Nancy was so overwhelmed. To overcome this, Nancy wants to the name sheets changed automatically according to the sales name on each sheet without manually rename it.
 
 :::image type="content" source="media/use-macro-rename-sheet/weekly-sales-activity-reports.png" alt-text="Screenshot of the weekly sales activity reports.":::
 

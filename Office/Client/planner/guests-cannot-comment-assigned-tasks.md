@@ -12,8 +12,9 @@ ms.custom:
   - CI 124798
 ms.reviewer: arvaradh, sadhil
 appliesto: 
-  - Office 365 Planner
+  - Microsoft 365 Planner
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Guests can't add comments to assigned Planner tasks
 
@@ -29,13 +30,13 @@ When [users with guest access are assigned tasks](https://support.microsoft.com/
 
 ## Cause
 
-When a task in Planner is assigned to a user with guest access, an Exchange Online recipient is created by using the guest's SMTP address. The error occurs if this SMTP address is already assigned to another Exchange Online recipient in the Office 365 tenant. In most such cases, the recipient is a mail contact.
+When a task in Planner is assigned to a user with guest access, an Exchange Online recipient is created by using the guest's SMTP address. The error occurs if this SMTP address is already assigned to another Exchange Online recipient in the Microsoft 365 tenant. In most such cases, the recipient is a mail contact.
 
 ## Resolution
 
 Change the SMTP address of the existing Exchange Online recipient to make it different from that of the guest. Alternatively, delete the recipient that uses the same SMTP address as the guest.
 
-You must be signed in to your Microsoft 365 or Office 365 account and have Microsoft 365 administrator permissions to make these changes.
+You must be signed in to your Microsoft 365 or Microsoft 365 account and have Microsoft 365 administrator permissions to make these changes.
 
 1. In the Microsoft 365 admin center, select **Admin centers** > **Exchange** to open the Exchange admin center.
 1. Select **Recipients** > **Contacts**.

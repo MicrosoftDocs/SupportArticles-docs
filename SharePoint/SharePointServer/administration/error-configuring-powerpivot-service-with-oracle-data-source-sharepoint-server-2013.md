@@ -13,6 +13,7 @@ ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2013
+ms.date: 3/31/2022
 ---
 
 # Error when configuring a PowerPivot service with an Oracle data source in SharePoint Server 2013

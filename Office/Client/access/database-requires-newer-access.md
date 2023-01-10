@@ -14,11 +14,10 @@ appliesto:
   - Access 2016
   - Access 2013
   - Access 2010
+ms.date: 3/31/2022
 ---
 
 # "Database you are trying to open requires a newer version of Microsoft Access" error in Access
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

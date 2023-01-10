@@ -15,11 +15,10 @@ ms.author: luche
 ms.reviewer: chriswy
 appliesto: 
   - Access 2002
+ms.date: 3/31/2022
 ---
 
 # Jet compact utility is available in download center
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 Moderate: Requires basic macro, coding, and interoperability skills.
 

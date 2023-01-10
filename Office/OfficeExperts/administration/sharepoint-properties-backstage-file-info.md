@@ -9,12 +9,14 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: sap:office-experts, CSSTroubleshoot
-ms.author: warrenr
+ms.author: v-maqiu
+ms.reviewer: warrenr
 appliesto: 
   - Microsoft 365
   - Office LTSC 2021
   - Office 2019
   - Office 2016
+ms.date: 3/31/2022
 ---
 
 # SharePoint properties of type (lookup – multi select) don't work on Office Backstage

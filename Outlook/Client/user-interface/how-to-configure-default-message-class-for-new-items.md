@@ -18,8 +18,9 @@ appliesto:
   - Microsoft Outlook 2010
   - Microsoft Office Outlook 2007
   - Microsoft Office Outlook 2003
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # How to configure the default message class for new items in an Outlook folder
 
@@ -44,7 +45,6 @@ The following table lists the main default folders in Outlook in which custom me
 |Calendar|IPM.Appointment|
 |Contacts|IPM.Contact|
 |Tasks|IPM.Task|
-|||
 
 To determine the currently configured default message class for new items on a folder, follow these steps:
 

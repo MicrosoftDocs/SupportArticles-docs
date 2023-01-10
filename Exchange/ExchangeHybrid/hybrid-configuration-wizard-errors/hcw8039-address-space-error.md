@@ -16,6 +16,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # HCW8039 The hybrid Send connector must only contain the single address space error when you run HCW
 
@@ -39,14 +40,14 @@ To resolve this issue, follow these steps:
 2. Run the following command:
 
     ```powershell
-    Get-SendConnector -name "Outbound to Office 365"
+    Get-SendConnector -name "Outbound to Microsoft 365"
     ```
 
 3. In the output, examine the value of the AddressSpace  parameter. You should see either "*" or "contoso.mail.onmicrosoft.com;1."
 4. If you see any addresses other than "*" or "contoso.mail.onmicrosoft.com;1", remove them. To do this, run the following command:
 
     ```powershell
-    Set-SendConnector -name "Outbound to Office 365 "smtp:contoso.mail.onmicrosoft.com;1"
+    Set-SendConnector -name "Outbound to Microsoft 365 "smtp:contoso.mail.onmicrosoft.com;1"
     ```
 
 5. Run the Hybrid Configuration wizard again.

@@ -1,6 +1,6 @@
 ---
 title: Cannot open attachments by double-clicking
-description: Describes an issue that prevents you from opening an attachment in Outlook 2016, Outlook 2019, and Outlook for Office 365 by double-clicking it. A resolution is provided.
+description: Describes an issue that prevents you from opening an attachment in Outlook 2016, Outlook 2019, and Outlook for Microsoft 365 by double-clicking it. A resolution is provided.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -14,8 +14,9 @@ ms.reviewer: tasitae
 appliesto: 
   - Outlook 2019
   - Outlook 2016
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Can't open an attachment in Outlook by double-clicking it
 
@@ -23,7 +24,7 @@ _Original KB number:_ &nbsp; 3106898
 
 ## Symptoms
 
-In Microsoft Outlook 2016, Outlook 2019, and Outlook for Office 365, when you double-click an attachment to open it, the file does not open. However, you can right-click the attachment and then select **Open** to open it.
+In Microsoft Outlook 2016, Outlook 2019, and Outlook for Microsoft 365, when you double-click an attachment to open it, the file does not open. However, you can right-click the attachment and then select **Open** to open it.
 
 ## Cause
 

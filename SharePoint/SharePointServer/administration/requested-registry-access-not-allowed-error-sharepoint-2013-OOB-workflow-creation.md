@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 appliesto: 
   - SharePoint Server 2013
+ms.date: 3/31/2022
 ---
 
 # "Requested registry access is not allowed" error in SharePoint 2013 OOB workflow creation

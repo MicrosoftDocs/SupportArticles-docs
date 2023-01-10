@@ -17,6 +17,7 @@ appliesto:
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition
   - Exchange Online
+ms.date: 3/31/2022
 ---
 # Attendees receive a meeting update after the event reminder is triggered
 

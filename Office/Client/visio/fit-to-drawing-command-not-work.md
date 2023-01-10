@@ -14,11 +14,10 @@ search.appverid:
 appliesto: 
   - Visio 2013
   - Visio 2010
+ms.date: 3/31/2022
 ---
 
 # In Visio, the "Fit to Drawing" command does not resize the page to fit the drawing's dimensions
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

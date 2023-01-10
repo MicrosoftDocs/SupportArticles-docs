@@ -16,11 +16,10 @@ appliesto:
   - Visio Professional 2010
   - Visio Standard 2013
   - Visio Professional 2013
+ms.date: 3/31/2022
 ---
 
 # Enable the Windows Search service if you want to use the Search for Shapes feature in Visio 2010 or in Visio 2013
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Introduction 
 

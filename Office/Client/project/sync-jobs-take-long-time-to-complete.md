@@ -14,11 +14,10 @@ appliesto:
   - Project Server 2013
   - Project Server 2010
   - Microsoft Office Project Server 2007
+ms.date: 3/31/2022
 ---
 
 # Project Server Sync Jobs take a long time to complete and users get Access Denied
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

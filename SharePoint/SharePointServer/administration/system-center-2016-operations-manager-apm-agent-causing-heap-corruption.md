@@ -14,6 +14,7 @@ appliesto:
   - SharePoint Server 2010
   - SharePoint Server 2013
   - SharePoint Server 2016
+ms.date: 3/31/2022
 ---
 
 # System Center 2016 Operations Manager APM Agent causing heap corruption in SharePoint  

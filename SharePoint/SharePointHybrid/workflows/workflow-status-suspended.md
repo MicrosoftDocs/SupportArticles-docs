@@ -13,6 +13,7 @@ ms.author: luche
 appliesto: 
   - SharePoint Online
   - SharePoint Server 2013
+ms.date: 3/31/2022
 ---
 
 # A SharePoint 2013 workflow in SharePoint Online doesn't complete when the list workflow is run at the Style Library

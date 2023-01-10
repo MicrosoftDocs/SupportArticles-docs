@@ -11,12 +11,13 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.custom: sap:office-experts, CSSTroubleshoot
 appliesto: 
-  - Excel for Office 365
+  - Excel for Microsoft 365
   - Excel 2019
   - Excel 2016
   - Excel 2013
   - Excel 2010
   - Microsoft Office Excel 2007
+ms.date: 3/31/2022
 ---
 
 # Create An Excel Add-In to Calculate Body Mass Index (BMI)

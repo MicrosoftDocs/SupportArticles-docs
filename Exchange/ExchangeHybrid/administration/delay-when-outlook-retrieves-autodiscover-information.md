@@ -20,6 +20,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Delay when Outlook retrieves Autodiscover information for an Exchange Online mailbox in a hybrid environment
 

@@ -14,6 +14,7 @@ ms.reviewer: talmagev, aruiz
 appliesto: 
   - Outlook 2016
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # You can't assign color categories for IMAP accounts in Outlook 2016
 
@@ -31,7 +32,7 @@ The ability to assign color categories is not available for IMAP email accounts 
 
 To work around this issue, add your email account as a POP3 account. POP3 accounts do support assigning color categories.
 
-Alternatively, if you are using an Outlook.com or Office 365 email account, see [Add an email account to Outlook](https://support.microsoft.com/office/add-an-email-account-to-outlook-6e27792a-9267-4aa4-8bb6-c84ef146101b) to make sure that you connect in a manner that provides the full benefits of those accounts.
+Alternatively, if you are using an Outlook.com or Microsoft 365 email account, see [Add an email account to Outlook](https://support.microsoft.com/office/add-an-email-account-to-outlook-6e27792a-9267-4aa4-8bb6-c84ef146101b) to make sure that you connect in a manner that provides the full benefits of those accounts.
 
 ## References
 

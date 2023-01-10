@@ -13,8 +13,9 @@ ms.custom:
 ms.reviewer: tasitae
 appliesto: 
   - Outlook 2016 for Mac
-  - Outlook for Mac for Office 365
+  - Outlook for Microsoft 365 for Mac
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Category colors are different after you migrate from Outlook for Mac 2011 to Outlook 2016 for Mac
 

@@ -11,24 +11,23 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
-  - Word for Office 365
+  - Word for Microsoft 365
   - Word 2019
   - Word 2013
   - Word 2016
   - Word 2010
+ms.date: 3/31/2022
 ---
 
 # Mail merge error when a data source is accessed by multiple users in Word
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
 Consider the following scenario: 
 
-- You try to open a mail-merged document in Microsoft Word 2010, Word 2013, or Word 2016.   
-- The data for this document is a Microsoft Excel worksheet (*.xlsx) that's stored in shared folder.   
-- The document has already been opened.   
+- You try to open a mail-merged document in Microsoft Word 2010, Word 2013, or Word 2016.
+- The data for this document is a Microsoft Excel worksheet (*.xlsx) that's stored in shared folder.
+- The document has already been opened.
 
 In this scenario, you receive the following error message:
 

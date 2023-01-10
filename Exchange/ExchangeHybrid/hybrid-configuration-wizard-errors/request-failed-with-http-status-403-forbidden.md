@@ -16,6 +16,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # The request failed with HTTP status 403: Forbidden when you run the Hybrid Configuration wizard
 
@@ -23,7 +24,7 @@ _Original KB number:_ &nbsp; 3067975
 
 ## Problem
 
-You want to set up a hybrid deployment between your on-premises Microsoft Exchange Server organization and Exchange Online in Microsoft Office 365. However, when you run the Hybrid Configuration wizard, you receive an "An error occurred accessing Windows Live. The request failed with HTTP status 403: Forbidden" error message. The full text of the message resembles the following:
+You want to set up a hybrid deployment between your on-premises Microsoft Exchange Server organization and Exchange Online in Microsoft 365. However, when you run the Hybrid Configuration wizard, you receive an "An error occurred accessing Windows Live. The request failed with HTTP status 403: Forbidden" error message. The full text of the message resembles the following:
 
 > ERROR:Updating hybrid configuration failed with error 'Subtask Configure execution failed: Creating Organization Relationships.
 >

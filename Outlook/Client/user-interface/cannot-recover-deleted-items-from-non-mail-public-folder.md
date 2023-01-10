@@ -14,8 +14,9 @@ ms.reviewer: aruiz
 appliesto: 
   - Outlook 2019
   - Outlook 2016
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # You can't recover deleted items from a non-mail public folder in Outlook 2016
 

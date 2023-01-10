@@ -15,11 +15,12 @@ ms.reviewer: gregmans
 search.appverid: 
   - MET150
 appliesto: 
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
   - Outlook 2019
   - Outlook 2016
   - Outlook 2013
   - Outlook 2010
+ms.date: 3/31/2022
 ---
 # Mailbox Quota Information is not displayed on the Status bar in Outlook
 

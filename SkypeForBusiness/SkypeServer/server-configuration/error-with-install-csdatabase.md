@@ -13,6 +13,7 @@ ms.reviewer: miadkins
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Lync Server 2013
+ms.date: 3/31/2022
 ---
 
 # Error when you create databases by using the Install-CsDatabase cmdlet in Lync Server 2013

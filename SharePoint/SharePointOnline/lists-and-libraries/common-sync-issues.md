@@ -1,7 +1,7 @@
 ---
 title: Common issues syncing SharePoint lists offline
-ms.author: prbalusu
-author: v-matthamer
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 09/24/2021
 audience: Admin
@@ -15,7 +15,7 @@ appliesto:
 ms.custom: 
   - CI 157491
   - CSSTroubleshoot
-ms.reviewer: sharepoint_triage
+ms.reviewer: prbalusu, sharepoint_triage
 description: Resolutions for some common issues with syncing SharePoint lists offline.
 ---
 
@@ -96,7 +96,7 @@ If the client device is online, and the sync icon shows for more than 10 minutes
 1. Switch to the **Application** tab.
 1. On the left side of the pane should be a list of Local Storage domains. Expand the **Local Storage** category and select the one that corresponds to the list URL. For example, if you were viewing `https://contoso.sharepoint.com/teams/teamSite/Lists/Number%20List/AllItems.aspx` you would pick `https://contoso.sharepoint.com`.  
 
-1. Add `sharepoint.datasync.List sync.logToConsole` in the right pane by selecting an empty line. Set the value to **true**.
+1. Add `sharepoint.datasync.nucleus.logToConsole` in the right pane by selecting an empty line. Set the value to **true**.
 
     :::image type="content" source="./media/common-sync-issues/logto.png" alt-text="sharepoint.datasync.List sync.logToConsole is added with the value set to True.":::
 

@@ -12,6 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business for Android
+ms.date: 3/31/2022
 ---
 
 # Troubleshooting issues with Microsoft Skype for Business (formerly Lync 2013) for Android
@@ -40,8 +41,8 @@ The following table describes the sign-in fields required for Android users:
 |-|-|-|
 |On-premises Skype for Business Server|SIP address and UPN are the same|**Sign-in address:**SIP address **User name:** Blank **Password:** Password|
 |On-premises Skype for Business Server|SIP address and UPN are different|**Sign-in address:** SIP address **User name:**UPN or domain\username **Password:** Password|
-|Office 365|SIP address and UPN are the same|**Sign-in address:** SIP address **User Name:** Blank **Password:** Password|
-|Office 365|SIP address and UPN are different|**Sign-in address:** SIP address **User name:** UPN **Password:** Password|
+|Microsoft 365|SIP address and UPN are the same|**Sign-in address:** SIP address **User Name:** Blank **Password:** Password|
+|Microsoft 365|SIP address and UPN are different|**Sign-in address:** SIP address **User name:** UPN **Password:** Password|
 
 If automatic discovery for mobile clients hasn't been configured, users have to enter the following internal and external discovery addresses in addition to the fields that are listed in the table:
 
@@ -50,7 +51,7 @@ If automatic discovery for mobile clients hasn't been configured, users have to 
 - External discovery address*:
 [https://webdir.online.lync.com/Autodiscover/autodiscoverservice.svc/Root](https://webdir.online.lync.com/autodiscover/autodiscoverservice.svc/root)   
 
-*These addresses are valid only for Office 365 users and will be different for On-premises Skype for Business Server deployments.
+*These addresses are valid only for Microsoft 365 users and will be different for On-premises Skype for Business Server deployments.
 
 > [!NOTE]
 > The Sign-in address and Password fields are displayed on the sign-in screen. To access the User name, Domain, Internal discovery address, and External discovery addressfields, select Server Settings on the sign-in screen.

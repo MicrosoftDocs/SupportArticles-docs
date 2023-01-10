@@ -14,6 +14,7 @@ ms.reviewer: jhayes, kunalsh, ninob
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # The owner of a mail-enabled security group or distribution group can't manage the group if it's hidden from the GAL
 
@@ -23,7 +24,7 @@ _Original KB number:_ &nbsp; 2813640
 
 ### Problem 1
 
-The owner of a security group can't view or manage a mail-enabled security group by using the Exchange admin center in Office 365 if the group is hidden from the global address list (GAL). However, a global admin can view the security group in the Exchange admin center. This occurs even though the owner is listed in the `ManagedBy` attribute of the group.
+The owner of a security group can't view or manage a mail-enabled security group by using the Exchange admin center in Microsoft 365 if the group is hidden from the global address list (GAL). However, a global admin can view the security group in the Exchange admin center. This occurs even though the owner is listed in the `ManagedBy` attribute of the group.
 
 ### Problem 2
 

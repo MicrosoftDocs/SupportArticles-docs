@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
   - SharePoint Server
+ms.date: 3/31/2022
 ---
 
 # Completed tasks aren't deleted for a workflow using the SharePoint 2013 Workflow Platform Type

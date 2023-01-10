@@ -1,7 +1,0 @@
-- name: Outlook Experts
-  href: ../outlook-experts-welcome.md
-  items:
-  - name: Mac Outlook Support Utilities
-    items:
-    - name: Useful tools
-      href: ../outlook-for-mac/useful-tools.md

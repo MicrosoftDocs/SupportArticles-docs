@@ -13,6 +13,7 @@ ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Contacts in Skype for Business Online appear to be offline or aren't searchable
@@ -72,7 +73,7 @@ Verify that connectivity to the Address Book web service is available. To do thi
      - 404 Not Found       
 5. Verify that the Exchange Autodiscover service is set up correctly. To do this, see Method 2 in the "Solution" section in the following Microsoft Knowledge Base article:  
 
-    [2404385 ](https://support.microsoft.com/help/2404385) Outlook can't set up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Office 365
+    [2404385 ](https://support.microsoft.com/help/2404385) Outlook can't set up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Microsoft 365
 
 ### Scenario 3:Skype for Business Online contacts are lost or missing, or the contacts list isn't updated
 

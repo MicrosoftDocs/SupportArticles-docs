@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Workspace 2010
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # SharePoint Workspace does not always sync with SharePoint Online automatically

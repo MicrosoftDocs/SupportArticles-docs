@@ -20,8 +20,9 @@ appliesto:
   - Microsoft Office Outlook 2003
   - Microsoft Business Productivity Online Dedicated
   - Microsoft Business Productivity Online Suite Federal
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Email remains in the Outbox when you use the DelegateSentItemsStyle registry value
 
@@ -63,7 +64,7 @@ If you set DelegateSentItemsStyle=0 in the registry, email messages that you sen
     `HKEY_CURRENT_USER\Software\Microsoft\Office\<x.0>\Outlook\Preferences`
 
     > [!NOTE]
-    > In this key path, the placeholder <x.0> represents 16.0 for Outlook 2016, Outlook for Office 365 and Outlook 2019, 15.0 for Outlook 2013, 14.0 for Outlook 2010, 12.0 for Outlook 2007, and 11.0 for Outlook 2003.
+    > In this key path, the placeholder <x.0> represents 16.0 for Outlook 2016, Outlook for Microsoft 365 and Outlook 2019, 15.0 for Outlook 2013, 14.0 for Outlook 2010, 12.0 for Outlook 2007, and 11.0 for Outlook 2003.
 
 4. Select the `DelegateSentItemsStyle` value.
 5. On the **Edit** menu, select **Modify**.
@@ -100,7 +101,7 @@ Outlook 2003
 
 ## Workaround
 
-If the methods provided in the Resolution section are not acceptable, and if your mailbox is located on Microsoft Exchange Server 2010 Service Pack 2 Update Rollup 4 or later version, or Exchange Server 2013 Cumulative Update 9 or later version or Office 365 Exchange Online, the Exchange administrator can configure similar behavior on the server. These configurations do not require the `DelegateSentItemsStyle` registry key to be enabled, therefore the issue will not occur.
+If the methods provided in the Resolution section are not acceptable, and if your mailbox is located on Microsoft Exchange Server 2010 Service Pack 2 Update Rollup 4 or later version, or Exchange Server 2013 Cumulative Update 9 or later version or Microsoft 365 Exchange Online, the Exchange administrator can configure similar behavior on the server. These configurations do not require the `DelegateSentItemsStyle` registry key to be enabled, therefore the issue will not occur.
 
 ### Microsoft Exchange Server 2010 Service Pack 2 Update Rollup 4 or later
 
@@ -108,7 +109,7 @@ Update Rollup 4 for Exchange Server 2010 Service Pack 2 introduced a new Exchang
 
 For more information about the `Set-MailboxSentItemsConfiguration` cmdlet, see [Messages sent by using the "Send As" and "Send on behalf" permissions are only copied to the Sent Items folder of the sender in an Exchange Server 2010 environment](https://support.microsoft.com/help/2632409).
 
-### Microsoft Exchange Server 2013 Cumulative Update 9 or later or Microsoft Office 365 Exchange Online
+### Microsoft Exchange Server 2013 Cumulative Update 9 or later or Microsoft 365 Exchange Online
 
 Cumulative Update 9 for Exchange Server 2013 introduced a new feature that allows administrators to configure the Sent Item folder to which a message is copied. Because this new feature is handled by the Exchange server, Outlook can be configured for online or cached Exchange mode. Note that if you enable this feature and enable the `DelegateSentItemsStyle` registry value with a cached Outlook profile at the same time, two copies of the sent item will be saved in the shared mailboxes Sent Items folder.
 
@@ -121,6 +122,6 @@ The `DelegateSentItemsStyle` registry value is stored in the following location 
 `HKEY_CURRENT_USER\Software\Microsoft\Office\<x.0>\Outlook\Preferences`
 
 > [!NOTE]
-> In this registry path, <x.0> corresponds to your version of Outlook (Outlook 2003 = 11.0, Outlook 2007 = 12.0, Outlook 2010 = 14.0, Outlook 2013 = 15.0, Outlook 2016, Outlook for Office 365 and Outlook 2019 = 16.0).
+> In this registry path, <x.0> corresponds to your version of Outlook (Outlook 2003 = 11.0, Outlook 2007 = 12.0, Outlook 2010 = 14.0, Outlook 2013 = 15.0, Outlook 2016, Outlook for Microsoft 365 and Outlook 2019 = 16.0).
 
 The functionality that is provided by the `DelegateSentItemsStyle` registry value is described in [When you send an e-mail message from a shared mailbox in Outlook 2007, the sent message is not saved in the Sent Items folder of the shared mailbox](https://support.microsoft.com/help/972148).

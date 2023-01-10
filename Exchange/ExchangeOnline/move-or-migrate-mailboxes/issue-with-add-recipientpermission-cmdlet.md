@@ -14,6 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
 # (You can't use the domain because it's not an accepted domain for your organization) error when you run the Add-RecipientPermission cmdlet
 
@@ -51,9 +52,9 @@ The proxy address of the recipient uses a domain that isn't configured as an acc
 
 Do one of the following:
 
-- Add and verify the domain. For more information, see [Adding additional domains to Office 365](https://support.office.com/article/adding-additional-domains-to-office-365-2d2fa996-b760-411d-a5cc-190d63f13207).
+- Add and verify the domain. For more information, see [Adding additional domains to Microsoft 365](https://support.office.com/article/adding-additional-domains-to-office-365-2d2fa996-b760-411d-a5cc-190d63f13207).
 - Remove the proxy address from the recipient. For more information, see [Add or remove email addresses for a mailbox](/Exchange/recipients/user-mailboxes/email-addresses).
-- Assign an Exchange Online license to the affected user. For more information, see [Assign licenses to users in Office 365 for business](/office365/admin/subscriptions-and-billing/assign-licenses-to-users) or [Assign licenses to user accounts with Office 365 PowerShell](/office365/enterprise/powershell/assign-licenses-to-user-accounts-with-office-365-powershell).
+- Assign an Exchange Online license to the affected user. For more information, see [Assign licenses to users in Microsoft 365 for business](/office365/admin/subscriptions-and-billing/assign-licenses-to-users) or [Assign licenses to user accounts with Microsoft 365 PowerShell](/office365/enterprise/powershell/assign-licenses-to-user-accounts-with-office-365-powershell).
   
 ## More information
 

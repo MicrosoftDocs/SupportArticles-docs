@@ -17,11 +17,10 @@ appliesto:
   - Microsoft Office Access 2007
   - Microsoft Office Access 2003
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # How to define relationships between tables in an Access database
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 _Original KB number:_ &nbsp; 304466
 

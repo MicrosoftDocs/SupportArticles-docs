@@ -1,6 +1,6 @@
 ---
 title: Cannot open documents on a network file share
-description: Describes a scenario in on-premises Exchange Server and in Exchange Online in Office 365 where users can't use Outlook on the web to open a shared document that resides on a network drive. Provides a resolution.
+description: Describes a scenario in on-premises Exchange Server and in Exchange Online in Microsoft 365 where users can't use Outlook on the web to open a shared document that resides on a network drive. Provides a resolution.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -18,6 +18,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Users can't open documents on a network file share by using Outlook on the web in Exchange Server or Exchange Online
 
@@ -29,7 +30,7 @@ Users in an on-premises Microsoft Exchange Server or Exchange Online environment
 
 ## Cause
 
-This behavior is by design. In Exchange Server and in Exchange Online in Office 365, you can't use Outlook on the web to access shared files through a Universal Naming Convention (UNC) path.
+This behavior is by design. In Exchange Server and in Exchange Online in Microsoft 365, you can't use Outlook on the web to access shared files through a Universal Naming Convention (UNC) path.
 
 ## Resolution
 

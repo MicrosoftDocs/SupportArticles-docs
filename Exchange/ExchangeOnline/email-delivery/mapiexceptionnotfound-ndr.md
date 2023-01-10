@@ -14,6 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
 # (554 5.2.0 STOREDRV.Deliver.Exception:ObjectNotFoundException.MapiExceptionNotFound) NDR when users send mail in Exchange Online
 

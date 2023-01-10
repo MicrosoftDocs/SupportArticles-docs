@@ -1,6 +1,6 @@
 ---
 title: How to export contacts via OWA
-description: Describes how to export contacts from Outlook 2011 for Mac to Exchange Online by using Outlook Web App in an Office 365 environment.
+description: Describes how to export contacts from Outlook 2011 for Mac to Exchange Online by using Outlook Web App in a Microsoft 365 environment.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -14,18 +14,19 @@ ms.reviewer: dahans
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
-# How to export contacts from Outlook 2011 for Mac to Exchange Online by using OWA in Office 365
+# How to export contacts from Outlook 2011 for Mac to Exchange Online by using OWA in Microsoft 365
 
 _Original KB number:_ &nbsp; 2648667
 
 ## Summary
 
-This step-by-step article describes how to export contacts from Microsoft Outlook 2011 for Mac to Microsoft Exchange Online by using Microsoft Outlook Web App in a Microsoft Office 365 environment.
+This step-by-step article describes how to export contacts from Microsoft Outlook 2011 for Mac to Microsoft Exchange Online by using Microsoft Outlook Web App in a Microsoft 365 environment.
 
 ## Symptoms
 
-A user sets up a profile in Outlook 2011 for Mac to connect to their Exchange Online mailbox in Office 365. However, external contacts aren't synced with Exchange Online. This occurs because external contacts must be exported from Outlook 2011 for Mac and then imported to Outlook Web App. However, the existing method to export contacts from Outlook 2011 for Mac is to use a text-delimited file, and this file type isn't supported in Office 365.
+A user sets up a profile in Outlook 2011 for Mac to connect to their Exchange Online mailbox in Microsoft 365. However, external contacts aren't synced with Exchange Online. This occurs because external contacts must be exported from Outlook 2011 for Mac and then imported to Outlook Web App. However, the existing method to export contacts from Outlook 2011 for Mac is to use a text-delimited file, and this file type isn't supported in Microsoft 365.
 
 ## Resolution
 

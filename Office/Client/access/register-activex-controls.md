@@ -15,11 +15,10 @@ ms.author: luche
 ms.reviewer: acc12b
 appliesto: 
   - Access 2007
+ms.date: 3/31/2022
 ---
 
 # How to register or unregister ActiveX controls in Access 2007
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 This article applies to a Microsoft Access database (.mdb), a Microsoft Access project (.adp), and a Microsoft Access 2007 database (.accdb).
 

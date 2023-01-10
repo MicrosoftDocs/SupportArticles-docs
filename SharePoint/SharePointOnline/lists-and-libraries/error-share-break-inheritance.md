@@ -15,6 +15,7 @@ appliesto:
   - SharePoint Online
   - OneDrive for Business
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # "You can't share this folder because there are too many items in the folder" error when trying to share or break inheritance
 

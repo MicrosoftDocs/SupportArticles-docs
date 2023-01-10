@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
   - SharePoint Server 2013
+ms.date: 3/31/2022
 ---
 
 # SharePoint 2010 Workflow platform creates Word files that can't be opened

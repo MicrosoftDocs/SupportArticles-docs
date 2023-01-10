@@ -1,40 +1,41 @@
 ---
-title: Support options for setting up single sign-on for Office 365
-description: Lists support options that are available to help you set up single sign-on (SSO) in Office 365.
+title: Support options for setting up single sign-on for Microsoft 365
+description: Lists support options that are available to help you set up single sign-on (SSO) in Microsoft 365.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
 ms.reviewer: willfid
-appliesto:
-- Office Products
+appliesto: 
+  - Office Products
+ms.date: 3/31/2022
 ---
 
-# Support options for setting up single sign-on for Office 365
+# Support options for setting up single sign-on for Microsoft 365
 
 ## Summary
 
-This article lists the support options that are available to set up single sign-on (SSO) authentication for Office 365.
+This article lists the support options that are available to set up single sign-on (SSO) authentication for Microsoft 365.
 
 ## More information
 
-The Office 365 subscription includes technical support. However, the support option to implement SSO or to change SSO configuration for Office 365 is not included with the Office 365 subscription. The other options available for these tasks are as follows.
+The Microsoft 365 subscription includes technical support. However, the support option to implement SSO or to change SSO configuration for Microsoft 365 is not included with the Microsoft 365 subscription. The other options available for these tasks are as follows.
 
 ### No-cost technical guidance
 
-The following is a free self-service guide to complete Active Directory Federation Services (AD FS) implementation tasks for Office 365 customers:
+The following is a free self-service guide to complete Active Directory Federation Services (AD FS) implementation tasks for Microsoft 365 customers:
 
 - Step-by-step implementation guidance: [Checklist: Use AD FS to implement and manage single sign-on](/previous-versions/azure/azure-services/jj205462(v=azure.100))
 
-If you have questions about this guide, refer to the following additional resources from the Office 365 community:
+If you have questions about this guide, refer to the following additional resources from the Microsoft 365 community:
 
-- Directory Integration Services discussion forum in the [Office 365 community](https://techcommunity.microsoft.com/t5/office-365/ct-p/Office365) 
-- Directory Integration Services wiki article in the [Office 365 community](/office365/enterprise/office-365-integration)
+- Directory Integration Services discussion forum in the [Microsoft 365 community](https://techcommunity.microsoft.com/t5/office-365/ct-p/Office365) 
+- Directory Integration Services wiki article in the [Microsoft 365 community](/office365/enterprise/office-365-integration)
 
 ### Paid technical advisory services
 

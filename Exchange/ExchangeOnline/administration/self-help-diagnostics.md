@@ -16,6 +16,7 @@ appliesto:
   - Exchange Online
   - Outlook
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Self-help diagnostics for issues in Exchange Online and Outlook
 
@@ -46,11 +47,9 @@ Several diagnostics currently cover the various areas within Exchange Online and
 |Email delivery troubleshooter|Check whether email messages are successfully delivered.| [Run Tests: Email Delivery](https://aka.ms/PillarEmailDelivery)|[Find and fix email delivery issues](/exchange/troubleshoot/email-delivery/email-delivery-issues)|
 |Outlook user connectivity diagnostics|Diagnose Outlook connectivity issues for users by running several checks on possible service-side settings (root causes) so that a tenant admin can quickly fix the issues without involving the users.|[Run Tests: Outlook User Connectivity](https://aka.ms/PillarOutlookConnectivity)|[Fix Outlook connectivity issue](/exchange/troubleshoot/outlook-issues/outlook-connection-issues)|
 |Non-delivery report (NDR) diagnostics|Provide additional information about NDRs that are received through email messages.|[Run Tests: Email NDR](https://aka.ms/PillarEmailNDR)|[Email non-delivery reports in Exchange Online](/exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/non-delivery-reports-in-exchange-online)|
-|Archive mailbox diagnostics|Check and identify issues about mailbox archiving.|[Run Tests: Archive Mailbox](https://aka.ms/PillarArchiveMailbox)|[Enable archive mailboxes in the Microsoft 365 compliance center](/microsoft-365/compliance/enable-archive-mailboxes)|
+|Archive mailbox diagnostics|Check and identify issues about mailbox archiving.|[Run Tests: Archive Mailbox](https://aka.ms/PillarArchiveMailbox)|[Enable archive mailboxes in the Microsoft Purview compliance portal](/microsoft-365/compliance/enable-archive-mailboxes)|
 |Outlook user password prompt diagnostics|Diagnose Outlook password prompt issues for users by running several checks on possible service-side settings (root causes) so that a tenant admin can quickly fix the issues without involving the users.|[Run Tests: Outlook Password Prompt](https://aka.ms/PillarOutlookPasswordPrompt)|[Fix Outlook password prompt issue](/outlook/troubleshoot/authentication/continually-prompts-password-office-365)|
 |Retention policy diagnostics|Check retention policy settings.|[Run Tests: Retention Policy](https://aka.ms/PillarRetentionPolicy)|[Retention tags and retention policies in Exchange Online](/exchange/security-and-compliance/messaging-records-management/retention-tags-and-policies)|
-|Enable Basic authentication in Exchange Online|Enable Basic authentication for legacy protocols in Exchange Online if previously disabled by Microsoft, or opt out of the disabling process if there is a need to use Basic authentication with specific legacy protocols.|[Run Tests: Basic Auth in EXO](https://aka.ms/PillarEXOBasicAuth)|[Basic Authentication and Exchange Online – June 2021 Update](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-june-2021-update/ba-p/2454827)|
 |DomainKeys Identified Mail (DKIM) diagnostics|Validate that DKIM signing is configured correctly and the correct DNS entries have been published.|[Run Tests: DKIM](https://aka.ms/diagdkim)|[Use DKIM to validate outbound email sent from your custom domain](/microsoft-365/security/office-365-security/use-dkim-to-validate-outbound-email)|
-|||||
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

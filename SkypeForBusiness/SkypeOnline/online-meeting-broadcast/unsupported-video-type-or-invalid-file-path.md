@@ -13,6 +13,7 @@ ms.reviewer: landerl, jasco
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # "Unsupported video type or invalid file path" error for Skype Meeting Broadcast attendees

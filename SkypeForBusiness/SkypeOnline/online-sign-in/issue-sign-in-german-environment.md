@@ -1,6 +1,6 @@
 ---
-title: Error when sign in to Skype for Business in a German Office 365 environment
-description: Describes a scenario that can occur when some Skype for Business clients try to connect to the German version of Office 365. Provides a workaround.
+title: Error when sign in to Skype for Business in a German Microsoft 365 environment
+description: Describes a scenario that can occur when some Skype for Business clients try to connect to the German version of Microsoft 365. Provides a workaround.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -12,13 +12,14 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business
+ms.date: 3/31/2022
 ---
 
-# Error when you sign in to Skype for Business in a German Office 365 environment
+# Error when you sign in to Skype for Business in a German Microsoft 365 environment
 
 ## Symptoms
 
-When you try to sign in the first time to Microsoft Skype for Business in the German version of Microsoft Office 365, you receive the following error message:
+When you try to sign in the first time to Microsoft Skype for Business in the German version of Microsoft 365, you receive the following error message:
 
 > Your sign in request is being redirected to the following server:  
 > Outlook.de  
@@ -28,7 +29,7 @@ When you try to sign in the first time to Microsoft Skype for Business in the Ge
 
 ## Cause
 
-This issue occurs because some specific Skype for Business client versions are incompatible with the German version of Office 365.
+This issue occurs because some specific Skype for Business client versions are incompatible with the German version of Microsoft 365.
 
 ## Workaround
 

@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2010
+ms.date: 3/31/2022
 ---
 
 # A user's display name is incorrect on a company's SharePoint MySite page

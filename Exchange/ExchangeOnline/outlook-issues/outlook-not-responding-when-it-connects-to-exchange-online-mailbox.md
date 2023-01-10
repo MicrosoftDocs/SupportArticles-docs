@@ -14,6 +14,7 @@ ms.reviewer: gregmans
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook not responding  when it connects to an Exchange Online mailbox that was migrated from on-premises Exchange Server
 

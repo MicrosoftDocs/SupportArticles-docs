@@ -14,8 +14,9 @@ ms.reviewer: tasitae
 appliesto: 
   - Outlook 2019 for Mac
   - Outlook 2016 for Mac
-  - Outlook for Mac for Office 365
+  - Outlook for Microsoft 365 for Mac
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # You do not have permission error when trying to open a shared Calendar folder in Outlook for Mac
 
@@ -37,7 +38,7 @@ To fix this issue, the calendar owner must share both the primary and the second
 
 ## More information
 
-This issue does not occur for Office 365 accounts that are using the REST protocol for Calendar.
+This issue does not occur for Microsoft 365 accounts that are using the REST protocol for Calendar.
 
 This issue is caused by a limitation in the EWS protocol that is used for Exchange on-premises accounts. Microsoft 365 accounts that use REST are no longer affected by this issue.
 

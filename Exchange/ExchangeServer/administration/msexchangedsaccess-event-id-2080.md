@@ -16,6 +16,7 @@ appliesto:
   - Exchange Server 2013
   - Exchange Server 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Event ID 2080 from MSExchangeDSAccess
 
@@ -53,7 +54,6 @@ The following information describes the columns in Event 2080 and their contents
 |`domaincontroller1.company.com`|CDG|1|7|7|1|0|0|1|7|1|
 |`domaincontroller2.company.com`|CDG|1|7|7|1|0|1|1|7|1|
 |`domaincontroller3.company.com`|CDG|1|7|7|1|0|1|1|7|1|
-||||||||||||
 
 ### Column descriptions
 

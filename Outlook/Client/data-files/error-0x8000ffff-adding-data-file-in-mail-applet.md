@@ -14,6 +14,7 @@ ms.reviewer: tasitae
 appliesto: 
   - Outlook 2016
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Error 0x8000ffff adding a data file in the Mail applet in Outlook 2016
   

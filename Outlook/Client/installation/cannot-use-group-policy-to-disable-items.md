@@ -15,6 +15,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Outlook 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Can't use Group Policy to disable items in Backstage view in Outlook
 
@@ -37,7 +38,6 @@ This problem occurs when you try to disable the following controls by using Grou
 |Prepare for Offline Use|20300|
 |Automatic Replies|5621|
 |Empty Deleted Items Folder|1671|
-|||
 
 ## Resolution
 

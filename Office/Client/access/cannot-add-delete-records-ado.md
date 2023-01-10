@@ -16,11 +16,10 @@ ms.reviewer: robdil
 appliesto: 
   - Access 2007
   - Access 2002
+ms.date: 3/31/2022
 ---
 
 # You cannot add records or delete records with the ADO AddNew method or with the Delete method
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 Advanced: Requires expert coding, interoperability, and multiuser skills. 
 

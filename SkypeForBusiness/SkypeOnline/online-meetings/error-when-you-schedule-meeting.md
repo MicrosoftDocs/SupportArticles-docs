@@ -1,6 +1,6 @@
 ---
 title: Issues when you schedule a meeting in Skype for Business Online
-description: Describes how to resolve issues that may occur when you create meetings in Skype for Business Online in Office 365.
+description: Describes how to resolve issues that may occur when you create meetings in Skype for Business Online in Microsoft 365.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -13,13 +13,14 @@ ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # How to resolve issues that may occur when you schedule a meeting in Skype for Business Online
 
 ## Problem
 
-When you schedule a meeting in Skype for Business Online (formerly Lync Online) in Office 365, you may experience one of the following symptoms. 
+When you schedule a meeting in Skype for Business Online (formerly Lync Online) in Microsoft 365, you may experience one of the following symptoms. 
 
 |Symptom|Cause|Resolution|
 |---|----|---|

@@ -1,6 +1,6 @@
 ---
 title: Free/busy lookups stop working
-description: Discusses an issue that prevents users from looking up free/busy information of other users. Occurs in a cross-premises environment or in a hybrid deployment of Exchange Server and Exchange Online in Office 365. Provides a resolution.
+description: Discusses an issue that prevents users from looking up free/busy information of other users. Occurs in a cross-premises environment or in a hybrid deployment of Exchange Server and Exchange Online in Microsoft 365. Provides a resolution.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -20,11 +20,12 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Free/busy lookups stop working in a cross-premises environment or in an Exchange Server hybrid deployment
 
 > [!NOTE]
-> The Hybrid Configuration wizard included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Office 365 Hybrid Configuration wizard available at [https://aka.ms/HybridWizard](https://aka.ms/hybridwizard). For more information, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
+> The Hybrid Configuration wizard included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Microsoft 365 Hybrid Configuration wizard available at [https://aka.ms/HybridWizard](https://aka.ms/hybridwizard). For more information, see [Microsoft 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
 
 _Original KB number:_ &nbsp; 2928514
 

@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: dahans
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # "Cannot add contact group. The Contacts list already contains the maximum number of distribution groups" when a Skype for Business Online user adds a contact group in Lync

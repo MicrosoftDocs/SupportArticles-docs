@@ -15,6 +15,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Event ID 2160 after you map a user to a certificate using altSecurityIdentities in Exchange Server 2010
 

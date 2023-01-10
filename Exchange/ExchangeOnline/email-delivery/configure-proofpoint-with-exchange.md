@@ -43,26 +43,31 @@ By default, Proofpoint does not limit the number of messages that it sends per c
 
 To avoid this situation, do the following:
 
-1. Set the value for the messages per connection to a number that is based on the average message size and average network throughput to Exchange Online. Proofpoint recommends an initial value of 199. Start at this value and reduce it if **ConnectionReset** errors are still logged.
+1. Set the value of **Maximum Number of Messages per SMTP Connection** to a number that's based on the average message size and average network throughput to Exchange Online. Proofpoint recommends an initial value of 199. Start at this value and reduce it if **ConnectionReset** errors are still logged.
 2. Increase the number of queue runners that are configured in Proofpoint that’s appropriate to maintain the same message throughput before and after you change the number of messages per connection.
 3. Clear any Exchange Online host names or IP addresses in the HostStatus file. You can use the Proofpoint UI to do this.
 
-### Disable the HostStatus feature
+### Disable the HostStat feature
 
-Exchange Online uses only two or three unique public hosts or IP addresses for each tenant (that correspond to different datacenters). These hosts or IPs are then load-balanced to hundreds of computers. If Proofpoint experiences a few **ConnectionReset** errors or other deferrals from one host, it identifies that host as bad, logs an entry in the HostStatus file, and does not retry any queued messages to that host for a long time. This situation blocks other messages in the queue to that host. In a configuration in which all incoming mail is sent to Proofpoint and then to Exchange Online, blocking mail to one of the two or three public hosts or IPs can cause a large delay in the mail delivery.
+Exchange Online uses only two or three unique public hosts or IP addresses for each tenant (that correspond to different datacenters). These hosts or IPs are then load-balanced to hundreds of computers. If Proofpoint experiences a few **ConnectionReset** errors or other deferrals from one host, it identifies that host as bad, and doesn't retry any queued messages to that host for a long time. This situation blocks other messages in the queue to that host. In a configuration in which all incoming mail is sent to Proofpoint and then to Exchange Online, blocking mail to one of the two or three public hosts or IPs can cause a large delay in the mail delivery.
 
 You can check the following locations to determine whether Proofpoint has identified a host as bad:
 
-- **HostStatus file:** An entry is logged in this file.
+- **Sendmail log:**
+  
+   In the Sendmail log, the following entry is logged to indicate that messages to that host are being deferred:
+   
+   **:xxxx to=\<info@domain.info\>, delay=00:00:00, xdelay=00:00:00, mailer=smtp, tls_verify=NONE, pri=121904, relay=[192.168.0.0], dsn=4.0.0, stat=Deferred** 
+
 - **SMTP log:**
 
   - In the SMTP log, the **stat=Deferred** entry is logged instead of the **stat=Deferred: 400-series SMTP response code** entry that is usually returned by the downstream MTA or SMTP server.
   - The corresponding log lines from the SMTP log indicate that a specific message was retried only a long time after the configured message retry interval.
 
-To make sure that every message is retried at every retry attempt, disable the HostStatus feature in Proofpoint. The feature is enabled by default.
+To make sure that every message is retried at every retry attempt, disable the HostStat feature in Proofpoint. The feature is enabled by default.
 
-> [!Note]
-> If you use the Proofpoint Email Protection cloud service, you must contact the Proofpoint Operations team to have this feature disabled.
+> [!NOTE]
+> If you use the Proofpoint Email Protection Cloud Service, you must contact the Proofpoint Support to have this feature disabled.
 
 ### Reduce the message retry interval
 

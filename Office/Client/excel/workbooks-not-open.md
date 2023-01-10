@@ -15,11 +15,10 @@ appliesto:
   - Excel 2016
   - Excel 2013
   - Excel 2010
+ms.date: 3/31/2022
 ---
 
 # Excel workbooks may not open after MS16-088 is installed
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
@@ -31,7 +30,7 @@ Previously, when you tried to open an HTML or XLA/XLAM file from an untrusted lo
 
 To resolve this issue, install the latest update for your version of Microsoft Office.
 
-### Office 365 subscription (Click-to-Run)
+### Microsoft 365 subscription (Click-to-Run)
 
 Install the latest updates (this includes Current Channel, First Release Deferred Channel, and Deferred Channel).
 

@@ -15,6 +15,7 @@ appliesto:
   - Access 2010
   - Microsoft Office Access 2007
 ms.reviewer: 
+ms.date: 3/31/2022
 ---
 # You receive an error message when you try to open an Office document
 

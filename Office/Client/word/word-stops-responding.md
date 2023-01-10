@@ -12,17 +12,16 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: warrenr
 appliesto: 
-  - Word for Office 365
+  - Word for Microsoft 365
   - Word 2019
   - Word 2016
   - Word 2013
   - Word 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Word slows or stops responding if there are excessive tracked changes or comments
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

@@ -14,11 +14,10 @@ ms.custom:
 ms.author: luche
 appliesto: 
   - Microsoft Word
+ms.date: 3/31/2022
 ---
 
 # How to reset user options and registry settings in Word
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 > [!IMPORTANT]
 > This article contains information about how to modify the registry. Make sure to back up the registry before you modify it. Make sure that you know how to restore the registry if a problem occurs. For more information about how to back up, restore, and modify the registry, see [Description of the Microsoft Windows registry](https://support.microsoft.com/help/256986).
@@ -220,7 +219,6 @@ In the following table, "Template" refers to either the Normal.dotm template or 
 |View toolbars|Template|
 |View/toolbar|Template|
 |Document Parts|Template|
-|||
 
 AutoCorrect lists are shared between Office programs. Any changes that you make to the AutoCorrect entries and settings when you are in one program are immediately available to the other programs. Additionally, Word can store AutoCorrect items that are made up of formatted text and graphics.
 
@@ -232,4 +230,3 @@ Information about AutoCorrect is stored in various locations. These locations ar
 |AutoCorrect entries used only by Word (formatted text and graphics)|Normal.dotm|
 |AutoCorrect settings (correct two initial capitals, capitalize names of days, replace text as you type)|Registry|
 |AutoCorrect settings used only by Word (corrects accidental usage of CAPS LOCK key, capitalizes first letter of sentences)|Registry|
-|||

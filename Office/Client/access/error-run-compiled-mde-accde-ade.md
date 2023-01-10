@@ -12,11 +12,10 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Access 2010
+ms.date: 3/31/2022
 ---
 
 # "The database cannot be opened because the VBA project contained in it cannot be read" when you run a compiled Microsoft Access MDE, ACCDE, or ADE file in Access 2010
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

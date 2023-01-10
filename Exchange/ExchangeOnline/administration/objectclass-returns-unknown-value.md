@@ -1,6 +1,6 @@
 ---
 title: ObjectClass returns Unknown when running cmdlet
-description: Discusses an issue in which the ObjectClass property returns a value of Unknown when you run the Get-MailboxStatistics cmdlet in Exchange Server or Exchange Online in Office 365.
+description: Discusses an issue in which the ObjectClass property returns a value of Unknown when you run the Get-MailboxStatistics cmdlet in Exchange Server or Exchange Online in Microsoft 365.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -18,6 +18,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # ObjectClass Unknown is returned when you use the Get-MailboxStatistics cmdlet
 
@@ -25,7 +26,7 @@ _Original KB number:_ &nbsp; 2795291
 
 ## Problem
 
-When you use the `Get-MailboxStatistics` Windows PowerShell cmdlet to get information about a mailbox in on-premises Exchange Server or Exchange Online in Office 365, the `ObjectClass` property unexpectedly returns a value of **Unknown**.
+When you use the `Get-MailboxStatistics` Windows PowerShell cmdlet to get information about a mailbox in on-premises Exchange Server or Exchange Online in Microsoft 365, the `ObjectClass` property unexpectedly returns a value of **Unknown**.
 
 For example, when you run the `Get-MailboxStatistics admin | FL *object*` command, you receive the following output:
 
@@ -34,7 +35,7 @@ ObjectClass : Unknown
 ObjectState: Unchanged
 ```
 
-In earlier versions of Exchange Server and in Exchange Online in Office 365, the `ObjectClass` property returns the correct value. For example, this property returns **Mailbox** for user mailboxes and **Mailbox, Disabled** for equipment and room mailboxes.
+In earlier versions of Exchange Server and in Exchange Online in Microsoft 365, the `ObjectClass` property returns the correct value. For example, this property returns **Mailbox** for user mailboxes and **Mailbox, Disabled** for equipment and room mailboxes.
 
 ## More information
 

@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
   - SharePoint Server 2013
+ms.date: 3/31/2022
 ---
 
 # A SharePoint workflow that uses a site column to perform a lookup on a list on a different site doesn't execute

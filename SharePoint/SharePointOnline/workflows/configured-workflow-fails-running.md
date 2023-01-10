@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # "Daily email limit has exceeded and your workflow has been suspended" or "Unable to send to a recipient" error in a SharePoint Online workflow
@@ -38,10 +39,10 @@ Consider the following scenario:
 
 ## Solution/Workaround
 
-To work around this issue, configure your workflow to send email messages without exceeding the Exchange Online sender limits. For example, use a pause in the workflow, send the email to an Office 365 group, a distribution group or mail enabled security group, or send the message to fewer than 200 recipients at a time.
+To work around this issue, configure your workflow to send email messages without exceeding the Exchange Online sender limits. For example, use a pause in the workflow, send the email to a Microsoft 365 group, a distribution group or mail enabled security group, or send the message to fewer than 200 recipients at a time.
 
 > [!NOTE]
-> It's considered a best practice to send the email to an Office 365 group, distribution group or mail enabled security group.
+> It's considered a best practice to send the email to a Microsoft 365 group, distribution group or mail enabled security group.
 
 ## More information
 

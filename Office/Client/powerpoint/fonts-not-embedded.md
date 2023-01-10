@@ -17,6 +17,7 @@ appliesto:
   - PowerPoint 2013
   - PowerPoint 2010
 ms.reviewer: johnlan
+ms.date: 3/31/2022
 ---
 # Some fonts are not embedded when you save a PowerPoint 2010 or later presentation in an earlier format
 

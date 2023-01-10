@@ -13,11 +13,10 @@ search.appverid:
 appliesto: 
   - Access 2010
   - Access 2013
+ms.date: 3/31/2022
 ---
 
 # Access: Errors during Import/Export to Excel xls
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

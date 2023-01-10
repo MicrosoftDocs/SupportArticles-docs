@@ -14,6 +14,7 @@ ms.reviewer: ajaysi
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # On-premises security groups are not synced to Exchange Online in a hybrid deployment
 
@@ -21,7 +22,7 @@ _Original KB number:_ &nbsp; 2988761
 
 ## Symptoms
 
-In your hybrid deployment of on-premises Exchange Server and Exchange Online in Office 365, you notice that some on-premises security groups are not synced to Exchange Online.
+In your hybrid deployment of on-premises Exchange Server and Exchange Online in Microsoft 365, you notice that some on-premises security groups are not synced to Exchange Online.
 
 ## Cause
 

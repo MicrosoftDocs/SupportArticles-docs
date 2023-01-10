@@ -11,19 +11,17 @@ search.appverid:
   - SPO160
   - MET150
 appliesto: 
-  - Word for Office 365
+  - Word for Microsoft 365
 ms.custom: 
   - CI 113851
   - CSSTroubleshoot
 ms.reviewer: mmaxey
-description: Describes how to troubleshoot problems when printing documents from Word for Office 365 running on Windows 10.
+description: Describes how to troubleshoot problems when printing documents from Word for Microsoft 365 running on Windows 10.
 ---
 
-# Troubleshoot printing failures in Word for Office 365 on Windows 10
+# Troubleshoot printing failures in Word for Microsoft 365 on Windows 10
 
-This article provides steps to diagnose and resolve issues that occur when you cannot print a Microsoft Word for Office 365 document on Windows 10.
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+This article provides steps to diagnose and resolve issues that occur when you cannot print a Microsoft Word for Microsoft 365 document on Windows 10.
 
 > [!NOTE]
 > To troubleshoot previous versions of Word, see [Troubleshoot print failures in Word](print-failures-in-word.md).

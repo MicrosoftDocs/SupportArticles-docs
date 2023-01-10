@@ -16,6 +16,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # (The WinRM client cannot complete the operation within the time specified) error when you run Hybrid Configuration wizard
 
@@ -23,7 +24,7 @@ _Original KB number:_ &nbsp; 3067913
 
 ## Symptoms
 
-You want to set up a hybrid deployment between your on-premises Microsoft Exchange Server organization and Exchange Online in Microsoft Office 365. However, when you run the Hybrid Configuration wizard, the wizard doesn't complete successfully, and you receive a **The WinRM client cannot complete the operation within the time specified** error message. The full text of this message resembles the following:
+You want to set up a hybrid deployment between your on-premises Microsoft Exchange Server organization and Exchange Online in Microsoft 365. However, when you run the Hybrid Configuration wizard, the wizard doesn't complete successfully, and you receive a **The WinRM client cannot complete the operation within the time specified** error message. The full text of this message resembles the following:
 
 > ERROR:Updating hybrid configuration failed with error 'Subtask Configure execution failed: Configure Recipient Settings  
 Execution of the Update-EmailAddressPolicy cmdlet had thrown an exception. This may indicate invalid parameters in your Hybrid Configuration settings.  

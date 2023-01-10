@@ -13,11 +13,10 @@ ms.author: v-maqiu
 appliesto: 
   - Microsoft Azure Active Directory Rights Management
   - Active Directory Rights Management Services Client 2.0
+ms.date: 3/31/2022
 ---
 
 # An update is available for Office to support migrations from AD RMS to Azure RMS
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

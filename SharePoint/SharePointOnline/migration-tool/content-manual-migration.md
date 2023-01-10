@@ -12,13 +12,14 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # Information about manual migration of SharePoint Online content
 
 ## Introduction
 
-Offboarding is the ability to move data from Office 365 to file shares or to a local computer. This is a manual process. This document describes the steps to save a SharePoint document library or list content from a SharePoint Online environment to file shares or to a local computer.
+Offboarding is the ability to move data from Microsoft 365 to file shares or to a local computer. This is a manual process. This document describes the steps to save a SharePoint document library or list content from a SharePoint Online environment to file shares or to a local computer.
 
 This document covers the following SharePoint Online archive scenarios:
 

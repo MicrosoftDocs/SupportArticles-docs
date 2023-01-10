@@ -14,6 +14,7 @@ ms.reviewer: chrispol
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Exchange Online users can't browse groups in Outlook Web App
 

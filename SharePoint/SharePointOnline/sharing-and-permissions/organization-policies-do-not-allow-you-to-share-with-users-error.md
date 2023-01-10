@@ -14,6 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # "Your organization's policies do not allow you to share with these users" error when sharing an item or site in SharePoint Online or OneDrive for Business 
@@ -29,7 +30,7 @@ This error message generally means that external sharing is turned off for your 
 ## Resolution
 
 > [!NOTE]
-> When following the below steps, if you see a message that indicates you don't have permission to proceed, you'll have to contact your SharePoint administrator or Office 365 administrator to perform the resolution steps for you.
+> When following the below steps, if you see a message that indicates you don't have permission to proceed, you'll have to contact your SharePoint administrator or Microsoft 365 administrator to perform the resolution steps for you.
 
 To resolve the issue, follow these steps:
 
@@ -38,8 +39,8 @@ To resolve the issue, follow these steps:
 1.    Sign in to https://admin.microsoft.com as a global or SharePoint admin. 
 
       > [!NOTE]
-      > - If you have Office 365 Germany, sign in at https://portal.office.de. 
-      > - If you have Office 365 operated by 21Vianet (China), sign in at https://login.partner.microsoftonline.cn/. Then select the Admin tile to open the admin center.
+      > - If you have Microsoft 365 Germany, sign in at https://portal.office.de. 
+      > - If you have Microsoft 365 operated by 21Vianet (China), sign in at https://login.partner.microsoftonline.cn/. Then select the Admin tile to open the admin center.
 
 2.    In the left pane, under **Admin centers**, select **SharePoint**. (You might need to select **Show all** to see the list of admin centers.)
 

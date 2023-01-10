@@ -15,6 +15,7 @@ appliesto:
   - Lync Server 2010 Enterprise Edition
   - Lync Server 2010 Standard Edition
   - Lync 2013
+ms.date: 3/31/2022
 ---
 
 # Blind transfer from an anonymous response group agent fails in Lync Server

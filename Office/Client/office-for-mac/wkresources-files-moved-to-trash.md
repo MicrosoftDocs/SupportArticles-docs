@@ -12,11 +12,10 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Office for Mac 2011
+ms.date: 3/31/2022
 ---
 
 # "wkresources" files in Trash after using or starting Office for Mac applications
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

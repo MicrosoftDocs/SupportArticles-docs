@@ -6,7 +6,9 @@ manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
+  - CI 162681
 ms.author: luche
 ms.reviewer: ambroset
 search.appverid: 
@@ -16,11 +18,10 @@ appliesto:
   - Office 2010
   - Office 2007
   - Office 2003
+ms.date: 3/31/2022
 ---
 
 # Description of Office features that are intended to enable collaboration and that are not intended to increase security
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 
@@ -53,7 +54,7 @@ The following are examples of Office features that are designed to help make you
 - Digitally Signed VBA Macro Projects
 You can use digitally signed Microsoft Office Visual Basic for Applications (VBA) macro projects. When you add a digital signature to a VBA macro project, you are supplying a verifiable signature that can vouch for the authenticity and the integrity of the VBA macro project.
 
-  For more information about digitally signed macros, see [Code Signing Office XP Visual Basic for Applications Macro Projects](https://msdn2.microsoft.com/library/aa163622(office.10).aspx).
+  For more information about digitally signed macros, see [Digitally sign your macro project](https://support.microsoft.com/office/digitally-sign-your-macro-project-956e9cc8-bbf6-4365-8bfa-98505ecd1c01).
  
 The "More Information" section contains additional information about Office features that are intended to enable specific collaboration scenarios.
 

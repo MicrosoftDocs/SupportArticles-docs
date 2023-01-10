@@ -14,6 +14,7 @@ ms.reviewer:
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Mail flow to Exchange Online stops and event ID 2004 is logged on the hybrid transport server
 
@@ -21,10 +22,10 @@ _Original KB number:_ &nbsp; 2888788
 
 ## Problem
 
-You experience the following symptoms in a hybrid deployment of on-premises Microsoft Exchange Server and Microsoft Exchange Online in Office 365:
+You experience the following symptoms in a hybrid deployment of on-premises Microsoft Exchange Server and Microsoft Exchange Online in Microsoft 365:
 
 - Mail flow to Exchange Online stops.
-- The following event is recorded in the Application log of the on-premises transport server that contains the connector to your Office 365 environment:
+- The following event is recorded in the Application log of the on-premises transport server that contains the connector to your Microsoft 365 environment:
 
     > Event ID: 2004  
     > Log Name: Application  
@@ -44,7 +45,7 @@ You experience the following symptoms in a hybrid deployment of on-premises Micr
 
 This issue can occur if all the following conditions are true:
 
-- The SMTP service was assigned two certificates that match the domain name of the on-premises transport server that contains the connector to your Office 365 environment.
+- The SMTP service was assigned two certificates that match the domain name of the on-premises transport server that contains the connector to your Microsoft 365 environment.
 - One of the certificates was issued by a certification authority (CA) that's trusted by Windows Live, and the other certificate was issued by a nontrusted CA (such as an internal root CA).
 
 In this scenario, the Exchange transport server establishes a Transport Layer Security (TLS) session to the cloud gateway by using the available SMTP certificate. However, when the Exchange transport server tries to establish a TLS session by using the certificate from the nontrusted CA, the cloud gateway doesn't accept the connection.

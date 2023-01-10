@@ -18,11 +18,10 @@ appliesto:
   - Access 2007
   - Access 2003
   - Access 2002
+ms.date: 3/31/2022
 ---
 
 # "The expression you entered has a function containing the wrong number of arguments" when you use CDec() function in an Access query
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 Moderate: Requires basic macro, coding, and interoperability skills.
 

@@ -15,6 +15,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Warning message when you run the Exchange 2010 Best Practices Analyzer: The AutomaticManagedPagefile property is set to True
 

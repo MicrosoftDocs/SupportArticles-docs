@@ -13,6 +13,7 @@ ms.author: v-six
 ms.reviewer: landerl, jasco, corbinm, dougl, lynnroe, cbland, rischwen, leonarwo, msp, romanma, tonyq
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # You can't join a Skype Meeting Broadcast as an "Event team" member
@@ -48,7 +49,7 @@ The Skype for Business client uses the Unified Communications Web API (UCWA) for
 For more information, see the following Microsoft websites:
 
 - [Set up your network for Skype Meeting Broadcast](https://support.office.com/article/set-up-skype-meeting-broadcast-dfa736b9-4920-4f48-b8c0-b5487ec6086f)   
-- [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges)
+- [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges)
 
 [!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 

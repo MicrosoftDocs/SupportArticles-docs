@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
   - SharePoint Server
+ms.date: 3/31/2022
 ---
 
 # SharePoint workflow that uses the "Replace List Item Permissions" action fails
@@ -35,7 +36,7 @@ To work around this issue, do one of the following:
 
 - Break inherited permissions and remove unique permissions for the list or library where you're running the workflow. Also remove any unnecessary permissions from the list. This limits the number of operations that are required when you use **Replace List Item Permissions** in the workflow.
 
-- Use Active Directory or Office 365 Security groups to manage permissions. Add the SharePoint groups to the security group instead of using individual SharePoint groups to manage permissions. You can manage the users in the group by using Active Directory or the Microsoft 365 admin center, depending on your configuration.
+- Use Active Directory or Microsoft 365 Security groups to manage permissions. Add the SharePoint groups to the security group instead of using individual SharePoint groups to manage permissions. You can manage the users in the group by using Active Directory or the Microsoft 365 admin center, depending on your configuration.
 
 ## More information
 

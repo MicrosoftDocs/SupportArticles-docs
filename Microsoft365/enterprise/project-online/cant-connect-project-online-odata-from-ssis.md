@@ -5,18 +5,17 @@ ms.author: v-maqiu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 description: OData Connection to Project Online from SSIS is failing if TLS is not enabled.
-appliesto:
-- Project Online
+appliesto: 
+  - Project Online
+ms.date: 3/31/2022
 ---
 
 # You can't connect to Project Online OData from SSIS
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

@@ -11,19 +11,19 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
-  - Excel for Office 365
+  - Excel for Microsoft 365
   - Excel 2019
   - Excel 2016
+ms.date: 3/31/2022
 ---
 
 # VBA code writes to cells slowly when many ActiveX controls are invisible in Excel 2016
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Consider the following scenario:
-- You are working in Excel for Office 365, Excel 2016 or a later version.    
+
+- You are working in Excel for Microsoft 365, Excel 2016 or a later version.    
 - A worksheet contains many ActiveX controls that are set to be invisible.    
 - You have VBA code that writes many formulas to cells.
 

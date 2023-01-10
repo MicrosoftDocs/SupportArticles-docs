@@ -1,6 +1,6 @@
 ---
 title: Administrative limit for this request was exceeded error
-description: Describes an issue that triggers a limit for this request was exceeded error when you try to add recipient domains to outbound connector in Office 365.
+description: Describes an issue that triggers a limit for this request was exceeded error when you try to add recipient domains to outbound connector in Microsoft 365.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -14,6 +14,7 @@ ms.reviewer: rrajan
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Administrative limit for this request was exceeded error when you add recipient domains to outbound connector
 
@@ -51,7 +52,6 @@ To resolve this issue, follow these steps:
         |---|
         |`Contoso.com`|
         |`Fabrikam.com`|
-        ||
 
     2. Import the data from the .csv file to a variable that's named domainname:
 

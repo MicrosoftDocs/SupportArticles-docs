@@ -15,11 +15,10 @@ appliesto:
   - Office 2016
   - Office 2013
   - Office 2010
+ms.date: 3/31/2022
 ---
 
 # Information about the error codes and corresponding descriptions of Microsoft Office activation process issues that can be repaired by using the Office Repair tool
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Introduction 
 

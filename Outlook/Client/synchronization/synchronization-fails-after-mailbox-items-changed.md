@@ -15,11 +15,12 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
   - Outlook 2013
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition
   - Exchange Server 2013 Enterprise CAL
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Synchronization is unsuccessful after mailbox items are changed through EWS calls in cached-mode Outlook client
 
@@ -27,7 +28,7 @@ _Original KB number:_ &nbsp; 4093129
 
 ## Symptoms
 
-Assume that you run the Microsoft Outlook 2013, Outlook 2016, Outlook 2019, or Outlook for Office 365 client in cached mode. When you close your Outlook client and then reopen it later, changes that were made to your mailbox items while Outlook was closed aren't synchronized as expected.
+Assume that you run the Microsoft Outlook 2013, Outlook 2016, Outlook 2019, or Outlook for Microsoft 365 client in cached mode. When you close your Outlook client and then reopen it later, changes that were made to your mailbox items while Outlook was closed aren't synchronized as expected.
 
 This issue most frequently occurs when mailbox items are changed by using Exchange Web Services (EWS) calls. These changes are sometimes performed by archiving solutions.
 

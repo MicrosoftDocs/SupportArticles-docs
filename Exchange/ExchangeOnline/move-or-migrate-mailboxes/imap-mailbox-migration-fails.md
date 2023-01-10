@@ -16,6 +16,7 @@ appliesto:
   - Exchange Server 2010
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Can't migrate IMAP mailboxes from Exchange Server 2010 to Exchange Online
 

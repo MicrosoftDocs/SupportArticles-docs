@@ -13,8 +13,9 @@ ms.custom:
 ms.reviewer: sbradley, gbratton
 appliesto: 
   - Outlook 2016
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Various attachment saving scenarios do not work as expected in Outlook 2016
 

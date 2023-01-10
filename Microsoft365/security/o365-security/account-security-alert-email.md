@@ -12,12 +12,11 @@ ms.custom: CSSTroubleshoot
 search.appverid: 
   - MET150
 appliesto: 
-  - Office 365
+  - Office 365 Dedicated/ITAR
+ms.date: 3/31/2022
 ---
 
 # You receive a Microsoft account security alert email message in Office 365 Dedicated/ITAR (vNext)
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
@@ -26,7 +25,7 @@ In Microsoft Office 365 Dedicated/ITAR (vNext), you receive an email message tha
 
 ## Cause
 
-You may have set your Office 365 work account as a secondary email address on your Microsoft Live account.
+You may have set your Microsoft 365 work account as a secondary email address on your Microsoft Live account.
 
 ## Resolution
 

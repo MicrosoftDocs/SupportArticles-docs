@@ -15,6 +15,7 @@ appliesto:
   - SharePoint Foundation 2010
   - Word for the web
   - PowerPoint for the web
+ms.date: 3/31/2022
 ---
 
 # Error when view or edit in browser for Word or PowerPoint Online  

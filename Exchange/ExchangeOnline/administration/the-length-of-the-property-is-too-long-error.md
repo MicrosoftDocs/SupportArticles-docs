@@ -14,6 +14,7 @@ ms.reviewer:
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # The length of the property is too long error when creating a new mail contact in EAC
 
@@ -36,6 +37,6 @@ Give the new contact a name that doesn't conflict with an existing mail contact 
 
 ## More information
 
-The error message that's described in the Symptoms section is not the correct error message for the scenario. This is a known issue in Office 365. You receive the correct error message if you try to create a duplicate contact by using Exchange Online PowerShell.
+The error message that's described in the Symptoms section is not the correct error message for the scenario. This is a known issue in Microsoft 365. You receive the correct error message if you try to create a duplicate contact by using Exchange Online PowerShell.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

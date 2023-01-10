@@ -12,23 +12,22 @@ search.appverid:
   - MET150
 appliesto: 
   - Project Online
+ms.date: 3/31/2022
 ---
 
 # Cannot Access Newly Purchased Project Online with One License
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
-##  Summary
+## Summary
 
 Having a license to Project Online is just the first step in getting started with Project Web App (PWA). Next, your account needs to be given permissions to access the PWA Home page. This can be a bit tricky if your organization has only purchased one license for evaluation. Your Tenant Admin can assign you the license, but if the Tenant Admin has not first configured access for you to the default PWA site, you will receive some type of error message. The most common error would be "Access Denied".
 
 To work around this issue the Tenant Admin can make you the PWA Admin and you can then manage the access for users to the PWA Home page.  
 
-##  More Information
+## More Information
 
 To set a PWA Admin the Tenant Admin needs to follow these steps:
 
-1. Log into Office 365 as the Tenant Administrator, click Admin and select SharePoint   
+1. Log into Microsoft 365 as the Tenant Administrator, click Admin and select SharePoint   
 2. Check the box to the left of the default PWA site   
 3. Click the Owners dropdown menu and select Manage Administrators   
 4. Enter the user account that will be the Site Collection Administrators and click OK 

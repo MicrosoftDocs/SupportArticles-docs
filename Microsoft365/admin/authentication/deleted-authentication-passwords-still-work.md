@@ -5,22 +5,21 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
-appliesto:
-- Cloud Services (Web roles/Worker roles)
-- Azure Active Directory
-- Microsoft Intune
-- Azure Backup
-- Office 365 Identity Management
+appliesto: 
+  - Cloud Services (Web roles/Worker roles)
+  - Azure Active Directory
+  - Microsoft Intune
+  - Azure Backup
+  - Microsoft 365
+ms.date: 3/31/2022
 ---
 
-# Deleted app passwords for Multi-Factor Authentication still work in Office 365, Azure, or Intune
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+# Deleted app passwords for Multi-Factor Authentication still work in Microsoft 365, Azure, or Intune
 
 ## PROBLEM
 

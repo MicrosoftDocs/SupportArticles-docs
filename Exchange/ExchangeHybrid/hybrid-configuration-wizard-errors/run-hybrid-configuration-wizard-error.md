@@ -1,6 +1,6 @@
 ---
 title: Can't run the Hybrid Configuration wizard
-description: Fixes an error message that you receive when you try to run the Hybrid Configuration wizard to set up a hybrid deployment between your on-premises Exchange Server environment and Exchange Online in Office 365.
+description: Fixes an error message that you receive when you try to run the Hybrid Configuration wizard to set up a hybrid deployment between your on-premises Exchange Server environment and Exchange Online in Microsoft 365.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -15,17 +15,18 @@ appliesto:
   - Exchange Online
   - Exchange Server 2010 Enterprise
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Subtask CheckPrereqs execution failed error when you run the Hybrid Configuration wizard
 
 _Original KB number:_ &nbsp; 2772596
 
 > [!NOTE]
-> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the [Office 365 Hybrid Configuration wizard](https://aka.ms/hybridwizard). For more information, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
+> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the [Microsoft 365 Hybrid Configuration wizard](https://aka.ms/hybridwizard). For more information, see [Microsoft 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
 
 ## Problem
 
-When you run the Hybrid Configuration wizard to set up a hybrid deployment between your on-premises Microsoft Exchange Server environment and Microsoft Exchange Online in Microsoft Office 365, you receive the following error message:
+When you run the Hybrid Configuration wizard to set up a hybrid deployment between your on-premises Microsoft Exchange Server environment and Microsoft Exchange Online in Microsoft 365, you receive the following error message:
 
 > Update-HybridConfiguration  
 > Failed  

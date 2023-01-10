@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Foundation 2010
+ms.date: 3/31/2022
 ---
 
 # Event ID 8306 when you activate Security Token Service Application

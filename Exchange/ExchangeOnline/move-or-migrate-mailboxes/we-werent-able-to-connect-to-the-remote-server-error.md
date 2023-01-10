@@ -14,6 +14,7 @@ ms.reviewer:
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # We weren't able to connect to the remote server error when migrating from on-premises Exchange to Online
 
@@ -57,6 +58,6 @@ To resolve this issue, follow these steps:
         Test-MigrationServerAvailability -Credentials $pscred -ExchangeOutlookAnywhere -ExchangeServer <Internal FQDN of the Exchange server> -RPCProxyServer <FQDN of the proxyserver> -Authentication Basic -EmailAddress <AdminEmail>
         ```
 
-      If the verification is successful, you can create a migration endpoint in Office 365.
+      If the verification is successful, you can create a migration endpoint in Microsoft 365.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

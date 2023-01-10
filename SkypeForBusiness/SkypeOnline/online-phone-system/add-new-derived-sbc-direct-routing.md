@@ -11,10 +11,11 @@ ms.topic: troubleshooting
 ms.custom: 
   - CSSTroubleshoot
   - CI 122287
-ms.author: scapero
+ms.author: v-six
 ms.reviewer: scapero
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Error when adding a new derived SBC for Direct Routing: Cannot find specified Gateway 

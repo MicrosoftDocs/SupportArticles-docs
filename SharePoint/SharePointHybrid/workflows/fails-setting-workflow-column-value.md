@@ -13,6 +13,7 @@ ms.author: luche
 appliesto: 
   - SharePoint Online
   - SharePoint Server 2013
+ms.date: 3/31/2022
 ---
 
 # Can't set value for "Hyperlink with formatting and constraints for publishing" column by using SharePoint 2013 workflow in SharePoint Online

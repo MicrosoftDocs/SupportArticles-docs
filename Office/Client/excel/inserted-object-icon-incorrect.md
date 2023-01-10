@@ -12,11 +12,10 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Excel 2019
+ms.date: 3/31/2022
 ---
 
 # Incorrect icon shows when inserting an object in Excel 2019
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

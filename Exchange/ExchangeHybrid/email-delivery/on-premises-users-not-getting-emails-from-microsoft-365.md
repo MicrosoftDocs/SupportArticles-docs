@@ -1,6 +1,6 @@
 ---
 title: On-premises users not getting emails from Microsoft 365
-description: Describes an issue in which on-premises users aren't getting email messages from Office 365 users in an Exchange hybrid deployment. Provides a resolution.
+description: Describes an issue in which on-premises users aren't getting email messages from Microsoft 365 users in an Exchange hybrid deployment. Provides a resolution.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -14,6 +14,7 @@ ms.reviewer: jhayes
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # On-premises users can't get email messages from Microsoft 365 users in an Exchange hybrid deployment
 

@@ -13,6 +13,7 @@ ms.reviewer:
 appliesto: 
   - SharePoint Server 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Enable scripts and reload this page when you try to open a SharePoint Server 2013 site
 

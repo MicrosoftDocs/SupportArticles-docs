@@ -15,6 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Outlook 2016
+ms.date: 3/31/2022
 ---
 # Errors when you upgrade to Office 2016
 

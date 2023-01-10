@@ -20,6 +20,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Remote mailbox is not moved from Exchange Server 2010 to Exchange Online when move shows as Completed
 
@@ -29,7 +30,7 @@ _Original KB number:_ &nbsp; 2886058
 
 Consider the following scenario.
 
-- You are using Microsoft Office 365.
+- You are using Microsoft 365.
 - You perform a move request for a remote mailbox from an on-premises Exchange 2010 server to Exchange Online.
 - After you perform the move request, the Exchange Management Console shows the status of the request as **Completed**.
 

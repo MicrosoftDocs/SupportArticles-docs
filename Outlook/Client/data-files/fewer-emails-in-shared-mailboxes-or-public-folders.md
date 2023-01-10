@@ -14,8 +14,9 @@ ms.reviewer: tasitae
 appliesto: 
   - Outlook 2019
   - Outlook 2016
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Only a subset of items are synchronized in shared mailboxes or public folders in Outlook 2016
 

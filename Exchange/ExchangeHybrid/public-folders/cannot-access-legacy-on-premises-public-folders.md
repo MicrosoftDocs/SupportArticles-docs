@@ -16,17 +16,18 @@ appliesto:
   - Exchange Server 2010 Standard
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Exchange Online users can't access legacy on-premises public folders
 
 _Original KB number:_ &nbsp; 3106618
 
 > [!NOTE]
-> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the [Office 365 Hybrid Configuration wizard](https://aka.ms/hybridwizard). For more information, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
+> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the [Microsoft 365 Hybrid Configuration wizard](https://aka.ms/hybridwizard). For more information, see [Microsoft 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
 
 ## Problem
 
-You have a hybrid deployment of Microsoft Exchange Online in Microsoft Office 365 and on-premises Microsoft Exchange Server, and you've configured on-premises public folders in Exchange Server 2010 or Exchange Server 2007. These folders are also known as legacy public folders.
+You have a hybrid deployment of Microsoft Exchange Online in Microsoft 365 and on-premises Microsoft Exchange Server, and you've configured on-premises public folders in Exchange Server 2010 or Exchange Server 2007. These folders are also known as legacy public folders.
 
 In this scenario, a user who was created in Exchange Online receives the following error message when they try to access the legacy public folders:
 
@@ -39,7 +40,7 @@ This issue occurs if the mailbox for the user was created in Exchange Online and
 
 ## Solution
 
-For this issue to be resolved, the Exchange Online mailbox must be linked to an on-premises user account. For more information, see [How to use SMTP matching to match on-premises user accounts to Office 365 user accounts for directory synchronization](https://support.microsoft.com/help/2641663).
+For this issue to be resolved, the Exchange Online mailbox must be linked to an on-premises user account. For more information, see [How to use SMTP matching to match on-premises user accounts to Microsoft 365 user accounts for directory synchronization](https://support.microsoft.com/help/2641663).
 
 ## More information
 

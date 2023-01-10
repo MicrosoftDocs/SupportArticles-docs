@@ -13,6 +13,7 @@ ms.author: luche
 ms.reviewer: kswallow
 appliesto: 
   - Access 2010 64 bit
+ms.date: 3/31/2022
 ---
 # Wizard error in Access 2010 after installing Office 2010 SP1
 

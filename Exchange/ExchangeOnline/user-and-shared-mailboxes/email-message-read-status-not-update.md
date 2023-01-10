@@ -1,6 +1,6 @@
 ---
 title: The Read status of email messages isn't updated
-description: Describes a known issue in Office 365 in which the Read status of email messages may not be updated between Exchange ActiveSync on a user's mobile device and the user's mailbox in Exchange Online.
+description: Describes a known issue in Microsoft 365 in which the Read status of email messages may not be updated between Exchange ActiveSync on a user's mobile device and the user's mailbox in Exchange Online.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -11,8 +11,10 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
 ms.reviewer: chrisbur
-appliesto: Exchange Online
+appliesto: 
+- Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # The Read status of email messages may not be updated between Exchange ActiveSync
 
@@ -20,7 +22,7 @@ _Original KB number:_ &nbsp; 2804607
 
 ## Problem
 
-The Read status of email messages may not be updated between Exchange ActiveSync on a user's mobile device and the user's Microsoft Exchange Online mailbox in Microsoft Office 365.
+The Read status of email messages may not be updated between Exchange ActiveSync on a user's mobile device and the user's Microsoft Exchange Online mailbox in Microsoft 365.
 
 ## Workaround
 
@@ -46,7 +48,7 @@ Export the contents of the existing mailbox to a .pst file for backup. To do thi
 
 To rename the existing mailbox, follow these steps:
 
-1. Sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com)) as an administrator.
+1. Sign in to the Microsoft 365 portal ([https://portal.office.com](https://portal.office.com)) as an administrator.
 2. In the header, select **Admin**, and then, under **Management** in the left navigation pane, select **Users**.
 3. In the list of users, select the user whose mailbox you want to re-create, and then select **Details**. In this example, the user name is *John Smith*.
 4. In the **Display name** box, change the display name of the user, and then click **Save**. For example, change *John Smith* to *John Smith2*.
@@ -104,7 +106,7 @@ To copy the contents of the original mailbox to the new mailbox, follow these st
     For example, open the *John Smith 2* mailbox, and then drag non-mail items from the *John Smith 2* mailbox to the *John Smith* mailbox.
 
 > [!IMPORTANT]
-> Any recurring meeting request in the original mailbox *could* potentially become orphaned if it leaves the Exchange store and if it's copied or moved to a .pst file. If the user has many meeting requests in his or her Calendar, the user may want to test the process by using some meetings and then confirm that the meetings can be updated correctly before he or she continues. If the links to the original meeting request are orphaned, an update from the organizer will create a new item in the recipient's calendar. However, the original item remains at the original date and time.
+> Any recurring meeting request in the original mailbox *could* potentially become orphaned if it leaves the Exchange store and if it's copied or moved to a .pst file. If the user has many meeting requests in Calendar, the user may want to test the process by using some meetings and then confirm that the meetings can be updated correctly before continuing. If the links to the original meeting request are orphaned, an update from the organizer will create a new item in the recipient's calendar. However, the original item remains at the original date and time.
 
 ## Status
 

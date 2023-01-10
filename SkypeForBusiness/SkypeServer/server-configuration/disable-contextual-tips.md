@@ -12,6 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business 2016
+ms.date: 3/31/2022
 ---
 
 # How to disable contextual tips in Skype for Business 2016

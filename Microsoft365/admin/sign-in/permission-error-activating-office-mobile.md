@@ -1,6 +1,6 @@
 ---
 title: You don't have permission when activating or signing in to Office Mobile
-description: Describes an issue in which you receive a "You don't have permission to access this content" or "We're having trouble locating your account" error message when you try to activate or sign in to Office Mobile on iPhone or Office Mobile on Android. Provides a resolution.
+description: Describes an issue in which you receive a You don't have permission to access this content or We're having trouble locating your account error message when you try to activate or sign in to Office Mobile on iPhone or Office Mobile on Android. Provides a resolution.
 author: MaryQiu1987
 audience: ITPro
 ms.topic: troubleshooting
@@ -9,19 +9,18 @@ manager: dcscontentpm
 ms.custom: CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 
-- MET150
-appliesto:
-- Office Mobile for iPhone
-- Office Mobile for Android
+  - MET150
+appliesto: 
+  - Office Mobile for iPhone
+  - Office Mobile for Android
+ms.date: 3/31/2022
 ---
 
 # Errors when trying to activate or sign in to Office Mobile on iPhone or Office Mobile on Android
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## PROBLEM
 
-When you try to activate or sign in to Office Mobile on iPhone, available in the Apple iTunes Store as "Office Mobile for Office 365 subscribers," or Office Mobile on Android, available in the Google Play store as "Office Mobile for Office 365," you receive one of the following error messages:
+When you try to activate or sign in to Office Mobile on iPhone, or Office Mobile on Android, you receive one of the following error messages:
 
 **You don't have permission to access this content**
 
@@ -31,15 +30,15 @@ This issue occurs if you're using a federated user account and single sign-on (S
 
 ## SOLUTION
 
-Verify that SSO isn't working or that some other sign-in issue may be occurring. To do this, try to sign in to the [Office 365 portal](https://portal.office.com).
+Verify that SSO isn't working or that some other sign-in issue may be occurring. To do this, try to sign in to the [Microsoft 365 portal](https://portal.office.com).
 
 To troubleshoot SSO issues, see the following Microsoft Knowledge Base article:
 
-[How to use Remote Connectivity Analyzer to troubleshoot single sign-on issues for Office 365, Azure, or Intune](https://support.microsoft.com/help/2650717)
+[How to use Remote Connectivity Analyzer to troubleshoot single sign-on issues for Microsoft 365, Azure, or Intune](https://support.microsoft.com/help/2650717)
 
 To troubleshoot other sign-in issues, see the following Microsoft Knowledge Base article:
 
-[You can't sign in to Office 365, Azure, or Intune](https://support.microsoft.com/help/2412085)
+[You can't sign in to Microsoft 365, Azure, or Intune](https://support.microsoft.com/help/2412085)
 
 ## MORE INFORMATION
 

@@ -1,31 +1,11 @@
 - name: Microsoft 365 Security Troubleshooting
-  href: ../microsoft-365-security-welcome.md
+  href: ../microsoft-365-security-welcome.yml
   items:
   - name: Antispam
     items:
-    - name: '"Tenant has exceeded threshold" NDR'
-      href: ../antispam/tenant-has-exceeded-threshold.md
-    - name: 550 5.4.1 Relay Access Denied NDR
-      href: ../antispam/relay-access-denied-ndr.md
-    - name: 550 5.7.1 AuthRequired NDR
-      href: ../antispam/authrequired-ndr.md
-    - name: 550 5.7.1 Message rejected NDR
-      href: ../antispam/message-rejected-ndr.md
-    - name: 550-DKIM NDR
-      href: ../antispam/550-dkim-ndr.md
-    - name: False positives
-      href: ../antispam/false-positives.md
-    - name: Junk E-mail Reporting Add-in
-      href: ../antispam/junk-email-reporting-add-in.md
-    - name: NDRs in protection environment
-      href: ../antispam/ndr-in-protection-environment.md
-    - name: Redirected mailbox marked SPAM
-      href: ../antispam/redirected-mailbox-spam.md
-    - name: SCL rating 5 messages in Inbox
-      href: ../antispam/scl-rating-messages-inbox.md
     - name: Sender Rewriting Scheme
       href: ../antispam/sender-rewriting-scheme.md
-  - name: O365 Security
+  - name: Security
     items:
     - name: Account security alert email message
       href: ../o365-security/account-security-alert-email.md

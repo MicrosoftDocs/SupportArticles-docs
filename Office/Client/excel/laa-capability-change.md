@@ -12,14 +12,13 @@ ms.reviewer: lauraho, ammert
 search.appverid: 
   - MET150
 appliesto: 
-  - Excel for Office 365
+  - Excel for Microsoft 365
   - Excel 2016
   - Excel 2013
+ms.date: 3/31/2022
 ---
 
 # Large Address Aware capability change for Excel
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 
@@ -27,7 +26,7 @@ appliesto:
 
 This change may minimize the frequency of the errors that are described in the following error messages when memory is constrained for 32-bit Excel installations:
 
-```adoc
+```output
 Excel cannot complete this task with available resources. Choose less data or close other applications.
 
 Out of Memory
@@ -41,16 +40,7 @@ There isn't enough memory to complete this action. Try using less data or closin
 
 ## Resolution
 
-To enable this change, you must be running the latest version of Microsoft Office. 
-
-|Version|Release date|Build number|
-|---|---|---|
-|Office 365 for 2016 (Current Channel Subscribers)|5/3/2016|Build 16.0.6868.2060|
-|Office 365 for 2016 (First Release Deferred Channel)|6/14/2016|Build 16.0.6965.2058|
-|Office 365 for 2016 (Deferred Channel Subscribers)|10/11/2016|Build 16.0.6965.2092|
-|[Office 365 for 2013](https://support.microsoft.com/gp/office-2013-365-update)|6/7/2016|Build 15.0.4833.1001|
-|[Excel 2013 (MSI)](https://support.microsoft.com/help/3115162)|6/7/2016|Build 15.0.4833.1000|
-|[Excel 2016 (MSI)](https://support.microsoft.com/help/3115139)|6/7/2016|Build 16.0.4393.1000|
+To enable this change, you must be running the latest version of Microsoft Office.
 
 ## More Information
 

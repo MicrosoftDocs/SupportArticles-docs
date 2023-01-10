@@ -15,12 +15,13 @@ ms.reviewer: aruiz, grtaylor
 search.appverid: 
   - MET150
 appliesto: 
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
   - Outlook 2019
   - Outlook 2016
   - Outlook 2013
   - Outlook 2010
   - Office Outlook 2007
+ms.date: 3/31/2022
 ---
 # How to suppress the AutoDiscover mismatch warning in Outlook 2007 and later versions
 
@@ -80,7 +81,7 @@ To configure Outlook to ignore the name mismatch and connect to a specific HTTP 
     > You can also use the following registry subkey:  
     > HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\xx.0\Outlook\AutoDiscover\RedirectServers
 
-    Where *xx* is 12.0 for Outlook 2007, 14.0 for Outlook 2010, 15.0 for Outlook 2013, and 16.0 for Outlook 2016, Outlook for Office 365 and Outlook 2019
+    Where *xx* is 12.0 for Outlook 2007, 14.0 for Outlook 2010, 15.0 for Outlook 2013, and 16.0 for Outlook 2016, Outlook for Microsoft 365 and Outlook 2019
 
 1. Click the **Edit** menu, point to **New**, and then click **String Value**.
 

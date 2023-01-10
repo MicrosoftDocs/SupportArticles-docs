@@ -17,11 +17,10 @@ appliesto:
   - Excel 2013
   - Excel 2016
   - Excel 2019
-  - Excel for Office 365
+  - Excel for Microsoft 365
+ms.date: 3/31/2022
 ---
 # How to control the startup message about updating linked workbooks in Excel
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

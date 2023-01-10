@@ -16,12 +16,11 @@ search.appverid:
 appliesto: 
   - Project Standard 2010
   - Project Professional 2010
+ms.date: 3/31/2022
 ---
 
 
 # How fiscal dates are shown on a timescaled view
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 _Original version:_ 2011
 

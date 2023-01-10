@@ -1,6 +1,6 @@
 ---
 title: IRM encryption does not support dynamic distribution group
-description: This article describes that the Office 365 encrypted message isn't support for a dynamic distribution group.
+description: This article describes that the Microsoft 365 encrypted message isn't support for a dynamic distribution group.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -16,8 +16,9 @@ search.appverid:
 appliesto: 
   - Microsoft 365 Business
   - Outlook
+ms.date: 3/31/2022
 ---
-# Can't view Office 365 IRM-encrypted message for dynamic distribution group
+# Can't view Microsoft 365 IRM-encrypted message for dynamic distribution group
 
 _Original KB number:_ &nbsp; 4459264
 

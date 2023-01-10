@@ -16,6 +16,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Active Directory operation failed on DomainController error when you run Hybrid Configuration wizard
 
@@ -23,9 +24,9 @@ _Original KB number:_ &nbsp; 3067609
 
 ## Symptoms
 
-You want to set up a hybrid deployment between your on-premises Microsoft Exchange Server organization and Exchange Online in Microsoft Office 365. However, when you run the Hybrid Configuration wizard, the wizard doesn't complete successfully, and you receive an **Active Directory operation failed on \<DomainController>.\<Domain>.com. The object \<DistinguishedName> does not exist** error message. The full text of this message resembles the following:
+You want to set up a hybrid deployment between your on-premises Microsoft Exchange Server organization and Exchange Online in Microsoft 365. However, when you run the Hybrid Configuration wizard, the wizard doesn't complete successfully, and you receive an **Active Directory operation failed on \<DomainController>.\<Domain>.com. The object \<DistinguishedName> does not exist** error message. The full text of this message resembles the following:
 
-> ERROR:Updating hybrid configuration failed with error 'Subtask Configure execution failed: Configure Mail FlowExecution of the Set-ReceiveConnector cmdlet had thrown an exception. This may indicate invalid parameters in your Hybrid Configuration settings. Active Directory operation failed on <**DomainController**>.contoso.com. The object 'CN=Inbound from Office 365,CN=SMTP Receive Connectors,CN=Protocols,CN' does not exist.
+> ERROR:Updating hybrid configuration failed with error 'Subtask Configure execution failed: Configure Mail FlowExecution of the Set-ReceiveConnector cmdlet had thrown an exception. This may indicate invalid parameters in your Hybrid Configuration settings. Active Directory operation failed on <**DomainController**>.contoso.com. The object 'CN=Inbound from Microsoft 365,CN=SMTP Receive Connectors,CN=Protocols,CN' does not exist.
  at Microsoft.Exchange.Management.Hybrid.RemotePowershellSession.RunCommand(String cmdlet, Dictionary`2 parameters, Boolean ignoreNotFoundErrors)
 
 ## Resolution

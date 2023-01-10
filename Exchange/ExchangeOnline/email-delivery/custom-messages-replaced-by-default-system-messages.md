@@ -1,6 +1,6 @@
 ---
 title: Custom messages in NDRs are replaced by default system messages
-description: Fixes an issue in which custom messages in NDRs are replaced by default system messages in Office 365.
+description: Fixes an issue in which custom messages in NDRs are replaced by default system messages in Microsoft 365.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -14,17 +14,18 @@ ms.reviewer: borget
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
-# Custom messages in NDRs are replaced by default system messages in Office 365
+# Custom messages in NDRs are replaced by default system messages in Microsoft 365
 
 _Original KB number:_ &nbsp; 3044155
 
 ## Problem
 
-You set a transport rule in Office 365 to return a non-delivery report (NDR) that displays a custom message. However, the custom message in the NDR is overwritten by the standard NDR message. This issue occurs in either of the following situations:
+You set a transport rule in Microsoft 365 to return a non-delivery report (NDR) that displays a custom message. However, the custom message in the NDR is overwritten by the standard NDR message. This issue occurs in either of the following situations:
 
-- The sender and recipient belong to different Office 365 organizations.
-- The sender has an Office 365 mailbox, and the recipient belongs to an external Exchange Server organization.
+- The sender and recipient belong to different Microsoft 365 organizations.
+- The sender has a Microsoft 365 mailbox, and the recipient belongs to an external Exchange Server organization.
 
 ## Cause
 
@@ -49,7 +50,7 @@ The `DSNConversionMode` parameter determines the format to use for delivery stat
 
 - **UseExchangeDSNs**
 
-    Exchange converts the DSNs to the Exchange Server 2013 DSN format. This format is the same as the Exchange Server 2010 DSN format. However, any customized text or attachments that were associated with the original DSN are overwritten if the DSN is delivered from another Office 365 organization or from an external organization.
+    Exchange converts the DSNs to the Exchange Server 2013 DSN format. This format is the same as the Exchange Server 2010 DSN format. However, any customized text or attachments that were associated with the original DSN are overwritten if the DSN is delivered from another Microsoft 365 organization or from an external organization.
 
 - **PreserveDNSBody**
 

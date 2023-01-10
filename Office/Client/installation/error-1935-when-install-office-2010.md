@@ -32,11 +32,10 @@ appliesto:
   - Office Professional Plus 2010 Home Use Program
   - Office Standard 2010
   - Office Starter 2010
+ms.date: 3/31/2022
 ---
 
 # Error 1935 when you try to install Microsoft Office
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 If you see "Error 1935. An error occurred during the installation of assembly component" when you install Office 2010 or 2007 or one of the Office stand-alone products like Excel, restart the computer and try to run setup again as a quick first step.
 

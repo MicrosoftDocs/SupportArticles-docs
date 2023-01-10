@@ -12,11 +12,10 @@ search.appverid:
   - MET150
 appliesto: 
   - Office 2016
+ms.date: 3/31/2022
 ---
 
 # Description of the numbering scheme for product code GUIDs in Office 2016
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 For a description of the numbering scheme for product code GUIDs in Office 2013, see [Description of the numbering scheme for product code GUIDs in Office 2013](https://support.microsoft.com/help/2786054).
 

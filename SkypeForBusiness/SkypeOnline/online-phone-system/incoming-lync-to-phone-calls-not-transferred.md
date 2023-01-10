@@ -14,13 +14,14 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
   - Exchange Online
+ms.date: 3/31/2022
 ---
 
 # Incoming Lync To Phone calls aren't transferred to Exchange Online Unified Messaging voice mail
 
 ## Problem
 
-Consider the following scenario. You are set up for Office 365, and you have valid Skype for Business Online (formerly Lync Online) and Exchange Online licenses. Lync To Phone and Exchange Online voice mail are set up according to the documentation. You can answer calls that are made to the Lync To Phone number, and you can make calls to other numbers. 
+Consider the following scenario. You are set up for Microsoft 365, and you have valid Skype for Business Online (formerly Lync Online) and Exchange Online licenses. Lync To Phone and Exchange Online voice mail are set up according to the documentation. You can answer calls that are made to the Lync To Phone number, and you can make calls to other numbers. 
 
 In this scenario, if an incoming call isn't answered, the call isn't transferred to Exchange Online Unified Messaging voice mail as expected. Instead, the person who is calling you hears a fast busy tone. The call never is transferred to voice mail. 
 

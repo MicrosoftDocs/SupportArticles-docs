@@ -15,10 +15,11 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
   - Outlook 2013
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
   - Microsoft Outlook 2010
   - Microsoft Office Outlook 2007
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Incomplete search results may occur in Outlook when a PDF iFilter is installed
 
@@ -34,7 +35,6 @@ _Original KB number:_ &nbsp; 2925203
 |---|---|---|---|
 |10023|Search|Gatherer|The protocol host process \<PID> did not respond and is being forcibly terminated {filter host process 6104|
 |10024|Search|Gatherer|The filter host process \<PID> did not respond and is being forcibly terminated.|
-|||||
 
 ## Cause
 

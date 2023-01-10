@@ -18,6 +18,7 @@ appliesto:
   - Outlook 2016
   - Outlook 2019
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # "There is not enough free memory to run this program" error in Outlook

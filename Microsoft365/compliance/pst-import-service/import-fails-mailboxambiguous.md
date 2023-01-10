@@ -1,6 +1,6 @@
 ---
-title: Office 365 Import job fails with MailboxAmbiguous error in the Import job log file
-description: Describes an issue in which you can't use the Office 365 Import Service to import PST files through the network or drive shipping.
+title: Microsoft 365 Import job fails with MailboxAmbiguous error in the Import job log file
+description: Describes an issue in which you can't use the Microsoft 365 Import Service to import PST files through the network or drive shipping.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -14,16 +14,17 @@ ms.reviewer: subansal
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
-# Office 365 Import job fails with MailboxAmbiguous error in the Import job log file
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+# Microsoft 365 Import job fails with MailboxAmbiguous error in the Import job log file
 
 _Original KB number:_&nbsp;4025464
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Symptoms
 
-When you use the Office 365 Import Service in the Security & Compliance Center to import PST files through the network or drive shipping, you may receive an error message that resembles the following:
+When you use the Microsoft 365 Import Service in the Security & Compliance Center to import PST files through the network or drive shipping, you may receive an error message that resembles the following:
 
 > Test.pst,Test@contoso.com,Failed,MailboxAmbiguous,0,0,,0,Microsoft.Exchange.Configuration.Tasks.ManagementObjectAmbiguousException, The operation couldn't be performed because Test@contoso.com matches multiple entries, such as 'Test'
 

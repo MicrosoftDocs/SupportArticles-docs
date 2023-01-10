@@ -16,10 +16,9 @@ appliesto:
   - Office 2019
   - Office 2016
   - Office 2013
+ms.date: 3/31/2022
 ---
 # "We can't start this app..." error installing an Office add-in
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

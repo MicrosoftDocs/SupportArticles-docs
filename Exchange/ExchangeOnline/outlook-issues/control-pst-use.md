@@ -1,6 +1,6 @@
 ---
-title: Outlook policy to control PST use and creation in Office 365 Import service
-description: Describes how to use Outlook policy to prevent users from adding new items to a .pst file and to prevent users from creating new .pst files during the import process. This applies to the Office 365 Import service.
+title: Outlook policy to control PST use and creation in Microsoft 365 Import service
+description: Describes how to use Outlook policy to prevent users from adding new items to a .pst file and to prevent users from creating new .pst files during the import process. This applies to the Microsoft 365 Import service.
 author: simonxjx
 audience: ITPro
 ms.topic: troubleshooting
@@ -17,13 +17,14 @@ appliesto:
   - Outlook 2013
   - Microsoft Outlook 2010
   - Microsoft Office Outlook 2007
+ms.date: 3/31/2022
 ---
 
-# How to use Outlook policy to control PST use and creation in the Office 365 Import service
+# How to use Outlook policy to control PST use and creation in the Microsoft 365 Import service
 
 ## Introduction
 
-When you use the Microsoft Office 365 Import service, you may want to control whether users can add new items to .pst files and how users use .pst files in Microsoft Outlook. This article describes how to prevent users from adding new items to an existing .pst file and how to prevent users from creating new .pst files during the import process.
+When you use the Microsoft 365 Import service, you may want to control whether users can add new items to .pst files and how users use .pst files in Microsoft Outlook. This article describes how to prevent users from adding new items to an existing .pst file and how to prevent users from creating new .pst files during the import process.
 
 ## Procedure
 
@@ -41,10 +42,9 @@ To prevent users from adding new data or content to an existing .pst file, add t
    |-|-|
    |Group Policy|`HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\xx.0\Outlook\PST`|
    |Office Customization Tool (OCT)|`HKEY_CURRENT_USER\Software\Microsoft\Office\xx.0\Outlook\PST`|
-   |||
-
+   
    > [!NOTE]
-   > The *xx*.0 placeholder represents the Outlook version (16.0 = Outlook 2016 and Outlook for Office 365, 15.0 = Outlook 2013, 14.0 = Outlook 2010, 12.0 = Outlook 2007).
+   > The *xx*.0 placeholder represents the Outlook version (16.0 = Outlook 2016 and Outlook for Microsoft 365, 15.0 = Outlook 2013, 14.0 = Outlook 2010, 12.0 = Outlook 2007).
 
 1. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
 1. Type `PSTDisableGrow`, and then press Enter.
@@ -57,7 +57,6 @@ The `PSTDisableGrow` registry entry can be set to the following values.
 |-|-|
 |0|User can add new items to an existing .pst file. This is the default value.|
 |1|Use cannot add new content or data to an existing .pst file.|
-|||
 
 ### Prevent users from adding new .pst files
 
@@ -70,10 +69,9 @@ To prevent users from connecting a .pst file to Outlook, add the `DisablePST` re
    |-|-|
    |Group Policy|`HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\xx.0\Outlook`|
    |Office Customization Tool (OCT)|`HKEY_CURRENT_USER\Software\Microsoft\Office\xx.0\Outlook`|
-   |||
-
+   
    > [!NOTE]
-   > The *xx*.0 placeholder represents the Outlook version (16.0 = Outlook 2016 and Outlook for Office 365, 15.0 = Outlook 2013, 14.0 = Outlook 2010, 12.0 = Outlook 2007).
+   > The *xx*.0 placeholder represents the Outlook version (16.0 = Outlook 2016 and Outlook for Microsoft 365, 15.0 = Outlook 2013, 14.0 = Outlook 2010, 12.0 = Outlook 2007).
 
 1. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
 1. Type `DisablePST`, and then press Enter.
@@ -87,7 +85,6 @@ The `DisablePST` registry entry can be set to the following values.
 |0|Users can add .pst files. This is the default value.|
 |1|Users cannot add .pst files. However, in scenarios in which a .pst file was connected to Outlook before this registry value was added, the existing .pst file will still be connected. No new.pst files can be added.|
 |2|Users can add only exclusive sharing .pst files, such as SharePoint .pst files.|
-|||
 
 ## More information
 

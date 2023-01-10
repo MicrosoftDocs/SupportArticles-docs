@@ -1,8 +1,9 @@
 ---
 title: Activation error Sorry, we are having some temporary server issues
 description: Troubleshooting methods if you're continuing to see the error Sorry, we are having some temporary server issues.
-author: vikkarti
-ms.author: v-matthamer
+author: helenclu
+ms.reviewer: vikkarti
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -15,6 +16,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
+ms.date: 3/31/2022
 ---
 
 # Microsoft 365 Apps activation error: “Sorry, we are having some temporary server issues”
@@ -91,7 +93,7 @@ Are you behind a proxy server? If you're not sure, ask your administrator. If so
   
 You need to allow the URLs and IP addresses in [this list](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide&preserve-view=true#microsoft-365-common-and-office-online).
   
-You can also allow Microsoft 365 to bypass the proxy server by creating a PAC file. For more information about creating a PAC file, see [Managing Office 365 endpoints](/microsoft-365/enterprise/managing-office-365-endpoints).
+You can also allow Microsoft 365 to bypass the proxy server by creating a PAC file. For more information about creating a PAC file, see [Managing Microsoft 365 endpoints](/microsoft-365/enterprise/managing-office-365-endpoints).
 <br/><br/>
 </details>
 
@@ -123,7 +125,7 @@ Are you behind a firewall? If you're not sure, ask your administrator. If you're
   
 Each firewall will have a different method to enable access to these URIs. Check your software's documentation for instructions or ask your administrator to do this for you.
   
-For more information about Microsoft 365 Apps for enterprise URLs and IP addresses, see the following Microsoft article: [Office 365 URLs and IP address ranges](https://technet.microsoft.com/library/hh373144.aspx).
+For more information about Microsoft 365 Apps for enterprise URLs and IP addresses, see the following Microsoft article: [Microsoft 365 URLs and IP address ranges](https://technet.microsoft.com/library/hh373144.aspx).
 <br/><br/>
 </details>
 

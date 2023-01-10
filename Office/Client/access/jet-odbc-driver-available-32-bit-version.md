@@ -12,11 +12,10 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft Access
+ms.date: 3/31/2022
 ---
 
 # Microsoft OLE DB Provider for Jet and Jet ODBC driver are available in 32-bit versions only
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Introduction
 

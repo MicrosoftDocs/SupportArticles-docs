@@ -15,11 +15,10 @@ appliesto:
   - Excel 2003
   - Excel 2002
   - Excel 2000
+ms.date: 3/31/2022
 ---
 
 # How to run a macro when certain cells change in Excel
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

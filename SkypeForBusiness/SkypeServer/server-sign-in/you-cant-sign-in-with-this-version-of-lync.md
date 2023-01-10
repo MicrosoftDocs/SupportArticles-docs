@@ -14,6 +14,7 @@ ms.reviewer: corbinm， mirung， daveh， msp， jasco， rischwen， amitpeer�
 appliesto: 
   - Lync 2013 for iPhone
   - Lync 2013 for iPad
+ms.date: 3/31/2022
 ---
 
 # "You can't sign in with this version of Lync" error in Lync for iPad or Lync for iPhone on iOS 9

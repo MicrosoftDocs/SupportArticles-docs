@@ -14,6 +14,7 @@ ms.reviewer: gregmans, PhilClod
 appliesto: 
   - Microsoft Outlook 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # How to resolve the Microsoft Outlook can not be started error that occurs when opening Outlook 2010
 

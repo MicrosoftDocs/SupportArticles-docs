@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2013
+ms.date: 3/31/2022
 ---
 
 # You can't start the User Profile Synchronization service

@@ -15,6 +15,7 @@ appliesto:
   - Outlook 2013
   - Outlook 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Unexpected behavior with smart card credentials in Outlook 2013 and 2010
 

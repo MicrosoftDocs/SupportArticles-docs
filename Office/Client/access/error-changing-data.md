@@ -16,10 +16,9 @@ appliesto:
   - Microsoft Office Access 2003
   - Microsoft Office Access 2002
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # You cannot change, add, or delete data in tables that are linked to an Excel workbook in Access
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 _Original KB number:_ &nbsp; 904953
 

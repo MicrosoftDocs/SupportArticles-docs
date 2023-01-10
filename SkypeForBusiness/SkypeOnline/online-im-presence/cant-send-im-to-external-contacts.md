@@ -16,6 +16,7 @@ appliesto:
   - Exchange Online
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
+ms.date: 3/31/2022
 ---
 
 # You can't send an IM to external contacts from Outlook Web App
@@ -27,7 +28,7 @@ You try to start an instant message (IM) conversation in Outlook Web App with an
 ## Solution 
 
 > [!NOTE]
-> This solution requires the assistance of an Office 365 administrator.
+> This solution requires the assistance of a Microsoft 365 administrator.
 
 To resolve this issue, create a Contact object in the Exchange Admin Center, and then add the external contact's IM address to the **Proxy Address** field. Make sure that the IM address contains the **sip:** prefix for the IM address of the external contact.
 

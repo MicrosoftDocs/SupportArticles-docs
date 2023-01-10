@@ -1,6 +1,6 @@
 ---
-title: How to troubleshoot data loss prevention policy tips in Exchange Online Protection in Office 365
-description: Provides guidance about troubleshooting data loss prevention (DLP) policy tips in Exchange Online Protection in Office 365.
+title: How to troubleshoot data loss prevention policy tips in Exchange Online Protection in Microsoft 365
+description: Provides guidance about troubleshooting data loss prevention (DLP) policy tips in Exchange Online Protection in Microsoft 365.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -16,16 +16,17 @@ appliesto:
   - Office Professional Plus 2013
   - Microsoft 365 Apps for enterprise
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
-# How to troubleshoot data loss prevention policy tips in Exchange Online Protection in Office 365
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+# How to troubleshoot data loss prevention policy tips in Exchange Online Protection in Microsoft 365
 
 _Original KB number:_&nbsp;2823263
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Problem
 
-Assume that you create or change a data loss prevention (DLP) policy in Microsoft Exchange Online Protection in Office 365 policy. This policy notifies users when an email message that they create in Microsoft Outlook 2013 contains sensitive information. However, when a user creates an email message that contains sensitive information, the policy tips aren't displayed as expected.
+Assume that you create or change a data loss prevention (DLP) policy in Microsoft Exchange Online Protection in Microsoft 365 policy. This policy notifies users when an email message that they create in Microsoft Outlook 2013 contains sensitive information. However, when a user creates an email message that contains sensitive information, the policy tips aren't displayed as expected.
 
 ## Solution
 

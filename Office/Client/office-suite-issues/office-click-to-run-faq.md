@@ -13,11 +13,10 @@ ms.author: luche
 ms.reviewer: bobcool
 appliesto: 
   - Office 2010
+ms.date: 3/31/2022
 ---
 
 # An overview of Microsoft Office Click-to-Run for Office 2010
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

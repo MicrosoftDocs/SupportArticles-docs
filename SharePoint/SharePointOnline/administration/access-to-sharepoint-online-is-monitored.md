@@ -13,6 +13,7 @@ ms.collection: SPO_Content
 ms.author: v-maqiu
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # "Access to Microsoft SharePoint Online is monitored" when browsing to a SharePoint site

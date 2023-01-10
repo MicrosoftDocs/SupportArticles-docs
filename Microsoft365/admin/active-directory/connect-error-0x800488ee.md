@@ -1,41 +1,39 @@
 ---
-title: Unable to connect to Office 365, Azure, or Intune
+title: Unable to connect to Microsoft 365, Azure, or Intune
 description: Describes an issue in which you receive an error message that contains a 0x800488EE error code after your admin account is disabled for Multi-Factor Authentication.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
-appliesto:
-- Cloud Services (Web roles/Worker roles)
-- Azure Active Directory
-- Microsoft Intune
-- Azure Backup
-- Office 365 User and Domain Management
+appliesto: 
+  - Cloud Services (Web roles/Worker roles)
+  - Azure Active Directory
+  - Microsoft Intune
+  - Azure Backup
+  - Microsoft 365
+ms.date: 3/31/2022
 ---
 
-# 0x800488EE when connecting to Office 365, Azure, or Intune in the Azure AD Module for PowerShell
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+# 0x800488EE when connecting to Microsoft 365, Azure, or Intune in the Azure AD Module for PowerShell
 
 ## PROBLEM
 
 Assume that Azure Multi-Factor Authentication was disabled for your admin account because you want to use the Azure Active Directory Module for Windows PowerShell. (Admins who are enabled for Azure Multi-Factor Authentication can't use the Azure Active Directory Module for Windows PowerShell.)
 
-When you open the Azure Active Directory Module for Windows PowerShell and then run the **Connect-MsolService** cmdlet to try to connect to Microsoft Office 365, Azure, or Microsoft Intune, the cmdlet does not run as expected. Instead, you receive the following error message:
+When you open the Azure Active Directory Module for Windows PowerShell and then run the **Connect-MsolService** cmdlet to try to connect to Microsoft 365, Azure, or Microsoft Intune, the cmdlet does not run as expected. Instead, you receive the following error message:
 
-```asciidoc
+```output
 Connect-MsolService : Exception of type
 'Microsoft.Online.Administration.Automation.MicrosoftOnlineException' was thrown.
 At line:1 char:1
 + Connect-MsolService
 + ~~~~~~~~~~~~~~~~~~~
-+ CategoryInfo : OperationStopped: (:) [Connect-MsolService], Mic
-rosoftOnlineException
++ CategoryInfo : OperationStopped: (:) [Connect-MsolService], MicrosoftOnlineException
 + FullyQualifiedErrorId : 0x800488EE,Microsoft.Online.Administration.Automation.ConnectMsolService
 ```
 

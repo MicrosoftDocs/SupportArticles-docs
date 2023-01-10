@@ -13,6 +13,7 @@ ms.reviewer:
 appliesto: 
   - SharePoint Server 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Total Size from Storage Metrics shows full size file version in SharePoint 2013
 

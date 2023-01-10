@@ -18,11 +18,10 @@ appliesto:
   - Visio Services in Microsoft SharePoint Server 2010
   - Visio Professional 2013
   - Visio Standard 2013
+ms.date: 3/31/2022
 ---
 
 # "Visio Services was unable to load this Web Drawing" when you load a Visio web drawing hosted on a different SharePoint farm
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

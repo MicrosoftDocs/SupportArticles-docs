@@ -1,8 +1,9 @@
 ---
 title: Microsoft 365 Apps activation error Product deactivated
 description: Troubleshooting for Microsoft 365 Apps activation error Product deactivated.
-author: vikkarti
-ms.author: v-matthamer
+author: helenclu
+ms.reviewer: vikkarti
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -15,6 +16,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
+ms.date: 3/31/2022
 ---
 
 # Microsoft 365 Apps activation error: “Product deactivated"

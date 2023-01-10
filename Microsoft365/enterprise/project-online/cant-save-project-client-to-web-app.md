@@ -4,21 +4,20 @@ author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
 localization_priority: Normal
-audience: ITPro 
+audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 search.appverid: 
-- MET150
+  - MET150
 description: Unable to save a project from a Project client to PWA with the error ID 12005(0xEE5)
-appliesto:
-- Project Online
-- Project Professional 2016
-- Project Pro for Office 365
+appliesto: 
+  - Project Online
+  - Project Professional 2016
+  - Project Pro for Microsoft 365
+ms.date: 3/31/2022
 ---
 
 # You can't save a project from a Project client to Project Web App
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

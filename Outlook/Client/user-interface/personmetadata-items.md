@@ -2,13 +2,14 @@
 title: Outlook Search Folders show unexpected mail items with empty subject lines
 description: Explains why Outlook search folders may include items with a blank subject from the PersonMetadata folder.
 author: helenclu
+ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: gbratton
+ms.reviewer: gbratton
 ms.custom: 
   - Outlook for Windows
   - CSSTroubleshoot
@@ -17,6 +18,7 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
   - Outlook 2013
+ms.date: 3/31/2022
 ---
 
 # Outlook Search Folders show unexpected mail items with empty subject lines

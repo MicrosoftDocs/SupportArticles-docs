@@ -17,6 +17,7 @@ appliesto:
   - Microsoft Office Outlook 2007
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Error when Outlook tries to connect to a server by using an RPC connection or an HTTPS connection: There is a problem with the proxy server's security certificate
 
@@ -133,4 +134,3 @@ The bitmask certificate problem codes are listed in the following table.
 |FLAG_CERT_DATE_INVALID|0x00000020|
 |FLAG_CERT_WRONG_USAGE|0x00000040|
 |FLAG_SECURITY_CHANNEL_ERROR|0x80000000|
-|||

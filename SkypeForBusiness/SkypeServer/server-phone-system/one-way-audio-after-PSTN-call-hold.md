@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: seemarah
 appliesto: 
   - Lync 2013
+ms.date: 3/31/2022
 ---
 
 # Lync 2013 client experiences one-way audio after a PSTN call is put on hold

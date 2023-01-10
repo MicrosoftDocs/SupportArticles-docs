@@ -15,6 +15,7 @@ appliesto:
   - Outlook 2013
   - Outlook 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Looking for credential tiles message when launching Outlook 2013 or 2010
 

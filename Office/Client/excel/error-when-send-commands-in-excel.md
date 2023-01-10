@@ -15,11 +15,10 @@ appliesto:
   - Excel 2013
   - Excel 2010
   - Microsoft Office Excel 2007
+ms.date: 3/31/2022
 ---
 
 # "An error occurred when sending commands to the program" in Excel
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
@@ -91,13 +90,13 @@ If these steps do not resolve the problem, go to Method 4.
 
 Try to repair your Office programs. To do this, follow the steps for your installation type and operating system.
 
-**For an Office 365 Click-to-Run installation**
+**For a Microsoft 365 Click-to-Run installation**
 
 Windows 10  
  
 1. In the search box, type **Control Panel**, and then click **Control Panel** in the search results.    
 2. Under **Programs**, click **Uninstall a program**.    
-3. Click **Microsoft Office 365** > **Change**.    
+3. Click **Microsoft 365** > **Change**.    
 4. Click **Online Repair** > **Repair**.    
  
 > [!NOTE]
@@ -106,7 +105,7 @@ Windows 10
 1. On the Start screen, type Control Panel.    
 2. Select **Control Panel**.    
 3. Under **Programs**, select **Uninstall a program**.    
-4. Select **Microsoft Office 365 **> **Change**.    
+4. Select **Microsoft 365 **> **Change**.    
 5. Select **Online Repair** > **Repair**.
 
 > [!NOTE]
@@ -116,7 +115,7 @@ Windows 7
 
 1. Select **Start** >**Control Panel**.    
 2. Double-click **Programs and Features**.    
-3. Select **Microsoft Office 365 **> **Change**.    
+3. Select **Microsoft 365 **> **Change**.    
 4. Select **Online Repair** > **Repair**.
 
 > [!NOTE]

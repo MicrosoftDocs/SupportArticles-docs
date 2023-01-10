@@ -12,11 +12,12 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 ms.reviewer: denniwil
 appliesto: 
-  - Access for Office 365
+  - Access for Microsoft 365
   - Access 2019
   - Access 2016
   - Access 2013
   - Access 2010
+ms.date: 3/31/2022
 ---
 
 # Error (Cannot update. Database or object is read-only) in a query against a linked SharePoint view if there are unlinked lookup fields in Access

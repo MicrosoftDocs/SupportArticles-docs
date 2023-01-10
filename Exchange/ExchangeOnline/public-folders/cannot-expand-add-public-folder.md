@@ -8,7 +8,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: haembab
+ms.author: v-six
 ms.custom: 
   - CSSTroubleshoot
   - CI 125428
@@ -18,6 +18,7 @@ appliesto:
   - Exchange Server 2019
   - Exchange Server 2016
   - Exchange Server 2013
+ms.date: 3/31/2022
 ---
 
 # Can't expand or add public folders in Outlook or OWA

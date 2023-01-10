@@ -18,8 +18,9 @@ appliesto:
   - Microsoft Outlook 2010
   - Microsoft Office Outlook 2007
   - Microsoft Office Outlook 2003
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Contacts with both an e-mail address and a fax number are listed twice when you select an e-mail recipient in Outlook
 

@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft InfoPath 2013
+ms.date: 3/31/2022
 ---
 
 # SoapServerException error when customizing list form (SPO and SP-onprem) using InfoPath designer

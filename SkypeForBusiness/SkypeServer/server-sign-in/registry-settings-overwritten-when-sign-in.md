@@ -15,6 +15,7 @@ appliesto:
   - Office Communicator 2007 R2
   - Lync 2010
   - Lync 2013
+ms.date: 3/31/2022
 ---
 
 # Lync 2013, Lync 2010, or Office Communicator 2007 R2 becomes the default application for protocols after user signs in

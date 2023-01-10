@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2013
   - SharePoint Designer 2013
+ms.date: 3/31/2022
 ---
 
 # Access denied when you send an email to a SharePoint group  

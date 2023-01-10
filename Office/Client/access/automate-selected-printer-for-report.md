@@ -17,11 +17,10 @@ appliesto:
   - Access 2007
   - Access 2003
   - Access 2002
+ms.date: 3/31/2022
 ---
 
 # How to automate the process of selecting the printer for a report in Microsoft Access
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 Novice: Requires knowledge of the user interface on single-user computers.
 

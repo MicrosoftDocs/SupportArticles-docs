@@ -16,8 +16,11 @@ ms.custom:
 search.appverid: MET150
 f1.keywords: 
   - NOCSH
+ms.date: 3/31/2022
 ---
 # Issues with communications and information barriers
+
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 [Information barriers](/microsoft-365/compliance/information-barriers) can help your organization remain compliant with legal requirements and industry regulations. For example, with information barriers, you can restrict communication between specific groups of users to avoid a conflict of interest or other issues. (To learn more about how to set up information barriers, see [Define policies for information barriers](/microsoft-365/compliance/information-barriers-policies).)
 
@@ -97,7 +100,7 @@ Verify that the users in question are included in an information barrier policy.
 
     |**Syntax***|**Example**|
     |:----------|:----------|
-    | `Get-InformationBarrierRecipientStatus -Identity <value> -Identity2 <value>` <p> You can use any value that uniquely identifies each user, such as name, alias, distinguished name, canonical domain name, email address, or GUID. |`Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw` <p> In this example, we refer to two user accounts in Office 365: *meganb* for *Megan*, and *alexw* for *Alex*. |
+    | `Get-InformationBarrierRecipientStatus -Identity <value> -Identity2 <value>` <p> You can use any value that uniquely identifies each user, such as name, alias, distinguished name, canonical domain name, email address, or GUID. |`Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw` <p> In this example, we refer to two user accounts in Microsoft 365: *meganb* for *Megan*, and *alexw* for *Alex*. |
 
     > [!TIP]
     > You can also use this cmdlet for a single user: `Get-InformationBarrierRecipientStatus -Identity <value>`
@@ -108,7 +111,7 @@ Verify that the users in question are included in an information barrier policy.
 
     |**Results**|**What to do next**|
     |:----------|:------------------|
-    | No segments are listed for the selected user(s) | Do one of the following:<br/>- Assign users to an existing segment by editing their user profiles in Azure Active Directory. (See [Configure user account properties with Office 365 PowerShell](/microsoft-365/enterprise/configure-user-account-properties-with-microsoft-365-powershell).)<br/>- Define a segment using a [supported attribute for information barriers](/microsoft-365/compliance/information-barriers-attributes). Then, either [define a new policy](/microsoft-365/compliance/information-barriers-policies#part-2-define-information-barrier-policies) or [edit an existing policy](/microsoft-365/compliance/information-barriers-edit-segments-policies#edit-a-policy) to include that segment. |
+    | No segments are listed for the selected user(s) | Do one of the following:<br/>- Assign users to an existing segment by editing their user profiles in Azure Active Directory. (See [Configure user account properties with Microsoft 365 PowerShell](/microsoft-365/enterprise/configure-user-account-properties-with-microsoft-365-powershell).)<br/>- Define a segment using a [supported attribute for information barriers](/microsoft-365/compliance/information-barriers-attributes). Then, either [define a new policy](/microsoft-365/compliance/information-barriers-policies#part-2-define-information-barrier-policies) or [edit an existing policy](/microsoft-365/compliance/information-barriers-edit-segments-policies#edit-a-policy) to include that segment. |
     | Segments are listed but no information barrier policies are assigned to those segments | Do one of the following:<br/>- [Define a new information barrier policy](/microsoft-365/compliance/information-barriers-policies#part-2-define-information-barrier-policies) for each segment in question <br/>- [Edit an existing information barrier policy](/microsoft-365/compliance/information-barriers-edit-segments-policies#edit-a-policy) to assign it to the correct segment |
     | Segments are listed and each is included in an information barrier policy | - Run the `Get-InformationBarrierPolicy` cmdlet to verify that information barrier policies are active<br/>- Run the `Get-InformationBarrierPoliciesApplicationStatus` cmdlet to confirm the policies are applied<br/>- Run the `Start-InformationBarrierPoliciesApplication` cmdlet to apply all active information barrier policies |
 
@@ -124,8 +127,8 @@ Information barrier policies are assigned to segments of users. Segments are def
 
     |**Syntax**|**Example**|
     |:---------|:----------|
-    | `Get-InformationBarrierRecipientStatus -Identity <value> -Identity2 <value>` <p> You can use any value that uniquely identifies each user, such as name, alias, distinguished name, canonical domain name, email address, or GUID. | `Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw` <p> In this example, we refer to two user accounts in Office 365: *meganb* for *Megan*, and *alexw* for *Alex*.          |
-    | `Get-InformationBarrierRecipientStatus -Identity <value>` <p> You can use any value that uniquely identifies the user, such as name, alias, distinguished name, canonical domain name, email address, or GUID.|`Get-InformationBarrierRecipientStatus -Identity jeanp`<p> In this example, we refer to a single account in Office 365: *jeanp*. |
+    | `Get-InformationBarrierRecipientStatus -Identity <value> -Identity2 <value>` <p> You can use any value that uniquely identifies each user, such as name, alias, distinguished name, canonical domain name, email address, or GUID. | `Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw` <p> In this example, we refer to two user accounts in Microsoft 365: *meganb* for *Megan*, and *alexw* for *Alex*.          |
+    | `Get-InformationBarrierRecipientStatus -Identity <value>` <p> You can use any value that uniquely identifies the user, such as name, alias, distinguished name, canonical domain name, email address, or GUID.|`Get-InformationBarrierRecipientStatus -Identity jeanp`<p> In this example, we refer to a single account in Microsoft 365: *jeanp*. |
 
 2. Review the results to see if information barrier policies are assigned, and to which segment(s) the user(s) belong.
 

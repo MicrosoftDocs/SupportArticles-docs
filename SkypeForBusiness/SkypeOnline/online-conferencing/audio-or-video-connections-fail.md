@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: dahans
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Audio or video connections are of poor quality or fail completely in Lync Mobile 2013

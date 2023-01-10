@@ -14,6 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Outlook on the web
+ms.date: 3/31/2022
 ---
 
 # The "Sent" time stamp on email messages is incorrect in Outlook on the web

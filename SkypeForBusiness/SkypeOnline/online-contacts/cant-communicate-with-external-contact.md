@@ -15,6 +15,7 @@ appliesto:
   - Skype for Business Online
   - Lync 2013
   - Lync 2010
+ms.date: 3/31/2022
 ---
 
 # Lync users can't communicate with external contacts who have Microsoft accounts that have a custom (EASI) domain

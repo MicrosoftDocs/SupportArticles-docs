@@ -25,11 +25,12 @@ keywords:
   - fix outlook
   - Outlook doesn't work
   - Outlook 365 doesn't work
-  - fix office 365
+  - fix Microsoft 365
 localization_priority: Normal
 manager: dcscontentpm
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
 # Fix Outlook connection problems for Microsoft 365 account
 

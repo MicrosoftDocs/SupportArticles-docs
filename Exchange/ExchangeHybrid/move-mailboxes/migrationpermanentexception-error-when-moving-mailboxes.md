@@ -16,13 +16,14 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # MigrationPermanentException error when moving mailboxes from Exchange Online to Exchange Server 2010
 
 _Original KB number:_ &nbsp; 2932443
 
 > [!NOTE]
-> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the [Office 365 Hybrid Configuration wizard](https://aka.ms/hybridwizard). For more information, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
+> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the [Microsoft 365 Hybrid Configuration wizard](https://aka.ms/hybridwizard). For more information, see [Microsoft 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
 
 ## Symptoms
 
@@ -54,10 +55,10 @@ Set-Mailbox John@contoso.com -ImListMigrationCompleted $false
 After you run the cmdlet, perform the mailbox move request.
 
 > [!NOTE]
-> The `$false` setting in the `ImListMigrationCompleted` parameter indicates that the user's contacts haven't been migrated to Lync to preserve the contact list. Be aware that the solution in this section may result in data loss. Exchange Server 2010 doesn't support the unified contact store feature in Lync 2013. Therefore, if you move a mailbox back to Exchange Server 2010 while the user's Lync contacts are stored in the unified contact store, the user could lose access to his or her Lync contacts. You should first make sure that the user's Lync contacts are moved back to Lync server before you move the mailbox to Exchange Server 2010.
+> The `$false` setting in the `ImListMigrationCompleted` parameter indicates that the user's contacts haven't been migrated to Lync to preserve the contact list. Be aware that the solution in this section may result in data loss. Exchange Server 2010 doesn't support the unified contact store feature in Lync 2013. Therefore, if you move a mailbox back to Exchange Server 2010 while the user's Lync contacts are stored in the unified contact store, the user could lose access to Lync contacts. You should first make sure that the user's Lync contacts are moved back to Lync server before you move the mailbox to Exchange Server 2010.
 
 ## More information
 
-If you experience issues when you move mailboxes to Exchange Online in Office 365, you can run the Troubleshoot Office 365 Mailbox Migration tool. This diagnostic is an automated troubleshooting tool. If you're experiencing a known issue, you receive a message that states what went wrong. The message includes a link to an article that contains the solution. Currently, the tool is supported only in Internet Explorer.
+If you experience issues when you move mailboxes to Exchange Online in Microsoft 365, you can run the Troubleshoot Microsoft 365 Mailbox Migration tool. This diagnostic is an automated troubleshooting tool. If you're experiencing a known issue, you receive a message that states what went wrong. The message includes a link to an article that contains the solution. Currently, the tool is supported only in Internet Explorer.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Microsoft Q&A](/answers/products/?WT.mc_id=msdnredirect-web-msdn).

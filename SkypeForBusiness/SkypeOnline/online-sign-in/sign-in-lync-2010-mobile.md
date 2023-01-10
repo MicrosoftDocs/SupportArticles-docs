@@ -13,6 +13,7 @@ ms.reviewer: v-lanac
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # "Cannot connect to the server" error message when Skype for Business Online users try to sign in to the Lync 2010 mobile client on a mobile device
@@ -43,7 +44,7 @@ After you verify that the Lyncdiscover CNAME record exists in DNS, check whether
 
 ### Step 3: Query DNS from the mobile carrier
 
-The next step to check whether the mobile device can resolve the Lyncdiscover CNAME record in DNS is to query DNS from the phone itself. This is difficult to do because most mobile devices don't include integrated network diagnostic tools. So, users have to download an application that performs these kinds of functions. Demonstrating the use of these applications is outside the scope of this article and outside the scope of Office 365 technical support. You may need to contact your carrier for additional assistance if the connection is only failing when connected to your data carrier.
+The next step to check whether the mobile device can resolve the Lyncdiscover CNAME record in DNS is to query DNS from the phone itself. This is difficult to do because most mobile devices don't include integrated network diagnostic tools. So, users have to download an application that performs these kinds of functions. Demonstrating the use of these applications is outside the scope of this article and outside the scope of Microsoft 365 technical support. You may need to contact your carrier for additional assistance if the connection is only failing when connected to your data carrier.
 
 ## More Information
 

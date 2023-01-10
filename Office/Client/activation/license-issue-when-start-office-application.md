@@ -35,6 +35,7 @@ appliesto:
   - PowerPoint 2013
   - Publisher 2013
   - Word 2013
+ms.date: 3/31/2022
 ---
 
 # "Microsoft Office cannot verify the license for this product" error when you start an Office app

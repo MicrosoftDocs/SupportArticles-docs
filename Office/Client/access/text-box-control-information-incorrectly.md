@@ -11,13 +11,14 @@ ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
-  - Access for Office 365
+  - Access for Microsoft 365
   - Access 2019
   - Access 2016
   - Access 2013
   - Access 2010
   - Microsoft Office Access 2007
   - Microsoft Office Access 2003
+ms.date: 3/31/2022
 ---
 # Text that is in a text box control of a report or a form may not appear correctly in Access
 

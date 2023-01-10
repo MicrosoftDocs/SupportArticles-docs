@@ -18,8 +18,9 @@ appliesto:
   - Microsoft Outlook 2010
   - Microsoft Office Outlook 2007
   - Microsoft Office Outlook 2003
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Email stays in the Outbox folder until you manually initiate a send/receive operation in Outlook
 
@@ -51,7 +52,7 @@ DWORD: Send Mail Immediately
 Value: 0
 
 > [!NOTE]
-> In the above registry key paths, <x.0> represents the Outlook version (16.0 = Outlook 2016, Outlook 2019, or Outlook for Office 365, 15.0 = Outlook 2013, 14.0 = Outlook 2010, 12.0 = Outlook 2007, 11.0 = Outlook 2003).
+> In the above registry key paths, <x.0> represents the Outlook version (16.0 = Outlook 2016, Outlook 2019, or Outlook for Microsoft 365, 15.0 = Outlook 2013, 14.0 = Outlook 2010, 12.0 = Outlook 2007, 11.0 = Outlook 2003).
 
 ## Resolution
 

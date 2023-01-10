@@ -1,8 +1,9 @@
 ---
 title: Issues with shared computer activation for Microsoft 365 Apps
 description: Troubleshooting steps for issues with shared computer activation for Microsoft 365 Apps.
-author: vikkarti
-ms.author: v-matthamer
+author: helenclu
+ms.reviewer: vikkarti
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -14,13 +15,14 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
+ms.date: 3/31/2022
 ---
 
 # Troubleshoot issues with shared computer activation for Microsoft 365 Apps
 
 If you're having problems getting shared computer activation to work when you deploy Microsoft 365 Apps to shared computers in your organization, try the following to fix the problem.
 
-If you’re encountering a specific error message, or you’re using RDS, VDI, Citrix, or FSLogix, you can go directly to the appropriate section:
+If you're encountering a specific error message, or you're using RDS, VDI, Citrix, or FSLogix, go directly to the appropriate section:
 
 - <a href="#errors">Specific error messages</a>
 
@@ -62,9 +64,9 @@ To activate Microsoft 365 Apps, TLS 1.2 must be enabled on the operating system.
 </details>
 
 <details>
-<summary><b>Check that your Office 365 plan supports shared computer activation</b></summary>
+<summary><b>Check that your Microsoft 365 plan supports shared computer activation</b></summary>
 
-To use shared computer activation, you must have an Office 365 (or Microsoft 365) plan that includes Microsoft 365 Apps and that supports shared computer activation. For more information, see [How to enable shared computer activation for Microsoft 365 Apps](/DeployOffice/overview-shared-computer-activation#how-to-enable-shared-computer-activation-for-microsoft-365-apps)
+To use shared computer activation, you must have a Microsoft 365 plan that includes Microsoft 365 Apps and that supports shared computer activation. For more information, see [How to enable shared computer activation for Microsoft 365 Apps](/DeployOffice/overview-shared-computer-activation#how-to-enable-shared-computer-activation-for-microsoft-365-apps)
 
 **Note** You also can use shared computer activation with the subscription versions of the Project and Visio desktop apps. You just need a subscription plan that includes those products.
 <br/><br/>
@@ -169,7 +171,7 @@ If the process isn’t blocked, but you still can’t activate Microsoft 365, de
 1.	Restart the device.
 1.	Download and run [the SaRA package for sign in issues](https://aka.ms/SaRA-OfficeSignInScenario).
 
-For manual troubleshooting for step 7, or for more information, see [Fix authentication issues in Office applications when you try to connect to an Office 365 service](/office365/troubleshoot/authentication/automatic-authentication-fails).
+For manual troubleshooting for step 7, or for more information, see [Fix authentication issues in Office applications when you try to connect to a Microsoft 365 service](/microsoft-365/troubleshoot/authentication/automatic-authentication-fails).
 <br/><br/>
 </details>
 
@@ -208,20 +210,20 @@ If you're having problems using shared computer activation, you might get one of
 <details>
 <summary><b>The products we found in your account cannot be used to activate Office in shared computer scenarios.</b></summary>
 
-This error means that you don't have an Office 365 (or Microsoft 365) plan that includes Microsoft 365 Apps and that supports shared computer activation. Therefore, you can't use shared computer activation.
+This error means that you don't have a Microsoft 365 plan that includes Microsoft 365 Apps and that supports shared computer activation. Therefore, you can't use shared computer activation.
 <br/><br/>
 </details>
 
 <details>
 <summary><b>UNLICENSED PRODUCT Most features are turned off because a shared computer license isn't available.</b></summary>
 
-This error means that a licensing token wasn't obtained from the Office Licensing Service on the internet. Office is now in reduced functionality mode. The user can view and print Office documents, but can't create or edit documents.
+This error means that a licensing token wasn't obtained from the Office Licensing Service on the internet. Office is now in reduced functionality mode. The users can view and print Office documents, but can't create or edit documents.
 
 You can try these steps to fix this problem:
 
-- [Check that the user is assigned a license](/microsoft-365/admin/manage/assign-licenses-to-users) for Microsoft 365 Apps.
+- [Check that the users are assigned a license](/microsoft-365/admin/manage/assign-licenses-to-users) for Microsoft 365 Apps.
 
-- Check that the user signs in with her user account for Office 365 if the **Activate Office** dialog box appears when the user opens an Office program.
+- Check that the users sign in with their user account for Microsoft 365 if the **Activate Office** dialog box appears when they open an Office program.
 
 - Check that there is connectivity between the shared computer and the internet.
 <br/><br/>
@@ -230,7 +232,7 @@ You can try these steps to fix this problem:
 <details>
 <summary><b>Sorry, we cannot verify the license currently installed for this product.</b></summary>
 
-This error means that Office has a problem with the user's licensing token on the shared computer. The user should make sure to sign in to Office with his user account for Office 365 so that Office can obtain a new licensing token from the Office Licensing Service on the internet.
+This error means that Office has a problem with the users' licensing token on the shared computer. The users should make sure to sign in to Office with their user account for Microsoft 365 so that Office can obtain a new licensing token from the Office Licensing Service on the internet.
 <br/><br/>
 </details>
 
@@ -244,7 +246,7 @@ The licensing token is valid until the date listed in the error message. The use
 </details>
 
 <details>
-<summary><b>Sorry, this Office 365 account has recently been used to activate too many computers.</b></summary>
+<summary><b>Sorry, this Microsoft 365 account has recently been used to activate too many computers.</b></summary>
 
 Microsoft places a limit on the number of shared computers that a user can activate Office on in a given time period. This error means that the user exceeded that limit. 
 <br/><br/>
@@ -257,11 +259,11 @@ Microsoft places a limit on the number of shared computers that a user can activ
 
 If you are having trouble with shared computer activation using Citrix, see the following Citrix articles:
 
-- [Password Field Not Displayed When Publishing Any Office 365 Application Such As Excel or Word On Server 2019 or Windows 10](https://support.citrix.com/article/CTX267071)
+- [Password Field Not Displayed When Publishing Any Microsoft 365 Application Such As Excel or Word On Server 2019 or Windows 10](https://support.citrix.com/article/CTX267071)
 
 - [Microsoft 365 Apps (Office 365) is Randomly Asking Users to Reactivate](https://support.citrix.com/article/CTX227286)
 
-- [Office 365 activation issue with Windows 10 VDI's](https://support.citrix.com/article/CTX289614)
+- [Microsoft 365 activation issue with Windows 10 VDI's](https://support.citrix.com/article/CTX289614)
 <br/><br/>
 </details>
 
@@ -312,9 +314,9 @@ If you’re using FSLogix and SSO:
 </details>
 
 <details>
-<summary><b>Office 365 Container Exclusions</b></summary>
+<summary><b>Microsoft 365 Container Exclusions</b></summary>
 
-When the FSLogix Office 365 container is used with any other profile solution (except local Windows profiles) the following folders need to be excluded from handling by the profile solution:
+When the FSLogix Microsoft 365 container is used with any other profile solution (except local Windows profiles) the following folders need to be excluded from handling by the profile solution:
 
 - OneDrive
 - SharePoint

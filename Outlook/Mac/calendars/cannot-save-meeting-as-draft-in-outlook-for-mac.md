@@ -8,14 +8,16 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - CI 162281
   - Outlook for Mac
   - CSSTroubleshoot
 ms.reviewer: elizs
 appliesto: 
   - Outlook 2019 for Mac
-  - Outlook for Mac for Office 365
+  - Outlook for Microsoft 365 for Mac
   - Outlook 2016 for Mac
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Cannot save a meeting as a draft in Outlook for Mac by using Office JS API
 
@@ -23,11 +25,11 @@ _Original KB number:_ &nbsp; 4505745
 
 ## Symptoms
 
-Microsoft Outlook for Mac does not support [saveAsync](/office/dev/add-ins/reference/objectmodel/preview-requirement-set/office.context.mailbox.item#saveasyncoptions-callback) on a meeting in Compose mode. Outlook add-ins cannot get the item identifier. This means that the add-ins cannot uniquely identify and communicate with Microsoft Exchange to update or listen for changes on the item.
+Microsoft Outlook for Mac does not support [saveAsync](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-1.6&preserve-view=true#outlook-office-appointmentcompose-saveasync-member(1)) on a meeting in Compose mode. Outlook add-ins cannot get the item identifier. This means that the add-ins cannot uniquely identify and communicate with Microsoft Exchange to update or listen for changes on the item.
 
 ## Workaround
 
-To work around this issue, you can set an extended property ([customProperty](/office/dev/add-ins/reference/objectmodel/preview-requirement-set/office.context.mailbox.item#loadcustompropertiesasynccallback-usercontext): Office JS API) on the item. An extended property is part of the item and will be available on Exchange as soon as the item is sent. Therefore, the add-in can query or listen to items that have this extended property set.
+To work around this issue, you can set an extended property ([customProperty](/javascript/api/outlook/office.appointmentcompose?view=outlook-js-1.6&preserve-view=true#outlook-office-appointmentcompose-loadcustompropertiesasync-member(1)): Office JS API) on the item. An extended property is part of the item and will be available on Exchange as soon as the item is sent. Therefore, the add-in can query or listen to items that have this extended property set.
 
 To set the property, follow these steps:
 
@@ -37,8 +39,8 @@ To set the property, follow these steps:
     3. Graph
 
 2. Get a valid token for each API set:
-    1. EWS: Use [getCallbackScopedAsync](/office/dev/add-ins/reference/objectmodel/preview-requirement-set/office.context.mailbox#getcallbacktokenasyncoptions-callback)
-    2. REST: Use [getCallbackScopedAsync](/office/dev/add-ins/reference/objectmodel/preview-requirement-set/office.context.mailbox#getcallbacktokenasyncoptions-callback) with **options.isRest** = **true**
+    1. EWS: Use [getCallbackTokenAsync](/javascript/api/outlook/office.mailbox?view=outlook-js-preview&preserve-view=true#outlook-office-mailbox-getcallbacktokenasync-member(1))
+    2. REST: Use [getCallbackTokenAsync](/en-us/javascript/api/outlook/office.mailbox?view=outlook-js-preview&preserve-view=true#outlook-office-mailbox-getcallbacktokenasync-member(1)) with **options.isRest** = **true**
     3. Graph: Use onBehalfOf token
 
 3. Query or listen for calendar events:

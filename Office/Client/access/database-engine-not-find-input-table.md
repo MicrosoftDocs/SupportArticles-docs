@@ -13,11 +13,10 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: wouterst, tputt, krislill, jenl
 appliesto: 
   - Access 2010
+ms.date: 3/31/2022
 ---
 
 # "The Microsoft Office Access database engine cannot find the input table" when you try to open a table in an Access 2010 template
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

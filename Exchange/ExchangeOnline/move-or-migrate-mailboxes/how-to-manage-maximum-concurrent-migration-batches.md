@@ -1,6 +1,6 @@
 ---
 title: How to manage maximum concurrent migration batches
-description: Describes how to manage the number of concurrent migration batches in Exchange Online in Office 365.
+description: Describes how to manage the number of concurrent migration batches in Exchange Online in Microsoft 365.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -14,14 +14,15 @@ ms.reviewer: v-lanac
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
-# How to manage the maximum concurrent migration batches in Exchange Online in Office 365
+# How to manage the maximum concurrent migration batches in Exchange Online in Microsoft 365
 
 _Original KB number:_ &nbsp; 2797784
 
 ## Summary
 
-This article describes how to manage the number of concurrent migration batches in Microsoft Exchange Online in Office 365.
+This article describes how to manage the number of concurrent migration batches in Microsoft Exchange Online in Microsoft 365.
 
 ## Resolution
 
@@ -34,7 +35,7 @@ To do this, use one of the following methods, as appropriate for your situation.
 When you use the EAC, you can specify only the number of concurrent migration batches for an existing migration batch. To do this, follow these steps:
 
 1. Create a migration batch by using either the EAC or Exchange Online PowerShell.
-2. Sign in to the [Office 365 portal](https://www.office.com/?auth=2), select **Admin**, and then select **Exchange** to open the EAC (if it's not already open).
+2. Sign in to the [Microsoft 365 portal](https://www.office.com/?auth=2), select **Admin**, and then select **Exchange** to open the EAC (if it's not already open).
 3. In the left navigation pane, select **Recipients**, and then select **Migration**.
 4. Select the migration batch that you want to change.
 5. Under **Associated endpoint**, select **View details**.
@@ -64,6 +65,6 @@ To set the maximum number of concurrent migration batches by using Exchange Onli
 
 ## More Information
 
-For more information about migration endpoints, see the Connect Office 365 or Office 365 to your email system section of the article [Perform a staged migration of email](/exchange/mailbox-migration/perform-a-staged-migration/perform-a-staged-migration).
+For more information about migration endpoints, see the Connect Microsoft 365 or Microsoft 365 to your email system section of the article [Perform a staged migration of email](/exchange/mailbox-migration/perform-a-staged-migration/perform-a-staged-migration).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com).

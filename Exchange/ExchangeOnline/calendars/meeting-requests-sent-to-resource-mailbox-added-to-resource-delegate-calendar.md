@@ -14,6 +14,7 @@ ms.reviewer: gabesl
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Meeting requests sent to resource mailbox in on-premises are added to resource delegate's calendar migrated to cloud
 
@@ -21,7 +22,7 @@ _Original KB number:_ &nbsp; 4036518
 
 ## Symptoms
 
-After a user's mailbox is migrated to Microsoft Office 365, they receive meeting requests from an on-premises room mailbox of which the user is a delegate, as expected.
+After a user's mailbox is migrated to Microsoft 365, they receive meeting requests from an on-premises room mailbox of which the user is a delegate, as expected.
 
 However, these meetings show on the user's calendar directly as if they were added as an attendee by the organizer. Also, any attempt to accept or decline the request comes directly from the user, instead of from the resource mailbox.
 

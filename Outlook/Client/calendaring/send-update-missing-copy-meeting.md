@@ -17,6 +17,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # How to move Outlook meetings without losing the option to send update
 

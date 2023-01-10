@@ -16,6 +16,7 @@ appliesto:
   - Microsoft Office Excel 2007
   - Microsoft Office Excel 2003
 ms.reviewer: 
+ms.date: 3/31/2022
 ---
 # Last digits are changed to zeros when you type long numbers in cells of Excel
 

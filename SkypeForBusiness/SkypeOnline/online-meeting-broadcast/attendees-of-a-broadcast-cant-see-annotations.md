@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: landerl, jasco, corbinm, dougl, lynnroe, cbland, rischwen, leonarwo, msp, romanma, tonyq
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Attendees of a broadcast can't see annotations that event team members make during a Skype Meeting Broadcast

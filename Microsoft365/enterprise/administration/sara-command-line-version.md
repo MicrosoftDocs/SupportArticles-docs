@@ -1,6 +1,6 @@
 ---
-title: SaRA command-line version
-description: Describes the command-line version of Microsoft Support and Recovery Assistant.
+title: Microsoft Support and Recovery Assistant Enterprise version
+description: Describes the Enterprise version of Microsoft Support and Recovery Assistant.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -10,139 +10,85 @@ localization_priority: Normal
 ms.custom: 
   - CI 148047
   - CSSTroubleshoot
-ms.reviewer: zebamehdi; brandisi
+  - CI 163053
+ms.reviewer: gregmans; zebamehdi
 appliesto: 
-  - Office 365
+  - Microsoft 365
 search.appverid: MET150
+ms.date: 10/26/2022
 ---
-# Command-line version of Microsoft Support and Recovery Assistant
+# Enterprise version of Microsoft Support and Recovery Assistant
 
-The command-line version of Microsoft Support and Recovery Assistant (SaRA) is self-contained and scriptable (run at a command line or in a PowerShell script). This version is an enterprise-ready diagnostic tool for specific client issues. It is useful in situations in which administrators have to remotely run a diagnostic tool on computers in their organization.
+> [!NOTE]
+> This article is for Microsoft 365 administrators only. For help to diagnose and fix issues that affect Office, Microsoft 365 or Outlook on your computer, see [About the Microsoft Support and Recovery Assistant](https://aka.ms/SaRA_Home).
 
-## Download and run the command-line version of SaRA
+The Enterprise version of Microsoft Support and Recovery Assistant is a self-contained, enterprise-ready diagnostic tool that you can use to troubleshoot specific client issues that affect Microsoft 365 apps, such as Microsoft Teams and Microsoft Outlook. This version of the Assistant runs at a command line or through a script such as PowerShell. Administrators will find this version of the Assistant useful when they have to run it on computers in their organization remotely.
 
-1. Download SaRA by using the following link: [https://aka.ms/SaRA_CommandLineVersionFiles](https://aka.ms/SaRA_CommandLineVersionFiles)
-1. In the downloaded file, extract the files in the *DONE* folder to a folder that you can access from the user's computer on which you will run SaRA.
-1. On the user's computer, select **Start**, enter `cmd`, and then press Enter to open a Command Prompt window.
+To fix issues on a single computer, we recommend that you use the [full version of the Assistant](https://aka.ms/SaRA_Home). If multiple devices are affected by an issue, use the Enterprise version of the Assistant.
 
-    **Note:** See the table in the "[Supported switches](#supported-switches)" section to determine whether an elevated Command Prompt window is required to run SaRA for the user's scenario.
+## Supported scenarios
 
-1. In the Command Prompt window, navigate to the folder in which you extracted the files from step 2.
-1. Run the command-line version of SaRA by using one or more switches that are discussed in the "[Supported switches](#supported-switches)" section.
+You can use the Enterprise version of the Assistant to resolve issues for the following scenarios. Select a scenario for details about how to run it.
 
-   > [!IMPORTANT]
-   > Updates to the command-line version of SaRA will be released on a regular basis. To make sure that you're using the latest version that has the most features and highest stability, each build of the application will stop working 90 days after the listed **Created** date for SaRAcmd.exe. Use the link provided in step 1 to download the latest version.
+|Scenario|Description|\<Scenarioname\>|
+|---|---|---|
+|[Outlook Scan](assistant-outlook-scan.md)|Scans Outlook for known issues and generates a comprehensive configuration report for Outlook, Office, and Windows. A full or offline scan can be run.|`ExpertExperienceAdminTask`|
+|[Office Uninstall](assistant-office-uninstall.md)|Scrubs any version of Office from a device. Use when you can't fully remove Office through Control Panel.|`OfficeScrubScenario`|
+|[Office Activation](assistant-office-activation.md)|Automated checks and recoveries to reset activation-related settings so you can successfully activate a subscription version of Office.|`OfficeActivationScenario`|
+|[Office Shared Computer Activation](assistant-office-shared-computer-activation.md)|Automated checks and recoveries to either enable or disable Office Shared Computer Activation.|`OfficeSharedComputerScenario`|
+|[Outlook Calendar Scan](assistant-outlook-calendar-scan.md)|Scans your Outlook calendar with the Calendar Checking tool (CalCheck) for dozens of known problems.|`OutlookCalendarCheckTask`|
+|[Teams Meeting Add-in for Outlook](assistant-teams-meeting-add-in-outlook.md)|Automated checks and recoveries to help you get the Teams Meeting Add-in for Outlook up and running.|`TeamsAddinScenario`|
+|[Reset Office Activation](assistant-reset-office-activation.md)|Clear prior activations of Microsoft 365 Apps for Enterprise to remove related licenses and cached Office account information. This resets Office applications to a clean state and you can then activate them with a different Office account or change to a different license mode.|`ResetOfficeActivation`|
 
-## Supported switches
+## Download and run the Enterprise version of the Assistant
 
-The following switches are available to control SaRAcmd.exe.
+1. Download the Assistant by selecting the following button.
+   > [!div class="nextstepaction"]
+   > [Download the Assistant](https://aka.ms/SaRA_EnterpriseVersionFiles)
+1. In the downloaded *.zip* file, extract the files to a folder that you can access from the user's computer on which you'll run the Assistant.
+1. On the user's computer, select **Start**, enter *cmd*, and then press Enter to open a Command Prompt window.
 
-**Note:** The switches aren't case-sensitive.
+   **Note:** If the scenario that you want to run requires an elevated Command Prompt window, select **Start**, enter *cmd*, right-click **Command Prompt** in the results, and then select **Run as administrator**.
 
-1. `-S <scenarioname>`
+1. At the command prompt, navigate to the folder in which you extracted the files from step 2.
+1. Run the Assistant by using the appropriate switches for the scenario.
 
-   Use the `-S` switch to specify the scenario that you want to run. The switch cannot be run on its own. It must be followed by `-AcceptEula`. For example, to run the scenario that removes the currently installed version of Office, enter `-S OfficeScrubScenario -AcceptEula`, and then press Enter.
+> [!IMPORTANT]
+> Updates to the Enterprise version of the Assistant are released on a regular basis. To make sure that you're using the latest version that has the most features and highest stability, each build of the application will stop working 90 days after the **Created** date that's listed for the SaRAcmd.exe file. Use the link that's provided in step 1 to always download the latest version available.
 
-   Currently, the following scenarios are supported through the command line.
+## Switches available for all scenarios
 
-   |*Scenarioname* value|Scenario entry point in the full (UI) version of SaRA|Elevated Command Prompt window required|
-   |---|---|---|
-   |`ExpertExperienceAdminTask`|Advanced Diagnostics \ Outlook|No|
-   |`OfficeScrubScenario`|Office \ I have Office installed, but I'm having trouble uninstalling it|Yes|
-   |`TeamsAddinScenario`|Teams \ The Teams Meeting option isn't shown, or the Teams Meeting add-in doesn't load in Outlook|No|
-   |||
+The following switches are available for the Enterprise version of the Assistant. They aren't case-sensitive. Unless noted as optional, the switches are required to run the scenario. You can use more than one optional switch.
 
-   **Note:** To open an elevated Command Prompt window, select **Start**, enter `cmd`, right-click **Command Prompt** in the results, and then select **Run as administrator**.
+|Switch \<parameter\>|Details|Required/Optional|Applicable scenarios|
+|---|---|---|---|
+|`-?`|Use the `-?` switch to display the functions of all the switches that are available for SaRAcmd.exe. If you use the `-?` switch together with other switches, it will override the other switches.|Optional|All|
+|`-Help`|The `-Help` switch displays a link to online content for more information. If you use the `-Help` switch together with other switches, it will override all the others except the `-?` switch.|Optional|All|
+|`-DisplayEULA <file path>`|Use the `-DisplayEULA` switch to display the End User License Agreement (EULA). You can save the EULA text to a file by specifying a path to the file by using the switch. If you use the `-DisplayEULA` switch together with other switches, it will override the other switches. |Optional|All|
+|`-S <scenarioname>`|Use the `-S` switch to specify the scenario that you want to run.|Required|All|
+|`-AcceptEula`|Use the `-AcceptEula` switch to accept the EULA. This is required before a scenario can be run.|Required|All|
+|`-LogFolder <Output Path>`| Use the `-LogFolder` switch to force SaraCmd.exe to output scenario-specific logs to the folder that's specified by \<Output Path\>.|Optional|`ExpertExperienceAdminTask`<br/>`OutlookCalendarCheckTask`|
+|`-HideProgress`|By default, the Assistant always displays the progress of the scenario. Use `-HideProgress` switch to hide the progress display for the listed scenarios.|Optional|`ExpertExperienceAdminTask`<br/>`OutlookCalendarCheckTask`|
+|`-OfflineScan`|Use the `-OfflineScan` switch to specify an offline scan of Outlook while the Outlook application is running.|Optional|`ExpertExperienceAdminTask`|
+|`-OfficeVersion`|Use the `-OfficeVersion` switch to remove only the Office version that's specified by the `<version>` parameter. If you use **All** as a parameter, all Office versions will be removed from the computer.|Optional|`OfficeScrubScenario`|
+|`-RemoveSCA`|Use the `-RemoveSCA` switch to remove Shared Computer Activation (SCA) and to configure non-SCA activation for Office.|Optional|`OfficeActivationScenario`<br/>`OfficeSharedComputerScenario`|
+|`-CloseOffice`|Use the `-CloseOffice` switch to close all Office apps that are open.|Required|`OfficeActivationScenario`<br/>`OfficeSharedComputerScenario`<br/>`ResetOfficeActivation`|
+|`-CloseOutlook`|Use the `-CloseOutlook` switch to close Outlook if it's open.|Required|`TeamsAddinScenario`|
+|`-P <profile name>`|Use the `-P` switch together with the \<Profile name\> parameter to specify the Outlook profile that you want the `OutlookCalendarCheckTask` scenario to scan.|Optional|`OutlookCalendarCheckTask`|
 
-2. `-CloseOutlook`
+## Version history of the Enterprise version of the Assistant
 
-   The `-CloseOutlook` switch is required to run TeamsAddinScenario.  
-   **Note**: If Outlook is running, this switch closes Outlook.
+Throughout the year, a new build of the Enterprise version of the Assistant is available through the download link that's provided in [Download and run the command-line version of the Assistant](#download-and-run-the-enterprise-version-of-the-assistant). Because each build stops working after 90 days, we recommend that you keep the Assistant updated by replacing your existing files with the latest version files.
 
-3. `-AcceptEula`
+The following table provides the versions of the Enterprise version of the Assistant that were made available on the specified date.
 
-   The End User License Agreement (EULA) must be accepted before a scenario can be run. If you're using `-AcceptEULA`, you must also use `-S <scenarioname>` to specify the scenario that you want to run. For example, to uninstall Office, run the following command from an elevated Command Prompt window:
-
-   ```console
-   SaRAcmd.exe -S OfficeScrubScenario -AcceptEula
-   ```
-
-   If you want to run the Advanced Diagnostic scenario for Outlook, run the following command:
-
-   ```console
-   SaRAcmd.exe -S ExpertExperienceAdminTask -AcceptEula
-   ```
-
-4. `-DisplayEULA`
-
-   Use the `-DisplayEULA` switch to display the EULA. To save the EULA text to a file, run a command that resembles the following example:
-
-   ```console
-   SaRAcmd.exe -DisplayEULA > c:\temp\SaRAEula.txt
-   ```
-
-5. `-Help`
-
-   The `-Help` switch displays a link to online content for additional information. If you use `-Help` together with other switches, `-Help` will override all the other switches except the `-?` switch.
-
-6. `-?`
-
-   Use the `-?` switch to display the functions of all the switches that are available for SaRAcmd.exe. If you use `-?` together with other switches, `-?` will override the other switches.
-
-## Conditions addressed by the command-line scenarios
-
-When you run a scenario by using the command-line version of SaRA, you receive no prompts. This is a different experience from the full version of SaRA. The following table describes the actions that the command-line version of SaRA takes, and the output that the tool displays for each condition within a scenario.
-
-- `ExpertExperienceAdminTask`
-
-  |Condition|Action taken by the command-line version|Output in the Command Prompt window|
-  |---|---|---|
-  |Outlook isn't running|Run an Offline scan of Outlook|*01:* An Offline scan was performed because Outlook is either not running or it is running elevated (as Administrator). See \<filename> in *%localappdata%\saralogs\UploadLogs*.|
-  |Outlook is running|Run a full scan of Outlook|*02:* A Full scan was performed. See \<filename> in *%localappdata%\saralogs\UploadLogs*.|
-  |More than one Outlook version is detected|Run a scan of the latest version of Outlook|(Depending on the situation, this output could be *01*, *02*, *04*, or *05*)|
-  |Outlook and the Command Prompt window are both elevated|Run a full scan of Outlook|*02:* A Full scan was performed. See \<filename> in *%localappdata%\saralogs\UploadLogs*.|
-  |Outlook is running as elevated; the SaRA Command Prompt window isn't elevated|Run an Offline scan of Outlook|*01:* An Offline scan was performed because Outlook is either not running or it is running elevated (as Administrator). See \<filename> in *%localappdata%\saralogs\UploadLogs*.|
-  |Outlook isn't running as elevated; the SaRA Command Prompt window is elevated|None|*04:* Outlook isn't running elevated. Don't use an elevated command-prompt.|
-  |Failure to run a scan (for any reason); for example:<ol><li>Outlook isn't installed</li><li>Only one Outlook version is detected, and that version is earlier than 2007</li><li>An exception occurs during the scan</li></ol>|Scan initiated but not completed|*05:* An error occurred while performing a scan of Outlook. You might be able to perform an Offline scan if you exit Outlook and rerun this scenario. You can also try using the full SaRA version.|
-  |||
-- `OfficeScrubScenario`
-
-  |Condition|Action taken by the command-line version|Output shown in the command-prompt window|
-  |---|---|---|
-  |Office removed successfully|None|*00:* Successfully completed this scenario.</br></br>**Note:** We recommend you restart the computer to finish any remaining cleanup tasks.|
-  |Office program found .exe files running:</br></br>lync, winword, excel, msaccess, mstore, infopath, setlang, msouc, ois, onenote, outlook, powerpnt, mspub, groove, visio, winproj, graph, teams|Exit the scenario|*06:* Office programs are running. Please close all open Office programs and then rerun this scenario.|
-  |No Office products found|Exit the scenario|*07:* No installed Office versions were found. Please use the full SaRA version.|
-  |Multiple Office products found|Exit the scenario|*08:* Multiple Office versions were found. Please use the full SaRA version.|
-  |Failure to remove Office|Exit the scenario|*09:* Failure to remove Office. Please use the full SaRA version.|
-  |SaRA isn't elevated|Exit the scenario|*10:* SaRA needs to run elevated for this scenario. Please use an elevated command-prompt.|
-  |||
-
-- `TeamsAddinScenario`
-
-  |Condition|Action taken by the command-line version|Output shown in the command-prompt window|
-  |---|---|---|
-  |Scan completed successfully|None|*00:* Scenario completed successfully. Please exit and restart Outlook.|
-  |User doesn't include the `-CloseOutlook` switch|Exit the scenario|*01:* This scenario requires the -CloseOutlook switch. Note, if Outlook is running, the -CloseOutlook switch closes Outlook. For additional information, please visit [https://aka.ms/SaRA_CommandLineVersion](https://aka.ms/SaRA_CommandLineVersion)|
-  |User doesn't include the `-AcceptEula` switch|Exit the scenario|*01:* Please provide -AcceptEula to continue with this scenario. For additional information, please visit [https://aka.ms/SaRA_CommandLineVersion](https://aka.ms/SaRA_CommandLineVersion)|
-  |Teams isn't installed|Exit the scenario|*20:* Could not find an installed version of Teams. Please see [https://support.office.com/article/how-do-i-get-access-to-microsoft-teams-fc7f1634-abd3-4f26-a597-9df16e4ca65b](https://support.office.com/article/how-do-i-get-access-to-microsoft-teams-fc7f1634-abd3-4f26-a597-9df16e4ca65b)|
-  |Outlook 2013 or later isn't installed|Exit the scenario|*21:* Could not find an installed version of Outlook 2013, or later. See [https://go.microsoft.com/fwlink/?linkid=2129032](https://go.microsoft.com/fwlink/?linkid=2129032)|
-  |Windows 7 users don't have the [Update for Universal C Runtime in Windows](https://support.microsoft.com/help/2999226/update-for-universal-c-runtime-in-windows) installed|Exit the scenario|*22:* Pre-requisites not met. Update from KB2999226 needs to be installed. See [https://go.microsoft.com/fwlink/?linkid=2129032](https://go.microsoft.com/fwlink/?linkid=2129032)|
-  |Registry issues detected: <br/><br/>LoadBehavior<>3 or add-in listed under the `DisabledItems` key or TeamsAddin.Connect <> 1 under the `DoNotDisableAddinList` key|Run the registry recovery action, and then exit the scenario.|*23:* The registry was updated to address missing or incorrect values. Please exit and restart Outlook.</br></br>*17:* An error occurred while running this scenario. You can also try using the full SaRA version.|
-  |None of the above conditions were detected|Run the re-register dll recovery action, and then exit the scenario.|*24:* The Microsoft.Teams.AddinLoader.dll was re-registered. Please exit and restart Teams. Then, exit and restart Outlook.|
-  |Failure to complete the scenario (for any reason)|Exit the scenario|*17:* An error occurred while running this scenario. You can also try using the full SaRA version.|
-  |||
-
-## SaRA command-line version history
-
-Throughout the year, a new build of SaRA is available through the download link that is provided at the beginning of this article. Because each build stops working after 90 days, we recommend that you keep SaRA updated by replacing the files you have with the latest version.
-
-The following table provides the versions of SaRA that were made available on the specified date.
-
-|Release date|SaRACmd.exe version|
-|--------|--------|
-|Feb 8, 2022|17.00.7971.000|
-|Nov 9, 2021|17.00.7513.000|
+|Release date|Version|
+|----------|-----------|
+|October 28, 2022|17.00.9246.000 |
+|September 13, 2022|17.00.9001.001 |
+|July 8, 2022|17.00.8713.001 |
+|May 18, 2022|17.00.8433.005 |
+|April 7, 2022|17.00.8256.000|
+|February 8, 2022|17.00.7971.000|
+|November 9, 2021|17.00.7513.000|
 |May 26, 2021|17.00.6665.000|
-|||
-
-For more information about the full version of SaRA, see [About the Microsoft Support and Recovery Assistant](https://aka.ms/sara_home).

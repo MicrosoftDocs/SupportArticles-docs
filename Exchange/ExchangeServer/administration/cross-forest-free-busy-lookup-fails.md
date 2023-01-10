@@ -20,6 +20,7 @@ appliesto:
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
+ms.date: 3/31/2022
 ---
 # Cross forest free/busy lookup fails when target forest is Exchange Server 2013 or Exchange Server 2016
 

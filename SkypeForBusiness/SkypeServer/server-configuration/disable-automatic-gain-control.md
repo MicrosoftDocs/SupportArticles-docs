@@ -1,6 +1,6 @@
 ---
 title: How to disable Automatic Gain Control in Skype for Business on Windows
-description: Describes methods to disable the Automatic Gain Control feature in Skype for Business in Office 365 Click-to-Run version 16.0.8625.2055 or a later version.
+description: Describes methods to disable the Automatic Gain Control feature in Skype for Business in Microsoft 365 Click-to-Run version 16.0.8625.2055 or a later version.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -12,11 +12,12 @@ ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto: 
   - Skype for Business 2016
+ms.date: 3/31/2022
 ---
 
 # How to disable Automatic Gain Control in Skype for Business on Windows
 
-If you're using Office 365 Click-to-Run version 16.0.8625.2055 or a later version, you can disable the Automatic Gain Control (AGC) feature in Skype for Business. To disable the feature, use one of the following methods. 
+If you're using Microsoft 365 Click-to-Run version 16.0.8625.2055 or a later version, you can disable the Automatic Gain Control (AGC) feature in Skype for Business. To disable the feature, use one of the following methods. 
 
 > [!WARNING]
 > Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall your operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk.

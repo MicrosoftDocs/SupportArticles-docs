@@ -2,7 +2,7 @@
 title: Public folder permissions and settings don't propagate to subfolders in the Exchange admin center (EAC)
 description: When you apply permissions to a public folder and its subfolders in the EAC, the permissions aren't applied to some or all subfolders. When you apply other settings, you receive errors.
 author: helenclu
-ms.author: batre
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -19,6 +19,7 @@ appliesto:
   - Exchange Server 2019
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 # Public folder permissions and settings don't propagate in EAC
 

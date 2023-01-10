@@ -19,6 +19,7 @@ appliesto:
   - Outlook 2013
   - Outlook 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # WebBrowser or WPF control doesn't display content correctly in an Office application when hosted inside a CustomTaskPane control
 

@@ -15,6 +15,7 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Unable to create an Outlook profile after a migration with Event 1098 in AAD log
 

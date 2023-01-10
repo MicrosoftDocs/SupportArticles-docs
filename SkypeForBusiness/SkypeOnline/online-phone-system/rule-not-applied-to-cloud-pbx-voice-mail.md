@@ -12,6 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Outlook mailbox rules aren't applied to Cloud PBX voice mails
@@ -22,7 +23,7 @@ You receive a Cloud PBX voice mail, but the Outlook mailbox rule to handle the r
 
 ## Solution
 
-This is the expected behavior. There's currently no workaround. Cloud PBX voice mail uses Exchange Web Services (EWS) to put the voice mail in the user's Office 365 mailbox. It does this by adding the voice mail as an attachment to an email message. Therefore, the email message isn't evaluated by the Outlook mailbox rules that are processed during new voice mail delivery.
+This is the expected behavior. There's currently no workaround. Cloud PBX voice mail uses Exchange Web Services (EWS) to put the voice mail in the user's Microsoft 365 mailbox. It does this by adding the voice mail as an attachment to an email message. Therefore, the email message isn't evaluated by the Outlook mailbox rules that are processed during new voice mail delivery.
 
 ## More Information
 

@@ -13,11 +13,10 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft Office Excel 2007
   - Microsoft Office Excel 2003
+ms.date: 3/31/2022
 ---
 
 # Use startup folders in Excel
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 For information about Excel 2010, Excel for Mac 2011, and later versions, see the following articles:
 

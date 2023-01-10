@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # The "Sync to Outlook" button and the "Tasks" link are missing in SharePoint Online
@@ -34,7 +35,7 @@ In Microsoft SharePoint Online, the following options are missing:
 
 If you want to continue using your **Tasks** page, you have to manually restore the link to your personal site. To do this, follow these steps:
 
-1. In Office 365, click your profile picture, and then click **About me**.
+1. In Microsoft 365, click your profile picture, and then click **About me**.
 
    :::image type="content" source="media/sync-to-outlook-tasks-link-missing/about-me.png" alt-text="Screenshot to select the About me item after selecting the profile picture." border="false":::
 
@@ -44,7 +45,7 @@ If you want to continue using your **Tasks** page, you have to manually restore 
 
 1. Click **link**.
 
-   :::image type="content" source="media/sync-to-outlook-tasks-link-missing/add-link.png" alt-text="Screenshot to click the link option in Office 365." border="false":::
+   :::image type="content" source="media/sync-to-outlook-tasks-link-missing/add-link.png" alt-text="Screenshot to click the link option in Microsoft 365." border="false":::
 
 1. In the **Text to display** box, type Tasks.
 

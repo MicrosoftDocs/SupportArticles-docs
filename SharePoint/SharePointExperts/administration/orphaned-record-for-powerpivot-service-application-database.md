@@ -2,7 +2,8 @@
 title: Orphaned record for PowerPivot service application database
 description: Fixes an error that occurs in Windows Event Viewer or the SharePoint Unified Logging Service (ULS) logs.
 author: helenclu
-ms.author: zakirh
+ms.author: luche
+ms.reviwer: zakirh
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -12,6 +13,7 @@ ms.topic: troubleshooting
 ms.custom: sap:spsexperts, CSSTroubleshoot
 appliesto: 
   - Microsoft SharePoint
+ms.date: 3/31/2022
 ---
 
 # Orphaned record for PowerPivot service application database

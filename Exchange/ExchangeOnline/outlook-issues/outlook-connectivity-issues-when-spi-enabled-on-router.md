@@ -1,6 +1,6 @@
 ---
 title: Outlook connectivity issues when SPI is enabled
-description: Provides a workaround for an issue in which Office 365 users experience connectivity issues in Outlook if stateful packet inspection (SPI) is enabled on the router.
+description: Provides a workaround for an issue in which Microsoft 365 users experience connectivity issues in Outlook if stateful packet inspection (SPI) is enabled on the router.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -14,6 +14,7 @@ ms.reviewer: chwillia
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook connectivity issues when stateful packet inspection (SPI) is enabled on the router
 
@@ -24,7 +25,7 @@ _Original KB number:_ &nbsp; 2862523
 
 ## Symptoms
 
-When Office 365 users use Microsoft Outlook, they experience the following symptoms:
+When Microsoft 365 users use Microsoft Outlook, they experience the following symptoms:
 
 - Outlook disconnects
 - Messages stay in the Outbox and aren't sent. However, if the user restarts Outlook, Outlook reconnects to the server, and messages are sent.

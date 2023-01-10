@@ -16,6 +16,7 @@ ms.reviewer: salarson
 appliesto: 
   - SharePoint Online
   - OneDrive
+ms.date: 3/31/2022
 ---
 
 # "Unable to reach the server" error when sharing files or folders in SharePoint or OneDrive
@@ -69,8 +70,22 @@ This message indicates that the list or library reaches the limit of the unique 
 
 To fix this error, follow the resolution at ["You can't share this folder because there are too many items in the folder" error when trying to share or break inheritance](../lists-and-libraries/error-share-break-inheritance.md).
 
+## Run the Check User Access Diagnostic
+
+> [!NOTE]
+> This feature requires a Microsoft 365 administrator account. This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+
+Microsoft 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with user access.
+
+Select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center.
+
+> [!div class="nextstepaction"]
+> [Run Tests: Check SharePoint User Access](https://aka.ms/PillarCheckUserAccess)
+
+The diagnostic performs a large range of verifications for internal users or guests who try to access SharePoint and OneDrive sites.
+
 ## More information
 
-["The number of items in this list exceeds the list view threshold" when you view lists in Office 365](../lists-and-libraries/items-exceeds-list-view-threshold.md)
+["The number of items in this list exceeds the list view threshold" when you view lists in Microsoft 365](../lists-and-libraries/items-exceeds-list-view-threshold.md)
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

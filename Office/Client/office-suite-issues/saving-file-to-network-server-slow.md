@@ -14,11 +14,10 @@ appliesto:
   - office 2016
   - Office 2013
   - Office 2010
+ms.date: 3/31/2022
 ---
 
 # Saving Office documents to a network server is slow when using EFS
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

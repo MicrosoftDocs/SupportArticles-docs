@@ -18,9 +18,10 @@ appliesto:
   - Microsoft Outlook 2010
   - Microsoft Office Outlook 2007
   - Microsoft Office Outlook 2003
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
   - Outlook 2010 with Business Contact Manager
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Description of the AutoArchive feature in Outlook
 

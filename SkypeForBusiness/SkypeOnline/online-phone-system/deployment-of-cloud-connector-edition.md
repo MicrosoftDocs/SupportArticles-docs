@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: landerl, jasco, nmurav, romanma, tonyq, cbland, rischwen, lynnroe, rigarcia, corbinm
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Deployment of Cloud Connector Edition in Amazon Web Services fails

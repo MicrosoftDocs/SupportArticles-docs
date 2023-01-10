@@ -16,6 +16,7 @@ appliesto:
   - SharePoint Server 2016
   - SharePoint Server 2019
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Unable to edit a list in SharePoint Datasheet View with Content Approval turned on
 

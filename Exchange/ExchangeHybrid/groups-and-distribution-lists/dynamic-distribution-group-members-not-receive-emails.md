@@ -16,6 +16,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Members of a dynamic distribution group in an Exchange hybrid deployment don't receive email messages
 
@@ -29,7 +30,7 @@ Additionally, if you run a command such as the following to return a list of rec
 
 ```console
 $list = Get-DynamicDistributionGroup sales@contoso.com  
-Get-Recipient -RecipientPreviewFilter $list.RecipientFilter
+Get-Recipient -RecipientPreviewFilter $list.RecipientFilter -OrganizationalUnit $list.RecipientContainer
 ```
 
 ## Cause
@@ -49,6 +50,6 @@ Set-DynamicDistributionGroup -Identity sales@contoso.com -RecipientFilter {(Reci
 
 ## More information
 
-For more information, see [Set-DynamicDistributionGroup](/powershell/module/exchange/set-dynamicdistributiongroup).
+For more information, see [Get-DynamicDistributionGroup](/powershell/module/exchange/get-dynamicdistributiongroup) and [Set-DynamicDistributionGroup](/powershell/module/exchange/set-dynamicdistributiongroup).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](/answers/topics/office-exchange-server-itpro.html).

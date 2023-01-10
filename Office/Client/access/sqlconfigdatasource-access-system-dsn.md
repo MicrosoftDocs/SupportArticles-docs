@@ -16,11 +16,10 @@ ms.reviewer: robdil
 appliesto: 
   - Access 2007
   - Access 2002
+ms.date: 3/31/2022
 ---
 
 # How to use SQLConfigDataSource to create an Access system DSN
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 Advanced: Requires expert coding, interoperability, and multiuser skills. 
 

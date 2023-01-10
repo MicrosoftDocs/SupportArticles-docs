@@ -14,8 +14,9 @@ ms.reviewer: tasitae
 appliesto: 
   - Outlook 2019
   - Outlook 2016
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook 2016 crashes when creating a new profile
 
@@ -38,7 +39,6 @@ When you try to create a new Microsoft Outlook 2016 profile, Outlook crashes. Ad
 |outlook.exe|16.0.4288.1000|olmapi32.dll|16.0.4288.1000|0x00169596|
 |outlook.exe|16.0.4266.1001|olmapi32.dll|16.0.4266.1001|0x00000000001D9071|
 |outlook.exe|16.0.4288.1000|olmapi32.dll|16.0.4288.1000|0x00000000001DA66D|
-||||||
 
 ## Cause
 

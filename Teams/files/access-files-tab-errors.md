@@ -10,12 +10,14 @@ localization_priority: Normal
 ms.custom: 
   - CI 149476
   - CI 143097
+  - CI 161519
   - CSSTroubleshoot
 ms.reviewer: prbalusu
 appliesto: 
   - Microsoft Teams
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 # Errors when selecting the Files tab on a Teams channel
 
@@ -30,13 +32,13 @@ To resolve this issue, use one of the following methods to revert the name of th
 ### Method 1
 
 1. Install the [PnP PowerShell module](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets).
-2. Run [Connect-PnPOnline](/powershell/module/sharepoint-pnp/connect-pnponline) to connect to the SharePoint site. For example:
+2. Run `Connect-PnPOnline` to connect to the SharePoint site. For example:
 
     ```powershell
     Connect-PnPOnline -Url "https://contoso.sharepoint.com/sites/team" -Interactive
     ```
 
-3. Run [Get-PnPList](/powershell/module/sharepoint-pnp/get-pnplist), and place the renamed document library into a variable by using the library name. In the following example, the library name is "Renamed Documents."
+3. Run `Get-PnPList`, and place the renamed document library into a variable by using the library name. In the following example, the library name is "Renamed Documents."
 
     ```powershell
     $list = Get-PnPList 'Renamed Documents'

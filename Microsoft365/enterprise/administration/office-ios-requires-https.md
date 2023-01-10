@@ -1,23 +1,25 @@
 ---
-title: Office apps for iOS requires HTTPS for server resources
-description: Beginning in version 2.57, Office app for iOS requires an HTTPS connection to server resources.
-author: dereksn
+title: Office apps for iOS require HTTPS for server resources
+description: Beginning in version 2.57, Office apps for iOS require an HTTPS connection to server resources.
+author: helenclu
+ms.reviewer: dereksn
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-matthamer
+ms.author: luche
 ms.custom: 
-- CSSTroubleshoot
-- CI 160526
-- CI 161252
+  - CSSTroubleshoot
+  - CI 160526
+  - CI 161252
 appliesto: 
   - Office app for iOS
+ms.date: 3/31/2022
 ---
 
-# Office app for iOS requires HTTPS to connect to server resources
+# Office apps for iOS require HTTPS to connect to server resources
 
 Beginning in Office apps for iOS version 2.57 and OneNote for iOS version 16.57, we enabled App Transport Security (ATS) to improve privacy and data integrity. This change requires that network connections are secured by the Transport Layer Security (TLS) protocol. For example, if you try to open a file from a SharePoint-based server that isn’t configured to use an HTTPS connection, Office apps won’t be able to open the file.
 

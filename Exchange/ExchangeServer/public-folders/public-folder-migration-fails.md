@@ -19,6 +19,7 @@ appliesto:
   - Exchange Online via Office 365 E Plans
   - Exchange Online via Office 365 P Plans
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Exchange public folder migration stops at 95% with error "There are [xx] Public Folders that could not be mail-enabled"
 

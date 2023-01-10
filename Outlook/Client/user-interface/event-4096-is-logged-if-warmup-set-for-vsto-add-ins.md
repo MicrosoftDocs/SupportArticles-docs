@@ -16,8 +16,9 @@ appliesto:
   - Outlook 2016
   - Outlook 2013
   - Microsoft Outlook 2010
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Event 4096 is logged if the WarmUp entry is set for VSTO add-ins in Outlook
 
@@ -32,7 +33,6 @@ The [Registry entries for VSTO Add-ins](/visualstudio/vsto/registry-entries-for-
 |Entry name|Type|Description|
 |---|---|---|
 |Warmup|REG_DWORD|Optional. A value that indicates that the .NET Framework and Visual Studio Tools for Office runtime load before an add-in loads and reduce the perceived time to load an add-in. Set the `Warmup` entry to 1 and use this in conjunction with `LoadBehavior` entry to reduce the load time for Outlook 2010 add-ins that are deployed by using Windows Installer (.msi). This registry key cannot be set by using ClickOnce.|
-||||
 
 ## More information
 

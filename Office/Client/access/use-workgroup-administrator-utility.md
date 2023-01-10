@@ -15,11 +15,10 @@ ms.author: luche
 ms.reviewer: jchishol
 appliesto: 
   - Access 2007
+ms.date: 3/31/2022
 ---
 
 # How to use the Workgroup Administrator utility in Access
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 This article applies to Microsoft Access .mdb files and .accdb files.
 

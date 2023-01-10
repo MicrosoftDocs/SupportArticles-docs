@@ -1,8 +1,9 @@
 ---
 title: Activating Microsoft 365 Apps for Business with a product key
 description: Describes how to activate Microsoft 365 Apps for Business with a product key.
-author: vikkarti
-ms.author: v-matthamer
+author: helenclu
+ms.reviewer: vikkarti
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -14,6 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
+ms.date: 3/31/2022
 ---
 
 # Activating Microsoft 365 Apps for Business with a product key
@@ -32,4 +34,4 @@ Use your Microsoft account, not your product key, to install and activate Micros
 
 - If your purchase of Office came with a product key, see [Where to enter your Office product key](https://support.office.com/article/Where-to-enter-your-Office-product-key-0a82e5ae-739e-4b92-a6f4-2ec780c185db).  
 
-- For help with an Office 365 Home or Personal product key, see [Using product keys with Office](https://support.office.com/article/using-product-keys-with-office-12a5763a-d45c-4685-8c95-a44500213759).
+- For help with a Microsoft 365 Home or Personal product key, see [Using product keys with Office](https://support.office.com/article/using-product-keys-with-office-12a5763a-d45c-4685-8c95-a44500213759).

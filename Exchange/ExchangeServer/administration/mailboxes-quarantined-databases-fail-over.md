@@ -16,6 +16,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2013 Enterprise
+ms.date: 3/31/2022
 ---
 # Mailboxes are quarantined and databases fail over unexpectedly in Exchange Server 2013
 

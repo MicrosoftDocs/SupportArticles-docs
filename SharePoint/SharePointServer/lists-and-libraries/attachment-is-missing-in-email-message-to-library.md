@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Windows SharePoint Services 3.0
+ms.date: 3/31/2022
 ---
 
 # Attachment is missing from an e-mail message that is sent to a document library  

@@ -15,8 +15,9 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
   - Outlook 2013
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Click here to view more on Microsoft Exchange hyperlink is missing in Outlook
 
@@ -24,7 +25,7 @@ _Original KB number:_ &nbsp; 2898376
 
 ## Symptoms
 
-When you use Microsoft Outlook 2019, Outlook 2016, Outlook 2013, or Outlook for Office 365 to connect to your Microsoft Exchange Server mailbox, your email folders display only newer items. Additionally, at the bottom of the list of items, the following message and hyperlink are missing:
+When you use Microsoft Outlook 2019, Outlook 2016, Outlook 2013, or Outlook for Microsoft 365 to connect to your Microsoft Exchange Server mailbox, your email folders display only newer items. Additionally, at the bottom of the list of items, the following message and hyperlink are missing:
 
 > This message is shown in the following figure:
 
@@ -42,7 +43,7 @@ This issue occurs when the following conditions are true:
 
   :::image type="content" source="media/click-here-to-view-more-on-microsoft-exchange-hyperlink-is-missing/server-settings.jpg" alt-text="The screenshot for Server settings" border="false":::
 
-This is a known limitation in Outlook 2019, Outlook 2016, Outlook 2013, and Outlook for Office 365.
+This is a known limitation in Outlook 2019, Outlook 2016, Outlook 2013, and Outlook for Microsoft 365.
 
 ## Workaround
 

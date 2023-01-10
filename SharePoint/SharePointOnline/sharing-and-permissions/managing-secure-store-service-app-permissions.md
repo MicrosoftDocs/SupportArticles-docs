@@ -15,6 +15,7 @@ appliesto:
   - SharePoint Server 2013
   - SharePoint Server 2010
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # Permissions required for managing the Secure Store Service app
@@ -36,7 +37,7 @@ If the accounts that are used as the Secure Store application pool identity and 
 
 ## More Information
 
-Users who are added to the Farm Administrators group in SharePoint Central Administration can access SharePoint central administration. However, when a user clicks **Manage** on the Secure Store Service application, he or she may receive an "Access is Denied" error message. This problem occurs in the following scenarios.
+Users who are added to the Farm Administrators group in SharePoint Central Administration can access SharePoint central administration. However, when they select **Manage** on the Secure Store Service application, they may receive an **Access is Denied** error message. This problem occurs in the following scenarios.
 
 ### Scenario 1
 

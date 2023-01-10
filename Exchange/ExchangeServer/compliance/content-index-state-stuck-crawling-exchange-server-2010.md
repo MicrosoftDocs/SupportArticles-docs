@@ -15,6 +15,7 @@ appliesto:
   - Exchange Server 2010 Standard
   - Exchange Server 2010 Enterprise
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Content index state remains stuck in crawling in an Exchange Server 2010 database
 

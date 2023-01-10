@@ -12,25 +12,24 @@ search.appverid:
   - MET150
 appliesto: 
   - Excel 2016
+ms.date: 3/31/2022
 ---
 
 # Error message "Microsoft Excel has stopped working" after installing KB3118373
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
-##  Symptoms
+## Symptoms
 
 Customers reported that after installing [October 4, 2016, update for Excel 2016](https://support.microsoft.com/help/3118373). Some Excel 2016 workbooks stopped responding and returned the error.
 
 > "Microsoft Excel has stopped working"
 
-##  Cause
+## Cause
 
 Due to the severe outcome, we have stopped further release of KB3118373, update for Excel 2016. If you have already installed this patch please uninstall it. 
 
 We apologize for any inconvenience this may have caused. The fix for this regression as well as other fixes in KB3118373 will be included in the next public update for Excel 2016.
 
-##  More Information
+## More Information
 
 How to uninstall this update: 
 
@@ -38,7 +37,6 @@ Windows 10
 
 1. Go to Start, enter View Installed Updates in the Search Windows box, and then press Enter.   
 2. In the list of updates, locate and select KB3118373, and then select Uninstall.  
-
 
 Windows 8 and Windows 8.1 
 

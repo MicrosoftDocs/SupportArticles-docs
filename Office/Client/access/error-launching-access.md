@@ -15,10 +15,9 @@ appliesto:
   - Access 2010
   - Microsoft Office Access 2007
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # "Access can't start because there is no license for it on this machine" error when launching Access
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 _Original KB number:_ &nbsp; 2656028
 

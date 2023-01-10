@@ -92,7 +92,6 @@ Try the following options to help determine the root cause of your problem in Wo
 | <b>Word 2010</b> | HKEY_CURRENT_USER\Software\Microsoft\Office\14.0\Word\Data |
 | <b>Word 2007</b> | HKEY_CURRENT_USER\Software\Microsoft\Office\12.0\Word\Data |
 | <b>Word 2003</b> | HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\Word\Data |
-|||
 
 
 </li>
@@ -127,7 +126,6 @@ Try the following options to help determine the root cause of your problem in Wo
 | <b>Word 2010</b> | HKEY_CURRENT_USER\Software\Microsoft\Office\14.0\Word\Options |
 | <b>Word 2007</b> | HKEY_CURRENT_USER\Software\Microsoft\Office\12.0\Word\Options |
 | <b>Word 2003</b> | HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\Word\Options |
-|||
 
 
 </li>
@@ -202,7 +200,6 @@ Try the following options to help determine the root cause of your problem in Wo
 | <b>Word 2010</b> || %programfiles%\Microsoft Office\Office14\Startup\ |
 | <b>Word 2007</b> || %programfiles%\Microsoft Office\Office12\Startup\ |
 | <b>Word 2003</b> || %programfiles%\Microsoft\Office\Office11\Startup\ |
-||||
 
 </li>
 <li>Right-click one of the files in the folder, and then select <b>Rename</b>.</li>
@@ -221,12 +218,10 @@ Try the following options to help determine the root cause of your problem in Wo
 | Windows 10, Windows 8.1, Windows 8, Windows 7, or Windows Vista |
 |---|
 | %userprofile%\AppData\Roaming\Microsoft\Word\Startup |
-||
 
 | Windows XP |
 |---|
 | %userprofile%\Application Data\Microsoft\Word\Startup |
-||
 
 </li>
 <li>Repeat steps 3 through 6 for each file in this Startup folder.</li>
@@ -362,8 +357,7 @@ To delete the Word Data registry subkey, follow these steps:
    | **Word 2010** | HKEY_CURRENT_USER\Software\Microsoft\Office\14.0\Word\Data |
    | **Word 2007** | HKEY_CURRENT_USER\Software\Microsoft\Office\12.0\Word\Data |
    | **Word 2003** | HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\Word\Data |
-   |||
-
+   
 4. Select **Data**, and then select **Export** on the **File** menu.    
 5. Name the file Wddata.reg, and then save the file to the desktop.    
 6. On the **Edit** menu, select **Delete**, and then select **Yes**.    
@@ -406,8 +400,7 @@ To delete the Word Options registry key, follow these steps:
    | **Word 2010** | HKEY_CURRENT_USER\Software\Microsoft\Office\14.0\Word\Options |
    | **Word 2007** | HKEY_CURRENT_USER\Software\Microsoft\Office\12.0\Word\Options |
    | **Word 2003** | HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\Word\Options |
-   |||
-
+   
 4. Select **Options**, and then on the **File** menu select **Export**.    
 5. Name the file Wddata.reg, and then save the file to the desktop.    
 6. On the **Edit** menu, select **Delete**, and then select **Yes**.    
@@ -510,8 +503,7 @@ To do this, follow these steps:
    | **Word 2010** || %programfiles%\Microsoft Office\Office14\Startup\ |
    | **Word 2007** || %programfiles%\Microsoft Office\Office12\Startup\ |
    | **Word 2003** || %programfiles%\Microsoft\Office\Office11\Startup\ |
-   ||||
-
+   
 4. Right-click one of the files in the folder, and then select **Rename**.    
 5. After the file name, type **.old**, and then press **Enter**.
 

@@ -1,8 +1,9 @@
 ---
 title: Sorry, another account from your organization is already signed in on this computer
 description: Troubleshooting steps for Microsoft 365 Apps activation error Sorry, another account from your organization is already signed in on this computer
-author: vikkarti
-ms.author: v-matthamer
+author: helenclu
+ms.reviewer: vikkarti
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -16,6 +17,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
+ms.date: 3/31/2022
 ---
 
 # Microsoft 365 Apps activation error: “Sorry, another account from your organization is already signed in on this computer”
@@ -24,7 +26,7 @@ When trying to activate Microsoft 365 apps, you might encounter the error:
 
 > Sorry, another account from your organization is already signed in on this computer
 
-If this occurs on a Mac, see [Can't sign in to an Office 2016 for Mac app](/office365/troubleshoot/sign-in/sign-in-to-office-2016-for-mac-fail).
+If this occurs on a Mac, see [Can't sign in to an Office 2016 for Mac app](/microsoft-365/troubleshoot/sign-in/sign-in-to-office-2016-for-mac-fail).
 
 For Windows devices, try the following troubleshooting methods to solve the problem.
 
@@ -118,7 +120,7 @@ If the process isn’t blocked, but you still can’t activate Microsoft 365, de
 1.	Restart the device.
 1.	Download and run [the SaRA package for sign in issues](https://aka.ms/SaRA-OfficeSignInScenario).
 
-For manual troubleshooting for step 7, or for more information, see [Fix authentication issues in Office applications when you try to connect to an Office 365 service](/office365/troubleshoot/authentication/automatic-authentication-fails).
+For manual troubleshooting for step 7, or for more information, see [Fix authentication issues in Office applications when you try to connect to a Microsoft 365 service](/microsoft-365/troubleshoot/authentication/automatic-authentication-fails).
 <br/><br/>
 </details>
 

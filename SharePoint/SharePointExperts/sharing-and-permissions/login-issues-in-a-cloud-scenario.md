@@ -2,7 +2,8 @@
 title: SharePoint Designer 2013 login Issues in a cloud scenario
 description: Describes the login issues in a cloud scenario of SharePoint Designer 2013.
 author: helenclu
-ms.author: joergsi
+ms.author: luche
+ms.reviewer: joergsi
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -13,13 +14,14 @@ ms.custom: sap:spsexperts, CSSTroubleshoot
 appliesto: 
   - SharePoint Designer 2013
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # SharePoint Designer 2013 login Issues in a cloud scenario
 
 This article was written by [Joerg Sinemus](https://social.msdn.microsoft.com/profile/Joerg+Sinemus), Escalation Engineer.
 
-Microsoft SharePoint Designer 2013 can be used to create workflows, change design of classic pages and do much more. When you work SharePoint Designer 2013 with Office 365 SharePoint Online, you may get some login issues. To avoid login issues, make sure that SharePoint Designer 2013 and Office are up to date by using Windows Update.
+Microsoft SharePoint Designer 2013 can be used to create workflows, change design of classic pages and do much more. When you work SharePoint Designer 2013 with Microsoft 365 SharePoint Online, you may get some login issues. To avoid login issues, make sure that SharePoint Designer 2013 and Office are up to date by using Windows Update.
 
 ## Symptoms
 

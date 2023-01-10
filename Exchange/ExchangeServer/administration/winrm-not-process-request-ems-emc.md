@@ -16,6 +16,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Server 2010
+ms.date: 3/31/2022
 ---
 # Error (The WinRM client... cannot determine the content type of the HTTP response from the destination computer) when you try to start Exchange Management Shell/Console
 

@@ -19,6 +19,7 @@ appliesto:
   - Microsoft Office Outlook 2007
   - Microsoft Office Outlook 2003
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # How to install the latest applicable updates for Microsoft Outlook (US English only)
 
@@ -51,7 +52,7 @@ To see the latest version information for click-to-run installations, click **Up
 
 For more information about click-to-run updates and to find the latest click-to-run version, go to the following Microsoft Office articles:
 
-- Office 2016: [Update history for Office 365 ProPlus (listed by date)](/officeupdates/update-history-office365-proplus-by-date?redirectSourcePath=%252fen-us%252farticle%252fae942449-1fca-4484-898b-a933ea23def7)
+- Office 2016: [Update history for Microsoft 365 Apps (listed by date)](/officeupdates/update-history-office365-proplus-by-date?redirectSourcePath=%252fen-us%252farticle%252fae942449-1fca-4484-898b-a933ea23def7)
 - Office 2013: [Update history for Office 2013](/officeupdates/update-history-office-2013?redirectSourcePath=%252farticle%252fupdate-history-for-office-2013-19214f38-85b7-4734-b2f8-a6a598bb0117)
 - Office 2010: [Update history for Office 2010 Click-to-Run products](/officeupdates/update-history-office-2010-click-to-run?redirectSourcePath=%252farticle%252fupdate-history-for-office-2010-click-to-run-products-ac74f68c-58f9-49b4-b7a7-75d899e4824d)
 
@@ -87,7 +88,6 @@ After you install all these updates, you should see the following versions of im
 |Winword.exe|16.0.4483.1000|
 |Wwlib.dll|16.0.4483.1000|
 |Mso.dll|16.0.4483.1000|
-|||
 
 ## Outlook 2013
 
@@ -149,7 +149,6 @@ After you install all these updates, you should see the following versions of im
 |Winword.exe|15.0.4893.1000|
 |Wwlib.dll|15.0.4893.1000|
 |Mso.dll|15.0.4893.1000|
-|||
 
 ## Outlook 2010
 
@@ -214,7 +213,6 @@ After you install all these updates, you should see the following versions of im
 |Winword.exe|14.0.7177.5000|
 |Wwlib.dll|14.0.7177.5000|
 |Mso.dll|14.0.7177.5000|
-|||
 
 ## Outlook 2007
 
@@ -243,7 +241,6 @@ After you install all these updates, you should see the following versions of im
 |Winword.exe|12.0.6762.5000|
 |Wwlib.dll|12.0.6762.5000|
 |Mso.dll|12.0.6762.5000|
-|||
 
 ## Outlook 2003
 
@@ -262,7 +259,6 @@ After you install all the update, you should see the following versions of impor
 |Outllib.dll|11.0.8330.0|
 |Outlook.exe|11.0.8326.0|
 |Winword.exe|11.0.8411.0|
-|||
 
 After you install all these updates, click the **Help** menu, and then click **About Microsoft Office Outlook**. The **About Microsoft Office Outlook** dialog box should show the following build number.
 

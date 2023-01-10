@@ -15,8 +15,9 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
   - Outlook 2013
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Password prompt at every Outlook start or can't create profile
 
@@ -24,14 +25,16 @@ _Original KB number:_ &nbsp; 3060280
 
 ## Symptoms
 
-When you connect to a Microsoft Exchange 2016, Exchange 2013, or Microsoft Office 365 mailbox in Microsoft Outlook 2019, Outlook 2016, Outlook, 2013 or Outlook for Office 365, you experience one of the following symptoms:
+When you connect to a Microsoft Exchange 2016, Exchange 2013, or Microsoft 365 mailbox in Microsoft Outlook 2019, Outlook 2016, Outlook, 2013 or Outlook for Microsoft 365, you experience one of the following symptoms:
 
 - You are prompted for your password every time that Outlook starts, even if you enabled the **Remember my credentials** option.
 - When you start Outlook, it is unable to connect, and it displays **Need Password** in the status bar. When you select **Need Password**, you receive the following message:  
   **This feature has been disabled by your administrator.**
 
-- When you try to create a new Outlook profile, you receive the following error message:  
-  **We're sorry, we couldn't set up your account automatically, to set it up yourself, click Next.**
+- When you try to create a new Outlook profile, you receive one of the following error messages:  
+  - **We're sorry, we couldn't set up your account automatically, to set it up yourself, click Next.**  
+  - **Something went wrong**
+  - **Something went wrong and Outlook couldn't set up your account. Please try again. If the problem continues, contact your email administrator.**
 
 ## Cause
 
@@ -41,7 +44,7 @@ This issue occurs if the **Allow Office to connect to the Internet** check box u
 
 To resolve this issue, enable the option to allow Office to connect to online services by following these steps for your version of Outlook.
 
-Outlook 2016, Outlook 2019, and Outlook for Office 365:
+Outlook 2016, Outlook 2019, and Outlook for Microsoft 365:
 
 1. On the **File** tab, select **Options**.
 2. Select **Trust Center**, and then select **Trust Center Settings**.
@@ -78,10 +81,10 @@ Value:
 
 > [!NOTE]
 >
-> - The <x.0> placeholder represents your version of Office (16.0 = Office 2016, Office 2019, or Outlook for Office 365, 15.0 = Office 2013).
+> - The <x.0> placeholder represents your version of Office (16.0 = Office 2016, Office 2019, or Outlook for Microsoft 365, 15.0 = Office 2013).
 > - If the `UseOnlineContent` value is located under the Policies hive, that value may have been created through Group Policy. Your administrator will have to change the policy to change this setting.
 
-The **Online Content Options** policy setting is located under the Microsoft Office 2019, Office 2016, Office 2013, or Outlook for Office 365 administrative template. Find these templates under **Tools | Options | General | Service Options, Online Content**.
+The **Online Content Options** policy setting is located under the Microsoft Office 2019, Office 2016, Office 2013, or Outlook for Microsoft 365 administrative template. Find these templates under **Tools | Options | General | Service Options, Online Content**.
 
 :::image type="content" source="media/password-prompt-at-every-start-or-cannot-create-profile/online-content-options-policy-setting.png" alt-text="Screenshot of Online Content Options policy setting." border="false":::
 

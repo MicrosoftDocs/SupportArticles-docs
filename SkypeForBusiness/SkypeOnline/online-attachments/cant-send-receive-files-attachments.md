@@ -13,13 +13,14 @@ ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # You can't send or receive files or attachments in Skype for Business Online
 
 ## Problem
 
-Assume that in an Office 365 environment, you try to send or receive files or attachments in Lync through Skype for Business Online (formerly Lync Online). In this situation, you may experience the following issues:
+Assume that in a Microsoft 365 environment, you try to send or receive files or attachments in Lync through Skype for Business Online (formerly Lync Online). In this situation, you may experience the following issues:
 
 - You can't send files to contacts.   
 - You can't receive files from contacts.   

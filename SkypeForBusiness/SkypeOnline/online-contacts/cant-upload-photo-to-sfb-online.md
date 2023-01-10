@@ -14,6 +14,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
   - Lync 2013
+ms.date: 3/31/2022
 ---
 
 # You can't upload a photo from Lync 2013 to Skype for Business Online

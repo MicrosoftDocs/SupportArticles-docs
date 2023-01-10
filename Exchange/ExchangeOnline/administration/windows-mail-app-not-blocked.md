@@ -2,7 +2,7 @@
 title: Windows Mail app not blocked despite ActiveSync organization settings
 description: The Exchange ActiveSync settings for your organization are set to block access to all devices, but you can still access mailboxes in Windows Mail.
 author: kellybos
-ms.author: v-matthamer
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -15,6 +15,7 @@ ms.reviewer: aruiz
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Windows Mail app not blocked despite ActiveSync organization settings

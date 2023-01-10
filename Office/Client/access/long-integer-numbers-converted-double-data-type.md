@@ -11,7 +11,7 @@ ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
-  - Access for Office 365
+  - Access for Microsoft 365
   - Access 2019
   - Access 2016
   - Access 2013
@@ -19,6 +19,7 @@ appliesto:
   - Microsoft Office Access 2007
   - Microsoft Office Access 2003
 ms.reviewer: amyv
+ms.date: 3/31/2022
 ---
 # Access exports long integer numbers as double data type with decimal places in dBase IV (.dbf) format
 

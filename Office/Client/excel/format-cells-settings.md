@@ -17,11 +17,10 @@ appliesto:
   - Excel 2010
   - Office Excel 2007
   - Office Excel 2003
+ms.date: 3/31/2022
 ---
 
 # How to control and understand settings in the Format Cells dialog box in Excel
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

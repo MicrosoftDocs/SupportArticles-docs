@@ -17,8 +17,9 @@ appliesto:
   - Outlook 2013
   - Outlook 2016 for Mac
   - Microsoft Outlook 2010
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Delegate receives multiple or duplicate meeting requests in Outlook
 

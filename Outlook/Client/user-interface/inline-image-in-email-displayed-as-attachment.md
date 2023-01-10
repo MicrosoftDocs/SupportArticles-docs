@@ -15,6 +15,7 @@ appliesto:
   - Outlook 2013
   - Microsoft Outlook 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Inline image in an email is shown as an attachment when you open the message in Outlook 2013 or 2010
 

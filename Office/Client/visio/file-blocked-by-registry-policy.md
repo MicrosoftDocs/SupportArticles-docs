@@ -14,11 +14,10 @@ search.appverid:
 appliesto: 
   - Visio Professional 2013
   - Visio Standard 2013
+ms.date: 3/31/2022
 ---
 
 # Error message when you open a file type that is blocked by registry policy settings in Visio 2013
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

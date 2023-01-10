@@ -13,17 +13,16 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
-  - Access for Office 365
+  - Access for Microsoft 365
   - Access 2019
   - Access 2016
   - Access 2013
   - Access 2010
   - Access 2007
+ms.date: 3/31/2022
 ---
 
 # "Too Many Fields Defined" error when you save a table in Access
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 Moderate: Requires basic macro, coding, and interoperability skills.
 

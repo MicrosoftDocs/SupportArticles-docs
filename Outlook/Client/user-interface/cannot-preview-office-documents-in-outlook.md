@@ -25,11 +25,12 @@ appliesto:
   - PowerPoint 2013
   - Excel 2013
   - Word 2013
-  - Outlook for Office 365
-  - Word for Office 365
-  - Excel for Office 365
-  - PowerPoint for Office 365
+  - Outlook for Microsoft 365
+  - Word for Microsoft 365
+  - Excel for Microsoft 365
+  - PowerPoint for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Can't preview Office documents in Outlook if Windows Firewall Service is disabled
 

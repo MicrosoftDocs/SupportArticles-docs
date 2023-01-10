@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # "External sharing is disabled for the site" error when a delegated partner administrator tries to access a client's SharePoint Online Admin Center
@@ -40,6 +41,6 @@ For more information about this cmdlet, see [Remove-SPOExternalUser](/powershell
 
 This issue occurs when the account that the delegated partner administrator uses for sign-in was originally invited to the SharePoint Online site of the partner's client as an guest. Guest permissions override a delegated partner's permissions. This prevents guests from accessing the SharePoint Online Admin Center.
 
-For more information, see [Partners: Build your business and administer your Office 365 partner account](https://support.microsoft.com/topic/partners-build-your-business-and-administer-your-office-365-partner-subscription-30dd1681-47e0-4cbc-abfe-a222cd111319).
+For more information, see [Partners: Build your business and administer your Microsoft 365 partner account](https://support.microsoft.com/topic/partners-build-your-business-and-administer-your-office-365-partner-subscription-30dd1681-47e0-4cbc-abfe-a222cd111319).
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

@@ -20,8 +20,9 @@ appliesto:
   - Skype for Business
   - Microsoft Lync 2013
   - Lync 2010
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # You can't see contact photos in Outlook, Skype for Business, or Lync
 
@@ -91,4 +92,4 @@ The **Do not display photograph** setting is managed by the following registry d
   Value: 1
 
 > [!NOTE]
-> The *x.0* placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Office 365, 15.0 = Office 2013, 14.0 = Office 2010).
+> The *x.0* placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Microsoft 365, 15.0 = Office 2013, 14.0 = Office 2010).

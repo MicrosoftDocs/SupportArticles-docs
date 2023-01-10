@@ -11,18 +11,17 @@ ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
-  - Excel for Office 365
+  - Excel for Microsoft 365
   - Excel 2019
   - Excel 2016
   - Excel 2013
   - Excel 2010
   - Microsoft Office Excel 2007
   - Microsoft Office Excel 2003
+ms.date: 3/31/2022
 ---
 
 # You receive a "Too many different cell formats" error message in Excel
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

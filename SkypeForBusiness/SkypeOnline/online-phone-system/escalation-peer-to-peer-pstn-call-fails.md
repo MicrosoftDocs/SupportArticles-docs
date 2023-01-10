@@ -12,6 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Cloud Connector Edition
+ms.date: 3/31/2022
 ---
 
 # Escalation of peer to peer PSTN call fails when you use Skype for Business Cloud Connector Edition
@@ -20,7 +21,7 @@ appliesto:
 
 Consider the following scenario. 
 
-- Your Office 365 user account is configured to use Cloud PBX.   
+- Your Microsoft 365 user account is configured to use Cloud PBX.   
 - You have an active PSTN call through Skype for Business on Windows, where the voice for this call uses Skype for Business Cloud Connector Edition.   
 - You try to escalate the call to a conference call by adding an additional participant to the call or by adding meeting content.   
 

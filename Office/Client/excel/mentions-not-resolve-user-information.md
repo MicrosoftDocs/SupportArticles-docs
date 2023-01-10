@@ -12,20 +12,21 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: remcgurk
 appliesto: 
-  - Word for Office 365
-  - Word for Mac for Office 365
+  - Word for Microsoft 365
+  - Word for Microsoft 365 for Mac 
   - Word for the web
-  - PowerPoint for Mac for Office 365
-  - PowerPoint for Office 365
+  - PowerPoint for Microsoft 365 for Mac
+  - PowerPoint for Microsoft 365
   - PowerPoint for the web
-  - Excel for Mac for Office 365
-  - Excel for Office 365
+  - Excel for Microsoft 365 for Mac 
+  - Excel for Microsoft 365
   - Excel for the web
-  - Outlook for Office 365
-  - Outlook for Mac for Office 365
+  - Outlook for Microsoft 365
+  - Outlook for Microsoft 365 for Mac
   - Outlook on the web
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 # User information in @mentions doesn't resolve
 

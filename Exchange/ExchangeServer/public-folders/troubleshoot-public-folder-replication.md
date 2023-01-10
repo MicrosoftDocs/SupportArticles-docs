@@ -217,7 +217,6 @@ Watch the application log on the source server for Event ID 3018, which indicate
 |Event Category:|Replication Outgoing Messages|
 |Event ID:|3018|
 |Message:|An outgoing replication message was issued.<br/>Type: 0x2<br/>Message ID: `<MessageID@Server.Domain.com>`<br/>Database "Storage Group\Public Folder"<br/>CN min: 1-100, CN max: 1-200<br/>RFIs:<br/>1) FID: 1-1234, PFID: 1-1, Offset: 28<br/>IPM_SUBTREE\Test 1|
-|||
 
 **Do you see Event ID 3018?**
 
@@ -238,7 +237,6 @@ When the public folder database is mounted, Event ID 3079 is recorded in the App
 |Event Category|Replication Errors|
 |Event ID|3079|
 |Message|Unexpected replication thread error on database "\<name>".<br/>1) FID: 1-1234, PFID: 1-1, Offset: 28<br/>IPM_SUBTREE\Test 1<br/>|
-|||
 
 **Do you see Event ID 3079?**
 
@@ -940,7 +938,6 @@ Examine Event ID 3016 to verify that the message was sent to the expected source
 |Event Category|Replication Outgoing Messages|
 |Event ID|3016|
 |Message|Outgoing message type \<value><br/>Message ID: \<id><br/>Folder: \<folder name><br/>Database "\<name>".<br/>CNSET: \<value><br/>CNSET(FAI): \<value><br/>Server: \<server name>|
-|||
 
 **Is the expected source server identified in Event ID 3016?**
 
@@ -1014,7 +1011,6 @@ Next, examine the Application log in Event Viewer for events that resemble the f
 |User|Not available|
 |Computer|Computer_Name|
 |Description|This is an SMTP protocol error log for virtual server ID 1, connection #29. The remote host `E2k3server1.contoso.com` responded to the SMTP command "xexch50" with "504 Need to authenticate first. "The full command sent was "XEXCH50 2336 3". This will probably cause the connection to fail.|
-|||
 
 |Event Type:|Error|
 |---|---|
@@ -1026,7 +1022,6 @@ Next, examine the Application log in Event Viewer for events that resemble the f
 |User|Not available|
 |Computer:|Computer_Name|
 |Description:|This is an SMTP protocol log for virtual server ID 1, connection #30. The client at "6.5.2.4" sent a "xexch50" command, and the SMTP server responded with "504 Need to authenticate first." The full command sent was "xexch50 1092 2". This will probably cause the connection to fail. These events indicate that the XEXCH50 protocol sink fired, but the exchange of the blobs failed between the servers that are listed in the events.|
-|||
 
 **Do you see Event ID 7004 and Event ID 7010 on the destination server?**
 

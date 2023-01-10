@@ -14,25 +14,25 @@ search.appverid:
 appliesto: 
   - Access 2016
   - Access 2013
-  - Access for Office 365
+  - Access for Microsoft 365
   - Access 2019
+ms.date: 3/31/2022
 ---
 
 # Access freezes when you open a linked table to a SharePoint list
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
-##  Symptoms
+## Symptoms
 
 In a Microsoft Access desktop database, when you try to open a table that's linked to a SharePoint list, Access stops responding. 
 
-##  Cause
+## Cause
 
 The issue occurs when the user who tries to open the existing linked table in Access doesn't have locally stored credentials for the SharePoint site that contains the list. A stored credential may be either a credential in Windows Credential Manager or a persistent cookie in Internet Explorer. 
 
-##  Resolution
+## Resolution
 
-To work around this issue, use one of the following methods. 
+To work around this issue, use one of the following methods.
+
 ### Method 1: Add the EnableLegacyListAuth registry entry
 
 **Note** For Access 2016, you must have Click-to-Run version 1804 (build 9226.2114) or MSI version (build 16.0.4690.1000) or a later version installed to use this method. 
@@ -57,7 +57,7 @@ To add the **EnableLegacyListAuth** registry entry, follow these steps:
    - For Access 2016
 
      HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\16.0\List    
-     
+
 2. On the **Edit** menu, point to **New**, and then click **DWORD Value**.    
 3. Type **EnableLegacyListAuth**, and then press **Enter**.    
 4. Right-click **EnableLegacyListAuth**, and then click **Modify**.    
@@ -71,8 +71,8 @@ To add the **EnableLegacyListAuth** registry entry, follow these steps:
      HKCU\SOFTWARE\Microsoft\Office\16.0\Common\Identity    
      
 7. Make sure that the value of **EnableADAL** is **0**.    
-8.  Exit Registry Editor.    
- 
+8. Exit Registry Editor.
+
 ### Method 2: Refresh the list
 
 To refresh the list, follow these steps: 
@@ -90,7 +90,6 @@ To relink the list, follow these steps:
 2. Reopen the database, and create a new module.    
 3. In VBA code, use the **RefreshLink** method of the TableDefs collection for the linked tables:
 
-
 ```vb
 Public Function TableRelinkSample()
            CurrentDb.TableDefs("<TableName>").RefreshLink
@@ -98,7 +97,7 @@ Public Function TableRelinkSample()
 ```
 
 **Note** If you have multiple linked SharePoint lists, you have to call **RefreshLink** only one time for any one of the tables.
-    
+
 4. Call the **TableRelinkSample()** function from the AutoExec macro or other startup code in the database.
 
    [TableDef.RefreshLink Method (DAO)](https://msdn.microsoft.com/library/office/ff198349.aspx)    

@@ -13,17 +13,18 @@ ms.reviewer: gbratton, nagarajp, mamcfadd
 appliesto: 
   - Outlook 2016
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # How to disable the Encrypt-Only feature in Outlook
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_&nbsp;4493792
+
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 ## Summary
 
-In Microsoft Outlook for Office 365, when the new Office 365 Message Encryption Capabilities feature is enabled, **Encrypt-Only**  is added as a new ad-hoc template. **Encrypt-Only**  enables message encryption without rights restrictions. This article describes how to disable the **Encrypt-Only** option in Outlook.
+In Microsoft Outlook for Microsoft 365, when you enable Microsoft Purview Message Encryption, **Encrypt-Only**  is added as a new ad-hoc template. **Encrypt-Only**  enables message encryption without rights restrictions. This article describes how to disable the **Encrypt-Only** option in Outlook.
 
 For more information about the feature, see [Encrypt-Only option for emails](/azure/information-protection/configure-usage-rights#encrypt-only-option-for-emails).
 

@@ -16,8 +16,9 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
   - Outlook 2013
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Attachment size exceeds the allowable limit error when you add a large attachment to an email message in Outlook
 
@@ -63,7 +64,7 @@ To modify the default attachment limit size in Outlook for an Internet email acc
 
    > [!NOTE]
    >
-   > - The <x.0> placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Office 365, 15.0 = Office 2013).
+   > - The <x.0> placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Microsoft 365, 15.0 = Office 2013).
    > - Manually create the path in the registry if it does not currently exist.
 
 4. Add the following registry data under this subkey:

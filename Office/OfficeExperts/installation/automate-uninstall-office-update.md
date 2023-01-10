@@ -8,10 +8,15 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: sap:office-experts, CSSTroubleshoot
-ms.author: ericspli
+ms.custom: 
+  - sap:office-experts
+  - CSSTroubleshoot
+  - CI 162524
+ms.reviewer: ericspli
+ms.author: v-maqiu
 appliesto: 
   - Microsoft Office
+ms.date: 3/31/2022
 ---
 
 # How to automate the uninstallation of an Office update programmatically
@@ -40,7 +45,6 @@ To determine the GUID of the installed Office version, follow these steps:
 
    - [Description of the numbering scheme for product code GUIDs in Office 2016](../../Client/office-suite-issues/numbering-scheme-for-product-guid.md)
    - [Description of the numbering scheme for product code GUIDs in Office 2013](../../Client/office-suite-issues/numbering-scheme-product-code-guids.md)
-   - [Description of the numbering scheme for product code GUIDs in Office 2010](https://support.microsoft.com/help/2186281)
 
    > [!NOTE]
    > Verify that you find the correct GUID by verifying the product in the **DisplayName** field of the key listed in the GUID.

@@ -1,6 +1,6 @@
 ---
-title: Prevent users from creating and managing distribution groups in Office 365
-description: Users can create and manage distribution groups in Office 365, but organizations may not want to allow this. Describes how Exchange Online admins can disable this functionality.
+title: Prevent users from creating and managing distribution groups in Microsoft 365
+description: Users can create and manage distribution groups in Microsoft 365, but organizations may not want to allow this. Describes how Exchange Online admins can disable this functionality.
 author: simonxjx
 audience: ITPro
 ms.topic: troubleshooting
@@ -14,16 +14,17 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
-# How to prevent users from creating and managing distribution groups in Office 365
+# How to prevent users from creating and managing distribution groups in Microsoft 365
 
 ## Introduction
 
-Users in a Microsoft Office 365 environment can create distribution groups and manage those distribution groups. As an admin, you may want to prevent users or a subset of users from creating and managing distribution groups.
+Users in a Microsoft 365 environment can create distribution groups and manage those distribution groups. As an admin, you may want to prevent users or a subset of users from creating and managing distribution groups.
 
 ## Procedure
 
-The functionality to create and manage distribution groups is available to users in organizations that don't use directory synchronization to sync users and groups from the on-premises environment to Office 365. Exchange Online admins can disable this functionality so that users can't create and manage their own distribution groups. To do this, follow these steps:
+The functionality to create and manage distribution groups is available to users in organizations that don't use directory synchronization to sync users and groups from the on-premises environment to Microsoft 365. Exchange Online admins can disable this functionality so that users can't create and manage their own distribution groups. To do this, follow these steps:
 
 ### Step 1: Edit the default role assignment policy or create a new role assignment policy
 
@@ -37,7 +38,7 @@ Do one of the following things, as appropriate for your situation:
 - Edit the default role assignment policy
 
   To edit the default role assignment policy, follow these steps:
-   1. Sign in to the Office 365 portal as an admin, click **Admin**, and then click **Exchange** to open the Exchange admin center.
+   1. Sign in to the Microsoft 365 portal as an admin, click **Admin**, and then click **Exchange** to open the Exchange admin center.
    2. In the left navigation pane click **permissions**, and then click **user roles**.
    3. Double-click **Default Role Assignment Policy**.
    4. Click to clear the **MyDistributionGroups** check box and the **MyDistributionGroupMembershipcheck** box.
@@ -46,7 +47,7 @@ Do one of the following things, as appropriate for your situation:
 - Create a new role assignment policy
 
   To create a new role assignment policy, follow these steps:
-  1. Sign in to the Office 365 portal as an admin, click **Admin**, and then click **Exchange** to open the Exchange admin center.
+  1. Sign in to the Microsoft 365 portal as an admin, click **Admin**, and then click **Exchange** to open the Exchange admin center.
   2. In the left navigation pane click **permissions**, and then click **user roles**.
   3. Click **New** (:::image type="icon" source="media/prevent-users-create-manage-dg/new.png" border="false":::).
   4. Type a name for the new role assignment policy, and then click to select the options that you want. Make sure that the **MyDistributionGroups** check box and the **MyDistributionGroupMembershipcheck** box are cleared.
@@ -65,7 +66,7 @@ To apply the role assignment policy, use one of the following methods, as approp
 
   To apply the role assignment policy to one user, follow these steps:
 
-  1. Sign in to the Office 365 portal as an admin, click **Admin**, and then click **Exchange** to open the Exchange admin center.
+  1. Sign in to the Microsoft 365 portal as an admin, click **Admin**, and then click **Exchange** to open the Exchange admin center.
   2. In the left navigation pane, click **recipients**, and then click **mailboxes**.
   3. Double-click the mailbox to which you want to apply the policy.
   4. In the mailbox details window, click **mailbox features**, and then in the **Role assignment policy** box, select the policy that you want to apply.

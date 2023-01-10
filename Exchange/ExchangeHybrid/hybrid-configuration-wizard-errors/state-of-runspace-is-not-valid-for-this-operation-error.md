@@ -16,6 +16,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # (State of runspace is not valid for this operation) error when running Hybrid Configuration wizard
 
@@ -23,7 +24,7 @@ _Original KB number:_ &nbsp; 3067613
 
 ## Symptoms
 
-You want to set up a hybrid deployment between your on-premises Exchange Server organization and Exchange Online in Office 365. However, when you run the Hybrid Configuration wizard, the wizard doesn't complete successfully. You receive a **State of runspace is not valid for this operation** error message. The full text of this message resembles the following:
+You want to set up a hybrid deployment between your on-premises Exchange Server organization and Exchange Online in Microsoft 365. However, when you run the Hybrid Configuration wizard, the wizard doesn't complete successfully. You receive a **State of runspace is not valid for this operation** error message. The full text of this message resembles the following:
 
 > ERROR:Updating hybrid configuration failed with error 'Subtask CheckPrereqs execution failed: Creating Organization Relationships.
 >
@@ -38,7 +39,7 @@ at System.Management.Automation.PowerShell.CoreInvokeAsync[TInput,TOutput](PSDat
 
 ## Resolution
 
-Follow the steps in the Solution section of this article ["Exception has been thrown by the target" error in a hybrid deployment of Office 365 and your on-premises environment](https://support.microsoft.com/help/2626696).
+Follow the steps in the Solution section of this article ["Exception has been thrown by the target" error in a hybrid deployment of Microsoft 365 and your on-premises environment](https://support.microsoft.com/help/2626696).
 
 If the problem persists, contact [Microsoft Support](https://support.microsoft.com/contactus/) and reference this article.
 

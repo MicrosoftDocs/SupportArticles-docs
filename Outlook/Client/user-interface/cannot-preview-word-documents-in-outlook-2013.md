@@ -14,6 +14,7 @@ ms.reviewer: robevans
 appliesto: 
   - Outlook 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # You can't preview Word documents in Outlook 2013
 

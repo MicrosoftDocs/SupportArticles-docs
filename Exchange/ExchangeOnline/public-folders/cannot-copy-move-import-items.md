@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - CI 161484
   - CI 159185
   - Exchange Online
   - CSSTroubleshoot
@@ -15,6 +16,7 @@ ms.reviewer: haembab; meerak; batre
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 10/13/2022
 ---
 
 # Can't copy, move, or import more than 1,000 items to public folders in Outlook
@@ -42,3 +44,7 @@ To fix this issue, open Outlook in Cached Exchange mode for copy, move, or impor
 1. [Download public folders in Cached Exchange Mode](https://support.microsoft.com/office/download-public-folders-in-cached-exchange-mode-39807488-8098-4a9c-b246-4c25e3e20510).
 1. [Add public folders to Favorites in Outlook](/exchange/collaboration-exo/public-folders/use-favorite-public-folders#add-public-folders-to-favorites-in-outlook).
 1. Copy, move, or import items to the public folder under **Favorites**.
+
+## Related content
+
+[Unable to copy or move public folders in Outlook](cannot-copy-or-move-pfs.md)

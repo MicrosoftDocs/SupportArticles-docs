@@ -12,11 +12,10 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft Office
+ms.date: 3/31/2022
 ---
 
 # Description of task panes in Office programs
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

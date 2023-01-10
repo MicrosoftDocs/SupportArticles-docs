@@ -13,15 +13,14 @@ search.appverid:
 appliesto: 
   - Office 2016
   - Office 2013
+ms.date: 3/31/2022
 ---
 
 # Office applications periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
-Users are periodically being prompted by Office 2013 and Lync 2013 for credentials to SharePoint Online, OneDrive, and Lync Online. 
+Users are periodically being prompted by Office 2013 and Lync 2013 for credentials to SharePoint Online, OneDrive, and Lync Online.
 
 The following are some examples of the credential messages:
 

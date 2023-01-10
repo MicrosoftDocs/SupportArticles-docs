@@ -14,6 +14,7 @@ ms.reviewer: tasitae
 appliesto: 
   - Outlook 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Message occurs when you start Outlook 2013: Please wait while Windows configures Microsoft Office 64-bit Components 2013
 

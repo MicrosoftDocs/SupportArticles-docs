@@ -17,8 +17,9 @@ appliesto:
   - Outlook 2013
   - Microsoft Outlook 2010
   - Microsoft Office Outlook 2007
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Email sent using Outlook are not saved to the Sent Items folder
 
@@ -93,7 +94,7 @@ The **Save copies of messages in Sent Items folder** option can be controlled us
 
   Where <x.0> is your version of Outlook:
 
-  Outlook 2016, Outlook for Office 365 and Outlook 2019 = 16.0  
+  Outlook 2016, Outlook for Microsoft 365 and Outlook 2019 = 16.0  
   Outlook 2013 = 15.0  
   Outlook 2010 = 14.0  
   Outlook 2007 = 12.0

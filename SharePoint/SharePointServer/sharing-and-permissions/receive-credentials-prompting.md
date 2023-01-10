@@ -12,6 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - SharePoint Server 2016
+ms.date: 3/31/2022
 ---
 
 # You're prompted for credentials when you open documents anonymously in SharePoint Server 2016
@@ -19,7 +20,7 @@ appliesto:
 ## Applies to:
 
 - Microsoft SharePoint Server 2016
-- Windows Installer (MSI) based version of Microsoft Office 2016 applications (does not apply to Office 365 applications)
+- Windows Installer (MSI) based version of Microsoft Office 2016 applications (does not apply to Microsoft 365 applications)
 - Anonymous access that is enabled for the SharePoint site or library
 - Accessing Office documents anonymously
 - Accessing Office documents by using a different account than the one that you used to logged in to Windows

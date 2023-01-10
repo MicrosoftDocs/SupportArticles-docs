@@ -1,6 +1,6 @@
 ---
-title: How to use mailbox audit logs in Office 365
-description: Describes how to use mailbox audit logs to determine when a mailbox was updated unexpectedly or whether items are missing in Office 365 dedicated.
+title: How to use mailbox audit logs in Microsoft 365
+description: Describes how to use mailbox audit logs to determine when a mailbox was updated unexpectedly or whether items are missing in Microsoft 365 dedicated.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -15,17 +15,18 @@ appliesto:
   - Exchange Online
   - Microsoft Exchange Online Dedicated
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
-# How to use mailbox audit logs in Office 365
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+# How to use mailbox audit logs in Microsoft 365
 
 _Original KB number:_&nbsp;4021960
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Summary
 
-In Microsoft Office 365, you can run mailbox audit logs to determine when a mailbox was updated unexpectedly or whether items are missing from a mailbox. You may have to do this, for example, if items are moved or if they're deleted unexpectedly or incorrectly.
+In Microsoft 365, you can run mailbox audit logs to determine when a mailbox was updated unexpectedly or whether items are missing from a mailbox. You may have to do this, for example, if items are moved or if they're deleted unexpectedly or incorrectly.
 
 For the vNext environment, please note that mailbox audit logs are not enabled by default and need to be turned on for a user before beginning a search.
 
@@ -41,7 +42,7 @@ Mailbox audit logging lets users obtain information about actions that are perfo
 To investigate this issue, create and use a Windows PowerShell script by using the sample script that's provided in the Step 1 in this section, and then customize a search. By default, you can investigate actions that are performed by non-owners and administrators. This script exports content in a simplified, comma-separated values (.csv) file to help you troubleshoot reports about items that are missing or that were updated unexpectedly.
 
 > [!IMPORTANT]
-> Customers are encouraged to use the script that's provided by Microsoft Online Services to help in certain investigations. Microsoft Online Services scripts are generic, and they should be usable in all customer environments. If errors occur when a script is run, the content of the script should be used as an example to create a customized script for a particular customer environment. Microsoft Online Services provides the script as a convenience to Office 365 customers without warranty, expressed or implied.
+> Customers are encouraged to use the script that's provided by Microsoft Online Services to help in certain investigations. Microsoft Online Services scripts are generic, and they should be usable in all customer environments. If errors occur when a script is run, the content of the script should be used as an example to create a customized script for a particular customer environment. Microsoft Online Services provides the script as a convenience to Microsoft 365 customers without warranty, expressed or implied.
 
 ### Step 1: Run the script
 
@@ -121,7 +122,7 @@ To run the script, follow these steps:
 
 ### Step 2: Customize a mailbox audit log search
 
-In Office 365, mailbox audit logging entries are retained in the mailbox for 90 days. You are prompted to indicate a start date and end date for the search. You can use several optional parameters to customize the search. For a description of these parameters, see the 'More Information' section.
+In Microsoft 365, mailbox audit logging entries are retained in the mailbox for 90 days. You are prompted to indicate a start date and end date for the search. You can use several optional parameters to customize the search. For a description of these parameters, see the 'More Information' section.
 
 If items are found after the script runs, you receive a message that resembles the following:
 
@@ -227,7 +228,6 @@ The most useful columns of the .csv file are exported. Some of these columns are
 |MailboxResolvedOwnerName|Resolved name of mailbox user</br>**Note** Resolved name is in the following format:</br>Domain\SamAccountName |
 |OperationResult|Status of the operation</br>**Note** Operation results include the following: </br>- Failed </br>- PartiallySucceeded </br>- Succeeded |
 |CrossMailboxOperation|Information about whether the operation logged is a cross-mailbox operation (for example, copying or moving messages among mailboxes) |
-|||
 
 ### More information about mailbox audit logging
 

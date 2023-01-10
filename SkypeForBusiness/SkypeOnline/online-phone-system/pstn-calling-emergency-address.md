@@ -12,6 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Validating a PSTN Calling emergency address returns an abbreviated city name
@@ -22,7 +23,7 @@ You validate an emergency address for your organization in the Skype for Busines
 
 ## Resolution
 
-This is functioning by design. No action is required. The address is correctly validated for the organization. Office 365 administrators can safely ignore this change in the name of the city. Typically, this occurs with the name of a city located in the state of California.
+This functioning is by design. No action is required. The address is correctly validated for the organization. Microsoft 365 administrators can safely ignore this change in the name of the city. Typically, this occurs with the name of a city located in the state of California.
 
 ## More Information
 

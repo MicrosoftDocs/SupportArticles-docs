@@ -13,11 +13,10 @@ search.appverid:
 appliesto: 
   - Excel 2013
   - Excel 2016
+ms.date: 3/31/2022
 ---
 
 # Memory usage in the 32-bit edition of Excel 2013 and 2016
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

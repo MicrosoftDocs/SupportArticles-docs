@@ -1,6 +1,6 @@
 ---
 title: Background task activation is spurious
-description: Describes an issue that triggers a Background task activation is spurious error. Occurs when you use an Office 2016 application or OneDrive for Business to access Office 365 resources. Provides a workaround.
+description: Describes an issue that triggers a Background task activation is spurious error. Occurs when you use an Office 2016 application or OneDrive for Business to access Microsoft 365 resources. Provides a workaround.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -12,9 +12,9 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Microsoft 365 Apps for enterprise
-  - Office 365 Home
-  - Office 365 Personal
-  - Office 365 Business
+  - Microsoft 365 Family
+  - Microsoft 365 Personal
+  - Microsoft 365 Apps
   - SharePoint Online
   - Exchange Online
   - Office Professional Plus 2016
@@ -30,11 +30,10 @@ appliesto:
   - Visio Professional 2016
   - Visio Standard 2016
   - Word 2016
+ms.date: 3/31/2022
 ---
 
-# "Background task activation is spurious" when you use an Office 2016 application to access Office 365 resources
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+# "Background task activation is spurious" when you use an Office 2016 application to access Microsoft 365 resources
 
 ## Problem
 
@@ -43,13 +42,13 @@ This article contains information that applies when you use the OneDrive for Bus
 > [!NOTE]
 > To determine which OneDrive sync client you're using, see [Which OneDrive sync client am I using?](https://support.office.com/article/which-onedrive-sync-client-am-i-using-19246eae-8a51-490a-8d97-a645c151f2ba).
 
-In a Windows 10 environment, you use your Office 365 work or school account to access Office 365 resources such as Exchange Online, SharePoint Online, or OneDrive for Business. However, when you start an Office 2016 application or OneDrive for Business, you receive the following error message:  
+In a Windows 10 environment, you use your Microsoft 365 work or school account to access Microsoft 365 resources such as Exchange Online, SharePoint Online, or OneDrive for Business. However, when you start an Office 2016 application or OneDrive for Business, you receive the following error message:  
 
 **Background task activation is spurious**
 
 ## Workaround
 
-To work around this issue, click **OK** to dismiss the error message, and then access the Office 365 resource again. 
+To work around this issue, click **OK** to dismiss the error message, and then access the Microsoft 365 resource again. 
 
 ## Status 
 

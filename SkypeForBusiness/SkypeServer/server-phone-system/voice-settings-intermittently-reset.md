@@ -14,6 +14,7 @@ appliesto:
   - Skype for Business Server 2015
   - Skype for Business for iOS
   - Skype for Business for Android
+ms.date: 3/31/2022
 ---
 
 # Voice settings are intermittently reset in Skype for Business app

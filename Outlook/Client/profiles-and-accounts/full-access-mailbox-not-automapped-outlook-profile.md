@@ -13,10 +13,11 @@ ms.custom:
 search.appverid: 
   - MET150
 appliesto: 
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
   - Outlook 2019
   - Outlook 2016
   - Outlook 2013
+ms.date: 3/31/2022
 ---
 # Mailboxes to which your account has full access aren't automapped to Outlook profile
 

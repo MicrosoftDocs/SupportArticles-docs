@@ -17,8 +17,9 @@ appliesto:
   - Outlook 2016
   - Outlook 2013
   - Microsoft Outlook 2010
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Emails that you forward are not saved in the Sent Items folder in Outlook
 
@@ -50,20 +51,20 @@ To fix this issue, enable the **Save forwarded messages** option by following th
 
 #### Outlook 2013 or later versions
 
-The default Group Policy template files for Outlook contain the policy setting that controls this functionality. These are Outlk16.admx and Outlk16.adml for Outlook 2016, Outlook 2019, Outlook LTSC 2021, or Outlook for Office 365 and Outlk15.admx and Outlk15.adml for Outlook 2013.
+The default Group Policy template files for Outlook contain the policy setting that controls this functionality. These are Outlk16.admx and Outlk16.adml for Outlook 2016, Outlook 2019, Outlook LTSC 2021, or Outlook for Microsoft 365 and Outlk15.admx and Outlk15.adml for Outlook 2013.
 
 To deploy this setting by using the Outlook Group Policy template, follow these steps:
 
 1. Download the following file from the Microsoft Download Center:
 
-    Office 2016, Office 2019, Office LTSC 2021, or Outlook for Office 365: [Administrative Template files (ADMX/ADML) and Office Customization Tool for Microsoft 365 Apps for enterprise, Office 2019, and Office 2016](https://www.microsoft.com/download/details.aspx?id=49030)  
+    Office 2016, Office 2019, Office LTSC 2021, or Outlook for Microsoft 365: [Administrative Template files (ADMX/ADML) and Office Customization Tool for Microsoft 365 Apps for enterprise, Office 2019, and Office 2016](https://www.microsoft.com/download/details.aspx?id=49030)  
     Office 2013: [Office 2013 Administrative Template files (ADMX/ADML) and Office Customization Tool](https://www.microsoft.com/download/details.aspx?id=35554)
 
 2. Extract the admintemplates_32bit.exe or admintemplates_64bit.exe file to a folder on your disk.
 
-3. Copy the file appropriate to your version of Outlook to the C:\Windows\PolicyDefinitions folder. Office 2016, Office 2019, Office LTSC 2021, or Outlook for Office 365: Outlk16.admx Office 2013: Outlk15.admx
+3. Copy the file appropriate to your version of Outlook to the C:\Windows\PolicyDefinitions folder. Office 2016, Office 2019, Office LTSC 2021, or Outlook for Microsoft 365: Outlk16.admx Office 2013: Outlk15.admx
 
-4. Copy the file appropriate to your version of Outlook to the C:\Windows\PolicyDefinitions\xx-xx Office 2016, Office 2019, Office LTSC 2021, or Outlook for Office 365: Outlk16.adml Office 2013: Outlk15.admlwhere xx-xx is a Language Culture Name. For example, for English (US), the Language Culture Name is en-us. For more information about Language Culture Names, see [Table of Language Culture Names, Codes, and ISO Values [C++]](/previous-versions/commerce-server/ee797784(v=cs.20)).
+4. Copy the file appropriate to your version of Outlook to the C:\Windows\PolicyDefinitions\xx-xx Office 2016, Office 2019, Office LTSC 2021, or Outlook for Microsoft 365: Outlk16.adml Office 2013: Outlk15.admlwhere xx-xx is a Language Culture Name. For example, for English (US), the Language Culture Name is en-us. For more information about Language Culture Names, see [Table of Language Culture Names, Codes, and ISO Values [C++]](/previous-versions/commerce-server/ee797784(v=cs.20)).
 
     > [!NOTE]
     > The .adml file must be copied from the correct language folder.
@@ -137,4 +138,4 @@ Value data:
 1 = enabled
 
 > [!NOTE]
-> The *x.0* placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Outlook for Office 365, 15.0 = Office 2013, 14.0 = Office 2010)
+> The *x.0* placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Outlook for Microsoft 365, 15.0 = Office 2013, 14.0 = Office 2010)

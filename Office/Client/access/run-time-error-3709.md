@@ -17,11 +17,10 @@ appliesto:
   - Access 2007
   - Access 2003
   - Access 2002
+ms.date: 3/31/2022
 ---
 
 # "Run-time error '3709'" when you enter a large amount of text in a Memo field that contains an index in Access
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 Moderate: Requires basic macro, coding, and interoperability skills.
 

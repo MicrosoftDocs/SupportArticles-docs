@@ -1,6 +1,6 @@
 ---
-title: Office 365 Hybrid Configuration Wizard fails on Exchange Server 2016 CU7
-description: Office 365 Hybrid Configuration Wizard fails to run on Exchange Server 2016 CU7, reporting error-Object reference not set to an instance of an object.
+title: Microsoft 365 Hybrid Configuration Wizard fails on Exchange Server 2016 CU7
+description: Microsoft 365 Hybrid Configuration Wizard fails to run on Exchange Server 2016 CU7, reporting error-Object reference not set to an instance of an object.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -15,14 +15,15 @@ appliesto:
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
-# Error from Office 365 Hybrid Configuration Wizard: Object not set to an instance of an object
+# Error from Microsoft 365 Hybrid Configuration Wizard: Object not set to an instance of an object
 
 _Original KB number:_ &nbsp;4051381
 
 ## Symptoms
 
-When you run the Microsoft Office 365 Hybrid Configuration Wizard after Exchange Server 2016 Cumulative Update 7 is installed, the wizard fails to run and reports that the Set-FederatedOrganizationIdentifier cmdlet returns error "Object reference not set to an instance of an object."
+When you run the Microsoft 365 Hybrid Configuration Wizard after Exchange Server 2016 Cumulative Update 7 is installed, the wizard fails to run and reports that the Set-FederatedOrganizationIdentifier cmdlet returns error "Object reference not set to an instance of an object."
 
 This message is part of the following full error message that's written to the Hybrid Configuration Wizard log:
 
@@ -65,7 +66,7 @@ Use this method if you have a second Exchange Server in your domain that's runni
     Set-FederatedOrganizationIdentifier -AccountNamespace '<AccountNameSpace>' -DelegationFederationTrust 'Microsoft Federation Gateway' -Enabled: $true -DefaultDomain $null
     ```
 
-1. After the cmdlet is completed successfully, run the Microsoft Office 365 Hybrid Configuration Wizard on Exchange Server 2016 Cumulative Update 7.
+1. After the cmdlet is completed successfully, run the Microsoft 365 Hybrid Configuration Wizard on Exchange Server 2016 Cumulative Update 7.
 
 ## Workaround 2
 

@@ -15,6 +15,7 @@ appliesto:
   - Outlook 2013
   - Microsoft Outlook 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # 0x8007007A error when you try to download an Offline Address Book in Outlook 2013 or Outlook 2010
 

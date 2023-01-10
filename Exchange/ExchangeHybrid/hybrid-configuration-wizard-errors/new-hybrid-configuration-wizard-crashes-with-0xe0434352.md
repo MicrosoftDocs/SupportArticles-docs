@@ -14,6 +14,7 @@ ms.reviewer: timothyh, pramods
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # New Hybrid Configuration Wizard crashes with error code 0xe0434352
 

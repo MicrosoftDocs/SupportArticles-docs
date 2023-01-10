@@ -13,11 +13,10 @@ search.appverid:
   - MET150
 appliesto: 
   - Excel 2013
+ms.date: 3/31/2022
 ---
 
 # Excel 2013 takes a very long time to insert or delete rows after a custom sort on many named columns
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

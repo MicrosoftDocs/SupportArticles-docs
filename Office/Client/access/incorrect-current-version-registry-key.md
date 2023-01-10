@@ -14,11 +14,10 @@ appliesto:
   - Access 2010
   - Access 2013
   - Microsoft Office Access 2007
+ms.date: 3/31/2022
 ---
 
 # Access: Incorrect version registry key
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

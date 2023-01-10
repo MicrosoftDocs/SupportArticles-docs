@@ -2,7 +2,7 @@
 title: IMAP clients fail to logon when Exchange Server 2010 coexists with Exchange Server 2016
 description: IMAP clients are repeatedly prompted for authentication credentials. This article provides two solutions.
 author: simonxjx
-ms.author: akashb
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -17,6 +17,7 @@ appliesto:
   - Exchange Server 2010
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 
 # IMAP clients fail to logon when Exchange Server 2010 coexists with Exchange Server 2016

@@ -17,6 +17,7 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2019
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Can't send or receive email messages behind a Cisco PIX or Cisco ASA firewall with the Mailguard feature turned on
 

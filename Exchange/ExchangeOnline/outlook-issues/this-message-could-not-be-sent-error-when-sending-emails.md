@@ -1,6 +1,6 @@
 ---
 title: This message could not be sent error
-description: Describes an issue in Office 365 in which users who have Send As permission to a distribution group receive a non-delivery report when they try to send an email message to other users in Outlook.
+description: Describes an issue in Microsoft 365 in which users who have Send As permission to a distribution group receive a non-delivery report when they try to send an email message to other users in Outlook.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -14,14 +14,15 @@ ms.reviewer:
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
-# This message could not be sent NDR when an approved user sends mail in Office 365
+# This message could not be sent NDR when an approved user sends mail in Microsoft 365
 
 _Original KB number:_ &nbsp; 2918777
 
 ## Symptoms
 
-When a user who has Send As permission to a distribution group tries to send an email message to other users by using Microsoft Outlook in Office 365, the user receives a non-delivery report (NDR) that contains the following error message:
+When a user who has Send As permission to a distribution group tries to send an email message to other users by using Microsoft Outlook in Microsoft 365, the user receives a non-delivery report (NDR) that contains the following error message:
 
 > This message could not be sent. Try sending the message again later, or contact your network administrator.  
 Error is [0x80070005-00000000-00000000]

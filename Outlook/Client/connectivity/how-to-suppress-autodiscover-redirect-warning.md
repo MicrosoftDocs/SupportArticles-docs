@@ -16,8 +16,9 @@ appliesto:
   - Outlook 2016
   - Outlook 2013
   - Microsoft Outlook 2010
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # How to suppress the AutoDiscover redirect warning in Outlook
 
@@ -45,19 +46,13 @@ To configure Outlook behavior when HTTP redirection occurs, you can set or deplo
 
 1. Close Outlook.
 2. Start Registry Editor.
-   - In Windows Vista, select **Start**, type *regedit* in the **Start Search** box, and then press Enter.
-
-      If you are prompted for an administrator password or confirmation, type the password, or select **Continue**.
-
-   - In Windows XP, select **Start**, select **Run**, type *regedit* in the **Open** box, and then select **OK**.
-
 3. Locate and then select the following registry subkey:  
-   `HKEY_CURRENT_USER\Software\Microsoft\Office\ **xx**.0\Outlook\AutoDiscover\RedirectServers`
+   `HKEY_CURRENT_USER\Software\Microsoft\Office\<xx.0>\Outlook\AutoDiscover\RedirectServers`
 
     > [!NOTE]
     > You can also use the following registry subkey:  
-    > `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\\<xx.0>\Outlook\AutoDiscover\RedirectServers`  
-    > Where <xx.0> is 14.0 for Outlook 2010, 15.0 for Outlook 2013, and 16.0 for Outlook 2016, Outlook for Office 365 and Outlook 2019.
+    > `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\<xx.0>\Outlook\AutoDiscover\RedirectServers`  
+    > Where \<xx.0\> is 14.0 for Outlook 2010, 15.0 for Outlook 2013, and 16.0 for Outlook 2016, Outlook for Microsoft 365 and Outlook 2019.
 
 4. Select the **Edit** menu, point to **New**, and then select **String Value**.
 

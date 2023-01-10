@@ -14,11 +14,10 @@ search.appverid:
 appliesto: 
   - Office 2013 Service Pack 1
   - Excel 2013
+ms.date: 3/31/2022
 ---
 
 # Excel workbook is not activated when you run a macro that calls the Workbook.Activate method
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms 
 

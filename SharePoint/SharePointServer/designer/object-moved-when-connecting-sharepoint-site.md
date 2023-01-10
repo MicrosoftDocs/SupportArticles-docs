@@ -13,6 +13,7 @@ ms.reviewer: shcui, SPspms
 appliesto: 
   - SharePoint Server 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Object moved error when you connect to a SharePoint site by using SharePoint Designer 2013
 

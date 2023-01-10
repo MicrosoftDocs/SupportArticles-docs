@@ -12,7 +12,7 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: 
 appliesto: 
-  - Access for Office 365
+  - Access for Microsoft 365
   - Access 2019
   - Access 2016
   - Access 2013
@@ -20,6 +20,7 @@ appliesto:
   - Access 2007
   - Access 2003
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # You receive a "ActiveX component can't create object" error message when using Access

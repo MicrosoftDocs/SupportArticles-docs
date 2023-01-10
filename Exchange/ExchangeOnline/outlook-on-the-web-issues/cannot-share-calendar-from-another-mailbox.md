@@ -1,6 +1,6 @@
 ---
 title: Can't share calendar from another mailbox
-description: You are unable to share Calendar from another mailbox by using OWA in Office 365 even though you have Full Access permissions of the mailbox.
+description: You are unable to share Calendar from another mailbox by using OWA in Microsoft 365 even though you have Full Access permissions of the mailbox.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -14,8 +14,9 @@ ms.reviewer: alinastr, mhaque, robertso
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
-# You can't share the Calendar from another mailbox by using Outlook Web App in Office 365
+# You can't share the Calendar from another mailbox by using Outlook Web App in Microsoft 365
 
 _Original KB number:_ &nbsp; 4091516
 
@@ -23,7 +24,7 @@ _Original KB number:_ &nbsp; 4091516
 
 Consider the following scenario:
 
-- You try to open another mailbox by using Outlook Web App (OWA) in Microsoft Office 365.
+- You try to open another mailbox by using Outlook Web App (OWA) in Microsoft 365.
 - You have **Full Access** permissions for the mailbox.
 - You locate the Calendar for the mailbox, and then you select **Share**.
 

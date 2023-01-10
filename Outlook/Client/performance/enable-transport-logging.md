@@ -19,6 +19,7 @@ appliesto:
   - Outlook 2010
   - Office Outlook 2007
   - Office Outlook 2003
+ms.date: 3/31/2022
 ---
 
 # How to enable transport logging in Outlook
@@ -44,7 +45,7 @@ To have us enable the mail logging option for you, go to the "Here's an easy fix
  
 To enable logging, follow the steps for your version of Outlook. 
 
-#### Microsoft Outlook 2019, Microsoft Outlook 2016, Microsoft Outlook 2013, Microsoft Outlook 2010, and Outlook for Office 365
+#### Microsoft Outlook 2019, Microsoft Outlook 2016, Microsoft Outlook 2013, Microsoft Outlook 2010, and Outlook for Microsoft 365
 
 1. On the **File** tab, click **Options**.    
 2. In the **Outlook Options** dialog box, click **Advanced**.    
@@ -98,7 +99,7 @@ DWORD: EnableLogging
 Values: 1 = logging enabled, 0 = logging disabled
 
 > [!NOTE]
-> In the subkey, <1x.0> represents the program version number ("16.0" = Outlook 2019, Outlook 2016 or Outlook for Office 365, "15.0" = Outlook 2013, "14.0" = Outlook 2010, "12.0" = Outlook 2007).
+> In the subkey, <1x.0> represents the program version number ("16.0" = Outlook 2019, Outlook 2016 or Outlook for Microsoft 365, "15.0" = Outlook 2013, "14.0" = Outlook 2010, "12.0" = Outlook 2007).
 
 After you enable logging, all communications that occur between Outlook and the email server are written to a log file.
 
@@ -109,7 +110,7 @@ After you enable logging, all communications that occur between Outlook and the 
  
 The log files are formatted as plain text. To find the log files, look in the following locations, depending upon your version of Outlook and also your version of Windows, if you are running Outlook 2007 or an earlier version. 
 
-#### Microsoft Outlook 2019, Outlook 2016, Outlook 2013, Outlook 2010 and Outlook for Office 365
+#### Microsoft Outlook 2019, Outlook 2016, Outlook 2013, Outlook 2010 and Outlook for Microsoft 365
 
 ##### POP3, SMTP, MAPI logs
  

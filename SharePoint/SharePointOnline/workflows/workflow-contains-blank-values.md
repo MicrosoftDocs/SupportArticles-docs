@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
   - SharePoint Server
+ms.date: 3/31/2022
 ---
 
 # Workflow that uses the SharePoint 2013 Workflow Platform Type contains blank values in output from the "Multiple lines of text" column

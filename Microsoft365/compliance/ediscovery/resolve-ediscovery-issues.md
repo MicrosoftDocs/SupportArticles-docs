@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting common eDiscovery issues
-description: Learn about basic troubleshooting steps you can take to resolve common issues in Office 365 eDiscovery.
+description: Learn about basic troubleshooting steps you can take to resolve common issues in Microsoft Purview eDiscovery.
 f1.keywords: 
   - NOCSH
 ms.author: v-six
@@ -20,8 +20,11 @@ search.appverid:
   - MOE150
   - MET150
 siblings_only: true
+ms.date: 3/31/2022
 ---
 # Resolve common eDiscovery issues
+
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 This article covers basic troubleshooting steps that you can take to identify and resolve issues that you might encounter during an eDiscovery search or elsewhere in the eDiscovery process. Resolving some of these scenarios requires help from Microsoft Support. Information about when to contact Microsoft Support is included in the resolution steps.
 
@@ -119,7 +122,7 @@ An eDiscovery search fails and returns a "recipient not found" error message. Th
 
 ## Error/issue: Search fails with error CS007
 
-When performing a Content search or a search associated with a Core eDiscovery case, a transient error occurs and the search fails with a CS007 error.
+When performing a Content search or a search associated with a eDiscovery (Standard) case, a transient error occurs and the search fails with a CS007 error.
 
 ### Resolution
 
@@ -129,7 +132,7 @@ When performing a Content search or a search associated with a Core eDiscovery c
 
 ## Error/issue: Exporting search results is slow
 
-When exporting search results from Core eDiscovery or Content search in the Microsoft 365 compliance center, the download takes longer than expected.  You can check to see the amount of data to be download and possibly increase the export speed.
+When exporting search results from eDiscovery (Standard) or Content search in the Microsoft Purview compliance portal, the download takes longer than expected.  You can check to see the amount of data to be download and possibly increase the export speed.
 
 ### Resolution
 
@@ -155,7 +158,7 @@ When exporting search results from Core eDiscovery or Content search in the Micr
 
 ## Error/issue: Export process not progressing or is stuck
 
-When you export search results from Core eDiscovery or Content search in the Microsoft 365 compliance center, the export process is not progressing or appears to be stuck.
+When you export search results from eDiscovery (Standard) or Content search in the Microsoft Purview compliance portal, the export process is not progressing or appears to be stuck.
 
 ### Resolution
 

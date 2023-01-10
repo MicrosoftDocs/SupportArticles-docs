@@ -14,6 +14,7 @@ ms.reviewer: vibour
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Public folder couldn't be mail-enabled when you migrate public folders to Exchange Online
 

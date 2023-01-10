@@ -20,6 +20,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Users prompted for credentials after adding a shared mailbox as a second Exchange email account in their Outlook profile
 
@@ -29,7 +30,7 @@ _Original KB number:_ &nbsp; 3184064
 
 Consider the following scenario:
 
-- You have a hybrid deployment of on-premises Microsoft Exchange Server and Microsoft Exchange Online in Office 365.
+- You have a hybrid deployment of on-premises Microsoft Exchange Server and Microsoft Exchange Online in Microsoft 365.
 - You configured legacy on-premises public folders for a hybrid deployment.
 - You create a shared mailbox that's located in Exchange Online.
 - You assign Full Access permissions to one or more users.

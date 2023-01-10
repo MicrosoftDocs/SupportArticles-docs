@@ -15,11 +15,10 @@ appliesto:
   - Microsoft Office Excel 2007
   - Microsoft Office Excel 2003
   - Excel 2010
+ms.date: 3/31/2022
 ---
 
 # How to loop through a list of data on a worksheet by using macros in Excel
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

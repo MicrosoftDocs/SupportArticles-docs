@@ -12,11 +12,10 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Microsoft Office
+ms.date: 3/31/2022
 ---
 
 # "Incorrect function" when saving a file from an Office program to a CD-RW or a DVD/CD-RW drive
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

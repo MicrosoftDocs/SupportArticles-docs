@@ -15,11 +15,10 @@ ms.author: luche
 ms.reviewer: mattbum
 appliesto: 
   - Access 2007
+ms.date: 3/31/2022
 ---
 
 # "This feature isn't installed, or has been disabled" when you open a wizard in Access
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

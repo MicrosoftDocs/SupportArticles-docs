@@ -19,6 +19,7 @@ appliesto:
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2013 Enterprise
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # EAC is slow to display recipients if PowerShell Transcription is turned on
 

@@ -14,10 +14,11 @@ ms.reviewer: farshadt
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Exchange Online Hybrid Free/Busy Diagnostic
 
-The Exchange Online Hybrid Free/Busy Diagnostic package collects Windows PowerShell command results that Office 365 technical support can use to troubleshoot free/busy issues in an Exchange hybrid deployment. The Support Diagnostics Platform (SDP) diagnostic tool uses this diagnostic package to collect relevant information. The SDP should be run on the hybrid server.
+The Exchange Online Hybrid Free/Busy Diagnostic package collects Windows PowerShell command results that Microsoft 365 technical support can use to troubleshoot free/busy issues in an Exchange hybrid deployment. The Support Diagnostics Platform (SDP) diagnostic tool uses this diagnostic package to collect relevant information. The SDP should be run on the hybrid server.
 
 This article lists the information that may be collected when this diagnostic package is run.
 
@@ -28,8 +29,8 @@ _Original KB number:_ &nbsp; 2957394
 > [!NOTE]
 >
 > - This diagnostic package is created specifically for customers who have a hybrid deployment of on-premises Exchange Server and Exchange Online.
-> - You have to provide global admin credentials for the Office 365 organization with which you are setting up free/busy.
-> - The SDP package asks you for the primary SMTP address of the on-premises users and the Office 365 users whose free/busy data you want to pull.
+> - You have to provide global admin credentials for the Microsoft 365 organization with which you are setting up free/busy.
+> - The SDP package asks you for the primary SMTP address of the on-premises users and the Microsoft 365 users whose free/busy data you want to pull.
 
 ### Exchange Online-related files
 
@@ -39,7 +40,6 @@ _Original KB number:_ &nbsp; 2957394
 |Get-FederationInformation cmdlet output for specified Domain.|O365_Get-FederationInformation -DomainName \<DomainName>.log|
 |Get-OrganizationRelationship cmdlet output|O365_Get-OrganizationRelationship.log|
 |Get-SharingPolicy cmdlet output|O365_Get-SharingPolicy.log|
-|||
 
 ### Hybrid server-related files
 
@@ -71,7 +71,6 @@ _Original KB number:_ &nbsp; 2957394
 |Get-WebServicesVirtualDirectory cmdlet output|\<HYBRIDSERVERNAME>_WebServicesVirtualDirectory_FL|
 |IIS log files|W3SVC1LogFiles.cab|
 |IIS log files|W3SVC2LogFiles.cab|
-|||
 
 ### On-premises legacy Exchange-related files
 
@@ -80,7 +79,6 @@ _Original KB number:_ &nbsp; 2957394
 |Get-mailbox -arbitration cmdlet output|\<HYBRIDSERVERNAME>_Arbitration Mailbox_FL.TXT|
 |Get-PublicFolderClientPermission cmdlet output|\<HYBRIDSERVERNAME>_NON_IPM_SUBTREE_SCHEDULE_FREE_BUSY_FIRST ORGANIZATION_EXTERNAL_FYDIBOHF25SPDLT.log_FL.TXT|
 |Get-PublicFolder cmdlet output|\<HYBRIDSERVERNAME>_NON_IPM_SUBTREE_SCHEDULE_FREE BUSY.log_FL|
-|||
 
 ## References
 

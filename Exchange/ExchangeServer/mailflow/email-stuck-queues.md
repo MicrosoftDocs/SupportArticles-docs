@@ -8,7 +8,8 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: sesteven
+ms.author: v-six
+ms.reviewer: sesteven
 ms.custom: 
   - CSSTroubleshoot
   - CI 124314
@@ -18,6 +19,7 @@ appliesto:
   - Exchange Server 2019
   - Exchange Server 2016
   - Exchange Server 2013
+ms.date: 3/31/2022
 ---
 
 # Email messages are stuck in Exchange Server queues for several minutes

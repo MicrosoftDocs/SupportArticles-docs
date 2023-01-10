@@ -1,6 +1,6 @@
 ---
-title: Enable or disable POP3, IMAP, MAPI, Outlook Web App or ActiveSync in Office 365
-description: Describes how to enable or disable POP3, IMAP, MAPI, Outlook Web App or ActiveSync in Office 365.
+title: Enable or disable POP3, IMAP, MAPI, Outlook Web App or ActiveSync in Microsoft 365
+description: Describes how to enable or disable POP3, IMAP, MAPI, Outlook Web App or ActiveSync in Microsoft 365.
 author: simonxjx
 audience: ITPro
 ms.topic: troubleshooting
@@ -14,8 +14,9 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
-# Enable or disable POP3, IMAP, MAPI, Outlook Web App or Exchange ActiveSync in Office 365
+# Enable or disable POP3, IMAP, MAPI, Outlook Web App or Exchange ActiveSync in Microsoft 365
 
 This article introduces the PowerShell commands that you can use to enable or disable the following items for a mailbox in Exchange Online:
 

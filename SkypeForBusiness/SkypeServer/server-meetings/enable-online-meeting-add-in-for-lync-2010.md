@@ -12,6 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Lync 2010
+ms.date: 3/31/2022
 ---
 
 # How to enable the Online Meeting Add-in for Microsoft Lync 2010 in Outlook

@@ -14,11 +14,10 @@ appliesto:
   - Office 2010
   - Office 2007
   - Office 2003
+ms.date: 3/31/2022
 ---
 
 # "Your system is low on virtual memory" error message when you try to start an Office program
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

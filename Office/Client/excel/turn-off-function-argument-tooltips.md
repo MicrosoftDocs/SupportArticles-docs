@@ -14,11 +14,10 @@ appliesto:
   - Microsoft Office Excel 2007
   - Microsoft Office Excel 2003
   - Microsoft Office Excel 2002
+ms.date: 3/31/2022
 ---
 
 # How to turn off Function Argument ToolTips in Excel
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

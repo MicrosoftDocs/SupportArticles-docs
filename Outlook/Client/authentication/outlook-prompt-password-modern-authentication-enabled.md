@@ -1,6 +1,6 @@
 ---
 title: Outlook prompts for password when Modern Authentication is enabled
-description: Describes two scenarios in which Outlook prompts for credentials and doesn't use Modern Authentication to connect Office 365. Provides a resolution.
+description: Describes two scenarios in which Outlook prompts for credentials and doesn't use Modern Authentication to connect Microsoft 365. Provides a resolution.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -15,11 +15,12 @@ appliesto:
   - Outlook 2016
   - Outlook 2013
   - Exchange Online
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
   - Outlook 2019
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
-# Outlook prompts for password and doesn't use Modern Authentication to connect to Office 365
+# Outlook prompts for password and doesn't use Modern Authentication to connect to Microsoft 365
 
 _Original KB number:_ &nbsp;3126599
 
@@ -29,13 +30,13 @@ Consider the following scenarios.
 
 **Scenario 1**:
 
-Microsoft Outlook connects to your primary mailbox in an on-premises Exchange server by using RPC, and it also connects to another mailbox that's located in Office 365.
+Microsoft Outlook connects to your primary mailbox in an on-premises Exchange server by using RPC, and it also connects to another mailbox that's located in Microsoft 365.
 
 **Scenario 2**:
 
-You migrate your mailbox to Office 365 from an Exchange server that Outlook connects to by using RPC.
+You migrate your mailbox to Microsoft 365 from an Exchange server that Outlook connects to by using RPC.
 
-In these scenarios, you're prompted for credentials, and Outlook doesn't use Modern Authentication to connect to Office 365. After you enter your credentials, they're transmitted to Office 365 instead of to a token.
+In these scenarios, you're prompted for credentials, and Outlook doesn't use Modern Authentication to connect to Microsoft 365. After you enter your credentials, they're transmitted to Microsoft 365 instead of to a token.
 
 ## Cause
 
@@ -77,4 +78,4 @@ If you're running Office 2013, make sure that both Outlook and MSO are updated t
 > [!NOTE]
 > Office 2016 doesn't require an update for this registry key to work.
 
-For more information about RPC, see [RPC over HTTP reaches end of support in Office 365 on October 31, 2017](https://support.microsoft.com/help/3201590/rpc-over-http-reaches-end-of-support-in-office-365-on-october-31-2017).
+For more information about RPC, see [RPC over HTTP reaches end of support in Microsoft 365 on October 31, 2017](https://support.microsoft.com/help/3201590/rpc-over-http-reaches-end-of-support-in-office-365-on-october-31-2017).

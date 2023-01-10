@@ -18,6 +18,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Microsoft Office Outlook 2007
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Internet Connection Sharing file instead of a Calendar Sharing or Policy does not allow granting permissions error
 

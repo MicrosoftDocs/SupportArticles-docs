@@ -12,11 +12,10 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft 365 Apps for enterprise
+ms.date: 3/31/2022
 ---
 
-# "This feature has been disabled by your Administrator" when Office 365 activates Skype for Business
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+# "This feature has been disabled by your Administrator" when Microsoft 365 activates Skype for Business
 
 ## Symptoms
 

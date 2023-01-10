@@ -16,12 +16,13 @@ appliesto:
   - Word 2013
   - Word 2010
   - Word 2007
+ms.date: 3/31/2022
 ---
 
 # Troubleshoot why Word does not print
 
 > [!NOTE]
-> If you're using **Microsoft 365** (Microsoft Word for Office 365 with Windows 10), see [Troubleshoot print failures in Word for Office 365 on Windows 10](print-failures-word-for-office-365-on-win-10.md).
+> If you're using **Microsoft 365** (Microsoft Word for Microsoft 365 with Windows 10), see [Troubleshoot print failures in Word for Microsoft 365 on Windows 10](print-failures-word-for-office-365-on-win-10.md).
 
 This article describes how to diagnose print failures in Microsoft Word. It also explains how to isolate the cause of the print failure and how to resolve the issue.
 

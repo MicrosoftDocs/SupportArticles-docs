@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: daveh
 appliesto: 
   - Lync Server 2013
+ms.date: 3/31/2022
 ---
 
 # You cannot start a front-end server when a SQL Server transaction log reaches maximum capacity in a Lync Server 2013 environment

@@ -14,8 +14,9 @@ ms.reviewer:
 appliesto: 
   - Outlook 2019
   - Outlook 2016
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # The address list cannot be displayed error when you try to view the contacts of a public folder in Outlook
 
@@ -23,7 +24,7 @@ _Original KB number:_ &nbsp; 4020049
 
 ## Symptoms
 
-When you try to select a public folder that contains contacts from the address book list in Microsoft Outlook 2016, Outlook 2019 or Outlook for Office 365, you receive the following error message even if you have permissions to read all objects of the folder:
+When you try to select a public folder that contains contacts from the address book list in Microsoft Outlook 2016, Outlook 2019 or Outlook for Microsoft 365, you receive the following error message even if you have permissions to read all objects of the folder:
 
 > The address list cannot be displayed. The Contacts folder associated with this address list could not be opened; it may have been moved or deleted, or you do not have permissions. For information on how to remove this folder from the Outlook Address Book, see Microsoft Outlook Help.
 
@@ -33,12 +34,12 @@ This issue may occur if the `ExcludeHttpsAutoDiscoverDomain` value under the fol
 
 `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\AutoDiscover\`
 
-In this situation, set the value to **0**, and then restart Outlook 2016, Outlook 2019 or Outlook for Office 365 to fix the issue.
+In this situation, set the value to **0**, and then restart Outlook 2016, Outlook 2019 or Outlook for Microsoft 365 to fix the issue.
 
 Additionally, this issue can occur if any of the Autodiscover endpoints is blocked or if Outlook 2016 can't find the Autodiscover information. You can use one of the following methods to test the Autodiscover connectivity:
 
 - **For on-premises users**: [Microsoft remote connectivity analyzer](https://testconnectivity.microsoft.com/tests/o365)
-- **For Office 365 users**: [About the Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f)
+- **For Microsoft 365 users**: [About the Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f)
 
 ## References
 

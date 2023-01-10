@@ -1,7 +1,8 @@
 ---
 title: Access error String data, right truncation (#0)
 description: Describes an issue that causes the Access error String data, right truncation (#0).
-author: denniwil
+author: helenclu
+ms.reviewer: denniwil
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
@@ -11,11 +12,12 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-matthamer
+ms.author: luche
 appliesto: 
-  - Access for Office 365
+  - Access for Microsoft 365
   - Access 2019
   - Access 2016
+ms.date: 3/31/2022
 ---
 
 # Access error: "String data, right truncation (#0)"

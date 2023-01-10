@@ -15,6 +15,7 @@ appliesto:
   - Outlook 2016
   - Outlook 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Synchronization monitor improvements in Microsoft Outlook
 
@@ -88,7 +89,6 @@ The data for this registry setting controls the repair process in a cumulative m
 |3|Use improved detection logic related to read/unread counts.<br/>Use improved detection logic to decide whether items have changed between local/server.<br/>Never clear offline items repair.<br/><br/>**NOTE** This setting enables the sync monitor to try to repair the sync problems by using steps 1, 2, and 3 in the sync monitor repair process.|
 |4|Use improved detection logic related to read/unread counts.<br/>Use improved detection logic to decide whether items have changed between local/server.<br/>Never try the integrity check scan.<br/>Never clear offline items repair.<br/><br/> **NOTE** This setting enables the sync monitor to try to repair the sync problems by using steps 1 and 2 in the sync monitor repair process.|
 |5|Use improved detection logic related to read/unread counts.<br/>Use improved detection logic to decide whether items have changed between local/server.<br/>Do not fix problems with the local binary information that is used to track sync state.<br/>Never try the integrity check scan.<br/>Never clear offline items repair.<br/><br/>**NOTE** This setting enables the sync monitor to try to repair the sync problems by using step 1 in the sync monitor repair process.|
-|||
 
 Diagnostic logging
 

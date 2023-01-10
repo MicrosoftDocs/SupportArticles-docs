@@ -9,18 +9,17 @@ ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft 365 Apps for enterprise
+  - MET150
+appliesto: 
+  - Microsoft 365 Apps for enterprise
+ms.date: 3/31/2022
 ---
 
 # Description of the Office Feature Updates task
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
-Starting in Microsoft Office ProPlus build 16.0.11220.*xxxxx* or a later build, there are two new tasks:
+Starting in Microsoft Office ProPlus build 16.0.11220.* or a later build, there are two new tasks:
 
 - Office Feature Updates
 - Office Feature Updates Logon
@@ -48,7 +47,7 @@ The **Office Feature Updates** task calls the "SDXHelper.exe" process in the bac
 
 **Q2: What are the pros and cons of disabling this task permanently? Is this recommended?**
 
-**A2:** For Office 365 customers, we recommend that they do not disable the Office Feature Updates task. This task makes sure that their Office features download the latest updates when the updates are available. In the future, more features will be updated through this task.
+**A2:** For Microsoft 365 customers, we recommend that they do not disable the Office Feature Updates task. This task makes sure that their Office features download the latest updates when the updates are available. In the future, more features will be updated through this task.
 
 **Q3: Is this task dependent on the Office Automatic Updates 2.0 task (or vice versa) for Office feature updates?**
 

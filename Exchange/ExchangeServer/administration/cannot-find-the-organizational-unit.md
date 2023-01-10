@@ -15,6 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Server
+ms.date: 3/31/2022
 ---
 # Error when you manage a user in EAC: Can't find the organizational unit that you specified
 

@@ -1,6 +1,6 @@
 ---
 title: eDiscovery searches are queued indefinitely
-description: Describes an issue in which the status of an eDiscovery search in Exchange Online remains in asearch has been queued state. Provides a workaround.
+description: Describes an issue in which the status of an eDiscovery search in Exchange Online remains in a search has been queued state. Provides a workaround.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -13,10 +13,13 @@ ms.reviewer:
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # eDiscovery searches in Exchange Online are queued indefinitely
 
 _Original KB number:_ &nbsp; 2979630
+
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 ## Symptoms
 
@@ -24,13 +27,13 @@ You perform an eDiscovery search in the Exchange admin center in Exchange Online
 
 ## Cause
 
-This problem occurs if the regional setting is **English (Canada)**. When you filter the search by using start and end dates, the **English (Canada)** regional setting configures the `DateFormat` property to use the DD/MM/YY format. This time format is passed to the .NET Framework `DateTime.TryParse` method, and this causes the search to fail and throw an exception.
+This problem occurs if the regional setting is **English (Canada)**. When you filter the search by using start and end dates, the **English (Canada)** regional setting configures the `DateFormat` property to use the DD/MM/YY format. This time format is passed to the .NET Framework `DateTime.TryParse` method, and causes the search to fail and throw an exception.
 
 ## Workaround
 
-To work around this issue, do one of the following:
+To work around this issue, use one of the following options:
 
-- Do not specify start and end dates. Instead, in the **Keywords** box on the **Search query** page, use date query terms that use the MM/DD/YY format. For example:
+- Don't specify start and end dates. Instead, in the **Keywords** box on the **Search query** page, use date query terms that use the MM/DD/YY format. For example:
 
   Received>="06/01/2009 7:00:00 AM" AND Received<="06/01/2014 7:00:00 AM"
 
@@ -40,7 +43,7 @@ To work around this issue, do one of the following:
 
 ## Status
 
-This is a known issue. We're working to address this issue and will post more information in this article when it becomes available.
+It's a known issue. We're working to address this issue and will post more information in this article when it becomes available.
 
 ## More information
 

@@ -16,11 +16,10 @@ appliesto:
   - Visio Standard 2010
   - Visio Professional 2013
   - Visio Standard 2013
+ms.date: 3/31/2022
 ---
 
 # Text is not displayed in a Visio 2010 / 2013 drawing when you open the drawing in a browser
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

@@ -1,6 +1,6 @@
 ---
-title: Mailbox Move to cloud fail with error when you move mailboxes to Office 365
-description: Describes an error message that you receive when you move mailboxes from your on-premises environment to Office 365 in a hybrid deployment. Provides a resolution.
+title: Mailbox Move to cloud fail with error when you move mailboxes to Microsoft 365
+description: Describes an error message that you receive when you move mailboxes from your on-premises environment to Microsoft 365 in a hybrid deployment. Provides a resolution.
 author: simonxjx
 audience: ITPro
 ms.topic: troubleshooting
@@ -15,18 +15,19 @@ search.appverid:
 appliesto: 
   - Exchange Online
   - Microsoft Exchange Server
+ms.date: 3/31/2022
 ---
-# Mailbox Move to the cloud fail with error when you move mailboxes to Office 365
+# Mailbox Move to the cloud fail with error when you move mailboxes to Microsoft 365
 
 ## Problem
 
-In a hybrid deployment of Microsoft Exchange Online in Microsoft Office 365 and on-premises Microsoft Exchange Server, you receive the following error message when you move mailboxes from your on-premises environment to Office 365:
+In a hybrid deployment of Microsoft Exchange Online in Microsoft 365 and on-premises Microsoft Exchange Server, you receive the following error message when you move mailboxes from your on-premises environment to Microsoft 365:
 
 > Mailbox Move to the cloud fail with error: Transient error CommunicationErrorTransientException has occurred. The system will retry
 
 ## Cause
 
-This issue may occur if the on-premises Microsoft Forefront Threat Management Gateway (TMG) server blocks HTTP requests from servers in the Office 365 environment. This occurs because of the flood mitigation feature in the Forefront TMG. This mechanism helps lessen flood attacks.
+This issue may occur if the on-premises Microsoft Forefront Threat Management Gateway (TMG) server blocks HTTP requests from servers in the Microsoft 365 environment. This occurs because of the flood mitigation feature in the Forefront TMG. This mechanism helps lessen flood attacks.
 
 To confirm that this is the issue that you are experiencing, examine the alerts that are displayed in the Forefront TMG management console. To do this, follow these steps:
 
@@ -48,7 +49,7 @@ To resolve this issue, configure flood mitigation settings in Forefront TMG to i
    :::image type="content" source="media/mailbox-move-to-cloud-fail-with-error/configure-flood-mitigation-settings.png" alt-text="Screenshot of the Behavioral Intrusion Detection tab, highlighted Configure Flood Mitigation Settings.":::
 
 3. In the **Flood Mitigation** dialog box, follow these steps:
-   1. Click the **IP Exceptions** tab, and then type the IP addresses that the Office 365 environment uses to connect during the mailbox move operation. To view a list of the IP address ranges and URLs that are used by Exchange Online in Office 365, see [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
+   1. Click the **IP Exceptions** tab, and then type the IP addresses that the Microsoft 365 environment uses to connect during the mailbox move operation. To view a list of the IP address ranges and URLs that are used by Exchange Online in Microsoft 365, see [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
    2. Click the **Flood Mitigation** tab, and then, next to **Maximum HTTP Requests per minute per IP address**, click **Edit**. In the **Custom limit** box, type a number to increase the limit.
 
       > [!NOTE]
@@ -59,7 +60,7 @@ To resolve this issue, configure flood mitigation settings in Forefront TMG to i
 
 ## More information
 
-For more information about this issue, visit the following Office 365 Community website:
+For more information about this issue, visit the following Microsoft 365 Community website:
 
 [https://go.microsoft.com/fwlink/?linkid=2003907](https://go.microsoft.com/fwlink/?linkid=2003907)
 

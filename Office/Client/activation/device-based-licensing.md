@@ -1,8 +1,9 @@
 ---
 title: Troubleshooting device-based licensing for Microsoft 365 Apps
 description: Describes issues you might encounter with Microsoft 365 device-based licensing.
-author: vikkarti
-ms.author: v-matthamer
+author: helenclu
+ms.reviewer: vikkarti
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -14,6 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
+ms.date: 3/31/2022
 ---
 
 # Troubleshooting device-based licensing for Microsoft 365 Apps
@@ -46,7 +48,7 @@ In this case, the device is having problems contacting the Office Licensing Serv
 
 If Microsoft 365 Apps are already installed and activated with user-based subscription licensing or shared computer activation, you will need to reset the license state on the device before it will transition over to device-based licensing. To reset the activation state, see [Reset Microsoft 365 Apps for enterprise activation state](/office/troubleshoot/activation/reset-office-365-proplus-activation-state).
 
-Make sure the device has access to the internet or that your firewall isn't preventing access to the Office licensing service. For more information about firewall settings, see [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
+Make sure the device has access to the internet or that your firewall isn't preventing access to the Office licensing service. For more information about firewall settings, see [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
 
 Note If the user account has been configured to use a proxy, but the SYSTEM account hasn’t, the device might be unable to get the device-based license. Use the [BITSAdmin tool](/windows/win32/bits/bitsadmin-tool) to configure the SYSTEM account to use the proxy.
 

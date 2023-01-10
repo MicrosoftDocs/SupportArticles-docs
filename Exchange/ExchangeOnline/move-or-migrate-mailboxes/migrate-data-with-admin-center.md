@@ -1,6 +1,6 @@
 ---
-title: How to migrate mailbox data by using the Exchange Admin Center in Office 365
-description: Describes how to migrate mailbox data by using the Exchange Admin Center in Office 365.
+title: How to migrate mailbox data by using the Exchange Admin Center in Microsoft 365
+description: Describes how to migrate mailbox data by using the Exchange Admin Center in Microsoft 365.
 author: simonxjx
 audience: ITPro
 ms.topic: troubleshooting
@@ -14,12 +14,13 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
-# How to migrate mailbox data by using the Exchange Admin Center in Office 365
+# How to migrate mailbox data by using the Exchange Admin Center in Microsoft 365
 
 ## Introduction
 
-This article describes the migration features that are available in the Exchange Admin Center in Microsoft Office 365. It also discusses migration scenarios in which the Exchange Admin Center is used to migrate data from the following existing environments:
+This article describes the migration features that are available in the Exchange Admin Center in Microsoft 365. It also discusses migration scenarios in which the Exchange Admin Center is used to migrate data from the following existing environments:
 
 - Microsoft Exchange Server 2003
 - Microsoft Exchange Server 2007
@@ -29,11 +30,11 @@ This article describes the migration features that are available in the Exchange
 
 ## More information
 
-The Exchange Admin Center in Office 365 is used to migrate data from a hosted and on-premises Exchange environment or an IMAP environment through the creation and management of migration batches. Migration batches are specific requests to migrate all mailboxes or a subset of mailboxes from a remote mailbox source.
+The Exchange Admin Center in Microsoft 365 is used to migrate data from a hosted and on-premises Exchange environment or an IMAP environment through the creation and management of migration batches. Migration batches are specific requests to migrate all mailboxes or a subset of mailboxes from a remote mailbox source.
 
 ### Supported kinds of migration
 
-In Exchange Online, IT admins have several options to migrate mailbox data from their existing on-premises or hosted environment. These options vary based on the source environment and the result that the customer wants to achieve. As with any deployment of Exchange Online in Office 365, customers can review the [Exchange Server Deployment Assistant](/exchange/exchange-deployment-assistant) to determine the settings that they have to set up to reach the end state that they want.
+In Exchange Online, IT admins have several options to migrate mailbox data from their existing on-premises or hosted environment. These options vary based on the source environment and the result that the customer wants to achieve. As with any deployment of Exchange Online in Microsoft 365, customers can review the [Exchange Server Deployment Assistant](/exchange/exchange-deployment-assistant) to determine the settings that they have to set up to reach the end state that they want.
 
 #### Remote move
 
@@ -47,11 +48,11 @@ Staged migration enables migration from an on-premises Exchange 2003 or Exchange
 
 #### Cutover migration
 
-The cutover migration option is for customers who want to migrate their whole environment at one time. This migration is limited to less than 2,000 mailboxes and is targeted at business customers who are running Exchange 2003 or a later version in their environment. Specifically, this migration supports users who are using the Microsoft Exchange Autodiscover service against Exchange 2007 (or later-version) environments to determine the mailboxes that are available for migration. However, if you're running Exchange 2003 in your on-premises environment, you can manually enter the remote procedure call (RPC) proxy addresses to access the Exchange mailboxes for migration. This option is available to Office 365 Enterprise customers and Office 365 Business customers.
+The cutover migration option is for customers who want to migrate their whole environment at one time. This migration is limited to less than 2,000 mailboxes and is targeted at business customers who are running Exchange 2003 or a later version in their environment. Specifically, this migration supports users who are using the Microsoft Exchange Autodiscover service against Exchange 2007 (or later-version) environments to determine the mailboxes that are available for migration. However, if you're running Exchange 2003 in your on-premises environment, you can manually enter the remote procedure call (RPC) proxy addresses to access the Exchange mailboxes for migration. This option is available to Office 365 Enterprise customers and Microsoft 365 Apps customers.
 
 #### IMAP migration
 
-IMAP migration is targeted at customers who may be using non-Exchange-based mail systems in their current hosted environment or have access to the data only by using the IMAP 4 protocol. The Office 365 migration engine uses the information that's provided by IT admins in the EAC to connect to IMAP mailboxes and download mailbox data. IT admins must provide a list of users to migrate in each batch by using a CSV file.
+IMAP migration is targeted at customers who may be using non-Exchange-based mail systems in their current hosted environment or have access to the data only by using the IMAP 4 protocol. The Microsoft 365 migration engine uses the information that's provided by IT admins in the EAC to connect to IMAP mailboxes and download mailbox data. IT admins must provide a list of users to migrate in each batch by using a CSV file.
 
 ### Offboarding migration
 
@@ -65,7 +66,7 @@ Admins whose organizations are deployed on Exchange Online can create and manage
 
 To create a migration batch, follow these steps:
 
-1. Sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com/)).
+1. Sign in to the Microsoft 365 portal ([https://portal.office.com](https://portal.office.com/)).
 2. Click **Admin**, and then click **Exchange**.
 3. Click **Migration**, click **New** (:::image type="icon" source="media/migrate-data-with-admin-center/cross.png" border="false":::), and then click **Onboarding**.
 4. Select the migration option that you want, and then click **Next**. Migration options are as follows:  
@@ -112,7 +113,7 @@ To create a staged migration batch, follow these steps:
 
    :::image type="content" source="media/migrate-data-with-admin-center/configuration-page.png" alt-text="Screenshot of the Migration configuration page for staged migration.":::
 
-6. Specify the admins in your Office 365 organization who should receive the migration report, select one of the following migration methods, and then click **New**:
+6. Specify the admins in your Microsoft 365 organization who should receive the migration report, select one of the following migration methods, and then click **New**:
    - Automatically start the migration
    - Manually start the migration later
 
@@ -139,7 +140,7 @@ To create a cutover migration batch, follow these steps:
 
    :::image type="content" source="media/migrate-data-with-admin-center/configuration-page-2.png" alt-text="Screenshot of the Migration configuration page for cutover migration.":::
 
-4. Specify the admins in your Office 365 organization who should receive the migration report, select one of the following migration methods, and then click **New**:  
+4. Specify the admins in your Microsoft 365 organization who should receive the migration report, select one of the following migration methods, and then click **New**:  
    - Automatically start the migration
    - Manually start the migration later
 
@@ -164,7 +165,7 @@ To create an IMAP migration batch, follow these steps:
 
    :::image type="content" source="media/migrate-data-with-admin-center/configuration-page-4.png" alt-text="Screenshot of the Migration configuration page.":::
 
-5. Specify the admins in your Office 365 organization who should receive the migration report, select one of the following migration methods, and then click **New**:  
+5. Specify the admins in your Microsoft 365 organization who should receive the migration report, select one of the following migration methods, and then click **New**:  
    - Automatically start the migration
    - Manually start the migration later
 

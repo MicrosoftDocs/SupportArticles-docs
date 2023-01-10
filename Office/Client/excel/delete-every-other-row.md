@@ -16,11 +16,10 @@ appliesto:
   - Microsoft Office Excel 2007
   - Excel 2010
   - Excel 2013
+ms.date: 3/31/2022
 ---
 
 # How to delete every other row on an Excel worksheet
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

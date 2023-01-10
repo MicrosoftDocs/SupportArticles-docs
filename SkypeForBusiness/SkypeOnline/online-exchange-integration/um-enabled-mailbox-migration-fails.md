@@ -14,6 +14,7 @@ appliesto:
   - Exchange Online
   - Microsoft Lync Online
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # UM-enabled mailbox migration to Exchange Online fails

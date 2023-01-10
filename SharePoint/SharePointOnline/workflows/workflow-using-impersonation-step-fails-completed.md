@@ -14,6 +14,7 @@ appliesto:
   - SharePoint Online
   - SharePoint Server 2013
   - SharePoint Server 2010
+ms.date: 3/31/2022
 ---
 
 # A SharePoint workflow that uses an impersonation step doesn't complete when you return field values for a user account as something other than "As a string"

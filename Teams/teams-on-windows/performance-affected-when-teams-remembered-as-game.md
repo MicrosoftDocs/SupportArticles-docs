@@ -15,6 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 # Teams performance is affected if it's remembered as a game by Xbox Game Bar
 

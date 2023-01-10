@@ -15,6 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Server 2010
+ms.date: 3/31/2022
 ---
 # HTTP error 403 when you start Exchange Management Shell on an Exchange Server 2010 Client Access server
 

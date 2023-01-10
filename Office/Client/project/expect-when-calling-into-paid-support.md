@@ -21,6 +21,7 @@ appliesto:
   - Project Server 2010
   - Microsoft Office Project Server 2007
   - Project Online Desktop Client
+ms.date: 3/31/2022
 ---
 # Project and Project Server Support Boundaries - What to Expect
 

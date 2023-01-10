@@ -14,6 +14,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # Lync presence is unavailable or missing in SharePoint sites
@@ -26,7 +27,7 @@ When you view a SharePoint site, the Lync presence icons that are next to the us
 
 If the Lync 2010 or Lync 2013 client is not running, or if no user is signed in, the presence status is not available in SharePoint. Make sure that the user is signed in to Lync and that presence is working correctly in the Lync client.
 
-The other resolution to this issue involves updating the ProxyAddresses Active Directory attribute to include the SharePoint user's Lync address. This is especially important if the Lync and SharePoint environments aren't in the same domain or forest. For example, if SharePoint is hosted on-premises but users sign in to Skype for Business Online (formerly Lync Online) through Office 365, you should update the ProxyAddresses Active Directory attribute in this manner. As long as the ActiveDirectory object that's associated with the SharePoint user contains the user's Lync sign-in address in the ProxyAddresses attribute, presence should display for that contact.
+The other resolution to this issue involves updating the ProxyAddresses Active Directory attribute to include the SharePoint user's Lync address. This is especially important if the Lync and SharePoint environments aren't in the same domain or forest. For example, if SharePoint is hosted on-premises but users sign in to Skype for Business Online (formerly Lync Online) through Microsoft 365, you should update the ProxyAddresses Active Directory attribute in this manner. As long as the ActiveDirectory object that's associated with the SharePoint user contains the user's Lync sign-in address in the ProxyAddresses attribute, presence should display for that contact.
 
 If you have Exchange tools available, populate the ProxyAddresses attribute by using the method that's described in the following Microsoft Knowledge Base article: 
 

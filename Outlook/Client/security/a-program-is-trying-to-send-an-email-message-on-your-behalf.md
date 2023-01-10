@@ -17,8 +17,9 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
   - Outlook 2013
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # "A program is trying to send an e-mail message on your behalf" warning in Outlook
 
@@ -26,7 +27,7 @@ _Original KB number:_ &nbsp; 3189806
 
 ## Symptoms
 
-In Microsoft Outlook LTSC 2021, Outlook 2019, Outlook for Office 365, Outlook 2016, and Outlook 2013, when you send an email message from another program, such as Microsoft Excel, you receive the following warning message:
+In Microsoft Outlook LTSC 2021, Outlook 2019, Outlook for Microsoft 365, Outlook 2016, and Outlook 2013, when you send an email message from another program, such as Microsoft Excel, you receive the following warning message:
 
 > A program is trying to send an e-mail message on your behalf. If this is unexpected, click Deny and verify your antivirus software is up-to-date.
 
@@ -57,7 +58,7 @@ To learn how Outlook detects your antivirus status, follow these steps:
 
     **Notes:**
 
-    - In these subkeys, the <*x.0*> placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Outlook for Office 365, and 15.0 = Office 2013).
+    - In these subkeys, the <*x.0*> placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Outlook for Microsoft 365, and 15.0 = Office 2013).
     - If the indicated registry subkey isn’t present, right-click the last subkey in the path, select **New** > **Key**, and then create the necessary subkey.
 
 1. Right-click the registry subkey, and then select **New** > **DWORD**.

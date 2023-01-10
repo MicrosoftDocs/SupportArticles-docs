@@ -16,6 +16,7 @@ appliesto:
   - Outlook 2013
   - Microsoft Office Outlook 2007
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook search folders aren't populated in Online mode after migration from Exchange 2013 to Exchange 2010
 

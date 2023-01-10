@@ -12,6 +12,7 @@ ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Designer 2013
+ms.date: 3/31/2022
 ---
 
 # A Workflow Status error is reported when a SharePoint 2010 workflow stops

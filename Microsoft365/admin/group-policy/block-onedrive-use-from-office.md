@@ -5,20 +5,19 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
-appliesto:
-- Microsoft 365 Apps for enterprise
-- Office 2016
-- OneDrive
+appliesto: 
+  - Microsoft 365 Apps for enterprise
+  - Office 2016
+  - OneDrive
+ms.date: 3/31/2022
 ---
 
 # How to block OneDrive use from within Microsoft 365 Apps for enterprise and Office 2016 applications
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 
@@ -31,14 +30,8 @@ To block OneDrive access for Office 2016 users in your organization, follow thes
 1. Download the [Office 2016 Administrative Template files (ADMX/ADML) and Office Customization Tool](https://www.microsoft.com/download/details.aspx?id=49030).
 
 2. Use the Office 2016 Administrative Templates to configure Group Policy settings under **User configuration** > **Administrative Templates** > **Microsoft Office 2016** > **Miscellaneous** as follows:
-   1. Set the **Show OneDrive Sign In** setting to **Disabled**:
-
-        ![Show OneDrive Sign-in](https://sawinternal.blob.core.windows.net/gds-images/3120068.png)
-
-    2. Enable the **Block signing into Office** setting, and set it to **Org ID only**:
-
-        ![Org ID only](https://sawinternal.blob.core.windows.net/gds-images/3120069.png)   
-   
+   1. Set the **Show OneDrive Sign In** setting to **Disabled**.
+   2. Enable the **Block signing into Office** setting, and set it to **Org ID only**.
 
 To prevent users from adding their personal OneDrive account, use one of the following methods:
 

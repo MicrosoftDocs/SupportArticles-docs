@@ -9,16 +9,16 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
   - CI 114797
+  - CI 162681
   - CSSTroubleshoot
 ms.reviewer: 
 appliesto: 
   - Microsoft Office Access 2007
   - Microsoft Office Access 2003
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # How to programmatically create a new column in an Access report
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 _Original KB number:_ &nbsp; 812719
 
@@ -274,4 +274,4 @@ The report contains four columns. The `Visible` property of the first three colu
 
 For more information about how to programmatically create an Access report, visit the following article:
 
-[Creating Access Reports](https://msdn2.microsoft.com/library/aa188513%28office.10%29.aspx)
+[Create a simple report](https://support.microsoft.com/office/create-a-simple-report-408e92a8-11a4-418d-a378-7f1d99c25304)

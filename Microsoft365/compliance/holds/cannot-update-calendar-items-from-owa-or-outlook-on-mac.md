@@ -13,16 +13,19 @@ ms.reviewer: gapart, munatara
 appliesto: 
   - Exchange Online Archiving
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Couldn't update the following event error when editing calendar items from OWA or Outlook
 
 _Original KB number:_ &nbsp; 4459263
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Symptoms
 
 Consider the following scenario:
 
-- A user has a mailbox in Microsoft Office 365.
+- A user has a mailbox in Microsoft 365.
 - In-place hold or litigation hold is enabled for the mailbox.
 - The user tries to edit calendar items from Microsoft Outlook Web App (OWA) or Microsoft Outlook.
 

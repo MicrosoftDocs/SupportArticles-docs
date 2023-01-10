@@ -1,6 +1,6 @@
 ---
 title: Outlook doesn't connect using MAPI over HTTP as expected
-description: Describes an issue in which Outlook for Office 365 doesn't connect Exchange using MAPI over HTTP as expected.
+description: Describes an issue in which Outlook for Microsoft 365 doesn't connect Exchange using MAPI over HTTP as expected.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -18,10 +18,11 @@ appliesto:
   - Outlook 2016
   - Microsoft Outlook 2013 Service Pack 1
   - Outlook 2019
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
-# Outlook 2010, 2013, 2016, or Outlook for Office 365 doesn't connect Exchange using MAPI over HTTP as expected
+# Outlook 2010, 2013, 2016, or Outlook for Microsoft 365 doesn't connect Exchange using MAPI over HTTP as expected
 
 _Original KB number:_ &nbsp;2937684
 
@@ -41,7 +42,7 @@ In the above scenario, the **Protocol** column in the **Outlook Connection Statu
 > [!NOTE]
 > MAPI/HTTP connections are designated in the **Protocol** column using the string **HTTP**.
 
-Additionally, if MAPI/HTTP is disabled, Office 365 users receive a Basic Authentication prompt instead of a Modern Authentication prompt.
+Additionally, if MAPI/HTTP is disabled, Microsoft 365 users receive a Basic Authentication prompt instead of a Modern Authentication prompt.
 
 ## Cause
 

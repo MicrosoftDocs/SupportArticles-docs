@@ -14,6 +14,7 @@ ms.reviewer: jchenau
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Primary SMTP addresses are displayed incorrectly or secondary SMTP addresses are missing
 
@@ -29,7 +30,7 @@ For example, you receive an NDR that contains the following error message:
 
 ## Cause
 
-This behavior occurs by design when you have one or more unverified domains in Office 365.
+This behavior occurs by design when you have one or more unverified domains in Microsoft 365.
 
 ## Solution
 

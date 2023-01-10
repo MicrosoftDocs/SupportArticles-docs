@@ -13,11 +13,10 @@ ms.author: luche
 ms.reviewer: mmaxey
 appliesto: 
   - Word 2013
+ms.date: 3/31/2022
 ---
 
 # How to configure the default search engine in Word 2013
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Introduction
 

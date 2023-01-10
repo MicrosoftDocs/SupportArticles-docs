@@ -12,6 +12,7 @@ ms.custom:
 appliesto: 
   - Skype for Business Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Set up Skype for Business Online external communications
 
@@ -47,7 +48,7 @@ Microsoft 365 creates a domain for you when you sign up (the domain name include
 
 If your current domain name ends in `.onmicrosoft.com`, you don't have a custom domain. For more information, see [Add a domain to Microsoft 365](/microsoft-365/admin/setup/add-domain).
 
-Are you using a custom domain with Office 365?
+Are you using a custom domain with Microsoft 365?
 
 - If yes, see [Custom domain status (Small Business)](#custom-domain-status-small-business).
 - If no, see [Turn on external communications](#turn-on-external-communications).
@@ -250,7 +251,7 @@ Now make sure everything works as expected by running the domain troubleshooter 
 
 When you see a message that says everything is set up correctly, you can continue the next step.
 
-If you have a firewall or proxy setup in your environment, make sure to configure it to exclude the [Office 365 URLs and IP address ranges](/office365/enterprise/urls-and-ip-address-ranges). If you need help with this step, contact Microsoft 365 Support.
+If you have a firewall or proxy setup in your environment, make sure to configure it to exclude the [Microsoft 365 URLs and IP address ranges](/office365/enterprise/urls-and-ip-address-ranges). If you need help with this step, contact Microsoft 365 Support.
 
 #### Turn on external communications
 

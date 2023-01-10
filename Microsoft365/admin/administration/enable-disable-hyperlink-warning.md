@@ -18,11 +18,10 @@ appliesto:
   - Microsoft Office 2016
   - Microsoft Office 2019
   - Microsoft 365 Apps for Enterprise
+ms.date: 3/31/2022
 ---
 
 # Enable or disable hyperlink warning messages in Office programs
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Introduction
 

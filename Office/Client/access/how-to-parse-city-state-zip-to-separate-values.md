@@ -11,7 +11,7 @@ ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
-  - Access for Office 365
+  - Access for Microsoft 365
   - Access 2019
   - Access 2016
   - Access 2013
@@ -19,6 +19,7 @@ appliesto:
   - Access 2007
   - Access 2003
 ms.reviewer: malcolms
+ms.date: 3/31/2022
 ---
 # How To Parse City, State, and Zip Code into Separate Values
 

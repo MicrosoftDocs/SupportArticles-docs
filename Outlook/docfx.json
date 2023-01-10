@@ -104,10 +104,10 @@
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/outlook/troubleshoot/breadcrumb/toc.json",
-      "extendBreadcrumb": true,
       "recommendations": true,
       "feedback_system": "none",
       "hideEdit": true,
+      "uhfHeaderId": "MSDocsHeader-Outlook.yml",
       "titleSuffix": "Outlook",
       "searchScope": ["Outlook Support"] 
     },

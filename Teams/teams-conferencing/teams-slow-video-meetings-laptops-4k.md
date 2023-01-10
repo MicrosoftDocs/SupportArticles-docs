@@ -2,7 +2,7 @@
 title: Teams is slow during video meetings on laptops docked to 4K/UHD monitors
 description: This article provides resolutions when Microsoft Teams is slow during video meetings on laptops docked to 4K/UHD monitors.
 author: helenclu
-ms.author: sgorantl
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -13,6 +13,7 @@ ms.custom:
 ms.reviewer: SfB_Triage
 appliesto: 
   - Microsoft Teams
+ms.date: 3/31/2022
 ---
 
 # Teams is slow during video meetings on laptops docked to 4K/UHD monitors

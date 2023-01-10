@@ -17,11 +17,10 @@ appliesto:
   - Access 2007
   - Access 2003
   - Access 2002
+ms.date: 3/31/2022
 ---
 
 # How to programmatically change the connection of an Access project
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 Advanced: Requires expert coding, interoperability, and multiuser skills. 
 

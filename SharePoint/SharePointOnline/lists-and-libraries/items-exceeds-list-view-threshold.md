@@ -12,13 +12,14 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
-# "The number of items in this list exceeds the list view threshold" when you view lists in Office 365
+# "The number of items in this list exceeds the list view threshold" when you view lists in Microsoft 365
 
 ## Problem
 
-When you view a SharePoint Online list in Office 365 Enterprise, you receive the following error message:
+When you view a SharePoint Online list in Microsoft 365 Enterprise, you receive the following error message:
 
 **The number of items in this list exceeds the list view threshold, which is 5000 items. Tasks that cause excessive server load (such as those involving all list items) are currently prohibited.**
 

@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2016
   - Exchange Server 2013
+ms.date: 3/31/2022
 ---
 
 # "554 5.4.14 Hop count exceeded - possible mail loop" NDR for outgoing email that's sent to an on-premises application in Exchange Server

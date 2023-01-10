@@ -13,13 +13,14 @@ ms.reviewer: MS aliases for tech reviewers and CI requestor, without @microsoft.
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Can't delete folders in the Deleted Items folder of an archive mailbox in Exchange Online
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 3210985
+
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 ## Symptoms
 
@@ -29,6 +30,6 @@ When an archive mailbox in Exchange Online is automatically expanded through the
 
 This behavior is by design for folders that are hosted on auto-expanding archives.
 
-For more information about auto-expanding archives, see [Announcing auto-expanding, highly scalable archives for Office 365 email](https://www.microsoft.com/en-us/microsoft-365/blog/2015/06/03/announcing-auto-expanding-highly-scalable-archives-for-office-365-email/).
+For more information about auto-expanding archives, see [Announcing auto-expanding, highly scalable archives for Microsoft 365 email](https://www.microsoft.com/en-us/microsoft-365/blog/2015/06/03/announcing-auto-expanding-highly-scalable-archives-for-office-365-email/).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com).

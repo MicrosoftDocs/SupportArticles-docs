@@ -15,13 +15,14 @@ ms.author: luche
 appliesto: 
   - Exchange Online
   - Outlook 2016 for Mac
+ms.date: 3/31/2022
 ---
 
 # Outlook 2016 for Mac repeatedly prompts for authentication
 
 ## Symptoms
 
-In Microsoft Outlook 2016 for Mac, you are repeatedly prompted for authentication while you're connected to your Office 365 account.
+In Microsoft Outlook 2016 for Mac, you are repeatedly prompted for authentication while you're connected to your Microsoft 365 account.
 
 ## Cause
 

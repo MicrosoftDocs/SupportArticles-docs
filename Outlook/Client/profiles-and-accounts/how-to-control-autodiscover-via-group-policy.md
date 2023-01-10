@@ -19,6 +19,7 @@ appliesto:
   - Outlook 2010
   - Outlook 2007
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # How to control Outlook AutoDiscover by using Group Policy
 

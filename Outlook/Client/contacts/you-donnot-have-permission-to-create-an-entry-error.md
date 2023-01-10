@@ -13,8 +13,9 @@ ms.custom:
 ms.reviewer: tafa
 appliesto: 
   - Outlook
-  - Office 365
+  - Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # You don't have permission to create an entry in this folder error when you add contacts to a contacts folder
 

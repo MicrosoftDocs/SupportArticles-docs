@@ -2,7 +2,8 @@
 title: A custom HTML login page doesn't render correctly in an Office application
 description: Describes an issue in which a custom HTML login page doesn't render correctly in an Office application, and provides a workaround.
 author: helenclu
-ms.author: warrenr
+ms.author: luche
+ms.reviewer: warrenr
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -12,6 +13,7 @@ ms.topic: troubleshooting
 ms.custom: sap:office-experts, CSSTroubleshoot
 appliesto: 
   - Microsoft Office
+ms.date: 3/31/2022
 ---
 
 # A custom HTML login page doesn't render correctly in an Office application

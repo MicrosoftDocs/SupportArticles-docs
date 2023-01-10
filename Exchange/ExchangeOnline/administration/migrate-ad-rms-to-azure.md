@@ -1,19 +1,21 @@
 ---
 title: How to migrate AD RMS to Azure RMS in Exchange Online
 description: Support has ended for a specific configuration for users who have Exchange Online mailboxes. This results in users unable to view or create messages protected by AD RMS.
-author: samschan
+author: helenclu
+ms.author: luche
+ms.reviwer: samschan
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.author: v-matthamer
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
   - MET150
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
 
 # How to migrate AD RMS to Azure RMS in Exchange Online

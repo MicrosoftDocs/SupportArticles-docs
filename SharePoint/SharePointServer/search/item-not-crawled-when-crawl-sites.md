@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2016
   - SharePoint Server 2013
+ms.date: 3/31/2022
 ---
 
 # "Item not crawled" error when you crawl a site  

@@ -14,11 +14,10 @@ appliesto:
   - Excel 2007
   - Excel 2003
   - Excel 2002
+ms.date: 3/31/2022
 ---
 
 # Apply different passwords or permissions to separate ranges in workbooks in Excel
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

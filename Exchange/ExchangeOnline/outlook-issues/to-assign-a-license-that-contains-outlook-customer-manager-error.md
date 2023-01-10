@@ -1,6 +1,6 @@
 ---
 title: Cannot create new user without Exchange Online license
-description: Discusses an issue in Office 365 in which you receive an error message when you create a new user without an Exchange Online license. Provides a workaround.
+description: Discusses an issue in Microsoft 365 in which you receive an error message when you create a new user without an Exchange Online license. Provides a workaround.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -12,8 +12,9 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: tasitae
 appliesto: 
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # To assign a license that contains Outlook Customer Manager error when creating a new user
 
@@ -24,7 +25,7 @@ _Original KB number:_ &nbsp; 3209493
 
 ## Symptoms
 
-In Office 365, when you try to create a new user without an Exchange Online license, you receive the following error message:
+In Microsoft 365, when you try to create a new user without an Exchange Online license, you receive the following error message:
 
 > To assign a license that contains Outlook Customer Manager, you must also assign one of the following service plans: Exchange Online (Plan 2), Exchange Online (Plan 1).
 
@@ -34,10 +35,10 @@ This issue occurs because Outlook Customer Manager is enabled for the new user. 
 
 ## Workaround
 
-To work around this issue, disable Outlook Customer Manager and Exchange Online for the Office 365 account. To do this, follow these steps:
+To work around this issue, disable Outlook Customer Manager and Exchange Online for the Microsoft 365 account. To do this, follow these steps:
 
 1. Connect to Exchange Online by using remote PowerShell. For more information, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
-2. Run the following command to retrieve the Office 365 AccountSkuID:
+2. Run the following command to retrieve the Microsoft 365 AccountSkuID:
 
     ```powershell
     Get-MsolAccountSku

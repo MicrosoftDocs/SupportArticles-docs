@@ -14,6 +14,7 @@ ms.reviewer: austinmc, pabbott
 appliesto: 
   - Exchange Server
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # EAS devices still sync after an account is disabled or a password is changed
 

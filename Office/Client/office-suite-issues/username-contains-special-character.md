@@ -1,6 +1,6 @@
 ---
 title: Error when you create a user name that contains a special character
-description: Describes an issue in which you receive an Invalid user name error message when you try to create a user name that contains special characters in Microsoft Office 365.
+description: Describes an issue in which you receive an Invalid user name error message when you try to create a user name that contains special characters in Microsoft 365.
 author: helenclu
 manager: dcscontentpm
 date: 3/16/2020
@@ -15,18 +15,17 @@ ms.reviewer: timball
 search.appverid: 
   - MET150
 appliesto: 
-  - Office 365 User and Domain Management
+  - Microsoft 365
+ms.date: 3/31/2022
 ---
 
-# "Invalid user name" when you try to create a user name that contains a special character in Office 365
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+# "Invalid user name" when you try to create a user name that contains a special character in Microsoft 365
 
 ## Problem
 
-When you create a user name that contains a special character in Microsoft Office 365, you receive one of the following error messages: 
+When you create a user name that contains a special character in Microsoft 365, you receive one of the following error messages: 
 
-Within the Office 365 portal
+Within the Microsoft 365 portal
 
 ```adoc
 Invalid user name
@@ -48,7 +47,7 @@ A Windows Live error occurred while provisioning for "user+invalid_characters@co
 
 ## Cause
 
-This behavior occurs because certain special characters aren't permitted in user names that you create in the Office 365. These special characters include but aren't limited to the following:
+This behavior occurs because certain special characters aren't permitted in user names that you create in the Microsoft 365. These special characters include but aren't limited to the following:
 
 | Property | UserPrincipalName requirements |
 | --- | --- |
@@ -63,6 +62,6 @@ However, the following exceptions apply:
 
 ## Solution
 
-When you create a new user in Office 365, make sure that you don't use any of the special characters that are listed in the "Cause" section.
+When you create a new user in Microsoft 365, make sure that you don't use any of the special characters that are listed in the "Cause" section.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

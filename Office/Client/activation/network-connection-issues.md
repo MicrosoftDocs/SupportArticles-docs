@@ -1,8 +1,9 @@
 ---
 title: Microsoft 365 Apps activation network connection issues
 description: Troubleshooting activation issues due to network connection problems.
-author: vikkarti
-ms.author: v-matthamer
+author: helenclu
+ms.reviewer: vikkarti, tfairman
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,10 +11,13 @@ localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
   - CI 157765
+  - CI 162387
+  - CI 166312
 search.appverid: 
   - MET150
 appliesto: 
   - Microsoft 365
+ms.date: 3/31/2022
 ---
 
 # Microsoft 365 Apps activation network connection issues
@@ -61,7 +65,7 @@ Are you behind a proxy server? If you're not sure, ask your administrator. If so
   
 You need to allow the URLs and IP addresses in [this list](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide&preserve-view=true#microsoft-365-common-and-office-online).
   
-You can also allow Microsoft 365 to bypass the proxy server by creating a PAC file. For more information about creating a PAC file, see [Managing Office 365 endpoints](/microsoft-365/enterprise/managing-office-365-endpoints).
+You can also allow Microsoft 365 to bypass the proxy server by creating a PAC file. For more information about creating a PAC file, see [Managing Microsoft 365 endpoints](/microsoft-365/enterprise/managing-office-365-endpoints).
 
 </details>
 
@@ -93,7 +97,7 @@ Are you behind a firewall? If you're not sure, ask your administrator. If you're
   
 Each firewall will have a different method to enable access to these URIs. Check your software's documentation for instructions or ask your administrator to do this for you.
   
-For more information about Microsoft 365 Apps for enterprise URLs and IP addresses, see [Office 365 URLs and IP address ranges](https://technet.microsoft.com/library/hh373144.aspx).
+For more information about Microsoft 365 Apps for enterprise URLs and IP addresses, see [Microsoft 365 URLs and IP address ranges](https://technet.microsoft.com/library/hh373144.aspx).
 
 </details>
 
@@ -118,7 +122,16 @@ If the process isn't blocked, but you still can't activate Microsoft 365, delete
 1. Restart the device.
 1. Download and run [the SaRA package for sign in issues](https://aka.ms/SaRA-OfficeSignInScenario).
 
-For manual troubleshooting for step 7, or for more information, see [Fix authentication issues in Office applications when you try to connect to an Office 365 service](/office365/troubleshoot/authentication/automatic-authentication-fails).
+For manual troubleshooting for step 7, or for more information, see [Fix authentication issues in Office applications when you try to connect to a Microsoft 365 service](/microsoft-365/troubleshoot/authentication/automatic-authentication-fails).
+
+</details>
+
+<details>
+<summary><b>Check external DNS for incorrect CNAME records</b></summary>
+
+Check your external DNS for an MSOID CNAME record that points to `clientconfig.partner.microsoftonline-p.net.cn`.
+
+This CNAME record is required only for customers who use Microsoft 365 that's operated by 21Vianet. 21Vianet is a service that's available in China. If this CNAME record is present, and your Microsoft 365 service is not operated by 21Vianet, users on your custom domain will receive a "custom domain isn't in our system" error message. Because of this error, users won't be able to activate their Microsoft 365 apps license. If you find this CNAME record, delete it, and wait for DNS replication to update the DNS record.
 
 </details>
 
@@ -178,15 +191,6 @@ If NCSI isn't registering your internet connection, try setting it to use Global
 1. Right-click the registry value and select **New**, then select **DWORD**.
 1. Name the DWORD `UseGlobalDNS`, and set the value to 1.
 1. Try activating Microsoft 365 again.
-
-If you still can't activate, try temporarily disabling IPv4 Checksum Offload:
-
-1. From Start, type *`powershell`*, and then select **Windows PowerShell** from the search results.
-1. At the command prompt, type the following command, and then press Enter:  
-`Disable-NetAdapterChecksumOffload -Name "*" -TcpIPv4`
-1. Try activating again.
-
-If you're still unable to activate, try temporarily disabling NCSI. For instructions, see the **Workaround** section of [An Internet Explorer or Edge window opens when your computer connects to a corporate network or a public network](/troubleshoot/windows-client/networking/internet-explorer-edge-open-connect-corporate-public-network#workaround).
 
 </details>
 

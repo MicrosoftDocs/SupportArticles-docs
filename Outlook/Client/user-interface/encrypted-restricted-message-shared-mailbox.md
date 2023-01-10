@@ -2,13 +2,14 @@
 title: Can't read encrypted or restricted message sent to shared mailbox in Outlook
 description: Provide two workarounds to an issue in which a user who was granted Full Access permission to a shared mailbox can't read encrypted or restricted message sent to the shared mailbox in Outlook.
 author: helenclu
+ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: kellybos
+ms.reviewer: kellybos
 ms.custom: 
   - Outlook for Windows
   - CSSTroubleshoot
@@ -19,6 +20,7 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
   - Outlook 2013
+ms.date: 3/31/2022
 ---
 # Can't read encrypted or restricted message sent to shared mailbox in Outlook
 
@@ -33,7 +35,7 @@ A user who is granted full access permissions to a shared mailbox can't read enc
 
 Outlook and the Azure Information Protection unified labeling client require the user to have full access permissions and have automapping enabled. However, automapping isn't enabled for users who are granted the full access permissions through a security group.
 
-For more information, see the “Can I open encrypted messages sent to a shared mailbox?” section of [Message Encryption FAQ](/microsoft-365/compliance/ome-faq?view=o365-worldwide&preserve-view=true#can-i-open-encrypted-messages-sent-to-a-shared-mailbox).
+For more information, see the “Can I open encrypted messages sent to a shared mailbox?” section of [Message encryption FAQ](/microsoft-365/compliance/ome-faq?view=o365-worldwide&preserve-view=true#can-i-open-encrypted-messages-sent-to-a-shared-mailbox).
 
 ## Workaround
 

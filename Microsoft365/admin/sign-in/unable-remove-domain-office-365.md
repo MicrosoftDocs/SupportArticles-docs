@@ -1,6 +1,6 @@
 ---
-title: Unable to remove this domain when remove a domain from Office 365
-description: Describes an issue in which you receive an Unable to remove this domain error message when you try to delete a domain from Office 365 by using Windows PowerShell. Provides a resolution.
+title: Unable to remove this domain when remove a domain from Microsoft 365
+description: Describes an issue in which you receive an Unable to remove this domain error message when you try to delete a domain from Microsoft 365 by using Windows PowerShell. Provides a resolution.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -11,16 +11,15 @@ ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: v-maqiu
 appliesto: 
-  - Office 365 User and Domain Management
+  - Microsoft 365
+ms.date: 3/31/2022
 ---
 
-# "Unable to remove this domain" when you try to remove a domain from Office 365
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+# "Unable to remove this domain" when you try to remove a domain from Microsoft 365
 
 ## Problem
 
-When you try to remove a domain from Microsoft Office 365 by using Windows PowerShell, you get the following error message:
+When you try to remove a domain from Microsoft 365 by using Windows PowerShell, you get the following error message:
 
 ```asciidoc
 Remove-MsolDomain : Unable to remove this domain. Use Get-MsolUser -DomainName<domain name> to retrieve a list of objects that are blocking removal.
@@ -35,12 +34,12 @@ At line:1 char:18
 This issue occurs if one or more of the following conditions are true: 
 
 - User accounts or groups are associated with the domain.    
-- The proxies that correspond to the domain for all mail-licensed users and for all mail-enabled groups aren't removed. Office 365 blocks the deletion of a domain until the proxies that correspond to the domain are removed.   
+- The proxies that correspond to the domain for all mail-licensed users and for all mail-enabled groups aren't removed. Microsoft 365 blocks the deletion of a domain until the proxies that correspond to the domain are removed.   
 - Skype for Business Online (formerly Lync Online) Session Initiation Protocol (SIP) addresses are used by the domain.   
 
 ## Solution
 
-Use the Microsoft 365 admin center to remove the domain. The Domain Manager in Office 365 will help admins remove any dependencies that block domain removal without having to use Windows PowerShell. 
+Use the Microsoft 365 admin center to remove the domain. The Domain Manager in Microsoft 365 will help admins remove any dependencies that block domain removal without having to use Windows PowerShell. 
 
 For more info about how to remove a domain in the Microsoft 365 admin center, go to [Remove a domain](/microsoft-365/admin/get-help-with-domains/remove-a-domain). 
 
@@ -68,7 +67,7 @@ To check whether user names contain the domain name, follow these steps:
    ```powershell
    Get-MsolUser -DomainName contoso.com | fl UserPrincipalName
    ```      
-3. Examine the results, and then change the user principal name (UPN) so that the domain isn't used. The UPN is the same as the user name and the user ID property. You can use the Office 365 portal or Windows PowerShell to change the UPN. The goal is to have no results returned.    
+3. Examine the results, and then change the user principal name (UPN) so that the domain isn't used. The UPN is the same as the user name and the user ID property. You can use the Microsoft 365 portal or Windows PowerShell to change the UPN. The goal is to have no results returned.    
  
 #### Step 2: Check email addresses
 
@@ -96,13 +95,13 @@ To check email addresses, follow these steps:
      > If this is the last administrator user, create a new global administrator, sign in, and then remove the problem user.    
    - If RecipientType is set to MailUniversalDistributionGroupor MailUniversalSecurityGroup, you can use the Set-DistributionGroup cmdlet together with the EmailAddresses parameter to change the smtp and SMTP addresses. To learn more about this cmdlet, see [Set-Distribution Group](/powershell/module/exchange/set-distributiongroup).
         
-      Or, you can remove the group. However, we don't recommend doing this. If you can't remove the group, follow the steps in ["You don't have sufficient permissions" error when you try to remove or make a change to a distribution group in Office 365"](https://support.microsoft.com/help/2731947).      
+      Or, you can remove the group. However, we don't recommend doing this. If you can't remove the group, follow the steps in ["You don't have sufficient permissions" error when you try to remove or make a change to a distribution group in Microsoft 365"](https://support.microsoft.com/help/2731947).      
    - If the RecipientType is set to DynamicDistributionGroup, you can use the Set-DynamicDistributionGroup cmdlet together with the EmailAddresses parameter to change the smtp and SMTP addresses. To learn more about this cmdlet, see [Set-DynamicDistributionGroup](/powershell/module/exchange/set-dynamicdistributiongroup).
         
-     Or, you can remove the group. However, we don't recommend doing this. If you can't remove the group, follow the steps in ["You don't have sufficient permissions" error when you try to remove or make a change to a distribution group in Office 365"](https://support.microsoft.com/help/2731947).      
+     Or, you can remove the group. However, we don't recommend doing this. If you can't remove the group, follow the steps in ["You don't have sufficient permissions" error when you try to remove or make a change to a distribution group in Microsoft 365"](https://support.microsoft.com/help/2731947).      
      
 ## More information
 
-For more information, see [You get an error message when you try to remove a domain from Office 365](https://support.microsoft.com/help/2284755).  
+For more information, see [You get an error message when you try to remove a domain from Microsoft 365](https://support.microsoft.com/help/2284755).  
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

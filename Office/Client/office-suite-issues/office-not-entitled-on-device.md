@@ -12,15 +12,12 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Microsoft Office
+ms.date: 3/31/2022
 ---
 
 # No Office entitlement found on device
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 You start up the Office on a new device and you get a message that "Office isn't entitled on this device" along with the option to try Office, enter a product key or purchase Office. 
 
@@ -32,4 +29,4 @@ This may or may not be an error depending on whether Office was entitled to come
 
 If Office wasn't supposed to come with your device, you can either get a trial or purchase Office. If you've purchased Office Online or at a retail store, you can also enter that product key.
 
-An Office 365 Subscription is included with certain devices. These are typically small screen touch devices and it's marked on the box. If you feel that there's an error and your device should have come with Office, you will need to contact support.
+A Microsoft 365 Subscription is included with certain devices. These are typically small screen touch devices and it's marked on the box. If you feel that there's an error and your device should have come with Office, you will need to contact support.

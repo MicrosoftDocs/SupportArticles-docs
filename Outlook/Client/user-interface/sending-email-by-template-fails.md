@@ -18,6 +18,7 @@ appliesto:
   - Exchange Online
   - Exchange Server 2016 Standard Edition
   - Exchange Server 2013 Standard Edition
+ms.date: 3/31/2022
 ---
 # Email messages aren't sent when you use a template file in Outlook 2010
 
@@ -27,7 +28,7 @@ _Original KB number:_ &nbsp; 3154038
 
 Consider the following scenario:
 
-- You use Microsoft Outlook 2010 to connect to a mailbox in Exchange Server 2013 or a later version or to Exchange Online in Office 365.
+- You use Microsoft Outlook 2010 to connect to a mailbox in Exchange Server 2013 or a later version or to Exchange Online in Microsoft 365.
 - Outlook 2010 is configured in online mode, and it uses a .pst file as the default delivery location.
 - You send email messages by using an OFT (.oft) file.
 

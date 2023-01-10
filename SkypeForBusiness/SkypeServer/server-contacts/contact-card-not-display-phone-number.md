@@ -13,6 +13,7 @@ ms.reviewer: jaym, carlsh
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business 2016
+ms.date: 3/31/2022
 ---
 
 # Contact card displays phone number instead of name in Skype for Business 2016
