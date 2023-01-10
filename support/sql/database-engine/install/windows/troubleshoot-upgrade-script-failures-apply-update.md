@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot upgrade script failures when applying an update
 description: Helps you troubleshoot and solve upgrade script failures when you apply an update.
-ms.date: 01/04/2023
+ms.date: 01/10/2023
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: ramakoni
 author: sevend2
@@ -40,4 +40,4 @@ Once you start SQL Server with trace flag 902, you can select one of the followi
 - [Error 1802: Create temporary database failed](upgrade-fails-errors-598-1802.md)
 - [Error 15173: Issues dropping server principals](sql-server-upgrade-failed-error-15173-upgrade-script.md)
 - [Error 17182: TLS 1.0 disabled](sql-server-upgrade-failed-error-17182-upgrade-script.md)
-- [Error 1714: Online index operations can only be performed in Enterprise edition](sql-server-upgrade-failed-error-1712-upgrade-script.md)
+- [Error 1712: Online index operations can only be performed in Enterprise edition](sql-server-upgrade-failed-error-1712-upgrade-script.md)

@@ -1,7 +1,7 @@
 ---
 title: Error 1712 when upgrading SQL Server 2014 to 2017  
 description: This article discusses error 1712 that causes a SQL Server upgrade to fail when it runs update database scripts.
-ms.date: 01/02/2022
+ms.date: 01/10/2023
 ms.custom: sap:Installation, Patching and Upgrade
 author: padmajayaraman
 ms.author: v-jayaramanp
