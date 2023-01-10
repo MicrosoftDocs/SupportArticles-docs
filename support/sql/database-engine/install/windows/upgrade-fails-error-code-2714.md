@@ -45,7 +45,7 @@ For more information about database upgrade scripts that are executed during CU 
 
 Follow these steps to solve the issue:
 
-1. Start SQL Server with [trace flag 902](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf902). For more information, see [Steps to start SQL Server with trace flag 902](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error#steps-to-start-sql-server-with-trace-flag-902).
+1. Start SQL Server with [trace flag 902](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf902). For more information, see [Steps to start SQL Server with trace flag 902](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error#steps-to-start--with-trace-flag-902).
 
 1. Open SQL Server Management Studio, connect to the SQL Server instance, and back up the `msdb` database.
 
