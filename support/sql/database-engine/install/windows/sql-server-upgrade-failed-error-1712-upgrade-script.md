@@ -67,7 +67,7 @@ SQL Server 2017 release to manufacture (RTM) upgrade script includes a dynamic l
 
 ## Resolution
 
-To resolve the 912 error, follow these steps:
+To resolve the 1712 error, follow these steps:
 
 1. Start SQL Server together with trace flag (TF) 902. For more information, see [Steps to start SQL with trace flag 902](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error#steps-to-start--with-trace-flag-902).
 
