@@ -26,7 +26,7 @@ Starting in Windows 10, version 1709 and Windows Server 2019, SMB2 and SMB3 clie
 - Guest account access to a remote server.
 - Fall back to the Guest account after invalid credentials are provided.
 
-SMB2 and SMB3 has the following behavior in these versions of Windows:
+SMB2 and SMB3 have the following behavior in these versions of Windows:
 
 - Windows 10 Enterprise and Windows 10 Education no longer allow a user to connect to a remote share by using guest credentials by default, even if the remote server requests guest credentials.
 - Windows Server 2019 Datacenter and Standard editions no longer allow a user to connect to a remote share by using guest credentials by default, even if the remote server requests guest credentials.
@@ -97,7 +97,7 @@ This change in default behavior is by design and is recommended by Microsoft for
 
 A malicious computer that impersonates a legitimate file server could allow users to connect as guests without their knowledge. We recommend that you don't change this default setting. If a remote device is configured to use guest credentials, an administrator should disable guest access to that remote device and configure correct authentication and authorization.
 
-Windows and Windows Server have not enabled guest access or allowed remote users to connect as guest or anonymous users since Windows 2000. Only third-party remote devices might require guest access by default. Microsoft-provided operating systems do not.
+Windows client and Windows Server have not enabled guest access or allowed remote users to connect as guest or anonymous users since Windows 2000. Only third-party remote devices might require guest access by default. Microsoft-provided operating systems do not.
 
 ## Resolution
 
@@ -111,7 +111,7 @@ If you can't configure your third party device to be secure, you can enable inse
 4. Select **Enabled** and select **OK**.
 
 > [!NOTE]
-> If modifying Active Directory domain-based group policy, use **Group Policy Management** (gpmc.msc).
+> If modifying Active Directory domain-based group policy, use **Group Policy Management** (*gpmc.msc*).
 
 For monitoring and inventory purposes: this group policy is setting the following DWORD registry value to 1 (insecure guest auth enabled) or 0 (insecure guest auth disabled):
 
