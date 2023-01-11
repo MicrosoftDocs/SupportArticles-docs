@@ -1,6 +1,6 @@
 ---
 title: Outlook for Mac users can't access on-premises public folders 
-description: Fixes an issue in which Outlook for Mac users receive a "Folders are temporarily unavailable because Outlook is not connected to the network" error message when they access Exchange Server 2013 public folders in a hybrid deployment.
+description: Fixes an issue in which Outlook for Mac users receive an error message that indicates Outlook isn't connected to the network when they access Exchange Server 2013 public folders in a hybrid deployment.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -34,7 +34,7 @@ In this scenario, when users use Outlook for Mac in Exchange Online to access th
 
 > Folders are temporarily unavailable because Outlook is not connected to the network.
 
-Additionally, if you check the server log (%ExchangeInstallPath%\Logging\Ews) in Exchange Server 2013 that hosts the public folder mailbox, you see the following error entry:
+Additionally, if you check the server log (*%ExchangeInstallPath%\Logging\Ews*) in Exchange Server 2013 that hosts the public folder mailbox, you see the following error entry:
 
 > \<Date/Time>.965Z,\<MailboxId>,15,0,1497,30,{AC96A663-47F0-4A84-9B8F-5253CD2CAC7D},NTLM,true,User@contoso.com,contoso.com,**MacOutlook/16.57.22011101 (Intelx64 Mac OS X 11.6.3 (Build 20G415))**, ,Exch1,EXCH5.contoso.com,**GetFolder,500**,857,,**ErrorInternalServerError**,User@contoso.com,..,ServiceDiagnostics_ReportException=System.NullReferenceException: **Object reference not set to an instance of an object.**
 at Microsoft.Exchange.Services.Core.Types.MailboxIdServerInfo.TryGetServerDataForMailbox(MailboxId mailboxId  Guid& mdbGuid  Int32& serverVersion  String& serverFQDN  Guid& mailboxGuid  String& cafeFQDN  Boolean& proxyToCafe)
