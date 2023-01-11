@@ -40,7 +40,7 @@ Cannot recover the master database. SQL Server is unable to run. Restore master 
 Dropping existing Agent certificate ...
 
 Error: 15559, Severity: 16, State: 1.</br>
-Cannot drop certificate '##MS_AgentSigningCertificate##' because there is a  user mapped to it.
+Cannot drop certificate '##MS_AgentSigningCertificate##' because there is a user mapped to it.
 
 Error: 912, Severity: 21, State: 2.</br>
 Script level upgrade for database 'master' failed because upgrade step 'sqlagent100_msdb_upgrade.sql' encountered error 15559, state 1, severity 16. This is a serious error condition which might interfere with regular operation and the database will be taken offline. If the error happened during upgrade of the 'master'database, it will prevent the entire SQL Server instance from starting.Examine the previous errorlog entries for errors, take the appropriate corrective actions and re-start the database so that the script upgrade steps run to completion.
