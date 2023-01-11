@@ -1,7 +1,7 @@
 ---
 title: SQL Server upgrade fails with error 5133
 description: Troubleshoots and solves an issue where a Cumulative Update or Service Pack for SQL Server reports error 5133 when executing database upgrade scripts.
-ms.date: 01/04/2023
+ms.date: 01/11/2023
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: ramakoni
 author: sevend2
@@ -36,12 +36,13 @@ Cannot recover the master database. SQL Server is unable to run. Restore master 
 ```
 
 ## Cause
+
 SQL Server reports error 5133 when it encounters an operating system error when trying to determine the directory of a file.
 SQL Server reports error 598 when it runs into an error while executing [CREATE DATABASE](/sql/t-sql/statements/create-database-transact-sql) or [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) statements.
 
 > [!NOTE]
 > From [Database Engine events and errors](/sql/relational-databases/errors-events/database-engine-events-and-errors), you can see `Error 598: An error occurred while executing CREATE/ALTER DB. Please look at the previous error for more information`.  
-> Entries prior to error 598 can provide more information about the cause of the failure. For example, in this article, the preceding error is 1802, which occurs because the upgrade script is unable to create a temporary database in the default data path. The temporary database is used by the setup program for various operations it runs during the update process. For more information about database upgrade scripts that are executed during CU or SP installation, see see [Troubleshooting upgrade script failures when applying an update](troubleshoot-upgrade-script-failures-apply-update.md).
+> Entries prior to error 598 can provide more information about the cause of the failure. For example, in this article, the preceding error is 1802, which occurs because the upgrade script is unable to create a temporary database in the default data path. The temporary database is used by the setup program for various operations it runs during the update process. For more information about database upgrade scripts that are executed during CU or SP installation, see [Troubleshooting upgrade script failures when applying an update](troubleshoot-upgrade-script-failures-apply-update.md).
 
 ## Resolution
 
