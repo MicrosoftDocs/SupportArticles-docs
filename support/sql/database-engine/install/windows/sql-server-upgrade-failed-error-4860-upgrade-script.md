@@ -47,7 +47,7 @@ To resolve the 4860 error, follow these steps:
 
 1. Start SQL Server together with trace flag (TF) 902. For more information, see [Steps to start SQL with trace flag 902](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error#steps-to-start--with-trace-flag-902).
 
-1. Repair the SQL Server installation per the procedure that's documented in [Repair a Failed SQL Server Installation](/sql/database-engine/install-windows/repair-a-failed-sql-server-installation?view=sql-server-ver16&preserve-view=true). Alternatively, you can copy the missing file from a different system that has the same build as your SQL Server installation, and restore the file on the computer on which the installation is failing.
+1. Repair the SQL Server installation per the procedure that's documented in [Repair a Failed SQL Server Installation](/sql/database-engine/install-windows/repair-a-failed-sql-server-installation). Alternatively, you can copy the missing file from a different system that has the same build as your SQL Server installation, and restore the file on the computer on which the installation is failing.
 
 1. Remove TF 902 from startup parameters, and then restart SQL Server. After SQL Server starts without TF 902, the upgrade script will run again.
 
