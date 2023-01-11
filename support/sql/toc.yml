@@ -107,34 +107,8 @@
         href: database-engine/startup-shutdown/sql-server-agent-crashes-upon-start.md
   - name: SQL Server resource usage (CPU, Memory, Storage) and Configuration
     items: 
-     - name: Generate a script to create a statistics-only database
-       href: database-engine/performance/stats-only-db-script.md
-     - name: Memory-optimized temppdb metadata out-of-memory errors
-       href: database-engine/performance/memory-optimized-tempdb-out-of-memory.md
-     - name: Non-yielding error if the lock pages in memory option is disabled
-       href: database-engine/performance/non-yielding-error-lock-pages-disable.md
-     - name: Performance issues when using Columstore indexes with large pages
-       href: database-engine/performance/performance-issues-using-columstore-indexes-large-pages.md
-     - name: Filtered index not used in queries
-       href: database-engine/performance/filtered-index-with-column-is-null.md
-     - name: Troubleshoot high-CPU-usage issues
-       href: database-engine/performance/troubleshoot-high-cpu-usage-issues.md
-     - name: Troubleshoot SQL Server slow performance caused by IO
-       href: database-engine/performance/troubleshoot-sql-io-performance.md
-     - name: TokenAndPermUserStore related performance issues
-       href: database-engine/performance/token-and-perm-user-store-perf-issue.md
-     - name: Troubleshoot query time-out errors
-       href: database-engine/performance/troubleshoot-query-timeouts.md
-     - name: Updates and configuration options for high-performance workloads (SQL Server 2014 and 2012)
-       href: database-engine/performance/recommended-updates-configuration-options.md
-     - name: Updates and configuration options for high-performance workloads (SQL Server 2017 and 2016)
-       href: database-engine/performance/recommended-updates-configuration-workloads.md
-     - name: Troubleshoot out of memory issues in SQL Server
-       href: database-engine/performance/troubleshoot-memory-issues.md
-     - name: Operations that trigger buffer pool scan may run slowly on large-memory computers
-       href: database-engine/performance/buffer-pool-scan-runs-slowly-large-memory-machines.md
-     - name: Reducing allocation contention in tempdb
-       href: database-engine/performance/recommendations-reduce-allocation-contention.md
+     - name: 701 error with large batches
+       href: database-engine/performance/701-error-large-batches.md
      - name: Blocked column is populated for latch waits
        href: database-engine/performance/blocked-column-populated-latch-waits.md
      - name: Decreased performance when using EFS to encrypt database files
@@ -143,14 +117,40 @@
        href: database-engine/performance/decreased-performance-run-aggregating-clause.md
      - name: External modules and filter drivers cause performance issues
        href: database-engine/performance/performance-consistency-issues-filter-drivers-modules.md
+     - name: Filtered index not used in queries
+       href: database-engine/performance/filtered-index-with-column-is-null.md
+     - name: Generate a script to create a statistics-only database
+       href: database-engine/performance/stats-only-db-script.md
+     - name: Memory-optimized temppdb metadata out-of-memory errors
+       href: database-engine/performance/memory-optimized-tempdb-out-of-memory.md
+     - name: Non-yielding error if the lock pages in memory option is disabled
+       href: database-engine/performance/non-yielding-error-lock-pages-disable.md
      - name: Non-yielding Resource Monitor
        href: database-engine/performance/resource-monitor-nonyielding-condition.md
+     - name: Operations that trigger buffer pool scan may run slowly on large-memory computers
+       href: database-engine/performance/buffer-pool-scan-runs-slowly-large-memory-machines.md
+     - name: Performance issues when using Columstore indexes with large pages
+       href: database-engine/performance/performance-issues-using-columstore-indexes-large-pages.md
+     - name: Reducing allocation contention in tempdb
+       href: database-engine/performance/recommendations-reduce-allocation-contention.md
      - name: SchemaMgr Store entries degrade performance
        href: database-engine/performance/schemamgr-store-degrades-performance.md
+     - name: Troubleshoot high-CPU-usage issues
+       href: database-engine/performance/troubleshoot-high-cpu-usage-issues.md
+     - name: Troubleshoot SQL Server slow performance caused by IO
+       href: database-engine/performance/troubleshoot-sql-io-performance.md
+     - name: TokenAndPermUserStore related performance issues
+       href: database-engine/performance/token-and-perm-user-store-perf-issue.md
+     - name: Troubleshoot query time-out errors
+       href: database-engine/performance/troubleshoot-query-timeouts.md
+     - name: Troubleshoot out of memory issues in SQL Server
+       href: database-engine/performance/troubleshoot-memory-issues.md
+     - name: Updates and configuration options for high-performance workloads (SQL Server 2014 and 2012)
+       href: database-engine/performance/recommended-updates-configuration-options.md
+     - name: Updates and configuration options for high-performance workloads (SQL Server 2017 and 2016)
+       href: database-engine/performance/recommended-updates-configuration-workloads.md
      - name: Use DBCC MEMORYSTATUS to monitor memory usage
        href: database-engine/performance/dbcc-memorystatus-monitor-memory-usage.md
-     - name: 701 error with large batches
-       href: database-engine/performance/701-error-large-batches.md
   - name: Slow query performance
     items: 
      - name: Different query performance between two SQL Servers
