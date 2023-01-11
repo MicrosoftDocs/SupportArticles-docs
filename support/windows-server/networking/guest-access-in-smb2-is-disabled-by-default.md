@@ -38,10 +38,10 @@ SMB2 and SMB3 have the following behavior in these versions of Windows:
 
 If you try to connect to devices that request credentials of a guest instead of appropriate authenticated principals, you may receive one of the following error messages:
 
-> You can't access this shared folder because your organization's security policies block unauthenticated guest access. These policies help protect your PC from unsafe or malicious devices on the network.
+- > You can't access this shared folder because your organization's security policies block unauthenticated guest access. These policies help protect your PC from unsafe or malicious devices on the network.
 
-> Error code: 0x80070035  
-> The network path was not found.
+- > Error code: 0x80070035  
+    The network path was not found.
 
 Also, if a remote server tries to force you to use guest access, or if an administrator enables guest access, the following entries are logged in the SMB Client event log:
 
@@ -101,7 +101,7 @@ Windows client and Windows Server haven't enabled guest access or allowed remote
 
 ## Resolution
 
-Configure your third-party SMB server device to require a username and password for SMB connections. A device that allows guest access means that any device or person on your network can read or copy all of your shared data without any audit trail or credentials.
+Configure your third-party SMB server device to require a username and password for SMB connections. If your device allows guest access, any device or person on your network can read or copy all of your shared data without any audit trail or credentials.
 
 If you can't configure your third-party device to be secure, you can enable insecure guest access with the following Group Policy settings:
 
