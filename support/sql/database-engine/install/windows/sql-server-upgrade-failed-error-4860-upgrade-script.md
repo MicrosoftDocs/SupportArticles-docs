@@ -19,7 +19,7 @@ When you install a CU or SP for SQL Server, the Setup program reports the follow
 
 > "Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes."
 
-When you check the SQL Server error log, you notice one of the following error entries:
+When you check the SQL Server error log, you notice error messages like the following:
 
 ```output
 Error: 4860, Severity: 16, State: 1.
