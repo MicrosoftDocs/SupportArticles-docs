@@ -23,15 +23,10 @@ When you check the SQL Server error log, you notice error messages like the foll
 
 ```output
 Error: 4860, Severity: 16, State: 1.
-
 Cannot bulk load. The file "C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Install\SqlTraceCollect.dtsx"<Filename> does not exist.
-
 Error: 912, Severity: 21, State: 2.
-
 Script level upgrade for database 'master' failed because upgrade step 'msdb110_upgrade.sql' encountered error 4860, state 1, severity 16. This is a serious error condition which might interfere with regular operation and the database will be taken offline. If the error happened during upgrade of the 'master' database, it will prevent the entire SQL Server instance from starting. Examine the previous errorlog entries for errors, take the appropriate corrective actions and re-start the database so that the script upgrade steps run to completion.
-
 Error: 3417, Severity: 21, State: 3.
-
 Cannot recover the master database. SQL Server is unable to run. Restore master from a full backup, repair it, or rebuild it.For more information about how to rebuild the master database, see SQL Server Books Online.
 ```
 
@@ -43,7 +38,6 @@ For example, if Setup can't find *SqlTraceCollect.dtsx*, it reports an error tha
 
 ```output
 Error: 4860, Severity: 16, State: 1.
-
 Cannot bulk load. The file "C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Install\SqlTraceCollect.dtsx"
 ```
 
