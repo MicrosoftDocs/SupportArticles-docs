@@ -48,6 +48,14 @@ Microsoft Dynamics GP 2013 and later versions are supported.
 
 Microsoft Dynamics NAV 2013 and later versions are supported.
 
+### Microsoft Dynamics CRM
+
+Microsoft Dynamics CRM 2015 and Microsoft Dynamics CRM 2016 are supported.
+
+### Microsoft Dynamics 365
+
+Microsoft Dynamics 365 Server version 9.1 and later versions are supported.
+
 ### Microsoft Exchange
 
 Exchange Server 2013 and later versions are supported. For more information, see the "Requirements for hardware virtualization" section of the following TechNet topic: [Exchange 2013 virtualization](https://technet.microsoft.com/library/jj619301%28v=exchg.150%29.aspx?f=255&mspperror=-2147217396#bkmk_prereq).

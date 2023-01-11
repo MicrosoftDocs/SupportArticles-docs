@@ -5,7 +5,7 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: nigreenf
-ms.service: container-service
+ms.service: azure-kubernetes-service
 ms.date: 11/4/2022
 ms.custom: devx-track-azurecli
 ---
