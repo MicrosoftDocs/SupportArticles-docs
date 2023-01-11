@@ -37,7 +37,7 @@ Because the tunnel components or the connectivity between the server and client 
 
 - Admission controller webhooks
 
-- Log retrieval (using the [kubectl logs](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs) command)
+- Ability of log retrieval (using the [kubectl logs](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs) command)
 
 - Running a command in a container or getting inside a container (using the [kubectl exec](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#exec) command)
 
