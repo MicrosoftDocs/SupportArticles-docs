@@ -72,5 +72,5 @@ SQL Server reports error 598 when it runs into an error while executing [CREATE 
 
 Once SQL Server starts without trace flag 902, the upgrade script will be executed again.
 
-- If the SP/CU upgrade script completes successfully, you can check the SQL Server error log and bootstrap folder to verify.
+- If the SP or CU upgrade script completes successfully, you can check the SQL Server error log and bootstrap folder to verify.
 - If the upgrade script fails again, check the SQL Server error log for other errors and troubleshoot the new errors.

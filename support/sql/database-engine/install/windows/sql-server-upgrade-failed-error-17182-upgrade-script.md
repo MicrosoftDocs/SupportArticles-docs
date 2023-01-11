@@ -17,27 +17,19 @@ This article helps you troubleshoot error 17182 that occurs when you install a c
 
 When you apply a CU or an SP for SQL Server, the Setup program reports the following error:
 
-> "Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes."
+> Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes.
 
 When you check the SQL Server error log, you notice errors like the following:
 
 ```output
 2019-04-27 00:49:59.53 spid13s     Unable to initialize SSL encryption because a valid certificate could not be found, and it is not possible to create a self-signed certificate.
-
 2019-04-27 00:49:59.53 spid13s     Error: 17182, Severity: 16, State: 1.
-
 2019-04-27 00:49:59.53 spid13s     TDSSNIClient initialization failed with error 0x80090331, status code 0x80. Reason: Unable to initialize SSL support. The client and server cannot communicate, because they do not possess a common algorithm.  
-
 2019-04-27 00:49:59.53 spid13s     Error: 17182, Severity: 16, State: 1.
-
 2019-04-27 00:49:59.53 spid13s     TDSSNIClient initialization failed with error 0x80090331, status code 0x1. Reason: Initialization failed with an infrastructure error. Check for previous errors. The client and server cannot communicate, because they do not possess a common algorithm.  
-
 2019-04-27 00:49:59.53 spid13s     Error: 17826, Severity: 18, State: 3.
-
 2019-04-27 00:49:59.53 spid13s     Could not start the network library because of an internal error in the network library. To determine the cause, review the errors immediately preceding this one in the error log.
-
 2019-04-27 00:49:59.53 spid13s     Error: 17120, Severity: 16, State: 1.
-
 2019-04-27 00:49:59.53 spid13s     SQL Server could not spawn FRunCommunicationsManager thread. Check the SQL Server error log and the Windows event logs for information about possible related problems.
 ```
 

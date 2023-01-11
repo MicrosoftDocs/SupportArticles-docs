@@ -17,20 +17,18 @@ This article helps you troubleshoot error 15173 or 15559 that occur when you ins
 
 When you apply a CU or an SP for SQL Server, the Setup program reports the following error:  
 
-> "Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes."
+> Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes.
 
 When you check the SQL Server error log, you notice one of the following error entries.
 
 **Error message set 1:**
 
 ```output
-Error: 15173, Severity: 16, State: 1.</br>
+Error: 15173, Severity: 16, State: 1.
 Server principal ‘##MS_PolicyEventProcessingLogin##’ has granted one or more permission(s). Revoke the permission(s) before dropping the server principal.
-
-Error: 912, Severity: 21, State: 2.</br>
+Error: 912, Severity: 21, State: 2.
 Script level upgrade for database 'master' failed because upgrade step 'msdb110_upgrade.sql' encountered error 15173, state 1, severity 16. This is a serious error condition which might interfere with regular operation and the database will be taken offline. If the error happened during upgrade of the 'master' database, it will prevent the entire SQL Server instance from starting. Examine the previous errorlog entries for errors, take the appropriate corrective actions and re-start the database so that the script upgrade steps run to completion.
-
-EventID 3417</br>
+EventID 3417
 Cannot recover the master database. SQL Server is unable to run. Restore master from a full backup, repair it, or rebuild it. For more information about how to rebuild the master database, see SQL Server Books Online.
 ```
 
@@ -38,14 +36,11 @@ Cannot recover the master database. SQL Server is unable to run. Restore master 
 
 ```output
 Dropping existing Agent certificate ...
-
-Error: 15559, Severity: 16, State: 1.</br>
+Error: 15559, Severity: 16, State: 1.
 Cannot drop certificate '##MS_AgentSigningCertificate##' because there is a user mapped to it.
-
-Error: 912, Severity: 21, State: 2.</br>
+Error: 912, Severity: 21, State: 2.
 Script level upgrade for database 'master' failed because upgrade step 'sqlagent100_msdb_upgrade.sql' encountered error 15559, state 1, severity 16. This is a serious error condition which might interfere with regular operation and the database will be taken offline. If the error happened during upgrade of the 'master'database, it will prevent the entire SQL Server instance from starting.Examine the previous errorlog entries for errors, take the appropriate corrective actions and re-start the database so that the script upgrade steps run to completion.
-
-Error: 3417, Severity: 21, State: 3.</br>
+Error: 3417, Severity: 21, State: 3.
 Cannot recover the master database. SQL Server is unable to run. Restore master from a full backup, repair it, or rebuild it. For more information about how to rebuild the master database, see SQL Server Books Online.</br>
 SQL Trace was stopped due to server shutdown. Trace ID = '1'. This is an informational message only; no user action is required.
 ```
@@ -66,25 +61,17 @@ To resolve the 15173 or 15559 error, follow these steps:
 
     ```sql
     SELECT   a.name, ,b.permission_name  
-    
     FROM  sys.server_principals a 
-    
     INNER JOIN sys.server_permissions b ON a.principal_id = b.grantee_principal_id 
-    
     INNER JOIN sys.server_principals c ON b.grantor_principal_id = c.principal_id 
-    
     WHERE c.name = '##MS_PolicyEventProcessingLogin##'
     ```
 
     ```sql
     SELECT   a.name,b.permission_name  
-    
     FROM  sys.server_principals a 
-    
     INNER JOIN sys.server_permissions b ON a.principal_id = b.grantee_principal_id 
-    
     INNER JOIN sys.server_principals c ON b.grantor_principal_id = c.principal_id 
-    
     WHERE c.name = '##MS_AgentSigningCertificate##'
     ```
 
@@ -98,11 +85,11 @@ To resolve the 15173 or 15559 error, follow these steps:
     In this case, run either of the following statements:
 
     ```sql
-    revoke CONTROL ON LOGIN::[##MS_PolicyEventProcessingLogin##] TO [NT SERVICE\MSSQL$TEST] AS [##MS_PolicyEventProcessingLogin##]
+    REVOKE CONTROL ON LOGIN::[##MS_PolicyEventProcessingLogin##] TO [NT SERVICE\MSSQL$TEST] AS [##MS_PolicyEventProcessingLogin##]
     ```
 
     ```sql
-    revoke CONTROL ON LOGIN::[##MS_AgentSigningCertificate##] TO [NT SERVICE\MSSQL$TEST] AS [##MS_AgentSigningCertificate]
+    REVOKE CONTROL ON LOGIN::[##MS_AgentSigningCertificate##] TO [NT SERVICE\MSSQL$TEST] AS [##MS_AgentSigningCertificate]
     ```
 
 1. Remove TF 902 from the startup parameters, and then restart SQL Server. After SQL Server starts without TF 902, the upgrade script will run again.

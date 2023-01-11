@@ -57,7 +57,7 @@ Follow these steps to solve the issue:
 
 Once SQL Server starts without trace flag 902, the upgrade script will be executed again, and the **DatabaseMailUserRole** schema is recreated.
 
-- If the SP/CU upgrade script completes successfully, you can check the SQL Server error log and bootstrap folder to verify.
+- If the SP or CU upgrade script completes successfully, you can check the SQL Server error log and bootstrap folder to verify.
 - If the upgrade script fails again, check the SQL Server error log for other errors and troubleshoot the new errors.
 
 ## More information

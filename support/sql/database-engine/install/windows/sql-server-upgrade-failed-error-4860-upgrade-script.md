@@ -17,7 +17,7 @@ This article helps you troubleshoot error 4860 that occurs when you install a cu
 
 When you install a CU or SP for SQL Server, the Setup program reports the following error:
 
-> "Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes."
+> Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes.
 
 When you check the SQL Server error log, you notice error messages like the following:
 
