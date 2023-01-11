@@ -69,7 +69,7 @@ This article lists the Microsoft SQL Server 2017 builds that were released after
 ## References
 
 - [Microsoft SQL Server support lifecycle](https://support.microsoft.com/lifecycle/?c2=1044)
-- [KB321185](../download-and-install-latest-updates.md) How to determine the version and edition of SQL Server and its components
+- [KB321185](../download-and-install-latest-updates.md) Latest updates and version history for SQL Server
 - [The script to determine which version and edition of SQL Server Database Engine is running](https://gallery.technet.microsoft.com/determining-which-version-af0f16f6)
 - [KB957826](https://support.microsoft.com/help/957826) The builds for all SQL Server versions
 - [SQL Server Service Packs are discontinued starting from SQL Server 2017](https://support.microsoft.com/help/4041553)

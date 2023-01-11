@@ -88,7 +88,7 @@ This article lists the Microsoft SQL Server 2014 builds that were released after
 ## References
 
 - [Microsoft SQL Server support lifecycle](https://support.microsoft.com/lifecycle/?c2=1044)
-- [KB321185](../download-and-install-latest-updates.md) How to determine the version and edition of SQL Server and its components
+- [KB321185](../download-and-install-latest-updates.md) Latest updates and version history for SQL Server
 - [The script to determine which version and edition of SQL Server Database Engine is running](https://gallery.technet.microsoft.com/determining-which-version-af0f16f6)
 - [KB957826](https://support.microsoft.com/help/957826) The builds for all SQL Server versions
 - [KB2958069](https://support.microsoft.com/help/2958069) How to obtain the latest service pack for SQL Server 2014
