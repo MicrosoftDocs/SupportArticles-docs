@@ -1,7 +1,7 @@
 ---
 title: Error 1712 when upgrading SQL Server 2014 or 2016 to 2017  
 description: This article discusses error 1712 that causes a SQL Server upgrade to fail when it runs update database scripts.
-ms.date: 01/10/2023
+ms.date: 01/11/2023
 ms.custom: sap:Installation, Patching and Upgrade
 author: padmajayaraman
 ms.author: v-jayaramanp
@@ -74,7 +74,7 @@ To resolve the 1712 error, follow these steps:
  > [!NOTE]
  > As this error occurs after upgrading binaries, SQL Server database engine will already be at SQL Server 2017 RTM level and you can still start the instance with TF 902.
 
-1. Install a build of SQL Server that is [SQL Server 2017 CU5](troubleshoot/sql/releases/sqlserver-2017/build-versions.md) or higher.
+1. Install a build of SQL Server that is [SQL Server 2017 CU5](troubleshoot/sql/releases/sqlserver-2017/build-versions) or higher.
 
 1. Remove TF 902 from the startup parameters, and then restart SQL Server.
 
@@ -83,3 +83,5 @@ To resolve the 1712 error, follow these steps:
    - If the upgrade script finishes successfully, the SP or CU upgrade is complete. You can check the SQL Server error log and bootstrap folder to verify the completed installation.
 
    - If the upgrade script fails again, check the SQL Server error log for additional error entries, and then troubleshoot the new errors.
+
+> Error code: 0x80070035  The network path was not found.
