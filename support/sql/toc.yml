@@ -397,6 +397,8 @@
        href: database-engine/database-file-operations/io-subsystem-requirements-tempdb.md
      - name: Space used by a table is not released
        href: database-engine/database-file-operations/space-table-uses-not-released.md
+     - name: SQL Server diagnostics detects unreported I/O problems due to stale reads or lost writes
+       href: database-engine/database-file-operations/diagnostics-for-unreported-io-problems.md
      - name: Support for databases on compressed volumes
        href: database-engine/database-file-operations/support-databases-compressed-volumes.md
      - name: Support for network database files
