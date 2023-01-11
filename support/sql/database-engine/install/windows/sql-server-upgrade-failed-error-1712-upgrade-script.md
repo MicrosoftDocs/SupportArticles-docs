@@ -17,7 +17,7 @@ This article helps you troubleshoot and resolve the issue wherein upgrading eith
 
 Upgrading to a SQL Server 2017 instance may fail while running the `ISServer_upgrade.sql` upgrade script with the following error:  
 
-> "Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes."
+> Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes.
 
 When you check the SQL Server error log, you notice one of the following error entries:
 
