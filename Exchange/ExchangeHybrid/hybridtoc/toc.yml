@@ -231,6 +231,8 @@
           href: ../move-mailboxes/cannot-migrate-to-exchange-2010.md
         - name: Can't move mailboxes to Exchange Online
           href: ../move-mailboxes/user-is-already-being-moved-error.md
+        - name: Can't register a Hybrid Agent in Exchange Server
+          href: ../move-mailboxes/cannot-register-hybrid-agent.md
         - name: Can't use OWA move items in a hybrid deployment
           href: ../move-mailboxes/cannot-move-items-using-owa.md
         - name: Error when you move mailboxes to or from Microsoft 365
