@@ -16,7 +16,7 @@ metadata:
 landingContent:
 
  # Card
-  - title: Common HTTP Error Codes
+  - title: Status/Error Codes
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -35,7 +35,7 @@ landingContent:
           - text: HTTP error 500.0 - Internal Server Error
             url: www-administration-management/http-error-500-when-you-visit-web-site.md
 
-  - title: Administration and Management
+  - title: Administration
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -45,7 +45,11 @@ landingContent:
             url: site-behavior-performance/failed-generate-certificate-request.md
           - text: Processor affinity doesn't work on NUMA
             url: iisadmin-service-inetinfo/processor-affinity-not-work.md
-
+          - text: Recover a private key of a deleted certificate
+            url: development/assign-certificate-private-key.md
+          - text: Configure intermediate certificates
+            url: www-authentication-authorization/configure-intermediate-certificates.md
+            
   - title: Authentication and Authorization
     linkLists:
       - linkListType: how-to-guide
@@ -59,16 +63,7 @@ landingContent:
           - text: IIS authenticates browser clients
             url: www-authentication-authorization/iis-authenticates-browser-client.md
 
-  - title: SSL Certificates
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Recover a private key of a deleted certificate
-            url: development/assign-certificate-private-key.md
-          - text: Configure intermediate certificates
-            url: www-authentication-authorization/configure-intermediate-certificates.md
-
-  - title: IIS Server Configuration
+  - title: Configuration
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -77,19 +72,16 @@ landingContent:
           - text: Http.sys registry settings for Windows
             url: iisadmin-service-inetinfo/httpsys-registry-windows.md
 
-  - title: Event Tracing for Windows
+  - title: Tracing and Troubleshooting
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: IIS ETW logs diagnostic
             url: health-diagnostic-performance/etw-log-diagnostic.md
-
-  - title: WinHTTP Tracing
-    linkLists:
-      - linkListType: how-to-guide
-        links:
           - text: WinHTTP SDP package information
             url: www-service-svchost/disable-winhttp-tracing-sdp.md
+          - text: Upload files to a WebDav directory with the WinINet API
+            url: development/upload-to-webdav-directory-fails.md
 
   - title: IIS Express
     linkLists:
@@ -104,10 +96,3 @@ landingContent:
         links:
           - text: Changes in Microsoft FTP 7.5
             url: ftp-service-svchost-inetinfo/changes-in-ftp-7-5.md
-
-  - title: Development
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Upload files to a WebDav directory with the WinINet API
-            url: development/upload-to-webdav-directory-fails.md
