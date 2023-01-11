@@ -38,14 +38,14 @@
     href: analysis-services/mdx-query-calculated-measure-run-slow.md
   - name: No properties and members of Dimension Hierarchy
     href: analysis-services/no-dimension-hierarchy-properties.md
+  - name: NA returns when you run a multi-subselect query
+    href: analysis-services/na-returns-run-a-multi-subselect-query.md
   - name: Perform a distributed query with OLAP Server
     href: analysis-services/perform-distributed-query-olap.md
   - name: Unexpected result from Analysis Services
     href: analysis-services/unexpected-result-analysis-services.md
   - name: Writeback performance issue
     href: analysis-services/writeback-performance-issue-cell-security-enable.md
-  - name: NA returns when you run a multi-subselect query
-    href: analysis-services/na-returns-run-a-multi-subselect-query.md
   - name: WMI Provider Error and 0x80004005 code
     href: analysis-services/wmi-provider-error-0x80004005-code.md
 
@@ -73,8 +73,6 @@
       href: database-engine/log-shipping/logshipping-monitor-14420-error.md
   - name: Startup, shutdown, restart issues (instance or database)
     items:
-      - name: SQL Server startup errors
-        href: database-engine/startup-shutdown/sql-server-startup-errors.md
       - name: Access is denied error and SQL Server doesn't start
         href: database-engine/startup-shutdown/event-id-7000-access-denied.md
       - name: Error 17113 when you start SQL Server service
@@ -83,6 +81,8 @@
         href: database-engine/startup-shutdown/agent-service-fails-start-stand-alone-server.md
       - name: Error 1069 when starting SQL Server
         href: database-engine/startup-shutdown/error-1069-service-cannot-start.md
+      - name: Error 17182 when you start SQL Server service
+        href: database-engine/startup-shutdown/error-17182-protocols-disabled-start-failure.md
       - name: Event ID 17058 and SQL Server doesn't start
         href: database-engine/startup-shutdown/event-id-17058-start-sql-server.md
       - name: Event ID 1814 and SQL Server doesn't start
@@ -93,12 +93,12 @@
         href: database-engine/startup-shutdown/event-id-33566-start-sql-server.md
       - name: Event ID 7000 and SQL Server doesn't start
         href: database-engine/startup-shutdown/event-id-7000-fail-start.md
-      - name: Manage the error log
-        href: database-engine/startup-shutdown/manage-error-log.md
       - name: Fails to start with error 17182
         href: database-engine/startup-shutdown/fails-start-error-17182.md
-      - name: Error 17182 when you start SQL Server service
-        href: database-engine/startup-shutdown/error-17182-protocols-disabled-start-failure.md
+      - name: Manage the error log
+        href: database-engine/startup-shutdown/manage-error-log.md
+      - name: SQL Server startup errors
+        href: database-engine/startup-shutdown/sql-server-startup-errors.md
       - name: SQL Service cannot start after configuring SSL certificate
         href: database-engine/startup-shutdown/service-cannot-start.md
       - name: SQL can't start with a domain account
