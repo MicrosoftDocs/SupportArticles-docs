@@ -67,6 +67,19 @@ The SQL Server team uses a scheduled delivery model for releasing fixes and prod
 > [!NOTE]
 > By default, hotfixes are serviced through GDR, CU, and OD releases. When a product's hotfix request volume gets low, the SQL Server team stops CU releases and delivers hotfixes through GDR and OD releases. The SQL Server team makes the decision based on support trends and customer demand.
 
+### Cumulative Update (CU) security update
+
+- CU security update contains security updates in addition to all the updates addressed by CU.
+
+- Subsequent CUs include updates addressed by CU security updates.
+
+- Example: [KB5014353 - Description of the security update for SQL Server 2019 CU16: June 14, 2022](https://support.microsoft.com/en-us/topic/kb5014353-description-of-the-security-update-for-sql-server-2019-cu16-june-14-2022-f0afe659-bd19-4c87-a417-a4c67a47e644)
+
+- For example, to get the update of [KB5014353 - Description of the security update for SQL Server 2019 CU16: June 14, 2022](https://support.microsoft.com/en-us/topic/kb5014353-description-of-the-security-update-for-sql-server-2019-cu16-june-14-2022-f0afe659-bd19-4c87-a417-a4c67a47e644), you can install any of these updates:
+
+   - [KB5014353 - Description of the security update for SQL Server 2019 CU16: June 14, 2022](https://support.microsoft.com/en-us/topic/kb5014353-description-of-the-security-update-for-sql-server-2019-cu16-june-14-2022-f0afe659-bd19-4c87-a417-a4c67a47e644)
+   - [KB5016394 - Cumulative Update 17 for SQL Server 2019](https://support.microsoft.com/en-us/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7) or newer Cumulative Update
+
 ### Service Pack (SP)
 
 - Service packs are no longer released for SQL Server 2017 and later versions.  
