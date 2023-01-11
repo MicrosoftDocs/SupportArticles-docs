@@ -1,7 +1,7 @@
 ---
 title: SQL Server upgrade fails with error 4860 when running update database scripts
-description: This article discusses  error 4860 that causes a SQL Server upgrade to fail when it runs update database scripts.
-ms.date: 01/10/2023
+description: This article discusses error 4860 that causes a SQL Server upgrade to fail when it runs update database scripts.
+ms.date: 01/11/2023
 ms.custom: sap:Installation, Patching and Upgrade
 author: padmajayaraman
 ms.author: v-jayaramanp
@@ -19,7 +19,7 @@ When you install a CU or SP for SQL Server, the Setup program reports the follow
 
 > "Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes."
 
-When you check the SQL Server error log, you notice one of the following error entries:
+When you check the SQL Server error log, you notice error messages like the following:
 
 ```output
 Error: 4860, Severity: 16, State: 1.

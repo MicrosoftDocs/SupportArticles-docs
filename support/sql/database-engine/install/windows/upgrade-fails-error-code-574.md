@@ -1,7 +1,7 @@
 ---
 title: SQL Server upgrade fails with error code 574
-description: Troubleshoots and solves an issue where a Cumulative Update (CU) or Service Pack (SP) for SQL Server reports error 574 when you execute database upgrade scripts.
-ms.date: 01/04/2023
+description: Troubleshoots and solves an issue where a Cumulative Update or Service Pack for SQL Server reports error 574 when executing database upgrade scripts.
+ms.date: 01/11/2023
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: ramakoni
 author: sevend2
@@ -11,7 +11,7 @@ ms.prod: sql
 
 # SQL Server upgrade fails with error code 574 when executing update database scripts
 
-This article helps you troubleshoot and solve an issue where a Cumulative Update (CU) or Service Pack (SP) for SQL Server reports error 574 when you execute database upgrade scripts.
+This article helps you troubleshoot and solve an issue where a Cumulative Update (CU) or Service Pack (SP) for SQL Server reports error 574 when executing database upgrade scripts.
 
 ## Symptoms
 
@@ -35,7 +35,7 @@ Script level upgrade for database 'master' failed because upgrade step 'msdb110_
 
 ## Cause
 
-The update process may run some upgrade scripts within a transaction. These update scripts are designed with an assumption that users don't make changes to system objects and associated permissions. If you inadvertently make any changes to system objects or permissions, some of these scripts may fail, and the associated transaction may become orphaned and remain open. In this scenario, when the setup program executes an upgrade script that uses `sp_configure` to set some configuration values, error 574 occurs. The actual cause of the setup failure should be determined by reviewing entries that are logged before error 574.
+The update process may run some upgrade scripts within a transaction. These update scripts are designed with an assumption that users don't make changes to system objects and associated permissions. If you inadvertently make any changes to system objects or permissions, some of these scripts may fail, and the associated transaction may become orphaned and remain open. In this scenario, when the setup program later executes an upgrade script that uses `sp_configure` to set some configuration values, error 574 occurs. The actual cause of the setup failure should be determined by reviewing entries that are logged before error 574.
 
 For example, a script like the following one can result in error 574:
 
@@ -78,7 +78,7 @@ Once SQL Server starts without trace flag 902, the upgrade script will be execut
 
 - User options cause transactions to fail.
 
-   **Solution**: Connect to SQL Server, [configure the user options Server Configuration Option](/sql/database-engine/configure-windows/configure-the-user-options-server-configuration-option) to identify options that may cause the issue, and remove the conflicting setting.
+   **Solution**: Connect to SQL Server, use the [user options](/sql/database-engine/configure-windows/configure-the-user-options-server-configuration-option) server configuration option documentation to identify options that may cause the issue, and remove the conflicting setting.
 
    For example, Microsoft support has seen instances where the setting for [IMPLICIT_TRANSACTIONS](/sql/t-sql/statements/set-implicit-transactions-transact-sql) causes the setup to fail. Alternately, if you can't identify the conflicting user option, remove all the user options by using the following script in SQL Server Management Studio (SSMS):
 

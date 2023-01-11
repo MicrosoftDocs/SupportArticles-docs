@@ -19,7 +19,7 @@ When you apply a CU or an SP for SQL Server, the Setup program reports the follo
 
 > "Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes."
 
-When you check the SQL Server error log, you notice one of the following error entries:
+When you check the SQL Server error log, you notice errors like the following:
 
 ```output
 2019-04-27 00:49:59.53 spid13s     Unable to initialize SSL encryption because a valid certificate could not be found, and it is not possible to create a self-signed certificate.

@@ -1,7 +1,7 @@
 ---
 title: SQL Server upgrade fails with error code 2714
-description: Troubleshoots and solves an issue where a Cumulative Update (CU) or Service Pack (SP) for SQL Server reports error 2714 when you execute database upgrade scripts.
-ms.date: 01/04/2023
+description: Troubleshoots and solves an issue where a Cumulative Update or Service Pack for SQL Server reports error 2714 when executing database upgrade scripts.
+ms.date: 01/11/2023
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: ramakoni
 author: sevend2
@@ -11,7 +11,7 @@ ms.prod: sql
 
 # SQL Server upgrade fails with error code 2714 when executing update database scripts
 
-This article helps you troubleshoot and solve an issue where a Cumulative Update (CU) or Service Pack (SP) for SQL Server reports error 2714 when you execute database upgrade scripts.
+This article helps you troubleshoot and solve an issue where a Cumulative Update (CU) or Service Pack (SP) for SQL Server reports error 2714 when executing database upgrade scripts.
 
 ## Symptoms
 
