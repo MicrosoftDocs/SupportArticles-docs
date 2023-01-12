@@ -348,7 +348,7 @@
     - name: Update or Slipstream installation for SQL Server 2008
       href: database-engine/install/windows/update-or-slipstream-installation.md
     - name: Upgrade failures on Windows Server 2012
-      href: database-engine/install/windows/error-upgrade-cluster-node.md'
+      href: database-engine/install/windows/error-upgrade-cluster-node.md
   - name: Machine Learning Services (in database)
     items:
       - name: Inconsistent results in MKL computations
