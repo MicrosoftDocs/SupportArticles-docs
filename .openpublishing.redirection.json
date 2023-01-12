@@ -5237,6 +5237,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/sql/admin/diagnostics-for-unreported-io-problems.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/diagnostics-for-unreported-io-problems",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/sql/admin/latch-timeout-running-dbcc-checkdb.md",
       "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/latch-timeout-running-dbcc-checkdb",
       "redirect_document_id": true
