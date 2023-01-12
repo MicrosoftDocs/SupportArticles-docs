@@ -61,6 +61,12 @@ For servers configured to enable 256 processor threads and that are running eith
 4. Install the latest Windows Server updates.
 5. Restart the system and enable the SMT, x2APIC and IOMMU settings for Windows Server 2019 in the BIOS.
 
+## Known issue with Server 2019 Recovery Environment (WinRE)
+
+Attempting to boot to the Windows Server 2019 Recovery Environment (WinRE) may result in a blue screen error 0x5C HAL_INITIALIZATION_FAILED. The WinRE image must be updated to support configurations with 256 or more processors and x2APIC enabled. To enable this support, apply the latest cumulative update for Server 2019 to the WinRE image. See the article below for instructions.
+
+- [Add an update package to Windows RE](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/add-update-to-winre?view=windows-11)
+
 ## Known UI limitations for Windows Server 2012R2/2016 Task Manager, WMI, or PowerShell queries to pull CPU information
 
 ### Task Manager does not display L2 and L3 cache sizes, or displays incorrect L2 and L3 cache sizes
