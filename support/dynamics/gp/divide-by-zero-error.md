@@ -3,7 +3,7 @@ title: Divide by zero error
 description: Provides a solution to an error that occurs when you print the Historical Stock Status report in Microsoft Dynamics GP.
 ms.reviewer: cwaswick, Angela
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 01/12/2023
 ---
 # "Divide by zero" error when you print the Historical Stock Status report in Microsoft Dynamics GP
 
@@ -47,7 +47,7 @@ Example:
     DELETE IV30300 WHERE DEX_ROW_ID = XXX
     ```
 
-Example from a case: Below is a select statement based on one of the documents that was returned in a case I worked on. Notice both lines being almost identical. The document should have only one line returned. I figured it must have been some type of posting interruption that caused the corruption because all the other tables in inventory posted just one line. I removed corrupt record missing the transaction source and the report printed.
+As you review your data in the select statement above, typically you will have 2 lines vs 1 line.  You will want to remove the corrupt record missing the transaction source.
 
 Cause 2
 
