@@ -32,10 +32,16 @@ You see any of the following issues when you check the presence status for a use
   > Outlook currently shows **Status unknown** for federated (external) Teams contacts.
 
 ## Resolution
+**Use Microsoft Support and Recovery Assistant**
 
-To fix these issues, download and run [Microsoft Support and Recovery Assistant](https://aka.ms/SaRA-TeamsPresenceScenario) for automated troubleshooting steps and fixes.
+To fix these issues, download and run the Assistant for automated troubleshooting steps and fixes.
 
-Or, follow these manual steps and check whether the issue is resolved after each step:
+> [!div class="nextstepaction"]
+> [Download the Assistant](https://aka.ms/SaRA-TeamsPresenceScenario)
+
+**Fix the issue manually**
+
+If you’d like to perform the checks and make the fixes manually, follow these manual steps and check whether the issue is resolved after each step:
 
 1. Make sure that the Teams app is installed on your computer. For more information, see [How do I get Microsoft Teams](https://support.microsoft.com/office/how-do-i-get-microsoft-teams-fc7f1634-abd3-4f26-a597-9df16e4ca65b).
 
