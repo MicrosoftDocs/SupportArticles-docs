@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article helps fix an issue where the NTP client doesn't synchronize time at the SpecialPollInterval period as expected.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  Windows 11
 _Original KB number:_ &nbsp; 3205089
 
 ## Symptoms
