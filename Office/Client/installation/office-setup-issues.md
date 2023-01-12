@@ -42,7 +42,7 @@ Many articles in the Microsoft Knowledge Base that relate to installation errors
 
 ## How to create a log file
 
-Office Setup automatically creates log files in your \Temp folder. The logs will be stored under %temp% for Sign-in or Activation issues. For installation or patching issues, they use the system account, so you will also want to collect the logs from %windir%\temp. For more information, see [How to enable Microsoft 365 Apps for enterprise ULS logging](/office365/troubleshoot/authentication/how-to-enable-office-365-proplus-uls-logging).
+Office Setup automatically creates log files in your \Temp folder. The logs will be stored under %temp% for Sign-in or Activation issues. For installation or patching issues, they use the system account, so you will also want to collect the logs from %windir%\temp. For more information, see [How to enable Microsoft 365 Apps for enterprise ULS logging](/microsoft-365/troubleshoot/authentication/how-to-enable-office-365-proplus-uls-logging).
 
 |Log file for|Log file name
 |---|---|

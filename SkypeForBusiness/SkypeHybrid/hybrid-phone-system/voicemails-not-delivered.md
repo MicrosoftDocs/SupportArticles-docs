@@ -38,7 +38,7 @@ The primary issue that affects third-party email systems is that the **FROM** ad
 
 ## Workaround for symptom 1
 
-Add the Cloud Service IP addresses listed at [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges#skype-for-business-online-and-microsoft-teams) in an SPF record. Alternatively, create a transport rule to bypass the spam filtering for Cloud Voicemail coming from them.
+Add the Cloud Service IP addresses listed at [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges#skype-for-business-online-and-microsoft-teams) in an SPF record. Alternatively, create a transport rule to bypass the spam filtering for Cloud Voicemail coming from them.
 
 ## Symptom 2
 

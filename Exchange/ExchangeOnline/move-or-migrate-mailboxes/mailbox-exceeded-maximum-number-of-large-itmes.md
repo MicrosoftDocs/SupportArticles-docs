@@ -1,6 +1,6 @@
 ---
-title: Can't migrate a user's mailbox data from the on-premises to Office 365
-description: Fixes an issue in which you receive an error message when you try to migrate a user's mailbox data from the on-premises messaging environment to Office 365.
+title: Can't migrate a user's mailbox data from the on-premises to Microsoft 365
+description: Fixes an issue in which you receive an error message when you try to migrate a user's mailbox data from the on-premises messaging environment to Microsoft 365.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -16,16 +16,16 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# This mailbox exceeded the maximum number of large items when migrating a user's mailbox data from the on-premises environment to Office 365
+# This mailbox exceeded the maximum number of large items when migrating a user's mailbox data from the on-premises environment to Microsoft 365
 
 _Original KB number:_ &nbsp; 2584294
 
 ## Problem
 
-You use one of the following to try to migrate a user's mailbox data from your on-premises messaging environment to Microsoft Office 365:
+You use one of the following to try to migrate a user's mailbox data from your on-premises messaging environment to Microsoft 365:
 
-- The New Migration Batch Wizard in the Exchange admin center of Office 365
-- The E-mail Migration wizard in the Exchange admin center of Office 365
+- The New Migration Batch Wizard in the Exchange admin center of Microsoft 365
+- The E-mail Migration wizard in the Exchange admin center of Microsoft 365
 - Exchange Online PowerShell
 
 However, you receive an error message that resembles the following:
@@ -50,11 +50,11 @@ To fix this issue, locate and remove messages that are larger than 150 MB from t
 
 ## More information
 
-For more info about how to import items into Outlook in Office 365, go to the following Microsoft websites:
+For more info about how to import items into Outlook in Microsoft 365, go to the following Microsoft websites:
 
 - [Import email, contacts, and calendar from an Outlook .pst file](https://support.microsoft.com/office/import-email-contacts-and-calendar-from-an-outlook-pst-file-431a8e9a-f99f-4d5f-ae48-ded54b3440ac)
 - [Import a .pst file into Outlook for Mac from Outlook for Windows](https://support.microsoft.com/office/import-a-pst-file-into-outlook-for-mac-from-outlook-for-windows-b4a6a1d6-94bb-4c85-a4fc-a83dc690e18c)
 
-For more info about Office 365 messaging limits, see [Exchange Online limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits).
+For more info about Microsoft 365 messaging limits, see [Exchange Online limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

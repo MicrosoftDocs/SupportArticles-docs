@@ -83,7 +83,7 @@ This limitation does not apply to SharePoint lists that are customized to use an
 
 ## UDCX data connections (SSA connections to SharePoint web services or SQL Azure)
 
-When you use an InfoPath form in the browser through Office 365, UDCX connections that contain explicit credentials or Secure Store Application details fail. This is because of the following InfoPath Forms Services options that aren't enabled in the cloud:
+When you use an InfoPath form in the browser through Microsoft 365, UDCX connections that contain explicit credentials or Secure Store Application details fail. This is because of the following InfoPath Forms Services options that aren't enabled in the cloud:
 
 - Allow embedded SQL authentication
 

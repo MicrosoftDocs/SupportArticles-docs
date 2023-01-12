@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 3067526
 
 ## Symptoms
 
-You want to set up a hybrid deployment between your on-premises Microsoft Exchange Server organization and Exchange Online in Microsoft Office 365. However, when you run the Hybrid Configuration wizard, the wizard doesn't complete successfully, and you receive a **The domains already exist in another organization relationship** error message. The full text of this message resembles the following:
+You want to set up a hybrid deployment between your on-premises Microsoft Exchange Server organization and Exchange Online in Microsoft 365. However, when you run the Hybrid Configuration wizard, the wizard doesn't complete successfully, and you receive a **The domains already exist in another organization relationship** error message. The full text of this message resembles the following:
 
 > ERROR : Subtask Configure execution failed: Configure Organization Relationship
 Execution of the New-OrganizationRelationship cmdlet has thrown an exception. This may indicate invalid parameters in your hybrid configuration settings.

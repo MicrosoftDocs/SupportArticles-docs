@@ -58,7 +58,7 @@ To troubleshoot this issue further, run the Exchange ActiveSync Autodiscover tes
 ### Test Exchange Online ActiveSync access externally by using Remote Connectivity Analyzer
 
 > [!NOTE]
-> Admins may want to guide users through running Remove Connectivity Analyzer if this is necessary. The Exchange ActiveSync Autodiscover test requires the user to enter his or her credentials.
+> Admins may want to guide users through running Remove Connectivity Analyzer if this is necessary. The Exchange ActiveSync Autodiscover test requires the users to enter their credentials.
 
 1. In a web browser, browse to the [Microsoft Remote Connectivity Analyzer tool](https://www.testconnectivity.microsoft.com/tests/o365).
 

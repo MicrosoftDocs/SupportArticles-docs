@@ -73,6 +73,7 @@
       "recommendations": true,
       "feedback_system": "None",
       "titleSuffix": "Office",
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
       "hideEdit": true,
       "searchScope": ["Office Support"] 
     },

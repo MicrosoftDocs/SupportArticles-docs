@@ -1,6 +1,6 @@
 ---
-title: Office 365 link in on-premises EAC goes to product comparison
-description: Describes a scenario where the Office 365 link in the on-premises Exchange admin center takes you to a page that compares plans and pricing for Office 365 instead of to the Exchange admin center in Office 365. Provides a solution.
+title: Microsoft 365 link in on-premises EAC goes to product comparison
+description: Describes a scenario where the Microsoft 365 link in the on-premises Exchange admin center takes you to a page that compares plans and pricing for Microsoft 365 instead of to the Exchange admin center in Microsoft 365. Provides a solution.
 author: simonxjx
 audience: ITPro
 ms.topic: troubleshooting
@@ -17,11 +17,11 @@ appliesto:
 ms.date: 3/31/2022
 ---
 
-# Office 365 link in on-premises EAC goes to product comparison, not Exchange admin center
+# Microsoft 365 link in on-premises EAC goes to product comparison, not Exchange admin center
 
 ## Problem
 
-When a user clicks the Office 365 link in the Exchange admin center (EAC) in Exchange Server 2016 or Exchange Server 2013, the user isn't routed to the Exchange admin center in Office 365. Instead, they are redirected to [https://go.microsoft.com/fwlink/p/?LinkId=258351](https://go.microsoft.com/fwlink/p/?linkid=258351), which is a page that compares plans and pricing for Office 365 services.
+When a user clicks the Microsoft 365 link in the Exchange admin center (EAC) in Exchange Server 2016 or Exchange Server 2013, the user isn't routed to the Exchange admin center in Microsoft 365. Instead, they are redirected to [https://go.microsoft.com/fwlink/p/?LinkId=258351](https://go.microsoft.com/fwlink/p/?linkid=258351), which is a page that compares plans and pricing for Microsoft 365 services.
 
 ## Cause
 

@@ -2,7 +2,7 @@
 title: Understand and troubleshoot Out of Office (OOF) replies
 description: Discusses how OOF works and some of the main reasons why an OOF reply might not get delivered to users.
 author: simonxjx
-ms.author: damande
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -95,7 +95,7 @@ The following sections discuss some of the scenarios in which OOF replies aren't
 
 If an OOF reply appears not to have been sent for all users in the tenant, a transport rule is usually to blame. Check all the transport rules that may apply to the affected mailbox by using step 2 of [this article](https://support.microsoft.com/help/2866165/senders-don-t-receive-out-of-office-notifications-from-an-office-365-u).
 
-If you suspect a delivery problem, run a [message trace](/microsoft-365/security/office-365-security/message-trace-scc) from the Office 365 tenant. For OOF messages, the sender of the original message becomes the recipient during tracking. You should be able to determine whether the OOF reply has been triggered and sent to an external or internal recipient. The message trace will clearly indicate whether a transport rule is blocking the OOF response.
+If you suspect a delivery problem, run a [message trace](/microsoft-365/security/office-365-security/message-trace-scc) from the Microsoft 365 tenant. For OOF messages, the sender of the original message becomes the recipient during tracking. You should be able to determine whether the OOF reply has been triggered and sent to an external or internal recipient. The message trace will clearly indicate whether a transport rule is blocking the OOF response.
 
 There's one scenario that's worth highlighting when it comes to transport rules blocking OOF replies. Let's assume that you moved the MX record to a third-party anti-spam program. You have created a transport rule to reject any email message that's sent from any IP address other than the third-party anti-spam program.
 

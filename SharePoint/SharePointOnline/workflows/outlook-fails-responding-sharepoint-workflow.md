@@ -15,7 +15,7 @@ appliesto:
 ms.date: 3/31/2022
 ---
 
-# Outlook 2013 doesn't respond when you approve a SharePoint Online approval workflow in Office 365
+# Outlook 2013 doesn't respond when you approve a SharePoint Online approval workflow in Microsoft 365
 
 ## Problem
 

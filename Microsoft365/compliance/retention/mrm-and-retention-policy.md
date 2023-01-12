@@ -1,6 +1,6 @@
 ---
-title: Messaging Records Management (MRM) and Retention Policies in Office 365.
-description: Describes the retention policy in Office 365 dedicated/ITAR.
+title: Messaging Records Management (MRM) and Retention Policies in Microsoft 365.
+description: Describes the retention policy in Microsoft 365 dedicated/ITAR.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -17,7 +17,7 @@ search.appverid: MET150
 ms.date: 3/31/2022
 ---
 
-# Messaging Records Management (MRM) and Retention Policies in Office 365
+# Messaging Records Management (MRM) and Retention Policies in Microsoft 365
 
 _Original KB number:_&nbsp;4032361
 
@@ -25,7 +25,7 @@ _Original KB number:_&nbsp;4032361
 
 ## Summary
 
-Microsoft Office 365 provides a default **retention policy** (also known as **Default MRM Policy**). To check for these policies in your environment, run the following cmdlet:
+Microsoft 365 provides a default **retention policy** (also known as **Default MRM Policy**). To check for these policies in your environment, run the following cmdlet:
 
 ```powershell
 Get-RetentionPolicy | fl Name
@@ -191,6 +191,6 @@ For more information, see the following articles:
 - Check whether an item was deleted, and then recover the item if it's necessary. To do this, see [Recover deleted messages in a user's mailbox in Exchange Online](/exchange/recipients-in-exchange-online/manage-user-mailboxes/recover-deleted-messages).
 
 - Search and investigate missing items. To do this, see the following articles:
-  - [How to use mailbox audit logs in Office 365 dedicated](https://support.microsoft.com/help/4021960/how-to-use-mailbox-audit-logs-in-office-365-dedicated)
+  - [How to use mailbox audit logs in Microsoft 365 dedicated](https://support.microsoft.com/help/4021960/how-to-use-mailbox-audit-logs-in-office-365-dedicated)
   - [Search-Mailbox](/powershell/module/exchange/search-mailbox)
   - [Create an In-Place eDiscovery search](/microsoft-365/compliance/content-search)

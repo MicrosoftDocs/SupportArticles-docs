@@ -74,15 +74,15 @@ This problem occurs because a change was made to the Transport Layer Security (T
 
 To resolve this problem, use one of the following methods.
 
-### Method 1 - Run the Office 365 Hybrid Configuration Wizard
+### Method 1 - Run the Microsoft 365 Hybrid Configuration Wizard
 
-Use the Office 365 Hybrid Configuration Wizard (HCW) to configure the Exchange 2013 servers to work by using the new TLS certificate. To do this, follow these steps:
+Use the Microsoft 365 Hybrid Configuration Wizard (HCW) to configure the Exchange 2013 servers to work by using the new TLS certificate. To do this, follow these steps:
 
 1. If the servers that are running Exchange Server 2013 and that are handling hybrid mail flow are running Exchange Server 2013 CU8 or an earlier version, follow the instructions at [Updates for Exchange 2013](/exchange/updates-for-exchange-2013-exchange-2013-help) to install the latest cumulative update on at least one server.
 
-2. After you install the latest cumulative update, download the Office 365 Hybrid Configuration Wizard from [https://aka.ms/HybridWizard](https://aka.ms/hybridwizard), and then run it by following the instructions at [Introducing the Microsoft Office 365 Hybrid Configuration Wizard](https://techcommunity.microsoft.com/t5/exchange-team-blog/introducing-the-microsoft-office-365-hybrid-configuration-wizard/ba-p/604207).
+2. After you install the latest cumulative update, download the Microsoft 365 Hybrid Configuration Wizard from [https://aka.ms/HybridWizard](https://aka.ms/hybridwizard), and then run it by following the instructions at [Introducing the Microsoft 365 Hybrid Configuration Wizard](https://techcommunity.microsoft.com/t5/exchange-team-blog/introducing-the-microsoft-office-365-hybrid-configuration-wizard/ba-p/604207).
 
-For information about the releases of Exchange Server that are supported in Office 365, see [Hybrid deployment prerequisites](/exchange/hybrid-deployment-prerequisites).
+For information about the releases of Exchange Server that are supported in Microsoft 365, see [Hybrid deployment prerequisites](/exchange/hybrid-deployment-prerequisites).
 
 ### Method 2 - Manually configure the servers
 

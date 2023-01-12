@@ -20,7 +20,7 @@ ms.date: 3/31/2022
 
 ## Problem
 
-In a Lync hybrid deployment, when you try to move users from the on-premises server that is running Lync to Skype for Business Online (formerly Lync Online) in Office 365, you receive the following error message in Skype for Business Online PowerShell:
+In a Lync hybrid deployment, when you try to move users from the on-premises server that is running Lync to Skype for Business Online (formerly Lync Online) in Microsoft 365, you receive the following error message in Skype for Business Online PowerShell:
 
 ```powershell
 Move-CsUser : HostedMigration fault: Error=(510), Description=(This user's tenant is not enabled for shared sip address space.)
@@ -28,7 +28,7 @@ Move-CsUser : HostedMigration fault: Error=(510), Description=(This user's tenan
 
 ## Solution
 
-Before you try to migrate an on-premises Lync user to Skype for Business Online in Office 365, your Office 365 Skype for Business Online organization must be enabled for Shared Session Initiation Protocol (SIP) Address Space.
+Before you try to migrate an on-premises Lync user to Skype for Business Online in Microsoft 365, your Microsoft 365 Skype for Business Online organization must be enabled for Shared Session Initiation Protocol (SIP) Address Space.
 
 ## More Information
 

@@ -22,7 +22,7 @@ ms.date: 3/31/2022
 
 Consider the following scenario:
 
-- In Microsoft SharePoint Server 2013 or Microsoft SharePoint Online in Office 365, you change your search result types by specifying a display template other than the default template.
+- In Microsoft SharePoint Server 2013 or Microsoft SharePoint Online in Microsoft 365, you change your search result types by specifying a display template other than the default template.
 
 - You perform a search and then view the results that are returned.
 

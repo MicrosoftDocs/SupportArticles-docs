@@ -13,7 +13,7 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: meerak; stevenle; gbratton; aruiz; vijayde
 appliesto: 
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
@@ -31,7 +31,7 @@ Outlook recognizes shareable links in an email message when you take any of the 
 - Reply to or forward an email message that contains existing links.
 - Resume working on a draft that includes existing links. For example, you start the draft in an earlier version of Outlook, and you resume working on it in a newer version.
 
-When Outlook detects a shareable link, it applies a gray background to the link to make it stand out to your recipients, and automatically shortens the URL to display only the name of the file.
+When Outlook detects a shareable link, it applies special formatting to the link which includes a gray background, blue color for the link, and an appropriate icon for the shared document. These visual indicators make the link stand out to your recipients. If you paste the URL for a shared document into the body of an email message, Outlook automatically shortens it to display the name of the file.
 
 :::image type="content" source="media/shareable-links-functionality-in-outlook/shareable-link-with-information.png" alt-text="Screenshot of the pop-up information windows of a shareable link after you insert a new link.":::
 
@@ -39,7 +39,7 @@ Outlook also displays information about the permissions that are required to acc
 
 **Tip:** If you use a screen-reading app, such as [Windows Narrator](https://support.microsoft.com/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1), the information about access permissions will be read out to you after you navigate the cursor into the link.
 
-## Undo link shortening 
+## Undo link shortening
 
 If you prefer to use the full URL instead of the shortened URL that Outlook inserts automatically, use one of the following methods:
 
@@ -65,7 +65,7 @@ You can choose to skip the remaining checks and send the email message anyway or
 
 If you choose not to send the message, and you wait for the checks to finish, Outlook displays the results of the checks.
 
-#### Result: All recipients can access the link
+### Result: All recipients can access the link
 
 If Outlook confirms that the links can be accessed by all recipients, you'll see the following confirmation message:
 
@@ -73,7 +73,7 @@ If Outlook confirms that the links can be accessed by all recipients, you'll see
 
 :::image type="content" source="media/shareable-links-functionality-in-outlook/link-permission-checking-complete.png" alt-text="Screenshot of the message that recipients can access links in your message.":::
 
-#### Result: One or more recipients can't access the link
+### Result: One or more recipients can't access the link
 
 If Outlook determines that one or more recipients can't access the shareable link, it changes the color of the shareable link to red, and displays a red exclamation mark in the upper-right corner of the link text. When you left-click the link, you'll see information about the cause of the access issue.
 
@@ -85,15 +85,22 @@ In this screenshot, the recipient is determined to be outside the organization a
 - **Attach as a copy**: Attach the file as a copy if you have the required permissions to access its location.
 - **Ignore**: Ignore the error so that the link appears functional and no warnings are displayed when you try to send the message.
 
-If you don't left-click the link to see the cause of the access issue, you won't see these three options. When you try to send the message, Outlook will display the following warning:
+You can also access these options by using the following methods:
+
+- Right-click the link.
+- Use the keyboard to access the context menu while the cursor is on the link.
+
+If you don't take steps to fix the access issue, then Outlook will display the following warning when you try to send the message:
 
 > Some recipients don't have access to links in your message.
 
 :::image type="content" source="media/shareable-links-functionality-in-outlook/link-permission-checking-warning-before-sending.png" alt-text="Error message that states that some recipients don't have access to links in your message.":::
 
-This provides you an opportunity to fix your recipient list before you send the message to make sure that everyone can access the link.
+This provides you another opportunity to fix your recipient list before you send the message to make sure that everyone can access the link.
 
-#### Result: Recipient access can't be verified
+**Tip**: If there are multiple links in your email message that have access issues, use Ctrl+Alt+F1 to navigate between them.
+
+### Result: Recipient access can't be verified
 
 If Outlook can't verify whether recipients have access to the link, it will display the following warning:
 
@@ -130,14 +137,14 @@ The only situation in which Outlook can unwrap such a message is if you view or 
 
 **Q3:** In which situations might Outlook not be able to check whether the recipients can access the links in a message, and then display warnings?
 
-**A3:** Here are some common situiations:
+**A3:** Here are some common situations:
 
 - You're working offline
 
     Outlook can't communicate with the server when you [work offline](https://support.microsoft.com/office/work-offline-in-outlook-f3a1251c-6dd5-4208-aef9-7c8c9522d633). If you add a link or recipients while you're working offline, Outlook will automatically communicate with the server after you're online.
 - You're not signed in by using an account that's associated with a link
 
-    If you add a link to a site (such as `sharepoint.com`), but you're not signed in to an account on the tenant that hosts the link, Outlook will not communicate with the server. For example, a link might point to `contoso.sharepoint.com`, but you might not be signed in to a Contoso company account. Outlook sends requests to only the tenants that you are signed in to.
+    If you add a link to a site (such as `sharepoint.com`), but you're not signed in to an account on the tenant that hosts the link, Outlook will not communicate with the server. For example, a link might point to `contoso.sharepoint.com`, but you might not be signed in to a Contoso account. Outlook sends requests to only the tenants that you are signed in to.
 - Your sending account isn't associated with the link
 
     You're signed in to an account that's associated with the link. However, you don't send the link from that account but from a different email account, instead. In this case, Outlook shortens the URL, and provides the correct file icon and the current link information. However, it won't check whether your recipients have access to the link, or allow you to manage their access.

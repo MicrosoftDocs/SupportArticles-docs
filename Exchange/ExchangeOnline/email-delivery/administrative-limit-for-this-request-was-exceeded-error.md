@@ -1,6 +1,6 @@
 ---
 title: Administrative limit for this request was exceeded error
-description: Describes an issue that triggers a limit for this request was exceeded error when you try to add recipient domains to outbound connector in Office 365.
+description: Describes an issue that triggers a limit for this request was exceeded error when you try to add recipient domains to outbound connector in Microsoft 365.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm

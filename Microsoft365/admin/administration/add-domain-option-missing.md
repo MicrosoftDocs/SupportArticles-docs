@@ -11,7 +11,7 @@ ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: v-maqiu
 appliesto: 
-  - Office 365 User and Domain Management
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
@@ -19,7 +19,7 @@ ms.date: 3/31/2022
 
 ## PROBLEM
 
-The **Add domain** option is missing from the "Manage domains" page of the Microsoft 365 admin center. Therefore, you cannot add a domain to Office 365.
+The **Add domain** option is missing from the "Manage domains" page of the Microsoft 365 admin center. Therefore, you cannot add a domain to Microsoft 365.
 
 Additionally, if you click **Billing** and then click **Licenses**, the following message is displayed on the licenses page:
 
@@ -27,7 +27,7 @@ Additionally, if you click **Billing** and then click **Licenses**, the followin
 
 ## CAUSE
 
-This issue occurs if you don't have a subscription or license for Office 365. For example, this issue may occur if a previous attempt to purchase a subscription was canceled.
+This issue occurs if you don't have a subscription or license for Microsoft 365. For example, this issue may occur if a previous attempt to purchase a subscription was canceled.
 
 ## SOLUTION
 

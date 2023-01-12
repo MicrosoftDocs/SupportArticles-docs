@@ -1,6 +1,6 @@
 ---
-title: Unable to move a mailbox from Office 365 back to on-premises in hybrid
-description: Describes an issue in which the move operation fails after it reaches 95 percent when you try to move a mailbox from Office 365 back to the on-premises environment in a hybrid deployment of Exchange Online in Office 365 and of Exchange Server. Provides a resolution.
+title: Unable to move a mailbox from Microsoft 365 back to on-premises in hybrid
+description: Describes an issue in which the move operation fails after it reaches 95 percent when you try to move a mailbox from Microsoft 365 back to the on-premises environment in a hybrid deployment of Exchange Online in Microsoft 365 and of Exchange Server. Provides a resolution.
 author: simonxjx
 audience: ITPro
 ms.topic: troubleshooting
@@ -18,18 +18,18 @@ appliesto:
   - Exchange Server 2010 Standard
 ms.date: 3/31/2022
 ---
-# Move operation fails when moving a mailbox from Office 365 back to the on-premises environment
+# Move operation fails when moving a mailbox from Microsoft 365 back to the on-premises environment
 
 > [!NOTE]
-> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Office 365 Hybrid Configuration wizard that's available at [https://aka.ms/HybridWizard](https://aka.ms/hybridwizard). For more information, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://blogs.technet.com/b/exchange/archive/2016/02/17/office-365-hybrid-configuration-wizard-for-exchange-2010.aspx).
+> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Microsoft 365 Hybrid Configuration wizard that's available at [https://aka.ms/HybridWizard](https://aka.ms/hybridwizard). For more information, see [Microsoft 365 Hybrid Configuration wizard for Exchange 2010](https://blogs.technet.com/b/exchange/archive/2016/02/17/office-365-hybrid-configuration-wizard-for-exchange-2010.aspx).
 
 ## Problem
 
 Consider the following scenario:
 
-- You have a hybrid deployment of Microsoft Exchange Online in Microsoft Office 365 and of your on-premises Microsoft Exchange Server environment.
-- You previously moved a mailbox from the on-premises environment to Office 365.
-- You try to offboard or to move the same mailbox from Office 365 back to the on-premises environment.
+- You have a hybrid deployment of Microsoft Exchange Online in Microsoft 365 and of your on-premises Microsoft Exchange Server environment.
+- You previously moved a mailbox from the on-premises environment to Microsoft 365.
+- You try to offboard or to move the same mailbox from Microsoft 365 back to the on-premises environment.
 
 In this scenario, the operation reaches 95 percent and then fails.
 
@@ -38,7 +38,7 @@ When this occurs, an "HTTP 400" error is generated in the following log files in
 - The Internet Information Services (IIS) log files
 - The HTTP error log (HTTPERR) files
 
-When you connect to Office 365 by using Windows PowerShell and then run the `Get-MoveRequestStatisticsMailboxID -IncludeReport | Export-CliXml FileName.xml` command, the stack trace section of the XML report shows the following:
+When you connect to Microsoft 365 by using Windows PowerShell and then run the `Get-MoveRequestStatisticsMailboxID -IncludeReport | Export-CliXml FileName.xml` command, the stack trace section of the XML report shows the following:
 
 ```asciidoc
 <S N="StackTrace"> at

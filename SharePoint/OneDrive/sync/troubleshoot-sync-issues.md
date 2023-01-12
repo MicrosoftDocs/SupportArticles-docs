@@ -43,7 +43,7 @@ Sometimes a conflict is detected between the local and server copies of files yo
 
 When a conflict is detected, you may see a sync error notification briefly. After that, the OneDrive for Business icon will display an error indicator in your system tray.
 
-:::image type="content" source="media/troubleshoot-sync-issues/error-indicator.png" alt-text="Screenshot of the OneDrive for Business error indicator." border="false":::
+:::image type="icon" source="media/troubleshoot-sync-issues/sync-error-icon.png":::
 
 To resolve the conflict, right-click or press and hold the OneDrive for Business icon, and then choose **Resolve**. You will see the options available for your conflict.
 
@@ -162,7 +162,7 @@ Did this solve your problem?
 
 If you are not signed in to the SharePoint Online site, you should log in and select the **Keep me signed in** option to make sure the OneDrive for Business synchronization process works well.
 
-When you supply credentials, be sure to use the credentials associated with the library. In most cases, this will be your Office 365 credentials.
+When you supply credentials, be sure to use the credentials associated with the library. In most cases, this will be your Microsoft 365 credentials.
 
 Did this solve your problem?
 
@@ -176,7 +176,7 @@ Before you try uninstalling and reinstalling, try repairing OneDrive for Busines
 Did this solve your problem?
 
 - If yes, we're glad that your issue is resolved.
-- If no, see [Uninstall and reinstall OneDrive for Business or Office](#uninstall-and-reinstall-onedrive-for-business-or-office).
+- If no, see [Uninstall and reinstall OneDrive for Business](#uninstall-and-reinstall-onedrive-for-business).
 
 ### Reset Internet Explorer
 
@@ -194,7 +194,7 @@ Did this solve your problem?
 
 Sorry, but we cannot resolve this issue by using this guide. Here are some other ideas that might help you resolve the problem:
 
-- Use the self-help options on the [Office 365 Community website](https://answers.microsoft.com/msoffice/forum?sort=LastReplyDate&dir=Desc&tab=All&status=all&mod=&modAge=&advFil=&postedAfter=&postedBefore=&threadType=All&isFilterExpanded=false&page=1).
+- Use the self-help options on the [Microsoft 365 Community website](https://answers.microsoft.com/msoffice/forum?sort=LastReplyDate&dir=Desc&tab=All&status=all&mod=&modAge=&advFil=&postedAfter=&postedBefore=&threadType=All&isFilterExpanded=false&page=1).
 - [Create a support incident](https://portal.office.com/Support/ServiceRequests.aspx) at Microsoft Online Services support. Ask your IT administrator to use the above link to create a new support incident.
 
 ### Repair a sync connection
@@ -217,24 +217,19 @@ Did this solve your problem?
 - If yes, we're glad that your issue is resolved.
 - If no, see [Repair OneDrive for Business or Office installation](#repair-onedrive-for-business-or-office-installation).
 
-### Uninstall and reinstall OneDrive for Business or Office
+### Uninstall and reinstall OneDrive for Business
 
-The steps to uninstall and reinstall either OneDrive for Business or Office depend on whether you installed the applications through a setup program (MSI), or through Click-to-run. Read this article to learn how to tell [how Office or the OneDrive for Business sync app was installed](https://support.microsoft.com/office/update-the-onedrive-for-work-or-school-sync-app-49771c73-e7ad-4d26-bff1-50bb12a83817).
+The steps to uninstall and reinstall OneDrive for Business depend on whether you installed the application through a setup program (MSI), or through Office Click-to-run. Read this article to learn how to tell [how Office or the OneDrive for Business sync app was installed](https://support.microsoft.com/office/update-the-onedrive-for-work-or-school-sync-app-49771c73-e7ad-4d26-bff1-50bb12a83817).
 
-If you installed Office through Click-to-run, do the following:
+If you installed the OneDrive for Business sync app through Office Click-to-run, do the following:
 
 - To uninstall Office, [follow these steps](https://support.microsoft.com/office/uninstall-office-from-a-pc-9dd49b83-264a-477a-8fcc-2fdf5dbf61d8).
 - To reinstall Office, [follow these steps](https://support.microsoft.com/office/download-and-install-or-reinstall-microsoft-365-or-office-2019-on-a-pc-or-mac-4414eaaf-0478-48be-9c42-23adc4716658).
 
-If you installed Office applications through a setup program (MSI), do the following:
-
-- To uninstall Office from the Control Panel, [follow these steps](https://support.microsoft.com/office/uninstall-office-from-a-pc-9dd49b83-264a-477a-8fcc-2fdf5dbf61d8).
-- To reinstall Office, contact your organization's administrator for installation media.
-
 If you installed the OneDrive for Business sync app through a setup program (MSI), do the following:
 
-- To uninstall the sync app from the Control Panel, [follow these steps](https://support.microsoft.com/office/uninstall-office-from-a-pc-9dd49b83-264a-477a-8fcc-2fdf5dbf61d8).
-- To reinstall the sync app, [follow these steps](https://support.microsoft.com/office/install-the-previous-onedrive-sync-client-with-office-and-sharepoint-37b3dddd-30af-4294-aba8-c290cea01b5d).
+- To uninstall the sync app from the Control Panel, [follow these steps](https://support.microsoft.com/office/f32a17ce-3336-40fe-9c38-6efb09f944b0).
+- To reinstall the sync app, [download and install OneDrive](https://www.microsoft.com/microsoft-365/onedrive/download).
 
 Did this solve your problem?
 

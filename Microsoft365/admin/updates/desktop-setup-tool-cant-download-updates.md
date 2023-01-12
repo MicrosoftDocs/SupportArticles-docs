@@ -1,6 +1,6 @@
 ---
 title: Desktop Setup Tool cannot download updates
-description: Describes an issue in which Office Desktop Setup can't download and install updates from Microsoft Update in an Office 365 environment. Provides a resolution.
+description: Describes an issue in which Office Desktop Setup can't download and install updates from Microsoft Update in a Microsoft 365 environment. Provides a resolution.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -11,15 +11,15 @@ ms.custom: CSSTroubleshoot
 search.appverid: 
   - MET150
 appliesto: 
-  - Office 365 User and Domain Management
+  - Microsoft 365 User and Domain Management
 ms.date: 3/31/2022
 ---
 
-# Office 365 Desktop Setup Tool cannot download updates or you receive an "Your computer is not allowed to connect to the Microsoft Update service" error message
+# Microsoft 365 Desktop Setup Tool cannot download updates or you receive an "Your computer is not allowed to connect to the Microsoft Update service" error message
 
 ## Problem 
 
-The Microsoft Office 365 Desktop Setup Tool can't download and install software updates from Windows Update or from Microsoft Update in a Microsoft Office 365 environment. You may also get the following error message:
+The Microsoft 365 Desktop Setup Tool can't download and install software updates from Windows Update or from Microsoft Update in a Microsoft 365 environment. You may also get the following error message:
 
 > Your computer is not allowed to connect to the Microsoft Update service.
 
@@ -47,7 +47,7 @@ Make sure that you can access other websites. If you can't access other websites
 
 
 In some cases, you may have to go the Microsoft Update website, and then manually install the Windows Update components.
-This issue typically occurs when access to Windows Update or to Microsoft Update is blocked. The Office 365 Desktop Setup Tool uses Windows Update to install software updates that are required to connect to Office 365. If access to Windows Update is blocked, the Office 365 Desktop Setup Tool can't install the required updates. 
+This issue typically occurs when access to Windows Update or to Microsoft Update is blocked. The Microsoft 365 Desktop Setup Tool uses Windows Update to install software updates that are required to connect to Microsoft 365. If access to Windows Update is blocked, the Microsoft 365 Desktop Setup Tool can't install the required updates. 
 
 In this scenario, Group Policy or other security configurations may block access to Windows Update or to Microsoft Update. This issue may also occur when a Windows Update component must be installed on the computer before the updates can be completed. 
 

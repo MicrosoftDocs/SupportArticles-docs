@@ -19,7 +19,7 @@ ms.date: 3/31/2022
 
 ## Problem 
 
-After Lync Mobile 2013 is installed, users who try to sign in to their organization's Lync server or to Skype for Business Online (formerly Lync Online) in Office 365 receive the following error message:
+After Lync Mobile 2013 is installed, users who try to sign in to their organization's Lync server or to Skype for Business Online (formerly Lync Online) in Microsoft 365 receive the following error message:
 
 **You can't sign in with this version of Lync. Install Lync 2010.**
 
@@ -29,7 +29,7 @@ If the users are signing in to an on-premises Lync Server 2013 deployment, you m
 
 [2809243](https://support.microsoft.com/help/2809243) Updates for Lync Server 2013 
 
-If the users are signing in to Skype for Business Online in Office 365, they may have to wait until your organization receives the latest Skype for Business Online service upgrades.
+If the users are signing in to Skype for Business Online in Microsoft 365, they may have to wait until your organization receives the latest Skype for Business Online service upgrades.
 
 For more information, see the following Microsoft websites: 
  

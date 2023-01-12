@@ -15,7 +15,7 @@ appliesto:
 ms.date: 3/31/2022
 ---
 
-# "This feature has been disabled by your Administrator" when Office 365 activates Skype for Business
+# "This feature has been disabled by your Administrator" when Microsoft 365 activates Skype for Business
 
 ## Symptoms
 

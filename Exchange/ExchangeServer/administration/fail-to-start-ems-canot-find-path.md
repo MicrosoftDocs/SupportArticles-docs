@@ -4,7 +4,7 @@ description: This article describes an issue that Exchange Management Shell fail
 author: simonxjx
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: batre
+ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 

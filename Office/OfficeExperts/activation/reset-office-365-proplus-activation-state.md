@@ -1,7 +1,8 @@
 ---
 title: Reset activation state for Microsoft 365 Apps for enterprise
-description: Four locations must be cleared to reset the activation or install to a clean state after Office 365 users are activated.
-author: MJP-MSFT
+description: Four locations must be cleared to reset the activation or install to a clean state after Microsoft 365 users are activated.
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: MET150
@@ -13,7 +14,7 @@ ms.custom:
 - CI 114181
 - CI 115742
 - CI 162124
-ms.author: mattphil
+ms.reviewer: mattphil
 appliesto: 
   - Microsoft 365 Apps for enterprise
 ms.date: 5/10/2022
@@ -35,12 +36,18 @@ To complete these tasks, you need to clear prior activations of Microsoft 365 ap
 > - The steps below apply to Microsoft Project and Microsoft Visio also.
 > - The steps and scripts in this article apply to Windows installations of Office apps. For Office for Mac installations, see [How to remove Office license files on a Mac](https://support.microsoft.com/office/how-to-remove-office-license-files-on-a-mac-b032c0f6-a431-4dad-83a9-6b727c03b193).
 
-## Method: Use the Microsoft Support and Recovery Assistant
+## Method: Use Microsoft Support and Recovery Assistant
 
-For a fully automated solution to reset the activation state, download and run the Assistant. Select the button below to begin.
+The Assistant fully automates all the steps required to reset Office activation, and is available in two versions. Use the version that's appropriate for your requirement.
 
-> [!div class="nextstepaction"]
-> [Download the Assistant](https://aka.ms/SaRA-OfficeActivation-Reset)
+- **The Enterprise (command-line) version of the Assistant**<br/>
+  The [Enterprise version of the Assistant](https://aka.ms/SaRA_EnterpriseVersion) is a command-line version that can be scripted and is recommended to reset Office activation on multiple devices and on devices that you can't access immediately.
+  > [!div class="nextstepaction"]
+  > [Download Enterprise version](https://aka.ms/SaRA_EnterpriseVersionFiles)
+- **UI version**<br/>
+  The [UI version of the Assistant](https://aka.ms/SaRA_Home) is recommended if you need to reset Office activation on a single device, or on a small number of individual devices. 
+  > [!div class="nextstepaction"]
+  > [Download UI version](https://aka.ms/SaRA-OfficeActivation-Reset)
 
 <h2 id="method2">Method: Use scripts to automate the cleanup process</h2>
 

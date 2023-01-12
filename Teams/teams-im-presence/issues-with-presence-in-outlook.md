@@ -2,7 +2,7 @@
 title: User presence status issues in Outlook
 description: Fixes an issue in which the status of a user presence is displayed incorrectly.
 author: helenclu
-ms.author: premgan
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - CI 126269
   - CSSTroubleshoot
-ms.reviewer: sylviebo
+ms.reviewer: sylviebo, premgan
 appliesto: 
   - Microsoft Teams
   - Outlook

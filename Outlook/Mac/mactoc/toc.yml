@@ -29,6 +29,8 @@
           href: ../calendars/cannot-propose-a-new-time-for-a-meeting.md
         - name: Can't save a meeting as draft in Outlook for Mac via Office JS API
           href: ../calendars/cannot-save-meeting-as-draft-in-outlook-for-mac.md
+        - name: Configure rooms and workspaces for Room Finder
+          href: /outlook/troubleshoot/calendaring/configure-room-finder-rooms-workspaces?context=/outlook/troubleshoot/context/mac-context
         - name: Create and book a workspace in Outlook
           href: /exchange/troubleshoot/outlook-issues/create-book-workspace-outlook?context=/outlook/troubleshoot/context/mac-context
         - name: The Open Shared Calendar option is unavailable

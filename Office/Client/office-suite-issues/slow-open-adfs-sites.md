@@ -12,11 +12,11 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: bhamv
 appliesto: 
-  - Word for Office 365
+  - Word for Microsoft 365
   - Word 2016
-  - Excel for Office 365
+  - Excel for Microsoft 365
   - Excel 2016
-  - PowerPoint for Office 365
+  - PowerPoint for Microsoft 365
   - PowerPoint 2016
 search.appverid: MET150
 ms.date: 3/31/2022

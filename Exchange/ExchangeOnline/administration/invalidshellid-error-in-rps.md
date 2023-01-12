@@ -1,6 +1,6 @@
 ---
 title: InvalidShellID error in RPS
-description: Describes an issue that triggers an InvalidShellID error when a script is running long or when you run an administrative cmdlet in Remote PowerShell (RPS) in Office 365. Provides a resolution.
+description: Describes an issue that triggers an InvalidShellID error when a script is running long or when you run an administrative cmdlet in Remote PowerShell (RPS) in Microsoft 365. Provides a resolution.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -16,13 +16,13 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# InvalidShellID error in RPS in Office 365
+# InvalidShellID error in RPS in Microsoft 365
 
 _Original KB number:_ &nbsp; 3090768
 
 ## Symptoms
 
-When a script is running long or when you run an administrative cmdlet in Remote PowerShell (RPS) in Microsoft Office 365, you intermittently receive an error message that resembles the following:
+When a script is running long or when you run an administrative cmdlet in Remote PowerShell (RPS) in Microsoft 365, you intermittently receive an error message that resembles the following:
 
 > Processing data for a remote command failed with the following error message:  
 [ClientAccessServer=Server1,BackEndServer=Server2,RequestId=<>,TimeStamp=*DateTime*] [FailureCategory=WSMan-InvalidShellID] The request for the Windows Remote Shell with ShellId <> failed because the shell was not found on the server. Possible causes are: the specified ShellId is incorrect or the shell no longer exists on the server. Provide the correct ShellId or create a new shell and retry the operation. For more information, see the about_Remote_Troubleshooting Help topic.

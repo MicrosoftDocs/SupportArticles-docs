@@ -23,7 +23,7 @@ Consider the following scenario:
 
 - You add a Page Viewer Web Part to your Microsoft SharePoint Online page.
 
-- Within the properties for the Web Part, you configured the **Link** setting to point to the Microsoft Office 365 Outlook Web App.
+- Within the properties for the Web Part, you configured the **Link** setting to point to the Microsoft 365 Outlook Web App.
 
 In this scenario, when you view the Web Part on a SharePoint Online page, you receive the following error message:
 

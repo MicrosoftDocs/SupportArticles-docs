@@ -12,7 +12,7 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: iuliam
 appliesto: 
-  - Excel for Office 365
+  - Excel for Microsoft 365
   - Excel 2019
   - Excel 2016
   - Excel 2013
@@ -28,9 +28,9 @@ ms.date: 3/31/2022
 Consider the following scenario:
 
 - You create a new Microsoft Excel workbook by right-clicking in a folder and then selecting **New** > **Microsoft Excel Worksheet**.
-- You have more than one language packs installed with Office 365.
+- You have more than one language packs installed with Microsoft 365.
 
-In this scenario, the name of the first sheet in the Excel workbook may appear in a language that's different than the **Display Language** set in Microsoft Office. For example, if you have Office 365 installed with German, English, and Polish, the name of the worksheet created is displayed in German, despite having English (or Polish) set as the **Display Language**.
+In this scenario, the name of the first sheet in the Excel workbook may appear in a language that's different than the **Display Language** set in Microsoft Office. For example, if you have Microsoft 365 installed with German, English, and Polish, the name of the worksheet created is displayed in German, despite having English (or Polish) set as the **Display Language**.
 
 :::image type="content" source="media/first-sheet-name-displays-different-language/display-language.png" alt-text="Screenshot to set English as the Display Language in the Excel Options window.":::
 
@@ -46,11 +46,11 @@ To correct this behavior, replace the original Excel12.xlsx in the *SHELLNEW* fo
 
 The *SHELLNEW* folder is located in the following folder (depending on the version and architecture of Excel and the OS):
 
-- For Office 365 32-bit on 64-bit Windows
+- For Microsoft 365 32-bit on 64-bit Windows
 
   C:\Program Files (x86)\Microsoft Office\root\vfs\Windows\SHELLNEW
 
-- For 64-bit Office 365 installations on 64-bit Windows
+- For 64-bit Microsoft 365 installations on 64-bit Windows
 
   C:\Program Files\Microsoft Office\root\vfs\Windows\SHELLNEW
 

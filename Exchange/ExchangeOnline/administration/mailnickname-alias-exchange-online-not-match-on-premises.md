@@ -31,7 +31,7 @@ To resolve this issue, update the `Alias` or `Mailnickname` attribute. To do thi
 
 ### Method 1: Use Exchange Management Shell
 
-1. Change the existing `Alias` attribute value so that the change is found by Azure Active Directory (Azure AD) Connect. This should sync the change to Office 365. To do this, use either the `Set-Mailbox` or `Set-RemoteMailbox` cmdlet, based on the recipient type in Exchange on-premises.
+1. Change the existing `Alias` attribute value so that the change is found by Azure Active Directory (Azure AD) Connect. This should sync the change to Microsoft 365. To do this, use either the `Set-Mailbox` or `Set-RemoteMailbox` cmdlet, based on the recipient type in Exchange on-premises.
 
       - `Set-RemoteMailbox`
 
@@ -47,7 +47,7 @@ To resolve this issue, update the `Alias` or `Mailnickname` attribute. To do thi
           Set-Mailbox <user@domain.com> -alias "$($alias.alias)1"**
           ```
   
-2. Start a Delta sync from Azure AD Connect, or wait for Azure AD Connect to run the delta. Ideally, this should sync the changes that are made in step 1 to Office 365.
+2. Start a Delta sync from Azure AD Connect, or wait for Azure AD Connect to run the delta. Ideally, this should sync the changes that are made in step 1 to Microsoft 365.
 3. Change the value of the `Alias` attribute to its original value. To do this, run either of the following cmdlets:
 
       ```powershell
@@ -58,22 +58,22 @@ To resolve this issue, update the `Alias` or `Mailnickname` attribute. To do thi
       Set-Mailbox <user@domain> -alias "$($alias.alias)"
       ```  
 
-4. Start a Delta sync from Azure AD Connect, or wait for Azure AD Connect to run the delta> Ideally, this should sync the changes to Office 365.
+4. Start a Delta sync from Azure AD Connect, or wait for Azure AD Connect to run the delta> Ideally, this should sync the changes to Microsoft 365.
 
 ### Method 2: Use Active Directory PowerShell module
 
-1. Change the `Mailnickname` attribute value so that the change is discovered by Azure AD Connect. This should sync the change to Office 365. To do this, run the following set of cmdlets:
+1. Change the `Mailnickname` attribute value so that the change is discovered by Azure AD Connect. This should sync the change to Microsoft 365. To do this, run the following set of cmdlets:
 
       ```powershell
       $mailnickname=Get-ADUser -Properties * -Filter {name -like '<username>*'}
       Get-ADUser -Properties * -Filter {name -like '<username>*'} | set-aduser -replace @{mailnickname="$($mailnickname.mailnickname)1"
       ```  
 
-2. Start a Delta sync from Azure AD Connect, or wait for Azure AD Connect to run the delta. Ideally, this should sync the changes that are made in step 1 to Office 365.
+2. Start a Delta sync from Azure AD Connect, or wait for Azure AD Connect to run the delta. Ideally, this should sync the changes that are made in step 1 to Microsoft 365.
 3. Change the value of the `Mailnickname` attribute to its original value. To do this, run the following cmdlet:
 
      ```powershell
      Get-ADUser -Properties * -Filter {name -like '<username>*'} | set-aduser -replace @{mailnickname="$($mailnickname.mailnickname)"
      ```  
 
-4. Start a Delta sync from Azure AD Connect, or wait for Azure AD Connect to run the delta. Ideally, this should sync the changes that are made in step 1 to Office 365.
+4. Start a Delta sync from Azure AD Connect, or wait for Azure AD Connect to run the delta. Ideally, this should sync the changes that are made in step 1 to Microsoft 365.

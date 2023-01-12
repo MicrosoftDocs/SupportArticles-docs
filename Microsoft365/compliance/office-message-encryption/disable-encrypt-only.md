@@ -24,7 +24,7 @@ _Original KB number:_&nbsp;4493792
 
 ## Summary
 
-In Microsoft Outlook for Office 365, when the Microsoft Purview Message Encryption feature is enabled, **Encrypt-Only**  is added as a new ad-hoc template. **Encrypt-Only**  enables message encryption without rights restrictions. This article describes how to disable the **Encrypt-Only** option in Outlook.
+In Microsoft Outlook for Microsoft 365, when you enable Microsoft Purview Message Encryption, **Encrypt-Only**  is added as a new ad-hoc template. **Encrypt-Only**  enables message encryption without rights restrictions. This article describes how to disable the **Encrypt-Only** option in Outlook.
 
 For more information about the feature, see [Encrypt-Only option for emails](/azure/information-protection/configure-usage-rights#encrypt-only-option-for-emails).
 

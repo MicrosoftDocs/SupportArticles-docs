@@ -54,24 +54,24 @@ For OAB version 4, the ANR that is used by the Offline Address Book indexes the 
 To work around this behavior, add a registry key that forces Outlook to use the online Global Address List to resolve ambiguous names or e-mail aliases.
 
 > [!NOTE]
-> When you are using a Cached mode profile with the `ANR Include Online GAL` value set to 1, Outlook will resolve proxy addresses for a user. For example, Marcelo Santos has the following e-mail addresses in his Active Directory account:
-
-Primary SMTP address - `msantos@contoso.com`  
-secondary smtp address - `marcelosantos@fourthcoffee.com`  
-custom - marcelo:santos  
-SIP - `msantos@contoso.com`
+> When you are using a Cached mode profile with the `ANR Include Online GAL` value set to 1, Outlook will resolve proxy addresses for a user. For example, Marcelo Santos has the following e-mail addresses in Active Directory account:
+>
+> - Primary SMTP address: `msantos@contoso.com`  
+> - secondary smtp address: `marcelosantos@fourthcoffee.com`  
+> - custom: marcelo:santos  
+> - SIP: `msantos@contoso.com`
 
 To resolve these proxy addresses enter partial addresses. For example, the following proxy addresses will be successfully resolved for the above example user:
 
-smtp:marcelosantos  
-smtp:`marcelosantos@fourthcoffee`  
-SIP:`msantos@contoso`  
-custom:marcelo
+- smtp:marcelosantos  
+- smtp:`marcelosantos@fourthcoffee`  
+- SIP:`msantos@contoso`  
+- custom:marcelo
 
 You can tell the name resolved successfully from the GAL because if you double-click the resolved name the dialog box with all of the user's Active Directory attributes (in the GAL) is displayed. However, you cannot enter the complete addresses for proxy address that end with a top-level domain. For example, if you enter the following proxy addresses they will not be resolved for the above example user:
 
-smtp:`marcelosantos@fourthcoffee.com`  
-SIP:`msantos@contoso.com`
+- smtp:`marcelosantos@fourthcoffee.com`  
+- SIP:`msantos@contoso.com`
 
 You can tell the name was not resolved successfully from the GAL because if you double-click the resolved name the **E-mail Properties** dialog box is displayed. This dialog box does not display any Active Directory attributes, only Display name, E-mail address, and E-mail type.
 

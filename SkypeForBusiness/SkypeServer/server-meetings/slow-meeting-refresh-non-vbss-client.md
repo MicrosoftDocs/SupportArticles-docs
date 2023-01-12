@@ -39,7 +39,7 @@ To make sure that all Office 2016 Skype for Business clients are updated correct
 
 If there are networking issues that severely hinder the use of Skype for Business traffic in your environment, it's likely that you will not be able to use VbSS or RDP correctly without first addressing the networking issues. For all required Skype for Business Online Traffic and Port information, see the following document:
 
-[Office 365 URLs and IP address ranges](https://support.office.com/article/office-365-urls-and-ip-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2?ui=en-us&rs=en-us&ad=us#bkmk_lyo)
+[Microsoft 365 URLs and IP address ranges](https://support.office.com/article/office-365-urls-and-ip-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2?ui=en-us&rs=en-us&ad=us#bkmk_lyo)
 
 If you have investigated all other possible causes of this issue, also make sure that your video drivers are as up-to-date as possible when you use this service.
 

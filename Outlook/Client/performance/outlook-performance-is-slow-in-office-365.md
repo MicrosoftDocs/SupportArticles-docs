@@ -1,6 +1,6 @@
 ---
-title: Outlook performance is slow in Office 365
-description: Describes performance issues that occur when you use Outlook in an Office 365 environment. Specifically, Outlook performs slowly when you open email messages, and mail sits for a long time in the Outbox after you send it. A resolution is provided.
+title: Outlook performance is slow in Microsoft 365
+description: Describes performance issues that occur when you use Outlook in a Microsoft 365 environment. Specifically, Outlook performs slowly when you open email messages, and mail sits for a long time in the Outbox after you send it. A resolution is provided.
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -18,11 +18,11 @@ author: simonxjx
 ms.author: v-six
 ms.date: 3/31/2022
 ---
-# Outlook performance is slow in the Office 365 environment
+# Outlook performance is slow in the Microsoft 365 environment
 
 ## Symptoms
 
-When you use Microsoft Outlook together with Microsoft Office 365, you experience one or more of the following symptoms:
+When you use Microsoft Outlook together with Microsoft 365, you experience one or more of the following symptoms:
 
 - Outlook responds slowly when you try to open email messages.
 - When you send an email message, the message sits in the Outbox folder for a long time.
@@ -33,7 +33,7 @@ When you use Microsoft Outlook together with Microsoft Office 365, you experienc
 
 This issue may occur for many reasons.
 
-This issue may be caused by an Exchange Online server issue. In this case, sign in to the Office 365 portal by using your administrator credentials, and then select **service health** to determine whether other customers are experiencing the same issue. If other customers are experiencing the issue, the issue should end when the service-interrupting event is resolved.
+This issue may be caused by an Exchange Online server issue. In this case, sign in to the Microsoft 365 portal by using your administrator credentials, and then select **service health** to determine whether other customers are experiencing the same issue. If other customers are experiencing the issue, the issue should end when the service-interrupting event is resolved.
 
 Also, determine whether any local network issues might be causing the problem. This includes issues that affect your local proxy server, firewall, or Internet service provider.
 
@@ -59,7 +59,7 @@ To fix this issue, follow these steps:
      > [!NOTE]
      > This diagnostic creates detailed information about your Outlook configuration and provides solutions for any known issues that are detected. It also gives you the option to upload your results to Microsoft so that a Support engineer can review them before you make a Support call.
 
-   - Disable Skype for Business Online (formerly Lync Online) integration. If Outlook is integrated with Skype for Business Online in your Office 365 environment, the integration may affect Outlook's performance. To disable Skype for Business Online integration with Outlook, follow these steps:
+   - Disable Skype for Business Online (formerly Lync Online) integration. If Outlook is integrated with Skype for Business Online in your Microsoft 365 environment, the integration may affect Outlook's performance. To disable Skype for Business Online integration with Outlook, follow these steps:
 
      1. Open Lync, select the gear icon in the upper-right corner, point to **Tools**, and then select **Options**.
      2. Select **Personal**, and then clear the check boxes in the **Personal information manager** area.

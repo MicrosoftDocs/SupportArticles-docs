@@ -8,7 +8,8 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: zakirh
+ms.author: v-maqiu
+ms.reviwer: zakirh
 ms.custom: sap:office-experts, CSSTroubleshoot
 appliesto: 
   - Microsoft Sway

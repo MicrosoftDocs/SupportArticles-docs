@@ -1,8 +1,9 @@
 ---
 title: Activation error That Microsoft account doesn’t exist
 description: Troubleshooting the Microsoft 365 activation error That Microsoft account doesn’t exist. Enter a different account or get a new one.
-author: vikkarti
-ms.author: v-matthamer
+author: helenclu
+ms.reviewer: vikkarti
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

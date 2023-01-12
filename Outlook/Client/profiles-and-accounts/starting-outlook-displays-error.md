@@ -1,6 +1,6 @@
 ---
-title: Outlook fails to start
-description: This article describes the error that occurs when Outlook fails to start, and provides a resolution.
+title: Outlook displays "This information service is not installed on your computer" error message
+description: This article provides a resolution for the error message about the information service that is displayed when trying to start Outlook.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -19,7 +19,7 @@ appliesto:
   - Outlook 2007
 ms.date: 3/31/2022
 ---
-# Starting Outlook displays error: This information service is not installed on your computer
+# Outlook displays "This information service is not installed on your computer" error message
 
 _Original KB number:_ &nbsp; 2772566
 

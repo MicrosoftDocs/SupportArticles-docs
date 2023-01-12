@@ -8,7 +8,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: arhinesm
+ms.author: luche
 ms.custom: sap:spsexperts, CSSTroubleshoot
 appliesto: 
   - PowerPoint Web App

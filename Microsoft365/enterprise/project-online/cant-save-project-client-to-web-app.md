@@ -13,7 +13,7 @@ description: Unable to save a project from a Project client to PWA with the erro
 appliesto: 
   - Project Online
   - Project Professional 2016
-  - Project Pro for Office 365
+  - Project Pro for Microsoft 365
 ms.date: 3/31/2022
 ---
 

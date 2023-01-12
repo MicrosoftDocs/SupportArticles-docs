@@ -71,7 +71,7 @@ When you reopen the meeting to send an update, delete the additional recipient e
 
 The `MaxRecipientEnvelopeLimit` value in Exchange is where the organization limit for recipients is stored. The default setting in Exchange 2010 and Exchange 2013 is 5000 recipients per message. However, this setting can be configured by your Exchange administrator.
 
-Exchange Online and Office 365 have an organization limit of 500 recipients per message, and this setting can't be modified. Where applicable, this value is configured through the following PowerShell command:
+Exchange Online and Microsoft 365 have an organization limit of 500 recipients per message, and this setting can't be modified. Where applicable, this value is configured through the following PowerShell command:
 
 ```powershell
 Set-TransportConfig -maxrecipientenvelopelimit: value

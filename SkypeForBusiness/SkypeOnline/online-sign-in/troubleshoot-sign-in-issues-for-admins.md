@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot sign-in issues for admins
-description: Helps Office 365 administrators troubleshoot and solve sign-in issues with Skype for Business Online.
+description: Helps Microsoft 365 administrators troubleshoot and solve sign-in issues with Skype for Business Online.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -22,19 +22,19 @@ _Original KB number:_ &nbsp; 10133
 
 This article will begin by asking you questions about your installation and the symptoms you're experiencing. Then we'll take you through a series of troubleshooting steps and configuration checks that are specific to your situation.
 
-The amount of time you spend will depend on the type of Office 365 installation you have, and the root causes of your sign-in issues.
+The amount of time you spend will depend on the type of Microsoft 365 installation you have, and the root causes of your sign-in issues.
 
 ## One user, or a few users here and there affected
 
-### Access to Office 365 on the web
+### Access to Microsoft 365 on the web
 
-If the affected users can sign in to Office 365 portal at [here](https://login.microsoftonline.com), go to [Valid Skype for Business user](#valid-skype-for-business-user).
+If the affected users can sign in to Microsoft 365 portal at [here](https://login.microsoftonline.com), go to [Valid Skype for Business user](#valid-skype-for-business-user).
 
-If the users can't sign in to Office 365, see the [Can't sign in to Office 365](#cant-sign-in-to-office-365) section.
+If the users can't sign in to Microsoft 365, see the [Can't sign in to Microsoft 365](#cant-sign-in-to-microsoft-365) section.
 
-### Can't sign in to Office 365
+### Can't sign in to Microsoft 365
 
-If the users can't sign in to Office 365, ask them to try the troubleshooting steps suggested in [You can't sign in to Office 365, Azure, or Intune](/office365/troubleshoot/sign-In/sign-in-to-office-365-azure-intune).
+If the users can't sign in to Microsoft 365, ask them to try the troubleshooting steps suggested in [You can't sign in to Microsoft 365, Azure, or Intune](/microsoft-365/troubleshoot/sign-In/sign-in-to-office-365-azure-intune).
 
 If the issue still exists, [contact support](#contact-support).
 
@@ -109,7 +109,7 @@ Choose your version of Skype for Business:
 - [Skype for Business 2015](#update-skype-for-business-2015)
 - [Skype for Business Windows Store app](#update-skype-for-business-windows-store-app)
 
-###### Office 365 Desktop Setup (Lync 2010)
+###### Microsoft 365 Desktop Setup (Lync 2010)
 
 Make sure that **Microsoft Online Services Sign-in Assistant** is running on Windows Services by following these steps:  
 (These steps are for Windows 10)
@@ -329,13 +329,13 @@ Find out if you've set up directory synchronization:
 
     :::image type="content" source="./media/troubleshoot-sign-in-issues-for-admins/check-status-of-ad-synchronization.png" alt-text="Screenshot that shows the Active Directory synchronization status in the User and groups tab.":::
 
-If your organization synchronizing Active Directory with Office 365 is using the Windows Azure Directory Synchronization Tool, go to [Single sign-on](#single-sign-on) section. If not, [contact support](#contact-support).
+If your organization synchronizing Active Directory with Microsoft 365 is using the Windows Azure Directory Synchronization Tool, go to [Single sign-on](#single-sign-on) section. If not, [contact support](#contact-support).
 
 ###### Single sign-on
 
-Is your organization using single sign-on with Office 365? If yes, go to the [Active Directory Federation Services (AD FS) configuration](#active-directory-federation-services-ad-fs-configuration) section.
+Is your organization using single sign-on with Microsoft 365? If yes, go to the [Active Directory Federation Services (AD FS) configuration](#active-directory-federation-services-ad-fs-configuration) section.
 
-If your organization isn't using single sign-on with Office 365, see the [Duplicate or conflicting Active Directory entries](#duplicate-or-conflicting-active-directory-entries) section.
+If your organization isn't using single sign-on with Microsoft 365, see the [Duplicate or conflicting Active Directory entries](#duplicate-or-conflicting-active-directory-entries) section.
 
 ###### Duplicate or conflicting Active Directory entries
 
@@ -350,13 +350,13 @@ If the issue still exists, [contact support](#contact-support).
 
 ###### Active Directory Federation Services (AD FS) configuration
 
-Check for known Active Directory Federation Services (AD FS) issues that might prevent single sign-on from working as expected. For details, see [Enterprise single sign-on users in Office 365 can't sign in to Lync Online from inside their corporate network](https://support.microsoft.com/help/2839539).
+Check for known Active Directory Federation Services (AD FS) issues that might prevent single sign-on from working as expected. For details, see [Enterprise single sign-on users in Microsoft 365 can't sign in to Lync Online from inside their corporate network](https://support.microsoft.com/help/2839539).
 
 If this method doesn't solve this issue, go to the [Hybrid Deployment with on-premises Skype for Business Server](#hybrid-deployment-with-on-premises-skype-for-business-server) section.
 
 ###### Hybrid Deployment with on-premises Skype for Business Server
 
-You have a hybrid deployment if you've set up a [shared SIP address space](/skypeforbusiness/deploy/integrate-with-exchange-server/outlook-web-app) with Skype for Business Online, and your on-premises Lync server shares a domain with your Office 365 organization.
+You have a hybrid deployment if you've set up a [shared SIP address space](/skypeforbusiness/deploy/integrate-with-exchange-server/outlook-web-app) with Skype for Business Online, and your on-premises Lync server shares a domain with your Microsoft 365 organization.
 
 If you have a Skype for Business Server 2015 and Skype for Business Online hybrid deployment, go to the [Skype for Business users enabled on-premises and moved to the cloud](#skype-for-business-users-enabled-on-premises-and-moved-to-the-cloud) section. If you don't have, go to [Duplicate or conflicting Active Directory entries](#duplicate-or-conflicting-active-directory-entries).
 
@@ -365,7 +365,7 @@ If you have a Skype for Business Server 2015 and Skype for Business Online hybri
 Make sure the users have been:
 
 1. Enabled for Skype for Business on the on-premises Skype for Business Server.
-1. Licensed for Skype for Business in Office 365.
+1. Licensed for Skype for Business in Microsoft 365.
 1. [Moved to Skype for Business Online](/SkypeForBusiness/hybrid/move-users-between-on-premises-and-cloud?toc=/SkypeForBusiness/toc.json).
 
 If the issue still exists, [contact support](#contact-support).
@@ -374,17 +374,17 @@ If the issue still exists, [contact support](#contact-support).
 
 ### Custom domain
 
-Office 365 creates a domain for you when you sign up (the domain name includes .onmicrosoft.com). But most companies prefer to use their own domain, like fabrikam.com, for their business email addresses and website.
+Microsoft 365 creates a domain for you when you sign up (the domain name includes .onmicrosoft.com). But most companies prefer to use their own domain, like fabrikam.com, for their business email addresses and website.
 
 If your current domain name ends in .onmicrosoft.com, you don't have a custom domain.
 
-Are you using a custom domain with Office 365? If yes, go to the [Office version](#office-version) section. If no, go to the [Access to Office 365 on the web](#access-to-office-365-on-the-web) section.
+Are you using a custom domain with Microsoft 365? If yes, go to the [Office version](#office-version) section. If no, go to the [Access to Microsoft 365 on the web](#access-to-microsoft-365-on-the-web) section.
 
 ### Office version
 
-To check your Office 365 subscription, sign in and go to **Admin** > **Licensing**.
+To check your Microsoft 365 subscription, sign in and go to **Admin** > **Licensing**.
 
-What type of Office 365 subscription do you have?
+What type of Microsoft 365 subscription do you have?
 
 - [Small Business](#custom-domain-status-small-business)
 - [Academic](#skype-for-business-server-and-skype-for-business-online-hybrid-deployment)
@@ -416,7 +416,7 @@ Run the domain troubleshooter:
     :::image type="content" source="./media/troubleshoot-sign-in-issues-for-admins/click-troubleshoot.png" alt-text="Screenshot that shows the troubleshoot option selected.":::
 1. If you discovered any network setup issues, resolve them, and then try signing in again.
 
-If this method doesn't solve the issue, go to the [Access to Office 365 on the web](#access-to-office-365-on-the-web) section.
+If this method doesn't solve the issue, go to the [Access to Microsoft 365 on the web](#access-to-microsoft-365-on-the-web) section.
 
 ### Set up your custom domain (Small Business)
 
@@ -428,20 +428,20 @@ Don't worry, we'll save your place, and you can start where you left off. Just c
 
 ### Skype for Business Server and Skype for Business Online hybrid deployment
 
-You have a hybrid deployment if your on-premises Skype for Business server shares a domain with your Office 365 organization, and you've set up a [shared SIP address space](/skypeforbusiness/deploy/integrate-with-exchange-server/outlook-web-app) with Skype for Business Online.
+You have a hybrid deployment if your on-premises Skype for Business server shares a domain with your Microsoft 365 organization, and you've set up a [shared SIP address space](/skypeforbusiness/deploy/integrate-with-exchange-server/outlook-web-app) with Skype for Business Online.
 
 Do you have a Skype for Business Server 2015 and Skype for Business Online hybrid deployment? If yes, go to the [Verify your Skype for Business Server hybrid deployment setup](#verify-your-skype-for-business-server-hybrid-deployment-setup) section. If no, go to the [Custom domain status](#custom-domain-status) section.
 
 ### Verify your Skype for Business Server hybrid deployment setup
 
-Make sure your Skype for Business Server deployment is set up to work with Skype for Business Online and Office 365. For details, see Planning for Skype for Business Server 2015 Hybrid Deployments and Determine DNS Requirements.
+Make sure your Skype for Business Server deployment is set up to work with Skype for Business Online and Microsoft 365. For details, see Planning for Skype for Business Server 2015 Hybrid Deployments and Determine DNS Requirements.
 
 Test your Lync Server hybrid deployment setup:
 
 - Test your setup with the Lync Server Remote Connectivity Test.
 - If necessary, correct any reported issues, and then try signing in again.
 
-If the issue still exists, go to the [Access to Office 365 on the web](#access-to-office-365-on-the-web) section.
+If the issue still exists, go to the [Access to Microsoft 365 on the web](#access-to-microsoft-365-on-the-web) section.
 
 ### Custom domain status
 
@@ -465,7 +465,7 @@ Run the domain troubleshooter:
 
 If you discovered any network setup issues, resolve them, and then try signing in again.
 
-If the issue still isn't solved, go to the [Access to Office 365 on the web](#access-to-office-365-on-the-web) section.
+If the issue still isn't solved, go to the [Access to Microsoft 365 on the web](#access-to-microsoft-365-on-the-web) section.
 
 ### Set up your custom domain
 
@@ -487,7 +487,7 @@ Run the domain troubleshooter:
 
 If you discovered any network setup issues, resolve them, and then try signing in again.
 
-If the issue still isn't solved, go to the [Access to Office 365 on the web](#access-to-office-365-on-the-web) section.
+If the issue still isn't solved, go to the [Access to Microsoft 365 on the web](#access-to-microsoft-365-on-the-web) section.
 
 ## Everybody in my organization affected
 

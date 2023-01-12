@@ -16,8 +16,8 @@ appliesto:
   - Exchange Online
   - Outlook for Android
   - Outlook for iOS
-  - Outlook for Mac for Office 365
-  - Outlook for Office 365
+  - Outlook for Microsoft 365 for Mac
+  - Outlook for Microsoft 365
   - Outlook on the web
 search.appverid: MET150
 ms.date: 3/31/2022

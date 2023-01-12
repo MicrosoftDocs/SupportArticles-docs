@@ -32,7 +32,7 @@ When you run the Hybrid Configuration wizard (HCW), you receive one of the follo
 
 > HCW8016 Hybrid domain Contoso.com isn't an accepted domain in the on-premises organization.
 
-> HCW8017 Hybrid domain Contoso.com isn't an accepted domain in the Office 365 tenant.
+> HCW8017 Hybrid domain Contoso.com isn't an accepted domain in the Microsoft 365 tenant.
 
 > HCW8029 No hybrid domains specified.
 

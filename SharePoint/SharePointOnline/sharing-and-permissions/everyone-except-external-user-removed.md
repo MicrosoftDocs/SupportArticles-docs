@@ -1,5 +1,5 @@
 ---
-title: Everyone except external users group is removed on Office 365
+title: Everyone except external users group is removed on Microsoft 365
 description: Works around an issue in which the Everyone except external users group is removed by a managed service account on private group sites.
 author: helenclu
 manager: dcscontentpm
@@ -15,11 +15,11 @@ appliesto:
 ms.date: 3/31/2022
 ---
 
-# "Everyone except external users" group is removed on Office 365 private group website
+# "Everyone except external users" group is removed on Microsoft 365 private group website
 
 ## Symptoms
 
-You notice that the `Everyone except external users` group is removed on a Microsoft Office 365 private group website after it is converted from a public group.
+You notice that the `Everyone except external users` group is removed on a Microsoft 365 private group website after it is converted from a public group.
 
 ## Cause
 

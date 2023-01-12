@@ -1,8 +1,9 @@
 ---
 title: Microsoft 365 Apps activation error The account isn’t associated with this Office product
 description: Troubleshooting the Microsoft 365 Apps activation error The account isn’t associated with this Office product.
-author: vikkarti
-ms.author: v-matthamer
+author: helenclu
+ms.reviewer: vikkarti
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

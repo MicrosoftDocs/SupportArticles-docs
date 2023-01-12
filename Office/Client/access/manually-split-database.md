@@ -79,7 +79,7 @@ To split the database in Microsoft Office Access 2007 or a later version, follow
 
 **Notes**
 
-This database is the front-end database. You can distribute this front-end database to the workstations so that each user has his own copy of the front-end database. 
+This database is the front-end database. You can distribute this front-end database to the workstations so that each user has their own copy of the front-end database. 
 
 You have now successfully split your database, which will improve performance. Now when a user opens a form, the form opens locally on their computer, and is not sent across the network. The only data that comes across the network is the data in the linked tables.
 

@@ -1,6 +1,6 @@
 ---
-title: Outlook cannot connect or web services cannot work after migrated to Office 365
-description: Describes an issue that generates performance and connection problems for Outlook 2013. Occurs after your mailbox is migrated to Office 365. A resolution is provided.
+title: Outlook cannot connect or web services cannot work after migrated to Microsoft 365
+description: Describes an issue that generates performance and connection problems for Outlook 2013. Occurs after your mailbox is migrated to Microsoft 365. A resolution is provided.
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,18 +10,18 @@ appliesto:
 - Outlook 2019
 - Outlook 2016
 - Outlook 2013
-- Outlook for Office 365
+- Outlook for Microsoft 365
 search.appverid: MET150
 ms.reviewer: tasitae
 author: simonxjx
 ms.author: v-six
 ms.date: 3/31/2022
 ---
-# Outlook doesn't connect or web services don't work after migration to Office 365
+# Outlook doesn't connect or web services don't work after migration to Microsoft 365
 
 ## Symptoms
 
-After your mailbox is migrated to Office 365, you may experience the following issues:
+After your mailbox is migrated to Microsoft 365, you may experience the following issues:
 
 - Outlook cannot connect to Exchange Server.
 - You cannot use features such as Out of Office, meeting availability, mail tips, the online archive, or any other web services feature that relies on Autodiscover.
@@ -50,7 +50,7 @@ DWORD: **ExcludeLastKnownGoodUrl**
 Value: 1
 
 > [!NOTE]
-> The <x.0> place holder represents your version of Office (**16.0** = Office 2016, Office 365 and Office 2019, **15.0** = Office 2013).
+> The <x.0> place holder represents your version of Office (**16.0** = Office 2016, Microsoft 365 and Office 2019, **15.0** = Office 2013).
 >
 > When the **ExcludeLastKnownGoodUrl** value is set to **1**, Outlook does _not_ use the last known working AutoDiscover URL.
 
@@ -86,7 +86,7 @@ If you prefer, you can use Group Policy to control whether Outlook uses the last
     > [!NOTE]
     > To load the Administrative Template files, download the files, and then follow the instructions for "Loading the ADMX templates" in [Use Group Policy to enforce Office 2010 settings](/previous-versions/office/office-2010/cc179081(v=office.14)). Although this article targets Office 2010, the Administrative Templates information also applies to later versions of Office.
     >
-    > The **##** placeholder represents your version of Office (**16** = Office 2016, Office 365 and Office 2019, **15** = Office 2013).
+    > The **##** placeholder represents your version of Office (**16** = Office 2016, Microsoft 365 and Office 2019, **15** = Office 2013).
 
 3. Under **User Configuration**, expand **Administrative Templates**, expand your version of **Microsoft Outlook**, expand **Account Settings**, and then select **Exchange**.
 

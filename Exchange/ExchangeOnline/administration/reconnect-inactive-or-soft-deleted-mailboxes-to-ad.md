@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 4337973
 When your on-premises Active Directory account is brought back into the scope of Azure AD Connect, your inactive mailbox is not reconnected automatically in Exchange Online. Additionally, a newly provisioned mailbox is created in Exchange Online.
 
 > [!NOTE]
-> For Microsoft Office 365 dedicated/ITAR customers, Microsoft Managed Services Service Provisioning Provider (MMSSPP) writes back the `msExchMailboxGUID` and `ExchangeGUID` attributes from the dedicated environment to a customer's on-premises Active Directory during the coexistence phase. Instead of a newly provisioned mailbox in Exchange Online, a mail-enabled user is created.
+> For Office 365 dedicated/ITAR customers, Microsoft Managed Services Service Provisioning Provider (MMSSPP) writes back the `msExchMailboxGUID` and `ExchangeGUID` attributes from the dedicated environment to a customer's on-premises Active Directory during the coexistence phase. Instead of a newly provisioned mailbox in Exchange Online, a mail-enabled user is created.
 
 ## Cause
 
@@ -86,6 +86,6 @@ Restore the content from the inactive mailbox to the newly provisioned mailbox b
 
 ## More information
 
-The steps in the Resolution section are adapted from the cloud mailbox instructions in [Restore an inactive mailbox in Office 365](/microsoft-365/compliance/restore-an-inactive-mailbox).
+The steps in the Resolution section are adapted from the cloud mailbox instructions in [Restore an inactive mailbox in Microsoft 365](/microsoft-365/compliance/restore-an-inactive-mailbox).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

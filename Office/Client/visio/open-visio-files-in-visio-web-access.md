@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 ms.reviewer: elzhou, genli, christys
 appliesto: 
-  - Visio Pro for Office 365
+  - Visio Pro for Microsoft 365
   - Visio 2019
   - Visio 2016
   - Visio 2013

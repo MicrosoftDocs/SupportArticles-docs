@@ -12,7 +12,6 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft 365 Apps for enterprise
-  - Office 365 Identity Management
 ms.date: 3/31/2022
 ---
 
@@ -56,6 +55,6 @@ Value: Disabled
 
 ## More information
 
-For more information about Office 365 activation issues, see [Office 365: Use the Support and Recovery Assistant for Office 365](https://support.office.com/article/unlicensed-product-and-activation-errors-in-office-0d23d3c0-c19c-4b2f-9845-5344fedc4380).
+For more information about Microsoft 365 activation issues, see [Microsoft 365: Use the Support and Recovery Assistant for Microsoft 365](https://support.office.com/article/unlicensed-product-and-activation-errors-in-office-0d23d3c0-c19c-4b2f-9845-5344fedc4380).
 
 Still need assistance? Ask for help in the [Microsoft Community](https://answers.microsoft.com/).

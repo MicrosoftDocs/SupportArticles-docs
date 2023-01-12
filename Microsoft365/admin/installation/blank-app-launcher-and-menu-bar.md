@@ -1,6 +1,6 @@
 ---
-title: Office 365 app launcher and menu bar icons are blank
-description: Describes a scenario in which icons are missing from the tiles in the Office 365 app launcher and from the menu bar in Outlook on the web.
+title: Microsoft 365 app launcher and menu bar icons are blank
+description: Describes a scenario in which icons are missing from the tiles in the Microsoft 365 app launcher and from the menu bar in Outlook on the web.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -11,22 +11,22 @@ ms.author: v-maqiu
 search.appverid: 
   - MET150
 appliesto: 
-  - Office 365
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
-# Office 365 app launcher and menu bar icons are blank
+# Microsoft 365 app launcher and menu bar icons are blank
 
 ## Problem
 
-In Office 365, a user experiences the following symptoms:
+In Microsoft 365, a user experiences the following symptoms:
 
-- Icons are missing from the tiles in the Office 365 app launcher.    
+- Icons are missing from the tiles in the Microsoft 365 app launcher.    
 - In Outlook on the web, the icons in the upper-right area of the page are missing. For example, the **Help** and **Settings** icon are missing.    
 
 ## Cause
 
-This issue occurs if the Untrusted Font Blocking feature is enabled on the computer as part of either a domain Group Policy setting or a local policy. Office 365 icons are glyphs that are saved in an Office 365-designated font. When the policy setting is enabled, glyphs from the font aren't visible.
+This issue occurs if the Untrusted Font Blocking feature is enabled on the computer as part of either a domain Group Policy setting or a local policy. Microsoft 365 icons are glyphs that are saved in a Microsoft 365-designated font. When the policy setting is enabled, glyphs from the font aren't visible.
 
 ## Solution
 

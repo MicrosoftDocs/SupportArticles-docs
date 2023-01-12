@@ -40,7 +40,7 @@ When Office 365 was upgraded in 2013, Exchange Online was configured to store Sk
 
 Since then, this feature was disabled because by default, and Skype for Business Online contact lists are now managed by Skype for Business Online. However, some users might still be using the Exchange UCS and experience no issues or problems at all. If their mailbox is unavailable through Exchange Web Services (EWS) at any time, they won't be able to change or even access their contact lists. If this becomes an issue, you may want to migrate your contacts back to Skype for Business Online.
 
-## Solutioin
+## Solution
 
 ### If you're experiencing this issue
 
@@ -60,8 +60,8 @@ Make sure that the **Personal information manager** is set to **Microsoft Exchan
 
 ### Then, check the DNS configuration for EWS Connectivity
 
-Next, if you're using a custom domain in Office 365, and the user has an Exchange Online mailbox, but the contact list is still unavailable, verify that all the necessary Domain Name System (DNS) records for Exchange Online Autodiscover are present. Lync uses the Exchange Autodiscover service to connect to the user's mailbox. If the Autodiscover service isn't working correctly, Lync won't be able to pull the user's contact list from the Exchange Unified Contact Store (UCS). For more information about how to verify the Exchange Autodiscover service, see "Method 2" of the Solution section in
-[Outlook can't set up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Office 365](https://support.microsoft.com/help/2404385).
+Next, if you're using a custom domain in Microsoft 365, and the user has an Exchange Online mailbox, but the contact list is still unavailable, verify that all the necessary Domain Name System (DNS) records for Exchange Online Autodiscover are present. Lync uses the Exchange Autodiscover service to connect to the user's mailbox. If the Autodiscover service isn't working correctly, Lync won't be able to pull the user's contact list from the Exchange Unified Contact Store (UCS). For more information about how to verify the Exchange Autodiscover service, see "Method 2" of the Solution section in
+[Outlook can't set up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Microsoft 365](https://support.microsoft.com/help/2404385).
 
 ### If the mailbox was accidentally disconnected or unlicensed
 
@@ -69,7 +69,7 @@ You have 30 days to reconnect the mailbox without any consequences. The user's m
 
 ### If the mailbox disconnect was intentional and you have to restore the user's contact list for Lync
 
-To restore the user's contact list to the Lync Server, you have to temporarily reconnect the user's mailbox and then run the Skype for Business OnlineRemote PowerShell cmdlet **Invoke-CsUcsRollback** to have the user's contact list migrated from his or her Exchange mailbox to the Lync server.
+To restore the user's contact list to the Lync Server, you have to temporarily reconnect the user's mailbox and then run the Skype for Business OnlineRemote PowerShell cmdlet **Invoke-CsUcsRollback** to have the user's contact list migrated from Exchange mailbox to the Lync server.
  
 ### If you want to migrate your contacts back toSkype for Business Online
 

@@ -26,12 +26,12 @@ ms.date: 3/31/2022
 
 ## Summary
 
- The Sync with SharePointfeature lets a Project Manager share an .mpp project file with Microsoft SharePoint users. This feature is available to use with SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, and SharePoint Online through Project Professional 2013, Project Professional 2016, Project Professional 2019, and Project for Office 365. This feature creates a SharePoint Project site. This site contains a Project Summary and Timeline, a tasks list, and a Calendar. Synchronizing also saves the .mpp file to the site assets for future editing.
+ The Sync with SharePointfeature lets a Project Manager share an .mpp project file with Microsoft SharePoint users. This feature is available to use with SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, and SharePoint Online through Project Professional 2013, Project Professional 2016, Project Professional 2019, and Project for Microsoft 365. This feature creates a SharePoint Project site. This site contains a Project Summary and Timeline, a tasks list, and a Calendar. Synchronizing also saves the .mpp file to the site assets for future editing.
 
 > [!NOTE]
 > The Project Manager must be part of the SharePoint Owners group (or at the least have designer permissions) on the parent site collection where the new or existing site resides.
 
-Synchronization goes the other way, too. If you have a SharePoint tasks list, there's an **Open with Project** button that opens the plan in Project Professional. This feature lets you use the Project Scheduling Engine to make schedule updates in Project Professional 2013, Project Professional 2016, Project Professional 2019, or Project for Office 365 and then synchronize the static list back to the tasks list on the SharePoint Project site.
+Synchronization goes the other way, too. If you have a SharePoint tasks list, there's an **Open with Project** button that opens the plan in Project Professional. This feature lets you use the Project Scheduling Engine to make schedule updates in Project Professional 2013, Project Professional 2016, Project Professional 2019, or Project for Microsoft 365 and then synchronize the static list back to the tasks list on the SharePoint Project site.
 
 Managing a Project Site tasks list in this manner is also known as lightweight project management. Project Server is not required for this functionality. SharePoint Foundation 2013, SharePoint Foundation 2016, or SharePoint Foundation 2019 is the minimum requirement for using the **Sync to SharePoint**feature.
 

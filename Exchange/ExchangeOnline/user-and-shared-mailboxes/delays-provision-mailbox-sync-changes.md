@@ -2,7 +2,7 @@
 title: Delays in provisioning of user/mailbox or synchronizing changes in Exchange Online
 description: Describes an issue in which provisioning of user/mailbox or synchronizing changes in Exchange Online delays. Provides a solution.
 author: simonxjx
-ms.author: rroddy
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

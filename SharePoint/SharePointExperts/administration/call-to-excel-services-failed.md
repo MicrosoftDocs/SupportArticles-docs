@@ -2,7 +2,8 @@
 title: Call to Excel Services failed with a scheduled data refresh
 description: Fixes the Call to Excel Services failed error when you run a scheduled data refresh by using PowerPivot.
 author: helenclu
-ms.author: zakirh
+ms.author: luche
+ms.reviwer: zakirh
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -40,7 +41,7 @@ In Excel 2016, the connection may be created by using the **Get & Transform** or
 
 ## More information
 
-Data refresh for Power Query connections is supported by Power BI for Office 365 (SharePoint Online). For more information, see [Scheduled Data Refresh for Power Query](https://powerbi.microsoft.com/blog/scheduled-data-refresh-for-power-query/).
+Data refresh for Power Query connections is supported by Power BI for Microsoft 365 (SharePoint Online). For more information, see [Scheduled Data Refresh for Power Query](https://powerbi.microsoft.com/blog/scheduled-data-refresh-for-power-query/).
 
 Interactive browser refresh and scheduled data refresh for Power Query connections are supported on-premises with PowerPivot for SharePoint 2016. It has the following minimum product requirements:
 

@@ -17,7 +17,7 @@ appliesto:
   - Outlook 2013
   - Microsoft Outlook 2010
   - Microsoft Office Outlook 2007
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
@@ -41,7 +41,7 @@ DWORD: TCOTrace
 Value: 1
 
 > [!NOTE]
-> The **x.0** placeholder represents your version of Office (16.0 = Outlook 2016, Outlook for Office 365 and Outlook 2019, 15.0 = Outlook 2013, 14.0 = Outlook 2010, and 12.0 = Outlook 2007).
+> The **x.0** placeholder represents your version of Office (16.0 = Outlook 2016, Outlook for Microsoft 365 and Outlook 2019, 15.0 = Outlook 2013, 14.0 = Outlook 2010, and 12.0 = Outlook 2007).
 
 TCOTrace logging should remain enabled only as long as you are working with a support engineer on a specific issue.
 
@@ -59,7 +59,7 @@ To resolve this issue, follow these steps:
    `HKEY_CURRENT_USER\Software\Microsoft\Office\x.0\Common\Debug`
 
     > [!NOTE]
-    > The **x.0** placeholder represents your version of Office (16.0 = Outlook 2016, Outlook for Office 365 and Outlook 2019, 15.0 = Outlook 2013, 14.0 = Outlook 2010, 12.0 = Outlook 2007).
+    > The **x.0** placeholder represents your version of Office (16.0 = Outlook 2016, Outlook for Microsoft 365 and Outlook 2019, 15.0 = Outlook 2013, 14.0 = Outlook 2010, 12.0 = Outlook 2007).
 
 5. Right-click TCOTrace, and then select **Delete**.
 6. When you are prompted to confirm the deletion, select **Yes**.

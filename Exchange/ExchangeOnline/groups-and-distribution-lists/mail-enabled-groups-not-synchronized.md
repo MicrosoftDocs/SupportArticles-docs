@@ -1,6 +1,6 @@
 ---
-title: Mail-enabled groups aren't synchronized to Office 365
-description: Discusses an issue in which mail-enabled groups that have an email address aren't synced from an on-premises environment to Office 365.
+title: Mail-enabled groups aren't synchronized to Microsoft 365
+description: Discusses an issue in which mail-enabled groups that have an email address aren't synced from an on-premises environment to Microsoft 365.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -14,17 +14,17 @@ ms.reviewer: willfid
 appliesto: 
   - Exchange Online
   - Azure Active Directory
-  - Office 365 Identity Management
+  - Microsoft 365
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# Mail-enabled groups that have an email address aren't synchronized to Office 365
+# Mail-enabled groups that have an email address aren't synchronized to Microsoft 365
 
 _Original KB number:_ &nbsp; 2508722
 
 ## Problem
 
-When you use the Microsoft Azure Active Directory Sync Tool to sync your on-premises Active Directory Domain Services (AD DS) environment to Microsoft Office 365, you notice that mail-enabled groups that have an email address aren't synced to Office 365.
+When you use the Microsoft Azure Active Directory Sync Tool to sync your on-premises Active Directory Domain Services (AD DS) environment to Microsoft 365, you notice that mail-enabled groups that have an email address aren't synced to Microsoft 365.
 
 This issue occurs if a display name isn't specified for the on-premises mail-enabled group.
 
@@ -49,7 +49,7 @@ The following procedure describes how to edit a display name by using ADSI Edit.
 
    :::image type="content" source="media/mail-enabled-groups-not-synchronized/name.png" alt-text="Screenshot of the Connection Settings dialog box selecting a well known Naming Context and the Default naming context.":::
 
-4. In the navigation pane on the left side, in the AD DS hierarchy, locate the mail-enabled group that isn't synced to Office 365. Right-click the group, and then click **Properties**.
+4. In the navigation pane on the left side, in the AD DS hierarchy, locate the mail-enabled group that isn't synced to Microsoft 365. Right-click the group, and then click **Properties**.
 
    :::image type="content" source="media/mail-enabled-groups-not-synchronized/group-properties.png" alt-text="Screenshot of the navigation pane showing mail-enabled groups.":::
 
@@ -61,7 +61,7 @@ The following procedure describes how to edit a display name by using ADSI Edit.
 
    :::image type="content" source="media/mail-enabled-groups-not-synchronized/displayname-attribute.png" alt-text="Screenshot of the Accounting Admin Properties dialog box showing the Attribute Editor tab and the displayName attribute.":::
 
-    In this example, the value of the `displayName` attribute is set to **\<not set>**. This is reason why the group isn't synced to Office 365.
+    In this example, the value of the `displayName` attribute is set to **\<not set>**. This is reason why the group isn't synced to Microsoft 365.
 
 7. In the **Value** box, enter a display name for the group, and then click **OK**.
 
@@ -79,7 +79,7 @@ The following procedure describes how to edit a display name by using ADSI Edit.
    4. Type **1** in the **Value data** box, and then click **OK**.
    5. Exit Registry Editor.
 
-10. Force directory synchronization or wait for the Azure Active Directory Sync Tool to sync the on-premises mail-enabled group to Office 365.
+10. Force directory synchronization or wait for the Azure Active Directory Sync Tool to sync the on-premises mail-enabled group to Microsoft 365.
 
 ## More information
 

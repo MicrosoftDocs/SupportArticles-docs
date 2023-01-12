@@ -1,8 +1,9 @@
 ---
-title: Office 365 can't open files from the most recently used document list (MRU)
-description: Describe an issue where Office 365 can't open files from the most recently used document list (MRU). Provides a solution.
+title: Microsoft 365 can't open files from the most recently used document list (MRU)
+description: Describe an issue where Microsoft 365 can't open files from the most recently used document list (MRU). Provides a solution.
 author: helenclu
-ms.author: warrenr
+ms.author: luche
+ms.reviewer: warrenr
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: sap:office-experts, CSSTroubleshoot
@@ -11,23 +12,23 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 appliesto: 
-  - Office 365
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
-# Office 365 can't open files from the most recently used document list (MRU)
+# Microsoft 365 can't open files from the most recently used document list (MRU)
 
 This article was written by [Warren Rath](https://social.technet.microsoft.com/profile/Warren_R_Msft), Support Escalation Engineer.
 
 ## Symptoms
 
-Assume that you have Microsoft Office 365 client applications and the **RoamingSettingsDisabled** policy is enabled. When you try to open a document from SharePoint or OneDrive through the Office **Most Recently Used** document list, you receive the following error message:
+Assume that you have Microsoft 365 client applications and the **RoamingSettingsDisabled** policy is enabled. When you try to open a document from SharePoint or OneDrive through the Office **Most Recently Used** document list, you receive the following error message:
 
 **Sorry, something went wrong.**
 
 ## Cause
 
-Office 365 no longer supports the **RoamingSettingsDisabled** registry key:
+Microsoft 365 no longer supports the **RoamingSettingsDisabled** registry key:
 
 - HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\Common\Roaming\RoamingSettingsDisabled
 - HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Roaming\RoamingSettingsDisabled

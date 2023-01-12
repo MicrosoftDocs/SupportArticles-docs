@@ -41,7 +41,7 @@ To resolve this issue, use one of the following methods, depending on your speci
 
 - If you're using directory synchronization, share the resource with security groups and not with a distribution list.
 - Use SharePoint groups. For more information, go to [Customize SharePoint site permissions](/sharepoint/customize-sharepoint-site-permissions).
-- Use Microsoft 365 groups. For more information, go to [Learn about Office 365 Groups](https://support.microsoft.com/office/learn-about-microsoft-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
+- Use Microsoft 365 groups. For more information, go to [Learn about Microsoft 365 Groups](https://support.microsoft.com/office/learn-about-microsoft-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
 
 ## More information
 

@@ -1,4 +1,4 @@
-- name: Hybrid Deployment Troubleshooting
+- name: Exchange hybrid deployment troubleshooting
   href: ../exchange-hybrid-welcome.md
   items:
     - name: Administration
@@ -23,7 +23,7 @@
           href: ../administration/federation-certificate-with-thumbprint-not-found.md
         - name: Missing certificate from Hybrid Configuration Wizard
           href: ../administration/missing-certificate-on-the-last-page-of-hybrid-configuration-wizard.md
-        - name: Mutual Authentication could not be established when testing Outlook Anywhere
+        - name: Mutual Authentication couldn't be established when testing Outlook Anywhere
           href: ../administration/mutual-authentication-could-not-be-established-error-if-testing-outlook-anywhere.md
         - name: OAuth authentication configuration fails
           href: ../administration/exchange-oauth-authentication-could-not-find-the-authorization.md
@@ -35,7 +35,7 @@
           href: ../administration/rpc-over-http-end-of-support.md
         - name: Running Setup /PrepareSchema for hybrid returns error
           href: ../administration/error-when-running-setup-prepareschema.md
-        - name: Unable to cast object of type error when connecting to Office 365 domain
+        - name: Unable to cast object of type error when connecting to Microsoft 365 domain
           href: ../administration/unable-to-cast-object-of-type-error.md
         - name: User photos aren't synced to Exchange Online
           href: ../administration/user-photos-not-synced-to-exchange-online.md
@@ -73,7 +73,7 @@
           href: ../email-delivery/delivery-has-failed-and-550-5-1-1-resolver.adr.recipnotfound.md
         - name: Can't receive mail after installing new certificate
           href: ../email-delivery/cannot-receive-mail-with-new-certificate.md
-        - name: Email from Edge Transport server appears as mail from external contacts
+        - name: Email from the Edge Transport server appears as mail from external contacts
           href: ../email-delivery/email-sent-from-edge-transport-server-appears-as-mail-from-external-contacts.md
         - name: Email messages are incorrectly quarantined
           href: ../email-delivery/email-messages-incorrectly-quarantined.md
@@ -95,7 +95,7 @@
           href: ../email-delivery/on-premises-users-not-getting-emails-from-microsoft-365.md
     - name: Groups and Distribution Lists
       items:
-        - name: Can't access Office 365 groups in Outlook
+        - name: Can't access Microsoft 365 groups in Outlook
           href: ../groups-and-distribution-lists/cannot-access-office-365-groups-in-outlook.md
         - name: Can't manage groups that's synced to Microsoft 365
           href: ../groups-and-distribution-lists/cannot-manage-group-synced-from-on-premises.md
@@ -143,6 +143,8 @@
           href: ../hybrid-configuration-wizard-errors/execution-failed-configure-legacy-exchange-support-error.md
         - name: External IP addresses were not properly cleared
           href: ../hybrid-configuration-wizard-errors/hcw8018-external-ip-addresses-not-cleared.md
+        - name: Resolve free/busy sharing issues
+          href: ../hybrid-configuration-wizard-errors/free-busy-sharing-issues-tls12.md
         - name: Get-HybridEmail DeliveryDatacenterIPs is not recognized error
           href: ../hybrid-configuration-wizard-errors/term-get-hybridmailflowdatacenterips-is-not-recognized-error.md
         - name: Get-WebServicesVirtualDirectory cmdlet error
@@ -161,6 +163,8 @@
           href: ../hybrid-configuration-wizard-errors/hcw8100-hcw8084-or-hcw8083-error.md
         - name: Hybrid Configuration Wizard can't show digital certificates
           href: ../hybrid-configuration-wizard-errors/hybrid-configuration-wizard-fails-to-show-digital-certificates.md
+        - name: Hybrid Configuration wizard doesn't connect to Office 365
+          href: ../hybrid-configuration-wizard-errors/hybrid-configuration-wizard-not-connect-to-office-365.md
         - name: Hybrid domain isn't an accepted domain for cloud organization error
           href: ../hybrid-configuration-wizard-errors/hybrid-domain-domain-isnt-accepted-domain-for-cloud-organization-error.md
         - name: Legacy Email Address Policy isn't automatically updated
@@ -183,35 +187,35 @@
           href: ../hybrid-configuration-wizard-errors/running-hybrid-configuration-wizard-fails.md
         - name: Same URI can't be attached to different AppId on a single day
           href: ../hybrid-configuration-wizard-errors/same-uri-not-attached-to-different-appid-on-single-day.md
-        - name: Secure Mail Certificate on server is not bound to the SMTP Service error
+        - name: Secure Mail Certificate on server isn't bound to the SMTP Service error
           href: ../hybrid-configuration-wizard-errors/secure-mail-certificate-on-server-is-not-bound-to-smtp-service-error.md
         - name: Sending mailbox server error when running HCW
           href: ../hybrid-configuration-wizard-errors/sending-mailbox-server-error-running-hcw.md
-        - name: State of runspace is not valid for this operation error
+        - name: State of runspace isn't valid for this operation error
           href: ../hybrid-configuration-wizard-errors/state-of-runspace-is-not-valid-for-this-operation-error.md
         - name: Subtask Configure execution failed
           href: ../hybrid-configuration-wizard-errors/hcw-subtask-configure-execution-failed.md
         - name: The request failed with HTTP status 403
           href: ../hybrid-configuration-wizard-errors/request-failed-with-http-status-403-forbidden.md
-        - name: The SSL certificate could not be checked
+        - name: The SSL certificate couldn't be checked
           href: ../hybrid-configuration-wizard-errors/ssl-certificate-could-not-be-checked.md
         - name: The user isn't assigned to any management roles
           href: ../hybrid-configuration-wizard-errors/user-not-assigned-to-any-management-roles.md
         - name: The pipeline has been stopped error when running Hybrid Configuration wizard
           href: ../hybrid-configuration-wizard-errors/system-management-automation-pipelinestoppedexception.md
-        - name: The term Get-OrganizationConfig is not recognized error
+        - name: The term Get-OrganizationConfig isn't recognized error
           href: ../hybrid-configuration-wizard-errors/term-get-organizationconfig-is-not-recognized-error.md
         - name: The underlying connection was closed error
           href: ../hybrid-configuration-wizard-errors/the-underlying-connection-was-closed-error.md
-        - name: The WSMan client cannot process the request error
+        - name: The WSMan client can't process the request error
           href: ../hybrid-configuration-wizard-errors/the-wsman-client-cannot-process-the-request-error.md
         - name: Unable to determine routing domain for cloud organization
           href: ../hybrid-configuration-wizard-errors/unable-to-determine-the-routing-domain-for-the-cloud-org.md
         - name: Warning occurs when running Hybrid Configuration wizard
           href: ../hybrid-configuration-wizard-errors/hcw-has-completed-but-was-not-able-to-perform-oauth.md
-        - name: Web Services External Url is not set on the On-Premises server error
+        - name: Web Services External Url isn't set on the on-premises server error
           href: ../hybrid-configuration-wizard-errors/web-services-external-url-is-not-set-on-the-on-premises-server-error.md
-        - name: WinRM client cannot complete operation within time specified error
+        - name: WinRM client can't complete operation within time specified error
           href: ../hybrid-configuration-wizard-errors/winrm-client-cannot-complete-operation-with-time-specified-error.md
     - name: Move Mailboxes
       items:
@@ -227,9 +231,11 @@
           href: ../move-mailboxes/cannot-migrate-to-exchange-2010.md
         - name: Can't move mailboxes to Exchange Online
           href: ../move-mailboxes/user-is-already-being-moved-error.md
+        - name: Can't register a Hybrid Agent in Exchange Server
+          href: ../move-mailboxes/cannot-register-hybrid-agent.md
         - name: Can't use OWA move items in a hybrid deployment
           href: ../move-mailboxes/cannot-move-items-using-owa.md
-        - name: Error when you move mailboxes to or from Office 365
+        - name: Error when you move mailboxes to or from Microsoft 365
           href: ../move-mailboxes/error-move-mailboxes-to-from-o365.md
         - name: Extension number can't be generated
           href: ../move-mailboxes/extension-number-not-generated-error.md
@@ -247,6 +253,8 @@
           href: ../move-mailboxes/you-must-specify-the-primaryonly-parameter-error.md
         - name: Move mailbox operation fails
           href: ../move-mailboxes/hybrid-move-fails.md
+        - name: '"Multiple entries" error when a remote move migration fails'
+          href: ../move-mailboxes/migration-fails-multiple-entries-error.md
         - name: Offboarding mailbox fails with error
           href: ../move-mailboxes/offboarding-mailbox-fails-homemdb-homemta.md
         - name: Operation has timed out when using New-MoveRequest
@@ -255,6 +263,8 @@
       items:
         - name: Can't access legacy on-premises public folders
           href: ../public-folders/cannot-access-legacy-on-premises-public-folders.md
+        - name: Can't access on-premises PFs from Outlook for Mac
+          href: ../public-folders/outlook-for-mac-unable-access-public-folders.md
         - name: Credential prompt when accessing on-premises PFs
           href: ../public-folders/credential-prompt-access-on-premises-public-folders.md
         - name: It is not possible to expand the folder error

@@ -2,7 +2,7 @@
 title: Teams owner unable to create a Planner tab
 description: Describes an issue in which Teams owner unable to create a Planner tab in Teams client.
 author: helenclu
-ms.author: cowitkow
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

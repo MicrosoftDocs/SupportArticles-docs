@@ -1,6 +1,6 @@
 ---
-title: Determine whether Office 365 account is compromised
-description: Describes how to determine whether your Office 365 account has been compromised.
+title: Determine whether Microsoft 365 account is compromised
+description: Describes how to determine whether your Microsoft 365 account has been compromised.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -11,15 +11,15 @@ ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 appliesto: 
-  - Office 365
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
-# How to determine whether your Office 365 account has been compromised
+# How to determine whether your Microsoft 365 account has been compromised
 
 ## Problem 
 
-You may have issues when you try to sign in to Microsoft Office 365. Or, you notice that suspicious activity occurs in your account, such as large amounts of spam that originates from your account.
+You may have issues when you try to sign in to Microsoft 365. Or, you notice that suspicious activity occurs in your account, such as large amounts of spam that originates from your account.
 
 You may also experience one or more of the following issues:
 
@@ -40,11 +40,11 @@ To help resolve these issues, you must perform all the following steps within fi
 1. Make sure that you have Windows Update turned on.
 1. If antivirus software isn't installed on your computer, we recommend that you install antivirus software and then run a scan to make sure that no malicious software is installed on the computer. You can download free anti-malware or antivirus software from Microsoft.
 
-### Step 2: Make sure that the attacker can't log on to your Office 365 account
+### Step 2: Make sure that the attacker can't log on to your Microsoft 365 account
 
 1. Change your password immediately. Make sure that the password is strong and that it contains upper and lowercase letters, at least one number, and at least one special character.
 1. Don't reuse any of your last five passwords. Even though the password history requirement lets you reuse a more recent password, you should select something that the attacker can't guess.
-1. If your on-premises identity is federated with Office 365, you must change your password on-premises, and then you must notify your administrator of the compromise.
+1. If your on-premises identity is federated with Microsoft 365, you must change your password on-premises, and then you must notify your administrator of the compromise.
 
 ### Step 3: Make sure that the attacker can't resume access to your account
 
@@ -57,11 +57,11 @@ To help resolve these issues, you must perform all the following steps within fi
 ### Step 4: Additional precautionary steps
 
 1. Make sure that you verify your sent items. You may have to inform people on your contacts list that your account was compromised. The attacker may have asked them for money, spoofing, for example, that you were stranded in a different country/region and needed money, or the attacker may send them a virus to also hijack their computers.
-1. Any other service that used this Exchange account as its alternative email account may have been compromised. First, perform these steps for your Office 365 subscription, and then perform these steps for your other accounts.
+1. Any other service that used this Exchange account as its alternative email account may have been compromised. First, perform these steps for your Microsoft 365 subscription, and then perform these steps for your other accounts.
 
 ## More information
 
-These issues may occur when your Office 365 subscription has been compromised. In this case, your compromised accounts may be blocked to protect you and your contacts and help you recover your account. 
+These issues may occur when your Microsoft 365 subscription has been compromised. In this case, your compromised accounts may be blocked to protect you and your contacts and help you recover your account. 
 
 For more information about phishing scams and fraudulent email messages, go to the following websites:
 

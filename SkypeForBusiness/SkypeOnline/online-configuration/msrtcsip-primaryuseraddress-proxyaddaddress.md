@@ -1,6 +1,6 @@
 ---
-title: Error in the Office 365 portal
-description: Describes a problem in which administrators receive an error message in the Office 365 portal that states that the value of msRTCSIP-PrimaryUserAddress or the SIP address isn't unique. Provides a resolution.
+title: Error in the Microsoft 365 portal
+description: Describes a problem in which administrators receive an error message in the Microsoft 365 portal that states that the value of msRTCSIP-PrimaryUserAddress or the SIP address isn't unique. Provides a resolution.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -16,11 +16,11 @@ appliesto:
 ms.date: 3/31/2022
 ---
 
-# "Value of msRTCSIP-PrimaryUserAddress or the SIP address in the ProxyAddresses field in your local Active Directory is not unique" in the Office 365 portal
+# "Value of msRTCSIP-PrimaryUserAddress or the SIP address in the ProxyAddresses field in your local Active Directory is not unique" in the Microsoft 365 portal
 
 ## Problem 
 
-Administrators may receive the following error message in the Office 365 portal:
+Administrators may receive the following error message in the Microsoft 365 portal:
 
 ```adoc
 For this user the value of msRTCSIP-PrimaryUserAddress or the SIP address in the ProxyAddresses field in your local Active Directory is not unique. Correct the value in your Active Directory.The users who have duplicate msRTCSIP-PrimaryUserAddress won't be able to sign in to Skype for Business Online (formerly Lync Online) or chat with other contacts.
@@ -72,14 +72,14 @@ If you're using directory synchronization, locate and correct the duplicate attr
      > If you currently have Exchange Server deployed on-premises, you can make these changes in the Exchange Management Console (EMC) or the Exchange Management Shell.   
   6. Force directory synchronization. Wait approximately 15 minutes for the changes to take full effect.   
 
-If you don't use directory synchronization, contact Office 365 technical support.
+If you don't use directory synchronization, contact Microsoft 365 technical support.
 
 ## More Information
 
-This problem occurs if the value of the msRTCSIP-PrimaryUserAddress attribute or the value of the Session Initiation Protocol (SIP) proxy address is the same for two users in Office 365.
+This problem occurs if the value of the msRTCSIP-PrimaryUserAddress attribute or the value of the Session Initiation Protocol (SIP) proxy address is the same for two users in Microsoft 365.
 
 > [!NOTE]
-> Even though the error message specifically states that the value in the local Active Directory isn't unique, you may experience this issue even though you aren't using the Microsoft Azure Active Directory Sync Tool. If you don't use Directory Synchronization, contact Office 365 technical support for help with resolving the issue. 
+> Even though the error message specifically states that the value in the local Active Directory isn't unique, you may experience this issue even though you aren't using the Microsoft Azure Active Directory Sync Tool. If you don't use Directory Synchronization, contact Microsoft 365 technical support for help with resolving the issue. 
 
 ## References
 

@@ -2,7 +2,7 @@
 title: IgnoreLegalHold isn't available or functional for Exchange Online user objects
 description: IgnoreLegalHold isn't available or functional for Disable-Mailbox, Remove-Mailbox, Disable-Mailuser, and Remove-Mailuser commands in Exchange Online
 author: MaryQiu1987
-ms.author: lindabr
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

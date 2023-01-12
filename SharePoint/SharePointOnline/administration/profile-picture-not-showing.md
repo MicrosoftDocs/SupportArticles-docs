@@ -1,7 +1,8 @@
 ---
 title: Profile picture not showing in SharePoint Online
 description: Your profile picture is not shown in SharePoint Online.
-author: salarson
+author: helenclu
+ms.reviewer: salarson
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

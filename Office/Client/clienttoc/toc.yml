@@ -1,5 +1,5 @@
 - name: Office Products Troubleshooting
-  href: ../office-client-welcome.md
+  href: ../office-client-welcome.yml
   items:
     - name: Access
       items:
@@ -313,7 +313,7 @@
           href: ../activation/office-activation-process-issues.md
         - name: Issue when activating Microsoft 365 Apps for enterprise
           href: ../activation/issue-when-activate-office-365-proplus.md
-        - name: Issue when activating Office from Office 365
+        - name: Issue when activating Office from Microsoft 365
           href: ../activation/issue-when-activate-office-from-office-365.md
         - name: Issue with changing Office 2010 product key
           href: ../activation/office-2010-product-key-change-error.md
@@ -357,7 +357,7 @@
           href: ../activation/device-based-licensing.md
         - name: We can't sign you into your company portal
           href: ../activation/something-configured-fails-activating-office.md
-        - name: We've run into a problem with your Office 365 subscription
+        - name: We've run into a problem with your Microsoft 365 subscription
           href: ../activation/run-into-a-problem.md
         - name: You currently have not been assigned an office license that includes the Office desktop apps
           href: ../activation/license-not-assigned.md
@@ -451,6 +451,8 @@
           href: ../excel/data-collected-by-excel-support-diagnostic.md
         - name: Excel data doesn't retain formatting in mail merge
           href: ../excel/excel-data-not-retain-formatting-mail-merge.md  
+        - name: Excel workbook shows old property values
+          href: ../excel/excel-workbook-shows-old-property-values.md
         - name: Date format is incorrect when converting a CSV text file with macros
           href: ../excel/incorrect-date-format-converted-csv-file.md
         - name: Delete cells with a "For Each...Next" loop
@@ -585,7 +587,7 @@
           href: ../excel/network-mapped-drive-hyperlinks-unc.md
         - name: Object Model calls fails from WorkbookOpen event
           href: ../excel/object-model-calls-fails-workbookopen-event.md
-        - name: Office 365 users can't open or synchronize files
+        - name: Microsoft 365 users can't open or synchronize files
           href: ../excel/cannot-operate-files.md
         - name: Operation Must Use an Updatable Query
           href: ../excel/fails-accessing-excel-through-odbc.md
@@ -821,7 +823,7 @@
           href: ../office-suite-issues/incorrect-function-saving-office-file.md
         - name: Information about Office Click-to-Run installation
           href: ../office-suite-issues/office-click-to-run-installation.md
-        - name: Installing Office 2010 from Office 365 Subscription fails
+        - name: Installing Office 2010 from Microsoft 365 Subscription fails
           href: ../office-suite-issues/install-office-from-office-365-subscription.md
         - name: Introduce Click-to-Run for Office 2010
           href: ../office-suite-issues/office-click-to-run-faq.md
@@ -829,7 +831,7 @@
           href: ../office-suite-issues/invalid-product-key-or-license-mismatch-error.md
         - name: Issue when launching Office in Microsoft Store app
           href: ../office-suite-issues/windows-cannot-access-device.md
-        - name: Issue when Office 365 activates Skype for Business
+        - name: Issue when Microsoft 365 activates Skype for Business
           href: ../office-suite-issues/office-365-activates-skype.md
         - name: Issue when opening a file with a long folder name
           href: ../office-suite-issues/fails-opening-long-folder-name-files.md
@@ -863,7 +865,7 @@
           href: ../office-suite-issues/office-suite-setup-not-restart.md
         - name: Office End User License Agreement always appears
           href: ../office-suite-issues/office-end-user-license-agreement.md
-        - name: Office error “could not create the work file”
+        - name: Office error "could not create the work file"
           href: ../office-suite-issues/no-file-previews-file-explorer-switching-to-32-bit.md
         - name: Office files with RMS protection crash
           href: ../office-suite-issues/rms-protected-files-crash.md
@@ -1083,7 +1085,7 @@
           href: ../visio/cannot-search-shapes-feature.md
         - name: Text not displayed when the drawing opens in a browser
           href: ../visio/text-not-displayed-in-drawing.md
-        - name: This is not a valid win32 application when installing Office 365
+        - name: This is not a valid win32 application when installing Microsoft 365
           href: ../visio/not-a-valid-win32-application-error.md
         - name: Troubleshoot damaged drawings in Visio
           href: ../visio/troubleshoot-damaged-drawings.md
@@ -1139,8 +1141,6 @@
           href: ../word/issues-when-start-or-use-word.md
         - name: Mail merge issue
           href: ../word/mail-merge-error.md
-        - name: Merge multiple Word documents into one
-          href: ../word/merge-word-documents.md
         - name: Object may not appear in Word 2010
           href: ../word/object-not-appear-in-word-2010.md
         - name: Operating parameter limitations and specifications
@@ -1161,7 +1161,7 @@
           href: ../word/not-recognize-misspelled-words-in-word.md
         - name: Track Changes functionality disabled when RMS is disabled
           href: ../word/track-changes-disabled.md
-        - name: Troubleshoot print failures in Word for Office 365 on Windows 10
+        - name: Troubleshoot print failures in Word for Microsoft 365 on Windows 10
           href: ../word/print-failures-word-for-office-365-on-win-10.md
         - name: User info in @mentions doesn't resolve
           href: /office/troubleshoot/excel/mentions-not-resolve-user-information?context=/office/troubleshoot/context/client-context

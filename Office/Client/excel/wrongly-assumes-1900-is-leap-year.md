@@ -13,7 +13,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Excel for Mac 2011
-  - Excel for Mac for Office 365
+  - Excel for Microsoft 365 for Mac 
   - Microsoft Office Excel 2003
   - Microsoft Office Excel 2007
   - Excel 2010

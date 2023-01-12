@@ -1,6 +1,6 @@
 ---
-title: Out of Office doesn't function correctly in Office 365
-description: Fixes some OOF issues in Office 365, for example, OOF messages cannot be saved, old or duplicate OOF messages are sent, or OOF message is not sent.
+title: Out of Office doesn't function correctly in Microsoft 365
+description: Fixes some OOF issues in Microsoft 365, for example, OOF messages cannot be saved, old or duplicate OOF messages are sent, or OOF message is not sent.
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -14,11 +14,11 @@ author: simonxjx
 ms.author: v-six
 ms.date: 3/31/2022
 ---
-# The Out of Office feature in Outlook doesn't function correctly in Office 365
+# The Out of Office feature in Outlook doesn't function correctly in Microsoft 365
 
 ## Symptoms
 
-When you try to use the Out of Office (OOF) feature in Outlook in Microsoft Office 365, you experience the following symptoms:
+When you try to use the Out of Office (OOF) feature in Outlook in Microsoft 365, you experience the following symptoms:
 
 - The OOF message cannot be saved.
 - An old or duplicate OOF message is sent.

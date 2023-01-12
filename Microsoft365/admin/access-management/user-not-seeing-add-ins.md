@@ -51,7 +51,7 @@ Users can't see add-in? Try one of these:
     
 - **Check Office version requirements**
     
-  - The user might be on an older, incompatible version of Office. For add-ins to be deployed the user must have Office ProPlus or Microsoft 365. You can check this out for any member of your organization. To find out how, see [Office 365 reports](https://support.office.com/article/office-365-reports-in-the-admin-center-microsoft-office-activations-87c24ae2-82e0-4d1e-be01-c3bcc3f18c60?ui=en-US&amp;rs=en-US&amp;ad=US).
+  - The user might be on an older, incompatible version of Office. For add-ins to be deployed the user must have Office ProPlus or Microsoft 365. You can check this out for any member of your organization. To find out how, see [Microsoft 365 reports](https://support.office.com/article/office-365-reports-in-the-admin-center-microsoft-office-activations-87c24ae2-82e0-4d1e-be01-c3bcc3f18c60?ui=en-US&amp;rs=en-US&amp;ad=US).
     
   - Alternatively, you can check this manually by going to the application, such as Word, then select **File \> Account**. Under **Product Information**, you should see **Microsoft 365 Apps for enterprise**. 
     
@@ -77,4 +77,4 @@ Users can't see add-in? Try one of these:
     
 ## See also
 
-[Manage deployment of Office 365 add-ins in the Microsoft 365 admin center](/office365/admin/manage/manage-deployment-of-add-ins).
+[Manage deployment of Microsoft 365 add-ins in the Microsoft 365 admin center](/office365/admin/manage/manage-deployment-of-add-ins).

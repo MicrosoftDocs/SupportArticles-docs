@@ -27,7 +27,7 @@ appliesto:
   - Word 2019 for Mac
   - Office for Business
   - Microsoft 365 for Home
-  - Office 365 Small Business
+  - Microsoft 365 Small Business
   - Office 2016 for Mac
   - Microsoft 365 for Mac
   - Outlook 2019 for Mac

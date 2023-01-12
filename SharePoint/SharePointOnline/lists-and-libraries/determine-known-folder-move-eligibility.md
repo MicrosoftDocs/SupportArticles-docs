@@ -71,7 +71,7 @@ The PreSignInSettingsConfig.json is one of the most important files for the OneD
 
     :::image type="content" source="media/determine-known-folder-move-eligibility/json-file.png" alt-text="Screenshot shows PreSignInSettingsConfig.json is present.":::
 
-If this .json file is missing, make sure there is no proxy or other network configuration blocking one or more of the required [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
+If this .json file is missing, make sure there is no proxy or other network configuration blocking one or more of the required [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
 
 Under some scenarios, it's possible that the antivirus installed on the computer can cause this issue. To test for this behavior, copy the .json file from a working machine and paste it in the provided location.
 

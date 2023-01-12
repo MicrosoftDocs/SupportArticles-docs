@@ -12,7 +12,7 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: tsimon, tasitae
 appliesto: 
-  - Outlook for Mac for Office 365
+  - Outlook for Microsoft 365 for Mac
   - Outlook 2019 for Mac
   - Outlook 2016 for Mac
 search.appverid: MET150
@@ -52,4 +52,4 @@ To work around these limitations, take the following actions:
 
 - Send email messages from a single account instead of from a distribution list, a security group, or a mail-enabled Public Folder.
 - Use single accounts as delegates instead of using distribution lists, security groups, or mail-enabled Public Folders as delegates.
-- Use an Office 365 Group instead. For more information about Office 365 Groups, see [Learn about Office 365 Groups](https://support.office.com/article/Learn-about-Office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
+- Use a Microsoft 365 Group instead. For more information about Microsoft 365 Groups, see [Learn about Microsoft 365 Groups](https://support.office.com/article/Learn-about-Office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).

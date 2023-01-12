@@ -1,6 +1,6 @@
 ---
-title: Grant Everyone claim to external users in Office 365
-description: Describes a new Everyone option to govern access of external users in Office 365 and identify resources that are granted permissions to all external users.
+title: Grant Everyone claim to external users in Microsoft 365
+description: Describes a new Everyone option to govern access of external users in Microsoft 365 and identify resources that are granted permissions to all external users.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -12,15 +12,15 @@ ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Azure Active Directory
-  - Office 365
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
-# Grant the Everyone claim to external users in Office 365
+# Grant the Everyone claim to external users in Microsoft 365
 
 ## Summary
 
-Starting on March 23, 2018, we're updating the behavior and governance of access by external users in Office 365.
+Starting on March 23, 2018, we're updating the behavior and governance of access by external users in Microsoft 365.
 
 After this change is made, an external user will see only the content that is shared with that user or with groups to which the user belongs. External users will no longer see content that is shared to the **Everyone**, **All Authenticated Users**, or **All Forms Users** groups. By default, content that is granted permissions to these groups will be visible only to your organization's users.
 
@@ -32,15 +32,15 @@ Administrators can change the default behavior to enable external users to see c
 
 In on-premises Active Directory domains, the **Everyone** special group represents all identities in the Active Directory domain. It includes the domain's guest account, which is disabled by default. By default, the **Everyone** group includes all user accounts that are added by delegated administrators to the domain.
  
-Before this change, Office 365 shared the behavior of on-premises Active Directory domains: Every user in a tenant's Azure Active Directory (Azure AD) was effectively considered a member of the **Everyone** group after you added an **Everyone** claim to the user's security context. This included external users. This claim enables a user to access any content that is shared with the **Everyone** group.
+Before this change, Microsoft 365 shared the behavior of on-premises Active Directory domains: Every user in a tenant's Azure Active Directory (Azure AD) was effectively considered a member of the **Everyone** group after you added an **Everyone** claim to the user's security context. This included external users. This claim enables a user to access any content that is shared with the **Everyone** group.
  
 Similarly, the **All Authenticated Users** and **All Forms Users** claims were added automatically to each user's security context. This included external users who have accounts in the tenant's Azure AD. These claims enable users to access any content that is shared with the **All Authenticated Users** or **All Forms Users** groups.
  
-Office 365 enables users to share and collaborate seamlessly with users inside and outside their organizations. When a user in your organization adds an external user to an Office 365 group or shares content with an external user and requires authentication ("sign-in") for access, an account is automatically created in Azure AD to represent the external guest user. It isn't necessary for a delegated administrator to create the account for the external user.
+Microsoft 365 enables users to share and collaborate seamlessly with users inside and outside their organizations. When a user in your organization adds an external user to a Microsoft 365 group or shares content with an external user and requires authentication ("sign-in") for access, an account is automatically created in Azure AD to represent the external guest user. It isn't necessary for a delegated administrator to create the account for the external user.
  
 ### Updates to the default access for external users
 
-To better support user-driven sharing, we're updating the behavior and governance of access by external users in Office 365.
+To better support user-driven sharing, we're updating the behavior and governance of access by external users in Microsoft 365.
  
 Starting on March 23, 2018, external users will no longer be granted the **Everyone**, **All Authenticated Users**, or **All Forms Users** claims by default. External users will be granted access only to content that is shared with the group to which the external user belongs, and to content that is shared directly with the external user. External users will not have access to content that is shared with these three special groups.
  
@@ -55,9 +55,9 @@ Use the following guidelines to grant access to external users for the selected 
 
 ### Use Azure AD groups and dynamic membership instead of default claims
 
-Although we continue to support sharing with the **Everyone**, **Everyone Except External Users**, **All Authenticated Users**, and **All Forms Users** groups, we encourage you to implement role-based access management by using customer-defined groups in Azure AD. This includes Office 365 groups.
+Although we continue to support sharing with the **Everyone**, **Everyone Except External Users**, **All Authenticated Users**, and **All Forms Users** groups, we encourage you to implement role-based access management by using customer-defined groups in Azure AD. This includes Microsoft 365 groups.
  
-Office 365 groups define the membership and access to content across Office 365 services and experiences. Many Office 365 services already support Azure AD dynamic groups, and these services are defined as a set of rules that are based on Azure AD properties and business logic.
+Microsoft 365 groups define the membership and access to content across Microsoft 365 services and experiences. Many Microsoft 365 services already support Azure AD dynamic groups, and these services are defined as a set of rules that are based on Azure AD properties and business logic.
  
 Dynamic groups are the best way to make sure that the appropriate users have access to the correct content. Dynamic groups let you define a group one time by using a definition that is based on rules. By having this ability, you don't have to add or remove members as your organization changes. 
 
@@ -86,7 +86,7 @@ Set-SPOTenant -ShowEveryoneClaim $true
  
 ### Assumption
 
-- Your Office 365 organization is Contoso. Your organization uses contoso.sharepoint.com for SharePoint sites and groups, and contoso-my.sharepoint.com for OneDrive storage.
+- Your Microsoft 365 organization is Contoso. Your organization uses contoso.sharepoint.com for SharePoint sites and groups, and contoso-my.sharepoint.com for OneDrive storage.
 - You're an administrator for the organization. Your identity isadmin@contoso.com.
  
 ### Process

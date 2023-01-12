@@ -1,6 +1,6 @@
 ---
 title: Outlook for Mac 2011 doesn't connect to Exchange Online
-description: Fixes an issue in which you can't use Outlook 2011 for Mac to connect to your Exchange Online account in Office 365.
+description: Fixes an issue in which you can't use Outlook 2011 for Mac to connect to your Exchange Online account in Microsoft 365.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -23,7 +23,7 @@ _Original KB number:_ &nbsp; 2725168
 
 ## Problem
 
-When you use Microsoft Outlook 2011 for Mac to connect to your Microsoft Exchange Online account in Microsoft Office 365, your email server settings aren't automatically set for Exchange Online. So, you try to manually set Outlook 2011 for Mac to connect to Exchange Online. However, the set fails, and you can't access your Exchange Online account by using Outlook 2011 for Mac.
+When you use Microsoft Outlook 2011 for Mac to connect to your Microsoft Exchange Online account in Microsoft 365, your email server settings aren't automatically set for Exchange Online. So, you try to manually set Outlook 2011 for Mac to connect to Exchange Online. However, the set fails, and you can't access your Exchange Online account by using Outlook 2011 for Mac.
 
 ## Cause
 

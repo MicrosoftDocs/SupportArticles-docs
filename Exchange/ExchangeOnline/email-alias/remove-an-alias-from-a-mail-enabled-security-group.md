@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Remove an alias from a mail-enabled security group
-ms.author: kwekua
-author: kwekua
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting

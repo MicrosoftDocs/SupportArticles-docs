@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.custom: CSSTroubleshoot
 appliesto: 
 - Outlook 2016 for Mac 
-- Outlook for Mac for Office 365 
+- Outlook for Microsoft 365 for Mac 
 - Outlook 2013 
 - Microsoft Outlook 2010
 search.appverid: MET150

@@ -16,7 +16,7 @@ appliesto:
   - Access 2013
   - Access 2016
   - Access 2019
-  - Access for Office 365
+  - Access for Microsoft 365
 search.appverid: MET150
 ms.date: 3/31/2022
 ---

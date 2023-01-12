@@ -1,6 +1,6 @@
 ---
-title: Cannot connect to your account when activate Office from Office 365
-description: Describes how to troubleshoot Office from Office 365 installation and activation issues.
+title: Cannot connect to your account when activate Office from Microsoft 365
+description: Describes how to troubleshoot Office from Microsoft 365 installation and activation issues.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -11,17 +11,17 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
-  - Microsoft 365 Apps for enterprise
-  - Microsoft Visio Pro for Office 365
+  - Microsoft 365
+  - Microsoft Visio Pro for Microsoft 365
   - Project Online Desktop Client
 ms.date: 3/31/2022
 ---
 
-# "Sorry, we can't connect to your account. Please try again later" error when you activate Office from Office 365
+# "Sorry, we can't connect to your account. Please try again later" error when you activate Office from Microsoft 365
 
 ## Summary
 
-This article discusses how to troubleshoot the activation issues in Microsoft Office from Office 365. Activation fails and you receive one the following error messages:  
+This article discusses how to troubleshoot the activation issues in Microsoft Office from Microsoft 365. Activation fails and you receive one the following error messages:  
 
 **We are unable to connect right now. Please check your network and try again later.**
 
@@ -31,10 +31,9 @@ This article discusses how to troubleshoot the activation issues in Microsoft Of
 
 This issue might be caused by one of several circumstances. Follow these steps to help troubleshoot the issue. After each step, check to see whether the issue is fixed. If not, proceed to the next step.
 
-### Step 1. Identify and fix activation issues by using the Support and Recovery Assistant for Office 365  
+### Step 1. Identify and fix activation issues by using the Support and Recovery Assistant for Microsoft 365  
 
-The Support and Recovery Assistant app runs on Windows PCs and can help you identify and fix activation issues with Office 365.   
-[Office 365: Use the Support and Recovery Assistant for Office 365](https://support.office.com/article/0d23d3c0-c19c-4b2f-9845-5344fedc4380?#bkmk_sara)
+The [Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f) runs on Windows PCs and can help you identify and fix activation issues with Microsoft 365.
 
 ### Step 2. Check whether you're behind a proxy server  
 
@@ -63,15 +62,15 @@ Are you behind a firewall? If you're not sure, ask your administrator. If you're
  
 Each firewall will have a different method for enable access to these URIs. Check your software's documentation for instructions or ask your administrator to do this for you. 
 
-For more information about Microsoft 365 Apps for enterprise URLs and IP addresses, see the following Microsoft article: [Office 365 URLs and IP address ranges](https://technet.microsoft.com/library/hh373144.aspx)
+For more information about Microsoft 365 Apps for enterprise URLs and IP addresses, see the following Microsoft article: [Microsoft 365 URLs and IP address ranges](https://technet.microsoft.com/library/hh373144.aspx)
 
 ### Step 4. Check whether you have the appropriate license   
  
-1. Sign in to the Office 365 portal.     
+1. Sign in to the Microsoft 365 portal.     
 2. Click **Settings** :::image type="icon" source="./media/issue-when-activate-office-from-office-365/setting-icon.png"::: and then click **Office 365 settings**.    
 3. Locate the **Assigned licenses** area.    
 4. If you see **The latest desktop version of Office**, then you have an Office subscription assigned correctly.    
-5. If you don't see **The latest desktop version of Office**, contact your administrator or see the Office article [What Office 365 business product or license do I have?](https://support.office.com/article/What-Office-365-business-product-or-license-do-I-have-f8ab5e25-bf3f-4a47-b264-174b1ee925fd) 
+5. If you don't see **The latest desktop version of Office**, contact your administrator or see the Office article [What Microsoft 365 business product or license do I have?](https://support.office.com/article/What-Office-365-business-product-or-license-do-I-have-f8ab5e25-bf3f-4a47-b264-174b1ee925fd) 
 
 ### Step 5. If you previously activated an Office 2013 program on the computer, try to remove the existing product key   
 

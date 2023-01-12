@@ -1,6 +1,6 @@
 ---
 title: Mobile devices not quarantined as expected
-description: Mobile devices are not quarantined and allowed to connect when they're removed either from the Office 365 Exchange Admin Center or PowerShell cmdlet.
+description: Mobile devices are not quarantined and allowed to connect when they're removed either from the Microsoft 365 Exchange Admin Center or PowerShell cmdlet.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -26,7 +26,7 @@ In Microsoft Exchange Online, some mobile devices are not quarantined as expecte
 
 For example, consider the following scenario:
 
-1. In the Office 365 tenant, Exchange ActiveSync access settings are configured to **Quarantine - Let me decide to block or allow later**. A quarantined device is then **Allowed**. When the device is allowed, the `Get-CASMailbox` cmdlet shows **Allowed** and **Blocked** devices in the `ActiveSyncAllowedDeviceIDs` and `ActiveSyncBlockedDeviceIDs` parameters.
+1. In the Microsoft 365 tenant, Exchange ActiveSync access settings are configured to **Quarantine - Let me decide to block or allow later**. A quarantined device is then **Allowed**. When the device is allowed, the `Get-CASMailbox` cmdlet shows **Allowed** and **Blocked** devices in the `ActiveSyncAllowedDeviceIDs` and `ActiveSyncBlockedDeviceIDs` parameters.
 
 2. Later, you want to remove the device. You can do this by using either of the following methods:
 
@@ -41,11 +41,11 @@ For example, consider the following scenario:
 
 3. After the device is removed, the user tries to add or configure the same device.
 
-In this scenario, the device is not quarantined and is allowed to connect. In the Office 365 Exchange admin center, mobile device details for the user show a status of **Access granted**, and the `Get-MobileDevice` cmdlet shows that the `DeviceAccessState` parameter value is **Allowed**. This is not the expected result. Instead, you expect the device to be quarantined.
+In this scenario, the device is not quarantined and is allowed to connect. In the Microsoft 365 Exchange admin center, mobile device details for the user show a status of **Access granted**, and the `Get-MobileDevice` cmdlet shows that the `DeviceAccessState` parameter value is **Allowed**. This is not the expected result. Instead, you expect the device to be quarantined.
 
 ## Cause
 
-When the device is removed (either from the Office 365 Exchange Admin Center or through PowerShell by using the `Remove-MobileDevice` cmdlet), the `ActiveSyncAllowedDeviceIDs` and `ActiveSyncBlockedDeviceIDs` parameters are not cleared. Therefore, when the user tries to connect by using the device that was previously removed, the device ID is still populated in the `ActiveSyncAllowedDeviceIDs` parameter, so the device is not quarantined and is allowed to connect.
+When the device is removed (either from the Microsoft 365 Exchange Admin Center or through PowerShell by using the `Remove-MobileDevice` cmdlet), the `ActiveSyncAllowedDeviceIDs` and `ActiveSyncBlockedDeviceIDs` parameters are not cleared. Therefore, when the user tries to connect by using the device that was previously removed, the device ID is still populated in the `ActiveSyncAllowedDeviceIDs` parameter, so the device is not quarantined and is allowed to connect.
 
 ## Workaround
 

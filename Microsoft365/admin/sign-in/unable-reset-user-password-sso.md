@@ -15,7 +15,7 @@ appliesto:
   - Azure Active Directory
   - Microsoft Intune
   - Azure Backup
-  - Office 365 Identity Management
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
@@ -23,7 +23,7 @@ ms.date: 3/31/2022
 
 ## Problem
 
-Consider the following scenario: A user can't sign in to a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune by using a user ID that's a member of a cloud service domain that was formerly set up for single sign-on (SSO). In this scenario, when a cloud service admin tries to reset the user's password by using the cloud service portal or Azure Active Directory Module for Windows PowerShell, the administrator receives the following error message:
+Consider the following scenario: A user can't sign in to a Microsoft cloud service such as Microsoft 365, Microsoft Azure, or Microsoft Intune by using a user ID that's a member of a cloud service domain that was formerly set up for single sign-on (SSO). In this scenario, when a cloud service admin tries to reset the user's password by using the cloud service portal or Azure Active Directory Module for Windows PowerShell, the administrator receives the following error message:
 
 **Unable to reset this user's password. Try again later.**
 

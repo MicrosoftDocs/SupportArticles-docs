@@ -36,10 +36,10 @@
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/microsoftteams/troubleshoot/breadcrumb/toc.json",
-      "extendBreadcrumb": true,
       "recommendations": true,
       "feedback_system": "none",
       "hideEdit": true,
+      "uhfHeaderId": "MSDocsHeader-MicrosoftTeams.yml",
       "titleSuffix": "Microsoft Teams",
       "searchScope": ["Teams Support"] 
     },

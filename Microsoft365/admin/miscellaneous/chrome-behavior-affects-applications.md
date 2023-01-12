@@ -12,7 +12,7 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: hirsin, tspring
 appliesto: 
-  - Office 365
+  - Microsoft 365
   - Azure Active Directory
   - Azure
 search.appverid: MET150

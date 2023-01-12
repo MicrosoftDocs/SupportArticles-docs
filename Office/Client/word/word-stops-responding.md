@@ -12,7 +12,7 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: warrenr
 appliesto: 
-  - Word for Office 365
+  - Word for Microsoft 365
   - Word 2019
   - Word 2016
   - Word 2013

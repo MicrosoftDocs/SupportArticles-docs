@@ -35,7 +35,7 @@ Consider the following scenarios:
 
 ### Scenario 2
 
-- You have a hybrid Office 365 environment.
+- You have a hybrid Microsoft 365 environment.
 - User1 has a mailbox in the cloud.
 - User2 has a mailbox on-premises.
 - User1 has full access permissions to the mailbox for User2.

@@ -13,7 +13,7 @@ ms.custom:
 ms.reviewer: tasitae, tsimon
 appliesto: 
   - Outlook 2016 for Mac
-  - Outlook for Mac for Office 365
+  - Outlook for Microsoft 365 for Mac
 search.appverid: MET150
 ms.date: 3/31/2022
 ---

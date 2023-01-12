@@ -1,6 +1,6 @@
 ---
 title: Messages sent from a shared mailbox aren't saved to the Sent Items folder
-description: Describes an issue in Office 365 in which email messages that you send on behalf of another user from a shared mailbox in Outlook aren't saved to the Sent Items folder of the shared mailbox. Provides a resolution.
+description: Describes an issue in Microsoft 365 in which email messages that you send on behalf of another user from a shared mailbox in Outlook aren't saved to the Sent Items folder of the shared mailbox. Provides a resolution.
 author: simonxjx
 audience: ITPro
 ms.topic: troubleshooting
@@ -24,7 +24,7 @@ Assume that you're using Microsoft Outlook 2010 or a later version, and you've b
 
 ## Cause
 
-In Office 365, shared mailboxes don't require a license and can't be added to Outlook as an independent mailbox. You can't sign in to a shared mailbox. Instead, you sign in to your own mailbox, and then you open the shared mailbox. When you send or reply to a new message from the shared mailbox, Outlook automatically sends or replies from the sender's account. Therefore, messages are stored in the Sent Items folder of the sender's mailbox.
+In Microsoft 365, shared mailboxes don't require a license and can't be added to Outlook as an independent mailbox. You can't sign in to a shared mailbox. Instead, you sign in to your own mailbox, and then you open the shared mailbox. When you send or reply to a new message from the shared mailbox, Outlook automatically sends or replies from the sender's account. Therefore, messages are stored in the Sent Items folder of the sender's mailbox.
 
 ## Solution
 
@@ -35,7 +35,7 @@ To work around this issue, use one of the following methods.
 
 ### Method 1: Configure the mailbox to save a copy of the message to the Sent Items folder of the shared mailbox in Exchange Online or in on-premises Exchange Server
 
-#### Exchange Online in Office 365 or Exchange Server 2013 Cumulative Update 9 or later update
+#### Exchange Online in Microsoft 365 or Exchange Server 2013 Cumulative Update 9 or later update
 
 Cumulative Update 9 for Exchange Server 2013 introduced a new feature that lets administrators configure the Sent Items folder to which a message is copied. For more information, see [Exchange Blog - Want more control over Sent Items when using shared mailboxes?](https://techcommunity.microsoft.com/t5/exchange-team-blog/want-more-control-over-sent-items-when-using-shared-mailboxes/ba-p/611106)
 

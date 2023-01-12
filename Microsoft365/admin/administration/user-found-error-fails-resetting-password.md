@@ -1,6 +1,6 @@
 ---
 title: A user with this name could not be found when resetting a password
-description: Describes an issue that occurs when you try to reset a password for a user in Microsoft Office 365. A resolution is provided.
+description: Describes an issue that occurs when you try to reset a password for a user in Microsoft 365. A resolution is provided.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -11,15 +11,15 @@ ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 appliesto: 
-  - Office 365 User and Domain Management
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
-# "A user with this name could not be found" when resetting a password for a user in Office 365
+# "A user with this name could not be found" when resetting a password for a user in Microsoft 365
 
 ## Problem
 
-When you try to reset a password for a user in Microsoft Office 365, you receive the following message:
+When you try to reset a password for a user in Microsoft 365, you receive the following message:
 
 **A user with this name could not be found. They may have been deleted.**
 

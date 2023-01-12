@@ -1,6 +1,6 @@
 ---
 title: Shared mailboxes unexpectedly convert to user mailboxes
-description: Describes that mailboxes that were moved from the on-premises environment to Office 365 and converted to shared mailboxes are unexpectedly converted to regular mailboxes after directory synchronization runs. Provides a resolution.
+description: Describes that mailboxes that were moved from the on-premises environment to Microsoft 365 and converted to shared mailboxes are unexpectedly converted to regular mailboxes after directory synchronization runs. Provides a resolution.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -27,21 +27,21 @@ ms.date: 3/31/2022
 _Original KB number:_ &nbsp; 2710029
 
 > [!NOTE]
-> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Office 365 Hybrid Configuration wizard that's available at [https://aka.ms/HybridWizard](https://aka.ms/hybridwizard). For more information, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
+> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Microsoft 365 Hybrid Configuration wizard that's available at [https://aka.ms/HybridWizard](https://aka.ms/hybridwizard). For more information, see [Microsoft 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
 
 ## Symptoms
 
-Assume that you have a hybrid deployment of Microsoft Exchange Online in Microsoft Office 365 and on-premises Microsoft Exchange Server. After directory synchronization runs, regular (user) mailboxes in Exchange Online that were converted to shared mailboxes may unexpectedly be reverted to regular mailboxes. When this occurs, you may be unable to convert the mailboxes back to shared mailboxes. Even if you can make this conversion, the mailboxes may revert to regular mailboxes again the next time that directory synchronization runs.
+Assume that you have a hybrid deployment of Microsoft Exchange Online in Microsoft 365 and on-premises Microsoft Exchange Server. After directory synchronization runs, regular (user) mailboxes in Exchange Online that were converted to shared mailboxes may unexpectedly be reverted to regular mailboxes. When this occurs, you may be unable to convert the mailboxes back to shared mailboxes. Even if you can make this conversion, the mailboxes may revert to regular mailboxes again the next time that directory synchronization runs.
 
 If a license is not assigned to the user, the mailbox may be disconnected. This can cause potentially irrecoverable data loss.
 
-Additionally, when you view the properties of the shared mailboxes in the Office 365 portal, you may receive the following error message:
+Additionally, when you view the properties of the shared mailboxes in the Microsoft 365 portal, you may receive the following error message:
 
 > Exchange: Couldn't convert the mailbox because the mailbox \<Guid> is already of the type 'Regular'
 
 ## Cause
 
-This issue occurs if the `RemoteRecipientType` attribute is set incorrectly. To be able to convert a User mailbox to a Shared mailbox and not have it be converted back to a User mailbox, the `RemoteRecipientType` attribute must reflect that the mailbox was migrated or that it is a Shared mailbox. If it does not, directory synchronization replicates the attributes to the cloud. Then, Office 365 converts the Shared mailbox to a regular `UserMailbox` object. If the user isn't licensed and if the 30-day grace period has ended, the mailbox is disconnected and converted to a `MailUser` object when license reconciliation runs.
+This issue occurs if the `RemoteRecipientType` attribute is set incorrectly. To be able to convert a User mailbox to a Shared mailbox and not have it be converted back to a User mailbox, the `RemoteRecipientType` attribute must reflect that the mailbox was migrated or that it is a Shared mailbox. If it does not, directory synchronization replicates the attributes to the cloud. Then, Microsoft 365 converts the Shared mailbox to a regular `UserMailbox` object. If the user isn't licensed and if the 30-day grace period has ended, the mailbox is disconnected and converted to a `MailUser` object when license reconciliation runs.
 
 ## Resolution
 

@@ -1,5 +1,5 @@
 - name: Outlook for Windows Troubleshooting
-  href: ../outlook-client-welcome.md
+  href: ../outlook-client-welcome.yml
   items:
     - name: Authentication
       items:
@@ -7,7 +7,7 @@
           href: ../authentication/continually-prompts-password-office-365.md
         - name: Disconnected after enabling modern authentication
           href: ../authentication/outlook-shows-disconnected-after-enabling-modern-authentication.md
-        - name: Doesn't use Modern Authentication to connect Office 365
+        - name: Doesn't use Modern Authentication to connect Microsoft 365
           href: ../authentication/outlook-prompt-password-modern-authentication-enabled.md
         - name: Force Outlook to resolve proxy addresses and custom properties
           href: ../authentication/how-to-force-outlook-to-resolve-proxy-addresses-and-custom-properties.md
@@ -47,6 +47,8 @@
           href: ../calendaring/calendar-permissions-differences-in-different-versions-of-outlook.md
         - name: Calendar shows working hours as grey
           href: ../calendaring/outlook-calendar-displays-working-hours-as-grey.md
+        - name: Can't delete calendar items
+          href: ../calendaring/cannot-delete-calendar-items.md
         - name: Can't send a response to a meeting request
           href: ../calendaring/cannot-send-response-to-meeting-request.md
         - name: Can't receive tentative meeting requests or responses
@@ -57,6 +59,10 @@
           href: ../calendaring/cannot-send-meeting-on-behalf-of-managers.md
         - name: Can't add an Internet calendar
           href: ../calendaring/cannot-add-an-internet-calendar.md
+        - name: Configure rooms and workspaces for Room Finder
+          href: ../calendaring/configure-room-finder-rooms-workspaces.md
+        - name: Configure Teams meeting links to open in Teams desktop app
+          href: ../calendaring/open-teams-meetings-in-desktop-app.md
         - name: Create and book a workspace in Outlook
           href: /exchange/troubleshoot/outlook-issues/create-book-workspace-outlook?context=/outlook/troubleshoot/context/client-context
         - name: Create online meeting failed error
@@ -111,10 +117,14 @@
           href: ../calendaring/outlook-not-showing-more-than-12-months-of-free-busy-data.md
         - name: No available rooms for meetings outside working hours
           href: ../calendaring/no-available-rooms-for-meeting-outside-working-hours.md
+        - name: No event reminders for automapped or additional mailboxes
+          href: ../calendaring/no-event-reminders-for-automapped-additional-mailboxes.md
         - name: Organizer's meeting outdated after delegate sends update
           href: ../calendaring/organizers-meeting-outdated-after-delegate-sends-update.md
         - name: Outlook crashes when opening a meeting that contains Lync meeting details
           href: ../calendaring/outlook-crashes-when-open-meeting-contains-lync-meeting-details.md
+        - name: Outlook doesn't show a reminder for a Google Calendar event invitation
+          href: ../calendaring/no-meeting-reminder-for-google-calendar-invites.md
         - name: Outlook or OWA doesn't show full details of private appointments
           href: ../calendaring/outlook-or-owa-not-shows-full-details-of-private-appointments.md
         - name: Resolve Teams Meeting add-in issues
@@ -207,14 +217,14 @@
           href: ../contacts/outlook-displays-incorrect-search-results-gal.md
         - name: How to hide columns in Address Book
           href: ../contacts/how-to-hide-columns-in-address-book.md
-        - name: Information about the Outlook AutoComplete list
-          href: ../contacts/information-about-the-outlook-autocomplete-list.md
         - name: LinkedIn is no longer available in Outlook Social Connector
           href: ../contacts/linkedin-is-no-longer-available-in-outlook-social-connector.md
         - name: No permission error when adding contacts
           href: ../contacts/you-donnot-have-permission-to-create-an-entry-error.md
         - name: No Offline Address Book is downloaded
           href: ../contacts/error-0x80070057-no-offline-address-book-download.md
+        - name: The Outlook AutoComplete list
+          href: ../contacts/information-about-the-outlook-autocomplete-list.md          
         - name: Unknown is displayed in group name when expanding
           href: ../contacts/cannot-expand-nested-contact-groups-unknown-shown.md
     - name: Data Files
@@ -251,12 +261,12 @@
           href: ../data-files/cannot-add-pst-or-ost-file-on-non-local-drive.md
         - name: Limits to using .pst files over LAN and WAN links
           href: ../data-files/limits-using-pst-files-over-lan-wan.md
+        - name: Manage download settings for shared mail folders
+          href: ../data-files/by-default-shared-mail-folders-are-downloaded-in-cashed.md          
         - name: New Data File is created when adding new POP3 account
           href: ../data-files/new-outlook-data-file-is-created-default-adding-pop3-account.md
         - name: Only some emails are synchronized
           href: ../data-files/fewer-emails-in-shared-mailboxes-or-public-folders.md
-        - name: Shared mail folders are downloaded in Cached mode
-          href: ../data-files/by-default-shared-mail-folders-are-downloaded-in-cashed.md
         - name: Special characters in mailbox folder names
           href: ../data-files/weird-folder-names-after-pst-migration.md
         - name: The Mailbox Cleanup Wizard doesn't start
@@ -381,6 +391,8 @@
           href: ../junk-email/outlook-error-over-junk-emial-list-limit.md
     - name: Message Body
       items:
+        - name: Accept and Decline buttons missing in a task request
+          href: ../message-body/accept-decline-buttons-missing-in-task-request.md
         - name: Attachment doesn't show in a Plain Text message
           href: ../message-body/attachment-does-not-appear-in-plain-text-message.md
         - name: Attachment size exceeds the allowable limit error
@@ -458,7 +470,7 @@
         - name: Information about the Sniffer functionality
           href: ../performance/information-about-outlook-sniffer-functionality.md
         - name: Install SaRA from network share
-          href: /office365/troubleshoot/installation/install-sara-from-network-share?context=/outlook/troubleshoot/context/client-context
+          href: /microsoft-365/troubleshoot/installation/install-sara-from-network-share?context=/outlook/troubleshoot/context/client-context
         - name: Insufficient memory to display a folder
           href: ../performance/outlook-folder-fails-displaying.md
         - name: Insufficient memory errors and sent mail stuck
@@ -491,9 +503,9 @@
           href: ../performance/outlook-shutdown-slowly-if-using-requireshutdownnotification.md
         - name: Outlook.exe.log in %Temp% consumes too much disk space
           href: ../performance/outlook-exe-log-file-in-temp-folder-consumes-too-much-space.md
-        - name: Performance is slow in the Office 365
+        - name: Performance is slow in Microsoft 365
           href: ../performance/outlook-performance-is-slow-in-office-365.md
-        - name: Performance issues for too many items or folders
+        - name: Performance issues with too many items or folders
           href: ../performance/performance-issues-if-too-many-items-or-folders.md
         - name: Performance issues if UseLowPriorityConfiguration is set to 0
           href: ../performance/performance-issues-if-uselowpriorityconfiguration-is-0.md
@@ -529,7 +541,7 @@
           href: ../profiles-and-accounts/error-when-subscribing-to-rss-feed-that-needs-authentication.md
         - name: Can't copy an appointment to an Outlook.com folder
           href: ../profiles-and-accounts/error-copy-appointment-to-outlook-com-folder.md
-        - name: Can't set up Office 365 account
+        - name: Can't set up Microsoft 365 account
           href: ../profiles-and-accounts/cannot-set-up-office-365-account-outlook.md
         - name: Can't use EAS to connect Outlook to Exchange
           href: ../profiles-and-accounts/outlook-cannot-use-activesync-connect-exchange.md
@@ -559,10 +571,12 @@
           href: ../profiles-and-accounts/you-ll-need-a-new-app-to-open-this-osf-roaming-16.md
         - name: Outlook crashes when sending emails with a nonexistent delivery location setting
           href: ../profiles-and-accounts/outlook-crashes-when-sending-emails.md
+        - name: Outlook displays error message about information service
+          href: ../profiles-and-accounts/starting-outlook-displays-error.md
+        - name: Outlook displays error message on first start
+          href: ../profiles-and-accounts/outlook-displays-error-message-on-first-start.md          
         - name: Outlook doesn't connect or web services don't work after migration
           href: ../profiles-and-accounts/cannot-connect-web-service-not-working-migrated-to-office-365.md
-        - name: Outlook fails to start
-          href: ../profiles-and-accounts/starting-outlook-displays-error.md
         - name: '"Refresh Your PC without affecting your file" option deletes Outlook profile'
           href: ../profiles-and-accounts/refresh-your-pc-without-affecting-your-file-deletes-profile.md
         - name: Remove automapping for shared mailbox
@@ -607,6 +621,8 @@
           href: ../synchronization/email-stays-in-outbox-until-manually-send-or-receive.md
         - name: Error 0x8004010F when sending or receiving email
           href: ../synchronization/error-0x8004010f-when-sending-or-receiving-emails.md
+        - name: Microsoft 365 groups don't synchronize in Outlook
+          href: ../synchronization/groups-dont-synchronize.md
         - name: Offline item count differs from server count
           href: ../synchronization/offline-item-count-for-folder-differs-from-server-count.md
         - name: Status bar has an upper limit of 3.99 GB
@@ -741,12 +757,14 @@
           href: ../user-interface/custom-mapi-solutions-not-working.md
         - name: MAPI is the only way to change profiles
           href: ../user-interface/mapi-is-the-only-way-to-change-profiles.md
-        - name: Messages occur if connecting to office 365 email accounts
+        - name: Messages occur if connecting to Microsoft 365 email accounts
           href: ../user-interface/messages-occur-when-connecting-to-office-365-email-account.md
         - name: Missing registry data causes problems with object model
           href: ../user-interface/missing-registry-information-causes-problems-with-object-model.md
         - name: Missing Weather Bar and Weather settings
           href: ../user-interface/weather-bar-and-weather-settings-are-missing.md
+        - name: Navigate to public folders in new Outlook for Windows
+          href: ../user-interface/navigate-to-public-folders-in-new-outlook.md
         - name: No notifications if Outlook Start menu shortcut is missing
           href: ../user-interface/no-desktop-alerts-(toast-notifications)-if-missing-start-menu-shortcut.md
         - name: No search results or content shown in favorites
@@ -761,7 +779,7 @@
           href: ../user-interface/only-subset-items-synchronized.md
         - name: OpenSharedItem holds file handle on signed .msg files
           href: ../user-interface/openshareditem-holds-file-handle-on-signed-msg-files.md
-        - name: Out of Office doesn't function correctly in Office 365
+        - name: Out of Office doesn't function correctly in Microsoft 365
           href: ../user-interface/out-of-office-feature-not-working-correctly.md
         - name: Outlook crashes when you call IMAPIProp::GetProps
           href: ../user-interface/stale-mapiobject-causes-outlook-crashes.md

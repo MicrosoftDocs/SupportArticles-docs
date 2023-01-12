@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4456110
 
 ## Symptoms
 
-Assume that you have a hybrid deployment that has a Microsoft Office 365 tenant. In this deployment, `contoso.com` is configured as the primary on-premises domain. For on-premises mailbox users, Azure Active Directory Connect synchronizes mailbox users in the on-premises Exchange organization, and creates mail-enabled users in Exchange Online.
+Assume that you have a hybrid deployment that has a Microsoft 365 tenant. In this deployment, `contoso.com` is configured as the primary on-premises domain. For on-premises mailbox users, Azure Active Directory Connect synchronizes mailbox users in the on-premises Exchange organization, and creates mail-enabled users in Exchange Online.
 
 The `TargetAddress` (`ExternalEmailAddress`) attribute‎ value is automatically calculated as `SMTP:user@contoso.com`. However, for one or more mail-enabled users, the `ExternalEmailAddress` attribute‎ value is set to another domain, such as `SMTP:user@fourthcoffee.com`.
 
@@ -38,9 +38,9 @@ Notice that the `ExternalEmailAddress` value in the output is the following:
 ExternalEmailAddress : SMTP:user@fourthcoffee.com
 ```
 
-You can also verify the `ExternalEmailAddress` attribute‎ value from the Office 365 Exchange Admin Center. To do this, locate **Recipients**, and then select **Contacts**. Double-click the mail user in question, and then view the email addresses section. Scroll down to the bottom of the page to see the external email address.
+You can also verify the `ExternalEmailAddress` attribute‎ value from the Microsoft 365 Exchange Admin Center. To do this, locate **Recipients**, and then select **Contacts**. Double-click the mail user in question, and then view the email addresses section. Scroll down to the bottom of the page to see the external email address.
 
-:::image type="content" source="media/hybrid-freebusy-lookups-fail/set-external-email.png" alt-text="Screenshot for ExternalEmailAddress value from Office 365 Exchange Admin Center.":::
+:::image type="content" source="media/hybrid-freebusy-lookups-fail/set-external-email.png" alt-text="Screenshot for ExternalEmailAddress value from Microsoft 365 Exchange Admin Center.":::
 
 > [!NOTE]
 > When users are synchronized from on-premises by using the Azure Active Directory Connect synchronization tool, you cannot change the external email address directly in Exchange Online. Instead, you must change the synchronized user in the on-premises organization.
@@ -60,7 +60,7 @@ To work around this issue, follow these steps:
 You should see that the `ExternalEmailAddress` (`TargetAddress`) attribute value changes back to the expected value of `SMTP:user@contoso.com`. After you verify this change, you can revert the change to the on-premises email addresses if you want.
 
 > [!NOTE]
-> You must also make sure that there are no validation errors on the Azure Active Directory object that could prevent synchronization to Exchange Online. For more information about how to check the status through the Office 365 Portal or the Azure Active Directory Module for Windows PowerShell, see [You see validation errors for users in the Office 365 portal or in the Azure Active Directory Module for Windows PowerShell](https://support.microsoft.com/help/2741233).
+> You must also make sure that there are no validation errors on the Azure Active Directory object that could prevent synchronization to Exchange Online. For more information about how to check the status through the Microsoft 365 Portal or the Azure Active Directory Module for Windows PowerShell, see [You see validation errors for users in the Microsoft 365 portal or in the Azure Active Directory Module for Windows PowerShell](https://support.microsoft.com/help/2741233).
 
 ## Status
 

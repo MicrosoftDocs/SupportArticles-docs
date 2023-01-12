@@ -1,6 +1,6 @@
 ---
-title: Azure AD Connect workflow in Office 365
-description: Describes the workflow with which Azure AD Connect works in Office 365.
+title: Azure AD Connect workflow in Microsoft 365
+description: Describes the workflow with which Azure AD Connect works in Microsoft 365.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -16,7 +16,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# How Azure AD Connect works in Office 365
+# How Azure AD Connect works in Microsoft 365
 
 _Original KB number:_ &nbsp; 4052070
 
@@ -63,8 +63,8 @@ A related topic is Active Directory Federation Services. See the following artic
 Here are articles for some common issues:
 
 - [Exchange Online object is not present or updated in Azure AD Connect](https://support.microsoft.com/help/4051392/a-vnext-object-is-not-present-or-updated-in-azure-ad-connect-for)
-- [Mailbox not provisioned in Azure AD Connect for Office 365](https://support.microsoft.com/help/4051375/mailbox-is-not-provisioned-in-azure-ad-connect-for-office-365)
-- [A user is missing from a group in Azure AD Connect for Office 365](https://support.microsoft.com/help/4052041/a-user-is-missing-from-a-group-in-azure-ad-connect-for-office-365)
+- [Mailbox not provisioned in Azure AD Connect for Microsoft 365](https://support.microsoft.com/help/4051375/mailbox-is-not-provisioned-in-azure-ad-connect-for-office-365)
+- [A user is missing from a group in Azure AD Connect for Microsoft 365](https://support.microsoft.com/help/4052041/a-user-is-missing-from-a-group-in-azure-ad-connect-for-office-365)
 - [Mailbox is present in both Office 365 Legacy Dedicated and vNext after license is applied](https://support.microsoft.com/help/3202607/can-t-complete-auto-discover-or-connect-to-a-mailbox-after-the-mailbox)
-- [You see validation errors for users in the Office 365 portal or in the Azure Active Directory Module for Windows PowerShell](https://support.microsoft.com/help/2741233/you-see-validation-errors-for-users-in-the-office-365-portal-or-in-the)
+- [You see validation errors for users in the Microsoft 365 portal or in the Azure Active Directory Module for Windows PowerShell](https://support.microsoft.com/help/2741233/you-see-validation-errors-for-users-in-the-office-365-portal-or-in-the)
 - [Validation errors for a mailbox archive GUID for Microsoft 365 users](./validation-errors-for-mailbox-archive-guid.md)

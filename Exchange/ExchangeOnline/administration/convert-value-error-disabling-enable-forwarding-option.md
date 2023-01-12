@@ -1,6 +1,6 @@
 ---
 title: Can't disable the Enable Forwarding option
-description: Provides a workaround for a problem that occurs when you clear the Enable Forwarding check box in the Exchange Admin Center to disable mail forwarding for an Office 365 user's mailbox.
+description: Provides a workaround for a problem that occurs when you clear the Enable Forwarding check box in the Exchange Admin Center to disable mail forwarding for a Microsoft 365 user's mailbox.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -16,13 +16,13 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# Cannot convert value when you disable the Enable Forwarding option for an Office 365 user
+# Cannot convert value when you disable the Enable Forwarding option for a Microsoft 365 user
 
 _Original KB number:_ &nbsp; 2872435
 
 ## Problem
 
-You try to disable the **Enable Forwarding** option for an Office 365 user's mailbox to disable mail forwarding. To do this, you click to clear the **Enable Forwarding** check box in the Exchange Admin Center. However, the check box is not cleared, and you receive the following error message:
+You try to disable the **Enable Forwarding** option for a Microsoft 365 user's mailbox to disable mail forwarding. To do this, you click to clear the **Enable Forwarding** check box in the Exchange Admin Center. However, the check box is not cleared, and you receive the following error message:
 
 > Cannot convert value "to type "System.Boolean". Boolean parameters accept only Boolean values and numbers, such as $True, $False, 1 or 0.
 

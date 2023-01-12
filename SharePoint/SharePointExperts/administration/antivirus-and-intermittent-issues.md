@@ -2,7 +2,8 @@
 title: Antivirus and intermittent issues when you view Office documents by using Microsoft Offices Online or Office Online Server
 description: Fixes antivirus and intermittent issues that occurs when you view Office documents by using Microsoft Microsoft Offices Online or Office Online Server.
 author: helenclu
-ms.author: jhaak
+ms.author: luche
+ms.reviewer: jhaak
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

@@ -11,7 +11,7 @@ ms.custom: CSSTroubleshoot
 search.appverid: 
   - MET150
 appliesto: 
-  - office 365
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 

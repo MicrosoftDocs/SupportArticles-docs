@@ -2,7 +2,7 @@
 title: Error (Failed to send) when sending messages to a group chat in Microsoft Teams
 description: This article provides information to an issue in which a chat creator can't send messages to a group chat if more than 200 members were added to the chat group at once. This is by design.
 author: helenclu
-ms.author: kellybos
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

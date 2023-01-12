@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
 appliesto: 
   - Azure Active Directory
-  - Office 365 Identity Management
+  - Microsoft 365
   - Windows Server 2012 Essentials
 ms.date: 3/31/2022
 ---
@@ -31,7 +31,7 @@ Additionally, an event ID 0 that contains the following description is logged to
 
 ## Cause 
 
-This issue occurs if Office 365 is integrated with a Windows Server 2012 Essentials server, or with Windows Server 2012 R2 Essentials. In this scenario, a password filter is attached to the Local Security Authentication server (Lsass.exe) that enforces the following domain password policy:
+This issue occurs if Microsoft 365 is integrated with a Windows Server 2012 Essentials server, or with Windows Server 2012 R2 Essentials. In this scenario, a password filter is attached to the Local Security Authentication server (Lsass.exe) that enforces the following domain password policy:
 
 - Passwords must contain 8–16 characters.   
 - Passwords cannot contain a space or a Microsoft Online Services account name.   
@@ -43,15 +43,15 @@ Because of the password policy restrictions, the Azure Active Directory Sync too
 
 ## Solution 
 
-Use the Windows Server Essentials Dashboard to manage Office 365. We also recommend that you uninstall the Azure Active Directory Sync tool from the server. 
+Use the Windows Server Essentials Dashboard to manage Microsoft 365. We also recommend that you uninstall the Azure Active Directory Sync tool from the server. 
 
-If, for any reason, you can't remove the Azure Active Directory Sync tool from the computer, disable Office 365 integration on the Windows Server Essentials Dashboard, and then restart the server. Doing so removes the password policy restrictions. 
+If, for any reason, you can't remove the Azure Active Directory Sync tool from the computer, disable Microsoft 365 integration on the Windows Server Essentials Dashboard, and then restart the server. Doing so removes the password policy restrictions. 
 
 ## More information
 
-For more info about Windows Server Essentials and Office 365, see the following resources:
+For more info about Windows Server Essentials and Microsoft 365, see the following resources:
 
-- [Manage Office 365 in Windows Server Essentials](/previous-versions/windows/it-pro/windows-server-essentials-sbs/jj593240(v=ws.11))   
+- [Manage Microsoft 365 in Windows Server Essentials](/previous-versions/windows/it-pro/windows-server-essentials-sbs/jj593240(v=ws.11))   
 - [How to create a service integration add-in for Windows Server Essentials Experience](/archive/blogs/sbs/how-to-create-a-service-integration-add-in-for-windows-server-essentials-experience)
 - [Manage online accounts for Windows Server Essentials users](/previous-versions/windows/it-pro/windows-server-essentials-sbs/dn737016(v=ws.11))
 

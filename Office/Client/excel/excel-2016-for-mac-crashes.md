@@ -12,7 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: lauraho
 appliesto: 
-  - Excel for Mac for Office 365
+  - Excel for Mac for Microsoft 365
 ms.date: 3/31/2022
 ---
 
