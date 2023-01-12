@@ -553,6 +553,7 @@
         href: database-engine/replication/understand-merge-replication-article-process.md
       - name: Update is replicated as DELETE/INSERT pairs
         href: database-engine/replication/update-statements-replicated-as-delete-insert.md
+
 - name: Database Client Programming
   items:
     - name: Can't uninstall ODBC driver completely
