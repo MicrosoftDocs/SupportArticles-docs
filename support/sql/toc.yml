@@ -169,16 +169,16 @@
        href: database-engine/connect/error-message-when-you-connect.md
      - name: Winsock LSP results in network or stability issues
        href: database-engine/connect/winsock-lsp-network-problem.md
-      - name: Connectivity How Tos
-        items:
-      - name: Dynamic vs Static ports
-        href: database-engine/connect/static-or-dynamic-port-config.md
-      - name: Kerberos Configuration Manager
-        href: database-engine/connect/using-kerberosmngr-sqlserver.md
-      - name: Testing using UDL file 
-        href: database-engine/connect/test-oledb-connectivity-use-udl-file.md
-      - name: Using PortQryUI tool
-        href: database-engine/connect/using-portqrytool-sqlserver.md
+       - name: Connectivity How Tos
+         items:
+         - name: Dynamic vs Static ports
+           href: database-engine/connect/static-or-dynamic-port-config.md
+         - name: Kerberos Configuration Manager
+           href: database-engine/connect/using-kerberosmngr-sqlserver.md
+         - name: Testing using UDL file 
+           href: database-engine/connect/test-oledb-connectivity-use-udl-file.md
+         - name: Using PortQryUI tool
+           href: database-engine/connect/using-portqrytool-sqlserver.md
   - name: Database Development
     items:
       - name: Activation tasks run over limit
