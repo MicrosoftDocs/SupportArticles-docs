@@ -42,7 +42,7 @@ To resolve this issue, use one of the following solutions.
 
 ## Solution 2: Back up, delete, and redeploy the PDB
 
-1. Make a backup of the PDB `kubectl get pdb <pdb-name> -n <pdb-namespace> -o yaml > pdb_backup.yaml`, and then delete the PDB `kubectl delete pdb <pdb-name> -n /<pdb-namespace>`. After the upgrade is finished, you can redeploy the PDB `kubectl apply -f pdb_backup.yaml`.
+1. Take a backup of the PDB `kubectl get pdb <pdb-name> -n <pdb-namespace> -o yaml > pdb_backup.yaml`, and then delete the PDB `kubectl delete pdb <pdb-name> -n /<pdb-namespace>`. After the upgrade is finished, you can redeploy the PDB `kubectl apply -f pdb_backup.yaml`.
 1. Try again to upgrade the AKS cluster to the same version that you tried to upgrade to previously. This process will trigger a reconciliation.
 
 ## Solution 3: Delete the pods that can't be drained
