@@ -52,7 +52,7 @@ Perform the following steps depending on the OS version:
 
     :::image type="content" source="media/windows-error-reporting-diagnostics-enablement-guidance/allow-diagnostic-data.png" alt-text="Screenshot of the Allow Diagnostic Data window with the Send optional diagnostic data option selected.":::
 
-    For more information about the level of data that's sent, see [Diagnostics, feedback, and privacy in Windows](https://support.microsoft.com/windows/diagnostics-feedback-and-privacy-in-windows-28808a2b-a31b-dd73-dcd3-4559a5199319).
+    For more information about the level of data sent, see [Diagnostics, feedback, and privacy in Windows](https://support.microsoft.com/windows/diagnostics-feedback-and-privacy-in-windows-28808a2b-a31b-dd73-dcd3-4559a5199319).
 
 4. Select **Apply** > **OK**.
 5. Double-click the **Configure diagnostic data opt-in settings user interface** policy.
@@ -77,7 +77,7 @@ Perform the following steps depending on the OS version:
     |:::image type="content" source="media/windows-error-reporting-diagnostics-enablement-guidance/allow-telemetry-windows-optional.png" alt-text="Screenshot of the Allow Telemetry window with Optional option selected." lightbox="media/windows-error-reporting-diagnostics-enablement-guidance/allow-telemetry-windows-optional.png":::     |:::image type="content" source="media/windows-error-reporting-diagnostics-enablement-guidance/allow-telemetry-windows-full.png" alt-text="Screenshot of the Allow Telemetry window with Full option selected." lightbox="media/windows-error-reporting-diagnostics-enablement-guidance/allow-telemetry-windows-full.png":::         |
 
    > [!NOTE]  
-   > Select at least the **Enhanced** option so that we can have enough actionable insights for Windows 10, version 1903 or later. For more information about the level of data that is collected, see [Diagnostic data settings](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings).
+   > Select at least the **Enhanced** option so that we can have enough actionable insights for Windows 10, version 1903 or later. For more information about the level of data collected, see [Diagnostic data settings](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings).
 
 5. Select **Apply** > **OK**.
 
