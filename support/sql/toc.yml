@@ -239,12 +239,12 @@
        href: database-engine/database-file-operations/database-engine-input-output-requirements.md
      - name: Defragmenting database disk drives
        href: database-engine/database-file-operations/defragmenting-database-disk-drives.md
+     - name: I/O subsystem requirements for the tempdb
+       href: database-engine/database-file-operations/io-subsystem-requirements-tempdb.md
      - name: Latch timeout when running DBCC CHECKDB
        href: database-engine/database-file-operations/latch-timeout-running-dbcc-checkdb.md
      - name: Logging and data storage algorithms
        href: database-engine/database-file-operations/logging-data-storage-algorithms.md
-     - name: I/O subsystem requirements for the tempdb
-       href: database-engine/database-file-operations/io-subsystem-requirements-tempdb.md
      - name: Space used by a table is not released
        href: database-engine/database-file-operations/space-table-uses-not-released.md
      - name: SQL Server diagnostics detects unreported I/O problems due to stale reads or lost writes
@@ -263,26 +263,6 @@
        href: database-engine/database-file-operations/troubleshoot-os-4kb-disk-sector-size.md
      - name: Virtual host drivers lead to data consistency problems
        href: database-engine/database-file-operations/virtual-host-driver-lead-data-consistency.md
-  - name: Log Shipping
-    items:
-    - name: Configure security for log shipping
-      href: database-engine/log-shipping/configure-security-log-shipping.md
-    - name: Logshipping monitor raises 14420 error
-      href: database-engine/log-shipping/logshipping-monitor-14420-error.md
-  - name: Linked Server and distributed queries
-    items: 
-      - name: Configuring permissions to access remote data
-        href: database-engine/linked-servers/configure-permissions-access-remote-data.md
-      - name: Crashes when you run an Oracle linked server query
-        href: database-engine/linked-servers/crashes-run-oracle-linked-server-query.md
-      - name: Decreased performance when querying view across linked servers
-        href: database-engine/linked-servers/decreased-performance-linkedserver-views.md
-      - name: Pass a variable to a linked server query
-        href: database-engine/linked-servers/pass-variable-linked-server-query.md
-      - name: Set up and troubleshoot a linked server to an Oracle database
-        href: database-engine/linked-servers/set-up-troubleshoot-linked-server.md
-      - name: Unable to begin a distributed transaction
-        href: database-engine/linked-servers/error-message-ole-db-provider.md
   - name: General Troubleshooting Information
     items:
       - name: Error 556 insert exec failed
@@ -311,8 +291,6 @@
       href: database-engine/install/windows/error-change-path-shared-component-directory.md
     - name: Evaluation period has expired when you use SSMS
       href: database-engine/install/windows/evaluation-period-has-expired.md
-    - name: New MU Servicing Model
-      href: database-engine/install/windows/new-mu-servicing-model.md
     - name: Fusion ATL rule check fails
       href: database-engine/install/windows/fusion-atl-rule-check-fails.md
     - name: Inapplicable CUs listed in WSUS, MU or SCM
@@ -321,6 +299,8 @@
       href: database-engine/install/windows/installation-fails-if-remove-user-right.md
     - name: Invalid User Directory message when installing CU or SP
       href: database-engine/install/windows/error-install-sql-server-2005-sp4.md
+    - name: New MU Servicing Model
+      href: database-engine/install/windows/new-mu-servicing-model.md
     - name: Naming schema and Fix areas for SQL updates
       href: database-engine/install/windows/naming-schema-and-fix-area.md
     - name: Permission error when you use a volume mount point
@@ -337,14 +317,14 @@
       href: database-engine/install/windows/issues-install-sql-server.md
     - name: SQL Server 2008 R2 and SQL Server 2008 Setup issues 
       href: database-engine/install/windows/sql-server-2008-setup-issues.md
-    - name: Troubleshoot common SQL Server Cumulative Update installation issues
-      href: database-engine/install/windows/sqlserver-patching-issues.md
     - name: SQL Server 2012 Setup issues
       href: database-engine/install/windows/sql-server-2012-setup-issues.md
     - name: SQL Server setup fails in DMZ
       href: database-engine/install/windows/cannot-install-sql-when-only-rodc-available.md
     - name: SxS install of X64 and X86 version of SSRS 2008
       href: database-engine/install/windows/install-reporting-service.md
+    - name: Troubleshoot common SQL Server Cumulative Update installation issues
+      href: database-engine/install/windows/sqlserver-patching-issues.md
     - name: Update or Slipstream installation for SQL Server 2008
       href: database-engine/install/windows/update-or-slipstream-installation.md
     - name: Upgrade failures on Windows Server 2012
@@ -369,10 +349,94 @@
         href: database-engine/install/windows/sql-server-upgrade-failed-error-15173-upgrade-script.md
       - name: SQL Server upgrade fails with error 17182
         href: database-engine/install/windows/sql-server-upgrade-failed-error-17182-upgrade-script.md
+  - name: Log Shipping
+    items:
+    - name: Configure security for log shipping
+      href: database-engine/log-shipping/configure-security-log-shipping.md
+    - name: Logshipping monitor raises 14420 error
+      href: database-engine/log-shipping/logshipping-monitor-14420-error.md
+  - name: Linked Server and distributed queries
+    items: 
+      - name: Configuring permissions to access remote data
+        href: database-engine/linked-servers/configure-permissions-access-remote-data.md
+      - name: Crashes when you run an Oracle linked server query
+        href: database-engine/linked-servers/crashes-run-oracle-linked-server-query.md
+      - name: Decreased performance when querying view across linked servers
+        href: database-engine/linked-servers/decreased-performance-linkedserver-views.md
+      - name: Pass a variable to a linked server query
+        href: database-engine/linked-servers/pass-variable-linked-server-query.md
+      - name: Set up and troubleshoot a linked server to an Oracle database
+        href: database-engine/linked-servers/set-up-troubleshoot-linked-server.md
+      - name: Unable to begin a distributed transaction
+        href: database-engine/linked-servers/error-message-ole-db-provider.md
   - name: Machine Learning Services (in database)
     items:
       - name: Inconsistent results in MKL computations
         href: database-engine/machine-learning/inconsistent-results-mkl-computations-missing-variable.md
+  - name: Replication, Change Tracking, Change Data Capture
+    items: 
+      - name: 102 and incorrect syntax error with peer-to-peer replication
+        href: database-engine/replication/peer-to-peer-replication-fails.md
+      - name: 1205 error when you configure transactional replication
+        href: database-engine/replication/error-1205-configure-transactional-replication.md
+      - name: 20011 error the process could not execute sp_replcmds
+        href: database-engine/replication/error-replication-log-reader-agent-fails.md
+      - name: 20598 error the row was not found at the Subscriber when applying the replicated command 
+        href: database-engine/replication/troubleshoot-error-20598.md
+      - name: 213 error when attaching CDC enabled database
+        href: database-engine/replication/attach-change-data-capture-database.md
+      - name: An error occurred while retrieving the publication data
+        href: database-engine/replication/error-replication-monitor.md
+      - name: Apply SQL hotfixes in a replication topology
+        href: database-engine/replication/apply-hotfix-sql-replication-topology.md
+      - name: ASCII function returns different results
+        href: database-engine/replication/ascii-function-returns-different-results-publisher-subscriber.md
+      - name: Cannot use rowguidcol in filter definition in merge replication
+        href: database-engine/replication/rowguidcol-not-supported-merge-replication.md
+      - name: CDC capture job fails when processing changes
+        href: database-engine/replication/cdc-capture-job-fails-processing-changes-table.md
+      - name: CDC for Oracle results in transaction log growth
+        href: database-engine/replication/sql-transaction-log-grows.md
+      - name: Duplicate key rows from sys.syscommittab table
+        href: database-engine/replication/duplicate-keys-sys-syscommittab-table.md
+      - name: Error message when you run the Distribution Agent
+        href: database-engine/replication/error-run-distribution-agent.md
+      - name: Fail to enumerate subscription properties
+        href: database-engine/replication/enumerate-subscription-properties.md
+      - name: Install service packs and hotfixes
+        href: database-engine/replication/install-service-packs-hotfixes.md
+      - name: Issue with custom business logic handler
+        href: database-engine/replication/problem-use-custom-business-logic-handler.md
+      - name: Manually remove replication
+        href: database-engine/replication/manually-remove-replication.md
+      - name: Merge replication doesn't support centralized subscriber topologies
+        href: database-engine/replication/merge-replication-cannot-support-centralized-subscriber-topologies.md
+      - name: Non-convergence when SQL Server processes child generations
+        href: database-engine/replication/non-convergence-when-processes-child-generations.md
+      - name: ORACDC517E - Oracle Call Interface (OCI) method failed
+        href: database-engine/replication/error-use-change-data-capture-service.md
+      - name: Oracle publication triggers send data for non-published columns
+        href: database-engine/replication/oracle-publication-triggers-sends-data.md
+      - name: Performance statistics for Log Reader and Distribution Agents
+        href: database-engine/replication/performance-statistics-log-reader-distribution-agents.md
+      - name: Pull subscriptions do not show up in Windows Synchronization Manager
+        href: database-engine/replication/subscriptions-do-not-show-up-windows-sync-manager.md
+      - name: Replication agents can't run
+        href: database-engine/replication/sql-replication-agents-not-run.md
+      - name: Script failed error when creating merge publication snapshot
+        href: database-engine/replication/script-failed-error-merge-publication-snapshot.md
+      - name: SkipErrors parameter in Distribution Agent
+        href: database-engine/replication/skiperrors-parameter-distribution-agent.md
+      - name: Snapshot or Logreader agents fail
+        href: database-engine/replication/snapshot-logreader-agents-fail-destination-table-empty.md
+      - name: Synchronization for merge replication fails
+        href: database-engine/replication/sql-merge-replication-synchronization-fails.md
+      - name: The subscription does not exist
+        href: database-engine/replication/subscription-does-not-exist-error.md
+      - name: Understand merge Replication article processing order
+        href: database-engine/replication/understand-merge-replication-article-process.md
+      - name: Update is replicated as DELETE/INSERT pairs
+        href: database-engine/replication/update-statements-replicated-as-delete-insert.md
   - name: Startup, shutdown, restart issues (instance or database)
     items:
       - name: Access is denied error and SQL Server doesn't start
@@ -509,71 +573,6 @@
        href: database-engine/security/sql-2016-fips-140-2-compliant-mode.md
      - name: Using SQL Server 2008 in FIPS 140-2-compliant mode
        href: database-engine/security/instructions-in-fips-140-2-compliant-mode.md
-  - name: Replication, Change Tracking, Change Data Capture
-    items: 
-      - name: 102 and incorrect syntax error with peer-to-peer replication
-        href: database-engine/replication/peer-to-peer-replication-fails.md
-      - name: 1205 error when you configure transactional replication
-        href: database-engine/replication/error-1205-configure-transactional-replication.md
-      - name: 20011 error the process could not execute sp_replcmds
-        href: database-engine/replication/error-replication-log-reader-agent-fails.md
-      - name: 20598 error the row was not found at the Subscriber when applying the replicated command 
-        href: database-engine/replication/troubleshoot-error-20598.md
-      - name: 213 error when attaching CDC enabled database
-        href: database-engine/replication/attach-change-data-capture-database.md
-      - name: An error occurred while retrieving the publication data
-        href: database-engine/replication/error-replication-monitor.md
-      - name: Apply SQL hotfixes in a replication topology
-        href: database-engine/replication/apply-hotfix-sql-replication-topology.md
-      - name: ASCII function returns different results
-        href: database-engine/replication/ascii-function-returns-different-results-publisher-subscriber.md
-      - name: Cannot use rowguidcol in filter definition in merge replication
-        href: database-engine/replication/rowguidcol-not-supported-merge-replication.md
-      - name: CDC capture job fails when processing changes
-        href: database-engine/replication/cdc-capture-job-fails-processing-changes-table.md
-      - name: CDC for Oracle results in transaction log growth
-        href: database-engine/replication/sql-transaction-log-grows.md
-      - name: Duplicate key rows from sys.syscommittab table
-        href: database-engine/replication/duplicate-keys-sys-syscommittab-table.md
-      - name: Error message when you run the Distribution Agent
-        href: database-engine/replication/error-run-distribution-agent.md
-      - name: Fail to enumerate subscription properties
-        href: database-engine/replication/enumerate-subscription-properties.md
-      - name: Install service packs and hotfixes
-        href: database-engine/replication/install-service-packs-hotfixes.md
-      - name: Issue with custom business logic handler
-        href: database-engine/replication/problem-use-custom-business-logic-handler.md
-      - name: Manually remove replication
-        href: database-engine/replication/manually-remove-replication.md
-      - name: Merge replication doesn't support centralized subscriber topologies
-        href: database-engine/replication/merge-replication-cannot-support-centralized-subscriber-topologies.md
-      - name: Non-convergence when SQL Server processes child generations
-        href: database-engine/replication/non-convergence-when-processes-child-generations.md
-      - name: ORACDC517E - Oracle Call Interface (OCI) method failed
-        href: database-engine/replication/error-use-change-data-capture-service.md
-      - name: Oracle publication triggers send data for non-published columns
-        href: database-engine/replication/oracle-publication-triggers-sends-data.md
-      - name: Performance statistics for Log Reader and Distribution Agents
-        href: database-engine/replication/performance-statistics-log-reader-distribution-agents.md
-      - name: Pull subscriptions do not show up in Windows Synchronization Manager
-        href: database-engine/replication/subscriptions-do-not-show-up-windows-sync-manager.md
-      - name: Replication agents can't run
-        href: database-engine/replication/sql-replication-agents-not-run.md
-      - name: Script failed error when creating merge publication snapshot
-        href: database-engine/replication/script-failed-error-merge-publication-snapshot.md
-      - name: SkipErrors parameter in Distribution Agent
-        href: database-engine/replication/skiperrors-parameter-distribution-agent.md
-      - name: Snapshot or Logreader agents fail
-        href: database-engine/replication/snapshot-logreader-agents-fail-destination-table-empty.md
-      - name: Synchronization for merge replication fails
-        href: database-engine/replication/sql-merge-replication-synchronization-fails.md
-      - name: The subscription does not exist
-        href: database-engine/replication/subscription-does-not-exist-error.md
-      - name: Understand merge Replication article processing order
-        href: database-engine/replication/understand-merge-replication-article-process.md
-      - name: Update is replicated as DELETE/INSERT pairs
-        href: database-engine/replication/update-statements-replicated-as-delete-insert.md
-
 - name: Database Client Programming
   items:
     - name: Can't uninstall ODBC driver completely
