@@ -65,12 +65,294 @@
 
 - name: Database Engine
   items:
+  - name: Always On Availability Groups (AG)
+    items:
+      - name: 9002 error on primary replica
+        href: database-engine/availability-groups/error-9002-transaction-log-large.md
+      - name: Always On DB in recovery pending or suspect state
+        href: database-engine/availability-groups/alwayson-availability-databases-recovery-pending-suspect.md    
+      - name: Error 2767 on secondary replica
+        href: database-engine/availability-groups/error-2767-query-secondary-replica-fails.md
+      - name: Error 41131 when creating availability group
+        href: database-engine/availability-groups/error-41131-create-availability-group.md
+      - name: Issues after changing the hostname
+        href: database-engine/availability-groups/error-41041-change-hostname.md
+      - name: Listener connection times out in multi-subnet
+        href: database-engine/availability-groups/listener-connection-times-out.md
+      - name: Query performance degradation on secondary replicas
+        href: database-engine/availability-groups/query-performance-degradation.md
+      - name: Troubleshooting automatic failover problems
+        href: database-engine/availability-groups/troubleshooting-automatic-failover-problems.md
+      - name: Troubleshooting on Always On issues
+        href: database-engine/availability-groups/troubleshooting-alwayson-issues.md
+  - name: Always On Failover Cluster Instance (FCI)
+    items: 
+      - name: Cluster resource in Failed state
+        href: database-engine/failover-clusters/cluster-resource-goes-failed-state.md
+      - name: Cluster validation rule failure
+        href: database-engine/failover-clusters/error-install-sql-server-windows-server-cluster.md
+      - name: Create databases or change disk file locations
+        href: database-engine/failover-clusters/create-databases-change-disk-file-locations.md
+      - name: Installation of SQL Server on a CSV disk fails
+        href: database-engine/failover-clusters/install-sql-server-2016-on-a-csv-disk-fails.md
+      - name: Manually re-create registry keys for cluster resources
+        href: database-engine/failover-clusters/manually-re-create-resource-specific-registry-keys.md
+      - name: Support policy for clustered configurations
+        href: database-engine/failover-clusters/support-policy-clustered-configurations.md
+      - name: Update fails on Cluster_IsOnlineIfClustered rule
+        href: database-engine/failover-clusters/cannot-update-cluster-setup-program-checks-rule.md
+      - name: Windows Failover cluster resource dependencies
+        href: database-engine/failover-clusters/windows-failover-cluster-resource-depend.md
+      - name: Warning about network binding order
+        href: database-engine/failover-clusters/warning-about-network-binding.md
+  - name: Connectivity How Tos
+    items:
+      - name: Dynamic vs Static ports
+        href: database-engine/connect/static-or-dynamic-port-config.md
+      - name: Kerberos Configuration Manager
+        href: database-engine/connect/using-kerberosmngr-sqlserver.md
+      - name: Testing using UDL file 
+        href: database-engine/connect/test-oledb-connectivity-use-udl-file.md
+      - name: Using PortQryUI tool
+        href: database-engine/connect/using-portqrytool-sqlserver.md
+  - name: Database Mirroring (DBM)
+    items:
+     - name: Assertion when you execute Bulk Insert or BCP 
+       href: database-engine/database-mirroring/assertion-execute-bulk-insert-bcp.md
+     - name: Assertion failure on partner servers when using mirroring
+       href: database-engine/database-mirroring/assertion-partner-servers-using-mirroring.md
+     - name: Mirrored databases are disconnected
+       href: database-engine/database-mirroring/mirrored-databases-disconnected.md
+  - name: Database Backup and Restore
+    items:
+     - name: A nonrecoverable I/O error when you use Backup to URL
+       href: database-engine/backup-restore/nonrecoverable-io-error-backup-url.md
+     - name: Access violations and memory dump files
+       href: database-engine/backup-restore/access-violations-memory-dump-files.md
+     - name: A TDE-enabled database may not recover
+       href: database-engine/backup-restore/tde-enabled-database-not-recover.md
+     - name: ASR Agent or non-component VSS Backup fails
+       href: database-engine/backup-restore/asr-agent-vss-backup-fails.md
+     - name: Azure Site Recovery jobs fail on servers hosting SQL servers
+       href: database-engine/backup-restore/revocery-jobs-fail-servers.md
+     - name: Back up a database using a VSS backup application
+       href: database-engine/backup-restore/backup-database-using-vss-backup-application.md
+     - name: Backup operation in the backupset history table
+       href: database-engine/backup-restore/backup-operation-backup-history-table.md
+     - name: Error 3156 when you restore a database
+       href: database-engine/backup-restore/error-3156-restore-database.md
+     - name: Error after you perform TDE certificate or key rotation
+       href: database-engine/backup-restore/error-after-perform-tde-certificate-key-rotation.md
+     - name: Error when backing up in-memory database
+       href: database-engine/backup-restore/error-backing-up-memory-database.md
+     - name: Error when you create a snapshot
+       href: database-engine/backup-restore/error-when-you-create-a-snapshot.md
+     - name: Error 33111 when restoring backups that use SQL Server Connector for Key Vault
+       href: database-engine/backup-restore/error-33111-restore-issues-sql-connector.md
+     - name: Restore or recovery may fail
+       href: database-engine/backup-restore/restore-recovery-may-fail.md
+     - name: Schedule and automate Backups of databases
+       href: database-engine/backup-restore/schedule-automate-backup-database.md
+     - name: Troubleshoot backup and restore operation issues
+       href: database-engine/backup-restore/backup-restore-operations.md
+  - name: Database Connectivity and Authentication
+    items:
+     - name: Common Connection Issues
+       href: database-engine/connect/resolve-connectivity-errors-overview.md
+     - name: Cannot generate SSPI context
+       href: database-engine/connect/cannot-generate-sspi-context-error.md
+     - name: Existing connection forcibly closed
+       href: database-engine/connect/tls-exist-connection-closed.md
+     - name: Login failed for user
+       href: /sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context
+     - name: Network-related or instance-specific error
+       href: database-engine/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md
+     - name: Pre-reqs for connectivity troubleshooting
+       href: database-engine/connect/resolve-connectivity-errors-checklist.md
+     - name: The certificate chain was issued by an authority that isn't trusted
+       href: database-engine/connect/certificate-chain-not-trusted.md
+     - name: Timeout expired errors
+       href: database-engine/connect/timeout-expired-error.md
+     - name: Token-based server access validation failed
+       href: database-engine/connect/cannot-connect-remotely.md
+     - name: Untrusted certificate authority error
+       href: database-engine/connect/error-message-when-you-connect.md
+     - name: Winsock LSP results in network or stability issues
+       href: database-engine/connect/winsock-lsp-network-problem.md
+  - name: Database Development
+    items:
+      - name: Activation tasks run over limit
+        href: database-engine/development/activation-runs-over-limit.md
+      - name: Assembly cannot be migrated to SQL Server 2017 error
+        href: database-engine/development/assembly-name-cannot-migrated-error.md
+      - name: Can't make a remote connection from a CLR trigger
+        href: database-engine/development/cannot-make-remote-connection-clr-trigger.md
+      - name: Error when you run CLR object or create assembly
+        href: database-engine/development/error-run-clr-object-create-assembly.md
+      - name: Execution of CLR fails with TypeInitializationException
+        href: database-engine/development/execution-clr-fails-typeInitializationexception.md
+      - name: Iterate through result set using T-SQL
+        href: database-engine/development/iterate-through-result-set.md
+      - name: Query returns incorrect results
+        href: database-engine/development/query-typecasts-a-unicode-column.md
+      - name: Run a DLL-based COM object
+        href: database-engine/development/run-dll-based-com-object.md
+      - name: Remove duplicate rows from table
+        href: database-engine/development/remove-duplicate-rows-sql-server-tab.md
+      - name: Rotate a table
+        href: database-engine/development/rotate-table.md
+      - name: Timeout issues when you deploy SQL CLR objects
+        href: database-engine/development/timeout-issues-deploy-clr-objects.md
+      - name: Use extended or SP_OA stored procedure to load CLR
+        href: database-engine/development/use-extended-sp-oa-stored-procedure.md
+  - name: Database Mail
+    items:
+      - name: The Transaction not longer valid when using Database Mail
+        href: database-engine/database-mail/database-mail-fails-send-message.md
+  - name: Full-Text Search, Semantic Search
+    items:
+      - name: Considerations when using the Full-Text to search
+        href: database-engine/search/full-text-search-engine-japanese-language.md
+      - name: Dashes ignored in search with SQL Full-Text
+        href: database-engine/search/dashes-ignored-search-full-text-msidxs-queries.md
+      - name: Error 0x80040e97 when using full-text search
+        href: database-engine/search/error-0x80040e97-using-full-text-search.md
+      - name: Full-text index doesn't index attribute values
+        href: database-engine/search/full-text-index-do-not-index-attribute-values.md
+      - name: Full-text indexes stop populating
+        href: database-engine/search/full-text-indexes-populate-slowly.md
+      - name: Improve the performance of full-text queries
+        href: database-engine/search/improve-performance-full-text-queries.md
+      - name: Words are not returned by an English word breaker
+        href: database-engine/search/words-not-returned-by-english-word-breaker.md
+  - name: File, Filegroup, Database Operations, or Corruption
+    items: 
+     - name: 1450 and 665 errors when running DBCC CHECKDB
+       href: database-engine/database-file-operations/1450-and-665-errors-running-dbcc-checkdb.md
+     - name: 17053 and 926 errors when running DBCC CHECK
+       href: database-engine/database-file-operations/17053-and-926-errors-running-dbcc-check.md
+     - name: 8967 and 8921 errors when running DBCC CHECKDB
+       href: database-engine/database-file-operations/8967-8921-errors-running-dbcc-checkdb.md
+     - name: Considerations for the autogrow and autoshrink
+       href: database-engine/database-file-operations/considerations-autogrow-autoshrink.md
+     - name: Database Engine Input/Output requirements
+       href: database-engine/database-file-operations/database-engine-input-output-requirements.md
+     - name: Defragmenting database disk drives
+       href: database-engine/database-file-operations/defragmenting-database-disk-drives.md
+     - name: Latch timeout when running DBCC CHECKDB
+       href: database-engine/database-file-operations/latch-timeout-running-dbcc-checkdb.md
+     - name: Logging and data storage algorithms
+       href: database-engine/database-file-operations/logging-data-storage-algorithms.md
+     - name: I/O subsystem requirements for the tempdb
+       href: database-engine/database-file-operations/io-subsystem-requirements-tempdb.md
+     - name: Space used by a table is not released
+       href: database-engine/database-file-operations/space-table-uses-not-released.md
+     - name: SQL Server diagnostics detects unreported I/O problems due to stale reads or lost writes
+       href: database-engine/database-file-operations/diagnostics-for-unreported-io-problems.md
+     - name: Support for databases on compressed volumes
+       href: database-engine/database-file-operations/support-databases-compressed-volumes.md
+     - name: Support for network database files
+       href: database-engine/database-file-operations/support-network-database-files.md
+     - name: Support on iSCSI technology components
+       href: database-engine/database-file-operations/support-iscsi-technology-components.md
+     - name: Transaction log file doesn't grow
+       href: database-engine/database-file-operations/transaction-log-file-not-grow.md
+     - name: Troubleshoot DBCC CHECKDB errors
+       href: database-engine/database-file-operations/troubleshoot-dbcc-checkdb-errors.md
+     - name: Troubleshoot errors related to system disk sector size greater than 4 KB
+       href: database-engine/database-file-operations/troubleshoot-os-4kb-disk-sector-size.md
+     - name: Virtual host drivers lead to data consistency problems
+       href: database-engine/database-file-operations/virtual-host-driver-lead-data-consistency.md
   - name: Log Shipping
     items:
     - name: Configure security for log shipping
       href: database-engine/log-shipping/configure-security-log-shipping.md
     - name: Logshipping monitor raises 14420 error
       href: database-engine/log-shipping/logshipping-monitor-14420-error.md
+  - name: Linked Server and distributed queries
+    items: 
+      - name: Configuring permissions to access remote data
+        href: database-engine/linked-servers/configure-permissions-access-remote-data.md
+      - name: Crashes when you run an Oracle linked server query
+        href: database-engine/linked-servers/crashes-run-oracle-linked-server-query.md
+      - name: Decreased performance when querying view across linked servers
+        href: database-engine/linked-servers/decreased-performance-linkedserver-views.md
+      - name: Pass a variable to a linked server query
+        href: database-engine/linked-servers/pass-variable-linked-server-query.md
+      - name: Set up and troubleshoot a linked server to an Oracle database
+        href: database-engine/linked-servers/set-up-troubleshoot-linked-server.md
+      - name: Unable to begin a distributed transaction
+        href: database-engine/linked-servers/error-message-ole-db-provider.md
+  - name: General Troubleshooting Information
+    items:
+      - name: Error 556 insert exec failed
+        href: database-engine/general/error-556-insert-exec-failed.md
+      - name: Improvements in handling some data types and uncommon operations
+        href: database-engine/general/sql-server-azure-sql-database-improvements.md
+      - name: Policy for untested .NET Framework assemblies
+        href: database-engine/general/policy-untested-net-framework-assemblies.md
+      - name: Servicing model
+        href: general/servicing-models-sql-server.md
+  - name: Installation, Patching, Upgrade, Uninstall
+    items:
+    - name: Attempted to perform an unauthorized operation error
+      href: database-engine/install/windows/error-set-up-update-instances.md
+    - name: Cannot install on Windows case-sensitive servers
+      href: database-engine/install/windows/sql-server-not-supported-in-windows-os-where-case-sensitivity-enabled.md
+    - name: Description of the Update Cache folder
+      href: database-engine/install/windows/description-update-cache-folder.md
+    - name: Different errors when installing SQL Server 2008 R2
+      href: database-engine/install/windows/error-install-sql-server-2008-r2.md
+    - name: Error code 1642 though update is applied
+      href: database-engine/install/windows/error-code-1642-update-applied.md
+    - name: Error if you change shared component directory
+      href: database-engine/install/windows/error-change-path-shared-component-directory.md
+    - name: Evaluation period has expired when you use SSMS
+      href: database-engine/install/windows/evaluation-period-has-expired.md
+    - name: Fusion ATL rule check fails
+      href: database-engine/install/windows/fusion-atl-rule-check-fails.md
+    - name: Inapplicable CUs listed in WSUS, MU or SCM
+      href: database-engine/install/windows/cu-apply-installation.md
+    - name: Installation fails when you remove user rights
+      href: database-engine/install/windows/installation-fails-if-remove-user-right.md
+    - name: Invalid User Directory message when installing CU or SP
+      href: database-engine/install/windows/error-install-sql-server-2005-sp4.md
+    - name: New MU Servicing Model
+      href: database-engine/install/windows/new-mu-servicing-model.md
+    - name: Naming schema and Fix areas for SQL updates
+      href: database-engine/install/windows/naming-schema-and-fix-area.md
+    - name: .Net Framework requirements for SQL Server
+      href: database-engine/install/windows/understanding-dotnet-framework-requirements.md
+    - name: Permission error when you use a volume mount point
+      href: database-engine/install/windows/permission-error-use-volume-mount-point.md
+    - name: Remove a partial installation of SQL server
+      href: database-engine/install/windows/remove-partial-installation.md
+    - name: Restore the missing Windows Installer cache files
+      href: database-engine/install/windows/restore-missing-windows-installer-cache-files.md
+    - name: Service may not start after patch installed
+      href: database-engine/install/windows/service-not-start-after-patch-installed.md
+    - name: Setup stops responding when you upgrade
+      href: database-engine/install/windows//setup-stops-responding-upgrade.md
+    - name: SQL on Windows 7 or Windows Server 2008 R2
+      href: database-engine/install/windows/issues-install-sql-server.md
+    - name: SQL Server 2008 R2 and SQL Server 2008 Setup issues 
+      href: database-engine/install/windows/sql-server-2008-setup-issues.md
+    - name: SQL Server 2012 Setup issues
+      href: database-engine/install/windows/sql-server-2012-setup-issues.md
+    - name: SQL Server setup fails in DMZ
+      href: database-engine/install/windows/cannot-install-sql-when-only-rodc-available.md
+    - name: SxS install of X64 and X86 version of SSRS 2008
+      href: database-engine/install/windows/install-reporting-service.md
+    - name: Troubleshoot common SQL Server Cumulative Update installation issues
+      href: database-engine/install/windows/sqlserver-patching-issues.md
+    - name: Update or Slipstream installation for SQL Server 2008
+      href: database-engine/install/windows/update-or-slipstream-installation.md
+    - name: Upgrade failures on Windows Server 2012
+      href: database-engine/install/windows/error-upgrade-cluster-node.md'
+  - name: Machine Learning Services (in database)
+    items:
+      - name: Inconsistent results in MKL computations
+        href: database-engine/machine-learning/inconsistent-results-mkl-computations-missing-variable.md
   - name: Startup, shutdown, restart issues (instance or database)
     items:
       - name: Access is denied error and SQL Server doesn't start
@@ -185,156 +467,6 @@
        href: database-engine/performance/understand-resolve-blocking.md
      - name: Upgrading compatibility level degrades performance for spatial queries
        href: database-engine/performance/upgrade-compatibility-level-degrades-performance.md
-  - name: Always On Availability Groups (AG)
-    items:
-      - name: 9002 error on primary replica
-        href: database-engine/availability-groups/error-9002-transaction-log-large.md
-      - name: Always On DB in recovery pending or suspect state
-        href: database-engine/availability-groups/alwayson-availability-databases-recovery-pending-suspect.md    
-      - name: Error 2767 on secondary replica
-        href: database-engine/availability-groups/error-2767-query-secondary-replica-fails.md
-      - name: Error 41131 when creating availability group
-        href: database-engine/availability-groups/error-41131-create-availability-group.md
-      - name: Issues after changing the hostname
-        href: database-engine/availability-groups/error-41041-change-hostname.md
-      - name: Listener connection times out in multi-subnet
-        href: database-engine/availability-groups/listener-connection-times-out.md
-      - name: Query performance degradation on secondary replicas
-        href: database-engine/availability-groups/query-performance-degradation.md
-      - name: Troubleshooting automatic failover problems
-        href: database-engine/availability-groups/troubleshooting-automatic-failover-problems.md
-      - name: Troubleshooting on Always On issues
-        href: database-engine/availability-groups/troubleshooting-alwayson-issues.md
-  - name: Database Mirroring (DBM)
-    items:
-     - name: Assertion when you execute Bulk Insert or BCP 
-       href: database-engine/database-mirroring/assertion-execute-bulk-insert-bcp.md
-     - name: Assertion failure on partner servers when using mirroring
-       href: database-engine/database-mirroring/assertion-partner-servers-using-mirroring.md
-     - name: Mirrored databases are disconnected
-       href: database-engine/database-mirroring/mirrored-databases-disconnected.md
-  - name: Database Backup and Restore
-    items:
-     - name: A nonrecoverable I/O error when you use Backup to URL
-       href: database-engine/backup-restore/nonrecoverable-io-error-backup-url.md
-     - name: Access violations and memory dump files
-       href: database-engine/backup-restore/access-violations-memory-dump-files.md
-     - name: A TDE-enabled database may not recover
-       href: database-engine/backup-restore/tde-enabled-database-not-recover.md
-     - name: ASR Agent or non-component VSS Backup fails
-       href: database-engine/backup-restore/asr-agent-vss-backup-fails.md
-     - name: Azure Site Recovery jobs fail on servers hosting SQL servers
-       href: database-engine/backup-restore/revocery-jobs-fail-servers.md
-     - name: Back up a database using a VSS backup application
-       href: database-engine/backup-restore/backup-database-using-vss-backup-application.md
-     - name: Backup operation in the backupset history table
-       href: database-engine/backup-restore/backup-operation-backup-history-table.md
-     - name: Error 3156 when you restore a database
-       href: database-engine/backup-restore/error-3156-restore-database.md
-     - name: Error after you perform TDE certificate or key rotation
-       href: database-engine/backup-restore/error-after-perform-tde-certificate-key-rotation.md
-     - name: Error when backing up in-memory database
-       href: database-engine/backup-restore/error-backing-up-memory-database.md
-     - name: Error when you create a snapshot
-       href: database-engine/backup-restore/error-when-you-create-a-snapshot.md
-     - name: Error 33111 when restoring backups that use SQL Server Connector for Key Vault
-       href: database-engine/backup-restore/error-33111-restore-issues-sql-connector.md
-     - name: Restore or recovery may fail
-       href: database-engine/backup-restore/restore-recovery-may-fail.md
-     - name: Schedule and automate Backups of databases
-       href: database-engine/backup-restore/schedule-automate-backup-database.md
-     - name: Troubleshoot backup and restore operation issues
-       href: database-engine/backup-restore/backup-restore-operations.md
-  - name: Database Connectivity and Authentication
-    items:
-     - name: Common Connection Issues
-       href: database-engine/connect/resolve-connectivity-errors-overview.md
-     - name: Cannot generate SSPI context
-       href: database-engine/connect/cannot-generate-sspi-context-error.md
-     - name: Existing connection forcibly closed
-       href: database-engine/connect/tls-exist-connection-closed.md
-     - name: Login failed for user
-       href: /sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context
-     - name: Network-related or instance-specific error
-       href: database-engine/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md
-     - name: Pre-reqs for connectivity troubleshooting
-       href: database-engine/connect/resolve-connectivity-errors-checklist.md
-     - name: The certificate chain was issued by an authority that isn't trusted
-       href: database-engine/connect/certificate-chain-not-trusted.md
-     - name: Timeout expired errors
-       href: database-engine/connect/timeout-expired-error.md
-     - name: Token-based server access validation failed
-       href: database-engine/connect/cannot-connect-remotely.md
-     - name: Untrusted certificate authority error
-       href: database-engine/connect/error-message-when-you-connect.md
-     - name: Winsock LSP results in network or stability issues
-       href: database-engine/connect/winsock-lsp-network-problem.md
-  - name: Connectivity How Tos
-    items:
-      - name: Dynamic vs Static ports
-        href: database-engine/connect/static-or-dynamic-port-config.md
-      - name: Kerberos Configuration Manager
-        href: database-engine/connect/using-kerberosmngr-sqlserver.md
-      - name: Testing using UDL file 
-        href: database-engine/connect/test-oledb-connectivity-use-udl-file.md
-      - name: Using PortQryUI tool
-        href: database-engine/connect/using-portqrytool-sqlserver.md
-  - name: Database Development
-    items:
-      - name: Activation tasks run over limit
-        href: database-engine/development/activation-runs-over-limit.md
-      - name: Assembly cannot be migrated to SQL Server 2017 error
-        href: database-engine/development/assembly-name-cannot-migrated-error.md
-      - name: Can't make a remote connection from a CLR trigger
-        href: database-engine/development/cannot-make-remote-connection-clr-trigger.md
-      - name: Error when you run CLR object or create assembly
-        href: database-engine/development/error-run-clr-object-create-assembly.md
-      - name: Execution of CLR fails with TypeInitializationException
-        href: database-engine/development/execution-clr-fails-typeInitializationexception.md
-      - name: Iterate through result set using T-SQL
-        href: database-engine/development/iterate-through-result-set.md
-      - name: Query returns incorrect results
-        href: database-engine/development/query-typecasts-a-unicode-column.md
-      - name: Run a DLL-based COM object
-        href: database-engine/development/run-dll-based-com-object.md
-      - name: Remove duplicate rows from table
-        href: database-engine/development/remove-duplicate-rows-sql-server-tab.md
-      - name: Rotate a table
-        href: database-engine/development/rotate-table.md
-      - name: Timeout issues when you deploy SQL CLR objects
-        href: database-engine/development/timeout-issues-deploy-clr-objects.md
-      - name: Use extended or SP_OA stored procedure to load CLR
-        href: database-engine/development/use-extended-sp-oa-stored-procedure.md
-  - name: General Troubleshooting Information
-    items:
-      - name: Error 556 insert exec failed
-        href: database-engine/general/error-556-insert-exec-failed.md
-      - name: Improvements in handling some data types and uncommon operations
-        href: database-engine/general/sql-server-azure-sql-database-improvements.md
-      - name: Policy for untested .NET Framework assemblies
-        href: database-engine/general/policy-untested-net-framework-assemblies.md
-      - name: Servicing model
-        href: general/servicing-models-sql-server.md
-  - name: Machine Learning Services (in database)
-    items:
-      - name: Inconsistent results in MKL computations
-        href: machine-learning/inconsistent-results-mkl-computations-missing-variable.md
-  - name: Full-Text Search, Semantic Search
-    items:
-      - name: Considerations when using the Full-Text to search
-        href: database-engine/search/full-text-search-engine-japanese-language.md
-      - name: Dashes ignored in search with SQL Full-Text
-        href: database-engine/search/dashes-ignored-search-full-text-msidxs-queries.md
-      - name: Error 0x80040e97 when using full-text search
-        href: database-engine/search/error-0x80040e97-using-full-text-search.md
-      - name: Full-text index doesn't index attribute values
-        href: database-engine/search/full-text-index-do-not-index-attribute-values.md
-      - name: Full-text indexes stop populating
-        href: database-engine/search/full-text-indexes-populate-slowly.md
-      - name: Improve the performance of full-text queries
-        href: database-engine/search/improve-performance-full-text-queries.md
-      - name: Words are not returned by an English word breaker
-        href: database-engine/search/words-not-returned-by-english-word-breaker.md
   - name: Security, Encryption, Auditing, Authorization
     items: 
      - name: Block remote use of local accounts in Windows
@@ -357,82 +489,6 @@
        href: database-engine/security/sql-2016-fips-140-2-compliant-mode.md
      - name: Using SQL Server 2008 in FIPS 140-2-compliant mode
        href: database-engine/security/instructions-in-fips-140-2-compliant-mode.md
-  - name: Database Mail
-    items:
-      - name: The Transaction not longer valid when using Database Mail
-        href: database-engine/database-mail/database-mail-fails-send-message.md
-  - name: Linked Server and distributed queries
-    items: 
-      - name: Configuring permissions to access remote data
-        href: database-engine/linked-servers/configure-permissions-access-remote-data.md
-      - name: Crashes when you run an Oracle linked server query
-        href: database-engine/linked-servers/crashes-run-oracle-linked-server-query.md
-      - name: Decreased performance when querying view across linked servers
-        href: database-engine/linked-servers/decreased-performance-linkedserver-views.md
-      - name: Pass a variable to a linked server query
-        href: database-engine/linked-servers/pass-variable-linked-server-query.md
-      - name: Set up and troubleshoot a linked server to an Oracle database
-        href: database-engine/linked-servers/set-up-troubleshoot-linked-server.md
-      - name: Unable to begin a distributed transaction
-        href: database-engine/linked-servers/error-message-ole-db-provider.md
-  - name: File, Filegroup, Database Operations, or Corruption
-    items: 
-     - name: 1450 and 665 errors when running DBCC CHECKDB
-       href: database-engine/database-file-operations/1450-and-665-errors-running-dbcc-checkdb.md
-     - name: 17053 and 926 errors when running DBCC CHECK
-       href: database-engine/database-file-operations/17053-and-926-errors-running-dbcc-check.md
-     - name: 8967 and 8921 errors when running DBCC CHECKDB
-       href: database-engine/database-file-operations/8967-8921-errors-running-dbcc-checkdb.md
-     - name: Considerations for the autogrow and autoshrink
-       href: database-engine/database-file-operations/considerations-autogrow-autoshrink.md
-     - name: Database Engine Input/Output requirements
-       href: database-engine/database-file-operations/database-engine-input-output-requirements.md
-     - name: Defragmenting database disk drives
-       href: database-engine/database-file-operations/defragmenting-database-disk-drives.md
-     - name: Latch timeout when running DBCC CHECKDB
-       href: database-engine/database-file-operations/latch-timeout-running-dbcc-checkdb.md
-     - name: Logging and data storage algorithms
-       href: database-engine/database-file-operations/logging-data-storage-algorithms.md
-     - name: I/O subsystem requirements for the tempdb
-       href: database-engine/database-file-operations/io-subsystem-requirements-tempdb.md
-     - name: Space used by a table is not released
-       href: database-engine/database-file-operations/space-table-uses-not-released.md
-     - name: SQL Server diagnostics detects unreported I/O problems due to stale reads or lost writes
-       href: database-engine/database-file-operations/diagnostics-for-unreported-io-problems.md
-     - name: Support for databases on compressed volumes
-       href: database-engine/database-file-operations/support-databases-compressed-volumes.md
-     - name: Support for network database files
-       href: database-engine/database-file-operations/support-network-database-files.md
-     - name: Support on iSCSI technology components
-       href: database-engine/database-file-operations/support-iscsi-technology-components.md
-     - name: Transaction log file doesn't grow
-       href: database-engine/database-file-operations/transaction-log-file-not-grow.md
-     - name: Troubleshoot DBCC CHECKDB errors
-       href: database-engine/database-file-operations/troubleshoot-dbcc-checkdb-errors.md
-     - name: Troubleshoot errors related to system disk sector size greater than 4 KB
-       href: database-engine/database-file-operations/troubleshoot-os-4kb-disk-sector-size.md
-     - name: Virtual host drivers lead to data consistency problems
-       href: database-engine/database-file-operations/virtual-host-driver-lead-data-consistency.md
-  - name: Always On Failover Cluster Instance (FCI)
-    items: 
-      - name: Cluster resource in Failed state
-        href: database-engine/failover-clusters/cluster-resource-goes-failed-state.md
-      - name: Cluster validation rule failure
-        href: database-engine/failover-clusters/error-install-sql-server-windows-server-cluster.md
-      - name: Create databases or change disk file locations
-        href: database-engine/failover-clusters/create-databases-change-disk-file-locations.md
-      - name: Installation of SQL Server on a CSV disk fails
-        href: database-engine/failover-clusters/install-sql-server-2016-on-a-csv-disk-fails.md
-      - name: Manually re-create registry keys for cluster resources
-        href: database-engine/failover-clusters/manually-re-create-resource-specific-registry-keys.md
-      - name: Support policy for clustered configurations
-        href: database-engine/failover-clusters/support-policy-clustered-configurations.md
-      - name: Update fails on Cluster_IsOnlineIfClustered rule
-        href: database-engine/failover-clusters/cannot-update-cluster-setup-program-checks-rule.md
-      - name: Windows Failover cluster resource dependencies
-        href: database-engine/failover-clusters/windows-failover-cluster-resource-depend.md
-      - name: Warning about network binding order
-        href: database-engine/failover-clusters/warning-about-network-binding.md
   - name: Replication, Change Tracking, Change Data Capture
     items: 
       - name: 102 and incorrect syntax error with peer-to-peer replication
@@ -497,62 +553,7 @@
         href: database-engine/replication/understand-merge-replication-article-process.md
       - name: Update is replicated as DELETE/INSERT pairs
         href: database-engine/replication/update-statements-replicated-as-delete-insert.md
-  - name: Installation, Patching, Upgrade, Uninstall
-    items:
-    - name: Attempted to perform an unauthorized operation error
-      href: database-engine/install/windows/error-set-up-update-instances.md
-    - name: Cannot install on Windows case-sensitive servers
-      href: database-engine/install/windows/sql-server-not-supported-in-windows-os-where-case-sensitivity-enabled.md
-    - name: Description of the Update Cache folder
-      href: database-engine/install/windows/description-update-cache-folder.md
-    - name: Different errors when installing SQL Server 2008 R2
-      href: database-engine/install/windows/error-install-sql-server-2008-r2.md
-    - name: Error code 1642 though update is applied
-      href: database-engine/install/windows/error-code-1642-update-applied.md
-    - name: Error if you change shared component directory
-      href: database-engine/install/windows/error-change-path-shared-component-directory.md
-    - name: Evaluation period has expired when you use SSMS
-      href: database-engine/install/windows/evaluation-period-has-expired.md
-    - name: Fusion ATL rule check fails
-      href: database-engine/install/windows/fusion-atl-rule-check-fails.md
-    - name: Inapplicable CUs listed in WSUS, MU or SCM
-      href: database-engine/install/windows/cu-apply-installation.md
-    - name: Installation fails when you remove user rights
-      href: database-engine/install/windows/installation-fails-if-remove-user-right.md
-    - name: Invalid User Directory message when installing CU or SP
-      href: database-engine/install/windows/error-install-sql-server-2005-sp4.md
-    - name: New MU Servicing Model
-      href: database-engine/install/windows/new-mu-servicing-model.md
-    - name: Naming schema and Fix areas for SQL updates
-      href: database-engine/install/windows/naming-schema-and-fix-area.md
-    - name: .Net Framework requirements for SQL Server
-      href: database-engine/install/windows/understanding-dotnet-framework-requirements.md
-    - name: Permission error when you use a volume mount point
-      href: database-engine/install/windows/permission-error-use-volume-mount-point.md
-    - name: Remove a partial installation of SQL server
-      href: database-engine/install/windows/remove-partial-installation.md
-    - name: Restore the missing Windows Installer cache files
-      href: database-engine/install/windows/restore-missing-windows-installer-cache-files.md
-    - name: Service may not start after patch installed
-      href: database-engine/install/windows/service-not-start-after-patch-installed.md
-    - name: Setup stops responding when you upgrade
-      href: database-engine/install/windows//setup-stops-responding-upgrade.md
-    - name: SQL on Windows 7 or Windows Server 2008 R2
-      href: database-engine/install/windows/issues-install-sql-server.md
-    - name: SQL Server 2008 R2 and SQL Server 2008 Setup issues 
-      href: database-engine/install/windows/sql-server-2008-setup-issues.md
-    - name: SQL Server 2012 Setup issues
-      href: database-engine/install/windows/sql-server-2012-setup-issues.md
-    - name: SQL Server setup fails in DMZ
-      href: database-engine/install/windows/cannot-install-sql-when-only-rodc-available.md
-    - name: SxS install of X64 and X86 version of SSRS 2008
-      href: database-engine/install/windows/install-reporting-service.md
-    - name: Troubleshoot common SQL Server Cumulative Update installation issues
-      href: database-engine/install/windows/sqlserver-patching-issues.md
-    - name: Update or Slipstream installation for SQL Server 2008
-      href: database-engine/install/windows/update-or-slipstream-installation.md
-    - name: Upgrade failures on Windows Server 2012
-      href: database-engine/install/windows/error-upgrade-cluster-node.md
+
 - name: Database Client Programming
   items:
     - name: Can't uninstall ODBC driver completely
