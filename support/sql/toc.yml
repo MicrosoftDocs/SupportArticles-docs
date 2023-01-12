@@ -169,8 +169,8 @@
        href: database-engine/connect/error-message-when-you-connect.md
      - name: Winsock LSP results in network or stability issues
        href: database-engine/connect/winsock-lsp-network-problem.md
-     - name: Connectivity How Tos
-       items:
+    - name: Connectivity How Tos
+      items:
          - name: Dynamic vs Static ports
            href: database-engine/connect/static-or-dynamic-port-config.md
          - name: Kerberos Configuration Manager
