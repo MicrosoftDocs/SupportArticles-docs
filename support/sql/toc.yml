@@ -499,8 +499,6 @@
         href: database-engine/replication/update-statements-replicated-as-delete-insert.md
   - name: Installation, Patching, Upgrade, Uninstall
     items:
-    - name: .Net Framework requirements for SQL Server
-      href: database-engine/install/windows/understanding-dotnet-framework-requirements.md
     - name: Attempted to perform an unauthorized operation error
       href: database-engine/install/windows/error-set-up-update-instances.md
     - name: Cannot install on Windows case-sensitive servers
@@ -515,8 +513,6 @@
       href: database-engine/install/windows/error-change-path-shared-component-directory.md
     - name: Evaluation period has expired when you use SSMS
       href: database-engine/install/windows/evaluation-period-has-expired.md
-    - name: New MU Servicing Model
-      href: database-engine/install/windows/new-mu-servicing-model.md
     - name: Fusion ATL rule check fails
       href: database-engine/install/windows/fusion-atl-rule-check-fails.md
     - name: Inapplicable CUs listed in WSUS, MU or SCM
@@ -525,8 +521,12 @@
       href: database-engine/install/windows/installation-fails-if-remove-user-right.md
     - name: Invalid User Directory message when installing CU or SP
       href: database-engine/install/windows/error-install-sql-server-2005-sp4.md
+    - name: New MU Servicing Model
+      href: database-engine/install/windows/new-mu-servicing-model.md
     - name: Naming schema and Fix areas for SQL updates
       href: database-engine/install/windows/naming-schema-and-fix-area.md
+    - name: .Net Framework requirements for SQL Server
+      href: database-engine/install/windows/understanding-dotnet-framework-requirements.md
     - name: Permission error when you use a volume mount point
       href: database-engine/install/windows/permission-error-use-volume-mount-point.md
     - name: Remove a partial installation of SQL server
@@ -541,14 +541,14 @@
       href: database-engine/install/windows/issues-install-sql-server.md
     - name: SQL Server 2008 R2 and SQL Server 2008 Setup issues 
       href: database-engine/install/windows/sql-server-2008-setup-issues.md
-    - name: Troubleshoot common SQL Server Cumulative Update installation issues
-      href: database-engine/install/windows/sqlserver-patching-issues.md
     - name: SQL Server 2012 Setup issues
       href: database-engine/install/windows/sql-server-2012-setup-issues.md
     - name: SQL Server setup fails in DMZ
       href: database-engine/install/windows/cannot-install-sql-when-only-rodc-available.md
     - name: SxS install of X64 and X86 version of SSRS 2008
       href: database-engine/install/windows/install-reporting-service.md
+    - name: Troubleshoot common SQL Server Cumulative Update installation issues
+      href: database-engine/install/windows/sqlserver-patching-issues.md
     - name: Update or Slipstream installation for SQL Server 2008
       href: database-engine/install/windows/update-or-slipstream-installation.md
     - name: Upgrade failures on Windows Server 2012
@@ -605,8 +605,6 @@
     href: general/support-policy-sql-server.md
 - name: Integration Services (SSIS)
   items:
-  - name: Troubleshoot slow SSIS or ELT jobs query performance
-    href: integration-services/slow-query-performance-ssis-etl.md
   - name: AG remains in the resolving state
     href: integration-services/ag-remains-resolving-state.md
   - name: Create a dynamic subject for the Send Mail task
@@ -621,6 +619,8 @@
     href: integration-services/error-use-oracle-connection-manager.md
   - name: Error when you virtualize BIDS or SSDT
     href: integration-services/error-you-virtualize-bids-ssdt.md
+  - name: Troubleshoot slow SSIS or ELT jobs query performance
+    href: integration-services/slow-query-performance-ssis-etl.md
   - name: SSIS checkpoints not honored for For and Foreach loop containers
     href: integration-services/ssis-checkpoints-not-honored-for-loop.md
   - name: SSIS package does not run when called from a job step
@@ -631,7 +631,6 @@
     href: integration-services/ssis-package-fails-use-dqs-cleansing-component.md
   - name: Use encryption and network packet size
     href: integration-services/use-encryption-network-packet-size.md
-
 - name: Master Data Services
   items:
   - name: MDS entity-based staging may fail
@@ -650,7 +649,6 @@
     href: analytics-platform-system/msg-104381-running-statement-order-by.md
   - name: Operations Manager can't monitor APS appliance
     href: analytics-platform-system/operations-manager-cannot-monitor-aps.md
-
 - name: Reporting Services (SSRS)
   items:
   - name: A call to AuthzInitializeContextFromSid fails
@@ -684,10 +682,10 @@
     href: linux/choosing-licensing-model-using-mssql-conf.md
   - name: Core dump on RHEL 7.4 when you run mssql-conf
     href: linux/core-dump-rhel-7-4-run-mssql-conf.md
-  - name: Restore operation fails on Linux servers
-    href: linux/database-restore-operation-fails-linux-server.md
   - name: mssql-conf setup fails with python module error
     href: linux/mssql-conf-setup-fails-with-python-module-error.md
+  - name: Restore operation fails on Linux servers
+    href: linux/database-restore-operation-fails-linux-server.md
 
 - name: Tools
   items:
@@ -715,12 +713,12 @@
     items:
     - name: Cannot connect to WMI provider error in Configuration manager
       href: tools/error-message-when-you-open-configuration-manager.md
+    - name: Description of the Replay Markup Language Utilities for SQL Server
+      href: tools/replay-markup-language-utility.md
     - name: Invalid password error or slow response
       href: tools/invalid-password-type-password-slowssms-sql-authentication.md
     - name: MSDB database grows
       href: tools/msdb-database-grows.md
-    - name: Description of the Replay Markup Language Utilities for SQL Server
-      href: tools/replay-markup-language-utility.md
     - name: New data isn't uploaded to MDW database after configuring collection set
       href: tools/data-collector-collection-set-upload-fail.md
     - name: PowerShell issue when RemoteSigned is not set
@@ -743,14 +741,14 @@
       href: tools/visual-studio-2010-shell-installed-sql-server-2014-2012.md
 - name: Product Updates and Release Notes
   items:
+  - name: Frequently asked questions and acronyms
+    href: releases/faq-acronyms.md
   - name: Latest updates and version history
     href: releases/download-and-install-latest-updates.md
   - name: Version and edition of SQL Server engine
     href: releases/find-my-sql-version.md
   - name: Version and edition of SQL components
     href: releases/components-client-tools-versions.md
-  - name: Frequently asked questions and acronyms
-    href: releases/faq-acronyms.md
   - name: SQL Server 2019
     items:
     - name: SQL Server 2019 build versions
