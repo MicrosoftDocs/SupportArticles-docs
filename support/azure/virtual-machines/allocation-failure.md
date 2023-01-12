@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting Azure VM allocation failures
-description: Troubleshoot allocation failures when you create, or resize a VM in Azure
+description: Troubleshoot allocation failures when you create or resize a VM in Azure
 services: virtual-machines
 documentationcenter: ''
 author: genlin
@@ -14,7 +14,7 @@ ms.date: 12/16/2021
 ms.author: genli
 
 ---
-# Troubleshoot allocation failures when you create, restart, or resize VMs in Azure
+# Troubleshoot allocation failures when you create or resize VMs in Azure
 
 When you create a virtual machine (VM), start stopped (deallocated) VMs, or resize a VM, Microsoft Azure allocates compute resources to your subscription. We are continually investing in additional infrastructure and features to make sure that we always have all VM types available to support customer demand. However, you may occasionally experience resource allocation failures because of unprecedented growth in demand for Azure services in specific regions. This problem can occur when you try to create or start VMs in a region while the VMs display the following error code and message:
 
@@ -107,5 +107,3 @@ When an allocation request is pinned to a cluster, there's a higher chance of fa
 :::image type="content" source="media/virtual-machines-common-allocation-failure/allocation-failed-at-pinned-cluster.png" alt-text="Diagram 3 shows allocation failed at pinned cluster: No free resource available and Diagram 4 shows allocation failed at pinned cluster: Size not supported.":::
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
-
-Description needs a change: Restart needs to be removed from the description as Restart process does not release cores as the container does not get destroyed during restart.
