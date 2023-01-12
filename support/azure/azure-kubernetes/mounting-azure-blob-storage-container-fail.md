@@ -13,7 +13,7 @@ This article provides possible causes and solutions for errors that cause the mo
 
 ## Symptoms
 
-In an Azure Kubernetes Service (AKS) environment, you deploy a Kubernetes resource such as a Deployment and a StatefulSet. The deployment will create a pod that mounts a PersistentVolumeClaim (PVC) referencing an Azure Blob storage container.
+In an Azure Kubernetes Service (AKS) environment, you deploy a Kubernetes resource such as a Deployment or a StatefulSet. The deployment will create a pod that mounts a PersistentVolumeClaim (PVC) referencing an Azure Blob storage container.
 
 However, the pod stays in the **ContainerCreating** status. When you run the `kubectl describe pods` command, you may see one of the following errors in the command output, which causes the mounting operation to fail.
 
