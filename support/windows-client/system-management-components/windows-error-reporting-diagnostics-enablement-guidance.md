@@ -15,7 +15,7 @@ ms.reviewer: kaushika, sangar, plingadevaru
 ---
 # Windows Error Reporting and Windows diagnostics enablement guidance
 
-This article provides guidance on Windows Error Reporting (WER) and diagnostic data (Telemetry). WER is an event-based feedback infrastructure designed to gather information on issues that Windows can detect, report the information to Microsoft, and provide users with any available solutions.
+This article provides guidance on Windows Error Reporting (WER) and diagnostic data (Telemetry). WER is an event-based feedback infrastructure designed to collect information on issues that Windows can detect, report the information to Microsoft, and provide users with any available solutions.
 
 ## Enable Windows Error Reporting (WER)
 
@@ -42,21 +42,21 @@ Expand **Policies** under **Computer Configuration** in **Group Policy Managemen
 
 :::image type="content" source="media/windows-error-reporting-diagnostics-enablement-guidance/group-policy-management-editor-wer-policy.png" alt-text="Screenshot of Group Policy Management Editor with the Policies folder under Computer Configuration.":::
 
-Follow below steps depending on the OS version:
+Perform the following steps depending on the OS version:
 
 ### For Windows 11
 
 1. Go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Data Collection and Preview Builds**.
 2. Double-click the **Allow Diagnostic Data** policy.
-3. Select **Enabled** and select the **Send optional diagnostic data** option from the **Options** drop-down list.
+3. Select **Enabled**, and then select the **Send optional diagnostic data** option from the **Options** drop-down list.
 
     :::image type="content" source="media/windows-error-reporting-diagnostics-enablement-guidance/allow-diagnostic-data.png" alt-text="Screenshot of the Allow Diagnostic Data window with the Send optional diagnostic data option selected.":::
 
-    For more information about the level of data being sent, see [Diagnostics, feedback, and privacy in Windows](https://support.microsoft.com/windows/diagnostics-feedback-and-privacy-in-windows-28808a2b-a31b-dd73-dcd3-4559a5199319).
+    For more information about the level of data that's sent, see [Diagnostics, feedback, and privacy in Windows](https://support.microsoft.com/windows/diagnostics-feedback-and-privacy-in-windows-28808a2b-a31b-dd73-dcd3-4559a5199319).
 
 4. Select **Apply** > **OK**.
 5. Double-click the **Configure diagnostic data opt-in settings user interface** policy.
-6. Select **Enabled**, and select the **Disable diagnostic data opt-in settings** option from the **Options** drop-down list.
+6. Select **Enabled**, and then select the **Disable diagnostic data opt-in settings** option from the **Options** drop-down list.
 
     :::image type="content" source="media/windows-error-reporting-diagnostics-enablement-guidance/configure-diagnostic-data-opt-in-settings-user-interface.png" alt-text="Screenshot of the Configure diagnostic data opt-in settings user interface window with Enabled selected.":::
 
@@ -67,7 +67,7 @@ Follow below steps depending on the OS version:
 1. Go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Data Collection and Preview Builds**.
 2. Double-click the **Allow Telemetry** policy.
 3. Select **Enabled**.
-4. From the **Options** drop-down list select:
+4. From the **Options** drop-down list, select:
 
    - **Optional** for Windows 10, version 1903 or later
    - **Full** for Windows 10, version 1809 or earlier
@@ -77,25 +77,25 @@ Follow below steps depending on the OS version:
     |:::image type="content" source="media/windows-error-reporting-diagnostics-enablement-guidance/allow-telemetry-windows-optional.png" alt-text="Screenshot of the Allow Telemetry window with Optional option selected." lightbox="media/windows-error-reporting-diagnostics-enablement-guidance/allow-telemetry-windows-optional.png":::     |:::image type="content" source="media/windows-error-reporting-diagnostics-enablement-guidance/allow-telemetry-windows-full.png" alt-text="Screenshot of the Allow Telemetry window with Full option selected." lightbox="media/windows-error-reporting-diagnostics-enablement-guidance/allow-telemetry-windows-full.png":::         |
 
    > [!NOTE]  
-   > Choose a minimum of **Enhanced** so that we can have enough actionable insights (for Windows 10,version 1903 or later. For more information about the level of data collected, see [Diagnostic data settings](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings).
+   > Select at least the **Enhanced** option so that we can have enough actionable insights for Windows 10, version 1903 or later. For more information about the level of data that is collected, see [Diagnostic data settings](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings).
 
 5. Select **Apply** > **OK**.
 
-    The following steps require a minimum of Windows 10, version 1803.
+    The following steps require at least Windows 10, version 1803.
 
 6. Double-click the **Configure telemetry opt-in setting user interface** policy.
-7. Select **Enabled**, and select the **Disable telemetry opt-in Settings** option from the **Options** drop-down list.
+7. Select **Enabled**, and then select the **Disable telemetry opt-in Settings** option from the **Options** drop-down list.
 
     :::image type="content" source="media/windows-error-reporting-diagnostics-enablement-guidance/configure-telemetry-opt-in-setting-user-interface.png" alt-text="Screenshot of the Configure telemetry opt-in setting user interface window with the Disable telemetry opt-in Settings option selected.":::
 
 8. Select **Apply** > **OK**.
 
-## Configure network endpoints to be allowed
+## Configure allowed network endpoints
 
 The following table lists the network endpoints related to how you can manage the collection and control of diagnostic data.
 
 - Port used: 443
-- Protocol used: Https with SSL/TLS using certificate pinning
+- Protocol used: HTTPS with SSL/TLS using certificate pinning
 
 | Windows versions | Endpoint |
 |---------|---------|
@@ -111,11 +111,11 @@ The following table lists the network endpoints related to how you can manage th
 
 For more information, see [Configure Windows diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
 
-## Limit additional data from being sent to Microsoft (Optional)
+## Restrict additional data from being sent to Microsoft (Optional)
 
-If the policies that are described in the article are enabled, Windows Error Reporting will send only kernel mini dumps and user mode triage dumps.
+If the policies described in the article are enabled, Windows Error Reporting will send only kernel mini dumps and user mode triage dumps.
 
-If you enable **Optional** data through Telemetry and want to control the type of dump information being shared with Microsoft, you can leverage the following policies. These policies allow you to limit the types of [crash dumps](/windows/win32/dxtecharts/crash-dump-analysis).
+If you enable **Optional** data through Telemetry and want to control the type of dump information shared with Microsoft, you can use the following policies. These policies allow you to limit the types of [crash dumps](/windows/win32/dxtecharts/crash-dump-analysis).
 
 For Windows 11 and Windows 10 (version 1909 and later):
 
@@ -138,30 +138,30 @@ Your group policy object will have the following settings configured:
 
 :::image type="content" source="media/windows-error-reporting-diagnostics-enablement-guidance/computer-configuration-enabled.png" alt-text="Screenshot of all the group policy object settings.":::
 
-After you have applied the above mentioned settings to the Organizational Unit, check the following items by using Registry Editor (*Regedit.exe*) to ensure the settings are configured and applied as desired on one of the machines:
+After you've applied the above-mentioned settings to the Organizational Unit, check the following items by using Registry Editor (*Regedit.exe*), and ensure the settings are configured and applied as desired on one of the machines:
 
 - `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
 
     |Registry Key Name  |Data  |
     |---------|---------|
-    |AllowTelemetry     |0x00000003         |
-    |DisableTelemetryOptInSettingsUx     |0x00000001         |
-    |LimitDiagnosticLogCollection     |0x00000001         |
-    |LimitDumpCollection     |0x00000001         |
+    |`AllowTelemetry`     |0x00000003         |
+    |`DisableTelemetryOptInSettingsUx`     |0x00000001         |
+    |`LimitDiagnosticLogCollection`     |0x00000001         |
+    |`LimitDumpCollection`     |0x00000001         |
 
 - `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\PCHealth\ErrorReporting`
 
-  - **Registry Key Name**: DoReport
+  - **Registry Key Name**: `DoReport`
   - **Data**: 0x00000001
 
 - `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Error Reporting`
 
     |Registry Key Name  |Data  |
     |---------|---------|
-    |Disabled     |0x00000000         |
-    |DontSendAdditionalData     |0x00000001         |
+    |`Disabled`     |0x00000000         |
+    |`DontSendAdditionalData`     |0x00000001         |
 
 - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting\Consent`
 
-  - **Registry Key Name**: DefaultConsent
+  - **Registry Key Name**: `DefaultConsent`
   - **Data**: 0x00000004
