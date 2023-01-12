@@ -241,7 +241,7 @@ After the virtual network link is added, the FQDN should be able to be resolved 
 
 #### Add virtual network peering between the two virtual networks
 
-If you're using a private endpoint, you've probably disabled public access at the Key Vault level, so there's no connectivity between AKS and the Key Vault. You can test that configuration by using the following Netcat (nc) command:
+If you're using a private endpoint, you've probably disabled public access at the Key Vault level, so there's no connectivity between AKS and the Key Vault. You can test that configuration by using the following Netcat (NC) command:
 
 ```console
 nc -v -w 2 <key-vault-name>.vault.azure.net 443
