@@ -3,7 +3,7 @@ title: Change the perpetual valuation method
 description: Describes how to change the perpetual valuation method and the periodic valuation method if Manufacturing is installed in Microsoft Dynamics GP.
 ms.reviewer: ttorgers, lmuelle
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 01/12/2023
 ---
 # How to change the perpetual valuation method and the periodic valuation method when Manufacturing in Microsoft Dynamics GP is installed
 
@@ -46,6 +46,12 @@ _Original KB number:_ &nbsp; 940837
     >
     > - To view the WIP account information, use the SmartList object.
     > - After the perpetual valuation method is changed, you can post issue transactions to return the appropriate quantities to the WIP account.
+
+6a. On the Cards menu, point to Inventory, and then select Quantities/Sites and note the quantity on hand.  (Or print the stock status or look at smartlist to find the quantity on hand).  You will need to do a decrease adjustment in inventory to bring all quantities down to zero.  
+
+•	Transactions > Inventory > Transaction Entry
+
+Note:  This is needed because all layers in the IV10200 need to be consumed before the change or there will be issues with posting after the change.  This is because GP isn’t coded to change any valuation method in the IV10200.  It just changes any new layers coming into the system and you don’t want layers in both valuation methods to be consumed after the change or it will cause issues with posting and/or cost. 
 
 7. Have all users exit the transaction windows for the following modules before you use the Change Valuation Method tool:
    - Inventory
@@ -126,6 +132,7 @@ _Original KB number:_ &nbsp; 940837
 
     > [!NOTE]
     > To view the standard cost for each cost bucket, use the Standard Cost Changes window. To open the Standard Cost Changes window, point to **Manufacturing** on the **Cards** menu, point to **Inventory**, and then select **Standard Cost Changes**.
+
 6. View the account that is used to track the following costs:
    - Labor cost
    - Machine cost
@@ -139,6 +146,14 @@ _Original KB number:_ &nbsp; 940837
 
     > [!NOTE]
     > For example, an item has a material cost of $10 and a labor cost of $5. So the total standard cost is $15. If the labor account differs from the main inventory account for the item, post an entry to move the labor cost of $5 for the on-hand items from the labor account to the main inventory account.
+
+7a. On the Cards menu, point to Inventory, and then select Quantities/Sites and note the quantity on hand.  (Or print the stock status or look at smartlist to find the quantity on hand).  You will need to do a decrease adjustment in inventory to bring all quantities down to zero.  
+
+•	Transactions > Inventory > Transaction Entry
+
+Note:  This is needed because all layers in the IV10200 need to be consumed before the change or there will be issues with posting after the change.  This is because GP isn’t coded to change any valuation method in the IV10200.  It just changes any new layers coming into the system and you don’t want layers in both valuation methods to be consumed after the change or it will cause issues with posting and/or cost. 
+
+
 8. Have all users exit the transaction windows in the following modules before you use the Change Valuation Method tool:
    - Inventory
    - Sales Order Processing
