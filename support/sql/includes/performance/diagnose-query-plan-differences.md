@@ -91,7 +91,7 @@ Here are some common causes for differences in query plans:
 
 - Optimizer timeout
 
-  Is there an [optimizer timeout](../../database-engine/performance/troubleshoot-optimizer-timeout-performance.md) issue? The query optimizer can stop evaluating plan options if the query being executed is too complex. When it stops, it picks the plan with the lowest cost available at the time. This can lead to seemingly an arbitrary plan choice on one server versus another.
+  Is there an [optimizer timeout](../../database-engine/performance/troubleshoot-optimizer-timeout-performance.md) issue? The query optimizer can stop evaluating plan options if the query being executed is too complex. When it stops, it picks the plan with the lowest cost available at the time. This can lead to what seems like an arbitrary plan choice on one server versus another.
   
 - SET options
 
