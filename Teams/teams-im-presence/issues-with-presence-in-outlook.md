@@ -32,16 +32,17 @@ You see any of the following issues when you check the presence status for a use
   > Outlook currently shows **Status unknown** for federated (external) Teams contacts.
 
 ## Resolution
-**Use Microsoft Support and Recovery Assistant**
+
+### Use the Microsoft Support and Recovery Assistant
 
 To fix these issues, download and run the Assistant for automated troubleshooting steps and fixes.
 
 > [!div class="nextstepaction"]
 > [Download the Assistant](https://aka.ms/SaRA-TeamsPresenceScenario)
 
-**Fix the issue manually**
+### Fix the issue manually
 
-If you’d like to perform the checks and make the fixes manually, follow these manual steps and check whether the issue is resolved after each step:
+Follow these manual steps and check whether the issue is resolved after each step:
 
 1. Make sure that the Teams app is installed on your computer. For more information, see [How do I get Microsoft Teams](https://support.microsoft.com/office/how-do-i-get-microsoft-teams-fc7f1634-abd3-4f26-a597-9df16e4ca65b).
 
@@ -87,7 +88,7 @@ If you’d like to perform the checks and make the fixes manually, follow these 
 
 6. Check that all the following registry subkeys are correct for the version of Office that you’re running. If not, fix the incorrect entry to match the following values.
 
-    ### [For 64-bit Office](#tab/64)
+    #### [For 64-bit Office](#tab/64)
 
       |For 64-bit Office|
       |-|
@@ -96,7 +97,7 @@ If you’d like to perform the checks and make the fixes manually, follow these 
       |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{B9AA1F11-F480-4054-A84E-B5D9277E40A8}\1.0\FLAGS`<br/>**Name**: (Default)<br/>**Type**: REG_SZ<br/>**Data**: 0|
       |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{B9AA1F11-F480-4054-A84E-B5D9277E40A8}\1.0\HELPDIR`<br>**Name**: (Default)<br>**Type**: REG_SZ<br>**Data**: `C:\Users\<username>\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.tlb`|
 
-    ### [For 32-bit Office](#tab/32)
+    #### [For 32-bit Office](#tab/32)
 
       |For 32-bit Office|
       |-|
@@ -110,7 +111,7 @@ If you’d like to perform the checks and make the fixes manually, follow these 
 
 ### Contact an administrator
 
-If these steps don’t resolve the issue, an administrator should create a support request in the Teams Admin Center, and provide the following information:
+If these steps don't resolve the issue, an administrator should create a support request in the Teams Admin Center, and provide the following information:
 
 - The sign-in address of the user who is experiencing the issue and seeing an inaccurate presence status for a contact.
 
