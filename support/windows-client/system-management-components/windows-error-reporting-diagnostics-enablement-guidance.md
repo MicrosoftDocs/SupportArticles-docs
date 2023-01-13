@@ -165,3 +165,22 @@ After you've applied the above-mentioned settings to the Organizational Unit, ch
 
   - **Registry Key Name**: `DefaultConsent`
   - **Data**: 0x00000004
+
+## Gather key information before contacting Microsoft support
+
+1. Download [TSSv2](https://aka.ms/getTSSv2) on all nodes and unzip it in the *C:\\tss_tool* folder.
+2. Open the *C:\\tss_tool* folder from an elevated PowerShell command prompt.
+3. Start the following traces on the problem computer by using the following cmdlets:
+
+    ```powershell
+    TSSv2.ps1 -SDP PERF,SETUP
+    ```
+
+    ```PowerShell
+    TSSv2.ps1 -Start -Scenario NET_WFP
+    ```
+
+4. Respond to the EULA prompt.
+5. Wait until the automated scripts finish collecting the required data.
+
+The traces will be stored in a zip file in the *C:\\MS_DATA\\SDP_PERFSETUP\\* folder, which can be uploaded to the Microsoft workspace for analysis.
