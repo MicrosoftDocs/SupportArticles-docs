@@ -1,6 +1,6 @@
 ---
-title: Export-ModernPublicFolderStatistics.ps1 script fails and returns a "ToBytes" error
-description: Provides workarounds for an issue in which the Export-ModernPublicFolderStatistics.ps1 script fails with a "ToBytes" error after you install the November 2022 security updates for Exchange Server.
+title: Export-ModernPublicFolderStatistics.ps1 script fails and returns a ToBytes error
+description: Provides workarounds for an issue in which the Export-ModernPublicFolderStatistics.ps1 script fails with a ToBytes error after you install the November 2022 security updates for Exchange Server.
 author: v-trisshores
 ms.author: v-trisshores
 manager: dcscontentpm
@@ -26,7 +26,7 @@ ms.date: 01/06/2023
 
 After you install the November 2022 Microsoft Exchange Server security updates (SUs) or later SUs, you try to run *Export-ModernPublicFolderStatistics.ps1*, but the script fails and returns the following error message:
 
-> "Method invocation failed because [System.String] does not contain a method named 'ToBytes'."
+> Method invocation failed because [System.String] does not contain a method named 'ToBytes'.
 
 ## Workaround
 
