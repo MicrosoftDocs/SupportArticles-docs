@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 1 for SQL Server 2022 (KB5022375)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 1 (KB5022375).
-ms.date: 2/15/2023
+ms.date: 
 ms.custom: KB5022375
 appliesto:
 - SQL Server 2022 on Windows
@@ -9,7 +9,7 @@ appliesto:
 ---
 # KB5022375 - Cumulative Update 1 for SQL Server 2022
 
-_Release Date:_ &nbsp; 2/15/2023  
+_Release Date:_ &nbsp;
 _Version:_ &nbsp; 16.0.4001.1
 
 ## Summary
@@ -106,6 +106,7 @@ You can verify the download by computing the hash of the *SQLServer2022-KB502237
 The English version of this package has the file attributes (or later file attributes) that are listed in the following table. The dates and times for these files are listed in Coordinated Universal Time (UTC). When you view the file information, it is converted to local time. To find the difference between UTC and local time, use the **Time Zone** tab in the **Date and Time** item in Control Panel.
 
 SQL Server 2022 Analysis Services
+
 |                          File   name                      |   File version  | File size |    Date   | Time | Platform |
 |:---------------------------------------------------------:|:---------------:|:---------:|:---------:|:----:|:--------:|
 | Asplatformhost.dll                                        | 2022.160.43.206 | 336848    | 12-Jan-23 | 9:46 | x64      |
