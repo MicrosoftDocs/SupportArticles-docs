@@ -90,7 +90,7 @@ Perform the following steps depending on the OS version:
 
 8. Select **Apply** > **OK**.
 
-## Configure allowed network endpoints
+## Configure network endpoints to be allowed
 
 The following table lists the network endpoints related to how you can manage the collection and control of diagnostic data.
 
@@ -111,7 +111,7 @@ The following table lists the network endpoints related to how you can manage th
 
 For more information, see [Configure Windows diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
 
-## Restrict additional data from being sent to Microsoft (Optional)
+## Limit additional data from being sent to Microsoft (Optional)
 
 If the policies described in the article are enabled, Windows Error Reporting will send only kernel mini dumps and user mode triage dumps.
 
