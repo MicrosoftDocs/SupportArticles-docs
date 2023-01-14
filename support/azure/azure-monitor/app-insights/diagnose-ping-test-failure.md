@@ -41,6 +41,7 @@ The following table lists the steps, error messages, and possible causes that yo
 | Redirect limit validation | This webpage has too many redirects. This loop will be terminated here since this request exceeded the limit for auto redirects. | Redirects are limited to 10 per test. |
 | Status code validation | `200 - OK` does not match the expected status `400 - BadRequest`. | The returned status code is counted as a success. "200" is the code that indicates that a normal web page was returned. |
 | Content validation | The required text 'hello' did not appear in the response. | The string isn't an exact case-sensitive match in the response. For example, the string "Welcome!" must be a plain string, without wildcard characters (such as an asterisk). If your page content changes, you might have to update the string. Only English characters are supported by content match. |
+| ClientConnectionFailure | Connection Failed | The response body is greater than 1MB (1 000 000 bytes).  Response body size must be less than 1 MB |
 
 > [!NOTE]
 > If the connection reuse step is present, then the following steps won't be present:
