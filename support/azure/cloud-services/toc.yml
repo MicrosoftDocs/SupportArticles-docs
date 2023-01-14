@@ -74,6 +74,8 @@
     href: troubleshoot-with-app-insights-features-overview.md
   - name: Troubleshoot with App Insights-common scenarios
     href: troubleshoot-common-scenario-use-app-insights.md
+  - name: Use App Insights to track logical drive free space
+    href: app-insights-track-free-space-logical-drive.md
   - name: Windows PaaS compute diagnostic data
     href: windows-azure-paas-compute-diagnostic-data.md
 
