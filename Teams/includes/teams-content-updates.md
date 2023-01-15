@@ -2,6 +2,14 @@
 
 
 
+## Week of January 09, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 1/13/2023 | [User presence status issues in Outlook](/microsoftteams/troubleshoot/teams-im-presence/issues-with-presence-in-outlook) | modified |
+
+
 ## Week of January 02, 2023
 
 
