@@ -63,7 +63,7 @@ The following message doesn't show any explicit errors from the WriteFile API or
 
 Starting with SQL Server 2005, the error message displayed is:
 
-> SQL Server detected a logical consistency-based I/O error: Stale Read. It occurred during a `<<Read/Write>>` of page `<<PAGEID>>` in database ID `<<DBID>>` at offset `<<PHYSICAL OFFSET>>` in file `<<FILE NAME>>`. Additional messages in the SQL Server error log or system event log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors. For more information, see SQL Server Books Online.
+> SQL Server detected a logical consistency-based I/O error: Stale Read. It occurred during a `<Read/Write>` of page `<PAGEID>` in database ID `<DBID>` at offset `<PHYSICAL OFFSET>` in file `<FILE NAME>`. Additional messages in the SQL Server error log or system event log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors. For more information, see SQL Server Books Online.
 
 For more information on error 824, see [MSSQLSERVER_824](/sql/relational-databases/errors-events/mssqlserver-824-database-engine-error).
 
