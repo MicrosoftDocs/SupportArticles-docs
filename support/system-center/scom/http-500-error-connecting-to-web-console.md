@@ -1,7 +1,7 @@
 ---
 title: HTTP 500 error connecting to the OpsMgr web console
 description: Fixes an issue in which you receive HTTP 500 error when you remotely connect to a stand-alone Operations Manager web console.
-ms.date: 06/30/2020
+ms.date: 01/12/2023
 ms.prod-support-area-path: 
 ---
 # HTTP 500 error when you connect to the Operations Manager web console
@@ -105,3 +105,70 @@ To fix the issue, verify the following settings, and then connect to the web con
      10. Select **Expanded**, and then verify that there are two entries for each management server (both NetBIOS name and FQDN).
   
      11. Click **OK** to close the **Properties** dialog box.
+
+Listed below are the details to assist in the guide (replace with the name you have)
+
+### Demo Names
+
+`SCOMMS.Lab.Local` - Management Server Name FQDN
+`SCOMWeb.Lab.Local` - SCOM Web console Server FQDN
+`Lab\SDKSvc` - SCOM Data Access Service Account (Optional)
+`Lab\SCOMAppPool` - SCOM Application Pool Identity Account (Optional)
+Https://mySCOM.Lab.Local/OperationsManager - URL used to access Operations Manager Web console (If there is no URL, substitute this with the Operations Manager Web console server name)
+ 
+### Register the SDK SPNs
+
+**Scenario 1**: The SDK runs as a Local System
+
+`Setspn.exe -S MSOMSdkSvc/SCOMMS SCOMMS`
+`Setspn.exe -S MSOMSdkSvc/SCOMMS.Lab.Local SCOMMS`
+ 
+**Scenario 2**: The SDK runS as a Domain Account (SDKSvc)
+
+`Setspn.exe -S MSOMSdkSvc/SCOMMS SDKSvc`
+`Setspn.exe -S MSOMSdkSvc/SCOMMS.Lab.Local SDKSvc`
+ 
+To verify if the service got registered, enter `SetSpn.exe -L SDKSvc`
+ 
+### Register the HTTP SPNs
+
+**Scenario 1**: The Web console application pool runs under default identity (ApplicationPoolIdentity)
+
+`Setspn.exe -S HTTP/mySCOM SCOMWeb`
+`Setspn.exe -S HTTP/mySCOM.Lab.Local SCOMWeb`
+ 
+**Scenario 2**: The Web console application pool runs under a custom identity (Lab\SCOMAppPool)
+ 
+`Setspn.exe -S HTTP/mySCOM SCOMAppPool`
+`Setspn.exe -S HTTP/mySCOM.Lab.Local SCOMAppPool`
+ 
+To verify if the service got registered, enter `SetSpn.exe -L SCOMAppPool`
+ 
+### Configure constraint delegations
+
+To configure constraint delegations, follow these steps:
+
+1.	Open **Active Directory Users and Computers**.
+2.	In the console tree, select **Computers**.
+3.	Open the properties based on the below scenarios:
+    -	**Scenario 1**: The Operations Manager web application pool runs under default Identity (ApplicationPoolIdentity)
+        -	Right-click the computer where the web console is installed on (SCOMWeb), and select **Properties**.
+    - **Scenario 2**: The Operations Manager web application pool runs under custom Identity (Lab\SCOMAppPool)
+	      - Right-click the user which is configured on the Web Application Pool identity (Lab\SCOMAppPool), and select **Properties**.
+4.	In the details pane, select **Delegation**.
+5.	On the **Delegation** tab, select **Trust this computer for delegation to specified services only.** and choose the **Use Kerberos only** radio button.
+6.	Select **Add**.
+7.	In the **Add Services** dialogue, select **Users and Computers**
+8.	In the **Select Users or Computers** dialogue, specify 
+    - **Scenario 1**: If the SDK is running as Local System, select the computer account of the SCOM management server (SCOMMS) and select **OK**.
+    - **Scenario 2**: If the SDK is running as Domain Account (SDKSvc), select the domain account that the SDK service is running under (SDKSvc) and select **OK**.
+9.	In the **Add Services** dialogue, select the service type **MSOMSdkSvc** and select **OK**.
+10.	Select **OK** to close the Properties dialogue. 
+ 
+### Verify end user account options
+
+1.	To verify that the user logging into the web console doesn't have the checkbox selected Account is sensitive and cannot be delegated.
+2.	Open **Active Directory Users and Computers**.
+3.	Right-click the UserAccount, and then select **Properties**. The UserAccount is the account used to connect to the web console. 
+4.	Select **Account**.
+5.	In the Account options box, confirm that it is not selected.
