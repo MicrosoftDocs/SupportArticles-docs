@@ -1,7 +1,7 @@
 ---
 title: SQL Server diagnostics detects unreported I/O problems
 description: This article helps you resolve the errors 605, 823, 3448, and 3456 using the SQL Server Diagnostics.
-ms.date: 01/13/2023
+ms.date: 01/16/2023
 ms.custom: sap:Administration and Management
 author: padmajayaraman
 ms.author: v-jayaramanp
@@ -49,7 +49,7 @@ To illustrate, Microsoft has confirmed scenarios where a WriteFile API call retu
 
 ## How to enable the diagnostics
 
-In SQL Server 2017 and later versions, this diagnostic capability is enabled by default. In SQL Server 2016 and earlier versions these diagnostics can only be enabled by using trace flag 818. You can specify trace flag [818](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql) as a startup parameter, -T818, for the SQL Server instance, or you can run the following T-SQL statement to enable them at runtime:
+In SQL Server 2017 and later versions, this diagnostic capability is enabled by default. In SQL Server 2016 and earlier versions these diagnostics can only be enabled by using trace flag 818. You can specify trace flag [818](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf818) as a startup parameter, -T818, for the SQL Server instance, or you can run the following T-SQL statement to enable them at runtime:
 
 ```sql
 DBCC TRACEON(818, -1)
@@ -63,9 +63,7 @@ The following message doesn't show any explicit errors from the WriteFile API or
 
 Starting with SQL Server 2005, the error message displayed is:
 
-```output
-SQL Server detected a logical consistency-based I/O error: Stale Read. It occurred during a `<<Read/Write>>` of page `<<PAGEID>>` in database ID `<<DBID>>` at offset `<<PHYSICAL OFFSET>>` in file `<<FILE NAME>>`. Additional messages in the SQL Server error log or system event log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors. For more information, see SQL Server Books Online.
-```
+> SQL Server detected a logical consistency-based I/O error: Stale Read. It occurred during a `<<Read/Write>>` of page `<<PAGEID>>` in database ID `<<DBID>>` at offset `<<PHYSICAL OFFSET>>` in file `<<FILE NAME>>`. Additional messages in the SQL Server error log or system event log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors. For more information, see SQL Server Books Online.
 
 For more information on error 824, see [MSSQLSERVER_824](/sql/relational-databases/errors-events/mssqlserver-824-database-engine-error).
 
