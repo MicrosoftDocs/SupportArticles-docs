@@ -1,12 +1,12 @@
 ---
 title: Error when browsing your website over the default cloud service domain url
 description: Provides information about troubleshooting issues in which you get an error (HTTP Error 503. The service is unavailable.) when accessing your cloud service application.
-ms.date: 06/22/2020
-ms.prod-support-area-path: 
+ms.date: 09/26/2022
 ms.reviewer: 
 author: genlin
 ms.author: genli
 ms.service: cloud-services
+ms.subservice: troubleshoot-dev
 ---
 # Error when browsing your website over the default cloud service domain url: HTTP Error 503. The service is unavailable
 
@@ -45,12 +45,11 @@ If there are no logs generated, this means the request is not reaching to the II
 2018-08-13 03:25:22 293.217.138.127 20463 10.1.2.5 80 HTTP/1.1 GET /favicon.ico - 503 - N/A -
 ```
 
-If you see the above log, HTTP 503 is thrown from HTTP.sys level and the client request is getting rejected from there itself without reaching the IIS. Now we are going to browse the site locally from IIS and see what happens - You might get an error - *This page can't be displayed*.One thing you might notice is that the IIS website was having a binding like below, which means in order to access this particular website you need to access over the custom domain name (`www.cloudservicelabs.com`)
+If you see the above log, HTTP 503 is thrown from HTTP.sys level and the client request is getting rejected from there itself without reaching the IIS. Now we are going to browse the site locally from IIS and see what happens - You might get an error - _This page can't be displayed_.One thing you might notice is that the IIS website was having a binding like below, which means in order to access this particular website you need to access over the custom domain name (`www.cloudservicelabs.com`)
 
 |IP Address| Port| Host Header|
 |---|---|---|
 | 10.1.2.5| 80| `www.cloudservicelabs.com` |
-||||
 
 Websites are accessed by every client using bindings. A typical binding for Websites is in the form of IP:Port:HostHeader. It is a mechanism that tells the server how this site can be reached. The next question that will come to your mind is that from where does this custom hostname came from.
 
@@ -67,3 +66,5 @@ ServiceDefinition.csdef is the place where you can configure the bindings for yo
 ```
 
 In real world scenario, in order to access your cloud service application over a custom hostname, you need to have a DNS configured for this host header corresponding to the cloud service VIP. For now, you can delete the **hostHeader** attribute from **Binding** element and redeploy your cloud service solution to resolve the issue.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot a netvsc.sys issue when you connect remotely to a Windows 10 or Windows Server 2016 VM in Azure | Microsoft Docs
+title: Troubleshoot a netvsc.sys issue when you connect remotely to a Windows 10 or Windows Server 2016 VM in Azure
 description: Learn how to troubleshoot a netsvc.sys-related RDP issue when you connecting to a Windows 10 or Windows Server 2016 VM in Azure.
 services: virtual-machines
 documentationCenter: ''
@@ -7,6 +7,7 @@ author: genlin
 manager: dcscontentpm
 editor: v-jesits
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
@@ -29,11 +30,9 @@ Typically, this issue occurs in Windows [build 14393](https://support.microsoft.
 
 This issue might occur if the version of the installed netvsc.sys system file is **10.0.14393.594** or **10.0.15063.0**. These versions of netvsc.sys might prevent the system from interacting with the Azure platform.
 
-
 ## Solution
 
 Before you follow these steps, [take a snapshot of the system disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk) of the affected VM as a backup. To troubleshoot this issue, use the Serial Console or [repair the VM offline](#repair-the-vm-offline) by attaching the system disk of the VM to a recovery VM.
-
 
 ### Use the Serial Console
 
@@ -112,6 +111,4 @@ Connect to [the Serial Console, open a PowerShell instance](serial-console-windo
 
 16. [Detach the system disk, and create the VM again](./troubleshoot-recovery-disks-portal-windows.md).
 
-## Need help? Contact support
-
-If you still need help, [contact Azure Support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) to get your issue resolved quickly.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

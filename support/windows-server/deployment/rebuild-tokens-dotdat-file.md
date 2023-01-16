@@ -67,4 +67,4 @@ After you rebuild theTokens.dat file, you must reinstall your product key by usi
 > [!NOTE]
 >
 > - You should never use the `/upk` switch to uninstall a product key. To install a product key over an existing product key, use the `/ipk` switch.
-> - For more information about KMS client setup keys, see [KMS Client Setup Keys](/previous-versions//ff793421(v=technet.10)).
+> - For more information about Key Management Services (KMS) client setup keys, see [KMS client activation and product keys](/windows-server/get-started/kms-client-activation-keys).

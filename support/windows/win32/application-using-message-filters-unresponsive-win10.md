@@ -2,10 +2,10 @@
 title: Apps using message filters may not respond in Windows 10
 description: This article discusses the problem when an application using its own message filters stops responding in Windows 10.
 ms.date: 12/29/2021
-author: Dipesh-Choubisa
-ms.author: v-dchoubisa
+author: HaiyingYu
+ms.author: haiyingyu
 manager: dcscontentpm
-ms.prod-support-area-path: Desktop app UI development
+ms.custom: sap:Desktop app UI development
 ms.reviewer: hihayak
 ms.technology: windows-dev-apps-desktop-app-ui-dev
 ---
@@ -31,7 +31,7 @@ Windows 10 adds Windows messages used by text input systems or Text Services Fra
 > [!NOTE]
 > Windows 10, version 2004 introduced the new version of TSF.
 
-If the message filter of the application removes Window messages using `PeekMessage` API or `GetMessage` API and doesn't pass messages to `DispatchMessage` API, TSF can’t complete processing the messages and the application may stop responding.
+If the message filter of the application removes Window messages using `PeekMessage` API or `GetMessage` API and doesn't pass messages to `DispatchMessage` API, TSF can't complete processing the messages and the application may stop responding.
 
 This problem may occur if the application has the message filter similar to the following example, which dispatches `WM_LBUTTONUP` messages only and removes other messages.
 

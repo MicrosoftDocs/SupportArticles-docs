@@ -1,7 +1,7 @@
 ---
 title: Conditional access and multi-factor authentication in Flow
 description: Using conditional access has an unexpected effect on users who use Flow to connect to Microsoft services that are relevant to conditional access policies.
-ms.reviewer: dblyth
+ms.reviewer: sranjan, hamenon
 ms.date: 3/31/2021
 ms.subservice: power-automate-flows
 ---
@@ -46,13 +46,12 @@ The primary adverse effect of conditional access on Flow is caused by the settin
 |---|---|---|
 |MaxInactiveTime|90 days|If any Flow connection is idle (unused by Flow runs) for longer than this timespan, any new Flow run after the expiry time fails and returns the following error:</br></br>**AADSTS70008: The refresh token has expired due to inactivity. The token was issued on Time and was inactive for 90.00:00:00**|
 |MaxAgeMultiFactor|Until-Revoked|This setting controls how long multi-factor refresh tokens (the kind of tokens that are used in Flow connections) are valid.</br></br>The default setting means that there is effectively no limit on how long a Flow connection can be used - unless a tenant admin specifically revokes the user's access.</br></br>Setting this value to any fixed timespan means that after that duration (regardless of use or inactivity), a Flow connection becomes invalid and the Flow runs then fail. When this occurs, the following error message is generated. This error requires users to repair or re-create the connection:</br></br>**AADSTS50076: Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access...**|
-|MaxAgeSingleFactor|Until-Revoked|This setting is same as the *MaxAgeMultiFactor* setting, but for single-factor refresh tokens.|
+|MaxAgeSingleFactor|Until-Revoked|This setting is same as the _MaxAgeMultiFactor_ setting, but for single-factor refresh tokens.|
 |MaxAgeSessionMultiFactor|Until-Revoked|There is no direct effect on Flow connections. This setting defines the expiration of a user session for web apps. This setting can be changed by the admins depending on how frequently they want the users to sign in to web apps before the user session expires.|
-||||
+  
+  Some settings that are configured as part of enabling multi-factor may affect the Flow connection. When MFA is enabled from **Microsoft 365 admin center** and the **remember multi-factor authentication** setting is selected, the configured value overrides the default token policy settings, _MaxAgeMultiFactor_, and _MaxAgeSessionMultiFactor_. Flow connections start failing when _MaxAgeMultiFactor_ expires, and it requires the user to use an explicit logon to fix the connections.
 
-Some settings that are configured as part of enabling multi-factor may affect the Flow connection. When MFA is enabled from **Microsoft 365 admin center** and the **remember multi-factor authentication** setting is selected, the configured value overrides the default token policy settings, *MaxAgeMultiFactor*, and *MaxAgeSessionMultiFactor*. Flow connections start failing when *MaxAgeMultiFactor* expires, and it requires the user to use an explicit logon to fix the connections.
-
-We recommend that you use the token policy instead of the **remember multi-factor authentication** setting to configure different values for *theMaxAgeMultiFactor* and *MaxAgeSessionMultiFactor* settings. The token policy lets Flow connections keep working while also controlling a user logon session for the Office 365 web apps.*MaxAgeMultiFactor* has to have a reasonably longer period - ideally, the Until-Revoked value. This is to make Flow connections keep working until the refresh token is revoked by the admin. *MaxAgeSessionMultiFactor* affects a user logon session. Tenant administrators can select the value that they want, depending on how frequently they want the users to sign in to the Office 365 web apps before the session expires.
+We recommend that you use the token policy instead of the **remember multi-factor authentication** setting to configure different values for _theMaxAgeMultiFactor_ and _MaxAgeSessionMultiFactor_ settings. The token policy lets Flow connections keep working while also controlling a user logon session for the Office 365 web apps._MaxAgeMultiFactor_ has to have a reasonably longer period - ideally, the Until-Revoked value. This is to make Flow connections keep working until the refresh token is revoked by the admin. _MaxAgeSessionMultiFactor_ affects a user logon session. Tenant administrators can select the value that they want, depending on how frequently they want the users to sign in to the Office 365 web apps before the session expires.
 
 To view Active Directory policies in your organization, you can use the following commands. The [Configurable token lifetimes in Azure Active Directory (Preview)](/azure/active-directory/develop/active-directory-configurable-token-lifetimes) document provides specific instructions to query and update the settings in your organization.
 
@@ -98,7 +97,7 @@ If a default organization policy already exists, update and override the setting
 
 After you configure the policy, tenant admins can clear the **remember multi-factor authentication** checkbox because the expiration of a user session is configured by using the token lifetime policy. The token lifetime policy settings make sure that Flow connections continue to work in the following conditions:
 
-- Office 365 web apps are configured to expire the user session after *X* days (14 days in example in step 2).
+- Office 365 web apps are configured to expire the user session after _X_ days (14 days in example in step 2).
 - The apps ask users to log on again by using MFA.
 
 ## More information
@@ -163,7 +162,7 @@ More importantly, users may also be unable to discover or run their flows from S
 
 #### Effect 7 - Creation of SharePoint out-of-box flows
 
-Related to Effect 6, the creation and execution of SharePoint out-of-box flows, such as the *Request Signoff* and *Page Approval* flows, can be blocked by conditional access policies. [Control access to SharePoint and OneDrive data based on network location](/sharepoint/control-access-based-on-network-location) indicates that these policies can cause access issues that affect both first-party and third-party apps.
+Related to Effect 6, the creation and execution of SharePoint out-of-box flows, such as the _Request Signoff_ and _Page Approval_ flows, can be blocked by conditional access policies. [Control access to SharePoint and OneDrive data based on network location](/sharepoint/control-access-based-on-network-location) indicates that these policies can cause access issues that affect both first-party and third-party apps.
 
 This scenario applies both to the network location and to conditional access policies (such as Disallow Unmanaged Devices). Support for the creation of SharePoint out-of-box flows is currently in development. We will post more information in this article when this support becomes available.
 

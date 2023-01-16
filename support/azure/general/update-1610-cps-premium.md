@@ -4,8 +4,7 @@ description: Describes Update 1610 for Cloud Platform System (CPS) Premium and p
 ms.date: 08/14/2020
 author: genlin
 ms.author: genli
-ms.service: cloud-services
-ms.prod-support-area-path: 
+ms.service: cloud-platform-system
 ms.reviewer: ashtons
 ---
 # Update 1610 for Cloud Platform System (CPS) Premium
@@ -41,7 +40,7 @@ A new AFM firmware update was released for Update 1609. If you applied the netwo
 
 Follow the steps in the "Update network switch firmware" section of the "1609" version of the CPS Premium Administrators Guide that was provided by your account team. Do not use the instructions from an earlier version of the Administrators Guide.
 
-For the download location of the AFM files for Update 1610, see [http://poweredgec.dell.com/cps/CPS_P_1611/Tools/AFM/](http://poweredgec.dell.com/cps/CPS_P_1611/Tools/AFM/).
+For the download location of the AFM files for Update 1610, see [https://poweredgec.dell.com/cps/CPS_P_1611/Tools/AFM/](https://poweredgec.dell.com/cps/CPS_P_1611/Tools/AFM/).
 
 AFM will be updated to version 2.1(0.0)P2. The following table lists the recommended firmware versions that switches should run after the update.
 
@@ -51,8 +50,7 @@ AFM will be updated to version 2.1(0.0)P2. The following table lists the recomme
 |S3048|9.10(0.1)P8|2016|
 |S4810|9.10(0.1)P8|2014|
 |S55|8.3.5.6|2014|
-||||
-
+  
 ### Step 2: Update serial port concentrator firmware
 
 > [!NOTE]
@@ -63,7 +61,7 @@ Follow the steps in the "Update serial port concentrator firmware" section of th
 Download the following:
 
 - Avocent ACS 6000 Series
-- [Digi CM 48](http://ftp1.digi.com/support/firmware/80007070_u.bin) 
+- [Digi CM 48](https://ftp1.digi.com/support/firmware/80007070_u.bin)
 
 The following table lists the recommended firmware versions that the serial port concentrator should run after the update.
 
@@ -71,8 +69,7 @@ The following table lists the recommended firmware versions that the serial port
 |---|---|---|
 |Avocent ACS 6000 Series|3.3.0.10|2016|
 |Digi CM 48|1.9.5.3|2014|
-||||
-
+  
 ### Step 3: Install the VMM hotfixes for VM placement
 
 - If you installed the VMM hotfix for virtual machine (VM) placement that was included in Update 1606, 1607, 1608, or 1609, you do not have to install it again. If this is true, you can skip this step and go to Step 4.
@@ -241,16 +238,14 @@ The compliance scan output is written to the following location to which the upd
 |All|Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Client" -Name Enabled -Type DWord -Value 0|
 |All|Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server" -Name DisabledByDefault -Type DWord -Value 1|
 |All|Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server" -Name Enabled -Type DWord -Value 0|
-|||
-
+  
 #### Updates for Windows Server 2012 R2 (from previous updates)
 
 |KB article|Description|
 |---|---|
 | [3138615](https://support.microsoft.com/help/3138615)|Update for Windows Server 2012 R2 (KB3138615)|
 | [3173424](https://support.microsoft.com/help/3173424)|Servicing stack update for Windows 8.1 and Windows Server 2012 R2: July 12, 2016|
-|||
-
+  
 ### Payload for Update 1610-1
 
 #### Updates for Windows Server 2012 R2
@@ -261,8 +256,7 @@ The compliance scan output is written to the following location to which the upd
 | [3188743](https://support.microsoft.com/help/3188743)|MS16-120: Description of the Security and Quality Rollup for .NET Framework 3.5 for Windows 8.1 and Windows Server 2012 R2: October 11, 2016|
 | [3192392](https://support.microsoft.com/help/3192392)|October 2016 security only quality update for Windows 8.1 and Windows Server 2012 R2|
 | [3200006](https://support.microsoft.com/help/3200006)|System Center Operations Manager Management Console crashes after you install MS16-118 and MS16-126|
-|||
-
+  
 #### System Center and Windows Azure Pack updates (from previous updates)
 
 |KB article|Description|
@@ -270,8 +264,7 @@ The compliance scan output is written to the following location to which the upd
 | [3147172](https://support.microsoft.com/help/3147172)|This update fixes the problems described in KB article 3147172|
 | [3147167](https://support.microsoft.com/help/3147167)|This update fixes the problems described in KB article 3147167|
 | [3158609](https://support.microsoft.com/help/3158609)|This update fixes the problems described in KB article 3158609|
-|||
-
+  
 #### Hardware (driver and firmware) updates (from previous updates)
 
 |Component|Category|1606 Version|
@@ -283,8 +276,7 @@ The compliance scan output is written to the following location to which the upd
 |R630|SAS HBA - Internal|6.603.07.00|
 |C6320|Chipset|10.1.2.19|
 |R630|Chipset|10.1.2.19|
-||||
-
+  
 #### Updates for Windows Server 2012 R2 (from previous updates)
 
 |KB Article|Description|
@@ -556,15 +548,13 @@ The compliance scan output is written to the following location to which the upd
 | [2538243](https://support.microsoft.com/help/2538243)|MS11-025: Description of the security update for Visual C++ 2008 SP1 Redistributable Package: June 14, 2011|
 | [2538241](https://support.microsoft.com/help/2538241)|MS11-025: Description of the security update for Visual Studio 2008 SP1: June 14, 2011|
 | [2467173](https://support.microsoft.com/help/2467173)|MS11-025: Description of the security update for Visual C++ 2010 Redistributable Package: April 12, 2011|
-|||
-
+  
 #### Updates for SQL Server 2012 (from previous updates)
 
 |KB article|Description|
 |---|---|
 | [3072779](https://support.microsoft.com/help/3072779)|SQL Server 2012 Service Pack 3 release information|
-|||
-
+  
 ## Troubleshooting
 
 ### Issue 1
@@ -595,7 +585,7 @@ Verify the SQL Server version. To do this, follow these steps:
 1. Open SQL Server Management Studio.
 2. Connect to the **\<Prefix>** -SH-SQL\SCSHAREDDB instance.
 3. Click **New Query**.
-4. Run the following command: 
+4. Run the following command:
 
     ```
     SELECT @@VERSION
@@ -643,9 +633,9 @@ In the VMM console, look for one or more failed "Perform servicing on a Service"
 > Error (22655)
 >
 > VMM is unable to retrieve status from computer
-> 
+>
 > Recommended Action
-> 
+>
 > Check if the computer is running and the VM guest agent is in a healthy state.
 
 ### Resolution
@@ -661,5 +651,7 @@ To resolve this problem, follow these steps:
 2. Restart the P&U process.  
 
 **Third-party information disclaimer**
- 
+
 Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

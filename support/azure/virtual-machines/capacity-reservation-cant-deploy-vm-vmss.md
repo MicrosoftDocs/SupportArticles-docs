@@ -2,9 +2,9 @@
 title: Can't deploy Virtual Machines or Virtual Machine Scale Sets (Uniform) with Capacity Reservation
 description: The following article discusses why you may not be able to deploy virtual machines (VMs) or Virtual Machine Scale Sets (VMSS) with Capacity Reservation.
 ms.date: 08/26/2021
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-capacity-reservation
 ms.collection: windows
 ---
 
@@ -46,3 +46,5 @@ If you have an existing Capacity Reservations that you can't use with VMs or VMS
 - Trying to attach a running VM/VMSS without first de-allocating the VM/VMSS.
 
   To attach running VM/VMSS to Capacity Reservation, the VM/VMSS must first be de-allocated. At the time of reallocation, reference Capacity Reservation as a property of the VM/VMSS.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

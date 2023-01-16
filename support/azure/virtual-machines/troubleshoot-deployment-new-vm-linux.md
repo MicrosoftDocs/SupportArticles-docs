@@ -1,14 +1,14 @@
 ---
-title: Troubleshoot Linux VM deployment| Microsoft Docs
-description: Troubleshoot Resource Manager deployment issues when you create a new Linux virtual machine in Azure
+title: Troubleshoot Linux VM deployment
+description: Troubleshoot Resource Manager deployment issues when you create a new Linux virtual machine in Azure.
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
 
 author: srijang
 manager: dcscontentpm
-editor: ''
 tags: top-support-issue, azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-deploy
 ms.collection: linux
 ms.workload: na
 ms.tgt_pltfrm: vm-linux
@@ -76,7 +76,7 @@ To identify the reason for failed provisioning you will need to start with the s
 
 You will need to deploy a new VM with [boot diagnostics enabled](/cli/azure/vm/boot-diagnostics) for the VM with the failing image to access provisioning events in the serial log.
 
-```bash
+```azurecli
 # create resource group
 resourceGroup=myBrokenImageRG
 location=westus2
@@ -108,7 +108,7 @@ az vm create \
 
 To view the serial log, you can go to the Portal, or run the command below to download the 'serialConsoleLogBlobUri' log:
 
-```bash
+```azurecli
 az vm boot-diagnostics get-boot-log-uris --name $vmName --resource-group $resourceGroup
 ```
 
@@ -125,7 +125,7 @@ When the VM is created for the first time, cloud-init will start up and try to m
 | Common systemd networking targets across different distros | `[ [0;32m  OK   [0m] Reached target Network (Pre).`<br>`[ [0;32m  OK   [0m] Reached target Network.`<br>`[ [0;32m  OK   [0m] Reached target Network is Online.` | Search for `Reached target Network`. |
 | In-depth networking status and networking targets for Ubuntu and distros where system networking is managed by `systemd-network`. | `Starting Network Time Synchronization...`<br>`[ [0;32m  OK   [0m] Started Network Time Synchronization.`<br>`Starting Initial cloud-init job (pre-networking)...`<br>`[ [0;32m  OK   [0m] Started Initial cloud-init job (pre-networking).`<br>`[ [0;32m  OK   [0m] Reached target Network (Pre).`<br>`Starting Network Service...`<br>`[ [0;32m  OK   [0m] Started Network Service.`<br>`Starting Wait for Network to be Configured...`<br>`Starting Network Name Resolution...`<br>`[ [0;32m  OK   [0m] Started Network Name Resolution.`<br>`[ [0;32m  OK   [0m] Reached target Network.`<br>`[ [0;32m  OK   [0m] Reached target Host and Network Name Lookups.`<br>`[ [0;32m  OK   [0m] Started Wait for Network to be Configured.`<br>`[ [0;32m  OK   [0m] Reached target Network is Online.`<br>`Starting Dispatcher daemon for systemd-networkd...`<br>`[ [0;32m  OK   [0m] Started Dispatcher daemon for systemd-networkd.` | Search for `network` or `networkd`. |
 | In-depth networking status and networking targets for RHEL/CentOS and distros where system networking is managed by `Network Manager`. | `Starting Read and set NIS domainname from /etc/sysconfig/network...`<br>`[ [32m  OK   [0m] Started Read and set NIS domainname from /etc/sysconfig/network.`<br>`Starting Import network configuration from initramfs...`<br>`[ [32m  OK   [0m] Started Import network configuration from initramfs.`<br>`Starting Initial cloud-init job (pre-networking)...`<br>`[ [32m  OK   [0m] Started Initial cloud-init job (pre-networking).`<br>`[ [32m  OK   [0m] Reached target Network (Pre).`<br>`Starting Network Manager...`<br>`[ [32m  OK   [0m] Started Network Manager.`<br>`Starting Network Manager Wait Online...`<br>`Starting Network Manager Script Dispatcher Service...`<br>`[ [32m  OK   [0m] Started Network Manager Script Dispatcher Service.`<br>`[ [32m  OK   [0m] Started Network Manager Wait Online.`<br>`Starting LSB: Bring up/down networking...`<br>`[ [32m  OK   [0m] Started LSB: Bring up/down networking.`<br>`[ [32m  OK   [0m] Reached target Network.`<br>`[ [32m  OK   [0m] Reached target Network is Online.` | Search for `network` or `Network Manager`. |
-| In-depth networking status and networking targets for SUSE/SLES and distros where system networking is managed by `Wicked`. | `Starting Initial cloud-init job (pre-networking)...`<br>`[ [0;32m  OK   [0m] Reached target Host and Network Name Lookups.`<br>`[ [0;32m  OK   [0m] Started Initial cloud-init job (pre-networking).`<br>`[ [0;32m  OK   [0m] Reached target Network (Pre).`<br>`Starting wicked DHCPv6 supplicant service...`<br>`Starting wicked DHCPv4 supplicant service...`<br>`Starting wicked AutoIPv4 supplicant service...`<br>`[ [0;32m  OK   [0m] Started wicked DHCPv6 supplicant service.`<br>`[ [0;32m  OK   [0m] Started wicked DHCPv4 supplicant service.`<br>`[ [0;32m  OK   [0m] Started wicked AutoIPv4 supplicant service.`<br>`Starting wicked network management service daemon...`<br>`[ [0;32m  OK   [0m] Started wicked network management service daemon.`<br>`Starting wicked network nanny service...`<br>`[ [0;32m  OK   [0m] Started wicked network nanny service.`<br>`Starting wicked managed network interfaces...`<br>`[    [0;31m* [0;1;31m* [0m [0;31m* [0m] A start job is running for wicked m…etwork interfaces (22s / no limit)`<br>`[K[   [0;31m* [0;1;31m* [0m [0;31m*  [0m] A start job is running for wicked m…etwork interfaces (28s / no limit)`<br>`[K[  [0;31m* [0;1;31m* [0m [0;31m*   [0m] A start job is running for wicked m…etwork interfaces (32s / no limit)`<br>`[K[ [0;32m  OK   [0m] Started wicked managed network interfaces.`<br>`[ [0;32m  OK   [0m] Reached target Network.`<br>`[ [0;32m  OK   [0m] Reached target Network is Online.` | Search for `network` or `wicked`. | 
+| In-depth networking status and networking targets for SUSE/SLES and distros where system networking is managed by `Wicked`. | `Starting Initial cloud-init job (pre-networking)...`<br>`[ [0;32m  OK   [0m] Reached target Host and Network Name Lookups.`<br>`[ [0;32m  OK   [0m] Started Initial cloud-init job (pre-networking).`<br>`[ [0;32m  OK   [0m] Reached target Network (Pre).`<br>`Starting wicked DHCPv6 supplicant service...`<br>`Starting wicked DHCPv4 supplicant service...`<br>`Starting wicked AutoIPv4 supplicant service...`<br>`[ [0;32m  OK   [0m] Started wicked DHCPv6 supplicant service.`<br>`[ [0;32m  OK   [0m] Started wicked DHCPv4 supplicant service.`<br>`[ [0;32m  OK   [0m] Started wicked AutoIPv4 supplicant service.`<br>`Starting wicked network management service daemon...`<br>`[ [0;32m  OK   [0m] Started wicked network management service daemon.`<br>`Starting wicked network nanny service...`<br>`[ [0;32m  OK   [0m] Started wicked network nanny service.`<br>`Starting wicked managed network interfaces...`<br>`[    [0;31m* [0;1;31m* [0m [0;31m* [0m] A start job is running for wicked m…etwork interfaces (22s / no limit)`<br>`[K[   [0;31m* [0;1;31m* [0m [0;31m*  [0m] A start job is running for wicked m…etwork interfaces (28s / no limit)`<br>`[K[  [0;31m* [0;1;31m* [0m [0;31m*   [0m] A start job is running for wicked m…etwork interfaces (32s / no limit)`<br>`[K[ [0;32m  OK   [0m] Started wicked managed network interfaces.`<br>`[ [0;32m  OK   [0m] Reached target Network.`<br>`[ [0;32m  OK   [0m] Reached target Network is Online.` | Search for `network` or `wicked`. |
 | Did boot reach far enough for cloud-init to start? | `Starting Initial cloud-init job (pre-networking)...`<br>`Starting Initial cloud-init job (metadata service crawler)...` | Search for `Starting Initial cloud-init job`. |
 | Cloud-init version and cloud-init stages reached | `[   22.446387] cloud-init[703]: Cloud-init v. 20.3-2-g371b392c-0ubuntu1~18.04.1 running 'init-local' at Wed, 28 Oct 2020 17:46:30 +0000. Up 21.23 seconds.`<br>`[   28.357120] cloud-init[837]: Cloud-init v. 20.3-2-g371b392c-0ubuntu1~18.04.1 running 'init' at Wed, 28 Oct 2020 17:46:34 +0000. Up 24.52 seconds.`<br>`[   50.421009] cloud-init[1445]: Cloud-init v. 20.3-2-g371b392c-0ubuntu1~18.04.1 running 'modules:config' at Wed, 28 Oct 2020 17:46:57 +0000. Up 48.21 seconds.`<br>`[   51.338792] cloud-init[1541]: Cloud-init v. 20.3-2-g371b392c-0ubuntu1~18.04.1 running 'modules:final' at Wed, 28 Oct 2020 17:47:00 +0000. Up 51.01 seconds.`<br>`[   51.366837] cloud-init[1541]: Cloud-init v. 20.3-2-g371b392c-0ubuntu1~18.04.1 finished at Wed, 28 Oct 2020 17:47:01 +0000. Datasource DataSourceAzure [seed=/dev/sr0].  Up 51.32 seconds` | Search for `Cloud-init v`. |
 | Network interfaces (NICs), NIC states (up/down), and NIC IP addresses. Shows if NIC IP addresses were properly configured and assigned. IP address assignment could either be dynamic through DHCP or statically configured. | `[   28.381544] cloud-init[837]: ci-info: ++++++++++++++++++++++++++++++++++++++Net device info+++++++++++++++++++++++++++++++++++++++`<br>`[   28.396781] cloud-init[837]: ci-info: +--------+------+-----------------------------+---------------+--------+-------------------+`<br>`[   28.416501] cloud-init[837]: ci-info: | Device |  Up  |           Address           |      Mask     | Scope  |     Hw-Address    |`<br>`[   28.427493] cloud-init[837]: ci-info: +--------+------+-----------------------------+---------------+--------+-------------------+`<br>`[   28.446544] cloud-init[837]: ci-info: |  eth0  | True |           10.0.0.4          | 255.255.255.0 | global | 00:0d:3a:c6:17:d5 |`<br>`[   28.460031] cloud-init[837]: ci-info: |  eth0  | True | fe80::20d:3aff:fec6:17d5/64 |       .       |  link  | 00:0d:3a:c6:17:d5 |`<br>`[   28.476415] cloud-init[837]: ci-info: |   lo   | True |          127.0.0.1          |   255.0.0.0   |  host  |         .         |`<br>`[   28.487962] cloud-init[837]: ci-info: |   lo   | True |           ::1/128           |       .       |  host  |         .         |`<br>`[   28.498191] cloud-init[837]: ci-info: +--------+------+-----------------------------+---------------+--------+-------------------+` | Search for `ci-info` or `Net device info`. |
@@ -218,9 +218,9 @@ Cloud-init versions >= 20.3 contain a fix which falls back and executes `dhclien
 
 ### Getting more logs
 
-If you find that you need more logs from the VM to understand the issues, you maybe can SSH into the VM using the [serial console](/azure/virtual-machines/troubleshooting/serial-console-linux) using a user that is baked into the image. If you do not have a user baked in, then you can either recreate the image with a user, or use the [AZ VM Repair tool](/cli/azure/ext/vm-repair/vm/repair#ext_vm_repair_az_vm_repair_create) which will mount the OS disk of the VM that failed to provision, to another VM.
+If you find that you need more logs from the VM to understand the issues, you maybe can SSH into the VM using the [serial console](/azure/virtual-machines/troubleshooting/serial-console-linux) using a user that is baked into the image. If you do not have a user baked in, then you can either recreate the image with a user, or use the [AZ VM Repair tool](/cli/azure/vm/repair#az-vm-repair-create) which will mount the OS disk of the VM that failed to provision, to another VM.
 
-```bash
+```azurecli
 az vm repair create  \
     --resource-group $resourceGroup \
     --name $vmName \
@@ -376,5 +376,7 @@ Yes. You can add an existing classic VM to a new or existing Availability Set. F
 
 ## Next steps
 
-* [Supportability of adding Azure VMs to an existing availability set](/troubleshoot/azure/virtual-machines/virtual-machines-availability-set-supportability)
-* [Redeploy Linux virtual machine to new Azure node](/troubleshoot/azure/virtual-machines/redeploy-to-new-node-linux)
+- [Supportability of adding Azure VMs to an existing availability set](/troubleshoot/azure/virtual-machines/virtual-machines-availability-set-supportability)
+- [Redeploy Linux virtual machine to new Azure node](/troubleshoot/azure/virtual-machines/redeploy-to-new-node-linux)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

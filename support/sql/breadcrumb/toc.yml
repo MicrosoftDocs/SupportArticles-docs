@@ -1,0 +1,18 @@
+- name: Docs
+  tocHref: /
+  topicHref: /index
+  items:
+
+  - name: Troubleshoot
+    tocHref: /sql/
+    topicHref: /troubleshoot/index
+    items:
+    - name: SQL Server
+      tocHref: /sql/sql-server/
+      topicHref: /troubleshoot/sql/welcome-sql-server
+    - name: SQL Server
+      tocHref: /sql/linux/
+      topicHref: /troubleshoot/sql/welcome-sql-server
+    - name: SQL Server
+      tocHref: /sql/relational-databases/
+      topicHref: /troubleshoot/sql/welcome-sql-server

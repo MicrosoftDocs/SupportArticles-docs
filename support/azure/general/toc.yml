@@ -19,28 +19,19 @@
     href: apim-troubleshooting-series.md
   - name: Blank response is returned
     href: api-return-blank-response.md
-  - name: HTTP 403 - Forbidden issues
-    href: request-throttling-http-403.md
   - name: HTTP 404 and 500 status codes
     href: soap-based-api-return-404-http-code.md
-  - name: Performance issues in API calls
-    href: performance-hit-api-calls.md
   - name: Unauthorized errors (401)
     href: unauthorized-errors-invoke-apis.md
+  - name: Performance issues in API calls
+    href: performance-hit-api-calls.md
+  - name: HTTP 403 - Forbidden issues
+    href: request-throttling-http-403.md
 
-- name: Azure App Service
-  items:
-  - name: App Service Compliance with PCI Standards 3.0 and 3.1
-    href: app-service-compliance-wit.md
-  - name: Backing up, restoring, and cloning
-    href: backing-up-restoring-and-cloning-microsoft-azure-app-services.md
-  - name: Troubleshoot temporary storage
-    href: temporary-storage-for-azure-app-service.md
-  - name: Troubleshoot instance-related issues
-    href: troubleshoot-instance-related-issues-on-azure-app-service.md
-    
 - name: Azure Stack
   items:
+  - name: Kernel Soft Reboot error c0000034
+    href: azure-stack-hci-kernel-soft-reboot-error-c0000034.md
   - name: Side-channel vulnerabilities protection
     href: side-channel-vulnerabilities.md
   - name: Warning message in Azure Stack
@@ -76,7 +67,7 @@
   - name: Update 2.1 for Cloud Platform System Premium
     href: update-2.1-for-cloud-platform-system-premium.md
 
-- name: Azure information Protection
+- name: Azure Information Protection
   items:
   - name: Troubleshoot Azure Information Protection policy issues
     href: troubleshoot-aip-issues.md
@@ -91,19 +82,63 @@
   - name: Azure Service Fabric troubleshooter
     href: fabric-logs.md
 
-
 - name: Azure Storage
   items:
   - name: Embedded application error when install Azure backup agent
     href: unable-to-execute-the-embedded-application-error-backup-agent.md
-  - name: Data restore scenarios for Azure Storage service
-    href: data-restore-storage.md
+  - name: Invalid blob or block content, or invalid block list
+    href: invalid-blob-or-block-content-or-invalid-block-list.md
   - name: Request body is too large error when write to file
     href: request-body-large.md
   - name: Optimize CreateFile function
     href: optimize-createfile-function.md
   - name: Troubleshoot high CPU or disk usage issues
     href: diagnose-high-cpu-disk-perfinsights.md
+
+- name: Azure Batch
+  items:
+  - name: Access to storage account is denied
+    href: access-denied-execute-azure-batch-job.md
+  - name: AccountEncryptionKeyUnavailable error message
+    href: error-accountencryptionkeyunavailable.md
+  - name: Batch node creation delays when restarting or reimaging
+    href: batch-node-creation-delay-restart-reimage.md
+  - name: Batch pool creation failure
+    href: azure-batch-pool-creation-failure.md
+  - name: Batch pool deletion failure
+    href: azure-batch-pool-deletion-failure.md
+  - name: Batch pool resizing failure
+    href: azure-batch-pool-resizing-failure.md
+  - name: Use managed identities in a Batch account or a Batch pool
+    href: use-managed-identities-azure-batch-account-pool.md
+
+- name: CycleCloud
+  items:
+  - name: Error "Client secret key is expired"
+    href: invalid-client-secret.md
+  - name: Error "Invalid Azure credentials provided" 
+    href: error-invalid-azure-credentials-cycle-cloud.md
+
+- name: HPC Pack
+  items:
+  - name: Failed Linux compute node agent extension installation
+    href: troubleshoot-install-failure-hpc-pack-linux-node-agent.md
+  - name: HPC jobs are stuck in canceling mode, and new jobs don't start
+    href: job-stuck-canceling-mode.md
+  - name: HPC Management Service fails to start after restoring database
+    href: hpc-management-service-not-start.md
+  - name: HPC compute nodes aren't shown or are in error state
+    href: compute-node-not-shown-error-state.md
+  - name: HPC node manager service unreachable
+    href: hpc-node-manager-service-unreachable-certificate.md
+  - name: HPC Pack Excel offloading job is stalled
+    href: hpc-pack-excel-offloading-job-stalled.md
+  - name: HPC reporting database connection problem
+    href: hpc-management-reporting-database-connection-issue.md
+  - name: HPC reporting database permission problem
+    href: hpc-management-reporting-database-permission-problem.md
+  - name: Error "No virtual network found" when you enter the application ID
+    href: error-no-virtual-network-found.md
 
 - name: General
   items:

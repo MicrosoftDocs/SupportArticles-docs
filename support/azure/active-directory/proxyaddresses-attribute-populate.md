@@ -1,9 +1,8 @@
 ---
 title: How the proxyAddresses attribute is populated in Azure AD
 description: Describes how the proxyAddresses attribute is populated in Azure AD. Provides example scenarios.
-ms.date: 05/09/2020
-ms.prod-support-area-path: 
-ms.reviewer: willfid
+ms.date: 05/23/2022
+ms.reviewer: "willfid,riantu,nualex,reviei"
 ms.service: active-directory
 ms.subservice: enterprise-users
 ---
@@ -14,238 +13,317 @@ This article describes how the proxyAddresses attribute is populated in Azure Ac
 _Original product version:_ &nbsp; Azure Active Directory  
 _Original KB number:_ &nbsp; 3190357
 
-The proxyAddresses attribute in Active Directory is a multi-value property that can contain various known address entries. For example, it can contain SMTP addresses, X500 addresses, SIP addresses, and so on. When an object is synchronized to Azure AD, the values that are specified in the proxyAddresses attribute in Active Directory are compared with Azure AD rules, and then the proxyAddresses attribute is populated in Azure AD. Therefore, the values of the proxyAddresses attribute for the object in Active Directory may not be the same as the values of the proxyAddresses attribute in Azure AD.
+The proxyAddresses attribute in Active Directory is a multi-value property that can contain various known address entries. For example, it can contain SMTP addresses, X500 addresses, SIP addresses, and so on. When an object is synchronized to Azure AD, the values that are specified in the mail or proxyAddresses attribute in Active Directory are copied to a shadow mail or proxyAddresses attribute in Azure AD, and then are used to calculate the final proxyAddresses of the object in Azure AD according to internal Azure AD rules. The logic that populates mail, mailNickName and proxyAddresses attributes in Azure AD is called proxy calculation and it takes into account many different aspects of the on-premises Active Directory data, such as:
+
+- Set or update the Primary SMTP address and additional secondary addresses based on the on-premises ProxyAddresses or UserPrincipalName. 
+- Set or update the Mail attribute based on the calculated Primary SMTP address.
+- Set or update the MailNickName attribute based on the on-premises MailNickName or Primary SMTP address prefix.
+- Discard on-premises addresses that have a reserved domain suffix, e.g. @\*.onmicrosoft.com, @\*.microsoftonline.com;
+- Discard on-premises ProxyAddresses with legacy protocols like MSMAIL, X400, etc;
+- Discard malformed on-premises addresses or not compliant with RFC 5322, e.g. missing protocol prefix "SMTP:", containing a space or other invalid character;
+- Remove ProxyAddresses with a non-verified domain suffix, if the user is assigned an Exchange Online license.
+
+Therefore, the values of the Mail and ProxyAddresses attributes for the object in Active Directory may not be the same as the values of the ProxyAddresses attribute in Azure AD.
 
 ## Terminology
 
 The following terminology is used in this article:
 
-- Initial domain: It's the first provisioned domain in the tenant. For example, `contoso.onmicrosoft.com`.
-- Microsoft Online Email Routing Address (MOERA): The MOERA is constructed from the user's userPrincipalName attribute in Active Directory and is automatically assigned to the cloud account during the initial sync. For example, `user@contoso.onmicrosoft.com`.
-- Primary SMTP address: It's the primary email address of an Exchange recipient object. For example, SMTP:`user@contoso.com`.
-- Secondary SMTP address: It's the secondary email address of an Exchange recipient object, which can have multiple secondary email addresses. For example, smtp:`user@contoso.com`.
-- User principal name (UPN): The UPN can be the sign-in name of the user.
-- mail attribute: It's an attribute in Active Directory, the value of which represents the email address of a user.
-- mailNickName attribute: It's an attribute in Active Directory, the value of which represents the alias of a user in an Exchange organization.
+- Initial domain: The first domain provisioned in the tenant. For example, `Contoso.onmicrosoft.com`.
+- Microsoft Online Email Routing Address (MOERA): The address constructed from the user's userPrincipalName prefix, plus the initial domain suffix, which is automatically added to the proxyAddresses in Azure AD. For example, `smtp:john.doe@Contoso.onmicrosoft.com`.
+- UserPrincipalName (UPN): The sign-in address of the user.
+- Primary SMTP address: The primary email address of an Exchange recipient object, including the SMTP protocol prefix. For example, `SMTP:john.doe@Contoso.com`.
+- Secondary smtp address: Additional email address(es) of an Exchange recipient object. For example, `smtp:john.doe@Contoso.com`.
+- Mail attribute: Holds the primary email address of a user, without the SMTP protocol prefix. For example, `john.doe@Contoso.com`.
+- MailNickName attribute: Holds the alias of an Exchange recipient object. For example, `john.doe`.
 
 ## Scenario 1: User doesn't have the mail, mailNickName, or proxyAddresses attribute set
 
 You created an on-premises user object that has the following attributes set:
 
-> UPN: `onprema@contoso.com`  
-> mail: \<not set>  
-> mailNickName: \<not set>  
-> proxyAddresses: \<not set>  
+```
+AD:mail              : \<not set>
+AD:mailNickName      : \<not set>
+AD:proxyAddresses    : {\<not set>}
+AD:userPrincipalName : user1upn@Contoso.com
+```
 
-Next, it's synchronized to Office 365 and assigned an Exchange Online license. In this scenario, the following operations are performed because of system calculation:
+Next, it's synchronized to Azure AD and only the mailNickName attribute is populated by using the prefix of the UPN, because it's a mandatory attribute:
 
-- Populate the mailNickName attribute by using the user part of the UPN.
-- Populate the MOERA by using the format mailNickName@initial domain.
-- Populate the mail attribute by using the same value as the UPN.
-- Add the UPN as **the primary** SMTP address in the proxyAddresses attribute.
-- Add the MOERA as **a secondary** SMTP address in the proxyAddresses attribute.
+```
+AAD:mailNickName      : user1upn
+AAD:UserPrincipalName : user1upn@Contoso.com
+```
 
-The following attributes are set in Azure AD on the synchronized user object:
+Then, it's assigned an Exchange Online license. In this scenario, the following operations are performed due to proxy calculation:
 
-> UPN: `onprema@contoso.com`  
-> mail: `onprema@contoso.com`  
-> mailNickName: onprema  
-> proxyAddresses: {smtp:`onprema@contoso.onmicrosoft.com`,SMTP:`onprema@contoso.com`}
+- Set the primary SMTP address in the proxyAddresses attribute by using the UPN value.
+- Populate the mail attribute by using the primary SMTP address.
+- Add the MOERA as a secondary smtp address in the proxyAddresses attribute, by using the format of mailNickName@initial domain.
+
+The following attributes are set in Azure AD on the synchronized user object with Exchange Online license:
+
+```
+AAD:mail              : user1upn@Contoso.com
+AAD:mailNickName      : user1upn
+AAD:proxyAddresses    : {smtp:user1upn@Contoso.onmicrosoft.com; SMTP:user1upn@Contoso.com}
+AAD:userPrincipalName : user1upn@Contoso.com
+```
 
 ## Scenario 2: User doesn't have the mailNickName or proxyAddresses attribute set
 
 You created an on-premises user object that has the following attributes set:
 
-> UPN: `onpremb@contoso.com`  
-> mail: `newb@contoso.com`  
-> mailNickName: \<not set>  
-> proxyAddresses: \<not set>
+```
+AD:mail              : user2mail@Contoso.com
+AD:mailNickName      : \<not set>
+AD:proxyAddresses    : {\<not set>}
+AD:userPrincipalName : user2upn@Contoso.com
+```
 
-Next, it's synchronized to Office 365 and assigned an Exchange Online license. In this scenario, the following operations are performed because of system calculation.
+Next, it's synchronized to Azure AD and the following operations are performed due to proxy calculation:
 
-- Populate the mailNickName attribute by using the user's part of the mail attribute.
-- Populate the MOERA by using the format of mailNickName@initial domain.
-- Populate the mail attribute by using the same value as the mail attribute.
-- Add the UPN as a secondary SMTP address in the proxyAddresses attribute.
-- Add the mail attribute as the primary SMTP address in the proxyAddresses attribute.
-- Add the MOERA as a secondary SMTP address in the proxyAddresses attribute.
+- Set the primary SMTP using the same value of the mail attribute.
+- Populate the mailNickName attribute by using the primary SMTP address prefix.
+- Populate the mail attribute by using the primary SMTP address.
 
-The following attributes are set in Azure AD on the synchronized user object:
+The following attributes are set in Azure AD upon initial user provisioning:
 
-> UPN: `onpremb@contoso.com`  
-> mail: `newb@contoso.com`  
-> mailNickName: newb  
-> proxyAddresses: {SMTP:`newb@contoso.com`,`smtp:onpremb@contoso.com`,smtp:`newb@contoso.onmicrosoft.com`}
+```
+AAD:mail              : user2mail@Contoso.com
+AAD:mailNickName      : user2mail
+AAD:proxyAddresses    : {SMTP:user2mail@Contoso.com}
+AAD:userPrincipalName : user2upn@Contoso.com
+```
+
+Then, it's assigned an Exchange Online license. In this scenario, the following operation is performed as a result of proxy calculation:
+
+- Add the UPN as a secondary smtp address in the proxyAddresses attribute.
+- Add the MOERA as a secondary smtp address in the proxyAddresses attribute, by using the format of mailNickName@initial domain.
+
+The following attributes are set in Azure AD on the synchronized user object with Exchange Online license:
+
+```
+AAD:mail              : user2mail@Contoso.com
+AAD:mailNickName      : user2mail
+AAD:proxyAddresses    : {smtp:user2upn@Contoso.com; smtp:user2mail@Contoso.onmicrosoft.com; SMTP:user2mail@Contoso.com}
+AAD:userPrincipalName : user2upn@Contoso.com
+```
 
 ## Scenario 3: You change the proxyAddresses attribute values of the on-premises user
 
 You created an on-premises user object that has the following attributes set:
 
-> UPN: `us1@contoso.com`  
-> mail: \<not set>  
-> mailNickName: \<not set>  
-> proxyAddresses: {smtp:`us1@contoso.onmicrosoft.com`,smtp:`us1@contoso.microsoftonline.com`,x500:/ o=MicrosoftOnline/ ou=External(FYDIBOHF25SPDLT)/ cn=Recipients/ cn=us1,SMTP:`us1@contoso.com`}
+```
+AD:mail              : \<not set>
+AD:mailNickName      : \<not set>
+AD:proxyAddresses    : {smtp:user3pa3@Fabrikam.microsoftonline.com, smtp:user3pa2@Contoso.onmicrosoft.com, SMTP:user3pa1@Contoso.com}
+AD:userPrincipalName : user3upn@Contoso.com
+```
 
-Next, it's synchronized to Office 365 and assigned an Exchange Online license. In this scenario, the following operations are performed because of system calculation:
+Next, it's synchronized to Azure AD and assigned an Exchange Online license. In this scenario, the following operation is performed as a result of proxy calculation:
 
-- Populate the mailNickName  attribute by using the user's part of the UPN.
-- Populate the MOERA by using mailNickName@initial domain.
-- Add the mail attribute by using the same value of the primary SMTP address that's specified in the proxyAddresses attribute.
-- Keep the MOERA as a secondary SMTP address in the proxyAddresses attribute.
-- Keep the current primary SMTP address in the proxyAddresses attribute.
-- Remove addresses that match the following pattern:
-  - SMTP address suffix is `xxx.onmicrosoft.com`
-  - SMTP address suffix is `xxx.microsoftonline.com`
-  - The organization's part of X500 address is /o=MicrosoftOnline
+- Discard addresses that have a reserved domain suffix. In this example, the following addresses are skipped:
+  - `smtp:user3pa2@Contoso.onmicrosoft.com`
+  - `smtp:user3pa3@Fabrikam.microsoftonline.com`
+- Set the primary SMTP using the same address that's specified in the on-premises proxyAddresses attribute.
+- Populate the mailNickName attribute by using the primary SMTP address prefix.
+- Populate the mail attribute by using the primary SMTP address.
+- Add the MOERA as a secondary smtp address in the proxyAddresses attribute, by using the format of mailNickName@initial domain.
+- Add the UPN as a secondary smtp address in the proxyAddresses attribute.
 
 The following attributes are set in Azure AD on the synchronized user object:
 
-> UPN: `us1@contoso.com`  
-> mail: `us1@contoso.com`  
-> mailNickName: us1  
-> proxyAddresses: {smtp:`us1@contoso.onmicrosoft.com`,SMTP:`us1@contoso.com`}
+```
+AAD:mail              : user3pa1@Contoso.com
+AAD:mailNickName      : user3pa1
+AAD:proxyAddresses    : {smtp:user3upn@Contoso.com; smtp:user3pa1@Contoso.onmicrosoft.com; SMTP:user3pa1@Contoso.com}
+AAD:userPrincipalName : user3upn@Contoso.com
+```
 
-Then, you change the values of the proxyAddresses attribute to the following ones:
+Then, you change the values of the on-premises proxyAddresses attribute to the following ones:
 
-> UPN: `us1@contoso.com`
-> mail: \<not set>  
-> mailNickName: \<not set>  
-> proxyAddresses: {smtp:`newus1@contoso.onmicrosoft.com`,smtp:`newus1@contoso.microsoftonline.com`,x500:/o=MicrosoftOnline/ou=External (FYDIBOHF25SPDLT)/cn=Recipients/cn=us1,SMTP:`newus1@contoso.com`}
+```
+AD:mail              : \<not set>
+AD:mailNickName      : \<not set>
+AD:proxyAddresses    : {smtp:user3new3@Fabrikam.microsoftonline.com, smtp:user3new2@Contoso.onmicrosoft.com, SMTP:user3new1@Contoso.com}
+AD:userPrincipalName : user3upn@Contoso.com
+```
 
-In this scenario, the following operations are performed because of system calculation:
+In this scenario, the following operation is performed as a result of proxy calculation:
 
-- Add the primary SMTP address that's specified in the proxyAddresses attribute.
-- Update the mail attribute by using the value of primary SMTP address specified in the proxyAddresse s attribute.
+- Discard addresses that have a reserved domain suffix. For example, the following addresses are skipped:
+  - `smtp:user3new2@Contoso.onmicrosoft.com`
+  - `smtp:user3new3@Fabrikam.microsoftonline.com`
+- Replace the new primary SMTP address that's specified in the proxyAddresses attribute.
+- Update the mail attribute by using the value of te new primary SMTP address specified in the proxyAddresses attribute.
+- Keep the old mailNickName since the on-premises mailNickName is not set nor its value have changed.
+- Keep the old MOERA as a secondary smtp address in the proxyAddresses attribute.
 - Keep the UPN as a secondary SMTP address in the proxyAddresses attribute.
 
 The following attributes are set in Azure AD on the synchronized user object:
 
-> UPN: `us1@contoso.com`  
-> mail: `newus1@contoso.com`  
-> mailNickName: us1  
-> proxyAddresses: {smtp:`us1@contoso.onmicrosoft.com`,SMTP:`newus1@contoso.com`,smtp:`us1@contoso.com`}
+```
+AAD:mail              : user3new1@Contoso.com
+AAD:mailNickName      : user3pa1
+AAD:proxyAddresses    : {SMTP:user3new1@Contoso.com; smtp:user3upn@Contoso.com; smtp:user3pa1@Contoso.onmicrosoft.com}
+AAD:userPrincipalName : user3upn@Contoso.com
+```
 
 ## Scenario 4: Exchange Online license is removed
 
 You created an on-premises user object that has the following attributes set:
 
-> UPN: `us2@contoso.com`  
-> mail: \<not set>  
-> mailNickName: \<not set>  
-> proxyAddresses: \<not set>
+```
+AD:mail              : \<not set>
+AD:mailNickName      : \<not set>
+AD:proxyAddresses    : {\<not set>}
+AD:userPrincipalName : user4upn@Contoso.com
+```
 
-Next, it's synchronized to Office 365 and assigned an Exchange Online license. In this scenario, the following operations are performed because of system calculation:
+Next, it's synchronized to Azure AD and assigned an Exchange Online license. In this scenario, the following operation is performed as a result of proxy calculation:
 
-- Populate the mailNickName attribute by using the user part of the UPN.
-- Populate the MOERA  by using the format mailNickName@initial domain.
-- Populate the mail attribute by using the same value as the UPN.
-- Add the UPN as a primary SMTP address in the proxyAddresses attribute.
-- Add the MOERA as the secondary SMTP address in the proxyAddresses attribute.
+- Set the primary SMTP address in the proxyAddresses attribute by using the UPN value.
+- Populate the mailNickName attribute by using the primary SMTP address prefix.
+- Populate the mail attribute by using the primary SMTP address.
+- Add the MOERA as a secondary smtp address in the proxyAddresses attribute, by using the format of mailNickName@initial domain.
 
 The following attributes are set in Azure AD on the synchronized user object:
 
-> UPN: `us2@contoso.com`  
-> mail: `us2@contoso.com`  
-> mailNickName: us2  
-> proxyAddresses: {smtp:`us2@contoso.onmicrosoft.com`,SMTP:`us2@contoso.com`}
+```
+AAD:mail              : user4upn@Contoso.com
+AAD:mailNickName      : user4upn
+AAD:proxyAddresses    : {smtp:user4upn@Contoso.onmicrosoft.com; SMTP:user4upn@Contoso.com}
+AAD:userPrincipalName : user4upn@Contoso.com
+```
 
-Then, you remove the Exchange Online license. Nothing changes in Azure AD. All attributes remain the same.
+Then, you remove the Exchange Online license and the following operation is performed as a result of proxy calculation:
 
-Then, you change the values of the proxyAddresses attribute to the following ones:
+- Remove the primary SMTP address in the proxyAddresses attribute corresponding to the UPN value.
+- Promote the MOERA from secondary to Primary SMTP address in the proxyAddresses attribute.
+- Update the mail attribute by using the primary SMTP address in the proxyAddresses attribute(MOERA).
 
-> UPN: `us2@contoso.com`  
-> mail: \<not set>  
-> mailNickName: \<not set>  
-> proxyAddresses: {smtp:`newus2@contoso.com`}
+```
+AAD:mail              : user4upn@Contoso.onmicrosoft.com
+AAD:mailNickName      : user4upn
+AAD:proxyAddresses    : {SMTP:user4upn@Contoso.onmicrosoft.com}
+AAD:userPrincipalName : user4upn@Contoso.com
+```
 
-In this scenario, the following operation is performed as a result of system calculation:
+Then, you add a secondary smtp address in the on-premises proxyAddresses attribute:
 
-- Add new SMTP address in the proxyAddresses attribute.
+```
+AD:mail              : \<not set>
+AD:mailNickName      : \<not set>
+AD:proxyAddresses    : {smtp:user4new@Contoso.com}
+AD:userPrincipalName : user4upn@Contoso.com
+```
+
+When the object is synchronized to Azure AD, the following operation is performed as a result of proxy calculation:
+
+- Add the secondary smtp address in the proxyAddresses attribute.
+- Add the UPN as a secondary smtp address in the proxyAddresses attribute.
 
 The following attributes set in Azure AD on the synchronized user object:
 
-> UPN: `us2@contoso.com`  
-> mail: `us2@contoso.onmicrosoft.com`  
-> mailNickName: us2  
-> proxyAddresses: {smtp:`us2@contoso.com`,SMTP:`us2@contoso.onmicrosoft.com`,smtp:`newus2@contoso.com`}
+```
+AAD:mail              : user4upn@Contoso.onmicrosoft.com
+AAD:mailNickName      : user4upn
+AAD:proxyAddresses    : {smtp:user4upn@Contoso.com; smtp:user4new@Contoso.com; SMTP:user4upn@Contoso.onmicrosoft.com}
+AAD:userPrincipalName : user4upn@Contoso.com
+```
 
 ## Scenario 5: The mailNickName attribute value is changed
 
-You created two on-premises user objects that have the following attributes set:
+You created an on-premises user object that has the following attributes set:
 
-> UPN: `us4@contoso.com`  
-> mail: \<not set>  
-> mailNickName: \<not set>  
-> proxyAddresses: \<not set>
+```
+AD:mail              : \<not set>
+AD:mailNickName      : \<not set>
+AD:proxyAddresses    : {\<not set>}
+AD:userPrincipalName : user5upn@Contoso.com
+```
 
-Next, it's synchronized to Office 365 and assigned an Exchange Online license. In this scenario, the following operations are performed because of system calculation:
+Next, it's synchronized to Azure AD and assigned an Exchange Online license. In this scenario, the following operation is performed as a result of proxy calculation:
 
-- Populate the mailNickName attribute by using the user's part of the UPN.
-- Populate the MOERA  by using the format mailNickName@initial domain.
-- Populate the mail attribute by using the same value as the MOERA.
-- Add the UPN as a secondary SMTP address in the proxyAddresses attribute.
-- Add the MOERA as the primary SMTP address in the proxyAddresses attribute.
+- Set the primary SMTP address in the proxyAddresses attribute by using the UPN value.
+- Populate the mailNickName attribute by using the primary SMTP address prefix.
+- Populate the mail attribute by using the primary SMTP address.
+- Add the MOERA as a secondary smtp address in the proxyAddresses attribute, by using the format of mailNickName@initial domain.
 
 The following attributes are set in Azure AD on the synchronized user object:
 
-> UPN: `us4@contoso.com`  
-> mail: `us4@contoso.onmicrosoft.com`  
-> mailNickName: us4
-> proxyAddresses: {smtp:`us4@contoso.com`,SMTP:`us4@contoso.onmicrosoft.com`}
+```
+AAD:mail              : user5upn@Contoso.com
+AAD:mailNickName      : user5upn
+AAD:proxyAddresses    : {smtp:user5upn@Contoso.onmicrosoft.com; SMTP:user5upn@Contoso.com}
+AAD:userPrincipalName : user5upn@Contoso.com
+```
 
-Then, you change the values of the proxyAddresses attribute of the on-premises user to the following ones:
+Then, you change the value of the on-premises mailNickName attribute to the following:
 
-> UPN: `us4@contoso.com`  
-> mail: \<not set>  
-> mailNickName: newus4  
-> proxyAddresses: \<not set>
+```
+mail              : \<not set>
+AD:mailNickName      : user5new1
+AD:proxyAddresses    : {\<not set>}
+AD:userPrincipalName : user5upn@Contoso.com
+```
 
-In this scenario, the following operations are performed because of system calculation:
+In this scenario, the following operation is performed as a result of proxy calculation:
 
-- Update the mailNickName attribute by using the same value as the mailNickName attribute.
+- Update the mailNickName attribute by using the same value as the on-premises mailNickName attribute.
 - Keep the mail attribute unchanged.
 - Keep the proxyAddresses attribute unchanged.
 
 The following attributes are set in Azure AD on the synchronized user object:
 
-> UPN: `us4@contoso.com`  
-> mail: `us4@contoso.onmicrosoft.com`  
-> mailNickName: newus4  
-> proxyAddresses: {smtp:`us4@contoso.com`,SMTP:`us4@contoso.onmicrosoft.com`}
+```
+AAD:mail              : user5upn@Contoso.com
+AAD:mailNickName      : user5new1
+AAD:proxyAddresses    : {smtp:user5upn@Contoso.onmicrosoft.com; SMTP:user5upn@Contoso.com}
+AAD:userPrincipalName : user5upn@Contoso.com
+```
 
 ## Scenario 6: Two users have the same mailNickName attribute
 
-You created two on-premises user objects that have the following attributes set:
+You created two on-premises user objects that have the same mailNickName value:
 
-> UPN: `us5@contoso.com`  
-> mail: \<not set>  
-> mailNickName: samenick  
-> proxyAddresses: \<not set>  
-> UPN: `us6@contoso.com`  
-> mail: \<not set>  
-> mailNickName: samenick  
-> proxyAddresses: \<not set>
+```
+AD:mail              : \<not set>
+AD:mailNickName      : user6mnn
+AD:proxyAddresses    : {\<not set>}
+AD:userPrincipalName : user6a@Contoso.com
+```
 
-Next, they are synchronized to Office 365 and assigned an Exchange Online license. In this scenario, the following operations are performed because of system calculation:
+```
+AD:mail              : \<not set>
+AD:mailNickName      : user6mnn
+AD:proxyAddresses    : {\<not set>}
+AD:userPrincipalName : user6b@Contoso.com
+```
 
-- Duplicate mailNickName  values are detected.
-- Populate the mailNickName attribute by appending four random digits.
-- Populate the MOERA  by using the format mailNickName@initial domain.
-- Add the mail attribute by using the same value as the MOERA.
-- Add the UPN as a secondary SMTP address in the proxyAddresses attribute.
-- Add the MOERA as the primary SMTP address in the proxyAddresses attribute.
+Next, they are synchronized to Office 365 and assigned an Exchange Online license. In this scenario, the following operation is performed as a result of proxy calculation:
+
+- Set the primary SMTP address in the proxyAddresses attribute by using the UPN value.
+- Populate the mailNickName attribute by using the same value as the on-premises mailNickName attribute.
+- Populate the mail attribute by using the primary SMTP address.
+- For the first user provisioned - Add the MOERA as the secondary smtp address in the proxyAddresses attribute, by using the format mailNickName@initial domain.
+- For the second user provisioned, MOERA is already in use by another object - Add the MOERA as the secondary smtp address, by appending 4 random digits to the mailNickName as a prefix, plus @initial domain suffix.
 
 The following attributes are set in Azure AD on the synchronized user object:
 
-> UPN: `us5@contoso.com`  
-> mail: `samenick@contoso.onmicrosoft.com`  
-> mailNickName: samenick  
-> proxyAddresses: {smtp:`us5@contoso.com`,SMTP:`samenick@contoso.onmicrosoft.com`}  
-> UPN: `us6@contoso.com`  
-> mail: `samenick0209@contoso.onmicrosoft.com`  
-> mailNickName: samenick0209  
-> proxyAddresses: {smtp:`us6@contoso.com`,SMTP:`samenick0209@contoso.onmicrosoft.com`}
+```
+AAD:mail              : user6a@Contoso.com
+AAD:mailNickName      : user6mnn
+AAD:proxyAddresses    : {smtp:user6mnn@Contoso.onmicrosoft.com; SMTP:user6a@Contoso.com}
+AAD:userPrincipalName : user6a@Contoso.com
+```
 
-## More information
+```
+AAD:mail              : user6b@Contoso.com
+AAD:mailNickName      : user6mnn
+AAD:proxyAddresses    : {smtp:user6mnn5236@Contoso.onmicrosoft.com; SMTP:user6b@Contoso.com}
+AAD:userPrincipalName : user6b@Contoso.com
+```
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

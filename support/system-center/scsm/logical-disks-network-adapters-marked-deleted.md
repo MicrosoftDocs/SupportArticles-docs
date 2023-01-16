@@ -2,7 +2,6 @@
 title: Logical disks and network adapters incorrectly marked as deleted
 description: Fixes an issue in which logical disk and network adapter objects are marked for deletion in Service Manager, even though those items still exist in Operations Manager.
 ms.date: 08/04/2020
-ms.prod-support-area-path: 
 ms.reviewer: scottwal, veharshv
 ---
 # Logical disks and network adapters marked deleted in Service Manager still exist in Operations Manager
@@ -65,8 +64,7 @@ To do this in the Service Manager console, follow these steps.
 | Windows Server 2008 Operating System (Discovery)| Microsoft.Windows.Server.2008.Discovery| Windows Server 2008 Network Adapter| Microsoft.Windows.Server.2008.NetworkAdapter |
 | Windows Server Operating System Library| Microsoft.Windows.Server.Library| Windows Server 2012 Logical Disk| Microsoft.Windows.Server.6.2.LogicalDisk |
 | Windows Server Operating System Library| Microsoft.Windows.Server.Library| Windows Server 2012 Network Adapter| Microsoft.Windows.Server.6.2.NetworkAdapter |
-|||||
-
+  
 When you are finished, you should have four Operations Manager CI connectors:
 
 - The original

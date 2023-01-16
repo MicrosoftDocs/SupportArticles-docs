@@ -1,12 +1,12 @@
 ---
 title: ASP.NET SignalR application is not working in Azure cloud service
 description: Provides information about troubleshooting issues where ASP.NET SignalR application is not working in Azure Cloud Service.
-ms.date: 06/22/2020
-ms.prod-support-area-path: 
+ms.date: 09/26/2022
 ms.reviewer: 
 author: genlin
 ms.author: genli
 ms.service: cloud-services
+ms.subservice: troubleshoot-dev
 ---
 # ASP.NET SignalR application is not working in Azure cloud service
 
@@ -66,3 +66,5 @@ In order to enable WebSocket feature you can use the below DISM command in a sta
 ```console
 %SystemRoot%\system32\DISM.exe /Online /Enable-Feature /FeatureName:IIS-WebSockets
 ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

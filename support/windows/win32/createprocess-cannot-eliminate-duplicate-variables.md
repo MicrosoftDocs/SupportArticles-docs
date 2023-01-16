@@ -2,7 +2,7 @@
 title: CreateProcess can't eliminate variables
 description: This article describes that in lpEnvironment parameter environment block, CreateProcess won't eliminate duplicated variables.
 ms.date: 03/16/2020
-ms.prod-support-area-path: System services development
+ms.custom: sap:System services development
 ms.reviewer: Franki
 ms.technology: windows-dev-apps-system-services-dev
 ---

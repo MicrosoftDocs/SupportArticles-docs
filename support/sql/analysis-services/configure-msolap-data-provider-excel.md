@@ -2,7 +2,7 @@
 title: Configure MSOLAP data provider for Excel
 description: This article describes how to configure the correct MSOLAP data provider for Excel to connect to Analysis Services.
 ms.date: 11/05/2020
-ms.prod-support-area-path: Analysis Services
+ms.custom: sap:Analysis Services
 ms.reviewer: dyonker
 ms.topic: how-to
 ms.prod: sql
@@ -25,8 +25,7 @@ To create a data connection to an Analysis Services data source, Microsoft Excel
 | SQL Server 2014| MSOLAP.6 |
 | SQL Server 2016| MSOLAP.7 |
 | SQL Server 2017 and later versions| MSOLAP.8 (Considered evergreen)|
-|||
-
+  
 For more information about MSOLAP and other client libraries for Analysis Services, review [Analysis Services client libraries](/analysis-services/client-libraries).
 
 For more information about how to use the correct version of MSOLAP, see [Connection string properties](/analysis-services/instances/connection-string-properties-analysis-services). For legacy MSOLAP versions, please refer to [How to obtain the latest versions of MSOLAP](https://support.microsoft.com/help/2735567). For latest MSOLAP version, please refer to [Analysis Services client libraries](/analysis-services/client-libraries).

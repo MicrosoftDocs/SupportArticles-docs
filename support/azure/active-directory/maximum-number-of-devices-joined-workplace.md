@@ -2,7 +2,6 @@
 title: Error (The maximum number of devices that can be joined to the workplace by the user has been reached) during a Workplace Join
 description: Describes a problem in which a (The maximum number of devices that can be joined to the workplace by the user has been reached) error occurs when you try to perform a Workplace Join operation. Provides a resolution.
 ms.date: 06/08/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: hybrid
@@ -78,3 +77,5 @@ You can also verify that the user has reached the device capacity by reviewing t
 ## More information
 
 For more troubleshooting information, see [Diagnostic logging for troubleshooting Workplace Join issues](https://support.microsoft.com/help/3045377).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

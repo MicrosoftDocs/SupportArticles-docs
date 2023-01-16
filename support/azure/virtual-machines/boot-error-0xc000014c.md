@@ -2,9 +2,9 @@
 title: Windows boot error 0xc000014c on an Azure VM
 description: Fixes an issue that triggers error code 0xc000014c when you try to start an Azure-based virtual machine.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: jarrettr
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ---
 # Windows boot error 0xc000014c on an Azure VM
@@ -39,3 +39,5 @@ To fix the issue, follow these steps.
 4. On the OS disk you attached, navigate to `\windows\system32\config`. Copy all the files as a backup in case a rollback is required.
 5. On the OS disk you attached, copy the files in `\windows\system32\config\regback` and replace the files in `\windows\system32\config`.
 6. Detach the repaired OS disk from the troubleshooting VM. Then, create a new VM from the OS disk.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

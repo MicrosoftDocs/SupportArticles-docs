@@ -2,7 +2,7 @@
 title: Guidelines for handling dates and times
 description: This article describes developer guidelines for date and time handling and includes guidelines to handle daylight saving time (DST).
 ms.date: 03/12/2020
-ms.prod-support-area-path: System services development
+ms.custom: sap:System services development
 ms.reviewer: jhornick, djanson
 ms.topic: how-to
 ms.technology: windows-dev-apps-system-services-dev

@@ -22,11 +22,11 @@ _Original KB number:_ &nbsp; 951016
 
 ## Introduction
 
-User Account Control (UAC) is a new security component of Windows Vista. UAC enables users to perform common day-to-day tasks as non-administrators. These users are called *standard users* in Windows Vista. User accounts that are members of the local Administrators group will run most applications by using the principle of *least privilege*. In this scenario, least-privileged users have rights that resemble the rights of a standard user account. However, when a member of the local Administrators group has to perform a task that requires administrator rights, Windows Vista automatically prompts the user for approval.
+User Account Control (UAC) is a new security component of Windows Vista. UAC enables users to perform common day-to-day tasks as non-administrators. These users are called _standard users_ in Windows Vista. User accounts that are members of the local Administrators group will run most applications by using the principle of _least privilege_. In this scenario, least-privileged users have rights that resemble the rights of a standard user account. However, when a member of the local Administrators group has to perform a task that requires administrator rights, Windows Vista automatically prompts the user for approval.
 
 ## How UAC remote restrictions work
 
-To better protect those users who are members of the local Administrators group, we implement UAC restrictions on the network. This mechanism helps prevent against *loopback* attacks. This mechanism also helps prevent local malicious software from running remotely with administrative rights.
+To better protect those users who are members of the local Administrators group, we implement UAC restrictions on the network. This mechanism helps prevent against _loopback_ attacks. This mechanism also helps prevent local malicious software from running remotely with administrative rights.
 
 ### Local user accounts (Security Account Manager user account)
 
@@ -46,7 +46,7 @@ A user who has a domain user account logs on remotely to a Windows Vista compute
 
 To disable UAC remote restrictions, follow these steps:
 
-1. Click **Start**, click **Run**, type *regedit*, and then press ENTER.
+1. Click **Start**, click **Run**, type _regedit_, and then press ENTER.
 
 2. Locate and then click the following registry subkey:
 
@@ -55,10 +55,10 @@ To disable UAC remote restrictions, follow these steps:
 3. If the **`LocalAccountTokenFilterPolicy`** registry entry doesn't exist, follow these steps:
 
     1. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
-    2. Type *LocalAccountTokenFilterPolicy*, and then press ENTER.
+    2. Type _LocalAccountTokenFilterPolicy_, and then press ENTER.
 
 4. Right-click **LocalAccountTokenFilterPolicy**, and then select **Modify**.
-5. In the **Value data** box, type *1*, and then select **OK**.
+5. In the **Value data** box, type _1_, and then select **OK**.
 6. Exit Registry Editor.
 
 ### Did this fix the problem
@@ -73,4 +73,4 @@ The **LocalAccountTokenFilterPolicy** registry entry can have a value of 0 or 1.
 |---|---|
 |0|This value builds a filtered token. It's the default value. The administrator credentials are removed.|
 |1|This value builds an elevated token.|
-|||
+  

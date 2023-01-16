@@ -2,9 +2,9 @@
 title: FAQs for Azure Disks
 description: This article answers some frequently asked questions about Azure Managed Disks and Azure Premium SSD disks.
 ms.date: 08/24/2021
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-support-statements
 ms.collection: windows
 ---
 
@@ -23,7 +23,7 @@ This article answers frequently asked questions about Azure Managed Disks and Az
 
 For more information, see the [Managed Disks overview](/azure/virtual-machines/managed-disks-overview).
 
-**Q: If I create a Standard managed disk from an existing VHD that's 80 large, how much will that cost me?**
+**Q: If I create a Standard managed disk from an existing VHD that's 80 GiB large, how much will that cost me?**
 
 **A:** A Standard managed disk that's created from an 80 GiB VHD is treated as the next available standard disk size: an S10 disk. Therefore, you'll be charged according to the S10 disk pricing.
 
@@ -414,6 +414,7 @@ On-demand bursting is available only in the west-central United States region.
 </details>
 
 ## Unmanaged disks
+
 <details>
   <summary>Click here to expand this section.</summary>
 
@@ -457,3 +458,5 @@ To request features, submit your requests and ideas to the [Azure Storage feedba
 - [Use Azure Storage Explorer to manage Azure managed disks](/azure/virtual-machines/disks-use-storage-explorer-managed-disks)
 - [Attach a managed data disk to a Windows VM](/azure/virtual-machines/windows/attach-managed-disk-portal)
 - [Resize a virtual machine using the Azure portal or PowerShell](/azure/virtual-machines/windows/resize-vm)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

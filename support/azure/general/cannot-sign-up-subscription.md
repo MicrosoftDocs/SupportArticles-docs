@@ -2,8 +2,7 @@
 title: Can't sign up for a Microsoft Azure subscription
 description: Discusses that you receive an error message when signing up for a Microsoft Azure subscription.
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
-ms.service: azure
+ms.service: azure-common-issues-support
 ms.author: genli
 author: genlin
 ms.reviewer: 
@@ -33,5 +32,7 @@ This process transforms the unmanaged directory into a managed directory by ass
 
 ## References
 
-- [How to perform an IT Admin Takeover with O365](https://powerbi.microsoft.com/blog/how-to-perform-an-it-admin-takeover-with-o365/) 
+- [How to perform an IT Admin Takeover with O365](https://powerbi.microsoft.com/blog/how-to-perform-an-it-admin-takeover-with-o365/)
 - [Take over an unmanaged directory in Azure Active Directory](/azure/active-directory/domains-admin-takeover)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

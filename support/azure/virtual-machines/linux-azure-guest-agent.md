@@ -4,13 +4,13 @@ description: Resolve issues with the Azure Linux Agent.
 services: virtual-machines
 ms.collection: linux
 ms.service: virtual-machines
+ms.subservice: vm-extensions-not-operating
 author: axelg
 manager: dcscontentpm
-editor: 
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure
-ms.date: 11/17/2020
+ms.date: 08/03/2022
 ms.author: axelg
 ---
 # Troubleshoot the Azure Linux Agent
@@ -77,10 +77,12 @@ The following error appears in the **/var/log/waagent.log** file when the VM can
 
 To resolve this issue:
 
-* Connect to the VM by using SSH, and then try to access the following URL from curl: http://168.63.129.16/?comp=versions.
+* Connect to the VM by using SSH, then run following command to test the connectivity between the VM and the WireServer. The root privilege is required to run the command.
+
+    ```Bash 
+   curl http://168.63.129.16/?comp=versions
+    ```
 * Check for any issues that might be caused by a firewall, a proxy, or another source that might be blocking access to the IP address 168.63.129.16.
 * Check whether Linux IPTables or a third-party firewall is blocking access to ports 80, and 32526.
 
-## Next steps
-
-To further troubleshoot Azure Linux Agent issues, [contact Microsoft support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade).
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

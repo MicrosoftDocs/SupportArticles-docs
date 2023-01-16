@@ -18,12 +18,12 @@ _Original KB number:_ &nbsp; 875169
 
 The [More Information](#more-information) section contains the following information:
 
-- *A checklist of the steps that you must follow to complete the calendar year-end closing procedures.*  
+- _A checklist of the steps that you must follow to complete the calendar year-end closing procedures._  
 
-- *A checklist of the steps that you must follow to complete the fiscal year-end closing procedures.*  
+- _A checklist of the steps that you must follow to complete the fiscal year-end closing procedures._  
 
-- *Detailed information about each step in the checklists.*  
-- *A list of frequently asked questions.*  
+- _Detailed information about each step in the checklists._  
+- _A list of frequently asked questions._  
 
 ## More Information
 
@@ -215,15 +215,15 @@ If you marked a vendor as 1099able and shouldn't have, or you forgot to mark a v
 
 3. In the FROM and TO sections, enter the following content:
 
-    - *To change a vendor to be 1099able:* select **Not a 1099 Vendor** in the FROM section, and select the appropriate 1099 type of Dividend, Interest or Miscellaneous, and the appropriate 1099 Box number in the TO section. (Miscellaneous and Box 7 Nonemployee Compensation is the most common.)
+    - _To change a vendor to be 1099able:_ select **Not a 1099 Vendor** in the FROM section, and select the appropriate 1099 type of Dividend, Interest or Miscellaneous, and the appropriate 1099 Box number in the TO section. (Miscellaneous and Box 7 Nonemployee Compensation is the most common.)
 
-    - *To change a vendor to not be 1099able* : Select the current Tax Type and 1099 Box Number that is selected on the Vendor Maintenance Options window for the vendor in the FROM section, and select **Not a 1099 Vendor** in the TO section.
+    - _To change a vendor to not be 1099able_ : Select the current Tax Type and 1099 Box Number that is selected on the Vendor Maintenance Options window for the vendor in the FROM section, and select **Not a 1099 Vendor** in the TO section.
 
     *If **Not a 1099 Vendor** isn't an option in the drop-down lists, then either you aren't on a GP version higher than Microsoft Dynamics GP 2013, or you didn't select Vendor and 1099 Transactions as instructed in step 2.
 
 4. Use the Range restriction to restrict to the Vendor ID that you wish to change and select **INSERT**.
 
-5. Select **Process**. The vendor status will be updated on the Vendor Maintenance Options window, and the 1099 information will be updated appropriately. You can use the *1099 details* window (see Method 1) to verify.
+5. Select **Process**. The vendor status will be updated on the Vendor Maintenance Options window, and the 1099 information will be updated appropriately. You can use the _1099 details_ window (see Method 1) to verify.
 
 **Method 3:** Edit the 1099 directly (Use for Microsoft Dynamics GP 2010 and prior versions, but can work for all versions)
 
@@ -242,7 +242,7 @@ If you marked a vendor as 1099able and shouldn't have, or you forgot to mark a v
 
     - Miscellaneous
 
-4. In the Display area, select **Month** or **Year**, and then type **20XX** in the Year field. (Enter the wished year for the *20XX* placeholder.)
+4. In the Display area, select **Month** or **Year**, and then type *_20XX_* in the Year field. (Enter the wished year for the *20XX* placeholder.)
 
 5. In the Amount column, type the correct 1099 amount. Select **Save**.
 
@@ -254,7 +254,7 @@ If you marked a vendor as 1099able and shouldn't have, or you forgot to mark a v
 
 2. In the Vendor ID list, select a vendor ID, and then select **Period**.
 
-3. In the Year field, type **20XX**. (Enter the wished year for the *20XX* placeholder.)
+3. In the Year field, type *_20XX_*. (Enter the wished year for the *20XX* placeholder.)
 
 4. In the Month/Period field, select the appropriate month or period.
 
@@ -272,7 +272,7 @@ If you marked a vendor as 1099able and shouldn't have, or you forgot to mark a v
 To print the 1099 statements, follow these steps:
 
 1. In Microsoft Dynamics GP, point to **Tools** on the **Microsoft Dynamics GP** menu, point to **Routines**, point to **Purchasing**, and then select **Print 1099**.
-2. In the **1099 Year** field, type **20XX**. (Enter the year for the *20XX* placeholder.)
+2. In the **1099 Year** field, type *_20XX_*. (Enter the year for the *20XX* placeholder.)
 3. Each of your 1099 report types must be printed separately. In the Print 1099 window, select the options that you want in the **1099 Type** field and in the **1099 Box Number** field, and then select **Print**.
 
 The following table provides additional information about the fields on the 1099 form and where this information can be located in Microsoft Dynamics GP.
@@ -284,8 +284,7 @@ The following table provides additional information about the fields on the 1099
 |Recipients name, address, and Zip Code/Postal Code| **Primary Address** of the Vendor Maintenance window|
 |Recipients identification number| **Tax ID** field of the Vendor Maintenance Options window|
 |Amounts for boxes 1-9 on the Dividend Form or 1-16 on the Miscellaneous Form| **1099 Amount** field in the Vendor Yearly Summary window|
-|||
-
+  
 Currently, Microsoft Dynamics GP doesn't handle magnetic media filing of state 1099s. The following Microsoft Dynamics Partner does offer compatible State W-2 and 1099 magnetic media products. For more information, contact:  
 
 Greenshades Accounting Software, Inc.  
@@ -413,4 +412,4 @@ To delete all inactive vendor records that fit these criteria, follow these step
 
 Q2: What should I do if I must issue a check on January 1 for the next year, but I'm not ready to close the current year yet?
 
-A2: Print the checks, but don't *post* them until after you process your year-end closing. If you must post the checks immediately, change the **Amount Paid** fields in the **Amounts Since Last Close** view of the Vendor Yearly Summary window.
+A2: Print the checks, but don't _post_ them until after you process your year-end closing. If you must post the checks immediately, change the **Amount Paid** fields in the **Amounts Since Last Close** view of the Vendor Yearly Summary window.

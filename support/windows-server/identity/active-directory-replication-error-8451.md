@@ -41,7 +41,6 @@ You might experience one of more of the following symptoms:
     |-1526|0xfffffa0a|JET_errLVCorrupted|Corruption encountered in long-value tree.|
     |-1601|0xfffff9bf|JET_errRecordNotFound|The key was not found.|
     |-1603|0xfffff9b|JET_errNoCurrentRecord|Currency not on a record.|
-    |||||
 
 - Dcpromo.exe fails and generates error 8451.  
     The user interface displays the following message:  
@@ -101,7 +100,6 @@ You might experience one of more of the following symptoms:
     |NTDS KCC|1925 with extended error 8451|The attempt to establish a replication link for the following writable directory partition failed.|
     |NTDS Replication|1084 with extended error 8451|Internal event: Active Directory could not update the following object with changes received from the following source domain controller. It is because an error occurred during the application of the changes to Active Directory on the domain controller.|
     |NTDS Replication|1699 with extended error 8451|The local domain controller failed to retrieve the changes requested for the following directory partition. As a result, it was unable to send the change requests to the domain controller at the following network address.|
-    ||||  
 
 - When you increase the NTDS diagnosing logging level on the domain controller, Event Viewer lists additional events that are related to the 8451 error. The following table lists the event sources and Event IDs of events that frequently accompany other events that contain the 8451 error.
 
@@ -113,7 +111,6 @@ You might experience one of more of the following symptoms:
     |Internal Processing|1173 with error-1603|Internal event: Active Directory has encountered the following exception and associated parameters. Exception: e0010004 Parameter: 0 Additional Data Error value: -1603 Internal ID: 2050344|
     |NTDS ISAM|474 with error-1018|The database page read from the file 'E:\NTDS\Data\ntds.dit' at offset 3846455296 (0x00000000e5444000) for 8192 (0x00002000) bytes failed verification due to a page checksum mismatch.  The expected checksum was 323677604 (0x134aeda4) and the actual checksum was 2081515684 (0x7c1168a4).  The read operation will fail with error -1018 (0xfffffc06).  If this condition persists, restore the database from a previous backup.  This problem is likely due to faulty hardware. Contact your hardware vendor for further assistance diagnosing the problem.|
     |NTDS ISAM|488|NTDS (396) NTDSA: Data inconsistency detected in table datatable of database C:\WINDOWS\NTDS\ntds.dit (4621,7905).|
-    ||||
 
 - When you run the Dcdiag.exe utility, it produces output that resembles as:  
 
@@ -145,46 +142,46 @@ The replication operation encountered a database error.
 >C:\>err -1414  
 for decimal -1414 / hex 0xfffffa7a :  
 JET_errSecondaryIndexCorrupted &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;esent98.h  
-/* Secondary index is corrupt. The database must be  
-defragmented */  
+/*Secondary index is corrupt. The database must be
+defragmented*/  
 1 matches found for "-1414"  
 >
 >C:\>err -1526  
 for decimal -1526 / hex 0xfffffa0a :  
 JET_errLVCorrupted &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;esent98.h  
-/* Corruption encountered in long-value tree */  
+/_Corruption encountered in long-value tree_/  
 1 matches found for "-1526"  
 >
 >C:\>err  -1603  
 for decimal -1603 / hex 0xfffff9bd :  
 JET_errNoCurrentRecord &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;esent98.h  
-/* Currency not on a record */  
+/_Currency not on a record_/  
 1 matches found for "-1603"  
 >
 >C:\>err -1075  
 for decimal -1075 / hex 0xfffffbcd :  
 JET_errOutOfLongValueIDs &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;esent98.h  
-/* Long-value ID counter has reached maximum value.  
+/*Long-value ID counter has reached maximum value.
 (perform offline defrag to reclaim free/unused  
-LongValueIDs) */  
+LongValueIDs)*/  
 1 matches found for "-1075"  
 >
 >C:\>err -1601  
 for decimal -1601 / hex 0xfffff9bf :  
 JET_errRecordNotFound &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;esent98.h  
-/* The key was not found */  
+/_The key was not found_/  
 1 matches found for "-1601"  
 >
 >C:\>err -1047  
 for decimal -1047 / hex 0xfffffbe9 :  
 JET_errInvalidBufferSize &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;esent98.h  
-/* Data buffer doesn't match column size */  
+/_Data buffer doesn't match column size_/  
 1 matches found for "-1047"  
 >
 >C:\>err -1018  
 for decimal -1018 / hex 0xfffffc06 :  
 JET_errReadVerifyFailure &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;ese.h  
-/* Checksum error on a database page */  
+/_Checksum error on a database page_/  
 JET_errReadVerifyFailure &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;esent98.h  
 /\* Checksum error on a database page */  
 2 matches found for "-1018"  
@@ -192,7 +189,7 @@ JET_errReadVerifyFailure &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&
 >C:\>err -1206  
 for decimal -1206 / hex 0xfffffb4a :  
 JET_errDatabaseCorrupted &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;esent98.h  
-/* Non database file or corrupted db */  
+/_Non database file or corrupted db_/  
 1 matches found for "-1206"
 
 ## Cause
@@ -259,7 +256,6 @@ If the problem recurs, collect some diagnostic data.
     |-1601|0xfffff9bf|JET_errRecordNotFound|The key was not found|Check hardware, firmware, and drivers.Run the `Esentutl /k` command. Run the **Ntdsutil** file integrity and SDA commands, and then do offline defragmentation​​​​​​​.​​​​​​​Otherwise restore from backup or demote and promote.|
     |-1603|0xfffff9bd|JET_errNoCurrentRecord|Currency not on a record|Check hardware, firmware, and drivers.Run the `Esentutl /`k command. Run the **Ntdsutil** file integrity and SDA commands, and then do offline defragmentation​​​​​​​.​​​​​​​Otherwise restore from backup or demote and promote.|
     |8451|0x2103|ERROR_DS_DRA_DB_ERROR|The replication operation encountered a database error|Check hardware, firmware, and drivers.Run the `Esentutl /k` command. Run the **Ntdsutil** file integrity and SDA commands, and then do offline defragmentation. Otherwise restore from backup or demote/promote.|
-    ||||||  
 
 4. If all these methods fail, restore the domain controller from a backup, or demote it and then repromote.
 
@@ -272,4 +268,3 @@ Verify the vertical jet database stack from the bottom up (proceeding up to the 
 |(1) Physical consistency|no equivalent| `Esentutl /k` |
 |(2) Extensible Storage Engine (ESE) logical consistency| **Ntdsutil**, **files**, **integrity**| **Esentutl /g** |
 |(3) Application logical consistency| **Ntdsutil**, **semantic database analysis** + **Ntdsutil**, **compact**|no equivalent for SDA  + **Esentutl /d** |
-||||

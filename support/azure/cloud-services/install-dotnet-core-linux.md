@@ -1,12 +1,12 @@
 ---
 title: Install .NET Core on Linux by using an Azure Batch start task
 description: Describes how to install .NET Core in Linux by using an Azure Batch start task.
-ms.date: 08/10/2020
-ms.prod-support-area-path: 
+ms.date: 09/26/2022
 ms.reviewer: 
 author: genlin
 ms.author: genli
 ms.service: cloud-services
+ms.subservice: reference
 ---
 # Install .NET Core on Linux by using an Azure Batch start task
 
@@ -79,7 +79,7 @@ To prevent the file format mismatch, do one of the following:
  To automate the process of converting files from Windows (DOS) to UNIX format, run the following command:
 
 ```bash
-$ dos2unix dotnetcoreinstall.sh
+dos2unix dotnetcoreinstall.sh
 ```
 
 To execute this command, you must first install the **dos2unix** package. To do this, run the following command:
@@ -87,6 +87,8 @@ To execute this command, you must first install the **dos2unix** package. To do 
 ```bash
 sudo apt-get install dos2unix
 ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 

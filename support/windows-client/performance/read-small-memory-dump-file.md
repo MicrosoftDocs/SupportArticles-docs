@@ -14,6 +14,10 @@ ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
 ms.technology: windows-client-performance
 adobe-target: true
 ---
+
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+--->
+
 # How to read the small memory dump file that is created by Windows if a crash occurs
 
 This article describes how to examine a small memory dump file. A small memory dump file can help you determine why your computer crashed.
@@ -50,9 +54,9 @@ To configure startup and recovery options to use the small memory dump file, fol
 1. Click **Start**, and then click **Control Panel**.
 2. Double-click **System**, and then click **Advanced system settings**.
 3. Click the **Advanced** tab, and then click **Settings** under **Startup and Recovery**.
-4. In the **Write debugging information** list, click **Small memory dump (64k)**.
+4. In the **Write debugging information** list, click **Small memory dump (256k)**.
 
-    :::image type="content" source="media/read-small-memory-dump-file/small-memory-dump-option.png" alt-text="Screenshot of the Small memory dump (64k) option in the Write debugging information list in the Startup and Recovery window." border="false"::: 
+    :::image type="content" source="media/read-small-memory-dump-file/small-memory-dump-option.gif" alt-text="Screenshot of the Small memory dump (256k) option in the Write debugging information list in the Startup and Recovery window." border="false":::
 
 To change the folder location for the small memory dump files, type a new path in the **Dump File** box or in the **Small dump directory** box, depending on your version of Windows).
 
@@ -107,8 +111,7 @@ The following table explains the use of the placeholders that are used in these 
 | **SymbolPath**|Either the local path where the symbol files have been downloaded or the symbol server path, including a cache folder. Because a small memory dump file contains limited information, the actual binary files must be loaded together with the symbols for the dump file to be correctly read.|
 | **ImagePath**|The path of these files. The files are contained in the I386 folder on the Windows XP CD-ROM. For example, the path may be `C:\Windows\I386`.|
 | **DumpFilePath**|The path and file name for the dump file that you are examining.|
-|||
-
+  
 ### Sample commands
 
 You can use the following sample commands to open the dump file. These commands assume the following:

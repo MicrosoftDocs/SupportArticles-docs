@@ -112,3 +112,5 @@ The default value for the **OtherWellKnownObjects** attribute is:
 > B:32:1EB93889E40C45DF9F0C64D23BBB6237:CN=Managed Service Accounts,**DC=< name of DC >,DC=com**
 
 To resolve this issue, open a ticket with Windows Directory Services Team.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

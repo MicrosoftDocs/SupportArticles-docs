@@ -1,10 +1,10 @@
 ---
 title: Azure Cloud Service Troubleshooting Series
 description: Azure Cloud Service Troubleshooting Series
-ms.date: 07/06/2020
-ms.prod-support-area-path: 
+ms.date: 09/26/2022
 ms.reviewer: 
 ms.service: cloud-services
+ms.subservice: troubleshoot-dev
 ---
 # Azure Cloud Service Troubleshooting Series
 
@@ -31,3 +31,5 @@ Let's deep dive into the troubleshooting series on Azure Cloud Service:
 - [Scenario 6 : Can't RDP to only 'HealthMonitor' worker role instance](https://support.microsoft.com/help/4464850).
 - [Scenario 7 : Can't access the website, although all role instances are in running state](https://support.microsoft.com/help/4464839).
 - [Scenario 8 : ASP.NET SignalR application is not working](https://support.microsoft.com/help/4464827).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

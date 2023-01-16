@@ -5,9 +5,9 @@ services: virtual-machines, azure-resource-manager
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 tags: azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
@@ -25,7 +25,7 @@ This article provides steps to resolve issues where Windows cannot boot and need
 When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of the VM, you'll see that the screenshot displays the Windows stop code **#0x00000074** or **BAD_SYSTEM_CONFIG_INFO**.
 
 > Your PC ran into a problem and needs to restart. You can restart.
-> For more information about this issue and possible fixes, visit http://windows.com/stopcode
+> For more information about this issue and possible fixes, visit <http://windows.com/stopcode>
 > If you call a support person, give them this info:
 > Stop code: BAD_SYSTEM_CONFIG_INFO
 
@@ -41,7 +41,7 @@ The **BAD_SYSTEM_CONFIG_INFO** stop code occurs if the **SYSTEM** registry hive 
 
 ## Solution
 
-### Process overview:
+### Process overview
 
 > [!TIP]
 > If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
@@ -59,7 +59,7 @@ The **BAD_SYSTEM_CONFIG_INFO** stop code occurs if the **SYSTEM** registry hive 
 1. Use steps 1-3 of the [VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md) to prepare a Repair VM.
 1. Check for hive corruption.
 1. Use Remote Desktop Connection to connect to the Repair VM.
-1. Copy the `<VOLUME LETTER OF BROKEN OS DISK>:\windows\system32\config` folder and save it in either your healthy disk partition, or in another safe location. Back up this folder as a precaution, since you will edit critical registry files. 
+1. Copy the `<VOLUME LETTER OF BROKEN OS DISK>:\windows\system32\config` folder and save it in either your healthy disk partition, or in another safe location. Back up this folder as a precaution, since you will edit critical registry files.
 
    > [!NOTE]
    > Make a copy of the `<VOLUME LETTER OF BROKEN OS DISK>:\windows\system32\config` folder as a backup in case you need to roll back any changes you make to the registry.
@@ -89,7 +89,7 @@ The instructions below will help you determine if the cause was due to hive corr
 1. Run the following commands:
 
    **Enable the Serial Console**:
-   
+
    ```ps
    bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /ems {<BOOT LOADER IDENTIFIER>} ON 
    bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /emssettings EMSPORT:1 EMSBAUDRATE:115200
@@ -128,7 +128,9 @@ The instructions below will help you determine if the cause was due to hive corr
    ```ps
    REG UNLOAD HKLM\BROKENSYSTEM
    ```
-   
+
 ### Rebuild the VM
 
 Use [step 5 of the VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md#repair-process-example) to rebuild the VM.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

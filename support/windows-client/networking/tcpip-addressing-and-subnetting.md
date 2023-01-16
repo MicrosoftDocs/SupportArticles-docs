@@ -39,7 +39,7 @@ An IP address is a 32-bit number. It uniquely identifies a host (computer or oth
 
 IP addresses are normally expressed in dotted-decimal format, with four numbers separated by periods, such as 192.168.123.132. To understand how subnet masks are used to distinguish between hosts, networks, and subnetworks, examine an IP address in binary notation.
 
-For example, the dotted-decimal IP address 192.168.123.132 is (in binary notation) the 32-bit number 110000000101000111101110000100. This number may be hard to make sense of, so divide it into four parts of eight binary digits.
+For example, the dotted-decimal IP address 192.168.123.132 is (in binary notation) the 32-bit number 11000000101010000111101110000100. This number may be hard to make sense of, so divide it into four parts of eight binary digits.
 
 These 8-bit sections are known as octets. The example IP address, then, becomes 11000000.10101000.01111011.10000100. This number only makes a little more sense, so for most uses, convert the binary address into dotted-decimal format (192.168.123.132). The decimal numbers separated by periods are the octets converted from binary to decimal notation.
 
@@ -67,7 +67,10 @@ So now you know, for this example using a 255.255.255.0 subnet mask, that the ne
 
 Almost all decimal subnet masks convert to binary numbers that are all ones on the left and all zeros on the right. Some other common subnet masks are:
 
-Decimal Binary 255.255.255.192 1111111.11111111.1111111.11000000 255.255.255.224 1111111.11111111.1111111.11100000
+| Decimal          | Binary                             |
+| ---------------- | ---------------------------------- |
+| 255.255.255.192  | 1111111.11111111.1111111.11000000  |
+| 255.255.255.224  | 1111111.11111111.1111111.11100000  |
 
 Internet RFC 1878 (available from [InterNIC-Public Information Regarding Internet Domain Name Registration Services](https://www.internic.net)) describes the valid subnets and subnet masks that can be used on TCP/IP networks.
 

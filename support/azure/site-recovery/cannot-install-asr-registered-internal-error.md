@@ -2,7 +2,6 @@
 title: Error when you try to install Microsoft Azure Site Recovery Provider
 description: You can't install Microsoft Azure Site Recovery Provider and receive an error message ASR cannot be registered due to an internal error.
 ms.date: 10/10/2020
-ms.prod-support-area-path: 
 ms.service: site-recovery
 ms.author: genli
 author: genlin
@@ -21,13 +20,13 @@ When you try to install and register the Microsoft Azure Site Recovery Provider 
 
 > The `ASR` cannot be registered due to an internal error. Run Setup again to register the server.
 
-The Azure Site Recovery Provider Setup log (located at *%PROGRAMDATA%\ASRLogs*) also contains an error that resembles the following one:
+The Azure Site Recovery Provider Setup log (located at _%PROGRAMDATA%\ASRLogs_) also contains an error that resembles the following one:
 
 > RegistrationClient called with acsUrl `https://eus2pod01rrp1users01.accesscontrol.windows.net/` relyingParty `http://windowscloudbackup/m3` 10:46:23:Exception while initializing RegisterActionProcessor: Threw Exception.Type: Microsoft.DisasterRecovery.Registration.DRRegistrationException, Exception.Message: Azure Site Recovery installation is incomplete. Please uninstall and reinstall again to proceed.
 
 ## Cause
 
-This exception indicates that a required value on the Virtual Machine Manager 2012 R2 server is missing. These values are stored in the following registry location: 
+This exception indicates that a required value on the Virtual Machine Manager 2012 R2 server is missing. These values are stored in the following registry location:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft System Center Virtual Machine Manager Server\Setup`
 
@@ -62,3 +61,5 @@ Then, add the retrieved VmmID value to the following registry subkey on the VMM 
 "VmmID"=""`
 
 Microsoft Azure Site Recovery Provider should now install successfully.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

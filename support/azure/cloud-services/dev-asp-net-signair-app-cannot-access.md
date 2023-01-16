@@ -1,12 +1,12 @@
 ---
 title: ASP.NET SignalR application cannot be accessed although all role instances are in running state
 description: Provides information about troubleshooting issues in which the ASP.NET SignalR application is not able to access with error "Can't reach this page".
-ms.date: 06/22/2020
-ms.prod-support-area-path: 
+ms.date: 09/26/2022
 ms.reviewer: 
 author: genlin
 ms.author: genli
 ms.service: cloud-services
+ms.subservice: troubleshoot-dev
 ---
 # ASP.NET SignalR application cannot be accessed although all role instances are in running state
 
@@ -93,3 +93,5 @@ Visitor Tracker is an ASP.NET SignalR application that tracks the number of visi
     ```
 
 4. Remove the ACL rule.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

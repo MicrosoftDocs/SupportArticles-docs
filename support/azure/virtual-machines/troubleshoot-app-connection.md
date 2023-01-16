@@ -1,19 +1,18 @@
 ---
-title: Troubleshoot VM application access in Azure | Microsoft Docs
+title: Troubleshoot VM application access in Azure
 description: Use these detailed troubleshooting steps to isolate issues in connecting to applications running on virtual machines in Azure.
 services: virtual-machines
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 tags: top-support-issue,azure-service-management,azure-resource-manager
 keywords: cannot start application, program won't open, listen port blocked, unable to start program, listen port blocked
 
 ms.service: virtual-machines
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
-
 ms.topic: troubleshooting
+ms.subservice: vm-cannot-connect
 ms.date: 10/31/2018
 ms.author: genli
 
@@ -30,6 +29,7 @@ If you are having issues connecting to your VM using RDP or SSH, see one of the 
 If you need more help at any point in this article, you can contact the Azure experts on [the MSDN Azure and the Stack Overflow forums](https://azure.microsoft.com/support/forums/). Alternatively, you can also file an Azure support incident. Go to the [Azure support site](https://azure.microsoft.com/support/options/) and select **Get Support**.
 
 ## Quick-start troubleshooting steps
+
 If you have problems connecting to an application, try the following general troubleshooting steps. After each step, try connecting to your application again:
 
 * Restart the virtual machine
@@ -45,6 +45,7 @@ If you have problems connecting to an application, try the following general tro
 For more information, see [Troubleshooting Endpoint Connectivity (RDP/SSH/HTTP, etc. failures)](https://social.msdn.microsoft.com/Forums/azure/en-US/538a8f18-7c1f-4d6e-b81c-70c00e25c93d/troubleshooting-endpoint-connectivity-rdpsshhttp-etc-failures?forum=WAVirtualMachinesforWindows).
 
 ## Detailed troubleshooting overview
+
 There are four main areas to troubleshoot the access of an application that is running on an Azure virtual machine.
 
 :::image type="content" source="media/virtual-machines-common-troubleshoot-app-connection/access-troubleshoot-main-area.png" alt-text="Diagram shows two Client devices are connected to the application on a V M by Internet and VPN respectively. 4 main areas to troubleshoot the access are highlighted.":::
@@ -65,6 +66,7 @@ For client computers that are accessing the application over a site-to-site VPN 
 To determine the source of the problem and its correction, follow these steps.
 
 ## Step 1: Access application from target VM
+
 Try to access the application with the appropriate client program from the VM on which it is running. Use the local host name, the local IP address, or the loopback address (127.0.0.1).
 
 :::image type="content" source="media/virtual-machines-common-troubleshoot-app-connection/access-from-target-vm.png" alt-text="Diagram of accessing the application directly from the V M in Azure VNet.":::
@@ -81,6 +83,7 @@ If you cannot access the application, verify the following settings:
 On both Windows and Linux-based virtual machines, use the **netstat -a** command to show the active listening ports. Examine the output for the expected ports on which your application should be listening. Restart the application or configure it to use the expected ports as needed and try to access the application locally again.
 
 ## <a id="step2"></a>Step 2: Access application from another VM in the same virtual network
+
 Try to access the application from a different VM but in the same virtual network, using the VM's host name or its Azure-assigned public, private, or provider IP address. For virtual machines created using the classic deployment model, do not use the public IP address of the cloud service.
 
 :::image type="content" source="media/virtual-machines-common-troubleshoot-app-connection/access-from-another-vm.png" alt-text="Diagram of accessing the application directly from another V M in the same virtual network in Azure VNet.":::
@@ -101,6 +104,7 @@ If you cannot access the application, verify the following settings:
 On a Windows-based virtual machine, use Windows Firewall with Advanced Security to determine whether the firewall rules exclude your application's inbound and outbound traffic.
 
 ## <a id="step3"></a>Step 3: Access application from outside the virtual network
+
 Try to access the application from a computer outside the virtual network as the VM on which the application is running. Use a different network as your original client computer.
 
 :::image type="content" source="media/virtual-machines-common-troubleshoot-app-connection/access-from-outside.png" alt-text="Diagram of accessing the application from a computer outside the virtual network.":::
@@ -132,11 +136,14 @@ If you can access the application, ensure that your Internet edge device is allo
 * The outbound application request traffic from your client computer to the Azure virtual machine.
 * The inbound application response traffic from the Azure virtual machine.
 
-## Step 4 If you cannot access the application, use IP Verify to check the settings. 
+## Step 4 If you cannot access the application, use IP Verify to check the settings
 
-For more information, see [Azure network monitoring overview](/azure/network-watcher/network-watcher-monitoring-overview). 
+For more information, see [Azure network monitoring overview](/azure/network-watcher/network-watcher-monitoring-overview).
 
 ## Additional resources
+
 [Troubleshoot Remote Desktop connections to a Windows-based Azure Virtual Machine](troubleshoot-rdp-connection.md)
 
 [Troubleshoot Secure Shell (SSH) connections to a Linux-based Azure virtual machine](troubleshoot-ssh-connection.md)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

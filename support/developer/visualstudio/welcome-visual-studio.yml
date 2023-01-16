@@ -1,0 +1,73 @@
+### YamlMime:Landing
+
+title: Visual Studio troubleshooting # < 60 chars
+summary: Welcome to Visual Studio troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Visual Studio. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Visual Studio troubleshooting document
+  description: Knowledge Base (KB) and other Support articles for Visual Studio. # Required; article description that is displayed in search results. < 160 chars.
+  ms.prod: visual-studio-family
+  ms.topic: landing-page # Required
+  author: HaiyingYu  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: haiyingyu #Required; microsoft alias of author; optional team alias.
+  ms.date: 05/09/2022
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Installation
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot installation and upgrade issues
+            url: /visualstudio/install/troubleshooting-installation-issues     
+          - text: Troubleshoot network related errors
+            url: /visualstudio/install/troubleshooting-network-related-errors-in-visual-studio
+          - text: Uninstall third-party applications
+            url: ./installation/secondary-installer-third-party-app.md
+          - text: OS requirements for Visual Studio 2022
+            url: ./general/visual-studio-2022-unsupported-operating-systems.md
+          - text: Resolve common setup errors
+            url: ./installation/issues-workarounds-visual-studio-setup.md
+  - title: Language or Compilers
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Language documentation
+            url: /visualstudio/windows#language-documentation
+          - text: Use C# to read from and write to text file
+            url: ./csharp/language-compilers/read-write-text-file.md
+          - text: Use C# to store and retrieve custom information from a .config file
+            url: ./csharp/language-compilers/store-custom-information-config-file.md
+          - text: Use C# to read XML data from a URL
+            url: ./csharp/language-compilers/read-xml-data-from-url.md
+          - text: Use C# to serialize an object to XML
+            url: ./csharp/language-compilers/serialize-object-xml.md
+          - text: Use C# applications to create and manage threads
+            url: ./csharp/language-compilers/create-thread.md
+          - text: I/O operations in Visual C++
+            url: ./cpp/language-compilers/basic-file-io-operation.md
+  - title: C and C++ Libraries
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Latest Visual C++ Redistributable downloads 
+            url: /cpp/windows/latest-supported-vc-redist
+          - text: Supported OS for Visual C++ Redistributable 
+            url: ./cpp/libraries/minimum-service-pack-levels.md
+          - text: Runtime framework packages for Desktop Bridge
+            url: ./cpp/libraries/c-runtime-packages-desktop-bridge.md
+  - title: Documentation, Training and Support
+    linkLists:      
+      - linkListType: reference
+        links:          
+          - text: Visual Studio IDE documentation 
+            url: /visualstudio/ide
+          - text: Learning paths and resources
+            url: /training/browse/?products=vs
+          - text: Support resources 
+            url: https://visualstudio.microsoft.com/vs/support/#talktous
+
+
+  

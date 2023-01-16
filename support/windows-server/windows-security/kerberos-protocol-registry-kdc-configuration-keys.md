@@ -46,7 +46,10 @@ The registry entries that are listed in this section must be added to the follow
   - Type: REG_DWORD
   - Default Value: 5 (minutes)
 
-    This value is the maximum time difference that's permitted between the client computer and the server that accepts Kerberos authentication.
+    This value is the maximum time difference that's permitted between the client computer and the server that accepts Kerberos authentication or the KDC.
+
+    > [!NOTE]
+    > The SkewTime is considered in the determination of Kerberos ticket validity for reuse. A ticket is considered expired if the expiration time is less than the current time + the SkewTime. For example, if the SkewTime is set to 20 minutes and the current time is 08:00, any ticket with an expiration time before 08:20 will be considered expired.
 
 - Entry: LogLevel
 
@@ -170,7 +173,6 @@ The registry entries that are listed in this section must be added to the follow
     |DEB_TRACE_U2U|0x00200000| |
     |DEB_TRACE_LOCKS|0x01000000| |
     |DEB_USE_LOG_FILE|0x02000000|Not implemented|
-    ||||
 
 - Entry: MaxTokenSize
 
@@ -292,7 +294,7 @@ The registry entries that are listed in this section must be added to the follow
   - Possible values:
 
     - 1 (decimal) or 0x1 (hexadecimal): Audit SPN unknown errors.
-    - 2 (decimal) or 0x2 (hexadecimal): Log PKINIT errors. (PKINIT is an Internet Engineering Task Force (IETF) Internet draft for *Public Key Cryptography for Initial Authentication in Kerberos*.)
+    - 2 (decimal) or 0x2 (hexadecimal): Log PKINIT errors. (PKINIT is an Internet Engineering Task Force (IETF) Internet draft for _Public Key Cryptography for Initial Authentication in Kerberos_.)
     - 4 (decimal) or 0x4 (hexadecimal): Log all KDC errors.
     - 8 (decimal) or 0x8 (hexadecimal): Log KDC warning event 25 in the system log when user asking for S4U2Self ticket doesn't have sufficient access to target user.
     - 16 (decimal) or 0x10 (hexadecimal): Log audit events on encryption type (ETYPE) and bad options errors. This value indicates what information the KDC will write to event logs and to audits.

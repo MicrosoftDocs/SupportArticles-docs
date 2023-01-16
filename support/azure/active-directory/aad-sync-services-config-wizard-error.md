@@ -31,6 +31,4 @@ To resolve this issue, sign out and then sign in to the computer. If the issue p
 4. Add yourself to the **ADSyncAdmins** group.
 5. Sign out, and then sign in to the computer again.
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -2,8 +2,8 @@
 title: Linux Image Provisioning Agent update awareness
 description: Provides the update awareness and frequently asked questions about Linux Image Provisioning Agent.
 ms.date: 10/10/2020
-ms.prod-support-area-path: 
 ms.service: virtual-machines
+ms.subservice: vm-extensions-not-operating
 ms.collection: linux
 ms.author: genli
 author: genlin
@@ -22,7 +22,7 @@ The images themselves will be updated to be provisioned using an open-source pro
 
 - Performance - Using cloud-init with Azure, you can see improved reduced VM creation times in most cases.
 - VM customization - cloud-init allows you to pass down VM configurations to cloud-init via [custom-data](/azure/virtual-machines/linux/using-cloud-init#deploying-a-cloud-init-enabled-virtual-machine), such as running scripts, installing packages, and adding users.
-- Migration - If you are migrating from other clouds, you can migrate cloud- init configurations, and modify them where necessary to work with your Azure deployments. 
+- Migration - If you are migrating from other clouds, you can migrate cloud- init configurations, and modify them where necessary to work with your Azure deployments.
 
 ## More information
 
@@ -31,7 +31,7 @@ The images themselves will be updated to be provisioned using an open-source pro
 - If you deploy these Azure Marketplace images, then there is nothing further that you need to do. You can immediately take advantage of the benefits after the update.
 - If you are creating custom images that derive from these images, and use the Linux Agent to process custom-data, check that your images still work correctly.
 
-    cloud- init supports multiple input types, including a bash script or a cloud- init config. Review the 'cloud- init'[user-data](https://cloudinit.readthedocs.io/en/latest/topics/format.html) documentation. 
+    cloud- init supports multiple input types, including a bash script or a cloud- init config. Review the 'cloud- init'[user-data](https://cloudinit.readthedocs.io/en/latest/topics/format.html) documentation.
 - See [this](/azure/virtual-machines/linux/using-cloud-init#cloud-init-overview) page for details on which images will be updated, and the timeline on when the updates will take place.
 
 ## Frequently asked questions
@@ -47,3 +47,5 @@ A2. Yes. To ensure that there is no conflict, the Linux Agent provisioning code 
 Q3. How can I tell if my image has been provisioned by cloud-init?  
 
 A3. Run `cloud-init status` to see if cloud-init has run.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

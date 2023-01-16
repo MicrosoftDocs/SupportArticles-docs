@@ -2,7 +2,7 @@
 title: S1023 error when you install the DirectX SDK
 description: This article provides resolutions for S1023 error that occurs when you install the June 2010 release of DirectX SDK.
 ms.date: 10/26/2020
-ms.prod-support-area-path: Graphics and multimedia development
+ms.custom: sap:Graphics and multimedia development
 ms.reviewer: stevelee
 ms.technology: windows-dev-apps-graphics-multimedia-dev
 ---

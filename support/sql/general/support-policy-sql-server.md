@@ -2,7 +2,7 @@
 title: Support policy for SQL Server
 description: This article describes the support policy for Microsoft SQL Server.
 ms.date: 12/10/2021
-ms.prod-support-area-path: General
+ms.custom: sap:General
 ms.reviewer: sureshka
 ms.prod: sql
 ---
@@ -169,7 +169,7 @@ If you deploy SQL Server on other cloud solutions or platforms, check with the c
 
 SQL Server follows the Fixed Lifecycle Policy for obtaining support and updates. See [Search Product and Services Lifecycle Information](/lifecycle/products/) for the lifecycle and stage (mainstream, extended, and out-of-support) for each product version. Big Data Clusters is an add-on to SQL Server 2019 and is governed as such under the Fixed Lifecycle Policy.
 
-Service Packs are released for SQL Server through version 2016. Support ends 12 months after the next service pack releases or at the end of the product's support life cycle, whichever comes first. For more information, please see the [Fixed Lifecycle Policy](/lifecycle/policies/fixed#service-packs).
+Service Packs are released for SQL Server through version 2016. Support ends 12 months after the next service pack releases or at the end of the product's support life cycle, whichever comes first. For more information, see the [Fixed Lifecycle Policy](/lifecycle/policies/fixed#service-packs).
 
 No service packs will be released starting from SQL Server 2017. For more information, see [SQL Server Service Packs are discontinued starting from SQL Server 2017](https://support.microsoft.com/help/4041553/sql-server-service-packs-are-discontinued-starting-from-sql-server).
 
@@ -200,6 +200,13 @@ If the technical problem that you experience doesn't exist in the SQL Server pro
 - [Ubuntu Operating System](https://login.ubuntu.com/+login)
 - [Red Hat Operating System](https://access.redhat.com/support/customer-service)
 - [SUSE Operating System](https://www.suse.com/support/)
+
+## Obtain support from SQL Server-based PaaS vendors
+
+If the technical problem that you experience exists in a third-party cloud PaaS offering, work directly with the solution vendor to troubleshoot the problem. For example:
+
+- [Amazon RDS (Amazon Web Services))](https://aws.amazon.com/rds/)
+- [Cloud SQL: for PostgreSQL, MySQL & SQL Server (Google Cloud)](https://cloud.google.com/sql/)
 
 ## Third-party information disclaimer
 

@@ -85,8 +85,7 @@ The following table summarizes Active Directory events that frequently cite the 
 |1655|NTDS General|Active Directory tried to communicate with the following global catalog and the attempts were unsuccessful.|
 |1925|NTDS KCC|The attempt to establish a replication link for the following writable directory partition failed.|
 |1926|NTDS KCC|The attempt to establish a replication link to a read-only directory partition with the following parameters failed.|
-||||
-
+  
 ### Symptom 5
 
 When you right-click the connection object from a source domain controller in Active Directory Sites and Services and then select Replicate Now, the process fails, and you receive the following error:

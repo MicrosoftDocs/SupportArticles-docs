@@ -41,3 +41,5 @@ If **Log on as a service** doesn't have *ALL SERVICES* listed, the installation 
 To resolve this issue, provide *ALL SERVICES* user rights to **Log on as a service**.
 
 The wizard now completes successfully.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

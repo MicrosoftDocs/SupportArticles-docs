@@ -2,7 +2,6 @@
 title: Remove VMware virtual machine (VM) protection references from DPMDB
 description: Provides a SQL script to remove VMware VM protection references from the DPM database.
 ms.date: 06/21/2021
-ms.prod-support-area-path:
 ms.reviewer: v-jysur; jarrettr; sudesai
 author: simonxjx
 ms.author: v-six
@@ -15,9 +14,9 @@ ms.author: v-six
 ```sql
 SET XACT_ABORT ON
 BEGIN TRANSACTION
-IF EXISTS( SELECT Ds.DataSourceID FROM tbl_IM_DataSource Ds JOIN tbl_PRM_LogicalReplica Lr ON Ds.DataSourceId = Lr.DataSourceId WHERE Ds.AppId = '<ID>') 
+IF EXISTS( SELECT Ds.DataSourceID FROM tbl_IM_DataSource Ds JOIN tbl_PRM_LogicalReplica Lr ON Ds.DataSourceId = Lr.DataSourceId WHERE Ds.AppId = '18BEE66C-826F-4499-A663-9805C8688AD3') 
 PRINT 'VMware DataSource in Active/Inactive protected state'
-ELSE IF EXISTS ( SELECT DataSourceID FROM tbl_IM_DataSource WHERE CloudProtectionStatus!=0 AND AppId='<ID>')
+ELSE IF EXISTS ( SELECT DataSourceID FROM tbl_IM_DataSource WHERE CloudProtectionStatus!=0 AND AppId='18BEE66C-826F-4499-A663-9805C8688AD3')
 PRINT 'VMware DataSource in Cloud are Active/Inactive protected state'
 ELSE
                 PRINT 'All VMware datasource protections are removed'
@@ -105,7 +104,7 @@ ELSE
         END
         DROP TABLE #serverIdTable3
 
-        SELECT DatasourceID INTO #datasourceIdTable2 FROM dbo.tbl_IM_DataSource WHERE AppId='<ID>'
+        SELECT DatasourceID INTO #datasourceIdTable2 FROM dbo.tbl_IM_DataSource WHERE AppId='18BEE66C-826F-4499-A663-9805C8688AD3'
         DECLARE @datasourceId2 nvarchar(100)
         WHILE exists ( SELECT * FROM #datasourceIdTable2 )
         BEGIN
@@ -117,7 +116,7 @@ ELSE
         END
         DROP TABLE #datasourceIdTable2
        
-        Delete from tbl_IM_DataSource where AppId='<ID>'   
+        Delete from tbl_IM_DataSource where AppId='18BEE66C-826F-4499-A663-9805C8688AD3'   
 
 COMMIT;
 ```

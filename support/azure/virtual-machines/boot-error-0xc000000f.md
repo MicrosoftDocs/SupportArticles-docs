@@ -2,9 +2,9 @@
 title: Boot error code 0xC000000F in an Azure VM
 description: Fixes a Boot error code 0xc000000f that occurs on an Azure virtual machine (VM).
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: jarrettr
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ---
 # Boot error code 0xC000000F in an Azure VM
@@ -125,7 +125,9 @@ To fix the issue, try the one of following resolutions:
 
     **Notes**:
 
-    - The screenshot shows volume E. However, the actual letter will appropriately reflect the one of the faulty drives (the OS disk attached as a data disk on the troubleshooting VM). 
+    - The screenshot shows volume E. However, the actual letter will appropriately reflect the one of the faulty drives (the OS disk attached as a data disk on the troubleshooting VM).
     - If the latest binary doesn't work, you can try the previous file version to obtain an earlier system update level on that component.
     - If the only binary that's returned in this step matches the file that you're trying to replace on the affected VM, and if both files have the same size and time stamp, you can replace the corrupted file by copying it from another working VM that has the same OS and, if possible, the same system update level.
 5. Detach the repaired disk from the troubleshooting VM. Then, [create a VM from the OS disk](/azure/virtual-machines/windows/create-vm-specialized-portal).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

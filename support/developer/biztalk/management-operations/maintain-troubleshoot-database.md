@@ -2,7 +2,7 @@
 title: Maintain and troubleshoot databases
 description: This article provides detailed information about how to maintain and troubleshoot BizTalk Server databases.
 ms.date: 09/25/2020
-ms.prod-support-area-path: Management and Operations
+ms.custom: sap:Management and Operations
 ms.reviewer: mandia
 ms.topic: how-to
 ---
@@ -193,15 +193,14 @@ Additionally, you can use the BHM tool output to determine which tables are the 
 | **HostName** Q|This table contains a reference to messages in the Spool table that are associated with the particular host and are not suspended. This table is in the BizTalkMsgBoxDb database.|
 |Spool<br/><br/>Parts<br/><br/>Fragments|These tables store actual message data in the BizTalkMsgBoxDb database.|
 |Instances|This table stores all instances and their current status in the BizTalkMsgBoxDb database.|
-|TrackingData_0_ *x*|These four tables store the Business Activity Monitoring (BAM) tracked events in the BizTalkMsgBoxDb database for TDDS to move the events to the BAMPrimaryImport database.|
-|TrackingData_1_ *x*|These four tables store the tracked events in the BizTalkMsgBoxDb database for TDDS to move the events to the BizTalkDTADB database.|
+|TrackingData_0_ _x_|These four tables store the Business Activity Monitoring (BAM) tracked events in the BizTalkMsgBoxDb database for TDDS to move the events to the BAMPrimaryImport database.|
+|TrackingData_1_ _x_|These four tables store the tracked events in the BizTalkMsgBoxDb database for TDDS to move the events to the BizTalkDTADB database.|
 |Tracking_Fragments **x** <br/>Tracking_Parts **x** <br/>Tracking_Spool **x**|Two of each of these tables is in the BizTalkMsgBoxDb and BizTalkDTADb databases. One is online, and the other is offline.<br/><br/>In BizTalk Server 2004 SP2 and in later versions, the TrackedMessages_Copy_BizTalkMsgBoxDb SQL Server Agent job moves tracked message bodies directly to these tables in the BizTalkDTADb database.<br/><br/>In BizTalk Server 2004 Service Pack 1 (SP1) and in earlier versions of BizTalk Server 2004, the TrackedMessages_Copy_BizTalkMsgBoxDb SQL Server Agent job copies tracked message bodies into these tables in the BizTalkMsgBoxDb database. The TrackingSpool_Cleanup_BizTalkMsgBoxDb SQL Server Agent job purges the offline tables and makes the tables online while the job also takes the online tables offline.|
 |dta_ServiceInstances|This table stores tracked events for service instances in the BizTalkDTADb database. If this table is large, the BizTalkDTADb database is probably large.|
 |dta_DebugTrace|This table stores the Orchestration debugger events in the BizTalkDTADb database.|
 |dta_MessageInOutEvents|This table stores tracked event messages in the BizTalkDTADb database. These tracked event messages include message context information.|
 |dta_ServiceInstanceExceptions|This table stores error information for any suspended service instance in the BizTalkDTADb database.|
-|||
-
+  
 Consider the following scenarios.
 
 - **HostNameQ_Suspended tables**

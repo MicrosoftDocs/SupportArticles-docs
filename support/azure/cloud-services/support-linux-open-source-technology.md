@@ -1,12 +1,12 @@
 ---
 title: Support for Linux and open-source technology in Azure
 description: Describes support for Linux images in Microsoft Azure.
-ms.date: 07/06/2020
-ms.prod-support-area-path: 
+ms.date: 11/01/2022
 ms.reviewer: patcatun
 author: genlin
 ms.author: genli
 ms.service: cloud-services
+ms.subservice: reference
 ---
 # Support for Linux and open-source technology in Azure
 
@@ -28,15 +28,14 @@ The endorsed Linux distributions are created and published by Linux partners for
 |---|---|---|
 | Customers who bring their own Linux virtual machine into Azure| Microsoft Support will assist you in using Azure platform or services, and may offer guidance for issues within Linux. A [support plan](https://azure.microsoft.com/support/plans/) is required to engage Microsoft Support.| The primary responsibility is with the customer. Microsoft may be able to offer guidance for issues within Linux. <br/><br/> Want to bring your own custom image? Start here: [Microsoft Azure: Linux Virtual Machines](/azure/virtual-machines/linux/) |
 | CentOS by Rogue Wave Software (formerly Open Logic)| Microsoft Support will assist you in using Azure platform or services, and may offer guidance for issues within Linux. A [support plan](https://azure.microsoft.com/support/plans/) is required to engage Microsoft Support.| [The CentOS Project](https://wiki.centos.org/About) |
-| CoreOS <br/> CoreOS is scheduled to be [end of life](https://coreos.com/os/eol/) by May 26, 2020.| Microsoft Support will assist you in using Azure platform or services, and may offer guidance for issues within Linux. A [support plan](https://azure.microsoft.com/support/plans/) is required to engage Microsoft Support.| Microsoft has two (2)  channels of migration for CoreOS users. <br/><br/>1. Flatcar by Kinvolk (see the "Flatcar Container Linux by Kinvolk" entry. ) <br/><br/>2. [Fedora Core OS](https://docs.fedoraproject.org/en-US/fedora-coreos/provisioning-azure/) (customers must upload their own image. Here's the [migration documentation](https://docs.fedoraproject.org/en-US/fedora-coreos/migrate-cl/)). |
+| CoreOS <br/> CoreOS is scheduled to be end of life) by May 26, 2020.| Microsoft Support will assist you in using Azure platform or services, and may offer guidance for issues within Linux. A [support plan](https://azure.microsoft.com/support/plans/) is required to engage Microsoft Support.| Microsoft has two (2)  channels of migration for CoreOS users. <br/><br/>1. Flatcar by Kinvolk (see the "Flatcar Container Linux by Kinvolk" entry. ) <br/><br/>2. [Fedora Core OS](https://docs.fedoraproject.org/en-US/fedora-coreos/provisioning-azure/) (customers must upload their own image. Here's the [migration documentation](https://docs.fedoraproject.org/en-US/fedora-coreos/migrate-cl/)). |
 | Debian by Credativ| Microsoft Support will assist you in using Azure platform or services, and may offer guidance for issues within Linux. A [support plan](https://azure.microsoft.com/support/plans/) is required to engage Microsoft Support.| [Debian GNU/Linux as an endorsed distribution in Azure Marketplace](https://azure.microsoft.com/blog/debian-images-now-available-on-azure/) [Credativ Support Contacts](https://www.credativ.de/en/portfolio/support/) |
 | Flatcar Container Linux by Kinvolk| Microsoft Support will assist you in using Azure platform or services, and may offer guidance for issues within Linux. A [support plan](https://azure.microsoft.com/support/plans/) is required to engage Microsoft Support.| [Migrating from CoreOS to Flatcar Container Linux](https://kinvolk.io/blog/2020/04/running-flatcar-container-linux-in-microsoft-azure/). |
-| Oracle Linux by Oracle| Microsoft Support will assist you in using Azure platform or services, and may offer guidance for issues within Linux. A [support plan](https://azure.microsoft.com/support/plans/) is required to engage Microsoft Support.| Oracle Linux users must have an active Oracle license. Microsoft may be able to give some guidance, but may defer support issues to Oracle. [Lifetime Support Policy: Coverage for Oracle Linux and Oracle VM](http://www.oracle.com/us/support/library/elsp-lifetime-069338.pdf) [Oracle Support Contacts](https://support.oracle.com/portal/) |
+| Oracle Linux by Oracle| Microsoft Support will assist you in using Azure platform or services, and may offer guidance for issues within Linux. A [support plan](https://azure.microsoft.com/support/plans/) is required to engage Microsoft Support.| Oracle Linux users must have an active Oracle license. Microsoft may be able to give some guidance, but may defer support issues to Oracle. [Lifetime Support Policy: Coverage for Oracle Linux and Oracle VM](https://www.oracle.com/a/ocom/docs/elsp-lifetime-069338.pdf) [Oracle Support Contacts](https://support.oracle.com/portal/) |
 | Red Hat Enterprise Linux (RHEL) by Red Hat| Microsoft Support will assist you in using Azure platform or services, and may offer guidance for issues within Linux. A [support plan](https://azure.microsoft.com/support/plans/) is required to engage Microsoft Support. For more information, please visit [Red Hat and Microsoft Azure Certified Cloud & Service Provider Support Policies](https://access.redhat.com/articles/2041273).| Red Hat has two (2) offerings for RHEL in Azure: <br/>1. [On-Demand (PAYG)](https://access.redhat.com/public-cloud/microsoft-azure) <br/>2. [Cloud Access (Gold Images)](https://www.redhat.com/en/technologies/cloud-computing/cloud-access)<br/><br/>Microsoft and Red Hat partner offer an integrated support experience. Support cost is integrated in the consumption cost of On-Demand images.<br/><br/>Cloud Access (BYOS) Support customers must have support agreements with both companies. The customer may be requested to engage Red Hat through their support agreement and bring Microsoft and Red Hat together on a service request.<br/><br/>Converting either On-Demand to Cloud Access, or Cloud Access to On-Demand can be done through the Azure Hybrid Benefit.<br/><br/>For more information, please see [Preview: Azure Hybrid Benefit – how it applies for Linux Virtual Machines](/azure/virtual-machines/linux/azure-hybrid-benefit-linux).|
 | SUSE Linux Enterprise Server by SUSE openSUSE by SUSE| Microsoft Support will assist you in using Azure platform or services, and may offer guidance for issues within Linux. A [support plan](https://azure.microsoft.com/support/plans/) is required to engage Microsoft Support.| SUSE has 3 offerings in Azure: <br/>1. Bring Your Own Subscription (BYOS) <br/>2. SUSE Images with Patching Support <br/>3. 24x7 Support Images <br/><br/> Bring Your Own Subscription (BYOS)<br/> <br/>Customers must register with SUSE to use these images. Microsoft may provide guidance for Linux issues, but may defer customer issues to SUSE directly.<br/> <br/>SUSE Images with Patching Support<br/><br/> This image includes updates for your virtual machine from SUSE. Microsoft may assist for Linux issues, but this image doesn't include additional support from SUSE. SUSE related inquiries may require the customer to engage SUSE directly, and require an active SUSE support agreement. <br/><br/>24x7 Support Images<br/><br/> 24x7 support includes updates and support through 24x7 web, email, chat, and telephone from Microsoft and SUSE. Virtual machines that are created from this image incur per-hour support fees, in addition to Azure platform fees. <br/><br/>Conversion between PAYG Offerings to BYOS can be done through the Azure Hybrid Benefit.<br/><br/> For more information, see [Preview: Azure Hybrid Benefit – how it applies for Linux Virtual Machines](/azure/virtual-machines/linux/azure-hybrid-benefit-linux)|
 | Ubuntu Linux by Canonical| Microsoft Support will assist you in using Azure platform or services, and may offer guidance for issues within Linux. A [support plan](https://azure.microsoft.com/support/plans/) is required to engage Microsoft Support.| [Ubuntu Wiki: Releases](https://wiki.ubuntu.com/Releases)<br/><br/> [The Ubuntu lifecycle and release cadence](http://www.ubuntu.com/info/release-end-of-life) |
-||||
-
+  
 ## Linux support scope
 
 Microsoft offers Linux support for [endorsed Linux distributions](/azure/virtual-machines/linux/endorsed-distros) in Azure. The Linux vendor may need to be engaged depending on the scenario.
@@ -49,8 +48,7 @@ Microsoft offers Linux support for [endorsed Linux distributions](/azure/virtual
 - Scenarios related to security aren't supported. They include but aren't limited to:
 
   - compromised virtual machines
-  - security forensics
-  - DDoS
+  - security incident response investigations
   - intrusion-prevention assistance
 
 ## Open-source technology support matrix
@@ -59,7 +57,7 @@ Microsoft may offer support for the following specific open-source technologies 
 
 - Languages: PHP, Java, Python, Node.JS
 - Database: MySQL
-- Web and application servers: Apache, Tomcat
+- Web and application servers: Apache HTTP Server, Apache Tomcat
 - Frameworks: WordPress
 
 ## Open-source technology support scope
@@ -76,6 +74,8 @@ Here are some of the support scenarios that Microsoft will assist with:
 - Deployment errors when customers try to deploy applications to the Azure platform and services.
 - Runtime errors when customers use the Azure platform and services.
 - Performance issues that affect applications that were built by using the supported open-source technologies on the Azure platform and services.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 

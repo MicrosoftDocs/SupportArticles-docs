@@ -2,7 +2,6 @@
 title: Error (Confirm you are using the current sign-in info) when you perform a Workplace Join
 description: Describes a problem that returns a (Confirm you are using the current sign-in info, and that your workplace uses this feature) error. Provides a resolution.
 ms.date: 06/08/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: authentication
@@ -93,3 +92,5 @@ If you try to perform Workplace Join to your local Active Directory domain, foll
 For more troubleshooting information, see the following article in the Microsoft Knowledge Base:
 
 [Diagnostic logging for troubleshooting Workplace Join issues](https://support.microsoft.com/help/3045377).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

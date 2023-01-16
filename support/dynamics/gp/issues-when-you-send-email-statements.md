@@ -1,13 +1,13 @@
 ---
 title: Troubleshoot issues that occur when you send e-mail statements
-description: Discusses several troubleshooting methods and items that you can review to troubleshoot issues that occur when you send e-mail statements in Microsoft Dynamics GP 9.0.
+description: Discusses several troubleshooting methods and items that you can review to troubleshoot issues that occur when you send e-mail statements in Microsoft Dynamics GP.
 ms.reviewer:
 ms.topic: troubleshooting
 ms.date: 03/31/2021
 ---
-# Troubleshoot issues that occur when you send e-mail statements in Microsoft Dynamics GP 9.0
+# Troubleshoot issues that occur when you send e-mail statements in Microsoft Dynamics GP
 
-This article discusses different methods that you can use to troubleshoot issues that occur when you send e-mail statements in Microsoft Dynamics GP 9.0.
+This article discusses different methods that you can use to troubleshoot issues that occur when you send e-mail statements in Microsoft Dynamics GP.
 
 _Applies to:_ &nbsp; Microsoft Dynamics GP  
 _Original KB number:_ &nbsp; 934699
@@ -74,4 +74,4 @@ Follow these steps to troubleshoot issues that occur when you send e-mail statem
 
 4. Verify that a PDF writer that has been tested for use with Microsoft Dynamics GP is installed. Adobe PDF Writer is one PDF writer that has been tested.
 
-5. Make sure that you use a MAPI compliant e-mail program such as Microsoft Outlook. For more information about how to determine whether an e-mail application is MAPI complaint, see [How to determine if an email Application is MAPI complaint for use with Microsoft FRx](https://support.microsoft.com/topic/how-to-determine-if-an-email-application-is-mapi-complaint-for-use-with-microsoft-frx-82471024-b1f7-4225-1501-7b15a2936f42).
+5. Make sure that you use a MAPI compliant e-mail program such as Microsoft Outlook.

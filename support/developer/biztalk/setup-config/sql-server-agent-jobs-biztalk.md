@@ -2,7 +2,7 @@
 title: SQL Server Agent jobs in BizTalk Server
 description: Lists all the SQL Server Agent jobs in BizTalk Server. Also provides a description of each SQL Server Agent job.
 ms.date: 03/06/2020
-ms.prod-support-area-path: BizTalk Server Setup and Configuration
+ms.custom: sap:BizTalk Server Setup and Configuration
 ms.reviewer: rickcau
 ---
 # Description of the SQL Server Agent jobs in BizTalk Server
@@ -32,8 +32,7 @@ The following table lists the BizTalk SQL Agent jobs.
 |Rules_Database_Cleanup_BizTalkRuleEngineDb|Purges old audit data from the Rule Engine (`BizTalkRuleEngineDb`) database every 90 days. This job also purges old history data (deploy/undeploy notifications) from the Rule Engine (`BizTalkRuleEngineDb`) database every 3 days. This job is created on BizTalk Server 2009.|Yes|
 |TrackedMessages_Copy_BizTalkMsgBoxDb|Copies the message bodies of tracked messages from the `BizTalkMsgBoxDb` database to the Tracking (`BizTalkDTADb`) database.|Yes|
 |TrackingSpool_Cleanup_BizTalkMsgBoxDb|Purges inactive tracking spool tables to free database space. This job exists only on BizTalk Server 2004.|No|
-||||
-
+  
 ## References
 
 For a list of the SQL Server Agent jobs and their descriptions on BizTalk Server, see [Database Structure and Jobs](/biztalk/core/database-structure-and-jobs).

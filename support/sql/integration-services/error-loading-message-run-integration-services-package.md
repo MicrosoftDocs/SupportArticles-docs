@@ -2,7 +2,7 @@
 title: Error loading when you run Integration package
 description: This article helps you resolve package load failures that occur when SSIS cannot decrypt the password stored in the package.
 ms.date: 09/02/2020
-ms.prod-support-area-path: Integration Services
+ms.custom: sap:Integration Services
 ms.reviewer: craigg
 ms.prod: sql
 ---

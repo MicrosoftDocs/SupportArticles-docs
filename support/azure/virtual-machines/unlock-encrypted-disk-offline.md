@@ -4,13 +4,14 @@ description: This article describes how to unlock an encrypted disk attached to 
 ms.author: genli
 ms.date: 07/16/2021
 ms.service: virtual-machines
+ms.subservice: vm-backup-restore
 ms.topic: troubleshooting
 title: Unlocking an encrypted disk for offline repair
 ---
 
 # Unlocking an encrypted disk for offline repair
 
-This article describes how to unlock an encrypted OS disk on a separate virtual machine (called a repair VM) to enable offline remediation and troubleshooting on that disk. 
+This article describes how to unlock an encrypted OS disk on a separate virtual machine (called a repair VM) to enable offline remediation and troubleshooting on that disk.
 
 ## Symptoms
 
@@ -65,19 +66,22 @@ For more information about the `Get-AzureRmDiskEncryptionStatus` cmdlet, see [Ge
 
 You can use the `az vm encryption show` command in Azure CLI with the query `disks[].encryptionSettings[].enabled` appended to determine whether ADE is enabled on a VM's disks. The following output indicates that ADE encryption is enabled.
 
-```console
-C:\Users\admin1>az vm encryption show --name MyVM --resource-group MyResourceGroup --query "disks[].encryptionSettings[].enabled"
+```azurecli
+az vm encryption show --name MyVM --resource-group MyResourceGroup --query "disks[].encryptionSettings[].enabled"
+```
+
+```output
 [
   true
 ]
 ```
 
-For more information about the `az vm encryption show` command, see [az vm encryption show](/cli/azure/vm/encryption#az_vm_encryption_show).
+For more information about the `az vm encryption show` command, see [az vm encryption show](/cli/azure/vm/encryption#az-vm-encryption-show).
 
 >[!NOTE]
 >**Offline repair for unencrypted disks**
 >
->If you determine that ADE is not enabled on the disk, see the following article for instructions about how to attach a disk to a repair VM: 
+>If you determine that ADE is not enabled on the disk, see the following article for instructions about how to attach a disk to a repair VM:
 >[Troubleshoot a Windows VM by attaching the OS disk to a recovery VM through the Azure portal](troubleshoot-recovery-disks-portal-windows.md)
 
 ### Determine whether the OS disk uses ADE version 1 (dual-pass encryption) or ADE version 2 (single-pass encryption)
@@ -185,7 +189,7 @@ By using this procedure, you manually create a VM that has the OS disk of the so
 
     :::image type="content" source="media/unlock-encrypted-disk-offline/unlocked-drive.png" alt-text="Screenshot of This P C with a drive marked by an icon of an open padlock.":::
 
-11. Now that you can access the volume, you can complete troubleshooting and mitigations as necessary, for example, by reading logs or running a script. 
+11. Now that you can access the volume, you can complete troubleshooting and mitigations as necessary, for example, by reading logs or running a script.
 
 12. After you repair the disk, [use the following procedure](troubleshoot-recovery-disks-portal-windows.md#swap-the-failed-vms-os-disk-with-the-repaired-disk) to replace the source VM's OS disk with the newly repaired disk.
 
@@ -234,7 +238,7 @@ The manual resolution method to unlock an encrypted disk offline relies on the A
     Install-Module -Name PowerShellGet -Force
     ```
 
-7. When the prompt returns, close the PowerShell window. Then, open a new PowerShell window with elevated privileges to start a new PowerShell session. 
+7. When the prompt returns, close the PowerShell window. Then, open a new PowerShell window with elevated privileges to start a new PowerShell session.
 8. At the PowerShell prompt, install the latest version of the Azure Az module:
 
     ```powershell
@@ -251,7 +255,7 @@ The manual resolution method to unlock an encrypted disk offline relies on the A
 
 1. In the Azure portal, navigate to the key vault that was used to encrypt the source VM. If you don't know the name of the key vault, enter the following command at the prompt in Azure Cloud Shell, and look for the value next to "sourceVault" in the output:
 
-    ```console
+    ```azurecli
     az vm encryption show --name MyVM --resource-group MyResourceGroup
     ```
 
@@ -260,7 +264,7 @@ The manual resolution method to unlock an encrypted disk offline relies on the A
 **Key Management Operations**: Get, List, Update, Create
 **Cryptographic Operations**: Unwrap key
 **Secret Permissions**: Get, List, Set
-4. Return to the repair VM and the elevated PowerShell window. 
+4. Return to the repair VM and the elevated PowerShell window.
 5. Enter the following command to begin the process of signing into your Azure subscription, replacing "[SubscriptionID]" with your Azure subscription ID:
 
     ```powershell
@@ -307,7 +311,7 @@ The manual resolution method to unlock an encrypted disk offline relies on the A
 ### Download the BEK to the repair VM
 
 1. On the repair VM, create a folder named "BEK" (without the quotation marks) in the root of the C volume.
-2. Copy and paste the following sample script into an empty PowerShell ISE script pane. 
+2. Copy and paste the following sample script into an empty PowerShell ISE script pane.
 
     >[!NOTE]
     >Replace the values for "$vault" and "$bek" with the values for your environment. For the $bek value, use the secret name that you obtained in the last procedure. (The secret name is the BEK file name without the ".bek" file name extension.)
@@ -332,7 +336,7 @@ The manual resolution method to unlock an encrypted disk offline relies on the A
 2. Record the following values in Notepad. You will be prompted to supply them when the script runs.
 
     - **secretUrl**. This is the URL of the secret that's stored in the key vault. A valid secret URL uses the following format:
-*<https://[key vault name].vault.azure.net/secrets/[BEK Name]/[version ID]>*
+*<<`https://[key`> vault name].vault.azure.net/secrets/[BEK Name]/[version ID]>*
 
         To find this value in the Azure portal, navigate to the **Secrets** blade in your key vault. Select the BEK name that was determined in the previous step, [Retrieve the BEK file name](#retrieve-the-bek-file-name). Select the current version identifier, and then read the Secret Identifier URL below **Properties**. (You can copy this URL to the clipboard.)
 
@@ -340,7 +344,7 @@ The manual resolution method to unlock an encrypted disk offline relies on the A
 
     - **keyVaultResourceGroup**. The resource group of the key vault.
     - **kekUrl**. This is the URL of the key that's used to protect the BEK. A valid kek URL uses the following format:
-*<https://[key vault name].vault.azure.net/keys/[key name]/[version ID]>*
+*<<`https://[key`> vault name].vault.azure.net/keys/[key name]/[version ID]>*
 
         You can get this value in the Azure portal by navigating to the **Keys** blade in your key vault, selecting the name of the key that's used as the KEK, selecting the current version identifier, and then reading the **Key Identifier URL** below **Properties**. (You can copy this URL to the clipboard.)
 
@@ -415,3 +419,5 @@ You are now ready to unlock the encrypted disk.
 ## Next Steps
 
 If you're having problems connecting to your VM, see [Troubleshoot Remote Desktop connections to an Azure VM](troubleshoot-rdp-connection.md). For problems with accessing applications running on your VM, see [Troubleshoot application connectivity issues on a Windows VM](troubleshoot-app-connection.md).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

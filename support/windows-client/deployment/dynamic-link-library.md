@@ -1,7 +1,7 @@
 ---
 title: Dynamic link library (DLL)
 description: Describes what a DLL is and the various issues that occur when you use a DLL.
-ms.date: 09/22/2020
+ms.date: 04/11/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -351,7 +351,7 @@ The following list describes some of the features of assemblies compared to the 
 
 ## References
 
-- [Deploying and Configuring Applications](https://msdn2.microsoft.com/netframework/aa497268.aspx)
+- [Deploying and Configuring Applications](/previous-versions/aa497268(v=msdn.10))
 
 - [Assemblies](/previous-versions/dotnet/netframework-1.1/hk5f40ct(v=vs.71))
 

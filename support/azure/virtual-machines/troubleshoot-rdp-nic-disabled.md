@@ -1,12 +1,12 @@
 ---
-title: Cannot connect remotely to Azure Virtual Machines because the NIC is disabled | Microsoft Docs
-description: Learn how to troubleshoot a problem in which RDP fails because the NIC is disabled in Azure VM| Microsoft Docs
+title: Cannot connect remotely to Azure Virtual Machines because the NIC is disabled
+description: Learn how to troubleshoot a problem in which RDP fails because the NIC is disabled in Azure VM.
 services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
@@ -15,10 +15,9 @@ ms.date: 11/12/2018
 ms.author: genli
 ---
 
-#  Cannot remote desktop to a VM because the network interface is disabled
+# Cannot remote desktop to a VM because the network interface is disabled
 
 This article explains how to resolve a problem in which you cannot make a Remote Desktop connection to Azure Windows Virtual Machines (VMs) if the network interface is disabled.
-
 
 ## Symptoms
 
@@ -27,7 +26,6 @@ You cannot make an RDP connection or any other type of connection to any other p
 :::image type="content" source="media/troubleshoot-rdp-nic-disabled/network-interface-disconnected.png" alt-text="Screenshot shows the network interface in the V M is disconnected.":::
 
 :::image type="content" source="media/troubleshoot-rdp-nic-disabled/network-interface-disabled.png" alt-text="Screenshot shows the network interface in the V M is disabled.":::
-
 
 ## Solution
 
@@ -58,7 +56,7 @@ To enable the interface for the VM, use Serial control or [reset network interfa
     netsh interface set interface name="Ethernet 2" admin=enabled
     ```
 
-4.  Check the state of the network interface again to make sure that the network interface is enabled.
+4. Check the state of the network interface again to make sure that the network interface is enabled.
 
     ```console
     netsh interface show interface
@@ -66,8 +64,10 @@ To enable the interface for the VM, use Serial control or [reset network interfa
 
     You don't have to restart the VM at this point. The VM will be back reachable.
 
-5.  Connect to the VM and see whether the problem is resolved.
+5. Connect to the VM and see whether the problem is resolved.
 
 ## Reset network interface
 
 To reset network interface, change the IP address to another IP address that is available in the Subnet. To do this, use Azure portal or Azure PowerShell. For more information, see [Reset network interface](reset-network-interface.md).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

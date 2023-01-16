@@ -2,7 +2,6 @@
 title: Runbook server goes offline due to deadlocks
 description: Fixes an issue where the System Center 2012 Orchestrator runbook server goes offline due to deadlocks.
 ms.date: 08/04/2020
-ms.prod-support-area-path:
 ---
 # The runbook server goes offline due to deadlocks
 

@@ -2,7 +2,6 @@
 title: How to use PerfInsights to diagnose high CPU or disk usage issues
 description: Introduce the troubleshooting skill of using PerfInsights to diagnose performance issues.
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.service: storage
 ms.subservice: common
 ms.author: genli
@@ -69,3 +68,5 @@ This article describes how to use PerfInsights to diagnose high CPU or disk usag
         :::image type="content" source="media/diagnose-high-cpu-disk-perfinsights/long-running-cpu-consumers.png" alt-text="Screenshot of processes that were accessing the disk.":::
 
     - Top spike CPU consumers. This table shows the processes that had high spike usage but did not consume CPU for a long time.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

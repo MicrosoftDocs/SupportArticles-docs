@@ -2,9 +2,9 @@
 title: Unable to sign out of online services that use Azure AD
 description: Describes a sign-out problem that occurs when you try to sign out of services that use Azure AD. Provides a resolution.
 ms.date: 07/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
 ms.service: active-directory
+ms.subservice: aad-general
 ---
 # Error when signing out of online services: Sorry, but we're having trouble signing you out
 
@@ -44,4 +44,4 @@ This problem occurs if third-party cookies are turned on in your web browser. We
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazuread) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

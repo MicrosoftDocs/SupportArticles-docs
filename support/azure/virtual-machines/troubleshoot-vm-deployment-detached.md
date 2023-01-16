@@ -1,11 +1,10 @@
 ---
-title: Troubleshoot virtual machine deployment due to detached disks | Microsoft Docs
+title: Troubleshoot virtual machine deployment due to detached disks
 description: Troubleshoot virtual machine deployment due to detached disks
 services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 ms.service: virtual-machines
 ms.collection: windows
 ms.topic: troubleshooting
@@ -47,7 +46,7 @@ diskSizeGB   : 8
 toBeDetached : False 
 ```
 
-### Step 2: Set the flag for failing disks to "true".
+### Step 2: Set the flag for failing disks to "true"
 
 Get the array index of the failing disk and set the **toBeDetached** flag for the failing disk (for which **AttachDiskWhileBeingDetached** error occurred) to "true". This setting implies detaching the disk from the virtual machine. The failing disk name can be found in the **errorMessage**.
 
@@ -72,13 +71,13 @@ PS D:> Update-AzureRmVM -ResourceGroupName "Example Resource Group" -VM $vm
 
 ## Solution 2: REST
 
-### Step 1: Get the virtual machine payload.
+### Step 1: Get the virtual machine payload
 
 ```azurepowershell-interactive
 GET https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}?$expand=instanceView&api-version=2019-03-01
 ```
 
-### Step 2: Set the flag for failing disks to "true".
+### Step 2: Set the flag for failing disks to "true"
 
 Set the **toBeDetached** flag for failing disk to true in the payload returned in Step 1. Please Note: The API version specified for Get and Put calls needs to be `2019-03-01` or greater.
 
@@ -109,7 +108,7 @@ Set the **toBeDetached** flag for failing disk to true in the payload returned i
         {
           "diskSizeGB": 1023,
           "createOption": "Empty",
-	    "name": "f94901ef-75ee-4477-9ad6-1c74da50e7ef",
+     "name": "f94901ef-75ee-4477-9ad6-1c74da50e7ef",
           "lun": 0,
           "toBeDetached": true
         },
@@ -201,7 +200,7 @@ PATCH https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups
           "createOption": "Empty",
           "lun": 0,
           "diskSizeGB": 1023,
-	    "name": "f94901ef-75ee-4477-9ad6-1c74da50e7ef",
+     "name": "f94901ef-75ee-4477-9ad6-1c74da50e7ef",
           "toBeDetached": true
         },
         {
@@ -232,3 +231,5 @@ PATCH https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups
 If you are having issues connecting to your VM, see [Troubleshoot RDP connections to an Azure VM](troubleshoot-rdp-connection.md).
 
 For issues with accessing applications running on your VM, see [Troubleshoot application connectivity issues on a Windows VM](troubleshoot-app-connection.md).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

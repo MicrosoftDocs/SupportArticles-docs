@@ -3,9 +3,8 @@ title: Apply out-of-band updates to the Microsoft Cloud Platform System Standard
 description: Describes the procedures to manually update the Microsoft Cloud Platform System Standard solution.
 author: genlin
 ms.author: genli
-ms.service: cloud-services
+ms.service: cloud-platform-system
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.reviewer: justini, paulcha, chengwei, jarrettr, twooley
 ---
 # Apply out-of-band updates to the Microsoft Cloud Platform System Standard platform
@@ -27,11 +26,11 @@ Follow the procedures in this article to manually update the Microsoft Cloud Pla
 4. In the **Fabric** workspace, under **Servers**, expand **Infrastructure**, and then click **Update Server**.
 5. In the Update Servers pane, right-click the listed server, and then click **Properties**.
 6. On the Update Classifications tab, make sure that the following check boxes are selected:
-   - Critical Updates 
-   - Definition Updates 
-   - Security Updates 
-   - Service Packs 
-   - Update Rollups 
+   - Critical Updates
+   - Definition Updates
+   - Security Updates
+   - Service Packs
+   - Update Rollups
 
     :::image type="content" source="media/apply-out-of-band-updates-to-cps/update-classification-tab.png" alt-text="Screenshot shows the check boxes are selected on the Update Classifications tab.":::
 
@@ -144,10 +143,10 @@ Follow the procedures in this article to manually update the Microsoft Cloud Pla
 
     The updates will download from the WSUS server and install on the VM.
 
-9. Repeat steps 3-8 for the listed infrastructure VMs in step 2, *except* for the Console VM.
+9. Repeat steps 3-8 for the listed infrastructure VMs in step 2, _except_ for the Console VM.
 10. For each VM, select Yes  when you're prompted with A restart is required to complete Windows Updates. Restart now?  You should restart the VMM server last. When you update the VMM server, expect the VMM console to disconnect and reconnect when it's available.
 11. Finally, after all other VMs are updated and restarted, update the Console VM by running sconfig in a local elevated Windows PowerShell session (for example, Run as administrator). The Server Configuration tool may take a while to open.
- 
+
     Notes
 
     - You don't have to update the SQL Server VMs because they were already updated by using the Cluster-Aware Updating tool.
@@ -172,3 +171,5 @@ Follow the procedures in this article to manually update the Microsoft Cloud Pla
     >  If this is an active account that you use for CPS Standard administration, make sure that it's a member of another group such as **Prefix** -Ops-Admins .
 
 3. It's now safe to close the servicing maintenance window and let users back on the system.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

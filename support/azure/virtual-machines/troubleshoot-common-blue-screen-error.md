@@ -1,13 +1,13 @@
 ---
 
-title: Blue screen errors when booting an Azure VM| Microsoft Docs
-description: Learn how to troubleshoot the issue that the blue screen error is received when booting| Microsoft Docs
+title: Blue screen errors when booting an Azure VM
+description: Learn how to troubleshoot the issue that the blue screen error is received when booting.
 services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
@@ -17,10 +17,10 @@ ms.author: genli
 ---
 
 # Windows shows blue screen error when booting an Azure VM
-This article describes blue screen errors that you may encounter when you boot a Windows Virtual Machine (VM) in Microsoft Azure. It provides steps to help you collect data for a support ticket. 
 
+This article describes blue screen errors that you may encounter when you boot a Windows Virtual Machine (VM) in Microsoft Azure. It provides steps to help you collect data for a support ticket.
 
-## Symptom 
+## Symptom
 
 A Windows VM doesn't start. When you check the boot screenshots in [Boot diagnostics](./boot-diagnostics.md), you see one of the following error messages in a blue screen:
 
@@ -47,13 +47,13 @@ To resolve this problem, you would need first to gather dump file for the crash 
 ### Attach the OS disk to a recovery VM
 
 1. Take a snapshot of the OS disk of the affected VM as a backup. For more information, see [Snapshot a disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk).
-2. [Attach the OS disk to a recovery VM](./troubleshoot-recovery-disks-portal-windows.md). 
+2. [Attach the OS disk to a recovery VM](./troubleshoot-recovery-disks-portal-windows.md).
 3. Remote desktop to the recovery VM.
 
 ### Locate dump file and submit a support ticket
 
 1. On the recovery VM, go to windows folder in the attached OS disk. If the driver letter that is assigned to the attached OS disk is F, you need to go to F:\Windows.
-2. Locate the memory.dmp file, and then [submit a support ticket](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) with the dump file. 
+2. Locate the memory.dmp file, and then [submit a support ticket](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) with the dump file.
 
 If you cannot find the dump file, move the next step to enable dump log and Serial Console.
 
@@ -99,7 +99,11 @@ To enable dump log and Serial Console, run the following script.
 
     reg unload HKLM\BROKENSYSTEM
     ```
+     > [!NOTE]
+     > If the rescue VM is created manually without the `az repair` commands, you can use [sac-os-dump-enabler.ps1]((https://github.com/Azure/repair-script-library/blob/master/src/windows/sac-os-dump-enabler.ps1) to collect dump files. If the OS disk of the faulty VM is attached to the rescue VM as a data disk and is online, run this script by using the **Run command** option in the rescue VM.
 
 3. [Detach the OS disk and then Re-attach the OS disk to the affected VM](./troubleshoot-recovery-disks-portal-windows.md).
 4. Start the VM to reproduce the issue, then a dump file will be generated.
 5. Attach the OS disk to a recovery VM, collect dump file, and then [submit a support ticket](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) with the dump file.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

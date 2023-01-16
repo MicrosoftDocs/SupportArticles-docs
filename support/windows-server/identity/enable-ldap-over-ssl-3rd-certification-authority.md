@@ -30,7 +30,9 @@ There's no user interface for configuring LDAPS. Installing a valid certificate 
 
 To enable LDAPS, you must install a certificate that meets the following requirements:
 
-- The LDAPS certificate is located in the Local Computer's Personal certificate store (programmatically known as the computer's MY certificate store).
+- The LDAPS certificate is located in the Local Computer's Personal certificate store (programmatically known as the computer's MY certificate store).  
+  > [!NOTE]
+  > If there is a certificate in the NT Directory Services (NTDS) store, DC use the certificate in the NTDS store instead.
 
 - A private key that matches the certificate is present in the Local Computer's store and is correctly associated with the certificate. The private key must *not* have strong private key protection enabled.
 
@@ -162,6 +164,6 @@ AD DS detects when a new certificate is dropped into its certificate store and t
 
 A new rootDse operation that's named renewServerCertificate can be used to manually trigger AD DS to update its SSL certificates without having to restart AD DS or restart the domain controller. This attribute can be updated using adsiedit.msc, or by importing the change in LDAP Directory Interchange Format (LDIF) using ldifde.exe. For more information on using LDIF to update this attribute, see [renewServerCertificate](/openspecs/windows_protocols/ms-adts/4cf26e43-ae0b-4823-b00c-18205ab78065).
 
-Finally, if a Windows Server 2008 or a later version domain controller finds multiple certificates in its store, it automatically selects the certificate whose expiration date is furthest in the future. Then, if your current certificate is approaching its expiration date, you can drop the replacement certificate in the store, and AD DS automatically switches to use it.
+Finally, if a Windows Server 2008 or a later version domain controller finds multiple certificates in its store, it will random chose one of these certificates.
 
 All these work for Windows Server 2008 AD DS and for 2008 Active Directory Lightweight Directory Services (AD LDS). For AD LDS, put certificates into the Personal certificate store for the service that corresponds to the AD LDS instance instead of for the NTDS service.

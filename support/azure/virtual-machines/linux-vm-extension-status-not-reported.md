@@ -2,9 +2,9 @@
 title: Linux VM extension status isn't reported after Azure Linux Agent 2.2.19 update
 description: Discusses a problem in which the Linux VM extension status is not reported after an Azure Linux Agent update to version 2.2.19.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: danis, danis
 ms.service: virtual-machines
+ms.subservice: vm-extensions-not-operating
 ms.collection: linux
 ---
 # Linux VM extension status isn't reported after Azure Linux Agent 2.2.19 update
@@ -20,7 +20,7 @@ On a Linux virtual machine (VM) that's running on an instance of Microsoft Azure
 
 ## Cause
 
-This problem occurs because of a [known issue](https://github.com/Azure/WALinuxAgent/wiki/Known-Issues#2219---protocolerror-varlibwaagentgoalstate1xml-is-missing). 
+This problem occurs because of a [known issue](https://github.com/Azure/WALinuxAgent/wiki/Known-Issues#2219---protocolerror-varlibwaagentgoalstate1xml-is-missing).
 
 ## Resolution
 
@@ -29,13 +29,13 @@ Microsoft is taking steps to automatically resolve this problem. For VMs that ha
 - **Extension publisher:** Microsoft.CPlat.Core
 - **Extension type:** RunCommandLinux
 
-You can use [Azure CLI](/cli/azure/install-azure-cli?view=azure-cli-latest&preserve-view=true)  to query the extensions that are assigned to a VM. To do this, run the following command:
+You can use [Azure CLI](/cli/azure/install-azure-cli)  to query the extensions that are assigned to a VM. To do this, run the following command:
 
 ```Azure CLI
 az vm extension list --vm-name <vmName> -g <resGroupName>
 ```
 
-You can also remove this extension by running the following command: 
+You can also remove this extension by running the following command:
 
 ```Azure CLI
 az vm extension delete --vm-name < vmName > -g <resGroupName> --name <extension name>
@@ -43,3 +43,5 @@ az vm extension delete --vm-name < vmName > -g <resGroupName> --name <extension 
 
 > [!NOTE]
 > In these commands, \<vmName>, \<resGroupName>, and \<extension name> represent the actual variable names.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

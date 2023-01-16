@@ -2,7 +2,6 @@
 title: Error 2013 when configuring SMTP server information
 description: Fixes an issue where you receive error 2013 when you configure SMTP server information in System Center Data Protection Manager.
 ms.date: 07/23/2020
-ms.prod-support-area-path: 
 ms.reviewer: slight, cbutch
 ---
 # Configuring SMTP server information in Data Protection Manager fails with error ID 2013

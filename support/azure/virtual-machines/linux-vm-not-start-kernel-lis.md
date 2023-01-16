@@ -2,11 +2,11 @@
 title: A Linux VM does not start correctly with kernel 3.10.0-514.16 after an LIS upgrade
 description: Describes that A Linux VM does not start correctly with kernel 3.10.0-514.16 after a Linux Integration Services (LIS) upgrade. Provides a workaround.
 ms.date: 11/26/2020
-ms.prod-support-area-path: 
 ms.author: genli
 author: genlin
 ms.reviewer: delhan, craigw
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: linux
 ---
 # A Linux VM does not start correctly with kernel 3.10.0-514.16 after an LIS upgrade
@@ -81,3 +81,5 @@ If you have already installed LIS 4.1.3, and you cannot start the VM, follow the
     packages=($(rpm -qa *microsoft-hyper-v*))  
     rpm -e ${packages[@]}
     ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

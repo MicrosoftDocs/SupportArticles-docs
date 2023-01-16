@@ -2,7 +2,6 @@
 title: Use diagnostic tracing
 description: Describes the tools that you can use to obtain trace logs in System Center Operations Manager and in System Center Essentials. A Microsoft CSS representative uses these trace logs to perform advanced troubleshooting.
 ms.date: 09/02/2020
-ms.prod-support-area-path: 
 ms.reviewer: cliveea, v-jomcc
 ---
 # Use diagnostic tracing in System Center Operations Manager and in System Center Essentials
@@ -55,7 +54,7 @@ To start diagnostic tracing, follow these steps:
 
 1. On the computer on which you want to start tracing, select **Start**, select **Run**, type **cmd**, and then click **OK**.
 2. At the command prompt, use the `cd` command to change to the Tools directory.
-3. Type `StartTracing LEVEL`, and then press **ENTER**. In this command, replace *LEVEL* with the tracing level that you want. Use uppercase characters to specify the tracing level. The following levels are available:
+3. Type `StartTracing LEVEL`, and then press **ENTER**. In this command, replace _LEVEL_ with the tracing level that you want. Use uppercase characters to specify the tracing level. The following levels are available:
 
    - ERR
    - WRN
@@ -91,7 +90,7 @@ To convert existing trace files to text tracing, you have to stop tracing first 
 2. At the command prompt, use the `cd` command to change to the Tools directory.
 3. Type `FormatTracing.cmd`, and then press **ENTER**.
 
-The first time that the `FormatTracing.cmd` command is executed, the trace files that are required to convert traces are extracted to the *SystemDrive\Program Files\System Center Operations Manager\Tools\TMF* folder. Then, the `FormatTracing.cmd` batch file enumerates each trace file (*.etl) in the `windows\logs\OpsMgrTrace` folder. Then, the TraceFMTSM.exe utility converts the files to text. The text output is written to a file of the same name with the extension .log in the `windows\logs\OpsMgrTrace` folder. A summary (.sum) file is also written to the same location for each file that is converted. This file details each trace message event converted.
+The first time that the `FormatTracing.cmd` command is executed, the trace files that are required to convert traces are extracted to the _SystemDrive\Program Files\System Center Operations Manager\Tools\TMF_ folder. Then, the `FormatTracing.cmd` batch file enumerates each trace file (*.etl) in the `windows\logs\OpsMgrTrace` folder. Then, the TraceFMTSM.exe utility converts the files to text. The text output is written to a file of the same name with the extension .log in the `windows\logs\OpsMgrTrace` folder. A summary (.sum) file is also written to the same location for each file that is converted. This file details each trace message event converted.
 
 ## View converted trace files
 
@@ -106,8 +105,7 @@ On a typical management server installation, three trace sessions begin when the
 |`windows\logs\OpsMgrTrace`|TracingGuidsBID.etl|Trace output for managed code components|
 |`windows\logs\OpsMgrTrace`|TracingGuidsNative.etl|Trace output for native code components|
 |`windows\logs\OpsMgrTrace`|TracingGuidsUI.etl|Trace output for managed code user interface (OpsMgr UI)|
-||||
-
+  
 Each session is enabled with circular tracing and has a maximum file size of 100 megabytes (MB). The typical .etl file size for a newly created .etl file is 16 kilobytes (KB).
 
 > [!NOTE]
@@ -170,10 +168,10 @@ Future hotfixes, service packs, or product updates may change the files in the T
 
 We recommend that you don't use the `ViewRealTimeTracing.cmd` batch file to view real-time traces in a production environment without advice from Microsoft CSS. Viewing traces in real time, especially when you use Information trace level settings or verbose trace level settings, may severely affect server performance.
 
-The first time that the `ViewRealTimeTracing.cmd` file is executed, the trace files that are required to convert traces are extracted to the *SystemDrive\Program Files\System Center Operations Manager\Tools\TMF* folder. The `ViewRealTimeTracing.cmd` batch file then enumerates each trace session definition file (Tools\TracingGuids*.txt) in the Tools folder. Then, a separate instance of `TraceFmtSM` is started within a Command Prompt window. Output of trace sessions for managed, native, and UI-managed traces are output to each window.
+The first time that the `ViewRealTimeTracing.cmd` file is executed, the trace files that are required to convert traces are extracted to the _SystemDrive\Program Files\System Center Operations Manager\Tools\TMF_ folder. The `ViewRealTimeTracing.cmd` batch file then enumerates each trace session definition file (Tools\TracingGuids*.txt) in the Tools folder. Then, a separate instance of `TraceFmtSM` is started within a Command Prompt window. Output of trace sessions for managed, native, and UI-managed traces are output to each window.
 
 The `ViewRealTimeTracing.cmd` batch file accepts a single, optional command-line parameter (`-ods`). Supplying this parameter will additionally output trace data to a debugger.
 
 ## References
 
-For more information about diagnostic tracing, go to [Microsoft Docs](/). Then, search **Event tracing for Windows**.
+For more information about diagnostic tracing, browse to [Microsoft Learn](/). Then, search **Event tracing for Windows**.

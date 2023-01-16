@@ -1,12 +1,12 @@
 ---
 title: ProcessorEngine role is stuck in Busy state
 description: Provide information about troubleshooting issues in which the ProcessorEngine role is stuck in Busy state when deploying cloud service application to Azure.
-ms.date: 06/22/2020
-ms.prod-support-area-path: 
+ms.date: 09/26/2022
 ms.reviewer: 
 author: genlin
 ms.author: genli
 ms.service: cloud-services
+ms.subservice: troubleshoot-dev
 ---
 # ProcessorEngine role is stuck in Busy state stating: Preparing to start role... System is initializing
 
@@ -86,3 +86,5 @@ Navigate to the path `C:\Resources\temp\{Deployment ID}.ProcessorEngine\RoleTemp
 In Visual Studio, the **Copy to Output Directory** property for your startup batch file or any other dependent files should be set to **Copy Always** to be sure that your startup batch file is properly deployed to your project on Azure (**approot\bin** for Web roles, and **approot**  for worker roles). However in this case **Copy to Output Directory** was set to **Do not copy** for 'configuration.xml' file.
 
 :::image type="content" source="media/scenario-4-processorengine-role-stuck-busy-state/configurationxml-file.png" alt-text="Screenshot shows the configuration.xml file properties.":::
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

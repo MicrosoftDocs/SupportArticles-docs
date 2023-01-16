@@ -1,13 +1,13 @@
 ---
 
-title: Use a Linux troubleshooting VM with the Azure CLI | Microsoft Docs
+title: Use a Linux troubleshooting VM with the Azure CLI
 description: Learn how to troubleshoot Linux VM issues by connecting the OS disk to a recovery VM using the Azure CLI
 services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 ms.service: virtual-machines
+ms.subservice: vm-backup-restore
 ms.collection: windows
 ms.devlang: azurecli
 ms.topic: troubleshooting
@@ -19,9 +19,11 @@ ms.author: genli
 ---
 
 # Troubleshoot a Linux VM by attaching the OS disk to a recovery VM with the Azure CLI
-If your Linux virtual machine (VM) encounters a boot or disk error, you may need to perform troubleshooting steps on the virtual hard disk itself. A common example would be an invalid entry in `/etc/fstab` that prevents the VM from being able to boot successfully. This article details how to use the Azure CLI to connect your virtual hard disk to another Linux VM to fix any errors, then re-create your original VM. 
+
+If your Linux virtual machine (VM) encounters a boot or disk error, you may need to perform troubleshooting steps on the virtual hard disk itself. A common example would be an invalid entry in `/etc/fstab` that prevents the VM from being able to boot successfully. This article details how to use the Azure CLI to connect your virtual hard disk to another Linux VM to fix any errors, then re-create your original VM.
 
 ## Recovery process overview
+
 The troubleshooting process is as follows:
 
 1. Stop the affected VM.
@@ -37,11 +39,12 @@ To perform these troubleshooting steps, you need the latest [Azure CLI](/cli/azu
 You can use the VM repair commands to automate steps 1, 2, 3, 4, 6, and 7. For more documentation and instructions, see [Repair a Linux VM by using the Azure Virtual Machine repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
 
 > [!Important]
-> The scripts in this article only apply to the VMs that use [Managed Disk](/azure/virtual-machines/managed-disks-overview). 
+> The scripts in this article only apply to the VMs that use [Managed Disk](/azure/virtual-machines/managed-disks-overview).
 
 In the following examples, replace parameter names with your own values, such as `myResourceGroup` and `myVM`.
 
 ## Determine boot issues
+
 Examine the serial output to determine why your VM is not able to boot correctly. A common example is an invalid entry in `/etc/fstab`, or the underlying virtual hard disk being deleted or moved.
 
 Get the boot logs with [az vm boot-diagnostics get-boot-log](/cli/azure/vm/boot-diagnostics). The following example gets the serial output from the VM named `myVM` in the resource group named `myResourceGroup`:
@@ -59,9 +62,10 @@ The following example stops the VM named `myVM` from the resource group named `m
 ```azurecli
 az vm stop --resource-group MyResourceGroup --name MyVm
 ```
+
 ## Take a snapshot from the OS Disk of the affected VM
 
-A snapshot is a full, read-only copy of a VHD. It cannot be attached to a VM. In the next step, we will create a disk from this snapshot. The following example creates a snapshot with name `mySnapshot` from the OS disk of the VM named `myVM'. 
+A snapshot is a full, read-only copy of a VHD. It cannot be attached to a VM. In the next step, we will create a disk from this snapshot. The following example creates a snapshot with name `mySnapshot` from the OS disk of the VM named `myVM'.
 
 ```azurecli
 #Get the OS disk Id 
@@ -70,6 +74,7 @@ $osdiskid=(az vm show -g myResourceGroup -n myVM --query "storageProfile.osDisk.
 #creates a snapshot of the disk
 az snapshot create --resource-group myResourceGroupDisk --source "$osdiskid" --name mySnapshot
 ```
+
 ## Create a disk from the snapshot
 
 This script creates a managed disk with name `myOSDisk` from the snapshot named `mySnapshot`.  
@@ -107,6 +112,7 @@ If the resource group and the source snapshot is not in the same region, you wil
 Now you have a copy of the original OS disk. You can mount this new disk to another Windows VM for troubleshooting purposes.
 
 ## Attach the new virtual hard disk to another VM
+
 For the next few steps, you use another VM for troubleshooting purposes. You attach the disk to this troubleshooting VM to browse and edit the disk's content. This process allows you to correct any configuration errors or review additional application or system log files.
 
 This script attach the disk `myNewOSDisk` to the VM `MyTroubleshootVM`:
@@ -118,6 +124,7 @@ $myNewOSDiskid=(az disk show -g $resourceGroup -n $osDisk --query id -o tsv)
 # Attach the disk to the troubleshooting VM
 az vm disk attach --disk $myNewOSDiskid --resource-group $resourceGroup --size-gb $diskSize --sku $storageType --vm-name MyTroubleshootVM
 ```
+
 ## Mount the attached data disk
 
 > [!NOTE]
@@ -156,12 +163,12 @@ az vm disk attach --disk $myNewOSDiskid --resource-group $resourceGroup --size-g
     > [!NOTE]
     > Best practice is to mount data disks on VMs in Azure using the universally unique identifier (UUID) of the virtual hard disk. For this short troubleshooting scenario, mounting the virtual hard disk using the UUID is not necessary. However, under normal use, editing `/etc/fstab` to mount virtual hard disks using device name rather than UUID may cause the VM to fail to boot.
 
-
 ## Fix issues on the new OS disk
+
 With the existing virtual hard disk mounted, you can now perform any maintenance and troubleshooting steps as needed. Once you have addressed the issues, continue with the following steps.
 
-
 ## Unmount and detach the new OS disk
+
 Once your errors are resolved, you unmount and detach the existing virtual hard disk from your troubleshooting VM. You cannot use your virtual hard disk with any other VM until the lease attaching the virtual hard disk to the troubleshooting VM is released.
 
 1. From the SSH session to your troubleshooting VM, unmount the existing virtual hard disk. Change out of the parent directory for your mount point first:
@@ -203,5 +210,7 @@ az vm start -n myVM -g myResourceGroup
 ```
 
 ## Next steps
+
 If you are having issues connecting to your VM, see [Troubleshoot SSH connections to an Azure VM](troubleshoot-ssh-connection.md). For issues with accessing applications running on your VM, see [Troubleshoot application connectivity issues on a Linux VM](troubleshoot-app-connection.md).
 
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

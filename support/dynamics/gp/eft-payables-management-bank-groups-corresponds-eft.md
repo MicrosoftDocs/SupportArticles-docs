@@ -82,4 +82,4 @@ The following table matches Microsoft Dynamics GP 9.0 bank groups to the corresp
 |Not available|US - NACHA-CCD+|
 |Not available|IS0 20022-Domestic, Low-Value|
 |Not available|User-Defined|
-|||
+  

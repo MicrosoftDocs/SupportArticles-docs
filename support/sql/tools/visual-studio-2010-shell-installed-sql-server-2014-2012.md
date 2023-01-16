@@ -2,10 +2,10 @@
 title: Visual Studio 2010 Shell is installed with SQL Server 2014 and 2012 
 description: This article provides a workaround for the Visual Studio 2010 Shell end-of-support warning that occurs when you scan the server with a security software.
 ms.date: 6/25/2021
-ms.prod-support-area-path: Tools
+ms.custom: sap:Tools
 ms.reviewer: suresh.kandoth
-author: cobibi
-ms.author: v-yunhya
+author: HaiyingYu
+ms.author: haiyingyu
 ---
 
 # Visual Studio 2010 Shell is installed with SQL Server 2014 and 2012

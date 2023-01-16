@@ -2,7 +2,7 @@
 title: Error when you virtualize BIDS or SSDT
 description: This article explains the support policy regarding sequencing  SQL Server Business Intelligence Development Studio (BIDS) or SQL Server Data Tools (SSDT).
 ms.date: 09/17/2020
-ms.prod-support-area-path: Integration Services
+ms.custom: sap:Integration Services
 ms.topic: article
 ms.prod: sql
 ---

@@ -10,7 +10,7 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 12/27/2021
+  ms.date: 2/11/2022
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -43,6 +43,28 @@ landingContent:
             url: ./azure-ad-hybrid-sync-no-such-object-on-server.md
           - text: Unable to create gMSA because KDS may not be running on domain controller
             url: ./azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller.md
+
+ # Card
+  - title: Password writeback issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: General troubleshooting steps
+            url: ./password-writeback-general-troubleshooting-steps.md
+          - text: Access rights and permissions
+            url: ./password-writeback-access-rights-permissions.md
+          - text: Error code 8023062C - insecure password reset or change
+            url: ./password-writeback-error-code-8023062c.md
+          - text: Error code SSPR_009 - synced Azure AD admin can't do cloud reset
+            url: ./password-writeback-error-code-sspr-009.md
+          - text: Error code SSPR_0029 - on-premises configuration not set up
+            url: ./password-writeback-error-code-sspr-0029.md
+          - text: Admin password reset on Microsoft 365 admin center
+            url: ./password-writeback-microsoft-365-admin-center.md
+          - text: Initial sign-in delays after forced password change
+            url: ./password-writeback-servers-need-time-catch-up.md
+          - text: On-premises policy disallows password reset
+            url: ./password-writeback-not-compliant-on-premises-ad-pwd-policy.md
 
  # Card
   - title: Sign-in to SAML-based SSO apps

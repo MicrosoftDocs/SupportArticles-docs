@@ -2,7 +2,6 @@
 title: Unable to authenticate your credentials error when you connect to Azure Active Directory
 description: Describes an issue that triggers an Unable to authenticate your credentials. Make sure that your user name is in the format <username>@<domain> error. Occurs when you use the Azure Active Directory Module for Windows PowerShell to connect to Azure Active Directory.
 ms.date: 05/11/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: enterprise-users
@@ -58,6 +57,4 @@ To perform administrative tasks by using the Azure Active Directory Module for W
 - Disable Azure Active Directory Multi-Factor Authentication for the user account.
 - Use a different admin account that isn't enabled for Azure Active Directory Multi-Factor Authentication.
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums)  website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

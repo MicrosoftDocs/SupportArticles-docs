@@ -7,18 +7,126 @@ metadata:
   title: Troubleshoot Azure Kubernetes Services issues
   description: Documentation for troubleshooting common issues with Azure Kubernetes Services. # Required; article description that is displayed in search results. < 160 chars.
   services: cloud-services
-  ms.service: cloud-services #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: azure-kubernetes-service #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 12/02/2021
+  ms.date: 10/21/2022
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
 
+# Card
+  - title: Learn how to use AKS with these quickstarts, tutorials, and samples
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: AKS documentation
+            url: /azure/aks/   
+
  # Card
-  - title: Can't connect to AKS cluster
+  - title: Troubleshoot create operations
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Basic troubleshooting
+            url: ./troubleshoot-aks-cluster-creation-issues.md
+          - text: K8SAPIServerConnFailVMExtensionError error (51)
+            url: ./error-code-k8sapiserverconnfailvmextensionerror.md
+          - text: K8SAPIServerDNSLookupFailVMExtensionError error (52)
+            url: ./error-code-k8sapiserverdnslookupfailvmextensionerror.md
+          - text: MissingSubscriptionRegistration error
+            url: ./error-code-missingsubscriptionregistration.md
+          - text: OutboundConnFailVMExtensionError error (50)
+            url: ./error-code-outboundconnfailvmextensionerror.md
+          - text: RequestDisallowedByPolicy error
+            url: ./error-code-requestdisallowedbypolicy.md
+          - text: SubnetIsFull error
+            url: ./error-code-subnetisfull.md
+          - text: SubscriptionRequestsThrottled error (429)
+            url: ./error-code-subscriptionrequeststhrottled.md
+
+ # Card 
+  - title: Troubleshoot upgrade operations
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Upgrade fails because of NSG rules
+            url: ./upgrade-fails-because-of-nsg-rules.md        
+          - text: PodDrainFailure error
+            url: ./error-code-poddrainfailure.md
+          - text: PublicIPCountLimitReached error
+            url: ./error-code-publicipcountlimitreached.md
+          - text: QuotaExceeded error
+            url: ./error-code-quotaexceeded.md
+          - text: SubnetIsFull error during an upgrade
+            url: ./error-code-subnetisfull-upgrade.md
+          - text: Kubernetes 1.16 upgrades fail using node labels
+            url: ./upgrades-to-kubernetes-fail-using-node-labels.md              
+
+ # Card
+  - title: Troubleshoot delete operations
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: CannotDeleteLoadBalancerWithPrivateLinkService error
+            url: ./cannot-delete-load-balancer-private-link-service.md
+          - text: InUseRouteTableCannotBeDeleted error
+            url: ./error-code-inuseroutetablecannotbedeleted.md
+          - text: LoadBalancerInUseByVirtualMachineScaleSet error
+            url: ./load-balancer-or-nsg-in-use-by-vm-scale-set.md
+          - text: PublicIPAddressCannotBeDeleted error
+            url: ./cannot-delete-ip-subnet-nsg.md
+          - text: RequestDisallowedByPolicy error
+            url: ./error-code-requestdisallowedbypolicy-delete.md
+          - text: TooManyRequestsReceived error
+            url: ./error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md
+
+ # Card 
+  - title: Troubleshoot scale operations
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Common issues with running or scaling large AKS clusters
+            url: ./aks-at-scale-troubleshoot-guide.md
+          - text: Failed to fix node group sizes
+            url: ./cluster-autoscaler-fails-to-scale.md
+
+# Card
+  - title: Troubleshoot node not ready
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Basic troubleshooting
+            url: ./node-not-ready-basic-troubleshooting.md
+          - text: Custom script extension errors
+            url: ./node-not-ready-custom-script-extension-errors.md
+          - text: Expired certificates
+            url: ./node-not-ready-expired-certificates.md
+          - text: Node not ready after being healthy
+            url: ./node-not-ready-after-being-healthy.md
+          - text: Node not ready but then recovers
+            url: ./node-not-ready-then-recovers.md
+
+ # Card
+  - title: Cannot connect to application hosted on AKS cluster
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Basic troubleshooting
+            url: ./connection-issues-application-hosted-aks-cluster.md
+          - text: Custom NSG blocks traffic
+            url: ./custom-nsg-blocks-traffic.md
+          - text: Failures in the "az aks command invoke" command
+            url: ./resolve-az-aks-command-invoke-failures.md
+          - text: Get and analyze HTTP response codes
+            url: ./get-and-analyze-http-response-codes.md
+          - text: Intermittent timeouts or server issues
+            url: ./intermittent-timeouts-or-server-issue.md
+
+ # Card
+  - title: Cannot connect to AKS cluster
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -28,10 +136,12 @@ landingContent:
             url: ./client-ip-address-cannot-access-api-server.md
           - text: Config file isn't available when connecting
             url: ./config-file-is-not-available-when-connecting.md
+          - text: Tunnel connectivity issues
+            url: ./tunnel-connectivity-issues.md
           - text: User can't get cluster resources
             url: ./user-cannot-get-cluster-resources.md
 
- # Card
+# Card
   - title: Data collection guide
     linkLists:
       - linkListType: how-to-guide
@@ -44,9 +154,15 @@ landingContent:
             url: ./packet-capture-pod-level.md
 
  # Card
-  - title: Troubleshoot performance issues
+  - title: Troubleshoot AKS cluster performance issues
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Identify high CPU consuming containers
             url: ./identify-high-cpu-consuming-containers-aks.md
+          - text: Identify memory saturation in AKS clusters
+            url: ./identify-memory-saturation-aks.md
+     
+
+
+

@@ -34,7 +34,7 @@ All the steps in the task sequence work as expected until the "Setup Windows and
 
 ## Cause
 
-This problem occurs because the default encryption in Windows 10, version 1511 was changed from AES 128 to XTS-AES 128 to improve security. The new encryption method is not recognized by systems versions that were released before Windows 10, version 1511. 
+This problem occurs because the default encryption in Windows 10, version 1511 was changed from AES 128 to XTS-AES 128 to improve security. The new encryption method is not recognized by systems versions that were released before Windows 10, version 1511.
 
 To verify this situation, enable command-line support, and run the following command during the Windows PE phase:
 
@@ -66,9 +66,8 @@ If you prefer other encryption methods, such as AES 256, use the guidance in the
 |4| AES_256|The volume has been fully or partially encrypted by the Advanced Encryption Standard (AES) algorithm that has an AES key size of 256 bits.<br/><br/> `reg.exe add HKLM\SOFTWARE\Policies\Microsoft\FVE /v EncryptionMethod  /t REG_DWORD /d 4 /f` |
 |6| XTS_AES128 *|The volume has been fully or partially encrypted by the Advanced Encryption Standard (AES) algorithm that has an XTS-AES key size of 128 bits. This is the default for Windows PE 10.0.586.0 (version 1511).<br/><br/> `reg.exe add HKLM\SOFTWARE\Policies\Microsoft\FVE /v EncryptionMethod  /t REG_DWORD /d 6 /f` |
 |7| XTS_AES256 *|The volume has been fully or partially encrypted by the Advanced Encryption Standard (AES) algorithm that has an XTS-AES key size of 256 bits. `reg.exe add HKLM\SOFTWARE\Policies\Microsoft\FVE /v EncryptionMethod  /t REG_DWORD /d 7 /f` |
-||||
-
-\* Supported for deployments of Windows 10 images, version 1511, or later versions only
+  
+  \* Supported for deployments of Windows 10 images, version 1511, or later versions only
 
 Your system deployment will now work. The encryption method is again set to AES 128, as it was in older Windows PE releases.
 

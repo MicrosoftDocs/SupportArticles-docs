@@ -59,8 +59,7 @@ To update the **DECPLCUR** column or the **DECPLQTY** column, you must run an SQ
 |4|3|
 |5|4|
 |6|5|
-|||
-
+  
 To update the **DECPLQTY** column or the **DECPLCUR** column by running an SQL statement, follow these steps:
 
 1. Select **Start**, point to **All Programs**, point to **Microsoft SQL Server**, and then select **Query Analyzer**.

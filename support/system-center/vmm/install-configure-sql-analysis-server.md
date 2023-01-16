@@ -2,7 +2,6 @@
 title: Install and configure a SQL Analysis Server
 description: Describes how to how to install and configure a SQL Analysis Server using service templates in System Center 2012 Virtual Machine Manager.
 ms.date: 05/07/2020
-ms.prod-support-area-path:
 ms.reviewer: alvinm
 ---
 # How to install and configure a SQL Analysis Server using service templates in Virtual Machine Manager

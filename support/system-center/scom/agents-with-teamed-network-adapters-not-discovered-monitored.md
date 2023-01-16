@@ -2,7 +2,6 @@
 title: Agents using NIC teaming aren't discovered or monitored
 description: Fixes an issue in which Operations Manager agents that use NIC teaming are not discovered or monitored.
 ms.date: 09/02/2020
-ms.prod-support-area-path:
 ms.reviewer: ainslebl
 ---
 # Operations Manager agents with teamed network adapters fail to be discovered and monitored

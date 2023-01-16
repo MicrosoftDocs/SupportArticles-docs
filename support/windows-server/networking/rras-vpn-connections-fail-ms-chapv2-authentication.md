@@ -55,3 +55,6 @@ If you must use MS-CHAPv2, you can enable NTLMv2 authentication by adding this r
 5. On the **Edit** menu, select **Modify**.
 6. In the **Value data** box, type *1*, and then select **OK**.
 7. Exit Registry Editor.
+
+> [!NOTE]
+> You may need to reload NPS services on the NPS Server or the Radius Server.

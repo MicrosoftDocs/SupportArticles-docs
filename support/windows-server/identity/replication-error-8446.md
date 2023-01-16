@@ -67,7 +67,6 @@ This article describes the symptoms, cause, and resolution steps for issues when
     |---|---|---|
     | NTDS Replication| 1699| The local domain controller failed to retrieve the changes requested for the following directory partition. As a result, it was unable to send the change requests to the domain controller at the following network address. 8446 The replication operation failed to allocate memory |
     | NTDS General| 1079| Active Directory could not allocate enough memory to process replication tasks. Replication might be affected until more memory is available Increase the amount of physical memory or virtual memory and restart this domain controller |
-    ||||  
 
 4. When you try to manually initiate replication using Repadmin or Active Directory Sites and Services, you get the following error message:
 

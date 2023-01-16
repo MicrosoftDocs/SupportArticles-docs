@@ -1,0 +1,39 @@
+### YamlMime:Landing
+
+title: Azure Monitor troubleshooting documentation # < 60 chars
+summary: Welcome to Azure Monitor troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Monitor. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Troubleshoot Azure Monitor issues
+  description: Documentation for troubleshooting common issues with Azure Monitor. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: azure-monitor  #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  ms.date: 4/18/2022
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Troubleshooting Azure Application Insights issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Diagnose common problems that cause your ping tests to fail in availability monitoring
+            url: ./app-insights/diagnose-ping-test-failure.md
+          - text: Error retrieving data in portal
+            url: ./app-insights/troubleshoot-portal-connectivity.md
+          - text: Troubleshooting auto-instrumentation issues
+            url: ./app-insights/auto-instrumentation-troubleshoot.md
+
+  - title: Troubleshooting Azure Log Analytics issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Basic troubleshooting of Microsoft Monitoring Agent
+            url: ./log-analytics/mma-troubleshoot-basics.md
+          - text: Error code 0x80090016 Keyset does not exist in event viewer or agent logs
+            url:  ./log-analytics/error-code-0x80090016-keyset-does-not-exist.md
+          - text: Microsoft Monitoring Agent couldn't start
+            url:  ./log-analytics/windows-could-not-start-mma.md

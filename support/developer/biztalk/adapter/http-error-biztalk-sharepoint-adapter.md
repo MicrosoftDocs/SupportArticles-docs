@@ -2,7 +2,7 @@
 title: Can't connect to alternate host headers
 description: An HTTP error when you alternate host headers on SharePoint 2010 from BizTalk Server 2010 with the BizTalk SharePoint Adapter.
 ms.date: 03/18/2020
-ms.prod-support-area-path: Adapter
+ms.custom: sap:Adapter
 ---
 # HTTP 404 error when you connect to alternate host headers on SharePoint 2010 from BizTalk Server 2010 with the BizTalk SharePoint Adapter
 

@@ -2,7 +2,6 @@
 title: Error 30111 when restoring databases with multiple backslashes
 description: Fixes an issue where you receive error ID 30111 when you try to restore a database that contains multiple backslash characters in Data Protection Manager
 ms.date: 07/24/2020
-ms.prod-support-area-path: 
 ---
 # Databases with multiple backslash characters can be protected but fail during restore
 

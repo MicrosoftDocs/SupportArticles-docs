@@ -2,7 +2,6 @@
 title: How to capture debug stream in Azure Automation runbooks
 description: Describes how to capture debug stream in Azure Automation runbooks.
 ms.date: 11/26/2020
-ms.prod-support-area-path: 
 ms.service: automation
 ms.author: genli
 author: genlin
@@ -53,3 +52,5 @@ This is a debug message.
 ```
 
 This occurs because the statement $GLOBAL:DebugPreference="Continue" tells PowerShell to display debug messages and then continue and the addition of 5>&1 to the end of any statement, which tells PowerShell to redirect stream 5 (debug) to stream 1 (output).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

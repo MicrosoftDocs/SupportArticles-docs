@@ -2,7 +2,6 @@
 title: Regular expression support in Operations Manager
 description: This article describes regular expression matching in discoveries and groups when you author management packs in System Center Operations Manager.
 ms.date: 06/22/2020
-ms.prod-support-area-path:
 ---
 # Regular expression support in System Center Operations Manager
 
@@ -60,8 +59,7 @@ Expression filters that are used in management packs use .NET Framework regex ex
 |N to M Matches|{n, m} |
 |New line character|\n |
 |Tab character|\t |
-|||
-
+  
 ## Operations Manager regular expression (regex) examples
 
 ### Example 1
@@ -135,8 +133,7 @@ You can use comparison operators when you construct a criteria expression. The v
 |AND|Evaluates to **true** if the left and right operands are both true.|`Name = 'SQL%' AND Description LIKE 'MyData%'` |
 |OR|Evaluates to **true** if either the left or right operand is true.|`Name = 'SQL%' OR Description LIKE 'MyData%'` |
 |NOT|Evaluates to **true** if the right operand isn't true.|`NOT (Name = 'IIS' OR Name = 'SQL')` |
-||||
-
+  
 ### Wildcards
 
 The following table defines the wildcard characters that you can use to construct a pattern when you use the `LIKE` operator.
@@ -149,8 +146,7 @@ The following table defines the wildcard characters that you can use to construc
 |\_|A wildcard that matches a single character.| `Name LIKE 'SQL200_'`<br/> Evaluates to **true** for the following `Name` values: <br/><br/>**SQL2000**<br/>**SQL2005**<br/><br/>**Note**: The expression evaluates to **false** for **SQL200** because the symbol \_ must match exactly one character in the `Name` value. |
 |[]|A wildcard that matches any one character that is enclosed in the character set.<br/><br/>**Note** Brackets are also used when qualifying references to [MonitoringObject](/previous-versions/system-center/developer/bb465607(v=msdn.10)?redirectedfrom=MSDN) properties. For more information, see [Defining Queries for Monitoring Objects](/previous-versions/system-center/developer/bb437594(v=msdn.10)?redirectedfrom=MSDN). |`Name LIKE 'SQL200[05]'`<br/>Evaluates to **true** for the following `Name` values:<br/><br/>**SQL2000**<br/>**SQL2005**<br/><br/>The expression evaluates to **false** for **SQL2003**.|
 |[^]|A wildcard that matches any one character that isn't enclosed in the character set.|`Name LIKE 'SQL200[^05]'`<br/>Evaluates to **true** for **SQL2003**.<br/><br/>The expression evaluates to **false** for **SQL2000** and **SQL2005**. |
-||||
-
+  
 ### DateTime comparisons
 
 When you use a [DateTime](/dotnet/api/system.datetime) value in a query expression, use the general DateTime format (**G**) to convert the `DateTime` value to a string value. For example:

@@ -2,7 +2,6 @@
 title: Directory synchronization to Azure Active Directory stops or you're warned that sync hasn't registered in more than a day
 description: Describes a performance problem in Azure Active Directory Sync Tool. The tool either stops syncing or reports that sync hasn't run in more than 24 hours. Provides a resolution.
 ms.date: 05/09/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: enterprise-users
@@ -90,7 +89,7 @@ This issue may occur if one or more of the following conditions are true:
         - If you're using Azure Active Directory Connect, look for **Microsoft Azure AD Sync**.
       - If the **Account is disabled** check box is already cleared, go to step 5.
 
-5. If the **Account is disabled**  check box is already cleared, it's possible that the password for the account was manually changed. To set a new password, open Active Directory Users and Computers, locate and right-click the account, and then select **Reset Password**  to reset the password. Note the password that you set because you'll have to use it in the next step. 
+5. If the **Account is disabled**  check box is already cleared, it's possible that the password for the account was manually changed. To set a new password, open Active Directory Users and Computers, locate and right-click the account, and then select **Reset Password**  to reset the password. Note the password that you set because you'll have to use it in the next step.
 6. Set the password on the logon account for the directory synchronization services:
 
     1. select **Start**, select **Run**, type Services.msc, and then select **OK**.
@@ -99,10 +98,7 @@ This issue may occur if one or more of the following conditions are true:
         |Azure Active Directory Synchronization client|Azure Active Directory Connect|
         |---|---|
         |<br/> Forefront Identity Manager Synchronization Service<br/>      SQL Server (MOSONLINE) (if present)<br/>      Azure Active Directory Sync Service|<br/>    Azure AD Sync|
-        |||
 
     3. Start the service or services for which you set the new password.
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazuread) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

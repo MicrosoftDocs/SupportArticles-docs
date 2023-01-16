@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 929276
 When you run the `w32tm /resync` command to synchronize Microsoft Windows Server 2003 or Microsoft Windows Small Business Server 2003 (Windows SBS) to an external time source, you receive the following error message:
 > The computer did not resync because no time data was available.
 
-If you run the `w32tm /config /syncfromflags:manual` command or the `w32tm /config/manualpeerlist:peerlist` command to determine whether Windows is configured correctly, the commands complete successfully.
+If you run the `w32tm /config /syncfromflags:manual` command or the `w32tm /config /manualpeerlist:peerlist` command to determine whether Windows is configured correctly, the commands complete successfully.
 
 ## Cause
 

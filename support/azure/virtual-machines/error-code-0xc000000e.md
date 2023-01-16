@@ -2,9 +2,9 @@
 title: Winload.exe error code 0xc000000e on an Azure VM
 description: Fixes a Winload.exe error (0xc000000e) that occurs on an Azure virtual machine (VM).
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: jarrettr
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ---
 # Winload.exe error code 0xc000000e on an Azure VM
@@ -63,7 +63,7 @@ The Boot partition contains a folder named "Boot." This folder is hidden by defa
 
     **\<Boot partition>** is the partition that contains a hidden system folder named "Boot".
 
-    **\<Identifier>** is the identifier of Windows Boot Loader you found in the previous step. 
+    **\<Identifier>** is the identifier of Windows Boot Loader you found in the previous step.
 
     ```console
     bcdedit /store <Boot partition>:\boot\bcd /set {bootmgr} device partition=<boot partition>:
@@ -82,3 +82,5 @@ The Boot partition contains a folder named "Boot." This folder is hidden by defa
     ```
 
 3. Detach the repaired OS disk from the troubleshooting VM. Then, create a new VM from the OS disk.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

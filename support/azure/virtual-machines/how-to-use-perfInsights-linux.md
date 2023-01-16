@@ -1,18 +1,18 @@
 ---
-title: How to use PerfInsights Linux in Microsoft Azure| Microsoft Docs
+title: How to use PerfInsights Linux in Microsoft Azure
 description: Learns how to use PerfInsights to troubleshoot Linux VM performance problems.
 services: virtual-machines
 documentationcenter: ''
 author: anandhms
 manager: dcscontentpm
-editor: na
 tags: ''
 ms.service: virtual-machines
 ms.collection: linux
 ms.workload: infrastructure-services
+ms.subservice: vm-performance
 ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
-ms.date: 7/10/2019
+ms.date: 4/15/2022
 ms.author: genli
 
 ---
@@ -159,9 +159,9 @@ The following categories of rules are currently supported:
 
 - High resource usage:
 
-    * High CPU usage: Detects high CPU usage periods, and shows the top CPU usage consumers during those periods.
-    * High memory usage: Detects high memory usage periods, and shows the top memory usage consumers during those periods.
-    * High disk usage: Detects high disk usage periods on physical disks, and shows the top disk usage consumers during those periods.
+  - High CPU usage: Detects high CPU usage periods, and shows the top CPU usage consumers during those periods.
+  - High memory usage: Detects high memory usage periods, and shows the top memory usage consumers during those periods.
+  - High disk usage: Detects high disk usage periods on physical disks, and shows the top disk usage consumers during those periods.
 
 - Storage: Detects specific storage configurations.
 - Memory: Detects specific memory configurations.
@@ -181,19 +181,21 @@ The following categories of rules are currently supported:
 #### Tool requirements
 
 - This tool must be run on the VM that has the performance issue.
-- Python 3.x or Python 2.7 must be installed on the VM.
+- Python 3.6 or a later version, must be installed on the VM. 
+  > [!Note]
+  > Python 2 is no longer supported by the Python Software Foundation (PSF). If Python 2.7 is installed on the VM, PerfInsights can be installed. However, no changes or bug fixes will be made in PerfInsights to support Python 2.7. For more information, see [Sunsetting Python 2](https://www.python.org/doc/sunset-python-2/).
 
 - The following distributions are currently supported:
 
     | Distribution               | Version                                         |
     |----------------------------|-------------------------------------------------|
-    | Oracle Linux Server        | 6.10 [`*`], 7.3, 7.5, 7.6, 7.7, 7.8 |
-    | CentOS                     | 6.5 [`*`], 7.6, 7.7, 7.8                                    |
-    | RHEL                       | 7.2, 7.5, 8.0 [`*`], 8.1, 8.2                               |
+    | Oracle Linux Server        | 6.10 [`*`], 7.3, 7.5, 7.6, 7.7, 7.8, 7.9 |
+    | CentOS                     | 6.5 [`*`], 7.6, 7.7, 7.8, 7.9                                    |
+    | RHEL                       | 7.2, 7.5, 8.0 [`*`], 8.1, 8.2, 8.6                               |
     | Ubuntu                     | 14.04, 16.04, 18.04, 20.04                               |
-    | Debian                     | 8, 9, 10 [`*`]                                    |
-    | SLES                       | 12 SP4 [`*`], 12 SP5 [`*`], 15 [`*`], 15 SP1 [`*`], 15 SP2 [`*`]                                      |
-    | AlmaLinux                  | 8.4                                               |
+    | Debian                     | 8, 9, 10, 11 [`*`]                                    |
+    | SLES                       | 12 SP4 [`*`], 12 SP5 [`*`], 15 [`*`], 15 SP1 [`*`], 15 SP2 [`*`], 15 SP4 [`*`]                                      |
+    | AlmaLinux                  | 8.4, 8.5                                               |
     |                            |                                                   |
 
 >[!Note]
@@ -204,7 +206,7 @@ The following categories of rules are currently supported:
 
 ### Known issues
 
-- RHEL 8 does not have Python installed by default. To run PerfInsights Linux, you must first install Python 2.7
+- RHEL 8 does not have Python installed by default. To run PerfInsights Linux, you must first install Python 2.7 or Python 3.x
 
 - Guest Agent information collection may fail on CentOS 6.x
 
@@ -343,3 +345,5 @@ The following screenshot shows a message similar to what you might receive:
 Follow the instructions in the message to access the file transfer workspace. For additional security, you have to change your password on first use.
 
 After you sign in, you will find a dialog box to upload the **PerformanceDiagnostics\_yyyy-MM-dd\_hh-mm-ss-fff.tar.gz** file that was collected by PerfInsights.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

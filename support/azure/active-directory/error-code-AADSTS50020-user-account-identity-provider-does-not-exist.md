@@ -1,7 +1,7 @@
 ---
 title: Error AADSTS50020 - User account from identity provider does not exist in tenant
 description: Troubleshoot scenarios in which a guest user unsuccessfully tries to sign in to the resource tenant and error code AADSTS50020 is returned.
-ms.date: 12/31/2021
+ms.date: 04/15/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.editor: v-jsitser
@@ -19,11 +19,11 @@ This article helps you troubleshoot error code `AADSTS50020` that's returned if 
 
 When a guest user tries to access an application or resource in the resource tenant, the sign-in fails, and the following error message is displayed:
 
-> "AADSTS50020: User account 'user@domain.com' from identity provider {IdentityProviderURL} does not exist in tenant {ResourceTenantName}."
+> AADSTS50020: User account 'user@domain.com' from identity provider {IdentityProviderURL} does not exist in tenant {ResourceTenantName}.
 
 When an administrator reviews the sign-in logs on the home tenant, a "90072" error code entry indicates a sign-in failure. The error message states:
 
-> "User account {email} from identity provider {idp} does not exist in tenant {tenant} and cannot access the application {appId}({appName}) in that tenant. The account needs to be added as an external user in the tenant first. Sign out and sign in again with a different Azure Active Directory user account."
+> User account {email} from identity provider {idp} does not exist in tenant {tenant} and cannot access the application {appId}({appName}) in that tenant. The account needs to be added as an external user in the tenant first. Sign out and sign in again with a different Azure Active Directory user account.
 
 ## Cause 1: Used unsupported account type (multitenant and personal accounts)
 
@@ -122,30 +122,60 @@ Error `AADSTS50020` might occur if the name of a guest user who was deleted in a
 
 ### Verification option 1: Check whether the resource tenant's guest user is older than the home tenant's user account
 
-Run the [Get-MsolUser](/powershell/module/msonline/get-msoluser) PowerShell cmdlet to review the user creation dates, as follows:
+The first verification option involves comparing the age of the resource tenant's guest user against the home tenant's user account. You can make this verification by using Microsoft Graph or MSOnline PowerShell.
 
-```AzurePowerShell
+#### Microsoft Graph
 
-Get-MsolUser -SearchString user@contoso.com | Format-List whenCreated
+Issue a request to the [MS Graph API](/graph/api/user-get) to review the user creation date, as follows:
 
+<!-- 
+#### Request
+
+{
+  "blockType": "request",
+  "name": "get_user_createdDateTime"
+}
+-->
+
+```msgraph-interactive
+GET https://graph.microsoft.com/v1.0/users/{id | userPrincipalName}/createdDateTime
 ```
+
+Then, check the creation date of the guest user in the resource tenant against the creation date of the user account in the home tenant. The scenario is confirmed if the guest user was created before the home tenant's user account was created.
+
+#### MSOnline PowerShell
+
+> [!NOTE]
+> The [MSOnline PowerShell module](/powershell/azure/active-directory/install-msonlinev1) is set to be deprecated.
+> Because it's also incompatible with PowerShell Core, make sure that you're using a compatible PowerShell version so that you can run the following commands.
+
+Run the [Get-MsolUser](/powershell/module/msonline/get-msoluser) PowerShell cmdlet to review the user creation date, as follows:
+
+```azurepowershell
+Get-MsolUser -SearchString user@contoso.com | Format-List whenCreated
+```
+
 Then, check the creation date of the guest user in the resource tenant against the creation date of the user account in the home tenant. The scenario is confirmed if the guest user was created before the home tenant's user account was created.
 
 ### Verification option 2: Check whether the resource tenant's guest alternative security ID differs from the home tenant's user net ID
+
+> [!NOTE]
+> The [MSOnline PowerShell module](/powershell/azure/active-directory/install-msonlinev1) is set to be deprecated.
+> Because it's also incompatible with PowerShell Core, make sure that you're using a compatible PowerShell version so that you can run the following commands.
 
 When a guest user accepts an invitation, the user's `LiveID` attribute (the unique sign-in ID of the user) is stored within `AlternativeSecurityIds` in the `key` attribute. Because the user account was deleted and created in the home tenant, the `NetID` value for the account will have changed for the user in the home tenant. Compare the `NetID` value of the user account in the home tenant against the key value that's stored within `AlternativeSecurityIds` of the guest account in the resource tenant, as follows:
 
 1. In the home tenant, retrieve the value of the `LiveID` attribute using the `Get-MsolUser` PowerShell cmdlet:
 
-    ```AzurePowerShell
-       Get-MsolUser -SearchString tuser1 | Select-Object -ExpandProperty LiveID
-    ```
+   ```azurepowershell
+   Get-MsolUser -SearchString tuser1 | Select-Object -ExpandProperty LiveID
+   ```
 
 1. In the resource tenant, convert the value of the `key` attribute within `AlternativeSecurityIds` to a base64-encoded string:
 
-   ```AzurePowerShell
-        [convert]::ToBase64String((Get-MsolUser -ObjectId 01234567-89ab-cdef-0123-456789abcdef
-        ).AlternativeSecurityIds.key)
+   ```azurepowershell
+   [convert]::ToBase64String((Get-MsolUser -ObjectId 01234567-89ab-cdef-0123-456789abcdef
+          ).AlternativeSecurityIds.key)
    ```
 
 1. Convert the base64-encoded string to a hexadecimal value by using an online converter (such as [base64.guru](https://base64.guru/converter/decode/hex)).
@@ -154,3 +184,5 @@ When a guest user accepts an invitation, the user's `LiveID` attribute (the uniq
 ### Solution: Reset the redemption status of the guest user account
 
 Reset the redemption status of the guest user account in the resource tenant. Then, you can keep the guest user object without having to delete and then re-create the guest account. You can reset the redemption status by using the Azure portal, Azure PowerShell, or the Microsoft Graph API. For instructions, see [Reset redemption status for a guest user](/azure/active-directory/external-identities/reset-redemption-status).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

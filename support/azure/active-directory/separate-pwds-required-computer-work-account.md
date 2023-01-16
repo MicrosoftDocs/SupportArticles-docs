@@ -2,7 +2,6 @@
 title: Separate passwords required for the computer and work or school account when using password synchronization and the Azure Active Directory sync tool
 description: Describes that users have to use a separate password to sign in to Office 365 and to log on to their computer, even though password synchronization is enabled in Azure AD. Provides a resolution.
 ms.date: 07/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: enterprise-users
@@ -32,6 +31,4 @@ To resolve this problem, do one of the following:
 
 After directory synchronization occurs, users' computer passwords in the on-premises Active Directory environment are synced to Azure AD. Users can then log on to their computers and sign in to the cloud service by using the same password.
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazuread) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

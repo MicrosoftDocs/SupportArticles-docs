@@ -2,7 +2,7 @@
 title: COM+ supports collection of dump file and process termination
 description: This article introduces the new functionalities of Microsoft COM+, including automatic collection of process dump file and process termination.
 ms.date: 6/25/2021
-ms.prod-support-area-path: Component development
+ms.custom: sap:Component development
 ms.reviewer: dave.anderson
 ms.technology: windows-dev-apps-component-dev
 ---
@@ -59,7 +59,6 @@ The system can be configured to perform one or both of the following actions whe
     |`AverageCallThreshold`|`REG_DWORD`|Threshold, in seconds, when the appropriate actions will be taken|**0**|
     |`DumpType`|`REG_DWORD`|0 = Generate a full dump file; 1 = Generate a minidump file; 2 = No dump file|**0**|
     |`Terminate`|`REG_DWORD`|0 = Process will continue; 1 = Process will be terminated|**0**|
-    |||||
 
 - To globally define actions for all COM+ components on the computer, add the configuration values under the following registry key:  
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\COM3\AutoDump`
@@ -95,7 +94,7 @@ To analyze the dump file, follow these steps:
     6. Select the dump file(s) that you want to analyze.
     7. Select **Start Analysis**.
 
-    The resulting HTML report is displayed in a new Microsoft Internet Explorer window on the desktop and saved to the DebugDiag Reports directory. The default location for this directory is *%USERPROFILE%\Documents\DebugDiag\Reports*.
+    The resulting HTML report is displayed in a new Microsoft Internet Explorer window on the desktop and saved to the DebugDiag Reports directory. The default location for this directory is _%USERPROFILE%\Documents\DebugDiag\Reports_.
 
 1. To resolve the problem, follow the guidance that is provided in the [Recommendations](#recommendations) section of the report. This section of the report may recommend the following things:
     - It may direct you to a Microsoft Knowledge Base article that describes known issues.
@@ -116,11 +115,11 @@ Terminating the process when high call times occur may help the COM+ component t
 
 ### DumpType registry value
 
-Minidump files can be created faster and occupy less disk space than full dump files. However, they aren't as useful to analyze problems because they frequently lack the required data. The typical size of full dump files for a *Dllhost.exe* process ranges from 10 megabytes (MB) to 50 MB. Their actual size depends on the size of the working set of the dumped process. The files are normally generated within seconds.
+Minidump files can be created faster and occupy less disk space than full dump files. However, they aren't as useful to analyze problems because they frequently lack the required data. The typical size of full dump files for a _Dllhost.exe_ process ranges from 10 megabytes (MB) to 50 MB. Their actual size depends on the size of the working set of the dumped process. The files are normally generated within seconds.
 
 ### Dump file options
 
-By default, the dump files are stored in the *%systemroot%\system32\com\dmp* directory. Use the settings in the **Image Dump Directory** box and under the **Maximum Number of Dump Images** area for the appropriate COM+ application to control the location and the number of dump files.
+By default, the dump files are stored in the _%systemroot%\system32\com\dmp_ directory. Use the settings in the **Image Dump Directory** box and under the **Maximum Number of Dump Images** area for the appropriate COM+ application to control the location and the number of dump files.
 
 ### Call time
 

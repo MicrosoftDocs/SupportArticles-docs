@@ -2,7 +2,6 @@
 title: DPM 2010 can't restore a renamed SharePoint site
 description: Fixes an issue where Data Protection Manager 2010 can't restore a SharePoint site after the site is renamed.
 ms.date: 07/27/2020
-ms.prod-support-area-path:
 ---
 # Data Protection Manager 2010 can't restore a SharePoint site after the site is renamed
 

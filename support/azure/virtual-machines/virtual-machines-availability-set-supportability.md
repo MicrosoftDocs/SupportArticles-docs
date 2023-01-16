@@ -1,10 +1,11 @@
 ---
-title: Supportability of adding Azure VMs to an existing availability set | Microsoft Docs
+title: Supportability of adding Azure VMs to an existing availability set
 description: This article provides a supportability matrix about which VM series you can mix in the same availability set
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 ms.service: virtual-machines
+ms.subservice: vm-deploy
 ms.topic: troubleshooting
 ms.date: 12/07/2021
 ms.author: genli
@@ -16,8 +17,8 @@ You may occasionally encounter limitations when you add new virtual machines (VM
 
 [Availability Sets - List Available Sizes - REST API](/rest/api/compute/availability-sets/list-available-sizes)
 
-
 ## Reference
+
 The following chart shows some common VM series you can mix in the same availability set.
 
 Series & Availability Set|Second VM|A|Av2|D|Dv2|Dv3|
@@ -32,3 +33,5 @@ Series & Availability Set|Second VM|A|Av2|D|Dv2|Dv3|
 All other series could not be in the same availability set because they require a specific hardware.
 
 A8/A9 VM size can't be mixed due to requirement on dedicated RDMA backend network.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

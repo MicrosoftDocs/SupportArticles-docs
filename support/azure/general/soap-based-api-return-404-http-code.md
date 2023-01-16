@@ -2,7 +2,6 @@
 title: Azure API Management Troubleshooting Scenario 2 - SOAP-based API returning 404 and 500 HTTP status codes
 description: Provides troubleshooting steps to an issue in which SOAP-based API is returning 404 and 500 HTTP status codes
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 author: genlin
 ms.author: genli
 ms.service: api-management
@@ -169,3 +168,5 @@ You need to understand who is throwing these HTTP 404 and 500 responses, APIM, o
 - If you check the request content representation from the **Request** tab present in **Frontend** definition of the Divide operation, you would notice that **intB** value is set to zero. You need to change the value of **intB** to a non-zero value and it should resolve the issue.
 
     :::image type="content" source="media/soap-based-api-return-404-500-http-code/intb-value.png" alt-text="Screenshot of the intB value that is set to zero.":::
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

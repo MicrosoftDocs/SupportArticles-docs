@@ -2,7 +2,6 @@
 title: Error (Unknown error (0x80005000)) message when you run the Azure Active Directory Sync Tool Configuration Wizard
 description: Describes an issue where you receive an error message when you run the Azure Active Directory Sync Tool Configuration Wizard. Provides a resolution.
 ms.date: 06/08/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: enterprise-users
@@ -68,6 +67,4 @@ To resolve this problem, make sure that all domain controllers are running in a 
 
 4. Investigate and resolve the problem. Most likely, the domain controller that's hosting the domain is not running or is not in the network.
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/home?forum=windowsazuread) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

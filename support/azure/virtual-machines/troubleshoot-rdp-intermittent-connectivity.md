@@ -1,12 +1,12 @@
 ---
-title: Remote Desktop disconnects frequently in Azure VM| Microsoft Docs
+title: Remote Desktop disconnects frequently in Azure VM
 description: Learn how to troubleshoot frequent disconnections of Remote Desktop in Azure VM.
 services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
@@ -19,7 +19,6 @@ ms.author: genli
 
 This article explains how to troubleshoot frequent disconnections to an Azure virtual machine (VM) through Remote Desktop Protocol RDP).
 
-
 ## Symptom
 
 You face intermittent RDP connectivity problems during your sessions. You can initially connect to the VM, but then the connection drops.
@@ -30,7 +29,7 @@ This problem may occur if the RDP Listener is misconfigured. Typically, this pro
 
 ## Solution
 
-Before you follow these steps, [take a snapshot of the OS disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk) of the affected VM as a backup. 
+Before you follow these steps, [take a snapshot of the OS disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk) of the affected VM as a backup.
 
 To troubleshoot this issue, use Serial control or [repair the VM offline](#repair-the-vm-offline) by attaching the OS disk of the VM to a recovery VM.
 
@@ -69,7 +68,7 @@ To troubleshoot this issue, use Serial control or [repair the VM offline](#repai
 
     `REG ADD "HKLM\SYSTEM\CurrentControlSet\control\Terminal Server\Winstations\RDP-Tcp" /v 'fInheritMaxSessionTime' /t REG_DWORD /d 1 /f`
 
-8. Set the RDP Disconnection Time control: 
+8. Set the RDP Disconnection Time control:
 
     `REG ADD "HKLM\SYSTEM\CurrentControlSet\control\Terminal Server\Winstations\RDP-Tcp" /v 'fInheritMaxDisconnectionTime' /t REG_DWORD /d 1 /f`
     `REG ADD "HKLM\SYSTEM\CurrentControlSet\control\Terminal Server\Winstations\RDP-Tcp" /v 'MaxDisconnectionTime' /t REG_DWORD /d 0 /f`
@@ -97,8 +96,8 @@ To troubleshoot this issue, use Serial control or [repair the VM offline](#repai
 3. On the OS disk that you attached, navigate to the **\windows\system32\config** folder. Copy all the files in this folder as a backup, in case a rollback is required.
 4. Start Registry Editor (regedit.exe).
 5. Select the **HKEY_LOCAL_MACHINE** key. On the menu, select **File** > **Load Hive**:
-6. Browse to the **\windows\system32\config\SYSTEM** folder on the OS disk that you attached. For the name of the hive, enter **BROKENSYSTEM**. The new registry hive is displayed under the **HKEY_LOCAL_MACHINE** key. Then load the software hive **\windows\system32\config\SOFTWARE** under the **HKEY_LOCAL_MACHINE** key. For the name of the hive software, enter **BROKENSOFTWARE**. 
-7. Open an elevated Command Prompt window (**Run as administrator**), and run commands in the remaining steps to reset the RDP configurations. 
+6. Browse to the **\windows\system32\config\SYSTEM** folder on the OS disk that you attached. For the name of the hive, enter **BROKENSYSTEM**. The new registry hive is displayed under the **HKEY_LOCAL_MACHINE** key. Then load the software hive **\windows\system32\config\SOFTWARE** under the **HKEY_LOCAL_MACHINE** key. For the name of the hive software, enter **BROKENSOFTWARE**.
+7. Open an elevated Command Prompt window (**Run as administrator**), and run commands in the remaining steps to reset the RDP configurations.
 8. Lower the RDP Security Layer to 0 so that communications between the server and client use the native RDP Encryption:
 
     `REG ADD "HKLM\BROKENSYSTEM\ControlSet001\control\Terminal Server\Winstations\RDP-Tcp" /v 'SecurityLayer' /t REG_DWORD /d 0 /f`
@@ -179,5 +178,4 @@ To troubleshoot this issue, use Serial control or [repair the VM offline](#repai
 
 18. Restart the VM, and try again to connect to it by using RDP.
 
-## Need help? 
-Contact support. If you still need help, [contact support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) to get your issue resolved quickly.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

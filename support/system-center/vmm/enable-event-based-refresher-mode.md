@@ -2,7 +2,6 @@
 title: Enable event-based refresher mode for VMM hosts
 description: Describes a new, event-based triggering system for host refresh in Virtual Machine Manager.
 ms.date: 05/07/2020
-ms.prod-support-area-path:
 ---
 # How to enable the event-based refresher mode for Virtual Machine Manager hosts
 

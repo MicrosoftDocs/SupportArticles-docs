@@ -2,9 +2,9 @@
 title: Capacity Reservation billing scenarios
 description: This article discusses billing scenarios as they apply to a Capacity Reservation
 ms.date: 08/26/2021
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-capacity-reservation
 ms.collection: windows
 ---
 
@@ -39,3 +39,5 @@ The following screenshot is an example of such a billing:
 :::image type="content" source="media/capacity-reservation-billing-scenerios/capacity-reservation-pricing-vm-zero-highlighted.png" alt-text="Diagram of capacity reservation pricing, with VM zero highlighted.":::
 
 As show in this example, the VM Reserved Instance discount is applied to VM 0. For that VM, the customer is only being charged for other components such as disks and networking. The other unused instance is charged at the PAYG rate for the VM size reserved.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

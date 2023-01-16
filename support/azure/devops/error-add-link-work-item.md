@@ -2,9 +2,10 @@
 title: Error when you add link to work item
 description: This article provides resolutions for the error that occurs when you try to add a new link to a work item in Team Foundation Server 2017 with Update 2 installed.
 ms.date: 08/18/2020
-ms.prod-support-area-path: Boards
+ms.custom: sap:Boards
 ms.reviewer: chcoope
-ms.service: az-devops-project
+ms.service: azure-devops
+ms.subservice: ts-boards
 ---
 # Error TF237201 when you try to add a new link to a work item in Team Foundation Server
 
@@ -34,3 +35,5 @@ exec prc_QueryRegistry 1, '#\Service\WorkItemTracking\Settings\WorkItemLinksLimi
 ```
 
 The script updates a setting that increases the maximum number of 'allowed' links.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

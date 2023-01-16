@@ -2,7 +2,6 @@
 title: Configure SharePoint 2010 management pack
 description: Describes the steps to troubleshoot or configure the SharePoint 2010 management pack for System Center Operations Manager in some scenarios.
 ms.date: 06/23/2020
-ms.prod-support-area-path: 
 ms.reviewer: edpaca, erinwi, adoyle
 ---
 # Configure the SharePoint 2010 management pack for System Center Operations Manager

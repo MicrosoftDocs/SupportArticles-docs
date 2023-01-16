@@ -2,9 +2,10 @@
 title: HTTP 502 error when you use Git client
 description: This article provides a resolution for the problem where you experience an HTTP 502 error when you connect to TFS 2013 by using Git client.
 ms.date: 09/25/2020
-ms.prod-support-area-path: Repos
+ms.custom: sap:Repos
 ms.reviewer: mmitrik
-ms.service: az-devops-project
+ms.service: azure-devops
+ms.subservice: ts-repos
 ---
 # HTTP 502 error when you connect to TFS 2013 by using Git clients
 
@@ -35,6 +36,8 @@ This issue occurs because of an issue in the ARR 2.5 feature.
 ## Resolution
 
 To resolve this issue, install [the ARR 2.5 update](https://support.microsoft.com/help/2589179).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
 
 ## More information
 

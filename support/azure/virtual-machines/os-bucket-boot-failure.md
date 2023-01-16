@@ -2,9 +2,9 @@
 title: Troubleshoot Windows VM OS boot failure
 description: Explains why a Windows VM cannot boot and how to solve the problem.
 ms.date: 12/07/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ---
 
@@ -167,8 +167,4 @@ Verify the OS partition that holds the BCD store for the disk is marked as activ
 
 Use [step 5 of the VM Repair Commands](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to rebuild the VM.
 
-## Next steps
-
-If you still cannot determine the cause of the issue and need more help, you can open a support ticket with Microsoft Customer Support.
-
-If you need more help at any point in this article, you can contact the Azure experts on the [MSDN Azure and Stack Overflow forums](https://azure.microsoft.com/support/forums/). Alternatively, you can file an Azure support incident. Go to the [Azure support site](https://azure.microsoft.com/support/options/), and select **Get support**. For information about using Azure support, read the [Microsoft Azure support FAQ](https://azure.microsoft.com/support/faq/).
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

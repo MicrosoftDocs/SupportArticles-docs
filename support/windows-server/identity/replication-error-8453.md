@@ -51,7 +51,7 @@ A RODC `childdc2.child.contoso.com` doesn't replicate the `contoso.com` partitio
 2. Open a connection to the `contoso.com` domain NC (default naming context).
 3. Open the properties of the **dc=contoso,dc=com NC**, and select the **Security** tab.
 4. Select **Add**, and enter the following entry in the text box:  
-    *Contoso\Enterprise Read-Only Domain Controllers*
+    _Contoso\Enterprise Read-Only Domain Controllers_
 
     > [!NOTE]
     > This group exists only in the forest-root domain.
@@ -209,8 +209,7 @@ Active Directory events that commonly indicate the 8453 status include but aren'
 |NTDS General|1655|Active Directory attempted to communicate with the following global catalog and the attempts were unsuccessful.|
 |NTDS KCC|1265|The attempt to establish a replication link with parameters<br/>Partition: \<partition DN path><br/>Source DSA DN: \<DN of source DC NTDS Settings object><br/>Source DSA Address: \<source DCs fully qualified CNAME><br/>Inter-site Transport (if any): \<dn path><br/>failed with the following status:|
 |NTDS KCC|1925|The attempt to establish a replication link for the following writable directory partition failed.|
-||||
-
+  
 ## Cause
 
 Error 8453 (Replication Access was denied) has multiple root causes, including:
@@ -264,15 +263,14 @@ To resolve this problem, use the following methods.
 
 The **UserAccountControl** attribute includes a bitmask that defines the capabilities and state of a user or computer account. For more information about **UserAccountControl** flags, see [User-Account-Control attribute](/windows/win32/adschema/a-useraccountcontrol).
 
-The typical **UserAccountControl** attribute value for a *writeable* (*full*) DC computer account is 532480 decimal or 82000 hex. **UserAccountControl** values for a DC computer account can vary, but must contain the **SERVER_TRUST_ACCOUNT** and **TRUSTED_FOR_DELEGATION** flags, as shown in the following table.
+The typical **UserAccountControl** attribute value for a _writeable_ (_full_) DC computer account is 532480 decimal or 82000 hex. **UserAccountControl** values for a DC computer account can vary, but must contain the **SERVER_TRUST_ACCOUNT** and **TRUSTED_FOR_DELEGATION** flags, as shown in the following table.
 
 | Property flag| Hex value| Decimal value |
 |---|---|---|
 | **SERVER_TRUST_ACCOUNT**| 0x2000| 8192 |
 | **TRUSTED_FOR_DELEGATION**| 0x80000| 524288 |
 | **UserAccountControl Value**| 0x82000| 532480 |
-||||
-
+  
 The typical **UserAccountControl** attribute value for a read-only domain controller computer account is 83890176 decimal or 5001000 hex.
 
 | Property flag| Hex value| Decimal value |
@@ -281,8 +279,7 @@ The typical **UserAccountControl** attribute value for a read-only domain contro
 | **TRUSTED_TO_AUTHENTICATE_FOR_DELEGATION**| 0x1000000| 16777216 |
 | **PARTIAL_SECRETS_ACCOUNT**| 0X4000000| 67108864 |
 | **Typical UserAccountControl Value for RODC**| 0x5001000| 83890176 |
-||||
-
+  
 - **The UserAccountControl attribute on the destination domain controller is missing the SERVER_TRUST_ACCOUNT flag**  
 
     If the DCDIAG MachineAccount test fails and returns a **failed test MachineAcccount** error message, and the **UserAccountControl** attribute on the tested domain controller is missing the **SERVER_TRUST_ACCOUNT** flag, add the missing flag in the tested domain controller's copy of Active Directory.
@@ -326,7 +323,7 @@ Default permissions on Active Directory partitions don't allow the following ope
 
 By design, these operations fail until default permissions or group memberships are modified.
 
-Permissions are defined at the top of each directory partition (*NC head*), and are inherited throughout the partition tree. Verify that explicit groups (groups that the user is directly a member of) and implicit groups (groups that explicit groups have nested membership of) have the required permissions. Also verify that Deny permissions assigned to implicit or explicit groups don't take precedence over the required permissions. For more information about default directory partitions, see [Default Security of the Configuration Directory Partition](/previous-versions/windows/it-pro/windows-2000-server/cc961739(v=technet.10)).
+Permissions are defined at the top of each directory partition (_NC head_), and are inherited throughout the partition tree. Verify that explicit groups (groups that the user is directly a member of) and implicit groups (groups that explicit groups have nested membership of) have the required permissions. Also verify that Deny permissions assigned to implicit or explicit groups don't take precedence over the required permissions. For more information about default directory partitions, see [Default Security of the Configuration Directory Partition](/previous-versions/windows/it-pro/windows-2000-server/cc961739(v=technet.10)).
 
 - **Verify that default permissions exist in the top of each directory partition that is failing and returning replication access was denied**  
 
@@ -338,8 +335,8 @@ Permissions are defined at the top of each directory partition (*NC head*), and 
 
     If a scheduled replication that's started by domain controllers in a forest is failing and returning error 8453, focus on permissions for the following security groups:
 
-    - Enterprise Domain Controllers
-    - Enterprise Read-Only Domain Controllers
+  - Enterprise Domain Controllers
+  - Enterprise Read-Only Domain Controllers
 
     If a scheduled replication is started by domain controllers on a read-only domain controller (RODC) is failing and returning error 8453, verify that the Enterprise Read-Only Domain Controllers security group is granted the required access on the NC head of each directory partition.
 
@@ -352,7 +349,6 @@ Permissions are defined at the top of each directory partition (*NC head*), and 
     | Replication Synchronization|X|
     | Replicating Directory Changes All|X|
     |Replicating Changes in Filter Set|X|
-    |||
 
     > [!NOTE]
     > The DCDIAG NcSecDesc test may report false positive errors when it's run in environments that have mixed system versions.

@@ -2,9 +2,9 @@
 title: Microsoft Azure IaaS VM logs
 description: Lists the Microsoft Azure IaaS VM logs and diagnostic information that's collected during troubleshooting by Microsoft Support.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-support-statements
 ms.collection: windows
 ---
 # Microsoft Azure IaaS VM logs
@@ -28,23 +28,23 @@ Information about Windows VMs will include the files listed below in addition to
 
 | /AzureData/CustomData.bin |
 |---|
-| /Packages/Plugins/*/*/config.txt |
-| /Packages/Plugins/*/*/HandlerEnvironment.json |
-| /Packages/Plugins/*/*/HandlerManifest.json |
-| /Packages/Plugins/*/*/PackageInformation.txt |
-| /Packages/Plugins/*/*/RuntimeSettings/*.settings |
-| /Packages/Plugins/*/*/Status/*.status |
-| /Packages/Plugins/*/*/Status/HeartBeat.Json |
+| /Packages/Plugins/_/_/config.txt |
+| /Packages/Plugins/_/_/HandlerEnvironment.json |
+| /Packages/Plugins/_/_/HandlerManifest.json |
+| /Packages/Plugins/_/_/PackageInformation.txt |
+| /Packages/Plugins/_/_/RuntimeSettings/*.settings |
+| /Packages/Plugins/_/_/Status/*.status |
+| /Packages/Plugins/_/_/Status/HeartBeat.Json |
 | /Packages/Plugins/ESET.FileSecurity/*/agent_version.txt |
 | /Packages/Plugins/ESET.FileSecurity/*/extension_version.txt |
-| /Packages/Plugins/Microsoft.Azure.Diagnostics.IaaSDiagnostics/*/*.config |
+| /Packages/Plugins/Microsoft.Azure.Diagnostics.IaaSDiagnostics/_/_.config |
 | /Packages/Plugins/Microsoft.Azure.Diagnostics.IaaSDiagnostics/*/AnalyzerConfigTemplate.xml |
-| /Packages/Plugins/Microsoft.Azure.Diagnostics.IaaSDiagnostics/*/Logs/*DiagnosticsPlugin*.log |
-| /Packages/Plugins/Microsoft.Azure.Diagnostics.IaaSDiagnostics/*/schema/wad*.json |
+| /Packages/Plugins/Microsoft.Azure.Diagnostics.IaaSDiagnostics/*/Logs/_DiagnosticsPlugin_.log |
+| /Packages/Plugins/Microsoft.Azure.Diagnostics.IaaSDiagnostics/_/schema/wad_.json |
 | /Packages/Plugins/Microsoft.Azure.Diagnostics.IaaSDiagnostics/*/StatusMonitor/ApplicationInsightsPackagesVersion.json |
 | /Packages/Plugins/Microsoft.Azure.RecoveryServices.VMSnapshot/*/SeqNumber.txt |
 | /Packages/Plugins/Microsoft.Azure.Security.Monitoring/*/Microsoft.WindowsAzure.Storage.xml |
-| /Packages/Plugins/Microsoft.Azure.Security.Monitoring/*/Monitoring/agent/AsmExtensionMonitoringConfig*.xml |
+| /Packages/Plugins/Microsoft.Azure.Security.Monitoring/_/Monitoring/agent/AsmExtensionMonitoringConfig_.xml |
 | /Packages/Plugins/Microsoft.Azure.Security.Monitoring/*/Monitoring/agent/Extensions/AzureSecurityPack/ASM.Azure.OSBaseline.xml |
 | /Packages/Plugins/Microsoft.Azure.Security.Monitoring/*/Monitoring/agent/Extensions/AzureSecurityPack/AsmExtensionSecurityPackStartupConfig.xml |
 | /Packages/Plugins/Microsoft.Azure.Security.Monitoring/*/Monitoring/agent/Extensions/AzureSecurityPack/AsmScan.log |
@@ -52,19 +52,19 @@ Information about Windows VMs will include the files listed below in addition to
 | /Packages/Plugins/Microsoft.Azure.Security.Monitoring/*/Monitoring/agent/Extensions/AzureSecurityPack/Azure.Common.scm.xml |
 | /Packages/Plugins/Microsoft.Azure.Security.Monitoring/*/Monitoring/agent/Extensions/AzureSecurityPack/SecurityPackStartup.log |
 | /Packages/Plugins/Microsoft.Azure.Security.Monitoring/*/Monitoring/agent/Extensions/AzureSecurityPack/SecurityScanLoggerManifest.man |
-| /Packages/Plugins/Microsoft.Azure.Security.Monitoring/*/Monitoring/agent/initconfig/*/Standard/AgentStandardEvents.xml |
-| /Packages/Plugins/Microsoft.Azure.Security.Monitoring/*/Monitoring/agent/initconfig/*/Standard/AgentStandardEventsMin.xml |
-| /Packages/Plugins/Microsoft.Azure.Security.Monitoring/*/Monitoring/agent/initconfig/*/Standard/AgentStandardExtensions.xml |
-| /Packages/Plugins/Microsoft.Azure.Security.Monitoring/*/Monitoring/agent/initconfig/*/Standard/AntiMalwareEvents.xml |
-| /Packages/Plugins/Microsoft.Azure.Security.Monitoring/*/Monitoring/agent/initconfig/*/Standard/MonitoringEwsEvents.xml |
-| /Packages/Plugins/Microsoft.Azure.Security.Monitoring/*/Monitoring/agent/initconfig/*/Standard/MonitoringEwsEventsCore.xml |
-| /Packages/Plugins/Microsoft.Azure.Security.Monitoring/*/Monitoring/agent/initconfig/*/Standard/MonitoringEwsRootEvents.xml |
-| /Packages/Plugins/Microsoft.Azure.Security.Monitoring/*/Monitoring/agent/initconfig/*/Standard/MonitoringStandardEvents.xml |
-| /Packages/Plugins/Microsoft.Azure.Security.Monitoring/*/Monitoring/agent/initconfig/*/Standard/MonitoringStandardEvents2.xml |
-| /Packages/Plugins/Microsoft.Azure.Security.Monitoring/*/Monitoring/agent/initconfig/*/Standard/MonitoringStandardEvents3.xml |
-| /Packages/Plugins/Microsoft.Azure.Security.Monitoring/*/Monitoring/agent/initconfig/*/Standard/SecurityStandardEvents.xml |
-| /Packages/Plugins/Microsoft.Azure.Security.Monitoring/*/Monitoring/agent/initconfig/*/Standard/SecurityStandardEvents2.xml |
-| /Packages/Plugins/Microsoft.Azure.Security.Monitoring/*/Monitoring/agent/initconfig/*/Standard/SecurityStandardEvents3.xml |
+| /Packages/Plugins/Microsoft.Azure.Security.Monitoring/_/Monitoring/agent/initconfig/_/Standard/AgentStandardEvents.xml |
+| /Packages/Plugins/Microsoft.Azure.Security.Monitoring/_/Monitoring/agent/initconfig/_/Standard/AgentStandardEventsMin.xml |
+| /Packages/Plugins/Microsoft.Azure.Security.Monitoring/_/Monitoring/agent/initconfig/_/Standard/AgentStandardExtensions.xml |
+| /Packages/Plugins/Microsoft.Azure.Security.Monitoring/_/Monitoring/agent/initconfig/_/Standard/AntiMalwareEvents.xml |
+| /Packages/Plugins/Microsoft.Azure.Security.Monitoring/_/Monitoring/agent/initconfig/_/Standard/MonitoringEwsEvents.xml |
+| /Packages/Plugins/Microsoft.Azure.Security.Monitoring/_/Monitoring/agent/initconfig/_/Standard/MonitoringEwsEventsCore.xml |
+| /Packages/Plugins/Microsoft.Azure.Security.Monitoring/_/Monitoring/agent/initconfig/_/Standard/MonitoringEwsRootEvents.xml |
+| /Packages/Plugins/Microsoft.Azure.Security.Monitoring/_/Monitoring/agent/initconfig/_/Standard/MonitoringStandardEvents.xml |
+| /Packages/Plugins/Microsoft.Azure.Security.Monitoring/_/Monitoring/agent/initconfig/_/Standard/MonitoringStandardEvents2.xml |
+| /Packages/Plugins/Microsoft.Azure.Security.Monitoring/_/Monitoring/agent/initconfig/_/Standard/MonitoringStandardEvents3.xml |
+| /Packages/Plugins/Microsoft.Azure.Security.Monitoring/_/Monitoring/agent/initconfig/_/Standard/SecurityStandardEvents.xml |
+| /Packages/Plugins/Microsoft.Azure.Security.Monitoring/_/Monitoring/agent/initconfig/_/Standard/SecurityStandardEvents2.xml |
+| /Packages/Plugins/Microsoft.Azure.Security.Monitoring/_/Monitoring/agent/initconfig/_/Standard/SecurityStandardEvents3.xml |
 | /Packages/Plugins/Microsoft.Azure.Security.Monitoring/*/Monitoring/agent/MonAgent-Pkg-Manifest.xml |
 | /Packages/Plugins/Microsoft.Azure.Security.Monitoring/*/MonitoringAgentCertThumbprints.txt |
 | /Packages/Plugins/Microsoft.Azure.Security.Monitoring/*/MonitoringAgentScheduledService.txt |
@@ -78,19 +78,19 @@ Information about Windows VMs will include the files listed below in addition to
 | /Packages/Plugins/Microsoft.Compute.BGInfo/*/emptyConfig.bgi |
 | /Packages/Plugins/Microsoft.Compute.BGInfo/*/PluginManifest.xml |
 | /Packages/Plugins/Microsoft.Powershell.DSC/*/DSCVersion.xml |
-| /Packages/Plugins/Microsoft.Powershell.DSC/*/DSCWork/*.dpx |
-| /Packages/Plugins/Microsoft.Powershell.DSC/*/DSCWork/*.dsc |
-| /Packages/Plugins/Microsoft.Powershell.DSC/*/DSCWork/*.log |
+| /Packages/Plugins/Microsoft.Powershell.DSC/_/DSCWork/_.dpx |
+| /Packages/Plugins/Microsoft.Powershell.DSC/_/DSCWork/_.dsc |
+| /Packages/Plugins/Microsoft.Powershell.DSC/_/DSCWork/_.log |
 | /Packages/Plugins/Microsoft.Powershell.DSC/*/DSCWork/HotfixInstallInProgress.dsc |
 | /Packages/Plugins/Microsoft.Powershell.DSC/*/DSCWork/PreInstallDone.dsc |
 | /Packages/Plugins/Microsoft.SqlServer.Management.SqlIaaSAgent/*/config.txt |
 | /Packages/Plugins/Microsoft.SqlServer.Management.SqlIaaSAgent/*/HandlerEnvironment.json |
 | /Packages/Plugins/Microsoft.SqlServer.Management.SqlIaaSAgent/*/HandlerManifest.json |
 | /Packages/Plugins/Microsoft.SqlServer.Management.SqlIaaSAgent/*/PackageDefinition.xml |
-| /Packages/Plugins/Microsoft.SqlServer.Management.SqlIaaSAgent/*/RuntimeSettings/*.settings |
-| /Packages/Plugins/Microsoft.SqlServer.Management.SqlIaaSAgent/*/Status/*.status |
+| /Packages/Plugins/Microsoft.SqlServer.Management.SqlIaaSAgent/_/RuntimeSettings/_.settings |
+| /Packages/Plugins/Microsoft.SqlServer.Management.SqlIaaSAgent/_/Status/_.status |
 | /Packages/Plugins/Microsoft.SqlServer.Management.SqlIaaSAgent/*/Status/HeartBeat.Json |
-| /Program Files/Microsoft SQL Server/*/MSSQL/Log/*.* |
+| /Program Files/Microsoft SQL Server/_/MSSQL/Log/_.* |
 | /unattend.xml |
 | /Windows/debug/DCPROMO.LOG |
 | /Windows/debug/dcpromoui.log |
@@ -173,32 +173,32 @@ Information about Windows VMs will include the files listed below in addition to
 | /WindowsAzure/Logs/AggregateStatus/aggregatestatus*.json |
 | /WindowsAzure/Logs/AppAgentRuntime.log |
 | /WindowsAzure/Logs/MonitoringAgent.log |
-| /WindowsAzure/Logs/Plugins/*/*/CommandExecution.log |
-| /WindowsAzure/Logs/Plugins/*/*/Heartbeat.log |
-| /WindowsAzure/Logs/Plugins/*/*/Install.log |
-| /WindowsAzure/Logs/Plugins/*/*/Update.log |
-| /WindowsAzure/Logs/Plugins/Microsoft.Azure.Diagnostics.IaaSDiagnostics/*/*/Configuration/Checkpoint.txt |
-| /WindowsAzure/Logs/Plugins/Microsoft.Azure.Diagnostics.IaaSDiagnostics/*/*/Configuration/MaConfig.xml |
-| /WindowsAzure/Logs/Plugins/Microsoft.Azure.Diagnostics.IaaSDiagnostics/*/*/Configuration/MonAgentHost.*.log |
+| /WindowsAzure/Logs/Plugins/_/_/CommandExecution.log |
+| /WindowsAzure/Logs/Plugins/_/_/Heartbeat.log |
+| /WindowsAzure/Logs/Plugins/_/_/Install.log |
+| /WindowsAzure/Logs/Plugins/_/_/Update.log |
+| /WindowsAzure/Logs/Plugins/Microsoft.Azure.Diagnostics.IaaSDiagnostics/_/_/Configuration/Checkpoint.txt |
+| /WindowsAzure/Logs/Plugins/Microsoft.Azure.Diagnostics.IaaSDiagnostics/_/_/Configuration/MaConfig.xml |
+| /WindowsAzure/Logs/Plugins/Microsoft.Azure.Diagnostics.IaaSDiagnostics/_/_/Configuration/MonAgentHost.*.log |
 | /WindowsAzure/Logs/Plugins/Microsoft.Azure.Diagnostics.IaaSDiagnostics/*/DiagnosticsPlugin.log |
 | /WindowsAzure/Logs/Plugins/Microsoft.Azure.Diagnostics.IaaSDiagnostics/*/DiagnosticsPluginLauncher.log |
-| /WindowsAzure/Logs/Plugins/Microsoft.Azure.RecoveryServices.VMSnapshot/*/IaaSBcdrExtension*.log |
+| /WindowsAzure/Logs/Plugins/Microsoft.Azure.RecoveryServices.VMSnapshot/_/IaaSBcdrExtension_.log |
 | /WindowsAzure/Logs/Plugins/Microsoft.Azure.Security.IaaSAntimalware/*/AntimalwareConfig.log |
 | /WindowsAzure/Logs/Plugins/Microsoft.Azure.Security.Monitoring/*/AsmExtension.log |
-| /WindowsAzure/Logs/Plugins/Microsoft.Azure.ServiceFabric.ServiceFabricNode/*/FabricMSIInstall*.log |
+| /WindowsAzure/Logs/Plugins/Microsoft.Azure.ServiceFabric.ServiceFabricNode/_/FabricMSIInstall_.log |
 | /WindowsAzure/Logs/Plugins/Microsoft.Azure.ServiceFabric.ServiceFabricNode/*/InfrastructureManifest.xml |
 | /WindowsAzure/Logs/Plugins/Microsoft.Azure.ServiceFabric.ServiceFabricNode/*/TempClusterManifest.xml |
-| /WindowsAzure/Logs/Plugins/Microsoft.Azure.ServiceFabric.ServiceFabricNode/*/VCRuntimeInstall*.log |
-| /WindowsAzure/Logs/Plugins/Microsoft.Compute.BGInfo/*/BGInfo*.log |
+| /WindowsAzure/Logs/Plugins/Microsoft.Azure.ServiceFabric.ServiceFabricNode/_/VCRuntimeInstall_.log |
+| /WindowsAzure/Logs/Plugins/Microsoft.Compute.BGInfo/_/BGInfo_.log |
 | /WindowsAzure/Logs/Plugins/Microsoft.Compute.JsonADDomainExtension/*/ADDomainExtension.log |
 | /WindowsAzure/Logs/Plugins/Microsoft.Compute.VMAccessAgent/*/JsonVMAccessExtension.log |
 | /WindowsAzure/Logs/Plugins/Microsoft.EnterpriseCloud.Monitoring.MicrosoftMonitoringAgent/*/0.log |
-| /WindowsAzure/Logs/Plugins/Microsoft.Powershell.DSC/*/DscExtensionHandler*.log |
-| /WindowsAzure/Logs/Plugins/Microsoft.Powershell.DSC/*/DSCLOG*.json |
-| /WindowsAzure/Logs/Plugins/Microsoft.SqlServer.Management.SqlIaaSAgent/*/CommandExecution*.log |
+| /WindowsAzure/Logs/Plugins/Microsoft.Powershell.DSC/_/DscExtensionHandler_.log |
+| /WindowsAzure/Logs/Plugins/Microsoft.Powershell.DSC/_/DSCLOG_.json |
+| /WindowsAzure/Logs/Plugins/Microsoft.SqlServer.Management.SqlIaaSAgent/_/CommandExecution_.log |
 | /WindowsAzure/Logs/Plugins/Symantec.SymantecEndpointProtection/*/sepManagedAzure.txt |
-| /WindowsAzure/Logs/Plugins/TrendMicro.DeepSecurity.TrendMicroDSA/*/*.log |
-| /WindowsAzure/Logs/SqlServerLogs/*.* |
+| /WindowsAzure/Logs/Plugins/TrendMicro.DeepSecurity.TrendMicroDSA/_/_.log |
+| /WindowsAzure/Logs/SqlServerLogs/_._ |
 | /WindowsAzure/Logs/Telemetry.log |
 | /WindowsAzure/Logs/TransparentInstaller.log |
 | /WindowsAzure/Logs/WaAppAgent.log |
@@ -257,17 +257,17 @@ Information about FreeBSD VMs will include the files listed below in addition to
 | /etc/nsswitch.conf |
 | /etc/rc.conf |
 | /etc/resolv.conf |
-| /etc/ssh/ssh_host*key* |
+| /etc/ssh/ssh_host_key_ |
 | /etc/ssh/sshd_config |
 | /etc/syslog.conf |
 | /etc/waagent.conf |
 | /var/lib/waagent/*.xml |
-| /var/lib/waagent/*/config/*.settings |
-| /var/lib/waagent/*/status/*.status |
+| /var/lib/waagent/_/config/_.settings |
+| /var/lib/waagent/_/status/_.status |
 | /var/lib/waagent/ExtensionsConfig.*.xml |
 | /var/lib/waagent/provisioned |
 | /var/log/auth* |
-| /var/log/azure/*/*/* |
+| /var/log/azure/_/_/* |
 | /var/log/boot* |
 | /var/log/dmesg* |
 | /var/log/messages* |
@@ -282,3 +282,5 @@ Information about FreeBSD VMs will include the files listed below in addition to
 | /var/lib/waagent |
 | /var/log |
 ||
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

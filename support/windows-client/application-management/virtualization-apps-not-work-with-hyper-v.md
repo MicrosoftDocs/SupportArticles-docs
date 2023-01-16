@@ -13,6 +13,10 @@ ms.reviewer: kaushika
 ms.custom: sap:1st-party-applications, csstroubleshoot
 ms.technology: windows-client-application-compatibility
 ---
+
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+--->
+
 # Virtualization applications don't work together with Hyper-V, Device Guard, and Credential Guard
 
 Many third-party virtualization applications don't work together with Hyper-V. Affected applications include VMware Workstation and VirtualBox. These applications might not start virtual machines, or they may fall back to a slower, emulated mode.
@@ -35,7 +39,7 @@ To determine whether the Hyper-V hypervisor is running, follow these steps:
 
    > A hypervisor has been detected. Features required for Hyper-V will not be displayed.
 
-   :::image type="content" source="media/virtualization-apps-not-work-with-hyper-v/system-information.png" alt-text="screenshot of the detail window of System Information.":::
+   :::image type="content" source="media/virtualization-apps-not-work-with-hyper-v/system-information.svg" alt-text="screenshot of the detail window of System Information.":::
 
 ## Cause
 
@@ -57,7 +61,7 @@ To disable Hyper-V in Control Panel, follow these steps:
 2. Select **Turn Windows features on or off**.
 3. Expand **Hyper-V**, expand **Hyper-V Platform**, and then clear the **Hyper-V Hypervisor** check box.
 
-    :::image type="content" source="media/virtualization-apps-not-work-with-hyper-v/hyper-v-hypervisor.png" alt-text="screenshot of the Hyper-V Hypervisor check box." border="false":::
+    :::image type="content" source="media/virtualization-apps-not-work-with-hyper-v/hyper-v-hypervisor.svg" alt-text="screenshot of the Hyper-V Hypervisor check box." border="false":::
 
 ### Disable Hyper-V in PowerShell
 

@@ -2,7 +2,6 @@
 title: End support SQL Server 2008 R2 (KB 4456242)
 description: SQL Server 2008 and SQL Server 2008 R2 are approaching the end of their support life cycle.
 ms.date: 02/12/2020
-ms.prod-support-area-path:
 ms.reviewer: sureshka, suehar
 ms.prod: sql
 ---
@@ -53,15 +52,14 @@ The following table concerns products for SQL Server 2008 and SQL Server 2008 R2
 | Microsoft SQL Server 2008 Standard      | 7/9/2019 |
 | Microsoft SQL Server 2008 Web           | 7/9/2019 |
 | Microsoft SQL Server 2008 Workgroup     | 7/9/2019 |
-|||
-
+  
 We recommend that you migrate to Azure SQL DB, or upgrade to the current product versions. You should take action before the support end dates. Upgrading lets you take advantage of the latest product innovations, and ensures uninterrupted support from Microsoft.
 
 ## Resources
 
 - [SQL Server end of support options](/sql/sql-server/end-of-support/sql-server-end-of-life-overview)
 
-- [Extend support for SQL Server 2008 and SQL Server 2008 R2 with Azure](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)
+- [Extend support for SQL Server 2008 and SQL Server 2008 R2 with Azure](/azure/azure-sql/virtual-machines/windows/sql-server-2008-extend-end-of-support)
 
 - [End of _Mainstream_ support for SQL Server 2008 and SQL Server 2008 R2, July 2014](/archive/blogs/sqlreleaseservices/end-of-mainstream-support-for-sql-server-2008-and-sql-server-2008-r2)
 

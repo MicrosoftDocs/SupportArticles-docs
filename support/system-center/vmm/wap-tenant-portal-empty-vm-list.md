@@ -2,7 +2,6 @@
 title: Empty VM list in WAP tenant portal
 description: Discusses that you see an empty VM list in Windows Azure Pack tenant portal even though VMs are available and displayed in System Center Virtual Machine Manager. Provides a resolution.
 ms.date: 04/29/2020
-ms.prod-support-area-path:
 ---
 # Empty VM list in WAP tenant portal although VMs are listed in VMM
 

@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 555252
 1. Requesting the Root Certification Authority Certificate by using command line:
 
     1. Log into the Root Certification Authority server with Administrator Account.
-    2. Go to **Start** > **Run** >, and type **Cmd** and press on **Enter** button.
+    2. Go to **Start** > **Run**. Enter the text **Cmd** and then select **Enter**.
     3. To export the Root Certification Authority server to a new file name **ca_name.cer**, type:
 
         ```console
@@ -36,16 +36,20 @@ _Original KB number:_ &nbsp; 555252
 
     1. Log on to Root Certification Authority Web Enrollment Site.
 
-        Usually the Web Enrollment Site resides in following links:
+        Usually the Web Enrollment Site resides in the following links:
+
+        http://\<ip_address>/certsrv
 
         or
 
-        ip_address = Root Certification Authority Server IP.
+        http://\<fqdn>/certsrv
 
-        fqdn = Fully qualified domain name of the Root Certification Authority Server.
+        `ip_address` = Root Certification Authority Server IP.
 
-    2. Click the "**Download a CA certificate,** **certificate chain, or CRL**" link.
-    3. Press on "**Download CA certificate**" link.
+        `fqdn` = Fully qualified domain name of the Root Certification Authority Server.
+
+    2. Select **Download a CA certificate, certificate chain, or CRL**.
+    3. Select **Download CA certificate**.
     4. Save the file "**certnew.cer**" in local disk store.
 
 [!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]

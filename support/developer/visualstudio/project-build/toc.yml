@@ -1,0 +1,6 @@
+- name: Can't save file settings in a C++ project
+  href: ./file-setting-not-save.md
+- name: Build errors when you delete the debug configuration
+  href: ./build-errors-delete-debug-configuration.md
+- name: Building a Windows 10 driver fails
+  href: ./building-windows-10-driver-fails.md

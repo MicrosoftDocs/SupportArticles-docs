@@ -2,7 +2,6 @@
 title: Error (Server Error in '/' Application) when you try to sign in to an app that is set up for Azure AD B2C
 description: Describes an error that occurs when you try to sign in to an app that is set up for Azure AD B2C.
 ms.date: 05/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: B2C
@@ -46,3 +45,5 @@ To fix this issue, follow these steps:
     <add key="ida:SignUpPolicyId" value="B2C_Signup_Policy_Name">
     </appSettings>
     ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

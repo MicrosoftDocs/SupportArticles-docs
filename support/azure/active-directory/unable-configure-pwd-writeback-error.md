@@ -2,7 +2,6 @@
 title: Error (Unable to configure password writeback) when you run the Azure AD Connect wizard
 description: Describes an issue that triggers an error when you run the Azure AD Connect wizard to set up password writeback. Provides a solution.
 ms.date: 05/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: vimals, willfid
 ms.service: active-directory
 ms.subservice: enterprise-users
@@ -22,20 +21,19 @@ When you run the Azure AD Connect wizard, you receive the following error messag
 
 ## Cause
 
-This issue occurs if one or both of the following conditions are true:
+This issue occurs if one of the following conditions are true:
 
 - The administrator account that's used to set up Azure AD Connect does not have the appropriate license.
 - The time on the server on which Azure AD Connect is installed is out of sync.
+- The TLS setting is configured correctly.
 
 ## Resolution
 
-### Make sure that you use the correct administrator account
+To reoslve this problem, follow these steps:
 
-Make sure that the administrator account that you use to enable password writeback is a cloud administrator account (created in Azure AD) and not a federated account (created in the on-premises Active Directory and synchronized to Azure AD). Also, make sure that the account has the appropriate Azure AD subscription license.
-
-### Make sure that the time isn't skewed
-
-On the authoritative time server, perform the steps in the **Configuring the Windows Time service to use an external time source** section of [How to configure an authoritative time server in Windows Server](https://support.microsoft.com/help/816042)
+1. [Enable TLS 1.2](/azure/active-directory/hybrid/reference-connect-tls-enforcement).
+2. Make sure that the administrator account that you use to enable password writeback is a cloud administrator account (created in Azure AD) and not a federated account (created in the on-premises Active Directory and synchronized to Azure AD). Also, make sure that the account has the appropriate Azure AD subscription license.
+3. Make sure that the time isn't skewed. On the authoritative time server, perform the steps in the **Configuring the Windows Time service to use an external time source** section of [How to configure an authoritative time server in Windows Server](https://support.microsoft.com/help/816042)
 
 Make sure that the time on the server on which Azure AD Connect is installed matches the time on the authoritative time server.
 
@@ -60,4 +58,4 @@ Password writeback service is not in a healthy state. No serviceHost for service
 running state. Please refer aka.ms/ssprtroubleshoot, Details: Version: 5.0.0.686
 ```
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

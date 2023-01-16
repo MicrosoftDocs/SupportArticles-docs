@@ -2,7 +2,6 @@
 title: A P2V conversion fails with GPT partitions
 description: Fixes an issue in which a physical to virtual (P2V) conversion may fail if the source machine contains a GUID Partition Table formatted disk.
 ms.date: 07/15/2020
-ms.prod-support-area-path: 
 ---
 # P2V fails with GPT partitions in System Center Virtual Machine Manager
 

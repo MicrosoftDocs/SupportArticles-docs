@@ -5,6 +5,7 @@ description: This article describes how to attach a disk to a repair VM for offl
 ms.author: genli
 ms.date: 07/16/2021
 ms.service: virtual-machines
+ms.subservice: vm-backup-restore
 ms.topic: troubleshooting
 ---
 
@@ -14,13 +15,16 @@ If your Windows virtual machine (VM) in Azure encounters a startup or disk error
 
 ## Determine which method to use for offline repair
 
-The steps you should use to attach a failed OS disk to a repair VM depend on whether the disk is encrypted with Azure Disk Encryption (ADE), whether it is managed or unmanaged, and some other factors.
+The steps you should use to attach a failed OS disk to a repair VM depend on whether the disk is encrypted with Azure Disk Encryption (ADE), whether it's managed or unmanaged, and some other factors.
 
-- If you know the OS disk is encrypted with ADE, see "[Unlocking an encrypted disk for offline repair](unlock-encrypted-disk-offline.md)" for instructions on attaching and unlocking the disk. If you are unsure if the OS disk is encrypted, see [Confirm that ADE is enabled on the disk](unlock-encrypted-disk-offline.md#confirm-that-ade-is-enabled-on-the-disk).
-- If you know the OS disk is unmanaged, see "[Attach an unmanaged disk to a VM for offline repair](unmanaged-disk-offline-repair.md)" for instructions on attaching the disk to a repair VM. If you are unsure, see [Determine if the OS disk is managed or unmanaged](unmanaged-disk-offline-repair.md#determine-if-the-os-disk-is-managed-or-unmanaged).
-- If you know the disk is both managed and unencrypted, choose one of the following methods:
-  - If company policy allows you to assign a public IP address to a repair VM, see "[Repair a Windows VM by using the Azure Virtual Machine repair commands](repair-windows-vm-using-azure-virtual-machine-repair-commands.md)."  This is the automated (preferred) method to attach a failed OS disk to a repair VM by using [az vm repair](/cli/azure/vm/repair).
-  - If company policies prevent you from assigning a public IP address to a repair VM, use the [manual method to attach an OS disk to a repair VM](#manually-attach-a-failed-os-disk-to-a-repair-vm).
+- If the OS disk is unmanaged, see [Attach an unmanaged disk to a VM for offline repair](unmanaged-disk-offline-repair.md) for instructions on attaching the disk to a repair VM. If you're unsure, see [Determine if the OS disk is managed or unmanaged](unmanaged-disk-offline-repair.md#determine-if-the-os-disk-is-managed-or-unmanaged).
+
+- If the OS disk is managed,
+  - Not encrypted, see [Repair a Windows VM by using the Azure Virtual Machine repair commands](repair-windows-vm-using-azure-virtual-machine-repair-commands.md). This is the automated (preferred) method to attach a failed OS disk to a repair VM by using [az vm repair](/cli/azure/vm/repair). If you're unsure if the OS disk is encrypted, see [Confirm that ADE is enabled on the disk](unlock-encrypted-disk-offline.md#confirm-that-ade-is-enabled-on-the-disk).
+  
+  - Encrypted with ADE single-pass encryption (with or without KEK), see [Repair a Windows VM by using the Azure Virtual Machine repair commands](repair-windows-vm-using-azure-virtual-machine-repair-commands.md). This is the automated (preferred) method to attach a failed OS disk to a repair VM by using [az vm repair](/cli/azure/vm/repair).
+  
+  - Encrypted with ADE using a method other than single-pass encryption, see [Unlocking an encrypted disk for offline repair](unlock-encrypted-disk-offline.md) for instructions on attaching and unlocking the disk.
 
 ## Manually attach a failed OS disk to a repair VM
 
@@ -62,14 +66,16 @@ To create a disk from the snapshot, follow these steps:
 
 ### Create a repair VM with the new disk attached as a data disk
 
-1. In the Azure portal, begin the process of creating a new VM based on Windows Server. 
+1. In the Azure portal, begin the process of creating a new VM based on Windows Server.
 2. On the **Basics** page of the "Create a Virtual Machine" wizard, specify the same region and availability zone that you chose for the new disk you just created from the snapshot.
-3. On the **Disks** page of the "Create a Virtual Machine" wizard, beneath **Data disks**, select **Attach an existing disk**.
+3. Complete the "Create a Virtual Machine" wizard with the default settings.
+4. Start and connect to the repair VM. Ensure the repair VM is operating correctly.
+5. Attach the disk to the repair VM as a data disk.
 
-    :::image type="content" source="media/unlock-encrypted-disk-offline/attach-existing-disk.png" alt-text="Screenshot of the disks page of the create a virtual machine wizard, with the option highlighted to attach an existing disk.":::
-
-4. In the **Data disks** list, select the disk you just created from the snapshot in the last procedure. 
-5. Complete the "Create a Virtual Machine" wizard with the default settings.
+    1. On the **Virtual machine** pane, select **Disks**.
+    2. On the **Disks** pane, select **Attach existing disks**.
+    3. Under **Disk name**, select the expected disk from the drop-down menu.
+    4. Select **Save**.
 
 ### Repair the failed VM's OS disk
 
@@ -92,3 +98,5 @@ Azure portal supports changing the OS disk of the VM. To do this, follow these s
 ## Next Steps
 
 If you're having problems connecting to your VM, see [Troubleshoot Remote Desktop connections to an Azure VM](troubleshoot-rdp-connection.md). For problems with accessing applications running on your VM, see [Troubleshoot application connectivity issues on a Windows VM](troubleshoot-app-connection.md).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -2,7 +2,6 @@
 title: Self-service users can't view a service on App Controller
 description: Fixes an issue where a self-service user receives the Retrieved data is incomplete warning when they view a service on System Center 2012 App Controller.
 ms.date: 08/18/2020
-ms.prod-support-area-path:
 ms.reviewer: jeffpatt
 ---
 # Retrieved data is incomplete warning when a self-service user views a service on App Controller

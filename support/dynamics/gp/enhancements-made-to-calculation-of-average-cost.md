@@ -174,7 +174,6 @@ The following conditions are true for items that use the Average Perpetual valua
     |Sale #3|||25|$1.23|$1.23|
     |Receipt #4|250|100||$1.30|$1.25|
     |Sale #4|||50|$1.25|$1.25|
-    |||||||
 
     The calculation for Receipt #1 uses the following formula:[(0 x $0.00) + (100 x $1.00)] ÷ [0 + (100 - 0)] = $1.00
 
@@ -216,7 +215,6 @@ The following conditions are true for items that use the Average Perpetual valua
   |Sale #3|||25|$1.23|$1.26|
   |Receipt #4|250|100||$1.30|$1.27|
   |Sale #4|||50|$1.25| |
-  |||||||
 
   The calculation for Receipt #3 uses the following formula:[(125 x $1.25) + (100 x $1.28)] ÷ [125 + (100 - 0)] = $1.263
 

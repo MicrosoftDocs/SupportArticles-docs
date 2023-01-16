@@ -90,7 +90,15 @@ To rebuild all performance counters including extensible and third-party counter
 
 3. Stop and restart the Performance Logs and Alerts service.
 
+    ```powershell
+    Get-Service -Name "pla" | Restart-Service -Verbose
+    ```
+
 4. Stop and restart the Windows Management Instrumentation service.
+
+    ```powershell
+    Get-Service -Name "winmgmt" | Restart-Service -Force -Verbose
+    ```
 
 5. Create a new Data Collector Set (don't use an existing Data Collector Set).
 

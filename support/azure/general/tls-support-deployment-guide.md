@@ -2,8 +2,7 @@
 title: TLS 1.2 Protocol Support Deployment Guide for Microsoft Azure Pack
 description: Describes how to deploy the TLS 1.2 protocol in Microsoft Azure Pack.
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
-ms.service: azure
+ms.service: azure-common-issues-support
 ms.author: genli
 author: genlin
 ms.reviewer: waltero, sarathys, mtandon, mouradl, larsbe, vladimip, genli
@@ -35,10 +34,6 @@ The following are prerequisites for supporting the TLS 1.2 protocol in Microsof
     > These settings should be configured on the systems that run Windows Azure Pack.
 
 ## Hardening the system to use the TLS 1.2 protocol
-
-Use one of the following methods.
-
-### Method 1: Manually modify the registry
 
 > [!IMPORTANT]
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756)  in case problems occur.
@@ -72,19 +67,7 @@ Use the following steps to enable/disable all SCHANNEL protocols system-wide. We
 
 8. On the **File** menu, click **Exit**.
 
-### Method 2: Automatically modify the registry
-
-- On Windows Server 2012 R2, run the **Update-ComputerSchannelSettings.ps1** PowerShell script in Administrator mode.
-- On Windows 10 and later versions, run the **SslProtocols.reg** and **SslCipherSuites4win10orlater.reg** registry files in Administrator mode.
-
-> [!NOTE]
-> These files are contained in the TLS1.2.zip file that is available from the [TechNet Gallery](https://gallery.technet.microsoft.com/TLS-12-Support-Deployment-15c3a47b).
-
 ## Setting Microsoft Azure Pack to support the TLS 1.2 protocol
-
-Use one of the following methods.
-
-### Method 1: Manually modify the registry
 
 > [!IMPORTANT]
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756)  in case problems occur.
@@ -98,8 +81,4 @@ To enable the installation of Microsoft Azure Pack on the system to support the 
 5. Create the following DWORD value under this key:SchUseStrongCrypto [Value = 1].
 6. Restart the system.
 
-### Method 2: Automatically modify the registry
-
-Run the **SchUseStrongCrypto.reg** registry file in Administrator mode.
-> [!NOTE]
-> This file is contained in the TLS1.2.zip file that is available from the [TechNet Gallery](https://gallery.technet.microsoft.com/TLS-12-Support-Deployment-15c3a47b).
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

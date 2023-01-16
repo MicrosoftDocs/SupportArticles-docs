@@ -65,8 +65,7 @@ For Windows editions that experience activation and "not genuine" errors that ar
 |Application|Microsoft-Windows-Security-SPP|8208|Acquisition of genuine ticket failed (hr=0xC004C4A2) for template Id 66c92734-d682-4d71-983e-d6ec3f16059f|
 |Application|Windows Activation Technologies|13|Genuine validation result: hrOffline = 0x00000000, hrOnline =0xC004C4A2|
 |Application|Microsoft-Windows-Security-SPP|8196|License Activation Scheduler (sppuinotify.dll) was not able to automatically activate. Error code:  0xC004F200:|
-|||||
-
+  
 ## Cause
 
 A recent update to the Microsoft Activation and Validation unintentionally caused a "not genuine" error on volume-licensed Windows 7 clients that had [KB971033](https://support.microsoft.com/help/971033) installed. The change was introduced at 10:00:00 UTC on January 8, 2019, and was reverted at 4:30:00 UTC on January 9, 2019.
@@ -151,8 +150,7 @@ The following table lists the KMS client keys for each edition of Windows 7.
 |Windows 7 Enterprise|33PXH-7Y6KF-2VJC9-XBBR8-HVTHH|
 |Windows 7 Enterprise N|YDRBP-3D83W-TY26F-D46B2-XCKRJ|
 |Windows 7 Enterprise E|C29WB-22CC8-VJ326-GHFJW-H9DH4|
-|||
-
+  
 > [!NOTE]
 >
 > - Scripts that contain the KMS client setup key must target the corresponding operating system edition.

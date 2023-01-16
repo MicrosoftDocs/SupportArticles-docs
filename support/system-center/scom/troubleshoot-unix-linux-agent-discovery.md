@@ -1,8 +1,7 @@
 ---
 title: Troubleshoot UNIX/Linux agent discovery
 description: This article helps troubleshoot common errors that may be encountered during the discovery process of UNIX or Linux computers.
-ms.date: 06/22/2020
-ms.prod-support-area-path:
+ms.date: 10/06/2022
 ---
 # Troubleshoot UNIX/Linux agent discovery in Operations Manager
 
@@ -89,6 +88,30 @@ When certificate verification fails, you typically receive an error that resembl
   To verify this, confirm that all management servers in the resource pool used for discovery trust each other server's certificate.
 
   For more information about how to manage resource pools for UNIX and Linux computers, see [Managing Resource Pools for UNIX and Linux Computers](/previous-versions/system-center/system-center-2012-R2/hh287152(v=sc.12)).
+  
+### The user name or password is incorrect
+
+You may see the error when trying to discover UNIX/Linux agents. The failure may occur during the certificate verification step while discovering a UNIX/Linux machine.
+
+**Possible causes**
+
+- Basic authentication is set to `false` on one or more management servers in the UNIX/Linux resource pool when the UNIX/Linux agent is not domain joined and cannot utilize Kerberos authentication. You can verify the current [WinRM](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management) settings by running the following command: `winrm get winrm/config/client`.
+- The username or password is incorrect.
+
+**Resolution**
+
+You can update the WinRM configuration on the management servers in the UNIX/Linux resource pool to allow Basic authentication by running the following command, or you can set the configuration via Group Policy:
+
+```cmd
+winrm set winrm/config/client/auth @{Basic="true"}
+```
+
+> [!NOTE]
+> The above command sets a DWORD (32-bit) registry value (**AllowBasic**) in the following registry key:
+>
+> `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WinRM\Client`
+>
+> **AllowBasic** allows either `1` (Enabled) or `0` (Disabled) decimal values.
 
 ### Certificate signing operation was not successful
 
@@ -163,6 +186,78 @@ In this situation, you typically receive an error that resembles the following:
 **Resolution**
 
 To fix this issue, verify that the management server can ping the agent host using its FQDN. Also verify that no network firewalls or host firewall is blocking TCP port 1270.
+
+### Unexpected discoveryResult.ErrorData type. Please file bug report - Parameter name: s
+
+**Error description**
+
+> Unexpected DiscoveryResult.ErrorData type. Please file bug report.  
+> ErrorData: System.ArgumentNullException  
+> Value cannot be null.  
+> Parameter name: s  
+> at System.Activities.WorkflowApplication.Invoke(Activity activity, IDictionary\`2 inputs, WorkflowInstanceExtensionManager extensions, TimeSpan timeout)  
+> at System.Activities.WorkflowInvoker.Invoke(Activity workflow, IDictionary\`2 inputs, TimeSpan timeout, WorkflowInstanceExtensionManager extensions)  
+> at Microsoft.SystemCenter.CrossPlatform.ClientActions.DefaultDiscovery.InvokeWorkflow(IManagedObject managementActionPoint, DiscoveryTargetEndpoint criteria, IInstallableAgents installableAgents)
+
+**Cause**
+
+This error occurs because WinHTTP proxy settings have been configured on the management servers in the UNIX or Linux resource pool, and the FQDN of the UNIX or Linux agent that you're trying to discover isn't included in the WinHTTP proxy bypass list.
+
+**Resolution**
+
+To fix this issue, add the UNIX or Linux FQDN to the WinHTTP proxy bypass list.
+
+On the management servers in the UNIX or Linux resource pool, run the following command at an elevated command prompt to verify the current proxy configuration:
+
+```console
+netsh winhttp show proxy
+```
+
+If a WinHTTP proxy server is configured, add the FQDN of the server that you're trying to discover to the bypass list by running the following command:
+
+```console
+netsh winhttp set proxy proxy-server="<proxyserver:port>" bypass-list="*.ourdomain.com;*.yourdomain.com*;<serverFQDN>"
+```
+
+Once the bypass list is configured, check if the agent discovery is successful.
+
+> [!NOTE]
+> You can run the `netsh winhttp reset proxy` command to disable the WinHTTP proxy. This command will remove the proxy server and configure direct access.
+
+### Unexpected discoveryResult.ErrorData type. Please file bug report - Parameter name: lhs
+
+**Error description**
+
+> Discovery not successful  
+> Message: Unspecified failure  
+> Details: Unexpected DiscoveryResult.ErrorData type. Please file bug report.  
+> ErrorData: System.ArgumentNullException  
+> Value cannot be null.  
+> Parameter name: lhs  
+> at System.Activities.WorkflowApplication.Invoke(Activity activity, IDictionary\`2 inputs, WorkflowInstanceExtensionManager extensions, TimeSpan timeout)  
+> at System.Activities.WorkflowInvoker.Invoke(Activity workflow, IDictionary\`2 inputs, TimeSpan timeout, WorkflowInstanceExtensionManager extensions)  
+> at Microsoft.SystemCenter.CrossPlatform.ClientActions.DefaultDiscovery.InvokeWorkflow(IManagedObject managementActionPoint, DiscoveryTargetEndpoint criteria, IInstallableAgents installableAgents)
+
+**Cause**
+
+This error occurs because of omsagent shell files in the installed kits folder.
+
+**Resolution**
+
+Navigate to the following directory in File Explorer:
+
+*C:\Program Files\Microsoft System Center\Operations Manager\Server\AgentManagement\UnixAgents\DownloadedKits*
+
+If there are omsagent files listed, move them to a temporary directory outside the System Center Operations Manager (SCOM) files.
+
+See the following screenshot for an example:
+
+:::image type="content" source="media/troubleshoot-unix-linux-agent-discovery/unix-linux-discovery-example-fix.png" alt-text="Screenshot that shows omsagent files in the DownloadedKits folder.":::
+
+After they're moved from the *DownloadedKits* folder, retry the discovery. The discovery should succeed now.
+
+> [!NOTE]
+> The discovery may fail with a different error. The error indicates that more troubleshooting is needed, such as sudoers, connectivity, and so on.
 
 ## SSH connectivity errors  
 
@@ -297,9 +392,9 @@ To fix the issue, follow these steps:
 
    > Sep 3 14:49:07 server auth|security:debug /opt/microsoft/scx/bin/omiserver PAM: pam_authenticate: error Authentication failed.
 
-   If you see similar lines in the messages log, it means that the PAM configuration file is missing information about OMIServer. The PAM configuration file can be found in the `/etc/pam.d/` directory.
+   If you see similar lines in the messages log, it means that the PAM configuration file is missing information about OMIServer. The PAM configuration file can be found in the `/etc/pam.d/` directory or the `/etc/pam.conf` file.
 
-   The easiest way to add the information about OMIServer back to the PAM configuration file is to reinstall the SCX agent from scratch on that computer. If that is not easily possible, you can copy the lines pertaining to OMI from a working computer to the non-working computer.  
+   The easiest way to add the information about OMIServer back to the PAM configuration file is to reinstall the SCX agent from scratch on that computer. If that is not easily possible, you can copy the lines pertaining to OMI from a working computer to the non-working computer.
 
 ### WSMan only discovery failed for 192.168.x.x
 

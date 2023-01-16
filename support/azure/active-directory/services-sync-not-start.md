@@ -1,10 +1,10 @@
 ---
 title: Azure Active Directory Connect services don't start
 description: Describes an issue that prevents Azure Active Directory Connect services from starting. Provides a resolution.
-ms.date: 12/22/2021
+ms.date: 5/26/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
-ms.reviewer: "riantu,nualex,reviei"
+ms.reviewer: riantu, nualex, reviei
 ms.service: active-directory
 ms.subservice: enterprise-users
 ---
@@ -17,21 +17,42 @@ _Original KB number:_ &nbsp; 2995030
 
 ## Symptoms
 
-You discover that one or more Azure AD Connect services don't start. For example, the Microsoft Azure AD Sync service (formerly known as ADSync) or the Windows Azure Active Directory Synchronization Service (formerly known as DirSync) doesn't start.
+You discover that one or more Azure AD Connect services don't start. For example, the Microsoft Azure AD Sync service (ADSync) doesn't start.
 
-## Solution 1: Set the directory synchronization account to log on as a service in Group Policy
+## Solution 1: Set User Rights Assignment permissions within Group Policy
 
-1. Select **Start**, enter *gpedit.msc* in the search box, and then press Enter to open the Local Group Policy Editor snap-in.
+Make group policy changes if necessary so that the ADSync service account can log on locally, as a service, and as a batch job. Because a domain group policy takes precedence over a local group policy, you need to check the settings for both types of group policies.
 
-2. Expand **Computer Configuration** > **Window Settings** > **Security Settings** > **Local policies**, and then select **User rights assignment**.
+1. Select **Start**, enter _gpedit.msc_ in the search box, and then press Enter to open the Local Group Policy Editor snap-in.
 
-3. Verify that the directory synchronization service account is added to the following policies:
+1. In the console tree, under **Computer Configuration**, expand **Windows Settings** > **Security Settings** > **Local Policies**, and then select **User Rights Assignment**.
 
-   - Log on as a service
-   - Log on as batch job
-   - Log on locally
+1. Verify that the ADSync service account is added for the following policy settings:
 
-4. If you made changes to the local policy, restart the computer to apply the changes.
+   - **Allow log on locally**
+   - **Log on as a batch job**
+   - **Log on as a service**
+
+1. For domain group policies, open an administrative command prompt.
+
+1. Run the following [gpresult](/windows-server/administration/windows-commands/gpresult) command, which generates a group policy report:
+
+   ```cmd
+   gpresult /H gpresult.htm
+   ```
+
+1. Open the resulting group policy report (*gpresult.htm*).
+
+1. If **User Rights Assignment** settings are applied through any domain group policy object (GPO), use the **Group Policy Management** console (*gpmc.msc*) from a domain controller to take one of the following actions:
+
+   - Remove the following policy settings from the **Winning GPO**:
+     - **Allow log on locally**
+     - **Log on as a batch job**
+     - **Log on as a service**
+
+   - Update the **Winning GPO** to include the ADSync service account.
+
+1. If you made any changes to the local group policy or domain group policy, restart the computer to apply the changes.
 
 ## Solution 2: Troubleshoot error messages in directory synchronization logging
 
@@ -43,6 +64,4 @@ If solutions 1 and 2 don't resolve the issue, remove and then reinstall director
 
 For example, if you use the Azure Active Directory Sync tool, remove and then reinstall it. Or, if you use Azure AD Sync, remove and then reinstall it.
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

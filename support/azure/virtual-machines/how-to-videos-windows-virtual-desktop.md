@@ -2,8 +2,8 @@
 title: How-to videos about Azure Virtual Desktop
 description: Watch these short videos to get up and running with Azure Virtual Desktop.
 ms.date: 11/26/2020
-ms.prod-support-area-path: 
 ms.service: virtual-machines
+ms.subservice: vm-support-statements
 ms.author: genli
 author: genlin
 ms.reviewer: 
@@ -46,3 +46,5 @@ Watch these short videos to get up and running with Azure Virtual Desktop:
 **Connectivity Issues "No Resource Available"**
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4vUnV]
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

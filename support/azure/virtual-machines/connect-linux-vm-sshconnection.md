@@ -2,9 +2,9 @@
 title: Can't connect a Linux VM using SSH connection
 description: Resolves an issue in which SSH fails because the /var/empty/sshd file is not owned by the root directory and is not group or world-writable.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: vilibert, vilibert, ramakk
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: linux
 ---
 # Can't connect a Linux VM using SSH connection
@@ -24,16 +24,16 @@ You cannot connect a Linux virtual machine (VM) by using a secure shell (SSH) co
 
 > /var/empty must be owned by root and not group or world-writable.  
 startproc: exit status of parent of /usr/sbin/sshd: 255  
-Failed 
+Failed
 
 **CentOS**  
 
 > Starting sshd: /var/empty/sshd must be owned by root and not group or world-writable.  
-[FAILED] 
+[FAILED]
 
 ## Cause
 
-This problem may occur if the /var/empty/sshd file is not owned by the root directory and is not group-writable or world-writable. 
+This problem may occur if the /var/empty/sshd file is not owned by the root directory and is not group-writable or world-writable.
 
 ## Resolution
 
@@ -63,8 +63,8 @@ Open the **Properties** window of the VM in the Azure portal to check the agent 
     chmod 755 /var/empty/sshd;chown root:root /var/empty/sshd;service sshd restart
     ```
 
-2. Go to the Azure portal, locate your VM settings, and then select **Extensions**  > **Add** > **Custom Script For Linux** > **Create**. 
-3. In **Script files**, upload the *update_perms.sh* file, and then click **OK**.
+2. Go to the Azure portal, locate your VM settings, and then select **Extensions**  > **Add** > **Custom Script For Linux** > **Create**.
+3. In **Script files**, upload the _update_perms.sh_ file, and then click **OK**.
 
     :::image type="content" source="media/connect-linux-vm-sshconnection/script-file.png" alt-text="Screenshot of uploading the update_perms.sh script." border="false":::
 
@@ -73,7 +73,7 @@ Open the **Properties** window of the VM in the Azure portal to check the agent 
     :::image type="content" source="media/connect-linux-vm-sshconnection/success-status.png" alt-text="Screenshot shows a success status of the script." border="false":::
 
 5. The **update_perms.sh** sample script changes the permissions on the /var/empty/sshd file from **777** to **755**  and sets the owner and group to **root:root**. Wait for script to run. This can take several minutes. The Linux Agent receives the request, and then it hands off to the correct extension.
-If you can connect to the VM by using the SSH connection, and you want to see what occurred while the update_params.sh script ran, examine the *extension.log* file in the `/var/log/azure/Microsoft.OSTCExtensions.CustomScriptForLinux/<version>` directory.
+If you can connect to the VM by using the SSH connection, and you want to see what occurred while the update_params.sh script ran, examine the _extension.log_ file in the `/var/log/azure/Microsoft.OSTCExtensions.CustomScriptForLinux/<version>` directory.
 
 ### Manually attach your VM disks to a temporary VM
 
@@ -101,3 +101,5 @@ vmname=yourvm;rg=yourrg;timestamp=`date +%d%Y%H%M%S`;az vm extension set –reso
 This feature lets you access the VM through a console as a physical server. This scheme allows you to modify files without using a custom script and without having to delete the VM.
 
 :::image type="content" source="media/connect-linux-vm-sshconnection/serial-console.png" alt-text="Screenshot of resetting by using Serial Console." border="false":::
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

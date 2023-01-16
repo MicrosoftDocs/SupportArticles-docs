@@ -2,7 +2,6 @@
 title: Troubleshoot 801 errors in VMM console 
 description: Describes an issue that causes a refresh of virtual machines in Virtual Machine Manager to fail and to trigger a 801 error that indicates VMM cannot find the Virtual hard disk object. Occurs because of orphaned object information in the database. A resolution is provided.
 ms.date: 04/29/2020
-ms.prod-support-area-path:
 ms.reviewer: brenth, DPM-VMM
 ---
 # 801 Missing %ObjectType and VmmAdminUI has stopped working errors in VMM
@@ -26,12 +25,11 @@ The following are common errors that are logged in the **Jobs** view in the Virt
   |Error|Description|Recommended action|
   |---|---|---|
   |801|VMM cannot find %ObjectType; object %FriendlyName;.|Make sure that the library object is valid, and then try the operation again. |
-  ||||
   
   For example:
 
   > Error (801)  
-  > VMM cannot find VM object *ObjectID*.  
+  > VMM cannot find VM object _ObjectID_.  
   > Recommended Action  
   > Ensure the library object is valid, and then try the operation again.
 
@@ -220,7 +218,7 @@ To resolve this issue, delete the orphaned objects from the database by followin
     COMMIT TRANSACTION T1
     ```
 
-    The only modification that you have to make in this script is in the fourth line, where you'll change *VMNAME* to the name of the VM you want to remove, still using single quotation marks. Then, you can run the script, and it will return a series of rows that are affected as follows.
+    The only modification that you have to make in this script is in the fourth line, where you'll change _VMNAME_ to the name of the VM you want to remove, still using single quotation marks. Then, you can run the script, and it will return a series of rows that are affected as follows.
 
     :::image type="content" source="media/fix-scvmm-801-errors/change-vmname.png" alt-text="Change the name of V M in Object Explorer.":::
 

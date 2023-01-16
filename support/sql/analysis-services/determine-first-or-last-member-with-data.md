@@ -2,7 +2,7 @@
 title: Determine the first or last member with data
 description: This article describes how to determine the first or last member with data.
 ms.date: 09/21/2020
-ms.prod-support-area-path: Analysis Services
+ms.custom: sap:Analysis Services
 ms.topic: how-to
 ms.prod: sql
 ---

@@ -8,7 +8,7 @@ brand: sql-server
 
 
 metadata:
-   title: Microsoft troubleshooting documentation | Microsoft Docs
+   title: Microsoft troubleshooting documentation | Microsoft Learn
    description: Find the documentation you need to troubleshoot issues and apply workarounds for the following commercial products from Microsoft.
    ms.topic: hub-page  
    ms.service: troubleshoot
@@ -22,14 +22,14 @@ metadata:
 productDirectory:
   items:
   - title: Windows
-    imageSrc: "media/hub-landing/windows.svg"
+    imageSrc: "media/hub-landing/windows-logo.png"
     summary: Troubleshooting articles for Windows
     url: windows/index.yml
 
   - title: Microsoft Edge and Internet Explorer
     imageSrc: "media/hub-landing/Edge.jpg"
     summary: Troubleshooting articles for Microsoft Edge and Internet Explorer
-    url: browsers/welcome-browsers.md
+    url: developer/browsers/welcome-browsers.md
       
   - title: BizTalk Server
     imageSrc: "media/hub-landing/biztalk.svg"
@@ -39,12 +39,12 @@ productDirectory:
   - title: .NET
     imageSrc: "media/hub-landing/logo_NET.svg"
     summary: Troubleshooting articles for .NET
-    url: dotnet/welcome-dotnet.md
+    url: developer/dotnet/welcome-dotnet-landing.yml
       
   - title: Visual Studio
     imageSrc: "media/hub-landing/logo_vs-ide.svg"
     summary: Troubleshooting articles for Visual Studio
-    url: visualstudio/welcome-visual-studio.md
+    url: developer/visualstudio/welcome-visual-studio.yml
       
   - title: Host Integration Server
     imageSrc: "media/hub-landing/his.jpeg"
@@ -54,16 +54,16 @@ productDirectory:
   - title: Web Apps
     imageSrc: "media/hub-landing/app-service-web.svg"
     summary: Troubleshooting articles for Web Apps
-    url: webapps/welcome-webapps.md
+    url: developer/webapps/welcome-webapps.md
 
   - title: SQL Server 
     imageSrc: "media/hub-landing/sql-database-blue.svg"
     summary: Troubleshooting articles for SQL Server
     url: sql/welcome-sql-server.md
 
-  - title: Microsoft Endpoint Manager
-    imageSrc: "media/hub-landing/microsoft-logo.svg"
-    summary: Troubleshooting articles for Microsoft Endpoint Manager
+  - title: Endpoint management
+    imageSrc: "media/hub-landing/microsoft.png"
+    summary: Troubleshooting articles for Endpoint management
     url: mem/index.yml
 
   - title: System Center
@@ -76,13 +76,13 @@ productDirectory:
     summary: Troubleshooting articles for Azure 
     url: azure/index.yml
       
-  - title: Office
-    imageSrc: "https://docs.microsoft.com/media/logos/logo_office.svg"
-    summary: Troubleshooting articles for Office
+  - title: Microsoft 365
+    imageSrc: "media/hub-landing/microsoft-365-logo.png"
+    summary: Troubleshooting articles for Microsoft 365
     url: /office/troubleshoot
 
   - title: Microsoft Dynamics
-    imageSrc: "media/hub-landing/microsoft-logo.svg"
+    imageSrc: "media/hub-landing/microsoft.png"
     summary: Troubleshooting articles for Microsoft Dynamics
     url: dynamics/index.yml
 
@@ -92,14 +92,14 @@ productDirectory:
     url: dynamics-365/index.yml
       
   - title: Microsoft Power Platform
-    imageSrc: "media/hub-landing/microsoft-logo.svg"
+    imageSrc: "media/hub-landing/microsoft.png"
     summary: Troubleshooting articles for Microsoft Power Platform
     url: power-platform/index.yml
 
   - title: Previous Versions
-    imageSrc: "media/hub-landing/microsoft-logo.svg"
+    imageSrc: "media/hub-landing/microsoft.png"
     summary: Troubleshooting articles for previous versions of products
-    url: https://docs.microsoft.com/previous-versions/troubleshoot/
+    url: /previous-versions/troubleshoot/
 
 # conceptualContent:
 

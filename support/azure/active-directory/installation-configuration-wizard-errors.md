@@ -1,8 +1,7 @@
 ---
 title: How to troubleshoot Azure Active Directory Sync tool installation and Configuration Wizard errors
 description: Describes how to troubleshoot Azure Active Directory Sync tool installation and Directory Sync tool Configuration Wizard error messages.
-ms.date: 05/11/2020
-ms.prod-support-area-path: 
+ms.date: 05/09/2022
 ms.reviewer: jhayes, willfid
 ms.service: active-directory
 ms.subservice: enterprise-users
@@ -57,7 +56,15 @@ When you run the Directory Sync tool Configuration Wizard, you must provide the 
     If the settings are correct, the output resembles the following example:
 
     ```output
-    DC: \DC.contoso.com Address:\ <IP Address> Dom Guid: <GUID> Dom Name: contoso.com Forest Name: contoso.com Dc Site Name: Default-First-Site-Name Our Site Name: Default-First-Site-Name Flags: PDC GC DS LDAP KDC TIMESERV GTIMESERV WRITABLE DNS_DC DNS_DOMAIN DNS_FOREST CLOSE_SITE The command completed successfully
+    DC: \DC.contoso.com 
+    Address:\ <IP Address> 
+    Dom Guid: <GUID> 
+    Dom Name: contoso.com 
+    Forest Name: contoso.com 
+    DC Site Name: Default-First-Site-Name 
+    Our Site Name: Default-First-Site-Name 
+    Flags: PDC GC DS LDAP KDC TIMESERV GTIMESERV WRITABLE DNS_DC DNS_DOMAIN DNS_FOREST CLOSE_SITE 
+    The command completed successfully
     ```
 
 - To check the computer's site membership, run the following command at the command prompt:
@@ -69,7 +76,8 @@ When you run the Directory Sync tool Configuration Wizard, you must provide the 
     A successful result resembles the following example:
 
     ```output
-    Default-First-Site-Name The command completed successfully
+    Default-First-Site-Name 
+    The command completed successfully
     ```
 
 ## Error 1: The computer must be joined to a domain
@@ -78,7 +86,7 @@ To troubleshoot this issue, check the domain membership of the computer by follo
 
 1. Log on to the computer.
 2. Right-click **My Computer**, and then select **Properties**.
-3. Select the **Computer Name** tab. If the computer is a domain member, the **Full Computer Name** resembles *ComputerName.Domain.xxx*. The domain name appears next to **Domain**.
+3. Select the **Computer Name** tab. If the computer is a domain member, the **Full Computer Name** resembles _ComputerName.Domain.xxx_. The domain name appears next to **Domain**.
 
 If the computer is a domain member, and you still receive the error message, verify that:
 
@@ -107,7 +115,7 @@ Sometimes, joining the computer to a workgroup, and then joining the computer ba
 In this case, the Directory Sync tool may not be installed because of a previous pending installation. The Setup package also installs software in the background during installation. To resolve this issue, follow these steps:
 
 1. In Control Panel, check whether Microsoft Identity Integration Server is listed in **Add or Remove Programs** or in **Programs and Features**. If it's present, you must remove it.
-2. Verify that the Program Files folder contains a subfolder that's named *Microsoft Identity Integration Server*. If the subfolder exists, you must rename the folder to *Microsoft Identity Integration Server_Old*.
+2. Verify that the Program Files folder contains a subfolder that's named _Microsoft Identity Integration Server_. If the subfolder exists, you must rename the folder to _Microsoft Identity Integration Server_Old_.
 3. Run Setup again.
 
 ## Troubleshoot other error messages
@@ -155,8 +163,5 @@ All directory synchronization logging is viewable in Event Viewer. To view all e
 |InternetQueryOptionError|Internet Explorer proxy settings were not read. Initial configuration using setup wizard may not be able to access online help. WinInet Error {0}|Event Viewer|The installation wizard couldn't read or change proxy settings in Internet Explorer. Verify that the proxy settings that are set in Internet Explorer are formatted correctly.|
 |InternetSetOptionError|Internet Explorer proxy settings were not set. Initial configuration using setup wizard may not be able to access online help. WinInet Error {0}|Event Viewer|The installation wizard couldn't read or change proxy settings in Internet Explorer. Verify that the proxy settings that are set in Internet Explorer are formatted correctly.|
 |RichCoexistenceNotAllowed|Current local directory does not have Exchange 2010 installed. Rich coexistence is not allowed.|Event Viewer|Install all the prerequisites for a hybrid deployment before you try to install the Directory Sync tool.|
-|||||
-
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/home) website.
+  
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

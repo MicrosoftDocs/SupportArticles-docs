@@ -1,13 +1,13 @@
 ﻿---
-title: Azure VM Guest OS firewall is blocking inbound traffic | Microsoft Docs
+title: Azure VM Guest OS firewall is blocking inbound traffic
 description: Learn how to fix the Remote Desktop Portal (RDP) connection issue that the guest operating system firewall is blocking inbound traffic.
 services: virtual-machines
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 tags: ''
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
@@ -50,17 +50,17 @@ Connect to the [Serial Console, and then open a PowerShell instance](serial-con
 
 #### Mitigation 1
 
-1.	If Azure Agent is installed and working correctly on the VM, you can use the "Reset configuration only" option under **Help** > **Reset password** on the VM menu.
+1. If Azure Agent is installed and working correctly on the VM, you can use the "Reset configuration only" option under **Help** > **Reset password** on the VM menu.
 
-2.	Running this recovery option does the following:
+2. Running this recovery option does the following:
 
-    *   Enables an RDP component if it’s disabled.
+    * Enables an RDP component if it’s disabled.
 
-    *   Enables all Windows firewall profiles.
+    * Enables all Windows firewall profiles.
 
-    *   Make sure that the RDP rule is turned on in Windows Firewall.
+    * Make sure that the RDP rule is turned on in Windows Firewall.
 
-    *   If the previous steps don’t work, manually reset the firewall rule. To do this, query all the rules that contain the name "Remote Desktop" by running the following command:
+    * If the previous steps don’t work, manually reset the firewall rule. To do this, query all the rules that contain the name "Remote Desktop" by running the following command:
 
         ```cmd
         netsh advfirewall firewall show rule dir=in name=all | select-string -pattern "(Name.*Remote Desktop)" -context 9,4 | more
@@ -72,7 +72,7 @@ Connect to the [Serial Console, and then open a PowerShell instance](serial-con
         netsh advfirewall firewall show rule dir=in name=all | select-string -pattern "(LocalPort.*<CUSTOM PORT>)" -context 9,4 | more
         ```
 
-3.	If you see that the rule is disabled, enable it. To open a whole group, such as the built-in Remote Desktop group, run the following command:
+3. If you see that the rule is disabled, enable it. To open a whole group, such as the built-in Remote Desktop group, run the following command:
 
     ```cmd
     netsh advfirewall firewall set rule group="Remote Desktop" new enable=yes
@@ -84,7 +84,7 @@ Connect to the [Serial Console, and then open a PowerShell instance](serial-con
     netsh advfirewall firewall set rule name="<CUSTOM RULE NAME>" new enable=yes
     ```
 
-4.	For troubleshooting, you can turn the firewall profiles to OFF:
+4. For troubleshooting, you can turn the firewall profiles to OFF:
 
     ```cmd
     netsh advfirewall set allprofiles state off
@@ -95,11 +95,11 @@ Connect to the [Serial Console, and then open a PowerShell instance](serial-con
     > [!Note]
     > You don't have to restart the VM to apply these changes.
 
-5.	Try to make an RDP connection to access the VM.
+5. Try to make an RDP connection to access the VM.
 
 #### Mitigation 2
 
-1.	Query the firewall profiles to determine whether the inbound firewall policy is set to *BlockInboundAlways*:
+1. Query the firewall profiles to determine whether the inbound firewall policy is set to *BlockInboundAlways*:
 
     ```cmd
     netsh advfirewall show allprofiles | more
@@ -109,16 +109,17 @@ Connect to the [Serial Console, and then open a PowerShell instance](serial-con
 
     > [!Note]
     > The following guidelines apply to the firewall policy, depending on how it’s set up:
+    >
     >    * *BlockInbound*: All inbound traffic will be blocked unless you have a rule in effect to allow that traffic.
     >    * *BlockInboundAlways*: All firewall rules will be ignored and all traffic will be blocked.
 
-2.	Set the *DefaultInboundAction* to not always blocked traffic. To do this, run the following command:
+2. Set the *DefaultInboundAction* to not always blocked traffic. To do this, run the following command:
 
     ```cmd
     netsh advfirewall set allprofiles firewallpolicy blockinbound,allowoutbound
     ```
 
-3.	Query the profiles again to make sure that your change was made successfully. To do this, run the following command:
+3. Query the profiles again to make sure that your change was made successfully. To do this, run the following command:
 
     ```cmd
     netsh advfirewall show allprofiles | more
@@ -132,11 +133,11 @@ Connect to the [Serial Console, and then open a PowerShell instance](serial-con
 
 ### Offline Mitigations
 
-1.	[Attach the system disk to a recovery VM](troubleshoot-recovery-disks-portal-windows.md).
+1. [Attach the system disk to a recovery VM](troubleshoot-recovery-disks-portal-windows.md).
 
-2.	Start a Remote Desktop connection to the recovery VM.
+2. Start a Remote Desktop connection to the recovery VM.
 
-3.	Make sure that the disk is flagged as **Online** in the Disk Management console. Note the drive letter that is assigned to the attached system disk.
+3. Make sure that the disk is flagged as **Online** in the Disk Management console. Note the drive letter that is assigned to the attached system disk.
 
 #### Mitigation 1
 
@@ -144,13 +145,13 @@ See [How to Enable-Disable a Firewall rule on a Guest OS](enable-disable-firewa
 
 #### Mitigation 2
 
-1.	[Attach the system disk to a recovery VM](troubleshoot-recovery-disks-portal-windows.md).
+1. [Attach the system disk to a recovery VM](troubleshoot-recovery-disks-portal-windows.md).
 
-2.	Start a Remote Desktop connection to the recovery VM.
+2. Start a Remote Desktop connection to the recovery VM.
 
-3.	After the system disk is attached to the recovery VM, make sure that the disk is flagged as **Online** in the Disk Management console. Note the drive letter that is assigned to the attached OS disk.
+3. After the system disk is attached to the recovery VM, make sure that the disk is flagged as **Online** in the Disk Management console. Note the drive letter that is assigned to the attached OS disk.
 
-4.	Open an elevated CMD instance, and then run the following script:
+4. Open an elevated CMD instance, and then run the following script:
 
     ```cmd
     REM Backup the registry prior doing any change
@@ -171,6 +172,8 @@ See [How to Enable-Disable a Firewall rule on a Guest OS](enable-disable-firewa
     reg unload HKLM\BROKENSYSTEM
     ```
 
-5.	[Detach the system disk and re-create the VM](troubleshoot-recovery-disks-portal-windows.md).
+5. [Detach the system disk and re-create the VM](troubleshoot-recovery-disks-portal-windows.md).
 
-6.	Check whether the issue is resolved.
+6. Check whether the issue is resolved.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

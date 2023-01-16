@@ -8,6 +8,7 @@ manager: dcscontentpm
 editor: v-jesits
 tags: azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-performance
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
@@ -16,7 +17,7 @@ ms.date: 9/24/2020
 ms.author: mnanda
 ---
 
-# Troubleshoot high-CPU issues for Azure virtual machines
+# Troubleshoot high-CPU issues on Azure Windows virtual machines
 
 ## Summary
 
@@ -317,3 +318,5 @@ For any performance issue, understanding your workload is key to solving the pro
 Because the user operations and amount of data varies, always keep a buffer in the computing, networking, and I/O capabilities of the VM. Now, any sudden change in workload doesn't have as great an effect.
 
 If you foresee the workload increasing soon, move to a higher SKU that has more computing power. If the workload will be compute-intensive, choose the VM SKUs wisely.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -1,7 +1,7 @@
 ---
 title: Differences between flow approval actions
 description: Explanation of the differences between the flow approval actions in Power Automate.
-ms.reviewer: 
+ms.reviewer: sranjan, hamenon
 ms.date: 3/31/2021
 ms.subservice: power-automate-flows
 ---
@@ -23,8 +23,7 @@ The primary difference s between using Start and Wait for an Approval and Create
 | Basic email notifications (including actionable email) and push notifications to the Flow Mobile app | Yes | Yes |
 | Responses/comments available as outputs | Yes | No, use Wait for an Approval to use these in the Flow. |
 | Step outputs an adaptive card that can be posted to Microsoft Teams | No, the approval is already complete after this step completes. | Yes |
-||||
-
+  
 If you:
 
 Want to store extra data in SQL, CDS, and so on, that contains approver information at the time of the request?
@@ -33,4 +32,4 @@ Want to store extra data in SQL, CDS, and so on, that contains approver informat
 
 Want to send adaptive cards to users in Microsoft Teams for them to approve directly within the Teams client?
 
-- Use Create an Approval, an in an *Apply To Each* over the approvers, use the Teams connector Flow bot action to post the adaptive card output from Create An Approval to each user, and then Wait for an approval.
+- Use Create an Approval, an in an _Apply To Each_ over the approvers, use the Teams connector Flow bot action to post the adaptive card output from Create An Approval to each user, and then Wait for an approval.

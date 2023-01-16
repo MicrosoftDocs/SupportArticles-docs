@@ -2,7 +2,7 @@
 title: Change in scripting function boolean parameter behavior
 description: This article provides a resolution for the problem where the behavior of boolean param within a scripting function has changed.
 ms.date: 09/27/2020
-ms.prod-support-area-path: Development and Deployment
+ms.custom: sap:Development and Deployment
 ms.reviewer: shaheera
 ---
 # Change in scripting function boolean parameter behavior

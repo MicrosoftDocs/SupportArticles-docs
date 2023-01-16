@@ -5,15 +5,15 @@ services: virtual-machines
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 tags: virtual-machines
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.devlang: azurecli
-ms.date: 09/10/2019
+ms.date: 07/29/2022
 ms.author: genli
 ---
 
@@ -53,3 +53,5 @@ If your VM doesn’t have an agent running, you can follow the steps in [Reset l
     **Note** This will ask for the password. Type the new password to set up the account.
 
 1. After you change the password, the issue should be resolved and you can use the account to log in into the VM. There is no need to restart the VM.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

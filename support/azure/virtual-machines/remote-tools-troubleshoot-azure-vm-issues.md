@@ -1,11 +1,10 @@
 ---
-title: Use remote tools to troubleshoot Azure VM issues | Microsoft Docs
+title: Use remote tools to troubleshoot Azure VM issues
 description: Learn about PsExec, PowerShell scripts, and other remote tools you can use to troubleshoot remote Azure VM issues without using RDP.
 services: virtual-machines
 documentationcenter: ''
 author: Deland-Han
 manager: dcscontentpm
-editor: ''
 tags: ''
 ms.collection: windows
 ms.topic: troubleshooting
@@ -15,6 +14,7 @@ ms.devlang: azurecli
 ms.date: 01/11/2018
 ms.author: delhan
 ms.service: virtual-machines
+ms.subservice: vm-troubleshooting-tools
 ---
 
 # Use remote tools to troubleshoot Azure VM issues
@@ -34,6 +34,7 @@ psexec \\<computer>-u user -s cmd
 ```
 
 >[!NOTE]
+>
 >* The command must be run on a computer that's in the same virtual network.
 >* DIP or HostName can be used to replace \<computer>.
 >* The -s parameter makes sure that the command is invoked by using System Account (administrator permission).
@@ -50,7 +51,7 @@ You can use the Custom Script Extension feature to run a custom script on the ta
 * The VM has connectivity.
 * Azure Virtual Machine Agent is installed and is working as expected on the VM.
 * The extension wasn't previously installed on the VM.
- 
+
   The extension injects the script only the first time that it's used. If you use this feature later, the extension recognizes that it was already used and doesn't upload the new script.
 
 Upload your script to a storage account, and generate its own container. Then, run the following script in Azure PowerShell on a computer that has connectivity to the VM.
@@ -58,7 +59,6 @@ Upload your script to a storage account, and generate its own container. Then, r
 ### For classic deployment model VMs
 
 [!INCLUDE [classic-vm-deprecation](../../includes/classic-vm-deprecation.md)]
-
 
 ```powershell
 #Set up the basic variables.
@@ -87,8 +87,6 @@ Set-AzureVMCustomScriptExtension "CustomScriptExtension" -VM $vm -StorageAccount
 ```
 
 ### For Azure Resource Manager VMs
-
- 
 
 ```powershell
 #Set up the basic variables.
@@ -121,7 +119,7 @@ Set-AzVMCustomScriptExtension -Name "CustomScriptExtension" -ResourceGroupName $
 >[!NOTE]
 >TCP Port 5986 (HTTPS) must be open so that you can use this option.
 >
->For Azure Resource Manager VMs, you must open port 5986 on the network security group (NSG). For more information, see Security groups. 
+>For Azure Resource Manager VMs, you must open port 5986 on the network security group (NSG). For more information, see Security groups.
 >
 >For RDFE VMs, you must have an endpoint that has a private port (5986) and a public port. Then, you also have to open that public-facing port on the NSG.
 
@@ -190,7 +188,7 @@ Run the following command based on the client computer location:
   Enter-PSSession -ComputerName  "<<HOSTNAME>>" -port 5986 -Credential (Get-Credential) -useSSL -SessionOption $Skip
   ```
 
->[!NOTE] 
+>[!NOTE]
 >Setting the SkipCaCheck flag bypasses the requirement to import a certificate to the VM when you start the session.
 
 You can also use the Invoke-Command cmdlet to run a script on the VM remotely.
@@ -204,7 +202,7 @@ Invoke-Command -ComputerName "<<COMPUTERNAME>" -ScriptBlock {"<<SCRIPT BLOCK>>"}
 >[!NOTE]
 >TCP port 135 or 445 must be open in order to use this option.
 >
->For Azure Resource Manager VMs, you have to open port 5986 on the NSG. For more information, see Security groups. 
+>For Azure Resource Manager VMs, you have to open port 5986 on the NSG. For more information, see Security groups.
 >
 >For RDFE VMs, you must have an endpoint that has a private port 5986 and a public port. You also have to open that public-facing port on the NSG.
 
@@ -212,12 +210,12 @@ Invoke-Command -ComputerName "<<COMPUTERNAME>" -ScriptBlock {"<<SCRIPT BLOCK>>"}
 
 2. Select **File** > **Connect Network Registry**.
 
-   :::image type="content" source="media/remote-tools-troubleshoot-azure-vm-issues/remote-registry.png" alt-text="Screenshot of the Connect Network Registry... option in the  File menu of Registry Editor"::: 
+   :::image type="content" source="media/remote-tools-troubleshoot-azure-vm-issues/remote-registry.png" alt-text="Screenshot of the Connect Network Registry... option in the  File menu of Registry Editor":::
 
 3. Locate the target VM by **host name** or **dynamic IP** (preferable) by entering it in the **Enter the object name to select** box.
 
-   :::image type="content" source="media/remote-tools-troubleshoot-azure-vm-issues/input-computer-name.png" alt-text="Screenshot of the Enter the object name to select box in the Select Computer dialog."::: 
- 
+   :::image type="content" source="media/remote-tools-troubleshoot-azure-vm-issues/input-computer-name.png" alt-text="Screenshot of the Enter the object name to select box in the Select Computer dialog.":::
+
 4. Enter the credentials for the target VM.
 
 5. Make any necessary registry changes.
@@ -227,7 +225,7 @@ Invoke-Command -ComputerName "<<COMPUTERNAME>" -ScriptBlock {"<<SCRIPT BLOCK>>"}
 >[!NOTE]
 >TCP ports 135 or 445 must be open in order to use this option.
 >
->For Azure Resource Manager VMs, you have to open port 5986 on the NSG. For more information, see Security groups. 
+>For Azure Resource Manager VMs, you have to open port 5986 on the NSG. For more information, see Security groups.
 >
 >For RDFE VMs, you must have an endpoint that has a private port 5986 and a public port. You also have to open that public-facing port on the NSG.
 
@@ -247,7 +245,9 @@ Invoke-Command -ComputerName "<<COMPUTERNAME>" -ScriptBlock {"<<SCRIPT BLOCK>>"}
 
 ## Next steps
 
-- For more information about the Enter-PSSession cmdlet, see [Enter-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession).
-- For more information about the Custom Script Extension for Windows using the classic deployment model, see [Custom Script Extension for Windows](/azure/virtual-machines/extensions/custom-script-windows).
-- PsExec is part of the [PSTools Suite](https://download.sysinternals.com/files/PSTools.zip).
-- For more information about the PSTools Suite, see [PSTools](/sysinternals/downloads/pstools).
+* For more information about the Enter-PSSession cmdlet, see [Enter-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession).
+* For more information about the Custom Script Extension for Windows using the classic deployment model, see [Custom Script Extension for Windows](/azure/virtual-machines/extensions/custom-script-windows).
+* PsExec is part of the [PSTools Suite](https://download.sysinternals.com/files/PSTools.zip).
+* For more information about the PSTools Suite, see [PSTools](/sysinternals/downloads/pstools).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

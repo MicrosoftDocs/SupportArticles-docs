@@ -8,6 +8,9 @@ ms.subservice: d365-sales-email-office-integration
 ---
 # Troubleshooting Server-Side Synchronization with Gmail
 
+> [!IMPORTANT]
+> As documented [here](https://support.google.com/accounts/answer/6010255), starting May 30th of 2022, Gmail is ending support for apps that are configured to only use your username and password. To use server-side synchronization with Gmail, follow the steps in [Connect Gmail accounts by using OAuth 2.0](/power-platform/admin/connect-gmail-oauth2).
+
 This article helps you resolve the problem that occurs when a Dynamics 365 mailbox is configured to use Server-Side Synchronization with Gmail.
 
 _Applies to:_ &nbsp; Microsoft Dynamics 365 Customer Engagement Online  

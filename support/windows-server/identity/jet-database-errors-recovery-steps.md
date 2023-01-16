@@ -242,7 +242,6 @@ You can use these methods to troubleshoot Jet database errors:
     | Administrators| Full Control| This folder, subfolders and files |
     | Creator Owner| Full Control| Subfolders and Files only |
     | Local Service| Create Folders / Append Data| This folder and subfolders |
-    ||||
 
     - The root of the volume that is hosting the NTDS.DIT and NTDS log files (system requires fully control)
     - The %windir% folder (i.e., c:\\windows or c:\\winnnt) (system requires fully control)
@@ -269,7 +268,6 @@ You can use these methods to troubleshoot Jet database errors:
     | 1. Physical consistency| no equivalent| `ESENTUTL /K` |
     | 2. ESE logical consistency| NTDSUTIL FILES INTEGRITY| `ESENTUTL /G` |
     | 3. Application logical consistency <br/>| NTDSUTIL ->Semantic database analysis<br/><br/>+<br/><br/>NTDSUTIL -> Offline Defrag| No equivalent. Run NTDSUTIL -> SDA<br/><br/>+<br/><br/>`ESENTUTL / D` |
-    ||||
 
 14. Look up the user action for the first failing Jet error encountered during step 13. Perform remediation if possible.
 15. Repair the Jet database:

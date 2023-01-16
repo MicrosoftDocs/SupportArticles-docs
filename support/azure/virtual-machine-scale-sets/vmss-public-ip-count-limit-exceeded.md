@@ -2,7 +2,6 @@
 title: PublicIPCountLimitExceededByVMScaleSet error when you create virtual machine scale set
 description: Describes how to file a support ticket for a Public IP quota increase.
 ms.date: 09/03/2021
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machine-scale-sets
 ---
@@ -13,7 +12,6 @@ ms.service: virtual-machine-scale-sets
 When you create a virtual machine scale set, you receive the following error message:
 
 >Error: Code='PublicIPCountLimitExceededByVMScaleSet' Message='The requested number of publicIPAddresses &lt;number&gt; for VM Scale Set &lt;Resource-ID&gt; will exceed the maximum number of publicIPAddresses allowed &lt;maximum number&gt; for subscription.
-
 
 ## Cause
 
@@ -26,3 +24,5 @@ To raise the limit or quota for your subscription, go to the [Azure portal]( htt
 :::image type="content" source="./media/vmss-public-ip-count-limit-exceeded/increase-public-ip.png" alt-text="The image about filing a support ticket":::
 
 For more information, see [How to file a support ticket for a quota increase](/azure/azure-resource-manager/templates/error-resource-quota#solution).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

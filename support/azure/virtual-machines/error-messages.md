@@ -1,14 +1,13 @@
 ---
-title: Common VM error codes in Azure | Microsoft Docs
+title: Common VM error codes in Azure
 description: Understand some of the common error codes encountered when you provision and manage virtual machines in Azure
 services: virtual-machines
 documentationcenter: ''
 author: xujing-ms
 manager: dcscontentpm 
-editor: ''
 tags: azure-resource-manager
-
 ms.service: virtual-machines
+ms.subservice: vm-common-errors-issues
 ms.topic: troubleshooting
 ms.workload: infrastructure
 ms.date: 5/22/2017
@@ -22,7 +21,8 @@ This article describes some of the most common error codes and messages you may 
 >[!NOTE]
 > You can leave comments on this page for feedback or through [Azure feedback](https://feedback.azure.com/forums/216843-virtual-machines) with #azerrormessage tag.
 
-## Error Response Format 
+## Error Response Format
+
 Azure VMs use the following JSON format for error response:
 
 ```json
@@ -42,7 +42,6 @@ Azure VMs use the following JSON format for error response:
 ```
 
 An error response always includes a status code and an error object. Each error object always contains an error code and a message. If the VM is created with a template, the error object also contains a details section that contains an inner level of error codes and message. Normally, the most inner level of error message is the root failure.
-
 
 ## Common virtual machine management errors
 
@@ -114,9 +113,9 @@ This section lists the common error messages you may encounter when managing VMs
 |  InvalidParameter  |  {0}' is not a valid captured VHD blob name prefix. A valid prefix matches regex '{1}'.  |
 |  InvalidParameter  |  Certificates cannot be added to your VM if the VM agent is not provisioned.  |
 |  InvalidParameter  |  A disk at LUN {0} already exists.  |
-|  InvalidParameter  |  Unable to create the VM because the requested size {0} is not available in the cluster where the availability set is currently allocated. The available sizes are: {1}. Read more on VM resizing strategy at https://aka.ms/azure-resizevm.  |
-|  InvalidParameter  |  The requested VM size {0} is not available in the current region. The sizes available in the current region are: {1}. Find out more on the available VM sizes in each region at https://aka.ms/azure-regions.  |
-|  InvalidParameter  |  The requested VM size {0} is not available in the current region. Find out more on the available VM sizes in each region at https://aka.ms/azure-regions.  |
+|  InvalidParameter  |  Unable to create the VM because the requested size {0} is not available in the cluster where the availability set is currently allocated. The available sizes are: {1}. Read more on VM resizing strategy at <https://aka.ms/azure-resizevm>.  |
+|  InvalidParameter  |  The requested VM size {0} is not available in the current region. The sizes available in the current region are: {1}. Find out more on the available VM sizes in each region at <https://aka.ms/azure-regions>.  |
+|  InvalidParameter  |  The requested VM size {0} is not available in the current region. Find out more on the available VM sizes in each region at <https://aka.ms/azure-regions>.  |
 |  InvalidParameter  |  Windows admin user name cannot be more than {0} characters long, end with a period(.), or contain the following characters: {1}.  |
 |  InvalidParameter  |  Windows computer name cannot be more than {0} characters long, be entirely numeric, or contain the following characters: {1}.  |
 |  MissingMoveDependentResources  |  The move resources request does not contain all the dependent resources. Please check error details for missing resource ids.  |
@@ -136,7 +135,7 @@ This section lists the common error messages you may encounter when managing VMs
 |  OperationNotAllowed  |  Cannot modify extensions in the VM when the VM is not running.  |
 |  OperationNotAllowed  |  The Capture action is only supported on a Virtual Machine with blob based disks. Please use the 'Image' resource APIs to create an Image from a managed Virtual Machine.  |
 |  OperationNotAllowed  |  The resource {0} cannot be created from Image {1} until Image has been successfully created.  |
-|  OperationNotAllowed  |  Updates to encryptionSettings is not allowed when VM is allocated, Please retry after VM is deallocated  |
+|  OperationNotAllowed  |  Updates to encryptionSettings is not allowed when VM is allocated. Please retry after VM is deallocated  |
 |  OperationNotAllowed  |  Addition of a managed disk to a VM with blob based disks is not supported.  |
 |  OperationNotAllowed  |  The maximum number of data disks allowed to be attached to a VM of this size is {0}.  |
 |  OperationNotAllowed  |  Addition of a blob based disk to VM with managed disks is not supported.  |
@@ -167,13 +166,13 @@ This section lists the common error messages you may encounter when managing VMs
 |  OperationNotAllowed  |  Unable to resize the VM because the requested size {0} is not available in the cluster where the availability set is currently allocated. The available sizes are: {1}. Read more on VM resizing strategy at [Troubleshoot allocation failures](./allocation-failure.md).  |
 |  OperationNotAllowed  |  Unable to resize the VM because the requested size {0} is not available in the cluster where the VM is currently allocated. To resize your VM to {1} please deallocate (this is Stop operation in the Azure portal) and try the resize operation again. Read more on VM resizing strategy at [Troubleshoot allocation failures](./allocation-failure.md).  |
 |  OSProvisioningClientError  |  OS Provisioning failed for VM '{0}' because the guest OS is currently being provisioned.  |
-|  OSProvisioningClientError  |  OS provisioning for VM '{0}' failed. Error details: {1} Make sure the image has been properly prepared (generalized). <ul><li>Instructions for Windows: https://azure.microsoft.com/documentation/articles/virtual-machines-windows-upload-image/  </li></ul> |
+|  OSProvisioningClientError  |  OS provisioning for VM '{0}' failed. Error details: {1} Make sure the image has been properly prepared (generalized). <ul><li>Instructions for [Windows](/azure/virtual-machines/windows/upload-generalized-managed).</li></ul> |
 |  OSProvisioningClientError  |  SSH host key generation failed. Error details: {0}. To resolve this issue verify if Linux agent is set up properly. <ul><li>You can check the instructions at : [Understanding and using the Azure Linux Agent](/azure/virtual-machines/extensions/agent-linux/) </li></ul> |
 |  OSProvisioningClientError  |  Username specified for the VM is invalid for this Linux distribution. Error details: {0}.  |
 |  OSProvisioningInternalError  |  OS Provisioning failed for VM '{0}' due to an internal error.  |
 |  OSProvisioningTimedOut  |  OS Provisioning for VM '{0}' did not finish in the allotted time. The VM may still finish provisioning successfully. Please check provisioning state later.  |
-|  OSProvisioningTimedOut  |  OS Provisioning for VM '{0}' did not finish in the allotted time. The VM may still finish provisioning successfully. Please check provisioning state later. Also, make sure the image has been properly prepared (generalized).   <ul><li>Instructions for [Windows](/azure/virtual-machines/windows/upload-generalized-managed).</li><li> Instructions for [Linux](/azure/virtual-machines/linux/capture-image)</li></ul>  |
-|  OSProvisioningTimedOut  |  OS Provisioning for VM '{0}' did not finish in the allotted time. However, the VM guest agent was detected running. This suggests the guest OS has not been properly prepared to be used as a VM image (with CreateOption=FromImage). To resolve this issue, either use the VHD as is with CreateOption=Attach or prepare it properly for use as an image:   <ul><li>Instructions for Windows: https://azure.microsoft.com/documentation/articles/virtual-machines-windows-upload-image/ </li><li> Instructions for Linux: https://azure.microsoft.com/documentation/articles/virtual-machines-linux-capture-image/</li></ul>  |
+|  OSProvisioningTimedOut  |  OS Provisioning for VM '{0}' did not finish in the allotted time. The VM may still finish provisioning successfully. Please check provisioning state later. Also, make sure the image has been properly prepared (generalized).   <ul><li>Instructions for [Windows](/azure/virtual-machines/windows/upload-generalized-managed)</li><li> Instructions for [Linux](/azure/virtual-machines/linux/capture-image)</li></ul>  |
+|  OSProvisioningTimedOut  |  OS Provisioning for VM '{0}' did not finish in the allotted time. However, the VM guest agent was detected running. This suggests the guest OS has not been properly prepared to be used as a VM image (with CreateOption=FromImage). To resolve this issue, either use the VHD as is with CreateOption=Attach or prepare it properly for use as an image:   <ul><li>Instructions for [Windows](/azure/virtual-machines/windows/upload-generalized-managed) </li><li> Instructions for [Linux](/azure/virtual-machines/linux/capture-image)</li></ul>  |
 |  OverConstrainedAllocationRequest  |  The required VM size is not currently available in the selected location.  |
 |  ResourceUpdateBlockedOnPlatformUpdate  |  Resource cannot be updated at this time due to ongoing platform update. Please try again later.  |
 |  StorageAccountLimitation  |  Storage account '{0}' does not support page blobs which are required to create disks.  |
@@ -210,6 +209,4 @@ This section lists the common error messages you may encounter when managing VMs
 |  VMRedeploymentTimedOut  |  Redeployment of VM '{0}' didn't finish in the allotted time. It might finish successfully in sometime. Else, you can retry the request.  |
 |  VMStartTimedOut  |  VM '{0}' did not start in the allotted time. The VM may still start successfully. Please check the power state later.  |
 
-
-## Next steps
-If you need more help, you can contact the Azure experts on [the MSDN Azure and Stack Overflow forums](https://azure.microsoft.com/support/forums/). Alternatively, you can file an Azure support incident. Go to the [Azure support site](https://azure.microsoft.com/support/options/) and select **Get Support**.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

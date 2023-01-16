@@ -218,3 +218,5 @@ certificate will be deleted (CloudFiltered=TRUE) by the sync engine.
 ## Next Steps
 
 - [Azure AD Connect Version history](/azure/active-directory/hybrid/reference-connect-version-history)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

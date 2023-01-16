@@ -1,0 +1,59 @@
+
+- name: Minimum service pack levels for Redistributable packages
+  href: ./minimum-service-pack-levels.md
+- name: Redistributable Package installation fails
+  href: ./runtime-installation-fails.md
+- name: C2653 or C2039 error when you reference a STD function
+  href: ./c2653-c2039-error-reference-function.md
+- name: Call Run() method of a Script control
+  href: ./call-script-control-run-method.md
+- name: Can't change the state of a menu item
+  href: ./cannot-change-state-menu-item.md
+- name: Change mouse pointer for a window in MFC
+  href: ./change-mouse-pointer-window-mfc.md
+- name: Click a Check box in a TreeView
+  href: ./click-check-box-treeview.md
+- name: Error at thread exit if FLS callback isn't freed
+  href: ./fatal-error-thread-exit-fls-callback.md
+- name: FAQs about Standard C++ library
+  href: ./faq-standard-cpp-library.yml
+- name: Fscanf function doesn't read consecutive lines
+  href: ./fscanf-does-not-read-consecutive-line.md
+- name: Mark MFC ActiveX controls safe
+  href: ./mark-mfc-activex-controls-as-safe.md
+- name: Runtime packages for Desktop Bridge
+  href: ./c-runtime-packages-desktop-bridge.md
+- name: The _CRTDBG_MAP_ALLOC macro doesn't work
+  href: ./crtdbg-map-alloc-macro-not-work.md
+- name: Use _crtBreakAlloc to debug a memory allocation
+  href: ./use-rtbreakalloc-debug-memory-allocation.md
+- name: Use list::list STL function
+  href: ./use-list-list-stl.md
+- name: Use list::remove STL function
+  href: ./use-list-stl-function.md
+- name: Use map STL functions
+  href: ./use-map-stl-functions.md
+- name: Use PageHeap to detect memory errors
+  href: ./pageheap-detect-memory-errors.md
+- name: Use priority_queue STL functions
+  href: ./use-priority-queue-stl-function.md
+- name: Use queue STL functions
+  href: ./stl-queue-member-functions.md
+- name: Use stack::top and stack::empty methods
+  href: ./stack-top-empty-stl-function.md
+- name: Use STL sqrt and pow functions
+  href: ./stl-sqrt-pow-functions.md
+- name: Use string arrays
+  href: ./use-string-arrays.md
+- name: Use random_shuffle STL function
+  href: ./use-random-shuffle-stl.md
+- name: Use set::find STL function
+  href: ./use-setfind-stl-function.md
+- name: Use STL PRIORITY_QUEUE class
+  href: ./stl-priority-queue-class-custom-type.md
+- name: Use the C Run-time
+  href: ./use-c-run-time.md
+- name: Use trigonometry STL functions
+  href: ./trigonometry-stl-functions.md
+- name: Use vector functions
+  href: ./vectorerase-vectorempty-vectorpush-back.md

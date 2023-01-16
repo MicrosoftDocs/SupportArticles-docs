@@ -2,7 +2,6 @@
 title: Azure API Management Troubleshooting Scenario 3 - Receiving unauthorized errors (401) while invoking APIs
 description: Provides troubleshooting steps to an issue in which you are getting unauthorized errors (401) while invoking APIs.
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 author: genlin
 ms.author: genli
 ms.service: api-management
@@ -61,3 +60,5 @@ The expected HTTP response code for all the operations is 200, however the respo
 - Go to the Echo APIsettings and check if it is associated with any of the available products. If not, then you must associate this API with a product so that you get a subscription key.
 
     Developers must first subscribe to a product to get access to the API. When they subscribe, they get a subscription key that is good for any API in that product. If you created the APIM instance, you are an administrator already, so you are subscribed to every product by default.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

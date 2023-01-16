@@ -2,7 +2,6 @@
 title: Event ID 4625 is logged
 description: A security audit failure event ID 4625 is logged every 5 minutes in the Security event log.
 ms.date: 06/23/2020
-ms.prod-support-area-path: 
 ms.reviewer: mihsar, charris, adoyle, jchornbe
 ---
 # Event ID 4625 is logged every 5 minutes when using the Exchange 2010 management pack in Operations Manager

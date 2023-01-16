@@ -2,7 +2,6 @@
 title: One or more objects don't sync when the Azure Active Directory Sync tool is used
 description: Describes an issue in which one or more AD DS object attributes don't sync to Azure AD through the Azure Active Directory Sync tool. Provides resolutions.
 ms.date: 07/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: enterprise-users
@@ -56,7 +55,6 @@ This issue occurs for one of the following reasons:
     ||sAMAccountName|Equals "MSOL_AD_Sync"|
     ||sAMAccountName|Is not present|
     ||isCriticalSystemObject|Is set to "True"|
-    ||||
 
 - The user principal name (UPN) was changed after the initial synchronization and must be updated manually.
 - Exchange Online Simple Mail Transfer Protocol (SMTP) addresses of synced users aren't populated appropriately in the on-premises Active Directory schema.
@@ -102,7 +100,6 @@ To determine attribute conflicts caused by user objects that were created by usi
         |---|---|---|
         |proxyAddresses|proxyAddresses (3): x500:/o=Exchange/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=1ae75fca0d3a4303802cea9ca50fcd4f-7628376; smtp:`7628376@service.contoso.com`; SMTP:`7628376@contoso.com`;|<br/> 1. The number that's displayed in parentheses next to the attribute label indicates the number of proxy address values in the multivalue attribute.<br/><br/> 2. Each distinct proxy address value is indicated by a semicolon (;).<br/><br/>3. The primary SMTP proxy address value is indicated by uppercase "SMTP:"|
         |userPrincipalName|`7628376@contoso.com`||
-        ||||
 
         > [!NOTE]
         > Ldp.exe is included in Windows Server 2008 and in the Windows Server 2003 Support Tools. The Windows Server 2003 Support Tools are included in the Windows Server 2003 installation media. Or, to obtain the Support Tools, go to the following Microsoft website: [Windows Server 2003 Service Pack 2 32-bit Support Tools](https://go.microsoft.com/fwlink/?linkid=100114)
@@ -122,18 +119,14 @@ To determine attribute conflicts caused by user objects that were created by usi
     > In this command, the placeholder "\<search UPN>" represents the UserPrincipalName attribute that you recorded in step 1f.
 
     ```powershell
-    get-MSOLUser -UserPrincipalName $userUPN | where {$_.LastDirSyncTime -eq $null}
+    Get-MSOLUser -UserPrincipalName $userUPN | where {$_.LastDirSyncTime -eq $null}
     ```
 
     Leave the console window open. You'll use it again in the next step.
-4. Check for duplicate proxyAddresses attributes. In the console connection that you opened in step 2, type the following commands in the order in which they are presented. Press Enter after each command:
+4. Check for duplicate proxyAddresses attributes. In the console connection that you opened in step 2, run the following command:
 
     ```powershell
-    $SessionExO = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $Cred -Authentication Basic - AllowRedirection
-    ```
-
-    ```powershell
-    Import-PSSession $sessionExO -prefix:Cloud
+    Import-Module ExchangeOnlineManagement
     ```
 
 5. For each proxy address entry that you recorded in step 1f, type the following commands in the order in which they are presented. Press Enter after each command:
@@ -146,7 +139,7 @@ To determine attribute conflicts caused by user objects that were created by usi
     > In this command, the placeholder "\<search proxyAddress>" represents the value of a proxyAddresses attribute that you recorded in step 1f.
 
     ```powershell
-    get-cloudmailbox | where {[string] $str = ($_.EmailAddresses); $str.tolower().Contains($proxyAddress.tolower()) -eq $true} | foreach {get-MSOLUser -UserPrincipalName $_.MicrosoftOnlineServicesID | where {($_.LastDirSyncTime -eq $null)}}
+    Get-EXOMailbox | where {[string] $str = ($_.EmailAddresses); $str.tolower().Contains($proxyAddress.tolower()) -eq $true} | foreach {get-MSOLUser -UserPrincipalName $_.MicrosoftOnlineServicesID | where {($_.LastDirSyncTime -eq $null)}}
     ```
 
 Items that are returned after you run the commands in step 3 and 4 represent user objects that weren't created through directory synchronization and that have attributes that conflict with the object that isn't syncing correctly.
@@ -224,9 +217,8 @@ When SMTP attributes aren't synced to Exchange Online in an expected way, you ma
 |proxyAddresses|SMTP:`user1@contoso.com`<br/>smtp:`user1@sub.contoso.com`|Primary SMTP: `user1@contoso.com`<br/>Secondary SMTP: `user1@sub.contoso.com`<br/>Secondary SMTP: `user1@contoso.onmicrosoft.com`|
 |mail|`User1@contoso.com`|Primary SMTP: `user1@contoso.com`<br/>Secondary SMTP: `user1@contoso.onmicrosoft.com`|
 |UserPrincipalName|`User1@contoso.com`|Primary SMTP: `user1@contoso.com`<br/>Secondary SMTP: `user1@contoso.onmicrosoft.com`|
-||||
-
-The Microsoft Online Email Routing Address (MOERA) entry that's associated with the default domain (such as `user1@contoso.onmicrosoft.com`) is an interpreted value that's based on a user account's alias. This specialty email address is inextricably linked to each Exchange Online recipient. You can't manage, delete, or create additional MOERA addresses for any recipient. However, the MOERA address can be over-ridden as the primary SMTP address by using the attributes in the on-premises Active Directory user object.
+  
+  The Microsoft Online Email Routing Address (MOERA) entry that's associated with the default domain (such as `user1@contoso.onmicrosoft.com`) is an interpreted value that's based on a user account's alias. This specialty email address is inextricably linked to each Exchange Online recipient. You can't manage, delete, or create additional MOERA addresses for any recipient. However, the MOERA address can be over-ridden as the primary SMTP address by using the attributes in the on-premises Active Directory user object.
 
 > [!NOTE]
 > The presence of data in the proxyAddresses attribute completely masks data in the mail attribute for Exchange Online email address population.
@@ -244,4 +236,4 @@ The Windows PowerShell commands that are mentioned in this article require the A
 For more information about filtering directory synchronization by attributes, see the following Microsoft TechNet wiki article:  
 [List of Attributes that are Synced by the Azure Active Directory Sync Tool](https://social.technet.microsoft.com/wiki/contents/articles/19901.list-of-attributes-that-are-synced-by-the-windows-azure-active-directory-sync-tool.aspx)
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/home?forum=windowsazuread) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

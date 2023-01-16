@@ -54,6 +54,5 @@ This issue occurs when registry entries that are required for Winlogon notificat
     |---|---|---|
     |Logoff|REG_SZ|TSEventLogoff|
     |Logon|REG_SZ|TSEventLogon|
-    ||||
 
 4. Restart the Terminal Server computer.

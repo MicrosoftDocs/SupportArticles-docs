@@ -2,7 +2,6 @@
 title: Maintenance mode in Operations Manager
 description: Describes Operations Manager maintenance mode.
 ms.date: 06/22/2020
-ms.prod-support-area-path:
 ms.reviewer: ganeshbg
 ---
 # Operations Manager maintenance mode

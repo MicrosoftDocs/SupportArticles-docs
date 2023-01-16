@@ -2,9 +2,9 @@
 title: Windows boot error 0xc0000225 on an Azure VM
 description: Fixes an issue that triggers error 0xc0000225 when you try to start an Azure-based virtual machine.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: jarrettr
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ---
 # Windows boot error 0xc0000225 on an Azure VM
@@ -35,7 +35,7 @@ Info: An unexpected error has occurred.
 Status: 0xc0000225  
 Info: The operating system couldn't be loaded because a critical system driver is missing or contains errors.
 
-In this message, \<BINARY> represents the actual binary file that's found. 
+In this message, \<BINARY> represents the actual binary file that's found.
 
 ## Cause
 
@@ -83,10 +83,10 @@ To fix the issue, follow these steps, based on the error message that you receiv
 
     The Boot partition contains a folder named "Boot." This folder is hidden by default. To see the folder, you must display the hidden files and folders and disable the **Hide protected operating system files (Recommended)** option. The boot partition is typically 300 MB~500 MB.  
 
-6. Run the following command as an administrator, and then record the identifier of Windows Boot Loader (not Windows Boot Manager). The identifier is a 32-character code and it resembles "xxxxxxxx-xxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx." You will use this identifier in the next step. 
+6. Run the following command as an administrator, and then record the identifier of Windows Boot Loader (not Windows Boot Manager). The identifier is a 32-character code and it resembles "xxxxxxxx-xxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx." You will use this identifier in the next step.
 
     ```console
-    bcdedit /store <Boot partition>:\boot\bcd /enum
+    bcdedit /store <Boot partition>:\boot\bcd /enum /v
     ```
 
 7. Repair the Boot Configuration data by running the following commands after you replace the placeholders by the actual values:
@@ -130,3 +130,5 @@ To fix the issue, follow these steps, based on the error message that you receiv
     - If the latest binary doesn't work, you can try the previous file version to obtain an earlier system update level on that component.
     - If the only binary that's returned in this step matches the file that you're trying to replace on the affected VM, and if both files have the same size and time stamp, you can replace the corrupted file by copying it from another working VM that has the same OS and, if possible, the same system update level.
 7. Detach the repaired disk from the troubleshooting VM. Then, create a VM from the OS disk.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -2,7 +2,7 @@
 title: Icon overlay handlers aren't displayed
 description: Describes a product limitation in Windows that restricts the number of icon overlays, which means that some registered icon overlays aren't displayed as expected.
 ms.date: 03/12/2020
-ms.prod-support-area-path: Desktop app UI development
+ms.custom: sap:Desktop app UI development
 ms.reviewer: davean
 ms.technology: windows-dev-apps-desktop-app-ui-dev
 ---
@@ -27,8 +27,10 @@ Software developers shouldn't rely solely on icon overlay handlers to provide ex
 
 ## More information
 
-An icon overlay is a small image in the lower-left corner of an icon that represents a `Shell` object. An icon overlay is typically added to an object's icon to provide extra information. For example, a commonly used icon overlay is the small arrow that indicates the icon represents a link instead of the actual file or folder. In addition to the standard icon overlays that are provided by the system, software developers can provide custom icon overlays by implementing and registering an icon overlay handler.
+An icon overlay is a small image in the lower-left corner of an icon that represents a `Shell` object. An icon overlay is typically added to an object's icon to provide extra information. For example, a commonly used icon overlay is the small arrow that indicates the icon represents a link instead of the actual file or folder. In addition to the standard icon overlays that are provided by the system, software developers can provide custom icon overlays by implementing and registering an icon overlay handler.
 
-Microsoft OneDrive and OneDrive for Business register multiple icon overlay handlers to indicate the synchronization and share states of the files that are managed by those applications. Because OneDrive is installed by default in Windows 10 systems, the number of icon overlay handlers that other applications can register before the problem that's described in the [Symptoms](#symptoms) section appears effectively reduced. OneDrive currently registers five icon overlay handlers, and there are four system icon overlays. This leaves just six slots in the system image list for use by other icon overlay handlers.
+Microsoft OneDrive and OneDrive for Business register multiple icon overlay handlers to indicate the synchronization and share states of the files that are managed by those applications. Because OneDrive is installed by default in Windows 10 systems, the number of icon overlay handlers that other applications can register before the problem that's described in the [Symptoms](#symptoms) section appears effectively reduced. OneDrive currently registers five icon overlay handlers, and there are four system icon overlays. This leaves just six slots in the system image list for use by other icon overlay handlers.
+
+Also, icon overlay handlers aren't used under folders that are synchronized with cloud file system, such as OneDrive and OneDrive for Business. The handlers aren't even executed under such folders.
 
 For more information, see [Creating icon overlay handlers](/previous-versions/cc144123(v=vs.85)).

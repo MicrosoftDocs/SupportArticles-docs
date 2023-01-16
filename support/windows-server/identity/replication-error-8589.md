@@ -73,7 +73,7 @@ You will see any of the following errors/warning when troubleshooting Active Dir
     This domain controller will be unable to replicate with the source domain controller until this problem is corrected.  
     >
     > User Action  
-    > Verify if the source domain controller is accessible or network connectivity is available. 
+    > Verify if the source domain controller is accessible or network connectivity is available.
     >
     > Additional Data  
     > Error value:  
@@ -108,7 +108,6 @@ You will see any of the following errors/warning when troubleshooting Active Dir
     |NTDS Replication / ActiveDirectory_DomainService 1411|Active Directory failed to construct a mutual authentication service principal name (SPN) for the following domain controller.|
     |NTDS Replication 2023|The local domain controller was unable to replicate changes to the following remote domain controller for the following directory partition.|
     |NTDS KCC 1925|The attempt to establish a replication link for the following writable directory partition failed.|
-    |||
 
 ## Cause
 
@@ -140,7 +139,7 @@ Verify the serverReference attribute is not missing or set to an incorrect value
     Use PowerShell to find the DC referenced. There are two PowerShell methods you can use. To do this open the "Active Directory Module for Windows PowerShell"
 
     Method 1:
-    Run the following two PowerShell cmdlets. In the first cmdlet, replace the partition name `CN=Configuration,DC=contoso,DC=com` with the DN of your Configuration partition. Replace the server name `DCSRV01.contoso.com` with the name of your domain controller. In the second cmdlet, replace the GUID *3dab7f9b-92e7-4391-b8db-71df532c1493* with the GUID in your event ID 1411.
+    Run the following two PowerShell cmdlets. In the first cmdlet, replace the partition name `CN=Configuration,DC=contoso,DC=com` with the DN of your Configuration partition. Replace the server name `DCSRV01.contoso.com` with the name of your domain controller. In the second cmdlet, replace the GUID _3dab7f9b-92e7-4391-b8db-71df532c1493_ with the GUID in your event ID 1411.
 
     ```powershell
     $list = Get-ADObject -Filter 'ObjectClass -eq "ntdsdsa"' -SearchBase '*CN=Configuration,DC=contoso,Dc=com*' -Server *DCSRV01.contoso.com*  
@@ -199,7 +198,7 @@ Verify the serverReference attribute is not missing or set to an incorrect value
     5. On left pane, expand " Configuration "
     6. Next expand " CN=Configuration,DC=contoso,DC=com "
     7. Next expand " CN=Sites "
-    8. Under CN=Sites, expand the *site* in which the server is located.
+    8. Under CN=Sites, expand the _site_ in which the server is located.
      Example: Default-First-Site-Name
     9. Under that site expand CN=Servers.
      Example: If DCSRV02 is in the Default-First-Site-Name site in Contoso.com, you should be in:

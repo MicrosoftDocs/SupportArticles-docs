@@ -57,4 +57,3 @@ History of App-V release versions and dates:
 |App-V 5.0 SP2 HF04|5.0.3400.0| [2956985](https://support.microsoft.com/help/2956985)|04/24/2014|
 |App-V 5.0 SP2|5.0.3361.0| [About SP2](/microsoft-desktop-optimization-pack/appv-v5/about-app-v-50-sp2)|12/02/2013|
 |App-V 5.0 RTM|5.0.285.0| [About App-V 5.0](/microsoft-desktop-optimization-pack/appv-v5/about-app-v-50)|11/1/2012|
-|||||

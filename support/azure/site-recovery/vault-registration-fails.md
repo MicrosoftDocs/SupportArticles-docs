@@ -2,7 +2,6 @@
 title: Vault registration fails in Azure Site Recovery with error
 description: Describes an error may occur if you are reinstalling the Azure Site Recovery provider and agent on a Hyper-V server that was previously registered to another vault.
 ms.date: 10/10/2020
-ms.prod-support-area-path: 
 ms.service: site-recovery
 ms.author: genli
 author: genlin
@@ -45,3 +44,5 @@ To fix this error and enable the ASR Provider and agent setup to complete succes
 
 3. Delete the registry key that you backed up in step 2.
 4. Restart the Provider and agent setup.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -38,4 +38,4 @@ This issue occurs when you reach the maximum size of the access control list (AC
 
 For more information about security descriptors and ACLs, go to the following Microsoft website:
 
-[How Security Descriptors and Access Control Lists Work](https://technet.microsoft.com/library/cc781716.aspx)
+[How Access Control Works in Active Directory Domain Services](/windows/win32/ad/how-access-control-works-in-active-directory-domain-services)

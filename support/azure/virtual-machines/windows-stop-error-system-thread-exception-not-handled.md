@@ -4,9 +4,9 @@ description: This article provides steps to resolve issues where the guest OS en
 services: virtual-machines
 documentationcenter: ''
 author: mibufo
-editor: ''
 tags: azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
@@ -33,7 +33,6 @@ The cause can't be determined until a memory dump file is analyzed. Continue to 
 > [!TIP]
 > If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
-
 To resolve this problem, you first need to gather the memory dump file for the crash and then send the file to Microsoft support. To collect the dump file, follow the instructions in the next two sections.
 
 ### Attach the OS disk to a new repair VM
@@ -53,3 +52,5 @@ For more information about NMI calls, see the [NMI calls in Azure Serial Console
 
 > [!div class="nextstepaction"]
 > [Troubleshoot Azure Virtual Machine boot errors](./boot-error-troubleshoot.md)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

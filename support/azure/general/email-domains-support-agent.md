@@ -2,9 +2,8 @@
 title: Email address domains used by Microsoft support professionals
 description: Describes the email address domains used by Microsoft support agents to communicate with our customers.
 ms.date: 06/07/2021
-ms.prod-support-area-path: 
 ms.reviewer: 
-ms.service: azure
+ms.service: azure-common-issues-support
 ms.author: genli
 author: genlin
 ---
@@ -20,3 +19,4 @@ If the email claims to be from Microsoft, but the email is being sent from anoth
 
 To spot phishing emails, see [Protect yourself from phishing](https://support.microsoft.com/windows/protect-yourself-from-phishing-0c7ea947-ba98-3bd9-7184-430e1f860a44).
 
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

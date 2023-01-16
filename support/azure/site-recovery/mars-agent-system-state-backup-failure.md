@@ -2,7 +2,6 @@
 title: Microsoft Azure Recovery Services Agent System State backup failure (error ID 8007007B)
 description: Error when you back up System State by using the Microsoft Azure Recovery Services (MARS) Agent.
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.service: site-recovery
 ms.author: genli
 author: genlin
@@ -44,7 +43,7 @@ To make sure that the file specification is updated, follow these steps:
 
     > Error in backup of c:\windows\\systemroot\  during enumerate: Error [0x8007007b] The filename, directory name, or volume label syntax is incorrect.
 
-2. Run the following command at an elevated command prompt: 
+2. Run the following command at an elevated command prompt:
 
     ```console
     diskshadow /l Output_File_Path
@@ -87,5 +86,7 @@ To make sure that the file specification is updated, follow these steps:
     |Before change|After change|
     |---|---|
     |:::image type="content" source="media/mars-agent-system-state-backup-failure/imagepath-value-before.png" alt-text="Screenshot of the search results for the imagepath before change.":::<br/>|:::image type="content" source="media/mars-agent-system-state-backup-failure/imagepath-value-after.png" alt-text="Screenshot of the search results for the imagepath after change.":::<br/>|
-    |||
+
 10. Go back to the MARS Agent console and start a System State Backup by clicking **Back Up Now**.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

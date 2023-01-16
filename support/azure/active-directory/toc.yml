@@ -7,6 +7,8 @@
     href: could-not-verify-account-reset-pwd.md
   - name: Maximum number of devices is reached
     href: maximum-number-of-devices-joined-workplace.md
+  - name: Troubleshoot data freshness alerts in Azure AD Connect Health
+    href: aad-connect-health-data-freshness.md
   - name: Unable to register a device
     href: cant-connect-service-error-register-device.md
   - name: Understand AD FS sign-in events in Azure AD with Connect Health
@@ -38,12 +40,14 @@
   items:
   - name: Troubleshoot adding apps
     href: troubleshoot-adding-apps.md
-  - name: Troubleshoot sign-in to SAML-based SSO apps
+  - name: Troubleshoot sign-in to apps
     items:
       - name: Error AADSTS50003 - certificate or key not configured
         href: error-code-AADSTS50003-cert-or-key-not-configured.md
-      - name: Error AADSTS50011 - reply URL mismatch
+      - name: Error AADSTS50011 - reply URL mismatch (SAML)
         href: error-code-AADSTS50011-reply-url-mismatch.md
+      - name: Error AADSTS50011 - redirect URI mismatch (OIDC/OAuth2)
+        href: error-code-AADSTS50011-redirect-uri-mismatch.md
       - name: Error AADSTS50020 - guest sign-in to resource tenant fails
         href: error-code-AADSTS50020-user-account-identity-provider-does-not-exist.md
       - name: Error AADSTS50105 - user not assigned a role
@@ -159,8 +163,6 @@
     href: user-displayed-disabled-or-enabled-mfa.md
   - name: Troubleshoot account lockout
     href: account-lockout-adfs-window-server.md
-  - name: Troubleshoot MFA issues
-    href: troubleshoot-azure-mfa-issue.md
   - name: Troubleshooting MFA issues
     href: troubleshoot-azure-mfa-issue.md
   - name: User name or password is incorrect
@@ -174,6 +176,24 @@
 
 - name: User Provisioning and Synchronization
   items:
+  - name: Password writeback
+    items:
+    - name: General troubleshooting steps
+      href: password-writeback-general-troubleshooting-steps.md
+    - name: Access rights and permissions
+      href: password-writeback-access-rights-permissions.md
+    - name: Error code 8023062C - insecure password reset or change
+      href: password-writeback-error-code-8023062c.md
+    - name: Error code SSPR_009 - synced Azure AD admin can't do cloud reset
+      href: password-writeback-error-code-sspr-009.md
+    - name: Error code SSPR_0029 - on-premises configuration not set up
+      href: password-writeback-error-code-sspr-0029.md
+    - name: Admin password reset on Microsoft 365 admin center
+      href: password-writeback-microsoft-365-admin-center.md
+    - name: Initial sign-in delays after forced password change
+      href: password-writeback-servers-need-time-catch-up.md
+    - name: On-premises policy disallows password reset
+      href: password-writeback-not-compliant-on-premises-ad-pwd-policy.md
   - name: Administrator credentials error
     href: admin-credentials-supplied-not-valid.md
   - name: Azure AD Connect services don't start
@@ -226,6 +246,8 @@
     href: unable-communicate-windows-service.md
   - name: Logon failure with 1789 error
     href: error-code-1789-configuration-wizard.md
+  - name: Model database corruption in SQLLocalDB
+    href: resolve-model-database-corruption-sqllocaldb.md
   - name: Must join domain error when installing sync tool
     href: computer-must-joined-domain.md
   - name: Number is added to username
@@ -256,8 +278,6 @@
     href: separate-pwds-required-computer-work-account.md
   - name: Slow performance and high CPU usage
     href: slow-performance-high-cpu-usage.md
-  - name: Troubleshoot Azure AD Connect installation issues
-    href: installation-issues.md
   - name: Troubleshoot Azure AD Connect version upgrading issues
     href: troubleshoot-aad-connect-fails-to-install-upgraded-version.md
   - name: Troubleshoot Azure AD Sync installation issues
@@ -296,7 +316,11 @@
     href: enable-disable-trace-online-services.md
   - name: IdFix.exe is not a valid Win32 application
     href: idfix-not-valid-win32-application.md
+  - name: IPv6 Support in Azure AD
+    href: azure-ad-ipv6-support.md
   - name: Security context is not associated in IdFix
     href: security-context-not-associate-domian.md
+  - name: Send Microsoft Authenticator logs and get an incident ID
+    href: send-microsoft-authenticator-logs.md  
   - name: Support data collection
     href: support-data-collection-diagnostic-logs.md

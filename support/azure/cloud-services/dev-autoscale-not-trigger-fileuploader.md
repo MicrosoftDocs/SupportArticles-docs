@@ -1,12 +1,12 @@
 ---
 title: Autoscale is not triggered for FileUploader role
 description: Provides information about troubleshooting issues in which autoscale is not triggered for FileUploader role although CPU utilization in one of the instances always stays at 100%.
-ms.date: 06/22/2020
-ms.prod-support-area-path: 
+ms.date: 09/26/2022
 ms.reviewer: 
 author: genlin
 ms.author: genli
 ms.service: cloud-services
+ms.subservice: troubleshoot-dev
 ---
 # Autoscale is not triggered for FileUploader role
 
@@ -84,3 +84,5 @@ You can also monitor the average CPU utilization of FileUploader role from **Met
 :::image type="content" source="media/scenario-3-autoscale-not-trigger-fileuploader/average-cpu-utilization.png" alt-text="Screenshot of the average CPU utilization of FileUploader role.":::
 
 So the bottom line is autoscaling rules that use a detection mechanism based on a measured trigger attribute (such as CPU usage) use an aggregated value over time, rather than instantaneous values, to trigger an autoscaling action. By default, the aggregate is an average of the values across all the instances of the role. So, in case of multiple instances, each PaaS VM reports a number for percentage CPU. To consolidate these, the cloud service role calculates the "statistic" across all of the instances. For instance, if there were three instances in a cloud service role, one running at 30% CPU, second one at 60% and another running at 90% CPU, the role would emit an average CPU utilization of 60%.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

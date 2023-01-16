@@ -2,9 +2,9 @@
 title: Can't create a Capacity Reservation
 description: The following article discusses the reasons why you are not able to create Capacity Reservation.
 ms.date: 08/26/2021
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-capacity-reservation
 ms.collection: windows
 ---
 
@@ -36,3 +36,5 @@ The following article discusses the reasons why you are not able to create Capac
 ## Steps to create Capacity Reservation
 
 - [Create a Capacity Reservation in Azure (preview)](/azure/virtual-machines/capacity-reservation-create)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -1,12 +1,12 @@
 ---
-title: Troubleshoot an RDP general error to a Windows VM in Azure | Microsoft Docs
-description: Learn how to troubleshoot an RDP general error to a Windows VM in Azure | Microsoft Docs
+title: Troubleshoot an RDP general error to a Windows VM in Azure
+description: Learn how to troubleshoot an RDP general error to a Windows VM in Azure.
 services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
@@ -72,7 +72,7 @@ Before you follow these steps, take a snapshot of the OS disk of the affected VM
    ch -si 1
    ```
 
-#### Step 2: Check the values of RDP registry keys:
+#### Step 2: Check the values of RDP registry keys
 
 1. Check if the RDP is disabled by group polices.
 
@@ -80,25 +80,30 @@ Before you follow these steps, take a snapshot of the OS disk of the affected VM
     REM Get the group policy setting
     reg query "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" /v fDenyTSConnections
     ```
+
     If the group policy states that RDP is disabled (fDenyTSConnections value is 0x1), run the following command to enable the TermService service. If the registry key is not found, there is no group policy configured to disabled the RDP. You can move to the next step.
 
     ```
     REM update the fDenyTSConnections value to enable TermService service
     reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" /v fDenyTSConnections /t REG_DWORD /d 0 /f
     ```
+
     > [!NOTE]
     > This step enables the TermService service temporarily. The change will be reset when the group policy settings are refreshed. To resolve the issue, you need to check if the TermService service is disabled by the local group policy or the domain group policy, and then update the policy settings correspondingly.
-    
+
 2. Check the current remote connection configuration.
+
     ```
     REM Get the local remote connection setting
     reg query "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections
     ```
+
     If the command returns 0x1, the VM is not allowing remote connection. Then, allow remote connection using the following command:
+
      ```
      reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
      ```
-    
+
 1. Check the current configuration of the terminal server.
 
     ```
@@ -135,6 +140,7 @@ Before you follow these steps, take a snapshot of the OS disk of the affected VM
       ```
       reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v TSUserEnabled /t REG_DWORD /d 0 /f
       ```
+
 5. Check the current configuration of the RDP listener.
 
       ```
@@ -219,7 +225,7 @@ For more information, see [Remote Desktop disconnects frequently in Azure VM](tr
       reg unload HKLM\BROKENSOFTWARE 
       ```
 
-6. If the VM is domain joined, check the following registry key to see if there is a group policy that will disable RDP. 
+6. If the VM is domain joined, check the following registry key to see if there is a group policy that will disable RDP.
 
       ```
       HKLM\BROKENSOFTWARE\Policies\Microsoft\Windows NT\Terminal Services\fDenyTSConnectionS
@@ -227,7 +233,6 @@ For more information, see [Remote Desktop disconnects frequently in Azure VM](tr
 
       If this key value is set to 1 that means RDP is disabled by the policy. To enable Remote Desktop through the GPO policy, change the following policy from domain controller:
 
-   
       **Computer Configuration\Policies\Administrative Templates:**
 
       Policy definitions\Windows Components\Remote Desktop Services\Remote Desktop Session Host\Connections\Allow users to connect remotely by using Remote Desktop Services
@@ -245,6 +250,4 @@ For more information, see [Remote Desktop Services isn't starting on an Azure VM
 
 For more information, see [Remote Desktop disconnects frequently in Azure VM](troubleshoot-rdp-intermittent-connectivity.md).
 
-## Need help? Contact support
-
-If you still need help, [contact support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) to get your issue resolved quickly.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

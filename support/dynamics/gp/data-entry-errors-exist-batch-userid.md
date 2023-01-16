@@ -22,18 +22,20 @@ When you select **Process** in the Create Refund Checks window, and then you sel
 ### Scenario 1
 
 You receive the following error message:
-> **Data entry errors exist in batch RMPMXFRUserID. Use the Batch Recovery window to process this batch.**
+
+> Data entry errors exist in batch RMPMXFR UserID. Use the Batch Recovery window to process this batch.
 
 > [!NOTE]
-> UserIDis a placeholder for the logon name of the user who is processing the refund checks. This logon name is part of the batch name.
+> UserID is a placeholder for the logon name of the user who is processing the refund checks. This logon name is part of the batch name.
 
 If the **Auto-open Print Payables Checks** check box is selected in the Refund Checks Setup window, this error message is displayed before the Print Payables Check window is displayed.
 
 You select **OK** after you receive the error message. If you continue to print the check batch, you receive the following error message:
 
-> **Errors have been found in this check batch. Please correct the errors before printing.**  
+> Errors have been found in this check batch. Please correct the errors before printing.
 
-If you've Multi-Dimensional Analysis (MDA) enabled for any of the GL accounts used in the Refund check, and if it has an MDA Analysis group set to *Required*, but no default MDA codes ID's are defined, the same error happens and it also creates a blank record in the PM20000 table. After this situation occurs, the damaged record needs to be manually removed from the PM20000 table. The issue can be avoided by either designating a default MDA analysis code ID for the MDA account/analysis group set to 100%, or by setting the assigned MDA analysis group ID for the account to *Optional* instead of *Required*.
+> [!NOTE]
+> If you have Multi-Dimensional Analysis (MDA) enabled for any of the GL accounts used in the Refund check, and if it has an MDA Analysis group set to Required, but no default MDA codes ID's are defined, the same error happens and it also creates a blank record in the PM20000 table.  After this occurs, the damaged record needs to be manually removed from the PM20000 table. The issue can be avoided by either designating a default MDA analysis code ID for the MDA account/analysis group set to 100%, or by setting the assigned MDA analysis group ID for the account to **Optional** instead of **Required**.
 
 ### Scenario 2
 
@@ -42,7 +44,8 @@ If you've Multi-Dimensional Analysis (MDA) enabled for any of the GL accounts us
 - You press the TAB key to move from a field.
 
 In this scenario, you receive the following error message:
-> **The stored procedure createSQLTmpTable returned the following results: DBMS 2627, Microsoft Dynamics GP:0.**  
+
+> The stored procedure createSQLTmpTable returned the following results: DBMS 2627, Microsoft Dynamics GP:0.
 
 The "Payables Transaction Inquiry - Vendor" window contains the following two work documents that resulted from the processing of the refund check:
 
@@ -60,6 +63,8 @@ If you select to clear the **Work** check box and the **History** check box, and
 
 ## Cause
 
+### Cause of scenario 1
+
 This problem occurs if the posting of the miscellaneous charge in Payables Management in Microsoft Dynamics GP is interrupted for one of the following reasons:
 
 - The accounts payable account isn't assigned in the Vendor Account Maintenance window, and the accounts payable account isn't assigned in the Posting Accounts Setup window.
@@ -67,11 +72,13 @@ This problem occurs if the posting of the miscellaneous charge in Payables Manag
 - The fiscal period in which the refund occurs in Accounts Payable in Microsoft Dynamics GP is closed.
 - The processing of the refund checks met a posting interruption or a network interruption.
 
-### Cause 2
+### Cause or scenario 2
 
 This problem occurs if the posting of a miscellaneous charge that the check is paying has been interrupted. The miscellaneous charge was partially posted without an amount, and the transaction remains in the batch.
 
 ## Resolution
+
+### Resolution for scenario 1
 
 To resolve this problem, determine the cause from the list of possible causes in Scenario 1 in the [Cause](#cause) section, and then correct the problem. To correct the problem, follow these steps:
 
@@ -82,7 +89,7 @@ To resolve this problem, determine the cause from the list of possible causes in
 5. Make the check batch available, and then make the RMPMXFR batch available. To do it, follow the steps in [KB - A batch is held in the Posting, Receiving, Busy, Marked, Locked, or Edited status in Microsoft Dynamics GP](https://support.microsoft.com/help/850289).
 6. If you experience the problems in Scenario 2, go to the resolution for Scenario 2.
 
-### Resolution for Scenario 2
+### Resolution for scenario 2
 
 To resolve this problem, follow these steps:
 

@@ -2,9 +2,9 @@
 title: Windows boot error 0xc00000ba in the Azure VM
 description: Provides a solution to an issue where Windows VM doesn't start with error code 0xc00000ba
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ---
 # Windows boot error 0xc00000ba in the Azure VM
@@ -95,3 +95,5 @@ If the boot issue occurs after you installed software or services, try to disabl
 
 7. If SFC states that the corruption is fixed, detach the OS disk from the troubleshooting VM, and wait until Azure updates the disk lease (3 minutes at most).
 8. Recreate the VM.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

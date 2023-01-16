@@ -5,8 +5,8 @@ services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
@@ -15,7 +15,7 @@ ms.date: 10/18/2021
 ms.author: genli
 ---
 
-#  Can't sign into your account when you try to connect to an Azure Windows VM
+# Can't sign into your account when you try to connect to an Azure Windows VM
 
 This article discusses how to troubleshoot the error "We can't sign into your account" when you try to connect to an Azure Windows VM using Remote Desktop Protocol (RDP).
 
@@ -55,9 +55,11 @@ Before proceeding with any of the solutions in this document, back up your VM OS
 1. Identify the profile entry for the affected user by looking at the value for the key "ProfileImagePath".
 
 1. Remove the user profile backup entry for the affected user (ends with ".bak"), do not remove entries for the built-in system accounts **S-1-5-18**, **S-1-5-19**, and **S-1-5-20**:
+
     ```powershell
     reg delete "HKLM\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\ProfileList\<GUID>.bak"
     ```
+
 1. Try to connect to the VM and see if the problem is resolved.
 1. If the problem still occurs, you can try removing the user profile entry for the affected user.
 
@@ -70,13 +72,14 @@ If you're unable to access the VM using the Azure Serial Console or other remote
 1. On the Repair VM, start Registry Editor (regedit.exe). Select the **HKEY_LOCAL_MACHINE** key, select **File** > **Load Hive** from the menu. Locate and load the *SOFTWARE* hive file in the *F:\Windows\System32\config* folder, and then type *RepairSOFTWARE* as the name for the hive.
 1. Navigate to *RepairSOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList*.
 1. Identify the profile entry for the affected user by looking at the value for the key "ProfileImagePath".
-1. Remove the user profile backup entry for the affected user (ends with ".bak"), do not remove entries for the built-in system accounts **S-1-5-18**, **S-1-5-19**, and **S-1-5-20**. 
+1. Remove the user profile backup entry for the affected user (ends with ".bak"), do not remove entries for the built-in system accounts **S-1-5-18**, **S-1-5-19**, and **S-1-5-20**.
 1. Use step 5 of the [VM Repair process](repair-windows-vm-using-azure-virtual-machine-repair-commands.md) to mount the repaired OS disk to the failed VM.
 1. Start the failed VM and try to connect to the VM using RDP. If the problem continues to occur, you can try removing the user profile entry for the affected user.
-
 
 ## Next steps
 
 If your Azure issue isn't addressed in this article, visit the Azure forums on [MSDN and Stack Overflow](https://azure.microsoft.com/support/forums/). You can post your issue in these forums, or post to [@AzureSupport on Twitter](https://twitter.com/AzureSupport). You also can submit an Azure support request.
 
 To submit a support request, go to the [Azure support page](https://azure.microsoft.com/support/options/) and select **Get support**.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

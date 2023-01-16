@@ -150,8 +150,9 @@ Entry: SyncIntervalInSeconds
 Type: DWORD  
 Default value (seconds): 3,600 (1 hour)
 
-Also review the following Microsoft Docs topic on DFS volume settings:
- [Change the amount of time that clients cache referrals](/windows-server/storage/dfs-namespaces/change-the-amount-of-time-that-clients-cache-referrals)
+Also review the following technical article on DFS volume settings:
+
+- [Change the amount of time that clients cache referrals](/windows-server/storage/dfs-namespaces/change-the-amount-of-time-that-clients-cache-referrals)
 
 ### The Knowledge Consistency Checker (KCC) replication topology update
 
@@ -166,7 +167,7 @@ Default value (seconds): 900 (15 minutes)
 
 ### Group Policy settings
 
-The following policy settings control the frequency of Net Logon-based traffic and of DFS-based traffic. To locate these settings, click **Start**, click **Run**, type *gpedit.msc*, and then click **OK**. Or, edit them in a domain-based Group Policy Object.
+The following policy settings control the frequency of Net Logon-based traffic and of DFS-based traffic. To locate these settings, click **Start**, click **Run**, type _gpedit.msc_, and then click **OK**. Or, edit them in a domain-based Group Policy Object.
 
 #### Computer Configuration/Administrative Templates/System/Net Logon
 
@@ -201,7 +202,6 @@ The following table shows the packet types and their default send intervals.
 |Windows Explorer|SMB|TCP/IP|32 seconds|This value controls the frequency that the file server sends an SMB echo frame to the client as long as the client has an outstanding long-term request open.|
 |KeepAlive|NetBIOS|TCP/IP|300 seconds (5 minutes)|This entry corresponds to<br/> `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlServices\NetBT\parameters\SessionKeepAlive` |
 |KeepAlive|TCP|TCP/IP|1 second|This entry corresponds to<br/> `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TCPIP\Parameters\KeepAliveTime` |
-||||||
 
 > [!Note]
 >
@@ -226,8 +226,7 @@ For more information, see the following Knowledge Base article:
 |DFS queries for domain controllers|900 seconds (15 minutes)| |
 |GPO refresh interval|90 minutes|See Group Policy Description: [Group Policy Search](https://gpsearch.azurewebsites.net/#341) |
 |Time service (W32time)|17 minutes|This value is found in the following registry subkeys:<br/><br/> `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32time\Config\MaxPollInterval` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32time\Config\MinPollInterval` <br/><br/>Also see the Group Policy settings for Windows Time Service: [Global Configuration Settings](https://gpsearch.azurewebsites.net/#2612) [Configure Windows NTP Client](https://gpsearch.azurewebsites.net/#2613) |
-||||
-
+  
 ## References
 
 For more information, see the following Knowledge Base articles:

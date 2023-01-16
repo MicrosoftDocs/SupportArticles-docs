@@ -77,6 +77,4 @@ If the extension is customizable, such as Custom Script Extension (CSE) or Desir
 1. On the **Extensions** blade, click **Add**.
 1. Select and re-install the same extension.
 
-## Contact support
-
-If you're unable to solve the problem, save the logs and [open a support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

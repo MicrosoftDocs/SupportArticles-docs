@@ -2,8 +2,8 @@
 title: Can't create CMMI team project in Chinese or Italian
 description: This article provides workarounds for the problem that you can't create CMMI team project in Simplified Chinese or Italian in Team Foundation Server 2017 RTW.
 ms.date: 08/14/2020
-ms.prod-support-area-path: Server Administration
-ms.service: az-devops-project
+ms.custom: sap:Server Administration
+ms.service: azure-devops-server
 ---
 # Cannot create CMMI team project in Simplified Chinese or Italian in Team Foundation Server 2017 RTW
 
@@ -28,10 +28,10 @@ The fix for this issue will be included in Team Foundation Server 2017 Update 1.
     **Team** -> **Team Project Collection Settings** -> **Process Template Manager**  
 
 3. Download the **CMMI** template locally.
-4. Edit the *ProcessTemplate.xml* file in the downloaded root folder as follows:
+4. Edit the _ProcessTemplate.xml_ file in the downloaded root folder as follows:
       1. Change the type from **27450541-8E31-4150-9947-DC59F998FC01** to a new GUID. For example: **57860870-4ae5-4212-b591-1e4f7d905650**  
       2. Change the name so that it differs from **CMMI**. For example: **CMMI_fixed**.
-5. Edit the *Task.xml* file in the WorkItem `Tracking\TypeDefinitions` folder as follows:
+5. Edit the _Task.xml_ file in the WorkItem `Tracking\TypeDefinitions` folder as follows:
 
     Search for the following text inside the \<WebLayout> element, and then replace it with the correct string.
 
@@ -42,6 +42,7 @@ The fix for this issue will be included in Team Foundation Server 2017 Update 1.
     |---|---|---|
     |CHS|\<Group Label=:::no-loc text="\"计划\"":::>|\<Group Label=":::no-loc text="规划":::">|
     |ITA|\<Group Label="Pianificazione">|\<Group Label="Programmazione">|
-    ||||
 
 6. Reupload the template.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

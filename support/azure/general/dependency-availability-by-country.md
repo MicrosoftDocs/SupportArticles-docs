@@ -2,30 +2,32 @@
 title: Azure dependency availability by country/region
 description: Many product features have Azure dependencies that might not be available in all countries/regions".
 ms.date: 09/16/2021
-ms.prod-support-area-path: 
-ms.service: azure
+ms.service: azure-common-issues-support
 ms.author: genli
 author: genlin
 ms.reviewer: tiffanyyu
 ---
 
-# Azure dependency availability by country/region
+# Azure dependency availability by primary country/region
 
-Many product features have Azure dependencies that might not be available in all countries/regions. This includes, but is not limited to, the following list:
+Many product features have Azure dependencies that might not be available in all primary countries/regions. This includes, but is not limited to, the following list:
 
 - Insider risk management
 - Microsoft Threat Protection (MTP)
-- Microsoft Information Protection (MIP)
-  - Auto-labeling for sensitivity labels 
+- Microsoft Purview Information Protection
+  - Auto-labeling for sensitivity labels
 - Communication compliance
 - Attack simulation
 - Microsoft Application Protection and Governance (MAPG)
 - Privacy
 - Transport
 
-## Availability by country/region
+> [!NOTE]
+> The Azure dependency is only applicable to a tenant's primary country/region. It's not applicable to a tenant's subsidary countries/regions. 
 
-Countries/regions that have Azure dependencies availability as of December 2021:
+## Availability by primary country/region
+
+Primary countries/regions that have Azure dependencies availability as of April 2022:
 
 - Australia
 - Brazil
@@ -34,16 +36,21 @@ Countries/regions that have Azure dependencies availability as of December 2021:
 - Germany
 - India
 - Japan
+- Norway*
+- South Africa*
 - South Korea
 - Switzerland
+- United Arab Emirates*
 - United Kingdom
 - United States of America
 
+Countries/regions with an asterisk (\*) appended have recently obtained Azure dependencies. All solutions are working on unlocking their features in these regions. Check Microsoft Center documentations to see when specific solutions will go live for these regions.
+
 Countries/regions that are planned to get Azure dependencies availability soon:
 
-- Norway
 - Qatar
 - Singapore
-- South Africa
 - Sweden
-- United Arab Emirates
+
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

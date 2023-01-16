@@ -2,7 +2,7 @@
 title: Upgrading does not upgrade Enterprise SSO
 description: This article provides a resolution for the problem where performing an in-place upgrade from BizTalk 2009 or 2010 to BizTalk 2013 does not upgrade Enterprise Single Sign On on the same machine.
 ms.date: 09/28/2020
-ms.prod-support-area-path: ENTSSO
+ms.custom: sap:ENTSSO
 ---
 # Upgrading to BizTalk Server 2013 does not upgrade Enterprise SSO
 

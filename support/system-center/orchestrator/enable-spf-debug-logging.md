@@ -2,7 +2,6 @@
 title: Enable debug logging in SPF
 description: Describes how to enable debug logging in System Provider Foundation (SPF) either through the Windows Event Viewer or through the command line.
 ms.date: 08/04/2020
-ms.prod-support-area-path:
 ms.reviewer: markstan
 ---
 # Debug logging in System Center Service Provider Foundation (SPF)

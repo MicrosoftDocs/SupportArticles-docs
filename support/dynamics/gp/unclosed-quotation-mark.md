@@ -16,11 +16,11 @@ _Original KB number:_ &nbsp; 2580792
 
 When you run the Historical Aged Trial Balance report for Payables Management, you receive one of the following error messages:
 
-Error Message 1
+Error Message 1 (for Credit memo)
 
 > [Microsoft][ODBC SQL Server Driver][SQL Server]Line 1 : Incorrect syntax near 'XXXXX'.[Microsoft][ODBC SQL Server Driver][SQL Server]Unclosed quotation mark before the character string ' and DocumentType=5'.
 
-Error Message 2
+Error Message 2 (for Payment)
 
 > [Microsoft][SQL Native Client][SQL Server]incorrect syntax near 'S'[Microsoft][SQL Native Client][SQL Server] Unclosed quotation mark after the character string 'and DocumentType = 6"
 
@@ -38,21 +38,29 @@ Use one of the following methods to resolve this issue:
 
 ### Resolution 1
 
-1. Use SmartList to identify the credit memo or manual payment document(s) where the **Voucher Number** field contains an apostrophe.
+1. Run this script in SQL against the company database to look for any voucher number, document numbers or vendor ID's with a single apostrophe in it, which is read as an unclosed quotation by the process. Any results for the voucher number (CONTRLNUM) are likely the clause, but the document number and vendor ID are also added to the script, and may or may not be an issue:
 
-2. Void and reenter the credit memo or manual payment without an apostrophe in the **Voucher Number** field.
+    ```sql
+    SELECT * FROM PM00400
+    WHERE 
+    CNTRLNUM LIKE '%''%' or 
+    DOCNUMBR LIKE '%''%' or 
+    VENDORID LIKE '%''%' 
+    ```
 
-### Resolution 2
+2. For any results returned by the script above, run the 'ALL Payables' script for each result returned above. (As the problem is more than likely a voucher number as that is an editable field to the user. Check your payables setup to make sure you don't have an apostrophe in the default next voucher number.)
 
-If Resolution 1 isn't feasible, open a support case for further assistance to locate the problem document.
+    > [!NOTE]
+    > If you do not have this script, you may want to open a support case for assistance to get this script and identify all the tables that this document may be in.
 
-> [!NOTE]
-> Locating the problem document may be a billable consulting expense to you. To reach Customer Service, telephone 888-477-7877.
+3. Manually fix the Voucher number with a direct 'update' statement in SQL for all the tables returned by the 'ALL Payables' script to remove the single apostrophe from a voucher number and Document number Be sure to write the field to be the exact same in all fields/tables where you change it. (If the issue is with the vendor ID, then don't use these steps. You can use the vendor modifier tool in PSTL to change a vendor ID.)
+
+If you need assistance, you can open a support case for further assistance. To reach Customer Service by telephone, call 888-477-7877.
 
 ## More information
 
-To prevent this issue from happening in the future, you can lock the **Voucher Number**  field to prevent users from modifying the voucher number. To do it, following these steps:
+To prevent this issue from happening in the future, you can lock the **Voucher Number** field to prevent users from modifying the voucher number. To do it, following these steps:
 
-1. Select Microsoft Dynamics GP, point to **Tools**, point to **Setup**, point to **Purchasing**, and then select **Payables**.
+1. Select Microsoft Dynamics GP, select **Microsoft Dynamics GP** > **Tools** > **Setup** > **Purchasing** > **Payables**.
 
-2. Unmark the Override Voucher Number at Transaction Entry option, and then select **OK**.
+2. Unmark the **Override Voucher Number at Transaction Entry** option, and then select **OK**.

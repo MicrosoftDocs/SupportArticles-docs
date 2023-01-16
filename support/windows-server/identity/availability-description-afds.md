@@ -114,8 +114,7 @@ The following files are available for download from the Microsoft Download Cente
 |AdfsSetup.exe|Windows Server 2008 R2|x64|24.04 MB|
 |AdfsSetup.exe|Windows Server 2008 SP2|x64|42.64 MB|
 |AdfsSetup.exe|Windows Server 2008 SP2|x86|38.66 MB|
-|||||
-
+  
 For more information about how to download Microsoft support files, see [How to obtain Microsoft support files from online services](https://support.microsoft.com/help/119591).
 
 Microsoft scanned this file for viruses. Microsoft used the most current virus-detection software that was available on the date that the file was posted. The file is stored on security-enhanced servers that help prevent any unauthorized changes to the file.  
@@ -140,7 +139,7 @@ Copy the AD FS service configuration file to a file server on the network before
 2. Copy the following configuration file to a safe backup location:  
     Microsoft.IdentityServer.Servicehost.exe.config
 
-3. Click **Start**, click **Run**, type *services.msc*, and then click **OK**.
+3. Click **Start**, click **Run**, type _services.msc_, and then click **OK**.
 4. Right-click **AD FS 2.0 Windows Service**, and then click **Properties**.
 5. On the **Log On** tab, note the service account that is used for the AD FS 2.0 Windows Service.
 
@@ -156,16 +155,16 @@ Reinstall AD FS 2.0, set a registry setting to restore the previous configuratio
     Microsoft.IdentityServer.Servicehost.exe.config
 3. Locate the following AD FS 2.0 installation folder, and then copy the file that is mentioned in step 2 to this location:  
     %system drive%\\Program Files\\Active Directory Federation Service 2.0
-4. Click **Start**, click **Run**, type *regedit*, and then click **OK**.
+4. Click **Start**, click **Run**, type _regedit_, and then click **OK**.
 5. Locate and then click the following registry subkey:  
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\adfssrv`
 
 6. On the **Edit** menu, point to **New**, and then click **String Value**.
-7. Type *InitialConfigurationCompleted*, and then press ENTER.
+7. Type _InitialConfigurationCompleted_, and then press ENTER.
 8. Right-click **InitialConfigurationCompleted**, and then click **Modify**.
-9. In the **Value data** box, type *TRUE*, and then click **OK**.
+9. In the **Value data** box, type _TRUE_, and then click **OK**.
 10. On the **File** menu, click **Exit** to exit Registry Editor.
-11. Click **Start**, click **Run**, type *services.msc*, and then click **OK**.
+11. Click **Start**, click **Run**, type _services.msc_, and then click **OK**.
 12. If you use Windows Internal Database as the AD FS 2.0 configuration database, follow these steps. Otherwise, bypass step 12, and go to step 13.
 
     1. Right-click **Windows Internal Database (MICROSOFT##SSEE)**, and then click **Properties**.
@@ -190,4 +189,4 @@ The following table lists significant technical revisions to this article. The r
 | Date| Revision |
 |---|---|
 |May 5, 2010|Original publication date|
-|||
+  

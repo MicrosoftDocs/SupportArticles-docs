@@ -2,7 +2,6 @@
 title: Missing or incorrect service principal names
 description: Fixes authentication and authorization problems in System Center Virtual Machine Manager due to missing or incorrect service principal names.
 ms.date: 04/26/2020
-ms.prod-support-area-path: 
 ms.reviewer: steveth
 ---
 # Authentication and authorization problems in System Center Virtual Machine Manager

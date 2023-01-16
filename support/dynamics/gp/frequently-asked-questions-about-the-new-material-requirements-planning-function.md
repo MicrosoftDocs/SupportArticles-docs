@@ -37,8 +37,7 @@ The following table describes the variables in the formula:
 |B|The quantity in the **Minimum** field in the Item Resource Planning Maintenance window|
 |C|The quantity in the **Economic Order** field in the Item Vendors Maintenance window|
 |D|The quantity in the **Minimum Order** field in the Item Vendors Maintenance window|
-|||
-
+  
 > [!NOTE]
 > The buffer quantity is added when a new order is placed.
 

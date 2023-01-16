@@ -2,7 +2,6 @@
 title: Management servers and managed devices are dimmed
 description: Fixes a problem where some Operations Manager roles are dimmed in the Operations console and event 623 is logged on the affected computers.
 ms.date: 07/06/2020
-ms.prod-support-area-path:
 ms.reviewer: cliveea, jarrettr, shannonw
 ---
 # Management servers and their managed devices are dimmed in the Operations Manager console

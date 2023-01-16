@@ -2,9 +2,9 @@
 title: Support policy for Citrix services on Azure
 description: Describes the Microsoft support policy that applies when you run Citrix services on Microsoft Azure. Also describes related Citrix support policies.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-support-statements
 ---
 # Support policy for Citrix services on Azure
 
@@ -39,6 +39,8 @@ It can take up to 4 hours. If the deployment is still pending after 4 hours, ope
 **Q: What is the support policy for XenApp trial?**
 
 XenApp Trial is not a formally supported product. Contact Citrix directly at [XenAppAzureTrial@citrix.com](mailto:XenAppAzureTrial@citrix.com) for best effort support directly from Citrix.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 

@@ -2,7 +2,6 @@
 title: Install Tivoli required rules and classes
 description: Describes how to install the required rules and classes for Opalis Integration Pack for IBM Tivoli Enterprise Console.
 ms.date: 08/04/2020
-ms.prod-support-area-path:
 ms.reviewer: irfanr, jfanjoy
 ---
 # Install Opalis Integration Pack for IBM Tivoli Enterprise Console class and rule definitions

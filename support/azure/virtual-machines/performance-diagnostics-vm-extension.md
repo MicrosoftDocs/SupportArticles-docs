@@ -1,18 +1,18 @@
 ---
-title: Azure Performance Diagnostics VM Extension for Windows| Microsoft Docs
+title: Azure Performance Diagnostics VM Extension for Windows
 description: Introduces Azure Performance Diagnostics VM Extension for Windows.
 services: virtual-machines
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: na
 tags: ''
 ms.service: virtual-machines
+ms.subservice: vm-performance
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 10/31/2018
+ms.date: 03/21/2022
 ms.author: genli
 
 ---
@@ -99,19 +99,19 @@ Follow these instructions to install the extension on Windows virtual machines:
 
     :::image type="content" source="media/performance-diagnostics-vm-extension/select-virtual-machine.png" alt-text="Screenshot of Azure portal, with Virtual machines highlighted.":::
 
-3. Select the **Extensions** blade, and select **Add**.
+3. Select the **Extensions + applications** blade, and select **Add**.
 
     :::image type="content" source="media/performance-diagnostics-vm-extension/select-extensions.png" alt-text="Screenshot of Extensions blade, with Add highlighted.":::
 
-4. Select **Azure Performance Diagnostics**, review the terms and conditions, and select **Create**.
+4. Search for **Azure Performance Diagnostics**, click the extension, review the terms and conditions, and select **Next**.
 
-    :::image type="content" source="media/performance-diagnostics-vm-extension/create-azure-performance-diagnostics-extension.png" alt-text="Screenshot of New resource screen, with Azure Performance Diagnostics highlighted.":::
+    :::image type="content" source="media/performance-diagnostics-vm-extension/search-result.png" alt-text="Screenshot of New resource screen, with Azure Performance Diagnostics highlighted.":::
 
-5. Provide the parameter values for the installation, and select **OK** to install the extension. For more information about supported scenarios, see [How to use PerfInsights](how-to-use-perfinsights.md#supported-troubleshooting-scenarios).
+5. Provide the parameter values for the installation, and then install the extension. For more information about supported scenarios, see [How to use PerfInsights](how-to-use-perfinsights.md#supported-troubleshooting-scenarios).
 
     :::image type="content" source="media/performance-diagnostics-vm-extension/install-extension.png" alt-text="Screenshot of Install extension dialog box.":::
 
-6. When the installation is successful, you see a message indicating this status.
+6. When the installation is successful, the status of the extension shows **Provisioning succeeded**.
 
     :::image type="content" source="media/performance-diagnostics-vm-extension/provisioning-succeeded-message.png" alt-text="Screenshot of Provisioning succeeded message.":::
 
@@ -122,13 +122,10 @@ Follow these instructions to install the extension on Windows virtual machines:
 
 To remove the extension from a virtual machine, follow these steps:
 
-1. Sign in to the [Azure portal](https://portal.azure.com), select the virtual machine from which you want to remove this extension, and then select the **Extensions** blade.
-2. Select the (**…**) for the Performance Diagnostics Extension entry from the list, and select **Uninstall**.
+1. Sign in to the [Azure portal](https://portal.azure.com), select the virtual machine from which you want to remove this extension, and then select the **Extensions + applications** blade.
+2. Select the Performance Diagnostics Extension, and then select **Uninstall**.
 
      :::image type="content" source="media/performance-diagnostics-vm-extension/uninstall-extension.png" alt-text="Screenshot of Extensions blade, with Uninstall highlighted.":::
-
-    > [!NOTE]
-    > You can also select the extension entry, and select the **Uninstall** option.
 
 ## Template deployment
 
@@ -260,11 +257,11 @@ You should also be able to download the zip file directly from the portal by sel
 
 ## Troubleshoot and support
 
-- Extension deployment status (in the notification area) might show "Deployment in progress" even though the extension is successfully provisioned.
+* Extension deployment status (in the notification area) might show "Deployment in progress" even though the extension is successfully provisioned.
 
     This issue can be safely ignored, as long as the extension status indicates that the extension is successfully provisioned.
-- You can address some issues during installation by using the extension logs. Extension execution output is logged to files found in the following directory:
+* You can address some issues during installation by using the extension logs. Extension execution output is logged to files found in the following directory:
 
     `C:\WindowsAzure\Logs\Plugins\Microsoft.Azure.Performance.Diagnostics.AzurePerformanceDiagnostics\<version>`
 
-If you need more help at any point in this article, you can contact the Azure experts on the [MSDN Azure and Stack Overflow forums](https://azure.microsoft.com/support/forums/). Alternatively, you can file an Azure support incident. Go to the [Azure support site](https://azure.microsoft.com/support/options/), and select **Get support**. For information about using Azure support, read the [Microsoft Azure support FAQ](https://azure.microsoft.com/support/faq/).
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -2,7 +2,6 @@
 title: Azure API Management Troubleshooting Scenario 1 - API returning blank response
 description: Provides troubleshooting steps to an issue in which Azure API is returning blank response.
 ms.date: 03/04/2021
-ms.prod-support-area-path: 
 ms.service: api-management
 ms.author: genli
 author: genlin
@@ -49,3 +48,5 @@ To debug this kind of issues, the best approach is collect [APIM inspector trace
 - Add the forward-request policy in the backend section or add **\<base />** element so that it inherits forward-request policy from the parent level (i.e. from the API level), which should resolve the problem.
 
 Read about the [forward-request](/azure/api-management/api-management-advanced-policies#ForwardRequest) policy to know more about it.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

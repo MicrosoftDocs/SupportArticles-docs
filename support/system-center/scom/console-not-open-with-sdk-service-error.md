@@ -2,7 +2,6 @@
 title: The Operations Manager console doesn't open
 description: Fixes an issue in which you receive the Failed to connect to server error when you open the Operations Manager console on the management server.
 ms.date: 09/02/2020
-ms.prod-support-area-path:
 ---
 # Operations Manager console doesn't open and gives SDK service error
 

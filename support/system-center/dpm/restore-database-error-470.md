@@ -2,7 +2,6 @@
 title: Error 470 when restoring a DPM database
 description: Fixes an issue that triggers an Invalid object name error when you try to restore a Data Protection Manager database by using the DpmSync utility.
 ms.date: 07/23/2020
-ms.prod-support-area-path: 
 ---
 # Error ID 470 when you run the DpmSync –RestoreDb command in Data Protection Manager
 

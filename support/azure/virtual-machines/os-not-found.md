@@ -2,9 +2,9 @@
 title: Windows can't boot with (An operating system wasn't found) error 
 description: Provides a solution to an issue where Windows VM doesn't start with (An operating system wasn't found) error.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ---
 # Windows boot error in an Azure VM: An operating system wasn't found
@@ -76,7 +76,7 @@ To fix this issue, stop (de-allocate) and restart the VM. Then, check whether th
         sel vol <number of the volume>
         ```
 
-    4. List the partition on the disk, and then select the partition that contains the Windows folder. 
+    4. List the partition on the disk, and then select the partition that contains the Windows folder.
 
         ```console
         list partition
@@ -139,3 +139,5 @@ To fix this issue, stop (de-allocate) and restart the VM. Then, check whether th
     ```
 
 4. Detach the repaired OS disk from the troubleshooting VM. Then, create a VM from the OS disk.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

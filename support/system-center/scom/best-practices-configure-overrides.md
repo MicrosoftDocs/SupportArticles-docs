@@ -2,7 +2,6 @@
 title: Best practices to configure overrides
 description: Describes a list of best practices to use when you configure overrides in System Center Operations Manager.
 ms.date: 06/30/2020
-ms.prod-support-area-path: 
 ms.reviewer: antoniha, v-jomcc
 ---
 # Best practices for configuring overrides in Operations Manager

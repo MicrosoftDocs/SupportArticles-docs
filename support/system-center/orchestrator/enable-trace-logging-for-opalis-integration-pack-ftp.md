@@ -2,7 +2,6 @@
 title: Enable trace logging for Opalis Integration Pack for FTP
 description: Describes how to enable trace logging for Opalis Integration Pack for File Transfer Protocol.
 ms.date: 08/04/2020
-ms.prod-support-area-path:
 ---
 # How to enable trace logging for Opalis Integration Pack for File Transfer Protocol (FTP)
 

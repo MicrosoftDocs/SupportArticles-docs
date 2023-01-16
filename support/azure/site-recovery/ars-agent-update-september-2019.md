@@ -74,9 +74,13 @@ If your servers are registered to one or more Recovery Services Vaults, you can 
 1. When you're done updating, you can select other servers that have Agent versions that are earlier than **2.0.9169.0**, and then update the Agents on those servers in the same manner.
 
 ### Restart information
+
 If you are using Windows Server 2008 (SP2 and R2 SP1, any version), you must restart the computer after you apply this update. Users who installed MARS Agent on other Windows Server versions don’t have to restart the computer after applying this update.
 
 ### Prerequisites
+
 If you use System Center 2016 Data Protection Manager (SC DPM), Microsoft recommends that you apply [Update Rollup 1](https://support.microsoft.com/help/3190600) for System Center 2016 Data Protection Manager or a later version.
 
 If you use System Center 2012 R2 Data Protection Manager (SC DPM), apply [Update Rollup 12](https://support.microsoft.com/help/3209592/) for System Center 2012 R2 Data Protection Manager or a later version.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

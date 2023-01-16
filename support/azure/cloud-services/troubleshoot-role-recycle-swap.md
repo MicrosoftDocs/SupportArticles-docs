@@ -2,7 +2,8 @@
 title: Troubleshoot Cloud Service role recycle threshold exceptions
 description: Troubleshoot UpdateDeploymentRoleRecycleThresholdReached (role recycle threshold) exceptions in Azure Cloud Service (classic).
 ms.service: cloud-services
-ms.date: 12/10/2021
+ms.subservice: troubleshoot-deployment-classic
+ms.date: 09/26/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: chiragpa
@@ -47,3 +48,5 @@ What if you don't want to lose the IP address that's associated with your existi
 1. Make a new deployment to that slot.
 
 1. Associate the required reserved IP address to this cloud service slot.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

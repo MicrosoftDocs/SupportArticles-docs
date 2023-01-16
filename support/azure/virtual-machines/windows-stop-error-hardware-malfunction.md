@@ -4,9 +4,9 @@ description: This article provides steps to resolve issues where Windows Server 
 services: virtual-machines
 documentationcenter: ''
 author: mibufo
-editor: ''
 tags: azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
@@ -54,8 +54,8 @@ This screen will appear when the Guest OS wasn't set up correctly and a Non-Mask
 
 ### Set up the Non-Maskable Interrupt (NMI) registry key
 
-1. Using the Azure portal, restart the VM so that the Guest OS boots normally. 
-2. Once some access to the VM has been restored, open an elevated command prompt (run as administrator). 
+1. Using the Azure portal, restart the VM so that the Guest OS boots normally.
+2. Once some access to the VM has been restored, open an elevated command prompt (run as administrator).
 3. Set up the NMI registry key with the following command:
 
     ```console
@@ -103,11 +103,11 @@ This screen will appear when the Guest OS wasn't set up correctly and a Non-Mask
 
 ### Enable serial console and memory dump collection
 
-Before rebuilding the VM, it is recommended to enable memory dump collection and Serial Console. To do so, run the following script: 
+Before rebuilding the VM, it is recommended to enable memory dump collection and Serial Console. To do so, run the following script:
 
-1. Open an elevated command prompt session (run as administrator). 
-2. List the BCD store data and determine the boot loader identifier, which you'll use in the next step. 
-    1. For a Generation 1 VM, enter the following command and note the identifier listed: 
+1. Open an elevated command prompt session (run as administrator).
+2. List the BCD store data and determine the boot loader identifier, which you'll use in the next step.
+    1. For a Generation 1 VM, enter the following command and note the identifier listed:
 
         ```console
         bcdedit /store <BOOT PARTITON>:\boot\bcd /enum
@@ -136,8 +136,8 @@ Before rebuilding the VM, it is recommended to enable memory dump collection and
 
     * In the command, replace `<VOLUME LETTER WHERE THE BCD FOLDER IS>` with the letter of the BCD folder.
     * In the command, replace `<BOOT LOADER IDENTIFIER>` with the identifier you found in the previous step.
-4. Verify that the free space on the OS disk is greater than the memory size (RAM) on the VM. 
-    1. If there's not enough space on the OS disk, you should change the location where the memory dump file will be created. Rather than creating the file on the OS disk, you can refer it to any other data disk attached to the VM that has enough free space. To change the location, replace **%SystemRoot%** with the drive letter (for example **F:**) of the data disk in the commands listed below. 
+4. Verify that the free space on the OS disk is greater than the memory size (RAM) on the VM.
+    1. If there's not enough space on the OS disk, you should change the location where the memory dump file will be created. Rather than creating the file on the OS disk, you can refer it to any other data disk attached to the VM that has enough free space. To change the location, replace **%SystemRoot%** with the drive letter (for example **F:**) of the data disk in the commands listed below.
     2. Enter the commands below (suggested dump configuration):
 
     **Load Registry Hive from the broken OS Disk:**
@@ -176,3 +176,5 @@ Before rebuilding the VM, it is recommended to enable memory dump collection and
 
 > [!div class="nextstepaction"]
 > [Troubleshoot Azure Virtual Machine Boot Errors](./boot-error-troubleshoot.md)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

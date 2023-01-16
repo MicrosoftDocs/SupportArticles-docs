@@ -2,7 +2,7 @@
 title: BizTalk Explorer operations fail
 description: This article describes a workaround for a System.Data.SqlClient.SQLException error message while you're performing BizTalk Explorer operations.
 ms.date: 03/16/2020
-ms.prod-support-area-path: Management and Operations
+ms.custom: sap:Management and Operations
 ---
 # BizTalk Explorer operations fail with System.Data.SqlClient.SQLException
 
