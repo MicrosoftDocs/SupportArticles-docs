@@ -12,8 +12,6 @@ This article describes how to change the perpetual valuation method to the perio
 _Applies to:_ &nbsp; Microsoft Dynamics GP  
 _Original KB number:_ &nbsp; 940837
 
-## Introduction
-
 > [!IMPORTANT]
 > Before you follow the instructions in this article, make sure that you have a complete backup copy of the database that you can restore if a problem occurs.
 
@@ -93,7 +91,7 @@ _Original KB number:_ &nbsp; 940837
 
 13. Enter and then revalue the standard costs. To do it, use one of the following methods.
 
-### Method 1
+#### Method 1
 
 1. In the **Standard Item Material Costs** window, point to **Manufacturing** on the **Cards** menu, point to **Inventory**, and then select **Std Item Mat Costs**.
 2. Use the **Roll Up and Revalue Inventory** window to revalue the standard cost. To do it, follow the appropriate step:
@@ -101,7 +99,7 @@ _Original KB number:_ &nbsp; 940837
    - If you're using Microsoft Dynamics GP 10.0, point to **Tools** on the **Microsoft Dynamics GP** menu, point to **Routines**, point to **Manufacturing**, and then select **Rollup and Revalue**.
    - If you're using Microsoft Dynamics GP 9.0, point to **Routines** on the **Tools** menu, point to **Manufacturing**, and then select **Rollup and Revalue**.
 
-### Method 2
+#### Method 2
 
 1. In the **Standard Cost Maintenance** window, point to **Inventory** on the **Cards** menu, point to **Manufacturing**, and then select **Std Cost Maintenance**.
 2. Use the **Roll Up and Revalue Inventory** window to revalue the standard cost. To do it, follow the appropriate step:
@@ -109,7 +107,7 @@ _Original KB number:_ &nbsp; 940837
      - If you're using Microsoft Dynamics GP 10.0, point to **Tools** on the **Microsoft Dynamics GP** menu, point to **Routines**, point to **Manufacturing**, and then select **Rollup and Revalue**.
      - If you're using Microsoft Dynamics GP 9.0, point to **Routines** on the **Tools** menu, point to **Manufacturing**, and then select **Rollup and Revalue**.
 
-### Method 3
+#### Method 3
 
 1. On the **Cards** menu, point to **Manufacturing**, point to **Inventory**, and then select **Standard Costs Changes**.
 2. Enter the standard costs in the **Standard Costs Changes** window, select **Rollup**, and then select **Replace Costs**.
