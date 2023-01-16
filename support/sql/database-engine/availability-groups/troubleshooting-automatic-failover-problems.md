@@ -1,8 +1,10 @@
 ---
 title: Troubleshooting automatic failover problems
 description: This article provides the troubleshooting steps for the problems that occur during automatic failover in SQL Server.
-ms.date: 12/16/2022
+ms.date: 01/16/2023
 ms.custom: sap:Availability Groups
+author: padmajayaraman
+ms.author: v-jayaramanp
 ms.reviewer: ramakoni, cmathews
 ms.prod: sql
 ---
@@ -17,14 +19,16 @@ _Original KB number:_ &nbsp; 2833707
 
 Microsoft SQL Server Always On availability groups can be configured for automatic failover. Therefore, if a health issue is detected on the instance of SQL Server that is hosting the primary replica, the primary role can be transitioned to the automatic failover partner (secondary replica). However, the secondary replica can't always be transitioned to the primary role, instead being transitioned only to the resolving role. Unless the primary replica returns to a healthy state, there's no replica in the primary role. Additionally, the availability databases are inaccessible.
 
-This article lists some common causes of unsuccessful automatic failover. Additionally, this article discusses the steps that you can perform in order to diagnose the cause of these failures.
+This article lists some common causes of unsuccessful automatic failover. Additionally, this article discusses the steps that you can perform to diagnose the cause of these failures.
 
 ## The symptoms when an automatic failover is triggered successfully
 
 When an automatic failover is triggered on the instance of SQL Server that is hosting the primary replica, the secondary replica transitions to the resolving role and then to the primary role. Additionally, you receive error messages in the SQL Server log report that resemble the following one:
 
-> The state of the local availability replica in availability group '\<Group name>' has changed from 'RESOLVING_NORMAL' to 'PRIMARY_PENDING'  
+```output
+The state of the local availability replica in availability group '\<Group name>' has changed from 'RESOLVING_NORMAL' to 'PRIMARY_PENDING'  
 The state of the local availability replica in availability group '\<Group name>' has changed from 'PRIMARY_PENDING' to 'PRIMARY_NORMAL'
+```
 
 :::image type="content" source="media/troubleshooting-automatic-failover-problems/error-log-notepad.png" alt-text="Screenshot of the error log when an automatic failover is triggered successfully.":::
 
@@ -49,7 +53,7 @@ To investigate and diagnose whether this is the cause of unsuccessful failover, 
 
 ### Step 1: Review the data in the Windows cluster log (_Cluster.log_)
 
-1. Use Windows PowerShell to generate the Windows cluster log on the cluster node that is hosting the primary replica. To do this, run the following cmdlet in an elevated PowerShell window on the instance of SQL Server that is hosting the primary replica:
+1. Use Windows PowerShell to generate the Windows cluster log on the cluster node that is hosting the primary replica. To do this, run the following cmdlet in an elevated PowerShell window on the instance of SQL Server that's hosting the primary replica:
 
    ```powershell
    Get-ClusterLog -Node <SQL Server node name> -TimeSpan 15
@@ -75,18 +79,18 @@ To investigate and diagnose whether this is the cause of unsuccessful failover, 
 1. Start Failover Cluster Manager.
 1. In the navigation pane, select **Roles**.
 1. In the **Roles** pane, right-click the clustered resource, and then select **Properties**.
-41 Select the **Failover** tab, and check the **Maximum Failures in the Specified Period** value.
+1. Select the **Failover** tab, and check the **Maximum Failures in the Specified Period** value.
 
    :::image type="content" source="media/troubleshooting-automatic-failover-problems/properties.png" alt-text="Screenshot of the Maximum Failures in the Specified Period property.":::
 
    > [!NOTE]
    > The default behavior specifies that if the clustered resource fails three times in a six hour period, it should remain in the failed state. For an availability group, this means the replica is left in the RESOLVING state.
 
-Conclusion
+**Conclusion**
 
 After you analyze the log, you find that the **failoverCount** value of 3 is greater than the **computedFailoverThreshold** value of 2. Therefore, Windows cluster can't complete the failover operation of the availability group resource to the failover partner.
 
-Resolution
+**Resolution**
 
 To resolve this issue, increase the **Maximum Failures in the Specified Period** value.
 
@@ -101,7 +105,7 @@ The SQL Server Database Engine resource DLL connects to the instance of SQL Serv
 - **Connect SQL**  
 - **View server state**
 
-If the NT AUTHORITY\SYSTEM login account lacks any of these permissions on the automatic failover partner (the secondary replica), then SQL Server can't start health detection when an automatic failover occurs. Therefore, the secondary replica can't transition to the primary role. To investigate and diagnose whether this is the cause, review the Windows cluster log. To do this, follow these steps:
+If the `NT AUTHORITY\SYSTEM` login account lacks any of these permissions on the automatic failover partner (the secondary replica), then SQL Server can't start health detection when an automatic failover occurs. Therefore, the secondary replica can't transition to the primary role. To investigate and diagnose whether this is the cause, review the Windows cluster log. To do this, follow these steps:
 
 1. Use Windows PowerShell to generate the Windows cluster log on the cluster node. To do this, run the following cmdlet in an elevated PowerShell window on the instance of SQL Server that is hosting the secondary replica that didn't transition into the primary role:
 
@@ -111,7 +115,7 @@ If the NT AUTHORITY\SYSTEM login account lacks any of these permissions on the a
 
    :::image type="content" source="media/troubleshooting-automatic-failover-problems/windows-powershell.png" alt-text="Screenshot of the Windows cluster log in Windows PowerShell in Case 2." border="false":::
 
-1. Open the Cluster.log file in Notepad in order to review the Windows cluster log.
+1. Open the *Cluster.log* file in Notepad to review the Windows cluster log.
 
 1. You can find error messages that resemble the following one:
 
@@ -120,33 +124,33 @@ If the NT AUTHORITY\SYSTEM login account lacks any of these permissions on the a
 
    :::image type="content" source="media/troubleshooting-automatic-failover-problems/error-messages.png" alt-text="Screenshot of Cluster.log file in Notepad in Case 2." border="false":::
 
-Conclusion
+**Conclusion**
 
-The Cluster.log file reports that there's a permission issue when SQL Server runs the diagnostics command. In this example, the failure was caused by removing the View server state permission from the NT AUTHORITY\SYSTEM login account on the instance of SQL Server that is hosting the secondary replica of an automatic failover pair.
+The *Cluster.log* file reports that there's a permission issue when SQL Server runs the diagnostics command. In this example, the failure was caused by removing the View server state permission from the `NT AUTHORITY\SYSTEM` login account on the instance of SQL Server that is hosting the secondary replica of an automatic failover pair.
 
-Resolution
+**Resolution**
 
-To resolve this issue, grant sufficient permissions to the NT AUTHORITY\SYSTEM login account for the health detection of SQL Server Database Engine resource DLL.  
+To resolve this issue, grant sufficient permissions to the `NT AUTHORITY\SYSTEM` login account for the health detection of SQL Server Database Engine resource DLL.  
 
 ## Case 3: The availability databases aren't in a SYNCHRONIZED state
 
-In order to automatically fail over, all availability databases that are defined in the availability group must be in a SYNCHRONIZED state between the primary replica and the secondary replica. When an automatic failover occurs, this synchronization condition must be met in order to make sure that there's no data loss. Therefore, if one availability database in the availability group in the synchronizing or not synchronized state, automatic failover won't successfully transition the secondary replica into the primary role.
+In order to automatically fail over, all availability databases that're defined in the availability group must be in a `SYNCHRONIZED` state between the primary replica and the secondary replica. When an automatic failover occurs, this synchronization condition must be met in order to make sure that there's no data loss. Therefore, if one availability database in the availability group in the synchronizing or not synchronized state, automatic failover won't successfully transition the secondary replica into the primary role.
 
 For more information about the required conditions for an automatic failover, see the **Conditions required for an Automatic Failover** section and the **Synchronous-commit replicas support two settings** section of the article: [Failover and Failover Modes (Always On Availability Groups)](/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups).
 
 To investigate and diagnose whether this is the cause of unsuccessful failover, review the SQL Server error log. You should find an error message that resembles the following one:
 
-One or more databases aren't synchronized or haven't joined the availability group
+One or more databases aren't synchronized or haven't joined the availability group.
 
 :::image type="content" source="media/troubleshooting-automatic-failover-problems/error-log.png" alt-text="Screenshot of the SQL Server error log in Case 3." border="false":::
 
-To check whether the availability databases were in the SYNCHRONIZED status, follow these steps:
+To check whether the availability databases were in the `SYNCHRONIZED` status, follow these steps:
 
 1. Connect to the secondary replica.
-1. Run the following SQL script in order to check the `is_failover_ready` value for all availability databases in the availability group that didn't fail over.
+1. Run the following SQL script to check the `is_failover_ready` value for all availability databases in the availability group that didn't fail over.
 
    > [!NOTE]
-   > A value of zero for any of the availability databases can prevent automatic failover, and this value indicates that the availability database was not SYNCHRONIZED.
+   > A value of zero for any of the availability databases can prevent automatic failover, and this value indicates that the availability database was not `SYNCHRONIZED`.
 
     ```sql
     Select database_name, is_failover_ready from sys.dm_hadr_database_replica_cluster_states where replica_id in (select replica_id from sys.dm_hadr_availability_replica_states)
@@ -154,26 +158,100 @@ To check whether the availability databases were in the SYNCHRONIZED status, fol
 
    :::image type="content" source="media/troubleshooting-automatic-failover-problems/sql-query.png" alt-text="Screenshot of SQL query in Case 3.":::
 
-Conclusion
+**Conclusion**
 
 A successful automatic failover of the availability group requires all availability databases be in the `SYNCHRONIZED` status. For more information about availability modes, review the following link:
 
 [Availability modes in Always On availability groups](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups)
 
-## Case 4: Unable to fail over, "Force Protocol Encryption" configuration has been selected for the client protocols
+## Case 4: Unable to fail over, the "Force Protocol Encryption" configuration has been selected for the client protocols
 
 To check for this configuration:  
 
 1. Launch SQL Server Configuration Manager.  
 1. In **left** pane, right-click the **SQL Native Client 11.0 Configuration** and choose **Properties**.  
-1. In dialog check **Force Encryption**, if set to **Yes**, change to **No**.
+1. In dialog, check **Force Encryption**, if set to **Yes**, change to **No**.
 1. Retest failover.  
 
 :::image type="content" source="media/troubleshooting-automatic-failover-problems/sql-config.png" alt-text="Screenshot of the SQL Native Client 11.0 Configuration properties in SQL Server Configuration Manager." border="false":::
 
-Conclusion
+**Conclusion**
 
 SQL Server Always On health monitoring uses a local ODBC connection to monitor SQL Server health. **Force Protocol Encryption** should only be enabled in the Client Configuration section of SQL Server Configuration Manager, if SQL Server itself has been configured to Force Encryptions in SQL Server Configuration Manager under the **SQL Server Network Configuration** section. For more information, see: [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine).
+
+## Case 5: Performance issues on secondary replica or node causes Always On health checks to fail
+
+Before failing over from primary replica to secondary replica, SQL Server Database Engine resource DLL connects to secondary replica to ascertain the health of the replica before failing over. If this connection fails due to performance issues on secondary replica, the automatic failover doesn't occur.
+
+To investigate and diagnose whether this is the cause, follow these steps:
+
+1. Review the Cluster log on the secondary replica, and check if you see the error message 'Unable to complete login process due to delay in opening server connection'.
+
+    ```output
+    0000110c.00002bcc::2020/08/06-01:17:54.943 INFO  [RCM] move of group AOCProd01AG from CO2ICMV3SQL09(1) to CO2ICMV3SQL10(2) of type MoveType::Manual is about to succeed, failoverCount=3, lastFailoverTime=2020/08/05-02:08:54.524 targeted=true 
+    00002a54.0000610c::2020/08/06-01:18:44.929 ERR   [RES] SQL Server Availability Group <AOCProd01AG>: [hadrag] ODBC Error: [08001] [Microsoft][SQL Server Native Client 11.0]Unable to complete login process due to delay in opening server connection (0) 
+    00002a54.0000610c::2020/08/06-01:18:44.929 INFO  [RES] SQL Server Availability Group <AOCProd01AG>: [hadrag] Could not connect to SQL Server (rc -1) 
+    00002a54.0000610c::2020/08/06-01:18:44.929 INFO  [RES] SQL Server Availability Group <AOCProd01AG>: [hadrag] SQLDisconnect returns following information 
+    00002a54.0000610c::2020/08/06-01:18:44.929 ERR   [RES] SQL Server Availability Group <AOCProd01AG>: [hadrag] ODBC Error: [08003] [Microsoft][ODBC Driver Manager] Connection not open (0) 
+    00002a54.0000610c::2020/08/06-01:18:44.931 ERR   [RES] SQL Server Availability Group <AOCProd01AG>: [hadrag] Failed to connect to SQL Server 
+    00002a54.0000610c::2020/08/06-01:18:44.931 ERR   [RHS] Online for resource AOCProd01AG failed. 
+    ```
+
+    This can occur if failover is to a SQL Server secondary replica, which has a busy existing workload. This could delay SQL Server's response to the HADR health connection request attempt resulting in a failed failover attempt.
+
+1. To determine if there is pressure on system schedulers, use SSMS and execute the following script against the secondary replica:
+
+    ```sql
+    USE master 
+    GO  
+    WHILE 1=1 
+    BEGIN 
+    PRINT convert(varchar(20), getdate(),120) 
+    DECLARE @max INT; 
+    SELECT @max = max_workers_count 
+    FROM sys.dm_os_sys_info; 
+    SELECT GETDATE() AS 'CurrentDate',  
+           @max AS 'TotalThreads',  
+           SUM(active_Workers_count) AS 'CurrentThreads',  
+           @max - SUM(active_Workers_count) AS 'AvailableThreads',  
+           SUM(runnable_tasks_count) AS 'WorkersWaitingForCpu',  
+           SUM(work_queue_count) AS 'RequestWaitingForThreads' 
+           --SUM(current_workers_count) AS 'AssociatedWorkers' 
+    FROM sys.dm_os_Schedulers 
+    WHERE STATUS = 'VISIBLE ONLINE'; 
+    wait for delay '0:0:15' 
+    END
+    ```
+
+Following is the sample output of the preceding query:
+
+   ```output
+    CurrentDate    TotalThreads    CurrentThreads    AvailableThreads    WorkersWaitingForCpu    RequestWaitingForThreads
+    
+    2020-10-06    01:27:01.337    1216    361    855    33    0
+    
+    2020-10-06    01:27:08.340    1216    1412   -196   22    76
+    
+    2020-10-06    01:27:15.340    1216    1304   -88    2    161
+    
+    2020-10-06    01:27:22.340    1216    1242   -26    21   185
+    
+    2020-10-06    01:27:29.343    1216    1346   -130   19   476
+    
+    2020-10-06    01:27:36.350    1216    1350   -134   9    630
+    
+    2020-10-06    01:27:43.353    1216    1346   -130   13   539
+    
+    2020-10-06    01:27:50.360    1216    1378   -162   5    328
+    
+    2020-10-06    01:27:57.360    1216    197    1019   0     0
+   ```
+
+High values reported for `WorkersWaitingForCpu` and `RequestWaitingForThreads` indicate that there's scheduling contention and SQL Server is unable to service the current workload in a timely manner.
+
+**Resolution**
+
+If you're experiencing this issue, re balance the workload on the secondary replica or consider increasing the number of CPUs on all the replicas in the availability group.
 
 ## Troubleshoot other failed failover events
 
@@ -203,38 +281,42 @@ Examples of connection failures to the new primary replica:
 
 ### Example Set 1
 
-> [hadrag] ODBC Error: [08001] [Microsoft][SQL Server Native Client 11.0]SQL Server Network
+ ```output
+[hadrag] ODBC Error: [08001] [Microsoft][SQL Server Native Client 11.0]SQL Server Network
 Interfaces: No client protocols are enabled and no protocol was specified in the connection
 string [xFFFFFFFF]. (268435455)
+ ```
 
-Resolution
+**Resolution**
 
 Launch SQL Server Configuration Manager and confirm Shared Memory or TCPIP is enabled
 under the Client Protocols for the SQL Native Client Configuration.
 
 ### Example Set 2
 
-> [hadrag] ODBC Error: [08001] [Microsoft][SQL Server Native Client 11.0]SQL Server Network
+ ```output
+[hadrag] ODBC Error: [08001] [Microsoft][SQL Server Native Client 11.0]SQL Server Network
 Interfaces: Server doesn't support requested protocol [xFFFFFFFF]. (268435455)
+ ```
 
-Resolution
+**Resolution**
 
-Launch SQL Server Configuration Manager and confirm Shared Memory or TCPIP is enabled
+Launch SQL Server Configuration Manager and confirm Shared Memory or TCP/IP is enabled
 under the Client Protocols for the SQL Native Client Configuration.
 
 ### Example Set 3
 
-> 000010b8.00001764::2020/12/02-16:52:49.808 ERR [RES] SQL Server Availability Group : [hadrag]
+ ```output
+000010b8.00001764::2020/12/02-16:52:49.808 ERR [RES] SQL Server Availability Group : [hadrag]
 ODBC Error: [42000] [Microsoft][SQL Server Native Client 11.0][SQL Server]Cannot alter the availability
 group 'ag', because it does not exist or you do not have permission. (15151)
->
-> 000010b8.00000fd0::2020/12/02-17:01:14.821 ERR [RES] SQL Server Availability Group: [hadrag]
+000010b8.00000fd0::2020/12/02-17:01:14.821 ERR [RES] SQL Server Availability Group: [hadrag]
 ODBC Error: [42000] [Microsoft][SQL Server Native Client 11.0][SQL Server]The user does not have permission to perform this action. (297)
->
-> 000010b8.00001838::2020/12/02-17:10:04.427 ERR [RES] SQL Server Availability Group : [hadrag]
+000010b8.00001838::2020/12/02-17:10:04.427 ERR [RES] SQL Server Availability Group : [hadrag]
 ODBC Error: [42000] [Microsoft][SQL Server Native Client 11.0][SQL Server]Login failed for user
 'SQLREPRO\NODE2$'. Reason: The account is disabled. (18470)
+ ```
 
-Resolution
+**Resolution**
 
 Review [Case 2: Insufficient NT Authority\SYSTEM account permissions](#case-2-insufficient-nt-authoritysystem-account-permissions).
