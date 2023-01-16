@@ -134,7 +134,7 @@ To resolve this issue, grant sufficient permissions to the `NT AUTHORITY\SYSTEM`
 
 ## Case 3: The availability databases aren't in a SYNCHRONIZED state
 
-In order to automatically fail over, all availability databases that're defined in the availability group must be in a `SYNCHRONIZED` state between the primary replica and the secondary replica. When an automatic failover occurs, this synchronization condition must be met in order to make sure that there's no data loss. Therefore, if one availability database in the availability group in the synchronizing or not synchronized state, automatic failover won't successfully transition the secondary replica into the primary role.
+In order to automatically fail over, all availability databases that are defined in the availability group must be in a `SYNCHRONIZED` state between the primary replica and the secondary replica. When an automatic failover occurs, this synchronization condition must be met in order to make sure that there's no data loss. Therefore, if one availability database in the availability group in the synchronizing or not synchronized state, automatic failover won't successfully transition the secondary replica into the primary role.
 
 For more information about the required conditions for an automatic failover, see the **Conditions required for an Automatic Failover** section and the **Synchronous-commit replicas support two settings** section of the article: [Failover and Failover Modes (Always On Availability Groups)](/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups).
 
@@ -225,7 +225,7 @@ To investigate and diagnose whether this is the cause, follow these steps:
 
     Following is the sample output of the preceding query:
 
-       ```output
+    ```output
         CurrentDate    TotalThreads    CurrentThreads    AvailableThreads    WorkersWaitingForCpu    RequestWaitingForThreads
         
         2020-10-06    01:27:01.337    1216    361    855    33    0
@@ -245,7 +245,7 @@ To investigate and diagnose whether this is the cause, follow these steps:
         2020-10-06    01:27:50.360    1216    1378   -162   5    328
         
         2020-10-06    01:27:57.360    1216    197    1019   0     0
-       ```
+    ```
 
 High values reported for `WorkersWaitingForCpu` and `RequestWaitingForThreads` indicate that there's scheduling contention and SQL Server is unable to service the current workload in a timely manner.
 
