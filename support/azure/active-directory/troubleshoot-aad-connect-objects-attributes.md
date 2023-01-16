@@ -528,7 +528,7 @@ Fortunately, the issues that affect these components usually generate an error i
 
   Together with this update, Azure AD also sets a **DirSyncOverrides** on the object to flag that this user has the mobile phone number "overwritten" in Azure AD. From this point on, any update to the mobile attribute that originates from on-premises will be ignored because this attribute will no longer be managed by on-premises AD.
 
-  A support engineer can file an internal escalation request to revert the mobile SoA to on-premises by providing the **objectId** of the target users. However, this method is not recommended because this issue might occur again if a user or admin updates the **Mobile** attribute in the Office Portal or through PowerShell.
+  Learn more on [how to use the new BypassDirSyncOverrides feature and how to restore synchronization of Mobile and otherMobile attributes from Azure AD to on-premises Active Directory] (how-to-bypassdirsyncoverrides.md)
 
 - **UserPrincipalName changes do not update in Azure AD**
 
