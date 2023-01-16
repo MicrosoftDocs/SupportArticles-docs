@@ -70,7 +70,7 @@ SQL Server reports error 598 when it runs into an error while executing [CREATE 
 
 1. Restart the SQL Server instance.
 
-Once SQL Server starts, the upgrade script will be executed again.
+Once the SQL Server instance starts, the upgrade script will be executed again.
 
 - If the SP or CU upgrade script completes successfully, you can check the SQL Server error log and bootstrap folder to verify.
 - If the upgrade script fails again, check the SQL Server error log for other errors and troubleshoot the new errors.
