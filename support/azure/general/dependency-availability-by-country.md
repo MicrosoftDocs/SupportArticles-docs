@@ -30,14 +30,17 @@ Many product features have Azure dependencies that might not be available in all
 Primary countries/regions that have Azure dependencies availability as of April 2022:
 
 - Australia
-- Brazil*
+- Brazil
 - Canada
 - France
-- Germany*
+- Germany
 - India
 - Japan
+- Norway*
+- South Africa*
 - South Korea
-- Switzerland*
+- Switzerland
+- United Arab Emirates*
 - United Kingdom
 - United States of America
 
@@ -45,11 +48,9 @@ Countries/regions with an asterisk (\*) appended have recently obtained Azure de
 
 Countries/regions that are planned to get Azure dependencies availability soon:
 
-- Norway
 - Qatar
 - Singapore
-- South Africa
 - Sweden
-- United Arab Emirates
+
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

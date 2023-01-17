@@ -2,8 +2,8 @@
 title: Troubleshoot Application Insights user analytics tools
 description: This article provides answers to common questions about the user behavior analytics tools in Application Insights.
 ms.date: 6/22/2022
-author: kelleyguiney22
-ms.author: v-kegui
+author: DennisLee-DennisLee
+ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: aaronmax
 ms.service: azure-monitor

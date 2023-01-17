@@ -2,7 +2,7 @@
 title: Enable MFA for SMS Provider calls
 description: Describes a new feature that you can enable multi-factor authentication for SMS Provider calls to protect administrative actions.
 ms.date: 06/16/2020
-ms.reviewer: kaushika, preetir, prabagar, yuexia
+ms.reviewer: kaushika, preetir, prabagar, yuexia, buzb
 ---
 # Enable multi-factor authentication for SMS Provider calls
 
@@ -15,6 +15,9 @@ _Original KB number:_ &nbsp; 4042963
 
 > [!IMPORTANT]
 > You must be a member of the Full Administrator role that has access to the All scope to set and change MFA setting for SMS Provider calls.
+
+> [!NOTE]
+> You can enable MFA from any server that hosts the SMS Provider because it is a global setting.
 
 To enable MFA, follow these steps:
 
@@ -56,6 +59,12 @@ To enable MFA, follow these steps:
 
 1. select **Execute!**, and then select **Dismiss**.
 
+You can run the following SQL query to check whether MFA is enabled. If MFA is enabled, the query output shows the value of the `Value3` property is `10`.
+
+```sql
+select * from vSMS_SC_GlobalProperty where PropertyName='{3B1F3900-A186-11d0-BDA9-00A0C909FDD7} Authentication'
+```
+
 ### Use PowerShell cmdlets to set the AuthenticationLevel and ExceptionList properties
 
 You can also use PowerShell cmdlets to set the `AuthenticationLevel` and `ExceptionList` properties.
@@ -71,10 +80,9 @@ You can also use PowerShell cmdlets to set the `AuthenticationLevel` and `Except
 Invoke-CimMethod -Namespace 'root\sms\site_<site code>' -ClassName 'SMS_Site' -MethodName 'SetAuthenticationLevel' -Arguments @{AuthenticationLevel=$AuthenticationLevel;ExceptionList=$ExceptionList}
 ```
 
-#### Example 2: Set the authentication level and remove any entries from the exception list
+#### Example 2: Set the authentication level to default and remove any entries from the exception list
 
 ```powershell
-[array]$ExceptionList=@()
-[uint32]$AuthenticationLevel=<Authentication level value>
-Invoke-CimMethod -Namespace 'root\sms\site_<site code>' -ClassName 'SMS_Site' -MethodName 'SetAuthenticationLevel' -Arguments @{AuthenticationLevel=$AuthenticationLevel;ExceptionList=$ExceptionList}
+[uint32]$AuthenticationLevel=0
+Invoke-CimMethod -Namespace 'root\sms\site_<site code>' -ClassName 'SMS_Site' -MethodName 'SetAuthenticationLevel' -Arguments @{AuthenticationLevel=$AuthenticationLevel}
 ```

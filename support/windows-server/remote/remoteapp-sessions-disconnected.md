@@ -32,8 +32,8 @@ Leaving the session in a disconnected state allows subsequent RemoteApps to laun
 
 By default disconnected RemoteApp sessions will remain in a disconnected state indefinitely. This behavior can be modified by a new Group Policy setting introduced in Windows Server 2008, **Set time limit for logoff of RemoteApp sessions**. This setting is located in Group Policy under both Computer Configuration and User Configuration:
 
-- Computer Configuration\Administrative Templates\Windows Components\Terminal Services\Terminal Server\Session Time Limits
-- User Configuration\Administrative Templates\Windows Components\Terminal Services\Terminal Server\Session Time Limits
+- Computer Configuration\Administrative Templates\Windows Components\Remote Desktop Services\Remote Desktop Session Host\Session Time Limits
+- User Configuration\Administrative Templates\Windows Components\Remote Desktop Services\Remote Desktop Session Host\Session Time Limits
 
 To enable and configure the policy setting:
 
@@ -46,3 +46,7 @@ To enable and configure the policy setting:
 7. At a command prompt, type *gpupdate* and press ENTER to force the policy to refresh immediately on the local computer.
 
 After the policy setting is enabled, disconnected RemoteApp sessions will be logged off after the configured time delay. If other settings that control logging off disconnected Remote Desktop or Terminal Services sessions (not just RemoteApp sessions) conflict with the above setting, then the policy configured for the shortest time period will take effect. For example, if the **Set time limit for disconnected sessions** policy setting is configured for a shorter time period than **Set time limit for logoff of RemoteApp sessions**, the former will take effect.
+
+## Reference
+
+For more information, see [Policy CSP - ADMX_TerminalServer](/windows/client-management/mdm/policy-csp-admx-terminalserver).

@@ -5,6 +5,8 @@ ms.date: 10/12/2022
 ms.custom: KB4518398
 appliesto:
 - SQL Server 2019
+author: simonxjx
+ms.author: v-six
 ---
 # KB4518398 - SQL Server 2019 build versions
 
@@ -19,7 +21,7 @@ This article lists the Microsoft SQL Server 2019 builds that were released after
 | CU16| 15.0.4223.1| 2019.150.4223.1| 15.0.35.23| 2018.150.35.23 | [KB5011644](https://support.microsoft.com/help/5011644) | April 18, 2022 |
 | CU15| 15.0.4198.2| 2019.150.4198.2| 15.0.35.22| 2018.150.35.22 | [KB5008996](https://support.microsoft.com/help/5008996) | January 27, 2022 |
 | CU14| 15.0.4188.2| 2019.150.4188.2| 15.0.35.19| 2018.150.35.19 | [KB5007182](https://support.microsoft.com/help/5007182) | November 22, 2021|
-| CU13| 15.0.4178.1| 2019.150.4178.1| 15.0.35.15| 2018.150.35.15 | [KB5005679](https://support.microsoft.com/help/xx5005679x) | October 05, 2021 |
+| CU13| 15.0.4178.1| 2019.150.4178.1| 15.0.35.15| 2018.150.35.15 | [KB5005679](https://support.microsoft.com/help/5005679) | October 05, 2021 |
 | CU12| 15.0.4153.1| 2019.150.4153.1| 15.0.35.15| 2018.150.35.15 | [KB5004524](https://support.microsoft.com/help/5004524) | August 04, 2021|
 | CU11| 15.0.4138.2| 2019.150.4138.2| 15.0.35.9 | 2018.150.35.9| [KB5003249](https://support.microsoft.com/help/5003249) | June 10, 2021|
 | CU10| 15.0.4123.1| 2019.150.4123.1| 15.0.35.0 | 2018.150.35.0| [KB5001090](https://support.microsoft.com/help/5001090) | April 06, 2021 |
@@ -48,9 +50,9 @@ This article lists the Microsoft SQL Server 2019 builds that were released after
 ## References
 
 - [Microsoft SQL Server support lifecycle](https://support.microsoft.com/lifecycle/?c2=1044)
-- [KB321185](https://support.microsoft.com/help/321185) How to determine the version and edition of SQL Server and its components
+- [Latest updates and version history for SQL Server](../download-and-install-latest-updates.md)
 - [The script to determine which version and edition of SQL Server Database Engine is running](https://gallery.technet.microsoft.com/determining-which-version-af0f16f6)
 - [KB957826](https://support.microsoft.com/help/957826) The builds for all SQL Server versions
 - [SQL Server Service Packs are discontinued starting from SQL Server 2017](https://support.microsoft.com/help/4041553)
-- [KB822499](https://support.microsoft.com/help/822499) Naming schema and Fix area descriptions for SQL Server software update packages
-- [KB824684](https://support.microsoft.com/help/824684) Description of the standard terminology that is used to describe Microsoft software updates
+- [Naming schema and Fix area descriptions for SQL Server software update packages](../../database-engine/install/windows/naming-schema-and-fix-area.md)
+- [Description of the standard terminology that is used to describe Microsoft software updates](../../../windows-client/deployment/standard-terminology-software-updates.md)

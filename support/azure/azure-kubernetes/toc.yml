@@ -163,21 +163,23 @@
 
 - name: Troubleshoot Azure Storage-related issues
   items:
-  - name: Errors when mounting file share
+  - name: Errors when mounting File share
     href: fail-to-mount-azure-file-share.md
-  - name: Errors when mounting disk volumes
+  - name: Errors when mounting Blob container
+    href: mounting-azure-blob-storage-container-fail.md 
+  - name: Errors when mounting Disk volumes
     href: fail-to-mount-azure-disk-volume.md
-  - name: Can't set the uid and gid mounting options on an Azure disk
+  - name: Can't set the uid and gid mounting options on an Azure Disk
     href: failure-setting-azure-disk-mount-options-uid-gid.md
   - name: Could not change permissions using Azure Files
     href: could-not-change-permissions-azure-files.md
-  - name: Failed to create file share on storage account
+  - name: Failed to create File share on storage account
     href: create-file-share-failed-storage-account.md
   - name: File share mounting failures for Azure Files
     href: file-share-mount-failures-azure-files.md
   - name: Recommended and useful mountOptions settings
     href: mountoptions-settings-azure-files.md
-  - name: Slow attach and detach operations for an Azure disk
+  - name: Slow attach and detach operations for an Azure Disk
     href: slow-attach-detach-operations-azure-disk.md
 
 - name: AKS common issues
@@ -239,6 +241,8 @@
     href: troubleshoot-key-vault-csi-secrets-store-csi-driver.md
   - name: Troubleshoot Dapr extension installation errors
     href: troubleshoot-dapr-extension-installation-errors.md
+  - name: Troubleshoot deployment failures of Azure Marketplace offers
+    href: troubleshoot-failed-kubernetes-deployment-offer.md
   - name: Troubleshoot the KEDA add-on
     href: troubleshoot-kubernetes-event-driven-autoscaling-add-on.md
 

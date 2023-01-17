@@ -5,6 +5,8 @@ ms.date: 10/12/2022
 ms.custom: KB2936603
 appliesto:
 - SQL Server 2014
+author: simonxjx
+ms.author: v-six
 ---
 # KB2936603 - SQL Server 2014 build versions
 
@@ -27,7 +29,7 @@ This article lists the Microsoft SQL Server 2014 builds that were released after
 | SQL Server 2014 SP2 CU18 | 12.0.5687.1 | [KB4500180](https://support.microsoft.com/help/4500180) | July 29, 2019 |
 | SQL Server 2014 SP2 CU17 | 12.0.5632.1 | [KB4491540](https://support.microsoft.com/help/4491540) | April 16, 2019|
 | SQL Server 2014 SP2 CU16 | 12.0.5626.1 | [KB4482967](https://support.microsoft.com/help/4482967) | February 19, 2019 |
-| SQL Server 2014 SP2 CU15 | 12.0.5605.1 | [KB4469137](https://support.microsoft.com/help/xx[KB4469137x) | December 12, 2018 |
+| SQL Server 2014 SP2 CU15 | 12.0.5605.1 | [KB4469137](https://support.microsoft.com/help/4469137) | December 12, 2018 |
 | SQL Server 2014 SP2 CU14 | 12.0.5600.1 | [KB4459860](https://support.microsoft.com/help/4459860) | October 15, 2018|
 | SQL Server 2014 SP2 CU13 | 12.0.5590.1 | [KB4456287](https://support.microsoft.com/help/4456287) | August 27, 2018 |
 | SQL Server 2014 SP2 CU12 | 12.0.5589.7 | [KB4130489](https://support.microsoft.com/help/4130489) | June 18, 2018 |
@@ -86,9 +88,9 @@ This article lists the Microsoft SQL Server 2014 builds that were released after
 ## References
 
 - [Microsoft SQL Server support lifecycle](https://support.microsoft.com/lifecycle/?c2=1044)
-- [KB321185](https://support.microsoft.com/help/321185) How to determine the version and edition of SQL Server and its components
+- [Latest updates and version history for SQL Server](../download-and-install-latest-updates.md)
 - [The script to determine which version and edition of SQL Server Database Engine is running](https://gallery.technet.microsoft.com/determining-which-version-af0f16f6)
 - [KB957826](https://support.microsoft.com/help/957826) The builds for all SQL Server versions
 - [KB2958069](https://support.microsoft.com/help/2958069) How to obtain the latest service pack for SQL Server 2014
-- [KB822499](https://support.microsoft.com/help/822499) Naming schema and Fix area descriptions for SQL Server software update packages
-- [KB824684](https://support.microsoft.com/help/824684) Description of the standard terminology that is used to describe Microsoft software updates
+- [Naming schema and Fix area descriptions for SQL Server software update packages](../../database-engine/install/windows/naming-schema-and-fix-area.md)
+- [Description of the standard terminology that is used to describe Microsoft software updates](../../../windows-client/deployment/standard-terminology-software-updates.md)

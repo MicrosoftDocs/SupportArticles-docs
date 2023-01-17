@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot the Kubernetes Event-driven Autoscaling (KEDA) add-on
 description: Learn how to troubleshoot the Kubernetes Event-driven Autoscaling (KEDA) add-on to the Azure Kubernetes Service (AKS).
-ms.service: container-service
-ms.date: 10/3/2022
+ms.service: azure-kubernetes-service
+ms.date: 12/22/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 editor: v-jsitser
@@ -34,7 +34,7 @@ The command output displays the installed version of KEDA:
 
 ```output
 APP
-2.7.0
+2.8.1
 ```
 
 ### Make sure that the cluster firewall is configured correctly
