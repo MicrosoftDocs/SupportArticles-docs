@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 1 for SQL Server 2022 (KB5022375)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 1 (KB5022375).
-ms.date: 
+ms.date: 2/15/2023
 ms.custom: KB5022375
 appliesto:
 - SQL Server 2022 on Windows
@@ -9,7 +9,7 @@ appliesto:
 ---
 # KB5022375 - Cumulative Update 1 for SQL Server 2022
 
-_Release Date:_ &nbsp;
+_Release Date:_ &nbsp; 2/15/2023  
 _Version:_ &nbsp; 16.0.4001.1
 
 ## Summary
