@@ -848,20 +848,20 @@ System service name: **TlntSvr**
 |---|---|---|
 |Telnet|TCP|23|
   
-### Terminal Services
+### Remote Desktop Services (RDS)
 
-Terminal Services provides a multi-session environment that enables client devices to access a virtual Windows desktop session and Windows-based programs that are running on the server. Terminal Services enables multiple users to be connected interactively to a computer.
+RDS provides a multi-session environment that enables client devices to access a virtual Windows desktop session and Windows-based programs that are running on the server. RDS enables multiple users to be connected interactively to a computer.
 
 System service name: **TermService**
 
 |Application protocol|Protocol|Ports|
 |---|---|---|
-|Terminal Services|TCP|3389|
-|Terminal Services|UDP|3389|
+|RDS|TCP|3389|
+|RDS|UDP|3389|
   
-### Terminal Services Licensing
+### RDS Licensing (RDSL)
 
-The Terminal Services Licensing system service installs a license server and provides licenses to registered clients when the clients connect to a terminal server (a server that has Terminal Server enabled). Terminal Services Licensing is a low-impact service that stores the client licenses that are issued for a terminal server and tracks the licenses that are issued to client computers or terminals.
+The RDSL system service installs a license server and provides licenses to registered clients when the clients connect to a RDS server (a server that has RDS enabled). RDSL is a low-impact service that stores the client licenses that are issued for a RDS server and tracks the licenses that are issued to client computers or servers.
 
 System service name: **TermServLicensing**
 
@@ -879,11 +879,11 @@ System service name: **TermServLicensing**
 ² It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
 > [!NOTE]
-> Terminal Services Licensing offers its services by using RPC over named pipes. This service has the same firewall requirements as the File and Printer Sharing feature.
+> RDSL offers its services by using RPC over named pipes. This service has the same firewall requirements as the File and Printer Sharing feature.
 
-### Terminal Services Session Directory
+### Remote Desktop Connection Broker
 
-The Terminal Services Session Directory system service enables clusters of load-balanced terminal servers to correctly route a user's connection request to the server where the user already has a session running. Users are routed to the first-available terminal server regardless of whether they are running another session in the server cluster. The load-balancing functionality pools the processing resources of several servers by using the TCP/IP networking protocol. You can use this service together with a cluster of terminal servers to increase the performance of a single terminal server by distributing sessions across multiple servers. Terminal Services Session Directory keeps track of disconnected sessions on the cluster and makes sure that users are reconnected to those sessions.
+The Remote Desktop Connection Broker system service enables clusters of load-balanced RDS servers to correctly route a user's connection request to the server where the user already has a session running. Users are routed to the first-available RDS server regardless of whether they are running another session in the server cluster. The load-balancing functionality pools the processing resources of several servers by using the TCP/IP networking protocol. You can use this service together with a cluster of RDS servers to increase the performance of a single RDS server by distributing sessions across multiple servers. Remote Desktop Connection Broker keeps track of disconnected sessions on the cluster and makes sure that users are reconnected to those sessions.
 
 System service name: **Tssdis**
 
@@ -1056,8 +1056,8 @@ The following table summarizes the information from the [System services ports](
 |135|TCP|RPC|Remote Storage Notification|
 |135|TCP|RPC|Remote Storage|
 |135|TCP|RPC|Systems Management Server 2.0|
-|135|TCP|RPC|Terminal Services Licensing|
-|135|TCP|RPC|Terminal Services Session Directory|
+|135|TCP|RPC|RDSL|
+|135|TCP|RPC|Remote Desktop Connection Broker|
 |137|UDP|NetBIOS Name Resolution|Computer Browser|
 |137|UDP|NetBIOS Name Resolution|Server|
 |137|UDP|NetBIOS Name Resolution|Windows Internet Name Service|
@@ -1158,8 +1158,8 @@ The following table summarizes the information from the [System services ports](
 |3268|TCP|Global Catalog|Local Security Authority|
 |3269|TCP|Global Catalog|Local Security Authority|
 |3343|UDP|Cluster Services|Cluster Service|
-|3389|TCP|Terminal Services|Terminal Services|
-|3389|UDP|Terminal Services|Terminal Services|
+|3389|TCP|RDS|RDS|
+|3389|UDP|RDS|RDS|
 |3527|UDP|MSMQ-Ping|Message Queuing|
 |4011|UDP|BINL|Remote Installation|
 |4500|UDP|NAT-T|Local Security Authority|
@@ -1232,9 +1232,9 @@ The list of services that require Active Directory services:
 - Routing and Remote Access
 - Server
 - Simple Mail Transfer Protocol (SMTP)
-- Terminal Services
-- Terminal Services Licensing
-- Terminal Services Session Directory
+- RDS
+- RDSL
+- Remote Desktop Connection Broker
 
 ## References
 
@@ -1324,9 +1324,9 @@ For more information about the ports that are used by Microsoft Message Queuing,
 
 For information about how to plan for and to deploy MOM, see [System Center Developer Documentation Library](/previous-versions/system-center/developer/cc817313(v=msdn.10)).
 
-### Terminal Services
+### RDS
 
-For more information about how to configure the port that is used by Terminal Services, see [Change the listening port for Remote Desktop on your computer](/windows-server/remote/remote-desktop-services/clients/change-listening-port).
+For more information about how to configure the port that is used by RDS, see [Change the listening port for Remote Desktop on your computer](/windows-server/remote/remote-desktop-services/clients/change-listening-port).
 
 ### Controlling communications over the Internet in Windows
 
