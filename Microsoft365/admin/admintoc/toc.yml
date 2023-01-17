@@ -73,7 +73,7 @@
       href: ../active-directory/duplicate-attributes-prevent-dirsync.md
     - name: Pending state issue with directory synchronization
       href: ../active-directory/pending-state-issue-with-directory-synchronization.md
-    - name: Set up AD FS for Microsoft 365 for Single Sign-On
+    - name: Set up AD FS for Microsoft 365 for single sign-on
       href: ../active-directory/set-up-adfs-for-single-sign-on.md
     - name: Set up single sign-on
       href: ../active-directory/set-up-single-sign-on.md
@@ -105,7 +105,7 @@
       href: ../authentication/certificate-based-authentication-fails-on-ios.md
     - name: Certificate warning from AD FS
       href: ../authentication/certificate-warning-from-ad-fs.md
-    - name: Connection issues when sign in Office 2016
+    - name: Connection issues when signing in Office 2016
       href: ../authentication/connection-issue-when-sign-in-office-2016.md
     - name: Deleted app passwords still work
       href: ../authentication/deleted-authentication-passwords-still-work.md
