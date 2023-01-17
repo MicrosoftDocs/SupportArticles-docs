@@ -3,7 +3,7 @@ title: Fails to mount an Azure Blob storage container
 description: Provides causes and solutions for errors that cause the mounting of an Azure Blob storage container to fail.
 author: AndreiBarbu95
 ms.author: andbar
-ms.service: container-service
+ms.service: azure-kubernetes-service
 ms.date: 12/20/2022
 ms.reviewer: cssakscic, chiragpa 
 ---

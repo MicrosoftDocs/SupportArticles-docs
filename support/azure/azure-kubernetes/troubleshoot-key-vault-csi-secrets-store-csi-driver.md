@@ -4,7 +4,7 @@ description: Troubleshoot and resolve common problems when you're using the Azur
 author: DennisLee-DennisLee
 ms.author: v-dele
 editor: v-jsitser
-ms.service: container-service
+ms.service: azure-kubernetes-service
 ms.date: 12/20/2022
 ms.reviewer: nickoman
 ---
@@ -241,7 +241,7 @@ After the virtual network link is added, the FQDN should be able to be resolved 
 
 #### Add virtual network peering between the two virtual networks
 
-If you're using a private endpoint, you've probably disabled public access at the Key Vault level, so there's no connectivity between AKS and the Key Vault. You can test that configuration by using the following Netcat command:
+If you're using a private endpoint, you've probably disabled public access at the Key Vault level, so there's no connectivity between AKS and the Key Vault. You can test that configuration by using the following Netcat (nc) command:
 
 ```console
 nc -v -w 2 <key-vault-name>.vault.azure.net 443

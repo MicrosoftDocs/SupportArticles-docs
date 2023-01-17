@@ -1,7 +1,7 @@
 ---
 title: Performance issues when working with files located on a file server
 description: Provides a solution to performance issues that occur when you work with files that are located on a file server
-ms.date: 12/03/2020
+ms.date: 01/10/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -49,7 +49,7 @@ You may experience one or more of the following symptoms when you work with file
 
     > System error 64. The specified network name is no longer available.
 
-- You are intermittently disconnected from network resources, and you cannot reconnect to the network resources on the file server. However, you can ping the server, and you can use a Terminal Services session to connect to the server.
+- You are intermittently disconnected from network resources, and you cannot reconnect to the network resources on the file server. However, you can ping the server, and you can use a Remote Desktop Services session to connect to the server.
 
 - If multiple users try to access Microsoft Office documents on the server, the **File is locked for editing** dialog box does not always appear when the second user opens the file.
 

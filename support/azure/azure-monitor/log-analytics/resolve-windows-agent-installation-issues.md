@@ -7,7 +7,7 @@ ms.author: v-dele
 ms.reviewer: aaronmax
 editor: v-jsitser
 ms.service: azure-monitor
-ms.subservice: logs
+ms.subservice: logs-troubleshoot
 keywords: 
 #Customer intent: As a Windows Log Analytics Agent (Windows Agent) user, I want to resolve Windows Agent installation errors so I can complete my installation successfully. 
 ---

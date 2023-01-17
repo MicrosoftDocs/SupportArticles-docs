@@ -3,6 +3,7 @@ title: Troubleshooting documentation
 description: This article lists Knowledge Base (KB) and other Support articles for Web Apps.
 ms.topic: article
 ms.date: 07/08/2020
+ms.service: app-service-web
 ---
 # Web Apps troubleshooting
 

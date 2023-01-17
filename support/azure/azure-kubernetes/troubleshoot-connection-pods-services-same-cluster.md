@@ -6,7 +6,7 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: chiragpa, rissing
 editor: v-jsitser
-ms.service: container-service
+ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot connections to pods and services so that I don't experience outbound connection issues from an Azure Kubernetes Service (AKS) cluster.
 ---
 # Troubleshoot connection issues to pods or services within an AKS cluster (internal traffic)
