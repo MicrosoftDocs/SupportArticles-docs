@@ -2,7 +2,6 @@
 title: Users can no longer sign in after you run the Convert-MSOLDomaintoFederated command to convert an existing domain
 description: Describes an issue in which users can no longer access Office 365, Azure, or Microsoft Intune after you run the Convert-MSOLDomaintoFederated command to convert an existing domain from standard authentication to federated authentication. Provides resolutions.
 ms.date: 07/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: dahans
 ms.service: active-directory
 ms.subservice: enterprise-users
@@ -82,4 +81,4 @@ If these conditions are true, reset the authentication setting for the domain an
 
 If this problem occurs, contact Microsoft Support to have the domain federation reversed temporarily so that the administrator (who is no longer SSO-enabled) can regain access to troubleshoot SSO-related problems.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazuread) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

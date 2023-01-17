@@ -54,8 +54,7 @@ This policy is introduced after the following versions of Windows or Windows upd
 |Registry subkey|`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\RestrictRemoteSam`|
 |Registry type|REG_SZ|
 |Registry value|A string that contains the SDDL of the security descriptor to be deployed.|
-|||
-
+  
 :::image type="content" source="media/authz-fails-access-denied-error-application-access-check/network-access-restrict-clients-allowed-to-make-remote-calls-to-sam-policy.png" alt-text="Restrict clients allowed to make remote calls to SAM policy setting dialog box.":::
 
 When you define the policy by using the Windows Server 2016 Admin Tools, the default is to allow only administrators access to this interface.
@@ -132,12 +131,12 @@ When you examine the network trace of what the server that's running Exchange Se
 >
 > UserName **SM_0ddc5cc213b943a5b** 16 280 KerberosV5.PrincipalName
 >
-> -> *This tells you AuthZ is trying Kerberos S4U*.
+> -> _This tells you AuthZ is trying Kerberos S4U_.
 >
 > 2017-10-27T16:34:52.1334577 0,0041316 10772 15016 KerberosV5 10.10.10.10 Kerberos(88) 10.10.10.11 16268 KRB_ERROR, KDC_ERR_CLIENT_REVOKED: Clients credentials have been revoked, status:  
 >STATUS_ACCOUNT_DISABLED
 >
-> -> *This is excpected as the System Mailbox account is disabled*.
+> -> _This is excpected as the System Mailbox account is disabled_.
 
 AuthZ tries to recover from this failure by querying the **tokenGroupsGlobalAndUniversal** attribute of the system mailbox, and then continuing to enumerate the Domain-Local groups. The LDAP session is encrypted. Therefore, you can't see the result in a network trace.
 

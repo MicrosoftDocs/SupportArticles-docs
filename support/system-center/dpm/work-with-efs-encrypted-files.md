@@ -2,7 +2,6 @@
 title: How DPM works with EFS encrypted files
 description: Describes how System Center Data Protection Manager handles encrypted and unencrypted files during synchronization.
 ms.date: 07/27/2020
-ms.prod-support-area-path:
 ms.reviewer: jeffpatt, jbuff
 ---
 # How System Center Data Protection Manager works with Encrypting File System (EFS) encrypted files

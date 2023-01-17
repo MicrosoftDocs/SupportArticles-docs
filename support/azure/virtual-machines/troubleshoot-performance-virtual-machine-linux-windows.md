@@ -5,9 +5,9 @@ services: virtual-machines, azure-resource-manager
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 tags: top-support-issue, azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-performance
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
@@ -65,12 +65,12 @@ Storage is a very important tier when we intend to analyze IO performance for a 
 
 To configure these options:
 
-1.    Select **Metrics**.
-2.    Select the **Resource** (storage account).
-3.    Select the **Namespace**
-4.    Select **Metric**.
-5.    Select the type of **Aggregation**
-6.    You can pin this view on dashboard.
+1. Select **Metrics**.
+2. Select the **Resource** (storage account).
+3. Select the **Namespace**
+4. Select **Metric**.
+5. Select the type of **Aggregation**
+6. You can pin this view on dashboard.
 
 ## Observing bottlenecks
 
@@ -178,7 +178,7 @@ For each check below, look for key trends when the issues occur within the time 
 
 If you see a drop in availability, there could be an issue with the platform, check the [Azure Status](https://azure.microsoft.com/status/). If no issue is shown there, raise a new support request.
 
-#### Check for Azure storage timeout - Add the storage account metrics:
+#### Check for Azure storage timeout - Add the storage account metrics
 
 * ClientTimeOutError
 * ServerTimeOutError
@@ -244,8 +244,4 @@ These articles discuss the specific scenarios:
 
 * [Use Azure Premium Storage with SQL Server](/previous-versions/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-sql-server-premium-storage)
 
-## Next steps
-
-If you need more help at any point in this article, contact the Azure experts on [the MSDN Azure and Stack Overflow forums](https://azure.microsoft.com/support/forums/).
-
-Alternatively, file an Azure support incident. Go to the [Azure support site](https://azure.microsoft.com/support/options/) and select **Get Support**.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -1,12 +1,12 @@
 ---
-title: An internal error occurs when you make an RDP connection to Azure Virtual Machines | Microsoft Docs
-description: Learn how to troubleshoot RDP internal errors in Microsoft Azure.| Microsoft Docs
+title: An internal error occurs when you make an RDP connection to Azure Virtual Machines
+description: Learn how to troubleshoot RDP internal errors in Microsoft Azure.
 services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
@@ -15,10 +15,9 @@ ms.date: 02/23/2020
 ms.author: genli
 ---
 
-#  An internal error occurs when you try to connect to an Azure VM through Remote Desktop
+# An internal error occurs when you try to connect to an Azure VM through Remote Desktop
 
 This article describes an error that you may experience when you try to connect to a virtual machine (VM) in Microsoft Azure.
-
 
 ## Symptoms
 
@@ -27,7 +26,6 @@ You can't connect to an Azure VM by using the remote desktop protocol (RDP). The
 - RDP internal error
 - An internal error has occurred
 - This computer can't be connected to the remote computer. Try connecting again. If the problem continues, contact the owner of the remote computer or your network administrator
-
 
 ## Cause
 
@@ -285,19 +283,13 @@ To enable dump log and Serial Console, run the following script.
     ```console
     REM Enable NLA
 
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\Terminal Server\WinStations\RDP-Tcp" /v SecurityLayer /t REG_DWORD /d 2 /f
-
     REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\Terminal Server\WinStations\RDP-Tcp" /v UserAuthentication /t REG_DWORD /d 1 /f
 
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\Terminal Server\WinStations\RDP-Tcp" /v fAllowSecProtocolNegotiation /t REG_DWORD /d 1 /f  
-
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\Terminal Server\WinStations\RDP-Tcp" /v SecurityLayer /t REG_DWORD /d 2 /f
-
     REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\Terminal Server\WinStations\RDP-Tcp" /v UserAuthentication /t REG_DWORD /d 1 /f
-
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\Terminal Server\WinStations\RDP-Tcp" /v fAllowSecProtocolNegotiation /t REG_DWORD /d 1 /f  
-
+    
     reg unload HKLM\BROKENSYSTEM
     ```
 
 5. [Detach the OS disk and recreate the VM](./troubleshoot-recovery-disks-portal-windows.md), and then check whether the issue is resolved.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

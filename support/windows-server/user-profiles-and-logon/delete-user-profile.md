@@ -1,7 +1,7 @@
 ---
-title: Delete a user profile in Windows Server 2008 and later
-description: Describes steps to delete a user profile in Windows Server 2008 and later.
-ms.date: 09/08/2020
+title: Delete a user profile in Windows
+description: Describes steps to delete a user profile in Windows.
+ms.date: 05/23/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -13,19 +13,24 @@ ms.reviewer: kaushika
 ms.custom: sap:user-profiles, csstroubleshoot
 ms.technology: windows-server-user-profiles
 ---
-# Delete a user profile in Windows Server 2008 and later
+# Delete a user profile in Windows
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 2462308
-
-## Steps to delete a user profile
-
- 1. Open System in Control Panel.
- 2. Click Advanced Settings, and on the **Advanced** tab, under **User Profiles**, click **Settings**.
- 3. Under **Profiles stored on this computer**, click the user profile you want to delete, and then click **Delete**.
+This article introduces how to delete a user's profile on a Windows-based device.
 
 > [!NOTE]
->
-> - To perform this procedure, you must be a member of the Administrators group on the local computer, or you must have been delegated the appropriate authority. If the computer is joined to a domain, members of the Domain Admins group might be able to perform this procedure. As a security best practice, consider using Run as to perform this procedure.
-> - To open System, click **Start** > **Control Panel**, and then double-click **System**.  
-> - To open System from a command line as an administrator, type **runas /user:** *computername* **\Administrator "rundll32.exe shell32.dll,Control_RunDLL sysdm.cpl"**.
+> To perform these methods, you must be a member of the Administrators group on the local computer or have been delegated the appropriate authority. If the computer is joined to a domain, members of the Domain Admins group might be able to perform this procedure.
+
+_Applies to:_ &nbsp; Windows Server; Windows Client  
+_Original KB number:_ &nbsp; 2462308
+
+## Using Control Panel
+
+1. Select **Start**, search for _Control Panel_, and select **Control Panel** in the result.
+2. Select **Large icons** in **View by:**, and then select **System**.
+   > [!NOTE]
+   > In Windows Server 2022, Windows 10, and Windows 11, the **Settings** App opens.  
+   > In Windows Server 2012 to Windows Server 2019, the classic **System** applet opens.
+
+3. Select the **Advanced System settings** link.
+4. In the dialog that opens, select **Settings** in the **User Profiles** section.
+5. In the next dialog, there is a list of profiles on the system. Select the profile that you want to remove and select **Delete**.

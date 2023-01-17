@@ -2,7 +2,6 @@
 title: Can't run scripts in Azure Active Directory Module for Windows PowerShell
 description: Describes an issue in which you receive an error message when you try to run scripts in Azure Active Directory Module for Windows PowerShell. Provides a resolution.
 ms.date: 10/26/2021
-ms.prod-support-area-path: 
 ms.reviewer: willfid, willfid
 ms.service: active-directory
 ms.subservice: enterprise-users
@@ -27,6 +26,7 @@ When you try to run a script in Microsoft Azure Active Directory Module for Wind
 ## Cause
 
 This issue may occur if one of the following factors is true:
+
 - The PowerShell version that you are using is higher than 5.1. The Azure Active Directory Module only works with PowerShell 3 to 5.1.
 - The execution policy is set to **Restricted**. Certain Windows PowerShell cmdlets can't run if the policy is too restricted.
 
@@ -60,4 +60,4 @@ The four execution policies are as follows:
 - RemoteSigned policy runs scripts. All scripts and configuration files downloaded from communication applications must be signed by a publisher that you trust. These communication applications include Microsoft Outlook, Windows Internet Explorer, Outlook Express, and Windows Messenger. This policy opens you to the risk of running malicious scripts that aren't downloaded from these applications. And you aren't prompted in this situation.
 - Unrestricted policy runs scripts. All scripts and configuration files downloaded from communication applications run after you confirm that you understand that the file originated from the Internet. These communication applications include Outlook, Internet Explorer, Outlook Express, and Windows Messenger. No digital signature is required. This policy opens you to the risk of running unsigned, malicious scripts that are downloaded from these applications.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/home) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

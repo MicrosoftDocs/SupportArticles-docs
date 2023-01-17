@@ -2,7 +2,6 @@
 title: Starting a new VMM job fails with error 2606
 description: Fixes an issue in which you can't start a new job in System Center 2012 Virtual Machine Manager (VMM) and receive error 2606.
 ms.date: 07/13/2020
-ms.prod-support-area-path:
 ---
 # Starting a new job in System Center 2012 Virtual Machine Manager fails with error 2606
 

@@ -2,7 +2,6 @@
 title: The Data Warehouse Base Library management pack shows a deployment status of Failed
 description: Fixes an issue in which management pack sync jobs fail and the Data Warehouse Base Library management pack shows a deployment status of Failed after you upgrade the data warehouse to System Center 2012 Service Manager SP1.
 ms.date: 08/04/2020
-ms.prod-support-area-path:
 ms.reviewer: adoyle
 ---
 # MPSyncJob fails and the Data Warehouse Base Library management pack deployment fails

@@ -2,9 +2,9 @@
 title: Windows boot error 0xc0000221 on an Azure VM
 description: Fixes error 0xc0000221, which occurs when you try to boot an Azure virtual machine (VM).
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ---
 # Windows boot error 0xc0000221 on an Azure VM
@@ -75,3 +75,5 @@ If the VM still doesn't boot, go to step 2.
 ### Step 3
 
 SFC checks for corruption in the registry and the file system. If SFC states that the corrupted files were found but it cannot fix them, you can [boot the VM from the Last Known Good Configuration](start-vm-last-known-good.md). This is to make sure that you have a good registry. Then, check the file system again by running SFC to identify the potentially corrupted files.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

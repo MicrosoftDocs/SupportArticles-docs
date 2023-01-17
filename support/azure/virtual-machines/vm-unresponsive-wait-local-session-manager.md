@@ -4,9 +4,9 @@ description: This article provides steps to resolve issues where the guest OS is
 services: virtual-machines
 documentationcenter: ''
 author: mibufo
-editor: ''
 tags: azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
@@ -52,3 +52,5 @@ For more information about NMI calls, see the [NMI calls in Azure Serial Console
 
 > [!div class="nextstepaction"]
 > [Troubleshoot Azure Virtual Machine boot errors](boot-error-troubleshoot.md)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

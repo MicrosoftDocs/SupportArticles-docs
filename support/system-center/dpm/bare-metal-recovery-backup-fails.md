@@ -2,7 +2,7 @@
 title: BMR backup fails in DPM or Azure Backup Server
 description: Describes an issue in which BMR backup fails because of high I/O latency if it uses Microsoft Azure Backup Server or System Center Data Protection Manager.
 ms.date: 07/23/2020
-ms.prod-support-area-path: System Center 2016 Data Protection Manager
+ms.custom: sap:System Center 2016 Data Protection Manager
 ---
 # BMR backup fails in Data Protection Manager or Azure Backup Server
 
@@ -102,7 +102,6 @@ To fix the issue, follow these steps:
     |subkey|Name|Type|Data|
     |---|---|---|---|
     |`HKLM\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters`|SessTimeout|REG_DWORD|1200|
-    ||||
 
     > [!NOTE]
     > The 1,200 seconds (20 minutes) time-out is a recommended value. Adjust the value as appropriate. You can review the Resilient File System (ReFS) event logs on the DPM or Azure Backup Server server to find any suspected I/O latency.

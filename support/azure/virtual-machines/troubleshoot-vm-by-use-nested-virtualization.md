@@ -1,13 +1,13 @@
 ---
-title: Troubleshoot a faulty Azure VM by using nested virtualization in Azure | Microsoft Docs
+title: Troubleshoot a faulty Azure VM by using nested virtualization in Azure
 description: How to troubleshoot a problem Azure VM by using nested virtualization in Azure
 services: virtual-machines
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 tags: azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-backup-restore
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
@@ -26,31 +26,31 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
 ## Step 1: Create a Rescue VM and install Hyper-V role
 
-1.  Create a new Rescue VM:
+1. Create a new Rescue VM:
 
-    -  Operating system: Windows Server 2016 Datacenter
+    - Operating system: Windows Server 2016 Datacenter
 
-    -  Size: Select a series that supports nested virtualization. For example: [Dv3](/azure/virtual-machines/dv3-dsv3-series) or [Dv4](/azure/virtual-machines/dv4-dsv4-series).
+    - Size: Select a series that supports nested virtualization. For example: [Dv3](/azure/virtual-machines/dv3-dsv3-series) or [Dv4](/azure/virtual-machines/dv4-dsv4-series).
 
-    -  Same location, Storage Account, and Resource Group as the faulty VM.
+    - Same location, Storage Account, and Resource Group as the faulty VM.
 
-    -  Select the same storage type as the faulty VM (Standard or Premium).
+    - Select the same storage type as the faulty VM (Standard or Premium).
 
-2.  After the Rescue VM is created, remote desktop to the Rescue VM.
+2. After the Rescue VM is created, remote desktop to the Rescue VM.
 
-3.  In Server Manager, select **Manage** > **Add Roles and Features**.
+3. In Server Manager, select **Manage** > **Add Roles and Features**.
 
-4.  In the **Installation Type** section, select **Role-based or feature-based installation**.
+4. In the **Installation Type** section, select **Role-based or feature-based installation**.
 
-5.  In the **Select destination server** section, make sure that the Rescue VM is selected.
+5. In the **Select destination server** section, make sure that the Rescue VM is selected.
 
-6.  Select the **Hyper-V role** > **Add Features**.
+6. Select the **Hyper-V role** > **Add Features**.
 
-7.  Select **Next** on the **Features** section.
+7. Select **Next** on the **Features** section.
 
-8.  If a virtual switch is available, select it. Otherwise select **Next**.
+8. If a virtual switch is available, select it. Otherwise select **Next**.
 
-9.  On the **Migration** section, select **Next**
+9. On the **Migration** section, select **Next**
 
 10. On the **Default Stores** section, select **Next**.
 
@@ -62,21 +62,21 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
 ## Step 2: Create the faulty VM on the Rescue VM's Hyper-V server
 
-1.  [Create a snapshot disk](troubleshoot-recovery-disks-portal-windows.md#take-a-snapshot-of-the-os-disk) for the OS disk of the VM that has problem, and then attach the snapshot disk to the Rescue VM.
+1. [Create a snapshot disk](troubleshoot-recovery-disks-portal-windows.md#take-a-snapshot-of-the-os-disk) for the OS disk of the VM that has problem, and then attach the snapshot disk to the Rescue VM.
 
-2.  Remote desktop to the Rescue VM.
+2. Remote desktop to the Rescue VM.
 
-3.  Open Disk Management (diskmgmt.msc). Make sure that the disk of the faulty VM is set to **Offline**.
+3. Open Disk Management (diskmgmt.msc). Make sure that the disk of the faulty VM is set to **Offline**.
 
-4.  Open Hyper-V Manager: In **Server Manager**, select the **Hyper-V role**. Right-click the server, and then select the **Hyper-V Manager**.
+4. Open Hyper-V Manager: In **Server Manager**, select the **Hyper-V role**. Right-click the server, and then select the **Hyper-V Manager**.
 
-5.  In the Hyper-V Manager, right-click the Rescue VM, and then select **New** > **Virtual Machine** > **Next**.
+5. In the Hyper-V Manager, right-click the Rescue VM, and then select **New** > **Virtual Machine** > **Next**.
 
-6.  Type a name for the VM, and then select **Next**.
+6. Type a name for the VM, and then select **Next**.
 
-7.  Select **Generation 1** or **Generation 2** according to the faulty VM generation.
+7. Select **Generation 1** or **Generation 2** according to the faulty VM generation.
 
-8.  Set the startup memory at 1024 MB or more.
+8. Set the startup memory at 1024 MB or more.
 
 9. If applicable select the Hyper-V Network Switch that was created. Else move to the next page.
 
@@ -112,3 +112,5 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 ## Next steps
 
 If you are having issues connecting to your VM, see [Troubleshoot RDP connections to an Azure VM](troubleshoot-rdp-connection.md). For issues with accessing applications running on your VM, see [Troubleshoot application connectivity issues on a Windows VM](troubleshoot-app-connection.md).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

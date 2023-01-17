@@ -2,7 +2,6 @@
 title: Reinstall a VMM agent on a host with service templates
 description: Describes how to reinstall the System Center 2012 Virtual Machine Manager agent on a host and restore service templates.
 ms.date: 05/07/2020
-ms.prod-support-area-path:
 ms.reviewer: alvinm
 ---
 # Reinstall the System Center 2012 Virtual Machine Manager agent on a host with services deployed

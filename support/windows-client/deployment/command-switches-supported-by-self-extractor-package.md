@@ -52,4 +52,4 @@ The following table lists the command-line switches that are supported by Micros
 | `/norestart`|Prevents prompting of the user when a restart of the computer is needed.|
 | `/forcerestart`|Forces a restart of the computer as soon as the update is finished.|
 | `/?`, `/h`, `/help`|Shows this help message.|
-|||
+  

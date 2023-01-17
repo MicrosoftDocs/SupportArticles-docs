@@ -2,7 +2,7 @@
 title: Segment terminator for X12 interchange
 description: The properties included in the ISA Segment define how BizTalk Server generates the ISA segment for an X12-encoded interchange. Valid values for Segment terminator are explained.
 ms.date: 03/19/2020
-ms.prod-support-area-path: Accelerators
+ms.custom: sap:Accelerators
 ---
 # BizTalk 2010 configuring segment terminator for an X12-encoded interchange
 

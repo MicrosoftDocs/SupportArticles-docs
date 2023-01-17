@@ -3,7 +3,7 @@ title: How to distribute by Department in Canadian Payroll
 description: Introduces how to distribute by department in Canadian Payroll for Microsoft Dynamics GP.
 ms.reviewer: cwaswick
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 12/31/2021
 ---
 # How to distribute by Department in Canadian Payroll using Microsoft Dynamics GP
 
@@ -37,3 +37,4 @@ By design, these types of paycodes won't distribute:
 - Vacation - Vacation dollars are distributed when the vacation amounts are *accrued*, not when they're paid out. And on the accrual, only the debit is distributed. The credit books ot the vacation payable account set in the Payroll Control Accounts-Canada window and isn't distributed.
 - Banked Sick Relief code - The system won't distribute when paying out the funds. The liability was already distributed when the amount was banked, and so won't distribute again.
 - Deduction paycodes - Deductions aren't distributable. The only workaround is to set up extensive deduction codes by department, which isn't ideal.
+- The distribution functions for Income Codes with Regular Pay as the pay type, but not for various specialized types such as EI Rebate.

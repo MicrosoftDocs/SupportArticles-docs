@@ -2,7 +2,6 @@
 title: Configure Windows authentication in AVIcode
 description: Describes how to configure Windows authentication for the SELog virtual directory in AVIcode Intercept Studio.
 ms.date: 08/13/2020
-ms.prod-support-area-path: 
 ---
 # Configure Windows authentication for the SELog virtual directory in AVIcode Intercept Studio
 

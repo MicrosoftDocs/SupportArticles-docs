@@ -1,5 +1,5 @@
 ---
-title: How to reset local Linux password on Azure VMs | Microsoft Docs
+title: How to reset local Linux password on Azure VMs
 description: Provides the steps to reset the local Linux password on Azure VM
 services: virtual-machines
 documentationcenter: ''
@@ -8,6 +8,7 @@ manager: dcscontentpm
 editor: 'v-jesits'
 tags: ''
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
@@ -37,6 +38,7 @@ You can reset the password without attaching the OS disk to another VM. This met
 
     az vm user update -u $AZ_ADMIN_USER -p $AZ_MSADMIN_PASS -g $AZ_RESOURCE_GROUP -n $AZ_VM_NAME
     ```
+
 3. Try to access the VM.
 
 To update the SSH key, see [Manage administrative users, SSH by using the VMAccess Extension with the Azure CLI](/azure/virtual-machines/extensions/vmaccess#update-ssh-key).
@@ -51,7 +53,8 @@ This method has been tested by using [the supported Linux distributions and vers
 > If you are experiencing problems that affect an Azure network virtual appliance, this method does not apply to your situation. Instead, you must contact the vendor of the network virtual appliance to get instructions about how to do a password reset safely.
 
 1. Take a snapshot of the OS disk of the affected VM as a backup. For more information, see [Snapshot a disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk).
-1. Run following [az vm repair create](/cli/azure/vm/repair?view=azure-cli-latest&preserve-view=true) commands. This will create a copy of the OS disk, and attach the disk to a recovery VM automatically.
+1. Run following [az vm repair create](/cli/azure/vm/repair) commands. This will create a copy of the OS disk, and attach the disk to a recovery VM automatically.
+
     ```
     AZ_RESOURCE_GROUP="YourResourceGroupName"
     AZ_VM_NAME="VMname"
@@ -60,6 +63,7 @@ This method has been tested by using [the supported Linux distributions and vers
 
     az vm repair create -g $AZ_RESOURCE_GROUP -n $AZ_VM_NAME --repair-username $AZ_ADMIN_USER --repair-password "$AZ_MSADMIN_PASS" --verbose
     ```
+
 1. Log in to the recovery VM. Mount the root file system on the data disk on /recovery, and set the password field a blank state.
 
     ```
@@ -125,3 +129,5 @@ This method has been tested by using [the supported Linux distributions and vers
 * [Troubleshoot Azure VM by attaching OS disk to another Azure VM](https://social.technet.microsoft.com/wiki/contents/articles/18710.troubleshoot-azure-vm-by-attaching-os-disk-to-another-azure-vm.aspx)
 
 * [Azure CLI: How to delete and redeploy a VM from VHD](/archive/blogs/linuxonazure/azure-cli-how-to-delete-and-re-deploy-a-vm-from-vhd)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

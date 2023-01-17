@@ -2,7 +2,7 @@
 title: BizTalk Server supportability on VM
 description: Discusses the support policy for running BizTalk Server in a virtualization environment.
 ms.date: 03/06/2020
-ms.prod-support-area-path: BizTalk Server Setup and Configuration
+ms.custom: sap:BizTalk Server Setup and Configuration
 ms.reviewer: larryfr
 ---
 # Microsoft BizTalk Server supportability on a virtual machine
@@ -31,7 +31,6 @@ The following table indicates the supportability of hosting a BizTalk Server vir
 |Microsoft Hyper-V Server 2012 R2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |Server Virtualization Validation Program (SVVP) certified *|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |Non-SVVP certified|Commercially reasonable support|Commercially reasonable support|Commercially reasonable support|Commercially reasonable support|Commercially reasonable support|Commercially reasonable support|Commercially reasonable support|
-|||||||||
 
 > [!NOTE]
 > SVVP lists products that have been tested and validated to work with Windows Server. Some SVVP companies have only been validated for Windows Server 2008 and later.

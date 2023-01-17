@@ -127,7 +127,9 @@ Unless otherwise noted, these steps apply to both workgroup computer and DC case
     2. Run the following commands:
 
         ```console
-        C:\ CD\Windows\system32\Spool Cacls.exe PRINTERS /e /g users:C
+        C:\
+        CD \Windows\system32\Spool
+        Cacls.exe PRINTERS /e /g users:C
         ```
 
     3. Restart the computer.

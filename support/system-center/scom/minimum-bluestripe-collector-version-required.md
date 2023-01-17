@@ -2,7 +2,6 @@
 title: Minimum BlueStripe Collector version required
 description: Describes the minimum version of the BlueStripe Collector required for a particular OS version.
 ms.date: 08/13/2020
-ms.prod-support-area-path: 
 ---
 # BlueStripe Collector support by operating system
 
@@ -52,7 +51,6 @@ If the collector isn't started after an upgrade, check the service.logs in the `
 ||SP3|8.0.0|current||
 ||SP4|8.0.1|current||
 ||SP5|8.1.0|current||
-||||||
 
 ## Linux
 
@@ -66,7 +64,7 @@ Starting with the 8.0.3 collector, there are now two installers for Linux, a 32 
 
 - Only default and SMP Linux kernel releases are supported.
 
-  - Non-standard kernel releases, such as PAE and Xen, aren't supported for any Linux distribution. For example, a system with the release string of *2.6.16.21-0.8-xen* isn't supported.
+  - Non-standard kernel releases, such as PAE and Xen, aren't supported for any Linux distribution. For example, a system with the release string of _2.6.16.21-0.8-xen_ isn't supported.
   - Custom kernels, including recompiles of standard kernels, aren't supported.
 
 - Centos Plus kernel isn't supported.
@@ -104,7 +102,6 @@ When upgrading a Linux operating system with an installed collector, you must re
 |2.6.18-402|8.0.3|current|||
 |2.6.18-404|8.0.5|current|||
 |2.6.18-406|8.1.0|current|||
-||||||
 
 ## Oracle® Enterprise Linux
 
@@ -165,7 +162,6 @@ When upgrading a Linux operating system with an installed collector, you must re
 |Red Hat 2.6.18-402|8.0.3|current|||
 |Red Hat 2.6.18-404|8.0.5|current|||
 |Red Hat 2.6.18-406|8.1.0|current|||
-||||||
 
 ## SUSE Linux Enterprise Server
 
@@ -179,7 +175,6 @@ SUSE Linux is only supported for 64-bit.
 |SP2|3.0.13|8.1.0|current||
 |SP3|3.0.76|8.1.0|current||
 |SP4|3.0.101|8.1.0|current||
-||||||
 
 ## Sun® Solaris®
 
@@ -193,7 +188,6 @@ Solaris 11 is currently not supported.
 |Solaris 10 1/13 (Update 11)|147147|147148|7.2.0|current||
 ||148888|148889|7.2.0|current||
 ||150400|150401|7.2.2|current||
-|||||||
 
 ## Microsoft® Windows®
 
@@ -222,4 +216,3 @@ Windows Server Core is supported for Windows Server 2008 R2 and a later version.
 |Windows 7|5.6.0|current||
 |SP1|5.6.0|current||
 |Windows XP|5.6.0|7.5.x||
-|||||

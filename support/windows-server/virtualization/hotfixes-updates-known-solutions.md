@@ -47,8 +47,7 @@ _Original KB number:_ &nbsp; 2974503
 |August 11, 2015| [3078411](https://support.microsoft.com/help/3078411)|Tenant VMs lose network connectivity if NAT gateway VM exhausts all TCP/IP ephemeral ports in Windows Server 2012 R2|
 |November 4, 2015| [3091402](https://support.microsoft.com/help/3091402)|Site-to-site VPN goes down in Windows 8.1 or Windows Server 2012 R2|
 |April 12, 2016| [3139164](https://support.microsoft.com/help/3139164)|Tracert command doesn't receive responses when you trace resources on Internet through Windows Server 2012 R2 HNV GW|
-||||
-
+  
 ## Microsoft System Center 2012 R2 Virtual Machine Manager (VMM)
 
 |Date added| Knowledge Base article| Title |
@@ -61,8 +60,7 @@ _Original KB number:_ &nbsp; 2974503
 |July 28, 2015| [3066340](https://support.microsoft.com/help/3066340)|Update Rollup 7 for System Center 2012 R2 Virtual Machine Manager|
 |November 2, 2015| [3096389](https://support.microsoft.com/help/3096389)|Update Rollup 8 for System Center 2012 R2 Virtual Machine Manager|
 |February 13, 2016| [3129784](https://support.microsoft.com/help/3129784)|Update Rollup 9 for System Center 2012 R2 Virtual Machine Manager|
-||||
-
+  
 ## Other known issues and solutions
 
 | Date added| Knowledge Base article| Title |
@@ -70,4 +68,3 @@ _Original KB number:_ &nbsp; 2974503
 |June 11, 2014| [2902166](https://support.microsoft.com/help/2902166)|Poor network performance on virtual machines on a Windows Server 2012 Hyper-V host if VMQ is enabled|
 |May 13, 2015| [2986895](https://support.microsoft.com/help/2986895)|Virtual machines lose network connectivity when you use Broadcom NetXtreme 1-gigabit network adapters|
 |January 12, 2016| [3135020](https://support.microsoft.com/help/3135020)|Recommended hotfixes, updates, and known solutions for Windows Server 2012 R2 Hyper-V environments|
-||||

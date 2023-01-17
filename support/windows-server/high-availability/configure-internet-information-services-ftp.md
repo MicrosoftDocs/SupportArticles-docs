@@ -1,7 +1,7 @@
 ---
 title: Configure FTP for IIS in a Windows Server failover cluster
 description: Describes how to configure FTP for IIS in a Windows Server failover cluster.
-ms.date: 09/08/2020
+ms.date: 06/21/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -91,7 +91,7 @@ On each cluster node, enable Offline Files:
     2. In the left pane, select **Features**.
     3. Select **Add Features** in the right pane.
     4. Do one of the following, as appropriate for your Windows version:
-       - For Windows Server 2016, go to the [Install Server with Desktop Experience](/windows-server/get-started/getting-started-with-server-with-desktop-experience) topic on the Microsoft Docs website.
+       - For Windows Server 2016, review [Install Server with Desktop Experience](/windows-server/get-started/getting-started-with-server-with-desktop-experience).
        - For Windows Server 2102 and 2012 R2, choose **Desktop Experience** under **User Interfaces and Infrastructures** in the features list
 2. Do the following:  
    For Windows Server 2012, 2012 R2 and 2016, select **Sync Center** in Control Panel, and then select **Manage offline files.**
@@ -111,7 +111,7 @@ On each cluster node, enable Offline Files:
 8. Schedule an offline file sync for every day or according to your requirements. You can also configure the offline sync to run every few minutes. Even if you don't set up a scheduler, when you change something in the Applicationhost.config file, the change is reflected on the Web server.
 
 > [!NOTE]
-> For more information about how to configure offline files for a shared configuration in IIS, visit the following Microsoft website: [Offline Files for Shared Configuration](https://learn.iis.net/page.aspx/212/offline-files-for-shared-configuration)
+> For more information about how to configure offline files for a shared configuration in IIS, see [Offline Files for Shared Configuration](/iis/web-hosting/configuring-servers-in-the-windows-web-platform/offline-files-for-shared-configuration).
 
 ## Configure the FTP site and specify the location of its content on one cluster node
 

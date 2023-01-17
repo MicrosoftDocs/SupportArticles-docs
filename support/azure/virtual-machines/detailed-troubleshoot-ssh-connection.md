@@ -1,14 +1,15 @@
 ---
-title: Detailed SSH troubleshooting for an Azure VM | Microsoft Docs
+title: Detailed SSH troubleshooting for an Azure VM
 description: More detailed SSH troubleshooting steps for issues connecting to an Azure virtual machine
 keywords: ssh connection refused,ssh error,azure ssh,SSH connection failed
 services: virtual-machines
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 tags: top-support-issue,azure-service-management,azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
+
 ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
@@ -19,12 +20,14 @@ ms.author: genli
 
 ---
 # Detailed SSH troubleshooting steps for issues connecting to a Linux VM in Azure
+
 There are many possible reasons that the SSH client might not be able to reach the SSH service on the VM. If you have followed through the more [general SSH troubleshooting steps](troubleshoot-ssh-connection.md), you need to further troubleshoot the connection issue. This article guides you through detailed troubleshooting steps to determine where the SSH connection is failing and how to resolve it.
 
 ## Take preliminary steps
+
 The following diagram shows the components that are involved.
 
-:::image type="content" source="media/detailed-troubleshoot-ssh-connection/components-of-ssh-service.png" alt-text="Diagram that shows components of SSH service."::: 
+:::image type="content" source="media/detailed-troubleshoot-ssh-connection/components-of-ssh-service.png" alt-text="Diagram that shows components of SSH service.":::
 
 The following steps help you isolate the source of the failure and figure out solutions or workarounds.
 
@@ -42,6 +45,7 @@ To verify network connectivity, check the configured endpoints and see if you ca
 After these steps, try the SSH connection again.
 
 ## Find the source of the issue
+
 The SSH client on your computer might fail to connect to the SSH service on the Azure VM due to issues or misconfigurations in the following areas:
 
 * [SSH client computer](#source-1-ssh-client-computer)
@@ -51,6 +55,7 @@ The SSH client on your computer might fail to connect to the SSH service on the 
 * [Linux-based Azure VM](#source-5-linux-based-azure-virtual-machine)
 
 ## Source 1: SSH client computer
+
 To eliminate your computer as the source of the failure, verify that it can make SSH connections to another on-premises, Linux-based computer.
 
 :::image type="content" source="media/detailed-troubleshoot-ssh-connection/ssh-client-computer-components.png" alt-text="Diagram that highlights SSH client computer components.":::
@@ -72,6 +77,7 @@ If you are using certificate authentication, verify that you have these permissi
 * Chmod 644 ~/.ssh/known_hosts (contains hosts that you’ve connected to via SSH)
 
 ## Source 2: Organization edge device
+
 To eliminate your organization edge device as the source of the failure, verify that a computer directly connected to the Internet can make SSH connections to your Azure VM. If you are accessing the VM over a site-to-site VPN or an Azure ExpressRoute connection, skip to [Source 4: Network security groups](#nsg).
 
 :::image type="content" source="media/detailed-troubleshoot-ssh-connection/organization-edge-device.png" alt-text="Diagram that highlights organization edge device.":::
@@ -109,12 +115,14 @@ To eliminate the endpoint as a source of the problem, remove the current endpoin
 <a id="nsg"></a>
 
 ## Source 4: Network security groups
+
 Network security groups enable you to have more granular control of allowed inbound and outbound traffic. You can create rules that span subnets and cloud services in an Azure virtual network. Check your network security group rules to ensure that SSH traffic to and from the Internet is allowed.
 For more information, see [About network security groups](/azure/virtual-network/network-security-groups-overview).
 
-You can also use IP Verify to validate the NSG configuration. For more information, see [Azure network monitoring overview](/azure/network-watcher/network-watcher-monitoring-overview). 
+You can also use IP Verify to validate the NSG configuration. For more information, see [Azure network monitoring overview](/azure/network-watcher/network-watcher-monitoring-overview).
 
 ## Source 5: Linux-based Azure virtual machine
+
 The last source of possible problems is the Azure virtual machine itself.
 
 :::image type="content" source="media/detailed-troubleshoot-ssh-connection/linux-based-azure-virtual-machine.png" alt-text="Diagram that highlights Linux-based Azure virtual machine.":::
@@ -129,4 +137,7 @@ Try connecting from your computer again. If it still fails, the following are so
 * Intrusion detection or network monitoring software that's running on the Azure virtual machine is preventing SSH connections.
 
 ## Additional resources
-For more information about troubleshooting application access, see [Troubleshoot access to an application running on an Azure virtual machine](./troubleshoot-app-connection.md)
+
+For more information about troubleshooting application access, see [Troubleshoot access to an application running on an Azure virtual machine](./troubleshoot-app-connection.md).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

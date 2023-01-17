@@ -2,7 +2,6 @@
 title: You can't open the Azure Active Directory Module for Windows PowerShell
 description: Discusses that you can't open the Azure Active Directory Module for Windows PowerShell because the .NET Framework 3.51 is not enabled on the computer. A resolution is provided to enable the .NET Framework 3.51.
 ms.date: 06/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: domain-services
@@ -35,6 +34,4 @@ To resolve this issue, manually enable the .NET Framework 3.51. To do this, foll
 2. Select **Turn Windows features on or off**.
 3. Select to select the **Microsoft NET Framework 3.51** check box, and then select **OK**.
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

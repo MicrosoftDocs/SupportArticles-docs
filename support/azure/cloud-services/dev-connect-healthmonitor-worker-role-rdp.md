@@ -1,12 +1,12 @@
 ---
 title: Cannot connect to 'HealthMonitor' worker role instance using RDP
 description: Provides information about troubleshooting issues in which the 'HealthMonitor' worker role instance is not able to remote connect.
-ms.date: 06/22/2020
-ms.prod-support-area-path: 
+ms.date: 09/26/2022
 ms.reviewer: 
 author: genlin
 ms.author: genli
 ms.service: cloud-services
+ms.subservice: troubleshoot-dev
 ---
 # Cannot connect to 'HealthMonitor' worker role instance using RDP
 
@@ -81,3 +81,5 @@ rule.Direction = NET_FW_RULE_DIRECTION_.NET_FW_RULE_DIR_IN;
 rule.Enabled = true;
 rules.Add(rule);
 ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

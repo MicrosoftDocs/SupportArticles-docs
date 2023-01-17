@@ -30,7 +30,7 @@ This article describes symptoms, cause, and resolution steps for AD operations t
 
     > Testing server: \<site\>\<DC Name\>  
           Starting test: Connectivity  
-             * Active Directory LDAP Services Check  
+             *Active Directory LDAP Services Check
              * Active Directory RPC Services Check  
              [\<DC Name\>] DsBindWithSpnEx() failed with error 1753,  
              There are no more endpoints available from the endpoint mapper..  
@@ -121,7 +121,6 @@ This article describes symptoms, cause, and resolution steps for AD operations t
     |NTDS General|1655|Active Directory attempted to communicate with the following global catalog and the attempts were unsuccessful.<br/><br/>|
     |NTDS KCC|1925|The attempt to establish a replication link for the following writable directory partition failed.<br/><br/>|
     | NTDS KCC|1265|An attempt by the Knowledge Consistency Checker (KCC) to add a replication agreement for the following directory partition and source domain controller failed. <br/> |
-    ||||
 
 ## Cause
 
@@ -201,7 +200,7 @@ c:\>nslookup -type=cname \<fully qualified cname of source DC> <destination DCs 
 
 Verify that the IP address returned by `NSLOOKUP` "owns" the host name / security identity of the source DC.
 
-a) C:\\>NBTSTAT -A \\<IP address *returned* by NSLOOKUP in the step above>
+a) `C:\\>NBTSTAT -A \\<IP address _returned_ by NSLOOKUP in the step above>`
 
 OR
 
@@ -234,7 +233,6 @@ Active Directory uses a mix of well-known and dynamically registered ports. Well
 | LDAP SSL| 636| √| √| |
 | Global Catalog Server| 3268| √|| |
 | Global Catalog Server| 3269| √|| |
-||||||
 
 Well-known ports are NOT registered with the endpoint mapper.
 
@@ -276,10 +274,9 @@ ncacn_http:CONTOSO-DC01[6004]
     | Remote Procedure Call (RPC)| Automatic|Started|
     | Remote Procedure Call (RPC) Locator| Automatic|Started|
     |
-    | **Windows Server 2003, Server 2008, Server 2008 R2**|**Startup Value**| **Service Status** 
+    | **Windows Server 2003, Server 2008, Server 2008 R2**|**Startup Value**| **Service Status**
     | Remote Procedure Call (RPC)|Automatic|Started|
     | Remote Procedure Call (RPC) Locator|Manual|Null or Stopped|
-    ||||
 
 1. Verify that the size of the dynamic port range hasn't been constrained. The Windows Server 2008 and Windows Server 2008 R2 NETSH syntax to enumerate the RPC port range is shown below:
 

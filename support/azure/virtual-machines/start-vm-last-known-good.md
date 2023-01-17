@@ -2,9 +2,9 @@
 title: How to start Azure Windows VM with Last Known Good Configuration
 description: Describes how to start a VM that fails to boot by using the Last Known Good Configuration feature.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ---
 # How to start Azure Windows VM with Last Known Good Configuration
@@ -39,7 +39,6 @@ _Original KB number:_ &nbsp; 4016731
     | HKEY_USERS\ProblemSystem\Select\Default| 2 |
     | HKEY_USERS\ProblemSystem\Select\Failed| 1 |
     |HKEY_USERS\ProblemSystem\Select\LastKnownGood|3|
-    |||
 
     For Windows 10, Windows Server 2016, and newer versions:
 
@@ -49,9 +48,10 @@ _Original KB number:_ &nbsp; 4016731
     | HKEY_USERS\ProblemSystem\Select\Default| 2 |
     | HKEY_USERS\ProblemSystem\Select\Failed| 1 |
     |HKEY_USERS\ProblemSystem\Select\LastKnownGood|2|
-    |||
 
     > [!NOTE]
     > If the VM was restarted on a Last Known Good Configuration before, the value on Current, Default, Failed and LastKnownGood will be increased in 1.  So, to boot by using Last Known Good Configuration, add 1 to all those values. For example, you should set `HKEY_USERS\ProblemSystem\Select\Current` to **3** if the VM was restarted on a **Last Known Good Configuration** before.
 6. Select `HKEY_USERS\ProblemSystem`, and then select **Unload Hive** on the **File** menu.
 7. Detach the repaired OS disk from the troubleshooting VM. Then, [create a new VM from the OS disk](/azure/virtual-machines/windows/create-vm-specialized-portal). You may have to wait about 10 minutes for Azure to release the disk.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

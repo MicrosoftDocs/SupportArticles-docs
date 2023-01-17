@@ -2,7 +2,6 @@
 title: Managing a host fails with error 0x8007000E
 description: Fixes an issue in which you receive error 2911 when you manage a host in Virtual Machine Manager.
 ms.date: 07/09/2020
-ms.prod-support-area-path: 
 ---
 # Managing a host in VMM fails with error 2911 - Not enough storage is available to complete this operation (0x8007000E)
 

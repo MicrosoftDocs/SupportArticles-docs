@@ -2,9 +2,8 @@
 title: Support policy for containers and related services on Azure
 description: Describes the support options and coverage that Microsoft offers for containers and surrounding infrastructure services.
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
-ms.service: azure
+ms.service: azure-common-issues-support
 ms.author: genli
 author: genlin
 ---
@@ -21,7 +20,7 @@ _Original KB number:_ &nbsp; 4035670
 
 For containers that are running on physical infrastructure and servers, Microsoft supports instances of Windows Server Containers on Windows Server 2016. For more information, see [Docker Engine on Windows](/virtualization/windowscontainers/manage-docker/configure-docker-daemon).
 
-For ­­­ support of Linux operating systems that are running on physical infrastructure and servers, customers have to contact the distribution provider for support, such as [Canonical](https://www.canonical.com/services), [CoreOS](https://coreos.com/support), or [Red Hat](https://www.redhat.com/en/services/support).
+For ­­­ support of Linux operating systems that are running on physical infrastructure and servers, customers have to contact the distribution provider for support, such as [Canonical](https://www.canonical.com/services), [CoreOS](https://support.coreos.com/hc), or [Red Hat](https://www.redhat.com/en/services/support).
 
 Physical infrastructure support is not provided by Microsoft, except in cases in which the hardware is a Microsoft product under warranty or a support plan, such as for Surface Pro 4.
 
@@ -44,7 +43,7 @@ Container orchestrators are enabled to work with container deployments as mentio
 We recommend that you use community resources or contact the orchestrator provider for additional technical assistance:
 
 - [Mesosphere](https://support.d2iq.com/)
-- [Docker Swarm](https://success.docker.com/Policies/Scope_of_Support)
+- [Docker Swarm](https://docs.docker.com/engine/swarm/)
 - [DC/OS](https://dcos.io/community/)
 - [Kubernetes](https://kubernetes.io/community/)
 
@@ -75,6 +74,8 @@ Customers may also choose to deploy containers to Azure Web Apps on Linux. In th
 Microsoft offers commercially reasonable support for the components that are deployed in this scenario, including the operating system, Docker Engine, and hosted elements in the container (such as Node.js). Customized code is not within the scope of support.
 
 :::image type="content" source="media/support-policy-containers/component-support.png" alt-text="Screenshot of component support.":::
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 

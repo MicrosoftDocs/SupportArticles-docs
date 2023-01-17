@@ -38,7 +38,6 @@ The following certificates are necessary and trusted in:
 |Microsoft Root Authority|Microsoft Root Authority|00c1008b3c3c8811d13ef663ecdf40|12/31/2020|All|Microsoft Root Authority|R|
 |Thawte Timestamping CA|Thawte Timestamping CA|00|12/31/2020|Time Stamping|Thawte Timestamping CA|R|
 |Microsoft Root Certificate Authority|Microsoft Root Certificate Authority|79ad16a14aa0a5ad4c7358f407132e65|5/9/2021|All|Microsoft Root Certificate Authority|R|
-||||||||
 
 The follow certificates are necessary and trusted in Windows XP and in Windows Server 2003:
 
@@ -51,7 +50,6 @@ The follow certificates are necessary and trusted in Windows XP and in Windows S
 |VeriSign Commercial Software Publishers CA|VeriSign Commercial Software Publishers CA|03c78f37db9228df3cbb1aad82fa6710|1/7/2004|Secure E-mail, Code Signing|VeriSign Commercial Software Publishers CA|R|
 |Thawte Timestamping CA|Thawte Timestamping CA|00|12/31/2020|Time Stamping|Thawte Timestamping CA|R|
 |Microsoft Root Certificate Authority|Microsoft Root Certificate Authority|79ad16a14aa0a5ad4c7358f407132e65|5/9/2021|All|Microsoft Root Certificate Authority|R|
-||||||||
 
 The follow certificates are necessary and trusted in Microsoft Windows 2000:
 
@@ -63,6 +61,5 @@ The follow certificates are necessary and trusted in Microsoft Windows 2000:
 |NO LIABILITY ACCEPTED, (c)97 VeriSign, Inc.|NO LIABILITY ACCEPTED, (c)97 VeriSign, Inc.|4a19d2388c82591ca55d735f155ddca3|1/7/2004|Time Stamping|VeriSign Time Stamping CA|R|
 |VeriSign Commercial Software Publishers CA|VeriSign Commercial Software Publishers CA|03c78f37db9228df3cbb1aad82fa6710|1/7/2004|Secure E-mail, Code Signing|VeriSign Commercial Software Publishers CA|R|
 |Thawte Timestamping CA|Thawte Timestamping CA|00|12/31/2020|Time Stamping|Thawte Timestamping CA|R|
-||||||||
 
-Some certificates that are listed in the previous tables have expired. However, these certificates are necessary for backward compatibility. Even if there's an expired trusted root certificate, anything that was signed by using that certificate *before* the expiration date requires that the trusted root certificate is validated. As long as expired certificates aren't revoked, they can be used to validate anything that was signed before their expiration.
+Some certificates that are listed in the previous tables have expired. However, these certificates are necessary for backward compatibility. Even if there's an expired trusted root certificate, anything that was signed by using that certificate _before_ the expiration date requires that the trusted root certificate is validated. As long as expired certificates aren't revoked, they can be used to validate anything that was signed before their expiration.

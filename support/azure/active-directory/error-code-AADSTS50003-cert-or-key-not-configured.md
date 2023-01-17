@@ -1,8 +1,7 @@
 ---
 title: Error AADSTS50003 - No signing key configured
-description: Describes a problem in which you receive an error message when signing in to SAML-based single sign-on configured app that has been configured to use Azure Active Directory as an Identity Provider (IdP). The error you receive is Error AADSTS50003 - No signing key configured.
-ms.date: 03/15/2021
-ms.prod-support-area-path: 
+description: Describes a problem in which you receive the error AADSTS50003 when signing in to SAML SSO configured app with Azure AD. 
+ms.date: 10/12/2022
 ms.reviewer: bernawy
 ms.service: active-directory
 ms.subservice: app-mgmt
@@ -31,3 +30,5 @@ To delete and create a new certificate, follow the steps below:
 ## More Information
 
 For a full list of Active Directory Authentication and authorization error codes see [Azure AD Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

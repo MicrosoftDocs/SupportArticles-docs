@@ -1,12 +1,12 @@
 ---
-title: Access is denied error when you connect to an Azure Windows VM | Microsoft Docs
+title: Access is denied error when you connect to an Azure Windows VM
 description: Resolves an access denial problem that occurs when you try to connect to an Azure Windows VM by using Remote Desktop.
 services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
@@ -46,7 +46,7 @@ After you connect to the VM by using PowerShell, follow these steps to troublesh
     ```powershell
     Get-Acl -Path "HKLM:\SOFTWARE\Microsoft\SystemCertificates\Remote Desktop\Certificates" | Format-List 
     ```
-    
+
     If this permission is not granted, run the following commands to grant Read access to the **Remote Desktop Users** group:
 
     ```powershell
@@ -62,7 +62,8 @@ After you connect to the VM by using PowerShell, follow these steps to troublesh
     $NewAcl.SetAccessRule($fileSystemAccessRule)
     Set-Acl -Path " HKLM:\SOFTWARE\Microsoft\SystemCertificates\Remote Desktop\Certificates " -AclObject $NewAcl
     ```
-2. Set the following registry key value to ignore the profile loading error:
+
+ 2. Set the following registry key value to ignore the profile loading error:
 
     ```powershell
     Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server' -name "IgnoreRegUserConfigErrors" 1 -Type DWord -force
@@ -71,15 +72,15 @@ After you connect to the VM by using PowerShell, follow these steps to troublesh
  3. Set the size of the token to its maximum value:
 
      ```powershell
-	Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Parameters' -name "MaxTokenSize" 65535 -Type DWord -force 
-    ```
+     Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Parameters' -name "MaxTokenSize" 65535 -Type DWord -force 
+     ```
 
-1. Set the correct account for the terminal services:
+ 1. Set the correct account for the terminal services:
 
     ```powershell
-	Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\services\termservice' -name "ObjectName" "NT Authority\NetworkService" -Type String -force
-   ```
+    Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\services\termservice' -name "ObjectName" "NT Authority\NetworkService" -Type String -force
+    ```
 
-## Need help?
+ 1. Restart VM to make the registry changes take effect.
 
-If you still need help to get your problem resolved, [contact Azure Support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade).
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

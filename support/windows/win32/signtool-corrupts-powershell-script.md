@@ -2,10 +2,10 @@
 title: SignTool may corrupt PowerShell script file
 description: This article provides resolutions for the PowerShell script file corruption that occurs when you use SignTool to sign the file that already contains a digital signature.
 ms.date: 6/15/2021
-ms.prod-support-area-path: Security development
+ms.custom: sap:Security development
 ms.reviewer: mstanley
-author: cobibi
-ms.author: v-yunhya
+author: HaiyingYu
+ms.author: haiyingyu
 ms.technology: windows-dev-apps-security-dev
 ---
 

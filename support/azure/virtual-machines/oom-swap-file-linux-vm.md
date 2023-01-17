@@ -2,9 +2,9 @@
 title: Out of memory error occurs in Linux Azure virtual machine
 description: Describes how to add swap space in Linux Azure virtual machines.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-common-errors-issues
 ms.collection: linux
 ---
 # Out of memory error occurs in Linux Azure virtual machine
@@ -29,6 +29,7 @@ This issue may be caused by the lack of a swap file.
 Add a swap file to increase the virtual memory in Linux Azure virtual machines. To do this, follow these steps.
 
 > [!NOTE]
+>
 > - The following commands are executed as root.
 > - You should set the swap file in compliance with the guidance from your Linux vendor: [Ubuntu](https://help.ubuntu.com/community/SwapFaq), [Red Hat](https://access.redhat.com/documentation/en-US/red_hat_enterprise_linux/4/html/system_administration_guide/swap_space).
 > - Before you create a swap file, you can run the following command to learn how much space is available under `/mnt/resource` or `/mnt`: `df -h`.
@@ -69,3 +70,5 @@ Add a swap file to increase the virtual memory in Linux Azure virtual machines. 
     ```
 
 For more information, see [Ubuntu Cloud Images](https://cloud-images.ubuntu.com/) and [SWAP space in Windows Azure Virtual Machines running pre-built Linux Images](https://azure.microsoft.com/blog/swap-space-in-windows-azure-virtual-machines-running-pre-built-linux-images-part-1/).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -2,7 +2,7 @@
 title: Agents can't find the primary management server
 description: Fixes an issue in which Operations Manager agents can't find the primary management server, and events 20012 and 2000 are logged.
 ms.date: 07/13/2020
-ms.prod-support-area-path: System Center Operations Manager
+ms.custom: sap:System Center Operations Manager
 ms.reviewer: 
 ---
 # Events 20012 and 2000 when you use Active Directory integration for agent assignment in Operations Manager

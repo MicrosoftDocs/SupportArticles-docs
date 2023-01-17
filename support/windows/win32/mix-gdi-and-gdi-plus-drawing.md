@@ -2,7 +2,7 @@
 title: Interoperability between GDI and GDI+
 description: Explains how to mix GDI and GDI+ drawing operations in the same code path.
 ms.date: 03/10/2020
-ms.prod-support-area-path: Graphics and multimedia development
+ms.custom: sap:Graphics and multimedia development
 ms.reviewer: V-JEFFBO, jhornick
 ms.topic: article
 ms.technology: windows-dev-apps-graphics-multimedia-dev

@@ -43,8 +43,7 @@ The following table lists basic hardware components and their corresponding emul
 |Memory|Supports 1 TB of RAM per virtual machine.|
 |Video card|Emulates a generic graphics adapter with 4 MB of VRAM, VGA, and SVGA support that is compliant with VESA 2.0, hardware cursor, and support for DirectX.|
 |IDE/ATAPI storage|Emulates up to 4 IDE devices, hard drives, or CD-ROM or DVD-ROM drives (or ISO images), and virtual hard disks that are up to 2040 MB per IDE channel.|
-|||
-
+  
 The following table lists hardware components and their corresponding synthetic hardware:
 
 |Component|Associated hardware|
@@ -58,8 +57,7 @@ The following table lists hardware components and their corresponding synthetic 
 |Microsoft Hyper-V Synthetic Virtual Fibre Channel Adapter|This synthetic Virtual Fibre Channel adapter is added to the guest when the integration services are installed into the OS in the virtual machine and a Virtual HBA is added to the virtual machine.|
 |Microsoft Hyper-V Virtual PCI Bus|This synthetic Virtual PCI Bus is added when the integration services are installed into the OS in the virtual machine and SR-IOV networking is being used.|
 |Microsoft Hyper-V Generation Counter device|This synthetic Virtual Machine Generation Counter device is added when the integration services are installed into the OS. The device provides a 128-bit VM Generation Identifier for a VM that stays the same unless the VM is reverted to a snapshot.|
-|||
-
+  
 ### References
 
 For more information, see [Virtual machine specifications for Hyper-V in Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn592184(v=ws.11)).

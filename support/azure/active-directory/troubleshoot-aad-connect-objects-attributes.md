@@ -2,7 +2,6 @@
 title: Troubleshoot Azure AD Connect objects and attributes
 description: Describes how to determine why an object is not syncing in Azure AD.
 ms.date: 2/3/2021
-ms.prod-support-area-path: 
 ms.reviewer: nualex
 editor: v-jesits
 ms.service: active-directory
@@ -331,7 +330,7 @@ The synchronization between ADCS and MV occurs on the delta/full synchronization
 
   Here are some examples of **Export-ADsyncObject** syntax:
 
-  - `Import-Module .\Export-ADsyncObject.psm1`
+  - `Import-Module "C:\Program Files\Microsoft Azure Active Directory Connect\Tools\AdSyncTools.psm1"`
   - `Export-ADsyncObject -DistinguishedName 'CN=TestUser,OU=Sync,DC=Domain,DC=Contoso,DC=com' -ConnectorName 'Domain.Contoso.com'`
   - `Export-ADsyncObject -ObjectId '{46EBDE97-7220-E911-80CB-000D3A3614C0}' -Source Metaverse -Verbose`
 
@@ -439,7 +438,7 @@ The synchronization between MV and AADCS occurs in the delta/full synchronizatio
 
    Here are some examples of **Export-ADsyncObject** syntax:
 
-   - `Import-Module .\Export-ADsyncObject.psm1`
+   - `Import-Module "C:\Program Files\Microsoft Azure Active Directory Connect\Tools\AdSyncTools.psm1"`
    - `Export-ADsyncObject -ObjectId '{46EBDE97-7220-E911-80CB-000D3A3614C0}' -Source Metaverse -Verbose`
    - `Export-ADsyncObject -DistinguishedName 'CN={2B4B574735713744676B53504C39424D4C72785247513D3D}' -ConnectorName 'Contoso.onmicrosoft.com - AAD'`
 
@@ -542,7 +541,6 @@ Fortunately, the issues that affect these components usually generate an error i
 
    **UserPrincipalName** updates will work if the user is NOT licensed. However, without the [SynchronizeUpnForManagedUsers](/azure/active-directory/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) feature, **UserPrincipalName** changes after the user is provisioned and is assigned a licensed that will NOT be updated in AAD. Notice that Microsoft does not disable this feature on behalf of the customer.
 
-
 - **Invisible characters and ProxyCalc internals**
 
    Issues that involve invalid characters that don't produce any sync error are more troublesome in **UserPrincipalName** and **ProxyAddresses** attributes because of the cascading effect in ProxyCalc processing that will **silently** discard the value from on-premises AD. This situation occurs as follows:
@@ -556,7 +554,6 @@ Fortunately, the issues that affect these components usually generate an error i
       To troubleshoot a space character in the **UserPrincipalName** or **ProxyAddress**, examine the value that's stored in the local AD from an LDIFDE or PowerShell exported to a file. An easy trick is to copy the contents of the exported file, and then paste it into a PowerShell window. The invisible character will be replaced by a question mark (?), as shown in the following example.
 
       :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/userprinciplename.png" alt-text="Screenshot shows an example to troubleshoot UserPrincipalName or ProxyAddress." border="false":::
-
 
 - **ThumbnailPhoto attribute (KB4518417)**
 
@@ -572,8 +569,8 @@ Fortunately, the issues that affect these components usually generate an error i
 
    3. If the AD (or AzureAD) **thumbnailPhoto** has the correct image but is not correct on other online services, the following conditions might apply:
 
-   - The user's mailbox contains an HD image and is not accepting low-resolution images from Azure AD thumbnailPhoto. The solution is to directly update the user's mailbox image.
-   - The user's mailbox image was updated correctly, but you're still seeing the original image. The solution is to wait at least six hours to see the updated image in the Office 365 User Portal or the Azure portal.
+  - The user's mailbox contains an HD image and is not accepting low-resolution images from Azure AD thumbnailPhoto. The solution is to directly update the user's mailbox image.
+  - The user's mailbox image was updated correctly, but you're still seeing the original image. The solution is to wait at least six hours to see the updated image in the Office 365 User Portal or the Azure portal.
 
 ## Additional resources
 
@@ -581,3 +578,5 @@ Fortunately, the issues that affect these components usually generate an error i
 - [Troubleshoot object synchronization with Azure AD Connect sync](/azure/active-directory/hybrid/tshoot-connect-objectsync)
 - [Troubleshoot an object that is not synchronizing with Azure Active Directory](/azure/active-directory/hybrid/tshoot-connect-object-not-syncing)
 - [Azure AD Connect Single Object Sync](/azure/active-directory/hybrid/how-to-connect-single-object-sync)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

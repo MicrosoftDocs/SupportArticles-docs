@@ -25,8 +25,7 @@ _Original KB number:_ &nbsp; 2749474
 |AntiMalware|ResultReport.xml|
 |User Account Control|ResultReport.xml|
 |UserName|ResultReport.xml|
-|||
-
+  
 ### Computer system
 
 | Description| File name |
@@ -34,8 +33,7 @@ _Original KB number:_ &nbsp; 2749474
 |Computer Model|ResultReport.xml|
 |Processor(s)|ResultReport.xml|
 |Machine|SERVERDATABASE_WhoAmI.txt|
-|||
-
+  
 ### RMS Store Operations configuration information
 
 | Description | File name |
@@ -85,24 +83,21 @@ _Original KB number:_ &nbsp; 2749474
 |Options4|ResultReport.xml|
 |NextAutoAccountNumber|ResultReport.xml|
 |AccountingInterface|ResultReport.xml|
-|||
-
+  
 ### SQL configuration
 
 | Description| File name |
 |---|---|
 |SQLServerName|ResultReport.xml|
 |SQLDB|ResultReport.xml|
-|||
-
+  
 ### RMS column information
 
 | Description| File name |
 |---|---|
 |RMS Column Information (.csv):|<**ComputerName**>_RMS_Column_Information.csv|
 |RMS Column Information (.txt):|<**ComputerName**>_RMS_Column_Information.txt|
-|||
-
+  
 ### RMS miscellaneous system configuration files
 
 | Description | File name |
@@ -130,48 +125,42 @@ _Original KB number:_ &nbsp; 2749474
 |Text files (.txt)|<**ComputerName**>_SQLVersionInfo.txt|
 |Text files (.txt)|<**ComputerName**>_systeminfo.txt|
 |Text files (.txt)|<**ComputerName**>_WhoAmI.txt|
-|||
-
+  
 ### RMS SQL triggers
 
 | Description| File name |
 |---|---|
 |RMS Sql Triggers (.csv)|<**ComputerName**>_RMS_Sql_Triggers.csv|
 |RMS Sql Triggers (.txt)|<**ComputerName**>_RMS_Sql_Triggers.txt|
-|||
-
+  
 ### RMS Store information
 
 | Description| File name |
 |---|---|
 |RMS Store Information (.csv)|<**ComputerName**>_RMS_Store.csv|
 |RMS Store Information (.txt)|<**ComputerName**>_RMS_Store.txt|
-|||
-
+  
 ### Files of RMS Store Operations configuration
 
 | Description| File name |
 |---|---|
 |RMS Store Operations Configuration Information (.csv)|<**ComputerName**>_RMS_Configuration.csv|
 |RMS Store Operations Configuration Information (.txt)|<**ComputerName**>_RMS_Configuration.txt|
-|||
-
+  
 ### RMS version history
 
 | Description| File name |
 |---|---|
 |RMS Version History (.csv)|<**ComputerName**>_RMS_VersionHistory.csv|
 |RMS Version History (.txt)|<**ComputerName**>_RMS_VersionHistory.txt|
-|||
-
+  
 ### Microsoft SQL Server version
 
 | Description| File name |
 |---|---|
 |Sql Server Version (.csv)|<**ComputerName**>_SQLVersioninfo.csv|
 |Sql Server Version (.txt)|<**ComputerName**>_SQLVersioninfo.txt|
-|||
-
+  
 ### Event log files
 
 | Description| File name |
@@ -182,8 +171,7 @@ _Original KB number:_ &nbsp; 2749474
 |System (.csv) |<**ComputerName**>_evt_System.csv|
 |System (.evtx) |<**ComputerName**>_evt_System.evtx|
 |System (.txt) |<**ComputerName**>_evt_System.txt|
-|||
-
+  
 ### Rule detection summary
 
 | RuleID| Title| Description |
@@ -191,8 +179,7 @@ _Original KB number:_ &nbsp; 2749474
 |RC_RMS_Duplicate_Batches|RMS Duplicate Batches Found|This diagnostic tool has found duplicate Batches within the current configuration.|
 |RC_RMS_Duplicate_Customers|RMS Duplicate Customers Found|This diagnostic tool has found duplicate customers within the current configuration.|
 |RC_RMS_Duplicate_Items|RMS Duplicate Items Found|This diagnostic tool has found duplicate Items within the current configuration.|
-||||
-
+  
 ## Additional Information
 
 In addition to the files that are collected and listed here, this troubleshooter can detect one or more of the following situations:

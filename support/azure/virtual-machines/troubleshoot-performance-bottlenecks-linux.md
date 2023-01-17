@@ -2,9 +2,9 @@
 title: Troubleshoot performance and isolate bottlenecks in Linux
 description: Troubleshoot CPU, memory, and disk input and output performance, and isolate bottlenecks in Linux virtual machines
 ms.date: 05/27/2021
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-performance
 author: genlin
 ms.author: esflores
 ---
@@ -426,3 +426,5 @@ For more information on PerfInsights in the Linux OS, review [How to use PerfIns
 - [Troubleshoot Azure virtual machine performance on Linux or Windows - Virtual Machines](troubleshoot-performance-virtual-machine-linux-windows.md)
 
 - [Performance diagnostics for Azure virtual machines](performance-diagnostics.md)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

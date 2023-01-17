@@ -47,8 +47,7 @@ The following Microsoft Knowledge Base articles describe the currently available
 |Hyper-V guest may freeze when it is running failover cluster service together with shared VHDX in Windows Server 2012 R2| [3139896](https://support.microsoft.com/help/3139896) |
 |0x00000001 Stop error when a shared VHDX file is accessed in Windows Server 2012 R2-based Hyper-V guest| [3141074](https://support.microsoft.com/help/3141074) |
 |LBFO Dynamic Teaming mode may drop packets in Windows Server 2012 R2| [3137691](https://support.microsoft.com/help/3137691) |
-|||
-
+  
 ## Other known issues and solutions
 
 - [Recommended hotfixes, updates, and known solutions for Windows Server 2012 R2 Hyper-V Network Virtualization (HNV) environments](https://support.microsoft.com/help/2974503)

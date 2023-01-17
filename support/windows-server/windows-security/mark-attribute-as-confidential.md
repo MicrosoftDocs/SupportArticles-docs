@@ -1,7 +1,7 @@
 ---
 title: Mark an attribute as confidential
 description: Describes how to use the confidential attributes feature in Windows Server 2003 Service Pack 1 (SP1). The confidential attribute feature is introduced by Windows Server 2003 SP1.
-ms.date: 09/08/2020
+ms.date: 06/21/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -272,13 +272,12 @@ In the following sample Ldp.exe output, Ldp.exe identifies the systemFlags attri
 ### Object identifiers
 
 When you add an attribute or a class object to the schema, one of the required attributes is the object identifier (also known as OID). Object identifiers are used to uniquely define object classes and attributes. Make sure that your company obtains a unique object identifier to identify its attribute. Tools that generate object identifiers, such as the Oidgen.exe tool, are not supported. To obtain an object identifier from Microsoft, visit the following Microsoft Web site:  
-[Obtaining an Object Identifier from Microsoft](https://msdn2.microsoft.com/library/ms677620.aspx)  
+[Obtaining an Object Identifier from Microsoft](/windows/win32/ad/obtaining-an-object-identifier-from-microsoft)  
 
 ### Attribute syntax
 
 The attributeSyntax attribute is also required to add new objects to the schema. This attribute defines the storage representation, byte ordering, and matching rules for comparisons of property types. The syntax defines whether the attribute value must be a string, a number, or a unit of time. Each attribute of every object is associated with exactly one syntax. Make sure that you select the correct attribute syntax for the new attribute. This is especially important if you synchronize a Lightweight Directory Access Protocol (LDAP) directory with another LDAP directory. After the attribute is added to the schema, its attribute syntax cannot be changed.
 
-For more information about the attributeSyntax attribute, visit the following Microsoft Web site:  
-[Attribute-Syntax attribute](https://msdn.microsoft.com/library/ms675236%28vs.85%29.aspx)
+For more information about the attributeSyntax attribute, see [Attribute-Syntax attribute](/windows/win32/adschema/a-attributesyntax).
 
 See the [Search-Flags attribute](/windows/win32/adschema/a-searchflags) for more information.

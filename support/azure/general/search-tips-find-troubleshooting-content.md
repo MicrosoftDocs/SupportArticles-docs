@@ -2,8 +2,7 @@
 title: Advanced search tips for finding Microsoft troubleshooting content
 description: Find out how to search for Microsoft support and troubleshooting articles using search best practices.
 ms.date: 10/10/2020
-ms.prod-support-area-path: 
-ms.service: azure
+ms.service: azure-common-issues-support
 ms.author: genli
 author: genlin
 ms.reviewer: 
@@ -84,25 +83,24 @@ Build a list of trusted sites to use during your investigation.
 
 | **Asset**| **Comments** |
 |---|---|
-|`Support.microsoft.com`|# 1 site for break / fix content for Microsoft on-prem products.|
-|`Docs.microsoft.com`|For most IT Pro content for cloud-based products, includes break-fix content.|
-|Windows Health Release Dashboard @ [https://docs.microsoft.com/windows/release-information/status-windows-10-1909](/windows/release-information/status-windows-10-1909) <br/>|OS version specific information describing friction ranging from intentional hardening changes to unintended regressions introduced by quality updates and sometimes feature updates.<br/><br/>Also describes interop issues with 1<sup>st</sup> party / 3<sup>rd</sup> party hardware / software that may be caused by Windows updates or 1<sup>st</sup> party / 3<sup>rd</sup> party hardware / software.|
+|`support.microsoft.com`|# 1 site for break / fix content for Microsoft on-prem products.|
+|`learn.microsoft.com`|For most IT Pro content for cloud-based products, includes break-fix content.|
+|[Windows Health Release Dashboard](/windows/release-information/status-windows-10-1909)<br/>|OS version specific information describing friction ranging from intentional hardening changes to unintended regressions introduced by quality updates and sometimes feature updates.<br/><br/>Also describes interop issues with 1<sup>st</sup> party / 3<sup>rd</sup> party hardware / software that may be caused by Windows updates or 1<sup>st</sup> party / 3<sup>rd</sup> party hardware / software.|
 |Known issue and release note text in the header Monthly Windows Update KB articles<br/><br/>See KB [4534310](https://support.microsoft.com/help/4534310/windows-7-update-kb4534310) as a recent example|Known issue text identifies friction including interop issues or regressions introduced by a given Windows update.<br/><br/>Release notes identify fixes resolved in that months update.<br/><br/>A fix that resolves an issue will generally use the same "known issue" or "release note" text across all affected OS versions.|
-|||
-
+  
 ## Other sites
 
 Don't overlook these valuable resources! Visit these sites and search using their own search engines.
 
-**Forums**
+**Forums**:
 
-- TechNet forums: [https://social.technet.microsoft.com/Forums/en-US/home](https://social.technet.microsoft.com/Forums/en-US/home)
-- Microsoft Q&A: [https://docs.microsoft.com/answers/index.html](/answers/index.html)
-- Consumer or end-user forum: [https://answers.microsoft.com/](https://answers.microsoft.com/)
+- [TechNet forums](https://social.technet.microsoft.com/Forums/en-US/home)
+- [Microsoft Q&A](/answers/index.html)
+- [Consumer or end-user forum](https://answers.microsoft.com/)
 
-**Blogs**
+**Blogs**:
 
-- [https://techcommunity.microsoft.com/](https://techcommunity.microsoft.com/)
+- [Microsoft Tech Community](https://techcommunity.microsoft.com/)
 
 ## Microsoft Support Portals (An overlooked resource for troubleshooting)
 
@@ -122,4 +120,5 @@ If you want your case resolved as quickly as possible, follow this tips to avoid
 |Use the appropriate severity||The severity should accurately reflect the impact of the problem. Sev-A should be restricted to problems that completely block a user or service frequently and have no workarounds.|
 |Provide a meaningful title|**Bad examples**<br/>1. Operation X <br/>2. OS version Y <br/>3. Error message Z <br/>4. Operation X on Windows 10<br/><br/> **Better**<br/>1. Operation X fails on major / minor version Y with Error Z <br/>2. Operation W intermittently fails on major / minor version X with error Y due to triggering configuration Z |Remove ambiguity, and try to capture "what", "who" "how" and "when" context in your title.<br/><br/>Microsoft has released 10 versions of Windows 10 to date. Each version contains new capabilities and behavior changes and bug fixes.|
 |Provide a meaningful problem description and repro steps that allow Microsoft to understand the problem and reproduce it in-house if the customer is unable to collect data||The single biggest contributors to slow root cause determination are poor problem description and lack of steps to reproduce the issue.<br/>Having the right data often enables Microsoft to identify root cause within hours or days for many type of issues. Some issues (memory or kernel related, for example) may take longer.<br/>Include "IS \| DOES" and "IS \| DOES NOT" context in your problem statement|
-||||
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -47,7 +47,7 @@ Connect Health correlates events from AD FS, dependent on the server version. It
 
 Basic configuration is automatic. Data is fed into the report after the feature goes live and prerequisites are met.
 
-You can enable Log Analytics for AD FS sign-ins and use it with any other Log Analytics-integrated components, such as Azure Sentinel. For more information, see [Enabling Log Analytics and Azure Monitor](/azure/active-directory/hybrid/how-to-connect-health-ad-fs-sign-in#enabling-log-analytics-and-azure-monitor).
+You can enable Log Analytics for AD FS sign-ins and use it with any other Log Analytics-integrated components, such as Microsoft Sentinel. For more information, see [Enabling Log Analytics and Azure Monitor](/azure/active-directory/hybrid/how-to-connect-health-ad-fs-sign-in#enabling-log-analytics-and-azure-monitor).
 
 ## Basic troubleshooting
 
@@ -68,3 +68,5 @@ cluster('Idsharedwus').database('ADFSConnectHealth').SignInEvent
 ## Next steps
 
 Read more about [AD FS sign-ins in Azure AD with Connect Health](/azure/active-directory/hybrid/how-to-connect-health-ad-fs-sign-in).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -1,7 +1,7 @@
 ---
 title: Event 142 time service stopped advertising
 description: Provides a resolution for event 142 that the time service has stopped advertising as a time source.
-ms.date: 10/19/2020
+ms.date: 02/17/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -41,7 +41,7 @@ Microsoft-Windows-Time-Service Event 142 is logged with one of four error string
 |event_0x003A| The time service has stopped advertising as a time source because there are no providers running. |
 |event_0x003B| The time service has stopped advertising as a good time source. |
 || The local clock is not synchronized |
-|||  
+
  >Event Xml:  
  \<Event xmlns="`https://schemas.microsoft.com/win/2004/08/events/event`">  
    \<System>  
@@ -72,8 +72,7 @@ Microsoft-Windows-Time-Service Event 142 is logged with one of four error string
 | The time service has stopped advertising as a time source because there are no providers running.|  The NTP client service has stopped or is non-responsive |
 | The time service has stopped advertising as a time source because there are no providers running.|  Time on the local computer has fallen out of sync with its peer |
 | The time service has stopped advertising as a good time source.|  The local DC is unable to locate a time server |
-|||
-
+  
 ## Resolution
 
 The dominant error string logged by Microsoft-Windows-Time-Service Event 142 is the third example:
@@ -100,7 +99,6 @@ The dominant error string logged by Microsoft-Windows-Time-Service Event 142 is 
     |---|---|
     |Microsoft-Windows-Time-Service event 37|\<note the protocol + source DC in event|
     |Microsoft-Windows-Kernel-General event 1.| The Microsoft-Windows-Kernel-General event 1 indicates that time has been changed in the VM. Every time W32time updates the clock, this event is logged. Every time Hyper-V Time Synch updates the clock, Microsoft-Windows-Kernel-General event 1 is logged. This event is not specific to VMs as it is also logged in physical machines when w32time updates the clock |
-    |||
 
 7. Other root causes
 
@@ -308,4 +306,4 @@ Recommendations from the Microsoft Windows time team to correct this environment
  [Configuring the Windows time service on the PDC emulator in the Forest root domain](https://technet.microsoft.com/library/upgrade-domain-controllers-to-windows-server-2008-r2%28WS.10%29.aspx#BKMK_VM)  
  [Configuring the Windows Time service for Windows Server 2008 and Windows Server 2008 R2](https://technet.microsoft.com/library/upgrade-domain-controllers-to-windows-server-2008-r2%28WS.10%29.aspx#BKMK_VM)  
  [Running Domain Controllers in Hyper-V](https://go.microsoft.com/fwlink/?LinkID=139651)  
- [Configuring the Windows time service for Windows Server](http://msmvps.com/blogs/acefekay/archive/2009/09/18/configuring-the-windows-time-service-for-windows-server.aspx) - Ace Fekay's blog post  
+ [Configuring the Windows time service for Windows Server](https://blogs.msmvps.com/acefekay/2009/09/18/configuring-the-windows-time-service-for-windows-server/) - Ace Fekay's blog post  

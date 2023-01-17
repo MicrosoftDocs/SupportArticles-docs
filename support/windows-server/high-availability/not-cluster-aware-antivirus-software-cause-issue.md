@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 This article provides help to solve problems with Cluster Services that be caused by antivirus software that isn't cluster-aware.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2022、Windows Server 2019、Windows Server 2016、Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 250355
 
 ## Summary
@@ -42,10 +42,22 @@ Even if you are not monitoring the shared disk, the filter drivers are still loa
 
 You can run antivirus software on a SQL Server cluster. However, you must make sure that the antivirus software is cluster-aware. Contact your antivirus software vendor about cluster-aware versions and interoperability.
 
-Additionally, you should exclude the following file system locations from virus scanning on a server that is running Cluster Services:
+Additionally, you should exclude the following file system locations and the processes from virus scanning on a server that is running Cluster Services:
+
+### Directory
 
 - The path of the `\Cluster` folder on the quorum hard disk. For example, exclude the `Q:\Cluster` folder from virus scanning.
 - The `%Systemroot%\Cluster` folder.
 - The temp folder for the Cluster Service account. For example, exclude the `\cliusr\Local Settings\Temp` folder from virus scanning.
+
+### Process
+
+- clussvc.exe (`%systemroot%\Cluster\clussvc.exe`)
+
+    This file may have to be configured as a process exclusion within the antivirus software.
+
+- rhs.exe (`%systemroot%\Cluster\rhs.exe`)
+
+    This file may have to be configured as a process exclusion within the antivirus software.
 
 For more information about running antivirus software on servers that are running SQL Server, see [How to choose antivirus software to run on computers that are running SQL Server](https://support.microsoft.com/help/309422).

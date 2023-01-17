@@ -2,7 +2,6 @@
 title: Set user permissions in the Opalis Integration Server client
 description: Describes how to set user permissions on folders, policies, computer groups, variables, counters, and schedules in the Opalis Integration Server client.
 ms.date: 08/03/2020
-ms.prod-support-area-path: 
 ---
 # Set user permissions in the Opalis Integration Server client
 

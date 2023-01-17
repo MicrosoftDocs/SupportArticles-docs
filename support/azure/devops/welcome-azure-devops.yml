@@ -7,11 +7,12 @@ metadata:
   title: Troubleshoot Azure DevOps issues
   description: Documentation for troubleshooting common issues with Azure DevOps. # Required; article description that is displayed in search results. < 160 chars.
   services: DevOps
-  ms.service: az-devops-project #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: azure-devops#Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
   ms.date: 12/18/2020
+  ms.subservice: azure-devops-starter
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 

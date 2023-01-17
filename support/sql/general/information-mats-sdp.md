@@ -2,7 +2,6 @@
 title: Information about MATS and SDP
 description: This article introduces the frequently asked questions about Microsoft Automated Troubleshooting Services and the Support Diagnostics Platform.
 ms.date: 01/20/2021
-ms.prod-support-area-path: 
 ms.reviewer: kaushika
 ---
 # Information about Microsoft Automated Troubleshooting Services and Support Diagnostic Platform

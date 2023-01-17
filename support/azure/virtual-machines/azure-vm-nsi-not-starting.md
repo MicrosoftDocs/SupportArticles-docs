@@ -2,9 +2,9 @@
 title: Azure Virtual Machine - Network Store Interface service is not starting
 description: Troubleshoot Network Store Interface service not starting
 ms.date: 12/20/2021
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: windows
 ---
 
@@ -14,7 +14,7 @@ ms.collection: windows
 
 1. The virtual machine (VM) screenshot shows the operating system (OS) fully loaded and waiting for credentials.
 
-   :::image type="content" source="media/azure-vm-nsi-not-starting/1-waiting.png" alt-text="Screenshot of the V M screen, which shows the OS fully loaded and waiting for credentials."::: 
+   :::image type="content" source="media/azure-vm-nsi-not-starting/1-waiting.png" alt-text="Screenshot of the V M screen, which shows the OS fully loaded and waiting for credentials.":::
 
 2. If you view the Guest OS Logs, you'll see that the core networking service, **Network Store Interface (NSI)**, is not starting or failing to start. This issue could be due to a hang, a crash of this service, or any required service to be run before it.
 
@@ -134,8 +134,4 @@ Connect to the VM using [Serial Console](/azure/virtual-machines/troubleshooting
 4. IF the NSI service fails due to a dependency, you can try the above process on the dependency that was listed.
 Once the NSI service is running you can try accessing the VM via RDP.
 
-## Next steps
-
-If you still cannot determine the cause of the issue and need more help, you can open a support ticket with Microsoft Customer Support.
-
-If you need more help at any point in this article, you can contact the Azure experts on the [MSDN Azure and Stack Overflow forums](https://azure.microsoft.com/support/forums/). Alternatively, you can file an Azure support incident. Go to the [Azure support site](https://azure.microsoft.com/support/options/), and select **Get support**. For information about using Azure support, read the [Microsoft Azure support FAQ](https://azure.microsoft.com/support/faq/).
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

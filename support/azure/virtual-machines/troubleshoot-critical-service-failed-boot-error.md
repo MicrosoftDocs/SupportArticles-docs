@@ -1,12 +1,12 @@
 ---
-title: CRITICAL SERVICE FAILED when booting an Azure VM | Microsoft Docs
-description: Learn how to troubleshoot the "0x0000005A-CRITICAL SERVICE FAILED" error that occurs when booting | Microsoft Docs
+title: CRITICAL SERVICE FAILED when booting an Azure VM
+description: Learn how to troubleshoot the "0x0000005A-CRITICAL SERVICE FAILED" error that occurs when booting.
 services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
@@ -16,25 +16,26 @@ ms.author: genli
 ---
 
 # Windows shows "CRITICAL SERVICE FAILED" on blue screen when booting an Azure VM
-This article describes the "CRITICAL SERVICE FAILED" error that you may experience when you boot a Windows Virtual Machine (VM) in Microsoft Azure. It provides troubleshooting steps to help resolve the issues. 
 
+This article describes the "CRITICAL SERVICE FAILED" error that you may experience when you boot a Windows Virtual Machine (VM) in Microsoft Azure. It provides troubleshooting steps to help resolve the issues.
 
-## Symptom 
+## Symptom
 
 A Windows VM doesn't start. When you check the boot screenshots in [Boot diagnostics](./boot-diagnostics.md), you see one of the following error messages on a blue screen:
 
-- "Your PC ran into a problem and needs to restart. You can restart. For more information about this issue and possible fixes, visit https://windows.com/stopcode. If you call a support person, give them this info: Stop code: CRITICAL SERVICE FAILED" 
-- "Your PC ran into a problem and needs to restart. We're just collecting some error info, and then we'll restart for you. 
+- "Your PC ran into a problem and needs to restart. You can restart. For more information about this issue and possible fixes, visit <https://windows.com/stopcode>. If you call a support person, give them this info: Stop code: CRITICAL SERVICE FAILED"
+- "Your PC ran into a problem and needs to restart. We're just collecting some error info, and then we'll restart for you.
 If you'd like to know more, you can search online later for this error: CRITICAL_SERVICE_FAILED"
 
 ## Cause
 
 There are various causes for stop errors. The most common causes are:
+
 - Problem with a driver
 - Corrupted system file or memory
 - Application accesses a forbidden sector of the memory
 
-## Solution 
+## Solution
 
 > [!TIP]
 > If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
@@ -44,7 +45,7 @@ To resolve this problem, [contact support and submit a dump file](./troubleshoot
 ### Attach the OS disk to a recovery VM
 
 1. Take a snapshot of the OS disk of the affected VM as a backup. For more information, see [Snapshot a disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk).
-2. [Attach the OS disk to a recovery VM](./troubleshoot-recovery-disks-portal-windows.md). 
+2. [Attach the OS disk to a recovery VM](./troubleshoot-recovery-disks-portal-windows.md).
 3. Establish a remote desktop connection to the recovery VM.
 
 ### Enable dump logs and Serial Console
@@ -98,7 +99,7 @@ To enable dump logs and Serial Console, run the following script.
 3. Open the **Run** box and run **verifier** to start the Driver Verifier Manager tool.
 4. Select **Automatically select unsigned drivers**, and then click **Next**.
 5. You will get the list of the driver files that are unsigned. Remember the file names.
-6. Copy the same versions of these files from a working VM, and then replace these unsigned files. 
+6. Copy the same versions of these files from a working VM, and then replace these unsigned files.
 
 7. Remove the safe boot settings:
 
@@ -106,7 +107,7 @@ To enable dump logs and Serial Console, run the following script.
     bcdedit /store <OS DISK LETTER>:\boot\bcd /deletevalue {default} safeboot
     ```
 
-8.	Restart the VM. 
+8. Restart the VM.
 
 ### Optional: Analyze the dump logs in Dump Crash mode
 
@@ -122,8 +123,8 @@ To analyze the dump logs yourself, follow these steps:
     Autoreboot = 0
 
     CrashDumpEnabled = 2
-7.	Select **BROKENSYSTEM**. From the menu, select **File** > **Unload Hive**.
-8.	Modify the BCD setup to boot into debug mode. Run the following commands from an elevated command prompt:
+7. Select **BROKENSYSTEM**. From the menu, select **File** > **Unload Hive**.
+8. Modify the BCD setup to boot into debug mode. Run the following commands from an elevated command prompt:
 
     ```cmd
     REM Setup some debugging flags on the boot manager
@@ -139,8 +140,9 @@ To analyze the dump logs yourself, follow these steps:
     bcdedit /store <OS DISK LETTER>:\boot\bcd /set {default} recoveryenabled no
     bcdedit /store <OS DISK LETTER>:\boot\bcd /set {default} integrityservices disable
     ```
+
 9. [Detach the OS disk and then re-attach the OS disk to the affected VM](troubleshoot-recovery-disks-portal-windows.md).
-10.	Boot the VM to see if it shows dump analysis. Find the file that fails to load. You need to replace this file with a file from the working VM. 
+10. Boot the VM to see if it shows dump analysis. Find the file that fails to load. You need to replace this file with a file from the working VM.
 
     The following is sample of dump analysis. You can see that the **FAILURE** is on filecrypt.sys: "FAILURE_BUCKET_ID: 0x5A_c0000428_IMAGE_filecrypt.sys".
 
@@ -162,7 +164,7 @@ To analyze the dump logs yourself, follow these steps:
     MODULE_NAME: filecrypt IMAGE_NAME: filecrypt.sys DEBUG_FLR_IMAGE_TIMESTAMP: 0 IMAGE_VERSION: STACK_COMMAND: .thread ; .cxr ; kb FAILURE_BUCKET_ID: 0x5A_c0000428_IMAGE_filecrypt.sys BUCKET_ID: 0x5A_c0000428_IMAGE_filecrypt.sys PRIMARY_PROBLEM_CLASS: 0x5A_c0000428_IMAGE_filecrypt.sys TARGET_TIME: 2017-11-13T20:51:04.000Z OSBUILD: 14393 OSSERVICEPACK: 1770 SERVICEPACK_NUMBER: 0 OS_REVISION: 0 SUITE_MASK: 144 PRODUCT_TYPE: 3 OSPLATFORM_TYPE: x64 OSNAME: Windows 10 OSEDITION: Windows 10 Server TerminalServer DataCenter OS_LOCALE: USER_LCID: 0 OSBUILD_TIMESTAMP: 2017-09-17 19:16:08 BUILDDATESTAMP_STR: 170917-1700 BUILDLAB_STR: rs1_release BUILDOSVER_STR: 10.0.14393.1770 ANALYSIS_SESSION_ELAPSED_TIME: bfc ANALYSIS_SOURCE: KM FAILURE_ID_HASH_STRING: km:0x5a_c0000428_image_filecrypt.sys FAILURE_ID_HASH: {35f25777-b01e-70a1-c502-f690dab6cb3a} FAILURE_ID_REPORT_LINK: https://go.microsoft.com/fwlink/?LinkID=397724&FailureHash=35f25777-b01e-70a1-c502-f690dab6cb3a
     ```
 
-11.	Once the VM is working and booting normally, remove the Dump Crash settings:
+11. Once the VM is working and booting normally, remove the Dump Crash settings:
 
     ```cmd
     REM Restore the boot manager to default values
@@ -177,3 +179,5 @@ To analyze the dump logs yourself, follow these steps:
     bcddit /store <OS DISK LETTER>:\boot\bcd /set {default} recoveryenabled no
     bcdedit /store <OS DISK LETTER>:\boot\bcd /set {default} integrityservicesenable
     ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -2,7 +2,7 @@
 title: Can't call HL7 pipelines from Orchestration
 description: Calling BizTalk Server HL7 Pipelines directly from Orchestration isn't supported as per RFC 1481591.
 ms.date: 03/16/2020
-ms.prod-support-area-path: Accelerators
+ms.custom: sap:Accelerators
 ---
 # BizTalk Server HL7 pipelines can't be called from orchestration
 

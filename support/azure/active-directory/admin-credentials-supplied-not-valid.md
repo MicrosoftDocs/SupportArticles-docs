@@ -2,7 +2,6 @@
 title: Error Enterprise Administrator credentials you supplied are not valid when you try to run the Azure Active Directory Sync Tool Configuration wizard
 description: Describes and provides a resolution for an error that occurs when you run the Azure Active Directory Sync Tool Configuration Wizard.
 ms.date: 06/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: enterprise-users
@@ -53,6 +52,4 @@ To check whether an account has enterprise admin permissions, follow these steps
 
 5. Check whether the user is listed in the **Members** list. If the user isn't in the list, one of the members of this list must log on and add the user to this list. Or, a member of this list can use their credentials in the Directory Sync Tool Configuration Wizard.
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

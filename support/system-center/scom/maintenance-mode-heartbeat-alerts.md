@@ -2,7 +2,6 @@
 title: Heartbeat alerts are generated in maintenance mode
 description: Describes an issue that a computer agent unexpectedly continues to generate heartbeat alerts after you put the computer agent into maintenance mode in System Center Operations Manager.
 ms.date: 06/30/2020
-ms.prod-support-area-path: 
 ms.reviewer: v-jomcc
 ---
 # A computer agent unexpectedly generates heartbeat alerts after you put it into maintenance mode

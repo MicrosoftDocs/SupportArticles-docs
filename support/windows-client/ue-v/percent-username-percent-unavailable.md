@@ -38,10 +38,15 @@ To fix this issue, enable one or both of the following registry keys to prevent 
 
 ### Per user OneDrive installation
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\OneDrive]
+`HKEY_CURRENT_USER\SOFTWARE\Microsoft\OneDrive`  
 "HasSystrayIconBeenPromoted"=dword:00000001
 
 ### Per computer OneDrive installation
 
-[HKEY_CURRENT_USER\SOFTWARE\Microsoft\OneDrive]
-"HasPerMachineSystrayIconBeenPromoted"=dword:00000001
+- For 32-bit version of OneDrive:  
+  `HKEY_CURRENT_USER\SOFTWARE\Microsoft\OneDrive`  
+  "HasPerMachineSystrayIconBeenPromoted"=dword:00000001
+
+- For 64-bit version of OneDrive:  
+  `HKEY_CURRENT_USER\SOFTWARE\Microsoft\OneDrive`  
+  "HasAMD64PerMachineSystrayIconBeenPromoted"=dword:00000001

@@ -5,9 +5,9 @@ services: virtual-machines
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 tags: azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
@@ -63,3 +63,5 @@ After completing the steps above, you can now safely apply the [Windows Update J
 
 > [!NOTE]
 > If you cannot revert the state of a VM in a non-boot state, [open a support ticket with Azure Support](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

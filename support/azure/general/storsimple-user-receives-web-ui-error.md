@@ -4,8 +4,7 @@ description: Describes an issue that User receives WebUI Oops error message in S
 ms.date: 08/14/2020
 author: genlin
 ms.author: genli
-ms.service: azure
-ms.prod-support-area-path: 
+ms.service: azure-common-issues-support
 ms.reviewer: 
 ---
 # StorSimple: User receives WebUI "Oops" error message
@@ -45,3 +44,5 @@ If the StorSimple device is running **version 2.1.1.454 or later**, follow these
     :::image type="content" source="media/storsimple-user-receives-webui/web-restart-command.png" alt-text="Screenshot shows the output of the web restart command.":::
 
 3. Log on to the WebUI, and then confirm that you no longer receive the error message. If the error persists, open a support case at [https://support2.microsoft.com/gp/storsimple](https://support2.microsoft.com/gp/storsimple).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

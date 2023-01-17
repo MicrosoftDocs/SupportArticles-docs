@@ -35,4 +35,4 @@ _Original KB number:_ &nbsp; 935623
 |Budgeting is available.|Not available|
 |You can use Microsoft FRx together with Analytical Accounting.|You can use Microsoft FRx together with Multidimensional Analysis.|
 |You can restrict access by user.|Not available|
-|||
+  

@@ -1,0 +1,298 @@
+- name: Internet Information Services
+  href: iis-welcome.yml
+- name: Active Server Pages
+  items:
+  - name: Can't create objects when an application run
+    href: active-server-pages/cannot-create-object-asp-applications-run.md
+  - name: Create GUIDs
+    href: active-server-pages/create-guids-asp.md
+  - name: Display images stored in a BLOB field
+    href: active-server-pages/display-images-stored-blob-field.md
+  - name: Error ASP 0178 when you instantiate COM object
+    href: active-server-pages/server-object-error-asp-0178-occurs.md
+  - name: Read and display binary data using ServerXMLHTTP
+    href: active-server-pages/read-and-display-binary-data-serverxmlhttp.md
+  - name: Run SQL Server stored procedures from an ASP Page
+    href: active-server-pages/run-sql-server-stored-procedures-asp-page.md
+  - name: Set locale ID per the browser's language
+    href: active-server-pages/set-asp-locale-id-browser-language.md
+  - name: VBScript type mismatch error
+    href: active-server-pages/vbscript-type-mismatch-error.md
+  - name: XMLHttpRequest setRequestHeader method and Cookies
+    href: active-server-pages/xmlhttprequest-setrequestheader-method-cookies.md
+
+- name: Application Request and Routing (ARR)
+  items:
+  - name: SSL Common Names aren't enforced
+    href: application-request-routing/affinity-not-honored-ssl-common-names-arr.md
+
+- name: Development
+  items:
+  - name: Add an HTTP response header to a web site
+    href: development/add-http-response-header-web-site.md
+  - name: Assign a private key to a new certificate
+    href: development/assign-certificate-private-key.md
+  - name: Child requests generate duplicate events
+    href: development/duplicate-aspnet-events.md
+  - name: Cookies aren't available
+    href: development/cookie-unavailable-ihttpmodules-ihttphandler.md
+  - name: Error 0x80004005 when you register WebClass
+    href: development/error-0x80004005-register-webclass-dll.md
+  - name: Fail to upload files to WebDav directory
+    href: development/upload-to-webdav-directory-fails.md
+  - name: HTTP error 403.6 when you open ISS webpage
+    href: development/403-6-forbidden-error.md
+  - name: Make a GET request
+    href: development/make-get-request.md
+
+- name: Deployment and migration
+  items:
+  - name: Can't use Web Deploy as a delegated user
+    href: deployment-migration/cannot-use-web-deploy.md
+  - name: Can't use Web Deployment as a non-admin user
+    href: deployment-migration/web-deploy-error-non-admin-user.md
+  - name: WebDeploy publishing endpoint changes
+    href: deployment-migration/webdeploy-publishing-endpoint-wap.md
+
+- name: FTP authentication and authorization
+  items:
+  - name: Authorization rules aren't inherited
+    href: ftp-authentication-authorization/ftp-authorization-rules-not-inherited.md
+  - name: Error 530 when you browse anonymous sites
+    href: ftp-authentication-authorization/error-530-anonymous-ftp-sites.md
+  - name: Use FTP in a typical session
+    href: ftp-authentication-authorization/how-to-use-ftp-utility.md
+
+- name: FTP service and Svchost or Inetinfo process operation
+  items:
+  - name: Changes in FTP 7.5
+    href: ftp-service-svchost-inetinfo/changes-in-ftp-7-5.md
+  - name: Download session fails when connection is closed
+    href: ftp-service-svchost-inetinfo/ftp-download-session-fails.md
+  - name: Error when you create an FTP site
+    href: ftp-service-svchost-inetinfo/error-create-ftp-site.md
+  - name: Status codes in IIS 7.0 and later versions
+    href: ftp-service-svchost-inetinfo/ftp-status-codes-iis-7-and-later-versions.md
+
+- name: General
+  items:
+  - name: ASP support in Windows
+    href: general/asp-support-windows.md
+  - name: Description of registry keys
+    href: general/use-registry-keys.md
+  - name: Design customization IIS log file field names
+    href: general/customize-iis-log-file-field-names.md
+  - name: Expression Web 4.0 FAQs
+    href: general/expression-web-faq.yml
+  - name: IIS Express isn't supported in production environment
+    href: general/express-not-supported-production-environment.md
+  - name: Instances where HTTP.sys doesn't cache
+    href: general/instances-httpsys-not-cache.md
+  - name: Can't access Web sites when security event log is full
+    href: general/users-cannot-access-web-sites-when-log-full.md
+
+- name: Health, diagnostic, and performance features
+  items:
+  - name: An application pool exceeds time limits
+    href: health-diagnostic-performance/application-pool-exceed-time-limits.md
+  - name: Data collection strategies of Web Server issues
+    href: health-diagnostic-performance/data-collection-strategies.md
+  - name: DebugDiag 1.2 installation and data collector
+    href: health-diagnostic-performance/debugdiag-collected-information.md
+  - name: Enable Schannel event logging in Windows
+    href: health-diagnostic-performance/enable-schannel-event-logging.md
+  - name: ETW logs diagnostic
+    href: health-diagnostic-performance/etw-log-diagnostic.md
+  - name: Hidden static files return HTTP 404 error
+    href: health-diagnostic-performance/hidden-static-files-http-404-access-denied.md
+  - name: HTTP error 400 in the CLM portal
+    href: health-diagnostic-performance/clm-http-bad-request.md
+  - name: HTTP error 403 or 404 when you access FRx WebPort
+    href: health-diagnostic-performance/http-error-403-404-frx-webport.md
+  - name: HTTP error 403.14
+    href: health-diagnostic-performance/http-403-14-forbidden-webpage.md
+  - name: HTTP error 403.16
+    href: health-diagnostic-performance/http-403-forbidden-access-website.md
+  - name: HTTP error 403.7
+    href: health-diagnostic-performance/http-error-403-7-forbidden-web-app.md
+  - name: HTTP error 404 file not found on a server
+    href: health-diagnostic-performance/troubleshoot-404-file-not-found-error.md
+  - name: HTTP error 404.13
+    href: health-diagnostic-performance/http-404-13-website.md
+  - name: HTTP error 404.17 when you visit a Web site
+    href: health-diagnostic-performance/error-message-you-visit-web-site.md
+  - name: HTTP error 405.0
+    href: health-diagnostic-performance/http-error-405-website.md
+  - name: HTTP error 500.19
+    href: health-diagnostic-performance/http-error-500-19-webpage.md
+  - name: HTTP error 501 - Not Implemented
+    href: health-diagnostic-performance/http-error-501-not-implemented.md
+  - name: HTTP error 503 and event 5189 from web applications
+    href: health-diagnostic-performance/error-503-event-5189-web-application.md
+  - name: Logs contain dots instead of logging field value
+    href: health-diagnostic-performance/iis-logs-contain-dots.md
+  - name: Pages can't be displayed
+    href: health-diagnostic-performance/cannot-access-site-using-https.md
+  - name: SSL Diagnostic tool for SDP
+    href: health-diagnostic-performance/ssl-diagnostic-tool-sdp.md
+  - name: Time-taken field in IIS HTTP logging
+    href: health-diagnostic-performance/time-taken-field-http-log.md
+  - name: Troubleshoot ABO Mapper errors
+    href: health-diagnostic-performance/troubleshoot-abo-mapper-errors.md
+  - name: Web application Performance Data Collector
+    href: health-diagnostic-performance/web-application-performance-data-collector.md
+
+- name: IISAdmin service and Inetinfo process operation
+  items:
+  - name: Admin cmdlets slow in PowerShell 4.0
+    href: iisadmin-service-inetinfo/administration-cmdlets-slow.md
+  - name: Error when you use IISReset.exe to restart IIS
+    href: iisadmin-service-inetinfo/using-iisreset-restart-iis-result-error.md
+  - name: FIM is unable to reset passwords
+    href: iisadmin-service-inetinfo/fim-password-reset-issue.md
+  - name: HTTP services can't be stopped
+    href: iisadmin-service-inetinfo/http-service-fail-stopped.md
+  - name: Http.sys registry settings for Windows
+    href: iisadmin-service-inetinfo/httpsys-registry-windows.md
+  - name: Processor affinity doesn't work on a NUMA server
+    href: iisadmin-service-inetinfo/processor-affinity-not-work.md
+  - name: Set multiple site bindings and SSL
+    href: iisadmin-service-inetinfo/ssl-multiple-web-sites-shared-configuration.md
+
+- name: IIS extensions, tools, and Add-ons
+  items:
+  - name: Management Pack doesn't detect events
+    href: extensions-tools/events-not-detected-scom.md
+  - name: No data is logged in the cs-username field
+    href: extensions-tools/no-cs-username-data-advanced-logging.md
+
+- name: Site behavior and performance
+  items:
+  - name: 0-byte file is returned
+    href: site-behavior-performance/0-byte-file-compression-enabled.md
+  - name: Applications can't run in Integrated Pipeline mode
+    href: site-behavior-performance/exception-integrated-pipeline-mode.md
+  - name: Authorization for requests to default document fails
+    href: site-behavior-performance/authorization-fails-default-documents.md
+  - name: Can't view websites over SSL
+    href: site-behavior-performance/cannot-view-website-using-ssl.md
+  - name: Calling PostCompletion twice may cause crash
+    href: site-behavior-performance/calling-postcompletion-cause-crash.md
+  - name: Can't call MTS COM from ASP
+    href: site-behavior-performance/server-execution-fail-call-mts-com-asp.md
+  - name: Default maximum stack size of a thread
+    href: site-behavior-performance/default-maximum-stack-size-thread.md
+  - name: Event handles may leak
+    href: site-behavior-performance/event-handles-leaked.md
+  - name: Event ID 115 when you connect HTTPS websites
+    href: site-behavior-performance/event-115-connect-https-website.md
+  - name: Expression Encoder crashes
+    href: site-behavior-performance/expression-encoder-crash-live-broadcasting.md
+  - name: Fail to generate the certificate request
+    href: site-behavior-performance/failed-generate-certificate-request.md
+  - name: FtpPutFile always returns success
+    href: site-behavior-performance/ftpputfile-success-451-status.md
+  - name: HTTP error 404.2
+    href: site-behavior-performance/http-error-402-webpage.md
+  - name: HTTP error 500 when you use Response.BinaryWrite
+    href: site-behavior-performance/http-500-response-binarywrite.md
+  - name: Internet printing fails
+    href: site-behavior-performance/internet-printing-fails.md
+  - name: Page can't be displayed when you connect through SSL
+    href: site-behavior-performance/page-cannot-displayed-when-you-connect-ssl.md
+  - name: Stale content when you store the content on a VHD
+    href: site-behavior-performance/stale-content-when-content-store-vhd.md
+  - name: Worker Process takes much memory
+    href: site-behavior-performance/work-process-takes-much-memory.md
+
+- name: WWW administration and management
+  items:
+  - name: Access to remote resources fails
+    href: www-administration-management/remote-resources-fails-requested-iis.md
+  - name: Configure the default document in IIS
+    href: www-administration-management/configure-default-document-iis.md
+  - name: Content types for HTTP compression
+    href: www-administration-management/content-types-http-compression.md
+  - name: Enable SSL for all customers
+    href: www-administration-management/enable-ssl-all-customers.md
+  - name: Error when you configure 32-bit managed handlers
+    href: www-administration-management/error-when-you-configure-32-bit-handlers.md
+  - name: HTTP error 400 when you send requests
+    href: www-administration-management/http-bad-request-response-kerberos.md
+  - name: HTTP error 500.0 when you visit a Web site
+    href: www-administration-management/http-error-500-when-you-visit-web-site.md
+  - name: HTTP status code
+    href: www-administration-management/http-status-code.md
+  - name: HTTPS connections fail and SSL bindings are deleted
+    href: www-administration-management/https-connections-fail-ssl-bindings-deleted.md
+  - name: IIS events are not displayed remotely
+    href: www-administration-management/iis-events-not-display-remotely.md
+
+- name: WWW authentication and authorization
+  items:
+  - name: Access is denied when you call web services
+    href: www-authentication-authorization/access-denied-call-web-service.md
+  - name: Changing IP/port causes sites to fail
+    href: www-authentication-authorization/change-ip-port-wildcard-certificate-site-fail.md
+  - name: Can't import .pfx files to personal certificate store
+    href: www-authentication-authorization/cannot-import-ssl-pfx-local-certificate.md
+  - name: Can't change identity of an application pool
+    href: www-authentication-authorization/0x80090016-change-application-pool-identity.md
+  - name: Configure W3SVC in WSFC
+    href: www-authentication-authorization/configure-w3svc-wsfc.md
+  - name: Configure intermediate certificates
+    href: www-authentication-authorization/configure-intermediate-certificates.md
+  - name: Configure Many-to-One client mappings
+    href: www-authentication-authorization/configure-many-to-one-client-mappings.md
+  - name: Default permissions and user rights
+    href: www-authentication-authorization/default-permissions-user-rights.md
+  - name: Digest authentication fails
+    href: www-authentication-authorization/digest-authentication.md
+  - name: EndpointConfigurationName property isn't updated
+    href: www-authentication-authorization/service-reference-endpointconfigurationname.md
+  - name: Errors when you install certificates
+    href: www-authentication-authorization/error-install-certificate.md
+  - name: Exporting configuration files fails
+    href: www-authentication-authorization/configuration-files-cannot-exported.md
+  - name: HTTP error 401.1 with pre-authentication headers
+    href: www-authentication-authorization/401-error-preauthentication-header.md
+  - name: HTTP error 403.7
+    href: www-authentication-authorization/http-403-forbidden-open-webpage.md
+  - name: IIS authenticates browser clients
+    href: www-authentication-authorization/iis-authenticates-browser-client.md
+  - name: IIS may reject requests with HTTP 403.7 or 403.16 errors
+    href: www-authentication-authorization/errors-403-7-reject-client-certificate-rquest.md
+  - name: Information associated with IIS site isn't deleted
+    href: www-authentication-authorization/information-associated-iis-site-is-not-deleted.md
+  - name: Impersonation fails when UAC is enabled
+    href: www-authentication-authorization/impersonation-fails-uac-enabled.md
+  - name: Kerberos double-hop authentication with Microsoft Edge
+    href: www-authentication-authorization/kerberos-double-hop-authentication-edge-chromium.md
+  - name: Read and analyze a client certificate
+    href: www-authentication-authorization/analyze-client-certificate.md
+  - name: Re-enabling shared configuration causes IIS can't start
+    href: www-authentication-authorization/not-start-reenable-shared-configuration.md
+  - name: Shared Configuration requires the same IIS version
+    href: www-authentication-authorization/shared-configuration-require-same-version.md
+  - name: ShutdownTimeLimit property doesn't work
+    href: www-authentication-authorization/shutdowntimelimit-not-apply-to-wcf.md
+  - name: Troubleshoot Kerberos failures
+    href: www-authentication-authorization/troubleshoot-kerberos-failures-ie.md
+  - name: Understanding identities
+    href: www-authentication-authorization/understanding-identities.md
+
+- name: WWW modules and features
+  items:
+  - name: Add and remove global modules at server and child levels 
+    href: www-modules-features/add-remove-global-modules.md
+  - name: Disable the Save Embedded Files dialog box
+    href: www-modules-features/disable-save-embedded-files-dialog.md
+  - name: Request Restrictions can't set for a wildcard ISAPI
+    href: www-modules-features/request-restrictions-not-set-isapi.md
+  - name: WebSocketModule is not loaded
+    href: www-modules-features/websocketmodule-is-not-loaded.md
+
+- name: WWW service and Svchost operation
+  items:
+  - name: WinHTTP SDP package information
+    href: www-service-svchost/disable-winhttp-tracing-sdp.md

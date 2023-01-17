@@ -2,7 +2,6 @@
 title: A new VM points to an unassigned VLAN
 description: Fix an issue where Virtual Machine Manager selects a tagged VLAN when creating a new virtual machine
 ms.date: 07/17/2020
-ms.prod-support-area-path:
 ms.reviewer: alvinm
 ---
 # System Center 2012 Virtual Machine Manager selects a tagged VLAN when creating a new virtual machine

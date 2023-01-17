@@ -2,7 +2,6 @@
 title: Error 1602 when starting VMM console
 description: Describes a problem in which error ID 1602 occurs and the Virtual Machine Manager console doesn't start.
 ms.date: 07/13/2020
-ms.prod-support-area-path:
 ms.reviewer: jchornbe
 ---
 # The Virtual Machine Manager console doesn't start and you receive error ID 1602

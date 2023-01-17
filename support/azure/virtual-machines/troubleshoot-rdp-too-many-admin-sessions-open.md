@@ -7,6 +7,7 @@ author: genlin
 manager: dcscontentpm
 editor: v-jesits
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
@@ -42,6 +43,7 @@ Before you start troubleshooting, [back up the OS disk](/azure/virtual-machines/
     ```powershell
    reg query "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\TerminalServerGateway\Config\Core" /v MaxConnections
     ```
+
     If the value doesn't exist, the service uses the default setting that allows an unlimited number of RDP connections.
 
     If the value exists, run the following command to set the **MaxConnections** value to **0** to allow unlimited RDP connections:
@@ -49,9 +51,7 @@ Before you start troubleshooting, [back up the OS disk](/azure/virtual-machines/
     ```powershell
     reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\TerminalServerGateway\Config\Core" /v MaxConnections /t REG_DWORD /d 0xffffffff /f 
     ```
+
 1. Restart the VM, and then try again to connect to the VM.
 
-
-## Need help?
-
-If you still need help to get your issue resolved, [contact Azure Support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade).
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

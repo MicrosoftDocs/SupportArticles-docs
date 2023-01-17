@@ -2,7 +2,7 @@
 title: How to troubleshoot a memory leak
 description: Describes troubleshooting steps, important memory usage considerations, and known memory-related issues in BizTalk Server.
 ms.date: 03/16/2020
-ms.prod-support-area-path: Performance
+ms.custom: sap:Performance
 ms.reviewer: mandia
 ---
 # How to troubleshoot a memory leak or an out-of-memory exception in the BizTalk Server process
@@ -62,7 +62,6 @@ The following table summarizes this information and includes the practical limit
 |32-bit|32-bit with /3GB|3 GB|2400 MB|1800 MB|
 |32-bit|64-bit|4 GB|3400 MB|2800 MB|
 |64-bit|64-bit|8 TB|Not applicable|Not applicable|
-||||||
 
 For more information about the addressable memory for 32-bit vs. 64-bit Windows, visit [Memory Limits for Windows and Windows Server Releases](/windows/win32/memory/memory-limits-for-windows-releases).
 
@@ -74,8 +73,7 @@ The following table lists PAE and 3 GB supportability for different versions of 
 |BizTalk Server 2006|Yes|Yes|
 |BizTalk Server 2006 R2|Yes|Yes|
 |BizTalk Server 2009|Yes|Yes|
-||||
-
+  
 If you must enable the **/3GB switch** to meet the performance requirements of a computer that is running BizTalk Server, you may want to consider adding servers to the BizTalk group. This enables you to scale out the memory-intensive host instances.
 
 BizTalk components that run inside an Internet Information Services (IIS) process may also benefit when the **/3GB switch** is enabled.
@@ -96,8 +94,8 @@ The Microsoft .NET Framework 2.0 and the .NET Framework 1.1 have different memor
 
 The common language runtime (CLR) has the following garbage collectors (GCs):
 
-- Workstation (*Mscorwks.dll*)
-- Server (*Mscorsvr.dll*)
+- Workstation (_Mscorwks.dll_)
+- Server (_Mscorsvr.dll_)
 
 If the computer that is running BizTalk Server is a multiprocessor system, the .NET Framework uses the Server version of the execution engine. This is the default behavior. The Server garbage collector is designed for maximum throughput. Additionally, the Server garbage collector scales to provide high performance. This garbage collector allocates memory and then later frees memory to provide high performance on the system. Therefore, a computer that is running BizTalk Server together with some .NET Framework components seems to have a memory leak. However, in this scenario, high memory usage is the expected behavior. If the computer runs out of system memory, or if the process stops working because of insufficient addressable memory, a memory leak condition may exist.
 
@@ -170,9 +168,8 @@ For this example, the following values would be specified in the BTSNTSvc64.exe.
 |---|---|---|---|
 |\Process\Virtual Bytes|5,784,787,695 bytes (5517 MB)|6069|7889|
 |\Process\Private Bytes|435,689,400 bytes (415 MB)|457|594|
-|||||
-
-These values would then be represented in the BTSNTSvc64.exe.config file as follows:
+  
+  These values would then be represented in the BTSNTSvc64.exe.config file as follows:
 
 ```xml
 <xlangs>
@@ -237,8 +234,7 @@ In the second column, **Yes** means that this `functoid` is implemented as inlin
 |All Scientific Functoids|Yes|
 |All Cumulative Functoids|Yes|
 |All Database Functoids|No|
-|||
-
+  
 |Advanced Functoids|Inline script?|
 |---|---|
 |Looping Functoid|No|
@@ -258,8 +254,7 @@ In the second column, **Yes** means that this `functoid` is implemented as inlin
 |Iteration Functoid|No|
 |Index Functoid|No|
 |Record Count Functoid|No|
-|||
-
+  
 BizTalk Server 2006 and later versions significantly improve memory management for large documents. To do this, BizTalk Server implements a configurable message size threshold for loading documents into memory during transform operations. The default message size threshold is 1 MB. For more information about the TransformThreshold setting, visit [How BizTalk Server Processes Large Messages](/biztalk/core/how-biztalk-server-processes-large-messages).
 
 ## Large attribute values and large element values
@@ -294,7 +289,7 @@ If you have identified a memory leak, try to determine the cause by removing cus
 
 ## Troubleshooting steps
 
-To troubleshoot an out-of-memory condition, use the Debug Diagnostics tool to monitor memory allocations over time. The Debug Diagnostics tool can create and analyze a memory leak dump file (.dmp). When you troubleshoot memory leaks, the goal is to attach *Leaktrack.dll* before the high memory condition reproduces to capture memory growth over time. *Leaktrack.dll* is included with the Debug Diagnostics tool.
+To troubleshoot an out-of-memory condition, use the Debug Diagnostics tool to monitor memory allocations over time. The Debug Diagnostics tool can create and analyze a memory leak dump file (.dmp). When you troubleshoot memory leaks, the goal is to attach _Leaktrack.dll_ before the high memory condition reproduces to capture memory growth over time. _Leaktrack.dll_ is included with the Debug Diagnostics tool.
 
 1. Install the Debug Diagnostics Tool.
 
@@ -389,14 +384,14 @@ To obtain the dump file, use one of the following methods:
 
 #### Method 1: Automatic
 
-Creating a Memory and Handle Leak rule with DebugDiag is the recommended approach to capture a memory dump. The Memory and Handle Leak rule automatically attaches *Leaktrack.dll*. This is used to track memory allocations. To create the Memory and Handle Leak rule, follow these steps:
+Creating a Memory and Handle Leak rule with DebugDiag is the recommended approach to capture a memory dump. The Memory and Handle Leak rule automatically attaches _Leaktrack.dll_. This is used to track memory allocations. To create the Memory and Handle Leak rule, follow these steps:
 
 1. Start Debug Diagnostics Tool 1.1.
 2. Select **Memory and Handle Leak**, and then click **Next**.
 3. Select the Btsntsvc.exe process, and then click **Next**.
 4. On the **Configure Leak Rule** page, follow these steps:
 
-   1. Click to select the **Start memory tracking immediately when rule is activated** check box. Otherwise, you can specify a warm-up time before *LeakTrack.dll* is injected in the BTSNTSvc.exe process.
+   1. Click to select the **Start memory tracking immediately when rule is activated** check box. Otherwise, you can specify a warm-up time before _LeakTrack.dll_ is injected in the BTSNTSvc.exe process.
 
    2. Click **Configure**, and then do the following:
 

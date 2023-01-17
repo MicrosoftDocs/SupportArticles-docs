@@ -2,12 +2,12 @@
 title: Use the SQLIOSim utility on Linux
 description: This article describes how to use SQLIOSim utility to simulate SQL Server activity on a disk subsystem on Linux.
 ms.date: 06/16/2021
-ms.prod-support-area-path: Other tools
+ms.custom: sap:Other tools
 ms.reviewer: amitkh, dansha, rafidl, Suresh.Kandoth
 ms.topic: how-to
 ms.prod: sql
-author: cobibi
-ms.author: v-yunhya
+author: HaiyingYu
+ms.author: haiyingyu
 ---
 # Use the SQLIOSim utility to simulate SQL Server activity on a disk subsystem on Linux
 
@@ -116,11 +116,11 @@ Now, you are ready to run SQLIOSim using the command:
 Sample configuration files for various tests can be downloaded from SQL Server support team's [github repo](https://github.com/microsoft/mssql-support/tree/master/sqliosim/sqliosim.cfg.linux).
 
 ```bash
-wget https://raw.githubusercontent.com/microsoft/mssql-support/master/sqliosim/sqliosim.cfg.linux/sqliosim.default.cfg.ini -P /tmp  
-wget https://raw.githubusercontent.com/microsoft/mssql-support/master/sqliosim/sqliosim.cfg.linux/sqliosim.hwcache.cfg.ini -P /tmp  
-wget https://raw.githubusercontent.com/microsoft/mssql-support/master/sqliosim/sqliosim.cfg.linux/sqliosim.nothrottle.cfg.ini -P /tmp  
-wget https://raw.githubusercontent.com/microsoft/mssql-support/master/sqliosim/sqliosim.cfg.linux/sqliosim.seqwrites.cfg.ini -P /tmp  
-wget https://raw.githubusercontent.com/microsoft/mssql-support/master/sqliosim/sqliosim.cfg.linux/sqliosim.sparse.cfg.ini -P /tmp
+wget https://raw.githubusercontent.com/microsoft/mssql-support/master/sqliosim/sqliosim.cfg.linux/sqliosim.default.cfg.ini -P /tmp
+wget https://raw.githubusercontent.com/microsoft/mssql-support/master/sqliosim/sqliosim.cfg.linux/sqliosim.hwcache.cfg.ini -P /tmp
+wget https://raw.githubusercontent.com/microsoft/mssql-support/master/sqliosim/sqliosim.cfg.linux/sqliosim.nothrottle.cfg.ini -P /tmp
+wget https://raw.githubusercontent.com/microsoft/mssql-support/master/sqliosim/sqliosim.cfg.linux/sqliosim.seqwrites.cfg.ini -P /tmp
+wget https://raw.githubusercontent.com/microsoft/mssql-support/master/sqliosim/sqliosim.cfg.linux/sqliosim.sparse.cfg.ini -P /tmp
 ```
 
 > [!NOTE]

@@ -2,7 +2,6 @@
 title: SHA2 is not supported
 description: This article provides a resolution for the issue where Windows Embedded Handheld 6.5 cannot connect to Office 365 Exchange Online through Exchange ActiveSync after certificate updates are made on a server that includes SHA2 encryption.
 ms.date: 08/27/2020
-ms.prod-support-area-path: 
 ms.reviewer: saroskar, markrad
 ms.technology: windows-hardware-general
 ---

@@ -2,7 +2,6 @@
 title: A host level backup fails with error 0x8007173D
 description: Fixes an issue where a host level backup fails with error 0x8007173D in System Center Data Protection Manager 2010.
 ms.date: 07/27/2020
-ms.prod-support-area-path:
 ms.reviewer: mjacquet, michvar
 ---
 # A host level backup fails with error 0x8007173D in System Center Data Protection Manager 2010

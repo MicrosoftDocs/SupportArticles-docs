@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 323352
 
 ## Summary
 
-The Netstat.exe utility has a new switch, the **-o** switch, that can display the process identifier (ID) that is associated with each connection. This information can be used to determine which process (program) listens on a particular port. For example, the `netstat -ano` command can produce the following output:
+The *Netstat.exe* utility has a new switch, the `-o` switch, that can display the process identifier (ID) that is associated with each connection. This information can be used to determine which process (program) listens on a particular port. For example, the `netstat -ano` command can produce the following output:
 
 ```output
 Proto Local Address Foreign Address State PID  
@@ -37,15 +37,15 @@ If you use Task Manager, you can match the process ID that is listed to a proces
 
 To match the process ID to a program, follow these steps:
 
-1. Press Ctrl+Alt+Delete, and then click **Task Manager**.
-2. Click the **Processes** tab.
-3. If you don't have a PID column, click **View** > **Select Columns**, and then click to select the **PID** (Process Identifier) check box.
-4. Click the column header that is labeled "PID" to sort the process by PIDs. You should be able to easily find the process ID and match it to the program that is listed in Task Manager.
+1. Select <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Esc</kbd> to open **Task Manager**.
+2. Select the **Processes** tab.
+3. If you don't have a PID column, select **View** > **Select Columns**, and then select to select the **PID** (Process Identifier) check box.
+4. Select the column header that is labeled "PID" to sort the process by PIDs. You should be able to easily find the process ID and match it to the program that is listed in Task Manager.
 
 ## How to obtain additional information about the Netstat.exe utility
 
-To obtain additional information about the Netstat.exe utility, follow these steps:
+To obtain additional information about the *Netstat.exe* utility, follow these steps:
 
-1. Click **Start** > **Run**.
-2. In the **Open** box, type *cmd*, and then click **OK**.
-3. At a command prompt, type*netstat /?*.
+1. Select **Start** > **Run**.
+2. In the **Open** box, type *cmd*, and then select **OK**.
+3. At a command prompt, type `netstat /?`.

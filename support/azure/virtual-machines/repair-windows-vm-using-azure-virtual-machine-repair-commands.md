@@ -1,11 +1,11 @@
 ---
-title: Repair a Windows VM by using the Azure Virtual Machine repair commands | Microsoft Docs
+title: Repair a Windows VM by using the Azure Virtual Machine repair commands
 description: This article details how to use Azure VM repair commands to connect the disk to another Windows VM to fix any errors, then rebuild your original VM.
 services: virtual-machines
+ms.subservice: vm-backup-restore
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 tags: virtual-machines
 ms.service: virtual-machines
 ms.collection: windows
@@ -22,6 +22,7 @@ ms.author: genli
 If your Windows virtual machine (VM) in Azure encounters a boot or disk error, you may need to repair the disk offline. A common example would be a failed application update that prevents the VM from being able to boot successfully. This article details how to use Azure VM repair commands to automatically attach a broken OS disk to another Windows VM for offline repair. Through this procedure, the failed OS disk will automatically be unlocked on the second VM, called a repair VM, if the disk is encrypted with Azure Disk Encryption. When the failed disk is attached to the repair VM, you can fix any errors and then rebuild your original VM with the repaired disk.
 
 > [!IMPORTANT]
+>
 > * The scripts in this article only apply to the VMs that use [Azure Resource Manager](/azure/azure-resource-manager/management/overview).
 > * Outbound connectivity from the VM (port 443) is required for the script to run.
 > * Only one script may run at a time.
@@ -42,9 +43,10 @@ Follow these steps to troubleshoot the VM issue:
 4. Run az vm repair run, or perform mitigation steps.
 5. Run az vm repair restore.
 
-To view all available VM repair commands and parameters, see [az vm repair](/cli/azure/ext/vm-repair/vm/repair).
+To view all available VM repair commands and parameters, see [az vm repair](/cli/azure/vm/repair).
 
 To run the commands, you need a role that can create the following types of resources in the subscription:
+
 * Resource Groups
 * Virtual Machines
 * Resource Tags
@@ -80,17 +82,19 @@ To run the commands, you need a role that can create the following types of reso
    az extension update -n vm-repair
    ```
 
-3. Run `az vm repair create`. This command will create a copy of the OS disk for the non-functional VM, create a repair VM in a new Resource Group, and attach the OS disk copy. The repair VM will be the same size and region as the non-functional VM specified. The Resource Group and VM name used in all steps will be for the non-functional VM. If your VM is using Azure Disk Encryption, use `--unlock-encrypted-vm` to unlock the encrypted disk so that it is accessible when attached to the repair VM. For more information, see [confirm that ADE is enabled on the disk](unlock-encrypted-disk-offline.md#confirm-that-ade-is-enabled-on-the-disk). If you need to troubleshoot your VM in a nested Hyper-V environment, use `--enable-nested` and the repair VM will created with the Hyper-V role enabled along with a nested VM using the OS disk copy. 
+3. Run `az vm repair create`. This command will create a copy of the OS disk for the non-functional VM, create a repair VM in a new Resource Group, and attach the OS disk copy. The repair VM will be the same size and region as the non-functional VM specified. The Resource Group and VM name used in all steps will be for the non-functional VM. If your VM is using Azure Disk Encryption, use `--unlock-encrypted-vm` to unlock the encrypted disk so that it is accessible when attached to the repair VM. For more information, see [confirm that ADE is enabled on the disk](unlock-encrypted-disk-offline.md#confirm-that-ade-is-enabled-on-the-disk). If you need to troubleshoot your VM in a nested Hyper-V environment, use `--enable-nested` and the repair VM will created with the Hyper-V role enabled along with a nested VM using the OS disk copy.
 
 > [!IMPORTANT]
 > The run and restore commands will require all inputs to be entered using the same case as used in the create command, make note or refer to the tags on the repair VM to see what was used.
 
    Repair VM example
+
    ```azurecli-interactive
    az vm repair create -g MyResourceGroup -n myVM --repair-username username --repair-password 'password!234' --verbose
    ```
-   
+
    Repair VM with Nested Hyper-V example
+
    ```azurecli-interactive
    az vm repair create -g MyResourceGroup -n myVM --repair-username username --repair-password 'password!234' --enable-nested --verbose
    ```
@@ -100,7 +104,7 @@ To run the commands, you need a role that can create the following types of reso
    ```azurecli-interactive
    az vm repair run -g MyResourceGroup -n MyVM --run-on-repair --run-id win-hello-world --verbose
    ```
-   
+
    Optionally you can perform any needed manual mitigation steps using the repair VM, then proceed to step 5.
 
 5. Run `az vm repair restore`. This command will swap the repaired OS disk with the original OS disk of the VM. The Resource Group and VM name used here are for the non-functional VM used in step 3.
@@ -124,3 +128,5 @@ az vm boot-diagnostics enable --name myVMDeployed --resource-group myResourceGro
 * If you are having issues connecting to your VM, see [Troubleshoot RDP connections to an Azure VM](./troubleshoot-rdp-connection.md).
 * For issues with accessing applications running on your VM, see [Troubleshoot application connectivity issues on virtual machines in Azure](./troubleshoot-app-connection.md).
 * For more information about using Resource Manager, see [Azure Resource Manager overview](/azure/azure-resource-manager/management/overview).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

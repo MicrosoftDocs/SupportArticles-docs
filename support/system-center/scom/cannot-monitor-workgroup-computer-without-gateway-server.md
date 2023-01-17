@@ -2,7 +2,6 @@
 title: Can't monitor a workgroup computer without a gateway server
 description: Explains how to configure an Operations Manager server to monitor a remote, untrusted workgroup computer without using a gateway server.
 ms.date: 06/23/2020
-ms.prod-support-area-path: 
 ms.reviewer: prakask
 ---
 # Can't see a workgroup computer when installing an Operations Manager agent on it without using a gateway server

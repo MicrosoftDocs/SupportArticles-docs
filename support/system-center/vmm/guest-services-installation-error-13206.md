@@ -2,7 +2,6 @@
 title: Error 13206 when installing virtual guest services
 description: Fixes an issue where you receive error 13206 when installing System Center Virtual Machine Manager guest services.
 ms.date: 07/17/2020
-ms.prod-support-area-path:
 ---
 # System Center Virtual Machine Manager guest services installation fails with error 13206
 

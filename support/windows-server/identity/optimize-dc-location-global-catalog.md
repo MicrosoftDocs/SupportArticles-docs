@@ -89,7 +89,7 @@ Domain controller-specific records
 |Rfc1510Kpwd|SRV|_kpasswd._tcp.\<DnsDomainName>|
 |Rfc1510UdpKpwd|SRV|_kpasswd._udp.\<DnsDomainName>|
 
- Global catalog-specific records  
+Global catalog-specific records  
 
 |Mnemonic|Type|DNS Record|
 |---|---|---|

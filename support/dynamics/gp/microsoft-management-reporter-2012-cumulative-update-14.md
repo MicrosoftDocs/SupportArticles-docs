@@ -68,4 +68,4 @@ New features included in CU14:
 |3695615|TOT formulas incorrect when Page Layout header option selected and exporting to single worksheet|
 |3696500|Error opening or designing report in es-es culture: TableLayoutPanel cannot expand to contain the control, because the panel's GrowStyle property is set to FixedSize.|
 |3701740|Microsoft Dynamics GP AA validation not working for blank CurrencyID in GL20000 table with GP2015|
-|||
+  

@@ -49,7 +49,6 @@ DFS Namespace, Offline Files, Shell, Folder Redirection, and Group Policy Prefer
 |Date added|Knowledge Base Article|Title|Why we recommend this hotfix|Hotfix type and availability|
 |---|---|---|---|---|
 | 10. Feb. 2015| [2916627](https://support.microsoft.com/help/2916627) and [3000482](https://support.microsoft.com/help/3000483)|MS15-011: Vulnerability in Group Policy could allow remote code execution: February 10, 2015|This hotfix contains the most current version of dfsc.sys (6.1.7601.22917)|To apply this hotfix, you must have Windows 7 SP1, or Windows Server 2008 R2 SP1 installed and install both hotfixes.|
-||||||
 
 ## Offline files components
 
@@ -57,14 +56,12 @@ DFS Namespace, Offline Files, Shell, Folder Redirection, and Group Policy Prefer
 |---|---|---|---|---|
 | 23/01/2014| [2831206](https://support.microsoft.com/help/2831206)|DFS network path goes offline in Windows 7 or Windows Server 2008 R2 when Transparent Caching Group Policy setting is enabled|This hotfix contains the most current version of cscdll.dll and cscapi.dll.|To apply this hotfix, you must have Windows 7 SP1, or Windows Server 2008 R2 SP1 installed. Available for individual download.|
 |23/05/2014| [2967567](https://support.microsoft.com/help/2967567)|Cannot access DFS root when the DFS path is offline and you log on to a Windows-based computer for the first time|This hotfix contains the most current version of cscui.dll.|To apply this hotfix, you must have Windows 7 SP1, or Windows Server 2008 R2 SP1 installed. Available for individual download.|
-||||||
 
 ## Shell component
 
 |Date added|Knowledge Base article|Title|Why we recommend this hotfix|Hotfix type and availability|
 |---|---|---|---|---|
 | 09/05/2015| [3009986](https://support.microsoft.com/help/3009986)|A copy or move operation is unsuccessful if a symbolic link is included|This hotfix contains the most current version of Shell32.dll.|To apply this hotfix, you must have Windows 7 SP1, or Windows Server 2008 R2 SP1 installed. Available for individual download.|
-||||||
 
 Folder Redirection (fdeploy.dll)
 
@@ -75,7 +72,6 @@ Currently this binary is the latest available in SP1 for Windows 7.
 |Date added|Knowledge Base article|Title|Why we recommend this hotfix|Hotfix type and availability|
 |---|---|---|---|---|
 | 07/04/2014| [2953722](https://support.microsoft.com/help/2953722)|Drive Maps preferences are still displayed in Group Policy RSoP after they are removed or disabled|This hotfix contains the most current version of Gpprefcl.dll. (*)|To apply this hotfix, you must have Windows 7 SP1, or Windows Server 2008 R2 SP1 installed. Available for individual download.|
-||||||
 
 (*) There's a more recent version in the GDR branch available (security hotfix deployed through Windows Update). Make sure that this hotfix AND all urgent/ critical fixes are installed. The version installed should be of a later date with version 6.1.760 1. 22 xxx and NOT 6.1.760 1. 18 xxx.
 
@@ -86,7 +82,6 @@ Under some circumstances, it might be necessary to reset the Offline Files datab
 |OS|Knowledge Base article|Reg.Exe command|
 |---|---|---|
 |XP| [230738](https://support.microsoft.com/help/230738)|REG ADD `HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\NetCache /v FormatDatabase /t REG_DWORD /d 1 /f`|
-||||
 
 Folder redirection can move content when the folder redirection target is changed.
 
@@ -94,7 +89,7 @@ It's straight forward, except when moving between different names that are actua
 
 To make sure that the move in these situations is successful, following group policy has to be set:
 
-*Verify Old and New folder redirection targets point to the same share before redirecting* under `Windows Components\File Explorer` (or Windows Explorer)
+_Verify Old and New folder redirection targets point to the same share before redirecting_ under `Windows Components\File Explorer` (or Windows Explorer)
 
 Next of course Offline Files is involved because the redirected folder target is by default made offline available.
 

@@ -2,7 +2,7 @@
 title: BizTalk Host instance can't start
 description: This article describes the problem that after you change the configuration file in BizTalk Server, a failure might occur and the BizTalk Server host instance can't start.
 ms.date: 03/04/2020
-ms.prod-support-area-path: BizTalk Server Setup and Configuration
+ms.custom: sap:BizTalk Server Setup and Configuration
 ---
 # BizTalk Host instance fails to start after a configuration file change
 

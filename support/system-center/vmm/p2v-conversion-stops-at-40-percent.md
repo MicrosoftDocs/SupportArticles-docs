@@ -2,7 +2,6 @@
 title: VMM P2V conversion stops at 40 percent
 description: Fixes an issue in which a physical to virtual (P2V) conversion in Virtual Machine Manager stops at 40 percent with error 0x809933BB or 0x80070539.
 ms.date: 09/11/2020
-ms.prod-support-area-path:
 ---
 # VMM P2V fails at 40 percent with error 0x809933BB or 0x80070539
 

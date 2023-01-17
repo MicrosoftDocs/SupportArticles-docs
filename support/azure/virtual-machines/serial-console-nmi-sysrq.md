@@ -1,13 +1,13 @@
 ---
-title: Azure Serial Console for SysRq and NMI calls | Microsoft Docs
+title: Azure Serial Console for SysRq and NMI calls
 description: Using Serial Console for SysRq and NMI calls in Azure virtual machines.
 services: virtual-machines
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 tags: azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-troubleshooting-tools
 ms.collection: linux
 ms.topic: article
 ms.tgt_pltfrm: vm-linux
@@ -90,7 +90,7 @@ For distribution-specific documentation on SysRq and steps to configure Linux to
 
 #### Ubuntu ####
 
- - [Kernel Crash Dump](https://help.ubuntu.com/lts/serverguide/kernel-crash-dump.html)
+- [Kernel Crash Dump](https://help.ubuntu.com/lts/serverguide/kernel-crash-dump.html)
 
 #### Red Hat ####
 
@@ -103,7 +103,7 @@ For distribution-specific documentation on SysRq and steps to configure Linux to
 
 #### CoreOS ####
 
-- [Collecting crash logs](https://coreos.com/os/docs/latest/collecting-crash-logs.html)
+- [Collecting crash logs](https://github.com/coreos/docs/blob/master/os/collecting-crash-logs.md)
 
 ## Non-Maskable Interrupt (NMI)
 
@@ -126,13 +126,13 @@ For more information on Linux kernel configurations, including `unknown_nmi_pani
 
 ### Ubuntu
 
- - [Kernel Crash Dump](https://help.ubuntu.com/lts/serverguide/kernel-crash-dump.html)
+- [Kernel Crash Dump](https://help.ubuntu.com/lts/serverguide/kernel-crash-dump.html)
 
 ### Red Hat
 
- - [What is an NMI and what can I use it for?](https://access.redhat.com/solutions/4127)
- - [How can I configure my system to crash when NMI switch is pushed?](https://access.redhat.com/solutions/125103)
- - [Crash Dump Admin Guide](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/kernel_administration_guide/kernel_crash_dump_guide)
+- [What is an NMI and what can I use it for?](https://access.redhat.com/solutions/4127)
+- [How can I configure my system to crash when NMI switch is pushed?](https://access.redhat.com/solutions/125103)
+- [Crash Dump Admin Guide](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/kernel_administration_guide/kernel_crash_dump_guide)
 
 ### SUSE
 
@@ -140,11 +140,13 @@ For more information on Linux kernel configurations, including `unknown_nmi_pani
 
 ### CoreOS
 
-- [Collecting crash logs](https://coreos.com/os/docs/latest/collecting-crash-logs.html)
+- [Collecting crash logs](https://github.com/coreos/docs/blob/master/os/collecting-crash-logs.md)
 
 ## Next steps
 
-* The main Serial Console Linux documentation page is located [here](serial-console-linux.md).
-* Use Serial Console to boot into [GRUB and enter single user mode](serial-console-grub-single-user-mode.md)
-* The Serial Console is also available for [Windows](serial-console-windows.md) VMs
-* Learn more about [boot diagnostics](boot-diagnostics.md)
+- The main Serial Console Linux documentation page is located [here](serial-console-linux.md).
+- Use Serial Console to boot into [GRUB and enter single user mode](serial-console-grub-single-user-mode.md)
+- The Serial Console is also available for [Windows](serial-console-windows.md) VMs
+- Learn more about [boot diagnostics](boot-diagnostics.md)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

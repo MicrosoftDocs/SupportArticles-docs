@@ -3,9 +3,8 @@ title: Update 1603 for Cloud Platform System Premium
 description: Describes Update 1603 for Cloud Platform System Premium and provides installation steps.
 author: genlin
 ms.author: genli
-ms.service: cloud-services
+ms.service: cloud-platform-system
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ---
 # Update 1603 for Cloud Platform System Premium
@@ -42,7 +41,6 @@ In the "Update the computers" section of the CPS Premium Administrators Guide, c
 
 The highly available Rack_Prefix-HA-VMM clustered role has two nodes: Rack_Prefix-VMM-01 and Rack_Prefix-VMM-02. In these steps, we refer to these as Node1 and Node2. To apply the VMM 2012 R2 hotfix, follow these steps:
 
-
 1. Copy the HostMode_Hotfix.exe file to a folder on a Console virtual machine (VM), such as C:\HostModeHotfix.
 
 2. Double-click the HostMode_Hotfix.exe file, review the Microsoft Software License Terms, and then click **Yes** to accept.
@@ -55,6 +53,7 @@ The highly available Rack_Prefix-HA-VMM clustered role has two nodes: Rack_Prefi
     $VmmServerName = "Rack_Prefix-HA-VMM" $vmmServer = Get-SCVMMServer -ComputerName $VmmServerName $activeNode = $vmmServer.ActiveVMMNode $passiveNodes = @() $vmmServer.FailoverVMMNodes | ForEach- Object { if($.ToLower() -ne $activeNode.ToLower()){ $passiveNodes += $ } } $passiveNodes
     " $vmmServer = Get-SCVMMServer -ComputerName $VmmServerName $activeNode = $vmmServer.ActiveVMMNode $passiveNodes = @() $vmmServer.FailoverVMMNodes | ForEach- Object { if($.ToLower() -ne $activeNode.ToLower()){ $passiveNodes += $ } } $passiveNodes
     ```
+
     > [!NOTE]
     > This script returns the server name of the passive VMM node. (In our example, we assume that Node2 is the passive node at first.)
 5. In File Explorer, locate the following folder on the passive node:
@@ -62,6 +61,7 @@ The highly available Rack_Prefix-HA-VMM clustered role has two nodes: Rack_Prefi
     ```
     \\Rack_Prefix-VMM-0#>\c$\Program Files\Microsoft System Center 2012 R2\Virtual Machine Manager\bin 
     ```
+
 6. Make backup copies of the following files in the \bin folder:
 
     - Engine.Common.dll
@@ -76,7 +76,7 @@ The highly available Rack_Prefix-HA-VMM clustered role has two nodes: Rack_Prefi
     ```  
 
 10. Verify that the services have stopped. To do this, run the following command:
-    
+
     ```
     Get-Service SCVMMService Get-Service SCVMMAgent
     ```  
@@ -87,8 +87,9 @@ The highly available Rack_Prefix-HA-VMM clustered role has two nodes: Rack_Prefi
     ```
     \\Rack_Prefix-VMM-0#>\c$\Program Files\Microsoft System Center 2012 R2\Virtual Machine Manager\bin
     ```
+
 12. In the \bin folder, replace the following files by using the new versions of the files that you extracted from the hotfix package:
-    
+
     - Engine.Common.dll
     - Utils.dll
 13. On the passive VMM node, run the following command to start the services:
@@ -96,6 +97,7 @@ The highly available Rack_Prefix-HA-VMM clustered role has two nodes: Rack_Prefi
     ```
     Start-Service SCVMMAgent
     ```  
+
     > [!NOTE]
     > The SCVMMService service does not start when the passive VMM server node is not active. The SCVMMService starts only when the node becomes the active node. This behavior is by design.
 14. In Failover Cluster Manager, start a failover. This makes Node1 the new passive node and Node2 (which has already been updated) the active node.
@@ -149,54 +151,54 @@ To update the network switch firmware, follow the steps in the "Update F5 load b
 
 ### Updates for Windows Server 2012 R2
 
-- ["STATUS_CONNECTION_RESET" error when an application reads a file in Windows Server 2012 R2 or Windows Server 2012 R2 ](https://support.microsoft.com/help/3076950) 
-- [MS15-105: Description of the security update for Hyper-V: September 8, 2015 ](https://support.microsoft.com/help/3087088) 
+- ["STATUS_CONNECTION_RESET" error when an application reads a file in Windows Server 2012 R2 or Windows Server 2012 R2](https://support.microsoft.com/help/3076950)
+- [MS15-105: Description of the security update for Hyper-V: September 8, 2015](https://support.microsoft.com/help/3087088)
 - [S15-109: Description of the security update for Windows Shell: October 13, 2015](https://support.microsoft.com/help/3080446)
 - [Hyper-V host crashes and has errors when you perform a VM live migration in Windows 8.1 and Windows Server 2012 R2](https://support.microsoft.com/help/3031598)
-- [Files aren't fully optimized and a deduplication cache lock contention issue occurs in Windows Server 2012 R2](https://support.microsoft.com/help/3094197) 
-- [MS15- 115: Description of the security update for Windows: November 10, 2015](https://support.microsoft.com/help/3097877) 
-- [MS15-128 and MS15-135: Description of the security update for Windows kernel-mode drivers: December 8, 2015 ](https://support.microsoft.com/help/3109094)
-- [MS15-127: Security update for Microsoft Windows DNS to address remote code execution: December 8, 2015](https://support.microsoft.com/help/3100465) 
-- [MS15-133: Description of the security update for Windows PGM: December 8, 2015](https://support.microsoft.com/help/3109103) 
-- [MS15-132: Description of the security update for Windows: December 8, 2015](https://support.microsoft.com/help/3108347) 
-- [MS15-128: Description of the security update for the .NET Framework 3.5 in Windows 8.1 and Windows Server 2012 R2: December 8, 2015 ](https://support.microsoft.com/help/3099864) 
-- [MS15- 132: Description of the security update for Windows: December 8, 2015](https://support.microsoft.com/help/3108381) 
+- [Files aren't fully optimized and a deduplication cache lock contention issue occurs in Windows Server 2012 R2](https://support.microsoft.com/help/3094197)
+- [MS15- 115: Description of the security update for Windows: November 10, 2015](https://support.microsoft.com/help/3097877)
+- [MS15-128 and MS15-135: Description of the security update for Windows kernel-mode drivers: December 8, 2015](https://support.microsoft.com/help/3109094)
+- [MS15-127: Security update for Microsoft Windows DNS to address remote code execution: December 8, 2015](https://support.microsoft.com/help/3100465)
+- [MS15-133: Description of the security update for Windows PGM: December 8, 2015](https://support.microsoft.com/help/3109103)
+- [MS15-132: Description of the security update for Windows: December 8, 2015](https://support.microsoft.com/help/3108347)
+- [MS15-128: Description of the security update for the .NET Framework 3.5 in Windows 8.1 and Windows Server 2012 R2: December 8, 2015](https://support.microsoft.com/help/3099864)
+- [MS15- 132: Description of the security update for Windows: December 8, 2015](https://support.microsoft.com/help/3108381)
 - [MS16-008: Description of the security update for Windows Kernel: January 12, 2016](https://support.microsoft.com/help/3121212)
-- [MS16-007: Description of the security update for Windows: January 12, 2016](https://support.microsoft.com/help/3110329) 
+- [MS16-007: Description of the security update for Windows: January 12, 2016](https://support.microsoft.com/help/3110329)
 - [MS16-007: Description of the security update for Windows: January 12, 2016](https://support.microsoft.com/help/3121918)
-- [MS16-005: Description of the security update for Windows kernel-mode drivers: January 12, 2016](https://support.microsoft.com/help/3124001) 
+- [MS16-005: Description of the security update for Windows kernel-mode drivers: January 12, 2016](https://support.microsoft.com/help/3124001)
 - [Hyper-V integration components update for Windows virtual machines that are running on a Windows 10-based host](https://support.microsoft.com/help/3063109)
-- [Space doesn't regenerate upon reallocation in Windows Server 2012 R2](https://support.microsoft.com/help/3090322) 
-- [Site-to-site VPN goes down in Windows 8.1 or Windows Server 2012 R2](https://support.microsoft.com/help/3091402) 
-- [System fails back to a host copy instead of an array copy or storages go down after LUN reset in Windows Server 2012 R2](https://support.microsoft.com/help/3121261) 
-- [All disks in a storage pool can't be brought online in a Windows Server 2012 R2-based cluster](https://support.microsoft.com/help/3123538) 
-- [MS16-035: Description of the security update for the .NET Framework 3.5 in Windows 8.1, Windows RT 8.1, and Windows Server 2012 R2: March 8, 2016](https://support.microsoft.com/help/3135985) 
-- [MS16-035: Description of the security update for the .NET Framework 3.5 in Windows 8.1 and Windows Server 2012 R2: March 8, 2016](https://support.microsoft.com/help/3135991) 
-- [MS16-035: Description of the security update for the .NET Framework 4.5.2 in Windows 8.1, Windows RT 8.1, and Windows Server 2012 R2: March 8, 2016](https://support.microsoft.com/help/3135994) 
-- [MS16-028: Description of the security update for Windows PDF Library: March 8, 2016](https://support.microsoft.com/help/3137513) 
-- [MS16-033: Description of the security update for Windows USB mass storage class driver: March 8, 2016](https://support.microsoft.com/help/3139398) 
-- [MS16-034: Description of the security update for Windows kernel-mode drivers: March 8, 2016](https://support.microsoft.com/help/3139852) 
-- [MS16-032: Description of the security update for the Windows Secondary Logon Service: March 8, 2016](https://support.microsoft.com/help/3139914) 
-- [MS16-030: Description of the security update for Windows OLE: March 8, 2016](https://support.microsoft.com/help/3139940) 
-- [MS16-026: Description of the security update for graphic fonts: March 8, 2016](https://support.microsoft.com/help/3140735) 
-- [MS16-019: Description of the security update for the .NET Framework 3.5 in Windows 8.1 and Windows Server 2012 R2: February 9, 2016](https://support.microsoft.com/help/3122651) 
- -[MS16-019: Description of the security update for the .NET Framework 4.5.2 in Windows 8.1, Windows RT 8.1, and Windows Server 2012 R2: February 9, 2016](https://support.microsoft.com/help/3122654) 
-- [MS16-012: Description of the security update for Windows PDF Library: February 9, 2016](https://support.microsoft.com/help/3123294) 
-- [MS16-014: Description of the security update for Windows 8.1 and Windows Server 2012 R2: February 9, 2016](https://support.microsoft.com/help/3126434) 
-- [MS16-017: Description of the security update for Remote Desktop display driver: February 9, 2016](https://support.microsoft.com/help/3126446) 
-- [MS16-014: Description of the security update for Windows Vista, Windows Server 2008, Windows 7, Windows Server 2008 R2, Windows Server 2012, Windows 8.1, and Windows Server 2012 R2: February 9, 2016](https://support.microsoft.com/help/3126587) 
-- [MS16-014: Description of the security update for Windows Vista, Windows Server 2008, Windows 7, Windows Server 2008 R2, Windows Server 2012, Windows 8.1, and Windows Server 2012 R2: February 9, 2016](https://support.microsoft.com/help/3126593) 
-- [MS16-021: Security update for NPS RADIUS server to address denial of service: February 9, 2016](https://support.microsoft.com/help/3133043) 
-- [MS16-018: Description of the security update for Windows kernel-mode drivers: February 9, 2016](https://support.microsoft.com/help/3134214) 
-- [MS16-020: Security update for Active Directory Federation Services to address denial of service: February 9, 2016](https://support.microsoft.com/help/3134222) 
+- [Space doesn't regenerate upon reallocation in Windows Server 2012 R2](https://support.microsoft.com/help/3090322)
+- [Site-to-site VPN goes down in Windows 8.1 or Windows Server 2012 R2](https://support.microsoft.com/help/3091402)
+- [System fails back to a host copy instead of an array copy or storages go down after LUN reset in Windows Server 2012 R2](https://support.microsoft.com/help/3121261)
+- [All disks in a storage pool can't be brought online in a Windows Server 2012 R2-based cluster](https://support.microsoft.com/help/3123538)
+- [MS16-035: Description of the security update for the .NET Framework 3.5 in Windows 8.1, Windows RT 8.1, and Windows Server 2012 R2: March 8, 2016](https://support.microsoft.com/help/3135985)
+- [MS16-035: Description of the security update for the .NET Framework 3.5 in Windows 8.1 and Windows Server 2012 R2: March 8, 2016](https://support.microsoft.com/help/3135991)
+- [MS16-035: Description of the security update for the .NET Framework 4.5.2 in Windows 8.1, Windows RT 8.1, and Windows Server 2012 R2: March 8, 2016](https://support.microsoft.com/help/3135994)
+- [MS16-028: Description of the security update for Windows PDF Library: March 8, 2016](https://support.microsoft.com/help/3137513)
+- [MS16-033: Description of the security update for Windows USB mass storage class driver: March 8, 2016](https://support.microsoft.com/help/3139398)
+- [MS16-034: Description of the security update for Windows kernel-mode drivers: March 8, 2016](https://support.microsoft.com/help/3139852)
+- [MS16-032: Description of the security update for the Windows Secondary Logon Service: March 8, 2016](https://support.microsoft.com/help/3139914)
+- [MS16-030: Description of the security update for Windows OLE: March 8, 2016](https://support.microsoft.com/help/3139940)
+- [MS16-026: Description of the security update for graphic fonts: March 8, 2016](https://support.microsoft.com/help/3140735)
+- [MS16-019: Description of the security update for the .NET Framework 3.5 in Windows 8.1 and Windows Server 2012 R2: February 9, 2016](https://support.microsoft.com/help/3122651)
+ -[MS16-019: Description of the security update for the .NET Framework 4.5.2 in Windows 8.1, Windows RT 8.1, and Windows Server 2012 R2: February 9, 2016](https://support.microsoft.com/help/3122654)
+- [MS16-012: Description of the security update for Windows PDF Library: February 9, 2016](https://support.microsoft.com/help/3123294)
+- [MS16-014: Description of the security update for Windows 8.1 and Windows Server 2012 R2: February 9, 2016](https://support.microsoft.com/help/3126434)
+- [MS16-017: Description of the security update for Remote Desktop display driver: February 9, 2016](https://support.microsoft.com/help/3126446)
+- [MS16-014: Description of the security update for Windows Vista, Windows Server 2008, Windows 7, Windows Server 2008 R2, Windows Server 2012, Windows 8.1, and Windows Server 2012 R2: February 9, 2016](https://support.microsoft.com/help/3126587)
+- [MS16-014: Description of the security update for Windows Vista, Windows Server 2008, Windows 7, Windows Server 2008 R2, Windows Server 2012, Windows 8.1, and Windows Server 2012 R2: February 9, 2016](https://support.microsoft.com/help/3126593)
+- [MS16-021: Security update for NPS RADIUS server to address denial of service: February 9, 2016](https://support.microsoft.com/help/3133043)
+- [MS16-018: Description of the security update for Windows kernel-mode drivers: February 9, 2016](https://support.microsoft.com/help/3134214)
+- [MS16-020: Security update for Active Directory Federation Services to address denial of service: February 9, 2016](https://support.microsoft.com/help/3134222)
 
 ### Updates for System Center 2012 R2 and Windows Azure Pack
 
-- [Update Rollup 9 for System Center 2012 R2 Data Protection Manager](https://support.microsoft.com/help/3112306) 
-- [Update Rollup 9 for System Center 2012 R2 Operations Manager](https://support.microsoft.com/help/3129774) 
+- [Update Rollup 9 for System Center 2012 R2 Data Protection Manager](https://support.microsoft.com/help/3112306)
+- [Update Rollup 9 for System Center 2012 R2 Operations Manager](https://support.microsoft.com/help/3129774)
 - [Update Rollup 9 for System Center 2012 R2 Orchestrator - Service Provider Foundation](https://support.microsoft.com/help/3133705)
-- [Update Rollup 9 for System Center 2012 R2 Virtual Machine Manager](https://support.microsoft.com/help/3129784) 
-- [Security Update Rollup 9.1 for Windows Azure Pack](https://support.microsoft.com/help/3146301) 
+- [Update Rollup 9 for System Center 2012 R2 Virtual Machine Manager](https://support.microsoft.com/help/3129784)
+- [Security Update Rollup 9.1 for Windows Azure Pack](https://support.microsoft.com/help/3146301)
 
 ### Hardware updates
 
@@ -224,7 +226,7 @@ The following automated firmware updates are applied as part of CPS 1.0 Update 1
 |Switch|S55|8.3.5.6|
 |Load Balancer|VIPRION 2150|11.5.3 HF2|
 |Load Balancer|VIPRION 2100|11.5.3 HF2|
-||||
+
 > [!NOTE]
 > The version of the VMM Service Template in this update is 3.2.8226.0 .
 
@@ -234,4 +236,5 @@ The following automated firmware updates are applied as part of CPS 1.0 Update 1
 |---|---|
 |Storage|Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\spaceport\Parameters" -Name ResetInterval -Type DWord -Value 20000|
 |Storage|Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\spaceport\Parameters" -Name ResetUnresponsiveTimeout -Type DWord -Value 10000|
-|||
+  
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

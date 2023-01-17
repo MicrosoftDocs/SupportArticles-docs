@@ -2,7 +2,6 @@
 title: Exchange 2010 management pack guidance
 description: Describes some best practice guidance along with workarounds to known issues involving the Exchange 2010 management pack running on System Center Operations Manager.
 ms.date: 07/06/2020
-ms.prod-support-area-path:
 ---
 # Guidance, tuning and known issues for the Exchange 2010 management pack for Operations Manager
 
@@ -93,7 +92,7 @@ The maximum number of tested objects and relationships per Operations Manager ma
 - Maximum number of managed objects: 800,000 - which is based on 10,000 Agents each with 80 instances
 - Maximum number of relationships: ~1,000,000
 
-Now these are only the maximum *tested* numbers from the Operations Manager Development team. Operations Manager can manage more than these numbers, however Operations Manager performance starts to become impacted and monitoring may be impaired if these numbers are exceeded.
+Now these are only the maximum _tested_ numbers from the Operations Manager Development team. Operations Manager can manage more than these numbers, however Operations Manager performance starts to become impacted and monitoring may be impaired if these numbers are exceeded.
 
 The Exchange correlation engine may not process alerting if there are too many managed objects, relationships, or groups containing a large number of objects. The noticed limits to relationships and group object members are:  
 
@@ -157,7 +156,6 @@ Additionally, there are Registry Keys to update to allow the RMS emulator to mor
 |---|---|---|---|---|
 |`HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft Operations Manager\3.0`|GroupCalcPollingIntervalMilliseconds|DWORD|000dbba0|Changes the Group Calculation processing to 15 minutes.|
 |`HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft Operations Manager\3.0\Config Service`|Polling Interval Seconds|DWORD|00000078|Changes the Config Service Polling to 2 minutes.|
-||||||
 
 Finally for the RMS emulator, ensure that there are no agents reporting directly to the RMS emulator whenever possible. The Exchange 2010 management pack hosts many non-hosted managed objects on the RMS emulator that has to process many health states as well as all alerting occurs from the RMS emulator. Having the RMS emulator process agent processing and dataflow can hinder this process and should if at all possible be avoided.
 
@@ -171,8 +169,7 @@ For all management servers including the RMS emulator, there are a few more regi
 |`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\HealthService\Parameters\Persistence Version Store Maximum`|DWORD|00002800|
 |`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\HealthService\Parameters\Persistence Checkpoint Depth Maximum`|DWORD|06400000|
 |`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\HealthService\Parameters\State Queue Items`|DWORD|00005000|Allows more data be allowed to store in the Health Service's data store on the local system.|
-|||||
-
+  
 > [!NOTE]
 > These updates don't apply to gateway servers.
 
@@ -208,7 +205,7 @@ Due to how the management pack is designed, the correlation engine has to cache 
 
 Additionally, if any monitoring doesn't seem to be correct and causing churn/noise, turn it off by disabling the corresponding monitor. Once disabled, review the criteria and determine if it's actionable and if any additional tuning is needed. It's better to stop the alerting for a short time to ensure Operations Manager isn't about to break, than allow a noisy alert that will mask other potential issues.
 
-Finally, make sure that your Operations Manager agents are healthy. Put in a remediation process for agents that don't report in. (You can toss a recovery process on **Health Service Heartbeat Failure**). The Exchange monitoring is based on the best health of *n* servers. If the *1* healthy server is not reporting in, Operations Manager thinks it's all unhealthy and can go pretty nuts in the process. (At this management pack most likely has 50+ monitoring criteria associated with that *1* healthy server.) Keeping the agents reporting in is key to ensuring monitoring is accurate.
+Finally, make sure that your Operations Manager agents are healthy. Put in a remediation process for agents that don't report in. (You can toss a recovery process on **Health Service Heartbeat Failure**). The Exchange monitoring is based on the best health of _n_ servers. If the _1_ healthy server is not reporting in, Operations Manager thinks it's all unhealthy and can go pretty nuts in the process. (At this management pack most likely has 50+ monitoring criteria associated with that _1_ healthy server.) Keeping the agents reporting in is key to ensuring monitoring is accurate.
 
 ## Common issues  
 

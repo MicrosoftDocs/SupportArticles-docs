@@ -2,7 +2,6 @@
 title: Azure API Management Troubleshooting Scenario 5 - Request throttling problems and HTTP 403 - Forbidden issues
 description: Provides troubleshooting steps to an issue in which GetPosts operation throws HTTP 403 - Forbidden error.
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.service: api-management
 ms.author: genli
 author: genlin
@@ -52,7 +51,7 @@ Apart from the above, we are also encountering **HTTP 429 - Too many requests** 
 
 - For the second issue (**HTTP 429 - Too many requests**) we will follow the same procedure by checking the APIM inspector trace and check if there is any 'rate-limit' or 'rate-limit-by-key' policy implemented at any scope.
 - If you calculate the effective policy, you should notice an access restriction policy (rate-limit-by-key) implemented at Global scope, i.e under 'Inbound processing' in 'All APIs' option.
- 
+
     ```xml
     <inbound>
         <choose>
@@ -64,3 +63,5 @@ Apart from the above, we are also encountering **HTTP 429 - Too many requests** 
     ```
 
 Read more about [ip-filter](/azure/api-management/api-management-access-restriction-policies#RestrictCallerIPs)  and [rate-limit-by-key](/azure/api-management/api-management-access-restriction-policies#LimitCallRateByKey) policies in APIM.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

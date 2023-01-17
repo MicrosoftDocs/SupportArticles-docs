@@ -2,7 +2,6 @@
 title: Troubleshoot account lockout in AD FS on Windows Server
 description: Fixes the account lockout issue that occurs in Microsoft Active Directory Federation Services (AD FS) on Windows Server.
 ms.date: 06/08/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: authentication
@@ -90,7 +89,7 @@ Make sure that extranet lockout and internal lockout thresholds are configured c
 
 We recommend that you enable modern authentication, certificate-based authentication, and the other features that are listed in this step to lower the risk of brute force attacks.
 
-**Deploy modern authentication** 
+**Deploy modern authentication**
 
 In addition to removing one of the attack vectors that are currently being used through Exchange Online, deploying modern authentication for your Office client applications enables your organization to benefit from multifactor authentication. Modern authentication is supported by all the latest Office applications across the Windows, iOS, and Android platforms.
 
@@ -119,7 +118,6 @@ The following non-password-based authentication types are available for AD FS an
     |---|---|
     |Using Azure MFA as additional authentication over the extranet|Adding Azure MFA or any additional authentication provider to AD FS and requiring that the additional method be used for extranet requests protects your accounts from access by using a stolen or brute-forced password. This can be done in AD FS 2012 R2 and 2016.|
     |Using Azure MFA as primary authentication|This is a new capability in AD FS 2016 to enable password-free access by using Azure MFA instead of the password. This guards against both password breaches and lockouts.|
-    |||
 
     For more information about how to configure Azure MFA by using AD FS, see [Configure AD FS 2016 and Azure MFA](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/configure-ad-fs-2016-and-azure-mfa)
 
@@ -167,9 +165,9 @@ PARAM ($PastDays = 1, $PastHours)
 
 cls
 if ($PastHours -gt 0)
-	{$PastPeriod = (Get-Date).AddHours(-($PastHours))}
-	else
-		{$PastPeriod = (Get-Date).AddDays(-($PastDays))	}
+ {$PastPeriod = (Get-Date).AddHours(-($PastHours))}
+ else
+  {$PastPeriod = (Get-Date).AddDays(-($PastDays)) }
 $Outputfile = $Pwd.path + "\BadCredAttempts.csv"
 $CS = get-wmiobject -class win32_computersystem
 $Hostname = $CS.Name + '.' + $CS.Domain
@@ -177,7 +175,7 @@ $Instances = @{}
 $OSVersion = gwmi win32_operatingsystem
 [int]$BN = $OSVersion.Buildnumber 
 if ($BN -lt 9200){$ADFSLogName = "AD FS 2.0/Admin"}
-	else {$ADFSLogName = "AD FS/Admin"}
+ else {$ADFSLogName = "AD FS/Admin"}
 
 $Users = @()
 $IPAddresses = @()
@@ -185,19 +183,19 @@ $Times = @()
 $AllInstances = @()
 Write-Host "Searching event log for bad credential events..."
 if ($BN -ge 9200) {Get-Winevent  -FilterHashTable @{LogName= "Security"; StartTime=$PastPeriod; ID=411} -ErrorAction SilentlyContinue | Where-Object  {$_.Message -match "The user name or password is incorrect"} |  % {
-	$Instance = New-Object PSObject
-	$UPN = $_.Properties[2].Value
-	$UPN = $UPN.Split("-")[0]
-	$IPAddress = $_.Properties[4].Value
-	$Users += $UPN
-	$IPAddresses += $IPAddress
-	$Times += $_.TimeCreated
-	add-member -inputobject $Instance -membertype noteproperty -name "UserPrincipalName" -value $UPN
-	add-member -inputobject $Instance -membertype noteproperty -name "IP Address" -value $IPAddress
-	add-member -inputobject $Instance -membertype noteproperty -name "Time" -value ($_.TimeCreated).ToString()
-	$AllInstances += $Instance
-	$Instance = $null
-	}
+ $Instance = New-Object PSObject
+ $UPN = $_.Properties[2].Value
+ $UPN = $UPN.Split("-")[0]
+ $IPAddress = $_.Properties[4].Value
+ $Users += $UPN
+ $IPAddresses += $IPAddress
+ $Times += $_.TimeCreated
+ add-member -inputobject $Instance -membertype noteproperty -name "UserPrincipalName" -value $UPN
+ add-member -inputobject $Instance -membertype noteproperty -name "IP Address" -value $IPAddress
+ add-member -inputobject $Instance -membertype noteproperty -name "Time" -value ($_.TimeCreated).ToString()
+ $AllInstances += $Instance
+ $Instance = $null
+ }
 }
 
 
@@ -227,48 +225,50 @@ PARAM ($SearchCriteria, $PastDays = 1, $PastHours)
 
 cls
 if ($PastHours -gt 0)
-	{
-	$PastPeriod = (Get-Date).AddHours(-($PastHours))
-	}
-	else
-		{$PastPeriod = $PastDays}
-	
+ {
+ $PastPeriod = (Get-Date).AddHours(-($PastHours))
+ }
+ else
+  {$PastPeriod = $PastDays}
+ 
 $CS = get-wmiobject -class win32_computersystem
 $Hostname = $CS.Name + '.' + $CS.Domain
 $Instances = @()
 Get-Winevent -ComputerName $Hostname -LogName Security  | Where-Object {(($_.ID -eq 501) `
 -and ($_.Properties.Value -contains $SearchCriteria) -and ($_.TimeCreated -gt $PastPeriod))} | % { $Instances += $_.Properties[0].Value}
 
-function FindADFSAuditEvents		{ 
-	param ($valuetomatch, $counter, $instance, $PastPeriod)
-		$Results = $pwd.Path + "\" + $SearchCriteria + "-ADFSSecAudit" + '-' + $Counter + ".txt"	
-		$SearchString = $SearchCriteria + " and instance " + $Instance + " in Security event log."
-		"Security Audit Events which match $SearchString" | Out-File $Results -Encoding UTF8 
-		Get-WinEvent -ComputerName $Hostname -LogName Security  -WarningAction SilentlyContinue | `
-		Where-Object -ErrorAction SilentlyContinue {($_.TimeCreated -gt $PastPeriod) -and (($_.Properties -contains $ValueToMatch) -or ($_.Properties[0].Value -match $Instance))}  | % {
-		$Event = New-object PSObject
-		add-member -inputobject $Event -membertype noteproperty -name "Event ID" -value $_.ID
-		add-member -inputobject $Event -membertype noteproperty -name "Provider" -value $_.ProviderName
-		add-member -inputobject $Event -membertype noteproperty -name "Machine Name" -value $_.MachineName
-		add-member -inputobject $Event -membertype noteproperty -name "User ID" -value $_.UserID
-		add-member -inputobject $Event -membertype noteproperty -name "Time Created " -value $_.TimeCreated		
-		$Event | FL *
-		$Event | Out-File $Results -Encoding UTF8  -Append
-		$_.Properties | FL *
-		$_.Properties | Out-File $Results -Encoding UTF8  -Append
-		$DateTimeExport = $_.TimeCreated
-		}
-	$DateTime = (($DateTimeExport.ToShortDateString()).Replace('/','-') + '@' + (($DateTimeExport.ToShortTimeString()).Replace(' ','')))
-	$DateTime = $DateTime.Replace(':','')
-	$Results2 = $pwd.Path + "\" + $SearchCriteria + '-' + $DateTime + "-ADFSSecAudit" + $Counter + ".txt"
-	Rename-Item -Path $Results -NewName $Results2
-	}	
+function FindADFSAuditEvents  { 
+ param ($valuetomatch, $counter, $instance, $PastPeriod)
+  $Results = $pwd.Path + "\" + $SearchCriteria + "-ADFSSecAudit" + '-' + $Counter + ".txt" 
+  $SearchString = $SearchCriteria + " and instance " + $Instance + " in Security event log."
+  "Security Audit Events which match $SearchString" | Out-File $Results -Encoding UTF8 
+  Get-WinEvent -ComputerName $Hostname -LogName Security  -WarningAction SilentlyContinue | `
+  Where-Object -ErrorAction SilentlyContinue {($_.TimeCreated -gt $PastPeriod) -and (($_.Properties -contains $ValueToMatch) -or ($_.Properties[0].Value -match $Instance))}  | % {
+  $Event = New-object PSObject
+  add-member -inputobject $Event -membertype noteproperty -name "Event ID" -value $_.ID
+  add-member -inputobject $Event -membertype noteproperty -name "Provider" -value $_.ProviderName
+  add-member -inputobject $Event -membertype noteproperty -name "Machine Name" -value $_.MachineName
+  add-member -inputobject $Event -membertype noteproperty -name "User ID" -value $_.UserID
+  add-member -inputobject $Event -membertype noteproperty -name "Time Created " -value $_.TimeCreated  
+  $Event | FL *
+  $Event | Out-File $Results -Encoding UTF8  -Append
+  $_.Properties | FL *
+  $_.Properties | Out-File $Results -Encoding UTF8  -Append
+  $DateTimeExport = $_.TimeCreated
+  }
+ $DateTime = (($DateTimeExport.ToShortDateString()).Replace('/','-') + '@' + (($DateTimeExport.ToShortTimeString()).Replace(' ','')))
+ $DateTime = $DateTime.Replace(':','')
+ $Results2 = $pwd.Path + "\" + $SearchCriteria + '-' + $DateTime + "-ADFSSecAudit" + $Counter + ".txt"
+ Rename-Item -Path $Results -NewName $Results2
+ } 
 
 $Counter = 1
 foreach ($instance in $Instances)
-	{
-	FindADFSAuditEvents -ValueToMatch $SearchCriteria  -Instance $Instance -PastPeriod $PastPeriod -Counter $Counter
-	$Counter++
-	}
+ {
+ FindADFSAuditEvents -ValueToMatch $SearchCriteria  -Instance $Instance -PastPeriod $PastPeriod -Counter $Counter
+ $Counter++
+ }
 
 ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

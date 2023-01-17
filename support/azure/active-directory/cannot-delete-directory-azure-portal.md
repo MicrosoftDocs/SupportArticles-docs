@@ -2,7 +2,6 @@
 title: Can't delete a directory through the Azure Management Portal
 description: Fixes an issue in which you can't delete a directory from the Azure Active Directory extension.
 ms.date: 05/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: domain-services
@@ -118,3 +117,5 @@ Contact Microsoft Partner Support at [Microsoft Partner Site](https://partner.mi
 ## Directory contains one or more applications that were added by a user or administrator
 
 To fix this issue, follow the steps in ["Cannot delete" error when you try to delete a B2C directory in Azure AD](https://support.microsoft.com/help/3112170).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

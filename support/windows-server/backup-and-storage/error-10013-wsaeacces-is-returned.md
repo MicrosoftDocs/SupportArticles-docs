@@ -1,7 +1,7 @@
 ---
 title: Error 10013 when you bind excluded port again
 description: Resolves an issue in which you cannot bind an excluded port again even though the SO_REUSEADDR option is set. This issue occurs in Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2.
-ms.date: 09/08/2020
+ms.date: 06/21/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -46,7 +46,7 @@ This issue occurs because of a problem in the tcpip.sys driver. Specifically, th
 To work around this issue, use one of the following methods:
 
 - Use a port that is not included in the default dynamic port range (from 49,152 to 65,535), and do not specify the port as an excluded port by running the `netsh` command.
-- Use the [CreatePersistentTcpPortReservation](https://msdn.microsoft.com/library/windows/desktop/gg696068%28v=vs.85%29.aspx) and [LookupPersistentTcpPortReservation](https://msdn.microsoft.com/library/windows/desktop/gg696072%28v=vs.85%29.aspx) functions to reserve a port.
+- Use the [CreatePersistentTcpPortReservation](/windows/win32/api/iphlpapi/nf-iphlpapi-createpersistenttcpportreservation) and [LookupPersistentTcpPortReservation](https://msdn.microsoft.com/library/windows/desktop/gg696072%28v=vs.85%29.aspx) functions to reserve a port.
 
 ## Status
 

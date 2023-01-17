@@ -2,7 +2,7 @@
 title: How to send EDI Interchange
 description: Describes how to set up filters to send the batched EDI.
 ms.date: 03/17/2020
-ms.prod-support-area-path: Accelerators
+ms.custom: sap:Accelerators
 ms.reviewer: mquian
 ---
 # How to set up filters to send the batched EDI Interchange

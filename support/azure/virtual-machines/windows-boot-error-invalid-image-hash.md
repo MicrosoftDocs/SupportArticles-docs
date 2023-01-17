@@ -6,9 +6,9 @@ services: virtual-machines, azure-resource-manager
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 tags: azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
@@ -40,12 +40,12 @@ or the message:
   > Status: 0xc0000428
 
   > Info: The digital signature for this file couldn't be verified.
-	
+ 
   :::image type="content" source="media/windows-boot-error-invalid-image-hash/digital-signature-not-verified.png" alt-text="Screenshot of the Windows Boot Manager window, with the status Ox0000428 and the info that the digital signature for this file couldn't be verified.":::
 
 ## Cause
 
-The image that was used to build the VM was a preview image with an expiration date rather than an RTM (Release to Manufacturing) image. 
+The image that was used to build the VM was a preview image with an expiration date rather than an RTM (Release to Manufacturing) image.
 
 Preview images have a designated lifecycle and the screenshot you see is displayed when you pass the expiration date, meaning the trial of the image is over.
 
@@ -105,7 +105,7 @@ Depending upon your preference, you can use either Azure PowerShell or Azure CLI
 1. Once downloaded, use either Command Prompt or PowerShell to enter the `az login` command and then sign in with your account credentials.
 1. Once logged in, enter the following commands:
 
-   ```powershell
+   ```azurecli
    az vm image list-publishers --location "<LOCATION>"
    az vm image list-offers --location "West US" --publisher "<PUBLISHER NAME>"
    az vm image list-skus --location "West US" --publisher "<PUBLISHER NAME>" --offer "<OFFER NAME>"
@@ -116,9 +116,11 @@ Depending upon your preference, you can use either Azure PowerShell or Azure CLI
 
   See the following example:
 
-  ```powershell
+  ```azurecli
   az vm image list-publishers --location "West US"
   az vm image list-offers --location "West US" --publisher "MicrosoftWindowsServer"
   az vm image list-skus --location "West US" --publisher "MicrosoftWindowsServer" --offer "WindowsServer"
   az vm image list  --location "West US" --publisher "MicrosoftWindowsServer" --offer "WindowsServer" --sku "2016-Datacenter"
   ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

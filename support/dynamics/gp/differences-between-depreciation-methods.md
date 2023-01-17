@@ -53,8 +53,7 @@ When this data is used, the following depreciation amounts are calculated when y
 |November|164.30|166.58|
 |December|169.74|166.52|
 |**Total**| **1998.90**| **1998.90** |
-||||
-
+  
 When you use the daily depreciation method, the depreciation amount is calculated as follows:
 
 - $10,000 divided by 1,826 days equals a daily depreciation amount of $5.48. 1,826 is the total number of days in five years plus one day for leap year.

@@ -5,9 +5,9 @@ services: virtual-machines
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 tags: top-support-issue
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.topic: troubleshooting
 ms.date: 08/19/2021
 ms.author: tibasham
@@ -134,3 +134,5 @@ If you're unable to access the VM using the Azure Serial Console, then the repai
 11. Use step 5 of [VM Repair Commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to rebuild the VM.
 
 12. Start the VM. If more than one kernel is installed, you might need to select the modified entry from the GRUB menu.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

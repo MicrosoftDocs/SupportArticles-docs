@@ -74,7 +74,7 @@ netsh advfirewall firewall add rule ?
 
 For more information about how to delete firewall rules, run the following command:
 
-```cosnole
+```console
 netsh advfirewall firewall delete rule ?
 ```
 

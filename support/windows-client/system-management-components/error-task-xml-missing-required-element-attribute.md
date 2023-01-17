@@ -1,7 +1,7 @@
 ---
 title: The task XML is missing a required element or attribute error when you use the /z switch together with the Schtasks command in Windows Vista
 description: Resolve an issue where you receive an error when you use the /z switch together with the Schtasks.exe command in Windows Vista.
-ms.date: 09/07/2020
+ms.date: 04/11/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -51,4 +51,4 @@ schtasks /create /tn "calculator" /tr c:\Windows\System32\calc.exe /sc once /sd 
 
 For more information about the **/V1** switch, visit the following MSDN website:
 
-[Schtasks.exe](https://msdn2.microsoft.com/library/bb736357%28VS.85%29.aspx)
+[Schtasks.exe](/windows/win32/taskschd/schtasks)

@@ -2,7 +2,6 @@
 title: Troubleshoot dynamic groups
 description: Diagnose and resolve issues with dynamic groups.
 ms.date: 12/10/2020
-ms.prod-support-area-path: 
 ms.service: active-directory
 ms.subservice: domain-services
 ---
@@ -260,3 +259,5 @@ When a dynamic group is deleted and restored, it's seen as a new group and re-po
 
 - [Creating Dynamic Membership Rules](/azure/active-directory/users-groups-roles/groups-dynamic-membership#other-properties-and-common-rules).
 - [Troubleshooting groups](/azure/active-directory/users-groups-roles/groups-troubleshooting).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

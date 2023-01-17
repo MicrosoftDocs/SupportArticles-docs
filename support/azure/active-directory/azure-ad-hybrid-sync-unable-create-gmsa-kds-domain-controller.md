@@ -57,3 +57,5 @@ Set-ADServiceAccount -Identity provAgentgMSA -KerberosEncryptionType AES128,AES2
 Next, reboot the Provisioning agent server and reinstall the agent.
 
 For more information on this issue, see [Cannot install service account. The provided context did not match the target.](/archive/blogs/joelvickery/cannot-install-service-account-the-provided-context-did-not-match-the-target)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

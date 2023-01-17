@@ -2,7 +2,7 @@
 title: V4 print drivers produce 0-byte spool file
 description: Workaround V4 print drivers attempting to send PCL/Postscript data in RAW mode to a printer and producing a 0-byte spool file.
 ms.date: 03/09/2020
-ms.prod-support-area-path: Graphics and multimedia development
+ms.custom: sap:Graphics and multimedia development
 ms.reviewer: v-mafect
 ms.technology: windows-dev-apps-graphics-multimedia-dev
 ---

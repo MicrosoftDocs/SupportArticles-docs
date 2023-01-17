@@ -2,7 +2,7 @@
 title: Time-out expired error when you use the UDDI tool
 description: This article provides resolutions for time-out expired error that occurs when you use the UDDI tool in BizTalk Server 2013.
 ms.date: 08/25/2020
-ms.prod-support-area-path: Management and Operations
+ms.custom: sap:Management and Operations
 ms.reviewer: Mstern
 ---
 # Time-out expired error when you use the UDDI tool in BizTalk Server 2013

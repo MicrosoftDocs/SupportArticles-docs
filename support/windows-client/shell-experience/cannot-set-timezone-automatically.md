@@ -4,7 +4,7 @@ description: Provides several methods to resolve the issue in which you cannot s
 ms.date: 06/23/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client

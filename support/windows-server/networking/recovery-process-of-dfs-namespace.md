@@ -62,8 +62,7 @@ The following chart details how the data (Active Directory or registry of a DFS 
 |<br/><br/>Domain <br/>|<br/><br/>Domain DFS Root or Links<br/>|<br/><br/>Active Directory, Registry<br/>|
 |<br/><br/>Standalone<br/>|<br/><br/>Standalone Root/Link<br/>|<br/><br/>Registry<br/>|
 |<br/><br/>Domain/Standalone<br/>|<br/><br/>Shared folders<br/>|<br/><br/>File System, Registry<br/>|
-||||
-
+  
 Utilize the dfsutil.exe utility to view the contents of the DFS configuration. Dfsutil is available within the Windows Server 2003 and the Windows XP Support Tools package, and it is included with Windows Server 2008 once the Distributed File System Role Service is installed via Server Manager. The following data lists the configuration for the DFS namespace/root named "DATA" after running the commands `dfsutil /root:\\contoso.com\DATA /view` (on 2003) or `dfsutil root \\contoso.com\DATA` (on 2008):
 
 > DFS Utility Version 5.2 (built on 5.2.3790.3959)
@@ -143,13 +142,13 @@ Note the typical shelf life of a system-state backup of Active Directory is only
 
 An alternate method to save the DFS configuration data is via the DFSUtil.exe utility. The output created via the "export" option may be used to recreate the missing DFS configuration information lost through accidental deletion.
 
-*Recovery:*  
+_Recovery:_  
 
 Once the scope of the modifications has been identified, the appropriate recovery process should be performed.
 
 Domain DFS Root and Links
 
-Option 1 - Restore the Active Directory DFS configuration data from backup 
+Option 1 - Restore the Active Directory DFS configuration data from backup
 
 For domain-based DFS, modification of a DFS root via a management tool has the largest potential impact to the namespace. This is because whenever modifications are performed via DFS API's, all root servers are notified of the changes and they will update their registry as required. Thus, restoration of the DFS configuration within Active Directory from backups may also require the task of recovering the registry of root servers.
 

@@ -5,6 +5,8 @@
     href: active-directory/welcome-azure-ad.yml
   - name: Azure Kubernetes Services
     href: azure-kubernetes/welcome-azure-kubernetes.yml
+  - name: Azure Monitor
+    href: azure-monitor/welcome-azure-monitor.yml
   - name: Cloud Services
     href: cloud-services/welcome-cloud-services.yml
   - name: Virtual Machines

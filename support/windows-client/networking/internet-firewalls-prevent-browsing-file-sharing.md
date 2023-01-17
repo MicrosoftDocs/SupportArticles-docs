@@ -50,7 +50,7 @@ A firewall is software or hardware that creates a protective barrier between you
 The following ports are associated with file sharing and server message block (SMB) communications:
 
 - Microsoft file sharing SMB: User Datagram Protocol (UDP) ports from 135 through 139 and Transmission Control Protocol (TCP) ports from 135 through 139.
-- Direct-hosted SMB traffic without a network basic input/output system (NetBIOS): port 445 (TCP and UPD).
+- Direct-hosted SMB traffic without a network basic input/output system (NetBIOS): port 445 (TCP and UDP).
 
 ### Technical support for Windows x64 editions
 

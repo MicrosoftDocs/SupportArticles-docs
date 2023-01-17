@@ -2,7 +2,6 @@
 title: Troubleshoot application protection in DPM
 description: Describes how to troubleshoot issues that may occur in application protection in Data Protection Manager.
 ms.date: 07/27/2020
-ms.prod-support-area-path:
 ms.reviewer: mjacquet, jarrettr
 ---
 # Troubleshoot application protection in System Center Data Protection Manager
@@ -29,8 +28,7 @@ _Original KB number:_ &nbsp; 4457488
 | DPM protection jobs start to fail.| If DPM is protecting a SQL Server database that is using mirroring or log shipping, after a failover the protected primary database will no longer be online and your DPM protection jobs start to fail.| If you plan to fail-back to the primary database, do the following: <ul><li>After your protection jobs start to fail and the replica is no longer valid, run a consistency check.<br/> **Note** If you fail-back to the primary database after only a short period of time and the replica remains valid, you don't have to run a consistency check. </li><li>If there is a delay in the fail-back to the primary database, you must create a protection group by using the **New Protection Group Wizard** to protect the new active database.<br/>After the failover, you can stop protection on the new protection group.</li></ul><br/>If you don't plan to fail-back to the primary database, we recommend that you remove the database from protection and then configure protection for the new database. To remove the primary database, do the following: <ol><li>In DPM Administrator Console, select **Protection** on the navigation bar. </li><li>In the **Protection** task area, select the database that you want to remove, and then in the **Actions** pane, select **Remove from protection**. </li><li>In the **Stop Protection - \<Protection Group name>** dialog box, select the **Retain Protected Data** option, and then select **Stop Protection**. </li></ol>After you remove the primary database, configure protection for the new database by using the **New Protection Group Wizard**. |
 | Incremental synchronizations fail for the SQL Server master database.| DPM doesn't support configuring incremental synchronizations for SQL Server master databases.| DPM allows for log backups for databases that are configured to use the full and bulk-logged recovery models. However, log backups cannot run against the SQL Server master database.<br/><br/>Additionally, don't set the synchronization frequency for the master database to **Just before a recovery point** because there are no backup logs to get from the protected server during the recovery. |
 | DPM isn't protecting SQL Server 2005 databases.| SQL Server 2005 includes database snapshots that appear in the **New Protection Group Wizard** as regular databases. However, DPM does not support protecting database snapshots for recovery.| You can view database snapshots in the Microsoft SQL Server Management Studio in the Database Snapshots folder. |
-||||
-
+  
 ## Hyper-V server
 
 |Issue| Possible cause| Resolution|
@@ -45,15 +43,13 @@ _Original KB number:_ &nbsp; 4457488
 | DPM error: Failed to prepare a Cluster Shared Volume (CSV) for backup as another backup using the same CSV is in progress. (ID 32612 Details: Unknown error (0x8007173d) (0x8007173D))| Too many parallel backups are competing for the same CSV LUN.| For information about how to enforce serial backups, in the DPM 2010 Operations Guide, see [Considerations for Backing Up Virtual Machines on CSV with the System VSS Provider](/previous-versions/system-center/data-protection-manager-2010/ff634192(v=technet.10)?redirectedfrom=MSDN). |
 | DPM error: An unexpected error occurred during job execution. (ID 104 Details: Element not found (0x80070490))| There might be a failed disk in the cluster.| Repair or remove the failed disk in the cluster. |
 | Backup of Hyper-V virtual machines are stalled and no data transfer occurs.| TCP Chimney Offloading may be active.| Run `netsh int tcp set global chimney=disabled` to disable TCP Chimney Offloading. |
-||||
-
+  
 ## Windows servers
 
 |Issue|Possible cause|Resolution|
 |---|---|---|
 | When you use WSB, the following errors might occur: <ul><li>DPM has detected a discontinuity in the log chain for \<DatasourceType> \<DatasourceName> on \<ServerName> since the last synchronization.</li><li>The recovery to the latest point in time failed. During a recovery to the latest point in time, DPM attempts to perform a SQL Server transaction log backup to receive the latest changes from the SQL Server database \<DatasourceName> on \<ServerName> before starting the recovery. This transaction log backup has failed.</li><li>DPM attempted to perform a SQL Server log backup, either as part of a backup job or a recovery to latest point in time job. The SQL Server log backup job has detected a discontinuity in the SQL Server log chain for \<DatasourceType> database \<DatasourceName> since the last backup. All incremental backup jobs will fail until an express full backup runs.</li></ul>| Performing backups by using WSB on a server that DPM is protecting can interfere with the backups that DPM uses.| If you are using WSB, do the following: <ul><li>Make sure that WSB always takes a **COPY** backup by using the WSB **Backup Once Wizard**. </li><li>If you are using WSB **Scheduled Backups**, make sure that the volumes that you are backing up contain no application data, such as Exchange Server data or SQL Server data. </li><li>After you reconfigure WSB, on the DPM server, run a new express full backup.</li></ul> |
-||||
-
+  
 ## File server
 
 | Issue| Possible cause| Resolution |
@@ -62,8 +58,7 @@ _Original KB number:_ &nbsp; 4457488
 | Inconsistent drive letter references in the New Protection Group Wizard.| If you change a volume drive letter and don't restart the computer before you create a protection group for that volume, inconsistent drive letter references may appear in the New Protection Group Wizard.| To display the correct drive letters in the New Protection Group Wizard, you must update the drive letters in SQL by following these steps: <br/><br/>1. Remove the volume from the protection group, keeping the replicas.<br/>2. Read the volume to the protection group. |
 | The recovery point time is not consistent with synchronization time.| When a recovery point is created, it reflects the time of the most recent change to the protected volume.<br/><br/>For example, if a recovery point is scheduled to be created at 11:00 A.M. and the most recent change to the protected volume occurred at 8:30 A.M., the recovery point that was created at 11:00 A.M. will display a time stamp of 8:30 A.M.| No action is required. |
 | Replicas are marked as inconsistent.| After a volume is marked as **Missing**, DPM only brings the volume back online during the next disk modification operation, such as **Allocate disk space**, or after restarting the computer. DPM then marks the replica as inconsistent.| You must run a manual consistency check. For information about performing a consistency check, in DPM Help, see How to Synchronize a Replica. |
-||||
-
+  
 ## Client computers
 
 | Issue| Possible cause| Resolution |
@@ -71,8 +66,7 @@ _Original KB number:_ &nbsp; 4457488
 | Recovery points are missing.| If scheduled recovery point creation and synchronization/consistency check for a client are run at the same time, the recovery point creation is skipped.| To avoid the loss of a recovery point for such clients, schedule an additional recovery point creation at a low-usage time so that the client computers that miss the recovery point creation have a recovery point created later. |
 | Backups of client computers that are connected to corporate network through DirectAccess failure with RPC server unavailable error.| Edge traversal is blocked in the firewall settings.|<br/>1. Open the Windows Firewall console (select **Start**, select **Run**, and then type **firewall.cpl**).<br/>2. In the left pane, select **Advanced settings**.<br/>3. Select **Inbound rules**, and then scroll down to **DPMRA** and **DPMRA_DCOM_135**.<br/>4. Double-click each rule, and then navigate to the **Advanced** tab.<br/>5. In the **Edge traversal** group item, select **Allow edge traversal**. |
 | **Access denied** when you try to retrieve information from the Windows Management Instrumentation (WMI) service.| This error can occur when you try to add a computer that is running Windows XP SP3 to the DPM server and a Group Policy setting is blocking the WMI service on the subject computer.| To resolve this error, do the following: <ol><li>On the computer that you want to add, select **Start**, select **Run**, type **regedit**, and then click **OK**. <br/><br/>**Caution** Serious problems can occur if you modify the registry incorrectly. These problems could require you to reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk. Always make sure that you back up the registry before you modify it, and that you know how to restore the registry if a problem occurs. </li><li>Locate the following registry subkey, and then delete it: <br/>`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MicrosoftFirewall\DomainProfile\RemoteAdminSettings` </li><li>Restart the computer, and then try to add the targeted computer to the DPM server again.</li></ol> |
-||||
-
+  
 ## SharePoint
 
 | Issue| Possible cause| Resolution|
@@ -89,8 +83,7 @@ _Original KB number:_ &nbsp; 4457488
 | **Replica inconsistent** alerts for one or more SQL Server databases that were previously a part of the SharePoint farm appear in the Monitoring pane.| DPM keeps the existing recovery points of the databases that are removed from the SharePoint farm. This can occur if the removed database is recovered by using DPM or if DPM was upgraded.| Resolve the alert by selecting **Inactivate the alert**. |
 | Some SharePoint farm's consistency check jobs seem to have stopped (no data transfer has occurred for a long time).| The consistency check was triggered while recovery of one of the farm's components was in progress.| Cancel the consistency check job and restart the consistency check for the farm from the Protection pane. |
 | The SharePoint catalog task fails with HR 0x80004003 (Invalid Pointer).| There is a network connectivity issue between the SharePoint front-end web server and the back-end server.| Rerun the catalog job by using Windows PowerShell. |
-||||
-
+  
 ## Exchange Server
 
 | Issue| Possible cause| Resolution |
@@ -104,18 +97,16 @@ _Original KB number:_ &nbsp; 4457488
 | All data replication jobs fail.| If the versions of Exchange Server Database Utilities (eseutil.exe) and ese.dll that are installed on the most recent edition of the protected Exchange Server differ from the versions that are installed on the DPM server, all data replication jobs will fail.| The eseutil.exe and ese.dll versions that are installed on the most recent edition of Exchange Server must be the same versions that are installed on the DPM server. For example, if you are protecting Exchange Server 2003 SP2, Exchange Server 2007, and Exchange Server 2007 SP1, you must copy eseutil.exe and ese.dll from the server that is running Exchange Server 2007 SP1 to the DPM server.<br/><br/>The following scenarios show the versions of eseutil.exe and ese.dll that you must install on the DPM server: <ul><li>32-bit operating system <br/> <br/>  - If DPM is protecting only computers that are running Exchange Server 2003 on a 32-bit operating system, copy eseutil.exe and ese.dll from the computer that is running Exchange Server 2003. <br/>  - If DPM is protecting computers that are running Exchange Server 2007, the 32-bit versions of eseutil.exe and ese.dll are required from Exchange Server 2007. You can get these versions from the Exchange Server 2007 Setup DVD. </li><br/><li> 64-bit operating system <br/> <br/>  - If DPM is protecting only computers that are running Exchange Server 2003 on a 32-bit operating system, copy eseutil.exe and ese.dll from the computer that is running Exchange Server 2003. <br/>  - If DPM is protecting Exchange Server 2007, copy eseutil.exe and ese.dll from the computer that is running Exchange Server 2007. </ul>|
 | Exchange Server protection fails.| If the Exchange writer is turned off for the Volume Shadow Copy Service in Windows Small Business Server 2003, protection will fail.| By default, the Setup program for Windows Small Business Server 2003 turns off the Microsoft Exchange Server 2003 writer for the Volume Shadow Copy Service. To protect data that uses DPM, the Exchange Server 2003 writer must be turned on.<br/><br/>**To turn on the Exchange writer** <br/>1. Select **Start**, select **Run**, type **regedit**, and then select **OK**.<br/>2. Locate and then double-click the following registry subkey: <br/>`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSExchangeIS\ParametersSystem` <br/><br/>3.  Double-click the **Disable Exchange Writer** value. <br/>4. In the **Value data** text box, change the value from **1** to **0**, and then select **OK**. <br/> 5. Exit Registry Editor. <br/>6. Select **Start**, point to **Administrative Tools**, and then select **Services**. <br/>7. Stop and then restart the Microsoft Exchange Information Store service. |
 | Local continuous replication (LCR) protection fails and returns a Volume Shadow Copy Service (VSS) error.| If the Exchange Server replication service isn't restarted after the registry key is set, LCR fails for the storage group.| Restart the replication service after you update the registry key. |
-| Setting and unsetting the *eseutil* flag through the command-line interface (CLI) fails.| The preferred server may not have been specified.| Provide the topology as `PT_CCR_ACTIVE_ONLY` together with the `RunEseUtilConsistencyCheck` option. |
+| Setting and unsetting the _eseutil_ flag through the command-line interface (CLI) fails.| The preferred server may not have been specified.| Provide the topology as `PT_CCR_ACTIVE_ONLY` together with the `RunEseUtilConsistencyCheck` option. |
 | The consistency check fails and returns **RMGenericError**.| The consistency check will fail if indexing, encryption, or Single Instance Storage (SIS) is enabled for the folder that contains the .edb file.| To resolve this issue, disable indexing, encryption, and SIS for the folder that contains the .edb file. |
-||||
-
+  
 ## System protection
 
 | Issue| Possible cause| Resolution|
 |---|---|---|
 | Bare Metal Recovery (BMR) backups fail and return an **Access Denied** error.| You have migrated from System State protection to BMR protection.|<br/>1. Remove BMR protection. <br/>2. Modify protection group and include BMR protection. |
 | One or more prerequisites for protecting this data source are missing on your Windows Server 2008 operating system.| This error occurs if the Windows Server Backup utility isn't installed on the protected server.| To resolve this issue, do the following: <br/>- To install the Windows Server Backup utility, open a command prompt with administrative credentials and run:<br/><br/> `Start /wait ocsetup WindowsServerBackup /quiet /norestart` <br/><br/> **Note** To open a command prompt with administrative credentials, select **Start**, point to **All Programs**, select **Accessories**, right-click **Command Prompt**, and then select **Run as administrator**. |
-||||
-
+  
 ## Virtual server
 
 | **Issue**| **Possible cause**| **Resolution** |
@@ -124,4 +115,3 @@ _Original KB number:_ &nbsp; 4457488
 | Data on the virtual machine is unavailable for protection.| Virtual Server 2005 R2 Service Pack 1 (SP1) may not be installed on the server that you want to protect.| Install Virtual Server 2005 R2 Service Pack 1 (SP1) on the server that you want to protect. |
 | Backup fails on the virtual machine with unknown error 0x800423f3.| The Virtual Server VSS Writer service doesn't support online backup for the client virtual machine.| Use Windows Event Viewer on the Virtual Server machine to determine whether Event ID 1044 exists. If this event exists, the virtual machine cannot run online backups.<br/><br/>You can run offline backups by updating the following registry subkey.<br/><br/>Locate:<br/><br/> `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Virtual Server\1.0\Backup\BackupType\<VMNAME>` <br/><br/>Set the value to **0**. |
 | Online backup fails.| Online backups fail if the virtual machine contains volumes that don't support shadow copies (FAT 32 file systems). Additionally, if the shadow copies exist on different virtual machine volumes, the backup fails.| Make sure that the virtual machine is running before configuring the backup, and then delete the entries for the virtual machines for which the online backup is failing.<br/><br/> `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Virtual Server\1.0\Backup\BackupType`. |
-||||

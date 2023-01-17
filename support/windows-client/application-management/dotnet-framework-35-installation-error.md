@@ -14,6 +14,10 @@ ms.custom: sap:.net-framework-installation, csstroubleshoot
 ms.technology: windows-client-application-compatibility
 adobe-target: true
 ---
+
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+--->
+
 # .NET Framework 3.5 installation errors: 0x800F0906, 0x800F081F, 0x800F0907, 0x800F0922
 
 This article helps fix Microsoft .NET Framework 3.5 installation errors.
@@ -23,6 +27,7 @@ _Original KB number:_ &nbsp; 2734782
 
 > [!NOTE]
 > Installation of the .NET Framework may throw errors that are not listed in this article, but you might be able to try the following steps to fix those errors as well.
+> Microsoft is releasing Out-of-band (OOB) updates for .NET Framework. [.NET Framework Out-of-band update to address issues after installing the January 11, 2022 Windows update](/windows/release-health/windows-message-center#359)
 
 ## Resolutions for Windows Server
 
@@ -125,7 +130,7 @@ To use the **Add Roles and Features Wizard**, follow these steps:
 
     :::image type="content" source="media/dotnet-framework-35-installation-error/specify-alternate-source-path.svg" alt-text="Screenshot of the Specify an alternate source path link on the Conform installation selections page." border="false":::  
 
-5. On the **Specify Alternate Source Path** page, type the path of the *SxS* folder as a local path or as a network share path. The screenshot for this step is listed below.
+5. On the **Specify Alternate Source Path** page, type the path of the _SxS_ folder as a local path or as a network share path. The screenshot for this step is listed below.
 
     :::image type="content" source="media/dotnet-framework-35-installation-error/path-of-sxs-folder.svg" alt-text="Screenshot of the Specify Alternate Source Path page." border="false":::  
 
@@ -200,8 +205,8 @@ To do this, follow these steps:
     To fix this issue, follow these steps:
 
     1. Open the .NET Framework installation files folder.
-    2. Open *Sources* folder.
-    3. Right-click the *SXS* folder, and then click **Properties**.
+    2. Open _Sources_ folder.
+    3. Right-click the _SXS_ folder, and then click **Properties**.
     4. Click **Security** and make sure that there is a check mark next to **Read & Execute**. If the check mark isn't there, click the **Edit** button and turn it on.
     5. Press Windows Key + X keyboard shortcut.  
     6. Click **Command Prompt (Admin)**.  
@@ -230,8 +235,7 @@ In Windows 10 and Windows Server 2012 R2, the .NET Framework 3.5 is a Feature on
 | 0x800F0906|The source files could not be downloaded. <br/> Use the **source** option to specify the location of the files that are required to restore the feature. For more information on specifying a source location, see `http://go.microsoft.com/fwlink/?LinkId=243077`. <br/> The DISM log file can be found at C:\Windows\Logs\DISM\dism.log. <br/><br/> Windows couldn't complete the requested changes. <br/> Windows couldn't connect to the Internet to download necessary files. Make sure that you're connected to the Internet, and click **Retry** to try again. <br/><br/> Installation of one or more roles, role services, or features failed. <br/> The source files could not be found. Try installing the roles, role services, or features again in a new Add Roles and Features Wizard session, and on the Confirmation page of the wizard, click **Specify an alternate source path** to specify a valid location of the source files that are required for the installation. The location must be accessible by the computer account of the destination server. <br/> <br/>0x800F0906 - CBS_E_DOWNLOAD_FAILURE <br/><br/> Error code: 0x800F0906 <br/><br/> Error: 0x800f0906|
 | 0x800F081F|The source files could not be found.<br/> Use the **Source** option to specify the location of the files that are required to restore the feature. For more information on specifying a source location, see `http://go.microsoft.com/fwlink/?LinkId=243077`. <br/> The DISM log file can be found at C:\Windows\Logs\DISM\dism.log <br/> <br/>0x800F081F - CBS_E_SOURCE_MISSING <br/><br/> Error code: 0x800F081F <br/><br/> Error: 0x800F081F|
 | 0x800F0907|DISM failed. No operation was performed.<br/>For more information, review the log file. <br/> The DISM log file can be found at C:\Windows\Logs\DISM\dism.log <br/><br/>Because of network policy settings, Windows couldn't connect to the Internet to download files that are required to complete the requested changes. Contact your network administrator for more information. <br/><br/> 0x800F0907 - CBS_E_GROUPPOLICY_DISALLOWED <br/><br/> Error code: 0x800F0907 <br/><br/>Error: 0x800F0907|
-|||
-
+  
 ### Download the .NET Framework 3.5 outside of the Windows Update requirement
 
 The .NET Framework 3.5 is available for customers with Volume Licensing or MSDN Subscription, as Feature on-Demand Media is available.

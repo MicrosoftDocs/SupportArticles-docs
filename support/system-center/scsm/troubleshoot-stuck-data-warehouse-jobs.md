@@ -2,7 +2,6 @@
 title: Troubleshoot stuck data warehouse jobs
 description: Provides suggestions for troubleshooting issues that certain data warehouse jobs freeze or hang in System Center 2012 Service Manager and later versions.
 ms.date: 08/03/2020
-ms.prod-support-area-path: 
 ---
 # Troubleshoot stuck data warehouse jobs in System Center Service Manager
 
@@ -74,9 +73,8 @@ The `DWStagingAndConfig` database is the database to use when you troubleshoot. 
     |5|Stopped|Stopped|
     |6|Completed|Completed|
     |7|Waiting|Waiting|
-    ||||
 
-The most common reason for a stuck data warehouse job is that the data warehouse management server lost communication with Microsoft SQL Server. It occurs if SQL Server was updated without the Service Manager administrator's knowledge. You can check the Operations Manager event log on the data warehouse management server to determine whether it's the reason.
+  The most common reason for a stuck data warehouse job is that the data warehouse management server lost communication with Microsoft SQL Server. It occurs if SQL Server was updated without the Service Manager administrator's knowledge. You can check the Operations Manager event log on the data warehouse management server to determine whether it's the reason.
 
 For other reasons, you can use Windows PowerShell cmdlets and SQL Server statements to troubleshoot. In the following resolution process, all PowerShell cmdlets are executed on the data warehouse management server, and the SQL Server statements are run against the `DWStagingAndConfig` database.
 
@@ -146,7 +144,6 @@ If certain jobs seem to run forever, use the next steps to reset the jobs.
     |BatchId|Name|Status|CategoryName|StartTime|EndTime|IsEnabled|
     |---|---|---|---|---|---|---|
     |8806|Load.Common|Running|Load|12/2/2016 7:44:00 AM||True|
-    ||||||||
 
 2. In SQL Server Management Studio, run the following statements:
 

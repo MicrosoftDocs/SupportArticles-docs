@@ -2,7 +2,6 @@
 title: Error 347 when installing the DPM agent
 description: Fixes an issue in which you receive error 347 when installing the DPM agent on Windows Server 2008 or Windows Server 2008 R2.
 ms.date: 07/23/2020
-ms.prod-support-area-path: 
 ms.reviewer: DPMTechReview, jarrettr, delhan
 ---
 # DPM agent installation fails with error 347

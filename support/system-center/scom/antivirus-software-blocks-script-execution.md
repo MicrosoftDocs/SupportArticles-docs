@@ -2,7 +2,6 @@
 title: Antivirus software blocks script execution
 description: Fixes an issue in which antivirus software blocks script execution in System Center Operations Manager.
 ms.date: 06/30/2020
-ms.prod-support-area-path: 
 ms.reviewer: adoyle, jchornbe, jarrettr
 ---
 # Antivirus software blocks script execution in System Center Operations Manager

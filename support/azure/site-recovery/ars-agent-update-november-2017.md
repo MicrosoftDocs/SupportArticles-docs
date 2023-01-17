@@ -79,7 +79,7 @@ If your servers are registered to one or more Recovery Services Vaults, you can 
 
     :::image type="content" source="media/ars-agent-update-november-2017/server-detail-blade.png" alt-text="Screenshot shows how to update the MARS Agent on the server." lightbox="media/ars-agent-update-november-2017/server-detail-blade.png":::
 
-1. When you're done updating, you can select other servers that have Agent versions that are earlier than *2.0.9099.0**, and then update the Agents on those servers in the same manner.
+1. When you're done updating, you can select other servers that have Agent versions that are earlier than _2.0.9099.0_*, and then update the Agents on those servers in the same manner.
 
 ### Restart information
 
@@ -94,3 +94,5 @@ This update replaces previously released update [KB 4041236](https://support.mic
 If you use System Center 2016 Data Protection Manager (SC DPM), Microsoft recommends that you apply [Update Rollup 1](https://support.microsoft.com/help/3190600) for System Center 2016 Data Protection Manager or a later version.
 
 If you use System Center 2012 R2 Data Protection Manager (SC DPM), apply [Update Rollup 12](https://support.microsoft.com/help/3209592/) for System Center 2012 R2 Data Protection Manager or a later version.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

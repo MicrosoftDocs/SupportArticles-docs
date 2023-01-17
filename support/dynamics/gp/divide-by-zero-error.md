@@ -74,8 +74,7 @@ Decimal place values in the IV30300 are as follows:
 |4|3|
 |5|4|
 |6|5|
-|||
-
+  
 Example update statement below:
 
 ```sql

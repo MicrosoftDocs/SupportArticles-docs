@@ -5,9 +5,9 @@ services: virtual-machines, azure-resource-manager
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 tags: azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
@@ -66,7 +66,7 @@ To solve the issue:
    ```console
    defrag <LETTER ASSIGN TO THE OS DISK>: /u /x /g
    ```
-   
+
 Depending upon the level of fragmentation, de-fragmentation could take several hours.
 
 ### Enable the Serial Console and memory dump collection
@@ -77,7 +77,7 @@ Depending upon the level of fragmentation, de-fragmentation could take several h
 1. Run the following commands:
 
    **Enable the Serial Console**:
-   
+
    ```console
    bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /ems {<BOOT LOADER IDENTIFIER>} ON 
    bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /emssettings EMSPORT:1 EMSBAUDRATE:115200
@@ -94,7 +94,7 @@ Depending upon the level of fragmentation, de-fragmentation could take several h
    ```console
    REG LOAD HKLM\BROKENSYSTEM <VOLUME LETTER OF BROKEN OS DISK>:\windows\system32\config\SYSTEM 
    ```
-   
+
    **Enable on ControlSet001**:
 
    ```console
@@ -102,7 +102,7 @@ Depending upon the level of fragmentation, de-fragmentation could take several h
    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f 
    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f
    ```
-   
+
    **Enable on ControlSet002**:
 
    ```console
@@ -110,13 +110,15 @@ Depending upon the level of fragmentation, de-fragmentation could take several h
    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f 
    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f
    ```
-   
+
    **Unload Broken OS Disk**:
 
    ```console
    REG UNLOAD HKLM\BROKENSYSTEM
    ```
-   
+
 ### Rebuild the VM
 
 Use [step 5 of the VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md#repair-process-example) to rebuild the VM.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

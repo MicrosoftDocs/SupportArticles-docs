@@ -2,7 +2,6 @@
 title: Configure cluster networks for CSV redirected access
 description: Describes how to configure cluster networks for CSV redirected access for Data Protection Manager Hyper-V protection.
 ms.date: 07/27/2020
-ms.prod-support-area-path:
 ms.reviewer: mjacquet
 ---
 # Configure cluster networks for CSV redirected access in DPM 2010

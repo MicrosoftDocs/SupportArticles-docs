@@ -63,6 +63,5 @@ For more information about the updates that are included in Microsoft Windows Se
 |[824995](https://support.microsoft.com/help/824995)|Windows starts and ends daylight saving time incorrectly if the time zone is set to (GMT+02:00) Cairo|Shell|
 |[901115](https://support.microsoft.com/help/901115)|A Terminal Services client computer may make beep sounds after you connect to a Windows Server 2003 Service Pack 1-based computer|Terminal Server|
 |[902346](https://support.microsoft.com/help/902346)|FIX: Error messages when you use a Windows Management Instrumentation (WMI) query to register WMI events on a computer that is running Windows Server 2003 or Windows XP: "0x80041032" and "0x80041003"|WMI|
-||||
-
+  
 This service pack also includes the fixes and the updates that are contained in Windows Server 2003 Service Pack 1 (SP1).

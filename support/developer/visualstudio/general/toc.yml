@@ -1,0 +1,22 @@
+- name: _stat-family function can't support Symbolic Directory Link
+  href: ./_stat-family-cannot-support-symbolic-directory-link.md
+- name: Alternate credentials don't work for Online accounts
+  href: ./alternate-credentials-stop-working.md
+- name: Can't find resources in XAML or WPF designer
+  href: ./cannot-find-resource-named-error.md
+- name: Can't sign in when JavaScript is disabled
+  href: ./cannot-sign-in-javascript-disabled.md
+- name: Error when you build applications
+  href: ./not-transform-license-file-to-binary-resource.md
+- name: Error when you use HTTPS protocol
+  href: ./release-management-not-have-https-protocol.md
+- name: Files can't be saved when you use Resource Editor
+  href: ./resource-editor-cannot-save-file.md
+- name: Subscriptions administrator migration
+  href: ./subscription-administrator-migration.md
+- name: Use AssemblyVersion and AssemblyFileVersion
+  href: ./assembly-version-assembly-file-version.md
+- name: VBScript runtime error when you do a numeric comparison
+  href: ./vbs-type-mismatch-error.md
+- name: Workarounds for Visual Studio 2022 on unsupported operating systems
+  href: ./visual-studio-2022-unsupported-operating-systems.md

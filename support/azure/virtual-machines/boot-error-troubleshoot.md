@@ -1,12 +1,12 @@
 ---
-title: 'Troubleshoot boot errors in Azure Virtual Machines | Microsoft Docs'
+title: 'Troubleshoot boot errors in Azure Virtual Machines'
 description: This article helps link you to articles to troubleshoot boot errors in Azure Virtual Machines.
 services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
@@ -21,7 +21,7 @@ This article lists the common boot errors that you may receive when you start a 
 
 ## Boot errors and solutions
 
-* [BitLocker boot errors](troubleshoot-bitlocker-boot-error.md) 
+* [BitLocker boot errors](troubleshoot-bitlocker-boot-error.md)
 * [VM is not booting after Windows update](troubleshoot-stuck-updating-boot-error.md)
 * [Windows show "Checking file system" during boot](troubleshoot-check-disk-boot-error.md)
 * [Blue screen errors](troubleshoot-common-blue-screen-error.md)
@@ -31,6 +31,8 @@ This article lists the common boot errors that you may receive when you start a 
 
 ## Next steps
 
-- [Boot diagnostics](boot-diagnostics.md)
-- [VM Serial Console](./serial-console-windows.md)
-- [Troubleshoot a Windows VM by attaching the OS disk to a recovery VM](./troubleshoot-recovery-disks-windows.md)
+* [Boot diagnostics](boot-diagnostics.md)
+* [VM Serial Console](./serial-console-windows.md)
+* [Troubleshoot a Windows VM by attaching the OS disk to a recovery VM](./troubleshoot-recovery-disks-windows.md)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

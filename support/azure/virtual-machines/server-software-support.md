@@ -2,9 +2,9 @@
 title: Microsoft server software support for Microsoft Azure Virtual Machines
 description: Discusses the support policy for Microsoft server software in a Microsoft Azure Virtual Machine environment.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: drewm, coreysa
 ms.service: virtual-machines
+ms.subservice: vm-support-statements
 ms.collection: windows
 ---
 # Microsoft server software support for Azure virtual machines
@@ -48,6 +48,14 @@ Microsoft Dynamics GP 2013 and later versions are supported.
 
 Microsoft Dynamics NAV 2013 and later versions are supported.
 
+### Microsoft Dynamics CRM
+
+Microsoft Dynamics CRM 2015 and Microsoft Dynamics CRM 2016 are supported.
+
+### Microsoft Dynamics 365
+
+Microsoft Dynamics 365 Server version 9.1 and later versions are supported.
+
 ### Microsoft Exchange
 
 Exchange Server 2013 and later versions are supported. For more information, see the "Requirements for hardware virtualization" section of the following TechNet topic: [Exchange 2013 virtualization](https://technet.microsoft.com/library/jj619301%28v=exchg.150%29.aspx?f=255&mspperror=-2147217396#bkmk_prereq).
@@ -61,7 +69,7 @@ Forefront Identity Manager 2010 R2 SP1 and later versions are supported.
 
 ### Microsoft HPC Pack
 
-Microsoft HPC Pack 2012 and later versions are supported. For more information, see the "Microsoft Azure integration" section of the following TechNet topic: [What's new in Microsoft HPC Pack 2012](https://technet.microsoft.com/library/jj899598.aspx#bkmk_windows_azure) 
+Microsoft HPC Pack 2012 and later versions are supported. For more information, see the "Microsoft Azure integration" section of the following TechNet topic: [What's new in Microsoft HPC Pack 2012](https://technet.microsoft.com/library/jj899598.aspx#bkmk_windows_azure)
 
 ### Microsoft Project Server
 
@@ -69,13 +77,13 @@ Project Server 2013 and later versions are supported.
 
 ### Microsoft SharePoint Server
 
-SharePoint Server 2010 and later versions are supported on Azure virtual machines. For more information, see the following SharePoint website: [Support and licensing for Microsoft Azure in SharePoint 2013](https://technet.microsoft.com/library/jj154957) 
+SharePoint Server 2010 and later versions are supported on Azure virtual machines.
 
 ### Microsoft SQL Server
 
 64-bit versions of SQL Server 2008 and later versions are supported. For more information, see the following Microsoft Knowledge Base article: [956893](https://support.microsoft.com/help/956893) Support policy for Microsoft SQL Server products that are running in a hardware virtualization environment
 
-Now Azure supports Failover Cluster Instances (FCI). For more information, see [Configure SQL Server Failover Cluster Instance on Azure Virtual Machine](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-create-failover-cluster).
+Now Azure supports Failover Cluster Instances (FCI). For more information, see [Create an FCI with Storage Spaces Direct (SQL Server on Azure VMs)](/azure/azure-sql/virtual-machines/windows/failover-cluster-instance-storage-spaces-direct-manually-configure).
 
 ### Microsoft System Center
 
@@ -138,14 +146,14 @@ Windows Server 2008 R2 and later versions are supported for the following roles 
     - Azure Files for shared file storage
 
     > [!NOTE]
-    > For example: SQL Server AlwaysOn availability groups. For more information, see the following MSDN article: [High availability and disaster recovery for SQL Server in Azure virtual machines](/previous-versions/azure/jj870962(v=azure.100)?redirectedfrom=MSDN).
+    > For example: SQL Server Always On availability groups. For more information, see the following MSDN article: [High availability and disaster recovery for SQL Server in Azure virtual machines](/previous-versions/azure/jj870962(v=azure.100)?redirectedfrom=MSDN).
 
 - Can be a third-party clustered role
 
     > [!NOTE]
     > Third-party clustered roles are supported by the vendor
 
-    For more information about licensing restrictions that are related to Remote Desktop Services in Microsoft Azure, see [Virtual machines Licensing FAQ](https://azure.microsoft.com/pricing/licensing-faq/). For technical information about how to configure Remote Desktop Services in Microsoft Azure for session hosting by using Windows Server 2012 or Windows Server 2012 R2, see [Azure Desktop Hosting - Reference Architecture and Deployment Guides](/previous-versions/azure/dn451351(v=azure.100)?redirectedfrom=MSDN).
+    For more information about licensing restrictions that are related to Remote Desktop Services in Microsoft Azure, see [Virtual machines Licensing FAQ](https://azure.microsoft.com/pricing/licensing-faq/). For technical information about how to configure Remote Desktop Services in Microsoft Azure for session hosting by using Windows Server 2012 or Windows Server 2012 R2, see [Azure Desktop Hosting - Reference Architecture and Deployment Guides](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/mt404690(v=ws.11)).
 
 The following roles are not supported on Microsoft Azure Virtual Machines:
 
@@ -182,3 +190,5 @@ The following significant features are not supported:
 
   - Active Directory Domain Services: [Guidelines for deploying Windows Server Active Directory in Azure virtual machines](/windows-server/identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100?redirectedfrom=MSDN).
   - For information about Office activation on Azure virtual machines, see [Microsoft Office prompts for activation in Azure](https://support.microsoft.com/help/956893).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

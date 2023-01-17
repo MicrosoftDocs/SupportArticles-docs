@@ -1,13 +1,13 @@
 ---
-title: Upgrade an Azure VM with SUSE Linux Enterprise Server to SUSE 15 SP1 | Microsoft Docs
+title: Upgrade an Azure VM with SUSE Linux Enterprise Server to SUSE 15 SP1
 description: This article provides general steps about how to use SUSE Distribution Migration System to upgrade SUSE Linux Enterprise server to SUSE 15 SP1 for an Azure virtual machine.
 services: virtual-machines
 documentationcenter: ''
 author: amkarmak
 manager: dcscontentpm
-editor: ''
 tags: virtual-machines
 ms.service: virtual-machines
+ms.subservice: vm-deploy
 ms.collection: linux
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
@@ -27,6 +27,9 @@ This article provides general steps about how to upgrade SUSE Linux Enterprise s
 The current SLES version must be SLES 12 SP4 or 12 SP5 before you can proceed to SLES 15 SP1.
 
 :::image type="content" source="media/linux-upgrade-suse-15sp1/upgrade-path.png" alt-text="Diagram shows the supported upgrade path. Only SLES 12 SP4 or 12 SP5 can upgrade to SLES 15 SP1." border="false":::
+
+> [!Note]
+> The steps in this article also apply to upgrading SLES SAP 12 SP4 or 12 SP5 to SLES SAP 15 SP1.
 
 ## Prerequisites
 
@@ -54,7 +57,7 @@ The current SLES version must be SLES 12 SP4 or 12 SP5 before you can proceed to
     cat /etc/os-release
     ```
 
-4. Install the **suse-migration-sle15-activation**. When the package **suse-migration-sle15-activation** gets installed, another package **SLES15-Migration** will be automatically installed as a dependency package. 
+4. Install the **suse-migration-sle15-activation**. When the package **suse-migration-sle15-activation** gets installed, another package **SLES15-Migration** will be automatically installed as a dependency package.
 
    ```console
    zypper install suse-migration-sle15-activation
@@ -84,3 +87,5 @@ You can use one of the following methods to check the generation version:
 
      :::image type="content" source="media/linux-upgrade-suse-15sp1/output-gen2.png" alt-text="Screenshot shows output of the command for generation 2 V M." border="false":::
 - In the [Azure portal](https://portal.azure.com),  go to **Properties**  of the VM, and then check the **VM generation** field.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

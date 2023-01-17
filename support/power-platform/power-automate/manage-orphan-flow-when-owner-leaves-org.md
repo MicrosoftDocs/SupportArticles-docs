@@ -1,7 +1,7 @@
 ---
 title: Manage orphan flow when owner leaves org
 description: Describes how to manage orphan flows when the owner leaves the organization.
-ms.reviewer: 
+ms.reviewer: tomche
 ms.topic: how-to
 ms.date: 3/31/2021
 ms.subservice: power-automate-flows
@@ -24,7 +24,7 @@ Admins can maintain continuity on the business process automated by the flow by 
 > [!NOTE]
 > Only privileged users can view flows that don't have any valid owners.
 
-On the [environment page from Flow Admin Center](https://admin.powerplatform.microsoft.com/environments), go to **Resources** tab and then open the **Flow** list. Orphaned flows display **None** as their owner.
+On the [environment page from Power Platform Admin Center](https://admin.powerplatform.microsoft.com/environments), go to **Resources** tab and then open the **Flow** list. Orphaned flows don't have an owner displayed in the **Owners** column.
 
 Select **Load more** to load the next set of flows so as to ensure you've looked through all flows that might be orphaned.
 

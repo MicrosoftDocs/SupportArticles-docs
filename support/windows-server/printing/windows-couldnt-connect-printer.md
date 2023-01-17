@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jokay
-ms.custom: sap:errors-and-troubleshooting:-general-issues, csstroubleshoot
+ms.custom: sap:errors-and-troubleshooting-general-issues, csstroubleshoot
 ms.technology: windows-server-printing
 ---
 # Error message when you try to connect to a printer by using an alias (CNAME) resource record: Windows couldn't connect to the printer

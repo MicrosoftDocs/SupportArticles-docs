@@ -2,7 +2,6 @@
 title: You don't receive a text or voice call that contains the verification code for Azure Active Directory Multi-Factor Authentication
 description: Discusses an issue in which an Office 365 admin who has Azure Active Directory (Azure AD) Multi-Factor Authentication enabled doesn't receive a text or voice call that contains the verification code. Therefore, the admin can't sign in to a work or school account.
 ms.date: 07/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: authentication
@@ -26,7 +25,7 @@ In this scenario, you can't sign in to your work or school account, such as Offi
 To fix this problem, follow these steps:
 
 1. If you have set up other options for security verification, select **Other verification options**, and then try again by selecting a different option. Also, make sure that your phone numbers are correct in your user account settings.
-2. Ask another global admin to confirm whether your phone numbers are set correctly in your user settings. 
+2. Ask another global admin to confirm whether your phone numbers are set correctly in your user settings.
 
 If steps 1 and 2 don't resolve the problem, your user account may be blocked from using Azure AD MFA. To check whether your user account is blocked, ask a global admin for your Microsoft cloud service to perform the following steps:
 
@@ -39,6 +38,4 @@ If you have an Azure AD MFA or Azure Active Directory Premium subscription
 
 If you have Office 365 and don't have an Azure AD MFA or Azure Active Directory Premium subscription, contact Office 365 Support.
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazuread) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -2,7 +2,7 @@
 title: Override EDI header for outgoing X12 997
 description: When you want to override EDI headers for an outgoing X12 997, an error happens.
 ms.date: 03/18/2020
-ms.prod-support-area-path: Accelerators
+ms.custom: sap:Accelerators
 ---
 # Override EDI header values for outgoing X12 997
 

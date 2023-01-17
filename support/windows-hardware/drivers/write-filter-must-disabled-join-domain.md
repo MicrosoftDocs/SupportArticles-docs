@@ -2,7 +2,6 @@
 title: Write filter must be disabled
 description: This article describes that before joining a domain when leaving a domain to join a workgroup, the Write filter must be disabled.
 ms.date: 09/07/2020
-ms.prod-support-area-path: 
 ms.technology: windows-hardware-general
 ---
 # Write filter must be disabled before joining/leaving domain

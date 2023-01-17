@@ -2,7 +2,6 @@
 title: DPM protection agent crashes
 description: Describes an issue that causes the DPM protection agent in System Center 2012 Data Protection Manager to return errors when you run it.
 ms.date: 07/23/2020
-ms.prod-support-area-path: 
 ---
 # Error ID 43 or 60 when you use System Center 2012 Data Protection Manager
 

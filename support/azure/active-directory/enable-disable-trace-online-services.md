@@ -2,9 +2,9 @@
 title: How to enable and disable a trace for the Microsoft Online Services Sign-in Assistant
 description: Describes how to enable and disable a trace for the Microsoft Online Services Sign-in Assistant in order to troubleshoot non-browser based sign-in issues.
 ms.date: 06/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: dahans
 ms.service: active-directory
+ms.subservice: aad-general
 ---
 # How to enable and disable a trace for the Microsoft Online Services Sign-in Assistant
 
@@ -124,6 +124,4 @@ To disable debug tracing for the Microsoft Online Services Sign-in Assistant, fo
 
 Log file locations depend on the specifics of the Folder registry entry that's listed earlier. In this example, the log is located in the `C:\MSOTrace` or `C:\MSOTraceLite` folder, depending on the application that performs authentication.
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

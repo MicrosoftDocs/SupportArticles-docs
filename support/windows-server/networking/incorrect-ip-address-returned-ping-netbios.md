@@ -1,7 +1,7 @@
 ---
 title: An incorrect IP address is returned
 description: Describes an issue in which an incorrect IP address is returned when you ping a server by using its NetBIOS name.
-ms.date: 09/27/2020
+ms.date: 04/11/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -90,4 +90,4 @@ For example, for an IP address of 10.0.0.1 for Server01, type as:
 ## More information
 
 For more information about the getaddrinfo function, visit the following MSDN Web site:  
-[The getaddrinfo function](https://msdn2.microsoft.com/library/ms738520%28vs.85%29.aspx)  
+[The getaddrinfo function](/windows/win32/api/ws2tcpip/nf-ws2tcpip-getaddrinfo)  

@@ -2,7 +2,7 @@
 title: ISA16 cannot be part of the payload
 description: This article describes that data values in the X12 message cannot be the same as ISA16 (component element separator) character.
 ms.date: 09/27/2020
-ms.prod-support-area-path: Accelerators
+ms.custom: sap:Accelerators
 ms.reviewer: mquian
 ms.topic: article
 ---

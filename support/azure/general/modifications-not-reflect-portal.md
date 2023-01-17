@@ -5,7 +5,6 @@ ms.date: 08/14/2020
 author: genlin
 ms.author: genli
 ms.service: automation
-ms.prod-support-area-path: 
 ms.reviewer: pfreitas
 ---
 # Modifications to the configuration mode of an Azure Automation Configuration Node aren't reflected in the portal
@@ -27,3 +26,5 @@ The configuration mode can be changed by either of the following methods:
 Either method modifies the configuration mode in the DscLocalConfigurationManager file on the DSC Node. However, in the Azure portal, the configuration mode is still marked as "Unknown." If the DSC Node and all configurations are removed from the Automation account before you reregister the DSC Node, the configuration mode is still displayed as "Unknown" in the Azure portal. There is no workaround for this behavior.
 
 This is known issue that affects only how the configuration mode is displayed in the Azure portal. The DSC Node still functions correctly per the settings in DscLocalConfigurationManager.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

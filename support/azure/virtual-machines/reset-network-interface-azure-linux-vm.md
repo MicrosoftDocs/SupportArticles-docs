@@ -5,8 +5,8 @@ services: virtual-machines
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
@@ -49,7 +49,7 @@ To submit a support request, go to the [Azure support page](https://azure.micros
 
 1. Open [Azure Cloud Shell](/azure/cloud-shell/overview) or preferred shell. Run the following commands:
 
-   ```azurepowershell
+   ```azurecli
    #Log in to the subscription  
 
    az login 
@@ -148,3 +148,5 @@ Once these details have been corrected, restart the VM with networking configure
 ### RHEL 8, Ubuntu, Debian
 
 These Linux distributions use `cloud-init`, and the issue should be resolved on the next reboot of the VM. If a reboot doesn't fix the issue, try any of the previously listed methods.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

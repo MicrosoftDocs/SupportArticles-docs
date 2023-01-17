@@ -2,9 +2,9 @@
 title: A Capacity Reservation is in a "Failed" provisioning state
 description: The following article discusses how to resolve the situation of a Capacity Reservation being in a "failed" provisioning state.
 ms.date: 08/26/2021
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-capacity-reservation
 ms.collection: windows
 ---
 
@@ -31,4 +31,4 @@ In a rare circumstance, it's possible that an existing Capacity Reservation ente
 
 1. Follow the steps at [Modify Capacity Reservations](/azure/virtual-machines/capacity-reservation-modify) to update the Capacity Reservation to the previous reserved quantity. Once updated, the reservation will be immediately available for use with virtual machines (VMs).
 
-If the capacity reservation is still in a "Failed" provisioning state after taking these steps, then [create a support ticket](/azure/azure-portal/supportability/how-to-create-azure-support-request).
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

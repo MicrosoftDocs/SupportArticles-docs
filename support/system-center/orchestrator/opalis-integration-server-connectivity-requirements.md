@@ -2,7 +2,6 @@
 title: Opalis Integration Server connectivity requirements
 description: Describes the connectivity requirements for the various Opalis Integration Server components to interact with each other.
 ms.date: 08/04/2020
-ms.prod-support-area-path:
 ms.reviewer: jfanjoy
 ---
 # Overview of Opalis Integration Server connectivity requirements

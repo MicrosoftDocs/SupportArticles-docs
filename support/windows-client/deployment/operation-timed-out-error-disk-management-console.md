@@ -53,7 +53,7 @@ To resolve the problem, do the following steps:
 `sfc /verifyonly`  
 
 3. If the above command returns stating problems were found, then type the following command and then press Enter. Let the command operation complete:  
-`sfc /scannnow`  
+`sfc /scannow`  
 
 4. Open Windows Explorer and then navigate to `%Systemroot%\inf` folder
 5. Verify if *volume.inf* file has been replaced. If the file is not replaced, then you need to copy volume.inf from another computer running the same version of Windows, same version of Service Pack, and same CPU architecture.

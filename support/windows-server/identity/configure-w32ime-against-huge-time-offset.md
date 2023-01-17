@@ -138,8 +138,7 @@ The `MaxPosPhaseCorrection` and `MaxNegPhaseCorrection` registry entries have a 
 |Value Type|DWORD|
 |Subkey| `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient` |
 |Notes|This entry specifies the special poll interval in seconds for manual peers. When the SpecialInterval 0x1 flag is enabled, W32Time uses this poll interval instead of a poll interval that the operating system determines. The default value on domain members is 3,600. The default value on stand-alone clients and servers is 604,800.|
-|||
-
+  
 > [!NOTE]
 > We recommend that you use the Global Policy object Editor to deploy these settings. For more information about the Windows Time service in a Windows Server 2003-based forest, see [Windows Time Service (W32Time)](/windows-server/networking/windows-time-service/windows-time-service-top).
 
@@ -175,4 +174,4 @@ The `MaxAllowedClockErrInSecs` registry entry has a default value of 43,200 (12 
 |Value Type|DWORD|
 |Subkey| `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters`|
 |Notes|Specifies the maximum clock change that is enabled in seconds. When the event is logged, the time isn't adjusted based on the value. This behavior occurs to help protect against any suspicious time stamp activity. The default value for domain members is 43,200.|
-|||
+  

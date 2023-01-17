@@ -2,7 +2,6 @@
 title: Work with Hyper-V network virtualization and Hyper-V replicas
 description: Discusses how to work with Hyper-V network virtualization and Hyper-V replicas in Virtual Machine Manager 2012.
 ms.date: 07/17/2020
-ms.prod-support-area-path:
 ms.reviewer: jchornbe, markstan, aagrawal, ruturajd
 ---
 # How to work with Hyper-V network virtualization and Hyper-V replicas in VMM 2012

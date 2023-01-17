@@ -44,8 +44,7 @@ Best practices for AutoRecovery based on server role, OS, and patch level:
 |Cluster Node|On|On|On|
 |Writable DFSR Server|Off|On|On|
 |Read-only DFSR Server|On|On|On|
-|||||
-
+  
 ## Disable the Stop Replication functionality in AutoRecovery
 
 To have DFSR perform AutoRecovery when a dirty database shutdown is detected, edit the following registry value after hotfix [2780453](https://support.microsoft.com/help/2780453) is installed in Windows Server 2008 R2. You can deploy this change on all versions of Windows Server 2012. If the value does not exist, you must create it.

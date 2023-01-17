@@ -2,7 +2,6 @@
 title: A migration job fails with error 23007 
 description: Fixes an issue that a migration job fails because of the timeout when there are multiple concurrent migration jobs in System Center 2012 Virtual Machine Manager.
 ms.date: 07/17/2020
-ms.prod-support-area-path:
 ms.reviewer: alvinm
 ---
 # Increase the timeout for migration jobs in System Center 2012 Virtual Machine Manager

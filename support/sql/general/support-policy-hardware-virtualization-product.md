@@ -2,7 +2,7 @@
 title: Support policy for hardware virtualization product
 description: This article describes the support policy for SQL Server products that are running in a hardware virtualization environment.
 ms.date: 11/09/2020
-ms.prod-support-area-path: General
+ms.custom: sap:General
 ms.reviewer: bobward
 ms.prod: sql
 ---
@@ -157,7 +157,7 @@ The following restrictions and limitations may affect the support policy of the 
 
   - Microsoft Azure Storages Geo-Replication is not supported if the data and log files of a database are stored in more than one disk.
 
-  - AlwaysOn Availability Groups (with multiple Listeners) fully supported.
+  - Always On Availability Groups (with multiple Listeners) fully supported.
 
   - We recommend a DS3 VM or higher for SQL Enterprise edition, and DS2 or higher for SQL Standard and Web.
 

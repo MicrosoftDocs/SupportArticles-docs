@@ -1,7 +1,7 @@
 ---
 title: Support for the leap second
 description: Summarizes Microsoft support for the leap second.
-ms.date: 09/10/2020
+ms.date: 01/18/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -27,7 +27,7 @@ This article contains information about Microsoft support for the leap second. T
 > [!NOTE]
 > Windows Server 2019 and Windows 10 October 2018 Update do support leap seconds in the platform. However, this article does not apply strictly to these or later operating systems. For more information, see:
 >  
-> - [Leap Second Announcement](https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fblogs.technet.microsoft.com%2Fnetworking%2F2018%2F07%2F18%2Ftop10-ws2019-hatime%2F&data=02%7C01%7Cjarrettr%40microsoft.com%7C94fdbafab8dc4eadbcda08d62a122f02%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636742654923783824&sdata=9sRBCKe9Sk3oK7TbgcrF8ZtSsYSsb6C%2FIWqEhLegFkE%3D&reserved=0)  
+> - [Leap Second Announcement](https://techcommunity.microsoft.com/t5/networking-blog/top-10-networking-features-in-windows-server-2019-10-accurate/ba-p/339739)  
 > - [Leap Second Validation for IT Pros](https://aka.ms/ITPro-LeapSecond)  
 > - [Leap Second Validation for Developers](https://aka.ms/Dev-LeapSecond)  
 

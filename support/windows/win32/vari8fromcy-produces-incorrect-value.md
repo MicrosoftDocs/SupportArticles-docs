@@ -2,7 +2,7 @@
 title: VarI8FromCy produces incorrect value
 description: There is a long-existing but rarely encountered bug in the OLE Automation function for converting currency (CY) type to 8-byte (64-bit) integers.
 ms.date: 03/16/2020
-ms.prod-support-area-path: Component development
+ms.custom: sap:Component development
 ms.reviewer: cosminr
 ms.technology: windows-dev-apps-component-dev
 ---

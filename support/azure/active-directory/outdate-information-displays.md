@@ -2,7 +2,6 @@
 title: Azure AD Connect Health shows old information about on-premises server
 description: Discusses an issue in which Azure AD Connect Health shows outdated information about the on-premises Azure AD Connect server. Provides a resolution.
 ms.date: 05/28/2020
-ms.prod-support-area-path: 
 ms.reviewer: cychua, arrenc
 ms.service: active-directory
 ms.subservice: enterprise-users
@@ -45,7 +44,6 @@ To verify that an existing Azure AD Connect server has a version compatibility i
     |---|---|
     | 1.1.614.0 (or earlier version)| 3.0.68.0 (or earlier version) 3.0.127.0 |
     | 1.1.647.0 (or later version)| 3.0.103.0 3.0.129.0 |
-    |||
 
 ## Resolution
 
@@ -63,15 +61,12 @@ Manually reinstall Health Agent for Sync to a version that is compatible with th
 
 To reinstall Health Agent for Sync:
 
-1. Determine the version of Health Agent that is compatible with the version of Azure AD Connect Synchronization Service that you have installed:
+1. Determine the version of Health Agent that is compatible with the version of Azure AD Connect Synchronization Service that you have installed. If you have Azure AD Connect Synchronization Service version 1.1.647.0 or a later version, use Health Agent Version 3.0.129.0.
 
-    - If you have Azure AD Connect Synchronization Service version 1.1.614.0 (or an earlier version), use Health Agent Version 3.0.127.0.
-    - If you have Azure AD Connect Synchronization Service version 1.1.647.0 (or a later version, use Health Agent Version 3.0.129.0.
-2. Download a copy of the Health Agent installer (AadConnectHealthAadSyncSetup.exe) from the following Microsoft Download Center website, as appropriate:
+2. Download a copy of the Health Agent installer (AadConnectHealthAadSyncSetup.exe) from the following Microsoft Download Center website:
 
-    [Health Agent installer version 3.0.127.0](https://www.microsoft.com/download/details.aspx?id=56143)
+    [Download and install Azure AD Connect Health Agent](/azure/active-directory/hybrid/how-to-connect-install-roadmap#download-and-install-azure-ad-connect-health-agent)
 
-    [Health Agent installer version 3.0.129.0](/azure/active-directory/hybrid/how-to-connect-install-roadmap#download-and-install-azure-ad-connect-health-agent)
 3. Log on to the Azure AD Connect server by using an account that has Local Administrator rights.
 4. To uninstall the existing version of Health Agent, follow these steps:
 
@@ -96,3 +91,5 @@ To reinstall Health Agent for Sync:
 
    5. When you are prompted for credentials, provide your Azure AD Global Admin credentials.
    6. Wait about two hours, and then verify that the Health panel is showing up-to-date information about Sync.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -1,12 +1,12 @@
 ---
 title: ZipEngine role is stuck between Restarting and Busy state
 description: Provides information about troubleshooting issues in which ZipEngine role is looping between Restarting and Busy state and throwing an exception
-ms.date: 06/22/2020
-ms.prod-support-area-path: 
+ms.date: 09/26/2022
 ms.reviewer: 
 author: genlin
 ms.author: genli
 ms.service: cloud-services
+ms.subservice: troubleshoot-dev
 ---
 # ZipEngine role is stuck between Restarting and Busy state
 
@@ -111,3 +111,5 @@ If you review the code of WorkerRole.cs for ZipEngine role, you would notice bel
 WorkerAssembly.WorkerAssembly workerAssembly = new WorkerAssembly.WorkerAssembly();
 workerAssembly.DoWork();
 ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

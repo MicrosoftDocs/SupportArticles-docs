@@ -2,9 +2,10 @@
 title: Rename the Azure DevOps Service URL
 description: This article provides the steps to rename the URL of your Azure DevOps Service.
 ms.date: 10/15/2020
-ms.prod-support-area-path: Client Connectivity
+ms.custom: sap:Client Connectivity
 ms.topic: how-to
-ms.service: az-devops-project
+ms.service: azure-devops
+ms.subservice: ts-client-connectivity
 ---
 # Things to do before and after you rename the URL of your Azure DevOps Service
 
@@ -72,7 +73,7 @@ We will not set up a redirect from your previous Azure DevOps Service URL to the
 - Update Git remotes:
   1. In the web user interface, click the **Clone** button and copy the new Git URL.
   2. Open a command prompt window. Change the directory to the Git repository.
-  3. Update the remote URL. Assuming that the remote is named *origin*, the command would be: `git remote set-url origin <url_copied_from_web>`.
+  3. Update the remote URL. Assuming that the remote is named _origin_, the command would be: `git remote set-url origin <url_copied_from_web>`.
 
   > [!NOTE]
   > If you use Visual Studio, you may need to refresh Team Explorer.
@@ -81,3 +82,5 @@ We will not set up a redirect from your previous Azure DevOps Service URL to the
   - [Remove and re-configure the self-host Windows agents](/azure/devops/pipelines/agents/v2-windows#remove-and-re-configure-an-agent).
   - [Remove and re-configure the self-host Linux agents](/azure/devops/pipelines/agents/v2-linux#remove-and-re-configure-an-agent).
   - [Remove and re-configure the self-host macOS agents](/azure/devops/pipelines/agents/v2-osx#remove-and-re-configure-an-agent).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

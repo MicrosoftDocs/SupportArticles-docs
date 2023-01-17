@@ -3,9 +3,8 @@ title: How to enable BitLocker in Cloud Platform System (CPS)
 description: Describes how to enable BitLocker on Cloud Platform System (CPS) in Windows Server 2012. Includes the scripts to automate this process.
 author: genlin
 ms.author: genli
-ms.service: cloud-services
+ms.service: cloud-platform-system
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.reviewer: fiseraci
 ---
 # How to enable BitLocker in Cloud Platform System (CPS)
@@ -19,14 +18,14 @@ This article explains how to enable BitLocker to provide Data at Rest encryption
 
 Microsoft Cloud Platform System leverages the Windows Server 2012 ability to encrypt Cluster Shared Volumes (CSV) by using BitLocker&reg;. This article explains how to enable BitLocker. It also provides the scripts to automate the process.
 > [!NOTE]
->  BitLocker should be enabled as early as possible in the CPS lifecycle because the process generates significant downtime. That is, the second script in this process will turn off all tenant VMs and all management VMs (except AD/DC VMs) to enable BitLocker . Follow these steps carefully. Failure to do so could result in extended downtime and data corruption.
+> BitLocker should be enabled as early as possible in the CPS lifecycle because the process generates significant downtime. That is, the second script in this process will turn off all tenant VMs and all management VMs (except AD/DC VMs) to enable BitLocker . Follow these steps carefully. Failure to do so could result in extended downtime and data corruption.
 
 ## Step 1 Enable Ethe BitLocker Drive Encryption feature
 
 Enable the BitLocker Drive Encryption feature on every node of the storage cluster:
 
 1. Copy the following code, and then save it as Enable-BitLockerFeature.ps1 in \<myFolder\> on the Console VM:
-    
+
     ```
     <###################################################
     # #
@@ -91,7 +90,8 @@ Enable the BitLocker Drive Encryption feature on every node of the storage clust
     }
     
     ```
-2. From the console VM, open a PowerShell console with admin rights, go to \<myFolder\>, and then enter the following: ./Enable-BitLockerFeature.ps1 -storageClusterName \<yourStorageCluster\> -verbose 
+
+2. From the console VM, open a PowerShell console with admin rights, go to \<myFolder\>, and then enter the following: ./Enable-BitLockerFeature.ps1 -storageClusterName \<yourStorageCluster\> -verbose
 The script will iterate through all the nodes of the storage cluster and install BitLocker. The nodes will be rebooted during the process.
 
 3. After the script finishes running successfully, go to step 2.
@@ -124,18 +124,21 @@ Note that BIOS configured TPM is not required, as BitLocker is being managed and
     1. In case you don't want to wait for the policy to propagate, you can manually enforce it by logging in to each storage node and running PS C:\Users\admin1\Desktop> gpupdate /force .
     2. Verify that the policy has been successfully applied by running the following cmdlet on each storage node: `PS C:\Users\admin1\Desktop> gpresult /scope computer /v`
     3. In the output, look for the Applied Group Policy objects. If your policy (in this example we called it BitLocker) is listed, the policy is applied, and you can go to step 3.
-    1. 
+
+    1.
+
 ## Step 3 Turn off tenant VMs
 
 **IMPORTANT [do not skip this step]:** If you have tenant VMs running, you must turn them off before you continue with the next step. The script in step 4 will turn off all the active VMs on the stamp. So make sure that you turn off all the tenant VMs before executing the script in step 4. Do not turn off the VMs with Domain controller role. After the volumes have an **Online (Redirected)** status, the tenant VMs can be safely restarted.
 
 ## Step 4 Enable BitLocker on storage
-Enable BitLocker encryption on all the storage volumes. 
+
+Enable BitLocker encryption on all the storage volumes.
 
 > [!IMPORTANT]
-> This procedure needs to be repeated on each rack of your CPS stamp as each rack has its own storage cluster. 
+> This procedure needs to be repeated on each rack of your CPS stamp as each rack has its own storage cluster.
 
-1. Copy the following code, and then save it as Enable-ClusterDiskBitlocker.ps1 in \<myFolder\> on one of the nodes of the storage cluster. Let's call that node < *myStorageNode* >. 
+1. Copy the following code, and then save it as Enable-ClusterDiskBitlocker.ps1 in \<myFolder\> on one of the nodes of the storage cluster. Let's call that node < _myStorageNode_ >.
 
     ```
     <###################################################
@@ -466,24 +469,25 @@ Enable BitLocker encryption on all the storage volumes.
     }
     Enable-ClusterDiskBitlocker -Verbose 
     ```
-2. Use Remote Desktop to connect to < *myStorageNode* > by using your admin credentials, and then open a PowerShell console with administrator rights. If you cannot connect, enable Remote Desktop on the storage nodes. For instructions on how to enable Remote Desktop, please refer to: [Windows 2012 Core Survival Guide - Remote Desktop.](https://blogs.technet.com/b/bruce_adamczak/archive/2013/02/12/windows-2012-core-survival-guide-remote-desktop.aspx) 
+
+2. Use Remote Desktop to connect to < _myStorageNode_ > by using your admin credentials, and then open a PowerShell console with administrator rights. If you cannot connect, enable Remote Desktop on the storage nodes. For instructions on how to enable Remote Desktop, please refer to: [Windows 2012 Core Survival Guide - Remote Desktop.](https://blogs.technet.com/b/bruce_adamczak/archive/2013/02/12/windows-2012-core-survival-guide-remote-desktop.aspx)
 
 3. Go to \<myFolder\>, and then enter the following command line:PS C:\Users\admin1\Desktop> .\Enable-ClusterDiskBitlocker.ps1 -Verbose
-The encryption key is the key that you want to use for BitLocker. The script prompts for your admin credentials and the names of the management cluster, the compute cluster, and the edge cluster. 
+The encryption key is the key that you want to use for BitLocker. The script prompts for your admin credentials and the names of the management cluster, the compute cluster, and the edge cluster.
 
 4. The script will first turn off all the VMs on the stamps (except the AD/DC VMs), so you will lose the connectivity to the console VM. The script will go through each cluster disk and enable BitLocker encryption. After BitLocker has been enabled on every cluster disk, the script will bring all the VMs online that were turned off during the process.
 
 If you are interested in learning what is going on under the hood, the script closely follows the steps in the following blog post:
 
-[How to configure BitLocker-encrypted clustered disks in Windows Server 2012](https://techcommunity.microsoft.com/t5/failover-clustering/how-to-configure-bitlocker-encrypted-clustered-disks-in-windows/ba-p/371825) 
+[How to configure BitLocker-encrypted clustered disks in Windows Server 2012](https://techcommunity.microsoft.com/t5/failover-clustering/how-to-configure-bitlocker-encrypted-clustered-disks-in-windows/ba-p/371825)
 
 This process takes about 30 minutes per storage cluster.
 
 5. After the script finishes running, open Failover Cluster Manager. All the cluster disks should have an **Online (Redirected)**  status. You can now turn on all the VMs that you turned off earlier and operate the CPS rack as usual. The encryption process might take several days to complete, depending on the amount of data that's written on the disks. After a cluster disk is fully encrypted, its status automatically returns to **Online**.
 
-6. Once the encryption process completed, please disable Remote Desktop on the storage nodes. For instructions on how to disable Remote Desktop, please refer to: [Windows 2012 Core Survival Guide - Remote Desktop.](https://blogs.technet.com/b/bruce_adamczak/archive/2013/02/12/windows-2012-core-survival-guide-remote-desktop.aspx) 
+6. Once the encryption process completed, please disable Remote Desktop on the storage nodes. For instructions on how to disable Remote Desktop, please refer to: [Windows 2012 Core Survival Guide - Remote Desktop.](https://blogs.technet.com/b/bruce_adamczak/archive/2013/02/12/windows-2012-core-survival-guide-remote-desktop.aspx)
 
-## Step 5 Verify the encryption status of the stamp 
+## Step 5 Verify the encryption status of the stamp
 
 To get a status update on the encryption process, or to get a printout of the encryption status for compliance reasons, run the following Get-VolumeEncryptionStatus cmdlet.
 
@@ -544,7 +548,9 @@ Write-Host "The cmdlet encountered a problem. Execution stopped." -ForegroundCol
 write-host "Exception Message: $($_.Exception.Message)" -ForegroundColor Red
 }
 ```
+
 1. Copy this code and save it as Get-VolumeEncryptionStatus.ps1 in \<myFolder\> on a console VM.
 
 2. Open a Powershell console with admin rights and run the following cmdlet to pass the name of your storage cluster: `PS C:\Users\admin1\Desktop> .\Get-VolumeEncryptionStatus.ps1 -storageClusterName`
 
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

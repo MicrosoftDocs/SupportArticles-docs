@@ -1,14 +1,14 @@
 ---
-title: Troubleshoot Azure VM RDP connection issues by Event ID | Microsoft Docs
+title: Troubleshoot Azure VM RDP connection issues by Event ID
 description: Use event IDs to troubleshoot various issues that prevent a Remote Desktop protocol (RDP) connection to an Azure Virtual Machine (VM).
 services: virtual-machines-windows
 documentationcenter: ''
 author: Deland-Han
 manager: dcscontentpm
-editor: ''
 tags: ''
 
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.collection: windows
@@ -18,7 +18,7 @@ ms.date: 11/01/2018
 ms.author: delhan
 
 ---
-# Troubleshoot Azure VM RDP connection issues by Event ID 
+# Troubleshoot Azure VM RDP connection issues by Event ID
 
 This article explains how to use event IDs to troubleshoot issues that prevent a Remote Desktop protocol (RDP) connection to an Azure Virtual Machine (VM).
 
@@ -107,6 +107,7 @@ wevtutil qe system /c:1 /f:text /q:"Event[System[Provider[@Name='Schannel'] and 
 The internal error state is 10001.
 
 ### Cause
+
 This issue occurs because the local RSA encryption keys in the MachineKeys folder on the VM can't be accessed. This issue can occur for one of the following reasons:
 
 1. Wrong permissions configuration on the Machinekeys folder or the RSA files.
@@ -132,9 +133,9 @@ To troubleshoot this issue, you have to set up the correct permissions on the RD
    Restart-Service TermService -Force
    ```
 
-2.	Run this script to reset the permissions of the MachineKey folder and to reset the RSA files to the default values.
+2. Run this script to reset the permissions of the MachineKey folder and to reset the RSA files to the default values.
 
-3.	Try to access the VM again.
+3. Try to access the VM again.
 
 After running the script, you can check the following files that are experiencing permissions issues:
 
@@ -156,7 +157,7 @@ Start-Service -Name "SessionEnv"
 
 If you can't renew the certificate, follow these steps to try to delete the certificate:
 
-1. On another VM in the same VNET, open the **Run** box, type **mmc**, and then press **OK**. 
+1. On another VM in the same VNET, open the **Run** box, type **mmc**, and then press **OK**.
 
 2. On the **File** menu, select **Add/Remove Snap-in**.
 
@@ -182,7 +183,7 @@ If you can't renew the certificate, follow these steps to try to delete the cert
    ```
 
    >[!Note]
-   >At this point, if you refresh the store from mmc, the certificate reappears. 
+   >At this point, if you refresh the store from mmc, the certificate reappears.
 
 Try to access the VM by using RDP again.
 
@@ -225,9 +226,9 @@ wevtutil qe system /c:1 /f:text /q:"Event[System[Provider[@Name='Schannel'] and 
 **Keywords:**       <br />
 **User:**          SYSTEM <br />
 **Computer:**      *computer* <br />
-**Description:** 
+**Description:**
 A fatal error occurred while creating a TLS server credential. The internal error state is 10013.
- 
+
 ### Cause
 
 This issue is caused by security policies. When older versions of TLS (such as 1.0) are disabled, RDP access fails.
@@ -240,7 +241,7 @@ To troubleshoot this issue, see [Troubleshoot authentication errors when you use
 
 ## Scenario 3
 
-If you have installed the **Remote Desktop Connection Broker** role on the VM, check whether there's event 2056 or event 1296 within the past 24 hours. In a CMD instance, run the following commands: 
+If you have installed the **Remote Desktop Connection Broker** role on the VM, check whether there's event 2056 or event 1296 within the past 24 hours. In a CMD instance, run the following commands:
 
 ```cmd
 wevtutil qe system /c:1 /f:text /q:"Event[System[Provider[@Name=' Microsoft-Windows-TerminalServices-SessionBroker '] and EventID=2056 and TimeCreated[timediff(@SystemTime) <= 86400000]]]" | more
@@ -283,11 +284,11 @@ Remote Desktop Connection Broker is not ready for RPC communication.
 
 ### Cause
 
-This issue occurs because the host name of the Remote Desktop Connection Broker server is changed, which is not a supported change. 
+This issue occurs because the host name of the Remote Desktop Connection Broker server is changed, which is not a supported change.
 
 The hostname has entries and dependencies on the Windows Internal Database, which is required by Remote Desktop Service farm in order to be able to work. Changing the hostname after the farm is already built causes many errors and can cause the broker server to stop working.
 
-### Resolution 
+### Resolution
 
 To fix this issue, the Remote Desktop Connection Broker role and the Windows Internal Database must be reinstalled.
 
@@ -302,3 +303,5 @@ To fix this issue, the Remote Desktop Connection Broker role and the Windows Int
 [Schannel 36872 or Schannel 36870 on a Domain Controller](/archive/blogs/instan/schannel-36872-or-schannel-36870-on-a-domain-controller)
 
 [Event ID 1058 — Remote Desktop Services Authentication and Encryption](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee890862(v=ws.10))
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

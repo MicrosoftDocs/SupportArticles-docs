@@ -2,7 +2,7 @@
 title: BizTalk Server hotfixes, cumulative updates, and service packs
 description: This article gives information about BizTalk Server hotfixes, cumulative updates, and service packs, including support.
 ms.date: 03/06/2020
-ms.prod-support-area-path: BizTalk Server Setup and Configuration
+ms.custom: sap:BizTalk Server Setup and Configuration
 ms.reviewer: MandiA
 ---
 # Information about BizTalk Server hotfixes, cumulative updates, and service packs

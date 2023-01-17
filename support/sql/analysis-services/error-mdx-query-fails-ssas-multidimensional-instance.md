@@ -2,7 +2,7 @@
 title: Error and MDX query fails in SSAS multidimensional instance
 description: This article provides a resolution for the problem that occurs when you run a Multidimensional Expressions (MDX) query on a Microsoft SQL Server Analysis Services (SSAS) multidimensional instance.
 ms.date: 01/14/2021
-ms.prod-support-area-path: Analysis Services
+ms.custom: sap:Analysis Services
 ms.reviewer: yinnw, tizh, mariusd
 ms.topic: troubleshooting
 ms.prod: sql 

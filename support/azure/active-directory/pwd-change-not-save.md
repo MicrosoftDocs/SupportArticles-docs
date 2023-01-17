@@ -2,7 +2,6 @@
 title: Changes to your password are not saved in Azure, Office 365, or Intune
 description: Describes a problem in which changes to your password are not saved in Microsoft Azure, Office 365, or Microsoft Intune. To resolve this problem, do not use special characters as part of your password.
 ms.date: 05/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: domain-services
@@ -23,3 +22,5 @@ This problem occurs when you use special characters such as the less-than sign `
 ## Resolution
 
 To resolve this problem, do not use special characters as part of your password.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

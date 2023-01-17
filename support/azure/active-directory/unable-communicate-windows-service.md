@@ -2,7 +2,6 @@
 title: Error (Unable to communicate with the Windows Azure Active Directory service) when Azure AD Connect cannot authenticate to Azure AD
 description: Provides information about troubleshooting a problem in which your identity sync client cannot authenticate to Microsoft Azure Active Directory if there is an unauthenticated proxy server.
 ms.date: 05/11/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: enterprise-users
@@ -67,4 +66,4 @@ To fix this issue, follow these steps:
 
 For more information, see [Error on .NET client that consumes a web service through an HTTP proxy server](https://support.microsoft.com/help/318140).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

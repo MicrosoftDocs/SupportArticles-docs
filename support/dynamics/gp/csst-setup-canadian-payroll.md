@@ -24,20 +24,20 @@ It's often caused by the Debit Account not being set up for CSSTDR.
 
 1. Setup your CSST Deduction and make sure that you select **Gross Pay** for the Calculate Rate on, and select **CSST Premiums** for the Further Identification.
 
-    :::image type="content" source="./media/csst-setup-canadian-payroll/csst-deduction.png" alt-text="Setup your CSST Deduction.":::
+    :::image type="content" source="media/csst-setup-canadian-payroll/csst-deduction.png" alt-text="Screenshot of Payroll Deduction Paycode Setup window with the Further Identification selected." border="false":::
 
 1. Enter the Deduction Percentage that you need to have calculate under the **Amounts** button.
 
-    :::image type="content" source="./media/csst-setup-canadian-payroll/deduction-percentage.png" alt-text="Enter the Deduction Percentage.":::
+    :::image type="content" source="media/csst-setup-canadian-payroll/deduction-percentage.png" alt-text="Screenshot of the Payroll Deduction Other Amounts window." border="false":::
 
 1. Setup a CSSTDR code. It doesn't need to have the Further Identification selected. It's used to read to the account for the debit portion of your CSST code.
 
-    :::image type="content" source="./media/csst-setup-canadian-payroll/csstdr-code.png" alt-text="Setup a CSSTDR code.":::
+    :::image type="content" source="media/csst-setup-canadian-payroll/csstdr-code.png" alt-text="Screenshot of CSST Deduction Paycode Setup window with no Further Identification selected." border="false":::
 
     Here's an example of the Debit and Credit on the Poster File based on the setups above.
 
-    :::image type="content" source="./media/csst-setup-canadian-payroll/debit-credit.png" alt-text="Example of the Debit and Credit.":::
+    :::image type="content" source="media/csst-setup-canadian-payroll/debit-credit.png" alt-text="Screenshot of an example of the Debit and Credit." lightbox="media/csst-setup-canadian-payroll/debit-credit.png":::
 
     The Employer CSST Amount will be updated after the payrun is posted and will appear on the **Employee R1** button on the Employee Card.
 
-    :::image type="content" source="./media/csst-setup-canadian-payroll/employee-r1.png" alt-text="Update Employer CSST Amount.":::
+    :::image type="content" source="media/csst-setup-canadian-payroll/employee-r1.png" alt-text="Screenshot shows Employer CSST Amount is updated.":::

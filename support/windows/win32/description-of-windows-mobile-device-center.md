@@ -2,9 +2,12 @@
 title: Description of Windows Mobile Device Center
 description: This article describes the new application that replaces ActiveSync in Windows Vista.
 ms.date: 07/29/2021
-ms.prod-support-area-path: 
 ms.topic: troubleshooting
 ---
+
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+--->
+
 # Description of Windows Mobile Device Center
 
 This article describes the new application that replaces ActiveSync in Windows Vista.
@@ -19,11 +22,11 @@ _Original KB number:_ &nbsp; 931937
 
 ## References for Windows 10 environments
 
-- To access your phone on your PCs, use Your Phone application on your system. For more information review [Your Phone app help & learning - Microsoft Support](https://support.microsoft.com/your-phone-app) and [Your Phone updates - Windows Insider Program | Microsoft Docs](/windows-insider/apps/your-phone#march-12-2019).
+- To access your phone on your PCs, use Your Phone application on your system. For more information review [Your Phone app help & learning - Microsoft Support](https://support.microsoft.com/your-phone-app) and [Your Phone updates - Windows Insider Program | Microsoft Learn](/windows-insider/apps/your-phone#march-12-2019).
 
-- To learn more about mobile device management on Windows 10 review [Mobile device management - Windows Client Management | Microsoft Docs](/windows/client-management/mdm/).
+- To learn more about mobile device management on Windows 10 review [Mobile device management - Windows Client Management | Microsoft Learn](/windows/client-management/mdm/).
 
-- To configure Windows 10 mobile devices, see [Configure Windows 10 Mobile devices - Configure Windows | Microsoft Docs](/windows/configuration/mobile-devices/configure-mobile).
+- To configure Windows 10 mobile devices, see [Configure Windows 10 Mobile devices - Configure Windows | Microsoft Learn](/windows/configuration/mobile-devices/configure-mobile).
 
 ## Introduction of Windows Mobile Device Center
 
@@ -54,7 +57,7 @@ If your phone has a touch screen, tap **Start**, tap the **System** tab, and the
 
 - Robust synchronization
 
-  :::image type="content" source="media/description-windows-mobile-device-center/windows-mobile-device-center.png" alt-text="Screenshot of the Windows Mobile Device Center window." border="false":::
+  :::image type="content" source="media/description-windows-mobile-device-center/windows-mobile-device-center.svg" alt-text="Screenshot of the Windows Mobile Device Center window." border="false":::
   
 
 - Photo management

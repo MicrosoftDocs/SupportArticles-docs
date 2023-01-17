@@ -1,0 +1,55 @@
+- name: Welcome
+  href: welcome-visual-studio.yml
+- name: C and C++ Libraries
+  href: ./cpp/libraries/toc.yml
+- name: Debuggers and analyzers
+  href: ./debuggers/toc.yml
+- name: General
+  href: ./general/toc.yml
+- name: Installation
+  href: ./installation/toc.yml
+- name: Integrated Development Environment (IDE)
+  href: ./ide/toc.yml
+- name: Language or Compilers
+  items:
+  - name: C#
+    href: ./csharp/language-compilers/toc.yml
+  - name: C++
+    href: ./cpp/language-compilers/toc.yml
+  - name: Visual Basic
+    href: ./visual-basic/language-compilers/toc.yml
+  - name: JavaScript
+    items:
+    - name: Use JScript or JavaScript to traverse a collection
+      href: ./language-compilers/use-jscript-javascript-traverse-collection.md
+  - name: Other
+    href: ./language-compilers/toc.yml
+- name: Project/Build System
+  href: ./project-build/toc.yml
+- name: Team Explorer/Version control
+  items:
+  - name: Excel or Project can't connect to Team Foundation Server
+    href: ./version-control/excel-project-cannot-connect-tfs-2010.md
+  - name: Solution Platform drop-down list isn't visible
+    href: ./version-control/invisible-solution-platform-drop-down-list.md
+- name: Third-party tools installed with Visual Studio
+  items:
+  - name: Google Android 27 emulator fails to start
+    href: ./third-party/android-27-emulator-not-start.md
+  - name: Java Development Kit is missing
+    href: ./third-party/jdk-missing-create-xamarin-app.md
+  - name: Third-party dependencies
+    href: ./third-party/third-party-dependencies.md
+  - name: Can't install Visual Studio Tools for Apache Cordova CTP 3.1
+    href: ./third-party/cannot-install-tools-ctp-3-1.md
+  - name: Installing JDK fails
+    href: ./third-party/jdk-installation-fails.md
+- name: Tools and utilities
+  items:
+  - name: Can't start Windows Simulator
+    href: ./tools-utilities/cannot-start-windows-simulator.md
+  - name: Can't use Custom Report Items in SSDT
+    href: ./tools-utilities/cannot-use-custom-report-items-ssdt.md
+  - name: NuGet-based Package Manager is missing
+    href: ./tools-utilities/nuget-based-package-manager-missing.md
+

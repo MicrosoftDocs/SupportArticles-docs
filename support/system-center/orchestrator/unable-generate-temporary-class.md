@@ -2,7 +2,6 @@
 title: Unable to generate a temporary class
 description: Fixes an issue where you receive the Unable to generate a temporary class (result=1) error when you execute the Invoke Web Services object.
 ms.date: 08/03/2020
-ms.prod-support-area-path: 
 ---
 # Unable to generate a temporary class (result=1) error when executing the Invoke Web Services object
 

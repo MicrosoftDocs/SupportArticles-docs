@@ -1,7 +1,7 @@
 ---
 title: Common errors creating and assigning flow approvals
 description: Common Power Automate approval errors and potential resolutions.
-ms.reviewer: 
+ms.reviewer: sranjan, hamenon
 ms.topic: troubleshooting
 ms.date: 3/31/2021
 ms.subservice: power-automate-flows
@@ -19,19 +19,19 @@ _Original KB number:_ &nbsp; 4513675
 
 > Required field 'assignedTo' contained no valid users in the organization
 
-This error occurs if the input value(s) to the Assigned To field of the approval action was either not a well -formatted email address, UPN, or AAD object id, or it was well formatted, but did not match any users in Microsoft Graph. If multiple users were specified (semi-colon delimited), then this means that all entries could not be found in Graph.
+This error occurs if the input value(s) to the Assigned To field of the approval action was either not a well -formatted email address, UPN, or AAD object id, or it was well formatted, but didn't match any users in Microsoft Graph. If multiple users were specified (semi-colon delimited), then this means that all entries couldn't be found in Graph.
 
 ### InvalidApprovalCreateRequestAssignedToMissing
 
 > Required field 'assignedTo' is missing or empty.
 
-This error occurs if the Assigned To field of the approval action did not contain any values. The Flow designer prevents any Flows from being saved without any value for this field, so typically this can occur if the Assigned To field is populated from the output of some other step and for this Flow run, there was no value for the expression or output field.
+This error occurs if the Assigned To field of the approval action didn't contain any values. The Flow designer prevents any Flows from being saved without any value for this field, so typically this can occur if the Assigned To field is populated from the output of some other step and for this Flow run, there was no value for the expression or output field.
 
 ### InvalidApprovalRequestor
 
 > The approval requestor must be a single, valid user account within your organization
 
-This error occurs if the input value(s) to the Assigned To field of the approval action was either not a well-formatted email address, UPN, or AAD object id, or it was well formatted, but did not match any users in Microsoft Graph. It will also be returned if multiple value users were specified for the re questor field.
+This error occurs if the input value(s) to the Assigned To field of the approval action was either not a well-formatted email address, UPN, or AAD object id, or it was well formatted, but didn't match any users in Microsoft Graph. It will also be returned if multiple value users were specified for the re questor field.
 
 ### InvalidXrmRecordId
 
@@ -57,7 +57,7 @@ The attachment content must be specified in [base64 format](https://en.wikipedia
 
 > 'The content for attachment '...' is empty. Attachments with empty content are not supported.'.
 
-Empty attachments (0 bytes) are not supported.
+Empty attachments (0 bytes) aren't supported.
 
 ### CdsApiAttachmentSizeLimitExceeded
 
@@ -91,7 +91,7 @@ For more information about these provisioning errors, see [Flow Approval CDS Pro
 
 > The Common Data Service database for this environment is disabled
 
-The Common Data Service instance has been disabled in this environment. This is not expected, and is may related to the expiration of all Flow & CDS plans within your AAD tenancy. To ensure the database can be enabled, make sure at least one user has active plans.
+The Common Data Service instance has been disabled in this environment. This isn't expected, and is may related to the expiration of all Flow & CDS plans within your AAD tenancy. To ensure the database can be enabled, make sure at least one user has active plans.
 
 ### CdsInstanceNotReady
 
@@ -109,11 +109,11 @@ For non-Default Flow and Power Appsenvironments, only environment admins can dir
 - Create and run an Approvals Flow.
 - Grant environment administrator permission to the current user.
 
-### XrmInstanceProvisioningIncomplete
+### CdsInstanceProvisioningIncomplete
 
 > A Common Data Service database for this environment has not completed provisioning or does not support the requested approvals functionality. A database administrator must save a Flow using approvals in order to complete provisioning.
 
-Microsoft Flow has not yet been able to set up the Approvals solution within the database for this instance.
+Microsoft Flow hasn't yet been able to set up the Approvals solution within the database for this instance.
 
 ### XrmProvisionInstanceFailed
 
@@ -159,7 +159,7 @@ This occurs if the inputs to the Custom Response options for an approval are inv
 
 > Required field 'title' is missing or empty
 
-The approval title was null or empty, which is not supported.
+The approval title was null or empty, which isn't supported.
 
 ### XrmApplyUserNotMemberOfSecurityGroup
 
@@ -172,3 +172,9 @@ The CDS database for this environment is protected by a security group. An owner
 > 'Encountered a general permissions error trying to access the CDS database. This could be caused by modification of the approvals administrator or user roles, or by an incompatible plugin.
 
 Ensure no custom plugins restrict access to the approvals data entities for either organization users for the Power Automate service principal used to provision records (`flowdev@microsoft.com`).
+
+### HTTP 412 Code: 0x80040237 InnerError
+
+> 'A record with matching key values already exists'
+
+This transient error can occur when trying to create or update an approval. This error occurs due to a race condition that's triggered when creating the approval. Retry the action to solve this issue.

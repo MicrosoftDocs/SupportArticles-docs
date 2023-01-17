@@ -2,9 +2,9 @@
 title: Support for VM agent extensions in Microsoft Azure
 description: Discusses support policy for the VM agent for Microsoft Azure Virtual Machines and for VM agent extensions on IaaS for Microsoft Azure.
 ms.date: 07/21/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-extensions-not-operating
 ---
 # Support for VM agent extensions in Microsoft Azure
 
@@ -30,8 +30,7 @@ Support for third-party VM agent extensions is provided directly by the vendor.
 |PuppetEnterpriseAgent|PuppetLabs agent|Supported by PuppetLabs| [https://support.puppet.com/hc/](https://support.puppet.com/hc/)|
 |Symantec Endpoint Protection|Symantec antivirus|Supported by Symantec| [http://www.symantec.com/business/support/index?page=contactsupport&key=54619](http://www.symantec.com/business/support/index?page=contactsupport&key=54619) |
 |Trend Micro Deep Security Agent|Trend Micro antivirus|Supported by Trend Micro| [http://www.trendmicro.com/us/business/saas/deep-security-as-a-service/index.html](http://www.trendmicro.com/us/business/saas/deep-security-as-a-service/index.html) |
-|||||
-
+  
 ## More information
 
 Understanding the difference between the VM agent and VM extensions helps troubleshoot problems by isolating the location of the problem.
@@ -73,6 +72,8 @@ An example of an error in starting the VMAccess extension is as follows:
 ```
 
 Use the table that is mentioned before to request support for the extension that is failing.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
 
 [!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
 

@@ -2,7 +2,6 @@
 title: Static IP is missing from a virtual switch
 description: Fixes an issue where the static IP information is missing from a virtual switch created in System Center 2012 Virtual Machine Manager SP1.
 ms.date: 07/17/2020
-ms.prod-support-area-path:
 ms.reviewer: alvinm
 ---
 # Static IP is missing from a virtual switch created with System Center 2012 Virtual Machine Manager SP1

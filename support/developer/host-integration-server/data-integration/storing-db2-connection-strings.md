@@ -2,7 +2,7 @@
 title: Storing DB2 connection strings
 description: This article explains how to save DB2 connection strings in Enterprise Single Sign-On, using KB 2499828 for Microsoft Host Integration Server 2010, or Cumulative Update 1.
 ms.date: 10/13/2020
-ms.prod-support-area-path: Data integration (DB2, host files)
+ms.custom: sap:Data integration (DB2, host files)
 ---
 # Storing DB2 connection strings in Enterprise Single Sign-On
 

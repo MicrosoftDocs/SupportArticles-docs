@@ -6,7 +6,6 @@ ms.author: genli
 ms.service: storage
 ms.subservice: files
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ---
 # Best practice to optimize CreateFile() function performance in Azure
@@ -21,11 +20,13 @@ When you call the [CreateFile()](/windows/win32/api/fileapi/nf-fileapi-createfil
 This is because a Write-Only handle cannot cache small writes locally, even if it is the only opened handle for the file. Using a Write-Only handle imposes a severe performance penalty.
 
 > [!NOTE]
-> Calling the **fopen()** function in "a" mode also opens a W rite-Only handle. 
+> Calling the **fopen()** function in "a" mode also opens a W rite-Only handle.
 
 ## More information
 
-- [Generic Access Rights](/windows/win32/secauthz/generic-access-rights?redirectedfrom=MSDN) 
-- [File Security and Access Rights](/windows/win32/fileio/file-security-and-access-rights?redirectedfrom=MSDN) 
-- [File Access Rights Constants](/windows/win32/fileio/file-access-rights-constants?redirectedfrom=MSDN) 
+- [Generic Access Rights](/windows/win32/secauthz/generic-access-rights?redirectedfrom=MSDN)
+- [File Security and Access Rights](/windows/win32/fileio/file-security-and-access-rights?redirectedfrom=MSDN)
+- [File Access Rights Constants](/windows/win32/fileio/file-access-rights-constants?redirectedfrom=MSDN)
 - [ACCESS_MASK](/windows/win32/secauthz/access-mask?redirectedfrom=MSDN)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

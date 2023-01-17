@@ -2,7 +2,6 @@
 title: How to troubleshoot password synchronization when using an Azure AD sync appliance
 description: Troubleshoots common issues when you're using an Azure Active Directory (Azure AD) sync appliance together with password synchronization.
 ms.date: 06/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: enterprise-users
@@ -105,8 +104,7 @@ The following tables list event ID messages in the Application log that are rela
 | 656|Password Change Request - Anchor : H552hI9GwEykZwosf74JeOQ==, Dn : CN=Viola Hanson,OU=Cloud Objects,DC=contoso,DC=local, Change Date : 05/01/2013 16:34:08|Password synchronization indicates that a password change was detected and tries to sync it to Azure AD. It identifies the user or users whose password changed and will be synced. Each batch contains at least one user and at most 50 users.|
 | 657|Password Change Result - Anchor : eX5b50Rf+UizRIMe2CA/tg==, Dn : CN=Viola Hanson,OU=Cloud Objects,DC=contoso,DC=local, Result : Success.|Users whose password successfully synced.|
 | 657|Password Change Result - Anchor : eX5b50Rf+UizRIMe2CA/tg==, Dn : CN=Viola Hanson,OU=Cloud Objects,DC=contoso,DC=local, Result : Failed.|Users whose password didn't sync.|
-||||
-
+  
 ### Informational (may require action)
 
 |Event ID|Description|Cause|More information|
@@ -114,8 +112,7 @@ The following tables list event ID messages in the Application log that are rela
 | 0|The following password changes failed to synchronized and have scheduled for retry.<br/><br/>DN = CN=Eli McLean,OU=Cloud Objects,DC=contoso,DC=local|User or users whose password wasn't synced|[Configure directory synchronization](/azure/active-directory/hybrid/whatis-hybrid-identity#bkmk_configuretool) <br/><br/>[One or more objects don't sync when using the Azure Active Directory Sync tool](objects-dont-sync-ad-sync-tool.md)|
 | 115|Access to Windows Azure Active Directory has been denied. Contact Technical Support.|Azure AD credentials were updated through Forefront Identity Manager (FIM).|Run the Azure AD Configuration Wizard again. See [Password hash synchronization stops working after you update Azure Active Directory credentials in FIM](pwd-hash-sync-stop-work-fim.md)|
 | 657|Password Change Result - Anchor : B0H+OD3LM0GEnYODwdPhpg==, Result : failed, Extended Error :|User or users whose password wasn't synced|[Configure directory synchronization](/azure/active-directory/hybrid/whatis-hybrid-identity#bkmk_configuretool) <br/><br/>[One or more objects don't sync when using the Azure Active Directory Sync tool](objects-dont-sync-ad-sync-tool.md) |
-|||||
-
+  
 ### Error (action required)
 
 |Event ID|Description|Cause|More information|
@@ -131,8 +128,7 @@ The following tables list event ID messages in the Application log that are rela
 |655|The user name or password is incorrect. Verify your user name, and then type your password again.|Azure AD credentials were updated through FIM.|Run the Azure AD Configuration Wizard again. See the following Microsoft Knowledge Base article: [Password hash synchronization stops working after updating Azure Active Directory credentials in FIM](pwd-hash-sync-stop-work-fim.md)|
 |6900|The server encountered an unexpected error while processing a password change notification:<br/><br/>"The user name or password is incorrect. Verify your user name, and then type your password again.|Azure AD credentials were updated through FIM.|Run the Azure AD Configuration Wizard again. See the following Microsoft Knowledge Base article: [Password hash synchronization stops working after updating Azure Active Directory credentials in FIM](pwd-hash-sync-stop-work-fim.md)|
 |6900|The server encountered an unexpected error while processing a password change notification:<br/><br/>"An error occurred. Error Code: 90. Error Description: Password Synchronization has not been activated for this company|Password sync isn't enabled for the organization.|See the following Microsoft Knowledge Base article: [User passwords aren't synced, and "Password Synchronization has not been activated for this company" error is logged in Event Viewer](/office365/troubleshoot/active-directory/password-synchronization-not-activated)|
-|||||
-
+  
 ## More information
 
 ### How to perform a full password sync
@@ -159,4 +155,4 @@ To do a full password sync, follow these steps, as appropriate for the Azure AD 
 
 2. If you're using the Azure AD Sync Service or Azure AD Connect, run the script that's on this page: [Azure AD Sync: How to Use PowerShell to Trigger a Full Password Sync](https://social.technet.microsoft.com/wiki/contents/articles/28433.how-to-use-powershell-to-trigger-a-full-password-sync-in-azure-ad-sync.aspx)
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazuread) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

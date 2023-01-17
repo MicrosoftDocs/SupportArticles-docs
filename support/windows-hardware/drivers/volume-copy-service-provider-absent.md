@@ -2,7 +2,6 @@
 title: Volume Copy Service Provider is absent
 description: This article provides a resolution for the issue where Microsoft Volume Copy Service Provider is absent from the list of services.
 ms.date: 08/27/2020
-ms.prod-support-area-path: 
 ms.reviewer: twarwick
 ms.technology: windows-hardware-general
 ---

@@ -4,8 +4,7 @@ description: Lists the Apache Spark diagnostic logs that's collected during trou
 ms.date: 05/27/2021
 author: genlin
 ms.author: genli
-ms.service: azure
-ms.prod-support-area-path: 
+ms.service: azure-diagnostics-support
 ms.reviewer: 
 ---
 # Apache Spark diagnostic logs in Azure Synapse Analytics
@@ -21,3 +20,5 @@ The following tables list the log data that will be collected to troubleshoot yo
 | Apache Spark Driver Logs  |The Spark driver program is a critical process that's used to negotiate resources with cluster manager and to schedule the job execution. Driver logs contain details about how the job was run and the resources that were used. This information is critical for troubleshooting the Spark application.   |
 |  Apache Spark Executor Logs |Spark Executors are worker nodes-related processes that are in charge of running individual tasks in a given Spark job. They are started at the beginning of a Spark application, and typically run for the entire lifetime of an application. After Spark Executors run the task, they send the results to the driver application. Executor logs contain details about how the individual tasks of your application performed, and whether any of them failed.   |
 |  Apache Spark Event Logs | Spark Event logs contain execution-related and performance-related metrics of all the executors. They also contain the list of scheduler stages and tasks, and the execution environment information. |
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -2,7 +2,7 @@
 title: EDI/AS2 runtime configuration fails
 description: This article describes what to do when the EDI/AS2 runtime configuration fails after you create a BizTalk Server group by using an existing SQL Server instance with unique database names.
 ms.date: 03/18/2020
-ms.prod-support-area-path: Accelerators
+ms.custom: sap:Accelerators
 ms.reviewer: EnriqueP
 ---
 # BizTalk Server EDI/AS2 runtime configuration fails with the error: DTS package BAM_DM_InterchangeStatusActivity already exists

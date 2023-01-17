@@ -2,8 +2,7 @@
 title: Update 1606 for Cloud Platform System (CPS) Premium
 description: Discusses Update 1606 for Cloud Platform System (CPS) Premium for Windows Server, Microsoft System Center, and hardware components.
 ms.date: 10/10/2020
-ms.prod-support-area-path: 
-ms.service: cloud-services
+ms.service: cloud-platform-system
 ms.author: genli
 author: genlin
 ms.reviewer: jameshed
@@ -31,6 +30,7 @@ Update 1606 for Cloud Platform System (CPS) Premium includes updates for Windows
 To install update 1606 for CPS Premium, follow these steps.
 
 > [!NOTE]
+>
 > - This update procedure assumes that you have already installed Update 1603.
 > - Any references to the CPS Premium Administrators Guide refers to Update 1603.
 > - There is no revision to the CPS Premium Administrators guide for Update 1606.
@@ -38,6 +38,7 @@ To install update 1606 for CPS Premium, follow these steps.
 ### Step 1: Install the VMM hotfixes
 
 > [!NOTE]
+>
 > - Update 1606 includes a VMM hotfix for virtual machine placement that is required in addition to the hotfix for HNV policy that was included in Update 1505. If you have already installed the HNV hotfix, you do not have to install it again, and you can skip to substep 2.
 > - The highly available VMM clustered role (**\<Prefix>** -HA-VMM) has two nodes, **\<Prefix>** -VMM-01 and **\<Prefix>** -VMM-02. In the instructions, we refer to these as Node1 and Node2.
 
@@ -221,15 +222,13 @@ The compliance scan output is written to the following location to which the upd
 |All|Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Client" -Name Enabled -Type DWord -Value 0|
 |All|Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server" -Name DisabledByDefault -Type DWord -Value 1|
 |All|Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server" -Name Enabled -Type DWord -Value 0|
-|||
-
-#### Updates for Windows Server 2012 R2 (from Update 1605-0) 
+  
+#### Updates for Windows Server 2012 R2 (from Update 1605-0)
 
 | KB Article| Description |
 |---|---|
 | [3138615](https://support.microsoft.com/help/3138615)|Update for Windows Server 2012 R2 (KB3138615)|
-|||
-
+  
 ### Payload for Update 1606-1
 
 #### Hardware (driver/firmware) updates
@@ -243,9 +242,8 @@ The compliance scan output is written to the following location to which the upd
 |R630|SAS HBA - Internal|6.603.07.00|
 |C6320|Chipset|10.1.2.19|
 |R630|Chipset|10.1.2.19|
-||||
-
-#### Updates for Windows Server 2012 R2 
+  
+#### Updates for Windows Server 2012 R2
 
 | KB Article| Description |
 |---|---|
@@ -385,18 +383,16 @@ The compliance scan output is written to the following location to which the upd
 | [2989930](https://support.microsoft.com/help/2989930)|"Not Connected" status for a paired Surface Pen in Bluetooth settings on Surface Pro 3|
 | [2894852](https://support.microsoft.com/help/2894852)|Description of the security update for the .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2: December 10, 2013|
 | [890830](https://support.microsoft.com/help/890830)|The Microsoft Windows Malicious Software Removal Tool helps remove specific, prevalent malicious software from computers that are running supported versions of Windows|
-|||
-
-#### Configuration changes 
+  
+#### Configuration changes
 
 | Node| Update |
 |---|---|
 |All|Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\AutoUpdate" -Name RootDirUrl -Type String -Value $destination|
 |All|Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\SystemCertificates\AuthRoot" -Name DisableRootAutoUpdate -Type DWord -Value 0|
 |All|Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\SystemCertificates\AuthRoot" -Name EnableDisallowedCertAutoUpdate -Type DWord -Value 1|
-|||
-
-#### Updates for Windows Server 2012 R2 (from Update 1605-1) 
+  
+#### Updates for Windows Server 2012 R2 (from Update 1605-1)
 
 | KB Article| Description |
 |---|---|
@@ -508,15 +504,13 @@ The compliance scan output is written to the following location to which the upd
 | [2538243](https://support.microsoft.com/help/2538243)|MS11-025: Description of the security update for Visual C++ 2008 SP1 Redistributable Package: June 14, 2011|
 | [2538241](https://support.microsoft.com/help/2538241)|MS11-025: Description of the security update for Visual Studio 2008 SP1: June 14, 2011|
 | [2467173](https://support.microsoft.com/help/2467173)|MS11-025: Description of the security update for Visual C++ 2010 Redistributable Package: April 12, 2011|
-|||
-
-#### Updates for SQL Server 2012 (from Update 1605-1) 
+  
+#### Updates for SQL Server 2012 (from Update 1605-1)
 
 | KB Article| Description |
 |---|---|
 | [3072779](https://support.microsoft.com/help/3072779)|SQL Server 2012 Service Pack 3 release information|
-|||
-
+  
 ### Troubleshooting
 
 #### Issue 1
@@ -552,7 +546,7 @@ In the WSUS console on a Console VM, follow these steps:
 
 VMM "Perform servicing on a Service" fails. Occasionally, failures in servicing occur because of communication issues that exist between the VMM server and its agents. The P&U engine automatically reruns. However, it sometimes does not detect whether the rerun is successful.
 
-**Detection** 
+**Detection**
 
 Verify that the service template qualifies for this situation. An example of a qualified template is shown in the following screen shot.
 
@@ -607,7 +601,7 @@ Verify that CAU succeeded. To do this, follow these steps:
     - < **Prefix** >-OM-SQL\SCOMDB
     - < **Prefix** >-KT-SQL\KATALDB
     - < **Prefix** >-DW-SQL\CPSDW
-    - < **Prefix** >-AS-SQL\CPSSSAS 
+    - < **Prefix** >-AS-SQL\CPSSSAS
 
 **Resolution**
 
@@ -616,3 +610,5 @@ If the CAU status shows a **Succeeded** value for all nodes, and if version info
 If the CAU status does not show as **Succeeded** for all nodes, or if version information for all instances is correct, restart the P&U process, and make no change in parameters.
 
 If the process fails again, please escalate the case through your usual support channels.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

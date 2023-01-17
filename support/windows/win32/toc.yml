@@ -22,6 +22,8 @@
       href: vari8fromcy-produces-incorrect-value.md
   - name: Desktop app UI development
     items:
+    - name: Hook procedure doesn't receive the VK_CONVERT message
+      href: hook-procedure-not-receiving-vk-convert-message.md
     - name: Apps using message filters may not respond in Windows 10
       href: application-using-message-filters-unresponsive-win10.md
     - name: Three- or four-finger touch interactions doesn't work in Windows 11
@@ -32,6 +34,8 @@
       href: desktop-bridge-app-fail-start-run-as-administrator.md
     - name: East Asian first character isn't recognized
       href: east-asian-first-character-not-recognized.md
+    - name: Half-width and full-width Japanese characters are treated as different characters
+      href: half-width-full-width-katakana-hiragana-characters.md
     - name: GetMessage ignores messages
       href: getmessage-ignores-posted-messages.md
     - name: SystemParametersInfo works incorrectly
@@ -48,6 +52,8 @@
       href: screen-saver-command-line.md
     - name: Warning 1946 when you install an Installer package
       href: warning-1946-when-you-install-installer-package.md
+    - name: Owner window gets activated when taskbar buttons are created
+      href: owner-window-activated-taskbar-buttons-created-both-windows.md
   - name: Distributed transactions
     items:
     - name: Can't start transactions
@@ -64,6 +70,10 @@
       href: xa-transaction-require-registry-entry.md
   - name: Graphics and multimedia development
     items:
+    - name: AAC audio isn't playing for MPEG-2 TS file in Windows 8.1
+      href: AAC-audio-not-playing-for-MPEG-2-TS-file-Windows-8-1.md
+    - name: Converting PDF to bitmap causes partial data loss in the image
+      href: converting-pdf-file-to-bitmap-image.md
     - name: Can't print to XPS Document Writer
       href: print-app-xps-document-writer.md
     - name: DirectShow doesn't connect to a downstream filter
@@ -78,6 +88,8 @@
       href: gdi-apis-may-fail-when-large-pages-used.md
     - name: Get status of printer and print job
       href: printer-print-job-status.md
+    - name: GetICMProfile might leak one or more handles on Windows 10
+      href: geticmprofile-might-leak-one-or-more-handles-on-windows10.md      
     - name: Interoperability between GDI and GDI+
       href: mix-gdi-and-gdi-plus-drawing.md
     - name: Modify printer settings by using SetPrinter
@@ -128,6 +140,8 @@
       href: access-violation-bex-appcrash.md
     - name: Asynchronous disk I/O appears synchronous
       href: asynchronous-disk-io-synchronous.md
+    - name: Add-in component guidelines for core OS processes
+      href: addin-components-core-os-processes.md
     - name: CD-ROM notifications
       href: receive-cd-rom-notification.md
     - name: CreateProcess can't eliminate duplicated variables
@@ -152,7 +166,5 @@
       href: user32-kernel32-not-initialize.md
   - name: Windows administration and management development
     items:
-    - name: Change Windows Active Directory user password through LDAP
-      href: change-windows-active-directory-user-password.md
     - name: MSI packages fail to run
       href: msi-packages-wmi-queries-cannot-run.md

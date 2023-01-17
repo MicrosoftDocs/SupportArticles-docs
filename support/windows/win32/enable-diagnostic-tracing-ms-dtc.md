@@ -3,7 +3,7 @@ title: Enable diagnostic tracing for MS DTC
 description: This article describes how to enable diagnostic tracing for MS DTC on a Windows 10 computer.
 ms.date: 03/13/2020
 ms.reviewer: johngil
-ms.prod-support-area-path: Distributed transactions
+ms.custom: sap:Distributed transactions
 ms.topic: how-to
 ms.technology: windows-dev-apps-distributed-transactions
 ---
@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 926099
 
 - Communication manager error tracing
 
-    Communication manager (CM) error tracing tracks any process that loads the *Msdtcprx.dll* file and that uses the remote procedure call (RPC) interface of MS DTC to communicate with other MS DTC-related processes. The output is in text format. The **0x8004d00a** error is a typical error for which communication manager error tracing may be useful.
+    Communication manager (CM) error tracing tracks any process that loads the _Msdtcprx.dll_ file and that uses the remote procedure call (RPC) interface of MS DTC to communicate with other MS DTC-related processes. The output is in text format. The **0x8004d00a** error is a typical error for which communication manager error tracing may be useful.
 
 > [!NOTE]
 > Transaction manager tracing and communication manager error tracing are independent processes. You can independently enable transaction manager tracing and communication manager error tracing. Or, you can independently disable them.
@@ -35,7 +35,7 @@ _Original KB number:_ &nbsp; 926099
 You can use the Component Services Microsoft Management Console (MMC) snap-in to enable transaction manager tracing. To do this, follow these steps:
 
 1. Select **Start**, select **All Programs**, select **Accessories**, and then select **Run**.
-2. Type *comexp.msc*, and then select **OK**.
+2. Type _comexp.msc_, and then select **OK**.
 3. Expand **Component Services**, expand **Computers**, expand **My Computer**, expand **Distributed Transaction Manager**, right-click **Local DTC**, and then select **Properties**.
 4. Select the **Tracing** tab.
 5. On the **Tracing** tab, you can modify the following TM tracing options:
@@ -75,7 +75,7 @@ Trace configuration is located on the local node, in a registry key that is name
 
 To create tracing functionality registry entries, follow these steps:
 
-1. Select **Start** > **All Programs** > **Accessories** > **Run**, type *regedit*, and then select **OK**.
+1. Select **Start** > **All Programs** > **Accessories** > **Run**, type _regedit_, and then select **OK**.
 2. Locate and then select one of the following sub keys:
 
     - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDTC\Tracing\Sources`
@@ -111,8 +111,7 @@ The `Sources` registry key contains a set of DWORD registry values that are list
 |TRACE_KTMRM|Tracing for integration with Kernel Transaction Manager|
 |TRACE_VSSBACKUP|Tracing for integration with the Microsoft Visual SourceSafe backup and restore mechanism|
 |TRACE_PERFMON|Tracing with support for performance counters|
-|||
-
+  
 The DWORD value should be a number from 0 to 255. The DWORD value indicates the level of tracing that occurs. The following table lists possible DWORD values.
 
 |Value|Description|
@@ -126,8 +125,7 @@ The DWORD value should be a number from 0 to 255. The DWORD value indicates the 
 |6|const BYTE TRACE_INOUT|
 |0xF0|const BYTE TRACE_OBSCURE|
 |0xFF|const BYTE TRACE_EVERYTHING|
-|||
-
+  
 > [!NOTE]
 > Higher values automatically include lower values. Therefore, when you enable the `TRACE_INFO` level, the `TRACE_ERROR` level is also enabled. Very few sources use any tracing that is higher than the `TRACE_VERBOSE` level.
 
@@ -138,14 +136,14 @@ The DWORD value should be a number from 0 to 255. The DWORD value indicates the 
 
 The `Output` registry key contains a set of values that control where trace output is sent. These values are as follows:
 
-- The `TraceFilePath` (REG_SZ) value is the root folder in which trace files should be stored. Tracing is written to a file in a folder that is named *msdtc-X.log*. In this folder name, *X* represents the decimal PID of the process that creates the file. Make sure that all the processes of interest can access the configured folder. Otherwise, trace information will be lost. If this value isn't set, traces aren't sent to a file.
+- The `TraceFilePath` (REG_SZ) value is the root folder in which trace files should be stored. Tracing is written to a file in a folder that is named _msdtc-X.log_. In this folder name, _X_ represents the decimal PID of the process that creates the file. Make sure that all the processes of interest can access the configured folder. Otherwise, trace information will be lost. If this value isn't set, traces aren't sent to a file.
 
 - The `ImageNameInTraceFileNameEnabled` (REG_DWORD) value determines whether the name of the tracing log file that's generated includes the image file name of the process that invoked the tracing log. If this is set to a non-zero value, the image file name of the process will be included in the tracing log file that's generated. If this value is set to zero, the image file name of the process will not be included in the tracing log file that's generated. By default, the value is set to zero (0). The following is an example of a trace file name where the log file that's generated contains the process:  
-    *MSDTC-msdtc.exe-3552.log* or *MSDTC-svchost.exe - 3556.log*
+    _MSDTC-msdtc.exe-3552.log_ or _MSDTC-svchost.exe - 3556.log_
 
 - The `MemoryBufferSize` (REG_DWORD) value is the size of the circular buffer in which trace messages are stored. If this value is set to 0, memory tracing is disabled. By default, this value is 10 MB. You may have to increase this value if you enable verbose tracing.
 
-- The `DebugOutEnabled` (REG_DWORD) value enables or disables output to the debugger. If the value is nonzero, the output is enabled. By default, this `Output` registry key is disabled. When you change the connection manager error-tracing configuration, the changes take effect when a process that loads the *Msdtcprx.dll* file is recycled. For example, the changes to the connection manager error-tracing configuration take effect when the MS DTC service process is recycled.
+- The `DebugOutEnabled` (REG_DWORD) value enables or disables output to the debugger. If the value is nonzero, the output is enabled. By default, this `Output` registry key is disabled. When you change the connection manager error-tracing configuration, the changes take effect when a process that loads the _Msdtcprx.dll_ file is recycled. For example, the changes to the connection manager error-tracing configuration take effect when the MS DTC service process is recycled.
 
 Alternatively, you can create a .reg file, and then you can use Registry Editor to import the file. To do this, follow these steps:
 
@@ -180,7 +178,7 @@ Alternatively, you can create a .reg file, and then you can use Registry Editor 
     "TRACE_VSSBACKUP"=dword:00000000
     ```
 
-2. Select **Start** > **All Programs** > **Accessories** > **Run**, type *regedit*, and then click **OK**.
+2. Select **Start** > **All Programs** > **Accessories** > **Run**, type _regedit_, and then click **OK**.
 3. On the **File** menu, select **Import**.
 4. Locate the file that you created in step 1, and then select **Open**. The **Registry Editor** dialog box appears.
 5. Select **OK**.

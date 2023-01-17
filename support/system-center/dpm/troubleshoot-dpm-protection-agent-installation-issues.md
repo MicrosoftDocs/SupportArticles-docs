@@ -2,7 +2,6 @@
 title: Troubleshoot DPM protection agent installation issues
 description: Troubleshoot some of the most common problems when installing System Center 2016 Data Protection Manager protection agent.
 ms.date: 08/22/2020
-ms.prod-support-area-path:
 ---
 # Troubleshoot Data Protection Manager 2016 protection agent installation issues
 

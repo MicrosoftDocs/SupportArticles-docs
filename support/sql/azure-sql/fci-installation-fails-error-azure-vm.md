@@ -2,7 +2,7 @@
 title: FCI installation fails with error on Azure VM
 description: This article provides a resolution for the problem that occurs when you try to install a Microsoft SQL Server Failover Clustered Instance (FCI) in Windows Server 2019 on a Microsoft Azure virtual machine (VM).
 ms.date: 01/15/2021
-ms.prod-support-area-path: Azure SQL virtual machine
+ms.custom: sap:Azure SQL virtual machine
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.prod: sql 
@@ -73,8 +73,7 @@ A new switch, **ManagementPointNetworkType**, that can be called by PowerShell c
 | **Singleton**|Uses the traditional method of DHCP or static IP address.|
 | **Distributed**|Use a Distributed Network Name by using Node IP addresses.|
 | **Automatic**|Uses detection to determine the appropriate setting. If SQL Server is running in Azure, uses **Distributed**. If SQL Server is running on-premises, uses **Singleton** (default setting).|
-|||
-
+  
 If you create the Windows cluster by using the Windows Cluster Manager Tool, the tool sets the switch parameter to **Automatic**. Because you are working on an Azure VM, the switch uses a Distributed Network Name instead.
 
 You can verify this by running the following PowerShell command:

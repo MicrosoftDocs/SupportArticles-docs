@@ -2,7 +2,6 @@
 title: Configure load balancing to use session persistence
 description: Describes how to ensure session persistence when you configure the load balancer in Microsoft Identity Manager.
 ms.date: 08/18/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ---
 # Configure load balancing to use session persistence in Microsoft Identity Manager

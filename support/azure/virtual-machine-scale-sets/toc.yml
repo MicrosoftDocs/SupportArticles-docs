@@ -6,12 +6,20 @@
   - name: "Error: AllocationFailed or ZonalAllocationFailed"
     href: allocationfailed-or-zonalallocationfailed.md
 
+- name: Troubleshoot compute health
+  items:
+  - name: VMSS instances remain in "Unhealthy" state and aren't repaired
+    href: instances-not-repaired.md
+  - name: Resource Health shows Degraded state in VMSS
+    href: resource-health-degraded-state.md
+  - name: VM is unavailable for 15 minutes
+    href: ../virtual-machines/azure-vm-unavailable.md
 - name: Troubleshoot scaling errors
   items:
   - name: QuotaExceeded error when scaling virtual machine scale sets
     href: virtual-machine-scale-sets-quota-exceeded.md
   - name: Resolve errors for resource quotas
-    href: https://docs.microsoft.com/azure/azure-resource-manager/templates/error-resource-quota
+    href: /azure/azure-resource-manager/templates/error-resource-quota
 
 - name: Troubleshoot deployment errors
   items:

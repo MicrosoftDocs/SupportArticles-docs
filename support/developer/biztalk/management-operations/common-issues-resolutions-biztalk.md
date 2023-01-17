@@ -2,7 +2,7 @@
 title: BizTalk server admin console issues
 description: Introduces common issues and resolutions with the BizTalk Server Administration console.
 ms.date: 03/04/2020
-ms.prod-support-area-path: Management and Operations
+ms.custom: sap:Management and Operations
 ms.reviewer: btstech
 ---
 # Common issues and resolutions with the BizTalk Server Administration console
@@ -18,7 +18,7 @@ When using System Center Operations Manager (SCOM) 2007 with the BizTalk Managem
 
 To resolve this issue, use one of the following resolutions:
 
-- Confirm the BizTalk Management Pack is configured correctly. For example, you must specify a Run As Account for the *BizTalk Server Monitoring Account* and *BizTalk Server Discovery Account* profiles within SCOM. For the specific details, see [Microsoft BizTalk Server Management Pack for System Center Operations Manager 2007](/biztalk/technical-guides/monitoring-biztalk-server-with-system-center-operations-manager-2007).
+- Confirm the BizTalk Management Pack is configured correctly. For example, you must specify a Run As Account for the _BizTalk Server Monitoring Account_ and _BizTalk Server Discovery Account_ profiles within SCOM. For the specific details, see [Microsoft BizTalk Server Management Pack for System Center Operations Manager 2007](/biztalk/technical-guides/monitoring-biztalk-server-with-system-center-operations-manager-2007).
 
 - The BizTalk Management pack runs a script for every artifact type (send port, receive port, receive location, send port group, orchestration, and so on) per host. If there are 50 hosts, then there will be 50 scripts executed against Windows Management Instrumentation (WMI) per artifact type. In this scenario, WMI can become overloaded. This querying may keep the BizTalk WMI provider running continuously.
 
@@ -34,7 +34,6 @@ To resolve this issue, use one of the following resolutions:
     |Receive Port Availability Monitor|2220|
     |Send Port Availability Monitor|2580|
     |Send Port Group Availability Monitor|2940|
-    |||
 
 ## Error when clicking Refresh or expanding Handlers
 
@@ -55,7 +54,7 @@ The BizTalk WMI Provider relies on the ClearAfter property within the WMI root n
 
 To set the `ClearAfter` property, use Windows Management Instrumentation Tester (wbemtest) on all BizTalk servers in the group using the steps below:
 
-1. Go to **Start** or **Run**, and type *wbemtest*.
+1. Go to **Start** or **Run**, and type _wbemtest_.
 2. Click the **Connect** button and change the name pace to root. Click **Connect**.
 3. Click the **Query** button and type `select * from __CacheControl`. Click **Apply**.
 4. Double-click each item and select the `ClearAfter` property. Confirm they have the following values:
@@ -67,7 +66,6 @@ To set the `ClearAfter` property, use Windows Management Instrumentation Tester 
     |__EventSinkCacheControl=@|00000000000015.000000:000|
     |__ObjectProviderCacheControl=@|00000000000030.000000:000|
     |__PropertyProviderCacheControl=@|00000000000030.000000:000|
-    |||
 
     If any value exceeds the values listed above, click the **Edit Property** button to change it. Click **Save Property**. Click **Save Object**.
 
@@ -124,16 +122,14 @@ To resolve these issues, confirm the SQL Server Browser service is started on al
     |Port No|TCP port used by SQL Server|
     |Protocol|TCP/IP|
     |Server|SQL Server name|
-    |||
 
-    For example, if your SQL Server computer is named *MySQL* and listening on port 40090, then you would specify the following:
+    For example, if your SQL Server computer is named _MySQL_ and listening on port 40090, then you would specify the following:
 
     |Alias Name|MySQL|
     |---|---|
     |Port No|40090|
     |Protocol|TCP/IP|
     |Server|MySQL|
-    |||
 
 3. Click **OK**.
 
@@ -150,12 +146,12 @@ When BizTalk and SQL Server are remote, the network layer could be responsible f
 
     64-bit server: `%systemroot% \SysWOW64\drivers\etc`
 
-    For example, if the SQL Server IP address is *1.1.1.1* and the SQL Server name is *MySQL*, you should add the hosts file *1.1.1.1 MySQL*.
+    For example, if the SQL Server IP address is _1.1.1.1_ and the SQL Server name is _MySQL_, you should add the hosts file _1.1.1.1 MySQL_.
 
     BizTalk Administration runs as a 32-bit process on a 64-bit server. As a result, the issue described below may impact the MMC:  
     32-bit applications don't use the Domain Name System (DNS) cache on a computer that is running an x64-based version of Windows Server 2003 or of Windows XP
 
-    If a remote server is specified in a receive location or a send port that is running in a 32-bit host, the DNS query for this server could also be affected. In this scenario, you can add the remote server to the hosts file. For example, the remote server IP address is `1.1.1.1` and the remote server name is *MyServer*. You would add the following to the hosts file *1.1.1.1 MyServer*.
+    If a remote server is specified in a receive location or a send port that is running in a 32-bit host, the DNS query for this server could also be affected. In this scenario, you can add the remote server to the hosts file. For example, the remote server IP address is `1.1.1.1` and the remote server name is _MyServer_. You would add the following to the hosts file _1.1.1.1 MyServer_.
 
     To reset the hosts file back to the default, see [How to reset the Hosts file back to the default](https://support.microsoft.com/help/972034).
 
@@ -217,6 +213,5 @@ If BizTalk support assistance is needed, collect the following data while reprod
     |Stored Procedures| SP: Completed<br/>SP: Starting<br/>SP: StmtCompleted<br/>SP: StmtStarting|
     |TSQL|SQL: StmtCompleted<br/>SQL: StmtStarting|
     |Transactions| DTCTransaction<br/>SQL Transaction|
-    |||
 
 4. Capture simultaneous Network Monitor captures on the BizTalk and SQL servers while reproducing the issue.

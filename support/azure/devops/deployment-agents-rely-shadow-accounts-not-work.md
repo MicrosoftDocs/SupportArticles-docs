@@ -2,9 +2,9 @@
 title: Deployment agents that rely on shadow don't work
 description: This article provides resolutions for the problem that occurs when you try to use deployment agents that rely on shadow accounts in Release Management.
 ms.date: 08/14/2020
-ms.prod-support-area-path: Server Administration
+ms.custom: sap:Server Administration
 ms.reviewer: achand, daleche, muthuk, sriramb, ronai, ans, leov
-ms.service: az-devops-project
+ms.service: azure-devops-server
 ---
 # Deployment agents that rely on shadow accounts do not work with Release Management Server for Visual Studio 2013
 
@@ -43,3 +43,5 @@ To resolve this issue, add the Service User accounts in Release Management. To d
 ## References
 
 Check out [Known issues when you install Release Management for Visual Studio 2013](/troubleshoot/visualstudio/install/release-management-installation-issues).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

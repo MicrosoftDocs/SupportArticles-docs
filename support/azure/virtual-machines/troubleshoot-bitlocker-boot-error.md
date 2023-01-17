@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting BitLocker boot errors on an Azure VM | Microsoft Docs
+title: Troubleshooting BitLocker boot errors on an Azure VM
 description: Learn how to troubleshoot BitLocker boot errors in an Azure VM
 services: virtual-machines
 documentationCenter: ''
@@ -7,6 +7,7 @@ author: genlin
 manager: dcscontentpm
 editor: v-jesits
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
@@ -25,7 +26,7 @@ ms.custom: has-adal-ref
 
 - Plug in the USB driver that has the BitLocker key
 
-- You’re locked out! Enter the recovery key to get going again (Keyboard Layout: US) The wrong sign-in info has been entered too many times, so your PC was locked to protect your privacy. To retrieve the recovery key, go to https://windows.microsoft.com/recoverykeyfaq from another PC or mobile device. In case you need it, the key ID is XXXXXXX. Or, you can reset your PC.
+- You’re locked out! Enter the recovery key to get going again (Keyboard Layout: US) The wrong sign-in info has been entered too many times, so your PC was locked to protect your privacy. To retrieve the recovery key, go to <https://windows.microsoft.com/recoverykeyfaq> from another PC or mobile device. In case you need it, the key ID is XXXXXXX. Or, you can reset your PC.
 
 - Enter the password to unlock this drive [ ] Press the Insert Key to see the password as you type.
 - Enter your recovery key Load your recovery key from a USB device.
@@ -62,6 +63,7 @@ If this method does not the resolve the problem, follow these steps to restore t
 
     Update-AzVM -VM $vm -ResourceGroupName $recoveryVMRG
     ```
+
      You cannot attach a managed disk to a VM that was restored from a blob image.
 
 3. After the disk is attached, make a remote desktop connection to the recovery VM.
@@ -94,13 +96,14 @@ If this method does not the resolve the problem, follow these steps to restore t
     -------               ------------ ------ ----------- -------------------------
     11/20/2020 7:41:56 AM BEK          C:\    myVM   EF7B2F5A-50C6-4637-0001-7F599C12F85C.BEK
     ```
+
     If you see two duplicated volumes, the volume that has the newer timestamp is the current BEK file that is used by the recovery VM.
 
     If the **Content Type** value is **Wrapped BEK**, go to the [Key Encryption Key (KEK) scenarios](#key-encryption-key-scenario--wrapped-bek).
 
     Now that you have the name of the BEK file for the drive, you have to create the secret-file-name.BEK file to unlock the drive.
 
-6.	Download the BEK file to the recovery disk. The following sample saves the BEK file to the C:\BEK folder. Make sure that the `C:\BEK\` path exists before you run the scripts.
+6. Download the BEK file to the recovery disk. The following sample saves the BEK file to the C:\BEK folder. Make sure that the `C:\BEK\` path exists before you run the scripts.
 
     ```powershell
     $vault = "myKeyVault"
@@ -113,12 +116,13 @@ If this method does not the resolve the problem, follow these steps to restore t
     [System.IO.File]::WriteAllBytes($path,$bekFileBytes)
     ```
 
-7.	To unlock the attached disk by using the BEK file, run the following command.
+7. To unlock the attached disk by using the BEK file, run the following command.
 
     ```powershell
     manage-bde -unlock F: -RecoveryKey "C:\BEK\EF7B2F5A-50C6-4637-0001-7F599C12F85C.BEK"
     ```
-    In this sample, the attached OS disk is drive F. Make sure that you use the correct drive letter. 
+
+    In this sample, the attached OS disk is drive F. Make sure that you use the correct drive letter.
 
 8. After the disk was successfully unlocked by using the BEK key, detach the disk from the recovery VM, and then recreate the VM by using this new OS disk.
 
@@ -147,6 +151,7 @@ For a Key Encryption Key scenario, follow these steps:
 2. Save the following script to a .PS1 file:
     > [!NOTE]
     > The ADAL Assemblies (dll files) that are used in this script are only available in [Az.Account 1.9.4](https://www.powershellgallery.com/packages/Az.Accounts/1.9.4), and the earlier versions. To install the Az.Account module, see [Install Az PowerShell module](#install-az-powershell-module).
+
     ```powershell
     #Set the Parameters for the script. If you have question about the Parameters, see the "KEK script parameters" section.
     param (
@@ -246,12 +251,13 @@ For a Key Encryption Key scenario, follow these steps:
     [Runtime.InteropServices.Marshal]::ZeroFreeBSTR($bstr)
     clear-variable -name wrappedBekSecretBase64
     ```
+
 3. Set the parameters. The script will process the KEK secret to create the BEK key, and then save it to a local folder on the recovery VM. If you receive errors when you run the script, see the [script troubleshooting](#script-troubleshooting) section.
 
 4. You see the following output when the script begins:
 
-    GAC    Version        Location                                                                              
-    ---    -------        --------                                                                              
+    GAC    Version        Location
+    ---    -------        --------
     False  v4.0.30319     C:\Program Files\WindowsPowerShell\Modules\Az.Accounts\...
     False  v4.0.30319     C:\Program Files\WindowsPowerShell\Modules\Az.Accounts\...
 
@@ -268,9 +274,10 @@ For a Key Encryption Key scenario, follow these steps:
     ```powershell
     manage-bde -unlock F: -RecoveryKey "C:\BEK\EF7B2F5A-50C6-4637-9F13-7F599C12F85C.BEK
     ```
-    In this sample, the attached OS disk is drive F. Make sure that you use the correct drive letter. 
 
-6. After the disk was successfully unlocked by using the BEK key, detach the disk from the recovery VM, and then use the **Swap OS disk** feature to replace the OS disk of the original VM with this repaired disk. 
+    In this sample, the attached OS disk is drive F. Make sure that you use the correct drive letter.
+
+6. After the disk was successfully unlocked by using the BEK key, detach the disk from the recovery VM, and then use the **Swap OS disk** feature to replace the OS disk of the original VM with this repaired disk.
 
 7. If the new VM still cannot boot normally, try one of following steps after you unlock the drive:
 
@@ -315,20 +322,30 @@ To install Az PowerShell module for the recovery VM, follow these steps:
     ```powershell
     [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
     ```
+
 2. Download the latest version of the Nuget package:
+
     ```powershell
-    	Install-PackageProvider -Name "Nuget" -Force
+     Install-PackageProvider -Name "Nuget" -Force
 
     ```
+
 3. Install the latest version of the PowerShellGet package, and then restart the PowerShell.
+
     ```powershell
     Install-Module -Name PowerShellGet -Force
     ```
-4. Run the following command to install the latest version of the Azure Az module: 
+
+4. Run the following command to install the latest version of the Azure Az module:
+
     ```powershell
     Install-Module -Name Az -Scope AllUsers -Repository PSGallery -Force
     ```
+
 5. Install the Az.Account 1.9.4 package:
+
     ```powershell
     Install-Module -Name Az.Accounts -Scope AllUsers -RequiredVersion "1.9.4" -Repository PSGallery -Force
     ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

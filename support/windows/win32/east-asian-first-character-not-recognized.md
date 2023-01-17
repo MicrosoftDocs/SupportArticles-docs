@@ -2,7 +2,7 @@
 title: East Asian first character isn't recognized
 description: This article provides resolutions for the problem where the first input character for East Asian languages isn't recognized correctly in DataGridView cell on Windows 10.
 ms.date: 01/29/2021
-ms.prod-support-area-path: Desktop app UI development
+ms.custom: sap:Desktop app UI development
 ms.reviewer: hirotoh
 ms.technology: windows-dev-apps-desktop-app-ui-dev
 ---
@@ -65,7 +65,6 @@ Consider the following scenario.
     | Windows 10 Version 1903| [KB4541335](https://support.microsoft.com/help/4541335) |
     | Windows 10 Version 1909| [KB4541335](https://support.microsoft.com/help/4541335) |
     | Windows 10 Version 2004| [KB4571744](https://support.microsoft.com/help/4571744) |
-    |||
 
     **Registry entry:**  
 

@@ -1,13 +1,13 @@
 ---
 
-title: Use a Linux troubleshooting VM in the Azure portal | Microsoft Docs
+title: Use a Linux troubleshooting VM in the Azure portal
 description: Learn how to troubleshoot Linux virtual machine issues by connecting the OS disk to a recovery VM using the Azure portal
 services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 ms.service: virtual-machines
+ms.subservice: vm-backup-restore
 ms.collection: linux
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
@@ -18,9 +18,11 @@ ms.author: genli
 ---
 
 # Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal
-If your Linux virtual machine (VM) encounters a boot or disk error, you may need to perform troubleshooting steps on the virtual hard disk itself. A common example would be an invalid entry in `/etc/fstab` that prevents the VM from being able to boot successfully. This article details how to use the Azure portal to connect your virtual hard disk to another Linux VM to fix any errors, then re-create your original VM. 
+
+If your Linux virtual machine (VM) encounters a boot or disk error, you may need to perform troubleshooting steps on the virtual hard disk itself. A common example would be an invalid entry in `/etc/fstab` that prevents the VM from being able to boot successfully. This article details how to use the Azure portal to connect your virtual hard disk to another Linux VM to fix any errors, then re-create your original VM.
 
 ## Recovery process overview
+
 The troubleshooting process is as follows:
 
 1. Stop the affected VM.
@@ -35,6 +37,7 @@ The troubleshooting process is as follows:
 > This article does not apply to the VM with unmanaged disk. For an encrypted Linux disk, see [Unlocking an encrypted Linux disk for offline repair](unlock-encrypted-linux-disk-offline-repair.md).
 
 ## Determine boot issues
+
 Examine the boot diagnostics and VM screenshot to determine why your VM is not able to boot correctly. A common example would be an invalid entry in `/etc/fstab`, or an underlying virtual hard disk being deleted or moved.
 
 Select your VM in the portal and then scroll down to the **Support + Troubleshooting** section. Click **Boot diagnostics** to view the console messages streamed from your VM. Review the console logs to see if you can determine why the VM is encountering an issue. The following example shows a VM stuck in maintenance mode that requires manual interaction:
@@ -44,6 +47,7 @@ Select your VM in the portal and then scroll down to the **Support + Troubleshoo
 You can also click **Screenshot** across the top of the boot diagnostics log to download a capture of the VM screenshot.
 
 ## Take a snapshot of the OS Disk
+
 A snapshot is a full, read-only copy of a virtual hard drive (VHD). We recommend that you cleanly shut down the VM before taking a snapshot, to clear out any processes that are in progress. To take a snapshot of an OS disk, follow these steps:
 
 1. Go to [Azure portal](https://portal.azure.com). Select **Virtual machines** from the sidebar, and then select the VM that has problem.
@@ -55,6 +59,7 @@ A snapshot is a full, read-only copy of a virtual hard drive (VHD). We recommend
 1. Create a snapshot in the same location as the OS disk.
 
 ## Create a disk from the snapshot
+
 To create a disk from the snapshot, follow these steps:
 
 1. Select **Cloud Shell** from the Azure portal.
@@ -91,16 +96,18 @@ To create a disk from the snapshot, follow these steps:
      
     New-AzDisk -Disk $diskConfig -ResourceGroupName $resourceGroupName -DiskName $diskName
     ```
+
 3. If the commands run successfully, you will see the new disk in the resource group that you provided.
 
 ## Attach disk to another VM
+
 For the next few steps, you use another VM for troubleshooting purposes. After you attach the disk to the troubleshooting VM,  you can browse and edit the disk's content. This process allows you to correct any configuration errors or review additional application or system log files. To attach the disk to another VM, follow these steps:
 
 1. Select your resource group from the portal, then select your troubleshooting VM. Select **Disks**, select **Edit**, and then click **Add data disk**:
 
     :::image type="content" source="media/troubleshoot-recovery-disks-portal-linux/attach-existing-disk.png" alt-text="Screenshot of the Add data disk option in the Azure portal.":::
 
-2. In the **Data disks** list, select the OS disk of the VM that you identified. If you do not see the OS disk, make sure that troubleshooting VM and the OS disk is in the same region (location). 
+2. In the **Data disks** list, select the OS disk of the VM that you identified. If you do not see the OS disk, make sure that troubleshooting VM and the OS disk is in the same region (location).
 3. Select **Save** to apply the changes.
 
 ## Mount the attached data disk
@@ -113,6 +120,7 @@ For the next few steps, you use another VM for troubleshooting purposes. After y
     ```bash
     dmesg | grep SCSI
     ```
+
     The output is similar to the following example:
 
     ```bash
@@ -140,11 +148,12 @@ For the next few steps, you use another VM for troubleshooting purposes. After y
     > [!NOTE]
     > Best practice is to mount data disks on VMs in Azure using the universally unique identifier (UUID) of the virtual hard disk. For this short troubleshooting scenario, mounting the virtual hard disk using the UUID is not necessary. However, under normal use, editing `/etc/fstab` to mount virtual hard disks using device name rather than UUID may cause the VM to fail to boot.
 
-
 ## Fix issues on original virtual hard disk
+
 With the existing virtual hard disk mounted, you can now perform any maintenance and troubleshooting steps as needed. Once you have addressed the issues, continue with the following steps.
 
 ## Unmount and detach original virtual hard disk
+
 Once your errors are resolved, detach the existing virtual hard disk from your troubleshooting VM. You cannot use your virtual hard disk with any other VM until the lease attaching the virtual hard disk to the troubleshooting VM is released.
 
 1. From the SSH session to your troubleshooting VM, unmount the existing virtual hard disk. Change out of the parent directory for your mount point first:
@@ -178,6 +187,9 @@ Azure portal now supports change the OS disk of the VM. To do this, follow these
 1. Select OK.
 
 ## Next steps
+
 If you are having issues connecting to your VM, see [Troubleshoot SSH connections to an Azure VM](troubleshoot-ssh-connection.md). For issues with accessing applications running on your VM, see [Troubleshoot application connectivity issues on a Linux VM](./troubleshoot-app-connection.md?toc=/azure/virtual-machines/linux/toc.json).
 
 For more information about using Resource Manager, see [Azure Resource Manager overview](/azure/azure-resource-manager/management/overview).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

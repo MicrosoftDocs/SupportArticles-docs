@@ -2,7 +2,6 @@
 title: Can't delete a B2C directory in Azure AD
 description: Describes an issue in which an error occurs when you try to delete a B2C directory in Azure AD. Provides a solution. 
 ms.date: 05/28/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid, chricas
 ms.service: active-directory
 ms.subservice: B2C
@@ -60,3 +59,5 @@ To do this, follow these steps:
     :::image type="content" source="media/cannot-delete-directory/overview.png" alt-text="Screenshot shows the Delete Directory option on the Overview menu." border="false":::
 
 3. Follow the instructions in the portal.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

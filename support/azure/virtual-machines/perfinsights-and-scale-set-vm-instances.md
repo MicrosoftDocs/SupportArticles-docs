@@ -4,7 +4,8 @@ description: Download, install, and run PerfInsights to troubleshoot problematic
 ms.date: 11/17/2021
 author: DennisLee-DennisLee
 ms.author: v-dele
-ms.service: virtual-machine-scale-sets
+ms.service: virtual-machines
+ms.subservice: vm-performance
 ---
 # PerfInsights and scale set VM instances
 
@@ -23,3 +24,5 @@ To get performance diagnostic data from your scale set, follow a two-part proces
 
 > [!NOTE]
 > If you install the Performance Diagnostics VM extension from the Azure portal instead, the PerfInsights tool is run on every VM instance in the scale set. You can then find the PerfInsights logs in the associated storage account.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

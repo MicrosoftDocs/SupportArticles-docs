@@ -57,8 +57,7 @@ The error messages display a red cross. The warning messages display a yellow ex
 |34|Calculated Tax Total for field G6 is not equal to field G1 - field G5|
 |35|Calculated Transaction Total for field G17 is not equal to field G12 - field G16|
 |36|Calculated Tax Total for field G17 is not equal to field G12 - field G16|
-|||
-
+  
 ## PAYG vendor summaries processing error messages and warning messages
 
 | Error Code| Error message |
@@ -123,4 +122,4 @@ The error messages display a red cross. The warning messages display a yellow ex
 |58|Supplier Street Address ID, Postcode does not contain 4 digits|
 |59|Supplier Postal Address ID, State Invalid Abbreviation|
 |60|Supplier Postal Address ID, Postcode does not contain 4 digits|
-|||
+  

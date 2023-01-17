@@ -2,7 +2,6 @@
 title: Security group is still mail-enabled after it is disabled through a sync in on-premises AD
 description: Fixes an issue in which a security group is still mail-enabled after it is disabled through a sync in on-premises AD.
 ms.date: 05/28/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: enterprise-users
@@ -42,3 +41,5 @@ To work around this issue, use one of the following methods:
 - Delete the security group from the Admin Portal, and then run the synchronization again.
 
 - Move the security group to another organizational unit (OU) that has not been synchronized (filtered out). When you do this, the group is removed from the cloud. Then, move the group back to the original OU.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

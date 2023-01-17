@@ -1,12 +1,12 @@
 ---
-title: Windows reboot loop on an Azure VM | Microsoft Docs
-description: Learn how to troubleshoot Windows reboot loop | Microsoft Docs
+title: Windows reboot loop on an Azure VM
+description: Learn how to troubleshoot Windows reboot loop.
 services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
@@ -16,6 +16,7 @@ ms.author: genli
 ---
 
 # Windows reboot loop on an Azure VM
+
 This article describes the reboot loop you may experience on a Windows Virtual Machine (VM) in Microsoft Azure.
 
 ## Symptom
@@ -75,31 +76,32 @@ To resolve this problem, [back up the OS disk](/azure/virtual-machines/windows/s
 
     `HKEY_LOCAL_MACHINE\BROKENSYSTEM\ControlSet00x\Services\RDAgent\ErrorControl`
 
-10.	If the value of the registry key is not set to **2**, then go to the next mitigation.
+10. If the value of the registry key is not set to **2**, then go to the next mitigation.
 
-11.	If the value of the registry key is set to **2**, then change the value from **2** to **1**.
+11. If the value of the registry key is set to **2**, then change the value from **2** to **1**.
 
-12.	If any of the following keys exist and they have value **2** or **3**, and then change these values to **1** accordingly:
+12. If any of the following keys exist and they have value **2** or **3**, and then change these values to **1** accordingly:
 
     - `HKEY_LOCAL_MACHINE\BROKENSYSTEM\ControlSet00x\Services\AzureWLBackupCoordinatorSvc\ErrorControl`
     - `HKEY_LOCAL_MACHINE\BROKENSYSTEM\ControlSet00x\Services\AzureWLBackupInquirySvc\ErrorControl`
     - `HKEY_LOCAL_MACHINE\BROKENSYSTEM\ControlSet00x\Services\AzureWLBackupPluginSvc\ErrorControl`
 
-13.	Select the **BROKENSYSTEM** key and then select **File** > **Unload Hive** from the menu.
+13. Select the **BROKENSYSTEM** key and then select **File** > **Unload Hive** from the menu.
 
-14.	Detach the OS disk from the troubleshooting VM.
+14. Detach the OS disk from the troubleshooting VM.
 
-15.	Remove the disk from the troubleshooting VM and wait about 2 minutes for Azure to release this disk.
+15. Remove the disk from the troubleshooting VM and wait about 2 minutes for Azure to release this disk.
 
-16.	[Create a new VM from the OS disk](/azure/virtual-machines/windows/create-vm-specialized).
+16. [Create a new VM from the OS disk](/azure/virtual-machines/windows/create-vm-specialized).
 
-17.	If the issue is fixed, then you may have to reinstall the [RDAgent](/archive/blogs/mast/install-the-vm-agent-on-an-existing-azure-vm) (WaAppAgent.exe).
+17. If the issue is fixed, then you may have to reinstall the [RDAgent](/archive/blogs/mast/install-the-vm-agent-on-an-existing-azure-vm) (WaAppAgent.exe).
 
 ### Solution for cause 2
 
 Restore the VM to the last known good configuration, follow the steps in [How to start Azure Windows VM with Last Known Good Configuration](https://support.microsoft.com/help/4016731/).
 
 ### Solution for cause 3
+
 >[!NOTE]
 >The following procedure should only be used as last resource. While restoring from regback may restore access to the machine, the OS is not considered stable since there is data lost in the registry between the timestamp of the hive and the current day. You need to build a new VM and make plans to migrate data.
 
@@ -112,3 +114,5 @@ Restore the VM to the last known good configuration, follow the steps in [How to
 4. Remove the disk from the troubleshooting VM and wait about 2 minutes for Azure to release this disk.
 
 5. [Create a new VM from the OS disk](/azure/virtual-machines/windows/create-vm-specialized).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

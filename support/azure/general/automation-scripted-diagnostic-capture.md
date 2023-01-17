@@ -2,7 +2,6 @@
 title: How to capture Azure Automation-scripted diagnostics
 description: Provides guidance for capturing diagnostic information for Microsoft Support engineers. 
 ms.date: 08/14/2020
-ms.prod-support-area-path: 
 ms.service: automation
 ms.author: genli
 author: genlin
@@ -79,3 +78,5 @@ The script then runs on its own to collect relevant data.
 ## After script runs
 
 After the script runs, it opens a Windows File Explorer window that points to the folder in which it stored the captured information.  To have the information analyzed, compress the storage folder, and then send the compressed file to Microsoft Support.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

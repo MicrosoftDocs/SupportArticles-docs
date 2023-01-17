@@ -6,9 +6,9 @@ documentationcenter: ''
 author: genlin
 ms.author: genli
 manager: dcscontentpm
-editor: ''
 tags: azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
@@ -127,3 +127,5 @@ If there's not enough space on the OS disk, you should change the location where
 ### Rebuild the Original VM
 
 Use [step 5 of the VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md#repair-process-example) to reassemble the VM.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -2,7 +2,6 @@
 title: Can't join a device to a Workplace by using Device Registration Services
 description: Resolves an error when a user can't join a device to a Workplace by using Device Registration Services.
 ms.date: 06/08/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: domain-services
@@ -18,11 +17,11 @@ _Original KB number:_ &nbsp; 3045387
 
 When a user tries to do a Workplace Join by using Device Registration Services, the user receives one of the following messages:
 
-- The user receives the following message *before* providing the user's user name and password:
+- The user receives the following message _before_ providing the user's user name and password:
 
     > Confirm you are using the current sign-in info, and that your workplace uses this feature. Also, the connection to your workplace might not be working right now. Please wait and try again.
 
-- The user receives the following message *after*  the user provides the user's user name and password:
+- The user receives the following message _after_  the user provides the user's user name and password:
 
     > Can't connect to the service.
 
@@ -42,8 +41,7 @@ An administrator may see details in Event Viewer that resemble the following exa
 |Source:|Microsoft-Windows-Workplace Join|
 |Level:|Error|
 |Description:|(See the following table for the Event ID description.)|
-|||
-
+  
 |Event ID|Description|Resolution|
 |---|---|---|
 |103|Workplace Join discovery failed. Server returned http status 404.|KB [3045386](https://support.microsoft.com/help/3045386) |
@@ -55,8 +53,7 @@ An administrator may see details in Event Viewer that resemble the following exa
 |102|Workplace Join discovery failed.<br/><br/>Exit Code: 0x80072EFD.<br/><br/>A connection with the server could not be established. Could not connect to `'https://EnterpriseRegistration.domain.com:443/EnrollmentServer/contract?api-version=1.0'`.|KB 3045381|
 |102|Workplace Join discovery failed.<br/><br/>Exit Code: 0x80004005.<br/><br/>An unknown error has occurred. Could not connect to `'https://EnterpriseRegistration.domain.com:443/EnrollmentServer/contract?api-version=1.0'`.|KB 3045380 |
 |200|"The maximum number of devices that can be joined to the workplace by the user has been reached."|KB [3045379](https://support.microsoft.com/help/3045379) |
-||||
-
+  
 ### Method 2
 
 To fix the problem for message 2, see ["Can't connect to the service" error when you try to register a device](https://support.microsoft.com/help/3045378).
@@ -126,3 +123,5 @@ Run [Microsoft Update](https://update.microsoft.com/), and make sure that the [U
 ### Verify that traffic is enabled if you're using a third-party proxy or firewall server
 
 If you try to do a Workplace Join to your local Active Directory, verify that there's a rule to enable incoming TCP connections to EnterpriseRegistration. **domain_name**. **domain_extension**. It should allow for traffic to pass through to the DRS server.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

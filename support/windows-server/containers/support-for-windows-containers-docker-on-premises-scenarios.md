@@ -138,8 +138,7 @@ As outlined in Supported container hosts, not all host operating systems support
 |Windows Server 2016 or 2019 Standard or Datacenter|Windows Server containers and Hyper-V containers with isolation|Windows Server containers and Hyper-V containers with isolation|Windows Server containers and Hyper-V containers with isolation|Not supported|
 |Windows 10 Professional or Enterprise|Hyper-V containers with isolation and Windows Server containers for dev/test|Hyper-V containers with isolation and Windows Server containers for dev/test|Hyper-V containers with isolation and Windows Server containers for dev/test|Not supported|
 |Windows IoT Core|Not supported|Not supported|Not supported|Windows Server containers|
-|||
-
+  
 If you plan to use container hosts that run different versions and releases of Windows, you will also need to consider the versions and releases of the container images. Some container features aren't backward compatible, so some newer container base images may not run on container hosts with old Operation System (OS) versions. See [Windows Container Version Compatibility](/virtualization/windowscontainers/deploy-containers/version-compatibility) for more information.
 
 ## Support for container workloads
@@ -178,19 +177,19 @@ When using a third-party endpoint security/anti-virus software, verify with the 
 
 ## Supported Container Runtime on Windows Server
 
-*Mirantis Container Runtime (MCR)* is a recommended and supported container runtime interface used to create, manage, and run Windows Server containers on Windows Server. For more information, see [Mirantis](https://www.mirantis.com/software/docker/container-runtime/).
+_Mirantis Container Runtime (MCR)_ is a recommended and supported container runtime interface used to create, manage, and run Windows Server containers on Windows Server. For more information, see [Mirantis](https://www.mirantis.com/software/docker/container-runtime/).
 
 See [Get Started: Prep Windows for containers](/virtualization/windowscontainers/quick-start/set-up-environment) for the recommended and supported installation method on Windows Server.
 
-*ContainerD* is an open-source industry-standard container runtime that is supported by the community. ContainerD running on Windows Server can create, manage, and run Windows Server Containers but Microsoft doesn't provide any support for it. For any issues or questions related to ContainerD, ask the [GitHub community](https://github.com/containerd/containerd/issues). For more information, see the [GitHub ContainerD project](https://github.com/containerd/containerd/issues) and [ContainerD project](https://containerd.io/).
+_ContainerD_ is an open-source industry-standard container runtime that is supported by the community. ContainerD running on Windows Server can create, manage, and run Windows Server Containers but Microsoft doesn't provide any support for it. For any issues or questions related to ContainerD, ask the [GitHub community](https://github.com/containerd/containerd/issues). For more information, see the [GitHub ContainerD project](https://github.com/containerd/containerd/issues) and [ContainerD project](https://containerd.io/).
 
 ## Supported Container Orchestrators
 
 Several container orchestrators support Windows Server containers. Please address any issues or questions with the vendor before engaging Microsoft support.
 
-*Docker swarm* is a feature of the Mirantis Container Runtime that creates, manages, and runs Windows Server containers in a mixed node environment of Linux and Windows hosts. Docker swarm is fully supported by Mirantis. Mirantis support will advise customers on whether Microsoft support should be engaged regarding issues or questions related to Windows Server. For more information about using Docker swarm with Windows Server containers, see [Getting started with swarm mode](/virtualization/windowscontainers/manage-containers/swarm-mode) and [Swarm mode overview](https://docs.docker.com/engine/swarm/) on Mirantis website.
+_Docker swarm_ is a feature of the Mirantis Container Runtime that creates, manages, and runs Windows Server containers in a mixed node environment of Linux and Windows hosts. Docker swarm is fully supported by Mirantis. Mirantis support will advise customers on whether Microsoft support should be engaged regarding issues or questions related to Windows Server. For more information about using Docker swarm with Windows Server containers, see [Getting started with swarm mode](/virtualization/windowscontainers/manage-containers/swarm-mode) and [Swarm mode overview](https://docs.docker.com/engine/swarm/) on Mirantis website.
 
-*Kubernetes* is an open-source project that supports Windows Server containers on Windows Server starting with Kubernetes 1.14. For more information, see [Intro to Windows support in Kubernetes](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#windows-containers-in-kubernetes) and [Support Functionality and Limitations](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#supported-functionality-and-limitations). For further guidance, see [Kubernetes on Windows](/virtualization/windowscontainers/kubernetes/getting-started-kubernetes-windows).
+_Kubernetes_ is an open-source project that supports Windows Server containers on Windows Server starting with Kubernetes 1.14. For more information, see [Intro to Windows support in Kubernetes](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#windows-containers-in-kubernetes) and [Support Functionality and Limitations](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#supported-functionality-and-limitations). For further guidance, see [Kubernetes on Windows](/virtualization/windowscontainers/kubernetes/getting-started-kubernetes-windows).
 
 For any issues and questions related to Kubernetes, see [Reporting Issues and Feature Requests](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#reporting-issues-and-feature-requests).
 
@@ -205,9 +204,9 @@ Microsoft doesn't provide support for the following items:
 
 Any question or issue related to non-supported items should be addressed to relevant GitHub communities.
 
-*Azure Service Fabric* is Microsoft's container orchestrator to deploy microservices across a cluster of machines. It is fully supported by Azure. All issues and questions should be directed to Azure support using "[Help + support](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview)" in the [Azure portal](https://ms.portal.azure.com/#home). For more information, see [Introducing the Service Fabric cluster resource manager](/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) and [Service Fabric and containers](/azure/service-fabric/service-fabric-containers-overview).
+_Azure Service Fabric_ is Microsoft's container orchestrator to deploy microservices across a cluster of machines. It is fully supported by Azure. All issues and questions should be directed to Azure support using "[Help + support](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview)" in the [Azure portal](https://ms.portal.azure.com/#home). For more information, see [Introducing the Service Fabric cluster resource manager](/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) and [Service Fabric and containers](/azure/service-fabric/service-fabric-containers-overview).
 
-*Azure Kubernetes Service on Azure Stack HCI (AKS-HCI)* is an on-premises implementation of the popular Azure Kubernetes Service (AKS) orchestrator, which automatically runs containerized applications at scale.
+_Azure Kubernetes Service on Azure Stack HCI (AKS-HCI)_ is an on-premises implementation of the popular Azure Kubernetes Service (AKS) orchestrator, which automatically runs containerized applications at scale.
 
 Microsoft provides end-to-end support for Azure Kubernetes Service on Azure Stack HCI except for the following items:
 
@@ -215,6 +214,6 @@ Microsoft provides end-to-end support for Azure Kubernetes Service on Azure Stac
 - Any non-in-box system services or drivers in the container or container host
 - Container base images that aren't supported by Microsoft (such as Nginx) or container base images that aren't listed in the supported add-ons list
 
-*Moby* is an open-source project intended for engineers, integrators and enthusiasts looking to modify, hack, fix, experiment, invent, and build systems based on containers. For more information, see the [Moby project](https://github.com/moby/moby) on GitHub.
+_Moby_ is an open-source project intended for engineers, integrators and enthusiasts looking to modify, hack, fix, experiment, invent, and build systems based on containers. For more information, see the [Moby project](https://github.com/moby/moby) on GitHub.
 
 Microsoft doesn't provide support for Moby in a stand-a-lone environment (a single-node container host running Windows Server). All questions and issues should be raised in the Moby project on GitHub.

@@ -2,8 +2,7 @@
 title: Retail prices displayed here error for Azure EA user when creating VM
 description: Provides several solutions to an issue in which you can't create a VM as an Azure Enterprise Agreement (EA) user in portal.
 ms.date: 09/16/2021
-ms.prod-support-area-path: 
-ms.service: azure
+ms.service: azure-common-issues-support
 ms.author: genli
 author: genlin
 ms.reviewer: 
@@ -58,3 +57,5 @@ When you use an EA dev/test subscription under an account that is not marked as 
 4. Find the account that has this issue in Azure portal.
 5. Click the pencil icon :::image type="icon" source="media/cannot-create-vm-ea/pencil-icon.png"::: on the right side.
 6. Check the **Dev/Test** box :::image type="icon" source="media/cannot-create-vm-ea/devtest-box.png":::, and then click **Save**.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

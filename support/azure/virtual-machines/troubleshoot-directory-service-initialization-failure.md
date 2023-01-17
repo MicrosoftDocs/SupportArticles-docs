@@ -5,9 +5,9 @@ services: virtual-machines, azure-resource-manager
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 tags: azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
@@ -74,9 +74,9 @@ As the disk is now attached to a repair VM, verify that the disk holding the Act
 
 1. **Optional** - If more space is needed, open a CMD instance and enter the `defrag <LETTER ASSIGNED TO THE OS DISK>: /u /x /g` command to perform a de-fragmentation on the drive:
 
-  * In the command, replace `<LETTER ASSIGNED TO THE OS DISK>` with the OS Disk's letter. For example, if the disk letter is `F:`, then the command would be `defrag F: /u /x /g`.
+- In the command, replace `<LETTER ASSIGNED TO THE OS DISK>` with the OS Disk's letter. For example, if the disk letter is `F:`, then the command would be `defrag F: /u /x /g`.
 
-  * Depending upon the level of fragmentation, the de-fragmentation could take hours.
+- Depending upon the level of fragmentation, the de-fragmentation could take hours.
 
 If there's enough space on the disk, continue to the next task.
 
@@ -146,11 +146,11 @@ To enable memory dump collection and Serial Console, run the following script by
 
 1. Verify that the free space on the OS disk is at least equal to the memory size (RAM) on the VM.
 
-  1. If there's not enough space on the OS disk, change the location where the memory dump file will be created, and refer that to any data disk attached to the VM that has enough free space.
+1. If there's not enough space on the OS disk, change the location where the memory dump file will be created, and refer that to any data disk attached to the VM that has enough free space.
 
      To change the location, replace `%SystemRoot%` with the drive letter (such as, `F:`) of the data disk in the following commands.
 
-  #### The following configuration is suggested to enable OS dump:
+#### The following configuration is suggested to enable OS dump
 
   **Load Broken OS Disk**:
 
@@ -228,3 +228,5 @@ To enable memory dump collection and Serial Console, run the following script by
    > If your VM was just migrated from on-premise and you want to migrate more domain controllers from on-premise to Azure, you should consider following the steps in the article below to prevent this issue from happening in future migrations:
    >
    > [How to upload existing on-premises Hyper-V domain controllers to Azure by using Azure PowerShell](https://support.microsoft.com/help/2904015)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

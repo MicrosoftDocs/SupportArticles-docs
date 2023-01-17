@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:errors-and-troubleshooting:-general-issues, csstroubleshoot
+ms.custom: sap:errors-and-troubleshooting-general-issues, csstroubleshoot
 ms.technology: windows-server-printing
 ---
 # Printer redirection and drive redirection don't work in a Terminal Server session

@@ -2,7 +2,7 @@
 title: Known issues in BizTalk Server 2013
 description: Describes the known issues in BizTalk Server 2013.
 ms.date: 03/06/2020
-ms.prod-support-area-path: Performance
+ms.custom: sap:Performance
 ms.reviewer: niklase, chiragpa
 ---
 # Known issues in BizTalk Server 2013

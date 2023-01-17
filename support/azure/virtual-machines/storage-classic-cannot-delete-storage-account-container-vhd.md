@@ -1,10 +1,11 @@
 ---
-title: Troubleshoot errors when you delete Azure classic storage accounts, containers, or VHDs | Microsoft Docs
+title: Troubleshoot errors when you delete Azure classic storage accounts, containers, or VHDs
 description: How to troubleshoot problems when deleting storage resources containing attached VHDs.
 services: storage
 author: AngshumanNayakMSFT
 tags: top-support-issue,azure-service-management
 ms.service: virtual-machines
+ms.subservice: vm-disk
 ms.topic: troubleshooting
 ms.date: 01/11/2019
 ms.author: annayak
@@ -15,11 +16,11 @@ This article provides troubleshooting guidance when one of the following errors 
 
 This article only covers issues with classic storage resources. If a user deletes a classic virtual machine using the Azure portal, PowerShell or CLI then the Disks aren't automatically deleted. The user gets the option to delete the "Disk" resource. In case the option isn't selected, the "Disk" resource will prevent deletion of the storage account, container and the actual *.vhd page blob file.
 
-More information about Azure disks can be found [here](/azure/virtual-machines/managed-disks-overview). Azure prevents deletion of a disk that is attached to a VM to prevent corruption. It also prevents deletion of containers and storage accounts, which have a page blob that is attached to a VM. 
+More information about Azure disks can be found [here](/azure/virtual-machines/managed-disks-overview). Azure prevents deletion of a disk that is attached to a VM to prevent corruption. It also prevents deletion of containers and storage accounts, which have a page blob that is attached to a VM.
 
 ## What is a "Disk"?
 
-A "Disk" resource is used to mount a *.vhd page blob file to a virtual machine, as an OS disk or Data disk. An OS disk or Data disk resource, until deleted, will continue to hold a lease on the *.vhd file. Any storage resource in the path shown in below image can't be deleted if a "Disk" resource points to it.
+A "Disk" resource is used to mount a *.vhd page blob file to a virtual machine, as an OS disk or Data disk. An OS disk or Data disk resource, until deleted, will continue to hold a lease on the*.vhd file. Any storage resource in the path shown in below image can't be deleted if a "Disk" resource points to it.
 
 :::image type="content" source="media/storage-classic-cannot-delete-storage-account-container-vhd/disk-lease-illustration.png" alt-text="Screenshot of the 3 parts of a storage resource path: Storage Account, Container and Actual Page Blob i.e the *.vhd file. A Disk resource points to it." lightbox="media/storage-classic-cannot-delete-storage-account-container-vhd/disk-lease-illustration.png":::
 
@@ -29,7 +30,7 @@ A "Disk" resource is used to mount a *.vhd page blob file to a virtual machine, 
 
 1. Delete the classic virtual machine.
 
-2. If the "Disks" checkbox is selected, the **disk lease** (shown in image above) associated with the page blob *.vhd is broken. The actual page blob *.vhd file will still exist in the storage account.
+2. If the "Disks" checkbox is selected, the **disk lease** (shown in image above) associated with the page blob *.vhd is broken. The actual page blob*.vhd file will still exist in the storage account.
 
     :::image type="content" source="media/storage-classic-cannot-delete-storage-account-container-vhd/steps-while-deleting-classic-vm.png" alt-text="Screenshot shows a dialog box to confirm deletion of a virtual machine." border="false":::  
 
@@ -42,9 +43,9 @@ A "Disk" resource is used to mount a *.vhd page blob file to a virtual machine, 
 
 When user tries to delete a classic storage account that is no longer needed, user may see the following behavior.
 
-#### Azure portal 
+#### Azure portal
 
-User navigates to the classic storage account on the [Azure portal](https://portal.azure.com) and clicks **Delete**, user will see the following message: 
+User navigates to the classic storage account on the [Azure portal](https://portal.azure.com) and clicks **Delete**, user will see the following message:
 
 With disk(s) "attached" to a virtual machine
 
@@ -66,7 +67,7 @@ User tries to delete a storage account, that is no longer being used, by using c
 
 When user tries to delete a classic storage blob container that is no longer needed, user may see the following behavior.
 
-#### Azure portal 
+#### Azure portal
 
 Azure portal wouldn't allow the user to delete a container if a "Disk(s)" lease exists pointing to a *.vhd page blob file in the container. It's by design to prevent accidental deletion of a vhd(s) file with Disk(s) lease on them.
 
@@ -74,17 +75,17 @@ Azure portal wouldn't allow the user to delete a container if a "Disk(s)" lease 
 
 #### Azure PowerShell
 
-If the user chooses to delete using PowerShell, it will result in the following error. 
+If the user chooses to delete using PowerShell, it will result in the following error.
 
 > Remove-AzureStorageContainer -Context $context -Name vhds
 >
 > Remove-AzureStorageContainer : The remote server returned an error: (412) There is currently a lease on the container and no lease ID was specified in the request.. HTTP Status Code: 412 - HTTP Error Message: There is currently a lease on the container and no lease ID was specified in the request.
 
-## Unable to delete a vhd 
+## Unable to delete a vhd
 
 After deleting the Azure virtual machine, user tries to delete the vhd file (page blob) and receive the message below:
 
-#### Azure portal 
+#### Azure portal
 
 On the portal, there could be two experiences depending on the list of blobs selected for deletion.
 
@@ -105,7 +106,6 @@ If the user chooses to delete using PowerShell, it will result in the following 
 > Remove-AzureStorageBlob -Context $context -Container vhds -Blob "classicvm-os-8698.vhd"
 >
 > Remove-AzureStorageBlob : The remote server returned an error: (412) There is currently a lease on the blob and no lease ID was specified in the request.. HTTP Status Code: 412 - HTTP Error Message: There is currently a lease on the blob and no lease ID was specified in the request.
-
 
 ## Resolution steps
 
@@ -135,3 +135,5 @@ Follow these steps on the Azure portal:
 3. Delete the image.
 4. Retry the Delete operation that previously failed.
 5. A storage account or container can't be deleted as long as it has a single Image.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

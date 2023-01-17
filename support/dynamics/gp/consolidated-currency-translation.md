@@ -62,7 +62,7 @@ Section 2: Management Reporter Consolidated Report
     Confirm the functional currency in both companies.  
     **Microsoft Dynamics GP menu >> Tools >> Setup >> Financial >> Multicurrency**
 
-    :::image type="content" source="./media/consolidated-currency-translation/multicurrency-setup.jpg" alt-text="Confirm the functional currency.":::
+    :::image type="content" source="media/consolidated-currency-translation/multicurrency-setup.png" alt-text="Screenshot of Functional Currency in the Multicurrency Setup window.":::
 
     > [!NOTE]
     > All remaining steps in this section must be done in the company where the conversion will happen. In this example, the CAD company will be used.
@@ -75,7 +75,7 @@ Section 2: Management Reporter Consolidated Report
 
     Create an Average Table:
 
-    :::image type="content" source="./media/consolidated-currency-translation/average-table.jpg" alt-text="Create an Average Table.":::
+    :::image type="content" source="media/consolidated-currency-translation/average-table.png" alt-text="Screenshot of Multicurrency Exchange Rate Table Setup window for an Average table.":::
 
     Exchange Table ID: CAD-US AVG  
     Description: Canadian to US Average  
@@ -87,7 +87,7 @@ Section 2: Management Reporter Consolidated Report
 
     Select **Rates**:
 
-    :::image type="content" source="./media/consolidated-currency-translation/multicurrency-exchange-rate-maintenance.jpg" alt-text="Select rates in the Average table.":::
+    :::image type="content" source="media/consolidated-currency-translation/multicurrency-exchange-rate-maintenance.png" alt-text="Screenshot of Multicurrency Exchange Rate Maintenance window for an average table.":::
 
     For this example, we have entered rates and dates where it will be easy to see the translation. Rates and dates will vary in your system. You must enter valid date ranges for Management Reporter to notice the rates for a given period.
 
@@ -95,7 +95,7 @@ Section 2: Management Reporter Consolidated Report
 
     Create a Current Table:
 
-    :::image type="content" source="./media/consolidated-currency-translation/current-table.jpg" alt-text="Create a Current Table.":::
+    :::image type="content" source="media/consolidated-currency-translation/current-table.png" alt-text="Screenshot of the Multicurrency Exchange Rate Table Setup window for a current table.":::
 
     Exchange Table ID: CAD-US CUR  
     Description: Canadian to US Current  
@@ -107,11 +107,11 @@ Section 2: Management Reporter Consolidated Report
 
     Select **Rates**:
 
-    :::image type="content" source="./media/consolidated-currency-translation/set-rates-current-table.jpg" alt-text="Select rates in the Current table.":::
+    :::image type="content" source="media/consolidated-currency-translation/set-rates-current-table.png" alt-text="Screenshot of Multicurrency Exchange Rate Maintenance window for a current table.":::
 
     Create a Historical Table:
 
-    :::image type="content" source="./media/consolidated-currency-translation/historical-table.jpg" alt-text="Create a Historical Table.":::
+    :::image type="content" source="media/consolidated-currency-translation/historical-table.png" alt-text="Screenshot of Multicurrency Exchange Rate Table Setup window for a historical table.":::
 
     Exchange Table ID: CAD-US HIST  
     Description: Canadian to US Historical  
@@ -123,7 +123,7 @@ Section 2: Management Reporter Consolidated Report
 
     Select **Rates**:
 
-    :::image type="content" source="./media/consolidated-currency-translation/set-rates-historical-table.jpg" alt-text="Select rates in the Historical table.":::
+    :::image type="content" source="media/consolidated-currency-translation/set-rates-historical-table.png" alt-text="Screenshot of Multicurrency Exchange Rate Maintenance window for a historical table":::
 
     Transaction Rate Default notes:
 
@@ -148,7 +148,7 @@ Section 2: Management Reporter Consolidated Report
 
     **Microsoft Dynamics GP menu >> Tools >> Setup >> System >> Multicurrency Access**
 
-    :::image type="content" source="./media/consolidated-currency-translation/multicurrency-access-setup.jpg" alt-text="Grant the company access.":::
+    :::image type="content" source="media/consolidated-currency-translation/multicurrency-access-setup.png" alt-text="Screenshot of Multicurrency Access Setup window.":::
 
 4. Multicurrency Setup
 
@@ -156,7 +156,7 @@ Section 2: Management Reporter Consolidated Report
 
     **Microsoft Dynamics GP menu >> Tools >> Setup >> Financial >> Multicurrency**
 
-    :::image type="content" source="./media/consolidated-currency-translation/set-up-multicurrency-setup.jpg" alt-text="Set up the Multicurrency Setup.":::
+    :::image type="content" source="media/consolidated-currency-translation/set-up-multicurrency-setup.png" alt-text="Screenshot of the Multicurrency Setup window.":::
 
     Reporting Currency: Z-US$
     Exchange Rate: 1.0000000
@@ -173,7 +173,7 @@ Section 2: Management Reporter Consolidated Report
 
     **Microsoft Dynamics GP menu >> Tools >> Setup >> Financial >> Rate Types**
 
-    :::image type="content" source="./media/consolidated-currency-translation/rate-types.jpg" alt-text="Configure the rate types.":::
+    :::image type="content" source="media/consolidated-currency-translation/rate-types.png" alt-text="Screenshot of Select Multicurrency Rate Types window.":::
 
     If the AVERAGE, BUY, or SELL rate types aren't in the Available Rate Types list, then they're assigned to other exchange tables. Unassigning them from those tables will let you assign them to the new tables.
 
@@ -183,7 +183,7 @@ Section 2: Management Reporter Consolidated Report
 
     **Cards >> Financial >> Account**
 
-    :::image type="content" source="./media/consolidated-currency-translation/accounts-currency-translation-type.jpg" alt-text="Set the Currency Translation Type for the accounts that you want to translate.":::
+    :::image type="content" source="media/consolidated-currency-translation/accounts-currency-translation-type.png" alt-text="Screenshot of Account Maintenance window.":::
 
 ## Section 2: Management Reporter Consolidated Report
 
@@ -195,29 +195,29 @@ Section 2: Management Reporter Consolidated Report
 
         **File >> New >> Row**
 
-        :::image type="content" source="./media/consolidated-currency-translation/create-row.jpg" alt-text="Create a row in the desired accounts.":::
+        :::image type="content" source="media/consolidated-currency-translation/create-row.png" alt-text="Screenshot of an example row created in the desired accounts.":::
 
     2. Create a tree that links to both companies. Dimensions aren't required unless you want to break out the data.
 
         **File >> New >> Tree**
 
-        :::image type="content" source="./media/consolidated-currency-translation/tree-links-both-companies.jpg" alt-text="Create a tree.":::
+        :::image type="content" source="media/consolidated-currency-translation/tree-links-both-companies.png" alt-text="Screenshot of an example tree that links to both companies with the Dimensions field empty.":::
 
     3. Create a column that handles the translation and breaks each company into its own column. In this example, there's a CAD Translated and a CAD Non-Translated column to show the translation in action. The only cell that tells Management Reporter to translate is the Currency Source cell.
 
         **File >> New >> Column**
 
-        :::image type="content" source="./media/consolidated-currency-translation/column-handles-translation.jpg" alt-text="Create a column.":::
+        :::image type="content" source="media/consolidated-currency-translation/column-handles-translation.png" alt-text="Screenshot of an example column that handles the translation.":::
 
     4. Create a report definition.
 
         **File >> New >> Report Definition**
 
-        :::image type="content" source="./media/consolidated-currency-translation/report-definition.jpg" alt-text="Create a report definition.":::
+        :::image type="content" source="media/consolidated-currency-translation/report-definition.png" alt-text="Screenshot of an example report definition on the Report tab.":::
 
     5. Generate the report and note the translated results.
 
-        :::image type="content" source="./media/consolidated-currency-translation/summary-all-units.jpg" alt-text="xGenerate the reportxx.":::
+        :::image type="content" source="media/consolidated-currency-translation/summary-all-units.png" alt-text="Screenshot of the example report generated.":::
 
         > [!NOTE]
         >
@@ -241,7 +241,7 @@ Section 2: Management Reporter Consolidated Report
 
     After you set up a translation, beginning balances along with translated beginning balances for the translation currencies are created by closing a year.
 
-    :::image type="content" source="./media/consolidated-currency-translation/currency-translation.jpg" alt-text="Translated beginning balances are created.":::
+    :::image type="content" source="media/consolidated-currency-translation/currency-translation.png" alt-text="Screenshot of the Currency translation window." border="false":::
 
     To enter translated beginning balance information:
 

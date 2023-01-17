@@ -2,7 +2,6 @@
 title: Upgrade Data Protection Manager (DPM) 2012 R2 to DPM 2016 with VMware VM protection
 description: Describes how to upgrade from DPM 2012 R2 to DPM 2016 if protection groups contain VMware virtual machines (VMs).
 ms.date: 01/22/2021
-ms.prod-support-area-path:
 ms.reviewer: digan; jarrettr; cbutch
 ---
 # How to upgrade DPM 2012 R2 to DPM 2016 if DPM 2012 R2 is used to protect VMware VMs

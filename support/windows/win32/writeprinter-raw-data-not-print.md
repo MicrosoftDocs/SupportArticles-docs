@@ -2,7 +2,7 @@
 title: WritePrinter API with RAW data can't print
 description: Fail with Terminal Services Easy Print when you call to the WritePrinter() API to write RAW data directly to a printer.
 ms.date: 03/09/2020
-ms.prod-support-area-path: Graphics and multimedia development
+ms.custom: sap:Graphics and multimedia development
 ms.technology: windows-dev-apps-graphics-multimedia-dev
 ---
 # WritePrinter() with RAW data fails to print with TS Easy Print

@@ -2,8 +2,8 @@
 title: Error when you try to copy content to Azure
 description: This article provides a resolution for the problem that occurs when you try to copy content to Microsoft Azure by using a Java-based tool or program.
 ms.date: 10/22/2020
-ms.prod-support-area-path: Data Factory, V2 - Azure-SSIS Integration Runtime
-ms.service: azure
+ms.custom: sap:Data Factory, V2 - Azure-SSIS Integration Runtime
+ms.service: azure-common-issues-support
 ---
 # UserErrorJreNotFound error message when you run a copy activity to Azure
 
@@ -69,3 +69,5 @@ To fix this issue, follow these steps to verify the status of the JRE installat
 >
 > - If any of these configurations are not as described in these steps, use the [JRE windows installer](https://go.microsoft.com/fwlink/?LinkId=808605) to fix the problems.
 > - If all the configurations in these steps are correct as described, there may be a VC++ runtime library missing in the system. You can fix this problem by installing the VC++ 2010 Redistributable Package.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

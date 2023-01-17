@@ -5,7 +5,8 @@ ms.date: 12/10/2021
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: "rissing,chiragpa"
-ms.service: container-service
+ms.service: azure-kubernetes-service
+ms.subservice: cannot-connect-to-cluster-through-api-server
 #Customer intent: As an Azure Kubernetes user, I want to fix or restore my config file so that I can successfully connect to my AKS cluster.
 ---
 # Config file isn't available when connecting
@@ -15,7 +16,7 @@ This article describes how to fix issues that occur when you can't connect to an
 ## Prerequisites
 
 - [Azure CLI](/cli/azure/install-azure-cli).
-- The Kubernetes cluster command-line tool ([kubectl](https://kubernetes.io/docs/tasks/tools/)). You can alternatively install kubectl by running the [az aks install-cli](/cli/azure/aks#az_aks_install_cli) command in Azure CLI.
+- The Kubernetes cluster command-line tool ([kubectl](https://kubernetes.io/docs/tasks/tools/)). You can alternatively install kubectl by running the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command in Azure CLI.
 
 ## Symptoms
 
@@ -31,7 +32,7 @@ error: You must be logged in to the server (the server has asked for the client 
 
 The [kubectl tool](https://kubernetes.io/docs/reference/kubectl/overview/) and other Kubernetes connection tools use a local configuration file named *config*. The *config* file contains authentication credentials and details to connect to the cluster. By default:
 
-- The [az aks get-credentials](/cli/azure/aks#az_aks_get_credentials) command in Azure CLI, which is used to get access credentials for a managed Kubernetes cluster, modifies the *~/.kube/config* file.
+- The [az aks get-credentials](/cli/azure/aks#az-aks-get-credentials) command in Azure CLI, which is used to get access credentials for a managed Kubernetes cluster, modifies the *~/.kube/config* file.
 
 - The kubectl command uses the [kubeconfig (kubectl configuration) file](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/) in the *$HOME/.kube* directory.
 
@@ -100,3 +101,5 @@ az aks get-credentials --resource-group <cluster-resource-group> \
     --overwrite-existing \
     [--file <config-file-location>]
 ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

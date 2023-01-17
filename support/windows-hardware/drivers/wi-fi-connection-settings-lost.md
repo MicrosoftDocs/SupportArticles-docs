@@ -2,7 +2,6 @@
 title: Wi-Fi connection settings are lost
 description: This article provides a workaround for the issue that occurs when you configure the Wi-Fi connection settings in the Network Connections item in Control Panel on a Windows Embedded Compact 7 device.
 ms.date: 08/27/2020
-ms.prod-support-area-path: 
 ms.reviewer: riwaida
 ms.technology: windows-hardware-network-driver
 ---

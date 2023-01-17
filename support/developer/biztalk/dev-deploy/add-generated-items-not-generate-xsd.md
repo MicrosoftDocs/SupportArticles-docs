@@ -2,7 +2,7 @@
 title: Add Generated Items Wizard can't generate an XSD schema
 description: This article discusses a problem in a BizTalk Server project where the Add Generated Items Wizard fails to generate an XSD schema and you might get an error message.
 ms.date: 03/16/2020
-ms.prod-support-area-path: Development and Deployment
+ms.custom: sap:Development and Deployment
 ms.reviewer: rickcau
 ---
 # Add Generated Items Wizard fails to generate an XSD schema

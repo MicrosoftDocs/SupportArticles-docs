@@ -53,7 +53,7 @@ Element:
 *\<DateTime>*, Info CSI 0000002a Performing 1 operations; 1 are not lock/unlock and follow:  
 (0) LockComponentPath (10): flags: 0 comp: {l:16 b:0079df39e6ddcf01300000001413a815} pathid: {l:16 b:0079df39e6ddcf01310000001413a815} path:  
 [l:234{117}]"\SystemRoot\WinSxS\x86_microsoft.windows.s..ation.badcomponents_31bf3856ad364e35_6.2.9200.16384_none_353ccb4c94858655" pid: 1314  starttime: 130566894897453336 (0x01cfdde62dc9d918)  
-*\<DateTime>*, Error [0x018005] CSI 0000002b (F) Failed execution of queue item Installer: Root Devices ({3d07d150-2f3d-4184-9793-d0fd59b0c885}) with HRESULT 800f0207 [Error,Facility=(000f),Code=519 (0x0207)]. Failure will not be ignored: A rollback will be initiated after all the operations in the installer queue are completed; installer is reliable (2)[gle=0x80004005]  
+*\<DateTime>*, Error [0x018005] CSI 0000002b (F) Failed execution of queue item Installer: Root Devices ({3d07d150-2f3d-4184-9793-d0fd59b0c885}) with HRESULT 800f0207 [Error,Facility=(000f),Code=519 (0x0207)]. Failure will not be ignored: A rollback will be initiated after all the operations in the installer queue are completed; installer is reliable \[2](gle=0x80004005)  
 *\<DateTime>*, Info CBS Added C:\Windows\Logs\CBS\CBS.log to WER report.  
 *\<DateTime>*, Info CBS Added C:\Windows\Logs\CBS\CbsPersist_*\<DateTime>*.log to WER report.  
 *\<DateTime>*, Info CBS Added C:\Windows\Logs\CBS\CbsPersist_*\<DateTime>*.log to WER report.  
@@ -103,4 +103,3 @@ Microsoft has confirmed that this is a problem in the Microsoft products listed 
 |0x800f0207|SPAPI_E_DEVINST_ALREADY_EXISTS|winerror.h|The device instance cannot be created because it already exists.|
 |0x80070002|ERROR_FILE_NOT_FOUND|winerror.h|The system cannot find the file specified.|
 |0x00000207|SE_AUDITID_LPC_INVALID_USE|msaudite.h|Invalid use of LPC port.|
-|||||

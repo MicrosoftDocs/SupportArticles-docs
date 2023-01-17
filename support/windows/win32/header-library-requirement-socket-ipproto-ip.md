@@ -2,7 +2,7 @@
 title: Header and Library at IPPROTO_IP level
 description: Introduces the Header and Library requirement When setting or getting socket options at the IPPROTO_IP level in a C/C++ Winsock application that's targeted for Windows NT.
 ms.date: 03/09/2020
-ms.prod-support-area-path: Networking development
+ms.custom: sap:Networking development
 ms.reviewer: MIKELIU
 ms.technology: windows-dev-apps-networking-dev
 ---

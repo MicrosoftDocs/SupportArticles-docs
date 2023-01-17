@@ -2,7 +2,7 @@
 title: Supported OS and SQL Server in BizTalk
 description: A summary of the operating systems, SQL Server, Visual Studio, and .NET Framework versions that supported by BizTalk Server.
 ms.date: 03/17/2020
-ms.prod-support-area-path: Development and Deployment
+ms.custom: sap:Development and Deployment
 ms.reviewer: mandia
 ---
 # Summary of 64-bit support, operating systems and SQL Server versions supported by BizTalk Server
@@ -40,7 +40,6 @@ The following tables list the operating systems, SQL Server, Visual Studio, and 
 | SQL Server Express|Yes but not recommended|Yes but not recommended|Yes but not recommended|Yes but not recommended|Yes but not recommended|
 | Visual Studio version|Visual Studio 2013|Visual Studio 2012|Visual Studio 2010|Visual Studio 2008 SP1 or later service pack|Visual Studio 2005|
 | .NET Framework version|Visual Studio project target build: .NET Framework 4.5 <br/><br/>BizTalk Runtime: .NET Framework 4.5. x|Visual Studio project target build: .NET Framework 4.5 <br/><br/>BizTalk Runtime: .NET Framework 4.5. x|Visual Studio project target build: .NET Framework 4 or .NET Framework 3.5 SP1 <br/><br/>BizTalk Runtime: .NET Framework 4.5.x (Only with CU7)|.NET Framework 3.5 SP1|.NET Framework 3.0 and .NET Framework 2.0|
-|||||||
 
 > [!IMPORTANT]
 > The latest service pack for Windows and SQL Server should be installed. Installing the latest Windows and SQL Server service pack is always supported.
@@ -54,8 +53,7 @@ The following tables list the operating systems, SQL Server, Visual Studio, and 
 | BizTalk Server 2010|All editions|Enterprise Edition<br/>Standard Edition<br/>Developer Edition<br/>Branch Edition<br/>Evaluation Edition|
 | BizTalk Server 2009|All editions|Enterprise Edition<br/>Developer Edition<br/>Branch Edition<br/>Evaluation Edition <br/><br/>The Standard Edition is not supported for native 64-bit execution.|
 | BizTalk Server 2006 R2|All editions|Enterprise Edition<br/> Developer Edition<br/>Branch Edition<br/>Evaluation Edition <br/><br/>The Standard Edition is not supported for native 64-bit execution.|
-||||
-
+  
 ## Previous BizTalk Server versions
 
 For previous BizTalk Server versions, go to [BizTalk Server: Operating System, SQL Server Version, and 64-bit Support](https://social.technet.microsoft.com/wiki/contents/articles/25276.biztalk-server-operating-system-sql-server-version-and-64-bit-support.aspx)

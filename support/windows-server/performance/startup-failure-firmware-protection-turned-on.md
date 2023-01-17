@@ -4,7 +4,7 @@ description: Provides a solution to an issue where startup fails when Firmware p
 ms.date: 06/23/2021
 author: v-lianna
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

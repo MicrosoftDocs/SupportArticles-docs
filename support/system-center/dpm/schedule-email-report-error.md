@@ -2,7 +2,6 @@
 title: Can't schedule an email report
 description: Describes an issue that causes the Reporting Services Server cannot connect to the DPM database error when you try to schedule a report to be emailed in Data Protection Manager.
 ms.date: 07/23/2020
-ms.prod-support-area-path: 
 ms.reviewer: mjacquet
 ---
 # Reporting Services Server cannot connect to the DPM database error when you schedule an email report

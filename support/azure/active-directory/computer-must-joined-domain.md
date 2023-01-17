@@ -2,7 +2,6 @@
 title: Error (The computer must be joined to a domain) when you try to install the Azure Active Directory Sync Tool
 description: Describes an error message that occurs when you try to install the Azure Active Directory Sync Tool. Provides a resolution.
 ms.date: 06/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: enterprise-users
@@ -61,6 +60,4 @@ If the computer is already joined to an AD DS domain, make sure that the compute
 8. If the issue isn't resolved, restart the computer that has Directory Sync Tool installed.
 9. If the issue still isn't resolved, make sure that the computer that has the Directory Sync Tool is installed can communicate with the computer that's running AD DS.
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

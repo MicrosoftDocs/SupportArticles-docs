@@ -1,8 +1,7 @@
 ---
 title: Error AADSTS650056 - Misconfigured application
 description: Describes a problem in which you receive an error message AADSTS650056 when signing in to SAML-based single sign-on configured app that has been configured to use Azure Active Directory as an Identity Provider (IdP).
-ms.date: 03/15/2021
-ms.prod-support-area-path: 
+ms.date: 08/26/2022
 ms.reviewer: bernawy
 ms.service: active-directory
 ms.subservice: app-mgmt
@@ -27,6 +26,10 @@ Ensure that the `Issuer` attribute in the SAML request matches the Identifier va
 
 Verify that the value in the Identifier textbox matches the value for the identifier value displayed in the error.
 
+For more information about the Issuer attribute, see [Single Sign-On SAML protocol](/azure/active-directory/develop/single-sign-on-saml-protocol).
+
 ## More Information
 
-For a full list of Active Directory authentication and authorization error codes see [Azure AD Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes)
+For a full list of Active Directory authentication and authorization error codes see [Azure AD Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
