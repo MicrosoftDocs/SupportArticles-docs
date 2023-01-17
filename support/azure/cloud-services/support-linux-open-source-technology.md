@@ -1,11 +1,12 @@
 ---
 title: Support for Linux and open-source technology in Azure
 description: Describes support for Linux images in Microsoft Azure.
-ms.date: 07/06/2020
+ms.date: 11/01/2022
 ms.reviewer: patcatun
 author: genlin
 ms.author: genli
 ms.service: cloud-services
+ms.subservice: reference
 ---
 # Support for Linux and open-source technology in Azure
 
@@ -27,7 +28,7 @@ The endorsed Linux distributions are created and published by Linux partners for
 |---|---|---|
 | Customers who bring their own Linux virtual machine into Azure| Microsoft Support will assist you in using Azure platform or services, and may offer guidance for issues within Linux. A [support plan](https://azure.microsoft.com/support/plans/) is required to engage Microsoft Support.| The primary responsibility is with the customer. Microsoft may be able to offer guidance for issues within Linux. <br/><br/> Want to bring your own custom image? Start here: [Microsoft Azure: Linux Virtual Machines](/azure/virtual-machines/linux/) |
 | CentOS by Rogue Wave Software (formerly Open Logic)| Microsoft Support will assist you in using Azure platform or services, and may offer guidance for issues within Linux. A [support plan](https://azure.microsoft.com/support/plans/) is required to engage Microsoft Support.| [The CentOS Project](https://wiki.centos.org/About) |
-| CoreOS <br/> CoreOS is scheduled to be [end of life](https://coreos.com/os/eol/) by May 26, 2020.| Microsoft Support will assist you in using Azure platform or services, and may offer guidance for issues within Linux. A [support plan](https://azure.microsoft.com/support/plans/) is required to engage Microsoft Support.| Microsoft has two (2)  channels of migration for CoreOS users. <br/><br/>1. Flatcar by Kinvolk (see the "Flatcar Container Linux by Kinvolk" entry. ) <br/><br/>2. [Fedora Core OS](https://docs.fedoraproject.org/en-US/fedora-coreos/provisioning-azure/) (customers must upload their own image. Here's the [migration documentation](https://docs.fedoraproject.org/en-US/fedora-coreos/migrate-cl/)). |
+| CoreOS <br/> CoreOS is scheduled to be end of life) by May 26, 2020.| Microsoft Support will assist you in using Azure platform or services, and may offer guidance for issues within Linux. A [support plan](https://azure.microsoft.com/support/plans/) is required to engage Microsoft Support.| Microsoft has two (2)  channels of migration for CoreOS users. <br/><br/>1. Flatcar by Kinvolk (see the "Flatcar Container Linux by Kinvolk" entry. ) <br/><br/>2. [Fedora Core OS](https://docs.fedoraproject.org/en-US/fedora-coreos/provisioning-azure/) (customers must upload their own image. Here's the [migration documentation](https://docs.fedoraproject.org/en-US/fedora-coreos/migrate-cl/)). |
 | Debian by Credativ| Microsoft Support will assist you in using Azure platform or services, and may offer guidance for issues within Linux. A [support plan](https://azure.microsoft.com/support/plans/) is required to engage Microsoft Support.| [Debian GNU/Linux as an endorsed distribution in Azure Marketplace](https://azure.microsoft.com/blog/debian-images-now-available-on-azure/) [Credativ Support Contacts](https://www.credativ.de/en/portfolio/support/) |
 | Flatcar Container Linux by Kinvolk| Microsoft Support will assist you in using Azure platform or services, and may offer guidance for issues within Linux. A [support plan](https://azure.microsoft.com/support/plans/) is required to engage Microsoft Support.| [Migrating from CoreOS to Flatcar Container Linux](https://kinvolk.io/blog/2020/04/running-flatcar-container-linux-in-microsoft-azure/). |
 | Oracle Linux by Oracle| Microsoft Support will assist you in using Azure platform or services, and may offer guidance for issues within Linux. A [support plan](https://azure.microsoft.com/support/plans/) is required to engage Microsoft Support.| Oracle Linux users must have an active Oracle license. Microsoft may be able to give some guidance, but may defer support issues to Oracle. [Lifetime Support Policy: Coverage for Oracle Linux and Oracle VM](https://www.oracle.com/a/ocom/docs/elsp-lifetime-069338.pdf) [Oracle Support Contacts](https://support.oracle.com/portal/) |
@@ -47,8 +48,7 @@ Microsoft offers Linux support for [endorsed Linux distributions](/azure/virtual
 - Scenarios related to security aren't supported. They include but aren't limited to:
 
   - compromised virtual machines
-  - security forensics
-  - DDoS
+  - security incident response investigations
   - intrusion-prevention assistance
 
 ## Open-source technology support matrix

@@ -163,8 +163,6 @@
     href: user-displayed-disabled-or-enabled-mfa.md
   - name: Troubleshoot account lockout
     href: account-lockout-adfs-window-server.md
-  - name: Troubleshoot MFA issues
-    href: troubleshoot-azure-mfa-issue.md
   - name: Troubleshooting MFA issues
     href: troubleshoot-azure-mfa-issue.md
   - name: User name or password is incorrect
@@ -318,7 +316,11 @@
     href: enable-disable-trace-online-services.md
   - name: IdFix.exe is not a valid Win32 application
     href: idfix-not-valid-win32-application.md
+  - name: IPv6 Support in Azure AD
+    href: azure-ad-ipv6-support.md
   - name: Security context is not associated in IdFix
     href: security-context-not-associate-domian.md
+  - name: Send Microsoft Authenticator logs and get an incident ID
+    href: send-microsoft-authenticator-logs.md  
   - name: Support data collection
     href: support-data-collection-diagnostic-logs.md

@@ -39,6 +39,8 @@
 
 - name: Repos
   items:
+  - name: Git clone or Git push fails to an Azure DevOps repository
+    href: git-clone-push-operation-failing-devops-repo.md
   - name: HTTP 502 error when you use Git client
     href: http-502-error-use-git-client.md
   - name: Pushing large files by Git client hangs

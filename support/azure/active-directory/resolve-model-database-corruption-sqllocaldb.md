@@ -1,7 +1,7 @@
 ---
 title: Resolve Model database corruption in SQLLocalDB
 description: This article describes how to resolve a known issue in SQLLocalDB that can prevent the ADSync service from starting because of a corrupted "Model" database.
-ms.date: 03/24/2022
+ms.date: 7/21/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: nualex
@@ -62,6 +62,15 @@ You can verify that the issue is based on the following events in the Azure AD C
   ```
 
 ## Mitigation
+
+> [!IMPORTANT]
+> Only apply the mitigation steps that are described here if all of these conditions occur:
+>
+> - The version of Azure AD Connect is 2.0.*x.x*.
+>
+> - Azure AD Connect is installed with SQL LocalDB.
+>
+> - *All* of the conditions that are listed in [Symptoms](#symptoms) are present.
 
 To recover the `Model` database from a corrupted state, follow these steps:
 

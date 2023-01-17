@@ -71,10 +71,6 @@
 
 - name: Print Driver
   items:
-  - name: GetMyDevicePortName may return incorrect port name in Windows 11 if you connect multiple USB scanners
-    href: IStiDeviceControl-GetMyDevicePortName-incorrect-port-name-multiple-USB.md
-  - name: Can't scan documents from a USB scanner after restarting Windows 11
-    href: cant-scan-from-USB-scanner-after-win11-restarts.md
   - name: Recurring icon is black when printing a calendar
     href: recurring-icon-background-is-black.md
 

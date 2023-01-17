@@ -33,5 +33,5 @@ additionalContent:
         url: /power-platform/
       # Card
       - title: Microsoft Power Platform training 
-        summary: "Check out the free training for Microsoft Power Platform on Microsoft Learn"
-        url: /learn/powerplatform/
+        summary: "Check out the free training for Microsoft Power Platform"
+        url: /training/powerplatform/

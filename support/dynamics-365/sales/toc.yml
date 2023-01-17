@@ -415,6 +415,8 @@
           href: you-are-not-part-this-organization.md
         - name: You are signed out of CRM Online Outlook Client
           href: you-are-signed-out-of-crm-online-outlook.md
+        - name: You cannot send email as the selected user error
+          href: cannot-send-email-as-another-user.md
         - name: You don't have a license to use this app
           href: you-do-not-have-license-to-use-this-app-error.md
         - name: You don't have permission to access this app

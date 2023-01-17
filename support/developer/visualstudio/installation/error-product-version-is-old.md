@@ -19,4 +19,4 @@ When you try to install Microsoft Visual Studio 2015, you receive the following 
 
 ## Resolution
 
-Verify that the version of Visual Studio 2015 that you're downloading is not earlier than the currently installed version. If you determine that the new version is not earlier than the installed version, see [this MSDN post](https://social.msdn.microsoft.com/Forums/abaecb1a-2ed6-4c9d-9676-794039ba3422/visual-studio-community-2015-setup-blocked-the-product-version-that-you-are-trying-to-set-up-is?forum=vssetup) for guidance to resolve this issue.
+Verify that the version of Visual Studio 2015 that you're downloading is not earlier than the currently installed version. If you determine that the new version is not earlier than the installed version, see [this MSDN post](https://social.msdn.microsoft.com/Forums/en-US/abaecb1a-2ed6-4c9d-9676-794039ba3422/visual-studio-community-2015-setup-blocked-the-product-version-that-you-are-trying-to-set-up-is?forum=vssetup) for guidance to resolve this issue.

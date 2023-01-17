@@ -6,8 +6,11 @@ metadata:
   ms.reviewer: ramakoni
   ms.topic: faq
   ms.technology: internet-explorer-development-website
+  ms.prod: internet-explorer
 title: Internet Explorer document modes FAQ
 summary: |
+  [!INCLUDE [](../../../includes/browsers-important.md)]
+
   This article provides answers to some of the most common questions about [document modes](/openspecs/ie_standards/ms-iedoco/d3fffb13-31cc-4dd0-b38c-2b6aaabc153e) in Internet Explorer.
   
   _Original product version:_ &nbsp; Internet Explorer  

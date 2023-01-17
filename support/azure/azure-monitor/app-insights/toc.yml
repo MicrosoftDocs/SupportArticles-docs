@@ -1,8 +1,0 @@
-- name: Application Insights
-  items:
-  - name: Welcome
-    href: welcome-application-insights.yml
-  - name: Error retrieving data in portal
-    href: troubleshoot-portal-connectivity.md
-  - name: Troubleshooting auto-instrumentation issues
-    href: auto-instrumentation-troubleshoot.md

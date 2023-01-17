@@ -2,8 +2,9 @@
 author: genlin
 description: This article describes how to attach an unmanaged disk to a repair VM for offline servicing.
 ms.author: genli
-ms.date: 07/16/2021
+ms.date: 05/17/2022
 ms.service: virtual-machines
+ms.subservice: vm-backup-restore
 ms.topic: troubleshooting
 title: Attach an unmanaged disk to a VM for offline repair
 ---
@@ -117,8 +118,26 @@ This new VM will act as your repair VM, and its own OS disk must be unmanaged.
     :::image type="content" source="media/unmanaged-disk-offline-repair/create-vm-no-infrastructure.png" alt-text="Screenshot of the Basics page of the Create a virtual machine wizard, showing the option selected for no infrastructure required.":::
 
 3. On the Disks page, expand **Advanced** below **Data Disks** and then clear the **Use managed disks** check box. Select a storage account for the unmanaged OS disk. Do not select to attach an existing disk.
-
     :::image type="content" source="media/unmanaged-disk-offline-repair/create-vm-no-managed.png" alt-text="Screenshot of the Disks page of the Create a virtual machine wizard, with the use managed disk option cleared.":::
+    If the **Use managed disks** option cannot be unselected, try to create the VM by using the following commands:
+
+    ```azurecli
+    ## Get the subnet ID of the VM
+
+    $SubnetID = az network vnet subnet show --resource-group <RG name> --name <Subnet name> --vnet-name <VNet name> --query id -o tsv
+    
+    ## Create a VM with the unmanaged disk
+
+    az vm create \
+        --resource-group <RG name>\
+        --name <VM name>\
+        --image <Image name>\
+        --location <location of the VM>\
+        --admin-username <Admin name>\
+        --subnet $SubnetID\
+        --size <VM size>\
+        --use-unmanaged-disk  
+    ```
 
 4. Complete the "Create a Virtual Machine" wizard by specifying configuration details that are appropriate for your organization.
 

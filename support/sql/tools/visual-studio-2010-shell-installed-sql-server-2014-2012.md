@@ -4,8 +4,8 @@ description: This article provides a workaround for the Visual Studio 2010 Shell
 ms.date: 6/25/2021
 ms.custom: sap:Tools
 ms.reviewer: suresh.kandoth
-author: cobibi
-ms.author: v-yunhya
+author: HaiyingYu
+ms.author: haiyingyu
 ---
 
 # Visual Studio 2010 Shell is installed with SQL Server 2014 and 2012

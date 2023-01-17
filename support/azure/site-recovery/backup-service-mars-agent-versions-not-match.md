@@ -47,12 +47,10 @@ To resolve this issue, follow these steps:
 
 3. Make sure that the firewall settings on the server or proxy are configured to allow the URL that is appropriate to the Azure cloud that you are using.
 
-    | Azure cloud| URL |
-    |---|---|
-    | Azure Cloud (Public)| <https://login.windows.net> |
-    | Azure China Cloud| <https://login.chinacloudapi.cn> |
-    | Azure US Government Cloud| <https://login.microsoftonline.us> |
-    | Azure German Cloud| <https://login.microsoftonline.de> |
+    - [Azure Cloud (Public)](https://login.windows.net)
+    - [Azure China Cloud](https://login.chinacloudapi.cn)
+    - [Azure US Government Cloud](https://login.microsoftonline.us)
+    - [Azure German Cloud](/previous-versions/azure/germany/germany-welcome)
 
 4. Run the following command from an elevated command prompt:
 

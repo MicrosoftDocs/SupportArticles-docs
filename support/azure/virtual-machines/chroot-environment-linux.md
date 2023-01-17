@@ -1,16 +1,17 @@
 ---
-title: Chroot environment in a Linux Rescue VM.
+title: How to troubleshoot the chroot environment in a Linux Rescue VM
 description: This article describes how to troubleshoot the chroot environment in the Rescue virtual machine (VM) in Linux.
 services: virtual-machines
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 ms.service: virtual-machines
+ms.subservice: vm-backup-restore
 ms.collection: linux
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
-ms.date: 05/05/2020
+ms.date: 05/17/2022
 ms.author: genli
 
 ---
@@ -19,10 +20,10 @@ ms.author: genli
 
 This article describes how to troubleshoot the chroot environment in the Rescue virtual machine (VM) in Linux.
 
-## Ubuntu 16.x && Ubuntu 18.x
+## Ubuntu 16.x && Ubuntu 18.x && Ubuntu 20.04
 
 1. Stop or de-allocate the affected VM.
-1. Create a rescue VM image of the same OS version, in same resource group (RSG) and location using managed disk.
+1. Create a rescue VM of the same generation, same OS version, in same resource group and location using managed disk.
 1. Use the Azure portal to take a snapshot of the affected virtual machine's OS disk.
 1. Create a disk out of the snapshot of the OS disk, and attach it to the Rescue VM.
 1. Once the disk has been created, Troubleshoot the chroot environment in the Rescue VM.
@@ -51,13 +52,12 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       mkdir /rescue
       mount /dev/sdc1 /rescue
       mount /dev/sdc15 /rescue/boot/efi
-      cd /rescue
-
-      mount -t proc proc proc
-      mount -t sysfs sys sys/
-      mount -o bind /dev dev/
-      mount -o bind /dev/pts dev/pts/
-      mount -o bind /run run/
+      
+      mount -t proc /proc /rescue/proc
+      mount -t sysfs /sys /rescue/sys
+      mount -o bind /dev /rescue/dev
+      mount -o bind /dev/pts /rescue/dev/pts
+      mount -o bind /run /rescue/run
       chroot /rescue
       ```
 
@@ -118,13 +118,12 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       mkdir /rescue
       mount -o nouuid /dev/sdc2 /rescue
       mount -o nouuid /dev/sdc1 /rescue/boot/
-      cd /rescue
-
-      mount -t proc proc proc
-      mount -t sysfs sys sys/
-      mount -o bind /dev dev/
-      mount -o bind /dev/pts dev/pts/
-      mount -o bind /run run/
+      
+      mount -t proc /proc /rescue/proc
+      mount -t sysfs /sys /rescue/sys
+      mount -o bind /dev /rescue/dev
+      mount -o bind /dev/pts /rescue/dev/pts
+      mount -o bind /run /rescue/run
       chroot /rescue
       ```
 
@@ -225,13 +224,12 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       mount /dev/mapper/rootvg-optlv /rescue/opt
       mount /dev/sdc2 /rescue/boot/
       mount /dev/sdc1 /rescue/boot/efi
-      cd /rescue
 
-      mount -t proc proc proc
-      mount -t sysfs sys sys/
-      mount -o bind /dev dev/
-      mount -o bind /dev/pts dev/pts/
-      mount -o bind /run run/
+      mount -t proc /proc /rescue/proc
+      mount -t sysfs /sys /rescue/sys
+      mount -o bind /dev /rescue/dev
+      mount -o bind /dev/pts /rescue/dev/pts
+      mount -o bind /run /rescue/run
       chroot /rescue
       ```
 
@@ -427,11 +425,12 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
    mount -o nouuid  /dev/mapper/rescuemevg-varlv /rescue/var 
    mount -o nouuid  /dev/sdc2 /rescue/boot
    mount /dev/sdc1 /rescue/boot/efi
-   mount -t proc proc /rescue/proc 
-   mount -t sysfs sys /rescue/sys/ 
-   mount -o bind /dev /rescue/dev/ 
-   mount -o bind /dev/pts /rescue/dev/pts/
-   mount -o bind /run /rescue/run/
+   
+   mount -t proc /proc /rescue/proc 
+   mount -t sysfs /sys /rescue/sys
+   mount -o bind /dev /rescue/dev 
+   mount -o bind /dev/pts /rescue/dev/pts
+   mount -o bind /run /rescue/run
    ```
 
 10. Verify the mounts
@@ -604,13 +603,12 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       mount -o nouuid /dev/sdc2 /rescue
       mount -o nouuid /dev/sdc1 /rescue/boot/
       mount /dev/sdc15 /rescue/boot/efi
-      cd /rescue
 
-      mount -t proc proc proc
-      mount -t sysfs sys sys/
-      mount -o bind /dev dev/
-      mount -o bind /dev/pts dev/pts/
-      mount -o bind /run run/
+      mount -t proc /proc /rescue/proc
+      mount -t sysfs /sys /rescue/sys
+      mount -o bind /dev /rescue/dev
+      mount -o bind /dev/pts /rescue/dev/pts
+      mount -o bind /run /rescue/run
       chroot /rescue
       ```
 
@@ -626,7 +624,6 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       umount /rescue/dev/pts
       umount /rescue/dev/
       umount /rescue/run
-      cd /
       umount /rescue/boot/efi
       umount /rescue/boot
       umount /rescue
@@ -673,13 +670,12 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       mount -o nouuid /dev/sdc4 /rescue
       mount -o nouuid /dev/sdc3 /rescue/boot/
       mount /dev/sdc2 /rescue/boot/efi
-      cd /rescue
 
-      mount -t proc proc proc
-      mount -t sysfs sys sys/
-      mount -o bind /dev dev/
-      mount -o bind /dev/pts dev/pts/
-      mount -o bind /run run/
+      mount -t proc /proc /rescue/proc
+      mount -t sysfs /sys /rescue/sys
+      mount -o bind /dev /rescue/dev
+      mount -o bind /dev/pts /rescue/dev/pts
+      mount -o bind /run /rescue/run
       chroot /rescue
       ```
 
@@ -695,7 +691,6 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       umount /rescue/dev/pts
       umount /rescue/dev/
       umount /rescue/run
-      cd /
       umount /rescue/boot/efi
       umount /rescue/boot
       umount /rescue

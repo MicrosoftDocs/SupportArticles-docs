@@ -2,9 +2,9 @@
 title: AAC audio isn't playing for MPEG-2 TS file in Windows 8.1
 description: This article discusses a problem when the AAC audio of an MPEG-2 TS file doesn't play in Windows 8.1.
 ms.date: 03/10/2022
-author: Dipesh-Choubisa
-ms.author: v-dchoubisa
-ms.custom: sap:Graphics and multimedia development
+author: HaiyingYu
+ms.author: haiyingyu
+ms.custom: sap:Graphics and multimedia development
 ms.reviewer: soshogoh
 ms.technology: windows-dev-apps-graphics-multimedia-dev
 ---

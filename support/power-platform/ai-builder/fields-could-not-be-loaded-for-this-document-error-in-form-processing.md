@@ -1,15 +1,17 @@
 ---
-title: Fields couldn't be loaded for this document error in a form processing model
-description: Provides a resolution for the error that occurs when fields couldn't be loaded in a form processing model.
+title: Fields couldn't be loaded for this document error in a document processing model
+description: Provides a resolution for the error that occurs when fields couldn't be loaded in a document processing model.
 ms.reviewer: angieandrews
 ms.topic: troubleshooting
 ms.date: 3/31/2021
 ms.subservice: 
+ms.author: angieandrews
+author: v-aangie
 ---
 
-# Fields couldn't be loaded for this document error in a form processing model
+# Fields couldn't be loaded for this document error in a document processing model
 
-This article provides a solution to an error that occurs when fields couldn't be loaded for a document in a form processing model.
+This article provides a solution to an error that occurs when fields couldn't be loaded for a document in a document processing model.
 
 _Applies to:_ &nbsp; Power Automate, Power Apps
 
@@ -37,4 +39,4 @@ If it’s a PDF with multiple pages, split the PDF documents with only the pages
 
 ## Resources
 
-For more information, see [Requirements and limitations for a form processing model](/ai-builder/form-processing-model-requirements).
+For more information, see [Requirements and limitations for a document processing model](/ai-builder/form-processing-model-requirements).

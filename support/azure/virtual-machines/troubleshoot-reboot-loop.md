@@ -1,11 +1,12 @@
 ---
-title: Windows reboot loop on an Azure VM | Microsoft Docs
-description: Learn how to troubleshoot Windows reboot loop | Microsoft Docs
+title: Windows reboot loop on an Azure VM
+description: Learn how to troubleshoot Windows reboot loop.
 services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows

@@ -30,7 +30,12 @@ Microsoft support professionals use to determine when a support case becomes a c
 ## More information
 
 > [!NOTE]
-> Typically, if the engineer spends more than 30 minutes on the issue, they will ask for an advisory/consulting service to be opened to continue assisting with the customization. Consulting services are handled through the Partner and can be opened by having the Partner send an email to the Microsoft Partner Advisory team. The engineer assigned to the new advisory request will provide a scope on how many Partner Advisory Hours (PAH hours) will be decremented for the service and this is the only form of currency accepted for the service. The service may be accepted or declined at that point. However, please note that if the original engineer worked on the original support case for more than 60 minutes, that case will remain as chargeable/decremented as well since research and testing were performed, regardless if the advisory service was accepted or not.
+> Typically, if the engineer spends more than 30 minutes on the issue, they will ask for an advisory/consulting service to be opened to continue assisting with the customization. Consulting services are handled through the Partner and can be opened by having the Partner send an email to the Microsoft Partner Advisory team.
+
+> [!IMPORTANT]
+> Advisory requests are no longer being accepted by Microsoft Dynamics GP Support. Support engineers will do the best they can to help you within a regular support case, within reason. However, they may use their judgement when to discontinue helping and close the case. (If they worked more than one hour on your issue, the case will remain chargeable, even if the issue is not resolved.) For any complex modifications or customizations, you must search for an ISV on your own for further assistance. Here is a link to help you search:
+>
+> [Dynamics ISV central](http://www.isv-central.com/search/products.aspx)
 
 ## Report Writer
 
@@ -88,9 +93,9 @@ If you need help for more than one of each function, the support case becomes a 
      Email: `support@eonesolutions.com`  
      Phone: 888-319-3663
 
-For **Microsoft Dynamics GP 2013 SP2 and prior versions,** SmartList Builder is supported by Microsoft Dynamics GP Support using the same criteria as defined in the [Smartlist Designer](#smartlist-designer) section below.  
+For **Microsoft Dynamics GP 2013 SP2 and prior versions,** SmartList Builder is supported by Microsoft Dynamics GP Support using the same criteria as defined in the [SmartList Designer](#smartlist-designer) section below.  
 
-## Smartlist Designer
+## SmartList Designer
 
 We offer step-by-step assistance for the following functions in a support case:
 
@@ -104,7 +109,7 @@ We offer step-by-step assistance for the following functions in a support case:
 
 If you need help for more than one of each function, the support case becomes a consulting engagement.
 
-SmartList Designer services that include a consulting engagement are subject to a one-hour minimum charge. Support professionals will try to create the customization that you request. However, some customizations cannot be created because of limitations in SmartList Builder or because of how data is stored in the database tables. So some customizations may not meet your exact specifications.
+SmartList Designer services that include a consulting engagement are subject to a one-hour minimum charge. Support professionals will try to create the customization that you request. However, some customizations can't be created because of limitations in SmartList Builder or because of how data is stored in the database tables. So some customizations may not meet your exact specifications.
 
 We support SmartList Designer queries that are customized for use with Microsoft Dynamics GP and with dictionaries that integrate with Microsoft Dynamics GP. These dictionaries include the following ones:
 
@@ -122,7 +127,7 @@ In a support case, we can provide information about the following attributes so 
 - Column names
 - Field values
 
-However, if you need help writing the SQL script, view or Business Alert, the support case becomes a consulting engagement. A request that takes more than 30 minutes to test and explain is considered a consulting engagement.
+However, if you need help with writing the SQL script, view or Business Alert, the support case becomes a consulting engagement. A request that takes more than 30 minutes to test and explain is considered a consulting engagement.
 
 > [!NOTE]
 > A blog article is available with sample SQL Views for various modules and could save you a lot of time: [Microsoft Dynamics GP SQL Views for Smartlist Designer to Enhance Reporting](https://community.dynamics.com/gp/b/dynamicsgp/posts/microsoft-dynamics-gp-sql-views-for-smartlist-designer-to-enhance-reporting)
@@ -139,7 +144,7 @@ We offer the following within a support case:
 We offer the following within a support case:
 
 - We can assist with Break/Fix for any sample that is available on the CustomerSource/PartnerSource sample downloads page.
-- Customizations coming from unsupported methods as found in community forums or blogs are not supported by Microsoft Technical support. Contact the forum or blog author for assistance with these types of issues.
+- Customizations coming from unsupported methods as found in community forums or blogs aren't supported by Microsoft Technical support. Contact the forum or blog author for assistance with these types of issues.
 
 ### Configurator File setup for eBanking modules
 
@@ -172,7 +177,7 @@ We offer the following assistance within a support case:
 
 - Create one calculated field on a single report in Report Writer.
 - Configure an existing Extender object.
-- Link an Extender object to a Smartlist.
+- Link an Extender object to a SmartList.
 - Create an Extender View.
  When the support case becomes a consulting engagement:
 - Data fixing is required.
@@ -181,14 +186,14 @@ We offer the following assistance within a support case:
 
 ### Workflow
 
-If you would like to create a condition for your workflow that isn't in Microsoft Dynamics GP by default, you can use the [Joining in Additional Tables for Workflow Conditions](https://community.dynamics.com/gp/b/dynamicsgpengineeringteamblog/posts/joining-in-additional-tables-for-workflow-conditions)  tool to help with the development of new workflow types or modifications of existing workflow types. This tool is supported in Microsoft Dynamics GP 2015 (14.00.0817) and later versions.  Support will be limited to creating one single line in a condition. If your customization for workflow takes more than 30 minutes to test and explain, it's considered a consulting service at the discretion of the Microsoft Engineer.
+If you would like to create a condition for your workflow that isn't in Microsoft Dynamics GP by default, you can use the [Joining in Additional Tables for Workflow Conditions](https://community.dynamics.com/gp/b/dynamicsgpengineeringteamblog/posts/joining-in-additional-tables-for-workflow-conditions) tool to help with the development of new workflow types or modifications of existing workflow types. This tool is supported in Microsoft Dynamics GP 2015 (14.00.0817) and later versions. Support will be limited to creating one single line in a condition. If your customization for workflow takes more than 30 minutes to test and explain, it's considered a consulting service at the discretion of the Microsoft Engineer.
 
 > [!NOTE]
 > Review [Microsoft Dynamics GP Workflow 2.0 AND & OR conditions when setting up approval steps.](https://community.dynamics.com/gp/b/dynamicsgp/posts/microsoft-dynamics-gp-workflow-2-0-and-amp-or-conditions-when-setting-up-approval-steps) to help with `And/Or` statements in workflow conditions.
 
 ## Additional information
 
-For more information about consulting engagements that involve Report Writer, SmartList Builder, Smartlist Designer, SSRS, or SQL script/view customizations, use one of the following methods, depending on whether you're a customer or a partner:
+For more information about consulting engagements that involve Report Writer, SmartList Builder, SmartList Designer, SSRS, or SQL script/view customizations, use one of the following methods, depending on whether you're a customer or a partner:
 
 - Customers
 
@@ -197,3 +202,8 @@ For more information about consulting engagements that involve Report Writer, Sm
 - Partners
 
     For more information about consulting services, contact Microsoft Advisory Services at 800-MPN-SOLVE.
+
+> [!IMPORTANT]
+> Advisory requests are no longer being accepted by Microsoft Dynamics GP Support. You must search for an ISV on your own to assist with any customizations. Here is a link to help you search:
+>
+> [Dynamics ISV central](http://www.isv-central.com/search/products.aspx)

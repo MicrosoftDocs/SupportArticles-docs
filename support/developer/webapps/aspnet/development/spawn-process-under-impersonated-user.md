@@ -168,24 +168,25 @@ Microsoft provides programming examples for illustration only, without warranty 
             commandLinePath = TextBox1.Text;
             PROCESS_INFORMATION pi = new PROCESS_INFORMATION();
             ret = CreateProcessAsUser(DupedToken,null,commandLinePath, ref sa, ref sa, false, 0, (IntPtr)0, "c:\\", ref si, out pi);
-        if (ret == false)
-        {
-            Label1.Text +="CreateProcessAsUser failed with " + Marshal.GetLastWin32Error();
-        }
-        else
-        {
-            Label1.Text +="CreateProcessAsUser SUCCESS. The child PID is" + pi.dwProcessId;
-            CloseHandle(pi.hProcess);
-            CloseHandle(pi.hThread);
-        }
-        ret = CloseHandle(DupedToken);
-        if (ret == false)
-        {
-            Label1.Text+=Marshal.GetLastWin32Error();
-        }
-        else
-        {
-            Label1.Text+="CloseHandle SUCCESS";
+            if (ret == false)
+            {
+                Label1.Text +="CreateProcessAsUser failed with " + Marshal.GetLastWin32Error();
+            }
+            else
+            {
+                Label1.Text +="CreateProcessAsUser SUCCESS. The child PID is" + pi.dwProcessId;
+                CloseHandle(pi.hProcess);
+                CloseHandle(pi.hThread);
+            }
+            ret = CloseHandle(DupedToken);
+            if (ret == false)
+            {
+                Label1.Text+=Marshal.GetLastWin32Error();
+            }
+            else
+            {
+                Label1.Text+="CloseHandle SUCCESS";
+            }
         }
     }
     ```

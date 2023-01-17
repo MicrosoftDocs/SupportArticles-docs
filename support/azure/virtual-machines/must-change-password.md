@@ -7,12 +7,13 @@ author: genlin
 manager: dcscontentpm
 tags: virtual-machines
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.devlang: azurecli
-ms.date: 09/10/2019
+ms.date: 07/29/2022
 ms.author: genli
 ---
 

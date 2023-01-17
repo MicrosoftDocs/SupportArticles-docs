@@ -14,5 +14,5 @@ Welcome to SQL Server troubleshooting. These articles explain how to determine, 
 
 ### Builds and Cumulative Updates available for SQL Server versions
 
-[Determine the version, edition, and update level of SQL Server and its components](general/determine-version-edition-update-level.md).
+[Latest updates and version history for SQL Server](../sql/releases/download-and-install-latest-updates.md).
 

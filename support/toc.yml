@@ -1,7 +1,7 @@
 - name: Index
   href: index.yml
 - name: Welcome
-  href: developer/dotnet/welcome-dotnet.md
+  href: developer/dotnet/welcome-dotnet-landing.yml
 - name: Welcome
   href: developer/host-integration-server/welcome-host-integration-server.md
 - name: Welcome

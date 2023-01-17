@@ -1,23 +1,23 @@
 ---
-title: SQL Server AlwaysOn protection fails with error 0x80990F75
-description: Fixes an issue where you receive error 0x80990F75 when attempting to protect a SQL Server AlwaysOn Availability Group in Data Protection Manager.
+title: SQL Server Always On protection fails with error 0x80990F75
+description: Fixes an issue where you receive error 0x80990F75 when attempting to protect a SQL Server Always On Availability Group in Data Protection Manager.
 ms.date: 07/24/2020
 ms.reviewer: dpmtechreview
 ---
-# SQL Server 2012 AlwaysOn protection in DPM fails with Internal error 0x80990F75
+# SQL Server 2012 Always On protection in DPM fails with Internal error 0x80990F75
 
-This article helps you fix an issue where you receive error 0x80990F75 when attempting to protect a SQL Server AlwaysOn Availability Group in Data Protection Manager (DPM).
+This article helps you fix an issue where you receive error 0x80990F75 when attempting to protect a SQL Server Always On Availability Group in Data Protection Manager (DPM).
 
 _Original product version:_ &nbsp; System Center 2012 Data Protection Manager  
 _Original KB number:_ &nbsp; 2769094
 
 ## Symptoms
 
-When attempting to protect a SQL Server AlwaysOn Availability Group using System Center 2012 Data Protection Manager, the job fails with the following error:
+When attempting to protect a SQL Server Always On Availability Group using System Center 2012 Data Protection Manager, the job fails with the following error:
 
 > The DPM job failed for SQL Server 2012 database \<*DBname*> on \<*serverName*> because the SQL Server instance **refused a connection to the protection agent. (ID 30172 Details: Internal error code: 0x80990F75)**
 
-In SQL Server, AlwaysOn is configured as follows:
+In SQL Server, Always On is configured as follows:
 
 - Availability Mode: **Synchronous Commit**
 - Failover Mode: **Automatic**
@@ -32,7 +32,7 @@ In general, **Prefer Secondary** backups should occur on a secondary replica exc
 
 ## Cause
 
-This occurs due to incorrect SQL Server AlwaysOn settings for DPM backups where **Make Readable Secondary** is set to **No**.
+This occurs due to incorrect SQL Server Always On settings for DPM backups where **Make Readable Secondary** is set to **No**.
 
 ## Resolution
 

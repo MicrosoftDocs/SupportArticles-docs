@@ -1,5 +1,5 @@
 ---
-title: Support for 32-bit operating systems in Azure virtual machines| Microsoft Docs
+title: Support for 32-bit operating systems in Azure virtual machines
 description: Information about operating systems that are supported on Azure virtual machines
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
@@ -7,6 +7,7 @@ author: genlin
 manager: dcscontentpm
 tags: top-support-issue, azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-support-statements
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows

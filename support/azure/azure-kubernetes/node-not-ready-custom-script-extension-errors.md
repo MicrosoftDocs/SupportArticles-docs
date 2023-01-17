@@ -5,7 +5,8 @@ ms.date: 4/15/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: rissing, chiragpa, momajed
-ms.service: container-service
+ms.service: azure-kubernetes-service
+ms.subservice: troubleshoot-node-not-ready
 #Customer intent: As an Azure Kubernetes user, I want to prevent custom script extension (CSE) errors so that I can avoid a Node Not Ready state within a node pool,  and avoid a Cluster Not in Succeeded state within Azure Kubernetes Service (AKS).
 ---
 # Troubleshoot node not ready failures caused by CSE errors

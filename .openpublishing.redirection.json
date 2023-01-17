@@ -1,6 +1,26 @@
 {
   "redirections": [
     {
+      "source_path": "support/windows-server/identity/support-for-admt-and-pes.md",
+      "redirect_url": "/troubleshoot/windows-server/identity/support-policy-and-known-issues-for-admt",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows/win32/change-windows-active-directory-user-password.md",
+      "redirect_url": "/troubleshoot/windows-server/identity/change-windows-active-directory-user-password",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/supply-chain/warehousing/scale-unit-warehouse-workload-installation-issues.md",
+      "redirect_url": "/dynamics365/supply-chain/cloud-edge/cloud-edge-landing-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/aibuilder-form-processing-is-not-extracting-tables-that-span-across-multiple-pages.md",
+      "redirect_url": "/ai-builder/create-form-processing-model#multipage-tables",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-server/networking/portqry-exe-command-line-utility.md",
       "redirect_url": "/troubleshoot/windows-server/networking/portqry-command-line-port-scanner-v2",
       "redirect_document_id": true
@@ -8,6 +28,11 @@
     {
       "source_path": "support/azure/active-directory/remove-duplicate-mobile-device-management.md",
       "redirect_url": "/troubleshoot/mem/intune/remove-duplicate-mobile-device-management",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-vpn-profiles.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/troubleshoot-vpn-profiles",
       "redirect_document_id": true
     },
     {
@@ -1356,11 +1381,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "support/dynamics-365/sales/cannot-send-email-as-another-user.md",
-      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/cannot-send-email-as-another-user",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "support/dynamics-365/sales/cannot-track-emails-in-crm-app-for-outlook.md",
       "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/cannot-track-emails-in-crm-app-for-outlook",
       "redirect_document_id": false
@@ -2374,6 +2394,3284 @@
       "source_path": "support/sql/connect/kerberos-configuration-manager-available.md",
       "redirect_url": "/troubleshoot/sql/connect/using-kerberosmngr-sqlserver",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-hardware/drivers/istidevicecontrol-getmydeviceportname-incorrect-port-name-multiple-usb.md",
+      "redirect_url": "/troubleshoot/windows-hardware/drivers/getmydeviceportname-returns-incorrect-port-name-usb-scanner",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-hardware/drivers/cant-scan-from-usb-scanner-after-win11-restarts.md",
+      "redirect_url": "/troubleshoot/windows-hardware/drivers/cant-scan-usb-scanner-after-win11-restarts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/user-profiles-and-logon/windows-identity-foundation.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/windows-identity-foundation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/device-licenses-introduction.md",
+      "redirect_url": "/mem/intune/fundamentals/licenses",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/small-file-handling-high-latency.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/web-apps-performance-faqs.md",
+      "redirect_url": "/troubleshoot/azure/app-service/web-apps-performance-faqs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/app-service-compliance-wit.md",
+      "redirect_url": "/troubleshoot/azure/app-service/app-service-compliance-wit",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/backing-up-restoring-and-cloning-microsoft-azure-app-services.md",
+      "redirect_url": "/troubleshoot/azure/app-service/backing-up-restoring-and-cloning-microsoft-azure-app-services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/web-apps-configuration-and-management-faqs.md",
+      "redirect_url": "/troubleshoot/azure/app-service/web-apps-configuration-and-management-faqs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/faqs-app-service-linux.md",
+      "redirect_url": "/troubleshoot/azure/app-service/faqs-app-service-linux",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/web-apps-open-source-technologies-faqs.md",
+      "redirect_url": "/troubleshoot/azure/app-service/web-apps-open-source-technologies-faqs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/temporary-storage-for-azure-app-service.md",
+      "redirect_url": "/troubleshoot/azure/app-service/temporary-storage-for-azure-app-service",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/troubleshoot-instance-related-issues-on-azure-app-service.md",
+      "redirect_url": "/troubleshoot/azure/app-service/troubleshoot-instance-related-issues-on-azure-app-service",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/web-apps-deployment-faqs.md",
+      "redirect_url": "/troubleshoot/azure/app-service/web-apps-deployment-faqs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/app-service/index.md",
+      "redirect_url": "/troubleshoot/azure/app-service/welcome-app-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/quote-exceeded-during-creation-upgrade.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/quota-exceeded-during-creation-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/data-restore-storage.md",
+      "redirect_url": "/azure/storage/blobs/data-protection-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/performance/winsock-lsp-network-problem.md",
+      "redirect_url": "/troubleshoot/sql/connect/winsock-lsp-network-problem",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/slow-query-performance-ssis-etl.md",
+      "redirect_url": "/troubleshoot/sql/integration-services/slow-query-performance-ssis-etl",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-monitor/index.yml",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/virtual-machines/rdp.md",
+      "redirect_url": "/troubleshoot/azure/virtual-machines/troubleshoot-rdp-connection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/log-analytics/welcome-log-analytics.yml",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-monitor/app-insights/welcome-application-insights.yml",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/log-analytics/erased-proxy-settings-microsoft-monitoring-agent.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/erased-proxy-settings-microsoft-monitoring-agent",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/error-code-0x80090016-keyset-does-not-exist.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/error-code-0x80090016-keyset-does-not-exist",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/linux-agent-missing-heartbeats.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/linux-agent-missing-heartbeats",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/linux-agent-performance-counter-missing.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/linux-agent-performance-counter-missing",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/mma-troubleshoot-basics.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/mma-troubleshoot-basics",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/resolve-windows-agent-installation-issues.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/resolve-windows-agent-installation-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/ssl-connectivity-mma-windows-powershell.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/ssl-connectivity-mma-windows-powershell",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/windows-could-not-start-mma.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/windows-could-not-start-mma",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/workspace-data-export-faq.yml",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/workspace-data-export-faq",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/troubleshoot-upgrade-errors.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-monitor/app-insights/troubleshoot-availability.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/diagnose-ping-test-failure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/reinstall-the-intune-connector.md",
+      "redirect_url": "/mem/intune/protect/certificate-connector-install",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-monitor/app-insights/snapshot-debugger-troubleshooting.md",
+      "redirect_url": "/azure/azure-monitor/snapshot-debugger/snapshot-debugger-troubleshoot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/atl-service-not-start.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/libraries/atl-service-not-start",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/debuggers/idebugaddress-getaddress-crash.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/debuggers/idebugaddress-getaddress-crash",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/language-compilers/no-warning-event-obsolete.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/no-warning-event-obsolete",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/mfc-enable-tablet-press-and-hold-gesture.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/mfc-enable-tablet-press-and-hold-gesture",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/project-build/cpp-2010-support-dotnet-4-target.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/project-build/cpp-2010-support-dotnet-4-target",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/debuggers/concurrency-visualizer-lost-kernel-user-mode-event.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/debuggers/concurrency-visualizer-lost-kernel-user-mode-event",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/bi-project-not-open-after-upgrade.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/general/bi-project-not-open-after-upgrade",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/help-viewer-power-tool.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/general/help-viewer-power-tool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/windows-automation-api-3-improve-visual-studio.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/general/windows-automation-api-3-improve-visual-studio",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/language-compilers/cannot-compile-32-bit-app-x64-machine.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/cannot-compile-32-bit-app-x64-machine",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/language-compilers/linker-fatal-error-out-of-memory.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/linker-fatal-error-out-of-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/language-compilers/building-solution-with-multiple-projects-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/building-solution-with-multiple-projects-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/ide/adjust-visual-experience-settings.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/ide/adjust-visual-experience-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/ide/atl-control-font-stock-not-update.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/ide/atl-control-font-stock-not-update",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/project-build/setup-project-depend-dotnet-framework.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/project-build/setup-project-depend-dotnet-framework",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/installation/known-issues-in-windows-8.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/install/known-issues-in-windows-8",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/installation/setup-issues-readme-file.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/install/setup-issues-readme-file",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/subscriptions/opt-out-of-dev-essentials.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/subscriptions/opt-out-of-dev-essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/vsa-tlb-not-loaded.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/general/vsa-tlb-not-loaded",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/application-exception-0xc0000094-vmware.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/application-exception-0xc0000094-vmware",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/drm-protected-subtitles-not-supported.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/drm-protected-subtitles-not-supported",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/playback-protected-video-content-fail-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/playback-protected-video-content-fail-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/run-configuration-tool.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/run-configuration-tool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/silverlight-not-work-google-chrome.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/silverlight-not-work-google-chrome",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/slsvcutil-tool-crashes.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/slsvcutil-tool-crashes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/type-characters-into-silverlight-textbox-richtextbox.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/type-characters-into-silverlight-textbox-richtextbox",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/update-available.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/update-available",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/general/determine-version-edition-update-level.md",
+      "redirect_url": "/troubleshoot/sql/releases/download-and-install-latest-updates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/app-management.yml",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/app-management",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/app-install-error-codes.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/app-install-error-codes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-app-install.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/troubleshoot-app-install",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-win32-app-install.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/troubleshoot-win32-app-install",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/app-installation-failed-error.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/app-installation-failed-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/apps-appear-unavailable.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/apps-appear-unavailable",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/develop-deliver-working-win32-app-via-intune.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/develop-deliver-working-win32-app-via-intune",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/corporate-data-unsaved-in-wip-allowed-apps.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/corporate-data-unsaved-in-wip-allowed-apps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/cannot-uninstall-apple-app-store-apps.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/cannot-uninstall-apple-app-store-apps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/onedrive-attaches-corporate-protected-data-imessage.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/onedrive-attaches-corporate-protected-data-imessage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/mismatch-error-configuration-value-ampersand.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/mismatch-error-configuration-value-ampersand",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/saving-images-locally-not-restricted.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/saving-images-locally-not-restricted",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/macos-lob-apps-not-deployed.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/macos-lob-apps-not-deployed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/error-0x87d13ba2-deploy-macos-lob-app.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/error-0x87d13ba2-deploy-macos-lob-app",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/cannot-install-macos-apps-and-run-shell-scripts.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/cannot-install-macos-apps-and-run-shell-scripts",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/application-could-not-be-wrapped.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/application-could-not-be-wrapped",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/removed-data-associated-with-app-error.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/removed-data-associated-with-app-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/discovered-apps-list-personal-apps.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/discovered-apps-list-personal-apps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/android-enterprise-enrolled-devices-fails-attaching-photo.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/android-enterprise-enrolled-devices-fails-attaching-photo",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/creating-message-action-not-allowed.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/creating-message-action-not-allowed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-google-apps.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/troubleshoot-google-apps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/invalid-address-open-web-app.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/invalid-address-open-web-app",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/managed-browser-policy-triggers-error-0x87d1fde8.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/managed-browser-policy-triggers-error-0x87d1fde8",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/only-one-app-policy-applied-edge-managed-browser.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/only-one-app-policy-applied-edge-managed-browser",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/save-application-failed-error.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/save-application-failed-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/apps-fail-sync-to-intune.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/apps-fail-sync-to-intune",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-app-protection-policy-deployment.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-protection-policies/troubleshoot-app-protection-policy-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-mam.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-protection-policies/troubleshoot-mam",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-data-transfer.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-protection-policies/troubleshoot-data-transfer",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/data-transfer-scenarios.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-protection-policies/data-transfer-scenarios",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/no-prompt-for-fingerprint-identity.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-protection-policies/no-prompt-for-fingerprint-identity",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-scep-certificate-profiles.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/troubleshoot-scep-certificate-profiles",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-scep-certificate-profile-deployment.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/troubleshoot-scep-certificate-profile-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-scep-certificate-delivery.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/troubleshoot-scep-certificate-delivery",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/cannot-assign-scep-certificates.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/cannot-assign-scep-certificates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/ios-scep-failure-no-getcacaps.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/ios-scep-failure-no-getcacaps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/certificateregistrationsvc-verify-request-error.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/certificateregistrationsvc-verify-request-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/devices-receive-scep-certificates-error-0x80094800.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/devices-receive-scep-certificates-error-0x80094800",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/scep-deployment-to-win10-devices-fails.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/scep-deployment-to-win10-devices-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/error-0x80090014-installing-ndes-certificate.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/error-0x80090014-installing-ndes-certificate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/fix-connectivity-issues.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/fix-connectivity-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/scep-certificate-request-fails.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/scep-certificate-request-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-scep-certificate-device-to-ndes.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/troubleshoot-scep-certificate-device-to-ndes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-scep-certificate-ndes-policy-module.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/troubleshoot-scep-certificate-ndes-policy-module",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-scep-certificate-reporting.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/troubleshoot-scep-certificate-reporting",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/verify-ndes-configuration.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/verify-ndes-configuration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-pkcs-certificate-profiles.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/troubleshoot-pkcs-certificate-profiles",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-certificate-connector-events.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/troubleshoot-certificate-connector-events",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/connector-setup-wizard-ends-prematurely.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/connector-setup-wizard-ends-prematurely",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/ndes-connector-signin-error-80004003.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/ndes-connector-signin-error-80004003",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/intune-connector-for-ad-not-appear.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/intune-connector-for-ad-not-appear",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/intune-connector-signin-unexpected-error.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/intune-connector-signin-unexpected-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-co-management-auto-enrolling.md",
+      "redirect_url": "/troubleshoot/mem/intune/comanage-configmgr/troubleshoot-co-management-auto-enrolling",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-co-management-bootstrap.md",
+      "redirect_url": "/troubleshoot/mem/intune/comanage-configmgr/troubleshoot-co-management-bootstrap",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-co-management-workloads.md",
+      "redirect_url": "/troubleshoot/mem/intune/comanage-configmgr/troubleshoot-co-management-workloads",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-policies-in-microsoft-intune.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-email-profiles-in-microsoft-intune.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/troubleshoot-email-profiles-in-microsoft-intune",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-wi-fi-profiles.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/troubleshoot-wi-fi-profiles",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/password-expiration-setting-not-working.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/password-expiration-setting-not-working",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-csp-custom-settings.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/troubleshoot-csp-custom-settings",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/deploy-oma-uris-to-target-csp-via-intune.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/deploy-oma-uris-to-target-csp-via-intune",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/device-configuration-profile-reports-error-2016281112.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/device-configuration-profile-reports-error-2016281112",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/enterprise-mode-site-list-not-deployed-win10.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/enterprise-mode-site-list-not-deployed-win10",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/users-cannot-logon-windows-multi-app-kiosk.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/users-cannot-logon-windows-multi-app-kiosk",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/windows-feature-updates-never-offered.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/windows-feature-updates-never-offered",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/2016341112-ios-device-is-currently-busy.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/2016341112-ios-device-is-currently-busy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/restriction-policy-not-blocking-personal-hotspot.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/restriction-policy-not-blocking-personal-hotspot",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/no-password-prompt-after-password-change.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/no-password-prompt-after-password-change",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/factory-reset-protection-emails-not-enforced.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/factory-reset-protection-emails-not-enforced",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/sip-address-password-not-saved.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/sip-address-password-not-saved",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/assign-password-setting-android-fully-managed.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/assign-password-setting-android-fully-managed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-device-enrollment-in-intune.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/troubleshoot-device-enrollment-in-intune",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/cannot-update-enrollment.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/cannot-update-enrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/devices-enroll-canceled-intune-subscription.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/devices-enroll-canceled-intune-subscription",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-android-enrollment.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/troubleshoot-android-enrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-android-certificates.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/troubleshoot-android-certificates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/device-ownership-changed-to-corporate.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/device-ownership-changed-to-corporate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/configure-android-enterprise-devices-intune.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/configure-android-enterprise-devices-intune",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-ios-enrollment-errors.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/troubleshoot-ios-enrollment-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/ios-devices-inactive.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/ios-devices-inactive",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/device-stuck-in-enrollment.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/device-stuck-in-enrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/profile-installation-failed.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/profile-installation-failed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/apple-dep-device-fails-auto-enrollment.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/apple-dep-device-fails-auto-enrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/dep-enrollment-xpc-type-error.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/dep-enrollment-xpc-type-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-macos-vm-enrollment.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/troubleshoot-macos-vm-enrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/keychain-error-enrolling-macos-devices.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/keychain-error-enrolling-macos-devices",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/understand-troubleshoot-esp.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/understand-troubleshoot-esp",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/azure-ad-device-registration-autopilot.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/azure-ad-device-registration-autopilot",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/import-windows-autopilot-device-csv-files-errors.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/import-windows-autopilot-device-csv-files-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/cannot-delete-autopilot-deployment-profile.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/cannot-delete-autopilot-deployment-profile",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-windows-enrollment-errors.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/troubleshoot-windows-enrollment-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/windows-user-cannot-enroll.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/windows-user-cannot-enroll",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-windows-work-school.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/troubleshoot-windows-work-school",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-windows-auto-enrollment.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/troubleshoot-windows-auto-enrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/windows10-enroll-error-80180002b.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/windows10-enroll-error-80180002b",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/no-permission-to-enroll-windows-devices.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/no-permission-to-enroll-windows-devices",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/mdm-enrollment-error-0xcaa9001f.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/mdm-enrollment-error-0xcaa9001f",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-sysprep-windows-10-device-enrolled-mdm.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/troubleshoot-sysprep-windows-10-device-enrolled-mdm",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/windows-failed-to-apply-mdm-policy.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/windows-failed-to-apply-mdm-policy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-device-actions.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-management/troubleshoot-device-actions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/remove-duplicate-mobile-device-management.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-management/remove-duplicate-mobile-device-management",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/orphaned-device-upn-shown-as-none.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-management/orphaned-device-upn-shown-as-none",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/help-desk-operator-fails-remote-tasks.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-management/help-desk-operator-fails-remote-tasks",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/intune-managed-ios-device-backup-encrypted.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-management/intune-managed-ios-device-backup-encrypted",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/remotewipe-fails-sending-dowipe-command.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-management/remotewipe-fails-sending-dowipe-command",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/cannot-sync-windows-10-devices.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-management/cannot-sync-windows-10-devices",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-conditional-access.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/troubleshoot-conditional-access",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-exchange-connector.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/troubleshoot-exchange-connector",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-exchange-connector-common-errors.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/troubleshoot-exchange-connector-common-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/could-not-retrieve-access-token.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/could-not-retrieve-access-token",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-jamf.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/troubleshoot-jamf",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/unable-to-connect-send-inventory-information.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/unable-to-connect-send-inventory-information",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-bitlocker-policies.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/troubleshoot-bitlocker-policies",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-bitlocker-admin-center.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/troubleshoot-bitlocker-admin-center",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/bitlocker-encrypted-device-not-compliant.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/bitlocker-encrypted-device-not-compliant",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/secure-boot-enabled-device-shows-not-compliant.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/secure-boot-enabled-device-shows-not-compliant",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/win10-devices-show-incorrect-compliance-status.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/win10-devices-show-incorrect-compliance-status",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/cannot-access-company-resources-on-dep.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/cannot-access-company-resources-on-dep",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/error-deploying-password-policy.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/error-deploying-password-policy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/intune-licensed-users-prompted-to-enroll.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/intune-licensed-users-prompted-to-enroll",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/intune-synced-attributes-list.md",
+      "redirect_url": "/troubleshoot/mem/intune/general/intune-synced-attributes-list",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-company-resource-access-problems.md",
+      "redirect_url": "/troubleshoot/mem/intune/general/troubleshoot-company-resource-access-problems",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-endpoint-protection-in-microsoft-intune.md",
+      "redirect_url": "/troubleshoot/mem/intune/general/troubleshoot-endpoint-protection-in-microsoft-intune",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/script-error-intune-setup.md",
+      "redirect_url": "/troubleshoot/mem/intune/general/script-error-intune-setup",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/error-query-intune-data-warehouse.md",
+      "redirect_url": "/troubleshoot/mem/intune/general/error-query-intune-data-warehouse",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/403-error-graph-explorer-query.md",
+      "redirect_url": "/troubleshoot/mem/intune/general/403-error-graph-explorer-query",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/nac-integration-errors.md",
+      "redirect_url": "/troubleshoot/mem/intune/general/nac-integration-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/before-you-call-intune-support.md",
+      "redirect_url": "/troubleshoot/mem/intune/get-support/before-you-call-intune-support",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/cannot-load-help-and-support-blade.md",
+      "redirect_url": "/troubleshoot/mem/intune/get-support/cannot-load-help-and-support-blade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshooting-blade-fails-loading.md",
+      "redirect_url": "/troubleshoot/mem/intune/get-support/troubleshooting-blade-fails-loading",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/long-line-causes-log-truncated.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/alerts-reports-queries/long-line-causes-log-truncated",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/cannot-edit-reports.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/alerts-reports-queries/cannot-edit-reports",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/obtain-error-code-descriptions.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/alerts-reports-queries/obtain-error-code-descriptions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/reports-not-run-as-expected.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/alerts-reports-queries/reports-not-run-as-expected",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/reporting-stops-working.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/alerts-reports-queries/reporting-stops-working",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/rsprocessingaborted-error-run-reports.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/alerts-reports-queries/rsprocessingaborted-error-run-reports",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/sql-query-times-out-or-console-slow-performance.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/alerts-reports-queries/sql-query-times-out-or-console-slow-performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/applications-not-deployed-to-users.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/app-management/applications-not-deployed-to-users",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/applications-not-deployed-to-windows10-arm64.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/app-management/applications-not-deployed-to-windows10-arm64",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/app-v-application-changes-not-included.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/app-management/app-v-application-changes-not-included",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/contributor-role-not-assigned-for-web-app.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/app-management/contributor-role-not-assigned-for-web-app",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/deploy-language-pack.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/app-management/deploy-language-pack",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/deployment-type-changes-deployed-unexpectedly.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/app-management/deployment-type-changes-deployed-unexpectedly",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshoot-microsoft-store-for-business-integration.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/app-management/troubleshoot-microsoft-store-for-business-integration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshoot-application-deployment.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/app-management/troubleshoot-application-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/install-configmgr-client-error-1603.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-installation/install-configmgr-client-error-1603",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/client-installation-error-1603.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-installation/client-installation-error-1603",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/client-installation-fails-without-bits.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-installation/client-installation-fails-without-bits",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/client-piloting-package-fails-after-site-expansion.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-installation/client-piloting-package-fails-after-site-expansion",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/configmgr-clients-reinstall-every-five-hours.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-installation/configmgr-clients-reinstall-every-five-hours",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/client-agent-installation-error-80041002.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-installation/client-agent-installation-error-80041002",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/mac-client-enrollment-fails.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-installation/mac-client-enrollment-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/mac-client-registration-fails.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-installation/mac-client-registration-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/policyagentinstanceprovider-warning-install-client.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-installation/policyagentinstanceprovider-warning-install-client",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/software-update-installations-stop-responding.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-installation/software-update-installations-stop-responding",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/support-for-mac-linux-and-unix-clients.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-installation/support-for-mac-linux-and-unix-clients",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/client-installation-fails-with-policyagentprovider-dll.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-installation/client-installation-fails-with-policyagentprovider-dll",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/configmgr-client-left-in-provisioning-mode.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/configmgr-client-left-in-provisioning-mode",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/inactive-clients-not-send-inventory.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/inactive-clients-not-send-inventory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/clients-not-receive-policy-data.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/clients-not-receive-policy-data",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/cannot-download-content-from-cmg.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/cannot-download-content-from-cmg",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/cmg-communication-error-403.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/cmg-communication-error-403",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/tenant-attach-component-not-connect-to-gateway.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/tenant-attach-component-not-connect-to-gateway",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/multiple-instances-of-unknown-computers-collection.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/multiple-instances-of-unknown-computers-collection",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/invalid-data-error-import-mof-file.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/invalid-data-error-import-mof-file",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/hardware-inventory-fails.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/hardware-inventory-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/remote-control-fails-error-c000012.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/remote-control-fails-error-c000012",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/sms-agent-host-not-automatically-restarted.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/sms-agent-host-not-automatically-restarted",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/software-metering-failed-start-prepdriver.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/software-metering-failed-start-prepdriver",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/turn-on-debuglogging-key.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/turn-on-debuglogging-key",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/upgrade-readiness-data-downloaded-continuously.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/upgrade-readiness-data-downloaded-continuously",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/console-stops-responding.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/console-management/console-stops-responding",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/console-crash-after-upgrade.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/console-management/console-crash-after-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/dcom-hardening-change-effect.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/console-management/dcom-hardening-change-effect",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/internal-error-2711-lp3076-during-console-installation.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/console-management/internal-error-2711-lp3076-during-console-installation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/unhandled-exception-launch-console.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/console-management/unhandled-exception-launch-console",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/windows-10-servicing-dashboard-empty.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/console-management/windows-10-servicing-dashboard-empty",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/configure-peer-cache.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/configure-peer-cache",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/deployment-property-change-not-saved.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/deployment-property-change-not-saved",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/anonymous-authentication-disabled.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/anonymous-authentication-disabled",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/app-v-apps-not-streamed-from-dp.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/app-v-apps-not-streamed-from-dp",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/boot-image-distribution-fails.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/boot-image-distribution-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/deployment-package-distribution-fails.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/deployment-package-distribution-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/content-distribution-error-80070070.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/content-distribution-error-80070070",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/content-distribution-idispatch-error.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/content-distribution-idispatch-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/use-neighbor-boundary-group-dp.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/use-neighbor-boundary-group-dp",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/slow-dp-installation-upgrade.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/slow-dp-installation-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/duplicate-rows-in-distributioncontentversion.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/duplicate-rows-in-distributioncontentversion",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/hash-mismatch-error-download-contentinfo-tar.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/hash-mismatch-error-download-contentinfo-tar",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/package-distribution-to-remote-dp-fails.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/package-distribution-to-remote-dp-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/windows-installer-source-list-update-fails.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/windows-installer-source-list-update-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/content-distribution-introduction.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/content-distribution-introduction",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/components-and-threads.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/components-and-threads",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/dp-installation-upgrade-configuration.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/dp-installation-upgrade-configuration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/content-library.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/content-library",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/understand-package-actions.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/understand-package-actions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshoot-content-distribution.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/troubleshoot-content-distribution",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/advanced-troubleshooting-tips.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/content-management/advanced-troubleshooting-tips",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/drs-performance-issue-after-installing-hotfix-3125525.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/data-transfer-sites/drs-performance-issue-after-installing-hotfix-3125525",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshoot-database-replication-service-issues.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/data-transfer-sites/troubleshoot-database-replication-service-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/diagnostics-sdp.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/diagnostics/diagnostics-sdp",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/failed-devices-client-health-dashboard.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/diagnostics/failed-devices-client-health-dashboard",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/lastlogontimestamp-not-accurate.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/discovery/lastlogontimestamp-not-accurate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/resource-domain-changes.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/discovery/resource-domain-changes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/incorrect-endpoint-definition-status.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/endpoint-protection/incorrect-endpoint-definition-status",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/antimalware-definition-files-not-updated.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/endpoint-protection/antimalware-definition-files-not-updated",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/install-endpoint-protection-for-linux.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/endpoint-protection/install-endpoint-protection-for-linux",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/microsoft-network-inspection-service-stopped.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/endpoint-protection/microsoft-network-inspection-service-stopped",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/configmgr-console-shows-out-of-date-values.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/endpoint-protection/configmgr-console-shows-out-of-date-values",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/recommended-antivirus-exclusions.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/endpoint-protection/recommended-antivirus-exclusions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/support-policies-for-azure-virtual-machines.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/endpoint-protection/support-policies-for-azure-virtual-machines",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshooting-reference.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/mdt/troubleshooting-reference",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/mobile-device-management-installation-errors.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/mdm/mobile-device-management-installation-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/communication-continues-after-subscription-removal.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/mdm/communication-continues-after-subscription-removal",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/initialize-ca-error-edit-device-enrollment-profile.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/mdm/initialize-ca-error-edit-device-enrollment-profile",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/custom-port-settings-not-added-to-boot-media.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/custom-port-settings-not-added-to-boot-media",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/not-enough-memory-resources-create-media.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/not-enough-memory-resources-create-media",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/scheduled-updates-fails-error-0x800700a1.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/scheduled-updates-fails-error-0x800700a1",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/error-managing-boot-images.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/error-managing-boot-images",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/windows-11-image-capture-fail.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/windows-11-image-capture-fail",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/configure-operating-system-deployment.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/configure-operating-system-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/fail-to-import-drivers.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/fail-to-import-drivers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/insufficient-permissions-to-migrate-driver-package.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/insufficient-permissions-to-migrate-driver-package",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/signed-drivers-shown-as-unsigned.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/signed-drivers-shown-as-unsigned",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/pxe-enabled-dp-generates-many-files.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/pxe-enabled-dp-generates-many-files",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/advanced-troubleshooting-pxe-boot.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/advanced-troubleshooting-pxe-boot",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/boot-from-pxe-server.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/boot-from-pxe-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/certificate-not-updated-on-pxe-dp.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/certificate-not-updated-on-pxe-dp",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/pxe-boot-not-work.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/pxe-boot-not-work",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshoot-pxe-boot-issues.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/troubleshoot-pxe-boot-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/understand-pxe-boot.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/understand-pxe-boot",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/pxe-boot-causes-wds-crash.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/pxe-boot-causes-wds-crash",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/pxe-enabled-remote-dp-not-start-wds.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/pxe-enabled-remote-dp-not-start-wds",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/unknown-computer-object-guid-stolen.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/unknown-computer-object-guid-stolen",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/active-users-groups-unexpectedly-deleted.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/active-users-groups-unexpectedly-deleted",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/cannot-create-mdt-task-sequence.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/cannot-create-mdt-task-sequence",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/in-place-upgrade-task-sequence-not-continue.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/in-place-upgrade-task-sequence-not-continue",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/apply-driver-package-task-error-80070057.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/apply-driver-package-task-error-80070057",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/computer-hangs-task-sequence-debug-mode.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/computer-hangs-task-sequence-debug-mode",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/dynamic-media-cannot-get-mp-locations.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/dynamic-media-cannot-get-mp-locations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/enable-bitlocker-task-fails-error-80070057.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/enable-bitlocker-task-fails-error-80070057",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/capture-user-state-task-fails.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/capture-user-state-task-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/get-network-captures-from-task-sequence.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/get-network-captures-from-task-sequence",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/no-mouse-cursor-during-osd-task-sequence.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/no-mouse-cursor-during-osd-task-sequence",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/osdresults-not-display-installed-applications.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/osdresults-not-display-installed-applications",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/sending-with-winhttp-failed-80072f8f-error.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/sending-with-winhttp-failed-80072f8f-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/slow-task-sequence-with-earlier-client-version.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/slow-task-sequence-with-earlier-client-version",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/task-sequence-fails-multiple-restarts.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/task-sequence-fails-multiple-restarts",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/osd-task-sequence-fails-error-80070005.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/osd-task-sequence-fails-error-80070005",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/task-sequence-fails-error-0x87d01004.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/task-sequence-fails-error-0x87d01004",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/task-sequence-stops-after-in-place-upgrade.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/task-sequence-stops-after-in-place-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/os-deployment-task-sequence-not-continue.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/os-deployment-task-sequence-not-continue",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/debug-deployment-not-displayed.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/debug-deployment-not-displayed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshoot-install-application-step.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/troubleshoot-install-application-step",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/required-versions-windows-deployment.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/os-deployment/required-versions-windows-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/mbam-setup-fails-with-prerequisite-check.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/mbam-setup-fails-with-prerequisite-check",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/not-found-error-editing-maintenance-task.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/not-found-error-editing-maintenance-task",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/central-administration-site-setup-fails.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/central-administration-site-setup-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/connectivity-issues-digicert-global-root-g2-not-installed.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/connectivity-issues-digicert-global-root-g2-not-installed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/enable-mfa-for-sms-provider-calls.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/enable-mfa-for-sms-provider-calls",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/management-points-stop-responding.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/management-points-stop-responding",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/management-points-fail-http-500-errors.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/management-points-fail-http-500-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/service-connection-point-not-download-updates.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/service-connection-point-not-download-updates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/state-message-processing-performance.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/state-message-processing-performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/sms-executive-service-crashes.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/sms-executive-service-crashes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/cannot-create-software-update-package.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/cannot-create-software-update-package",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/failed-to-find-folder-or-file-error.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/failed-to-find-folder-or-file-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/function-sequence-error.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/function-sequence-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/site-system-installation-account-used-for-db-connection.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/site-system-installation-account-used-for-db-connection",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/sql-cus-must-be-installed-on-secondary-sites.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/sql-cus-must-be-installed-on-secondary-sites",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/support-policy-for-manual-database-changes.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/support-policy-for-manual-database-changes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/smsdbmon-repeatedly-logs-warnings.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/smsdbmon-repeatedly-logs-warnings",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/changes-to-built-in-collections-overwritten.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/changes-to-built-in-collections-overwritten",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/clients-automatically-upgrade.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/clients-automatically-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/service-connection-tool-not-download-updates.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/service-connection-tool-not-download-updates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/offline-servicing-lcu-may-fail.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/offline-servicing-lcu-may-fail",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/site-upgrade-blocked-in-database-update.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/site-upgrade-blocked-in-database-update",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/upgrade-to-configmgr-2012-sp1.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/upgrade-to-configmgr-2012-sp1",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/understand-troubleshoot-updates-servicing.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/understand-troubleshoot-updates-servicing",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/maintenance-tasks-default-settings.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/maintenance-tasks-default-settings",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/bad-gateway-error-deploy-software-updates.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/bad-gateway-error-deploy-software-updates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/clients-not-get-software-updates.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/clients-not-get-software-updates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/different-software-updates-results-displayed.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/different-software-updates-results-displayed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/errors-servicing-server-group.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/errors-servicing-server-group",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/error-0x800f0831-installing-update.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/error-0x800f0831-installing-update",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/dotnet-framework-updates-fail-to-sync.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/dotnet-framework-updates-fail-to-sync",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/adr-updates-download-failure.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/adr-updates-download-failure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/state-messaging-description.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/state-messaging-description",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/software-updates-introduction.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/software-updates-introduction",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/software-update-maintenance.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/software-update-maintenance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/software-update-point-installation-configuration.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/software-update-point-installation-configuration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/wsus-configuration-manager.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/wsus-configuration-manager",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/track-software-update-synchronization.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/track-software-update-synchronization",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/track-software-update-compliance-assessment.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/track-software-update-compliance-assessment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/track-software-update-deployment-process.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/track-software-update-deployment-process",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/enable-verbose-logging.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/enable-verbose-logging",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshoot-software-update-management.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/troubleshoot-software-update-management",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshoot-software-update-synchronization.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/troubleshoot-software-update-synchronization",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshoot-software-update-scan-failures.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/troubleshoot-software-update-scan-failures",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshoot-software-update-deployments.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/troubleshoot-software-update-deployments",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/decline-superseded-updates.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/decline-superseded-updates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/deploy-definition-updates-using-wsus.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/deploy-definition-updates-using-wsus",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/error-80244007-when-wsus-client-scans-updates.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/error-80244007-when-wsus-client-scans-updates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/high-network-bandwidth-usage.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/high-network-bandwidth-usage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/optimize-wsus-client-performance.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/optimize-wsus-client-performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/reindex-the-wsus-database.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/reindex-the-wsus-database",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/spdeleteupdate-slow-performance.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/spdeleteupdate-slow-performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshoot-issues-with-wsus-client-agents.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/troubleshoot-issues-with-wsus-client-agents",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshoot-wsus-connection-failures.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/troubleshoot-wsus-connection-failures",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshoot-wsus-server-high-cpu-usage.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/troubleshoot-wsus-server-high-cpu-usage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/troubleshoot-wsus-import-sync-issues.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/troubleshoot-wsus-import-sync-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/wsus-and-windows-update-agent-diagnostics.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/wsus-and-windows-update-agent-diagnostics",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/windows-server-update-services-best-practices.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/windows-server-update-services-best-practices",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/wsus-client-computers-restart-automatically.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/wsus-client-computers-restart-automatically",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/wsus-client-long-time-finish-update-scan.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/wsus-client-long-time-finish-update-scan",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/wsus-console-crashes.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/wsus-console-crashes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/wsus-maintenance-guide.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/wsus-maintenance-guide",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/wsus-not-sync-with-certificate-error-800B0109.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/wsus-not-sync-with-certificate-error-800B0109",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/wsus-synchronization-fails-with-soapexception.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/update-management/wsus-synchronization-fails-with-soapexception",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/best-practices-when-updating-a-flow.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/connections/best-practices-when-updating-a-flow",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/custom-connectors-not-show-refresh-url.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/connections/custom-connectors-not-show-refresh-url",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/blocked-frame-with-origin-uci.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/blocked-frame-with-origin-uci",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/cookies-pop-up-blocker-error.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/cookies-pop-up-blocker-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/custom-pages-sdk-script-not-load.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/custom-pages-sdk-script-not-load",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/filter-blank-records.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/filter-blank-records",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/lookup-does-not-filter-entity-records.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/lookup-does-not-filter-entity-records",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/no-navigation-when-selecting-button.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/no-navigation-when-selecting-button",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/regenerate-ribbon-metadata.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/regenerate-ribbon-metadata",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/ribbon-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/ribbon-issues-button-hidden.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues-button-hidden",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/ribbon-issues-button-not-working-correctly.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues-button-not-working-correctly",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/ribbon-issues-button-visible.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues-button-visible",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/web-api-client-errors.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/dataverse-web-api/web-api-client-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/common-issues-and-resolutions.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/isolate-and-troubleshoot-common-issues/common-issues-and-resolutions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-canvas-app-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-canvas-app-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-common-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-common-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-model-app-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-model-app-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/minimal-canvas-app-repro.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/isolate-and-troubleshoot-common-issues/minimal-canvas-app-repro",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/troubleshooting-startup-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/isolate-and-troubleshoot-common-issues/troubleshooting-startup-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/troubleshoot-power-query-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/isolate-and-troubleshoot-common-issues/troubleshoot-power-query-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/cannot-import-solutions-publish-changes.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/manage-apps-and-solutions/cannot-import-solutions-publish-changes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/dataverse-environment-variables.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/manage-apps-and-solutions/dataverse-environment-variables",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/dataverse-records-missing-required-fields.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/manage-apps-and-solutions/dataverse-records-missing-required-fields",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/wrap-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/manage-apps-and-solutions/wrap-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/india/apac-ind-gst-troubleshooting-default-value-in-tax-information-not-expected.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/apac-ind-gst-troubleshooting-default-value-in-tax-information-not-expected",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/india/apac-ind-gst-troubleshooting-setoff-rule-activate-take-long-time.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/apac-ind-gst-troubleshooting-setoff-rule-activate-take-long-time",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/india/apac-ind-gst-troubleshooting-field-value-incorrect-gstr-report-result.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/apac-ind-gst-troubleshooting-field-value-incorrect-gstr-report-result",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/india/apac-ind-gst-troubleshooting-invoice-journal-wrong.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/apac-ind-gst-troubleshooting-invoice-journal-wrong",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/india/apac-ind-gst-troubleshooting-open-designer-current-used-tax-configuration.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/apac-ind-gst-troubleshooting-open-designer-current-used-tax-configuration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/india/apac-ind-gst-troubleshooting-ledger-account-voucher-wrong.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/apac-ind-gst-troubleshooting-ledger-account-voucher-wrong",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/india/apac-ind-gst-troubleshooting-records-fields-not-showing-gstr-report.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/apac-ind-gst-troubleshooting-records-fields-not-showing-gstr-report",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/india/apac-ind-gst-troubleshooting-setoff-rule-error-transactions-on-voucher-not-balance.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/apac-ind-gst-troubleshooting-setoff-rule-error-transactions-on-voucher-not-balance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/india/troubleshoot-tax-engine-gte-issues.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/troubleshoot-tax-engine-gte-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/india/apac-ind-gst-troubleshooting-tax-amount-wrong-after-calculation.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/apac-ind-gst-troubleshooting-tax-amount-wrong-after-calculation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/india/apac-ind-gst-troubleshooting-tax-configuration-errors.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/apac-ind-gst-troubleshooting-tax-configuration-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/india/apac-ind-gst-troubleshooting-tax-not-calculated.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/apac-ind-gst-troubleshooting-tax-not-calculated",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/india/apac-ind-gst-troubleshooting-taxtrans-or-voucher-not-generated.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/apac-ind-gst-troubleshooting-taxtrans-or-voucher-not-generated",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/india/apac-ind-gst-troubleshooting-tax-transaction-id-incorrect.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/apac-ind-gst-troubleshooting-tax-transaction-id-incorrect",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/sales-tax/sales-tax-troubleshooting-field-value-taxtrans-incorrect.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/sales-tax-troubleshooting-field-value-taxtrans-incorrect",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/sales-tax/sales-tax-troubleshooting-tax-not-calculated-amount-zero.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/sales-tax-troubleshooting-tax-not-calculated-amount-zero",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/sales-tax/sales-tax-troubleshooting-tax-calculation-bad-performance.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/sales-tax-troubleshooting-tax-calculation-bad-performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/sales-tax/sales-tax-troubleshooting-taxtrans-record-not-generated.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/sales-tax-troubleshooting-taxtrans-record-not-generated",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/sales-tax/sales-tax-troubleshooting-tax-posted-to-wrong-ledger-account.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/sales-tax-troubleshooting-tax-posted-to-wrong-ledger-account",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/finance/sales-tax/sales-tax-troubleshooting-voucher-not-generated.md",
+      "redirect_url": "/troubleshoot/dynamics-365/finance/tax/sales-tax-troubleshooting-voucher-not-generated",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/connect/login-failed-for-user.md",
+      "redirect_url": "/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/log-shipping/configure-security-log-shipping.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/log-shipping/configure-security-log-shipping",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/log-shipping/logshipping-monitor-14420-error.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/log-shipping/logshipping-monitor-14420-error",
+      "redirect_document_id": true
+    },
+    { 
+      "source_path": "support/sql/admin/sql-server-startup-errors.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/sql-server-startup-errors",
+      "redirect_document_id": true
+    },
+    { 
+      "source_path": "support/sql/admin/event-id-7000-access-denied.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/event-id-7000-access-denied",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-17113-start-service.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/error-17113-start-service",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-17182-protocols-disabled-start-failure.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/error-17182-protocols-disabled-start-failure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/agent-service-fails-start-stand-alone-server.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/agent-service-fails-start-stand-alone-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-1069-service-cannot-start.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/error-1069-service-cannot-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/event-id-17058-start-sql-server.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/event-id-17058-start-sql-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/event-id-1814-fail-start.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/event-id-1814-fail-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/event-id-33565-start-sql-server.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/event-id-33565-start-sql-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/event-id-33566-start-sql-server.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/event-id-33566-start-sql-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/event-id-7000-fail-start.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/event-id-7000-fail-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/manage-error-log.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/manage-error-log",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/fails-start-error-17182.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/fails-start-error-17182",
+      "redirect_document_id": true
+    },
+     {
+      "source_path": "support/sql/admin/sql-cannot-start-with-domain-account.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/sql-cannot-start-with-domain-account",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/service-cannot-start.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/service-cannot-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/sql-server-agent-crashes-upon-start.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/sql-server-agent-crashes-upon-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/stats-only-db-script.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/stats-only-db-script",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/performance-issues-using-columstore-indexes-large-pages.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/performance-issues-using-columstore-indexes-large-pages",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/memory-optimized-tempdb-out-of-memory.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/memory-optimized-tempdb-out-of-memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/non-yielding-error-lock-pages-disable.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/non-yielding-error-lock-pages-disable",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/filtered-index-with-column-is-null.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/filtered-index-with-column-is-null",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-slow-running-queries.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-slow-running-queries",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-high-cpu-usage-issues.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-high-cpu-usage-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-sql-io-performance.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-sql-io-performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/token-and-perm-user-store-perf-issue.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/token-and-perm-user-store-perf-issue",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-query-timeouts.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-query-timeouts",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-query-perf-between-servers.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-query-perf-between-servers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-application-slow-ssms-fast.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-application-slow-ssms-fast",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/decreased-query-perf-after-upgrade.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/decreased-query-perf-after-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/understand-resolve-blocking.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/understand-resolve-blocking",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/recommended-updates-configuration-options.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/recommended-updates-configuration-options",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/recommended-updates-configuration-workloads.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/recommended-updates-configuration-workloads",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/resolve-pagelatch-ex-contention.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/resolve-pagelatch-ex-contention",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-memory-issues.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-memory-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-never-ending-query.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-never-ending-query",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-query-async-network-io.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-query-async-network-io",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/buffer-pool-scan-runs-slowly-large-memory-machines.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/buffer-pool-scan-runs-slowly-large-memory-machines",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/recommendations-reduce-allocation-contention.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/recommendations-reduce-allocation-contention",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-blocking-caused-compile-locks.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-blocking-caused-compile-locks",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/resolve-blocking-problems-caused-lock-escalation.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/resolve-blocking-problems-caused-lock-escalation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/blocked-column-populated-latch-waits.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/blocked-column-populated-latch-waits",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/decreased-performance-use-efs.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/decreased-performance-use-efs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/decreased-performance-run-aggregating-clause.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/decreased-performance-run-aggregating-clause",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/performance-consistency-issues-filter-drivers-modules.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/performance-consistency-issues-filter-drivers-modules",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/decreased-perf-high-cpu-optimized-nested-loop.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/decreased-perf-high-cpu-optimized-nested-loop",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/resource-monitor-nonyielding-condition.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/resource-monitor-nonyielding-condition",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/schemamgr-store-degrades-performance.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/schemamgr-store-degrades-performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/upgrade-compatibility-level-degrades-performance.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/upgrade-compatibility-level-degrades-performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/dbcc-memorystatus-monitor-memory-usage.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/dbcc-memorystatus-monitor-memory-usage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-entire-sqlserver-slow.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-entire-sqlserver-slow",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-optimizer-timeout-performance.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-optimizer-timeout-performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/troubleshoot-performance-narrow-vs-wide-plans.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/troubleshoot-performance-narrow-vs-wide-plans",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/701-error-large-batches.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/701-error-large-batches",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/availability-groups/error-9002-transaction-log-large.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/error-9002-transaction-log-large",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/availability-groups/alwayson-availability-databases-recovery-pending-suspect.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/alwayson-availability-databases-recovery-pending-suspect",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/availability-groups/error-2767-query-secondary-replica-fails.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/error-2767-query-secondary-replica-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/availability-groups/error-41041-change-hostname.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/error-41041-change-hostname",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/availability-groups/query-performance-degradation.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/query-performance-degradation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/availability-groups/troubleshooting-automatic-failover-problems.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/troubleshooting-automatic-failover-problems",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/availability-groups/troubleshooting-alwayson-issues.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/troubleshooting-alwayson-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/availability-groups/error-41131-create-availability-group.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/error-41131-create-availability-group",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/availability-groups/listener-connection-times-out.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/listener-connection-times-out",
+      "redirect_document_id": true
+    },
+
+    {
+      "source_path": "support/sql/admin/assertion-execute-bulk-insert-bcp.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-mirroring/assertion-execute-bulk-insert-bcp",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-mirroring/mirrored-databases-disconnected.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-mirroring/mirrored-databases-disconnected",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/assertion-partner-servers-using-mirroring.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-mirroring/assertion-partner-servers-using-mirroring",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/run-dll-based-com-object.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/development/run-dll-based-com-object",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/cardinality-estimator-degrades-query-performance.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/cardinality-estimator-degrades-query-performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/nonrecoverable-io-error-backup-url.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/nonrecoverable-io-error-backup-url",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/tde-enabled-database-not-recover.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/tde-enabled-database-not-recover",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/access-violations-memory-dump-files.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/access-violations-memory-dump-files",
+      "redirect_document_id": true
+    },   
+    {
+      "source_path": "support/sql/admin/asr-agent-vss-backup-fails.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/asr-agent-vss-backup-fails",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/sql/admin/revocery-jobs-fail-servers.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/revocery-jobs-fail-servers",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/sql/admin/backup-database-using-vss-backup-application.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/backup-database-using-vss-backup-application",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/sql/admin/backup-operation-backup-history-table.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/backup-operation-backup-history-table",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/behavior-compressed-backups.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/behavior-compressed-backups",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-3156-restore-database.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/error-3156-restore-database",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-after-perform-tde-certificate-key-rotation.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/error-after-perform-tde-certificate-key-rotation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-backing-up-memory-database.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/error-backing-up-memory-database",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-when-you-create-a-snapshot.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/error-when-you-create-a-snapshot",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/restore-recovery-may-fail.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/restore-recovery-may-fail",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/schedule-automate-backup-database.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/schedule-automate-backup-database",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/backup-restore-operations.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/backup-restore-operations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-33111-restore-issues-sql-connector.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/error-33111-restore-issues-sql-connector",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/connect/resolve-connectivity-errors-overview.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/resolve-connectivity-errors-overview",
+      "redirect_document_id": true
+    },   
+    {
+      "source_path": "support/sql/connect/certificate-chain-not-trusted.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/certificate-chain-not-trusted",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/sql/connect/resolve-connectivity-errors-checklist.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/resolve-connectivity-errors-checklist",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/sql/connect/cannot-generate-sspi-context-error.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/cannot-generate-sspi-context-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/connect/tls-exist-connection-closed.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/tls-exist-connection-closed",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/connect/timeout-expired-error.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/timeout-expired-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/connect/cannot-connect-remotely.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/cannot-connect-remotely",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/connect/error-message-when-you-connect.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/error-message-when-you-connect",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/connect/winsock-lsp-network-problem.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/winsock-lsp-network-problem",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/connect/static-or-dynamic-port-config.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/static-or-dynamic-port-config",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/connect/using-kerberosmngr-sqlserver.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/using-kerberosmngr-sqlserver",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/connect/test-oledb-connectivity-use-udl-file.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/test-oledb-connectivity-use-udl-file",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/connect/using-portqrytool-sqlserver.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/using-portqrytool-sqlserver",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/activation-runs-over-limit.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/development/activation-runs-over-limit",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/assembly-name-cannot-migrated-error.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/development/assembly-name-cannot-migrated-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-run-clr-object-create-assembly.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/development/error-run-clr-object-create-assembly",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/cannot-make-remote-connection-clr-trigger.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/development/cannot-make-remote-connection-clr-trigger",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/execution-clr-fails-typeInitializationexception.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/development/execution-clr-fails-typeInitializationexception",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/iterate-through-result-set.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/development/iterate-through-result-set",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/query-typecasts-a-unicode-column.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/development/query-typecasts-a-unicode-column",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/remove-duplicate-rows-sql-server-tab.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/development/remove-duplicate-rows-sql-server-tab",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/rotate-table.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/development/rotate-table",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/timeout-issues-deploy-clr-objects.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/development/timeout-issues-deploy-clr-objects",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/use-extended-sp-oa-stored-procedure.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/development/use-extended-sp-oa-stored-procedure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/error-556-insert-exec-failed.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/general/error-556-insert-exec-failed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/sql-server-azure-sql-database-improvements.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/general/sql-server-azure-sql-database-improvements",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-design/policy-untested-net-framework-assemblies.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/general/policy-untested-net-framework-assemblies",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/machine-learning/inconsistent-results-mkl-computations-missing-variable.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/machine-learning/inconsistent-results-mkl-computations-missing-variable",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/full-text-search-engine-japanese-language.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/search/full-text-search-engine-japanese-language",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/dashes-ignored-search-full-text-msidxs-queries.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/search/dashes-ignored-search-full-text-msidxs-queries",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-0x80040e97-using-full-text-search.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/search/error-0x80040e97-using-full-text-search",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/full-text-index-do-not-index-attribute-values.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/search/full-text-index-do-not-index-attribute-values",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/full-text-indexes-populate-slowly.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/search/full-text-indexes-populate-slowly",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/improve-performance-full-text-queries.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/search/improve-performance-full-text-queries",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/words-not-returned-by-english-word-breaker.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/search/words-not-returned-by-english-word-breaker",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/block-remote-use-local-accounts.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/block-remote-use-local-accounts",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/create-database-permission-logged.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/create-database-permission-logged",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/always-encrypted-database-connection-fail.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/always-encrypted-database-connection-fail",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/error-disable-guest-user.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/error-disable-guest-user",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/fix-permission-issues-move-msdb.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/fix-permission-issues-move-msdb",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/transfer-logins-passwords-between-instances.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/transfer-logins-passwords-between-instances",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/use-pfx-formatted-certificates.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/use-pfx-formatted-certificates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/sql-2014-fips-140-2-compliant-mode.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/sql-2014-fips-140-2-compliant-mode",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/sql-2016-fips-140-2-compliant-mode.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/sql-2016-fips-140-2-compliant-mode",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/security/instructions-in-fips-140-2-compliant-mode.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/security/instructions-in-fips-140-2-compliant-mode",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/database-mail-fails-send-message.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-mail/database-mail-fails-send-message",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/configure-permissions-access-remote-data.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/linked-servers/configure-permissions-access-remote-data",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/crashes-run-oracle-linked-server-query.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/linked-servers/crashes-run-oracle-linked-server-query",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/pass-variable-linked-server-query.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/linked-servers/pass-variable-linked-server-query",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/set-up-troubleshoot-linked-server.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/linked-servers/set-up-troubleshoot-linked-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/error-message-ole-db-provider.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/linked-servers/error-message-ole-db-provider",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/performance/decreased-performance-linkedserver-views.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/linked-servers/decreased-performance-linkedserver-views",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/io-subsystem-requirements-tempdb.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/io-subsystem-requirements-tempdb",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/diagnostics-for-unreported-io-problems.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/diagnostics-for-unreported-io-problems",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/latch-timeout-running-dbcc-checkdb.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/latch-timeout-running-dbcc-checkdb",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/logging-data-storage-algorithms.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/logging-data-storage-algorithms",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/space-table-uses-not-released.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/space-table-uses-not-released",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/support-databases-compressed-volumes.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/support-databases-compressed-volumes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/support-network-database-files.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/support-network-database-files",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/support-iscsi-technology-components.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/support-iscsi-technology-components",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/transaction-log-file-not-grow.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/transaction-log-file-not-grow",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/troubleshoot-dbcc-checkdb-errors.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/troubleshoot-dbcc-checkdb-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/virtual-host-driver-lead-data-consistency.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/virtual-host-driver-lead-data-consistency",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/1450-and-665-errors-running-dbcc-checkdb.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/1450-and-665-errors-running-dbcc-checkdb",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/17053-and-926-errors-running-dbcc-check.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/17053-and-926-errors-running-dbcc-check",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/8967-8921-errors-running-dbcc-checkdb.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/8967-8921-errors-running-dbcc-checkdb",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/considerations-autogrow-autoshrink.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/considerations-autogrow-autoshrink",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/database-engine-input-output-requirements.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/database-engine-input-output-requirements",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/defragmenting-database-disk-drives.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/defragmenting-database-disk-drives",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/troubleshoot-os-4kb-disk-sector-size.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/database-file-operations/troubleshoot-os-4kb-disk-sector-size",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/failover-clusters/cluster-resource-goes-failed-state.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/failover-clusters/cluster-resource-goes-failed-state",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/failover-clusters/error-install-sql-server-windows-server-cluster.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/failover-clusters/error-install-sql-server-windows-server-cluster",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/failover-clusters/create-databases-change-disk-file-locations.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/failover-clusters/create-databases-change-disk-file-locations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/failover-clusters/install-sql-server-2016-on-a-csv-disk-fails.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/failover-clusters/install-sql-server-2016-on-a-csv-disk-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/failover-clusters/manually-re-create-resource-specific-registry-keys.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/failover-clusters/manually-re-create-resource-specific-registry-keys",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/failover-clusters/support-policy-clustered-configurations.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/failover-clusters/support-policy-clustered-configurations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/failover-clusters/windows-failover-cluster-resource-depend.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/failover-clusters/windows-failover-cluster-resource-depend",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/cannot-update-cluster-setup-program-checks-rule.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/failover-clusters/cannot-update-cluster-setup-program-checks-rule",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/warning-about-network-binding.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/failover-clusters/warning-about-network-binding",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/peer-to-peer-replication-fails.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/peer-to-peer-replication-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/attach-change-data-capture-database.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/attach-change-data-capture-database",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/error-1205-configure-transactional-replication.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/error-1205-configure-transactional-replication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/cdc-capture-job-fails-processing-changes-table.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/cdc-capture-job-fails-processing-changes-table",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/error-replication-log-reader-agent-fails.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/error-replication-log-reader-agent-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/troubleshoot-error-20598.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/troubleshoot-error-20598",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/error-replication-monitor.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/error-replication-monitor",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/apply-hotfix-sql-replication-topology.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/apply-hotfix-sql-replication-topology",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/ascii-function-returns-different-results-publisher-subscriber.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/ascii-function-returns-different-results-publisher-subscriber",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/rowguidcol-not-supported-merge-replication.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/rowguidcol-not-supported-merge-replication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/sql-transaction-log-grows.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/sql-transaction-log-grows",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/duplicate-keys-sys-syscommittab-table.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/duplicate-keys-sys-syscommittab-table",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/error-run-distribution-agent.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/error-run-distribution-agent",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/enumerate-subscription-properties.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/enumerate-subscription-properties",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/install-service-packs-hotfixes.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/install-service-packs-hotfixes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/problem-use-custom-business-logic-handler.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/problem-use-custom-business-logic-handler",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/manually-remove-replication.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/manually-remove-replication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/merge-replication-cannot-support-centralized-subscriber-topologies.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/merge-replication-cannot-support-centralized-subscriber-topologies",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/non-convergence-when-processes-child-generations.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/non-convergence-when-processes-child-generations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/error-use-change-data-capture-service.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/error-use-change-data-capture-service",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/oracle-publication-triggers-sends-data.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/oracle-publication-triggers-sends-data",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/performance-statistics-log-reader-distribution-agents.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/performance-statistics-log-reader-distribution-agents",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/subscriptions-do-not-show-up-windows-sync-manager.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/subscriptions-do-not-show-up-windows-sync-manager",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/sql-replication-agents-not-run.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/sql-replication-agents-not-run",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/script-failed-error-merge-publication-snapshot.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/script-failed-error-merge-publication-snapshot",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/skiperrors-parameter-distribution-agent.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/skiperrors-parameter-distribution-agent",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/snapshot-logreader-agents-fail-destination-table-empty.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/snapshot-logreader-agents-fail-destination-table-empty",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/sql-merge-replication-synchronization-fails.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/sql-merge-replication-synchronization-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/subscription-does-not-exist-error.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/subscription-does-not-exist-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/understand-merge-replication-article-process.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/understand-merge-replication-article-process",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/replication/update-statements-replicated-as-delete-insert.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/replication/update-statements-replicated-as-delete-insert",
+      "redirect_document_id": true
+    },
+
+    {
+      "source_path": "support/sql/install/understanding-dotnet-framework-requirements.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/understanding-dotnet-framework-requirements",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/error-set-up-update-instances.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/error-set-up-update-instances",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/sql-server-not-supported-in-windows-os-where-case-sensitivity-enabled.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sql-server-not-supported-in-windows-os-where-case-sensitivity-enabled",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/description-update-cache-folder.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/description-update-cache-folder",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/error-install-sql-server-2008-r2.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/error-install-sql-server-2008-r2",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/error-code-1642-update-applied.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/error-code-1642-update-applied",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/error-change-path-shared-component-directory.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/error-change-path-shared-component-directory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/evaluation-period-has-expired.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/evaluation-period-has-expired",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/fusion-atl-rule-check-fails.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/fusion-atl-rule-check-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/cu-apply-installation.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/cu-apply-installation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/installation-fails-if-remove-user-right.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/installation-fails-if-remove-user-right",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/error-install-sql-server-2005-sp4.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/error-install-sql-server-2005-sp4",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/naming-schema-and-fix-area.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/naming-schema-and-fix-area",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/new-mu-servicing-model.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/new-mu-servicing-model",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/permission-error-use-volume-mount-point.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/permission-error-use-volume-mount-point",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/remove-partial-installation.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/remove-partial-installation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/restore-missing-windows-installer-cache-files.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/restore-missing-windows-installer-cache-files",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/service-not-start-after-patch-installed.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/service-not-start-after-patch-installed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/setup-stops-responding-upgrade.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/setup-stops-responding-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/issues-install-sql-server.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/issues-install-sql-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/sql-server-2008-setup-issues.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sql-server-2008-setup-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/sqlserver-patching-issues.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sqlserver-patching-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/install-reporting-service.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/install-reporting-service",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/update-or-slipstream-installation.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/update-or-slipstream-installation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/sql-server-2012-setup-issues.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/sql-server-2012-setup-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/error-upgrade-cluster-node.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/error-upgrade-cluster-node",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/install/cannot-install-sql-when-only-rodc-available.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/cannot-install-sql-when-only-rodc-available",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/agent-job-fail-error-65535-782-7437.md",
+      "redirect_url": "/troubleshoot/sql/ssms/agent/agent-job-fail-error-65535-782-7437",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/34052-error-pbm-generates-alerts.md",
+      "redirect_url": "/troubleshoot/sql/ssms/agent/34052-error-pbm-generates-alerts",
+      "redirect_document_id": true
+    }, 
+    {
+      "source_path": "support/sql/replication/configure-troubleshoot-subscriptionstreamsof-distribution-agent.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/performance/configure-troubleshoot-subscriptionstreamsof-distribution-agent",
+      "redirect_document_id": true
     }
-  ]
+
+]
 }

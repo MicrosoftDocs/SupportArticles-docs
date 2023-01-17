@@ -2,7 +2,7 @@
 title: Advanced search tips for finding Microsoft troubleshooting content
 description: Find out how to search for Microsoft support and troubleshooting articles using search best practices.
 ms.date: 10/10/2020
-ms.service: azure
+ms.service: azure-common-issues-support
 ms.author: genli
 author: genlin
 ms.reviewer: 
@@ -83,8 +83,8 @@ Build a list of trusted sites to use during your investigation.
 
 | **Asset**| **Comments** |
 |---|---|
-|`Support.microsoft.com`|# 1 site for break / fix content for Microsoft on-prem products.|
-|`Docs.microsoft.com`|For most IT Pro content for cloud-based products, includes break-fix content.|
+|`support.microsoft.com`|# 1 site for break / fix content for Microsoft on-prem products.|
+|`learn.microsoft.com`|For most IT Pro content for cloud-based products, includes break-fix content.|
 |[Windows Health Release Dashboard](/windows/release-information/status-windows-10-1909)<br/>|OS version specific information describing friction ranging from intentional hardening changes to unintended regressions introduced by quality updates and sometimes feature updates.<br/><br/>Also describes interop issues with 1<sup>st</sup> party / 3<sup>rd</sup> party hardware / software that may be caused by Windows updates or 1<sup>st</sup> party / 3<sup>rd</sup> party hardware / software.|
 |Known issue and release note text in the header Monthly Windows Update KB articles<br/><br/>See KB [4534310](https://support.microsoft.com/help/4534310/windows-7-update-kb4534310) as a recent example|Known issue text identifies friction including interop issues or regressions introduced by a given Windows update.<br/><br/>Release notes identify fixes resolved in that months update.<br/><br/>A fix that resolves an issue will generally use the same "known issue" or "release note" text across all affected OS versions.|
   

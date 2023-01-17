@@ -20,7 +20,7 @@ When you configure a **Hybrid Azure AD join** task in the Azure AD Connect Sync 
 
 For more information about how to troubleshoot pending devices, see the following video:
 
-> [!VIDEO <https://www.youtube-nocookie.com/embed/QBR1c81kaxA>]
+> [!VIDEO https://www.youtube-nocookie.com/embed/QBR1c81kaxA]
 
 ## How a device gets stuck in a pending state
 
@@ -58,7 +58,6 @@ To fix the problem, unregister the device by running `dsregcmd /leave` at an ele
 **Get all pending devices, and save the returned data in a CSV file**
 
  ```powershell
-Get all pending devices and save the returned data in a CSV file:
 Get-AzureADDevice -all $true |  Where-Object{($_.DeviceTrustType -eq"ServerAd") -and ($_.ProfileType -ne"RegisteredDevice") -and (-not $_.AlternativeSecurityIds)} | select-object -Property AccountEnabled, ObjectId, DeviceId, DisplayName, DeviceOSType, DeviceOSVersion, DeviceTrustType | export-csv pendingdevicelist-summary.csv -NoTypeInformation
 ```
 

@@ -2,14 +2,14 @@
 title: Boot diagnostics for VMs in Azure | Microsoft Doc
 description: Overview of the two debugging features for virtual machines in Azure
 services: virtual-machines
-author: Deland-Han
+author: genli
 manager: dcscontentpm
 tags: azure-resource-manager
-
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.topic: troubleshooting
-ms.date: 10/31/2018
-ms.author: delhan
+ms.date: 05/17/2022
+ms.author: genli
 ---
 
 # How to use boot diagnostics to troubleshoot virtual machines in Azure
@@ -42,9 +42,9 @@ You can select the **Boot diagnostics** option to view the log and the screensho
 
 The following procedure is for a virtual machine created using the Resource Manager deployment model.
 
-On the **Management** tab, in **Monitoring** section, make sure that **Boot diagnostics** is turned on. From the **Diagnostics storage account** drop-down list, select a storage account in which to place the diagnostic files.
+On the **Management** tab, in **Monitoring** section, make sure that **Boot diagnostics** is turned on. The default setting is to have boot diagnostics enabled using a managed storage account.
 
-:::image type="content" source="media/virtual-machines-common-boot-diagnostics/enable-boot-diagnostics-vm.png" alt-text="Screenshot of the Monitoring section on the Management tab under Create a virtual machine page." border="false":::
+  ![Screenshot of the options in the VM creation Boot diagnostics page](media/virtual-machines-common-boot-diagnostics/new-boot-diagnostics-vm.png)
 
 > [!NOTE]
 > The Boot diagnostics feature does not support premium storage account or Zone Redundant Storage Account Types. If you use the premium storage account for Boot diagnostics, you might receive the StorageAccountTypeNotSupported error when you start the VM.
@@ -81,11 +81,11 @@ For more information on deploying resources using templates, see [Quickstart: Cr
 To enable Boot diagnostics on an existing virtual machine, follow these steps:
 
 1. Sign in to the [Azure portal](https://portal.azure.com), and then select the virtual machine.
-2. In the **Support + troubleshooting** section, select **Boot diagnostics**, then select the **Settings** tab.
-3. In **Boot diagnostics** settings, change the status to **On**, and from the **Storage account** drop-down list select a storage account.
-4. Save the change.
+2. In the **Help** section, select **Boot diagnostics**, then select the **Settings** tab.
+3. In **Boot diagnostics** settings, select the boot diagnostics with managed storage account or custom storage account.
+    ![Screenshot of the options in the existing VM's Boot diagnostics page](media/virtual-machines-common-boot-diagnostics/existing-boot-diagnostics-vm.png)
 
-    :::image type="content" source="media/virtual-machines-common-boot-diagnostics/enable-for-existing-vm.png" alt-text="Screenshot of the On option under the Status item and the Storage account field in the Boot diagnostics page." border="false":::
+1. Save the change.
 
 ### Enable boot diagnostics using the Azure CLI
 
@@ -107,6 +107,6 @@ powercfg /setacvalueindex SCHEME_CURRENT SUB_VIDEO VIDEOIDLE 0
 xset s off
 ```
 
-For Windows VMs, the Azure provisioning agent is different than the VM agent, and it is the provisioning agent that runs the above command during provisioning for VMs created from a generalized image. You can see the evidence of that if you search for powercfg in C:\Windows\Panther\WaSetup.xml, which is the provisioning agent log. But since the provisioning agent does not need to run for VMs created from a specialized VHD, that is a scenario where you would need to run the powercfg command manually to disable the virtual display timeout. Also, it is possible to have a particularly old Azure VM created from generalized image that may not have it set because it was created before the provisioning agent was updated to disable the virtual display timeout.
+For Windows VMs, the Azure provisioning agent is different than the VM agent. It runs the above command during provisioning for VMs created from a generalized image. You can see this event if you search for powercfg in C:\Windows\Panther\WaSetup.xml, which is the provisioning agent log. But since the provisioning agent does not need to run for VMs created from a specialized VHD, that is a scenario where you would need to run the powercfg command manually to disable the virtual display timeout. Also, it is possible to have a particularly old Azure VM created from generalized image that may not have it set because it was created before the provisioning agent was updated to disable the virtual display timeout.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

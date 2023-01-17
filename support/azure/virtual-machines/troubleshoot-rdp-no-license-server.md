@@ -6,6 +6,7 @@ documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
@@ -87,7 +88,7 @@ To resolve this problem, [back up the OS disk](/azure/virtual-machines/windows/s
        ```
         reg query "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\RCM\Licensing Core" /v LicensingMode
 
-        reg query "HKLM\SYSTEM\CurrentControlSet\Services\TermService\Parameters" /v SpecifiedLicenseServers
+        reg query "HKLM\SYSTEM\CurrentControlSet\Services\TermService\Parameters\LicenseServers" /v SpecifiedLicenseServers
        ```
 
         If the **LicensingMode** value is set to any value other than 4, per user, then set the value to 4:
@@ -99,7 +100,7 @@ To resolve this problem, [back up the OS disk](/azure/virtual-machines/windows/s
        If the **SpecifiedLicenseServers** value doesn't exist, or it has incorrect license server information, then change it as follows:
 
        ```
-        reg add "HKLM\SYSTEM\CurrentControlSet\Services\TermService\Parameters" /v SpecifiedLicenseServers /t REG_MULTI_SZ /d "<FQDN / IP License server>"
+        reg add "HKLM\SYSTEM\CurrentControlSet\Services\TermService\Parameters\LicenseServers" /v SpecifiedLicenseServers /t REG_MULTI_SZ /d "<FQDN / IP License server>"
        ```
 
     3. After you make any changes to the registry, restart the VM.

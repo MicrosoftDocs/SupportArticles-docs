@@ -49,6 +49,8 @@
       href: unexpected-reboots-attached-vhds.md
     - name: Understand a system reboot
       href: understand-vm-reboot.md
+    - name: Troubleshoot Windows stop error (directory service initialization failure)
+      href: troubleshoot-directory-service-initialization-failure.md
 
   - name: Planned maintenance
     items:
@@ -57,8 +59,6 @@
 
   - name: VM restart issues
     items:
-    - name: Can't restart after applying kernel changes
-      href: kernel-related-boot-issues.md
     - name: Fail to access Generation 2 Linux VM
       href: unable-access-g2-linux-vm-reboot.md
     - name: Fail to restart or be provisioned
@@ -96,10 +96,14 @@
         href: troubleshoot-device-names-problems.md
       - name: Error in an Azure Linux VM - Failed to start Switch Root
         href: resolve-failed-start-switch-root-azure-linux-vm.md
-      - name: Grub Rescue
+      - name: GRUB rescue issues
         href: troubleshoot-vm-boot-error.md
       - name: Linux VM does not start after an LIS upgrade
         href: linux-vm-not-start-kernel-lis.md
+      - name: Troubleshoot Linux VM UEFI boot failures
+        href: azure-linux-vm-uefi-boot-failures.md
+      - name: Linux VM fails to boot due to full OS disk
+        href: linux-fulldisk-boot-error.md
     - name: Windows
       href: boot-error-troubleshoot.md
       items:
@@ -204,16 +208,24 @@
   items:
   - name: Linux
     items:
+    - name: Can't restart after applying kernel changes
+      href: kernel-related-boot-issues.md
     - name: Debian Linux VM
       href: cannot-connect-debian-linux.md
     - name: Detailed SSH troubleshooting
       href: detailed-troubleshoot-ssh-connection.md
+    - name: Fail to connect to VM through SSH due to SELinux misconfiguration
+      href: linux-selinux-troubleshooting.md
+    - name: Troubleshoot Linux VM UEFI boot failures
+      href: azure-linux-vm-uefi-boot-failures.md
     - name: Network issues
       href: cannot-connect-linux-network.md
     - name: SSH connection
       href: connect-linux-vm-sshconnection.md
     - name: SSH troubleshooting
       href: troubleshoot-ssh-connection.md
+    - name: SUSE VM connectivity and registration issues
+      href: suse-public-cloud-connectivity-registration-issues.md
     - name: Troubleshoot file system errors
       href: linux-recovery-cannot-start-file-system-errors.md
     - name: Recover LVM configured VMs and no boot 
@@ -224,6 +236,15 @@
       href: linux-virtual-machine-cannot-start-fstab-errors.md
     - name: Troubleshoot permissions are too open error
       href: troubleshoot-ssh-permissions-too-open.md
+    - name: Troubleshoot kernel panic
+      href: linux-kernel-panic-troubleshooting.md
+    - name: Troubleshoot VM boot issues due to disabled Hyper-V drivers
+      href: linux-hyperv-issue.md
+    - name: VM fails to boot after VFAT is disabled
+      href: vfat-disabled-boot-issues.md
+    - name: VM fails to boot and lands in dracut emergency shell
+      href: linux-no-boot-dracut.md
+
   - name: Windows
     items:
     - name: Cannot RDP because "You must change your password before logging on the first time" error
@@ -250,7 +271,7 @@
       href: detailed-troubleshoot-rdp.md
     - name: Troubleshoot a failed trust relationship in an Azure Windows VM
       href: troubleshoot-broken-secure-channel.md
-    - name: Troubleshoot RDP error because the DHCP is disabled
+    - name: Troubleshoot RDP error because DHCP is disabled
       href: troubleshoot-rdp-dhcp-disabled.md
     - name: Troubleshoot RDP error because of the NSG setting
       href: troubleshoot-rdp-nsg-problem.md
@@ -260,7 +281,7 @@
       href: troubleshoot-rdp-no-license-server.md
     - name: Troubleshoot remote desktop services issues
       href: troubleshoot-remote-desktop-services-issues.md
-    - name: Troubleshoot An internal error
+    - name: Troubleshoot an internal error
       href: Troubleshoot-rdp-internal-error.md
     - name: Troubleshoot RDP access is denied error 
       href: troubleshoot-rdp-access-denied.md 
@@ -270,9 +291,9 @@
       href: troubleshoot-rdp-general-error.md
     - name: Troubleshoot Azure VM RDP connection issues by Event ID
       href: event-id-troubleshoot-vm-rdp-connecton.md
-    - name: Troubleshoot RDP error in VM because of static IP
+    - name: Troubleshoot RDP error in VM due to static IP
       href: troubleshoot-rdp-static-ip.md
-    - name: Troubleshoot RDP error in VM because the NIC is disabled
+    - name: Troubleshoot RDP error in VM due to disabled NIC
       href: troubleshoot-rdp-nic-disabled.md
     - name: Troubleshoot RDP error caused by Safe Mode
       href: troubleshoot-rdp-safe-mode.md
@@ -299,10 +320,12 @@
   - name: Application access issues
     href: troubleshoot-app-connection.md
 
-- name: Linux VM package management
+- name: Linux VM setup and configuration
   items:
-  - name: SUSE VM connectivity and registration issues
-    href: suse-public-cloud-connectivity-registration-issues.md
+  - name: Configure multiple NICs
+    href: linux-vm-multiple-virtual-network-interfaces-configuration.md
+  - name: Create SWAP file
+    href: create-swap-file-linux-vm.md
 
 - name: VM extensions troubleshooting
   items:
@@ -318,7 +341,7 @@
     href: extensions-stop-running.md
   - name: Minimum version support for agents
     href: support-extensions-agent-version.md
-  - name: Previous command is rerun
+  - name: Previous command is re-run
     href: customscript-reruns-previous-command.md
   - name: Supported extensions
     href: support-agent-extensions.md
@@ -363,8 +386,10 @@
       href: troubleshoot-performance-bottlenecks-linux.md
     - name: Troubleshoot performance issues through Monitoring
       href: troubleshoot-performance-virtual-machine-linux-windows.md
-    - name: Troubleshoot high CPU issues for Azure Windows virtual machines
+    - name: Troubleshoot high CPU issues in Azure Windows virtual machines
       href: troubleshoot-high-cpu-issues-azure-windows-vm.md
+    - name: Troubleshoot high memory issues for Azure Windows virtual machines
+      href: azure-windows-vm-memory-issue.md
   - name: Known performance issues
     items:
     - name: Poor performance on Windows Server 2012 R2
@@ -378,6 +403,8 @@
     href: /azure/virtual-machines/faq-for-disks?context=/troubleshoot/azure/virtual-machines/context/context
   - name: Cannot extend an encrypted OS volume in Windows
     href: cannot-extend-encrypted-os-volume.md
+  - name: Cannot extend volume on a SQL standalone server virtual machine
+    href: cannot-extend-volume-sql-server.md
   - name: Errors when deleting storage resources
     href: storage-resource-deletion-errors.md
   - name: Errors when deleting classic storage resources
@@ -390,7 +417,7 @@
   - name: Troubleshoot Azure Compute Gallery - Windows/Linux
     href: /azure/virtual-machines/troubleshooting-shared-images?context=/troubleshoot/azure/virtual-machines/context/context
 
-- name: Backup and retore troubleshooting
+- name: Backup and restore troubleshooting
   items:
   - name: VM recovery access
     items:
@@ -420,6 +447,8 @@
           href: repair-linux-vm-using-ALAR.md
         - name: Unlock the encrypted disk for offline repair
           href: unlock-encrypted-linux-disk-offline-repair.md
+        - name: Troubleshoot chroot environment for Linux rescue VM
+          href: chroot-environment-linux.md
       - name: Repair VM with Nested Hyper-V
         href: troubleshoot-vm-by-use-nested-virtualization.md
 
@@ -529,6 +558,8 @@
       href: vm-cannot-upgrade-64-vcpu.md
     - name: VM stuck in failed state
       href: vm-stuck-in-failed-state.md
+    - name: VM is unavailable for 15 minutes
+      href: azure-vm-unavailable.md      
     - name: Redeploy a VM
       items:
       - name: Linux

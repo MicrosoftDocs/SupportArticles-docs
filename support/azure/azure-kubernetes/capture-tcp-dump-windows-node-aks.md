@@ -5,7 +5,8 @@ ms.date: 11/15/2021
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: erbookbi
-ms.service: container-service
+ms.service: azure-kubernetes-service
+ms.subservice: data-collection-guide
 ---
 # Capture a TCP dump from a Windows node in an AKS cluster
 
@@ -178,5 +179,7 @@ Next, follow these steps to copy the dump files from the jump VM to your machine
     :::image type="content" source="./media/capture-tcp-dump-windows-node-aks/jump-vm-file-explorer.png" alt-text="Screenshot of File Explorer on the jump virtual machine. Drag AKS_node_name.cab and AKS_node_name.etl from the jump VM to your local machine drive." lightbox="./media/capture-tcp-dump-windows-node-aks/jump-vm-file-explorer.png" border="false":::
 
 The dump files are now in the root directory of your machine's c: drive.
+
+---
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

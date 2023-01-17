@@ -3606,6 +3606,16 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/windows-hardware/drivers/getmydeviceportname-returns-incorrect-port-name-usb-scanner.md",
+      "redirect_url": "https://support.microsoft.com/topic/september-20-2022-kb5017383-os-build-22000-1042-preview-62753265-68e9-45d2-adcb-f996bf3ad393",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-hardware/drivers/cant-scan-usb-scanner-after-win11-restarts.md",
+      "redirect_url": "https://support.microsoft.com/topic/september-20-2022-kb5017383-os-build-22000-1042-preview-62753265-68e9-45d2-adcb-f996bf3ad393",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-server/deployment/unknown-device-vmbus-virtual-machine.md",
       "redirect_url": "/troubleshoot/windows-server/virtualization/unknown-device-vmbus-virtual-machine",
       "redirect_document_id": true
@@ -4179,6 +4189,70 @@
       "source_path": "support/developer/visualstudio/cpp/general/expand-pointer-debugger-watch-window.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/cpp/debuggers/expand-pointer-debugger-watch-window",
       "redirect_document_id": true
-    }
+    },
+    {
+      "source_path": "support/developer/visualstudio/installation/issues-workarounds-visual-studio-2012-setup.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/installation/issues-workarounds-visual-studio-setup",
+    },
+    {
+      "source_path": "support/developer/webapps/index.md",
+      "redirect_url": "/troubleshoot/developer/webapps/welcome-webapps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/webapps/iis/index.md",
+      "redirect_url": "/troubleshoot/developer/webapps/iis/iis-welcome",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/index.md",
+      "redirect_url": "/troubleshoot/developer/browsers/welcome-browsers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/index.md",
+      "redirect_url": "/troubleshoot/developer/biztalk/welcome-biztalk-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/dotnet/index.md",
+      "redirect_url": "/troubleshoot/developer/dotnet/welcome-dotnet",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/host-integration-server/index.md",
+      "redirect_url": "/troubleshoot/developer/host-integration-server/welcome-host-integration-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/index.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/welcome-visual-studio",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/ide/crash-with-stardist-3.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/ide/crash-with-stardict-3",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/how-to-prevent-users-from-using-ai-builder.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/prevent-users-from-creating-ai-builder-custom-models",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/jdk-missing-create-xamarin-app.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/third-party/jdk-missing-create-xamarin-app",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/language-compilers/build-fails-deploy-component-system-text-encoding.md",
+      "redirect_url": "/troubleshoot/developer/dotnet/framework/general/build-fails-deploy-component-system-text-encoding",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/dotnet/welcome-dotnet.md",
+      "redirect_url": "/troubleshoot/developer/dotnet/welcome-dotnet-landing",
+      "redirect_document_id": true
+    }  
   ]
 }

@@ -3,7 +3,7 @@ title: Support policy for containers and related services on Azure
 description: Describes the support options and coverage that Microsoft offers for containers and surrounding infrastructure services.
 ms.date: 08/14/2020
 ms.reviewer: 
-ms.service: azure
+ms.service: azure-common-issues-support
 ms.author: genli
 author: genlin
 ---
@@ -20,7 +20,7 @@ _Original KB number:_ &nbsp; 4035670
 
 For containers that are running on physical infrastructure and servers, Microsoft supports instances of Windows Server Containers on Windows Server 2016. For more information, see [Docker Engine on Windows](/virtualization/windowscontainers/manage-docker/configure-docker-daemon).
 
-For ­­­ support of Linux operating systems that are running on physical infrastructure and servers, customers have to contact the distribution provider for support, such as [Canonical](https://www.canonical.com/services), [CoreOS](https://coreos.com/support), or [Red Hat](https://www.redhat.com/en/services/support).
+For ­­­ support of Linux operating systems that are running on physical infrastructure and servers, customers have to contact the distribution provider for support, such as [Canonical](https://www.canonical.com/services), [CoreOS](https://support.coreos.com/hc), or [Red Hat](https://www.redhat.com/en/services/support).
 
 Physical infrastructure support is not provided by Microsoft, except in cases in which the hardware is a Microsoft product under warranty or a support plan, such as for Surface Pro 4.
 

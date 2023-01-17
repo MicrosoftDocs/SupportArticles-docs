@@ -155,6 +155,12 @@ landingContent:
             url: ./performance-diagnostics.md
           - text:  Troubleshoot performance issues through Monitoring
             url: ./troubleshoot-performance-virtual-machine-linux-windows.md
+          - text:  Isolate bottlenecks on Linux virtual machines
+            url: ./troubleshoot-performance-bottlenecks-linux.md
+          - text:  Troubleshoot high-CPU issues on Azure Windows virtual machines
+            url: ./troubleshoot-high-cpu-issues-azure-windows-vm.md 
+          - text:  Azure VM is unavailable for 15 minutes
+            url: ./azure-vm-unavailable.md                        
        
    # Card
   - title: VM Extension issues
@@ -167,3 +173,6 @@ landingContent:
             url: /azure/virtual-machines/extensions/diagnostics-windows
           - text:  Custom Script Extension for Windows
             url: /azure/virtual-machines/extensions/custom-script-windows#tips-and-tricks
+
+                        
+            

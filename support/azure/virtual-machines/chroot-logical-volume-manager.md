@@ -7,6 +7,7 @@ author: vilibert
 manager: dcscontentpm
 tags: Linux chroot LVM
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: linux
 ms.devlang: na
 ms.topic: troubleshooting

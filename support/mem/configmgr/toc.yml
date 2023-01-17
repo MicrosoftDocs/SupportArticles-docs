@@ -1,444 +1,451 @@
+items:
 - name: Welcome
   href: welcome-configuration-manager.yml
 - name: Alerts, reporting, and queries
   items:
     - name: A log with a long line is truncated in CMTrace
-      href: long-line-causes-log-truncated.md
+      href: alerts-reports-queries/long-line-causes-log-truncated.md
     - name: Editing reports fails
-      href: cannot-edit-reports.md
+      href: alerts-reports-queries/cannot-edit-reports.md
     - name: Obtain error code descriptions in reports
-      href: obtain-error-code-descriptions.md
+      href: alerts-reports-queries/obtain-error-code-descriptions.md
     - name: Reports don't run as expected
-      href: reports-not-run-as-expected.md
+      href: alerts-reports-queries/reports-not-run-as-expected.md
     - name: Reporting stops working
-      href: reporting-stops-working.md
+      href: alerts-reports-queries/reporting-stops-working.md
     - name: rsProcessingAborted error when running reports
-      href: rsprocessingaborted-error-run-reports.md
+      href: alerts-reports-queries/rsprocessingaborted-error-run-reports.md
     - name: SQL query times out or slow console performance
-      href: sql-query-times-out-or-console-slow-performance.md
+      href: alerts-reports-queries/sql-query-times-out-or-console-slow-performance.md
 - name: Application management and software distribution
   items:
     - name: Applications not deployed to users logged on to domain controllers
-      href: applications-not-deployed-to-users.md
+      href: app-management/applications-not-deployed-to-users.md
     - name: Can't deploy applications to Windows 10 ARM64 devices
-      href: applications-not-deployed-to-windows10-arm64.md
+      href: app-management/applications-not-deployed-to-windows10-arm64.md
     - name: Changes to App-V applications aren't included
-      href: app-v-application-changes-not-included.md
+      href: app-management/app-v-application-changes-not-included.md
     - name: Contributor role is no longer assigned at the subscription level
-      href: contributor-role-not-assigned-for-web-app.md
+      href: app-management/contributor-role-not-assigned-for-web-app.md
     - name: Deploy Windows language packs
-      href: deploy-language-pack.md
+      href: app-management/deploy-language-pack.md
     - name: Deployment Type changes are deployed unexpectedly
-      href: deployment-type-changes-deployed-unexpectedly.md
+      href: app-management/deployment-type-changes-deployed-unexpectedly.md
     - name: Troubleshoot Microsoft Store for Business and Education integration
-      href: troubleshoot-microsoft-store-for-business-integration.md
+      href: app-management/troubleshoot-microsoft-store-for-business-integration.md
     - name: Troubleshooting tips for application deployments
-      href: troubleshoot-application-deployment.md
+      href: app-management/troubleshoot-application-deployment.md
 - name: Client installation and assignment
   items:
     - name: Can't install client in Windows Server 2008 SP2
-      href: install-configmgr-client-error-1603.md
+      href: client-installation/install-configmgr-client-error-1603.md
     - name: Client installation error 1603
-      href: client-installation-error-1603.md
+      href: client-installation/client-installation-error-1603.md
     - name: Client installation fails when BITS isn't installed
-      href: client-installation-fails-without-bits.md
+      href: client-installation/client-installation-fails-without-bits.md
     - name: Client piloting package fails after a site expansion
-      href: client-piloting-package-fails-after-site-expansion.md
+      href: client-installation/client-piloting-package-fails-after-site-expansion.md
     - name: Clients reinstall every five hours
-      href: configmgr-clients-reinstall-every-five-hours.md
+      href: client-installation/configmgr-clients-reinstall-every-five-hours.md
+    - name: Conversion failed when upgrading to version 1810
+      href: client-installation/conversion-failed-upgrade-version-1810.md
     - name: Error 80041002 when installing client agent
-      href: client-agent-installation-error-80041002.md
+      href: client-installation/client-agent-installation-error-80041002.md
     - name: Mac client enrollment fails
-      href: mac-client-enrollment-fails.md
+      href: client-installation/mac-client-enrollment-fails.md
     - name: Mac client registration fails
-      href: mac-client-registration-fails.md
+      href: client-installation/mac-client-registration-fails.md
     - name: PolicyAgentInstanceProvider warnings during client installation
-      href: policyagentinstanceprovider-warning-install-client.md
+      href: client-installation/policyagentinstanceprovider-warning-install-client.md
     - name: Software update installations stop responding
-      href: software-update-installations-stop-responding.md
+      href: client-installation/software-update-installations-stop-responding.md
     - name: Support for Mac, Linux and UNIX clients
-      href: support-for-mac-linux-and-unix-clients.md
+      href: client-installation/support-for-mac-linux-and-unix-clients.md
     - name: There was a problem starting PolicyAgentProvider.dll
-      href: client-installation-fails-with-policyagentprovider-dll.md
+      href: client-installation/client-installation-fails-with-policyagentprovider-dll.md
 - name: Client management
   items:
     - name: Client remains in provisioning mode after upgrade
-      href: configmgr-client-left-in-provisioning-mode.md
+      href: client-management/configmgr-client-left-in-provisioning-mode.md
     - name: Clients become inactive
-      href: inactive-clients-not-send-inventory.md
+      href: client-management/inactive-clients-not-send-inventory.md
     - name: Clients don't receive policy data
-      href: clients-not-receive-policy-data.md
-    - name: Cloud management gateway
+      href: client-management/clients-not-receive-policy-data.md
+    - name: Cloud services
       items:
         - name: WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID
-          href: cannot-download-content-from-cmg.md
+          href: client-management/cannot-download-content-from-cmg.md
         - name: Clients can't communicate with CMG
-          href: cmg-communication-error-403.md
+          href: client-management/cmg-communication-error-403.md
+        - name: Tenant attach components fail to connect to backend cloud service
+          href: client-management/tenant-attach-component-not-connect-to-gateway.md
     - name: Collections
       items:
         - name: Multiple instances of the Unknown computers collection
-          href: multiple-instances-of-unknown-computers-collection.md
+          href: client-management/multiple-instances-of-unknown-computers-collection.md
     - name: Inventory and asset intelligence
       items:
         - name: Can't import the Sms_def.mof file
-          href: invalid-data-error-import-mof-file.md
+          href: client-management/invalid-data-error-import-mof-file.md
         - name: Hardware inventory fails
-          href: hardware-inventory-fails.md
+          href: client-management/hardware-inventory-fails.md
     - name: Remote control fails with error C000012
-      href: remote-control-fails-error-c000012.md
+      href: client-management/remote-control-fails-error-c000012.md
     - name: SMS Agent Host service doesn't restart when the WMI service resumes
-      href: sms-agent-host-not-automatically-restarted.md
+      href: client-management/sms-agent-host-not-automatically-restarted.md
     - name: Software Metering failed to start PrepDriver
-      href: software-metering-failed-start-prepdriver.md
+      href: client-management/software-metering-failed-start-prepdriver.md
     - name: Turn on the DebugLogging key
-      href: turn-on-debuglogging-key.md
+      href: client-management/turn-on-debuglogging-key.md
     - name: Upgrade Readiness data is downloaded continuously
-      href: upgrade-readiness-data-downloaded-continuously.md
+      href: client-management/upgrade-readiness-data-downloaded-continuously.md
 - name: Configuration Manager console
   items:
     - name: Console appears to hang when loading drivers
-      href: console-stops-responding.md
+      href: console-management/console-stops-responding.md
     - name: Console crashes after upgrading to version 2107
-      href: console-crash-after-upgrade.md
+      href: console-management/console-crash-after-upgrade.md
+    - name: Issues after installing June 2022 Windows security updates
+      href: console-management/dcom-hardening-change-effect.md
     - name: Internal Error 2711.LP3076
-      href: internal-error-2711-lp3076-during-console-installation.md
+      href: console-management/internal-error-2711-lp3076-during-console-installation.md
     - name: Microsoft.ConfigurationManagement has stopped working
-      href: unhandled-exception-launch-console.md
+      href: console-management/unhandled-exception-launch-console.md
     - name: No data in the Windows 10 servicing dashboard
-      href: windows-10-servicing-dashboard-empty.md
+      href: console-management/windows-10-servicing-dashboard-empty.md
 - name: Content management
   items:
     - name: Configure peer cache for Configuration Manager clients
-      href: configure-peer-cache.md
+      href: content-management/configure-peer-cache.md
     - name: Distribution point and content distribution
       items:
         - name: A deployment property change isn't saved
-          href: deployment-property-change-not-saved.md
+          href: content-management/deployment-property-change-not-saved.md
         - name: Anonymous Authentication of SMS_DP_SMSPKG$ reset to Disabled
-          href: anonymous-authentication-disabled.md
+          href: content-management/anonymous-authentication-disabled.md
         - name: App-V applications can't be streamed from a DP
-          href: app-v-apps-not-streamed-from-dp.md
+          href: content-management/app-v-apps-not-streamed-from-dp.md
         - name: Boot image distribution to a PXE enabled DP fails
-          href: boot-image-distribution-fails.md
+          href: content-management/boot-image-distribution-fails.md
         - name: Can't distribute deployment packages
-          href: deployment-package-distribution-fails.md
+          href: content-management/deployment-package-distribution-fails.md
         - name: Content distribution fails with error 80070070
-          href: content-distribution-error-80070070.md
+          href: content-management/content-distribution-error-80070070.md
         - name: Content distribution fails with IDispatch error
-          href: content-distribution-idispatch-error.md
+          href: content-management/content-distribution-idispatch-error.md
         - name: DPs in a neighbor boundary group are used
-          href: use-neighbor-boundary-group-dp.md
+          href: content-management/use-neighbor-boundary-group-dp.md
         - name: DP installations or upgrades take a long time
-          href: slow-dp-installation-upgrade.md
+          href: content-management/slow-dp-installation-upgrade.md
         - name: Duplicate rows in DistributionContentVersion table
-          href: duplicate-rows-in-distributioncontentversion.md
+          href: content-management/duplicate-rows-in-distributioncontentversion.md
         - name: Hash mismatch error downloading Contentinfo.tar
-          href: hash-mismatch-error-download-contentinfo-tar.md
+          href: content-management/hash-mismatch-error-download-contentinfo-tar.md
         - name: Package distribution to a remote DP fails
-          href: package-distribution-to-remote-dp-fails.md
+          href: content-management/package-distribution-to-remote-dp-fails.md
         - name: Windows Installer source list update fails
-          href: windows-installer-source-list-update-fails.md
+          href: content-management/windows-installer-source-list-update-fails.md
     - name: Troubleshoot content distribution
       items:
         - name: Content distribution overview
-          href: content-distribution-introduction.md
+          href: content-management/content-distribution-introduction.md
         - name: Components and threads for content distribution
-          href: components-and-threads.md
+          href: content-management/components-and-threads.md
         - name: Install and configure distribution points
-          href: dp-installation-upgrade-configuration.md
+          href: content-management/dp-installation-upgrade-configuration.md
         - name: Content library
-          href: content-library.md
+          href: content-management/content-library.md
         - name: Package actions in content distribution
-          href: understand-package-actions.md
+          href: content-management/understand-package-actions.md
         - name: Troubleshoot content distribution
-          href: troubleshoot-content-distribution.md
+          href: content-management/troubleshoot-content-distribution.md
         - name: Advanced troubleshooting tips for content distribution
-          href: advanced-troubleshooting-tips.md
+          href: content-management/advanced-troubleshooting-tips.md
 - name: Data transfer between sites
   items:
     - name: DRS performance issues after installing hotfix 3125525
-      href: drs-performance-issue-after-installing-hotfix-3125525.md
+      href: data-transfer-sites/drs-performance-issue-after-installing-hotfix-3125525.md
     - name: Troubleshoot database replication service issues
-      href: troubleshoot-database-replication-service-issues.md
+      href: data-transfer-sites/troubleshoot-database-replication-service-issues.md
 - name: Diagnostic
   items:
     - name: Configuration Manager diagnostics
-      href: diagnostics-sdp.md
+      href: diagnostics/diagnostics-sdp.md
     - name: Failed devices on client health dashboard
-      href: failed-devices-client-health-dashboard.md
+      href: diagnostics/failed-devices-client-health-dashboard.md
 - name: Discovery
   items:
     - name: lastLogonTimestamp isn't updated as expected
-      href: lastlogontimestamp-not-accurate.md
+      href: discovery/lastlogontimestamp-not-accurate.md
     - name: Resource domain is changed after installing Windows updates
-      href: resource-domain-changes.md
+      href: discovery/resource-domain-changes.md
 - name: Endpoint Protection
   items:
     - name: An incorrect Endpoint Definition status
-      href: incorrect-endpoint-definition-status.md
+      href: endpoint-protection/incorrect-endpoint-definition-status.md
     - name: Clients can't update antimalware definition files
-      href: antimalware-definition-files-not-updated.md
+      href: endpoint-protection/antimalware-definition-files-not-updated.md
     - name: Download and install Endpoint Protection for Linux
-      href: install-endpoint-protection-for-linux.md
+      href: endpoint-protection/install-endpoint-protection-for-linux.md
     - name: Microsoft Network Inspection service is stopped
-      href: microsoft-network-inspection-service-stopped.md
+      href: endpoint-protection/microsoft-network-inspection-service-stopped.md
     - name: Out-of-date definition version and last update time
-      href: configmgr-console-shows-out-of-date-values.md
+      href: endpoint-protection/configmgr-console-shows-out-of-date-values.md
     - name: Recommended antivirus exclusions
-      href: recommended-antivirus-exclusions.md
+      href: endpoint-protection/recommended-antivirus-exclusions.md
     - name: Support policies for Azure Virtual Machines
-      href: support-policies-for-azure-virtual-machines.md
+      href: endpoint-protection/support-policies-for-azure-virtual-machines.md
 - name: Microsoft Deployment Toolkit (MDT)
   items:
     - name: Troubleshooting reference for MDT
-      href: troubleshooting-reference.md
+      href: mdt/troubleshooting-reference.md
 - name: Mobile device management
   items:
     - name: Call to HttpSendRequestSync failed for port 443
-      href: mobile-device-management-installation-errors.md
+      href: mdm/mobile-device-management-installation-errors.md
     - name: Communication with Intune service doesn't stop
-      href: communication-continues-after-subscription-removal.md
+      href: mdm/communication-continues-after-subscription-removal.md
     - name: Initialize CA Error
-      href: initialize-ca-error-edit-device-enrollment-profile.md
+      href: mdm/initialize-ca-error-edit-device-enrollment-profile.md
 - name: OS deployment
   items:
     - name: Build and capture reference image
       items:
         - name: Custom port settings aren't added to boot media
-          href: custom-port-settings-not-added-to-boot-media.md
+          href: os-deployment/custom-port-settings-not-added-to-boot-media.md
         - name: Not enough memory resources creating media
-          href: not-enough-memory-resources-create-media.md
+          href: os-deployment/not-enough-memory-resources-create-media.md
         - name: Scheduled Updates fails to unmount image
-          href: scheduled-updates-fails-error-0x800700a1.md
+          href: os-deployment/scheduled-updates-fails-error-0x800700a1.md
         - name: Unable to manage boot images
-          href: error-managing-boot-images.md
+          href: os-deployment/error-managing-boot-images.md
         - name: Errors when capturing Windows 11 image
-          href: windows-11-image-capture-fail.md
+          href: os-deployment/windows-11-image-capture-fail.md
     - name: Configure OS deployment in System Center 2012 Configuration Manager
-      href: configure-operating-system-deployment.md
+      href: os-deployment/configure-operating-system-deployment.md
     - name: Manage drivers
       items:
         - name: Can't import drivers
-          href: fail-to-import-drivers.md
+          href: os-deployment/fail-to-import-drivers.md
         - name: Insufficient permissions to migrate a driver package
-          href: insufficient-permissions-to-migrate-driver-package.md
+          href: os-deployment/insufficient-permissions-to-migrate-driver-package.md
         - name: Signed drivers are displayed as unsigned
-          href: signed-drivers-shown-as-unsigned.md
+          href: os-deployment/signed-drivers-shown-as-unsigned.md
     - name: PXE boot
       items:
         - name: A PXE enabled DP generates many files
-          href: pxe-enabled-dp-generates-many-files.md
+          href: os-deployment/pxe-enabled-dp-generates-many-files.md
         - name: Advanced troubleshooting for PXE boot
-          href: advanced-troubleshooting-pxe-boot.md
+          href: os-deployment/advanced-troubleshooting-pxe-boot.md
         - name: Boot from a PXE server
-          href: boot-from-pxe-server.md
+          href: os-deployment/boot-from-pxe-server.md
         - name: Failed to get the encrypted PXE password
-          href: certificate-not-updated-on-pxe-dp.md
+          href: os-deployment/certificate-not-updated-on-pxe-dp.md
         - name: PXE boot doesn't work
-          href: pxe-boot-not-work.md
+          href: os-deployment/pxe-boot-not-work.md
         - name: Troubleshoot PXE boot
-          href: troubleshoot-pxe-boot-issues.md
+          href: os-deployment/troubleshoot-pxe-boot-issues.md
         - name: Understand PXE boot
-          href: understand-pxe-boot.md
+          href: os-deployment/understand-pxe-boot.md
         - name: WDS crashes due to PXE boot
-          href: pxe-boot-causes-wds-crash.md
+          href: os-deployment/pxe-boot-causes-wds-crash.md
         - name: WDS doesn't start on a PXE enabled remote DP
-          href: pxe-enabled-remote-dp-not-start-wds.md
+          href: os-deployment/pxe-enabled-remote-dp-not-start-wds.md
     - name: Task sequences
       items:
         - name: A client computer steals the GUID of an Unknown Computer object
-          href: unknown-computer-object-guid-stolen.md
+          href: os-deployment/unknown-computer-object-guid-stolen.md
         - name: Active users and groups are unexpectedly deleted
-          href: active-users-groups-unexpectedly-deleted.md
+          href: os-deployment/active-users-groups-unexpectedly-deleted.md
         - name: An error occurred when loading the task sequence
-          href: cannot-create-mdt-task-sequence.md
+          href: os-deployment/cannot-create-mdt-task-sequence.md
         - name: An in-place upgrade task sequence doesn't continue 
-          href: in-place-upgrade-task-sequence-not-continue.md
+          href: os-deployment/in-place-upgrade-task-sequence-not-continue.md
         - name: Apply Driver Package task fails with error 80070057
-          href: apply-driver-package-task-error-80070057.md
+          href: os-deployment/apply-driver-package-task-error-80070057.md
         - name: Computer hangs during an OSD task sequence in debug mode
-          href: computer-hangs-task-sequence-debug-mode.md
+          href: os-deployment/computer-hangs-task-sequence-debug-mode.md
         - name: Dynamic Media can't get management point locations
-          href: dynamic-media-cannot-get-mp-locations.md
+          href: os-deployment/dynamic-media-cannot-get-mp-locations.md
         - name: Enable BitLocker task fails with error 80070057
-          href: enable-bitlocker-task-fails-error-80070057.md
+          href: os-deployment/enable-bitlocker-task-fails-error-80070057.md
         - name: The Capture User State task fails
-          href: capture-user-state-task-fails.md
+          href: os-deployment/capture-user-state-task-fails.md
         - name: Get network captures in Windows PE
-          href: get-network-captures-from-task-sequence.md
+          href: os-deployment/get-network-captures-from-task-sequence.md
         - name: No mouse cursor during an OSD task sequence
-          href: no-mouse-cursor-during-osd-task-sequence.md
+          href: os-deployment/no-mouse-cursor-during-osd-task-sequence.md
         - name: OSDResults doesn't display installed applications
-          href: osdresults-not-display-installed-applications.md
+          href: os-deployment/osdresults-not-display-installed-applications.md
         - name: Sending with winhttp failed 80072f8f
-          href: sending-with-winhttp-failed-80072f8f-error.md
+          href: os-deployment/sending-with-winhttp-failed-80072f8f-error.md
         - name: Slow task sequences with earlier client versions
-          href: slow-task-sequence-with-earlier-client-version.md
+          href: os-deployment/slow-task-sequence-with-earlier-client-version.md
         - name: Task sequence fails if software updates require multiple restarts
-          href: task-sequence-fails-multiple-restarts.md
+          href: os-deployment/task-sequence-fails-multiple-restarts.md
         - name: Task sequence fails with error 80070005
-          href: osd-task-sequence-fails-error-80070005.md
+          href: os-deployment/osd-task-sequence-fails-error-80070005.md
         - name: Task sequence fails with error 0x87d01004
-          href: task-sequence-fails-error-0x87d01004.md
+          href: os-deployment/task-sequence-fails-error-0x87d01004.md
         - name: Task sequence stops after an in-place upgrade
-          href: task-sequence-stops-after-in-place-upgrade.md
+          href: os-deployment/task-sequence-stops-after-in-place-upgrade.md
         - name: Task sequence stops after setup or upgrade
-          href: os-deployment-task-sequence-not-continue.md
+          href: os-deployment/os-deployment-task-sequence-not-continue.md
         - name: The debug deployment isn't displayed
-          href: debug-deployment-not-displayed.md
+          href: os-deployment/debug-deployment-not-displayed.md
         - name: Troubleshoot the Install Application task sequence step
-          href: troubleshoot-install-application-step.md  
+          href: os-deployment/troubleshoot-install-application-step.md  
     - name: Versions required for Windows deployment
-      href: required-versions-windows-deployment.md
+      href: os-deployment/required-versions-windows-deployment.md
 - name: Setup, migration, backup, and recovery
   items:
     - name: BitLocker and MBAM
       items:
         - name: MBAM 2.0 setup prerequisite checker fails
-          href: mbam-setup-fails-with-prerequisite-check.md
+          href: setup-migrate-backup-recovery/mbam-setup-fails-with-prerequisite-check.md
     - name: Not found error editing Update Application Catalog Tables
-      href: not-found-error-editing-maintenance-task.md
+      href: setup-migrate-backup-recovery/not-found-error-editing-maintenance-task.md
     - name: Site installation
       items:
         - name: A central administration site setup fails
-          href: central-administration-site-setup-fails.md
+          href: setup-migrate-backup-recovery/central-administration-site-setup-fails.md
     - name: Site system roles installation and operations
       items:
         - name: Connectivity issues when the DigiCert Global Root G2 root cert is not installed
-          href: connectivity-issues-digicert-global-root-g2-not-installed.md
+          href: setup-migrate-backup-recovery/connectivity-issues-digicert-global-root-g2-not-installed.md
         - name: Enable MFA for SMS Provider calls
-          href: enable-mfa-for-sms-provider-calls.md
+          href: setup-migrate-backup-recovery/enable-mfa-for-sms-provider-calls.md
         - name: HTTP Error 500.19
-          href: management-points-stop-responding.md
+          href: setup-migrate-backup-recovery/management-points-stop-responding.md
         - name: Management points fail with HTTP 500 errors
-          href: management-points-fail-http-500-errors.md
+          href: setup-migrate-backup-recovery/management-points-fail-http-500-errors.md
         - name: Service connection point doesn't download updates
-          href: service-connection-point-not-download-updates.md
+          href: setup-migrate-backup-recovery/service-connection-point-not-download-updates.md
         - name: Troubleshoot state message processing performance issues
-          href: state-message-processing-performance.md
+          href: setup-migrate-backup-recovery/state-message-processing-performance.md
     - name: SMS Executive service
       items:
         - name: SMS_EXECUTIVE service crashes
-          href: sms-executive-service-crashes.md
+          href: setup-migrate-backup-recovery/sms-executive-service-crashes.md
     - name: SQL Server settings and configuration
       items:
         - name: Can't create software update packages or applications
-          href: cannot-create-software-update-package.md
+          href: setup-migrate-backup-recovery/cannot-create-software-update-package.md
         - name: Error when you move a site database
-          href: failed-to-find-folder-or-file-error.md
+          href: setup-migrate-backup-recovery/failed-to-find-folder-or-file-error.md
         - name: Function sequence error in Smsdbmon.log
-          href: function-sequence-error.md
+          href: setup-migrate-backup-recovery/function-sequence-error.md
         - name: Site system installation account incorrectly used for database connection
-          href: site-system-installation-account-used-for-db-connection.md
+          href: setup-migrate-backup-recovery/site-system-installation-account-used-for-db-connection.md
         - name: SQL Server updates must be manually installed on secondary sites
-          href: sql-cus-must-be-installed-on-secondary-sites.md
+          href: setup-migrate-backup-recovery/sql-cus-must-be-installed-on-secondary-sites.md
         - name: Support policies for manual database changes
-          href: support-policy-for-manual-database-changes.md
+          href: setup-migrate-backup-recovery/support-policy-for-manual-database-changes.md
         - name: Warnings are repeatedly logged in Smsdbmon.log
-          href: smsdbmon-repeatedly-logs-warnings.md
+          href: setup-migrate-backup-recovery/smsdbmon-repeatedly-logs-warnings.md
     - name: Updates and servicing
       items:
         - name: Changes to built-in collections are overwritten after upgrade
-          href: changes-to-built-in-collections-overwritten.md
+          href: setup-migrate-backup-recovery/changes-to-built-in-collections-overwritten.md
         - name: Clients are automatically upgraded
-          href: clients-automatically-upgrade.md
+          href: setup-migrate-backup-recovery/clients-automatically-upgrade.md
         - name: Error downloading the ConfigMgr.AdminUIContent.cab file
-          href: service-connection-tool-not-download-updates.md
+          href: setup-migrate-backup-recovery/service-connection-tool-not-download-updates.md
         - name: Offline servicing a WIM image with Latest Cumulative Update fails
-          href: offline-servicing-lcu-may-fail.md
+          href: setup-migrate-backup-recovery/offline-servicing-lcu-may-fail.md
         - name: Site upgrade gets stuck at database update
-          href: site-upgrade-blocked-in-database-update.md
+          href: setup-migrate-backup-recovery/site-upgrade-blocked-in-database-update.md
         - name: Upgrade to System Center 2012 Configuration Manager SP1
-          href: upgrade-to-configmgr-2012-sp1.md
+          href: setup-migrate-backup-recovery/upgrade-to-configmgr-2012-sp1.md
         - name: Understand and troubleshoot Updates and Servicing
-          href: understand-troubleshoot-updates-servicing.md
+          href: setup-migrate-backup-recovery/understand-troubleshoot-updates-servicing.md
     - name: Maintenance tasks default settings
-      href: maintenance-tasks-default-settings.md
+      href: setup-migrate-backup-recovery/maintenance-tasks-default-settings.md
 - name: Software update management
   items:
     - name: Issues
       items:
         - name: Bad gateway error when deploying software updates
-          href: bad-gateway-error-deploy-software-updates.md
+          href: update-management/bad-gateway-error-deploy-software-updates.md
         - name: Clients don't get software updates
-          href: clients-not-get-software-updates.md
+          href: update-management/clients-not-get-software-updates.md
         - name: Different results are shown for software updates
-          href: different-software-updates-results-displayed.md
+          href: update-management/different-software-updates-results-displayed.md
         - name: Errors when servicing a server group
-          href: errors-servicing-server-group.md
+          href: update-management/errors-servicing-server-group.md
         - name: Error 0x800f0831 installing updates
-          href: error-0x800f0831-installing-update.md
+          href: update-management/error-0x800f0831-installing-update.md
         - name: .NET Framework 4.7.2 updates fail to sync
-          href: dotnet-framework-updates-fail-to-sync.md
+          href: update-management/dotnet-framework-updates-fail-to-sync.md
         - name: Updates aren't downloaded when an ADR runs
-          href: adr-updates-download-failure.md
+          href: update-management/adr-updates-download-failure.md
     - name: State messaging
-      href: state-messaging-description.md
+      href: update-management/state-messaging-description.md
     - name: Understand software update management
       items:
         - name: Software updates introduction
-          href: software-updates-introduction.md
+          href: update-management/software-updates-introduction.md
         - name: Software updates maintenance
-          href: software-update-maintenance.md
+          href: update-management/software-update-maintenance.md
         - name: Software update point installation and configuration
-          href: software-update-point-installation-configuration.md
+          href: update-management/software-update-point-installation-configuration.md
         - name: WSUS Configuration Manager
-          href: wsus-configuration-manager.md
+          href: update-management/wsus-configuration-manager.md
         - name: Track software update synchronization
-          href: track-software-update-synchronization.md
+          href: update-management/track-software-update-synchronization.md
         - name: Track software update compliance assessment
-          href: track-software-update-compliance-assessment.md
+          href: update-management/track-software-update-compliance-assessment.md
         - name: Track software update deployment
-          href: track-software-update-deployment-process.md
+          href: update-management/track-software-update-deployment-process.md
     - name: Troubleshoot software update management
       items:
         - name: Enable verbose logging
-          href: enable-verbose-logging.md
+          href: update-management/enable-verbose-logging.md
         - name: Troubleshoot software update management
-          href: troubleshoot-software-update-management.md
+          href: update-management/troubleshoot-software-update-management.md
         - name: Troubleshoot software update synchronization
-          href: troubleshoot-software-update-synchronization.md
+          href: update-management/troubleshoot-software-update-synchronization.md
         - name: Troubleshoot software update scan failures
-          href: troubleshoot-software-update-scan-failures.md
+          href: update-management/troubleshoot-software-update-scan-failures.md
         - name: Troubleshoot software update deployment
-          href: troubleshoot-software-update-deployments.md
+          href: update-management/troubleshoot-software-update-deployments.md
     - name: Windows Server Update Services (WSUS)
       items:
         - name: Decline superseded updates in WSUS
-          href: decline-superseded-updates.md
+          href: update-management/decline-superseded-updates.md
         - name: Deploy Windows Defender definition updates
-          href: deploy-definition-updates-using-wsus.md
+          href: update-management/deploy-definition-updates-using-wsus.md
         - name: Error 80244007 when WSUS client scans for updates
-          href: error-80244007-when-wsus-client-scans-updates.md
+          href: update-management/error-80244007-when-wsus-client-scans-updates.md
         - name: High network bandwidth usage
-          href: high-network-bandwidth-usage.md
+          href: update-management/high-network-bandwidth-usage.md
         - name: Optimize WSUS client performance
-          href: optimize-wsus-client-performance.md
+          href: update-management/optimize-wsus-client-performance.md
         - name: Reindex the WSUS database
-          href: reindex-the-wsus-database.md  
+          href: update-management/reindex-the-wsus-database.md
         - name: The spDeleteUpdate stored procedure runs slowly
-          href: spdeleteupdate-slow-performance.md          
+          href: update-management/spdeleteupdate-slow-performance.md
         - name: Troubleshoot issues with WSUS client agents
-          href: troubleshoot-issues-with-wsus-client-agents.md
+          href: update-management/troubleshoot-issues-with-wsus-client-agents.md
         - name: Troubleshoot WSUS connection failures
-          href: troubleshoot-wsus-connection-failures.md
+          href: update-management/troubleshoot-wsus-connection-failures.md
         - name: Troubleshoot WSUS high CPU usage
-          href: troubleshoot-wsus-server-high-cpu-usage.md
+          href: update-management/troubleshoot-wsus-server-high-cpu-usage.md
         - name: Troubleshoot WSUS synchronization and import issues
-          href: troubleshoot-wsus-import-sync-issues.md 
+          href: update-management/troubleshoot-wsus-import-sync-issues.md 
         - name: WSUS and Windows Update Agent diagnostics
-          href: wsus-and-windows-update-agent-diagnostics.md
+          href: update-management/wsus-and-windows-update-agent-diagnostics.md
         - name: WSUS best practices
-          href: windows-server-update-services-best-practices.md
+          href: update-management/windows-server-update-services-best-practices.md
         - name: WSUS client computers restart without any notification
-          href: wsus-client-computers-restart-automatically.md
+          href: update-management/wsus-client-computers-restart-automatically.md
         - name: WSUS client takes too long to finish an update scan
-          href: wsus-client-long-time-finish-update-scan.md
+          href: update-management/wsus-client-long-time-finish-update-scan.md
         - name: WSUS console crashes
-          href: wsus-console-crashes.md
+          href: update-management/wsus-console-crashes.md
         - name: WSUS maintenance guide
-          href: wsus-maintenance-guide.md
+          href: update-management/wsus-maintenance-guide.md
         - name: WSUS sync fails in Windows Server 2008 R2
-          href: wsus-not-sync-with-certificate-error-800B0109.md
+          href: update-management/wsus-not-sync-with-certificate-error-800B0109.md
         - name: WSUS synchronization fails with SoapException
-          href: wsus-synchronization-fails-with-soapexception.md
+          href: update-management/wsus-synchronization-fails-with-soapexception.md

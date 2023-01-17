@@ -1,8 +1,9 @@
 ---
-title: Cannot connect with RDP to a Windows VM in Azure | Microsoft Docs
+title: Cannot connect with RDP to a Windows VM in Azure
 description: Troubleshoot issues when you cannot connect to your Windows virtual machine in Azure using Remote Desktop
 keywords: Remote desktop error,remote desktop connection error,cannot connect to VM,remote desktop troubleshooting
 services: virtual-machines
+ms.subservice: vm-cannot-connect
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
@@ -239,6 +240,15 @@ You may encounter a specific error message when trying to connect to your VM via
 * [An authentication error has occurred. The Local Security Authority cannot be contacted](troubleshoot-specific-rdp-errors.md#rdpauth).
 * [Windows Security error: Your credentials did not work](troubleshoot-specific-rdp-errors.md#wincred).
 * [This computer can't connect to the remote computer](troubleshoot-specific-rdp-errors.md#rdpconnect).
+
+## Troubleshoot sign-in issues when users RDP with Azure AD credentials
+
+You may receive the following common errors when you try to RDP with Azure AD credentials: "no Azure roles assigned", "unauthorized client", or "two-factor authentication sign-in method required". Refer to the following articles to fix these issues:
+
+* [Your account is configured to prevent you from using this device. For more info, contact your system administrator](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/active-directory/devices/howto-vm-sign-in-azure-ad-windows.md#troubleshoot-sign-in-issues).
+* [Windows Security error: Your credentials did not work. Unauthorized client](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/active-directory/devices/howto-vm-sign-in-azure-ad-windows.md#unauthorized-client).
+* [Windows Security error: Your credentials did not work. Password change required](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/active-directory/devices/howto-vm-sign-in-azure-ad-windows.md#password-change-required).
+* [The sign-in method you're trying to use isn't allowed. Try a different sign-in method or contact your system administrator](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/active-directory/devices/howto-vm-sign-in-azure-ad-windows.md#mfa-sign-in-method-required).
 
 ## Additional resources
 

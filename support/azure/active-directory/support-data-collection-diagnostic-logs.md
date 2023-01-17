@@ -4,6 +4,7 @@ description: Describes the support data that will be collected for troubleshooti
 ms.date: 07/20/2020
 ms.reviewer: 
 ms.service: active-directory
+ms.subservice: aad-general
 ---
 # Microsoft Azure Active Directory diagnostic logs
 

@@ -162,10 +162,10 @@ IIS 7.0 and later versions use the following client error HTTP status codes:
   - 404.503 - Not Found: the IP address is included in the Deny list of IP Restriction
   - 404.504 - Not Found: the host name is included in the Deny list of IP Restriction
 
-  - 405 - Method Not Allowed.
-  - 406 - Client browser does not accept the MIME type of the requested page.
-  - 408 - Request timed out.
-  - 412 - Precondition failed.
+- 405 - Method Not Allowed.
+- 406 - Client browser does not accept the MIME type of the requested page.
+- 408 - Request timed out.
+- 412 - Precondition failed.
 
 ### 5**xx** - Server error
 

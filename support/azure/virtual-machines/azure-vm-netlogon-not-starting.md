@@ -4,6 +4,7 @@ description: Troubleshoot Netlogon service not starting
 ms.date: 01/11/2021
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: windows
 ---
 

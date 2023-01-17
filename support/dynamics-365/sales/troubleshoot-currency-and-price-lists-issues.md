@@ -2,9 +2,11 @@
 title: Troubleshoot issues with currency and price lists
 description: Provides resolutions for the known issues that are related to currency and price lists in Dynamics 365 Sales.
 author: sbmjais
+ms.reviewer: lavanyakr
 ms.author: shjais
 ms.topic: troubleshooting
 ms.date: 02/28/2022
+ms.subservice: d365-sales-sales
 ---
 
 # Troubleshoot issues with currency and price lists
@@ -47,7 +49,7 @@ You can change the currency and price list for the entities in the following sta
 || Canceled | No | No |
 || Fulfilled | No | No |
 || Invoiced | No | No |
-| **Invoice** | Active | Yes, but only if there are no associated Quote Product records. | Yes, but this can cause an error with the Invoice record if the associated Order Product records aren't part of the selected price list. |
+| **Invoice** | Active | No | Yes, but this can cause an error if the associated Invoice Product records aren't part of the selected price list. |
 || Paid | No | No |
 || Canceled | No | No |
 

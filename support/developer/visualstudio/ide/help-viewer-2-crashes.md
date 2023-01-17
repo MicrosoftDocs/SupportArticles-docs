@@ -1,10 +1,9 @@
 ---
 title: Visual Studio 2012 Help Viewer 2.0 crashes
-description: This article provides a resolution to resolve the crash problem when you launch Help Viewer 2.0 with Visual Studio 2012.
-ms.date: 04/27/2020
-ms.custom: sap:Language or compilers
-ms.technology: vs-language-compilers
+description: This article provides a resolution to resolve the crash problem when you launch Help Viewer 2.0 in Visual Studio 2012.
+ms.date: 05/12/2022
 ---
+
 # Visual Studio 2012 Help Viewer 2.0 crashes
 
 This article helps you resolve the Microsoft Visual Studio 2012 Help Viewer crash problem.
@@ -29,7 +28,7 @@ The Help Viewer 2.0 or one of its components is missing or damaged.
 
 ## Resolution
 
-To resolve this issue, you should close all instances of Visual Studio 2010, open the **Program and Features** applet from the Control Panel, select the installed instance of Visual Studio 2012, select **Change**, and continue with the **Repair** option.
+To resolve this issue, you must close all instances of Visual Studio 2010, open the **Program and Features** applet from the Control Panel, select the installed instance of Visual Studio 2012, select **Change**, and continue with the **Repair** option.
 
 ## Reset personal preferences
 

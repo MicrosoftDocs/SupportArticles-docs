@@ -4,6 +4,7 @@ description: Fixes an issue that triggers error 0xc0000225 when you try to start
 ms.date: 07/21/2020
 ms.reviewer: jarrettr
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ---
 # Windows boot error 0xc0000225 on an Azure VM
@@ -85,7 +86,7 @@ To fix the issue, follow these steps, based on the error message that you receiv
 6. Run the following command as an administrator, and then record the identifier of Windows Boot Loader (not Windows Boot Manager). The identifier is a 32-character code and it resembles "xxxxxxxx-xxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx." You will use this identifier in the next step.
 
     ```console
-    bcdedit /store <Boot partition>:\boot\bcd /enum
+    bcdedit /store <Boot partition>:\boot\bcd /enum /v
     ```
 
 7. Repair the Boot Configuration data by running the following commands after you replace the placeholders by the actual values:

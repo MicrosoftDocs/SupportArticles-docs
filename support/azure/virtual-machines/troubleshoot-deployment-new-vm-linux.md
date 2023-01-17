@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot Linux VM deployment| Microsoft Docs
-description: Troubleshoot Resource Manager deployment issues when you create a new Linux virtual machine in Azure
+title: Troubleshoot Linux VM deployment
+description: Troubleshoot Resource Manager deployment issues when you create a new Linux virtual machine in Azure.
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
 
@@ -8,6 +8,7 @@ author: srijang
 manager: dcscontentpm
 tags: top-support-issue, azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-deploy
 ms.collection: linux
 ms.workload: na
 ms.tgt_pltfrm: vm-linux
@@ -217,7 +218,7 @@ Cloud-init versions >= 20.3 contain a fix which falls back and executes `dhclien
 
 ### Getting more logs
 
-If you find that you need more logs from the VM to understand the issues, you maybe can SSH into the VM using the [serial console](/azure/virtual-machines/troubleshooting/serial-console-linux) using a user that is baked into the image. If you do not have a user baked in, then you can either recreate the image with a user, or use the [AZ VM Repair tool](/cli/azure/ext/vm-repair/vm/repair#ext_vm_repair_az_vm_repair_create) which will mount the OS disk of the VM that failed to provision, to another VM.
+If you find that you need more logs from the VM to understand the issues, you maybe can SSH into the VM using the [serial console](/azure/virtual-machines/troubleshooting/serial-console-linux) using a user that is baked into the image. If you do not have a user baked in, then you can either recreate the image with a user, or use the [AZ VM Repair tool](/cli/azure/vm/repair#az-vm-repair-create) which will mount the OS disk of the VM that failed to provision, to another VM.
 
 ```azurecli
 az vm repair create  \

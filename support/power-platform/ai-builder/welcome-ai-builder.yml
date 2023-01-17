@@ -17,7 +17,7 @@ landingContent:
   # Card
   - title: Administration and licensing
     linkLists:
-      - linkListType: how-to-guide
+      - linkListType: reference
         links:
           - text: Actions are disabled or deactivated
             url: aibuilder-actions-are-disabled-deactivated.md
@@ -25,21 +25,19 @@ landingContent:
             url: the-current-environment-donot-meet-the-minimum-requirements-error-message.md
 
   # Card
+  - title: Models
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: AI models fail to be imported in a new environment
+            url: aimodels-fail-to-be-imported-in-a-new-environment.md
+
+  # Card
   - title: Documentation and training
     linkLists:
       - linkListType: reference
         links:
           - text: AI Builder documentation
-            url: https://docs.microsoft.com/ai-builder/
+            url: /ai-builder/
           - text: AI Builder training
-            url: https://docs.microsoft.com/learn/browse/?expanded=power-platform&products=ai-builder
-
-  # Card
-  - title: Models
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: AI models fail to be imported in a new environment
-            url: aimodels-fail-to-be-imported-in-a-new-environment.md
-          - text: Form processing isn't extracting tables
-            url: aibuilder-form-processing-is-not-extracting-tables-that-span-across-multiple-pages.md
+            url: /training/browse/?expanded=power-platform&products=ai-builder

@@ -5,40 +5,63 @@ summary: Welcome to Power Apps troubleshooting. These articles explain how to de
 metadata:
   title: Power Apps troubleshooting
   description: Landing page for Power Apps troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
-  ms.prod: power-platform  #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.prod: power-platform #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
-  author:   #Required; your GitHub user alias, with correct capitalization.
-  ms.author:  #Required; microsoft alias of author; optional team alias.
+  author: #Required; your GitHub user alias, with correct capitalization.
+  ms.author: #Required; microsoft alias of author; optional team alias.
   ms.date: 3/31/2021
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
-
- # Card
-  - title: Connections
+  # Card
+  - title: Troubleshoot common Power Apps issues
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Best practices when updating a flow
-            url: best-practices-when-updating-a-flow.md
+            url: connections/best-practices-when-updating-a-flow.md
+          - text: Common issues and resolutions for Power Apps
+            url: isolate-and-troubleshoot-common-issues/common-issues-and-resolutions.md
+          - text: General Power Apps debugging strategies
+            url: isolate-and-troubleshoot-common-issues/isolate-common-issues.md
+          - text: Isolate issues in canvas apps
+            url: isolate-and-troubleshoot-common-issues/isolate-canvas-app-issues.md
+          - text: Isolate issues in model-driven app
+            url: isolate-and-troubleshoot-common-issues/isolate-model-app-issues.md
+          - text: Troubleshoot startup issues for Power Apps
+            url: isolate-and-troubleshoot-common-issues/troubleshooting-startup-issues.md
+          - text: Troubleshoot Power Query issues
+            url: isolate-and-troubleshoot-common-issues/troubleshoot-power-query-issues.md
 
- # Card
-  - title: Ribbons and commanding
+  # Card
+  - title: Create and use apps
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Ribbon issues
-            url: ribbon-issues.md
-          - text: Regenerate ribbon metadata 
-            url: regenerate-ribbon-metadata.md
+          - text: Troubleshoot ribbon issues
+            url: create-and-use-apps/ribbon-issues.md
+          - text: Regenerate ribbon metadata
+            url: create-and-use-apps/regenerate-ribbon-metadata.md
 
- # Card
+  # Card
   - title: Documentation and training
     linkLists:
       - linkListType: reference
         links:
           - text: Power Apps documentation
-            url: /powerapps/
-          - text: Power Apps training 
-            url: /learn/powerplatform/power-apps
+            url: /power-apps/
+          - text: Power Apps training
+            url: /training/powerplatform/power-apps
+
+  # Card
+  - title: Support Resources
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Power Apps support
+            url: https://powerapps.microsoft.com/support
+          - text: Power Apps Community forum
+            url: https://powerusers.microsoft.com/t5/Forums/ct-p/PA_Comm_Forums
+          - text: Power Apps Ideas forum
+            url: https://powerusers.microsoft.com/t5/Power-Apps-Ideas/idb-p/PowerAppsIdeas

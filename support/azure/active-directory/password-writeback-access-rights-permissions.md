@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot password writeback access rights and permissions
 description: Learn about preparatory troubleshooting steps involving the required access rights and permissions for password writeback.
-ms.date: 2/25/2022
+ms.date: 6/2/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: jarrettr, nualex
@@ -51,7 +51,7 @@ Use the MMC snap-in for Active Directory Users and Computers. Follow these steps
 
 1. Select **View** > **Advanced Features**.
 
-1. In the navigation pane, find and select the user account that you want to check the permissions for. Then, select the **Properties** icon.
+1. In the console tree, find and select the user account that you want to check the permissions for. Then, select the **Properties** icon.
 
 1. In the **Properties** dialog box for the account, select the **Security** tab, and then select the **Advanced** button.
 
@@ -84,7 +84,7 @@ The PowerShell method is useful for offline analysis. It lets you import the fil
 
 ## Avoid replication issues when fixing permissions
 
-When you fix Active Directory permissions, the changes to Active Directory might not take effect immediately. Active Directory permissions are also subject to replications across the forest in the same manner that Active Directory objects are. How do you mitigate the Active Directory replication issues or delays? You set a preferred domain controller in Azure AD Connect, and work on only that domain controller for any changes. When you use the Active Directory Users and Computers snap-in, right-click the domain root in the navigation pane, select the **Change Domain Controller** menu item, and then pick the same preferred domain controller.
+When you fix Active Directory permissions, the changes to Active Directory might not take effect immediately. Active Directory permissions are also subject to replications across the forest in the same manner that Active Directory objects are. How do you mitigate the Active Directory replication issues or delays? You set a preferred domain controller in Azure AD Connect, and work on only that domain controller for any changes. When you use the Active Directory Users and Computers snap-in, right-click the domain root in the console tree, select the **Change Domain Controller** menu item, and then pick the same preferred domain controller.
 
 For a quick sanity check within Active Directory, run domain controller diagnostics by using the [dcdiag](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731968(v=ws.11)) command. Then, run the [repadmin /replsummary](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc770963(v=ws.11)) command to view a summary of replication problems. The following commands store the command output to text files, although you can modify them to display the output on the console:
 
@@ -101,7 +101,7 @@ You can view the existing Active Directory permissions in the security propertie
 
 1. Open the Active Directory Users and Computers snap-in.
 
-1. In the navigation pane, locate and select the Active Directory domain root, and then select the **Properties** icon.
+1. In the console tree, locate and select the Active Directory domain root, and then select the **Properties** icon.
 
 1. In the **Properties** dialog box for the account, select the **Security** tab.
 
@@ -174,7 +174,7 @@ This section describes the expected Active Directory permissions for password wr
 
 1. Return to the Active Directory Users and Computers snap-in.
 
-1. Use the navigation pane or the **Action** > **Find** menu item to select the target user object, and then select the **Properties** icon.
+1. Use the console tree or the **Action** > **Find** menu item to select the target user object, and then select the **Properties** icon.
 
 1. In the **Properties** dialog box for the account, select the **Security** tab.
 
@@ -251,13 +251,37 @@ The **Special** permissions in this table include **Read/Write private informati
 | (blank) | \<domain root> | This object and all descendant objects |
 | Special | \<domain root> | This object and all descendant objects |
 
+## Required permissions on the SAM server object
+
+This section describes the expected Active Directory permissions for password writeback on the Security Account Manager (SAM) server object (CN=Server,CN=System,DC=Contoso,DC=com). To find the security properties of the SAM server object (samServer), follow these steps:
+
+1. Return to the Active Directory Users and Computers snap-in.
+
+1. In the console tree, locate and select the **System** container.
+
+1. Locate and select **Server** (the samServer object), and then select the **Properties** icon.
+
+1. In the **Properties** dialog box for the object, select the **Security** tab.
+
+1. Select the **Advanced Security Settings** dialog box. The **Permissions** tab displays the current list of samServer object permissions for each Active Directory identity (Principal).
+
+1. Verify that at least one of the following principals is listed in the access control entry for the samServer object. If only **Pre-Windows 2000 Compatible Access** is listed, make sure that **Authenticated Users** is a member of this built-in group.
+
+### Permissions for Pre-Windows 2000 Compatible Access (Allow)
+
+**Special** permissions must include the **List contents**, **Read all properties**, and **Read permissions** rights.
+
+### Permissions for Authenticated Users (Allow)
+
+**Special** permissions must include the **List contents**, **Read all properties**, and **Read permissions** rights.
+
 ## Required permissions on the Builtin container
 
 This section describes the expected Active Directory permissions for password writeback on the Builtin container. To view the existing security permissions, follow these steps to get to the security properties of the built-in object:
 
 1. Open to the Active Directory Users and Computers snap-in.
 
-1. In the navigation pane, locate and select the **Builtin** container, and then select the **Properties** icon.
+1. In the console tree, locate and select the **Builtin** container, and then select the **Properties** icon.
 
 1. In the **Properties** dialog box for the account, select the **Security** tab.
 
@@ -286,7 +310,7 @@ To make sure that you have the correct domain group policies, follow these steps
 
 1. Select **Start**, enter *secpol.msc*, and then select **Local Security Policy** in the search results.
 
-1. In the navigation pane, under **Security Settings**, expand **Local Policies**, and then select **User Rights Assignment**.
+1. In the console tree, under **Security Settings**, expand **Local Policies**, and then select **User Rights Assignment**.
 
 1. In the list of policies, select **Impersonate a client after authentication**, and then select the **Properties** icon.
 

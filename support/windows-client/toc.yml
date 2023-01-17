@@ -260,6 +260,10 @@
       href: ./deployment/updates-not-install-with-fast-startup.md
   - name: Servicing
     items:
+    - name: Additional resources for Windows Update
+      href: ./deployment/additional-resources-for-windows-update.md
+    - name: 'Troubleshooting guidance: Windows Update'
+      href: ./deployment/troubleshoot-windows-update-issues.md
     - name: .NET Framework 1.1 isn't supported
       href: ./deployment/dotnet-framework-1dot1-not-supported.md
     - name: 80072EE6 error when downloading an update from WSUS
@@ -316,6 +320,8 @@
       href: ./deployment/missing-windows-installer-cache.md
     - name: SFC detects Opencl.dll as corrupted
       href: ./deployment/sfc-detects-opencl-dot-dll-corrupted.md
+    - name: SFC flags Windows Defender files as corrupted
+      href: ./deployment/sfc-flags-windows-defender-powershell-module-files-corrupted.md
     - name: Standard terminology that defines software updates
       href: ./deployment/standard-terminology-software-updates.md
     - name: Switches with Xcopy and Xcopy32 commands
@@ -342,6 +348,10 @@
       href: ./deployment/windows-update-hangs-updates-uninstalled.md
   - name: Setup
     items:
+    - name: Windows 10 upgrade resolution procedures
+      href: ./deployment/windows-10-upgrade-resolution-procedures.md
+    - name: Windows 10 upgrade quick fixes
+      href: ./deployment/windows-10-upgrade-quick-fixes.md
     - name: .NET Framework 4.5.1 (web installer)
       href: ./deployment/dotnet-framework-4dot5dot1-web-installer.md
     - name: An upgrade to Windows Server 2016 fails
@@ -384,7 +394,7 @@
       href: ./deployment/language-packs-no-longer-available-after-upgrade.md
     - name: MiracastView package cause sysprep error after upgrading a computer
       href: ./deployment/miracastview-cause-sysprep-error-upgrade-windows-10-1709.md
-    - name: Network provider settings are removed during an in-place upgrade 
+    - name: Network provider settings are removed during an in-place upgrade
       href: ./deployment/network-provider-settings-removed-in-place-upgrade.md
     - name: Operations fail if Windows 8 is improperly identified as a WTG installation
       href: ./deployment/windows-8-incorrectly-reported-as-wtg-installation.md
@@ -408,6 +418,10 @@
       href: ./deployment/winre-cannot-built-deploy-image-captured-non-uefi-computer.md
     - name: You can't access an EFI system partition
       href: ./deployment/cant-access-efi-system-partition.md
+  - name: USMT
+    items:
+    - name: USMT common issues
+      href: ./deployment/usmt-common-issues.md
 - name: Group Policy
   items:
   - name: Group Policy
@@ -560,6 +574,14 @@
       href: ./networking/windows-connection-manager-disconnects-wlan.md
   - name: TCP/IP communications
     items:
+    - name: RPC error troubleshooting guidance
+      href: ./networking/rpc-errors-troubleshooting.md
+    - name: TCP/IP port exhaustion troubleshooting
+      href: ./networking/tcp-ip-port-exhaustion-troubleshooting.md
+    - name: TCP/IP connectivity issues troubleshooting
+      href: ./networking/tcp-ip-connectivity-issues-troubleshooting.md
+    - name: Collect data using Network Monitor
+      href: ./networking/collect-data-using-network-monitor.md
     - name: Additional gateways appear in persistent routes
       href: ./networking/incorrect-default-gateways-in-persistent-routes.md
     - name: Can't install SNMP and WMI SNMP Provider
@@ -567,7 +589,7 @@
     - name: Can't turn on Network Discovery
       href: ./networking/cannot-turn-on-network-discovery.md
     - name: Check Microsoft Broadband Network Adapter
-      href: ./networking/ping-exe-check-microsoft-broadband-network-adapter.md    
+      href: ./networking/ping-exe-check-microsoft-broadband-network-adapter.md
     - name: Device can't connect to mobile broadband
       href: ./networking/device-cant-connect-mobile-broadband-over-the-air.md
     - name: Enterprise APN lost after SIM change or MBN adapter error
@@ -580,7 +602,7 @@
       href: ./networking/cannot-establish-dial-up-connection.md
     - name: How to disable network adapter power management
       href: ./networking/power-management-on-network-adapter.md
-    - name: ICS doesn't work after computer or service restart 
+    - name: ICS doesn't work after computer or service restart
       href: ./networking/ics-not-work-after-computer-or-service-restart.md
     - name: Internet Explorer or Edge window opens when connecting to a corporate network
       href: ./networking/internet-explorer-edge-open-connect-corporate-public-network.md
@@ -626,6 +648,12 @@
       href: ./networking/internet-firewalls-prevent-browsing-file-sharing.md
   - name: Wireless networking and 802.1X authentication
     items:
+    - name: Wireless network connectivity issues troubleshooting
+      href: ./networking/wireless-network-connectivity-issues-troubleshooting.md
+    - name: Data collection for troubleshooting 802.1X authentication issues
+      href: ./networking/data-collection-for-troubleshooting-802-1x-authentication-issues.md
+    - name: 802.1X authentication issues troubleshooting
+      href: ./networking/802-1x-authentication-issues-troubleshooting.md
     - name: Code 31 error for WAN Miniport device
       href: ./networking/code-31-error-device-manager-for-wan-miniport.md
     - name: Configure Wi-Fi Sense and Paid Wi-Fi Services
@@ -674,6 +702,22 @@
       href: ./performance/issues-when-calls-createwindowex-32-bit-applications.md
   - name: Blue Screen/Bugcheck
     items:
+    - name: Event ID 41 "The system has rebooted without cleanly shutting down first"
+      href: ./performance/event-id-41-restart.md
+    - name: Stop error 7B or Inaccessible_Boot_Device troubleshooting
+      href: ./performance/stop-error-7b-or-inaccessible-boot-device-troubleshooting.md
+    - name: Stop error or blue screen error troubleshooting
+      href: ./performance/stop-error-or-blue-screen-error-troubleshooting.md
+    - name: Stop error when updating in-box Broadcom network adapter driver
+      href: ./performance/stop-error-broadcom-network-driver-update.md
+    - name: Generate a kernel or complete crash dump
+      href: ./performance/generate-a-kernel-or-complete-crash-dump.md
+    - name: Configure system failure and recovery options
+      href: ./performance/configure-system-failure-and-recovery-options.md
+    - name: How to determine the appropriate page file size for 64-bit versions of Windows
+      href: ./performance/how-to-determine-the-appropriate-page-file-size-for-64-bit-versions-of-windows.md
+    - name: Introduction to the page file
+      href: ./performance/introduction-to-the-page-file.md
     - name: Computers crash with error code 0x113
       href: ./performance/error-0x113-intel-amd-graphics-adapters.md
     - name: NMI_HARDWARE_FAILURE error
@@ -688,8 +732,14 @@
       href: ./performance/stop-error-lenovo-thinkpad-kb4568831-uefi.md
     - name: Tablet device creates only a minidump file
       href: ./performance/tablet-device-creates-minidump-file.md
+    - name: Windows start-up issues advanced troubleshooting
+      href: ./performance/windows-startup-issues-troubleshooting.md
   - name: No Boot (not BugChecks)
     items:
+    - name: Windows-based computer freeze troubleshooting
+      href: ./performance/windows-based-computer-freeze-troubleshooting.md
+    - name: Windows boot issues troubleshooting
+      href: ./performance/windows-boot-issues-troubleshooting.md
     - name: Advanced troubleshooting Windows boot problems with LiveRE tool
       href: ./performance/live-re-troubleshoot-windows-boot.md
     - name: Can't refresh or reset your PC
@@ -782,6 +832,8 @@
       href: ./printing/errors-connect-to-shared-printer-cname-record.md
     - name: Printing from Modern App creates large spool file
       href: ./printing/print-modern-app-creates-large-file.md
+    - name: Windows 11 RPC connection updates for print
+      href: ./printing/windows-11-rpc-connection-updates-for-print.md
   - name: 'Management and Configuration: Installing Print drivers'
     items:
     - name: Error message 0x0000052e when you try to install a network printer
@@ -802,7 +854,7 @@
     items:
     - name: 802.1x user authentication fails when using RDS connection
       href: ./remote/cannot-use-802dot1x-user-authentication-connect-rds.md
-    - name: Local computer behaves as if Windows logo key is pressed 
+    - name: Local computer behaves as if Windows logo key is pressed
       href: ./remote/local-computer-behaves-as-if-windows-logo-key-pressed.md
     - name: Use MSTSC or universal Remote Desktop client instead of RDMan
       href: ./remote/use-mstsc-universal-remote-desktop-client-instead-rdman.md
@@ -857,8 +909,8 @@
   - name: DPI and Display Issues
     items:
     - name: Can't open high resolution file in Photo Gallery
-      href: ./shell-experience/cannot-open-high-resolution-file-photo-gallery.md    
-    - name: 'Display configuration reverts to "Second screen only"'
+      href: ./shell-experience/cannot-open-high-resolution-file-photo-gallery.md
+    - name: Display configuration reverts to "Second screen only"
       href: ./shell-experience/display-configuration-reverts-second-screen-only-resume-standby.md
     - name: Display issue when you use USB-attached monitor
       href: ./shell-experience/display-configuration-retained-after-reboot.md
@@ -948,6 +1000,14 @@
     items:
     - name: Windows Search 4.0 and Multilingual User Interface Pack
       href: ./shell-experience/windows-search-4-multilingual-user-interface-pack.md
+  - name: KIOSK-MODE
+    items:
+    - name: Kiosk mode issues troubleshooting
+      href: ./shell-experience/kiosk-mode-issues-troubleshooting.md
+  - name: START-MENU
+    items:
+    - name: Troubleshoot Start menu errors
+      href: ./shell-experience/troubleshoot-start-menu-errors.md
 - name: System Management Components
   items:
   - name: System Management Components
@@ -970,6 +1030,8 @@
     items:
     - name: Grant-DfsnAccess doesn't change inheritance mode
       href: ./system-management-components/grant-dfsnaccess-not-change-inheritance.md
+    - name: Signed PowerShell script fails for hash mismatch
+      href: ./system-management-components/signed-powershell-script-fails-hash-mismatch.md
   - name: Server Manager
     items:
     - name: DNS server tool is missing for RSAT client
@@ -986,6 +1048,10 @@
       href: ./system-management-components/task-scheduler-task-only-runs-in-background.md
     - name: Use the at command to schedule tasks
       href: ./system-management-components/use-at-command-to-schedule-tasks.md
+  - name: WER
+    items:
+    - name: Windows Error Reporting and Windows diagnostics enablement guidance
+      href: ./system-management-components/windows-error-reporting-diagnostics-enablement-guidance.md
   - name: WinRM
     items:
     - name: Errors when you run WinRM commands
@@ -1064,6 +1130,12 @@
       href: ./user-profiles-and-logon/roaming-profile-was-not-completely-synchronized-error.md
     - name: Renaming user account doesn't change profile path
       href: ./user-profiles-and-logon/renaming-user-account-not-change-profile-path.md
+  - name: HELLO-FOR-BUSINESS
+    items:
+    - name: Event ID 300 - Windows Hello successfully created in Windows 10
+      href: ./user-profiles-and-logon/event-id-300-windows-hello-successfully-created-in-windows-10.md
+    - name: Windows Hello errors during PIN creation in Windows 10
+      href: ./user-profiles-and-logon/windows-hello-errors-during-pin-creation-in-windows-10.md
 - name: Virtualization
   items:
   - name: Virtualization
@@ -1110,6 +1182,24 @@
       href: ./windows-security/access-computer-after-administrator-disabled.md
   - name: Bitlocker
     items:
+    - name: Decode Measured Boot logs to track PCR changes
+      href: ./windows-security/decode-measured-boot-logs-to-track-pcr-changes.md
+    - name: 'BitLocker and TPM: other known issues'
+      href: ./windows-security/bitlocker-and-tpm-other-known-issues.md
+    - name: 'BitLocker cannot encrypt a drive: known TPM issues'
+      href: ./windows-security/bitlocker-cannot-encrypt-a-drive-known-tpm-issues.md
+    - name: 'BitLocker configuration: known issues'
+      href: ./windows-security/bitlocker-configuration-known-issues.md
+    - name: 'BitLocker recovery: known issues'
+      href: ./windows-security/bitlocker-recovery-known-issues.md
+    - name: 'BitLocker Network Unlock: known issues'
+      href: ./windows-security/bitlocker-network-unlock-known-issues.md
+    - name: 'Enforcing BitLocker policies by using Intune: known issues'
+      href: ./windows-security/enforcing-bitlocker-policies-by-using-intune-known-issues.md
+    - name: 'BitLocker cannot encrypt a drive: known issues'
+      href: ./windows-security/bitlocker-cannot-encrypt-a-drive-known-issues.md
+    - name: BitLocker issues troubleshooting
+      href: ./windows-security/bitlocker-issues-troubleshooting.md
     - name: BitLocker Recovery starts when OEMs perform firmware updates for TPM 1.2
       href: ./windows-security/bitlocker-recovery-starts-oems-firmware-updates-tpm-1-dot-2.md
     - name: Earlier Windows versions don't start after "Setup Windows and Configuration Manager"

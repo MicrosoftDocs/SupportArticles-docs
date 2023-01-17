@@ -22,7 +22,10 @@ Follow these guidelines to generate EFT files or EFT prenote files:
 > [!NOTE]
 > Before you follow the instructions in this article, make sure that you have a complete backup copy of the database that you can restore if a problem occurs.
 
-- **OPTION 1**: If you selected the **Payables Prenote Required** check box or **Receivables Prenote Required** checkbox, the EFT prenote file will need to be generated first before the system will generate a regular EFT file. To generate an EFT prenote file, follow these steps:  
+- **OPTION 1: Preauthorization required for EFT**
+
+    If you selected the **Payables Prenote Required** check box or **Receivables Prenote Required** checkbox, the EFT prenote file will need to be generated first before the system will generate a regular EFT file. To generate an EFT prenote file, follow these steps:
+
     1. On the **Cards** menu, point to **Financial**, and then select **Checkbook**.
     2. In the Checkbook Maintenance window, enter the appropriate checkbook ID in the **Checkbook ID** box, and then select **EFT Bank**.
     3. In the Checkbook EFT Bank Maintenance window, select
@@ -30,9 +33,11 @@ Follow these guidelines to generate EFT files or EFT prenote files:
     4. In the **EFT Payables Options** (or Receivables Options) area, verify if the **Payables Prenote Required** (or **Receivables Prenote Required**) check box is selected. If the **Payables Prenote Required** (or **Receivables Prenote Required**) check box is selected, follow the appropriate method:
         - Method 1: Select to clear the **Payables Prenote Required** (or **Receivables Prenote Required**) check box to not require a prenote file.
         - Method 2: Select **Generate Prenotes** to continue to generate the prenote file if required by the bank.
-    5. Select **OK**  two times to close the windows, and then select **Save**.
+    5. Select **OK** two times to close the windows, and then select **Save**.
 
-- **OPTION 2**: Certain fields between the checkbook and vendor (or customer) must match in order for the EFT file or EFT prenote file to generate. These fields include the Currency ID (if you have multicurrency installed), Country Code, and Bank Country/Region. These fields aren't required, but if they're filled in on either side, the other side must match. To verify, use one the following steps:
+- **OPTION 2: EFT Payment does not pull for vendor**
+
+    Certain fields between the checkbook and vendor (or customer) must match in order for the EFT file or EFT prenote file to generate. These fields include the Currency ID (if you have multicurrency installed), Country Code, and Bank Country/Region. These fields aren't required, but if they're filled in on either side, the other side must match. To verify, use one the following steps:
 
     1. On the **Cards** menu, point to **Financial**, and then select **Checkbook**.
     2. In the Checkbook Maintenance window, select the appropriate checkbook ID in the **Checkbook ID** box.
@@ -57,7 +62,9 @@ Follow these guidelines to generate EFT files or EFT prenote files:
     16. Select **OK** to close the window. Select **Save** to close the Vendor Maintenance window.
     17. Now test the EFT file or EFT prenote file again.
 
-- **OPTION 3**: If you don't specify a bank file format, you receive the following error message when you try to generate the EFT file:
+- **OPTION 3: Error when trying to generate EFT file**
+
+    If you don't specify a bank file format, you receive the following error message when you try to generate the EFT file:
 
     > The selected checkbook is not set up with the payables file format. The EFT file cannot be generated.  
     > The selected checkbook is not set up with the receivables file format.  The EFT file cannot be generated.
@@ -66,16 +73,19 @@ Follow these guidelines to generate EFT files or EFT prenote files:
   1. On the **Cards** menu, point to
  **Financial**, and then select **Checkbook**.
   2. In the Checkbook Maintenance window, enter the appropriate checkbook ID in the **Checkbook ID** box.
-  3. Select **EFT Bank**, and then select **Payables Options** (or Receivables Options  depending on if you're working with EFT for Payables or EFT for Receivables).
-  4. In the **File Format**  area, select the lookup button to select an EFT file format ID for the Single Format if only using one format for all vendors (or customers) or Based on Vendor if you're using different formats for different vendors (or customers).
+  3. Select **EFT Bank**, and then select **Payables Options** (or Receivables Options depending on if you're working with EFT for Payables or EFT for Receivables).
+  4. In the **File Format** area, select the lookup button to select an EFT file format ID for the Single Format if only using one format for all vendors (or customers) or Based on Vendor if you're using different formats for different vendors (or customers).
 
       > [!NOTE]
       >  Select the blue expansion arrow button next to the format fields to drill back to the EFT File Format Maintenance window. Or you can key a new ID right in this window and the system will prompt you if you would like to add this as a new format. Or to navigate directly to the EFT File Format window, point to **Financial** on the **Cards** menu, and then select **EFT File Format**.
   5. Select **OK** two times to close the windows, and then select **Save**.
 
-- **OPTION 4**: If you don't specify a path of the location where you want to save the EFT file output or the prenote file output, you receive the following error message when you try to generate the EFT file:
+- **OPTION 4: Error when trying to generate EFT file**
+
+    If you don't specify a path of the location where you want to save the EFT file output or the prenote file output, you receive the following error message when you try to generate the EFT file:
+
     > The EFT file could not be generated in the path specified for Payables Prenote File in Checkbook EFT Payables Options.  
-      THe EFT file could not be generated inthe path specified for Receivables Prenote File in Checkbook EFT Receivables Options.
+      The EFT file could not be generated in the path specified for Receivables Prenote File in Checkbook EFT Receivables Options.
 
     You must specify the path of the location where you want to save the EFT file output or the prenote file output. To do it, use the steps below:
 
@@ -87,16 +97,21 @@ Follow these guidelines to generate EFT files or EFT prenote files:
         - > [!NOTE]
           > If this is a new setup, we recommend to always generate the test EFT files to a **local drive** first to make sure the file will generate while you test. Once the file generates to a local drive, then you can change the paths for the output files to a shared drive if needed and verify it still works. This method takes any permissions issues with the shared drive out of the picture while you test.
         - > [!NOTE]
-          > In the output path that you choose, make sure the **folders or file name** you save to do not have any **spaces, numbers or special characters** (periods,dashes,etc). For example, if you named the file *prenote1.txt* or *prenote 1.txt*, you should make it *prenote.txt* instead.
+          > In the output path that you choose, make sure the folders or file name you save to do not have any spaces, periods, numbers or special characters (periods, dashes, etc). For example, if you named the file *prenote1.txt* or *prenote 1.txt*, you should make it *prenote.txt* instead (removing the number). Or if the path is *J://Payables/Payments/Jane.Doe/Payment.txt*, the period in the Jane.Doe folder would cause an issue. Test saving to just *J://Payables/Payments/payment.txt* instead to make sure it works at this folder level on the same drive.
         - Make sure the path isn't too many folders deep. (fewer than three folders)
         - Make sure the path isn't longer than the visible length of the field in the GP window.
-        - Make sure any folders in the path don't contain any periods or special characters.
         - If using Web client, make sure to test on the thick client.
         - > [!NOTE]
           > If you would like the filename to have an extension, enter it right in the output file path. For example, name the file as *prenotex.txt* if you want the .txt extension on the out put file.
-    6. Select **OK**  two times to close the windows, and then select **Save**.
+        - If using a mapped drive, make sure the user can save any other file to that location manually.
+        - If using a mapped drive, make sure the drive is mapped to the same letter on each workstation.
+        - If using a mapped drive, make sure the drive is mapped on the network to the same letter.
+        - Consult your local IT staff for further assistance with permissions within your own environment to shared locations. Users should have 'full control' access.
+    6. Select **OK** two times to close the windows, and then select **Save**.
 
-- **OPTION 5**: If the checkbook ID contains any special characters, such as a dash (-), a slash mark (/), or an apostrophe ('), use a different checkbook ID or create a new checkbook ID that has no special characters. After you generate EFT files or EFT prenote files by using a different checkbook ID or a new checkbook ID, you must change the checkbook ID in all tables. To do it, use one of the following methods.
+- **OPTION 5: EFT file does not generate for specific checkbook ID**
+
+    If the checkbook ID contains any special characters, such as a dash (-), a slash mark (/), or an apostrophe ('), use a different checkbook ID or create a new checkbook ID that has no special characters. After you generate EFT files or EFT prenote files by using a different checkbook ID or a new checkbook ID, you must change the checkbook ID in all tables. To do it, use one of the following methods.
 
   - Method 1
 
@@ -106,7 +121,7 @@ Follow these guidelines to generate EFT files or EFT prenote files:
 
     Use an SQL query tool to change the checkbook ID in all tables. To do it, follow these steps:
 
-      1. Start SQL Server Management Studio. To do it, see the [How to start a SQL query tool](#how-to-start-a-sql-query-tool) section.
+      1. Start SQL Server Management Studio.
       2. Run the following script to locate all tables that contain the Checkbook ID field (CHEKBKID).
 
           ```sql
@@ -127,7 +142,10 @@ Follow these guidelines to generate EFT files or EFT prenote files:
           > [!NOTE]
           > In this script, the *\<XXX>* placeholder is a placeholder for the new checkbook ID that has no special characters. The *\<YYY>* placeholder is a placeholder for the previous checkbook ID.
 
-- **OPTION 6**: If you recently upgraded to Microsoft Dynamics GP 10.0 or GP 2010, you may receive the following error message:
+- **OPTION 6: Error when generating EFT file**
+
+    If you recently upgraded to Microsoft Dynamics GP 10.0 or GP 2010, you may receive the following error message:
+
     > The bank/country assigned to the vendors remit to address is missing or inactive. Assign the bank/country region to the address or activate the format.
 
     If you receive this error message, check the PM20000 (PM_Transaction_Open) table to make sure that the vendor addresses in the VADCDTRO column are the same addresses for the vendors in the earlier version. The VADCDTRO column in the PM20000 table must match the VADCDTRO column in the PM00200 (PM_Vendor_Master) table for each vendor. To determine which vendor generates the error message, use one of the following methods.
@@ -141,7 +159,7 @@ Follow these guidelines to generate EFT files or EFT prenote files:
 
   - Method 2
 
-    1. Start SQL Server Management Studio. To do it, see the **How to start an SQL query tool** section.
+    1. Start SQL Server Management Studio.
     2. Run the following script against the company database.
 
         ```sql
@@ -153,10 +171,12 @@ Follow these guidelines to generate EFT files or EFT prenote files:
 
     3. Make sure that the VADCDTRO (Vendor Address Code - Remit To) column in the PM20000 table matches the VADCDTRO column in the PM00200 table. Additionally, make sure that the VADCDTRO column in the PM20100 (PM_Apply_To_OPEN_OPEN_temporary) table matches the VADCDTRO column in the PM00200 table and in the PM20000 (PM_Transaction_Open) table.
 
-- **OPTION 7**: If you recently upgraded to Microsoft Dynamics GP 10.0 or GP 2010 from a GP 9.0 or prior version, you must manually enter the bank name in the **Bank Name** box.
+- **OPTION 7: EFT file does not generate, no error**
+
+    If you recently upgraded to Microsoft Dynamics GP 10.0 or GP 2010 from a GP 9.0 or prior version, you must manually enter the bank name in the **Bank Name** box.
 
     > [!NOTE]
-    > The **Bank Name**  box does not exist in Microsoft Dynamics GP 9.0 and prior versions.
+    > The **Bank Name** box does not exist in Microsoft Dynamics GP 9.0 and prior versions.
 
     To manually enter the bank name in the **Bank Name** box, follow these steps:
 
@@ -167,16 +187,6 @@ Follow these guidelines to generate EFT files or EFT prenote files:
     5. Select **OK**, and then select **Save**.
     6. Close the Vendor Address Maintenance window.
     7. In the Vendor Maintenance window, select **Save**.
-
-## How to Start a SQL Query Tool
-
-1. Follow the appropriate method below:
-
-    - If you're using SQL Server 2005, start SQL Server Management Studio. To do it, select **Start**, point to **All Programs**, point to **Microsoft SQL Server 2005**, and then select **SQL Server Management Studio**.
-    - If you're using SQL Server 2008, start SQL Server Management Studio. To do it, select **Start**, point to **All Programs**, point to **Microsoft SQL Server 2008**, and then select **SQL Server Management Studio**.
-    - If you're using SQL Server 2008 R2, start SQL Server Management Studio. To do it, select **Start**, point to **All Programs**, point to **Microsoft SQL Server 2008 R2**, and then select **SQL Server Management Studio**.
-
-2. Select the **new query** button at the top and select the company database from the drop-down menu.
 
 ## Commonly Asked Questions
 
@@ -190,11 +200,11 @@ A2: EFT for Payables was moved into the core dictionary in Microsoft Dynamics GP
 
 To activate EFT, select **Tools** under the Microsoft Dynamics GP menu, point to **Setup**, point to **System** and select **Registration**. Make sure the appropriate module of EFT Payables or EFT Receivables is marked as appropriate.
 
-To verify it's working for the respective module, select **Cards**, point to **Purchasing** (or **Sales**), and select **Vendor** (or **Customer**). Enter a Vendor ID (or Customer ID) and select the **Address** button. If you see a button named **EFT BANK** in the lower right corner of the Vendor (or Customer) Address Maintenance window, then EFT is working.  
+To verify it's working for the respective module, select **Cards**, point to **Purchasing** (or **Sales**), and select **Vendor** (or **Customer**). Enter a Vendor ID (or Customer ID) and select the **Address** button. If you see a button named **EFT BANK** in the lower right corner of the Vendor (or Customer) Address Maintenance window, then EFT is working.
 
 Q3: Are you able to send invoice information in the EFT file?
 
-A3: Yes, it's called the **Addenda** line. You'll need to map out the Line Type for the **Addenda** line on the EFT file format according to your bank's specifications.
+A3: Yes, it's called the **Addenda** line. You'll need to map out the Line Type for the **Addenda** line on the EFT file format according to your bank's specifications. As many addenda lines will print for however many invoices make up the payment. Addenda lines on a standard NACHA format typically start with a record type code of '7'.
 
 Q4: Are you able to send multiple addenda lines in the EFT file?
 
@@ -206,7 +216,7 @@ A5: No. Each addenda line would store the information for each invoice that make
 
 Q6: Are you able to configure any EFT file format to produce a Check Printing File format? (Many banks are now offering this service to print checks and require an XML format where each addenda line would be in its own remittance format.)
 
-A6: You're on your own to test. At this time, Microsoft Dynamics GP doesn't offer or support Check Printing File formats since it's a customized file and not a true EFT file format. It's for a different service that is provided by your bank.  The EFT functionality in Dynamics GP is coded to achieve the EFT file formats that are included out of the box, so there may be some requirements you may or may not be able to achieve. You would need to test on your own to see if the format you need can be done in Dynamics GP with the current EFT functionality, or not. If you open a support case, you can expect the same assistance with advising on one field or one error message per support incident. Oftentimes a dexterity customization may be needed, which is outside of regular support guidelines.
+A6: You're on your own to test. At this time, Microsoft Dynamics GP doesn't offer or support Check Printing File formats since it's a customized file and not a true EFT file format. It's for a different service that is provided by your bank. The EFT functionality in Dynamics GP is coded to achieve the EFT file formats that are included out of the box, so there may be some requirements you may or may not be able to achieve. You would need to test on your own to see if the format you need can be done in Dynamics GP with the current EFT functionality, or not. If you open a support case, you can expect the same assistance with advising on one field or one error message per support incident. Oftentimes a dexterity customization may be needed, which is outside of regular support guidelines.
 
 One requirement we've seen for an xml format, where each remittance information is listed in its own grouping would need a dexterity customization to achieve. We encourage you to vote on this product suggestion in the [Microsoft Ideas product suggestion database](https://experience.dynamics.com/ideas/) so this functionality can be reviewed for a future enhancement.
 
@@ -220,7 +230,7 @@ A8: GP 10.0 and GP 2010 and GP 2013 offer 10 standard EFT file formats that are 
 
 Q9: What if my bank uses a file format that varies slightly from one of the standard formats offered in GP?
 
-A9: The EFT file formats available in Microsoft Dynamics GP are set up to follow the US Government and NACHA (National Automated Clearing House Association) published formats. They're published standard requirements. The file formats currently offered in Microsoft Dynamics GP are coded to achieve the required **** fields in these standard formats. So if your bank requires a format that varies slightly from one of the standard formats offered in GP, or a more updated version of a format, you may need to pursue a consulting service for the customization.  In the meantime, you could check with the bank to see if they would make an exception, or accept any other formats that Dynamics GP can do (such as one of the standard NACHA formats), or edit the EFT file in Notepad before sending it to the bank.
+A9: The EFT file formats available in Microsoft Dynamics GP are set up to follow the US Government and NACHA (National Automated Clearing House Association) published formats. They're published standard requirements. The file formats currently offered in Microsoft Dynamics GP are coded to achieve the required **** fields in these standard formats. So if your bank requires a format that varies slightly from one of the standard formats offered in GP, or a more updated version of a format, you may need to pursue a consulting service for the customization. In the meantime, you could check with the bank to see if they would make an exception, or accept any other formats that Dynamics GP can do (such as one of the standard NACHA formats), or edit the EFT file in Notepad before sending it to the bank.
 
 You can search the [Microsoft ISV Central](https://www.microsoft.com/licensing/licensing-programs/isv-program) to find an ISV that may offer an EFT product compatible with Dynamics GP or could help you achieve a customization to meet your needs:
 
@@ -228,7 +238,7 @@ Also enter a Product Suggestion in the [Ideas](https://experience.dynamics.com/i
 
 Q10: My bank doesn't use any of the EFT File formats listed in GP. How can I create a new format to follow my bank?
 
-A10: You can use the user-defined EFT file format to create your own format. However, you're responsible for setting it up and testing it. Microsoft isn't able to support your custom format. We'll help you with one field or error message per case. If you would like assistance setting up the file format, Microsoft can help through a consulting engagement, which is a billable expense to you. You can also try to set up the format yourself. If you tackle it yourself, we suggest setting up another sample format using one of the formats in the system such as the PPD format as a reference so you can see how the fields are mapped and you can mirror your format the same way. It should help you accomplish most fields. However, all the fields you need may not be available, or may appear to be available but don't work (such as counts or totals). Any assistance to obtain a field that currently isn't available or doesn't work would have to be handled through a consulting engagement. Just because the field appears to be available in the mapping in GP doesn't necessarily mean that it will work. You'll need to test generating the EFT files to see the final result.
+A10: You can use the user-defined EFT file format to create your own format. However, you are responsible for setting it up and testing it. Microsoft is not able to support your custom format. We will help you with one field or error message per case. You can also try to set up the format yourself. If you tackle this yourself, we suggest setting up another sample format using one of the formats in the system such as the PPD or CCD file format and use that as a reference so you can see how the fields are mapped and you can mirror your format the same way (or start with the PPD or CCD format and modify it as needed). This should help you accomplish most fields. However, all the fields you need may not be available, or may appear to be available but don't work (such as counts or totals). Just because you can select a table/field in a line doesn't mean that it will work. (For example putting check information in an addenda line.) You would have to test it to verify. You will need to test on your own to verify what fields work in what lines. The format in Dynamics GP were coded according to the required fields in each line per the standard published formats by the National Automated Clearing House Association (NACHA). You can visit NACHA.org to view the required fields for each standard format.
 
 Q11: How do you set up settlement lines for the EFT File format? (Or the bank is asking for a total debit or credit line in the footer that will offset the file.)
 
@@ -237,6 +247,8 @@ A11: A settlement line is basically where the bank is asking for debit and credi
 Q12: What is an IAT format?
 
 A12: The IAT formats are provided to accommodate changes in the IAT (International ACH Transaction) rules as mandated by the NACHA and OFAC organizations for use with international ACH files.
+
+The IAT format contains seven addenda lines, where each line is coded to include specific Transaction, company or vendor information. The **Remittance addenda** line wasn't coded in this format since it isn't required information in the standard published format. You wouldn't be able to substitute any of the other seven addenda lines to include the remittance information (invoices that make up the payment.) Visit NACHA.org to view the standard published format and required fields.
 
 Q13: What does PPD and CCD mean for the standard US NACHA files? What does the + mean next to each?
 
@@ -248,11 +260,13 @@ A13: These types mean:
 
 Q14: Why is the Bank/Transit Routing number in the EFT file set to 10 digits if most US routing numbers are only nine digits long? Where do I enter the check digit for the bank routing number?
 
-A14: The Transit Routing number field is meant to hold the nine digits of the routing number, plus the 1 Check Digit number behind it, for a total of 10 digits in the Bank Transit routing number field. The bank may split these two fields separately on your bank specifications, so you can choose if you want to lump them together in one field in your EFT file mapping (as 10 digits), or split them out as two fields. For example, map the bank transit routing number as one field that is nine digits long, and then map another field as one digit and hard-code it as a constant to the value you need (usually 1).  
+A14: The Transit Routing number field is meant to hold the nine digits of the routing number, plus the 1 Check Digit number behind it, for a total of 10 digits in the Bank Transit routing number field. The bank may split these two fields separately on your bank specifications, so you can choose if you want to lump them together in one field in your EFT file mapping (as 10 digits), or split them out as two fields. For example, map the bank transit routing number as one field that is nine digits long, and then map another field as one digit and hard-code it as a constant to the value you need (usually 1).
 
-Q15: How do I handle the Bank Transit Routing routing number when it's only eight digits long in Canada?
+Q15: How do I handle the Bank Transit Routing number when it's only eight digits long in Canada?
 
 A15: Canada used to have an eight digit routing number, but changed it to nine digits to match the United States. They just added a 0 in the front of the existing eight digit routing number.
+
+Also, it may flip the routing number around in RM/PM EFT file formats for Canada. You can only key eight characters and it assumes you are entering it directly from a Canadian cheque, where the MICR number listed is BBBBBAAA, where BBBB is a five digit transit or branch number, and the AAA is the institution number. So Dynamics GP assumes it was entered this way and flips around for you so it is 0+AAA+BBBBB in the EFT file. (And right-justified and padded with a leading zero to be nine digits long.) So be aware that the last three digits will be moved to the front, with the padded leading zero. So if you enter 45678123 (BBBBBAAA), it will get flipped around to 0 + 123 + 45678 in the file. You will want to enter it in Dynamics GP with the first three digits at the end. So if you have 12345678, you will enter 45678123 (BBBBBAAA) in Dynamics GP.
 
 Q16: Why don't the count lines work in all the line type rows?
 
@@ -266,15 +280,26 @@ It's currently by design and will be considered as a future enhancement.
 
 Q17: The bank is asking me to add pad blocks or block count 10 to the EFT file format. What does that mean?
 
-A17: Pad Blocks are where the bank requires the EFT file to have some lines in it. For example, if they require a Pad Block of 10, which means that they want the file to be in multiples of 10 lines. So if the file is 22 lines, the system will need to add eight dummy lines so the total line count of the file is 30. Or, if the file is 49 lines long, then the system would only need to add one dummy line to get the file to be 50 lines. The total number of lines of the file needs to be in a multiple of 10. The EFT File Format Maintenance window includes a section to Add Pad Blocks. So for this example, you would mark the checkbox for Add Pad Blocks and Pad Lines in Multiple of 10. Furthermore, the bank will also indicate what character to print in the dummy lines and how many characters across. Usually they've you add a Pad Character of '9' and the Number of Pad Chars to be 94, which is the standard width of a line, so the 9's get printed all the way across the padded line. You must consult your bank's requirements and set up this section according to your bank's requirements.  
+A17: Pad Blocking or 'block counts' requires EFT files to have some lines in it or multiple of lines in the file created. For example, if they require a Pad Block of 10, this means that they want the file to be in multiples of 10 lines. So if the file is 22 lines, the system will need to add eight dummy lines so the total line count of the file is 30. Or, if the file is 49 lines long, then the system would only need to add one dummy line to get the file to be 50 lines. The total number of lines of the file needs to be in a multiple of 10.
+
+1. Open the EFT File format in Dynamics GP (**Cards** > **Financial** > **EFT file format**).
+2. Select the file format ID.
+3. In the upper right section, mark the checkbox for 'Add Pad Blocks'.
+4. Define the pad character, number of padded characters and block count required by your bank. The most common scenario is to pad a '9' character in blocks of 10. This would be entered as:
+
+    ```output
+    Pad character:   9
+    Number of pad chars:  94   (width of line needed)
+    Pad lines in multiple of: 10   (block count)
+    ```
 
 Q18: If a value doesn't fill the entire field in the EFT file, how do you fill the rest of the field with zeroes or spaces?
 
 A18: In the EFT File Maintenance window, there's a Pad Char field on each line. Leave this field blank if you want the field to have spaces. Or put a 0 in this field, if you wish for the unused portion of the field to be padded with 0's. The zeroes will be padded in the remainder of the field based on whether you set the data in the field to be right or left justified.
 
-Q19: In the PM Paid Transaction History file, there's a field called the Transaction Description. This field prints blank and doesn't pull the description from the invoice.
+Q19: In the PM Paid Transaction History file, there is a field called the 'Transaction Description'. This field prints blank and doesn't pull the description from the invoice. How can I get the transaction description from the invoice in the Addenda line? (or the PO#, or the full document amount of the invoice, etc.)
 
-A19: The Transaction Description field is available to pull into the file, however it pulls the description on the payment and not the invoice. So it produces a blank field since the payment doesn't typically have a description associated with it. The Transaction Description associated with the invoice isn't a standard field, and so isn't supported to be populated from the invoice at this time.
+A19: The EFT file is for electronic payments, and therefore is always looking for the mapped fields from the perspective of the payment record. So if you pull the **Transaction Description** field from the PM Paid transaction history file on to the Addenda line, it is looking for the payment, not the invoice, so it will print blank (since the payment is not posted yet). The only invoice information you can get to pull on to the Addend line is the invoice information that is on the apply record to the payment in the **PM Apply to History** table. This includes only the Invoice document number, invoice date, discounts and net paid amount. You can't get to the transaction description associated with the invoice, or PO#, or full document amount, because these are not supported at this time. For more information, see [Custom data fields for Electronic Funds Transfer (EFT) formats in Microsoft Dynamics GP](custom-data-fields-for-electronic-funds-transfer-formats.md).
 
 Q20: How do you get the document number for the invoice to print in the addenda line?
 
@@ -282,6 +307,8 @@ A20: To get the Document Number for the invoice, you'll need to map it as follow
 
 TABLE: PM APPLY TO HISTORY FILE
 FIELD: APPLY TO DOCUMENT NUMBER
+
+For more information, see [Custom data fields for Electronic Funds Transfer (EFT) formats in Microsoft Dynamics GP](custom-data-fields-for-electronic-funds-transfer-formats.md).
 
 Q21: I have keyed multiple invoices to one vendor in Microsoft Dynamics GP. Some of the invoices were keyed to an Address ID with banking information and some of the invoices were keyed to an Address ID without EFT banking information. When I build the check batch or EFT batch, it doesn't work the way I expect. How do the invoices pull into the check and EFT batches?
 
@@ -303,7 +330,7 @@ A22: The Development team has created a product suggestion database named MS Con
 
 After each suggestion is given a priority rating, it stays in the database so that other customers can also vote on it over time. The more votes it gets, the higher in priority it will go, so your votes do count and are important. This database is used to determine what enhancements customers would like to see in future versions so log product suggestions in the [Ideas product suggestion](https://experience.dynamics.com/ideas/) database.
 
-Q23: How do I get the File Creation Date in Julian date format? (For example, the Julian date format is '0yyddd' where yy is the last two digits of the year and the ddd is the day of the year that that date falls on out of 365 days. So for example, September 24th, 2011 would be in 011267 in Julian format.)
+Q23: How do I get the File Creation Date in Julian date format? (For example, the Julian date format is '0yyddd' where yy is the last two digits of the year and the ddd is the day of the year that that date falls on out of 365 days. So for example, September 24, 2011 would be in 011267 in Julian format.)
 
 A23: To accomplish the Julian date format, you would have to use two fields as follows:
 
@@ -323,7 +350,7 @@ If the vendor is set up for EFT, the system will default to the EFT checkbox aut
 
 Q25: Can Microsoft provide a list of banks that use specific EFT File formats?
 
-A25: Unfortunately, Microsoft isn't able to certify which banks use which formats, because of liability reasons and also because banks are ever-changing that formats they use, which makes managing that information impossible. Certain banks also may require specific fields that aren't required on the standard published format. So you must contact the bank directly to see what formats they'll accept and provide you with a requirements document for the format they require. Then you'll have to modify a format in the EFT File Format window in Microsoft Dynamics GP to see if the deviated field is possible or not. Contact Microsoft Dynamics GP for a consulting engagement if you need to have the file customized to pull information that isn't readily available.
+A25: Microsoft isn't able to certify which banks use which formats, because of liability reasons and also because banks are ever-changing that formats they use, which makes managing that information impossible. Certain banks also may require specific fields that aren't required on the standard published format. So you must contact the bank directly to see what formats they'll accept and provide you with a requirements document for the format they require. Then you'll have to modify a format in the EFT File Format window in Microsoft Dynamics GP to see if the deviated field is possible or not. Contact Microsoft Dynamics GP for a consulting engagement if you need to have the file customized to pull information that isn't readily available.
 
 Q26: The bank won't accept my EFT file because the sequence number in the EFT file name is -0001 and we already uploaded an EFT file with that same sequence number today. The next file we generated was also generated with the same -0001 sequence number.
 
@@ -331,15 +358,13 @@ Q26: The naming convention for the EFT files (on Microsoft Dynamics GP 10.0 and 
 
 `EFT FILENAME + CHECKBOOK ID + DATE + SEQUENCE NUMBER + EXTENSION (if designated)`
 
-The EFT FILENAME is pulled from the filename designated in the **Payables Options** or **Receivables Options** tab for the output paths on the checkbook.
+The EFT FILENAME is pulled from the filename designated in the **Payables Options** or **Receivables Options** tab for the output paths on the checkbook. If no extension such as `.txt` is designated here, then no extension will be added to the resulting EFT file generated.
 
 The CHECKBOOK ID is the Checkbook ID used on the checkrun.
 
 The DATE is the system date.
 
-The SEQUENCE NUMBER will increment off the other EFT files saved to the same path/folder with the same name. The sequence number will increment accordingly for the next EFT file generated. So if you generated an EFT file today with the sequence number of -0001. Another EFT file-generated today will increment to -0002 saved to the same location. However, if you delete the first file with the -0001 sequence number first, then the second file will not see it and start over and use the -0001 sequence number again. It's a problem with most banks as they will consider it a duplicate file. When you generate a file the next day, the date will change, so it will start over at -0001 again.  So be sure not to delete the EFT files from the location the files are being saved to if you generate more than one EFT file per day.
-
-The SEQUENCE NUMBER is pulled from the filename designated in the Payables Options or Receivables Options tab for the output paths on the checkbook.  If no extension such as .txt is designated here, then no extension will be added to the resulting EFT file generated.
+The SEQUENCE NUMBER will increment off the other EFT files saved to the same path/folder with the same name. The sequence number will increment accordingly for the next EFT file generated. So if you generated an EFT file today with the sequence number of -0001. Another EFT file-generated today will increment to -0002 saved to the same location. However, if you delete the first file with the -0001 sequence number first, then the second file won't see it and start over and use the -0001 sequence number again. It's a problem with most banks as they will consider it a duplicate file. When you generate a file the next day, the date will change, so it will start over at -0001 again. So be sure not to delete the EFT files from the location the files are being saved to if you generate more than one EFT file per day.
 
 Q27: Can I have credit memo's show on the EFT file?
 
@@ -369,7 +394,7 @@ update CM00103 set SERIES = 4 where EFTFormatID = 'XXX'
 
 Q31: What version of the ISO 20022 format is available in Microsoft Dynamics GP?
 
-A31: Only Version 1 of the ISO 20022 format is currently available in Microsoft Dynamics GP. Unfortunately, Version 2 or Version 3 aren't available at this time and would be considered a product enhancement. If you would like to see the newer versions of this format added to Microsoft Dynamics GP in the future, select the link below and enter a [product suggestion](https://experience.dynamics.com/ideas/) and add any comments to this can be reviewed and considered for a future release.
+A31: Only Version 1 of the ISO 20022 format (PAIN 001.001.01) is currently available in Microsoft Dynamics GP. Unfortunately, Version 2 or Version 3 isn't available at this time and would be considered a product enhancement. If you would like to see the newer versions of this format added to Microsoft Dynamics GP in the future, such as Version 3 (PAIN 001.001.03), select the link below and enter a [product suggestion](https://experience.dynamics.com/ideas/idea/?ideaid=48e420e7-2199-e911-80e8-0003ff68cb40) and add any comments to this can be reviewed and considered for a future release.
 
 Q32: How do you get a Unique File Creation Number generated for each new EFT file?
 
@@ -383,14 +408,16 @@ Field: EFT Next File Number
 > [!NOTE]
 > The bank prenote file generated will print zeroes in this field.
 
+For more information, see [Custom data fields for Electronic Funds Transfer (EFT) formats in Microsoft Dynamics GP](custom-data-fields-for-electronic-funds-transfer-formats.md).
+
 Q33: What are some other custom fields commonly requested for EFT?
 
-A33: Information on other custom fields commonly requested for EFT file can be found in [Custom Data Fields for Electronic Funds Transfer (EFT) formats in Microsoft Dynamics GP](https://support.microsoft.com/help/2956922).
+A33: Information on other custom fields commonly requested for EFT file can be found in [Custom Data Fields for Electronic Funds Transfer (EFT) formats in Microsoft Dynamics GP](custom-data-fields-for-electronic-funds-transfer-formats.md).
 
-Q34:  Can I get an addenda count in the Detail line to achieve the CTX file format?
+Q34: Can I get an addenda count in the Detail line to achieve the CTX file format?
 
-A34:  No, at this time, you aren't able to count/sum until after the lines are listed. So you wouldn't be able to count the addenda lines in the Detail line since they're printed after the Detail line, so you wouldn't be able to achieve the CTX format. Your options would include:
+A34: No, at this time, you aren't able to count/sum until after the lines are listed. So you wouldn't be able to count the addenda lines in the Detail line since they're printed after the Detail line, so you wouldn't be able to achieve the CTX format. Your options would include:
 
 1. Run 'one check per invoice' instead of 'one check per vendor', and hard code the addenda count =1 in the EFT file format.
-1. Ask the bank if they would make an exception or accept any other NACHA format such as the CCD or PPD format.  (Many banks have accepted the 'detail + addenda' count in a footer line instead.)
+1. Ask the bank if they would make an exception or accept any other NACHA format such as the CCD or PPD format. (Many banks have accepted the 'detail + addenda' count in a footer line instead.)
 1. Seek out a third-party product that allows this functionality or 4) a dexterity customization.

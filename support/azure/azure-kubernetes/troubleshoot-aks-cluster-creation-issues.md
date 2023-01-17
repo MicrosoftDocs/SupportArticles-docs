@@ -6,7 +6,8 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, erbookbi
-ms.service: container-service
+ms.service: azure-kubernetes-service
+ms.subservice: troubleshoot-create-operations
 #Customer intent: As an Azure Kubernetes user, I want to take basic troubleshooting measures to resolve issues that occur when I try to create or deploy an Azure Kubernetes Service (AKS) cluster.
 ---
 # Basic troubleshooting of AKS cluster creation issues
@@ -28,7 +29,7 @@ When you create clusters by using Azure CLI, errors are recorded as output if th
 > `> --load-balancer-sku standard \` \
 > `> --vnet-subnet-id /subscriptions/01234567-89ab-cdef-0123-456789abcdef/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/aks_demo_vnet/subnets/AKS`
 >
-> `It is highly recommended to use USER assigned identity (option --assign-identity) when you want to bring you own subnet, which will have no latency for the role assignment to take effect. When you SYSTEM assigned identity, azure-cli will grant Network Contributor role to the system assigned identity after the cluster is created, and the role assignment will take some time to take effect, see https://docs.microsoft.com/azure/aks/use-managed-identity, proceed to create cluster with system assigned identity? (y/N): y`
+> `It is highly recommended to use USER assigned identity (option --assign-identity) when you want to bring you own subnet, which will have no latency for the role assignment to take effect. When you SYSTEM assigned identity, azure-cli will grant Network Contributor role to the system assigned identity after the cluster is created, and the role assignment will take some time to take effect, see https://learn.microsoft.com/azure/aks/use-managed-identity, proceed to create cluster with system assigned identity? (y/N): y`
 >
 > `(ControlPlaneAddOnsNotReady) Pods not in Running status: konnectivity-agent-67f7f5554f-nsw2g,konnectivity-agent-8686cb54fd-xlsgk,metrics-server-6bc97b47f7-dfhbr,coredns-845757d86-7xjqb,coredns-autoscaler-5f85dc856b-mxkrj`
 >

@@ -1,7 +1,7 @@
 ---
 title: Enable TLS 1.2 support as Azure AD TLS 1.0/1.1 is deprecated
 description: This article describes how to enable support for TLS 1.2 in your environment, in preparation for upcoming Azure AD TLS 1.0/1.1 deprecation.
-ms.date: 02/16/2022
+ms.date: 10/3/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: dahans, abizerh
@@ -79,6 +79,11 @@ You can configure those values to add TLS 1.2 and TLS 1.1 to the default secure 
 
 For more information, see [How to enable TLS 1.2 on clients](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client).
 
+> [!NOTE]
+> By default, an OS that supports TLS 1.2 (for example, Windows 10) also supports legacy versions of the TLS protocol. When a connection is made by using TLS 1.2 and it doesn’t get a timely response, or when the connection is reset, the OS might try to connect to the target web service by using an older TLS protocol (such as TLS 1.0 or 1.1). This usually occurs if the network is busy, or if a packet drops in the network. After the temporary fallback to the legacy TLS, the OS will try again to make a TLS 1.2 connection.
+>
+> What will be the status of such fallback traffic after Microsoft stops supporting the legacy TLS? The OS might still try to make a TLS connection by using the legacy TLS protocol. But if the Microsoft service is no longer supporting the older TLS protocol, the legacy TLS-based connection won’t succeed. This will force the OS to try the connection again by using TLS 1.2 instead.
+
 ### Identify and reduce dependency on clients that don't support TLS 1.2
 
 Update the following clients to provide uninterrupted access:
@@ -91,7 +96,7 @@ Update the following clients to provide uninterrupted access:
 
 For more information, see [Handshake Simulation for various clients connecting to www.microsoft.com, courtesy SSLLabs.com](/security/engineering/solving-tls1-problem#appendix-a-handshake-simulation).
 
-### Enable TLS 1.2 common server roles that communicate with Azure AD
+### Enable TLS 1.2 on common server roles that communicate with Azure AD
 
 - Azure AD Connect (install the latest version)
   - Do you also want to enable TLS 1.2 between the sync engine server and a remote SQL Server? Then make sure you have the required versions installed for [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/topic/kb3135244-tls-1-2-support-for-microsoft-sql-server-e4472ef8-90a9-13c1-e4d8-44aad198cdbe).
@@ -120,7 +125,9 @@ For more information, see [Handshake Simulation for various clients connecting t
 
 ### Registry strings
 
-Make sure that the following registry DWORD values are configured for these subkeys:
+To manually configure and enable TLS 1.2 at the operating system level, you can add the following DWORD values.
+
+For Windows 2012 R2, Windows 8.1, and later OS, TLS 1.2 is enabled by default. Thus, the following registry values aren't required unless they were set with different values.
 
 - **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client**
   - "DisabledByDefault": **00000000**
@@ -131,7 +138,7 @@ Make sure that the following registry DWORD values are configured for these subk
 - **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft&#92;.NETFramework\v4.0.30319**
   - "SchUseStrongCrypto": **00000001**
 
-To enable TLS 1.2, use the PowerShell script that's provided in [TLS 1.2 enforcement for Azure AD Connect](/azure/active-directory/hybrid/reference-connect-tls-enforcement).
+To enable TLS 1.2 by using a PowerShell script, see [TLS 1.2 enforcement for Azure AD Connect](/azure/active-directory/hybrid/reference-connect-tls-enforcement).
 
 ## Update and configure .NET Framework to support TLS 1.2 <a name="update-configure-tls-12"></a>
 
@@ -243,6 +250,17 @@ To query for legacy TLS entries using Azure Monitor:
         | project HasLegacyTls=JsonAuthProcDetails.value
     )
     | where HasLegacyTls == true
+
+    // Workload Identity (service principal) sign-ins
+    AADServicePrincipalSignInLogs
+    | where AuthenticationProcessingDetails has "Legacy TLS"
+        and AuthenticationProcessingDetails has "True"
+    | extend JsonAuthProcDetails = parse_json(AuthenticationProcessingDetails)
+    | mv-apply JsonAuthProcDetails on (
+        where JsonAuthProcDetails.key startswith "Legacy TLS"
+        | project HasLegacyTls=JsonAuthProcDetails.value
+    )
+    | where HasLegacyTls == true
     ```
 
 1. Select **Run** to execute the query. The log entries that match the query appear in the **Results** tab below the query definition.
@@ -323,11 +341,11 @@ To filter and export the sign-in log entries:
 1. Save the following script to a PowerShell script (.ps1) file.
 
     ```powershell
-    $tId = "<your tenant ID>"  # Add tenant ID from Azure Active Directory page on portal.
+    $tId = "your-tenant-id"  # Add tenant ID from Azure Active Directory page on portal.
     $agoDays = 4  # Will filter the log for $agoDays from the current date and time.
     $startDate = (Get-Date).AddDays(-($agoDays)).ToString('yyyy-MM-dd')  # Get filter start date.
     $pathForExport = "./"  # The path to the local filesystem for export of the CSV file.
-    
+
     Connect-MgGraph -Scopes "AuditLog.Read.All" -TenantId $tId  # Or use Directory.Read.All.
     Select-MgProfile "beta"  # Low TLS is available in Microsoft Graph preview endpoint.
 
@@ -336,17 +354,24 @@ To filter and export the sign-in log entries:
     $clauses = (
         "createdDateTime ge $startDate",
         "signInEventTypes/any(t: t eq 'nonInteractiveUser')",
+        "signInEventTypes/any(t: t eq 'servicePrincipal')",
         "(authenticationProcessingDetails/any($procDetailFunction))"
     )
 
     # Get the interactive and non-interactive sign-ins based on filtering clauses.
-    $signInsInteractive = Get-MgAuditLogSignIn -Filter ($clauses[0,2] -Join " and ") -All
-    $signInsNonInteractive = Get-MgAuditLogSignIn -Filter ($clauses[0,1,2] -Join " and ") -All
+    $signInsInteractive = Get-MgAuditLogSignIn -Filter ($clauses[0,3] -Join " and ") -All
+    $signInsNonInteractive = Get-MgAuditLogSignIn -Filter ($clauses[0,1,3] -Join " and ") -All
+    $signInsWorkloadIdentities = Get-MgAuditLogSignIn -Filter ($clauses[0,2,3] -Join " and ") -All
 
     $columnList = @{  # Enumerate the list of properties to be exported to the CSV files.
         Property = "CorrelationId", "createdDateTime", "userPrincipalName", "userId",
-                   "UserDisplayName", "AppDisplayName", "AppId", "IPAddress", "isInteractive",
-                   "ResourceDisplayName", "ResourceId", "UserAgent"
+                  "UserDisplayName", "AppDisplayName", "AppId", "IPAddress", "isInteractive",
+                  "ResourceDisplayName", "ResourceId", "UserAgent"
+    }
+
+    $columnListWorkloadId = @{ #Enumerate the list of properties for workload identities to be exported to the CSV files.
+        Property = "CorrelationId", "createdDateTime", "AppDisplayName", "AppId", "IPAddress",
+                  "ResourceDisplayName", "ResourceId", "ServicePrincipalId", "ServicePrincipalName"
     }
 
     $signInsInteractive | ForEach-Object {
@@ -358,7 +383,7 @@ To filter and export the sign-in log entries:
             }
         }
     } | Export-Csv -Path ($pathForExport + "Interactive_lowTls_$tId.csv") -NoTypeInformation
-    
+
     $signInsNonInteractive | ForEach-Object {
         foreach ($authDetail in $_.AuthenticationProcessingDetails)
         {
@@ -368,6 +393,16 @@ To filter and export the sign-in log entries:
             }
         }
     } | Export-Csv -Path ($pathForExport + "NonInteractive_lowTls_$tId.csv") -NoTypeInformation
+
+    $signInsWorkloadIdentities | ForEach-Object {
+        foreach ($authDetail in $_.AuthenticationProcessingDetails)
+        {
+            if (($authDetail.Key -match "Legacy TLS") -and ($authDetail.Value -eq "True"))
+            {
+                $_ | Select-Object @columnListWorkloadId
+            }
+        }
+    } | Export-Csv -Path ($pathForExport + "WorkloadIdentities_lowTls_$tId.csv") -NoTypeInformation
     ```
 
 1. In the [Azure portal](https://portal.azure.com), search for and select **Azure Active Directory**.
@@ -381,7 +416,6 @@ To filter and export the sign-in log entries:
     - **AppDisplayName**
     - **ResourceDisplayName**
     - **UserAgent**
-
 ---
 
 ### View details about log entries in the Azure AD portal

@@ -1,11 +1,12 @@
 ---
 title: Unable to mount Azure file share
 description: Describes errors that cause the mounting of an Azure file share to fail and provides solutions.
-ms.date: 04/07/2022
+ms.date: 05/20/2022
 author: genlin
 ms.author: genli
 ms.reviewer: chiragpa, akscsscic
-ms.service: container-service
+ms.service: azure-kubernetes-service
+ms.subservice: troubleshoot-azure-storage-issues
 ---
 # Errors when mounting an Azure file share
 
@@ -13,7 +14,7 @@ This article provides possible causes and solutions for errors that cause the mo
 
 ## Symptoms
 
-You deploy a Kubernetes resource by using a Deployment or StatefulSet in an Azure Kubernetes Service (AKS) environment. The deployment will create a pod that mounts a PersistentVolumeClaim (PVC) referencing an Azure file share.
+You deploy a Kubernetes resource such as a Deployment or a StatefulSet, in an Azure Kubernetes Service (AKS) environment. The deployment will create a pod that mounts a PersistentVolumeClaim (PVC) referencing an Azure file share.
 
 However, the pod stays in the **ContainerCreating** status. When you run the `kubectl describe pods` command, you may see one of the following errors in the command output, which causes the mounting operation to fail:
 
@@ -239,12 +240,14 @@ Here are possible causes for this error:
 - [Cause 1: Kubernetes secret doesn't reference the correct storage account name or key](#secretnotusecorrectstorageaccountkey)
 - [Cause 2: AKS's VNET and subnet aren't allowed for the storage account](#akssubnetnotallowed)
 - [Cause 3: Connectivity is via a private link but nodes and the private endpoint are in different VNETs](#aksnotawareprivateipaddress)
+- [Cause 4: Storage account is set to require encryption that the client doesn't support](#akssmbencryption)
 
 > [!NOTE]
 >
 > - Cause 1 applies to public and private scenarios.
 > - Cause 2 applies to the public scenario only.
 > - Cause 3 applies to the private scenario only.
+> - Cause 4 applies to public and private scenarios.
 
 ### <a id="secretnotusecorrectstorageaccountkey"></a>Cause 1: Kubernetes secret doesn't reference correct storage account name or key
 
@@ -298,7 +301,7 @@ If you don't have access to the AKS cluster in the Azure portal, perform Step 2 
 
     :::image type="content" source="media/fail-to-mount-azure-file-share/command-decode-storage-account-name.png" alt-text="Screenshot of command that decodes storage account name.":::
 
-#### Solution: Adjust Kubernetes secret
+#### Solution: Adjust the Kubernetes secret and re-create the pods
 
 If the value of the storage account name or key in the Kubernetes secret doesn't match the value in **Access keys** in the storage account, adjust the Kubernetes secret at the Kubernetes secret level by running the following command:
 
@@ -315,6 +318,8 @@ echo -n '<storage account name>'| base64 | tr -d '\n' ; echo
 ```
 
 For more information, see [Managing Secrets using kubectl](https://kubernetes.io/docs/tasks/configmap-secret/managing-secret-using-kubectl/).
+
+After the Kubernetes secret `azure-storage-account-<storage-account-name>-secret` has the right values, re-create the pods. Otherwise, those pods will continue to use the old values that aren't valid anymore.
 
 ### <a id="akssubnetnotallowed"></a>Cause 2: AKS's VNET and subnet aren't allowed for storage account
 
@@ -386,8 +391,20 @@ After the virtual network link is added, the FQDN should be resolved via a priva
 
 :::image type="content" source="media/fail-to-mount-azure-file-share/private-ip-address-resolved.png" alt-text="Screenshot shows private ip address is resolved.":::
 
+### <a id="akssmbencryption"></a>Cause 4: Storage account is set to require encryption that the client doesn't support
+
+[Azure Files Security Settings](/azure/storage/files/files-smb-protocol?tabs=azure-portal#smb-security-settings) contain a number of options for controlling the security and encryption settings on storage accounts. Restricting allowed methods and algorithms can prevent clients from connecting.
+
+AKS versions earlier than 1.25 are based on Ubuntu 18.04 LTS, which uses the Linux 5.4 kernel and only supports the AES-128-CCM and AES-128-GCM encryption algorithms. The **Maximum security** profile, or a **Custom** profile that disables AES-128-GCM, will cause share mapping failures.
+
+AKS versions 1.25 and later versions are based on Ubuntu 22.04, which uses the Linux 5.15 kernel and has support for AES-256-GCM.
+
+#### Solution: Allow AES-128-GCM encryption algorithm to be used
+
+Enable the AES-128-GCM algorithm by using the **Maximum compatibility** profile or a **Custom** profile that enables AES-128-GCM. For more information, see [Azure Files Security Settings](/azure/storage/files/files-smb-protocol?tabs=azure-portal#smb-security-settings).
+
 ## More information
 
-- If you experience some other mount errors, see [Troubleshoot Azure Files problems in Linux](/azure/storage/files/storage-troubleshoot-linux-file-connection-problems).
+If you experience some other mount errors, see [Troubleshoot Azure Files problems in Linux](/azure/storage/files/storage-troubleshoot-linux-file-connection-problems).
 
-- If the issue isn't resolved, [contact Azure support for assistance](/azure/azure-portal/supportability/how-to-create-azure-support-request).
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

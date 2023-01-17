@@ -1,5 +1,5 @@
 ---
-title: How to reset network interface for Azure Windows VM| Microsoft Docs
+title: How to reset network interface for Azure Windows VM
 description: Shows how to reset network interface for Azure Windows VM
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
@@ -7,10 +7,11 @@ author: genlin
 manager: dcscontentpm
 tags: top-support-issue, azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 11/16/2018
+ms.date: 05/26/2022
 ms.author: genli
 
 ---
@@ -25,7 +26,9 @@ This article shows how to reset the network interface for Azure Windows VM to re
 
 ## Reset network interface
 
-### For VMs deployed in Resource group model
+### For VMs deployed in Resource Manager model
+#### Use Azure portal
+
 
 1. Go to the [Azure portal](https://ms.portal.azure.com).
 2. Select the affected Virtual Machine.
@@ -42,28 +45,42 @@ This article shows how to reset the network interface for Azure Windows VM to re
 
 #### Use Azure PowerShell
 
-1. Make sure that you have [the latest Azure PowerShell](/powershell/azure/) installed
+1. Make sure that you have [the latest Azure PowerShell](/powershell/azure/) installed.
 2. Open an elevated Azure PowerShell session (Run as administrator). Run the following commands:
 
     ```powershell
     #Set the variables 
     $SubscriptionID = "<Subscription ID>"​
-    $VM = "<VM Name>"
     $ResourceGroup = "<Resource Group>"
-    $VNET = "<Virtual Network>"
-    $IP = "NEWIP"
-    
+    $NetInter="<The Network interface of the VM>"
+    $VNET = "<Virtual network>"
+    $subnet= "<The virtual network subnet>"
+    $PrivateIP = "<New Private IP>"
+
+    #You can ignore the publicIP variable if the VM does not have a public IP associated.
+    $publicIP =Get-AzPublicIpAddress -Name <the public IP name> -ResourceGroupName  $ResourceGroup
+ 
     #Log in to the subscription​ 
     Add-AzAccount
     Select-AzSubscription -SubscriptionId $SubscriptionId 
         
     #Check whether the new IP address is available in the virtual network.
-    Test-AzureStaticVNetIP –VNetName $VNET –IPAddress  $IP
+    Get-AzVirtualNetwork -Name $VNET -ResourceGroupName $ResourceGroup | Test-AzPrivateIPAddressAvailability -IPAddress $PrivateIP
     
-    #Add/Change static IP. This process will not change MAC address
-    Get-AzVM -ResourceGroupName $ResourceGroup -Name $VM | Set-AzureStaticVNetIP -IPAddress $IP | Update-AzVM
+    #Add/Change static IP. This process will change MAC address
+    $vnet = Get-AzVirtualNetwork -Name $VNET -ResourceGroupName $ResourceGroup
+
+    $subnet = Get-AzVirtualNetworkSubnetConfig -Name $subnet -VirtualNetwork $vnet
+
+    $nic = Get-AzNetworkInterface -Name  $NetInter -ResourceGroupName  $ResourceGroup
+    
+    #Remove the PublicIpAddress parameter if the VM does not have a public IP.
+    $nic | Set-AzNetworkInterfaceIpConfig -Name ipconfig1 -PrivateIpAddress $PrivateIP -Subnet $subnet -PublicIpAddress $publicIP -Primary
+
+    $nic | Set-AzNetworkInterface
     ```
 
+2. The virtual machine will restart to initialize the new NIC to the system.
 3. Try to RDP to your machine. If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
 
 ### For Classic VMs
@@ -82,7 +99,7 @@ To reset network interface, follow these steps:
 6. Change the **IP address** to another IP address that is available in the Subnet.
 7. Select **Save**.
 8. The virtual machine will restart to initialize the new NIC to the system.
-9. Try to RDP to your machine.    If successful, you can choose to revert the Private IP address back to the original.  
+9. Try to RDP to your machine.  If successful, you can choose to revert the Private IP address back to the original.  
 
 #### Use Azure PowerShell
 

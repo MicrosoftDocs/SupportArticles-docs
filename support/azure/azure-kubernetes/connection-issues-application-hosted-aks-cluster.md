@@ -1,11 +1,12 @@
 ---
 title: Fix connection issues to an app that's hosted on an AKS cluster
 description: Learn about basic troubleshooting steps if you experience connection issues to an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
-ms.date: 4/29/2022
+ms.date: 8/19/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
-ms.reviewer: chiragpa
-ms.service: container-service
+ms.reviewer: chiragpa, pkc, rissing
+ms.service: azure-kubernetes-service
+ms.subservice: cannot-connect-to-app-on-cluster
 #Customer intent: As an Azure Kubernetes user, I want to take basic troubleshooting steps so that I can successfully connect to an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
 ---
 # Troubleshoot connection issues to an app that's hosted on an AKS cluster
@@ -67,7 +68,7 @@ It's important to understand the request flow for the application.
 
 A basic request flow to applications on an AKS cluster would resemble the flow that's shown in the following diagram.
 
-:::image type="content" source="./media/connection-issues-application-hosted-aks-cluster/aks-cluster-app-request-flow.svg" lightbox="./media/connection-issues-application-hosted-aks-cluster/aks-cluster-app-request-flow.svg" alt-text="Diagram of a basic request flow to applications on an Azure Kubernetes Service (A K S) cluster." border="true":::
+:::image type="content" source="./media/connection-issues-application-hosted-aks-cluster/aks-cluster-app-request-flow.svg" lightbox="./media/connection-issues-application-hosted-aks-cluster/aks-cluster-app-request-flow.svg" alt-text="Diagram of a basic request flow to applications on an Azure Kubernetes Service (A K S) cluster." border="false":::
 
 ## Inside-out troubleshooting
 
@@ -112,7 +113,7 @@ Is the pod running? In this case, test the connectivity by starting a test pod i
 
 ```bash
 # Start a test pod in the cluster:
-kubectl run -it --rm aks-ssh --image=debian
+kubectl run -it --rm aks-ssh --image=debian:stable
 
 # After the test pod is running, you will gain access to the pod.
 # Then you can run the following commands:
@@ -124,7 +125,7 @@ curl -Iv http://<pod-ip-address>:<port>
 
 For applications that listen on other protocols, you can install relevant tools inside the test pod and then check the connectivity to the application pod.
 
-For more commands to troubleshoot pods, see [Debug running pods](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-running-pod/).
+For more commands to troubleshoot pods, see [Debug running pods](https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/).
 
 ### Step 2: Check whether the application is reachable from the service
 
@@ -173,11 +174,11 @@ Are the endpoints in the service correct? If so, access the service, and check w
 
 For the `ClusterIP` service, you can start a test pod in the cluster and access the service IP address:
 
-:::image type="content" source="./media/connection-issues-application-hosted-aks-cluster/test-pod-access-cluster-ip-address.svg" lightbox="./media/connection-issues-application-hosted-aks-cluster/test-pod-access-cluster-ip-address.svg" alt-text="Diagram of using a test pod in an Azure Kubernetes Service (A K S) cluster to access the cluster I P address." border="true":::
+:::image type="content" source="./media/connection-issues-application-hosted-aks-cluster/test-pod-access-cluster-ip-address.svg" lightbox="./media/connection-issues-application-hosted-aks-cluster/test-pod-access-cluster-ip-address.svg" alt-text="Diagram of using a test pod in an Azure Kubernetes Service (A K S) cluster to access the cluster I P address." border="false":::
 
 ```bash
 # Start a test pod in the cluster:
-kubectl run -it --rm aks-ssh --image=debian
+kubectl run -it --rm aks-ssh --image=debian:stable
   
 # After the test pod is running, you will gain access to the pod.
 # Then, you can run the following commands:
@@ -193,7 +194,7 @@ If the previous command doesn't return an appropriate response, check the servic
 
 For the `LoadBalancer` service, you can access the load balancer IP address from outside the cluster.
 
-:::image type="content" source="./media/connection-issues-application-hosted-aks-cluster/access-load-balancer-ip-address-outside-cluster.svg" lightbox="./media/connection-issues-application-hosted-aks-cluster/access-load-balancer-ip-address-outside-cluster.svg" alt-text="Diagram of a test user accessing the load balancer I P address from outside an Azure Kubernetes Service (A K S) cluster." border="true":::
+:::image type="content" source="./media/connection-issues-application-hosted-aks-cluster/access-load-balancer-ip-address-outside-cluster.svg" lightbox="./media/connection-issues-application-hosted-aks-cluster/access-load-balancer-ip-address-outside-cluster.svg" alt-text="Diagram of a test user accessing the load balancer I P address from outside an Azure Kubernetes Service (A K S) cluster." border="false":::
 
 ```bash
 curl -Iv http://<service-ip-address>:<port>
@@ -205,7 +206,7 @@ Does the `LoadBalancer` service IP address return a correct response? If it does
 
 1. Verify that the network security groups (NSGs) that are associated with the AKS nodes and AKS subnet allow the incoming traffic on the service port.
 
-For more commands to troubleshoot services, see [Debug services](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-service/).
+For more commands to troubleshoot services, see [Debug services](https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/).
 
 ## Scenarios that use an ingress instead of a service
 
@@ -213,7 +214,7 @@ For scenarios in which the application is exposed by using an `Ingress` resource
 
 > Client >> DNS name >> Load balancer or application gateway IP address >> Ingress pods inside the cluster >> Service or pods
 
-:::image type="content" source="./media/connection-issues-application-hosted-aks-cluster/ingress-resource-app-traffic-flow.svg" lightbox="./media/connection-issues-application-hosted-aks-cluster/ingress-resource-app-traffic-flow.svg" alt-text="Diagram of the network traffic flow when an app inside an Azure Kubernetes Service (A K S) cluster is exposed by using an ingress resource." border="true":::
+:::image type="content" source="./media/connection-issues-application-hosted-aks-cluster/ingress-resource-app-traffic-flow.svg" lightbox="./media/connection-issues-application-hosted-aks-cluster/ingress-resource-app-traffic-flow.svg" alt-text="Diagram of the network traffic flow when an app inside an Azure Kubernetes Service (A K S) cluster is exposed by using an ingress resource." border="false":::
 
 You can apply the inside-out approach of troubleshooting here, too. You can also check the ingress and ingress controller details for more information:
 

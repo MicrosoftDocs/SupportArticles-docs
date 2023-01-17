@@ -1,71 +1,75 @@
 ---
 title: Verify first-party Microsoft applications in sign-in reports
 description: Describes how to verify first-party Microsoft applications in sign-in reports
-ms.date: 02/09/2022
-ms.reviewer: jafritts
+ms.date: 12/22/2022
+ms.reviewer: bernaw
 ms.service: active-directory
 ms.subservice: compliance
 ---
 # Verify first-party Microsoft applications in sign-in reports
 
-When you are reviewing your sign-in reports, you may see an application in your sign-in report that you don't own and want to identify the application. You also may wonder how you signed into that app, as you don't remember accessing the app.
+When you're reviewing your sign-in reports, you might see an application in your sign-in report that you don't own and want to identify the application. You also might wonder how you signed into that app, if you don't remember accessing the app.
 
-Here is an example of a sign-in report:
+Here's an example sign-in report:
 
 :::image type="content" source="media/verify-first-party-apps-sign-in/sign-in-report.png" alt-text="Screenshot of a sign-in report in Azure Active Directory.":::
 
-For example, when you access **docs.microsoft.com**, the application shown in the sign-in log may say **dev-rel-auth-prod**, which is not descriptive regarding **doc.microsoft.com**.
+For example, when you access `learn.microsoft.com`, the application that's shown in the sign-in log may say `dev-rel-auth-prod`, which isn't descriptive of `learn.microsoft.com`.
 
-Though the apps listed in sign-in reports are indeed owned by Microsoft, and are not suspicious applications, there is a way that you can verify whether an Azure AD service principal found in your AAD logs is owned by Microsoft.
+Although the apps that are listed in sign-in reports are owned by Microsoft and aren't suspicious applications, you can determine whether Microsoft owns an Azure Active Directory (Azure AD) service principal that's found in your Azure AD logs.
 
 > [!NOTE]
-> First-party Microsoft applications don't always result in a service principal created in your tenant. In this case, you will likely continue to see the applications in your sign-in reports. This article lists the [application IDs for commonly used Microsoft applications](#application-ids-for-commonly-used-microsoft-applications).
+> First-party Microsoft applications don't always result in a service principal that's created in your tenant. In this case, you'll likely continue to see the applications in your sign-in reports. This article lists the [application IDs of commonly used Microsoft applications](#application-ids-of-commonly-used-microsoft-applications).
 
-## Verify a 1st Microsoft Service Principal in your AAD tenant
+## Verify a first-party Microsoft service principal in your Azure AD tenant
 
-1. Visit the [AAD Enterprise Applications blade](https://portal.azure.com/#blade/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/AllApps/menuId/).
+1. Open the [list of enterprise applications in Azure AD](https://portal.azure.com/#blade/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/AllApps/menuId/).
 
-2. Select **All applications** in the left-hand menu.
+2. In the navigation pane, select **All applications**.
 
-3. In the **Application Type** drop-down menu, select **Microsoft Applications** and hit apply.  All applications listed here are owned by Microsoft.
+3. In the **Application Type** drop-down list, select **Microsoft Applications**, and then select **Apply**. All applications that are listed here are owned by Microsoft.
 
-    :::image type="content" source="media/verify-first-party-apps-sign-in/microsoft-applications-in-application-type-menu.png" alt-text="Screenshot of the Application Type drop-down menu where Microsoft Applications is selected.":::
+    :::image type="content" source="media/verify-first-party-apps-sign-in/microsoft-applications-in-application-type-menu.png" alt-text="Screenshot of the Application Type drop-down menu where Microsoft Applications are selected.":::
 
-4. In the search box below the selectable drop-down menus, filter the list by adding a specific **Display Name** or **Application ID**.
+4. In the search box below the drop-down lists, filter the Microsoft application list by adding a specific **Display Name** or **Application ID**.
 
     :::image type="content" source="media/verify-first-party-apps-sign-in/add-display-name-in-searchbox.png" alt-text="Screenshot of the search box where a display name is entered.":::
 
-5. Select the desired app, then select **Properties** in the left-hand menu to open the listed app's properties and confirm the message that:
+5. Select the desired app, and then select **Properties** in the navigation pane to view the listed app's properties. Verify that you see the following error message:
 
-   ``You can't delete this application because it's a Microsoft first party application.``
+   ```output
+   You can't delete this application because it's a Microsoft first party application.
+   ```
 
-    :::image type="content" source="media/verify-first-party-apps-sign-in/you-cant-delete-this-application.png" alt-text="Screenshot of the message that displays the statement you can't delete this application because it's a Microsoft first party application.":::
+    :::image type="content" source="media/verify-first-party-apps-sign-in/you-cant-delete-this-application.png" alt-text="Screenshot of the message that displays the statement you can't delete this application because it's a Microsoft first-party application.":::
 
-## Verify a 1st Party Microsoft Service Principal through PowerShell
+## Verify a first-party Microsoft service principal through PowerShell
 
-1. Open the Azure Active Directory Module in PowerShell
+1. Open the Azure Active Directory Module in PowerShell.
 
 2. In the PowerShell module, enter the following cmdlet:
 
    ```cmd
-   Get-AzureADServicePrincipal -Filter "DisplayName eq '(DISPLAY NAME)'" | fl *
+   Get-AzureADServicePrincipal -Filter "DisplayName eq '<display-name>'" | fl *
    ```
 
-   Replace **(DISPLAY NAME)** with the app's actual display name.
+   Replace `<display name>` with the app's actual display name.
 
-3. Review the result's **AppOwnerTenantId**.
+3. Review the result's `AppOwnerTenantId`.
 
     :::image type="content" source="media/verify-first-party-apps-sign-in/review-the-app-owner-tenant-id.png" alt-text="Screenshot of the output of a request to show the Azure AD service principal.":::
 
-   In the previous screenshot, **f8cdef31-a31e-4b4a-93e4-5f571e91255a** is the Microsoft Service's AAD tenant ID.
+   In the screenshot, `f8cdef31-a31e-4b4a-93e4-5f571e91255a` is the Microsoft Service's Azure AD tenant ID.
 
-## Application IDs for commonly used Microsoft applications
+## Application IDs of commonly used Microsoft applications
 
-The following table lists some, but not all, first party Microsoft applications. You may see these applications in the Sign-ins report in Azure AD.  
+The following table lists some, but not all, first-party Microsoft applications. You may see these applications in the Sign-ins report in Azure AD.  
 
 |Application Name|Application IDs|
 |--|--|
 |ACOM Azure Website|23523755-3a2b-41ca-9315-f81f3f566a95|
+|AEM-DualAuth|69893ee3-dd10-4b1c-832d-4870354be3d8|
+|ASM Campaign Servicing|0cb7b9ec-5336-483b-bc31-b15b5788de71|
 |Azure Advanced Threat Protection|7b7531ad-5926-4f2d-8a1d-38495ad33e17|
 |Azure Data Lake|e9f49c6b-5ce5-44c8-925d-015017e9f7ad|
 |Azure Lab Services Portal|835b2a73-6e10-4aa5-a979-21dfda45231c|
@@ -85,6 +89,7 @@ The following table lists some, but not all, first party Microsoft applications.
 |Microsoft Approval Management|65d91a3d-ab74-42e6-8a2f-0add61688c74<br>38049638-cc2c-4cde-abe4-4479d721ed44|
 |Microsoft Authentication Broker|29d9ed98-a469-4536-ade2-f981bc1d605e|
 |Microsoft Azure CLI|04b07795-8ddb-461a-bbee-02f9e1bf7b46|
+|Microsoft Azure PowerShell|1950a258-227b-4e31-a9cf-717495945fc2|
 |Microsoft Bing Search|cf36b471-5b44-428c-9ce7-313bf84528de|
 |Microsoft Bing Search for Microsoft Edge|2d7f3606-b07d-41d1-b9d2-0d0c9296a6e8|
 |Microsoft Bing Default Search Engine|1786c5ed-9644-47b2-8aa0-7201292175b6|
@@ -97,6 +102,7 @@ The following table lists some, but not all, first party Microsoft applications.
 |Microsoft Graph|00000003-0000-0000-c000-000000000000|
 |Microsoft Intune Web Company Portal|74bcdadc-2fdc-4bb3-8459-76d06952a0e9|
 |Microsoft Intune Windows Agent|fc0f3af4-6835-4174-b806-f7db311fd2f3|
+|Microsoft Learn|18fbca16-2224-45f6-85b0-f7bf2b39b3f3|
 |Microsoft Office|d3590ed6-52b3-4102-aeff-aad2292ab01c|
 |Microsoft Office 365 Portal|00000006-0000-0ff1-ce00-000000000000|
 |Microsoft Office Web Apps Service|67e3df25-268a-4324-a550-0de1c7f97287|
@@ -129,9 +135,12 @@ The following table lists some, but not all, first party Microsoft applications.
 |OfficeClientService|0f698dd4-f011-4d23-a33e-b36416dcb1e6|
 |OfficeHome|4765445b-32c6-49b0-83e6-1d93765276ca|
 |OfficeShredderWacClient|4d5c2d63-cf83-4365-853c-925fd1a64357|
+|OMSOctopiPROD|62256cef-54c0-4cb4-bcac-4c67989bdc40|
 |OneDrive SyncEngine|ab9b8c07-8f02-4f72-87fa-80105867a763|
 |OneNote|2d4d3d8e-2be3-4bef-9f87-7875a61c29de|
 |Outlook Mobile|27922004-5251-4030-b22d-91ecd9a37ea4|
+|Partner Customer Delegated Admin Offline Processor|a3475900-ccec-4a69-98f5-a65cd5dc5306|
+|Password Breach Authenticator|bdd48c81-3a58-4ea9-849c-ebea7f6b6360|
 |Power BI Service|00000009-0000-0000-c000-000000000000|
 |SharedWithMe|ffcb16e8-f789-467c-8ce9-f826a080d987|
 |SharePoint Online Web Client Extensibility|08e18876-6177-487e-b8b5-cf950c1e598c|
@@ -152,6 +161,6 @@ The following table lists some, but not all, first party Microsoft applications.
 
 ## More information
 
-For more information, please see: [Sign-in activity reports in the Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-sign-ins#sign-ins-report).
+For more information, see [Sign-in activity reports in the Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-sign-ins#sign-ins-report).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -1,5 +1,7 @@
 - name: Welcome
   href: welcome-dpm.yml
+- name: DPM error codes
+  href: vnext-dpm-error-codes.md
 - name: Agents
   items:
     - name: Agent communication issues
@@ -58,6 +60,8 @@
       href: configure-cluster-networks.md
     - name: Hyper-V backup fails with error 30112
       href: hyper-v-backup-fails-error-30112.md
+    - name: VM guest can't be modified or removed from protection group
+      href: vm-guest-cannot-be-modified-removed-from-protection-group.md
 - name: Reports
   items:
     - name: Reporting Services Server cannot connect to the DPM database
@@ -68,8 +72,6 @@
       href: deduplicated-volumes-backup-fails.md
     - name: Can't upgrade to DPM 2012
       href: cannot-run-sql-instance-to-upgrade-dpm.md
-    - name: DPM error codes
-      href: vnext-dpm-error-codes.md
     - name: DPM 2010 consistency check fails
       href: consistency-check-error-0x80070005.md
     - name: DPM 2012 SP1 error codes
@@ -100,7 +102,7 @@
       href: new-databases-not-automatically-added.md
     - name: Protection jobs fail with errors
       href: protection-jobs-fail-errors.md
-    - name: SQL Server AlwaysOn protection fails with error 0x80990F75
+    - name: SQL Server Always On protection fails with error 0x80990F75
       href: sql-alwayson-protection-error-0x80990F75.md
     - name: Troubleshoot scheduled backup job failures
       href: troubleshoot-scheduled-backup-job-failures.md
@@ -112,6 +114,8 @@
   items:
     - name: Tape is labeled as Unrecognized
       href: tape-labeled-as-unrecognized.md
+    - name: DPM fails to inventory IBM 35XX Tape Library
+      href: fail-to-inventory-ibm-35xx-tape-library.md
 - name: VMware protection
   items:
     - name: Option isn't available to reprotect VMware VMs

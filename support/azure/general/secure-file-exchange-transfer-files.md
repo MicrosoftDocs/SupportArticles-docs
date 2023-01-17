@@ -1,10 +1,10 @@
 ---
 title: How to securely transfer files to Microsoft Support
 description: Provides information to help you fast and secure transfer files with Microsoft Support.
-ms.date: 08/14/2020
+ms.date: 05/17/2022
 author: genlin
 ms.author: genli
-ms.service: azure
+ms.service: azure-common-issues-support
 ms.reviewer: 
 ---
 # How to securely transfer files to Microsoft Support
@@ -83,8 +83,10 @@ When you open a support case and the country/region that you specify is:
 |Secure File Exchange| `https://support.microsoft.com` |
 |Personal Microsoft account sign-in| `https://login.live.com` |
 |Work or school Microsoft account sign-in| `https://login.microsoftonline.com` |
+|Microsoft U.S. Government Cloud services (Azure Gov, Office 365 GCC High and DoD)| `https://dtmffprodclient.usgovtrafficmanager.net`|
 |Other| `https://api.dtmnebula.microsoft.com` |
 |Other (Microsoft Cloud Deutschland) - For Germany only| `https://dtmbfprodapi.azuretrafficmanager.de`|
+
   
 ## What happens when my case is closed?
 

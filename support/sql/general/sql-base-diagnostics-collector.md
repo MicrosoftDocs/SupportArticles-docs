@@ -31,16 +31,16 @@ The SQL Server Base Diagnostics Collector must be run by a user who has administ
 
 The SQL Base Diagnostics Collector discovers all instances of SQL Server that are installed on the computer where the diagnostics tool is run. As part of the data collection process, the SQL Base Diagnostics Collector will try to connect to each instance of SQL Server that the diagnostic tool discovers to collect information about the current SQL Server configuration and server "state." Database connections are made by using Windows authentication. The user who is executing the SQL Base Diagnostics Collector must have a Windows logon that is a member in the sysadmin fixed server role for the following diagnostic collection tasks to succeed:
 
-- SQL Server AlwaysOn Configuration Collection
+- SQL Server Always On Configuration Collection
 - SQLDIAG Data Collection Scripts
 
 ## Support for Windows failover clusters
 
 The SQL Base Diagnostics Collector is cluster-aware and will collect cluster-specific information when the diagnostic tool is run against a Windows Server Failover Cluster.
 
-To diagnose SQL Server AlwaysOn Availability Group failovers, or SQL Server cluster resource failovers, you may have to run the SQL Base Diagnostic collector against more than one cluster node to collect all the necessary troubleshooting information:
+To diagnose SQL Server Always On Availability Group failovers, or SQL Server cluster resource failovers, you may have to run the SQL Base Diagnostic collector against more than one cluster node to collect all the necessary troubleshooting information:
 
-- Run the SQL Base Diagnostic Collector against the cluster node that currently owns the SQL Server AlwaysOn Availability Group or SQL Server cluster resource that experienced the failover. This is necessary as the information that is collected for SQL Server and SQL Server AlwaysOn resides on the cluster disk resource, and is failed over with the AlwaysOn Availability Group or SQL Server cluster resource to the new owning node.
+- Run the SQL Base Diagnostic Collector against the cluster node that currently owns the SQL Server Always On Availability Group or SQL Server cluster resource that experienced the failover. This is necessary as the information that is collected for SQL Server and SQL Server Always On resides on the cluster disk resource, and is failed over with the Always On Availability Group or SQL Server cluster resource to the new owning node.
 
 - Run the SQL Base Diagnostic Collector against the node where the failure occurred. This enables the collection of the cluster log from the cluster node where the failure occurred.
 
@@ -344,27 +344,27 @@ To diagnose SQL Server AlwaysOn Availability Group failovers, or SQL Server clus
   |---|---|
   |SQLDIAG script output| Named instance: <br/> _<COMPUTER_NAME>_<INSTANCE_NAME>_1033_sp_sqldiag_Shutdown.OUT_<br/><br/> Default Instance: <br/> _<COMPUTER_NAME>_MSSQLSERVER_1033_sp_sqldiag_Shutdown.OUT_|
 
-- SQL Server AlwaysOn configuration information
+- SQL Server Always On configuration information
 
   > [!NOTE]
-  > The SQL Server AlwaysOn configuration information is only collected from SQL Server 2012 instances.
+  > The SQL Server Always On configuration information is only collected from SQL Server 2012 instances.
 
   |Description|File name|
   |---|---|
-  |SQL Server AlwaysOn configuration information| Named instance: <br/> _<COMPUTER_NAME>_<INSTANCE_NAME>_1033_AlwaysOn.OUT_<br/><br/> Default Instance: <br/> _<COMPUTER_NAME>_MSSQLSERVER_1033_AlwaysOn.OUT_|
+  |SQL Server Always On configuration information| Named instance: <br/> _<COMPUTER_NAME>_<INSTANCE_NAME>_1033_AlwaysOn.OUT_<br/><br/> Default Instance: <br/> _<COMPUTER_NAME>_MSSQLSERVER_1033_AlwaysOn.OUT_|
 
-- SQL Server AlwaysOn health logs
+- SQL Server Always On health logs
 
-  SQL Server AlwaysOn health session logs are collected from each SQL Server 2012 instance that is installed on the destination computer. The files are collected and compressed into "instance specific" zip archives.
+  SQL Server Always On health session logs are collected from each SQL Server 2012 instance that is installed on the destination computer. The files are collected and compressed into "instance specific" zip archives.
 
-  The maximum number of SQL Server AlwaysOn Health logs that will be collected for each discovered instance is 20. The files are collected in descending order, based on the creation date of the file.
+  The maximum number of SQL Server Always On Health logs that will be collected for each discovered instance is 20. The files are collected in descending order, based on the creation date of the file.
 
   |Description|File name|
   |---|---|
-  |SQL Server AlwaysOn health logs| Named instance: <br/> _<COMPUTER_NAME>_<INSTANCE_NAME>_AlwaysOn_health_XeLogs.zip_<br/><br/> Default Instance: <br/> _<COMPUTER_NAME>_MSSQLSERVER_AlwaysOn_health_XeLogs.zip_|
+  |SQL Server Always On health logs| Named instance: <br/> _<COMPUTER_NAME>_<INSTANCE_NAME>_AlwaysOn_health_XeLogs.zip_<br/><br/> Default Instance: <br/> _<COMPUTER_NAME>_MSSQLSERVER_AlwaysOn_health_XeLogs.zip_|
 
   > [!NOTE]
-  > When the SQL Base Diagnostics Collector is executed against a Windows failover cluster, SQL Server AlwaysOn health logs are only collected if they are stored on a drive that is "owned" and "online" to the target cluster node.
+  > When the SQL Base Diagnostics Collector is executed against a Windows failover cluster, SQL Server Always On health logs are only collected if they are stored on a drive that is "owned" and "online" to the target cluster node.
 
 - SQL Server failover cluster health logs
 

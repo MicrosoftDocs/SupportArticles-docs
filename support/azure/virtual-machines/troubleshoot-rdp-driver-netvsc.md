@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot a netvsc.sys issue when you connect remotely to a Windows 10 or Windows Server 2016 VM in Azure | Microsoft Docs
+title: Troubleshoot a netvsc.sys issue when you connect remotely to a Windows 10 or Windows Server 2016 VM in Azure
 description: Learn how to troubleshoot a netsvc.sys-related RDP issue when you connecting to a Windows 10 or Windows Server 2016 VM in Azure.
 services: virtual-machines
 documentationCenter: ''
@@ -7,6 +7,7 @@ author: genlin
 manager: dcscontentpm
 editor: v-jesits
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows

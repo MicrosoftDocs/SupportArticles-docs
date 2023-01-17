@@ -119,18 +119,14 @@ To determine attribute conflicts caused by user objects that were created by usi
     > In this command, the placeholder "\<search UPN>" represents the UserPrincipalName attribute that you recorded in step 1f.
 
     ```powershell
-    get-MSOLUser -UserPrincipalName $userUPN | where {$_.LastDirSyncTime -eq $null}
+    Get-MSOLUser -UserPrincipalName $userUPN | where {$_.LastDirSyncTime -eq $null}
     ```
 
     Leave the console window open. You'll use it again in the next step.
-4. Check for duplicate proxyAddresses attributes. In the console connection that you opened in step 2, type the following commands in the order in which they are presented. Press Enter after each command:
+4. Check for duplicate proxyAddresses attributes. In the console connection that you opened in step 2, run the following command:
 
     ```powershell
-    $SessionExO = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $Cred -Authentication Basic - AllowRedirection
-    ```
-
-    ```powershell
-    Import-PSSession $sessionExO -prefix:Cloud
+    Import-Module ExchangeOnlineManagement
     ```
 
 5. For each proxy address entry that you recorded in step 1f, type the following commands in the order in which they are presented. Press Enter after each command:
@@ -143,7 +139,7 @@ To determine attribute conflicts caused by user objects that were created by usi
     > In this command, the placeholder "\<search proxyAddress>" represents the value of a proxyAddresses attribute that you recorded in step 1f.
 
     ```powershell
-    get-cloudmailbox | where {[string] $str = ($_.EmailAddresses); $str.tolower().Contains($proxyAddress.tolower()) -eq $true} | foreach {get-MSOLUser -UserPrincipalName $_.MicrosoftOnlineServicesID | where {($_.LastDirSyncTime -eq $null)}}
+    Get-EXOMailbox | where {[string] $str = ($_.EmailAddresses); $str.tolower().Contains($proxyAddress.tolower()) -eq $true} | foreach {get-MSOLUser -UserPrincipalName $_.MicrosoftOnlineServicesID | where {($_.LastDirSyncTime -eq $null)}}
     ```
 
 Items that are returned after you run the commands in step 3 and 4 represent user objects that weren't created through directory synchronization and that have attributes that conflict with the object that isn't syncing correctly.

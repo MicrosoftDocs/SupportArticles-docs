@@ -1,5 +1,5 @@
 ---
-title: Performance diagnostics for Azure virtual machines| Microsoft Docs
+title: Performance diagnostics for Azure virtual machines
 description: Introduces Azure Performance Diagnostics for Windows.
 services: virtual-machines
 documentationcenter: ''
@@ -8,12 +8,13 @@ manager: dcscontentpm
 editor: przlplx
 tags: ''
 ms.service: virtual-machines
+ms.subservice: vm-performance
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 
 ms.topic: troubleshooting
-ms.date: 9/20/2018
+ms.date: 10/24/2022
 ms.author: anandh
 
 ---
@@ -48,11 +49,11 @@ You can run performance diagnostics directly from the Azure portal, where you ca
     | Distribution               | Version                                         |
     |----------------------------|-------------------------------------------------|
     | Oracle Linux Server        | 6.10 [`*`], 7.3, 7.5, 7.6, 7.7, 7.8, 7.9 |
-    | CentOS                     | 6.5 [`*`], 7.6, 7.7, 7.8                                    |
-    | RHEL                       | 7.2, 7.5, 8.0 [`*`], 8.1, 8.2                               |
+    | CentOS                     | 6.5 [`*`], 7.6, 7.7, 7.8, 7.9                                    |
+    | RHEL                       | 7.2, 7.5, 8.0 [`*`], 8.1, 8.2, 8.6                               |
     | Ubuntu                     | 14.04, 16.04, 18.04, 20.04                               |
-    | Debian                     | 8, 9, 10 [`*`]                                    |
-    | SLES                       | 12 SP4 [`*`], 12 SP5 [`*`], 15 [`*`], 15 SP1 [`*`], 15 SP2 [`*`]                                      |
+    | Debian                     | 8, 9, 10, 11 [`*`]                                    |
+    | SLES                       | 12 SP4 [`*`], 12 SP5 [`*`], 15 [`*`], 15 SP1 [`*`], 15 SP2 [`*`], 15 SP4 [`*`]                                      |
     | AlmaLinux                  | 8.4, 8.5                                               |
     |                            |                                                   |
 
@@ -63,28 +64,24 @@ You can run performance diagnostics directly from the Azure portal, where you ca
 
 Performance diagnostics installs a VM extension that runs a diagnostics tool that is named PerfInsights. PerfInsights is available for both [Windows](./how-to-use-perfinsights.md) and [Linux](./how-to-use-perfinsights-linux.md). To install and run performance diagnostics, follow these steps:
 
-1. In the left column of commands, select **Virtual machines**.
+1. In the [Azure portal](https://portal.azure.com), select **Virtual machines**.
 1. From the list of VM names, select the VM that you want to run diagnostics on.
-1. In the right column of commands, select **Performance diagnostics**.
+1. In the **Help** section, select **Performance diagnostics**.
 
-    :::image type="content" source="media/performance-diagnostics/performance-diagnostics-install.png" alt-text="Screenshot of Azure portal, with Install performance diagnostics button highlighted.":::
+    :::image type="content" source="media/performance-diagnostics/open-performance-diag.png" alt-text="Screenshot of Azure portal, with Install performance diagnostics button highlighted.":::
 
-    > [!NOTE]
-    > In this screenshot, the blade of VM names is hidden.
 1. Select a storage account (optional)
 
     If you want to use a single storage account to store the performance diagnostics results for multiple VMs, you can select a storage account by clicking the **Settings** button in the toolbar. Click the **OK** button once you select the storage account.
 
+    :::image type="content" source="media/performance-diagnostics/storage-account-settings.png" alt-text="Screenshot of Performance diagnostics blade, with Settings toolbar button highlighted.":::
+
     If you do not specify a storage account, a new storage account will be created by default.
 
-    :::image type="content" source="media/performance-diagnostics/settings-button.png" alt-text="Screenshot of Performance diagnostics blade, with Settings toolbar button highlighted.":::
-
-    :::image type="content" source="media/performance-diagnostics/select-storage-account.png" alt-text="Screenshot of storage account selection from Performance diagnostics settings blade.":::
-
-1. Select the **Install performance diagnostics** button.
-1. Select the **Run diagnostics** check box if you want to run a diagnostic after the installation is completed. If you make this selection, you will be able to choose the performance analysis scenario and related options.
+1. Select the **Install performance diagnostics** button. If you want to run a diagnostic after the installation is completed, select the **Run diagnostics after the installation finishes** check box. If you make this selection, you will be able to choose the performance analysis scenario and related options.
 
     :::image type="content" source="media/performance-diagnostics/install-diagnostics-button.png" alt-text="Screenshot of Performance diagnostics install button. The Run diagnostics after installation finishes option is checked.":::
+
 
 ## Select an analysis scenario to run
 
@@ -185,6 +182,10 @@ You can uninstall performance diagnostics from a VM. This action removes the VM 
 
 :::image type="content" source="media/performance-diagnostics/uninstall-button.png" alt-text="Screenshot of the Performance diagnostics blade toolbar with Uninstall button highlighted.":::
 
+## Move Azure resources across regions
+
+Azure VMs, and related network and storage resources, can be moved across regions by using Azure Resource Mover. However, moving VM extensions across regions isn't supported. For example, moving the Azure Performance Diagnostics VM extension across regions isn't supported. You have to install it manually on the VM in the target region after the VM is moved. For more information, see [Support matrix for moving Azure VMs between Azure regions](/azure/resource-mover/support-matrix-move-region-azure-vm).
+
 ## Frequently asked questions
 
 ### Where is the diagnostics data from my VM stored
@@ -204,7 +205,7 @@ When you open a support ticket with Microsoft, it is important to share the perf
 You may share a link to the reports compressed file by using Shared Access Signatures. To do this, follow these steps:
 
 1. In the Azure portal, browse to the storage account in which the diagnostics data is stored.
-1. Select **Blobs** under the **Blob service** section.
+1. Select **Containers** under the **Data Storage** section.”.
 1. Select the **azdiagextnresults** container.
 1. Select the Performance diagnostics output compressed file that you want to share.
 1. On the **Generate SAS** tab, select the criteria for sharing.

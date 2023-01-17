@@ -1,22 +1,22 @@
 ---
 title: Error AADSTS75005 - The request is not a valid Saml2 protocol message
-description: Describes a problem in which you receive an error message when signing in to SAML-based single sign-on configured app that has been configured to use Azure Active Directory as an Identity Provider (IdP). The error you receive is Error AADSTS75005 - The request is not a valid Saml2 protocol message.
-ms.date: 03/15/2021
+description: Describes a problem in which you receive AADSTS75005 error when signing in to SAML-based single sign-on configured app.
+ms.date: 08/26/2022
 ms.reviewer: bernawy
 ms.service: active-directory
 ms.subservice: app-mgmt
 ---
 # Error AADSTS75005 - The request is not a valid Saml2 protocol message
 
-This article describes a problem in which you receive the error message "Error AADSTS75005 - The request is not a valid Saml2 protocol message." when trying to sign into a SAML-based single sign-on (SSO) configured app that has been integrated with Azure Active Directory (Azure AD).
+This article describes a problem in which you receive the error message "Error AADSTS75005 - The request is not a valid Saml2 protocol message." when you try to sign into an apapplication that has been integrated with Azure Active Directory (Azure AD).
 
 ## Symptoms
 
-You receive error `AADSTS75005` when trying to sign into an application that has been setup to use Azure AD for identity management using SAML-based SSO.
+You receive error `AADSTS75005` when trying to sign into an application that has been set up to use Azure AD for identity management using SAML-based SSO.
 
 ## Cause
 
-Azure AD doesn’t support the SAML request sent by the application for single sign-on. Some common issues are:
+Azure AD doesn't support the SAML request sent by the application for single sign-on. Some common issues are:
 
 - Missing required fields in the SAML request.
 - SAML request encoded method.
@@ -32,6 +32,6 @@ The application vendor should validate that they support the Azure AD SAML imple
 
 ## More Information
 
-For a full list of Active Directory Authentication and authorization error codes see [Azure AD Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes)
+For a full list of Active Directory Authentication and authorization error codes, see [Azure AD Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

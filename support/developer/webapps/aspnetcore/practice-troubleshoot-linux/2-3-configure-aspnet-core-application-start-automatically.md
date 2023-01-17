@@ -67,8 +67,8 @@ RestartSec=10
 KillSignal=SIGINT
 SyslogIdentifier=dotnet-example
 User=www-data
-Environment=ASPNETCORE\_ENVIRONMENT=Production
-Environment=DOTNET\_PRINT\_TELEMETRY\_MESSAGE=false
+Environment=ASPNETCORE_ENVIRONMENT=Production
+Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
 
 [Install]
 WantedBy=multi-user.target
@@ -106,8 +106,8 @@ RestartSec=10
 KillSignal=SIGINT
 SyslogIdentifier=myfirstapp-identifier
 User=www-data
-Environment=ASPNETCORE\_ENVIRONMENT=Development
-Environment=DOTNET\_PRINT\_TELEMETRY\_MESSAGE=false
+Environment=ASPNETCORE_ENVIRONMENT=Development
+Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
 
 [Install]
 WantedBy=multi-user.target
@@ -132,7 +132,7 @@ Should the web application stop unexpectedly, it will automatically start again 
 There is one final step: The service is running but not enabled. "Enabled" means that it starts automatically after the server is started. This is the desired final configuration. Run the following command to make sure that the service is enabled:
 
 ```bash
-Sudo systemctl enable myfirstwebapp.service
+sudo systemctl enable myfirstwebapp.service
 ```
 
 :::image type="content" source="./media/2-3-configure-aspnet-core-application-start-automatically/sudo-systemctl-enable-command.png" alt-text="Screenshot of sudo systemctl enable command." border="true":::

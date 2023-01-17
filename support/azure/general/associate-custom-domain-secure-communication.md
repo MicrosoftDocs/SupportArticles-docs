@@ -2,7 +2,7 @@
 title: Associating a custom domain and securing communication with Microsoft Azure
 description: This guided walkthrough provides instructions on how to associate a custom domain and secure communication (HTTPS) with Azure.
 ms.date: 11/26/2020
-ms.service: azure
+ms.service: azure-common-issues-support
 ms.author: genli
 author: genlin
 ms.reviewer: aspring

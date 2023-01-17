@@ -6,6 +6,7 @@ author: mimckitt
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-common-errors-issues
 ms.topic: troubleshooting
 ms.date: 10/4/2021
 ms.author: mimckitt
@@ -51,9 +52,9 @@ az vm reapply -g MyResourceGroup -n MyVm
 Update the VM objects and properties by running the [Update-AzVM](/powershell/module/az.compute/update-azvm?view=azps-6.5.0#examples&preserve-view=true) command after you apply the reapply parameter:
 
 ```azurepowershell-interactive
-$VM = Get-AzVM -ResourceGroupName <ResourceGroup> -Name <VMName>
-Set-AzVM -VM $VM -Reapply
-Update-AzVM -VM $VM
+Get-AzVM -ResourceGroupName <ResourceGroup> -Name <VMName>
+Set-AzVM -ResourceGroupName <ResourceGroup> -Name <VMName> -Reapply
+Update-AzVM -VM <VMName> -ResourceGroupName <ResourceGroupName>
 
 ```
 

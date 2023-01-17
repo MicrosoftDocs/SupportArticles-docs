@@ -3,7 +3,8 @@ title: Identify the containers consuming high CPU in an AKS cluster
 description: Describes how to identify the containers consuming high CPU in an AKS cluster
 ms.date: 07/08/2021
 ms.reviewer: chiragpa
-ms.service: container-service
+ms.service: azure-kubernetes-service
+ms.subservice: troubleshoot-cluster-performance
 ---
 # Identify the containers consuming high CPU in an AKS cluster
 
@@ -45,7 +46,7 @@ A customer may run a simple command because this type of interaction is not avai
 
 Simple commands can be run on a node through Secure Shell (SSH) to help identify any high CPU consuming containers.
 
-1. Access the afflicted node with SSH. Depending on the version of the cluster, run either `docker stats` or `crictl stats`, depending on whether or not you have **ContainerD**. ContainerD is container runtime that executes containers and [manages container images on a node](/azure/aks/cluster-configuration#container-runtime-configuration).
+1. Access the afflicted node with SSH. Depending on the version of the cluster, run either `docker stats` or `crictl stats`, depending on whether or not you have **ContainerD**. ContainerD is a container runtime that executes containers and [manages container images on a node](/azure/aks/cluster-configuration#container-runtime-configuration).
 
    1. If you don't have **ContainerD**, run this command:
 

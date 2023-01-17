@@ -36,7 +36,7 @@ The following table lists and describes the return codes that are used by the Ro
 |8|Several files didn't copy.|
   
 > [!NOTE]
-> Any value greater than 8 indicates that there was at least one failure during the copy operation.
+> Any value greater than or equal to 8 indicates that there was at least one failure during the copy operation.
 
 ## More information
 

@@ -2,7 +2,7 @@
 title: Error loading from Contents tab through Azure Data Factory, version 1
 description: Describes an error when loading data files through Azure Data Factory, version 1. To resolve this problem, upgrade to Azure Data Factory, version 2.
 ms.date: 08/14/2020
-ms.service: azure
+ms.service: azure-common-issues-support
 ms.author: genli
 author: genlin
 ms.reviewer: 

@@ -1,7 +1,7 @@
 ---
 title: Managing the Teams Chat icon on Windows 11
-description: This article helps you to manage the Chat icon on Windows 11. 
-ms.date: 03/03/2022
+description: This article helps you to manage the Chat icon on Windows 11.
+ms.date: 08/04/2022
 author: kaushika-msft
 ms.author: v-jayaramanp
 ms.topic: troubleshooting
@@ -9,12 +9,14 @@ ms.reviewer: warren-msft, kimberj
 ms.prod: windows-client
 ms.custom: sap:windows-script-host-cscript-or-wscript, csstroubleshoot
 ms.technology: windows-client-application-compatibility
+audience: itpro
+localization_priority: medium
 ---
 # Managing the Teams Chat icon on Windows 11
 
 This article describes how to manage the Chat icon on Windows 11.
 
-_Applies to:_ &nbsp; Windows 11  
+_Applies to:_ &nbsp; Windows 11
 
 ## Introduction to Teams Chat icon on Windows 11
 
@@ -31,9 +33,9 @@ After Windows 11 is installed, you can start using the default version of Teams 
 > [!NOTE]
 > The Teams for work app is not included in the Windows 11 installer and will not be installed until you set it up. Before you install the Teams app, there will be an app icon (small camera) on the taskbar.
 
-### Scenario 1: Chat icon is present on the Taskbar, but Teams isn’t installed.
+### Scenario 1: Chat icon is present on the Taskbar, but Teams isn't installed.
 
-If you see the Chat icon on the Taskbar but you don’t see the Teams app, select the **Chat** icon, and then check whether the following screen appears.
+If you see the Chat icon on the Taskbar but you don't see the Teams app, select the **Chat** icon, and then check whether the following screen appears.
 
 :::image type="content" source="media/windows-teams-chat-icon/scenario-1-continue.png" alt-text="Chat icon is present on the Taskbar, but Teams isn't installed.":::
 
@@ -48,11 +50,11 @@ Run the following PowerShell cmdlet to check whether the Windows 11-based device
 Get-AppxPackage -name '*teams'
 ```
 
-If this command displays no results, the Teams app isn’t installed.
+If this command displays no results, the Teams app isn't installed.
 
 :::image type="content" source="media/windows-teams-chat-icon/scenario-1-commandline.png" alt-text="Command to check whether Windows 11 based device has Teams installed.":::
 
-### Scenario 2: Chat icon is turned on, but Teams isn’t configured.
+### Scenario 2: Chat icon is turned on, but Teams isn't configured.
 
 If you see the Chat icon on the taskbar, select the **Chat** icon, and then check whether the following screen appears.
 
@@ -70,7 +72,7 @@ If this command returns the installation status, the Teams app is installed.
 
 :::image type="content" source="media/windows-teams-chat-icon/scenario-2-commandline.png" alt-text="Command is used to confirm the installation status.":::
 
-You’ll see the same results when you configure Teams. Also, you should see a list of contacts in the Chat window.
+You'll see the same results when you configure Teams. Also, you should see a list of contacts in the Chat window.
 
 > [!NOTE]
 > When you select **Get Started** and complete the configuration of Teams, a list of contacts appears in place of the Get Started screen which means that Teams is installed and fully configured.  
@@ -96,7 +98,7 @@ To turn on Chat, right-click the taskbar, select **Taskbar settings**, and then 
 Admins can customize Group Policy settings, such as Show, Hide, and Disabled, for the Chat icon.
 
 > [!NOTE]
-> The **Disabled** option is available on the **Enabled > State list**. Do not confuse this command with setting the policy to **Disabled**.
+> The **Disabled** option is available on the **Enabled > State list**. Do not confuse this command with setting the policy to **Disabled**. The policy is located under *Computer Configuration\\Administrative Templates\\Windows Components\\Chat\\*.
 
 You can configure the Chat icon on the taskbar using the following dialog box.
 
@@ -114,8 +116,8 @@ The values for this policy are 0, 1, 2, and 3. This policy defaults to 0 if not 
 
 - **0 – Not Configured**: The Chat icon follows the default configuration for your Windows edition.
 - **1 – Show**: The Chat icon appears on the taskbar by default. You can show or hide it in Settings.
-- **2 – Hide**: The Chat icon doesn’t appear by default. You can show or hide it in Settings.
-- **3 – Disabled**: The Chat icon doesn’t appear on the taskbar. Settings are not available to show or hide the icon.
+- **2 – Hide**: The Chat icon doesn't appear by default. You can show or hide it in Settings.
+- **3 – Disabled**: The Chat icon doesn't appear on the taskbar. Settings are not available to show or hide the icon.
 
 ## Removing the Chat icon using Intune – Settings Catalog
 
@@ -137,4 +139,4 @@ remove-appxpackage -package "MicrosoftTeams_21302.202.1065.6968_x64__8wekyb3d8bb
 
 ### Can I remove the Teams app from the default Windows image?
 
-The default Windows image doesn’t include the Teams app.
+The default Windows image doesn't include the Teams app.

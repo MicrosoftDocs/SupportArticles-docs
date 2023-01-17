@@ -619,6 +619,8 @@
         href: enter-a-transaction-dimension-code.md
       - name: Fail to post Analytical Accounting transactions or save Master record
         href: error-when-posting-analytical-accounting-transactions-or-save-master-record.md
+      - name: Financial Reports don't match GL Trial Balance reports
+        href: financial-report-do-not-match-gl-trial-balance-report.md
       - name: How to key Beginning Balances for Dimension Codes in Analytical Accounting
         href: how-to-key-beginning-balances-for-dimension-codes.md
       - name: Installation of analytical accounting has failed when activating AA
@@ -651,7 +653,7 @@
         href: year-and-period-list-options-are-blank-when-creating-query.md
     - name: Bank Reconciliation
       items:
-      - name: A transaction doesn‘t fall within an existing fiscal year
+      - name: A transaction doesn't fall within an existing fiscal year
         href: a-transaction-cannot-fall-a-fiscal-year.md
       - name: A deposit for this checkbook has already been started
         href: a-deposit-for-this-checkbook-has-already-been-started-error-in-bank-reconciliation.md
@@ -681,6 +683,8 @@
         href: how-to-handle-eft-ach-files-with-bank-reconciliation.md
       - name: How to start using an existing checkbook to reconcile in Bank Reconciliation
         href: how-to-start-using-existing-checkbook-to-reconcile.md
+      - name: How transactions are matched in Electronic Reconcile 
+        href: how-transactions-match-electronic-reconcile.md
       - name: Move reconciled transactions to history to help performance issues
         href: move-reconciled-transactions-to-history-to-resolve-performance-issues.md
       - name: No transactions show in the Select Bank Transaction window
@@ -689,6 +693,8 @@
         href: performance-issue-with-checkbook-register-inquiry-window.md
       - name: Reconcile process handles a voided transaction in Bank Reconciliation
         href: reconcile-process-handles-transaction.md
+      - name: Reconcile to GL routine for Bank Reconciliation
+        href: reconcile-to-gl-routine-for-bank-reconciliation.md
       - name: Steps to reconcile bank statement with no activity
         href: steps-reconcile-bank-statement.md
       - name: The difference must be zero before you can reconcile this checkbook error
@@ -797,6 +803,8 @@
         href: add-credit-field.md
       - name: Adjust the beginning balance entries
         href: adjust-beginning-balance-entries-after-performing-year-end-closing.md
+      - name: Beginning balances don't show on Advanced Financial Analysis Balance Sheet
+        href: beginning-balances-not-show-balance-sheet.md
       - name: Can't import a budget from Excel
         href: cannot-import-budget-use-budget-wizard-for-excel.md
       - name: Can't select a batch in the Batch Recovery window
@@ -1081,6 +1089,8 @@
         href: error-print-eft-checks-in-payables-management-module.md
       - name: Can't save an intercompany transaction
         href: error-save-intercompany-transaction.md
+      - name: Can't send emails such as PM EFT remittances
+        href: send-emails-takes-long-time.md
       - name: Can't unapply a payment when you transfer payment to history tables
         href: cannot-unapply-payment-when-you-transfer-payment-to-history-tables.md
       - name: Can't reprint Payables Year-End Closing Report after year-end close
@@ -1213,6 +1223,8 @@
         href: only-one-addenda-record-is-listed-for-each-vendor-payment.md
       - name: Payables batch shows error after an upgrade to Dynamics GP 2010
         href: getchange-operation-on-table-cmtransactioneft-table-failed-accessing-sql-data.md
+      - name: Payables Management EFT Standard ACH format
+        href: payables-eft-standard-ach-format.md
       - name: Prevent zero dollar remittances from printing
         href: prevent-zero-dollar-remittances-from-printing.md
       - name: Project Accounting information for this vendor does not exist warning
@@ -1321,10 +1333,14 @@
         href: error-unable-add-entity-because-it-already-exists.md
       - name: Cash account isn't populated in Cash Receipts Distribution Entry
         href: cash-account-is-not-populated-in-cash-receipts-distribution-entry.md
+      - name: Cash receipts are automatically depositing into Bank Rec
+        href: cash-receipt-batches-post-as-individual-deposits.md
       - name: Change amount is incorrect when you run the Historical Trial Balance report
         href: net-change-amount-incorrect-run-historical-trial-balance.md
       - name: Cost is $0.00 when you enter an RMA and receive it
         href: cost-is-0-when-you-enter-rma-and-receive-it.md
+      - name: Could not e-mail status report to Sender error
+        href: could-not-email-status-report-to-sender-error.md
       - name: Credit Limit feature used in Receivables Management and in National Accounts
         href: information-about-credit-limit-feature.md
       - name: Data entry errors exist in batch RMPMXFR UserID
@@ -1369,6 +1385,8 @@
         href: how-to-reduce-principal-amount-on-scheduled-payment.md
       - name: How to retrieve the next document number for Receivables Management documents
         href: how-to-retrieve-the-next-document-number-for-receivables-management-documents.md
+      - name: How to send customer statements via emails
+        href: how-to-email-customer-statements.md
       - name: How to use bank account number and bank routing number instead of customer ID in Lockbox
         href: how-to-use-bank-account-number-and-bank-routing-number-in-lockbox-processing.md
       - name: How to use Contract Billing Reversal utility in Contract Administration
@@ -1597,6 +1615,8 @@
         href: error-during-canadian-payroll-employee-import.md
       - name: Error message when you print the FUTA or SUTA report
         href: could-not-find-stored-procedure.md
+      - name: Error packing batch entry file -1
+        href: packing-batch-entry-file-1-error.md
       - name: Error when you save a future effective record
         href: fail-to-save-future-effective-record.md
       - name: Errors when selecting a batch in Build Payroll Checks
@@ -1651,6 +1671,8 @@
         href: modify-employer-number-on-releve-1-form-for-quebec.md
       - name: Order that Canadian Payroll is updated during Update Masters
         href: order-that-canadian-payroll-is-updated-during-update-masters.md
+      - name: Payroll deductions are not included when calculating checks
+        href: payroll-deductions-not-included.md
       - name: Payroll isn't updated 
         href: payroll-not-updated-set-up-benefits-deductions.md
       - name: Payroll timecard approvals aren't going to correct approver
@@ -1739,6 +1761,8 @@
         href: error-close-revenue-recognition-entry-distribution.md
       - name: Fiscal information does not exist for service fee dates
         href: fiscal-information-does-not-exist-error-when-adding-service-fee-to-project.md
+      - name: How to credit a posted billing transaction
+        href: how-to-credit-posted-billing-transaction.md
       - name: How to modify an invoice to make numbers converted into words
         href: how-to-modify-invoice-in-project-accounting-to-make-numbers-converted-into-words.md
       - name: How to print Item Number on the PA Billing Invoice Format 10 report

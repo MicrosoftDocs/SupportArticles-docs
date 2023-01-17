@@ -1,15 +1,17 @@
 ---
-title: Dependency Timeout error when using a form processing model in Power Automate
-description: Provides a resolution for the dependency timeout error when you use a form processing model.
+title: Dependency Timeout error when using a document processing model in Power Automate
+description: Provides a resolution for the dependency timeout error when you use a document processing model.
 ms.reviewer: angieandrews
 ms.topic: troubleshooting
 ms.date: 3/31/2021
 ms.subservice: 
+ms.author: angieandrews
+author: v-aangie
 ---
 
-# Dependency timeout error when using a form processing model in Power Automate
+# Dependency timeout error when using a document processing model in Power Automate
 
-This article provides a solution to a dependency timeout error when using a form processing model in Microsoft Power Automate.
+This article provides a solution to a dependency timeout error when using a document processing model in Microsoft Power Automate.
 
 _Applies to:_ &nbsp; Power Automate
 
@@ -19,12 +21,13 @@ You get the dependency timeout error "408 - Dependency Timeout".
 
 ## Cause
 
-When executing a form processing model in Power Automate, the file you're trying to process might have a high number of pages, or the file size is too large.
+When executing a document processing model in Power Automate, the file you're trying to process might have a high number of pages, or the file size is too large.
 
 ## Resolution
 
 Here are some actions that can be done to improve this.
 
+- The timeout limit of document processing, invoice, receipt, and identity actions has increased from 90 seconds to 60 minutes in April 2022. The flows that contain these actions created or saved after April 2022 have the extended timeout limit of 60 minutes. If the flow was created before that date, edit and re-save the flow to extend the timeout limit.
 - If the file has multiple pages, reduce the document to just the pages you need to process. You can use the **Page range** input in Power Automate to only process the pages you need.
 
     For more information, go to [page range](/ai-builder/form-processing-model-in-flow#page-range) in Power Automate.

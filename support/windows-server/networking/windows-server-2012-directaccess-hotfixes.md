@@ -1,7 +1,7 @@
 ---
 title: Recommended hotfixes and updates for Windows Server 2012
 description: Lists the recommended hotfixes and updates for Windows Server 2012 DirectAccess and Windows Server 2012 R2 DirectAccess.
-ms.date: 09/08/2020
+ms.date: 11/18/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -112,7 +112,7 @@ The updates are listed by the operating systems that they apply to. Some of the 
 
 [DirectAccess clients may not be able to connect with error 0x80092013](https://support.microsoft.com/help/2980672)
 
-[Prerequisites for Deploying DirectAccess](https://technet.microsoft.com/library/dn464273.aspx)
+[Prerequisites for Deploying DirectAccess](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn464273(v=ws.11))
 
 [DirectAccess unsupported configurations](https://technet.microsoft.com/library/dn464274.aspx)
 

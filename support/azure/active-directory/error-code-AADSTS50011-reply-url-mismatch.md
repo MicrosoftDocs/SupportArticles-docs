@@ -1,18 +1,20 @@
 ---
-title: Error AADSTS50011 - The reply URL <reply URL sent> specified in the request does not match the reply URLs configured for the application <GUID>....
-description: Describes a problem in which you receive an error message when signing in to SAML-based single sign-on configured app that has been configured to use Azure Active Directory as an Identity Provider (IdP). The error you receive is Error AADSTS50011 - The reply URL <reply URL sent> specified in the request does not match the reply URLs configured for the application <GUID>. Make sure the reply URL sent in the request matches one added to your application in the Azure portal. Navigate to https://aka.ms/urlMismatchError to learn more about how to fix this.
-ms.date: 03/15/2021
+title: Error AADSTS50011 - The reply URL specified in the request does not match the reply URLs configured for the application <GUID>.
+description: Describes a problem in which you receive reply URL does not match error when signing in to SAML-based Single Sign-On configured app.
+ms.date: 06/15/2022
 ms.reviewer: bernawy
 ms.service: active-directory
 ms.subservice: app-mgmt
 ---
-# Error AADSTS50011 - The reply URL 'reply URL sent' specified in the request does not match the reply URLs configured for the application 'appId'
+# Error AADSTS50011 - The reply URL specified in the request does not match
 
-This article describes a problem in which you receive the error message "Error AADSTS50011 - The reply URL \<reply URL sent\> specified in the request does not match the reply URLs configured for the application \<GUID\>. Make sure the reply URL sent in the request matches one added to your application in the Azure portal. Navigate to https://aka.ms/urlMismatchError to learn more about how to fix this." when trying to sign into a SAML-based single sign-on (SSO) configured app that has been integrated with Azure Active Directory (Azure AD).
+This article provides a resolution to the AADSTS50011 error that occurs during federated authentication with Azure Active Directory (Azure AD).
 
 ## Symptoms
 
-You receive error `AADSTS50011` when trying to sign into an application that has been setup to use Azure AD for identity management using SAML-based SSO.
+You receive error `AADSTS50011` when trying to sign into an application that has been set up to use Azure AD for identity management using SAML-based SSO.
+
+>Error AADSTS50011 - The reply URL does not match the reply URLs configured for the application \<GUID\>. Make sure the reply URL sent in the request matches one added to your application in the Azure portal. Navigate to https://aka.ms/urlMismatchError to learn more about how to fix this." when trying to sign into a SAML-based Single Sign-On (SSO) configured app that has been integrated with Azure Active Directory (Azure AD).
 
 ## Cause
 
@@ -32,7 +34,7 @@ As an example, refer to the following article for detailed steps about how to co
 >[!Note]
 >The reply URL is also known as Redirect URI. These values depend on what application is being used. You should get the values from the application vendor.
 
-After you've updated the Reply URL value in Azure AD, and it matches the value sent by the application in the SAML request, you should be able to sign in to the application.
+After you update the Reply URL value in Azure AD and it matches the value that sent by the application in the SAML request, you should be able to sign in to the application.
 
 ## More Information
 

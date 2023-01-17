@@ -1,8 +1,9 @@
 ---
-title: Troubleshoot SSH connection issues to an Azure VM | Microsoft Docs
+title: Troubleshoot SSH connection issues to an Azure VM
 description: How to troubleshoot issues such as 'SSH connection failed' or 'SSH connection refused' for an Azure VM running Linux.
 keywords: ssh connection refused, ssh error, azure ssh, SSH connection failed
 services: virtual-machines
+ms.subservice: vm-cannot-connect
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
@@ -39,10 +40,11 @@ Continue reading for more detailed troubleshooting steps and explanations.
 
 ## Available methods to troubleshoot SSH connection issues
 
-You can reset credentials or SSH configuration using one of the following methods:
+You can reset credentials, SSH configuration, or troubleshoot the status of the SSH service by using one of the following methods:
 
 * [Azure portal](#use-the-azure-portal) - great if you need to quickly reset the SSH configuration or SSH key and you don't have the Azure tools installed.
 * [Azure VM Serial Console](./serial-console-linux.md) - the VM serial console will work regardless of the SSH configuration, and will provide you with an interactive console to your VM. In fact, "can't SSH" situations are specifically what the serial console was designed to help solve. More details below.
+* [Use Run Command through Azure portal](#runcommand) - You can run basic commands by using the Run Command functionality through the Azure portal. The output will be returned to the portal.
 * [Azure CLI](#use-the-azure-cli) - if you are already on the command line, quickly reset the SSH configuration or credentials. If you are working with a classic VM, you can use the [Azure classic CLI](#use-the-azure-classic-cli).
 * [Azure VMAccessForLinux extension](#use-the-vmaccess-extension) - create and reuse json definition files to reset the SSH configuration or user credentials.
 
@@ -78,29 +80,81 @@ Use Network Watcher's [Next hop](/azure/network-watcher/diagnose-vm-network-rout
 
 The [Azure VM Serial Console](./serial-console-linux.md) provides access to a text-based console for Linux virtual machines. You can use the console to troubleshoot your SSH connection in an interactive shell. Ensure you have met the [prerequisites](./serial-console-linux.md#prerequisites) for using Serial Console and try the commands below to further troubleshoot your SSH connectivity.
 
-### Check that SSH is running
+### Check that SSH service is running
 
-You can use the following command to verify whether SSH is running on your VM:
+To check the service status, use the following command, which is available in most current Linux distributions:
 
 ```console
-ps -aux | grep ssh
+sudo systemctl status sshd.service
 ```
 
-If there is any output, SSH is up and running.
+See the following output example. Check the service status from the `Active` line in the output. The output also shows the port and IP addresses being listened to.
+
+```console
+user@hostname:~$ sudo systemctl status sshd.service
+● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: enabled)
+     Active: active (running) since Thu 2022-06-23 17:44:36 UTC; 1 day 3h ago
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+   Main PID: 829 (sshd)
+      Tasks: 1 (limit: 9535)
+     Memory: 5.1M
+     CGroup: /system.slice/ssh.service
+             └─829 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+
+Jun 23 17:44:35 ubu2004 systemd[1]: Starting OpenBSD Secure Shell server...
+Jun 23 17:44:36 ubu2004 sshd[829]: Server listening on 0.0.0.0 port 22.
+Jun 23 17:44:36 ubu2004 sshd[829]: Server listening on :: port 22.
+Jun 23 17:44:36 ubu2004 systemd[1]: Started OpenBSD Secure Shell server.
+```
+
+If this command isn't available or returns unexpected results, use other available commands. You can use the `ss` command either as root or via the `sudo` command to verify whether the SSH service is running on your VM.
+
+The following example shows how to run the `ss` command through `sudo`:
+
+```console
+sudo ss --listen --tcp --process --numeric | grep sshd
+```
+
+> [!NOTE]
+> We recommend the `ss` command because the `netstat` command is deprecated and not always available in modern distributions.
+
+If there is any output, SSH is up and running. See the following output example:
+
+```console
+$ sudo ss -ltpn | grep sshd
+LISTEN    0         128                0.0.0.0:22               0.0.0.0:*        users:(("sshd",pid=829,fd=3))
+LISTEN    0         128                   [::]:22                  [::]:*        users:(("sshd",pid=829,fd=4))
+```
+
+`-ltpn` is the shortened form of the `--listen --tcp --process –numeric` arguments. The output shows that the SSHD process 829 is listening on both IPv4 and IPv6 addresses.
 
 ### Check which port SSH is running on
 
-You can use the following command to check which port SSH is running on:
+The command output above shows that the SSHD process is listening on port 22. When the SSHD process is configured to run on another port, the port will be displayed in the output. To check if the change was made in the standard configuration file, examine the default configuration file, */etc/ssh/sshd_config* by using one of the following commands:
 
 ```console
-sudo grep Port /etc/ssh/sshd_config
+grep -i port /etc/ssh/sshd_config
 ```
 
-Your output will look something like:
+or
+
+```console
+grep -i listen /etc/ssh/sshd_config
+```
+
+The output will look like the following:
 
 ```output
 Port 22
 ```
+
+Any line that begins with `#` in the output is a comment and can be safely ignored. If nothing is returned, or the lines are comments, the default configuration is used. The default configuration is to listen to all IP addresses on the system, on port 22.
+
+## <a id="runcommand">Use Run Command through Azure portal</a>
+
+If you are not able to run commands through the Serial Console, for example when only SSH keys are used for authentication, the Run Command feature can be used to issue commands and view the output. All commands that were previously run from the Serial Console can be run non-interactively in the Run Command section in the Azure portal. The output will be returned to the Azure portal. There is no need to use `sudo` to run commands in the Run Command context.
 
 ## Use the Azure CLI
 

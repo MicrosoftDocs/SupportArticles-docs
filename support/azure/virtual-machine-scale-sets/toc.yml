@@ -8,9 +8,12 @@
 
 - name: Troubleshoot compute health
   items:
+  - name: VMSS instances remain in "Unhealthy" state and aren't repaired
+    href: instances-not-repaired.md
   - name: Resource Health shows Degraded state in VMSS
     href: resource-health-degraded-state.md
-
+  - name: VM is unavailable for 15 minutes
+    href: ../virtual-machines/azure-vm-unavailable.md
 - name: Troubleshoot scaling errors
   items:
   - name: QuotaExceeded error when scaling virtual machine scale sets

@@ -1,7 +1,7 @@
 ---
 title: New sessions setup for LDAP services takes longer than expected if targeting host names
 description: Discusses a problem in which a new session setup for LDAP services takes longer than expected if it targets host names.
-ms.date: 09/21/2020
+ms.date: 06/21/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -91,7 +91,7 @@ This option is set differently depending on the programming interface that is us
 
 ### Wldap32
 
-If an Active Directory DNS server name is passed for theHostNameparameter, [ldap_set_option](https://msdn.microsoft.com/library/aa366993%28v=VS.85%29.aspx) should be called to set the LDAP_OPT_AREC_EXCLUSIVE flag before calling any LDAP function that creates the actual connection.
+If an Active Directory DNS server name is passed for theHostNameparameter, [ldap_set_option](/windows/win32/api/winldap/nf-winldap-ldap_set_option) should be called to set the LDAP_OPT_AREC_EXCLUSIVE flag before calling any LDAP function that creates the actual connection.
 
 Doing this forces an A-record lookup and bypasses any SRV record lookup when the computer resolves the host name. In some scenarios, it improves network performance. For example, in a branch office that uses a dial-up connection, using A-Record lookup can avoid forcing the dialup to query a remote DNS server for SRV records when it resolves names.
 

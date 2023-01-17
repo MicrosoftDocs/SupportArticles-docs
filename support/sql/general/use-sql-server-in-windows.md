@@ -1,9 +1,9 @@
 ---
 title: SQL Server in Windows operating system
 description: This article describes how to use SQL Server in Windows 8, Windows 8.1, Windows Server 2012, and Windows Server 2012 R2 environments.
-ms.date: 12/15/2021
+ms.date: 05/30/2022
 ms.custom: sap:Installation, Patching and Upgrade
-ms.reviewer: ramakoni
+ms.reviewer: ramakoni, randolphwest
 ms.prod: sql
 ---
 
@@ -26,7 +26,7 @@ How to use this article:
 
 1. Find out the minimum requirements for the SQL Server version you are trying to install for the corresponding OS.
 
-    |Windows Version/SQL Version --> |SQL Server 2019|SQL Server 2017|SQL Server 2016 |SQL Server 2014 |SQL Server 2012 |SQL Server 2008 R2 |SQL Server 2008|More Information/Limitations|
+    |Windows Version/SQL Version |SQL Server 2019|SQL Server 2017|SQL Server 2016 |SQL Server 2014 |SQL Server 2012 |SQL Server 2008 R2 |SQL Server 2008|More Information/Limitations|
     |---|---|---|---|---|---|---|---|---|
     |Windows Server 2022  |Yes  (RTM) |Yes  (RTM) | Not supported | Not supported | Not supported |Not supported |Not supported |[Additional information for Windows Server 2022 environments](#minimum-sql-server-version-requirements-for-windows-server-2022-and-windows-11)|
     |Windows 11 |Yes  (RTM) |Yes  (RTM) |Not supported |Not supported |Not supported |Not supported |Not supported |[Additional information for Windows 11 environments](#minimum-sql-server-version-requirements-for-windows-server-2022-and-windows-11)|
@@ -315,7 +315,7 @@ The following table summarizes how versions of SQL Server work with some new fea
 |Resilient File System (ReFS)||||ReFS is not supported in SQL 2012 and all other down-level versions. SQL Server 2014 supports ReFS.| |
 |Mitigation of RAM Hardware Errors|LazyWriter|Checksum page sniffer|SQL Server 2012||When SQL Server 2012 is installed on a Windows 2012 operating system with hardware that supports bad memory diagnostics, you will notice new error messages like 854, 855, and 856 instead of the 832 errors that LazyWriter usually generates.|
 |Number of instances per cluster|High availability|Failover Clustering|SQL Server 2012|25 per failover cluster when you use drive letters and up to 50 if you are using SMB file share storage| |
-|Cluster Share Volumes (CSV's)||||Beginning in SQL Server 2014, AlwaysOn Failover Cluster Instances supports Clustered Shared Volumes (CSV) in both Windows Server 2008 R2 and Windows Server 2012. For more information on CSV, see [Understanding Cluster Shared Volumes in a Failover Cluster](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759255(v=ws.11)). CSVs are not supported in versions prior to SQL Server 2014.| |
+|Cluster Share Volumes (CSV's)||||Beginning in SQL Server 2014, Always On Failover Cluster Instances supports Clustered Shared Volumes (CSV) in both Windows Server 2008 R2 and Windows Server 2012. For more information on CSV, see [Understanding Cluster Shared Volumes in a Failover Cluster](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759255(v=ws.11)). CSVs are not supported in versions prior to SQL Server 2014.| |
 
 ## SQL Server 2005 information
 

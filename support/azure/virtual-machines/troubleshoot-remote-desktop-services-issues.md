@@ -1,11 +1,12 @@
 ---
-title: Remote Desktop Services isn't starting on an Azure VM | Microsoft Docs
-description: Learn how to troubleshoot issues with Remote Desktop Services when you connect to a virtual machine | Microsoft Docs
+title: Remote Desktop Services isn't starting on an Azure VM
+description: Learn how to troubleshoot issues with Remote Desktop Services when you connect to a virtual machine.
 services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
