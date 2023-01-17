@@ -13,9 +13,9 @@ ms.reviewer: kaushika, SPAT, slight
 ms.custom: sap:administration, csstroubleshoot
 ms.technology: windows-server-rds
 ---
-# How to add a user to RDS RDP permissions by using WMI
+# How to add a user to RDP permissions by using WMI
 
-This article describes three methods to add users or groups to Remote Desktop Services (RDS) Remote Desktop Protocol (RDP) permissions.
+This article describes three methods to add users or groups to Remote Desktop Protocol (RDP) permissions.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 290720
@@ -26,7 +26,7 @@ Two of the three methods use Windows Management Instrumentation (WMI). One metho
 
 ## More information
 
-To add users or groups to RDS RDP permissions, use one of the following methods.
+To add users or groups to RDP permissions, use one of the following methods.
 
 ## Using the GUI
 
