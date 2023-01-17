@@ -202,7 +202,7 @@ To investigate and diagnose whether this is the cause, follow these steps:
 1. To determine if there is pressure on system schedulers, use SSMS and execute the following script against the secondary replica:
 
     ```sql
-    USE master 
+    USE MASTER 
     GO  
     WHILE 1=1 
     BEGIN 
@@ -251,7 +251,7 @@ High values reported for `WorkersWaitingForCpu` and `RequestWaitingForThreads` i
 
 **Resolution**
 
-If you're experiencing this issue, re balance the workload on the secondary replica or consider increasing the number of CPUs on all the replicas in the availability group.
+If you're experiencing this issue, re-balance the workload on the secondary replica or consider increasing the number of CPUs on all the replicas in the availability group.
 
 ## Troubleshoot other failed failover events
 
