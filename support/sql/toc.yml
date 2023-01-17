@@ -91,6 +91,8 @@
         href: database-engine/failover-clusters/cluster-resource-goes-failed-state.md
       - name: Cluster validation rule failure
         href: database-engine/failover-clusters/error-install-sql-server-windows-server-cluster.md
+      - name: Configure an Always On availability group to perform a failover
+        href: database-engine/failover-clusters/configure-always-on-availability-group-perform-failover.md
       - name: Create databases or change disk file locations
         href: database-engine/failover-clusters/create-databases-change-disk-file-locations.md
       - name: Installation of SQL Server on a CSV disk fails
