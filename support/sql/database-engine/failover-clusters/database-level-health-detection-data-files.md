@@ -34,7 +34,7 @@ If you want the WSFC to trigger a failover instead of a resource start when [err
 
 1. Check the box **If all the restart attempts fail, begin restarting again after the specified period (hh:mm)**, set the value to **00:10**, and select **OK**.
 
-1. Make sure both your nodes are **Possible Owners** and **Preferred Owners**.
+1. Make sure both your nodes are **Possible Owners** and **preferred owners**.
 
 ## Custom configuration option
 
@@ -60,4 +60,4 @@ If you want the WSFC to trigger a failover instead of a resource start when [err
 
    `sqlcmd -S <ReplicaName1> -U SQLADMIN -P`
 
-1. Removed the Disk. Once you get error 823, the Always On availability group fails over to the **VM2**.
+1. Removed the Disk. Once you get error 823, the Always On availability group fails over to the secondary replica.
