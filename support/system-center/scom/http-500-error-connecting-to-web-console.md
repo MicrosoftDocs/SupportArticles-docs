@@ -118,6 +118,8 @@ Listed below are the details to assist in the guide (replace with the name you h
  
 ### Register the SDK SPNs
 
+To registerthe SDK SPNs, run the below commands based on the scenario:
+
 **Scenario 1**: The SDK runs as a Local System
 
 `Setspn.exe -S MSOMSdkSvc/SCOMMS SCOMMS`
@@ -128,9 +130,11 @@ Listed below are the details to assist in the guide (replace with the name you h
 `Setspn.exe -S MSOMSdkSvc/SCOMMS SDKSvc`
 `Setspn.exe -S MSOMSdkSvc/SCOMMS.Lab.Local SDKSvc`
  
-To verify if the service was registered, enter `SetSpn.exe -L SDKSvc`
+To verify if the service was registered, enter the command `SetSpn.exe -L SDKSvc`
  
 ### Register the HTTP SPNs
+
+To register the HTTP SPNs, run the below commands based on the scenario:
 
 **Scenario 1**: The Web console application pool runs under the default identity (ApplicationPoolIdentity).
 
@@ -142,7 +146,7 @@ To verify if the service was registered, enter `SetSpn.exe -L SDKSvc`
 `Setspn.exe -S HTTP/mySCOM SCOMAppPool`
 `Setspn.exe -S HTTP/mySCOM.Lab.Local SCOMAppPool`
  
-To verify if the service was registered, enter `SetSpn.exe -L SCOMAppPool`
+To verify if the service was registered, enter the command `SetSpn.exe -L SCOMAppPool`
  
 ### Configure constraint delegations
 
@@ -152,14 +156,14 @@ To configure constraint delegations, follow these steps:
 2.	In the console tree, select **Computers**.
 3.	Open the properties based on the below scenarios:
     1. **Scenario 1**: The Operations Manager web application pool runs under default Identity (ApplicationPoolIdentity)
-        -	Right-click the computer where the web console is installed on (SCOMWeb), and select **Properties**.
+        -	Right-click the computer where the web console is installed on (SCOM Web) and select **Properties**.
     2. **Scenario 2**: The Operations Manager web application pool runs under custom Identity (Lab\SCOMAppPool)
-	      - Right-click the user which is configured on the Web Application Pool identity (Lab\SCOMAppPool), and select **Properties**.
+	      - Right-click the user which is configured on the Web Application Pool identity (Lab\SCOMAppPool) and select **Properties**.
 4.	In the details pane, select **Delegation**.
 5.	On the **Delegation** tab, select **Trust this computer for delegation to specified services only.** and choose **Use Kerberos only**.
 6.	Select **Add**.
 7.	In the **Add Services** dialog, select **Users and Computers**.
-8.	In the **Select Users or Computers** dialogue, specify the following based on the scenario:
+8.	In the **Select Users or Computers** dialogue, specify the following, based on the scenario:
     - **Scenario 1**: If the SDK is running as a Local System, select the computer account of the SCOM management server (SCOMMS) and select **OK**.
     - **Scenario 2**: If the SDK is running as Domain Account (SDKSvc), select the domain account that the SDK service is running under (SDKSvc) and select **OK**.
 9.	In the **Add Services** dialog, select the service type **MSOMSdkSvc** and select **OK**.
