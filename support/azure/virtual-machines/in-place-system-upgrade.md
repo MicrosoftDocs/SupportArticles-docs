@@ -37,15 +37,6 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 
 ### Windows versions not yet supported for in-place system upgrades (consider using a workaround)
 
-- Windows Server 2022
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2 Datacenter
-- Windows Server 2012 R2 Standard
-- Windows Server 2012 Datacenter
-- Windows Server 2012 Standard
-- Windows Server 2008 R2 Datacenter
-- Windows Server 2008 R2 Standard
 - Windows 8.1
 - Windows 7 Enterprise
 - Windows Server, version 1709
@@ -96,10 +87,6 @@ Create an Azure VM that runs a supported version of the operating system, and th
 Follow the steps in the following article to upload the VHD to Azure and to deploy the VM.
 
 [Upload a generalized VHD and use it to create new VMs in Azure](/azure/virtual-machines/windows/upload-generalized-managed)
-
-### Method 3: Request to join Azure VM Upgrade Preview
-
-If you're interested in upgrading an operating system version that's not yet supported, you may join a Private or Public Preview program, depending on capacity and availability. Email your request to [azurevmrequest@microsoft.com](mailto:azurevmrequest@microsoft.com).
 
 ## References
 
