@@ -1,6 +1,6 @@
 ---
 title: Configure an Always On availability group to perform a failover
-description: This article describes how to configure an Always On availability group to perform a failover when database data file is unavailable.
+description: This article describes how to configure an Always On availability group to perform a failover when the database data file is unavailable.
 ms.date: 01/16/2023
 ms.custom: sap:Failover Clusters
 ms.prod: sql
@@ -10,11 +10,11 @@ author: sevend2
 ms.reviewer: moraja
 ---
 
-# How to configure an Always On availability group to perform a failover when database data file is unavailable
+# How to configure an Always On availability group to perform a failover when the database data file is unavailable
 
 ## Summary
 
-In a SQL Server Always On availability group, database level health detection can perform a failover only if the error (disk failure or similar) occurs in the database transaction log.
+In a SQL Server Always On availability group, database-level health detection can perform a failover only if the error (disk failure or similar) occurs in the database transaction log.
 
 If the error happens on the data file, SQL Server only sends the failure notice to a [Windows Server Failover Cluster](/sql/sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server) (WSFC) and relies on it to make the right decision based on policy configuration.
 
@@ -22,13 +22,13 @@ To configure an Always On availability group to perform a failover, use one of t
 
 ## Configure Failover Cluster Manager
 
-If you want the WSFC to trigger a failover instead of resource start when [errors 823 and others](https://techcommunity.microsoft.com/t5/sql-server-blog/sql-server-availability-groups-8211-enhanced-database-level/ba-p/385965) occur, follow these steps:
+If you want the WSFC to trigger a failover instead of a resource start when [errors 823 and others](https://techcommunity.microsoft.com/t5/sql-server-blog/sql-server-availability-groups-8211-enhanced-database-level/ba-p/385965) occur, follow these steps:
 
 1. Open Failover Cluster Manager.
 
-1. Expand your cluster, and select **Roles**.
+1. Expand your cluster and select **Roles**.
 
-1. Right-click the first role, and select **Properties** > **Polices**.
+1. Right-click the first role and select **Properties** > **Polices**.
 
 1. Set the value of **Maximum restarts in the specified period** to **0**.
 
@@ -48,7 +48,7 @@ If you want the WSFC to trigger a failover instead of resource start when [error
    Go
    ```
 
-1. Expand **SQL Server Agent**, right-click **Alert** and select **New Alert...**.
+1. Expand **SQL Server Agent**, right-click **Alert**, and select **New Alert...**.
 
 1. Specify a value for **Name**, select **SQL Server event alert** for **Type**, specify the value of **Error number** to **823**, and then select **OK**.
 
@@ -60,4 +60,4 @@ If you want the WSFC to trigger a failover instead of resource start when [error
 
    `sqlcmd -S <ReplicaName1> -U SQLADMIN -P`
 
-1. Removed the Disk. once you get error 823, the Always On availability group fails over to the **VM2**.
+1. Removed the Disk. Once you get error 823, the Always On availability group fails over to the **VM2**.
