@@ -1,7 +1,7 @@
 ---
 title: SQL Server diagnostics detects unreported I/O problems
 description: This article helps you resolve the errors 605, 823, 3448, and 3456 using the SQL Server Diagnostics.
-ms.date: 11/16/2022
+ms.date: 01/16/2023
 ms.custom: sap:Administration and Management
 author: padmajayaraman
 ms.author: v-jayaramanp
@@ -24,23 +24,18 @@ If operating system, driver, or hardware problems cause lost write or stale read
 2003-07-24 16:43:04.57 spid63 Getpage: bstat=0x9, sstat=0x800, cache
 2003-07-24 16:43:04.57 spid63 pageno is/should be: objid is/should be:
 2003-07-24 16:43:04.57 spid63 (1:7040966)/(1:7040966) 2093354622/2039782424
-
 2003-07-24 16:43:04.57 spid63 ... IAM indicates that page is allocated to this object
-
 2003-07-24 16:52:37.67 spid63 Error: 605, Severity: 21, State: 1
 2003-07-24 16:52:37.67 spid63 Attempt to fetch logical page (1:7040966) in database 'pubs' belongs to object 'authors', not to object 'titles'..
-
 2003-07-24 16:52:40.99 spid63 Error: 3448, Severity: 21, State: 1
 2003-07-24 16:52:40.99 spid63 Could not undo log record (63361:16876:181), for transaction ID (0:159696956), on page (1:7040977), database 'pubs' (database ID 12). Page information: LSN = (63192:958360:10), type = 2. Log information: OpCode = 2, context 1..
-
 2003-07-09 14:31:35.92 spid66 Error: 823, Severity: 24, State: 2
 2003-07-09 14:31:35.92 spid66 I/O error (bad page ID) detected during read at offset 0x00000016774000 in file 'h:\sql\MSSQL\data\tempdb.mdf'..
-
 2010-02-06 15:57:24.14 spid17s Error: 3456, Severity: 21, State: 1.
 2010-02-06 15:57:24.14 spid17s Could not redo log record (58997:5252:28), for transaction ID (0:109000187), on page (1:480946), database 'MyDatabase' (database ID 17). Page: LSN = (58997:5234:17), type = 3. Log: OpCode = 2, context 5, PrevPageLSN: (58997:5243:17). Restore from a backup of the database, or repair the database.
 ```
 
-## More information
+## New I/O diagnostic capabilities in SQL Server
 
 SQL Server introduced new I/O diagnostic capabilities starting with SQL Server 2000 Service Pack 4 and these diagnostics have been part of the product since then. These capabilities are designed to help detect external I/O related problems and to troubleshoot the error messages described in the [Symptoms](#symptoms) section.
 
@@ -52,10 +47,9 @@ If you receive any of the error messages that are listed in the [Symptoms](#symp
 
 To illustrate, Microsoft has confirmed scenarios where a WriteFile API call returns a status of success, but an immediate, successful read of the same data block returns older data, including data that's likely stored in a hardware read cache. Sometimes, this problem occurs because of a read cache problem. In other cases, the write data is never written to the physical disk.
 
-### How to enable the diagnostics
+## How to enable the diagnostics
 
-In SQL Server 2017 and later versions, this diagnostic capability is enabled by default. In SQL Server 2016 and earlier versions these diagnostics can only be enabled by using trace flag 818. You can specify trace flag [818](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql?view=sql-server-ver16&preserve-view=true) as a startup parameter, -T818, for the SQL Server instance, or you can run the following T-SQL statement to enable them at runtime:
-
+In SQL Server 2017 and later versions, this diagnostic capability is enabled by default. In SQL Server 2016 and earlier versions these diagnostics can only be enabled by using trace flag 818. You can specify trace flag [818](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf818) as a startup parameter, -T818, for the SQL Server instance, or you can run the following T-SQL statement to enable them at runtime:
 
 ```sql
 DBCC TRACEON(818, -1)
@@ -63,15 +57,13 @@ DBCC TRACEON(818, -1)
 
 Trace flag 818 enables an in-memory ring buffer that's used for tracking the last 2,048 successful write operations that're performed by the computer running SQL Server, not including sort and workfile I/Os. When errors such as 605, 823, or 3448 occur, the incoming buffer's log sequence number (LSN) value is compared to the recent write list. If the LSN that's retrieved during the read operation is older than the one used in the write operation, a new error message is logged in the SQL Server error log. Most SQL Server write operations occur as checkpoints or as lazy writes (a lazy write is a background task that uses asynchronous I/O). The implementation of the ring buffer is lightweight and the performance effect on the system is negligible.
 
-### Details about the message in the error log
+## Details about the message in the error log
 
 The following message doesn't show any explicit errors from the WriteFile API or the ReadFile API calls that SQL Server. Instead, it shows a logical I/O error that resulted when the LSN was reviewed, and its expected value wasn't correct:
 
 Starting with SQL Server 2005, the error message displayed is:
 
-```output
-SQL Server detected a logical consistency-based I/O error: Stale Read. It occurred during a `<<Read/Write>>` of page `<<PAGEID>>` in database ID `<<DBID>>` at offset `<<PHYSICAL OFFSET>>` in file `<<FILE NAME>>`. Additional messages in the SQL Server error log or system event log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors. For more information, see SQL Server Books Online.
-```
+> SQL Server detected a logical consistency-based I/O error: Stale Read. It occurred during a `<Read/Write>` of page `<PAGEID>` in database ID `<DBID>` at offset `<PHYSICAL OFFSET>` in file `<FILE NAME>`. Additional messages in the SQL Server error log or system event log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors. For more information, see SQL Server Books Online.
 
 For more information on error 824, see [MSSQLSERVER_824](/sql/relational-databases/errors-events/mssqlserver-824-database-engine-error).
 
@@ -79,7 +71,7 @@ At the point or reporting this error, either the read cache contains an older ve
 
 If error 3448 occurs when you try to rollback a transaction that has error 605 or 823, the SQL Server instance automatically closes the database and tries to open and recover it. The first page that experiences error 605 or 823 is considered a bad page, and the page ID is kept by the computer running SQL Server. During recovery (before the redo phase) when the bad page ID is read, the primary details about the page header are logged in the SQL Server error log. This action is important because it helps to distinguish between Lost Write and Stale Read scenarios.
 
-### Behavior observed with stale reads and lost writes
+## Behavior observed with stale reads and lost writes
 
 You may see the following two common behaviors in stale read scenarios:
 
@@ -91,7 +83,7 @@ The behaviors mentioned in the preceding paragraph indicate a read caching probl
 
 Sometimes, the problem may not be specific to a hardware cache. It may be a problem with a filter driver. In such cases, review your software, including backup utilities and antivirus software, and then see if there are problems with the filter driver.
 
-### Description of various stale reads and lost writes scenarios
+## Description of various stale reads and lost writes scenarios
 
 Microsoft has also noted conditions that don't meet the criteria for error 605 or 823 but are caused by the same stale read or lost write activity. In some instances, a page appears to be updated twice but with the same LSN value. This behavior may occur if the Object ID and the Page ID are correct (page already allocated to the object), and a change is made to the page and flushed to the disk. The next page retrieval returns an older image, and then a second change is made. The SQL Server transaction log shows that the page was updated twice with the same LSN value. This action becomes a problem when you try to restore a transaction log sequence or with data consistency problems, such as foreign key failures or missing data entries. The following error message illustrates one example of this condition:
 
@@ -127,9 +119,7 @@ Microsoft has noted that the root cause for the following sort read failures is 
 
 ```output
 2003-04-01 20:13:31.38 spid122 SQL Server Assertion: File: <p:\sql\ntdbms\storeng\drs\include\record.inl>, line=1447 Failed Assertion = 'm_SizeRec > 0 && m_SizeRec <= MAXDATAROW'.
-
 2003-03-29 09:51:41.12 spid57 Sort read failure (bad page ID). pageid = (0x1:0x13e9), dbid = 2, file = e:\program files\Microsoft SQL Server\mssql\data\tempdb.mdf. Retrying.
-
 2003-03-29 09:51:41.13 spid57 Error: 823, Severity: 24, State: 7
 2003-03-29 09:51:41.13 spid57 I/O error (bad page ID) detected during read at offset 0x000000027d2000 in file 'e:\program files\Microsoft SQL Server\mssql\data\tempdb.mdf'..
 * 00931097 Module(sqlservr+00531097) (utassert_fail+000002E3)
