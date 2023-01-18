@@ -152,7 +152,7 @@ To check whether the availability databases were in the `SYNCHRONIZED` state, fo
    > A value of zero for any of the availability databases can prevent automatic failover. This value indicates that the availability database was not `SYNCHRONIZED`.
 
     ```sql
-    Select database_name, is_failover_ready from sys.dm_hadr_database_replica_cluster_states where replica_id in (select replica_id from sys.dm_hadr_availability_replica_states)
+    SELECT database_name, is_failover_ready FROM sys.dm_hadr_database_replica_cluster_states WHERE replica_id IN (SELECT replica_id FROM sys.dm_hadr_availability_replica_states)
     ```
 
    :::image type="content" source="media/troubleshooting-automatic-failover-problems/sql-query.png" alt-text="Screenshot of SQL query in Case 3.":::
@@ -248,13 +248,13 @@ High values reported for `WorkersWaitingForCpu` and `RequestWaitingForThreads` i
 
 **Resolution**
 
-If you experience this problem, rebalance the workload on the secondary replica or consider increasing the number of computers on all the replicas in the availability group.
+If you experience this problem, re-balance the workload on the secondary replica or consider increasing the number of computers on all the replicas in the availability group.
 
 ## Troubleshoot other failed failover events
 
 To monitor the health of the new primary replica during failover, you must locally connect AlwaysOn health monitoring to the SQL Server instance that's transitioning to the primary role.
 
-In addition to the more common reasons that are dicussed in this article, there are many reasons other reasons that this connection attempt might fail. To investigate a failed failover attempt further, review the Cluster log on the failover partner (the replica that you couldn't fail over to):
+In addition to the more common reasons that are discussed in this article, there are many reasons other reasons that this connection attempt might fail. To investigate a failed failover attempt further, review the Cluster log on the failover partner (the replica that you couldn't fail over to):
 
 1. Use Windows PowerShell to generate the Windows Cluster log on the cluster node. To do this, run the following cmdlet in an elevated PowerShell window on the instance of SQL Server that's hosting the secondary replica that didn't transition into the primary role. A Cluster log will be generated for the last 60 minutes of activity.
 
