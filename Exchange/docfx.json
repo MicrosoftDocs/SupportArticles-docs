@@ -94,6 +94,12 @@
       "searchScope": ["Exchange Support"] 
     },
     "fileMetadata": {
+      "feedback_system": {
+        "ExchangeOnline/**/*.md": "Standard"
+      },
+      "feedback_product_url": {
+        "ExchangeOnline/**/*.md": "https://admin.exchange.microsoft.com"
+      },
       "ms.prod": {
         "ExchangeServer/**/*.md": "exchange-server-it-pro"     
       },

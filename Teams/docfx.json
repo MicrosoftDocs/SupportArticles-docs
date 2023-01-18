@@ -37,7 +37,8 @@
     "globalMetadata": {
       "breadcrumb_path": "/microsoftteams/troubleshoot/breadcrumb/toc.json",
       "recommendations": true,
-      "feedback_system": "none",
+      "feedback_system": "Standard",
+      "feedback_product_url": "https://feedbackportal.microsoft.com/feedback/forum/ad198462-1c1c-ec11-b6e7-0022481f8472",
       "hideEdit": true,
       "uhfHeaderId": "MSDocsHeader-MicrosoftTeams.yml",
       "titleSuffix": "Microsoft Teams",
