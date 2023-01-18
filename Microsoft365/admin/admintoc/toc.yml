@@ -205,6 +205,8 @@
       href: ../installation/click-to-run-installation-error-12.md
     - name: Error 30050-1039 (0) when installing M365 Apps for enterprise
       href: ../installation/error-30050-1039-0.md
+    - name: Error when installing Microsoft 365 apps
+      href: ../installation/cannot-access-powershell-file-error.md
     - name: Error when uninstalling O365 Pro Plus
       href: ../installation/something-went-wrong-30016-4-error.md
     - name: Install Microsoft 365 apps
