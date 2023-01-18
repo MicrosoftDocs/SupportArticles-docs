@@ -1,0 +1,57 @@
+### YamlMime:Landing
+
+title: ASP.NET troubleshooting # < 60 chars
+summary: Welcome to ASP.NET troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use ASP.NET. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: ASP.NET troubleshooting
+  description: Landing page for ASP.NET troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
+  ms.prod: asp.net, aspnet-core  #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: HaiyingYu #Required; your GitHub user alias, with correct capitalization.
+  ms.author: haiyingyu #Required; microsoft alias of author; optional team alias.
+  ms.date: 01/18/2023
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: ASP.NET Development
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Use Visual C# to upload a file to a Web site
+            url: /aspnet/development/upload-file-to-web-site.md
+          - text: Implement forms-based authentication
+            url: /aspnet/development/forms-based-authentication.md
+          - text: Inline expressions
+            url: /aspnet/development/inline-expressions.md
+          - text: Implement impersonation
+            url: /aspnet/development/implement-impersonation.md
+          - text: ASP.NET server controls overview
+            url: /aspnet/development/server-controls.md
+
+  - title: ASP.NET Diagnostic and Performance
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot Out of Memory issues
+            url: /aspnet/health-diagnostic-performance/troubleshoot-outofmemoryexception.md
+          - text: Create the Web.config file
+            url: /aspnet/health-diagnostic-performance/create-web-config.md
+
+  - title: ASP.NET Authentication and Authorization
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot common permissions and security-related issues
+            url: /aspnet/www-authentication-authorization/troubleshoot-permissions-security-issues.md
+          - text: Control authorization permissions
+            url: /aspnet/www-authentication-authorization/authorization-permissions.md
+
+  - title: ASP.NET Core
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot ASP.NET Core applications on Linux
+            url: /aspnetcore/practice-troubleshoot-linux/introduction.md
