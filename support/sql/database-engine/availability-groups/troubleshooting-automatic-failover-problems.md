@@ -17,13 +17,13 @@ _Original KB number:_ &nbsp; 2833707
 
 ## Summary  
 
-SQL Server Always On availability groups can be configured for automatic failover. If a health issue is detected on the instance of SQL Server that's hosting the primary replica, the primary role can be transitioned to the automatic failover partner (secondary replica). However, the secondary replica can't always be transitioned to the primary role. In some cases, it can be transitioned only to the Resolving role. In this situation, no replica will have the primary role unless the primary replica returns to a healthy state. Additionally, the availability databases will be inaccessible.
+SQL Server Always On availability groups can be configured for automatic failover. If a health issue is detected on the instance of SQL Server that's hosting the primary replica, the primary role can be transitioned to the automatic failover partner (secondary replica). However, the secondary replica can't always be transitioned to the primary role. In some cases, it can be transitioned only to the `RESOLVING` role. In this situation, no replica will have the primary role unless the primary replica returns to a healthy state. Additionally, the availability databases will be inaccessible.
 
 This article lists some common causes of unsuccessful automatic failover and discusses the steps that you can take to diagnose the cause of these failures.
 
 ## Symptoms if an automatic failover is triggered successfully
 
-When an automatic failover is triggered on the instance of SQL Server that is hosting the primary replica, the secondary replica transitions to the Resolving role and then to the primary role. Although the process is successful, error entries are logged in the SQL Server log report that resemble the following text:
+When an automatic failover is triggered on the instance of SQL Server that is hosting the primary replica, the secondary replica transitions to the `RESOLVING` role and then to the primary role. Although the process is successful, error entries are logged in the SQL Server log report that resemble the following text:
 
 ```output
 The state of the local availability replica in availability group '\<Group name>' has changed from 'RESOLVING_NORMAL' to 'PRIMARY_PENDING'  
@@ -37,9 +37,9 @@ The state of the local availability replica in availability group '\<Group name>
 
 ## Symptoms if an automatic failover is unsuccessful
 
-If an automatic failover event isn't successful, the secondary replica doesn't successfully transition to the primary role. Therefore, the availability replica will report that this replica is in a **Resolving** state. Additionally, the availability databases report that they are in a **Not Synchronizing** state, and applications can't access these databases.
+If an automatic failover event isn't successful, the secondary replica doesn't successfully transition to the primary role. Therefore, the availability replica will report that this replica is in a `RESOLVING` state. Additionally, the availability databases report that they are in a **Not Synchronizing** state, and applications can't access these databases.
 
-For example, in the following image, SQL Server Management Studio reports that the secondary replica is in a **Resolving** state because the automatic failover process could not to transition the secondary replica into the primary role.
+For example, in the following image, SQL Server Management Studio reports that the secondary replica is in a `RESOLVING` state because the automatic failover process couldn't transition the secondary replica into the primary role.
 
 :::image type="content" source="media/troubleshooting-automatic-failover-problems/availability-replicas.png" alt-text="Screenshot of the availability replicas in SQL Server Management Studio.":::
 
@@ -83,7 +83,7 @@ To investigate and diagnose whether this is the cause of unsuccessful failover, 
    :::image type="content" source="media/troubleshooting-automatic-failover-problems/properties.png" alt-text="Screenshot of the Maximum Failures in the Specified Period property.":::
 
    > [!NOTE]  
-   > The default behavior specifies that if the clustered resource fails three times within six hours, it should remain in the failed state. For an availability group, this means that the replica is left in the **Resolving** state.
+   > The default behavior specifies that if the clustered resource fails three times within six hours, it should remain in the failed state. For an availability group, this means that the replica is left in the `RESOLVING` state.
 
 **Conclusion**
 
@@ -98,7 +98,7 @@ To resolve this problem, increase the **Maximum Failures in the Specified Period
 
 ## Case 2: Insufficient NT Authority\SYSTEM account permissions
 
-The SQL Server Database Engine resource DLL connects to the instance of SQL Server that is hosting the primary replica by using ODBC in order to monitor health. The logon credentials that are used for this connection are the local SQL Server NT AUTHORITY\SYSTEM login account. By default, this local login account is granted the following permissions:
+The SQL Server Database Engine resource DLL connects to the instance of SQL Server that is hosting the primary replica by using ODBC in order to monitor health. The logon credentials that are used for this connection are the local SQL Server `NT AUTHORITY\SYSTEM` login account. By default, this local login account is granted the following permissions:
 
 - **Alter Any Availability Group**  
 - **Connect SQL**  
@@ -116,7 +116,7 @@ If the `NT AUTHORITY\SYSTEM` login account lacks any of these permissions on the
 
 1. Open the *Cluster.log* file in Notepad to review the Windows cluster log.
 
-1. Find error entry that resemble the following text:
+1. Find error entry that resembles the following text:
 
    > Failed to run diagnostics command.
    The user does not have permission to perform this action.
@@ -125,7 +125,7 @@ If the `NT AUTHORITY\SYSTEM` login account lacks any of these permissions on the
 
 **Conclusion**
 
-The *Cluster.log* file reports that a permissions issue exists when SQL Server runs the diagnostics command. In this example, the failure was caused by removing the View server state permission from the `NT AUTHORITY\SYSTEM` login account on the instance of SQL Server that is hosting the secondary replica of an automatic failover pair.
+The *Cluster.log* file reports that a permissions issue exists when SQL Server runs the diagnostics command. In this example, the failure was caused by removing the View server state permission from the `NT AUTHORITY\SYSTEM` login account on the instance of SQL Server that's hosting the secondary replica of an automatic failover pair.
 
 **Resolution**
 
@@ -149,7 +149,7 @@ To check whether the availability databases were in the `SYNCHRONIZED` state, fo
 1. Run the following SQL script to check the `is_failover_ready` value for all availability databases in the availability group that didn't fail over.
 
    > [!NOTE]  
-   > A value of zero for any of the availability databases can prevent automatic failover. This value indicates that the availability database was not `SYNCHRONIZED`.
+   > A value of zero for any of the availability databases can prevent automatic failover. This value indicates that the availability database wasn't `SYNCHRONIZED`.
 
     ```sql
     SELECT database_name, is_failover_ready FROM sys.dm_hadr_database_replica_cluster_states WHERE replica_id IN (SELECT replica_id FROM sys.dm_hadr_availability_replica_states)
@@ -161,7 +161,7 @@ To check whether the availability databases were in the `SYNCHRONIZED` state, fo
 
 A successful automatic failover of the availability group requires that all availability databases be in the `SYNCHRONIZED` state. For more information about availability modes, see [Availability modes in Always On availability groups](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups).
 
-## Case 4: Unable to fail over, the "Force Protocol Encryption" configuration has been selected for the client protocols
+## Case 4: After a failover, the "Force Protocol Encryption" configuration is selected for the client protocols.
 
 To check for this configuration:  
 
@@ -266,7 +266,7 @@ In addition to the more common reasons that are discussed in this article, there
 
 1. Search for the "Connect to SQL Server" string that falls during the unsuccessful failover event.
 
-1. Review the subsequent login messages by using by the thread ID (see the following screenshot) to correlate the events that are related to the login event. The following example shows a search for "Connect to SQL Server." It also shows using the thread ID (left side) to locate the other diagnostics that describe why.
+1. Review the subsequent login messages by using the thread ID (see the following screenshot) to correlate the events that are related to the login event. The following example shows a search for "Connect to SQL Server." It also shows using the thread ID (left side) to locate the other diagnostics that describe why.
 
 :::image type="content" source="media/troubleshooting-automatic-failover-problems/cluster-log-example.png" alt-text="Screenshot of the Cluster log showing connect to SQL and the threadID." lightbox="media/troubleshooting-automatic-failover-problems/cluster-log-example.png":::
 
@@ -282,8 +282,7 @@ string [xFFFFFFFF]. (268435455)
 
 **Resolution**
 
-Start SQL Server Configuration Manager, and then verify that Shared Memory or TCPIP is enabled
-under **Client Protocols** for the SQL Native Client Configuration.
+Start SQL Server Configuration Manager, and then verify that Shared Memory or TCPIP is enabled under **Client Protocols** for the SQL Native Client Configuration.
 
 ### Example Set 2
 
@@ -294,8 +293,7 @@ Interfaces: Server doesn't support requested protocol [xFFFFFFFF]. (268435455)
 
 **Resolution**
 
-Start SQL Server Configuration Manager, and then verify that Shared Memory or TCP/IP is enabled
-under **Client Protocols** for the SQL Native Client Configuration.
+Start SQL Server Configuration Manager, and then verify that Shared Memory or TCP/IP is enabled under **Client Protocols** for the SQL Native Client Configuration.
 
 ### Example Set 3
 
