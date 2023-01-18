@@ -17,7 +17,7 @@ appliesto:
   - Office 2021
   - Office 2019
 search.appverid: MET150
-ms.date: 1/17/2023
+ms.date: 1/19/2023
 ---
 
 # "Windows cannot access the specified device, path, or file" error when installing Microsoft 365 apps
@@ -28,13 +28,15 @@ When you install Microsoft 365 apps from [Microsoft 365 portal](https://www.offi
 
 > Windows cannot access the specified device, path, or file. You may not have the appropriate permissions to access the item.
 
-:::image type="content" source="media/install-m365-apps-powershell-file-error/powershell-file-error.png" alt-text="Screenshot of the error message that indicates Windows cannot access the PowerShell.exe file.":::
+:::image type="content" source="media/cannot-access-powershell-file-error/powershell-file-error.png" alt-text="Screenshot of the error message that indicates Windows cannot access the PowerShell.exe file.":::
 
 This error will also occur in the following scenarios:
 
-- Add [second installs](/deployoffice/fieldnotes/build-dynamic-lean-universal-packages) for Microsoft 365 apps.
+- Add language packs or products like Visio or Project to your device where Microsoft 365 apps are already installed.
 - Online repair Microsoft 365 apps.
 - Uninstall Microsoft 365 apps.
+
+**Important:** If you set [**Display Level**](/deployoffice/office-deployment-tool-configuration-options#display-element) to **None** (Display Level = "None") when you use the Office Deployment Tool, the installation fails silently or gets stuck in the background.
 
 ## Cause
 
@@ -48,9 +50,6 @@ This error occurs for one or both of the following reasons:
 **Note:** You must have administrator permissions to perform the following actions.
 
 To work around this issue, enable *PowerShell.exe* only during the scenario where the error occurs. After the error is fixed, block or disable PowerShell.exe again on the device.
-
-> [!IMPORTANT]
-> If you set [**Display Level**](/deployoffice/office-deployment-tool-configuration-options#display-element) to **None** (Display Level = "None") when you use the Office Deployment Tool, the installation fails silently or gets stuck in the background.
 
 ## Status
 
