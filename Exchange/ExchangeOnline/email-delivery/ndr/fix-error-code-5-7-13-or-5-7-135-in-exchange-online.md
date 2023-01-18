@@ -145,4 +145,4 @@ To configure the public folder's allowed senders list, open the EAC do the follo
 
 ## See also
 
-[Email non-delivery reports in Exchange Online](non-delivery-reports-in-exchange-online.md)
+[Email non-delivery reports in Exchange Online](/exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/non-delivery-reports-in-exchange-online)

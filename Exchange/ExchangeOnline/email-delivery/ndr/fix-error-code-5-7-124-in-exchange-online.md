@@ -150,6 +150,6 @@ Groups with more than 5,000 members have the following restrictions automaticall
 
 ## See also
 
-[Email non-delivery reports in Exchange Online](non-delivery-reports-in-exchange-online.md)
+[Email non-delivery reports in Exchange Online](/exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/non-delivery-reports-in-exchange-online)
 
 [Create and manage distribution groups in Exchange Online](/exchange/recipients-in-exchange-online/manage-distribution-groups/manage-distribution-groups).

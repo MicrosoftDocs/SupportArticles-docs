@@ -285,8 +285,6 @@
           href: ../email-delivery/messages-with-attachments-are-not-delivered.md
         - name: Non-delivery report (NDR)
           items:
-            - name: NDR in Exchange Online
-              href: ../email-delivery/ndr/non-delivery-reports-in-exchange-online.md
             - name: 550 5.1.8 Access denied
               href: ../email-delivery/ndr/fix-error-code-5-1-8-in-exchange-online.md
             - name: 5.4.6 or 5.4.14
