@@ -54,7 +54,11 @@
     "fileMetadata": {
       "feedback_system": {
         "azure/*.md": "GitHub",
-        "azure/**/*.md": "GitHub"
+        "azure/**/*.md": "GitHub",
+        "mem/**/*.md": "Standard"
+      },
+      "feedback_github_repo": {
+        "mem/**/*.md": "https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472"
       },
       "layout": {
         "**/index.yml": "LandingPage"
