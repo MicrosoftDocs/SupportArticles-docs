@@ -1,7 +1,7 @@
 ---
 title: Steps for in-place system upgrades for supported Windows 10 Azure VMs and workarounds for unsupported versions
 description: Describes how to work around the unsupported in-place system upgrade on a Windows Azure VM.
-ms.date: 06/29/2021
+ms.date: 01/17/2023
 ms.reviewer: 
 ms.service: virtual-machines
 ms.subservice: vm-common-errors-issues
@@ -37,19 +37,16 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 
 ### Windows versions not yet supported for in-place system upgrades (consider using a workaround)
 
-- Windows Server 2022
-- Windows Server 2019
-- Windows Server 2016
+- Windows 8.1
+- Windows 7 Enterprise
+- Windows Server, version 1709
+- Windows Server, version 1803
 - Windows Server 2012 R2 Datacenter
 - Windows Server 2012 R2 Standard
 - Windows Server 2012 Datacenter
 - Windows Server 2012 Standard
 - Windows Server 2008 R2 Datacenter
 - Windows Server 2008 R2 Standard
-- Windows 8.1
-- Windows 7 Enterprise
-- Windows Server, version 1709
-- Windows Server, version 1803
 
 ## In-place system upgrade process for a Windows 10 VM
 
@@ -58,10 +55,10 @@ This process requires 45-60 minutes to complete and for the VM to restart. To do
 1. Verify that the Windows 10 VM doesn't use [Ephemeral OS Disk](/azure/virtual-machines/ephemeral-os-disks). This feature is currently not supported.
 2. Verify that the Windows 10 VM has at least 2 GB of RAM, and 12 GB of free disk space on the system disk.
 3. To prevent data loss, back up the Windows 10 VM by using [Azure Backup](/azure/backup/). Or use a third-party backup solution from [Azure Marketplace Backup & Recovery](https://azuremarketplace.microsoft.com/marketplace/apps?search=Backup%20%26%20Recovery&page=1).
-4. Check whether the backup was successful. To do so, turn off the original Windows 10 VM. Verify that a new VM can be successfully restored from the backup, and that all applications are running successfully.
+4. Check whether the backup was successful. To do this, turn off the original Windows 10 VM. Verify that a new VM can be successfully restored from the backup and that all applications are running successfully.
 
-   > [!NOTE]
-   > Either the original Windows 10 VM or the restored VM can be used as a source for in-place system upgrade. But both VMs can't be running at the same time, unless the system name of the VM and the IP addresses on one of the VMs was changed to prevent conflicts.
+   > [!NOTE]  
+   > Either the original Windows 10 VM or the restored VM can be used as a source for in-place system upgrade. But both VMs can't be running at the same time unless the system name of the VM and the IP addresses on one of the VMs was changed to prevent conflicts.
 
 5. Connect to the Windows 10 VM, and go to **Settings** > **Updates & Security** > **Windows Update**.
 6. In Windows Update, select **Check for updates**.
@@ -72,13 +69,13 @@ If you have general questions about this procedure, post to [Microsoft Q&A](/ans
 
 ## Workaround
 
-To work around this issue, create an Azure VM that's running a supported version. And then either migrate the workload (Method 1, preferred), or download and upgrade the VHD of the VM (Method 2).
+To work around this issue, create an Azure VM that's running a supported version. Then, either migrate the workload (Method 1, preferred) or download and upgrade the VHD of the VM (Method 2).
 
 To prevent data loss, back up the Windows 10 VM by using [Azure Backup](/azure/backup/). Or use a third-party backup solution from [Azure Marketplace Backup & Recovery](https://azuremarketplace.microsoft.com/marketplace/apps?search=Backup%20%26%20Recovery&page=1).
 
 ### Method 1: Deploy a newer system and migrate the workload
 
-Create an Azure VM that runs a supported version of the operating system, and then migrate the workload. To do so, you will use Windows Server migration tools. For instructions to migrate Windows Server roles and features, see the following article:
+Create an Azure VM that runs a supported version of the operating system, and then migrate the workload. To do this, use Windows Server migration tools. For instructions to migrate Windows Server roles and features, see the following article:
 
 [Install, use, and remove Windows Server migration tools](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134202(v=ws.11))
 
@@ -96,10 +93,6 @@ Create an Azure VM that runs a supported version of the operating system, and th
 Follow the steps in the following article to upload the VHD to Azure and to deploy the VM.
 
 [Upload a generalized VHD and use it to create new VMs in Azure](/azure/virtual-machines/windows/upload-generalized-managed)
-
-### Method 3: Request to join Azure VM Upgrade Preview
-
-If you're interested in upgrading an operating system version that's not yet supported, you may join a Private or Public Preview program, depending on capacity and availability. Email your request to [azurevmrequest@microsoft.com](mailto:azurevmrequest@microsoft.com).
 
 ## References
 
