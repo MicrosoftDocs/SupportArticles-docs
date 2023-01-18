@@ -295,6 +295,8 @@ If you have a custom domain (for example, contoso.com instead of contoso.onmicro
 
 ## See also
 
+[Email non-delivery reports in Exchange Online](/exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/non-delivery-reports-in-exchange-online)
+
 [Backscatter in EOP](/microsoft-365/security/office-365-security/backscatter-messages-and-eop)
 
 [Configure email forwarding for a mailbox](/exchange/recipients-in-exchange-online/manage-user-mailboxes/configure-email-forwarding)
