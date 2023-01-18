@@ -36,7 +36,7 @@ This error will also occur in the following scenarios:
 - Online repair Microsoft 365 apps.
 - Uninstall Microsoft 365 apps.
 
-**Important:** If you set [**Display Level**](/deployoffice/office-deployment-tool-configuration-options#display-element) to **None** (Display Level = "None") when you use the Office Deployment Tool, the installation fails silently or gets stuck in the background.
+**Important:** If you set [**Display Level**](/deployoffice/office-deployment-tool-configuration-options#display-element) to **None** (Display Level = "None") when you use the Office Deployment Tool, the installation fails without an error message or gets stuck in the background.
 
 ## Cause
 
