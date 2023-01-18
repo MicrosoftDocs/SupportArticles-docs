@@ -35,8 +35,7 @@ The system detected an address conflict for IP address 0.0.0.0. with the system 
 When you check the DHCP server audit logs (*%windir%\\System32\\dhcp\\DHCP*.log*), you find many BAD_ADDRESS entries. Here's an example (*%windir%\\System32\\dhcp\\DhcpSrvLog-Fri.log*):
 
 ```output
-11,11/22/19,09:30:39,Renew,10.2.29.108,<Computer Name>.contoso.com,<MAC Address>,,230319146,0,,,,0x4D53465420352E30,MSFT 5.0,,,0x010C766C616E2D323032382D6871,0  
-15,11/22/19,09:30:43,NACK,10.2.29.70,,6C0B84B61504,,0,6,,,,,,,,,0  
+11,11/22/19,09:30:39,Renew,10.2.29.108,<Computer Name>.contoso.com,<MAC Address>,,230319146,0,,,,0x4D53465420352E30,MSFT 5.0,,,0x010C766C616E2D323032382D6871,0   
 13,11/22/19,09:30:43,Conflict,10.2.29.108,BAD_ADDRESS,,,0,6,,,,,,,,,0  
 ```
 
