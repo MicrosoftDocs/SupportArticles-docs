@@ -42,7 +42,7 @@
   - name: Installation
     items:
     - name: Error when installing Microsoft 365 apps
-      href: ../installation/install-m365-apps-powershell-file-error.md
+      href: ../installation/cannot-access-powershell-file-error.md
   - name: Miscellaneous
     items:
     - name: Can't find or insert any clip art
