@@ -32,11 +32,15 @@ When you use the Hybrid Configuration wizard (HCW) to set up a [Microsoft Hybrid
 You also receive the following error entries in the HCW log:
 
 ```output
-10333 \[Client=UX, fn=SendAsync, Thread=\<ID\>\] Results=NotFound {"error":{"code":"Application_NotFound","message":"Application '\<application GUID\>' not found or OnPremisesPublishing is not enabled for your tenant."
+10333 \[Client=UX, fn=SendAsync, Thread=\<ID\>\] Results=NotFound {"error":
+{"code":"Application_NotFound", "message":"Application '\<application GUID\>' not found or
+OnPremisesPublishing is not enabled for your tenant."
 ```
 
 ```output
-10333 \[Client=UX, fn=SendAsync, Thread=\<ID\>\] Results=BadRequest {"error":{"code": "InternalUrl_Duplicate","message":"Internal url '\<application URL\>' is invalid since it is already in use."
+10333 \[Client=UX, fn=SendAsync, Thread=\<ID\>\] Results=BadRequest {"error":
+{"code": "InternalUrl_Duplicate", "message":"Internal url '\<application URL\>' is invalid
+since it is already in use."
 ```
 
 ## Cause
