@@ -1,5 +1,5 @@
 ---
-title: Install and maintain SaRA tool from a network share
+title: Install and maintain Microsoft Support and Recovery Assistant from a network share
 description: Learn how to install SaRA from a network share and update the SaRA files so that SaRA installations use the latest files.
 author: MaryQiu1987
 ms.author: v-maqiu
@@ -18,97 +18,94 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# How to install and maintain Microsoft Support and Recovery Assistant (SaRA) from a network share or Internet location
+# Install and maintain Microsoft Support and Recovery Assistant from a network share or internet location
 
-If you manage Windows devices for your company and you want to install the Microsoft Support and Recovery Assistant (also referred to as Assistant) on multiple machines, you have a couple of installation options:
+You can install Microsoft Support and Recovery Assistant on your company's Windows-based devices from the following locations:
 
- - Shared location on a network
- - Internet location
+- Shared location on a network
+- Internet source for installation files 
 
 > [!NOTE]
-> If you're an enterprise customer, you can also run [the Enterprise version of Microsoft Support and Recovery Assistant](/microsoft-365/troubleshoot/administration/sara-command-line-version).
+> If you're an enterprise customer, you can run [the Enterprise version of Microsoft Support and Recovery Assistant](/microsoft-365/troubleshoot/administration/sara-command-line-version).
 
-## Installing the Assistant from a network location
+## Install the Assistant from a network location
 
-1. Download the Assistant:  
+1. Download the installation files for the Assistant:  
 
-   [SaRA network installation files](https://aka.ms/SaRANetworkInstallFiles)
+   [Assistant network installation files](https://aka.ms/SaRANetworkInstallFiles)
 
-2. In the downloaded file, extract the files from the **ClickOnce** folder to a shared network folder.
+2. In the downloaded files, extract the files from the **ClickOnce** folder to a shared network folder.
 3. Install the Assistant. 
 
-   Use SaraSetup.exe to either install it at a command prompt or manually.
+   Run SaraSetup.exe either at a command prompt or manually.
 
-### Command prompt installation of the Assistant
+### Install the Assistant at a command prompt
 
-1. Select **Start**, type **cmd**, and then press Enter to open a Command Prompt window.
-2. Type the path to SaraSetup.exe, and then press **Enter**.
+1. Select **Start**, type *cmd*, and then press Enter to open a Command Prompt window.
+2. Type the path to *SaraSetup.exe*, and then press **Enter**.
     > [!NOTE]
     >
-    > - You can use the quiet switch (**/q** or **/quiet**) to run Setup without any user interaction or user interface.
-    > If the **/q** (or **/quiet**) switch is used, SaraSetup.exe runs in the background.
-    > - To run the installation and see output from the setup process in the Command Prompt window, use **/d** or **/debug** instead of **/q** (or **/quiet**) at the command prompt.
-    > - Use the **/?**, **/h**, or **/help** switches to display a window that shows all available command-line switches for SaraSetup.exe.
-    > - If the Assistant is installed by using the /q, /quiet, /d, or /debug switches, the End User License Agreement (EULA) is displayed when the Support and Recovery Assistant is started for the first time.
+    > - To run Setup without any user interaction or user interface, use the **/q** or **/quiet**switch. If either of these switches are used, SaraSetup.exe runs in the background.
+    > - To run the installation and see output from the Setup process in the Command Prompt window, use the **/d** or **/debug** switch instead of the **/q** or **/quiet** switch at the command prompt.
+    > - Use the **/?**, **/h**, or **/help** switch to display a window that shows all available command-line switches for SaraSetup.exe.
+    > - If the Assistant is installed by using the /q, /quiet, /d, or /debug switch, the End User License Agreement (EULA) is displayed when the Assistant starts for the first time.
 
-### Manual installation of the Assistant
+### Install the Assistant manually
 
-To manually install the Assistant, follow these steps:
-
-1. On the computer on which you want to install the Assistant, browse to the shared folder.
+1. On the computer on which you want to install the Assistant, browse to the shared network folder.
 1. Double-click **SaraSetup.exe**.
 1. Select **Install**.
 1. Wait for the download and installation process to finish.
-1. After the installation is complete, and the End User License agreement has been accepted, the first Assistant screen is displayed.
+1. After the installation is complete, and you accept the End User License agreement, the first screen of the Assistant appears.
 
-### Maintaining the network installation folder and updating the Assistant
+### Update the installation files on the network share
 
-The files for the Assistant are republished regularly. You should update the files on the network share so that installations of the Assistant use the latest files. 
+The network installation files for the Assistant are republished regularly. You should update the files on your network share so that all installations of the Assistant use the latest files. 
 
-To keep the Assistant files up-to-date, follow these steps:
+To keep the Assistant files up to date, follow these steps:
 
-1. Download the Assistant by using the link that is provided in the "Installing the Assistant from a network location" section.
+1. Download the Assistant from [network installation files](https://aka.ms/SaRANetworkInstallFiles).
 2. In the downloaded file, extract the program files from the **ClickOnce** folder.
 3. Replace the existing program files in your shared network folder with the new extracted files.
 
-Any computer that has the Assistant already installed can now be updated by using the following steps. New installations of the Assistant will also use the new version that is available on the network share.
+New installations of the Assistant use the latest version that is available on the network share. Existing installations of the Assistant can now be updated by using the following steps:
 
 1. Start the Assistant on a computer on which it's already installed.
 2. Select **OK**, and wait for the update to finish.
 
-The Assistant is now installed and ready to run troubleshooting scenarios.
+The Assistant is now updated and ready to run troubleshooting scenarios.
 
-## Scripted installation from the Internet
+## Script the Assistant installation from the internet source 
 
-The main drawback to the network installation version of the Assistant is that you have to manually keep the files for the Assistant updated on your network share. If this maintenance task is either a roadblock to deploying the Assistant or you simply want to instead deploy the Assistant a different way, you can use the following sample script to install the Assistant from its Internet source.
+A drawback of the network installation version of the Assistant is that you have to update the files for the Assistant on your network share manually. If this maintenance task is a roadblock to deploying the Assistant, you can use the following sample script to install the Assistant from its internet source.
 
-If you use this approach to install the Assistant, updating of the Assistant automatically occurs each time the Assistant is started (assuming there is a newer build available on the Internet).
+[Download the sample script to install the Assistant from the internet source](https://aka.ms/SaRAInternetInstall)
 
-[Download sample script to install the Assistant from the Internet](https://aka.ms/SaRAInternetInstall)
+If you use this approach, the Assistant will update automatically to the newest version available on the internet every time that it starts.
 
-This script installs the Assistant using the following default steps:
-1.	Download SaraSetup.exe from the Internet (https://aka.ms/SaRA-Internet-Setup) into the %Temp% folder.
-2.	Ensure the download is successful (script ends if there's a download failure)
-3.	Install the Assistant without user interaction (using the /quiet switch)
-4.	Log the installation process in %Temp%\SaraSetupLog _<timestamp>.txt
-5.	Ensure the installation is successful (script ends if the installation fails)
-6.	Delete SaraSetup.exe from the %Temp% folder
+This script installs the Assistant by using the following default steps:
 
-    There are several variables in the script that can be modified to control, for example, the download folder, the folder location for the log file, and the log filename.
+1.	Download SaraSetup.exe from the internet [https://aka.ms/SaRA-Internet-Setup](https://aka.ms/SaRA-Internet-Setup) into the %Temp% folder.
+2.	Make sure that the download is successful (the script ends if there's a download failure).
+3.	Install the Assistant without user interaction (using the **/q** or **/quiet** switch).
+4.	Log the installation process in *%Temp%\SaraSetupLog_\<timestamp\>.txt*.
+5.	Make sure that the installation is successful (the script ends if the installation fails).
+6.	Delete SaraSetup.exe from the %Temp% folder.
+
+There are several variables in the script that can be modified, including the download folder, the folder location for the log file, and the log filename.
   
-    > [!NOTE]
-    >
-    > Detailed instructions for the script are provided in the comments included with the script.
-    >
-    > Note, the End-User License Agreement (EULA) is shown on first launch of the Assistant.
+ > [!NOTE]
+ >
+ > - Detailed instructions for the script are provided in the comments that are included with the script.
+ > - The End-User License Agreement (EULA) is displayed when the Assistant starts the first time.
 
-## SaRA version history
+## Version history of the Assistant
 
-One or two times a month, a new build of SaRA is available through the download link that is provided at the beginning of this article. To keep SaRA updated to have the latest version, we recommend that you follow the steps in the "Maintaining the SaRA installation folder and updating SaRA" section every month.
+A new build of the Assistant is released once or twice a month. To get the latest version, we recommend that you follow the steps in the [Update the installation files on the network share](#update-the-installation-files-on-the-network-share) section every month.
 
-The following table provides the versions of SaRA that were made available on the specified date.
+The following table provides the versions that were made available on the specified dates.
 
-|Release date|SaRA version|
+|Release date|Version of the Assistant|
 |--------|--------|
 |October 20, 2022|17.00.9167.015|
 |September 20, 2022|17.00.9001.010|
