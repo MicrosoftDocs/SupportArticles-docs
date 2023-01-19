@@ -26,21 +26,21 @@ ms.date: 3/31/2022
 
 When Microsoft 365 can't deliver email you sent, you'll receive an email notification called a [non-delivery report](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/non-delivery-reports-in-exchange-online). Find your error code for specific help with getting your email delivered:
 
-- [Code 4.4.7](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-550-4-4-7-in-exchange-online)
-- [Code 5.7.12](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-5-7-12-in-exchange-online)
-- [Code 5.1.8](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-5-1-8-in-exchange-online)
-- [Code 5.7.124](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-5-7-124-in-exchange-online)
-- [Code 5.1.10](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-550-5-1-0-in-exchange-online)
-- [Code 5.7.133](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-5-7-133-in-exchange-online)
-- [Codes 5.1.1 through 5.1.20](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-550-5-1-1-through-5-1-20-in-exchange-online)
-- [Code 5.7.134](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-5-7-134-in-exchange-online)
-- [Code 5.4.1](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-550-5-4-1-in-exchange-online)
-- [Codes 5.7.13 or 5.7.135](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-5-7-13-or-5-7-135-in-exchange-online)
-- [Codes 5.4.6 through 5.4.20](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-5-4-6-through-5-4-20-in-exchange-online)
-- [Code 5.7.136](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-5-7-136-in-exchange-online)
-- [Code 5.6.11](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-550-5-6-11-in-exchange-online)
-- [Codes 451 5.7.500-699 (ASxxx)](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-451-4-7-500-699-asxxx-in-exchange-online)
-- [Code 5.7.1](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-550-5-7-1-in-exchange-online)
+- [Code 4.4.7](fix-error-code-550-4-4-7-in-exchange-online.md)
+- [Code 5.7.12](fix-error-code-5-7-12-in-exchange-online.md)
+- [Code 5.1.8](fix-error-code-5-1-8-in-exchange-online.md)
+- [Code 5.7.124](fix-error-code-5-7-124-in-exchange-online.md)
+- [Code 5.1.10](fix-error-code-550-5-1-0-in-exchange-online.md)
+- [Code 5.7.133](fix-error-code-5-7-133-in-exchange-online.md)
+- [Codes 5.1.1 through 5.1.20](fix-error-code-550-5-1-1-through-5-1-20-in-exchange-online.md)
+- [Code 5.7.134](fix-error-code-5-7-134-in-exchange-online.md)
+- [Code 5.4.1](fix-error-code-550-5-4-1-in-exchange-online.md)
+- [Codes 5.7.13 or 5.7.135](fix-error-code-5-7-13-or-5-7-135-in-exchange-online.md)
+- [Codes 5.4.6 through 5.4.20](fix-error-code-5-4-6-through-5-4-20-in-exchange-online.md)
+- [Code 5.7.136](fix-error-code-5-7-136-in-exchange-online.md)
+- [Code 5.6.11](fix-error-code-550-5-6-11-in-exchange-online.md)
+- [Codes 451 5.7.500-699 (ASxxx)](fix-error-code-451-4-7-500-699-asxxx-in-exchange-online.md)
+- [Code 5.7.1](fix-error-code-550-5-7-1-in-exchange-online.md)
 
 ## Additional email help
 
