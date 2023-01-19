@@ -33,7 +33,7 @@ The state of the local availability replica in availability group '\<Group name>
 :::image type="content" source="media/troubleshooting-automatic-failover-problems/error-log-notepad.png" alt-text="Screenshot of the error log if an automatic failover is triggered successfully.":::
 
 > [!NOTE]  
-> The secondary replica transitions successfully from a **RESOLVING_NORMAL** state to a **PRIMARY_NORMAL** state.
+> The secondary replica transitions successfully from a `RESOLVING_NORMAL` state to a `PRIMARY_NORMAL` state.
 
 ## Symptoms if an automatic failover is unsuccessful
 
