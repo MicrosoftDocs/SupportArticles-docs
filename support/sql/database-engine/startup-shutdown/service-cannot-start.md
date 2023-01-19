@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 928779
 
 ## Symptoms
 
-Consider the following scenario. You configure an instance of SQL Server to use a SSL certificate. The SSL certificate uses the Enhanced Cryptographic Provider 1.0. In this scenario, the SQL Server service can't start. When you try to start the SQL Server service, the following error messages are written to the SQL Server Errorlog file:
+Consider the following scenario. You configure an instance of SQL Server to use an SSL certificate. The SSL certificate uses the Enhanced Cryptographic Provider 1.0. In this scenario, the SQL Server service can't start. When you try to start the SQL Server service, the following error messages are written to the SQL Server Errorlog file:
 
 ```output
 Error: 26014, Severity: 16, State: 1.
@@ -61,5 +61,5 @@ The following error message is mentioned in the [Symptoms](#symptoms) section:
 
 > Date Time Server TDSSNIClient initialization failed with error 0x80092004, status code 0x80.
 
-In this error message, **error state 0x80** indicates there is a problem in the SSL certificate. Additionally, **0x80092004** is a Security Support Provider Interface (SSPI) error code that translates to **CRYPT_E_NOT_FOUND**.
+In this error message, **error state 0x80** indicates there's a problem in the SSL certificate. Additionally, **0x80092004** is a Security Support Provider Interface (SSPI) error code that translates to **CRYPT_E_NOT_FOUND**.
 
