@@ -74,6 +74,10 @@ If the steps in this section don't fix the problem for you, contact your email a
 
    :::image type="content" source="media/fix-error-code-550-5-1-10-in-exchange-online/autocomplete.png" alt-text="Screenshot shows the Send Again option for an email message. In the Resend to field, the recipient's address has been provided by the AutoComplete feature." border="false":::
 
+   2. Use the Down Arrow key to select the recipient from the Auto-Complete drop-down list and then press the Delete key or choose the **Delete** icon to the right of the email address.
+
+4. In the **To** box, continue typing the entire recipient email address. Be sure to spell the address correctly.
+
 5. Click **Send**.
 
 #### Verify recipient's email address and resend your message in Outlook on the web (formerly known as Outlook Web App)
@@ -87,6 +91,9 @@ If the steps in this section don't fix the problem for you, contact your email a
 2. On the **To** line of the new copy of your message, choose the **Delete** icon :::image type="icon" source="media/fix-error-code-550-5-1-10-in-exchange-online/delete-icon.png"::: to delete the recipient's email address.
 
    :::image type="content" source="media/fix-error-code-550-5-1-10-in-exchange-online/delete-option.png" alt-text="Screenshot shows the To line of an email message with the option to delete the recipient's email address." border="false":::
+   If your original message had an attachment larger than 10 MB, the **Send Again** option might not be available or might not work. Instead, resend the message from your **Sent Items** folder.
+
+2. On the **To** line of the new copy of your message, choose the **Delete** icon to delete the recipient's email address.
 
 3. Remove the recipient's email address from the Auto-Complete list (a bad or outdated entry could be causing the problem):
 
@@ -95,6 +102,7 @@ If the steps in this section don't fix the problem for you, contact your email a
       :::image type="content" source="media/fix-error-code-550-5-1-10-in-exchange-online/to-line.png" alt-text="Screenshot shows the To line of an email message with the option to delete the recipient's email address from the Auto-Complete list." border="false":::
 
    2. Use the Down Arrow key to select the recipient from the Auto-Complete list, and then press the Delete key. Or, hover over the recipient's name and click the **Delete** icon :::image type="icon" source="media/fix-error-code-550-5-1-10-in-exchange-online/delete-icon.png":::.
+   2. Use the Down Arrow key to select the recipient from the Auto-Complete list, and then press the Delete key. Or, hover over the recipient's name and click the **Delete** icon.
 
 4. On the **To** line, continue typing the recipient's entire email address. Be sure to spell the address correctly.
 
@@ -123,6 +131,8 @@ If the problem persists after performing these steps, ask the recipient to refer
 4. From the **Options** navigation pane on the left, select **Mail** \> **Automatic processing** \> **Inbox and sweep rules**.
 
     :::image type="content" source="media/fix-error-code-550-5-1-10-in-exchange-online/inbox-rules.png" alt-text="Screenshot of the Inbox rules page." border="false":::
+
+4. From the **Options** navigation pane on the left, select **Mail** \> **Automatic processing** \> **Inbox and sweep rules**.
 
 5. Update, turn off, or delete any rules that might be forwarding the sender's message to a non-existent or broken email address.
 
@@ -156,6 +166,10 @@ To verify that the recipient exists and has an active license assigned:
 
    :::image type="content" source="media/fix-error-code-550-5-1-10-in-exchange-online/assign-license.png" alt-text="Screenshot of a product license that's available." border="false":::
 
+3. If the user's mailbox is hosted in Exchange Online, click the user's record to review their details and verify that they've been assigned a valid license for email (for example, an Office 365 Enterprise E5 license).
+
+4. If the user's mailbox is hosted in Exchange Online, but no license has been assigned, choose **Edit** and assign the user a license.
+
 ### Fix or remove broken forwarding rules or settings
 
 Microsoft 365 or Office 365 provides the following features for users and email admins to forward messages to another email address:
@@ -186,6 +200,8 @@ The recipient might have an Inbox rule that is forwarding messages to a problema
 
    :::image type="content" source="media/fix-error-code-550-5-1-10-in-exchange-online/email-forwarding-off.png" alt-text="Screenshot of the Email forwarding setting that's turned off." border="false":::
 
+4. Turn off **Email forwarding** and select **Save**.
+
 #### Forwarding using mail flow rules (email admin)
 
 Unlike Inbox rules that are associated with a user's mailbox, mail flow rules (also known as transport rules) are organization-wide settings and can only be created and edited by email admins.
@@ -204,6 +220,13 @@ Unlike Inbox rules that are associated with a user's mailbox, mail flow rules (a
     - An example of a redirect rule in Classic EAC is the following image.
 
          :::image type="content" source="media/fix-error-code-550-5-1-10-in-exchange-online/classic-eac-redirect-rule.png" alt-text="Screenshot of the Rules page in Classic Exchange admin center":::
+
+2. In the Exchange admin center (EAC), that is, New EAC or Classic EAC, go to **Mail flow** \> **Rules**.
+
+3. Look for any redirect rules that might be forwarding the sender's message to another address.
+    - An example of a redirect rule in New EAC is the following image.
+
+    - An example of a redirect rule in Classic EAC is the following image.
 
 4. Update, turn off, or delete any suspect forwarding rules.
 
@@ -277,6 +300,8 @@ If you have a custom domain (for example, contoso.com instead of contoso.onmicro
 2. In the pop-out **Required DNS settings** pane, select **Check DNS**.
 
    :::image type="content" source="media/fix-error-code-550-5-1-10-in-exchange-online/dns-settings.png" alt-text="Screenshot of the Required DNS settings page and the Check DNS button is highlighted." border="false":::
+
+2. In the pop-out **Required DNS settings** pane, select **Check DNS**.
 
 3. Verify that there's only one MX record configured for the recipient's domain. Microsoft doesn't support using more than one MX record for a domain that's enrolled in Exchange Online.
 

@@ -1,8 +1,8 @@
 ---
 title: Microsoft 365 groups don't synchronize in Outlook 
 description: Provides a fix for when Microsoft 365 groups don't synchronize in Outlook.
-author: Devon-Miller
-ms.author: v-devmiller
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

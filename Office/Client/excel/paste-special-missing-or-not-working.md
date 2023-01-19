@@ -10,6 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
   - CI 162524
+  - CI 171649
 search.appverid: 
   - MET150
 appliesto: 
@@ -49,4 +50,4 @@ Ensure that all instances of the web browsers that you use are closed and try to
 
     :::image type="content" source="media/paste-special-missing-or-not-working/paste-special-settings.png" alt-text="Check the Paste Special settings." border="false":::
 
-You can also get help from the [Microsoft Community](https://answers.microsoft.com/) online community, search for more information on [Microsoft Support](https://support.microsoft.com/search/) or [Windows Help and How To](https://office.microsoft.com/support/), or learn more about [Assisted Support](https://support.microsoft.com/contactus/) options.
+You can also get help from the [Microsoft Community](https://answers.microsoft.com/) online community, search for more information on [Microsoft Support](https://support.microsoft.com) or [Windows Help and How To](https://office.microsoft.com/support/), or learn more about [Assisted Support](https://support.microsoft.com/contactus/) options.
