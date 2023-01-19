@@ -1,14 +1,14 @@
 ---
-title: Troubleshoot issue with provisioning in Omnichannel for Customer Service
-description: Provides resolutions for known issues with service-level agreements in Dynamics 365 Customer Service.
+title: Troubleshoot issues with provisioning Omnichannel for Customer Service
+description: Provides resolutions for known issues that are related to provisioning Omnichannel for Customer Service..
 author: lalexms
 ms.author: laalexan
 ms.date: 01/17/2023
 ---
 
-# Troubleshoot provisioning issue with Omnichannel for Customer Service
+# Troubleshoot issues with provisioning Omnichannel for Customer Service
 
-This article helpsyou troubleshoot and resole provisioning issues with Omnichannel for Customer Service.
+This article helps you troubleshoot and resolve provisioning issues with Omnichannel for Customer Service.
 
 ## Issue 1 - Instance unavailable to select on the provisioning application <a name="provision"></a>
 
