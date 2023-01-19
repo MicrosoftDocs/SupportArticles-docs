@@ -14,7 +14,7 @@ This article helps you troubleshoot and resolve provisioning issues with Omnicha
 
 ### Symptom
 
-Cannot see all the instances from the organization selector.
+Cannot see all the instances from the Organization selector.
 
 ### Cause
 
