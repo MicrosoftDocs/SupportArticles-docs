@@ -6,7 +6,9 @@ ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- CSSTroubleshoot
+- CI 171649
 localization_priority: Normal
 search.appverid: 
   - MET150
@@ -43,4 +45,4 @@ If Word Starter 2010 or Excel Starter 2010 cannot be opened, uninstall and reins
     :::image type="content" source="media/cannot-be-opened-error-when-start/open-office-2010.png" alt-text="Screenshot to select the Open option in Microsoft Office 2010." border="false":::
  If the error continues to occur, you may have to do a full restore of the computer to reinstall Microsoft Office Starter 2010. We recommend you contact the computer manufacturer to talk about your options before you do this.
 
-Get help from the [Microsoft Community](https://answers.microsoft.com/) online community, search for more information on [Microsoft Support](https://support.microsoft.com/search/) or [Office Help and How To](https://office.microsoft.com/support/), or learn more about [Assisted Support](https://support.microsoft.com/contactus/) options.
+Get help from the [Microsoft Community](https://answers.microsoft.com/) online community, search for more information on [Microsoft Support](https://support.microsoft.com) or [Office Help and How To](https://office.microsoft.com/support/), or learn more about [Assisted Support](https://support.microsoft.com/contactus/) options.
