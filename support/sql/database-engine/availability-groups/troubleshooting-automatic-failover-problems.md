@@ -161,7 +161,7 @@ To check whether the availability databases were in the `SYNCHRONIZED` state, fo
 
 A successful automatic failover of the availability group requires that all availability databases be in the `SYNCHRONIZED` state. For more information about availability modes, see [Availability modes in Always On availability groups](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups).
 
-## Case 4: After a failover, the "Force Protocol Encryption" configuration is selected for the client protocols.
+## Case 4: "Force Protocol Encryption" configuration is selected for the client protocols on secondary replica (target primary) though the replica is not configured for encryption
 
 To check for this configuration:  
 
