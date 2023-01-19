@@ -163,7 +163,7 @@ A successful automatic failover of the availability group requires that all avai
 
 ## Case 4: "Force Protocol Encryption" configuration is selected for the client protocols on secondary replica (target primary) though the replica isn't configured for encryption
 
-After a health issue is detected on the primary server, during failover, cluster DLL on failover partner (secondary replica) tries to connect to local replica to initiate health monitoring as part of the transition to the primary role. If the secondary replica isn't configured for encryption, but the **Force Protocol Encryption** setting is inadvertently set in client configuration, the connection will fail, and the failover can't occur.
+During failover, when the primary server detects a health issue the cluster DLL on failover partner (secondary replica) tries to connect to local replica to initiate health monitoring. This is part of the transition to the primary role. If the secondary replica isn't configured for encryption, but the **Force Protocol Encryption** setting is inadvertently set in client configuration, the connection will fail, and the failover can't occur.
 
 To check for this configuration:  
 
