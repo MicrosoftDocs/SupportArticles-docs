@@ -17,12 +17,11 @@ ms.technology: windows-server-system-management-components
 
 This article describes simplified Event Tracing for Windows (ETW).
 
-_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2593157
 
 ## Summary
 
-ETW was first introduced in Windows 2000. It serves the purpose of providing component level logging. As mentioned in the article [Improve Debugging and Performance Tuning with ETW](https://msdn.microsoft.com/magazine/cc163437.aspx), ETW provides:
+Event Tracing for Windows (ETW) serves the purpose of providing component level logging. As mentioned in the article [About Event Tracing](/windows/win32/etw/about-event-tracing), ETW provides:
 
 *A tracing mechanism for events raised by both user-mode applications and kernel-mode device drivers. Additionally, ETW gives you the ability to enable and disable logging dynamically, making it easy to perform detailed tracing in production environments without requiring reboots or application restarts. This allows large-scale server applications to write events with minimum disturbance*.
 
