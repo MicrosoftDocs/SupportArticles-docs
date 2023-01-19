@@ -55,7 +55,6 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 
 | Issue  |  Description | Workaround |
 | --- | --- | --- |
-|No video for remote participants from Android Meeting Room devices| Remote participants can't get video from meeting participants who are using Teams Rooms on Android devices, such as MTRA Poly X50, X30, and Yealink A20. The issue is intermittent. | Install [Update 1449/1.0.96.2022051102 of the Teams Rooms app for Android](https://support.microsoft.com/office/what-s-new-in-microsoft-teams-devices-eabf4d81-acdd-4b23-afa1-9ee47bb7c5e2#ID0EBD=Teams_Rooms_on_Android). This update fixes most of the issues with video not displaying on these devices. |
 | Laser pointer and drawing tools in PowerPoint Live don't display for in-room participants | In-room meeting participants in a Teams meeting who're using Teams Rooms on Android devices aren't able to see the following features during a PowerPoint Live presentation: Laser pointer, pen, highlighter, and eraser. | No workaround is available at this time. |
 
 ### Issues with Teams phones

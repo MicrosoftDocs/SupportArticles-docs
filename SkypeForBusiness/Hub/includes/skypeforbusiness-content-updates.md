@@ -2,6 +2,16 @@
 
 
 
+## Week of January 09, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 1/11/2023 | Chat app in Outlook for Mac defaults to Teams instead of Skype for Business | removed |
+| 1/11/2023 | Create Outlook invitation link  isn't available in Skype Meeting Broadcast | removed |
+| 1/11/2023 | Sorry, you don't have permission to create meeting | removed |
+
+
 ## Week of January 02, 2023
 
 

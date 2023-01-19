@@ -31,9 +31,17 @@ When you use the Hybrid Configuration wizard (HCW) to set up a [Microsoft Hybrid
 
 You also receive the following error entries in the HCW log:
 
-> 10333 \[Client=UX, fn=SendAsync, Thread=\<ID\>\] Results=NotFound {"error":{"code":"Application_NotFound","message":"Application '\<application GUID\>' not found or OnPremisesPublishing is not enabled for your tenant."
+```output
+10333 \[Client=UX, fn=SendAsync, Thread=\<ID\>\] Results=NotFound {"error":
+{"code":"Application_NotFound", "message":"Application '\<application GUID\>' not found or
+OnPremisesPublishing is not enabled for your tenant."
+```
 
-> 10333 \[Client=UX, fn=SendAsync, Thread=\<ID\>\] Results=BadRequest {"error":{"code": "InternalUrl_Duplicate","message":"Internal url '\<application URL\>' is invalid since it is already in use."
+```output
+10333 \[Client=UX, fn=SendAsync, Thread=\<ID\>\] Results=BadRequest {"error":
+{"code": "InternalUrl_Duplicate", "message":"Internal url '\<application URL\>' is invalid
+since it is already in use."
+```
 
 ## Cause
 
@@ -65,11 +73,11 @@ Remove the previously installed, orphaned Hybrid Agent application. To do this, 
 
 1. Get the application GUID of the previous Hybrid Agent application. You can find this GUID by searching the HCW log for the following entry:
 
-   > 10386 \[Client=UX, Thread=\<ID\>\] Previous Connector Application Name found: \<application GUID\>
+   `10386 [Client=UX, Thread=<ID>] Previous Connector Application Name found: <application GUID>`
 
    The entry might resemble the following example:
 
-   > 10386 \[Client=UX, Thread=20\] Previous Connector Application Name found: 8fc44b37-bf0d-45bf-8254-d4d033d93a6e
+   `10386 [Client=UX, Thread=20] Previous Connector Application Name found: 8fc44b37-bf0d-45bf-8254-d4d033d93a6e`
 
 2. Remove the previous Hybrid Agent application. To do this, follow these steps:
 
