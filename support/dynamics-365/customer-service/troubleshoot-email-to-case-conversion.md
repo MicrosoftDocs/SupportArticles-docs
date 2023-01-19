@@ -80,7 +80,7 @@ This results in the following error in system jobs:
 
 To resolve this issue, keep the Customer field blank or set it to **{Sender(Email)}**. This allows the system to automatically create contact for the unknown sender and link it to the case.
 
-## Error 2
+### Error 2
 
 The Customer field is set as **{Senders Account(Email)}** and Contact field as **{Sender(Email)}**.
 
