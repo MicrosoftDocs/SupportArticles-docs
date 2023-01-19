@@ -1634,8 +1634,8 @@
       href: ./networking/cant-add-dhcp-reservation.md
     - name: DHCP client can't get a DHCP-assigned IP address
       href: ./networking/dhcp-client-fail-obtain-valid-ip-address.md
-    - name: DHCP server not respond to DHCP requests after option 66 Boot Server Host Name configured
-      href: ./networking/dhcp-server-not-respond-dhcp-requests-option-66-configured.md
+    - name: DHCP server is slow or fails to respond to DHCP requests after option 66 wrongly configured
+      href: ./networking/dhcp-server-slow-not-respond-dhcp-requests-option-66-wrongly-configured.md
     - name: DHCP Server sends a DHCPNAK to clients
       href: ./networking/dhcp-server-sends-dhcpnak-clients.md
     - name: Dynamic updates of DNS registrations are delayed
