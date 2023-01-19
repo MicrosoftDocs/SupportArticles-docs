@@ -8,12 +8,13 @@ ms.date: 01/19/2023
 
 # Troubleshoot signin issues in Customer Service
 
-This article
+This article helps you troubleshoot common errors you might encounter when signing in to Omnichannel for Customer Service or Customer Service workspace with Omnichannel enabled.
 
 ## Issue - Errors occur when I try to open Omnichannel for Customer Service or Customer Service workspace with Omnichannel enabled <a name="oc-csw-errors"></a> 
 
 ### Symptom
-As an agent, when you log in to the Omnichannel for Customer Service application or when you log in on Customer Service Workspace with Omnichannel enabled, you see any of the following error messages.
+
+As an agent, when you log in to the Omnichannel for Customer Service application or when you log in on Customer Service Workspace with Omnichannel enabled, you see any an error message.
 
 ### Cause 
 
