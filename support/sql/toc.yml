@@ -773,6 +773,10 @@
     items:
     - name: Cumulative Update 1 (KB5022375)
       href: releases/sqlserver-2022/cumulativeupdate1.md    
+    - name: 'Improvement: Add the permission check and update implementation in sys.sp_xtp_force_gc'
+      href: releases/sqlserver-2022/add-permission-check-change-procedure.md
+    - name: 'FIX: Error when CDC capture process inserts duplicate key in cdc.lsn_time_mapping'
+      href: releases/sqlserver-2022/error-cdc-capture-process-insert-duplicate-key.md
   - name: SQL Server 2019
     items:
     - name: SQL Server 2019 build versions
