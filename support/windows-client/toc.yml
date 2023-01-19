@@ -936,6 +936,8 @@
       href: ./shell-experience/cannot-set-timezone-automatically.md
     - name: Changes to calendar date in BIOS are not reflected in Windows
       href: ./shell-experience/changes-calendar-date-in-bios-not-reflected.md
+    - name: Daylight saving time help and support
+      href: ./system-management-components/daylight-saving-time-help-support.md
   - name: File Associations
     items:
     - name: Can't associate a program with an extension
@@ -1016,10 +1018,6 @@
     items:
     - name: Delete saved logs from Event Viewer
       href: ./system-management-components/delete-saved-log-from-event-viewer.md
-  - name: Help and Support
-    items:
-    - name: Daylight saving time help and support
-      href: ./system-management-components/daylight-saving-time-help-support.md
   - name: Microsoft Management Console (MMC)
     items:
     - name: Error when you launch VAMT 3.0

@@ -1,7 +1,7 @@
 ---
 title: Event Tracing for Windows is simplified
 description: Describes simplified Event Tracing for Windows (ETW).
-ms.date: 09/08/2020
+ms.date: 01/19/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:help-and-support, csstroubleshoot
+ms.custom: sap:event-viewer, csstroubleshoot
 ms.technology: windows-server-system-management-components
 ---
 # Event Tracing for Windows Simplified
