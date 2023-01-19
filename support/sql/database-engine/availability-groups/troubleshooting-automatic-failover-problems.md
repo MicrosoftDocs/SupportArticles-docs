@@ -139,7 +139,7 @@ For more information about the required conditions for an automatic failover, se
 
 To investigate and diagnose whether this is the cause of unsuccessful failover, review the SQL Server error log. You should find an error entry that resembles the following text:
 
-One or more databases aren't synchronized or haven't joined the availability group.
+> One or more databases aren't synchronized or haven't joined the availability group.
 
 :::image type="content" source="media/troubleshooting-automatic-failover-problems/error-log.png" alt-text="Screenshot of the SQL Server error log in Case 3." border="false":::
 
@@ -163,18 +163,20 @@ A successful automatic failover of the availability group requires that all avai
 
 ## Case 4: "Force Protocol Encryption" configuration is selected for the client protocols on secondary replica (target primary) though the replica is not configured for encryption
 
+After a health issue is detected on the primary server, during failover, cluster DLL on failover partner (secondary replica) tries to connect to local replica to initiate health monitoring as part of the transition to the primary role. If the secondary replica is not configured for encryption, but the **Force Protocol Encryption** setting is inadvertently set in client configuration, the connection will fail, and the failover can't occur.
+
 To check for this configuration:  
 
 1. Start SQL Server Configuration Manager.  
 1. In the **left** pane, right-click the **SQL Native Client 11.0 Configuration**, and then select **Properties**.  
-1. In the dialog box, check the **Force Encryption** setting. If it's set to **Yes**, change the value to **No**.
+1. In the dialog box, check the **Force Protocol Encryption** setting. If it's set to **Yes**, change the value to **No**.
 1. Retest the failover.
 
 :::image type="content" source="media/troubleshooting-automatic-failover-problems/sql-config.png" alt-text="Screenshot of the SQL Native Client 11.0 Configuration properties in SQL Server Configuration Manager." border="false":::
 
 **Conclusion**
 
-SQL Server Always On health monitoring uses a local ODBC connection to monitor SQL Server health. **Force Protocol Encryption** should be enabled in the "Client Configuration" section of SQL Server Configuration Manager only if SQL Server itself was configured to Force Encryptions in SQL Server Configuration Manager in the **SQL Server Network Configuration** section. For more information, see: [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine).
+SQL Server Always On health monitoring uses a local ODBC connection to monitor SQL Server health. **Force Protocol Encryption** should be enabled in the **Client Configuration** section of SQL Server Configuration Manager only if SQL Server itself was configured to Force Encryptions in SQL Server Configuration Manager in the **SQL Server Network Configuration** section. For more information, see: [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine).
 
 ## Case 5: Performance issues on secondary replica or node causes Always On health checks to fail
 
@@ -182,7 +184,7 @@ Before failing over from primary replica to the secondary replica, SQL Server Da
 
 To investigate and diagnose whether this is the cause, follow these steps:
 
-1. Review the Cluster log on the secondary replica to check for the error message, 'Unable to complete login process due to delay in opening server connection'.
+1. Review the Cluster log on the secondary replica to check for the error message, "Unable to complete login process due to delay in opening server connection".
 
     ```output
     0000110c.00002bcc::2020/08/06-01:17:54.943 INFO  [RCM] move of group AOCProd01AG from CO2ICMV3SQL09(1) to CO2ICMV3SQL10(2) of type MoveType::Manual is about to succeed, failoverCount=3, lastFailoverTime=2020/08/05-02:08:54.524 targeted=true 
@@ -266,7 +268,7 @@ In addition to the more common reasons that are discussed in this article, there
 
 1. Search for the "Connect to SQL Server" string that falls during the unsuccessful failover event.
 
-1. Review the subsequent login messages by using the thread ID (see the following screenshot) to correlate the events that are related to the login event. The following example shows a search for "Connect to SQL Server." It also shows using the thread ID (left side) to locate the other diagnostics that describe why.
+1. Review the subsequent login messages by using the thread ID (see the following screenshot) to correlate the events that are related to the login event. The following example shows a search for "Connect to SQL Server." It also shows using the thread ID (left side) to locate the other diagnostics that describe why the connection attempt failed.
 
 :::image type="content" source="media/troubleshooting-automatic-failover-problems/cluster-log-example.png" alt-text="Screenshot of the Cluster log showing connect to SQL and the threadID." lightbox="media/troubleshooting-automatic-failover-problems/cluster-log-example.png":::
 
@@ -282,7 +284,7 @@ string [xFFFFFFFF]. (268435455)
 
 **Resolution**
 
-Start SQL Server Configuration Manager, and then verify that Shared Memory or TCPIP is enabled under **Client Protocols** for the SQL Native Client Configuration.
+Start SQL Server Configuration Manager, and then verify that Shared Memory or TCP/IP is enabled under **Client Protocols** for the SQL Native Client Configuration.
 
 ### Example Set 2
 
