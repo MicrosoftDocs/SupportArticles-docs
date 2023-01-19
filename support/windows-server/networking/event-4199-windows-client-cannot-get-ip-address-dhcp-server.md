@@ -1,6 +1,6 @@
 ---
-title: Event ID 4199 and Windows client can't get IP address from DHCP server
-description: Help to resolve Event ID 4199 and the issue in which Windows client can't get IP address from DHCP server.
+title: Event ID 4199 and Windows client can't get an IP address from the DHCP server
+description: Helps resolve Event ID 4199 and the issue in which the Windows client can't get an IP address from the DHCP server.
 ms.date: 01/17/2023
 author: v-lianna
 ms.author: v-lianna
@@ -13,9 +13,9 @@ ms.reviewer: kaushika, rnitsch, markusr
 ms.custom: sap:dynamic-host-configuration-protocol-dhcp, csstroubleshoot
 ms.technology: networking
 ---
-# Event ID 4199 and Windows client can't get IP address from DHCP server
+# Event ID 4199 and Windows client can't get an IP address from the DHCP server
 
-Windows client can't get an IP address from the Dynamic Host Configuration Protocol (DHCP) server and Event ID 4199 is logged as follows:
+Windows client can't get an IP address from the Dynamic Host Configuration Protocol (DHCP) server, and Event ID 4199 is logged as follows:
 
 ```output
 Log Name: System  
@@ -41,12 +41,12 @@ When you check the DHCP server audit logs (*%windir%\\System32\\dhcp\\DHCP*.log*
 
 ## ARP probe is detected as a duplicate IP address
 
-The cause might relate to a Layer 3 switch or router security feature called "IP Device Tracking". If the switch or router sends out an address resolution protocol (ARP) probe for the client while the Windows client is in the duplicate address detection (DAD) phase, the client detects the probe as a duplicate IP address and declines the IP address offered by the DHCP server.
+The cause might be related to a Layer 3 switch or a router security feature called "IP Device Tracking." If the switch or router sends out an address resolution protocol (ARP) probe for the client while the Windows client is in the duplicate address detection (DAD) phase, the client detects the probe as a duplicate IP address and declines the IP address offered by the DHCP server.
 
 > [!NOTE]
-> Windows DHCP clients that obtain an IP address use a gratuitous ARP request to perform a client-based conflict detection before completing configuration and using the server offered IP address.  
+> Windows DHCP clients that obtain an IP address use a gratuitous ARP request to perform a client-based conflict detection before completing configuration and using the server-offered IP address.  
 
-## Deactivate IP Device Tracking feature or delay sending ARP probe requests
+## Deactivate the IP Device Tracking feature or delay sending ARP probe requests
 
 To resolve this issue, deactivate the IP Device Tracking feature on the Layer 3 switch or router, or delay sending ARP probe requests.  
 
@@ -57,7 +57,7 @@ Set-NetIPInterface -InterfaceAlias "Ethernet" -AddressFamily IPv4 -DadTransmits 
 ```
 
 > [!IMPORTANT]
-> This action should only be done in well-managed environments, as you run a risk of having duplicate IP addresses on the network without any notifications or warnings from Windows.
+> This action should only be done in well-managed environments, as you risk having duplicate IP addresses on the network without any notifications or warnings from Windows.
 
 Cisco also recognizes this issue and provides the solution in [Troubleshoot Duplicate IP Address 0.0.0.0 Error Messages](https://www.cisco.com/c/en/us/support/docs/ios-nx-os-software/8021x/116529-problemsolution-product-00.html).
 
