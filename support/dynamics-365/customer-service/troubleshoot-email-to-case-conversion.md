@@ -9,7 +9,7 @@ ms.date: 01/18/2022
 
 # Troubleshoot issues with converting an email to a case
 
-This article helps you troubleshoot and resolve common issues with converting an email to a case. You can use the Activity monitor that is available on the **Record creation and update rules** page, and configure the options to view skipped scenarios, failed scenarios, or all scenarios for a time period. More information: [Use activity monitor to review and track rules](automatically-create-update-records.md#use-activity-monitor-to-review-and-track-rules).
+This article helps you troubleshoot and resolve common issues with converting an email to a case. You can use the Activity monitor that's available on the **Record creation and update rules** page, and configure the options to view skipped scenarios, failed scenarios, or all scenarios for a time period. More information: [Use activity monitor to review and track rules](/dynamics365/customer-service/automatically-create-update-records).
 
 ## Issue 1 - Case creation fails when mail is sent from queue address to same queue address on which automatic record creation rule is configured
 
@@ -25,8 +25,8 @@ This is an expected behavior.
 
 Perform the following steps as a workaround:
 
-1. Migrate your rule from the web client to Unified Interface. More information: [Migrate automatic record creation rules and service-level agreements](migrate-automatic-record-creation-and-sla-agreements.md).
-2. Follow the information in [Configure advanced settings for rules](automatically-create-update-records.md#configure-advanced-settings-for-rules) to manage emails from unknown senders.
+1. Migrate your rule from the web client to Unified Interface. More information: [Migrate automatic record creation rules and service-level agreements](/dynamics365/customer-service/migrate-automatic-record-creation-and-sla-agreements).
+2. Follow the information in [Configure advanced settings for rules](/dynamics365/customer-service/automatically-create-update-records) to manage emails from unknown senders.
 
 ## Issue 2 - Incoming email is not converted to a case
 
@@ -47,7 +47,7 @@ Follow any of the below steps to diagnose and resolve the issue.
 1. Check whether the email is syncing with the system: Navigate to **Activities** and look for the Email activity. If email isn't syncing with the system, there may be an issue with the email router or server-side sync configuration.
 1. Check whether the email activity is created but a related QueueItem isn't found. If an active **Automatic Record Creation and Update Rule** exists for a specific queue, QueueItem is marked as inactive, and disappears from the QueueItem View.
 1. If the email is coming from an unknown sender, check for the **Create contact for unknown sender** option. Go to the **Automatic Record Creation and Update Rule** configuration and check whether the **Create contact for unknown sender** box is checked. If the **Create contact for unknown sender** check box isn't checked, incoming email from an unknown sender won't be converted to a case.
-1. Check whether **Automatic Record Creation and Update Rule** is configured properly by going to system jobs and checking for a failure message. For more information about configuration failure scenarios and resolution for sample configuration failure, see [Configuration failure scenarios and resolutions](#configuration-failure-scenarios-and-resolutions).
+1. Check whether **Automatic Record Creation and Update Rule** is configured properly by going to system jobs and checking for a failure message. For more information about configuration failure scenarios and resolution for sample configuration failure, see [Configuration failure scenarios and resolutions](#troubleshoot-error-messages).
 
    > [!NOTE]
    > The Customer field in the case entity can be a contact or an account. If a matching incoming email address isn't found for a contact or an account, and **Create contact for unknown sender** box is checked, the system creates contact for incoming email address and links it to the case's customer field.
