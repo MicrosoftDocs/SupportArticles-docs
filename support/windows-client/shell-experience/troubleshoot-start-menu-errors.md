@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Start menu errors
 description: Learn how to troubleshoot common Start menu errors in Windows 10. For example, learn to troubleshoot errors related to deployment, crashes, and performance.
-ms.date: 08/25/2022
+ms.date: 01/19/2023
 ms.prod: windows-client
 ms.author: lizlong
 author: lizgt2000
@@ -14,7 +14,7 @@ ms.reviewer: kaushika
 audience: itpro
 localization_priority: medium
 ---
-# Troubleshoot Start menu errors
+# Start menu troubleshooting guidance
 
 _Applies to:_ &nbsp; Windows 10
 
@@ -152,27 +152,26 @@ The following list provides information about common errors you might run into w
 
 ### Symptom: Start menu and other shell components broken by Third party app "ClickShare"
 
-- You may experience various issues related to the Windows Shell on devices runningOffice ClickToRun, along with some 3rd party applications that use Office APIs:
+You may experience various issues related to the Windows Shell on devices that are running Office ClickToRun, along with some third party applications that use Office APIs:
 
-- Event 1000 is logged in the Application event log reporting application crashes for StartMenuExperienceHost.exe, ShellExperienceHost.exe, SearchUI.exe, with an error code 0xc000027b / -1073741189
+- Event 1000 is logged in the Application event log. The event log reports that an application crashes for StartMenuExperienceHost.exe, ShellExperienceHost.exe, SearchUI.exe, with an error code 0xc000027b / -1073741189.
+- Errors in the Microsoft-Windows-AppModel-State event log mentioning the following error with various package names:
+  
+  > Triggered repair of state locations because operation SettingsInitialize against package Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy hit error -2147024891.
 
-- Errors in the Microsoft-Windows-AppModel-State event log mentioning the below error with various package names:
-
-  Triggered repair of state locations because operation SettingsInitialize against package Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy hit error -2147024891.
-
-- The Windows Start Menu does not respond to mouse clicks or the Windows key 
+- The Windows Start Menu does not respond to mouse clicks or the Windows key.
 - Windows Search does not respond to mouse clicks on pressing the Search button or Windows+S key.
- 
+
 #### Cause
 
-This may occur when a third party process like ClickShare uses Office APIs on a machine where Office is deployed using Office ClickToRun.
-Application Packages" permissions are being removed from the following Registry path:
+This may occur when a third party process such as ClickShare uses Office APIs on a computer where Office is deployed by using Office ClickToRun.
+Application packages' permissions are being removed from the following Registry path:
 
-  HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders
+`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders`
 
 #### Workaround
 
-Run the [scripts](https://cesdiagtools.blob.core.windows.net/windows/FixUserShellFolderPermissions.zip) to fix the issue when it happens, although the scripts cannot prevent the issue from re-occurring.
+Run the [scripts](https://cesdiagtools.blob.core.windows.net/windows/FixUserShellFolderPermissions.zip) to fix the issue when it happens, though the scripts cannot prevent the issue from re-occurring.
 
 If you are using Barco ClickShare, refer Barco's Knowledge Base, [Unresponsive Windows taskbar or user shell folder permissions issues with ClickShare App Calendar integration](https://www.barco.com/en/support/knowledge-base/6077-unresponsive-windows-taskbar-with-clickshare-app).
 
