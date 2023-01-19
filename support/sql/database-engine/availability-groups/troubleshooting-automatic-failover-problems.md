@@ -161,9 +161,9 @@ To check whether the availability databases were in the `SYNCHRONIZED` state, fo
 
 A successful automatic failover of the availability group requires that all availability databases be in the `SYNCHRONIZED` state. For more information about availability modes, see [Availability modes in Always On availability groups](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups).
 
-## Case 4: "Force Protocol Encryption" configuration is selected for the client protocols on secondary replica (target primary) though the replica is not configured for encryption
+## Case 4: "Force Protocol Encryption" configuration is selected for the client protocols on secondary replica (target primary) though the replica isn't configured for encryption
 
-After a health issue is detected on the primary server, during failover, cluster DLL on failover partner (secondary replica) tries to connect to local replica to initiate health monitoring as part of the transition to the primary role. If the secondary replica is not configured for encryption, but the **Force Protocol Encryption** setting is inadvertently set in client configuration, the connection will fail, and the failover can't occur.
+After a health issue is detected on the primary server, during failover, cluster DLL on failover partner (secondary replica) tries to connect to local replica to initiate health monitoring as part of the transition to the primary role. If the secondary replica isn't configured for encryption, but the **Force Protocol Encryption** setting is inadvertently set in client configuration, the connection will fail, and the failover can't occur.
 
 To check for this configuration:  
 
@@ -198,7 +198,7 @@ To investigate and diagnose whether this is the cause, follow these steps:
 
     This situation can occur if the failover is made to a SQL Server secondary replica that has a busy existing workload. This could delay SQL Server's response to the HADR health connection request attempt and prevent a successful failover attempt.
 
-1. To determine whether there is pressure on system schedulers, use SQL Server Management Studio to run the following script on the secondary replica:
+1. To determine whether there's pressure on system schedulers, use SQL Server Management Studio to run the following script on the secondary replica:
 
     ```sql
     USE MASTER 
@@ -250,7 +250,7 @@ High values reported for `WorkersWaitingForCpu` and `RequestWaitingForThreads` i
 
 **Resolution**
 
-If you experience this problem, re-balance the workload on the secondary replica or consider increasing the number of computers on all the replicas in the availability group.
+If you experience this problem, rebalance the workload on the secondary replica or consider increasing the number of computers on all the replicas in the availability group.
 
 ## Troubleshoot other failed failover events
 
