@@ -180,7 +180,7 @@ SQL Server Always On health monitoring uses a local ODBC connection to monitor S
 
 ## Case 5: Performance issues on secondary replica or node causes Always On health checks to fail
 
-Before failing over from primary replica to the secondary replica, SQL Server Database Engine resource DLL connects to the secondary replica to ascertain the health of the replica before failing over. If this connection fails because of performance issues on the secondary replica, automatic failover doesn't occur.
+Before failing over from primary replica to the secondary replica, SQL Server Database Engine resource DLL connects to the secondary replica to ascertain the health of the replica. If this connection fails because of performance issues on the secondary replica, automatic failover doesn't occur.
 
 To investigate and diagnose whether this is the cause, follow these steps:
 
@@ -270,7 +270,7 @@ In addition to the more common reasons that are discussed in this article, there
 
 1. Review the subsequent login messages by using the thread ID (see the following screenshot) to correlate the events that are related to the login event. The following example shows a search for "Connect to SQL Server." It also shows using the thread ID (left side) to locate the other diagnostics that describe why the connection attempt failed.
 
-:::image type="content" source="media/troubleshooting-automatic-failover-problems/cluster-log-example.png" alt-text="Screenshot of the Cluster log showing connect to SQL and the threadID." lightbox="media/troubleshooting-automatic-failover-problems/cluster-log-example.png":::
+    :::image type="content" source="media/troubleshooting-automatic-failover-problems/cluster-log-example.png" alt-text="Screenshot of the Cluster log showing connect to SQL and the threadID." lightbox="media/troubleshooting-automatic-failover-problems/cluster-log-example.png":::
 
 The following examples show connection failures to the new primary replica.
 
