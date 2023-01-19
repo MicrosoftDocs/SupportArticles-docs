@@ -13,6 +13,8 @@ This article helps you troubleshoot and resolve common issues with converting an
 
 ## Issue 1 - Case creation fails when mail is sent from queue address to same queue address on which automatic record creation rule is configured
 
+### Symptom
+
 When configuring an automatic record creation rule for a queue in the web client, in the rule, set the customer value as null (Channel properties). Then, if you try to send mail from sender as queue mail address to recipient as queue mail address, the case creation fails with the following error message: "Case is missing customer".
 
 ### Cause
@@ -30,9 +32,13 @@ Perform the following steps as a workaround:
 
 ## Issue 2 - Incoming email is not converted to a case
 
+### Symptom
+
+Email-to-case conversion isn't functioning.
+
 ### Cause
 
-Email to case conversion is not functioning because of any of the following reasons:
+Email-to-case conversion may not work for any of the following reasons:
 - Email sync with the system
 - QueueItem isn't found
 - Email is coming from an unknown sender
@@ -76,7 +82,7 @@ This results in the following error in system jobs:
 
 ![Error email case.](media/error-email-case.png "Error email case")
 
-#### Solution 1
+### Resolution 1
 
 To resolve this issue, keep the Customer field blank or set it to **{Sender(Email)}**. This allows the system to automatically create contact for the unknown sender and link it to the case.
 
@@ -90,7 +96,7 @@ This results in the following error in system jobs:
 
 ![Case email error.](media/case-email-error.png "Case email error")
 
-#### Solution 2
+### Resolution 2
 
 To resolve this issue, keep the Customer field blank or set it to **{Sender(Email)}**. This allows the system to automatically create contact for the unknown sender and link it to the case.
 
@@ -104,7 +110,7 @@ This results in the following error in system jobs:
 
 ![Error in system jobs.](media/error-system-jobs.png "Error in system jobs")
 
-#### Solution 3
+#### Resolution 3
 
 To resolve this issue, leave contact field blank and set Customer field either to blank or to **{Sender(Email)}**.
 
