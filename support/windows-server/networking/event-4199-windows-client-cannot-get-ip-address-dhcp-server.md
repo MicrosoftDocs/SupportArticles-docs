@@ -41,7 +41,7 @@ When you check the DHCP server audit logs (*%windir%\\System32\\dhcp\\DHCP*.log*
 
 ## ARP probe is detected as a duplicate IP address
 
-The cause might be related to a Layer 3 switch or a router security feature called "IP Device Tracking." If the switch or router sends out an address resolution protocol (ARP) probe for the client while the Windows client is in the duplicate address detection (DAD) phase, the client detects the probe as a duplicate IP address and declines the IP address offered by the DHCP server.
+The cause might be related to a Layer 3 switch or router security feature called "IP Device Tracking." If the switch or router sends out an address resolution protocol (ARP) probe for the client while the Windows client is in the duplicate address detection (DAD) phase, the client detects the probe as a duplicate IP address and declines the IP address offered by the DHCP server.
 
 > [!NOTE]
 > Windows DHCP clients that obtain an IP address use a gratuitous ARP request to perform a client-based conflict detection before completing configuration and using the server-offered IP address.  
