@@ -1640,7 +1640,7 @@
       href: ./networking/dhcp-dynamic-updates-of-dns-registrations-delayed.md
     - name: Event ID 1056 after installing DHCP
       href: ./networking/event-1056-install-dhcp-server-service.md
-    - name: Event ID 4199 and Windows client can't get IP address from DHCP server
+    - name: Event ID 4199 and Windows client can't get IP address
       href: ./networking/event-4199-windows-client-cannot-get-ip-address-dhcp-server.md
     - name: Fail to modify existing DHCP scope
       href: ./networking/modify-existing-dhcp-scope-results.md
