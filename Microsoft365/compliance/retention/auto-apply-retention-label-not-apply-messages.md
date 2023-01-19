@@ -14,13 +14,13 @@ ms.reviewer: cabailey, vipg, roygles, lindabr
 appliesto: 
   - Exchange Online via Office 365 E Plans 
 search.appverid: MET150
-ms.date: 1/12/2023
+ms.date: 1/19/2023
 ---
 # Auto-apply retention label doesn't apply to items in a mailbox
 
 ## Symptoms
 
-You have configured an [auto-apply retention label](/microsoft-365/compliance/apply-retention-labels-automatically) by using a query that contains specific words, phrases, or values of searchable properties. However, the label doesn't automatically apply to the items in a user's mailbox in your organization. .
+You have configured an [auto-apply retention label](/microsoft-365/compliance/apply-retention-labels-automatically) by using a query that contains specific words, phrases, or values of searchable properties. However, the label doesn't automatically apply to the items in a user's mailbox in your organization.
 
 ## Cause
 
