@@ -54,7 +54,7 @@ productDirectory:
   - title: Web Apps
     imageSrc: "media/hub-landing/app-service-web.svg"
     summary: Troubleshooting articles for Web Apps
-    url: developer/webapps/welcome-webapps.md
+    url: developer/webapps/welcome-webapps.yml
 
   - title: SQL Server 
     imageSrc: "media/hub-landing/sql-database-blue.svg"
