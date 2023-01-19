@@ -76,7 +76,7 @@ Errors received on configuring custom time calculation for SLA and during its us
 
 Custom time calculation isn't configured correctly.
 
-#### Resolution 
+### Resolution 
 
 Set up custom time calculation and troubleshoot issues. For information on setting up custom time calculation, go to: [Enable custom time calculation of SLA KPIs](/dynamics365/customer-service/enable-sla-custom-time-calculation#enable-custom-time-calculation-of-sla-kpis). For information on troubleshooting issues, go to: [Error codes for custom time calculation](/dynamics365/customer-service/enable-sla-custom-time-calculation#error-codes-for-custom-time-calculation)
 
