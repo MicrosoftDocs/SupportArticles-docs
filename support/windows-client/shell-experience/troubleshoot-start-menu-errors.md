@@ -180,7 +180,6 @@ If you are using Barco ClickShare, refer Barco's Knowledge Base, [Unresponsive W
 - In the case of ClickShare, disabling Calendar integration would prevent the issue from re-occurring. 
 - Prevent the applications from running at startup.
 
-
 ### Symptom: Start Menu doesn't respond on Windows 2012 R2, Windows 10, or Windows 2016
 
 #### Cause
