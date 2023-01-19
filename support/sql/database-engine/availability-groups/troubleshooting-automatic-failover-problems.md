@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting automatic failover problems
 description: This article provides troubleshooting steps for problems that occur during automatic failover in SQL Server.
-ms.date: 01/16/2023
+ms.date: 01/19/2023
 ms.custom: sap:Availability Groups
 author: padmajayaraman
 ms.author: v-jayaramanp
@@ -37,7 +37,7 @@ The state of the local availability replica in availability group '\<Group name>
 
 ## Symptoms if an automatic failover is unsuccessful
 
-If an automatic failover event isn't successful, the secondary replica doesn't successfully transition to the primary role. Therefore, the availability replica will report that this replica is in a `RESOLVING` state. Additionally, the availability databases report that they are in a **Not Synchronizing** state, and applications can't access these databases.
+If an automatic failover event isn't successful, the secondary replica doesn't successfully transition to the primary role. Therefore, the availability replica will report that this replica is in a `RESOLVING` state. Additionally, the availability databases report that they are in a `NOT SYNCHRONIZING` state, and applications can't access these databases.
 
 For example, in the following image, SQL Server Management Studio reports that the secondary replica is in a `RESOLVING` state because the automatic failover process couldn't transition the secondary replica into the primary role.
 
@@ -133,7 +133,7 @@ To resolve this issue, grant sufficient permissions to the `NT AUTHORITY\SYSTEM`
 
 ## Case 3: The availability databases aren't in a SYNCHRONIZED state
 
-To automatically fail over, all availability databases that are defined in the availability group must be in a `SYNCHRONIZED` state between the primary replica and the secondary replica. When an automatic failover occurs, this synchronization condition must be met in order to make sure that there's no data loss. Therefore, if one availability database in the availability group is in the synchronizing or not synchronized state, automatic failover won't successfully transition the secondary replica into the primary role.
+To automatically fail over, all availability databases that are defined in the availability group must be in a `SYNCHRONIZED` state between the primary replica and the secondary replica. When an automatic failover occurs, this synchronization condition must be met in order to make sure that there's no data loss. Therefore, if one availability database in the availability group is in the synchronizing or `NOT SYNCHRONIZED` state, automatic failover won't successfully transition the secondary replica into the primary role.
 
 For more information about the required conditions for an automatic failover, see the **Conditions required for an Automatic Failover** section and the **Synchronous-commit replicas support two settings** section of [Failover and Failover Modes (Always On Availability Groups)](/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups).
 
