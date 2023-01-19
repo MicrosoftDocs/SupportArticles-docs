@@ -95,7 +95,7 @@
       href: ../information-barriers/information-barriers-troubleshooting.md
   - name: Retention
     items:
-    - name: Auto-label doesn't apply to messages
+    - name: Auto-apply label doesn't apply to messages
       href: ../retention/auto-apply-retention-label-not-apply-messages.md
     - name: Can't manage disposition reviews
       href: ../retention/cannot-manage-disposition-reviews.md
