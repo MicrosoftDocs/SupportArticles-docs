@@ -17,7 +17,7 @@ ms.technology: networking
 
 This article helps to resolve the issue in which the Dynamic Host Configuration Protocol (DHCP) server answers delayed or doesn't respond to DHCP requests, even though the request volume won't cause DHCP performance issues.
 
-After a DHCP server has the DHCP server or scope option (**066 Boot Server Host Name**) configured to a server name that isn't resolvable, the DHCP clients can't get an IP address from the DHCP server.
+When a DHCP server has the DHCP server or scope option (**066 Boot Server Host Name**) configured to a server name that isn't resolvable, the DHCP clients can't get an IP address from the DHCP server in time.
 
 :::image type="content" source="media/dhcp-server-slow-not-respond-dhcp-requests-option-66-wrongly-configured/scope-option-66-boot-server-host-name.png" alt-text="Screenshot of the Scope Options 066 Boot Server Host Name with a server name as the String value.":::
 
