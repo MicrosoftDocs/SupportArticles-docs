@@ -1000,13 +1000,13 @@
     items:
     - name: Windows Search 4.0 and Multilingual User Interface Pack
       href: ./shell-experience/windows-search-4-multilingual-user-interface-pack.md
-  - name: KIOSK-MODE
+  - name: Kiosk mode
     items:
     - name: Kiosk mode issues troubleshooting
       href: ./shell-experience/kiosk-mode-issues-troubleshooting.md
-  - name: START-MENU
+  - name: Start menu
     items:
-    - name: Troubleshoot Start menu errors
+    - name: 'Troubleshooting guidance: Start menu'
       href: ./shell-experience/troubleshoot-start-menu-errors.md
 - name: System Management Components
   items:
