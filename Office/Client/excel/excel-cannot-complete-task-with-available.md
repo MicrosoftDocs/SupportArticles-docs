@@ -8,7 +8,9 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: jenl
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- CSSTroubleshoot
+- CI 171649
 search.appverid: 
   - MET150
 appliesto: 
@@ -152,7 +154,7 @@ If the error continues to occur, go to the "References" section of this article.
 If the information in this knowledge base article did not help resolve the error in Excel 2010, select one of the following options:
 
 - More Microsoft online articles:
-[Perform a search to find more online articles about this specific error.](https://support.microsoft.com/search)
+[Perform a search to find more online articles about this specific error.](https://support.microsoft.com)
 
 - Help from the Microsoft Community online:
 [Visit the Microsoft Community and post your question about this error.](https://answers.microsoft.com/)
