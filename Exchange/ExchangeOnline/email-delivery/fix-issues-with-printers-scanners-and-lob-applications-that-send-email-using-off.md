@@ -1,4 +1,5 @@
 ---
+title: Fix issues with printers, scanners, and LOB apps that send email using Microsoft 365
 ms.localizationpriority: medium
 description: Fix issues with printers, scanners, and line of business applications that use Microsoft 365 or Office 365 to send email.
 ms.topic: troubleshooting
@@ -6,7 +7,6 @@ author: simonxjx
 ms.author: v-six
 ms.assetid: c75542a8-c792-42c0-a8c5-291df987512d
 ms.reviewer:
-title: Fix issues with printers, scanners, and LOB applications that send email using Microsoft 365 or Office 365
 ms.collection:
 - exchange-online
 - M365-email-calendar
@@ -23,7 +23,7 @@ ms.custom:
 manager: dcscontentpm
 ---
 
-# Fix issues with printers, scanners, and LOB applications that send email using Microsoft 365 or Office 365
+# Fix issues with printers, scanners, and LOB apps that send email using Microsoft 365
 
 Email clients provide actionable error messages when something goes wrong. Sending email from devices and applications is less easy to fix, and you might not get clear information to help you. This article can help you troubleshoot, and it uses printer configurations as examples.
 
