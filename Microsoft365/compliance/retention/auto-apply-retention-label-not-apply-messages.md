@@ -1,6 +1,6 @@
 ---
 title: Auto-apply retention label doesn't apply to messages 
-description: Fixes an issue in which auto-apply retention label that you have configured doesn't apply to items in a mailbox.
+description: Fixes an issue in which an auto-apply retention label that you have configured doesn't apply to items in a mailbox.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -20,7 +20,7 @@ ms.date: 1/19/2023
 
 ## Symptoms
 
-You have configured an [auto-apply retention label](/microsoft-365/compliance/apply-retention-labels-automatically) by using a query that contains specific words, phrases, or values of searchable properties. However, the label doesn't automatically apply to the items in a user's mailbox in your organization.
+You configure an [auto-apply retention label](/microsoft-365/compliance/apply-retention-labels-automatically) by using a query that contains specific words, phrases, or values of searchable properties. However, the label doesn't automatically apply to the items in a user's mailbox in your organization.
 
 ## Cause
 
