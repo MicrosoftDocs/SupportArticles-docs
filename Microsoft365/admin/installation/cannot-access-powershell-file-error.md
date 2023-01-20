@@ -1,6 +1,6 @@
 ---
 title: Can't access PowerShell.exe when installing Microsoft 365 apps
-description: Provides a workaround for an issue in which you can't install Microsoft 365 apps because PowerShell is blocked.
+description: Provides a workaround for an issue that prevents you from installing Microsoft 365 apps because PowerShell is blocked.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -30,13 +30,13 @@ When you install Microsoft 365 apps from [Microsoft 365 portal](https://www.offi
 
 :::image type="content" source="media/cannot-access-powershell-file-error/powershell-file-error.png" alt-text="Screenshot of the error message that indicates Windows cannot access the PowerShell.exe file.":::
 
-This error will also occur in the following scenarios:
+This error also occurs in the following scenarios:
 
-- Add language packs or products like Visio or Project to your device where Microsoft 365 apps are already installed.
-- Online repair Microsoft 365 apps.
-- Uninstall Microsoft 365 apps.
+- Adding language packs or products such as Microsoft Visio or Microsoft Project to your device if Microsoft 365 apps are already installed
+- Making online repairs of Microsoft 365 apps
+- Uninstalling Microsoft 365 apps
 
-**Important:** If you set [**Display Level**](/deployoffice/office-deployment-tool-configuration-options#display-element) to **None** (Display Level = "None") when you use the Office Deployment Tool, the installation fails without an error message or gets stuck in the background.
+**Important:** If you set [**Display Level**](/deployoffice/office-deployment-tool-configuration-options#display-element) to **None** (Display Level = "None") when you use the Office Deployment Tool, the installation fails without generating an error message or gets stuck in the background.
 
 ## Cause
 
@@ -47,9 +47,9 @@ This error occurs for one or both of the following reasons:
 
 ## Workaround
 
-**Note:** You must have administrator permissions to perform the following actions.
+**Note:** You must have administrator permissions to take the following actions.
 
-To work around this issue, enable *PowerShell.exe* only during the scenario where the error occurs. After the error is fixed, block or disable PowerShell.exe again on the device.
+To work around this issue, enable *PowerShell.exe* only during the scenario in which the error occurs. After the error is fixed, block or disable PowerShell.exe again on the device.
 
 ## Status
 
