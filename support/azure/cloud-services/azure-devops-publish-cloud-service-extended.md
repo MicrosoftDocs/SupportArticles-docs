@@ -6,6 +6,7 @@ ms.reviewer: piw, maheshallu
 author: AmandaAZ
 ms.author: v-weizhu
 ms.service: cloud-services
+ms.subservice: troubleshoot-dev
 ms.topic: how-to
 ---
 # How to use Azure DevOps to publish Cloud Services (extended support)
