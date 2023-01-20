@@ -150,7 +150,7 @@ If there is a component of Start that is consistently crashing, capture a dump t
 
 The following list provides information about common errors you might run into with Start Menu, as well as steps to help you mitigate them.
 
-### Symptom: Start menu and other shell components broken by Third party app "ClickShare"
+### Symptom: Start Menu and other shell components fail when Apps including Barco's ClickShare access Office APIs
 
 You may experience various issues related to the Windows Shell on devices that are running Office ClickToRun, along with some third party applications that use Office APIs:
 
@@ -177,8 +177,12 @@ If you are using Barco ClickShare, refer Barco's Knowledge Base, [Unresponsive W
 
 #### Prevent the issue from reoccurring
 
-- In the case of ClickShare, disabling Calendar integration would prevent the issue from re-occurring. 
+- In the case of ClickShare, disabling Calendar integration would prevent the issue from re-occurring.
 - Prevent the applications from running at startup.
+
+#### Status
+
+Microsoft is aware of this issue and is working to resolve it. We will post more information in this article when it becomes available.
 
 ### Symptom: Start Menu doesn't respond on Windows 2012 R2, Windows 10, or Windows 2016
 
