@@ -1640,6 +1640,8 @@
       href: ./networking/dhcp-dynamic-updates-of-dns-registrations-delayed.md
     - name: Event ID 1056 after installing DHCP
       href: ./networking/event-1056-install-dhcp-server-service.md
+    - name: Event ID 4199 and Windows client can't get IP address
+      href: ./networking/event-4199-windows-client-cannot-get-ip-address-dhcp-server.md
     - name: Fail to modify existing DHCP scope
       href: ./networking/modify-existing-dhcp-scope-results.md
     - name: Increase the number of IP addresses on a subnet
@@ -2488,12 +2490,8 @@
     items:
     - name: Security event log forwarding fails with Error 0x138C and 5004
       href: ./system-management-components/security-event-log-forwarding-fails-error-0x138c-5004.md
-  - name: Help and Support
-    items:
     - name: Event Tracing for Windows is simplified
       href: ./system-management-components/event-tracing-for-windows-simplified.md
-    - name: Windows Server 2003 Service Pack 1 Support Tools
-      href: ./system-management-components/windows-server-2003-service-pack-1-support-tools.md
   - name: Microsoft Management Console (MMC)
     items:
     - name: A slow service does not start due to time-out error
