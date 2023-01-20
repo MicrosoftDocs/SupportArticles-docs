@@ -53,4 +53,4 @@ To work around this issue, enable *PowerShell.exe* only during the scenario in w
 
 ## Status
 
-Microsoft is aware of this issue and is working to resolve it. We will post more information in this article when it becomes available.
+Microsoft is researching this problem and will post more information in this article when it becomes available.
