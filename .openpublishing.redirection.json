@@ -5666,6 +5666,11 @@
       "source_path": "support/sql/admin/34052-error-pbm-generates-alerts.md",
       "redirect_url": "/troubleshoot/sql/ssms/agent/34052-error-pbm-generates-alerts",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/system-management-components/windows-server-2003-service-pack-1-support-tools.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/windows-server-2003-service-pack-1-support-tools",
+      "redirect_document_id": false
     }, 
     {
       "source_path": "support/sql/replication/configure-troubleshoot-subscriptionstreamsof-distribution-agent.md",
