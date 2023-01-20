@@ -1574,6 +1574,8 @@
       href: ./networking/dns-server-not-resolve-queries-for-top-level-domain.md
     - name: DNS Server logs event 7062
       href: ./networking/dns-server-logs-event-7062.md
+    - name: DNS Server loses its teaming NIC configuration
+      href: ./networking/dns-server-loses-teaming-nic-configuration.md
     - name: DNS Server vulnerability to Cache snooping attacks
       href: ./networking/dns-server-cache-snooping-attacks.md
     - name: DNS zone transfer options are unexpectedly reset
