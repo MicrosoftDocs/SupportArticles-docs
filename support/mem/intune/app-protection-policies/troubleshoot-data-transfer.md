@@ -52,7 +52,7 @@ In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2
 |Setting name   |OS   |Setting value   |Use case   |
 |------------|-----|------|-----------------|
 |Send org data to other apps|Android|Policy managed apps|Restrict data transfer to policy managed apps. Data can be transferred to unmanaged apps but the data is encrypted and can't be opened.|
-||iOS/iPadOS|Policy managed apps with OS sharing|SData transfer may be restricted to policy managed and unmanaged apps by applying "IntuneMAMUPN" app configuration policy. Refer to [iOS/iPadOS security app configuration policies](/mem/intune/enrollment/ios-ipados-app-configuration-policies) and [How to manage data transfer between iOS apps in Microsoft Intune](/mem/intune/apps/data-transfer-between-apps-manage-ios).|
+||iOS/iPadOS|Policy managed apps with OS sharing|Data transfer may be restricted to policy managed and unmanaged apps by applying "IntuneMAMUPN" app configuration policy. </br>Refer to [iOS/iPadOS security app configuration policies](/mem/intune/enrollment/ios-ipados-app-configuration-policies) and [How to manage data transfer between iOS apps in Microsoft Intune](/mem/intune/apps/data-transfer-between-apps-manage-ios).|
 ||iOS|Policy managed app with Open-In/Share filtering|Restrict data transfer by filtering apps displayed in sharing extensions. Sharing files with this setting restricts the available apps to those that support Intune APP only.|
 |Select apps to exempt|iOS|Custom URI schemes|Allow data transfer to specific unmanaged apps.|
 ||Android|App packageIDs|Allow data transfer to specific unmanaged apps.|
