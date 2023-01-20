@@ -69,7 +69,7 @@ To install and run the Fiddler Trace scenario in the Microsoft Support and Recov
 
     :::image type="content" source="media/run-fiddler-trace/secure-network.png" alt-text="Enter a password to secure the network capture." border="false":::
 
-11. If you are satisfied with the information that the Recovery Assistant has collected, select **Next**. If you want to discard the information and repeat this procedure to collect new information, select **Start over**.
+11. If you're satisfied with the information that the Recovery Assistant has collected, select **Next**. If you want to discard the information and repeat this procedure to collect new information, select **Start over**.
 
     :::image type="content" source="media/run-fiddler-trace/diagnostic-logs-collection-complete.png" alt-text="Logging collection by the Recovery Assistant is complete." border="false":::
 
@@ -81,7 +81,8 @@ To install and run the Fiddler Trace scenario in the Microsoft Support and Recov
     >
     > - Selecting the "Microsoft Support Site" link opens the file transfer workspace.
     > - Selecting the "here" link opens the folder that holds the recorded log files.
-    > - The log files in Windows are available as %localappdata%\Temp\\<random characters\>\Fiddler_*.saz.
+    > - The log files in Windows are available as %localappdata%\Temp\\<random characters\>\Fiddler_*.saz.  
+    > - If the user account that ran the scenario is different from the user account that's logged into Windows, you may receive an error when you select the "here" link. This error indicates that the folder isn't available, because %localappdata% is different in the two accounts. If you receive an error, look in the %localappdata%\Temp\\<random characters\>\ folder for the user account that ran the scenario.
 
 13. On the Microsoft Support Secure File Exchange website, select **Add files** to upload the log files.
 
