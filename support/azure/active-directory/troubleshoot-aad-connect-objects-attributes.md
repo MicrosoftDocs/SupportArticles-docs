@@ -528,7 +528,7 @@ Fortunately, the issues that affect these components usually generate an error i
 
   Together with this update, Azure AD also sets a **DirSyncOverrides** on the object to flag that this user has the mobile phone number "overwritten" in Azure AD. From this point on, any update to the mobile attribute that originates from on-premises will be ignored because this attribute will no longer be managed by on-premises AD.
 
-  Learn more on [BypassDirSyncOverrides](/azure/active-directory/hybrid/how-to-bypassdirsyncoverrides) feature and how to restore synchronization of Mobile and other Mobile attributes from Azure AD to on-premises Active Directory.
+  For more information about the BypassDirSyncOverrides feature and how to restore synchronization of Mobile and otherMobile attributes from Azure AD to on-premises Active Directory, see [How to use the BypassDirSyncOverrides feature of an Azure AD tenant](/azure/active-directory/hybrid/how-to-bypassdirsyncoverrides).
 
 - **UserPrincipalName changes do not update in Azure AD**
 
