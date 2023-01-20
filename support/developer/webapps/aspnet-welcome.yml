@@ -21,37 +21,37 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Use Visual C# to upload a file to a Web site
-            url: /aspnet/development/upload-file-to-web-site.md
+            url: ./aspnet/development/upload-file-to-web-site.md
           - text: Implement forms-based authentication
-            url: /aspnet/development/forms-based-authentication.md
+            url: ./aspnet/development/forms-based-authentication.md
           - text: Inline expressions
-            url: /aspnet/development/inline-expressions.md
+            url: ./aspnet/development/inline-expressions.md
           - text: Implement impersonation
-            url: /aspnet/development/implement-impersonation.md
+            url: ./aspnet/development/implement-impersonation.md
           - text: ASP.NET server controls overview
-            url: /aspnet/development/server-controls.md
+            url: ./aspnet/development/server-controls.md
 
   - title: ASP.NET Diagnostic and Performance
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot Out of Memory issues
-            url: /aspnet/health-diagnostic-performance/troubleshoot-outofmemoryexception.md
+            url: ./aspnet/health-diagnostic-performance/troubleshoot-outofmemoryexception.md
           - text: Create the Web.config file
-            url: /aspnet/health-diagnostic-performance/create-web-config.md
+            url: ./aspnet/health-diagnostic-performance/create-web-config.md
 
   - title: ASP.NET Authentication and Authorization
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot common permissions and security-related issues
-            url: /aspnet/www-authentication-authorization/troubleshoot-permissions-security-issues.md
+            url: ./aspnet/www-authentication-authorization/troubleshoot-permissions-security-issues.md
           - text: Control authorization permissions
-            url: /aspnet/www-authentication-authorization/authorization-permissions.md
+            url: ./aspnet/www-authentication-authorization/authorization-permissions.md
 
   - title: ASP.NET Core
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot ASP.NET Core applications on Linux
-            url: /aspnetcore/practice-troubleshoot-linux/introduction.md
+            url: ./aspnetcore/practice-troubleshoot-linux/introduction.md
