@@ -219,32 +219,6 @@
           href: ../email-alias/remove-an-email-alias.md
     - name: Email Delivery
       items:
-        - name: 5.7.1. Unable To Relay NDR
-          href: ../email-delivery/unable-to-relay-blocked-by-allow-list.md
-        - name: 550 5.1.1 ExRecipNotFound NDR
-          href: ../email-delivery/exrecipnotfound-ndr.md
-        - name: 550 5.1.10 RecipientNotFound NDR
-          href: ../email-delivery/recipientnotfound-ndr.md
-        - name: 550 5.2.0 BadPrimary NDR
-          href: ../email-delivery/badprimary-ndr.md
-        - name: 550 5.7.64 TenantAttribution
-          href: ../email-delivery/relay-access-denied-smtp.md
-        - name: 550 5.7.64 TenantAttribution NDR
-          href: ../email-delivery/tenantattribution-ndr.md
-        - name: 550 x-dg-ref header is too long NDR
-          href: ../email-delivery/550-x-dg-ref-header-too-long-ndr.md
-        - name: 550 5.6.0 APPROVAL.InvalidExpiry error
-          href: ../email-delivery/550-5-6-0-approval-invalidexpiry-cannot-read-expiry-poilcy-error.md
-        - name: 554 4.3.2 mailbox busy
-          href: ../email-delivery/remote-server-returned-mailbox-busy.md
-        - name: 554 5.2.0 STOREDRV.Deliver.Exception
-          href: ../email-delivery/mapiexceptionnotfound-ndr.md
-        - name: 554 5.2.2 mailbox full NDR
-          href: ../email-delivery/cannot-send-mail-mepf.md
-        - name: 554 5.6.0 Invalid message NDR
-          href: ../email-delivery/invalid-message-ndr.md
-        - name: AggregateGroupMailbox full NDR
-          href: ../email-delivery/ndr-received-send-emails-microsoft365-groups.md
         - name: Administrative limit for this request was exceeded error
           href: ../email-delivery/administrative-limit-for-this-request-was-exceeded-error.md
         - name: Automatically forward email in transport rule
@@ -285,10 +259,42 @@
           href: ../email-delivery/messages-with-attachments-are-not-delivered.md
         - name: Non-delivery report (NDR)
           items:
-            - name: 550 5.1.8 Access denied
-              href: ../email-delivery/ndr/fix-error-code-5-1-8-in-exchange-online.md
+            - name: NDR error codes
+              href: ../email-delivery/ndr/mail-issues.md
+            - name: 451 4.7.500-699 (ASxxx)
+              href: ../email-delivery/ndr/fix-error-code-451-4-7-500-699-asxxx-in-exchange-online.md
             - name: 5.4.6 or 5.4.14
               href: ../email-delivery/ndr/fix-error-code-5-4-6-through-5-4-20-in-exchange-online.md
+            - name: 5.7.1. Unable To Relay
+              href: ../email-delivery/ndr/unable-to-relay-blocked-by-allow-list.md
+            - name: 550 4.4.7
+              href: ../email-delivery/ndr/fix-error-code-550-4-4-7-in-exchange-online.md
+            - name: 550 5.0.350
+              href: ../email-delivery/ndr/fix-error-code-550-5-0-350-in-exchange-online.md
+            - name: 550 x-dg-ref header is too long
+              href: ../email-delivery/ndr/550-x-dg-ref-header-too-long-ndr.md
+            - name: 550 5.1.0
+              href: ../email-delivery/ndr/fix-error-code-550-5-1-0-in-exchange-online.md
+            - name: 550 5.1.1 RESOLVER.ADR.ExRecipNotFound
+              href: ../email-delivery/ndr/exrecipnotfound-ndr.md
+            - name: 550 5.1.1 through 550 5.1.20
+              href: ../email-delivery/ndr/fix-error-code-550-5-1-1-through-5-1-20-in-exchange-online.md
+            - name: 550 5.1.8 Access denied
+              href: ../email-delivery/ndr/fix-error-code-5-1-8-in-exchange-online.md
+            - name: 550 5.1.10
+              href: ../email-delivery/ndr/fix-error-code-550-5-1-10-in-exchange-online.md
+            - name: 550 5.1.10 RESOLVER.ADR.RecipientNotFound
+              href: ../email-delivery/ndr/recipientnotfound-ndr.md
+            - name: 550 5.2.0 RESOLVER.ADR.BadPrimary
+              href: ../email-delivery/ndr/badprimary-ndr.md
+            - name: 550 5.4.1
+              href: ../email-delivery/ndr/fix-error-code-550-5-4-1-in-exchange-online.md
+            - name: 550 5.6.0 APPROVAL.InvalidExpiry
+              href: ../email-delivery/ndr/550-5-6-0-approval-invalidexpiry-cannot-read-expiry-poilcy-error.md
+            - name: 550 5.6.11
+              href: ../email-delivery/ndr/fix-error-code-550-5-6-11-in-exchange-online.md
+            - name: 550 5.7.1
+              href: ../email-delivery/ndr/fix-error-code-550-5-7-1-in-exchange-online.md
             - name: 550 5.7.12 or 5.7.12
               href: ../email-delivery/ndr/fix-error-code-5-7-12-in-exchange-online.md
             - name: 550 5.7.13 or 550 5.7.135
@@ -299,6 +305,10 @@
               href: ../email-delivery/ndr/fix-error-code-5-7-57-in-exchange-online.md
             - name: 550 5.7.64
               href: ../email-delivery/ndr/fix-error-code-5-7-64-in-exchange-online.md
+            - name: 550 5.7.64 TenantAttribution when sending emails externally
+              href: ../email-delivery/ndr/relay-access-denied-smtp.md
+            - name: 550 5.7.64 TenantAttribution when sending emails through EOP
+              href: ../email-delivery/ndr/tenantattribution-ndr.md
             - name: 550 5.7.124 or 5.7.124
               href: ../email-delivery/ndr/fix-error-code-5-7-124-in-exchange-online.md
             - name: 550 5.7.133
@@ -309,28 +319,18 @@
               href: ../email-delivery/ndr/fix-error-code-5-7-136-in-exchange-online.md
             - name: 550 5.7.700 through 550 5.7.750
               href: ../email-delivery/ndr/fix-error-code-5-7-700-through-5-7-750.md
-            - name: 451 4.7.500-699 (ASxxx)
-              href: ../email-delivery/ndr/fix-error-code-451-4-7-500-699-asxxx-in-exchange-online.md
-            - name: 550 4.4.7
-              href: ../email-delivery/ndr/fix-error-code-550-4-4-7-in-exchange-online.md
-            - name: 550 5.0.350
-              href: ../email-delivery/ndr/fix-error-code-550-5-0-350-in-exchange-online.md
-            - name: 550 5.1.0
-              href: ../email-delivery/ndr/fix-error-code-550-5-1-0-in-exchange-online.md
-            - name: 550 5.1.1 through 550 5.1.20
-              href: ../email-delivery/ndr/fix-error-code-550-5-1-1-through-5-1-20-in-exchange-online.md
-            - name: 550 5.1.10
-              href: ../email-delivery/ndr/fix-error-code-550-5-1-10-in-exchange-online.md
-            - name: 550 5.4.1
-              href: ../email-delivery/ndr/fix-error-code-550-5-4-1-in-exchange-online.md
-            - name: 550 5.6.11
-              href: ../email-delivery/ndr/fix-error-code-550-5-6-11-in-exchange-online.md
-            - name: 550 5.7.1
-              href: ../email-delivery/ndr/fix-error-code-550-5-7-1-in-exchange-online.md
+            - name: 554 4.3.2 mailbox busy
+              href: ../email-delivery/ndr/remote-server-returned-mailbox-busy.md
+            - name: 554 5.2.0 STOREDRV.Deliver.Exception
+              href: ../email-delivery/ndr/mapiexceptionnotfound-ndr.md
+            - name: 554 5.2.2 mailbox full
+              href: ../email-delivery/ndr/cannot-send-mail-mepf.md
+            - name: 554 5.6.0 Invalid message content
+              href: ../email-delivery/ndr/invalid-message-ndr.md
+            - name: AggregateGroupMailbox is full
+              href: ../email-delivery/ndr/ndr-received-send-emails-microsoft365-groups.md
             - name: Error 'the sender's submission quota was exceeded'
               href: ../email-delivery/ndr/fix-error-for-submission-quota-exceeded-in-exchange-online.md
-        - name: Non-delivery report error codes
-          href: ../email-delivery/mail-issues.md
     - name: Groups and Distribution Lists
       items:
         - name: A MailTip displays wrong number of recipients

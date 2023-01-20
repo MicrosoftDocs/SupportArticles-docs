@@ -1,5 +1,5 @@
 ---
-title: 550 5.7.64 TenantAttribution; Relay Access Denied SMTP when users send mails
+title: 550 5.7.64 TenantAttribution when users send mails externally
 description: 550 5.7.64 TenantAttribution; Relay Access Denied SMTP bounce backs for external emails being relayed out through Microsoft 365.
 author: simonxjx
 audience: ITPro
@@ -17,7 +17,7 @@ appliesto:
   - Exchange Online
 ms.date: 3/31/2022
 ---
-# (550 5.7.64 TenantAttribution; Relay Access Denied SMTP) error when users send mail externally in Microsoft 365
+# "550 5.7.64 TenantAttribution" when sending mail externally in Microsoft 365
 
 ## Symptoms
 
@@ -70,7 +70,7 @@ Make sure that the new certificate is sent from on-premises Exchange to Exchange
 2. At this point, you can locate the matching inbound connector in Microsoft 365 and verify that the certificate value matches. In this example, the `TlsSenderCertificateName` value must be set to *.contoso.com.
 
     > [!NOTE]
-    > To relay messages through Microsoft 365, the domain of the sender or the domain of contoso.com must be verified in the Microsoft 365 tenant. Otherwise, you may see an error similar to that described in Symptoms but also an explicit ATT36 error. (For information about the ATT36 error, see [Configure a certificate-based connector to relay email messages through Microsoft 365](./office-365-notice.md).)
+    > To relay messages through Microsoft 365, the domain of the sender or the domain of contoso.com must be verified in the Microsoft 365 tenant. Otherwise, you may see an error similar to that described in Symptoms but also an explicit ATT36 error. (For information about the ATT36 error, see [Configure a certificate-based connector to relay email messages through Microsoft 365](../office-365-notice.md).)
 
 ## More information
 

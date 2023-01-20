@@ -1,5 +1,5 @@
 ---
-title: 550 5.1.1 RESOLVER.ADR.ExRecipNotFound NDR in Microsoft 365
+title: NDR error 550 5.1.1 RESOLVER.ADR.ExRecipNotFound
 description: Describes an issue that occurs when you send email messages by using Outlook in Microsoft 365. Provides a resolution.
 author: simonxjx
 ms.author: v-six
@@ -19,7 +19,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# (550 5.1.1 RESOLVER.ADR.ExRecipNotFound) NDR error message when you send email messages by using Outlook in Microsoft 365
+# "550 5.1.1 RESOLVER.ADR.ExRecipNotFound" when sending emails by using Outlook in Microsoft 365
 
 _Original KB number:_ &nbsp; 2784785
 
