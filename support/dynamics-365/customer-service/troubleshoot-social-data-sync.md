@@ -9,7 +9,7 @@ ms.date: 01/19/2023
 
 # Troubleshoot sync issues with social data in Omnichannel for Customer Service
 
-This article helps you troubleshoot and resolve an issue with social data not syncing in the Omnichannel for Customer Service environment.
+This article helps you troubleshoot and resolve an issue with social data not syncing and prevents record identification for return users in the Omnichannel for Customer Service environment.
 
 ### Symptom
 
