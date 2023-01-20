@@ -35,12 +35,12 @@ When this change occurs, Windows logs the following event in the DNS server even
 
 ## Cause
 
-As indicated by DNS Event 410, this behaviour is expected.
+As indicated by DNS Event 410, this behavior is expected.
 
-When the DNS server starts, it checks the IP addresses of the available NICs and notes that none of the addresses match the configured teaming NIC address. Because of this mismatch, the DNS server determines that the configuration is not valid. The DNS server deletes the configuration and reverts to listening on all available IP addresses.
+When the DNS server starts, it checks the IP addresses of the available NICs and notes that none of the addresses match the configured teaming NIC address. Because of this mismatch, the DNS server determines that the configuration isn't valid. The DNS server deletes the configuration and reverts to listening on all available IP addresses.
 
-The teaming NIC is not available until after the physical NICs have come online. The problem is that the **DNS Server** service starts after the physical NICs come online, but it doesn't wait for the teaming NIC to become available.
+The teaming NIC isn't available until after the physical NICs have come online. The problem is that the **DNS Server** service starts after the physical NICs come online, but it doesn't wait for the teaming NIC to become available.
 
 ## Resolution
 
-To resolve this issue, change the startup type of the **DNS Server** service to **Automatic (Delayed Start)**. This delays the startup of the service so that the teaming NIC is available.
+To resolve this issue, change the startup type of the **DNS Server** service to **Automatic (Delayed Start)**. This setting delays the startup of the service so that the teaming NIC is available.
