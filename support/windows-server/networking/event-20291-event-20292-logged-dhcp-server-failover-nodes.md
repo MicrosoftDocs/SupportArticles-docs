@@ -21,22 +21,22 @@ These events are located in the path of **Applications and Services Logs** > **M
 
 - DHCP2
 
-```output
-Source: Microsoft-Windows-DHCP-Server 
-Event ID: 20291
-Task Category: DHCP Failover
-Description: A BINDING-ACK message with transaction id: 84584 was sent for IP address: 10.10.10.10 with reject reason: (Outdated binding information) to partner server: DHCP01 for failover relationship: DHCP1-DHCP1-Failover.
-```
+    ```output
+    Source: Microsoft-Windows-DHCP-Server 
+    Event ID: 20291
+    Task Category: DHCP Failover
+    Description: A BINDING-ACK message with transaction id: 84584 was sent for IP address: 10.10.10.10 with reject reason: (Outdated binding information) to partner server: DHCP01 for failover relationship: DHCP1-DHCP1-Failover.
+    ```
 
 - DHCP1
 
-```output
-Source: Microsoft-Windows-DHCP-Server 
-Event ID: 20292
-Task Category: DHCP Failover
-Description: A BINDING-ACK message with transaction id: 84585 was received for IP address: 10.10.10.10 with reject reason: (Outdated binding information) from partner server: DHCP2 for failover relationship: DHCP1- 
-DHCP2-Failover. 
-```
+    ```output
+    Source: Microsoft-Windows-DHCP-Server 
+    Event ID: 20292
+    Task Category: DHCP Failover
+    Description: A BINDING-ACK message with transaction id: 84585 was received for IP address: 10.10.10.10 with reject reason: (Outdated binding information) from partner server: DHCP2 for failover relationship: DHCP1- 
+    DHCP2-Failover. 
+    ```
 
 ## Many duplicate requests within a second
 
