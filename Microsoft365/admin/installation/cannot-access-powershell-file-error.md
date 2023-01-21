@@ -17,14 +17,14 @@ appliesto:
   - Office 2021
   - Office 2019
 search.appverid: MET150
-ms.date: 1/19/2023
+ms.date: 1/20/2023
 ---
 
 # "Windows cannot access the specified device, path, or file" error when installing Microsoft 365 apps
 
 ## Symptoms
 
-When you install Microsoft 365 apps from [Microsoft 365 portal](https://www.office.com/?auth=2) or by using enterprise deployment methods, you receive the following error message about the *PowerShell.exe* file:
+When you install Microsoft 365 apps from [Microsoft 365 portal](https://www.office.com/?auth=2) or by using enterprise-level deployment methods, you receive the following error message about the *PowerShell.exe* file:
 
 > Windows cannot access the specified device, path, or file. You may not have the appropriate permissions to access the item.
 
@@ -36,20 +36,20 @@ This error also occurs in the following scenarios:
 - Making online repairs of Microsoft 365 apps
 - Uninstalling Microsoft 365 apps
 
-**Important:** If you set [**Display Level**](/deployoffice/office-deployment-tool-configuration-options#display-element) to **None** (Display Level = "None") when you use the Office Deployment Tool, the installation fails without generating an error message or gets stuck in the background.
+**Important:** If you set [**Display Level**](/deployoffice/office-deployment-tool-configuration-options#display-element) to **None** (Display Level = "None") when you use the Office Deployment Tool, the installation fails without generating an error message or any progress bars.
 
 ## Cause
 
 This error occurs for one or both of the following reasons:
 
-- PowerShell is blocked or restricted with permissions by a policy.
+- PowerShell has its permissions blocked or restricted by a policy.
 - PowerShell is blocked by your security software.
 
 ## Workaround
 
 **Note:** You must have administrator permissions to take the following actions.
 
-To work around this issue, enable *PowerShell.exe* only during the scenario in which the error occurs. After the error is fixed, block or disable PowerShell.exe again on the device.
+To work around this issue, enable *PowerShell.exe* only during the scenario in which the error occurs. After the error is fixed, block or disable *PowerShell.exe again on the device.
 
 ## Status
 
