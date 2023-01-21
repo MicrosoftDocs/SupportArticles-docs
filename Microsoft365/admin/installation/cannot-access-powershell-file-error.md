@@ -49,7 +49,7 @@ This error occurs for one or both of the following reasons:
 
 **Note:** You must have administrator permissions to take the following actions.
 
-To work around this issue, enable *PowerShell.exe* only during the scenario in which the error occurs. After the error is fixed, block or disable *PowerShell.exe again on the device.
+To work around this issue, enable *PowerShell.exe* only during the scenario in which the error occurs. After the error is fixed, block or disable *PowerShell.exe* again on the device.
 
 ## Status
 
