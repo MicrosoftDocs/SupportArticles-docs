@@ -1,24 +1,28 @@
 ---
-title: Steps for in-place system upgrades for supported Windows 10 Azure VMs and workarounds for unsupported versions
-description: Describes how to work around the unsupported in-place system upgrade on a Windows Azure VM.
-ms.date: 01/17/2023
-ms.reviewer: 
+title: In-place upgrade for supported VMs running Windows in Azure
+description: Understand how to work around the unsupported in-place system upgrade on an Azure VM that runs Windows.
+ms.date: 01/18/2023
+ms.reviewer: joscon, scotro, azurevmcptcic
 ms.service: virtual-machines
 ms.subservice: vm-common-errors-issues
 ms.collection: windows
 ---
-# Steps for in-place system upgrades for supported Windows 10 Azure VMs and workarounds for unsupported versions
+# In-place upgrade for supported VMs running Windows in Azure
 
-This article describes how to do an in-place system upgrade of supported Windows 10-based Azure virtual machines (Azure VMs). This article also describes workarounds for Azure VMs that are not supported for in-place system upgrades.
+This article describes how to do an in-place system upgrade of supported Windows 10-based Azure virtual machines (Azure VMs). This article also describes workarounds for Azure VMs that aren't supported for in-place system upgrades.
 
-_Original product version:_ &nbsp; Windows Server version 1709, Windows Server version 1803, Windows 10, version 1709, all editions, Virtual Machine running Windows, Windows Server 2016, Windows Server 2012 R2 Standard, Windows Server 2012 R2 Datacenter, Windows Server 2012 Datacenter, Windows Server 2012 Standard, Windows Server 2008 R2 Standard, Windows Server 2008 R2 Datacenter, Windows 10, Windows 8.1, Windows 7 Enterprise, Windows 10, version 1803, all editions, Windows Server version 1803  
+> [!NOTE]  
+> **Looking for Windows Server?**  
+> For the in-place system upgrade procedure for virtual machines that are running Windows Server, see [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade).
+
+_Original product version:_ &nbsp; Windows 10, version 1803, all editions, Windows 10, version 1709, all editions, Virtual Machine running Windows, Windows 10, Windows 8.1, Windows 7 Enterprise  
 _Original KB number:_ &nbsp; 4014997
 
 ## Symptoms
 
 Consider the following scenario:
 
-- You have a virtual machine (VM) that is running Windows in a Microsoft Azure environment.
+- You have a virtual machine (VM) that's running Windows in a Microsoft Azure environment.
 - You run an in-place upgrade of the VM to a newer version of the operating system.
 
  In this scenario, the upgrade may fail or become blocked and require direct console access.
@@ -39,14 +43,6 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 
 - Windows 8.1
 - Windows 7 Enterprise
-- Windows Server, version 1709
-- Windows Server, version 1803
-- Windows Server 2012 R2 Datacenter
-- Windows Server 2012 R2 Standard
-- Windows Server 2012 Datacenter
-- Windows Server 2012 Standard
-- Windows Server 2008 R2 Datacenter
-- Windows Server 2008 R2 Standard
 
 ## In-place system upgrade process for a Windows 10 VM
 
@@ -69,17 +65,11 @@ If you have general questions about this procedure, post to [Microsoft Q&A](/ans
 
 ## Workaround
 
-To work around this issue, create an Azure VM that's running a supported version. Then, either migrate the workload (Method 1, preferred) or download and upgrade the VHD of the VM (Method 2).
+To work around this issue, create an Azure VM that's running a supported version. Download and upgrade the VHD of the VM.
 
 To prevent data loss, back up the Windows 10 VM by using [Azure Backup](/azure/backup/). Or use a third-party backup solution from [Azure Marketplace Backup & Recovery](https://azuremarketplace.microsoft.com/marketplace/apps?search=Backup%20%26%20Recovery&page=1).
 
-### Method 1: Deploy a newer system and migrate the workload
-
-Create an Azure VM that runs a supported version of the operating system, and then migrate the workload. To do this, use Windows Server migration tools. For instructions to migrate Windows Server roles and features, see the following article:
-
-[Install, use, and remove Windows Server migration tools](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134202(v=ws.11))
-
-### Method 2: Download and upgrade the VHD  
+### Download and upgrade the VHD  
 
 #### Step 1: Do an in-place upgrade in a local Hyper-V VM
 
