@@ -19,10 +19,9 @@ keywords: resolution policy, default zone scope, zone scope, geo-location, DNS z
 
 _Applies to:_ &nbsp; Windows Server 2019, all editions Windows Server 2019 Datacenter: Azure Edition - Preview
 
-
 ## Symptoms
 
-Consider an organzation that uses an AD-integrated zone (default zone scope) called contoso.com for their internal workstations and servers. The organization wants to implement a geo-location DNS structure for their branches, so the clients in a specific site can access intranet services from their local subnets.
+Consider an organization that uses an AD-integrated zone (default zone scope) called contoso.com for their internal workstations and servers. The organization wants to implement a geo-location DNS structure for their branches, so the clients in a specific site can access intranet services from their local subnets.
 
 The configuration of the DNS zone resembles the following:
 
@@ -48,11 +47,11 @@ Add-DnsServerQueryResolutionPolicy -Name "CentralAmericaPolicy" -Action ALLOW -C
 Add-DnsServerQueryResolutionPolicy -Name "SouthAmericaPolicy" -Action ALLOW -ClientSubnet "eq,SouthAmericaSubnet" -ZoneScope "SouthAmericaZoneScope,1" -ZoneName "contoso.com"
 ```
 
-The desired outcome is that a client attempts to locate a requested resource first in the local zone scope, then in the default zone scope. However, after the organization configures these policies, clients from the defined subnets can't successfully resolve records that're hosted in the default zone scope (contoso.com). For example, clients cannot resolve **hostA.contoso.com**. The DNS server returns a "Server Failure" message to such requests.
+The desired outcome is that a client attempts to locate a requested resource first in the local zone scope, then in the default zone scope. However, after the organization configures these policies, clients from the defined subnets can't successfully resolve records that're hosted in the default zone scope (contoso.com). For example, clients can't resolve **hostA.contoso.com**. The DNS server returns a "Server Failure" message to such requests.
 
 ## Cause
 
-In this case, incoming authoritative queries are evaluated against the appropriate set of zone-level policies based on their order of precedence. It seems intuitive to assume that any query that fails to match a policy is automatically serviced from the default zone scope. However, this is not the case. Instead, any non-matching query results in a name resolution failure.
+In this case, incoming authoritative queries are evaluated against the appropriate set of zone-level policies based on their order of precedence. It seems intuitive to assume that any query that fails to match a policy is automatically serviced from the default zone scope. However, this isn't the case. Instead, any non-matching query results in a name resolution failure.
 
 In other words, if the DNS server receives a name resolution query for **hostA.contoso.com** from a client that's specified in a client subnet policy, the DNS server only looks at the related zone scope.
 
