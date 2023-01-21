@@ -2490,12 +2490,8 @@
     items:
     - name: Security event log forwarding fails with Error 0x138C and 5004
       href: ./system-management-components/security-event-log-forwarding-fails-error-0x138c-5004.md
-  - name: Help and Support
-    items:
     - name: Event Tracing for Windows is simplified
       href: ./system-management-components/event-tracing-for-windows-simplified.md
-    - name: Windows Server 2003 Service Pack 1 Support Tools
-      href: ./system-management-components/windows-server-2003-service-pack-1-support-tools.md
   - name: Microsoft Management Console (MMC)
     items:
     - name: A slow service does not start due to time-out error
