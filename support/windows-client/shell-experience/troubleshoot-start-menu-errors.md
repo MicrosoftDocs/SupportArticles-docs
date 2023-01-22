@@ -171,14 +171,34 @@ Application packages' permissions are being removed from the following Registry 
 
 #### Workaround
 
-Run the [scripts](https://cesdiagtools.blob.core.windows.net/windows/FixUserShellFolderPermissions.zip) to fix the issue when it happens, though the scripts cannot prevent the issue from re-occurring.
+1. Download the [scripts](https://cesdiagtools.blob.core.windows.net/windows/FixUserShellFolderPermissions.zip) to fix the issue when it happens, though the scripts cannot 
+prevent the issue from re-occurring.
 
-If you are using Barco ClickShare, refer Barco's Knowledge Base, [Unresponsive Windows taskbar or user shell folder permissions issues with ClickShare App Calendar integration](https://www.barco.com/en/support/knowledge-base/6077-unresponsive-windows-taskbar-with-clickshare-app).
+2. Open a Powershell prompt under the affected user identity, and run
+
+```PowerShell
+.\FixUserShellFolderPermissions.ps1
+```
+
+- If the script can't access the registry key because the registry permissions are wiped out, then open an elevated Powershell prompt and run the following command:
+
+  - ```powershell
+    FixUserShellFolderPermissions.ps1 -allprofiles
+    ```
+- If an application doesn't work, you may need to register the shell packages by running from the affected user the command 
+
+  - ```powershell
+    FixUserShellFolderPermissions.ps1 -register
+    ```
+
+> [!NOTE]
+> If Barco ClickShare v4.27.0.x is installed, either rollback, uninstall or upgrade to stop the propagation. 
+> Refer Barco's Knowledge Base, [Unresponsive Windows taskbar or user shell folder permissions issues with ClickShare App Calendar integration](https://www.barco.com/en/support/knowledge-base/6077-unresponsive-windows-taskbar-with-clickshare-app).
 
 #### Prevent the issue from reoccurring
 
-- In the case of ClickShare, disabling Calendar integration would prevent the issue from re-occurring.
-- Prevent the applications from running at startup.
+- In the case of ClickShare, ensure ClickShare v4.27.0.x is not running and then disabling calendar integration would prevent the issue from re-occurring.
+- Prevent the applications from running at startup or configure the applications to Start on-demand.
 
 #### Status
 
