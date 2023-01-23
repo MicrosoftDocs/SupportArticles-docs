@@ -1,0 +1,14 @@
+
+- name: Dynamics 365 Customer Insights
+  href: welcome-customer-insights.yml
+
+  items:
+  - name: Activation
+    items:
+    - name: Troubleshoot controls from Customer Card Add-in if they don't find data
+      href: troubleshoot-controls-customer-card-add-in.md
+
+  - name: Data sources
+    items:
+    - name: Troubleshoot Power Query data source refresh issues for data sources based on Power Platform Dataflows
+      href: troubleshoot-power-query-data-source-refresh-issues-PPDF.md
