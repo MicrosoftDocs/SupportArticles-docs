@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Power Query data source refresh issues for data sources based on Power Platform Dataflows
-description: Learn how to address issues with data sources based on Power Platform Dataflows in Dynamics 36 Customer Insights.
+description: Learn how to address issues with data sources based on Power Platform Dataflows in Dynamics 365 Customer Insights.
 author: m-hartmann
 ms.author: mhart
 ms.date: 01/23/2023
@@ -37,7 +37,7 @@ If the **Status** of the dataflow is **Success**, the ownership of the Power Que
 
 If the **Status** of the dataflow is **Failed**.
 
-### Solution 1: Review the refresh history file
+### Solution 2: Review the refresh history file
 
    1. Download the refresh history file.
    1. Review the downloaded file for the reason for the failure.

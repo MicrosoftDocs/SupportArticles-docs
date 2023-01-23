@@ -7,8 +7,12 @@
     items:
     - name: Troubleshoot controls from Customer Card Add-in if they don't find data
       href: troubleshoot-controls-customer-card-add-in.md
+    - name: Troubleshoot issues with the Power BI connector
+      href: troubleshoot-power-bi-connector.md
+    - name: Troubleshoot segment not eligible for export
+      href: troubleshoot-ineligible-segments.md
 
   - name: Data sources
     items:
-    - name: Troubleshoot Power Query data source refresh issues for data sources based on Power Platform Dataflows
+    - name: Troubleshoot Power Query data source refresh issues
       href: troubleshoot-power-query-data-source-refresh-issues-PPDF.md
