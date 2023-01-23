@@ -5,8 +5,6 @@ summary: Welcome to Microsoft Dynamics 365 Customer Insights troubleshooting. Th
 metadata:
   title: Microsoft Dynamics 365 Customer Insights troubleshooting
   description: Landing page for Microsoft Dynamics 365 Customer Insights troubleshooting articles.
-  ms.prod: dynamics-365
-  ms.service: customer-insights
   ms.topic: landing-page
   author: m-hartmann
   ms.author: mhart

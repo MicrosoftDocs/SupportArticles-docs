@@ -3,7 +3,6 @@ title: Troubleshoot Power Query data source refresh issues for data sources base
 description: Learn how to address issues with data sources based on Power Platform Dataflows in Dynamics 36 Customer Insights.
 author: m-hartmann
 ms.author: mhart
-ms.topic: troubleshooting 
 ms.date: 01/23/2023
 ---
 

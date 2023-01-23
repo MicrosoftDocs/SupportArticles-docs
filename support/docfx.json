@@ -268,6 +268,7 @@
         "power-platform/admin/*.md": "power-platform",
         "power-platform/power-apps/**/**.*": "powerapps",
         "power-platform/power-automate/*.md": "power-automate",
+        "dynamics-365/customer-insights/**.*": "customer-insights",
         "dynamics-365/fraud-protection/*.md": "dynamics-365-fraud-protection",
         "dynamics-365/marketing/*.md": "dynamics-365-marketing",
         "dynamics-365/sales/*.md": "dynamics-365-sales",
@@ -341,6 +342,7 @@
         "azure/active-directory/*.md": "Active Directory",
         "azure/devops/*.md": "Azure DevOps",
         "azure/synapse-analytics/**/*.md": "Azure Synapse Analytics",
+        "dynamics-365/customer-insights/*.md": "Dynamics 365 Customer Insights",
         "dynamics-365/fraud-protection/*.md": "Dynamics 365 Fraud Protection",
         "dynamics-365/marketing/*.md": "Dynamics 365 Marketing",
         "dynamics-365/sales/*.md": "Dynamics 365 Sales",
@@ -439,6 +441,11 @@
           "Troubleshoot",
           "Dynamics 365",
           "Marketing"
+        ],
+        "dynamics-365/customer-insights/**/*.md": [
+          "Troubleshoot",
+          "Dynamics 365",
+          "Customer Insights"
         ],
         "dynamics-365/fraud-protection/**/*.md": [
           "Troubleshoot",
