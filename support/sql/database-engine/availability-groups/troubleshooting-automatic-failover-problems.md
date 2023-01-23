@@ -227,23 +227,23 @@ To investigate and diagnose whether this is the cause, follow these steps:
     ```output
           CurrentDate                 TotalThreads    CurrentThreads    AvailableThreads    WorkersWaitingForCpu    RequestWaitingForThreads
         
-        2020-10-06   01:27:01.337         1216                361               855                 33                      0
+        2020-10-06   01:27:01.337         1216                361               855                33                      0
         
-        2020-10-06    01:27:08.340        1216                1412              -196                22                     76
+        2020-10-06    01:27:08.340        1216               1412              -196                22                     76
         
-        2020-10-06    01:27:15.340        1216                1304              -88                  2                    161
+        2020-10-06    01:27:15.340        1216               1304              -88                  2                    161
         
-        2020-10-06    01:27:22.340        1216                1242              -26                 21                    185
+        2020-10-06    01:27:22.340        1216               1242              -26                 21                    185
         
-        2020-10-06    01:27:29.343        1216                1346              -130                19                    476
+        2020-10-06    01:27:29.343        1216               1346              -130                19                    476
         
-        2020-10-06    01:27:36.350        1216                1350              -134                 9                    630
+        2020-10-06    01:27:36.350        1216               1350              -134                 9                    630
         
-        2020-10-06    01:27:43.353        1216                1346              -130                13                    539
+        2020-10-06    01:27:43.353        1216               1346              -130                13                    539
         
-        2020-10-06    01:27:50.360        1216                1378              -162                 5                    328
+        2020-10-06    01:27:50.360        1216               1378              -162                 5                    328
         
-        2020-10-06    01:27:57.360        1216                 197               1019                0                     0
+        2020-10-06    01:27:57.360        1216                197               1019                0                      0
     ```
 
 High values reported for `WorkersWaitingForCpu` and `RequestWaitingForThreads` indicate that scheduling contention is occurring and that SQL Server can't service the current workload in a timely manner.
