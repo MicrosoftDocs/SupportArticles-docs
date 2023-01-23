@@ -250,7 +250,7 @@ High values reported for `WorkersWaitingForCpu` and `RequestWaitingForThreads` i
 
 **Resolution**
 
-If you experience this problem, rebalance the workload on the secondary replica or consider increasing the number of computers on all the replicas in the availability group.
+If you experience this problem, rebalance the workload on the secondary replica or consider increasing the processing power (add processors)on the computers running these workloads.
 
 ## Troubleshoot other failed failover events
 
