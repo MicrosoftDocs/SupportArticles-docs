@@ -35,7 +35,7 @@ For complete details about how to run the Enterprise version of the Assistant, s
 
 ## Script the Reset Office Activation scenario
 
-You can automate some of the tasks to run the scenario. The following sample Windows PowerShell script can help you get started. 
+You can automate some of the tasks to run the scenario. The following sample Windows PowerShell script can help you get started. You can also edit it to better fit your requirements.
 
 **Note**: 
 
@@ -44,7 +44,7 @@ You can automate some of the tasks to run the scenario. The following sample Win
 
 [Download the Reset Office Activation scenario script](https://aka.ms/SaRAEnterpriseResetOfficeActivation)
 
-The script performs the following basic tasks, but it can be edited to better fit your own workflows.
+The script performs the following basic tasks. 
 
 1. Copy the files for the Enterprise version of the Assistant to the client from the location specified in the script.
 
