@@ -225,9 +225,9 @@ To investigate and diagnose whether this is the cause, follow these steps:
     The following is sample output of the preceding query:
 
     ```output
-        CurrentDate    TotalThreads    CurrentThreads    AvailableThreads    WorkersWaitingForCpu    RequestWaitingForThreads
+          CurrentDate                 TotalThreads    CurrentThreads    AvailableThreads    WorkersWaitingForCpu    RequestWaitingForThreads
         
-        2020-10-06    01:27:01.337    1216    361    855    33    0
+        2020-10-06  01:27:01.337      1216                361               855                 33                      0
         
         2020-10-06    01:27:08.340    1216    1412   -196   22    76
         
@@ -250,7 +250,7 @@ High values reported for `WorkersWaitingForCpu` and `RequestWaitingForThreads` i
 
 **Resolution**
 
-If you experience this problem, rebalance the workload on the secondary replica or consider increasing the processing power (add processors)on the computers running these workloads.
+If you experience this problem, rebalance the workload on the secondary replica or consider increasing the processing power (add processors) on the computers running these workloads.
 
 ## Troubleshoot other failed failover events
 
