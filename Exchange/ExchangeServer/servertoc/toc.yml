@@ -615,3 +615,5 @@
           href: ../setup/service-pack-upgrade-fails.md
         - name: Setup of Mailbox role fails
           href: ../setup/setup-of-mailbox-role-fails-with-error.md
+        - name: Version error in RecoverServer mode install
+          href: ../setup/version-error-in-recover-server-mode-install.md
