@@ -56,7 +56,7 @@ To resolve the issue, restore the `SerialNumber` value to the Exchange Server CU
    Set-ADObject -Identity "$dn" -Replace @{serialnumber="<SerialNumber>"}
    ```
 
-   For example, you might run the following commands if the lost server has Exchange Server 2019 CU12:
+   For example, you might run the following commands if the lost server has Exchange Server 2019 CU12 installed:
 
    ```powershell
    $dn = "CN=e161,CN=Servers,CN=Exchange Administrative Group (FYDIBOHF23SPDLT),CN=Administrative Groups,CN=Contoso,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=Contoso,DC=com"
