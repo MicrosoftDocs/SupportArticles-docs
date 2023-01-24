@@ -20,7 +20,7 @@ _Original KB number:_ &nbsp; 928779
 
 In this scenario, you configure an instance of SQL Server to use an SSL certificate. The SSL certificate uses the Enhanced Cryptographic Provider 1.0.
 
-In this scenario, the SQL Server service can't start. When you try to start the SQL Server service, the following error messages are written to the SQL Server Errorlog file:
+When you try to start the SQL Server service in this scenario, the following error messages are written to the SQL Server Errorlog file:
 
 ```output
 Error: 26014, Severity: 16, State: 1.
@@ -44,13 +44,13 @@ This problem occurs because you can't use a certificate that has the Enhanced Cr
 
 To resolve this problem, use any of the following methods:
 
-- Don't specify any certificate. Therefore, SQL Server generates a self-signed certificate. To do this, leave the **Certificate** box blank in the SQL Server Configuration Manager.
+- Don't specify any certificate to let the SQL server generate a self-signed certificate. To do this, leave the **Certificate** box blank in the SQL Server Configuration Manager.
 
-For more information, visit the following sites:
+  For more information, visit the following sites:
 
- - [Configuring Server Network Protocols and Net-Libraries](/previous-versions/sql/sql-server-2008-r2/ms177485(v=sql.105))
-
- - [Encrypting Connections to SQL Server](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105))
+  - [Configuring Server Network Protocols and Net-Libraries](/previous-versions/sql/sql-server-2008-r2/ms177485(v=sql.105))
+    
+  - [Encrypting Connections to SQL Server](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105))
 
 - Use a certificate that uses the RSA Channel Cryptographic Provider for the SQL Server certificate.
 - Use SQL Server Configuration Manager to configure the certificate. Starting with SQL Server 2019, you can use the SQL Configuration Manager to view and validate certificates installed in a SQL Server instance, identifying which certificates may be close to expiring and other tasks. For more information, see [Certificate Management (SQL Server Configuration Manager)](/sql/database-engine/configure-windows/manage-certificates)
