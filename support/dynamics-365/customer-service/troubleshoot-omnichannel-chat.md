@@ -206,7 +206,11 @@ You must remove the Customer Service Hub app from the channel provider configura
 
 ### Issue
 
-As an agent or a supervisor, you see that some conversations are stuck in the wrap-up state in your Omnichannel Agent Dashboard or Omnichannel Ongoing Conversations Dashboard. 
+As an agent or a supervisor, you see that some conversations are stuck in the wrap-up state in your Omnichannel Agent Dashboard or Omnichannel Ongoing Conversations Dashboard.
+
+### Cause
+
+The primary agent assigned to the conversation may not have closed it in the session panel.
 
 ### Resolution
 
