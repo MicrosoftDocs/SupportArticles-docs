@@ -12,7 +12,6 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Microsoft Teams
-  - Skype for Business Online
 ms.date: 12/30/2022
 adobe-target: true
 ---
@@ -23,7 +22,7 @@ When you try to sign in to Microsoft Teams in Microsoft Edge, Google Chrome, Moz
 
 This issue occurs if you use the **Trusted Sites** feature in your browser and you don't add the URLs for Microsoft Teams to the list of sites that your browser should trust. In this situation, the Teams web client can't sign in.
 
-To resolve this issue, update the settings for your browser. To do this, follow the steps in the appropriate section for your browser.
+To resolve this issue, update your browser settings by using the steps in the appropriate section.
 
 > [!NOTE]  
 > You must have administrative rights to make the updates. If you're the administrator for your organization, you can use a Group Policy Object (GPO) to make the updates.
@@ -49,8 +48,8 @@ To resolve this issue, update the settings for your browser. To do this, follow 
 To change the settings by using a GPO:
 
 1. Go to the [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise) to download the Microsoft Edge policy templates file and extract the contents.
-2. Add the sites that are listed in [step 2](/deployedge/configure-microsoft-edge#2-set-mandatory-or-recommended-policies) to **Content settings** > **CookiesAllowedForUrls** by having either a mandatory or recommended policy. 
- 
+2. Add the sites that are listed in [step 2](/deployedge/configure-microsoft-edge#2-set-mandatory-or-recommended-policies) to **Content settings** > **CookiesAllowedForUrls** by having either a mandatory or recommended policy.
+
 For more information about how to configure Microsoft Edge Group Policy settings, see the following articles:
 
 - [Configure Microsoft Edge policy settings on Windows devices](/deployedge/configure-microsoft-edge)
@@ -84,7 +83,7 @@ There are two types of policy templates: an ADM and an ADMX template. Verify whi
     - **Set the home page**: The URL that Chrome opens when a user opens the browser or selects the **Home** button.
     - **Send anonymous usage statistics and crash information**: To turn off sending any crash information or anonymous statistics to Google, change this setting to **False**.
     - **Turn off auto-updates**: Although we don't usually recommended it, you can turn off auto-updates.
-    
+
     Apply the policies to the target computers. Depending on your network configuration, the policy might require some time to propagate. Or, you might have to propagate the policies manually through the administrator tools.
 7. Add the sites that are listed in step 2 under [Microsoft Edge](#microsoft-edge) to the **Content settings** > **CookiesAllowedForUrls** setting.
 
@@ -135,7 +134,8 @@ For more information, see [Limits and specifications for Teams](/microsoftteams/
 
     :::image type="content" source="media/sign-in-loop/ie-advanced-privacy-settings.png" alt-text="Screenshot of the advanced privacy settings dialog box showing that first and third party cookies are selected as accept and always allow session cookies is selected":::
 
-    Alternatively, follow these steps:
+Alternatively, follow these steps:
+
 1. In the **Internet Options** window, select **Security** > **Trusted Sites** > **Sites**.
 2. Add the following sites:
 
