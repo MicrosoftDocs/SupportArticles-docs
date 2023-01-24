@@ -68,13 +68,13 @@ A message stating "Sorry, we're not able to serve you at the moment" is shown to
 
 The issue might be caused by one of the following scenarios:
 
-### Cause 1 - Agents not configured in the queue.
-- Allowed Presence is not updated in the work stream: The default work streams that are shipped out-of-the-box, does not have **Allowed Presence** values in the work stream.
+- Agents aren't configured in the queue.
+- Allowed Presence is not updated in the work stream: The default work streams that are shipped out-of-the-box don't have **Allowed Presence** values in the workstream.
 
    > [!div class=mx-imgBorder]
    > ![Sorry, we are not able to serve you at this moment message on portal chat widget.](media/chat-widget-not-able-serve.png "Sorry, we are not able to serve you at this moment")
 
-### Resolution 1
+### Resolution
 
 As an administrator, make sure of the following details:
 
@@ -82,14 +82,17 @@ As an administrator, make sure of the following details:
 
 - For the associated workstream, check that the **Allowed Presence** option has values in the **Work distribution** area. More information: [Configure work distribution](create-workstreams.md#configure-work-distribution)
 
-## Chat widget does not load on the portal
+## Issue 4 - Chat widget doesn't load on the portal
 
-### Issue
+### Symptom
 
-Chat widget does not load on the portal. There are multiple reasons this may happen. This section includes five possible resolutions.
+Chat widget doesn't load on the portal. 
 
 > [!div class="mx-imgBorder"]
 > ![Chat widget portal.](media/chat-portal.png "Chat widget portal view")
+
+### Causes
+There are multiple reasons why this may happen, depending on your configuration. There are five ways to try to resolve the issue.
 
 ### Resolution 1: Location option
 
@@ -184,7 +187,7 @@ Restart the portal by doing the following steps:
     > [!div class="mx-imgBorder"]
     > ![Select Restart to restart the portal.](media/chat-portal-restart.png "Select Restart to restart the portal")
 
-## Agents not receiving chat in Omnichannel for Customer Service
+## Agent isn't receiving chat in Omnichannel for Customer Service
 
 ### Issue
 
