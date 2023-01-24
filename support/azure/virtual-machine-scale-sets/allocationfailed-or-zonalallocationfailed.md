@@ -6,7 +6,8 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: "saraic,nameier,shache,emanders"
 ms.service: virtual-machine-scale-sets
-#Customer intent: As a < type of user >, I want < what? > so that < why? >.
+ms.subservice: troubleshoot-allocation-failures
+#Customer intent: As an Azure Virtual Machine Scale Set user, I want to troubleshoot an AllocationFailed or ZonalAllocationFailed error so that I can successfully create, restart, or resize a scale set instance.
 ---
 # Fix an AllocationFailed or ZonalAllocationFailed error when you create, restart, or resize Virtual Machine Scale Sets in Azure
 
