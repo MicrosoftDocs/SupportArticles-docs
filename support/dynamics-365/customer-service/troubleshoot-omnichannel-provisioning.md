@@ -92,17 +92,17 @@ To avoid the provisioning failure, you must remove the Microsoft Teams service p
 1. Select **Start**, type **PowerShell**, and right-click **Windows PowerShell** and select **Run as administrator**.  <br>
 ![Run PowerShell as an administrator.](media/powershell.png "Run PowerShell as an administrator")
 
-2. Select **Yes** on the **User Control** dialog to allow the application to make changes.
-3. Type the `Install-Module AzureAD` command in the PowerShell window, and press **Enter**. This command installs the PowerShell commands for interacting with Azure Active Directory. <br>
+1. Select **Yes** on the **User Control** dialog to allow the application to make changes.
+1. Type the `Install-Module AzureAD` command in the PowerShell window, and press **Enter**. This command installs the PowerShell commands for interacting with Azure Active Directory. <br>
 ![Execute command.](media/powershell2.png "Execute command")
 
-4. PowerShell prompts whether to trust the repository. Type **Y** for yes and press **Enter**.  <br>
+1. PowerShell prompts whether to trust the repository. Type **Y** for yes and press **Enter**.  <br>
 ![Run command.](media/powershell3.png "Run command")
 
-5. Type the `Connect-AzureAD` command in the PowerShell window, and press **Enter**.
+1. Type the `Connect-AzureAD` command in the PowerShell window, and press **Enter**.
 This establishes a connection with the tenant's Azure Active Directory, so you can manage it using PowerShell.
-6. Sign in to your organization as a tenant admin.
-7. Run the `Remove-AzureADServicePrincipal -ObjectID <ObjectID>` command in the PowerShell window twice, one each for Microsoft Teams and Skype Teams Calling API Service. Replace **`<ObjectID>`** with the object ID you had stored earlier. This command deletes the expired Teams service and Skype Teams Calling API Service from Azure Active Directory.
+1. Sign in to your organization as a tenant admin.
+1. Run the `Remove-AzureADServicePrincipal -ObjectID <ObjectID>` command in the PowerShell window twice, one each for Microsoft Teams and Skype Teams Calling API Service. Replace **`<ObjectID>`** with the object ID you had stored earlier. This command deletes the expired Teams service and Skype Teams Calling API Service from Azure Active Directory.
 
    > [!Note]
    > Right-click in the PowerShell window to paste the Object ID.
@@ -139,3 +139,31 @@ After removing the expired Microsoft Teams license from the tenant, you can add 
 1. Select the app, go to the **Properties** tab, and turn on the **Enabled for users to sign-in** toggle.
 
 The chat is added to the tenant again.
+
+
+## Issue 4 - After Omnichannel for Customer Service is provisioned, the agent dashboard displays an authentication error
+
+### Symptom
+
+After provisioning Omnichannel for Customer Service, the following error message is displayed on the agent dashboard: "Something went wrong while authenticating—please try again. If this continues, have your administrator contact Microsoft Support with the client session ID."
+
+### Cause
+
+The issue occurs when you rename the org URL but don’t update the channel URL after you've provisioned Omnichannel for Customer Service.
+
+### Resolution
+
+1. Go to [https://make.powerapps.com](https://make.powerapps.com).
+
+1. On the left pane, select **Apps**, and then from the applications list, select **Omnichannel for Customer Service**.
+
+1. Select the ellipsis (...) button, scroll down the list, and select **App profile manager**.
+
+1. Select the administrator app (either Customer Service workspace or Omnichannel Administration), and then select **Channel provider**.
+   The Active Channel Providers list is displayed.
+
+1. Do the following steps:
+    - Make sure that the omnichannel channel provider record is listed and is in the active state. 
+     If the omnichannel record is not active, select the record, and then select **Activate** on the menu bar.
+    - On the **General** tab of the omnichannel record, make sure that the **Channel URL** field includes the org information as shown in the following example: <br>
+   `https://oc-cdn-ocprod.azureedge.net/convcontrol/ChatControl.htm?uci=true&clientName=zfp&cloudType=Public&env=prod&ocBaseUrl=https://org749544d7-crm.omnichannelengagementhub.com&ucilib=https:// <org>.crm.dynamics.com/webresources/Widget/msdyn_ciLibrary.js`
