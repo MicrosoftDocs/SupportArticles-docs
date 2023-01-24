@@ -19,7 +19,15 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot controls from Customer Card Add-in
-            url:  troubleshoot-controls-customer-card-add-in.md
+            url:  controls-customer-card-add-in.md
+          - text: Controls from Customer Card Add-in if they don't find data
+            url: controls-customer-card-add-in.md
+          - text: Errors on date fields when loading Customer Insights entities in Power BI Desktop
+            url: error-date-fields-power-bi-connector.md
+          - text: Customer Insights environment doesn't show in Power BI
+            url: environment-not-showing-in-power-bi.md
+          - text: Troubleshoot segment not eligible for export
+            url: ineligible-segments-b2b.md
 
   - title: Data sources
     linkLists:

@@ -5,14 +5,16 @@
   items:
   - name: Activation
     items:
-    - name: Troubleshoot controls from Customer Card Add-in if they don't find data
-      href: troubleshoot-controls-customer-card-add-in.md
-    - name: Troubleshoot issues with the Power BI connector
-      href: troubleshoot-power-bi-connector.md
+    - name: Controls from Customer Card Add-in if they don't find data
+      href: controls-customer-card-add-in.md
+    - name: Errors on date fields when loading Customer Insights entities in Power BI Desktop
+      href: error-date-fields-power-bi-connector.md
+    - name: Customer Insights environment doesn't show in Power BI
+      href: environment-not-showing-in-power-bi.md
     - name: Troubleshoot segment not eligible for export
-      href: troubleshoot-ineligible-segments.md
+      href: ineligible-segments-b2b.md
 
   - name: Data sources
     items:
-    - name: Troubleshoot Power Query data source refresh issues
-      href: troubleshoot-power-query-data-source-refresh-issues-PPDF.md
+    - name: Power Query data source refresh issues
+      href: power-query-data-source-refresh-issues-PPDF.md
