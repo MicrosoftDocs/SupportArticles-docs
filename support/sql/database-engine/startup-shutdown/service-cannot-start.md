@@ -1,7 +1,7 @@
 ---
-title: Service can't start after you use SSL certificate
+title: Service can't start after you use an SSL certificate
 description: This article helps you resolve a problem that occurs after you configure an SSL certificate that uses Microsoft Enhanced Cryptographic Provider 1.0.
-ms.date: 01/19/2023
+ms.date: 01/24/2023
 ms.custom: sap:Security Issues
 author: padmajayaraman
 ms.author: v-jayaramanp
@@ -18,7 +18,9 @@ _Original KB number:_ &nbsp; 928779
 
 ## Symptoms
 
-Consider the following scenario. You configure an instance of SQL Server to use an SSL certificate. The SSL certificate uses the Enhanced Cryptographic Provider 1.0. In this scenario, the SQL Server service can't start. When you try to start the SQL Server service, the following error messages are written to the SQL Server Errorlog file:
+In this scenario, you configure an instance of SQL Server to use an SSL certificate. The SSL certificate uses the Enhanced Cryptographic Provider 1.0.
+
+In this scenario, the SQL Server service can't start. When you try to start the SQL Server service, the following error messages are written to the SQL Server Errorlog file:
 
 ```output
 Error: 26014, Severity: 16, State: 1.
