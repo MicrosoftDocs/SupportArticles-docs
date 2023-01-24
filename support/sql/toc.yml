@@ -777,8 +777,6 @@
         href: releases/sqlserver-2022/cumulativeupdate1.md    
       - name: 'Improvement: Add the permission check and update implementation in sys.sp_xtp_force_gc'
         href: releases/sqlserver-2022/add-permission-check-change-procedure.md
-      - name: 'FIX: Log Reader Agent reader thread causes an assertion dump'
-        href: releases/sqlserver-2022/log-reader-agent-reader-thread-causes-an-assertion-dump.md
       - name: 'FIX: Error when CDC capture process inserts duplicate key in cdc.lsn_time_mapping'
         href: releases/sqlserver-2022/error-cdc-capture-process-insert-duplicate-key.md
       - name: 'FIX: Error 3801 during a T-SQL snapshot backup'
