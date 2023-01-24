@@ -16,7 +16,7 @@ Resolve an issue in Power BI Desktop relate to the Power BI connector for Dynami
 
 ## Symptoms
 
-When loading entities that contain fields with a date format like MM/DD/YYYY, you might encounter errors due to mismatched locale formats. This mismatch happens when your Power BI Desktop file is set to another locale than English (United States), because date fields in Customer Insights are saved in US format.
+Entities that contain fields with a date format might cause issues due to mismatched locale formats. Date fields in Customer Insights are in US format. Ensure your Power BI file uses the English (United States) locale.
 
 ### Resolution
 

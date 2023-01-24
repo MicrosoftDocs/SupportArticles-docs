@@ -16,8 +16,8 @@ Resolve issues if the data is stale or you see errors after a data source refres
 
 ## Symptoms
 
-Ownership of the data source has changed. If the **Status** of the dataflow is **Success**, the ownership of the Power Query-based data source might have changed.
-Data refresh fails. If the **Status** of the dataflow is **Failed**.
+- Ownership of the data source has changed. If the **Status** of the dataflow is **Success**, the ownership of the Power Query-based data source might have changed.
+- The data refresh **Status** of the dataflow is **Failed**.
 
 ## Resolution
 
@@ -34,4 +34,4 @@ Data refresh fails. If the **Status** of the dataflow is **Failed**.
 
    1. Download the refresh history file.
    1. Review the downloaded file for the reason for the failure.
-   1. If the error cannot be resolved, open a support ticket. Include the downloaded refresh history file.
+   1. If the error can't be resolved, open a support ticket. Include the downloaded refresh history file.
