@@ -6,8 +6,7 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: cargonz
-ms.service: virtual-machines
-ms.subservice: hpc
+ms.service: hpcpack
 #Customer intent: As a Microsoft HPC Pack user, I want resolve a reporting database connection problem in the HPC Cluster Manager so that I can successfully use a high-performance computing (HPC) management database.
 ---
 # Resolve an HPC reporting database connection problem

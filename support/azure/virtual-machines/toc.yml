@@ -567,6 +567,9 @@
       - name: Windows
         href: redeploy-to-new-node-windows.md
 
+- name: Platform as a service VM logs
+  href: sdp352ef8720-e3ee-4a12-a37e-cc3b0870f359-windows-vm.md
+
 - name: Support statements
   items:
   - name: Windows Server 2008 R2 Support
@@ -578,8 +581,6 @@
     - name: Upload a Windows Server 2008/2008 R2 specialized image to Azure
       href: /windows-server/get-started/modernize-windows-server-2008?context=/troubleshoot/azure/virtual-machines/context/context
 
-  - name: Azure VM logs
-    href: sdp352ef8720-e3ee-4a12-a37e-cc3b0870f359-windows-vm.md
   - name: Citrix services support policy
     href: support-policy-citrix-services.md
   - name: FAQ - Azure IaaS VM disks, and managed and unmanaged premium disks
