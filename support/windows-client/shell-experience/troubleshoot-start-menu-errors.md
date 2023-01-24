@@ -192,7 +192,7 @@ prevent the issue from re-occurring.
     ```
 
 > [!NOTE]
-> If Barco ClickShare v4.27.0.x is installed, either rollback, uninstall or upgrade to stop the propagation. 
+> If Barco ClickShare v4.27.0.2 or greater is installed, either rollback, uninstall or upgrade to stop the propagation. 
 > Refer Barco's Knowledge Base, [Unresponsive Windows taskbar or user shell folder permissions issues with ClickShare App Calendar integration](https://www.barco.com/en/support/knowledge-base/6077-unresponsive-windows-taskbar-with-clickshare-app).
 
 #### Prevent the issue from reoccurring
