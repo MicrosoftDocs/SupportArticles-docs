@@ -1,14 +1,14 @@
 ---
-title: Troubleshoot controls from Customer Card Add-in if they don't find data
+title: Controls from Customer Card Add-in if they don't find data
 description: Learn how to fix an issue with capitalization in customer ID fields.
 author: m-hartmann
 ms.author: mhart
 ms.date: 01/23/2023
 ---
 
-# Troubleshoot controls from Customer Card Add-in if they don't find data
+# Controls from Customer Card Add-in if they don't find data
 
-Resolve issues with empty controls on the Customer Card Add-in.
+If GUID of the contact ID contains capital letters, you need to transform them in the Power Query editor.
 
 ## Prerequisites
 
@@ -16,11 +16,11 @@ Resolve issues with empty controls on the Customer Card Add-in.
 - Make sure you configured the Card Add-in according to the instructions: [Configure the Customer Card Add-in](/dynamics365/customer-insights/customer-card-add-in.md#configure-the-customer-card-add-in).
 - Ownership of the data source.
 
-## Cause: Uppercase characters in the contactId GUID
+## Symptoms
 
-If GUID of the contact ID contains capital letters, you need to transform them in the Power Query editor.
+Some controls in the Customer Card Add-in don't show data.
 
-### Solution: Transform to lowercase
+## Resolution
 
 1. Edit the data source in Power Query Editor.
 1. Select the contact ID column.
