@@ -34,4 +34,4 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot Power Query data source refresh issues
-            url:  troubleshoot-power-query-data-source-refresh-issues-PPDF.md
+            url:  power-query-data-source-refresh-issues-PPDF.md
