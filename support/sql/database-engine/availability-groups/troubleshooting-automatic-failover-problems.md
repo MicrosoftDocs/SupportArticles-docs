@@ -224,8 +224,8 @@ To investigate and diagnose whether this is the cause, follow these steps:
 
     The following is sample output of the preceding query:
     
-    |CurrentDate               |TotalThreads  |CurrentThreads  |AvailableThreads  |WorkersWaitingForCpu |RequestWaitingForThreads |
-    |-----------|--------------|--------------|----------------|------------------|---------------------|-------------------------|
+    |CurrentDate |CurrentDate  |TotalThreads  |CurrentThreads  |AvailableThreads  |WorkersWaitingForCpu |RequestWaitingForThreads |
+    |------------|-------------|--------------|----------------|------------------|---------------------|-------------------------|
     |2020-10-06 |01:27:01.337  |1216          |361             |855               |33                   |0                        |
     |2020-10-06 |01:27:08.340  |1216          |1412            |-196              |22                   |76                       |
     |2020-10-06 |01:27:15.340  |1216          |1304            |-88               |2                    |161                      |
