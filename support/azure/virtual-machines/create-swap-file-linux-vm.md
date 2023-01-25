@@ -43,12 +43,22 @@ Then, create the SWAP file under the resource disk path or a custom path.
 
     ```bash
     #!/bin/sh
-    size=`df -h --output=target, avail | grep -i ^\/mnt | awk '{print $2}' | cut -b1,2`
-    swapsize=`echo "scale=0; ($size*0.3)/1" | bc`
-    echo $swapsize
-    dd if=/dev/zero of=/mnt/swapfile bs=1073741824 count=$swapsize
+
+    # Percent of space on the ephemeral disk to dedicate to swap. Here 30% is being used. Modify as appropriate.
+    PCT=0.3
+
+    # Get size of the ephemeral disk and multiply it by the percent of space to allocate
+    size=$(df -m --output=target,avail | awk -v percent="$PCT" '/\/mnt/{SIZE=int($2*percent);print SIZE}')
+    echo "$size MB of space being allocated to swap file"
+
+    # Create an empty file first and set correct permissions
+    dd if=/dev/zero of=/mnt/swapfile bs=1M count=$size
     chmod 0600 /mnt/swapfile
+
+    # Make the file available to use as swap
     mkswap /mnt/swapfile
+
+    # Enable swap
     swapon /mnt/resource/swapfile
     swapon -a
     ```
@@ -85,12 +95,22 @@ Then, create the SWAP file under the resource disk path or a custom path.
 
     ```bash
     #!/bin/sh
-    size=`df -h --output=target, avail | grep -i azure\/resource | awk '{print $2}' | cut -b1,2`
-    swapsize=`echo "scale=0; ($size*0.3)/1" | bc`
-    echo $swapsize
-    dd if=/dev/zero of=/azure/resource/swapfile bs=1073741824 count=$swapsize
+
+    # Percent of space on the ephemeral disk to dedicate to swap. Here 30% is being used. Modify as appropriate.
+    PCT=0.3
+
+    # Get size of the ephemeral disk and multiply it by the percent of space to allocate. Modify the custom path below (azure\/resource) as appropriate.
+    size=$(df -m --output=target,avail | awk -v percent="$PCT" '/\azure\/resource/{SIZE=int($2*percent);print SIZE}')
+    echo "$size MB of space being allocated to swap file"
+
+    # Create an empty file first and set correct permissions
+    dd if=/dev/zero of=/azure/resource/swapfile bs=1M count=$size
     chmod 0600 /azure/resource/swapfile
+
+    # Make the file available to use as swap
     mkswap /azure/resource/swapfile
+
+    # Enable swap
     swapon /azure/resource/swapfile
     swapon -a
     ```
