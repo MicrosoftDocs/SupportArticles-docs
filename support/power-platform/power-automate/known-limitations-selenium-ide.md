@@ -9,9 +9,7 @@ ms.subservice: power-automate-desktop-flows
 
 > [!IMPORTANT]
 >
-> - As of February 28, 2022, Selenium IDE will no longer be supported.
-> - As of November 30, 2021, Windows recorder (V1) no longer works.
-> - Migrate your flows created with Selenium IDE and Windows recorder (V1) to Power Automate for desktop or delete them.
+> As of February 28, 2022, Selenium IDE will no longer be supported. Migrate your flows created with Selenium IDE to Power Automate for desktop or delete them.
 
 This article describes the known limitations of Selenium IDE.
 
