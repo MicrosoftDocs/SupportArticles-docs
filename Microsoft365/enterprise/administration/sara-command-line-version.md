@@ -1,6 +1,6 @@
 ---
 title: Microsoft Support and Recovery Assistant Enterprise version
-description: Describes the Enterprise version of Microsoft Support and Recovery Assistant.
+description: Describes the Enterprise version of Microsoft Support and Recovery Assistant, historically known as SaRA.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -103,6 +103,19 @@ This script provides the following additional capabilities:
    If the Assistant can't successfully complete a scenario, a draft email message is created that includes a .zip file attachment that contains all the session logs.
 
    **Note**: To use this capability, you have to update the script to include an email address, message subject, and message body.
+
+### Sample 3: Script to run two scenarios, back-to-back
+
+[Download the script for back-to-back sessions ](https://aka.ms/SaRAEnterpriseMultiScenarioHelper)
+
+This script provides the following additional capabilities:
+
+ - Allow for the specification of two scenarios to be run
+
+   **Note**: The script contains the list of supported scenario pairs
+
+ - Start SaraCmd.exe to run the first scenario
+ - When the first scenario is finished, run a second scenario if the result code from the first scenario translates to a successful completion
 
 ## Switches available for all scenarios
 
