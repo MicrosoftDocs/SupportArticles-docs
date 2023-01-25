@@ -21,11 +21,11 @@ _Applies to:_ &nbsp; Windows Server 2019, all editions Windows Server 2019 Datac
 
 ## Symptoms
 
-Consider an organization that uses an AD-integrated zone (default zone scope) called contoso.com for their internal workstations and servers. The organization wants to implement a geo-location DNS structure for their branches, so the clients in a specific site can access intranet services from their local subnets.
+Consider an organization that uses an AD-integrated zone (default zone scope) that's named contoso.com for their internal workstations and servers. The organization wants to implement a geo-location DNS structure for their branches so that the clients in a specific site can access intranet services from their local subnets.
 
-The configuration of the DNS zone resembles the following:
+The configuration of the DNS zone resembles the following structure.
 
-| Subnet | IPv4 Address space | Zone scope name |
+| Subnet | IPv4 address space | Zone scope name |
 | --- | --- | --- |
 |NorthAmericaSubnet |192.168.3.0/24 |NorthAmericaZoneScope |
 |CentralAmericaSubnet |192.168.6.0/24 |CentralAmericaZoneScope|
@@ -47,17 +47,15 @@ Add-DnsServerQueryResolutionPolicy -Name "CentralAmericaPolicy" -Action ALLOW -C
 Add-DnsServerQueryResolutionPolicy -Name "SouthAmericaPolicy" -Action ALLOW -ClientSubnet "eq,SouthAmericaSubnet" -ZoneScope "SouthAmericaZoneScope,1" -ZoneName "contoso.com"
 ```
 
-The desired outcome is that a client attempts to locate a requested resource first in the local zone scope, then in the default zone scope. However, after the organization configures these policies, clients from the defined subnets can't successfully resolve records that're hosted in the default zone scope (contoso.com). For example, clients can't resolve **hostA.contoso.com**. The DNS server returns a "Server Failure" message to such requests.
+The desired outcome is that a client tries to locate a requested resource first in the local zone scope and then in the default zone scope. However, after the organization configures these policies, clients from the defined subnets can't successfully resolve records that are hosted in the default zone scope (contoso.com). For example, clients can't resolve **hostA.contoso.com**. When it receives such requests, the DNS server returns a "Server Failure" message.
 
 ## Cause
 
-In this case, incoming authoritative queries are evaluated against the appropriate set of zone-level policies based on their order of precedence. It seems intuitive to assume that any query that fails to match a policy is automatically serviced from the default zone scope. However, this isn't the case. Instead, any non-matching query results in a name resolution failure.
-
-In other words, if the DNS server receives a name resolution query for **hostA.contoso.com** from a client that's specified in a client subnet policy, the DNS server only looks at the related zone scope.
+In this situation, incoming authoritative queries are evaluated against the appropriate set of zone-level policies based on their order of precedence. It seems intuitive that any query that doesn't match a policy would be automatically serviced from the default zone scope. However, this isn't true. Instead, any non-matching query triggers a name resolution failure. That is, if the DNS server receives a name resolution query for **hostA.contoso.com** from a client that's specified in a client subnet policy, the DNS server examines only the related zone scope.
 
 ## Resolution
 
-To configure the policies so that the DNS server checks the default zone scope as well as the local zone scope, use a more precise [DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy) statement, such as the following:
+To configure the policies so that the DNS server checks the default zone scope in addition to the local zone scope, use a more precise [DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy) statement, such as the following:
 
 ```powershell
 Add-DnsServerQueryResolutionPolicy -Name "NorthAmericaPolicy" -Action ALLOW -ClientSubnet "eq,NorthAmericaSubnet" -ZoneScope "NorthAmericaZoneScope,1" -ZoneName "contoso.com" -FQDN "www.contoso.com"
