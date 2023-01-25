@@ -187,9 +187,27 @@ Restart the portal by doing the following steps:
     > [!div class="mx-imgBorder"]
     > ![Select Restart to restart the portal.](media/chat-portal-restart.png "Select Restart to restart the portal")
 
-## Agent isn't receiving chat in Omnichannel for Customer Service
+## Issue 5 - Error occurs when trying to create a chat widget or social channel
 
-### Issue
+### Symptom
+
+Omnichannel solutions are installed in your environment when you receive a new trial organization. However, when you try to create a chat widget, Facebook page, or social channel in the Omnichannel Administration app, error messages similar to the following messsages might be displayed:
+
+- An error occurred in the PreLiveChatConfigCreatePlugin plug-in.
+- An error occurred in the PostOperationFacebookCreatePlugin plug-in.
+
+### Cause
+
+These errors occur because though the solutions are already installed in your environment, they need to be activated before you can start using them.
+
+### Resolution
+
+To provision the solutions, perform the steps outlined in [Provision Omnichannel for Customer Service](omnichannel-provision-license.md).
+
+
+## Issue 6 - Agent isn't receiving chat in Omnichannel for Customer Service
+
+### Symptom
 
 As an agent, you aren't receiving chat in the Omnichannel for Customer Service app. The issue is caused when you receive the chats in Customer Service Hub app.
 
