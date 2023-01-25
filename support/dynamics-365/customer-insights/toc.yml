@@ -2,8 +2,13 @@
 - name: Dynamics 365 Customer Insights
   href: welcome-customer-insights.yml
 
+  - name: Data sources
+    items:
+    - name: Power Query data source refresh issues
+      href: power-query-data-source-refresh-issues-PPDF.md
+
   items:
-  - name: Activation
+  - name: Exports
     items:
     - name: Controls from Customer Card Add-in if they don't find data
       href: controls-customer-card-add-in.md
@@ -13,8 +18,4 @@
       href: environment-not-showing-in-power-bi.md
     - name: Troubleshoot segment not eligible for export
       href: ineligible-segments-b2b.md
-
-  - name: Data sources
-    items:
-    - name: Power Query data source refresh issues
-      href: power-query-data-source-refresh-issues-PPDF.md
+      
