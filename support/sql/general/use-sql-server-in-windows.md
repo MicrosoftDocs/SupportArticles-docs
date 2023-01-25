@@ -130,7 +130,7 @@ Before you install SQL Server on a computer that is running Windows 10 or Window
 
 - **For SQL Server 2022 on Windows**  
 
-   The release is supported at the SQL Server 2019 on Windows Server 2016 RTM Release version and Windows 10 TH1 1507 or greater versions.
+   The release is supported at the SQL Server 2022 on Windows Server 2016 RTM Release version and Windows 10 TH1 1507 or greater versions.
    
 - **For SQL Server 2019 on Windows**
 
