@@ -7,7 +7,6 @@
     - name: Power Query data source refresh issues
       href: power-query-data-source-refresh-issues-PPDF.md
 
-  items:
   - name: Exports
     items:
     - name: Controls from Customer Card Add-in if they don't find data
