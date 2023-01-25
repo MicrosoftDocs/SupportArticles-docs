@@ -42,7 +42,7 @@ This error also occurs in the following scenarios:
 
 This error occurs for one or both of the following reasons:
 
-- PowerShell has its permissions blocked or restricted by a policy.
+- Permissions for PowerShell.exe are restricted or blocked by a policy.
 - PowerShell is blocked by your security software.
 
 ## Workaround
