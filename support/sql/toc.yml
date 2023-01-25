@@ -775,7 +775,7 @@
       items:
       - name: Cumulative Update 1 (KB5022375)
         href: releases/sqlserver-2022/cumulativeupdate1.md
-      - name: 'Improvement: Block the change tracking side table truncation when the base table is truncated'
+      - name: 'Improvement: Block the change tracking side table truncation'
         href: releases/sqlserver-2022/block-the-change-tracking-side-table-truncation.md
       - name: 'Improvement: Add the permission check and update implementation in sys.sp_xtp_force_gc'
         href: releases/sqlserver-2022/add-permission-check-change-procedure.md
@@ -785,6 +785,8 @@
         href: releases/sqlserver-2022/error-cdc-capture-process-insert-duplicate-key.md
       - name: 'FIX: Error 3801 during a T-SQL snapshot backup'
         href: releases/sqlserver-2022/error-3801-during-a-t-sql-snapshot-backup.md
+      - name: 'FIX: Error when snapshot scripts include NEWSEQUENTIALID'
+        href: releases/sqlserver-2022/error-when-snapshot-scripts-include-newsequentialid.md
   - name: SQL Server 2019
     items:
     - name: SQL Server 2019 build versions
