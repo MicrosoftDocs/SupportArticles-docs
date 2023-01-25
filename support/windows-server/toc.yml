@@ -1572,6 +1572,8 @@
       href: ./networking/dns-registers-duplicate-srv-records-for-dc.md
     - name: DNS Servers don't resolve queries for top-level domains
       href: ./networking/dns-server-not-resolve-queries-for-top-level-domain.md
+    - name: DNS Server geo-location policy doesn't work as expected
+      href: ./networking/dns-server-geo-location-policy-doesnt-work-as-expected.md
     - name: DNS Server logs event 7062
       href: ./networking/dns-server-logs-event-7062.md
     - name: DNS Server vulnerability to Cache snooping attacks
