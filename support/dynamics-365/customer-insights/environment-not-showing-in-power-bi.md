@@ -18,7 +18,7 @@ Resolve issues with the Power BI connector for Dynamics 365 Customer Insights.
 
 If an environment has more than one [relationship](/dynamics365/customer-insights/relationships.md) defined between two identical entities in Customer Insights, it won't be available in the Power BI connector.
 
-### Resolution
+## Resolution
 
 Identify and remove the duplicated relationships.
 

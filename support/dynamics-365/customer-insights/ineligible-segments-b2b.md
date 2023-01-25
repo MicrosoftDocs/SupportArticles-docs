@@ -20,7 +20,7 @@ Customer Insights environments for business accounts support contact segments an
 Within an environment of business accounts your exports fail with the error message:
 "The following segment isn't eligible for this export destination: '{name of segment}'. Choose only segments of type ContactProfile and try again."
 
-### Resolutions
+## Resolutions
 
 1. Sign in to Customer Insights and open the B2B environment.
 

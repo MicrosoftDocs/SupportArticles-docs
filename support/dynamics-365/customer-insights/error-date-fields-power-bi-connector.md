@@ -18,6 +18,6 @@ Resolve an issue in Power BI Desktop relate to the Power BI connector for Dynami
 
 Entities that contain fields with a date format might cause issues due to mismatched locale formats. Date fields in Customer Insights are in US format. Ensure your Power BI file uses the English (United States) locale.
 
-### Resolution
+## Resolution
 
 Change the locale. The Power BI Desktop file has a single locale setting, which is applied when retrieving data. To fix the date errors, [set the locale of the .BPI file](/power-bi/fundamentals/supported-languages-countries-regions#choose-the-language-or-locale-of-power-bi-desktop) to English (United States).
