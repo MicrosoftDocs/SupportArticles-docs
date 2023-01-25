@@ -173,8 +173,11 @@ This section describes the minimum version requirements for installing SQL Serve
 Before you install SQL Server on a computer that is running Windows Server 2012 R2 or Windows 8.1, you must make sure that you fulfill the following minimum requirements, as appropriate for your situation:
 
 - **For SQL Server 2022 on Windows**  
+
    SQL Server 2022 is not supported on Windows 8.1 or Windows Server 2012 R2.
+   
 - **For SQL Server 2019 on Windows**
+
     SQL Server 2019 is not supported on Windows 8.1 or Windows Server 2012 R2.
 
 - **For SQL Server 2017 on Windows**
