@@ -79,13 +79,13 @@ Keywords: (128)
 User: NETWORK SERVICE  
 Computer: ServerName.contoso.com  
 Description: The AllowInsecureGuestAuth registry value is not configured with default settings.
-```
 
 Default registry value:  
 `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters] "AllowInsecureGuestAuth"=dword:0`
 
 Configured registry value:  
 `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters] "AllowInsecureGuestAuth"=dword:1`
+```
 
 #### Guidance
 
