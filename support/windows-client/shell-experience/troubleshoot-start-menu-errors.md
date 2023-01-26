@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Start menu errors
 description: Learn how to troubleshoot common Start menu errors in Windows 10. For example, learn to troubleshoot errors related to deployment, crashes, and performance.
-ms.date: 08/25/2022
+ms.date: 01/19/2023
 ms.prod: windows-client
 ms.author: lizlong
 author: lizgt2000
@@ -10,11 +10,11 @@ ms.topic: troubleshooting
 ms.collection: highpri
 ms.technology: windows-client-shell-experience
 ms.custom: sap:start-menu, csstroubleshoot
-ms.reviewer: aaroncz
+ms.reviewer: kaushika
 audience: itpro
 localization_priority: medium
 ---
-# Troubleshoot Start menu errors
+# Start menu troubleshooting guidance
 
 _Applies to:_ &nbsp; Windows 10
 
@@ -149,6 +149,60 @@ If there is a component of Start that is consistently crashing, capture a dump t
 ## Common errors and mitigation
 
 The following list provides information about common errors you might run into with Start Menu, as well as steps to help you mitigate them.
+
+### Symptom: Start Menu and other shell components fail when Apps including Barco's ClickShare access Office APIs
+
+You may experience various issues related to the Windows Shell on devices that are running Office ClickToRun, along with some third party applications that use Office APIs:
+
+- Event 1000 is logged in the Application event log. The event log reports that an application crashes for StartMenuExperienceHost.exe, ShellExperienceHost.exe, SearchUI.exe, with an error code 0xc000027b / -1073741189.
+- Errors in the Microsoft-Windows-AppModel-State event log mentioning the following error with various package names:
+  
+  > Triggered repair of state locations because operation SettingsInitialize against package Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy hit error -2147024891.
+
+- The Windows Start Menu does not respond to mouse clicks or the Windows key.
+- Windows Search does not respond to mouse clicks on pressing the Search button or Windows+S key.
+
+#### Cause
+
+This may occur when a third party process such as ClickShare uses Office APIs on a computer where Office is deployed by using Office ClickToRun.
+Application packages' permissions are being removed from the following Registry path:
+
+`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders`
+
+#### Workaround
+
+1. Download the [scripts](https://cesdiagtools.blob.core.windows.net/windows/FixUserShellFolderPermissions.zip) to fix the issue when it happens, though the scripts cannot 
+prevent the issue from re-occurring.
+
+2. Open a Powershell prompt under the affected user identity, and run
+
+```PowerShell
+.\FixUserShellFolderPermissions.ps1
+```
+
+- If the script can't access the registry key because the registry permissions are wiped out, then open an elevated Powershell prompt and run the following command:
+
+  - ```powershell
+    FixUserShellFolderPermissions.ps1 -allprofiles
+    ```
+- If an application doesn't work, you may need to register the shell packages by running from the affected user the command 
+
+  - ```powershell
+    FixUserShellFolderPermissions.ps1 -register
+    ```
+
+> [!NOTE]
+> If Barco ClickShare v4.27.0.x is installed, either rollback, uninstall or upgrade to stop the propagation. 
+> Refer Barco's Knowledge Base, [Unresponsive Windows taskbar or user shell folder permissions issues with ClickShare App Calendar integration](https://www.barco.com/en/support/knowledge-base/6077-unresponsive-windows-taskbar-with-clickshare-app).
+
+#### Prevent the issue from reoccurring
+
+- In the case of ClickShare, ensure ClickShare v4.27.0.x is not running and then disabling calendar integration would prevent the issue from re-occurring.
+- Prevent the applications from running at startup or configure the applications to Start on-demand.
+
+#### Status
+
+Microsoft is aware of this issue and is working to resolve it. We will post more information in this article when it becomes available.
 
 ### Symptom: Start Menu doesn't respond on Windows 2012 R2, Windows 10, or Windows 2016
 

@@ -48,6 +48,16 @@
     - name: Web Apps
       tocHref: /troubleshoot/developer/webapps/
       topicHref: /troubleshoot/developer/webapps/welcome-webapps
+      items:
+      - name: ASP.NET
+        tocHref: /troubleshoot/developer/webapps/aspnet
+        topicHref: /troubleshoot/developer/webapps/aspnet-welcome
+      - name: ASP.NET Core
+        tocHref: /troubleshoot/developer/webapps/aspnetcore
+        topicHref: /troubleshoot/developer/webapps/aspnet-welcome
+      - name: Internet Information Services
+        tocHref: /troubleshoot/developer/webapps/iis/
+        topicHref: /troubleshoot/developer/webapps/iis/iis-welcome
 
     - name: SQL Server
       tocHref: /troubleshoot/sql/
