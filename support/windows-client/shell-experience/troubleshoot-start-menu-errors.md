@@ -150,9 +150,9 @@ If there is a component of Start that is consistently crashing, capture a dump t
 
 The following list provides information about common errors you might run into with Start Menu, as well as steps to help you mitigate them.
 
-### Symptom: Apps using Office APIs with Office ClickToRun installed may cause the Start Menu and other shell components to fail
+### Symptom: Apps using Office APIs with Office Click-to-Run installed may cause the Start Menu and other shell components to fail
 
-You may experience various issues related to the Windows Shell on devices that are running Office ClickToRun, along with some third party applications that use Office APIs:
+You may experience various issues related to the Windows Shell on devices that are running Office Click-to-Run, along with some third party applications that use Office APIs:
 
 - Event 1000 is logged in the Application event log. The event log reports that an application crashes for StartMenuExperienceHost.exe, ShellExperienceHost.exe, SearchUI.exe, with an error code 0xc000027b / -1073741189.
 - Errors in the Microsoft-Windows-AppModel-State event log mentioning the following error with various package names:
@@ -164,15 +164,16 @@ You may experience various issues related to the Windows Shell on devices that a
 
 #### Cause
 
-Affected devices may have damaged registry keys or data which might affect apps using Microsoft Office APIs to integrate with Windows, Microsoft Office, or Microsoft Outlook or Outlook Calendar. This may occur if application packages permissions are being removed from the following Registry path:
+Affected devices may have damaged registry keys or data which might affect apps using Microsoft Office APIs to integrate with Windows, Microsoft Office, Microsoft Outlook, or Outlook Calendar. This may occur if application packages permissions are being removed from the following registry path:
 
 `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders`
 
 #### Workaround
 
 > [!NOTE]
-> Barco has reported to have fixed this issue starting their App version 4.27.2. However, the affected devices may need to follow the steps mentioned in the workaround section.  
-> Refer Barco's Knowledge Base, [Unresponsive Windows taskbar or user shell folder permissions issues with ClickShare App Calendar integration](https://www.barco.com/en/support/knowledge-base/6077-unresponsive-windows-taskbar-with-clickshare-app).  
+> Barco has reported to have fixed this issue starting their App version 4.27.2. However, the affected devices may need to follow the steps mentioned in the workaround section.
+>
+> For more information, see [Unresponsive Windows taskbar or user shell folder permissions issues with ClickShare App Calendar integration](https://www.barco.com/en/support/knowledge-base/6077-unresponsive-windows-taskbar-with-clickshare-app).
 
 To workaround the issue, follow below steps:
 
@@ -199,7 +200,7 @@ prevent the issue from re-occurring.
 #### Prevent the issue from reoccurring
 
 - Ensure the ClickShare App is updated to version 4.27.2 or higher. 
-- Ensure the Calendar integration is disabled (default disabled as of 4.27.2).
+- Ensure the Calendar integration is disabled (default disabled as of version 4.27.2).
 - Prevent the applications from running at startup or configure the applications to Start on-demand.
 
 #### Status
@@ -439,3 +440,5 @@ Option 2:
 4. Confirm that **All Application Packages** group is missing.
 5. Select **Edit**, and then select **Add** to add the group.
 6. Test Start and other Apps.
+
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
