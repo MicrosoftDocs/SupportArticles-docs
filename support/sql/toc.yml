@@ -779,6 +779,8 @@
         href: releases/sqlserver-2022/block-the-change-tracking-side-table-truncation.md
       - name: 'Improvement: Add the permission check and update implementation in sys.sp_xtp_force_gc'
         href: releases/sqlserver-2022/add-permission-check-change-procedure.md
+      - name: 'Improvement: Revert the length of ROUTINE_DEFINITION to 4000'
+        href: releases/sqlserver-2022/revert-the-length-of-routine-definition.md
       - name: 'FIX: Log Reader Agent reader thread may generate an assertion dump'
         href: releases/sqlserver-2022/log-reader-agent-reader-thread-may-generate-an-assertion-dump.md
       - name: 'FIX: Error when CDC capture process inserts duplicate key in cdc.lsn_time_mapping'
@@ -787,6 +789,12 @@
         href: releases/sqlserver-2022/error-3801-during-a-t-sql-snapshot-backup.md
       - name: 'FIX: Error when snapshot scripts include NEWSEQUENTIALID'
         href: releases/sqlserver-2022/error-when-snapshot-scripts-include-newsequentialid.md
+      - name: 'FIX: Error 8992 when you run DBCC CHECKDB'
+        href: releases/sqlserver-2022/error-8992-when-you-run-dbcc-checkdb.md
+      - name: 'FIX: Error when running the CDC Control task'
+        href: releases/sqlserver-2022/error-when-running-the-cdc-control-task.md
+      - name: 'FIX: Full-text Search may generate memory leaks and stop responding'
+        href: releases/sqlserver-2022/full-text-search-may-generate-memory-leaks-and-stop-responding.md
   - name: SQL Server 2019
     items:
     - name: SQL Server 2019 build versions

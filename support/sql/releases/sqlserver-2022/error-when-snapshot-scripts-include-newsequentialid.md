@@ -10,7 +10,7 @@ appliesto:
 
 ## Symptoms
 
-When the distributor agent attempts to apply a snapshot generated on a table that has a primary key that has the NEWSEQUENTIALID function as a default value, the following error occurs:
+When the Distribution Agent attempts to apply a snapshot generated on a table that has a primary key that has the NEWSEQUENTIALID function as a default value, the following error occurs:
 
 >The newsequentialid() built-in function can only be used in a DEFAULT expression for a column of type 'uniqueidentifier' in a CREATE TABLE or ALTER TABLE statement.  It cannot be combined with other operators to form a complex scalar expression.
 
