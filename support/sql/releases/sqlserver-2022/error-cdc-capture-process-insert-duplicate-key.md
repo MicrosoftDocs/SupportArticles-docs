@@ -1,21 +1,19 @@
 ---
 title: Error when CDC capture process inserts duplicate key in cdc.lsn_time_mapping
-description: Describes an issue where error occurs when Change Data Capture (CDC) capture process tries to insert duplicate key in the cdc.lsn_time_mapping table in SQL Server 2022 or 2019.
+description: Describes an issue where error occurs when Change Data Capture (CDC) capture process tries to insert duplicate key in the cdc.lsn_time_mapping table in SQL Server 2022.
 ms.date: 02/15/2023
 ms.custom: KB5022979
 appliesto:
 - SQL Server 2022 on Windows
 - SQL Server 2022 on Linux
-- SQL Server 2019 on Windows
-- SQL Server 2019 on Linux
 ---
 # KB5022979 - FIX: Error occurs when CDC capture process tries to insert duplicate key in table "cdc.lsn_time_mapping" in SQL Server
 
 ## Symptoms
 
-Assume that Change Data Capture (CDC) is enabled in Microsoft SQL Server 2022 or 2019. Because of a timing issue, CDC capture process may try to insert duplicate `start_lsn` in the table `cdc.lsn_time_mapping`, and you may receive an error message that resembles the following:
+Assume that Change Data Capture (CDC) is enabled in Microsoft SQL Server 2022. Because of a timing issue, CDC capture process may try to insert duplicate `start_lsn` in the table `cdc.lsn_time_mapping`, and you may receive an error message that resembles the following:
 
-> Violation of PRIMARY KEY constraint 'lsn_time_mapping_clustered_idx'. Cannot insert duplicate key in object 'cdc.lsn_time_mapping'. The duplicate key value is (Value).
+> Violation of PRIMARY KEY constraint 'lsn_time_mapping_clustered_idx'. Cannot insert duplicate key in object 'cdc.lsn_time_mapping'. The duplicate key value is (*Value*).
 
 ## Resolution
 

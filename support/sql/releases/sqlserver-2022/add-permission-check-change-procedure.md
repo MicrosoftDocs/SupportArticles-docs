@@ -5,7 +5,6 @@ ms.date: 02/15/2023
 ms.custom: KB5022975
 appliesto:
 - SQL Server 2022 on Windows
-- SQL Server 2019 on Windows
 ---
 # KB5022975 - Improvement: Add the permission check in sys.sp_xtp_force_gc and change the procedure to a single call for allocated and used bytes
 
