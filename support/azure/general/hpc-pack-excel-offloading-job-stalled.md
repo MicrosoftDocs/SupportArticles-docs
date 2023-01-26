@@ -6,8 +6,8 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: cargonz, dandchen
-ms.service: hpcpack
-#Customer intent: As a Microsoft HPC Pack user, I want resolve a stalled Excel offloading job so that I can successfully use an Excel workbook to run a job in an Azure cluster.
+ms.prod: hpcpack
+#Customer intent: As a Microsoft HPC Pack user, I want to resolve a stalled Excel offloading job so that I can successfully use an Excel workbook to run a job in an Azure cluster.
 ---
 # HPC Pack Excel offloading job is stalled
 
