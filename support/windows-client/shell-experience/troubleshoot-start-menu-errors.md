@@ -175,7 +175,7 @@ Affected devices may have damaged registry keys or data which might affect apps 
 >
 > For more information, see [Unresponsive Windows taskbar or user shell folder permissions issues with ClickShare App Calendar integration](https://www.barco.com/en/support/knowledge-base/6077-unresponsive-windows-taskbar-with-clickshare-app).
 
-To workaround the issue, follow below steps:
+To workaround the issue, follow these steps:
 
 1. Download the [scripts](https://cesdiagtools.blob.core.windows.net/windows/FixUserShellFolderPermissions.zip) to fix the issue when it happens, though the scripts cannot 
 prevent the issue from re-occurring.
