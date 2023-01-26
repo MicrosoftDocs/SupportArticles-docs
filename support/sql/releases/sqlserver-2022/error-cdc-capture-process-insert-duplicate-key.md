@@ -1,7 +1,7 @@
 ---
 title: Error when CDC capture process inserts duplicate key in cdc.lsn_time_mapping
 description: Describes an issue where error occurs when Change Data Capture (CDC) capture process tries to insert duplicate key in the cdc.lsn_time_mapping table in SQL Server 2022 or 2019.
-ms.date: 01/19/2023
+ms.date: 02/15/2023
 ms.custom: KB5022979
 appliesto:
 - SQL Server 2022 on Windows
@@ -19,10 +19,9 @@ Assume that Change Data Capture (CDC) is enabled in Microsoft SQL Server 2022 or
 
 ## Resolution
 
-This problem is fixed in the following cumulative updates for SQL Server:
+This problem is fixed in the following cumulative update for SQL Server:
 
-- :::image type="icon" source="../media/download-icon.png" border="false":::  [Cumulative Update 1 for SQL Server 2022](cumulativeupdate1.md)
-- :::image type="icon" source="../media/download-icon.png" border="false":::  [Cumulative Update 19 for SQL Server 2019](https://support.microsoft.com/topic/b63d7163-e2e7-46f7-b50a-c3d1f2913219)
+[Cumulative Update 1 for SQL Server 2022](cumulativeupdate1.md)
 
 > [!NOTE]
 > This fix covers all the cases. For the same issue that occurs in SQL Server 2019 that has a previous cumulative update installed, SQL Server 2017, and SQL Server 2016, see the previous fix [KB 4521739](https://support.microsoft.com/topic/dd6ee9c4-f5fd-1509-96a3-3f3562391fa3). However, the previous fix didn't cover all the cases.
@@ -31,8 +30,7 @@ This problem is fixed in the following cumulative updates for SQL Server:
 
 Each new cumulative update for SQL Server contains all the hotfixes and security fixes that were in the previous build. We recommend that you install the latest build for your version of SQL Server:
 
-- Latest cumulative update for SQL Server 2022
-- [Latest cumulative update for SQL Server 2019](https://support.microsoft.com/topic/782ed548-1cd8-b5c3-a566-8b4f9e20293a)
+Latest cumulative update for SQL Server 2022
 
 ## Status
 
