@@ -11,7 +11,7 @@ appliesto:
 
 ## Symptoms
 
-In Microsoft SQL Server 2022, assume that you use DBCC CLINEDATABASE on a database where change data capture (CDC) is enabled and create roles assigned to the CDC user in this database. When you run DBCC CHECKDB against the cloned database, the following error occurs:
+In Microsoft SQL Server 2022, Assume that you use DBCC CLONEDATABASE on a database where change data capture (CDC) is enabled. There are system-defined database roles owned by CDC users in this database.  When you run DBCC CHECKDB against the cloned database, the following error occurs:
 
 >Msg 8992, Level 16, State 1, Line <*LineNumber*></br>
 Check Catalog Msg 3853, State 1: Attribute (owning_principal_id=*ID*) of row (principal_id=*ID*) in sys.database_principals does not have a matching row (principal_id=*ID*) in sys.database_principals.
