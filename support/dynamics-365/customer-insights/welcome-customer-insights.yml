@@ -29,9 +29,22 @@ landingContent:
           - text: Troubleshoot segment not eligible for export
             url: ineligible-segments-b2b.md
 
-  - title: Data sources
+  - title: Data ingestion
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot Power Query data source refresh issues
             url:  power-query-data-source-refresh-issues-PPDF.md
+
+  - title: Resources
+    linkLists:
+      - linkListType: learn
+        links:
+          - text: Documentation
+            url:  /dynamics365/customer-insights/
+          - text: Training
+            url: /training/dynamics365/
+          - text: Talk to the community
+            url: https://go.microsoft.com/fwlink/?linkid=2073991
+          - text: Share your ideas
+            url: https://go.microsoft.com/fwlink/?linkid=2074172

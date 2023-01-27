@@ -2,7 +2,7 @@
 - name: Dynamics 365 Customer Insights
   href: welcome-customer-insights.yml
 
-- name: Data sources
+- name: Data ingestion
   items:
     - name: Power Query data source refresh issues
       href: power-query-data-source-refresh-issues-PPDF.md
