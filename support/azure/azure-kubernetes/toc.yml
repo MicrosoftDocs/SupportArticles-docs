@@ -40,7 +40,6 @@
 
 - name: Troubleshoot upgrade operations
   items:
-
   - name: Troubleshoot Azure Kubernetes Service (AKS) upgrade errors
     items:
     - name: Upgrade fails because of NSG rules
@@ -55,7 +54,9 @@
       href: error-code-subnetisfull-upgrade.md   
   - name: Kubernetes 1.16 upgrades fail
     href: upgrades-to-kubernetes-fail-using-node-labels.md  
-          
+  - name: Upgrade issues with Gen2 VMs on Windows AKS cluster
+    href: nodepools-not-upgraded-to-gen2-during-node-image-upgrade.md
+
 - name: Troubleshoot delete operations
   items:
   - name: CannotDeleteLoadBalancerWithPrivateLinkService error
