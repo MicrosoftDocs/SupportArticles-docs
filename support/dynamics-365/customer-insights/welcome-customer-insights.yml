@@ -19,22 +19,20 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot controls from Customer Card Add-in
-            url:  controls-customer-card-add-in.md
-          - text: Controls from Customer Card Add-in if they don't find data
-            url: controls-customer-card-add-in.md
+            url:  exports/controls-customer-card-add-in.md
           - text: Errors on date fields when loading Customer Insights entities in Power BI Desktop
-            url: error-date-fields-power-bi-connector.md
+            url: exports/error-date-fields-power-bi-connector.md
           - text: Customer Insights environment doesn't show in Power BI
-            url: environment-not-showing-in-power-bi.md
+            url: exports/environment-not-showing-in-power-bi.md
           - text: Troubleshoot segment not eligible for export
-            url: ineligible-segments-b2b.md
+            url: exports/ineligible-segments-b2b.md
 
   - title: Data ingestion
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot Power Query data source refresh issues
-            url:  power-query-data-source-refresh-issues-PPDF.md
+            url:  data-ingestion/power-query-data-source-refresh-issues-PPDF.md
 
   - title: Resources
     linkLists:

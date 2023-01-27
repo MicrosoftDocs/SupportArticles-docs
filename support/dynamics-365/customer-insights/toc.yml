@@ -5,16 +5,16 @@
 - name: Data ingestion
   items:
     - name: Power Query data source refresh issues
-      href: power-query-data-source-refresh-issues-PPDF.md
+      href: data-ingestion/power-query-data-source-refresh-issues-PPDF.md
 
 - name: Exports
   items:
     - name: Controls from Customer Card Add-in if they don't find data
-      href: controls-customer-card-add-in.md
+      href: exports/controls-customer-card-add-in.md
     - name: Errors on date fields when loading Customer Insights entities in Power BI Desktop
-      href: error-date-fields-power-bi-connector.md
+      href: exports/error-date-fields-power-bi-connector.md
     - name: Customer Insights environment doesn't show in Power BI
-      href: environment-not-showing-in-power-bi.md
+      href: exports/environment-not-showing-in-power-bi.md
     - name: Troubleshoot segment not eligible for export
-      href: ineligible-segments-b2b.md
+      href: exports/ineligible-segments-b2b.md
       
