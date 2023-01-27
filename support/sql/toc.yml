@@ -787,6 +787,8 @@
         href: releases/sqlserver-2022/error-cdc-capture-process-insert-duplicate-key.md
       - name: 'FIX: Error 3801 during a T-SQL snapshot backup'
         href: releases/sqlserver-2022/error-3801-during-a-t-sql-snapshot-backup.md
+      - name: 'FIX: Error 302 when the Distribution Agent applies snapshot scripts'
+        href: releases/sqlserver-2022/error-302-when-the-distribution-agent-applies-snapshot-scripts.md
       - name: 'FIX: Error 8992 when you run DBCC CHECKDB'
         href: releases/sqlserver-2022/error-8992-when-you-run-dbcc-checkdb.md
       - name: 'FIX: Error when running the CDC Control task'
