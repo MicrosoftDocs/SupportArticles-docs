@@ -47,20 +47,30 @@ Then, create the SWAP file under the resource disk path or a custom path.
     # Percent of space on the ephemeral disk to dedicate to swap. Here 30% is being used. Modify as appropriate.
     PCT=0.3
 
-    # Get size of the ephemeral disk and multiply it by the percent of space to allocate
-    size=$(df -m --output=target,avail | awk -v percent="$PCT" '/\/mnt/{SIZE=int($2*percent);print SIZE}')
-    echo "$size MB of space being allocated to swap file"
+    # Location of swap file. Modify as appropriate based on location of ephemeral disk.
+    LOCATION=/mnt
 
-    # Create an empty file first and set correct permissions
-    dd if=/dev/zero of=/mnt/swapfile bs=1M count=$size
-    chmod 0600 /mnt/swapfile
+    if [ ! -f ${LOCATION}/swapfile ]
+    then
+    
+        # Get size of the ephemeral disk and multiply it by the percent of space to allocate
+        size=$(/bin/df -m --output=target,avail | /bin/awk -v percent="$PCT" -v pattern=${LOCATION} '$0 ~ pattern {SIZE=int($2*percent);print SIZE}')
+        echo "$size MB of space allocated to swap file"
 
-    # Make the file available to use as swap
-    mkswap /mnt/swapfile
+         # Create an empty file first and set correct permissions
+        /bin/dd if=/dev/zero of=${LOCATION}/swapfile bs=1M count=$size
+        /bin/chmod 0600 ${LOCATION}/swapfile
+
+        # Make the file available to use as swap
+        /sbin/mkswap ${LOCATION}/swapfile
+    fi
 
     # Enable swap
-    swapon /mnt/swapfile
-    swapon -a
+    /sbin/swapon ${LOCATION}/swapfile
+    /sbin/swapon -a
+
+    # Display current swap status
+    /sbin/swapon -s
     ```
 
     The script will be executed on every boot and allocates 30% of the available space in the resource disk. You can customize the values based on your situation.
@@ -98,24 +108,31 @@ Then, create the SWAP file under the resource disk path or a custom path.
 
     # Percent of space on the ephemeral disk to dedicate to swap. Here 30% is being used. Modify as appropriate.
     PCT=0.3
+
+    # Location of swap file. Modify as appropriate based on location of ephemeral disk.
+    LOCATION=/azure/resource
+
+    if [ ! -f ${LOCATION}/swapfile ]
+    then
     
-    # Location of the swapfile. Modify as appropriate here and in the search in awk below
-    LOCATION="/azure/resource"
+        # Get size of the ephemeral disk and multiply it by the percent of space to allocate
+        size=$(/bin/df -m --output=target,avail | /bin/awk -v percent="$PCT" -v pattern=${LOCATION} '$0 ~ pattern {SIZE=int($2*percent);print SIZE}')
+        echo "$size MB of space allocated to swap file"
 
-    # Get size of the ephemeral disk and multiply it by the percent of space to allocate. Modify the custom path below (azure\/resource) as appropriate.
-    size=$(df -m --output=target,avail | awk -v percent="$PCT" '/\azure\/resource/{SIZE=int($2*percent);print SIZE}')
-    echo "$size MB of space being allocated to swap file"
+         # Create an empty file first and set correct permissions
+        /bin/dd if=/dev/zero of=${LOCATION}/swapfile bs=1M count=$size
+        /bin/chmod 0600 ${LOCATION}/swapfile
 
-    # Create an empty file first and set correct permissions
-    dd if=/dev/zero of=${LOCATION}/swapfile bs=1M count=$size
-    chmod 0600 ${LOCATION}/swapfile
-
-    # Make the file available to use as swap
-    mkswap ${LOCATION}/swapfile
+        # Make the file available to use as swap
+        /sbin/mkswap ${LOCATION}/swapfile
+    fi
 
     # Enable swap
-    swapon ${LOCATION}/swapfile
-    swapon -a
+    /sbin/swapon ${LOCATION}/swapfile
+    /sbin/swapon -a
+
+    # Display current swap status
+    /sbin/swapon -s
     ```
 
 1. Make sure the file is executable:
