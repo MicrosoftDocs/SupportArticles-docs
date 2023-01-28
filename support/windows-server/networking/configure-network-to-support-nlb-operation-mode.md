@@ -1,7 +1,7 @@
 ---
 title: Configure network infrastructure to support the NLB operation mode
 description: Describes how the different NLB operation modes affect network infrastructure, and the best ways in which the network can support each mode.
-ms.date: 12/07/2020
+ms.date: 01/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -132,7 +132,9 @@ This mode is basically the same as multicast mode, except that the switches can 
 When you enable IGMP multicast, the NLB nodes send IGMP Join messages to the 239.255.x.y multicast address (in this address, x.y represents the last two octets of the NLB VIP). For example, if the NLB VIP is 10.0.0.1, the multicast address for IGMP Join messages is 239.244.0.1. These messages indicate the group membership of the NLB nodes. The switches use this information to configure the MAC address table.
 
 Some of the articles that are listed in the [Multicast](#multicast) section include the correct configuration parameters for their devices for multicast with IGMP. To verify that your equipment can support this mode, contact your hardware vendor.
-NLB supports IGMP Version 1 only on any Windows Version where IGMP multicast mode does  exist up to Windows Server 2022.
+
+> [!NOTE]
+> NLB supports IGMP Version 1 only on any Windows versions where IGMP multicast mode does exist up to Windows Server 2022.
 
 ## Configure the NLB operation mode
 
