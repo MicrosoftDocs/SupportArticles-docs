@@ -803,7 +803,7 @@
         href: releases/sqlserver-2022/exception-use-return-value-json-constructors.md
       - name: 'FIX: Error when you load audit logs from SSMS'
         href: releases/sqlserver-2022/error-load-audit-logs-ssms.md
-      - name: 'FIX: The key name for the JSON_OBJECT function isn't quoted'
+      - name: FIX: The key name for the JSON_OBJECT function isn't quoted
         href: releases/sqlserver-2022/json-object-key-name-not-quoted.md
       - name: 'FIX: Database accessibility issues with high-volume customer workloads'
         href: releases/sqlserver-2022/database-accessibility-issues-high-volume-customer-workloads.md
