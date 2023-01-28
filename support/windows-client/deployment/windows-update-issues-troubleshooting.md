@@ -271,3 +271,14 @@ Other components that connect to the internet:
 - Windows Spotlight: [Policy Configure Windows spotlight on lock screen](https://gpsearch.azurewebsites.net/#13362) (Set to disabled)
 - Consumer experiences: [Policy Turn off Microsoft consumer experiences](https://gpsearch.azurewebsites.net/#13329) (Set to enabled)
 - Background traffic from Windows apps: [Policy Let Windows apps run in the background](https://gpsearch.azurewebsites.net/#13571)
+
+## Transient errors caused by heavy load or network congestion
+
+Users might sometimes receive the following errors from Windows Update. These are transient issues, occurring when the service is temporarily under heavy load or when networks are congested. Users do not have to take any action because the device will retry the operation at a later time. 
+
+|Error Code |Error Value | Details
+|---------|---------|---------|
+|WU_S_SEARCHT_LOAD_SHEDDING | 0x248001 | Search operation completed successfully but one or more services were shedding load.
+|WU_E_PT_LOAD_SHEDDING | 0x8024402d | The server is shedding load.
+
+In the above cases, users programatically calling into the Windows Update Agent API to [retreive the result](https://learn.microsoft.com/en-us/windows/win32/api/wuapi/nf-wuapi-isearchresult-get_resultcode) of a search operation would get [orcFailed](https://learn.microsoft.com/en-us/windows/win32/api/wuapi/ne-wuapi-operationresultcode) or [orcSucceededWithErrors](https://learn.microsoft.com/en-us/windows/win32/api/wuapi/ne-wuapi-operationresultcode). Retrying the operation at a later time is expected to succeed.
