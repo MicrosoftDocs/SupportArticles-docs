@@ -2,13 +2,12 @@
 title: Known limitations of Selenium IDE
 description: Describes the known limitations of Selenium IDE.
 ms.reviewer: ashvinis, gtrantzas
-ms.date: 12/01/2022
+ms.date: 01/28/2023
 ms.subservice: power-automate-desktop-flows
 ---
 # Known limitations of Selenium IDE
 
 > [!IMPORTANT]
->
 > As of February 28, 2022, Selenium IDE will no longer be supported. Migrate your flows created with Selenium IDE to Power Automate for desktop or delete them.
 
 This article describes the known limitations of Selenium IDE.
