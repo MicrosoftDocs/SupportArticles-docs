@@ -1,6 +1,6 @@
 ---
 title: Error when CDC capture process inserts duplicate key in cdc.lsn_time_mapping
-description: Describes an issue where error occurs when Change Data Capture (CDC) capture process tries to insert duplicate key in the cdc.lsn_time_mapping table in SQL Server 2022.
+description: Describes an issue where an error occurs when Change Data Capture (CDC) capture process tries to insert a duplicate key in the cdc.lsn_time_mapping table in SQL Server 2022.
 ms.date: 02/15/2023
 ms.custom: KB5022979
 appliesto:

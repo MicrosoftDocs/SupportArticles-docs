@@ -781,6 +781,10 @@
         href: releases/sqlserver-2022/add-permission-check-change-procedure.md
       - name: 'Improvement: Revert the length of ROUTINE_DEFINITION to 4000'
         href: releases/sqlserver-2022/revert-the-length-of-routine-definition.md
+      - name: 'Improvement: The hybrid buffer pool with direct write feature is enabled by default'
+        href: releases/sqlserver-2022/hybrid-buffer-pool-with-direct-write-feature-enabled-by-default.md
+      - name: 'Improvement: Add a sys.dm_external_provider_certificate_info DMV'
+        href: releases/sqlserver-2022/add-sys-dm-external-provider-certificate-info-dmv.md
       - name: 'FIX: Log Reader Agent reader thread may generate an assertion dump'
         href: releases/sqlserver-2022/log-reader-agent-reader-thread-may-generate-an-assertion-dump.md
       - name: 'FIX: Error when CDC capture process inserts duplicate key in cdc.lsn_time_mapping'
@@ -795,6 +799,14 @@
         href: releases/sqlserver-2022/error-when-running-the-cdc-control-task.md
       - name: 'FIX: Full-text Search may generate memory leaks and stop responding'
         href: releases/sqlserver-2022/full-text-search-may-generate-memory-leaks-and-stop-responding.md
+      - name: 'FIX: Exception when you use the return value of JSON constructors'
+        href: releases/sqlserver-2022/exception-use-return-value-json-constructors.md
+      - name: 'FIX: Error when you load audit logs from SSMS'
+        href: releases/sqlserver-2022/error-load-audit-logs-ssms.md
+      - name: 'FIX: The key name for the JSON_OBJECT function isn't quoted'
+        href: releases/sqlserver-2022/json-object-key-name-not-quoted.md
+      - name: 'FIX: Database accessibility issues with high-volume customer workloads'
+        href: releases/sqlserver-2022/database-accessibility-issues-high-volume-customer-workloads.md
   - name: SQL Server 2019
     items:
     - name: SQL Server 2019 build versions
