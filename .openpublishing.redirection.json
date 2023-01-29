@@ -5676,7 +5676,51 @@
       "source_path": "support/sql/replication/configure-troubleshoot-subscriptionstreamsof-distribution-agent.md",
       "redirect_url": "/troubleshoot/sql/database-engine/performance/configure-troubleshoot-subscriptionstreamsof-distribution-agent",
       "redirect_document_id": true
-    }
-
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-administration-management/remote-resources-fails-requested-iis.md",
+      "redirect_url": "/previous-versions/troubleshoot/iis/remote-resources-fails-requested-iis",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/error-503-event-5189-web-application.md",
+      "redirect_url": "/previous-versions/troubleshoot/iis/error-503-event-5189-web-application",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/webapps/iis/active-server-pages/display-images-stored-blob-field.md",
+      "redirect_url": "/previous-versions/troubleshoot/iis/display-images-stored-blob-field",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/ssl-diagnostic-tool-sdp.md",
+      "redirect_url": "/previous-versions/troubleshoot/iis/ssl-diagnostic-tool-sdp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/http-error-403-404-frx-webport.md",
+      "redirect_url": "/previous-versions/troubleshoot/iis/http-error-403-404-frx-webport",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/webapps/iis/extensions-tools/no-cs-username-data-advanced-logging.md",
+      "redirect_url": "/previous-versions/troubleshoot/iis/no-cs-username-data-advanced-logging",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-authentication-authorization/not-start-reenable-shared-configuration.md",
+      "redirect_url": "/previous-versions/troubleshoot/iis/not-start-reenable-shared-configuration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/webapps/iis/iisadmin-service-inetinfo/fim-password-reset-issue.md",
+      "redirect_url": "/previous-versions/troubleshoot/iis/fim-password-reset-issue",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/webapps/iis/extensions-tools/events-not-detected-scom.md",
+      "redirect_url": "/previous-versions/troubleshoot/iis/events-not-detected-scom",
+      "redirect_document_id": false
+    },
 ]
 }
