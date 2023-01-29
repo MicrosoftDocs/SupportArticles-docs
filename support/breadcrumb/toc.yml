@@ -140,6 +140,9 @@
       tocHref: /troubleshoot/dynamics-365/
       topicHref: /troubleshoot/dynamics-365/
       items:
+      - name: Dynamics 365 Finance
+        tocHref: /troubleshoot/dynamics-365/finance/
+        topicHref: /troubleshoot/dynamics-365/finance/welcome-finance
       - name: Dynamics 365 Fraud Protection
         tocHref: /troubleshoot/dynamics-365/fraud-protection/
         topicHref: /troubleshoot/dynamics-365/fraud-protection/welcome-fraud-protection
