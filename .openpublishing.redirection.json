@@ -5702,6 +5702,11 @@
       "redirect_url": "/previous-versions/troubleshoot/iis/http-error-403-404-frx-webport",
       "redirect_document_id": false
     },
+        {
+      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/web-application-performance-data-collector.md",
+      "redirect_url": "/previous-versions/troubleshoot/iis/web-application-performance-data-collector",
+      "redirect_document_id": false
+    },
     {
       "source_path": "support/developer/webapps/iis/extensions-tools/no-cs-username-data-advanced-logging.md",
       "redirect_url": "/previous-versions/troubleshoot/iis/no-cs-username-data-advanced-logging",
@@ -5744,12 +5749,12 @@
     },
     {
       "source_path": "support/developer/webapps/iis/health-diagnostic-performance/troubleshoot-abo-mapper-errors.md",
-      "redirect_url": "",
+      "redirect_url": "/previous-versions/troubleshoot/iis/troubleshoot-abo-mapper-errors",
       "redirect_document_id": false
     },
     {
       "source_path": "support/developer/webapps/iis/deployment-migration/webdeploy-publishing-endpoint-wap.md",
-      "redirect_url": "",
+      "redirect_url": "/previous-versions/troubleshoot/iis/webdeploy-publishing-endpoint-wap",
       "redirect_document_id": false
     },
     {
@@ -5766,6 +5771,6 @@
       "source_path": "support/developer/webapps/iis/site-behavior-performance/stale-content-when-content-store-vhd.md",
       "redirect_url": "previous-versions/troubleshoot/iis/stale-content-when-content-store-vhd",
       "redirect_document_id": false
-    },
+    }
 ]
 }
