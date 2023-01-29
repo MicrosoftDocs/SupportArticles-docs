@@ -177,4 +177,4 @@ For more information, see [Configure email forwarding for a mailbox](/exchange/r
 
 ## See also
 
-[Email non-delivery reports in Office 365](/exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/non-delivery-reports-in-exchange-online)
+[Email non-delivery reports in Office 365](non-delivery-reports-in-exchange-online.md)
