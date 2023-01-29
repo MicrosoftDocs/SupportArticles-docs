@@ -10,7 +10,7 @@ appliesto:
 
 ## Symptoms
 
-High-volume customer workloads that use Extensible Key Management (EKM) may experience intermittent database accessibility issues. These accessibility issues are caused by the frequent creation or rotation of the virtual log file (VLF) that requires access to Azure Key Vault (AKV). If AKV or supporting services (such as Azure Active Directory (Azure AD)) aren't accessible during this creation or rotation, you can't perform the creation of the VLF. Additionally, it causes a database accessibility issue.
+High-volume customer workloads that use [Extensible Key Management (EKM)](/sql/relational-databases/security/encryption/extensible-key-management-ekm) may experience intermittent database accessibility issues. These accessibility issues are caused by the frequent creation or rotation of the virtual log file (VLF) that requires access to Azure Key Vault (AKV). If AKV or supporting services (such as Azure Active Directory (Azure AD)) aren't accessible during this creation or rotation, you can't perform the creation of the VLF. Additionally, it causes a database accessibility issue.
 
 VLFs can be created frequently when the transaction log files are small or the automatic growth (autogrow) increment of the transaction log is small, instead of large enough to stay ahead of the needs of the workload transaction. For more information, see [Manage the size of the transaction log file](/sql/relational-databases/logs/manage-the-size-of-the-transaction-log-file).
 
@@ -22,7 +22,6 @@ This problem is fixed in the following cumulative updates for SQL Server:
 
 [Cumulative Update 1 for SQL Server 2022](cumulativeupdate1.md)
 
-> 
 This fix introduces a startup trace flag 15025 (TF 15025). You can use TF 15025 to disable the AKV access that is required for a newly created VLF, which allows high-volume customer workloads to continue without interruption. Once this trace flag is enabled, SQL Server doesn't contact AKV during the creation of the VLF.
 
 To check if the key in AKV is still in use or needs to be disabled, you must perform one of the following operations to the database:
@@ -36,7 +35,7 @@ In any of the operations listed, SQL Server will contact AKV and check the key a
 
 Even if you enable TF 15025, these operations will still reach AKV.
 
-You can run the following Transact-SQL (T-SQL) statement to check the status of the key in AKV:
+You can run the following Transact-SQL (T-SQL) statement to check the status of the key in a database:
 
 ```SQL
 SELECT * FROM sys.dm_database_encryption_keys
