@@ -2,6 +2,14 @@
 
 
 
+## Week of January 23, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 1/24/2023 | [Teams web client is stuck in a login loop](/microsoftteams/troubleshoot/teams-sign-in/sign-in-loop) | modified |
+
+
 ## Week of January 09, 2023
 
 
