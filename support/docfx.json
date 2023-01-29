@@ -268,7 +268,7 @@
         "power-platform/admin/*.md": "power-platform",
         "power-platform/power-apps/**/**.*": "powerapps",
         "power-platform/power-automate/*.md": "power-automate",
-        "dynamics-365/customer-insights/**.*": "customer-insights",
+        "dynamics-365/customer-insights/**/**.*": "customer-insights",
         "dynamics-365/fraud-protection/*.md": "dynamics-365-fraud-protection",
         "dynamics-365/marketing/*.md": "dynamics-365-marketing",
         "dynamics-365/sales/*.md": "dynamics-365-sales",
