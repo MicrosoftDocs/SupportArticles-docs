@@ -73,4 +73,4 @@ After you have set up a connector, you can monitor if IP throttling has stopped.
 
 ## See also
 
-[Email non-delivery reports in Exchange Online](/exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/non-delivery-reports-in-exchange-online)
+[Email non-delivery reports in Exchange Online](non-delivery-reports-in-exchange-online.md)

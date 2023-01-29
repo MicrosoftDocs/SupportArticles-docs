@@ -147,4 +147,4 @@ Here are some of the error codes that are related to mail routing loops or a bad
 
 ## See also
 
-[Email non-delivery reports in Exchange Online](/exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/non-delivery-reports-in-exchange-online)
+[Email non-delivery reports in Exchange Online](non-delivery-reports-in-exchange-online.md)
