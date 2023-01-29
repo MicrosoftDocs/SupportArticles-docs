@@ -6,6 +6,7 @@ metadata:
   title: Microsoft Dynamics 365 Customer Insights troubleshooting
   description: Landing page for Microsoft Dynamics 365 Customer Insights troubleshooting articles.
   ms.topic: landing-page
+  ms.prod: dynamics-365
   author: m-hartmann
   ms.author: mhart
   ms.date: 01/23/2023
@@ -18,31 +19,39 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Troubleshoot controls from Customer Card Add-in
-            url:  exports/controls-customer-card-add-in.md
-          - text: Errors on date fields when loading Customer Insights entities in Power BI Desktop
-            url: exports/error-date-fields-power-bi-connector.md
           - text: Customer Insights environment doesn't show in Power BI
             url: exports/environment-not-showing-in-power-bi.md
+          - text: Errors on date fields when loading Customer Insights entities in Power BI Desktop
+            url: exports/error-date-fields-power-bi-connector.md
+          - text: Troubleshoot controls from Customer Card Add-in
+            url: exports/controls-customer-card-add-in.md
           - text: Troubleshoot segment not eligible for export
-            url: exports/ineligible-segments-b2b.md
+            url: exports/ineligible-segments-b-to-b.md
 
+  # Card
   - title: Data ingestion
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot Power Query data source refresh issues
-            url:  data-ingestion/power-query-data-source-refresh-issues-PPDF.md
+            url: data-ingestion/power-query-data-source-refresh-issues-dataflows.md
 
-  - title: Resources
+  # Card
+  - title: Documentation and training
     linkLists:
-      - linkListType: learn
+      - linkListType: reference
         links:
-          - text: Documentation
-            url:  /dynamics365/customer-insights/
-          - text: Training
+          - text: Customer Insights documentation
+            url: /dynamics365/customer-insights/
+          - text: Customer Insights training
             url: /training/dynamics365/
-          - text: Talk to the community
+
+  # Card
+  - title: Support Resources
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Customer Insights community
             url: https://go.microsoft.com/fwlink/?linkid=2073991
           - text: Share your ideas
             url: https://go.microsoft.com/fwlink/?linkid=2074172
