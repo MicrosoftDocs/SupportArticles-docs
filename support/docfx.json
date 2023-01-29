@@ -342,7 +342,7 @@
         "azure/active-directory/*.md": "Active Directory",
         "azure/devops/*.md": "Azure DevOps",
         "azure/synapse-analytics/**/*.md": "Azure Synapse Analytics",
-        "dynamics-365/customer-insights/*.md": "Dynamics 365 Customer Insights",
+        "dynamics-365/customer-insights/**/*.md": "Dynamics 365 Customer Insights",
         "dynamics-365/fraud-protection/*.md": "Dynamics 365 Fraud Protection",
         "dynamics-365/marketing/*.md": "Dynamics 365 Marketing",
         "dynamics-365/sales/*.md": "Dynamics 365 Sales",

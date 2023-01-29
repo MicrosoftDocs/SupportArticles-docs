@@ -8,7 +8,7 @@ ms.date: 01/23/2023
 
 # Segment not eligible for export for B-to-B audiences
 
-Customer Insights environments for business accounts support contact segments and account segments. Due to this change, contact exports only work with segments based on contacts. Associate contact details with segments and update the refresh schedule to address the error.
+Dynamics 365 Customer Insights environments for business accounts support contact segments and account segments. Due to this change, contact exports only work with segments based on contacts. Associate contact details with segments and update the refresh schedule to address the error.
 
 ## Prerequisites
 

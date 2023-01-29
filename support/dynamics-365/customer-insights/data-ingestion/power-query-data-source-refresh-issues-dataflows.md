@@ -26,7 +26,7 @@ You may find the following issues:
 To solve the issue, take the following steps:
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
-1. Choose the environment with your Customer Insights data and navigate to **Dataflows**.
+1. Choose the environment with your Dynamics 365 Customer Insights data and navigate to **Dataflows**.
 1. If the status is "Success":
 
    1. Review the refresh schedule from the refresh history.

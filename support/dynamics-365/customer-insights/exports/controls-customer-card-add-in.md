@@ -12,7 +12,7 @@ If the GUID (Globally Unique Identifier) of the contact ID contains capital lett
 
 ## Prerequisites
 
-- Administrator permissions in Customer Insights.
+- Administrator permissions in Dynamics 365 Customer Insights.
 - Make sure that you configured the Card Add-in according to the instructions: [Configure the Customer Card Add-in](/dynamics365/customer-insights/customer-card-add-in#configure-the-customer-card-add-in).
 - Ownership of the data source.
 
