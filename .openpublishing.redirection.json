@@ -5722,5 +5722,50 @@
       "redirect_url": "/previous-versions/troubleshoot/iis/events-not-detected-scom",
       "redirect_document_id": false
     },
+    {
+      "source_path": "support/developer/webapps/iis/development/error-0x80004005-register-webclass-dll.md",
+      "redirect_url": "/previous-versions/troubleshoot/iis/error-0x80004005-register-webclass-dll",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/debugdiag-collected-information.md",
+      "redirect_url": "/previous-versions/troubleshoot/iis/debugdiag-collected-information",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/webapps/iis/iisadmin-service-inetinfo/administration-cmdlets-slow.md",
+      "redirect_url": "/previous-versions/troubleshoot/iis/administration-cmdlets-slow",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-authentication-authorization/service-reference-endpointconfigurationname.md",
+      "redirect_url": "/previous-versions/troubleshoot/iis/service-reference-endpointconfigurationname",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/webapps/iis/health-diagnostic-performance/troubleshoot-abo-mapper-errors.md",
+      "redirect_url": "",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/webapps/iis/deployment-migration/webdeploy-publishing-endpoint-wap.md",
+      "redirect_url": "",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/webapps/iis/site-behavior-performance/expression-encoder-crash-live-broadcasting.md",
+      "redirect_url": "/previous-versions/troubleshoot/iis/expression-encoder-crash-live-broadcasting",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-modules-features/disable-save-embedded-files-dialog.md",
+      "redirect_url": "/previous-versions/troubleshoot/iis/disable-save-embedded-files-dialog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/webapps/iis/site-behavior-performance/stale-content-when-content-store-vhd.md",
+      "redirect_url": "previous-versions/troubleshoot/iis/stale-content-when-content-store-vhd",
+      "redirect_document_id": false
+    },
 ]
 }
