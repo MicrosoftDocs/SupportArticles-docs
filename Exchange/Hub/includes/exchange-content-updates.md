@@ -2,6 +2,14 @@
 
 
 
+## Week of January 23, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 1/23/2023 | [Version error when you install Exchange Server in RecoverServer mode](/exchange/troubleshoot/setup/version-error-in-recover-server-mode-install) | added |
+
+
 ## Week of January 16, 2023
 
 
@@ -45,11 +53,3 @@
 | 1/10/2023 | [Can't register a Hybrid Agent in Exchange Server](/exchange/troubleshoot/move-mailboxes/cannot-register-hybrid-agent) | added |
 | 1/10/2023 | [Outlook for Mac users can't access on-premises public folders](/exchange/troubleshoot/public-folders/outlook-for-mac-unable-access-public-folders) | added |
 | 1/10/2023 | [Exchange UnifiedContent folder fills up the drive](/exchange/troubleshoot/administration/unifiedcontent-folder-fills-up-drive) | added |
-
-
-## Week of December 19, 2022
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 12/20/2022 | [Unexpected PublicFolderMailBoxes groups are created](/exchange/troubleshoot/administration/publicfoldermailboxes-dynamic-distribution-groups) | modified |
