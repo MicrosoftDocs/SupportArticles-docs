@@ -28,7 +28,7 @@ If you want the WSFC to trigger a failover instead of a resource start when [err
 
 1. Expand your cluster and select **Roles**.
 
-1. Right-click the first role and select **Properties** > **Polices**.
+1. Right-click the first role and select **Properties** > **Policies**.
 
 1. Set the value of **Maximum restarts in the specified period** to **0**.
 
@@ -38,19 +38,19 @@ If you want the WSFC to trigger a failover instead of a resource start when [err
 
 ## Custom configuration option
 
-1. Open SQL Server Management Studio and connect to your primary and secondary replicas.
+1. Create a text file with the following t-sql command inside, note path and file name for next steps:
 
 1. Run the following statement:
 
    ```sql
+   ;Connect [ReplicaVM\instanceName]
    Alter Availability Group [AGName] Force_Failover;
-   Go
    Go
    ```
 
 1. Expand **SQL Server Agent**, right-click **Alert**, and select **New Alert...**.
 
-1. Specify a value for **Name**, select **SQL Server event alert** for **Type**, specify the value of **Error number** to **823**, and then select **OK**.
+1. Specify a value for **Name**, select **SQL Server event alert** for **Type**, specify the value of **Error number** to **823** or any other desired error as per the list, and then select **OK**.
 
 1. Select **Response**, check **Execute job**, select the job you want, and then select **OK**.
 
@@ -58,6 +58,4 @@ If you want the WSFC to trigger a failover instead of a resource start when [err
 
 1. Enter the following failover SQLCMD command:
 
-   `sqlcmd -S <ReplicaName1> -U SQLADMIN -P`
-
-1. Removed the Disk. Once you get error 823, the Always On availability group fails over to the secondary replica.
+   `sqlcmd -S <ReplicaName1> -U SQLADMIN -P <YourPassword> -i "path to your sql file from step 1"`
