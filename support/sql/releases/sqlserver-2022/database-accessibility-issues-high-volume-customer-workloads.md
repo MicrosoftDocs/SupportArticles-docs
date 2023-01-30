@@ -45,7 +45,7 @@ SELECT * FROM sys.dm_database_encryption_keys
 
 Each new cumulative update for SQL Server contains all the hotfixes and security fixes that were in the previous build. We recommend that you install the latest build for your version of SQL Server:
 
-Latest cumulative update for SQL Server 2022
+[Latest cumulative update for SQL Server 2022](build-versions.md)
 
 ## Status
 

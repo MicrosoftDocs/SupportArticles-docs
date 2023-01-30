@@ -783,6 +783,8 @@
         href: releases/sqlserver-2022/revert-the-length-of-routine-definition.md
       - name: 'Improvement: The hybrid buffer pool with direct write feature is enabled by default'
         href: releases/sqlserver-2022/hybrid-buffer-pool-with-direct-write-feature-enabled-by-default.md
+      - name: 'Improvement: Split the FT_IFTS_RWLOCK wait type into more granular wait types'
+        href: releases/sqlserver-2022/split-ft-ifts-rwlock-wait-type.dm
       - name: 'FIX: Log Reader Agent reader thread may generate an assertion dump'
         href: releases/sqlserver-2022/log-reader-agent-reader-thread-may-generate-an-assertion-dump.md
       - name: 'FIX: Error when CDC capture process inserts duplicate key in cdc.lsn_time_mapping'
