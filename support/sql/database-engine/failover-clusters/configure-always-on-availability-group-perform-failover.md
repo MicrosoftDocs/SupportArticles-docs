@@ -38,9 +38,7 @@ If you want the WSFC to trigger a failover instead of a resource start when [err
 
 ## Custom configuration option
 
-1. Create a text file with the following t-sql command inside, note path and file name for next steps:
-
-1. Run the following statement:
+1. Create a text file that contains the following t-sql commands, and note the path and file name for later steps:
 
    ```sql
    ;Connect [ReplicaVM\instanceName]
