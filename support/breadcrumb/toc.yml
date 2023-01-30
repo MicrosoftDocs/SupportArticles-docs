@@ -166,6 +166,9 @@
       - name: Power Automate
         tocHref: /troubleshoot/power-platform/power-automate/
         topicHref: /troubleshoot/power-platform/power-automate/welcome-power-automate
+      - name: AI Builder
+        tocHref: /troubleshoot/power-platform/ai-builder/
+        topicHref: /troubleshoot/power-platform/ai-builder/welcome-ai-builder
 
     - name: Microsoft Dynamics
       tocHref: /troubleshoot/dynamics/
