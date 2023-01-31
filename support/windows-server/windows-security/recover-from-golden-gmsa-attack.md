@@ -27,11 +27,11 @@ For a description of a Golden gMSA attack, see [Introducing the Golden GMSA Atta
 
 The description is accurate and the approach to resolve the problem is to replace the Microsoft Key Distribution Service (kdssvc.dll, also known as KDS) root key object and all gMSAs that use the compromised KDS root key object.
 
-## More Information
+## More information
 
-In a successful attack on a gMSA, the attacker obtains all the important attributes of the KDS root key object and the **SId** and **msds-ManagedPasswordID** attributes of a gMSA object.
+In a successful attack on a gMSA, the attacker obtains all the important attributes of the KDS root key object and the **Sid** and **msds-ManagedPasswordID** attributes of a gMSA object.
 
-**msds-ManagedPasswordID** is only present on a writable copy of the domain. Therefore, if a domain controller's database is exposed, only the domain that the domain controller hosts is open to the Golden gMSA attack. However, if the attacker can authenticate to a domain controller that hosts the domain, the attacker can get the contents of **msds-ManagedPasswordID**. The attacker can then use this information to craft an attack against gMSAs in additional domains.
+**msds-ManagedPasswordID** is only present on a writable copy of the domain. Therefore, if a domain controller's database is exposed, only the domain that the domain controller hosts is open to the Golden gMSA attack. However, if the attacker can authenticate to a domain controller of a different domain in the forest, the attacker might have sufficient permissions to get the contents of **msds-ManagedPasswordID**. The attacker can then use this information to craft an attack against gMSAs in additional domains.
 
 To protect additional domains of your forest after one domain has been exposed, you have to replace all the gMSAs in the exposed domain before the attacker can leverage the information. Most of the time you don't know the details of what was exposed. Therefore, we suggest that you apply the resolution to all domains of the forest.
 
@@ -50,7 +50,7 @@ In the domain that holds the gMSAs that you want to repair, follow these steps:
 
 1. Take a domain controller offline, and isolate it from the network.
 1. Restore the domain controller from a backup that was created at about the time the AD DS database was exposed.
-1. Run an authoritative restore on the domain's **Managed Service Accounts** container. Make sure that the restore operation includes all of the container's child objects that may be associated with this domain controller.
+1. Run an authoritative restore on the domain's **Managed Service Accounts** container. Make sure that the restore operation includes all of the container's child objects that may be associated with this domain controller. This step rolls back the last password update status. The next time a service retrieves the password, the password updates to a new password that's based on the new KDS root key object.
 1. On a different domain controller, follow the steps in [Create the Key Distribution Services KDS Root Key](/windows-server/security/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key.md) to create a new KDS root key object.
 1. On all the domain controllers, restart **Microsoft Key Distribution Service**.
 1. Create a new gMSA. Make sure that the new gMSA uses the new KDS root key object to create the value for the **msDS-ManagedPasswordId** attribute.
@@ -74,9 +74,12 @@ In the domain that holds the gMSAs that you want to repair, follow these steps:
 
 ### Case 2: You don't know when or what details of the KDS root key object were exposed, and you can’t wait for the passwords to roll
 
-You have to create a new KDS root key object, and use this object to replace all the gMSAs in the domains of the forest that use the exposed KDS root key object.
+Such an exposure might be part of a complete exposure of your Active Directory forest that can lead to a situation in which the attacker can run offline attacks on all passwords. In this case consider running a Forest Recovery, or resetting all account passwords. Recovering the gMSAs to a clean state is part of this activity.
 
-The following steps resemble the procedure that's in [Getting Started with Group Managed Service Accounts](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md). However, there are a few important changes.
+During the following process, you have to create a new KDS root key object. Then you use this object to replace all the gMSAs in the domains of the forest that use the exposed KDS root key object.
+
+> [!NOTE]  
+> The following steps resemble the procedure that's in [Getting Started with Group Managed Service Accounts](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md). However, there are a few important changes.
 
 Follow these steps:
 
@@ -102,7 +105,6 @@ Follow these steps:
 
       If the first gMSA that you created uses the new KDS root key, all subsequent gMSAs also use the new key.
 
-1. Rejoin the member servers to the domain.
 1. Update the appropriate services to use the new gMSAs.
 1. Delete the old gMSAs that used the old KDS root key object.
 1. Delete the old KDS root key object.
