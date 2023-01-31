@@ -70,7 +70,9 @@
       - name: 9002 error on primary replica
         href: database-engine/availability-groups/error-9002-transaction-log-large.md
       - name: Always On DB in recovery pending or suspect state
-        href: database-engine/availability-groups/alwayson-availability-databases-recovery-pending-suspect.md    
+        href: database-engine/availability-groups/alwayson-availability-databases-recovery-pending-suspect.md
+      - name: Configure an Always On availability group to perform a failover
+        href: database-engine/availability-groups/configure-always-on-availability-group-perform-failover.md
       - name: Error 2767 on secondary replica
         href: database-engine/availability-groups/error-2767-query-secondary-replica-fails.md
       - name: Error 41131 when creating availability group
@@ -91,8 +93,6 @@
         href: database-engine/failover-clusters/cluster-resource-goes-failed-state.md
       - name: Cluster validation rule failure
         href: database-engine/failover-clusters/error-install-sql-server-windows-server-cluster.md
-      - name: Configure an Always On availability group to perform a failover
-        href: database-engine/failover-clusters/configure-always-on-availability-group-perform-failover.md
       - name: Create databases or change disk file locations
         href: database-engine/failover-clusters/create-databases-change-disk-file-locations.md
       - name: Installation of SQL Server on a CSV disk fails
