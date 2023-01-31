@@ -1,19 +1,19 @@
 ---
-title: Troubleshooting Synapse Link for Azure Synapse Analytics serverless SQL pool
-description: Solutions for common issues experienced on Synapse Link for Azure Synapse Analytics serverless SQL pool
+title: Troubleshooting Azure Synapse Link for Azure Synapse Analytics serverless SQL pool
+description: Solutions for common issues experienced on Azure Synapse Link for Azure Synapse Analytics serverless SQL pool
 ms.date: 01/31/2023
 author: scott-epperly
 ms.author: goventur
 ms.reviewer: scepperl
 ---
 
-# Troubleshooting Synapse Link for Azure Synapse Analytics serverless SQL pool
+# Troubleshooting Azure Synapse Link for Azure Synapse Analytics serverless SQL pool
 
 _Applies to:_ &nbsp; Azure Synapse Analytics
 
 need a description here
 
-## Synapse Link for Dataverse
+## Azure Synapse Link for Dataverse
 
 ### Data Export Service (DES) deprecation
 
@@ -25,11 +25,11 @@ Learn how to transition from Data Export Service to Azure Synapse Link for Datav
 
 ### Near real-time data and read-only snapshot data
 
-After creating an Azure Synapse Link, two versions of the table data will be synchronized in Azure Synapse Analytics and/or Azure Data Lake Storage Gen2 in your Azure subscription by default to ensure you can reliably consume updated data in the lake at any given time:
+After you create an Azure Synapse Link for Dataverse, there will be two versions of the table data that will be synchronized in Azure Synapse Analytics and/or Azure Data Lake Storage Gen2:
 
 |Table type|Description|
 |--|--|
-|**Near real-time data**|Provides a copy of data synchronized from Dataverse by using Synapse Link in an efficient manner by detecting what data has changed since it was initially extracted or last synchronized.|
+|**Near real-time data**|Provides a copy of data synchronized from Dataverse by using Azure Synapse Link in an efficient manner by detecting what data has changed since it was initially extracted or last synchronized.|
 |**Snapshot data**|Provides a read-only copy of near real-time data that's updated at regular intervals (in this case every hour).|
 
 For more information, see [Access near real-time data and read-only snapshot data](/power-apps/maker/data-platform/azure-synapse-link-synapse#access-near-real-time-data-and-read-only-snapshot-data).
@@ -40,7 +40,7 @@ When creating an Azure Synapse Link for Dataverse with your Azure Synapse worksp
 
 For more information, see [Query and analyze the incremental updates (preview)](/power-apps/maker/data-platform/azure-synapse-incremental-updates).
 
-## Synapse Link for Azure Cosmos DB
+## Azure Synapse Link for Azure Cosmos DB
 
 ### Accessing Azure Cosmos DB data
 
@@ -64,22 +64,26 @@ Learn how to [automatically handle analytical store schemas](/azure/cosmos-db/an
 
 ### Missing properties (columns) in the query result
 
-If you don't see some of the columns that represent properties existing in your Azure Cosmos DB containers, check the constraints.
+If you're missing columns that exist in your Azure Cosmos DB containers, it's probable that the schema constraints have been violated.  The following constraints are applicable on the operational data in Azure Cosmos DB when you enable analytical store to automatically infer and represent the schema correctly:
 
-You can have a maximum of 200 properties at any nesting level in the schema and a maximum nesting depth of 5. An item with 201 properties doesn't meet this constraint and will not be represented in the analytical store. An item with more than 5 nested levels in the schema also doesn't meet this constraint and will not be represented in the analytical store.  
+* You can have a maximum of 1000 properties across all nested levels in the document schema and a maximum nesting depth of 127.
+    * Only the first 1000 properties are represented in the analytical store.
+    * Only the first 127 nested levels are represented in the analytical store.
+    * The first level of a JSON document is its / root level.
+    * Properties in the first level of the document will be represented as columns.
 
-Another possible cause is that if the Azure Cosmos DB analytical store follows the well-defined schema representation and the specification above is violated by certain items, those items will not be included in the analytical store. Learn how to [automatically handle analytical store schemas](/azure/cosmos-db/analytical-store-introduction#analytical-schema).  
+For more information on the schema constraints, see [Analytical store - Overview](/azure/cosmos-db/analytical-store-introduction#analytical-schema).
 
 All transactional operations are propagated, including deletes. The analytical store time to live (TTL) setting also can cause data removal.
 
 - If a document is deleted in transactional store, it will also be deleted from analytical store, despite both store's TTLs.
 - If transactional TTL is smaller than analytical TTL, the data is archived from transactional store but kept in analytical store up to the configured TTL limit.
 - If transactional TTL is bigger than analytical TTL, data will be archived from analytical store and kept in transactional store up to the configured TTL limit.
-- If you use the SQL API, the schema is well-defined by default, meaning that the first document in the collection will define the analytical store schema. Documents that violate that format won't be synced to the analytical store.  
+- If you use the SQL API, the schema is well-defined by default, meaning that the first document in the collection will define the analytical store schema. If a document doesn't conform to the first document's schema, then it won't be synced to the analytical store.  
 
-### Additional resources
+### Resources
 
 - [What is Azure Cosmos DB analytical store](/azure/cosmos-db/analytical-store-introduction)
 - [Analytical store time to live (TTL) overview](/azure/cosmos-db/analytical-store-introduction#analytical-ttl)
-- [Frequently asked questions about Synapse Link for Azure Cosmos DB](/azure/cosmos-db/synapse-link-frequently-asked-questions)
+- [Frequently asked questions about Azure Synapse Link for Azure Cosmos DB](/azure/cosmos-db/synapse-link-frequently-asked-questions)
 - [Schema representation](/azure/cosmos-db/analytical-store-introduction#schema-representation)
