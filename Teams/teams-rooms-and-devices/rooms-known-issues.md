@@ -55,7 +55,8 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 
 | Issue  |  Description | Workaround |
 | --- | --- | --- |
-| Laser pointer and drawing tools in PowerPoint Live don't display for in-room participants | In-room meeting participants in a Teams meeting who're using Teams Rooms on Android devices aren't able to see the following features during a PowerPoint Live presentation: Laser pointer, pen, highlighter, and eraser. | No workaround is available at this time. |
+| Laser pointer and drawing tools in PowerPoint Live don't display for in-room participants | In-room meeting participants in a Teams meeting who're using Teams Rooms on Android devices aren't able to see the following features during a PowerPoint Live presentation: Laser pointer, pen, highlighter, and eraser. | Join the meeting on your personal device to see the laser pointer and drawing tools in PowerPoint Live. |
+| Teams Admin Settings unavailable on Teams Rooms on Android devices with Teams Rooms Basic license. | The **Teams Admin Settings** option under **Device Settings** is unavailable on devices that have the Teams Rooms Basic license for Teams Rooms on Android CY22 U3 app (version 1449/1.0.96.2022120503). | Admins can either assign a Teams Rooms Pro license to the same device or downgrade the device to use Teams Rooms on Android CCY22 U2B app (version: 1449/1.0.96.2022090606) instead. |
 
 ### Issues with Teams phones
 
@@ -65,7 +66,7 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 |Can't delete contacts on Android phones|You can't delete contacts from Teams on Android phones.|Use either the Teams desktop or the Teams web client to delete contacts from Teams.|
 |Busy on Busy feature is unavailable | The Busy on Busy feature isn't available in Teams on phones. | This feature isn't available for Teams on phones at this time. |
 | Signed out of Teams on Android devices | Teams Rooms on Android, Teams phone devices, Teams panels, and Teams displays are signed out of Teams automatically. | Follow the instructions provided in [Signed out of Teams on Android devices](./signed-out-of-teams-android-devices.md).|
-| Can't resume a call after using **Consult first** option on Teams phones | After using the **Consult first** option in the **Transfer** menu when you select the **Resume** option to resume the call, the call fails. | No workaround is available at this time.|
+| Can't resume a call after using **Consult first** option on Teams phones | After using the **Consult first** option in the **Transfer** menu when you select the **Resume** option to resume the call, the call fails. | End the call made by using the **Consult first** option and then resume the original call.|
 |Calls on long hold in GCCH tenants drop intermittently|On GCCH tenants that're running 2022 update #4A (Teams app version 1449/1.0.94.2022110803), when a call is put on long hold by a user the call drops in some instances. This issue doesn't occur on other clouds.|No workaround is available at this time.|
 
 ## Limitations
