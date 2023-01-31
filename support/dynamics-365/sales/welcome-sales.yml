@@ -72,3 +72,15 @@ landingContent:
             url: troubleshoot-lead-form-auto-generated-contact-company-fields.md
           - text: Troubleshoot issues with table views
             url: troubleshoot-table-views-issues.md
+
+# Card
+  - title: Documentation and training
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Dynamics 365 Sales documentation
+            url: /dynamics365/sales/help-hub
+          - text: Dynamics 365 Sales training
+            url: /training/dynamics365/sales
+          - text: Dynamics 365 Community
+            url: https://community.dynamics.com/

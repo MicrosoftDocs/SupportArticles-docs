@@ -41,3 +41,15 @@ landingContent:
             url: tax/troubleshoot-tax-engine-gte-issues.md
           - text: Voucher isn't generated on the Voucher transactions page
             url: tax/sales-tax-troubleshooting-voucher-not-generated.md
+
+# Card
+  - title: Documentation and training
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Dynamics 365 Finance documentation
+            url: /dynamics365/finance/
+          - text: Dynamics 365 Finance training
+            url: /training/dynamics365/finance
+          - text: Dynamics 365 Community
+            url: https://community.dynamics.com/
