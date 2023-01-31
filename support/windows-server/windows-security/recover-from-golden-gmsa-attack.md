@@ -17,7 +17,7 @@ keywords: gMSA, golden gMSA, kds root key object
 
 # How to recover from a Golden gMSA attack
 
-This article describes an approach to repairing group Managed Service Account (gMSA) account credentials that are affected by a domain controller database exposure incident.
+This article describes an approach to repairing group Managed Service Account (gMSA) credentials that are affected by a domain controller database exposure incident.
 
 _Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -66,7 +66,7 @@ In the domain that holds the gMSAs that you want to repair, follow these steps:
 
    In this value, the GUID data starts at offset 24. The parts of the GUID are in a different sequence. In this image, the red, green, and blue sections identify the reordered parts. The orange section identifies the part of the sequence that is the same as the original GUID.
 
-   If the first gMSA that you created uses the new KDS root key, all subsequent gMSA also use the new key.
+   If the first gMSA that you created uses the new KDS root key, all subsequent gMSAs also use the new key.
 
 1. Delete the old KDS root key object.
 1. Reconnect the restored domain controller and bring it online.  
@@ -100,7 +100,7 @@ Follow these steps:
 
       In this value, the GUID data starts at offset 24. The parts of the GUID are in a different sequence. In this image, the red, green, and blue sections identify the reordered parts. The orange section identifies the part of the sequence that is the same as the original GUID.
 
-      If the first gMSA that you created uses the new KDS root key, all subsequent gMSA also use the new key.
+      If the first gMSA that you created uses the new KDS root key, all subsequent gMSAs also use the new key.
 
 1. Rejoin the member servers to the domain.
 1. Update the appropriate services to use the new gMSAs.
