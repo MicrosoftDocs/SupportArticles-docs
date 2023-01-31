@@ -11,7 +11,7 @@ ms.reviewer: scepperl
 
 _Applies to:_ &nbsp; Azure Synapse Analytics
 
-> **Note**: Review the [list of known issues](https://learn.microsoft.com/azure/synapse-analytics/known-issues) currently active or recently resolved in Azure Synapse Analytics.
+> **Note**: Review the [list of known issues](/azure/synapse-analytics/known-issues) currently active or recently resolved in Azure Synapse Analytics.
 
 Scan the following sections for guidance to achieve optimal performance and to prevent failures related to resource constraints on your Azure Synapse Analytics serverless SQL pools.
 
@@ -19,8 +19,8 @@ Scan the following sections for guidance to achieve optimal performance and to p
 
 The information and strategies contained in the following articles lay the foundation for much of what you need to know for getting the best performance out of your serverless SQL pool.  It's highly encouraged that you review these articles to establish your understanding of the use cases and common issues to expect.
 
-- [Best practices for serverless SQL pool in Azure Synapse Analytics](https://learn.microsoft.com/azure/synapse-analytics/sql/best-practices-serverless-sql-pool)
-- [Troubleshoot serverless SQL pool in Azure Synapse Analytics](https://learn.microsoft.com/azure/synapse-analytics/sql/resources-self-help-sql-on-demand?tabs=x80070002)
+- [Best practices for serverless SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql/best-practices-serverless-sql-pool)
+- [Troubleshoot serverless SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql/resources-self-help-sql-on-demand?tabs=x80070002)
 
 ## Understand scaling on serverless SQL pool
 
@@ -31,8 +31,8 @@ Serverless SQL pools don't require you to manually pick the right size. The syst
 For full documentation on performance tuning for Delta Lake files, see the following resources:
 
 - [Delta Lake Documentation Page](https://docs.delta.io/latest/delta-intro.html).
-- [What is Delta Lake](https://learn.microsoft.com/azure/synapse-analytics/spark/apache-spark-what-is-delta-lake)
-- [Query Delta Lake files using serverless SQL pool in Azure Synapse Analytics](https://learn.microsoft.com/azure/synapse-analytics/sql/query-delta-lake-format)
+- [What is Delta Lake](/azure/synapse-analytics/spark/apache-spark-what-is-delta-lake)
+- [Query Delta Lake files using serverless SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql/query-delta-lake-format)
 
 ## Performance tuning guidance for CSV files
 
@@ -40,10 +40,10 @@ The most important activity for ensuring performant querying over CSV files on a
 
 For more detailed information about the role of statistics on CSV files in serverless SQL pools, see:
 
-- [Querying CSV files](https://learn.microsoft.com/azure/synapse-analytics/sql/query-single-csv-file)
-- [Statistics in serverless SQL pool](https://learn.microsoft.com/azure/synapse-analytics/sql/develop-tables-statistics#statistics-in-serverless-sql-pool)
-- [Manually create statistics for CSV files](https://learn.microsoft.com/azure/synapse-analytics/sql/best-practices-serverless-sql-pool#manually-create-statistics-for-csv-files)
-- [Query time-out expired](https://learn.microsoft.com/azure/synapse-analytics/sql/resources-self-help-sql-on-demand?tabs=x80070002#query-timeout-expired)
+- [Querying CSV files](/azure/synapse-analytics/sql/query-single-csv-file)
+- [Statistics in serverless SQL pool](/azure/synapse-analytics/sql/develop-tables-statistics#statistics-in-serverless-sql-pool)
+- [Manually create statistics for CSV files](/azure/synapse-analytics/sql/best-practices-serverless-sql-pool#manually-create-statistics-for-csv-files)
+- [Query time-out expired](/azure/synapse-analytics/sql/resources-self-help-sql-on-demand?tabs=x80070002#query-timeout-expired)
 
 ## Recommendations for using Power BI and other reporting tools
 
@@ -66,6 +66,6 @@ For more detailed information about the role of statistics on CSV files in serve
 
 |Category|Recommended actions or documentation|
 |--|--|
-|Data Exploration|[Azure storage](https://learn.microsoft.com/azure/synapse-analytics/sql/develop-storage-files-overview?tabs=impersonation)<br>[Store query results on Azure storage](https://learn.microsoft.com/azure/synapse-analytics/sql/create-external-table-as-select)<br>[Logical data warehouse](https://learn.microsoft.com/azure/synapse-analytics/sql/tutorial-logical-data-warehouse)|
-|OPENROWSET and External Tables|[OPENROWSET function](https://learn.microsoft.com/azure/synapse-analytics/sql/develop-openrowset)<br>[External tables](https://learn.microsoft.com/azure/synapse-analytics/sql/develop-tables-external-tables?tabs=native)<br>[Stored Procedures](https://learn.microsoft.com/azure/synapse-analytics/sql/develop-stored-procedures)<br>[Views](https://learn.microsoft.com/azure/synapse-analytics/sql/create-use-views)<br>[Data transformations](https://learn.microsoft.com/azure/synapse-analytics/sql/develop-tables-cetas#cetas-in-serverless-sql-pool)|
-| Available T-SQL features in serverless SQL pools | [T-SQL features in Azure Synapse pools](https://learn.microsoft.com/azure/synapse-analytics/sql/overview-features)|
+|Data Exploration|[Azure storage](/azure/synapse-analytics/sql/develop-storage-files-overview?tabs=impersonation)<br>[Store query results on Azure storage](/azure/synapse-analytics/sql/create-external-table-as-select)<br>[Logical data warehouse](/azure/synapse-analytics/sql/tutorial-logical-data-warehouse)|
+|OPENROWSET and External Tables|[OPENROWSET function](/azure/synapse-analytics/sql/develop-openrowset)<br>[External tables](/azure/synapse-analytics/sql/develop-tables-external-tables?tabs=native)<br>[Stored Procedures](/azure/synapse-analytics/sql/develop-stored-procedures)<br>[Views](/azure/synapse-analytics/sql/create-use-views)<br>[Data transformations](/azure/synapse-analytics/sql/develop-tables-cetas#cetas-in-serverless-sql-pool)|
+| Available T-SQL features in serverless SQL pools | [T-SQL features in Azure Synapse pools](/azure/synapse-analytics/sql/overview-features)|

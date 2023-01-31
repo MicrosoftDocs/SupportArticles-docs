@@ -19,7 +19,7 @@ need a description here
 
 Learn how to transition from Data Export Service to Azure Synapse Link for Dataverse with the following articles:
 
-- [DES deprecation playbook](https://learn.microsoft.com/shows/dynamics-365-fasttrack-architecture-insights/best-practice-des-deprecation-playbook)
+- [DES deprecation playbook](/shows/dynamics-365-fasttrack-architecture-insights/best-practice-des-deprecation-playbook)
 - [Data Export Services (DES) - Deprecation note](https://community.dynamics.com/365/f/dynamics-365-general-forum/442397/data-export-services-des---deprecation---metadata-information)
 - [From Data Export Service to Azure Synapse Link for Dataverse](https://powerapps.microsoft.com/blog/do-more-with-data-from-data-export-service-to-azure-synapse-link-for-dataverse)
 
@@ -32,13 +32,13 @@ After creating an Azure Synapse Link, two versions of the table data will be syn
 |**Near real-time data**|Provides a copy of data synchronized from Dataverse by using Synapse Link in an efficient manner by detecting what data has changed since it was initially extracted or last synchronized.|
 |**Snapshot data**|Provides a read-only copy of near real-time data that's updated at regular intervals (in this case every hour).|
 
-For more information, see [Access near real-time data and read-only snapshot data](https://learn.microsoft.com/power-apps/maker/data-platform/azure-synapse-link-synapse#access-near-real-time-data-and-read-only-snapshot-data).
+For more information, see [Access near real-time data and read-only snapshot data](/power-apps/maker/data-platform/azure-synapse-link-synapse#access-near-real-time-data-and-read-only-snapshot-data).
 
 ### Incremental updates (Preview)
 
 When creating an Azure Synapse Link for Dataverse with your Azure Synapse workspace, you can enable the incremental update feature to create a series of time-stamped folders containing only the changes to the Dataverse data that occurred during the user-specified time interval.
 
-For more information, see [Query and analyze the incremental updates (preview)](https://learn.microsoft.com/power-apps/maker/data-platform/azure-synapse-incremental-updates).
+For more information, see [Query and analyze the incremental updates (preview)](/power-apps/maker/data-platform/azure-synapse-incremental-updates).
 
 ## Synapse Link for Azure Cosmos DB
 
@@ -46,8 +46,8 @@ For more information, see [Query and analyze the incremental updates (preview)](
 
 You can query Azure Cosmos DB data in the analytical store using Spark pools and serverless SQL pools. Resolve common issues by following the steps found in these articles:
 
-- [Spark pools](https://learn.microsoft.com/azure/synapse-analytics/synapse-link/how-to-query-analytical-store-spark) 
-- [Serverless SQL pools](https://learn.microsoft.com/azure/synapse-analytics/sql/query-cosmos-db-analytical-store?tabs=openrowset-credential)
+- [Spark pools](/azure/synapse-analytics/synapse-link/how-to-query-analytical-store-spark) 
+- [Serverless SQL pools](/azure/synapse-analytics/sql/query-cosmos-db-analytical-store?tabs=openrowset-credential)
 
 ### Can't query Azure Cosmos DB container
 
@@ -60,7 +60,7 @@ There are two modes of schema representation in the analytical store. These mode
 - Well-defined schema representation (default for Azure Cosmos DB SQL API)
 - Full fidelity schema representation (default for Azure Cosmos DB's API for MongoDB)  
 
-Learn how to [automatically handle analytical store schemas](https://learn.microsoft.com/azure/cosmos-db/analytical-store-introduction#analytical-schema).  
+Learn how to [automatically handle analytical store schemas](/azure/cosmos-db/analytical-store-introduction#analytical-schema).  
 
 ### Missing properties (columns) in the query result
 
@@ -68,7 +68,7 @@ If you don't see some of the columns that represent properties existing in your 
 
 You can have a maximum of 200 properties at any nesting level in the schema and a maximum nesting depth of 5. An item with 201 properties doesn't meet this constraint and will not be represented in the analytical store. An item with more than 5 nested levels in the schema also doesn't meet this constraint and will not be represented in the analytical store.  
 
-Another possible cause is that if the Azure Cosmos DB analytical store follows the well-defined schema representation and the specification above is violated by certain items, those items will not be included in the analytical store. Learn how to [automatically handle analytical store schemas](https://learn.microsoft.com/azure/cosmos-db/analytical-store-introduction#analytical-schema).  
+Another possible cause is that if the Azure Cosmos DB analytical store follows the well-defined schema representation and the specification above is violated by certain items, those items will not be included in the analytical store. Learn how to [automatically handle analytical store schemas](/azure/cosmos-db/analytical-store-introduction#analytical-schema).  
 
 All transactional operations are propagated, including deletes. The analytical store time to live (TTL) setting also can cause data removal.
 
@@ -79,7 +79,7 @@ All transactional operations are propagated, including deletes. The analytical s
 
 ### Additional resources
 
-- [What is Azure Cosmos DB analytical store](https://learn.microsoft.com/azure/cosmos-db/analytical-store-introduction)
-- [Analytical store time to live (TTL) overview](https://learn.microsoft.com/azure/cosmos-db/analytical-store-introduction#analytical-ttl)
-- [Frequently asked questions about Synapse Link for Azure Cosmos DB](https://learn.microsoft.com/azure/cosmos-db/synapse-link-frequently-asked-questions)
-- [Schema representation](https://learn.microsoft.com/azure/cosmos-db/analytical-store-introduction#schema-representation)
+- [What is Azure Cosmos DB analytical store](/azure/cosmos-db/analytical-store-introduction)
+- [Analytical store time to live (TTL) overview](/azure/cosmos-db/analytical-store-introduction#analytical-ttl)
+- [Frequently asked questions about Synapse Link for Azure Cosmos DB](/azure/cosmos-db/synapse-link-frequently-asked-questions)
+- [Schema representation](/azure/cosmos-db/analytical-store-introduction#schema-representation)

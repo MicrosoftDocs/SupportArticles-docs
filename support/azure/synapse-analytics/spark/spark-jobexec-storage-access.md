@@ -30,8 +30,8 @@ The following use cases aren't supported when connecting to a Storage account fr
 
 | Error | Solution|
 |-------|---------|
-|"errorMessage":"LSRServiceException is \[{\"StatusCode\":400,\"ErrorResponse\":{\"code\":\"LSRLinkedServiceFailure\",\"message\":\"Could not find Linked Service AzureDataLakeStorage1;| This error appears when a Synapse workspace is associated with a Git repository, Azure DevOps Services, or GitHub and if the artifact (notebook, linked service) isn't published. <br><br>Manually publish your [code changes](https://docs.microsoft.com/azure/synapse-analytics/cicd/source-control#publish-code-changes) in the collaboration branch to the Synapse service |
-| stdout: Exception in thread "main" org.apache.hadoop.fs.FileAlreadyExistsException: Operation failed: "This endpoint does not support BlobStorageEvents or SoftDelete. Disable these account features if you would like to use this endpoint.", 409, HEAD, https://<storageaccountname>.dfs.core.windows.net/scripts/?upn=false&action=getAccessControl&timeout=90| Confirm ADLS Gen 2 storage is configured as [primarily storage](https://docs.microsoft.com/azure/synapse-analytics/security/how-to-grant-workspace-managed-identity-permissions#step-1-navigate-to-the-adls-gen2-storage-account-in-azure-portal).<br><br>To disable SoftDelete, uncheck [Enable blob soft delete](https://docs.microsoft.com/azure/storage/blobs/soft-delete-blob-enable?tabs=azure-portal#enable-blob-soft-delete) for the storage account.|
+|"errorMessage":"LSRServiceException is \[{\"StatusCode\":400,\"ErrorResponse\":{\"code\":\"LSRLinkedServiceFailure\",\"message\":\"Could not find Linked Service AzureDataLakeStorage1;| This error appears when a Synapse workspace is associated with a Git repository, Azure DevOps Services, or GitHub and if the artifact (notebook, linked service) isn't published. <br><br>Manually publish your [code changes](/azure/synapse-analytics/cicd/source-control#publish-code-changes) in the collaboration branch to the Synapse service |
+| stdout: Exception in thread "main" org.apache.hadoop.fs.FileAlreadyExistsException: Operation failed: "This endpoint does not support BlobStorageEvents or SoftDelete. Disable these account features if you would like to use this endpoint.", 409, HEAD, https://<storageaccountname>.dfs.core.windows.net/scripts/?upn=false&action=getAccessControl&timeout=90| Confirm ADLS Gen 2 storage is configured as [primarily storage](/azure/synapse-analytics/security/how-to-grant-workspace-managed-identity-permissions#step-1-navigate-to-the-adls-gen2-storage-account-in-azure-portal).<br><br>To disable SoftDelete, uncheck [Enable blob soft delete](/azure/storage/blobs/soft-delete-blob-enable?tabs=azure-portal#enable-blob-soft-delete) for the storage account.|
 
 ## Troubleshooting 403 issue 
 
@@ -47,7 +47,7 @@ The following use cases aren't supported when connecting to a Storage account fr
 
 ## Role-based access control implementation in storage
     
-For role-based access control (RBAC) implementation in storage, details are controlled at the container level. Refer to, [Access control model in Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control-model). 
+For role-based access control (RBAC) implementation in storage, details are controlled at the container level. Refer to, [Access control model in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control-model). 
  
 ### Azure role-based access control
 
@@ -63,9 +63,9 @@ Use Access control lists (ACLs) to apply detailed levels of access to directorie
 
 ## Resources
 
-- [Troubleshoot connectivity between Azure Synapse Analytics Synapse Studio and storage](https://docs.microsoft.com/azure/synapse-analytics/troubleshoot/troubleshoot-synapse-studio-and-storage-connectivity)
-- [Grant permissions to workspace managed identity](https://docs.microsoft.com/azure/synapse-analytics/security/how-to-grant-workspace-managed-identity-permissions)
-- [Synapse workspace managed Identity](https://docs.microsoft.com/azure/synapse-analytics/security/synapse-workspace-managed-identity)
-- [Security baseline](https://docs.microsoft.com/azure/synapse-analytics/security-baseline)
-- [How permissions are evaluated](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control-model#how-permissions-are-evaluated)
+- [Troubleshoot connectivity between Azure Synapse Analytics Synapse Studio and storage](/azure/synapse-analytics/troubleshoot/troubleshoot-synapse-studio-and-storage-connectivity)
+- [Grant permissions to workspace managed identity](/azure/synapse-analytics/security/how-to-grant-workspace-managed-identity-permissions)
+- [Synapse workspace managed Identity](/azure/synapse-analytics/security/synapse-workspace-managed-identity)
+- [Security baseline](/azure/synapse-analytics/security-baseline)
+- [How permissions are evaluated](/azure/storage/blobs/data-lake-storage-access-control-model#how-permissions-are-evaluated)
 
