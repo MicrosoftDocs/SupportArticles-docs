@@ -80,7 +80,7 @@ If you want to disable public IP, you can implement one of the following options
 - [Understanding Azure Synapse Private Endpoints](https://techcommunity.microsoft.com/t5/azure-architecture-blog/understanding-azure-synapse-private-endpoints/ba-p/2281463)
 - [Azure RBAC permissions for Azure Private Link](/azure/private-link/rbac-permissions?msclkid=d6948d48c6dc11ec857440eb53627605)
 - [Assign the correct Synapse RBAC role](/azure/synapse-analytics/security/synapse-workspace-synapse-rbac-roles).
- - [Create and manage IP firewall rules](/azure/azure-sql/database/firewall-configure?view=azuresql#create-and-manage-ip-firewall-rules)
+ - [Create and manage IP firewall rules](/azure/azure-sql/database/firewall-configure#create-and-manage-ip-firewall-rules)
 - Create a [self-hosted integration runtime (SHIR)](/azure/purview/manage-integration-runtimes) while [data exfiltration protection (DEP)](/azure/synapse-analytics/security/workspace-data-exfiltration-protection) is enabled in your workspace to prevent access issues.
 - [Connect to workspace resources from a restricted network](/azure/synapse-analytics/security/how-to-connect-to-workspace-from-restricted-network)
 
