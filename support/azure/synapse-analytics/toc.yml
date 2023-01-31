@@ -14,13 +14,13 @@
 - name: Serverless SQL pool
   items:
   - name: Performance tuning guidance for serverless SQL pool
-    href: serverless-sql/ssq-perf-optimize-querying.md
+    href: serverless-sql/ssql-perf-optimize-querying.md
   - name: Troubleshoot issues with CREATE EXTERNAL TABLE AS SELECT (CETAS) serverless SQL pools
     href: serverless-sql/ssql-perf-cetas.md
   - name: Manage your costs on serverless SQL pool
-    href: serverless-sql/ssq-perf-optimize-cost.md
+    href: serverless-sql/ssql-perf-optimize-cost.md
   - name: Troubleshooting Synapse Link for serverless SQL pool
-    href: serverless-sql/ssq-perf-optimize-synapse-link.md
+    href: serverless-sql/ssql-perf-optimize-synapse-link.md
 - name: Apache Spark
   items: 
   - name: Resolve Azure Synapse Analytics Apache Spark pool storage access issues 
