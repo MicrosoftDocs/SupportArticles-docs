@@ -1,5 +1,5 @@
 ---
-title: GMSA: How to recover from a Golden gMSA attack
+title: How to recover from a Golden gMSA attack
 description: Describes how to repair compromised gMSAs after a Golden gMSA attack
 ms.date: 2/1/2023
 author: v-tappelgate
@@ -15,7 +15,7 @@ ms.technology: windows-server-security
 keywords: gMSA, golden gMSA, kds root key object
 ---
 
-# GMSA: How to recover from a Golden gMSA attack
+#How to recover from a Golden gMSA attack
 
 This article describes an approach to repairing group Managed Service Account (gMSA) account credentials that are affected by a domain controller database exposure incident.
 
@@ -58,16 +58,16 @@ In the domain that holds the gMSAs that you want to repair, follow these steps:
 
    For example if the KDS root key object has the following **cn**:  
 
-   :::image type="content" source="./recover-from-golden gmsa-attack/kds-root-key-cn.png" alt-text="Value of the cn attribute of a KDS root key object.":::  
+   :::image type="content" source="./media/recover-from-golden-gmsa-attack/kds-root-key-cn.png" alt-text="Value of the cn attribute of a KDS root key object.":::  
    A gMSA that's created by using this object has a **msDS-ManagedPasswordId** value that resembles the following:  
-   :::image type="content" source="./recover-from-golden gmsa-attack/gmsa-pwid-data.png" alt-text="Value of the msDS-ManagedPasswordId attribute of a gMSA object, showing how it includes the pieces of the KDS root key cn attribute.":::  
+   :::image type="content" source="./media/recover-from-golden-gmsa-attack/gmsa-pwid-data.png" alt-text="Value of the msDS-ManagedPasswordId attribute of a gMSA object, showing how it includes the pieces of the KDS root key cn attribute.":::  
    In this value, the GUID data starts at offset 24. The parts of the GUID are in a different sequence. In this image, the red, green, and blue sections identify the reordered parts. The orange section identifies the part of the sequence that is the same as the original GUID.
 
    If the first gMSA that you created uses the new KDS root key, all subsequent gMSA also use the new key.
 
 1. Delete the old KDS root key object.
 1. Reconnect the restored domain controller and bring it online.  
-   Now the authoritative restore and all the other changes, including the restored gMSAs, replicate. This action rolls the paswords of the restored gMSAs, creating new passwords that are based on the new KDS root key object.
+   Now the authoritative restore and all the other changes, including the restored gMSAs, replicate. This action rolls the passwords of the restored gMSAs, creating new passwords that are based on the new KDS root key object.
 
 ### Case 2: You do not know when or what details of the KDS root key object were exposed, and you can’t wait for the passwords to roll
 
@@ -88,10 +88,9 @@ Follow these steps:
    1. Check the **msDS-ManagedPasswordId** value of the first gMSA that you created. The value of this attribute is binary data that includes the GUID of the matching KDS root key object.  
 
       For example if the KDS root key object has the following **cn**:  
-
-      :::image type="content" source="./kds-root-key-cn.png" alt-text="":::  
+      :::image type="content" source="./media/recover-from-golden-gmsa-attack/kds-root-key-cn.png" alt-text="Value of the cn attribute of a KDS root key object.":::  
       A gMSA that's created by using this object has a **msDS-ManagedPasswordId** value that resembles the following:  
-      :::image type="content" source="./gmsa-pwid-data.png" alt-text="":::  
+      :::image type="content" source="./media/recover-from-golden-gmsa-attack/gmsa-pwid-data.png" alt-text="Value of the msDS-ManagedPasswordId attribute of a gMSA object, showing how it includes the pieces of the KDS root key cn attribute.":::  
       In this value, the GUID data starts at offset 24. The parts of the GUID are in a different sequence. In this image, the red, green, and blue sections identify the reordered parts. The orange section identifies the part of the sequence that is the same as the original GUID.
 
       If the first gMSA that you created uses the new KDS root key, all subsequent gMSA also use the new key.
@@ -104,5 +103,3 @@ Follow these steps:
 ## References
 
 [Group Managed Service Accounts Overview](./windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview)
-
-
