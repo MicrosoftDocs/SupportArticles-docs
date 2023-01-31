@@ -15,7 +15,7 @@ ms.technology: windows-server-security
 keywords: gMSA, golden gMSA, kds root key object
 ---
 
-#How to recover from a Golden gMSA attack
+# How to recover from a Golden gMSA attack
 
 This article describes an approach to repairing group Managed Service Account (gMSA) account credentials that are affected by a domain controller database exposure incident.
 
@@ -41,7 +41,7 @@ Use one of the following two approaches to resolve this issue, depending on your
 
 ### Case 1: You have reliable information on what information was exposed and when
 
-If you know the that the exposure happened before a certain date, and this date is older than the oldest gMSA password you have, you can resolve the problem without re-creating the gMSAs.
+If you know that the exposure happened before a certain date, and this date is older than the oldest gMSA password you have, you can resolve the problem without re-creating the gMSAs.
 
 > [!NOTE]  
 > You do not have to manually repair gMSAs that were created after the ADDS database was exposure was ended. The attacker does not know the details of these accounts, and their passwords will regenerate based on the new KDS root key object.
@@ -49,7 +49,7 @@ If you know the that the exposure happened before a certain date, and this date 
 In the domain that holds the gMSAs that you want to repair, follow these steps:
 
 1. Take a domain controller offline, and isolate it from the network.
-1. Restore the domain controller from a backup that was created at about the time the ADDS database was exposed.
+1. Restore the domain controller from a backup that was created at about the time the AD DS database was exposed.
 1. Run an authoritative restore on the domain's **Managed Service Accounts** container. Make sure that the restore operation includes all of the container's child objects that may be associated with this domain controller.
 1. On a different domain controller, follow the steps in [Create the Key Distribution Services KDS Root Key](/windows-server/security/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key.md) to create a new KDS root key object.
 1. On all the domain controllers, restart **Microsoft Key Distribution Service**.
@@ -69,7 +69,7 @@ In the domain that holds the gMSAs that you want to repair, follow these steps:
 1. Reconnect the restored domain controller and bring it online.  
    Now the authoritative restore and all the other changes, including the restored gMSAs, replicate. This action rolls the passwords of the restored gMSAs, creating new passwords that are based on the new KDS root key object.
 
-### Case 2: You do not know when or what details of the KDS root key object were exposed, and you can’t wait for the passwords to roll
+### Case 2: You don't know when or what details of the KDS root key object were exposed, and you can’t wait for the passwords to roll
 
 You have to create a new KDS root key object, and use this object to replace all the gMSAs in the domains of the forest that use the exposed KDS root key object.
 
@@ -95,7 +95,7 @@ Follow these steps:
 
       If the first gMSA that you created uses the new KDS root key, all subsequent gMSA also use the new key.
 
-1. Re-join the member servers to the domain.
+1. Rejoin the member servers to the domain.
 1. Update the appropriate services to use the new gMSAs.
 1. Delete the old gMSAs that used the old KDS root key object.
 1. Delete the old KDS root key object.
