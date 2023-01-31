@@ -9,11 +9,19 @@ metadata:
   ms.topic: landing-page # Required
   author: #Required; your GitHub user alias, with correct capitalization.
   ms.author: #Required; microsoft alias of author; optional team alias.
-  ms.date: 8/4/2022
+  ms.date: 01/31/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
+# Card
+  - title: General ledger issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot issues with the General ledger adjustments page
+            url: general-ledger/ledger-adjustments-troubleshoot.md
+
   # Card
   - title: Tax issues
     linkLists:
@@ -21,3 +29,15 @@ landingContent:
         links:
           - text: Error 400 or 401 when setting Dataverse virtual table visibility
             url: tax/cannot-set-dataverse-virtual-table-visibility.md
+          - text: Field value is incorrect in TaxTrans
+            url: tax/sales-tax-troubleshooting-field-value-taxtrans-incorrect.md
+          - text: Tax amount is incorrect after calculation
+            url: tax/apac-ind-gst-troubleshooting-tax-amount-wrong-after-calculation.md
+          - text: Tax configuration errors
+            url: tax/apac-ind-gst-troubleshooting-tax-configuration-errors.md
+          - text: Tax isn't calculated on tax documents
+            url: tax/apac-ind-gst-troubleshooting-tax-not-calculated.md
+          - text: Troubleshoot issues with tax engine (GTE)
+            url: tax/troubleshoot-tax-engine-gte-issues.md
+          - text: Voucher isn't generated on the Voucher transactions page
+            url: tax/sales-tax-troubleshooting-voucher-not-generated.md

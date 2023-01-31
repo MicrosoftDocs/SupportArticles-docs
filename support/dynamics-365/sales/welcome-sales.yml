@@ -9,16 +9,66 @@ metadata:
   ms.topic: landing-page # Required
   author:   #Required; your GitHub user alias, with correct capitalization.
   ms.author:  #Required; microsoft alias of author; optional team alias.
-  ms.date: 3/31/2021
+  ms.date: 01/31/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
 
  # Card
-  - title: Applications and Add-ons
+  - title: Access Issues
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Perform specific operations
-            url: dynamics-365-how-to-articles.md
+          - text: Resolve the errors when signing in to Dynamics 365 (online)
+            url: error-when-signing-dynamics-365.md
+
+ # Card
+  - title: Customization and Solutions issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't import a solution due to components are missing
+            url: import-of-solution-fails-due-to-missing-components.md
+          - text: Can't import a solution with the same field name but a different Data Type
+            url: the-import-of-solution-failed-error-when-importing-solution.md
+          - text: Resolve an input string was not in a correct format error
+            url: input-string-was-not-in-a-correct-format-error.md
+          - text: Resolve an import file is too large to upload error
+            url: the-import-file-is-too-large-upload.md
+          - text: Resolve an error code 80040203 (Invalid Argument)
+            url: error-code-80040203-invalid-argument-error.md
+
+ # Card
+  - title: Dynamics 365 client for Outlook issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Dynamics 365 App for Outlook doesn't show within Outlook
+            url: app-does-not-appear-within-outlook.md
+          - text: Resolve a something went wrong during sign-in error
+            url: something-went-wrong-during-sign.md
+
+ # Card
+  - title: Email and Office Integration issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Resolve an email can't be received because license is invalid error
+            url: email-cannot-be-received-because-license-is-invalid-error.md
+          - text: Resolve a you don't have required privilege (prvReadOrganization) error
+            url: privilege-error-occurs-when-using-dynamics-365-app-for-outlook.md
+          - text: Resolve an account does not have permission to impersonate requested user error
+            url: the-account-does-not-have-permission-to-impersonate-the-requested-user-error.md
+
+ # Card
+  - title: Sales Hub issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot issues with products
+            url: troubleshoot-products-issues.md
+          - text: Troubleshoot issues with automatic generation of contact or company-related fields
+            url: troubleshoot-lead-form-auto-generated-contact-company-fields.md
+          - text: Troubleshoot issues with table views
+            url: troubleshoot-table-views-issues.md
