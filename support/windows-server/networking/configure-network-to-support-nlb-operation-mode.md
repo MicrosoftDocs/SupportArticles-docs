@@ -134,7 +134,7 @@ When you enable IGMP multicast, the NLB nodes send IGMP Join messages to the 239
 Some of the articles that are listed in the [Multicast](#multicast) section include the correct configuration parameters for their devices for multicast with IGMP. To verify that your equipment can support this mode, contact your hardware vendor.
 
 > [!NOTE]
-> NLB supports IGMP Version 1 only on any Windows versions where IGMP multicast mode does exist up to Windows Server 2022.
+> Up until Windows Server 2022, NLB supports IGMP Version 1 on any Windows versions that include IGMP multicast mode.
 
 ## Configure the NLB operation mode
 
