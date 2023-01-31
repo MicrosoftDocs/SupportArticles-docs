@@ -41,8 +41,8 @@ If you want the WSFC to trigger a failover instead of a resource start when [err
 1. Create a text file that contains the following t-sql commands, and note the path and file name for later steps:
 
    ```sql
-   ;Connect [ReplicaVM\instanceName]
-   Alter Availability Group [AGName] Force_Failover;
+   Connect [ReplicaVM\instanceName];
+   Alter Availability Group [AGName] Failover;
    Go
    ```
 
