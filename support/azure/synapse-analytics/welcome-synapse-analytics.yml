@@ -17,6 +17,14 @@ metadata:
 
 landingContent:
 
+  # Card
+  - title: Workspace
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Resolve Azure Synapse Studio connectivity issues
+            ulr: ./workspace/wrk-conn-synapse-studio.md
+ 
  # Card
   - title: Dedicated SQL pool
     linkLists:
@@ -30,3 +38,25 @@ landingContent:
             url: ./dedicated-sql/dsql-perf-stats-accuracy.md
           - text: Troubleshoot tempdb errors on a dedicated SQL pool
             url: ./dedicated-sql/dsql-perf-tempdb-errors.md
+
+ # Card
+  - title: Serverless SQL pool
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Performance tuning guidance for serverless SQL pool
+            url: ./serverless-sql/ssq-perf-optimize-querying.md
+          - text: Troubleshoot issues with CREATE EXTERNAL TABLE AS SELECT (CETAS) serverless SQL pools
+            url: ./serverless-sql/ssql-perf-cetas.md
+          - text: Manage your costs on serverless SQL pool
+            url: ./serverless-sql/ssq-perf-optimize-cost.md
+          - text: Troubleshooting Synapse Link for serverless SQL pool
+            url: ./serverless-sql/ssq-perf-optimize-synapse-link.md
+
+ # Card
+  - title: Apache Spark
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Resolve Azure Synapse Analytics Apache Spark pool storage access issues 
+            url: ./spark/spark-jobexec-storage-access.md
