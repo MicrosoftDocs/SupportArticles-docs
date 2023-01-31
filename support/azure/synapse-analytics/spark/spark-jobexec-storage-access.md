@@ -1,6 +1,6 @@
 ---
 title: Resolve Azure Synapse Analytics Apache Spark pool storage access issues
-description: Provides solutions to common storage issues encounterd on Azure Synapse Analytics Apache Spark pools
+description: Provides solutions to common storage issues encountered on Azure Synapse Analytics Apache Spark pools
 ms.date: 01/31/2023
 author: scott-epperly
 ms.author: kjacobkurian
