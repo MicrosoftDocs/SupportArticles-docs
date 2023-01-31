@@ -23,7 +23,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Resolve Azure Synapse Studio connectivity issues
-            ulr: ./workspace/wrk-conn-synapse-studio.md
+            url: ./workspace/wrk-conn-synapse-studio.md
  
  # Card
   - title: Dedicated SQL pool
