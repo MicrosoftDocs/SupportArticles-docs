@@ -1,6 +1,6 @@
 ---
 title: DHCP Server is slow or fails to respond to DHCP requests if option 66 "Bootp Server Host Name" is wrongly configured
-description: Helps to resolve the issue in which the Dynamic Host Configuration Protocol (DHCP) server answers late or doesn't respond to DHCP requests, even though the request volume won't cause DHCP performance issues.
+description: Helps to resolve the issue in which the Dynamic Host Configuration Protocol (DHCP) server answers delayed or doesn't respond to DHCP requests, even though the request volume won't cause DHCP performance issues.
 ms.date: 01/18/2023
 author: v-lianna
 ms.author: v-lianna
@@ -15,7 +15,7 @@ ms.technology: networking
 ---
 # DHCP Server is slow or fails to respond to DHCP requests if option 66 "Bootp Server Host Name" is wrongly configured
 
-This article helps to resolve the issue in which the Dynamic Host Configuration Protocol (DHCP) server answers late or doesn't respond to DHCP requests, even though the request volume won't cause DHCP performance issues.
+This article helps to resolve the issue in which the Dynamic Host Configuration Protocol (DHCP) server answers delayed or doesn't respond to DHCP requests, even though the request volume won't cause DHCP performance issues.
 
 When a DHCP server has the DHCP server or scope option (**066 Boot Server Host Name**) configured to a server name that isn't resolvable, the DHCP clients can't get an IP address from the DHCP server in time.
 
