@@ -59,8 +59,11 @@ In the domain that holds the gMSAs that you want to repair, follow these steps:
    For example if the KDS root key object has the following **cn**:  
 
    :::image type="content" source="media/recover-from-golden-gmsa-attack/kds-root-key-cn.png" alt-text="Value of the cn attribute of a KDS root key object.":::  
+
    A gMSA that's created by using this object has a **msDS-ManagedPasswordId** value that resembles the following:  
+
    :::image type="content" source="media/recover-from-golden-gmsa-attack/gmsa-pwid-data.png" alt-text="Value of the msDS-ManagedPasswordId attribute of a gMSA object, showing how it includes the pieces of the KDS root key cn attribute.":::  
+
    In this value, the GUID data starts at offset 24. The parts of the GUID are in a different sequence. In this image, the red, green, and blue sections identify the reordered parts. The orange section identifies the part of the sequence that is the same as the original GUID.
 
    If the first gMSA that you created uses the new KDS root key, all subsequent gMSA also use the new key.
@@ -88,9 +91,13 @@ Follow these steps:
    1. Check the **msDS-ManagedPasswordId** value of the first gMSA that you created. The value of this attribute is binary data that includes the GUID of the matching KDS root key object.  
 
       For example if the KDS root key object has the following **cn**:  
+
       :::image type="content" source="media/recover-from-golden-gmsa-attack/kds-root-key-cn.png" alt-text="Value of the cn attribute of a KDS root key object.":::  
+
       A gMSA that's created by using this object has a **msDS-ManagedPasswordId** value that resembles the following:  
+
       :::image type="content" source="media/recover-from-golden-gmsa-attack/gmsa-pwid-data.png" alt-text="Value of the msDS-ManagedPasswordId attribute of a gMSA object, showing how it includes the pieces of the KDS root key cn attribute.":::  
+
       In this value, the GUID data starts at offset 24. The parts of the GUID are in a different sequence. In this image, the red, green, and blue sections identify the reordered parts. The orange section identifies the part of the sequence that is the same as the original GUID.
 
       If the first gMSA that you created uses the new KDS root key, all subsequent gMSA also use the new key.
