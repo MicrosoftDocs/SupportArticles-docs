@@ -18,7 +18,7 @@ And you can monitor the size and the creation frequency of VLFs by using [sys.dm
 
 ## Resolution
 
-This problem is fixed in the following cumulative updates for SQL Server:
+This problem is fixed in the following cumulative update for SQL Server:
 
 [Cumulative Update 1 for SQL Server 2022](cumulativeupdate1.md)
 
