@@ -6,7 +6,7 @@ ms.custom: KB5023236
 appliesto:
 - SQL Server 2022 on Windows
 ---
-# KB 5023236 - FIX: Database accessibility issues with high-volume customer workloads that use EKM for encryption and key generation
+# KB5023236 - FIX: Database accessibility issues with high-volume customer workloads that use EKM for encryption and key generation
 
 ## Symptoms
 
