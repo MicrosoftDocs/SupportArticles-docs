@@ -9,7 +9,7 @@ ms.collection: windows
 ---
 # In-place upgrade for supported VMs running Windows in Azure
 
-This article describes how to do an in-place system upgrade of supported Windows 10-based Azure virtual machines (Azure VMs). This article also describes workarounds for Azure VMs that aren't supported for in-place system upgrades.
+This article describes how to do an in-place system upgrade of supported Windows 10-based Azure virtual machines (Azure VMs). This article also describes workarounds for Azure VMs that aren't supported for in-place system upgrades. For Azure VMs running Windows Server, see [In-place upgrade for supported VMs running Windows in Azure](/azure/virtual-machines/windows-in-place-upgrade)
 
 > [!NOTE]  
 > **Looking for Windows Server?**  
