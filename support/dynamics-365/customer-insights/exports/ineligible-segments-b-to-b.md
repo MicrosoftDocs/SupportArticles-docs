@@ -3,6 +3,7 @@ title: Segment not eligible for export for B-to-B audiences
 description: Learn how to address export issues with ineligible segments in Dynamics 365 Customer Insights.
 author: m-hartmann
 ms.author: mhart
+ms.reviewer: mhart
 ms.date: 01/23/2023
 ---
 

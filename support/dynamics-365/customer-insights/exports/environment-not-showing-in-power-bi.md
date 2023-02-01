@@ -3,6 +3,7 @@ title: Customer Insights environment doesn't show in Power BI
 description: Learn how to address issues with relationships in the Power BI connection for Dynamics 365 Customer Insights.
 author: m-hartmann
 ms.author: mhart
+ms.reviewer: mhart
 ms.date: 01/23/2023
 ---
 

@@ -3,6 +3,7 @@ title: Errors on date fields when loading Customer Insights entities in Power BI
 description: Learn how to address issues with loading errors in the Power BI connection for Dynamics 365 Customer Insights.
 author: m-hartmann
 ms.author: mhart
+ms.reviewer: mhart
 ms.date: 01/23/2023
 ---
 
