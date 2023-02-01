@@ -123,6 +123,8 @@
           href: cannot-automate-webpage-with-iframes.md
         - name: Can't interact with web elements on runtime
           href: web-automation-action-fails-runtime.md
+        - name: Failed to get UI element
+          href: failed-get-ui-element.md
         - name: Can't record in a VDI environment
           href: cannot-record-in-vdi-environments.md
         - name: Can't access the parent flow
