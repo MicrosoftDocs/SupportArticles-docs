@@ -22,7 +22,7 @@ This problem is fixed in the following cumulative update for SQL Server:
 
 [Cumulative Update 1 for SQL Server 2022](cumulativeupdate1.md)
 
-This fix introduces a startup trace flag 15025 (TF 15025). You can use TF 15025 to disable the AKV access that is required for a newly created VLF, which allows high-volume customer workloads to continue without interruption. Once this trace flag is enabled, SQL Server doesn't contact AKV during the creation of the VLF.
+This fix introduces a startup trace flag 15025 (TF 15025). You can use TF 15025 to disable the AKV access that is required for a newly created VLF, which allows high-volume customer workloads to continue without interruption. Once this trace flag is enabled, SQL Server that uses EKM for encryption and key generation doesn't contact AKV during the creation of the VLF.
 
 To check if the key in AKV is still in use or needs to be disabled, you must perform one of the following operations to the database:
 
