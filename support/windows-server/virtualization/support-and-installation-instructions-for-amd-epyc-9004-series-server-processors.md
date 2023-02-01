@@ -33,7 +33,7 @@ When installing Windows Server operating system (OS), use the latest installatio
 To install Windows Server on systems that use AMD EPYC 96x4 SKUs that have more than 64 cores, the following OS media images are required:
 
 * Windows Server 2019: Build 17763.3532 (2022 October) or later
-* Windows Server 2022: Build 20348.405 (2021 December) or later
+* Windows Server 2022: Build 20348.405 (2022 March) or later
 
 To use earlier OS media releases prior to aforementioned releases, use one of the following options:
 
