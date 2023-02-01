@@ -1,7 +1,7 @@
 ---
 title: Windows Update issues troubleshooting
 description: Learn about troubleshooting Windows Update, issues related to HTTP/Proxy, and why some features are offered and others aren't.
-ms.date: 08/19/2022
+ms.date: 02/01/2023
 ms.prod: windows-client
 author: aczechowski
 ms.author: aaroncz
@@ -24,7 +24,7 @@ If you run into problems when using Windows Update, start with the following ste
 
 1. Run the built-in Windows Update troubleshooter to fix common issues. Navigate to **Settings** > **Update & Security** > **Troubleshoot** > **Windows Update**.
 
-2. Install the most recent Servicing Stack Update that matches your version of Windows from the Microsoft Update Catalog. For more information on servicing stack updates, see [Servicing stack updates](/windows/deployment/update/servicing-stack-updates).
+2. Install the most recent Servicing Stack Update that matches your version of Windows from the Microsoft Update Catalog. For more information on servicing stack updates, see [Servicing stack updates](/windows/deployment/update/servicing-stack-updates).
 
 3. Make sure that you install the latest Windows updates, cumulative updates, and rollup updates. To verify the update status, refer to the appropriate update history for your system:
 
@@ -271,3 +271,14 @@ Other components that connect to the internet:
 - Windows Spotlight: [Policy Configure Windows spotlight on lock screen](https://gpsearch.azurewebsites.net/#13362) (Set to disabled)
 - Consumer experiences: [Policy Turn off Microsoft consumer experiences](https://gpsearch.azurewebsites.net/#13329) (Set to enabled)
 - Background traffic from Windows apps: [Policy Let Windows apps run in the background](https://gpsearch.azurewebsites.net/#13571)
+
+## Transient errors caused by heavy load or network congestion
+
+Users might sometimes receive the following errors from Windows Update. These are transient issues, occurring when the service is temporarily under heavy load or when networks are congested. Users do not have to take any action because the device will retry the operation at a later time.
+
+|Error Code |Error Value |Details |
+|---------|---------|---------|
+|WU_S_SEARCHT_LOAD_SHEDDING | 0x248001 | Search operation completed successfully but one or more services were shedding load. |
+|WU_E_PT_LOAD_SHEDDING | 0x8024402d | The server is shedding load. |
+
+In these cases, users that programmatically call into the Windows Update Agent API to [retrieve the result](/windows/win32/api/wuapi/nf-wuapi-isearchresult-get_resultcode) of a search operation would get [orcFailed](/windows/win32/api/wuapi/ne-wuapi-operationresultcode) or [orcSucceededWithErrors](/windows/win32/api/wuapi/ne-wuapi-operationresultcode). Retrying the operation at a later time is expected to succeed.
