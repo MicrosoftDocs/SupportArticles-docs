@@ -1,6 +1,6 @@
 ---
 title: Failed to get UI element 
-description: Provides a resolution for the issue where a desktop flow action fails to get a UI element.
+description: Provides a resolution on desktop flow actions that fail to get a UI element.
 ms.reviewer: nimoutzo
 ms.date: 02/01/2023
 ms.subservice: power-automate-desktop-flows
@@ -8,7 +8,7 @@ ms.subservice: power-automate-desktop-flows
 
 # Failed to get UI element
 
-This article provides a resolution for an issue where a desktop flow action fails to get a UI element.
+This article provides a resolution on solving the error messages that you may receive when a desktop flow action fails to get a UI element.
 
 ## Symptoms
 
@@ -46,7 +46,7 @@ For UI automation actions:
 
     1. Moreover, the **Failed to get window** error may be generated in case the selector of the parent screen is invalid. To repair that, see the following instructions.
 
-1. Ensure the UI element is available on the respective screen/web page.
+1. Ensure the UI element is available on the respective screen or webpage.
 
 1. Capture the UI element again as a new UI element object and populate the erroneous action with the new UI element.
 
