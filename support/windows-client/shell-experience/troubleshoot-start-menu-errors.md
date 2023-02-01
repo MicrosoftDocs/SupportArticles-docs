@@ -205,7 +205,7 @@ prevent the issue from re-occurring.
 
 #### Status
 
-Microsoft is aware of this issue and is working to resolve it. We will post more information in this article when it becomes available.
+Microsoft is aware of this issue and is working to resolve it in an upcoming Office update. We will post more information in this article when it becomes available.
 
 ### Symptom: Start Menu doesn't respond on Windows 2012 R2, Windows 10, or Windows 2016
 
