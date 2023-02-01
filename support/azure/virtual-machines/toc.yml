@@ -238,8 +238,6 @@
       href: connect-linux-vm-sshconnection.md
     - name: SSH troubleshooting
       href: troubleshoot-ssh-connection.md
-    - name: SUSE VM connectivity and registration issues
-      href: suse-public-cloud-connectivity-registration-issues.md
     - name: Reset network interface for Azure Linux VM
       href: reset-network-interface-azure-linux-vm.md
     - name: Troubleshoot permissions are too open error
@@ -326,6 +324,13 @@
     href: linux-vm-multiple-virtual-network-interfaces-configuration.md
   - name: Create SWAP file
     href: create-swap-file-linux-vm.md
+
+- name: Linux repository troubleshooting
+  items:
+  - name: SUSE
+    items:
+    - name: SUSE VM connectivity and registration issues
+      href: suse-public-cloud-connectivity-registration-issues.md
 
 - name: VM extensions troubleshooting
   items:
