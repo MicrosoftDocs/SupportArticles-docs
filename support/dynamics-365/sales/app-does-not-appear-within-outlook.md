@@ -1,6 +1,6 @@
 ---
 title: App doesn't appear within Outlook
-description: Dynamics 365 App for Outlook doesn't appear within Outlook.
+description: Provides a solution to an issue where the app doesn't appear within Outlook after deploying Dynamics 365 App for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 01/31/2023
@@ -8,7 +8,7 @@ ms.subservice: d365-sales-client-outlook
 ---
 # Microsoft Dynamics 365 App for Outlook doesn't appear within Outlook
 
-This article provides a solution to an issue where the app doesn't appear within Outlook after deploying Dynamics 365 App for Outlook.
+There are several reasons why the Dynamics 365 App for Outlook may not appear within Outlook after deployment. This article describes the different causes and solutions.
 
 _Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 4345566
@@ -41,11 +41,11 @@ If you're using Microsoft 365 Apps for enterprise, verify that the **Enable opti
 
 If you don't see the app appear when viewing a list of emails, but you do see the app when you open an email, verify that the [Use and configure the Reading Pane to preview messages](https://support.microsoft.com/office/2fd687ed-7fc4-4ae3-8eab-9f9b8c6d53f0) is enabled in Outlook. Outlook Apps such as Dynamics 365 App for Outlook are intended to appear in the reading pane when viewing a list of emails.
 
-## Cause 4: The specific type of email you're viewing isn't supported by Office Apps or the Dynamics 365 app
+## Cause 4: The specific type of email you're viewing isn't supported by Dynamics 365 App for Outlook
 
 #### Resolution
 
-Dynamics 365 App for Outlook is an Outlook Add-in. Some email types such as encrypted emails aren't available to use with Outlook Add-ins. For more information, see [Mailbox items available to add-ins](/office/dev/add-ins/outlook/outlook-add-ins-overview#mailbox-items-available-to-add-ins). In addition to the items not available for Office Apps, the Dynamics 365 App for Outlook doesn't currently support delegate users.
+Dynamics 365 App for Outlook is an Outlook Add-in. Some email types such as encrypted emails aren't available to use with Outlook Add-ins. For more information, see [Mailbox items available to add-ins](/office/dev/add-ins/outlook/outlook-add-ins-overview#mailbox-items-available-to-add-ins).
 
 ## Cause 5: The app needs to be redeployed
 
