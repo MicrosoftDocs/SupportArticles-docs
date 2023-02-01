@@ -21,7 +21,7 @@ _Applies to:_ &nbsp; Windows Server 2016
 
 ## Symptoms
 
-You are using a third-party DNS server solution, and you can't consistently resolve names when using conditional forwarding.
+You're using a third-party DNS server solution, and you can't consistently resolve names when using conditional forwarding.
 
 The local DNS server (10.100.100.70) can connect to the DNS server that's configured as a conditional forwarder (10.133.3.250). The first request from the DNS server to the conditional forwarder successfully resolves a name (for example, nbob1.contoso.com). After a period of time, name resolution stops working. An nslookup query to the conditional forwarder returns a "nonexistent domain" error message.
 
@@ -31,7 +31,7 @@ If you clear the DNS server cache on the forwarding computer (the local DNS serv
 
 The DNS server (10.100.100.70) forwards the client's name resolution request for nbob1.contoso.com to the configured conditional forwarder (10.133.3.250). The name query contains two parts, an A query (IPv4) and an AAAA query (IPv6).
 
-The conditional forwarder returns a correct response for the A record. For example, when a DNS client issues the `nslookup nbob1.contoso.com`command, the DNS server reports the following response from the conditional forwarder:
+The conditional forwarder returns a correct response for the A record. For example, when a DNS client issues the `nslookup nbob1.contoso.com` command, the DNS server reports the following response from the conditional forwarder:
 
 ```output
 10.100.100.70 10.133.3.250 DNS:QueryId = 0x78CB, QUERY (Standard query), Query for nbob1.contoso.com of type Host Addr on class Internet
@@ -59,7 +59,7 @@ ResourceDataLength: 4 (0x4)
 IPAddress: 10.158.150.200
 ```
 
-These responses are excerpted from aserver-side Wireshark traces on the local DNS server (10.100.100.70).
+These responses are excerpted from server-side Wireshark traces on the local DNS server (10.100.100.70).
 
 We expect the reported response for the AAAA query to resemble the following excerpt:
 
@@ -137,11 +137,11 @@ QuestionType: AAAA, IPv6 Address, 28(0x1c)
 QuestionClass: Internet, 1(0x1) 
 ```
 
-In such cases, the underlying problem is that the response from the conditional forwarder was not formatted correctly. The local DNS server interpreted the response to mean that the record was not found.
+In such cases, the underlying problem is that the response from the conditional forwarder wasn't formatted correctly. The local DNS server interpreted the response to mean that the record wasn't found.
 
 ## Resolution
 
-Contact the vendor of the 3rd party DNS server implementation about this issue.
+Contact the vendor of the third-party DNS server implementation about this issue.
 
 Additionally, you can use Windows PowerShell to implement the following DNS server recursion policy. The new policy might mitigate this issue.
 
