@@ -1,6 +1,6 @@
 ---
 title: Failed to get UI element 
-description: Provides a resolution on desktop flow actions that fail to get a UI element.
+description: Provides a resolution on desktop flow actions that fail to get UI elements.
 ms.reviewer: nimoutzo
 ms.date: 02/01/2023
 ms.subservice: power-automate-desktop-flows
