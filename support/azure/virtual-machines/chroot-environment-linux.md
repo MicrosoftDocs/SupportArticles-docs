@@ -11,7 +11,7 @@ ms.collection: linux
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
-ms.date: 05/17/2022
+ms.date: 02/01/2023
 ms.author: genli
 
 ---
@@ -212,19 +212,24 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
         └─rootvg-rootlv 253:5    0    2G  0 lvm
       ```
 
-   1. Use the following commands to access the chroot environment:
+   1. Use the following commands to prepare the chroot dir.
 
       ```console
       mkdir /rescue
       mount /dev/mapper/rootvg-rootlv /rescue
       mount /dev/mapper/rootvg-varlv /rescue/var
       mount /dev/mapper/rootvg-homelv /rescue/home
-      mount /dev/mapper/rootvg-usrlv /rescue/usr
+      mount /dev/mapper/rootvg-usrlv /rescue/usrd
       mount /dev/mapper/rootvg-tmplv /rescue/tmp
       mount /dev/mapper/rootvg-optlv /rescue/opt
       mount /dev/sdc2 /rescue/boot/
       mount /dev/sdc1 /rescue/boot/efi
+      ```
+        The `/rescue/boot/` and `/rescue/boot/efi` partitions may not always be located on `/dev/sdc2` or `/dev/sdc1`. If you encounter an error while trying to mount these partitions, check the `/rescue/etc/fstab` file to determine the correct devices for the `/boot` and `/boot/efi` partitions from the broken OS disk. Then, run the `blkid` command and compare the UUID from the `/rescue/etc/fstab` file with the output of `blkid` to determine the correct device for mounting the `/rescue/boot/` and `/rescue/boot/efi` in the repair VM.
 
+   1. Access the chroot environment:
+   
+      ```console
       mount -t proc /proc /rescue/proc
       mount -t sysfs /sys /rescue/sys
       mount -o bind /dev /rescue/dev
