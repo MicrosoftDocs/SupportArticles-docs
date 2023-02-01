@@ -207,13 +207,13 @@ Windows client devices can receive updates from various sources, including Windo
 
 Check the output for the Name and OffersWindowsUPdates parameters, which you can interpret according to this table.
 
-|Output|Meaning| 
+|Output|Meaning|
 |-|-|
 |- Name: Microsoft Update <br>-OffersWindowsUpdates: True| - The update source is Microsoft Update, which means that updates for other Microsoft products besides the operating system could also be delivered.<br>- Indicates that the client is configured to receive updates for all Microsoft Products (Office, etc.) |
 |- <a name="BKMK_DCAT"></a>Name: DCat Flighting Prod <br>- OffersWindowsUpdates: True |- Starting with Windows 10, version 1709, feature updates are always delivered through the DCAT service.<br>- Indicates that the client is configured to receive feature updates from Windows Update. |
 |- Name: Windows Store (DCat Prod) <br>- OffersWindowsUpdates: False |-The update source is Insider Updates for Store Apps.<br>- Indicates that the client won't receive or isn't configured to receive these updates.| 
 |- Name: Windows Server Update Service <br>- OffersWindowsUpdates: True |- The source is a Windows Server Updates Services server. <br>- The client is configured to receive updates from WSUS. |
-|- Name: Windows Update<br>- OffersWindowsUpdates: True|- The source is Windows Update. <br>- The client is configured to receive updates from Windows Update Online.| 
+|- Name: Windows Update<br>- OffersWindowsUpdates: True|- The source is Windows Update. <br>- The client is configured to receive updates from Windows Update Online.|
 
 ## You have a bad setup in the environment
 
@@ -274,11 +274,11 @@ Other components that connect to the internet:
 
 ## Transient errors caused by heavy load or network congestion
 
-Users might receive the following errors from Windows Update. These errors are transient errors, occurring when the service is temporarily under heavy load or when networks are congested. Users don't have to take any action because the device will retry the operation at a later time.
+Users might receive the following errors from Windows Update. These errors are transient errors, occurring when the service is temporarily under heavy load or when networks are congested. Users don't need to take any action because the device will retry the operation later.
 
-|Error Code |Error Value |Details |
+|Error code |Error value |Details |
 |---------|---------|---------|
 |WU_S_SEARCHT_LOAD_SHEDDING | 0x248001 | Search operation completed successfully but one or more services were shedding load. |
 |WU_E_PT_LOAD_SHEDDING | 0x8024402d | The server is shedding load. |
 
-In these cases, users that programmatically call into the Windows Update Agent API to [retrieve the result](/windows/win32/api/wuapi/nf-wuapi-isearchresult-get_resultcode) of a search operation would get [orcFailed](/windows/win32/api/wuapi/ne-wuapi-operationresultcode) or [orcSucceededWithErrors](/windows/win32/api/wuapi/ne-wuapi-operationresultcode). Retrying the operation at a later time is expected to succeed.
+In these cases, users that programmatically call into the Windows Update Agent API to [retrieve the result](/windows/win32/api/wuapi/nf-wuapi-isearchresult-get_resultcode) of a search operation would get [orcFailed](/windows/win32/api/wuapi/ne-wuapi-operationresultcode) or [orcSucceededWithErrors](/windows/win32/api/wuapi/ne-wuapi-operationresultcode). Retrying the operation later is expected to succeed.
