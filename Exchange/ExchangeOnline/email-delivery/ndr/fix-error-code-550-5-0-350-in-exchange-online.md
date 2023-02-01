@@ -71,4 +71,4 @@ The **Diagnostic information for administrators** section in the bounce message 
 
 ## See also
 
-[Email non-delivery reports in Exchange Online](/exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/non-delivery-reports-in-exchange-online)
+[Email non-delivery reports in Exchange Online](non-delivery-reports-in-exchange-online.md)

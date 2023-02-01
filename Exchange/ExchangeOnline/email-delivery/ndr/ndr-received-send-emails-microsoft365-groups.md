@@ -1,5 +1,5 @@
 ---
-title: NDR received when sending emails to Microsoft 365 Groups
+title: NDR error AggregateGroupMailbox full when sending emails to Microsoft 365 Groups
 description: Provides a workaround to an issue in which an NDR is received when sending emails to Microsoft 365 Groups.
 author: simonxjx
 ms.author: v-six
@@ -11,6 +11,7 @@ ms.custom:
   - CI 125861
   - CSSTroubleshoot
   - Exchange Online
+  - CI 167832
 ms.reviewer: batre
 appliesto: 
   - Exchange Online
@@ -19,7 +20,7 @@ search.appverid:
 ms.date: 3/31/2022
 ---
 
-# Error (AggregateGroupMailbox full) when sending emails to Microsoft 365 Groups
+# "AggregateGroupMailbox is full" when sending emails to Microsoft 365 Groups
 
 ## Symptoms
 
@@ -27,7 +28,7 @@ When you send an email message to a Microsoft 365 group, you receive a non-deliv
 
 > Delivery has failed to these recipients or groups:
 >
-> `AggregateGroupMailbox.A.201708181918@contoso.onmicrosoft.com` the recipient’s mailbox is full and can’t accept messages now. Please try resending your message later, or contact the recipient directly.
+> `AggregateGroupMailbox.A.201708181918@contoso.onmicrosoft.com` the recipient's mailbox is full and can't accept messages now. Please try resending your message later, or contact the recipient directly.
 
 
 ## Cause
