@@ -60,11 +60,11 @@ In the domain that holds the gMSAs that you want to repair, follow these steps:
 
    For example, assume that the KDS root key object has the following **CN**.  
 
-   :::image type="content" source="media/recover-from-golden-gmsa-attack/kds-root-key-cn.png" alt-text="Screenshot that shows the value of the cn attribute of a KDS root key object.":::  
+   :::image type="content" source="media/recover-from-golden-gmsa-attack/kds-root-key-cn.png" alt-text="Screenshot that shows the value of the CN attribute of a KDS root key object.":::  
 
    A gMSA that's created by using this object has an **msDS-ManagedPasswordId** value that resembles the following.  
 
-   :::image type="content" source="media/recover-from-golden-gmsa-attack/gmsa-pwid-data.png" alt-text="Screenshot of the value of the msDS-ManagedPasswordId attribute of a gMSA object, showing how it includes the pieces of the KDS root key cn attribute.":::  
+   :::image type="content" source="media/recover-from-golden-gmsa-attack/gmsa-pwid-data.png" alt-text="Screenshot of the value of the msDS-ManagedPasswordId attribute of a gMSA object, showing how it includes the pieces of the KDS root key CN attribute.":::  
 
    In this value, the GUID data starts at offset 24. The parts of the GUID are in a different sequence. In this image, the red, green, and blue sections identify the reordered parts. The orange section identifies the part of the sequence that is the same as the original GUID.
 
@@ -97,7 +97,7 @@ Follow these steps:
 
       For example, assume that the KDS root key object has the following **CN**.  
 
-      :::image type="content" source="media/recover-from-golden-gmsa-attack/kds-root-key-cn.png" alt-text="Screenshot of the value of the cn attribute of a KDS root key object.":::  
+      :::image type="content" source="media/recover-from-golden-gmsa-attack/kds-root-key-cn.png" alt-text="Screenshot of the value of the CN attribute of a KDS root key object.":::  
 
       A gMSA that's created by using this object has an **msDS-ManagedPasswordId** value that resembles the image.  
 
