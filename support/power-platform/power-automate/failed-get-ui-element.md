@@ -66,7 +66,7 @@ For UI automation actions:
 
     1. Edit the selector (one of them) manually using the operands or editing the values of the attributes.
 
-    1. Use alternative approaches for interacting with the element on the screen. You can use image automation, mouse and keyboard actions, and optical character recognition (OCR).
+1. Use alternative approaches for interacting with the element on the screen. You can use image automation, mouse and keyboard actions, and optical character recognition (OCR).
 
 ## Useful links
 
