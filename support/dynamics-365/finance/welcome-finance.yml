@@ -15,7 +15,7 @@ metadata:
 
 landingContent:
 # Card
-  - title: General ledger issues
+  - title: General ledger
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -23,7 +23,7 @@ landingContent:
             url: general-ledger/ledger-adjustments-troubleshoot.md
 
   # Card
-  - title: Tax issues
+  - title: Tax
     linkLists:
       - linkListType: how-to-guide
         links:

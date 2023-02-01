@@ -24,7 +24,7 @@ landingContent:
             url: error-when-signing-dynamics-365.md
 
  # Card
-  - title: Customization and Solutions issues
+  - title: Customization and Solutions
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -40,7 +40,7 @@ landingContent:
             url: error-code-80040203-invalid-argument-error.md
 
  # Card
-  - title: Dynamics 365 client for Outlook issues
+  - title: Dynamics 365 client for Outlook
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -50,7 +50,7 @@ landingContent:
             url: something-went-wrong-during-sign.md
 
  # Card
-  - title: Email and Office Integration issues
+  - title: Email and Office Integration
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -62,7 +62,7 @@ landingContent:
             url: the-account-does-not-have-permission-to-impersonate-the-requested-user-error.md
 
  # Card
-  - title: Sales Hub issues
+  - title: Sales Hub
     linkLists:
       - linkListType: how-to-guide
         links:
