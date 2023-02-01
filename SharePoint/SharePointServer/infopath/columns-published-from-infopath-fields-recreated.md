@@ -78,4 +78,4 @@ There are a couple of methods to prevent this from happening:
 
 ## More information
 
-[Add, remove, or modify SharePoint library columns or site columns](https://office.microsoft.com/infopath-help/add-remove-or-modify-sharepoint-library-columns-or-site-columns-ha010103003.aspx)
+For more information, see [Add, remove, or modify SharePoint library columns or site columns](https://support.microsoft.com/office/93d836e0-382a-4f5c-b4f7-632e0e626313).
