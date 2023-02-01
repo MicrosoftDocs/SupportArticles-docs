@@ -274,7 +274,7 @@ Other components that connect to the internet:
 
 ## Transient errors caused by heavy load or network congestion
 
-Users might sometimes receive the following errors from Windows Update. These are transient issues, occurring when the service is temporarily under heavy load or when networks are congested. Users do not have to take any action because the device will retry the operation at a later time.
+Users might receive the following errors from Windows Update. These errors are transient errors, occurring when the service is temporarily under heavy load or when networks are congested. Users don't have to take any action because the device will retry the operation at a later time.
 
 |Error Code |Error Value |Details |
 |---------|---------|---------|
