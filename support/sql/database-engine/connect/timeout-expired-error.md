@@ -107,7 +107,7 @@ Before troubleshooting, view the complete call stack of the error messages to de
 
     1. Increase the connection-timeout parameter.
 
-        - If you use an application to connect to SQL Server, increase the relevant connection-timeout parameter values and check whether the connection eventually succeeds. For example, if you use `System.Data.Sqlcient`, set the [SqlConnection.ConnectionTimeout](/dotnet/api/system.data.sqlclient.sqlconnection.connectiontimeout) property to **30** or a higher value.
+        - If you use an application to connect to SQL Server, increase the relevant connection-timeout parameter values and check whether the connection eventually succeeds. For example, if you use `System.Data.SqlClient`, set the [SqlConnection.ConnectionTimeout](/dotnet/api/system.data.sqlclient.sqlconnection.connectiontimeout) property to **30** or a higher value.
 
             > [!NOTE]
             > If you use other providers, check [Homepage for SQL client programming](/sql/connect/homepage-sql-connection-programming).

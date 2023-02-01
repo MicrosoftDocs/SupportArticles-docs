@@ -1572,8 +1572,12 @@
       href: ./networking/dns-registers-duplicate-srv-records-for-dc.md
     - name: DNS Servers don't resolve queries for top-level domains
       href: ./networking/dns-server-not-resolve-queries-for-top-level-domain.md
+    - name: DNS Server geo-location policy doesn't work as expected
+      href: ./networking/dns-server-geo-location-policy-doesnt-work-as-expected.md
     - name: DNS Server logs event 7062
       href: ./networking/dns-server-logs-event-7062.md
+    - name: DNS Server loses its teaming NIC configuration
+      href: ./networking/dns-server-loses-teaming-nic-configuration.md
     - name: DNS Server vulnerability to Cache snooping attacks
       href: ./networking/dns-server-cache-snooping-attacks.md
     - name: DNS zone transfer options are unexpectedly reset
@@ -2492,12 +2496,8 @@
     items:
     - name: Security event log forwarding fails with Error 0x138C and 5004
       href: ./system-management-components/security-event-log-forwarding-fails-error-0x138c-5004.md
-  - name: Help and Support
-    items:
     - name: Event Tracing for Windows is simplified
       href: ./system-management-components/event-tracing-for-windows-simplified.md
-    - name: Windows Server 2003 Service Pack 1 Support Tools
-      href: ./system-management-components/windows-server-2003-service-pack-1-support-tools.md
   - name: Microsoft Management Console (MMC)
     items:
     - name: A slow service does not start due to time-out error

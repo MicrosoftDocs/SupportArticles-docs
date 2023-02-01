@@ -22,7 +22,7 @@ All Microsoft, software that's installed in the Azure virtual machine environmen
 
 In some cases, specific versions of Microsoft server software are required for support. These versions are noted in this article, and the supported versions may be updated as required.
 
-Microsoft does not support an upgrade of the operating system of a Microsoft Azure Virtual Machine. (For more information, see KB [4014997](https://support.microsoft.com/help/4014997).) Instead, you should create a new Azure virtual machine that is running the supported version of the operating system that is required and then migrate the workload. Instructions for how to migrate Windows Server roles and features are available in the following TechNet topic: [Install, use, and remove Windows Server migration tools](https://technet.microsoft.com/library/jj134202).
+Microsoft does not support an in-place upgrade of certain versions of the operating system in a Microsoft Azure Virtual Machine. (For more information, see KB [4014997](https://support.microsoft.com/help/4014997).) Instead, you should create a new Azure virtual machine that is running the supported version of the operating system that is required and then migrate the workload. Instructions for how to migrate Windows Server roles and features are available in the following TechNet topic: [Install, use, and remove Windows Server migration tools](https://technet.microsoft.com/library/jj134202).
 
 ## Supported software
 
