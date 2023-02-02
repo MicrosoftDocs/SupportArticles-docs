@@ -3,10 +3,10 @@ title: IPv6 support in Azure Active Directory (Azure AD)
 description: Learn about Internet Protocol version 6 (IPv6) support in Azure Active Directory (Azure AD). Review what your organization needs to do to accommodate IPv6.
 ms.service: active-directory
 ms.subservice: aad-general
-ms.date: 01/31/2023
+ms.date: 02/01/2023
 ms.author: v-dele
 author: DennisLee-DennisLee
-ms.reviewer: lhuangnorth, gautama, amycolannino, joflore
+ms.reviewer: lhuangnorth, gautama, amycolannino, joflore, mariourrutia
 ms.collection: M365-identity-device-management
 ---
 # IPv6 support in Azure Active Directory
@@ -34,7 +34,7 @@ We know that IPv6 support is a significant change for some organizations. We're 
 
 ## What does my organization have to do?
 
-If you have public IPv6 addresses representing your network, you might need to update your named locations.
+If you have public IPv6 addresses representing your network, take the actions that are described in the following sections as soon as possible.
 
 > For example:  
 > 
@@ -90,7 +90,7 @@ You can test Azure AD authentication over IPv6 before we enable it worldwide in 
     $params = @{
         Namespace = "login.microsoftonline.com"
         NameServers = $DnsServerIPs
-        DisplayName = "AAD-NRPT"
+        DisplayName = "AZURE-AD-NRPT"
     }
     Add-DnsClientNrptRule @params
     ```
@@ -123,7 +123,7 @@ You can test Azure AD authentication over IPv6 before we enable it worldwide in 
 
     ```powershell
     Get-DnsClientNrptRule | Where-Object {
-        $_.DisplayName -match "AAD-NRPT" -or $_.Namespace -match "login.microsoftonline.com"
+        $_.DisplayName -match "AZURE-AD-NRPT" -or $_.Namespace -match "login.microsoftonline.com"
     } | Remove-DnsClientNrptRule -Force
     ```
 
@@ -151,17 +151,17 @@ $DnsServerIPs = $DnsServers | Foreach-Object {
 
 # List the rules.
 $existingRules = Get-DnsClientNrptRule | Where-Object {
-    $_.DisplayName -match "AAD-NRPT" -or $_.Namespace -match "login.microsoftonline.com"
+    $_.DisplayName -match "AZURE-AD-NRPT" -or $_.Namespace -match "login.microsoftonline.com"
 }
 if ($existingRules) { 
-    Write-Output ("AAD Nrpt rule exists: {0}" -F $existingRules) 
+    Write-Output ("Azure AD NRPT rule exists: {0}" -F $existingRules) 
 } 
 else { 
-    Write-Output "Adding AAD NRPT Dns rule for login.microsoftonline.com ..." 
+    Write-Output "Adding Azure AD NRPT DNS rule for login.microsoftonline.com ..." 
     $params = @{
         Namespace = "login.microsoftonline.com"
         NameServers = $DnsServerIPs
-        DisplayName = "AAD-NRPT"
+        DisplayName = "AZURE-AD-NRPT"
     }
     Add-DnsClientNrptRule @params
 }  
@@ -173,15 +173,15 @@ else {
 # Remove the Azure AD NRPT rule.
 # List the rules.
 $existingRules = Get-DnsClientNrptRule | Where-Object {
-    $_.DisplayName -match "AAD-NRPT" -or $_.Namespace -match "login.microsoftonline.com"
+    $_.DisplayName -match "AZURE-AD-NRPT" -or $_.Namespace -match "login.microsoftonline.com"
 }
 if ($existingRules) { 
-    Write-Output "Removing AAD NRPT Dns rule for login.microsoftonline.com ..." 
+    Write-Output "Removing Azure AD NRPT DNS rule for login.microsoftonline.com ..." 
     $existingRules | Format-Table 
     $existingRules | Remove-DnsClientNrptRule -Force 
 } 
 else { 
-    Write-Output "AAD NRPT rule does not exist. Device was successfully remediated."
+    Write-Output "Azure AD NRPT rule does not exist. Device was successfully remediated."
 }
 ```
 
@@ -202,7 +202,7 @@ $DnsServerIPs = $DnsServers | Foreach-Object {
 }
 # List the rules.
 $existingRules = Get-DnsClientNrptRule | Where-Object {
-    $_.DisplayName -match "AAD-NRPT" -or $_.Namespace -match "login.microsoftonline.com"
+    $_.DisplayName -match "AZURE-AD-NRPT" -or $_.Namespace -match "login.microsoftonline.com"
 }
 if ($existingRules) { 
     Write-Output 'Compliant' 
