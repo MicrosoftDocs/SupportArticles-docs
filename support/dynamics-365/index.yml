@@ -10,6 +10,9 @@ metadata:
 additionalContent:
   sections:
     - items:
+        - title: Dynamics 365 Customer Insights
+          summary: Troubleshooting articles for Dynamics 365 Customer Insights
+          url: customer-insights/welcome-customer-insights.yml
         - title: Dynamics 365 Finance
           summary: Troubleshooting articles for Dynamics 365 Finance
           url: finance/welcome-finance.yml
