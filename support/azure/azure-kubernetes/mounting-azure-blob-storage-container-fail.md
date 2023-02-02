@@ -4,6 +4,7 @@ description: Provides causes and solutions for errors that cause the mounting of
 author: AndreiBarbu95
 ms.author: andbar
 ms.service: azure-kubernetes-service
+ms,subservice: troubleshoot-azure-storage-issues
 ms.date: 12/20/2022
 ms.reviewer: cssakscic, chiragpa 
 ---

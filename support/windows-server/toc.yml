@@ -1638,6 +1638,8 @@
       href: ./networking/cant-add-dhcp-reservation.md
     - name: DHCP client can't get a DHCP-assigned IP address
       href: ./networking/dhcp-client-fail-obtain-valid-ip-address.md
+    - name: DHCP server is slow or fails to respond to DHCP requests
+      href: ./networking/dhcp-server-slow-not-respond-dhcp-requests-option-66-wrongly-configured.md
     - name: DHCP Server sends a DHCPNAK to clients
       href: ./networking/dhcp-server-sends-dhcpnak-clients.md
     - name: Dynamic updates of DNS registrations are delayed
@@ -2902,6 +2904,8 @@
       href: ./windows-security/trust-between-windows-ad-domain-not-work-correctly.md
     - name: Overlapping Forest Names cause problems
       href: ./windows-security/overlapping-forest-names-problem-forest-trust-established.md
+    - name: How to recover from a Golden gMSA attack
+      href: ./windows-security/recover-from-golden-gmsa-attack.md
     - name: Security identifier could not be resolved
       href: ./windows-security/security-identifier-could-not-be-resolved.md
     - name: Trusted Domains don't appear
