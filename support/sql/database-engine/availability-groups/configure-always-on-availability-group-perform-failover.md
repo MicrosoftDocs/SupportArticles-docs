@@ -22,13 +22,13 @@ To configure an Always On availability group to perform a failover, use one of t
 
 ## Configure Failover Cluster Manager
 
-If you want the WSFC to trigger a failover instead of a resource start when [errors 823 and others](https://techcommunity.microsoft.com/t5/sql-server-blog/sql-server-availability-groups-8211-enhanced-database-level/ba-p/385965) occur, follow these steps:
+If you want the WSFC to trigger a failover instead of a resource restart when [errors 823 and others](https://techcommunity.microsoft.com/t5/sql-server-blog/sql-server-availability-groups-8211-enhanced-database-level/ba-p/385965) occur, follow these steps:
 
 1. Open Failover Cluster Manager.
 
 1. Expand your cluster and select **Roles**.
 
-1. Right-click the first role and select **Properties** > **Policies**.
+1. Right-click the AG role and select **Properties** > **Policies**.
 
 1. Set the value of **Maximum restarts in the specified period** to **0**.
 
@@ -41,10 +41,13 @@ If you want the WSFC to trigger a failover instead of a resource start when [err
 1. Create a text file that contains the following t-sql commands, and note the path and file name for later steps:
 
    ```sql
-   Connect [ReplicaVM\instanceName];
+   Connect [ReplicaVM\InstanceName];
    Alter Availability Group [AGName] Failover;
    Go
    ```
+
+   > [!Note]
+   > Change `ReplicaVM\InstanceName` to match your environments. This script is an example for reference. A full script should perform other checks before performing a failover.
 
 1. Expand **SQL Server Agent**, right-click **Alert**, and select **New Alert...**.
 
@@ -56,4 +59,4 @@ If you want the WSFC to trigger a failover instead of a resource start when [err
 
 1. Enter the following failover SQLCMD command:
 
-   `sqlcmd -S <ReplicaName1> -U SQLADMIN -P <YourPassword> -i "path to your sql file from step 1"`
+   `sqlcmd -S <SecondaryReplicaName> -U SQLADMIN -P <YourPassword> -i "path to your sql file from step 1"`
