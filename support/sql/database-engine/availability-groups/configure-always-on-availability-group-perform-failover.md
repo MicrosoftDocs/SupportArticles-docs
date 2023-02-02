@@ -41,13 +41,13 @@ If you want the WSFC to trigger a failover instead of a resource restart when [e
 1. Create a text file that contains the following t-sql commands, and note the path and file name for later steps:
 
    ```sql
-   Connect [ReplicaVM\InstanceName];
+   Connect <ReplicaVM\InstanceName>;
    Alter Availability Group [AGName] Failover;
    Go
    ```
 
    > [!Note]
-   > Change `ReplicaVM\InstanceName` to match your environments. This script is an example for reference. A full script should perform other checks before performing a failover.
+   > <ReplicaVM\InstanceName> is a placeholder. You need to change it to match your environments. This script is an example for reference. A full script should perform other checks before performing a failover.
 
 1. Expand **SQL Server Agent**, right-click **Alert**, and select **New Alert...**.
 
