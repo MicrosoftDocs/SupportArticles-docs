@@ -38,6 +38,6 @@ In this section, we identify and provide troubleshooting suggestions for common 
 
 **Action:** Check the **Restrict cut, copy, and paste between other apps** setting in both the Endpoint Manager admin center and the device using Microsoft Edge. It’s possible that the setting is set to *Blocked.*
 
-Also, make sure the document you are pasting into is not opened from a managed location, such as OneDrive for Business or SharePoint Online. New documents in Word, Excel, PowerPoint are not protected by app protection policies.
+Also, when copying and pasting text from one managed app to another, make sure the document you are pasting into is opened from a managed location, such as OneDrive for Business or SharePoint Online. New documents in Word, Excel, PowerPoint that have not been saved to OneDrive for Business or SharePoint Online are not protected by APP and the cut, copy, and paste function will not work until they are.
 
-For common scenarios where APP is not applied, refer to [Common usage scenarios in Troubleshooting app protection policy user issues](/mem/intune/app-protection-policies/troubleshoot-mam#common-usage-scenarios).
+For more information and scenarios involving APP, see to [Common usage scenarios in Troubleshooting app protection policy user issues](/mem/intune/app-protection-policies/troubleshoot-mam#common-usage-scenarios).
