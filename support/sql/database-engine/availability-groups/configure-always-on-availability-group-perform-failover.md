@@ -47,7 +47,7 @@ If you want the WSFC to trigger a failover instead of a resource restart when [e
    ```
 
    > [!Note]
-   > <ReplicaVM\InstanceName> is a placeholder. You need to change it to match your environments. This script is an example for reference. A full script should perform other checks before performing a failover.
+   > `<ReplicaVM\InstanceName>` is a placeholder. You need to change it to match your environments. This script is an example for reference. A full script should perform other checks before performing a failover.
 
 1. Expand **SQL Server Agent**, right-click **Alert**, and select **New Alert...**.
 
