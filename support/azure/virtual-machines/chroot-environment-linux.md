@@ -226,6 +226,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       mount /dev/sdc1 /rescue/boot/efi
       ```
         The `/rescue/boot/` and `/rescue/boot/efi` partitions may not always be located on `/dev/sdc2` or `/dev/sdc1`. If you encounter an error while trying to mount these partitions, check the `/rescue/etc/fstab` file to determine the correct devices for the `/boot` and `/boot/efi` partitions from the broken OS disk. Then, run the `blkid` command and compare the UUID from the `/rescue/etc/fstab` file with the output of `blkid` to determine the correct device for mounting the `/rescue/boot/` and `/rescue/boot/efi` in the repair VM. 
+        
          The `mount /dev/mapper/rootvg-optlv /rescue/opt` command may fail if the rootvg-optlv volume group is absent. If that's the case, you can bypass this command.
 
    1. Access the chroot environment:
