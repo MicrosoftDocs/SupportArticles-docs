@@ -1,5 +1,5 @@
 ---
-title: DNS server reverts to listening on all IP addresses instead of the configured NIC Teaming IP address
+title: DNS server loses its NIC Teaming configuration
 description: Describes an issue in which a DNS server that's configured to use NIC Teaming reverts to using physical adapters after the computer restarts.
 ms.date: 1/26/2023
 author: v-tappelgate
