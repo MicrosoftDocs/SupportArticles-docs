@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: <sap/see CI>
+ms.custom: sap:modern-inbox-and-microsoft-store-apps, csstroubleshoot
 ms.technology: networking
 keywords: DNS, listen, IP address, restart, ListenAddresses
 ---
@@ -22,6 +22,7 @@ _Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016
 ## Symptoms
 
 Consider the following scenario:  
+
 - The DNS server computer has multiple network adapters that you use in a NIC Teaming configuration.
 - You configure the DNS server to listen on the IP address of the teaming network adapter. 
 - On the **Interfaces** tab of the DNS server properties dialog box in DNS Manager, you can configure the IP address that you want to use.
@@ -32,13 +33,13 @@ In this scenario, when you set this configuration, Windows stores it in a regist
 
 After you restart the DNS server, Windows deletes both the setting and the registry value. The DNS server starts listening on all IP addresses again.
 
-When this change occurs, Windows logs the following event in the DNS server event log:
+When this change occurs, Windows logs Event ID 410 in the DNS server event log:
 
-> Event 410: The DNS server list of restricted interfaces does not contain a valid IP address for the server computer. The DNS server will use all IP interfaces on the machine. Use the DNS manager server properties, interfaces dialog, to verify and reset the IP addresses the DNS server should listen on. For more information, see "To restrict a DNS server to listen only on selected addresses" in the online Help.
+> The DNS server list of restricted interfaces does not contain a valid IP address for the server computer. The DNS server will use all IP interfaces on the machine. Use the DNS manager server properties, interfaces dialog, to verify and reset the IP addresses the DNS server should listen on. For more information, see "To restrict a DNS server to listen only on selected addresses" in the online Help.
 
 ## Cause
 
-As indicated by DNS Event 410, this behavior is expected.
+As indicated by DNS Event ID 410, this behavior is expected.
 
 When the DNS server starts, it checks the IP addresses of the available network adapters and notes that none of the addresses match the configured NIC Teaming address. Because of this mismatch, the DNS server determines that the configuration isn't valid. The DNS server then deletes the configuration, and reverts to listening on all available IP addresses.
 
