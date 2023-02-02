@@ -278,7 +278,7 @@ Users might receive the following errors from Windows Update. These errors are t
 
 |Error code |Error value |Details |
 |---------|---------|---------|
-|WU_S_SEARCHT_LOAD_SHEDDING | 0x248001 | Search operation completed successfully but one or more services were shedding load. |
+|WU_S_SEARCH_LOAD_SHEDDING | 0x248001 | Search operation completed successfully but one or more services were shedding load. |
 |WU_E_PT_LOAD_SHEDDING | 0x8024402d | The server is shedding load. |
 
 In these cases, users that programmatically call into the Windows Update Agent API to [retrieve the result](/windows/win32/api/wuapi/nf-wuapi-isearchresult-get_resultcode) of a search operation would get [orcFailed](/windows/win32/api/wuapi/ne-wuapi-operationresultcode) or [orcSucceededWithErrors](/windows/win32/api/wuapi/ne-wuapi-operationresultcode). Retrying the operation later is expected to succeed.
