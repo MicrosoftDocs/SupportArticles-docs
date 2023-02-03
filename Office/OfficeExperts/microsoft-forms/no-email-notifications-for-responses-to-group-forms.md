@@ -35,9 +35,23 @@ You might not receive email notifications for responses that you submit to a Gro
 
    :::image type="content" source="media/no-email-notifications-for-responses-to-group-forms/number-of-members.png" alt-text="Selecting the number of members in the top-right." border="false":::
 
-5. In Outlook on the web, select the **Edit** button above the group name.
+5. In Outlook on the web, select the ellipsis and then select the **Edit group** button.
 
     :::image type="content" source="media/no-email-notifications-for-responses-to-group-forms/edit-group-option.png" alt-text="Select the ellipsis and then select the Edit group option.":::
+
+**Note:** If there is no ellipsis to reach the Edit group option, then it means it is hidden because the group was created in Teams.  When a group is created in Teams, the following default Exchange Online setting is enabled:
+
+    HiddenFromExchangeClientsEnabled : True
+
+When **HiddenFromExchangeClientsEnabled** is set to **True**, it removes the Edit Group option in the group email settings, preventing enabling the settings that allow group email notifications to members.
+
+To view the current setting, run this command in Exhange Online PowerShell, replacing <groupname> with the name of the group:
+
+    Get-UnifiedGroup -Filter {displayname -eq "<groupname>"} | Format-List HiddenFromExchangeClientsEnabled
+
+If it is set to **True**, you can use this command to change the setting to **False**:
+
+    Set-UnifiedGroup TestProgram@email.onmicrosoft.com -HiddenFromExchangeClientsEnabled:$False
 
 6. Select the **Let people outside the organization email the groups** and **Members will receive all group conversations and events ...** check boxes and then select **Save**.
 
