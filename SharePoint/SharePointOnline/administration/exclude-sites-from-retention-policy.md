@@ -32,9 +32,9 @@ If the retention policy applies to all sites, you can exclude a site from the re
 
 ## Edit the retention policy
 
-1. Go to the Microsoft Purview compliance portal at https://compliance.microsoft.com/ 
+1. Go to the [Microsoft Purview compliance portal](https://go.microsoft.com/fwlink/p/?linkid=2077149). 
 
-1. In the left pane, find **Information Governance**, and then select **Retention**. You will be shown all the retention policies that are configured in your tenant.  
+1. select **Data lifecycle management** > **Microsoft 365** > **Retention Policies**. You'll be shown all the retention policies that are configured in your tenant.  
 
 1. Select the policy that you want to edit, and then select **Edit Policy**.
 
