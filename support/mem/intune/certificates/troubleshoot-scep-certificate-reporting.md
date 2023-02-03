@@ -12,10 +12,9 @@ When using SCEP certificate profiles to provision certificates to Windows device
 This article applies to the Step 6 of the [SCEP communication workflow](troubleshoot-scep-certificate-profiles.md).
 
 > [!IMPORTANT]  
-> The details in this article only apply to the *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*. Support for these two connectors ended in July of 2021 when they were both replaced by a new connector, the *Certificate Connector for Microsoft Intune*.
+> The details in this article apply only to the **PFX Certificate Connector for Microsoft Intune** and **Microsoft Intune Connector**. Support for both connectors ended in July 2021, when they are both replaced by the **Certificate Connector for Microsoft Intune**.
 >
-> If you use the new connector, see [Certificate Connector for Microsoft Intune(https://learn.microsoft.com/mem/intune/protect/certificate-connector-overview) for details about capabilities, connector status, and log details including a list of Log Event IDs for the newer connector.
-
+> If you use the new connector, see [Certificate Connector for Microsoft Intune](/mem/intune/protect/certificate-connector-overview) for more information about capabilities, connector status, and log details including a list of Log Event IDs for the newer connector.
 
 ## Find reporting log entries
 
