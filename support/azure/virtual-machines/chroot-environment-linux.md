@@ -276,7 +276,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 > [!NOTE]
 > It is possible that you need to deploy the rescue VM using the same lvm image, if that's the case you would need to get around that by modifying some aspects of the rescue VM LVM.
 
-1. Check the status of the disks prior attaching the disk you want to rescue
+1. Check the status of the disks prior attaching the disk you want to rescue.
 
    ```console
    # lsblk -f
@@ -323,7 +323,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
    ```
 
-4. lvm commands will complain about duplicated PV
+4. lvm commands will complain about duplicated PV.
 
    ```console
    # pvs
@@ -439,7 +439,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
    mount -o bind /dev/pts /rescue/dev/pts
    mount -o bind /run /rescue/run
    ```
-     The `/rescue/boot/` and `/rescue/boot/efi` partitions may not always be located on `/dev/sdc2` or `/dev/sdc1`. If you encounter an error while trying to mount these partitions, check the `/rescue/etc/fstab` file to determine the correct devices for the `/boot` and `/boot/efi` partitions from the broken OS disk. Then, run the `blkid` command and compare the UUID from the `/rescue/etc/fstab` file with the output of `blkid` to determine the correct device for mounting the `/rescue/boot/` and `/rescue/boot/efi` in the repair VM. You may see duplicate UUID in the output. In this scenario, mount the partition that matches the device letter from step 5. In the example of this document, the correct partition you should mount is `/dev/sdc'. 
+     The `/rescue/boot/` and `/rescue/boot/efi` partitions may not always be located on `/dev/sdc2` or `/dev/sdc1`. If you encounter an error while trying to mount these partitions, check the `/rescue/etc/fstab` file to determine the correct devices for the `/boot` and `/boot/efi` partitions from the broken OS disk. Then, run the `blkid` command and compare the UUID from the `/rescue/etc/fstab` file with the output of `blkid` to determine the correct device for mounting the `/rescue/boot/` and `/rescue/boot/efi` in the repair VM. Duplicate UUIDs may appear in the output. In this scenario, mount the partition that matches the device letter from step 5. In the example of this section, the correct partition you should mount is `/dev/sdc'. The `dev/sda` represents the operating system currently in use and should be ignored.
      
 10. Verify the mounts
 
