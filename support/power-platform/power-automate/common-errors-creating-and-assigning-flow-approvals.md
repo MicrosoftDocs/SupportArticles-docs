@@ -43,7 +43,7 @@ The record identifier passed to "Wait for an approval" is null, empty, or not a 
 
 > Found multiple matching users ('\<ID>, \<ID>') for 'someUserName@contoso.com'.
 
-This error will occur if two users in Microsoft Graph were found for the same Assigned To input (email address or UPN). Rather than potentially assign the approval to the wrong user account, Flow will fail the run. The unique AAD object ids for the two or more matching records are returned in the error message so that users can investigate further with a user administrator in their tenant. (The user accounts can be viewed on `graph.microsoft.com`).
+This error will occur if two users in Microsoft Graph were found for the same Assigned To (or Requestor) input (email address or UPN). Rather than potentially assign the approval to the wrong user account, Flow will fail the run. The unique AAD object ids for the two or more matching records are returned in the error message so that users can investigate further with a user administrator in their tenant. (The user accounts can be viewed on `graph.microsoft.com`).
 
 ## Attachments
 
