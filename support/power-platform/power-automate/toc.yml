@@ -123,8 +123,6 @@
           href: cannot-automate-webpage-with-iframes.md
         - name: Can't interact with web elements on runtime
           href: web-automation-action-fails-runtime.md
-        - name: Failed to get UI element
-          href: failed-get-ui-element.md
         - name: Can't record in a VDI environment
           href: cannot-record-in-vdi-environments.md
         - name: Can't access the parent flow
@@ -151,6 +149,8 @@
           href: desktop-flow-runs-list-not-updated.md
         - name: Desktop flow fails with the SessionCreationTimeout error code
           href: sessioncreationtimeout-error-code.md
+        - name: Failed to get UI element
+          href: failed-get-ui-element.md
         - name: '"Failed to deserialize Flow" error'
           href: failed-to-deserialize-flow-error.md
         - name: '"Failed to assume control of Microsoft Edge/Chrome/Firefox" error'
