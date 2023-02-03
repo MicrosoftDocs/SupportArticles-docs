@@ -14,15 +14,21 @@ If the changes to an availability group arrive and harden on the database transa
 
 ## Symptoms and impact of recovery (redo) queueing
 
-**Querying secondary replica returns different results than the primary replica** - Read only workloads which query secondary replicas may query stale data. If there is recovery queuing, changes to data on the primary replica database might not reflect in the secondary database when querying the same data.
+### Querying secondary replica returns different results than the primary replica
+
+Read only workloads which query secondary replicas may query stale data. If there is recovery queuing, changes to data on the primary replica database might not reflect in the secondary database when querying the same data.
 
 Although changes arrive at the secondary and are written to the database log file, the changes won’t be queried until they are 'recovered' into the database files. The recovery operation is what makes those changes readable.
 
 For more information, see the section [Data latency on secondary replica in Differences between availability modes for an Always On availability group](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups?view=sql-server-ver16).
 
-**Failover Time is Longer or Recovery Time Objective (RTO) is violated** - RTO is the maximum database downtime an organization can handle or how quickly the organization can regain access to the database after an outage. If substantial recovery queueing is present on a secondary replica and a failover occurs, recovery may take longer before the database will transition to the primary role and represent the state of the database prior to the failover. This can delay the resumption of production after failover.
+### Failover Time is Longer or Recovery Time Objective (RTO) is violated
 
-**Various diagnostic features report availability group recovery queuing** - When there is recovery queueing, the Always On dashboard in SQL Server Management Studio might report an unhealthy availability group.
+RTO is the maximum database downtime an organization can handle or how quickly the organization can regain access to the database after an outage. If substantial recovery queueing is present on a secondary replica and a failover occurs, recovery may take longer before the database will transition to the primary role and represent the state of the database prior to the failover. This can delay the resumption of production after failover.
+
+### Various diagnostic features report availability group recovery queueing
+
+When there is recovery queueing, the Always On dashboard in SQL Server Management Studio might report an unhealthy availability group.
 
 ## How to check for recovery (redo) queueing
 
@@ -30,7 +36,9 @@ Recovery queue is a per-database measurement and can be checked using the Always
 
 The next few sections provide ways you can actively monitor your availability group database recovery queue.
 
-**Query sys.dm_hadr_database_replica_states** - The DMV `sys.dm_hadr_database_replica_states` report a row for each availability group database and one column is the `redo_queue_size`. The `redo_queue_size` reports the recovery queue size in kilobytes. You can set up a query that resembles the following query to monitor any trend in the redo queue size every 30 seconds. The query is being run on the primary replica and it uses the predicate `is_local=0` to report the data for the secondary replica, where `redo_queue_size` and `redo_rate` are relevant.
+### Query sys.dm_hadr_database_replica_states
+
+The DMV `sys.dm_hadr_database_replica_states` report a row for each availability group database and one column is the `redo_queue_size`. The `redo_queue_size` reports the recovery queue size in kilobytes. You can set up a query that resembles the following query to monitor any trend in the redo queue size every 30 seconds. The query is being run on the primary replica and it uses the predicate `is_local=0` to report the data for the secondary replica, where `redo_queue_size` and `redo_rate` are relevant.
 
 ```sql
 WHILE 1=1
@@ -48,7 +56,7 @@ Here is what the output looks like:
 
 :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/dm-hadr-database-replica-states-output.png" alt-text="Report the data for the secondary replica, where redo_queue_size and redo_rate are relevant.":::
 
-**Review the Recovery Queue in AlwaysOn Dashboard**
+### Review the Recovery Queue in AlwaysOn Dashboard
 
 To review the recovery queue, perform the following steps:
 
@@ -61,13 +69,13 @@ To review the recovery queue, perform the following steps:
 
 1. Right-click on the header highlighted in red in the following screenshot, to add **Redo Queue Size (KB)** and **Redo Rate (KB/sec)**.
   
-    :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/add-redo-queue-size-rate.png" alt-text="Add the counters Redo Queue Size (KB) and Redo Rate (KB/sec)":::
+    :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/add-redo-queue-size-rate.png" alt-text="Add the counters Redo Queue Size (KB) and Redo Rate (KB/sec).":::
 
 1. By default, the Always On dashboard auto refreshes **Redo Queue Size (KB)** and **Redo Rate (KB/sec)** every 60 seconds.
 
     :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/add-redo-queue-size-rate-refreshes-60.png" alt-text="Refresh counters every 60 seconds.":::
 
-**Review the Recovery Queue in performance monitor**
+### Review the Recovery Queue in performance monitor
 
 The recovery queue size is unique to each secondary replica and database. Therefore, to review the recovery queue of an availability group database, perform the following steps.
 
@@ -108,7 +116,9 @@ In this example, there are some I/O related wait types reported (PAGEIOLATCH_UP,
 
 :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/input-output-related-waittimes.png" alt-text="Largest wait times reported in the next column.":::
 
-**SQL Server redo wait types** - When a wait type is identified, review the following article [SQL Server 2016/2017: Availability group secondary replica redo model and performance - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/sql-server/sql-server-2016-2017-availability-group-secondary-replica-redo/ba-p/385905%22%20/t%20%22_blank) as a cross-reference for common wait types that cause recovery queuing and how to resolve.
+### SQL Server redo wait types
+
+When a wait type is identified, review the following article [SQL Server 2016/2017: Availability group secondary replica redo model and performance - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/sql-server/sql-server-2016-2017-availability-group-secondary-replica-redo/ba-p/385905%22%20/t%20%22_blank) as a cross-reference for common wait types that cause recovery queuing and how to resolve.
 
 ## Other possible cause of recovery queuing - Blocked redo
 
