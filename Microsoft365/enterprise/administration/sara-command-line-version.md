@@ -1,6 +1,6 @@
 ---
 title: Microsoft Support and Recovery Assistant Enterprise version
-description: Describes the Enterprise version of Microsoft Support and Recovery Assistant.
+description: Describes the Enterprise version of Microsoft Support and Recovery Assistant, historically known as SaRA.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -19,12 +19,12 @@ ms.date: 10/26/2022
 ---
 # Enterprise version of Microsoft Support and Recovery Assistant
 
-> [!NOTE]
-> This article is for Microsoft 365 administrators only. For help to diagnose and fix issues that affect Office, Microsoft 365 or Outlook on your computer, see [About the Microsoft Support and Recovery Assistant](https://aka.ms/SaRA_Home).
+> [!NOTE]  
+> This article is for Microsoft 365 administrators only. For help to diagnose and fix issues that affect Microsoft Office, Microsoft 365, or Microsoft Outlook on your computer, see [About the Microsoft Support and Recovery Assistant](https://aka.ms/SaRA_Home).
 
-The Enterprise version of Microsoft Support and Recovery Assistant is a self-contained, enterprise-ready diagnostic tool that you can use to troubleshoot specific client issues that affect Microsoft 365 apps, such as Microsoft Teams and Microsoft Outlook. This version of the Assistant runs at a command line or through a script such as PowerShell. Administrators will find this version of the Assistant useful when they have to run it on computers in their organization remotely.
+The Enterprise version of Microsoft Support and Recovery Assistant is a self-contained, enterprise-ready diagnostic tool that you can use to troubleshoot specific client issues that affect Microsoft 365 apps, such as Microsoft Teams and Outlook. This version of the Assistant runs at a command line or through a script such as PowerShell. Administrators will find this version of the Assistant useful if they have to run it on computers in their organization remotely.
 
-To fix issues on a single computer, we recommend that you use the [full version of the Assistant](https://aka.ms/SaRA_Home). If multiple devices are affected by an issue, use the Enterprise version of the Assistant.
+To resolve issues on a single computer, we recommend that you use the [full version of the Assistant](https://aka.ms/SaRA_Home). If multiple devices are affected, use the Enterprise version of the Assistant.
 
 ## Supported scenarios
 
@@ -36,9 +36,9 @@ You can use the Enterprise version of the Assistant to resolve issues for the fo
 |[Office Uninstall](assistant-office-uninstall.md)|Scrubs any version of Office from a device. Use when you can't fully remove Office through Control Panel.|`OfficeScrubScenario`|
 |[Office Activation](assistant-office-activation.md)|Automated checks and recoveries to reset activation-related settings so you can successfully activate a subscription version of Office.|`OfficeActivationScenario`|
 |[Office Shared Computer Activation](assistant-office-shared-computer-activation.md)|Automated checks and recoveries to either enable or disable Office Shared Computer Activation.|`OfficeSharedComputerScenario`|
-|[Outlook Calendar Scan](assistant-outlook-calendar-scan.md)|Scans your Outlook calendar with the Calendar Checking tool (CalCheck) for dozens of known problems.|`OutlookCalendarCheckTask`|
-|[Teams Meeting Add-in for Outlook](assistant-teams-meeting-add-in-outlook.md)|Automated checks and recoveries to help you get the Teams Meeting Add-in for Outlook up and running.|`TeamsAddinScenario`|
-|[Reset Office Activation](assistant-reset-office-activation.md)|Clear prior activations of Microsoft 365 Apps for Enterprise to remove related licenses and cached Office account information. This resets Office applications to a clean state and you can then activate them with a different Office account or change to a different license mode.|`ResetOfficeActivation`|
+|[Outlook Calendar Scan](assistant-outlook-calendar-scan.md)|Scans your Outlook calendar by using the Calendar Checking tool (CalCheck) for dozens of known problems.|`OutlookCalendarCheckTask`|
+|[Teams Meeting Add-in for Outlook](assistant-teams-meeting-add-in-outlook.md)|Automated checks and recoveries to help you get the Teams Meeting Add-in for Outlook running.|`TeamsAddinScenario`|
+|[Reset Office Activation](assistant-reset-office-activation.md)|Clear any previous activations of Microsoft 365 Apps for Enterprise to remove related licenses and cached Office account information. This resets Office applications to a clean state. Then, you can activate the applications by using a different Office account or change to a different license mode.|`ResetOfficeActivation`|
 
 ## Download and run the Enterprise version of the Assistant
 
@@ -53,12 +53,12 @@ You can use the Enterprise version of the Assistant to resolve issues for the fo
 1. At the command prompt, navigate to the folder in which you extracted the files from step 2.
 1. Run the Assistant by using the appropriate switches for the scenario.
 
-> [!IMPORTANT]
-> Updates to the Enterprise version of the Assistant are released on a regular basis. To make sure that you're using the latest version that has the most features and highest stability, each build of the application will stop working 90 days after the **Created** date that's listed for the SaRAcmd.exe file. Use the link that's provided in step 1 to always download the latest version available.
+> [!IMPORTANT]  
+> Updates to the Enterprise version of the Assistant are released on a regular basis. To make sure that you're using the latest version that has the most features and highest stability, each build of the application will stop working 90 days after the **Created** date that's listed for the SaRAcmd.exe file. Use the link that's provided in step 1 to always download the latest available version.
 
 ## Script the Enterprise version of the Assistant
 
-Because the Enterprise version of the Assistant is a command-line executable, you can script it to simplify the experience and add functionality. The following sample scripts can help you get started. The two scripts provide different capabilities.
+Because the Enterprise version of the Assistant is a command-line executable, you can script it to simplify the experience and add functionality. The following sample scripts can help you get started. These scripts provide different capabilities.
 
 **Note**: Detailed instructions for each script are provided in the included comments.
 
@@ -104,6 +104,19 @@ This script provides the following additional capabilities:
 
    **Note**: To use this capability, you have to update the script to include an email address, message subject, and message body.
 
+### Sample 3: Script to run two scenarios back-to-back
+
+[Download the script for back-to-back sessions](https://aka.ms/SaRAEnterpriseMultiScenarioHelper)
+
+This script provides the following additional capabilities:
+
+ - Allow the specification of two scenarios to be run
+
+   **Note**: The script contains the list of supported scenario pairs.
+
+ - Start SaraCmd.exe to run the first scenario.
+ - When the first scenario is finished, run a second scenario if the result code from the first scenario indicates a successful completion.
+
 ## Switches available for all scenarios
 
 The following switches are available for the Enterprise version of the Assistant. They aren't case-sensitive. Unless noted as optional, the switches are required to run the scenario. You can use more than one optional switch.
@@ -126,7 +139,7 @@ The following switches are available for the Enterprise version of the Assistant
 
 ## Version history of the Enterprise version of the Assistant
 
-A new build of the Enterprise version of the Assistant is released multiple times a year at [Download and run the command-line version of the Assistant](#download-and-run-the-enterprise-version-of-the-assistant). Because each build stops working after 90 days, we recommend that you keep the Assistant updated by replacing your existing files with the latest version files.
+A new build of the Enterprise version of the Assistant is released multiple times a year. (See [Download and run the command-line version of the Assistant](#download-and-run-the-enterprise-version-of-the-assistant)). Because each build stops working after 90 days, we recommend that you keep the Assistant updated by replacing your existing files with the latest version files.
 
 The following table provides the versions of the Enterprise version of the Assistant that were made available on the specified dates.
 
