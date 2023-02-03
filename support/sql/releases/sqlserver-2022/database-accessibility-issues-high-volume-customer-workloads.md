@@ -1,6 +1,6 @@
 ---
 title: Database accessibility issues with high-volume customer workloads
-description: Describes an issue where database accessibility issues occur with high-volume customer workloads that use Extensible Key Management (EKM) for encryption and key generation.
+description: Fixes an issue where high-volume customer workloads using Extensible Key Management (EKM) for encryption and key generation experience database accessibility issues.
 ms.date: 02/15/2023
 ms.custom: KB5023236
 appliesto:
@@ -10,11 +10,11 @@ appliesto:
 
 ## Symptoms
 
-High-volume customer workloads that use [Extensible Key Management (EKM)](/sql/relational-databases/security/encryption/extensible-key-management-ekm) may experience intermittent database accessibility issues. These accessibility issues are caused by the frequent creation or rotation of the virtual log file (VLF) that requires access to Azure Key Vault (AKV). If AKV or supporting services (such as Azure Active Directory (Azure AD)) aren't accessible during this creation or rotation, you can't perform the creation of the VLF. Additionally, it causes a database accessibility issue.
+High-volume customer workloads that use [Extensible Key Management (EKM)](/sql/relational-databases/security/encryption/extensible-key-management-ekm) may experience intermittent database accessibility issues. These accessibility issues are caused by the frequent creation or rotation of the virtual log file (VLF) that requires access to Azure Key Vault (AKV). If AKV or supporting services such as Azure Active Directory (Azure AD) aren't accessible during this creation or rotation, you can't perform the creation of the VLF. Additionally, it can cause database accessibility issues.
 
-VLFs can be created frequently when the transaction log files are small or the automatic growth (autogrow) increment of the transaction log is small, instead of large enough to stay ahead of the needs of the workload transaction. For more information, see [Manage the size of the transaction log file](/sql/relational-databases/logs/manage-the-size-of-the-transaction-log-file).
+VLFs can be created frequently when the transaction log files are small, or the automatic growth (autogrow) increment of the transaction log is small, instead of large enough to exceed the needs of the workload transactions. For more information, see [Manage the size of the transaction log file](/sql/relational-databases/logs/manage-the-size-of-the-transaction-log-file).
 
-And you can monitor the size and the creation frequency of VLFs by using [sys.dm_db_log_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql).
+You can monitor the size and the creation frequency of VLFs by using [sys.dm_db_log_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql).
 
 ## Resolution
 
@@ -22,16 +22,16 @@ This problem is fixed in the following cumulative update for SQL Server:
 
 [Cumulative Update 1 for SQL Server 2022](cumulativeupdate1.md)
 
-This fix introduces a startup trace flag 15025 (TF 15025). You can use TF 15025 to disable the AKV access that is required for a newly created VLF, which allows high-volume customer workloads to continue without interruption. Once this trace flag is enabled, SQL Server that uses EKM for encryption and key generation doesn't contact AKV during the creation of the VLF.
+This fix introduces a startup trace flag 15025 (TF 15025). You can use TF 15025 to disable the AKV access that's required for a newly created VLF, which allows high-volume customer workloads to continue without interruption. Once this trace flag is enabled, SQL Server that uses EKM for encryption and key generation doesn't contact AKV during the creation of the VLF.
 
 To check if the key in AKV is still in use or needs to be disabled, you must perform one of the following operations to the database:
 
-- Take a backup (any type of backup) of the database or transaction log.
+- Back up the database or transaction log (any type of backup).
 - Run `DBCC CHECKDB` against the encrypted database.
 - Set the encrypted database to the `OFFLINE` state and then to the `ONLINE` state.
 - Create a database snapshot of the encrypted database.
 
-In any of the operations listed, SQL Server will contact AKV and check the key access during this operation if the key exists in AKV.
+In any of the listed operations, SQL Server will contact AKV and check the key access during this operation if the key exists in AKV.
 
 Even if you enable TF 15025, these operations will still reach AKV.
 
@@ -58,4 +58,4 @@ Microsoft has confirmed that this is a problem in the Microsoft products that ar
 - [sys.dm_db_log_info (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql)
 - [sys.dm_database_encryption_keys (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)
 - [ALTER DATABASE SET options (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options)
-- Learn about the [terminology](../../../windows-client/deployment/standard-terminology-software-updates.md) that Microsoft uses to describe software updates.
+- Learn about the [terminology](../../../windows-client/deployment/standard-terminology-software-updates.md) that Microsoft uses to describe software updates
