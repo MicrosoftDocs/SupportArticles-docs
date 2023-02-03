@@ -8,7 +8,7 @@ ms.subservice: power-automate-desktop-flows
 
 # Error occurs when a desktop flow action fails to get a UI element
 
-There are several reasons why an error occurs when a desktop flow action fails to get a UI element. This article describes the different causes and solutions.
+This article describes the different causes and solutions for the error messages that may occur when a desktop flow action fails to get a UI element.
 
 ## Symptoms
 
