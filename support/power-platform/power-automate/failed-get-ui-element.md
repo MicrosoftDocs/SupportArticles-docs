@@ -16,13 +16,19 @@ The execution of a desktop flow fails with one of the following error messages:
 
 - For UI automation actions:
 
+  Error 1
+
   > Action failed (failed to get window)
 
   where "Action" is the respective Power Automate for desktop action.
 
+  Error 2
+
   > Action failed (failed to get UI element)
 
   where "Action" is the respective Power Automate for desktop action.
+
+  Error 3
 
   > UIAutomation.ActionFailedError
 
@@ -30,9 +36,13 @@ The execution of a desktop flow fails with one of the following error messages:
 
 - For Browser automation actions:
 
+  Error 1
+
   > Element with selector 'xyz' not found
   
   where "xyz" is the selector that pinpoints the element.
+
+  Error 2
 
   > WebAutomation.ElementNotFoundError
 
