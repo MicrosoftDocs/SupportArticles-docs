@@ -420,7 +420,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
 9. Mount the FS coming from the data drive.
 
-   When using xfs use the -o nouuid option to avoid conflicts with the UUIDs and mount the needed filesystems to perform a chroot:
+   When using xfs, specify the `-o nouuid` option to avoid conflicts with the UUIDs and mount the needed filesystems to perform a chroot:
 
    ```console
    mkdir /rescue
@@ -439,7 +439,8 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
    mount -o bind /dev/pts /rescue/dev/pts
    mount -o bind /run /rescue/run
    ```
-
+     The `/rescue/boot/` and `/rescue/boot/efi` partitions may not always be located on `/dev/sdc2` or `/dev/sdc1`. If you encounter an error while trying to mount these partitions, check the `/rescue/etc/fstab` file to determine the correct devices for the `/boot` and `/boot/efi` partitions from the broken OS disk. Then, run the `blkid` command and compare the UUID from the `/rescue/etc/fstab` file with the output of `blkid` to determine the correct device for mounting the `/rescue/boot/` and `/rescue/boot/efi` in the repair VM. You may see duplicate UUID in the output. In this scenario, mount the partition that matches the device letter from step 5. In the example of this document, the correct partition you should mount is `/dev/sdc'. 
+     
 10. Verify the mounts
 
     ```console
