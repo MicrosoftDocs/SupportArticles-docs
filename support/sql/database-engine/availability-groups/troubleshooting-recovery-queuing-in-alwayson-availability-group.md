@@ -1,12 +1,14 @@
 ---
 title: Troubleshooting recovery queuing in an AlwaysOn availability group
-description: This article provides resolutions for the common problem about Always On configuration on SQL server.
+description: This article troubleshoots problems related to recovery queueing in an AlwaysOn availability group. 
 ms.date: 08/03/2020
 ms.custom: sap:Availability Groups
 ms.prod: sql
+author: padmajayaraman
+ms.author: v-jayaramanp
 ---
 
-## What is recovery queueing?
+# What is recovery queueing?
 
 Changes made to an availability group database on the primary replica are sent to all secondary replicas defined in the same availability group. Once those changes arrive at the secondary replica, they are first written to the transaction log file of the availability group database. SQL Server then uses the 'recovery' or 'redo' operation to update the database file(s).
 
