@@ -18,7 +18,7 @@ If the changes to an availability group arrive and harden on the database transa
 
 ### Querying secondary replica returns different results than the primary replica
 
-Read only workloads, which query secondary replicas may query stale data. If there is recovery queuing, changes to data on the primary replica database might not reflect in the secondary database when querying the same data.
+Read only workloads, which query secondary replicas may query stale data. If there's recovery queuing, changes to data on the primary replica database might not reflect in the secondary database when querying the same data.
 
 Although changes arrive at the secondary and are written to the database log file, the changes won’t be queried until they are 'recovered' into the database files. The recovery operation is what makes those changes readable.
 
@@ -30,7 +30,7 @@ RTO is the maximum database downtime an organization can handle or how quickly t
 
 ### Various diagnostic features report availability group recovery queueing
 
-When there is recovery queueing, the Always On dashboard in SQL Server Management Studio might report an unhealthy availability group.
+When there's recovery queueing, the Always On dashboard in SQL Server Management Studio might report an unhealthy availability group.
 
 ## How to check for recovery (redo) queueing
 
@@ -97,7 +97,7 @@ Here is a screenshot of what increasing recovery queueing might look like:
 
 ## How to Diagnose Recovery (Redo) Queueing
 
-After you have identified recovery queuing for a specific secondary replica availability group database, connect to the secondary replica and query `sys.dm_exec_requests` to determine the `wait_type` and `wait_time` for recovery threads. Here is a query that can be executed in a loop. We are looking for a high frequency of one or more wait types and even wait times for those wait types. Here is a sample query that runs every second and reports the wait types and wait times for the availability group 'agdb':
+After you've identified recovery queuing for a specific secondary replica availability group database, connect to the secondary replica and query `sys.dm_exec_requests` to determine the `wait_type` and `wait_time` for recovery threads. Here is a query that can be executed in a loop. We are looking for a high frequency of one or more wait types and even wait times for those wait types. Here is a sample query that runs every second and reports the wait types and wait times for the availability group 'agdb':
 
 ```sql
 WHILE (1=1)
@@ -140,7 +140,7 @@ Monitor for schema modification lock wait type using the query described earlier
 
 ## Other possible causes of recovery queuing - Single Threaded Redo
 
-SQL Server introduced parallel recovery for secondary replica databases in SQL Server 2016. If you are experiencing recovery queuing while running SQL Server 2012 or SQL Server 2014, upgrading to newer versions may improve redo performance in your production environment.
+SQL Server introduced parallel recovery for secondary replica databases in SQL Server 2016. If you're experiencing recovery queuing while running SQL Server 2012 or SQL Server 2014, upgrading to newer versions may improve redo performance in your production environment.
 
 Single threaded redo can occur even on later, more advanced SQL Server versions where parallel recovery architecture is used, On these versions, a SQL Server instance can use up to 100 threads for parallel redo. Depending on the number of processors and availability group databases, parallel redo threads are allocated and the number approaches 100 total threads. In such a case, when the 100 thread redo thread limit is reached some databases in the availability group are assigned a single redo thread.
 
@@ -156,7 +156,7 @@ AND database_id= db_id('agdb')
 
 :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/single-threaddb-startup.png" alt-text="Determine if your availability group database is using parallel recovery.":::
 
-If you have confirmed your database is using single threaded redo, review the algorithm described previously to determine if SQL Server is exceeding the number of 100 worker threads dedicated for parallel recovery. This might be the reason that the 'agdb’ database is using a single thread only for recovery.
+If you've confirmed your database is using single threaded redo, review the algorithm described previously to determine if SQL Server is exceeding the number of 100 worker threads dedicated for parallel recovery. This might be the reason that the 'agdb’ database is using a single thread only for recovery.
 
 SQL Server 2022 now implements a new parallel recovery algorithm so that worker threads are assigned for parallel recovery based on the workload, which eliminates the chances of a busy database remaining in single threaded recovery. For more information, see [Thread Usage by Availability Groups](/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability).
 
