@@ -8,15 +8,15 @@ ms.prod: sql
 
 ## What is recovery queueing?
 
-Changes made to an availability group database on the primary replica are sent to all secondary replicas defined in the same availability group. Once those arrive at the secondary replica, they are first written to the transaction log file of the availability group database. SQL Server then uses the 'recovery' or 'redo' operation to update the database file(s).
+Changes made to an availability group database on the primary replica are sent to all secondary replicas defined in the same availability group. Once those changes arrive at the secondary replica, they are first written to the transaction log file of the availability group database. SQL Server then uses the 'recovery' or 'redo' operation to update the database file(s).
 
-If the changes to an availability group arrive and harden on the database transaction log file faster than they can be recovered, then a recovery 'queue' is formed. This is composed of hardened transaction log transactions that haven't been recovered into the database.
+If the changes to an availability group arrive and harden on the database transaction log file faster than they can be recovered, then a recovery 'queue' is formed. This queue is composed of hardened transaction log transactions that haven't been recovered into the database.
 
 ## Symptoms and impact of recovery (redo) queueing
 
 ### Querying secondary replica returns different results than the primary replica
 
-Read only workloads which query secondary replicas may query stale data. If there is recovery queuing, changes to data on the primary replica database might not reflect in the secondary database when querying the same data.
+Read only workloads, which query secondary replicas may query stale data. If there is recovery queuing, changes to data on the primary replica database might not reflect in the secondary database when querying the same data.
 
 Although changes arrive at the secondary and are written to the database log file, the changes won’t be queried until they are 'recovered' into the database files. The recovery operation is what makes those changes readable.
 
