@@ -132,7 +132,7 @@ Use Performance Monitor to actively monitor blocked redo impact to recovery queu
 
 :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/monitor-blocked-redo-impact-to-recovery-queue.png" alt-text="Monitor for schema modification lock wait type.":::
 
-Monitor for schema modification lock wait type using the query described earlier to monitor the wait types reported for redo operations, against `sys.dm_exec_requests`. You can observe the increasing wait time for the `LCK_M_SCH_M` (schema modification locks the redo thread is attempting to acquire) from ongoing redo blockage:
+Monitor for schema modification lock wait type using the query described earlier to check the wait types reported for redo operations, against `sys.dm_exec_requests`. You can observe the increasing wait time for the `LCK_M_SCH_M` (schema modification locks the redo thread is attempting to acquire) from ongoing redo blockage:
 
 :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/increase-wait-time-lck-m-sch-m.png" alt-text="Observe the increasing wait time for the LCK_M_SCH_M.":::
 
