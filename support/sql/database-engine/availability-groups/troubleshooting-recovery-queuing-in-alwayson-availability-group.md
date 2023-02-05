@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting recovery queuing in an AlwaysOn availability group
 description: This article troubleshoots problems related to recovery queueing in an AlwaysOn availability group. 
-ms.date: 08/03/2020
+ms.date: 02/05/2023
 ms.custom: sap:Availability Groups
 ms.prod: sql
 author: padmajayaraman
