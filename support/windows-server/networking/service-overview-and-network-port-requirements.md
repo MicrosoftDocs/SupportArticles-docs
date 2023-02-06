@@ -190,7 +190,7 @@ System service name: **ClusSvc**
 |Cluster Service|TCP|3343 (This port is required during a node join operation.)|
 |RPC|TCP|135|
 |Cluster Administrator|UDP|137|
-|Randomly allocated high UDP ports²|UDP|Random port number between 1024 and 65535<br/>Random port number between 49152 and 65535³|
+|Randomly allocated high UDP ports²|TCP|Random port number between 1024 and 65535<br/>Random port number between 49152 and 65535³|
   
 > [!NOTE]
 > Additionally, for successful validation on Windows Failover Clusters on 2008 and above, allow inbound and outbound traffic for ICMP4, ICMP6, and port 445/TCP for SMB.
