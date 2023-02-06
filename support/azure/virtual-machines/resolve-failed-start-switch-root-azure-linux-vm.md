@@ -85,34 +85,23 @@ If you're unable to access the VM using the Azure Serial Console, then the repai
 
    `mount /dev/sdc15 /repair/efi/`
 
-7. Copy the *kernelopts* value from the *grubenv* file.
+7. Copy the *kernelopts* value from the *grubenv* file. The path of the grubenv file in Linux can vary depending on the distribution and configuration of the system. However, it is commonly located at `/boot/efi/EFI/redhat/grubenv` or `/boot/grub2/gubenv`.
 
    Example:
 
    ```console
-   [root@repairvm ~] # cat /boot/efi/EFI/redhat/grubenv
-   saved_entry=d606d39f9aa249beb74216035ea11733-4.18.0-193.19.1.el8_2.x86_64  
-   kernelopts=**root=UUID=bc0bc3e1-e621-40ab-96ca-8d6a5268f17e ro  crashkernel=auto console=tty0 console=ttyS0,115200n8**  
-   boot_success=1 
+   cat /boot/efi/EFI/redhat/grubenv
    ```
 
-8. Edit the desired boot entry from `/boot/loader/entries` and manually add both `kernelopts` and `earlyprintk=ttyS0` to the command.
+8. Edit the desired boot entry from `/boot/loader/entries`:
 
    Example:
 
    ```console
-   [root@repairvm ~] # vi /boot/loader/entries/a358b364a6d3492898bedc8d1dea3e92-4.18.0-147.8.1.el8_1.x86_64.conf
-   title Oracle Linux Server (4.18.0-147.8.1.el8_1.x86_64) 8.2  
-   version 4.18.0-147.8.1.el8_1.x86_64  
-   linux /vmlinuz-4.18.0-147.8.1.el8_1.x86_64 **root=UUID=bc0bc3e1-e621-40ab-96ca-8d6a5268f17e ro  crashkernel=auto console=tty0 console=ttyS0,115200n8 _earlyprintk=ttyS0_**  
-   initrd /initramfs-4.18.0-147.8.1.el8_1.x86_64.img $tuned_initrd  
-   options $kernelopts $tuned_params  
-   id ol-20200407213902-4.18.0-147.8.1.el8_1.x86_64  
-   grub_users $grub_users  
-   grub_arg --unrestricted  
-   grub_class kernel  
+   vi /boot/loader/entries/a358b364a6d3492898bedc8d1dea3e92-4.18.0-147.8.1.el8_1.x86_64.conf
    ```
-
+   Manually add the `kernelopts` value that you copied and `earlyprintk=ttyS0` to the boot entry file.
+   
 9. Unmount the efi partition. For example,   `/repair/efi/`.
 
    `umount /repair/efi`
