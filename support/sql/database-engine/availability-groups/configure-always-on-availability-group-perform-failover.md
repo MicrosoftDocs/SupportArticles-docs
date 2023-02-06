@@ -32,24 +32,13 @@ If you want the WSFC to trigger a failover instead of a resource restart when [e
 
 1. Set the value of **Maximum restarts in the specified period** to **0**.
 
-1. Check the box **If all the restart attempts fail, begin restarting again after the specified period (hh:mm)**, set the value to **00:10**, and select **OK**.
+1. Check the box **If all the restart attempts fail, begin restarting again after the specified period (hh:mm)** and select **OK**.
 
 1. Make sure both your nodes are **Possible Owners** and **preferred owners**.
 
 ## Custom configuration option
 
-1. Create a text file that contains the following t-sql commands, and note the path and file name for later steps:
-
-   ```sql
-   Connect <ReplicaVM\InstanceName>;
-   Alter Availability Group [AGName] Failover;
-   Go
-   ```
-
-   > [!Note]
-   > `<ReplicaVM\InstanceName>` is a placeholder. You need to change it to match your environments. This script is an example for reference. A full script should perform other checks before performing a failover.
-
-1. Expand **SQL Server Agent**, right-click **Alert**, and select **New Alert...**.
+1. In SQL Server Management Studio, expand **SQL Server Agent**, right-click **Alerts**, and select **New Alert...**.
 
 1. Specify a value for **Name**, select **SQL Server event alert** for **Type**, specify the value of **Error number** to **823** or any other desired error as per the list, and then select **OK**.
 
@@ -57,6 +46,6 @@ If you want the WSFC to trigger a failover instead of a resource restart when [e
 
 1. On the **Job Step Properties** dialog, specify a value for **Step name**, select **Operating system (CmdExec)** for **Type**, and then select **SQL Server Agent Service Account** for **Run as**.
 
-1. Enter the following failover SQLCMD command:
+1. Enter the following failover sqlcmd command:
 
-   `sqlcmd -S <SecondaryReplicaName> -U SQLADMIN -P <YourPassword> -i "path to your sql file from step 1"`
+   `sqlcmd -S <SecondaryReplicaName> -U SQLADMIN -P <YourPassword> -Q "ALTER Availability Group [AGName] Failover"`
