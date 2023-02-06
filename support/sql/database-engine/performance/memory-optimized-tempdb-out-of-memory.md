@@ -66,7 +66,10 @@ By using the DMVs to verify the cause, you may see different scenarios of the is
 
     The DMV [tempdb.sys.dm_xtp_system_memory_consumers](/sql/relational-databases/system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql) or [tempdb.sys.dm_db_xtp_memory_consumers](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-memory-consumers-transact-sql) shows a large difference between allocated bytes and used bytes.
 
-    **Resolution**: To resolve the issue, you can run the following commands in [SQL Server 2019 CU13](https://support.microsoft.com/topic/kb5005679-cumulative-update-13-for-sql-server-2019-5c1be850-460a-4be4-a569-fe11f0adc535) or a later version that has a new procedure `sys.sp_xtp_force_gc` to free up allocated but unused bytes.
+    **Resolution**: To resolve the issue, you can run the following commands in [SQL Server 2019 CU13](https://support.microsoft.com/topic/kb5005679-cumulative-update-13-for-sql-server-2019-5c1be850-460a-4be4-a569-fe11f0adc535), [SQL Server 2022 CU1](../../releases/sqlserver-2022/cumulativeupdate1.md), or a later version that has a new procedure `sys.sp_xtp_force_gc` to free up allocated but unused bytes.
+
+    > [!NOTE]
+    > Starting with [SQL Server 2022 CU1](../../releases/sqlserver-2022/cumulativeupdate1.md), you need to execute the stored procedure only once.
 
     ```sql
     /* Yes, 2 times for both*/
