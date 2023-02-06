@@ -2,6 +2,8 @@
 title: Failed to get UI element error
 description: Provides a resolution for the issue that desktop flow actions fail to get UI elements.
 ms.reviewer: nimoutzo
+author: Giorgos Trantzas
+ms.author: gtrantzas
 ms.date: 02/01/2023
 ms.subservice: power-automate-desktop-flows
 ---
@@ -84,7 +86,9 @@ To solve the issue, take the following steps:
 
 1. Use alternative approaches for interacting with the element on the screen. You can use image automation, mouse and keyboard actions, and optical character recognition (OCR).
 
-## More information
+If you receive the "Element wasn't found" or "Window wasn't found" error when a UI automation action fails in Microsoft Power Automate, see [UI automation action fails with "Failed to get element/window" or "Element/Window wasn't found" error](ui-automation-action-fails-errors.md).
+
+## References
 
 - [Automate desktop applications](/power-automate/desktop-flows/desktop-automation)
 - [Automate webpages](/power-automate/desktop-flows/automation-web)
