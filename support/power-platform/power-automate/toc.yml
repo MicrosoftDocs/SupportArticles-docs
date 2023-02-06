@@ -149,6 +149,8 @@
           href: desktop-flow-runs-list-not-updated.md
         - name: Desktop flow fails with the SessionCreationTimeout error code
           href: sessioncreationtimeout-error-code.md
+        - name: Failed to get UI element
+          href: failed-get-ui-element.md
         - name: '"Failed to deserialize Flow" error'
           href: failed-to-deserialize-flow-error.md
         - name: '"Failed to assume control of Microsoft Edge/Chrome/Firefox" error'
