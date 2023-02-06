@@ -7,7 +7,7 @@ search.appverid: MET150
 ---
 # Troubleshooting data transfer between apps
 
-This article gives troubleshooting guidance for scenarios where a Microsoft Intune app protection policy (APP) designed to allow data transfer doesn't work as intended.The most common uses of the Intune APP are for data protection, to control the transfer of corporate data between APP managed applications (apps), and to restrict data transfer to unmanaged apps. For example, users can transfer corporate data from the Microsoft Outlook app to the Microsoft Excel app (both policy-managed) but not to the Dropbox mobile app (an unmanaged app).
+This article gives troubleshooting guidance for scenarios where a Microsoft Intune app protection policy (APP) designed to allow data transfer doesn't work as intended. The most common uses of the Intune APP are for data protection, to control the transfer of corporate data between APP managed applications (apps), and to restrict data transfer to unmanaged apps. For example, users can transfer corporate data from the Microsoft Outlook app to the Microsoft Excel app (both policy-managed) but not to the Dropbox mobile app (an unmanaged app).
 
 When applying Intune APP for data protection, a major unexpected behavior would be seeing your users cannot transfer data between managed apps, such as Outlook and Teams. In such scenarios, use the troubleshooting steps in this article to help diagnose and resolve the problem. For general APP troubleshooting, see [Troubleshooting app protection policy deployment in Intune](troubleshoot-app-protection-policy-deployment.md).
 
@@ -73,9 +73,12 @@ For more information, see [iOS/iPadOS app protection policy settings](/mem/intun
 
 ## Review APP settings on the device side with Microsoft Edge
 
-Run Intune diagnostics in Microsoft Edge to check APP setting applied to each managed app on a device.
-Open Microsoft Edge on the device and enter the URL, about:intunehelp. **Intune Diagnostics** will open, as shown in the examples below.
-Tap **View Intune App Status** (iOS/iPad) or **VIEW APP INFO** (Android) to see APP settings applied to each app on the device. Compare setting values in this view with those configured in Endpoint Manager. For an explanation of these settings' values, see [Review client app protection logs](/mem/intune/apps/app-protection-policy-settings-log).
+Run Intune diagnostics in Microsoft Edge to check the APP setting applied to each managed application on a device.
+
+1. Open Microsoft Edge on the device and enter the URL, about:intunehelp. **Intune Diagnostics** will open, as shown in the examples below.
+1. Tap **View Intune App Status** (iOS/iPad) or **VIEW APP INFO** (Android) to see APP settings applied to each app on the device. 
+1. Compare setting values in this view with those configured in Endpoint Manager. 
+   1. For an explanation of these settings' values, see [Review client app protection logs](/mem/intune/apps/app-protection-policy-settings-log).
 
 :::image type="content" source="media/troubleshoot-data-transfer/intune-diagnostics-ios-and-android.png" alt-text="Side-by-side screenshots of Intune Diagnostics on an iOS/iPadOS device (left) and an Android device (right).":::
 
