@@ -1,6 +1,6 @@
 ---
 title: Log Reader Agent reader thread may generate an assertion dump on a publisher
-description: Describes the symptoms that the Log Reader Agent reader thread may generate an assertion dump on a publisher.
+description: Fixes an issue in which the Log Reader Agent reader thread generates an assertion dump on a publisher.
 ms.date: 02/15/2023
 ms.custom: KB5022970
 appliesto:
@@ -20,8 +20,8 @@ In this scenario, the Log Reader Agent reader thread may generate the following 
 
 >\* Location:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;replrowset.cpp:2226</br>
 \* Expression:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(LSN)m_curLSN < (LSN)(pSchemas->schema_lsn_begin)</br>
-\* SPID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*SPID*</br>
-\* Process ID:&nbsp;&nbsp;&nbsp;&nbsp;*ProcessID*
+\* SPID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<SPID></br>
+\* Process ID:&nbsp;&nbsp;&nbsp;&nbsp;\<ProcessID>
 
 ## Resolution
 

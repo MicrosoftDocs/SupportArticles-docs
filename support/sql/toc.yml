@@ -777,7 +777,7 @@
       items:
       - name: Cumulative Update 1 (KB5022375)
         href: releases/sqlserver-2022/cumulativeupdate1.md
-      - name: 'FIX: Log Reader Agent reader thread may generate an assertion dump'
+      - name: 'FIX: Log Reader Agent reader thread generates an assertion dump'
         href: releases/sqlserver-2022/log-reader-agent-reader-thread-may-generate-an-assertion-dump.md
       - name: 'FIX: Database accessibility issues with high-volume customer workloads'
         href: releases/sqlserver-2022/database-accessibility-issues-high-volume-customer-workloads.md
