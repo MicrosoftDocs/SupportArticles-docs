@@ -98,11 +98,11 @@ If you go to the website now, you'll see error messages that contain more inform
 >
 > **Exception Details:** System.IO.FileNotFoundException
   
-### Option 5: Use the compute emulator
+### Option 5: Use the Compute Emulator
 
-You can use the Azure compute emulator to diagnose and troubleshoot issues of missing dependencies and *Web.config* errors. For best results when you use this method to diagnose issues, use a computer or VM that has a clean installation of Windows.
+You can use the Azure Compute Emulator to diagnose and troubleshoot issues of missing dependencies and *Web.config* errors. For best results when you use this method to diagnose issues, use a computer or VM that has a clean installation of Windows.
 
-To diagnose issues by using the Azure compute emulator:
+To diagnose issues by using the Azure Compute Emulator:
 
 1. Install the [Azure SDK](https://azure.microsoft.com/downloads/).
 1. On the development computer, build the cloud service project.

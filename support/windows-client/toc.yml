@@ -346,6 +346,8 @@
       href: ./deployment/drive-reassignment-block-update.md
     - name: Windows Update hangs
       href: ./deployment/windows-update-hangs-updates-uninstalled.md
+    - name: Windows Update issues troubleshooting
+      href: ./deployment/windows-update-issues-troubleshooting.md
   - name: Setup
     items:
     - name: Windows 10 upgrade resolution procedures
@@ -362,6 +364,10 @@
       href: ./deployment/cant-enter-uefi-firmware-setup.md
     - name: Can't turn off a computer from Audit mode
       href: ./deployment/fail-to-turn-off-computer-from-audit-mode.md
+    - name: Windows 10 upgrade issues troubleshooting
+      href: ./deployment/windows-10-upgrade-issues-troubleshooting.md
+    - name: Windows 10 upgrade error codes
+      href: ./deployment/windows-10-upgrade-error-codes.md
     - name: Computer screen goes black during setup
       href: ./deployment/computer-screen-black-during-installation.md
     - name: Customize default local user profile
@@ -422,6 +428,8 @@
     items:
     - name: USMT common issues
       href: ./deployment/usmt-common-issues.md
+    - name: USMT return codes
+      href: ./deployment/usmt-return-codes.md
 - name: Group Policy
   items:
   - name: Group Policy
