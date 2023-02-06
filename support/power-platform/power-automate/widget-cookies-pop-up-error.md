@@ -1,7 +1,7 @@
 ---
 title: Cookies or pop-up blocker errors when accessing Power Automate embedded experiences
 description: Resolves the cookies or pop-up blocker errors when accessing Power Automate in other apps.
-ms.reviewer: 
+ms.reviewer: hamenon
 ms.date: 02/01/2023
 author: hamenon-ms
 ms.author: hamenon
@@ -22,7 +22,7 @@ These issues occur because third-party cookies are blocked in the web browser.
 
 Power Automate stores some data, such as user identity and preferences locally, leveraging your browser's capabilities. Problems occur if the browser blocks the storage of such local data or third-party cookies set by Power Automate.
 
-To check what browser you're using and the browser settings, go to [WhatIsMyBrowser](https://www.whatismybrowser.com/). Then, enable third-party cookies, and make sure that the related sites aren't blocked for cookies.
+To solve the issues, go to the settings of the browser you're using, enable the third-party cookies, and make sure that the related sites aren't blocked for cookies.
 
 #### Instructions for Microsoft Edge
 
