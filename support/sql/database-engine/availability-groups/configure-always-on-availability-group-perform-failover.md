@@ -51,4 +51,4 @@ If you want the WSFC to trigger a failover instead of a resource restart when [e
    `sqlcmd -S <SecondaryReplicaName> -U SQLADMIN -P <YourPassword> -Q "ALTER Availability Group <AGName> Failover"`
    
    > [!NOTE]
-   > `<SecondaryReplicaName>`, <YourPassword> and `<AGName>` are placeholders. You need to change it to match your environments. This script is an example for reference. A full script should perform other checks before performing a failover.
+   > `<SecondaryReplicaName>`, `<YourPassword>` and `<AGName>` are placeholders. You need to change it to match your environments. This script is an example for reference. A full script should perform other checks before performing a failover.
