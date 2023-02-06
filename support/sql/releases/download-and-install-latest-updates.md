@@ -39,14 +39,14 @@ Each of the following links provides information for all of the applicable produ
 
   |Version|Latest service pack|Latest GDR|Latest cumulative update|
   |---|---|---|---|
-|**SQL Server 2022**<br/><br/>- [Build information](#sql-server-2022)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver16&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5021522) ( - February 2023) |None |
-  |**SQL Server 2019**<br/><br/>- [Build information](#sql-server-2019)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5021125) ( - February 2023)|[CU18 for 2019](https://support.microsoft.com/help/5017593) (15.0.4261.1 - September 2022)<br/><br/>[CU18 + GDR](https://support.microsoft.com/help/5021124) ( - February 2023)|
-  |**SQL Server 2017**<br/><br/>- [Build information](#sql-server-2017)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5021127) ( - February 2023)|[CU31 for 2017](https://support.microsoft.com/help/5016884) (14.0.3456.2 - September 2022)<br/><br/>[CU31 + GDR](https://support.microsoft.com/help/5021126) ( - February 2023)|
-  |**SQL Server 2016**<br/><br/>- [Build information](#sql-server-2016)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|[Azure Connect pack](https://support.microsoft.com/help/5014242) (13.0.7000.253 - May 2022)<br/><br/>[SP3](https://support.microsoft.com/help/5003279) (13.0.6300.2 - September 2021)<br/><br/>[SP2](https://support.microsoft.com/help/4052908) (13.0.5026.0 - April 2018)<br/><br/>[SP1](https://support.microsoft.com/help/3182545) (13.0.4001.0 - November 2016)|[GDR for Azure Connect pack](https://support.microsoft.com/help/5021128) ( - February 2023)<br/><br/>[GDR for SP3](https://support.microsoft.com/help/5021129) ( - February 2023)<br/><br/>[GDR for SP2](https://support.microsoft.com/help/5014365) (13.0.5108.50 - June 2022)<br/><br/>[GDR for SP1](https://support.microsoft.com/help/4505219) (13.0.4259.0 - July 2019)<br/><br/>[GDR for RTM](https://support.microsoft.com/help/4058560) (13.0.1745.2 - January 2018)|[CU17 + GDR for SP2](https://support.microsoft.com/help/5014351) (13.0.5893.48 - June 2022)<br/><br/>[CU17 for 2016 SP2](https://support.microsoft.com/help/5001092) (13.0.5888.11 - March 2021)<br/><br/>[CU15 + GDR for SP1](https://support.microsoft.com/help/4505221) (13.0.4604.0 - July 2019)<br/><br/>[CU15 for SP1](https://support.microsoft.com/help/4495257) (13.0.4574.0 - May 2019)<br/><br/>[CU9 for RTM](https://support.microsoft.com/help/4037357) (13.0.2216.0 - November 2017)|
-  |**SQL Server 2014**<br/><br/>- [Build information](#sql-server-2014)<br/>- [Installation](https://www.microsoft.com/download/details.aspx?id=42299)|[SP3](https://support.microsoft.com/help/4022619) (12.0.6024.0 - October 2018)<br/><br/>[SP2](https://support.microsoft.com/help/3171021) (12.0.5000.0 - July 2016)<br/><br/>[SP1](https://support.microsoft.com/help/3058865) (12.0.4100.1 - May 2015)|[GDR for SP3](https://support.microsoft.com/help/5021037) ( - February 2023)<br/><br/>[GDR for SP2](https://support.microsoft.com/help/4505217) (12.0.5223.6 - July 2019)<br/><br/>[GDR for SP1](https://support.microsoft.com/help/4019091) (August 2017)<br/><br/>[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058) (July 2015)|[CU4 + GDR for SP3](https://support.microsoft.com/help/5021045) ( - February 2023)<br/><br/>[CU4 for SP3](https://support.microsoft.com/help/4500181) (12.0.6329.1 - July 2019)<br/><br/>[CU18 for SP2](https://support.microsoft.com/help/4500180) (12.0.5687.1 - July 2019)<br/><br/>[CU13 for SP1](https://support.microsoft.com/help/4019099) (12.0.4522.0 - August 2017)|
-  |**SQL Server 2012**<br/><br/>- [Build information](#sql-server-2012)<br/>- [Installation](/previous-versions/sql/sql-server-2012/cc281837(v=sql.110))| [SP4](https://support.microsoft.com/help/4018073) (11.0.7001.0 - September 2017)<br/><br/>[SP3](https://support.microsoft.com/help/3072779) (11.0.6020.0 - November 2015)<br/><br/>[SP2](https://support.microsoft.com/help/2958429) (11.0.5058.0 - June 2014)<br/><br/>[SP1](https://support.microsoft.com/help/2674319) (11.0.3000.00 - November 2012|[GDR for SP4](https://support.microsoft.com/help/5021123) ( - February 2023)<br/><br/>[GDR for SP3](https://support.microsoft.com/help/4057115) (January 2018)<br/><br/>[MS 16-136](/security-updates/SecurityBulletins/2016/ms16-136) (November 2016)<br/><br/>[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058) (December 2015)|[CU10 for SP3](https://support.microsoft.com/help/4025925) (11.0.6607.3 - August 2017)<br/><br/>[CU16 for SP2](https://support.microsoft.com/help/3205054) (11.0.5678.0 - January 2017)<br/><br/>[CU16 for SP1](https://support.microsoft.com/help/3052476) (11.0.3487.0 - May 2015)|
-  |**SQL&nbsp;Server&nbsp;2008&nbsp;R2**<br/><br/>- [Build information](#sql-server-2008-r2)<br/>- [Installation](https://www.microsoft.com/download/details.aspx?id=44271)|[SP3](https://support.microsoft.com/help/2979597) (10.50.6000.34 - September 2014)<br/><br/>[SP2](https://support.microsoft.com/help/2630458) (10.50.4000.0 - July 2012)|[GDR for SP3](https://support.microsoft.com/help/5021112) (February 2023)<br/><br/>[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058) (July 2015)|None|
-  |**SQL Server 2008**<br/><br/>- [Build information](#sql-server-2008)<br/>- [Servicing](/previous-versions/sql/sql-server-2008/dd638062(v=sql.100))|[SP4](https://support.microsoft.com/help/2979596) (10.0.6000.29 - September 2014)<br/><br/>[SP3](https://support.microsoft.com/help/2546951) (10.00.5500.00 - October 2011)|[GDR for SP4](https://support.microsoft.com/help/5020863) (February 2023)<br/><br/>[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058) (July 2015)|None|
+|**SQL Server 2022**<br/><br/>- [Build information](#sql-server-2022)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver16&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5021522) (16.0.1050.5 - February 2023) |None |
+  |**SQL Server 2019**<br/><br/>- [Build information](#sql-server-2019)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5021125) (15.0.2101.7 - February 2023)|[CU18 for 2019](https://support.microsoft.com/help/5017593) (15.0.4261.1 - September 2022)<br/><br/>[CU18 + GDR](https://support.microsoft.com/help/5021124) (15.0.4280.7 - February 2023)|
+  |**SQL Server 2017**<br/><br/>- [Build information](#sql-server-2017)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5021127) (14.0.2047.8 - February 2023)|[CU31 for 2017](https://support.microsoft.com/help/5016884) (14.0.3456.2 - September 2022)<br/><br/>[CU31 + GDR](https://support.microsoft.com/help/5021126) (14.0.3460.9 - February 2023)|
+  |**SQL Server 2016**<br/><br/>- [Build information](#sql-server-2016)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|[Azure Connect pack](https://support.microsoft.com/help/5014242) (13.0.7000.253 - May 2022)<br/><br/>[SP3](https://support.microsoft.com/help/5003279) (13.0.6300.2 - September 2021)<br/><br/>[SP2](https://support.microsoft.com/help/4052908) (13.0.5026.0 - April 2018)<br/><br/>[SP1](https://support.microsoft.com/help/3182545) (13.0.4001.0 - November 2016)|[GDR for Azure Connect pack](https://support.microsoft.com/help/5021128) (13.0.7024.30 - February 2023)<br/><br/>[GDR for SP3](https://support.microsoft.com/help/5021129) (13.0.6430.49 - February 2023)<br/><br/>[GDR for SP2](https://support.microsoft.com/help/5014365) (13.0.5108.50 - June 2022)<br/><br/>[GDR for SP1](https://support.microsoft.com/help/4505219) (13.0.4259.0 - July 2019)<br/><br/>[GDR for RTM](https://support.microsoft.com/help/4058560) (13.0.1745.2 - January 2018)|[CU17 + GDR for SP2](https://support.microsoft.com/help/5014351) (13.0.5893.48 - June 2022)<br/><br/>[CU17 for 2016 SP2](https://support.microsoft.com/help/5001092) (13.0.5888.11 - March 2021)<br/><br/>[CU15 + GDR for SP1](https://support.microsoft.com/help/4505221) (13.0.4604.0 - July 2019)<br/><br/>[CU15 for SP1](https://support.microsoft.com/help/4495257) (13.0.4574.0 - May 2019)<br/><br/>[CU9 for RTM](https://support.microsoft.com/help/4037357) (13.0.2216.0 - November 2017)|
+  |**SQL Server 2014**<br/><br/>- [Build information](#sql-server-2014)<br/>- [Installation](https://www.microsoft.com/download/details.aspx?id=42299)|[SP3](https://support.microsoft.com/help/4022619) (12.0.6024.0 - October 2018)<br/><br/>[SP2](https://support.microsoft.com/help/3171021) (12.0.5000.0 - July 2016)<br/><br/>[SP1](https://support.microsoft.com/help/3058865) (12.0.4100.1 - May 2015)|[GDR for SP3](https://support.microsoft.com/help/5021037) (12.0.6174.8 - February 2023)<br/><br/>[GDR for SP2](https://support.microsoft.com/help/4505217) (12.0.5223.6 - July 2019)<br/><br/>[GDR for SP1](https://support.microsoft.com/help/4019091) (August 2017)<br/><br/>[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058) (July 2015)|[CU4 + GDR for SP3](https://support.microsoft.com/help/5021045) (12.0.6444.4 - February 2023)<br/><br/>[CU4 for SP3](https://support.microsoft.com/help/4500181) (12.0.6329.1 - July 2019)<br/><br/>[CU18 for SP2](https://support.microsoft.com/help/4500180) (12.0.5687.1 - July 2019)<br/><br/>[CU13 for SP1](https://support.microsoft.com/help/4019099) (12.0.4522.0 - August 2017)|
+  |**SQL Server 2012**<br/><br/>- [Build information](#sql-server-2012)<br/>- [Installation](/previous-versions/sql/sql-server-2012/cc281837(v=sql.110))| [SP4](https://support.microsoft.com/help/4018073) (11.0.7001.0 - September 2017)<br/><br/>[SP3](https://support.microsoft.com/help/3072779) (11.0.6020.0 - November 2015)<br/><br/>[SP2](https://support.microsoft.com/help/2958429) (11.0.5058.0 - June 2014)<br/><br/>[SP1](https://support.microsoft.com/help/2674319) (11.0.3000.00 - November 2012|[GDR for SP4](https://support.microsoft.com/help/5021123) (11.0.7512.11 - February 2023)<br/><br/>[GDR for SP3](https://support.microsoft.com/help/4057115) (January 2018)<br/><br/>[MS 16-136](/security-updates/SecurityBulletins/2016/ms16-136) (November 2016)<br/><br/>[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058) (December 2015)|[CU10 for SP3](https://support.microsoft.com/help/4025925) (11.0.6607.3 - August 2017)<br/><br/>[CU16 for SP2](https://support.microsoft.com/help/3205054) (11.0.5678.0 - January 2017)<br/><br/>[CU16 for SP1](https://support.microsoft.com/help/3052476) (11.0.3487.0 - May 2015)|
+  |**SQL&nbsp;Server&nbsp;2008&nbsp;R2**<br/><br/>- [Build information](#sql-server-2008-r2)<br/>- [Installation](https://www.microsoft.com/download/details.aspx?id=44271)|[SP3](https://support.microsoft.com/help/2979597) (10.50.6000.34 - September 2014)<br/><br/>[SP2](https://support.microsoft.com/help/2630458) (10.50.4000.0 - July 2012)|[GDR for SP3](https://support.microsoft.com/help/5021112) (10.50.6785.2 - February 2023)<br/><br/>[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058) (July 2015)|None|
+  |**SQL Server 2008**<br/><br/>- [Build information](#sql-server-2008)<br/>- [Servicing](/previous-versions/sql/sql-server-2008/dd638062(v=sql.100))|[SP4](https://support.microsoft.com/help/2979596) (10.0.6000.29 - September 2014)<br/><br/>[SP3](https://support.microsoft.com/help/2546951) (10.00.5500.00 - October 2011)|[GDR for SP4](https://support.microsoft.com/help/5020863) (10.0.6814.4 - February 2023)<br/><br/>[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058) (July 2015)|None|
 
   > [!NOTE]
   > "Latest" = During the past 12 months
@@ -60,15 +60,15 @@ Each of the following links provides information for all of the applicable produ
 
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
-||None|GDR|[5021522](https://support.microsoft.com/help/5021522)|February 14, 2023|
+|16.0.1050.5|None|GDR|[5021522](https://support.microsoft.com/help/5021522)|February 14, 2023|
 |16.0.1000.6|None|RTM|NA|November 16, 2022|
 
 ### SQL Server 2019
 
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
-||None|CU18 + GDR| [5021124](https://support.microsoft.com/help/5021124)|February 14, 2023|
-||None|GDR| [5021125](https://support.microsoft.com/help/5021125)|February 14, 2023|
+|15.0.4280.7|None|CU18 + GDR| [5021124](https://support.microsoft.com/help/5021124)|February 14, 2023|
+|15.0.2101.7|None|GDR| [5021125](https://support.microsoft.com/help/5021125)|February 14, 2023|
 |15.0.4261.1|None|CU18| [5017593](https://support.microsoft.com/help/5017593)|September 28, 2022|
 |15.0.4249.2|None|CU17| [5016394](https://support.microsoft.com/help/5016394)|August 11, 2022|
 |15.0.4236.7|None|CU16 + GDR| [5014353](https://support.microsoft.com/help/5014353)|June 14, 2022|
@@ -98,8 +98,8 @@ Each of the following links provides information for all of the applicable produ
 
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
-||None| CU31 + GDR| [5021126](https://support.microsoft.com/help/5021126)|February 14, 2023|
-||None| GDR| [5021127](https://support.microsoft.com/help/5021127)|February 14, 2023|
+|14.0.3460.9|None| CU31 + GDR| [5021126](https://support.microsoft.com/help/5021126)|February 14, 2023|
+|14.0.2047.8|None| GDR| [5021127](https://support.microsoft.com/help/5021127)|February 14, 2023|
 |14.0.3456.2|None| CU31| [5016884](https://support.microsoft.com/help/5016884)|September 20, 2022|
 |14.0.3451.2|None| CU30| [5013756](https://support.microsoft.com/help/5013756)|July 13, 2022|
 |14.0.3445.2|None| CU29 + GDR| [5014553](https://support.microsoft.com/help/5014553)|June 14, 2022|
@@ -148,8 +148,8 @@ Each of the following links provides information for all of the applicable produ
 
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
-||SP3|GDR|[5021129](https://support.microsoft.com/help/5021129)|February 14, 2023|
-||SP3|Azure Connect pack + GDR|[5021128](https://support.microsoft.com/help/5021128)|February 14, 2023|
+|13.0.6430.49|SP3|GDR|[5021129](https://support.microsoft.com/help/5021129)|February 14, 2023|
+|13.0.7024.30|SP3|Azure Connect pack + GDR|[5021128](https://support.microsoft.com/help/5021128)|February 14, 2023|
 |13.0.6419.1|SP3|GDR|[5014355](https://support.microsoft.com/help/5014355)|June 14, 2022|
 |13.0.7016.1|SP3|Azure Connect pack + GDR|[5015371](https://support.microsoft.com/help/5015371)|June 14, 2022|
 |13.0.7000.253|SP3|Azure Connect pack|[5014242](https://support.microsoft.com/help/5014242)|May 19, 2022|
@@ -223,8 +223,8 @@ Each of the following links provides information for all of the applicable produ
 
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
-||SP3|CU4 + GDR| [5021045](https://support.microsoft.com/help/5021045)|February 14, 2023|
-||SP3|GDR|[5021037](https://support.microsoft.com/help/5021037)|February 14, 2023|
+|12.0.6444.4|SP3|CU4 + GDR| [5021045](https://support.microsoft.com/help/5021045)|February 14, 2023|
+|12.0.6174.8|SP3|GDR|[5021037](https://support.microsoft.com/help/5021037)|February 14, 2023|
 |12.0.6439.10|SP3|CU4 + GDR| [5014164](https://support.microsoft.com/help/5014164)|June 14, 2022|
 |12.0.6169.19|SP3|GDR|[5014165](https://support.microsoft.com/help/5014165)|June 14, 2022|
 |12.0.6433.1|SP3|CU4 + GDR| [4583462](https://support.microsoft.com/help/4583462)|January 12, 2021|
@@ -306,7 +306,7 @@ Each of the following links provides information for all of the applicable produ
 
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
-||SP4| GDR Security Update| [5021123](https://support.microsoft.com/help/5021123)|February 14, 2023|
+|11.0.7512.11|SP4| GDR Security Update| [5021123](https://support.microsoft.com/help/5021123)|February 14, 2023|
 |11.0.7507.2|SP4| GDR Security Update| [4583465](https://support.microsoft.com/help/4583465)|January 12, 2021|
 |11.0.6260.1|SP3| GDR Security Update| [4057115](https://support.microsoft.com/help/4057115)|January 16, 2018|
 |11.0.7001.0|SP4| RTW/PCU4| [4018073](https://support.microsoft.com/help/4018073)|October 2, 2017|
@@ -375,7 +375,7 @@ Each of the following links provides information for all of the applicable produ
 
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
-||SP3| GDR| [5021112](https://support.microsoft.com/help/5021112)|February 14, 2023|
+|10.50.6785.2|SP3| GDR| [5021112](https://support.microsoft.com/help/5021112)|February 14, 2023|
 |10.50.6529.00|SP3| MS15-058: QFE Security Update| [3045314](https://support.microsoft.com/help/3045314)|July 14, 2015|
 |10.50.6220.00|SP3| MS15-058: QFE Security Update| [3045316](https://support.microsoft.com/help/3045316)|July 14, 2015|
 |10.50.6000.34|SP3| RTW/PCU3| [2979597](https://support.microsoft.com/help/2979597)|September 26, 2014|
@@ -431,7 +431,7 @@ Each of the following links provides information for all of the applicable produ
 
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
-||SP4| GDR| [5020863](https://support.microsoft.com/help/5020863)|February 14, 2023|
+|10.0.6814.4|SP4| GDR| [5020863](https://support.microsoft.com/help/5020863)|February 14, 2023|
 |10.00.6535.00|SP4| MS15-058: QFE Security Update| [3045308](https://support.microsoft.com/help/3045308)|July 14, 2015|
 |10.00.6241.00|SP4| MS15-058: GDR Security Update| [3045311](https://support.microsoft.com/help/3045311)|July 14, 2015|
 |10.00.5890.00|SP3| MS15-058: QFE Security Update| [3045303](https://support.microsoft.com/help/3045303)|July 14, 2015|
