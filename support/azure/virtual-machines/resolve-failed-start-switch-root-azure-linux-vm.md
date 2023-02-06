@@ -41,7 +41,7 @@ If you're unable to use the Azure Serial Console section, proceed to the [Offlin
 
 2. Select the entry for the rescue kernel.
 
-3. Copy the `kernelopts` value from the `grubenv` file. The path of the `grubenv` file in Linux can vary depending on the distribution and configuration of the system. However, it is commonly located at `/boot/efi/EFI/redhat/grubenv` or `/boot/grub2/gubenv`.
+3. Copy the `kernelopts` value from the `grubenv` file. The path of the `grubenv` file in Linux can vary depending on the distribution and configuration of the system. It is commonly located at `/boot/efi/EFI/redhat/grubenv` or `/boot/grub2/gubenv`.
 
 
    Example:
@@ -85,7 +85,7 @@ If you're unable to access the VM using the Azure Serial Console, then the repai
 
    `mount /dev/sdc15 /repair/efi/`
 
-7. Copy the `kernelopts` value from the `grubenv` file. The path of the `grubenv` file in Linux can vary depending on the distribution and configuration of the system. However, it is commonly located at `/boot/efi/EFI/redhat/grubenv` or `/boot/grub2/gubenv`.
+7. Copy the `kernelopts` value from the `grubenv` file. The path of the `grubenv` file in Linux can vary depending on the distribution and configuration of the system. It is commonly located at `/boot/efi/EFI/redhat/grubenv` or `/boot/grub2/gubenv`.
 
    Example:
 
