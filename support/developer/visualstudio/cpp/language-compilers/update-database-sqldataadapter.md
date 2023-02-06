@@ -46,7 +46,7 @@ To create a sample SQL Server table to use in the Visual C++ .NET code samples d
 
 ## Code sample 1: Automatically generated commands
 
-If the `SELECT` statement to retrieve the data used to populate a `DataSet` is based on a single database table, you can take advantage of the `CommandBuilder` object to automatically generate the `DeleteCommand`, `InsertCommand`, and `UpdateCommand` properties of the `DataAdapter`. This simplifies and reduces the code required to perform `INSERT`, `UDPATE`, and `DELETE` operations.
+If the `SELECT` statement to retrieve the data used to populate a `DataSet` is based on a single database table, you can take advantage of the `CommandBuilder` object to automatically generate the `DeleteCommand`, `InsertCommand`, and `UpdateCommand` properties of the `DataAdapter`. This simplifies and reduces the code required to perform `INSERT`, `UPDATE`, and `DELETE` operations.
 
 As a minimum requirement, you must set the `SelectCommand` property for automatic command generation to work. The table schema retrieved by the `SelectCommand` determines the syntax of the automatically generated `INSERT`, `UPDATE`, and `DELETE` statements.
 
