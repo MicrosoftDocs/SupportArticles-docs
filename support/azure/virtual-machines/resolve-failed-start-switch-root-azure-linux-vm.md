@@ -41,34 +41,24 @@ If you're unable to use the Azure Serial Console section, proceed to the [Offlin
 
 2. Select the entry for the rescue kernel.
 
-3. Copy the *kernelopts* value from the *grubenv* file.
+3. Copy the *kernelopts* value from the *grubenv* file. The path of the grubenv file in Linux can vary depending on the distribution and configuration of the system. However, it is commonly located at `/boot/efi/EFI/redhat/grubenv` or `/boot/grub2/gubenv`.
+
 
    Example:
 
    ```console
-   [root@examplevm ~] # cat /boot/efi/EFI/redhat/grubenv
-   saved_entry=d606d39f9aa249beb74216035ea11733-4.18.0-193.19.1.el8_2.x86_64  
-   kernelopts=**root=UUID=bc0bc3e1-e621-40ab-96ca-8d6a5268f17e ro  crashkernel=auto console=tty0 console=ttyS0,115200n8**  
-   boot_success=1 
+   cat /boot/grub2/gubenv
    ```
 
-4. Edit the desired boot entry from `/boot/loader/entries` and manually add both `kernelopts` and `earlyprintk=ttyS0` to the command.
+4. Edit the desired boot entry from `/boot/loader/entries`:  
 
    Example:
 
    ```console
-   [root@examplevm ~] # vi /boot/loader/entries/a358b364a6d3492898bedc8d1dea3e92-4.18.0-147.8.1.el8_1.x86_64.conf
-   title Oracle Linux Server (4.18.0-147.8.1.el8_1.x86_64) 8.2  
-   version 4.18.0-147.8.1.el8_1.x86_64  
-   linux /vmlinuz-4.18.0-147.8.1.el8_1.x86_64 **root=UUID=bc0bc3e1-e621-40ab-96ca-8d6a5268f17e ro  crashkernel=auto console=tty0 console=ttyS0,115200n8 _earlyprintk=ttyS0_**  
-   initrd /initramfs-4.18.0-147.8.1.el8_1.x86_64.img $tuned_initrd  
-   options $kernelopts $tuned_params  
-   id ol-20200407213902-4.18.0-147.8.1.el8_1.x86_64  
-   grub_users $grub_users  
-   grub_arg --unrestricted  
-   grub_class kernel  
+   vi /boot/loader/entries/a358b364a6d3492898bedc8d1dea3e92-4.18.0-147.8.1.el8_1.x86_64.conf
    ```
-
+   Manually add the `kernelopts` value that you copied and `earlyprintk=ttyS0` to the boot entry file.
+   
 5. Reboot the VM. If more than one kernel is installed, you might need to select the modified entry from the GRUB menu.
 
 ### <a name="offlinemethod"></a>Offline method
