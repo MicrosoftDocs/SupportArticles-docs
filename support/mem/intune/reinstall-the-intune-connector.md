@@ -4,19 +4,20 @@ description: Learn how to reinstall the Microsoft Intune Certificate Connector i
 author: helenclu
 ms.author: luche
 ms.reviewer: jesantae
-ms.date: 09/08/2021
+ms.date: 02/06/2023
 ---
 # How to reinstall the Intune Certificate Connector
+
+> [!IMPORTANT]  
+> The details in this article apply only to the **PFX Certificate Connector for Microsoft Intune** and **Microsoft Intune Connector**. Support for both connectors ends in July 2021, when they are both replaced by the **Certificate Connector for Microsoft Intune**.
+>
+> If you use the new connector, see [Certificate Connector for Microsoft Intune](/mem/intune/protect/certificate-connector-overview) for more information about capabilities, connector status, and log details including a list of Log Event IDs for the newer connector.
 
 This article describes how to uninstall and reinstall the Intune Certificate Connector. You might need to reinstall the connector in one of these scenarios:
 
 - The connector displays an **Error** status in Intune.
 - The connector certificate is expired.
 - The connector version has to be updated.
-
->[!NOTE]
->Reinstalling to upgrade to the new unified Intune Certificate Connector is fully supported. But some of the steps in this article about checking the NDESCertThumbprint registry value, do not apply, as this entry is removed from the registry with the new unified connector.
->Read more here, [Install the Certificate Connector for Microsoft Intune](/mem/intune/protect/certificate-connector-install)
 
 ## Before you uninstall the connector
 
