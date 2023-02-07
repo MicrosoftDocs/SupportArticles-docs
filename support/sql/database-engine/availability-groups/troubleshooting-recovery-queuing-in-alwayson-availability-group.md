@@ -34,13 +34,13 @@ In the case of recovery queueing, the Always On dashboard in SQL Server Manageme
 
 ## How to check for recovery (redo) queueing
 
-Recovery queue is a per-database measurement that can be checked by using the Always On dashboard on the primary replica or by using the `sys.dm_hadr_database_replica_states` dynamic management view (DMV) on the primary or secondary replica. Performance Monitor counters check recovery queuing and recovery rate. These counters must be checked against the secondary replica.
+Recovery queue is a per-database measurement that can be checked by using the Always On dashboard on the primary replica or by using the `sys.dm_hadr_database_replica_states` Dynamic Management View (DMV) on the primary or secondary replica. Performance Monitor counters check recovery queuing and recovery rate. These counters must be checked against the secondary replica.
 
 The next several sections provide methods to actively monitor your availability group database recovery queue.
 
 ### Query sys.dm_hadr_database_replica_states
 
-The `sys.dm_hadr_database_replica_states` DMV reports a row for each availability group database. One column in the report is `redo_queue_size`. The `redo_queue_size` value is the recovery queue size as measured in kilobytes. You can set up a query that resembles the following query to monitor any trend in the recovery queue size every 30 seconds. The query is run on the primary replica. It uses the `is_local=0` predicate to report the data for the secondary replica, where `redo_queue_size` and `redo_rate` are relevant.
+The `sys.dm_hadr_database_replica_states` DMV reports a row for each availability group database. One column in the report is `redo_queue_size`. This value is the recovery queue size as measured in kilobytes. You can set up a query that resembles the following query to monitor any trend in the recovery queue size every 30 seconds. The query is run on the primary replica. It uses the `is_local=0` predicate to report the data for the secondary replica, where `redo_queue_size` and `redo_rate` are relevant.
 
 ```sql
 WHILE 1=1
@@ -62,16 +62,16 @@ Here is what the output looks like.
 
 To review the recovery queue, follow these steps:
 
-1. Open the AlwaysOn Dashboard in SSMS.
-1. Right-click an availability group in the SSMS Object Explorer, and select **Show Dashboard**.
+1. Open the AlwaysOn Dashboard in SSMS by right-clicking on an availability group in SSMS Object Explorer.
+1. Select **Show Dashboard**.
 
-1. The availability group databases are listed last, and there’s some data reported on the databases. Although **Redo Queue Size (KB)** and **Redo Rate (KB/sec)** aren't listed by default, they can be added to this view, as shown in the screenshot in the next step. To add these counters, right-click the header above the database reports, and select from the list of available columns.
+1. The availability group databases are listed last, and there’s some data reported on the databases. Although **Redo Queue Size (KB)** and **Redo Rate (KB/sec)** aren't listed by default, you can add them to this view, as shown in the screenshot in the next step. To add these counters, right-click the header above the database reports, and select from the list of available columns.
 
 1. To add **Redo Queue Size (KB)** and **Redo Rate (KB/sec)**, right-click the header that is shown as highlighted in red in the following screenshot.
   
     :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/add-redo-queue-size-rate.png" alt-text="Screenshot that shows adding the counters Redo Queue Size (KB) and Redo Rate (KB/sec).":::
 
-1. By default, the Always On dashboard auto refreshes **Redo Queue Size (KB)** and **Redo Rate (KB/sec)** every 60 seconds.
+    By default, the Always On dashboard auto refreshes **Redo Queue Size (KB)** and **Redo Rate (KB/sec)** every 60 seconds.
 
     :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/add-redo-queue-size-rate-refreshes-60.png" alt-text="Screenshot showing refresh counters set to every 60 seconds.":::
 
