@@ -1,6 +1,6 @@
 ---
-title: Troubleshooting recovery queuing in an AlwaysOn availability group
-description: This article help you to troubleshoot problems that are related to recovery queueing in an AlwaysOn availability group. 
+title: Troubleshooting recovery queueing in an Always On availability group
+description: This article help you to troubleshoot problems that are related to recovery queueing in an Always On availability group. 
 ms.date: 02/05/2023
 ms.custom: sap:Availability Groups
 ms.prod: sql
@@ -18,9 +18,9 @@ If the changes to an availability group arrive and harden on the database transa
 
 ### Querying primary and secondary replicas returns different results
 
-Read-only workloads that query secondary replicas might query stale data. If recovery queuing occurs, changes to data on the primary replica database might not be reflected in the secondary database when you query the same data.
+Read-only workloads that query secondary replicas might query stale data. If recovery queueing occurs, changes to data on the primary replica database might not be reflected in the secondary database when you query the same data.
 
-Although changes arrive at the secondary database and are written to the database log file, the changes won’t be queried until they are recovered and restored to the database files. The recovery operation is what makes those changes readable.
+Although changes arrive at the secondary database and are written to the database log file, the changes won't be queried until they are recovered and restored to the database files. The recovery operation is what makes those changes readable.
 
 For more information, see the ["Data latency on secondary replica"](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups?view=sql-server-ver16&preserve-view=true) section of "Differences between availability modes for an Always On availability group."
 
@@ -34,7 +34,7 @@ In the case of recovery queueing, the Always On dashboard in SQL Server Manageme
 
 ## How to check for recovery (redo) queueing
 
-Recovery queue is a per-database measurement that can be checked by using the Always On dashboard on the primary replica or by using the `sys.dm_hadr_database_replica_states` Dynamic Management View (DMV) on the primary or secondary replica. Performance Monitor counters check recovery queuing and recovery rate. These counters must be checked against the secondary replica.
+Recovery queue is a per-database measurement that can be checked by using the Always On dashboard on the primary replica or by using the `sys.dm_hadr_database_replica_states` Dynamic Management View (DMV) on the primary or secondary replica. Performance Monitor counters check recovery queueing and recovery rate. These counters must be checked against the secondary replica.
 
 The next several sections provide methods to actively monitor your availability group database recovery queue.
 
@@ -65,9 +65,10 @@ To review the recovery queue, follow these steps:
 1. Open the AlwaysOn Dashboard in SSMS by right-clicking on an availability group in SSMS Object Explorer.
 1. Select **Show Dashboard**.
 
-1. The availability group databases are listed last, and there’s some data reported on the databases. Although **Redo Queue Size (KB)** and **Redo Rate (KB/sec)** aren't listed by default, you can add them to this view, as shown in the screenshot in the next step. To add these counters, right-click the header above the database reports, and select from the list of available columns.
+    The availability group databases are listed last, and there's some data reported on the databases. Although **Redo Queue Size (KB)** and **Redo Rate (KB/sec)** aren't listed by default, you can add them to this view, as shown in the screenshot in the next step.
+1. To add these counters, right-click the header above the database reports, and select from the list of available columns.
 
-1. To add **Redo Queue Size (KB)** and **Redo Rate (KB/sec)**, right-click the header that is shown as highlighted in red in the following screenshot.
+1. To add **Redo Queue Size (KB)** and **Redo Rate (KB/sec)**, right-click the header that's shown as highlighted in red in the following screenshot.
   
     :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/add-redo-queue-size-rate.png" alt-text="Screenshot that shows adding the counters Redo Queue Size (KB) and Redo Rate (KB/sec).":::
 
@@ -85,17 +86,17 @@ The recovery queue size is unique to each secondary replica and database. Theref
 
 1. Under **Available counters**, select **SQLServer:Database Replica**, and then select **Recovery Queue** and **Redone Bytes/sec** counters.
 
-1. In the **Instance** box, select the availability group database that you want to monitor for recovery queuing.
+1. In the **Instance** box, select the availability group database that you want to monitor for recovery queueing.
 
 1. Select **Add** > **OK**.
 
-Here is what increasing recovery queueing might look like.
+   Here's what increasing recovery queueing might look like.
 
-:::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/increase-recovery-queueing-graph.png" alt-text="Screenshot showing an increase in recovery queueing.":::
+   :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/increase-recovery-queueing-graph.png" alt-text="Screenshot showing an increase in recovery queueing.":::
 
 ## How to diagnose recovery (redo) queueing
 
-After you identify recovery queuing for a specific secondary replica availability group database, connect to the secondary replica, and then query `sys.dm_exec_requests` to determine the `wait_type` and `wait_time` for recovery threads. Here is a query that can run in a loop. You're looking for a high frequency of one or more wait types and even wait times for those wait types. Here is a sample query that runs every second and reports the wait types and wait times for the availability group, "agdb":
+After you identify recovery queueing for a specific secondary replica availability group database, connect to the secondary replica, and then query `sys.dm_exec_requests` to determine the `wait_type` and `wait_time` for recovery threads. Here's a query that can run in a loop. You're looking for a high frequency of one or more wait types and even wait times for those wait types. Here's a sample query that runs every second and reports the wait types and wait times for the availability group, "agdb":
 
 ```sql
 WHILE (1=1)
@@ -110,7 +111,7 @@ END
 ```
 
 > [!IMPORTANT]  
-> For meaningful wait type output, recovery queueing should be observed to be increasing when you use one of the methods that are described earlier to monitor this condition.
+> For meaningful wait type output, recovery queueing should be observed to be increasing when you use one of the methods that're described earlier to monitor this condition.
 
 In this example, some I/O-related wait types are reported (PAGEIOLATCH_UP, PAGEIOATCH_EX). Monitor to check whether these wait types continue to have the largest `wait_times` values, as reported in the next column.
 
@@ -118,17 +119,17 @@ In this example, some I/O-related wait types are reported (PAGEIOLATCH_UP, PAGEI
 
 ### SQL Server redo wait types
 
-When a wait type is identified, review the following article [SQL Server 2016/2017: Availability group secondary replica redo model and performance - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/sql-server/sql-server-2016-2017-availability-group-secondary-replica-redo/ba-p/385905%22%20/t%20%22_blank) as a cross-reference for common wait types that cause recovery queuing, and for help to resolve the problem.
+When a wait type is identified, review the following article [SQL Server 2016/2017: Availability group secondary replica redo model and performance - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/sql-server/sql-server-2016-2017-availability-group-secondary-replica-redo/ba-p/385905%22%20/t%20%22_blank) as a cross-reference for common wait types that cause recovery queueing, and for help to resolve the problem.
 
-## Another possible cause of recovery queuing: Blocked redo
+## Another possible cause of recovery queueing: Blocked redo
 
-If your solution directs reporting (querying) against availability group databases on the secondary replica, these read-only queries acquire schema stability (Sch-S) locks. These Sch-S locks can block redo threads from acquiring schema modification (Sch-M) locks (also known as "schema modify locks" or `LCK_M_SCH_M`) to make any data definition language (DDL) changes, such as `ALTER TABLE` or `ALTER INDEX`. A blocked redo thread can't apply log records until it's unblocked. This can cause recovery queuing.
+If your solution directs reporting (querying) against availability group databases on the secondary replica, these read-only queries acquire schema stability (Sch-S) locks. These Sch-S locks can block redo threads from acquiring schema modification (Sch-M) locks (also known as "schema modify locks" or `LCK_M_SCH_M`) to make any data definition language (DDL) changes, such as `ALTER TABLE` or `ALTER INDEX`. A blocked redo thread can't apply log records until it's unblocked. This can cause recovery queueing.
 
 To check for historical evidence of a blocked redo, open the **AlwaysOn_health Xevent** trace files on the secondary replica by using SSMS. Look for `lock_redo_blocked` events.
 
 :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/alwayson-health-xevent.png" alt-text="Screenshot that shows checking for for historical evidence of a blocked redo.":::
 
-Use Performance Monitor to actively monitor blocked redo impact to recovery queue. Add the **SQL Server::Database Replica::Redo blocked/sec** and **SQL Server::Database Replica::Recovery Queue** counters. The following screenshot shows an `ALTER TABLE ALTER COLUMN` command that is run against the primary replica while a long-running query is run against the same table on the secondary replica. The **Redo blocked/sec** counter indicates that the `ALTER TABLE ALTER COLUMN` command is run. While the long-running query is running on the same table on the secondary replica, any subsequent changes on the primary will cause an increase in the recovery queue.
+Use Performance Monitor to actively monitor blocked redo impact to recovery queue. Add the **SQL Server::Database Replica::Redo blocked/sec** and **SQL Server::Database Replica::Recovery Queue** counters. The following screenshot shows an `ALTER TABLE ALTER COLUMN` command that's run against the primary replica while a long-running query is run against the same table on the secondary replica. The **Redo blocked/sec** counter indicates that the `ALTER TABLE ALTER COLUMN` command is run. While the long-running query is running on the same table on the secondary replica, any subsequent changes on the primary will cause an increase in the recovery queue.
 
 :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/monitor-blocked-redo-impact-to-recovery-queue.png" alt-text="Screenshot showing a monitor for the schema modification lock wait type.":::
 
@@ -136,9 +137,9 @@ Monitor for the schema modification lock wait type that the redo thread tries to
 
 :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/increase-wait-time-lck-m-sch-m.png" alt-text="Screenshot that shows the increasing wait time for the LCK_M_SCH_M.":::
 
-## Anther possible cause of recovery queuing: Single-threaded redo
+## Another possible cause of recovery queueing: Single-threaded redo
 
-SQL Server introduced parallel recovery for secondary replica databases in Microsoft SQL Server 2016. If you're experiencing recovery queuing when you run SQL Microsoft Server 2012 or Microsoft SQL Server 2014, you can upgrade to a later version of the program to improve redo performance in your production environment.
+SQL Server introduced parallel recovery for secondary replica databases in Microsoft SQL Server 2016. If you're experiencing recovery queueing when you run SQL Microsoft Server 2012 or Microsoft SQL Server 2014, you can upgrade to a later version of the program to improve redo performance in your production environment.
 
 A single-threaded redo can occur in even later, more advanced SQL Server versions in which parallel recovery architecture is used. In these versions, a SQL Server instance can use up to 100 threads for a parallel redo. Depending on the numbers of processors and availability group databases, parallel redo threads are allocated up to a maximum of 100 total threads. If the 100-thread redo limit is reached, some databases in the availability group are assigned a single redo thread.
 
