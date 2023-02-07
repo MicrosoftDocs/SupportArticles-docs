@@ -218,7 +218,7 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 
 | Code | Description | Notes |
 |---|---|---|
-| 405.0 | Method not allowed. | The request is made by using an HTTP method that isn't valid. For more information, see [HTTP Error 405.0 when you visit a website that is hosted on a server that is running IIS](../health-diagnostic-performance/http-error-405-website/http-error-405-website.md). |
+| 405.0 | Method not allowed. | The request is made by using an HTTP method that isn't valid. For more information, see [HTTP Error 405.0 when you visit a website that is hosted on a server that is running IIS](../health-diagnostic-performance/http-error-405-website.md). |
 | 406.0 | Invalid MIME type. | The request is made by using an `Accept` header that contains a MIME value that isn't valid. |
 | 412.0 | Precondition failed. | The request is made by using an `If-Match` request header that contains a value that isn't valid. |
 
