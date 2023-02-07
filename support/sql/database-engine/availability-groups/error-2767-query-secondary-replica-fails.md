@@ -25,7 +25,7 @@ When offloading read-only workloads to a secondary replica of an Always On avail
 
 ## Cause
 
-This issue occurs because an active transaction prevents the log record of cache from accessing and refreshing the statistics on the secondary replica.
+This issue occurs because an active transaction prevents the cache invalidation log record from accessing and refreshing the statistics on the secondary replica.
 
 ## Workaround
 
