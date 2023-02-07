@@ -11,7 +11,7 @@ author: mabicca
 
 # Create a SWAP file for an Azure Linux VM
 
-To create a SWAP file on Azure Linux VMs, you need to set up cloud-init to automatically create it on the ephemeral (resource) disk of the VM. The resource disk is mounted under `/mnt` by default. It is located on the physical server where the Linux VM is hosted and has lower latency. It is not recommended to create SWAP partitions on OS disks or data disks that might impact the performance of the operating system and apps. It's important to remember that the resource disk should never be used to store regular data since it's only temporary storage. When a VM is moved to another host or stopped/deallocated, any data written to this disk will be wiped. It is recommended to use the resource disk only for data that can be removed such as SWAP and caching files. For more information, see [Temporary disk](/azure/virtual-machines/managed-disks-overview#temporary-disk).
+To create a SWAP file on Azure Linux VMs, you need to set up cloud-init to automatically create it on the ephemeral (resource) disk of the VM. The resource disk is mounted under `/mnt` by default. It's located on the physical server where the Linux VM is hosted and has lower latency. It isn't recommended to create SWAP partitions on OS disks or data disks that might impact the performance of the operating system and apps. It's important to remember that the resource disk should never be used to store regular data since it's only temporary storage. When a VM is moved to another host or stopped/deallocated, any data written to this disk will be wiped. It's recommended to use the resource disk only for data that can be removed such as SWAP and caching files. For more information, see [Temporary disk](/azure/virtual-machines/managed-disks-overview#temporary-disk).
 
 ## Disable SWAP creation in waagent configuration
 
@@ -110,7 +110,7 @@ Then, create the SWAP file under the resource disk path or a custom path.
     PCT=0.3
 
     # Location of swap file. Modify as appropriate based on location of ephemeral disk.
-    LOCATION=/mnt
+    LOCATION=/azure/resource
 
     if [ ! -f ${LOCATION}/swapfile ]
     then
