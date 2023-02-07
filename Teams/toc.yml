@@ -274,7 +274,11 @@
       - name: Monitored or Offline status is Unhealthy
         href: ./teams-rooms-and-devices/monitored-offline-status-unhealthy.md  
       - name: OS Edition status is Unhealthy
-        href: ./teams-rooms-and-devices/os-edition-status-unhealthy.md      
+        href: ./teams-rooms-and-devices/os-edition-status-unhealthy.md
+      - name: USB Peripheral Power Drain status is Unhealthy
+        href: ./teams-rooms-and-devices/usb-peripheral-power-drain-status-unhealthy.md
+      - name: USB Selective Suspend status is Unhealthy
+        href: ./teams-rooms-and-devices/usb-selective-suspend-status-unhealthy.md
       - name: Resolve Teams Rooms resource account sign-in issues
         href: ./teams-rooms-and-devices/teams-rooms-resource-account-sign-in-issues.md
       - name: Resolve Windows Update issues on Teams Rooms Pro devices
