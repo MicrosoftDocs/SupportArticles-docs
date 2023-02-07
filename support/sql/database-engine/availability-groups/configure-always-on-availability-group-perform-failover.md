@@ -18,11 +18,11 @@ In a SQL Server Always On availability group, database-level health detection ca
 
 If the error happens on the data file, SQL Server only sends the failure notice to a [Windows Server Failover Cluster](/sql/sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server) (WSFC) and relies on it to make the right decision based on policy configuration.
 
-To configure an Always On availability group to perform a failover, use one of the following methods:
+To configure an Always On availability group to perform a failover when [errors 823 and others](https://techcommunity.microsoft.com/t5/sql-server-blog/sql-server-availability-groups-8211-enhanced-database-level/ba-p/385965) occur, use one of the following procedures:
 
 ## Configure Failover Cluster Manager
 
-If you want the WSFC to trigger a failover instead of a resource restart when [errors 823 and others](https://techcommunity.microsoft.com/t5/sql-server-blog/sql-server-availability-groups-8211-enhanced-database-level/ba-p/385965) occur, follow these steps:
+This procedure will set up the WSFC policy to cause a failover to one of the possible owners instead of attempting to restart the role on the current primary node.
 
 1. Open Failover Cluster Manager.
 
@@ -37,6 +37,8 @@ If you want the WSFC to trigger a failover instead of a resource restart when [e
 1. Make sure both your nodes are **Possible Owners** and **preferred owners**.
 
 ## Custom configuration option
+
+This procedure provides an example on how to utilize the available alert mechanism in SQL Server and SQL Server Agent to detect the error and perform a failover.
 
 1. In SQL Server Management Studio, expand **SQL Server Agent**, right-click **Alerts**, and select **New Alert...**.
 
