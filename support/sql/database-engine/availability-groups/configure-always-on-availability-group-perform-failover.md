@@ -38,7 +38,7 @@ This procedure will set up the WSFC policy to cause a failover to one of the pos
 
 ## Custom configuration option
 
-This procedure provides an example on how to utilize the available alert mechanism in SQL Server and SQL Server Agent to detect the error and perform a failover.
+This procedure provides an example of how to utilize the available alert mechanism in SQL Server and SQL Server Agent to detect the error and perform a failover.
 
 1. In SQL Server Management Studio, expand **SQL Server Agent**, right-click **Alerts**, and select **New Alert...**.
 
