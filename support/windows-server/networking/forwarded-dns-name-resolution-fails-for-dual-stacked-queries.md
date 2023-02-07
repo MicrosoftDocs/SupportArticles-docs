@@ -156,3 +156,5 @@ The new policy might mitigate this issue.
 [RFC 2308, Negative Caching of DNS Queries](https://www.rfc-editor.org/rfc/rfc2308), Section 3, describes the behavior that's expected from the name servers that are authoritative for a zone. When the DNS server reports an NXDOMAIN or indicates that no data of the requested type exists, the response must include in the authority section the Start of Authority (SOA) record for the zone. This is required so that the response can be cached.
 
 [Common Misbehavior Against DNS Queries for IPv6 Addresses](https://tools.ietf.org/html/rfc4074) describes specific issues that might affect AAAA name resolution queries.
+
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
