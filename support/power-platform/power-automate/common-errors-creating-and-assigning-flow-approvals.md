@@ -1,9 +1,9 @@
 ---
 title: Common errors creating and assigning flow approvals
 description: Common Power Automate approval errors and potential resolutions.
-ms.reviewer: sranjan, hamenon
+ms.reviewer: hamenon, mansong
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 02/07/2023
 ms.subservice: power-automate-flows
 ---
 # Common errors creating and assigning flow approvals
