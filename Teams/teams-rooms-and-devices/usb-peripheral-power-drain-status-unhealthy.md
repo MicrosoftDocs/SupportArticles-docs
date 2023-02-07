@@ -1,6 +1,6 @@
 ---
 title: The USB Peripheral Power Drain status of a Teams Rooms device is Unhealthy
-description: Resolve the issue that causes the USB Peripheral Power Drain signal of a Microsoft Teams Rooms device to appear as Unhealthy.
+description: Resolves an issue that causes the USB Peripheral Power Drain signal of a Microsoft Teams Rooms device to appear as Unhealthy.
 ms.reviewer: rebenite
 ms.topic: troubleshooting
 ms.date: 2/6/2023
@@ -20,24 +20,24 @@ ms.custom: CI171525
 
 ## Symptoms
 
-In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **USB Peripheral Power Drain** signal of a Microsoft Teams Rooms device is shown as **Unhealthy**, and the incident severity value is shown as **Warning**. And users may experience the following issue:
+In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **USB Peripheral Power Drain** signal of a Microsoft Teams Rooms device is shown as **Unhealthy**, and the incident severity value is shown as **Warning**. Additionally, users might experience the following issue:
 
 When the Teams Rooms device goes to sleep and is woken up, USB devices that are connected to it become unresponsive or disconnected.
 
-> [!NOTE]
+> [!NOTE]  
 > Incidents that are classified as **Warning** don't affect the health status that's reported for a device.
 
 ## Cause
 
-This issue occurs if the Stop devices when screen is off setting is enabled on the Teams Rooms device.
+This issue occurs if the **Stop devices when screen is off** setting is enabled on the Teams Rooms device.
 
-Each new Teams Rooms device includes a Windows configuration that defines whether or not to stop the connected USB devices when the screen is off. By default, this setting is set to disabled, but sometimes it may be changed.
+Each new Teams Rooms device includes a Windows configuration that specifies whether to stop the connected USB devices when the screen is off. By default, this setting is set to disabled. However, it might sometimes be changed.
 
-When Windows goes into a lower power state, if this setting is enabled, it will keep track of any persistent USB communication and issue a USB device reset if it sees that one or more peripherals have been idle for a long time preventing the device from going into a deeper power state (a situation where a USB peripheral drains the device’s battery). While this behavior shouldn't apply to any Teams Rooms devices that are always plugged into AC power, it has been known to cause issues in the past, such as unexpected USB disconnections causing the device's firmware or mishandled drivers to be in a hung or unresponsive state. Therefore, if this setting is enabled, the Teams Rooms Pro agent detects and reports the status of **USB Peripheral Power Drain** as **Unhealthy**.
+When Windows goes into a lower power state while the **Stop devices** setting is enabled, it will keep track of any persistent USB communications. In this situation, Windows will issue a USB device reset if it sees that one or more USB peripherals have been idle for a long time. This prevents the device from going into a deeper and more vulnerable power state during which a USB peripheral might drain its battery. While this behavior shouldn't apply to any Teams Rooms devices that are always plugged into AC power, it is known to cause issues in the past, such as unexpected USB disconnections that cause the device's firmware or mishandled drivers to become unresponsive. Therefore, if this setting is enabled, the Teams Rooms Pro agent detects and reports the status of **USB Peripheral Power Drain** as **Unhealthy**.
 
 ## Resolution
 
-Teams Rooms Pro performs an automatic remediation to fix this issue. However, if the problem persists, use one of the following methods, depending on how the Teams Rooms device is configured.
+Microsoft Teams Rooms Pro performs an automatic remediation to fix this issue. However, if the issue persists, use one of the following methods, depending on how the Teams Rooms device is configured.
 
 ### Method 1: Use Windows PowerShell
 
@@ -64,4 +64,4 @@ Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\USB\AutomaticSurp
 Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\USB\AutomaticSurpriseRemoval' -Name AttemptRecoveryFromUsbPowerDrain -Value 0 -ErrorAction Stop
 ```
 
-1. [Create a script policy (add the script to script settings) and assign the policy to groups](/mem/intune/apps/intune-management-extension#create-a-script-policy-and-assign-it).
+1. [Create a script policy (add the script to script settings), and assign the policy to groups](/mem/intune/apps/intune-management-extension#create-a-script-policy-and-assign-it).
