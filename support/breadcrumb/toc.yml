@@ -7,7 +7,7 @@
     tocHref: /troubleshoot/
     topicHref: /troubleshoot/index
     items:
-    
+
     - name: Windows
       tocHref: /troubleshoot/windows/
       topicHref: /troubleshoot/windows/
@@ -20,7 +20,7 @@
         topicHref: /troubleshoot/windows-client/welcome-windows-client
       - name: Application Developer
         tocHref: /troubleshoot/windows/win32
-        topicHref: /troubleshoot/windows/win32/welcome-windowsdeveloper    
+        topicHref: /troubleshoot/windows/win32/welcome-windowsdeveloper
       - name: Hardware Developer
         tocHref: /troubleshoot/windows-hardware/drivers
         topicHref: /troubleshoot/windows-hardware/drivers/welcome-windowshardware
@@ -32,7 +32,7 @@
     - name: BizTalk Server
       tocHref: /troubleshoot/developer/biztalk/
       topicHref: /troubleshoot/developer/biztalk/welcome-biztalk-server
-      
+
     - name: .NET
       tocHref: /troubleshoot/developer/dotnet/
       topicHref: /troubleshoot/developer/dotnet/welcome-dotnet-landing
@@ -140,6 +140,12 @@
       tocHref: /troubleshoot/dynamics-365/
       topicHref: /troubleshoot/dynamics-365/
       items:
+      - name: Dynamics 365 Customer Insights
+        tocHref: /troubleshoot/dynamics-365/customer-insights/
+        topicHref: /troubleshoot/dynamics-365/customer-insights/welcome-customer-insights
+      - name: Dynamics 365 Finance
+        tocHref: /troubleshoot/dynamics-365/finance/
+        topicHref: /troubleshoot/dynamics-365/finance/welcome-finance
       - name: Dynamics 365 Fraud Protection
         tocHref: /troubleshoot/dynamics-365/fraud-protection/
         topicHref: /troubleshoot/dynamics-365/fraud-protection/welcome-fraud-protection
@@ -163,6 +169,9 @@
       - name: Power Automate
         tocHref: /troubleshoot/power-platform/power-automate/
         topicHref: /troubleshoot/power-platform/power-automate/welcome-power-automate
+      - name: AI Builder
+        tocHref: /troubleshoot/power-platform/ai-builder/
+        topicHref: /troubleshoot/power-platform/ai-builder/welcome-ai-builder
 
     - name: Microsoft Dynamics
       tocHref: /troubleshoot/dynamics/

@@ -15,7 +15,7 @@ The Power Automate team provides the JavaScript Software Developer Kit (JS SDK) 
 The Flow JS SDK reference needs to be added to the host application using the following code:
 
 ```html
-<script src="https://make.powerautomate.com/Content/msflowsdk-1.1.js"></script>
+<script src="https://flow.microsoft.com/Content/msflowsdk-1.1.js"></script>
 ```
 
 ## Including a local copy of the SDK in your application

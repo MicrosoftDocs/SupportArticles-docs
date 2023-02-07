@@ -166,7 +166,7 @@ To transfer the logins, use one of the following methods, as appropriate for you
         
                         IF (@type IN ( 'G', 'U'))
                         BEGIN -- NT authenticated account/group 
-                          SET @tmpstr = 'CREATE LOGIN ' + QUOTENAME( @name ) + ' FROM WINDOWS WITH DEFAULT_DATABASE = [' + @defaultdb + ']'
+                          SET @tmpstr = 'CREATE LOGIN ' + QUOTENAME( @name ) + ' FROM WINDOWS WITH DEFAULT_DATABASE = [' + @defaultdb + ']' + ', DEFAULT_LANGUAGE = [' + @defaultlanguage + ']'
                         END
                         ELSE 
                         BEGIN -- SQL Server authentication
