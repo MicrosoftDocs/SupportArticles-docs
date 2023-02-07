@@ -1,7 +1,7 @@
 ---
 title: Cookies or pop-up blocker errors when accessing Power Automate embedded experiences
 description: Resolves the cookies or pop-up blocker errors when accessing Power Automate in other apps.
-ms.reviewer: hamenon
+ms.reviewer: hamenon, tapanm, rymacdow
 ms.date: 02/01/2023
 author: hamenon-ms
 ms.author: hamenon
