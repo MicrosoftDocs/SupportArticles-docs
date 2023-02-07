@@ -27,7 +27,7 @@ The information and strategies present in the following articles lay the foundat
 
 ## Understand scaling on serverless SQL pool
 
-Serverless SQL pools don't require you to manually pick the right size. The system automatically adjusts the size based on your query requirements, and therefore manage your infrastructure and pick the right size for your solution.
+Serverless SQL pools don't require you to manually pick the right size. The system automatically adjusts the size based on your query requirements, and therefore manages your infrastructure and picks the right size for your solution.
 
 ## Performance tuning guidance for Delta Lake files
 
