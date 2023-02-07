@@ -16,18 +16,18 @@ This article helps you enhance performance for Azure Synapse Analytics serverles
 > [!NOTE]
 > Review the [list of known issues](/azure/synapse-analytics/known-issues) currently active or recently resolved in Azure Synapse Analytics.
 
-See the next few sections for information about achieving optimal performance and to prevent failures related to resource constraints on your Azure Synapse Analytics serverless SQL pools.
+See the next few sections for information on achieving optimal performance and prevent failures related to resource constraints on your Azure Synapse Analytics serverless SQL pools.
 
 ## Best practices and troubleshooting guides
 
-The information and strategies present in the following articles lay the foundation for much of what you need to know for getting the best performance out of your serverless SQL pool. It's highly encouraged that you review these articles to establish your understanding of the use cases and common issues to expect.
+The information and strategies present in the following articles form the base for much of what you need to know for getting the best performance of your serverless SQL pool. We recommend you to review these articles to understand the use cases and troubleshoot common issues.
 
 - [Best practices for serverless SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql/best-practices-serverless-sql-pool)
 - [Troubleshoot serverless SQL pool in Azure Synapse Analytics](/azure/synapse-analytics/sql/resources-self-help-sql-on-demand?tabs=x80070002)
 
 ## Understand scaling on serverless SQL pool
 
-Serverless SQL pools don't require you to manually pick the right size. The system automatically adjusts the size based on your query requirements, and therefore manages your infrastructure and picks the right size for your solution.
+Serverless SQL pools don't require you to manually pick the right size. The system automatically adjusts the size based on your query requirements, and thereby manages the infrastructure and picks the right size for your solution.
 
 ## Performance tuning guidance for Delta Lake files
 
@@ -50,19 +50,21 @@ For more detailed information about the role of statistics on CSV files in serve
 
 ## Recommendations for using Power BI and other reporting tools
 
+There are several recommendations to use Power BI and other reporting tools and they are:
+
 - Always check your tenant location.
 - Set up a cache for a better user experience.
 - Avoid returning millions of records to a dashboard.
 - Use scheduled refreshes to avoid parallel query executions that drain SQL serverless pool resources.
 - Use Spark to pre-aggregate common analytical queries. This "write once/read many" approach can avoid heavy queries that are run continuously.
-- Use filters to avoid big data volumes that were moved across your Azure infrastructure. Joins between different data stores.
+- Joins between different data stores - Use filters to avoid big data volumes that were moved across your Azure infrastructure.
 - Use `Latin1_General_100_BIN2_UTF8` collation for character data types. This collation avoids transferring all data from storage to your serverless SQL pool by pushing down filters when reading from storage.
-- Use the most optimal size, if you're casting or converting data to `char` or `varchar` during query time. When possible, avoid using `VARCHAR(MAX)`.
+- Use the most optimal size, if you're casting or converting data to `char` or `varchar` while running a query. When possible, avoid using `VARCHAR(MAX)`.
 - Automatic inference converts data types to a format that may not be optimal. Use the `WITH` clause to optimize data types.
-- The Azure Synapse SQL serverless pool resources has limits. Executing queries simultaneously will consume resources. It's common to see Power BI (PBI) dashboards reaching resource limits when multiple refreshes occur in parallel. Scheduled refreshes and load testing can help avoid this problem. Also, utilizing multiple Azure Synapse workspaces can address greater concurrency requirements.
-- You can query `sys.columns` or use `sp_describe_first_result_set` and `select top 0 from <view>` to check the data types, after you create a view. This approach is faster and less costly than using `SELECT * FROM...`.
+- The Azure Synapse SQL serverless pool resources has limits. Running queries simultaneously will consume resources. It's common to see Power BI (PBI) dashboards reaching resource limits when multiple refreshes occur in parallel. Scheduled refreshes and load testing can help avoid this problem. Also, utilizing multiple Azure Synapse workspaces can address greater concurrency requirements.
+- You can run the query `sys.columns` or use `sp_describe_first_result_set` and `select top 0 from <view>` to check the data types, after you create a view. This approach is faster and less costly than using `SELECT * FROM...`.
 - Use the [Statement Generator](https://htmlpreview.github.io/?https://github.com/Azure-Samples/Synapse/blob/main/SQL/tools/cosmosdb/generate-openrowset.html) to automatically create optimum column formats for your query.
-- Use the `OPENJSON` function to expose nested JSON data as columns. But if you also use the `AS JSON` option, the column type must be `NVARCHAR(MAX)`. This approach isn't ideal for performance. The best option is to use the `WITH` clause to expose nested arrays as columns.
+- Use the `OPENJSON` function to expose nested JSON data as columns. But if you also use the `AS JSON` command, the column type must be `NVARCHAR(MAX)`. This approach isn't ideal for performance. The best option is to use the `WITH` clause to expose nested arrays as columns.
 - The Cosmos DB transactional store partition key isn't used in the analytical store. In Azure Synapse Link, you can now model your transactional data to optimize data ingestion and point reads.
 
 ## Extra guidance and best practices
