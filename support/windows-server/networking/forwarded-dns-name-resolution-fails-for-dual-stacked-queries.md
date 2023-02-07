@@ -1,6 +1,6 @@
 ---
-title: Forwarded DNS name resolution might fail for dual-stacked queries
-description: Describes an issue in which DNS queries that include requests for A and AAAA records may initially succeed, and then start failing.
+title: Forwarded DNS name resolution fails for dual-stacked queries
+description: Describes an issue in which DNS queries that include requests for A and AAAA records initially succeed but then fail.
 ms.date: 2/2/2023
 author: v-tappelgate
 ms.author: v-tappelgate
@@ -12,24 +12,24 @@ localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:modern-inbox-and-microsoft-store-apps, csstroubleshoot
 ms.technology: networking
-keywords: A record,AAAA record, nonexistent domain, DNS cache,conditional forward
+keywords: A record, AAAA record, nonexistent domain, DNS cache, conditional forward
 ---
 
-# Forwarded DNS name resolution might fail for dual-stacked queries
+# Forwarded DNS name resolution fails for dual-stacked queries
 
 _Applies to:_ &nbsp; Windows Server 2016
 
 ## Symptoms
 
-You're using a third-party DNS server solution, and you can't consistently resolve names when using conditional forwarding.
+You're using a third-party DNS server solution, and you can't consistently resolve names when you use conditional forwarding.
 
-The local DNS server (10.100.100.70) can connect to the DNS server that's configured as a conditional forwarder (10.133.3.250). The first request from the DNS server to the conditional forwarder successfully resolves a name (for example, nbob1.contoso.com). After a period of time, name resolution stops working. An nslookup query to the conditional forwarder returns a "nonexistent domain" error message.
+The local DNS server (10.100.100.70) can connect to the DNS server that's configured as a conditional forwarder (10.133.3.250). The first request from the DNS server to the conditional forwarder successfully resolves a name (for example, nbob1.contoso.com). After some time, name resolution stops working. An nslookup query to the conditional forwarder returns a "nonexistent domain" error message.
 
 If you clear the DNS server cache on the forwarding computer (the local DNS server), name resolution resumes. However, this fix is temporary.
 
 ## Cause
 
-The DNS server (10.100.100.70) forwards the client's name resolution request for nbob1.contoso.com to the configured conditional forwarder (10.133.3.250). The name query contains two parts, an A query (IPv4) and an AAAA query (IPv6).
+The DNS server (10.100.100.70) forwards the client's name resolution request for nbob1.contoso.com to the configured conditional forwarder (10.133.3.250). The name query contains two parts: An A query (IPv4) and an AAAA query (IPv6).
 
 The conditional forwarder returns a correct response for the A record. For example, when a DNS client issues the `nslookup nbob1.contoso.com` command, the DNS server reports the following response from the conditional forwarder:
 
@@ -61,7 +61,7 @@ IPAddress: 10.158.150.200
 
 These responses are excerpted from server-side Wireshark traces on the local DNS server (10.100.100.70).
 
-We expect the reported response for the AAAA query to resemble the following excerpt:
+The reported response for the AAAA query should resemble the following excerpt:
 
 ```output
 10.10.10.100 10.10.10.10 DNS:QueryId = 0x21F1, QUERY (Standard query), Query for nbob1.contoso.com of type AAAA on class Internet
@@ -106,7 +106,7 @@ ExpirationLimit: 86400 (0x15180)
 MinimumTTL: 3600 (0xE10)
 ```
 
-However, the local DNS server actually reports a server failure (such as "no record in the domain" or "server failure") for the AAAA record. This response poisons the local DNS server cache and generates a negative cache entry for the host A record as well. After this cache update, the local DNS server no longer resolves host (A) name resolution requests for nbob1.contoso.com.
+However, the local DNS server actually reports a server failure (such as "no record in the domain" or "server failure") for the AAAA record. This response poisons the local DNS server cache and generates a negative cache entry for the host A record, too. After this cache update, the local DNS server no longer resolves host (A) name resolution requests for nbob1.contoso.com.
 
 ```output
 10.100.100.170 10.133.3.250 DNS:QueryId = 0xC30F, QUERY (Standard query), Query for nbob1.contoso.com of type AAAA on class Internet
@@ -137,20 +137,22 @@ QuestionType: AAAA, IPv6 Address, 28(0x1c)
 QuestionClass: Internet, 1(0x1) 
 ```
 
-In such cases, the underlying problem is that the response from the conditional forwarder wasn't formatted correctly. The local DNS server interpreted the response to mean that the record wasn't found.
+In such cases, the underlying problem is that the response from the conditional forwarder isn't formatted correctly. The local DNS server interprets the response to mean that the record isn't found.
 
 ## Resolution
 
 Contact the vendor of the third-party DNS server implementation about this issue.
 
-Additionally, you can use Windows PowerShell to implement the following DNS server recursion policy. The new policy might mitigate this issue.
+Additionally, you can use Windows PowerShell to implement the following DNS server recursion policy, as follows:
 
 ```powershell
 Add-DnsServerQueryResolutionPolicy -Name "BlockRecursionOfAAAA" -ApplyOnRecursion -Action Deny -QType "EQ,AAAA"
 ```
 
+The new policy might mitigate this issue.
+
 ## More information
 
-[RFC 2308, Negative Caching of DNS Queries](https://www.rfc-editor.org/rfc/rfc2308), Section 3, describes the behavior that's expected from the name servers that are authoritative for a zone. when reporting an NXDOMAIN or indicating that no data of the requested type exists, the response MUST include the Start of Authority (SOA) record of the zone in the authority section of the response. This is required so that the response can be cached.
+[RFC 2308, Negative Caching of DNS Queries](https://www.rfc-editor.org/rfc/rfc2308), Section 3, describes the behavior that's expected from the name servers that are authoritative for a zone. When the DNS server reports an NXDOMAIN or indicates that no data of the requested type exists, the response must include in the authority section the Start of Authority (SOA) record for the zone. This is required so that the response can be cached.
 
 [Common Misbehavior Against DNS Queries for IPv6 Addresses](https://tools.ietf.org/html/rfc4074) describes specific issues that might affect AAAA name resolution queries.
