@@ -2,6 +2,14 @@
 
 
 
+## Week of January 30, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 1/31/2023 | [Known issues in Teams Rooms and devices](/microsoftteams/troubleshoot/teams-rooms-and-devices/rooms-known-issues) | modified |
+
+
 ## Week of January 23, 2023
 
 

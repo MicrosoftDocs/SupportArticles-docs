@@ -2,6 +2,17 @@
 
 
 
+## Week of January 30, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 1/31/2023 | [Troubleshooting common eDiscovery issues](/microsoft-365/troubleshoot/ediscovery/resolve-ediscovery-issues) | modified |
+| 1/31/2023 | [Auto-apply retention label doesn't apply to messages](/microsoft-365/troubleshoot/retention/auto-apply-retention-label-not-apply-messages) | added |
+| 2/1/2023 | [Troubleshooting common eDiscovery issues](/microsoft-365/troubleshoot/ediscovery/resolve-ediscovery-issues) | modified |
+| 2/2/2023 | [Microsoft Support and Recovery Assistant Enterprise version](/microsoft-365/troubleshoot/administration/sara-command-line-version) | modified |
+
+
 ## Week of January 23, 2023
 
 
