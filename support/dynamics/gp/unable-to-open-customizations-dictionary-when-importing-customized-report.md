@@ -62,7 +62,7 @@ To resolve this problem, follow these steps:
 > If the issue still exists after you apply the above steps, consider the following to solve the issue.
 >
 > - This error can occur if you import a report for a product you don't have installed on this instance of Microsoft Dynamics GP.
-> - This error can also occur if your Forms.dic and Reports.dic files are located on a shared network drive, UNC path and or both. Put the files locally into C drive and try again.
+> - This error can also occur if your Forms.dic and Reports.dic files are located on a shared network drive, UNC path, or both. Put the files locally into C drive and try again.
 > - Right-click Microsoft Dynamics GP and then select **Run as administrator** to see if this makes a difference with user SA.
 
 ## References
