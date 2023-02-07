@@ -1,5 +1,5 @@
 ---
-title: Error when you install SQL Server 2005 SP4
+title: Invalid directory error when installing SQL CU or SP
 description: This article provides resolutions for the problem that occurs when you install a Cumulative Update or a Service Pack for a SQL Server instance.
 ms.date: 09/25/2020
 ms.custom: sap:Installation, Patching and Upgrade
