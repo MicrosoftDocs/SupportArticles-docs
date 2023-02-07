@@ -6,6 +6,7 @@ ms.author: divargas
 ms.date: 10/10/2022
 ms.reviewer: jofrance
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: linux
 ms.topic: troubleshooting
 ---
@@ -221,7 +222,7 @@ The serial console is the fastest method to resolve this issue. It allows you to
 
 1. Use the [Azure serial console](/azure/virtual-machines/linux/serial-console#access-serial-console-for-linux) to boot the VM in single-user mode. For more information, see [Use Serial Console to access GRUB and single-user mode](/troubleshoot/azure/virtual-machines/serial-console-grub-single-user-mode).
 
-    To boot the VM in single-user mode, interrupt the boot process at the GRUB menu level and edit the main kernel entry to add the `init=/bin/bash` kernel option in the linux16 GRUB line.
+    To boot the VM in single-user mode, interrupt the boot process at the GRUB menu level and edit the main kernel entry to add the `init=/bin/bash` kernel option in the GRUB line that starts with `linux`.
 
     :::image type="content" source="media/vfat-disabled-boot-issues/boot-singleuser.gif" alt-text="Animated GIF that shows the process of interrupting the boot process at GRUB menu level to boot the system in single-user mode.":::
 

@@ -6,7 +6,7 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: maheshallu, wu.ping, prpillai
-ms.topic: howto
+ms.topic: how-to
 ms.service: cloud-services
 ms.subservice: troubleshoot-extended-support
 ---

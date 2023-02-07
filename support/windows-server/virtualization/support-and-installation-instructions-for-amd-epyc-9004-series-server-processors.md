@@ -33,7 +33,7 @@ When installing Windows Server operating system (OS), use the latest installatio
 To install Windows Server on systems that use AMD EPYC 96x4 SKUs that have more than 64 cores, the following OS media images are required:
 
 * Windows Server 2019: Build 17763.3532 (2022 October) or later
-* Windows Server 2022: Build 20348.405 (2021 December) or later
+* Windows Server 2022: Build 20348.859 (2022 July) or later
 
 To use earlier OS media releases prior to aforementioned releases, use one of the following options:
 
@@ -56,8 +56,10 @@ To use earlier OS media releases prior to aforementioned releases, use one of th
 
 In systems running Windows Server 2019 with the Hyper-V virtualization feature enabled, when number of logical processors is greater than 320, the operating system runs Hyper-V Minroot configuration. In such systems, the followings are issues and limitations that may be observed in AMD EPYC 9004 system-based systems have more than total of 320 logical processors.
 
-* Task Manager in the root partition does not show CPU utilization accounting for virtual machines’ workloads.
+* Task Manager in the root partition does not show CPU utilization accounting for virtual machines' workloads.
 * The operating system does not use Collaborative Processor Performance Control (CPPC) for processor power management despite CPPC being set to enable in BIOS.
 * The root partition may not utilize all maximum 320 logical processors available when running Minroot configuration.
 
 For more information, see [Windows Server 2019 Hyper-V host behavior running in the Minroot configuration](windows-server-hyper-v-host-minroot-behaviors.md).
+
+Attempting to boot to the Windows Server 2019 Recovery Environment (WinRE) may result in a blue screen error 0x5C HAL_INITIALIZATION_FAILED. The WinRE image must be updated to support configurations with greater than 64 cores per socket. To enable this support, apply the latest cumulative update for Server 2019 to the WinRE image. See [Add an update package to Windows RE](/windows-hardware/manufacture/desktop/add-update-to-winre?view=windows-11&preserve-view=true) for instructions.

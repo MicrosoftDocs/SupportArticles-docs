@@ -2,11 +2,11 @@
 title: Troubleshoot Azure Monitor Application Insights for Java
 description: This article presents troubleshooting information for the Java agent for Azure Monitor Application Insights.
 ms.topic: conceptual
-ms.date: 6/22/2022
+ms.date: 1/10/2023
 ms.author: v-dele
 author: DennisLee-DennisLee
 editor: v-jsitser
-ms.reviewer: aaronmax
+ms.reviewer: aaronmax, jeanbisutti, trstalna
 ms.service: azure-monitor
 ms.subservice: application-insights
 ms.devlang: java
@@ -20,7 +20,7 @@ This article provides troubleshooting information to resolve common issues that 
 
 ## Check the self-diagnostic log file
 
-By default, Application Insights Java 3.x produces a log file named *applicationinsights.log* in the same directory
+By default, Application Insights Java 3._x_ produces a log file named *applicationinsights.log* in the same directory
 that holds the *applicationinsights-agent-3.2.11.jar* file.
 
 This log file is the first place to check for hints about any issues you might be experiencing.
@@ -28,16 +28,34 @@ This log file is the first place to check for hints about any issues you might b
 If there's still no log file generated, check to make sure that your Java application has write permission to the directory that holds the
 *applicationinsights-agent-3.2.11.jar* file.
 
-If there's still no log file generated, check the `stdout` log from your Java application for errors. Application Insights Java 3.x
-should log any errors that would prevent it from logging to its normal location to the `stdout` log.
+If there's still no log file that's generated, check the `stdout` log from your Java application for errors. Application Insights Java 3._x_
+should log any errors that would prevent it from logging to its normal location in the `stdout` log.
+
+## Troubleshoot connectivity issues
+
+Application Insights SDKs and agents send telemetry to be ingested as REST calls at our ingestion endpoints. To test connectivity from your web server or application host computer to the ingestion service endpoints, use raw REST clients from PowerShell or run [curl commands](https://curl.se/). See [Troubleshoot missing application telemetry in Azure Monitor Application Insights](investigate-missing-telemetry.md).
+
+If the connectivity issue is caused by the Application Insights Java agent, consider the following options:
+
+- [Verify the connection string for the Application Insights configuration](/azure/azure-monitor/app/java-standalone-config#connection-string).
+
+- Use Application Insights Java version 3.4.6 or a later version to verify that the Java keystore contains a required certificate. To do this, [enable the self-diagnostics feature](/azure/azure-monitor/app/java-standalone-config#self-diagnostics) at the `TRACE` level. In the Application Insights logs, do you see the following entry?
+
+  > TRACE c.m.applicationinsights.agent - Application Insights root certificate in the Java keystore: false
+
+  If you see this entry, refer to [Import SSL certificates](#import-ssl-certificates) to import a root certificate in the Java keystore.
+
+- If you use the `-Djsse.enableSNIExtension=false` option, try to run the agent without that option. From Application Insights Java version 3.4.5, if you specify `-Djsse.enableSNIExtension=false`, the following error entry appears in the logs:
+
+  > WARN  c.m.applicationinsights.agent - System property -Djsse.enableSNIExtension=false is detected. If you have connection issues with Application Insights, please remove this.
 
 ## Java virtual machine (JVM) fails to start
 
 If the Java virtual machine (JVM) fails to start, it might return an "Error opening zip file or JAR manifest missing" message. That error means that the agent jar file might have been corrupted during file transfer. Try redownloading the agent jar file.
 
-## Upgrade from the Application Insights Java 2.x SDK
+## Upgrade from the Application Insights Java 2._x_ SDK
 
-If you're already using the Application Insights Java 2.x SDK in your application, you can keep using it. The Application Insights Java 3.x agent will detect, capture, and correlate any custom telemetry you're sending through the 2.x SDK. It will also prevent duplicate telemetry by suppressing any auto-collection performed by the 2.x SDK. For more information, see [Upgrade from the Java 2.x SDK](/azure/azure-monitor/app/java-standalone-upgrade-from-2x).
+If you're already using the Application Insights Java 2._x_ SDK in your application, you can keep using it. The Application Insights Java 3._x_ agent will detect, capture, and correlate any custom telemetry you're sending through the 2._x_ SDK. It will also prevent duplicate telemetry by suppressing any auto-collection performed by the 2._x_ SDK. For more information, see [Upgrade from the Java 2._x_ SDK](/azure/azure-monitor/app/java-standalone-upgrade-from-2x).
 
 ## Upgrade from Application Insights Java 3.0 preview
 

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot known issues for printing
 description: Overview of printing known issues.
-ms.date: 09/27/2021
+ms.date: 01/18/2023
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
@@ -112,21 +112,11 @@ The print spooler might be stalled.
 
 On the print server, try to stop and restart the Print Spooler service.
 
-## An application on a 16-bit version of Windows (such as Windows for Workgroups) generates an "out of memory" error on startup
-
-### Cause
-
-A default printer is not selected.
-
-### Resolution
-
-Add a printer, and set it as the default printer.
-
 ## A driver is not listed
 
 ### Resolution
 
-Windows printer drivers are developed through cooperation between Microsoft and the independent hardware vendor that manufactures the print device. For new and updated print drivers, see Microsoft printing support at the [Microsoft website](https://go.microsoft.com/fwlink/?linkid=303), and also check [Windows Update](https://go.microsoft.com/fwlink/?linkid=284).
+Windows printer drivers are developed through cooperation between Microsoft and the independent hardware vendor that manufactures the print device. For new and updated print drivers, see Microsoft printing support at the [How to download and install the latest printer drivers](https://support.microsoft.com/windows/how-to-download-and-install-the-latest-printer-drivers-4ff66446-a2ab-b77f-46f4-a6d3fe4bf661), and also check [Windows Update](https://go.microsoft.com/fwlink/?linkid=284).
 
 ## A new print driver that you downloaded from the internet has to be installed
 
