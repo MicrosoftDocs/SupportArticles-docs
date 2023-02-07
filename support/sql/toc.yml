@@ -771,6 +771,10 @@
     href: releases/find-my-sql-version.md
   - name: Version and edition of SQL components
     href: releases/components-client-tools-versions.md
+  - name: SQL Server 2022
+    items:
+    - name: SQL Server 2022 build versions
+      href: releases/sqlserver-2022/build-versions.md
   - name: SQL Server 2019
     items:
     - name: SQL Server 2019 build versions
