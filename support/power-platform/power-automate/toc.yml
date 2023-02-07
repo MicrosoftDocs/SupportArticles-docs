@@ -97,6 +97,8 @@
           href: dropdown-does-not-list-items-in-trigger-or-action.md
         - name: There is a problem with the flow's trigger
           href: there-is-a-problem-with-the-flows-trigger.md
+        - name: Third-party cookies or pop-up blocker errors when accessing Power Automate
+          href: widget-cookies-pop-up-error.md
         - name: Troubleshoot Flow Connections
           href: troubleshooting-flow-connections.md
         - name: Troubleshoot Flow Custom Connectors
