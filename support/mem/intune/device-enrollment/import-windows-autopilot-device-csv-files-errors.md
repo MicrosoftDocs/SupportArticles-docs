@@ -61,7 +61,7 @@ If the device record doesn't exist in Microsoft Store for Business or Intune, yo
     Mdmdiagnosticstool.exe -area Autopilot -cab c:\out.cab
     ```
 
-    The Out.cab file contains important diagnostic data that can help you to troubleshoot your issue.
+    The Out.cab file contains important device data that will be used to remove the device record and can be collected at any point during the Autopilot process.
 
 > [!NOTE]
 > These files can be attached to the service request when you create the request.
