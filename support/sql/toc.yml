@@ -70,7 +70,9 @@
       - name: 9002 error on primary replica
         href: database-engine/availability-groups/error-9002-transaction-log-large.md
       - name: Always On DB in recovery pending or suspect state
-        href: database-engine/availability-groups/alwayson-availability-databases-recovery-pending-suspect.md    
+        href: database-engine/availability-groups/alwayson-availability-databases-recovery-pending-suspect.md
+      - name: Configure an Always On availability group to perform a failover
+        href: database-engine/availability-groups/configure-always-on-availability-group-perform-failover.md
       - name: Error 2767 on secondary replica
         href: database-engine/availability-groups/error-2767-query-secondary-replica-fails.md
       - name: Error 41131 when creating availability group
@@ -769,6 +771,10 @@
     href: releases/find-my-sql-version.md
   - name: Version and edition of SQL components
     href: releases/components-client-tools-versions.md
+  - name: SQL Server 2022
+    items:
+    - name: SQL Server 2022 build versions
+      href: releases/sqlserver-2022/build-versions.md
   - name: SQL Server 2019
     items:
     - name: SQL Server 2019 build versions
