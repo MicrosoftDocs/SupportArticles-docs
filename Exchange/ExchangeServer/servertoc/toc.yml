@@ -607,8 +607,6 @@
           href: ../setup/process-execution-failed-with-exit-code-3.md
         - name: Issues occur if arbitration mailbox isn't upgraded
           href: ../setup/issues-occur-if-arbitration-mailbox-not-upgraded.md
-        - name: Manually update scan engines
-          href: ../setup/manually-update-scan-engines.md
         - name: Run Update cmdlet fails
           href: ../setup/network-path-was-not-found-error.md
         - name: Service Pack upgrade fails
