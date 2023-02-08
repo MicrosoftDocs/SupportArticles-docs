@@ -39,7 +39,7 @@ For more information on performance tuning for Delta Lake files, see the followi
 
 ## Performance tuning guidance for CSV files
 
-The most important task to ensure performant querying CSV files on a serverless SQL pool is to create statistics on the external tables. Though statistics are automatically created on Parquet files and on CSV files accessed using `OPENQUERY()`, reading CSV files using external tables requires you to manually create statistics.
+The most important task to ensure performant querying CSV files on a serverless SQL pool is to create statistics on the external tables. Though statistics are automatically created on Parquet and CSV files, accessed using `OPENQUERY()`, reading the CSV files using external tables requires you to manually create statistics.
 
 For more detailed information about the role of statistics on CSV files in serverless SQL pools, see:
 
