@@ -10,11 +10,12 @@ localization_priority: Normal
 ms.custom: 
 - CSSTroubleshoot
 - CI 162959
+- CI 171788
 appliesto: 
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 4/25/2022
+ms.date: 2/8/2023
 ---
 
 # Resolve issues with Teams Meeting add-in for Outlook
@@ -93,12 +94,28 @@ If the add-in still doesn’t display, use the following steps to check the regi
 > [!WARNING]
 > Follow this section's steps carefully. Incorrect registry entries can cause serious system issues. As a precaution, [back up the registry for restoration](https://support.microsoft.com/help/322756/how-to-back-up-and-restore-the-registry-in-windows).
 
-- Launch RegEdit.exe.
+1. Check the load behavior of the add-in:
 
-- Navigate to `HKEY_CURRENT_USER\Software\Microsoft\Office\Outlook\Addins`.
+   1. Launch RegEdit.exe.
+   1. Navigate to `HKEY_CURRENT_USER\Software\Microsoft\Office\Outlook\Addins\TeamsAddin.FastConnect`.
+   1. Check the value of `LoadBehavior`. It should be set to **3**.
+   1. If `LoadBehavior` has a value other than 3, change it to 3 and restart Outlook.
+  
+   If the add-in still doesn’t display, go to step 2.
+2. Check whether the [Configure Outlook object model prompt when reading address information](https://gpsearch.azurewebsites.net/#12432) policy setting is configured:
 
-- Check whether **TeamsAddin.FastConnect** is displayed.
+   1. Launch RegEdit.exe.
+   1. Navigate to `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\Outlook\Security`. If you applied the policy settings by using [Cloud Policy service](/deployoffice/admincenter/overview-cloud-policy), navigate to `HKEY_CURRENT_USER\Software\Policies\Microsoft\Cloud\Office\16.0\Outlook\Security`.
 
-- Under **TeamsAddin.FastConnect**, make sure **LoadBehavior** is displayed and is set to 3.
+      **Note:** Policy settings that are implemented by using Cloud Policy take precedence over policy settings that are implemented by using Group Policy on Windows.
+   1. Check for the `promptoomaddressinformationaccess` registry value and whether a value is set for it. If the value is 0, it indicates that the policy setting is set to the *Automatically deny* option. So Outlook will automatically deny programmatic access requests from any program. In this situation, go to step d.
+   1. Check the [Configure trusted add-ins](https://gpsearch.azurewebsites.net/#12439) policy setting.
 
-- If **LoadBehavior** has a value other than 3, change it to 3 and restart Outlook.
+      If this policy setting is configured, Teams administrators can use one of the following options:
+
+      - Disable or unconfigure the policy setting.
+      - If the policy is really needed, then make sure that *Microsoft.Teams.AddinLoader.dll* is in the list of trusted add-ins and the corresponding hash value is correct. You can use the [Get-FileHash](/powershell/module/microsoft.powershell.utility/get-filehash) cmdlet to compute the hash value of the .dll file.
+
+        **Note:** The *Microsoft.Teams.AddinLoader.dll* file that's used is automatically updated with the Teams client, so the hash value must be constantly updated to pair with the .dll file.
+
+[!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]
