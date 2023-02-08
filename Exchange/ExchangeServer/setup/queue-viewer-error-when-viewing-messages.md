@@ -1,6 +1,6 @@
 ---
-title: Critical error when you try to view queue messages in Queue Viewer
-description: Resolves an issue in which Queue Viewer returns a critical error when you try to view queue messages.
+title: Error when you try to view queue messages in Queue Viewer
+description: Resolves an issue in which Queue Viewer returns an error when you try to view queue messages.
 author: v-trisshores
 ms.author: v-trisshores
 manager: dcscontentpm
@@ -18,7 +18,7 @@ search.appverid: MET150
 ms.date: 02/08/2023
 ---
 
-# Critical error when you try to view queue messages in Queue Viewer
+# Error when you try to view queue messages in Queue Viewer
 
 ## Symptoms
 
