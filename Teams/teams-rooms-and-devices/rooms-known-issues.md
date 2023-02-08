@@ -41,7 +41,7 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 |Virtual keyboard missing|The virtual keyboard doesn't appear when you have to enter information in Teams Rooms devices. This issue occurs in Windows 10, version 1903.|Install the April 2020 Cumulative Update for Windows 10, version 1903 for x64-based systems through Windows Update.|
 |Teams Rooms app fails to start after update|If your Teams Rooms device uses a processor (CPU) which supports Control-flow Enforcement Technology (CET), such as the 11th Gen Intel® Core™ Processor or later and you have:<ul><li>Applied cumulative update KB5013942</li><li>Not applied cumulative update KB5015020 or later</li><li>Updated the Teams Rooms app</li></ul>then you might see an error that the Teams Rooms app can't be started.|Reimage the Teams Rooms device with OEM media that uses Windows operating system version 20H2 or later.|
 |Can't access Windows Settings from the desktop right-click menu.|On Teams Rooms devices that are running app version 3.1.98.0 or later versions, any user account that has the Teams Rooms app installed will be able to access Windows Settings only by using the Start menu. If you try to access Windows Settings by using another method, the Teams Rooms app will open instead.|Use one of the following workarounds to access Windows Settings:<ul><li>Select the **Settings** option from the **Start** menu.</li><li>Uninstall the Teams Rooms app for the affected user. Locate the app on the **Start** menu, right-click it and select **Uninstall**.</li></ul>
-| Black screen replaces meeting video in Zoom calls | In a Zoom meeting, on a device that's running the Teams Rooms for Windows app, the video feed from the device appears as a black screen both on the device and for the remote participants in the meeting.<br/><br/>For more information, see [Teams Rooms Video affected in Zoom meetings](https://aka.ms/Teams_Rooms_Video_affected_in_Zoom_meetings). | No workaround is available at this time. |
+| Black screen replaces meeting video in Zoom calls | In a Zoom meeting, on a device that's running the Teams Rooms for Windows app, the video feed from the device appears as a black screen both on the device and for the remote participants in the meeting.<br/><br/>For more information, see [Teams Rooms Video affected in Zoom meetings](https://aka.ms/Teams_Rooms_Video_affected_in_Zoom_meetings). No workaround is available at this time. |
 
 ### Hardware issues
 
@@ -69,6 +69,12 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 | Signed out of Teams on Android devices | Teams Rooms on Android, Teams phone devices, Teams panels, and Teams displays are signed out of Teams automatically. | Follow the instructions provided in [Signed out of Teams on Android devices](./signed-out-of-teams-android-devices.md).|
 | Can't resume a call after using **Consult first** option on Teams phones | After using the **Consult first** option in the **Transfer** menu when you select the **Resume** option to resume the call, the call fails. | End the call made by using the **Consult first** option and then resume the original call.|
 |Calls on long hold in GCCH tenants drop intermittently|On GCCH tenants that are running 2022 update #4A (Teams app version 1449/1.0.94.2022110803), when a call is put on long hold by a user the call drops in some instances. This issue doesn't occur on other clouds.|No workaround is available at this time.|
+
+### Issues with Teams panels
+
+| Issue  |  Description | Workaround |
+| --- | --- | --- |
+|Changes made to the configuration profile in the Teams admin center are not syncing with the device | When you change settings such as **Release room if no one checks in** in the configuration profile for a device by using the Teams admin center, the changes don't always sync with the user's device.| Change the setting on the device from the **Teams Admin Settings** option under **Device Settings**.|
 
 ## Limitations
 
