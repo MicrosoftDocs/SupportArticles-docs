@@ -31,7 +31,7 @@ When the Teams Rooms device goes to sleep and is woken up, USB devices that are 
 
 This issue occurs if the **Stop devices when screen is off** setting is enabled on the Teams Rooms device.
 
-Each new Teams Rooms device includes a Windows configuration that specifies whether to stop the connected USB devices when the screen is off. By default, this setting is set to disabled. However, it might sometimes be changed.
+Every new Teams Rooms device includes a Windows configuration that specifies whether to stop the connected USB devices when the screen is off. By default, this setting is set to disabled. However, it might sometimes be changed.
 
 When Windows goes into a lower power state while the **Stop devices** setting is enabled, it will keep track of any persistent USB communications. In this situation, Windows will issue a USB device reset if it sees that one or more USB peripherals have been idle for a long time. This prevents the device from going into a deeper and more vulnerable power state during which a USB peripheral might drain its battery. While this behavior shouldn't apply to any Teams Rooms devices that are always plugged into AC power, it is known to cause issues in the past, such as unexpected USB disconnections that cause the device's firmware or mishandled drivers to become unresponsive. Therefore, if this setting is enabled, the Teams Rooms Pro agent detects and reports the status of **USB Peripheral Power Drain** as **Unhealthy**.
 
@@ -47,7 +47,7 @@ Run the following command in Windows PowerShell:
 Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\USB\AutomaticSurpriseRemoval' -Name AttemptRecoveryFromUsbPowerDrain -Value 0 -ErrorAction Stop
 ```
 
-### Method 2: Use the Registry Editor
+### Method 2: Use Registry Editor
 
 1. Open Registry Editor.
 1. Locate the following subkey:
