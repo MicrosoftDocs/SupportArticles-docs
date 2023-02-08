@@ -5,7 +5,7 @@ ms.date: 01/31/2023
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.service: virtual-machine-scale-sets
-ms.subservice: troubleshoot-deletion-errors
+ms.subservice: # troubleshoot-deletion-errors
 ms.reviewer: mimckitt
 ---
 # "OperationNotAllowed. Deletion of Virtual Machine Scale Set isn't allowed"
