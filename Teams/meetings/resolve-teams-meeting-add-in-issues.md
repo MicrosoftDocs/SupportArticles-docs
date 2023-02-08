@@ -117,5 +117,3 @@ If the add-in still doesn’t display, use the following steps to check the regi
       - If the policy is really needed, then make sure that *Microsoft.Teams.AddinLoader.dll* is in the list of trusted add-ins and the corresponding hash value is correct. You can use the [Get-FileHash](/powershell/module/microsoft.powershell.utility/get-filehash) cmdlet to compute the hash value of the .dll file.
 
         **Note:** The *Microsoft.Teams.AddinLoader.dll* file that's used is automatically updated with the Teams client, so the hash value must be constantly updated to pair with the .dll file.
-
-[!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]
