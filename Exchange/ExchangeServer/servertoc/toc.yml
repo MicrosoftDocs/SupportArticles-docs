@@ -587,6 +587,8 @@
           href: ../setup/cannot-install-exchange-server-from-unattended-installation.md
         - name: Can't use Setup.exe to uninstall server role
           href: ../setup/cannot-uninstall-server-role-via-setup-exe.md
+        - name: Critical error when you view Queue Viewer messages
+          href: ../setup/queue-viewer-critical-error-when-viewing-messages.md
         - name: Cumulative Update 20 shown instead of CU22
           href: ../setup/cumulative-update-20-is-shown-not-22.md
         - name: Event ID 106 Performance counter updating error
