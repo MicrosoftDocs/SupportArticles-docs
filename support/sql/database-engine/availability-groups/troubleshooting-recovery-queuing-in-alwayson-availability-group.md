@@ -1,14 +1,18 @@
 ---
 title: Troubleshooting recovery queueing in an Always On availability group
-description: This article help you to troubleshoot problems that are related to recovery queueing in an Always On availability group. 
-ms.date: 02/05/2023
+description: This article helps you to troubleshoot problems that are related to recovery queueing in an Always On availability group. 
+ms.date: 02/08/2023
 ms.custom: sap:Availability Groups
 ms.prod: sql
 author: padmajayaraman
 ms.author: v-jayaramanp
 ---
 
-# What is recovery queueing?
+# Troubleshooting recovery queueing in an Always On availability group
+
+This article provides resolutions to problems related to recovery queueing.
+
+## What is recovery queueing?
 
 Changes that are made to the primary replica in an availability group database are sent to all secondary replicas that are defined in the same availability group. After those changes arrive at the secondary replicas, they are first written to the transaction log file of the availability group database. Microsoft SQL Server then uses the *recovery* or *redo* operation to update the database files.
 
@@ -22,7 +26,7 @@ Read-only workloads that query secondary replicas might query stale data. If rec
 
 Although changes arrive at the secondary database and are written to the database log file, the changes won't be queried until they are recovered and restored to the database files. The recovery operation is what makes those changes readable.
 
-For more information, see the ["Data latency on secondary replica"](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups?view=sql-server-ver16&preserve-view=true) section of "Differences between availability modes for an Always On availability group."
+For more information, see the [Data latency on secondary replica](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups?view=sql-server-ver16&preserve-view=true) section of "Differences between availability modes for an Always On availability group."
 
 ### Failover time is longer or RTO is exceeded
 
@@ -56,13 +60,13 @@ END
 
 Here is what the output looks like.
 
-:::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/dm-hadr-database-replica-states-output.png" alt-text="Screenshot of the output for the query report the data for the secondary replica where redo_queue_size and redo_rate are relevant.":::
+:::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/dm-hadr-database-replica-states-output-recovery.png" alt-text="Screenshot of the output for the query report the data for the secondary replica where redo_queue_size and redo_rate are relevant.":::
 
-### Review the recovery queue in AlwaysOn Dashboard
+### Review the recovery queue in Always On Dashboard
 
 To review the recovery queue, follow these steps:
 
-1. Open the AlwaysOn Dashboard in SSMS by right-clicking on an availability group in SSMS Object Explorer.
+1. Open the Always On Dashboard in SSMS by right-clicking on an availability group in SSMS Object Explorer.
 1. Select **Show Dashboard**.
 
     The availability group databases are listed last, and there's some data reported on the databases. Although **Redo Queue Size (KB)** and **Redo Rate (KB/sec)** aren't listed by default, you can add them to this view, as shown in the screenshot in the next step.
@@ -70,11 +74,11 @@ To review the recovery queue, follow these steps:
 
 1. To add **Redo Queue Size (KB)** and **Redo Rate (KB/sec)**, right-click the header that's shown as highlighted in red in the following screenshot.
   
-    :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/add-redo-queue-size-rate.png" alt-text="Screenshot that shows adding the counters Redo Queue Size (KB) and Redo Rate (KB/sec).":::
+    :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/add-redo-queue-size-rate-recovery-queueing.png" alt-text="Screenshot that shows adding the counters Redo Queue Size (KB) and Redo Rate (KB/sec).":::
 
     By default, the Always On dashboard auto refreshes **Redo Queue Size (KB)** and **Redo Rate (KB/sec)** every 60 seconds.
 
-    :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/add-redo-queue-size-rate-refreshes-60.png" alt-text="Screenshot showing refresh counters set to every 60 seconds.":::
+    :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/add-redo-queue-size-rate-refreshes-60-recovery.png" alt-text="Screenshot showing refresh counters set to every 60 seconds.":::
 
 ### Review the recovery queue in Performance Monitor
 
@@ -86,7 +90,7 @@ The recovery queue size is unique to each secondary replica and database. Theref
 
 1. Under **Available counters**, select **SQLServer:Database Replica**, and then select **Recovery Queue** and **Redone Bytes/sec** counters.
 
-1. In the **Instance** box, select the availability group database that you want to monitor for recovery queueing.
+1. In the **Instance** list box, select the availability group database that you want to monitor for recovery queueing.
 
 1. Select **Add** > **OK**.
 
@@ -115,7 +119,7 @@ END
 
 In this example, some I/O-related wait types are reported (PAGEIOLATCH_UP, PAGEIOATCH_EX). Monitor to check whether these wait types continue to have the largest `wait_times` values, as reported in the next column.
 
-:::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/input-output-related-waittimes.png" alt-text="Screenshot showing the largest wait times reported in the next column.":::
+:::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/input-output-related-waittimes-recovery.png" alt-text="Screenshot showing the largest wait times reported in the next column.":::
 
 ### SQL Server redo wait types
 
@@ -127,7 +131,7 @@ If your solution directs reporting (querying) against availability group databas
 
 To check for historical evidence of a blocked redo, open the **AlwaysOn_health Xevent** trace files on the secondary replica by using SSMS. Look for `lock_redo_blocked` events.
 
-:::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/alwayson-health-xevent.png" alt-text="Screenshot that shows checking for for historical evidence of a blocked redo.":::
+:::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/alwayson-health-xevent-recovery.png" alt-text="Screenshot that shows checking for for historical evidence of a blocked redo.":::
 
 Use Performance Monitor to actively monitor blocked redo impact to recovery queue. Add the **SQL Server::Database Replica::Redo blocked/sec** and **SQL Server::Database Replica::Recovery Queue** counters. The following screenshot shows an `ALTER TABLE ALTER COLUMN` command that's run against the primary replica while a long-running query is run against the same table on the secondary replica. The **Redo blocked/sec** counter indicates that the `ALTER TABLE ALTER COLUMN` command is run. While the long-running query is running on the same table on the secondary replica, any subsequent changes on the primary will cause an increase in the recovery queue.
 
@@ -135,7 +139,7 @@ Use Performance Monitor to actively monitor blocked redo impact to recovery queu
 
 Monitor for the schema modification lock wait type that the redo thread tries to acquire. To do this, use the query that was described earlier to check the wait types that are reported for redo operations against `sys.dm_exec_requests`. You can observe the increasing wait time for the `LCK_M_SCH_M` in the ongoing redo blockage.
 
-:::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/increase-wait-time-lck-m-sch-m.png" alt-text="Screenshot that shows the increasing wait time for the LCK_M_SCH_M.":::
+:::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/increase-wait-time-lck-m-sch-m-recovery.png" alt-text="Screenshot that shows the increasing wait time for the LCK_M_SCH_M.":::
 
 ## Another possible cause of recovery queueing: Single-threaded redo
 
@@ -143,7 +147,7 @@ SQL Server introduced parallel recovery for secondary replica databases in Micro
 
 A single-threaded redo can occur in even later, more advanced SQL Server versions in which parallel recovery architecture is used. In these versions, a SQL Server instance can use up to 100 threads for a parallel redo. Depending on the numbers of processors and availability group databases, parallel redo threads are allocated up to a maximum of 100 total threads. If the 100-thread redo limit is reached, some databases in the availability group are assigned a single redo thread.
 
-To determine whether your availability group database is using parallel recovery, connect to the secondary replica, and use the following query to determine the number of rows (threads) that apply recovery for the availability group database. In the following example, if the "agdb" database is a single thread. and its command is `DB STARTUP`, the recovery workload might benefit from parallel recovery.
+To determine whether your availability group database is using parallel recovery, connect to the secondary replica, and use the following query to determine the number of rows (threads) that apply recovery for the availability group database. In the following example, if the "agdb" database is a single thread, and its command is `DB STARTUP`, the recovery workload might benefit from parallel recovery.
 
 ```sql
 SELECT db_name(database_id) AS dbname, command, session_id, database_id, wait_type, wait_time,
@@ -153,8 +157,8 @@ WHERE command IN ('PARALLEL REDO HELP TASK', 'PARALLEL REDO TASK', 'DB STARTUP')
 AND database_id= db_id('agdb')
 ```
 
-:::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/single-threaddb-startup.png" alt-text="Screenshot that shows how to determine whether your availability group database uses parallel recovery.":::
+:::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/single-threaddb-startup-recovery.png" alt-text="Screenshot that shows how to determine whether your availability group database uses parallel recovery.":::
 
 If you verify that your database uses a single-threaded redo, review the algorithm that was described earlier to determine whether SQL Server is exceeding the number of 100 worker threads that are dedicated for parallel recovery. Such a condition might be the reason that the "agdb" database is using only a single thread for recovery.
 
-SQL Server 2022 now uses a new parallel recovery algorithm so that worker threads are assigned for parallel recovery based on the workload. This eliminates the chance that a busy database will remain in a single-threaded recovery. For more information, see the ["Thread Usage by Availability Groups"](/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability#ThreadUsage) section of "Prerequisites, Restrictions, and Recommendations for Always On availability groups."
+SQL Server 2022 now uses a new parallel recovery algorithm so that worker threads are assigned for parallel recovery based on the workload. This eliminates the chance that a busy database will remain in a single-threaded recovery. For more information, see the [Thread Usage by Availability Groups](/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability#ThreadUsage) section of "Prerequisites, Restrictions, and Recommendations for Always On availability groups."
