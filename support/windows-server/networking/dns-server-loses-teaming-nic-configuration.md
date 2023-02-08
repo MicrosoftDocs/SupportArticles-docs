@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:modern-inbox-and-microsoft-store-apps, csstroubleshoot
+ms.custom: sap:dns, csstroubleshoot
 ms.technology: networking
 keywords: DNS, listen, IP address, restart, ListenAddresses
 ---
@@ -29,7 +29,7 @@ Consider the following scenario:
 
 :::image type="content" source="./media/dns-server-loses-teaming-nic-configuration/dc-properties-interfaces.png" alt-text="Screenshot of the DNS server properties that shows a specific IP address on the Interfaces tab.":::  
 
-In this scenario, when you set this configuration, Windows stores it in a registry value under the **HKLM\SYSTEM\CurrentControlSet\Services\DNS\Parameters\ListenAddresses** subkey.
+In this scenario, when you set this configuration, Windows stores it in a registry value under the `HKLM\SYSTEM\CurrentControlSet\Services\DNS\Parameters\ListenAddresses` subkey.
 
 After you restart the DNS server, Windows deletes both the setting and the registry value. The DNS server starts listening on all IP addresses again.
 
