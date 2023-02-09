@@ -1,5 +1,5 @@
 ---
-title: Configure an Always On availability group to perform a failover
+title: Manually configure AG for automatic failover for errors on data file
 description: This article describes how to configure an Always On availability group to perform a failover when the database data file is unavailable.
 ms.date: 02/07/2023
 ms.custom: sap:Availability Groups
