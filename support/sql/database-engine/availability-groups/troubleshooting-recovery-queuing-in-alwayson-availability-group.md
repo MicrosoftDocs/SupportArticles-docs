@@ -60,7 +60,7 @@ END
 
 Here is what the output looks like.
 
-:::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/dm-hadr-database-replica-states-output-recovery.png" alt-text="Screenshot of the output for the query report the data for the secondary replica where redo_queue_size and redo_rate are relevant.":::
+:::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/dm-hadr-database-replica-states-output-recovery.png" alt-text="Screenshot of the output for the query report the data for the secondary replica where redo_queue_size and redo_rate are relevant." lightbox="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/dm-hadr-database-replica-states-output-recovery.png":::
 
 ### Review the recovery queue in Always On Dashboard
 
