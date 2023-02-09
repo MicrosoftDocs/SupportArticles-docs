@@ -205,7 +205,7 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 | 404.14 | Request URL too long. | The requested URL exceeds the limit that is allowed for the server. |
 | 404.15 | Query string too long. | The request contains a query string that is longer than the limit that is allowed for the server. |
 | 404.16 | DAV request sent to the static file handler |
-| 404.17 | Dynamic content mapped to the static file handler. | For more information, see [Error message when you visit a Web site that is hosted on IIS 7.0: HTTP Error 404.17 - Not Found](https://support.microsoft.com/help/2019689/error-message-when-you-visit-a-web-site-that-is-hosted-on-iis-7-0-http). |
+| 404.17 | Dynamic content mapped to the static file handler. | For more information, see [Error message when you visit a Web site that is hosted on IIS 7.0: HTTP Error 404.17 - Not Found](../health-diagnostic-performance/error-message-you-visit-web-site.md). |
 | 404.18 | Querystring sequence denied |
 | 404.19 | Denied by filtering rule |
 | 404.20 | Too Many URL Segments |
@@ -241,7 +241,7 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 
 | Code | Description | Notes |
 |---|---|---|
-| 500.0 | Module or ISAPI error occurred. | This HTTP status code may occur for many server-side reasons. For more information, see [HTTP Error 500.0 - Internal Server Error error when you you open an IIS 7.0 Webpage](https://support.microsoft.com/help/942031/http-error-500-0-internal-server-error-error-when-you-you-open-an-iis). |
+| 500.0 | Module or ISAPI error occurred. | This HTTP status code may occur for many server-side reasons. For more information, see [HTTP Error 500.0 - Internal Server Error error when you you open an IIS 7.0 Webpage](./http-error-500-when-you-visit-web-site.md). |
 | 500.11 | Application is shutting down on the web server. | The request isn't processed because the destination application pool is shutting down. Wait for the worker process to finish shutting down, and then try the request again. If this problem persists, the web application may be experiencing problems that prevent the web application from shutting down correctly. |
 | 500.12 | Application is busy restarting on the web server. | The request isn't processed because the destination application pool is restarting. This HTTP status code should disappear when you refresh the page. If this HTTP status code appears again after you refresh the page, the problem may be caused by antivirus software that is scanning the Global.asa file. If this problem persists, the web application may be experiencing problems that prevent the web application from restarting correctly. |
 | 500.13 | Web server is too busy. | The request isn't processed because the server is too busy to accept any new incoming requests. Typically, this HTTP status code means that the number of incoming concurrent requests exceeds the number that the IIS 7.0 and later versions web application can process. This problem may occur when the performance configuration settings are set too low, the hardware is insufficient, or a bottleneck occurs in the IIS 7.0 and later versions web application. A common troubleshooting method is to generate a memory dump file of the IIS 7.0 and later versions processes when the error is occurring and then to debug the memory dump file. |
