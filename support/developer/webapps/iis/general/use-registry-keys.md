@@ -47,16 +47,6 @@ This article also contains information about how to modify the registry. This li
 
 ## Registry keys that apply to the WAS
 
-- `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\WAS\Parameters\ConfigIsolationEnabled (REG_DWORD)`  
-
-  The default value for this registry key is one that specifies configuration isolation enabled.
-
-  - If you set this registry key to a 0, you disable configuration isolation, and the worker process tries to read the *ApplicationHost.config* file directly. The default value is any value other than 0 or 1.
-
-  - If you disable configuration isolation, you must change the System Access Control List (SACL) of the `%windir%\system32\inetsrv\config` folder to grant the worker processes read access to the *ApplicationHost.config* file.
-
-  - The configuration isolation feature is not available in the release version of Windows Vista. This registry key does not function in the release version of Windows Vista.
-
 - `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\WAS\Parameters\ConfigIsolationPath (REG_SZ)`  
 
   This registry key specifies the folder path for temporary application pool configuration files that the WAS creates. The default value for this registry key is `%systemdrive%\inetput\temp\apppools`.
