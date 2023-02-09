@@ -22,7 +22,7 @@ To configure an Always On availability group to perform a failover when [errors 
 
 ## Configure Failover Cluster Manager
 
-This procedure will set up the WSFC policy to cause a failover to one of the possible owners instead of attempting to restart the role on the current primary node.
+This procedure sets up the WSFC policy to cause a failover to one of the possible owners instead of attempting to restart the role on the current primary node.
 
 1. Open Failover Cluster Manager.
 
