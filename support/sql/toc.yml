@@ -525,6 +525,8 @@
        href: database-engine/performance/troubleshoot-query-perf-between-servers.md
      - name: Decreased query performance after upgrade
        href: database-engine/performance/decreased-query-perf-after-upgrade.md
+     - name: Diagnose availability group database in reverting state
+       href: database-engine/performance/diagnose-availability-group-database-reverting-state.md
      - name: High CPU or high memory grants with queries that use optimized nested loops
        href: database-engine/performance/decreased-perf-high-cpu-optimized-nested-loop.md   
      - name: Performance degradation with new CE join containment assumption
