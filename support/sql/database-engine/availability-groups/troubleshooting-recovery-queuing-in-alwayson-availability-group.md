@@ -24,7 +24,7 @@ If the changes to an availability group arrive and harden on the database transa
 
 Read-only workloads that query secondary replicas might query stale data. If recovery queueing occurs, changes to data on the primary replica database might not be reflected in the secondary database when you query the same data.
 
-Although changes arrive at the secondary database and are written to the database log file, the changes won't be queried until they are recovered and restored to the database files. The recovery operation is what makes those changes readable.
+Although changes arrive at the secondary database and are written to the database log file, the changes won't be queried until they're recovered and restored to the database files. The recovery operation is what makes those changes readable.
 
 For more information, see the [Data latency on secondary replica](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups?view=sql-server-ver16&preserve-view=true) section of "Differences between availability modes for an Always On availability group."
 
@@ -96,7 +96,7 @@ The recovery queue size is unique to each secondary replica and database. Theref
 
    Here's what increasing recovery queueing might look like.
 
-   :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/increase-recovery-queueing-graph.png" alt-text="Screenshot showing an increase in recovery queueing.":::
+    [![Screenshot showing an increase in recovery queueing.](media/troubleshooting-recovery-queuing-in-alwayson-availability-group/increase-recovery-queueing-graph.png)](media/troubleshooting-recovery-queuing-in-alwayson-availability-group/increase-recovery-queueing-graph.png#lightbox)
 
 ## How to diagnose recovery (redo) queueing
 
