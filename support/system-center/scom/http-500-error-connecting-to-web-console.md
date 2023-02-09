@@ -44,7 +44,7 @@ To fix the issue, verify the following settings, and then connect to the web con
 
       Here is the sample output based on the above demo names and the SDK service is running under domain service account *Lab\SDKSvc*:
 
-      > Registered ServicePrincipalNames for CN= SDKSvc,CN=Users,DC= Lab,DC=Local:  
+      > Registered ServicePrincipalNames for <br>CN= SDKSvc,CN=Users,DC= Lab,DC=Local:  
       > MSOMSdkSvc/SCOMMS1  
       > MSOMSdkSvc/SCOMMS1.Lab.Local  
       > MSOMSdkSvc/SCOMMS2  
@@ -75,40 +75,40 @@ To fix the issue, verify the following settings, and then connect to the web con
 
     - Scenario 1: When you use default settings for the web console application pools where the web console application pool is running under the default identity (ApplicationPoolIdentity), run the following commands to register the HTTP service SPN for the web console server computer account:
 
-    ```console
-    setspn -S HTTP/serverFQDN serverAccount	(setspn -S HTTP\SCOMWeb.Lab.Local SCOMWeb)
-    setspn -S HTTP/serverNETBIOSname serverAccount	(setspn -S HTTP\SCOMWeb SCOMWeb)
-    ```
+      ```console
+      setspn -S HTTP/serverFQDN serverAccount	(setspn -S HTTP\SCOMWeb.Lab.Local SCOMWeb)
+      setspn -S HTTP/serverNETBIOSname serverAccount	(setspn -S HTTP\SCOMWeb SCOMWeb)
+      ```
 
-    *serverFQDN* and *serverNETBIOSname* are the FQDN and NetBIOS names of the web console server and *serverAccount* is the computer account of the web console server.
+      *serverFQDN* and *serverNETBIOSname* are the FQDN and NetBIOS names of the web console server and *serverAccount* is the computer account of the web console server.
 
-    To check whether the SPNs are registered correctly, run the following command:
+      To check whether the SPNs are registered correctly, run the following command:
 
-    ```console
-    Setspn -L webconsoleservername	(setspn -L SCOMWeb)
-    ```
+      ```console
+      Setspn -L webconsoleservername	(setspn -L SCOMWeb)
+      ```
 
-    The output must contain the following entries:
+      The output must contain the following entries:
 
-    > HTTP/serverFQDN  
-    > HTTP/serverNETBIOSname
+      > HTTP/serverFQDN  
+      > HTTP/serverNETBIOSname
 
     - Scenario 2: When the web console application pool is running under a custom identity (Lab\SCOMAppPool), run the following commands to register the HTTP service SPN for the domain account:
 
-    ```console
-    setspn -S HTTP/serverFQDN APPidentityDomainAccount	(setspn -S HTTP/SCOMWeb.Lab.Local SCOMAppPool)
-    setspn -S HTTP/serverNETBIOSname APPidentityDomainAccount	(setspn -S HTTP/SCOMWeb SCOMAppPool)
-    ```
-    To check whether the SPNs are registered correctly, run the following command:
+      ```console
+      setspn -S HTTP/serverFQDN APPidentityDomainAccount	(setspn -S HTTP/SCOMWeb.Lab.Local SCOMAppPool)
+      setspn -S HTTP/serverNETBIOSname APPidentityDomainAccount	(setspn -S HTTP/SCOMWeb SCOMAppPool)
+      ```
+      To check whether the SPNs are registered correctly, run the following command:
 
-    ```console
-    Setspn -L APPidentityDomainAccount	(setspn -L SCOMAppPool)
-    ```
+      ```console
+      Setspn -L APPidentityDomainAccount	(setspn -L SCOMAppPool)
+      ```
 
-    The output must contain the following entries:
+      The output must contain the following entries:
 
-    > HTTP/serverFQDN  
-    > HTTP/serverNETBIOSname
+      > HTTP/serverFQDN  
+      > HTTP/serverNETBIOSname
 
 3. The delegation for the web console is configured correctly in Active Directory. To do this, follow these steps:
 
