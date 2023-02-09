@@ -141,7 +141,7 @@ Monitor for the schema modification lock wait type that the redo thread tries to
 
 :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/increase-wait-time-lck-m-sch-m-recovery.png" alt-text="Screenshot that shows the increasing wait time for the LCK_M_SCH_M.":::
 
-## Another possible cause of recovery queueing: Single-threaded redo
+### Single-threaded redo
 
 SQL Server introduced parallel recovery for secondary replica databases in Microsoft SQL Server 2016. If you're experiencing recovery queueing when you run SQL Microsoft Server 2012 or Microsoft SQL Server 2014, you can upgrade to a later version of the program to improve redo performance in your production environment.
 
