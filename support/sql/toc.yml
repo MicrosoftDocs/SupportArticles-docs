@@ -71,7 +71,7 @@
         href: database-engine/availability-groups/error-9002-transaction-log-large.md
       - name: Always On DB in recovery pending or suspect state
         href: database-engine/availability-groups/alwayson-availability-databases-recovery-pending-suspect.md
-      - name: Configure an Always On availability group to perform a failover
+      - name: Manually configure AG for automatic failover for errors on data file
         href: database-engine/availability-groups/configure-always-on-availability-group-perform-failover.md
       - name: Error 2767 on secondary replica
         href: database-engine/availability-groups/error-2767-query-secondary-replica-fails.md
