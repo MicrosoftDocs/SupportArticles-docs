@@ -125,7 +125,7 @@ In this example, some I/O-related wait types are reported (PAGEIOLATCH_UP, PAGEI
 
 When a wait type is identified, review the following article [SQL Server 2016/2017: Availability group secondary replica redo model and performance - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/sql-server/sql-server-2016-2017-availability-group-secondary-replica-redo/ba-p/385905%22%20/t%20%22_blank) as a cross-reference for common wait types that cause recovery queueing, and for help to resolve the problem.
 
-## Another possible cause of recovery queueing: Blocked redo
+### Blocked redo threads on secondary reporting servers
 
 If your solution directs reporting (querying) against availability group databases on the secondary replica, these read-only queries acquire schema stability (Sch-S) locks. These Sch-S locks can block redo threads from acquiring schema modification (Sch-M) locks (also known as "schema modify locks" or `LCK_M_SCH_M`) to make any data definition language (DDL) changes, such as `ALTER TABLE` or `ALTER INDEX`. A blocked redo thread can't apply log records until it's unblocked. This can cause recovery queueing.
 
