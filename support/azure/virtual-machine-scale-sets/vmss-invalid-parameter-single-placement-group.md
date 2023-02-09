@@ -1,5 +1,5 @@
 ---
-title: InvalidParameter. The value True of parameter singlePlacementGroup is not allowed. Allowed values are False.
+title: The value True of parameter singlePlacementGroup is not allowed
 description: Learn how to resolve the InvalidParameter (SinglePlacementGroup error) when you deploy a Virtual Machine Scale Set by using Flexible orchestration mode.
 ms.date: 01/31/2023
 author: DennisLee-DennisLee
