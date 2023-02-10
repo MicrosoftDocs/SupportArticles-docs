@@ -26,7 +26,7 @@ Read-only workloads that query secondary replicas might query stale data. If rec
 
 Although changes arrive at the secondary database and are written to the database log file, the changes won't be queried until they're recovered and restored to the database files. The recovery operation is what makes those changes readable.
 
-For more information, see the [Data latency on secondary replica](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups?view=sql-server-ver16&preserve-view=true) section of "Differences between availability modes for an Always On availability group."
+For more information, see the [Data latency on secondary replica](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups) section of "Differences between availability modes for an Always On availability group."
 
 ### Failover time is longer or RTO is exceeded
 
