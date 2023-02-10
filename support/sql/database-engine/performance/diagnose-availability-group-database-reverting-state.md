@@ -75,7 +75,7 @@ Connect to the secondary replica using SQL Server Management Studio (SSMS) Objec
 > [!NOTE]
 > Extended event `hadr_trace_message` was added to the latest cumulative updates in SQL Server. You must be running the latest cumulative updates to observe this extended event.
 
-The SQL Server error log on the secondary replica isn't much help when estimating reverting completion. From the following image, you can observe from **10:008** to **11:03** while in the reverting state, little is reported. Once the secondary has received all the pages from the primary replica, it's now able to roll back the transaction that was running on the original primary that triggered the reverting state. Recovery runs from **11:03** to **11:05**. Shortly after recovery completes, the database should begin to synchronize with the primary replica and catch up on all the changes made at the primary while the secondary database was reverting.
+The SQL Server error log on the secondary replica isn't much help when estimating reverting completion. From the following image, you can observe from **10:08** to **11:03** while in the reverting state, little is reported. Once the secondary has received all the pages from the primary replica, it's now able to roll back the transaction that was running on the original primary that triggered the reverting state. Recovery runs from **11:03** to **11:05**. Shortly after recovery completes, the database should begin to synchronize with the primary replica and catch up on all the changes made at the primary while the secondary database was reverting.
 
 ### Monitor reverting completion time using Performance Monitor
 
