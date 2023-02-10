@@ -77,13 +77,13 @@ Connect to the secondary replica using SQL Server Management Studio (SSMS) Objec
 
 The SQL Server error log on the secondary replica isn't much help when estimating reverting completion. From the following image, you can observe from **10:08** to **11:03** while in the reverting state, little is reported. Once the secondary has received all the pages from the primary replica, it's now able to roll back the transaction that was running on the original primary that triggered the reverting state. Recovery runs from **11:03** to **11:05**. Shortly after recovery completes, the database should begin to synchronize with the primary replica and catch up on all the changes made at the primary while the secondary database was in the reverting state.
 
-:::image type="content" source="media/diagnose-availability-group-database-reverting-state/reverting-recovery.png" alt-text="The screenshot shows the SQL Server error log for reverting and recovery phase.":::
+:::image type="content" source="media/diagnose-availability-group-database-reverting-state/reverting-recovery.png" alt-text="The screenshot shows the SQL Server error log for reverting and recovery phase." lightbox="media/diagnose-availability-group-database-reverting-state/reverting-recovery.png":::
 
 ### Monitor reverting completion time using Performance Monitor
 
 Monitor the reverting state progress using the performance counters **SQL Server:Database Replica:Total Log Requiring Undo** and **SQL Server:Database Replica:Log Remaining for Undo** and choose the availability group database for the Instance. In the example in the following screenshot, **Total Log Requiring Undo** is reported as **56.3** mb, and **Log Remaining for Undo** is slowly dropping to **0** that is reporting the reverting progress.
 
-:::image type="content" source="media/diagnose-availability-group-database-reverting-state/log-remaining-undo.png" alt-text="The screenshot shows the performance counters for Total Log Requiring Undo and Log Remaining for Undo.":::
+:::image type="content" source="media/diagnose-availability-group-database-reverting-state/log-remaining-undo.png" alt-text="The screenshot shows the performance counters for Total Log Requiring Undo and Log Remaining for Undo." lightbox="media/diagnose-availability-group-database-reverting-state/log-remaining-undo.png":::
 
 ## What are your other options other than waiting?
 
