@@ -21,7 +21,7 @@ Availability group primary and secondary replica(s) remain in a connected state 
 
 During failovers, this connected state is severed. Once the new primary replica has come online, connectivity is reestablished between the primary replica and secondary replica(s). During this initial connected state, a common recovery point is negotiated in which the new secondary should start recovery so that it's in sync with the primary.
 
-If a large transaction is running at the time of the failover, the new secondary database log is ahead of the primary replica database. And the new common recovery point negotiated will require the secondary replica to receive pages from the primary replica in order for it to be in a state where synchronization can resume. This reverting process is also called "Undo of Redo."
+If a large transaction is running at the time of the failover, the new secondary database log is ahead of the primary replica database. And the new common recovery point negotiated will require the secondary replica to receive pages from the primary replica in order for it to be in a state where synchronization can resume. This reverting process is also called "Undo of Redo".
 
 The reverting process is inherently slow, happens often, and typically small transactions triggering the reverting state are hardly noticed. It's often noticed when a large transaction is interrupted, causing many pages to be sent from the primary to the secondary to revert the secondary replica database to a recoverable state.
 
@@ -70,12 +70,12 @@ Use one of the following methods to estimate the time remaining in the reverting
 
 The [AlwaysOn_health](/sql/database-engine/availability-groups/windows/always-on-extended-events#BKMK_alwayson_health) extended event diagnostic log has a [hadr_trace_message](/sql/database-engine/availability-groups/windows/always-on-extended-events#sqlserverhadr_trace_message) event that reports the reverting state progress every five minutes.
 
-Connect to the secondary replica using SQL Server Management Studio (SSMS) Object Explorer and drill into **Management**, **Extended Events**, and then **Sessions**. Right-click the `AlwaysOn_health` event and select **Watch Live Data**. You should get a new tabbed window reporting the current state of the reverting operation. The state is reported every five minutes via the `hadr_trace_message` event, and the completed percentage of the reverting operation is reported.
+Connect to the secondary replica using SQL Server Management Studio (SSMS) Object Explorer and drill into **Management**, **Extended Events**, and then **Sessions**. Right-click the **AlwaysOn_health** event and select **Watch Live Data**. You should get a new tabbed window reporting the current state of the reverting operation. The state is reported every five minutes via the `hadr_trace_message` event, and the completed percentage of the reverting operation is reported.
 
 > [!NOTE]
 > Extended event `hadr_trace_message` was added to the latest cumulative updates in SQL Server. You must be running the latest cumulative updates to observe this extended event.
 
-The SQL Server error log on the secondary replica isn't much help when estimating reverting completion. From the following image, you can observe from **10:08** to **11:03** while in the reverting state, little is reported. Once the secondary has received all the pages from the primary replica, it's now able to roll back the transaction that was running on the original primary that triggered the reverting state. Recovery runs from **11:03** to **11:05**. Shortly after recovery completes, the database should begin to synchronize with the primary replica and catch up on all the changes made at the primary while the secondary database was reverting.
+The SQL Server error log on the secondary replica isn't much help when estimating reverting completion. From the following image, you can observe from **10:08** to **11:03** while in the reverting state, little is reported. Once the secondary has received all the pages from the primary replica, it's now able to roll back the transaction that was running on the original primary that triggered the reverting state. Recovery runs from **11:03** to **11:05**. Shortly after recovery completes, the database should begin to synchronize with the primary replica and catch up on all the changes made at the primary while the secondary database was in the reverting state.
 
 ### Monitor reverting completion time using Performance Monitor
 
