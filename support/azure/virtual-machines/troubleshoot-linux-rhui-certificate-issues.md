@@ -62,11 +62,12 @@ The Azure Red Hat Linux VM has the RHUI Azure package already installed. However
 
 If the RHUI certificate was removed from the VM by mistake, the following error message appears when you try to install or update a package:
 
-> `# yum install <package-name>`  
->
-> Red Hat Enterprise Linux X for x86_64 - XXXX  0.0  B/s |   0  B     00:00  
-> Errors during downloading metadata for repository 'rhel-X-for-x86_64-XXXX-eus-rhui-rpms':  
-> \- **Curl error (58): Problem with the local SSL certificate** for https\://rhui-3.microsoft.com/pulp/repos/content/eus/rhel8/rhui/X.X/x86_64/XXXXX/os/repodata/repomd.xml [could not load PEM client certificate, OpenSSL error error:02001002:system library:fopen:No such file or directory, (no key found, wrong pass phrase, or wrong file format?)]
+```output
+# yum install <package-name>
+ Red Hat Enterprise Linux X for x86_64 - XXXX  0.0  B/s |   0  B     00:00  
+ Errors during downloading metadata for repository 'rhel-X-for-x86_64-XXXX-eus-rhui-rpms':  
+ \- **Curl error (58): Problem with the local SSL certificate** for https\://rhui-3.microsoft.com/pulp/repos/content/eus/rhel8/rhui/X.X/x86_64/XXXXX/os/repodata/repomd.xml [could not load PEM client certificate, OpenSSL error error:02001002:system library:fopen:No such file or directory, (no key found, wrong pass phrase, or wrong file format?)]
+```
 
 ### Solution 2: Reinstall the EUS, non-EUS, or SAP RHUI package
 
@@ -122,11 +123,12 @@ The RHUI EUS, non-EUS, or SAP/E4S package is missing from the Red Hat VM, but th
 
 When you try to install or update a package, you receive the following error message:
 
-> `# yum install XXXX`  
->
-> Red Hat Enterprise Linux X for x86_64 - XXXX  0.0  B/s |   0  B     00:00  
-> Errors during downloading metadata for repository 'rhel-X-for-x86_64-XXXX-XXX-rhui-rpms':  
-> \- **Curl error (58): Problem with the local SSL certificate** for https\://rhui-3.microsoft.com/pulp/repos/content/eus/rhel8/rhui/X.X/x86_64/XXXXX/os/repodata/repomd.xml [could not load PEM client certificate, OpenSSL error error:02001002:system library:fopen:No such file or directory, (no key found, wrong pass phrase, or wrong file format?)]
+```output
+# yum install <package-name>  
+Red Hat Enterprise Linux X for x86_64 - XXXX  0.0  B/s |   0  B     00:00  
+ Errors during downloading metadata for repository 'rhel-X-for-x86_64-XXXX-XXX-rhui-rpms':  
+- **Curl error (58): Problem with the local SSL certificate** for https\://rhui-3.microsoft.com/pulp/repos/content/eus/rhel8/rhui/X.X/x86_64/XXXXX/os/repodata/repomd.xml [could not load PEM client certificate, OpenSSL error error:02001002:system library:fopen:No such file or directory, (no key found, wrong pass phrase, or wrong file format?)]
+```
 
 ### Solution 3: Install the EUS, non-EUS, or SAP/E4S RHUI package
 
@@ -593,12 +595,13 @@ The *ca-bundle.crt* certificate file was manually deleted, was corrupted, or is 
 
 You might receive an error message that resembles the following output when you try to run `yum` commands:
 
-> `# yum repolist`  
->
-> Loaded plugins: langpacks, product-id, search-disabled-repos  
-> rhui-rhel-X-server-dotnet-rhui FAILED  
-> https\://rhui-3.microsoft.com/pulp/repos//content/dist/rhel/rhui/server/X/XServer/x86_64/dotnet/1/os/repodata/70b2edf9a115dffa42d4dd66ba77e77bc3cad45d1143ed02df72ea58c92b59b5-primary.sqlite.bz2: [Errno 14] **curl#77 - "Problem with the SSL CA cert (path? access rights?)"**  
-> Trying other mirror.
+```output
+# yum repolist  
+ Loaded plugins: langpacks, product-id, search-disabled-repos  
+ rhui-rhel-X-server-dotnet-rhui FAILED  
+ https\://rhui-3.microsoft.com/pulp/repos//content/dist/rhel/rhui/server/X/XServer/x86_64/dotnet/1/os/repodata/70b2edf9a115dffa42d4dd66ba77e77bc3cad45d1143ed02df72ea58c92b59b5-primary.sqlite.bz2: [Errno 14] **curl#77 - "Problem with the SSL CA cert (path? access rights?)"**  
+ Trying other mirror.
+```
 
 ### Solution 4: Update or reinstall the CA certificates package
 
