@@ -12,7 +12,7 @@ This article provides a resolution to a login issue in Power Automate for deskto
 
 ## Symptoms
 
-- The current Power Automate for desktop login browser sends an invalid "user agent" header, causing some 2-factor authentication to identify it as a security issue.
+- The current Power Automate for desktop login browser sends an invalid "user agent" header, causing some two factor authentications to identify it as a security issue.
 
 - Attempting to log in shows a JavaScript error.
 

@@ -123,6 +123,8 @@
           href: login-windows-keep-appearing.md
         - name: Enable webview2 in Power Automate for desktop login
           href: enable-webview-pad-login.md
+        - name: We can't sign you in - browser blocks cookies
+          href: browser-blocks-cookies.md
         - name: Can't automate webpage with iframes
           href: cannot-automate-webpage-with-iframes.md
         - name: Can't interact with web elements on runtime
