@@ -2,11 +2,11 @@
 title: Troubleshoot Azure Monitor Application Insights for Java
 description: This article presents troubleshooting information for the Java agent for Azure Monitor Application Insights.
 ms.topic: conceptual
-ms.date: 1/10/2023
+ms.date: 2/13/2023
 ms.author: v-dele
 author: DennisLee-DennisLee
 editor: v-jsitser
-ms.reviewer: aaronmax, jeanbisutti, trstalna
+ms.reviewer: aaronmax, jeanbisutti, trstalna, ashisunnam
 ms.service: azure-monitor
 ms.subservice: application-insights
 ms.devlang: java
@@ -52,6 +52,8 @@ If the connectivity issue is caused by the Application Insights Java agent, cons
 ## Java virtual machine (JVM) fails to start
 
 If the Java virtual machine (JVM) fails to start, it might return an "Error opening zip file or JAR manifest missing" message. That error means that the agent jar file might have been corrupted during file transfer. Try redownloading the agent jar file.
+
+If you [enabled Application Insights to monitor your Tomcat application](https://tomcat.apache.org/), there might be a several-minute delay in the time that it takes to start the application. This delay is caused because Tomcat tries to scan the Application Insights jar files during application startup. To speed up the application start time, you can exclude the Application Insights jar files from the list of scanned files. Scanning these jar files isn't necessary.
 
 ## Upgrade from the Application Insights Java 2._x_ SDK
 
