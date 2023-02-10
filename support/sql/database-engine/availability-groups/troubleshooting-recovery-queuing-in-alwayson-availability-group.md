@@ -74,11 +74,11 @@ To review the recovery queue, follow these steps:
 
 1. To add **Redo Queue Size (KB)** and **Redo Rate (KB/sec)**, right-click the header that's shown as highlighted in red in the following screenshot.
   
-    :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/add-redo-queue-size-rate-recovery-queueing.png" alt-text="Screenshot showing refresh counters set to every 60 seconds.":::
+    :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/add-redo-queue-size-rate-recovery-queueing.png" alt-text="Screenshot that shows adding the counters Redo Queue Size (KB) and Redo Rate (KB/sec).":::
 
     By default, the Always On dashboard auto refreshes **Redo Queue Size (KB)** and **Redo Rate (KB/sec)** every 60 seconds.
 
-    :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/add-redo-queue-size-rate-refreshes-60-recovery.png" alt-text="Screenshot showing refresh counters set to every 60 seconds.":::
+    :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/add-redo-queue-size-rate-refreshes-60-recovery.png" alt-text=" Screenshot showing refresh counters set to every 60 seconds.":::
 
 ### Review the recovery queue in Performance Monitor
 
@@ -161,4 +161,4 @@ AND database_id= db_id('agdb')
 
 If you verify that your database uses a single-threaded redo, review the algorithm that was described earlier to determine whether SQL Server is exceeding the number of 100 worker threads that are dedicated for parallel recovery. Such a condition might be the reason that the "agdb" database is using only a single thread for recovery.
 
-SQL Server 2022 now uses a new parallel recovery algorithm so that worker threads are assigned for parallel recovery based on the workload. This eliminates the chance that a busy database will remain in a single-threaded recovery. For more information, see the [Thread Usage by Availability Groups](https://learn.microsoft.com/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability?view=sql-server-ver16#ThreadUsage) section of "Prerequisites, Restrictions, and Recommendations for Always On availability groups."
+SQL Server 2022 now uses a new parallel recovery algorithm so that worker threads are assigned for parallel recovery based on the workload. This eliminates the chance that a busy database will remain in a single-threaded recovery. For more information, see the [Thread Usage by Availability Groups](/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability?view=sql-server-ver16&preserve-view=true) section of "Prerequisites, Restrictions, and Recommendations for Always On availability groups."
