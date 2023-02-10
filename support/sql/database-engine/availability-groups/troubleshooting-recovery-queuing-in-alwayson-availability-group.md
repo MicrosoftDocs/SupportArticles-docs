@@ -38,7 +38,7 @@ In the case of recovery queueing, the Always On dashboard in SQL Server Manageme
 
 ## How to check for recovery (redo) queueing
 
-Recovery queue is a per-database measurement that can be checked by using the Always On dashboard on the primary replica or by using the `[sys.dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)` Dynamic Management View (DMV) on the primary or secondary replica. Performance Monitor counters check recovery queueing and recovery rate. These counters must be checked against the secondary replica.
+Recovery queue is a per-database measurement that can be checked by using the Always On dashboard on the primary replica or by using the [sys.dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) Dynamic Management View (DMV) on the primary or secondary replica. Performance Monitor counters check recovery queueing and recovery rate. These counters must be checked against the secondary replica.
 
 The next several sections provide methods to actively monitor your availability group database recovery queue.
 
