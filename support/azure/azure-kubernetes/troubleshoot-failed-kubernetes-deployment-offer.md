@@ -7,6 +7,7 @@ ms.author: v-dele
 ms.reviewer: chiragpa, atchub
 editor: v-jsitser
 ms.service: azure-kubernetes-service
+ms.subservice: troubleshoot-extensions-add-ons
 #Customer intent: As an Azure Marketplace user, I want to troubleshoot the failed deployment of a Kubernetes application after I accept an offer on the Marketplace.
 ---
 # Troubleshoot the failed deployment of a Kubernetes application offer
