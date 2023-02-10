@@ -65,6 +65,68 @@ For the IP ranges that are specified for Azure AD, make sure that you allow outb
 
 By default, both IPv6 and IPv4 traffic is supported on Windows and most other operating system (OS) platforms. Changes to the standard IPv6 configuration may result in unintended consequences. For more information, see [Guidance for configuring IPv6 in Windows for advanced users](/troubleshoot/windows-server/networking/configure-ipv6-in-windows).
 
+## How to find the IPv6 address used to sign-in to Azure AD
+To help admins find the IPv6 addresses used to sign-in to Azure AD, either during proactive testing 
+[Name Resolution Policy Table (NRPT)](https://learn.microsoft.com/en-us/troubleshoot/azure/active-directory/azure-ad-ipv6-support#test-azure-ad-authentication-over-ipv6) mentioned above OR post the IPv6 enablement in March 2023, use the methods below. Finding the top IPv6 addresses that are owned and managed by the organization will help you add the same under ‘Named location”.
+
+### Methods to get the list of IPv6 addresses from Sign-in logs:
+
+   #### Filtering Azure AD Sign-in logs
+   - In the Azure portal, search for and select Azure Active Directory.
+   - In the Overview page menu, select Sign-in logs.
+   - Click on +Add filters and select IP Address
+   - In the filter “IP address contains” insert a colon **“:”** (without quotes)
+   - Select the Location tab to check more IP Address and Named Locations.
+            - Add new Named Location and Mark as trusted if necessary.
+   - Click on Download to export the logs in CSV or JSON formats. 
+ 
+   #### Log Analytics (in Azure Monitor)
+ 
+   You can query the Azure AD Interactive and Non-Interactive sign-in logs using Azure Monitor. 
+
+   Azure Monitor is a powerful log analysis, monitoring, and alerting tool. Use Azure Monitor for:
+   -	Azure AD logs
+   -	Azure resources logs
+   -	Logs from independent software tools
+
+   Note
+   You need an Azure AD Premium license to export reporting data to Azure Monitor.
+
+   To query for legacy TLS entries using Azure Monitor:
+
+   •	In Integrate Azure AD logs with Azure Monitor logs, follow the instructions for how to access the Azure AD sign-in logs in Azure Monitor.
+
+   •	In the query definition area, paste the following Kusto Query Language query:
+ 
+
+        union SigninLogs, AADNonInteractiveUserSignInLogs
+        | where IPAddress has ":"
+        | summarize RequestCount = count() by IPAddress, AppDisplayName, NetworkLocationDetails
+        | sort by RequestCount
+
+   •	Select Run to execute the query. The log entries that match the query appear in the Results tab below the query definition.
+
+   #### Exporting logs through PowerShell
+    
+        $tId = "TENANT ID"  # Add tenant ID from Azure Active Directory page on portal.
+        $agoDays = 2  # Will filter the log for $agoDays from the current date and time.
+        $startDate = (Get-Date).AddDays(-($agoDays)).ToString('yyyy-MM-dd')  # Get filter start date.
+        $pathForExport = "./"  # The path to the local filesystem for export of the CSV file. Connect-MgGraph -Scopes "AuditLog.Read.All" -TenantId $tId  # Or use Directory.Read.All. 
+        # Get the interactive and non-interactive IPv6 sign-ins .
+        $signInsInteractive = Get-MgAuditLogSignIn -Filter "contains(IPAddress, ':')" -All
+        $signInsNonInteractive = Get-MgAuditLogSignIn -Filter "contains(IPAddress, ':')" -All $columnList = @{  # Enumerate the list of properties to be exported to the CSV files.
+            Property = "createdDateTime","CorrelationId", "userPrincipalName", "userId",
+                      "UserDisplayName", "AppDisplayName", "AppId", "IPAddress", "isInteractive",
+                      "ResourceDisplayName", "ResourceId"
+        } # Summary IPv6 & App Display Name count
+        $signInsInteractive | Group-Object IPaddress, AppDisplayName | Select-Object @{Name='IPaddress';Expression={$_.Group[0].IPaddress}}, 
+            @{Name ='AppDisplayName';Expression={$_.Group[0].AppDisplayName}}, Count | Sort-Object -Property Count –Descending | Export-Csv -Path ($pathForExport + "Summary_Interactive_IPv6_$tId.csv") -NoTypeInformation
+        $signInsNonInteractive | Group-Object IPaddress, AppDisplayName | Select-Object @{Name='IPaddress';Expression={$_.Group[0].IPaddress}}, 
+            @{Name ='AppDisplayName';Expression={$_.Group[0].AppDisplayName}}, Count | Sort-Object -Property Count –Descendin | Export-Csv -Path ($pathForExport + "Summary_NonInteractive_IPv6_$tId.csv") -NoTypeInformation #Detailed IPv6 Sign-ins
+        #$signInsInteractive  | Select-Object @columnList | Export-Csv -Path ($pathForExport + "Detailed_Interactive_IPv6_$tId.csv") -NoTypeInformation
+        #$signInsNonInteractive  | Select-Object @columnList | Export-Csv -Path ($pathForExport + "Detailed_NonInteractive_IPv6_$tId.csv") -NoTypeInformation
+
+
 ## Test Azure AD authentication over IPv6
 
 You can test Azure AD authentication over IPv6 before we enable it worldwide in late March 2023. This procedure helps validate IPv6 range configurations. The recommended approach is to use a [Name Resolution Policy Table (NRPT)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn593632(v=ws.11)) rule pushed to your Azure AD-joined Windows devices. In Windows Server, NRPT lets you implement a global or local policy that overrides DNS resolution paths. With this feature, you can redirect DNS for various fully qualified domain names (FQDNs) to special DNS servers that are configured to have IPv6 DNS entries for Azure AD sign-in. It's simple to enable and disable NRPT rules by using a PowerShell script. You can use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) to push this feature to clients.
