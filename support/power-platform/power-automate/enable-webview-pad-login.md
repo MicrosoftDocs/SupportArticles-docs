@@ -26,8 +26,8 @@ To verify the issue, you need to install and use a network tracing tool, such as
 
 1. Add a **REG_DWORD** registry key in **Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Power Automate Desktop**. 
 
-    **Key name**: UseMsalDesktopFeatures
-    **Value**: 1
+    - **Key name**: UseMsalDesktopFeatures
+    - **Value**: 1
 
 Find more details about Webview2 in the following links:
 
