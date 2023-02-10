@@ -1,5 +1,5 @@
 ---
-title: OperationNotAllowed. Deletion of Virtual Machine Scale Set isn't allowed as it contains one or more VMs. Please delete or detach the VM(s) before deleting the Virtual Machine Scale Set.
+title: Deletion of Virtual Machine Scale Set isn't allowed as it contains one or more VMs
 description: Learn how to resolve the OperationNotAllowed error when you deploy a Virtual Machine Scale Set by using Flexible orchestration mode.
 ms.date: 01/31/2023
 author: DennisLee-DennisLee

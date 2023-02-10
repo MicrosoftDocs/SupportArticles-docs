@@ -1,5 +1,5 @@
 ---
-title: Configure an Always On availability group to perform a failover
+title: Manually configure AG for automatic failover for errors on data file
 description: This article describes how to configure an Always On availability group to perform a failover when the database data file is unavailable.
 ms.date: 02/07/2023
 ms.custom: sap:Availability Groups
@@ -22,7 +22,7 @@ To configure an Always On availability group to perform a failover when [errors 
 
 ## Configure Failover Cluster Manager
 
-This procedure will set up the WSFC policy to cause a failover to one of the possible owners instead of attempting to restart the role on the current primary node.
+This procedure sets up the WSFC policy to cause a failover to one of the possible owners instead of attempting to restart the role on the current primary node.
 
 1. Open Failover Cluster Manager.
 
@@ -53,4 +53,4 @@ This procedure provides an example of how to utilize the available alert mechani
    `sqlcmd -S <SecondaryReplicaName> -U SQLADMIN -P <YourPassword> -Q "ALTER Availability Group <AGName> Failover"`
    
    > [!NOTE]
-   > `<SecondaryReplicaName>`, `<YourPassword>` and `<AGName>` are placeholders. You need to change it to match your environments. This script is an example for reference. A full script should perform other checks before performing a failover.
+   > `<SecondaryReplicaName>`, `<YourPassword>`, and `<AGName>` are placeholders. You need to change it to match your environments. This script is an example for reference. A full script should perform other checks before performing a failover.
