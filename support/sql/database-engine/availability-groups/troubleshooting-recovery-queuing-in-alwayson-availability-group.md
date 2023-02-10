@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting recovery queueing in an Always On availability group
 description: This article helps you to troubleshoot problems that are related to recovery queueing in an Always On availability group. 
-ms.date: 02/08/2023
+ms.date: 02/10/2023
 ms.custom: sap:Availability Groups
 ms.prod: sql
 author: padmajayaraman
@@ -60,7 +60,7 @@ END
 
 Here is what the output looks like.
 
-[![Screenshot of the output for the query report the data for the secondary replica where redo_queue_size and redo_rate are relevant.](media/troubleshooting-recovery-queuing-in-alwayson-availability-group/dm-hadr-database-replica-states-output-recovery.png)](media/troubleshooting-recovery-queuing-in-alwayson-availability-group/dm-hadr-database-replica-states-output-recovery-enlarged.png#lightbox)
+:::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/dm-hadr-database-replica-states-output-recovery.png" alt-text="Screenshot of the output for the query report the data for the secondary replica where redo_queue_size and redo_rate are relevant.":::
 
 ### Review the recovery queue in Always On Dashboard
 
@@ -74,11 +74,11 @@ To review the recovery queue, follow these steps:
 
 1. To add **Redo Queue Size (KB)** and **Redo Rate (KB/sec)**, right-click the header that's shown as highlighted in red in the following screenshot.
   
-   [![Screenshot that shows adding the counters Redo Queue Size (KB) and Redo Rate (KB/sec).](media/troubleshooting-recovery-queuing-in-alwayson-availability-group/add-redo-queue-size-rate-recovery-queueing.png)](media/troubleshooting-recovery-queuing-in-alwayson-availability-group/add-redo-queue-size-rate-recovery-queueing.png#lightbox)
+    :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/add-redo-queue-size-rate-recovery-queueing.png" alt-text="Screenshot showing refresh counters set to every 60 seconds.":::
 
     By default, the Always On dashboard auto refreshes **Redo Queue Size (KB)** and **Redo Rate (KB/sec)** every 60 seconds.
 
-    [![Screenshot showing refresh counters set to every 60 seconds.](media/troubleshooting-recovery-queuing-in-alwayson-availability-group/add-redo-queue-size-rate-refreshes-60-recovery.png)](media/troubleshooting-recovery-queuing-in-alwayson-availability-group/add-redo-queue-size-rate-refreshes-60-recovery.png#lightbox)
+    :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/add-redo-queue-size-rate-refreshes-60-recovery.png" alt-text="Screenshot showing refresh counters set to every 60 seconds.":::
 
 ### Review the recovery queue in Performance Monitor
 
@@ -96,7 +96,7 @@ The recovery queue size is unique to each secondary replica and database. Theref
 
    Here's what increasing recovery queueing might look like.
 
-    [![Screenshot showing an increase in recovery queueing.](media/troubleshooting-recovery-queuing-in-alwayson-availability-group/increase-recovery-queueing-graph.png)](media/troubleshooting-recovery-queuing-in-alwayson-availability-group/increase-recovery-queueing-graph.png#lightbox)
+    :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/increase-recovery-queueing-graph.png" alt-text="Screenshot showing an increase in recovery queueing.":::
 
 ## How to diagnose recovery (redo) queueing
 
@@ -123,7 +123,7 @@ In this example, some I/O-related wait types are reported (PAGEIOLATCH_UP, PAGEI
 
 ### SQL Server redo wait types
 
-When a wait type is identified, review the following article [SQL Server 2016/2017: Availability group secondary replica redo model and performance - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/sql-server/sql-server-2016-2017-availability-group-secondary-replica-redo/ba-p/385905%22%20/t%20%22_blank) as a cross-reference for common wait types that cause recovery queueing, and for help to resolve the problem.
+When a wait type is identified, review the following article [SQL Server 2016/2017: Availability group secondary replica redo model and performance - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/sql-server-blog/sql-server-2016-2017-availability-group-secondary-replica-redo/ba-p/385905) as a cross-reference for common wait types that cause recovery queueing, and for help to resolve the problem.
 
 ### Blocked redo threads on secondary reporting servers
 
@@ -161,4 +161,4 @@ AND database_id= db_id('agdb')
 
 If you verify that your database uses a single-threaded redo, review the algorithm that was described earlier to determine whether SQL Server is exceeding the number of 100 worker threads that are dedicated for parallel recovery. Such a condition might be the reason that the "agdb" database is using only a single thread for recovery.
 
-SQL Server 2022 now uses a new parallel recovery algorithm so that worker threads are assigned for parallel recovery based on the workload. This eliminates the chance that a busy database will remain in a single-threaded recovery. For more information, see the [Thread Usage by Availability Groups](/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability#ThreadUsage) section of "Prerequisites, Restrictions, and Recommendations for Always On availability groups."
+SQL Server 2022 now uses a new parallel recovery algorithm so that worker threads are assigned for parallel recovery based on the workload. This eliminates the chance that a busy database will remain in a single-threaded recovery. For more information, see the [Thread Usage by Availability Groups](https://learn.microsoft.com/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability?view=sql-server-ver16#ThreadUsage) section of "Prerequisites, Restrictions, and Recommendations for Always On availability groups."
