@@ -123,7 +123,7 @@ For AD LDS:
 
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\<adam instance>\Parameters\Links process batch size`  
 **Type**: DWORD  
-**Min Value**: 1000  
+**Min Value**: 100  
 **Max Value**: 10000  
 
 This value overrides the default value of 10,000 as the number of atomic links to process at one time. You don't have to restart the NTDS or LDS instance service, or restart the computer to make the setting effective.
