@@ -119,6 +119,8 @@
           href: issue-with-ui-flows-error-uiaelementnotfound.md
     - name: Desktop flows
       items:
+        - name: Login windows keep appearing
+          href: login-windows-keep-appearing.md
         - name: Can't automate webpage with iframes
           href: cannot-automate-webpage-with-iframes.md
         - name: Can't interact with web elements on runtime
