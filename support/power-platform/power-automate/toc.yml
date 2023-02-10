@@ -121,6 +121,8 @@
       items:
         - name: Login windows keep appearing
           href: login-windows-keep-appearing.md
+        - name: Enable webview2 in Power Automate for desktop login
+          href: enable-webview-pad-login.md
         - name: Can't automate webpage with iframes
           href: cannot-automate-webpage-with-iframes.md
         - name: Can't interact with web elements on runtime
