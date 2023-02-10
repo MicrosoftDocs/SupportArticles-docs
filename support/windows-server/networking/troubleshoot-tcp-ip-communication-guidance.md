@@ -17,6 +17,9 @@ ms.technology: networking
 
 This article is designed to help you troubleshoot TCP/IP communication issues.
 
+> [!div class="nextstepaction"]
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806409" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common Active Directory replication issues.
+
 ## Troubleshooting tools
 
 The ping command is useful to test basic connectivity. However, you shouldn't rely upon it to prove overall connectivity. Telnet and [PsPing](/sysinternals/downloads/psping) are more useful, for the following reasons:

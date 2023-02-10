@@ -17,6 +17,9 @@ ms.technology: networking
 
 The listed resources in this article can help you resolve issues that you experience when you use Remote Access.
 
+> [!div class="nextstepaction"]
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806376" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common VPN and AlwaysOn VPN issues.
+
 ## Recommended troubleshooting steps
 
 - VPN deployment typically requires a minimum of manual configurations on a server or client computer. Your main considerations are that the correct ports are open on the firewall and are forwarded to the server, and that VPN is enabled. The VPN should work right out of the box. Also make sure that the VPN settings on the client have the appropriate protocols selected.
