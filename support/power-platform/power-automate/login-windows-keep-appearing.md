@@ -8,7 +8,7 @@ ms.subservice: power-automate-desktop-flows
 
 # Login windows keep appearing
 
-This article provides a resolution to an issue that keeps the sign-in windows appearing.
+This article provides a resolution to an issue that keeps the sign-in windows of Power Automate for desktop appearing.
 
 ## Symptoms
 
