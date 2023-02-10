@@ -3,7 +3,7 @@ title: Use PowerShell to manage VIP swaps in Azure Cloud Services (extended supp
 description: Learn how to manage VIP swaps in Azure Cloud Services (extended support) by using PowerShell.
 ms.service: cloud-services
 ms.subservice: troubleshoot-extended-support
-ms.date: 2/8/2022
+ms.date: 2/8/2023
 author: DennisLee-DennisLee
 ms.author: v-dele
 editor: v-jsitser
@@ -22,7 +22,7 @@ This article discusses how to swap between two independent cloud service deploym
 - Two [static public IP addresses](/azure/virtual-network/ip-services/create-public-ip-powershell): One for the production environment, the other for the staging environment. The IP addresses in this example are named `cses-prod` and `cses-stag`, respectively.
 - A [virtual network](/azure/virtual-network/quick-create-powershell) for the test environment. In this example, the virtual network is named `test001VNet`.
 - An [Azure Blob Storage account](/azure/storage/blobs/storage-blobs-introduction).
-- The URLs for the service configuration file and the package file, in [service shared access signature (SAS) URI format](/rest/api/storageservices/create-service-sas). If you haven't already created these URLs, you can create each SAS URI (or the SAS token that's part of the SAS URI) by using the Azure portal or by calling the [New-AzStorageBlobSASToken](/powershell/module/az.storage/new-azstorageblobsastoken) cmdlet. Assign the service configuration file and package file URLs to the `$cscfg` and `$cspkg` variables, respectively. The following PowerShell code snippet shows the format of these URLs. The URLs will be used in subsequent calls to the [New-AzCloudService](/powershell/module/az.cloudservice/new-azcloudservice) cmdlet.
+- The URLs for the service configuration file and the package file, in [service shared access signature (SAS) URI format](/rest/api/storageservices/create-service-sas). If you haven't already created these URLs, you can create each SAS URI (or the SAS token that's part of the SAS URI) by using the Azure portal or by calling the [New-AzStorageBlobSASToken](/powershell/module/az.storage/new-azstorageblobsastoken) cmdlet. Assign the service configuration file and package file URLs to the `$cscfg` and `$cspkg` variables, respectively. The following PowerShell code snippet shows the format of these URLs. The URLs are used in subsequent calls to the [New-AzCloudService](/powershell/module/az.cloudservice/new-azcloudservice) cmdlet.
 
   ```powershell
   $containerUrl = "https://<storage-account-name>.blob.core.windows.net/<container-name>"
@@ -192,7 +192,7 @@ In the [Azure portal][ap], you can view details about the new production cloud s
 
 ### Step 2: Create a staging cloud service to map the staging IP address
 
-When you have a new version of the cloud service, you can create it as the staging cloud service for step 2. In this step, we will search for the production cloud service by using the production public IP address’s front-end setting. To implement this step, make sure that, when you define the network profile for the staging cloud service, you set the ID of its swappable cloud service property to the ID of the production cloud service.
+When you have a new version of the cloud service, you can create it as the staging cloud service for step 2. In this step, we search for the production cloud service by using the production public IP address’s front-end setting. To implement this step, when you define the network profile for the staging cloud service, make sure that you set the ID of its swappable cloud service property to the ID of the production cloud service.
 
 ```azurepowershell
 # Define basic variables.
@@ -363,7 +363,7 @@ Remove-AzCloudService -Name $stagCS.Name -ResourceGroupName $stagCS.ResourceGrou
 
 Now, you should be able to see the new cloud service version being mapped to the production public IP address name. Additionally, the swappable cloud service will no longer be visible.
 
-In the [Azure portal][ap], search for and select **Cloud services (extended support)**, and then select the **testcsesv2** cloud service from the list of cloud services. (There won't be a **testcsesv1** cloud service listed anymore.) On the **Overview** page for that cloud service, the **Essentials** section will no longer display a **Swappable cloud service** field (that formerly contained a value of **testcsesv1**). The **Public IP DNS name** field now displays the production IP address (`cses-prod.eastus.cloudapp.azure.com` in the workflow diagram).
+In the [Azure portal][ap], search for and select **Cloud services (extended support)**, and then select the **testcsesv2** cloud service from the list of cloud services. (There won't be a **testcsesv1** cloud service listed anymore.) On the **Overview** page for that cloud service, the **Essentials** section no longer displays a **Swappable cloud service** field (that formerly contained a value of **testcsesv1**). The **Public IP DNS name** field now displays the production IP address (`cses-prod.eastus.cloudapp.azure.com` in the workflow diagram).
 
 ### Steps 5 and 6: Swap the new version of the cloud service with a third version
 
