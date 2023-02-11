@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot connectivity issues on a dedicated SQL pool
 description: Provides methods for troubleshooting initial and dropped connections on a dedicated SQL pool.
-ms.date: 01/31/2023
-author: scott-epperly
-ms.author: jiaqhuan
+ms.date: 02/11/2023
+author: padmajayaraman
+ms.author: v-jayaramanp
 ms.reviewer: scepperl
 ---
 
@@ -11,41 +11,41 @@ ms.reviewer: scepperl
 
 _Applies to:_ &nbsp; Azure Synapse Analytics
 
-There are various causes for connectivity issues on a dedicated SQL pool. This article will provide tools and methods to help you to troubleshoot the most common connectivity issues seen by Microsoft Support.
-
+There are various causes for connectivity issues on a dedicated SQL pool. This article will provide tools and methods to help you troubleshoot the most common connectivity issues seen by Microsoft Support.
 
 ## Initial connectivity checklist
 
-The following table is a list of commonly overlooked reasons for connectivity issues against a dedicated SQL pool.  Quickly scan the list and follow the directions for any topic that you believe may have been overlooked.
+The following table is a list of commonly overlooked reasons for connectivity issues against a dedicated SQL pool. Check the list of reasons to see how you can work around the problem.
 
-| Task Description | Directions |
-|-----|----|
+| Task Description | Workaround |
+|---|---|
 | **Check for Azure service outages.** | Check the [Microsoft Azure Service Dashboard](https://azure.microsoft.com/status/) to see if there are any known issues. |
-| **Check for service availability.** | In the Azure portal, go to the dedicated SQL pool you're trying to connect and select **Diagnose and solve problems** on the left navigation to [check service availability](/azure/sql-data-warehouse/sql-data-warehouse-troubleshoot-connectivity#check-service-availability). |
+| **Check for service availability.** | In the Azure portal, go to the dedicated SQL pool you're trying to connect and select **Diagnose and solve problems** on the left pane to [check service availability](/azure/sql-data-warehouse/sql-data-warehouse-troubleshoot-connectivity#check-service-availability). |
 | **Check for paused or scaling operation.** | Check to see if your service is currently paused or in the process of scaling. Open the Azure portal and go to your dedicated SQL pool you're trying to connect to. For more information, see [troubleshooting documentation](/azure/sql-data-warehouse/sql-data-warehouse-troubleshoot-connectivity#check-for-paused-or-scaling-operation). |
-| **Check the **Resource health** blade in the Azure portal for status updates.** | An *Unavailable* status means that resource health has detected consistent sign-in failures due to a system error in your SQL Database. The status of *Degraded* means that resource health has detected mostly successful sign-ins, but there are some failures as well. These sign-in failures may be caused by transient errors.
+| **Check the **Resource health** blade in the Azure portal for status updates.** | An *Unavailable* status means that resource health has detected consistent sign-in failures due to a system error in your SQL database. The status of *Degraded* means that resource health has detected mostly successful sign-ins, but there are some failures as well. These sign-in failures may be caused by transient errors. |
 | **Check your firewall settings.** | Dedicated SQL pool communicates over port 1433. If you're trying to connect from within a corporate network, outbound traffic over port 1433 might not be allowed by your network's firewall. In that case, you can't connect to your Azure SQL Database server unless your IT department opens port 1433. For more information, see [Create and manage IP firewall rules](/azure/sql-database/sql-database-firewall-configure#create-and-manage-ip-firewall-rules). |
-| **Check your virtual network/service endpoint settings.** | If you're receiving [errors "40914" and "40615"](/azure/sql-data-warehouse/sql-data-warehouse-troubleshoot-connectivity#check-your-vnetservice-endpoint-settings), see the error description and resolution in the **Common error messages** section. |
-| **Check for the latest drivers.** | Verify you're using the [latest version of the tool and drivers](/sql/connect/jdbc/system-requirements-for-the-jdbc-driver) to connect to your dedicated SQL pool. For more information, see [Check for the latest drivers](/azure/sql-data-warehouse/sql-data-warehouse-troubleshoot-connectivity#check-for-the-latest-drivers). <br><br>Resources:<br>* [Connect and manage your dedicated SQL pool using the Azure portal](/azure/sql-data-warehouse/create-data-warehouse-portal)<br>* [Connect and manage your dedicated SQL pool using PowerShell](/azure/sql-data-warehouse/create-data-warehouse-powershell).|
-| **Check your connection string.** | Verify your connection strings are set properly. [Check your connection string](/azure/sql-data-warehouse/sql-data-warehouse-troubleshoot-connectivity#check-your-connection-string) to view some sample connection strings for ADO.NET, ODBC, PHP, and JDBC. See [additional information about connection strings](/azure/sql-data-warehouse/sql-data-warehouse-connect-overview#find-your-server-name).
+| **Check your virtual network/service endpoint settings.** | If you see the [errors "40914" and "40615"](/azure/sql-data-warehouse/sql-data-warehouse-troubleshoot-connectivity#check-your-vnetservice-endpoint-settings), see the error description and resolution in the [Common error messages reference](#common-error-message-reference) section. |
+| **Check for the latest drivers.** | Verify you're using the [latest version of the tool and drivers](/sql/connect/jdbc/system-requirements-for-the-jdbc-driver) to connect to your dedicated SQL pool. For more information, see [Check for the latest drivers](/azure/sql-data-warehouse/sql-data-warehouse-troubleshoot-connectivity#check-for-the-latest-drivers). <br><br>Resources:<br>* [Connect and manage your dedicated SQL pool using the Azure portal](/azure/sql-data-warehouse/create-data-warehouse-portal)<br>* [Connect and manage your dedicated SQL pool using PowerShell](/azure/sql-data-warehouse/create-data-warehouse-powershell). |
+| **Check your connection string.** | Verify your connection strings are set properly. [Check your connection string](/azure/sql-data-warehouse/sql-data-warehouse-troubleshoot-connectivity#check-your-connection-string) to view some sample connection strings for ADO.NET, ODBC, PHP, and JDBC. See [additional information about connection strings](/azure/sql-data-warehouse/sql-data-warehouse-connect-overview#find-your-server-name). |
 
 ## Troubleshoot persistent connectivity errors
 
 The [Azure SQL connectivity checker](https://github.com/Azure/SQL-Connectivity-Checker) is a PowerShell script that automates a series of checks for the most common configuration issues. Most issues detected by the script will be accompanied by recommendations for resolution.
 
-The following PowerShell script will download and run the latest version of the Azure SQL connectivity checker.  Run it from any client computer where persistent connectivity issues occur.
+The following PowerShell script will download and run the latest version of the Azure SQL connectivity checker. Run it from any client computer where persistent connectivity issues occur.
 
-> Note
-> * To run the tests from Linux, from machines without internet access, or from a containerized environment, see [SQL connectivity checker on GitHub](https://github.com/Azure/SQL-Connectivity-Checker).
-> * For more PowerShell commands, see [Available PowerShell commands](/powershell/module/azurerm.sql#sql).
+> [!NOTE]
+> - To run the tests from Linux, from machines without Internet access or from a containerized environment, see [SQL connectivity checker on GitHub](https://github.com/Azure/SQL-Connectivity-Checker).
+> - For more PowerShell commands, see [Available PowerShell commands](/powershell/module/azurerm.sql#sql).
 
 1. Open Windows PowerShell ISE (in **Administrator** mode if possible).
-   - **Note**: To collect a network trace along with the tests (`CollectNetworkTrace` parameter), you must run PowerShell as an administrator.
-2. Open a **New Script** window.
-3. Copy/paste the following text into the script window:
+   > [!NOTE]
+   > To collect a network trace along with the tests (`CollectNetworkTrace` parameter), you must run PowerShell as an administrator.
+1. Open a **New Script** window.
+1. Copy or paste the following text into the script window:
 
  ```
- $parameters = @{
+  $parameters = @{
      # Supports Single, Elastic Pools and Managed Instance (MI public endpoint is supported)
      # Supports Azure Synapse / Azure SQL Data Warehouse (*.sql.azuresynapse.net / *.database.windows.net)
      # Supports Public Cloud (*.database.windows.net), Azure China (*.database.chinacloudapi.cn), Azure Germany (*.database.cloudapi.de) and Azure Government (*.database.usgovcloudapi.net)
@@ -61,7 +61,7 @@ The following PowerShell script will download and run the latest version of the 
      DelayBetweenConnections = 1 # Number of seconds to wait between connection attempts while running advanced connectivity tests
      CollectNetworkTrace = $true  # Set as $true (default) or $false
      #EncryptionProtocol = '' # Supported values: 'Tls 1.0', 'Tls 1.1', 'Tls 1.2'; Without this parameter operating system will choose the best protocol to use
- }
+   }
 
  $ProgressPreference = "SilentlyContinue";
  if ("AzureKudu" -eq $env:DOTNET_CLI_TELEMETRY_PROFILE) {
@@ -85,12 +85,12 @@ The following PowerShell script will download and run the latest version of the 
  #end
  ```
 
-4. Set the parameters on the script. 
-    - Specify the server name and database name. 
+1. Set the parameters on the script.
+    - Specify the server name and database name.
     - Specifying the user and password information is optional but is best practice.
-5. Run the script.
+1. Run the script.
    - Results are displayed in the output window. If the user has permissions to create folders, a folder with the resulting log file is created, along with a ZIP file (`AllFiles.zip`). Executing the script on Windows automatically opens the folder after the script completes.
-6. Examine the output for any issues detected, and follow the recommended steps to resolve the issue.
+1. Examine the output for any issues detected, and follow the recommended steps to resolve the issue.
    - If the issue can't be resolved, send the `AllFiles.zip` file to Microsoft using the **File upload** option in the **Details** step when creating your support case.
 
 ## Troubleshoot intermittent connectivity errors
@@ -99,23 +99,23 @@ Make sure that all production applications have robust [retry logic](/azure/azur
 
 ### Connection policy configuration for gateway issues
 
-- The Azure SQL Database gateway terminates sessions that are idle for longer than 30 minutes. This scenario frequently impacts pooled, idle connections. For *dedicated SQL pool (formerly SQL DW)*, you can switch the [connection policy](/azure/azure-sql/database/connectivity-architecture?WT.mc_id=pid:13491:sid:32745426#connection-policy) for your server from *proxy* to *redirect*. The redirect setting bypasses the gateway after it's connected and eliminates the issue.
+The Azure SQL Database gateway terminates sessions that are idle for longer than 30 minutes. This scenario frequently impacts pooled, idle connections. For *dedicated SQL pool (formerly SQL DW)*, you can switch the [connection policy](/azure/azure-sql/database/connectivity-architecture?WT.mc_id=pid:13491:sid:32745426#connection-policy) for your server from *proxy* to *redirect*. The redirect setting bypasses the gateway after it's connected and eliminates the issue.
 
 ### TCP KeepAlive in Microsoft JDBC driver
 
-- The Microsoft JDBC driver and some other third-party drivers don't enable TCP KeepAlive, which causes the TCP network layer to drop the connection after a certain idle period. Verify that you have the latest client drivers installed and that the driver enables [KeepAlive](/sql/connect/jdbc/connecting-to-an-azure-sql-database#connections-dropped).
+The Microsoft JDBC driver and some other third-party drivers don't enable TCP KeepAlive, which causes the TCP network layer to drop the connection after a certain idle period. Verify that you have the latest client drivers installed and that the driver enables [KeepAlive](/sql/connect/jdbc/connecting-to-an-azure-sql-database#connections-dropped).
 
 ### Time-out configuration
 
-- All applications connecting to Synapse SQL pools should use a sign-in time-out of at least 15 seconds. Shorter durations may encounter time-outs during a database reconfiguration.
+All applications connecting to Synapse SQL pools should use a sign-in time-out of at least 15 seconds. Shorter durations may encounter time-outs during a database reconfiguration.
 
 ### High resource utilization
 
 - Check to see if you're experiencing heavy load on the server with a high number of queued requests. You may need to scale up your data warehouse for [more resources](/azure/sql-data-warehouse/sql-data-warehouse-troubleshoot-connectivity#intermittent-connection-issues).
 - Try implementing [retry logic](/azure/sql-database/sql-database-connectivity-issues#retry-logic-for-transient-errors) in your client application to help mitigate these situations, making the errors transparent to users.
-- Azure Synapse Analytics provides a rich monitoring experience within the Azure portal to surface insights regarding your data warehouse workload.  You can review the CPU, memory, and local tempdb usage as it correlates to your workload in [Azure Monitor](https://portal.azure.com/#view/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/~/metrics) of the Azure portal.
-    - For dedicated SQL pools in a Synapse Workspace, see [Metrics emitted by dedicated SQL pools](/azure/synapse-analytics/monitoring/how-to-monitor-using-azure-monitor#dedicated-sql-pool-metrics).
-    - For metrics emitted by dedicated SQL pools (formerly SQL Data Warehouse), see [Monitoring resource utilization and query activity](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-concept-resource-utilization-query-activity).
+- Azure Synapse Analytics provides a rich monitoring experience within the Azure portal to surface insights regarding your data warehouse workload. You can review the CPU, memory, and local `tempdb` usage as it correlates to your workload in [Azure Monitor](https://portal.azure.com/#view/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/~/metrics) of the Azure portal.
+  - For dedicated SQL pools in a Synapse Workspace, see [Metrics emitted by dedicated SQL pools](/azure/synapse-analytics/monitoring/how-to-monitor-using-azure-monitor#dedicated-sql-pool-metrics).
+  - For metrics emitted by dedicated SQL pools (formerly SQL Data Warehouse), see [Monitoring resource utilization and query activity](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-concept-resource-utilization-query-activity).
 
 ## Common error message reference
 
@@ -130,18 +130,17 @@ Use this table to find descriptions and mitigations for the most common error me
 | **Error 40615: Cannot open server '{0}' requested by the login. Client with IP address '{1}' is not allowed to access the server**| The client is trying to connect from an IP address that isn't authorized to connect to the Azure SQL Database server. The server firewall has no IP address rule that allows a client to communicate from the given IP address to the SQL Database. Enter the client's IP address as a new IP rule in the **Firewall** settings of the resource in Azure portal. A list of several SQL Database error messages is documented [here](/azure/sql-database/sql-database-develop-error-messages). |
 | **Error 40914: Cannot open server '[server-name]' requested by the login. Client is not allowed to access the server** | In this scenario, the client is in a subnet that has virtual network server endpoints.  However, the Azure SQL Database server has no virtual network rule that grants the right to communicate with the SQL Database to the subnet. In the **Firewall** pane of the Azure portal, use the virtual network rules control to [add a virtual network rule](/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?toc=/azure/sql-data-warehouse/toc.json#anchor-how-to-by-using-firewall-portal-59j) for the subnet. |
 | **Error 9002: 'The transaction log for database 'xxxx' is full due to 'ACTIVE_TRANSACTION'. (Microsoft SQL Server, Error: 9002)'** | This error usually means there's a long running transaction that isn't yet committed, or there's a hanging session, which makes transaction log full. Check for hanging sessions with `SELECT * FROM sys.dm_exec_sessions and kill it with KILL <session_id>`. If there's no hanging sessions, you may need to cancel the long-running query or kill that session to mitigate this issue. |
-|"A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections."|Logins for SQL Database or dedicated SQL pools (formerly SQL DW) in Azure Synapse can land on *any of the gateways in a region*. For consistent connectivity to SQL Database or dedicated SQL pools (formerly SQL DW) in Azure Synapse, allow network traffic to and from *all* gateway IP addresses and subnets for the region. See [Gateway IP addresses](/azure/azure-sql/database/connectivity-architecture#gateway-ip-addresses).|
+|"A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server wasn't found or wasn't accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections."|Logins for SQL Database or dedicated SQL pools (formerly SQL DW) in Azure Synapse can land on *any of the gateways in a region*. For consistent connectivity to SQL Database or dedicated SQL pools (formerly SQL DW) in Azure Synapse, allow network traffic to and from *all* gateway IP addresses and subnets for the region. See [Gateway IP addresses](/azure/azure-sql/database/connectivity-architecture#gateway-ip-addresses).|
 |**"File cannot be opened because it does not exist or is used by another process"**|If your query fails with this error and you've verified that the file exists and isn't used by another process, then the Serverless SQL pool can't access the file. If the storage is protected with the firewall, review the steps described in [querying firewall protected storage](/azure/synapse-analytics/sql/develop-storage-files-storage-access-control?tabs=user-identity#querying-firewall-protected-storage).|
-|**"Failed to execute the query. Error: External table <_tablename_> is not accessible because content of directory cannot be listed."**|If the storage is protected with the firewall, review the steps described in [querying firewall protected storage](/azure/synapse-analytics/sql/develop-storage-files-storage-access-control?tabs=user-identity#querying-firewall-protected-storage). Use the preceding PowerShell script to validate if the storage account network rules are correctly configured.|
-
+|**"Failed to execute the query. Error: External table <_tablename_> is not accessible because content of directory cannot be listed."**|If the storage is protected with the firewall, see [querying firewall protected storage](/azure/synapse-analytics/sql/develop-storage-files-storage-access-control?tabs=user-identity#querying-firewall-protected-storage). Use the preceding PowerShell script to validate if the storage account network rules are correctly configured.|
 
 ## Resources
 
-* [Troubleshooting connectivity issues in dedicated SQL pool (formerly SQL DW)](/azure/sql-data-warehouse/sql-data-warehouse-troubleshoot-connectivity)
-* [Troubleshoot dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-troubleshoot)
-* [Troubleshoot transient connection errors in Azure SQL](/azure/azure-sql/database/troubleshoot-common-connectivity-issues?WT.mc_id=pid:13491:sid:32745426/)<br>
-* [View and change maintenance schedule](/azure/sql-data-warehouse/viewing-maintenance-schedule)
-* Video: Understanding Connectivity issues in SQL Database | Data Exposed<br>
-  The following video explains how to handle connection issues with SQL Database.
+- [Troubleshooting connectivity issues in dedicated SQL pool (formerly SQL DW)](/azure/sql-data-warehouse/sql-data-warehouse-troubleshoot-connectivity)
+- [Troubleshoot dedicated SQL pool (formerly SQL DW) in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-troubleshoot)
+- [Troubleshoot transient connection errors in Azure SQL](/azure/azure-sql/database/troubleshoot-common-connectivity-issues?WT.mc_id=pid:13491:sid:32745426/)<br>
+- [View and change maintenance schedule](/azure/sql-data-warehouse/viewing-maintenance-schedule)
+- Video: Understanding Connectivity issues in SQL Database | Data Exposed<br>
+  - The following video explains how to handle connection issues with SQL Database.
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?show=data-exposed&ep=understanding-connectivity-issues-in-sql-database-data-exposed]
