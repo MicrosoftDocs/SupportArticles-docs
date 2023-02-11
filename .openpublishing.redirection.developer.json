@@ -3813,7 +3813,7 @@
     {
       "source_path": "support/developer/visualstudio/install/install/secondary-installer-third-party-app.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/installation/secondary-installer-third-party-app",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/developer/visualstudio/install/install/setup-issues-readme-file.md",
@@ -4346,8 +4346,13 @@
     },
     {
       "source_path": "support/developer/webapps/iis/site-behavior-performance/stale-content-when-content-store-vhd.md",
-      "redirect_url": "previous-versions/troubleshoot/iis/stale-content-when-content-store-vhd",
+      "redirect_url": "/previous-versions/troubleshoot/iis/stale-content-when-content-store-vhd",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/installation/uninstall-third-party-app.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/installation/secondary-installer-third-party-app",
+      "redirect_document_id": true
     }
   ]
 }
