@@ -1,6 +1,7 @@
 ---
 title: SSIS package does not run when called from a job step
 description: This article provides resolutions for the problem that occurs when you call an SSIS package from a SQL Server Agent job step.
+ms.date: 12/07/2020
 ms.custom: sap:Integration Services
 ms.reviewer: craigg
 ms.prod: sql
