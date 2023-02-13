@@ -31,11 +31,11 @@ To fix the issue, perform the following configurations and verification, and the
 > [!NOTE]
 > The following sample names are used in configuration steps. You have to replace them with the names in your environment.
 >
-> - *SCOMMS.Lab.Local* - Management Server Name FQDN
-> - *SCOMWeb.Lab.Local* - System Center Operations Manager (SCOM) Web console Server FQDN
-> - *Lab\SDKSvc* - SCOM Data Access Service Account (Optional)
-> - *Lab\SCOMAppPool* - SCOM Application Pool Identity Account (Optional)
-> - `https://mySCOM.Lab.Local/OperationsManager` - URL used to access the Operations Manager Web console (If there is no URL, substitute this with the Operations Manager Web console server name)
+> - *SCOMMS.Lab.Local* - The fully qualified domain name (FQDN) of the System Center Operations Manager (SCOM) management server
+> - *SCOMWeb.Lab.Local* - The FQDN of the server that hosts the SCOM Web console
+> - *Lab\SDKSvc* - SCOM Data Access Service account (Optional)
+> - *Lab\SCOMAppPool* - SCOM Application Pool Identity account (Optional)
+> - `https://mySCOM.Lab.Local/OperationsManager` - URL that's used to access the Operations Manager Web console (If there is no URL, substitute this with the Operations Manager Web console server name)
 
 ### Register the SDK SPNs
 
@@ -55,7 +55,7 @@ To register the System Center Data Access (SDK) Service Principal Names (SPNs), 
     Setspn.exe -S MSOMSdkSvc/SCOMMS.Lab.Local SDKSvc
     ```
 
-    To verify if the SDK service is registered, run the `SetSpn.exe -L SDKSvc` command.
+    To verify if the SDK service is registered, run the `Setspn.exe -L SDKSvc` command.
 
 ### Register the HTTP SPNs
 
@@ -75,7 +75,7 @@ To register the HTTP SPNs, run the following commands according to different sce
     Setspn.exe -S HTTP/mySCOM.Lab.Local SCOMAppPool
     ```
 
-    To verify if the HTTP service is registered, run the `SetSpn.exe -L SCOMAppPool` command.
+    To verify if the HTTP service is registered, run the `Setspn.exe -L SCOMAppPool` command.
 
 ### Configure constraint delegations
 
@@ -99,10 +99,10 @@ To configure constraint delegations, follow these steps:
 7. In the **Add Services** dialog box, select **Users or Computers**.
 8. In the **Select Users or Computers** dialogue box, specify the account according to different scenarios:
 
-    - Scenario 1: The SDK runs under a LocalSystem account
+    - Scenario 1: The SDK service runs under a LocalSystem account
 
          Select the computer account of the SCOM management server (SCOMMS) and select **OK**.
-    - Scenario 2: The SDK runs under a domain account (SDKSvc)
+    - Scenario 2: The SDK service runs under a domain account (SDKSvc)
 
          Select the domain account that the SDK service runs under and select **OK**.
 
@@ -111,9 +111,9 @@ To configure constraint delegations, follow these steps:
 
 ### Verify "Account is sensitive and cannot be delegated" isn't set
 
-To verify that the user logging into the web console doesn't have **Account is sensitive and cannot be delegated** set, follow these steps:
+To verify that the user logging into the Web console doesn't have **Account is sensitive and cannot be delegated** set, follow these steps:
 
 1. Start the Active Directory Users and Computers console.
-2. Right-click the user account that's used to connect to the web console, and then select **Properties**.
+2. Right-click the user account that's used to connect to the Web console, and then select **Properties**.
 3. Select **Account**.
 4. In the **Account options** dialogue box, confirm that the **Account is sensitive and cannot be delegated** checkbox isn't selected.
