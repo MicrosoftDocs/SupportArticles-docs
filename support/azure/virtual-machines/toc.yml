@@ -155,7 +155,7 @@
 - name: Troubleshoot VM is not booting
   items:
     - name: Linux
-        items:
+      items:
         - name: Serial Console for Linux
           href: serial-console-linux.md
         - name: Linux - Specific scenarios
