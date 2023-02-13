@@ -23,21 +23,21 @@ This issue doesn't occur if you connect to the web console from the web console 
 
 To fix the issue, perform the following configurations and verification, and then connect to the web console again:
 
-1. [Register the System Center Data Access Service Principal Names](#register-the-system-center-data-access-service-principal-names)
+1. [Register the SDK SPNs](#register-the-http-spns)
 2. [Register the HTTP SPNs](#register-the-http-spns)
 3. [Configure constraint delegations](#configure-constraint-delegations)
 4. [Verify "Account is sensitive and cannot be delegated" isn't set](#verify-account-is-sensitive-and-cannot-be-delegated-isnt-set)
 
 > [!NOTE]
-> These sample names are used in the following configuration steps. You have to replace them with the names in your environment.
+> The following sample names are used in configuration steps. You have to replace them with the names in your environment.
 >
-> - `SCOMMS.Lab.Local` - Management Server Name FQDN
-> - `SCOMWeb.Lab.Local` - System Center Operations Manager (SCOM) Web console Server FQDN
-> - `Lab\SDKSvc` - SCOM Data Access Service Account (Optional)
-> - `Lab\SCOMAppPool` - SCOM Application Pool Identity Account (Optional)
+> - *SCOMMS.Lab.Local* - Management Server Name FQDN
+> - *SCOMWeb.Lab.Local* - System Center Operations Manager (SCOM) Web console Server FQDN
+> - *Lab\SDKSvc* - SCOM Data Access Service Account (Optional)
+> - *Lab\SCOMAppPool* - SCOM Application Pool Identity Account (Optional)
 > - `https://mySCOM.Lab.Local/OperationsManager` - URL used to access the Operations Manager Web console (If there is no URL, substitute this with the Operations Manager Web console server name)
 
-### Register the System Center Data Access Service Principal Names
+### Register the SDK SPNs
 
 To register the System Center Data Access (SDK) Service Principal Names (SPNs), run the following commands according to different scenarios:
 
@@ -96,11 +96,11 @@ To configure constraint delegations, follow these steps:
 4. In the details pane, select **Delegation**.
 5. On the **Delegation** tab, select **Trust this computer for delegation to specified services only** > **Use Kerberos only**.
 6. Select **Add**.
-7. In the **Add Services** dialog, select **Users and Computers**.
-8. In the **Select Users or Computers** dialogue, specify the following, based on the scenario:
+7. In the **Add Services** dialog box, select **Users and Computers**.
+8. In the **Select Users or Computers** dialogue box, specify the following, based on the scenario:
 
-    - Scenario 1: If the SDK runs under a Local System account, select the computer account of the SCOM management server (SCOMMS) and select **OK**.
-    - Scenario 2: If the SDK runs as a Domain Account (SDKSvc), select the domain account that the SDK service runs under and select **OK**.
+    - Scenario 1: If the SDK runs under a LocalSystem account, select the computer account of the SCOM management server (SCOMMS) and select **OK**.
+    - Scenario 2: If the SDK runs under a domain account (SDKSvc), select the domain account that the SDK service runs under and select **OK**.
 
 9. In the **Add Services** dialog, select the service type **MSOMSdkSvc** and select **OK**.
 10. Select **OK** to close the **Properties** dialog.
@@ -112,4 +112,4 @@ To verify that the user logging into the web console doesn't have **Account is s
 1. Start the Active Directory Users and Computers console.
 2. Right-click the user account that's used to connect to the web console, and then select **Properties**.
 3. Select **Account**.
-4. In the **Account options** box, confirm that the **Account is sensitive and cannot be delegated** checkbox isn't selected.
+4. In the **Account options** dialogue box, confirm that the **Account is sensitive and cannot be delegated** checkbox isn't selected.
