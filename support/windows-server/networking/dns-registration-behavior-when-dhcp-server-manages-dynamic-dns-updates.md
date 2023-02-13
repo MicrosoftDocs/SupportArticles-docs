@@ -46,17 +46,17 @@ A deliberate design change was introduced in Windows 8.1 onward to the DHCP clie
 If you've configured your DNS zones for **Secure only** dynamic updates, then only the entity (the DHCP client, DHCP server, or an account that the DHCP services are configured to use) that created a DNS record can update or delete that record. If the DHCP client creates a DNS record instead of the DHCP server, the DHCP server can't modify that record later.
 
 > [!NOTE]  
-> Microsoft's DHCP client doesn't provide a way to directly set the client's **O** and **S** values in the user interface. By default, both values are **0**. You can view the values by recording a [netsh trace](previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd878498(v=ws.10).md) of a DHCP client request, and using a utility such as Netmon to view the results.
+> Microsoft's DHCP client doesn't provide a way to directly set the client's **O** and **S** values in the user interface. By default, both values are **0**. You can view the values by recording a [netsh trace](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd878498(v=ws.10)) of a DHCP client request, and using a utility such as Netmon to view the results.
 >  
-> You can use the Windows PowerShell [Get-DhcpServerv4OptionValue](/powershell/module/dhcpserver/get-dhcpserverv4optionvalue.md) cmdlet to view the DHCP server's Option 81 value. However, the cmdlet reports this value as a single integer that combines several different settings as bit values. For example, selecting **Always dynamically update DNS records** on the **DNS** tab of a DHCP scope's properties sets the **S** value to **1**. However, the cmdlet reports one of eight possible values for Option 81 (all of which use **S**=**1**). The specific value depends on the combination of settings on the **DNS** tab.
+> You can use the Windows PowerShell [Get-DhcpServerv4OptionValue](/powershell/module/dhcpserver/get-dhcpserverv4optionvalue) cmdlet to view the DHCP server's Option 81 value. However, the cmdlet reports this value as a single integer that combines several different settings as bit values. For example, selecting **Always dynamically update DNS records** on the **DNS** tab of a DHCP scope's properties sets the **S** value to **1**. However, the cmdlet reports one of eight possible values for Option 81 (all of which use **S**=**1**). The specific value depends on the combination of settings on the **DNS** tab.
 
-For more information about how dynamic updates work between the DHCP client, the DHCP server, and the DNS server, see [DNS Processes and Interactions](previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197552(v=ws.10).md)
+For more information about how dynamic updates work between the DHCP client, the DHCP server, and the DNS server, see [DNS Processes and Interactions](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197552(v=ws.10))
 
 ## Resolution
 
 If your architecture requires that you use **Always dynamically update DNS records**, you can use a registry key on the client computer to force the DHCP client to honor the DHCP server override.
 
-[!INCLUDE [Registry](../../support/includes/registry-important-alert.md)]
+[!INCLUDE [Registry](../../../support/includes/registry-important-alert.md)]
 
 1. Navigate to the following subkey:
    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters`
