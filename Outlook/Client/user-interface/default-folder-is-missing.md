@@ -29,6 +29,8 @@ ms.date: 3/31/2022
 
 _Original KB number:_ &nbsp; 2992093
 
+[!NOTE] This article does not apply to Shared Calendars that have the new calendar sharing improvements enabled (aka REST-based Shared Calendars). To determine if you have the new calendar sharing improvements enabled see https://support.microsoft.com/en-us/office/how-to-enable-and-disable-the-outlook-calendar-sharing-updates-c3aec5d3-55ce-4cea-84b0-80aab6d8dc26.
+
 ## Symptoms
 
 In Microsoft Outlook and in Outlook on the web, you may find that a folder appears to be missing from your mailbox.
