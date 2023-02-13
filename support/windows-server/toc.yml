@@ -1566,6 +1566,8 @@
       href: ./networking/dns-namespace-design.md
     - name: DNS queries to some domains are failed
       href: ./networking/dns-name-queries-not-success.md
+    - name: DNS record registration behavior when the DHCP server manages dynamic DNS updates
+      href: ./networking/dns-registration/behavior-when-dhcp-server-manages-dynamic-dns-updates.md
     - name: DNS records don't show in DNS zones
       href: ./networking/dns-records-not-present.md
     - name: DNS registers duplicate SRV records for a DC

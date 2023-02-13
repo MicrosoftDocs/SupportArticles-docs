@@ -7,11 +7,11 @@ ms.author: v-tappelgate
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: <upper-level folder>
+ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: <sap/see CI>
-ms.technology: <subfolder>
+ms.custom: sap:dns, csstroubleshoot
+ms.technology: networking
 keywords: DNS dynamic updates, DHCP option 81, client FQDN option, DHCP client
 ---
 
