@@ -8,7 +8,6 @@
     - name: How to create an Azure support request
       href: /azure/azure-portal/supportability/how-to-create-azure-support-request
 
-
 - name: Support statements
   items:
   - name: What Microsoft server software is supported to run in Azure virtual machines
@@ -596,9 +595,8 @@
   items:
   - name: Common error messages
     href: error-messages.md
-    items:
-    - name: Throttling errors
-      href: troubleshooting-throttling-errors.md
+  - name: Throttling errors
+    href: troubleshooting-throttling-errors.md
 
   - name: Other common issues
     items:
