@@ -83,7 +83,7 @@ To configure constraint delegations, follow these steps:
 
 1. Start the Active Directory Users and Computers console.
 2. In the console tree, select **Computers**.
-3. Open the properties based on different scenarios:
+3. Open the properties according to different scenarios:
 
     - Scenario 1: The Operations Manager web application pool runs under the default identity (ApplicationPoolIdentity)
 
@@ -96,14 +96,18 @@ To configure constraint delegations, follow these steps:
 4. In the details pane, select **Delegation**.
 5. On the **Delegation** tab, select **Trust this computer for delegation to specified services only** > **Use Kerberos only**.
 6. Select **Add**.
-7. In the **Add Services** dialog box, select **Users and Computers**.
-8. In the **Select Users or Computers** dialogue box, specify the following, based on the scenario:
+7. In the **Add Services** dialog box, select **Users or Computers**.
+8. In the **Select Users or Computers** dialogue box, specify the account according to different scenarios:
 
-    - Scenario 1: If the SDK runs under a LocalSystem account, select the computer account of the SCOM management server (SCOMMS) and select **OK**.
-    - Scenario 2: If the SDK runs under a domain account (SDKSvc), select the domain account that the SDK service runs under and select **OK**.
+    - Scenario 1: The SDK runs under a LocalSystem account
+
+         Select the computer account of the SCOM management server (SCOMMS) and select **OK**.
+    - Scenario 2: The SDK runs under a domain account (SDKSvc)
+
+         Select the domain account that the SDK service runs under and select **OK**.
 
 9. In the **Add Services** dialog, select the service type **MSOMSdkSvc** and select **OK**.
-10. Select **OK** to close the **Properties** dialog.
+10. Select **OK** to close the **Properties** dialog box.
 
 ### Verify "Account is sensitive and cannot be delegated" isn't set
 
