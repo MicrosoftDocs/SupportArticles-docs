@@ -24,7 +24,7 @@ _Applies to:_ &nbsp; Windows 11, Windows 10, Windows 8.1
 You have an infrastructure that uses Windows Dynamic Host Configuration Protocol (DHCP) clients and Microsoft DHCP servers to assign and manage IP addresses. On the DHCP server, you've selected **Enable DNS dynamic updates according to the settings below** and **Always dynamically update DNS records**. In this configuration, you expect the DHCP server to manage dynamic DNS updates for A records and PTR records. However, you observe that both the client and the server create DNS records. Depending on your configuration, this behavior has the following effects:
 
 - If you've configured the DNS zones for **Nonsecure and secure** dynamic updates, you see the DHCP server create records, and then the DHCP client deletes and recreates the same records.
-- If you've configured the DNS zones for **Secure only** dynamic updates, DNS records might become inconsistent. Both the DHCP server and the DHCP client create records, but the DHCP server cannot update records that the DHCP client created. Conversely, the DHCP client cannot update records that the DHCP server created.
+- If you've configured the DNS zones for **Secure only** dynamic updates, DNS records might become inconsistent. Both the DHCP server and the DHCP client create records, but the DHCP server can't update records that the DHCP client created. Conversely, the DHCP client can't update records that the DHCP server created.
 
 ## Cause
 
@@ -74,4 +74,4 @@ If your architecture requires that you use **Always dynamically update DNS recor
 
 1. Restart the client computer.
 
-1. In the DNS server management console, check the forward and reverse lookup zones. Depending on your specific environment, you may have to manually delete A and PTR records that the DHCP server does not have permission to delete or change.
+1. In the DNS server management console, check the forward and reverse lookup zones. Depending on your specific environment, you may have to manually delete A and PTR records that the DHCP server doesn't have permission to delete or change.
