@@ -316,11 +316,11 @@ Domain computers authenticate to the domain, as do domain users. Windows require
 
 ### Event ID 4016 and Event ID 5016
 
-During periodic Group Policy refresh, the service uses the information it collected in the pre-processing phase to apply each policy setting. The service accomplishes this by passing the previously collected information to each of the system and nonsystem client-side extensions. This phase begins by recording a client-side extension (CSE) processing events.
+During the periodic Group Policy refresh, the service uses the information it collected in the pre-processing phase to apply each policy setting. The service accomplishes this by passing the previously collected information to each of the system and nonsystem client-side extensions. This phase begins by recording a client-side extension (CSE) processing event.
 
 |Event ID  |Event type  |Explanation  |
 |---------|---------|---------|
-|4016     |Informational         |The Group Policy service logs this event each time a Group Policy client-side extension begins processing.         |
+|4016     |Informational         |The Group Policy service logs this event each time a Group Policy client-side extension begins its processing.         |
 |5016     |Success         |The Group Policy service logs this event when a Group Policy client-side extension completes its processing successfully.         |
 
 When you go to the **Details** tab under Event ID 5016, you may find the following return status:
@@ -330,7 +330,7 @@ ErrorCode 2147483658 <-> 0x8000000a       -2147483638               E_PENDING   
 ```
 
 > [!NOTE]
-> The error value "-2147483638 (E_PENDING)" being returned is expected and by design. It indicates that an asynchronous thread was started successfully by the Group Policy engine to process the audit extension information. It also means that the error value will log even if the new audit settings are effective or applied on the clients.
+> The error value "-2147483638 (E_PENDING)" being returned is expected and by design. It indicates that an asynchronous thread was started successfully by the Group Policy engine to process the audit extension information. It also means that the error value will be logged even if the new audit settings are effective or applied on the clients.
 
 ## Gather key information before you contact Microsoft Support
 
