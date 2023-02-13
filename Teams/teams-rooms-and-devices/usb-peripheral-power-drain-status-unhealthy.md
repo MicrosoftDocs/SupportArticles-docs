@@ -60,8 +60,8 @@ Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\USB\AutomaticSurp
 
 1. Save the following command as *USBREM.ps1*:
 
-```powershell
-Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\USB\AutomaticSurpriseRemoval' -Name AttemptRecoveryFromUsbPowerDrain -Value 0 -ErrorAction Stop
-```
+   ```powershell
+   Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\USB\AutomaticSurpriseRemoval' -Name AttemptRecoveryFromUsbPowerDrain -Value 0 -ErrorAction Stop
+   ```
 
 1. [Create a script policy (add the script to script settings), and assign the policy to groups](/mem/intune/apps/intune-management-extension#create-a-script-policy-and-assign-it).

@@ -2,6 +2,15 @@
 
 
 
+## Week of February 06, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 2/8/2023 | Manually update scan engines | removed |
+| 2/8/2023 | [Error when you try to view queue messages in Queue Viewer](/exchange/troubleshoot/setup/queue-viewer-error-when-viewing-messages) | added |
+
+
 ## Week of January 23, 2023
 
 
