@@ -1,7 +1,7 @@
 ---
 title: Applying Group Policy troubleshooting guidance
 description: Provides guidance to troubleshoot Group Policy.
-ms.date: 09/12/2022
+ms.date: 02/13/2023
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
@@ -313,6 +313,24 @@ Domain computers authenticate to the domain, as do domain users. Windows require
 - Account for time zone misconfigurations if the computer is configured in a time zone different from the domain controller.
 - A time difference greater than five minutes between the computer and the domain controller may lead to the computer failing to authenticate with the domain. Force time synchronization against time service using the `w32tm /resync` command.
 - Restart the computer.
+
+### Event ID 4016 and Event ID 5016
+
+During periodic Group Policy refresh, the service uses the information it collected in the pre-processing phase to apply each policy setting. The service accomplishes this by passing the previously collected information to each of the system and nonsystem client-side extensions. This phase begins by recording a client-side extension (CSE) processing events.
+
+|Event ID  |Event type  |Explanation  |
+|---------|---------|---------|
+|4016     |Informational         |The Group Policy service logs this event each time a Group Policy client-side extension begins processing.         |
+|5016     |Success         |The Group Policy service logs this event when a Group Policy client-side extension completes its processing successfully.         |
+
+When you go to the **Details** tab under Event ID 5016, you may find the following return status:
+
+```output
+ErrorCode 2147483658 <-> 0x8000000a       -2147483638               E_PENDING                    "The data necessary to complete this operation is not yet available"
+```
+
+> [!NOTE]
+> The error value "-2147483638 (E_PENDING)" being returned is expected and by design. It indicates that an asynchronous thread was started successfully by the Group Policy engine to process the audit extension information. It also means that the error value will log even if the new audit settings are effective or applied on the clients.
 
 ## Gather key information before you contact Microsoft Support
 
