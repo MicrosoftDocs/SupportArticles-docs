@@ -33,18 +33,18 @@ This behavior occurs because of the settings that control [anonymous join](/micr
 
 - If an external participant isn't signed in with a Teams work or school account and tries to [join the meeting](https://support.microsoft.com/office/join-a-meeting-without-a-teams-account-c6efc38f-4e03-4e79-b28f-e65a4c039508) (as an anonymous user), they receive the message in one of the following situations:
 
-  - The organization meeting setting [Anonymous users can join a meeting](/microsoftteams/anonymous-users-in-meetings#manage-anonymous-meeting-join-for-the-organization) is turned off. If this setting is turned off, anonymous users can't join meetings that are organized by any users in your organization.
-  - The organization meeting setting [Anonymous users can join a meeting](/microsoftteams/anonymous-users-in-meetings#manage-anonymous-meeting-join-for-the-organization) is turned on. However, in the meeting policies that are assigned to the meeting organizer, the [Anonymous users can join a meeting](/microsoftteams/settings-policies-reference#meeting-join--lobby) setting is turned off. This prevents anonymous users from joining meetings that are scheduled by that organizer.
+  - The organization meeting setting [Anonymous users can join a meeting](/microsoftteams/meeting-settings-in-teams#allow-anonymous-users-to-join-meetings) is turned off. If this setting is turned off, anonymous users can't join meetings that are organized by any users in your organization.
+  - The organization meeting setting [Anonymous users can join a meeting](/microsoftteams/meeting-settings-in-teams#allow-anonymous-users-to-join-meetings) is turned on. However, in the meeting policies that are assigned to the meeting organizer, the [Anonymous users can join a meeting](/microsoftteams/settings-policies-reference#meeting-join--lobby) setting is turned off. This prevents anonymous users from joining meetings that are scheduled by that organizer.
 - If an external participant is signed in with a Teams work or school account and tries to join the meeting (as an authenticated user), they receive the message in one of the following situations:
 
   - In the [external access](/microsoftteams/manage-external-access#allow-or-block-domains) setting of your organization, the external participant's domain is blocked or not allowed. Also, anonymous join is disabled* in your organization.
   - The external participant's domain isn't blocked or is allowed. However, in the external access setting of the external participant's organization, the meeting organizer's domain is blocked or not allowed. Also, anonymous join is disabled* in your organization.
   - External access is mutually enabled in both the external participant's organization and the meeting organizer's organization. However, external access is blocked by user-level policies from either the meeting organizer side or the external participant side. Also, anonymous join is disabled* in your organization.
   
-  \*Anonymous join is disabled in one of the following manners:
+  \*[Anonymous join](/microsoftteams/anonymous-users-in-meetings) is disabled in one of the following manners:
 
-  - The organization meeting setting [Anonymous users can join a meeting](/microsoftteams/anonymous-users-in-meetings#manage-anonymous-meeting-join-for-the-organization) is turned off.
-  - The organization meeting setting [Anonymous users can join a meeting](/microsoftteams/anonymous-users-in-meetings#manage-anonymous-meeting-join-for-the-organization) is turned on. However, in the meeting policies that are assigned to the meeting organizer, the [Anonymous users can join a meeting](/microsoftteams/settings-policies-reference#meeting-join--lobby) setting is turned off.
+  - The organization meeting setting [Anonymous users can join a meeting](/microsoftteams/meeting-settings-in-teams#allow-anonymous-users-to-join-meetings) is turned off.
+  - The organization meeting setting [Anonymous users can join a meeting](/microsoftteams/meeting-settings-in-teams#allow-anonymous-users-to-join-meetings) is turned on. However, in the meeting policies that are assigned to the meeting organizer, the [Anonymous users can join a meeting](/microsoftteams/settings-policies-reference#meeting-join--lobby) setting is turned off.
 
 ## Resolution
 
@@ -53,7 +53,7 @@ To allow external participants to join Teams meetings, select the correct settin
 ### Allow all external participants (regardless of whether they are signed in with a Teams work or school account) to join meetings
 
 - Enable anonymous join in the [organization meeting settings](/microsoftteams/meeting-settings-in-teams).
-- Enable anonymous join in the [meeting policies](/microsoftteams/meeting-policies-participants-and-guests) that are assigned to all users in your organization.
+- Enable anonymous join in the [meeting policies](/microsoftteams/settings-policies-reference#meeting-join--lobby) that are assigned to all users in your organization.
 
   > [!NOTE]
   > To allow anonymous join to meetings that are organized by only specific users in your organization, enable anonymous join in the meeting policies that are assigned to those specific users, and then disable anonymous join in the meeting policies that are assigned to other users.
@@ -79,7 +79,7 @@ To allow external participants to join Teams meetings, select the correct settin
 
 - [Block external access](/microsoftteams/manage-external-access).
 - Enable anonymous join in the [organization meeting settings](/microsoftteams/meeting-settings-in-teams).
-- Enable anonymous join in the [meeting policies](/microsoftteams/meeting-policies-participants-and-guests) that are assigned to all users in your organization.
+- Enable anonymous join in the [meeting policies](/microsoftteams/settings-policies-reference#meeting-join--lobby) that are assigned to all users in your organization.
 
   > [!NOTE]
   > To allow anonymous join to meetings that are organized by only specific users in your organization, enable anonymous join in the meeting policies that are assigned to those specific users, and then disable anonymous join in the meeting policies that are assigned to other users.
