@@ -148,7 +148,7 @@ The traces will be stored in a zip file in the *C:\\MSDATA* folder, which can be
 - [DNS server geo-location policy doesn't work as expected](dns-server-geo-location-policy-doesnt-work-as-expected.md)
 - [DNS Active Directory-Integrated Zones](/windows-server/identity/ad-ds/plan/active-directory-integrated-dns-zones)
 - [DNS zone replication in Active Directory](/previous-versions/windows/it-pro/windows-server-2003/cc779655%28v%3dws.10%29)
-- [Forwarded DNS name resolution fails for dual-stacked queries](forwarded-dns-name-resolution-fails-for-dual-stacked-queries)
+- [Forwarded DNS name resolution fails for dual-stacked queries](forwarded-dns-name-resolution-fails-for-dual-stacked-queries.md)
 - [Verify that SRV DNS records have been created](/troubleshoot/windows-server/networking/verify-srv-dns-records-have-been-created)
 - [DNS server reverts to listening on all IP addresses instead of the configured NIC Teaming IP address](dns-server-loses-teaming-nic-configuration.md)
 - [Configure DNS dynamic updates](/troubleshoot/windows-server/networking/configure-dns-dynamic-updates-windows-server-2003)
