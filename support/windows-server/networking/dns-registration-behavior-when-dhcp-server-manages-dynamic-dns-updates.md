@@ -41,7 +41,7 @@ The DHCP server also stores a set of Option 81 flags that govern dynamic DNS upd
 
 As described in the RFC, the DHCP server's reply to the request message should include its flag values. If **O** is set to **1** in the server's message, the client should understand that the server is overriding the client's **S** value.
 
-A deliberate design change was introduced in Windows 8.1 onward to the DHCP client's dynamic DNS update behavior. This change supports continued development and enhancements of the TCP/IP (Transmission Control Protocol/Internet Protocol) stack in later releases of Microsoft operating systems. In Windows 8.1 and later versions, the DHCP client doesn't honor the DHCP server's Option 81 **O** and **S** values. If the client is configured to update A records, it continues to do so even when the server is also configured to update A records. This is the case when you select **Always dynamically update DNS records** in the DHCP management console.
+In Windows 8.1, a deliberate design change was introduced to the DHCP client's dynamic DNS update behavior. This change supports continued development and enhancements of the TCP/IP (Transmission Control Protocol/Internet Protocol) stack in later versions of Microsoft operating systems. In Windows 8.1 and later versions, the DHCP client doesn't honor the DHCP server's Option 81 **O** and **S** values. If the client is configured to update A records, it continues to do so even when the server is also configured to update A records. That's the case when you select **Always dynamically update DNS records** in the DHCP management console.
 
 If you've configured your DNS zones for **Secure only** dynamic updates, then only the entity (the DHCP client, DHCP server, or an account that the DHCP services are configured to use) that created a DNS record can update or delete that record. If the DHCP client creates a DNS record instead of the DHCP server, the DHCP server can't modify that record later.
 
@@ -54,7 +54,7 @@ For more information about how dynamic updates work between the DHCP client, the
 
 ## Resolution
 
-If your architecture requires that you use **Always dynamically update DNS records**, you can use a registry key on the client computer to force the DHCP client to honor the DHCP server override.
+If your architecture requires that you use **Always dynamically update DNS records**, you can create a registry key on the client computer to force the DHCP client to honor the DHCP server override.
 
 [!INCLUDE [Registry](../../../support/includes/registry-important-alert.md)]
 
