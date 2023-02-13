@@ -1,6 +1,6 @@
 ---
-title: Default folder is missing
-description: Documenting issue where folders appear to be missing.  Resolution is provided.
+title: Default folder is missing in Outlook and Outlook on the web
+description: Resolves an issue in which folders appear to be missing.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -29,7 +29,7 @@ ms.date: 3/31/2022
 
 _Original KB number:_ &nbsp; 2992093
 
-[!NOTE] This article does not apply to Shared Calendars that have the new calendar sharing improvements enabled (aka REST-based Shared Calendars). To determine if you have the new calendar sharing improvements enabled see https://support.microsoft.com/en-us/office/how-to-enable-and-disable-the-outlook-calendar-sharing-updates-c3aec5d3-55ce-4cea-84b0-80aab6d8dc26.
+[!NOTE] This article does not apply to shared calendars that are enabled with the new calendar sharing improvements based on REST. To determine if your shared calendars have the new improvements enabled, see [Confirm that your shared calendar is using the new improvements](https://support.microsoft.com/office/how-to-enable-and-disable-the-outlook-calendar-sharing-updates-c3aec5d3-55ce-4cea-84b0-80aab6d8dc26).
 
 ## Symptoms
 
