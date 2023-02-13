@@ -523,8 +523,8 @@
     - name: Red Hat RHUI certificate issues
       href: troubleshoot-linux-rhui-certificate-issues.md
 
-- name: Tools - Remote troubleshooting for VMs
-  href: remote-tools-troubleshoot-azure-vm-issues.md
+- name: Remote troubleshooting for VMs tools
+  items:
     - name: Custom Script Extension or Run Command
       items:
         - name: Debug scripts run by Custom Script Extension or Run Command
