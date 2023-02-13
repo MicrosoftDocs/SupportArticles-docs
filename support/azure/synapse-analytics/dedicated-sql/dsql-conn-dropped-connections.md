@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot connectivity issues on a dedicated SQL pool
 description: Provides methods for troubleshooting initial and dropped connections on a dedicated SQL pool.
-ms.date: 02/11/2023
+ms.date: 02/13/2023
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: scepperl
@@ -32,7 +32,7 @@ The following table is a list of commonly overlooked reasons for connectivity is
 
 The [Azure SQL connectivity checker](https://github.com/Azure/SQL-Connectivity-Checker) is a PowerShell script that automates a series of checks for the most common configuration issues. Most issues detected by the script will be accompanied by recommendations for resolution.
 
-The following PowerShell script will download and run the latest version of the Azure SQL connectivity checker. Run it from any client computer where persistent connectivity issues occur.
+The following PowerShell script will download and run the latest version of the Azure SQL connectivity checker. You can run it from any client computer where persistent connectivity issues occur.
 
 > [!NOTE]
 > - To run the tests from Linux, from machines without Internet access or from a containerized environment, see [SQL connectivity checker on GitHub](https://github.com/Azure/SQL-Connectivity-Checker).
