@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 2/13/2022
+ms.date: 2/13/2023
 ---
 # External participants receive "Sign in to Teams to join, or contact the meeting organizer"
 
