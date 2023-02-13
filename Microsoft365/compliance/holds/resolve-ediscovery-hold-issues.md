@@ -1,6 +1,7 @@
 ---
 title: Troubleshoot eDiscovery hold errors
 description: Troubleshoot errors related to legal holds applied to custodians and non-custodial data sources in Core eDiscovery.
+ms.date: 07/21/2022
 f1.keywords: 
   - NOCSH
 ms.author: v-six

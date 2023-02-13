@@ -1,5 +1,6 @@
 ---
 title: Fix NDR error 451 4.7.500-699 (ASxxx) in Exchange Online
+ms.date: 01/29/2023
 ms.author: v-six
 author: simonxjx
 manager: dcscontentpm
