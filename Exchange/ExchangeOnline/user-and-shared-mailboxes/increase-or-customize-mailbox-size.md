@@ -1,6 +1,6 @@
 ---
 title: Increase or customize Exchange Online mailbox size
-description: Describes how to increase the Exchange Online mailbox size and use PowerShell to customize mailbox size in the Microsoft 365 environment.
+description: Describes how to make space in an Exchange Online mailbox that is full.
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
