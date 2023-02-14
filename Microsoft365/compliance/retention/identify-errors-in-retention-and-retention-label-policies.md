@@ -55,12 +55,12 @@ In the [Microsoft Purview compliance portal](https://compliance.microsoft.com/):
 
 Use the following steps to check for errors in policies that target:
 
-- Microsoft Exchange email
+- Microsoft Exchange Online email
 - Microsoft SharePoint sites
 - Microsoft OneDrive accounts
 - Microsoft 365 Groups
-- Microsoft Skype for Business
-- Exchange public folders
+- Microsoft Skype for Business conversations
+- Exchange Online public folders
 - Microsoft Teams chat messages
 - Teams channel messages
 
@@ -78,7 +78,7 @@ Use the following steps to check for errors in policies that target:
 Use the following steps to check for errors in policies that target:
 
 - Teams private channel messages
-- Yammer user messages
+- Microsoft Yammer user messages
 - Yammer community messages
 
 1. [Connect to Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).

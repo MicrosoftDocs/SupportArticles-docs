@@ -76,12 +76,12 @@ To resolve this issue, use either of the following methods.
 
    Use the [New-RetentionComplianceRule](/powershell/module/exchange/new-retentioncompliancerule) cmdlet for policies that target:
 
-   - Microsoft Exchange email
+   - Microsoft Exchange Online email
    - Microsoft SharePoint sites
    - Microsoft OneDrive accounts
    - Microsoft 365 Groups
-   - Microsoft Skype for Business
-   - Exchange public folders
+   - Microsoft Skype for Business conversations
+   - Exchange Online public folders
    - Microsoft Teams chat messages
    - Teams channel messages
 
@@ -94,7 +94,7 @@ To resolve this issue, use either of the following methods.
    Use the [New-AppRetentionComplianceRule](/powershell/module/exchange/new-appretentioncompliancerule) cmdlet for policies that target:
 
    - Teams private channel messages
-   - Yammer user messages
+   - Microsoft Yammer user messages
    - Yammer community messages
 
    For example, to add a rule that specifies an unlimited retention period, run the following command:
