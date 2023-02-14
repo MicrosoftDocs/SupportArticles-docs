@@ -29,7 +29,10 @@ ms.date: 3/31/2022
 
 _Original KB number:_ &nbsp; 2992093
 
-[!NOTE] This article does not apply to shared calendars that are enabled with the new REST-based calendar sharing improvements. To determine if your shared calendars have the new improvements enabled, see [Confirm that your shared calendar is using the new improvements](https://support.microsoft.com/office/how-to-enable-and-disable-the-outlook-calendar-sharing-updates-c3aec5d3-55ce-4cea-84b0-80aab6d8dc26).
+> [!NOTE]
+> This article does not apply to shared calendars that are enabled with the new REST-based calendar sharing improvements. To determine if your shared calendars have the new improvements enabled, see [Confirm that your shared calendar is using the new improvements](https://support.microsoft.com/office/how-to-enable-and-disable-the-outlook-calendar-sharing-updates-c3aec5d3-55ce-4cea-84b0-80aab6d8dc26).
+
+alert
 
 ## Symptoms
 
