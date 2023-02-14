@@ -70,12 +70,6 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 | Can't resume a call after using **Consult first** option on Teams phones | After using the **Consult first** option in the **Transfer** menu when you select the **Resume** option to resume the call, the call fails. | End the call made by using the **Consult first** option and then resume the original call.|
 |Calls on long hold in GCCH tenants drop intermittently|On GCCH tenants that are running 2022 update #4A (Teams app version 1449/1.0.94.2022110803), when a call is put on long hold by a user the call drops in some instances. This issue doesn't occur on other clouds.|No workaround is available at this time.|
 
-### Issues with Teams panels
-
-| Issue  |  Description | Workaround |
-| --- | --- | --- |
-|Changes made to the configuration profile in the Teams admin center are not syncing with the device | When you change settings such as **Release room if no one checks in** in the configuration profile for a device by using the Teams admin center, the changes don't always sync with the user's device.| Change the setting on the device from the **Teams Admin Settings** option under **Device Settings**.|
-
 ## Limitations
 
 - Front row requires 1920 × 1080 resolution for a 16:9 display or 2560 × 1080 resolution for a 21:9 display. These displays are set to 100 percent scaling. If the chat panel on your front-of-room display shows unreadable UI, see [Change scale and resolution for front-of-room](/microsoftteams/rooms/rooms-operations#scale-and-resolution) to adjust your display settings.
