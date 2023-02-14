@@ -355,7 +355,7 @@
         "dynamics-365/sales/*.md": "Dynamics 365 Sales",
         "dynamics-365/finance/**/*.md": "Dynamics 365 Finance",
         "dynamics-365/supply-chain/**/*.md": "Dynamics 365 Supply Chain Management",
-        "power-platform/power-apps/*.md": "Power Apps",
+        "power-platform/power-apps/**/*.md": "Power Apps",
         "power-platform/power-automate/*.md": "Power Automate",
         "dynamics/gp/*.md": "Dynamics GP"
       },
@@ -471,7 +471,7 @@
           "Unified Operations",
           "Supply Chain"
         ],
-        "power-platform/power-apps/*.md": [
+        "power-platform/power-apps/**/*.md": [
           "Troubleshoot",
           "Power Platform",
           "Power Apps"
