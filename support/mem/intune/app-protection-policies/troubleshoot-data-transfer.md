@@ -52,7 +52,7 @@ In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2
 |Setting name   |OS   |Setting value   |Use case   |
 |------------|-----|------|-----------------|
 |Send org data to other apps|Android|Policy managed apps|Restrict data transfer to policy managed apps. Data can be transferred to unmanaged apps but the data is encrypted and can't be opened.|
-||iOS/iPadOS|Policy managed apps with OS sharing|Data transfer may be restricted to policy managed and unmanaged apps by applying "IntuneMAMUPN" app configuration policy. </br>Refer to [iOS/iPadOS security app configuration policies](/mem/intune/enrollment/ios-ipados-app-configuration-policies) and [How to manage data transfer between iOS apps in Microsoft Intune](/mem/intune/apps/data-transfer-between-apps-manage-ios).|
+||iOS/iPadOS|Policy managed apps with OS sharing|Data transfer may be restricted to policy managed and unmanaged apps by applying "IntuneMAMUPN" app configuration policy. </br></br>Refer to [iOS/iPadOS security app configuration policies](/mem/intune/enrollment/ios-ipados-app-configuration-policies) and [How to manage data transfer between iOS apps in Microsoft Intune](/mem/intune/apps/data-transfer-between-apps-manage-ios).|
 ||iOS|Policy managed app with Open-In/Share filtering|Restrict data transfer by filtering apps displayed in sharing extensions. Sharing files with this setting restricts the available apps to those that support Intune APP only.|
 |Select apps to exempt|iOS|Custom URI schemes|Allow data transfer to specific unmanaged apps.|
 ||Android|App packageIDs|Allow data transfer to specific unmanaged apps.|
@@ -75,10 +75,13 @@ For more information, see [iOS/iPadOS app protection policy settings](/mem/intun
 
 Run Intune diagnostics in Microsoft Edge to check the APP setting applied to each managed application on a device.
 
-1. Open Microsoft Edge on the device and enter the URL, about:intunehelp. **Intune Diagnostics** will open, as shown in the examples below.
-1. Tap **View Intune App Status** (iOS/iPad) or **VIEW APP INFO** (Android) to see APP settings applied to each app on the device. 
-1. Compare setting values in this view with those configured in Endpoint Manager. 
-   1. For an explanation of these settings' values, see [Review client app protection logs](/mem/intune/apps/app-protection-policy-settings-log).
+1. Open Microsoft Edge on the device and enter the URL, *about:intunehelp*. **Intune Diagnostics** will open, as shown in the examples below.
+
+1. Tap **View Intune App Status** (iOS/iPadOS) or **VIEW APP INFO** (Android) to see APP settings applied to each app on the device.
+
+1. Compare setting values in this view with those configured in Endpoint Manager.
+
+    For an explanation of these settings' values, see [Review client app protection logs](/mem/intune/apps/app-protection-policy-settings-log).
 
 :::image type="content" source="media/troubleshoot-data-transfer/intune-diagnostics-ios-and-android.png" alt-text="Side-by-side screenshots of Intune Diagnostics on an iOS/iPadOS device (left) and an Android device (right).":::
 

@@ -82,7 +82,7 @@ items:
       - name: Troubleshoot data transfer between apps
         href: app-protection-policies/troubleshoot-data-transfer.md
       - name: Troubleshoot cut, copy, and paste
-        href: troubleshoot-cut-copy-paste.md     
+        href: app-protection-policies/troubleshoot-cut-copy-paste.md
       - name: Troubleshoot exemptions to data transfer policies
         href: app-protection-policies/troubleshoot-data-transfer-exemptions.md
       - name: Common data transfer issues
