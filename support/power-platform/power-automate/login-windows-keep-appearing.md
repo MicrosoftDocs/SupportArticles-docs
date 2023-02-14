@@ -1,14 +1,14 @@
 ---
 title: Login windows keep appearing
-description: Provides a resolution to an issue that keeps the sign-in windows appearing.
+description: Provides a resolution for the issue where login windows of Power Automate for desktop keep appearing.
 ms.reviewer: pefelesk
-ms.date: 02/10/2023
+ms.date: 02/14/2023
 ms.subservice: power-automate-desktop-flows
 ---
 
 # Login windows keep appearing
 
-This article provides a resolution to an issue that keeps the sign-in windows of Power Automate for desktop appearing.
+This article provides a resolution for the issue where login windows of Power Automate for desktop keep appearing.
 
 ## Symptoms
 
@@ -31,7 +31,7 @@ To identify if another process is the issue:
 1. Run the following command:
 
     ```CMD
-    handle net.pip
+    handle net.pipe
     ```
 
 1. Running this command should display a list of processes that use named pipes and the address they listen to.
@@ -43,7 +43,7 @@ To identify if another process is the issue:
     For example:
 
     ```CMD
-    e.g.: PAD.BrowserNativeMessageHost.exe pid: 21064 type: Section 464: \Sessions\1\BaseNamedObjects\net.pipe:EbmV0LnBpcGU6Ly8rL0JST1dTRVJOQVRJVkVIT1NULzE2NjIwLzEv Microsoft.Management.Services.IntuneWindowsAgent.exe pid: 26708 type: Section 6AC: \BaseNamedObjects\net.pipe:EbmV0LnBpcGU6Ly8rL0lOVFVORU1BTkFHRU1FTlRFWFRFTlNJT04vU1RBVFVTU0VSVklDRS8= PipesTest.Server.exe pid: 6540 type: Section 3AC: \BaseNamedObjects\net.pipe:EbmV0LnBpcGU6Ly8rLw== The customer needs to identify whether there is a process displaying the string highlighted in bold (EbmV0LnBpcGU6Ly8rLw==).
+    e.g.: PAD.BrowserNativeMessageHost.exe pid: 21064 type: Section 464: \Sessions\1\BaseNamedObjects\net.pipe:EbmV0LnBpcGU6Ly8rL0JST1dTRVJOQVRJVkVIT1NULzE2NjIwLzEv Microsoft.Management.Services.IntuneWindowsAgent.exe pid: 26708 type: Section 6AC: \BaseNamedObjects\net.pipe:EbmV0LnBpcGU6Ly8rL0lOVFVORU1BTkFHRU1FTlRFWFRFTlNJT04vU1RBVFVTU0VSVklDRS8= PipesTest.Server.exe pid: 6540 type: Section 3AC: \BaseNamedObjects\net.pipe:EbmV0LnBpcGU6Ly8rLw==.
     ```
 
 ## Resolution
@@ -56,4 +56,4 @@ As an alternate, ensure Power Automate for desktop is closed (from the taskbar t
 
 ## Workaround #2
 
-If solutions are possible,  specify Power Automate for desktop executables to run as administrator. This workaround may solve the issue only in some cases, and it causes a UAC prompt to appear each time.
+If the other solutions aren't possible, specify Power Automate for desktop executables to run as administrator. This workaround may solve the issue only in some cases, and it causes a UAC prompt to appear each time.
