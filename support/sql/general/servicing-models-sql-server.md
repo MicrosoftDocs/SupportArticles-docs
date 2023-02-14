@@ -77,9 +77,9 @@ The following are the RTM GDRs that are available for SQL Server 2019 as of Febr
 
 |Build number|KB number|KB URL|
 |-|-|-|
-|15.0.2095.3|5014356|https://support.microsoft.com/kb/5014356|
-|15.0.2080.9|4583458|https://support.microsoft.com/kb/4583458|
-|15.0.2070.41|4517790|https://support.microsoft.com/kb/4517790|
+|15.0.2095.3|5014356|[https://support.microsoft.com/kb/5014356](https://support.microsoft.com/kb/5014356)|
+|15.0.2080.9|4583458|[https://support.microsoft.com/kb/4583458](https://support.microsoft.com/kb/4583458)|
+|15.0.2070.41|4517790|[https://support.microsoft.com/kb/4517790](https://support.microsoft.com/kb/4517790)|
 
 If you're a customer who opted for only GDR updates to the RTM version and no CUs, 15.0.2095.3 is the latest GDR for your RTM-baseline.
 
@@ -89,7 +89,7 @@ If you're using CUs for your SQL Server instance, you can check whether there's 
 
 |Build number|KB number|KB URL|Release Date|Service Pack Level|Cumulative Update or Security ID|Servicing Model|
 |-|-|-|-|-|-|-|
-|14.0.3445.2|5014553|https://support.microsoft.com/kb/5014553|2022-06-14|NA|CU29-GDR|Cumulative Update with GDR|
+|14.0.3445.2|5014553|[https://support.microsoft.com/kb/5014553](https://support.microsoft.com/kb/5014553)|2022-06-14|NA|CU29-GDR|Cumulative Update with GDR|
 
 > [!NOTE]
 > If there's a CU that has a later version number than a CU\<nn>-GDR version, the later version includes the GDR fixes. Microsoft always recommends that you install the latest CU that's available for a given SQL Server version.
