@@ -153,7 +153,7 @@ If your solution directs reporting (querying) against availability group databas
 
 To check for historical evidence of a blocked redo, open the **AlwaysOn_health Xevent** trace files on the secondary replica by using SSMS. Look for `lock_redo_blocked` events.
 
-   [![Screenshot that shows checking for for historical evidence of a blocked redo.](media/troubleshooting-recovery-queuing-in-alwayson-availability-group/alwayson-health-xevent-recovery.png)](media/troubleshooting-recovery-queuing-in-alwayson-availability-group/alwayson-health-xevent-recovery-small.png#lightbox)
+   [![Screenshot that shows checking for for historical evidence of a blocked redo.](media/troubleshooting-recovery-queuing-in-alwayson-availability-group/alwayson-health-xevent-recovery.png)](media/troubleshooting-recovery-queuing-in-alwayson-availability-group/alwayson-health-xevent-recovery.png#lightbox)
 
 Use Performance Monitor to actively monitor blocked redo impact to recovery queue. Add the **SQL Server::Database Replica::Redo blocked/sec** and **SQL Server::Database Replica::Recovery Queue** counters. The following screenshot shows an `ALTER TABLE ALTER COLUMN` command that's run against the primary replica while a long-running query is run against the same table on the secondary replica. The **Redo blocked/sec** counter indicates that the `ALTER TABLE ALTER COLUMN` command is run. While the long-running query is running on the same table on the secondary replica, any subsequent changes on the primary will cause an increase in the recovery queue.
 
