@@ -33,7 +33,7 @@ After failing over an availability group, you may observe that the secondary is 
 
 |Always On dashboard reports Not Synchronizing on the primary|Always On dashboard reports Reverting on the secondary|
 |-|-|
-|:::image type="content" source="media/diagnose-availability-group-database-reverting-state/alwayson-dashboard-reports-not-synchronizing-on-the-primary.png" alt-text="The screenshot shows Always On dashboard reports Not Synchronizing on the primary and Reverting on the secondary." lightbox="media/diagnose-availability-group-database-reverting-state/alwayson-dashboard-reports-not-synchronizing-on-the-primary.png":::|:::image type="content" source="media/diagnose-availability-group-database-reverting-state/alwayson-dashboard-reports-not-reverting-on-the secondary.png" alt-text="The screenshot shows Always On dashboard reports not reverting on the secondary." lightbox="media/diagnose-availability-group-database-reverting-state/alwayson-dashboard-reports-not-reverting-on-the secondary.png":::|
+|:::image type="content" source="media/diagnose-availability-group-database-reverting-state/alwayson-dashboard-reports-not-synchronizing-on-the-primary.png" alt-text="The screenshot shows that Always On dashboard reports Not Synchronizing on the primary." lightbox="media/diagnose-availability-group-database-reverting-state/alwayson-dashboard-reports-not-synchronizing-on-the-primary.png":::|:::image type="content" source="media/diagnose-availability-group-database-reverting-state/alwayson-dashboard-reports-not-reverting-on-the secondary.png" alt-text="The screenshot shows that Always On dashboard reports Reverting on the secondary." lightbox="media/diagnose-availability-group-database-reverting-state/alwayson-dashboard-reports-not-reverting-on-the secondary.png":::|
 
 ### Always On DMVs reports NOT SYNCHRONIZING on the primary
 
@@ -48,11 +48,11 @@ JOIN sys.dm_hadr_database_replica_cluster_states drcs
 ON drs.group_database_id=drcs.group_database_id
 ```
 
-:::image type="content" source="media/diagnose-availability-group-database-reverting-state/query-the-availability-group-dmvs.png" alt-text="The screenshot shows Always On DMVs reports NOT SYNCHRONIZING on the primary." lightbox="media/diagnose-availability-group-database-reverting-state/query-the-availability-group-dmvs.png":::
+:::image type="content" source="media/diagnose-availability-group-database-reverting-state/query-the-availability-group-dmvs.png" alt-text="The screenshot shows that Always On DMVs reports NOT SYNCHRONIZING on the primary." lightbox="media/diagnose-availability-group-database-reverting-state/query-the-availability-group-dmvs.png":::
 
 When you query the DMVs on the secondary, the availability group database is in the **REVERTING** state.
 
-:::image type="content" source="media/diagnose-availability-group-database-reverting-state/query-the-alwayson-dmvs-on-the-secondary.png" alt-text="The screenshot shows Always On DMVs reports REVERTING on the secondary." lightbox="media/diagnose-availability-group-database-reverting-state/query-the-alwayson-dmvs-on-the-secondary.png":::
+:::image type="content" source="media/diagnose-availability-group-database-reverting-state/query-the-alwayson-dmvs-on-the-secondary.png" alt-text="The screenshot shows that Always On DMVs reports REVERTING on the secondary." lightbox="media/diagnose-availability-group-database-reverting-state/query-the-alwayson-dmvs-on-the-secondary.png":::
 
 ### Read-only and reporting workloads fail to access the secondary database
 
@@ -63,7 +63,7 @@ If you have a read-only workload, like a reporting workload that is routed to th
 > Msg 922, Level 14, State 1, Line 2
 > Database 'agdb' is being recovered. Waiting until recovery is finished.
 
-:::image type="content" source="media/diagnose-availability-group-database-reverting-state/batches-may-fail-with-message-922.png" alt-text="The screenshot shows read-only and reporting workloads fail to access the secondary database with error 922." lightbox="media/diagnose-availability-group-database-reverting-state/batches-may-fail-with-message-922.png":::
+:::image type="content" source="media/diagnose-availability-group-database-reverting-state/batches-may-fail-with-message-922.png" alt-text="The screenshot shows that read-only and reporting workloads fail to access the secondary database with error 922." lightbox="media/diagnose-availability-group-database-reverting-state/batches-may-fail-with-message-922.png":::
 
 An application trying to login to the secondary replica database in the reverting state fails to connect and raises error 18456:
 
@@ -125,4 +125,4 @@ CROSS APPLY sys.dm_exec_input_buffer(es.session_id, NULL) eib WHERE es.is_user_p
 ORDER BY tat.transaction_begin_time ASC
 ```
 
-:::image type="content" source="media/diagnose-availability-group-database-reverting-state/transaction-begin-time-and-current-time-open-transactions.png" alt-text="The screenshot shows the transaction begin time and current time of any open transactions." lightbox="media/diagnose-availability-group-database-reverting-state/transaction-begin-time-and-current-time-open-transactions.png":::
+:::image type="content" source="media/diagnose-availability-group-database-reverting-state/transaction-begin-time-and-current-time-open-transactions.png" alt-text="The screenshot shows the begin time and current time of any open transactions." lightbox="media/diagnose-availability-group-database-reverting-state/transaction-begin-time-and-current-time-open-transactions.png":::
