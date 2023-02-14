@@ -101,10 +101,14 @@
       href: ../retention/cannot-manage-disposition-reviews.md
     - name: Can't retain cloud attachments
       href: ../retention/cannot-retain-cloud-attachments.md
+    - name: Identify errors in Microsoft 365 retention and retention label policies
+      href: ../retention/identify-errors-in-retention-and-retention-label-policies.md
     - name: Managed folders disappear
       href: ../retention/managed-folders-disappear.md
     - name: MRM and retention policies
       href: ../retention/mrm-and-retention-policy.md
+    - name: Resolve errors in Microsoft 365 retention and retention label policies
+      href: ../retention/resolve-errors-in-retention-and-retention-label-policies.md
   - name: Microsoft Purview Message Encryption
     items:
     - name: Can't display message
