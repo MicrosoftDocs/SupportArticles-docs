@@ -31,7 +31,7 @@ When a database is in the reverting state on the secondary replica, the database
 
 After failing over an availability group, you may observe that the secondary is reported as not synchronizing while the failover was successful. The Always On dashboard reports **Not Synchronizing** on the primary and **Reverting** on the secondary.
 
-|Always On dashboard reports not synchronizing on the primary|Always On dashboard reports not reverting on the secondary|
+|Always On dashboard reports Not Synchronizing on the primary|Always On dashboard reports Reverting on the secondary|
 |-|-|
 |:::image type="content" source="media/diagnose-availability-group-database-reverting-state/alwayson-dashboard-reports-not-synchronizing-on-the-primary.png" alt-text="The screenshot shows Always On dashboard reports Not Synchronizing on the primary and Reverting on the secondary." lightbox="media/diagnose-availability-group-database-reverting-state/alwayson-dashboard-reports-not-synchronizing-on-the-primary.png":::|:::image type="content" source="media/diagnose-availability-group-database-reverting-state/alwayson-dashboard-reports-not-reverting-on-the secondary.png" alt-text="The screenshot shows Always On dashboard reports not reverting on the secondary." lightbox="media/diagnose-availability-group-database-reverting-state/alwayson-dashboard-reports-not-reverting-on-the secondary.png":::|
 
@@ -124,3 +124,5 @@ JOIN sys.dm_exec_sessions es ON tst.session_id=es.session_id
 CROSS APPLY sys.dm_exec_input_buffer(es.session_id, NULL) eib WHERE es.is_user_process = 1
 ORDER BY tat.transaction_begin_time ASC
 ```
+
+:::image type="content" source="media/diagnose-availability-group-database-reverting-state/transaction-begin-time-and-current-time-open-transactions.png" alt-text="The screenshot shows the transaction begin time and current time of any open transactions." lightbox="media/diagnose-availability-group-database-reverting-state/transaction-begin-time-and-current-time-open-transactions.png":::
