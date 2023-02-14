@@ -109,7 +109,7 @@ While this update is pending, admins may see write conflicts and transaction fai
 > - Garbage collection isn't related to the processing of group membership link deletions.
 > - Decreasing TSL isn't a valid method of accelerating link deletions.
 > - The legacy value for **Links process batch size**  is 1,000 in versions before Windows Server 2008 R2. In later versions, the batch size is increased to 10,000 to improve the performance of undeleting in forests that have the Recycle Bin enabled.
-> - Check values of the **Links process batch size** parameter. If it's nondefault, set the value back to its default or an even smaller value such as 1,000, 100, or even 10.
+> - Check values of the **Links process batch size** parameter. If it's nondefault, set the value back to its default or an even smaller value such as 1,000 or 100.
 >
 > Smaller values decrease version store usage by deleting a smaller number of objects per deleting thereby reducing the total time to perform a single delete transaction. This has the positive side effect of reducing version store and time window for write conflicts while you increase the time that's required to accurately reflect the group membership in the directory.
 
