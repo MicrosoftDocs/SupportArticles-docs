@@ -39,7 +39,7 @@ The SQL Server team uses a scheduled delivery model for releasing fixes and prod
 - Contains critical fix requests that satisfy all these conditions:
 
   - You can't wait for the scheduled Cumulative Update release.
-  - There is no reasonable mitigation or workaround.
+  - There's no reasonable mitigation or workaround.
   - The problem causes significant impact to product or application functionality.
 
 - The hotfix can be requested by any customer, regardless of their support offering.
@@ -48,7 +48,7 @@ The SQL Server team uses a scheduled delivery model for releasing fixes and prod
 
 - This hotfix build can contain one or more fixes.
 
-- There is no defined frequency.
+- There's no defined frequency.
 
 - Example: [KB4510083 - On-demand hotfix update package 2 for SQL Server 2017 CU15](https://support.microsoft.com/topic/kb4510083-on-demand-hotfix-update-package-2-for-sql-server-2017-cu15-5a04ceb8-b93d-43d7-c767-e96e307744e4)
 
@@ -69,7 +69,11 @@ The SQL Server team uses a scheduled delivery model for releasing fixes and prod
 
 A GDR can have either an RTM baseline or a CU baseline. The latest GDR version for each baseline is cumulative and includes fixes from all the previous GDRs for the corresponding baseline.
 
-Example: [Determining the latest GDR for RTM baseline](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fdownload.microsoft.com%2Fdownload%2Fd%2F3%2Fe%2Fd3e28f3d-6a4f-47ce-aaa5-9d74c5590ed6%2FSQLServerBuilds.xlsx&wdOrigin=BROWSELINK). The following are the RTM GDRs that are available for SQL Server 2019 as of February 6, 2023 per the builds spreadsheet.
+#### Examples
+
+**Determine the latest GDR for RTM baseline:**
+
+The following are the RTM GDRs that are available for SQL Server 2019 as of February 6, 2023 per the builds spreadsheet.
 
 |Build number|KB number|KB URL|
 |-|-|-|
@@ -77,11 +81,11 @@ Example: [Determining the latest GDR for RTM baseline](https://view.officeapps.l
 |15.0.2080.9|4583458|https://support.microsoft.com/kb/4583458|
 |15.0.2070.41|4517790|https://support.microsoft.com/kb/4517790|
 
-If you are a customer who opted for only GDR updates to the RTM version and no CUs, 15.0.2095.3 is the latest GDR for your RTM-baseline.
+If you're a customer who opted for only GDR updates to the RTM version and no CUs, 15.0.2095.3 is the latest GDR for your RTM-baseline.
 
-### Determine the latest GDRs for a CU baseline
+**Determine the latest GDRs for a CU baseline:**
 
-If you are using CUs for your SQL Server instance, you can check whether there's a GDR available for a given CU by reviewing the **Cumulative Update or Security ID** column for the corresponding version in the builds spreadsheet, and checking the CU\<nn>-GDR entry (where nn is the current CU that's installed for your SQL Server version). For example, if you want to know whether there are any GDRs for SQL Server 2019, checking for "CU29-GDR" reveals the following row.
+If you're using CUs for your SQL Server instance, you can check whether there's a GDR available for a given CU by reviewing the **Cumulative Update or Security ID** column for the corresponding version in the builds spreadsheet, and checking the CU\<nn>-GDR entry (where nn is the current CU that's installed for your SQL Server version). For example, if you want to know whether there are any GDRs for SQL Server 2019, checking for "CU29-GDR" reveals the following row.
 
 |Build number|KB number|KB URL|Release Date|Service Pack Level|Cumulative Update or Security ID|Servicing Model|
 |-|-|-|-|-|-|-|
@@ -106,13 +110,14 @@ If you are using CUs for your SQL Server instance, you can check whether there's
 
 ## Security fixes and security updates
 
-**Security fixes:** Fixes that are generally shipped in a CU  for which components in a fix list table for the corresponding CU are set to **SQL Security**. (For more information, see [Explanation of Fix areas column in the Fix list KB articles for cumulative updates and service packs](/troubleshoot/sql/database-engine/install/windows/naming-schema-and-fix-area#explanation-of-fix-areas-column-in-the-fix-list-kb-articles-for-cumulative-updates-and-service-packs)). Or, for which a component for the corresponding fix is set to Security Infrastructure in the detailed fix list table in the [builds spreadsheet](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fdownload.microsoft.com%2Fdownload%2Fd%2F3%2Fe%2Fd3e28f3d-6a4f-47ce-aaa5-9d74c5590ed6%2FSQLServerBuilds.xlsx&wdOrigin=BROWSELINK). These are the fixes that are made to the security components of a SQL Server database engine.
+**Security fixes:** Fixes that are generally shipped in a CU for which components in a fix list table for the corresponding CU are set to **SQL Security**. (For more information, see [Explanation of Fix areas column in the Fix list KB articles for cumulative updates and service packs](/troubleshoot/sql/database-engine/install/windows/naming-schema-and-fix-area#explanation-of-fix-areas-column-in-the-fix-list-kb-articles-for-cumulative-updates-and-service-packs)). Or, for which a component for the corresponding fix is set to Security Infrastructure in the detailed fix list table in the [builds spreadsheet](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fdownload.microsoft.com%2Fdownload%2Fd%2F3%2Fe%2Fd3e28f3d-6a4f-47ce-aaa5-9d74c5590ed6%2FSQLServerBuilds.xlsx&wdOrigin=BROWSELINK). These are the fixes that are made to the security components of a SQL Server database engine.
 
 **Security updates:** A security fix to address vulnerabilities that can be used to compromise your SQL Server installation. These are released through a GDR (either an RTM-GDR or a CU-GDR). Subsequent CUs or GDRs include these security updates. Microsoft advises customers to install the latest product releases, security updates, service packs, and cumulative updates to remain as secure as possible. For more information, see [Fixed Lifecycle Policy](/lifecycle/policies/fixed).
 
 To check whether a GDR is a security update, you should review the release documentation for the corresponding GDR. Security updates always have an associated Common Vulnerability and Exposure (CVE) note. For example, the documentation for CU29-GDR ("[KB5014553 - Description of the security update for SQL Server 2017 CU29: June 14, 2022](https://support.microsoft.com/topic/kb5014553-description-of-the-security-update-for-sql-server-2017-cu29-june-14-2022-024a90f1-1173-4ade-9c18-816ee7150458)") has a link to [CVE-2022-29143](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-29143) that opens in the Security Update Guide on the Microsoft - MSRC website. For more information, see [Coming Soon: New Security Update Guide Notification System](https://msrc.microsoft.com/blog/2022/01/coming-soon-new-security-update-guide-notification-system/).
 
-Notice that GDRs don't necessarily have to be security updates. For example, "[KB4517790 - Servicing Update for SQL Server 2019 RTM](https://support.microsoft.com/topic/kb4517790-servicing-update-for-sql-server-2019-rtm-7faa2daf-df06-276d-40c2-9d33961de5f6)" is a non-security GDR release.
+> [!NOTE]
+> GDRs don't necessarily have to be security updates. For example, "[KB4517790 - Servicing Update for SQL Server 2019 RTM](https://support.microsoft.com/topic/kb4517790-servicing-update-for-sql-server-2019-rtm-7faa2daf-df06-276d-40c2-9d33961de5f6)" is a non-security GDR release.
 
 ## Support phase and release vehicle matrix
 
