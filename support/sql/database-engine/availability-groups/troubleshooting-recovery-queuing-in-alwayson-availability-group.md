@@ -70,6 +70,7 @@ To review the recovery queue, follow these steps:
 1. Select **Show Dashboard**.
 
     The availability group databases are listed last, and there's some data reported on the databases. Although **Redo Queue Size (KB)** and **Redo Rate (KB/sec)** aren't listed by default, you can add them to this view, as shown in the screenshot in the next step.
+
 1. To add these counters, right-click the header above the database reports, and select from the list of available columns.
 
 1. To add **Redo Queue Size (KB)** and **Redo Rate (KB/sec)**, right-click the header that's shown as highlighted in red in the following screenshot.
@@ -113,7 +114,7 @@ If you observe increasing recovery queueing over time, further investigation is 
 
 ### Get baseline rates for redo rate
 
-During healthy AlwaysOn performance, monitor the redo rate on your busy availability group databases. What do they look like during typically busy business hours? What do they look like during periods of maintenance, when large transactions drive higher transaction throughput on the system? You can compare these values when you observe recovery queue growth to help determine what has changed. The workload might simply be greater than usual. If the redo rate is lower, further investigation might be required to determine why.
+During healthy AlwaysOn performance, monitor the redo rate on your busy availability group databases. What do they look like during typically busy business hours? What are these rates during periods of maintenance, when large transactions (index rebuilds, ETL processes) drive higher transaction throughput on the system? You can compare these values when you observe recovery queue growth to help determine what has changed. The workload might simply be greater than usual. If the redo rate is lower, further investigation might be required to determine why.
 
 ### Workload volumes matter
 
@@ -152,7 +153,7 @@ If your solution directs reporting (querying) against availability group databas
 
 To check for historical evidence of a blocked redo, open the **AlwaysOn_health Xevent** trace files on the secondary replica by using SSMS. Look for `lock_redo_blocked` events.
 
-   [![Screenshot that shows checking for for historical evidence of a blocked redo.](media/troubleshooting-recovery-queuing-in-alwayson-availability-group/alwayson-health-xevent-recovery.png)](media/troubleshooting-recovery-queuing-in-alwayson-availability-group/alwayson-health-xevent-recovery.png#lightbox)
+   [![Screenshot that shows checking for for historical evidence of a blocked redo.](media/troubleshooting-recovery-queuing-in-alwayson-availability-group/alwayson-health-xevent-recovery-small.png)](media/troubleshooting-recovery-queuing-in-alwayson-availability-group/alwayson-health-xevent-recovery.png#lightbox)
 
 Use Performance Monitor to actively monitor blocked redo impact to recovery queue. Add the **SQL Server::Database Replica::Redo blocked/sec** and **SQL Server::Database Replica::Recovery Queue** counters. The following screenshot shows an `ALTER TABLE ALTER COLUMN` command that's run against the primary replica while a long-running query is run against the same table on the secondary replica. The **Redo blocked/sec** counter indicates that the `ALTER TABLE ALTER COLUMN` command is run. While the long-running query is running on the same table on the secondary replica, any subsequent changes on the primary will cause an increase in the recovery queue.
 
