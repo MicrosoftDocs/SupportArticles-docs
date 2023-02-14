@@ -104,9 +104,9 @@ The recovery queue size is unique to each secondary replica and database. Theref
 
 This section explains how you can interpret the values that are related to recovery queueing that you determined in the previous section.
 
-### When is recovery queueing a problem? How much recovery queueing should ou tolerate?
+### When is recovery queueing a problem? How much recovery queueing should you tolerate?
 
-You might assume that if the recovery queue is reporting a value of 0, this means that no recovery queuing is occurring at the time of that report. However, when your production environment is busy, you should expect to observe the recovery queue frequently report a value other than zero even in a healthy AlwaysOn environment. During typical production, you should expect to observe this value fluctuate between 0 and a non-zero value.
+You might assume that if the recovery queue is reporting a value of **0**, this means that no recovery queuing is occurring at the time of that report. However, when your production environment is busy, you should expect to observe the recovery queue frequently report a value other than zero even in a healthy AlwaysOn environment. During typical production, you should expect to observe this value fluctuate between 0 and a non-zero value.
 
 If you observe increasing recovery queueing over time, further investigation is warranted. This extra activity indicates that something has changed. If you observe a sudden growth in the recovery queue, the following measurements are useful for troubleshooting:
 
@@ -138,7 +138,7 @@ END
 ```
 
 > [!IMPORTANT]  
-> For meaningful wait type output, recovery queueing should be observed to be increasing when you use one of the methods that're described earlier to monitor this condition.
+> For meaningful wait type output, recovery queueing should be observed to be increasing when you use one of the methods that are described earlier to monitor this condition.
 
 In this example, some I/O-related wait types are reported (`PAGEIOLATCH_UP`, `PAGEIOATCH_EX`). Monitor to check whether these wait types continue to have the largest `wait_times` values, as reported in the next column.
 
