@@ -135,7 +135,7 @@ To resolve this issue, use either of the following methods. If you use method 1,
 
 2. Select the policy to open the policy details pane. Make sure that you select the policy name and not the corresponding checkbox. Otherwise, the details pane won't open.
 
-3. In the policy details pane, select **Retry**. The policy will enter a pending state until policy sync and distribution finishes.
+3. In the policy details pane, select **Retry**. The policy enters a pending state until policy sync and distribution finishes.
 
 #### Method 2: Use PowerShell
 
@@ -227,7 +227,7 @@ To resolve this issue, use either of the following methods. If you use method 1,
 
 3. Select the policy to open the policy details pane. Make sure that you select the policy name and not the corresponding checkbox. Otherwise, the details pane won't open.
 
-4. In the policy details pane, select **Retry**. The policy will enter a pending state until policy sync and distribution finishes.
+4. In the policy details pane, select **Retry**. The policy enters a pending state until policy sync and distribution finishes.
 
 #### Method 2: Use PowerShell
 
@@ -257,7 +257,7 @@ Get-RetentionCompliancePolicy -Identity "<policy name>" -DistributionDetail | Se
 
 ### Cause
 
-An administrator locked the site, or the system temporarily locked the site during an automated process. During an automated process, updates are not permitted.
+An administrator locked the site, or the system temporarily locked the site during an automated process. During an automated process, updates aren't permitted.
 
 ### Resolution
 
@@ -275,7 +275,7 @@ To resolve this issue, use either of the following methods. If you use method 1,
 
 3. Select the policy to open the policy details pane. Make sure that you select the policy name and not the corresponding checkbox. Otherwise, the details pane won't open.
 
-4. In the policy details pane, select **Retry**. The policy will enter a pending state until policy sync and distribution finishes.
+4. In the policy details pane, select **Retry**. The policy enters a pending state until policy sync and distribution finishes.
 
 #### Method 2: Use PowerShell
 
@@ -321,7 +321,7 @@ To resolve this issue, use either of the following methods. If you use method 1,
 
 2. Select the policy to open the policy details pane. Make sure that you select the policy name and not the corresponding checkbox. Otherwise, the details pane won't open.
 
-3. In the policy details pane, select **Retry**. The policy will enter a pending state until policy sync and distribution finishes.
+3. In the policy details pane, select **Retry**. The policy enters a pending state until policy sync and distribution finishes.
 
 #### Method 2: Use PowerShell
 
@@ -365,7 +365,7 @@ To resolve this issue, use either of the following methods. If you use method 1,
 
 2. Select the policy to open the policy details pane. Make sure that you select the policy name and not the corresponding checkbox. Otherwise, the details pane won't open.
 
-3. In the policy details pane, select **Retry**. The policy will enter a pending state until policy sync and distribution finishes.
+3. In the policy details pane, select **Retry**. The policy enters a pending state until policy sync and distribution finishes.
 
 #### Method 2: Use PowerShell
 
@@ -458,7 +458,7 @@ To resolve this issue, use either of the following methods. If you use method 1,
 
 2. Select the policy to open the policy details pane. Make sure that you select the policy name and not the corresponding checkbox. Otherwise, the details pane won't open.
 
-3. In the policy details pane , select **Retry**. The policy will enter a pending state until policy sync and distribution finishes.
+3. In the policy details pane, select **Retry**. The policy enters a pending state until policy sync and distribution finishes.
 
 #### Method 2: Use PowerShell
 

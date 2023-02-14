@@ -73,7 +73,7 @@ Use the following steps to check for errors in policies that target:
    Get-RetentionCompliancePolicy -Identity "<policy name>" -DistributionDetail | Select -ExpandProperty DistributionResults
    ```
 
-   Any policy errors appear in the value that's returned by the `DistributionStatus` property. If there are policy errors, the value that's returned by the `DistributionResults` property will contain more information about the errors.
+   Any policy errors appear in the value that's returned by the `DistributionStatus` property. If there are policy errors, the value that's returned by the `DistributionResults` property contains more information about the errors.
 
 Use the following steps to check for errors in policies that target:
 
@@ -90,7 +90,7 @@ Use the following steps to check for errors in policies that target:
    Get-AppRetentionCompliancePolicy -Identity "\<policy name\>" -DistributionDetail | Select -ExpandProperty DistributionResults
    ```
 
-   Any policy errors appear in the value that's returned by the `DistributionStatus` property. If there are policy errors, the value that's returned by the `DistributionResults` property will contain more information about the errors.
+   Any policy errors appear in the value that's returned by the `DistributionStatus` property. If there are policy errors, the value that's returned by the `DistributionResults` property contains more information about the errors.
 
 ## Recommended practices
 
