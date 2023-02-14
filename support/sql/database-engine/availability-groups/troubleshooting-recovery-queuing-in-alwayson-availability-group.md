@@ -14,7 +14,7 @@ This article provides resolutions to problems related to recovery queueing.
 
 ## What is recovery queueing?
 
-Changes that are made to the primary replica in an availability group database are sent to all secondary replicas that are defined in the same availability group. After those changes arrive at the secondary replicas, they are first written to the transaction log file of the availability group database. Microsoft SQL Server then uses the *recovery* or *redo* operation to update the database files.
+Changes that are made to the primary replica in an availability group database are sent to all secondary replicas that are defined in the same availability group. After those changes arrive at the secondary replicas, they're first written to the transaction log file of the availability group database. Microsoft SQL Server then uses the *recovery* or *redo* operation to update the database files.
 
 If the changes to an availability group arrive and harden on the database transaction log file faster than they can be recovered, a *recovery queue* is formed. This queue is composed of hardened transaction log transactions that weren't recovered and restored to the database.
 
@@ -114,7 +114,7 @@ If you observe increasing recovery queueing over time, further investigation is 
 
 ### Get baseline rates for redo rate
 
-During healthy AlwaysOn performance, monitor the redo rate on your busy availability group databases. What do they look like during typically busy business hours? What are these rates during periods of maintenance, when large transactions (index rebuilds, ETL processes) drive higher transaction throughput on the system? You can compare these values when you observe recovery queue growth to help determine what has changed. The workload might simply be greater than usual. If the redo rate is lower, further investigation might be required to determine why.
+During healthy AlwaysOn performance, monitor the redo rate on your busy availability group databases. What do they look like during typically busy business hours? What are these rates during periods of maintenance, when large transactions (index rebuilds, ETL processes) drive higher transaction throughput on the system? You can compare these values when you observe recovery queue growth to help determine what has changed. The workload might be greater than usual. If the redo rate is lower, further investigation might be required to determine why.
 
 ### Workload volumes matter
 
