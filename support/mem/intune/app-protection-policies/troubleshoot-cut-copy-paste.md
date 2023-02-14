@@ -2,7 +2,7 @@
 title: Troubleshoot restricting cut, copy, and paste between applications
 description: General steps to help troubleshoot restricting the cut, copy, and paste feature between applications.
 ms.date: 02/14/2023
-ms.reviewer: v-cshields, roblane-msft
+ms.reviewer: v-cshields, roblane
 search.appverid: MET150
 ---
 # Troubleshoot restricting cut, copy, and paste between applications
