@@ -18,7 +18,7 @@ When you sign in to Power Automate for desktop, you receive the following messag
 
 ## Resolution
 
-This issue is related to Microsoft Authentication Library (MSAL). To resolve this issue:
+This issue is related to [Microsoft Authentication Library (MSAL)](azure/active-directory/develop/msal-authentication-flows). To resolve this issue:
 
 1. Go to **Control Panel** > **Internet Options** > **Security** > **Trusted Sites**.
 1. Add the following URLs:
