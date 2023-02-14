@@ -6,6 +6,7 @@ ms.custom: sap:Availability Groups
 ms.prod: sql
 author: padmajayaraman
 ms.author: v-jayaramanp
+ms.reviewer: ramakoni
 ---
 
 # Troubleshooting recovery queueing in an Always On availability group
@@ -139,7 +140,7 @@ END
 > [!IMPORTANT]  
 > For meaningful wait type output, recovery queueing should be observed to be increasing when you use one of the methods that're described earlier to monitor this condition.
 
-In this example, some I/O-related wait types are reported (PAGEIOLATCH_UP, PAGEIOATCH_EX). Monitor to check whether these wait types continue to have the largest `wait_times` values, as reported in the next column.
+In this example, some I/O-related wait types are reported (`PAGEIOLATCH_UP`, `PAGEIOATCH_EX`). Monitor to check whether these wait types continue to have the largest `wait_times` values, as reported in the next column.
 
    :::image type="content" source="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/input-output-related-waittimes-recovery.png" alt-text="Screenshot showing the largest wait times reported in the next column." lightbox="media/troubleshooting-recovery-queuing-in-alwayson-availability-group/input-output-related-waittimes-recovery.png":::
 
