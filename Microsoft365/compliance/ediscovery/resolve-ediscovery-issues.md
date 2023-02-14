@@ -20,7 +20,7 @@ search.appverid:
   - MOE150
   - MET150
 siblings_only: true
-ms.date: 1/31/2023
+ms.date: 2/14/2023
 ---
 # Resolve common eDiscovery issues
 
@@ -367,7 +367,7 @@ This can be a client-side issue. To remediate it, follow these steps:
 
 If none of these steps solve the problem, gather the output of `Get-ComplianceSearch` and `Get-ComplianceSearchAction` before creating a support case.
 
-**Issue: Problem retrieving mailbox items while archiving**
+## Issue: Problem retrieving mailbox items while archiving
 
 The following errors are displayed in Export Warnings.csv and Errors.csv during content search and the eDiscovery standard export workflow.
 
@@ -376,6 +376,26 @@ The following errors are displayed in Export Warnings.csv and Errors.csv during 
 
 These errors indicate that certain items found during search couldn’t be retrieved. These might be temporary backup copies that are created during archival. While these temporary backups are accessible to search and thus can be matched, they are not accessible for retrieval. However eDiscovery can match and retrieve the original items which are exact copies of the backups.
 
-**Resolution**
+### Resolution
 
 No action is needed to address these errors. The original items associated with the same mailbox will be retrieved and subsequently exported or added to a review set.
+
+## Error/issue: Export process opens a new blank page without a download
+
+When you export search results from eDiscovery (Standard) or Content search in the Microsoft Purview compliance portal, the export process opens a new blank page, and the eDiscovery Export Tool (UnifiedExportTool) isn't downloaded.
+
+### Resolution
+
+To fix this issue, allow pop-ups from the Microsoft Purview compliance portal.
+
+In Microsoft Edge:
+
+1. Select the **Settings and more** icon (...) in the upper-right corner of the browser.
+1. Select **Settings** > **Cookies and site permissions**.
+1. Under **All permissions**, select **Pop-ups and redirects**.
+1. Under **Allow**, select **Add**.
+1. In the **Add a site** dialog box, enter *https://compliance.microsoft.com*, and then select **Add**.
+
+If you're using a different browser, follow the browser's documentation to allow pop-ups from the Microsoft Purview compliance portal.
+
+After you make this change, restart the export process.
