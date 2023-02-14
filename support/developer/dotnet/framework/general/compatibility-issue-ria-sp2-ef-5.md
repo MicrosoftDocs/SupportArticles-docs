@@ -39,3 +39,5 @@ There are two ways to add RIA Services functionality to a Microsoft Silverlight 
 ## More information
 
 For more information about RIA Services, see [RIA Services is Getting Open-Sourced](https://jeffhandley.com/2013-07-03/ria-services-is-getting-open-sourced). For NuGet packages, see the repository at [NuGet.org](https://www.nuget.org).
+
+[!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
