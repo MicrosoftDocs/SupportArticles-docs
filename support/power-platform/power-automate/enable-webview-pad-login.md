@@ -21,6 +21,8 @@ Consider the following scenario in Power Automate for desktop:
 
 To verify the issue, you need to install and use a network tracing tool, such as Fiddler.
 
+:::image type="content" source="media/enable-webview-pad-login/fiddler.png" alt-text="Screenshot presenting how to verify the issue with Fiddler.":::
+
 ## Resolution
 
 1. Install [WebView2 Runtime](https://go.microsoft.com/fwlink/p/?LinkId=2124703).
