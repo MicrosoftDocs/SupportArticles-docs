@@ -31,9 +31,9 @@ The description in that article is accurate. The approach to resolving the probl
 
 ## More information
 
-In a successful attack on a gMSA, the attacker obtains all the important attributes of the KDS root key object and the **Sid** and **msds-ManagedPasswordID** attributes of a gMSA object.
+In a successful attack on a gMSA, the attacker obtains all the important attributes of the KDS root key object and the `Sid` and `msds-ManagedPasswordID` attributes of a gMSA object.
 
-The **msds-ManagedPasswordID** attribute is present only on a writable copy of the domain. Therefore, if a domain controller's database is exposed, only the domain that the domain controller hosts is open to the Golden gMSA attack. However, if the attacker can authenticate to a domain controller of a different domain in the forest, the attacker might have sufficient permissions to get the contents of **msds-ManagedPasswordID**. The attacker could then use this information to craft an attack against gMSAs in additional domains.
+The `msds-ManagedPasswordID` attribute is present only on a writable copy of the domain. Therefore, if a domain controller's database is exposed, only the domain that the domain controller hosts is open to the Golden gMSA attack. However, if the attacker can authenticate to a domain controller of a different domain in the forest, the attacker might have sufficient permissions to get the contents of `msds-ManagedPasswordID`. The attacker could then use this information to craft an attack against gMSAs in additional domains.
 
 To protect additional domains of your forest after one domain has been exposed, you have to replace all the gMSAs in the exposed domain before the attacker can use the information. Usually, you don't know the details of what was exposed. Therefore, we suggest that you apply the resolution to all domains of the forest.
 
@@ -55,14 +55,14 @@ In the domain that holds the gMSAs that you want to repair, follow these steps:
 1. Run an authoritative restore operation on the domain's **Managed Service Accounts** container. Make sure that the restore operation includes all the container's child objects that might be associated with this domain controller. This step rolls back the last password update status. The next time that a service retrieves the password, the password updates to a new password that's based on the new KDS root key object.
 1. On a different domain controller, follow the steps in [Create the Key Distribution Services KDS Root Key](/windows-server/security/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key) to create a new KDS root key object.
 1. On all the domain controllers, restart **Microsoft Key Distribution Service**.
-1. Create a new gMSA. Make sure that the new gMSA uses the new KDS root key object to create the value for the **msDS-ManagedPasswordId** attribute.
-1. Check the **msDS-ManagedPasswordId** value of the first gMSA that you created. The value of this attribute is binary data that includes the GUID of the matching KDS root key object.  
+1. Create a new gMSA. Make sure that the new gMSA uses the new KDS root key object to create the value for the `msds-ManagedPasswordID` attribute.
+1. Check the `msds-ManagedPasswordID` value of the first gMSA that you created. The value of this attribute is binary data that includes the GUID of the matching KDS root key object.  
 
-   For example, assume that the KDS root key object has the following **CN**.  
+   For example, assume that the KDS root key object has the following `CN`.  
 
    :::image type="content" source="media/recover-from-golden-gmsa-attack/kds-root-key-cn.png" alt-text="Screenshot that shows the value of the CN attribute of a KDS root key object.":::  
 
-   A gMSA that's created by using this object has an **msDS-ManagedPasswordId** value that resembles the following.  
+   A gMSA that's created by using this object has an `msds-ManagedPasswordID` value that resembles the following.  
 
    :::image type="content" source="media/recover-from-golden-gmsa-attack/gmsa-pwid-data.png" alt-text="Screenshot of the value of the msDS-ManagedPasswordId attribute of a gMSA object, showing how it includes the pieces of the KDS root key CN attribute.":::  
 
@@ -85,21 +85,21 @@ During the following process, you have to create a new KDS root key object. Then
 
 Follow these steps:
 
-1. Disable all the existing gMSA accounts. To do this, for each account, set the **userAccountControl** attribute to **4098** (this value combines **workstation type** and **disabled**).
+1. Disable all the existing gMSA accounts. To do this, for each account, set the `userAccountControl` attribute to **4098** (this value combines **workstation type** and **disabled**).
 1. Use a single domain controller to follow these steps:
    1. Follow the steps in [Create the Key Distribution Services KDS Root Key](/windows-server/security/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key.md) to create a new KDS root key object.
    1. Restart **Microsoft Key Distribution Service**. After it restarts, the service picks up the new object.
    1. Edit the existing gMSAs to remove the service principle names (SPNs) and DNS host names.
    1. Create new gMSAs to replace the existing gMSAs.
 1. Check the new gMSAs to make sure that they use the new KDS root key object. To do this, follow these steps:
-   1. Note the **CN** (GUID) value of the KDS root key object.
-   1. Check the **msDS-ManagedPasswordId** value of the first gMSA that you created. The value of this attribute is binary data that includes the GUID of the matching KDS root key object.  
+   1. Note the `CN` (GUID) value of the KDS root key object.
+   1. Check the `msds-ManagedPasswordID` value of the first gMSA that you created. The value of this attribute is binary data that includes the GUID of the matching KDS root key object.  
 
-      For example, assume that the KDS root key object has the following **CN**.  
+      For example, assume that the KDS root key object has the following `CN`.  
 
       :::image type="content" source="media/recover-from-golden-gmsa-attack/kds-root-key-cn.png" alt-text="Screenshot of the value of the CN attribute of a KDS root key object.":::  
 
-      A gMSA that's created by using this object has an **msDS-ManagedPasswordId** value that resembles the image.  
+      A gMSA that's created by using this object has an `msds-ManagedPasswordID` value that resembles the image.  
 
       :::image type="content" source="media/recover-from-golden-gmsa-attack/gmsa-pwid-data.png" alt-text="Screenshot of the value of the msDS-ManagedPasswordId attribute of a gMSA object, showing how it includes the pieces of the KDS root key CN attribute.":::  
 
