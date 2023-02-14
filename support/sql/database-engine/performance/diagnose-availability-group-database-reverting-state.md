@@ -11,9 +11,7 @@ ms.prod: sql
 
 # Diagnose availability group database in the reverting state
 
-## Symptoms
-
-When a database is in the reverting state on the secondary replica, the database isn't synchronized and therefore doesn't receive changes from the primary replica. A sudden loss of the database on the primary replica could result in data loss.
+This article helps you diagnose an availability group database in the reverting state.
 
 ## What is the reverting state?
 
@@ -25,11 +23,17 @@ If a large transaction is running at the time of the failover, the new secondary
 
 The reverting process is inherently slow, happens often, and typically small transactions triggering the reverting state are hardly noticed. It's often noticed when a large transaction is interrupted, causing many pages to be sent from the primary to the secondary to revert the secondary replica database to a recoverable state.
 
-## Impact of an availability group database in the reverting state
+## Symptoms and effect of an availability group database in the reverting state
+
+When a database is in the reverting state on the secondary replica, the database isn't synchronized and therefore doesn't receive changes from the primary replica. A sudden loss of the database on the primary replica could result in data loss.
 
 ### Always On dashboard reports Not Synchronizing on the primary
 
 After failing over an availability group, you may observe that the secondary is reported as not synchronizing while the failover was successful. The Always On dashboard reports **Not Synchronizing** on the primary and **Reverting** on the secondary.
+
+|Always On dashboard reports not synchronizing on the primary|Always On dashboard reports not reverting on the secondary|
+|-|-|
+|:::image type="content" source="media/diagnose-availability-group-database-reverting-state/alwayson-dashboard-reports-not-synchronizing-on-the-primary.png" alt-text="The screenshot shows Always On dashboard reports Not Synchronizing on the primary and Reverting on the secondary." lightbox="media/diagnose-availability-group-database-reverting-state/alwayson-dashboard-reports-not-synchronizing-on-the-primary.png":::|:::image type="content" source="media/diagnose-availability-group-database-reverting-state/alwayson-dashboard-reports-not-reverting-on-the secondary.png" alt-text="The screenshot shows Always On dashboard reports not reverting on the secondary." lightbox="media/diagnose-availability-group-database-reverting-state/alwayson-dashboard-reports-not-reverting-on-the secondary.png":::|
 
 ### Always On DMVs reports NOT SYNCHRONIZING on the primary
 
@@ -44,7 +48,11 @@ JOIN sys.dm_hadr_database_replica_cluster_states drcs
 ON drs.group_database_id=drcs.group_database_id
 ```
 
+:::image type="content" source="media/diagnose-availability-group-database-reverting-state/query-the-availability-group-dmvs.png" alt-text="The screenshot shows Always On DMVs reports NOT SYNCHRONIZING on the primary." lightbox="media/diagnose-availability-group-database-reverting-state/query-the-availability-group-dmvs.png":::
+
 When you query the DMVs on the secondary, the availability group database is in the **REVERTING** state.
+
+:::image type="content" source="media/diagnose-availability-group-database-reverting-state/query-the-alwayson-dmvs-on-the-secondary.png" alt-text="The screenshot shows Always On DMVs reports REVERTING on the secondary." lightbox="media/diagnose-availability-group-database-reverting-state/query-the-alwayson-dmvs-on-the-secondary.png":::
 
 ### Read-only and reporting workloads fail to access the secondary database
 
@@ -54,6 +62,8 @@ If you have a read-only workload, like a reporting workload that is routed to th
 
 > Msg 922, Level 14, State 1, Line 2
 > Database 'agdb' is being recovered. Waiting until recovery is finished.
+
+:::image type="content" source="media/diagnose-availability-group-database-reverting-state/batches-may-fail-with-message-922.png" alt-text="The screenshot shows read-only and reporting workloads fail to access the secondary database with error 922." lightbox="media/diagnose-availability-group-database-reverting-state/batches-may-fail-with-message-922.png":::
 
 An application trying to login to the secondary replica database in the reverting state fails to connect and raises error 18456:
 
@@ -75,15 +85,17 @@ Connect to the secondary replica using SQL Server Management Studio (SSMS) Objec
 > [!NOTE]
 > Extended event `hadr_trace_message` was added to the latest cumulative updates in SQL Server. You must be running the latest cumulative updates to observe this extended event.
 
+:::image type="content" source="media/diagnose-availability-group-database-reverting-state/alwayson-health-extended-event-diagnostic-log.png" alt-text="The screenshot shows the AlwaysOn_health extended event diagnostic log." lightbox="media/diagnose-availability-group-database-reverting-state/alwayson-health-extended-event-diagnostic-log.png":::
+
 The SQL Server error log on the secondary replica isn't much help when estimating reverting completion. From the following image, you can observe from **10:08** to **11:03** while in the reverting state, little is reported. Once the secondary has received all the pages from the primary replica, it's now able to roll back the transaction that was running on the original primary that triggered the reverting state. Recovery runs from **11:03** to **11:05**. Shortly after recovery completes, the database should begin to synchronize with the primary replica and catch up on all the changes made at the primary while the secondary database was in the reverting state.
 
-:::image type="content" source="media/diagnose-availability-group-database-reverting-state/reverting-recovery.png" alt-text="The screenshot shows the SQL Server error log for reverting and recovery phase." lightbox="media/diagnose-availability-group-database-reverting-state/reverting-recovery.png":::
+:::image type="content" source="media/diagnose-availability-group-database-reverting-state/sql-server-error-log-on-the-secondary-replica" alt-text="The screenshot shows the SQL Server error log for reverting and recovery phase." lightbox="media/diagnose-availability-group-database-reverting-state/sql-server-error-log-on-the-secondary-replica":::
 
 ### Monitor reverting completion time using Performance Monitor
 
 Monitor the reverting state progress using the performance counters **SQL Server:Database Replica:Total Log Requiring Undo** and **SQL Server:Database Replica:Log Remaining for Undo** and choose the availability group database for the Instance. In the example in the following screenshot, **Total Log Requiring Undo** is reported as **56.3** mb, and **Log Remaining for Undo** is slowly dropping to **0** that is reporting the reverting progress.
 
-:::image type="content" source="media/diagnose-availability-group-database-reverting-state/log-remaining-undo.png" alt-text="The screenshot shows the performance counters for Total Log Requiring Undo and Log Remaining for Undo." lightbox="media/diagnose-availability-group-database-reverting-state/log-remaining-undo.png":::
+:::image type="content" source="media/diagnose-availability-group-database-reverting-state/total-log-requiring-undo-log-remaining-undo" alt-text="The screenshot shows the performance counters for Total Log Requiring Undo and Log Remaining for Undo." lightbox="media/diagnose-availability-group-database-reverting-state/total-log-requiring-undo-log-remaining-undo":::
 
 ## What are your other options other than waiting?
 
