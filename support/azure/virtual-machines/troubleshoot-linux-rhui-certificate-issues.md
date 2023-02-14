@@ -233,7 +233,7 @@ All the following commands should be run by using root privileges or by specifyi
 2. Install the `rhui-azure-rhel9` package by running the `yum install` command:
 
    ```bash
-   sudo yum --config=rhui-microsoft-azure-9.config install rhui-azure-rhel9
+   sudo yum --config=rhui-microsoft-azure-rhel9.config install rhui-azure-rhel9
    ```
 
 3. Verify that the corresponding repositories are available and show no errors by running the `dnf repolist` command:
