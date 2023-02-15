@@ -9,7 +9,7 @@ author: MonicaChenc
 ms.author: v-cuichen
 ms.reviewer: mireks, vanto, rajat.jain, chrisbrower, arupp
 ---
-# KB5023236 - FIX: Database accessibility issues with high-volume customer workloads that use EKM for encryption and key generation
+# FIX: Database accessibility issues with high-volume customer workloads that use EKM for encryption and key generation
 
 ## Symptoms
 
