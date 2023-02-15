@@ -73,7 +73,7 @@ A GDR can have either an RTM baseline or a CU baseline. The latest GDR version f
 
 **Determine the latest GDR for RTM baseline:**
 
-The following are the RTM GDRs that are available for SQL Server 2019 as of February 6, 2023 per the builds spreadsheet.
+The following are the RTM GDRs that are available for SQL Server 2019 as of February 6, 2023 when you filter on RTM-GDR in *Cumulative Update or Security ID* column in [builds spreadsheet](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fdownload.microsoft.com%2Fdownload%2Fd%2F3%2Fe%2Fd3e28f3d-6a4f-47ce-aaa5-9d74c5590ed6%2FSQLServerBuilds.xlsx&wdOrigin=BROWSELINK).
 
 |Build number|KB number|KB URL|
 |-|-|-|
