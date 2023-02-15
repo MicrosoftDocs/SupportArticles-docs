@@ -53,7 +53,7 @@ If the connectivity issue is caused by the Application Insights Java agent, cons
 
 If the Java virtual machine (JVM) fails to start, it might return an "Error opening zip file or JAR manifest missing" message. That error means that the agent jar file might have been corrupted during file transfer. Try redownloading the agent jar file.
 
-## Startup delays in Tomcat Java apps
+## Tomcat Java apps take several minutes to start
 
 If you [enabled Application Insights to monitor your Tomcat application](https://tomcat.apache.org/), there might be a several-minute delay in the time that it takes to start the application. This delay is caused because Tomcat tries to scan the Application Insights jar files during application startup. To speed up the application start time, you can exclude the Application Insights jar files from the list of scanned files. Scanning these jar files isn't necessary.
 
