@@ -71,6 +71,8 @@ You can test Azure AD authentication over IPv6 before we enable it worldwide in 
 
 > [!NOTE]
 > Microsoft is providing these instructions for testing purposes only. You must remove the following configurations by May 2023 to ensure that your clients are using production DNS servers. The DNS servers in the following procedures may be decommissioned after May 2023.
+> 
+> Please be kindly advised that using the [Resolve-DnsName](/powershell/module/dnsclient/resolve-dnsname) cmdlet is most appropriate for validating [NRPT](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn593632(v=ws.11)) rules, using the [nslookup](/windows-server/administration/windows-commands/nslookup)  command may not show the same result and this is to be expected given the differences that exist between these tools .
 
 ### Configure a client NRPT rule manually
 
