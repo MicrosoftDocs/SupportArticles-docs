@@ -330,7 +330,11 @@
   - name: SUSE
     items:
     - name: SUSE VM connectivity and registration issues
-      href: suse-public-cloud-connectivity-registration-issues.md
+      href: suse-public-cloud-connectivity-registration-issues.md      
+  - name: Red Hat
+    items:
+    - name: Red Hat RHUI certificate issues
+      href: troubleshoot-linux-rhui-certificate-issues.md
 
 - name: VM extensions troubleshooting
   items:

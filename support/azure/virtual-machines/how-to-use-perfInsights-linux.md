@@ -196,7 +196,7 @@ The following categories of rules are currently supported:
     | Debian                     | 8, 9, 10, 11 [`*`]                                    |
     | SLES                       | 12 SP4 [`*`], 12 SP5 [`*`], 15 [`*`], 15 SP1 [`*`], 15 SP2 [`*`], 15 SP4 [`*`]                                      |
     | AlmaLinux                  | 8.4, 8.5                                               |
-    |                            |                                                   |
+    | CBL-Mariner                | 2.0                                                   |
 
 >[!Note]
 >[`*`] Please refer to [Known issues](#known-issues) section
