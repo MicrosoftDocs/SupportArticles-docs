@@ -19,8 +19,6 @@ ms.date: 02/14/2023
 
 # Resolve errors in Microsoft 365 retention and retention label policies
 
-[!include[Purview banner](../../../includes/purview-rebrand.md)]
-
 If you encounter an error that's related to Microsoft 365 retention or retention label policies, select the applicable error description from the following list:
 
 - [Settings not found](#error-settings-not-found)

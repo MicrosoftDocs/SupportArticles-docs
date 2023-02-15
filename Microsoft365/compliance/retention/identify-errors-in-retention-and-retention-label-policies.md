@@ -19,8 +19,6 @@ ms.date: 02/14/2023
 
 # Identify errors in Microsoft 365 retention and retention label policies
 
-[!include[Purview banner](../../../includes/purview-rebrand.md)]
-
 This article provides steps that you can follow to check for errors in Microsoft 365 retention or retention label policies. You can find these policies in the [Data Lifecycle Management](https://compliance.microsoft.com/informationgovernance) and [Records Management](https://compliance.microsoft.com/recordsmanagement) solutions within the [Microsoft Purview compliance portal](https://compliance.microsoft.com/).
 
 Policy errors can occur during the policy sync and distribution process in [Microsoft Purview](/azure/purview/overview). This process is a prerequisite for policy enforcement. How a policy is enforced depends on the type of policy:
