@@ -24,7 +24,6 @@ Windows Vista, Windows Server 2008, and later versions of Windows implement RFC 
 
 By default, Windows favors IPv6 global unicast addresses over IPv4 addresses.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 929852
 
 ## Summary
