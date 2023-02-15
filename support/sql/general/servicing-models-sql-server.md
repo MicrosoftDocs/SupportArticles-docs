@@ -29,7 +29,7 @@ The SQL Server team uses a scheduled delivery model for releasing fixes and prod
 |**Release frequency** |Every month for the first year after a SQL Server release, and every two months for the remaining four years of the full 5-year [mainstream lifecycle](/lifecycle/products/?products=sql-server). |Every two months for a given baseline. |
 |**Localized content** |Will accommodate localized content, allowing new feature completeness and supportability enhancements to be delivered faster. ||
 |**Example** |[KB5016394 - Cumulative Update 17 for SQL Server 2019 (microsoft.com)](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7)|[B5001092 - Cumulative Update 17 for SQL Server 2016 SP2 (microsoft.com)](https://support.microsoft.com/topic/kb5001092-cumulative-update-17-for-sql-server-2016-sp2-5876a4d6-59ac-484a-93dc-4be456cd87d1)|
-|**Notes** |CU31 for 2017 is the last CU for SQL Server 2017. We'll ship only on-demand fixes and security updates for SQL Server 2017.|We no longer ship CUs for SQL Server 2016 and earlier versions. Only on-demand fixes and security updates will be shipped.|
+|**Notes** |CU31 for 2017 is the last CU for SQL Server 2017. We'll ship only on-demand fixes and security updates for SQL Server 2017.|We no longer ship CUs for SQL Server 2016 and earlier versions. Only on-demand fixes and security updates will be shipped. For products that reached Extended Support End date, you will require [Extended Security Update (ESU) subscription](sql/sql-server/end-of-support/sql-server-extended-security-updates) for receiving security updates. |
 
 > [!NOTE]
 > The update can be requested by any customer, regardless of their support offering.
