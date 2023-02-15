@@ -52,10 +52,6 @@
       "recommendations": true
     },
     "fileMetadata": {
-      "feedback_system": {
-        "azure/*.md": "GitHub",
-        "azure/**/*.md": "GitHub"
-      },
       "layout": {
         "**/index.yml": "LandingPage"
       },
