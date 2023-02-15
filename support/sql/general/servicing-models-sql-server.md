@@ -81,7 +81,7 @@ The following are the RTM GDRs that are available for SQL Server 2019 as of Febr
 |15.0.2080.9|4583458|[https://support.microsoft.com/kb/4583458](https://support.microsoft.com/kb/4583458)|
 |15.0.2070.41|4517790|[https://support.microsoft.com/kb/4517790](https://support.microsoft.com/kb/4517790)|
 
-If you're a customer who opted for only GDR updates to the RTM version and no CUs, 15.0.2095.3 is the latest GDR for your RTM-baseline.
+If you're a customer who opted for only GDR updates to the RTM version and no CUs, 15.0.2095.3 is the latest GDR build for your RTM-baseline.
 
 **Determine the latest GDRs for a CU baseline:**
 
