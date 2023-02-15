@@ -117,6 +117,8 @@
       href: ../lists-and-libraries/film-reel-icon-video-content.md
     - name: Can't check in multiple items in a document library
       href: ../lists-and-libraries/cannot-check-in-multiple-items.md
+    - name: Can't delete Teams channel folders
+      href: ../lists-and-libraries/deleted-teams-standard-channel-folder-deletion-fails.md
     - name: Can't open documents in a local client from Chrome
       href: ../../SharePointServer/lists-and-libraries/cant-open-sp-documents-from-chrome.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Can't share/break inheritance of a folder, list, or library
