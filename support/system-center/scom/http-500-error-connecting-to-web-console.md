@@ -21,12 +21,14 @@ This issue doesn't occur if you connect to the web console from the web console 
 
 ## Resolution
 
-To fix the issue, perform the following configurations and verification, and then connect to the web console again:
+To fix the issue, perform the following configurations and verifications, and then connect to the web console again:
 
-1. [Register the SDK SPNs](#register-the-http-spns)
-2. [Register the HTTP SPNs](#register-the-http-spns)
-3. [Configure constraint delegations](#configure-constraint-delegations)
-4. [Verify "Account is sensitive and cannot be delegated" isn't set](#verify-account-is-sensitive-and-cannot-be-delegated-isnt-set)
+1. [Register the SDK SPNs](#register-the-sdk-spns)
+1. [Verify the SDK SPNs](#verify-the-sdk-spns)
+1. [Register the HTTP SPNs](#register-the-http-spns)
+1. [Verify the HTTP SPNs](#verify-the-http-spns)
+1. [Configure constraint delegations](#configure-constraint-delegations)
+1. [Verify "Account is sensitive and cannot be delegated" isn't set](#verify-account-is-sensitive-and-cannot-be-delegated-isnt-set)
 
 > [!NOTE]
 > The following sample names are used in configuration steps. You have to replace them with the names in your environment.
@@ -55,7 +57,21 @@ To register the System Center Data Access (SDK) Service Principal Names (SPNs), 
     Setspn.exe -S MSOMSdkSvc/SCOMMS.Lab.Local SDKSvc
     ```
 
-    To verify if the SDK service is registered, run the `Setspn.exe -L SDKSvc` command.
+### Verify the SDK SPNs
+
+To verify if the SDK service is registered, run the following command according to different scenarios:
+
+- Scenario 1: The SDK service runs under a LocalSystem account
+
+    ```console
+    Setspn.exe -L SCOMMS
+    ```
+
+- Scenario 2: The SDK service runs under a domain account (SDKSvc)
+
+    ```console
+    Setspn.exe -L SDKSvc
+    ```
 
 ### Register the HTTP SPNs
 
@@ -75,7 +91,21 @@ To register the HTTP SPNs, run the following commands according to different sce
     Setspn.exe -S HTTP/mySCOM.Lab.Local SCOMAppPool
     ```
 
-    To verify if the HTTP service is registered, run the `Setspn.exe -L SCOMAppPool` command.
+### Verify the HTTP SPNs
+
+To verify if the HTTP service is registered, run the following command according to different scenarios:
+
+- Scenario 1: The Web console application pool runs under the default identity (ApplicationPoolIdentity)
+
+    ```console
+    Setspn.exe -L SCOMWeb
+    ```
+
+- Scenario 2: The Web console application pool runs under a custom identity (Lab\SCOMAppPool)
+
+    ```console
+    Setspn.exe -L SCOMAppPool
+    ```
 
 ### Configure constraint delegations
 
