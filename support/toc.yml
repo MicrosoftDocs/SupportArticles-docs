@@ -7,7 +7,7 @@
 - name: Welcome
   href: developer/visualstudio/welcome-visual-studio.yml
 - name: Welcome
-  href: developer/webapps/welcome-webapps.md
+  href: developer/webapps/welcome-webapps.yml
 - name: Welcome
   href: windows/win32/welcome-windowsdeveloper.md
 - name: Welcome

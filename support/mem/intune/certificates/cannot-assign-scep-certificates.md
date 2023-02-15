@@ -10,6 +10,11 @@ ms.reviewer: kaushika, joelste, shhodge
 
 This article fixes an issue in which you can't assign Simple Certificate Enrollment Protocol (SCEP) certificates to devices in Microsoft Intune after you renew an expired certificate.
 
+> [!IMPORTANT]  
+> The details in this article apply only to the **Microsoft Intune Connector**. Support for this connector ends in July 2021, when it's replaced by the **Certificate Connector for Microsoft Intune**.
+>
+> If you use the new connector, see [Certificate Connector for Microsoft Intune](/mem/intune/protect/certificate-connector-overview) for more information about capabilities, connector status, and log details including a list of Log Event IDs for the newer connector.
+
 ## Symptoms
 
 You use Microsoft Intune to assign SCEP certificates to devices that you manage. After you renew an expired certificate, new certificates can't be assigned to the devices. When you open the NDESPlugin.log file, the log stops at **Sending request to certificate registration point**.

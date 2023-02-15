@@ -7,7 +7,7 @@ ms.author: v-dele
 ms.reviewer: irfanr, arboisse
 editor: v-jsitser
 ms.service: azure-monitor
-ms.subservice: logs
+ms.subservice: logs-troubleshoot
 keywords:
 #Customer intent: As an Azure Monitor user, I want to check the connectivity of Secure Sockets Layer (SSL) for the Microsoft Monitoring Agent so that the agent can successfully communicate over the network on a Windows computer.
 ---

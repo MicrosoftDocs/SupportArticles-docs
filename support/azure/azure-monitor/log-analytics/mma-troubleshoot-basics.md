@@ -7,7 +7,7 @@ ms.author: arboisse
 ms.reviewer: arboisse
 editor: v-jsitser
 ms.service: azure-monitor
-ms.subservice: logs
+ms.subservice: logs-troubleshoot
 ---
 
 # Azure Log Analytics Monitoring Agent troubleshooting basics

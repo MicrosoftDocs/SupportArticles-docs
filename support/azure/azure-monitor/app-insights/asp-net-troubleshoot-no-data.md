@@ -382,7 +382,7 @@ To remove Application Insights in Visual Studio, follow the steps provided in [H
 
 ## It still isn't working
 
-See the [Microsoft Q&A page for Application Insights](/answers/questions/topics/azure-monitor.html).
+See the [Microsoft Q&A page for Application Insights](/answers/tags/20/azure-monitor).
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 

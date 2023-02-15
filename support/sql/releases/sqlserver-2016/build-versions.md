@@ -19,6 +19,7 @@ This article lists the Microsoft SQL Server 2016 builds that were released after
 
 | Cumulative Update Name | Product Version | Knowledge Base Number | Release Day |
 |--------------------------|-----------------|-----------------------|---------------|
+| Azure Connect Pack + GDR | 13.0.7024.30 | [KB5021128](https://support.microsoft.com/help/5021128) | February 14, 2023 |
 | Azure Connect Pack + GDR | 13.0.7016.1 | [KB5015371](https://support.microsoft.com/help/5015371) | June 14, 2022 |
 | Azure Connect Pack | 13.0.7000.253 | [KB5014242](https://support.microsoft.com/help/5014242) | May 19, 2022|
 
@@ -26,6 +27,7 @@ This article lists the Microsoft SQL Server 2016 builds that were released after
 
 | Cumulative Update Name | Product Version | Knowledge Base Number | Release Day|
 |------------------------|-----------------|-----------------------|--------------------|
+| SP3 + GDR| 13.0.6430.49 | [KB5021129](https://support.microsoft.com/help/5021129) | February 14, 2023|
 | SP3 + GDR| 13.0.6419.1 | [KB5014355](https://support.microsoft.com/help/5014355) | June 14, 2022|
 | SP3| 13.0.6300.2 | [KB5003279](https://support.microsoft.com/help/5003279) | September 15, 2021 |
 
@@ -94,9 +96,9 @@ This article lists the Microsoft SQL Server 2016 builds that were released after
 ## References
 
 - [Microsoft SQL Server support lifecycle](https://support.microsoft.com/lifecycle/?c2=1044)
-- [KB321185](../download-and-install-latest-updates.md) Latest updates and version history for SQL Server
+- [Latest updates and version history for SQL Server](../download-and-install-latest-updates.md)
 - [The script to determine which version and edition of SQL Server Database Engine is running](https://gallery.technet.microsoft.com/determining-which-version-af0f16f6)
 - [KB957826](https://support.microsoft.com/help/957826) The builds for all SQL Server versions
 - [KB3177534](https://support.microsoft.com/help/3177534) How to obtain the latest service pack for SQL Server 2016
-- [KB822499](../../database-engine/install/windows/naming-schema-and-fix-area.md) Naming schema and Fix area descriptions for SQL Server software update packages
-- [KB824684](../../../windows-client/deployment/standard-terminology-software-updates.md) Description of the standard terminology that is used to describe Microsoft software updates
+- [Naming schema and Fix area descriptions for SQL Server software update packages](../../database-engine/install/windows/naming-schema-and-fix-area.md)
+- [Description of the standard terminology that is used to describe Microsoft software updates](../../../windows-client/deployment/standard-terminology-software-updates.md)

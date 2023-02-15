@@ -7,7 +7,7 @@ ms.author: v-dele
 ms.reviewer: irfanr, nali2, arboisse
 editor: v-jsitser
 ms.service: azure-monitor
-ms.subservice: logs
+ms.subservice: logs-troubleshoot
 keywords:
 #Customer intent: As an Azure Monitor user, I want to troubleshoot why the Log Analytics agent for Linux doesn't report heartbeats to the Log Analytics workspace so that I can successfully monitor the health of my Linux virtual machine.
 ---

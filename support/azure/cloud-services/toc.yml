@@ -54,6 +54,8 @@
     href: gather-log-files-offline-analysis-preservation.md
   - name: Grant a virtual network sole access to your cloud service
     href: grant-virtual-network-sole-access.md
+  - name: Manage VIP swaps using PowerShell
+    href: manage-vip-swap-powershell.md
   - name: No space on the E or F drive
     href: no-space-e-f-drive.md
   - name: RDP connections fail occasionally
@@ -74,6 +76,8 @@
     href: troubleshoot-with-app-insights-features-overview.md
   - name: Troubleshoot with App Insights-common scenarios
     href: troubleshoot-common-scenario-use-app-insights.md
+  - name: Use App Insights to track logical drive free space
+    href: app-insights-track-free-space-logical-drive.md
   - name: Windows PaaS compute diagnostic data
     href: windows-azure-paas-compute-diagnostic-data.md
 

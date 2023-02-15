@@ -19,9 +19,9 @@ To get support for Linux Agent and extensions in Azure, the [Linux Agent](https
 
 **Starting in July 2022**, the minimum supported version will be version 2.2.53.1 for the Linux Agent.
 
-- If the Linux Agent version is earlier than version 2.2.10, you must update the VM by using the distribution package manager and by enabling auto-update.
+- If the Linux Agent version is earlier than version 2.2.53.1, you must update the VM by using the distribution package manager and by enabling auto-update.
 - If the distribution vendor doesn't have the minimum Linux Agent version in the package repositories, the system is still in support. If the Linux Agent version is later than version 2.1.7, you must enable the Agent auto-update feature. It will retrieve the latest version of code for extension handling.
-- If the Linux Agent version is earlier than version 2.2.10, or if the Linux system is out-of-support, we may require you to update the agent before getting support.
+- If the Linux Agent version is earlier than version 2.2.53.1, or if the Linux system is out-of-support, we may require you to update the agent before getting support.
 - If the Linux Agent version is customized by a publisher, Microsoft may direct you to the publisher for support agent or extension-specific support because of the customization.
  To upgrade the Linux Agent, see [How to update the Azure Linux Agent on a VM](/azure/virtual-machines/linux/update-agent).
 

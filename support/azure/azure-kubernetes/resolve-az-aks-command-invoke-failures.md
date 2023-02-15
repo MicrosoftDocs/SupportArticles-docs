@@ -79,7 +79,7 @@ To exempt an Azure Policy:
 
 1. In the **Namespace exclusions** box, add the *aks-command* namespace to the list of namespaces to be excluded.
 
-Alternatively, if the policy isn't a built-in policy, you can check the configuration of the `command-<ID>` pod, and adjust the policy as necessary. To view the pod's YAML configuration, run the following command:
+Alternatively, if the policy isn't a built-in policy, you can check the configuration of the `command-<ID>` pod, and adjust the policy as necessary. To explore the pod's YAML configuration, run the following command:
 
 ```bash
 kubectl get pods command-<ID> --namespace aks-command --output yaml

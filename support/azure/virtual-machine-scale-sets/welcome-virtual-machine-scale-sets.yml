@@ -28,12 +28,26 @@ landingContent:
             url: allocationfailed-or-zonalallocationfailed.md
 
    # Card
+  - title: Deletion errors
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: OperationNotAllowed
+            url: vmss-operation-not-allowed.md
+
+   # Card
   - title: Deployment errors
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Public IP count limit exceeded
             url: vmss-public-ip-count-limit-exceeded.md
+          - text: InvalidParameter - Fault domain count
+            url: vmss-invalid-parameter-fault-domain-count.md
+          - text: InvalidParameter - SinglePlacementGroup
+            url: vmss-invalid-parameter-single-placement-group.md
+          - text: OutboundConnectivityNotEnabledOnVM
+            url: vmss-outbound-connectivity-not-enabled.md
 
    # Card
   - title: Extension issues

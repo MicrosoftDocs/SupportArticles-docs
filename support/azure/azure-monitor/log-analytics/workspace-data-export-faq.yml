@@ -8,7 +8,7 @@ metadata:
   ms.author: v-dele
   ms.reviewer: josecons, neghuman
   ms.service: azure-monitor
-  ms.subservice: logs
+  ms.subservice: logs-troubleshoot
 
 title: Azure Log Analytics workspace data export FAQ
 summary: This article answers frequently asked questions (FAQ) about how to export data from a Microsoft Azure Log Analytics workspace.

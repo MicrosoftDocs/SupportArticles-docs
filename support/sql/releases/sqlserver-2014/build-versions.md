@@ -16,6 +16,8 @@ This article lists the Microsoft SQL Server 2014 builds that were released after
 
 | Cumulative update name| Build version | Knowledge Base number | Release day |
 |-------------------------|---------------|-----------------------|-------------------|
+| SQL Server 2014 SP3 CU4 GDR| 12.0.6444.4 | [KB5021045](https://support.microsoft.com/help/5021045) | February 14, 2023 |
+| SQL Server 2014 SP3 GDR| 12.0.6174.8 | [KB5021037](https://support.microsoft.com/help/5021037) | February 14, 2023 |
 | SQL Server 2014 SP3 CU4 | 12.0.6329.1 | [KB4500181](https://support.microsoft.com/help/4500181) | July 29, 2019 |
 | SQL Server 2014 SP3 CU3 | 12.0.6259.0 | [KB4491539](https://support.microsoft.com/help/4491539) | April 16, 2019|
 | SQL Server 2014 SP3 CU2 | 12.0.6214.1 | [KB4482960](https://support.microsoft.com/help/4482960) | February 19, 2019 |
@@ -88,9 +90,9 @@ This article lists the Microsoft SQL Server 2014 builds that were released after
 ## References
 
 - [Microsoft SQL Server support lifecycle](https://support.microsoft.com/lifecycle/?c2=1044)
-- [KB321185](../download-and-install-latest-updates.md) Latest updates and version history for SQL Server
+- [Latest updates and version history for SQL Server](../download-and-install-latest-updates.md)
 - [The script to determine which version and edition of SQL Server Database Engine is running](https://gallery.technet.microsoft.com/determining-which-version-af0f16f6)
 - [KB957826](https://support.microsoft.com/help/957826) The builds for all SQL Server versions
 - [KB2958069](https://support.microsoft.com/help/2958069) How to obtain the latest service pack for SQL Server 2014
-- [KB822499](../../database-engine/install/windows/naming-schema-and-fix-area.md) Naming schema and Fix area descriptions for SQL Server software update packages
-- [KB824684](../../../windows-client/deployment/standard-terminology-software-updates.md) Description of the standard terminology that is used to describe Microsoft software updates
+- [Naming schema and Fix area descriptions for SQL Server software update packages](../../database-engine/install/windows/naming-schema-and-fix-area.md)
+- [Description of the standard terminology that is used to describe Microsoft software updates](../../../windows-client/deployment/standard-terminology-software-updates.md)

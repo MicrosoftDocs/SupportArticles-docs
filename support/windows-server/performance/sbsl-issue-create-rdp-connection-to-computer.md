@@ -28,9 +28,9 @@ In other cases, you may see the new user logons are slowed down to a degree they
 
 ## Cause
 
-This issue occurs because of a deadlock condition that involves terminal services (termsrv.dll), lsass (kerberos), and redirector. The deadlock occurs when terminal services try to load the user configuration data by issuing remote registry calls to the domain controller.
+This issue occurs because of a deadlock condition that involves Remote Desktop Services (RDS) (termsrv.dll), lsass (kerberos), and redirector. The deadlock occurs when RDS services try to load the user configuration data by issuing remote registry calls to the domain controller.
 
-When you experience slow or hung logons, terminal server service makes calls to API to a domain controller, and the round trips for these induce significant delays. This may occur for the following reasons:
+When you experience slow or hung logons, RDS service makes calls to API to a domain controller, and the round trips for these induce significant delays. This may occur for the following reasons:
 
 - The network link to the Domain Controller is slow, congested and sees frame loss, and significant time is spent with retries to transfer data.
 - The Domain Controller experiences local performance issues and responds to the requests slowly.

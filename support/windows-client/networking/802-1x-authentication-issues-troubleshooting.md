@@ -1,7 +1,7 @@
 ---
 title: 802.1X authentication issues troubleshooting
 description: Troubleshoot authentication flow by learning how 802.1X Authentication works for wired and wireless clients.
-ms.date: 08/22/2022
+ms.date: 02/14/2023
 ms.prod: windows-client
 author: aczechowski
 ms.author: aaroncz
@@ -15,6 +15,9 @@ audience: itpro
 localization_priority: medium
 ---
 # Advanced troubleshooting 802.1X authentication
+
+> [!div class="nextstepaction"]
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806441" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common Wireless technology issues.
 
 _Applies to:_ &nbsp; Windows 10
 

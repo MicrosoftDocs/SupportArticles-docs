@@ -6,6 +6,7 @@ ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: nigreenf
 ms.service: azure-kubernetes-service
+ms.subservice: troubleshoot-extensions-add-ons
 ms.date: 11/4/2022
 ms.custom: devx-track-azurecli
 ---

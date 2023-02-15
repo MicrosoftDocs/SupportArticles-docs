@@ -11,7 +11,7 @@ ms.reviewer:
 
 App services are hosted on Azure App Service plans that define the compute resources that you need to be able to run a web app. The compute resources, also known as instances, can occasionally become unavailable. This video helps you to identify such issues, and explains how to resolve them. From improving load balancing to moving to an entirely new set of instances, you'll be well equipped to resolve instance-related issues by applying these techniques.
 
-> [!VIDEO <https://www.youtube.com/embed/Cg_muggc2m0>]
+> [!VIDEO https://www.youtube.com/embed/Cg_muggc2m0]
 
 ## Related content
 

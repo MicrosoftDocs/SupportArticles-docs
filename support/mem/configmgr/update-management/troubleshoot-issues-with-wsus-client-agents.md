@@ -143,13 +143,13 @@ To repair a corrupted BITS configuration, follow these steps:
 
     ```console
     sc config bits binpath= "%systemroot%\system32\svchost.exe –k netsvcs"
-    sc config bits depend= RpcSs EventSystem
+    sc config bits depend= RpcSs/EventSystem
     sc config bits start= delayed-auto
-    sc config bits type= interact
+    sc config bits type= interact type=own
     sc config bits error= normal
     sc config bits obj= LocalSystem
     sc privs bits privileges= SeCreateGlobalPrivilege/SeImpersonatePrivilege/SeTcbPrivilege/SeAssignPrimaryTokenPrivilege/SeIncreateQuotaPrivilege
-    sc sidtype bits type= unrestricted
+    sc sidtype bits unrestricted
     sc failure bits reset= 86400 actions=restart/60000/restart/120000
     ```
 

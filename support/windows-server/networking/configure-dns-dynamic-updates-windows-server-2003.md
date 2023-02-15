@@ -1,7 +1,7 @@
 ---
 title: How to configure DNS dynamic updates in Windows Server
 description: Describes that  how to configure DNS dynamic updates in Windows Server and how to integrate DNS updates with DHCP.
-ms.date: 06/16/2021
+ms.date: 01/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -41,7 +41,7 @@ Windows provides the following features that are related to the DNS dynamic upda
     The DNS Server service can scan and remove records that are no longer required. When you enable this feature, you can prevent outdated records from remaining in DNS.
 - Secure dynamic updates in Active Directory-integrated zones.
 
-    You can configure Active Directory-integrated zones for secure dynamic updates so that only authorized users can make changes to a zone or to a record.
+    You can configure Active Directory-integrated zones for secure dynamic updates so that only authorized clients can make changes to a zone or to a record.
 - Administration from a command prompt.
 - Enhanced name resolution.
 - Enhanced caching and negative caching.

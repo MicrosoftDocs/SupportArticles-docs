@@ -25,6 +25,17 @@
   items:
   - name: Public IP count limit exceeded
     href: vmss-public-ip-count-limit-exceeded.md
+  - name: InvalidParameter - Fault domain count
+    href: vmss-invalid-parameter-fault-domain-count.md
+  - name: InvalidParameter - SinglePlacementGroup
+    href: vmss-invalid-parameter-single-placement-group.md
+  - name: OutboundConnectivityNotEnabledOnVM
+    href: vmss-outbound-connectivity-not-enabled.md
+
+- name: Troubleshoot deletion errors
+  items:
+  - name: OperationNotAllowed
+    href: vmss-operation-not-allowed.md
 
 - name: Troubleshoot extension issues
   items:
