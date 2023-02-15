@@ -2,8 +2,8 @@
 title: Troubleshoot connectivity issues on a dedicated SQL pool
 description: Provides methods for troubleshooting initial and dropped connections on a dedicated SQL pool.
 ms.date: 02/13/2023
-author: padmajayaraman
-ms.author: v-jayaramanp
+author: scott-epperly
+ms.author: goventur
 ms.reviewer: scepperl
 ---
 
@@ -35,13 +35,14 @@ The [Azure SQL connectivity checker](https://github.com/Azure/SQL-Connectivity-C
 The following PowerShell script downloads and runs the latest version of the Azure SQL connectivity checker. You can run it from any client computer on which persistent connectivity issues occur.
 
 > [!NOTE]
-> - To run the tests in Linux, from computers that have no internet access, or from a containerized environment, see [SQL connectivity checker on GitHub](https://github.com/Azure/SQL-Connectivity-Checker).
+> - To run the tests in Linux, from computers that have no Internet access, or from a containerized environment, see [SQL connectivity checker on GitHub](https://github.com/Azure/SQL-Connectivity-Checker).
 > - For more PowerShell commands, see [Available PowerShell commands](/powershell/module/azurerm.sql#sql).
 
 1. Open Windows PowerShell ISE (in **Administrator** mode if possible).
-   > **Note:** To collect a network trace together with the tests (`CollectNetworkTrace` parameter), you must run PowerShell as an administrator.
+   > [!NOTE]
+   > To collect a network trace together with the tests (`CollectNetworkTrace` parameter), you must run PowerShell as an administrator.
 1. Open a **New Script** window.
-1. Copy or paste the following text into the script window:
+1. Copy and paste the following text into the script window:
 
  ```
   $parameters = @{
@@ -87,11 +88,12 @@ The following PowerShell script downloads and runs the latest version of the Azu
 1. Set the parameters on the script.
     - Specify the server name and database name.
     - Specify the user and password information.
-      **Note:** This step is optional but is a best practice.
+      > [!NOTE]
+      > This step is optional but is a best practice.
 1. Run the script.
-   - Results are displayed in the output window. If the user has permissions to create folders, a folder that includes the resulting log file is created, together with a .zip file (`AllFiles.zip`). In Windows, the folder opens automatically after the script finishes running.
+   Results are displayed in the output window. If the user has permissions to create folders, a folder that includes the resulting log file is created, together with a .zip file (`AllFiles.zip`). In Windows, the folder opens automatically after the script finishes running.
 1. Examine the output for any detected issues, and follow the recommended steps to resolve the issue.
-   - If the issue can't be resolved, send the `AllFiles.zip` file to Microsoft by using the **File upload** option in the **Details** step when you create your Support Request.
+   If the issue can't be resolved, send the `AllFiles.zip` file to Microsoft by using the **File upload** option in the **Details** step when you create your Support Request.
 
 ## Troubleshoot intermittent connectivity errors
 
@@ -123,7 +125,7 @@ Use this table to find descriptions and mitigations for the most common error me
 
 | Error message | Description and Mitigation |
 |-----|----|
-| **Error 18456: Login failed for user 'NT AUTHORITY\ANONYMOUS LOGON'. (Microsoft SQL Server, Error: 18456)** |This error occurs when an Azure AD user tries to connect to the master database but doesn't have a user in the master. To correct this issue, either specify the dedicated SQL pool that you want to connect to at connection time, or add the user to the master database. For more information, see [Security overview](/azure/azure-sql/database/security-overview) and [sign-in errors with state and description](/sql/relational-databases/errors-events/ the SAS token. Consider switching to [Managed identity](/azure/synapse-analytics/sql/develop-storage-files-storage-access-control?tabs=managed-identity#supported-storage-authorization-types) or [Azure AD pass-through](/azure/synapse-analytics/sql/develop-storage-files-storage-access-control?tabs=user-identity#supported-storage-authorization-types) authentication to access protected storage. For more information, see [Grant access to trusted Azure services](/azure/storage/common/storage-network-security?tabs=azure-portal#grant-access-to-trusted-azure-services) and [Control storage account access for serverless SQL pool](/azure/synapse-analytics/sql/develop-storage-files-storage-access-control?tabs=user-identity). |
+| **Error 18456: Login failed for user 'NT AUTHORITY\ANONYMOUS LOGON'. (Microsoft SQL Server, Error: 18456)** |This error occurs when an Azure AD user tries to connect to the master database but doesn't have a user in the master. To correct this issue, either specify the dedicated SQL pool that you want to connect to at connection time, or add the user to the master database. For more information, see [Security overview](/azure/azure-sql/database/security-overview) and [sign-in errors with state and description](/sql/relational-databases/errors-events/ of the SAS token. Consider switching to [Managed identity](/azure/synapse-analytics/sql/develop-storage-files-storage-access-control?tabs=managed-identity#supported-storage-authorization-types) or [Azure AD pass-through](/azure/synapse-analytics/sql/develop-storage-files-storage-access-control?tabs=user-identity#supported-storage-authorization-types) authentication to access protected storage. For more information, see [Grant access to trusted Azure services](/azure/storage/common/storage-network-security?tabs=azure-portal#grant-access-to-trusted-azure-services) and [Control storage account access for serverless SQL pool](/azure/synapse-analytics/sql/develop-storage-files-storage-access-control?tabs=user-identity). |
 | **Error 916: The server principal "MyUserName" is not able to access the database "master" under the current security context. Cannot open user default database. Login failed. Login failed for user 'MyUserName'. (Microsoft SQL Server, Error: 916)** | This error occurs when an Azure AD user tries to connect to the master database but doesn't have a user in the master. To correct this issue, either specify the dedicated SQL pool that you want to connect to at connection time or add the user to the master database. For more information, see [Security overview](/azure/azure-sql/database/security-overview) and [sign-in errors with state and description](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).|
 | **Error 40613: Database X on server Y is not currently available**| Error 40613 is a nonspecific, [transient error](/azure/azure-sql/database/troubleshoot-common-connectivity-issues) returned by Azure any time that your database is unavailable. You should expect occasional brief periods (for example, less than 60 seconds) during which you see error "40613." To accommodate this scenario, make sure that all production applications have robust [retry logic](/azure/azure-sql/database/troubleshoot-common-connectivity-issues#retry-logic-for-transient-errors).|
 | **Error 40615: Cannot open server '{0}' requested by the login. Client with IP address '{1}' is not allowed to access the server**| The client is trying to connect from an IP address that isn't authorized to connect to the Azure SQL Database server. The server firewall has no IP address rule that allows a client to communicate from the given IP address to the SQL Database. Enter the client's IP address as a new IP rule in the **Firewall** settings of the resource in Azure portal. A list of several SQL Database error messages is documented [here](/azure/sql-database/sql-database-develop-error-messages). |
