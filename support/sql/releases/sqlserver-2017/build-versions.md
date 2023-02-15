@@ -53,6 +53,8 @@ This article lists the Microsoft SQL Server 2017 builds that were released after
 
 | Cumulative update name | SQL Server product version | SQL Server (sqlservr.exe) file version | Analysis Services product version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
 |------------------------|----------------------------|----------------------------------------|-----------------------------------|----------------------------------------------|-----------------------|--------------------|
+| CU31 GDR | 14.0.3460.9 | 2017.140.3460.9 | 14.0.249.106 | 2017.140.249.106 | [KB5021126](https://support.microsoft.com/help/5021126) | February 14, 2023|
+| GDR | 14.0.2047.8 | 2017.140.2047.8 | 14.0.6.471 | 2017.140.6.471 | [KB5021127](https://support.microsoft.com/help/5021127) | February 14, 2023|
 | CU29 GDR | 14.0.3445.2| 2017.140.3445.2| 14.0.249.90 | 2017.140.249.90| [KB5014553](https://support.microsoft.com/help/5014553) | June 14, 2022|
 | GDR| 14.0.2042.3| 2017.140.2042.3| 14.0.6.461| 2017.140.6.461 | [KB5014354](https://support.microsoft.com/help/5014354) | June 14, 2022|
 | CU22 GDR | 14.0.3370.1| 2017.140.3370.1| 14.0.246.62 | 2017.140.249.62| [KB4583457](https://support.microsoft.com/help/4583457) | January 21, 2021 |
@@ -63,6 +65,7 @@ This article lists the Microsoft SQL Server 2017 builds that were released after
 | GDR| 14.0.2014.14 | 2017.140.2014.14 | 14.0.6.443| 2017.140.6.443 | [KB4494351](https://support.microsoft.com/help/4494351) | May 14, 2019 |
 | CU9 + GDR| 14.0.3035.2| 2017.140.3035.2| 14.0.223.1| 2017.140.223.1 | [KB4293805](https://support.microsoft.com/help/4293805) | August 14, 2018|
 | GDR| 14.0.2002.14 | 2017.140.2002.14 | 14.0.3.441| 2017.140.3.441 | [KB4293803](https://support.microsoft.com/help/4293803) | August 14, 2018|
+| CU3 + GDR| 14.0.3015.40 | 2017.140.3015.40 | 14.0.2.021| 2017.140.202.1 | [KB4058562](https://support.microsoft.com/help/4058562) | January 03, 2018 |
 | GDR| 14.0.2000.63 | 2017.140.2000.63 | 14.0.3.441| 2017.140.3.441 | [KB4057122](https://support.microsoft.com/help/4057122) | January 03, 2018 |
 | RTM| 14.0.1000.169| 2017.140.1000.169| 14.0.1.439| 2017.140.1.439 | NA| September 29, 2017 |
 
