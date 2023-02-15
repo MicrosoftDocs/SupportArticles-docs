@@ -1,27 +1,29 @@
 ---
 title: Enable WebView2 in Power Automate for desktop login
-description: Provides a resolution to a login issue in Power Automate for desktop.
+description: Provides a resolution for a login issue in Power Automate for desktop.
 ms.reviewer: pefelesk
+author: georgiostrantzas
+ms.author: Giorgos.Trantzas
 ms.date: 02/10/2023
 ms.subservice: power-automate-desktop-flows
 ---
 
 # Enable WebView2 in Power Automate for desktop login
 
-This article provides a resolution to a login issue in Power Automate for desktop.
+This article provides a resolution for a login issue in Power Automate for desktop.
 
 ## Symptoms
 
 Consider the following scenario in Power Automate for desktop:
 
-- The current Power Automate for desktop login browser sends an invalid "user agent" header, which causes some two factor authentications to identify it as a security issue.
-- Attempting to log in shows a JavaScript error.
+- The current Power Automate for desktop login browser sends an invalid "user agent" header, which causes some two-factor authentications (2FA) to identify it as a security issue.
+- Attempting to log in to Power Automate for desktop shows a JavaScript error.
 
 ## Verify the issue
 
 To verify the issue, you need to install and use a network tracing tool, such as Fiddler.
 
-:::image type="content" source="media/enable-webview-pad-login/fiddler.png" alt-text="Screenshot presenting how to verify the issue with Fiddler.":::
+:::image type="content" source="media/enable-webview-pad-login/fiddler.png" alt-text="Screenshot presenting how to verify the issue with Fiddler." lightbox="media/enable-webview-pad-login/fiddler.png":::
 
 ## Resolution
 

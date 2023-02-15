@@ -121,12 +121,6 @@
           href: issue-with-ui-flows-error-uiaelementnotfound.md
     - name: Desktop flows
       items:
-        - name: Login windows keep appearing
-          href: login-windows-keep-appearing.md
-        - name: Enable webview2 in Power Automate for desktop login
-          href: enable-webview-pad-login.md
-        - name: We can't sign you in - browser blocks cookies
-          href: browser-blocks-cookies.md
         - name: Can't automate webpage with iframes
           href: cannot-automate-webpage-with-iframes.md
         - name: Can't interact with web elements on runtime
@@ -157,6 +151,8 @@
           href: desktop-flow-runs-list-not-updated.md
         - name: Desktop flow fails with the SessionCreationTimeout error code
           href: sessioncreationtimeout-error-code.md
+        - name: Enable WebView2 in Power Automate for desktop login
+          href: enable-webview-pad-login.md
         - name: Failed to get UI element
           href: failed-get-ui-element.md
         - name: '"Failed to deserialize Flow" error'
@@ -173,6 +169,8 @@
           href: invalid-private-key-file-error.md
         - name: Known limitations of Selenium IDE
           href: known-limitations-selenium-ide.md
+        - name: Login windows keep appearing
+          href: login-windows-keep-appearing.md
         - name: Module or action wasn't found error
           href: module-action-wasnt-found-error.md
         - name: Power Automate for desktop console doesn't show any flows
@@ -185,6 +183,8 @@
           href: troubleshoot-direct-connectivity-issues.md
         - name: Troubleshoot issues with Power Automate browser extensions
           href: web-extensions-policies.md
+        - name: We can't sign you in - browser blocks cookies
+          href: browser-blocks-cookies.md
     - name: Solutions
       items:
         - name: Can't import solutions or publish changes
