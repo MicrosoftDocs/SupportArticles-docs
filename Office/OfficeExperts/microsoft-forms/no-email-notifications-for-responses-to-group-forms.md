@@ -35,24 +35,23 @@ You might not receive email notifications for responses that you submit to a Gro
 
    :::image type="content" source="media/no-email-notifications-for-responses-to-group-forms/number-of-members.png" alt-text="Selecting the number of members in the top-right." border="false":::
 
-5. In Outlook on the web, select the ellipsis and then select the **Edit group** button.
+5. In Outlook on the web, select the More options icon (...), and then select **Edit group**.
 
     :::image type="content" source="media/no-email-notifications-for-responses-to-group-forms/edit-group-option.png" alt-text="Select the ellipsis and then select the Edit group option.":::
 
-**Note:** If there is no ellipsis to reach the Edit group option, then it means it is hidden because the group was created in Teams.  When a group is created in Teams, the following default Exchange Online setting is enabled:
+   **Note:** If the **Edit group** option isn't available, it indicates that the group was created in Microsoft Teams. When a group is created in Teams, the Exchange Online setting `HiddenFromExchangeClientsEnabled` is set to **True** by default. When `HiddenFromExchangeClientsEnabled` is set to **True**, it removes the **Edit group** option from the group email settings, so you can't enable the settings that allow group email notifications to members.
 
-    HiddenFromExchangeClientsEnabled : True
+   To view the current setting, run the following command in Exhange Online PowerShell, replacing <groupname> with the name of the group:
+   
+    ```powershell
+     Get-UnifiedGroup -Filter {displayname -eq "<groupname>"} | Format-List HiddenFromExchangeClientsEnabled
+    ``` 
 
-When **HiddenFromExchangeClientsEnabled** is set to **True**, it removes the Edit Group option in the group email settings, preventing enabling the settings that allow group email notifications to members.
+    If `HiddenFromExchangeClientsEnable` is set to **True**, use the following command to set it to **False**:
 
-To view the current setting, run this command in Exhange Online PowerShell, replacing <groupname> with the name of the group:
-
-    Get-UnifiedGroup -Filter {displayname -eq "<groupname>"} | Format-List HiddenFromExchangeClientsEnabled
-
-If it is set to **True**, you can use this command to change the setting to **False**:
-
-    Set-UnifiedGroup TestProgram@email.onmicrosoft.com -HiddenFromExchangeClientsEnabled:$False
-
+    ```powershell
+     Set-UnifiedGroup -Identity "<groupname>" -HiddenFromExchangeClientsEnabled:$False
+    ```
 6. Select the **Let people outside the organization email the groups** and **Members will receive all group conversations and events ...** check boxes and then select **Save**.
 
     :::image type="content" source="media/no-email-notifications-for-responses-to-group-forms/select-two-checkboxes-in-edit-group-page.png" alt-text="Select the two checkboxes in the External email settings.":::
