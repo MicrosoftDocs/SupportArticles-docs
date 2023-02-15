@@ -33,7 +33,7 @@ If you encounter an error that's related to Microsoft 365 retention or retention
 - [You can't apply a hold here](#error-you-cant-apply-a-hold-here)
 - [Your policy is stuck in PendingDeletion](#error-your-policy-is-stuck-in-pendingdeletion)
 
-If none of the resolutions apply to your issue, please contact [Microsoft Support](https://go.microsoft.com/fwlink/?linkid=2189021).
+If none of the resolutions apply to your issue, contact [Microsoft Support](https://go.microsoft.com/fwlink/?linkid=2189021).
 
 For information about how to identify retention policy errors, see [Identify errors in Microsoft 365 retention and retention label policies](identify-errors-in-retention-and-retention-label-policies.md).
 
@@ -527,6 +527,6 @@ An unspecified error occurred when you tried to delete the policy.
 
 [Back to top](#resolve-errors-in-microsoft-365-retention-and-retention-label-policies)
 
-## More info
+## More information
 
 For information about how to troubleshoot eDiscovery issues, see [Resolve common eDiscovery issues](/microsoft-365/troubleshoot/ediscovery/resolve-ediscovery-issues).
