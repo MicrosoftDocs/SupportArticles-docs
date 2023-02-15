@@ -55,7 +55,7 @@ If the Java virtual machine (JVM) fails to start, it might return an "Error open
 
 ## Tomcat Java apps take several minutes to start
 
-If you [enabled Application Insights to monitor your Tomcat application](https://tomcat.apache.org/), there might be a several-minute delay in the time that it takes to start the application. This delay is caused because Tomcat tries to scan the Application Insights jar files during application startup. To speed up the application start time, you can exclude the Application Insights jar files from the list of scanned files. Scanning these jar files isn't necessary.
+If you [enabled Application Insights to monitor your Tomcat application](/azure/azure-monitor/app/java-standalone-arguments#tomcat-8-linux), there might be a several-minute delay in the time that it takes to start the application. This delay is caused because Tomcat tries to scan the Application Insights jar files during application startup. To speed up the application start time, you can exclude the Application Insights jar files from the list of scanned files. Scanning these jar files isn't necessary.
 
 ## Upgrade from the Application Insights Java 2._x_ SDK
 
