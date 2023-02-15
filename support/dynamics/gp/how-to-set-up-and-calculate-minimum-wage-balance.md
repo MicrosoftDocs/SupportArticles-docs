@@ -3,11 +3,11 @@ title: How to set up and calculate minimum wage balance
 description: Describes how to set up and calculate minimum wage balance in Microsoft Dynamics Great Plains and in Microsoft Business Solutions - Great Plains.
 ms.reviewer: lmuelle
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 02/15/2023
 ---
 # How to set up and calculate minimum wage balance in Microsoft Dynamics GP
 
-This article describes how set up and calculate minimum wage balance in Microsoft Dynamics GP and in Microsoft Business Solutions - Great Plains.
+This article describes how set up and calculate minimum wage balance in Microsoft Dynamics GP.
 
 _Applies to:_ &nbsp; Microsoft Dynamics GP  
 _Original KB number:_ &nbsp; 865588
@@ -16,15 +16,9 @@ _Original KB number:_ &nbsp; 865588
 
 To set up and calculate minimum wage balance, follow these steps:
 
-1. Setup a minimum wage balance pay code. To do this, follow these steps depending on the program that you use.
+1. Setup a minimum wage balance pay code. To do this, follow these steps.
 
-    - Microsoft Dynamics GP 10.0 and higher versions:
-
-      On the **Microsoft Dynamics GP** menu, point to **Tools**, point to **Setup**, point to **Payroll**, and then select **Paycode**.
-
-    - Microsoft Dynamics GP 9.0 and Microsoft Business Solutions - Great Plains 8.0
-
-      On the **Tools** menu, point to **Setup**, point to **Payroll**, and then select **Paycode**.
+    On the **Microsoft Dynamics GP** menu, point to **Tools**, point to **Setup**, point to **Payroll**, and then select **Paycode**.
 
 2. Type or select a pay code, and then type a description in the **Description** box.
 3. In the **Pay Type** list, select **Minimum Wage Balance**.
@@ -54,6 +48,7 @@ For the following examples, the employee is assigned the following:
 - The Hourly pay code at a rate of $2.00.
 - The Reported Tips pay code.
 - The Minimum Wage Balance pay code at a rate of $5.50.
+Business Expense pay is not included in Minimum Wage Balance nor is Retro-Active pay calculation.
 
 #### Example 1
 
