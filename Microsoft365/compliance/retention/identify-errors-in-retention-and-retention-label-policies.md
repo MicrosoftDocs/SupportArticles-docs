@@ -84,8 +84,8 @@ Use the following steps to check for errors in policies that target:
 2. Get policy information by using the [Get-AppRetentionCompliancePolicy cmdlet](/powershell/module/exchange/get-appretentioncompliancepolicy). Run the following commands:
 
    ```powershell
-   Get-AppRetentionCompliancePolicy -Identity "\<policy name\>" -DistributionDetail | FL DistributionStatus
-   Get-AppRetentionCompliancePolicy -Identity "\<policy name\>" -DistributionDetail | Select -ExpandProperty DistributionResults
+   Get-AppRetentionCompliancePolicy -Identity "<policy name>" -DistributionDetail | FL DistributionStatus
+   Get-AppRetentionCompliancePolicy -Identity "<policy name>" -DistributionDetail | Select -ExpandProperty DistributionResults
    ```
 
    Any policy errors appear in the value that's returned by the `DistributionStatus` property. If there are policy errors, the value that's returned by the `DistributionResults` property contains more information about the errors.
