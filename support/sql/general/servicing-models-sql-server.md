@@ -1,7 +1,7 @@
 ---
 title: Servicing models for SQL Server
 description: This article describes the information regarding servicing channels for currently supported versions of SQL Server.
-ms.date: 08/19/2020
+ms.date: 02/15/2023
 ms.reviewer: ramakoni
 ms.author: v-sidong
 author: sevend2
@@ -75,11 +75,11 @@ A GDR can have either an RTM baseline or a CU baseline. The latest GDR version f
 
 The following are the RTM GDRs that are available for SQL Server 2019 as of February 6, 2023 when you filter on RTM-GDR in *Cumulative Update or Security ID* column in [builds spreadsheet](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fdownload.microsoft.com%2Fdownload%2Fd%2F3%2Fe%2Fd3e28f3d-6a4f-47ce-aaa5-9d74c5590ed6%2FSQLServerBuilds.xlsx&wdOrigin=BROWSELINK).
 
-|Build number|KB number|KB URL|
-|-|-|-|
-|15.0.2095.3|5014356|[https://support.microsoft.com/kb/5014356](https://support.microsoft.com/kb/5014356)|
-|15.0.2080.9|4583458|[https://support.microsoft.com/kb/4583458](https://support.microsoft.com/kb/4583458)|
-|15.0.2070.41|4517790|[https://support.microsoft.com/kb/4517790](https://support.microsoft.com/kb/4517790)|
+|Build number|KB number|KB URL|Release Date|Service Pack Level|Cumulative Update or Security ID|Servicing Model|
+|-|-|-|-|-|-|-|
+|15.0.2095.3|5014356|[https://support.microsoft.com/kb/5014356](https://support.microsoft.com/kb/5014356)|2022-06-14|NA|RTM-GDR|GDR|
+|15.0.2080.9|4583458|[https://support.microsoft.com/kb/4583458](https://support.microsoft.com/kb/4583458)|2021-01-12|NA|RTM-GDR|GDR|
+|15.0.2070.41|4517790|[https://support.microsoft.com/kb/4517790](https://support.microsoft.com/kb/4517790)|2019-11-04|NA|RTM-GDR|GDR|
 
 If you're a customer who opted for only GDR updates to the RTM version and no CUs, 15.0.2095.3 is the latest GDR build for your RTM-baseline.
 
