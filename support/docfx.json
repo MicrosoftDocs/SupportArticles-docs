@@ -492,7 +492,7 @@
         "dynamics-365/finance/**/*.md": "Core, Operations, Finance, ShowInHelp"
       },
       "search.app": {
-        "power-platform/power-apps/*.md": [
+        "power-platform/power-apps/**/*.md": [
           "PowerApps"
         ],
         "power-platform/power-automate/*.md": [
