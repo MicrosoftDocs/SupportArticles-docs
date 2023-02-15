@@ -3,8 +3,8 @@ title: Enable WebView2 in Power Automate for desktop login
 description: Provides a resolution for a login issue in Power Automate for desktop.
 ms.reviewer: pefelesk
 author: georgiostrantzas
-ms.author: Giorgos.Trantzas
-ms.date: 02/10/2023
+ms.author: gtrantzas
+ms.date: 02/14/2023
 ms.subservice: power-automate-desktop-flows
 ---
 
