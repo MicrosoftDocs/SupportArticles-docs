@@ -11,6 +11,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
   - CI 157398
+  - CI 171536
   - CSSTroubleshoot
   - seo-marvel-apr2020
 ms.collection: 
@@ -20,13 +21,13 @@ search.appverid:
   - MOE150
   - MET150
 siblings_only: true
-ms.date: 2/14/2023
+ms.date: 2/15/2023
 ---
 # Resolve common eDiscovery issues
 
-[!include[Purview banner](../../../includes/purview-rebrand.md)]
+This article covers basic troubleshooting steps that you can take to identify and resolve issues that you might encounter during an eDiscovery search or elsewhere in the eDiscovery process. For information about how to troubleshoot common retention policy errors, see [Resolve errors in Microsoft 365 retention and retention label policies](/microsoft-365/troubleshoot/retention/resolve-errors-in-retention-and-retention-label-policies).
 
-This article covers basic troubleshooting steps that you can take to identify and resolve issues that you might encounter during an eDiscovery search or elsewhere in the eDiscovery process. Resolving some of these scenarios requires help from Microsoft Support. Information about when to contact Microsoft Support is included in the resolution steps.
+Resolving some of these scenarios requires help from Microsoft Support. Information about when to contact Microsoft Support is included in the resolution steps.
 
 ## Error/issue: Ambiguous location
 
@@ -204,12 +205,6 @@ eDiscovery Case Hold Policy Sync Distribution error. The error reads:
    Get-CaseHoldPolicy <policyname> - DistributionDetail | FL
    ```
 
-    For a retention policy, run the following command:
-
-   ```powershell
-   Get-RetentionCompliancePolicy <policyname> - DistributionDetail | FL
-   ```
-
 2. Examine the value in the DistributionDetail parameter for errors like the following:
 
    > Error: Resources: It's taking longer than expected to deploy the policy. It might take an additional 2 hours to update the final deployment status, so check back in a couple hours."
@@ -220,12 +215,6 @@ eDiscovery Case Hold Policy Sync Distribution error. The error reads:
 
    ```powershell
    Set-CaseHoldPolicy <policyname> -RetryDistribution
-   ```
-
-   For retention policies:
-
-   ```powershell
-   Set-RetentionCompliancePolicy <policyname> -RetryDistribution
    ```
 
 4. Contact Microsoft Support.
@@ -245,25 +234,13 @@ eDiscovery Case Hold Policies may be stuck in PendingDeletion and can't be remov
    Set-CaseHoldPolicy <policyname> -RetryDistribution
    ```
 
-   For retention policies:
-
-   ```powershell
-   Set-RetentionCompliancePolicy <policyname> -RetryDistribution
-   ```
-   
 2. Try to delete the policy using PowerShell and the `-ForceDeletion` parameter:
-   
+
    For eDiscovery case holds, use the [Remove-CaseHoldPolicy](/powershell/module/exchange/remove-caseholdpolicy?view=exchange-ps&preserve-view=true) cmdlet:
-   
+
    ```powershell
    Remove-CaseHoldPolicy <policyname> -ForceDeletion
    ```
-  
-   For retention policies, use the [Remove-RetentionCompliancePolicy](/powershell/module/exchange/remove-retentioncompliancepolicy?view=exchange-ps&preserve-view=true) cmdlet:
-  
-   ```powershell
-   Remove-RetentionCompliancePolicy <policyname> -ForceDeletion
-   ```  
   
 3. Contact Microsoft Support.
 
