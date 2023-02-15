@@ -330,7 +330,7 @@ ErrorCode 2147483658 <-> 0x8000000a       -2147483638               E_PENDING   
 ```
 
 > [!NOTE]
-> The error value "-2147483638 (E_PENDING)" being returned is expected and by design. It indicates that an asynchronous thread was started successfully by the Group Policy engine to process the audit extension information. It also means that the error value will be logged even if the new audit settings are effective or applied on the clients.
+> The return value "-2147483638 (E_PENDING)" is expected and by design during audit client-side extension processing. It indicates that an asynchronous thread was started successfully by the Group Policy engine to process the audit extension information. It also means that the return value will be logged even if the new audit settings are effective or applied on the clients.
 
 ## Gather key information before you contact Microsoft Support
 
