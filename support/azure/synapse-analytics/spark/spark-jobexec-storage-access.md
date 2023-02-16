@@ -38,7 +38,7 @@ The following use cases aren't supported when you connect to a Storage account f
 
 - To write to storage through a pipeline, Synapse Workspace MSI is the security principal that runs any operations such as Read, Write, and Delete on the storage.
   - Make sure that the Workspace MSI account has the Storage Blob Data Contributor role to perform all actions.
-- If Azure Notebooks is used to access storage account, the logged-in account is used, unless you access storage through linked services.
+- If you use Azure Notebooks to access storage account, the logged-in account is used, unless you access storage through linked services.
   - The logged-in user account should have the Storage Blob Data Contributor role to have full access and permissions.
 - To connect to storage, use linked service and Service Principal authenticates. Then, the application that's registered at Azure Active should be assigned "Storage Blob Data Contributor" on the Azure storage.
 
