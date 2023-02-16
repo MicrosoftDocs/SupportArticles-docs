@@ -45,29 +45,28 @@ To fix this issue, follow these steps:
 
 1. Decrease the `MaxInboundConnection` limit on the Receive connectors of each Exchange-based server, as follows.
 
-> [!NOTE]  
-> To prevent putting a limit on the number of connections from busy sources, such as email gateways, you might have to increase the `MaxInboundConnectionPercentagePerSource` parameter from the default value of **2**. We recommend that you also closely monitor the incoming mail flow and gradually increase the value, as necessary.
+    > [!NOTE]  
+    > To prevent putting a limit on the number of connections from busy sources, such as email gateways, you might have to increase the `MaxInboundConnectionPercentagePerSource` parameter from the default value of **2**. We recommend that you also closely monitor the incoming mail flow and gradually increase the value, as necessary.
 
     1. To check the current value of the `MaxInboundConnection` parameter, run the [Get-ReceiveConnector](/powershell/module/exchange/get-receiveconnector) cmdlet:
 
-    ```powershell
-    Get-ReceiveConnector -Server <Server Name> | Format-Table Identity,MaxInboundConnection -Auto
-    ```
+       ```powershell
+       Get-ReceiveConnector -Server <Server Name> | Format-Table Identity,MaxInboundConnection -Auto
+       ```
 
-    > [!NOTE]  
-    > The default value for this limit is 5,000 concurrent connections.
+       **Note:** The default value for this limit is 5,000 concurrent connections.
 
     1. To set the limit to a value of 1,000 concurrent connections, run the following cmdlets:
 
-    ```powershell
-    Get-ReceiveConnector -Server <Server Name> | Set-ReceiveConnector -MaxInboundConnection 1000
-    ```
+       ```powershell
+       Get-ReceiveConnector -Server <Server Name> | Set-ReceiveConnector -MaxInboundConnection 1000
+       ```
 
     1. To set each Receive connector limit individually, run the [Set-ReceiveConnector](/powershell/module/exchange/set-receiveconnector) cmdlet:
 
-    ```powershell
-    Set-ReceiveConnector -Identity "<Receive Connector Identity>" -MaxInboundConnection 1000
-    ```
+       ```powershell
+       Set-ReceiveConnector -Identity "<Receive Connector Identity>" -MaxInboundConnection 1000
+       ```
 
     1. Restart the Microsoft Exchange Transport service.
 
