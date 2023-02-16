@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 1 for SQL Server 2022 (KB5022375)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 1 (KB5022375).
-ms.date: 2/15/2023
+ms.date: 2/16/2023
 ms.custom: KB5022375
 author: Elena068
 ms.author: v-qianli2
@@ -12,7 +12,7 @@ appliesto:
 
 # KB5022375 - Cumulative Update 1 for SQL Server 2022
 
-_Release Date:_ &nbsp; 02/15/2023  
+_Release Date:_ &nbsp; 02/16/2023  
 _Version:_ &nbsp; 16.0.4003.1
 
 ## Summary
@@ -117,17 +117,9 @@ The following update is available from the Microsoft Download Center:
 </details>
 
 <details>
-<summary><b>How to obtain or download this cumulative update package for Windows</b></summary>
+<summary><b>How to obtain or download this cumulative update package for Windows from Microsoft Update Catalog</b></summary>
 
-The following update is available from the Microsoft Update Catalog:
-
-- :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2022 CU1 now](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5022375)
-
-> [!NOTE]
->
-> - [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=sql%20server%202022) contains this SQL Server 2022 CU and previously released SQL Server 2022 CU releases.
-> - This CU is also available through Windows Server Update Services (WSUS).
-> - We recommend that you always install the latest cumulative update that is available.
+This cumulative update package is not yet available on Microsoft Update Catalog. This article will be updated after the package is made available on this channel.
 
 </details>
 
