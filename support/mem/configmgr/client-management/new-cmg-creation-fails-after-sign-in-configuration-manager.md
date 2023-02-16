@@ -21,7 +21,7 @@ When you try to create a CMG, there's a failure to obtain the Microsoft Graph to
 
 This issue occurs in one of the following conditions:
 
-- The `Prompt.Never` flag is passed, but the constraint can't be honored because user interaction is required. 
+- The `Prompt.Never` flag is passed, but the constraint can't be honored because user interaction is required.
 - An error occurs during a silent web authentication that prevents the HTTP authentication flow from completing in a short enough time frame.
 
 ## Resolution
@@ -31,16 +31,16 @@ This issue occurs in one of the following conditions:
 
 To fix this issue, use one of the following methods:
 
-- If you are running Configuration Manager version 2207, install the [hotfix rollup (KB15152495)](/mem/configmgr/hotfix/2207/15152495).
+- If you're running Configuration Manager version 2207, install the [hotfix rollup (KB15152495)](/mem/configmgr/hotfix/2207/15152495).
 
     > [!NOTE]
     > To get the hotfix, go to the **Administration** workspace, select the **Updates and Servicing** node, and then select **Check for updates** in the ribbon.
 
-- If you are running Configuration Manager version 2203, install the [limited release hotfix](https://configmgrbits.azureedge.net/qfe/2203/KB15986968_9078.1030/CM2203-KB15986968.ConfigMgr.Update.exe) to address this issue.
+- If you're running Configuration Manager version 2203, install the [limited release hotfix](https://configmgrbits.azureedge.net/qfe/2203/KB15986968_9078.1030/CM2203-KB15986968.ConfigMgr.Update.exe) to address this issue.
 
     Prerequisite: To install the hotfix, you must have the [hotfix rollup KB14244456](/mem/configmgr/hotfix/2203/14244456) installed.
 
-- If you are running Configuration Manager version 2111, install the [limited release hotfix](https://configmgrbits.azureedge.net/qfe/2111/KB15986968_9068.1033/CM2111-KB15986968.ConfigMgr.Update.exe) to address this issue.
+- If you're running Configuration Manager version 2111, install the [limited release hotfix](https://configmgrbits.azureedge.net/qfe/2111/KB15986968_9068.1033/CM2111-KB15986968.ConfigMgr.Update.exe) to address this issue.
 
     Prerequisite: To install the hotfix, you must have the [hotfix rollup KB12896009](/mem/configmgr/hotfix/2111/12896009) installed.
 
