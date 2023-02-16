@@ -275,7 +275,7 @@ Each of the following links provides information for all of the applicable produ
 |12.0.4474.0|SP1|CU9| [3186964](https://support.microsoft.com/help/3186964)|October 17, 2016|
 |12.0.4468.0|SP1|CU8| [3174038](https://support.microsoft.com/help/3174038)|August 15, 2016|
 |12.0.4459.0|SP1|CU7| [3162659](https://support.microsoft.com/help/3162659)|June 20, 2016|
-|12.0.4457.0|SP1|CU6| [3167392](https://support.microsoft.com/help/3167392)|May 30,2016|
+|12.0.4457.0|SP1|CU6| [3167392](https://support.microsoft.com/help/3167392)|May 30, 2016|
 |12.0.4449.0|SP1|CU6| [3144524](https://support.microsoft.com/help/3144524)|April 18, 2016|
 |12.0.4438.0|SP1|CU5| [3130926](https://support.microsoft.com/help/3130926)|February 22, 2016|
 |12.0.4436.0|SP1|CU4| [3106660](https://support.microsoft.com/help/3106660)|December 21, 2015|
@@ -522,7 +522,7 @@ Each of the following links provides information for all of the applicable produ
 |Build number or version|Version description, (KB number for that update), release date|
 |---|---|
 |8.00.2283|Post-SP4 hotfix for MS09-004 (971524)|
-|8.00.2282|MS09-004: KB959420 October 29,2008|
+|8.00.2282|MS09-004: KB959420 October 29, 2008|
 |8.00.2273|MS08-040 - KB 948111 July 8, 2008|
 |8.00.2040|Post-SP4 AWE fix (899761)|
 |8.00.2039| SQL Server 2000 SP4 |
