@@ -1,7 +1,7 @@
 ---
 title: HTTP status code overview
 description: This article provides a list of the HTTP status codes in IIS 7.0 and later versions.
-ms.date: 07/21/2020
+ms.date: 02/16/2023
 ms.custom: sap:WWW Administration and Management
 ms.reviewer: v-jayc
 ms.technology: iis-www-administration-management
@@ -88,7 +88,7 @@ IIS 7.0 and later versions use the following client error HTTP status codes:
 
 | Code | Description | Notes |
 |---|---|---|
-| [400](#400---bad-request) | Bad request | The request could not be understood by the server due to malformed syntax. The client should not repeat the request without modifications. |
+| [400](#400---bad-request) | Bad request | The request could not be understood by the server due to malformed syntax. The client should not repeat the request without modifications. For more information, see [Troubleshooting HTTP 400 Errors in IIS](/iis/troubleshoot/diagnosing-http-errors/troubleshooting-http-400-errors-in-iis) |
 | [401](#401---access-denied) | Access denied | The request has not been applied because it lacks valid authentication credentials for the target resource. |
 | [403](#403---forbidden) | Forbidden | The server understood the request but refuses to fulfill it. |
 | [404](#404---not-found) | Not found | The origin server didn't find a current representation for the target resource or isn't willing to disclose that one exists. |
@@ -161,16 +161,16 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 | 403.4 | SSL required | The request is made over a non-secure channel. But the web application requires a Secure Sockets Layer (SSL) connection. |
 | 403.5 | SSL 128 required | The server is configured to require a 128-bit SSL connection. But, the request isn't sent by using 128-bit encryption. |
 | 403.6 | IP address rejected | The server is configured to deny access to the current IP address. |
-| 403.7 | Client certificate required | The server is configured to require a certificate for client authentication. But the client browser doesn't have an appropriate client certificate installed. For more information, see [HTTP error 403.7 when you run a web application that's hosted on a server that is running IIS 7.0](../health-diagnostic-performance/http-error-403-7-forbidden-web-app.md). |
+| 403.7 | Client certificate required | The server is configured to require a certificate for client authentication. But the client browser doesn't have an appropriate client certificate installed. For more information, see [HTTP error 403.7](../health-diagnostic-performance/http-error-403-7-forbidden-web-app.md). |
 | 403.8 | Site access denied | The server is configured to deny requests based on the Domain Name System (DNS) name of the client computer. For more information, see [Dynamic IP Address restrictions](/iis/get-started/whats-new-in-iis-8/iis-80-dynamic-ip-address-restrictions). |
 | 403.9 | Forbidden: too many clients are trying to connect to the web server |
 | 403.10 | Forbidden: web server is configured to deny Execute access |
 | 403.11 | Forbidden: Password has been changed |
 | 403.12 | Mapper denied access | The page that you want to access requires a client certificate. But, the user ID that is mapped to the client certificate is denied access to the file. |
 | 403.13 | Client certificate revoked | The client browser tries to use a client certificate that was revoked by the issuing certification authority. |
-| 403.14 | Directory listing denied | The server isn't configured to display a content directory listing, and a default document isn't set. For more information, see [HTTP Error 403.14 - Forbidden when you open an IIS Webpage](../health-diagnostic-performance/http-403-14-forbidden-webpage.md). |
+| 403.14 | Directory listing denied | The server isn't configured to display a content directory listing, and a default document isn't set. For more information, see [HTTP Error 403.14](../health-diagnostic-performance/http-403-14-forbidden-webpage.md). |
 | 403.15 | Forbidden: Client access licenses have exceeded limits on the web server |
-| 403.16 | Client certificate is untrusted or invalid. | The client browser tries to use an invalid client certificate. Or the server that is running IIS 7.0 and later versions doesn't trust the client certificate. For more information, see [HTTP Error 403.16 when you try to access a website that's hosted on IIS 7.0](../health-diagnostic-performance/http-403-forbidden-access-website.md). |
+| 403.16 | Client certificate is untrusted or invalid. | The client browser tries to use an invalid client certificate. Or the server that is running IIS 7.0 and later versions doesn't trust the client certificate. For more information, see [HTTP Error 403.16](../health-diagnostic-performance/http-403-forbidden-access-website.md). |
 | 403.17 | Client certificate has expired or is not yet valid. | The client browser tries to use a client certificate that is expired or that isn't yet valid. |
 | 403.18 | Cannot execute requested URL in the current application pool. | A custom error page is configured. And the application pool of the customer error page is different with the application pool of the requested URL. |
 | 403.19 | Cannot execute CGI applications for the client browser in this application pool. | The identity of the application pool doesn't have the Replace a process level token user right. |
@@ -205,7 +205,7 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 | 404.14 | Request URL too long. | The requested URL exceeds the limit that is allowed for the server. |
 | 404.15 | Query string too long. | The request contains a query string that is longer than the limit that is allowed for the server. |
 | 404.16 | DAV request sent to the static file handler |
-| 404.17 | Dynamic content mapped to the static file handler. | For more information, see [Error message when you visit a Web site that is hosted on IIS 7.0: HTTP Error 404.17 - Not Found](../health-diagnostic-performance/error-message-you-visit-web-site.md). |
+| 404.17 | Dynamic content mapped to the static file handler. | For more information, see [HTTP Error 404.17 - Not Found](../health-diagnostic-performance/error-message-you-visit-web-site.md). |
 | 404.18 | Querystring sequence denied |
 | 404.19 | Denied by filtering rule |
 | 404.20 | Too Many URL Segments |
@@ -218,7 +218,7 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 
 | Code | Description | Notes |
 |---|---|---|
-| 405.0 | Method not allowed. | The request is made by using an HTTP method that isn't valid. For more information, see [HTTP Error 405.0 when you visit a website that is hosted on a server that is running IIS](../health-diagnostic-performance/http-error-405-website.md). |
+| 405.0 | Method not allowed. | The request is made by using an HTTP method that isn't valid. For more information, see [HTTP Error 405.0](../health-diagnostic-performance/http-error-405-website.md). |
 | 406.0 | Invalid MIME type. | The request is made by using an `Accept` header that contains a MIME value that isn't valid. |
 | 412.0 | Precondition failed. | The request is made by using an `If-Match` request header that contains a value that isn't valid. |
 
@@ -232,7 +232,7 @@ IIS and later versions use the following server error HTTP status codes:
 |---|---|---|
 | [500](#500---internal-server-error) | Internal server error | The server encountered an unexpected condition that prevented it from fulfilling the request. |
 | 501 | Header values specify a configuration that is not implemented | The server does not support the functionality required to fulfill the request. |
-| [502](#502---bad-gateway) | Web server received an invalid response while acting as a gateway or proxy | The server, while acting as a gateway or proxy, received an invalid response from an inbound server it accessed while attempting to fulfill the request. |
+| [502](#502---bad-gateway) | Web server received an invalid response while acting as a gateway or proxy | The server, while acting as a gateway or proxy, received an invalid response from an inbound server it accessed while attempting to fulfill the request. For more information, see [Troubleshooting 502 Errors in ARR](Troubleshooting 502 Errors in ARR). |
 | [503](#503---service-unavailable) | Service unavailable | The server is currently unable to handle the request due to a temporary overload or scheduled maintenance, which will likely be alleviated after some delay. |
 
 #### 500 - Internal server error
@@ -241,12 +241,12 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 
 | Code | Description | Notes |
 |---|---|---|
-| 500.0 | Module or ISAPI error occurred. | This HTTP status code may occur for many server-side reasons. For more information, see [HTTP Error 500.0 - Internal Server Error error when you you open an IIS 7.0 Webpage](./http-error-500-when-you-visit-web-site.md). |
+| 500.0 | Module or ISAPI error occurred. | This HTTP status code may occur for many server-side reasons. For more information, see [HTTP Error 500.0 - Internal Server Error error](./http-error-500-when-you-visit-web-site.md). |
 | 500.11 | Application is shutting down on the web server. | The request isn't processed because the destination application pool is shutting down. Wait for the worker process to finish shutting down, and then try the request again. If this problem persists, the web application may be experiencing problems that prevent the web application from shutting down correctly. |
 | 500.12 | Application is busy restarting on the web server. | The request isn't processed because the destination application pool is restarting. This HTTP status code should disappear when you refresh the page. If this HTTP status code appears again after you refresh the page, the problem may be caused by antivirus software that is scanning the Global.asa file. If this problem persists, the web application may be experiencing problems that prevent the web application from restarting correctly. |
 | 500.13 | Web server is too busy. | The request isn't processed because the server is too busy to accept any new incoming requests. Typically, this HTTP status code means that the number of incoming concurrent requests exceeds the number that the IIS 7.0 and later versions web application can process. This problem may occur when the performance configuration settings are set too low, the hardware is insufficient, or a bottleneck occurs in the IIS 7.0 and later versions web application. A common troubleshooting method is to generate a memory dump file of the IIS 7.0 and later versions processes when the error is occurring and then to debug the memory dump file. |
 | 500.15 | Direct requests for Global.asax aren't allowed. | A direct request for the _Global.asa_ file or for the _Global.asax_ file is made. |
-| 500.19 | Configuration data is invalid. | This HTTP status code occurs because of a problem in the associated _applicationhost.config_ file or in the associated _Web.config_ file. For more information, see [HTTP Error 500.19 when you open an IIS Webpage](../health-diagnostic-performance/http-error-500-19-webpage.md). |
+| 500.19 | Configuration data is invalid. | This HTTP status code occurs because of a problem in the associated _applicationhost.config_ file or in the associated _Web.config_ file. For more information, see [HTTP Error 500.19](../health-diagnostic-performance/http-error-500-19-webpage.md). |
 | 500.21 | Module not recognized. |
 | 500.22 | An ASP.NET `httpModules` configuration does not apply in Managed Pipeline mode. |
 | 500.23 | An ASP.NET `httpHandlers` configuration does not apply in Managed Pipeline mode. |
