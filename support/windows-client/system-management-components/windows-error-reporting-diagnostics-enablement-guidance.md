@@ -1,7 +1,7 @@
 ---
 title: Windows Error Reporting and Windows diagnostics enablement guidance
 description: Provides guidance on configuring Windows Error Reporting and Windows Telemetry.
-ms.date: 01/12/2023
+ms.date: 02/16/2023
 author: v-lianna
 ms.author: v-lianna
 manager: dcscontentpm
@@ -15,7 +15,7 @@ ms.reviewer: kaushika, sangar, plingadevaru
 ---
 # Windows Error Reporting and Windows diagnostics enablement guidance
 
-This article provides guidance on Windows Error Reporting (WER) and diagnostic data (Telemetry). WER is an event-based feedback infrastructure designed to collect information on issues that Windows can detect, report the information to Microsoft, and provide users with any available solutions.
+This article provides guidance on Windows Error Reporting (WER) and diagnostic data. WER is an event-based feedback infrastructure designed to collect information on issues that Windows can detect, report the information to Microsoft, and provide users with any available solutions.
 
 ## Enable Windows Error Reporting (WER)
 
@@ -36,7 +36,7 @@ This article provides guidance on Windows Error Reporting (WER) and diagnostic d
 6. Double-click the **Disable Windows Error Reporting** policy.
 7. Select **Disabled** > **Apply** > **OK**.
 
-## Configure Windows diagnostic data (Telemetry)
+## Configure Windows diagnostic data
 
 Expand **Policies** under **Computer Configuration** in **Group Policy Management Editor** (*gpmc.msc*).
 
