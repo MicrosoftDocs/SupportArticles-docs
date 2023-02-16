@@ -1,10 +1,10 @@
 ---
-title: HTTP 500 error when connecting to OpsMgr web console remotely
+title: HTTP 500 error when connecting to the OpsMgr web console remotely
 description: Fixes an issue in which you receive HTTP 500 error when you remotely connect to a stand-alone Operations Manager web console.
 ms.date: 02/09/2023
 ms.prod-support-area-path: 
 ---
-# HTTP 500 error when you connect to Operations Manager web console remotely
+# HTTP 500 error when you connect to the Operations Manager web console remotely
 
 This article provides a resolution to solve the HTTP 500 error that occurs when you connect to the Operations Manager web console remotely.
 
@@ -23,21 +23,21 @@ This issue doesn't occur if you connect to the web console from the web console 
 
 To fix the issue, perform the following configurations and verifications, and then connect to the web console again:
 
-1. [Register the SDK SPNs](#register-the-sdk-spns)
-1. [Verify the SDK SPNs](#verify-the-sdk-spns)
-1. [Register the HTTP SPNs](#register-the-http-spns)
-1. [Verify the HTTP SPNs](#verify-the-http-spns)
-1. [Configure constraint delegations](#configure-constraint-delegations)
-1. [Verify "Account is sensitive and cannot be delegated" isn't set](#verify-account-is-sensitive-and-cannot-be-delegated-isnt-set)
+1. [Register the SDK SPNs.](#register-the-sdk-spns)
+1. [Verify the SDK SPNs.](#verify-the-sdk-spns)
+1. [Register the HTTP SPNs.](#register-the-http-spns)
+1. [Verify the HTTP SPNs.](#verify-the-http-spns)
+1. [Configure constraint delegations.](#configure-constraint-delegations)
+1. [Verify "Account is sensitive and cannot be delegated" isn't set.](#verify-account-is-sensitive-and-cannot-be-delegated-isnt-set)
 
 > [!NOTE]
-> The following sample names are used in configuration and verification steps. You have to replace them with the names in your environment.
+> The following sample names are used in the configuration and verification steps. You have to replace them with the names in your environment.
 >
 > - *SCOMMS.Lab.Local* - The fully qualified domain name (FQDN) of the System Center Operations Manager (SCOM) management server
 > - *SCOMWeb.Lab.Local* - The FQDN of the server that hosts the SCOM Web console
 > - *Lab\SDKSvc* - SCOM Data Access Service account (Optional)
 > - *Lab\SCOMAppPool* - SCOM Application Pool Identity account (Optional)
-> - `https://mySCOM.Lab.Local/OperationsManager` - URL that's used to access the Operations Manager Web console (If there is no URL, substitute this with the Operations Manager Web console server name)
+> - `https://mySCOM.Lab.Local/OperationsManager` - URL that's used to access the Operations Manager Web console (If there's no URL, substitute this with the Operations Manager Web console server name.)
 
 ### Register the SDK SPNs
 
