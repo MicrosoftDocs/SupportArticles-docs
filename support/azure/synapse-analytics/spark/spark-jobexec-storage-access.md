@@ -11,7 +11,7 @@ ms.reviewer: scepperl
 
 _Applies to:_ &nbsp; Azure Synapse Analytics
 
-Apache Spark is a parallel processing framework that supports in-memory processing to boost the performance of big data analytic applications. Apache Spark in Azure Synapse Analytics is one of the Microsoft implementations of Apache Spark in the cloud. Azure Synapse makes it easy to create and configure a serverless Apache Spark pool in Azure. Spark pools in Azure Synapse are compatible with Azure Storage and Azure Data Lake Generation 2 Storage. Therefore, you can use Spark pools to process your data that's stored in Azure.
+Apache Spark is a parallel processing framework that supports in-memory processing to boost the performance of big data analytic applications. Apache Spark in Azure Synapse Analytics is one of the Microsoft implementations of Apache Spark in the cloud. Azure Synapse makes it easy to create and configure a serverless Apache Spark pool in Azure. Spark pools in Azure Synapse are compatible with Azure Storage and Azure Data Lake Generation 2 Storage. Therefore, you can use Spark pools to process your data stored in Azure.
 
 If you're experiencing pool storage access issues, such as "403" errors or the failure of the Synapse workspace to find linked services, use the provided guidance to help resolve your issues.
 
@@ -36,7 +36,7 @@ The following use cases aren't supported when you connect to a Storage account f
 
 **Storage access and the account accessing**
 
-- To write to storage through a pipeline, Synapse Workspace MSI is the security principal that runs any operation (Read, Write, Delete) on the storage.
+- To write to storage through a pipeline, Synapse Workspace MSI is the security principal that runs any operations such as Read, Write, and Delete on the storage.
   - Make sure that the Workspace MSI account has the Storage Blob Data Contributor role to perform all actions.
 - If Azure Notebooks is used to access storage account, the logged-in account is used, unless you access storage through linked services.
   - The logged-in user account should have the Storage Blob Data Contributor role to have full access and permissions.
