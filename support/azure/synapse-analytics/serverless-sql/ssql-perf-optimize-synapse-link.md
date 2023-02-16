@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Azure Synapse Link for serverless SQL pool
 description: Provides solutions for common issues experienced on Azure Synapse Link for Azure Synapse Analytics serverless SQL pool.
-ms.date: 01/31/2023
+ms.date: 02/16/2023
 author: sevend2
 ms.author: goventur
 ms.reviewer: scepperl
