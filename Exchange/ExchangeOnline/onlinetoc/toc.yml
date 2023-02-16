@@ -11,7 +11,7 @@
           href: ../administration/release-messages-prompted-client-certificate.md
         - name: A remote mailbox created in AD DS isn't ACLable
           href: ../administration/remote-mailbox-created-in-ad-ds-not-aclable.md
-        - name: Access is denied with Windows PowerShell
+        - name: Access denied when using remote Windows PowerShell
           href: ../administration/access-denied-connect-powershell.md
         - name: Azure AD Connect workflow in Microsoft 365
           href: ../administration/azure-ad-connect-workflow.md
@@ -55,7 +55,7 @@
           href: ../administration/description-of-the-files-folder-in-office-365.md
         - name: Don't have permissions to update options specified error
           href: ../administration/you-dont-have-permissions-to-update-the-options-you-specified-error.md
-        - name: EAC is slow to show recipients if PowerShell Transcription is turned on
+        - name: EAC delays when displaying Recipients list 
           href: ../administration/eac-slow-to-display-recipients-if-powershell-transcription-is-turned-on.md
         - name: Email items missing on Exchange ActiveSync client
           href: ../administration/items-missing-on-exchange-activesync-client.md
@@ -79,7 +79,7 @@
           href: ../administration/migrate-ad-rms-to-azure.md
         - name: How to use PowerShell to grant admin access to all mailboxes
           href: ../administration/how-to-use-powershell-to-grant-admin-access-to-all-mailboxes.md
-        - name: Inactive mailbox isn't automatically reconnected to AD
+        - name: Inactive mailbox doesn't reconnect automatically to AD 
           href: ../administration/reconnect-inactive-or-soft-deleted-mailboxes-to-ad.md
         - name: InvalidShellID error in Remote PowerShell
           href: ../administration/invalidshellid-error-in-rps.md
@@ -101,10 +101,12 @@
           href: ../administration/objectclass-returns-unknown-value.md
         - name: Outlook for Mac 2011 doesn't connect to Exchange Online
           href: ../administration/outlook-for-mac-2011-not-connect-exchange-online.md
-        - name: Outlook can't connect via a proxy that's set up by PAC
+        - name: Outlook can't connect through file-based PAC proxy
           href: ../administration/outlook-cannot-connect-via-proxy-set-by-pac.md
-        - name: POP/IMAP client authenticate fails
+        - name: POP/IMAP client authentication fails
           href: ../administration/pop-imap-auth-fails-if-x-ms-client-application-is-microsoft-exchange-popimap.md
+        - name: Public folder permissions in Exchange admin center show GUID instead of name
+          href: ../administration/public-folder-permissions-in-exchange-admin-center-show-guid-not-name.md
         - name: Repeated calls against the same folder are slow
           href: ../administration/slow-repeated-calls-against-same-folder.md
         - name: Self-help diagnostics
@@ -175,7 +177,7 @@
           href: ../calendars/delegate-only-sees-freebusy-info-if-manager-is-in-another-forest.md
         - name: Delegates accept meetings automatically
           href: ../calendars/delegates-accept-meetings-automatically.md
-        - name: Meeting requests are added to resource delegate's calendar
+        - name: Meeting requests added to resource delegate's calendar
           href: ../calendars/meeting-requests-sent-to-resource-mailbox-added-to-resource-delegate-calendar.md
         - name: Message store has reached its maximum size
           href: ../calendars/store-reached-maximum-size.md
@@ -243,7 +245,7 @@
           href: ../email-delivery/external-recipients-not-receiving-distribution-group-emails.md
         - name: Find and fix email delivery issues
           href: ../email-delivery/email-delivery-issues.md
-        - name: How to block message from being sent or received
+        - name: How to block message send or receive
           href: ../email-delivery/how-to-block-message-from-being-sent-or-received.md
         - name: IMCEAEX non-delivery report
           href: ../email-delivery/imceaex-ndr.md
@@ -371,7 +373,7 @@
           href: ../mobile-devices/mobile-devices-not-quarantined-as-expected.md
         - name: Outlook app access end after June 1 if EWS app policies not set correctly
           href: ../mobile-devices/outlook-app-access-end-after-june-1-if-ews-app-policies-not-set-correctly.md
-        - name: Some Android devices do not redirect to Exchange Online
+        - name: Some Android devices don't redirect to Exchange Online
           href: ../mobile-devices/some-android-devices-do-not-redirect-to-exchange-online.md
         - name: Use Outlook Web App to remotely wipe an ActiveSync device
           href: ../mobile-devices/how-to-use-owa-remotely-wipe-mobile-device.md
@@ -471,7 +473,7 @@
           href: /exchange/troubleshoot/administration/self-help-diagnostics?context=/exchange/troubleshoot/context/online-context
         - name: Sending and receiving email
           href: ../outlook-issues/outlook-connection-issues.md
-        - name: Show a Room list option isn't shown in Room Finder
+        - name: Room Finder doesn't display Show a Room list option
           href: ../outlook-issues/show-a-room-list-option-not-displayed-in-room-finder.md
         - name: This message could not be sent error if sending emails with Send as permission
           href: ../outlook-issues/this-message-could-not-be-sent-error-when-sending-emails.md
@@ -587,7 +589,7 @@
           href: ../send-emails/smtp-submission-improvements.md
         - name: Error occurs when connecting via SMTP client
           href: ../send-emails/error-when-connecting-to-exchange-online-via-smtp-client.md
-        - name: EWS API cannot access Teams data
+        - name: EWS API can't access Teams data
           href: ../send-emails/ews-not-support-access-teams-data.md
         - name: How to set IIS SMTP for outgoing TLS authentication
           href: ../send-emails/how-to-set-iis-smtp-for-outgoing-tls-auth.md
