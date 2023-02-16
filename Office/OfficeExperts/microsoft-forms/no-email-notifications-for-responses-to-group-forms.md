@@ -41,7 +41,7 @@ You might not receive email notifications for responses that you submit to a Gro
 
    **Note:** If the **Edit group** option isn't available, it indicates that the group was created in Microsoft Teams. When a group is created in Teams, the Exchange Online setting `HiddenFromExchangeClientsEnabled` is set to **True** by default. When `HiddenFromExchangeClientsEnabled` is set to **True**, it removes the **Edit group** option from the group email settings, so you can't enable the settings that allow group email notifications to members.
 
-   To view the current setting, run the following command in Exhange Online PowerShell, replacing \<groupname\> with the name of the group:
+   To view the current setting, run the following command in Exhange Online PowerShell, replace \<groupname\> with the name of the group:
    
     ```powershell
      Get-UnifiedGroup -Filter {displayname -eq "<groupname>"} | Format-List HiddenFromExchangeClientsEnabled
