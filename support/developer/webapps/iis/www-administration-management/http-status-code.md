@@ -88,7 +88,7 @@ IIS 7.0 and later versions use the following client error HTTP status codes:
 
 | Code | Description | Notes |
 |---|---|---|
-| [400](#400---bad-request) | Bad request | The request could not be understood by the server due to malformed syntax. The client should not repeat the request without modifications. For more information, see [Troubleshooting HTTP 400 Errors in IIS](/iis/troubleshoot/diagnosing-http-errors/troubleshooting-http-400-errors-in-iis) |
+| [400](#400---bad-request) | Bad request | The request could not be understood by the server due to malformed syntax. The client should not repeat the request without modifications. For more information, see [Troubleshooting HTTP 400 Errors in IIS](/iis/troubleshoot/diagnosing-http-errors/troubleshooting-http-400-errors-in-iis). |
 | [401](#401---access-denied) | Access denied | The request has not been applied because it lacks valid authentication credentials for the target resource. |
 | [403](#403---forbidden) | Forbidden | The server understood the request but refuses to fulfill it. |
 | [404](#404---not-found) | Not found | The origin server didn't find a current representation for the target resource or isn't willing to disclose that one exists. |
@@ -190,7 +190,7 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 |---|---|---|
 | 404.0 | Not found | The file that you try to access is moved or doesn't exist. |
 | 404.1 | Site Not Found |
-| 404.2 | ISAPI or CGI restriction. | The requested ISAPI resource or the requested CGI resource is restricted on the computer. For more information, see [HTTP Error 404.2 when you visit a web page that is hosted on a computer that is running IIS 7.0](../site-behavior-performance/http-error-402-webpage.md). |
+| 404.2 | ISAPI or CGI restriction. | The requested ISAPI resource or the requested CGI resource is restricted on the computer. For more information, see [HTTP Error 404.2](../site-behavior-performance/http-error-402-webpage.md). |
 | 404.3 | MIME type restriction. | The current MIME mapping for the requested extension type is invalid or isn't configured. |
 | 404.4 | No handler configured. | The file name extension of the requested URL doesn't have a handler that is configured to process the request on the Web server. |
 | 404.5 | Denied by request filtering configuration. | The requested URL contains a character sequence that is blocked by the server. |
@@ -201,7 +201,7 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 | 404.10 | Request header too long. | The request is denied because the request headers are too long. |
 | 404.11 | Request contains double escape sequence. | The request contains a double escape sequence. |
 | 404.12 | Request contains high-bit characters. | The request contains high-bit characters, and the server is configured not to allow high-bit characters. |
-| 404.13 | Content length too large. | The request contains a `Content-Length` header. The value of the `Content-Length` header is larger than the limit that is allowed for the server. For more information, see [HTTP Error 404.13 - CONTENT_LENGTH_TOO_LARGE when you visit a web site that is hosted on a server that is running IIS 7.0](../health-diagnostic-performance/http-404-13-website.md). |
+| 404.13 | Content length too large. | The request contains a `Content-Length` header. The value of the `Content-Length` header is larger than the limit that is allowed for the server. For more information, see [HTTP Error 404.13 - CONTENT_LENGTH_TOO_LARGE](../health-diagnostic-performance/http-404-13-website.md). |
 | 404.14 | Request URL too long. | The requested URL exceeds the limit that is allowed for the server. |
 | 404.15 | Query string too long. | The request contains a query string that is longer than the limit that is allowed for the server. |
 | 404.16 | DAV request sent to the static file handler |
@@ -232,7 +232,7 @@ IIS and later versions use the following server error HTTP status codes:
 |---|---|---|
 | [500](#500---internal-server-error) | Internal server error | The server encountered an unexpected condition that prevented it from fulfilling the request. |
 | 501 | Header values specify a configuration that is not implemented | The server does not support the functionality required to fulfill the request. |
-| [502](#502---bad-gateway) | Web server received an invalid response while acting as a gateway or proxy | The server, while acting as a gateway or proxy, received an invalid response from an inbound server it accessed while attempting to fulfill the request. For more information, see [Troubleshooting 502 Errors in ARR](Troubleshooting 502 Errors in ARR). |
+| [502](#502---bad-gateway) | Web server received an invalid response while acting as a gateway or proxy | The server, while acting as a gateway or proxy, received an invalid response from an inbound server it accessed while attempting to fulfill the request. For more information, see [Troubleshooting 502 Errors in ARR](/iis/extensions/troubleshooting-application-request-routing/troubleshooting-502-errors-in-arr). |
 | [503](#503---service-unavailable) | Service unavailable | The server is currently unable to handle the request due to a temporary overload or scheduled maintenance, which will likely be alleviated after some delay. |
 
 #### 500 - Internal server error
@@ -241,7 +241,7 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 
 | Code | Description | Notes |
 |---|---|---|
-| 500.0 | Module or ISAPI error occurred. | This HTTP status code may occur for many server-side reasons. For more information, see [HTTP Error 500.0 - Internal Server Error error](./http-error-500-when-you-visit-web-site.md). |
+| 500.0 | Module or ISAPI error occurred. | This HTTP status code may occur for many server-side reasons. For more information, see [HTTP Error 500.0 - Internal Server Error](./http-error-500-when-you-visit-web-site.md). |
 | 500.11 | Application is shutting down on the web server. | The request isn't processed because the destination application pool is shutting down. Wait for the worker process to finish shutting down, and then try the request again. If this problem persists, the web application may be experiencing problems that prevent the web application from shutting down correctly. |
 | 500.12 | Application is busy restarting on the web server. | The request isn't processed because the destination application pool is restarting. This HTTP status code should disappear when you refresh the page. If this HTTP status code appears again after you refresh the page, the problem may be caused by antivirus software that is scanning the Global.asa file. If this problem persists, the web application may be experiencing problems that prevent the web application from restarting correctly. |
 | 500.13 | Web server is too busy. | The request isn't processed because the server is too busy to accept any new incoming requests. Typically, this HTTP status code means that the number of incoming concurrent requests exceeds the number that the IIS 7.0 and later versions web application can process. This problem may occur when the performance configuration settings are set too low, the hardware is insufficient, or a bottleneck occurs in the IIS 7.0 and later versions web application. A common troubleshooting method is to generate a memory dump file of the IIS 7.0 and later versions processes when the error is occurring and then to debug the memory dump file. |
@@ -290,8 +290,9 @@ IIS 7.0 and later versions define the following HTTP status codes that indicate 
 | 503.3 | ASP.NET queue full |
 | 503.4 | FastCGI queue full |
 
-## References
+## More information
 
-For more information about HTTP status code definitions, see [HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html#name-status-codes).  
+- [HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html#name-status-codes)
+- [How to Use HTTP Detailed Errors in IIS 7.0](/iis/troubleshoot/diagnosing-http-errors/how-to-use-http-detailed-errors-in-iis)
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
