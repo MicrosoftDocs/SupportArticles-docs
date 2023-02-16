@@ -105,8 +105,8 @@
           href: ../administration/outlook-cannot-connect-via-proxy-set-by-pac.md
         - name: POP/IMAP client authenticate fails
           href: ../administration/pop-imap-auth-fails-if-x-ms-client-application-is-microsoft-exchange-popimap.md
-        - name: Public folder permissions in Exchange admin center show GUID
-          href: ../administration/public-folder-permissions-in-exchange-admin-center-show-guid.md
+        - name: Public folder permissions in Exchange admin center show GUID instead of name
+          href: ../administration/public-folder-permissions-in-exchange-admin-center-show-guid-not-name.md
         - name: Repeated calls against the same folder are slow
           href: ../administration/slow-repeated-calls-against-same-folder.md
         - name: Self-help diagnostics
