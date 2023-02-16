@@ -29,7 +29,7 @@ The following use cases aren't supported when you connect to a Storage account f
 
 | Error | Solution |
 |---|---|
-| "errorMessage":"LSRServiceException is \[{\"StatusCode\":400,\"ErrorResponse\":{\"code\":\"LSRLinkedServiceFailure\",\"message\":\"Could not find Linked Service AzureDataLakeStorage1; | This error is generated if a Synapse workspace is associated with a Git repository, Azure DevOps Services, or GitHub, and if the artifact (notebook, linked service) isn't published. <br><br>Manually publish your [code changes](/azure/synapse-analytics/cicd/source-control#publish-code-changes) in the collaboration branch to the Synapse service. |
+| "errorMessage":"LSRServiceException is \[{\"StatusCode\":400,\"ErrorResponse\":{\"code\":\"LSRLinkedServiceFailure\",\"message\":\"Could not find Linked Service AzureDataLakeStorage1; | This error is generated if a Synapse workspace is associated with a Git repository, Azure DevOps Services, or GitHub, and if the artifact such as a notebook or linked service isn't published. <br><br>Manually publish your [code changes](/azure/synapse-analytics/cicd/source-control#publish-code-changes) in the collaboration branch to the Synapse service. |
 | stdout: Exception in thread "main" org.apache.hadoop.fs.FileAlreadyExistsException: Operation failed: "This endpoint does not support BlobStorageEvents or SoftDelete. Disable these account features if you would like to use this endpoint.", 409, HEAD, https://\<storageaccountname\>.dfs.core.windows.net/scripts/?upn=false&action=getAccessControl&timeout=90 | Verify that ADLS Gen 2 storage is configured as [primary storage](/azure/synapse-analytics/security/how-to-grant-workspace-managed-identity-permissions#step-1-navigate-to-the-adls-gen2-storage-account-in-azure-portal).<br><br>To disable **SoftDelete**, clear the [Enable blob soft delete](/azure/storage/blobs/soft-delete-blob-enable?tabs=azure-portal#enable-blob-soft-delete) checkbox for the storage account. |
 
 ## Troubleshooting '403' issues
@@ -52,7 +52,7 @@ Azure role-based access control uses role assignments to apply sets of permissio
 
 Use Access control lists (ACLs) to apply detailed levels of access to directories and files.
 
-- If data access roles such as Storage Blob Data Reader or Storage Blob Data Contributor are found for the security principal, a check is run to verify that the role has the permissions to perform actions (Write, Read, Delete). If so, the security principal will have access to all files and folders, according to the container role.
+- If data access roles such as Storage Blob Data Reader or Storage Blob Data Contributor are found for the security principal, a check is run to verify that the role has the permissions to perform actions such as Write, Read, and Delete. If so, the security principal will have access to all files and folders, according to the container role.
   - There are no extra ACL checks on the files or folders.
 - If a data access role isn't found for the security principal at the storage container level, ACL checks are run on the files and folders.
 
