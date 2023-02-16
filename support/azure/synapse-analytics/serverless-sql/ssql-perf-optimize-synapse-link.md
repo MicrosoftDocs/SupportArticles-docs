@@ -1,17 +1,17 @@
 ---
-title: Troubleshooting Azure Synapse Link for Azure Synapse Analytics serverless SQL pool
-description: Solutions for common issues experienced on Azure Synapse Link for Azure Synapse Analytics serverless SQL pool
+title: Troubleshoot Azure Synapse Link for serverless SQL pool
+description: Provides solutions for common issues experienced on Azure Synapse Link for Azure Synapse Analytics serverless SQL pool.
 ms.date: 01/31/2023
-author: scott-epperly
+author: sevend2
 ms.author: goventur
 ms.reviewer: scepperl
 ---
 
-# Troubleshooting Azure Synapse Link for Azure Synapse Analytics serverless SQL pool
+# Troubleshoot Azure Synapse Link for Azure Synapse Analytics serverless SQL pool
 
 _Applies to:_ &nbsp; Azure Synapse Analytics
 
-need a description here
+This article provides solutions for common issues experienced on Azure Synapse Link for Azure Synapse Analytics serverless SQL pool.
 
 ## Azure Synapse Link for Dataverse
 
@@ -30,7 +30,7 @@ After you create an Azure Synapse Link for Dataverse, there will be two versions
 |Table type|Description|
 |--|--|
 |**Near real-time data**|Provides a copy of data synchronized from Dataverse by using Azure Synapse Link in an efficient manner by detecting what data has changed since it was initially extracted or last synchronized.|
-|**Snapshot data**|Provides a read-only copy of near real-time data that's updated at regular intervals (in this case every hour).|
+|**Snapshot data**|Provides a read-only copy of near real-time data that's updated at regular intervals (in this case, every hour).|
 
 For more information, see [Access near real-time data and read-only snapshot data](/power-apps/maker/data-platform/azure-synapse-link-synapse#access-near-real-time-data-and-read-only-snapshot-data).
 
@@ -44,16 +44,16 @@ For more information, see [Query and analyze the incremental updates (preview)](
 
 ### Accessing Azure Cosmos DB data
 
-You can query Azure Cosmos DB data in the analytical store using Spark pools and serverless SQL pools. Resolve common issues by following the steps found in these articles:
+You can query Azure Cosmos DB data in the analytical store using Spark pools and serverless SQL pools. Resolve common issues by following the steps in these articles:
 
-- [Spark pools](/azure/synapse-analytics/synapse-link/how-to-query-analytical-store-spark) 
+- [Spark pools](/azure/synapse-analytics/synapse-link/how-to-query-analytical-store-spark)
 - [Serverless SQL pools](/azure/synapse-analytics/sql/query-cosmos-db-analytical-store?tabs=openrowset-credential)
 
 ### Can't query Azure Cosmos DB container
 
 Make sure you've properly configured Azure Synapse Link and the analytical store in the Azure Cosmos DB account.
 
-### Understanding schema representation
+### Understand schema representation
 
 There are two modes of schema representation in the analytical store. These modes have tradeoffs between the simplicity of a columnar representation, handling the polymorphic schemas, and simplicity of query experience:
 
@@ -64,26 +64,26 @@ Learn how to [automatically handle analytical store schemas](/azure/cosmos-db/an
 
 ### Missing properties (columns) in the query result
 
-If you're missing columns that exist in your Azure Cosmos DB containers, it's probable that the schema constraints have been violated.  The following constraints are applicable on the operational data in Azure Cosmos DB when you enable analytical store to automatically infer and represent the schema correctly:
+If you're missing columns that exist in your Azure Cosmos DB containers, it's probable that the schema constraints have been violated. The following constraints are applicable to the operational data in Azure Cosmos DB when you enable the analytical store to automatically infer and represent the schema correctly:
 
-* You can have a maximum of 1000 properties across all nested levels in the document schema and a maximum nesting depth of 127.
-    * Only the first 1000 properties are represented in the analytical store.
-    * Only the first 127 nested levels are represented in the analytical store.
-    * The first level of a JSON document is its / root level.
-    * Properties in the first level of the document will be represented as columns.
+- You can have a maximum of 1000 properties across all nested levels in the document schema and a maximum nesting depth of 127.
+- Only the first 1000 properties are represented in the analytical store.
+- Only the first 127 nested levels are represented in the analytical store.
+- The first level of a JSON document is its root level.
+- Properties in the first level of the document will be represented as columns.
 
 For more information on the schema constraints, see [Analytical store - Overview](/azure/cosmos-db/analytical-store-introduction#analytical-schema).
 
 All transactional operations are propagated, including deletes. The analytical store time to live (TTL) setting also can cause data removal.
 
-- If a document is deleted in transactional store, it will also be deleted from analytical store, despite both store's TTLs.
-- If transactional TTL is smaller than analytical TTL, the data is archived from transactional store but kept in analytical store up to the configured TTL limit.
-- If transactional TTL is bigger than analytical TTL, data will be archived from analytical store and kept in transactional store up to the configured TTL limit.
-- If you use the SQL API, the schema is well-defined by default, meaning that the first document in the collection will define the analytical store schema. If a document doesn't conform to the first document's schema, then it won't be synced to the analytical store.  
+- If a document is deleted in the transactional store, it will also be deleted from the analytical store, despite both stores' TTLs.
+- If transactional TTL is smaller than analytical TTL, the data is archived from the transactional store but kept in the analytical store up to the configured TTL limit.
+- If transactional TTL is bigger than analytical TTL, data is archived from the analytical store and kept in the transactional store up to the configured TTL limit.
+- If you use the SQL API, the schema is well-defined by default, meaning that the first document in the collection defines the analytical store schema. If a document doesn't conform to the first document's schema, it won't be synched to the analytical store.  
 
 ### Resources
 
-- [What is Azure Cosmos DB analytical store](/azure/cosmos-db/analytical-store-introduction)
-- [Analytical store time to live (TTL) overview](/azure/cosmos-db/analytical-store-introduction#analytical-ttl)
+- [What is Azure Cosmos DB analytical store?](/azure/cosmos-db/analytical-store-introduction)
+- [Analytical store Time-to-Live (TTL) overview](/azure/cosmos-db/analytical-store-introduction#analytical-ttl)
 - [Frequently asked questions about Azure Synapse Link for Azure Cosmos DB](/azure/cosmos-db/synapse-link-frequently-asked-questions)
 - [Schema representation](/azure/cosmos-db/analytical-store-introduction#schema-representation)
