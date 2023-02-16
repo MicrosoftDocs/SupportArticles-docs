@@ -40,17 +40,17 @@ The following use cases aren't supported when you connect to a Storage account f
   - Make sure that the Workspace MSI account has the Storage Blob Data Contributor role to perform all actions.
 - If you use Azure Notebooks to access storage account, the logged-in account is used, unless you access storage through linked services.
   - The logged-in user account should have the Storage Blob Data Contributor role to have full access and permissions.
-- To connect to storage, use linked service and Service Principal authenticates. Then, the application that's registered at Azure Active should be assigned "Storage Blob Data Contributor" on the Azure storage.
+- To connect to storage, use linked service and service principal authenticates. Then, the application that's registered at Azure Active should be assigned "Storage Blob Data Contributor" on the Azure storage.
 
 For role-based access control (RBAC) implementation in storage, details are controlled at the container level. For more information, see [Access control model in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control-model).
 
 ### Azure role-based access control
 
-Azure role-based access control uses role assignments to apply sets of permissions to security principals such as the Synapse Workspace MSI, Logged-in User, or Application register in Azure Active Directory. Roles such as Owner, Contributor, Reader, and Storage Account Contributor enable a security principal to manage a storage account.
+Azure role-based access control uses role assignments to apply sets of permissions to security principals such as the Synapse Workspace MSI, Logged-in User, or Application register in the Azure Active Directory. Roles such as Owner, Contributor, Reader, and Storage Account Contributor enable a security principal to manage a storage account.
 
 ### Access control lists
 
-Use Access control lists (ACLs) to apply detailed levels of access to directories and files.
+Use access control lists (ACLs) to apply detailed levels of access to directories and files.
 
 - If data access roles such as Storage Blob Data Reader or Storage Blob Data Contributor are found for the security principal, a check is run to verify that the role has the permissions to perform actions such as Write, Read, and Delete. If so, the security principal will have access to all files and folders, according to the container role.
   - There are no extra ACL checks on the files or folders.
