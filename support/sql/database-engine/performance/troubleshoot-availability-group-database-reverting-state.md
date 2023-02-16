@@ -1,6 +1,6 @@
 ---
-title: Diagnose availability group database in the reverting state
-description: This article helps you diagnose an availability group database in the reverting state where Not Synchronizing is reported on the primary.
+title: Troubleshoot availability group database in the reverting state
+description: This article helps you troubleshoot an availability group database in the reverting state where Not Synchronizing is reported on the primary.
 ms.date: 02/09/2023
 ms.custom: sap:Performance
 ms.reviewer: cmathews
@@ -9,9 +9,9 @@ ms.author: v-sidong
 ms.prod: sql
 ---
 
-# Diagnose availability group database in the reverting state
+# Troubleshoot availability group database in the reverting state
 
-This article helps you diagnose an availability group database in the reverting state.
+This article helps you troubleshoot an availability group database in the reverting state.
 
 ## What is the reverting state?
 
