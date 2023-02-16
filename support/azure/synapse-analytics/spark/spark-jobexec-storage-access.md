@@ -52,7 +52,7 @@ Azure role-based access control uses role assignments to apply sets of permissio
 
 Use access control lists (ACLs) to apply detailed levels of access to directories and files.
 
-- If data access roles such as Storage Blob Data Reader or Storage Blob Data Contributor are found for the security principal, a check is run to verify that the role has the permissions to perform actions such as Write, Read, and Delete. If so, the security principal will have access to all files and folders, according to the container role.
+- If data access roles such as Storage Blob Data Reader or Storage Blob Data Contributor are found for the security principal, a check is run to verify if the role has the permissions to perform actions such as Write, Read, and Delete. If so, the security principal might access all files and folders, based on the container role.
   - There are no extra ACL checks on the files or folders.
 - If a data access role isn't found for the security principal at the storage container level, ACL checks are run on the files and folders.
 
