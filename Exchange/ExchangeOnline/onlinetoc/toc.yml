@@ -177,7 +177,7 @@
           href: ../calendars/delegate-only-sees-freebusy-info-if-manager-is-in-another-forest.md
         - name: Delegates accept meetings automatically
           href: ../calendars/delegates-accept-meetings-automatically.md
-        - name: Meeting requests are added to resource delegate's calendar
+        - name: Meeting requests added to resource delegate's calendar
           href: ../calendars/meeting-requests-sent-to-resource-mailbox-added-to-resource-delegate-calendar.md
         - name: Message store has reached its maximum size
           href: ../calendars/store-reached-maximum-size.md
@@ -245,7 +245,7 @@
           href: ../email-delivery/external-recipients-not-receiving-distribution-group-emails.md
         - name: Find and fix email delivery issues
           href: ../email-delivery/email-delivery-issues.md
-        - name: How to block message from being sent or received
+        - name: How to block message send or receive
           href: ../email-delivery/how-to-block-message-from-being-sent-or-received.md
         - name: IMCEAEX non-delivery report
           href: ../email-delivery/imceaex-ndr.md
@@ -473,7 +473,7 @@
           href: /exchange/troubleshoot/administration/self-help-diagnostics?context=/exchange/troubleshoot/context/online-context
         - name: Sending and receiving email
           href: ../outlook-issues/outlook-connection-issues.md
-        - name: Show a Room list option isn't shown in Room Finder
+        - name: Room Finder doesn't display Show a Room list option
           href: ../outlook-issues/show-a-room-list-option-not-displayed-in-room-finder.md
         - name: This message could not be sent error if sending emails with Send as permission
           href: ../outlook-issues/this-message-could-not-be-sent-error-when-sending-emails.md
