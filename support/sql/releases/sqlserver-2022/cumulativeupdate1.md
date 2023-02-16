@@ -119,7 +119,7 @@ The following update is available from the Microsoft Download Center:
 <details>
 <summary><b>How to obtain or download this cumulative update package for Windows from Microsoft Update Catalog</b></summary>
 
-This cumulative update package is not yet available on Microsoft Update Catalog. This article will be updated after the package is made available on this channel.
+This cumulative update package is not yet available on [Microsoft Update Catalog](https://www.catalog.update.microsoft.com). This article will be updated after the package is made available on this channel.
 
 </details>
 
