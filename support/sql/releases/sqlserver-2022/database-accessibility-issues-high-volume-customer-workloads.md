@@ -5,6 +5,7 @@ ms.date: 02/16/2023
 ms.custom: KB5023236
 appliesto:
 - SQL Server 2022 on Windows
+- SQL Server 2019 on Windows
 author: MonicaChenc
 ms.author: v-cuichen
 ms.reviewer: mireks, vanto, rajat.jain, chrisbrower, arupp
@@ -21,9 +22,10 @@ You can monitor the size and the creation frequency of VLFs by using [sys.dm_db_
 
 ## Resolution
 
-This problem is fixed in the following cumulative update for SQL Server:
+This problem is fixed in the following cumulative updates for SQL Server:
 
-[Cumulative Update 1 for SQL Server 2022](cumulativeupdate1.md)
+- [Cumulative Update 1 for SQL Server 2022](cumulativeupdate1.md)
+- [Cumulative Update 19 for SQL Server 2019](https://support.microsoft.com/help/5023049)
 
 This fix introduces a startup trace flag 15025 (TF 15025). You can use TF 15025 to disable the AKV access that's required for a newly created VLF, which allows high-volume customer workloads to continue without interruption. Once this trace flag is enabled, SQL Server that uses EKM for encryption and key generation doesn't contact AKV during the creation of the VLF.
 
@@ -48,7 +50,8 @@ SELECT * FROM sys.dm_database_encryption_keys
 
 Each new cumulative update for SQL Server contains all the hotfixes and security fixes that were in the previous build. We recommend that you install the latest build for your version of SQL Server:
 
-[Latest cumulative update for SQL Server 2022](build-versions.md)
+- [Latest cumulative update for SQL Server 2022](build-versions.md)
+- [Latest cumulative update for SQL Server 2019](https://support.microsoft.com/help/4518398)
 
 ## Status
 
