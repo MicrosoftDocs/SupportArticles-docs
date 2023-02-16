@@ -1,7 +1,7 @@
 ---
 title: Use registry keys
 description: This article describes the registry keys that are used by Microsoft Internet Information Services (IIS) on Windows.
-ms.date: 07/21/2020
+ms.date: 02/16/2023
 ms.reviewer: finbarr
 ms.technology: iis-general
 ---
