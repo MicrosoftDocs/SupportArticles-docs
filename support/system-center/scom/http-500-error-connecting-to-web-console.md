@@ -31,7 +31,7 @@ To fix the issue, perform the following configurations and verifications, and th
 1. [Verify "Account is sensitive and cannot be delegated" isn't set](#verify-account-is-sensitive-and-cannot-be-delegated-isnt-set)
 
 > [!NOTE]
-> The following sample names are used in configuration steps. You have to replace them with the names in your environment.
+> The following sample names are used in configuration and verification steps. You have to replace them with the names in your environment.
 >
 > - *SCOMMS.Lab.Local* - The fully qualified domain name (FQDN) of the System Center Operations Manager (SCOM) management server
 > - *SCOMWeb.Lab.Local* - The FQDN of the server that hosts the SCOM Web console
