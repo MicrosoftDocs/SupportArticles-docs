@@ -68,7 +68,7 @@ If you have a read-only workload, like a reporting workload that is routed to th
 An application trying to login to the secondary replica database in the reverting state fails to connect and raises error 18456:
 
 > 2023-01-26 13:01:13.100 Logon Error: 18456, Severity: 14, State: 38.
-> 2023-01-26 13:01:13.100 Logon Login failed for user 'CSSSQL\cssadmin'. Reason: Failed to open the explicitly specified database 'agdb'. [CLIENT: \<local machine>]
+> 2023-01-26 13:01:13.100 Logon Login failed for user '<UserName>'. Reason: Failed to open the explicitly specified database 'agdb'. [CLIENT: \<local machine>]
 
 This error can also be reported in the SQL Server error log if failed logins are being audited.
 
