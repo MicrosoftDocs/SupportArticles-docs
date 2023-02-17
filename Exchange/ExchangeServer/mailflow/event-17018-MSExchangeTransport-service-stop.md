@@ -33,7 +33,7 @@ at Microsoft.Exchange.Transport.Storage.DataConnection..ctor(JET_INSTANCE instan
 
 ## Cause
 
-This issue occurs because a high number of incoming connections can exhaust the session limit too quickly. In this situation, server-to-server connections are not being bound by the `MaxInboundConnectLimit` setting. This causes the number of connections to exceed the set limit.
+This issue occurs because a high number of server-to-server connections can exhaust the session limit too quickly.
 
 ## Resolution
 
@@ -46,7 +46,7 @@ To fix this issue, follow these steps:
 1. Decrease the `MaxInboundConnection` limit on the Receive connectors of each Exchange-based server, as follows.
 
     > [!NOTE]  
-    > To prevent putting a limit on the number of connections from busy sources, such as email gateways, you might have to increase the `MaxInboundConnectionPercentagePerSource` parameter from the default value of **2**. We recommend that you also closely monitor the incoming mail flow and gradually increase the value, as necessary.
+    > To prevent limiting the number of connections from busy sources, such as email gateways, you might have to increase the `MaxInboundConnectionPercentagePerSource` parameter from the default value of **2**. We recommend that you also closely monitor the incoming mail flow and gradually increase the value, as necessary.
 
     1. To check the current value of the `MaxInboundConnection` parameter, run the [Get-ReceiveConnector](/powershell/module/exchange/get-receiveconnector) cmdlet:
 
@@ -70,10 +70,10 @@ To fix this issue, follow these steps:
 
     1. Restart the Microsoft Exchange Transport service.
 
-1. Override the server-to-server throttle. To do this, run the **New-SettingOverride** cmdlet in Exchange Management Shell, and specify the following settings:​​​  
+1. Override the server-to-server throttle. To set and refresh the override, run the **New-SettingOverride** and **Get-ExchangeDiagnosticInfo** cmdlets in Exchange Management Shell:
 
-    - **Name** - "Throttle server to server inbound calls"
-    - **Component** - TransportConfiguration
-    - **Section** - ThrottleServerToServerInboundConnections
-    - **Parameters** - ("Enabled=True")
-    - **Reason** - "Any Text String "
+   ```powershell
+   New-SettingOverride -Name "Throttle server to server inbound calls" -Component TransportConfiguration -Section ThrottleServerToServerInboundConnections -Parameters ("Enabled=True") -Reason "Any Text String " 
+
+   Get-ExchangeDiagnosticInfo -Process Microsoft.Exchange.Directory.TopologyService -Component VariantConfiguration -Argument Refresh
+   ```
