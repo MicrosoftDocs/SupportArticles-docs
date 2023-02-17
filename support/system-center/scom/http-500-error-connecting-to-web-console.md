@@ -39,6 +39,8 @@ To fix the issue, perform the following configurations and verifications, and th
 > - *Lab\SCOMAppPool* - SCOM Application Pool Identity account (Optional)
 > - `https://mySCOM.Lab.Local/OperationsManager` - URL that's used to access the Operations Manager Web console (If there's no URL, substitute this with the Operations Manager Web console server name.)
 
+---
+
 ### SDK SPNs
 
 #### Register the SDK SPNs
@@ -83,6 +85,8 @@ To verify if the SDK service is registered, run the following command according 
     Setspn.exe -L SDKSvc
     ```
 
+---
+
 ### HTTP SPNs
 
 #### Register the HTTP SPNs
@@ -126,6 +130,8 @@ To verify if the HTTP service is registered, run the following command according
     ```console
     Setspn.exe -L SCOMAppPool
     ```
+
+---
 
 ### Configure constraint delegations
 
