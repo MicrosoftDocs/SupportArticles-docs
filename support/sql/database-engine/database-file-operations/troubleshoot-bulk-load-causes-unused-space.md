@@ -43,7 +43,7 @@ There are a few options to consider in resolving this issue:
 
 ### Small number of inserts means no bulk load operations
 
-If you have a relatively small number of rows to insert, then these aren't "bulk" inserts. In those cases of small batch sizes, using BULK INSERTS and the [minimal logging optimizations](/sql/relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import) for bulk loading of data aren't applicable. So, don't use them.
+If you have a relatively small number of rows to insert, then these aren't "bulk" inserts. In those cases of small batch sizes, using BULK INSERTS and the [minimal logging optimizations](/sql/relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import) for bulk loading of data aren't recommended.
 
 #### Set the batchsize value for bulk load operation
 
