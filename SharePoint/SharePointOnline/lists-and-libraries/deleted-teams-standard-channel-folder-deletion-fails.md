@@ -17,27 +17,27 @@ appliesto:
 - SharePoint Online
 ms.date: 2/15/2023
 ---
-# Unable to delete the folder for a deleted Teams standard channel
+# You can't delete the folder for a deleted Teams standard channel
 
 ## Symptoms
 
-For standard channels in Microsoft Teams that you deleted before August 2022, you're not able to delete the corresponding folder in the SharePoint library.
+You can't delete the corresponding folder in the SharePoint library for standard channels in Microsoft Teams that you deleted before August 2022.
 
 ## Cause
 
-Prior to August 2022, the folder for a Teams channel wasn't disconnected from Teams after the channel was deleted. So there was no option available to delete the folder.
+Before August 2022, the folder for a Teams channel wasn't disconnected from Teams after the channel was deleted. Therefore, there is no available option to delete the SharePoint folder.
 
-For folders that were deleted from August 2022 onward, the option to delete the folder in SharePoint is available.
+For folders that were deleted starting in August 2022, the option to delete the folder in SharePoint is available.
 
 ## Resolution
 
-To fix the issue, rename the folder in the modern experience of the SharePoint library. The renaming will trigger the **Delete** option to display.
+To fix the issue, rename the folder in the modern experience of the SharePoint library. Renaming the folder triggers the **Delete** option to appear.
 
-1. Select the three dots next to the folder and select **Rename**.
-2. Type a new name for the folder and select **Rename**.
-Now when you select the three dots next to the folder, you'll see the **Delete** option displayed.
+1. Select the ellipses (three dots) icon next to the folder, and select **Rename**.
+2. Type a new name for the folder, and select **Rename**.
+3. Select the ellipses icon again. The **Delete** option should now appear.
 3. Select **Delete** to delete the folder.
 
-If you're still unable to delete the folder, it might be associated with an active Teams channel. To find the active channel, navigate to the folder and select **Go to channel**. The associated channel will display in Teams.
+If you still can't delete the folder, the folder might be associated with an active Teams channel. To find the active channel, navigate to the folder, and then select **Go to channel**. The associated channel appears in Teams.
 
-If you want to delete the folder, you'll need to delete the channel first.
+If you want to delete the folder, you must first delete the channel.
