@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting long send queueing in an Always On availability group
 description: This article troubleshoots problems related to log send queueing in an Always On availability group. 
-ms.date: 02/15/2023
+ms.date: 02/17/2023
 ms.custom: sap:Availability Groups
 ms.prod: sql
 author: padmajayaraman
@@ -181,7 +181,7 @@ If a secondary replica is hosted far from the primary replica, log send queueing
 
    `PS C:\WINDOWS\system32> Get-NetTCPSetting | Select SettingName, CwndRestart`
 
-    :::image type="content" source="media/troubleshooting-log-send-queuing-in-alwayson-availability-group/nettcpsetting-commandline.png" alt-text="Screenshot that shows if Congestion Windows Restart contributes to network latency." lightbox="media/troubleshooting-log-send-queuing-in-alwayson-availability-group/nettcpsetting-commandline.png":::
+    :::image type="content" source="media/troubleshooting-log-send-queuing-in-alwayson-availability-group/nettcpsetting-commandline.png" alt-text="Screenshot that shows if Congestion Windows Restart contributes to network latency.":::
 
     For more information about how to set the **TCP Congestion Windows Restart** property to **False**, see [Set-NetTCPSetting (NetTCPIP)](/powershell/module/nettcpip/set-nettcpsetting?view=windowsserver2022-ps&preserve-view=true).
 
@@ -220,24 +220,24 @@ If a secondary replica is hosted far from the primary replica, log send queueing
 
   1. On the secondary replica server, open an elevated command prompt window, change the directory to the **NTttcp** tool folder, and then run the following command:
 
-     `ntttcp.exe -r -m 1,0,secondaryipaddress-a 16 -t 60`
+     `ntttcp.exe -r -m 1,0,<secondaryipaddress>-a 16 -t 60`
 
      > [!NOTE]
-     > In this command, <'secondaryipaddress'> is a placeholder for the actual IP address of the secondary replica server.
+     > In this command, <secondaryipaddress> is a placeholder for the actual IP address of the secondary replica server.
 
   1. On the primary replica server, open an elevated command prompt window, change the directory to the NTttcp tool folder, and then run the following command by again specifying the actual IP address of the secondary replica server:
 
-     `ntttcp.exe -s -m 1,0,secondaryipaddress-a 16 -t 60`
+     `ntttcp.exe -s -m 1,0,<secondaryipaddress>-a 16 -t 60`
 
      The following screenshots show NTttcp running on the secondary and primary replicas. Because of network latency, the tool can send only 739 KB/sec of data. That is what you can expect SQL Server to be able to send.
 
      **NTttcp on Secondary Replica**
 
-      :::image type="content" source="media/troubleshooting-log-send-queuing-in-alwayson-availability-group/ntttcp-secondary-replica.png" alt-text="Screenshot showing NTttcp running on a secondary replica." lightbox="media/troubleshooting-log-send-queuing-in-alwayson-availability-group/ntttcp-secondary-replica.png":::
+      :::image type="content" source="media/troubleshooting-log-send-queuing-in-alwayson-availability-group/ntttcp-secondary-replica.png" alt-text="Screenshot showing NTttcp running on a secondary replica.":::
 
      **NTttcp on Primary Replica**
 
-      :::image type="content" source="media/troubleshooting-log-send-queuing-in-alwayson-availability-group/ntttcp-primary-replica.png" alt-text="Screenshot showing NTttcp running on a primary replica." lightbox="media/troubleshooting-log-send-queuing-in-alwayson-availability-group/ntttcp-primary-replica.png":::
+      :::image type="content" source="media/troubleshooting-log-send-queuing-in-alwayson-availability-group/ntttcp-primary-replica.png" alt-text="Screenshot showing NTttcp running on a primary replica.":::
   
 **Review Performance Monitor counters**
 
