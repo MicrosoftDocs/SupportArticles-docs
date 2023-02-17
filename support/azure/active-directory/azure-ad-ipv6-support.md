@@ -70,9 +70,9 @@ By default, both IPv6 and IPv4 traffic is supported on Windows and most other op
 You can test Azure AD authentication over IPv6 before we enable it worldwide in late March 2023. This procedure helps validate IPv6 range configurations. The recommended approach is to use a [Name Resolution Policy Table (NRPT)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn593632(v=ws.11)) rule pushed to your Azure AD-joined Windows devices. In Windows Server, NRPT lets you implement a global or local policy that overrides DNS resolution paths. With this feature, you can redirect DNS for various fully qualified domain names (FQDNs) to special DNS servers that are configured to have IPv6 DNS entries for Azure AD sign-in. It's simple to enable and disable NRPT rules by using a PowerShell script. You can use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) to push this feature to clients.
 
 > [!NOTE]
-> Microsoft is providing these instructions for testing purposes only. You must remove the following configurations by May 2023 to ensure that your clients are using production DNS servers. The DNS servers in the following procedures may be decommissioned after May 2023.
+> - Microsoft is providing these instructions for testing purposes only. You must remove the following configurations by May 2023 to ensure that your clients are using production DNS servers. The DNS servers in the following procedures may be decommissioned after May 2023.
 > 
-> Please be kindly advised that using the [Resolve-DnsName](/powershell/module/dnsclient/resolve-dnsname) cmdlet is most appropriate for validating [NRPT](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn593632(v=ws.11)) rules, using the [nslookup](/windows-server/administration/windows-commands/nslookup)  command may not show the same result and this is to be expected given the differences that exist between these tools .
+> - We recommend using the [Resolve-DnsName](/powershell/module/dnsclient/resolve-dnsname) cmdlet to validate NRPT rules. If you use the [nslookup](/windows-server/administration/windows-commands/nslookup) command, the result may be different given the differences that exist between these tools.
 
 ### Configure a client NRPT rule manually
 
