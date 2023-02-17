@@ -223,7 +223,7 @@ If a secondary replica is hosted far from the primary replica, log send queueing
      `ntttcp.exe -r -m 1,0,<secondaryipaddress>-a 16 -t 60`
 
      > [!NOTE]
-     > In this command, <secondaryipaddress> is a placeholder for the actual IP address of the secondary replica server.
+     > In this command, \<secondaryipaddress\> is a placeholder for the actual IP address of the secondary replica server.
 
   1. On the primary replica server, open an elevated command prompt window, change the directory to the NTttcp tool folder, and then run the following command by again specifying the actual IP address of the secondary replica server:
 
