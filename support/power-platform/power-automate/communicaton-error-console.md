@@ -14,7 +14,7 @@ This article provides a resolution for a communication error when launching or o
 
 ## Symptoms
 
-An error dialog appears with title **Communication error** and message **Power Automate console didn't start properly. Restart Power Automate.**.
+An error dialog appears with title **Communication error** and message **Power Automate console didn't start properly. Restart Power Automate**.
 
 ## Cause
 
@@ -50,5 +50,5 @@ Run Power Automate for desktop (PAD) as administrator.
 
 > [!NOTE]
 >
-> - Running processes as administrator may cause UAC prompts to appear each time you launch the process.
+> - Running processes as administrator may cause UAC prompts to appear each time you launch them.
 > - Running Power Automate for desktop as administrator doesn't work on unattended mode.
