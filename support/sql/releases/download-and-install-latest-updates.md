@@ -1,7 +1,7 @@
 ---
 title: Latest updates and version history for SQL Server
 description: This article lists various builds or updates that are available for different versions of SQL Server.
-ms.date: 10/15/2022
+ms.date: 2/16/2023
 ms.custom: sap:Installation, Patching and Upgrade
 ms.topic: how-to
 ms.prod: sql
@@ -21,7 +21,7 @@ _Original KB number:_ &nbsp; 321185
 
 ## Summary
 
-- A downloadable version of an Excel workbook that contains all the build versions together with their current support lifecycle stage for 2005 through the current version is available. The Excel file also contains detailed fix lists for SQL Server 2019 and SQL Server 2017. **[Click to download this new Excel file now](https://download.microsoft.com/download/d/3/e/d3e28f3d-6a4f-47ce-aaa5-9d74c5590ed6/SQLServerBuilds.xlsx)**.
+- A downloadable version of an Excel workbook that contains all the build versions together with their current support lifecycle stage for 2005 through the current version is available. The Excel file also contains detailed fix lists for SQL Server 2022, SQL Server 2019, and SQL Server 2017. **[Click to download this new Excel file now](https://download.microsoft.com/download/d/3/e/d3e28f3d-6a4f-47ce-aaa5-9d74c5590ed6/SQLServerBuilds.xlsx)**.
 
 - To learn what a specific version number of SQL Server maps to, or to find the KB article information for a specific cumulative update package or a service pack, search for the version number in the [SQL Server Complete Version](#sql-server-complete-version-list-tables) list tables.
 
@@ -39,8 +39,8 @@ Each of the following links provides information for all of the applicable produ
 
   |Version|Latest service pack|Latest GDR|Latest cumulative update|
   |---|---|---|---|
-|**SQL Server 2022**<br/><br/>- [Build information](#sql-server-2022)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver16&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5021522) (16.0.1050.5 - February 2023) |None |
-  |**SQL Server 2019**<br/><br/>- [Build information](#sql-server-2019)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5021125) (15.0.2101.7 - February 2023)|[CU18 for 2019](https://support.microsoft.com/help/5017593) (15.0.4261.1 - September 2022)<br/><br/>[CU18 + GDR](https://support.microsoft.com/help/5021124) (15.0.4280.7 - February 2023)|
+|**SQL Server 2022**<br/><br/>- [Build information](#sql-server-2022)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver16&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5021522) (16.0.1050.5 - February 2023) |[CU1 for 2022](../releases/sqlserver-2022/cumulativeupdate1.md) (16.0.4003.1 - February 2023) |
+  |**SQL Server 2019**<br/><br/>- [Build information](#sql-server-2019)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5021125) (15.0.2101.7 - February 2023)|[CU19 for 2019](https://support.microsoft.com/help/5023049) (15.0.4298.1 - February 2023)<br/><br/>[CU18 + GDR](https://support.microsoft.com/help/5021124) (15.0.4280.7 - February 2023)|
   |**SQL Server 2017**<br/><br/>- [Build information](#sql-server-2017)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|None|[GDR](https://support.microsoft.com/help/5021127) (14.0.2047.8 - February 2023)|[CU31 for 2017](https://support.microsoft.com/help/5016884) (14.0.3456.2 - September 2022)<br/><br/>[CU31 + GDR](https://support.microsoft.com/help/5021126) (14.0.3460.9 - February 2023)|
   |**SQL Server 2016**<br/><br/>- [Build information](#sql-server-2016)<br/>- [Installation](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver15&preserve-view=true)|[Azure Connect pack](https://support.microsoft.com/help/5014242) (13.0.7000.253 - May 2022)<br/><br/>[SP3](https://support.microsoft.com/help/5003279) (13.0.6300.2 - September 2021)<br/><br/>[SP2](https://support.microsoft.com/help/4052908) (13.0.5026.0 - April 2018)<br/><br/>[SP1](https://support.microsoft.com/help/3182545) (13.0.4001.0 - November 2016)|[GDR for Azure Connect pack](https://support.microsoft.com/help/5021128) (13.0.7024.30 - February 2023)<br/><br/>[GDR for SP3](https://support.microsoft.com/help/5021129) (13.0.6430.49 - February 2023)<br/><br/>[GDR for SP2](https://support.microsoft.com/help/5014365) (13.0.5108.50 - June 2022)<br/><br/>[GDR for SP1](https://support.microsoft.com/help/4505219) (13.0.4259.0 - July 2019)<br/><br/>[GDR for RTM](https://support.microsoft.com/help/4058560) (13.0.1745.2 - January 2018)|[CU17 + GDR for SP2](https://support.microsoft.com/help/5014351) (13.0.5893.48 - June 2022)<br/><br/>[CU17 for 2016 SP2](https://support.microsoft.com/help/5001092) (13.0.5888.11 - March 2021)<br/><br/>[CU15 + GDR for SP1](https://support.microsoft.com/help/4505221) (13.0.4604.0 - July 2019)<br/><br/>[CU15 for SP1](https://support.microsoft.com/help/4495257) (13.0.4574.0 - May 2019)<br/><br/>[CU9 for RTM](https://support.microsoft.com/help/4037357) (13.0.2216.0 - November 2017)|
   |**SQL Server 2014**<br/><br/>- [Build information](#sql-server-2014)<br/>- [Installation](https://www.microsoft.com/download/details.aspx?id=42299)|[SP3](https://support.microsoft.com/help/4022619) (12.0.6024.0 - October 2018)<br/><br/>[SP2](https://support.microsoft.com/help/3171021) (12.0.5000.0 - July 2016)<br/><br/>[SP1](https://support.microsoft.com/help/3058865) (12.0.4100.1 - May 2015)|[GDR for SP3](https://support.microsoft.com/help/5021037) (12.0.6174.8 - February 2023)<br/><br/>[GDR for SP2](https://support.microsoft.com/help/4505217) (12.0.5223.6 - July 2019)<br/><br/>[GDR for SP1](https://support.microsoft.com/help/4019091) (August 2017)<br/><br/>[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058) (July 2015)|[CU4 + GDR for SP3](https://support.microsoft.com/help/5021045) (12.0.6444.4 - February 2023)<br/><br/>[CU4 for SP3](https://support.microsoft.com/help/4500181) (12.0.6329.1 - July 2019)<br/><br/>[CU18 for SP2](https://support.microsoft.com/help/4500180) (12.0.5687.1 - July 2019)<br/><br/>[CU13 for SP1](https://support.microsoft.com/help/4019099) (12.0.4522.0 - August 2017)|
@@ -60,6 +60,7 @@ Each of the following links provides information for all of the applicable produ
 
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
+|16.0.4003.1|None|CU1|[5022375](../releases/sqlserver-2022/cumulativeupdate1.md)|February 16, 2023|
 |16.0.1050.5|None|GDR|[5021522](https://support.microsoft.com/help/5021522)|February 14, 2023|
 |16.0.1000.6|None|RTM|NA|November 16, 2022|
 
@@ -67,6 +68,7 @@ Each of the following links provides information for all of the applicable produ
 
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
+|15.0.4298.1|None|CU19| [5023049](https://support.microsoft.com/help/5023049)|February 16, 2023|
 |15.0.4280.7|None|CU18 + GDR| [5021124](https://support.microsoft.com/help/5021124)|February 14, 2023|
 |15.0.2101.7|None|GDR| [5021125](https://support.microsoft.com/help/5021125)|February 14, 2023|
 |15.0.4261.1|None|CU18| [5017593](https://support.microsoft.com/help/5017593)|September 28, 2022|
@@ -273,7 +275,7 @@ Each of the following links provides information for all of the applicable produ
 |12.0.4474.0|SP1|CU9| [3186964](https://support.microsoft.com/help/3186964)|October 17, 2016|
 |12.0.4468.0|SP1|CU8| [3174038](https://support.microsoft.com/help/3174038)|August 15, 2016|
 |12.0.4459.0|SP1|CU7| [3162659](https://support.microsoft.com/help/3162659)|June 20, 2016|
-|12.0.4457.0|SP1|CU6| [3167392](https://support.microsoft.com/help/3167392)|May 30,2016|
+|12.0.4457.0|SP1|CU6| [3167392](https://support.microsoft.com/help/3167392)|May 30, 2016|
 |12.0.4449.0|SP1|CU6| [3144524](https://support.microsoft.com/help/3144524)|April 18, 2016|
 |12.0.4438.0|SP1|CU5| [3130926](https://support.microsoft.com/help/3130926)|February 22, 2016|
 |12.0.4436.0|SP1|CU4| [3106660](https://support.microsoft.com/help/3106660)|December 21, 2015|
@@ -520,7 +522,7 @@ Each of the following links provides information for all of the applicable produ
 |Build number or version|Version description, (KB number for that update), release date|
 |---|---|
 |8.00.2283|Post-SP4 hotfix for MS09-004 (971524)|
-|8.00.2282|MS09-004: KB959420 October 29,2008|
+|8.00.2282|MS09-004: KB959420 October 29, 2008|
 |8.00.2273|MS08-040 - KB 948111 July 8, 2008|
 |8.00.2040|Post-SP4 AWE fix (899761)|
 |8.00.2039| SQL Server 2000 SP4 |
