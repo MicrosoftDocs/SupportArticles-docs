@@ -39,8 +39,6 @@ To fix the issue, perform the following configurations and verifications, and th
 > - *Lab\SCOMAppPool* - SCOM Application Pool Identity account (Optional)
 > - `https://mySCOM.Lab.Local/OperationsManager` - URL that's used to access the Operations Manager Web console (If there's no URL, substitute this with the Operations Manager Web console server name.)
 
----
-
 ### SDK SPNs
 
 #### Register the SDK SPNs
@@ -48,6 +46,7 @@ To fix the issue, perform the following configurations and verifications, and th
 To register the System Center Data Access (SDK) Service Principal Names (SPNs), run the following commands according to different scenarios:
 
 - ##### Scenario 1
+
   The SDK service runs under a LocalSystem account
 
     ```console
@@ -56,6 +55,7 @@ To register the System Center Data Access (SDK) Service Principal Names (SPNs), 
     ```
 
 - ##### Scenario 2
+
   The SDK service runs under a domain account (SDKSvc)
 
     ```console
@@ -68,6 +68,7 @@ To register the System Center Data Access (SDK) Service Principal Names (SPNs), 
 To verify if the SDK service is registered, run the following command according to different scenarios:
 
 - ##### Scenario 1
+
   The SDK service runs under a LocalSystem account
 
     ```console
@@ -75,13 +76,12 @@ To verify if the SDK service is registered, run the following command according 
     ```
 
 - ##### Scenario 2
+
   The SDK service runs under a domain account (SDKSvc)
 
     ```console
     Setspn.exe -L SDKSvc
     ```
-
----
 
 ### HTTP SPNs
 
@@ -90,6 +90,7 @@ To verify if the SDK service is registered, run the following command according 
 To register the HTTP SPNs, run the following commands according to different scenarios:
 
 - ##### Scenario 1
+
   The Web console application pool runs under the default identity (ApplicationPoolIdentity)
 
     ```console
@@ -98,6 +99,7 @@ To register the HTTP SPNs, run the following commands according to different sce
     ```
 
 - ##### Scenario 2
+
   The Web console application pool runs under a custom identity (Lab\SCOMAppPool)
 
     ```console
@@ -110,6 +112,7 @@ To register the HTTP SPNs, run the following commands according to different sce
 To verify if the HTTP service is registered, run the following command according to different scenarios:
 
 - ##### Scenario 1
+
   The Web console application pool runs under the default identity (ApplicationPoolIdentity)
 
     ```console
@@ -117,13 +120,12 @@ To verify if the HTTP service is registered, run the following command according
     ```
 
 - ##### Scenario 2
+
   The Web console application pool runs under a custom identity (Lab\SCOMAppPool)
 
     ```console
     Setspn.exe -L SCOMAppPool
     ```
-
----
 
 ### Configure constraint delegations
 
