@@ -17,7 +17,7 @@ search.appverid:
   - MET150
 ms.date: 2/16/2023
 ---
-# Error "Couldn't complete the call" when you call a user from the contact card
+# "Couldn't complete the call" error when you use a contact card in Teams
 
 ## Symptoms
 
@@ -27,11 +27,11 @@ In the Microsoft Teams Windows desktop client, you try to call a user in your or
 
 ## Cause
 
-This issue occurs because you aren't enabled to use the Enterprise Voice feature. To initiate a call from a contact card, the caller must be enabled for Enterprise Voice.
+This issue occurs because you aren't enabled to use the Enterprise Voice feature. To initiate a call by using a contact card, the caller must be enabled for Enterprise Voice.
 
 ## Workaround
 
-To work around this issue, use one of the following ways to call the user:
+To work around this issue, use one of the following methods to make the call:
 
-- In a 1:1 chat with the user, select the **Audio call** icon:::image type="icon" source="media/error-call-from-contact-card/call-icon.png":::.
-- Select **Calls** from the vertical toolbar, enter the user's name, select the user from the results displayed, and then select **Call**.
+- In a one-to-one chat with the target user, select the **Audio call** icon:::image type="icon" source="media/error-call-from-contact-card/call-icon.png":::.
+- Select **Calls** on the vertical toolbar, enter the user's name, select the user from the results list, and then select **Call**.
