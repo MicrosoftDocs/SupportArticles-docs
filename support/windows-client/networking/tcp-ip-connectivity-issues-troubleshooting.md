@@ -16,6 +16,9 @@ localization_priority: medium
 ---
 # Troubleshoot TCP/IP connectivity
 
+> [!div class="nextstepaction"]
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806409" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common Active Directory replication issues.
+
 _Applies to:_ &nbsp; Windows 10
 
 You might come across connectivity errors on the application end or timeout errors. The following are the most common scenarios:
