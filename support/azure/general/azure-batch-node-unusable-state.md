@@ -11,28 +11,25 @@ ms.service: batch
 
 Azure Batch might set [the state of a Batch node](/rest/api/batchservice/compute-node/get#computenodestate) to **Unusable** for many reasons. You can't schedule tasks to a node in the **Unusable** state, but it still incurs charges. In most cases, the Batch service will try to recover the node. However, if the **Unusable** state is caused by a configuration issue, the node couldn't be recovered. This article discusses some common configuration issues that cause nodes to be unusable and provides solutions.
 
-## Virtual network configuration issue
+## Virtual network configuration issues
 
-### Symptom
-
-- In a pool that's associated with a subnet of a virtual network (VNet), all nodes are in the **Unusable** state.
-- There's no [error](/rest/api/batchservice/compute-node/get#computenodeerror) code on the nodes.
+In a pool that's associated with a subnet of a virtual network (VNet), all nodes are in the **Unusable** state. But there's no [error](/rest/api/batchservice/compute-node/get#computenodeerror) code on the nodes.
 
 :::image type="content" source="media/azure-batch-node-unusable-state/node-state-shows-unusable.png" alt-text="Image alt text.":::
 
-This symptom means that the Batch service is unable to communicate with the nodes. In most cases, it's caused by VNet configuration issues. The following sections describe the two most common causes.
+Th symptom above mean that the Batch service is unable to communicate with the nodes. In most cases, it's caused by VNet configuration issues. The following sections describe the two most common causes.
 
 ### Cause 1: Missing required network security group (NSG) rules
 
 When an NSG is configured in the subnet, it's required to configure this NSG with at least the inbound and outbound security rules as shown below so that the Batch service can communicate with nodes. If the communication to the nodes in the specified subnet is denied by the NSG, the Batch service will set the state of the nodes to **Unusable**.
 
-Inbound security rules
+- Inbound security rules
 
-:::image type="content" source="media/azure-batch-node-unusable-state/inbound-security-rules.png" alt-text="Screenshot of inbound security rules.":::
+    :::image type="content" source="media/azure-batch-node-unusable-state/inbound-security-rules.png" alt-text="Screenshot of inbound security rules.":::
 
-Outbound security rules
+- Outbound security rules
 
-:::image type="content" source="media/azure-batch-node-unusable-state/outbound-security-rules.png" alt-text="Screenshot of outbound security rules.":::
+    :::image type="content" source="media/azure-batch-node-unusable-state/outbound-security-rules.png" alt-text="Screenshot of outbound security rules.":::
 
 ### Solution for Cause 1: Configure NSG with required inbound and outbound security rules
 
@@ -60,7 +57,7 @@ To perform the configuration, follow these steps:
 
 When the VNet where the pool is associated has forced tunneling enabled, it's required to add a UDR corresponding to the BatchNodeManagement.\<region> service tag in the region where your Batch account exists. Otherwise, the traffic between the Batch service and nodes will be blocked and the compute nodes will become unusable.
 
-### Solution for Cause 2: add UDR corresponding to BatchNodeManagement.\<region> service tag
+### Solution for Cause 2: Add UDR corresponding to BatchNodeManagement.\<region> service tag
 
 To resolve this issue, add a UDR corresponding to the BatchNodeManagement.\<region> service tag in the region where your Batch account exists and set the **Next hop type** to **Internet**. For more information, see [User-defined routes for forced tunneling](/azure/batch/batch-virtual-network#user-defined-routes-for-forced-tunneling).
 
@@ -82,8 +79,6 @@ To do this, follow these steps:
 1. Reboot the node to be back to the normal state.
 
 ## Disk full issue
-
-### Symptom
 
 A node is in the **Unusable** state and the following error message shows on the node:
 
@@ -138,8 +133,6 @@ To resolve the issue, follow these steps:
 
 Sometimes, custom image configuration issues, for example custom images aren't appropriately prepared, can result in unusable nodes. Custom images use a wide range of variables. These variables may cause nodes to be unusable.
 
-### Symptom
-
 A Batch node is in **Unusable** or **Starting** state and the following error code shows on the node:
 
 > **Code:**  
@@ -170,8 +163,6 @@ When the authentication mode of the linked Azure Storage account (or called auto
 
 :::image type="content" source="media/azure-batch-node-unusable-state/batch-account-managed-identity-authentication-mode.png" alt-text="Screenshot of the 'Batch Account Managed Identity' authentication mode.":::
 
-### Symptom
-
 A Batch node is in the **Unusable** state and the following error code shows on the node:
 
 > **Code:** ApplicationPackageError  
@@ -187,7 +178,7 @@ A Batch node is in the **Unusable** state and the following error code shows on 
 
 When you create the pool, you can specify multiple managed identities. If the managed identity defined in the node identity reference (configured in the auto-storage account) isn't added to the pool identity, nodes can't use the correct managed identity for authentication. This causes the application package download process fails, which causes the node to be unusable.
 
-### Solution: re-create the pool with the right managed identity
+### Solution: Re-create the pool with the right managed identity
 
 To resolve this issue, re-create the pool with the right managed identity defined in the node identity reference. For more information about using Batch pool managed identity, see [Set up managed identity in your batch pool](use-managed-identities-azure-batch-account-pool.md#set-up-managed-identity-in-your-batch-pool).
 
