@@ -529,8 +529,6 @@
        href: database-engine/performance/troubleshoot-query-perf-between-servers.md
      - name: Decreased query performance after upgrade
        href: database-engine/performance/decreased-query-perf-after-upgrade.md
-     - name: Troubleshoot availability group database in reverting state
-       href: database-engine/performance/troubleshoot-availability-group-database-reverting-state.md
      - name: High CPU or high memory grants with queries that use optimized nested loops
        href: database-engine/performance/decreased-perf-high-cpu-optimized-nested-loop.md   
      - name: Performance degradation with new CE join containment assumption
@@ -541,6 +539,8 @@
        href: database-engine/performance/resolve-blocking-problems-caused-lock-escalation.md
      - name: Slower query in database application than in SSMS
        href: database-engine/performance/troubleshoot-application-slow-ssms-fast.md
+     - name: Troubleshoot availability group database in reverting state
+       href: database-engine/performance/troubleshoot-availability-group-database-reverting-state.md
      - name: Troubleshoot slow queries affected by Optimizer Timeout
        href: database-engine/performance/troubleshoot-optimizer-timeout-performance.md
      - name: Troubleshoot entire SQL Server or application appears slow
