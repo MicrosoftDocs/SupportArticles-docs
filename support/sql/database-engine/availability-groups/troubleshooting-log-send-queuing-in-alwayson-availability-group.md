@@ -15,7 +15,7 @@ This article provides resolutions to problems related to log send queueing.
 
 ## What is log send queueing?
 
-Changes that are made to an availability group database on the primary replica (such as `INSERT`, `UPDATE`, and `DELETE`) are written to the transaction log and sent to the availability group secondary replicas. The *Log Send Queue* defines the number of log records in the log files of the primary database that have not been sent to the secondary replicas.
+Changes that are made to an availability group database on the primary replica (such as `INSERT`, `UPDATE`, and `DELETE`) are written to the transaction log and sent to the availability group secondary replicas. The *Log Send Queue* defines the number of log records in the log files of the primary database that haven't been sent to the secondary replicas.
 
 ## Symptoms and effect of log send queueing
 
@@ -101,7 +101,7 @@ This section explains how to interpret the values of the log send queue size.
 
 ### When is log send queuing bad? How much log send queuing should be tolerated?
 
-You might assume that if the log send queue is reporting a value of **0**, this means that no log send queuing is occurring at the time of that report. However, when your production environment is busy, you should expect to observe the log send queue frequently report a value other than zero even in a healthy AlwaysOn environment. During typical production, you should expect to observe this value fluctuate between 0 and a non-zero value.
+You might assume that if the log send queue is reporting a value of **0**, this means that no log send queueing is occurring at the time of that report. However, when your production environment is busy, you should expect to observe the log send queue frequently report a value other than zero even in a healthy AlwaysOn environment. During typical production, you should expect to observe this value fluctuate between 0 and a non-zero value.
 
 If you observe increasing log send queueing over time, further investigation is warranted. This extra activity indicates that something has changed. If you observe a sudden growth in the log send queue, the following measurements are useful for troubleshooting:
 
@@ -111,11 +111,11 @@ If you observe increasing log send queueing over time, further investigation is 
 
 ### Get baseline rates for log send rate and mirrored transactions/sec
 
-During healthy AlwaysOn performance, monitor the **log send rate** and **mirrored transactions/sec** values for your busy availability group databases. What do they look like during typically busy business hours? What do they look like during periods of maintenance, when large transactions drive higher transaction throughput on the system? You can compare these values when you observe log send queue growth to help determine what has changed. The workload might simply be greater than usual. If the log send rate is less than usual, further investigation might be required to determine why.
+During healthy AlwaysOn performance, monitor the **log send rate** and **mirrored transactions/sec** values for your busy availability group databases. What do they look like during typically busy business hours? What do they look like during periods of maintenance, when large transactions drive higher transaction throughput on the system? You can compare these values when you observe log send queue growth to help determine what has changed. The workload might be greater than usual. If the log send rate is less than usual, further investigation might be required to determine why.
 
 ### Workload volumes matter
 
-When you have large workloads (such as an `UPDATE` statement against one million rows, an index rebuild on a 1 terabyte table, or even an ETL batch that's inserting millions of rows), you should expect to see some log send queue growth, either immediately or over time. This is expected when a large number of changes are made suddenly in the availability group database.
+When you have large workloads (such as an `UPDATE` statement against 1 million rows, an index rebuild on a 1-terabyte table, or even an ETL batch that's inserting millions of rows), you should expect to see some log send queue growth, either immediately or over time. This is expected when a large number of changes are made suddenly in the availability group database.
 
 ## How to diagnose log send queueing
 
@@ -160,7 +160,7 @@ The following table is sample of results. An increase in the `runnable_tasks_cou
 
 This condition is especially common if the secondary replica is physically remote from the primary replica. Multi-site availability groups let customers deploy copies of business data across multiple sites for disaster recovery and reporting. This makes near-real-time changes available to the copies of the production data at remote locations.
 
-If a secondary replica is hosted far from the primary replica, log send queueing can be caused by network latency and an inability to send changes to the remote secondary as fast as they are being produced in the primary replica database.
+If a secondary replica is hosted far from the primary replica, log send queueing can be caused by network latency and an inability to send changes to the remote secondary as fast as they're being produced in the primary replica database.
 
 > [!IMPORTANT]  
 > SQL Server uses a single connection to synchronize changes from the primary to the secondary replicas. Therefore, if a secondary replica is remote, the width of the pipe will not affect how much data SQL Server can send. Instead, this amount is more dependent on the network latency in the pipe (connection speed).
@@ -169,7 +169,7 @@ If a secondary replica is hosted far from the primary replica, log send queueing
 
 - **Check whether flow control settings contribute to network latency**
 
-    Microsoft SQL Server availability groups use flow control gates to avoid excessive consumption of network resources, memory, and other resources on all availability replicas. These flow control gates do not affect the synchronization health state of the availability replicas. However, they can affect the overall performance of your availability databases, including RPO.
+    Microsoft SQL Server availability groups use flow control gates to avoid excessive consumption of network resources, memory, and other resources on all availability replicas. These flow control gates don't affect the synchronization health state of the availability replicas. However, they can affect the overall performance of your availability databases, including RPO.
     
     Later versions of SQL Server change the thresholds at which flow control is entered. This can help relieve the effect that flow control has on symptoms such as log send queueing. For more information about flow control and the history of changes to flow control thresholds, see [Flow control gates](/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups&tabs=new-limits).
     
@@ -207,7 +207,7 @@ If a secondary replica is hosted far from the primary replica, log send queueing
 
 - **Test network throughput from primary to secondary using independent tool**
 
-    Use a tool such as NTttcp to independently detect network throughput between the primary and secondary replicas by using a single connection. Network latency is a common cause for log send queueing. The following steps show to use an independent tool such as NTttcp to measure the network throughput.
+    Use a tool such as NTttcp to independently detect network throughput between the primary and secondary replicas by using a single connection. Network latency is a common cause for log send queueing. The following steps show how to use an independent tool such as NTttcp to measure the network throughput.
 
     > [!IMPORTANT]  
     > SQL Server sends changes from the primary replica to the secondary replica by using a single connection. In the following section, we configure and run **NTttcp** to use a single connection (in the same manner as SQL Server) to compare the throughput accurately.
