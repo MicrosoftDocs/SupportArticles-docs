@@ -293,6 +293,8 @@
       href: ./teams-on-mac/virtual-camera-doesnt-work-macos.md
   - name: Teams on Windows
     items:
+    - name: Error when calling from a contact card
+      href: ./teams-on-windows/error-call-from-contact-card.md
     - name: Teams remembered as XBox game
       href: ./teams-on-windows/performance-affected-when-teams-remembered-as-game.md
   - name: Third-party programs
