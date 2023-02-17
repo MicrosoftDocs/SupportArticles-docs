@@ -1,6 +1,6 @@
 ---
 title: Bulk load operations can lead to large amounts of unused space
-description: This article provides resolutions for the problem where the SQL Server database transaction log file doesn't grow by the configured file growth value.
+description: This article provides solutions for the issue where bulk load operations with a small batch size lead to much unused space
 ms.date: 02/16/2023
 ms.custom: sap:Administration and management
 ms.reviewer: 
