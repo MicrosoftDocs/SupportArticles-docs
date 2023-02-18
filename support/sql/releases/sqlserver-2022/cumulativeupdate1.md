@@ -22,6 +22,9 @@ This article describes Cumulative Update package 1 (CU1) for Microsoft SQL Serve
 - SQL Server - Product version: **16.0.4003.1**, file version: **2022.160.4003.1**
 - Analysis Services - Product version: **16.0.43.208**, file version: **2022.160.43.208**
 
+> [!NOTE]
+> This Cumulative Update includes recently released GDR for SQL Server 2022 ([KB5021522 - Description of the security update for SQL Server 2022 GDR: February 14, 2023](https://support.microsoft.com/help/5021522)). For more information about SQL Servicing releases, see [Servicing models for SQL Server](../../general/servicing-models-sql-server.md).
+
 ## Known issues in this update
 
 There are no known issues in this cumulative update.
