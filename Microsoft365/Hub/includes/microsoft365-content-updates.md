@@ -2,6 +2,17 @@
 
 
 
+## Week of February 13, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 2/14/2023 | [Troubleshooting common eDiscovery issues](/microsoft-365/troubleshoot/ediscovery/resolve-ediscovery-issues) | modified |
+| 2/15/2023 | [Identify errors in Microsoft 365 retention and retention label policies](/microsoft-365/troubleshoot/retention/identify-errors-in-retention-and-retention-label-policies) | added |
+| 2/15/2023 | [Resolve errors in Microsoft 365 retention and retention label policies](/microsoft-365/troubleshoot/retention/resolve-errors-in-retention-and-retention-label-policies) | added |
+| 2/15/2023 | [Troubleshooting common eDiscovery issues](/microsoft-365/troubleshoot/ediscovery/resolve-ediscovery-issues) | modified |
+
+
 ## Week of January 30, 2023
 
 
