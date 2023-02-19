@@ -40,15 +40,15 @@ To perform the configuration, follow these steps:
 1. Navigate to the pool from the Azure portal.
 1. Check the pool properties to obtain the VNet and subnet name.
 
-    :::image type="content" source="media/azure-batch-node-unusable-state/check-vnet-subnet-name.png" alt-text="Screenshot of the network configuration.":::
+    :::image type="content" source="media/azure-batch-node-unusable-state/check-vnet-subnet-name.png" alt-text="Screenshot of the network configuration." lightbox="media/azure-batch-node-unusable-state/check-vnet-subnet-name.png":::
 
 1. Navigate to the VNet. In the VNet page, select **Settings** > **Subnets**. In the list of subnets, select the expected subnet. In the subnet pane, find the NSG.
 
-    :::image type="content" source="media/azure-batch-node-unusable-state/check-nsg-associated-to-subnet.png" alt-text="Screenshot of the subnet information.":::
+    :::image type="content" source="media/azure-batch-node-unusable-state/check-nsg-associated-to-subnet.png" alt-text="Screenshot of the subnet information." lightbox="media/azure-batch-node-unusable-state/check-nsg-associated-to-subnet.png":::
 
 1. Navigate to the NSG. Check the configuration in the NSG page.
 
-    :::image type="content" source="media/azure-batch-node-unusable-state/nsg-configuration.png" alt-text="Screenshot of the NSG configuration.":::
+    :::image type="content" source="media/azure-batch-node-unusable-state/nsg-configuration.png" alt-text="Screenshot of the NSG configuration." lightbox="media/azure-batch-node-unusable-state/nsg-configuration.png":::
 
 1. Configure this NSG with the required inbound and outbound security rules.
 1. Reboot the node to be back to the normal state.
@@ -66,15 +66,15 @@ To do this, follow these steps:
 1. Navigate to the pool from the Azure portal.
 1. Check the pool properties to obtain the VNet and subnet name.
 
-    :::image type="content" source="media/azure-batch-node-unusable-state/check-vnet-subnet-name.png" alt-text="Screenshot of the network configuration.":::
+    :::image type="content" source="media/azure-batch-node-unusable-state/check-vnet-subnet-name.png" alt-text="Screenshot of the network configuration." lightbox="media/azure-batch-node-unusable-state/check-vnet-subnet-name.png":::
 
 1. Navigate to the VNet. In the VNet page, select **Settings** > **Subnets**. In the list of subnets, select the route table associated with the expected subnet.
 
-    :::image type="content" source="media/azure-batch-node-unusable-state/select-route-table.png" alt-text="Screenshot that shows the subnet and its route table.":::
+    :::image type="content" source="media/azure-batch-node-unusable-state/select-route-table.png" alt-text="Screenshot that shows the subnet and its route table." lightbox="media/azure-batch-node-unusable-state/select-route-table.png":::
 
 1. In the root table page, select **Routes** > **Add**. In the **Add route** pane, add the required UDR and set the **Next hop type** to **Internet**.
 
-    :::image type="content" source="media/azure-batch-node-unusable-state/add-route-table.png" alt-text="Screenshot that shows how to add a UDR.":::
+    :::image type="content" source="media/azure-batch-node-unusable-state/add-route-table.png" alt-text="Screenshot that shows how to add a UDR." lightbox="media/azure-batch-node-unusable-state/add-route-table.png":::
 
 1. Reboot the node to be back to the normal state.
 
@@ -88,7 +88,7 @@ A node is in the **Unusable** state and the following error message shows on the
 > **Values:**  
 > Message - The VM disk is full. Delete job, tasks, or file on the node to free up spaces and then reboot the node.
 
-:::image type="content" source="media/azure-batch-node-unusable-state/node-error-disk-full.png" alt-text="Screenshot of the 'DiskFull' error message.":::
+:::image type="content" source="media/azure-batch-node-unusable-state/node-error-disk-full.png" alt-text="Screenshot of the 'DiskFull' error message." lightbox="media/azure-batch-node-unusable-state/node-error-disk-full.png":::
 
 ### Cause: No enough disk space on the node
 
@@ -127,7 +127,7 @@ To resolve the issue, follow these steps:
 
     After the node is restarted, the node should be in healthy state and can accept new tasks.
 
-    :::image type="content" source="media/azure-batch-node-unusable-state/node-in-healthy-state.png" alt-text="Screenshot of node in healthy state.":::
+    :::image type="content" source="media/azure-batch-node-unusable-state/node-in-healthy-state.png" alt-text="Screenshot of node in healthy state." lightbox="media/azure-batch-node-unusable-state/node-in-healthy-state.png":::
 
 ## Custom image configuration issue
 
@@ -140,13 +140,13 @@ A Batch node is in **Unusable** or **Starting** state and the following error co
 > **Message:**  
 > The batch agent extension provisioning has failed on compute node
 
-:::image type="content" source="media/azure-batch-node-unusable-state/batchagentinstallationfailure-error-message.png" alt-text="Screenshot of the BatchAgentInstallationFailure error message.":::
+:::image type="content" source="media/azure-batch-node-unusable-state/batchagentinstallationfailure-error-message.png" alt-text="Screenshot of the BatchAgentInstallationFailure error message." lightbox="media/azure-batch-node-unusable-state/batchagentinstallationfailure-error-message.png":::
 
 ### Cause: OS SKU of custom image is different from OS SKU selected during pool creation
 
 When you create an Azure Batch pool via the Azure portal, if you set **Image Type** to **Custom Image – Shared Image Gallery**, the Azure portal won't perform the OS SKU validation. If you select an OS SKU that's different from the actual OS SKU used in the custom image, Azure Batch will install Batch Node Agent that matches the selected OS SKU instead of the actual OS SKU used in the custom image.
 
-:::image type="content" source="media/azure-batch-node-unusable-state/set-batch-pool-image-type-os-sku.png" alt-text="Screenshot that shows the setting of the image type and OS sku during pool creation.":::
+:::image type="content" source="media/azure-batch-node-unusable-state/set-batch-pool-image-type-os-sku.png" alt-text="Screenshot that shows the setting of the image type and OS sku during pool creation." lightbox="media/azure-batch-node-unusable-state/set-batch-pool-image-type-os-sku.png":::
 
 ### Solution: Recreate the pool with OS SKU of custom image
 
@@ -161,7 +161,7 @@ For more information about how to create a custom image, see the following artic
 
 When the authentication mode of the linked Azure Storage account (or called auto-storage account) is set to **Batch Account Managed Identity** as shown below, wrong configuration on the pool identity will cause nodes to be unusable. For more information, see [Behavior scenarios](use-managed-identities-azure-batch-account-pool.md#behavior-scenarios).
 
-:::image type="content" source="media/azure-batch-node-unusable-state/batch-account-managed-identity-authentication-mode.png" alt-text="Screenshot of the 'Batch Account Managed Identity' authentication mode.":::
+:::image type="content" source="media/azure-batch-node-unusable-state/batch-account-managed-identity-authentication-mode.png" alt-text="Screenshot of the 'Batch Account Managed Identity' authentication mode." lightbox="media/azure-batch-node-unusable-state/batch-account-managed-identity-authentication-mode.png":::
 
 A Batch node is in the **Unusable** state and the following error code shows on the node:
 
@@ -172,7 +172,7 @@ A Batch node is in the **Unusable** state and the following error code shows on 
 > ApplicationPackageReference - asdf:0.0.1
 > Message - Resource download failed
 
-:::image type="content" source="media/azure-batch-node-unusable-state/application-package-error.png" alt-text="Screenshot of the ApplicationPackageError.":::
+:::image type="content" source="media/azure-batch-node-unusable-state/application-package-error.png" alt-text="Screenshot of the ApplicationPackageError." lightbox="media/azure-batch-node-unusable-state/application-package-error.png":::
 
 ### Cause: Managed identity defined in node identity reference isn't added to pool identity
 
