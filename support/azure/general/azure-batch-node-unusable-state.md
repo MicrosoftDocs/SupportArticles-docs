@@ -31,7 +31,7 @@ When an NSG is configured in the subnet, it's required to configure this NSG wit
 
     :::image type="content" source="media/azure-batch-node-unusable-state/outbound-security-rules.png" alt-text="Screenshot of outbound security rules.":::
 
-### Solution for Cause 1: Configure NSG with required inbound and outbound security rules
+### Solution 1: Configure NSG with required inbound and outbound security rules
 
 To resolve this issue, configure the NSG with the required inbound and outbound security rules as recommended in [Network security groups for Virtual Machine Configuration pools: Specifying subnet-level rules](/azure/batch/batch-virtual-network#network-security-groups-for-virtual-machine-configuration-pools-specifying-subnet-level-rules).
 
@@ -57,7 +57,7 @@ To perform the configuration, follow these steps:
 
 When the VNet where the pool is associated has forced tunneling enabled, it's required to add a UDR corresponding to the BatchNodeManagement.\<region> service tag in the region where your Batch account exists. Otherwise, the traffic between the Batch service and nodes will be blocked and the compute nodes will become unusable.
 
-### Solution for Cause 2: Add UDR corresponding to BatchNodeManagement.\<region> service tag
+### Solution 2: Add UDR corresponding to BatchNodeManagement.\<region> service tag
 
 To resolve this issue, add a UDR corresponding to the BatchNodeManagement.\<region> service tag in the region where your Batch account exists and set the **Next hop type** to **Internet**. For more information, see [User-defined routes for forced tunneling](/azure/batch/batch-virtual-network#user-defined-routes-for-forced-tunneling).
 
