@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 861806
 
 ## Canadian Payroll year-end update and payroll tax update
 
-This article discusses the payroll year-end update and the payroll tax update. When the payroll year-end update and tax update are released for the year, you may [download the file to prepare for year-end](https://learn.microsoft.com/dynamics/s-e/gp/cagptuye2018_285).
+This article discusses the payroll year-end update and the payroll tax update. When the payroll year-end update and tax update are released for the year, you may [download the file to prepare for year-end](/dynamics/s-e/gp/cagptuye2018_285).
 
 > [!IMPORTANT]
 > Before you follow the instructions in this article, make sure that you have a complete backup copy of the database that you can restore if a problem occurs.
