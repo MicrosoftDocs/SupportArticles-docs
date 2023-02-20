@@ -52,8 +52,6 @@
   href: ./secondary-installer-third-party-app.md
 - name: Setup crashes due to certain fonts
   href: ./fonts-cause-setup-crash.md
-- name: Uninstall third-party applications
-  href: ./uninstall-third-party-app.md
 - name: Uninstall Visual Studio 2012
   href: ./uninstall-visual-studio-2012.md
 - name: Visual Studio 2015 and 2013 features doesn't work
