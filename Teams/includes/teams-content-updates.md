@@ -2,6 +2,14 @@
 
 
 
+## Week of February 13, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 2/13/2023 | [External participants (users) are blocked from joining a Teams meeting](/microsoftteams/troubleshoot/meetings/external-participants-join-meeting-blocked) | modified |
+
+
 ## Week of February 06, 2023
 
 
@@ -26,11 +34,3 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 1/24/2023 | [Teams web client is stuck in a login loop](/microsoftteams/troubleshoot/teams-sign-in/sign-in-loop) | modified |
-
-
-## Week of January 09, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 1/13/2023 | [User presence status issues in Outlook](/microsoftteams/troubleshoot/teams-im-presence/issues-with-presence-in-outlook) | modified |
