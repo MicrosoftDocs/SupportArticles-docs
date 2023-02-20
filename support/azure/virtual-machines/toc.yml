@@ -1,20 +1,20 @@
 - name: Welcome
   href: welcome-virtual-machines.yml
 
-- name: How to get additional support for Azure VMs
+- name: Get additional support for Azure VMs
   items:
-    - name: How to get additional support for VM specific issues
+    - name: Get additional support for VM-specific issues
       href: /azure/virtual-machines/vm-support-help
     - name: How to create an Azure support request
       href: /azure/azure-portal/supportability/how-to-create-azure-support-request
 
 - name: Support statements
   items:
-  - name: What Microsoft server software is supported to run in Azure virtual machines
+  - name: What Microsoft server software is supported in Azure virtual machines?
     href: server-software-support.md
-  - name: What 32-bit operating systems are supported
+  - name: What 32-bit operating systems are supported?
     href: support-32-bit-operating-systems-virtual-machines.md
-  - name: What log files are collected during troubleshooting
+  - name: What log files are collected during troubleshooting?
     items:
     - name: Microsoft Azure IaaS VM logs and diagnostic information
       href: iaas-logs.md
@@ -74,7 +74,7 @@
       href: troubleshoot-ssh-connection.md
     - name: Reset network interface for Azure Linux VM
       href: reset-network-interface-azure-linux-vm.md
-    - name: Troubleshoot permissions are too open error
+    - name: Troubleshoot "permissions are too open" error
       href: troubleshoot-ssh-permissions-too-open.md
   - name: Windows
     items:
@@ -116,7 +116,7 @@
       href: Troubleshoot-rdp-internal-error.md
     - name: Troubleshoot RDP access is denied error
       href: troubleshoot-rdp-access-denied.md
-    - name: Troubleshoot connection disconnects frequently
+    - name: Troubleshoot connection disconnects frequently issue
       href: troubleshoot-rdp-intermittent-connectivity.md
     - name: Troubleshoot a general error
       href: troubleshoot-rdp-general-error.md
@@ -226,7 +226,7 @@
             href: troubleshoot-unexpected-restart-error-during-vm-boot.md
           - name: VM startup is stuck
             href: troubleshoot-vm-boot-configure-update.md
-          - name: VM cannot boot due to windows boot manager
+          - name: VM cannot boot due to Windows Boot Manager
             href: troubleshoot-guide-windows-boot-manager-menu.md
           - name: VM is unresponsive due to updating
             href: unresponsive-vm-apply-windows-update.md
@@ -240,7 +240,7 @@
             href: unresponsive-vm-apply-security-policy.md
           - name: VM is unresponsive while waiting for Local Session Manager
             href: vm-unresponsive-wait-local-session-manager.md
-          - name: Windows boot manager error - Status Invalid Image Hash
+          - name: Windows Boot Manager error - Status Invalid Image Hash
             href: windows-boot-error-invalid-image-hash.md
           - name: Windows stop error - Bad System Config Info
             href: windows-stop-error-bad-system-config-info.md
@@ -315,7 +315,7 @@
     items:
     - name: Isolate bottlenecks in Linux
       href: troubleshoot-performance-bottlenecks-linux.md
-    - name: Troubleshoot performance issues through Monitoring
+    - name: Troubleshoot performance issues through monitoring
       href: troubleshoot-performance-virtual-machine-linux-windows.md
   - name: Troubleshoot VM performance issues - Windows
     items:
@@ -390,13 +390,13 @@
         href: unable-access-g2-linux-vm-reboot.md
       - name: Fail to restart or be provisioned
         href: linux-kernel-fails-restart-provision.md
-      - name: Start VM with Last Known Good Configuration
+      - name: Start VM with last known good configuration
         href: start-vm-last-known-good.md
       - name: Swap file is not re-created
         href: swap-file-not-recreated-linux-vm-restart.md
       - name: Restarting or resizing a VM
         href: restart-resize-error-troubleshooting.md
-      - name: Restarting, Shutting Down, or Stopping services
+      - name: Restarting, shutting down, or stopping services
         href: boot-error-troubleshoot-windows.md
 
 - name: Troubleshoot VM extensions
@@ -434,7 +434,7 @@
   - name: Troubleshoot Linux VM agent
     href: linux-azure-guest-agent.md
 
-- name: Troubleshoot Disk Management
+- name: Troubleshoot disk management
   items:
   - name: Overview
     href: /azure/virtual-machines/managed-disks-overview?context=/troubleshoot/azure/virtual-machines/context/context
@@ -453,14 +453,14 @@
   - name: VHD is not supported when you create a VM in Azure
     href: vhd-not-supported-vm-azure.md
 
-- name: Troubleshoot Windows Activation
+- name: Troubleshoot Windows activation
   items:
   - name: Windows activation problems
     href: troubleshoot-activation-problems.md
   - name: Activation problem with forced tunneling
     href: custom-routes-enable-kms-activation.md
 
-- name: Troubleshoot Azure Disk Encryption
+- name: Troubleshoot Azure disk encryption
   items:
   - name: Windows
     items:
@@ -507,7 +507,7 @@
   items:
   - name: Configure multiple NICs
     href: linux-vm-multiple-virtual-network-interfaces-configuration.md
-  - name: Create SWAP file
+  - name: Create a SWAP file
     href: create-swap-file-linux-vm.md
   - name: Maximum RAM memory of Linux VM
     href: max-linux-ram-limited-64-gb.md
@@ -523,7 +523,7 @@
     - name: Red Hat RHUI certificate issues
       href: troubleshoot-linux-rhui-certificate-issues.md
 
-- name: Remote troubleshooting for VMs tools
+- name: Remote troubleshooting for VM tools
   items:
     - name: Custom Script Extension or Run Command
       items:
@@ -562,7 +562,7 @@
 
 - name: Tools - VM recovery access using nested virtualization
   items:
-  - name: Repair VM with Nested Hyper-V
+  - name: Repair a VM with Nested Hyper-V
     href: troubleshoot-vm-by-use-nested-virtualization.md
   - name: VM is Windows
     items:
