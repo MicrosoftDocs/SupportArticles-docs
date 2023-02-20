@@ -22,6 +22,9 @@ This article describes Cumulative Update package 1 (CU1) for Microsoft SQL Serve
 - SQL Server - Product version: **16.0.4003.1**, file version: **2022.160.4003.1**
 - Analysis Services - Product version: **16.0.43.208**, file version: **2022.160.43.208**
 
+> [!NOTE]
+> This Cumulative Update includes the recently released GDR for SQL Server 2022 ([KB5021522 - Description of the security update for SQL Server 2022 GDR: February 14, 2023](https://support.microsoft.com/help/5021522)). For more information about SQL Servicing releases, see [Servicing models for SQL Server](../../general/servicing-models-sql-server.md).
+
 ## Known issues in this update
 
 There are no known issues in this cumulative update.
@@ -530,7 +533,7 @@ To uninstall this CU on Linux, you must roll back the package to the previous ve
 
 - [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)
 - [SQL Server Service Packs are no longer supported starting from SQL Server 2017](https://support.microsoft.com/topic/fd405dee-cae7-b40f-db14-01e3e4951169)
-- [Determining which version and edition of SQL Server Database Engine is running](https://gallery.technet.microsoft.com/determining-which-version-af0f16f6)
+- [Determine which version and edition of SQL Server Database Engine is running](../find-my-sql-version.md)
 - [Servicing models for SQL Server](../../general/servicing-models-sql-server.md)
 - [Naming schema and Fix area descriptions for SQL Server software update packages](../../database-engine/install/windows/naming-schema-and-fix-area.md)
 - [Description of the standard terminology that is used to describe Microsoft software updates](../../../windows-client/deployment/standard-terminology-software-updates.md)
