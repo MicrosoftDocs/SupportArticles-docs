@@ -48,12 +48,10 @@
   href: ./msiapplymultiplepatches-error-1601.md
 - name: Known issues for Visual Studio 2012 and updates
   href: ./known-issues-visual-studio-2012-update.md
-- name: Secondary Installer uninstallation instructions
+- name: Uninstall third-party applications in Visual Studio 2015
   href: ./secondary-installer-third-party-app.md
 - name: Setup crashes due to certain fonts
   href: ./fonts-cause-setup-crash.md
-- name: Uninstall third-party applications
-  href: ./uninstall-third-party-app.md
 - name: Uninstall Visual Studio 2012
   href: ./uninstall-visual-studio-2012.md
 - name: Visual Studio 2015 and 2013 features doesn't work
