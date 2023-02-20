@@ -4,7 +4,7 @@ description: Troubleshooting recorder launch for UI Flows in Power Automate.
 ms.reviewer: jokovace
 ms.topic: troubleshooting
 ms.date: 3/31/2021
-ms.subservice: power-automate-flows
+ms.subservice: power-automate-desktop-flows
 ---
 # UI flows cannot launch recorder
 

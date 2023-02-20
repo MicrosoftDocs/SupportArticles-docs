@@ -4,7 +4,7 @@ description: Provides mitigation steps for the error codes that occur when runni
 ms.reviewer: cefriant
 ms.topic: troubleshooting
 ms.date: 12/15/2022
-ms.subservice: power-automate-flows
+ms.subservice: power-automate-desktop-flows
 ---
 # Error code occurs when running an attended or unattended desktop flow
 

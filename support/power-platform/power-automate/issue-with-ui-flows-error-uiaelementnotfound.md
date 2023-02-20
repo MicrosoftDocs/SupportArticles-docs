@@ -4,7 +4,7 @@ description: Provides a resolution to solve the UIAElementNotFound error during 
 ms.reviewer: priyase
 ms.topic: troubleshooting
 ms.date: 3/31/2021
-ms.subservice: power-automate-flows
+ms.subservice: power-automate-desktop-flows
 ---
 # Issue with UI flows UIAElementNotFound error
 
