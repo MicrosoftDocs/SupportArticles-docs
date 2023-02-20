@@ -4,17 +4,17 @@
 - name: Get additional support for Azure VMs
   items:
     - name: Get additional support for VM-specific issues
-      href: /azure/virtual-machines/vm-support-help
+      href: /azure/virtual-machines/vm-support-help?context=/troubleshoot/azure/virtual-machines/context/context
     - name: How to create an Azure support request
-      href: /azure/azure-portal/supportability/how-to-create-azure-support-request
+      href: /azure/azure-portal/supportability/how-to-create-azure-support-request?context=/troubleshoot/azure/virtual-machines/context/context
 
 - name: Support statements
   items:
-  - name: What Microsoft server software is supported in Azure virtual machines?
+  - name: What Microsoft server software is supported in Azure virtual machines
     href: server-software-support.md
   - name: What 32-bit operating systems are supported?
     href: support-32-bit-operating-systems-virtual-machines.md
-  - name: What log files are collected during troubleshooting?
+  - name: What log files are collected during troubleshooting
     items:
     - name: Microsoft Azure IaaS VM logs and diagnostic information
       href: iaas-logs.md
