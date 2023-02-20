@@ -151,7 +151,7 @@
           href: desktop-flow-runs-list-not-updated.md
         - name: Desktop flow fails with the SessionCreationTimeout error code
           href: sessioncreationtimeout-error-code.md
-        - name: Enable WebView2 in Power Automate for desktop login
+        - name: Can't sign in with JavaScript error
           href: enable-webview-pad-login.md
         - name: Failed to get UI element
           href: failed-get-ui-element.md

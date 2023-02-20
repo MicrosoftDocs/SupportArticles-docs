@@ -1,14 +1,14 @@
 ---
-title: Enable WebView2 in Power Automate for desktop login
+title: Can't sign in with JavaScript error
 description: Provides a resolution for a login issue in Power Automate for desktop.
 ms.reviewer: pefelesk
 author: georgiostrantzas
 ms.author: gtrantzas
-ms.date: 02/14/2023
+ms.date: 02/20/2023
 ms.subservice: power-automate-desktop-flows
 ---
 
-# Enable WebView2 in Power Automate for desktop login
+# Can't sign in with JavaScript error
 
 This article provides a resolution for a login issue in Power Automate for desktop.
 
@@ -21,7 +21,7 @@ Consider the following scenario in Power Automate for desktop:
 
 ## Verify the issue
 
-To verify the issue, you need to install and use a network tracing tool, such as Fiddler.
+To verify the issue, you need to install and use a network tracing tool, such as Fiddler. As shown below, the User-Agent contains legacy MSIE and Windows versions. A Javascript error will appear during sign-in if the network doesn't allow such calls.
 
 :::image type="content" source="media/enable-webview-pad-login/fiddler.png" alt-text="Screenshot presenting how to verify the issue with Fiddler." lightbox="media/enable-webview-pad-login/fiddler.png":::
 
