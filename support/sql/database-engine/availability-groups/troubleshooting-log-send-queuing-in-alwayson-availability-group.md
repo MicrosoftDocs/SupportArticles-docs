@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting long send queueing in an Always On availability group
 description: This article troubleshoots problems related to log send queueing in an Always On availability group. 
-ms.date: 02/17/2023
+ms.date: 02/20/2023
 ms.custom: sap:Availability Groups
 ms.prod: sql
 author: padmajayaraman
@@ -101,7 +101,7 @@ This section explains how to interpret the values of the log send queue size.
 
 ### When is log send queuing bad? How much log send queuing should be tolerated?
 
-You might assume that if the log send queue is reporting a value of **0**, this means that no log send queueing is occurring at the time of that report. However, when your production environment is busy, you should expect to observe the log send queue frequently report a value other than zero even in a healthy AlwaysOn environment. During typical production, you should expect to observe this value fluctuate between 0 and a non-zero value.
+You might assume that if the log send queue is reporting a value of **0**, this means that no log send queuing is occurring at the time of that report. However, when your production environment is busy, you should expect to observe the log send queue frequently report a value other than zero even in a healthy AlwaysOn environment. During typical production, you should expect to observe this value fluctuate between 0 and a non-zero value.
 
 If you observe increasing log send queueing over time, further investigation is warranted. This extra activity indicates that something has changed. If you observe a sudden growth in the log send queue, the following measurements are useful for troubleshooting:
 
@@ -223,7 +223,7 @@ If a secondary replica is hosted far from the primary replica, log send queueing
      `ntttcp.exe -r -m 1,0,<secondaryipaddress>-a 16 -t 60`
 
      > [!NOTE]
-     > In this command, \<secondaryipaddress\> is a placeholder for the actual IP address of the secondary replica server.
+     > In this command, *`<secondaryipaddress>`* is a placeholder for the actual IP address of the secondary replica server.
 
   1. On the primary replica server, open an elevated command prompt window, change the directory to the NTttcp tool folder, and then run the following command by again specifying the actual IP address of the secondary replica server:
 
