@@ -52,7 +52,7 @@ If it has been less than 14 days (the default soft-delete period) since the work
             "config": {}, "enabled": false },
             "omsagent": {
                "config": {
-                  "logAnalyticsWorkspaceResourceID": "/subscriptions/<WorkspaceSubscription>/resourceGroups/defaultresourcegroup-eus/providers/Microsoft.OperationalInsights/workspaces/defaultworkspace-ce1ba766-26d0-4cc5-bca6-ccaae1c275b7-eus"
+                  "logAnalyticsWorkspaceResourceID": "/subscriptions/<WorkspaceSubscription>/resourceGroups/defaultresourcegroup-eus/providers/Microsoft.OperationalInsights/workspaces/defaultworkspace-<WorkspaceID>-eus"
                 }, 
                 "enabled": true
     ```
