@@ -6,33 +6,25 @@ ms.date: 02/15/2023
 ---
 # Year-end closing procedures for the Canadian Payroll module in Microsoft Dynamics GP
 
-This article introduces the year-end closing routine for Canadian Payroll in Microsoft Dynamics GP. And this article also provides troubleshooting information for the year-end closing routine.
+This article introduces the recommended year-end closing procedures for the Microsoft Dynamics GP integrated Canadian Payroll module. The [Payroll year-end checklist](#payroll-year-end-checklist) section contains the following:
+
+- A detailed checklist of the steps that you must follow to complete the year-end closing procedures
+- Detailed information for each step in the checklist
 
 _Applies to:_ &nbsp; Microsoft Dynamics GP  
 _Original KB number:_ &nbsp; 861806
+
+> [!NOTE]
+> Read this whole article before you perform any one of the steps. If you have any questions, contact Microsoft Dynamics Technical Support. More information about the Canadian Payroll module is typically included in the year-end update documentation.
+
+> [!IMPORTANT]
+> Before you follow the instructions in this article, make sure that you have a complete backup copy of the database that you can restore if a problem occurs.
 
 ## Canadian Payroll year-end update and payroll tax update
 
 This article discusses the payroll year-end update and the payroll tax update. When the payroll year-end update and tax update are released for the year, you may [download the file to prepare for year-end](/dynamics/s-e/gp/cagptuye2018_285).
 
-> [!IMPORTANT]
-> Before you follow the instructions in this article, make sure that you have a complete backup copy of the database that you can restore if a problem occurs.
-
-## Summary
-
-This document outlines the recommended year-end closing procedures for the Microsoft Dynamics GP integrated Canadian Payroll module. The [More information](#more-information) section contains the following:
-
-- A detailed checklist of the steps that you must follow to complete the year-end closing procedures
-- Detailed information for each step in the checklist
-
-## Introduction
-
-> [!NOTE]
-> Read this whole article before you perform any one of the steps. If you have any questions, contact Microsoft Dynamics Technical Support. More information about the Canadian Payroll module is typically included in the year-end update documentation.
-
-## More information
-
-### Payroll year-end checklist
+## Payroll year-end checklist
 
 1. [Complete all the pay runs for the current year](#complete-all-the-pay-runs-for-the-current-year)
 2. [Complete any necessary 2023 payroll reports](#complete-any-necessary-2023-payroll-reports)
@@ -46,16 +38,16 @@ This document outlines the recommended year-end closing procedures for the Micro
 10. [Print the T4, T4A, RL-1 reports and create T4, T4A and RL-1 XML files, if appropriate](#print-the-t4-t4a-rl-1-reports-and-create-t4-t4a-and-rl-1-xml-files-if-appropriate)
 11. [Verify that pay periods for 2024 are set correctly](#verify-that-the-pay-periods-are-set-correctly-for-2024)
 
-#### Complete all the pay runs for the current year
+### Complete all the pay runs for the current year
 
 > [!NOTE]
 > Any batch that has a value of **2024** in the **Cheque Date** field should be processed after you perform the year-end reset. If the cheque date of your final pay period for 2023 is in the year 2023, the 2023 tax tables must be used per the statement in the Canada Customs and Revenue Agency document T4001.
 
 For example, a weekly payroll at the end of December that has a cutoff date of January 1, 2024, is processed by using the 2024 tax calculations. This payroll will be included in the 2024 history.
 
-#### Complete any necessary 2023 payroll reports
+### Complete any necessary 2023 payroll reports
 
-#### Make a backup of the data
+### Make a backup of the data
 
 Create a backup, and then put this backup into safe, permanent storage. By creating a backup, make sure that you have a permanent record of the company's financial position at the end of the year. You can restore the backup to quickly recover data if a power fluctuation or other problem occurs during the year-end closing procedure. To create a backup from Microsoft Dynamics GP, follow these steps:
 
@@ -66,11 +58,11 @@ Create a backup, and then put this backup into safe, permanent storage. By creat
 > [!NOTE]
 > We recommend that you name this backup Pre Year-End Tax Update to differentiate it from your other backups.
 
-#### Install the Canadian year-end update
+### Install the Canadian year-end update
 
 Install the update from one of the following locations.
 
-#### Complete the Year End File Reset process
+### Complete the Year End File Reset process
 
 To perform a year-end file reset, follow these steps:
 
@@ -100,7 +92,7 @@ To perform a year-end file reset, follow these steps:
 > [!IMPORTANT]
 > If any errors occur during the Year-End Reset process, be sure to restore to a backup!
 
-#### Make another backup of the data
+### Make another backup of the data
 
 Create a backup, and then put this backup into safe, permanent storage. By creating a backup, make sure that you have a permanent record of the company's financial position at the end of the year. You can restore the backup to quickly recover data if a power fluctuation or other problem occurs during the year-end closing procedure. To create a backup, follow these steps:
 
@@ -111,12 +103,12 @@ Create a backup, and then put this backup into safe, permanent storage. By creat
 > [!NOTE]
 > We recommend that you name this backup Post Year-End Tax Update to differentiate it from your other backups.
 
-#### Create the T4, T4A, and RL-1 statements, and print the T4, T4A, and RL-1 reports
+### Create the T4, T4A, and RL-1 statements, and print the T4, T4A, and RL-1 reports
 
 > [!NOTE]
 > This step can be performed any time after you complete the previous step, **Perform a year-end file reset**. For example, you may complete pay runs for the new year before you create and print any reports.
 
-##### Create and print the T4 reports and the RL-1 reports
+#### Create and print the T4 reports and the RL-1 reports
 
 To do this, follow these steps:
 
@@ -128,31 +120,31 @@ To do this, follow these steps:
 6. Select **OK** to exit.
 7. Print the T4 Edit List. To do this, point to **Payroll-Canada** on the **Reports** menu, select **Routines**, select **Routines Reports**, and then select **T4 Edit Report**.
 
-##### Create and print the T4A reports
+#### Create and print the T4A reports
 
-To do this, follow these steps
+To do this, follow these steps:
 
 1. In Microsoft Dynamics GP, point to **Tools** on the Microsoft Dynamics GP menu, point to **Routines** > **Payroll - Canada** > **T4A Routines**, and then select **T4A Setup**.
 2. Select **Create T4A's**.
 3. Select **Print T4A Report** to print the T4A Verification Report.
 
-#### Edit the T4, T4A, and RL-1 records as necessary
+### Edit the T4, T4A, and RL-1 records as necessary
 
-##### Modify the T4 statements
+#### Modify the T4 statements
 
 To do this, in Microsoft Dynamics GP, point to **Tools** on the Microsoft Dynamics GP menu, point to **Routines** >  **Payroll - Canada**, and then select **T4 Edit**.
 
-##### Modify the T4A statements
+#### Modify the T4A statements
 
 To do this, in Microsoft Dynamics GP, point to **Tools** on the Microsoft Dynamics GP menu, point to **Routines** > **Payroll - Canada** > **T4A Routines**, and then select **T4A Record Edit**.
 
-##### Modify the R1 amounts based on the edit list in the R1 Edit window
+#### Modify the R1 amounts based on the edit list in the R1 Edit window
 
 To do this, in Microsoft Dynamics GP, point to **Tools** on the Microsoft Dynamics GP menu, point to **Routines** > **Payroll - Canada**, and then select **R1 Edit**.
 
-#### Create T4, T4A, and RL-1 Summary records
+### Create T4, T4A, and RL-1 Summary records
 
-##### Create the summary information for the T4 reports and for the RL-1 reports
+#### Create the summary information for the T4 reports and for the RL-1 reports
 
 To do this, follow these steps:
 
@@ -160,16 +152,16 @@ To do this, follow these steps:
 2. Select **Create T4 Summary Records**.
 3. Select **Create R1 Summary Records**.
 
-##### Create the summary information for the T4A reports
+#### Create the summary information for the T4A reports
 
 To do this, follow these steps:
 
 1. In Microsoft Dynamics GP, point to **Tools** on the Microsoft Dynamics GP menu, point to **Routines** > **Payroll - Canada** > **T4A Routines**, and then select **T4A Summary**.
 2. Select **Create T4A Summary Records**.
 
-#### Print the T4, T4A, RL-1 reports and create T4, T4A and RL-1 XML files, if appropriate
+### Print the T4, T4A, RL-1 reports and create T4, T4A and RL-1 XML files, if appropriate
 
-##### Print the final T4 reports
+#### Print the final T4 reports
 
 To do this, follow these steps:
 
@@ -184,7 +176,7 @@ To do this, follow these steps:
 
 6. To generate the electronic T4 file, select **Electronic T4's**. Complete the **Payroll Electronic Transfer T4** window and then select either **Verify Only** or **Verify and Generate**.
 
-##### Print the RL-1 reports
+#### Print the RL-1 reports
 
 To do this, follow these steps:
 
@@ -198,7 +190,7 @@ To do this, follow these steps:
     > This report is not designed to print on to a pre-printed form.
 6. To generate the electronic RL-1 file, select **Electronic R1's**. Complete the **Payroll Electronic Transfer R1** window and enter the required fields including the **Software Developer Authorization Number**. Then select either **Verify Only** or **Verify and Generate**.
 
-##### Print the T4A reports
+#### Print the T4A reports
 
 To do this, follow these steps:
 
@@ -210,7 +202,7 @@ To do this, follow these steps:
 6. To print the reports, select **T4A Segment** and **T4A Summary**.
 7. To generate the electronic T4A's, select **Electronic T4A's**. Complete the **Payroll Electronic Transfer T4A** window and then select either **Verify Only** or **Verify and Generate**.
 
-#### Verify that the pay periods are set correctly for 2024
+### Verify that the pay periods are set correctly for 2024
 
 To verify that the pay periods are set correctly for the upcoming new year, in Microsoft Dynamics GP, point to **Tools** on the Microsoft Dynamics GP menu, point to **Setup** > **Payroll - Canada** > **Control**, and then select **Frequency**.
 
@@ -230,7 +222,7 @@ A3: You'll need to restore to a backup from BEFORE the Year-End Reset was done. 
 
 **Q4: Why do I have to key in the RL-1 Auth Number?**
 
-A4: In order to make year-end more seamless, the **RL-1 Auth Number** field was added as an editable field to the **Payroll T4/R1 Print- Canada** window. The user will now be required to key in the RL-1 Slip number in this field. This authorization number is used by Revenue Quebec to identify that the forms came from Microsoft Dynamics GP. (This authorization number will be stored in a SQL table [CPY20100], per year, so it's available for reprints.) If the user updates the RL-1 Auth number field, the **Last Updated Date** will be changed to be the current System Date. The RL-1 Report (P_CPY_SETP_R1_Laser) was also changed to read this new authorization number field.
+A4: To make year-end more seamless, the **RL-1 Auth Number** field was added as an editable field to the **Payroll T4/R1 Print- Canada** window. The user will now be required to key in the RL-1 Slip number in this field. This authorization number is used by Revenue Quebec to identify that the forms came from Microsoft Dynamics GP. (This authorization number will be stored in a SQL table [CPY20100], per year, so it's available for reprints.) If the user updates the **RL-1 Auth Number** field, the **Last Updated Date** will be changed to be the current System Date. The RL-1 Report (P_CPY_SETP_R1_Laser) was also changed to read this new authorization number field.
 
 **Q5: Why do the taxes calculated in Dynamics GP differ from the CRA online calculator? How are Income Taxes calculated in Canadian Payroll?**
 
