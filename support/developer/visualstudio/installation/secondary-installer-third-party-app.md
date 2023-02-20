@@ -1,9 +1,9 @@
 ---
-title: Remove partner app deployed by secondary installer
+title: Uninstall third-party applications deployed by secondary installer in Visual Studio 2015
 description: Describes how to remove third-party applications that the secondary installer in Visual Studio 2015 setup lets users deploy to their computer.
-ms.date: 02/11/2023
+ms.date: 02/20/2023
 ms.custom: sap:Installation
-ms.reviewer: rflaming
+ms.reviewer: rflaming, matcav
 ms.topic: troubleshooting
 ---
 # Uninstall third-party applications deployed by the secondary installer in Visual Studio 2015
