@@ -7,7 +7,7 @@ ms.author: v-weizhu
 ms.reviewer: chiragpa, cssakscic
 ms.service: azure-kubernetes-service
 ---
-# Fails to upgrade or scale AKS cluster due to missing Log Analytics workspace
+# Failed to upgrade or scale AKS cluster due to missing Log Analytics workspace
 
 This article provides solutions to the "Unable to get log analytics workspace info" error that occurs when you upgrade or scale a Microsoft Azure Kubernetes Service (AKS) cluster.
 
@@ -20,7 +20,7 @@ When you upgrade or scale an AKS cluster, you may see the following error:
 > Resource ID: /subscriptions/\<WorkspaceSubscription>/resourcegroups/defaultresourcegroup-weu/providers/microsoft.operationalinsights/workspaces/defaultworkspace-\<WorkspaceID>-weu.  
 > Detail: operationalinsights.WorkspacesClient#GetSharedKeys: Failure responding to request: StatusCode=404 -- Original Error: autorest/azure: Service returned an error. Status=404 Code='ResourceGroupNotFound' Message='Resource group 'defaultresourcegroup-weu' could not be found.'
 
-This issue will occur if you delete the Log Analytics workspace or the resource group where the workspace is located without disabling monitoring on the AKS cluster.
+This issue occurs if you delete the Log Analytics workspace or the resource group where the workspace is located without disabling monitoring on the AKS cluster.
 
 To resolve this issue, use one of the following solutions:
 
