@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 3016536
 
 ## What's secondary installer
 
-Visual Studio 2015 has a secondary installer that lets you install third-party applications that support development of cross platform and mobile applications. When Visual Studio 2015 or the secondary installer is uninstalled, the third-party applications may still remain installed. These third-party applications may or may not have entries in **Add or Remove Programs** item in Control Panel.
+Visual Studio 2015 has a secondary installer that lets you install third-party applications that support development of cross platform and mobile applications. When Visual Studio 2015 is uninstalled, the third-party applications may still remain installed. These third-party applications may or may not have entries in **Add or Remove Programs** item in Control Panel.
 
 The following sections provide more information about the third-party applications that the secondary installer lets you deploy on your computer, and instructions about how to uninstall them.
 
