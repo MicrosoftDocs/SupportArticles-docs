@@ -21,7 +21,7 @@ When you try to access content on a server that is running IIS by using the HTTP
 The first digit of the status code defines the class of response. The last two digits don't have any categorization role. There are five values for the first digit:
 
 - [1xx (Informational)](#1xx---informational): Provisional response - the request was received, continuing process.
-- [2xx (Successful)](#2xx---success): The server successfully received and accepted the request.
+- [2xx (Successful)](#2xx---successful): The server successfully received and accepted the request.
 - [3xx (Redirection)](#3xx---redirection): Further action needs to be taken in order to complete the request.
 - [4xx (Client Error)](#4xx---client-error): The request contains an error and can't be fulfilled.
 - [5xx (Server Error)](#5xx---server-error): The server failed to fulfill the request.
@@ -51,7 +51,7 @@ IIS 7.0 and later versions use the following informational HTTP status codes:
 | 100 | Continue | Initial part of the request has been received and has not yet been rejected by the server. The server intends to send a final response after the request has been fully received and acted upon. |
 | 101 | Switching protocols | Server understands and is willing to comply with client's request for a change in the application protocol being used. |
 
-### 2**xx** - Success
+### 2**xx** - Successful
 
 These HTTP status codes indicate that the server successfully received and accepted the client's request.
 
