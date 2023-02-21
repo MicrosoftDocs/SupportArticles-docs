@@ -3,7 +3,7 @@ title: IPv6 support in Azure Active Directory (Azure AD)
 description: Learn about Internet Protocol version 6 (IPv6) support in Azure Active Directory (Azure AD). Review what your organization needs to do to accommodate IPv6.
 ms.service: active-directory
 ms.subservice: aad-general
-ms.date: 02/01/2023
+ms.date: 02/21/2023
 ms.author: v-dele
 author: DennisLee-DennisLee
 ms.reviewer: lhuangnorth, gautama, amycolannino, joflore, mariourrutia
@@ -15,7 +15,7 @@ We're excited to bring IPv6 support to Azure Active Directory (Azure AD), to sup
 
 If your organization's networks don't support IPv6 today, you can safely ignore this information until such time that they do.
 
-## What's changing? 
+## What's changing?
 
 Our service endpoint URLs will now resolve to return both IPv4 and IPv6 addresses. If a client platform or network supports IPv6, the connection will mostly be attempted using IPv6, assuming that the network hops that are in between (such as firewalls or web proxies) also support IPv6. For environments that don't support IPv6, client applications will continue to connect to Azure AD over IPv4. 
 
@@ -237,6 +237,53 @@ The following instructions show you how to create the necessary Win32 applicatio
 1. Select **Next** on the **Supersedence (preview)** page to continue without any changes. 
 1. On the **Assignments** page, create assignments based on your requirements, and then select **Next** to continue.  
 1. Review the information one final time on the **Review + create** page. Once you finish your validation, select **Create** to create the application.  
+
+## Find IPv6 addresses in Sign-in logs
+
+Using one or more of the following methods, compare the list of IPv6 addresses to those addresses you expect. Consider adding these IPv6 addresses to your named locations and marking some as trusted where appropriate.
+
+### Azure portal
+
+1. Sign in to the **Azure portal** as a Reports Reader, Security Reader, Global Reader, Security Administrator, or other role with permission.
+1. Browse to **Azure Active Directory** > **Sign-in logs**.
+1. Select **+ Add filters** > **IP address** and select **Apply**.
+1. In the **Filter by IP address** box, insert a colon **:**.
+1. Optionally download this list of log entries to JSON or CSV format for further processing.
+
+### Log Analytics
+
+If your organization uses [Log Analytics](/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics), you can query for IPv6 addresses in your logs using the following query.
+
+```kusto
+union SigninLogs, AADNonInteractiveUserSignInLogs
+| where IPAddress has ":"
+| summarize RequestCount = count() by IPAddress, AppDisplayName, NetworkLocationDetails
+| sort by RequestCount
+```
+
+### PowerShell
+
+Organizations can use the following PowerShell script to query the Azure AD sign-in logs.
+
+```powershell
+$tId = "TENANT ID"  # Add tenant ID from Azure Active Directory page on portal.
+$agoDays = 2  # Will filter the log for $agoDays from the current date and time.
+$startDate = (Get-Date).AddDays(-($agoDays)).ToString('yyyy-MM-dd')  # Get filter start date.
+$pathForExport = "./"  # The path to the local filesystem for export of the CSV file. Connect-MgGraph -Scopes "AuditLog.Read.All" -TenantId $tId  # Or use Directory.Read.All. 
+# Get the interactive and non-interactive IPv6 sign-ins .
+$signInsInteractive = Get-MgAuditLogSignIn -Filter "contains(IPAddress, ':')" -All
+$signInsNonInteractive = Get-MgAuditLogSignIn -Filter "contains(IPAddress, ':')" -All $columnList = @{  # Enumerate the list of properties to be exported to the CSV files.
+    Property = "createdDateTime","CorrelationId", "userPrincipalName", "userId",
+      "UserDisplayName", "AppDisplayName", "AppId", "IPAddress", "isInteractive",
+      "ResourceDisplayName", "ResourceId"
+} # Summary IPv6 & App Display Name count
+$signInsInteractive | Group-Object IPaddress, AppDisplayName | Select-Object @{Name='IPaddress';Expression={$_.Group[0].IPaddress}}, 
+    @{Name ='AppDisplayName';Expression={$_.Group[0].AppDisplayName}}, Count | Sort-Object -Property Count –Descending | Export-Csv -Path ($pathForExport + "Summary_Interactive_IPv6_$tId.csv") -NoTypeInformation
+$signInsNonInteractive | Group-Object IPaddress, AppDisplayName | Select-Object @{Name='IPaddress';Expression={$_.Group[0].IPaddress}}, 
+    @{Name ='AppDisplayName';Expression={$_.Group[0].AppDisplayName}}, Count | Sort-Object -Property Count –Descendin | Export-Csv -Path ($pathForExport + "Summary_NonInteractive_IPv6_$tId.csv") -NoTypeInformation #Detailed IPv6 Sign-ins
+#$signInsInteractive  | Select-Object @columnList | Export-Csv -Path ($pathForExport + "Detailed_Interactive_IPv6_$tId.csv") -NoTypeInformation
+#$signInsNonInteractive  | Select-Object @columnList | Export-Csv -Path ($pathForExport + "Detailed_NonInteractive_IPv6_$tId.csv") -NoTypeInformation
+```
 
 ## Next steps
 
