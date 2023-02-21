@@ -96,7 +96,7 @@
         "azure/azure-kubernetes/*.md": "https://feedback.azure.com/d365community/forum/aabe212a-f724-ec11-b6e6-000d3a4f0da0",
         "azure/site-recovery/*.md": "https://feedback.azure.com/d365community/forum/3ccca344-2d25-ec11-b6e6-000d3a4f0f84",
         "azure/synapse-analytics/**/*.md": "https://feedback.azure.com/d365community/forum/9b9ba8e4-0825-ec11-b6e6-000d3a4f07b8",
-        "azure/general/*.md": "https://learn.microsoft.com/en-us/answers/tags/133/azure",
+        "azure/general/*.md": "https://learn.microsoft.com/answers/tags/133/azure",
         "azure/virtual-desktop/*.md": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/idb-p/AzureVirtualDesktop"
       },
       "layout": {
