@@ -146,6 +146,8 @@ A Batch node is in **Unusable** or **Starting** state and the following error co
 
 When you create an Azure Batch pool via the Azure portal, if you set **Image Type** to **Custom Image – Shared Image Gallery**, the Azure portal won't perform the OS SKU validation. If you select an OS SKU that's different from the actual OS SKU used in the custom image, Azure Batch will install Batch Node Agent that matches the selected OS SKU instead of the actual OS SKU used in the custom image.
 
+In the following screenshot, the custom image is based on Canonical's Ubuntu 18 Azure Marketplace image. When setting the **OS sku**, the Azure Batch won't perform the validation.
+
 :::image type="content" source="media/azure-batch-node-unusable-state/set-batch-pool-image-type-os-sku.png" alt-text="Screenshot that shows the setting of the image type and OS sku during pool creation.":::
 
 ### Solution: Recreate the pool with OS SKU of custom image
