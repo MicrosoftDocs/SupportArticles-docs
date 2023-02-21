@@ -5681,12 +5681,12 @@
       "source_path": "support/sql/database-engine/install/windows/error-install-sql-server-2005-sp4.md",
       "redirect_url": "/troubleshoot/sql/database-engine/install/windows/user-data-log-directory-invalid",
       "redirect_document_id": true
-    }
+    },
     {
       "source_path": "support/azure/azure-kubernetes/invalid-service-principal-profile-credentials-or-client-secret.md",
       "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-code-serviceprincipalvalidationclienterror",
       "redirect_document_id": true
-    }
+    },
     {
       "source_path": "support/azure/azure-kubernetes/error-aadsts7000215-invalid-client-secret-provided.md",
       "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-code-serviceprincipalvalidationclienterror",
