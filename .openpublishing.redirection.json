@@ -5690,7 +5690,7 @@
     {
       "source_path": "support/azure/azure-kubernetes/error-aadsts7000215-invalid-client-secret-provided.md",
       "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-code-serviceprincipalvalidationclienterror",
-      "redirect_document_id": true
+      "redirect_document_id": false
     }
 ]
 }
