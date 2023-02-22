@@ -8,3 +8,5 @@
   href: ./remote-debugger-collect-information.md
 - name: Debugger doesn't stop on breakpoints
   href: ./debugger-not-stop-breakpoint.md
+- name: Troubleshoot snapshot debugging
+  href: ./debug-live-azure-apps-troubleshooting.md
