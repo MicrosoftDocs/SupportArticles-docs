@@ -55,7 +55,7 @@ To perform the configuration, follow these steps:
 
 ### Cause 2: Missing required user-defined routes (UDR)
 
-When the VNet where the pool is associated has forced tunneling enabled, it's required to add a UDR corresponding to the BatchNodeManagement.\<region> service tag in the region where your Batch account exists. Otherwise, the traffic between the Batch service and nodes will be blocked, and the compute nodes will become unusable.
+When the VNet, where the pool is associated, has forced tunneling enabled, it's required to add a UDR corresponding to the BatchNodeManagement.\<region> service tag in the region where your Batch account exists. Otherwise, the traffic between the Batch service and nodes will be blocked, and the compute nodes will become unusable.
 
 ### Solution 2: Add UDR corresponding to BatchNodeManagement.\<region> service tag
 
