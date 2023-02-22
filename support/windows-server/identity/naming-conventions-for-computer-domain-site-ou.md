@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes the naming conventions for computer accounts in Windows, NetBIOS domain names, DNS domain names, Active Directory sites, and organizational units (OUs) that are defined in the Active Directory directory service.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012  
 _Original KB number:_ &nbsp; 909264
 
 ## Summary
@@ -58,9 +58,9 @@ In that article, this naming convention applies to computer, OU, and site names.
   - greater than sign (>)
   - vertical bar (|)
 
-    Names can contain a period (.). But the name can't start with a period. The use of non-DNS names with periods is allowed in Microsoft Windows NT. Periods should not be used in Microsoft Windows 2000 or later versions of Windows. If you're upgrading a computer whose NetBIOS name contains a period, change the machine name. For more information, see **Special characters**.
+    Names can contain a period (.). But the name can't start with a period. The use of non-DNS names with periods is allowed in Microsoft Windows NT. Periods should not be used in Windows. If you're upgrading a computer whose NetBIOS name contains a period, change the machine name. For more information, see **Special characters**.
 
-    In Windows 2000 and later versions of Windows, computers that are members of an Active Directory domain can't have names that are composed completely of numbers. This restriction is because of DNS restrictions.
+    Computers that are members of an Active Directory domain can't have names that are composed completely of numbers. This restriction is because of DNS restrictions.
 
     For more information about the NetBIOS name syntax, see [NetBIOS name syntax](/openspecs/windows_protocols/ms-nbte/6f06fa0e-1dc4-4c41-accb-355aaf20546d).
 
@@ -90,7 +90,7 @@ In that article, this naming convention applies to computer, OU, and site names.
 
     DNS names can contain only alphabetical characters (A-Z), numeric characters (0-9), the minus sign (-), and the period (.). Period characters are allowed only when they are used to delimit the components of domain style names.
 
-    In the Windows 2000 domain name system (DNS) and the Windows Server 2003 DNS, Unicode characters are supported. Other implementations of DNS don't support Unicode characters. Avoid Unicode characters if queries will be passed to the servers that use non-Microsoft implementations of DNS.
+    Windows domain name system (DNS) supports Unicode characters. Other implementations of DNS don't support Unicode characters. Avoid Unicode characters if queries will be passed to the servers that use non-Microsoft implementations of DNS.
 
     For more information, see the following websites:
 
@@ -120,14 +120,14 @@ In that article, this naming convention applies to computer, OU, and site names.
 
     The underscore has a special role. It is permitted for the first character in SRV records by RFC definition. But newer DNS servers may also allow it anywhere in a name. For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).
 
-    More rules are:
+    More rules include the following:
 
   - All characters preserve their case formatting except for American Standard Code for Information Interchange (ASCII) characters.
   - The first character must be alphabetical or numeric.
   - The last character must not be a minus sign or a period.
   - Two-character SDDL user strings that are listed in [well-known SIDs list](/windows/win32/secauthz/sid-strings) can't be used. Otherwise, _import_, _export_, and _take control_ operations fail.
 
-    In Windows 2000 and later versions of Windows, computers that are members of an Active Directory domain can't have names that are composed completely of numbers. This restriction is because of DNS restrictions.
+    Computers that are members of an Active Directory domain can't have names that are composed completely of numbers. This restriction is because of DNS restrictions.
 
     > [!NOTE]
     > DNS Host Name Registration substitutes a hyphen (-) character for invalid characters.
@@ -141,7 +141,7 @@ In that article, this naming convention applies to computer, OU, and site names.
     > [!NOTE]
     > Windows doesn't permit computer names that exceed 15 characters, and you can't specify a DNS host name that differs from the NETBIOS host name. You might however create host headers for a web site hosted on a computer and that is then subject to this recommendation.
 
-    In Windows 2000 and Windows Server 2003, the maximum host name and the FQDN use the standard length limitations that are mentioned earlier, with the addition of UTF-8 (Unicode) support. Because some UTF-8 characters exceed one octet in length, you can't determine the size by counting the characters.
+    The maximum host name and the FQDN use the standard length limitations that are mentioned earlier, with the addition of UTF-8 (Unicode) support. Because some UTF-8 characters exceed one octet in length, you can't determine the size by counting the characters.
 
     Domain controllers must have an FQDN of less than 155 bytes.
 
@@ -159,7 +159,7 @@ In that article, this naming convention applies to computer, OU, and site names.
 
 - Best practices
 
-    When you create names for the DNS computers in a new Windows Server 2003 DNS infrastructure, use the following guidelines:
+    When you create names for the DNS computers in a Windows DNS infrastructure, use the following guidelines:
 
   - Choose computer names that are easy for users to remember.
   - Identify the owner of the computer in the computer name.
@@ -167,7 +167,7 @@ In that article, this naming convention applies to computer, OU, and site names.
   - For ASCII characters, don't use character case to indicate the owner or the purpose of a computer. For ASCII characters, DNS is not case-sensitive, Windows and Windows applications are not case-preserving in all places.
   - Match the Active Directory domain name to the primary DNS suffix of the computer name. For more information, see the [Disjointed namespaces](#disjointed-namespaces) section below.
   - Use a unique name for every computer in your organization. Avoid the same computer name for computers in different DNS domains.
-  - Use ASCII characters. This guarantees interoperability with computers that are running versions of Windows that are earlier than Windows 2000.
+  - Use ASCII characters. This guarantees interoperability with computers that aren't running Windows.
   - In DNS computer names, use only the characters that are listed in RFC 1123. These characters include A-Z, a-z, 0-9, and the hyphen (-). In Windows Server 2003, DNS allows most UTF-8 characters in names. Don't use extended ASCII or UTF-8 characters unless all the DNS servers in your environment support them.
 
 ## Domain names
@@ -182,25 +182,33 @@ Here are details for NetBIOS domain names and DNS domain names.
 
 - Disallowed characters
 
-    NetBIOS computer names can't contain the following characters:
+    The DNS host name checking function verifies NetBIOS domain names. These names can't contain the following characters:
 
+  - comma (,)
+  - tilde (~)
+  - colon (:)
+  - exclamation point (!)
+  - at sign (@)
+  - number sign (#)
+  - dollar sign ($)
+  - percent (%)
+  - caret (^)
+  - ampersand (&)
+  - apostrophe (')
+  - period (.)
+  - parentheses (())
+  - braces ({})
+  - underscore (_)
+  - white space(blank)
   - backslash (\\)
   - slash mark (/)
-  - colon (:)
-  - asterisk (*)
-  - question mark (?)
-  - quotation mark (")
-  - less than sign (<)
-  - greater than sign (>)
-  - vertical bar (|)
-  
-    Names can contain a period (.). But the name can't start with a period. The use of non-DNS names with periods is allowed in Microsoft Windows NT. Periods shouldn't be used in Active Directory domains. If you are upgrading a domain whose NetBIOS name contains a period, change the name by migrating the domain to a new domain structure. Do not use periods in new NetBIOS domain names.
 
-     In Windows 2000 and later versions of Windows, computers that are members of an Active Directory domain can't have names that are composed completely of numbers. This restriction is because of DNS restrictions.
+    Names can contain a period (.). But the name can't start with a period. The use of non-DNS names with periods is allowed in Microsoft Windows NT. Periods shouldn't be used in Active Directory NetBIOS domain names. If you are upgrading a domain whose NetBIOS name contains a period, change the name by migrating the domain to a new domain structure. Do not use periods in new NetBIOS domain names.
 
-- Minimum name length: 1 character
+     Computers that are members of an Active Directory domain can't have names that are composed completely of numbers. This restriction is because of DNS restrictions.
 
-- Maximum name length: 15 characters.
+       - Minimum name length: 1 character
+       - Maximum name length: 15 characters.
 
     > [!NOTE]
     > The 16th character is reserved to identify the functionality that is installed on the registered network device.
@@ -224,7 +232,7 @@ Here are details for NetBIOS domain names and DNS domain names.
 
     DNS names can contain only alphabetical characters (A-Z), numeric characters (0-9), the minus sign (-), and the period (.). Period characters are allowed only when they are used to delimit the components of domain style names.
 
-    In the Windows 2000 domain name system (DNS) and the Windows Server 2003 DNS, Unicode characters are supported. Other implementations of DNS don't support Unicode characters. Avoid Unicode characters if queries will be passed to the servers that use non-Microsoft implementations of DNS.
+    Windows DNS supports Unicode characters are supported. Other implementations of DNS don't support Unicode characters. Avoid Unicode characters if queries will be passed to the servers that use non-Microsoft implementations of DNS.
 
     For more information, visit the following web sites:
 
@@ -256,15 +264,14 @@ Here are details for NetBIOS domain names and DNS domain names.
 
     When promoting a new domain, you get a warning that an underscore character might cause problems with some DNS servers. But it still lets you create the domain.
 
-    More rules are:
+    More rules include the following:
 
   - All characters preserve their case formatting except for ASCII characters.
   - The first character must be alphabetical or numeric.
   - The last character must not be a minus sign or a period.
 
-- Minimum name length: 2 characters
-
-- Maximum name length: 255 characters
+    - Minimum name length: 2 characters
+    - Maximum name length: 255 characters
 
     The maximum length of the host name and of the fully qualified domain name (FQDN) is 63 bytes per label and 255 characters per FQDN. The latter is based on the maximum path length possible with an Active Directory Domain name with the paths needed in `SYSVOL`, and it needs to obey to the 260 character `MAX_PATH` limitation.
 
@@ -276,11 +283,11 @@ Here are details for NetBIOS domain names and DNS domain names.
 
     The AD FQDN domain name appears in the path twice, due to that the length of an AD FQDN domain name is restricted to 64 characters.
 
-    In Windows 2000 and Windows Server 2003, the maximum host name and the FQDN use the standard length limitations that are mentioned earlier, with the addition of UTF-8 (Unicode) support. Because some UTF-8 characters exceed one octet in length, you can't determine the size by counting the characters.
+    In Windows, the maximum host name and the FQDN use the standard length limitations that are mentioned earlier, with the addition of UTF-8 (Unicode) support. Because some UTF-8 characters exceed one octet in length, you can't determine the size by counting the characters.
 
 - Single-label domain namespaces
 
-    Single-label DNS names are names that don't contain a suffix, such as `.com`, `.corp`, `.net`, `.org`, or *`companyname`*. For example, _host_ is a single-label DNS name. Most Internet registrars don't allow the registration of single-label DNS names.
+    Single-label DNS names are names that don't contain a suffix, such as `.com`, `.corp`, `.net`, `.org`, or _`companyname`_. For example, _host_ is a single-label DNS name. Most Internet registrars don't allow the registration of single-label DNS names.
 
     Generally, we recommend that you register DNS names for internal and external namespaces with an Internet registrar. This includes the DNS names of Active Directory domains, unless such names are subdomains of DNS names that are registered by your organization name. For example, `corp.example.com` is a subdomain of `example.com`. Registering your DNS name with an Internet registrar may help prevent a name collision. A name collision may occur if another organization tries to register the same DNS name, or if your organization merges with another organization that uses the same DNS name.
 
@@ -289,7 +296,7 @@ Here are details for NetBIOS domain names and DNS domain names.
   - Single-label DNS names can't be registered by using an Internet registrar.
   - Domains that have single-label DNS names require additional configuration.
   - The DNS Server service may not be used to locate domain controllers in domains that have single-label DNS names.
-  - By default, Windows Server 2003-based domain members, Windows XP-based domain members, and Windows 2000-based domain members don't perform dynamic updates to single-label DNS zones.
+  - By default, Windows domain members don't perform dynamic updates to single-label DNS zones.
 
     For more information, see [Deployment and operation of Active Directory domains that are configured by using single-label DNS names](https://support.microsoft.com/help/300684).
 
@@ -297,7 +304,7 @@ Here are details for NetBIOS domain names and DNS domain names.
 
     See [Table of reserved words](#table-of-reserved-words).
 
-    Don't use top-level Internet domain names on the intranet, such as `.com`, `.net`, and `.org`. If you use top-level Internet domain names on the intranet, computers on the intranet that are also connected to the Internet may experience resolution errors.
+    Don't use top-level Internet domain names on the intranet, such as `.com`, `.net`, and `.org`. If you use top-level Internet domain names on the intranet, computers on the intranet that are also connected to the Internet may experience resolution errors. Additionally, avoid using names that're used in internet-standard special features, such as `.local`.
 
 #### Disjointed namespaces
 
@@ -329,7 +336,7 @@ For more information about a disjoint namespace, see the following articles:
 
 - Maximum number of domains in a forest
 
-    In Windows 2000, the maximum number of domains in a forest is 800. In Windows Server 2003 and later versions, the maximum number of domains at Forest Functional Level 2 is 1200. This restriction is a limitation of multivalued non-linked attributes in Windows Server 2003.
+    In Windows Server, the maximum number of domains at Forest Functional Level 2 is 1200. This restriction is a limitation of multivalued non-linked attributes in Windows Server.
 
 - Best practices
 
@@ -361,7 +368,7 @@ We recommend that you use a valid DNS name when you create a new site name. Othe
 
     DNS names can contain only alphabetical characters (A-Z), numeric characters (0-9), the minus sign (-), and the period (.). Period characters are allowed only when they are used to delimit the components of domain style names.
 
-    In the Windows 2000 domain name system (DNS) and the Windows Server 2003 DNS, Unicode characters are supported. Other implementations of DNS don't support Unicode characters. Avoid Unicode characters if queries will be passed to the servers that use non-Microsoft implementations of DNS.
+    Windows DNS supports Unicode characters. Other implementations of DNS don't support Unicode characters. Avoid Unicode characters if queries will be passed to the servers that use non-Microsoft implementations of DNS.
 
     For more information, visit the following web sites:
 
@@ -391,7 +398,7 @@ We recommend that you use a valid DNS name when you create a new site name. Othe
 
     The underscore has a special role. It's permitted for the first character in SRV records by RFC definition. But newer DNS servers may also allow it anywhere in a name. For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).
 
-    More rules are:
+    More rules include the following:
 
   - All characters preserve their case formatting except for ASCII characters.
   - The first character must be alphabetical or numeric.
@@ -403,7 +410,7 @@ We recommend that you use a valid DNS name when you create a new site name. Othe
 
     The maximum length of the DNS name is 63 bytes per label.
 
-    In Windows 2000 and Windows Server 2003, the maximum host name and the FQDN use the standard length limitations that are mentioned earlier, with the addition of UTF-8 (Unicode) support. Because some UTF-8 characters exceed one octet in length, you can't determine the size by counting the characters.
+    In Windows, the maximum host name and the FQDN use the standard length limitations that are mentioned earlier, with the addition of UTF-8 (Unicode) support. Because some UTF-8 characters exceed one octet in length, you can't determine the size by counting the characters.
 
 ## OU names
 
@@ -442,8 +449,9 @@ The OU is deleted and during the tombstone lifetime of the OU you create a child
 |CREATOR OWNER SERVER|X|X|X|X|
 |DIALUP|X|X|X|X|
 |DIGEST AUTH|||X|X|
-|INTERACTIVE|X|X|X|X|
+|DOMAIN | | | |X|
 |ENTERPRISE||| |X|
+|INTERACTIVE|X|X|X|X|
 |INTERNET||X|X|X|
 |LOCAL|X|X|X|X|
 |LOCAL SYSTEM|||X|X|
