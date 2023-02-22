@@ -1,7 +1,7 @@
 ---
 title: Bulk load operations can lead to large amounts of unused space
 description: This article provides solutions for the issue where bulk load operations with a small batch size lead to much unused space.
-ms.date: 02/21/2023
+ms.date: 02/22/2023
 ms.custom: sap:Administration and management
 ms.reviewer: 
 author: PiJoCoder
@@ -44,11 +44,11 @@ Following are a few options to consider in resolving this issue:
 
 ### Small number of inserts means no bulk load operations
 
-If you have a relatively small number of rows to insert, then these aren't "bulk" inserts. In those cases of small batch sizes, using `BULK INSERTS` and the [minimal logging optimizations](/sql/relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import) for bulk loading of data aren't recommended.
+If you have a relatively small number of rows to insert, then these aren't "bulk" inserts. In cases of small batch sizes, using `BULK INSERTS` and the [minimal logging optimizations](/sql/relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import) for bulk loading of data aren't recommended.
 
 #### Set the batch size value for bulk load operation
 
-For bulk load operations, choose a batch size that's a multiple of the size of an extent (64 KB) and is based on the average row size. Such a batch size value would allow the rows to efficiently fill the space within the extent. For example, if the average row size is 25 bytes, you would divide 64 KB by 25 bytes per row to see how many rows you can pack in a batch size. In this case, 64 KB = 65536 bytes divided by 25 bytes per row provide 2730 rows. Thus, you can choose a batch size around this number, allowing for space for the header of each data page. You can test with batch size 2700 or 2500. To find the average row size in your table, use the following query. For heaps (tables with no clustered index), use 0 for the `index_id` parameter (the third parameter). For tables with clustered indexes, use 1 as shown in this example.
+For bulk load operations, choose a batch size that's a multiple of the size of an extent (64 KB) and is based on the average row size. Such a batch size value would allow the rows to efficiently fill the space within the extent. For example, if the average row size is 25 bytes, you would divide 64 KB by 25 bytes per row to see how many rows you can pack in a batch size. In this case, 64 KB = 65536 bytes divided by 25 bytes per row provide 2730 rows. Thus, you can choose a batch size around this number, allowing for space for the header of each data page. You can test with batch size 2700 or 2500. To find the average row size in your table, use the following query. For heaps (tables with no clustered index), use 0 for the `[index_id](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql?view=sql-server-ver16)` parameter (the third parameter). For tables with clustered indexes, use 1 as shown in this example.
 
 ```sql
 SELECT 
@@ -64,7 +64,7 @@ FROM sys.dm_db_index_physical_stats (DB_ID(N'AdventureWorks2016'), OBJECT_ID(N'P
 
 ### When batch size change isn't an option for bulk load operation
 
-If for some reason, you can't change the batch size or use regular `INSERTS`, you can disable fast inserts (minimal logging) behavior using [trace flag 692](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf692). With fast inserts enabled by default after SQL Server 2016, each bulk load batch allocates new extent(s) and bypasses the lookup for available free space in existing pages. Therefore, bulk loads with small batch sizes can lead to an increase in unused space in objects. Trace flag 692 disables fast inserts while loading bulk data into a heap or clustered index and minimizes the unused space issue described here.
+If for some reason, you can't change the batch size or use regular `INSERTS`, you can disable fast inserts (minimal logging) behavior using [trace flag 692](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf692). With fast inserts enabled by default after SQL Server 2016, each bulk load batch allocates new extent(s) and bypasses the lookup for available free space in existing pages. Therefore, bulk loads with small batch sizes can lead to an increase in unused space in objects. Trace flag 692 disables fast inserts while loading bulk data into a heap or clustered index and minimizes the unused space issue described in this article.
 To enable the trace flag, you can either do it while SQL Server is online using the following query:
 
 ```sql
