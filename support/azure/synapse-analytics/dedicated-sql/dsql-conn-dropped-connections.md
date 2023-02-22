@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot connectivity issues on a dedicated SQL pool
 description: Provides methods for troubleshooting initial and dropped connections on a dedicated SQL pool.
-ms.date: 02/13/2023
+ms.date: 02/21/2023
 author: scott-epperly
 ms.author: goventur
 ms.reviewer: scepperl
