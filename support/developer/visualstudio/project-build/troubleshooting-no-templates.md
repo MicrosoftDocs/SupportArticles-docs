@@ -1,27 +1,29 @@
 ---
 title: Why can I not see all available templates?
-description: "Troubleshooting article on why you cannot see all available templates."
+description: Troubleshooting article on why you can't see all available templates.
 ms.topic: troubleshooting
-author: heiligerdankgesang 
-ms.author: dominicn
-manager: dominicn
+author: HaiyingYu 
+ms.author: haiyingyu
+ms.reviewer: dominicn
 ms.date: 04/02/2019
-ms.assetid: 297D9094-B40F-4C1A-BF19-B14CB735003A
+ms.prod: visual-studio-mac
+ms.technology: vs-ide-general
 ---
+
 # Troubleshooting: Why can I not see all available templates?
 
- [!INCLUDE [Visual Studio for Mac](~/includes/applies-to-version/vs-mac-only.md)]
+ _Applies to:_&nbsp;Visual Studio for Mac
 
-In the New Project Dialog you only see the templates of components that have been installed. If you are missing any following components, make sure the correct components are installed, as described below:
+In the New Project Dialog, you only see the templates of components that have been installed. If you're missing any following templates, make sure the correct components are installed:
 
-|Missing Template  |Component to Install  |
-|---------|---------|
-|Android     |Android        |
-|iOS     |iOS         |
-|tvOS     |iOS         |
-|watchOS     |iOS         |
-|Multiplatform     |Android and iOS         |
-|Mac     |macOS (Cocoa)         |
-|.NET Core     |.NET Core         |
+| Missing Template | Component to Install |
+|---|---|
+| Android | Android |
+| iOS | iOS |
+| tvOS | iOS |
+| watchOS | iOS |
+| Multiplatform | Android and iOS |
+| Mac | macOS (Cocoa) |
+| .NET Core | .NET Core |
 
-Run the VisualStudioForMacInstaller.dmg again to install the components. If you no longer have it, you can download it from the [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/) webpage.
+Run the `VisualStudioForMacInstaller.dmg` again to install the components. If you no longer have it, you can download it from the [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/) webpage.
