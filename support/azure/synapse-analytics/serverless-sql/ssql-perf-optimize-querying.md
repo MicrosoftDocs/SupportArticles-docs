@@ -1,7 +1,7 @@
 ---
 title: Performance tuning guidance for Azure Synapse Analytics serverless SQL pool
 description: This article provides guidance for optimizing performance on Azure Synapse Analytics serverless SQL pool.
-ms.date: 02/15/2023
+ms.date: 02/21/2023
 author: scott-epperly
 ms.author: goventur
 ms.reviewer: scepperl
