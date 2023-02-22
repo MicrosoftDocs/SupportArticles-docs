@@ -1,7 +1,7 @@
 ---
 title: Manage cost structure for Azure Synapse Analytics serverless SQL pools
 description: This article discusses frequently asked questions about the cost of Azure Synapse Analytics serverless SQL pools.
-ms.date: 02/15/2023
+ms.date: 02/21/2023
 author: scott-epperly
 ms.author: goventur
 ms.reviewer: scepperl
