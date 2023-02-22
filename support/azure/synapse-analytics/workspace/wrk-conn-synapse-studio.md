@@ -1,7 +1,7 @@
 ---
 title: Resolve Azure Synapse Studio connectivity issues
 description: Provides solutions to common connectivity issues encountered in Azure Synapse Studio.
-ms.date: 02/16/2023
+ms.date: 02/21/2023
 author: sevend2
 ms.author: aminpashna
 ms.reviewer: scepperl
