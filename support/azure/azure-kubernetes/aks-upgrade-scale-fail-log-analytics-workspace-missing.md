@@ -40,7 +40,7 @@ If it has been less than 14 days (the default soft-delete period) since the work
 >     - Workspace name
 >     - Region
 
-1. Get the workspace resource ID by using "Get Managed cluster" in Jarvis or running the Azure CLI command `az aks show -g <clusterRG> -n <clusterName>`.
+1. Get the workspace resource ID by running the Azure CLI command `az aks show -g <clusterRG> -n <clusterName>`.
 
     Here's an example output of the command:
 
@@ -72,7 +72,5 @@ az aks disable-addons -a monitoring -g <clusterRG> -n <clusterName>
 ```
 
 If the same error occurs while disabling the monitoring add-on, recreate the missing Log Analytics workspace, and then run the upgrade or scale operation again.
-
-[!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
