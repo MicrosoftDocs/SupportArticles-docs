@@ -265,6 +265,25 @@ union SigninLogs, AADNonInteractiveUserSignInLogs
 
 Organizations can use the following PowerShell script to query the Azure AD sign-in logs.
 
+Provided by Lisa
+```powershell
+# Copyright (c) Microsoft Corporation. All rights reserved.
+# Licensed under the MIT license.
+$ErrorActionPreference = "Stop"
+Connect-MgGraph -Scopes "User.Read.All","Group.ReadWrite.All"
+# add custom filter e.g. Get-MgAuditLogSignIn -Filter "createdDateTime ge 2022-12-07 and createdDateTime lt 2022-12-08" -Top 50 -Orderby "createdDateTime desc"
+$logs = Get-MgAuditLogSignIn -Top 1000 -Orderby "createdDateTime desc"
+# select unique IP address
+$ips = $logs | Select-Object IpAddress -Unique
+$ipv6Pattern = "^(([a-z0-9]+):){7}([a-z0-9]+)$"
+$result = $ips | Where-Object {$_.IpAddress -match $ipv6Pattern}
+$result | Out-File ./ipv6.txt
+Write-Host Outputted IPv6 addresses into (Get-Location)\ipv6.txt
+# Disconnect-MgGraph
+# Write-Host "Disconnected from Microsoft Graph"
+```
+
+Provided in notes
 ```powershell
 $tId = "TENANT ID"  # Add tenant ID from Azure Active Directory page on portal.
 $agoDays = 2  # Will filter the log for $agoDays from the current date and time.
