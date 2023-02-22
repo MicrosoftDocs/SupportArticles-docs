@@ -17,7 +17,7 @@ In a pool that's associated with a subnet of a virtual network (VNet), all nodes
 
 :::image type="content" source="media/azure-batch-node-unusable-state/node-state-shows-unusable.png" alt-text="Image alt text.":::
 
-Th symptom above means that the Batch service is unable to communicate with the nodes. In most cases, it's caused by VNet configuration issues. The following sections describe the two most common causes.
+The symptom above means that the Batch service is unable to communicate with the nodes. In most cases, it's caused by VNet configuration issues. The following sections describe the two most common causes.
 
 ### Cause 1: Missing required network security group (NSG) rules
 
