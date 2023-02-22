@@ -35,7 +35,7 @@ After failing over an availability group, you may observe that the secondary is 
 
 |Always On dashboard reports Not Synchronizing on the primary|Always On dashboard reports Reverting on the secondary|
 |-|-|
-|:::image type="content" source="media/troubleshoot-availability-group-database-reverting-state/alwayson-dashboard-reports-not-synchronizing-on-the-primary.png" alt-text="The screenshot shows that Always On dashboard reports Not Synchronizing on the primary." lightbox="media/troubleshoot-availability-group-database-reverting-state/alwayson-dashboard-reports-not-synchronizing-on-the-primary.png":::|:::image type="content" source="media/troubleshoot-availability-group-database-reverting-state/alwayson-dashboard-reports-not-reverting-on-the secondary.png" alt-text="The screenshot shows that Always On dashboard reports Reverting on the secondary." lightbox="media/troubleshoot-availability-group-database-reverting-state/alwayson-dashboard-reports-not-reverting-on-the secondary.png":::|
+|:::image type="content" source="media/troubleshoot-availability-group-database-reverting-state/alwayson-dashboard-reports-not-synchronizing-on-the-primary.png" alt-text="Screenshot of the Always On dashboard reporting Not Synchronizing on the primary." lightbox="media/troubleshoot-availability-group-database-reverting-state/alwayson-dashboard-reports-not-synchronizing-on-the-primary.png":::|:::image type="content" source="media/troubleshoot-availability-group-database-reverting-state/alwayson-dashboard-reports-not-reverting-on-the secondary.png" alt-text="Screenshot of Always On dashboard reporting Reverting on the secondary." lightbox="media/troubleshoot-availability-group-database-reverting-state/alwayson-dashboard-reports-not-reverting-on-the secondary.png":::|
 
 ### Always On DMVs reports NOT SYNCHRONIZING on the primary
 
@@ -50,11 +50,11 @@ JOIN sys.dm_hadr_database_replica_cluster_states drcs
 ON drs.group_database_id=drcs.group_database_id
 ```
 
-:::image type="content" source="media/troubleshoot-availability-group-database-reverting-state/query-the-availability-group-dmvs.png" alt-text="The screenshot shows that Always On DMVs reports NOT SYNCHRONIZING on the primary." lightbox="media/troubleshoot-availability-group-database-reverting-state/query-the-availability-group-dmvs.png":::
+:::image type="content" source="media/troubleshoot-availability-group-database-reverting-state/query-the-availability-group-dmvs.png" alt-text="Screenshot of Always On DMVs reporting NOT SYNCHRONIZING on the primary." lightbox="media/troubleshoot-availability-group-database-reverting-state/query-the-availability-group-dmvs.png":::
 
 When you query the DMVs on the secondary, the availability group database is in **REVERTING** state.
 
-:::image type="content" source="media/troubleshoot-availability-group-database-reverting-state/query-the-alwayson-dmvs-on-the-secondary.png" alt-text="The screenshot shows that Always On DMVs reports REVERTING on the secondary." lightbox="media/troubleshoot-availability-group-database-reverting-state/query-the-alwayson-dmvs-on-the-secondary.png":::
+:::image type="content" source="media/troubleshoot-availability-group-database-reverting-state/query-the-alwayson-dmvs-on-the-secondary.png" alt-text="Screenshot of Always On DMVs reporting REVERTING on the secondary." lightbox="media/troubleshoot-availability-group-database-reverting-state/query-the-alwayson-dmvs-on-the-secondary.png":::
 
 ### Read-only and reporting workloads fail to access the secondary database
 
@@ -65,7 +65,7 @@ If you have a read-only workload, like a reporting workload that is routed to th
 > Msg 922, Level 14, State 1, Line 2
 > Database 'agdb' is being recovered. Waiting until recovery is finished.
 
-:::image type="content" source="media/troubleshoot-availability-group-database-reverting-state/batches-may-fail-with-message-922.png" alt-text="The screenshot shows that read-only and reporting workloads fail to access the secondary database with error 922." lightbox="media/troubleshoot-availability-group-database-reverting-state/batches-may-fail-with-message-922.png":::
+:::image type="content" source="media/troubleshoot-availability-group-database-reverting-state/batches-may-fail-with-message-922.png" alt-text="Screenshot shows that read-only and reporting workloads fail to access the secondary database with error 922." lightbox="media/troubleshoot-availability-group-database-reverting-state/batches-may-fail-with-message-922.png":::
 
 An application trying to login to the secondary replica database in reverting state fails to connect and raises error 18456:
 
@@ -87,17 +87,17 @@ Connect to the secondary replica using SQL Server Management Studio (SSMS) Objec
 > [!NOTE]
 > The extended event `hadr_trace_message` was added to the latest cumulative updates in SQL Server. You must be running the latest cumulative updates to observe this extended event in the `AlwaysOn_health` extended event session.
 
-:::image type="content" source="media/troubleshoot-availability-group-database-reverting-state/alwayson-health-extended-event-diagnostic-log.png" alt-text="The screenshot shows the AlwaysOn_health extended event diagnostic log." lightbox="media/troubleshoot-availability-group-database-reverting-state/alwayson-health-extended-event-diagnostic-log.png":::
+:::image type="content" source="media/troubleshoot-availability-group-database-reverting-state/alwayson-health-extended-event-diagnostic-log.png" alt-text="Screenshot of the AlwaysOn_health extended event diagnostic log." lightbox="media/troubleshoot-availability-group-database-reverting-state/alwayson-health-extended-event-diagnostic-log.png":::
 
 The SQL Server error log on the secondary replica isn't much help when estimating reverting completion. From the following image, you can observe from **10:08** to **11:03** while in reverting state, little is reported. Once the secondary has received all the pages from the primary replica, it's now able to roll back the transaction that was running on the original primary that triggered reverting state. Recovery runs from **11:03** to **11:05**. Shortly after recovery completes, the database should begin to synchronize with the primary replica and catch up on all the changes made at the primary while the secondary database was in reverting state.
 
-:::image type="content" source="media/troubleshoot-availability-group-database-reverting-state/sql-server-error-log-on-the-secondary-replica.png" alt-text="The screenshot shows the SQL Server error log for reverting and recovery phase." lightbox="media/troubleshoot-availability-group-database-reverting-state/sql-server-error-log-on-the-secondary-replica.png":::
+:::image type="content" source="media/troubleshoot-availability-group-database-reverting-state/sql-server-error-log-on-the-secondary-replica.png" alt-text="Screenshot of the SQL Server error log for reverting and recovery phase." lightbox="media/troubleshoot-availability-group-database-reverting-state/sql-server-error-log-on-the-secondary-replica.png":::
 
 ### Monitor reverting completion time using Performance Monitor
 
 Monitor reverting state progress using the performance counters **SQL Server:Database Replica:Total Log Requiring Undo** and **SQL Server:Database Replica:Log Remaining for Undo** and choose the availability group database for the Instance. In the example in the following screenshot, **Total Log Requiring Undo** is reported as **56.3** mb, and **Log Remaining for Undo** is slowly dropping to **0** that is reporting reverting progress.
 
-:::image type="content" source="media/troubleshoot-availability-group-database-reverting-state/total-log-requiring-undo-log-remaining-undo.png" alt-text="The screenshot shows the performance counters for Total Log Requiring Undo and Log Remaining for Undo." lightbox="media/troubleshoot-availability-group-database-reverting-state/total-log-requiring-undo-log-remaining-undo.png":::
+:::image type="content" source="media/troubleshoot-availability-group-database-reverting-state/total-log-requiring-undo-log-remaining-undo.png" alt-text="Screenshot of the performance counters for Total Log Requiring Undo and Log Remaining for Undo." lightbox="media/troubleshoot-availability-group-database-reverting-state/total-log-requiring-undo-log-remaining-undo.png":::
 
 ## What are your other options other than waiting?
 
