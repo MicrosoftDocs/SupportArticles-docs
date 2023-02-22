@@ -17,7 +17,7 @@ In a pool that's associated with a subnet of a virtual network (VNet), all nodes
 
 :::image type="content" source="media/azure-batch-node-unusable-state/node-state-shows-unusable.png" alt-text="Image alt text.":::
 
-Th symptom above mean that the Batch service is unable to communicate with the nodes. In most cases, it's caused by VNet configuration issues. The following sections describe the two most common causes.
+Th symptom above means that the Batch service is unable to communicate with the nodes. In most cases, it's caused by VNet configuration issues. The following sections describe the two most common causes.
 
 ### Cause 1: Missing required network security group (NSG) rules
 
@@ -92,7 +92,7 @@ A node is in the **Unusable** state and the following error message shows on the
 
 ### Cause: No enough disk space on the node
 
-When a job is run on the node, each task in the job may produce output data. This output data is written to the file system of the Batch node. When this data reaches more than 90% capacity of the disk size of the node SKU, the Batch service marks the node unusable and blocks the node from running any further tasks until the Batch service has performed a cleanup.
+When a job runs on the node, each task in the job may produce output data. This output data is written to the file system of the Batch node. When this data reaches more than 90% capacity of the disk size of the node SKU, the Batch service marks the node unusable and blocks the node from running any further tasks until the Batch service has performed a cleanup.
 
 Batch node agent reserves 10% capacity of the disk space for its functionality. Before any tasks are scheduled to run depending on the capacity of the Batch node, it's essential to keep enough spaces on the disk. For best practices while designing the tasks, see [Tasks](/azure/batch/best-practices#tasks).
 
