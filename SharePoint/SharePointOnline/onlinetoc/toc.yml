@@ -59,7 +59,7 @@
       href: ../administration/profile-picture-not-showing.md
     - name: Remove assembly reference from Sandbox solution
       href: ../../SharePointServer/administration/change-sandbox-solution.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
-    - name: SharePoint Online out of storage spacet
+    - name: SharePoint Online out of storage space
       href: ../administration/out-of-storage.md
     - name: Third-party tools changes support
       href: ../administration/third-party-tools-change-support.md    
@@ -117,6 +117,8 @@
       href: ../lists-and-libraries/film-reel-icon-video-content.md
     - name: Can't check in multiple items in a document library
       href: ../lists-and-libraries/cannot-check-in-multiple-items.md
+    - name: Can't delete Teams channel folders
+      href: ../lists-and-libraries/deleted-teams-standard-channel-folder-deletion-fails.md
     - name: Can't open documents in a local client from Chrome
       href: ../../SharePointServer/lists-and-libraries/cant-open-sp-documents-from-chrome.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Can't share/break inheritance of a folder, list, or library
@@ -253,7 +255,7 @@
     items:
     - name: '"Access Denied due to organizational policies" error'
       href: ../sharing-and-permissions/access-denied-due-to-org-policies.md
-    - name: '"Error 403 Forbidden" in OneDrive or SharePoints'
+    - name: '"Error 403 Forbidden" in OneDrive or SharePoint'
       href: ../sharing-and-permissions/error-403-forbidden.md
     - name: '"Everyone except external users" group is removed'
       href: ../sharing-and-permissions/everyone-except-external-user-removed.md
@@ -307,7 +309,7 @@
       href: ../Sites/header-field-too-long-error.md
     - name: '"HTTP request is unauthorized" error'
       href: ../Sites/calendar-overlay-unsupported.md
-    - name: '"This site cant be reached" and ERR_INVALID_RESPONSE error when accessing SharePoint site'
+    - name: '"This site cannot be reached" and ERR_INVALID_RESPONSE error when accessing SharePoint site'
       href: ../Sites/err-invalid-response-accessing-sharepoint-site.md
     - name: '"You do not have an e-mail address" error with creating an online alert'
       href: ../sites/do-not-have-an-e-mail-address-when-create-an-alert.md
@@ -321,7 +323,7 @@
       href: ../Sites/cannot-find-specified-web-given-url.md
     - name: Can't permanently delete a site when it's connected to a Microsoft 365 group
       href: ../Sites/cannot-permanently-delete-site.md    
-    - name: Customizations of the top navigation bar is reverted
+    - name: Customizations of the top navigation bar are reverted
       href: ../Sites/customizations-revert-to-default-settings.md
     - name: Error when trying to change site logo on O365 group SharePoint site
       href: ../sites/error-when-changing-o365-site-logo.md
@@ -341,11 +343,11 @@
       href: ../../SharePointServer/lists-and-libraries/modified-date-site-contents-not-accurate.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Notifications not received by group connected to SharePoint site
       href: ../sites/notification-email-not-received.md
-    - name: Public websites is discontinued
+    - name: Public websites are discontinued
       href: ../Sites/public-websites-be-discontinued.md
     - name: Rich Text fields don't respond
       href: ../Sites/rich-text-fields-fails-responding.md
-    - name: SharePoint Online alert notifications isn't received
+    - name: SharePoint Online alert notifications aren't received
       href: ../Sites/no-alert-notifications.md
     - name: SharePoint or OneDrive read-only error messages
       href: ../Sites/site-is-read-only.md
