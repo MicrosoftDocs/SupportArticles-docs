@@ -4,7 +4,7 @@ description: This article helps to solve the UI flow playback error UnableToLaun
 ms.reviewer: ambham
 ms.topic: troubleshooting
 ms.date: 3/31/2021
-ms.subservice: power-automate-flows
+ms.subservice: power-automate-desktop-flows
 ---
 # Troubleshoot UI flow Playback - Unable To Launch Application
 
