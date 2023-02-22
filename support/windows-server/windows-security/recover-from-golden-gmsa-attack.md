@@ -87,7 +87,7 @@ Follow these steps:
 
 1. Disable all the existing gMSA accounts. To do this, for each account, set the `userAccountControl` attribute to **4098** (this value combines **workstation type** and **disabled**).
 1. Use a single domain controller to follow these steps:
-   1. Follow the steps in [Create the Key Distribution Services KDS Root Key](/windows-server/security/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key.md) to create a new KDS root key object.
+   1. Follow the steps in [Create the Key Distribution Services KDS Root Key](/windows-server/security/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key) to create a new KDS root key object.
    1. Restart **Microsoft Key Distribution Service**. After it restarts, the service picks up the new object.
    1. Edit the existing gMSAs to remove the service principle names (SPNs) and DNS host names.
    1. Create new gMSAs to replace the existing gMSAs.

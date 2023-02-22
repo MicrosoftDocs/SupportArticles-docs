@@ -42,7 +42,7 @@ To identify if another process is running:
     For example:
 
     ```console
-    e.g.: PAD.BrowserNativeMessageHost.exe pid: 21064 type: Section 464: \Sessions\1\BaseNamedObjects\net.pipe:EbmV0LnBpcGU6Ly8rL0JST1dTRVJOQVRJVkVIT1NULzE2NjIwLzEv Microsoft.Management.Services.IntuneWindowsAgent.exe pid: 26708 type: Section 6AC: \BaseNamedObjects\net pipe:EbmV0LnBpcGU6Ly8rL0lOVFVORU1BTkFHRU1FTlRFWFRFTlNJT04vU1RBVFVTU0VSVklDRS8= PipesTest.Server.exe pid: 6540 type: Section 3AC: \BaseNamedObjects\net.pipe:EbmV0LnBpcGU6Ly8rLw==
+    PAD.BrowserNativeMessageHost.exe pid: 21064 type: Section 464: \Sessions\1\BaseNamedObjects\net.pipe:EbmV0LnBpcGU6Ly8rL0JST1dTRVJOQVRJVkVIT1NULzE2NjIwLzEv Microsoft.Management.Services.IntuneWindowsAgent.exe pid: 26708 type: Section 6AC: \BaseNamedObjects\net.pipe:EbmV0LnBpcGU6Ly8rL0lOVFVORU1BTkFHRU1FTlRFWFRFTlNJT04vU1RBVFVTU0VSVklDRS8= PipesTest.Server.exe pid: 6540 type: Section 3AC: \BaseNamedObjects\net.pipe:EbmV0LnBpcGU6Ly8rLw==
     ```
 
 ## Resolution
