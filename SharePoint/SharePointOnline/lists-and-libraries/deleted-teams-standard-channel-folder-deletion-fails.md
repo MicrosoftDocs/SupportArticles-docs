@@ -15,7 +15,7 @@ ms.custom:
 ms.reviewer: prbalusu
 appliesto: 
 - SharePoint Online
-ms.date: 2/15/2023
+ms.date: 2/22/2023
 ---
 # You can't delete the folder for a deleted Teams standard channel
 
@@ -33,9 +33,9 @@ For folders that were deleted starting in August 2022, the option to delete the 
 
 To fix the issue, rename the folder in the modern experience of the SharePoint library. Renaming the folder triggers the **Delete** option to appear.
 
-1. Select the ellipses (three dots) icon next to the folder, and select **Rename**.
+1. Select the "More actions" (three dots) icon next to the folder, and select **Rename**.
 2. Type a new name for the folder, and select **Rename**.
-3. Select the ellipses icon again. The **Delete** option should now appear.
+3. Select the "More actions" icon again. The **Delete** option should now appear.
 3. Select **Delete** to delete the folder.
 
 If you still can't delete the folder, the folder might be associated with an active Teams channel. To find the active channel, navigate to the folder, and then select **Go to channel**. The associated channel appears in Teams.
