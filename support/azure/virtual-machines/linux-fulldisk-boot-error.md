@@ -6,6 +6,7 @@ ms.author: pagienge
 ms.topic: troubleshooting
 ms.date: 10/15/2022
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: linux
 ---
 # Troubleshoot Azure Linux virtual machine boot issues due to full OS disk
