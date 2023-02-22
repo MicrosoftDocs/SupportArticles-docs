@@ -18,7 +18,7 @@ ms.technology: networking
 > [!div class="nextstepaction"]
 > <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806264" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common DNS issues.
 
-This solution is designed to help you troubleshoot Domain Name System (DNS) scenarios. DNS troubleshooting can be broken down into server-side and client-side issues.
+This solution is designed to help you troubleshoot Domain Name System (DNS) scenarios. You can break down DNS troubleshooting into server-side and client-side issues.
 
 ## Troubleshooting checklist
 
@@ -39,11 +39,11 @@ This solution is designed to help you troubleshoot Domain Name System (DNS) scen
 
 ### DNS records are missing in a DNS zone
 
-This issue can be caused by one of the following causes:
+This issue can have one of the following causes:
 
 #### DNS scavenging is misconfigured
 
-If DNS records go missing from DNS zones, scavenging is the most common cause. Even Windows-based computers that have statically-assigned servers will register their records every 24 hours. Check whether the NoRefresh and Refresh intervals are too low. For example, if these values are both "less than 24 hours," you'll lose DNS records.
+If DNS records go missing from DNS zones, scavenging is the most common cause. Even Windows-based computers that have statically-assigned servers register their records every 24 hours. Check whether the NoRefresh and Refresh intervals are too low. For example, if these values are both "less than 24 hours," you lose DNS records.
 
 To troubleshoot this issue, see [Using DNS aging and scavenging](/previous-versions/windows/it-pro/windows-server-2003/cc757041%28v=ws.10%29).
 
@@ -51,7 +51,7 @@ To troubleshoot this issue, see [Using DNS aging and scavenging](/previous-versi
 
 Sometimes, the host "A" record is deleted on the original DNS server after the host "A" record is registered on the newly configured DNS server IP address (Active Directory Integrated DNS). From a user perspective, anything that depends on name resolution is broken. When the DNS server IP address is changed on the client, the client sends an SOA update to delete its "A" record from the old DNS server. Then, it sends another update to register its "A" record to the new DNS server.
 
-The trouble occurs in Active Directory-integrated zones. Issues occur when the DNS Server IP address is changed on the client. When the IP address changes, the client sends a registration request to the new server, and sends a deletion request to old server. Because both servers are already synced up, registration won't occur. However, the "A" record is deleted on the old server, and then it's deleted on both servers because of Active Directory.
+The trouble occurs in Active Directory-integrated zones. Issues occur when the DNS Server IP address is changed on the client. When the IP address changes, the client sends a registration request to the new server, and sends a deletion request to old server. Because both servers are already synced up, the records aren't registered. However, the "A" record is deleted on the old server, and then it's deleted on both servers because of Active Directory.
 
 #### DHCP clients that have option 81 configured unregister host "A" records during host "AAAA" registration
 
@@ -59,7 +59,7 @@ This problem occurs if Option 81 is defined and ISATAP or 6to4 interfaces are pr
 
 #### The DNS Dynamic Update Protocol update to existing records fails
 
-The DNS Dynamic Update Protocol update to existing records fails and causes these records to be deleted by the scavenging process as aged records.
+The DNS Dynamic Update Protocol update to existing records fails. Because of this, the scavenging process considers the records to be aged and deletes them.
 
 NETLOGON "event 577X" events are logged for record registration failures of SRV records by the NETLOGON service. Other events are logged for registration failures of host "A" and PTR records. Check the system logs for these failures. Such events may be logged by a client that registers these records. Or they may be logged by the DHCP servers that register the records on the client's behalf.
 
@@ -69,7 +69,7 @@ This behavior is by design. The DNS records ("A" or PTR) are automatically updat
 
 ### Avoid registering unwanted network interface card in DNS
 
-If the network interface card is configured to register the connection address in DNS, then the DHCP/DNS client service will register the record in DNS. Unwanted network cards should be configured not to register the connection address in DNS.
+If the network interface card is configured to register the connection address in DNS, then the DHCP/DNS client service registers the record in DNS. Unwanted network cards should be configured not to register the connection address in DNS.
 
 To prevent this issue, make sure that the unwanted network interface card address isn't registered in DNS. Follow these steps:
 
@@ -83,7 +83,7 @@ To prevent this issue, make sure that the unwanted network interface card addres
 A DNS query request may time out if the DNS server forwards the query to unreachable Forwarders or Root Hints. Follow these steps to troubleshoot this issue:
 
 1. Open the DNS console on the DNS server, and check whether Forwarders or Conditional Forwarders are reachable. If some of the forwarders are unreachable, remove them.
-2. If the DNS server does not have to use Forwarders and Root Hints, open the DNS console on the DNS server, open the server **Properties** window, select **Advanced**, and then turn on **Disable recursion**. (This also disables Forwarders.)
+2. If the DNS server doesn't have to use Forwarders and Root Hints, open the DNS console on the DNS server, open the server **Properties** window, select **Advanced**, and then turn on **Disable recursion**. (This also disables Forwarders.)
 
 ### Event ID 4004 and event ID 4013
 
