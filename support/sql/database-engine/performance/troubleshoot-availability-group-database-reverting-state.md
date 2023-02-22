@@ -127,4 +127,4 @@ CROSS APPLY sys.dm_exec_input_buffer(es.session_id, NULL) eib WHERE es.is_user_p
 ORDER BY tat.transaction_begin_time ASC
 ```
 
-:::image type="content" source="media/troubleshoot-availability-group-database-reverting-state/transaction-begin-time-and-current-time-open-transactions.png" alt-text="The screenshot shows the begin time and current time of any open transactions." lightbox="media/troubleshoot-availability-group-database-reverting-state/transaction-begin-time-and-current-time-open-transactions.png":::
+:::image type="content" source="media/troubleshoot-availability-group-database-reverting-state/transaction-begin-time-and-current-time-open-transactions.png" alt-text="Screenshot shows the begin time and current time of any open transactions." lightbox="media/troubleshoot-availability-group-database-reverting-state/transaction-begin-time-and-current-time-open-transactions.png":::
