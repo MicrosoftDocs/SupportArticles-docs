@@ -5671,6 +5671,11 @@
       "source_path": "support/windows-server/system-management-components/windows-server-2003-service-pack-1-support-tools.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/windows-server-2003-service-pack-1-support-tools",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/identity/restoring-domain-controller-cause-inconsistencies.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/restoring-domain-controller-cause-inconsistencies",
+      "redirect_document_id": false
     }, 
     {
       "source_path": "support/sql/replication/configure-troubleshoot-subscriptionstreamsof-distribution-agent.md",
