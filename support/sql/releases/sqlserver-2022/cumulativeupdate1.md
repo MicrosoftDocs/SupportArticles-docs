@@ -22,13 +22,16 @@ This article describes Cumulative Update package 1 (CU1) for Microsoft SQL Serve
 - SQL Server - Product version: **16.0.4003.1**, file version: **2022.160.4003.1**
 - Analysis Services - Product version: **16.0.43.208**, file version: **2022.160.43.208**
 
+> [!NOTE]
+> This Cumulative Update includes the recently released GDR for SQL Server 2022 ([KB5021522 - Description of the security update for SQL Server 2022 GDR: February 14, 2023](https://support.microsoft.com/help/5021522)). For more information about SQL Servicing releases, see [Servicing models for SQL Server](../../general/servicing-models-sql-server.md).
+
 ## Known issues in this update
 
 There are no known issues in this cumulative update.
 
 ## Improvements and fixes included in this update
 
-A downloadable Excel workbook that contains a summary list of builds, together with their current support lifecycle, is available. The Excel file also contains detailed fix lists for SQL Server 2022, SQL Server 2019, and SQL Server 2017. [Select to download this Excel file now](https://download.microsoft.com/download/d/3/e/d3e28f3d-6a4f-47ce-aaa5-9d74c5590ed6/SQLServerBuilds.xlsx).
+A downloadable Excel workbook that contains a summary list of builds, together with their current support lifecycle, is available. The Excel file also contains detailed fix lists for SQL Server 2022, SQL Server 2019, and SQL Server 2017. [Select to download this Excel file now](https://aka.ms/sqlserverbuilds).
 
 > [!NOTE]
 > Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
