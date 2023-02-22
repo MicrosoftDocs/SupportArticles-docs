@@ -48,7 +48,7 @@ To resolve this problem, follow these steps:
 1. Restart the Azure Linux Agent. See [How to update the Azure Linux Agent on a VM](/azure/virtual-machines/extensions/update-linux-agent) for information about the restart commands for different Linux distributions.
 1. Make sure that the VM is configured to create a swap file by using cloud-init:
   
-    1. Add the following script to `/var/lib/cloud/scripts/per-boot`.
+    1. Create a script `/var/lib/cloud/scripts/per-boot/create_swapfile.sh` with the following commands:
 
         ```bash
         #!/bin/sh
