@@ -15,7 +15,7 @@ Azure Batch might set [the state of a Batch node](/rest/api/batchservice/compute
 
 In a pool that's associated with a subnet of a virtual network (VNet), all nodes are in the **Unusable** state. But there's no [error](/rest/api/batchservice/compute-node/get#computenodeerror) code on the nodes.
 
-:::image type="content" source="media/azure-batch-node-unusable-state/node-state-shows-unusable.png" alt-text="Image alt text.":::
+:::image type="content" source="media/azure-batch-node-unusable-state/node-state-shows-unusable.png" alt-text="Screenshot that shows the state of a node .":::
 
 The symptom above means that the Batch service is unable to communicate with the nodes. In most cases, it's caused by VNet configuration issues. The following sections describe the two most common causes.
 
