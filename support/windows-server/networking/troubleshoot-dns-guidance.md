@@ -90,7 +90,50 @@ A DNS query request may time out if the DNS server forwards the query to unreach
 Event message:  
 > DNS server was unable to open Active Directory. This DNS server is configured to use directory service information and cannot operate without access to the directory. The DNS server will wait for the directory to start. If the DNS server is started but the appropriate event has not been logged, then the DNS server is still waiting for the directory to start.
 
-To troubleshoot this issue, see [Troubleshoot AD DS and restart the DNS Server service](/troubleshoot/windows-server/networking/troubleshoot-dns-event-id-4013#resolution)
+To troubleshoot this issue, see [Troubleshoot AD DS and restart the DNS Server service](/troubleshoot/windows-server/networking/troubleshoot-dns-event-id-4013#resolution).
+
+### DNS Server geo-location policy doesn't work as expected
+
+You use an AD-integrated zone (default zone scope) that's named contoso.com, and geo-location zone scopes that are associated with specific subnets. You use Windows PowerShell's `Add-DnsServerQueryResolutionPolicy` cmdlets to configure DNS resolution policies. 
+
+The desired outcome is that a client tries to locate a requested resource first in the local zone scope and then in the default zone scope. However, after the organization configures these policies, clients from the defined subnets can't successfully resolve records that are hosted in the default zone scope (contoso.com). For example, clients can't resolve **hostA.contoso.com**. When it receives such requests, the DNS server returns a "Server Failure" message.
+
+To troubleshoot this issue, see [DNS server geo-location policy doesn't work as expected](dns-server-geo-location-policy-doesnt-work-as-expected.md).
+
+### Forwarded DNS name resolution fails for dual-stacked queries
+
+You're using a third-party DNS server solution, and you can't consistently resolve names when you use conditional forwarding.
+
+The local DNS server (10.100.100.70) can connect to the DNS server that's configured as a conditional forwarder (10.133.3.250). The first request from the DNS server to the conditional forwarder successfully resolves a name (for example, nbob1.contoso.com). After some time, name resolution stops working. An nslookup query to the conditional forwarder returns a "nonexistent domain" error message.
+
+If you clear the DNS server cache on the forwarding computer (the local DNS server), name resolution resumes. However, this fix is temporary.
+
+To troubleshoot this issue, see [Forwarded DNS name resolution fails for dual-stacked queries](forwarded-dns-name-resolution-fails-for-dual-stacked-queries.md).
+
+### DNS Server loses its NIC Teaming configuration
+
+Consider the following scenario:  
+
+- The DNS server computer has multiple network adapters that you use in a NIC Teaming configuration.
+- You configure the DNS server to listen on the IP address of the teaming network adapter. 
+- On the **Interfaces** tab of the DNS server properties dialog box in DNS Manager, you can configure the IP address that you want to use.
+
+After you restart the DNS server, Windows deletes the setting. The DNS server starts listening on all IP addresses again.
+
+When this change occurs, Windows logs Event ID 410 in the DNS server event log:
+
+> The DNS server list of restricted interfaces does not contain a valid IP address for the server computer. The DNS server will use all IP interfaces on the machine. Use the DNS manager server properties, interfaces dialog, to verify and reset the IP addresses the DNS server should listen on. For more information, see "To restrict a DNS server to listen only on selected addresses" in the online Help.
+
+To troubleshoot this issue, see [DNS server reverts to listening on all IP addresses instead of the configured NIC Teaming IP address](dns-server-loses-teaming-nic-configuration.md).
+
+### DNS record registration behavior when the DHCP server manages dynamic DNS updates
+
+You have an infrastructure that uses Windows Dynamic Host Configuration Protocol (DHCP) clients and Microsoft DHCP servers to assign and manage IP addresses. On the DHCP server, you select **Enable DNS dynamic updates according to the settings below** and **Always dynamically update DNS records**. In this configuration, you expect the DHCP server to manage dynamic DNS updates for A records and PTR records. However, you observe that both the client and the server create DNS records. Depending on your configuration, this behavior has the following effects:
+
+- If you configure the DNS zones for **Nonsecure and secure** dynamic updates, you see that the DHCP server creates records, and then the DHCP client deletes and re-creates the same records.
+- If you configure the DNS zones for **Secure only** dynamic updates, DNS records might become inconsistent. Both the DHCP server and the DHCP client create records. However, the DHCP server can't update records that the DHCP client creates, and the DHCP client can't update records that the DHCP server creates.
+
+To troubleshoot this issue, see [DNS record registration behavior when the DHCP server is set to "Always dynamically update DNS records"](dns-registration-behavior-when-dhcp-server-manages-dynamic-dns-updates.md).
 
 ## Data collection
 
@@ -145,12 +188,8 @@ The traces will be stored in a zip file in the *C:\\MSDATA* folder, which can be
 - [Understanding Aging and Scavenging](/previous-versions/windows/it-pro/windows-server-2003/cc759204%28v%3dws.10%29)
 - [Enable DNS dynamic updates for clients](/previous-versions/windows/it-pro/windows-server-2003/cc757445%28v%3dws.10%29)
 - [DNS Policies overview](/windows-server/networking/dns/deploy/dns-policies-overview)
-- [DNS server geo-location policy doesn't work as expected](dns-server-geo-location-policy-doesnt-work-as-expected.md)
 - [DNS Active Directory-Integrated Zones](/windows-server/identity/ad-ds/plan/active-directory-integrated-dns-zones)
 - [DNS zone replication in Active Directory](/previous-versions/windows/it-pro/windows-server-2003/cc779655%28v%3dws.10%29)
-- [Forwarded DNS name resolution fails for dual-stacked queries](forwarded-dns-name-resolution-fails-for-dual-stacked-queries.md)
 - [Verify that SRV DNS records have been created](/troubleshoot/windows-server/networking/verify-srv-dns-records-have-been-created)
-- [DNS server reverts to listening on all IP addresses instead of the configured NIC Teaming IP address](dns-server-loses-teaming-nic-configuration.md)
 - [Configure DNS dynamic updates](/troubleshoot/windows-server/networking/configure-dns-dynamic-updates-windows-server-2003)
-- [DNS record registration behavior when the DHCP server is set to "Always dynamically update DNS records"](dns-registration-behavior-when-dhcp-server-manages-dynamic-dns-updates.md)
 - [Reviewing DNS concepts](/windows-server/identity/ad-ds/plan/reviewing-dns-concepts)
