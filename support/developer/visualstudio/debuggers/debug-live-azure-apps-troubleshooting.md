@@ -217,7 +217,7 @@ You can find Instrumentation logs in the following locations:
   - Open the following view: **Windows Logs>Application**.
   - **Filter Current Log** by **Event Source** using either **Production Breakpoints** or **Instrumentation Engine**.
 - AKS
-  - Instrumentation engine logging at /tmp/diag/log.txt (set MicrosoftInstrumentationEngine_FileLogPath in DockerFile)
+  - Instrumentation engine logging at _/tmp/diag/log.txt_ (set `MicrosoftInstrumentationEngine_FileLogPath` in DockerFile)
   - ProductionBreakpoint logging at _/tmp/diag/shLog.txt_
 
 ## Known issues
