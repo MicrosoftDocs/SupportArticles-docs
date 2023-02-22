@@ -4,7 +4,7 @@ description: Provides a solution to an issue where multi-screen recording isn't 
 ms.reviewer: rajeyara
 ms.topic: troubleshooting
 ms.date: 3/31/2021
-ms.subservice: power-automate-flows
+ms.subservice: power-automate-desktop-flows
 ---
 # Multi-screen recording isn't working
 
