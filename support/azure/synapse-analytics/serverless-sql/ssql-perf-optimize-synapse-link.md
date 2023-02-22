@@ -66,8 +66,8 @@ Learn how to [automatically handle analytical store schemas](/azure/cosmos-db/an
 
 If you're missing columns that exist in your Azure Cosmos DB containers, it's probable that the schema constraints have been violated. The following constraints are applicable to the operational data in Azure Cosmos DB when you enable the analytical store to automatically infer and represent the schema correctly:
 
-- You can have a maximum of 1000 properties across all nested levels in the document schema and a maximum nesting depth of 127.
-- Only the first 1000 properties are represented in the analytical store.
+- You can have a maximum of 1,000 properties across all nested levels in the document schema and a maximum nesting depth of 127.
+- Only the first 1,000 properties are represented in the analytical store.
 - Only the first 127 nested levels are represented in the analytical store.
 - The first level of a JSON document is its root level.
 - Properties in the first level of the document will be represented as columns.
