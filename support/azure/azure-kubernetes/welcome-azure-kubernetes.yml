@@ -164,6 +164,14 @@ landingContent:
             url: ./identify-high-cpu-consuming-containers-aks.md
           - text: Identify memory saturation in AKS clusters
             url: ./identify-memory-saturation-aks.md
+
+ # Card 
+  - title: Troubleshoot Mariner container host issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot common issues with Mariner container hosts on AKS
+            url: ./troubleshoot-common-mariner-aks.md        
      
 
 
