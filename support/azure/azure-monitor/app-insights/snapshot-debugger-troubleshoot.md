@@ -8,7 +8,7 @@ ms.reviewer: cweining
 ms.service: azure-monitor
 ms.subservice: application-insights
 ---
-# Troubleshoot problems enabling Application Insights Snapshot Debugger or viewing snapshots
+# <a id="troubleshooting"></a> Troubleshoot problems enabling Application Insights Snapshot Debugger or viewing snapshots
 
 If you enabled Application Insights Snapshot Debugger for your application, but aren't seeing snapshots for exceptions, you can use these instructions to troubleshoot.
 
