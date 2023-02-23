@@ -93,6 +93,10 @@
     items:
     - name: Issues related to information barrier policies
       href: ../information-barriers/information-barriers-troubleshooting.md
+  - name: Information protection scanner
+    items:
+    - name: Resolve issues with scanner deployment
+      href: ../information-protection-scanner/resolve-deployment-issues.md
   - name: Retention
     items:
     - name: Auto-apply label doesn't apply to messages
