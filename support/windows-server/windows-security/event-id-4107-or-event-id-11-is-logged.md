@@ -1,7 +1,7 @@
 ---
 title: Event ID 4107 or ID 11 is logged
 description: Fixes a problem in which Event ID 4107 or Event ID 11 is logged in the Application log.
-ms.date: 09/08/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

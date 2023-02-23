@@ -1,7 +1,7 @@
 ---
 title: Error when you use the Set-MsolADFSContext command
 description: Describes an issue in which you receive an error message when you use the Set-MsolADFSContext command.
-ms.date: 05/14/2021
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

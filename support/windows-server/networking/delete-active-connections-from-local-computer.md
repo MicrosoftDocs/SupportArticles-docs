@@ -1,7 +1,7 @@
 ---
 title: Delete all active connections from local computer
 description: Describes how you can delete active or remembered connections on a local computer.
-ms.date: 09/24/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

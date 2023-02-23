@@ -1,7 +1,7 @@
 ---
 title: Errors when unknown environment variable is used
 description: Describes an issue where Group Policy error events are logged when unknown environment variable is used. Provides a solution to this issue.
-ms.date: 09/08/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

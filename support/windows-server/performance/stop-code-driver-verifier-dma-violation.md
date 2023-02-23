@@ -1,7 +1,7 @@
 ---
 title: Stop code DRIVER_VERIFIER_DMA_VIOLATION (0xE6)
 description: Helps to fix the stop error DRIVER_VERIFIER_DMA_VIOLATION (0xE6) when kernel Direct Memory Access (DMA) protection is enabled.
-ms.date: 08/10/2021
+ms.date: 9/24/2021
 author: v-lianna
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Configure TCP/IP Filtering
 description: Describes how to configure TCP/IP filtering on Microsoft Windows 2003-based computers.
-ms.date: 10/19/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

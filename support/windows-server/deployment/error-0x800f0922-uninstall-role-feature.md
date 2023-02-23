@@ -1,7 +1,7 @@
 ---
 title: Error 0x800f0922 when you uninstall roles
 description: Provides a solution to an issue where uninstalling Windows Server roles or features fails with error 0x800f0922.
-ms.date: 10/21/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

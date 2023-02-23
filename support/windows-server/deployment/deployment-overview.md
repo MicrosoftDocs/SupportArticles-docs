@@ -1,7 +1,7 @@
 ---
 title: Deployment overview
 description: Overview of Deployment troubleshooting articles for Windows Server.
-ms.date: 11/09/2020
+ms.date: 6/17/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

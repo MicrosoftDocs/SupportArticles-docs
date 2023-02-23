@@ -1,7 +1,7 @@
 ---
 title: Active Directory replication Event ID 1388 or 1988 - A lingering object is detected
 description: Helps you troubleshoot Active Directory Replication Event ID 1388 and 1988.
-ms.date: 12/07/2020
+ms.date: 3/24/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

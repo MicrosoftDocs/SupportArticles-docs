@@ -1,7 +1,7 @@
 ---
 title: Interactive logon isn't allowed
 description: Provides a solution to an error that occurs when Domain Controller does not allow interactive logon.
-ms.date: 09/23/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
