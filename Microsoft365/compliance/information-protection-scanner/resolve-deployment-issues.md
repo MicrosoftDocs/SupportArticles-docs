@@ -278,7 +278,7 @@ One of the following:
 
 - > SchemaMismatchException
 
-- In the Azure portal, on the Nodes page: 
+- In the Azure portal, on the **Nodes** page: 
 
   > DB schema is not up to date. Run Update-AIPScanner command to update the DB schema  
   Error: DB schema is not up to date
@@ -381,7 +381,7 @@ Check your scanner configuration in the Azure portal.
 
 For more information, see [Configuring and installing the Azure Information Protection unified labeling scanner](/azure/information-protection/deploy-aip-scanner-configure-install).
 
-**Note:** A profile is a legacy scanner term that has been replaced by the scanner cluster and content scan job in newer versions of the scanner.
+**Note:** A *profile* is a legacy scanner term that has been replaced by the scanner cluster and content scan job in newer versions of the scanner.
 
 ### No repositories configured
 
