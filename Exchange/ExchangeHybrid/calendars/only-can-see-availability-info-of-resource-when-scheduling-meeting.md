@@ -42,26 +42,24 @@ This problem occurs if the resource mailbox was migrated from the on-premises en
 
 ## Resolution
 
-To enable on-premises users to view capacity and description details about the migrated resource mailboxes, manually update the `msExchResourceCapacity` and `msExchResourceDisplay` attributes that were migrated to Exchange Online.
-
-To enable on-premises users to view capacity and description details about the migrated resource mailboxes, manually update the msExchResourceCapacity, msExchResourceDisplay, msExchResourceMetaData and msExchResourceSearchProperties attributes for the intended resource mailbox that was migrated to Exchange Online.
+To enable on-premises users to view capacity and description details about the migrated resource mailboxes, manually update the `msExchResourceCapacity`, `msExchResourceDisplay`, `msExchResourceMetaData` and `msExchResourceSearchProperties` attributes for the intended resource mailbox that was migrated to Exchange Online.
 
 > [!NOTE]
-> The msExchResourceCapacity attribute will have the value of the capacity defined for the resource mailbox, to keep a consistency across objects, you need to gather it from the migrated resource mailbox properties present in Exchange Online by running "Get-Mailbox <ResourceMailboxId> | fl ResourceCapacity" from an [Exchange Online Powershell session](/powershell/exchange/connect-to-exchange-online-powershell).
+> The `msExchResourceCapacity` attribute will have the value of the capacity defined for the resource mailbox, to keep a consistency across objects, you need to gather it from the migrated resource mailbox properties present in Exchange Online by running "Get-Mailbox MigratedResourceMailboxId | fl ResourceCapacity" from an [Exchange Online Powershell session](/powershell/exchange/connect-to-exchange-online-powershell).  
 
-#
+
 The following Cmdlets must be run from a Powershell session with the ActiveDirectory module imported on-premises:
   
 - If the resource mailbox is an equipment mailbox, run the following CmdLet:
   
   ```powershell 
-  Set-AdUser MigratedRoomMailbox -Replace @{msExchResourceCapacity ="<TypeTheCapacityValueHere>";msExchResourceDisplay="Equipment"; msExchResourceMetaData="ResourceType:Equipment"; msExchResourceSearchProperties="Equipment"}
+  Set-AdUser MigratedResourceMailboxId -Replace @{msExchResourceCapacity ="<TypeTheCapacityValueHere>";msExchResourceDisplay="Equipment"; msExchResourceMetaData="ResourceType:Equipment"; msExchResourceSearchProperties="Equipment"}
   ```
 
 - If the resource mailbox is a room mailbox, run the following CmdLet:
 
   ```powershell 
-  Set-AdUser MigratedRoomMailbox -Replace @{msExchResourceCapacity ="<TypeTheCapacityValueHere>";msExchResourceDisplay="Room"; msExchResourceMetaData="ResourceType:Room"; msExchResourceSearchProperties="Room"}
+  Set-AdUser MigratedResourceMailboxId -Replace @{msExchResourceCapacity ="<TypeTheCapacityValueHere>";msExchResourceDisplay="Room"; msExchResourceMetaData="ResourceType:Room"; msExchResourceSearchProperties="Room"}
   ```
   
 
