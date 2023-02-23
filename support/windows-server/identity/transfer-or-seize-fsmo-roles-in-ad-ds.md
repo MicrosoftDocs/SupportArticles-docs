@@ -1,7 +1,7 @@
 ---
 title: Transfer or seize FSMO roles
 description: Describes how you can use the Ntdsutil.exe utility to move or to seize Flexible Single Master Operations (FSMO) roles.
-ms.date: 09/08/2020
+ms.date: 3/24/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

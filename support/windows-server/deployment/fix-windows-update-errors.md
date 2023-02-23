@@ -1,7 +1,7 @@
 ---
 title: Fix Windows Update errors via DISM or System Update Readiness tool
 description: Use the System Update Readiness Tool or the DISM tool to fix problems that prevent Windows Update from installing successfully.
-ms.date: 12/26/2022
+ms.date: 12/30/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

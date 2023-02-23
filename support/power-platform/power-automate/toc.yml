@@ -95,6 +95,8 @@
           href: web-automation-action-fails-runtime.md
         - name: Can't record in a VDI environment
           href: cannot-record-in-vdi-environments.md
+        - name: Can't sign in with JavaScript error
+          href: enable-webview-pad-login.md
         - name: Can't access the parent flow
           href: cannot-access-parent-flow.md
         - name: Can't access the run queue of a gateway
@@ -109,6 +111,8 @@
           href: cannot-connect-access-database-engine-ole-db.md
         - name: Can't access the elements of a Java application
           href: cannot-access-java-application-elements.md
+        - name: Communication error when launching Power Automate for desktop
+          href: communication-error-console.md
         - name: Desktop flows don't show in console if license expired or unassigned
           href: desktop-flows-not-show-console-license-expired-unassigned.md
         - name: Desktop flow runs don't show in Desktop flow runs page
@@ -125,8 +129,6 @@
           href: double-click-drag-drop-are-not-working.md
         - name: Errors when running attended or unattended desktop flows
           href: troubleshoot-errors-running-attended-or-unattended-desktop-flows.md
-        - name: Enable WebView2 in Power Automate for desktop login
-          href: enable-webview-pad-login.md
         - name: Find which machine is failing within a cluster
           href: find-which-machine-is-failing-within-a-cluster.md
         - name: Failed to get UI element

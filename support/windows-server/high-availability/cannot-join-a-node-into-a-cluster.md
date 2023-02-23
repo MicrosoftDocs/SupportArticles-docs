@@ -1,7 +1,7 @@
 ---
 title: Unable to join a node into a cluster
 description: Resolves an issue where users are unable to join a node into a cluster if UDP port 3343 is blocked.
-ms.date: 10/15/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

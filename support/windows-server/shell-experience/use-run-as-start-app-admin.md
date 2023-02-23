@@ -1,7 +1,7 @@
 ---
 title: Use Run as to start an app as an admin
 description: Describes how to use the Run as command to start an application as an administrator.
-ms.date: 09/28/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
