@@ -66,11 +66,11 @@ Several common problems result in the Open Debug Snapshot not showing up. Using 
 
 There's a link in the exception pane of the end-to-end trace view that takes you to the Snapshot Health Check.
 
-:::image type="content" source="./media/snapshot-debugger/enter-snapshot-health-check.png" alt-text="Screenshot showing how to enter snapshot health check.":::
+:::image type="content" source="./media/snapshot-debugger-troubleshoot/enter-snapshot-health-check.png" alt-text="Screenshot showing how to enter snapshot health check.":::
 
 The interactive, chat-like interface looks for common problems and guides you to fix them.
 
-:::image type="content" source="./media/snapshot-debugger/health-check.png" alt-text="Screenshot showing the interactive Health Check window listing the problems and suggestions how to fix them.":::
+:::image type="content" source="./media/snapshot-debugger-troubleshoot/health-check.png" alt-text="Screenshot showing the interactive Health Check window listing the problems and suggestions how to fix them.":::
 
 If that doesn't solve the problem, then refer to the following manual troubleshooting steps.
 
@@ -84,7 +84,7 @@ On March 31, 2025, support for instrumentation key ingestion will end. Instrumen
 
 If you have an ASP.NET application that's hosted in Azure App Service or in IIS on a virtual machine, your application could fail to connect to the Snapshot Debugger service due to a missing SSL security protocol.
 
-[The Snapshot Debugger endpoint requires TLS version 1.2](/azure/azure-monitor/snapshot-debugger/snapshot-debugger-upgrade). The set of SSL security protocols is one of the quirks enabled by the `httpRuntime targetFramework` value in the `system.web` section of `web.config`.
+[The Snapshot Debugger endpoint requires TLS version 1.2](/azure/azure-monitor/snapshot-debugger-troubleshoot/snapshot-debugger-troubleshoot-upgrade). The set of SSL security protocols is one of the quirks enabled by the `httpRuntime targetFramework` value in the `system.web` section of `web.config`.
 If the `httpRuntime targetFramework` is 4.5.2 or lower, then TLS 1.2 isn't included by default.
 
 > [!NOTE]
@@ -108,11 +108,11 @@ To check the setting, open your *web.config* file and find the system.web sectio
 
 ## Preview Versions of .NET Core
 
-If you're using a preview version of .NET Core or your application references Application Insights SDK, directly or indirectly via a dependent assembly, follow the instructions for [Enable Snapshot Debugger for other environments](/azure/azure-monitor/snapshot-debugger/snapshot-debugger-vm).
+If you're using a preview version of .NET Core or your application references Application Insights SDK, directly or indirectly via a dependent assembly, follow the instructions for [Enable Snapshot Debugger for other environments](/azure/azure-monitor/snapshot-debugger-troubleshoot/snapshot-debugger-troubleshoot-vm).
 
 ## Check the Diagnostic Services site extension' Status Page
 
-If Snapshot Debugger was enabled through the [Application Insights pane](/azure/azure-monitor/snapshot-debugger/snapshot-debugger-app-service) in the portal, it was enabled by the Diagnostic Services site extension.
+If Snapshot Debugger was enabled through the [Application Insights pane](/azure/azure-monitor/snapshot-debugger-troubleshoot/snapshot-debugger-troubleshoot-app-service) in the portal, it was enabled by the Diagnostic Services site extension.
 
 > [!NOTE]
 > Codeless installation of Application Insights Snapshot Debugger follows the .NET Core support policy.
@@ -139,11 +139,11 @@ You can use the Kudu management site for App Service to get the base url of this
 
 Based on how Snapshot Debugger was enabled, see the following options:
 
-* If Snapshot Debugger was enabled through the [Application Insights pane in the portal](/azure/azure-monitor/snapshot-debugger/snapshot-debugger-app-service), then your application should already be running the latest NuGet package.
+* If Snapshot Debugger was enabled through the [Application Insights pane in the portal](/azure/azure-monitor/snapshot-debugger-troubleshoot/snapshot-debugger-troubleshoot-app-service), then your application should already be running the latest NuGet package.
 
 * If Snapshot Debugger was enabled by including the [Microsoft.ApplicationInsights.SnapshotCollector](https://www.nuget.org/packages/Microsoft.ApplicationInsights.SnapshotCollector) NuGet package, use Visual Studio's NuGet Package Manager to make sure you're using the latest version of `Microsoft.ApplicationInsights.SnapshotCollector`.
 
-For the latest updates and bug fixes, [consult the release notes](/azure/azure-monitor/snapshot-debugger/snapshot-collector-release-notes).
+For the latest updates and bug fixes, [consult the release notes](/azure/azure-monitor/snapshot-debugger-troubleshoot/snapshot-collector-release-notes).
 
 ## Check the uploader logs
 
@@ -317,7 +317,7 @@ When a snapshot is created, the throwing exception is tagged with a snapshot ID.
 1. Select **Search**.
 1. Type `ai.snapshot.id` in the Search text box and press Enter.
 
-:::image type="content" source="./media/snapshot-debugger/search-snapshot-portal.png" alt-text="Screenshot showing search for telemetry with a snapshot ID in the portal.":::
+:::image type="content" source="./media/snapshot-debugger-troubleshoot/search-snapshot-portal.png" alt-text="Screenshot showing search for telemetry with a snapshot ID in the portal.":::
 
 If this search returns no results, no snapshots were reported to Application Insights in the selected time range.
 
