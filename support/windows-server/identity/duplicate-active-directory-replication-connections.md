@@ -1,7 +1,7 @@
 ---
 title: Duplicate Active Directory replication connections are created
 description: Provides a solution to an issue where duplicate Active Directory replication connections are created for one or more domain controllers across one or more sites.
-ms.date: 09/14/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

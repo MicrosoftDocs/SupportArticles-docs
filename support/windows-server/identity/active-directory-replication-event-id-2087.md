@@ -1,7 +1,7 @@
 ---
 title: Active Directory replication Event ID 2087 (DNS lookup failure caused replication to fail)
 description: Helps you diagnose and solve Active Directory replication Event ID 2087.
-ms.date: 12/07/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

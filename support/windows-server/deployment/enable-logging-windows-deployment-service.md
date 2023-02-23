@@ -1,7 +1,7 @@
 ---
 title: Enable logging in WDS
 description: Explains how to modify the registry to enable tracing and logging in WDS. You can use the information to help troubleshoot issues that you may experience in WDS.
-ms.date: 09/08/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

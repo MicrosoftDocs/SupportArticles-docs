@@ -1,7 +1,7 @@
 ---
 title: DCDiag VerifyReferences test fails
 description: Provides a solution to an error that occurs when you use the DFSR service to replicate the sysvol folder.
-ms.date: 10/22/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
