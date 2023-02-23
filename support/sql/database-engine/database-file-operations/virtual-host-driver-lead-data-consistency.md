@@ -58,5 +58,5 @@ Contact Xsigo Systems to obtain a version of the driver that is fixed. The fixed
 - [MSSQLSERVER_824](/sql/relational-databases/errors-events/mssqlserver-824-database-engine-error)
 - [MSSQLSERVER_823](/sql/relational-databases/errors-events/mssqlserver-823-database-engine-error)
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
