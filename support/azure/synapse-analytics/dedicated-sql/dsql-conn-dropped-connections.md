@@ -19,14 +19,14 @@ The following list describes commonly overlooked reasons for connectivity issues
 
 | Task description | Workaround |
 |---|---|
-| **Check for Azure service outages.** | Check the [Microsoft Azure Service Dashboard](https://azure.microsoft.com/status/) to see whether there are any known issues. |
-| **Check for service availability.** | In the Azure portal, go to the dedicated SQL pool that you're trying to connect to, and select **Diagnose and solve problems** in the left pane to [check service availability](/azure/sql-data-warehouse/sql-data-warehouse-troubleshoot-connectivity#check-service-availability). |
-| **Check for paused or scaling operation.** | Check whether your service is currently paused or in the process of scaling. In the Azure portal, go to the dedicated SQL pool that you're trying to connect to. For more information, see [troubleshooting documentation](/azure/sql-data-warehouse/sql-data-warehouse-troubleshoot-connectivity#check-for-paused-or-scaling-operation). |
-| **Check the **Resource health** blade in the Azure portal for status updates.** | An *Unavailable* status means that resource health has detected consistent sign-in failures because of a system error in your SQL database. The status of *Degraded* means that resource health has detected mostly successful sign-ins, but there are also some failures. These sign-in failures might be caused by transient errors. |
-| **Check your firewall settings.** | Dedicated SQL pool communicates over port 1433. If you're trying to connect from within a corporate network, outbound traffic over port 1433 might not be allowed by your network's firewall. In that case, you can't connect to your Azure SQL Database server unless your IT department opens port 1433. For more information, see [Create and manage IP firewall rules](/azure/sql-database/sql-database-firewall-configure#create-and-manage-ip-firewall-rules). |
-| **Check your virtual network/service endpoint settings.** | If you see [errors "40914" and "40615"](/azure/sql-data-warehouse/sql-data-warehouse-troubleshoot-connectivity#check-your-vnetservice-endpoint-settings), see the error description and resolution in the [Common error messages reference](#common-error-message-reference) section. |
-| **Check for the latest drivers.** | Verify that you're using the [latest version of the tool and drivers](/sql/connect/jdbc/system-requirements-for-the-jdbc-driver) to connect to your dedicated SQL pool. For more information, see [Check for the latest drivers](/azure/sql-data-warehouse/sql-data-warehouse-troubleshoot-connectivity#check-for-the-latest-drivers). <br><br>Resources:<br>* [Connect and manage your dedicated SQL pool using the Azure portal](/azure/sql-data-warehouse/create-data-warehouse-portal)<br>* [Connect and manage your dedicated SQL pool by using PowerShell](/azure/sql-data-warehouse/create-data-warehouse-powershell). |
-| **Check your connection string.** | Verify that your connection strings are set correctly. [Check your connection string](/azure/sql-data-warehouse/sql-data-warehouse-troubleshoot-connectivity#check-your-connection-string) to see some sample connection strings for ADO.NET, ODBC, PHP, and JDBC. See [additional information about connection strings](/azure/sql-data-warehouse/sql-data-warehouse-connect-overview#find-your-server-name). |
+| Check for Azure service outages. | Check the [Microsoft Azure Service Dashboard](https://azure.microsoft.com/status/) to see whether there are any known issues. |
+| Check for service availability. | In the Azure portal, go to the dedicated SQL pool that you're trying to connect to, and select **Diagnose and solve problems** in the left pane to [check service availability](/azure/sql-data-warehouse/sql-data-warehouse-troubleshoot-connectivity#check-service-availability). |
+| Check for paused or scaling operation. | Check whether your service is currently paused or in the process of scaling. In the Azure portal, go to the dedicated SQL pool that you're trying to connect to. For more information, see [troubleshooting documentation](/azure/sql-data-warehouse/sql-data-warehouse-troubleshoot-connectivity#check-for-paused-or-scaling-operation). |
+| Check the **Resource health** blade in the Azure portal for status updates. | An *Unavailable* status means that resource health has detected consistent sign-in failures because of a system error in your SQL database. The status of *Degraded* means that resource health has detected mostly successful sign-ins, but there are also some failures. These sign-in failures might be caused by transient errors. |
+| Check your firewall settings. | Dedicated SQL pool communicates over port 1433. If you're trying to connect from within a corporate network, outbound traffic over port 1433 might not be allowed by your network's firewall. In that case, you can't connect to your Azure SQL Database server unless your IT department opens port 1433. For more information, see [Create and manage IP firewall rules](/azure/sql-database/sql-database-firewall-configure#create-and-manage-ip-firewall-rules). |
+| Check your virtual network/service endpoint settings. | If you see [errors "40914" and "40615"](/azure/sql-data-warehouse/sql-data-warehouse-troubleshoot-connectivity#check-your-vnetservice-endpoint-settings), see the error description and resolution in the [Common error messages reference](#common-error-message-reference) section. |
+| Check for the latest drivers. | Verify that you're using the [latest version of the tool and drivers](/sql/connect/jdbc/system-requirements-for-the-jdbc-driver) to connect to your dedicated SQL pool. For more information, see [Check for the latest drivers](/azure/sql-data-warehouse/sql-data-warehouse-troubleshoot-connectivity#check-for-the-latest-drivers). <br><br>Resources:<br>* [Connect and manage your dedicated SQL pool using the Azure portal](/azure/sql-data-warehouse/create-data-warehouse-portal)<br>* [Connect and manage your dedicated SQL pool by using PowerShell](/azure/sql-data-warehouse/create-data-warehouse-powershell). |
+| Check your connection string. | Verify that your connection strings are set correctly. [Check your connection string](/azure/sql-data-warehouse/sql-data-warehouse-troubleshoot-connectivity#check-your-connection-string) to see some sample connection strings for ADO.NET, ODBC, PHP, and JDBC. See [additional information about connection strings](/azure/sql-data-warehouse/sql-data-warehouse-connect-overview#find-your-server-name). |
 
 ## Troubleshoot persistent connectivity errors
 
@@ -44,8 +44,8 @@ The following PowerShell script downloads and runs the latest version of the Azu
 1. Open a **New Script** window.
 1. Copy and paste the following text into the script window:
 
- ```
-  $parameters = @{
+     ```vb
+     $parameters = @{
      # Supports Single, Elastic Pools and Managed Instance (MI public endpoint is supported)
      # Supports Azure Synapse / Azure SQL Data Warehouse (*.sql.azuresynapse.net / *.database.windows.net)
      # Supports Public Cloud (*.database.windows.net), Azure China (*.database.chinacloudapi.cn), Azure Germany (*.database.cloudapi.de) and Azure Government (*.database.usgovcloudapi.net)
@@ -61,29 +61,29 @@ The following PowerShell script downloads and runs the latest version of the Azu
      DelayBetweenConnections = 1 # Number of seconds to wait between connection attempts while running advanced connectivity tests
      CollectNetworkTrace = $true  # Set as $true (default) or $false
      #EncryptionProtocol = '' # Supported values: 'Tls 1.0', 'Tls 1.1', 'Tls 1.2'; Without this parameter operating system will choose the best protocol to use
-   }
+      }
 
- $ProgressPreference = "SilentlyContinue";
- if ("AzureKudu" -eq $env:DOTNET_CLI_TELEMETRY_PROFILE) {
+     $ProgressPreference = "SilentlyContinue";
+     if ("AzureKudu" -eq $env:DOTNET_CLI_TELEMETRY_PROFILE) {
      $scriptFile = '/ReducedSQLConnectivityChecker.ps1'
- } else {
+     } else {
      $scriptFile = '/AzureSQLConnectivityChecker.ps1'
- }
- $scriptUrlBase = 'http://raw.githubusercontent.com/Azure/SQL-Connectivity-Checker/master'
- cls
- Write-Host 'Trying to download the script file from GitHub (https://github.com/Azure/SQL-Connectivity-Checker), please wait...'
- try {
+     }
+     $scriptUrlBase = 'http://raw.githubusercontent.com/Azure/SQL-Connectivity-Checker/master'
+     cls
+     Write-Host 'Trying to download the script file from GitHub (https://github.com/Azure/SQL-Connectivity-Checker), please wait...'
+     try {
      [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12 -bor [Net.SecurityProtocolType]::Tls11 -bor [Net.SecurityProtocolType]::Tls
      Invoke-Command -ScriptBlock ([Scriptblock]::Create((Invoke-WebRequest ($scriptUrlBase + $scriptFile) -UseBasicParsing -TimeoutSec 60).Content)) -ArgumentList $parameters
      }
- catch {
+     catch {
      Write-Host 'ERROR: The script file could not be downloaded:' -ForegroundColor Red
      $_.Exception
      Write-Host 'Confirm this machine can access https://github.com/Azure/SQL-Connectivity-Checker/' -ForegroundColor Yellow
      Write-Host 'or use a machine with Internet access to see how to run this from machines without Internet. See how at https://github.com/Azure/SQL-Connectivity-Checker/' -ForegroundColor Yellow
- }
- #end
- ```
+     }
+     #end
+     ```
 
 1. Set the parameters on the script.
     - Specify the server name and database name.
