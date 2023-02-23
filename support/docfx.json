@@ -44,7 +44,7 @@
     "globalMetadata": {
       "breadcrumb_path": "/support/breadcrumb/toc.json",
       "extendBreadcrumb": false,
-      "feedback_system": "None",
+      "feedback_system": "Standard",
       "feedback_github_repo": "MicrosoftDocs/SupportArticles-docs",
       "searchScope": [
         "Troubleshoot"
@@ -52,21 +52,6 @@
       "recommendations": true
     },
     "fileMetadata": {
-      "feedback_system": {
-        "dynamics/gp/*.md": "Standard",
-        "dynamics-365/**/*.md": "Standard",
-        "dynamics-365/fraud-protection/*.md": "None",
-        "power-platform/**/*.md": "Standard",
-        "windows-server/**/*.md": "Standard",
-        "windows-client/**/*.md": "Standard",
-        "windows-hardware/**/*.md": "Standard",
-        "developer/dotnet/**/*.md": "Standard",
-        "developer/visualstudio/**/*.md": "Standard",
-        "sql/**/*.md": "Standard",
-        "mem/**/*.md": "Standard",
-        "system-center/**/*.md": "Standard",
-        "azure/**/*.md": "Standard"
-      },
       "feedback_product_url": {
         "dynamics/gp/*.md": "https://experience.dynamics.com/ideas/categories/?forum=771cc5ac-c117-e811-8105-3863bb2e0320&forumName=Dynamics%20GP",
         "dynamics-365/customer-insights/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights",
