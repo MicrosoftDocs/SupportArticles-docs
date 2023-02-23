@@ -41,7 +41,7 @@ The diagnostics tool checks the following details and then creates a log file wi
 > - If you're not running the tool by using the service account that is used to run the scanner service, you must use the `-OnBehalf` parameter. Else you will encounter errors.
 > - To print the last 10 errors from the scanner log, add the `Verbose` parameter. If you want to print more errors, use the `VerboseErrorCount` to define the number of errors you want to print.
 
-The `Start-AIPScannerDiagnostics` command doesn't run a complete prerequisites check. If you're having issues with the scanner, you must also ensure that your system complies with [scanner requirements](/microsoft-365/compliance/deploy-scanner-prereqs?view=o365-worldwide), and your [scanner configuration and installation](/microsoft-365/compliance/deploy-scanner-configure-install) is complete.
+The `Start-AIPScannerDiagnostics` command doesn't run a complete prerequisites check. If you're having issues with the scanner, you must also ensure that your system complies with [scanner requirements](/microsoft-365/compliance/deploy-scanner-prereqs), and your [scanner configuration and installation](/microsoft-365/compliance/deploy-scanner-configure-install) is complete.
 
 ## Scan timed out
 
@@ -361,7 +361,7 @@ Increase the number of dynamic ports for the operating system hosting the files.
 
 For more information about how to view the current port range and increase the range, see [Settings that can be modified to improve network performance](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
 
-Also see: [Scan timed out]((/azure/information-protection/deploy-aip-scanner-tsg#troubleshooting-a-scan-that-timed-out)).
+Also see: [Scan timed out](/azure/information-protection/deploy-aip-scanner-tsg#troubleshooting-a-scan-that-timed-out).
 
 ### Missing content scan job or profile
 
