@@ -1,7 +1,7 @@
 ---
 title: Support policy for Windows containers and Docker in on-premises scenarios
 description: Summary of the configurations that Microsoft supports for Windows containers when you use them in an on-premises Windows deployment.
-ms.date: 12/07/2020
+ms.date: 3/24/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

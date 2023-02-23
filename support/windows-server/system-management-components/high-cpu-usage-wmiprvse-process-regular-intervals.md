@@ -1,7 +1,7 @@
 ---
 title: High CPU usage by the WMI Provider Host (WmiPrvSE.exe) process at regular intervals
 description: Provides a workaround for the issue of high CPU usage by the WMI Provider Host (WmiPrvSE.exe) process at regular intervals.
-ms.date: 11/16/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

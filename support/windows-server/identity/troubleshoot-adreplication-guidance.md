@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting Active Directory replication
 description: Introduces general guidance for troubleshooting scenarios related to Active Directory replication.
-ms.date: 03/16/2022
+ms.date: 8/22/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

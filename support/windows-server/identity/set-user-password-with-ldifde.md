@@ -1,7 +1,7 @@
 ---
 title: Set a user's password with Ldifde
 description: Describes how to set a user's password by using the Ldifde tool.
-ms.date: 09/08/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

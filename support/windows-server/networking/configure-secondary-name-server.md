@@ -1,7 +1,7 @@
 ---
 title: Configure a secondary name server
 description: Describes how to configure a secondary DNS server.
-ms.date: 10/13/2020
+ms.date: 12/2/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

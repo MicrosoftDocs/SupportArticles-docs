@@ -1,7 +1,7 @@
 ---
 title: How to evaluate effective permissions for resources on remote computers
 description: Resolves an issue in which access checks for remote resources return incorrect results.
-ms.date: 05/23/2022
+ms.date: 5/24/2022
 author: v-tappelgate
 ms.author: v-tappelgate
 manager: dcscontentpm
@@ -16,7 +16,7 @@ ms.technology: windows-server-security
 
 # How to evaluate effective permissions for resources on remote computers
 
-_Applies to:_&nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
+_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 ## Symptoms and causes
 

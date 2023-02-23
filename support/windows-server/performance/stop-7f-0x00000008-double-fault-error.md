@@ -1,7 +1,7 @@
 ---
 title: Stop 7F, 0x00000008 (double-fault) error
 description: Provides a solution to a STOP 0x0000007F, 0x00000008 error message on your computer because of a specific processor error.
-ms.date: 10/15/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
