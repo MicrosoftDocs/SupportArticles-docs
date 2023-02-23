@@ -1,7 +1,7 @@
 ---
 title: Fail to insert a smart card in a reader
 description: Provides a solution to an error that occurs when you insert a smart card in a reader.
-ms.date: 09/27/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

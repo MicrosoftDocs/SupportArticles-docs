@@ -1,7 +1,7 @@
 ---
 title: Use language ID to identify language pack
 description: Describes how to resolve the language ID to the name of the correct language pack to install.
-ms.date: 10/14/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

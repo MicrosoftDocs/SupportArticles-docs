@@ -1,7 +1,7 @@
 ---
 title: Cannot open EXE files
 description: Provides a resolution for the issue that you cannot open exe files.
-ms.date: 09/27/2020
+ms.date: 3/12/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

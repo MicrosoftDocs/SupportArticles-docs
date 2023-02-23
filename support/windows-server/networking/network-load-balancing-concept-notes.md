@@ -1,7 +1,7 @@
 ---
 title: Network Load Balancing concept and notes
 description: describes the Network Load Balancing.
-ms.date: 09/21/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

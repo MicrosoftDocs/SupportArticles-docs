@@ -1,7 +1,7 @@
 ---
 title: Disable machine account password changes
 description: Describes how an administrator can disable automatic machine account password changes.
-ms.date: 10/09/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

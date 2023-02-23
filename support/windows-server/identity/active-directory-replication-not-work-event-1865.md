@@ -1,7 +1,7 @@
 ---
 title: AD replication isn't working with event 1865 logged
 description: Fixes an issue where Active Directory replication doesn't work and event IDs 1865 and 1311 are logged.
-ms.date: 09/14/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

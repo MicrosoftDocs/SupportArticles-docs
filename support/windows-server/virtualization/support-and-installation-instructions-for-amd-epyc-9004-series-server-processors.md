@@ -4,7 +4,7 @@ description: Introduce the Windows Server operating system support statements an
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
-ms.date: 11/10/2022
+ms.date: 2/2/2023
 ms.prod: windows-server
 ms.technology: hyper-v
 ms.custom: sap:installation-and-configuration-of-hyper-v, csstroubleshoot
@@ -13,7 +13,7 @@ ms.custom: sap:installation-and-configuration-of-hyper-v, csstroubleshoot
 
 This article introduces the Windows Server operating system support statements and installation instructions for AMD EPYC 9004 series server processors.
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019  
+_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019
 
 ## Windows Server support
 

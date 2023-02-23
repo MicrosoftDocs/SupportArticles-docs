@@ -1,7 +1,7 @@
 ---
 title: WSUS SelfUpdate doesn't send automatic updates
 description: Provides a resolution to a problem that occurs when a WSUS SelfUpdate service does not send automatic updates and client computers do not report to the server.
-ms.date: 10/20/2020
+ms.date: 3/24/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

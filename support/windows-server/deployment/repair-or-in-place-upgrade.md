@@ -1,7 +1,7 @@
 ---
 title: How to do an in-place upgrade
 description: This article introduces how to do a repair/in-place upgrade of the existing installation for Windows.
-ms.date: 09/08/2020
+ms.date: 4/6/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 After you've done the emergency repair process, the computer still doesn't operate normally. In this situation, you may want to do a repair or in-place upgrade of the existing installation.
 
-_Applies to:_ &nbsp; All Windows versions
+_Applies to:_ &nbsp; All Windows versions  
 _Original KB number:_ &nbsp; 2255099
 
 ## More information

@@ -1,7 +1,7 @@
 ---
 title: User Profiles and Folder Redirection group policies aren't applied
 description: Addresses an issue that prevents User Profiles and folder redirection group policies from working in SCCM.
-ms.date: 08/19/2021
+ms.date: 1/20/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
