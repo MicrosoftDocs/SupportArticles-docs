@@ -1,7 +1,7 @@
 ---
 title: Event ID's with point and print restrictions
 description: Provides a resolution for Event ID's commonly associated with point and print restrictions.
-ms.date: 10/19/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

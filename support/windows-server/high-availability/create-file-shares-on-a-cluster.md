@@ -1,7 +1,7 @@
 ---
 title: How to create file shares on a cluster
 description: Describes how to create file shares on a cluster.
-ms.date: 12/04/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

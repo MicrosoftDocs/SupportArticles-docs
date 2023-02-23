@@ -1,7 +1,7 @@
 ---
 title: Long paths with spaces require quotation marks
 description: Solves an issue that occurs when you specify long filenames or paths with spaces.
-ms.date: 09/23/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

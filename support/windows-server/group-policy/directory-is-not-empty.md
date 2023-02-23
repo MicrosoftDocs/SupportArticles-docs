@@ -1,7 +1,7 @@
 ---
 title: Importing a GPO using GPMC fails with an error (The Directory is not empty)
 description: Provides solutions to an issue when you import a saved GPO using GPMC.
-ms.date: 09/15/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

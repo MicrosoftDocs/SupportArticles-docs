@@ -1,7 +1,7 @@
 ---
 title: AD Replication error 8333 Directory Object Not Found
 description: Describes an issue where AD operations fail with error 8333 (Directory object not found (ERROR_DS_OBJ_NOT_FOUND)).
-ms.date: 09/08/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

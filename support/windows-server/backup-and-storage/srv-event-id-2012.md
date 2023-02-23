@@ -1,7 +1,7 @@
 ---
 title: System event log srv event ID 2012
 description: Explains reasons for the system event log srv event ID 2012.
-ms.date: 09/10/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
