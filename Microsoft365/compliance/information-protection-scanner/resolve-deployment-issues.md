@@ -207,7 +207,7 @@ For scenarios in which the scanner runs non-interactively, you must authenticate
 When you run the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) cmdlet, make sure you use the token parameter on behalf of the service account that's used to run the scanner service as shown in the following example:
 
 ```powershell
-$pscreds = Get-Credential CONTOSO\scanner
+$pscreds = Get-Credential CONTOSO\scanner  
 Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -DelegatedUser scanner@contoso.com -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
 ```
 
@@ -274,5 +274,156 @@ Check the network connectivity between the scanner computer and the database.
 
 Additionally, make sure that the service account being used to run scanner processes has all the permissions required to access the database.
 
+### Mismatched or outdated schema
 
+**Error message**
+
+One of the following:
+
+- > SchemaMismatchException
+
+- In the Azure portal, on the Nodes page: 
+
+  > DB schema is not up to date. Run Update-AIPScanner command to update the DB schema  
+  Error: DB schema is not up to date
+
+**Description**
+
+The database schema is not up to date.
+
+**Resolution**
+
+Run the [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) cmdlet to resynchronize your schema and ensure that it's up to date with any recent changes.
+
+### Underlying connection was closed
+
+**Error messages**
+
+> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a send. ---> System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+
+> [System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a send. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host.
+
+**Description**
+
+These errors indicate that TLS 1.2 isn't enabled.
+
+**Resolution**
+
+For information about how to enable TLS 1.2, see:
+
+- [Firewalls and network infrastructure requirements](/azure/information-protection/requirements#firewalls-and-network-infrastructure)
+- [How to enable TLS 1.2](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client)
+- [Enable TLS 1.1 and TLS 1.2 support in Office Online Server](/officeonlineserver/enable-tls-1-1-and-tls-1-2-support-in-office-online-server)
+
+### Stuck scanner processes
+
+**Error message**
+
+There's no error message displayed but the scanner times out.
+
+**Description**
+
+Scanner is processing a single file longer than expected. The process might be stuck.
+
+**Resolution**
+
+Check the detailed report to see whether the file is increasing in size.
+
+If the file size continues to increase, then the scanner is still processing data, and you must wait until it's done.
+
+However, if the file is no longer increasing in size, do the following:
+
+1. Run the following cmdlets:
+
+   - [Start-AIPScannerDiagnostics](/powershell/module/azureinformationprotection/start-aipscannerdiagnostics) cmdlet: to run diagnostic checks on your scanner, and export and zip log files for any errors that are found.
+   - [Export-AIPLogs](/powershell/module/azureinformationprotection/export-aiplogs) cmdlet: to export and create a .zip version of the log files from the *%localappdata%\Microsoft\MSIP\Logs* directory.
+
+2. Create a dump file for the MSIP Scanner service. In the Windows Task Manager, right-click the **MSIP Scanner service**, and select **Create dump file**.
+3. In the Azure portal, stop the scan.
+4. On the scanner machine, restart the service.
+5. Open a support ticket and attach the dump files from the scanner process.
+
+For more information, see [Scan timed out](/azure/information-protection/deploy-aip-scanner-tsg#troubleshooting-a-scan-that-timed-out).
+
+### Unable to connect to remote server
+
+**Error message**
+
+In the *%localappdata%\Microsoft\MSIP\Logs\MSIPScanner.iplog* file:
+
+> Unable to connect to the remote server ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted IP:port
+
+**Note:** This file will be compressed in to a .zip file if there are multiple logs.
+
+**Description**
+
+The scanner has exceeded the number of allowed network connections.
+
+**Resolution**
+
+Increase the number of dynamic ports for the operating system hosting the files.
+
+For more information about how to view the current port range and increase the range, see [Settings that can be modified to improve network performance](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
+
+Also see: [Scan timed out]((/azure/information-protection/deploy-aip-scanner-tsg#troubleshooting-a-scan-that-timed-out)).
+
+### Missing content scan job or profile
+
+**Error messages**
+
+In the Azure portal on the **Nodes** page:
+
+> No content scan job found
+
+**Description**
+
+This error occurs when the content scan job or profile can't be found.
+
+**Resolution**
+
+Check your scanner configuration in the Azure portal.
+
+For more information, see [Configuring and installing the Azure Information Protection unified labeling scanner](/azure/information-protection/deploy-aip-scanner-configure-install).
+
+**Note:** A profile is a legacy scanner term that has been replaced by the scanner cluster and content scan job in newer versions of the scanner.
+
+### No repositories configured
+
+**Error message**
+
+In the admin portal, on the **Nodes** page:
+
+> No repositories are configured
+
+**Description**
+
+You may have a content scan job with no repositories configured.
+
+**Resolution**
+
+Check your content scan job settings and add at least one repository.
+
+For more information, see [Create a content scan job](/azure/information-protection/deploy-aip-scanner-configure-install#create-a-content-scan-job).
+
+### No cluster found
+
+**Error message**
+
+In the admin portal, on the **Nodes** page:
+
+> No cluster found
+
+**Description**
+
+No actual match found for one of the scanner clusters you've defined.
+
+**Resolution**
+
+Verify your cluster configuration and check it against your own system details for typos and errors.
+
+For more information, see [Create a scanner cluster](/azure/information-protection/deploy-aip-scanner-configure-install#create-a-scanner-cluster).
+
+## More information
+
+[Best practices for deploying and using the AIP UL scanner](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/best-practices-for-deploying-and-using-the-aip-ul-scanner/ba-p/1878168).
 
