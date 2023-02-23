@@ -206,11 +206,8 @@ For scenarios in which the scanner runs non-interactively, you must authenticate
 When you run the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) cmdlet, make sure you use the token parameter on behalf of the service account that's used to run the scanner service as shown in the following example:
 
 ```powershell
-$pscreds = Get-Credential CONTOSO\scanner  
+$pscreds = Get-Credential CONTOSO\scanner
 Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -DelegatedUser scanner@contoso.com -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
-```
-
-```output
 Acquired application access token on behalf of CONTOSO\scanner.
 ```
 
