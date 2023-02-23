@@ -40,13 +40,9 @@ In that article, this naming convention applies to computer, OU, and site names.
 
 ### NetBIOS computer names
 
-- Allowed characters
+- **Allowed characters.** NetBIOS computer names can contain all alphanumeric characters except for the extended characters that appear in the following in **Disallowed characters** list. Names can contain a period, but names can't start with a period.
 
-    NetBIOS computer names can contain all alphanumeric characters except for the extended characters that appear in the following in **Disallowed characters** list. Names can contain a period, but names can't start with a period.
-
-- Disallowed characters
-
-    NetBIOS computer names can't contain the following characters:
+- **Disallowed characters.** NetBIOS computer names can't contain the following characters:
 
   - backslash (\\)
   - slash mark (/)
@@ -58,24 +54,23 @@ In that article, this naming convention applies to computer, OU, and site names.
   - greater than sign (>)
   - vertical bar (|)
 
-    Names can contain a period (.). But the name can't start with a period. The use of non-DNS names with periods is allowed in Microsoft Windows NT. Periods shouldn't be used in Windows. If you're upgrading a computer whose NetBIOS name contains a period, change the computer name. For more information, see **Special characters**.
-
-    Computers that are members of an Active Directory domain can't have names that only contain numbers. This restriction is because of DNS restrictions.
+  > [!NOTE]  
+  > - Names can contain a period (.). But the name can't start with a period. The use of non-DNS names with periods is allowed in Microsoft Windows NT. Periods shouldn't be used in Windows. If you're upgrading a computer whose NetBIOS name contains a period, change the computer name. For more information, see **Special characters**.
+  >
+  > - Computers that are members of an Active Directory domain can't have names that only contain numbers. This restriction is because of DNS restrictions.
 
     For more information about the NetBIOS name syntax, see [NetBIOS name syntax](/openspecs/windows_protocols/ms-nbte/6f06fa0e-1dc4-4c41-accb-355aaf20546d).
 
-- Minimum name length: One character
-
-- Maximum name length: 15 characters
+- Name length rules.
+    - Minimum name length: One character.
+    - Maximum name length: 15 characters
 
     > [!NOTE]
-    > The 16th character is reserved to identify the functionality that is installed on the registered network device.
+    > The 16th character of a NetBIOS computer name is reserved to identify the functionality that is installed on the registered network device.
 
-- Reserved names
+- **Reserved names.** See [Table of reserved words](#table-of-reserved-words).
 
-    See [Table of reserved words](#table-of-reserved-words).
-
-- Special characters: Period (.)
+- **Special characters.** Period (.)
 
     A period character separates the name into a NetBIOS scope identifier and the computer name. The NetBIOS scope identifier is an optional string of characters that identify logical NetBIOS networks that run on the same physical TCP/IP network. For NetBIOS to work between computers, the computers must have the same NetBIOS scope identifier and unique computer names.
 
@@ -86,20 +81,16 @@ In that article, this naming convention applies to computer, OU, and site names.
 
 ### DNS host names
 
-- Allowed characters
+- **Allowed characters.** DNS names can contain only alphabetical characters (A-Z), numeric characters (0-9), the minus sign (-), and the period (.). Period characters are allowed only when they're used to delimit the components of domain style names.
 
-    DNS names can contain only alphabetical characters (A-Z), numeric characters (0-9), the minus sign (-), and the period (.). Period characters are allowed only when they're used to delimit the components of domain style names.
+  Windows domain name system (DNS) supports Unicode characters. Other implementations of DNS don't support Unicode characters. Avoid Unicode characters if queries will be passed to the servers that use non-Microsoft implementations of DNS.
 
-    Windows domain name system (DNS) supports Unicode characters. Other implementations of DNS don't support Unicode characters. Avoid Unicode characters if queries will be passed to the servers that use non-Microsoft implementations of DNS.
-
-    For more information, see the following websites:
+  For more information, see the following websites:
 
   - [rfc952](https://www.ietf.org/rfc/rfc952.txt)
   - [rfc1123](https://www.ietf.org/rfc/rfc1123.txt)
 
-- Disallowed characters
-
-    DNS host names can't contain the following characters:
+- **Disallowed characters.** DNS host names can't contain the following characters:
 
   - comma (,)
   - tilde (~)
@@ -116,34 +107,36 @@ In that article, this naming convention applies to computer, OU, and site names.
   - parentheses (())
   - braces ({})
   - underscore (_)
+    > [!NOTE]  
+    > The underscore has a special role. It's permitted for the first character in SRV records by RFC definition. But newer DNS servers may also allow it anywhere in a name. For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).
   - white space (blank)
 
-    The underscore has a special role. It's permitted for the first character in SRV records by RFC definition. But newer DNS servers may also allow it anywhere in a name. For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).
+  > [!NOTE]
+  > DNS Host Name Registration substitutes a hyphen (-) character for invalid characters.
 
-    More rules include the following:
-
-  - All characters preserve their case formatting except for American Standard Code for Information Interchange (ASCII) characters.
-  - The first character must be alphabetical or numeric.
-  - The last character must not be a minus sign or a period.
-  - Two-character SDDL user strings that are listed in [well-known SIDs list](/windows/win32/secauthz/sid-strings) can't be used. Otherwise, _import_, _export_, and _take control_ operations fail.
-
-    Computers that are members of an Active Directory domain can't have names that only contain numbers. This restriction is because of DNS restrictions.
-
-    > [!NOTE]
-    > DNS Host Name Registration substitutes a hyphen (-) character for invalid characters.
-
-- Minimum name length: Two characters
-
-- Maximum name length: 63 characters
-
+- **Name length rules.**
+  - Minimum name length: Two characters.
+  - Maximum name length: 63 characters.  
     The maximum length of the host name and of the fully qualified domain name (FQDN) is 63 bytes per label and 255 bytes per FQDN.
 
     > [!NOTE]
-    > Windows doesn't permit computer names that exceed 15 characters, and you can't specify a DNS host name that differs from the NETBIOS host name. You might however create host headers for a web site hosted on a computer and that is then subject to this recommendation.
+    > Windows doesn't permit computer names that exceed 15 characters, and you can't specify a DNS host name that differs from the NetBIOS host name. However, you might create host headers for a web site that's hosted on a computer. Then the host headers are subject to this rule.
 
-    The maximum host name and the FQDN use the standard length limitations that are mentioned earlier, with the addition of UTF-8 (Unicode) support. Because some UTF-8 characters exceed one octet in length, you can't determine the size by counting the characters.
+  - The maximum host name and the FQDN use the standard length limitations that are mentioned earlier, with the addition of UTF-8 (Unicode) support. Because some UTF-8 characters exceed one octet in length, you can't determine the size by counting the characters.
 
-    Domain controllers must have an FQDN of less than 155 bytes.
+
+  - The FQDN of a domain controller must be smaller than 155 bytes.
+
+
+
+- **Additional rules for DNS host names.**
+
+  - All characters preserve their case formatting except for American Standard Code for Information Interchange (ASCII) characters.
+  - The first character in a DNS host name must be alphabetical or numeric.
+  - The last character must not be a minus sign or a period.
+  - Two-character SDDL user strings that are listed in [well-known SIDs list](/windows/win32/secauthz/sid-strings) can't be used. Otherwise, _import_, _export_, and _take control_ operations fail.
+  - Computers that are members of an Active Directory domain can't have names that only contain numbers. This is a DNS restriction.
+
 
 - Reserved names per RFC 952
 
