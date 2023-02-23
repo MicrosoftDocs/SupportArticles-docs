@@ -39,7 +39,7 @@ This solution is designed to help you troubleshoot Domain Name System (DNS) scen
 
 ### DNS records are missing in a DNS zone
 
-This issue can have one of the following causes:
+This issue can have any one of the following causes.
 
 #### DNS scavenging is misconfigured
 
@@ -51,7 +51,7 @@ To troubleshoot this issue, see [Using DNS aging and scavenging](/previous-versi
 
 Sometimes, the host "A" record is deleted on the original DNS server after the host "A" record is registered on the newly configured DNS server IP address (Active Directory Integrated DNS). From a user perspective, anything that depends on name resolution is broken. When the DNS server IP address is changed on the client, the client sends an SOA update to delete its "A" record from the old DNS server. Then, it sends another update to register its "A" record to the new DNS server.
 
-The trouble occurs in Active Directory-integrated zones. Issues occur when the DNS Server IP address is changed on the client. When the IP address changes, the client sends a registration request to the new server, and sends a deletion request to old server. Because both servers are already synced up, the records aren't registered. However, the "A" record is deleted on the old server, and then it's deleted on both servers because of Active Directory.
+The trouble occurs in Active Directory integrated zones. Issues occur when the DNS Server IP address is changed on the client. When the IP address changes, the client sends a registration request to the new server, and sends a deletion request to old server. Because both servers are already synced, the records aren't registered. However, the "A" record is deleted on the old server, and then it's deleted on both servers because of Active Directory.
 
 #### DHCP clients that have option 81 configured unregister host "A" records during host "AAAA" registration
 
@@ -59,7 +59,7 @@ This problem occurs if Option 81 is defined and ISATAP or 6to4 interfaces are pr
 
 #### The DNS Dynamic Update Protocol update to existing records fails
 
-The DNS Dynamic Update Protocol update to existing records fails. Because of this, the scavenging process considers the records to be aged and deletes them.
+The DNS Dynamic Update Protocol update to existing records fails. Because of this, the scavenging process considers the records to be aged, and it deletes them.
 
 NETLOGON "event 577X" events are logged for record registration failures of SRV records by the NETLOGON service. Other events are logged for registration failures of host "A" and PTR records. Check the system logs for these failures. Such events may be logged by a client that registers these records. Or they may be logged by the DHCP servers that register the records on the client's behalf.
 
@@ -67,23 +67,23 @@ NETLOGON "event 577X" events are logged for record registration failures of SRV 
 
 This behavior is by design. The DNS records ("A" or PTR) are automatically updated during the next DHCP renewal request from the client.
 
-### Avoid registering unwanted network interface card in DNS
+### Unwanted network adapter might be registered in DNS
 
-If the network interface card is configured to register the connection address in DNS, then the DHCP/DNS client service registers the record in DNS. Unwanted network cards should be configured not to register the connection address in DNS.
+If the network adapter is configured to register the connection address in DNS, then the DHCP/DNS client service registers the record in DNS. Unwanted network cards should be configured not to register the connection address in DNS.
 
-To prevent this issue, make sure that the unwanted network interface card address isn't registered in DNS. Follow these steps:
+To prevent this issue, make sure that the unwanted network adapter address isn't registered in DNS. Follow these steps:
 
-1. In **Network Connections**, open the properties for the unwanted network card, open TCP/IP properties, select **Advanced** > **DNS**, and then clear the **Register this connections Address in DNS** check box.
+1. In **Network Connections**, open the properties for the unwanted network card, open TCP/IP properties, select **Advanced** > **DNS**, and then clear the **Register this connections Address in DNS** checkbox.
 2. In the left pane, open the DNS server console, highlight the server, and then select **Action** > **Properties**. On the **Interfaces** tab, select **listen on only the following IP addresses**. Remove the unwanted IP address from the list.
 3. On the **Zone** properties page, select the **Name server** tab. In addition to the FQDN of the domain controller, you'll see the IP address that's associated with the domain controller. Remove the unwanted IP address if it's listed.
-4. After doing it, delete the existing unwanted host "A" record of the domain controller.
+4. Delete the existing unwanted host "A" record of the domain controller.
 
 ### DNS query response delays
 
-A DNS query request may time out if the DNS server forwards the query to unreachable Forwarders or Root Hints. Follow these steps to troubleshoot this issue:
+A DNS query request may time out if the DNS server forwards the query to unreachable forwarders or root hints. To troubleshoot this issue, follow these steps:
 
-1. Open the DNS console on the DNS server, and check whether Forwarders or Conditional Forwarders are reachable. If some of the forwarders are unreachable, remove them.
-2. If the DNS server doesn't have to use Forwarders and Root Hints, open the DNS console on the DNS server, open the server **Properties** window, select **Advanced**, and then turn on **Disable recursion**. (This also disables Forwarders.)
+1. Open the DNS console on the DNS server, and check whether forwarders or conditional forwarders are reachable. If some of the forwarders are unreachable, remove them.
+2. If the DNS server doesn't have to use forwarders and root hints, open the DNS console on the DNS server, open the server **Properties** window, select **Advanced**, and then turn on **Disable recursion**. (This also disables forwarders.)
 
 ### Event ID 4004 and event ID 4013
 
@@ -94,9 +94,9 @@ To troubleshoot this issue, see [Troubleshoot AD DS and restart the DNS Server s
 
 ### DNS Server geo-location policy doesn't work as expected
 
-You use an AD-integrated zone (default zone scope) that's named contoso.com, and geo-location zone scopes that are associated with specific subnets. You use Windows PowerShell's `Add-DnsServerQueryResolutionPolicy` cmdlets to configure DNS resolution policies. 
+You use an Active Directory integrated zone (default zone scope) that's named contoso.com, and geo-location zone scopes that are associated with specific subnets. You use the Windows PowerShell `Add-DnsServerQueryResolutionPolicy` cmdlets to configure DNS resolution policies. 
 
-The desired outcome is that a client tries to locate a requested resource first in the local zone scope and then in the default zone scope. However, after the organization configures these policies, clients from the defined subnets can't successfully resolve records that are hosted in the default zone scope (contoso.com). For example, clients can't resolve **hostA.contoso.com**. When it receives such requests, the DNS server returns a "Server Failure" message.
+The desired outcome is that a client tries to locate a requested resource, first in the local zone scope and then in the default zone scope. However, after the organization configures these policies, clients from the defined subnets can't successfully resolve records that are hosted in the default zone scope (contoso.com). For example, clients can't resolve **hostA.contoso.com**. When the DNS server receives such requests, it returns a "Server Failure" message.
 
 To troubleshoot this issue, see [DNS server geo-location policy doesn't work as expected](dns-server-geo-location-policy-doesnt-work-as-expected.md).
 
@@ -122,7 +122,7 @@ After you restart the DNS server, Windows deletes the setting. The DNS server st
 
 When this change occurs, Windows logs Event ID 410 in the DNS server event log:
 
-> The DNS server list of restricted interfaces does not contain a valid IP address for the server computer. The DNS server will use all IP interfaces on the machine. Use the DNS manager server properties, interfaces dialog, to verify and reset the IP addresses the DNS server should listen on. For more information, see "To restrict a DNS server to listen only on selected addresses" in the online Help.
+> The DNS server list of restricted interfaces does not contain a valid IP address for the server computer. The DNS server will use all IP interfaces on the computer. Use the DNS manager server properties, interfaces dialog box, to verify and reset the IP addresses the DNS server should listen on. For more information, see "To restrict a DNS server to listen only on selected addresses" in the online Help.
 
 To troubleshoot this issue, see [DNS server reverts to listening on all IP addresses instead of the configured NIC Teaming IP address](dns-server-loses-teaming-nic-configuration.md).
 
@@ -141,20 +141,20 @@ Before contacting Microsoft support, you can gather information about your issue
 
 ### Prerequisites
 
-1. TSSv2 must be run by accounts with administrator privileges on the local system, and EULA must be accepted (once EULA is accepted, TSSv2 won't prompt again).
-2. We recommend the local machine `RemoteSigned` PowerShell execution policy.
+- TSSv2 must be run by accounts that have administrator privileges on the local system, and the EULA must be accepted. (After the EULA is accepted, TSSv2 won't prompt again.)
+- We recommend the LocalMachine `RemoteSigned` PowerShell execution policy.
 
 > [!NOTE]
 > If the current PowerShell execution policy doesn't allow running TSSv2, take the following actions:
 >
-> - Set the `RemoteSigned` execution policy for the process level by running the cmdlet `PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`.
-> - To verify if the change takes effect, run the cmdlet `PS C:\> Get-ExecutionPolicy -List`.
-> - Because the process level permissions only apply to the current PowerShell session, once the given PowerShell window in which TSSv2 runs is closed, the assigned permission for the process level will also go back to the previously configured state.
+> - Set the `RemoteSigned` execution policy for the process level by running the cmdlet, `PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`.
+> - To verify that the change takes effect, run the cmdlet, `PS C:\> Get-ExecutionPolicy -List`.
+> - Because the process level permissions apply to only the current PowerShell session, after the given PowerShell window in which TSSv2 runs is closed, the assigned permission for the process level also reverts to the previously configured state.
 
 ### Gather key information before contacting Microsoft support
 
 1. Download [TSSv2](https://aka.ms/getTSSv2) on all nodes and unzip it in the *C:\\tss_tool* folder.
-2. Open the *C:\\tss_tool* folder from an elevated PowerShell command prompt.
+2. Open the *C:\\tss_tool* folder at an elevated PowerShell command prompt.
 3. Start the traces on the client and the server by using the following cmdlets:
 
     - Client:  
@@ -178,9 +178,9 @@ Before contacting Microsoft support, you can gather information about your issue
 
 7. Enter *Y* to finish the log collection after the issue is reproduced.
 
-The traces will be stored in a zip file in the *C:\\MSDATA* folder, which can be uploaded to the workspace for analysis.
+The traces are stored in a compressed file in the *C:\\MSDATA* folder. This can be uploaded to the workspace for analysis.
 
-## Reference
+## References
 
 - [Troubleshooting DNS clients](/windows-server/networking/dns/troubleshoot/troubleshoot-dns-client)
 - [Troubleshooting DNS Servers](/windows-server/networking/dns/troubleshoot/troubleshoot-dns-server)
