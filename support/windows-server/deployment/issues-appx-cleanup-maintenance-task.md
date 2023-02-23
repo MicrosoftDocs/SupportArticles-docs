@@ -1,7 +1,7 @@
 ---
 title: Issues with AppX cleanup maintenance task
 description: Provides workarounds for known issues that involve the AppX cleanup maintenance task in Windows 8.1 and Windows Server 2012 R2.
-ms.date: 09/24/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
