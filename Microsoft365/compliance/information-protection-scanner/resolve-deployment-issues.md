@@ -42,19 +42,7 @@ The diagnostics tool checks the following details and then creates a log file wi
 > - To print the last 10 errors from the scanner log, add the `Verbose` parameter. If you want to print more errors, use the `VerboseErrorCount` to define the number of errors you want to print.
 
 The `Start-AIPScannerDiagnostics` command doesn't run a complete prerequisites check. If you're having issues with the scanner, you must also ensure that your system complies with [scanner requirements](/microsoft-365/compliance/deploy-scanner-prereqs), and your [scanner configuration and installation](/microsoft-365/compliance/deploy-scanner-configure-install) is complete.
-
-## Scan timed out
-
-If the scanner stops unexpectedly while scanning a large number of files in a repository, you may need to modify one of the following settings:
-
-- **Number of dynamic ports**. You may need to increase the number of dynamic ports for the operating system hosting the files. Server hardening for SharePoint can be one reason why the scanner exceeds the number of allowed network connections, and stops.
-
-  For more information about how to view the current port range and increase the range, see [Settings that can be Modified to Improve Network Performance](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
-
-- **List view threshold**. For large SharePoint farms, you may need to increase the list view threshold. By default, the list view threshold is set to **5,000**.
-
-  For more information, see [Manage large lists and libraries in SharePoint](https://support.microsoft.com/office/manage-large-lists-and-libraries-b8588dae-9387-48c2-9248-c24122f07c59).
-  
+ 
 ## Verify scanning details per scanner node and repository
 
 Run the [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/get-aipscannerstatus) PowerShell cmdlet to get details about the current scan status and the list of nodes in your scanner cluster.
@@ -176,11 +164,11 @@ The following table provides information about specific error messages that are 
 
 **Description**
 
-This error occurs if the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) command fails.
+The [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) command has failed.
 
 **Resolution**
 
-Make sure to define the permissions correctly in the Azure portal.
+Verfy that the appropriate permissions are defined correctly in the Azure portal.
 
 For more information, see [Create and configure Azure AD applications for Set-AIPAuthentication](/azure/information-protection/rms-client/clientv2-admin-guide-powershell#create-and-configure-azure-ad-applications-for-set-aipauthentication).
 
@@ -201,9 +189,9 @@ These authentication errors occur when the scanner runs non-interactively.
 
 **Resolution**
 
-For scenarios in which the scanner runs non-interactively, you must authenticate by using a token by using the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) cmdlet.
+You must authenticate by using a token by using the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) cmdlet.
 
-When you run the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) cmdlet, make sure you use the token parameter on behalf of the service account that's used to run the scanner service as shown in the following example:
+When you run the Set-AIPAuthentication cmdlet, make sure you use the token parameter on behalf of the service account that's used to run the scanner service as shown in the following example:
 
 ```powershell
 $pscreds = Get-Credential CONTOSO\scanner
@@ -211,7 +199,7 @@ Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "
 Acquired application access token on behalf of CONTOSO\scanner.
 ```
 
-For more information, see [Get an Azure AD token for the scanner](/azure/information-protection/deploy-aip-scanner-configure-install#get-an-azure-ad-token-for-the-scanner).
+For more information, see [Get an Azure AD token for the scanner](/microsoft-365/compliance/deploy-scanner-configure-install#get-an-azure-ad-token-for-the-scanner).
 
 ### Policy missing
 
@@ -227,7 +215,7 @@ The scanner is unable to find your sensitivity label policy file.
 
 To verify that your policy file exists as expected, check in the following location: *%localappdata%\Microsoft\MSIP\mip\MSIP.Scanner.exe\mip\mip.policies.sqlite3*.
 
-For more information about sensitivity labels and their label policies, see [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels) in the Microsoft Purview documentation.
+For more information about sensitivity labels and their label policies, see [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels).
 
 ### Policy doesn't include automatic labeling conditions
 
@@ -245,10 +233,10 @@ Configure the following settings:
 
 |Setting|Steps to configure settings|
 |----------|-----------|
-|**Content scan job settings**|In the Azure portal, do the following:<ul><li>[Set the **Info types to be discovered** to **All**](/azure/information-protection/deploy-aip-scanner-configure-install#identify-all-custom-conditions-and-known-sensitive-information-types)</li><li>[Define a default label to be applied when scanning](/azure/information-protection/deploy-aip-scanner-configure-install#apply-a-default-label-to-all-files-in-a-data-repository)</li></ul>|
+|**Content scan job settings**|In the Azure portal, do the following:<ul><li>[Set the **Info types to be discovered** to **All**](/microsoft-365/compliance/deploy-scanner-configure-install#use-the-scanner-with-alternative-configurations)</li><li>[Define a default label to be applied when scanning](/azure/information-protection/deploy-aip-scanner-configure-install#apply-a-default-label-to-all-files-in-a-data-repository)(/microsoft-365/compliance/deploy-scanner-configure-install#use-the-scanner-with-alternative-configurations)</li></ul>|
 |**Labeling policy settings**|In the Microsoft Purview compliance portal, do the following:<ul><li>[Define a default sensitivity label](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy)</li><li>[Configure automatic / recommended labeling](/microsoft-365/compliance/apply-sensitivity-label-automatically)</li></ul>|
 
-If your settings are already defined as expected, the policy file itself may be missing or inaccessible, such as when there's a timeout from the Microsoft Purview compliance portal.
+If the settings are already defined as expected, the policy file itself may be missing or inaccessible, such as when there's a timeout from the Microsoft Purview compliance portal.
 
 To verify your policy file, check that the following file exists: *%localappdata%\Microsoft\MSIP\mip\MSIP.Scanner.exe\mip\mip.policies.sqlite3*
 
@@ -262,7 +250,7 @@ For more information, see [What is the Azure Information Protection unified labe
 
 **Description**
 
-The scanner may not be able to connect to the database.
+The scanner is not able to connect to the database.
 
 **Resolution**
 
@@ -305,7 +293,7 @@ These errors indicate that TLS 1.2 isn't enabled.
 
 **Resolution**
 
-For information about how to enable TLS 1.2, see:
+To enable TLS 1.2, see:
 
 - [Firewalls and network infrastructure requirements](/azure/information-protection/requirements#firewalls-and-network-infrastructure)
 - [How to enable TLS 1.2](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client)
@@ -319,15 +307,25 @@ There's no error message displayed but the scanner times out.
 
 **Description**
 
-Scanner is processing a single file longer than expected. The process might be stuck.
+The scanner is processing a single file for a longer time than expected or it stops unexpectedly while scanning a large number of files in a repository. The scanner process might be stuck.
 
 **Resolution**
 
-Check the detailed report to see whether the file is increasing in size.
+Modify one of the following settings:
+
+- **Number of dynamic ports**. You may need to increase the number of dynamic ports for the operating system hosting the files. Server hardening for SharePoint can be one reason why the scanner exceeds the number of allowed network connections, and stops.
+
+  For information about how to view the current port range and increase the range, see [Settings that can be Modified to Improve Network Performance](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
+
+- **List view threshold**. For large SharePoint farms, you may need to increase the list view threshold. By default, the list view threshold is set to **5,000**.
+
+  For information on increasing the threshold, see [Manage large lists and libraries in SharePoint](https://support.microsoft.com/office/manage-large-lists-and-libraries-b8588dae-9387-48c2-9248-c24122f07c59).
+
+If the issue still occurs, check the detailed report to determine whether the file is increasing in size.
 
 If the file size continues to increase, then the scanner is still processing data, and you must wait until it's done.
 
-However, if the file is no longer increasing in size, do the following:
+If the file is no longer increasing in size, do the following:
 
 1. Run the following cmdlets:
 
@@ -339,17 +337,15 @@ However, if the file is no longer increasing in size, do the following:
 4. On the scanner machine, restart the service.
 5. Open a support ticket and attach the dump files from the scanner process.
 
-For more information, see [Scan timed out](/azure/information-protection/deploy-aip-scanner-tsg#troubleshooting-a-scan-that-timed-out).
-
 ### Unable to connect to remote server
 
 **Error message**
 
-In the *%localappdata%\Microsoft\MSIP\Logs\MSIPScanner.iplog* file:
+In the MSIPScanner.iplog* file located under *%localappdata%\Microsoft\MSIP\Logs\:
 
 > Unable to connect to the remote server ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted IP:port
 
-**Note:** This file will be compressed in to a .zip file if there are multiple logs.
+If there are multiple logs, then MSIPScanner.iplog* file will be a .zip file. 
 
 **Description**
 
@@ -359,9 +355,7 @@ The scanner has exceeded the number of allowed network connections.
 
 Increase the number of dynamic ports for the operating system hosting the files.
 
-For more information about how to view the current port range and increase the range, see [Settings that can be modified to improve network performance](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
-
-Also see: [Scan timed out](/azure/information-protection/deploy-aip-scanner-tsg#troubleshooting-a-scan-that-timed-out).
+For information about how to view the current port range and increase the range, see [Settings that can be modified to improve network performance](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
 
 ### Missing content scan job or profile
 
@@ -379,7 +373,7 @@ This error occurs when the content scan job or profile can't be found.
 
 Check your scanner configuration in the Azure portal.
 
-For more information, see [Configuring and installing the Azure Information Protection unified labeling scanner](/azure/information-protection/deploy-aip-scanner-configure-install).
+For more information, see [Configuring and installing the Azure Information Protection unified labeling scanner](/microsoft-365/compliance/deploy-scanner-configure-install).
 
 **Note:** A *profile* is a legacy scanner term that has been replaced by the scanner cluster and content scan job in newer versions of the scanner.
 
@@ -399,7 +393,7 @@ You may have a content scan job with no repositories configured.
 
 Check your content scan job settings and add at least one repository.
 
-For more information, see [Create a content scan job](/azure/information-protection/deploy-aip-scanner-configure-install#create-a-content-scan-job).
+For more information, see [Create a content scan job](/microsoft-365/compliance/deploy-scanner-configure-install#configure-the-scanner-settings).
 
 ### No cluster found
 
@@ -417,7 +411,7 @@ No actual match found for one of the scanner clusters you've defined.
 
 Verify your cluster configuration and check it against your own system details for typos and errors.
 
-For more information, see [Create a scanner cluster](/azure/information-protection/deploy-aip-scanner-configure-install#create-a-scanner-cluster).
+For more information, see [Create a scanner cluster](/microsoft-365/compliance/deploy-scanner-configure-install#configure-the-scanner-settings).
 
 ## More information
 
