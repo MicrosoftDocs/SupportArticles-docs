@@ -49,6 +49,8 @@ If the connectivity issue is caused by the Application Insights Java agent, cons
 
   > WARN  c.m.applicationinsights.agent - System property -Djsse.enableSNIExtension=false is detected. If you have connection issues with Application Insights, please remove this.
 
+- If none of the above solutions can help you, you can use [troubleshooting tools](https://github.com/microsoft/ApplicationInsights-Java/wiki/Diagnose-connection-to-the-Application-Insights-backend-(3.x)).
+
 ## Java virtual machine (JVM) fails to start
 
 If the Java virtual machine (JVM) fails to start, it might return an "Error opening zip file or JAR manifest missing" message. That error means that the agent jar file might have been corrupted during file transfer. Try redownloading the agent jar file.
