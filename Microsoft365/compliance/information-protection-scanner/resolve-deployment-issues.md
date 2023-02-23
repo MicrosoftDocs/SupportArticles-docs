@@ -163,10 +163,10 @@ The following table provides information about specific error messages that are 
 
 |Error type|Troubleshooting|
 |----------|-----------|
-|Authentication errors|<ul><li>[Authentication token not accepted](#authentication-token-not-accepted)</li> <li>Authentication token missing</li></ul>|
-|Policy errors|<ul><li>Policy missing</li> <li>Policy doesn't include any automatic labeling condition</li></ul>|
-|DB / Schema errors|<ul><li>Database errors</li> <li>Mismatched or outdated schema</li></ul>|
-|Other errors|<ul><li>Underlying connection was closed</li> <li>Stuck scanner processes</li> <li>Unable to connect to remote server</li> <li>Missing content scan job or profile</li> <li>No repositories are configured</li> <li>No cluster found</li> <li>Scanner diagnostics errors</li></ul>|
+|Authentication errors|<ul><li>[Authentication token not accepted](#authentication-token-not-accepted)</li> <li>[Authentication token missing](#authentication-token-missing)</li></ul>|
+|Policy errors|<ul><li>[Policy missing](#policy-missing)</li> <li>[Policy doesn't include any automatic labeling condition](#policy-doesnt-include-automatic-labeling-conditions)</li></ul>|
+|DB / Schema errors|<ul><li>[Database errors](#database-errors)</li> <li>[Mismatched or outdated schema](#mismatched-or-outdated-schema)</li></ul>|
+|Other errors|<ul><li>[Underlying connection was closed](#underlying-connection-was-closed)</li> <li>[Stuck scanner processes](#stuck-scanner-processes)</li> <li>[Unable to connect to remote server](#unable-to-connect-to-remote-server)</li> <li>[Missing content scan job or profile](#missing-content-scan-job-or-profile)</li> <li>[No repositories are configured](#no-repositories-are-configured)</li> <li>[No cluster found](#no-cluster-found)</li> <li>[Scanner diagnostics errors](#scanner-diagnostics-errors)</li></ul>|
 
 ### Authentication token not accepted
 
@@ -191,7 +191,7 @@ For more information, see [Create and configure Azure AD applications for Set-AI
 - > NoAuthTokenException: Client application failed to provide authentication token for HTTP request
 - > Microsoft.InformationProtection.Exceptions.NoAuthTokenException: Client application failed to provide authentication token for HTTP request. Failed with: System.AggregateException: One or more errors occurred. ---> Microsoft.IdentityModel.Clients.ActiveDirectory.AdalException: user_interaction_required: One of two conditions was encountered: 1. The PromptBehavior.Never flag was passed, but the constraint could not be honored, because user interaction was required. 2. An error occurred during a silent web authentication that prevented the http authentication flow from completing in a short enough time frame
 - > Failed to acquire a token using windows integrated authentication (No SSO)
-- From the Azure portal, on the Nodes page:
+- From the Azure portal, on the **Nodes** page:
 
   > Policy does not include any automatic labeling condition
 
