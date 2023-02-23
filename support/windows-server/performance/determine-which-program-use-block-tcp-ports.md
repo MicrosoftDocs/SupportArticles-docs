@@ -1,7 +1,7 @@
 ---
 title: How to determine which program uses or blocks specific TCP ports in Windows Server 2003
 description: Discusses how to determine which program uses or blocks specific Transmission Control Protocol (TCP) ports.
-ms.date: 09/27/2020
+ms.date: 12/29/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

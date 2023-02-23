@@ -1,7 +1,7 @@
 ---
 title: View and transfer FSMO roles
 description: Describes how to view and transfer FSMO roles.
-ms.date: 10/09/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Monitor performance of remote computers
 description: Describes how to use Performance Monitor and the Datalog.exe file to monitor performance of remote computers.
-ms.date: 10/19/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

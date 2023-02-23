@@ -1,7 +1,7 @@
 ---
 title: WSUS 3.0 installation package
 description: Describes how to obtain the WSUS 3.0 installation package.
-ms.date: 10/19/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

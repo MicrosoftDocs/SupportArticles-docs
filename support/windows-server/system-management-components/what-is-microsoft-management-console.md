@@ -1,7 +1,7 @@
 ---
 title: What is MMC
 description: Describe the functions of the Microsoft Management Console.
-ms.date: 09/27/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Windows Activation fails with error 0x8007267C
 description: Provides solutions to an issue where Windows Activation fails with the error code 0x8007267C.
-ms.date: 10/21/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

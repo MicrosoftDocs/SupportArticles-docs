@@ -1,7 +1,7 @@
 ---
 title: DFSR databases crash on primary member
 description: Describes how to recover from a DFSR database crash on designated primary member.
-ms.date: 09/08/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
