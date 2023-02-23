@@ -95,7 +95,7 @@
       href: ../information-barriers/information-barriers-troubleshooting.md
   - name: Information protection scanner
     items:
-    - name: Issues with information protection scanner deployment
+    - name: Resolve issues with scanner deployment
       href: ../information-protection-scanner/resolve-deployment-issues.md
   - name: Retention
     items:
