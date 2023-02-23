@@ -51,7 +51,7 @@ To troubleshoot this issue, see [Using DNS aging and scavenging](/previous-versi
 
 Sometimes, the host "A" record is deleted on the original DNS server after the host "A" record is registered on the newly configured DNS server IP address (Active Directory Integrated DNS). From a user perspective, anything that depends on name resolution is broken. When the DNS server IP address is changed on the client, the client sends an SOA update to delete its "A" record from the old DNS server. Then, it sends another update to register its "A" record to the new DNS server.
 
-The trouble occurs in Active Directory integrated zones. Issues occur when the DNS Server IP address is changed on the client. When the IP address changes, the client sends a registration request to the new server, and sends a deletion request to old server. Because both servers are already synced, the records aren't registered. However, the "A" record is deleted on the old server, and then it's deleted on both servers because of Active Directory.
+The trouble occurs in Active Directory integrated zones. Issues occur when the DNS Server IP address is changed on the client. When the IP address changes, the client sends a registration request to the new server, and sends a deletion request to old server. Because both servers are already synced, the records aren't registered. However, the "A" record is deleted on the old server, and then it's deleted on both servers because of Active Directory replication.
 
 #### DHCP clients that have option 81 configured unregister host "A" records during host "AAAA" registration
 
@@ -67,7 +67,7 @@ NETLOGON "event 577X" events are logged for record registration failures of SRV 
 
 This behavior is by design. The DNS records ("A" or PTR) are automatically updated during the next DHCP renewal request from the client.
 
-### Unwanted network adapter might be registered in DNS
+### Avoid registering unwanted network interface card in DNS
 
 If the network adapter is configured to register the connection address in DNS, then the DHCP/DNS client service registers the record in DNS. Unwanted network cards should be configured not to register the connection address in DNS.
 
