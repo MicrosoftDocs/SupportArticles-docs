@@ -1,5 +1,5 @@
 ---
-title: 
+title: Resolve issues with information protection scanner deployment
 description: 
 author: MaryQiu1987
 ms.author: v-maqiu
@@ -185,8 +185,94 @@ Make sure to define the permissions correctly in the Azure portal.
 
 For more information, see [Create and configure Azure AD applications for Set-AIPAuthentication](/azure/information-protection/rms-client/clientv2-admin-guide-powershell#create-and-configure-azure-ad-applications-for-set-aipauthentication).
 
+### Authentication token missing
 
+**Error messages**
 
+- > NoAuthTokenException: Client application failed to provide authentication token for HTTP request
+- > Microsoft.InformationProtection.Exceptions.NoAuthTokenException: Client application failed to provide authentication token for HTTP request. Failed with: System.AggregateException: One or more errors occurred. ---> Microsoft.IdentityModel.Clients.ActiveDirectory.AdalException: user_interaction_required: One of two conditions was encountered: 1. The PromptBehavior.Never flag was passed, but the constraint could not be honored, because user interaction was required. 2. An error occurred during a silent web authentication that prevented the http authentication flow from completing in a short enough time frame
+- > Failed to acquire a token using windows integrated authentication (No SSO)
+- From the Azure portal, on the Nodes page:
+
+  > Policy does not include any automatic labeling condition
+
+**Description**
+
+These authentication errors occur when the scanner runs non-interactively.
+
+**Resolution**
+
+For scenarios in which the scanner runs non-interactively, you must authenticate by using a token by using the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) cmdlet.
+
+When you run the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) cmdlet, make sure you use the token parameter on behalf of the service account that's used to run the scanner service as shown in the following example:
+
+```powershell
+$pscreds = Get-Credential CONTOSO\scanner
+Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -DelegatedUser scanner@contoso.com -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
+```
+
+```output
+Acquired application access token on behalf of CONTOSO\scanner.
+```
+
+For more information, see [Get an Azure AD token for the scanner](/azure/information-protection/deploy-aip-scanner-configure-install#get-an-azure-ad-token-for-the-scanner).
+
+### Policy missing
+
+**Error message**
+
+> Policy is missing
+
+**Description**
+
+The scanner is unable to find your sensitivity label policy file.
+
+**Resolution**
+
+To verify that your policy file exists as expected, check in the following location: *%localappdata%\Microsoft\MSIP\mip\MSIP.Scanner.exe\mip\mip.policies.sqlite3*.
+
+For more information about sensitivity labels and their label policies, see [Create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels) in the Microsoft Purview documentation.
+
+### Policy doesn't include automatic labeling conditions
+
+**Error message**
+
+> Policy is missing labeling conditions
+
+**Description**
+
+The labeling policy is missing automatic labeling conditions.
+
+**Resolution**
+
+Configure the following settings:
+
+|Setting|Steps to configure settings|
+|----------|-----------|
+|**Content scan job settings**|In the Azure portal, do the following:<ul><li>[Set the **Info types to be discovered** to **All**](/azure/information-protection/deploy-aip-scanner-configure-install#identify-all-custom-conditions-and-known-sensitive-information-types)</li><li>[Define a default label to be applied when scanning](/azure/information-protection/deploy-aip-scanner-configure-install#apply-a-default-label-to-all-files-in-a-data-repository)</li></ul>|
+|**Labeling policy settings**|In the Microsoft Purview compliance portal, do the following:<ul><li>[Define a default sensitivity label](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy)</li><li>[Configure automatic / recommended labeling](/microsoft-365/compliance/apply-sensitivity-label-automatically)</li></ul>|
+
+If your settings are already defined as expected, the policy file itself may be missing or inaccessible, such as when there's a timeout from the Microsoft Purview compliance portal.
+
+To verify your policy file, check that the following file exists: *%localappdata%\Microsoft\MSIP\mip\MSIP.Scanner.exe\mip\mip.policies.sqlite3*
+
+For more information, see [What is the Azure Information Protection unified labeling scanner?](/microsoft-365/compliance/deploy-scanner) and [Learn about sensitivity labels](/microsoft-365/compliance/sensitivity-labels).
+
+### Database errors
+
+**Error message**
+
+> DB error
+
+**Description**
+
+The scanner may not be able to connect to the database.
+
+**Resolution**
+
+Check the network connectivity between the scanner computer and the database.
+
+Additionally, make sure that the service account being used to run scanner processes has all the permissions required to access the database.
 
 
 
