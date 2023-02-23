@@ -5,6 +5,8 @@ items:
   items:
   - name: Application Insights telemetry
     items:
+    - name: JavaScript SDK troubleshooting
+      href: app-insights/javascript-sdk-troubleshooting.md
     - name: Troubleshoot missing telemetry in Application Insights
       href: app-insights/investigate-missing-telemetry.md
     - name: Troubleshoot auto-instrumentation issues
