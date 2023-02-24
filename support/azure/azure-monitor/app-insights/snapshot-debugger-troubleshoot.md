@@ -143,7 +143,7 @@ Based on how Snapshot Debugger was enabled, see the following options:
 
 * If Snapshot Debugger was enabled by including the [Microsoft.ApplicationInsights.SnapshotCollector](https://www.nuget.org/packages/Microsoft.ApplicationInsights.SnapshotCollector) NuGet package, use Visual Studio's NuGet Package Manager to make sure you're using the latest version of `Microsoft.ApplicationInsights.SnapshotCollector`.
 
-For the latest updates and bug fixes, [consult the release notes](/azure/azure-monitor/snapshot-debugger-troubleshoot/snapshot-collector-release-notes).
+For the latest updates and bug fixes, [consult the release notes](/azure/azure-monitor/snapshot-debugger/snapshot-collector-release-notes).
 
 ## Check the uploader logs
 
