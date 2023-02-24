@@ -3,7 +3,7 @@ title: IPv6 support in Azure Active Directory (Azure AD)
 description: Learn about Internet Protocol version 6 (IPv6) support in Azure Active Directory (Azure AD). Review what your organization needs to do to accommodate IPv6.
 ms.service: active-directory
 ms.subservice: aad-general
-ms.date: 02/21/2023
+ms.date: 02/24/2023
 ms.author: v-dele
 author: DennisLee-DennisLee
 ms.reviewer: lhuangnorth, gautama, amycolannino, joflore, mariourrutia
@@ -37,9 +37,9 @@ We know that IPv6 support is a significant change for some organizations. We're 
 If you have public IPv6 addresses representing your network, take the actions that are described in the following sections as soon as possible.
 
 > For example:  
-> 
+>
 > Some organizations have a Conditional Access policy that blocks access to specific applications from outside a trusted named location that represents their public network addresses. This named location contains the IPv4 addresses that are owned by the customer, but it might not include the public IPv6 addresses that represent the customer network.
-> 
+>
 > **If customers don't update their named locations with these IPv6 addresses, their users will be blocked.**
 
 ### Named locations
@@ -240,7 +240,7 @@ The following instructions show you how to create the necessary Win32 applicatio
 
 ## Find IPv6 addresses in Sign-in logs
 
-Using one or more of the following methods, compare the list of IPv6 addresses to those addresses you expect. Consider adding these IPv6 addresses to your named locations and marking some as trusted where appropriate.
+Using one or more of the following methods, compare the list of IPv6 addresses to those addresses you expect. Consider adding these IPv6 addresses to your named locations and marking some as trusted where appropriate. You will need at least the [Reports Reader role](/azure/active-directory/roles/permissions-reference#reports-reader) assigned in order to read the Sign-ins log.
 
 ### Azure portal
 
@@ -263,39 +263,23 @@ union SigninLogs, AADNonInteractiveUserSignInLogs
 
 ### PowerShell
 
-Organizations can use the following PowerShell script to query the Azure AD sign-in logs.
+Organizations can use the following PowerShell script to query the Azure AD sign-in logs in [Microsoft Graph PowerShell](/powershell/microsoftgraph/authentication-commands). The script will provide you a listing of IPv6 addresses along with the application and number of times it appears.
 
-Provided by Lisa
 ```powershell
-# Copyright (c) Microsoft Corporation. All rights reserved.
-# Licensed under the MIT license.
-$ErrorActionPreference = "Stop"
-Connect-MgGraph -Scopes "User.Read.All","Group.ReadWrite.All"
-# add custom filter e.g. Get-MgAuditLogSignIn -Filter "createdDateTime ge 2022-12-07 and createdDateTime lt 2022-12-08" -Top 50 -Orderby "createdDateTime desc"
-$logs = Get-MgAuditLogSignIn -Top 1000 -Orderby "createdDateTime desc"
-# select unique IP address
-$ips = $logs | Select-Object IpAddress -Unique
-$ipv6Pattern = "^(([a-z0-9]+):){7}([a-z0-9]+)$"
-$result = $ips | Where-Object {$_.IpAddress -match $ipv6Pattern}
-$result | Out-File ./ipv6.txt
-Write-Host Outputted IPv6 addresses into (Get-Location)\ipv6.txt
-# Disconnect-MgGraph
-# Write-Host "Disconnected from Microsoft Graph"
-```
-
-Provided in notes
-```powershell
-$tId = "TENANT ID"  # Add tenant ID from Azure Active Directory page on portal.
+$tId = "TENANT ID"  # Add the Azure Active Directory tenant ID.
 $agoDays = 2  # Will filter the log for $agoDays from the current date and time.
 $startDate = (Get-Date).AddDays(-($agoDays)).ToString('yyyy-MM-dd')  # Get filter start date.
-$pathForExport = "./"  # The path to the local filesystem for export of the CSV file. Connect-MgGraph -Scopes "AuditLog.Read.All" -TenantId $tId  # Or use Directory.Read.All. 
-# Get the interactive and non-interactive IPv6 sign-ins .
+$pathForExport = "./"  # The path to the local filesystem for export of the CSV file. 
+
+Connect-MgGraph -Scopes "AuditLog.Read.All" -TenantId $tId 
+# Get both interactive and non-interactive IPv6 sign-ins .
 $signInsInteractive = Get-MgAuditLogSignIn -Filter "contains(IPAddress, ':')" -All
-$signInsNonInteractive = Get-MgAuditLogSignIn -Filter "contains(IPAddress, ':')" -All $columnList = @{  # Enumerate the list of properties to be exported to the CSV files.
+$signInsNonInteractive = Get-MgAuditLogSignIn -Filter "contains(IPAddress, ':')" -All 
+$columnList = @{  # Enumerate the list of properties to be exported to the CSV files.
     Property = "createdDateTime","CorrelationId", "userPrincipalName", "userId",
       "UserDisplayName", "AppDisplayName", "AppId", "IPAddress", "isInteractive",
       "ResourceDisplayName", "ResourceId"
-} # Summary IPv6 & App Display Name count
+} # Summarize IPv6 & App Display Name count
 $signInsInteractive | Group-Object IPaddress, AppDisplayName | Select-Object @{Name='IPaddress';Expression={$_.Group[0].IPaddress}}, 
     @{Name ='AppDisplayName';Expression={$_.Group[0].AppDisplayName}}, Count | Sort-Object -Property Count –Descending | Export-Csv -Path ($pathForExport + "Summary_Interactive_IPv6_$tId.csv") -NoTypeInformation
 $signInsNonInteractive | Group-Object IPaddress, AppDisplayName | Select-Object @{Name='IPaddress';Expression={$_.Group[0].IPaddress}}, 
