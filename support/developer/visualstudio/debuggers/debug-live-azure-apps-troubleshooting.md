@@ -4,7 +4,7 @@ description: Understand troubleshooting and known issues for snapshot debugging 
 ms.date: 04/24/2019
 author: HaiyingYu
 ms.author: haiyingyu
-ms.reviewer: jmartens
+ms.reviewer: mikejo
 ---
 
 # Troubleshooting and known issues for snapshot debugging in Visual Studio
