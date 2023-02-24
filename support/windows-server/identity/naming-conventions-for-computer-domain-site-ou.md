@@ -103,11 +103,10 @@ In that article, this naming convention applies to computer, OU, and site names.
   - braces ({})
   - underscore (_)
   - white space (blank)
-
     > [!NOTE]  
     > - The underscore has a special role. It's permitted for the first character in SRV records by RFC definition. However, newer DNS servers may also allow it anywhere in a name. For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).
-  >
-  > - The DNS host name registration process substitutes a hyphen (-) character for invalid characters.
+    >
+    > - The DNS host name registration process substitutes a hyphen (-) character for invalid characters.
 
 - **Name length rules.**
 
@@ -129,11 +128,11 @@ In that article, this naming convention applies to computer, OU, and site names.
   - Two-character security descriptor definition language (SDDL) user strings that are listed in [well-known SIDs list](/windows/win32/secauthz/sid-strings) can't be used. Otherwise, _import_, _export_, and _take control_ operations fail.
   - Computers that are members of an Active Directory domain can't have names that only contain numbers. This is a DNS restriction.
 
-- **Reserved names as per RFC.** For more information, see [RFC 952](https://www.ietf.org/rfc/rfc952.txt).
+- **Reserved names as per RFC.** For more information, see [RFC 952](https://www.ietf.org/rfc/rfc952.txt).  
 
-  - -GATEWAY
-  - -GW
-  - -TAC
+    - GATEWAY
+    - GW
+    - TAC
 
 - **Reserved names in Windows.** See [Table of reserved words](#table-of-reserved-words).
 
@@ -186,7 +185,6 @@ Here are details for NetBIOS domain names and DNS domain names.
 
   - Minimum name length: One character.
   - Maximum name length: 15 characters.
-
       > [!NOTE]
       > The 16th character of the name is reserved to identify the functionality that is installed on the registered network device.
 
@@ -227,7 +225,7 @@ Here are details for NetBIOS domain names and DNS domain names.
   > [!NOTE]  
   > The underscore has a special role. It's permitted for the first character in SRV records by RFC definition. But newer DNS servers may also allow it anywhere in a name. When you create a new domain, you get a warning that an underscore character might cause problems with some DNS servers. However, you can still create the domain.For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).  
 
-- **Additional rules.**
+- **Additional rules.**  
 
   - All characters preserve their case formatting except for ASCII characters.
   - The first character must be alphabetical or numeric.
@@ -254,7 +252,7 @@ Here are details for NetBIOS domain names and DNS domain names.
     >  
     > - The \<_CSE-specific path_> might contain user input such as the sign-in script file name. As a result, it can also reach a significant length.
 
-- **Single-label domain namespaces.** Single-label DNS names are names that don't contain a suffix, such as `.com`, `.corp`, `.net`, `.org`, or _`companyname`_. For example, _host_ is a single-label DNS name. Most Internet registrars don't allow the registration of single-label DNS names.
+- **Single-label domain namespaces.** Single-label DNS names are names that don't contain a suffix, such as `.com`, `.corp`, `.net`, `.org`, or _`companyname`_. For example, _host_ is a single-label DNS name. Most Internet registrars don't allow the registration of single-label DNS names.  
 
     Generally, we recommend that you register DNS names for internal and external namespaces with an Internet registrar. This includes the DNS names of Active Directory domains, unless such names are subdomains of DNS names that are registered by your organization name. For example, `corp.example.com` is a subdomain of `example.com`. Registering your DNS name with an Internet registrar may help prevent a name collision. A name collision may occur if another organization tries to register the same DNS name, or if your organization merges with another organization that uses the same DNS name.
 
@@ -265,7 +263,7 @@ Here are details for NetBIOS domain names and DNS domain names.
   - The DNS Server service can't locate domain controllers in domains that have single-label DNS names.
   - By default, Windows domain members don't perform dynamic updates to single-label DNS zones. For more information, see [Deployment and operation of Active Directory domains that are configured by using single-label DNS names](deployment-operation-ad-domains.md).
 
-- **Reserved names.** See [Table of reserved words](#table-of-reserved-words).
+- **Reserved names.** See [Table of reserved words](#table-of-reserved-words).  
 
     Don't use top-level internet domain names on the intranet, such as `.com`, `.net`, and `.org`. If you use top-level Internet domain names on the intranet, computers on the intranet that also connect to the internet may experience resolution errors. Additionally, avoid using names that're used in internet-standard special features, such as `.local`.
 
@@ -338,13 +336,13 @@ We recommend that you use a valid DNS name when you create a new site name. Othe
   > [!NOTE]  
   > The underscore has a special role. It's permitted for the first character in SRV records by RFC definition. But newer DNS servers may also allow it anywhere in a name. For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).
 
-- **Additional rules.**
+- **Additional rules.**  
 
   - All characters preserve their case formatting except for ASCII characters.
   - The first character must be alphabetical or numeric.
   - The last character must not be a minus sign or a period.
 
-- **Name length rules.**
+- **Name length rules.**  
 
   - Minimum name length: One character.
   - Maximum name length: 63 characters.
@@ -358,7 +356,7 @@ We recommend that you use a valid DNS name when you create a new site name. Othe
 
 - **Disallowed characters.** No characters are disallowed.
 
-- **Name length rules.**
+- **Name length rules.**  
 
   - Minimum name length: One character.
   - Maximum name length: 64 characters.
@@ -369,7 +367,7 @@ When the OU at the domain root level has the same name as a future child domain,
 
 You delete the OU. During the tombstone lifetime of the deleted OU, you create a child domain that has the same name. Then you delete the child domain, and then create it a second time. In this scenario, a duplicate record name in the ESE database causes a phantom-phantom name collision when the child domain is re-created. This problem prevents the Active Directory Configuration container from replicating.
 
-> [!NOTE]
+> [!NOTE]  
 > A similar name conflict might also happen with other RDN name types under certain conditions, not restricted to DC and OU name types.
 
 ## Table of reserved words
