@@ -353,6 +353,7 @@
         "dynamics-365/supply-chain/**/*.md": "Dynamics 365 Supply Chain Management",
         "power-platform/power-apps/**/*.md": "Power Apps",
         "power-platform/power-automate/*.md": "Power Automate",
+        "power-platform/ai-builder/*.md": "AI Builder",
         "dynamics/gp/*.md": "Dynamics GP"
       },
       "searchScope": {
