@@ -30,11 +30,11 @@ This article discusses the following topics:
 - Names that we don't recommend
 - General recommendations that are based on supporting Active Directory in small, medium, and large deployments
 
-All objects that are named within Active Directory, or within AD/AM and LDS, are subject to name matching based on the algorithm described in the following article:
+All objects that are named within Active Directory Directory Services (AD DS), Active Directory Application Mode (ADAM), or Active Directory Lightweight Directory Services (AD LDS), are subject to name matching based on the algorithm described in the following article:
 
 [You can't add a user name or an object name that only differs by a character with a diacritic mark](https://support.microsoft.com/help/938447).
 
-In that article, this naming convention applies to computer, organizational unit (OU), and site names.
+In that article, this naming convention applies to computer, OU, and site names.
 
 ## Computer names
 
@@ -123,6 +123,7 @@ In that article, this naming convention applies to computer, organizational unit
 - **Additional rules for DNS host names.**
 
   - All characters preserve their case formatting except for American Standard Code for Information Interchange (ASCII) characters.
+
   - The first character in a DNS host name must be alphabetical or numeric.
   - The last character must not be a minus sign or a period.
   - Two-character security descriptor definition language (SDDL) user strings that are listed in [well-known SIDs list](/windows/win32/secauthz/sid-strings) can't be used. Otherwise, _import_, _export_, and _take control_ operations fail.
