@@ -55,6 +55,6 @@
 - name: Visual Studio for Mac
   items:
   - name: Can't see all available templates
-    href: ./troubleshooting-no-templates.md
+    href: ./vs-for-mac/troubleshooting-no-templates.md
   - name: Error retrieving update information when updating
-    href: ./updater-troubleshooting.md
+    href: ./vs-for-mac/updater-troubleshooting.md
