@@ -341,11 +341,11 @@ If the file is no longer increasing in size, do the following:
 
 **Error message**
 
-In the MSIPScanner.iplog* file located under *%localappdata%\Microsoft\MSIP\Logs\:
+In the *MSIPScanner.iplog* file located under *%localappdata%\Microsoft\MSIP\Logs\\*:
 
 > Unable to connect to the remote server ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted IP:port
 
-If there are multiple logs, then MSIPScanner.iplog* file will be a .zip file. 
+If there are multiple logs, then *MSIPScanner.iplog* file will be a .zip file. 
 
 **Description**
 
