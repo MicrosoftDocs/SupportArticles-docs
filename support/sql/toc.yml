@@ -84,7 +84,7 @@
       - name: Query performance degradation on secondary replicas
         href: database-engine/availability-groups/query-performance-degradation.md
       - name: Troubleshoot availability group database in reverting state
-        href: database-engine/performance/troubleshoot-availability-group-database-reverting-state.md
+        href: database-engine/availability-groups/troubleshoot-availability-group-database-reverting-state.md
       - name: Troubleshooting automatic failover problems
         href: database-engine/availability-groups/troubleshooting-automatic-failover-problems.md
       - name: Troubleshooting on Always On issues
