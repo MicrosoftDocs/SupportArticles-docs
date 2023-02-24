@@ -233,7 +233,7 @@ Configure the following settings:
 
 |Setting|Steps to configure settings|
 |----------|-----------|
-|**Content scan job settings**|In the Azure portal, do the following:<ul><li>[Set the **Info types to be discovered** to **All**](/microsoft-365/compliance/deploy-scanner-configure-install#use-the-scanner-with-alternative-configurations)</li><li>[Define a default label to be applied when scanning](/azure/information-protection/deploy-aip-scanner-configure-install#apply-a-default-label-to-all-files-in-a-data-repository)(/microsoft-365/compliance/deploy-scanner-configure-install#use-the-scanner-with-alternative-configurations)</li></ul>|
+|**Content scan job settings**|In the Azure portal, do the following:<ul><li>[Set the **Info types to be discovered** to **All**](/microsoft-365/compliance/deploy-scanner-configure-install#use-the-scanner-with-alternative-configurations)</li><li>[Define a default label to be applied when scanning](/microsoft-365/compliance/deploy-scanner-configure-install#use-the-scanner-with-alternative-configurations)</li></ul>|
 |**Labeling policy settings**|In the Microsoft Purview compliance portal, do the following:<ul><li>[Define a default sensitivity label](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy)</li><li>[Configure automatic / recommended labeling](/microsoft-365/compliance/apply-sensitivity-label-automatically)</li></ul>|
 
 If the settings are already defined as expected, the policy file itself may be missing or inaccessible, such as when there's a timeout from the Microsoft Purview compliance portal.
@@ -359,9 +359,9 @@ For information about how to view the current port range and increase the range,
 
 ### Missing content scan job or profile
 
-**Error messages**
+**Error message**
 
-In the Azure portal on the **Nodes** page:
+In the Azure portal, on the **Nodes** page:
 
 > No content scan job found
 
