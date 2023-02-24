@@ -80,9 +80,7 @@ In that article, this naming convention applies to computer, OU, and site names.
 
 - **Allowed characters.** DNS names can contain only alphabetical characters (A-Z), numeric characters (0-9), the minus sign (-), and the period (.). Period characters are allowed only when they're used to delimit the components of domain style names.
 
-  Windows domain name system (DNS) supports Unicode characters. Other implementations of DNS don't support Unicode characters. Avoid Unicode characters if queries will be passed to the servers that use non-Microsoft implementations of DNS.
-
-  For more information, see the following RFCs:
+  Windows domain name system (DNS) supports Unicode characters. Other implementations of DNS don't support Unicode characters. Avoid Unicode characters if queries will be passed to the servers that use non-Microsoft implementations of DNS. For more information, see the following RFCs:
 
   - [RFC 952: DOD Internet Host Table Specification](https://www.ietf.org/rfc/rfc952.txt)
   - [RFC 1123: Requirements for Internet Hosts--Application and Support](https://www.ietf.org/rfc/rfc1123.txt)
@@ -103,18 +101,20 @@ In that article, this naming convention applies to computer, OU, and site names.
   - period (.)
   - parentheses (())
   - braces ({})
-  - white space (blank)
   - underscore (_)
-    > [!NOTE]  
-    > The underscore has a special role. It's permitted for the first character in SRV records by RFC definition. However, newer DNS servers may also allow it anywhere in a name. For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).
+  - white space (blank)
 
-  > [!NOTE]
-  > The DNS host name registration process substitutes a hyphen (-) character for invalid characters.
+    > [!NOTE]  
+    > - The underscore has a special role. It's permitted for the first character in SRV records by RFC definition. However, newer DNS servers may also allow it anywhere in a name. For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).
+  >
+  > - The DNS host name registration process substitutes a hyphen (-) character for invalid characters.
 
 - **Name length rules.**
+
   - The FQDN of a domain controller must be smaller than 155 bytes.
   - Minimum name length: Two characters.
   - Maximum name length: 63 characters.  
+
       > [!NOTE]  
       > - If you use UTF-8 (Unicode) characters, remember that some UTF-8 characters exceed one octet in length. In that case, you can't determine the size of a name by counting the characters. The maximum size of the host name and of the fully qualified domain name (FQDN) is 63 bytes per label and 255 bytes per FQDN.
       >
@@ -156,8 +156,10 @@ Here are details for NetBIOS domain names and DNS domain names.
 ### NetBIOS domain names
 
 - **Allowed characters.** NetBIOS domain names can contain all alphanumeric characters except for the extended characters that appear in the **Disallowed characters** list. Names can contain a period, but names can't start with a period.
+
   > [!NOTE]  
   > Microsoft Windows NT allows non-DNS names to have period. Periods shouldn't be used in Active Directory NetBIOS domain names. If you're upgrading a computer whose NetBIOS name contains a period, change the name by migrating the domain to a new domain structure. Don't use periods in new NetBIOS domain names.
+
 - **Disallowed characters.** The DNS host name checking function verifies NetBIOS domain names. These names can't contain the following characters:
 
   - comma (,)
@@ -179,15 +181,16 @@ Here are details for NetBIOS domain names and DNS domain names.
   - backslash (\\)
   - slash mark (/)
   - Computers that are members of an Active Directory domain can't have names that only contain numbers. This restriction is because of DNS restrictions.
+
 - **Name length rules.**  
+
   - Minimum name length: One character.
   - Maximum name length: 15 characters.
+
       > [!NOTE]
       > The 16th character of the name is reserved to identify the functionality that is installed on the registered network device.
 
-- Reserved names in Windows. See [Table of reserved words](#table-of-reserved-words).
-
-    The names of an upgraded domain can include a reserved word. However, trust relationships with other domains fail in this situation.
+- **Reserved names in Windows.** See [Table of reserved words](#table-of-reserved-words). The names of an upgraded domain can include a reserved word. However, trust relationships with other domains fail in this situation.
 
 - **Special characters.** Period (.).
 
@@ -218,11 +221,11 @@ Here are details for NetBIOS domain names and DNS domain names.
   - period (.)
   - parentheses (())
   - braces ({})
-  - white space (blank)
-  - underscore (_)  
-    The underscore has a special role. It's permitted for the first character in SRV records by RFC definition. But newer DNS servers may also allow it anywhere in a name. For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).  
+  - underscore (_)
+  - white space (blank)  
 
-    When you create a new domain, you get a warning that an underscore character might cause problems with some DNS servers. However, you can still create the domain.
+  > [!NOTE]  
+  > The underscore has a special role. It's permitted for the first character in SRV records by RFC definition. But newer DNS servers may also allow it anywhere in a name. When you create a new domain, you get a warning that an underscore character might cause problems with some DNS servers. However, you can still create the domain.For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).  
 
 - **Additional rules.**
 
@@ -234,6 +237,7 @@ Here are details for NetBIOS domain names and DNS domain names.
 
   - Minimum name length: Two characters.
   - Maximum name length: 255 characters.
+
     > [!NOTE]  
     > If you use UTF-8 (Unicode) characters, remember that some UTF-8 characters exceed one octet in length. In that case, you can't determine the size of a name by counting the characters. The maximum size of the host name and of the FQDN is 63 bytes per label and 255 bytes per FQDN.
 
@@ -328,9 +332,11 @@ We recommend that you use a valid DNS name when you create a new site name. Othe
   - period (.)
   - parentheses (())
   - braces ({})
-  - white space (blank)
-  - underscore (_)  
-    The underscore has a special role. It's permitted for the first character in SRV records by RFC definition. But newer DNS servers may also allow it anywhere in a name. For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).
+  - underscore (_)
+  - white space (blank)  
+
+  > [!NOTE]  
+  > The underscore has a special role. It's permitted for the first character in SRV records by RFC definition. But newer DNS servers may also allow it anywhere in a name. For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).
 
 - **Additional rules.**
 
@@ -342,6 +348,7 @@ We recommend that you use a valid DNS name when you create a new site name. Othe
 
   - Minimum name length: One character.
   - Maximum name length: 63 characters.
+
     > [!NOTE]  
     > If you use UTF-8 (Unicode) characters, remember that some UTF-8 characters exceed one octet in length. In that case, you can't determine the size of a name by counting the characters. The maximum length of the DNS name is 63 bytes per label.
 
