@@ -201,7 +201,7 @@ Here are details for NetBIOS domain names and DNS domain names.
 - **Allowed characters.** DNS names can contain only alphabetical characters (A-Z), numeric characters (0-9), the minus sign (-), and the period (.). Period characters are allowed only when they're used to delimit the components of domain style names.
 
     Windows DNS supports Unicode characters. Other implementations of DNS don't support Unicode characters. Avoid Unicode characters if queries will be passed to the servers that use non-Microsoft implementations of DNS. For more information, see [RFC 952](https://www.ietf.org/rfc/rfc952.txt) and [RFC 1123](https://www.ietf.org/rfc/rfc1123.txt).
-.
+
 - **Disallowed characters.** DNS domain names can't contain the following characters:
 
   - comma (,)
@@ -235,8 +235,7 @@ Here are details for NetBIOS domain names and DNS domain names.
   - Maximum name length: 255 characters.
     > [!NOTE]  
     > If you use UTF-8 (Unicode) characters, remember that some UTF-8 characters exceed one octet in length. In that case, you can't determine the size of a name by counting the characters. The maximum size of the host name and of the FQDN is 63 bytes per label and 255 bytes per FQDN.
-  - The maximum name length is based on the requirements of `SYSVOL` paths, and also on the `MAX_PATH` limitation of 260 characters.
-
+  - The maximum name length is based on the requirements of `SYSVOL` paths, and also on the `MAX_PATH` limitation of 260 characters.  
     A path in `SYSVOL` resembles the following example:
 
     ```console
