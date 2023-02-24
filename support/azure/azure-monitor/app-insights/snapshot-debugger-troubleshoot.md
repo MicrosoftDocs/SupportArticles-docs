@@ -84,7 +84,7 @@ On March 31, 2025, support for instrumentation key ingestion will end. Instrumen
 
 If you have an ASP.NET application that's hosted in Azure App Service or in IIS on a virtual machine, your application could fail to connect to the Snapshot Debugger service due to a missing SSL security protocol.
 
-[The Snapshot Debugger endpoint requires TLS version 1.2](/azure/azure-monitor/snapshot-debugger-troubleshoot/snapshot-debugger-troubleshoot-upgrade). The set of SSL security protocols is one of the quirks enabled by the `httpRuntime targetFramework` value in the `system.web` section of `web.config`.
+[The Snapshot Debugger endpoint requires TLS version 1.2](/azure/azure-monitor/snapshot-debugger/snapshot-debugger-upgrade?toc=%2Fazure%2Fazure-monitor%2Ftoc.json). The set of SSL security protocols is one of the quirks enabled by the `httpRuntime targetFramework` value in the `system.web` section of `web.config`.
 If the `httpRuntime targetFramework` is 4.5.2 or lower, then TLS 1.2 isn't included by default.
 
 > [!NOTE]
@@ -108,11 +108,11 @@ To check the setting, open your *web.config* file and find the system.web sectio
 
 ## Preview Versions of .NET Core
 
-If you're using a preview version of .NET Core or your application references Application Insights SDK, directly or indirectly via a dependent assembly, follow the instructions for [Enable Snapshot Debugger for other environments](/azure/azure-monitor/snapshot-debugger-troubleshoot/snapshot-debugger-troubleshoot-vm).
+If you're using a preview version of .NET Core or your application references Application Insights SDK, directly or indirectly via a dependent assembly, follow the instructions for [Enable Snapshot Debugger for other environments](/azure/azure-monitor/snapshot-debugger/snapshot-debugger-vm?toc=%2Fazure%2Fazure-monitor%2Ftoc.json).
 
 ## Check the Diagnostic Services site extension' Status Page
 
-If Snapshot Debugger was enabled through the [Application Insights pane](/azure/azure-monitor/snapshot-debugger-troubleshoot/snapshot-debugger-troubleshoot-app-service) in the portal, it was enabled by the Diagnostic Services site extension.
+If Snapshot Debugger was enabled through the [Application Insights pane](/azure/azure-monitor/snapshot-debugger/snapshot-debugger-app-service?toc=%2Fazure%2Fazure-monitor%2Ftoc.json) in the portal, it was enabled by the Diagnostic Services site extension.
 
 > [!NOTE]
 > Codeless installation of Application Insights Snapshot Debugger follows the .NET Core support policy.
@@ -139,11 +139,11 @@ You can use the Kudu management site for App Service to get the base url of this
 
 Based on how Snapshot Debugger was enabled, see the following options:
 
-* If Snapshot Debugger was enabled through the [Application Insights pane in the portal](/azure/azure-monitor/snapshot-debugger-troubleshoot/snapshot-debugger-troubleshoot-app-service), then your application should already be running the latest NuGet package.
+* If Snapshot Debugger was enabled through the [Application Insights pane in the portal](/azure/azure-monitor/snapshot-debugger/snapshot-debugger-app-service?toc=%2Fazure%2Fazure-monitor%2Ftoc.json), then your application should already be running the latest NuGet package.
 
 * If Snapshot Debugger was enabled by including the [Microsoft.ApplicationInsights.SnapshotCollector](https://www.nuget.org/packages/Microsoft.ApplicationInsights.SnapshotCollector) NuGet package, use Visual Studio's NuGet Package Manager to make sure you're using the latest version of `Microsoft.ApplicationInsights.SnapshotCollector`.
 
-For the latest updates and bug fixes, [consult the release notes](/azure/azure-monitor/snapshot-debugger-troubleshoot/snapshot-collector-release-notes).
+For the latest updates and bug fixes, [consult the release notes](/azure/azure-monitor/snapshot-debugger/snapshot-collector-release-notes).
 
 ## Check the uploader logs
 
