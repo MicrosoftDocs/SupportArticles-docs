@@ -1,7 +1,7 @@
 ---
 title: Use custom certificate for TLS over RDS
 description: Describes how to for RDS to use a custom server authentication certificate for TLS.
-ms.date: 10/10/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

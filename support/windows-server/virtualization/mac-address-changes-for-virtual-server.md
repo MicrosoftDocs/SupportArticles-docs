@@ -1,7 +1,7 @@
 ---
 title: Fails to connect to virtual server after failover
 description: Helps solve an issue where users in a different subnet are unable to connect to the virtual server after a failover from one cluster node to another.
-ms.date: 09/08/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

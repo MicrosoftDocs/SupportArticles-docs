@@ -1,7 +1,7 @@
 ---
 title: How to get and use the Active Directory Replication Status Tool
 description: Describes how to get and use the Active Directory Replication Status Tool.
-ms.date: 2/10/2021
+ms.date: 12/9/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

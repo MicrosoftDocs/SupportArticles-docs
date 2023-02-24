@@ -1,7 +1,7 @@
 ---
 title: Lingering objects still remain
 description: Describes procedures for cleaning up objects that are reintroduced to AD after you bring an offline DC back online.
-ms.date: 09/08/2020
+ms.date: 12/10/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

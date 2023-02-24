@@ -1,7 +1,7 @@
 ---
 title: Description of System File Checker (Sfc.exe)
 description: Describes System File Checker (Sfc.exe), which is a command-line utility used with the Windows File Protection (WFP) feature.
-ms.date: 09/22/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

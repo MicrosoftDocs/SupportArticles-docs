@@ -1,7 +1,7 @@
 ---
 title: Hotfixes for DFS technologies
 description: Lists the currently available hotfixes for Distributed File System (DFS) technologies in Windows Server 2012 and Windows Server 2012 R2.
-ms.date: 09/08/2020
+ms.date: 3/24/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

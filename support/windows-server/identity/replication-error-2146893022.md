@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot AD replication error -2146893022
 description: This article describes how to troubleshoot a problem in which Active Directory replication fails and generates an error (-2146893022).
-ms.date: 09/08/2020
+ms.date: 3/24/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

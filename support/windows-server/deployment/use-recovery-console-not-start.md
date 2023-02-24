@@ -1,7 +1,7 @@
 ---
 title: How To Use the Recovery Console
 description: Describes how to use the Recovery Console on a computer that does not start.
-ms.date: 10/09/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

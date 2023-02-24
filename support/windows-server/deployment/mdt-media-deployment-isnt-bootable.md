@@ -1,7 +1,7 @@
 ---
 title: MDT Media Deployment USB isn't bootable
 description: Provides a solution to an error that occurs when you try to boot a Microsoft Deployment Toolkit 2012 Update 1 media deployment USB drive on a x86 UEFI-based system.
-ms.date: 09/23/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
