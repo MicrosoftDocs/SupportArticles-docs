@@ -4,5 +4,3 @@
   href: ./build-errors-delete-debug-configuration.md
 - name: Building a Windows 10 driver fails
   href: ./building-windows-10-driver-fails.md
-- name: Can't see all available templates on Visual Studio for Mac
-  href: ./troubleshooting-no-templates.md
