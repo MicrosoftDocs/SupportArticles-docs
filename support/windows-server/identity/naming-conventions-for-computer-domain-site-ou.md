@@ -108,12 +108,11 @@ In that article, this naming convention applies to computer, OU, and site names.
     >
     > - The DNS host name registration process substitutes a hyphen (-) character for invalid characters.
 
-- **Name length rules.**
+- **Name length rules.**  
 
   - The FQDN of a domain controller must be smaller than 155 bytes.
   - Minimum name length: Two characters.
   - Maximum name length: 63 characters.  
-
       > [!NOTE]  
       > - If you use UTF-8 (Unicode) characters, remember that some UTF-8 characters exceed one octet in length. In that case, you can't determine the size of a name by counting the characters. The maximum size of the host name and of the fully qualified domain name (FQDN) is 63 bytes per label and 255 bytes per FQDN.
       >
@@ -221,7 +220,6 @@ Here are details for NetBIOS domain names and DNS domain names.
   - braces ({})
   - underscore (_)
   - white space (blank)  
-
   > [!NOTE]  
   > The underscore has a special role. It's permitted for the first character in SRV records by RFC definition. But newer DNS servers may also allow it anywhere in a name. When you create a new domain, you get a warning that an underscore character might cause problems with some DNS servers. However, you can still create the domain.For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).  
 
@@ -235,10 +233,8 @@ Here are details for NetBIOS domain names and DNS domain names.
 
   - Minimum name length: Two characters.
   - Maximum name length: 255 characters.
-
     > [!NOTE]  
     > If you use UTF-8 (Unicode) characters, remember that some UTF-8 characters exceed one octet in length. In that case, you can't determine the size of a name by counting the characters. The maximum size of the host name and of the FQDN is 63 bytes per label and 255 bytes per FQDN.
-
   - The maximum name length is based on the requirements of `SYSVOL` paths, and also on the `MAX_PATH` limitation of 260 characters.
 
     A path in `SYSVOL` resembles the following example:
@@ -263,9 +259,7 @@ Here are details for NetBIOS domain names and DNS domain names.
   - The DNS Server service can't locate domain controllers in domains that have single-label DNS names.
   - By default, Windows domain members don't perform dynamic updates to single-label DNS zones. For more information, see [Deployment and operation of Active Directory domains that are configured by using single-label DNS names](deployment-operation-ad-domains.md).
 
-- **Reserved names.** See [Table of reserved words](#table-of-reserved-words).  
-
-    Don't use top-level internet domain names on the intranet, such as `.com`, `.net`, and `.org`. If you use top-level Internet domain names on the intranet, computers on the intranet that also connect to the internet may experience resolution errors. Additionally, avoid using names that're used in internet-standard special features, such as `.local`.
+- **Reserved names.** See [Table of reserved words](#table-of-reserved-words). Don't use top-level internet domain names on the intranet, such as `.com`, `.net`, and `.org`. If you use top-level Internet domain names on the intranet, computers on the intranet that also connect to the internet may experience resolution errors. Additionally, avoid using names that're used in internet-standard special features, such as `.local`.
 
 #### Disjointed namespaces
 
@@ -314,6 +308,7 @@ We recommend that you use a valid DNS name when you create a new site name. Othe
 - **Allowed characters.** DNS names can contain only alphabetical characters (A-Z), numeric characters (0-9), the minus sign (-), and the period (.). Period characters are allowed only when they're used to delimit the components of domain style names.
 
     Windows DNS supports Unicode characters. Other implementations of DNS don't support Unicode characters. Avoid Unicode characters if queries will be passed to the servers that use non-Microsoft implementations of DNS. For more information, see [RFC 952](https://www.ietf.org/rfc/rfc952.txt) and [RFC 1123](https://www.ietf.org/rfc/rfc1123.txt).
+
 - **Disallowed characters.** DNS names can't contain the following characters:
 
   - comma (,)
@@ -332,7 +327,6 @@ We recommend that you use a valid DNS name when you create a new site name. Othe
   - braces ({})
   - underscore (_)
   - white space (blank)  
-
   > [!NOTE]  
   > The underscore has a special role. It's permitted for the first character in SRV records by RFC definition. But newer DNS servers may also allow it anywhere in a name. For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).
 
@@ -346,7 +340,6 @@ We recommend that you use a valid DNS name when you create a new site name. Othe
 
   - Minimum name length: One character.
   - Maximum name length: 63 characters.
-
     > [!NOTE]  
     > If you use UTF-8 (Unicode) characters, remember that some UTF-8 characters exceed one octet in length. In that case, you can't determine the size of a name by counting the characters. The maximum length of the DNS name is 63 bytes per label.
 
