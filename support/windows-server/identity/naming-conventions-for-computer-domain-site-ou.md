@@ -32,9 +32,9 @@ This article discusses the following topics:
 
 All objects that are named within Active Directory, or within AD/AM and LDS, are subject to name matching based on the algorithm described in the following article:
 
-[You cannot add a user name or an object name that only differs by a character with a diacritic mark](https://support.microsoft.com/help/938447).
+[You can't add a user name or an object name that only differs by a character with a diacritic mark](https://support.microsoft.com/help/938447).
 
-In that article, this naming convention applies to computer, OU, and site names.
+In that article, this naming convention applies to computer, organizational unit (OU), and site names.
 
 ## Computer names
 
@@ -112,13 +112,13 @@ In that article, this naming convention applies to computer, OU, and site names.
   > The DNS host name registration process substitutes a hyphen (-) character for invalid characters.
 
 - **Name length rules.**
-    - The FQDN of a domain controller must be smaller than 155 bytes.
+  - The FQDN of a domain controller must be smaller than 155 bytes.
   - Minimum name length: Two characters.
   - Maximum name length: 63 characters.  
-    > [!NOTE]  
-    > - If you use UTF-8 (Unicode) characters, remember that some UTF-8 characters exceed one octet in length. In that case, you can't determine the size of a name by counting the characters. The maximum size of the host name and of the fully qualified domain name (FQDN) is 63 bytes per label and 255 bytes per FQDN.
-    >
-    > - Windows doesn't permit computer names that exceed 15 characters, and you can't specify a DNS host name that differs from the NetBIOS host name. However, you might create host headers for a web site that's hosted on a computer. Then the host headers are subject to this rule.
+      > [!NOTE]  
+      > - If you use UTF-8 (Unicode) characters, remember that some UTF-8 characters exceed one octet in length. In that case, you can't determine the size of a name by counting the characters. The maximum size of the host name and of the fully qualified domain name (FQDN) is 63 bytes per label and 255 bytes per FQDN.
+      >
+      > - Windows doesn't permit computer names that exceed 15 characters, and you can't specify a DNS host name that differs from the NetBIOS host name. However, you might create host headers for a web site that's hosted on a computer. Then the host headers are subject to this rule.
 
 - **Additional rules for DNS host names.**
 
@@ -139,6 +139,7 @@ In that article, this naming convention applies to computer, OU, and site names.
 - **Best practices.** When you create names for computers in a Windows DNS infrastructure, use the following guidelines:
 
   - Use a computer name that's easy for users to remember.
+
   - Identify the owner of the computer in the computer name.
   - Use a name that describes the purpose of the computer.
   - Match the Active Directory domain name to the primary DNS suffix of the computer name. For more information, see [Disjointed namespaces](#disjointed-namespaces).
@@ -180,8 +181,8 @@ Here are details for NetBIOS domain names and DNS domain names.
 - **Name length rules.**  
   - Minimum name length: One character.
   - Maximum name length: 15 characters.
-    > [!NOTE]
-    > The 16th character of the name is reserved to identify the functionality that is installed on the registered network device.
+      > [!NOTE]
+      > The 16th character of the name is reserved to identify the functionality that is installed on the registered network device.
 
 - Reserved names in Windows. See [Table of reserved words](#table-of-reserved-words).
 
@@ -232,8 +233,8 @@ Here are details for NetBIOS domain names and DNS domain names.
 
   - Minimum name length: Two characters.
   - Maximum name length: 255 characters.
-  > [!NOTE]  
-  > If you use UTF-8 (Unicode) characters, remember that some UTF-8 characters exceed one octet in length. In that case, you can't determine the size of a name by counting the characters. The maximum size of the host name and of the FQDN is 63 bytes per label and 255 bytes per FQDN.
+    > [!NOTE]  
+    > If you use UTF-8 (Unicode) characters, remember that some UTF-8 characters exceed one octet in length. In that case, you can't determine the size of a name by counting the characters. The maximum size of the host name and of the FQDN is 63 bytes per label and 255 bytes per FQDN.
 
   - The maximum name length is based on the requirements of `SYSVOL` paths, and also on the `MAX_PATH` limitation of 260 characters.
 
@@ -327,8 +328,7 @@ We recommend that you use a valid DNS name when you create a new site name. Othe
   - parentheses (())
   - braces ({})
   - white space (blank)
-  - underscore (_)
-
+  - underscore (_)  
     The underscore has a special role. It's permitted for the first character in SRV records by RFC definition. But newer DNS servers may also allow it anywhere in a name. For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).
 
 - **Additional rules.**
@@ -338,16 +338,20 @@ We recommend that you use a valid DNS name when you create a new site name. Othe
   - The last character must not be a minus sign or a period.
 
 - **Name length rules.**
+
   - Minimum name length: One character.
   - Maximum name length: 63 characters.
-  > [!NOTE]  
-  > If you use UTF-8 (Unicode) characters, remember that some UTF-8 characters exceed one octet in length. In that case, you can't determine the size of a name by counting the characters. The maximum length of the DNS name is 63 bytes per label.
+    > [!NOTE]  
+    > If you use UTF-8 (Unicode) characters, remember that some UTF-8 characters exceed one octet in length. In that case, you can't determine the size of a name by counting the characters. The maximum length of the DNS name is 63 bytes per label.
 
 ## OU names
 
 - **Allowed characters.** All characters are allowed, even extended characters. Although Active Directory Users and Computers lets you name an OU with extended characters, we recommend that you use names that describe the purpose of the OU and that are short enough to easily manage. Lightweight Directory Access Protocol (LDAP) doesn't have any restrictions, because the CN of the object is put in quotation marks.
+
 - **Disallowed characters.** No characters are disallowed.
+
 - **Name length rules.**
+
   - Minimum name length: One character.
   - Maximum name length: 64 characters.
 
