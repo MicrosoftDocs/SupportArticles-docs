@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot issues that involve the App Insights JavaScript SDK
 description: Learn how to troubleshoot SDK load failure for JavaScript web applications, Azure Application Insights for web pages, and source map support for JavaScript apps.
-ms.date: 2/17/2023
+ms.date: 2/25/2023
 ms.author: v-dele
 author: DennisLee-DennisLee
 editor: v-jsitser
@@ -26,7 +26,7 @@ The following sections discuss the symptoms, causes, and solutions for a specifi
 
 ## Symptoms
 
-In the \<head> element of the web page that you're monitoring, the [JavaScript snippet][snippet-based-setup] (version 3 or a later version) creates and reports the following exception when it detects that the SDK script did not download or initialize:
+In the \<head> element of the web page that you're monitoring, the [JavaScript snippet][snippet-based-setup] (version 3 or a later version) creates and reports the following exception when it detects that the SDK script didn't download or initialize:
 
 > SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)
 
@@ -73,14 +73,16 @@ If the user experiences intermittent network connectivity failures, there are fe
 
 To minimize intermittent network connectivity failure, we implemented `Cache-Control` headers on all the CDN files. After the user's browser downloads the current version of the SDK, it doesn't have to download it again because it reuses the previously obtained copy. (See [how caching works](/azure/cdn/cdn-how-caching-works).) If the caching check fails or there's a new release available, the user's browser has to download the updated version. Therefore, you might see a background level of *"noise"* in the check failure scenario. Or, you might see a temporary spike when a new release occurs and becomes generally available (deployed to the CDN).
 
-### Solution 1b: Embed the SDK by using npm packages
+### Solution 1b: Use npm packages to embed the SDK together with the application in a single bundle
 
-Is the SDK load failure exception persistent, and does it occur for many users together with a reduction in normal client telemetry? In this case, intermittent network connectivity issues probably aren't the true cause of the problem, and you should explore other possible cause.
+Is the SDK load failure exception persistent, and does it occur for many users together with a reduction in normal client telemetry? In this case, intermittent network connectivity issues probably aren't the true cause of the problem, and you should explore other possible causes.
 
 > [!NOTE]  
 > A common indication that this failure occurs for multiple users is that the exception is reported at a rapid and sustained level.
 
-In this situation, hosting the SDK on your own CDN is unlikely to provide or reduce the occurrences of this exception. The same issue affects your own CDN and it occurs also if you use the SDK through an npm package solution. From the user's perspective, when this exception occurs, your entire application fails to load or initialize, not just the telemetry SDK (that users don't see). Therefore, users will probably continue to refresh your site until it loads completely.
+In this situation, hosting the SDK on your own CDN is unlikely to provide or reduce the occurrences of this exception. The same issue affects your own CDN and it occurs also if you use the SDK through an npm package solution. Failure of the latter scenario occurs especially if Application Insights is included in a different [bundle](/aspnet/mvc/overview/performance/bundling-and-minification) from that of the application that's being monitored, because the failure is guaranteed to occur in at least one of those bundles. From the user's perspective, when this exception occurs, your entire application fails to load or initialize, not just the telemetry SDK (that users don't see). Therefore, users will probably continue to refresh your site until it loads completely.
+
+You can try to [use npm packages to embed the Application Insights SDK](#solution-4b3-use-npm-packages-to-embed-the-application-insights-sdk) together with the monitored application in a single bundle. Although an intermittency failure might still occur in this scenario, a combined bundle does offer a real chance of fixing the problem.
 
 ## Cause 2: Application Insights CDN outage
 
@@ -98,7 +100,7 @@ If the SDK doesn't initialize, the \<script /> is still successfully downloaded 
 
 #### Step 1: Check for a successful SDK download
 
-Check wheher the SDK downloaded successfully. If no script download occurred, this scenario isn't the cause of the SDK load failure exception. Use a browser that supports developer tools. Select F12 to view the developer tools, and then select the **Network** tab. Verify that the script that's defined in the [src snippet configuration][snippet-configuration-options] was downloaded. To do this, check for response code `200` (success) or `304` (not changed). To review the network traffic, you can also use a web debugging tool such as [Fiddler](https://www.telerik.com/fiddler).
+Check whether the SDK downloaded successfully. If no script download occurred, this scenario isn't the cause of the SDK load failure exception. Use a browser that supports developer tools. Select F12 to view the developer tools, and then select the **Network** tab. Verify that the script that's defined in the [src snippet configuration][snippet-configuration-options] was downloaded. To do this, check for response code `200` (success) or `304` (not changed). To review the network traffic, you can also use a web debugging tool such as [Fiddler](https://www.telerik.com/fiddler).
 
 If the SDK didn't download successfully, review the following table to understand the different reporting options.
 
@@ -119,7 +121,7 @@ Check for JavaScript exceptions. Use a browser that supports developer tools. Se
 
 - A faulty release was deployed to the CDN.
 
-To check for a faulty configuration, change the configuration that's passed to the snippet (if you have not already done this) so that it includes only your instrumentation key as a string value. The following code shows an example snippet configuration change.
+To check for a faulty configuration, change the configuration that's passed to the snippet (if you haven't already done this) so that it includes only your instrumentation key as a string value. The following code shows an example snippet configuration change.
 
 > [!NOTE]  
 > Support for instrumentation key ingestion ends on March 31, 2025. Instrumentation key ingestion will continue to work, but we'll no longer provide updates or support for the feature. See [Transition to connection strings](/azure/azure-monitor/app/migrate-from-instrumentation-keys-to-connection-strings) to take advantage of [new capabilities](/azure/azure-monitor/app/migrate-from-instrumentation-keys-to-connection-strings#new-capabilities).
@@ -165,6 +167,7 @@ If the SDK still doesn't initialize, try enabling the [enableDebug configuration
 
 ```js
 <script type="text/javascript">
+...
 src: "https://js.monitor.azure.com/scripts/b/ai.2.js",
 cfg:{
     instrumentationKey: "<instrumentation-key-guid>",
@@ -230,7 +233,7 @@ Instead of having users download the Application Insights SDK from the public CD
 
 #### Solution 4b3: Use npm packages to embed the Application Insights SDK
 
-Instead of using the [snippet][snippet-based-setup] and [adding public CDN endpoints](#solution-4a-add-blocklist-exceptions-for-cdn-endpoints)), you can use the [npm packages](https://www.npmjs.com/package/applicationinsights) to include the SDK as part of your own JavaScript files. The SDK becomes just another package within your own scripts. For more information, see the [npm-based setup][npm-based-setup] section of the Application Insights JavaScript SDK GitHub page.
+Instead of using the [snippet][snippet-based-setup] and [adding public CDN endpoints](#solution-4a-add-blocklist-exceptions-for-cdn-endpoints), you can use the [npm packages](https://www.npmjs.com/package/applicationinsights) to include the SDK as part of your own JavaScript files. The SDK becomes just another package within your own scripts. For more information, see the [npm-based setup][npm-based-setup] section of the Application Insights JavaScript SDK GitHub page.
 
 > [!NOTE]  
 > We recommend that when you use npm packages, you should also use some form of [JavaScript bundler](https://www.bing.com/search?q=javascript+bundler) to help you to do code splitting and minification.
