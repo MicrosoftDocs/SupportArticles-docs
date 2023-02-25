@@ -30,7 +30,6 @@ These errors occur if both the following conditions are true:
 
 The error occurs because of a change in the default behavior of the client drivers. Older versions of client drivers are designed to assume that data encryption is **OFF** by default. The new drivers assume this setting to be **ON** by default. Because data encryption is set to **ON**, the driver tries to validate the server's certificate and fails.
 
-- Currently, MSOLEDBSQL19 prevents the creation of linked servers without encryption and a trusted certificate (a self-signed certificate is insufficient). 
 
 ### Solutions
 
@@ -40,7 +39,9 @@ The error occurs because of a change in the default behavior of the client drive
 
 - **Solution 3:** Add `;Trust Server Certificate=true` to the connection string. This will force the client to trust the certificate without validation.
 
-- If linked servers are required, use the existing supported version of MSOLEDBSQL.
+- > [!NOTE]
+    > Currently, MSOLEDBSQL19 prevents the creation of linked servers without encryption and a trusted certificate (a self-signed certificate is insufficient). If linked servers are required, use the existing supported version of MSOLEDBSQL.
+        
 
 ## [Upgraded to Microsoft ODBC Driver 18.*x* for SQL Server](#tab/odbc-driver-18x)
 
