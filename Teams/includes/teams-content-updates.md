@@ -2,6 +2,14 @@
 
 
 
+## Week of February 20, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 2/20/2023 | [Error "Couldn't complete the call" when calling from a contact card in Teams](/microsoftteams/troubleshoot/teams-on-windows/error-call-from-contact-card) | added |
+
+
 ## Week of February 13, 2023
 
 
