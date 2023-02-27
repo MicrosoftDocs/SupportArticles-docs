@@ -2,23 +2,23 @@
 title: Troubleshoot common issues with Mariner container hosts on AKS
 description: Learn how to address some common issues reported with Mariner nodes on AKS 
 ms.date: 02/22/2023
-author: Sudhanva Huruli
+author: suhuruli
 ms.author: suhuruli
 ms.reviewer: 
 ms.service: azure-kubernetes-service
-ms.subservice: troubleshoot-common-mariner-aks
+ms.subservice: common-issues
 #Customer intent: As an Azure Kubernetes user using Mariner container hosts, I want to take basic troubleshooting steps.
 ---
 
 # Troubleshoot Common Issues with Mariner container hosts on AKS
 
-This article provides troubleshooting steps for some of the commonly reported issues when using Mariner container hosts with AKS. For more information on how to use Mariner container hosts with AKS and get started, please visit the [Use Mariner with AKS](https://learn.microsoft.com/en-us/azure/aks/use-mariner) documentation. 
+This article provides troubleshooting steps for some of the commonly reported issues when using Mariner container hosts with AKS. For more information on how to use Mariner container hosts with AKS and get started, please visit the [Use Mariner with AKS](/aks/use-mariner) documentation. 
 
 ## Before you begin
 
 Read the [official guide for troubleshooting Kubernetes clusters](https://kubernetes.io/docs/tasks/debug/debug-cluster/_print/). Also, read the [Microsoft engineer's guide to Kubernetes troubleshooting](https://github.com/feiskyer/kubernetes-handbook/blob/master/en/troubleshooting/index.md). This guide contains commands for troubleshooting pods, nodes, clusters, and other features.
 
-Furthermore, please check the [Known Limitations](https://learn.microsoft.com/en-us/azure/aks/use-mariner#limitations) list to see if a scenario you are trying is already a known limitation we are working on. 
+Furthermore, please check the [Known Limitations](/aks/use-mariner#limitations) list to see if a scenario you are trying is already a known limitation we are working on. 
 
 ## Prerequisites
 
