@@ -14,15 +14,15 @@ If you enabled Application Insights Snapshot Debugger for your application, but 
 
 There can be many different reasons why snapshots aren't generated. You can start by running the snapshot health check to identify some of the possible common causes.
 
-## Not Supported Scenarios
+## Not supported scenarios
 
 Below you can find scenarios where Snapshot Collector isn't supported:
 
 |Scenario    | Side Effects | Recommendation |
 |------------|--------------|----------------|
-|When using the Snapshot Collector SDK in your application directly (*.csproj*) and you have enabled the advance option "Interop".| The local Application Insights SDK (including Snapshot Collector telemetry) will be lost, therefore, no Snapshots will be available. <br/> Your application could crash at startup with `System.ArgumentException: telemetryProcessorTypedoes not implement ITelemetryProcessor` <br/> For more information about the Application Insights feature "Interop", see the [documentation.](/azure/azure-monitor/app/azure-web-apps-net-core#troubleshooting) | If you're using the advance option "Interop", use the codeless Snapshot Collector injection (enabled thru the Azure portal UX) |
+|When you use the Snapshot Collector SDK in your application directly (*.csproj*) and you have enabled the advance option "Interop".| The local Application Insights SDK (including Snapshot Collector telemetry) will be lost, therefore, no snapshots will be available. <br/> Your application could crash at startup with `System.ArgumentException: telemetryProcessorTypedoes not implement ITelemetryProcessor` <br/> For more information about the Application Insights feature "Interop", see the [Application monitoring for Azure App Service and ASP.NET Core](/azure/azure-monitor/app/azure-web-apps-net-core#troubleshooting). | If you're using the advance option "Interop", use the codeless Snapshot Collector injection (enabled through the Azure portal UX) |
 
-## Make sure you're using the appropriate Snapshot Debugger Endpoint
+## Make sure you're using the appropriate Snapshot Debugger endpoint
 
 Currently the only regions that require endpoint modifications are [Azure Government](/azure/azure-government/compare-azure-government-global-azure#application-insights) and [Azure China](/azure/china/resources-developer-guide).
 
@@ -62,7 +62,7 @@ Below is an example of the `host.json` updated with the US Government Cloud agen
 
 ## Use the snapshot health check
 
-Several common problems result in the Open Debug Snapshot not showing up. Using an outdated Snapshot Collector, for example; reaching the daily upload limit; or perhaps the snapshot is just taking a long time to upload. Use the Snapshot Health Check to troubleshoot common problems.
+Several common problems result in the Open Debug Snapshot not showing up. For example, an outdated Snapshot Collector is used; the daily upload limit is reached; or perhaps the snapshot is just taking a long time to upload. Use the Snapshot Health Check to troubleshoot common problems.
 
 There's a link in the exception pane of the end-to-end trace view that takes you to the Snapshot Health Check.
 
@@ -104,13 +104,13 @@ To check the setting, open your *web.config* file and find the system.web sectio
 > Modifying the `httpRuntime targetFramework` value changes the runtime quirks applied to your application and can cause other, subtle behavior changes. Be sure to test your application thoroughly after making this change. For a full list of compatibility changes, see [Re-targeting changes](/dotnet/framework/migration-guide/application-compatibility#retargeting-changes).
 
 > [!NOTE]
-> If the `targetFramework` is 4.7 or above then Windows determines the available protocols. In Azure App Service, TLS 1.2 is available. However, if you're using your own virtual machine, you may need to enable TLS 1.2 in the OS.
+> If the `targetFramework` is 4.7 or a later version, Windows determines the available protocols. In Azure App Service, TLS 1.2 is available. However, if you're using your own virtual machine, you may need to enable TLS 1.2 in the OS.
 
-## Preview Versions of .NET Core
+## Preview versions of .NET Core
 
 If you're using a preview version of .NET Core or your application references Application Insights SDK, directly or indirectly via a dependent assembly, follow the instructions for [Enable Snapshot Debugger for other environments](/azure/azure-monitor/snapshot-debugger/snapshot-debugger-vm?toc=%2Fazure%2Fazure-monitor%2Ftoc.json).
 
-## Check the Diagnostic Services site extension' Status Page
+## Check the Diagnostic Services site extension's Status Page
 
 If Snapshot Debugger was enabled through the [Application Insights pane](/azure/azure-monitor/snapshot-debugger/snapshot-debugger-app-service?toc=%2Fazure%2Fazure-monitor%2Ftoc.json) in the portal, it was enabled by the Diagnostic Services site extension.
 
@@ -127,12 +127,12 @@ This domain will be the same as the Kudu management site for App Service.
 
 This Status Page shows the installation state of the Profiler and Snapshot Collector agents. If there was an unexpected error, it will be displayed and show how to fix it.
 
-You can use the Kudu management site for App Service to get the base url of this Status Page:
+You can use the Kudu management site for App Service to get the base URL of this Status Page:
 
 1. Open your App Service application in the Azure portal.
 1. Select **Advanced Tools**, or search for **Kudu**.
 1. Select **Go**.
-1. Once you are on the Kudu management site, in the URL, **append the following `/DiagnosticServices` and press enter**.
+1. Once you are on the Kudu management site, in the URL, append the following `/DiagnosticServices` and press <kbd> Enter </kbd>.
  It will end like this: `https://<kudu-url>/DiagnosticServices`
 
 ## Upgrade to the latest version of the NuGet package
@@ -204,7 +204,7 @@ SnapshotUploader.exe Information: 0 : Deleted PDB scan marker : D:\local\Temp\Du
 
 For applications that *aren't* hosted in App Service, the uploader logs are in the same folder as the minidumps: `%TEMP%\Dumps\<ikey>` (where `<ikey>` is your instrumentation key).
 
-## Troubleshooting Cloud Services
+## Troubleshoot Cloud Services
 
 In Cloud Services, the default temporary folder could be too small to hold the minidump files, leading to lost snapshots.
 
@@ -253,7 +253,7 @@ Follow these steps to configure your Cloud Service role with a dedicated local r
    }
    ```
 
-1. Update your role's *ApplicationInsights.config* file to override the temporary folder location used by `SnapshotCollector`
+1. Update the *ApplicationInsights.config* file of your role to override the temporary folder location used by `SnapshotCollector`.
 
    ```xml
    <TelemetryProcessors>
@@ -265,24 +265,24 @@ Follow these steps to configure your Cloud Service role with a dedicated local r
    </TelemetryProcessors>
    ```
 
-## Overriding the Shadow Copy folder
+## Override the Shadow Copy folder
 
 When the Snapshot Collector starts up, it tries to find a folder on disk that is suitable for running the Snapshot Uploader process. The chosen folder is known as the Shadow Copy folder.
 
 The Snapshot Collector checks a few well-known locations, making sure it has permissions to copy the Snapshot Uploader binaries. The following environment variables are used:
 
-* Fabric_Folder_App_Temp
-* LOCALAPPDATA
-* APPDATA
-* TEMP
+* `Fabric_Folder_App_Temp`
+* `LOCALAPPDATA`
+* `APPDATA`
+* `TEMP`
 
-If a suitable folder can't be found, Snapshot Collector reports an error saying *"Couldn't find a suitable shadow copy folder."*
+If a suitable folder can't be found, Snapshot Collector reports an error saying "Couldn't find a suitable shadow copy folder."
 
 If the copy fails, Snapshot Collector reports a `ShadowCopyFailed` error.
 
 If the uploader can't be launched, Snapshot Collector reports an `UploaderCannotStartFromShadowCopy` error. The body of the message often contains `System.UnauthorizedAccessException`. This error usually occurs because the application is running under an account with reduced permissions. The account has permission to write to the shadow copy folder, but it doesn't have permission to execute code.
 
-Since these errors usually happen during startup, they'll usually be followed by an `ExceptionDuringConnect` error saying *Uploader failed to start*."
+Since these errors usually happen during startup, they'll usually be followed by an `ExceptionDuringConnect` error saying "Uploader failed to start."
 
 To work around these errors, you can specify the shadow copy folder manually via the `ShadowCopyFolder` configuration option. For example, using *ApplicationInsights.config*:
 
@@ -315,7 +315,7 @@ When a snapshot is created, the throwing exception is tagged with a snapshot ID.
 
 1. Browse to your Application Insights resource in the Azure portal.
 1. Select **Search**.
-1. Type `ai.snapshot.id` in the Search text box and press Enter.
+1. Type `ai.snapshot.id` in the Search text box and press <kbd> Enter </kbd>.
 
 :::image type="content" source="./media/snapshot-debugger-troubleshoot/search-snapshot-portal.png" alt-text="Screenshot showing search for telemetry with a snapshot ID in the portal.":::
 
@@ -325,7 +325,7 @@ To search for a specific snapshot ID from the Uploader logs, type that ID in the
 
 1. Double-check that you're looking at the right Application Insights resource by verifying the instrumentation key.
 
-1. Using the timestamp from the Uploader log, adjust the Time Range filter of the search to cover that time range.
+1. Adjust the Time Range filter of the search to cover that time range by using the timestamp from the Uploader log.
 
 If you still don't see an exception with that snapshot ID, then the exception record wasn't reported to Application Insights. This situation can happen if your application crashed after it took the snapshot but before it reported the exception record. In this case, check the App Service logs under `Diagnose and solve problems` to see if there were unexpected restarts or unhandled exceptions.
 
