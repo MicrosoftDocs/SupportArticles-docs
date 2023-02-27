@@ -1,22 +1,22 @@
 ---
 title: Bulk load operations can leave large amounts of unused space
 description: Learn how to resolve the issue of excessive unused space in bulk load operations that have a small batch size.
-ms.date: 02/24/2023
+ms.date: 02/27/2023
 ms.custom: sap:Administration and management
-ms.reviewer: 
-author: PiJoCoder
-ms author: jopilov
+ms.reviewer: jopilov
+author: padmajayaraman
+ms author: v-jayaramanp
 ms.prod: sql
 ---
 
-# Excessive unused space after running bulk load operations 
+# Excessive unused space after running bulk load operations
 
 ## Symptoms
 
 You might observe consistently high growth of unused space for tables in your databases when you run bulk load operations. For example, if you run the `sp_spaceused` command, the unused space in the table occupies a large percentage of the reserved space (overall space allocated for the table).
 
 ```sql
-exec sp_spaceused 'Sales.Customer'
+EXEC sp_spaceused 'Sales.Customer'
 ```
 
 Here's an example.
@@ -29,7 +29,7 @@ Here's an example.
 
 If you use bulk load operation that have a small batch size, tables might allocate page [extents](/sql/relational-databases/pages-and-extents-architecture-guide#extents) that are barely used.
 
-Running bulk load operations that use minimal logging can help improve the performance of data load operations in indexes if the data is pre-ordered or sequentially loaded. But the batch size that you use (`BATCHSIZE` in [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql) and `-b` option in [bcp utility](/sql/tools/bcp-utility)) in these operations plays a critical role in achieving faster performance and efficient space usage. Each bulk load batch allocates one or more new extents. This bypasses the allocation cache lookup for existing extents that have available free space. You can optimize insert performance by creating extents instead of seeking free space on existing extents. However, if you use a smaller batch size (for example, 10 rows per batch), SQL Server reserves a new 64 KB extent for every batch of 10 records. This is wasteful for most row sizes. The remaining pages in the extent are unused but reserved for the object. Therefore, this fast load optimization combined with a smaller batch size causes inefficient space useage.
+Running bulk load operations that use minimal logging can help improve the performance of data load operations in indexes if the data is pre-ordered or sequentially loaded. But the batch size that you use (`BATCHSIZE` in [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql) and `-b` option in [bcp utility](/sql/tools/bcp-utility)) in these operations plays a critical role in achieving faster performance and efficient space usage. Each bulk load batch allocates one or more new extents. This bypasses the allocation cache lookup for existing extents that have available free space. You can optimize insert performance by creating extents instead of seeking free space on existing extents. However, if you use a smaller batch size (for example, 10 rows per batch), SQL Server reserves a new 64 KB extent for every batch of 10 records. This is wasteful for most row sizes. The remaining pages in the extent are unused but reserved for the object. Therefore, this fast load optimization combined with a smaller batch size causes inefficient space usage.
 
 The following table from [the MSSQL Tiger Team blog site](/archive/blogs/sql_server_team/sql-server-2016-minimal-logging-and-impact-of-the-batchsize-in-bulk-load-operations) shows some empirical evidence to illustrate this behavior.
 
@@ -61,11 +61,11 @@ FROM sys.dm_db_index_physical_stats (DB_ID(N'AdventureWorks2016'), OBJECT_ID(N'P
 ```
 
 > [!NOTE]
-> Be careful not to set the batch size to a large value because doing this could cause bursts of large I/O requests. For more information, see [I/O effect of exceedingly large batch size](#io-effect-of-exceedingly-large-batch-size).
+> Be careful not to set the batch size to a large value because doing this could cause bursts of large I/O requests. For more information, see [I/O effect of exceedingly large batch sizes](#io-effect-of-exceedingly-large-batch-sizes).
 
 ### If batch size configuration isn't an option for bulk load operation
 
-If, for some reason, you can't change the batch size or use regular `INSERTS`, you can disable the fast inserts (minimal logging) behavior by using [trace flag 692](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf692) (TF 692). If you have fast inserts enabled by default after SQL Server 2016, each bulk load batch allocates new extents and bypasses the lookup for available free space in existing pages. Therefore, bulk load operations that have small batch sizes can cause an increase in unused space in objects. TF 692 disables fast inserts while loading bulk data into a heap or clustered index. This minimizes the unused space issue that is described in the "Symptoms" section.
+If, for some reason, you can't change the batch size or use regular `INSERTS`, you can disable the fast inserts (minimal logging) behavior by using [trace flag 692](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf692) (TF 692). If you have fast inserts enabled by default after SQL Server 2016, each bulk load batch allocates new extents and bypasses the lookup for available free space in existing pages. Therefore, bulk load operations that have small batch sizes can cause an increase in unused space in objects. TF 692 disables fast inserts while loading bulk data into a heap or clustered index. This minimizes the unused space issue that is described in the [Symptoms](#symptoms) section.
 
 You can enable the trace flag while SQL Server is online by using the following query:
 
