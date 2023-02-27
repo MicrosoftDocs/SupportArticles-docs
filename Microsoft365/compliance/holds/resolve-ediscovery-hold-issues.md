@@ -44,7 +44,7 @@ To reduce the number of errors related to eDiscovery holds, we recommend the fol
     }
    ```
 
-- Merge your updates to an eDiscovery hold in a single bulk request rather than updating the hold policy repeatedly for each transaction. For example, to add multiple user mailboxes to an existing hold policy using the [Set-CaseHoldPolicy](/powershell/module/exchange/set-caseholdpolicy) cmdlet, run the command (or add as a code block to a script) so that it runs only once to add multiple users.
+- Merge your updates to an eDiscovery hold in a single bulk request rather than updating the hold policy repeatedly for each transaction. For example, to add multiple user mailboxes to an existing hold policy using the [Set-CaseHoldPolicy](/powershell/module/exchange/set-caseholdpolicy) cmdlet from [Security & Compliance PowerShell](/powershell/exchange/scc-powershell?view=exchange-ps&preserve-view=true), run the command (or add as a code block to a script) so that it runs only once to add multiple users.
 
   **Correct**
 
