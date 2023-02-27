@@ -133,7 +133,7 @@ You can use the Kudu management site for App Service to get the base URL of this
 1. Select **Advanced Tools**, or search for **Kudu**.
 1. Select **Go**.
 1. Once you are on the Kudu management site, in the URL, append the `/DiagnosticServices` and press <kbd>Enter</kbd>.
- It will end like this: `https://<kudu-url>/DiagnosticServices`
+ It will end like this: `https://<kudu-url>/DiagnosticServices`.
 
 ## Upgrade to the latest version of the NuGet package
 
