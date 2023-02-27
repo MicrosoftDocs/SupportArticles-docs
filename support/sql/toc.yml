@@ -787,6 +787,12 @@
         href: releases/sqlserver-2022/cumulativeupdate1.md
       - name: 'FIX: Database accessibility issues with high-volume customer workloads'
         href: releases/sqlserver-2022/database-accessibility-issues-high-volume-customer-workloads.md
+    - name: Cumulative Update 2
+      items:
+      - name: Cumulative Update 2 (KB5023127)
+        href: releases/sqlserver-2022/cumulativeupdate2.md
+      - name: Error when setting the SQL Server Agent job history log
+        href: releases/sqlserver-2022/error-when-setting-the-sql-server-agent-job-history-log.md       
   - name: SQL Server 2019
     items:
     - name: SQL Server 2019 build versions
