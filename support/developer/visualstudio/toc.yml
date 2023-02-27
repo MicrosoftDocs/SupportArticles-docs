@@ -54,9 +54,3 @@
     href: ./tools-utilities/nuget-based-package-manager-missing.md
   - name: Troubleshoot XAML Hot Reload
     href: ./tools-utilities/xaml-hot-reload-troubleshooting.md
-- name: Visual Studio for Mac
-  items:
-  - name: Can't see all available templates
-    href: ./vs-for-mac/troubleshooting-no-templates.md
-  - name: Error retrieving update information when updating
-    href: ./vs-for-mac/updater-troubleshooting.md
