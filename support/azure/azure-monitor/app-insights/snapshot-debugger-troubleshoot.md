@@ -18,9 +18,9 @@ There can be many different reasons why snapshots aren't generated. You can star
 
 Below you can find scenarios where Snapshot Collector isn't supported:
 
-|Scenario    | Side Effects | Recommendation |
+|Scenario    | Side effects | Recommendation |
 |------------|--------------|----------------|
-|When you use the Snapshot Collector SDK in your application directly (*.csproj*) and you have enabled the advance option "Interop".| The local Application Insights SDK (including Snapshot Collector telemetry) will be lost, therefore, no snapshots will be available. <br/> Your application could crash at startup with `System.ArgumentException: telemetryProcessorTypedoes not implement ITelemetryProcessor` <br/> For more information about the Application Insights feature "Interop", see the [Application monitoring for Azure App Service and ASP.NET Core](/azure/azure-monitor/app/azure-web-apps-net-core#troubleshooting). | If you're using the advance option "Interop", use the codeless Snapshot Collector injection (enabled through the Azure portal UX) |
+|When you use the Snapshot Collector SDK in your application directly (*.csproj*) and you have enabled the advance option "Interop".| The local Application Insights SDK (including Snapshot Collector telemetry) will be lost; therefore, no snapshots will be available. <br/> Your application could crash at startup with `System.ArgumentException: telemetryProcessorTypedoes not implement ITelemetryProcessor` <br/> For more information about the Application Insights feature "Interop", see the [Application monitoring for Azure App Service and ASP.NET Core](/azure/azure-monitor/app/azure-web-apps-net-core#troubleshooting). | If you're using the advance option "Interop", use the codeless Snapshot Collector injection (enabled through the Azure portal UX). |
 
 ## Make sure you're using the appropriate Snapshot Debugger endpoint
 
@@ -28,7 +28,7 @@ Currently the only regions that require endpoint modifications are [Azure Govern
 
 For App Service and applications using the Application Insights SDK, you have to update the connection string using the supported overrides for Snapshot Debugger as defined below:
 
-|Connection String Property    | US Government Cloud | China Cloud |  
+|Connection string property    | US Government Cloud | China Cloud |  
 |---------------|---------------------|-------------|
 |SnapshotEndpoint         | `https://snapshot.monitor.azure.us`    | `https://snapshot.monitor.azure.cn` |
 
@@ -40,7 +40,7 @@ For Function App, you have to update the `host.json` using the supported overrid
 |---------------|---------------------|-------------|
 |AgentEndpoint         | `https://snapshot.monitor.azure.us`    | `https://snapshot.monitor.azure.cn` |
 
-Below is an example of the `host.json` updated with the US Government Cloud agent endpoint:
+Here is an example of the `host.json` updated with the US Government Cloud agent endpoint:
 
 ```json
 {
@@ -118,7 +118,7 @@ If Snapshot Debugger was enabled through the [Application Insights pane](/azure/
 > Codeless installation of Application Insights Snapshot Debugger follows the .NET Core support policy.
 > For more information about supported runtimes, see [.NET Core Support Policy](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).
 
-You can check the Status Page of this extension by going to the following url:
+You can check the Status Page of this extension by going to the following URL:
 `https://{site-name}.scm.azurewebsites.net/DiagnosticServices`
 
 > [!NOTE]
@@ -132,7 +132,7 @@ You can use the Kudu management site for App Service to get the base URL of this
 1. Open your App Service application in the Azure portal.
 1. Select **Advanced Tools**, or search for **Kudu**.
 1. Select **Go**.
-1. Once you are on the Kudu management site, in the URL, append the following `/DiagnosticServices` and press <kbd> Enter </kbd>.
+1. Once you are on the Kudu management site, in the URL, append the `/DiagnosticServices` and press <kbd>Enter</kbd>.
  It will end like this: `https://<kudu-url>/DiagnosticServices`
 
 ## Upgrade to the latest version of the NuGet package
@@ -315,7 +315,7 @@ When a snapshot is created, the throwing exception is tagged with a snapshot ID.
 
 1. Browse to your Application Insights resource in the Azure portal.
 1. Select **Search**.
-1. Type `ai.snapshot.id` in the Search text box and press <kbd> Enter </kbd>.
+1. Type `ai.snapshot.id` in the Search text box and press <kbd>Enter</kbd>.
 
 :::image type="content" source="./media/snapshot-debugger-troubleshoot/search-snapshot-portal.png" alt-text="Screenshot showing search for telemetry with a snapshot ID in the portal.":::
 
