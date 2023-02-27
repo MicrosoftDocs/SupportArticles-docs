@@ -157,7 +157,7 @@
 
 - name: Troubleshoot AKS cluster performance issues
   items:
-  - name: Identify high CPU consuming containers
+  - name: Identify nodes and containers consuming high CPU
     href: identify-high-cpu-consuming-containers-aks.md
   - name: Identify memory saturation in AKS clusters
     href: identify-memory-saturation-aks.md
