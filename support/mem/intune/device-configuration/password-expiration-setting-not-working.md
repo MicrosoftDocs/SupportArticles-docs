@@ -1,6 +1,6 @@
 ---
-title: Password expiration setting for devices in Intune doesn't work
-description: Describes an issue where the password expiration device restriction setting doesn't function as expected on devices that are enrolled in Microsoft Intune.
+title: Password expiration setting for Android devices in Intune doesn't work
+description: Describes an issue where the password expiration device restriction setting doesn't function as expected on Android devices that are enrolled in Microsoft Intune.
 ms.date: 10/07/2021
 search.appverid: MET150
 ms.custom: sap:Device configuration
@@ -12,7 +12,7 @@ This article describes an issue in which the **Password expiration** device rest
 
 ## Symptoms
 
-You deploy a policy that contains the following device restriction setting for devices in Intune:
+You deploy a policy that contains the following device restriction setting for Android devices in Intune:
 
 **Password expiration (days)**
 
