@@ -18,7 +18,7 @@ Assume that the SQL Server Agent is enabled within a SQL Server instance on Linu
 
 ## Resolution
 
-Two new SQL Server Agent properties, `sqlagent.jobhistorymaxrows` and `sqlagent.jobhistorymaxrowsperjob`, have been added to the `mssql-conf` configuration utility. These settings allow you to set the maximum number of rows for the job history and the maximum number of job history rows per job respectively.
+Two new SQL Server Agent properties, `sqlagent.jobhistorymaxrows` and `sqlagent.jobhistorymaxrowsperjob`, have been added to the `mssql-conf` configuration utility. These settings allow you to set the maximum number of rows for the job history log and the maximum number of job history rows per job respectively.
 
 Example: </br>`sudo /opt/mssql/bin/mssql-conf set sqlagent.jobhistorymaxrows 1000` </br>`sudo /opt/mssql/bin/mssql-conf set sqlagent.jobhistorymaxrowsperjob 100` 
 
