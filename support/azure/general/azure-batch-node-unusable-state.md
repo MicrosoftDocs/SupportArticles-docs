@@ -25,11 +25,11 @@ When an NSG is configured in the subnet, it's required to configure this NSG wit
 
 - Inbound security rules
 
-    :::image type="content" source="media/azure-batch-node-unusable-state/inbound-security-rules.png" alt-text="Screenshot of inbound security rules.":::
+    :::image type="content" source="media/azure-batch-node-unusable-state/inbound-security-rules.png" alt-text="Screenshot of inbound security rules." border="false":::
 
 - Outbound security rules
 
-    :::image type="content" source="media/azure-batch-node-unusable-state/outbound-security-rules.png" alt-text="Screenshot of outbound security rules.":::
+    :::image type="content" source="media/azure-batch-node-unusable-state/outbound-security-rules.png" alt-text="Screenshot of outbound security rules." border="false":::
 
 ### Solution 1: Configure NSG with required inbound and outbound security rules
 
@@ -40,15 +40,15 @@ To perform the configuration, follow these steps:
 1. Navigate to the pool from the Azure portal.
 1. Check the pool properties to obtain the VNet and subnet names.
 
-    :::image type="content" source="media/azure-batch-node-unusable-state/check-vnet-subnet-name.png" alt-text="Screenshot of the network configuration.":::
+    :::image type="content" source="media/azure-batch-node-unusable-state/check-vnet-subnet-name.png" alt-text="Screenshot of the network configuration." lightbox="media/azure-batch-node-unusable-state/check-vnet-subnet-name.png":::
 
 1. Navigate to the VNet. On the VNet page, select **Settings** > **Subnets**. In the list of subnets, select the expected subnet. In the subnet pane, find the NSG.
 
-    :::image type="content" source="media/azure-batch-node-unusable-state/check-nsg-associated-to-subnet.png" alt-text="Screenshot of the subnet information.":::
+    :::image type="content" source="media/azure-batch-node-unusable-state/check-nsg-associated-to-subnet.png" alt-text="Screenshot of the subnet information." lightbox="media/azure-batch-node-unusable-state/check-nsg-associated-to-subnet.png":::
 
 1. Navigate to the NSG. Check the configuration on the NSG page.
 
-    :::image type="content" source="media/azure-batch-node-unusable-state/nsg-configuration.png" alt-text="Screenshot of the NSG configuration.":::
+    :::image type="content" source="media/azure-batch-node-unusable-state/nsg-configuration.png" alt-text="Screenshot of the NSG configuration." lightbox="media/azure-batch-node-unusable-state/nsg-configuration.png":::
 
 1. Configure this NSG with the required inbound and outbound security rules.
 1. Reboot the node to be back to the normal state.
@@ -84,7 +84,7 @@ A node is in the **Unusable** state, and the following error message shows on th
 
 > **Code:** DiskFull
 > **Message:**  
-> There is no enough disk space on the node  
+> There is not enough disk space on the node  
 > **Values:**  
 > Message - The VM disk is full. Delete job, tasks, or file on the node to free up spaces and then reboot the node.
 
@@ -140,7 +140,7 @@ A Batch node is in the **Unusable** or **Starting** state, and the following err
 > **Message:**  
 > The batch agent extension provisioning has failed on compute node
 
-:::image type="content" source="media/azure-batch-node-unusable-state/batchagentinstallationfailure-error-message.png" alt-text="Screenshot of the BatchAgentInstallationFailure error message.":::
+:::image type="content" source="media/azure-batch-node-unusable-state/batchagentinstallationfailure-error-message.png" alt-text="Screenshot of the BatchAgentInstallationFailure error message." lightbox="media/azure-batch-node-unusable-state/batchagentinstallationfailure-error-message.png":::
 
 ### Cause: OS SKU of the custom image is different from OS SKU selected during pool creation
 
