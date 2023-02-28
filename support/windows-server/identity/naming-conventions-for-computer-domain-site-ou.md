@@ -60,7 +60,7 @@ In that article, this naming convention applies to computer names, OU names, and
   For more information about the NetBIOS name syntax, see [NetBIOS name syntax](/openspecs/windows_protocols/ms-nbte/6f06fa0e-1dc4-4c41-accb-355aaf20546d).
 
 - **Name length rules:**
-    - Minimum name length: 1 character
+    - Minimum name length: One character
     - Maximum name length: 15 characters
       > [!NOTE]
       > The 16th character of a NetBIOS computer name is reserved for identifying the functionality that is installed on the registered network device.
