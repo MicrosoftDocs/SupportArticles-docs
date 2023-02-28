@@ -24,7 +24,7 @@ If you want to update or remove a service reference, see [Add, update, or remove
 When you select the **Go** button with no address, you may see an error message that says "Please enter the address for a service." To resolve this issue, identify the service's address and enter it.
 
 - If it's a service in your solution, you can use the **Discover** button to find and select it, and then try the **Go** button again.
-- If it's a service hosted somewhere on the internet, add it by following the instructions at [Add a WCF service reference](how-to-add-update-or-remove-a-wcf-data-service-reference.md#add-a-wcf-service-reference).
+- If it's a service hosted somewhere on the internet, add it by following the instructions at [Add a WCF service reference](/visualstudio/vsto/how-to-add-update-or-remove-a-wcf-data-service-reference#add-a-wcf-service-reference).
 
 ## Error returning data from a service
 
@@ -74,7 +74,7 @@ To fix this error, manually rebuild the service project:
 2. In the **Options** dialog box, expand **Projects and Solutions**, and then select **General**.
 3. Make sure that the **Show advanced build configurations** check box is selected, and then select **OK**.
 4. Load the WCF service project.
-5. In the **Configuration Manager** dialog box, set the **Active solution configuration** to **Debug**. For more information, see [How to: Create and edit configurations](../ide/how-to-create-and-edit-configurations.md).
+5. In the **Configuration Manager** dialog box, set the **Active solution configuration** to **Debug**. For more information, see [How to: Create and edit configurations](/visualstudio/ide/how-to-create-and-edit-configurations).
 6. In **Solution Explorer**, select the WCF service project.
 7. On the **Build** menu, select **Rebuild** to rebuild the WCF service project.
 
