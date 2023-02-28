@@ -217,6 +217,19 @@ If you're using Java 9 or later, check to make sure the JVM has the `jdk.crypto.
 
 Otherwise, these cipher suites should already be part of modern Java 8+ distributions. We recommend that you check where you installed your Java distribution from, and investigate why the security providers in that Java distribution's *java.security* configuration file differ from standard Java distributions.
 
+## Slow start-up time with Application Insights
+
+### Java 8
+
+There is a known issue with Java 8 that can increase the start-up time with Application Insights.
+You can try to:
+* [Runtime attach the Application Insights Java agent](https://learn.microsoft.com/en-us/azure/azure-monitor/app/java-spring-boot#enabling-programmatically) if your application is based on Spring Boot
+* Or, use a Java version greater than or equal to 11
+
+### Experimental feature
+
+You can try [this experimental feature](https://github.com/microsoft/ApplicationInsights-Java/wiki/Start-up-time-improvement-with-a-limited-number-of-CPU-cores-(experimental)) and give feedback about it.
+
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
