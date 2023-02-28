@@ -60,7 +60,7 @@ The following cmdlets must be run from an on-premises PowerShell session with th
   Set-AdUser MigratedResourceMailboxId -Replace @{msExchResourceCapacity ="<TheCapacityValue>";msExchResourceDisplay="Equipment"; msExchResourceMetaData="ResourceType:Equipment"; msExchResourceSearchProperties="Equipment"}
   ```
 
-- If the resource mailbox is a room mailbox, run the following CmdLet:
+- If the resource mailbox is a room mailbox, run the following cmdlet:
 
   ```powershell 
   Set-AdUser MigratedResourceMailboxId -Replace @{msExchResourceCapacity ="<TheCapacityValue>";msExchResourceDisplay="Room"; msExchResourceMetaData="ResourceType:Room"; msExchResourceSearchProperties="Room"}
