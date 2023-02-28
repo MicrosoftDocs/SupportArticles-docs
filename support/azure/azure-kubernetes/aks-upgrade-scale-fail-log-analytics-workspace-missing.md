@@ -34,6 +34,7 @@ If it has been less than 14 days (the default soft-delete period) since the work
 > [!NOTE]
 >
 > - Because the AKS control plane finds the workspace based on resource URI, the workspace can't be recreated with the same name within 14 days.
+> - If your workspace is deleted as part of a resource group delete operation, you must first re-create the resource group with the same name.
 > - To perform the workspace recovery, you must have the Contributor permissions to the subscription and resource group where the workspace is located, and the following information is also required:
 >     - Subscription ID
 >     - Resource Group name
