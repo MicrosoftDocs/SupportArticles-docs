@@ -82,9 +82,9 @@ Active Directory runs under the Lsass.exe process and includes the authenticatio
 
 > [!NOTE]
 >
-> - If your computer network environment uses only Windows Server 2008 R2, Windows Server 2008, Windows 7, or Windows Vista, you must enable connectivity over the high port range of 49152 through 65535.
+> - If your computer network environment uses only Windows Server 2008 R2, Windows Server 2008, Windows 7, Windows Vista or later versions, you must enable connectivity over the high port range of 49152 through 65535.
 >
-> - If your computer network environment uses Windows Server 2008 R2, Windows Server 2008, Windows 7, or Windows Vista together with versions of Windows earlier than Windows Server 2008 and Windows Vista, you must enable connectivity over both port ranges:  
+> - If your computer network environment uses Windows Server 2008 R2, Windows Server 2008, Windows 7, Windows Vista or later versions together with versions of Windows earlier than Windows Server 2008 and Windows Vista, you must enable connectivity over both port ranges:  
 > High port range of 49152 through 65535  
 > Low port range of 1025 through 5000
 > - If your computer network environment uses only versions of Windows earlier than Windows Server 2008 and Windows Vista, you must enable connectivity over the low port range of 1025 through 5000.
@@ -190,7 +190,7 @@ System service name: **ClusSvc**
 |Cluster Service|TCP|3343 (This port is required during a node join operation.)|
 |RPC|TCP|135|
 |Cluster Administrator|UDP|137|
-|Randomly allocated high ports²|TCP|Random port number between 1024 and 65535<br/>Random port number between 49152 and 65535³|
+|Randomly allocated high ports²|TCP|Random port number between 1024 and 65535³<br/>Random port number between 49152 and 65535|
   
 > [!NOTE]
 > Additionally, for successful validation on Windows Failover Clusters on 2008 and above, allow inbound and outbound traffic for ICMP4, ICMP6, and port 445/TCP for SMB.
@@ -199,7 +199,7 @@ System service name: **ClusSvc**
 >
 > ² For more information about how to customize these ports, see Remote Procedure Calls and DCOM in the [References](#references) section.
 >
-> ³ It's the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
+> ³ It's the range in Windows versions that are earlier than Windows Server 2008, and Windows Vista.
 
 ### Computer Browser
 
