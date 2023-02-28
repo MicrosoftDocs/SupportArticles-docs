@@ -54,3 +54,7 @@
     href: ./tools-utilities/nuget-based-package-manager-missing.md
   - name: Troubleshoot XAML Hot Reload
     href: ./tools-utilities/xaml-hot-reload-troubleshooting.md
+  - name: Troubleshoot Office solution security
+    href: ./tools-utilities/troubleshooting-office-solution-security.md
+  - name: Troubleshoot references to WCF or WCF Data Services
+    href: ./tools-utilities/troubleshooting-service-references.md
