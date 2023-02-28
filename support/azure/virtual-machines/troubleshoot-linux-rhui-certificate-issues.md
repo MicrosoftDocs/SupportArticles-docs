@@ -537,7 +537,7 @@ The following steps apply if the OS version is *earlier than the latest version 
 4. Lock the `releasever` variable by running the following command:
 
    ```bash
-   sudo echo $(. /etc/os-release && echo $VERSION_ID) > /etc/yum/vars/releaseverv
+   sudo echo $(. /etc/os-release && echo $VERSION_ID) > /etc/yum/vars/releasever
    ```
 
 5. Verify that the corresponding repositories are available and show no errors by running the `dnf repolist` command:
@@ -578,7 +578,7 @@ The following steps apply if the OS version is *earlier than the latest version 
 4. Lock the `releasever` variable by running the following command:
 
    ```bash
-   sudo echo $(. /etc/os-release && echo $VERSION_ID) > /etc/yum/vars/releaseverv
+   sudo echo $(. /etc/os-release && echo $VERSION_ID) > /etc/yum/vars/releasever
    ```
 
 5. Verify that the corresponding repositories are available and show no errors by running the `dnf repolist` command:
