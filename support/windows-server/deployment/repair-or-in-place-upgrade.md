@@ -15,7 +15,7 @@ ms.technology: windows-server-deployment
 ---
 # How to do an in-place upgrade on Windows
 
-After you've done the emergency repair process, the computer still doesn't operate normally. In this situation, you may want to do a repair or in-place upgrade of the existing installation.
+After you've done the emergency repair process, the computer still doesn't operate normally. In this situation, you may want to do a repair in-place upgrade or an in-place ugprade to a newer operating system version. A repair IPU means performing an in-place upgade to the same OS version as the existing one.
 
 _Applies to:_ &nbsp; All Windows versions  
 _Original KB number:_ &nbsp; 2255099
