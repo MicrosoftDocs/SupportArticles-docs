@@ -1,7 +1,7 @@
 ---
 title: Setup fails on VM with error 0xE0000100
 description: Describes an issue in which you receive an error 0xE0000100 that occurs when Windows Server 2012 R2 setup fails on a virtual machine.
-ms.date: 09/09/2020
+ms.date: 3/3/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

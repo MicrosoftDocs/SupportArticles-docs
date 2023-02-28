@@ -1,7 +1,7 @@
 ---
 title: Cached domain logon information
 description: This article describes how cached domain logon information works and how to control cached logon information.
-ms.date: 09/08/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -36,7 +36,7 @@ With caching disabled, the user is prompted with this message:
 
 When you log on to Windows by using cached logon information, if the domain controller is unavailable to validate your account, you cannot access network resources that require domain validation. However, you can access network resources that do not require domain validation.
 
-Through the registry and a resource kit utility (Regkey.exe), you can change the number of previous logon attempts that a server will cache. The valid range of values for this parameter is 0 to 50. A value of 0 turns off logon caching and any value above 50 will only cache 50 logon attempts. By default, all versions of Windows remember 10 cached logons except Windows Server 2008.
+Through the Registry Editor or a Registry Console Tool (reg.exe), you can change the number of previous logon attempts that a server will cache. The valid range of values for this parameter is 0 to 50. A value of 0 turns off logon caching and any value above 50 will only cache 50 logon attempts. By default, all versions of Windows remember 10 cached logons except Windows Server 2008.
 
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).

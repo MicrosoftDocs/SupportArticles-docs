@@ -1,7 +1,7 @@
 ---
 title: Terminal Server commands change
 description: Provides some information about Terminal Server command change.
-ms.date: 09/14/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

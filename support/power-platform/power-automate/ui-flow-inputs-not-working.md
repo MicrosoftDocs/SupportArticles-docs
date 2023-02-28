@@ -4,7 +4,7 @@ description: Troubleshooting UI flow inputs not working issue.
 ms.reviewer: abmehr
 ms.topic: troubleshooting
 ms.date: 3/31/2021
-ms.subservice: power-automate-flows
+ms.subservice: power-automate-desktop-flows
 ---
 # UI flow inputs not working
 
