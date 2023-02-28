@@ -62,7 +62,6 @@ In that article, this naming convention applies to computer names, OU names, and
 - **Name length rules:**
     - Minimum name length: 1 character
     - Maximum name length: 15 characters
-
       > [!NOTE]
       > The 16th character of a NetBIOS computer name is reserved for identifying the functionality that is installed on the registered network device.
 
@@ -104,7 +103,6 @@ In that article, this naming convention applies to computer names, OU names, and
   - braces ({})
   - underscore (_)
   - white space (blank)
-
     > [!NOTE]  
     > - The underscore has a special role. It's permitted for the first character in SRV records by RFC definition. However, newer DNS servers might also allow it anywhere in a name. For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).
     >
@@ -115,7 +113,6 @@ In that article, this naming convention applies to computer names, OU names, and
   - The FQDN of a domain controller must be smaller than 155 bytes.
   - Minimum name length: Two characters
   - Maximum name length: 63 characters  
-
     > [!NOTE]  
     > - If you use UTF-8 (Unicode) characters, remember that some UTF-8 characters exceed one octet in length. In that case, you can't determine the size of a name by counting the characters. The maximum size of the host name and of the fully qualified domain name (FQDN) is 63 bytes per label and 255 bytes per FQDN.
     >
@@ -180,7 +177,6 @@ The following sections describe NetBIOS domain names and DNS domain names.
   - white space (blank)
   - backslash (\\)
   - slash (/)
-
     > [!NOTE]  
     > Computers that are members of an Active Directory domain can't have names that contain only numeral. This is a DNS restriction.
 
@@ -188,7 +184,6 @@ The following sections describe NetBIOS domain names and DNS domain names.
 
   - Minimum name length: One character
   - Maximum name length: 15 characters
-
       > [!NOTE]  
       > The 16th character of the name is reserved for identifying the functionality that is installed on the registered network device.
 
@@ -225,7 +220,6 @@ The following sections describe NetBIOS domain names and DNS domain names.
   - braces ({})
   - underscore (_)
   - white space (blank)  
-
     > [!NOTE]  
     > The underscore has a special role. It's permitted for the first character in SRV records by RFC definition. But newer DNS servers might also allow it anywhere in a name. When you create a domain, you receive a warning message that states that an underscore character might cause problems for some DNS servers. However, you can still create the domain. For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).  
 
@@ -239,10 +233,8 @@ The following sections describe NetBIOS domain names and DNS domain names.
 
   - Minimum name length: Two characters
   - Maximum name length: 255 characters
-
       > [!NOTE]  
       > If you use UTF-8 (Unicode) characters, remember that some UTF-8 characters exceed one octet in length. In that case, you can't determine the size of a name by counting the characters. The maximum size of the host name and of the FQDN is 63 bytes per label and 255 bytes per FQDN.
-
   - The maximum name length is based on the requirements of `SYSVOL` paths, and also on the `MAX_PATH` limitation of 260 characters.  
     A path in `SYSVOL` resembles the following example:
 
@@ -334,7 +326,6 @@ We recommend that you use a valid DNS name when you create a new site name. Othe
   - braces ({})
   - underscore (_)
   - white space (blank)  
-
     > [!NOTE]  
     > The underscore has a special role. It's permitted for the first character in SRV records by RFC definition. But newer DNS servers might also allow it anywhere in a name. For more information, see [Complying with Name Restrictions for Hosts and Domains](/previous-versions/windows/it-pro/windows-2000-server/cc959336(v=technet.10)).
 
@@ -348,7 +339,6 @@ We recommend that you use a valid DNS name when you create a new site name. Othe
 
   - Minimum name length: One character
   - Maximum name length: 63 characters
-
     > [!NOTE]  
     > If you use UTF-8 (Unicode) characters, remember that some UTF-8 characters exceed one octet in length. In that case, you can't determine the size of a name by counting the characters. The maximum length of the DNS name is 63 bytes per label.
 
