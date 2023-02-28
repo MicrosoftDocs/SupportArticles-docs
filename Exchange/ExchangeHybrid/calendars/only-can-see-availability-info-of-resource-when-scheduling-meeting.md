@@ -38,31 +38,34 @@ In this scenario, the user can see availability information about the resource. 
 
 ## Cause
 
-This problem occurs if the resource mailbox was migrated from the on-premises environment to Exchange Online. Capacity and description properties of on-premises resource mailboxes are stored in the `msExchResourceCapacity` and `msExchResourceDisplay` attributes of the object in Active Directory Domain Services (AD DS). When the object is migrated from the on-premises environment to Exchange Online, these attributes are removed from the on-premises AD DS (this is by design). Therefore, on-premises users can't view capacity and description information about migrated resource mailboxes.
+This problem occurs if the resource mailbox was migrated from the on-premises environment to Exchange Online. Capacity and description properties of on-premises resource mailboxes are stored in the `msExchResourceCapacity` and `msExchResourceDisplay` attributes of the object in Active Directory Domain Services (AD DS). When the object is migrated from the on-premises environment to Exchange Online, these attributes are removed from the on-premises AD DS, this behavior is by design. Therefore, on-premises users can't view capacity and description information about migrated resource mailboxes.
 
 ## Resolution
 
-To enable on-premises users to view capacity and description details about the migrated resource mailboxes, manually update the `msExchResourceCapacity`, `msExchResourceDisplay`, `msExchResourceMetaData` and `msExchResourceSearchProperties` attributes for the intended resource mailbox that was migrated to Exchange Online.
+To enable on-premises users to view capacity and description details about the migrated resource mailboxes, manually update the following attributes for the intended resource mailbox that's migrated to Exchange Online:
+
+- `msExchResourceCapacity`
+- `msExchResourceDisplay`
+- `msExchResourceMetaData`
+- `msExchResourceSearchProperties`
 
 > [!NOTE]
-> The `msExchResourceCapacity` attribute will have the value of the capacity defined for the resource mailbox, to keep a consistency across objects, you need to gather it from the migrated resource mailbox properties present in Exchange Online by running "Get-Mailbox MigratedResourceMailboxId | fl ResourceCapacity" from an [Exchange Online Powershell session](/powershell/exchange/connect-to-exchange-online-powershell).  
+> The `msExchResourceCapacity` attribute will have the capacity value defined for the resource mailbox. To ensure consistency across objects, obtain its value from the migrated resource mailbox properties in Exchange Online by running `Get-Mailbox MigratedResourceMailboxId | fl ResourceCapacity` in an [Exchange Online PowerShell session](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
 
-
-The following Cmdlets must be run from a Powershell session with the ActiveDirectory module imported on-premises:
-  
-- If the resource mailbox is an equipment mailbox, run the following CmdLet:
+The following cmdlets must be run from an on-premises PowerShell session with the ActiveDirectory module imported:
+ 
+- If the resource mailbox is an equipment mailbox, run the following cmdlet:
   
   ```powershell 
-  Set-AdUser MigratedResourceMailboxId -Replace @{msExchResourceCapacity ="<TypeTheCapacityValueHere>";msExchResourceDisplay="Equipment"; msExchResourceMetaData="ResourceType:Equipment"; msExchResourceSearchProperties="Equipment"}
+  Set-AdUser MigratedResourceMailboxId -Replace @{msExchResourceCapacity ="<TheCapacityValue>";msExchResourceDisplay="Equipment"; msExchResourceMetaData="ResourceType:Equipment"; msExchResourceSearchProperties="Equipment"}
   ```
 
 - If the resource mailbox is a room mailbox, run the following CmdLet:
 
   ```powershell 
-  Set-AdUser MigratedResourceMailboxId -Replace @{msExchResourceCapacity ="<TypeTheCapacityValueHere>";msExchResourceDisplay="Room"; msExchResourceMetaData="ResourceType:Room"; msExchResourceSearchProperties="Room"}
+  Set-AdUser MigratedResourceMailboxId -Replace @{msExchResourceCapacity ="<TheCapacityValue>";msExchResourceDisplay="Room"; msExchResourceMetaData="ResourceType:Room"; msExchResourceSearchProperties="Room"}
   ```
   
-
 ## More information
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Microsoft Q&A](/answers/products/?WT.mc_id=msdnredirect-web-msdn).
