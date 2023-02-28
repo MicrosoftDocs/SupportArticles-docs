@@ -66,7 +66,7 @@ To do this, follow these steps:
 1. Navigate to the pool from the Azure portal.
 1. Check the pool properties to obtain the VNet and subnet names.
 
-    :::image type="content" source="media/azure-batch-node-unusable-state/check-vnet-subnet-name.png" alt-text="Screenshot of the network configuration.":::
+    :::image type="content" source="media/azure-batch-node-unusable-state/check-vnet-subnet-name.png" alt-text="Screenshot of the network configuration." lightbox="media/azure-batch-node-unusable-state/check-vnet-subnet-name.png":::
 
 1. Navigate to the VNet. On the VNet page, select **Settings** > **Subnets**. In the list of subnets, select the route table associated with the expected subnet.
 
@@ -88,7 +88,7 @@ A node is in the **Unusable** state, and the following error message shows on th
 > **Values:**  
 > Message - The VM disk is full. Delete job, tasks, or file on the node to free up spaces and then reboot the node.
 
-:::image type="content" source="media/azure-batch-node-unusable-state/node-error-disk-full.png" alt-text="Screenshot of the 'DiskFull' error message.":::
+:::image type="content" source="media/azure-batch-node-unusable-state/node-error-disk-full.png" alt-text="Screenshot of the 'DiskFull' error message." lightbox="media/azure-batch-node-unusable-state/node-error-disk-full.png":::
 
 ### Cause: Not enough disk space on the node
 
