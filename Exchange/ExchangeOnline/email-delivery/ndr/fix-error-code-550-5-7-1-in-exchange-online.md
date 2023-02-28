@@ -136,9 +136,9 @@ To configure the public folder to accept messages from external senders, follow 
 
 In this case, the NDR the sender receives would include information in the **Diagnostics for administrators** section similar to the following information:
 
-`5.7.1 Service unavailable; Client host [xxx.xxx.xxx.xxx] blocked using Blocklist 1; To request removal from this list please forward this message to delist@messaging.microsoft.com`
+`5.7.1 Service unavailable; Client host [xxx.xxx.xxx.xxx] blocked using Blocklist 1; To request removal from this list please forward this message to delist@microsoft.com`
 
-To remove the restriction on the sender's source email system, forward the NDR message to delist@messaging.microsoft.com. Also see [Use the delist portal to remove yourself from the blocked senders list](/microsoft-365/security/office-365-security/use-the-delist-portal-to-remove-yourself-from-the-office-365-blocked-senders-lis).
+To remove the restriction on the sender's source email system, forward the NDR message to delist@microsoft.com. Also see [Use the delist portal to remove yourself from the blocked senders list](/microsoft-365/security/office-365-security/use-the-delist-portal-to-remove-yourself-from-the-office-365-blocked-senders-lis).
 
 ### Your domain isn't fully enrolled in Microsoft 365 or Office 365
 
