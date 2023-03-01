@@ -115,7 +115,7 @@ This requires collecting network trace logs on the primary and secondary replica
 
 ## How to diagnose replica connection timeouts?
 
-In the previous section What causes replica connection timeouts, one key reason for connection timeouts is application issues which prevent SQL Server from servicing the connection with the partner replica. This section explains how to analyze the SQL Server logs which may lead to root cause for the replica connection timeouts. This section ends with a more advanced section on how to collect network traces when the connection timeouts occur so that the network can be checked.
+In the previous section [What causes replica connection timeouts](#what-causes-replica-connection-timeouts), one key reason for connection timeouts is application issues, which prevent SQL Server from servicing the connection with the partner replica. This section explains how to analyze the SQL Server logs, which may lead to root cause for the replica connection timeouts. This section ends with a more advanced section on how to collect network traces when the connection timeouts occur so that the network can be checked.
 
 ### Assess timing and location of replica connection timeouts
 
@@ -126,11 +126,11 @@ Review the history, the frequency, and trends of the connection timeouts. The me
 The `AlwaysOn_health` extended event session has been enhanced to include the `ucs_connection_setup`event, which is triggered when a replica is establishing a connection with its partner replica. This can be helpful when troubleshooting connection timeout issues.
 
 > [!NOTE]
-> Extended event ucs_connection_setup was added to the latest cumulative updates in SQL Server, you must be running the latest cumulative updates to observe this extended event.
+> Extended event `ucs_connection_setup` was added to the latest cumulative updates in SQL Server, you must be running the latest cumulative updates to observe this extended event.
 
-### Query AlwaysOn Distributed Management Views (DMVs) for more information
+### Query AlwaysOn Distributed Management Views (DMVs)
 
-You can also query more information about the replica's connected state. This query only reports the connected state and any errors associated with the connection timeout at point in time and if the connection issues are intermittent, it may not capture the disconnected state easily.
+You can also query more information about the replica's connected state. This query only reports the connected state and any errors associated with the connection timeout at point in time and if the connection issues are intermittent, it might not capture the disconnected state easily.
 
 ```sql
 SELECT ar.replica_server_name, ars.role_desc, ars.connected_state_desc,
@@ -142,7 +142,7 @@ In this example, there is a sustained disconnected state because the mirroring e
 
 :::image type="content" source="media/troubleshooting-intermittent-connection-timeouts-availability-groups/query-primary-replica.png" alt-text="Screenshot that shows sustained disconnected state because the mirroring endpoint on the primary replica has been stopped." lightbox="media/troubleshooting-intermittent-connection-timeouts-availability-groups/query-primary-replica.png":::
 
-By querying the secondary replica, the AlwaysOn DMVs only report on the secondary replica.
+By querying the secondary replica, the Always On DMVs only report on the secondary replica.
 
 :::image type="content" source="media/troubleshooting-intermittent-connection-timeouts-availability-groups/query-secondary-replica.png" alt-text="Screenshot that shows sustained disconnected state because the mirroring endpoint on the secondary replica has been stopped." lightbox="media/troubleshooting-intermittent-connection-timeouts-availability-groups/query-secondary-replica.png":::
 
@@ -165,7 +165,7 @@ The following screenshot shows the AlwaysOn_health data from the secondary repli
 
 ### Investigate SQL Server application ability to service replica connection
 
-One of the most common reasons an availability replica cannot service the partner replica connection is a non-yielding scheduler. For more information on what a non-yielding scheduler is see [Troubleshooting SQL Server Scheduling and Yielding](https://techcommunity.microsoft.com/t5/sql-server-support-blog/troubleshooting-sql-server-scheduling-and-yielding/ba-p/319148).
+One of the most common reasons an availability replica can't service the partner replica connection is a non-yielding scheduler. For more information on what a non-yielding scheduler is, see [Troubleshooting SQL Server Scheduling and Yielding](https://techcommunity.microsoft.com/t5/sql-server-support-blog/troubleshooting-sql-server-scheduling-and-yielding/ba-p/319148).
 
 SQL Server will track non-yielding scheduler events as short as 5 to 10 seconds. It will begin tracking these shorter non-yielding events and will report them in the `TrackingNonYieldingScheduler` data point in the `sp_server_diagnostics query_processing` component output.
 
@@ -211,7 +211,9 @@ Next, the output from the SQL Agent job running sp_server_diagnostics was checke
 
 :::image type="content" source="media/troubleshooting-intermittent-connection-timeouts-availability-groups/create-time-timestamp-query-processing.png" alt-text="Screenshot that shows sp_server_diagnostics output has been concatenated." lightbox="media/troubleshooting-intermittent-connection-timeouts-availability-groups/create-time-timestamp-query-processing.png":::
 
-### Next steps after a non-yielding event has been associated with the replica connection timeout
+### Investigate a non-yielding scheduler event
+
+If you have confirmed from the earlier diagnosis steps that a non-yielding event caused the replica connection timeout:
 
 - Identify the workloads that are running in SQL Server at the time of the non-yielding events are being run.
 
@@ -219,15 +221,15 @@ Next, the output from the SQL Agent job running sp_server_diagnostics was checke
 
 - Collect performance monitor tracing on the system where the non-yielding event was detected.
 
-- Collect key performance counters for system resources including **Processor::% Processor Time, Memory::Available MBytes** and **Logical Disk::Avg Disk Queue Length** and **Logical Disk::Avg Disk sec/Transfer**.
+- Collect key performance counters for system resources including **Processor::% Processor Time, Memory::Available MBytes**, **Logical Disk::Avg Disk Queue Length**, and **Logical Disk::Avg Disk sec/Transfer**.
 
 - If necessary, open a support incident with the SQL Server support team for further assistance in finding root cause for these non-yielding events and share the logs you have collected for further analysis.
 
 ### Advanced Data Collection - collect network trace during connection timeout
 
-If the previous diagnosis of the SQL Server application didn’t yield root cause, the network should be investigated. Successful analysis of the network requires collecting a network trace that covers the time of the connection timeout.
+If the previous diagnosis of the SQL Server application didn't yield root cause, the network should be investigated. Successful analysis of the network requires collecting a network trace that covers the time of the connection timeout.
 
-The following instructions start a Windows `netsh` network tracing on the replicas where the connection timeouts are being reported in the SQL Server error logs. A Windows scheduled event task is triggered when one of the SQL Server connection errors is recorded in the application event log. The scheduled task runs a command to stop the `netsh` network trace, so that the key network trace data is not overwritten.
+The following instructions start a Windows `netsh` network tracing on the replicas where the connection timeouts are being reported in the SQL Server error logs. A Windows scheduled event task is triggered when one of the SQL Server connection errors is recorded in the application event log. The scheduled task runs a command to stop the `netsh` network trace, so that the key network trace data isn't overwritten.
 
 The following instructions assume a path of F:\ for the batch and tracing logs. Adjust this path to your environment:
 
@@ -245,7 +247,7 @@ schtasks /Create /tn Event35206Task /tr F:\stoptrace.bat /SC ONEVENT /EC Applica
 schtasks /Create /tn Event35267Task /tr F:\stoptrace.bat /SC ONEVENT /EC Application /MO *[System/EventID=35267] /f /RL HIGHEST
 ```
 
-1. When the event occurs and the network traces are stopped and captured, you can delete the on event tasks:
+1. When the event occurs and the network traces are stopped and captured, you can delete the `ONEVENT` tasks:
 
 ```console
 PS C:\Users\sqladmin> Schtasks /Delete /tn Event35206Task /F
