@@ -1,7 +1,7 @@
 ---
 title: Bulk load operations can leave large amounts of unused space
 description: Learn how to resolve the issue of excessive unused space in bulk load operations that have a small batch size.
-ms.date: 02/27/2023
+ms.date: 03/01/2023
 ms.custom: sap:Administration and management
 ms.reviewer: jopilov
 author: padmajayaraman
@@ -29,7 +29,7 @@ Here's an example.
 
 If you use bulk load operation that have a small batch size, tables might allocate page [extents](/sql/relational-databases/pages-and-extents-architecture-guide#extents) that are barely used.
 
-Running bulk load operations that use minimal logging can help improve the performance of data load operations in indexes if the data is pre-ordered or sequentially loaded. But the batch size (`BATCHSIZE` in [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql) and `-b` option in [bcp utility](/sql/tools/bcp-utility)) that you use in these operations plays a critical role in achieving faster performance on one hand and efficient space usage on another. In minimal logging mode, each bulk load batch bypasses a lookup for available free space when it allocates one or more new extents. SQL Server skips this cache lookup in order to optimize insert performance. It directly creates new extents instead of seeking for free space in existing ones. Therefore, if you use a small batch size (for example, 10 rows per batch), SQL Server reserves a new 64-KB extent for every batch of 10 records. This is wasteful for most row sizes (some rows may be so wide as to fit on a single page in which case 10 records may be appropriate). The remaining pages in the extent are unused but reserved for the object. Therefore, the fast load optimization combined with a smaller batch size causes inefficient space usage.
+Running bulk load operations that use minimal logging can help improve the performance of data load operations in indexes if the data is pre-ordered or sequentially loaded. But the batch size (`BATCHSIZE` in [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql) and `-b` option in [bcp utility](/sql/tools/bcp-utility)) that you use in these operations plays a critical role in achieving faster performance on one hand and efficient space usage on another. In minimal logging mode, each bulk load batch bypasses a lookup for available free space when it allocates one or more new extents. SQL Server skips this cache lookup to optimize insert performance. It directly creates new extents instead of looking for free space in existing ones. Therefore, if you use a small batch size (for example, 10 rows per batch), SQL Server reserves a new 64-KB extent for every batch of 10 records. This is wasteful for most row sizes (some rows may be so wide as to fit on a single page in which case 10 records may be appropriate). The remaining pages in the extent are unused but reserved for the object. Therefore, the fast load optimization combined with a smaller batch size causes inefficient space usage.
 
 The following table from [the MSSQL Tiger Team blog site](/archive/blogs/sql_server_team/sql-server-2016-minimal-logging-and-impact-of-the-batchsize-in-bulk-load-operations) shows some empirical evidence to illustrate this behavior.
 
