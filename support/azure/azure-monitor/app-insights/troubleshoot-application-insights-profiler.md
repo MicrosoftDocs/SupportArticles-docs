@@ -52,11 +52,11 @@ Search for trace messages and custom events sent by Profiler to your Application
 
 1. In your Application Insights resource, select **Search** from the top menu bar.
 
-   :::image type="content" source="./media/troubleshoot-application-insights-profiler/search-trace-messages.png" alt-text="Screenshot of selecting the search button from the Application Insights resource.":::
+   :::image type="content" source="media/troubleshoot-application-insights-profiler/search-trace-messages.png" alt-text="Screenshot of selecting the search button from the Application Insights resource.":::
 
 1. Use the search string `stopprofiler OR startprofiler OR upload OR ServiceProfilerSample` to find the relevant data:
 
-   :::image type="content" source="./media/troubleshoot-application-insights-profiler/search-results.png" alt-text="Screenshot of the search results from aforementioned search string.":::
+   :::image type="content" source="media/troubleshoot-application-insights-profiler/search-results.png" alt-text="Screenshot of the search results from aforementioned search string.":::
 
    The search results above include two examples of searches from two AI resources:
 
@@ -89,18 +89,18 @@ For Profiler to work properly, make sure:
       1. Select **Go**.
    1. In the top menu, select **Tools** > **WebJobs dashboard**. The **WebJobs** pane opens.
 
-      :::image type="content" source="./media/troubleshoot-application-insights-profiler/profiler-web-job.png" alt-text="Screenshot of the WebJobs pane, which displays the name, status, and last run time of jobs.":::
+      :::image type="content" source="media/troubleshoot-application-insights-profiler/profiler-web-job.png" alt-text="Screenshot of the WebJobs pane, which displays the name, status, and last run time of jobs.":::
 
    1. To view the details of the webjob, including the log, select the **ApplicationInsightsProfiler3** link.  
      The **Continuous WebJob Details** pane opens.
 
-      :::image type="content" source="./media/troubleshoot-application-insights-profiler/profiler-web-job-log.png" alt-text="Screenshot of the Continuous WebJob Details pane.":::
+      :::image type="content" source="media/troubleshoot-application-insights-profiler/profiler-web-job-log.png" alt-text="Screenshot of the Continuous WebJob Details pane.":::
 
 If Profiler still isn't working for you, you can download the log and [submit an Azure support ticket](https://azure.microsoft.com/support/).
 
 #### Check the Diagnostic Services site extension's status page
 
-If Profiler was enabled through the [Application Insights pane](/azure/azure-monitor/profiler/profiler) in the portal, it was enabled by the Diagnostic Services site extension. You can check the status page of this extension by going to the url `https://{site-name}.scm.azurewebsites.net/DiagnosticServices`.
+If Profiler was enabled through the [Application Insights pane](/azure/azure-monitor/profiler/profiler) in the portal, it was enabled by the Diagnostic Services site extension. You can check the status page of this extension by going to the url `https://<site-name>.scm.azurewebsites.net/DiagnosticServices`.
 
 > [!NOTE]
 > The domain of the status page link will vary depending on the cloud. This domain will be the same as the Kudu management site for App Service.
@@ -120,7 +120,7 @@ It will end like this: `https://<kudu-url>/DiagnosticServices`.
 
 It will display a status page similar to:
 
-:::image type="content" source="./media/troubleshoot-application-insights-profiler/status-page.png" alt-text="Screenshot of the Diagnostic Services Status Page.":::
+:::image type="content" source="media/troubleshoot-application-insights-profiler/status-page.png" alt-text="Screenshot of the Diagnostic Services Status Page.":::
 
 > [!NOTE]
 > Codeless installation of Application Insights Profiler follows the .NET Core support policy. For more information about supported runtimes, see [.NET Core Support Policy](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).
@@ -145,9 +145,7 @@ If you're redeploying your web app to a Web Apps resource with Profiler enabled,
 
 This error occurs if you run Web Deploy from scripts or from the Azure Pipelines. Resolve by adding the following deployment parameters to the Web Deploy task:
 
-```
--skip:Directory='.*\\App_Data\\jobs\\continuous\\ApplicationInsightsProfiler.*' -skip:skipAction=Delete,objectname='dirPath',absolutepath='.*\\App_Data\\jobs\\continuous$' -skip:skipAction=Delete,objectname='dirPath',absolutepath='.*\\App_Data\\jobs$'  -skip:skipAction=Delete,objectname='dirPath',absolutepath='.*\\App_Data$'
-```
+`-skip:Directory='.*\\App_Data\\jobs\\continuous\\ApplicationInsightsProfiler.*' -skip:skipAction=Delete,objectname='dirPath',absolutepath='.*\\App_Data\\jobs\\continuous$' -skip:skipAction=Delete,objectname='dirPath',absolutepath='.*\\App_Data\\jobs$'  -skip:skipAction=Delete,objectname='dirPath',absolutepath='.*\\App_Data$'`
 
 These parameters delete the folder used by Application Insights Profiler and unblock the redeploy process. They don't affect the Profiler instance that's currently running.
 
@@ -155,7 +153,7 @@ These parameters delete the folder used by Application Insights Profiler and unb
 
 Profiler runs as a continuous webjob in the web app. You can open the web app resource in the [Azure portal](https://portal.azure.com). In the **WebJobs** pane, check the status of **ApplicationInsightsProfiler**. If it isn't running, open **Logs** to get more information.
 
-### VMs and Cloud Services
+### Virtual machines and Cloud Services
 
 To see whether Profiler is configured correctly by Azure Diagnostics, follow these steps:
 
@@ -171,17 +169,13 @@ To check the settings that were used to configure Azure Diagnostics, follow thes
 
 1. Open the log file at this location. The plugin version may be newer on your machine.
 
-    For VMs:
+    - For VMs:
 
-    ```
-    c:\WindowsAzure\logs\Plugins\Microsoft.Azure.Diagnostics.PaaSDiagnostics\1.11.3.12\DiagnosticsPlugin.log
-    ```
+        *C:\WindowsAzure\logs\Plugins\Microsoft.Azure.Diagnostics.PaaSDiagnostics\1.11.3.12\DiagnosticsPlugin.log*
 
-    For Cloud Services:
+    - For Cloud Services:
 
-    ```
-    c:\logs\Plugins\Microsoft.Azure.Diagnostics.PaaSDiagnostics\1.11.3.12\DiagnosticsPlugin.log  
-    ```
+        *C:\logs\Plugins\Microsoft.Azure.Diagnostics.PaaSDiagnostics\1.11.3.12\DiagnosticsPlugin.log*
 
 1. In the file, search for the string `WadCfg` to find the settings that were passed to the VM to configure Azure Diagnostics.
 
@@ -189,37 +183,29 @@ To check the settings that were used to configure Azure Diagnostics, follow thes
 
 1. Check the command line that's used to start Profiler. The arguments that are used to launch Profiler are in the following file (the drive could be `C:` or `D:` and the directory may be hidden):
 
-    For VMs:
+    - For VMs:
 
-    ```
-    C:\ProgramData\ApplicationInsightsProfiler\config.json
-    ```
-    
-    for Cloud Services:
+        *C:\ProgramData\ApplicationInsightsProfiler\config.json*
 
-    ```
-    D:\ProgramData\ApplicationInsightsProfiler\config.json
-    ```
+    - For Cloud Services:
+
+        *D:\ProgramData\ApplicationInsightsProfiler\config.json*
 
 1. Make sure that the iKey on the Profiler command line is correct.
 
-1. Using the path found in the preceding *config.json* file, check the Profiler log file, called *BootstrapN.log*. It displays:
+1. Using the path found in the preceding *config.json* file, check the Profiler log file, called *BootstrapN.log*. It displays the following information:
    - The debug information that indicates the settings that Profiler is using.
    - Status and error messages from Profiler.  
 
-    You can find the file:
+    You can find the file from the following directions:
 
-    For VMs:
+    - For VMs:
 
-    ```
-    C:\WindowsAzure\Logs\Plugins\Microsoft.Azure.Diagnostics.IaaSDiagnostics\1.17.0.6\ApplicationInsightsProfiler
-    ```
+        *C:\WindowsAzure\Logs\Plugins\Microsoft.Azure.Diagnostics.IaaSDiagnostics\1.17.0.6\ApplicationInsightsProfiler*
 
-    For Cloud Services:
+    - For Cloud Services:
 
-    ```
-    C:\Logs\Plugins\Microsoft.Azure.Diagnostics.IaaSDiagnostics\1.17.0.6\ApplicationInsightsProfiler
-    ```
+        *C:\Logs\Plugins\Microsoft.Azure.Diagnostics.IaaSDiagnostics\1.17.0.6\ApplicationInsightsProfiler*
 
 1. If Profiler is running while your application is receiving requests, the "Activity detected from iKey" message is displayed.
 
@@ -231,7 +217,7 @@ If your application connects to the internet via a proxy or a firewall, you may 
 
 The IPs used by Application Insights Profiler are included in the Azure Monitor service tag. For more information, see [Service Tags documentation](/azure/virtual-network/service-tags-overview).
 
-## If all else fails...
+## If all else fails
 
 Submit a support ticket in the Azure portal. Include the correlation ID from the error message.
 
