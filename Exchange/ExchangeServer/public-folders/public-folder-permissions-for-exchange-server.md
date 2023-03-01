@@ -43,8 +43,8 @@ The following table lists the predefined public folder roles and the permissions
 |Owner|X|X|X|X|X|X|X|X|X|X|
 |PublishingEditor|X|X|X|||X|X|X|X|X|
 |Editor|X|X||||X|X|X|X|X|
-|PublishingAuthor|X|X|X|||X|X||X|X|
+|PublishingAuthor|X|X|X|||X|X||X||
 |Author|X|X||||X|X||X||
-|Non-EditingAuthor|X|X||||X|||||
+|Non-EditingAuthor|X|X||||X|||X||
 |Reviewer||X||||X|||||
 |Contributor|X|||||X|||||

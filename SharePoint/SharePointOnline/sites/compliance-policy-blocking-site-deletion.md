@@ -21,7 +21,7 @@ appliesto:
 ms.reviewer: prbalusu
 ---
 
-# Can't delete a site because of an invalid retention policy
+# Can't delete a site because of an invalid retention policy or eDiscovery hold
 
 ## Symptoms
 
@@ -38,21 +38,23 @@ You might experience one of the following scenarios.
 
 **Scenario 3:** You've excluded or removed a SharePoint site or a OneDrive site from a retention policy. More than 24 hours after you make these updates, you try to delete the affected site or a version of a document on the site. However, the attempt is unsuccessful, and you receive one of the error messages that are mentioned in scenarios 1 and 2.
 
+**Scenario 4:** You've excluded or removed a SharePoint or a OneDrive site from an eDiscovery hold, the hold stays in grace period for 30 days and prevents the site to be deleted. And you receive the error message that's mentioned in scenario 1.
+
 ## Cause
 
-Each of these error messages is generated when a retention policy on the affected site blocks a deletion even after you exclude or remove the site from the policy. This indicates that the retention policy might be invalid.
+Each of these error messages is generated when a retention policy on the affected site blocks a deletion even after you exclude or remove the site from the policy or eDiscovery hold. This indicates that the retention policy might be invalid or there is a grace period for the eDiscovery hold.
 
 ## Resolution
 
-To verify the validity of the retention policy and delete it if it's invalid, run the following test in the Microsoft 365 admin center. You must have administrator permissions to use the following steps.
+To verify the validity of the retention policy or grace eDiscovery hold and delete it if it's invalid, run the following test in the Microsoft 365 admin center. You must have administrator permissions to use the following steps.
 
 > [!NOTE]
 > This test isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
 
-1. Select the **Run Tests: Invalid Retention Hold** button to populate the associated test in the Microsoft 365 admin center:
+1. Select the **Run Tests: Invalid Retention or grace eDiscovery Hold** button to populate the associated test in the Microsoft 365 admin center:
 
    > [!div class="nextstepaction"]
-   > [Run Tests: Invalid Retention Hold](https://aka.ms/PillarInvalidRetention)
+   > [Run Tests: Invalid Retention or grace eDiscovery Hold](https://aka.ms/PillarInvalidRetention)
 
 2. In the **Run diagnostics** section, either type or copy and paste the URL of the affected SharePoint site or OneDrive site.
 

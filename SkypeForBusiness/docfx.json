@@ -103,7 +103,7 @@
       "breadcrumb_path": "/skypeforbusiness/troubleshoot/breadcrumb/toc.json",
       "extendBreadcrumb": true,
       "recommendations": true,
-      "feedback_system": "none",
+      "feedback_system": "Standard",
       "hideEdit": true,
       "uhfHeaderId": "MSDocsHeader-M365-IT",
       "titleSuffix": "Skype for Business",

@@ -366,3 +366,16 @@ This can be a client-side issue. To remediate it, follow these steps:
 7. If step 6 works, then the issue occurs because of a local virus scanner or a disk issue.
 
 If none of these steps solve the problem, gather the output of `Get-ComplianceSearch` and `Get-ComplianceSearchAction` before creating a support case.
+
+**Issue: Problem retrieving mailbox items while archiving**
+
+The following errors are displayed in Export Warnings.csv and Errors.csv during content search and the eDiscovery standard export workflow.
+
+> "FailedToExportItem_Microsoft.Exchange.EDiscovery.Export.ExportException: Export failed with error type: 'FailedToExportItem'. Message: Item has been moved or deleted."
+> "FailedToExportItem_Microsoft.Exchange.EDiscovery.Export.ExportException: Export failed with error type: 'FailedToExportItem'. Message: Unable to retrieve item due to timeout after multiple retries."
+
+These errors indicate that certain items found during search couldn’t be retrieved. These might be temporary backup copies that are created during archival. While these temporary backups are accessible to search and thus can be matched, they are not accessible for retrieval. However eDiscovery can match and retrieve the original items which are exact copies of the backups.
+
+**Resolution**
+
+No action is needed to address these errors. The original items associated with the same mailbox will be retrieved and subsequently exported or added to a review set.

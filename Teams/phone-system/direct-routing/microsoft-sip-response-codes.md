@@ -32,7 +32,7 @@ The structure of a Microsoft response code is as follows:
 
 *5\<X\>\<Y\>\<ZZZ\>*
 
-- *5* indicates the PSTN hub.
+- *5* indicates Teams Phone System.
 - \<*X*\> represents the module that generates the response code. If \<*X*\> is **6**, this indicates that the SBC generated the final response code. All other values of \<*X*\> indicate that a Microsoft module generated the final response code.  
 - \<*Y*\> is the module-specific source or protocol.
 - \<*ZZZ*\> is the module-specific or source-specific code. It might be equivalent to the SIP response code.

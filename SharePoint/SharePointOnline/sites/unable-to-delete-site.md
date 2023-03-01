@@ -26,6 +26,7 @@ When trying to delete a SharePoint site, you might get an error stating the site
 - Can't delete site
 - This site has a compliance policy set to block deletion
 - The requested operation is not supported for site
+- A compliance policy is currently blocking this site deletion
 
 The above errors are a sample of the possible errors. There are several other errors that will state the site can't be deleted.
 

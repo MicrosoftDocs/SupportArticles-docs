@@ -116,11 +116,11 @@ Here are resolutions to common issues that you might experience when you use sha
 
 **Q1:** A link shows a gray background, but the permission checking for the link doesn't seem to be working. Also, the option to manage access to the link isn't available.
 
-**A1:** It's possible for a link to have a gray background and yet not be recognized by Outlook as a link to a OneDrive or SharePoint file. This issue commonly occurs when the link is in a message that you received from someone else, and you reply to or forward the message. In this case, there are several possible reason why this issue might occur:
+**A1:** It's possible for a link to have a gray background and yet not be recognized by Outlook as a link to a OneDrive or SharePoint file. This issue commonly occurs when the link is in a message that you received from someone else, and you reply to or forward the message. In this case, there are several possible reasons why this issue might occur:
 
 - The original sender of the link manually applied a gray background to it.
 - Your Outlook client doesn't recognize the service that the link points to. For example, if the sender hosts their SharePoint site on a custom domain instead of sharepoint.com, Outlook can't recognize the site unless you're signed in to an account that's associated with the domain under **File** > **Office Account** > **Connected Services**.
-- The link is a Safelink that's [wrapped](/microsoft-365/security/office-365-security/safe-links#safe-links-settings-for-email-messages) by using the Microsoft standard URL prefix: `https://nam01.safelinks.protection.outlook.com`. If you copy a wrapped link from an email message, and paste it into a new email message, Outlook can't unwrap the link to recognize the file that's stored on OneDrive or SharePoint.
+- The link is a Safe link that's [wrapped](/microsoft-365/security/office-365-security/safe-links#safe-links-settings-for-email-messages) by using the Microsoft standard URL prefix: `https://nam01.safelinks.protection.outlook.com`. If you copy a wrapped link from an email message, and paste it into a new email message, Outlook can't unwrap the link to recognize the file that's stored on OneDrive or SharePoint.
 
 The only situation in which Outlook can unwrap such a message is if you view or preview the message and then reply or forward it.
 

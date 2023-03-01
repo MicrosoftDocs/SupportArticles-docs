@@ -2,17 +2,9 @@
 
 
 
-## Week of August 29, 2022
+## Week of January 16, 2023
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 9/2/2022 | [Office troubleshooting for admins and IT professionals # < 60 chars](/office/troubleshoot/index) | modified |
-
-
-## Week of August 15, 2022
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 8/16/2022 | [Microsoft 365 Apps activation network connection issues](/office/troubleshoot/activation/network-connection-issues) | modified |
+| 1/20/2023 | [Cannot be opened error when you start Office Starter 2010](/office/troubleshoot/office-suite-issues/cannot-be-opened-error-when-start) | modified |
