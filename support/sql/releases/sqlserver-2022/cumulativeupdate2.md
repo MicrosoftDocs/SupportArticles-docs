@@ -13,14 +13,14 @@ appliesto:
 # KB5023127 - Cumulative Update 2 for SQL Server 2022
 
 _Release Date:_ &nbsp; March 08, 2023  
-_Version:_ &nbsp; 16.0.4013.1
+_Version:_ &nbsp; 16.0.4015.1
 
 ## Summary
 
-This article describes Cumulative Update package 2 (CU2) for Microsoft SQL Server 2022. This update contains 13 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 1, and it updates components in the following builds:
+This article describes Cumulative Update package 2 (CU2) for Microsoft SQL Server 2022. This update contains 14 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 1, and it updates components in the following builds:
 
-- SQL Server - Product version: **16.0.4013.1**, file version: **
-- Analysis Services - Product version: **, file version: **
+- SQL Server - Product version: **16.0.4015.1**, file version: **2022.160.4015.1**
+- Analysis Services - Product version: **16.0.43.208**, file version: **2022.160.43.208**
 
 > [!NOTE]
 > This Cumulative Update includes the recently released GDR for SQL Server 2022 ([KB5021522 - Description of the security update for SQL Server 2022 GDR: February 14, 2023](https://support.microsoft.com/help/5021522)). For more information about SQL Servicing releases, see [Servicing models for SQL Server](../../general/servicing-models-sql-server.md).
@@ -40,6 +40,19 @@ For more information about the bugs that are fixed and enhancements that are inc
 
 | Bug reference | Description | Fix area | Component | Platform |
 |-|-|-|-|-|
+| <a id="2043384">[2043384](#2043384)</a> | Fixes an issue where the sqlcmd utility doesn't honor the sqlcmd command ":!!" when you run operating system (OS) commands. For more information, see [sqlcmd Commands](https://learn.microsoft.com/sql/tools/sqlcmd/sqlcmd-utility?view=sql-server-ver16#sqlcmd-commands). | SQL Server Client Tools | Command Line Tools | Windows |
+| <a id="2232487">[2232487](#2232487) | Starting in SQL Server 2022 CU 2, CREATE EXTERNAL DATA SOURCE supports the use of TNS files when connecting to Oracle, by using the CONNECTION_OPTIONS parameter. | SQL Server Engine |  PolyBase | Windows |
+| <a id="2217553">[2217553](#2217553)</a> | Fixes a memory issue when a recursive graph query is aborted during execution. | SQL Server Engine | Query Execution | All |
+| <a id="2163005">[2163005](#2163005)</a> | Fixes an issue where the DataAccess property for the linked server is reset to False when you execute the `sp_addsubscription` stored procedure or create a subscription through the New Subscription Wizard on server A after the following scenarios: </br></br>1. You have a linked server on server A for server B and have used the linked server for data access. </br>2. You configure server A as the Publisher and server B as the Subscriber and create transactional replication. | SQL Server Engine | Replication | All |
+| <a id="2119277">[2119277](#2119277)</a> | Fixes an issue where the full cleanup failure in the first side table and partial cleanup failure in others can cause incorrect syscommittab table cleanup in change tracking auto cleanup. This issue can leave orphaned records in the side tables. | SQL Server Engine | Replication | Windows |
+| <a id="2205260">[2205260](#2205260)</a> | Before you apply this fix, the "Replicated transactions are waiting for next Log backup or for mirroring partner to catch up" error may occur when you enable change data capture (CDC) and delayed durability on a database at the same time. After you apply this fix, error 22891 or 22892 occurs to prevent you from enabling CDC and delayed durability on a database at the same time, which means: </br>- Error 22891 occurs when you try to enable CDC on a database that has delayed durability enabled. </br>- Error 22892 occurs when you try to enable delayed durability on a database that has CDC enabled. </br></br>Error message: </br></br>- 22891: Could not enable Change Data Capture for database '\<DatabaseName>'. Change Data Capture cannot be enabled on a DB with delayed durability set. </br>- 22892: Could not enable delayed durability on DB. Delayed durability cannot be enabled on a DB while Change Data Capture is enabled. </br></br>For more information, see [Delayed durability and other SQL Server features](/sql/relational-databases/logs/control-transaction-durability#bkmk_OtherSQLFeatures). | SQL Server Engine | Replication | Windows |
+|<a id="2216691">[2216691](#2216691)</a> </br><a id="2234321">[2234321](#2234321)</a> | Before you apply this fix, the "Replicated transactions are waiting for next Log backup or for mirroring partner to catch up" error may occur when you enable transactional replication and delayed durability on a database at the same time. After you apply this fix, error 22891 or 22892 occurs to prevent you from enabling transactional replication and delayed durability on a database at the same time, which means: </br>- Error 22891 occurs when you try to enable transactional replication on a database that has delayed durability enabled. </br>- Error 22892 occurs when you try to enable delayed durability on a database that has transactional replication enabled. </br></br>Error message: </br></br>- 22891: Could not enable Replication for database '\<DatabaseName>'. Replication cannot be enabled on a DB with delayed durability set. </br>- 22892: Could not enable delayed durability on DB. Delayed durability cannot be enabled on a DB while Replication is enabled.  </br></br>For more information, see [Delayed durability and other SQL Server features](/sql/relational-databases/logs/control-transaction-durability#bkmk_OtherSQLFeatures). | SQL Server Engine | Replication | All |
+| <a id="2217036">[2217036](#2217036) | Fixes an issue where the ·sp_replmonitorsubscriptionpendingcmds` stored procedure, which is used to report the number of pending commands for peer-to-peer transactional replication, reports the incorrect number of pending commands. | SQL Server Engine | Replication | All |
+| <a id="2223628">[2223628](#2223628)</a> |	Fixes the incorrect primary key column indexing issue during the schema export phase of Azure Synapse Link replication. This issue occurs when you drop one or more columns that are in front of the primary key column of a table and then enable Azure Synapse Link replication for the table. | SQL Server Engine | Replication | Windows |
+| <a id="2175274">[2175274](#2175274)</a> | Fixes an issue where callers of `sp_srvrolepermission` and `sp_helpsrvrolemember` receive an error when passing in the name of a fixed server role on Azure SQL Managed Instance, such as `sysadmin`. | SQL Server Engine | Security Infrastructure | All |
+| <a id="2231144">[2231144](#2231144)</a> | Fixes an issue that's caused by automatic parameterization of queries where interleaved execution of multi-statement table-valued functions (MSTVFs) may return incorrect results or cause a deadlock on the first execution. | | | All |
+| <a id="2217522">[2217522](#2217522)</a> | Fixes an issue where interleaved execution for multi-statement table-valued functions (MSTVFs) uses the OPTIMIZE FOR query hint value and returns an incorrect result for the first-time execution when the runtime constant value is different from the OPTIMIZE FOR query hint value. After you apply this fix, the interleaved execution will check OPTIMIZE FOR query hints in all cases to avoid using the OPTIMIZE FOR query hint value for first-time execution. | | |All|
+| <a id="2230926">[2230926](#2230926)</a> | [FIX: Error may occur when setting the SQL Server Agent job history log (KB5024352)](error-when-setting-the-sql-server-agent-job-history-log.md) | | | All |
 
 ## How to obtain or download this or the latest cumulative update package
 
@@ -84,7 +97,7 @@ You can verify the download by computing the hash of the *SQLServer2022-KB502312
 
 |File name|SHA256 hash|
 |---------|---------|
-|SQLServer2022-KB5023127-x64.exe||
+|SQLServer2022-KB5023127-x64.exe| 076E99DF447AC3F977F6ABB3D94874F5D75EE8C6EB1AD772FB1C874F5D17CA35 |
 
 </details>
 
@@ -92,6 +105,268 @@ You can verify the download by computing the hash of the *SQLServer2022-KB502312
 <summary><b>Cumulative Update package file information</b></summary>
 
 The English version of this package has the file attributes (or later file attributes) that are listed in the following table. The dates and times for these files are listed in Coordinated Universal Time (UTC). When you view the file information, it's converted to local time. To find the difference between UTC and local time, use the **Time Zone** tab in the **Date and Time** item in Control Panel.
+
+SQL Server 2022 Database Services Common Core
+
+|                   File   name              |   File version  | File size |    Date   |  Time | Platform |
+|:------------------------------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
+| Instapi150.dll                             | 2022.160.4015.1 | 104352    | 27-Feb-23 | 16:20 | x64      |
+| Instapi150.dll                             | 2022.160.4015.1 | 79776     | 27-Feb-23 | 16:20 | x86      |
+| Microsoft.analysisservices.adomdclient.dll | 16.0.43.208     | 2633680   | 27-Feb-23 | 16:19 | x86      |
+| Microsoft.analysisservices.adomdclient.dll | 16.0.43.208     | 2633672   | 27-Feb-23 | 16:20 | x86      |
+| Microsoft.analysisservices.core.dll        | 16.0.43.208     | 2933152   | 27-Feb-23 | 16:20 | x86      |
+| Microsoft.analysisservices.xmla.dll        | 16.0.43.208     | 2323360   | 27-Feb-23 | 16:20 | x86      |
+| Microsoft.analysisservices.xmla.dll        | 16.0.43.208     | 2323408   | 27-Feb-23 | 16:20 | x86      |
+| Microsoft.sqlserver.rmo.dll                | 16.0.4015.1     | 554960    | 27-Feb-23 | 16:20 | x86      |
+| Msasxpress.dll                             | 2022.160.43.208 | 27600     | 27-Feb-23 | 16:20 | x86      |
+| Msasxpress.dll                             | 2022.160.43.208 | 32672     | 27-Feb-23 | 16:20 | x64      |
+| Sql_common_core_keyfile.dll                | 2022.160.4015.1 | 137168    | 27-Feb-23 | 16:19 | x64      |
+| Sqldumper.exe                              | 2022.160.4015.1 | 227280    | 27-Feb-23 | 16:20 | x86      |
+| Sqldumper.exe                              | 2022.160.4015.1 | 260000    | 27-Feb-23 | 16:20 | x64      |
+
+SQL Server 2022 Data Quality
+
+|          File   name      | File version | File size |    Date   |  Time | Platform |
+|:-------------------------:|:------------:|:---------:|:---------:|:-----:|:--------:|
+| Microsoft.ssdqs.core.dll  | 16.0.4015.1  | 599968    | 27-Feb-23 | 16:20 | x86      |
+| Microsoft.ssdqs.core.dll  | 16.0.4015.1  | 600016    | 27-Feb-23 | 16:20 | x86      |
+| Microsoft.ssdqs.dll       | 16.0.4015.1  | 173984    | 27-Feb-23 | 16:20 | x86      |
+| Microsoft.ssdqs.infra.dll | 16.0.4015.1  | 1857440   | 27-Feb-23 | 16:20 | x86      |
+| Microsoft.ssdqs.proxy.dll | 16.0.4015.1  | 370632    | 27-Feb-23 | 16:20 | x86      |
+| Microsoft.ssdqs.proxy.dll | 16.0.4015.1  | 370640    | 27-Feb-23 | 16:20 | x86      |
+
+SQL Server 2022 Database Services Core Instance
+
+|                    File   name               |   File version  | File size |    Date   |  Time | Platform |
+|:--------------------------------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
+| Aetm-enclave-simulator.dll                   | 2022.160.4015.1 | 4719056   | 27-Feb-23 | 17:52 | x64      |
+| Aetm-enclave.dll                             | 2022.160.4015.1 | 4673464   | 27-Feb-23 | 17:52 | x64      |
+| Aetm-sgx-enclave-simulator.dll               | 2022.160.4015.1 | 4909136   | 27-Feb-23 | 17:52 | x64      |
+| Aetm-sgx-enclave.dll                         | 2022.160.4015.1 | 4874464   | 27-Feb-23 | 17:52 | x64      |
+| Hadrres.dll                                  | 2022.160.4015.1 | 227280    | 27-Feb-23 | 17:52 | x64      |
+| Hkcompile.dll                                | 2022.160.4015.1 | 1411024   | 27-Feb-23 | 17:52 | x64      |
+| Hkengine.dll                                 | 2022.160.4015.1 | 5760928   | 27-Feb-23 | 17:52 | x64      |
+| Hkruntime.dll                                | 2022.160.4015.1 | 190416    | 27-Feb-23 | 17:52 | x64      |
+| Hktempdb.dll                                 | 2022.160.4015.1 | 71632     | 27-Feb-23 | 17:52 | x64      |
+| Microsoft.analysisservices.applocal.xmla.dll | 16.0.43.208     | 2322336   | 27-Feb-23 | 17:52 | x86      |
+| Microsoft.sqlserver.xevent.linq.dll          | 2022.160.4015.1 | 333776    | 27-Feb-23 | 17:52 | x64      |
+| Microsoft.sqlserver.xevent.targets.dll       | 2022.160.4015.1 | 96160     | 27-Feb-23 | 17:52 | x64      |
+| Odsole70.rll                                 | 16.0.4015.1     | 30624     | 27-Feb-23 | 17:52 | x64      |
+| Odsole70.rll                                 | 16.0.4015.1     | 38816     | 27-Feb-23 | 17:52 | x64      |
+| Odsole70.rll                                 | 16.0.4015.1     | 34768     | 27-Feb-23 | 17:52 | x64      |
+| Odsole70.rll                                 | 16.0.4015.1     | 38816     | 27-Feb-23 | 17:52 | x64      |
+| Odsole70.rll                                 | 16.0.4015.1     | 38816     | 27-Feb-23 | 17:52 | x64      |
+| Odsole70.rll                                 | 16.0.4015.1     | 30624     | 27-Feb-23 | 17:52 | x64      |
+| Odsole70.rll                                 | 16.0.4015.1     | 30672     | 27-Feb-23 | 17:52 | x64      |
+| Odsole70.rll                                 | 16.0.4015.1     | 34720     | 27-Feb-23 | 17:52 | x64      |
+| Odsole70.rll                                 | 16.0.4015.1     | 38816     | 27-Feb-23 | 17:52 | x64      |
+| Odsole70.rll                                 | 16.0.4015.1     | 30624     | 27-Feb-23 | 17:52 | x64      |
+| Odsole70.rll                                 | 16.0.4015.1     | 38816     | 27-Feb-23 | 17:52 | x64      |
+| Qds.dll                                      | 2022.160.4015.1 | 1779616   | 27-Feb-23 | 17:52 | x64      |
+| Rsfxft.dll                                   | 2022.160.4015.1 | 55200     | 27-Feb-23 | 17:52 | x64      |
+| Secforwarder.dll                             | 2022.160.4015.1 | 83872     | 27-Feb-23 | 17:52 | x64      |
+| Sql_engine_core_inst_keyfile.dll             | 2022.160.4015.1 | 137168    | 27-Feb-23 | 17:52 | x64      |
+| Sqlaccess.dll                                | 2022.160.4015.1 | 444320    | 27-Feb-23 | 17:52 | x64      |
+| Sqlagent.exe                                 | 2022.160.4015.1 | 726992    | 27-Feb-23 | 17:52 | x64      |
+| Sqlceip.exe                                  | 16.0.4015.1     | 300960    | 27-Feb-23 | 17:52 | x86      |
+| Sqlctr160.dll                                | 2022.160.4015.1 | 128928    | 27-Feb-23 | 17:52 | x86      |
+| Sqlctr160.dll                                | 2022.160.4015.1 | 157648    | 27-Feb-23 | 17:52 | x64      |
+| Sqldk.dll                                    | 2022.160.4015.1 | 4028368   | 27-Feb-23 | 17:52 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4015.1 | 1746848   | 27-Feb-23 | 17:52 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4015.1 | 3839904   | 27-Feb-23 | 17:52 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4015.1 | 4056992   | 27-Feb-23 | 17:52 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4015.1 | 4564896   | 27-Feb-23 | 17:52 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4015.1 | 4695968   | 27-Feb-23 | 17:52 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4015.1 | 3741600   | 27-Feb-23 | 17:52 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4015.1 | 3930016   | 27-Feb-23 | 17:52 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4015.1 | 4564896   | 27-Feb-23 | 17:52 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4015.1 | 4396960   | 27-Feb-23 | 17:52 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4015.1 | 4466592   | 27-Feb-23 | 17:52 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4015.1 | 2439072   | 27-Feb-23 | 17:52 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4015.1 | 2381728   | 27-Feb-23 | 17:52 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4015.1 | 4253600   | 27-Feb-23 | 17:52 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4015.1 | 3889056   | 27-Feb-23 | 17:52 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4015.1 | 4405152   | 27-Feb-23 | 17:52 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4015.1 | 4196256   | 27-Feb-23 | 17:52 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4015.1 | 4179872   | 27-Feb-23 | 17:52 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4015.1 | 3966880   | 27-Feb-23 | 17:52 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4015.1 | 3844000   | 27-Feb-23 | 17:52 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4015.1 | 1685408   | 27-Feb-23 | 17:52 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4015.1 | 4290464   | 27-Feb-23 | 17:52 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4015.1 | 4429728   | 27-Feb-23 | 17:52 | x64      |
+| Sqllang.dll                                  | 2022.160.4015.1 | 48568224  | 27-Feb-23 | 17:52 | x64      |
+| Sqlmin.dll                                   | 2022.160.4015.1 | 51316640  | 27-Feb-23 | 17:52 | x64      |
+| Sqlos.dll                                    | 2022.160.4015.1 | 51152     | 27-Feb-23 | 17:52 | x64      |
+| Sqlrepss.dll                                 | 2022.160.4015.1 | 137120    | 27-Feb-23 | 17:52 | x64      |
+| Sqlscriptdowngrade.dll                       | 2022.160.4015.1 | 51104     | 27-Feb-23 | 17:52 | x64      |
+| Sqlscriptupgrade.dll                         | 2022.160.4015.1 | 5830608   | 27-Feb-23 | 17:52 | x64      |
+| Sqlservr.exe                                 | 2022.160.4015.1 | 722848    | 27-Feb-23 | 17:52 | x64      |
+| Sqltses.dll                                  | 2022.160.4015.1 | 9390024   | 27-Feb-23 | 17:52 | x64      |
+| Sqsrvres.dll                                 | 2022.160.4015.1 | 305104    | 27-Feb-23 | 17:52 | x64      |
+| Svl.dll                                      | 2022.160.4015.1 | 247712    | 27-Feb-23 | 17:52 | x64      |
+| Xe.dll                                       | 2022.160.4015.1 | 718800    | 27-Feb-23 | 17:52 | x64      |
+| Xpstar.dll                                   | 2022.160.4015.1 | 534432    | 27-Feb-23 | 17:52 | x64      |
+
+SQL Server 2022 Database Services Core Shared
+
+|                        File   name                   |   File version  | File size |    Date   |  Time | Platform |
+|:----------------------------------------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
+| Distrib.exe                                          | 2022.160.4015.1 | 268240    | 27-Feb-23 | 16:21 | x64      |
+| Logread.exe                                          | 2022.160.4015.1 | 788384    | 27-Feb-23 | 16:21 | x64      |
+| Microsoft.analysisservices.applocal.core.dll         | 16.0.43.208     | 2933680   | 27-Feb-23 | 16:21 | x86      |
+| Microsoft.data.sqlclient.dll                         | 3.10.22089.1    | 2032120   | 27-Feb-23 | 16:20 | x86      |
+| Microsoft.datatransformationservices.scalehelper.dll | 16.0.4015.1     | 30624     | 27-Feb-23 | 16:20 | x86      |
+| Microsoft.identity.client.dll                        | 4.36.1.0        | 1503672   | 27-Feb-23 | 16:20 | x86      |
+| Microsoft.identitymodel.jsonwebtokens.dll            | 5.5.0.60624     | 66096     | 27-Feb-23 | 16:20 | x86      |
+| Microsoft.identitymodel.logging.dll                  | 5.5.0.60624     | 32296     | 27-Feb-23 | 16:20 | x86      |
+| Microsoft.identitymodel.protocols.dll                | 5.5.0.60624     | 37416     | 27-Feb-23 | 16:20 | x86      |
+| Microsoft.identitymodel.protocols.openidconnect.dll  | 5.5.0.60624     | 109096    | 27-Feb-23 | 16:20 | x86      |
+| Microsoft.identitymodel.tokens.dll                   | 5.5.0.60624     | 167672    | 27-Feb-23 | 16:21 | x86      |
+| Microsoft.sqlserver.replication.dll                  | 2022.160.4015.1 | 1714128   | 27-Feb-23 | 16:21 | x64      |
+| Microsoft.sqlserver.rmo.dll                          | 16.0.4015.1     | 554960    | 27-Feb-23 | 16:21 | x86      |
+| Msgprox.dll                                          | 2022.160.4015.1 | 313248    | 27-Feb-23 | 16:21 | x64      |
+| Msoledbsql.dll                                       | 2018.186.4.0    | 2734072   | 27-Feb-23 | 16:20 | x64      |
+| Msoledbsql.dll                                       | 2018.186.4.0    | 153584    | 27-Feb-23 | 16:20 | x64      |
+| Newtonsoft.json.dll                                  | 13.0.1.25517    | 704408    | 27-Feb-23 | 16:21 | x86      |
+| Qrdrsvc.exe                                          | 2022.160.4015.1 | 530336    | 27-Feb-23 | 16:21 | x64      |
+| Rdistcom.dll                                         | 2022.160.4015.1 | 939984    | 27-Feb-23 | 16:21 | x64      |
+| Repldp.dll                                           | 2022.160.4015.1 | 337864    | 27-Feb-23 | 16:21 | x64      |
+| Replisapi.dll                                        | 2022.160.4015.1 | 419792    | 27-Feb-23 | 16:21 | x64      |
+| Replmerg.exe                                         | 2022.160.4015.1 | 604112    | 27-Feb-23 | 16:21 | x64      |
+| Replprov.dll                                         | 2022.160.4015.1 | 890784    | 27-Feb-23 | 16:21 | x64      |
+| Replrec.dll                                          | 2022.160.4015.1 | 1058720   | 27-Feb-23 | 16:21 | x64      |
+| Replsub.dll                                          | 2022.160.4015.1 | 501712    | 27-Feb-23 | 16:21 | x64      |
+| Spresolv.dll                                         | 2022.160.4015.1 | 301008    | 27-Feb-23 | 16:21 | x64      |
+| Sql_engine_core_shared_keyfile.dll                   | 2022.160.4015.1 | 137168    | 27-Feb-23 | 16:20 | x64      |
+| Sqlcmd.exe                                           | 2022.160.4015.1 | 276432    | 27-Feb-23 | 16:21 | x64      |
+| Sqldistx.dll                                         | 2022.160.4015.1 | 268240    | 27-Feb-23 | 16:21 | x64      |
+| Sqlmergx.dll                                         | 2022.160.4015.1 | 423888    | 27-Feb-23 | 16:21 | x64      |
+| Xe.dll                                               | 2022.160.4015.1 | 718800    | 27-Feb-23 | 16:21 | x64      |
+
+SQL Server 2022 sql_extensibility
+
+|            File   name        |   File version  | File size |    Date   |  Time | Platform |
+|:-----------------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
+| Commonlauncher.dll            | 2022.160.4015.1 | 100304    | 27-Feb-23 | 16:20 | x64      |
+| Exthost.exe                   | 2022.160.4015.1 | 247712    | 27-Feb-23 | 16:20 | x64      |
+| Launchpad.exe                 | 2022.160.4015.1 | 1361872   | 27-Feb-23 | 16:20 | x64      |
+| Sql_extensibility_keyfile.dll | 2022.160.4015.1 | 137168    | 27-Feb-23 | 16:20 | x64      |
+| Sqlsatellite.dll              | 2022.160.4015.1 | 1165216   | 27-Feb-23 | 16:20 | x64      |
+
+SQL Server 2022 Full-Text Engine
+
+|          File   name     |   File version  | File size |    Date   |  Time | Platform |
+|:------------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
+| Fd.dll                   | 2022.160.4015.1 | 710608    | 27-Feb-23 | 16:20 | x64      |
+| Fdhost.exe               | 2022.160.4015.1 | 153504    | 27-Feb-23 | 16:20 | x64      |
+| Fdlauncher.exe           | 2022.160.4015.1 | 100304    | 27-Feb-23 | 16:20 | x64      |
+| Sql_fulltext_keyfile.dll | 2022.160.4015.1 | 137168    | 27-Feb-23 | 16:19 | x64      |
+
+SQL Server 2022 Integration Services
+
+|                            File   name                        |   File version  | File size |    Date   |  Time | Platform |
+|:-------------------------------------------------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
+| Attunity.sqlserver.cdccontroltask.dll                         | 7.0.0.133       | 79176     | 27-Feb-23 | 16:23 | x86      |
+| Attunity.sqlserver.cdccontroltask.dll                         | 7.0.0.133       | 79176     | 27-Feb-23 | 16:23 | x86      |
+| Attunity.sqlserver.cdcsplit.dll                               | 7.0.0.133       | 40312     | 27-Feb-23 | 16:23 | x86      |
+| Attunity.sqlserver.cdcsplit.dll                               | 7.0.0.133       | 40312     | 27-Feb-23 | 16:23 | x86      |
+| Attunity.sqlserver.cdcsrc.dll                                 | 7.0.0.133       | 80728     | 27-Feb-23 | 16:23 | x86      |
+| Attunity.sqlserver.cdcsrc.dll                                 | 7.0.0.133       | 80728     | 27-Feb-23 | 16:23 | x86      |
+| Isdbupgradewizard.exe                                         | 16.0.4015.1     | 120776    | 27-Feb-23 | 16:22 | x86      |
+| Isdbupgradewizard.exe                                         | 16.0.4015.1     | 120736    | 27-Feb-23 | 16:22 | x86      |
+| Microsoft.analysisservices.applocal.core.dll                  | 16.0.43.208     | 2933664   | 27-Feb-23 | 16:22 | x86      |
+| Microsoft.analysisservices.applocal.core.dll                  | 16.0.43.208     | 2933680   | 27-Feb-23 | 16:22 | x86      |
+| Microsoft.sqlserver.integrationservices.isserverdbupgrade.dll | 16.0.4015.1     | 509856    | 27-Feb-23 | 16:22 | x86      |
+| Msdtssrvr.exe                                                 | 16.0.4015.1     | 219040    | 27-Feb-23 | 16:22 | x64      |
+| Msmdpp.dll                                                    | 2022.160.43.208 | 10165664  | 27-Feb-23 | 16:22 | x64      |
+| Newtonsoft.json.dll                                           | 13.0.1.25517    | 704408    | 27-Feb-23 | 16:22 | x86      |
+| Newtonsoft.json.dll                                           | 13.0.1.25517    | 704408    | 27-Feb-23 | 16:22 | x86      |
+| Newtonsoft.json.dll                                           | 13.0.1.25517    | 704408    | 27-Feb-23 | 16:23 | x86      |
+| Sql_is_keyfile.dll                                            | 2022.160.4015.1 | 137168    | 27-Feb-23 | 16:22 | x64      |
+| Sqlceip.exe                                                   | 16.0.4015.1     | 300960    | 27-Feb-23 | 16:22 | x86      |
+| Xe.dll                                                        | 2022.160.4015.1 | 718800    | 27-Feb-23 | 16:22 | x64      |
+| Xe.dll                                                        | 2022.160.4015.1 | 640976    | 27-Feb-23 | 16:23 | x86      |
+
+SQL Server 2022 sql_polybase_core_inst
+
+|                                File   name                           |   File version  | File size |    Date   |  Time | Platform |
+|:--------------------------------------------------------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
+| Dms.dll                                                              | 16.0.1020.0     | 559576    | 27-Feb-23 | 17:34 | x86      |
+| Dmsnative.dll                                                        | 2022.160.1020.0 | 152536    | 27-Feb-23 | 17:34 | x64      |
+| Dwengineservice.dll                                                  | 16.0.1020.0     | 44976     | 27-Feb-23 | 17:34 | x86      |
+| Instapi150.dll                                                       | 2022.160.4015.1 | 104352    | 27-Feb-23 | 17:34 | x64      |
+| Microsoft.sqlserver.datawarehouse.backup.backupmetadata.dll          | 16.0.1020.0     | 67544     | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.catalog.dll                        | 16.0.1020.0     | 293336    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.common.dll                         | 16.0.1020.0     | 1956824   | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.configuration.dll                  | 16.0.1020.0     | 169400    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.datamovement.common.dll            | 16.0.1020.0     | 646616    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.datamovement.manager.dll           | 16.0.1020.0     | 246232    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.datamovement.messagetypes.dll      | 16.0.1020.0     | 139184    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.datamovement.messagingprotocol.dll | 16.0.1020.0     | 79792     | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.diagnostics.dll                    | 16.0.1020.0     | 51120     | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.distributor.dll                    | 16.0.1020.0     | 88536     | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.engine.dll                         | 16.0.1020.0     | 1129432   | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.engine.statsstream.dll             | 16.0.1020.0     | 80816     | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.eventing.dll                       | 16.0.1020.0     | 70576     | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.fabric.appliance.dll               | 16.0.1020.0     | 35288     | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.fabric.interface.dll               | 16.0.1020.0     | 30648     | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.fabric.polybase.dll                | 16.0.1020.0     | 46504     | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.fabric.xdbinterface.dll            | 16.0.1020.0     | 21424     | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.failover.dll                       | 16.0.1020.0     | 26584     | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.hadoop.hadoopbridge.dll            | 16.0.1020.0     | 131544    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.loadercommon.dll                   | 16.0.1020.0     | 86488     | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.loadmanager.dll                    | 16.0.1020.0     | 100784    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.dll                   | 16.0.1020.0     | 292792    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 16.0.1020.0     | 120280    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 16.0.1020.0     | 138160    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 16.0.1020.0     | 141240    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 16.0.1020.0     | 137648    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 16.0.1020.0     | 150456    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 16.0.1020.0     | 139696    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 16.0.1020.0     | 134616    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 16.0.1020.0     | 176568    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 16.0.1020.0     | 117168    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 16.0.1020.0     | 136632    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.nodes.dll                          | 16.0.1020.0     | 72664     | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.nulltransaction.dll                | 16.0.1020.0     | 21944     | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.parallelizer.dll                   | 16.0.1020.0     | 37296     | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.resourcemanagement.dll             | 16.0.1020.0     | 128952    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.dll                            | 16.0.1020.0     | 3064752   | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.dll                     | 16.0.1020.0     | 3955672   | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 16.0.1020.0     | 118192    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 16.0.1020.0     | 133040    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 16.0.1020.0     | 137648    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 16.0.1020.0     | 133552    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 16.0.1020.0     | 148440    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 16.0.1020.0     | 134064    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 16.0.1020.0     | 130480    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 16.0.1020.0     | 170928    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 16.0.1020.0     | 115120    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 16.0.1020.0     | 132056    | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.sqldistributor.dll                 | 16.0.1020.0     | 67504     | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.transactsql.scriptdom.dll          | 16.0.1020.0     | 2682808   | 27-Feb-23 | 17:34 | x86      |
+| Microsoft.sqlserver.datawarehouse.utilities.dll                      | 16.0.1020.0     | 2436568   | 27-Feb-23 | 17:34 | x86      |
+| Mpdwinterop.dll                                                      | 2022.160.4015.1 | 296864    | 27-Feb-23 | 17:34 | x64      |
+| Mpdwsvc.exe                                                          | 2022.160.4015.1 | 7817120   | 27-Feb-23 | 17:34 | x64      |
+| Secforwarder.dll                                                     | 2022.160.4015.1 | 83872     | 27-Feb-23 | 17:34 | x64      |
+| Sharedmemory.dll                                                     | 2022.160.1020.0 | 61360     | 27-Feb-23 | 17:34 | x64      |
+| Sqldk.dll                                                            | 2022.160.4015.1 | 4028368   | 27-Feb-23 | 17:34 | x64      |
+| Sqldumper.exe                                                        | 2022.160.4015.1 | 260000    | 27-Feb-23 | 17:34 | x64      |
+| Sqlevn70.rll                                                         | 2022.160.4015.1 | 1746848   | 27-Feb-23 | 17:34 | x64      |
+| Sqlevn70.rll                                                         | 2022.160.4015.1 | 4564896   | 27-Feb-23 | 17:34 | x64      |
+| Sqlevn70.rll                                                         | 2022.160.4015.1 | 3741600   | 27-Feb-23 | 17:34 | x64      |
+| Sqlevn70.rll                                                         | 2022.160.4015.1 | 4564896   | 27-Feb-23 | 17:34 | x64      |
+| Sqlevn70.rll                                                         | 2022.160.4015.1 | 4466592   | 27-Feb-23 | 17:34 | x64      |
+| Sqlevn70.rll                                                         | 2022.160.4015.1 | 2439072   | 27-Feb-23 | 17:34 | x64      |
+| Sqlevn70.rll                                                         | 2022.160.4015.1 | 2381728   | 27-Feb-23 | 17:34 | x64      |
+| Sqlevn70.rll                                                         | 2022.160.4015.1 | 4196256   | 27-Feb-23 | 17:34 | x64      |
+| Sqlevn70.rll                                                         | 2022.160.4015.1 | 4179872   | 27-Feb-23 | 17:34 | x64      |
+| Sqlevn70.rll                                                         | 2022.160.4015.1 | 1685408   | 27-Feb-23 | 17:34 | x64      |
+| Sqlevn70.rll                                                         | 2022.160.4015.1 | 4429728   | 27-Feb-23 | 17:34 | x64      |
+| Sqlncli17e.dll                                                       | 2017.1710.3.1   | 1898432   | 27-Feb-23 | 17:34 | x64      |
+| Sqlos.dll                                                            | 2022.160.4015.1 | 51152     | 27-Feb-23 | 17:34 | x64      |
+| Sqlsortpdw.dll                                                       | 2022.160.1020.0 | 4841392   | 27-Feb-23 | 17:34 | x64      |
+| Sqltses.dll                                                          | 2022.160.4015.1 | 9390024   | 27-Feb-23 | 17:34 | x64      |
 
 </details>
 
