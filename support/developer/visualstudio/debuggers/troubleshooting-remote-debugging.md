@@ -10,7 +10,9 @@ ms.reviewer: mikejo
 
 _Applies to:_&nbsp;Visual Studio
 
-The first step is to check your error message, if a message appeared, and investigate. The message may include a link that you can select.
+This article introduces troubleshooting steps and solutions of some common issues with [remote debugging]](/visualstudio/debugger/remote-debugging).
+
+To troubleshoot remote debugging issues, the first step is to check for error messages and investigate. The message may include a link with more information.
 
 Next, verify that the app is running correctly on the server before trying to debug it.
 

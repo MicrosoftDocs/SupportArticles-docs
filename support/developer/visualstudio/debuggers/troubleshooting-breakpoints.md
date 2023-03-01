@@ -12,7 +12,7 @@ _Applies to:_&nbsp;Visual Studio
 
 ## Breakpoint warnings
 
-When debugging, a breakpoint has two possible visual states:
+When debugging, a [breakpoint](/visualstudio/debugger/using-breakpoints) has two possible visual states:
 
 - A solid red circle, if the debugger successfully set a breakpoint in the target process.
 - A hollow (white filled) circle, either the breakpoint is disabled or warning occurred when trying to set the breakpoint.

@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting snapshot debugging
+title: Troubleshooting snapshot debugging live Azure apps
 description: Understand troubleshooting and known issues for snapshot debugging in Visual Studio. Load ICorProfiler without causing downtime on your production site.
 ms.date: 04/24/2019
 author: HaiyingYu
@@ -10,6 +10,8 @@ ms.reviewer: mikejo
 # Troubleshooting and known issues for snapshot debugging in Visual Studio
 
 _Applies to:_&nbsp;Visual Studio
+
+This article provides resolutions of common issues that you may encounter when you [debug an Azure app](/visualstudio/debugger/debug-azure-apps) with Snapshot Debugger in Visual Studio.
 
 If the steps described in this article don't resolve your issue, search for the problem on [Developer Community](https://aka.ms/feedback/suggest?space=8) or report a new issue by choosing **Help** > **Send Feedback** > **Report a Problem** in Visual Studio.
 

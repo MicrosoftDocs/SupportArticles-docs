@@ -13,9 +13,9 @@ ms.reviewer: johnhart
 
 _Applies to:_&nbsp;Visual Studio
 
-This article contains tips for solving common problems that you might encounter when you work with securing Office solutions.
+This article contains tips for solving common problems that you might encounter when you work with [securing Office solutions](/visualstudio/vsto/securing-office-solutions).
 
-Applies to: The information in this article applies to document-level projects and Visual Studio Tools for Office (VSTO) Add-in projects. See [Features available by Office application and project type](/visualstudio/vsto/features-available-by-office-application-and-project-type).
+The information in this article applies to document-level projects and Visual Studio Tools for Office (VSTO) Add-in projects. See [Features available by Office application and project type](/visualstudio/vsto/features-available-by-office-application-and-project-type).
 
 ## Trusted solutions can't be installed from restricted sites
 
