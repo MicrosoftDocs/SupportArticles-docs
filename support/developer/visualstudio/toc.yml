@@ -56,5 +56,9 @@
     href: ./tools-utilities/xaml-hot-reload-troubleshooting.md
   - name: Troubleshoot Office solution security
     href: ./tools-utilities/troubleshooting-office-solution-security.md
+  - name: Deploying an Office Solution
+    href: ./tools-utilities/troubleshooting-office-solution-deployment.md
+  - name: Troubleshooting Office Solutions
+    href: ./tools-utilities/troubleshooting-errors-in-office-solutions.md
   - name: Troubleshoot references to WCF or WCF Data Services
     href: ./tools-utilities/troubleshooting-service-references.md
