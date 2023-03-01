@@ -38,9 +38,9 @@ A downloadable Excel workbook that contains a summary list of builds, together w
 
 For more information about the bugs that are fixed and enhancements that are included in this cumulative update, see the following Microsoft Knowledge Base articles.
 
-| Bug reference | Description | Fix area | Component | Platform |
-|-|-|-|-|-|
-| <a id="2043384">[2043384](#2043384)</a> | Fixes an issue where the sqlcmd utility doesn't honor the sqlcmd command ":!!" when you run operating system (OS) commands. For more information, see [sqlcmd Commands](https://learn.microsoft.com/sql/tools/sqlcmd/sqlcmd-utility?view=sql-server-ver16#sqlcmd-commands). | SQL Server Client Tools | Command Line Tools | Windows |
+| Bug reference | Description | Fix area | Component | Platform|
+|---------------|-------------|----------|-----------|---------| 
+| <a id="2043384">[2043384](#2043384)</a> | Fixes an issue where the sqlcmd utility doesn't honor the sqlcmd command ":!!" when you run operating system (OS) commands. For more information, see [sqlcmd Commands](/sql/tools/sqlcmd/sqlcmd-utility?#sqlcmd-commands). | SQL Server Client Tools | Command Line Tools | Windows |
 | <a id="2232487">[2232487](#2232487) | Starting in SQL Server 2022 CU 2, CREATE EXTERNAL DATA SOURCE supports the use of TNS files when connecting to Oracle, by using the CONNECTION_OPTIONS parameter. | SQL Server Engine |  PolyBase | Windows |
 | <a id="2217553">[2217553](#2217553)</a> | Fixes a memory issue when a recursive graph query is aborted during execution. | SQL Server Engine | Query Execution | All |
 | <a id="2163005">[2163005](#2163005)</a> | Fixes an issue where the DataAccess property for the linked server is reset to False when you execute the `sp_addsubscription` stored procedure or create a subscription through the New Subscription Wizard on server A after the following scenarios: </br></br>1. You have a linked server on server A for server B and have used the linked server for data access. </br>2. You configure server A as the Publisher and server B as the Subscriber and create transactional replication. | SQL Server Engine | Replication | All |
