@@ -13,7 +13,7 @@ This article provides solutions to the "Unable to get log analytics workspace in
 
 ## Symptoms
 
-When you upgrade or scale an AKS cluster, you may see the following error:
+When you start, upgrade or scale an AKS cluster, you may see the following error:
 
 > Failed to save container service '\<container service name>'.  
 > Error: Unable to get log analytics workspace info.  
