@@ -11,6 +11,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
   - CI 157398
+  - CI 171536
   - CSSTroubleshoot
   - seo-marvel-apr2020
 ms.collection: 
@@ -20,13 +21,13 @@ search.appverid:
   - MOE150
   - MET150
 siblings_only: true
-ms.date: 3/31/2022
+ms.date: 2/15/2023
 ---
 # Resolve common eDiscovery issues
 
-[!include[Purview banner](../../../includes/purview-rebrand.md)]
+This article covers basic troubleshooting steps that you can take to identify and resolve issues that you might encounter during an eDiscovery search or elsewhere in the eDiscovery process. For information about how to troubleshoot common retention policy errors, see [Resolve errors in Microsoft 365 retention and retention label policies](/microsoft-365/troubleshoot/retention/resolve-errors-in-retention-and-retention-label-policies).
 
-This article covers basic troubleshooting steps that you can take to identify and resolve issues that you might encounter during an eDiscovery search or elsewhere in the eDiscovery process. Resolving some of these scenarios requires help from Microsoft Support. Information about when to contact Microsoft Support is included in the resolution steps.
+Resolving some of these scenarios requires help from Microsoft Support. Information about when to contact Microsoft Support is included in the resolution steps.
 
 ## Error/issue: Ambiguous location
 
@@ -204,12 +205,6 @@ eDiscovery Case Hold Policy Sync Distribution error. The error reads:
    Get-CaseHoldPolicy <policyname> - DistributionDetail | FL
    ```
 
-    For a retention policy, run the following command:
-
-   ```powershell
-   Get-RetentionCompliancePolicy <policyname> - DistributionDetail | FL
-   ```
-
 2. Examine the value in the DistributionDetail parameter for errors like the following:
 
    > Error: Resources: It's taking longer than expected to deploy the policy. It might take an additional 2 hours to update the final deployment status, so check back in a couple hours."
@@ -220,12 +215,6 @@ eDiscovery Case Hold Policy Sync Distribution error. The error reads:
 
    ```powershell
    Set-CaseHoldPolicy <policyname> -RetryDistribution
-   ```
-
-   For retention policies:
-
-   ```powershell
-   Set-RetentionCompliancePolicy <policyname> -RetryDistribution
    ```
 
 4. Contact Microsoft Support.
@@ -245,25 +234,13 @@ eDiscovery Case Hold Policies may be stuck in PendingDeletion and can't be remov
    Set-CaseHoldPolicy <policyname> -RetryDistribution
    ```
 
-   For retention policies:
-
-   ```powershell
-   Set-RetentionCompliancePolicy <policyname> -RetryDistribution
-   ```
-   
 2. Try to delete the policy using PowerShell and the `-ForceDeletion` parameter:
-   
+
    For eDiscovery case holds, use the [Remove-CaseHoldPolicy](/powershell/module/exchange/remove-caseholdpolicy?view=exchange-ps&preserve-view=true) cmdlet:
-   
+
    ```powershell
    Remove-CaseHoldPolicy <policyname> -ForceDeletion
    ```
-  
-   For retention policies, use the [Remove-RetentionCompliancePolicy](/powershell/module/exchange/remove-retentioncompliancepolicy?view=exchange-ps&preserve-view=true) cmdlet:
-  
-   ```powershell
-   Remove-RetentionCompliancePolicy <policyname> -ForceDeletion
-   ```  
   
 3. Contact Microsoft Support.
 
@@ -367,7 +344,7 @@ This can be a client-side issue. To remediate it, follow these steps:
 
 If none of these steps solve the problem, gather the output of `Get-ComplianceSearch` and `Get-ComplianceSearchAction` before creating a support case.
 
-**Issue: Problem retrieving mailbox items while archiving**
+## Issue: Problem retrieving mailbox items while archiving
 
 The following errors are displayed in Export Warnings.csv and Errors.csv during content search and the eDiscovery standard export workflow.
 
@@ -376,6 +353,26 @@ The following errors are displayed in Export Warnings.csv and Errors.csv during 
 
 These errors indicate that certain items found during search couldn’t be retrieved. These might be temporary backup copies that are created during archival. While these temporary backups are accessible to search and thus can be matched, they are not accessible for retrieval. However eDiscovery can match and retrieve the original items which are exact copies of the backups.
 
-**Resolution**
+### Resolution
 
 No action is needed to address these errors. The original items associated with the same mailbox will be retrieved and subsequently exported or added to a review set.
+
+## Error/issue: Export process opens a new blank page without a download
+
+When you export search results from eDiscovery (Standard) or Content search in the Microsoft Purview compliance portal, the export process opens a new blank page, and the eDiscovery Export Tool (UnifiedExportTool) isn't downloaded.
+
+### Resolution
+
+To fix this issue, allow pop-ups from the Microsoft Purview compliance portal.
+
+In Microsoft Edge:
+
+1. Select the **Settings and more** icon (...) in the upper-right corner of the browser.
+1. Select **Settings** > **Cookies and site permissions**.
+1. Under **All permissions**, select **Pop-ups and redirects**.
+1. Under **Allow**, select **Add**.
+1. In the **Add a site** dialog box, enter *https://compliance.microsoft.com*, and then select **Add**.
+
+If you're using a different browser, follow the browser's documentation to allow pop-ups from the Microsoft Purview compliance portal.
+
+After you make this change, restart the export process.

@@ -13,7 +13,7 @@ ms.author: v-maqiu
 ms.reviwer: zakirh
 appliesto: 
   - Microsoft Forms
-ms.date: 3/31/2022
+ms.date: 2/15/2023
 ---
 # No email notifications for responses to Group Forms
 
@@ -35,10 +35,23 @@ You might not receive email notifications for responses that you submit to a Gro
 
    :::image type="content" source="media/no-email-notifications-for-responses-to-group-forms/number-of-members.png" alt-text="Selecting the number of members in the top-right." border="false":::
 
-5. In Outlook on the web, select the **Edit** button above the group name.
+5. In Outlook on the web, select the More options icon (...), and then select **Edit group**.
 
     :::image type="content" source="media/no-email-notifications-for-responses-to-group-forms/edit-group-option.png" alt-text="Select the ellipsis and then select the Edit group option.":::
 
+   **Note:** If the **Edit group** option isn't available, it indicates that the group was created in Microsoft Teams. When a group is created in Teams, the Exchange Online setting `HiddenFromExchangeClientsEnabled` is set to **True** by default. When `HiddenFromExchangeClientsEnabled` is set to **True**, it removes the **Edit group** option from the group email settings, so you can't enable the settings that allow group email notifications to members.
+
+   To view the current setting, run the following command in Exhange Online PowerShell, replace \<groupname\> with the name of the group:
+   
+    ```powershell
+     Get-UnifiedGroup -Filter {displayname -eq "<groupname>"} | Format-List HiddenFromExchangeClientsEnabled
+    ``` 
+
+    If `HiddenFromExchangeClientsEnable` is set to **True**, use the following command to set it to **False**:
+
+    ```powershell
+     Set-UnifiedGroup -Identity "<groupname>" -HiddenFromExchangeClientsEnabled:$False
+    ```
 6. Select the **Let people outside the organization email the groups** and **Members will receive all group conversations and events ...** check boxes and then select **Save**.
 
     :::image type="content" source="media/no-email-notifications-for-responses-to-group-forms/select-two-checkboxes-in-edit-group-page.png" alt-text="Select the two checkboxes in the External email settings.":::
