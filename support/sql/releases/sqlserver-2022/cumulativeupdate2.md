@@ -17,7 +17,7 @@ _Version:_ &nbsp; 16.0.4015.1
 
 ## Summary
 
-This article describes Cumulative Update package 2 (CU2) for Microsoft SQL Server 2022. This update contains 14 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 1, and it updates components in the following builds:
+This article describes Cumulative Update package 2 (CU2) for Microsoft SQL Server 2022. This update contains 12 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 1, and it updates components in the following builds:
 
 - SQL Server - Product version: **16.0.4015.1**, file version: **2022.160.4015.1**
 - Analysis Services - Product version: **16.0.43.208**, file version: **2022.160.43.208**
@@ -37,6 +37,19 @@ A downloadable Excel workbook that contains a summary list of builds, together w
 > Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
 
 For more information about the bugs that are fixed and enhancements that are included in this cumulative update, see the following Microsoft Knowledge Base articles.
+
+| Bug reference | Description | Fix area | Component | Platform |
+|---------------|-------------|----------|-----------|----------|
+| <a   id="2043384">[2043384](#2043384)</a> | Fixes an issue where the **sqlcmd** utility doesn't honor the **sqlcmd** command ":!!" when you run operating system (OS) commands. For more information, see [sqlcmd   Commands](/sql/tools/sqlcmd/sqlcmd-utility#sqlcmd-commands). | SQL Server Client Tools | Command Line Tools | Windows |
+| <a id="2232487">[2232487](#2232487)</a> | Starting in SQL Server 2022 CU 2, `CREATE EXTERNAL DATA SOURCE` supports the use of TNS files when connecting to Oracle, by using the `CONNECTION_OPTIONS` parameter. | SQL Server Engine | PolyBase | Windows |
+| <a id="2217553">[2217553](#2217553)</a> | Fixes a memory issue when a recursive graph query is aborted during execution. | SQL Server Engine | Query Execution | All |
+| <a id="2217036">[2217036](#2217036)</a> | [FIX: sp_replmonitorsubscriptionpendingcmds returns incorrect pending commands for P2P replication (KB5017009)](https://support.microsoft.com/help/5017009) | SQL Server Engine | Replication | All |
+| <a id="2119277">[2119277](#2119277)</a> | Fixes an issue where the full cleanup failure in the first side table and partial cleanup failure in others can cause incorrect syscommittab table cleanup in change tracking auto cleanup. This issue can leave orphaned records in the side tables. | SQL Server Engine | Replication | Windows |
+| <a id="2163005">[2163005](#2163005)</a> | Fixes an issue where the `DataAccess` property for the linked server is reset to `False` when you execute the `sp_addsubscription` stored procedure or create a subscription through the New Subscription Wizard on server A after the following scenarios: </br></br>1. You have a linked server on server A for server B and have used the linked server for data access. </br>2. You configure server A as the Publisher and server B as the Subscriber and create transactional replication. | SQL Server Engine | Replication | All |
+| <a id="2205260">[2205260](#2205260)</a> </br><a id="2216691">[2216691](#2216691)</a> </br><a id="2234321">[2234321](#2234321)</a> | Before the fix, you can still enable transactional replication or change data capture (CDC) and delayed durability on a database at the same time even if transactional replication or CDC and delayed durability aren't compatible. This fix explicitly prevents you from enabling transactional replication or CDC and delayed durability on a database at the same time by returning the following error 22891 or 22892:  </br></br>22891: Could not enable \<FeatureName> for database '\<DatabaseName>'. \<FeatureName> cannot be enabled on a DB with delayed durability set. </br>22892: Could not enable delayed durability on DB. Delayed durability cannot be enabled on a DB while \<FeatureName> is enabled. </br></br>For more information, see [Delayed durability and other SQL Server features](/sql/relational-databases/logs/control-transaction-durability#bkmk_OtherSQLFeatures). | SQL Server Engine | Replication | All |
+| <a id="2223628">[2223628](#2223628)</a> | Fixes the incorrect primary key column indexing issue during the schema export phase of Azure Synapse Link replication. This issue occurs when you drop one or more columns that are in front of the primary key column of a table and then enable Azure Synapse Link replication for the table. | SQL Server Engine | Replication | Windows |
+| <a id="2230926">[2230926](#2230926)</a> | [FIX: Error may occur when setting the SQL Server Agent job history log (KB5024352)](error-set-sql-server-agent-job-history-log.md) | SQL Server Engine | | All |
+| <a id="2217522">[2217522](#2217522)</a> | Fixes an issue where interleaved execution for multi-statement table-valued functions (MSTVFs) uses the OPTIMIZE FOR query hint value and returns an incorrect result for the first-time execution when the runtime constant value is different from the OPTIMIZE FOR query hint value. After you apply this fix, the interleaved execution will check OPTIMIZE FOR query hints in all cases to avoid using the OPTIMIZE FOR query hint value for first-time execution. | | | All |
 
 ## How to obtain or download this or the latest cumulative update package
 
@@ -89,6 +102,68 @@ You can verify the download by computing the hash of the *SQLServer2022-KB502312
 <summary><b>Cumulative Update package file information</b></summary>
 
 The English version of this package has the file attributes (or later file attributes) that are listed in the following table. The dates and times for these files are listed in Coordinated Universal Time (UTC). When you view the file information, it's converted to local time. To find the difference between UTC and local time, use the **Time Zone** tab in the **Date and Time** item in Control Panel.
+
+SQL Server 2022 Analysis Services
+
+|                      File name                      |   File version  | File size |    Date   |  Time | Platform |
+|:---------------------------------------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
+| Asplatformhost.dll                                  | 2022.160.43.208 | 336808    | 27-Feb-23 | 16:20 | x64      |
+| Microsoft.analysisservices.server.core.dll          | 16.0.43.208     | 2903472   | 27-Feb-23 | 16:20 | x86      |
+| Microsoft.data.mashup.sqlclient.dll                 | 2.108.3243.0    | 24480     | 27-Feb-23 | 16:20 | x86      |
+| Microsoft.data.sqlclient.dll                        | 1.14.21068.1    | 1920960   | 27-Feb-23 | 16:20 | x86      |
+| Microsoft.identity.client.dll                       | 4.14.0.0        | 1350048   | 27-Feb-23 | 16:20 | x86      |
+| Microsoft.identitymodel.jsonwebtokens.dll           | 5.6.0.61018     | 65952     | 27-Feb-23 | 16:20 | x86      |
+| Microsoft.identitymodel.logging.dll                 | 5.6.0.61018     | 26528     | 27-Feb-23 | 16:20 | x86      |
+| Microsoft.identitymodel.protocols.dll               | 5.6.0.61018     | 32192     | 27-Feb-23 | 16:20 | x86      |
+| Microsoft.identitymodel.protocols.openidconnect.dll | 5.6.0.61018     | 103328    | 27-Feb-23 | 16:20 | x86      |
+| Microsoft.identitymodel.tokens.dll                  | 5.6.0.61018     | 162720    | 27-Feb-23 | 16:20 | x86      |
+| Msmdctr.dll                                         | 2022.160.43.208 | 38864     | 27-Feb-23 | 16:20 | x64      |
+| Msmdlocal.dll                                       | 2022.160.43.208 | 71755216  | 27-Feb-23 | 16:20 | x64      |
+| Msmdlocal.dll                                       | 2022.160.43.208 | 53920160  | 27-Feb-23 | 16:20 | x86      |
+| Msmdpump.dll                                        | 2022.160.43.208 | 10335152  | 27-Feb-23 | 16:20 | x64      |
+| Msmdredir.dll                                       | 2022.160.43.208 | 8132016   | 27-Feb-23 | 16:20 | x86      |
+| Msmdsrv.exe                                         | 2022.160.43.208 | 71308720  | 27-Feb-23 | 16:20 | x64      |
+| Msmdsrv.rll                                         | 2022.160.43.208 | 954832    | 27-Feb-23 | 16:20 | x64      |
+| Msmdsrv.rll                                         | 2022.160.43.208 | 1882576   | 27-Feb-23 | 16:20 | x64      |
+| Msmdsrv.rll                                         | 2022.160.43.208 | 1669584   | 27-Feb-23 | 16:20 | x64      |
+| Msmdsrv.rll                                         | 2022.160.43.208 | 1878992   | 27-Feb-23 | 16:20 | x64      |
+| Msmdsrv.rll                                         | 2022.160.43.208 | 1846224   | 27-Feb-23 | 16:20 | x64      |
+| Msmdsrv.rll                                         | 2022.160.43.208 | 1145296   | 27-Feb-23 | 16:20 | x64      |
+| Msmdsrv.rll                                         | 2022.160.43.208 | 1138128   | 27-Feb-23 | 16:20 | x64      |
+| Msmdsrv.rll                                         | 2022.160.43.208 | 1767376   | 27-Feb-23 | 16:20 | x64      |
+| Msmdsrv.rll                                         | 2022.160.43.208 | 1746896   | 27-Feb-23 | 16:20 | x64      |
+| Msmdsrv.rll                                         | 2022.160.43.208 | 930768    | 27-Feb-23 | 16:20 | x64      |
+| Msmdsrv.rll                                         | 2022.160.43.208 | 1835472   | 27-Feb-23 | 16:20 | x64      |
+| Msmdsrvi.rll                                        | 2022.160.43.208 | 953296    | 27-Feb-23 | 16:20 | x64      |
+| Msmdsrvi.rll                                        | 2022.160.43.208 | 1880528   | 27-Feb-23 | 16:20 | x64      |
+| Msmdsrvi.rll                                        | 2022.160.43.208 | 1666512   | 27-Feb-23 | 16:20 | x64      |
+| Msmdsrvi.rll                                        | 2022.160.43.208 | 1874384   | 27-Feb-23 | 16:20 | x64      |
+| Msmdsrvi.rll                                        | 2022.160.43.208 | 1842640   | 27-Feb-23 | 16:20 | x64      |
+| Msmdsrvi.rll                                        | 2022.160.43.208 | 1143248   | 27-Feb-23 | 16:20 | x64      |
+| Msmdsrvi.rll                                        | 2022.160.43.208 | 1136584   | 27-Feb-23 | 16:20 | x64      |
+| Msmdsrvi.rll                                        | 2022.160.43.208 | 1763792   | 27-Feb-23 | 16:20 | x64      |
+| Msmdsrvi.rll                                        | 2022.160.43.208 | 1743312   | 27-Feb-23 | 16:20 | x64      |
+| Msmdsrvi.rll                                        | 2022.160.43.208 | 931280    | 27-Feb-23 | 16:20 | x64      |
+| Msmdsrvi.rll                                        | 2022.160.43.208 | 1830864   | 27-Feb-23 | 16:20 | x64      |
+| Msmgdsrv.dll                                        | 2022.160.43.208 | 10083760  | 27-Feb-23 | 16:20 | x64      |
+| Msmgdsrv.dll                                        | 2022.160.43.208 | 8265648   | 27-Feb-23 | 16:20 | x86      |
+| Msolap.dll                                          | 2022.160.43.208 | 10970016  | 27-Feb-23 | 16:20 | x64      |
+| Msolap.dll                                          | 2022.160.43.208 | 8744864   | 27-Feb-23 | 16:20 | x86      |
+| Msolui.dll                                          | 2022.160.43.208 | 289696    | 27-Feb-23 | 16:20 | x86      |
+| Msolui.dll                                          | 2022.160.43.208 | 308144    | 27-Feb-23 | 16:20 | x64      |
+| Newtonsoft.json.dll                                 | 13.0.1.25517    | 704448    | 27-Feb-23 | 16:20 | x86      |
+| Sni.dll                                             | 1.1.1.0         | 555424    | 27-Feb-23 | 16:20 | x64      |
+| Sql_as_keyfile.dll                                  | 2022.160.4015.1 | 137168    | 27-Feb-23 | 16:19 | x64      |
+| Sqlceip.exe                                         | 16.0.4015.1     | 300960    | 27-Feb-23 | 16:20 | x86      |
+| Sqldumper.exe                                       | 2022.160.4015.1 | 227280    | 27-Feb-23 | 16:20 | x86      |
+| Sqldumper.exe                                       | 2022.160.4015.1 | 260000    | 27-Feb-23 | 16:20 | x64      |
+| System.identitymodel.tokens.jwt.dll                 | 5.6.0.61018     | 83872     | 27-Feb-23 | 16:20 | x86      |
+| Tmapi.dll                                           | 2022.160.43.208 | 5884336   | 27-Feb-23 | 16:20 | x64      |
+| Tmcachemgr.dll                                      | 2022.160.43.208 | 5575120   | 27-Feb-23 | 16:20 | x64      |
+| Tmpersistence.dll                                   | 2022.160.43.208 | 1481136   | 27-Feb-23 | 16:20 | x64      |
+| Tmtransactions.dll                                  | 2022.160.43.208 | 7197648   | 27-Feb-23 | 16:20 | x64      |
+| Xmsrv.dll                                           | 2022.160.43.208 | 26594224  | 27-Feb-23 | 16:20 | x64      |
+| Xmsrv.dll                                           | 2022.160.43.208 | 35895712  | 27-Feb-23 | 16:20 | x86      |
 
 SQL Server 2022 Database Services Common Core
 

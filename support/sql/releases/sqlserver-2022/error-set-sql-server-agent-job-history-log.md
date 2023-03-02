@@ -5,6 +5,7 @@ ms.date: 3/08/2023
 ms.custom: KB5024352
 author: Elena068
 ms.author: v-qianli2
+ms.reviewer: derekw, pcaronauger
 appliesto:
 - SQL Server 2022 on Linux
 ---
