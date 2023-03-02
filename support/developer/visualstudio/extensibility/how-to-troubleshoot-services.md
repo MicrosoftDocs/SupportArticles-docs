@@ -22,7 +22,7 @@ if (log == null) return;
 
 ## The service isn't registered with Visual Studio
 
-Examine the system registry to see whether the service has been correctly registered. For more information, see [How to: Provide a service](visualstudioextensibility/how-to-provide-a-service).
+Examine the system registry to see whether the service has been correctly registered. For more information, see [How to: Provide a service](/visualstudio/extensibility/how-to-provide-a-service).
 
 The following sample *.reg* file fragment shows how the SVsTextManager service might be registered:
 
@@ -57,7 +57,7 @@ If a tool window hosts a user control or any other control container, the contai
 
 ## See also
 
-- [List of available services](visualstudioextensibility/internals/list-of-available-services)
-- [Use and provide services](visualstudioextensibility/using-and-providing-services)
-- [Service essentials](visualstudioextensibility/internals/service-essentials)
+- [List of available services](/visualstudio/extensibility/internals/list-of-available-services)
+- [Use and provide services](/visualstudio/extensibility/using-and-providing-services)
+- [Service essentials](/visualstudio/extensibility/internals/service-essentials)
 - [Visual Studio troubleshooting](../welcome-visual-studio.yml)
