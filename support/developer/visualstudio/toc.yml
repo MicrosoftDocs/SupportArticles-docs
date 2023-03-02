@@ -4,6 +4,10 @@
   href: ./cpp/libraries/toc.yml
 - name: Debuggers and analyzers
   href: ./debuggers/toc.yml
+- name: Extensibility - Visual Studio SDK
+  items:
+  - name: Troubleshoot services
+    href: ./extensibility/how-to-troubleshoot-services.md
 - name: General
   href: ./general/toc.yml
 - name: Installation
