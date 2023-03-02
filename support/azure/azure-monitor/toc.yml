@@ -33,7 +33,7 @@ items:
       href: app-insights/troubleshoot-portal-connectivity.md
     - name: Missing CPU Total and Committed Memory metrics
       href: app-insights/missing-cpu-total-committed-memory-metrics.md
-    - name: Troubleshoot problems enabling or viewing Application Insights Profiler
+    - name: Troubleshoot Application Insights Profiler
       href: app-insights/profiler-troubleshooting.md
     - name: Troubleshoot Azure Application Insights availability monitoring
       href: app-insights/troubleshoot-availability.md
@@ -47,8 +47,6 @@ items:
       href: app-insights/status-monitor-v2-troubleshoot.md
   - name: Snapshot Debugger troubleshooting
     href: app-insights/snapshot-debugger-troubleshoot.md
-  - name: Troubleshoot Application Insights Profiler
-    href: app-insights/troubleshoot-application-insights-profiler.md
 
 - name: Log Analytics
   items:
