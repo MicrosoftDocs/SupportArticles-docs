@@ -81,7 +81,7 @@ When you see parallel threads in your traces, determine which threads are waitin
 
 For Profiler to work properly, make sure the following things:
 
-- Your web app has [Application Insights enabled](/azure/azure-monitor/profiler/profiler) with the [right settings](/azure/azure-monitor/profiler/profiler#for-application-insights-and-app-service-in-different-subscriptions)
+- Your web app has [Application Insights enabled](/azure/azure-monitor/profiler/profiler) with the [right settings](/azure/azure-monitor/profiler/profiler#for-application-insights-and-app-service-in-different-subscriptions).
 
 - The ApplicationInsightsProfiler3 webjob is running. To check the webjob, follow these steps:
 
@@ -101,14 +101,14 @@ If Profiler still isn't working for you, you can download the log and [submit an
 
 #### Check the Diagnostic Services site extension's status page
 
-If Profiler was enabled through the [Application Insights pane](/azure/azure-monitor/profiler/profiler) in the portal, it was enabled by the Diagnostic Services site extension. You can check the status page of this extension by going to the url `https://<site-name>.scm.azurewebsites.net/DiagnosticServices`.
+If Profiler was enabled through the [Application Insights pane](/azure/azure-monitor/profiler/profiler) in the portal, it was enabled by the Diagnostic Services site extension. You can check the status page of this extension by going to the URL `https://<site-name>.scm.azurewebsites.net/DiagnosticServices`.
 
 > [!NOTE]
 > The domain of the status page link will vary depending on the cloud. This domain will be the same as the Kudu management site for App Service.
 
 The status page shows the installation state of the Profiler and [Snapshot Debugger](/azure/azure-monitor/snapshot-debugger/snapshot-debugger) agents. If there was an unexpected error, it will be displayed and show how to fix it.
 
-You can use the Kudu management site for App Service to get the base url of this status page:
+You can use the Kudu management site for App Service to get the base URL of this status page:
 
 1. Open your App Service application in the Azure portal.
 2. Select **Advanced Tools**.
