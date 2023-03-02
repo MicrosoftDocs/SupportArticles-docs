@@ -8,6 +8,8 @@
   items:
   - name: Can't get a service in SDK
     href: ./extensibility/how-to-troubleshoot-services.md
+  - name: Troubleshooting VSPackages
+    href: ./extensibility/troubleshooting-vspackages.md
 - name: General
   href: ./general/toc.yml
 - name: Installation
