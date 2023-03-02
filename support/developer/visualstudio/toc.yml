@@ -6,7 +6,7 @@
   href: ./debuggers/toc.yml
 - name: Extensibility - Visual Studio SDK
   items:
-  - name: Troubleshoot services
+  - name: Can't get a service in SDK
     href: ./extensibility/how-to-troubleshoot-services.md
 - name: General
   href: ./general/toc.yml
