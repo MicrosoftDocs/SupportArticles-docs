@@ -17,21 +17,19 @@ This article helps you diagnose intermittent connection timeouts that are report
 
 ### Querying secondary returns different results than the primary replica
 
-Read only workloads which query secondary replicas may query stale data. If there are intermittent replica connection timeouts, changes to data on the primary replica database aren't yet reflected in the secondary database when querying the same data. For more information, see the section [Data latency on secondary replica](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups).
+Read only workloads, which query secondary replicas may query stale data. If there are intermittent replica connection timeouts, changes to data on the primary replica database aren't yet reflected in the secondary database when querying the same data. For more information, see the section [Data latency on secondary replica](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups).
 
 ### Secondary replica may not be failover ready if configured for automatic failover
 
-If your availability group is configured for automatic failover and the synchronous commit failover partner is intermittently disconnected from the primary, automatic failover may be unsuccessful.
+If you configure the availability group for automatic failover and the synchronous commit failover partner is intermittently disconnected from the primary, automatic failover may be unsuccessful.
 
 ### Various diagnostic features report availability group not synchronized
 
-The Always On dashboard in SQL Server Management Studio may report an unhealthy availability group with replicas in a **Not Synchronizing** state.
-
-Intermittently you may observe the Always On dashboard report replicas in the **Not synchronizing** state.
+The Always On dashboard in SQL Server Management Studio may report an unhealthy availability group with replicas in a **Not Synchronizing** state. You may also observe the Always On dashboard report replicas in the **Not synchronizing** state.
 
 :::image type="content" source="media/troubleshooting-intermittent-connection-timeouts-availability-groups/always-on-dashboard-report-replicas-not-synchronizing-state.png" alt-text="Screenshot that shows the Always On dashboard report replicas in the Not Synchronizing state." lightbox="media/troubleshooting-intermittent-connection-timeouts-availability-groups/always-on-dashboard-report-replicas-not-synchronizing-state.png":::
 
-When you review the SQL Server error logs of those replicas, you might observe messages like the following, which indicates that there was a connection timeout between the replicas in the availability group.
+When you review the SQL Server error logs of those replicas, you might observe messages like the following, which indicate that there was a connection timeout between the replicas in the availability group.
 
 **Error log from the primary replica**
 
@@ -49,7 +47,7 @@ When you review the SQL Server error logs of those replicas, you might observe m
 
 ### Intermittent connection problems can affect a secondary replica's failover readiness
 
-You can query `sys.dm_hadr_database_replica_cluster_states` to determine if the availability group database is failover ready at that moment. Here is an example of the results when the mirroring endpoint has been stopped on the secondary replica.
+You can query `sys.dm_hadr_database_replica_cluster_states` to determine if the availability group database is failover ready at that moment. Here's an example of the results when the mirroring endpoint has been stopped on the secondary replica.
 
 ```sql
 SELECT drcs.database_name, drcs.is_failover_ready, ar.replica_server_name, ars.role_desc, ars.connected_state_desc,
@@ -65,7 +63,7 @@ Automatic failover may fail to bring the availability group online in the primar
 
 ## What do the connection timeout errors indicate?
 
-The default availability group replica `SESSION_TIMEOUT` setting is 10 seconds. This setting is configured for each replica and determines how long the replica waits to receive a response from its partner replica before reporting a connection timeout. When a replica hasn't had a response from the partner replica, it will report a connection timeout in the SQL Server error log and the Windows application event log. The replica that reports the timeout will immediately attempt to reconnect and will continue to re-connect every five seconds.
+The default availability group replica `SESSION_TIMEOUT` setting is 10 seconds. This setting is configured for each replica and determines how long the replica waits to receive a response from its partner replica before reporting a connection timeout. When a replica hasn't had a response from the partner replica, it reports a connection timeout in the SQL Server error log and the Windows application event log. The replica that reports the timeout will immediately attempt to reconnect and will continue to reconnect every five seconds.
 
 The connection timeout typically is detected and reported by only one replica but sometimes the connection timeout might be reported by both replicas at the same time. There are a couple of different versions of this message depending on whether the connection timeout occurred with a previously established connection or a new connection attempt.
 
@@ -75,13 +73,13 @@ Message 35206 A connection timeout has occurred on a previously established conn
 Message 35201 A connection timeout has occurred while attempting to establish a connection to availability replica '<replicaname>' with id [<replicaid>]. Either a networking or firewall issue exists, or the endpoint address provided for the replica is not the database mirroring endpoint of the host server instance.
 ```
 
-The partner replica may or may not detect a timeout. If it does, it might report the message 35201 or 35206, if it doesn't, it will report connection loss to each of the availability group databases.
+The partner replica may or may not detect a timeout. If it does, it might report the message 35201 or 35206, if it doesn't, it reports connection loss to each of the availability group databases.
 
 ```output
 Message 35267 Always On Availability Groups connection with primary/secondary database terminated for primary/secondary database '<databasename>' on the availability replica '<replicaname>' with Replica ID: {<replicaid>}. This is an informational message only. No user action is required.
 ```
 
-Here is an example of what SQL Server will report to the error log. For example, if you stop the mirroring endpoint on the primary replica, the secondary replica will detect a connection timeout and messages 35206 and 36267 are reported in the secondary replica error log:
+Here's an example of what SQL Server reports to the error log. For example, if you stop the mirroring endpoint on the primary replica, the secondary replica will detect a connection timeout and messages 35206 and 36267 are reported in the secondary replica error log:
 
 ```output
 2023-02-15 07:11:03.100 spid31s A connection timeout has occurred on a previously established connection to availability replica 'SQL19AGN1' with id [17116239-4815-4B9B-8097-26F68DED0653]. Either a networking or a firewall issue exists or the availability replica has transitioned to the resolving role.
@@ -107,7 +105,7 @@ SQL Server may be busy, for several reasons, and doesn't service the mirroring e
 
 - SQL Server threads are responsible for yielding the scheduler (CPU) to other threads to complete their work if a thread doesn't yield in a timely fashion.
 
-- SQL Server experiences worker thread exhaustion, out of memory, or application problems that affects its  ability to service the mirroring endpoint connection.
+- SQL Server experiences worker thread exhaustion, out of memory, or application problems that affect its ability to service the mirroring endpoint connection.
 
 ### Network issue
 
@@ -119,7 +117,7 @@ In the previous section [What causes replica connection timeouts](#what-causes-r
 
 ### Assess timing and location of replica connection timeouts
 
-Review the history, the frequency, and trends of the connection timeouts. The messages described in the last section found in the SQL Server error log is a great way to do this. Where are the connection timeouts reported? Are they consistently reported on the primary or the secondary replica? When did the errors occur? Do they occur in a certain week of the month, day of the week, or time of day? Are there other scheduled maintenance or batch processing that correspond to the times the connection timeouts are observed? This assessment can help you scope and correlate the connection timeouts which can lead to the root cause.
+Review the history, the frequency, and trends of the connection timeouts. The messages described in the last section found in the SQL Server error log is a great way to do this. Where are the connection timeouts reported? Are they consistently reported on the primary or the secondary replica? When did the errors occur? Do they occur in a certain week of the month, day of the week, or time of day? Is there other scheduled maintenance or batch processing that correspond to the times the connection timeouts are observed? This assessment can help you scope and correlate the connection timeouts, which can lead to the root cause.
 
 ### Review the AlwaysOn_health extended event session
 
@@ -167,7 +165,7 @@ By querying the secondary replica, the Always On DMVs only report on the seconda
 
 One of the most common reasons an availability replica can't service the partner replica connection is a non-yielding scheduler. For more information on what a non-yielding scheduler is, see [Troubleshooting SQL Server Scheduling and Yielding](https://techcommunity.microsoft.com/t5/sql-server-support-blog/troubleshooting-sql-server-scheduling-and-yielding/ba-p/319148).
 
-SQL Server will track non-yielding scheduler events as short as 5 to 10 seconds. It will begin tracking these shorter non-yielding events and will report them in the `TrackingNonYieldingScheduler` data point in the `sp_server_diagnostics query_processing` component output.
+SQL Server will track non-yielding scheduler events as short as 5 to 10 seconds. It  begins tracking these shorter non-yielding events and reports them in the `TrackingNonYieldingScheduler` data point in the `sp_server_diagnostics query_processing` component output.
 
 To check for non-yielding events that might cause replica connection timeouts, follow these steps:
 
@@ -256,7 +254,7 @@ Analysis of the network trace is outside the scope of this troubleshooter. If yo
 
 ## What else can I do to mitigate the connection timeouts?
 
-The default availability group `SESSION_TIMEOUT` is configured for 10 seconds. You may be able to mitigate the connection timeouts by adjusting the availability group replica `SESSION_TIMEOUT` property. This setting is per replica. Adjust it for the primary and each affected secondary replica. Here is an example of the syntax. The default `SESSION_TIMEOUT` is 10, so you could use 15 as the next value.
+The default availability group `SESSION_TIMEOUT` is configured for 10 seconds. You may be able to mitigate the connection timeouts by adjusting the availability group replica `SESSION_TIMEOUT` property. This setting is per replica. Adjust it for the primary and each affected secondary replica. Here's an example of the syntax. The default `SESSION_TIMEOUT` is 10, so you could use 15 as the next value.
 
 ```sql
 ALTER AVAILABILITY GROUP ag
