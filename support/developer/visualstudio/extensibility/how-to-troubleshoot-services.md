@@ -12,7 +12,7 @@ _Applies to:_&nbsp;Visual Studio
 
 This article introduces common causes and solutions when you can't [get a service](/visualstudio/extensibility/how-to-get-a-service) in the Visual Studio SDK.
 
-If the requested service cannot be obtained, the call to <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> returns null. Always test for null after requesting a service:
+If the requested service can't be obtained, the call to <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> returns null. Always test for null after requesting a service:
 
 ```csharp
 IVsActivityLog log =
@@ -20,7 +20,7 @@ IVsActivityLog log =
 if (log == null) return;
 ```
 
-## The service is not registered with Visual Studio
+## The service isn't registered with Visual Studio
 
 Examine the system registry to see whether the service has been correctly registered. For more information, see [How to: Provide a service](visualstudioextensibility/how-to-provide-a-service).
 
@@ -36,12 +36,12 @@ In this example, version number is the version of Visual Studio, such as 12.0 or
 
 ## The service is requested by interface type and not by service type
 
-Use the service type and not the interface type when you call `GetService`. When requesting a service from Visual Studio, <xref:Microsoft.VisualStudio.Shell.Package> extracts the GUID from the type. A service will not be found if:
+Use the service type and not the interface type when you call `GetService`. When requesting a service from Visual Studio, <xref:Microsoft.VisualStudio.Shell.Package> extracts the GUID from the type. A service won't be found if:
 
 - An interface type is passed to `GetService` instead of the service type.
 - No GUID is explicitly assigned to the interface. Therefore, the system creates a default GUID for an object as needed.
 
-## The VSPackage requesting the service has not been sited
+## The VSPackage requesting the service hasn't been sited
 
 Be sure the VSPackage requesting the service has been sited. Visual Studio sites a VSPackage after constructing it and before calling <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A>.
 
@@ -49,11 +49,11 @@ If you have code in a VSPackage constructor that needs a service, move it to the
 
 ## The wrong service provider is used
 
-Be sure that you are using the correct service provider.
+Be sure that you're using the correct service provider.
 
-Not all service providers are alike. The service provider that Visual Studio passes to a tool window differs from the one it passes to a VSPackage. The tool window service provider knows about <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection>, but does not know about <xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable>. You can call <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> to get a VSPackage service provider from within a tool window.
+Not all service providers are alike. The service provider that Visual Studio passes to a tool window differs from the one it passes to a VSPackage. The tool window service provider knows about <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection>, but doesn't know about <xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable>. You can call <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> to get a VSPackage service provider from within a tool window.
 
-If a tool window hosts a user control or any other control container, the container will be sited by the Windows component model and will not have access to any Visual Studio services. You can call <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> to get a VSPackage service provider from within a control container.
+If a tool window hosts a user control or any other control container, the container will be sited by the Windows component model and won't have access to any Visual Studio services. You can call <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> to get a VSPackage service provider from within a control container.
 
 ## See also
 
