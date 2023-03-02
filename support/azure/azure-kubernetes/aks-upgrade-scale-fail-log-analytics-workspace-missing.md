@@ -7,13 +7,13 @@ ms.author: v-weizhu
 ms.reviewer: chiragpa, cssakscic
 ms.service: azure-kubernetes-service
 ---
-# Failed to upgrade or scale AKS cluster due to missing Log Analytics workspace
+# Failed to upgrade or scale Azure Kubernetes Service cluster due to missing Log Analytics workspace
 
 This article provides solutions to the "Unable to get log analytics workspace info" error that occurs when you upgrade or scale a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Symptoms
 
-When you start, upgrade or scale an AKS cluster, you may see the following error:
+When you start, upgrade, or scale an AKS cluster, you may see the following error:
 
 > Failed to save container service '\<container service name>'.  
 > Error: Unable to get log analytics workspace info.  
@@ -24,17 +24,17 @@ This issue occurs if you delete the Log Analytics workspace or the resource grou
 
 To resolve this issue, use one of the following solutions:
 
-- [Solution 1: Recover the Log Analytics workspace](#solution-1-recover-the-log-analytics-workspace)
-- [Solution 2: Disable monitoring on the AKS cluster](#solution-2-disable-monitoring-on-the-aks-cluster)
+- [Solution 1: Recover the Log Analytics workspace.](#solution-1-recover-the-log-analytics-workspace)
+- [Solution 2: Disable monitoring on the AKS cluster.](#solution-2-disable-monitoring-on-the-aks-cluster)
 
 ## Solution 1: Recover the Log Analytics workspace
 
-If it has been less than 14 days (the default soft-delete period) since the workspace is deleted, recover the workspace.
+If it has been less than 14 days (the default soft-delete period) since the workspace was deleted, recover the workspace.
 
 > [!NOTE]
 >
-> - If it has not been 14 days, the workspace can't be recreated with the same name. Therefore, the recovery must be done, because the AKS control plane finds the workspace based on resource URI.
-> - If your workspace is deleted as part of a resource group delete operation, you must first re-create the resource group with the same name.
+> - If it hasn't been 14 days, the workspace can't be recreated with the same name. Therefore, the recovery must be done because the AKS control plane finds the workspace based on the resource URI.
+> - If your workspace was deleted as part of a resource group delete operation, you must first re-create the resource group with the same name.
 > - To perform the workspace recovery, you must have the Contributor permissions to the subscription and resource group where the workspace is located, and the following information is also required:
 >     - Subscription ID
 >     - Resource Group name
@@ -58,13 +58,13 @@ If it has been less than 14 days (the default soft-delete period) since the work
                 "enabled": true
     ```
 
-2. Re-create the workspace with the workspace resource ID, by running the PowerShell cmdlet [New-AzOperationalInsightsWorkspace](/powershell/module/az.operationalinsights/New-AzOperationalInsightsWorkspace).
+2. Re-create the workspace with the workspace resource ID by running the PowerShell cmdlet [New-AzOperationalInsightsWorkspace](/powershell/module/az.operationalinsights/New-AzOperationalInsightsWorkspace).
 
 3. Run the upgrade or scale operation again.
 
 ## Solution 2: Disable monitoring on the AKS cluster
 
-If it has been more than 14 days since the workspace is deleted, disable monitoring on the AKS cluster and then run the upgrade or scale operation again.
+If it has been more than 14 days since the workspace was deleted, disable monitoring on the AKS cluster and then run the upgrade or scale operation again.
 
 To disable monitoring on the AKS cluster, run the following command:
 
@@ -72,6 +72,6 @@ To disable monitoring on the AKS cluster, run the following command:
 az aks disable-addons -a monitoring -g <clusterRG> -n <clusterName>
 ```
 
-If the same error occurs while disabling the monitoring add-on, recreate the missing Log Analytics workspace, and then run the upgrade or scale operation again.
+If the same error occurs while disabling the monitoring add-on, recreate the missing Log Analytics workspace and then run the upgrade or scale operation again.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
