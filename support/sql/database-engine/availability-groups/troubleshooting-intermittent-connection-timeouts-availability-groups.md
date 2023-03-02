@@ -79,7 +79,7 @@ The partner replica may or may not detect a timeout. If it does, it might report
 Message 35267 Always On Availability Groups connection with primary/secondary database terminated for primary/secondary database '<databasename>' on the availability replica '<replicaname>' with Replica ID: {<replicaid>}. This is an informational message only. No user action is required.
 ```
 
-Here's an example of what SQL Server reports to the error log. For example, if you stop the mirroring endpoint on the primary replica, the secondary replica will detect a connection timeout and messages 35206 and 36267 are reported in the secondary replica error log:
+Here's an example of what SQL Server reports to the error log. For example, if you stop the mirroring endpoint on the primary replica, the secondary replica detects a connection timeout and messages 35206 and 36267 are reported in the secondary replica error log:
 
 ```output
 2023-02-15 07:11:03.100 spid31s A connection timeout has occurred on a previously established connection to availability replica 'SQL19AGN1' with id [17116239-4815-4B9B-8097-26F68DED0653]. Either a networking or a firewall issue exists or the availability replica has transitioned to the resolving role.
@@ -87,7 +87,7 @@ Here's an example of what SQL Server reports to the error log. For example, if y
 2023-02-15 07:11:03.100 spid31s Always On Availability Groups connection with primary database terminated for secondary database 'agdb' on the availability replica 'SQL19AGN1' with Replica ID: {17116239-4815-4b9b-8097-26f68ded0653}. This is an informational message only. No user action is required.
 ```
 
-The primary replica didn't detect any connection timeout since it was still able to communicate with the secondary and reports message 35267 for each availability group database (in this case there is just one database, 'agdb'):
+The primary replica didn't detect any connection timeout since it was still able to communicate with the secondary and reports message 35267 for each availability group database (in this case there's just one database, 'agdb'):
 
 ```output
 2023-02-15 07:10:55.500 spid43s Always On Availability Groups connection with secondary database terminated for primary database 'agdb' on the availability replica 'SQL19AGN2' with Replica ID: {85682e51-07e1-4b9a-9d66-d7ca5e9164ad}. This is an informational message only. No user action is required.
@@ -136,7 +136,7 @@ ars.last_connect_error_description, ars.last_connect_error_number, ar.endpoint_u
 FROM sys.dm_hadr_availability_replica_states ars JOIN sys.availability_replicas ar ON ars.replica_id=ar.replica_id
 ```
 
-In this example, there is a sustained disconnected state because the mirroring endpoint on the primary replica has been stopped. By querying the primary replica, the Always On DMV can report on the primary and all secondary replicas (the endpoint is disabled on the primary replica).
+In this example, there's a sustained disconnected state because the mirroring endpoint on the primary replica has been stopped. By querying the primary replica, the Always On DMV can report on the primary and all secondary replicas (the endpoint is disabled on the primary replica).
 
 :::image type="content" source="media/troubleshooting-intermittent-connection-timeouts-availability-groups/query-primary-replica.png" alt-text="Screenshot that shows sustained disconnected state because the mirroring endpoint on the primary replica has been stopped." lightbox="media/troubleshooting-intermittent-connection-timeouts-availability-groups/query-primary-replica.png":::
 
@@ -211,7 +211,7 @@ Next, the output from the SQL Agent job running sp_server_diagnostics was checke
 
 ### Investigate a non-yielding scheduler event
 
-If you have confirmed from the earlier diagnosis steps that a non-yielding event caused the replica connection timeout:
+If you've confirmed from the earlier diagnosis steps that a non-yielding event caused the replica connection timeout:
 
 1. Identify the workloads that are running in SQL Server at the time of the non-yielding events are being run.
 
@@ -221,13 +221,13 @@ If you have confirmed from the earlier diagnosis steps that a non-yielding event
 
 1. Collect key performance counters for system resources including **Processor::% Processor Time, Memory::Available MBytes**, **Logical Disk::Avg Disk Queue Length**, and **Logical Disk::Avg Disk sec/Transfer**.
 
-1. If necessary, open a support incident with the SQL Server support team for further assistance in finding root cause for these non-yielding events and share the logs you have collected for further analysis.
+1. If necessary, open a support incident with the SQL Server support team for further assistance in finding root cause for these non-yielding events and share the logs you've collected for further analysis.
 
 ### Advanced Data Collection - collect network trace during connection timeout
 
 If the previous diagnosis of the SQL Server application didn't yield root cause, the network should be checked. Successful analysis of the network requires collecting a network trace that covers the time of the connection timeout.
 
-The following instructions start a Windows `netsh` network tracing on the replicas where the connection timeouts are being reported in the SQL Server error logs. A Windows scheduled event task is triggered when one of the SQL Server connection errors is recorded in the application event log. The scheduled task runs a command to stop the `netsh` network trace, so that the key network trace data isn't overwritten. The  instructions also assume a path of *F:\* for the batch and tracing logs. Adjust this path to your environment:
+The following instructions start a Windows `netsh` network tracing on the replicas where the connection timeouts are being reported in the SQL Server error logs. A Windows scheduled event task is triggered when one of the SQL Server connection errors is recorded in the application event log. The scheduled task runs a command to stop the `netsh` network trace, so that the key network trace data isn't overwritten. The instructions also assume a path of *F:\* for the batch and tracing logs. Adjust this path to your environment:
 
 1. Start network trace as shown in the following code snippet on the two replicas where the connection timeouts have been occurring.
 
