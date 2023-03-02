@@ -53,11 +53,11 @@ Search for trace messages and custom events sent by Profiler to your Application
 
 1. In your Application Insights resource, select **Search** from the top menu bar.
 
-   :::image type="content" source="media/troubleshoot-application-insights-profiler/search-trace-messages.png" alt-text="Screenshot of selecting the search button from the Application Insights resource.":::
+   :::image type="content" source="media/profiler-troubleshooting/search-trace-messages.png" alt-text="Screenshot of selecting the search button from the Application Insights resource.":::
 
 1. Use the search string `stopprofiler OR startprofiler OR upload OR ServiceProfilerSample` to find the relevant data:
 
-   :::image type="content" source="media/troubleshoot-application-insights-profiler/search-results.png" alt-text="Screenshot of the search results from aforementioned search string.":::
+   :::image type="content" source="media/profiler-troubleshooting/search-results.png" alt-text="Screenshot of the search results from aforementioned search string.":::
 
    The search results above include two examples of searches from two AI resources:
 
@@ -90,12 +90,12 @@ For Profiler to work properly, make sure the following things:
       1. Select **Go**.
    1. In the top menu, select **Tools** > **WebJobs dashboard**. The **WebJobs** pane opens.
 
-      :::image type="content" source="media/troubleshoot-application-insights-profiler/profiler-web-job.png" alt-text="Screenshot of the WebJobs pane, which displays the name, status, and last run time of jobs.":::
+      :::image type="content" source="media/profiler-troubleshooting/profiler-web-job.png" alt-text="Screenshot of the WebJobs pane, which displays the name, status, and last run time of jobs.":::
 
    1. To view the details of the webjob, including the log, select the **ApplicationInsightsProfiler3** link.  
      The **Continuous WebJob Details** pane opens.
 
-      :::image type="content" source="media/troubleshoot-application-insights-profiler/profiler-web-job-log.png" alt-text="Screenshot of the Continuous WebJob Details pane.":::
+      :::image type="content" source="media/profiler-troubleshooting/profiler-web-job-log.png" alt-text="Screenshot of the Continuous WebJob Details pane.":::
 
 If Profiler still isn't working for you, you can download the log and [submit an Azure support ticket](https://azure.microsoft.com/support/).
 
@@ -117,7 +117,7 @@ You can use the Kudu management site for App Service to get the base url of this
 
     It will end like this: `https://<kudu-url>/DiagnosticServices`. It will display a status page similar to the following:
 
-    :::image type="content" source="media/troubleshoot-application-insights-profiler/status-page.png" alt-text="Screenshot of the Diagnostic Services Status Page.":::
+    :::image type="content" source="media/profiler-troubleshooting/status-page.png" alt-text="Screenshot of the Diagnostic Services Status Page.":::
 
 > [!NOTE]
 > Codeless installation of Application Insights Profiler follows the .NET Core support policy. For more information about supported runtimes, see [.NET Core Support Policy](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).
