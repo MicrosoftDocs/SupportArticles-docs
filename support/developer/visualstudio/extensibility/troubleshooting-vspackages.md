@@ -1,127 +1,99 @@
 ---
-title: Troubleshooting VSPackages | Microsoft Docs
-description: Learn about common problems that you might have with your VSPackage and troubleshooting tips to resolve the issues.
-ms.custom: SEO-VS-2020
+title: Troubleshoot issues with VSPackages
+description: Describes common issues and troubleshooting tips with VSPackages.
 ms.date: 11/04/2016
-ms.topic: troubleshooting
-helpviewer_keywords:
-- VSPackages, troubleshooting
-- debugging, VSPackages
-ms.assetid: 274673e7-72e7-476f-a263-3411b5b874be
-author: maiak
-ms.author: maiak
-manager: jmartens
-ms.technology: vs-ide-sdk
-ms.workload:
-- vssdk
+author: HaiyingYu
+ms.author: haiyingyu
+ms.reviewer: maiak
 ---
-# Troubleshooting VSPackages
+# Troubleshoot issues with VSPackages
 
- [!INCLUDE [Visual Studio](~/includes/applies-to-version/vs-windows-only.md)]
-Following are common problems that you might have with your VSPackage and tips to resolve the issues.
+_Applies to:_&nbsp;Visual Studio
 
-### To troubleshoot a VSPackage that keeps Visual Studio from starting
+This article introduces common issues and troubleshooting tips with your VSPackages.
 
-- Start [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] in safe mode.
+## A VSPackage keeps Visual Studio from starting
 
-   To start [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] in safe mode, at a command prompt, type **devenv.exe /safemode**.
+In this scenario, start Visual Studio in safe mode by entering _devenv.exe /safemode_ at a command prompt. During this process, no VSPackages are loaded except the VSPackages that are included with Visual Studio.
 
-   During this process no VSPackages are loaded except the VSPackages that are included with [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
+## A VSPackage isn't loaded
 
-### To troubleshoot a VSPackage that does not load
+To troubleshoot this issue, try one or more of the following steps:
 
-1. Make sure that you are using the registry root in which the VSPackage is registered to run, usually the experimental registry root.
+- Make sure that you're using the registry root in which the VSPackage is registered to run, usually the experimental registry root. For more information, see [The Experimental Instance](/visualstudio/extensibility/the-experimental-instance).
+- If the VSPackage is targeted to run in the experimental registry root, make sure that you're running the experimental version of Visual Studio.
 
-    For more information, see [The Experimental Instance](../extensibility/the-experimental-instance.md).
-
-2. If the VSPackage is targeted to run in the experimental registry root, make sure that you are running the experimental version of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
-
-    To run the experimental version, type the following in a command window: **devenv /rootsuffix exp**.
-
-3. Check your VSPackage registry entries.
-
-    For more information, see [Registering VSPackages](registering-and-unregistering-vspackages.md) and [Managing VSPackages](../extensibility/managing-vspackages.md).
-
-4. Open the **Output** window of the instance of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] that is failing to load the VSPackage. Information about why the VSPackage is failing to load may be displayed in that window.
+    To run the experimental version, open a Visual Studio Command Prompt and then enter _devenv /rootsuffix exp_.
+- Check your VSPackage registry entries. For more information, see [Registering VSPackages](/visualstudio/extensibility/registering-and-unregistering-vspackages) and [Managing VSPackages](/visualstudio/extensibility/managing-vspackages).
+- Open the **Output** window of the instance of Visual Studio that is failing to load the VSPackage. Information about why the VSPackage is failing to load may be displayed in that window.
 
    > [!NOTE]
-   > If you are starting the experimental version of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] from the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] integrated development environment (IDE), inspect the **Output** window of both versions.
+   > If you are starting the experimental version of Visual Studio from the Visual Studio integrated development environment (IDE), inspect the **Output** window of both versions.
+- Examine the activity log. For more information, see [How to: Use the Activity Log](/visualstudio/extensibility/how-to-use-the-activity-log).
+- For more information about exceptions thrown by the IDE, select **Exceptions** on the **Debug** menu to enable the exceptions. In the Exceptions dialog box, select the types of exceptions about which you want more information.
 
-5. Examine the activity log.
+## A VSPackage isn't registered
 
-    For more information, see [How to: Use the Activity Log](../extensibility/how-to-use-the-activity-log.md).
+Make sure that the VSPackage assembly resides in a trusted location. [RegPkg](/visualstudio/extensibility/internals/regpkg-utility) can't register assemblies in an untrusted or partially trusted location, such as a network share in the default .NET security configuration. Although a warning appears whenever a user creates a project in an untrusted location, the **Do not show this message again** checkbox can prevent this warning from reoccurring.
 
-6. For more information about exceptions thrown by the IDE, click **Exceptions** on the **Debug** menu to enable the exceptions. In the **Exceptions** dialog box select the types of exceptions about which you want more information.
+## A command isn't visible or it generates an error when it's selected
 
-### To troubleshoot a VSPackage that does not register
+To solve this issue, try the following steps:
 
-1. Make sure that the VSPackage assembly resides in a trusted location. RegPkg cannot register assemblies in an untrusted or partially trusted location, such as a network share in the default .net security configuration. Although a warning appears whenever a user creates a project in an untrusted location, the "do not show this message again" checkbox can prevent this warning from reoccurring.
-
-### To troubleshoot a command that is not visible or that generates an error when you click a command
-
-1. Merge the new or changed menu commands and those already in the IDE by typing the following at the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Command Prompt: **devenv /rootsuffix Exp /setup**.
-
-2. Make sure that [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] can find UI.dll for your VSPackage.
+- Merge the new or changed menu commands and those commands already in the IDE by entering _devenv /rootsuffix Exp /setup_ at the Visual Studio Command Prompt.
+- Make sure that Visual Studio can find UI.dll for your VSPackage.
 
    1. Find the CLSID of the VSPackage in the Packages section of the registry:
 
-        HKLM\Software\Microsoft\Visual Studio\\*\<version>*\Packages
+        `HKLM\Software\Microsoft\Visual Studio\<version>\Packages`
+   1. Verify that the path given by the SatelliteDll subkey is correct.
 
-   2. Verify that the path given by the SatelliteDll subkey is correct.
+## A VSPackage behaves unexpectedly
 
-### To troubleshoot a VSPackage that behaves unexpectedly
+To troubleshoot this issue, try one or more of the following steps:
 
-1. Set breakpoints in your code.
+- Set breakpoints in your code.
 
      Good starting points for debugging are the constructor and the initialization method. You can also set breakpoints in the area you want to evaluate, such as a menu command. To enable breakpoints, you must run under the debugger.
 
-    1. On the **Project** menu, click **Properties**.
+    1. On the **Project** menu, select **Properties**.
 
-    2. On the **Property Pages** dialog box, select the **Debug** tab.
+    1. On the **Property Pages** dialog box, select the **Debug** tab.
 
-    3. In the **Command line arguments** box, type the root suffix of the development environment that your VSPackage targets. For example, to select the experimental build, type: **/RootSuffix Exp**.
+    1. In the **Command line arguments** box, enter the root suffix of the development environment that your VSPackage targets. For example, to select the experimental build, enter: _/RootSuffix Exp_.
 
-    4. On the **Debug** menu, click **Start Debugging** or press F5.
+    1. On the **Debug** menu, select **Start Debugging** or press F5.
 
         > [!NOTE]
         > If you are debugging a project, create or load an existing instance of your project now.
 
-2. Use the activity log.
+- Use the activity log.
 
-     Trace VSPackage behavior by writing information to the activity log at key points. This technique is especially useful when you run a VSPackage in a retail environment. For more information, see [How to: Use the Activity Log](../extensibility/how-to-use-the-activity-log.md).
+     Trace VSPackage behavior by writing information to the activity log at key points. This technique is especially useful when you run a VSPackage in a retail environment. For more information, see [How to: Use the Activity Log](/visualstudio/extensibility/how-to-use-the-activity-log).
 
-3. Use public symbols.
+- Use public symbols.
 
-     To improve readability while debugging, you can attach symbols to the debugger.
+    To improve readability while debugging, you can attach symbols to the debugger:
 
     1. From the **Tools/Options** menu, navigate to the **Debugging/Symbols** dialog box.
+    1. Add **Symbol file (.pdb) location**: _https://msdl.microsoft.com/download/symbols_.
+    1. To improve performance, specify a symbol cache folder, for example: _C:\symbols_.
 
-    2. Add this **Symbol file (.pdb) location**:
+## A VSPackage or one of its dependencies is missing
 
-         `https://msdl.microsoft.com/download/symbols`
+- For managed code, make sure that the reference paths are correct.
 
-    3. To improve performance, specify a symbol cache folder, for example:
-
-        ```
-        C:\symbols
-        ```
-
-### To troubleshoot a missing VSPackage or one of its dependencies
-
-1. For managed code, make sure that the reference paths are correct.
-
-   1. On the **Project** menu, click **Properties**.
-
-   2. Select the **References** tab in the **Property Pages** dialog box and make sure all paths are correct. Alternatively, you can use the **Object Browser** to browse for the referenced objects.
+   1. On the **Project** menu, select **Properties**.
+   1. Select the **References** tab in the **Property Pages** dialog box and make sure all paths are correct. Alternatively, you can use the **Object Browser** to browse for the referenced objects.
 
         For managed code, you can use the [Fuslogvw.exe (Assembly Binding Log Viewer)](/dotnet/framework/tools/fuslogvw-exe-assembly-binding-log-viewer) to display the details of failed assembly loads.
+- For unmanaged code, find the CLSID of the VSPackage in the Visual Studio CLSID registry node:
 
-2. For unmanaged code, find the CLSID of the VSPackage in the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] CLSID registry node:
+    `HKLM\Software\Microsoft\Visual Studio\<version>\CLSID`
 
-    HKLM\Software\Microsoft\Visual Studio\\*\<version>*\CLSID
-
-   Make sure that the InprocServer32 entry has the correct path of the VSPackage dll.
+   Make sure that the InprocServer32 entry has the correct path of the VSPackage DLL.
 
 ## See also
-- [VSPackages](../extensibility/internals/vspackages.md)
-- [Visual Studio troubleshooting](/troubleshoot/visualstudio/welcome-visual-studio/)
+
+- [VSPackages](/visualstudio/extensibility/internals/vspackages)
+- [Visual Studio troubleshooting](../welcome-visual-studio.yml)
