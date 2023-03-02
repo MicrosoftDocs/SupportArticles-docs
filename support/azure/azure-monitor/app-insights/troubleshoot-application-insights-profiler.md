@@ -78,11 +78,11 @@ When you see parallel threads in your traces, determine which threads are waitin
 
 ### Azure App Service
 
-For Profiler to work properly, make sure:
+For Profiler to work properly, make sure the following things:
 
 - Your web app has [Application Insights enabled](/azure/azure-monitor/profiler/profiler) with the [right settings](/azure/azure-monitor/profiler/profiler#for-application-insights-and-app-service-in-different-subscriptions)
 
-- The ApplicationInsightsProfiler3 WebJob is running. To check the webjob:
+- The ApplicationInsightsProfiler3 webjob is running. To check the webjob, follow these steps:
 
    1. Go to [Kudu](https://github.com/projectkudu/kudu/wiki/Accessing-the-kudu-service). From the Azure portal:
       1. In your App Service, select **Advanced Tools** from the left side menu.
@@ -112,15 +112,11 @@ You can use the Kudu management site for App Service to get the base url of this
 1. Open your App Service application in the Azure portal.
 2. Select **Advanced Tools**.
 3. Select **Go**.
-4. Once you are on the Kudu management site:
-   1. Append `/DiagnosticServices` to the URL.
-   1. Press <kbd>Enter</kbd>.
+4. Once you are on the Kudu management site, append `/DiagnosticServices` to the URL and press <kbd>Enter</kbd>.
 
-It will end like this: `https://<kudu-url>/DiagnosticServices`.
+    It will end like this: `https://<kudu-url>/DiagnosticServices`. It will display a status page similar to the following:
 
-It will display a status page similar to:
-
-:::image type="content" source="media/troubleshoot-application-insights-profiler/status-page.png" alt-text="Screenshot of the Diagnostic Services Status Page.":::
+    :::image type="content" source="media/troubleshoot-application-insights-profiler/status-page.png" alt-text="Screenshot of the Diagnostic Services Status Page.":::
 
 > [!NOTE]
 > Codeless installation of Application Insights Profiler follows the .NET Core support policy. For more information about supported runtimes, see [.NET Core Support Policy](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).
