@@ -115,7 +115,7 @@ This requires collecting network trace logs on the primary and secondary replica
 
 ## How to diagnose replica connection timeouts?
 
-In the previous section [What causes replica connection timeouts](#what-causes-replica-connection-timeouts), one key reason for connection timeouts is application issues, which prevent SQL Server from servicing the connection with the partner replica. This section explains how to analyze the SQL Server logs, which may lead to root cause for the replica connection timeouts. This section ends with a more advanced section on how to collect network traces when the connection timeouts occur so that the network can be checked.
+In the previous section [What causes replica connection timeouts](#what-causes-replica-connection-timeouts), one key reason for connection timeouts was application issues, which prevent SQL Server from servicing the connection with the partner replica. This section explains how to analyze the SQL Server logs, which may lead to root cause for the replica connection timeouts. This section ends with a more advanced section on how to collect network traces when the connection timeouts occur so that the network can be checked.
 
 ### Assess timing and location of replica connection timeouts
 
@@ -128,7 +128,7 @@ The `AlwaysOn_health` extended event session has been enhanced to include the `u
 > [!NOTE]
 > Extended event `ucs_connection_setup` was added to the latest cumulative updates in SQL Server, you must be running the latest cumulative updates to observe this extended event.
 
-### Query AlwaysOn Distributed Management Views (DMVs)
+### Query Always On Distributed Management Views (DMVs)
 
 You can also query more information about the replica's connected state. This query only reports the connected state and any errors associated with the connection timeout at point in time and if the connection issues are intermittent, it might not capture the disconnected state easily.
 
@@ -150,14 +150,14 @@ By querying the secondary replica, the Always On DMVs only report on the seconda
 
 1. Connect to each replica using SQL Server Management Studio (SSMS) Object Explorer and open the AlwaysOn_health extended event files.
 
-1. In **SSMS**, go to **File** and then **Open** and then **Merge Extended Event Files**.
+1. In **SSMS**, go to **File** > **Open** and then **Merge Extended Event Files**.
 
 1. Select the **Add** button and using the **File Open** dialog box and then navigate to the files in the *SQL Server \LOG* directory.
 
 1. Press **Control** and select the files whose name begins with *'AlwaysOn_healthxxx.xel'*.
 
 1. Select **Open** and then select **OK**.
-    You should see a new tabbed window in SSMS with the AlwaysOn events.
+   You should see a new tabbed window in SSMS with the AlwaysOn events.
 
 The following screenshot shows the AlwaysOn_health data from the secondary replica. The first outlined box shows the connection loss after the endpoint on the primary replica is stopped. The second outlined box shows the connection failure the next time the secondary replica attempts to connect to the primary replica.
 
@@ -229,36 +229,34 @@ If you have confirmed from the earlier diagnosis steps that a non-yielding event
 
 If the previous diagnosis of the SQL Server application didn't yield root cause, the network should be investigated. Successful analysis of the network requires collecting a network trace that covers the time of the connection timeout.
 
-The following instructions start a Windows `netsh` network tracing on the replicas where the connection timeouts are being reported in the SQL Server error logs. A Windows scheduled event task is triggered when one of the SQL Server connection errors is recorded in the application event log. The scheduled task runs a command to stop the `netsh` network trace, so that the key network trace data isn't overwritten.
-
-The following instructions assume a path of F:\ for the batch and tracing logs. Adjust this path to your environment:
+The following instructions start a Windows `netsh` network tracing on the replicas where the connection timeouts are being reported in the SQL Server error logs. A Windows scheduled event task is triggered when one of the SQL Server connection errors is recorded in the application event log. The scheduled task runs a command to stop the `netsh` network trace, so that the key network trace data isn't overwritten. The  instructions also assume a path of *F:\* for the batch and tracing logs. Adjust this path to your environment:
 
 1. Start network trace as shown in the following code snippet on the two replicas where the connection timeouts have been occurring.
 
-```console
-netsh trace start capture=yes persistent=yes overwrite=yes maxsize=500 tracefile=f:\trace.etl
-```
+    ```console
+    netsh trace start capture=yes persistent=yes overwrite=yes maxsize=500 tracefile=f:\trace.etl
+    ```
 
 1. Create Windows scheduled tasks that stop the `netsh` trace on events 35206 or 35267. You can create these tasks from an administrative command line:
 
-```console
-schtasks /Create /tn Event35206Task /tr F:\stoptrace.bat /SC ONEVENT /EC Application /MO *[System/EventID=35206] /f /RL HIGHEST
-
-schtasks /Create /tn Event35267Task /tr F:\stoptrace.bat /SC ONEVENT /EC Application /MO *[System/EventID=35267] /f /RL HIGHEST
-```
+    ```console
+    schtasks /Create /tn Event35206Task /tr F:\stoptrace.bat /SC ONEVENT /EC Application /MO *[System/EventID=35206] /f /RL HIGHEST
+    
+    schtasks /Create /tn Event35267Task /tr F:\stoptrace.bat /SC ONEVENT /EC Application /MO *[System/EventID=35267] /f /RL HIGHEST
+    ```
 
 1. When the event occurs and the network traces are stopped and captured, you can delete the `ONEVENT` tasks:
 
-```console
-PS C:\Users\sqladmin> Schtasks /Delete /tn Event35206Task /F
-PS C:\Users\sqladmin> Schtasks /Delete /tn Event35206Task /F
-```
+    ```console
+    PS C:\Users\sqladmin> Schtasks /Delete /tn Event35206Task /F
+    PS C:\Users\sqladmin> Schtasks /Delete /tn Event35206Task /F
+    ```
 
 Analysis of the network trace is outside the scope of this troubleshooter. If you can't interpret the network trace, open a case with the Microsoft SQL Server support team and provide the trace along with other requested log files for root cause analysis.
 
 ## What else can I do to mitigate the connection timeouts?
 
-The default availability group `SESSION_TIMEOUT` is configured for 10 seconds. You may be able to mitigate the connection timeouts by adjusting the availability group replica `SESSION_TIMEOUT` property. This setting is per replica, adjust it for the primary, and each affected secondary replica. Here is an example of the syntax. The default `SESSION_TIMEOUT` is 10, so 15 may be the next value to try.
+The default availability group `SESSION_TIMEOUT` is configured for 10 seconds. You may be able to mitigate the connection timeouts by adjusting the availability group replica `SESSION_TIMEOUT` property. This setting is per replica. Adjust it for the primary and each affected secondary replica. Here is an example of the syntax. The default `SESSION_TIMEOUT` is 10, so you could use 15 as the next value.
 
 ```sql
 ALTER AVAILABILITY GROUP ag
