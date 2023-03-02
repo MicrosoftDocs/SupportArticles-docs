@@ -223,7 +223,7 @@ Otherwise, these cipher suites should already be part of modern Java 8+ distribu
 
 There is a known issue with Java 8 related to jar file signature verification of Java agents that can increase the start-up time with Application Insights.
 You can try to:
-* [Runtime attach the Application Insights Java agent](https://learn.microsoft.com/en-us/azure/azure-monitor/app/java-spring-boot#enabling-programmatically) if your application is based on Spring Boot
+* [Runtime attach the Application Insights Java agent](/azure/azure-monitor/app/java-spring-boot#enabling-programmatically) if your application is based on Spring Boot
 * Or, use a Java version greater than or equal to 11
 
 ### Experimental feature
