@@ -22,6 +22,8 @@ Two new SQL Server Agent properties, `sqlagent.jobhistorymaxrows` and `sqlagent.
 
 Example: </br>`sudo /opt/mssql/bin/mssql-conf set sqlagent.jobhistorymaxrows 1000` </br>`sudo /opt/mssql/bin/mssql-conf set sqlagent.jobhistorymaxrowsperjob 100` 
 
+**Note** After configuring `sqlagent.jobhistorymaxrows` or `sqlagent.jobhistorymaxrowsperjob` as the above example, you need to restart the application. The two properties can't be configured using SQL Server Management Studio (SSMS).
+
 This problem is fixed in the following cumulative update for SQL Server:
 
 [Cumulative Update 2 for SQL Server 2022](cumulativeupdate2.md)
