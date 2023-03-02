@@ -4,7 +4,7 @@ description: Provides a solution to an issue where Double-Click, Drag and Drop a
 ms.reviewer: rajeyara
 ms.topic: troubleshooting
 ms.date: 3/31/2021
-ms.subservice: power-automate-flows
+ms.subservice: power-automate-desktop-flows
 ---
 # Double-Click, Drag and Drop aren't working
 

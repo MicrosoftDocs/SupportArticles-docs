@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot AD FS issues
 description: Describes how to troubleshoot authentication issues that may arise for federated users in Azure Active Directory or Office 365. Provides a comprehensive list of symptoms and their solutions.
-ms.date: 10/22/2020
+ms.date: 3/24/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

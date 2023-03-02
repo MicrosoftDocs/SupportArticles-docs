@@ -1,7 +1,7 @@
 ---
 title: unable to allocate memory
 description: Provides a resolution for the issue that it is unable to allocate memory from the system paged pool.
-ms.date: 10/09/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

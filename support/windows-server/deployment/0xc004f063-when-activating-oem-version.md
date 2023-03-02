@@ -1,7 +1,7 @@
 ---
 title: Error code 0xc004f063 when activating or validating an OEM version of Windows
 description: Provides a solution to an 0xc004f063 error that occurs when you try to activate or validate an OEM version of Windows.
-ms.date: 09/16/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

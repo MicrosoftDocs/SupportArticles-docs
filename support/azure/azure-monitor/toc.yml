@@ -5,6 +5,8 @@ items:
   items:
   - name: Application Insights telemetry
     items:
+    - name: JavaScript SDK troubleshooting
+      href: app-insights/javascript-sdk-troubleshooting.md
     - name: Troubleshoot missing telemetry in Application Insights
       href: app-insights/investigate-missing-telemetry.md
     - name: Troubleshoot auto-instrumentation issues
@@ -43,6 +45,9 @@ items:
       href: app-insights/change-analysis-troubleshoot.md    
     - name: Troubleshoot Azure Application Insights Agent (formerly Status Monitor v2)
       href: app-insights/status-monitor-v2-troubleshoot.md
+  - name: Snapshot Debugger troubleshooting
+    href: app-insights/snapshot-debugger-troubleshoot.md
+
 - name: Log Analytics
   items:
   - name: Basic troubleshooting of Microsoft Monitoring Agent

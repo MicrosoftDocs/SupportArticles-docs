@@ -1,7 +1,7 @@
 ---
 title: Third-party storage solutions support policy
 description: Explains the Microsoft third-party storage software solutions support policy that works in conjunction with Microsoft server products.
-ms.date: 09/15/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

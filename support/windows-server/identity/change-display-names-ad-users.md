@@ -1,7 +1,7 @@
 ---
 title: Change display names of AD users
 description: Describes how to change display names of Active Directory users.
-ms.date: 09/27/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

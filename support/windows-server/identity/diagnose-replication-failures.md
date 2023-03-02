@@ -1,7 +1,7 @@
 ---
 title: Diagnose AD replication failures
 description: Describes how to diagnose Active Directory replication failures.
-ms.date: 09/08/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

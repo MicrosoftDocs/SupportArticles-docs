@@ -3,7 +3,7 @@ title: IPv6 support in Azure Active Directory (Azure AD)
 description: Learn about Internet Protocol version 6 (IPv6) support in Azure Active Directory (Azure AD). Review what your organization needs to do to accommodate IPv6.
 ms.service: active-directory
 ms.subservice: aad-general
-ms.date: 02/01/2023
+ms.date: 02/24/2023
 ms.author: v-dele
 author: DennisLee-DennisLee
 ms.reviewer: lhuangnorth, gautama, amycolannino, joflore, mariourrutia
@@ -15,9 +15,9 @@ We're excited to bring IPv6 support to Azure Active Directory (Azure AD), to sup
 
 If your organization's networks don't support IPv6 today, you can safely ignore this information until such time that they do.
 
-## What's changing? 
+## What's changing?
 
-Our service endpoint URLs will now resolve to return both IPv4 and IPv6 addresses. If a client platform or network supports IPv6, the connection will mostly be attempted using IPv6, assuming that the network hops that are in between (such as firewalls or web proxies) also support IPv6. For environments that don't support IPv6, client applications will continue to connect to Azure AD over IPv4. 
+Our service endpoint URLs will now resolve to return both IPv4 and IPv6 addresses. If a client platform or network supports IPv6, the connection will mostly be attempted using IPv6, assuming that the network hops that are in between (such as firewalls or web proxies) also support IPv6. For environments that don't support IPv6, client applications will continue to connect to Azure AD over IPv4.
 
 The following features will also support IPv6 addresses:
 
@@ -37,14 +37,14 @@ We know that IPv6 support is a significant change for some organizations. We're 
 If you have public IPv6 addresses representing your network, take the actions that are described in the following sections as soon as possible.
 
 > For example:  
-> 
+>
 > Some organizations have a Conditional Access policy that blocks access to specific applications from outside a trusted named location that represents their public network addresses. This named location contains the IPv4 addresses that are owned by the customer, but it might not include the public IPv6 addresses that represent the customer network.
-> 
+>
 > **If customers don't update their named locations with these IPv6 addresses, their users will be blocked.**
 
 ### Named locations
 
-Named locations are shared between many features, such as Conditional Access, Identity Protection, and B2C. Customers should partner with their network administrators and internet service providers (ISPs) to identify their public-facing IPv6 addresses. Customers should then use this list to [create or update named locations, to include their identified IPv6 addresses](/azure/active-directory/conditional-access/location-condition#ip-address-ranges). 
+Named locations are shared between many features, such as Conditional Access, Identity Protection, and B2C. Customers should partner with their network administrators and internet service providers (ISPs) to identify their public-facing IPv6 addresses. Customers should then use this list to [create or update named locations, to include their identified IPv6 addresses](/azure/active-directory/conditional-access/location-condition#ip-address-ranges).
 
 ### Azure AD per-user multifactor authentication
 
@@ -70,7 +70,9 @@ By default, both IPv6 and IPv4 traffic is supported on Windows and most other op
 You can test Azure AD authentication over IPv6 before we enable it worldwide in late March 2023. This procedure helps validate IPv6 range configurations. The recommended approach is to use a [Name Resolution Policy Table (NRPT)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn593632(v=ws.11)) rule pushed to your Azure AD-joined Windows devices. In Windows Server, NRPT lets you implement a global or local policy that overrides DNS resolution paths. With this feature, you can redirect DNS for various fully qualified domain names (FQDNs) to special DNS servers that are configured to have IPv6 DNS entries for Azure AD sign-in. It's simple to enable and disable NRPT rules by using a PowerShell script. You can use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) to push this feature to clients.
 
 > [!NOTE]
-> Microsoft is providing these instructions for testing purposes only. You must remove the following configurations by May 2023 to ensure that your clients are using production DNS servers. The DNS servers in the following procedures may be decommissioned after May 2023.
+> - Microsoft is providing these instructions for testing purposes only. You must remove the following configurations by May 2023 to ensure that your clients are using production DNS servers. The DNS servers in the following procedures may be decommissioned after May 2023.
+> 
+> - We recommend using the [Resolve-DnsName](/powershell/module/dnsclient/resolve-dnsname) cmdlet to validate NRPT rules. If you use the [nslookup](/windows-server/administration/windows-commands/nslookup) command, the result may be different given the differences that exist between these tools.
 
 ### Configure a client NRPT rule manually
 
@@ -127,7 +129,7 @@ You can test Azure AD authentication over IPv6 before we enable it worldwide in 
     } | Remove-DnsClientNrptRule -Force
     ```
 
-### Deploy NRPT rule with Intune 
+### Deploy NRPT rule with Intune
 
 To deploy the NRPT rule to multiple machines by using Intune, create a Win32 app and assign it to one or more devices. 
 
@@ -213,7 +215,7 @@ if ($existingRules) {
 
 See [Prepare Win32 app content for upload](/mem/intune/apps/apps-win32-prepare) to create a *.intunewin* file from the folder and scripts that you previously saved.
 
-#### Step 3: Create the Win32 application 
+#### Step 3: Create the Win32 application
 
 The following instructions show you how to create the necessary Win32 application. For more information, see [Add, assign, and monitor a Win32 app in Microsoft Intune](/mem/intune/apps/apps-win32-add).
 
@@ -234,9 +236,59 @@ The following instructions show you how to create the necessary Win32 applicatio
 1. In the **Requirement** page, select both **Operating system architectures** and set **Minimum Operating system** to **Windows 10 1607**. Select **Next** to continue.
 1. On the **Detection** page, select **Use a custom detection script** from the **Rules format** dropdown list. Select the browse button beside the **Script file** box to choose the detection script. Leave the remaining fields as their default values. Select **Next** to continue.
 1. Select **Next** on the **Dependencies** page to continue without any changes.  
-1. Select **Next** on the **Supersedence (preview)** page to continue without any changes. 
+1. Select **Next** on the **Supersedence (preview)** page to continue without any changes.
 1. On the **Assignments** page, create assignments based on your requirements, and then select **Next** to continue.  
 1. Review the information one final time on the **Review + create** page. Once you finish your validation, select **Create** to create the application.  
+
+## Find IPv6 addresses in Sign-in logs
+
+Using one or more of the following methods, compare the list of IPv6 addresses to those addresses you expect. Consider adding these IPv6 addresses to your named locations and marking some as trusted where appropriate. You need at least the [Reports Reader role](/azure/active-directory/roles/permissions-reference#reports-reader) assigned in order to read the Sign-ins log.
+
+### Azure portal
+
+1. Sign in to the **Azure portal** as a Reports Reader, Security Reader, Global Reader, Security Administrator, or other role with permission.
+1. Browse to **Azure Active Directory** > **Sign-in logs**.
+1. Select **+ Add filters** > **IP address** and select **Apply**.
+1. In the **Filter by IP address** box, insert a colon (**:**).
+1. Optionally download this list of log entries to JSON or CSV format for further processing.
+
+### Log Analytics
+
+If your organization uses [Log Analytics](/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics), you can query for IPv6 addresses in your logs using the following query.
+
+```kusto
+union SigninLogs, AADNonInteractiveUserSignInLogs
+| where IPAddress has ":"
+| summarize RequestCount = count() by IPAddress, AppDisplayName, NetworkLocationDetails
+| sort by RequestCount
+```
+
+### PowerShell
+
+Organizations can use the following PowerShell script to query the Azure AD sign-in logs in [Microsoft Graph PowerShell](/powershell/microsoftgraph/authentication-commands). The script provides you with a listing of IPv6 addresses along with the application and number of times it appears.
+
+```powershell
+$tId = "TENANT ID"  # Add the Azure Active Directory tenant ID.
+$agoDays = 2  # Will filter the log for $agoDays from the current date and time.
+$startDate = (Get-Date).AddDays(-($agoDays)).ToString('yyyy-MM-dd')  # Get filter start date.
+$pathForExport = "./"  # The path to the local filesystem for export of the CSV file. 
+
+Connect-MgGraph -Scopes "AuditLog.Read.All" -TenantId $tId 
+# Get both interactive and non-interactive IPv6 sign-ins .
+$signInsInteractive = Get-MgAuditLogSignIn -Filter "contains(IPAddress, ':')" -All
+$signInsNonInteractive = Get-MgAuditLogSignIn -Filter "contains(IPAddress, ':')" -All 
+$columnList = @{  # Enumerate the list of properties to be exported to the CSV files.
+    Property = "createdDateTime","CorrelationId", "userPrincipalName", "userId",
+      "UserDisplayName", "AppDisplayName", "AppId", "IPAddress", "isInteractive",
+      "ResourceDisplayName", "ResourceId"
+} # Summarize IPv6 & App Display Name count
+$signInsInteractive | Group-Object IPaddress, AppDisplayName | Select-Object @{Name='IPaddress';Expression={$_.Group[0].IPaddress}}, 
+    @{Name ='AppDisplayName';Expression={$_.Group[0].AppDisplayName}}, Count | Sort-Object -Property Count –Descending | Export-Csv -Path ($pathForExport + "Summary_Interactive_IPv6_$tId.csv") -NoTypeInformation
+$signInsNonInteractive | Group-Object IPaddress, AppDisplayName | Select-Object @{Name='IPaddress';Expression={$_.Group[0].IPaddress}}, 
+    @{Name ='AppDisplayName';Expression={$_.Group[0].AppDisplayName}}, Count | Sort-Object -Property Count –Descendin | Export-Csv -Path ($pathForExport + "Summary_NonInteractive_IPv6_$tId.csv") -NoTypeInformation #Detailed IPv6 Sign-ins
+#$signInsInteractive  | Select-Object @columnList | Export-Csv -Path ($pathForExport + "Detailed_Interactive_IPv6_$tId.csv") -NoTypeInformation
+#$signInsNonInteractive  | Select-Object @columnList | Export-Csv -Path ($pathForExport + "Detailed_NonInteractive_IPv6_$tId.csv") -NoTypeInformation
+```
 
 ## Next steps
 
@@ -246,4 +298,4 @@ We'll keep this article updated. Here's a short link you can use to come back fo
 - [Conditional Access: Block access by location](/azure/active-directory/conditional-access/howto-conditional-access-policy-location)
 - [Find help and get support for Azure Active Directory](/azure/active-directory/fundamentals/how-to-get-support)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)] 
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

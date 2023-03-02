@@ -1,7 +1,7 @@
 ---
 title: Service using gMSA account doesn't start
 description: Address an issue in which service cannot start and slow startup and user logon when the service is configured to use gMSA account on a Windows Server 2012 R2-based DC.
-ms.date: 09/08/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
