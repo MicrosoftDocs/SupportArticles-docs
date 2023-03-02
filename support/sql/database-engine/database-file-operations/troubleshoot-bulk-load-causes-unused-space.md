@@ -1,7 +1,7 @@
 ---
 title: Bulk load operations can leave large amounts of unused space
 description: Learn how to resolve the issue of excessive unused space in bulk load operations that have a small batch size.
-ms.date: 03/01/2023
+ms.date: 03/02/2023
 ms.custom: sap:Administration and management
 ms.reviewer: jopilov
 author: padmajayaraman
@@ -21,9 +21,9 @@ EXEC sp_spaceused 'Sales.Customer'
 
 Here's an example.
 
-| Table          | Reserved (KB) | Data (KB) | Index (KB) | Unused (KB) |
-| -------------- | ------------- | --------- | ---------- | ----------- |
-| Sales.Customer | 800000        | 50000     | 10000      | 740000      |
+| Table | Reserved (KB) | Data (KB) | Index (KB) | Unused (KB) |
+|---|---|---|---|---|
+| Sales.Customer | 80,0000 | 50,000 | 10000 | 7,40,000 |
 
 ## Cause
 
@@ -35,9 +35,9 @@ The following table from [the MSSQL Tiger Team blog site](/archive/blogs/sql_ser
 
 | Batch size  | Reserved (KB)  | Data (KB)  | Index size (KB)  | Unused (KB)  | Percent (%) unused |
 | ----------  | -------------  | ---------  | ---------------  | -----------  | ------------------ |
-| 10          | 6472           | 808        | 8                | 5656         | 87                 |
-| 100         | 1352           | 168        | 8                | 1176         | 86                 |
-| 1000        | 264            | 128        | 8                | 128          | 49                 |
+| 10          | 6,472           | 808        | 8                | 5,656         | 87                 |
+| 100         | 1,352           | 168        | 8                | 1,176         | 86                 |
+| 1,000        | 264            | 128        | 8                | 128          | 49                 |
 
 ## Resolution
 
@@ -49,7 +49,7 @@ If you have a relatively small number of rows to insert, then these aren't "bulk
 
 ### Setting the batch size value for bulk load operation
 
-For bulk load operations, choose a batch size that's a multiple of the size of an extent (64 KB) and is based on the average row size. Such a batch size value would allow the rows to efficiently fill the space within the extent. For example, if the average row size is 25 bytes, you would divide 64 KB by 25 bytes per row to determine how many rows you can pack into a batch size. In this case, 64 KB = 65536 bytes / 25 bytes per row = 2620 rows. Therefore, you can choose a batch size around this number, allowing space for the header of each data page. You can test this by using batch sizes of say a range between 2,500 and 2,700 and observe the space usage. To find the average row size in your table, use the following query. For heaps (tables that have no clustered index), use **0** for the [index_ID](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql?view=sql-server-ver16&preserve-view=true) parameter (the third parameter). For tables that have clustered indexes, use **1**, as shown in the following example.
+For bulk load operations, choose a batch size that's a multiple of the size of an extent (64 KB) and is based on the average row size. Such a batch size value would allow the rows to efficiently fill the space within the extent. For example, if the average row size is 25 bytes, you would divide 64 KB by 25 bytes per row to determine how many rows you can pack into a batch size. In this case, 64 KB = 65536 bytes / 25 bytes per row = 2,620 rows. Therefore, you can choose a batch size around this number, allowing space for the header of each data page. You can test this by using batch sizes of say a range between 2,500 and 2,700 and observe the space usage. To find the average row size in your table, use the following query. For heaps (tables that have no clustered index), use **0** for the [index_ID](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql?view=sql-server-ver16&preserve-view=true) parameter (the third parameter). For tables that have clustered indexes, use **1**, as shown in the following example.
 
 ```sql
 SELECT 
