@@ -87,6 +87,8 @@
         href: database-engine/availability-groups/troubleshooting-automatic-failover-problems.md
       - name: Troubleshoot availability group database in reverting state
         href: database-engine/availability-groups/troubleshoot-availability-group-database-reverting-state.md
+      - name: Troubleshooting intermittent connection timeouts between availability group replicas
+        href: database-engine/availability-groups/troubleshooting-intermittent-connection-timeouts-availability-groups.md
       - name: Troubleshooting log send queuing in an Always On availability group
         href: database-engine/availability-groups/troubleshooting-log-send-queuing-in-alwayson-availability-group.md
       - name: Troubleshooting on Always On issues

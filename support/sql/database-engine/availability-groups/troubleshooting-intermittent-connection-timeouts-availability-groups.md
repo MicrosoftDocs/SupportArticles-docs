@@ -65,7 +65,7 @@ Automatic failover may fail to bring the availability group online in the primar
 
 ## What do the connection timeout errors indicate?
 
-The default availability group replica `SESSION_TIMEOUT` setting is 10 seconds. This setting is configured for each replica and determines how long the replica waits to receive a response from its partner replica before reporting a connection timeout. When a replica hasn't had a response from the partner replica, it will report a connection timeout in the SQL Server error log and the Windows application event log. The replica that reports the timeout will immediately attempt to reconnect and will continue to attempt to re-connect every five seconds.
+The default availability group replica `SESSION_TIMEOUT` setting is 10 seconds. This setting is configured for each replica and determines how long the replica waits to receive a response from its partner replica before reporting a connection timeout. When a replica hasn't had a response from the partner replica, it will report a connection timeout in the SQL Server error log and the Windows application event log. The replica that reports the timeout will immediately attempt to reconnect and will continue to re-connect every five seconds.
 
 The connection timeout typically is detected and reported by only one replica but sometimes the connection timeout might be reported by both replicas at the same time. There are a couple of different versions of this message depending on whether the connection timeout occurred with a previously established connection or a new connection attempt.
 
@@ -101,25 +101,25 @@ The primary replica didn't detect any connection timeout since it was still able
 
 SQL Server may be busy, for several reasons, and doesn't service the mirroring endpoint connection within the availability group `SESSION_TIMEOUT` period, resulting in the connection timeout. Some causes are:
 
-- 100% CPU utilization, SQL or some other application is driving CPU for seconds at a time.
+- SQL Server experiences 100% CPU utilization. SQL or some other application is driving CPU for seconds at a time.
 
 - SQL Server experiences non-yielding scheduler events.
 
 - SQL Server threads are responsible for yielding the scheduler (CPU) to other threads to complete their work if a thread doesn't yield in a timely fashion.
 
-- Worker thread exhaustion, out of memory or application problems in SQL Server that affects SQL Server ability to service the mirroring endpoint connection.
+- SQL Server experiences worker thread exhaustion, out of memory, or application problems that affects its  ability to service the mirroring endpoint connection.
 
 ### Network issue
 
-This requires collecting network trace logs on the primary and secondary replicas, during the period in which the error is raised by looking for network latency and dropped packets.
+This requires collecting network trace logs on the primary and secondary replicas, during the period in which the error is triggered by looking for network latency and dropped packets.
 
 ## How to diagnose replica connection timeouts?
 
-In the previous section [What causes replica connection timeouts](#what-causes-replica-connection-timeouts), one key reason for connection timeouts was application issues, which prevent SQL Server from servicing the connection with the partner replica. This section explains how to analyze the SQL Server logs, which may lead to root cause for the replica connection timeouts. This section ends with a more advanced section on how to collect network traces when the connection timeouts occur so that the network can be checked.
+In the previous section [What causes replica connection timeouts](#what-causes-replica-connection-timeouts), one key reason for connection timeouts was application issues, which prevent SQL Server from servicing the connection with the partner replica. This section explains how to analyze the SQL Server logs, which may lead to root cause for the replica connection timeouts. This section ends with a more advanced section on how to collect network traces when the connection timeouts occur so that you can check the network.
 
 ### Assess timing and location of replica connection timeouts
 
-Review the history, the frequency, and trends of the connection timeouts. The messages described in the last section found in the SQL Server error log is a great way to do this. Where are the connection timeouts reported? Are they consistently reported on the primary or the secondary replica? When did the errors occur? Do they occur in a certain week of the month, day of the week, or time of day? Are there other scheduled maintenance or batch processing that correspond to the times the connection timeouts are observed? This assessment can help you scope and correlate the connection timeouts which can lead to root cause.
+Review the history, the frequency, and trends of the connection timeouts. The messages described in the last section found in the SQL Server error log is a great way to do this. Where are the connection timeouts reported? Are they consistently reported on the primary or the secondary replica? When did the errors occur? Do they occur in a certain week of the month, day of the week, or time of day? Are there other scheduled maintenance or batch processing that correspond to the times the connection timeouts are observed? This assessment can help you scope and correlate the connection timeouts which can lead to the root cause.
 
 ### Review the AlwaysOn_health extended event session
 
@@ -148,20 +148,20 @@ By querying the secondary replica, the Always On DMVs only report on the seconda
 
 ## Review the AlwaysOn extended event session
 
-1. Connect to each replica using SQL Server Management Studio (SSMS) Object Explorer and open the AlwaysOn_health extended event files.
+1. Connect to each replica using SQL Server Management Studio (SSMS) Object Explorer and open the `AlwaysOn_health` extended event files.
 
 1. In **SSMS**, go to **File** > **Open** and then **Merge Extended Event Files**.
 
-1. Select the **Add** button and using the **File Open** dialog box and then navigate to the files in the *SQL Server \LOG* directory.
+1. Select the **Add** button and using the **File Open** dialog box and then, navigate to the files in the *SQL Server \LOG* directory.
 
 1. Press **Control** and select the files whose name begins with *'AlwaysOn_healthxxx.xel'*.
 
 1. Select **Open** and then select **OK**.
    You should see a new tabbed window in SSMS with the AlwaysOn events.
 
-The following screenshot shows the AlwaysOn_health data from the secondary replica. The first outlined box shows the connection loss after the endpoint on the primary replica is stopped. The second outlined box shows the connection failure the next time the secondary replica attempts to connect to the primary replica.
+    The following screenshot shows the `AlwaysOn_health` data from the secondary replica. The first outlined box shows the connection loss after the endpoint on the primary replica is stopped. The second outlined box shows the connection failure the next time the secondary replica attempts to connect to the primary replica.
 
-:::image type="content" source="media/troubleshooting-intermittent-connection-timeouts-availability-groups/always-on-health-data-secondary-replica.png" alt-text="Screenshot that shows the AlwaysOn_health data from the secondary replica." lightbox="media/troubleshooting-intermittent-connection-timeouts-availability-groups/always-on-health-data-secondary-replica.png":::
+    :::image type="content" source="media/troubleshooting-intermittent-connection-timeouts-availability-groups/always-on-health-data-secondary-replica.png" alt-text="Screenshot that shows the AlwaysOn_health data from the secondary replica." lightbox="media/troubleshooting-intermittent-connection-timeouts-availability-groups/always-on-health-data-secondary-replica.png":::
 
 ### Investigate SQL Server application ability to service replica connection
 
@@ -175,28 +175,28 @@ To check for non-yielding events that might cause replica connection timeouts, f
 
 1. Schedule this job on the server that doesn't report the connection timeout, in other words, if Server A replica reports the replica connection timeout in its error log, set up the SQL Agent job on the partner replica Server B. Alternatively, if you are seeing connection timeouts on both replicas, create the job on both replicas.
 
-The following batch creates a job that executes `sp_server_diagnostics` every five seconds and appends the output to a text file and then starts the job.
+    The following batch creates a job that executes `sp_server_diagnostics` every five seconds and appends the output to a text file and then starts the job.
 
 1. Change the `@output_file_name` to a valid path and file name.
 
-```vb
-USE [msdb]
-GO
-DECLARE @ReturnCode INT
-SELECT @ReturnCode = 0
-DECLARE @jobId BINARY(16)
-EXEC @ReturnCode = msdb.dbo.sp_add_job @job_name=N'Run sp_server_diagnostics',
-@owner_login_name=N'sa', @job_id = @jobId OUTPUT
-/****** Object: Step [Run SP_SERVER_DIAGNOSTICS] Script Date: 2/15/2023 4:20:41 PM ******/
-EXEC @ReturnCode = msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'Run SP_SERVER_DIAGNOSTICS',
-@subsystem=N'TSQL',
-@command=N'sp_server_diagnostics 5',
-@database_name=N'master',
-@output_file_name=N'D:\cases\2423\sp_server_diagnostics_output.out',
-@flags=2
-EXEC @ReturnCode = msdb.dbo.sp_add_jobserver @job_id = @jobId, @server_name = N'(local)'
-EXEC sp_start_job 'Run sp_server_diagnostics'
-```
+    ```vb
+    USE [msdb]
+    GO
+    DECLARE @ReturnCode INT
+    SELECT @ReturnCode = 0
+    DECLARE @jobId BINARY(16)
+    EXEC @ReturnCode = msdb.dbo.sp_add_job @job_name=N'Run sp_server_diagnostics',
+    @owner_login_name=N'sa', @job_id = @jobId OUTPUT
+    /****** Object: Step [Run SP_SERVER_DIAGNOSTICS] Script Date: 2/15/2023 4:20:41 PM ******/
+    EXEC @ReturnCode = msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'Run SP_SERVER_DIAGNOSTICS',
+    @subsystem=N'TSQL',
+    @command=N'sp_server_diagnostics 5',
+    @database_name=N'master',
+    @output_file_name=N'D:\cases\2423\sp_server_diagnostics_output.out',
+    @flags=2
+    EXEC @ReturnCode = msdb.dbo.sp_add_jobserver @job_id = @jobId, @server_name = N'(local)'
+    EXEC sp_start_job 'Run sp_server_diagnostics'
+    ```
 
 ### Analyze the results
 
@@ -215,19 +215,19 @@ Next, the output from the SQL Agent job running sp_server_diagnostics was checke
 
 If you have confirmed from the earlier diagnosis steps that a non-yielding event caused the replica connection timeout:
 
-- Identify the workloads that are running in SQL Server at the time of the non-yielding events are being run.
+1. Identify the workloads that are running in SQL Server at the time of the non-yielding events are being run.
 
-- Similar to the replica connection timeouts, look for trends in these events during the month, day, or week that they occur.
+1. Similar to the replica connection timeouts, look for trends in these events during the month, day, or week that they occur.
 
-- Collect performance monitor tracing on the system where the non-yielding event was detected.
+1. Collect performance monitor tracing on the system where the non-yielding event was detected.
 
-- Collect key performance counters for system resources including **Processor::% Processor Time, Memory::Available MBytes**, **Logical Disk::Avg Disk Queue Length**, and **Logical Disk::Avg Disk sec/Transfer**.
+1. Collect key performance counters for system resources including **Processor::% Processor Time, Memory::Available MBytes**, **Logical Disk::Avg Disk Queue Length**, and **Logical Disk::Avg Disk sec/Transfer**.
 
-- If necessary, open a support incident with the SQL Server support team for further assistance in finding root cause for these non-yielding events and share the logs you have collected for further analysis.
+1. If necessary, open a support incident with the SQL Server support team for further assistance in finding root cause for these non-yielding events and share the logs you have collected for further analysis.
 
 ### Advanced Data Collection - collect network trace during connection timeout
 
-If the previous diagnosis of the SQL Server application didn't yield root cause, the network should be investigated. Successful analysis of the network requires collecting a network trace that covers the time of the connection timeout.
+If the previous diagnosis of the SQL Server application didn't yield root cause, the network should be checked. Successful analysis of the network requires collecting a network trace that covers the time of the connection timeout.
 
 The following instructions start a Windows `netsh` network tracing on the replicas where the connection timeouts are being reported in the SQL Server error logs. A Windows scheduled event task is triggered when one of the SQL Server connection errors is recorded in the application event log. The scheduled task runs a command to stop the `netsh` network trace, so that the key network trace data isn't overwritten. The  instructions also assume a path of *F:\* for the batch and tracing logs. Adjust this path to your environment:
 
