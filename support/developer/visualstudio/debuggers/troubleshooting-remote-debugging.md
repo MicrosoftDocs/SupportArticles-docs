@@ -10,7 +10,7 @@ ms.reviewer: mikejo
 
 _Applies to:_&nbsp;Visual Studio
 
-This article introduces troubleshooting steps and solutions of some common issues with [remote debugging]](/visualstudio/debugger/remote-debugging).
+This article introduces troubleshooting steps and solutions of some common issues with [remote debugging](/visualstudio/debugger/remote-debugging).
 
 To troubleshoot remote debugging issues, the first step is to check for error messages and investigate. The message may include a link with more information.
 

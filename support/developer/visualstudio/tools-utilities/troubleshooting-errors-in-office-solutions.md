@@ -23,7 +23,7 @@ This article introduces how to troubleshoot issues that you may encounter when y
 
 _Applies to:_&nbsp;Visual Studio
 
-## Task 1: Create, upgrade, and open projects
+## Issues when you create, upgrade, and open projects
 
 You might encounter the following issues when you create or open Office projects.
 
@@ -47,16 +47,15 @@ If you create a new Excel workbook project based on an existing workbook, you mi
 These errors can occur you try to create a project that is based on a workbook that had its personal information removed by using the Document Inspector. To avoid this ISSUE, perform the following steps before creating the project:
 
 1. Open the workbook in Excel.
-2. In Excel, open the Trust Center.
-3. On the **Privacy Options** tab, clear the **Remove personal information from file properties on save** check box.
-4. Save the workbook and close Excel.
+1. In Excel, open the Trust Center.
+1. On the **Privacy Options** tab, clear the **Remove personal information from file properties on save** check box.
+1. Save the workbook and close Excel.
 
 ### Issue 4: Can't open a project after migration
 
 After an Office solution is migrated to Microsoft Office 2010, the project can't be opened on a development computer with only the 2007 Microsoft Office system installed. You may see the following errors.
 
 - "One or more projects in the solution were not loaded correctly. Please see the Output Window for details."
-
 - "Cannot create the project because the application associated with this project type is not installed on this computer. You must install the Microsoft Office application that is associated with this project type."
 
 To resolve this issue, edit the _.vbproj_ or _.csproj_ file. For a Word project, replace `HostPackage="{763FDC83-64E5-4651-AC9B-28C4FEB985A1}"` with `HostPackage="{6CE98B71-D55A-4305-87A8-0D6E368D9600}"`. For an Excel project, replace `HostPackage="{B284B16A-C42C-4438-BDCD-B72F4AC43CFB}"` with `HostPackage="{825100CF-0BA7-47EA-A084-DCF3308DAF74}"`. For an Outlook project, replace `HostPackage="{D2B20FF5-A6E5-47E1-90E8-463C6860CB05}"` with `HostPackage="{20A848B8-E01F-4801-962E-25DB0FF57389}"`.
@@ -69,7 +68,7 @@ If you upgrade a Microsoft Office 2003 document-level project, and the document 
 
 After you finish upgrading the project, you can uninstall the Visual Studio 2005 Tools for Office Second Edition Runtime from the development computer if it isn't being used by any other Office solutions.
 
-## Task 2: Use the designers
+## Issues when you use the designers
 
 You might encounter the following issues when you work with the document, workbook, or worksheet designer in document-level projects.
 
@@ -78,9 +77,7 @@ You might encounter the following issues when you work with the document, workbo
 Visual Studio can't open the designer in the following cases:
 
 - Excel or Word is already open and is displaying a modal dialog box. To open the designer, check to see if Excel or Word has a modal dialog box open, and close any open modal dialog boxes. If there are no modal dialog boxes open, there might be some other action required before Excel or Word responds.
-
 - The project is currently being debugged. To open the designer, stop or finish debugging.
-
 - An Excel VSTO Add-in that is installed on the development computer is displaying a dialog box when Excel starts. To create an Excel document-level project, you must first disable the VSTO Add-in.
 
 ### Issue 2: Controls appear as black rectangles on the document or worksheet
@@ -95,7 +92,7 @@ If you open a Word template in the Visual Studio designer, controls on the templ
 
 When Excel or Word is open in the Visual Studio designer, clicking the **Clip Art** button on the **Illustrations** tab in the ribbon doesn't open the **Clip Art** task pane. To add clip art, you must open the copy of the workbook or document that is in the main project folder (not the copy that is in the _\bin_ folder) outside of Visual Studio, add the clip art, and then save the workbook or document.
 
-## Task 3: Write code
+## Issues when you write code
 
 You might encounter the following issues when you write code in Office projects.
 
@@ -128,7 +125,7 @@ For more information about event interfaces in the Office PIAs, see [Overview of
 
 ### Issue 2: Can't reference Office PIA classes in projects that target the .NET Framework 4 or the .NET Framework 4.5
 
-In projects that target the  .NET Framework 4 or the .NET Framework 4.5, code that references a class that is defined in an Office PIA won't compile by default. Classes in the PIAs use the naming convention _\<objectname>Class_, such as <xref:Microsoft.Office.Interop.Word.DocumentClass> and <xref:Microsoft.Office.Interop.Excel.WorkbookClass>. For example, the following code from a Word VSTO Add-in project won't compile.
+In projects that target the .NET Framework 4 or the .NET Framework 4.5, code that references a class that is defined in an Office PIA won't compile by default. Classes in the PIAs use the naming convention _\<objectname>Class_, such as <xref:Microsoft.Office.Interop.Word.DocumentClass> and <xref:Microsoft.Office.Interop.Excel.WorkbookClass>. For example, the following code from a Word VSTO Add-in project won't compile.
 
 ### [C#](#tab/csharp)
 
@@ -147,10 +144,9 @@ Dim document As Word.DocumentClass = Globals.ThisAddIn.Application.ActiveDocumen
 This code results in the following compile errors:
 
 - Visual Basic: "Reference to class 'DocumentClass' is not allowed when its assembly is linked using No-PIA mode."
-
 - Visual C#: "Interop type 'Microsoft.Office.Interop.Word.DocumentClass' cannot be embedded. Use the applicable interface instead."
 
-  To resolve this error, modify the code to reference the corresponding interface instead. For example, rather than reference a <xref:Microsoft.Office.Interop.Word.DocumentClass> object, reference an instance of the <xref:Microsoft.Office.Interop.Word.Document> interface instead.
+To resolve this error, modify the code to reference the corresponding interface instead. For example, rather than reference a <xref:Microsoft.Office.Interop.Word.DocumentClass> object, reference an instance of the <xref:Microsoft.Office.Interop.Word.Document> interface instead.
 
 ### [C#](#tab/csharp)
 
@@ -220,7 +216,7 @@ Dim doc As Document  ' Class is ambiguous
 
 Even though you've imported the Word or Excel namespace and have access to all the classes inside it, you must fully qualify all the types with Word or Excel to remove namespace ambiguity.
 
-## Task 4: Build projects
+## Issues when you build projects
 
 You might encounter the following issues when you build Office projects.
 
@@ -236,7 +232,7 @@ If you want to include a document that has restricted permissions, use an unrest
 
 If you delete a <xref:Microsoft.Office.Tools.Excel.NamedRange> control from a worksheet that isn't the active worksheet in the designer, the auto-generated code might not be removed from your project and compiler errors might occur. To make sure the code is removed, you should always select the worksheet that contains the <xref:Microsoft.Office.Tools.Excel.NamedRange> control to make it the active worksheet before deleting the control. If auto-generated code isn't deleted when you delete the control, you can cause the designer to delete the code by activating the worksheet and making a change so that the worksheet becomes marked as modified. When you rebuild the project, the code is removed.
 
-## Task 5: Debug projects
+## Issues when you debug projects
 
 You might encounter the following issues when you debug Office projects.
 

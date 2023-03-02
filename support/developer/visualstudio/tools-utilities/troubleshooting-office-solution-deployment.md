@@ -40,7 +40,7 @@ Visual Studio 2010 Tools for Office runtime provides a registry entry that admin
 
    **HKEY_CURRENT_USER\Software\Microsoft\VSTA**
 
-2. In the **AddInTimeout** subkey, set the time-out value in milliseconds.
+1. In the **AddInTimeout** subkey, set the time-out value in milliseconds.
 
    If the **AddInTimeout** subkey doesn't exist, create it as a DWORD.
 
@@ -67,10 +67,8 @@ You can configure Visual Studio so that Fusion will download assemblies every ti
 ### How to download assemblies instead of loading cached copies
 
 1. On the menu bar, select **Project**, **\<ProjectName> Properties**.
-
-2. On the **Application** page, select **Assembly Information**.
-
-3. Set the revision number, third field, of the **Assembly Version**, to a wild card (\*). For example, "1.0.*". Then select the **OK** button.
+1. On the **Application** page, select **Assembly Information**.
+1. Set the revision number, third field, of the **Assembly Version**, to a wild card (\*). For example, "1.0.*". Then select the **OK** button.
 
 After you change the assembly version, you can continue to sign your assembly with a strong name, and Fusion will load the most recent version of the customization.
 
