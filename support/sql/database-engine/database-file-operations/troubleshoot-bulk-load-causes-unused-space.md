@@ -23,7 +23,7 @@ Here's an example.
 
 | Table | Reserved (KB) | Data (KB) | Index (KB) | Unused (KB) |
 |---|---|---|---|---|
-| Sales.Customer | 80,0000 | 50,000 | 10000 | 7,40,000 |
+| Sales.Customer | 80,0000 | 50,000 | 10,000 | 7,40,000 |
 
 ## Cause
 
