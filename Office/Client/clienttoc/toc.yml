@@ -526,7 +526,7 @@
         - name: GROWTH statistical functions
           href: ../excel/statistical-functions-growth.md
         - name: Heavy Excel workloads run slowly in multi-session environments
-          href: ../excel/heavy-excel-workloads-run-slowly-multisession
+          href: ../excel/heavy-excel-workloads-run-slowly-multisession.md
         - name: Hide sheets and use xlVeryHidden constant in a macro
           href: ../excel/hide-sheet-and-use-xlveryhidden.md
         - name: How column widths are determined
