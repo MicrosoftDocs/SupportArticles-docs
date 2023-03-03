@@ -22,10 +22,7 @@ When you start, upgrade, or scale an AKS cluster, you may see the following erro
 
 This issue occurs if you delete the Log Analytics workspace or the resource group where the workspace is located without disabling monitoring on the AKS cluster.
 
-To resolve this issue, use one of the following solutions:
-
-- [Solution 1: Recover the Log Analytics workspace](#solution-1-recover-the-log-analytics-workspace).
-- [Solution 2: Disable monitoring on the AKS cluster](#solution-2-disable-monitoring-on-the-aks-cluster).
+To resolve this issue, use one of the following solutions.
 
 ## Solution 1: Recover the Log Analytics workspace
 
