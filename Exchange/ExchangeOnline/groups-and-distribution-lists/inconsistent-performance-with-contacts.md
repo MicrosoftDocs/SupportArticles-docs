@@ -1,8 +1,8 @@
 ---
 title: Inconsistent performance when working with contacts
 description: Describes an issue in which performance is inconsistent when working with contacts.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,9 +10,10 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: 
+ms.reviewer: ninob
 appliesto: 
   - Exchange Online
+  - Outlook
 search.appverid: 
   - MET150
 ms.date: 3/3/2023
@@ -29,7 +30,7 @@ When working with contacts, you might experience symptoms such as the following:
 
 ## Cause
 
-We strongly recommend that you have no more than 10,000 items in your Contacts folder. This is because of the high input/output activity involved when working with contacts. Although 10,000 is NOT a limit that is enforced by Exchange Online, exceeding this number might cause performance issues.
+We strongly recommend that you have no more than 10,000 items in your Contacts folder. This is because of the high input/output activity involved when working with contacts. Although 10,000 is not a limit that is enforced by Exchange Online, exceeding this number might cause performance issues.
 
 ## Resolution
 
