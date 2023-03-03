@@ -90,8 +90,6 @@
     href: aks-at-scale-troubleshoot-guide.md
   - name: Failed to fix node group sizes
     href: cluster-autoscaler-fails-to-scale.md
-  - name: Unable to get log analytics workspace info error
-    href: aks-upgrade-scale-fail-log-analytics-workspace-missing.md
 
 - name: Troubleshoot node not ready
   items:
