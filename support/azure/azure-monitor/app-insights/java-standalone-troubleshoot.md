@@ -2,11 +2,11 @@
 title: Troubleshoot Azure Monitor Application Insights for Java
 description: This article presents troubleshooting information for the Java agent for Azure Monitor Application Insights.
 ms.topic: conceptual
-ms.date: 1/10/2023
+ms.date: 3/3/2023
 ms.author: v-dele
 author: DennisLee-DennisLee
 editor: v-jsitser
-ms.reviewer: aaronmax, jeanbisutti, trstalna
+ms.reviewer: aaronmax, jeanbisutti, trstalna, toddfous, heya
 ms.service: azure-monitor
 ms.subservice: application-insights
 ms.devlang: java
@@ -217,18 +217,15 @@ If you're using Java 9 or later, check to make sure the JVM has the `jdk.crypto.
 
 Otherwise, these cipher suites should already be part of modern Java 8+ distributions. We recommend that you check where you installed your Java distribution from, and investigate why the security providers in that Java distribution's *java.security* configuration file differ from standard Java distributions.
 
-## Slow start-up time with Application Insights
+## Slow startup time in Application Insights and Java 8
 
-### Java 8
+There's a known issue in Java 8 that's related to the jar file signature verification of Java agents. This issue can increase the startup time in Application Insights. To fix this issue, you can apply one of the following options:
 
-There is a known issue with Java 8 related to jar file signature verification of Java agents that can increase the start-up time with Application Insights.
-You can try to:
-* [Runtime attach the Application Insights Java agent](/azure/azure-monitor/app/java-spring-boot#enabling-programmatically) if your application is based on Spring Boot
-* Or, use a Java version greater than or equal to 11
+- If your application is based on Spring Boot, [runtime attach the Application Insights Java agent](/azure/azure-monitor/app/java-spring-boot#enabling-programmatically).
 
-### Experimental feature
+- Use Java version 11 or a later version.
 
-You can try [this experimental feature](https://github.com/microsoft/ApplicationInsights-Java/wiki/Start-up-time-improvement-with-a-limited-number-of-CPU-cores-(experimental)) and give feedback about it.
+Alternatively, you can try the following experimental feature: [Startup time improvement for a limited number of CPU cores](https://github.com/microsoft/ApplicationInsights-Java/wiki/Start-up-time-improvement-with-a-limited-number-of-CPU-cores-(experimental)). If you experience any issues while using this feature, send us feedback.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
