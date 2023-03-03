@@ -19,9 +19,9 @@ ms.reviewer: johnhart
 ---
 # Troubleshoot issues in Office solutions
 
-This article introduces how to troubleshoot issues that you may encounter when you perform different tasks while developing Office solutions in Visual Studio。
-
 _Applies to:_&nbsp;Visual Studio
+
+This article introduces how to troubleshoot issues that you may encounter when you perform different tasks while developing Office solutions in Visual Studio。
 
 ## Issues when you create, upgrade, and open projects
 
