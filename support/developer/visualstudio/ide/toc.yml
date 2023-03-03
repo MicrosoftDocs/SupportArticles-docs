@@ -14,6 +14,8 @@
   href: ./screen-readers-not-read-tool-windows.md
 - name: Visual Studio 2012 crashes with StarDict-3
   href: ./crash-with-stardict-3.md
+- name: Visual Studio unrecoverable process error
+  href: ./visual-studio-unrecoverable-process-error.md
 - name: Help Viewer 2.0 crashes
   href: ./help-viewer-2-crashes.md
 - name: Application unresponsive due to low system memory
