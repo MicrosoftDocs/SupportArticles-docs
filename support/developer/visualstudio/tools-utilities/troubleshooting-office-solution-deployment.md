@@ -129,4 +129,3 @@ Set the extension to **.vsto** and the MIME type to **application/x-ms-vsto**.
 
 - [Troubleshoot ClickOnce deployments](/visualstudio/deployment/troubleshooting-clickonce-deployments)
 - [Deploy an Office solution](/visualstudio/vsto/deploying-an-office-solution)
-- [Visual Studio troubleshooting](../welcome-visual-studio.yml)

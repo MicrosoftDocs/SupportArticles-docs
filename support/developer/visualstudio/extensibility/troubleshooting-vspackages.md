@@ -10,7 +10,7 @@ ms.reviewer: maiak
 
 _Applies to:_&nbsp;Visual Studio
 
-This article introduces common issues and troubleshooting tips with your VSPackages.
+This article introduces common issues and troubleshooting tips with your [VSPackages](/visualstudio/extensibility/internals/vspackages).
 
 ## A VSPackage keeps Visual Studio from starting
 
@@ -76,7 +76,7 @@ To troubleshoot this issue, try one or more of the following steps:
     To improve readability while debugging, you can attach symbols to the debugger:
 
     1. From the **Tools/Options** menu, navigate to the **Debugging/Symbols** dialog box.
-    1. Add **Symbol file (.pdb) location**: _https://msdl.microsoft.com/download/symbols_.
+    1. Add **Symbol file (.pdb) location**: `https://msdl.microsoft.com/download/symbols`.
     1. To improve performance, specify a symbol cache folder, for example: _C:\symbols_.
 
 ## A VSPackage or one of its dependencies is missing
@@ -96,4 +96,3 @@ To troubleshoot this issue, try one or more of the following steps:
 ## See also
 
 - [VSPackages](/visualstudio/extensibility/internals/vspackages)
-- [Visual Studio troubleshooting](../welcome-visual-studio.yml)

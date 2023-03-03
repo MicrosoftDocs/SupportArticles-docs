@@ -1,6 +1,6 @@
 ---
 title: Can't get a service in Visual Studio SDK
-description: Learn how to common causes and solutions when you can't get a service in the Visual Studio SDK.
+description: Introduces common causes and solutions when you can't get a service in the Visual Studio SDK.
 ms.date: 11/04/2016
 author: HaiyingYu
 ms.author: haiyingyu

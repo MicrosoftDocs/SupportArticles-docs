@@ -8,7 +8,7 @@
   items:
   - name: Can't get a service in SDK
     href: ./extensibility/how-to-troubleshoot-services.md
-  - name: Troubleshooting VSPackages
+  - name: Troubleshoot VSPackages
     href: ./extensibility/troubleshooting-vspackages.md
   - name: Troubleshoot brokered services
     href: ./extensibility/how-to-troubleshoot-brokered-services.md

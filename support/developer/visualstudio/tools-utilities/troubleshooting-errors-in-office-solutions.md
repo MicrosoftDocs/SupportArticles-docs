@@ -271,6 +271,5 @@ Whether you select **Yes** or **No** in the dialog box, Visual Studio terminates
 ## See also
 
 - [Troubleshoot Office solutions](/visualstudio/vsto/troubleshooting-office-solutions)
-- [Troubleshoot Office solution security](/visualstudio/vsto/troubleshooting-office-solution-security)
-- [Troubleshoot Office solution deployment](/visualstudio/vsto/troubleshooting-office-solution-deployment)
-- [Visual Studio troubleshooting](../welcome-visual-studio.yml)
+- [Troubleshoot Office solution security](./troubleshooting-office-solution-security.md)
+- [Troubleshoot Office solution deployment](./troubleshooting-office-solution-deployment.md)

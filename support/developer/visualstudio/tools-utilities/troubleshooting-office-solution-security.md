@@ -42,4 +42,3 @@ If the location of the deployment manifest has been assigned to the restricted s
 ## See also
 
 - [Secure Office solutions](/visualstudio/vsto/securing-office-solutions)
-- [Visual Studio troubleshooting](../welcome-visual-studio.yml)
