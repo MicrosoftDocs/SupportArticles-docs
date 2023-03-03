@@ -24,8 +24,8 @@ This issue occurs if you delete the Log Analytics workspace or the resource grou
 
 To resolve this issue, use one of the following solutions:
 
-- [Solution 1: Recover the Log Analytics workspace.](#solution-1-recover-the-log-analytics-workspace)
-- [Solution 2: Disable monitoring on the AKS cluster.](#solution-2-disable-monitoring-on-the-aks-cluster)
+- [Solution 1: Recover the Log Analytics workspace](#solution-1-recover-the-log-analytics-workspace).
+- [Solution 2: Disable monitoring on the AKS cluster](#solution-2-disable-monitoring-on-the-aks-cluster).
 
 ## Solution 1: Recover the Log Analytics workspace
 
