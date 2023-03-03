@@ -1,8 +1,8 @@
 ---
 title: Bulk load operations can leave large amounts of unused space
 description: Learn how to resolve the issue of excessive unused space in bulk load operations that have a small batch size.
-ms.date: 03/02/2023
-ms.custom: sap:Administration and management
+ms.date: 03/03/2023
+ms.custom: sap:Administration and Management
 ms.reviewer: jopilov
 author: padmajayaraman
 ms author: v-jayaramanp
@@ -23,7 +23,7 @@ Here's an example.
 
 | Table | Reserved (KB) | Data (KB) | Index (KB) | Unused (KB) |
 |---|---|---|---|---|
-| Sales.Customer | 80,0000 | 50,000 | 10,000 | 7,40,000 |
+| Sales.Customer | 800,000 | 50,000 | 10,000 | 740,000 |
 
 ## Cause
 
@@ -49,7 +49,7 @@ If you have a relatively small number of rows to insert, then these aren't "bulk
 
 ### Setting the batch size value for bulk load operation
 
-For bulk load operations, choose a batch size that's a multiple of the size of an extent (64 KB) and is based on the average row size. Such a batch size value would allow the rows to efficiently fill the space within the extent. For example, if the average row size is 25 bytes, you would divide 64 KB by 25 bytes per row to determine how many rows you can pack into a batch size. In this case, 64 KB = 65536 bytes / 25 bytes per row = 2,620 rows. Therefore, you can choose a batch size around this number, allowing space for the header of each data page. You can test this by using batch sizes of say a range between 2,500 and 2,700 and observe the space usage. To find the average row size in your table, use the following query. For heaps (tables that have no clustered index), use **0** for the [index_ID](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql?view=sql-server-ver16&preserve-view=true) parameter (the third parameter). For tables that have clustered indexes, use **1**, as shown in the following example.
+For bulk load operations, choose a batch size that's a multiple of the size of an extent (64 KB) and is based on the average row size. Such a batch size value would allow the rows to efficiently fill the space within the extent. For example, if the average row size is 25 bytes, you would divide 64 KB by 25 bytes per row to determine how many rows you can pack into a batch size. In this case, 64 KB = 65,536 bytes / 25 bytes per row = 2,620 rows. Therefore, you can choose a batch size around this number, allowing space for the header of each data page. You can test this by using batch sizes of say a range between 2,500 and 2,700 and observe the space usage. To find the average row size in your table, use the following query. For heaps (tables that have no clustered index), use **0** for the [index_ID](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql?view=sql-server-ver16&preserve-view=true) parameter (the third parameter). For tables that have clustered indexes, use **1**, as shown in the following example.
 
 ```sql
 SELECT 
