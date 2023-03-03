@@ -14,8 +14,8 @@ ms.custom:
 - CSSTroubleshoot
 ms.reviewer: nasira; lusassl; paulkwo; meerak
 appliesto:
-- Exchange Server 2016
 - Exchange Server 2019
+- Exchange Server 2016
 search.appverid: MET150
 ---
 # Microsoft Exchange Transport service stops and returns Event ID 17018
@@ -43,7 +43,7 @@ To fix this issue, follow these steps:
 
    [Description of the security update for Microsoft Exchange Server 2019, 2016, and 2013: February 14, 2023 (KB5023038)](https://support.microsoft.com/en-us/topic/description-of-the-security-update-for-microsoft-exchange-server-2019-2016-and-2013-february-14-2023-kb5023038-2e60d338-dda3-46ed-aed1-4a8bbee87d23)
 
-1. Decrease the `MaxInboundConnection` limit on the Receive connectors of each Exchange-based server, as follows.
+1. Decrease the `MaxInboundConnection` limit on the Receive connectors of each Exchange server, as follows.
 
     > [!NOTE]  
     > To prevent limiting the number of connections from busy sources, such as email gateways, you might have to increase the `MaxInboundConnectionPercentagePerSource` parameter from the default value of **2**. We recommend that you also closely monitor the incoming mail flow and gradually increase the value, as necessary.
@@ -68,7 +68,7 @@ To fix this issue, follow these steps:
        Set-ReceiveConnector -Identity "<Receive Connector Identity>" -MaxInboundConnection 1000
        ```
 
-    1. Restart the Microsoft Exchange Transport service.
+    1. Restart the Transport service.
 
 1. Override the server-to-server throttle. To set and refresh the override, run the **New-SettingOverride** and **Get-ExchangeDiagnosticInfo** cmdlets in Exchange Management Shell:
 
@@ -77,3 +77,5 @@ To fix this issue, follow these steps:
 
    Get-ExchangeDiagnosticInfo -Process Microsoft.Exchange.Directory.TopologyService -Component VariantConfiguration -Argument Refresh
    ```
+
+1. Restart the Transport service.
