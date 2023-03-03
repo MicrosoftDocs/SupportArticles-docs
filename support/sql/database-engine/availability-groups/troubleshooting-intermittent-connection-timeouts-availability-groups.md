@@ -27,7 +27,7 @@ If you configure the availability group for automatic failover and the synchrono
 
 The Always On dashboard in SQL Server Management Studio may report an unhealthy availability group with replicas in a **Not Synchronizing** state. You may also observe the Always On dashboard report replicas in the **Not synchronizing** state.
 
-:::image type="content" source="media/troubleshooting-intermittent-connection-timeouts-availability-groups/always-on-dashboard-report-replicas-not-synchronizing-state.png" alt-text="Screenshot that shows the Always On dashboard report replicas in the Not Synchronizing state." lightbox="media/troubleshooting-intermittent-connection-timeouts-availability-groups/always-on-dashboard-report-replicas-not-synchronizing-state.png":::
+:::image type="content" source="media/troubleshooting-intermittent-connection-timeouts-availability-groups/always-on-dashboard-report-replicas-not-synchronizing-state.png" alt-text="Screenshot that shows the Always On dashboard report replicas in the Not Synchronizing state.":::
 
 When you review the SQL Server error logs of those replicas, you might observe messages like the following, which indicate that there was a connection timeout between the replicas in the availability group.
 
@@ -57,7 +57,7 @@ JOIN sys.dm_hadr_database_replica_cluster_states drcs ON ar.replica_id=drcs.repl
 WHERE ars.role_desc='SECONDARY'
 ```
 
-:::image type="content" source="media/troubleshooting-intermittent-connection-timeouts-availability-groups/sqlerrorlog-failover-ready.png" alt-text="Screenshot that shows when the mirroring endpoint has been stopped on the secondary replica." lightbox="media/troubleshooting-intermittent-connection-timeouts-availability-groups/sqlerrorlog-failover-ready.png":::
+:::image type="content" source="media/troubleshooting-intermittent-connection-timeouts-availability-groups/sqlerrorlog-failover-ready.png" alt-text="Screenshot that shows when the mirroring endpoint has been stopped on the secondary replica.":::
 
 Automatic failover may fail to bring the availability group online in the primary role on the failover partner machine if failover coincides with a replica connection timeout.
 
@@ -99,7 +99,7 @@ The primary replica didn't detect any connection timeout since it was still able
 
 SQL Server may be busy, for several reasons, and doesn't service the mirroring endpoint connection within the availability group `SESSION_TIMEOUT` period, resulting in the connection timeout. Some causes are:
 
-- SQL Server experiences 100% CPU utilization. SQL or some other application is driving CPU for seconds at a time.
+- SQL Server experiences 100% CPU utilization which means that SQL or some other application is driving CPU for seconds at a time.
 
 - SQL Server experiences non-yielding scheduler events.
 
@@ -109,7 +109,7 @@ SQL Server may be busy, for several reasons, and doesn't service the mirroring e
 
 ### Network issue
 
-This requires collecting network trace logs on the primary and secondary replicas, during the period in which the error is triggered by looking for network latency and dropped packets.
+This requires collecting network trace logs on the primary and secondary replicas when the error is triggered by looking at network latency and dropped packets.
 
 ## How to diagnose replica connection timeouts?
 
@@ -121,7 +121,7 @@ Review the history, the frequency, and trends of the connection timeouts. The me
 
 ### Review the AlwaysOn_health extended event session
 
-The `AlwaysOn_health` extended event session has been enhanced to include the `ucs_connection_setup`event, which is triggered when a replica is establishing a connection with its partner replica. This can be helpful when troubleshooting connection timeout issues.
+The `AlwaysOn_health` extended event session has been enhanced to include the `ucs_connection_setup` event, which is triggered when a replica is establishing a connection with its partner replica. This can be helpful when troubleshooting connection timeout issues.
 
 > [!NOTE]
 > Extended event `ucs_connection_setup` was added to the latest cumulative updates in SQL Server, you must be running the latest cumulative updates to observe this extended event.
@@ -138,19 +138,21 @@ FROM sys.dm_hadr_availability_replica_states ars JOIN sys.availability_replicas 
 
 In this example, there's a sustained disconnected state because the mirroring endpoint on the primary replica has been stopped. By querying the primary replica, the Always On DMV can report on the primary and all secondary replicas (the endpoint is disabled on the primary replica).
 
-:::image type="content" source="media/troubleshooting-intermittent-connection-timeouts-availability-groups/query-primary-replica.png" alt-text="Screenshot that shows sustained disconnected state because the mirroring endpoint on the primary replica has been stopped." lightbox="media/troubleshooting-intermittent-connection-timeouts-availability-groups/query-primary-replica.png":::
+:::image type="content" source="media/troubleshooting-intermittent-connection-timeouts-availability-groups/query-primary-replica.png" alt-text="Screenshot that shows sustained disconnected state because the mirroring endpoint on the primary replica has been stopped.":::
 
 By querying the secondary replica, the Always On DMVs only report on the secondary replica.
 
-:::image type="content" source="media/troubleshooting-intermittent-connection-timeouts-availability-groups/query-secondary-replica.png" alt-text="Screenshot that shows sustained disconnected state because the mirroring endpoint on the secondary replica has been stopped." lightbox="media/troubleshooting-intermittent-connection-timeouts-availability-groups/query-secondary-replica.png":::
+:::image type="content" source="media/troubleshooting-intermittent-connection-timeouts-availability-groups/query-secondary-replica.png" alt-text="Screenshot that shows sustained disconnected state because the mirroring endpoint on the secondary replica has been stopped.":::
 
 ## Review the AlwaysOn extended event session
 
 1. Connect to each replica using SQL Server Management Studio (SSMS) Object Explorer and open the `AlwaysOn_health` extended event files.
 
-1. In **SSMS**, go to **File** > **Open** and then **Merge Extended Event Files**.
+1. In **SSMS**, go to **File** > **Open** and then select **Merge Extended Event Files**.
 
-1. Select the **Add** button and using the **File Open** dialog box and then, navigate to the files in the *SQL Server \LOG* directory.
+1. Select the **Add** button.
+
+1. Using the **File Open** dialog box, navigate to the files in the *SQL Server \LOG* directory.
 
 1. Press **Control** and select the files whose name begins with *'AlwaysOn_healthxxx.xel'*.
 
@@ -165,7 +167,7 @@ By querying the secondary replica, the Always On DMVs only report on the seconda
 
 One of the most common reasons an availability replica can't service the partner replica connection is a non-yielding scheduler. For more information on what a non-yielding scheduler is, see [Troubleshooting SQL Server Scheduling and Yielding](https://techcommunity.microsoft.com/t5/sql-server-support-blog/troubleshooting-sql-server-scheduling-and-yielding/ba-p/319148).
 
-SQL Server will track non-yielding scheduler events as short as 5 to 10 seconds. It  begins tracking these shorter non-yielding events and reports them in the `TrackingNonYieldingScheduler` data point in the `sp_server_diagnostics query_processing` component output.
+SQL Server will track non-yielding scheduler events as short as 5 to 10 seconds. It begins tracking these shorter non-yielding events and reports them in the `TrackingNonYieldingScheduler` data point in the `sp_server_diagnostics query_processing` component output.
 
 To check for non-yielding events that might cause replica connection timeouts, follow these steps:
 
