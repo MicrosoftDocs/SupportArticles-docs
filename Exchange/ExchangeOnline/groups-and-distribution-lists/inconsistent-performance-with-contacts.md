@@ -1,6 +1,6 @@
 ---
 title: Inconsistent performance when working with contacts
-description: .
+description: Describes an issue in which performance is inconsistent when working with contacts.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
