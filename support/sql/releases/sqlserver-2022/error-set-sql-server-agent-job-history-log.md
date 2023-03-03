@@ -1,7 +1,7 @@
 ---
 title: Error may occur when setting the SQL Server Agent job history log
-description: Describes the symptoms that an error may occur when setting the SQL Server Agent job history log.
-ms.date: 3/08/2023
+description: Fixes an error that occurs when setting or changing the maximum number of job history log rows and job history rows per job.
+ms.date: 03/08/2023
 ms.custom: KB5024352
 author: Elena068
 ms.author: v-qianli2
@@ -19,11 +19,11 @@ Assume that the SQL Server Agent is enabled within a SQL Server instance on Linu
 
 ## Resolution
 
-Two new SQL Server Agent properties, `sqlagent.jobhistorymaxrows` and `sqlagent.jobhistorymaxrowsperjob`, have been added to the `mssql-conf` configuration utility. These settings allow you to set the maximum number of rows for the job history log and the maximum number of job history rows per job respectively.
+Two new SQL Server Agent properties, `sqlagent.jobhistorymaxrows` and `sqlagent.jobhistorymaxrowsperjob`, have been added to the `mssql-conf` configuration utility. These settings allow you to set the maximum number of rows for the job history log and the maximum number of job history rows per job, respectively.
 
-Example: </br>`sudo /opt/mssql/bin/mssql-conf set sqlagent.jobhistorymaxrows 1000` </br>`sudo /opt/mssql/bin/mssql-conf set sqlagent.jobhistorymaxrowsperjob 100` 
+Example: </br>`sudo /opt/mssql/bin/mssql-conf set sqlagent.jobhistorymaxrows 1000` </br>`sudo /opt/mssql/bin/mssql-conf set sqlagent.jobhistorymaxrowsperjob 100`
 
-**Note** After configuring `sqlagent.jobhistorymaxrows` or `sqlagent.jobhistorymaxrowsperjob` as the above example, you need to restart the application. The two properties can't be configured using SQL Server Management Studio (SSMS).
+**Note**: After configuring `sqlagent.jobhistorymaxrows` or `sqlagent.jobhistorymaxrowsperjob` as the above example, you need to restart the application. The two properties can't be configured using SQL Server Management Studio (SSMS).
 
 This problem is fixed in the following cumulative update for SQL Server:
 
