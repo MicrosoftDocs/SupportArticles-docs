@@ -1,5 +1,5 @@
 ---
-title: 
+title: Inconsistent performance when working with contacts
 description: .
 author: helenclu
 ms.author: luche

@@ -218,7 +218,7 @@
         - name: How to hide columns in Address Book
           href: ../contacts/how-to-hide-columns-in-address-book.md
         - name: Inconsistent performance with contacts
-          href: ../../../Exchange/ExchangeOnline/groups-and-distribution-lists/inconsistent-performance-with-contacts.md?context=/outlook/troubleshoot/context/client-context
+          href: /exchange/troubleshoot/groups-and-distribution-lists/inconsistent-performance-with-contacts.md?context=/outlook/troubleshoot/context/client-context
         - name: LinkedIn is no longer available in Outlook Social Connector
           href: ../contacts/linkedin-is-no-longer-available-in-outlook-social-connector.md
         - name: No permission error when adding contacts
