@@ -73,6 +73,14 @@ Assign an owner to the Microsoft 365 group that's associated with the team. For 
 
 **Note:** Only a Microsoft 365 administrator in your organization can make this change.
 
+## Error: We can't get your files, we're working on getting them back
+
+This error could be a temporary issue.
+
+### Resolution
+
+Try to access the Files tab after some time. If the issue persists for a longer period of time, [run a self-diagnostics tool](#run-a-self-diagnostics-tool) to resolve any known issues.
+
 ### Run a self-diagnostics tool
 
 Microsoft 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with accessing files to Teams.
