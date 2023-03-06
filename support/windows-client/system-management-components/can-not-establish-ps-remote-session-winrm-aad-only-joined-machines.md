@@ -17,8 +17,6 @@ ms.technology: windows-client-system-management-components
 
 This article helps to resolve the issue in which a PowerShell remote session using Windows Remote Management (WinRM) can't be established between machines that are joined to Azure Active Directory (Azure AD) only.
 
-_Original KB number:_ &nbsp; 5024228
-
 You have two machines on the same network. They aren't joined to a local domain and only joined to Azure AD with no on-premises synchronization.
 
 When you try to establish a PowerShell remote session using WinRM between the two machines, you receive the following error messages:
