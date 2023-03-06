@@ -23,25 +23,21 @@ You have two machines on the same network. They aren't joined to a local domain 
 
 When you try to establish a PowerShell remote session using WinRM between the two machines, you receive the following error messages:
 
-- ```output
-    Enter-PSSession : Connecting to remote server CLIENT01 failed with the following error message : The WinRM client cannot process the request. If the authentication scheme is different from Kerberos, or if the client computer is not joined to a domain, then HTTPS transport must be used or the destination machine must be added to the TrustedHosts configuration setting. Use winrm.cmd to configure TrustedHosts. Note that computers in the TrustedHosts list might not be authenticated. You can get more information about that by running the following command: winrm help config. For more information, see the about_Remote_Troubleshooting Help topic.
-  ```
+- > Enter-PSSession : Connecting to remote server CLIENT01 failed with the following error message : The WinRM client cannot process the request. If the authentication scheme is different from Kerberos, or if the client computer is not joined to a domain, then HTTPS transport must be used or the destination machine must be added to the TrustedHosts configuration setting. Use winrm.cmd to configure TrustedHosts. Note that computers in the TrustedHosts list might not be authenticated. You can get more information about that by running the following command: winrm help config. For more information, see the about_Remote_Troubleshooting Help topic.
 
-- ```output
-    Enter-PSSession : Connecting to remote server CLIENT01 failed with the following error message : WinRM cannot process the request. The following error with errorcode 0x8009030e occurred while using Negotiate authentication: A specified logon session does not exist. It may already have been terminated.
-    Possible causes are:
-    -The user name or password specified are invalid.
-    -Kerberos is used when no authentication method and no user name are specified.
-    -Kerberos accepts domain user names, but not local user names.
-    -The Service Principal Name (SPN) for the remote computer name and port does not exist.
-    -The client and remote computers are in different domains and there is no trust between the two domains.  
-    After checking for the above issues, try the following:
-    -Check the Event Viewer for events related to authentication.
+- > Enter-PSSession : Connecting to remote server CLIENT01 failed with the following error message : WinRM cannot process the request. The following error with errorcode 0x8009030e occurred while using Negotiate authentication: A specified logon session does not exist. It may already have been terminated.  
+    Possible causes are:  
+     -The user name or password specified are invalid.  
+     -Kerberos is used when no authentication method and no user name are specified.  
+     -Kerberos accepts domain user names, but not local user names.  
+     -The Service Principal Name (SPN) for the remote computer name and port does not exist.  
+     -The client and remote computers are in different domains and there is no trust between the two domains.  
+    After checking for the above issues, try the following:  
+    -Check the Event Viewer for events related to authentication.  
     -Change the authentication method; add the destination computer to the WinRM TrustedHosts configuration setting or use HTTPS transport.  
-    Note that computers in the TrustedHosts list might not be authenticated.
+    Note that computers in the TrustedHosts list might not be authenticated.  
     -For more information about WinRM configuration, run the following command: winrm help config. For more
     information, see the about_Remote_Troubleshooting Help topic.
-  ```
 
 This issue occurs because of one of the following reasons:
 
