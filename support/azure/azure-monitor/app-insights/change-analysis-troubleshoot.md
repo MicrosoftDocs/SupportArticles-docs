@@ -107,7 +107,7 @@ To troubleshoot virtual machine issues by using the troubleshooting tool in the 
 
 :::image type="content" source="./media/change-analysis-troubleshoot/vm-dnsp-troubleshooting-tools.png" alt-text="Screenshot of the Diagnose and Solve Problems tool for a Virtual Machine with Troubleshooting tools selected.":::
 
-:::image type="content" source="./media/change-analysis-troubleshoot/analyze-recent-changes.png" alt-text="Screenshot of the tile for the Analyze recent changes troubleshooting tool for a virtual machine.":::
+:::image type="content" source="./media/change-analysis-troubleshoot/analyze-recent-changes.png" alt-text="Screenshot of the tile for the Analyze recent changes troubleshooting tool for a virtual machine." border="false":::
 
 ## Can't filter to your resource to view changes
 
