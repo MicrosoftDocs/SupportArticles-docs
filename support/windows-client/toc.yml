@@ -1060,6 +1060,8 @@
       href: ./system-management-components/windows-error-reporting-diagnostics-enablement-guidance.md
   - name: WinRM
     items:
+    - name: Can't establish a PowerShell remote session using WinRM
+      href: ./system-management-components/can-not-establish-ps-remote-session-winrm-aad-only-joined-machines.md    
     - name: Errors when you run WinRM commands
       href: ./system-management-components/errors-when-you-run-winrm-commands.md
     - name: How to configure WINRM for HTTPS
