@@ -2,7 +2,6 @@
 title: Troubleshooting Linux Kernel Panics in Azure
 description: Discusses multiple conditions that can lead to a kernel panic and provides general troubleshooting guidance.
 author: divargas-msft
-ms.author: divargas
 ms.author: adelgadohell
 ms.topic: troubleshooting
 ms.date: 03/06/2023
