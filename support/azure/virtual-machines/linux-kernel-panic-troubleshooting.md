@@ -2,9 +2,10 @@
 title: Troubleshooting Linux Kernel Panics in Azure
 description: Discusses multiple conditions that can lead to a kernel panic and provides general troubleshooting guidance.
 author: divargas-msft
+ms.author: divargas
 ms.author: adelgadohell
 ms.topic: troubleshooting
-ms.date: 05/19/2022
+ms.date: 03/06/2023
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
 ms.collection: linux
@@ -56,14 +57,16 @@ Some of the most common kernel panic events:
 
 A kernel panic at boot time prevents the VM from finishing the operating system startup process. It happens every time the virtual machine is started, and it doesn't allow logging in.
 
-This kind of event is commonly related but not limited to: 
-* A recent kernel upgrade
-* A recent kernel downgrade
-* Kernel module changes
-* Operating system configuration changes (GRUB, sysctl, and selinux)
-* Possible missing files
-* Wrong permissions on files
-* Missing partitions
+This kind of event is commonly related but not limited to:
+* [A recent kernel upgrade](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues#other-kernel-boot-issues-kernelupgrade).
+* [A recent kernel downgrade](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues#other-kernel-boot-issues-kerneldowngrade).
+* [Kernel module changes](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues#other-kernel-boot-issues-kernelmodulechanges).
+* [Operating system configuration changes](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues#other-kernel-boot-issues-OSchanges) (GRUB, sysctl, and selinux).
+    * [SELinux issues](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues#attempted-tokill-init-selinuxissues).
+* [Missing important files and directories](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues#attempted-tokill-init-missingfilesdirs).
+* [Missing important system core libraries and packages](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues#attempted-tokill-init-missinglibraries).
+* [Wrong permissions on files](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues#attempted-tokill-init-wrongpermissions).
+* [Missing partitions](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues#attempted-tokill-init-missingpartitions).
 
 ### Resolution for scenario 1
 
@@ -73,10 +76,10 @@ In order to deal with this kind of kernel panic, the following approaches can be
 
 Use the Azure serial console to interrupt the boot process and select a previous kernel version, if available. This way, the VM will be able to boot up again, then you can use one of the following methods to fix the specific issue with the non-booting kernel:
 
-* Reinstall or regenerate a missing initramfs.
-* Reinstall the problematic kernel.
-* Review the loaded pr missing kernel modules.
-* Review the partitions.
+* [Reinstall or regenerate a missing initramfs](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues#missing-initramfs).
+* [Reinstall the problematic kernel](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues#other-kernel-boot-issues-kernelupdate).
+* [Review the loaded or missing kernel modules](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues#other-kernel-boot-issues-kernelmodulechanges).
+* [Review the partitions](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues#attempted-tokill-init-missingpartitions).
 
 #### Method 2: Offline repair using a rescue VM
 
@@ -84,22 +87,25 @@ In case the Azure serial console isn't available or no previous kernel is availa
 
 Use the [**Repair VM** command](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to create a repair VM that has a copy of the target VM's OS disk attached. Then use [chroot](chroot-environment-linux.md) mount the copy of the OS file systems in the repair VM. After that, try following methods to fix the kernel issues:
 
-* Reinstall or regenerate a missing initramfs.
-* Reinstall the problematic kernel.
-* Review the loaded or missing kernel modules.
-* Review the partitions.
-* Recover missing files.
+* [Reinstall or regenerate a missing initramfs](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues#missing-initramfs).
+* [Reinstall the problematic kernel](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues#other-kernel-boot-issues-kernelupdate).
+* [Review the loaded or missing kernel modules](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues#other-kernel-boot-issues-kernelmodulechanges).
+* [Review the partitions](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues#attempted-tokill-init-missingpartitions).
+* [Recover missing files](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues#attempted-tokill-init-missingfilesdirs).
+* [Recover missing important system core libraries and packages](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues#attempted-tokill-init-missinglibraries).
 
 ## Scenario 2: Kernel panic at run time
 
 This kind of kernel panic will commonly get triggered at unpredictable times after the Operating System startup process completes and causes the VM to stop responding, preventing it from logging in. It is commonly related but not limited to:
 
-* A recent kernel upgrade
-* A recent kernel downgrade
-* A kernel module changes 
-* Operating system configuration changes (sysctl)
+* [A recent kernel upgrade](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues#other-kernel-boot-issues-kernelupgrade).
+* [A recent kernel downgrade](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues#other-kernel-boot-issues-kerneldowngrade).
+* [Kernel module changes](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues#other-kernel-boot-issues-kernelmodulechanges).
+* [Operating system configuration changes](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues#other-kernel-boot-issues-OSchanges) (GRUB, sysctl, and selinux).
+    * [SELinux issues](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues#attempted-tokill-init-selinuxissues).
 * Application workload changes
 * Application development changes or bugs
+* [Possible kernel bugs](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues#other-kernel-boot-issues-kernelbugs)
 * Performance-related issues
 
 ### Resolution for scenario 2
