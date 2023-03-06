@@ -5,6 +5,8 @@ ms.date: 02/22/2023
 ms.reviewer: chiragpa
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-cluster-performance
+author: AmandaAZ
+ms.author: v-weizhu
 ---
 # Identify the nodes and containers consuming high CPU in an AKS cluster
 
@@ -59,11 +61,11 @@ To identify nodes, containers, or pods that drive high CPU usage, follow these s
 
     In the following screenshot, the node only uses 12% of the max CPU and has been running for 16 days.
 
-    :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/node-container-insights.png" alt-text="Screenshot of the Nodes under the Monitoring selection.":::
+    :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/node-container-insights.png" alt-text="Screenshot of the Nodes under the Monitoring selection." lightbox="media/identify-high-cpu-consuming-containers-aks/node-container-insights.png":::
 
 1. Once you locate the nodes with high CPU usage, select the nodes to find pods on them and their CPU usage.
 
-    :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/containers-in-node-insights.png" alt-text="Screenshot of the insights option for pods under the Monitoring selection.":::
+    :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/containers-in-node-insights.png" alt-text="Screenshot of the insights option for pods under the Monitoring selection." lightbox="media/identify-high-cpu-consuming-containers-aks/containers-in-node-insights.png":::
 
     Once you get the list of pods with high CPU usage, you can map it to the applications that cause the spike in CPU usage.
 
