@@ -44,9 +44,9 @@ The licenseCheck result, if invalid, will give in its message attribute the miss
 
 To solve this issue :
 
-- if the message indicates a ‘Per user plan with attended RPA’ license is required : contact your M365 administrator to get this license assigned to the user triggering the run
-- if the message indicates a ‘Per flow plan’ license is required : assign a 'Per flow plan' to the cloud flow triggering the desktop flow run
-- if the message indicates an ‘Unattended RPA’ add-on is required : ask your Power Platform administrator to assign an 'Unattended RPA' add-on to your environment from Power Platform Admin Center
+- <b>‘Per user plan with attended RPA’ license missing</b> : contact your M365 administrator to get this license assigned to the user triggering the run
+- <b>‘Per flow plan’ license missing</b> : assign a 'Per flow plan' to the cloud flow triggering the desktop flow run
+- <b>‘Unattended RPA’ add-on missing</b> : ask your Power Platform administrator to assign an 'Unattended RPA' add-on to your environment from Power Platform Admin Center
 
 ## Notes
 
