@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting intermittent connection time-outs between availability group replicas
 description: This article helps you diagnose intermittent connection time-outs that are reported between availability group replicas. 
-ms.date: 02/28/2023
+ms.date: 03/06/2023
 ms.custom: sap:Availability Groups
 ms.prod: sql
 author: padmajayaraman
@@ -17,7 +17,7 @@ This article helps you diagnose intermittent connection time-outs that are repor
 
 ### Querying primary and secondary replicas returns different results
 
-Read-only workloads that query secondary replicas might query stale data. If intermittent replica connection time-outs occur, changes to data on the primary replica database aren't yet reflected in the secondary database when you query the same data. For more information, see the ["Data latency on secondary replica"](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups) section.
+Read-only workloads that query secondary replicas might query stale data. If intermittent replica connection time-outs occur, changes to data on the primary replica database aren't yet reflected in the secondary database when you query the same data. For more information, see the [Data latency on secondary replica](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups) section.
 
 ### "Automatic failover" secondary replica might not be failover ready
 
@@ -162,7 +162,7 @@ By querying the secondary replica, the Always On DMVs reports on only the second
 
     The following screenshot shows the `AlwaysOn_health` data from the secondary replica. The first outlined box shows the connection loss after the endpoint on the primary replica is stopped. The second outlined box shows the connection failure that occurs the next time that the secondary replica tries to connect to the primary replica.
 
-    :::image type="content" source="media/troubleshooting-intermittent-connection-timeouts-availability-groups/always-on-health-data-secondary-replica.png" alt-text="Screenshot that shows the AlwaysOn_health data from the secondary replica." lightbox="media/troubleshooting-intermittent-connection-timeouts-availability-groups/always-on-health-data-secondary-replica.png":::
+    :::image type="content" source="media/troubleshooting-intermittent-connection-timeouts-availability-groups/always-on-health-data-secondary-replica.png" alt-text="Screenshot that shows the AlwaysOn_health data from the secondary replica.":::
 
 ### Investigate SQL Server application ability to service replica connection
 
@@ -196,20 +196,22 @@ To check for non-yielding events that might cause replica connection time-outs, 
     EXEC @ReturnCode = msdb.dbo.sp_add_jobserver @job_id = @jobId, @server_name = N'(local)'
     EXEC sp_start_job 'Run sp_server_diagnostics'
     ```
-   > **Note:** In these commands, change `@output_file_name` to a valid path and file name.
+
+   > [!NOTE]
+   > In these commands, change `@output_file_name` to a valid path and file name.
 
 ### Analyze the results
 
 When a connection time-out is reported, note the timestamp of the time-out event that's shown in the SQL Server error log. For the replicas in the following example, `SQL19AGN1` was reporting the replica connection time-outs. Therefore, a SQL Agent job was created on `SQL19AGN2`, the partner replica. Then, a connection time-out was reported in the SQL19AGN1 error log at 07:24:31.
 
-:::image type="content" source="media/troubleshooting-intermittent-connection-timeouts-availability-groups/analyze-event-timestamp-timeout.png" alt-text="Screenshot that shows the connection time-out reported in the SQL19AGN1 error log." lightbox="media/troubleshooting-intermittent-connection-timeouts-availability-groups/analyze-event-timestamp-timeout.png":::
+:::image type="content" source="media/troubleshooting-intermittent-connection-timeouts-availability-groups/analyze-event-timestamp-timeout.png" alt-text="Screenshot that shows the connection time-out reported in the SQL19AGN1 error log.":::
 
 Next, the output from the SQL Agent job that runs sp_server_diagnostics is checked at around the reported time, specifically reviewing the `TrackingNonYieldingScheduler` data point in the `query_processing` component output. The output reports that a non-yielding scheduler was tracked (as a non-zero hexadecimal value) on server SQL19AGN2 (at 07:24:33) around the time that the replica connection time-out was reported on SQL19AGN1 (at 07:24:31).
 
 > [!NOTE]
 > The following `sp_server_diagnostics` output is concatenated to show both the `create_time` (timestamp) and `query_processing TrackingNonYieldingScheduler` results.
 
-:::image type="content" source="media/troubleshooting-intermittent-connection-timeouts-availability-groups/create-time-timestamp-query-processing.png" alt-text="Screenshot that shows sp_server_diagnostics output was concatenated." lightbox="media/troubleshooting-intermittent-connection-timeouts-availability-groups/create-time-timestamp-query-processing.png":::
+:::image type="content" source="media/troubleshooting-intermittent-connection-timeouts-availability-groups/create-time-timestamp-query-processing.png" alt-text="Screenshot that shows sp_server_diagnostics output was concatenated.":::
 
 ### Investigate a non-yielding scheduler event
 
