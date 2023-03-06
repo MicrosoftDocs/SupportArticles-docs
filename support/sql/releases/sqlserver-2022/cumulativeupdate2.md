@@ -12,7 +12,7 @@ appliesto:
 
 # KB5023127 - Cumulative Update 2 for SQL Server 2022
 
-_Release Date:_ &nbsp; March 08, 2023
+_Release Date:_ &nbsp; March 08, 2023  
 _Version:_ &nbsp; 16.0.4015.1
 
 ## Summary
