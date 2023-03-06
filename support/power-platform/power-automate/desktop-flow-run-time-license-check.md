@@ -14,12 +14,26 @@ _Applies to:_ &nbsp; Power Automate for Desktop
 ## Symptoms
 
 If you [trigger a desktop flow run](https://learn.microsoft.com/power-automate/developer/desktop-flow-public-apis#trigger-a-desktop-flow-run) using the [Dataverse Web API RunDesktopFlow Action](https://learn.microsoft.com/power-apps/developer/data-platform/webapi/reference/rundesktopflow?view=dataverse-latest), you will retrieve a JSON output containing a "licenseCheck" object. 
-If valid, the licenceCheck code is "ValidLicenseCoverage". If invalid, the licenseCheck code can take multiple values depending on the licensing component(s) missing (among licenses & add-ons).
+If valid, the licenceCheck code is "ValidLicenseCoverage". Any other code is a warning of a missing licensing component (license and/or add-on).
+
+    ```xml
+     <system.net>
+          <defaultProxy enabled="true" useDefaultCredentials="true"> 
+          </defaultProxy> 
+     </system.net>
+    ```
+
 
 
 ## Cause
 
-When invalid, the token 
+If If invalid, the licenseCheck code can take multiple values depending on the licensing component(s) missing : 
+- AttendedNoLicense
+
+- LicensingCheckFailed
+
+-
+-
 
 ## Resolution
 
