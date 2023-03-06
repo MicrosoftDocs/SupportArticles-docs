@@ -67,7 +67,7 @@ Often, this error message includes the following text:
 
 > Azure Lighthouse subscription is not supported, the changes are only available in the subscription's home tenant
 
-Azure Lighthouse allows for cross-tenant resource administration. However, cross-tenant support needs to be built for each resource provider. Currently, Change Analysis has not built this support. If you're signed in to one tenant, you can't query for resource or subscription changes whose home is in another tenant.
+Azure Lighthouse allows for cross-tenant resource administration. However, cross-tenant support needs to be built for each resource provider. Currently, Change Analysis hasn't built this support. If you're signed in to one tenant, you can't query for resource or subscription changes whose home is in another tenant.
 
 If this is a blocking issue for you, [submit an Azure support ticket](https://azure.microsoft.com/support/) to describe how you're trying to use Change Analysis.
 
@@ -118,7 +118,7 @@ When filtering down to a particular resource in the Change Analysis standalone p
 1. In that resource's left side menu, select **Diagnose and solve problems**.
 1. In the **Change Analysis** card, select **View change details**.
 
-   :::image type="content" source="./media/change-analysis-troubleshoot/change-details-card.png" alt-text="Screenshot of viewing change details from the Change Analysis card in Diagnose and solve problems tool.":::
+   :::image type="content" source="./media/change-analysis-troubleshoot/change-details-card.png" alt-text="Screenshot of viewing change details from the Change Analysis card in the Diagnose and solve problems tool.":::
 
 From here, you'll be able to view all of the changes for that one resource.
 
