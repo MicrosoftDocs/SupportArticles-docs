@@ -71,7 +71,7 @@ Azure Lighthouse allows for cross-tenant resource administration. However, cross
 
 If this is a blocking issue for you, [submit an Azure support ticket](https://azure.microsoft.com/support/) to describe how you're trying to use Change Analysis.
 
-## Resolve "An error occurred while getting changes. Please refresh this page or come back later to view changes" error message
+## Resolve the "An error occurred while getting changes. Please refresh this page or come back later to view changes" error message
 
 When changes can't be loaded, Azure Monitor's Change Analysis service presents this general error message. Here are a few known causes:
 
