@@ -115,20 +115,12 @@ This error might be associated with one of the following issues:
 
       If the VM is running CentOS, replace `redhat` with `centos` in the *grub.cfg* file absolute path */boot/efi/EFI/centos/grub.cfg*.
 
-    * **SLES 12/15 without EUFI (BIOS based - Gen1)**
+    * **SLES 12/15 Gen1 and Gen2**
 
         ```bash
         # grub2-install /dev/sdX
         # grub2-mkconfig -o /boot/grub2/grub.cfg
         # sed -i 's/hd2/hd0/g' /boot/grub2/grub.cfg
-        ```
-
-    * **SLES 12/15 with EUFI (Gen2)**
-
-        ```bash
-        # grub2-install /dev/sdX
-        # grub2-mkconfig -o /boot/efi/EFI/BOOT/grub.cfg
-        # sed -i 's/hd2/hd0/g' /boot/efi/EFI/BOOT/grub.cfg
         ```
 
     * **Ubuntu 18.04/20.04**
