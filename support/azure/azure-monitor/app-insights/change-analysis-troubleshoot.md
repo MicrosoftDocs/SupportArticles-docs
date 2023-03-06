@@ -13,7 +13,7 @@ ms.subservice: change-analysis
 
 This article provides troubleshooting information for Azure Monitor's Change Analysis resource provider.
 
-## Trouble registering Microsoft.ChangeAnalysis resource provider from Change history tab
+## Trouble registering Microsoft.ChangeAnalysis resource provider from the Change history tab
 
 If you're viewing Change history after its first integration with Azure Monitor's Change Analysis, you'll see it automatically registering the `Microsoft.ChangeAnalysis` resource provider. The resource may fail and incur the following error messages:
 
@@ -23,7 +23,7 @@ If you're viewing Change history after its first integration with Azure Monitor'
 
 ### <a id="not-enought-permission-to-register"></a> "You don't have enough permissions to register Microsoft.ChangeAnalysis resource provider" error message
 
-You're receiving this error message because your role in the current subscription isn't associated with the `Microsoft.Support/register/action` scope. For example, you aren't the owner of your subscription and instead received shared access permissions through a coworker (like view access to a resource group).
+You're receiving this error message because your role in the current subscription isn't associated with the `Microsoft.Support/register/action` scope. For example, you aren't the owner of your subscription and instead received shared access permissions through a coworker (for example, view access to a resource group).
 
 To resolve the issue, contact the owner of your subscription to register the `Microsoft.ChangeAnalysis` resource provider. To do this, follow these steps:
 
@@ -41,25 +41,25 @@ To resolve the issue, contact the owner of your subscription to register the `Mi
 
 ### <a id="failed-to-register"></a>"Failed to register Microsoft.ChangeAnalysis resource provider" error message
 
-This error message is likely a temporary internet connectivity issue, since:
+This error message is likely a temporary internet connectivity issue since:
 
-* The UI sent the resource provider registration request.
+* The UI sent the resource provider a registration request.
 * You've resolved your [permissions issue](#not-enought-permission-to-register).
 
 Try refreshing the page and checking your internet connection. If the error persists, [submit an Azure support ticket](https://azure.microsoft.com/support/).
 
 ### <a id="taking-longer-than-expected"></a>"This is taking longer than expected" error message
 
-You'll receive this error message when the registration takes longer than 2 minutes. While unusual, it doesn't mean something went wrong.
+You receive this error message when the registration takes longer than two minutes. While unusual, it doesn't mean something went wrong.
 
 To resolve this issue, follow these steps:
 
 1. Prepare for downtime.
 1. Restart your web app to see your registration changes.
 
-Changes should show up within a few hours of app restart. If your changes still don't show after 6 hours, [submit an Azure support ticket](https://azure.microsoft.com/support/).
+Changes should show up within a few hours of the app restart. If your changes still don't show after six hours, [submit an Azure support ticket](https://azure.microsoft.com/support/).
 
-## Resolve "Azure Lighthouse subscription is not supported" error message
+## Resolve the "Azure Lighthouse subscription is not supported" error message
 
 ### "Failed to query Microsoft.ChangeAnalysis resource provider" error message
 
@@ -67,7 +67,7 @@ Often, this error message includes the following text:
 
 > Azure Lighthouse subscription is not supported, the changes are only available in the subscription's home tenant
 
-Azure Lighthouse allows for cross-tenant resource administration. However, cross-tenant support needs to be built for each resource provider. Currently, Change Analysis has not built this support. If you're signed into one tenant, you can't query for resource or subscription changes whose home is in another tenant.
+Azure Lighthouse allows for cross-tenant resource administration. However, cross-tenant support needs to be built for each resource provider. Currently, Change Analysis has not built this support. If you're signed in to one tenant, you can't query for resource or subscription changes whose home is in another tenant.
 
 If this is a blocking issue for you, [submit an Azure support ticket](https://azure.microsoft.com/support/) to describe how you're trying to use Change Analysis.
 
@@ -75,25 +75,25 @@ If this is a blocking issue for you, [submit an Azure support ticket](https://az
 
 When changes can't be loaded, Azure Monitor's Change Analysis service presents this general error message. Here are a few known causes:
 
-* Internet connectivity error from the client device.
-* Change Analysis service being temporarily unavailable.
+* Internet connectivity error from the client device
+* Change Analysis service being temporarily unavailable
 
 Refreshing the page after a few minutes usually fixes this issue. If the error persists, [submit an Azure support ticket](https://azure.microsoft.com/support/).
 
-## Resolve "Only partial data loaded" error message
+## Resolve the "Only partial data loaded" error message
 
 This error message may occur in the Azure portal when loading change data via the Change Analysis home page. Typically, the Change Analysis service calculates and returns all change data. However, in a network failure or a temporary outage of service, you may receive an error message indicating only partial data was loaded.
 
 To load all change data, try waiting a few minutes and refreshing the page. If you're still only receiving partial data, [submit an Azure support ticket](https://azure.microsoft.com/support/).
 
-## Resolve "You don't have enough permissions to view some changes. Contact your Azure subscription administrator" error message
+## Resolve the "You don't have enough permissions to view some changes. Contact your Azure subscription administrator" error message
 
-This general unauthorized error message occurs when the current user doesn't have sufficient permissions to view the change. At minimum, the following permissions are required for these corresponding actions:
+This general unauthorized error message occurs when the current user doesn't have sufficient permissions to view the change. At a minimum, the following permissions are required for these corresponding actions:
 
 * To view infrastructure changes returned by Azure Resource Graph and Azure Resource Manager, reader access is required.
-* For web app in-guest file changes and configuration changes, contributor role is required.
+* For web app in-guest file changes and configuration changes, a contributor role is required.
 
-## Resolve "Cannot see in-guest changes for newly enabled Web App" error message
+## Resolve the "Cannot see in-guest changes for newly enabled Web App" error message
 
 You may not immediately see web app in-guest file changes and configuration changes. Prepare for brief downtime and restart your web app. After that, you should be able to view changes within 30 minutes. If not, [submit an Azure support ticket](https://azure.microsoft.com/support/).
 
