@@ -9,7 +9,7 @@ ms.reviewer: derekw, pcaronauger
 appliesto:
 - SQL Server 2022 on Linux
 ---
-# KB5024352 - FIX: Error may occur when setting the SQL Server Agent job history log
+# FIX: Error may occur when setting the SQL Server Agent job history log
 
 ## Symptoms
 
