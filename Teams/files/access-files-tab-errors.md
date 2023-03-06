@@ -73,11 +73,13 @@ Assign an owner to the Microsoft 365 group that's associated with the team. For 
 
 **Note:** Only a Microsoft 365 administrator in your organization can make this change.
 
-## Error: "we can't get your files, we're working on getting them backp
-It could be a temporary issue.
+## Error: We can't get your files, we're working on getting them back
+
+This error could be a temporary issue.
 
 ### Resolution
-You can try to access the files tab after sometime. If the issue persists for a longer period, Run a self-diagnostics tool below to address any known issues.
+
+Try to access the Files tab after some time. If the issue persists for a longer period of time, [run a self-diagnostics tool](#run-a-self-diagnostics-tool) to resolve any known issues.
 
 ### Run a self-diagnostics tool
 
