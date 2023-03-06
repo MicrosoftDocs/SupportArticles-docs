@@ -159,7 +159,7 @@ You can specify the directory where you want the Sqldumper.exe utility to write 
 
 If you specify a full dump file or a filtered dump file to be generated, the Sqldumper.exe utility may take several minutes to generate the dump file. The time depends on the following variables:
 
-- The amount of memory that the Sqldumper.exe utility is currently using.
+- The amount of memory that the Sqlservr.exe utility is currently using.
 - The speed of the drive to which the utility is writing the dump file.
 
 During this time, the Sqldumper.exe utility won't process commands. You'll notice that the server has stopped responding. Additionally, a cluster failover may occur.
