@@ -35,7 +35,7 @@ Consider the following scenario:
 
 In this scenario, you encounter the following issues when you try to add your Exchange Online email account to Outlook:
 
-- The Modern authentication prompt goes blank after you enter your Exchange Online credentials.
+- The Modern authentication prompt window goes blank after you enter your Exchange Online credentials.
 
 - Outlook doesn't add the account to your default Outlook profile.
 
