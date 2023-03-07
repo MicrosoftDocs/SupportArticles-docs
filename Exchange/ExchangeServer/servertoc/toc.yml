@@ -589,6 +589,8 @@
           href: ../setup/cannot-uninstall-server-role-via-setup-exe.md
         - name: Cumulative Update 20 shown instead of CU22
           href: ../setup/cumulative-update-20-is-shown-not-22.md
+        - name: Error when you try to view messages in Queue Viewer
+          href: ../setup/queue-viewer-error-when-viewing-messages.md
         - name: Event ID 106 Performance counter updating error
           href: ../setup/event-106-msexchange-common.md
         - name: Event ID 6010 logged after installing CU23

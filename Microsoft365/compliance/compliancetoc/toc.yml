@@ -93,6 +93,10 @@
     items:
     - name: Issues related to information barrier policies
       href: ../information-barriers/information-barriers-troubleshooting.md
+  - name: Information protection scanner
+    items:
+    - name: Resolve issues with scanner deployment
+      href: ../information-protection-scanner/resolve-deployment-issues.md
   - name: Retention
     items:
     - name: Auto-apply label doesn't apply to messages
@@ -101,12 +105,16 @@
       href: ../retention/cannot-manage-disposition-reviews.md
     - name: Can't retain cloud attachments
       href: ../retention/cannot-retain-cloud-attachments.md
+    - name: Identify errors in Microsoft 365 retention and retention label policies
+      href: ../retention/identify-errors-in-retention-and-retention-label-policies.md
     - name: Managed folders disappear
       href: ../retention/managed-folders-disappear.md
     - name: MRM and retention policies
       href: ../retention/mrm-and-retention-policy.md
     - name: Resolve email archive and deletion issues with MRM
       href: ../retention/troubleshoot-mrm-email-archive-deletion.md
+    - name: Resolve errors in Microsoft 365 retention and retention label policies
+      href: ../retention/resolve-errors-in-retention-and-retention-label-policies.md
   - name: Microsoft Purview Message Encryption
     items:
     - name: Can't display message

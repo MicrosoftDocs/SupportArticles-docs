@@ -1,5 +1,6 @@
 ---
 title: Fix error "sender's submission quota exceeded" in Exchange Online
+ms.date: 01/06/2023
 ms.author: v-six
 author: simonxjx
 manager: dcscontentpm
