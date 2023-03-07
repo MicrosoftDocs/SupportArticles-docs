@@ -78,7 +78,7 @@ Try the following steps to resolve the issue:
 4. Check your network connection to make sure it's stable.
 5. If you're getting Azure Active Directory (Azure AD) errors, they're usually related to user authentication and authorization. The error page might contain additional information that can help diagnose and fix the problem. To resolve Azure AD errors, you might need assistance from your IT department.
 
-### Enable storage of third-party cookies and local data in your browser or app
+## Enable storage of third-party cookies and local data in your browser or app
 
 Power Apps stores some data locally, such as user identity and preferences, leveraging your browser's capabilities. Problems occur if the browser blocks the storage of such local data, or third-party cookies set by Power Apps.
 
@@ -88,7 +88,7 @@ To enable this setting for the Power Apps and Dynamics 365 mobile apps for iOS, 
 
 These instructions are shown on the following tabs.
 
-#### [Microsoft Edge](#tab/microsoft-edge)
+### [Microsoft Edge](#tab/microsoft-edge)
 
 - Option 1: Enable storage of third-party cookies and local data for all sites
 
@@ -118,7 +118,7 @@ These instructions are shown on the following tabs.
     1. Ensure **Cookies and other site data** is disabled. If you want to keep it enabled, select **Add** instead, and then add:
         - `[*.]powerapps.com`
 
-#### [Google Chrome](#tab/google-chrome)
+### [Google Chrome](#tab/google-chrome)
 
 - Option 1: Enable storage of third-party cookies and local data for all sites
 
@@ -143,13 +143,13 @@ These instructions are shown on the following tabs.
         - `[*.]powerapps.com`
     1. Make sure you select the **Including third-party cookies on this site** option when adding the site.
 
-#### [Safari (iOS)](#tab/safari-ios)
+### [Safari (iOS)](#tab/safari-ios)
 
 1. In Safari app, select **Safari** > **Preferences** > **Privacy**.
 1. Ensure **Block all cookies** isn't selected.
 1. Ensure **Prevent cross-site tracking** isn't selected.
 
-#### [iOS Settings](#tab/ios-settings)
+### [iOS Settings](#tab/ios-settings)
 
 - Instructions for Dynamics 365 for phones or Dynamics 365 for tablets app on iOS
 
@@ -169,7 +169,7 @@ These instructions are shown on the following tabs.
   1. Scroll down to **Edge**.
   1. Toggle on **Allow Cross-Website Tracking**.
 
-### Clear your browser cache
+## Clear your browser cache
 
 The browser cache is stored on your device's hard drive. When you visit a website, your browser downloads certain information that allows it to load faster when you revisit the same website in the future. Some Power Apps features use the browser cache to provide a faster user experience. In some cases, you may want to clear your browser cache. Here are the instructions for different browsers:
 
