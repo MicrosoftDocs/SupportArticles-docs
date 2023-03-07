@@ -7,11 +7,11 @@ ms.author: v-weizhu
 ms.reviewer: v-dele, aaronmax, cweining, v-jsitser
 ms.service: azure-monitor
 ms.subservice: application-insights
-#Customer intent: As an Azure Application Insights user, I want to know how to troubleshoot various problems enabling or viewing the Application Insights Profiler so I can use it effectively.  
+#Customer intent: As an Azure Application Insights user, I want to know how to troubleshoot various problems enabling or viewing Application Insights Profiler so I can use it effectively.  
 ---
 # Troubleshoot Application Insights Profiler
 
-This article provides troubleshooting steps and information to use Azure Application Insights Profiler.
+This article provides troubleshooting steps and information for using Azure Application Insights Profiler.
 
 ## Make sure you're using the appropriate Profiler Endpoint
 
@@ -24,7 +24,7 @@ Currently, the only regions that require endpoint modifications are [Azure Gover
 
 ## Make sure your app is running on the right versions
 
-Profiler is supported on the [.NET Framework later than 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework).
+Profiler is supported on the [.NET Framework later than version 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework).
 
 If your web app is an ASP.NET Core application, it must be running on the [latest supported ASP.NET Core runtime](https://dotnet.microsoft.com/download/dotnet/6.0).
 
@@ -41,7 +41,7 @@ If the data you're trying to view is older than a couple of weeks, try limiting 
 
 ## Make sure you can access the gateway
 
-Check that proxies or a firewall isn't blocking your access to `https://gateway.azureserviceprofiler.net`.
+Check that proxies or a firewall aren't blocking your access to `https://gateway.azureserviceprofiler.net`.
 
 ## Make sure the Profiler is running
 
@@ -57,7 +57,7 @@ Search for trace messages and custom events sent by Profiler to your Application
 
 1. Use the search string `stopprofiler OR startprofiler OR upload OR ServiceProfilerSample` to find the relevant data:
 
-   :::image type="content" source="media/profiler-troubleshooting/search-results.png" alt-text="Screenshot of the search results from aforementioned search string.":::
+   :::image type="content" source="media/profiler-troubleshooting/search-results.png" alt-text="Screenshot of the search results from the aforementioned search string.":::
 
    The search results above include two examples of searches from two AI resources:
 
@@ -71,7 +71,7 @@ Search for trace messages and custom events sent by Profiler to your Application
 
 When two or more parallel threads are associated with a request, the total time metric in the stack viewer may be more than the duration of the request. In that case, the total thread time is more than the actual elapsed time.
 
-For example, one thread might be waiting on the other to be completed. The viewer tries to detect this situation and omits the uninteresting wait. In doing so, it errs on the side of displaying too much information, rather than omitting what might be critical information.
+For example, one thread might be waiting on the other to be completed. The viewer tries to detect this situation and omits the uninteresting wait. In doing so, it errs on the side of displaying too much information rather than omitting what might be critical information.
 
 When you see parallel threads in your traces, determine which threads are waiting so that you can identify the hot path for the request. Usually, the thread that quickly goes into a wait state is simply waiting on the other threads. Concentrate on the other threads, and ignore the time in the waiting threads.
 
@@ -111,9 +111,8 @@ The status page shows the installation state of the Profiler and [Snapshot Debug
 You can use the Kudu management site for App Service to get the base URL of this status page:
 
 1. Open your App Service application in the Azure portal.
-2. Select **Advanced Tools**.
-3. Select **Go**.
-4. Once you are on the Kudu management site, append `/DiagnosticServices` to the URL and press <kbd>Enter</kbd>.
+2. Select **Advanced Tools** and then select **Go**.
+3. Once on the Kudu management site, append `/DiagnosticServices` to the URL and press <kbd>Enter</kbd>.
 
     It will end like this: `https://<kudu-url>/DiagnosticServices`. It will display a status page similar to the following:
 
@@ -128,7 +127,7 @@ When you configure Profiler, updates are made to the web app's settings. If nece
 
 #### Too many active profiling sessions
 
-You can enable Profiler on a maximum of four Web Apps that are running in the same service plan. If you've more than four, Profiler might throw the following error:
+You can enable Profiler on a maximum of four Web Apps that are running in the same service plan. If you have more than four, Profiler might throw the following error:
 
 > Microsoft.ServiceProfiler.Exceptions.TooManyETWSessionException
 
@@ -140,7 +139,7 @@ If you're redeploying your web app to a Web Apps resource with Profiler enabled,
 
 > Directory Not Empty 'D:\\home\\site\\wwwroot\\App_Data\\jobs'
 
-This error occurs if you run Web Deploy from scripts or from the Azure Pipelines. Resolve by adding the following deployment parameters to the Web Deploy task:
+This error occurs if you run Web Deploy from scripts or Azure Pipelines. Resolve by adding the following deployment parameters to the Web Deploy task:
 
 `-skip:Directory='.*\\App_Data\\jobs\\continuous\\ApplicationInsightsProfiler.*' -skip:skipAction=Delete,objectname='dirPath',absolutepath='.*\\App_Data\\jobs\\continuous$' -skip:skipAction=Delete,objectname='dirPath',absolutepath='.*\\App_Data\\jobs$'  -skip:skipAction=Delete,objectname='dirPath',absolutepath='.*\\App_Data$'`
 
@@ -176,7 +175,7 @@ To check the settings that were used to configure Azure Diagnostics, follow thes
 
 1. In the file, search for the string `WadCfg` to find the settings that were passed to the VM to configure Azure Diagnostics.
 
-1. Check to see whether the iKey used by the Profiler sink is correct.
+1. Check whether the iKey used by the Profiler sink is correct.
 
 1. Check the command line that's used to start Profiler. The arguments that are used to launch Profiler are in the following file (the drive could be `C:` or `D:` and the directory may be hidden):
 
@@ -188,7 +187,7 @@ To check the settings that were used to configure Azure Diagnostics, follow thes
 
         *D:\ProgramData\ApplicationInsightsProfiler\config.json*
 
-1. Make sure that the iKey on the Profiler command line is correct.
+1. Make sure the iKey on the Profiler command line is correct.
 
 1. Using the path found in the preceding *config.json* file, check the Profiler log file, called *BootstrapN.log*. It displays the following information:
    - The debug information that indicates the settings that Profiler is using.
