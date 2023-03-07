@@ -65,7 +65,7 @@ Changes should show up within a few hours of the app restart. If your changes st
 
 Often, this error message includes the following text:
 
-> Azure Lighthouse subscription is not supported, the changes are only available in the subscription's home tenant
+> Azure Lighthouse subscription is not supported, the changes are only available in the subscription's home tenant.
 
 Azure Lighthouse allows for cross-tenant resource administration. However, cross-tenant support needs to be built for each resource provider. Currently, Change Analysis hasn't built this support. If you're signed in to one tenant, you can't query for resource or subscription changes whose home is in another tenant.
 
