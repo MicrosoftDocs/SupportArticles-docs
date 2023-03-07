@@ -8,7 +8,6 @@ ms.reviewer: nigreenf
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-extensions-add-ons
 ms.date: 11/4/2022
-ms.custom: devx-track-azurecli
 ---
 
 # Troubleshoot Dapr extension installation errors
