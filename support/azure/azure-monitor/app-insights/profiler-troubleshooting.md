@@ -41,7 +41,7 @@ If the data you're trying to view is older than a couple of weeks, try limiting 
 
 ## Make sure you can access the gateway
 
-Check that proxies or a firewall aren't blocking your access to `https://gateway.azureserviceprofiler.net`.
+Check that proxies or a firewall isn't blocking your access to `https://gateway.azureserviceprofiler.net`.
 
 ## Make sure the Profiler is running
 
