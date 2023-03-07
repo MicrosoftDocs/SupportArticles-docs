@@ -13,11 +13,11 @@ ms.subservice: application-insights
 
 This article provides troubleshooting steps and information for using Azure Application Insights Profiler.
 
-## Make sure you're using the appropriate Profiler Endpoint
+## Make sure you're using the appropriate Profiler endpoint
 
 Currently, the only regions that require endpoint modifications are [Azure Government](/azure/azure-government/compare-azure-government-global-azure#application-insights) and [Azure China](/azure/china/resources-developer-guide).
 
-|App Setting    | US Government Cloud | China Cloud |
+|App setting    | US Government Cloud | China Cloud |
 |---------------|---------------------|-------------|
 |ApplicationInsightsProfilerEndpoint         | `https://profiler.monitor.azure.us`    | `https://profiler.monitor.azure.cn` |
 |ApplicationInsightsEndpoint | `https://dc.applicationinsights.us` | `https://dc.applicationinsights.azure.cn` |
