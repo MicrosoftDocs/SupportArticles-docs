@@ -2,10 +2,10 @@
 title: Use Azure custom routes to enable KMS activation with forced tunneling
 description: Shows how to use Azure custom routes to enable KMS activation when using forced tunneling in Azure.
 services: virtual-machines, azure-resource-manager
-documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: top-support-issue, azure-resource-manager
+ms.custom: devx-track-azurepowershell
 ms.service: virtual-machines
 ms.subservice: vm-windows-activation
 ms.collection: windows
