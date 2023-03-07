@@ -62,7 +62,7 @@ An attempt to proffer a brokered service will throw an exception if any of these
 
 The result of a call to <xref:Microsoft.VisualStudio.Shell.ServiceBroker.IBrokeredServiceContainer.Proffer%2A?displayProperty=nameWithType> is an <xref:System.IDisposable>. A brokered service becomes unavailable to new requests after this value is disposed. When your brokered service has specific affinity to some context such as an open solution, it may be appropriate to only proffer the brokered service when that context is active. It isn't necessary to retain and dispose of this value when your package is disposed.
 
-## Issues when tracing RPC between client and service
+## Tracing RPC between client and service
 
 Once a connection between client and service is established, tracing their communication can be useful, particularly when they are in different processes.
 

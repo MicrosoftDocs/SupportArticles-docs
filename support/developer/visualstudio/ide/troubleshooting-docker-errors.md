@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Docker client errors on Windows | Microsoft Docs
+title: Troubleshoot Docker client errors on Windows
 description: Troubleshoot problems you encounter when using Visual Studio to create and deploy web apps to Docker on Windows by using Visual Studio.
 ms.devlang: dotnet
 ms.date: 10/12/2022
@@ -15,7 +15,7 @@ When you're working with Visual Studio Container Tools, you may encounter issues
 
 ## Volume sharing is not enabled. Enable volume sharing in the Docker CE for Windows settings (Linux containers only)
 
-File sharing only needs to be managed if you are using Hyper-V with Docker. If you are using WSL 2, the following steps are not necessary and the file sharing option will not be visible. To resolve this issue:
+File sharing only needs to be managed if you're using Hyper-V with Docker. If you're using WSL 2, the following steps aren't necessary, and the file sharing option won't be visible. To resolve this issue:
 
 1. Right-click **Docker for Windows** in the notification area, and then select **Settings**.
 1. Select **Resources** > **File Sharing** and share the folder that needs to be accessed. Sharing your entire system drive is possible but not recommended.
@@ -78,11 +78,11 @@ By default, Docker stores images in the *%ProgramData%/Docker/* folder, which is
 
   ![Screenshot of Docker File Sharing](media/troubleshooting-docker-errors/docker-daemon-settings.png)
 
-Click **Apply & Restart**. These steps modify the configuration file at *%ProgramData%\docker\config\daemon.json*. Previously built images are not moved.
+Select **Apply & Restart**. These steps modify the configuration file at *%ProgramData%\docker\config\daemon.json*. Previously built images aren't moved.
 
 ## Container type mismatch
 
-When adding Docker support to a project, you choose either a Windows or a Linux container. If the Docker Server host is not configured to run the same container type as the project target, you see an error similar to:
+When adding Docker support to a project, you choose either a Windows or a Linux container. If the Docker Server host isn't configured to run the same container type as the project target, you see an error similar to:
 
   ![Screenshot of Docker Host and Project Mismatch](media/troubleshooting-docker-errors/docker-host-config-change-linux-to-windows.png)
 
