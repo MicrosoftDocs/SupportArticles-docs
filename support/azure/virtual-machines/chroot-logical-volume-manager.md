@@ -16,7 +16,7 @@ ms.date: 03/06/2023
 ms.author: divargas
 ---
 
-# Troubleshooting a Linux VM when there's no access to the Azure serial console and the disk layout is using LVM (Logical Volume Manager)
+# Troubleshooting a Linux VM not booting up when there's no access to the Azure serial console and the disk layout is using LVM (Logical Volume Manager)
 
 This troubleshooting guide is of benefit for scenarios where a Linux VM isn't booting and connect to the virtual machine using SSH isn't possible. Also, the Azure serial console access is unavailable, and the underlying file system layout is configured with Logical Volume Manager (LVM).
 
@@ -39,6 +39,12 @@ You also need to create a temporary virtual machine to be used for the recovery 
 2. Connect to the repair/rescue VM and mount the copy of the OS file systems in the repair VM by using [chroot](chroot-environment-linux.md).
 
     * When executing commands in a **chroot** environment, note they're executed against the attached OS Disk and not the local **rescue/repair** VM.
+3. <a id="exit-chroot-and-swap-the-os-disk"></a>Once the troubleshooting is complete, perform the following actions:
+
+    1. Exit chroot.
+    2. Unmount the copy of the file systems from the rescue/repair VM.
+    3. Run the `az vm repair restore` command to swap the repaired OS disk with the original OS disk of the VM. For more information, see Step 5 in [Repair a Linux VM by using the Azure Virtual Machine repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
+    4. Validate if the VM is able to boot up by taking a look at the Azure serial console or by trying to connect to the VM.
 
 ## Enable Serial Console
 
