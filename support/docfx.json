@@ -162,6 +162,7 @@
         "developer/webapps/aspnetcore/**/*.md": "aspnet-core",
         "developer/webapps/iis/**/*.md": "iis",
         "sql/**/*.md": "sql",
+        "sql/analysis-services/**/*.md": "",
         "developer/host-integration-server/**/*.md": "host-integration-server",
         "developer/visualstudio/**/*.md": "visual-studio-family",
         "developer/visualstudio/cpp/**/*.md": "visual-cpp",
@@ -268,7 +269,6 @@
         "system-center/vmm/**/*.md": "virtual-machine-manager",
         "microsoft-identity-manager/*.md": "",
         "sql/admin/**/*.md": "sql-engine-admin-management",
-        "sql/analysis-services/**/*.md": "sql-analysis-services",
         "sql/analytics-platform-system/**/*.md": "sql-pdw-aps",
         "sql/availability-groups/**/*.md": "sql-engine-hadr",
         "sql/azure-sql/**/*.md": "sql-azure-vm",
@@ -305,7 +305,8 @@
         "dynamics-365/finance/**/**.*": "dynamics-365-finance",
         "dynamics-365/supply-chain/**/**.*": "dynamics-365-supply-chain",
         "mem/intune/**/*.md": "microsoft-intune",
-        "power-platform/ai-builder/*.md": "aibuilder"
+        "power-platform/ai-builder/*.md": "aibuilder",
+        "sql/analysis-services/**/*.md": "analysis-services"
       },
       "ms.subservice": {
         "dynamics-365/customer-insights/administration/**.*": "d365-ci-administration",
