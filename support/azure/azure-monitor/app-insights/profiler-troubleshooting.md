@@ -22,20 +22,20 @@ Currently, the only regions that require endpoint modifications are [Azure Gover
 |ApplicationInsightsProfilerEndpoint         | `https://profiler.monitor.azure.us`    | `https://profiler.monitor.azure.cn` |
 |ApplicationInsightsEndpoint | `https://dc.applicationinsights.us` | `https://dc.applicationinsights.azure.cn` |
 
-## Make sure your app runs on the right versions
+## Make sure your app runs on right version
 
 Profiler is supported on the [.NET Framework later than version 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework).
 
 If your web app is an ASP.NET Core application, it must be run on the [latest supported ASP.NET Core runtime](https://dotnet.microsoft.com/download/dotnet/6.0).
 
-## Make sure you use the right Azure service plan
+## Make sure you use right Azure service plan
 
 Profiler isn't currently supported on free or shared app service plans. Upgrade to one of the basic plans for Profiler to start working.
 
 > [!NOTE]
 > The Azure Functions consumption plan isn't supported. For more information, see [Profile live Azure Functions app with Application Insights](/azure/azure-monitor/profiler/profiler-azure-functions).
 
-## Make sure you search for Profiler data within the right timeframe
+## Make sure you search for Profiler data within right timeframe
 
 If the data you try to view is older than a couple of weeks, try limiting your time filter and try again. Traces are deleted after seven days.
 
@@ -45,17 +45,17 @@ Check that proxies or a firewall isn't blocking your access to `https://gateway.
 
 ## Make sure the Profiler is running
 
-Profiling data is uploaded only when it can be attached to a request that happened while Profiler was running. The Profiler collects data for two minutes each hour. You can also trigger the Profiler by [starting a profiling session](/azure/azure-monitor/profiler/profiler-settings#profile-now).
+Profiling data is uploaded only when it can be attached to a request that happens while Profiler is running. The Profiler collects data for two minutes each hour. You can also trigger the Profiler by [starting a profiling session](/azure/azure-monitor/profiler/profiler-settings#profile-now).
 
 Profiler writes trace messages and custom events to your Application Insights resource. You can use these events to see how Profiler is running.
 
-To search for trace messages and custom events sent by Profiler to your Application Insights resource, follow these steps:
+To search for trace messages and custom events that Profiler sends to your Application Insights resource, follow these steps:
 
 1. In your Application Insights resource, select **Search** from the top menu bar.
 
    :::image type="content" source="media/profiler-troubleshooting/search-trace-messages.png" alt-text="Screenshot of selecting the search button from the Application Insights resource.":::
 
-1. Use the search string `stopprofiler OR startprofiler OR upload OR ServiceProfilerSample` to find the relevant data:
+1. Use the search string `stopprofiler OR startprofiler OR upload OR ServiceProfilerSample` to find the relevant data.
 
    :::image type="content" source="media/profiler-troubleshooting/search-results.png" alt-text="Screenshot of the search results from the aforementioned search string.":::
 
@@ -71,7 +71,7 @@ To search for trace messages and custom events sent by Profiler to your Applicat
 
 When two or more parallel threads are associated with a request, the total time metric in the stack viewer may be more than the duration of the request. In that case, the total thread time is more than the actual elapsed time.
 
-For example, one thread might be waiting on the other to be completed. The viewer tries to detect this situation and omits this wait. In this case, it may display excessive information instead of ignoring potentially critical information
+For example, one thread might be waiting on the other to be completed. The viewer tries to detect this situation and omits this wait. In this case, it may display excessive information instead of ignoring potentially critical information.
 
 When you see parallel threads in your traces, determine which threads are waiting so that you can identify the hot path for the request. Usually, the thread that quickly goes into a wait state is simply waiting on the other threads. Concentrate on the other threads, and ignore the time in the waiting threads.
 
@@ -85,15 +85,15 @@ For Profiler to work properly, make sure the following things:
 
 - The ApplicationInsightsProfiler3 webjob is running. To check the webjob, follow these steps:
 
-   1. Go to [Kudu](https://github.com/projectkudu/kudu/wiki/Accessing-the-kudu-service). From the Azure portal, perform the following actions:
-      1. In your App Service, select **Advanced Tools** from the left side menu.
-      1. Select **Go**.
+   1. [Access the Kudu service](https://github.com/projectkudu/kudu/wiki/Accessing-the-kudu-service).
+
+        In the Azure portal, go to your App Service. Select **Advanced Tools** from the left side menu and then select **Go**.
+
    1. In the top menu, select **Tools** > **WebJobs dashboard**. The **WebJobs** pane opens.
 
       :::image type="content" source="media/profiler-troubleshooting/profiler-web-job.png" alt-text="Screenshot of the WebJobs pane, which displays the name, status, and last run time of jobs.":::
 
-   1. To view the details of the webjob, including the log, select the **ApplicationInsightsProfiler3** link.  
-     The **Continuous WebJob Details** pane opens.
+   1. To view the details of the webjob, including the log, select the **ApplicationInsightsProfiler3** link. The **Continuous WebJob Details** pane opens.
 
       :::image type="content" source="media/profiler-troubleshooting/profiler-web-job-log.png" alt-text="Screenshot of the Continuous WebJob Details pane.":::
 
@@ -101,16 +101,16 @@ If Profiler still isn't working for you, you can download the log and [submit an
 
 #### Check the Diagnostic Services site extension's status page
 
-If Profiler is enabled through the [Application Insights pane](/azure/azure-monitor/profiler/profiler) in the portal, it is enabled by the Diagnostic Services site extension. You can check the status page of this extension by going to the URL `https://<site-name>.scm.azurewebsites.net/DiagnosticServices`.
+If Profiler is enabled through the [Application Insights pane](/azure/azure-monitor/profiler/profiler) in the Azure portal, it is enabled by the Diagnostic Services site extension. You can check the status page of this extension by going to the URL `https://<site-name>.scm.azurewebsites.net/DiagnosticServices`.
 
 > [!NOTE]
 > The domain of the status page link will vary depending on the cloud. This domain will be the same as the Kudu management site for App Service.
 
 The status page shows the installation state of the Profiler and [Snapshot Debugger](/azure/azure-monitor/snapshot-debugger/snapshot-debugger) agents. If there's an unexpected error, the status page will be displayed and show how to fix the error.
 
-You can use the Kudu management site for App Service to get the base URL of this status page:
+You can use the Kudu management site for App Service to get the base URL of this status page. To do this, follow these steps:
 
-1. Open your App Service application in the Azure portal.
+1. Open your App Service application from the Azure portal.
 2. Select **Advanced Tools** > **Go**.
 3. Once on the Kudu management site, append `/DiagnosticServices` to the URL and press <kbd>Enter</kbd>.
 
@@ -141,13 +141,18 @@ If you redeploy your web app to a Web Apps resource with Profiler enabled, you m
 
 This error occurs if you run Web Deploy from scripts or Azure Pipelines. To resolve this issue, add the following deployment parameters to the Web Deploy task:
 
-`-skip:Directory='.*\\App_Data\\jobs\\continuous\\ApplicationInsightsProfiler.*' -skip:skipAction=Delete,objectname='dirPath',absolutepath='.*\\App_Data\\jobs\\continuous$' -skip:skipAction=Delete,objectname='dirPath',absolutepath='.*\\App_Data\\jobs$'  -skip:skipAction=Delete,objectname='dirPath',absolutepath='.*\\App_Data$'`
+- `-skip:Directory='.*\\App_Data\\jobs\\continuous\\ApplicationInsightsProfiler.*'`
+- `-skip:skipAction=Delete,objectname='dirPath',absolutepath='.*\\App_Data\\jobs\\continuous$'`
+
+- `-skip:skipAction=Delete,objectname='dirPath',absolutepath='.*\\App_Data\\jobs$'`
+
+- `-skip:skipAction=Delete,objectname='dirPath',absolutepath='.*\\App_Data$'`
 
 These parameters delete the folder used by Application Insights Profiler and unblock the redeploy process. They don't affect the Profiler instance that's currently running.
 
 #### Is the Profiler running?
 
-Profiler runs as a continuous webjob in the web app. You can open the web app resource in the [Azure portal](https://portal.azure.com). In the **WebJobs** pane, check the status of ApplicationInsightsProfiler. If it isn't running, open **Logs** to get more information.
+Profiler runs as a continuous webjob in the web app. You can open the web app resource in the Azure portal. In the **WebJobs** pane, check the status of ApplicationInsightsProfiler. If it isn't running, open **Logs** to get more information.
 
 ### Virtual machines and Cloud Services
 
@@ -161,7 +166,7 @@ To see whether Profiler is configured correctly by Azure Diagnostics, follow the
 
 To check the settings that is used to configure Azure Diagnostics, follow these steps:
 
-1. Sign in to the virtual machine (VM).
+1. Sign in to the virtual machine.
 
 1. Open the log file at this location. The plugin version may be newer on your machine.
 
@@ -177,7 +182,7 @@ To check the settings that is used to configure Azure Diagnostics, follow these 
 
 1. Check whether the `iKey` used by the Profiler is correct.
 
-1. Check the command line that's used to start Profiler. The arguments that are used to launch Profiler are in the following file (the drive could be `C:` or `D:` and the directory may be hidden):
+1. Check the command line that's used to start Profiler. The arguments that are used to launch Profiler are in the following file (the drive could be `C` or `D` and the directory may be hidden):
 
     - For VMs:
 
