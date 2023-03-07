@@ -15,6 +15,8 @@
           href: ../authentication/looking-for-credential-tiles-message.md
         - name: O365 credential prompts with AuthenticationService value
           href: ../authentication/o365-credential-prompts-with-authenticationservice.md
+        - name: Outlook doesn't connect when using Modern authentication
+          href: /exchange/troubleshoot/administration/outlook-does-not-connect-with-modern-authentication?context=/outlook/troubleshoot/context/client-context
         - name: Outlook prompts for credentials
           href: ../authentication/outlook-prompts-credentials.md
         - name: Outlook asks for password repeatedly when using MAPI over HTTP

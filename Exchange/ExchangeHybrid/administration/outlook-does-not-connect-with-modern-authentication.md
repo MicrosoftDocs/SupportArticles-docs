@@ -7,8 +7,6 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.service: exchange-online
-ms.subservice: hybrid-configuration-wizard
 ms.custom: 
   - Exchange Hybrid
   - CSSTroubleshoot
