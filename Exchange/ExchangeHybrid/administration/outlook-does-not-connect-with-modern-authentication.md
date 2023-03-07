@@ -97,7 +97,7 @@ Add the missing Autodiscover resource principle to the SPN list in the Azure AD 
    > You can check the list of SPNs in Azure AD by running the following command:
    >
    > ```powershell
-   > Get-MsolServicePrincipal -AppPrincipalId 00000002-0000-0ff1-ce00-000000000000 | select -ExpandProperty ServicePrincipalNames`
+   > Get-MsolServicePrincipal -AppPrincipalId 00000002-0000-0ff1-ce00-000000000000 | select -ExpandProperty ServicePrincipalNames
    > ```
 
 To verify that the on-premises Exchange Server and Exchange Online endpoints can [successfully authenticate requests](/exchange/configure-oauth-authentication-between-exchange-and-exchange-online-organizations-exchange-2013-help#how-do-you-know-this-worked) from each other, use the [Test-OAuthConnectivity](/powershell/module/exchange/Test-OAuthConnectivity) cmdlet.
