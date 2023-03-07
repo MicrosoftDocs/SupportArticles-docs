@@ -16,7 +16,7 @@ When you use server-side synchronization with Microsoft Dynamics 365 and Microso
 
 ## Cause
 
-If a Safe Attachments policy in Microsoft Defender for Office 365 is configured with the **Dynamic Delivery** action, and an email is received in the user's inbox with an attachment, two emails with the same email message ID will exist. The user will receive the first one without the original attachment while the Safe Attachments policy is scanning the attachments. The second email will replace the first one after the scanning completes.
+If a Safe Attachments policy in Microsoft Defender for Office 365 is configured with the **Dynamic Delivery** action, and an email is received in the user's inbox with an attachment, two emails with the same email message ID will exist. The user will receive the first one without the original attachment while Safe Attachments is scanning the attachments. The second email will replace the first one after the scanning completes.
 
 The server-side synchronization feature will only track emails with the same message ID once to avoid duplication. If the second email doesn't get to Exchange before the sync cycle starts from Microsoft Dynamics 365, the original attachment may not be tracked to the system.
 
