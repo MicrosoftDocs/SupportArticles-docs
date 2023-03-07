@@ -111,7 +111,7 @@ The status page shows the installation state of the Profiler and [Snapshot Debug
 You can use the Kudu management site for App Service to get the base URL of this status page:
 
 1. Open your App Service application in the Azure portal.
-2. Select **Advanced Tools** and then select **Go**.
+2. Select **Advanced Tools** > **Go**.
 3. Once on the Kudu management site, append `/DiagnosticServices` to the URL and press <kbd>Enter</kbd>.
 
     It will end like this: `https://<kudu-url>/DiagnosticServices`. It will display a status page similar to the following:
