@@ -164,7 +164,7 @@ During this validation, make sure the following things:
 
 ### <a id="dracut-grub-misconf-wrong-swap"></a>Wrong swap device path in GRUB configuration file
 
-In this scenario, A VM fails to complete the boot process and drops into the **dracut** emergency shell with an error similar to the following:
+In this scenario, A VM fails to complete the boot process and enters the **dracut** emergency shell with an error similar to the following:
 
 ```output
 [  188.000765] dracut-initqueue[324]: Warning: /dev/VG/SwapVol does not exist
@@ -172,22 +172,22 @@ In this scenario, A VM fails to complete the boot process and drops into the **d
 Warning: /dev/VG/SwapVol does not exist
 ```
 
-The GRUB configuration file in this example is set to load a Logical Volume (LV) as swap with the parameter of `rd.lvm.lv=VG/SwapVol` and the VM is unable to locate it.
+The GRUB configuration file in this example is set to load a Logical Volume (LV) as swap with the parameter `rd.lvm.lv=VG/SwapVol`. However, the VM is unable to locate  this LV during the boot process.
 
-As a first step, keep in consideration it's not recommended to use a swap device like this one in Azure Linux virtual machines. For more information about the proper swap configuration for Linux in Azure, see [Create a SWAP file for an Azure Linux VM](/troubleshoot/azure/virtual-machines/create-swap-file-linux-vm).
+It's important to note that using a swap device in this way in Azure Linux VMs is not recommended. For more information, see [Create a SWAP file for an Azure Linux VM](/troubleshoot/azure/virtual-machines/create-swap-file-linux-vm).
 
-To resolve this issue, look for the swap path `rd.lvm.lv=VG/SwapVol` in the GRUB configuration file (`/etc/default/grub`) and remove it.
+To resolve this issue, locate the swap path `rd.lvm.lv=VG/SwapVol` in the GRUB configuration file (`/etc/default/grub`) and remove it.
 
-* If you're inside chroot in a repair/rescue VM:
+* If you're using a repair/rescue VM and are inside chroot:
     1. Follow step 1 in [Offline troubleshooting](#offline-troubleshooting).
-    2. Edit the `/etc/default/grub` file, go to the `GRUB_CMDLINE_LINUX` entry, and look for the `rd.lvm.lv=VG/SwapVol`, and remove it from the configuration.
+    2. Edit the `/etc/default/grub` file, go to the `GRUB_CMDLINE_LINUX` entry, and locate the `rd.lvm.lv=VG/SwapVol` parameter, and remove it from the configuration.
     3. [Reinstall GRUB and regenerate GRUB configuration file](troubleshoot-vm-boot-error.md#reinstall-grub-regenerate-grub-configuration-file).
 
-* If you're in the Azure serial console:
+* If you're using the Azure Serial Console:
     1. Follow step 3 in [Online troubleshooting](#online-troubleshooting).
     2. Go to the line starting with `linux`, and then look for the `rd.lvm.lv=VG/SwapVol` parameter and remove it.
-    3. Select <kbd>Ctrl</kbd>+<kbd>X</kbd> to boot the VM.
-    4. Once the VM successfully boots, modify the `/etc/default/grub` file, remove the `rd.lvm.lv=VG/SwapVol` parameter, and update the GRUB configuration file, as instructed in [Reinstall GRUB and regenerate GRUB configuration file](troubleshoot-vm-boot-error.md#reinstall-grub-regenerate-grub-configuration-file).
+    3. Select `<kbd>Ctrl</kbd>+<kbd>X</kbd>` to boot the VM.
+    4. Once the VM successfully boots, modify the `/etc/default/grub` file, remove the `rd.lvm.lv=VG/SwapVol` parameter, and update the GRUB configuration file, as instructed in [Reinstall GRUB and regenerate GRUB configuration file](troubleshoot-vm-boot-error.md#reinstall-grub-regenerate-grub-configuration-file) section.
 
 ### <a id="dracut-grub-misconf-dup-params"></a>Duplicated parameters in GRUB configuration file
 
