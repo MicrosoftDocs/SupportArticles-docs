@@ -178,16 +178,16 @@ It's important to note that using a swap device in this way in Azure Linux VMs i
 
 To resolve this issue, locate the swap path `rd.lvm.lv=VG/SwapVol` in the GRUB configuration file (`/etc/default/grub`) and remove it. To do this, use one of the following methods:
 
-**Using a repair/rescue VM with chroot**
-1. Follow step 1 in [Offline troubleshooting](#offline-troubleshooting).
-2. Edit the `/etc/default/grub` file, go to the `GRUB_CMDLINE_LINUX` entry, and locate the `rd.lvm.lv=VG/SwapVol` parameter, and remove it from the configuration.
-3. [Reinstall GRUB and regenerate GRUB configuration file](troubleshoot-vm-boot-error.md#reinstall-grub-regenerate-grub-configuration-file).
+* If you're inside chroot in a repair/rescue VM:
+    1. Follow step 1 in [Offline troubleshooting](#offline-troubleshooting).
+    2. Edit the `/etc/default/grub` file, go to the `GRUB_CMDLINE_LINUX` entry, locate the `rd.lvm.lv=VG/SwapVol` parameter, and then remove it from the configuration.
+    3. [Reinstall GRUB and regenerate GRUB configuration file](troubleshoot-vm-boot-error.md#reinstall-grub-regenerate-grub-configuration-file).
 
-**Using Azure Serial Console**
-1. Follow step 3 in [Online troubleshooting](#online-troubleshooting).
-2. Go to the line starting with `linux`, and then look for the `rd.lvm.lv=VG/SwapVol` parameter and remove it.
-3. Select `<kbd>Ctrl</kbd>+<kbd>X</kbd>` to boot the VM.
-4. Once the VM successfully boots, modify the `/etc/default/grub` file, remove the `rd.lvm.lv=VG/SwapVol` parameter, and update the GRUB configuration file, as instructed in [Reinstall GRUB and regenerate GRUB configuration file](troubleshoot-vm-boot-error.md#reinstall-grub-regenerate-grub-configuration-file) section.
+* If you're in the Azure serial console:
+    1. Follow step 3 in [Online troubleshooting](#online-troubleshooting).
+    2. Go to the line starting with `linux`, locate the `rd.lvm.lv=VG/SwapVol` parameter and remove it.
+    3. Select `<kbd>Ctrl</kbd>+<kbd>X</kbd>` to boot the VM.
+    4. Once the VM successfully boots, modify the `/etc/default/grub` file, remove the `rd.lvm.lv=VG/SwapVol` parameter, and then update the GRUB configuration file, as instructed in [Reinstall GRUB and regenerate GRUB configuration file](troubleshoot-vm-boot-error.md#reinstall-grub-regenerate-grub-configuration-file) section.
 
 ### <a id="dracut-grub-misconf-dup-params"></a>Duplicated parameters in GRUB configuration file
 
