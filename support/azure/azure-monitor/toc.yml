@@ -41,7 +41,7 @@ items:
       href: app-insights/usage-troubleshoot.md
   - name: Status Monitor and Change Analysis
     items:
-    - name: Troubleshoot Azure Monitor's Change Analysis (preview)
+    - name: Troubleshoot Azure Monitor's Change Analysis
       href: app-insights/change-analysis-troubleshoot.md    
     - name: Troubleshoot Azure Application Insights Agent (formerly Status Monitor v2)
       href: app-insights/status-monitor-v2-troubleshoot.md
