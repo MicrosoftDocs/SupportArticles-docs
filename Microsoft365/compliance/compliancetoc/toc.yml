@@ -105,6 +105,8 @@
       href: ../retention/managed-folders-disappear.md
     - name: MRM and retention policies
       href: ../retention/mrm-and-retention-policy.md
+    - name: Resolve email archive and deletion issues with MRM
+      href: ../retention/troubleshoot-mrm-email-archive-deletion.md
   - name: Microsoft Purview Message Encryption
     items:
     - name: Can't display message
