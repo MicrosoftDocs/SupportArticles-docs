@@ -40,11 +40,11 @@ items:
     - name: Troubleshoot user behavior analytics tools in Azure Application Insights
       href: app-insights/usage-troubleshoot.md
   - name: Status Monitor and Change Analysis
-    items:
-    - name: Troubleshoot Azure Monitor's Change Analysis
-      href: app-insights/change-analysis-troubleshoot.md    
+    items:   
     - name: Troubleshoot Azure Application Insights Agent (formerly Status Monitor v2)
       href: app-insights/status-monitor-v2-troubleshoot.md
+    - name: Troubleshoot Azure Monitor's Change Analysis
+      href: app-insights/change-analysis-troubleshoot.md 
   - name: Snapshot Debugger troubleshooting
     href: app-insights/snapshot-debugger-troubleshoot.md
 

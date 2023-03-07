@@ -15,7 +15,7 @@ This article provides troubleshooting information for Azure Monitor's Change Ana
 
 ## Trouble registering Microsoft.ChangeAnalysis resource provider from the Change history tab
 
-If you're viewing Change history after its first integration with Azure Monitor's Change Analysis, you'll see it automatically registering the `Microsoft.ChangeAnalysis` resource provider. The resource may fail and incur the following error messages:
+If you're viewing the **Change history** tab after its first integration with Azure Monitor's Change Analysis, you'll see it automatically registering the `Microsoft.ChangeAnalysis` resource provider. The resource may fail and incur the following error messages:
 
 * [You don't have enough permissions to register Microsoft.ChangeAnalysis resource provider](#not-enought-permission-to-register).
 * [Failed to register Microsoft.ChangeAnalysis resource provider](#failed-to-register).
