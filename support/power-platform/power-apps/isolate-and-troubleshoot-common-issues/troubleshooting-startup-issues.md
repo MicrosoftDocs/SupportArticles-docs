@@ -169,6 +169,8 @@ These instructions are shown on the following tabs.
   1. Scroll down to **Edge**.
   1. Toggle on **Allow Cross-Website Tracking**.
 
+---
+
 ## Clear your browser cache
 
 The browser cache is stored on your device's hard drive. When you visit a website, your browser downloads certain information that allows it to load faster when you revisit the same website in the future. Some Power Apps features use the browser cache to provide a faster user experience. In some cases, you may want to clear your browser cache. Here are the instructions for different browsers:
