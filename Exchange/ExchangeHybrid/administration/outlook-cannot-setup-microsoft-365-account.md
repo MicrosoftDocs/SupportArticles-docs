@@ -29,7 +29,7 @@ Consider the following scenario:
 
 - You migrate a user's mailbox from on-premises Microsoft Exchange Server to Exchange Online.
 
-- You disable all local Autodiscover options in the **Disable Autodiscover** Group Policy settings.
+- You disable all local Autodiscover options in the **Disable AutoDiscover** Group Policy settings.
 
 - You disable the **Allow the use of connected experiences in Office** policy setting.
 
@@ -45,7 +45,7 @@ If the user views their Outlook account information in **File** \> **Office Acco
 
 ## Cause
 
-Autodiscover can use either local or cloud options to set up the user's account on an Outlook client or create a profile for the user. In your scenario, cloud Autodiscover is automatically disabled because the **Allow the use of connected experiences in Office** policy setting is disabled. Also, because all the local Autodiscover options are also disabled, your policy settings disable both the local and cloud Autodiscover options. If both the local and cloud Autodiscover options are unavailable, Outlook has no way to retrieve the user's account settings.
+Autodiscover can use either local or cloud options to set up the user's account on an Outlook client or create a profile for the user. In your scenario, cloud Autodiscover is automatically disabled because the **Allow the use of connected experiences in Office** policy setting is disabled. Also, because all the local Autodiscover options are disabled, your policy settings disable both the local and cloud Autodiscover options. If both the local and cloud Autodiscover options are unavailable, Outlook has no way to retrieve the user's account settings.
 
 The following table lists the local and cloud Autodiscover options in the **Disable AutoDiscover** Group Policy settings.
 
