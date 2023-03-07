@@ -4,7 +4,6 @@ description: This article provides workarounds for the writeback performance pro
 ms.date: 07/22/2020
 ms.custom: sap:Analysis Services
 ms.reviewer: haidongh, heidist
-ms.prod: sql
 ---
 # Writeback performance problem when cell security is enabled in SQL Server Analysis Services
 

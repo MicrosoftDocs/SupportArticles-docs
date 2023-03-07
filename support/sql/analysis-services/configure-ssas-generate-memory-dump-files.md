@@ -5,7 +5,6 @@ ms.date: 09/25/2020
 ms.custom: sap:Analysis Services
 ms.reviewer: lisaliu
 ms.topic: how-to
-ms.prod: sql
 ---
 # Configure SQL Server Analysis Services to generate memory dump files
 

@@ -4,7 +4,6 @@ description: This article provides a resolution for the problem when a Multidime
 ms.date: 01/14/2021
 ms.reviewer: yinnw
 ms.topic: troubleshooting
-ms.prod: sql 
 ---
 # MDX queries with calculated measure using the "/" operator run slowly in SSAS
 
