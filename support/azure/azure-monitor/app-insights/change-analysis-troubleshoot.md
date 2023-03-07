@@ -17,9 +17,9 @@ This article provides troubleshooting information for Azure Monitor's Change Ana
 
 If you're viewing Change history after its first integration with Azure Monitor's Change Analysis, you'll see it automatically registering the `Microsoft.ChangeAnalysis` resource provider. The resource may fail and incur the following error messages:
 
-* [You don't have enough permissions to register Microsoft.ChangeAnalysis resource provider](#not-enought-permission-to-register)
-* [Failed to register Microsoft.ChangeAnalysis resource provider](#failed-to-register)
-* [This is taking longer than expected](#taking-longer-than-expected)
+* [You don't have enough permissions to register Microsoft.ChangeAnalysis resource provider](#not-enought-permission-to-register).
+* [Failed to register Microsoft.ChangeAnalysis resource provider](#failed-to-register).
+* [This is taking longer than expected](#taking-longer-than-expected).
 
 ### <a id="not-enought-permission-to-register"></a> "You don't have enough permissions to register Microsoft.ChangeAnalysis resource provider" error message
 
@@ -97,7 +97,7 @@ This general unauthorized error message occurs when the current user doesn't hav
 
 You may not immediately see web app in-guest file changes and configuration changes. Prepare for brief downtime and restart your web app. After that, you should be able to view changes within 30 minutes. If not, [submit an Azure support ticket](https://azure.microsoft.com/support/).
 
-## Diagnose and solve problems tool for virtual machines
+## "Diagnose and solve problems" tool for virtual machines
 
 To troubleshoot virtual machine issues by using the troubleshooting tool in the Azure portal, follow these steps:
 
