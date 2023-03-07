@@ -106,7 +106,7 @@ If Profiler was enabled through the [Application Insights pane](/azure/azure-mon
 > [!NOTE]
 > The domain of the status page link will vary depending on the cloud. This domain will be the same as the Kudu management site for App Service.
 
-The status page shows the installation state of the Profiler and [Snapshot Debugger](/azure/azure-monitor/snapshot-debugger/snapshot-debugger) agents. If there was an unexpected error, it will be displayed and show how to fix it.
+The status page shows the installation state of the Profiler and [Snapshot Debugger](/azure/azure-monitor/snapshot-debugger/snapshot-debugger) agents. If there is an unexpected error, the status page will be displayed and show how to fix the error.
 
 You can use the Kudu management site for App Service to get the base URL of this status page:
 
