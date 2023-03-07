@@ -107,8 +107,6 @@ To troubleshoot virtual machine issues by using the troubleshooting tool in the 
 
 :::image type="content" source="./media/change-analysis-troubleshoot/vm-dnsp-troubleshooting-tools.png" alt-text="Screenshot of the Diagnose and Solve Problems tool for a Virtual Machine with Troubleshooting tools selected.":::
 
-:::image type="content" source="./media/change-analysis-troubleshoot/analyze-recent-changes.png" alt-text="Screenshot of the tile for the Analyze recent changes troubleshooting tool for a virtual machine." border="false":::
-
 ## Can't filter to your resource to view changes
 
 When filtering down to a particular resource in the Change Analysis standalone page, you may encounter a known limitation that only returns 1,000 resource results. To filter through and pinpoint changes for one of your 1,000+ resources:
