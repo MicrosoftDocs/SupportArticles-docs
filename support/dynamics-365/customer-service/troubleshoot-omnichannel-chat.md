@@ -40,8 +40,10 @@ To configure ending a bot conversation, perform the following steps:
    3. In the **Enter a value to respond** box, select the **Expression** tab, and then enter **bool(true)** to build the expression, and select **OK**.
    4. Save the changes, and then exit Power Automate.
 4. In the topic that you were editing, select **Call an action** again, and then in the list, select the flow that you created. 
-5.  In **Add node**, select **End the conversation**, and then select **Transfer to agent**.
-        > ![Configure end-conversation topic.](media/end-bot-conversation.png "Configure end-conversation topic")
+5. In **Add node**, select **End the conversation**, and then select **Transfer to agent**.
+      > [!div class="mx-imgBorder"]
+      > ![!Configure end-conversation topic.](media/end-bot-conversation.png "Configure end-conversation topic")
+        
 6. Go to the topic in which you need to invoke the topic for ending the bot conversation in Omnichannel for Customer Service, and use the **Go to another topic** option in **Add a node**.
 7. Select the topic that you created for ending the bot conversation.
 8. Save and publish the changes.
