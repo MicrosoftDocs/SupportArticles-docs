@@ -13,8 +13,8 @@ This article provides guidance that will help to identify the root cause of Segm
 
 ## Prerequisites
 
-Segment refresh Status is 'Successful'.
-Last refresh date is within 28 days.
+- Segment refresh Status is 'Successful'.
+- Last refresh date is within 28 days.
 
 ## Symptoms
 
@@ -31,12 +31,22 @@ Having contradictory ANDed conditions or rules on same attribute will always gen
 To remove this possibility, analyze all the rules and conditions that would reveal such a broken logic. Of course it could be more complex where the contradiction is actually across several attributes and this would need more business knowledge of what can or cannot exists in the dataset(s) (e.g. "MyAttributeStatus = 1 AND MyAttributeStatusDescription = Inactive" when this is by nature impossible for this dataset where both attributes are functionally linked and "Status = 1" means "Active")
 
 2. Missing Data for the attribute used in Segment Rule or Condition:
-If the value of the attribute used in Segment rule or condition is missing for any reason, the segment is likely to return 0 members. This can be investigated further as:
+If the value of the attribute used in Segment rule or condition is missing for any reason, the segment is likely to return 0 members. This can be investigated further by checking if the 'expected' value actually exists in the entity:
 
-    1. Check the steps described [here](https://learn.microsoft.com/en-us/dynamics365/customer-insights/entities#explore-a-specific-entitys-data) to explore entity data/attribute values. 
+    - Check the steps described [here](https://learn.microsoft.com/en-us/dynamics365/customer-insights/entities#explore-a-specific-entitys-data) to explore entity data/attribute values. 
 If available, closely observe the 'Summary' of attributes you are interested in and ensure they are not in 'Missing' or 'Error' state. 
-Please note: 'Summary' view is not available for all system generated entities and is optional for entities ingested using 'Attach Azure Data Lake' ingestion pattern.
+Note: 'Summary' view is not available for all system generated entities and is optional for entities ingested using 'Attach Azure Data Lake' ingestion pattern.
 
-2.2 Check if the source records are not rejected for being identified as 'corrupt' as per this [link](https://learn.microsoft.com/en-us/dynamics365/customer-insights/data-sources#corrupt-data-sources).
+    - Check if the source records are not rejected for being identified as ['corrupt'](https://learn.microsoft.com/en-us/dynamics365/customer-insights/data-sources#corrupt-data-sources).
 
-2.3 If the above steps were not useful to locate/identify the 
+    - If the above steps were not useful to locate/identify an attribute in the entity to further investigate, these approaches could be used to further explore the attribute values in the data:
+    
+        - D365 Customer Insights "Entity" screen: The "data" tab can previews 1000 records, and the "Download" to .csv option would only contain 100,000 records. 
+    Note: There might be a few cases where for security and privacy reasons Customer has asked that the "Download" button is disabled and you would not even have access to this 100,000 export approach, or where your dataset is bigger.
+    
+        - Power BI connector: Use Power BI connector to explore the Customer Insights entity from Power BI. [Link](https://learn.microsoft.com/en-us/dynamics365/customer-insights/export-power-bi)
+Note: All entities, especially source entities from a "CDM-attach" data source, won't be available with this connector, and this not going to scale too good past 1 million records, so would only recommend for investigations on smaller entities.
+
+        - Export to Azure: Export the entity to either [Blob](https://learn.microsoft.com/en-us/dynamics365/customer-insights/export-azure-blob-storage)  or [ADLS gen2](https://learn.microsoft.com/en-us/dynamics365/customer-insights/export-azure-data-lake-storage-gen2)  or [Azure Synapse](https://learn.microsoft.com/en-us/dynamics365/customer-insights/export-azure-synapse-analytics), from where you can proceed to further investigations thanks to Synapse, Power BI or any other data exploration tool.
+
+        - Power Query: If the data you want to check is from a PowerQuery source entity, you can also spin a dedicated data source, or extra reference query in your existing Data source that would apply the same filtering condition (e.g. "MyAttribute = 123") and see if once refreshed the new entity corresponding to this new query is containing any data.
