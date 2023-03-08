@@ -1,6 +1,6 @@
 ---
 title: Inconsistent performance when working with contacts
-description: Describes an issue in which performance is inconsistent when working with contacts.
+description: Describes an issue in which performance is inconsistent when you work with contacts.
 author: Cloud-Writer
 ms.author: meerak
 manager: dcscontentpm
@@ -22,23 +22,23 @@ ms.date: 3/3/2023
 
 ## Symptoms
 
-When working with contacts, you might experience symptoms such as the following:
+When you work with contacts, you experience symptoms such as the following:
 
-- Calls from Microsoft Graph to perform operations against the Contacts folder may fail with a 503 or 504 error.
+- Calls from Microsoft Graph to run operations on the *Contacts* folder fail and return a "503" or "504" error message.
 
-- Mail clients might experience performance issues or stop responding when working with contacts.
+- Mail clients experience performance issues or stop responding.
 
 ## Cause
 
-We strongly recommend that you have no more than 10,000 items in your Contacts folder. This is because of the high input/output activity involved when working with contacts. Although 10,000 is not a limit that is enforced by Exchange Online, exceeding this number might cause performance issues.
+We strongly recommend that you have no more than 10,000 items in your *Contacts* folder. This is because of the high input and output activity that occurs when you work with contacts. Although the 10,000-item limit is not enforced by Exchange Online, you might experience performance issues if you exceed this number.
 
 ## Resolution
 
-You can use Microsoft Outlook to check the number of items in the Contacts folder in [Cached Exchange mode](https://support.microsoft.com/office/7885af08-9a60-4ec3-850a-e221c1ed0c1c). If it exceeds 10,000, delete some contacts to help mitigate the performance issues.
+Use Microsoft Outlook to check the number of items in the *Contacts* folder in [Cached Exchange mode](https://support.microsoft.com/office/7885af08-9a60-4ec3-850a-e221c1ed0c1c). If the amount exceeds 10,000, delete some contacts to help mitigate performance issues.
 
-1. To determine the number of items in the Contacts folder, follow these steps:
+1. To determine the number of items in the *Contacts* folder, follow these steps:
 
-    1. Open the People pane in Outlook, then right-click **Contacts**.
+    1. Open the **People** pane in Outlook, then right-click **Contacts**.
 
     1. Select **Properties**.
 
@@ -48,4 +48,4 @@ You can use Microsoft Outlook to check the number of items in the Contacts folde
 
     The number of items in the folder is displayed in the **Statistics for this folder** section.
 
-1. To delete contacts, use either Outlook or Outlook on the Web. If you receive an error when attempting to delete multiple contacts at one time, select fewer contacts and try again.
+1. To delete contacts, use either Outlook or Outlook on the web. If you receive an error message when you try to delete multiple contacts simultaneously, select fewer contacts, and then try again.
