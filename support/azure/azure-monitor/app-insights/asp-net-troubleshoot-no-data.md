@@ -22,7 +22,7 @@ This article provides troubleshooting information to help resolve issues when da
 
 ## Some of my telemetry is missing
 
-Some example scenarios:
+Example scenarios:
 
 #### In Application Insights, I see only a fraction of the events that my app generates
 
@@ -54,7 +54,7 @@ Internet Information Services (IIS) logs counts of all requests that reach IIS a
 
 ## No data from my server
 
-Some example scenarios:
+Example scenarios:
 
 #### I installed my app on my web server and now I don't see any telemetry from it. It worked OK on my dev machine.
 
@@ -122,7 +122,7 @@ Failure to upgrade properly might lead to unexpected exceptions or telemetry not
 
 ## No "Add Application Insights" option in Visual Studio
 
-An example scenario:
+Example scenario:
 
 #### When I right-click an existing project in Solution Explorer, I don't see any Application Insights options
 
@@ -133,7 +133,7 @@ An example scenario:
 
 ## Adding Application Insights failed
 
-An example scenario:
+Example scenario:
 
 #### When I try to add Application Insights to an existing project, I see an error message
 
@@ -151,7 +151,7 @@ Fix:
 
 ## "NuGet packages are missing" on my build server
 
-An example scenario:
+Example scenario:
 
 #### Everything builds OK when I'm debugging on my development machine, but I get a NuGet error on the build server
 
@@ -160,7 +160,7 @@ and [Automatic Package Restore](/nuget/consume-packages/package-restore#migrate-
 
 ## Missing menu command to open Application Insights from Visual Studio
 
-An example scenario:
+Example scenario:
 
 #### When I right-click my project Solution Explorer, I don't see any Application Insights commands, or I don't see an Open Application Insights command
 
@@ -181,7 +181,7 @@ Otherwise, your project type isn't directly supported by the Developer Analytics
 
 ## "Access denied" on opening Application Insights from Visual Studio
 
-An example scenario:
+Example scenario:
 
 #### The "Open Application Insights" menu command takes me to the Azure portal, but I get an "access denied" error
 
@@ -194,7 +194,7 @@ The Microsoft sign-in that you last used on your default browser doesn't have ac
 
 ## "Asset not found" on opening Application Insights from Visual Studio
 
-An example scenario:
+Example scenario:
 
 #### The "Open Application Insights" menu command takes me to the Azure portal, but I get an "asset not found" error
 
@@ -212,7 +212,7 @@ Apply one of the following fixes:
 
 ## Where do I find my telemetry?
 
-An example scenario:
+Example scenario:
 
 #### I signed in to the Azure portal, and I'm looking at the Azure home dashboard. So where do I find my Application Insights data?
 
@@ -221,7 +221,7 @@ An example scenario:
 
 ## No server data (or no data at all)
 
-An example scenario:
+Example scenario:
 
 #### I ran my app and then opened the Application Insights service in Microsoft Azure, but all the charts show "Learn how to collect," "Not configured," or only page view and user data, but no server data
 
@@ -245,7 +245,7 @@ An example scenario:
 
 ## No data on page views, browsers, and usage
 
-An example scenario:
+Example scenario:
 
 #### I see data in server response time and server requests charts, but no data in page view load time, or in the Browser or Usage panes
 
