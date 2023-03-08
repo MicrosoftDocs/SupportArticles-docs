@@ -21,21 +21,21 @@ ms.date: 3/8/2023
 
 Users in your organization experience one or more of the following issues:
 
-- They can't open encrypted emails in Microsoft Outlook and Outlook on the web.
-- They can't send encrypted emails.
+- They can't open encrypted email messages in Microsoft Outlook or Outlook on the web.
+- They can't send encrypted email messages.
 - The **Encrypt** button is missing in both Outlook and Outlook on the web.
 
 ## Cause
 
-These issues can occur for different reasons, such as:
+These issues can occur for several reasons, such as:
 
-- The Microsoft 365 subscription purchased by your organization doesn't support Microsoft Purview Message Encryption.
-- The tenant used by your organization has configuration issues.
-- The account used by the affected user to sign in to Outlook or Outlook on the web isn't assigned a valid license to use the Microsoft Purview Message Encryption feature.
+- Your organization's Microsoft 365 subscription doesn't support Microsoft Purview Message Encryption.
+- The tenant that's used by your organization is misconfigured.
+- The account that's used by the affected users to sign in to Outlook or Outlook on the web isn't assigned a valid license to use the Microsoft Purview Message Encryption feature.
 
 ## Resolution
 
-To resolve these issues, follow these steps in order. Check whether the issue persists after each step. If it does, proceed to the next step.
+To resolve the issues, follow these steps in the given order. After you complete each step, check whether the issue persists. If it does, go to the next step.
 
 ### Step 1: Verify the Microsoft 365 subscription 
 
@@ -43,14 +43,14 @@ To use Microsoft Purview Message Encryption, your organization must have a subsc
 
 ### Step 2: Verify the tenant configuration
 
-1. Use Exchange Online PowerShell to check that your tenant is [configured correctly for Microsoft Purview Message Encryption](/microsoft-365/compliance/set-up-new-message-encryption-capabilities?view=o365-worldwide#verify-microsoft-purview-message-encryption-configuration-in-exchange-online-powershell&preserve-view=true).
-1. Use the following cmdlet to check if Information Rights Management (IRM) features are enabled in Outlook on the web.
+1. Use Exchange Online PowerShell to verify that your tenant is [configured correctly for Microsoft Purview Message Encryption](/microsoft-365/compliance/set-up-new-message-encryption-capabilities?view=o365-worldwide#verify-microsoft-purview-message-encryption-configuration-in-exchange-online-powershell&preserve-view=true).
+1. Run the following cmdlet to check whether Information Rights Management (IRM) features are enabled in Outlook on the web:
 
    ```powershell
    Get-OwaMailboxPolicy | fl *IRMEnabled*
    ```
 
-   If **IRMEnabled** is false, run the following cmdlet:
+   If **IRMEnabled** is **False**, run the following cmdlet:
 
    ```powershell
    Set-OwaMailboxPolicy -Identity OwaMailboxPolicy-Default -IRMEnabled $true
@@ -62,16 +62,16 @@ To use Microsoft Purview Message Encryption, your organization must have a subsc
    Set-IRMConfiguration -SimplifiedClientAccessEnabled $true
    ```
 
-### Step 3: Verify the affected user account's license
+### Step 3: Verify the affected users' account licenses
 
-The affected user needs to ensure that the account which they used to sign in to Outlook or Outlook on the web has been assigned the appropriate license to use the Microsoft Purview Message Encryption feature. If they're not sure, the affected user should follow these steps on their device:
+The affected users have to make sure that the account that they use to sign in to Outlook or Outlook on the web is assigned the appropriate license to use the Microsoft Purview Message Encryption feature. If they can't determine this, users should follow these steps on their device:
 
 1. Sign out of Office.
-1. Remove cached credentials from Windows Credential Manager
+1. Remove cached credentials from Windows Credential Manager:
 
    1. Open **Control Panel** > **User Accounts** > **Credential Manager**.
    1. Select **Windows Credentials**.
-   1. Remove all Outlook or Office credentials by expanding each credential and selecting **Remove**.
+   1. Remove all Outlook or Office credentials by expanding each credential and then selecting **Remove**.
 1. If the device isn't Azure AD-joined, remove the unlicensed account from the device:
 
    1. Select **Start** > **Settings** > **Accounts** > **Access work or school**.
@@ -80,7 +80,7 @@ The affected user needs to ensure that the account which they used to sign in to
 
 ### Step 4: Verify connection to the Azure Rights Management service
 
-To determine whether the affected user's mail client is able to connect to the Azure Rights Management service, run the following PowerShell commands:
+To determine whether the affected user's mail client can connect to the Azure Rights Management service, run the following PowerShell commands:
 
 ```powershell
 $request = [System.Net.HttpWebRequest]::Create("https://admin.na.aadrm.com/admin/admin.svc")
@@ -88,19 +88,19 @@ $request.GetResponse()
 $request.ServicePoint.Certificate.Issuer
 ```
 
-The result should show that the issuing Certificate Authority (CA) is a Microsoft CA. For example:
+The output should show that the issuing Certificate Authority (CA) is a Microsoft CA. For example:
 
 > CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US.
 
-If you see a CA that isn't from Microsoft, it's likely that your secure client-to-service connection has been terminated and needs to be reconfigured on your firewall. For more information, see [Firewalls and network infrastructure](/azure/information-protection/requirements%23firewalls-and-network-infrastructure).
+If you see a CA that isn't from Microsoft, your secure client-to-service connection was probably terminated and has to be reconfigured on your firewall. For more information, see [Firewalls and network infrastructure](/azure/information-protection/requirements#firewalls-and-network-infrastructure).
 
 ### Step 5: Check for sensitivity labels
 
-If sensitivity labels are applied to emails, permissions must be assigned correctly so that recipients can access the email. For more information, see [Restrict access to content by using sensitivity labels](/microsoft-365/compliance/encryption-sensitivity-labels?view=o365-worldwide&preserve-view=true).
+If sensitivity labels are applied to email messages, permissions must be assigned correctly so that recipients can access the messages. For more information, see [Restrict access to content by using sensitivity labels](/microsoft-365/compliance/encryption-sensitivity-labels?view=o365-worldwide&preserve-view=true).
 
-If the issue persists after all the checks are complete, [contact Microsoft Support](https://support.microsoft.com/contactus/) for further troubleshooting.
+If the issue persists after you complete all these steps, [contact Microsoft Support](https://support.microsoft.com/contactus/) for further troubleshooting.
 
 ## More information
 
-- If users in your organization experience issues when they send to or receive encrypted emails from people outside your organization, check the Conditional Access policies and guest account configuration in both organizations. For more information, see [Azure AD configuration for encrypted content](/microsoft-365/compliance/encryption-azure-ad-configuration?view=o365-worldwide&preserve-view=true) and [Conditional Access policies for Azure Information Protection](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/conditional-access-policies-for-azure-information-protection/ba-p/250357).
-- Users can open encrypted messages that are sent to a shared mailbox. If the email is sent from the same organization, they can open it when they're signed in to a supported Outlook client. If the email is sent from an external organization, they need to use Outlook on the web. For more information, see [Message encryption FAQ](/microsoft-365/compliance/ome-faq?view=o365-worldwide#can-i-open-encrypted-messages-sent-to-a-shared-mailbox-&preserve-view=true).
+- If users in your organization experience issues when they send encrypted messages to or receive encypted messages from people outside your organization, check the Conditional Access policies and guest account configuration in both organizations. For more information, see [Azure AD configuration for encrypted content](/microsoft-365/compliance/encryption-azure-ad-configuration?view=o365-worldwide&preserve-view=true) and [Conditional Access policies for Azure Information Protection](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/conditional-access-policies-for-azure-information-protection/ba-p/250357).
+- Users can open encrypted email messages that are sent to a shared mailbox. If the message is sent from the same organization, users can open it when they're signed in to a supported Outlook client. If the message is sent from an external organization, users must use Outlook on the web. For more information, see [Message encryption FAQ](/microsoft-365/compliance/ome-faq?view=o365-worldwide#can-i-open-encrypted-messages-sent-to-a-shared-mailbox-&preserve-view=true).
