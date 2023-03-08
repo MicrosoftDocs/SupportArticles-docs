@@ -9,12 +9,12 @@ ms.date: 03/08/2023
 
 # Segments returning "0 members"
 
-This article provides guidance that will help to identify the root cause of Segments returning "0 members".
+This article provides guidance that will provide functional guidance to identify the root cause of Segments returning "0 members". This guide must be used only for functional troubleshooting when you expect the segment to return members but it does not. This is often true during new segment creation or when scheduled segments that used to include members in the past are returning "0 members".
 
 ## Prerequisites
 
 - Segment refresh Status is 'Successful'.
-- Last refresh date is within 28 days.
+- Last refresh date is within 1 day.
 
 ## Symptoms
 
