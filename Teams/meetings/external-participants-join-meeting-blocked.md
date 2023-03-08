@@ -55,8 +55,8 @@ Here are some example situations.
 ### Allow all types of external participants to join meetings
 
 - Enable anonymous join in the [organization meeting settings](/microsoftteams/meeting-settings-in-teams).
-- Enable anonymous join in the [meeting policies](/microsoftteams/settings-policies-reference#meeting-join--lobby) that are assigned to all users in your organization or to those users who are allowed to organize meetings with anonymous participants.
-
+- Enable anonymous join in the [meeting policies](/microsoftteams/settings-policies-reference#meeting-join--lobby) that are assigned to users in your organization who are allowed to organize meetings with anonymous participants.
+ 
   > [!NOTE]
   > To allow anonymous join to meetings that are organized by only specific users in your organization, enable anonymous join in the meeting policies that are assigned to those specific users, and then disable anonymous join in the meeting policies that are assigned to other users.
 - In the [external access](/microsoftteams/manage-external-access#allow-or-block-domains) setting, select **Allow all external domains**.
