@@ -2,9 +2,18 @@
 
 
 
-## Week of January 16, 2023
+## Week of February 27, 2023
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 1/20/2023 | [Cannot be opened error when you start Office Starter 2010](/office/troubleshoot/office-suite-issues/cannot-be-opened-error-when-start) | modified |
+| 3/1/2023 | Troubleshooting why Word won't print | removed |
+| 3/1/2023 | How to troubleshoot printing failures in Word for O365 on Windows 10 | removed |
+
+
+## Week of February 13, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 2/16/2023 | [No email notifications for responses to Group Forms](/office/troubleshoot/microsoft-forms/no-email-notifications-for-responses-to-group-forms) | modified |

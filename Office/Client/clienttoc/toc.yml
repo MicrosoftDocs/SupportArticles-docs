@@ -525,6 +525,8 @@
           href: ../excel/formulas-to-count-occurrences-in-excel.md
         - name: GROWTH statistical functions
           href: ../excel/statistical-functions-growth.md
+        - name: Heavy Excel workloads run slowly in multi-session environments
+          href: ../excel/heavy-excel-workloads-run-slowly-multisession.md
         - name: Hide sheets and use xlVeryHidden constant in a macro
           href: ../excel/hide-sheet-and-use-xlveryhidden.md
         - name: How column widths are determined
@@ -1147,8 +1149,6 @@
           href: ../word/operating-parameter-limitation.md
         - name: Performance issues with AutoRecover location
           href: ../word/performance-issue-on-autorecover-location.md
-        - name: Print failures in Word
-          href: ../word/print-failures-in-word.md
         - name: relationship rID8 was not found
           href: ../word/image-part-relationship-rld8-not-found-error-microsoft-word.md
         - name: Reset user options and registry settings in Word
@@ -1161,8 +1161,6 @@
           href: ../word/not-recognize-misspelled-words-in-word.md
         - name: Track Changes functionality disabled when RMS is disabled
           href: ../word/track-changes-disabled.md
-        - name: Troubleshoot print failures in Word for Microsoft 365 on Windows 10
-          href: ../word/print-failures-word-for-office-365-on-win-10.md
         - name: User info in @mentions doesn't resolve
           href: /office/troubleshoot/excel/mentions-not-resolve-user-information?context=/office/troubleshoot/context/client-context
         - name: Using printer fonts in Word
