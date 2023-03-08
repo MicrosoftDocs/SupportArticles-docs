@@ -29,8 +29,6 @@
           href: ../administration/exchange-oauth-authentication-could-not-find-the-authorization.md
         - name: Outlook Web App address is out of date error
           href: ../administration/outlook-web-app-address-is-out-of-date-error-when-accessing-owa.md
-        - name: Outlook can't set up a Microsoft 365 account
-          href: ../administration/outlook-cannot-setup-microsoft-365-account.md
         - name: Primary SMTP address is overwritten by targetAddress
           href: ../administration/primary-smtp-address-is-overwritten-by-targetaddress.md
         - name: RPC over HTTP reaches end of support
