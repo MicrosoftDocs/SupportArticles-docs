@@ -571,6 +571,8 @@
           href: ../profiles-and-accounts/full-access-mailbox-not-automapped-outlook-profile.md
         - name: Need a new app to open this osf-roaming.16 message
           href: ../profiles-and-accounts/you-ll-need-a-new-app-to-open-this-osf-roaming-16.md
+        - name: Outlook can't set up a Microsoft 365 account
+          href: /exchange/troubleshoot/outlook-issues/outlook-cannot-setup-microsoft-365-account?context=/outlook/troubleshoot/context/client-context
         - name: Outlook crashes when sending emails with a nonexistent delivery location setting
           href: ../profiles-and-accounts/outlook-crashes-when-sending-emails.md
         - name: Outlook displays error message about information service

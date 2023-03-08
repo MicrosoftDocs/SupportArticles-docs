@@ -461,6 +461,8 @@
           href: ../outlook-issues/issues-when-using-autodiscover-service.md
         - name: No permissions error when accessing another user's mailbox folder
           href: ../outlook-issues/cannot-access-another-mailbox-folder.md
+        - name: Outlook can't set up a Microsoft 365 account
+          href: ../outlook-issues/outlook-cannot-setup-microsoft-365-account.md
         - name: Outlook client displays incorrect policy
           href: ../outlook-issues/outlook-client-displays-incorrect-policy.md
         - name: Outlook not responding when connecting to Exchange Online
