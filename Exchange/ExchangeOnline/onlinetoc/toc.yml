@@ -349,6 +349,8 @@
           href: ../groups-and-distribution-lists/cannot-upgrade-distribution-lists-to-office-365-groups.md
         - name: Common tasks to manage Microsoft 365 groups
           href: ../groups-and-distribution-lists/o365-group-tasks.md
+        - name: Inconsistent performance with contacts
+          href: ../groups-and-distribution-lists/inconsistent-performance-with-contacts.md
         - name: Mail-enabled groups aren't synced to O365
           href: ../groups-and-distribution-lists/mail-enabled-groups-not-synchronized.md
         - name: Ownerless group policy questions
