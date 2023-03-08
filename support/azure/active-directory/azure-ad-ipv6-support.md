@@ -3,7 +3,7 @@ title: IPv6 support in Azure Active Directory (Azure AD)
 description: Learn about Internet Protocol version 6 (IPv6) support in Azure Active Directory (Azure AD). Review what your organization needs to do to accommodate IPv6.
 ms.service: active-directory
 ms.subservice: aad-general
-ms.date: 02/24/2023
+ms.date: 03/08/2023
 ms.author: v-dele
 author: DennisLee-DennisLee
 ms.reviewer: lhuangnorth, gautama, amycolannino, joflore, mariourrutia
@@ -28,7 +28,7 @@ The following features will also support IPv6 addresses:
 
 ## When will IPv6 be supported in Azure AD?
 
-We'll begin introducing IPv6 support to Azure AD in late March 2023.
+We'll begin introducing IPv6 support to Azure AD starting April 3, 2023.
 
 We know that IPv6 support is a significant change for some organizations. We're publishing this information now so that customers can make plans to ensure readiness.
 
@@ -67,7 +67,7 @@ By default, both IPv6 and IPv4 traffic is supported on Windows and most other op
 
 ## Test Azure AD authentication over IPv6
 
-You can test Azure AD authentication over IPv6 before we enable it worldwide in late March 2023. This procedure helps validate IPv6 range configurations. The recommended approach is to use a [Name Resolution Policy Table (NRPT)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn593632(v=ws.11)) rule pushed to your Azure AD-joined Windows devices. In Windows Server, NRPT lets you implement a global or local policy that overrides DNS resolution paths. With this feature, you can redirect DNS for various fully qualified domain names (FQDNs) to special DNS servers that are configured to have IPv6 DNS entries for Azure AD sign-in. It's simple to enable and disable NRPT rules by using a PowerShell script. You can use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) to push this feature to clients.
+You can test Azure AD authentication over IPv6 before we enable it worldwide using the following procedures. This procedure helps validate IPv6 range configurations. The recommended approach is to use a [Name Resolution Policy Table (NRPT)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn593632(v=ws.11)) rule pushed to your Azure AD-joined Windows devices. In Windows Server, NRPT lets you implement a global or local policy that overrides DNS resolution paths. With this feature, you can redirect DNS for various fully qualified domain names (FQDNs) to special DNS servers that are configured to have IPv6 DNS entries for Azure AD sign-in. It's simple to enable and disable NRPT rules by using a PowerShell script. You can use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) to push this feature to clients.
 
 > [!NOTE]
 > - Microsoft is providing these instructions for testing purposes only. You must remove the following configurations by May 2023 to ensure that your clients are using production DNS servers. The DNS servers in the following procedures may be decommissioned after May 2023.
@@ -292,7 +292,7 @@ $signInsNonInteractive | Group-Object IPaddress, AppDisplayName | Select-Object 
 
 ## Next steps
 
-We'll keep this article updated. Here's a short link you can use to come back for updated and new information: <https://aka.ms/azureadipv6>.
+We'll keep this article updated. Here's a short link you can use to come back for updated and new information: [https://aka.ms/azureadipv6](https://aka.ms/azureadipv6).
 
 - [Use the location condition in a Conditional Access policy](/azure/active-directory/conditional-access/location-condition)
 - [Conditional Access: Block access by location](/azure/active-directory/conditional-access/howto-conditional-access-policy-location)
