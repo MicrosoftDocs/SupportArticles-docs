@@ -289,7 +289,7 @@ This is the expected behavior for SLAs in the web client. It is recommended to d
 
 ## Issue 14 - Deletion of SLAs or SLA Items show error messages in Unified Interface during solution upgrade or manual deletion
 
-## Symptom
+### Symptom
 
 The following two error messages are displayed:
 
