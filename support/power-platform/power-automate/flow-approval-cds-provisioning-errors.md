@@ -62,7 +62,7 @@ To resolve this issue, tenant administrators need to go to the **Enterprise Appl
 
 > The Dataverse database for this environment is disabled
 
-The Dataverse instance has been disabled in this environment. It isn't expected and is related to the expiration of all Power Automate & Dataverse plans within your Azure Active Directory (AD) tenancy. To ensure the database can be enabled, make sure at least one user has active plans.
+The Dataverse instance has been disabled in this environment. It isn't expected and is related to the expiration of all Power Automate & Dataverse plans within your Azure Active Directory (Azure AD) tenancy. To ensure the database can be enabled, make sure at least one user has active plans.
 
 ## Error "Database isn't ready yet"
 
@@ -78,6 +78,6 @@ For non-default Power Automate and Power Apps environments, only environment adm
 
 Either an administrator must:
 
-- Create the environment manually from the Power Apps Admin portal.
+- Create the environment manually from the Power Platform Admin portal.
 - Create and run an approvals flow.
 - Grant environment administrator permission to the current user.
