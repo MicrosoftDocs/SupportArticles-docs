@@ -9,7 +9,7 @@ ms.date: 03/08/2023
 
 # Segments returning "0 members"
 
-This article provides guidance that will provide functional guidance to identify the root cause of Segments returning "0 members". This guide must be used only for functional troubleshooting when you expect the segment to return members but it does not. This is often true during new segment creation or when scheduled segments that used to include members in the past are returning "0 members".
+This article provides functional guidance to identify the root cause when a Segment returns "0 members". This guide must be used only for functional troubleshooting when you expect the segment to return members but it does not. This is often true during new segment creation or when scheduled segments that used to include members in the past are returning "0 members" now.
 
 ## Prerequisites
 
@@ -28,9 +28,11 @@ Take the following steps to investigate the issue:
 
 1. Validate basic logic for contradictory rules:
 Having contradictory ANDed conditions or rules on same attribute will always generate a 0-member Segment (e.g. "MyAttribute = 123 AND MyAttribute = 456").
-To remove this possibility, analyze all the rules and conditions that would reveal such a broken logic. Of course it could be more complex where the contradiction is actually across several attributes and this would need more business knowledge of what can or cannot exists in the dataset(s) (e.g. "MyAttributeStatus = 1 AND MyAttributeStatusDescription = Inactive" when this is by nature impossible for this dataset where both attributes are functionally linked and "Status = 1" means "Active")
+To remove this possibility, analyze all the rules and conditions that would reveal such a broken logic. Of course it could be more complex where the contradiction is actually across several attributes and this would need more business knowledge of what can or cannot exists in the dataset(s) (e.g. "MyAttributeStatus = 1 AND MyAttributeStatusDescription = Inactive" when this is by nature impossible for this dataset where both attributes are functionally linked and "Status = 1" means "Active").
 
-2. Missing data for the attribute/s used in Segment Rule or Condition:
+2. Break down complexity: 
+
+3. Missing data for the attribute/s used in Segment Rule or Condition:
 If the value of the attribute used in Segment rule or condition is missing for any reason, the segment is likely to return 0 members. This can be investigated further by checking if the 'expected' value actually exists in the entity:
 
     - Check the steps described [here](https://learn.microsoft.com/en-us/dynamics365/customer-insights/entities#explore-a-specific-entitys-data) to explore entity data/attribute values. 
@@ -53,7 +55,7 @@ Note: All entities, especially source entities from a "CDM-attach" data source, 
 
         - Power Query: If the data you want to check is from a PowerQuery source entity, you can also spin a dedicated data source, or extra reference query in your existing Data source that would apply the same filtering condition (e.g. "MyAttribute = 123") and see if once refreshed the new entity corresponding to this new query is containing any data.
         
-3. "Relationships" Issues:
+4. "Relationships" Issues:
 If the relationship between the entity used in segmentation and Customer entity doesn't work, the segment will continue to return "0 members".
 
     - Choose correct Relationship Path: Check if the intended [relationship path](https://learn.microsoft.com/en-us/dynamics365/customer-insights/relationships#relationship-paths) is used as several paths could be technically valid between your source entity (with the condition) and the Customer entity. If there are several hops, inspect each relationship and validate if they are setup correctly and on expected 'attributes'.
