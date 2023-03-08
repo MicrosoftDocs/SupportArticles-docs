@@ -111,6 +111,8 @@
       href: ../office-message-encryption/cannot-display-message.md
     - name: Disable Encrypt-Only
       href: ../office-message-encryption/disable-encrypt-only.md
+    - name: Resolve Microsoft Purview Message Encryption issues
+      href: ../office-message-encryption/fix-message-encryption-issue-microsoft-purview.md
   - name: PST Import Service
     items:
     - name: Import job fails with MailboxAmbiguous
