@@ -129,6 +129,8 @@
           href: double-click-drag-drop-are-not-working.md
         - name: Errors when running attended or unattended desktop flows
           href: troubleshoot-errors-running-attended-or-unattended-desktop-flows.md
+        - name: Failed license check on a desktop flow run
+          href: desktop-flow-run-time-license-check
         - name: Find which machine is failing within a cluster
           href: find-which-machine-is-failing-within-a-cluster.md
         - name: Failed to get UI element
