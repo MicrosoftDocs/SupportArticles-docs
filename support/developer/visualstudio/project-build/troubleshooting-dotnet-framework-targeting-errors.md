@@ -1,6 +1,6 @@
 ---
-title: Troubleshooting .NET Framework Targeting Errors
-description: Learn about MSBuild errors that might occur because of reference issues and how you can resolve those errors.
+title: Troubleshoot .NET Framework targeting errors
+description: This article provides a resolution for MSBuild errors that might occur because of reference issues and also about how you to resolve those errors.
 ms.custom: sap:Project/Build System
 ms.date: 03/09/2023
 ms.topic: troubleshooting
@@ -9,16 +9,18 @@ f1_keywords:
 - MSBuild.ResolveAssemblyReference.FailedToResolveReferenceBecausePrimaryAssemblyInExclusionList
 author: padmajayaraman
 ms.author: v-jayaramanp
-manager: jmartens
-ms.technology: msbuild
+ms.reviewer: ghogen
 ---
+
 # Troubleshoot .NET Framework targeting errors
+
+_Applies to:_&nbsp;Visual Studio
 
 This topic describes MSBuild errors that might occur because of reference issues and how you can resolve those errors.
 
 ## You have referenced a project or assembly that targets a different version of .NET
 
- You can create applications that reference projects or assemblies that target different versions of .NET. For example, you can create an application that targets .NET 6 but references an assembly that targets .NET Core 3.1. However, if you create a project that targets an earlier version of .NET, you can't set a reference in that project to a project or assembly that targets .NET 6.  Here's an example of the error you might see in this case:
+ You can create applications that reference projects or assemblies that target different versions of .NET. For example, you can create an application that targets .NET 6 but references an assembly that targets .NET Core 3.1. However, if you create a project that targets an earlier version of .NET, you can't set a reference in that project to a project or assembly that targets .NET 6. Here's an example of the error you might see in this case:
 
  ```output
  error NU1201: Project ClassLibrary-NET6 is not compatible with netcoreapp3.1 (.NETCoreApp,Version=v3.1). Project ClassLibrary-NET6 supports: net6.0 (.NETCoreApp,Version=v6.0)
@@ -35,7 +37,13 @@ To resolve the error, make sure that your application targets a .NET version tha
 
 ### Updating references in app.config
 
- To work around application settings in .NET Framework applications, open **Solution Explorer**, choose **Show All Files**, and then edit the *app.config* file in the XML editor of Visual Studio. Change the version in the settings to match the appropriate version of .NET. For example, you can change the version setting from 4.0.0.0 to 2.0.0.0. Similarly, for an application that has added resources, open **Solution Explorer**, choose the **Show All Files** button, expand **My Project** (Visual Basic) or **Properties** (C#), and then edit the *Resources.resx* file in the XML editor of Visual Studio. Change the version setting from 4.0.0.0 to 2.0.0.0.
+To work around application settings in .NET Framework applications,
+
+1. Open **Solution Explorer**.
+1. Select **Show All Files**, and then edit the *app.config* file in the XML editor of Visual Studio.
+1. Change the version in the settings to match the appropriate version of .NET. For example, you can change the version setting from 4.0.0.0 to 2.0.0.0.
+1. Similarly, for an application that has added resources, open **Solution Explorer**, select **Show All Files**, expand **My Project** (Visual Basic) or **Properties** (C#), and then edit the *Resources.resx* file in the XML editor of Visual Studio.
+1. Change the version setting from 4.0.0.0 to 2.0.0.0.
 
 ### Updating resources
 
@@ -43,13 +51,13 @@ To resolve the error, make sure that your application targets a .NET version tha
 
 ## You have re-targeted a project to a different version of .NET and references do not resolve
 
- If you retarget a project to a different version of .NET, your references may not resolve properly in some cases. Explicit fully qualified references to assemblies often cause this issue, but you can resolve it by removing the references that do not resolve and then adding them back to the project. As an alternative, you can edit the project file to replace the references. First, you remove references of the following form:
+ If you re-target a project to a different version of .NET, your references may not resolve properly in some cases. Explicit fully qualified references to assemblies often cause this issue, but you can resolve it by removing the references that don't resolve and then adding them back to the project. As an alternative, you can edit the project file to replace the references. First, remove references of the following form:
 
 ```xml
 <Reference Include="System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
 ```
 
- Then you replace them with the simple form:
+Then, replace them with the simple form:
 
 ```xml
 <Reference Include="System.ServiceModel" />
