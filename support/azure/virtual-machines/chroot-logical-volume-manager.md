@@ -58,7 +58,7 @@ This article provides a troubleshooting guide to recovery the VM.
 
 ## Enable Serial Console
 
-If there isn't an access to the Serial Console for the VM, verify the GRUB configuration parameters for your Linux VM and correct them. For more information, see [Proactive GRUB configuration](serial-console-grub-proactive-configuration.md).
+If there isn't access to the Serial Console for the VM, verify the GRUB configuration parameters for your Linux VM and correct them. For more information, see [Proactive GRUB configuration](serial-console-grub-proactive-configuration.md).
 
 ## <a id="perform-fixes"></a>Common troubleshooting scenarios
 
