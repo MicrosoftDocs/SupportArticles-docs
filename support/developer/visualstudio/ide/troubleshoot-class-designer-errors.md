@@ -25,7 +25,7 @@ This article introduces how to resolve Class Designer issues in Visual Studio.
 
 ## Symptoms
 
-After you modify the source type of a typedef, base classes, or association types, you might receive an error:
+After you modify the source type of a typedef, base classes, or association types, you might receive the following error:
 
 > Class Designer is unable to display this type.
 

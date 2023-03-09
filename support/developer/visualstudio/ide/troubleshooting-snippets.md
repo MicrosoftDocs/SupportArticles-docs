@@ -11,7 +11,7 @@ ms.reviewer: tglee
 
 _Applies to:_&nbsp;Visual Studio
 
-This article helps you troubleshoot problems with IntelliSense code snippets that are typically caused by the following two reasons:
+This article helps you troubleshoot problems with IntelliSense code snippets. The issues are typically caused by:
 
 - A corrupt snippet file.
 - Bad content in the snippet file.
