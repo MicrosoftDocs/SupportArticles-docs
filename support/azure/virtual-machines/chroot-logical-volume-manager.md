@@ -1,6 +1,6 @@
 ---
-title: Recover Azure Linux VM where Logical Volume Manager is used
-description: Provides a troubleshooting guide to recover an Azure Linux VM where Logical Volume Manager is configured.
+title: Troubleshoot Azure Linux VM when there's no access to Azure serial console and disk layout uses LVM
+description: Provides a troubleshoot guide for an Azure Linux VM when there's no access to the Azure serial console and the disk layout uses Logical Volume Manager.
 services: virtual-machines
 documentationcenter: ''
 author: divargas-msft
@@ -15,15 +15,14 @@ ms.workload: infrastructure-services
 ms.date: 03/06/2023
 ms.author: divargas
 ---
-# Troubleshoot Linux VM not booting up when the disk layout uses Logical Volume Manager
+# Troubleshoot Azure Linux VM when there's no access to Azure Serial Console and the disk layout uses Logical Volume Manager
 
-When the underlying file system layout of an Azure Linux virtual machine (VM) is configured with Logical Volume Manager (LVM), the following issues occur with the VM:
+This article provides a troubleshooting guide for an Azure Linux virtual machine (VM). This guide applies to the following scenarios:
 
-- The VM fails to boot up.
-- Azure Serial Console for the VM is unaccessible.
-- Connection to the VM by using SSH fails.
-
-This article provides a troubleshooting guide to recovery the VM.
+- The VM isn't booting up.
+- Connection to the VM by using SSH isn't possible.
+- The Azure Serial Console access is unavailable.
+- The VM is using Logical Volume Manager (LVM) in the operating system (OS) disk.
 
 ## Prerequisites
 
@@ -58,13 +57,15 @@ This article provides a troubleshooting guide to recovery the VM.
 
 ## Enable Serial Console
 
-If there isn't access to the Serial Console for the VM, verify the GRUB configuration parameters for your Linux VM and correct them. For more information, see [Proactive GRUB configuration](serial-console-grub-proactive-configuration.md).
+If access to the Serial Console hasn't been possible, verify the GRUB configuration parameters for your Linux VM and correct them. For more information, see [Proactive GRUB configuration](serial-console-grub-proactive-configuration.md).
 
 ## <a id="perform-fixes"></a>Common troubleshooting scenarios
 
 ### Scenario 1: Configure the VM to boot from a different kernel
 
-If the current kernel is corrupted or an upgrade doesn't complete, force the VM to boot from a previous kernel. To do this, check [Recent kernel downgrade](kernel-related-boot-issues.md#other-kernel-boot-issues-kerneldowngrade) and follow the steps in [Boot system on older kernel version](kernel-related-boot-issues.md#bootingup-differentkernel).
+A common scenario is to force a VM to boot from a previous kernel as the current installed kernel may have become corrupt or an upgrade did not complete correctly.
+
+To do this, follow the steps in [Boot system on older kernel version](kernel-related-boot-issues.md#bootingup-differentkernel). You can also check [Recent kernel downgrade](kernel-related-boot-issues.md#other-kernel-boot-issues-kerneldowngrade).
 
 ### Scenario 2: Kernel update issues
 
