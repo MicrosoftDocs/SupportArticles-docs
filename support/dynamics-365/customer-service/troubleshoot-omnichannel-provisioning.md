@@ -3,7 +3,7 @@ title: Troubleshoot issues with provisioning Omnichannel for Customer Service
 description: Provides resolutions for known issues that are related to provisioning Omnichannel for Customer Service..
 author: lalexms
 ms.author: laalexan
-ms.date: 01/17/2023
+ms.date: 03/08/2023
 ---
 
 # Troubleshoot issues with provisioning Omnichannel for Customer Service
