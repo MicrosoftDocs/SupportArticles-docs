@@ -142,7 +142,7 @@ The following example shows a sustained disconnected state because the mirroring
 
 By querying the secondary replica, the Always On DMVs reports on only the secondary replica.
 
-:::image type="content" source="media/troubleshooting-intermittent-connection-timeouts-availability-groups/query-secondary-replica.png" alt-text="Screenshot that shows sustained disconnected state because the mirroring endpoint on the secondary replica was stopped.":::
+:::image type="content" source="media/troubleshooting-intermittent-connection-timeouts-availability-groups/query-secondary-replica-small.png" alt-text="Screenshot that shows sustained disconnected state because the mirroring endpoint on the secondary replica was stopped." lightbox="media/troubleshooting-intermittent-connection-timeouts-availability-groups/query-secondary-replica-big.png":::
 
 ## Review the AlwaysOn extended event session
 
