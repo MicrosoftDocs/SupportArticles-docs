@@ -103,10 +103,10 @@ This kind of kernel panic will commonly get triggered at unpredictable times aft
 * [Kernel module changes](kernel-related-boot-issues.md#other-kernel-boot-issues-kernelmodulechanges).
 * [Operating system configuration changes](kernel-related-boot-issues.md#other-kernel-boot-issues-OSchanges) (GRUB, sysctl, and SELinux).
     * [SELinux issues](kernel-related-boot-issues.md#attempted-tokill-init-selinuxissues).
-* Application workload changes
-* Application development changes or bugs
-* [Possible kernel bugs](kernel-related-boot-issues.md#other-kernel-boot-issues-kernelbugs)
-* Performance-related issues
+* Application workload changes.
+* Application development changes or bugs.
+* [Possible kernel bugs](kernel-related-boot-issues.md#other-kernel-boot-issues-kernelbugs).
+* Performance-related issues.
 
 ### Resolution for scenario 2
 
