@@ -71,6 +71,8 @@
           href: flow-approval-cds-provisioning-errors.md
         - name: Power Automate Approval Email delivery information
           href: power-automate-approval-email-information.md
+        - name: Guest user Approval email errors
+          href: guest-approval-email-error.md
         - name: Recommendations for conditional access and multi-factor authentication
           href: conditional-access-and-multi-factor-authentication-in-flow.md
         - name: Send an email with an embedded image
