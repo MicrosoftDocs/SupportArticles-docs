@@ -263,6 +263,8 @@
        href: database-engine/database-file-operations/support-network-database-files.md
      - name: Support on iSCSI technology components
        href: database-engine/database-file-operations/support-iscsi-technology-components.md
+     - name: Bulk load operations can leave large amounts of unused space
+       href: database-engine/database-file-operations/troubleshoot-bulk-load-causes-unused-space.md
      - name: Transaction log file doesn't grow
        href: database-engine/database-file-operations/transaction-log-file-not-grow.md
      - name: Troubleshoot DBCC CHECKDB errors
