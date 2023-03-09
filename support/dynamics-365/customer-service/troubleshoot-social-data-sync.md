@@ -4,7 +4,7 @@ description: Provides a resolution for the social profile entity being blocked a
 author: lalexms
 ms.author: laalexan
 ms.topic: troubleshooting
-ms.date: 01/19/2023
+ms.date: 03/08/2023
 ---
 
 # Troubleshoot sync issues with social data in Omnichannel for Customer Service
