@@ -4,7 +4,7 @@ description: Provides a resolution for issues with using the chat features in Om
 author: lalexms
 ms.author: laalexan
 ms.topic: troubleshooting
-ms.date: 01/19/2023
+ms.date: 03/08/2023
 ---
 
 # Troubleshoot issues with chats in Omnichannel for Customer Service
