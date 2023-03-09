@@ -9,7 +9,7 @@ ms.subservice: power-automate-desktop-flows
 ---
 # A failed license check on a desktop flow run
 
-This article provides a resolution for the issue where you can't trigger a desktop flow run when a license check is performed at run time in Power Automate for desktop.
+This article provides a resolution for the issue where you receive a license check error code when you trigger a desktop flow run in Power Automate for desktop.
 
 _Applies to:_ &nbsp; Power Automate for desktop
 
@@ -52,4 +52,4 @@ To solve this issue:
 - If the 'Unattended RPA' add-on is missing, ask your Power Platform administrator to assign an 'Unattended RPA' add-on to your environment from the Power Platform admin center.
 
 > [!NOTE]
-> A failed license check, if it doesn't block the desktop flow run immediately, can mean that the cloud flow triggering the desktop flow run will soon be suspended for licensing reasons. Check the cloud flow in question to get more information about it.
+> A failed license check (if it doesn't block the desktop flow run immediately) can mean that the cloud flow triggering the desktop flow run will soon be suspended for licensing reasons. Check the cloud flow in question to get more information.
