@@ -12,6 +12,8 @@
   href: ./release-management-client-crash.md
 - name: Screen readers can't read tool windows
   href: ./screen-readers-not-read-tool-windows.md
+- name: Troubleshoot code coverage
+  href: ./troubleshooting-code-coverage.md
 - name: Troubleshoot Docker client errors on Windows
   href: ./troubleshooting-docker-errors.md
 - name: Visual Studio 2012 crashes with StarDict-3
