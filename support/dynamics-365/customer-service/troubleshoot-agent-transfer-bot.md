@@ -4,7 +4,7 @@ description: Provides a resolution for missing required variables and actions du
 author: lalexms
 ms.author: laalexan
 ms.topic: troubleshooting
-ms.date: 01/19/2023
+ms.date: 03/08/2023
 ---
 
 # Troubleshoot issue with missing required variables and actions during agent tranfers from Power Virtual Agents bots
