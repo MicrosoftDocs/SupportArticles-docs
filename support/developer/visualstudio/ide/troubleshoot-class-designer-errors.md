@@ -1,9 +1,7 @@
 ---
-title: Class Designer errors
+title: Troubleshoot Class Designer errors
 description: Learn how to resolve Class Design errors by dragging the modified or relocated source code to the class diagram again to display it.
-ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: troubleshooting
 f1_keywords:
 - vs.classdesigner.CPlusPlusViewInDiagramNoTypeFound
 - vs.classdesigner.CPlusPlusNoTypeFound
@@ -17,34 +15,35 @@ f1_keywords:
 - vs.classdesigner.ViewInDiagramUnparsableTypeFound
 - vs.classdesigner.AssociationTypeNotFound
 - vs.classdesigner.CPlusPlusTypeCannotBeAdded
-helpviewer_keywords:
-- errors, class diagrams
-- errors, Class Designer
-- error messages, Class Designer
-- error messages, class diagrams
-- Class Designer [Visual Studio], errors
-- class diagrams, errors
-ms.assetid: 79d70e70-704c-4255-ab68-c10d6949470e
-author: TerryGLee
-ms.author: tglee
-manager: jmartens
-ms.technology: vs-ide-general
-ms.workload:
-- multiple
+ms.reviewer: tglee
 ---
 # Class Designer errors
 
- [!INCLUDE [Visual Studio](~/includes/applies-to-version/vs-windows-only.md)]
+_Applies to:_&nbsp;Visual Studio
 
-**Class Designer** does not track the location of your source files, so modifying your project structure or moving source files in the project can cause **Class Designer** to lose track of the type, For example, it's common to modify the source type of a typedef, base classes, and association types. You might receive an error such as **Class Designer is unable to display this type**. To resolve the error, drag the modified or relocated source code to the class diagram again to display it.
+This article introduces how to resolve Class Designer issues in Visual Studio.
+
+## Symptoms
+
+After you modify the source type of a typedef, base classes, or association types, you might receive an error:
+
+> Class Designer is unable to display this type.
+
+## Cause
+
+**Class Designer** does not track the location of your source files, so modifying your project structure or moving source files in the project can cause **Class Designer** to lose track of the type.
+
+## Resolution
+
+To resolve the error, drag the modified or relocated source code to the class diagram again to display it.
 
 ## Resources
 
 You can find assistance with other errors and warnings in the following resources:
 
-- [Work with Visual C++ code](working-with-visual-cpp-code.md) includes troubleshooting information about displaying C++ in a class diagram.
+- [Work with Visual C++ code](/visualstudio/ide/class-designer/working-with-visual-cpp-code) includes troubleshooting information about displaying C++ in a class diagram.
 - [Visual Studio Class Designer forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsclassdesigner) provides a forum for questions about **Class Designer**.
 
 ## See also
 
-- [Design and view classes and types](designing-and-viewing-classes-and-types.md)
+- [Design and view classes and types](/visualstudio/ide/class-designer/designing-and-viewing-classes-and-types)
