@@ -7,7 +7,7 @@ ms.topic: troubleshooting
 ms.date: 03/08/2023
 ---
 
-# Troubleshoot issues with integrated search providers (preview)
+# Data isn't updated on the Insights tab for integrated search providers
 
 This article helps you troubleshoot issues with integrated search providers in Customer Service.
 
@@ -15,16 +15,22 @@ This article helps you troubleshoot issues with integrated search providers in C
 
 ### Symptom
 
-Data doesn't get updated on the Insights tab for integrated search providers
+Data isn't updated on the Insights tab even after the scheduled refresh interval time.
 
 ### Cause
 
-The configuration is missing extentions that allow the bot to access the variables and actions it needs to complete the transfers.
+There are a number of potential causes for this issue.
 
 ### Resolution
 
-Ensure that the following extensions are installed. These extensions provide out-of-the-box actions or variables in the Power Virtual Agents authoring canvas that make the authoring experience easier for the bot author.
+Perform the following troubleshooting steps to diagnose and fix the issue:
 
-   - [Power Virtual Agents telephony extension](https://appsource.microsoft.com/product/dynamics-365/mscrm.mspva_telephony_extension)
-   - [Omnichannel Power Virtual Agent extension](https://appsource.microsoft.com/product/dynamics-365/mscrm.omnichannelpvaextension)
-   - [Omnichannel Voice Power Virtual Agent extension](https://appsource.microsoft.com/product/dynamics-365/mscrm.omnichannelvoicepvaextension)
+- Check whether the root URL and the sitemap URL are configured correctly. There is a possibility that there is some misconfiguration or the URLs provided don't exist. - Check the URLs on the browser to make sure that they are valid ones.
+- Check if the External Reference Id field is mapped to a unique field in the source property. As the ID is expected to be unique, mapping repeated or non-unique fields for this field from the source will cause issues when articles are ingested.
+- Make sure that you haven't selected the No refresh option for Refresh interval for a data provider.
+- If the source is authenticated, make sure that the secret provided is correct.
+
+If the issue persists, raise a Microsoft Support ticket.
+
+For detailed information on managing a search provider, go to [Manage integrate search providers (preview)](/dynamics365/customer-service/add-search-provider#manage-integrated-search-providers-preview).
+  
