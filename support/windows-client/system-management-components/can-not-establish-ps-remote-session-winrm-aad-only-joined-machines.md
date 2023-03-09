@@ -1,7 +1,7 @@
 ---
 title: Can't establish a PowerShell remote session using WinRM
 description: Helps to resolve the issue in which a PowerShell remote session using Windows Remote Management (WinRM) can't be established between machines that are joined to Azure Active Directory (Azure AD) only.
-ms.date: 03/06/2023
+ms.date: 03/09/2023
 author: v-lianna
 ms.author: v-lianna
 manager: dcscontentpm
