@@ -3,7 +3,7 @@ title: Troubleshoot issue with deploying a custom solution containing Agentscrip
 description: Provides a resolution for a known issue related to deploying an Agentscript custom solution in Omnichannel for Customer Service..
 author: lalexms
 ms.author: laalexan
-ms.date: 01/17/2023
+ms.date: 03/08/2023
 ---
 
 # Troubleshoot issue deploying custom Agentscript solution in Omnichannel for Customer Service
