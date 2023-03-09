@@ -61,7 +61,7 @@ This kind of event is commonly related but not limited to:
 * [A recent kernel upgrade](kernel-related-boot-issues.md#other-kernel-boot-issues-kernelupgrade).
 * [A recent kernel downgrade](kernel-related-boot-issues.md#other-kernel-boot-issues-kerneldowngrade).
 * [Kernel module changes](kernel-related-boot-issues.md#other-kernel-boot-issues-kernelmodulechanges).
-* [Operating system configuration changes](kernel-related-boot-issues.md#other-kernel-boot-issues-OSchanges) (GRUB, sysctl, and selinux).
+* [Operating system configuration changes](kernel-related-boot-issues.md#other-kernel-boot-issues-OSchanges) (GRUB, sysctl, and SELinux).
     * [SELinux issues](kernel-related-boot-issues.md#attempted-tokill-init-selinuxissues).
 * [Missing important files and directories](kernel-related-boot-issues.md#attempted-tokill-init-missingfilesdirs).
 * [Missing important system core libraries and packages](kernel-related-boot-issues.md#attempted-tokill-init-missinglibraries).
@@ -101,7 +101,7 @@ This kind of kernel panic will commonly get triggered at unpredictable times aft
 * [A recent kernel upgrade](kernel-related-boot-issues.md#other-kernel-boot-issues-kernelupgrade).
 * [A recent kernel downgrade](kernel-related-boot-issues.md#other-kernel-boot-issues-kerneldowngrade).
 * [Kernel module changes](kernel-related-boot-issues.md#other-kernel-boot-issues-kernelmodulechanges).
-* [Operating system configuration changes](kernel-related-boot-issues.md#other-kernel-boot-issues-OSchanges) (GRUB, sysctl, and selinux).
+* [Operating system configuration changes](kernel-related-boot-issues.md#other-kernel-boot-issues-OSchanges) (GRUB, sysctl, and SELinux).
     * [SELinux issues](kernel-related-boot-issues.md#attempted-tokill-init-selinuxissues).
 * Application workload changes
 * Application development changes or bugs
