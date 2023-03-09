@@ -1,18 +1,15 @@
 ---
 title: Troubleshoot startup or sign-in issues for Power Apps
 description: Provides resolutions for the common configuration issues that prevent Power Apps from starting.
-author: wimcoor
+author: amchern
+ms.author: amchern
+ms.reviewer: tapanm, mkaur
 ms.custom: canvas
-ms.reviewer: tapanm
 ms.date: 03/06/2023
-ms.author: namarwah
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
-contributors:
-  - wimcoor
-  - tapanm-msft
 ---
 
 # Troubleshooting startup or sign-in issues for Power Apps
