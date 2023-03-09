@@ -1,13 +1,13 @@
 ---
 title: Troubleshoot issue with integrated search providers
-description: Provides a resolution for issues with integrated search providers in Dynamics 365 Customer Service.
+description: Provides a resolution for issues with integrated search providers (preview) in Dynamics 365 Customer Service.
 author: lalexms
 ms.author: laalexan
 ms.topic: troubleshooting
 ms.date: 03/08/2023
 ---
 
-# Data isn't updated on the Insights tab for integrated search providers
+# Data isn't updated on the Insights tab for integrated search providers (preview)
 
 This article helps you troubleshoot issues with integrated search providers in Customer Service.
 
