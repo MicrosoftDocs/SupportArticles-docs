@@ -68,7 +68,7 @@ Then, replace them with the simple form:
 
 ## See also
 
-- [How to: Target a version of the .NET Framework](/visualstudio/ide/visual-studio-multi-targeting-overview?view=vs-2022)
+- [How to: Target a version of the .NET Framework](/visualstudio/ide/visual-studio-multi-targeting-overview?view=vs-2022&preserve-view=true)
 - [.NET Framework client profile](/dotnet/framework/deployment/client-profile)
-- [Framework targeting overview](/visualstudio/ide/visual-studio-multi-targeting-overview?view=vs-2022)
-- [Multitargeting](/visualstudio/msbuild/msbuild-multitargeting-overview?view=vs-2022)
+- [Framework targeting overview](/visualstudio/ide/visual-studio-multi-targeting-overview?view=vs-2022&preserve-view=true)
+- [Multitargeting](/visualstudio/msbuild/msbuild-multitargeting-overview?view=vs-2022&preserve-view=true)
