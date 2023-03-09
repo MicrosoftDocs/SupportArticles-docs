@@ -139,12 +139,14 @@ The following switches are available for the Enterprise version of the Assistant
 
 ## Version history of the Enterprise version of the Assistant
 
-A new build of the Enterprise version of the Assistant is released multiple times a year. (See [Download and run the command-line version of the Assistant](#download-and-run-the-enterprise-version-of-the-assistant)). Because each build stops working after 90 days, we recommend that you keep the Assistant updated by replacing your existing files with the latest version files.
+A new build of the Enterprise version of the Assistant is released multiple times a year. (See [Download and run the Enterprise version of the Assistant](#download-and-run-the-enterprise-version-of-the-assistant)). Because each build stops working after 90 days, we recommend that you keep the Assistant updated by replacing your existing files with the latest version files.
 
 The following table provides the versions of the Enterprise version of the Assistant that were made available on the specified dates.
 
 |Release date|Version|
 |----------|-----------|
+|February 09, 2023|17.00.9663.009|
+|February 06, 2023|17.00.9663.003|
 |December 16, 2022|17.00.9467.006 |
 |October 28, 2022|17.00.9246.000 |
 |September 13, 2022|17.00.9001.001 |

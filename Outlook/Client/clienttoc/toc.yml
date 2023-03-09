@@ -15,6 +15,8 @@
           href: ../authentication/looking-for-credential-tiles-message.md
         - name: O365 credential prompts with AuthenticationService value
           href: ../authentication/o365-credential-prompts-with-authenticationservice.md
+        - name: Outlook doesn't connect when using Modern authentication
+          href: /exchange/troubleshoot/administration/outlook-does-not-connect-with-modern-authentication?context=/outlook/troubleshoot/context/client-context
         - name: Outlook prompts for credentials
           href: ../authentication/outlook-prompts-credentials.md
         - name: Outlook asks for password repeatedly when using MAPI over HTTP
@@ -217,6 +219,8 @@
           href: ../contacts/outlook-displays-incorrect-search-results-gal.md
         - name: How to hide columns in Address Book
           href: ../contacts/how-to-hide-columns-in-address-book.md
+        - name: Inconsistent performance with contacts
+          href: /exchange/troubleshoot/groups-and-distribution-lists/inconsistent-performance-with-contacts?context=/outlook/troubleshoot/context/client-context
         - name: LinkedIn is no longer available in Outlook Social Connector
           href: ../contacts/linkedin-is-no-longer-available-in-outlook-social-connector.md
         - name: No permission error when adding contacts
@@ -569,6 +573,8 @@
           href: ../profiles-and-accounts/full-access-mailbox-not-automapped-outlook-profile.md
         - name: Need a new app to open this osf-roaming.16 message
           href: ../profiles-and-accounts/you-ll-need-a-new-app-to-open-this-osf-roaming-16.md
+        - name: Outlook can't set up a Microsoft 365 account
+          href: /exchange/troubleshoot/outlook-issues/outlook-cannot-setup-microsoft-365-account?context=/outlook/troubleshoot/context/client-context
         - name: Outlook crashes when sending emails with a nonexistent delivery location setting
           href: ../profiles-and-accounts/outlook-crashes-when-sending-emails.md
         - name: Outlook displays error message about information service

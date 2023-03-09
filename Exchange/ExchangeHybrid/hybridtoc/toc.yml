@@ -27,6 +27,8 @@
           href: ../administration/mutual-authentication-could-not-be-established-error-if-testing-outlook-anywhere.md
         - name: OAuth authentication configuration fails
           href: ../administration/exchange-oauth-authentication-could-not-find-the-authorization.md
+        - name: Outlook doesn't connect when using Modern authentication
+          href: ../administration/outlook-does-not-connect-with-modern-authentication.md
         - name: Outlook Web App address is out of date error
           href: ../administration/outlook-web-app-address-is-out-of-date-error-when-accessing-owa.md
         - name: Primary SMTP address is overwritten by targetAddress
