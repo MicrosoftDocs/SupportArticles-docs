@@ -4,7 +4,7 @@ description: Provides a resolution for issues with deploying a custom solution c
 author: lalexms
 ms.author: laalexan
 ms.topic: troubleshooting
-ms.date: 01/19/2023
+ms.date: 03/08/2023
 ---
 
 # Troubleshoot issue with deploying a custom solution containing Agentscript solution in Omnichannel for Customer Service
