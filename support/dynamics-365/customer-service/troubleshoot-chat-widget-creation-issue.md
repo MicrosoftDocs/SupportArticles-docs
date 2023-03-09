@@ -4,7 +4,7 @@ description: Provides a resolution for issues with creating a chat wideget or so
 author: lalexms
 ms.author: laalexan
 ms.topic: troubleshooting
-ms.date: 01/19/2023
+ms.date: 03/08/2023
 ---
 
 # Troubleshoot issues with creating a chat widget or social channel in Omnichannel for Customer Service
