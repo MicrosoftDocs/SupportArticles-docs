@@ -4,7 +4,7 @@ description: Provides resolutions for the known issues that are related to conve
 author: neeranelli
 ms.author: nenellim
 ms.topic: troubleshooting
-ms.date: 01/18/2022
+ms.date: 03/08/2023
 ---
 
 # Troubleshoot issues with converting an email to a case
