@@ -96,7 +96,8 @@ This procedure uses the kubectl commands in a console. It displays only the curr
        | awk '{print $1" "$2}' \
        | xargs -n2 kubectl top pods --namespace \
        | awk 'NR==1 || NR%2==0' \
-       | sort -k3n
+       | sort -k3n \
+       | column -t
    ```
 
    > [!NOTE]  
@@ -105,20 +106,23 @@ This procedure uses the kubectl commands in a console. It displays only the curr
    The output of the code snippet resembles the following text:
 
    ```output
-   NAME                           CPU(cores)   MEMORY(bytes)
-   cloud-node-manager-67sng   1m           16Mi
-   azure-ip-masq-agent-8wdvm   1m           17Mi
-   kube-proxy-hwl6k   4m           28Mi
-   vpa-admission-controller-b4f5d975d-njx6q   1m           33Mi
-   vpa-updater-56f9bfc96f-t2k5d   1m           39Mi
-   csi-azuredisk-node-9dprw   2m           44Mi
-   csi-azurefile-node-14rmk   2m           49Mi
-   emailservice-6ffdd9cc49-slr4w   8m           54Mi
-   cartservice-6d994d9676-hdcpp   16m          57Mi
-   metrics-server-8644c8db54-nmv9v   5m           65Mi
-   loadgenerator-657b45689d-ktmm5   114m         232Mi
-   ama-metrics-node-4p57r   11m          292Mi
-   ama-logs-72wl9   15m          521Mi
+   NAME                                 CPU(cores)   MEMORY(bytes)
+   coredns-autoscaler-5655d66f64-9fp2k  1m           7Mi
+   shippingservice-7946db7679-qzplg     6m           15Mi
+   azure-ip-masq-agent-tb8xv            1m           16Mi
+   cloud-node-manager-wggqd             1m           16Mi
+   kube-proxy-c244z                     1m           22Mi
+   coredns-59b6bf8b4f-5zg5s             3m           24Mi
+   coredns-59b6bf8b4f-5x62d             3m           25Mi
+   currencyservice-7977f668dc-rvbwm     12m          32Mi
+   csi-azurefile-node-9fcx8             2m           38Mi
+   metrics-server-5f8d84558d-frsq4      4m           42Mi
+   metrics-server-5f8d84558d-rc5nj      4m           43Mi
+   csi-azuredisk-node-9fh7h             2m           46Mi
+   adservice-795589cf6f-xs66r           4m           87Mi
+   ama-metrics-node-54sfj               16m          249Mi
+   ama-logs-rs-6db98d6dff-vj4xw         13m          259Mi
+   ama-logs-w5bmd                       12m          403Mi
    ```
 
 1. Review the requests and limits for each pod on the node by running the [kubectl describe node](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#describe) command:
