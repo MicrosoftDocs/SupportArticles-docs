@@ -85,7 +85,7 @@ Here are two options to fix a broken reference for a file that was renamed:
 
 ## Network connection or authentication has failed
 
-There can be many possible causes for inaccessible files. For example, there might be a failed network connection or a failed authentication. Conversely, each cause might have a unique means of recovery. For example, you might have to contact the local administrator for access to the required resources. However, deleting the reference and fixing the code that used it is always an option.
+There can be many possible causes for inaccessible files. For example, there might be a failed network connection or a failed authentication. Conversely, each cause might have a unique means of recovery. For example, you might have to contact the local administrator to access the required resources. However, deleting the reference and fixing the code that used it is always an option.
 
 ## Referenced COM component isn't installed on computer
 
