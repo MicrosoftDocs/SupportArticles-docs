@@ -1,3 +1,5 @@
+- name: Troubleshoot Visual Studio installation and upgrades
+  href: ./troubleshoot-installation-issues.md
 - name: Running Parallels on Mac may cause error 1606
   href: ./error-1606-psf-folder.md
 - name: Visual Studio 2015 is stuck while installing KB2999226
