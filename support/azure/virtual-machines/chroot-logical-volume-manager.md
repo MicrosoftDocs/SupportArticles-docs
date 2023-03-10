@@ -57,7 +57,7 @@ This article provides a troubleshooting guide for an Azure Linux virtual machine
 
 ## Enable Serial Console
 
-If access to the Serial Console is still not possible, verify the GRUB configuration parameters for your Linux VM and correct them. For more information, see [Proactive GRUB configuration](serial-console-grub-proactive-configuration.md).
+If access to the Serial Console is still not possible, verify the GRUB configuration parameters for your Linux VM and correct them. For more information, see [Serial Console GRUB proactive configuration](serial-console-grub-proactive-configuration.md).
 
 ## <a id="perform-fixes"></a>Common troubleshooting scenarios
 
