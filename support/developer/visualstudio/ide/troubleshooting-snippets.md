@@ -5,7 +5,6 @@ ms.date: 11/04/2016
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: tglee
-
 ---
 # Troubleshoot issues with IntelliSense code snippets
 
