@@ -32,7 +32,7 @@ This article consolidates the most common Linux operating system boot errors tha
 
 * To fix Linux VM boot issues due to `/etc/fstab` misconfigurations or data file system issues, see [Troubleshoot Linux VM boot issues due to fstab errors](linux-virtual-machine-cannot-start-fstab-errors.md).
 
-* To recover a Linux VM that fails to boot with a kernel panic "Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(0,0)" due to missing initramfs, after a recent patching activity, see [Regenerate a missing initramfs](kernel-related-boot-issues.md#missing-initramfs).
+* To recover a Linux VM that fails to boot with a kernel panic "Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(0,0)" due to missing initramfs, after a recent patching activity, see [Regenerate missing initramfs](kernel-related-boot-issues.md#missing-initramfs).
 
 * To troubleshoot a Linux VM that fails to boot due to related Linux kernel issues, see [Scenario 1: Kernel panic occurs at boot time](linux-kernel-panic-troubleshooting.md#scenario-1-kernel-panic-occurs-at-boot-time), and [Azure Linux virtual machine fails to boot after applying kernel changes](kernel-related-boot-issues.md).
 
@@ -63,6 +63,6 @@ This article consolidates the most common Linux operating system boot errors tha
 
 * [Azure OS disk swap](/azure/virtual-machines/linux/os-disk-swap)
 
-    If you have an existing VM, but you want to swap the disk for a backup disk or another OS disk, you can use the Azure CLI to swap the OS disks. You don't have to delete and recreate the VM. You can even use a managed disk in another resource group, as long as it isn't already in use. This tool is used by the [Azure Repair VM command](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to exchange the OS disk of the VMs.
+    If you have an existing VM, but you want to swap the disk for a backup disk or another OS disk, you can use the Azure CLI to swap the OS disks. You don't have to delete and recreate the VM. You can even use a managed disk in another resource group, as long as it isn't already in use. This tool is used by the [Azure VM repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to exchange the OS disk of the VMs.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
