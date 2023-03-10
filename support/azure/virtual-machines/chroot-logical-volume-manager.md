@@ -17,7 +17,7 @@ ms.author: divargas
 ---
 # Troubleshoot Azure Linux VM when there's no access to Azure Serial Console and the disk layout uses Logical Volume Manager
 
-This article provides a troubleshooting guide for an Azure Linux virtual machine (VM). This guide applies to the following scenarios:
+This article provides a troubleshooting guide for an Azure Linux virtual machine (VM) where all the following conditions are presented:
 
 - The VM isn't booting up.
 - Connection to the VM by using SSH isn't possible.
