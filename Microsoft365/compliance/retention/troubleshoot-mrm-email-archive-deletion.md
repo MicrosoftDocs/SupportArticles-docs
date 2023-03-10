@@ -18,7 +18,7 @@ search.appverid: MET150
 ms.date: 3/7/2023
 ---
 
-# Resolve email archive and deletion issues when using MRM
+# Resolve email archive and deletion issues when using retention policies
 
 This article explores some common issues that prevent messaging records management (MRM) from correctly deleting or archiving email messages in Exchange Online. It also provides steps to identify the root cause and resolve the issues.
 
