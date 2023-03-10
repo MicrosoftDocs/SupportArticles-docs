@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot Azure Linux VM when there's no access to Azure serial console and disk layout uses LVM
-description: Provides a troubleshoot guide for an Azure Linux VM when there's no access to the Azure serial console and the disk layout uses Logical Volume Manager.
+title: Troubleshoot Azure Linux VM when there's no access to Azure Serial Console and the disk layout uses LVM
+description: Provides a troubleshooting guide for an Azure Linux VM when there's no access to Azure Serial Console and the disk layout uses Logical Volume Manager.
 services: virtual-machines
 documentationcenter: ''
 author: divargas-msft
@@ -28,19 +28,19 @@ This article provides a troubleshooting guide for an Azure Linux virtual machine
 
 - To use the [Azure VM repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md), the following access is required:
 
-  - Access to the [Azure Cloud Shell](https://ms.portal.azure.com/#cloudshell/).
-  - Access to a new or existent custom storage account.
+  - Access to the [Azure Cloud Shell](https://ms.portal.azure.com/#cloudshell/)
+  - Access to a new or existing custom storage account
 
-- To perform the recovery operation, a temporary VM is required. To create such VM, you need the corresponding permissions at Azure subscription level.
+- To perform the recovery operation, a temporary VM is required. To create such a VM, you need the corresponding permissions at the Azure subscription level.
 
 ## Prepare the rescue VM
 
-1. Use [VM repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to create a rescue VM that has a copy of the affected VM's operating system (OS) disk attached.
+1. Use [VM repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to create a rescue VM that has a copy of the affected VM's OS disk attached.
 
     > [!NOTE]
     > Alternatively, you can create a rescue VM manually by using the Azure portal. For more information, see [Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal](troubleshoot-recovery-disks-portal-linux.md).
 
-    - If you create the rescue VM manually instead of using the VM repair commands, to avoid issues due to duplicated LVM structures, you must select an image without LVM in the OS disk. If using Red Hat based VMs, you need to search the image by using "Red Hat RAW". Ubuntu and SUSE images don't use LVM in the OS disk.
+    - If you create the rescue VM manually instead of using the VM repair commands, to avoid issues due to duplicated LVM structures, you must select an image without LVM in the OS disk. If using Red Hat-based VMs, you need to search the image by using "Red Hat RAW." Ubuntu and SUSE images don't use LVM in the OS disk.
 
     - If the LVM utilities are missing in the Red Hat RAW image, [install the LVM utilities](/azure/virtual-machines/linux/configure-lvm?toc=%2Fazure%2Fvirtual-machines%2Flinux%2Ftoc.json#install-the-lvm-utilities).
 
@@ -57,13 +57,13 @@ This article provides a troubleshooting guide for an Azure Linux virtual machine
 
 ## Enable Serial Console
 
-If access to the Serial Console hasn't been possible, verify the GRUB configuration parameters for your Linux VM and correct them. For more information, see [Proactive GRUB configuration](serial-console-grub-proactive-configuration.md).
+If access to the Serial Console is still not possible, verify the GRUB configuration parameters for your Linux VM and correct them. For more information, see [Proactive GRUB configuration](serial-console-grub-proactive-configuration.md).
 
 ## <a id="perform-fixes"></a>Common troubleshooting scenarios
 
 ### Scenario 1: Configure the VM to boot from a different kernel
 
-A common scenario is to force a VM to boot from a previous kernel as the current installed kernel may have become corrupt or an upgrade did not complete correctly.
+A common scenario is to force a VM to boot from a previous kernel, as the currently installed kernel may have become corrupt or an upgrade didn't complete correctly.
 
 To do this, follow the steps in [Boot system on older kernel version](kernel-related-boot-issues.md#bootingup-differentkernel). You can also check [Recent kernel downgrade](kernel-related-boot-issues.md#other-kernel-boot-issues-kerneldowngrade).
 
