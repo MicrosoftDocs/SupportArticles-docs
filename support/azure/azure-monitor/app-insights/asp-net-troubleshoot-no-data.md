@@ -1,7 +1,7 @@
 --- 
 title: Troubleshoot no data in Application Insights for .NET
 description: Review troubleshooting steps to try when you don't see any data in Application Insights for .NET and .NET Core.
-ms.date: 6/21/2022
+ms.date: 03/10/2023
 author: DennisLee-DennisLee
 ms.author: v-dele
 editor: v-jsitser

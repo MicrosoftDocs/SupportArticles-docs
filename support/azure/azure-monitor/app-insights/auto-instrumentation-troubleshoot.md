@@ -4,9 +4,8 @@ description: Troubleshoot auto-instrumentation in Application Insights.
 ms.topic: conceptual
 ms.service: azure-monitor
 ms.subservice: application-insights
-ms.date: 02/28/2022
+ms.date: 03/10/2023
 ---
-
 # Troubleshoot Application Insights auto-instrumentation
 
 This article helps you troubleshoot problems with auto-instrumentation in Application Insights.
@@ -30,7 +29,7 @@ Verify that a supported version of .NET or .NET Core was used to build and publi
 
 See the .NET or .NET Core documentation to determine if your version is supported:
 
- - [Application monitoring for Azure App Service and ASP.NET](/azure/azure-monitor/app/azure-web-apps-net#application-monitoring-for-azure-app-service-and-aspnet)
+- [Application monitoring for Azure App Service and ASP.NET](/azure/azure-monitor/app/azure-web-apps-net#application-monitoring-for-azure-app-service-and-aspnet)
 - [Application monitoring for Azure App Service and ASP.NET Core](/azure/azure-monitor/app/azure-web-apps-net-core#application-monitoring-for-azure-app-service-and-aspnet-core)
 
 ### A diagnostics library was detected
@@ -46,3 +45,5 @@ These libraries must be removed for auto-instrumentation to succeed.
 ## More help
 
 If you have questions about Application Insights auto-instrumentation, you can post a question on our [Microsoft Q&A question page](/answers/topics/azure-monitor.html).
+
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
