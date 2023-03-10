@@ -24,12 +24,12 @@ This article provides troubleshooting information to help resolve issues when da
 
 Example scenarios:
 
-#### In Application Insights, I see only a fraction of the events that my app generates
+### In Application Insights, I see only a fraction of the events that my app generates
 
 * If you're consistently seeing the same fraction, it's probably because of adaptive [sampling](/azure/azure-monitor/app/sampling). To confirm this cause, select **Overview** > **Search** and look at an instance of a **Request** or other event. To see the full property details, select the ellipsis (**...**) at the bottom of the **Properties** section. If the request count is greater than 1, sampling is in operation.
 * It's possible that you're hitting a [data rate limit](/azure/azure-monitor/service-limits#application-insights) for your pricing plan. These limits are applied per minute.
 
-#### I'm randomly experiencing data loss
+### I'm randomly experiencing data loss
 
 * Check whether you're experiencing data loss at the [telemetry channel](/azure/azure-monitor/app/telemetry-channels#does-the-application-insights-channel-guarantee-telemetry-delivery-if-not-what-are-the-scenarios-in-which-telemetry-can-be-lost).
 * Check for any known issues in the telemetry channel of the [GitHub repo](https://github.com/Microsoft/ApplicationInsights-dotnet/issues).
@@ -43,7 +43,7 @@ Example scenarios:
 >
 >You can use a tool like [Fiddler](https://www.telerik.com/fiddler/fiddler-classic), or any other tool that will inspect HTTP traffic, to confirm successful telemetry uploads. The back end will return a "200 OK" HTTP status code to indicate a successful upload. Or you can use the [SDK logs](#troubleshoot-logs) to see if the back end is rejecting data.
 
-#### I'm experiencing data loss in a console app or on a web app when the app is about to stop
+### I'm experiencing data loss in a console app or on a web app when the app is about to stop
 
 * The SDK channel keeps telemetry in buffer and sends it in batches. If the application is shutting down, you might need to explicitly call [Flush()](/azure/azure-monitor/app/api-custom-events-metrics#flushing-data). The `Flush()` behavior depends on the actual [channel](/azure/azure-monitor/app/telemetry-channels#built-in-telemetry-channels) used.
 * Per [.NET Core/.NET Framework Console application](/azure/azure-monitor/app/worker-service#net-corenet-framework-console-application), explicitly calling `Flush()` followed by sleep is required in console apps.
@@ -56,11 +56,11 @@ Internet Information Services (IIS) logs counts of all requests that reach IIS a
 
 Example scenarios:
 
-#### I installed my app on my web server and now I don't see any telemetry from it. It worked OK on my dev machine.
+### I installed my app on my web server and now I don't see any telemetry from it. It worked OK on my dev machine.
 
 A firewall issue is most likely the cause. [Set firewall exceptions for Application Insights to send data](/azure/azure-monitor/app/ip-addresses).
 
-#### I installed the [Azure Monitor Application Insights Agent](/azure/azure-monitor/app/status-monitor-v2-overview) on my web server to monitor existing apps. I don't see any results.
+### I installed the [Azure Monitor Application Insights Agent](/azure/azure-monitor/app/status-monitor-v2-overview) on my web server to monitor existing apps. I don't see any results.
 
 See [Troubleshooting Status Monitor](/azure/azure-monitor/app/status-monitor-v2-troubleshoot).
 
@@ -68,13 +68,13 @@ See [Troubleshooting Status Monitor](/azure/azure-monitor/app/status-monitor-v2-
 
 If you have an ASP.NET application hosted in Azure App Service or in IIS on a virtual machine, your application could fail to connect to the Snapshot Debugger service because of a missing SSL security protocol.
 
-[The Snapshot Debugger endpoint requires TLS version 1.2](/azure/azure-monitor/snapshot-debugger/snapshot-debugger-upgrade). The set of SSL security protocols is one of the quirks enabled by the \<httpRuntime> element's **targetFramework** attribute value in the \<system.web> section of the *web.config* file.
+[The Snapshot Debugger endpoint requires TLS version 1.2](/azure/azure-monitor/snapshot-debugger/snapshot-debugger-upgrade). The set of SSL security protocols is one of the quirks enabled by the `<httpRuntime>` element's `targetFramework` attribute value in the `<system.web>` section of the *web.config* file.
 If the target framework is 4.5.2 or lower, TLS 1.2 isn't included by default.
 
 > [!NOTE]
-> The \<httpRuntime> element's **targetFramework** attribute value is independent of the target framework used when you build your application.
+> The `<httpRuntime>` element's `targetFramework` attribute value is independent of the target framework used when you build your application.
 
-To check the setting, open your *web.config* file and find the *system.web* section. Make sure that the **targetFramework** for \<httpRuntime> is set to 4.6 or above.
+To check the setting, open your *web.config* file and find the `<system.web>` section. Make sure that the `targetFramework` for `<httpRuntime>` is set to 4.6 or above.
 
 ```xml
 <system.web>
@@ -85,7 +85,7 @@ To check the setting, open your *web.config* file and find the *system.web* sect
 ```
 
 > [!NOTE]
-> Modifying the \<httpRuntime> element's **targetFramework** value changes the runtime quirks applied to your application and can cause other subtle behavior changes. Be sure to test your application thoroughly after you make this change. For a full list of compatibility changes, see [Retargeting changes](/dotnet/framework/migration-guide/application-compatibility#retargeting-changes).
+> Modifying the `<httpRuntime>` element's `targetFramework` value changes the runtime quirks applied to your application and can cause other subtle behavior changes. Be sure to test your application thoroughly after you make this change. For a full list of compatibility changes, see [Retargeting changes](/dotnet/framework/migration-guide/application-compatibility#retargeting-changes).
 >
 > If the target framework is 4.7 or above, Windows determines the available protocols. In Azure App Service, TLS 1.2 is available. However, if you're using your own virtual machine, you might need to enable TLS 1.2 in the OS.
 
@@ -124,7 +124,7 @@ Failure to upgrade properly might lead to unexpected exceptions or telemetry not
 
 Example scenario:
 
-#### When I right-click an existing project in Solution Explorer, I don't see any Application Insights options
+### When I right-click an existing project in Solution Explorer, I don't see any Application Insights options
 
 * The tools don't support all types of .NET projects. Web and Windows Communication Foundation (WCF) projects are supported. For other project types, such as desktop or service applications, you can still [add an Application Insights SDK to your project manually](/azure/azure-monitor/app/windows-desktop).
 * Make sure you have [Visual Studio 2013 Update 3 or later](/visualstudio/releasenotes/vs2013-update3-rtm-vs). It comes pre-installed with Developer Analytics tools, which provide the Application Insights SDK.
@@ -135,7 +135,7 @@ Example scenario:
 
 Example scenario:
 
-#### When I try to add Application Insights to an existing project, I see an error message
+### When I try to add Application Insights to an existing project, I see an error message
 
 Likely causes:
 
@@ -153,7 +153,7 @@ Fix:
 
 Example scenario:
 
-#### Everything builds OK when I'm debugging on my development machine, but I get a NuGet error on the build server
+### Everything builds OK when I'm debugging on my development machine, but I get a NuGet error on the build server
 
 See [NuGet Package Restore](/nuget/consume-packages/package-restore)
 and [Automatic Package Restore](/nuget/consume-packages/package-restore#migrate-to-automatic-package-restore-visual-studio).
@@ -183,7 +183,7 @@ Otherwise, your project type isn't directly supported by the Developer Analytics
 
 Example scenario:
 
-#### The "Open Application Insights" menu command takes me to the Azure portal, but I get an "access denied" error
+### The "Open Application Insights" menu command takes me to the Azure portal, but I get an "access denied" error
 
 The Microsoft sign-in that you last used on your default browser doesn't have access to [the resource that was created when Application Insights was added to this app](/azure/azure-monitor/app/asp-net). There are two likely causes:
 
@@ -196,7 +196,7 @@ The Microsoft sign-in that you last used on your default browser doesn't have ac
 
 Example scenario:
 
-#### The "Open Application Insights" menu command takes me to the Azure portal, but I get an "asset not found" error
+### The "Open Application Insights" menu command takes me to the Azure portal, but I get an "asset not found" error
 
 There are two likely causes:
 
@@ -214,7 +214,7 @@ Apply one of the following fixes:
 
 Example scenario:
 
-#### I signed in to the Azure portal, and I'm looking at the Azure home dashboard. So where do I find my Application Insights data?
+### I signed in to the Azure portal, and I'm looking at the Azure home dashboard. So where do I find my Application Insights data?
 
 * Search for and select **Application Insights**, and select your application. If you don't have any projects there, you need to [add or configure Application Insights in your web project](/azure/azure-monitor/app/asp-net). You can browse through the summary charts that appear to see more detail.
 * In Visual Studio, while you're debugging your app, select the **Application Insights** button.
@@ -223,7 +223,7 @@ Example scenario:
 
 Example scenario:
 
-#### I ran my app and then opened the Application Insights service in Microsoft Azure, but all the charts show "Learn how to collect," "Not configured," or only page view and user data, but no server data
+### I ran my app and then opened the Application Insights service in Microsoft Azure, but all the charts show "Learn how to collect," "Not configured," or only page view and user data, but no server data
 
 * Run your application in debug mode in Visual Studio (F5). Use the application to generate some telemetry. Check that you can see events logged in the Visual Studio output window.
 
@@ -247,7 +247,7 @@ Example scenario:
 
 Example scenario:
 
-#### I see data in server response time and server requests charts, but no data in page view load time, or in the Browser or Usage panes
+### I see data in server response time and server requests charts, but no data in page view load time, or in the Browser or Usage panes
 
 The data comes from scripts in the web pages.
 
@@ -304,7 +304,7 @@ Did you build for .NET [Long Term Support (LTS)](https://dotnet.microsoft.com/pl
 
 Follow these instructions to capture troubleshooting logs for your framework.
 
-#### .NET Framework
+### .NET Framework
 
 > [!NOTE]
 > Starting in version 2.14, the [Microsoft.AspNet.ApplicationInsights.HostingStartup](https://www.nuget.org/packages/Microsoft.AspNet.ApplicationInsights.HostingStartup) package is no longer necessary. SDK logs are now collected with the [Microsoft.ApplicationInsights](https://www.nuget.org/packages/Microsoft.ApplicationInsights/) package. No other package is required.
@@ -327,7 +327,7 @@ Follow these instructions to capture troubleshooting logs for your framework.
 
 1. Revert these changes when you're finished.
 
-#### .NET Core
+### .NET Core
 
 1. Install the [Application Insights SDK NuGet package for ASP.NET Core](https://nuget.org/packages/Microsoft.ApplicationInsights.AspNetCore) package from NuGet. The version you install must match the current installed version of `Microsoft.ApplicationInsights`.
 
@@ -358,7 +358,9 @@ The Application Insights SDK log `EventSource` has self-troubleshooting logs tha
 
 To collect logs, download PerfView and run this command:
 
-> **PerfView.exe collect -MaxCollectSec:300 -NoGui /onlyProviders=**\*Microsoft-ApplicationInsights-Core,\*Microsoft-ApplicationInsights-Data,\*Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel,\*Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,\*Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,\*Microsoft-ApplicationInsights-Extensibility-DependencyCollector,\*Microsoft-ApplicationInsights-Extensibility-HostingStartup,\*Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,\*Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,\*Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,\*Microsoft-ApplicationInsights-Extensibility-Web,\*Microsoft-ApplicationInsights-Extensibility-WindowsServer,\*Microsoft-ApplicationInsights-WindowsServer-Core,\*Microsoft-ApplicationInsights-LoggerProvider,\*Microsoft-ApplicationInsights-Extensibility-EventSourceListener,\*Microsoft-ApplicationInsights-AspNetCore,\*Redfield-Microsoft-ApplicationInsights-Core,\*Redfield-Microsoft-ApplicationInsights-Data,\*Redfield-Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel,\*Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,\*Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,\*Redfield-Microsoft-ApplicationInsights-Extensibility-DependencyCollector,\*Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,\*Redfield-Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,\*Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,\*Redfield-Microsoft-ApplicationInsights-Extensibility-Web,\*Redfield-Microsoft-ApplicationInsights-Extensibility-WindowsServer,\*Redfield-Microsoft-ApplicationInsights-LoggerProvider,\*Redfield-Microsoft-ApplicationInsights-Extensibility-EventSourceListener,\*Redfield-Microsoft-ApplicationInsights-AspNetCore
+```console
+PerfView.exe collect -MaxCollectSec:300 -NoGui /onlyProviders=\*Microsoft-ApplicationInsights-Core,\*Microsoft-ApplicationInsights-Data,\*Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel,\*Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,\*Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,\*Microsoft-ApplicationInsights-Extensibility-DependencyCollector,\*Microsoft-ApplicationInsights-Extensibility-HostingStartup,\*Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,\*Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,\*Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,\*Microsoft-ApplicationInsights-Extensibility-Web,\*Microsoft-ApplicationInsights-Extensibility-WindowsServer,\*Microsoft-ApplicationInsights-WindowsServer-Core,\*Microsoft-ApplicationInsights-LoggerProvider,\*Microsoft-ApplicationInsights-Extensibility-EventSourceListener,\*Microsoft-ApplicationInsights-AspNetCore,\*Redfield-Microsoft-ApplicationInsights-Core,\*Redfield-Microsoft-ApplicationInsights-Data,\*Redfield-Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel,\*Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,\*Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,\*Redfield-Microsoft-ApplicationInsights-Extensibility-DependencyCollector,\*Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,\*Redfield-Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,\*Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,\*Redfield-Microsoft-ApplicationInsights-Extensibility-Web,\*Redfield-Microsoft-ApplicationInsights-Extensibility-WindowsServer,\*Redfield-Microsoft-ApplicationInsights-LoggerProvider,\*Redfield-Microsoft-ApplicationInsights-Extensibility-EventSourceListener,\*Redfield-Microsoft-ApplicationInsights-AspNetCore
+```
 
 You can modify these parameters as needed:
 
@@ -379,7 +381,9 @@ Alternatively, you can use a cross-platform .NET Core tool, [dotnet-trace](/dotn
 
 After you install `dotnet-trace`, run the following [dotnet-trace collect](/dotnet/core/diagnostics/dotnet-trace#dotnet-trace-collect) command in bash:
 
-> **dotnet-trace collect --process-id \<PID> --providers** Microsoft-ApplicationInsights-Core,Microsoft-ApplicationInsights-Data,Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel,Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,Microsoft-ApplicationInsights-Extensibility-DependencyCollector,Microsoft-ApplicationInsights-Extensibility-HostingStartup,Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,Microsoft-ApplicationInsights-Extensibility-Web,Microsoft-ApplicationInsights-Extensibility-WindowsServer,Microsoft-ApplicationInsights-WindowsServer-Core,Microsoft-ApplicationInsights-LoggerProvider,Microsoft-ApplicationInsights-Extensibility-EventSourceListener,Microsoft-ApplicationInsights-AspNetCore,Redfield-Microsoft-ApplicationInsights-Core,Redfield-Microsoft-ApplicationInsights-Data,Redfield-Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel,Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,Redfield-Microsoft-ApplicationInsights-Extensibility-DependencyCollector,Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,Redfield-Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,Redfield-Microsoft-ApplicationInsights-Extensibility-Web,Redfield-Microsoft-ApplicationInsights-Extensibility-WindowsServer,Redfield-Microsoft-ApplicationInsights-LoggerProvider,Redfield-Microsoft-ApplicationInsights-Extensibility-EventSourceListener,Redfield-Microsoft-ApplicationInsights-AspNetCore
+```console
+dotnet-trace collect --process-id \<PID> --providers Microsoft-ApplicationInsights-Core,Microsoft-ApplicationInsights-Data,Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel,Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,Microsoft-ApplicationInsights-Extensibility-DependencyCollector,Microsoft-ApplicationInsights-Extensibility-HostingStartup,Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,Microsoft-ApplicationInsights-Extensibility-Web,Microsoft-ApplicationInsights-Extensibility-WindowsServer,Microsoft-ApplicationInsights-WindowsServer-Core,Microsoft-ApplicationInsights-LoggerProvider,Microsoft-ApplicationInsights-Extensibility-EventSourceListener,Microsoft-ApplicationInsights-AspNetCore,Redfield-Microsoft-ApplicationInsights-Core,Redfield-Microsoft-ApplicationInsights-Data,Redfield-Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel,Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,Redfield-Microsoft-ApplicationInsights-Extensibility-DependencyCollector,Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,Redfield-Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,Redfield-Microsoft-ApplicationInsights-Extensibility-Web,Redfield-Microsoft-ApplicationInsights-Extensibility-WindowsServer,Redfield-Microsoft-ApplicationInsights-LoggerProvider,Redfield-Microsoft-ApplicationInsights-Extensibility-EventSourceListener,Redfield-Microsoft-ApplicationInsights-AspNetCore
+```
 
 ## Remove Application Insights
 
