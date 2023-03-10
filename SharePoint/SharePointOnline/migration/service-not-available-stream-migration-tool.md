@@ -30,13 +30,13 @@ This error message indicates that the Stream connector isn't successfully connec
 
 ## Cause
 
-This error occurs if connection to the required endpoint is blocked by your tenant or there is a network connection problem.
+This error occurs if your tenant blocks connection to the required endpoint or there's a network connection problem.
 
 ## Resolution
 
 To fix the issue, follow these steps:
 
-1. Make sure that the following URLs are included in your tenant's [allow list](https://security.microsoft.com/tenantAllowBlockList):
+1. Make sure that the following URLs are included in your tenant's [allowlist](https://security.microsoft.com/tenantAllowBlockList):
 
    - [https://api.mover.io](https://api.mover.io)
    - [https://api.microsoftstream.com/](https://api.microsoftstream.com/)
