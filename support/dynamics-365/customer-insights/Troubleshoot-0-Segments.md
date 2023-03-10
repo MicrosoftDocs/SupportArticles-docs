@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot Segments returning "0 members"
-description: Learn how to identify the root cause when segment returns 0 members in Dynamics 365 Customer Insights.
+title: Segments return no members
+description: Learn how to identify the root cause when a segment has no members in Dynamics 365 Customer Insights.
 author: ashwini-puranik
 ms.author: aspuranik
 ms.reviewer: mhart
@@ -9,7 +9,7 @@ ms.date: 03/08/2023
 
 # Segments return no members
 
-This article provides functional guidance to identify the root cause when a Segment returns "0 members". Use this troubleshooting guide when you expect the segment to return members but it doesn't.
+This article provides functional guidance to identify the root cause when a segment returns with no members. Use this troubleshooting guide when you expect the segment to return members but it doesn't.
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ This article provides functional guidance to identify the root cause when a Segm
 
 ## Symptoms
 
-Segment runs and refreshes successfully but doesn't include any profiles ("0 members").
+Segment runs and refreshes successfully but doesn't include any members.
 
 ## Resolution
 
@@ -54,14 +54,10 @@ If the value of the attribute used in a segment rule or condition is missing for
 
   - [Download the .csv for a table on the table view](/dynamics365/customer-insights/entities) to validate the first 100,000 records.
 
-<!-- 
-not valid for most users, hence drop that
-    Note: There might be a few cases where for security and privacy reasons Customer has asked that the "Download" button is disabled and you would not even have access to this 100,000 export approach, or where your dataset is bigger.
--->
+  - Use the [Customer Insights Power BI connector](/dynamics365/customer-insights/export-power-bi) to explore the Customer Insights entity in Power BI.
 
- <!-- drop? 
-        - *Power BI connector*: Use [Power BI connector](https://learn.microsoft.com/en-us/dynamics365/customer-insights/export-power-bi) to explore the Customer Insights entity from Power BI.<br>
-Note: All entities, especially source entities from a "CDM-attach"/"Attach Azure Data Lake Storage" data source, won't be available with this connector, and this not going to scale too good past 1 million records, so would only recommend for investigations on smaller entities. -->
+    > [!NOTE]
+    > All entities, especially source entities from an Azure Data Lake Storage data source, won't be available with this connector. It's also recommended to use on tables with less than 1 million rows.
 
   - Export data to Azure in a [Azure Blob Storage](/dynamics365/customer-insights/export-azure-blob-storage), [Azure Data Lake Storage](/dynamics365/customer-insights/export-azure-data-lake-storage-gen2), or [Azure Synapse Analytics](/dynamics365/customer-insights/export-azure-synapse-analytics), which can help with further investigations using Synapse Analytics, Power BI, or any other data exploration tool.
 
@@ -77,13 +73,8 @@ If the relationship between the table used for segmentation and the unified cust
 
 - Verify the data types of the attributes align across tables.
 
-<!-- I don't get this part, it's described too complicated imho.
+- The [deduplication process identifies a “winner” record during data unification](/dynamics365/customer-insights/review-unification#verify-output-entities-from-data-unification). Measures and segments created where the deduplicated profile source table in the relationship path, may use the “winner” record, leading to unexpected results.
 
-- The [deduplication process identifies a “winner” record during data unification](/dynamics365/customer-insights/review-unification#verify-output-entities-from-data-unification). Measures and segments created using deduplicated tables in the relationship path, use the “winner” record’s primary key. By default, all the segment conditions on attributes from entities that are prior in the relationship path to entities contributing to Profile Unification (or directly the entity contributing to Profile Unification) will be evaluated only for those source records that have a relationship to the “winner” record of Profile Unification.<br>
-E.g: Customer had 'MembershipType' of 'Slvr' (Silver) in the past and is now upgraded to 'Gld' (Gold) but both records exist in the 'CustomerMembership' entity. ContactId is the Primary Key (PK) on this table and this table participates in Unification. During Deduplication process, the PK of record with MembershipType 'Slvr' was deemed as 'winner' and it's PK was included in the Primary Key column of Customer entity while that of the record with 'Gld' was added to the Alternate Key column. The 'MembershipMaster' contains the abbrevations for 'Slvr' and 'Gld' and a segment is created from this entity with condition where 'MembershipTypeName' = 'Gold'. In this scenario, the customer will not be included in the Segment since the 'winner' PK has 'slvr' (Silver) MembershipType.
-    Relation: MembershipType (MembershipType) > CustomerMembership (MembershipType):(ContactId) > Customer (ContactId)
--->
+For example, there are three tables. *Membership* lists membership types, *ContactMembership* maps contacts to membership types, and the unified customer profile. If person maps to more than one membership in *ContactMembership*, and that table participates in the deduplication process, the unified customer profile only contains one primary key that maps to *ContactMembership*. This key is used to look up the type of membership in the *Membership* table through the relationship path *Membership* > *ContactMembership* > *CustomerProfile*. Hence, only one membership type gets returned, instead of two as you might expect.
 
-<!-- preview
-    - *Advanced SQL*: In the case of Advanced SQL Segments, the Join conditions explicitly defined in the SQL statement are considered while the relationships defined within D365 Customer Insights UI are disregarded. 
-    - -->
+If person maps to more than one membership in *ContactMembership*, and that table participates in the deduplication process, the unified customer profile of that person only contains one primary key that maps to *ContactMembership*. This key is used to look up the type of membership in the *Membership* table through the relationship path *Membership* > *ContactMembership* > *CustomerProfile*.
