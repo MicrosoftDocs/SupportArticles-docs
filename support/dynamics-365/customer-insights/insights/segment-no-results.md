@@ -75,6 +75,12 @@ If the relationship between the table used for segmentation and the unified cust
 
 - The [deduplication process identifies a “winner” record during data unification](/dynamics365/customer-insights/review-unification#verify-output-entities-from-data-unification). Measures and segments created where the deduplicated profile source table in the relationship path, may use the “winner” record, leading to unexpected results.
 
-For example, there are three tables. *Membership* lists membership types, *ContactMembership* maps contacts to membership types, and the unified customer profile. If person maps to more than one membership in *ContactMembership*, and that table participates in the deduplication process, the unified customer profile only contains one primary key that maps to *ContactMembership*. This key is used to look up the type of membership in the *Membership* table through the relationship path *Membership* > *ContactMembership* > *CustomerProfile*. Hence, only one membership type gets returned, instead of two as you might expect.
+Segment and measure evaluation happens by joining tables on the attributes defined in the relationships. For example, *MembershipMaster* has a relationship with the *Contact* table with *MembershipId* and *MembershipType* attributes. The *Contact* table has a relationship with the *Customer* table, containing unified customer profiles over the attribute *ContactId* and *ContactId (Source1_Contact)*.
 
-If person maps to more than one membership in *ContactMembership*, and that table participates in the deduplication process, the unified customer profile of that person only contains one primary key that maps to *ContactMembership*. This key is used to look up the type of membership in the *Membership* table through the relationship path *Membership* > *ContactMembership* > *CustomerProfile*.
+:::image type="content" source="../media/relationship-diagram-segment-no-result.png" alt-text="Table relationship diagram example.":::
+
+If the profile table (in this example *Contact*) is [deduplicated](/dynamics365/customer-insights/remove-duplicates), then the evaluation happens through the "winner" record because of the relationship.
+
+:::image type="content" source="../media/data-example-segment-no-result.png" alt-text="Sample data for relationship diagram.":::
+
+In this example, contact C1 (with Gold membership) and C2 (with Silver membership) have been unified with C2 being the winner. Hence when a segment is created to identify 'Gold' members, 'First Person' will not be the part of the segment because the relationship path is evaluated only with C2.
