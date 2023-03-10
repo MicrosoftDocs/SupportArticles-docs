@@ -203,10 +203,12 @@
       href: ../lists-and-libraries/url-invalid-upload-file-to-list.md
     - name: Troubleshoot mapped network drives
       href: ../lists-and-libraries/troubleshoot-mapped-network-drives.md
-  - name: Migration Tool
+  - name: Migration
     items:
+    - name: Error "Service is not available" when using the Stream migration tool
+      href: ../migration/service-not-available-stream-migration-tool.md
     - name: Information about manual migration
-      href: ../migration-tool/content-manual-migration.md
+      href: ../migration/content-manual-migration.md
   - name: Performance
     items:
     - name: Performance troubleshooter for SharePoint Online
