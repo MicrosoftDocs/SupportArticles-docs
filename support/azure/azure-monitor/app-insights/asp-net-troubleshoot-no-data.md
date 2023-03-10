@@ -56,11 +56,11 @@ Internet Information Services (IIS) logs counts of all requests that reach IIS a
 
 Example scenarios:
 
-### I installed my app on my web server and now I don't see any telemetry from it. It worked OK on my dev machine.
+### I installed my app on my web server and now I don't see any telemetry from it. It worked OK on my dev machine
 
 A firewall issue is most likely the cause. [Set firewall exceptions for Application Insights to send data](/azure/azure-monitor/app/ip-addresses).
 
-### I installed the Azure Monitor Application Insights Agent on my web server to monitor existing apps. I don't see any results.
+### I installed the Azure Monitor Application Insights Agent on my web server to monitor existing apps. I don't see any results
 
 See [Troubleshooting Status Monitor](/azure/azure-monitor/app/status-monitor-v2-troubleshoot).
 
@@ -155,14 +155,13 @@ Example scenario:
 
 ### Everything builds OK when I'm debugging on my development machine, but I get a NuGet error on the build server
 
-See [NuGet Package Restore](/nuget/consume-packages/package-restore)
-and [Automatic Package Restore](/nuget/consume-packages/package-restore#migrate-to-automatic-package-restore-visual-studio).
+See [NuGet Package Restore](/nuget/consume-packages/package-restore) and [Automatic Package Restore](/nuget/consume-packages/package-restore#migrate-to-automatic-package-restore-visual-studio).
 
 ## Missing menu command to open Application Insights from Visual Studio
 
 Example scenario:
 
-#### When I right-click my project Solution Explorer, I don't see any Application Insights commands, or I don't see an Open Application Insights command
+### When I right-click my project Solution Explorer, I don't see any Application Insights commands, or I don't see an Open Application Insights command
 
 Likely causes:
 
@@ -230,7 +229,7 @@ Example scenario:
     :::image type="content" source="./media/asp-net-troubleshoot-no-data/output-window.png" alt-text="Screenshot that shows an application running in debug mode in Visual Studio.":::
 * In the Application Insights portal, select **Overview** > [Search](/azure/azure-monitor/app/diagnostic-search). Data usually appears here first.
 * Select the **Refresh** button. The pane refreshes itself periodically, but you can also do it manually. The refresh interval is longer for larger time ranges.
-* Verify that the [connection strings](/azure/azure-monitor/app/sdk-connection-string) match. On the main pane for your app in the Application Insights portal, in the **Essentials** dropdown, look at **Connection string**. Then, in your project in Visual Studio, open *ApplicationInsights.config* and find the \<ConnectionString> element. Check whether the two strings are equal. If the strings don't match, take one of the following actions:
+* Verify that the [connection strings](/azure/azure-monitor/app/sdk-connection-string) match. On the main pane for your app in the Application Insights portal, in the **Essentials** dropdown list, look at **Connection string**. Then, in your project in Visual Studio, open *ApplicationInsights.config* and find the `<ConnectionString>` element. Check whether the two strings are equal. If the strings don't match, take one of the following actions:
 
   | Environment | Action |
   | ----------- | ------ |
