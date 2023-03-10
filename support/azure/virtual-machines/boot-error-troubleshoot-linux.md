@@ -11,7 +11,7 @@ ms.collection: linux
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure
-ms.date: 03/06/2023
+ms.date: 03/10/2023
 ms.author: divargas
 ---
 # Troubleshoot Azure Linux virtual machine boot errors
