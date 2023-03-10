@@ -15,6 +15,8 @@ f1_keywords:
 - vs.classdesigner.ViewInDiagramUnparsableTypeFound
 - vs.classdesigner.AssociationTypeNotFound
 - vs.classdesigner.CPlusPlusTypeCannotBeAdded
+author: HaiyingYu
+ms.author: haiyingyu
 ms.reviewer: tglee
 ---
 # Class Designer errors

@@ -11,7 +11,7 @@ ms.reviewer: tglee
 
 _Applies to:_&nbsp;Visual Studio
 
-This article helps you troubleshoot problems with IntelliSense code snippets. The issues are typically caused by:
+This article helps you troubleshoot problems with IntelliSense [code snippets](/VisualStudio/ide/code-snippets). The issues are typically caused by:
 
 - A corrupt snippet file.
 - Bad content in the snippet file.
@@ -26,6 +26,3 @@ This article helps you troubleshoot problems with IntelliSense code snippets. Th
 - You may be missing a project reference. Examine the documentation about the snippet. If the reference isn't found on the computer, you'll need to install it. Inserting a snippet should add any references needed to the project. If the snippet is missing the reference information, it can be reported to the snippet creator as an error.
 - A variable may be undefined. Undefined variables in a snippet should be highlighted. If not, that can be reported to the snippet creator as an error.
 
-## See also
-
-- [Code snippets](/VisualStudio/ide/code-snippets)
