@@ -1,7 +1,7 @@
 ---
 title: Support for booting from SAN
 description: Describes the supportability of having a Windows server boot from a Storage Area Network (SAN).
-ms.date: 09/08/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting Remote Access (VPN and AOVPN)
 description: Introduces general guidance for troubleshooting scenarios related to Remote Access (VPN and AOVPN).
-ms.date: 03/16/2022
+ms.date: 11/18/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

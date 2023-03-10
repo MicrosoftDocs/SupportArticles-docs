@@ -5,7 +5,6 @@ ms.date: 01/15/2021
 ms.custom: sap:Azure SQL virtual machine
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.prod: sql 
 ---
 # Error (The given key was not present in the dictionary) and SQL Server FCI installation fails on an Azure VM in Server 2019
 

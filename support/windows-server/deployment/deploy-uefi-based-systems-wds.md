@@ -1,7 +1,7 @@
 ---
 title: Windows Deployment Services (WDS) support for UEFI
 description: Discusses the support for deploying to UEFI-based systems from Windows Deployment Services (WDS).
-ms.date: 09/07/2020
+ms.date: 3/24/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -67,24 +67,28 @@
   items:
   - name: Always On Availability Groups (AG)
     items:
-      - name: 9002 error on primary replica
-        href: database-engine/availability-groups/error-9002-transaction-log-large.md
-      - name: Always On DB in recovery pending or suspect state
-        href: database-engine/availability-groups/alwayson-availability-databases-recovery-pending-suspect.md
-      - name: Manually configure AG for automatic failover for errors on data file
-        href: database-engine/availability-groups/configure-always-on-availability-group-perform-failover.md
       - name: Error 2767 on secondary replica
         href: database-engine/availability-groups/error-2767-query-secondary-replica-fails.md
+      - name: Error 9002 on primary replica
+        href: database-engine/availability-groups/error-9002-transaction-log-large.md
       - name: Error 41131 when creating availability group
         href: database-engine/availability-groups/error-41131-create-availability-group.md
+      - name: Always On DB in recovery pending or suspect state
+        href: database-engine/availability-groups/alwayson-availability-databases-recovery-pending-suspect.md
       - name: Issues after changing the hostname
         href: database-engine/availability-groups/error-41041-change-hostname.md
       - name: Listener connection times out in multi-subnet
         href: database-engine/availability-groups/listener-connection-times-out.md
+      - name: Manually configure AG for automatic failover for errors on data file
+        href: database-engine/availability-groups/configure-always-on-availability-group-perform-failover.md
       - name: Query performance degradation on secondary replicas
         href: database-engine/availability-groups/query-performance-degradation.md
       - name: Troubleshooting automatic failover problems
         href: database-engine/availability-groups/troubleshooting-automatic-failover-problems.md
+      - name: Troubleshoot availability group database in reverting state
+        href: database-engine/availability-groups/troubleshoot-availability-group-database-reverting-state.md
+      - name: Troubleshooting log send queuing in an Always On availability group
+        href: database-engine/availability-groups/troubleshooting-log-send-queuing-in-alwayson-availability-group.md
       - name: Troubleshooting on Always On issues
         href: database-engine/availability-groups/troubleshooting-alwayson-issues.md
       - name: Troubleshooting recovery queueing in an Availability Group
@@ -259,6 +263,8 @@
        href: database-engine/database-file-operations/support-network-database-files.md
      - name: Support on iSCSI technology components
        href: database-engine/database-file-operations/support-iscsi-technology-components.md
+     - name: Bulk load operations can leave large amounts of unused space
+       href: database-engine/database-file-operations/troubleshoot-bulk-load-causes-unused-space.md
      - name: Transaction log file doesn't grow
        href: database-engine/database-file-operations/transaction-log-file-not-grow.md
      - name: Troubleshoot DBCC CHECKDB errors
@@ -777,6 +783,12 @@
     items:
     - name: SQL Server 2022 build versions
       href: releases/sqlserver-2022/build-versions.md
+    - name: Cumulative Update 1
+      items:
+      - name: Cumulative Update 1 (KB5022375)
+        href: releases/sqlserver-2022/cumulativeupdate1.md
+      - name: 'FIX: Database accessibility issues with high-volume customer workloads'
+        href: releases/sqlserver-2022/database-accessibility-issues-high-volume-customer-workloads.md
   - name: SQL Server 2019
     items:
     - name: SQL Server 2019 build versions
@@ -796,8 +808,8 @@
   - name: SQL Server on Linux Release History
     items:
     - name: SQL Server 2022
-      href: /sql/linux/sql-server-linux-release-history-2022?context=/troubleshoot/sql/context/context
+      href: linux/release-history-2022.md
     - name: SQL Server 2019
-      href: /sql/linux/sql-server-linux-release-history-2019?context=/troubleshoot/sql/context/context
+      href: linux/release-history-2019.md
     - name: SQL Server 2017
-      href: /sql/linux/sql-server-linux-release-history-2017?context=/troubleshoot/sql/context/context
+      href: linux/release-history-2017.md

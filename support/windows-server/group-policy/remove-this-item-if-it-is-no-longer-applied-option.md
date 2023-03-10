@@ -1,7 +1,7 @@
 ---
 title: Remove this item if it is no longer applied option
 description: Describes the behavior of the Remove this item if it is no longer applied option in Group Policy preferences.
-ms.date: 09/08/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -4,7 +4,6 @@ description: This article shows that when you calculate the previous period grow
 ms.date: 07/22/2020
 ms.custom: sap:Analysis Services
 ms.topic: how-to
-ms.prod: sql
 ---
 # Calculate previous period growth in SQL Server Analysis Services
 

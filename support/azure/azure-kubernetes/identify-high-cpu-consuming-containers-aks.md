@@ -1,81 +1,124 @@
 ---
-title: Identify the containers consuming high CPU in an AKS cluster
-description: Describes how to identify the containers consuming high CPU in an AKS cluster
-ms.date: 07/08/2021
+title: Identify the nodes and containers consuming high CPU in an AKS cluster
+description: Describes how to identify the containers consuming high CPU in an AKS cluster.
+ms.date: 02/22/2023
 ms.reviewer: chiragpa
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-cluster-performance
+author: AmandaAZ
+ms.author: v-weizhu
 ---
-# Identify the containers consuming high CPU in an AKS cluster
+# Identify the nodes and containers consuming high CPU in an AKS cluster
 
-High CPU consumption is a symptom of one or more applications, or processes, that are requiring enough CPU time, that the performance or usability of the machine is impacted. High CPU consumption can occur in a variety of ways, but is most commonly driven by either user action or applications.
+High CPU usage is a symptom of one or more applications or processes that require so much CPU time that the performance or usability of the machine is impacted. High CPU usage can occur in many ways, but it's mostly caused by user configuration.
 
-When a machine experiences high CPU consumption, the applications running on the machine can be negatively impacted, and the user experience will be degraded. Applications or processes also become unstable, which may lead to issues beyond slow responses.
+When a node in an [Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes) cluster experiences high CPU usage, the applications running on it can experience degradation in performance and reliability. Applications or processes also become unstable, which may lead to issues beyond slow responses.
 
-[Container Insights](/azure/azure-monitor/containers/container-insights-overview) is a feature within [Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes) that is designed to monitor the performance of container workloads. You can use Container Insights to identify containers or pods that are driving high CPU consumption.
+This article helps you identify the nodes and containers that consume high CPU and provides best practices to resolve high CPU usage.
 
-## Identify high CPU containers in an AKS cluster
+## Symptoms of high CPU usage
 
-To identify containers or pods that are driving high CPU consumption:
+While running an AKS cluster, you may see the following symptoms that indicate high CPU usage:
 
-1. On the [Azure portal](https://portal.azure.com), navigate to the cluster.
+- CPU starvation
 
-1. Under **Monitoring** select **Insights**.
+    CPU-intensive applications slow down other applications on the same node.
 
-   :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/Insights.png" alt-text="Screenshot of the insights option under the Monitoring selection.":::
+- Slow state changes
 
-1. Set the appropriate **Time Range**.
+    Pods may take longer to get ready.
+
+- NotReady node state
+
+   A node enters the **NotReady** state. This issue occurs because the container with high CPU usage causes the Kubectl command line tool to be unresponsive.
+
+## Methods to identify nodes/containers with high CPU usage
+
+To identify nodes and containers with high CPU usage, use the following two methods:
+
+- [Container insights](#container-insights)
+- [kubectl commands](#kubectl-commands)
+
+### Container insights
+
+[Container insights](/azure/azure-monitor/containers/container-insights-overview) is a feature within AKS. It's designed to monitor the performance of container workloads. You can use Container insights to identify nodes, containers, or pods that drive high CPU usage.
+
+To identify nodes, containers, or pods that drive high CPU usage, follow these steps:
+
+1. Navigate to the cluster from the [Azure portal](https://portal.azure.com).
+
+1. Under **Monitoring**, select **Insights**.
+
+   :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/Insights.png" alt-text="Screenshot of the Monitoring under Insights":::
+
+1. Set the appropriate **Time range**.
 
    :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/six-hour-time-range.png" alt-text="Screenshot of a time range of six hours.":::
 
-1. Select **Containers**.
+1. Locate the nodes with high CPU usage and check if the node CPU usage is stable.
 
-    :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/containers-option.png" alt-text="Screenshot of the Containers option.":::
+    Select **Nodes**. Set **Metric** to **CPU Usage (millicores)** and then set the sample to **Max**. Use the sort feature on the **Max** to order the nodes by **Max%**. The nodes with the highest CPU usage appear at the top.
 
-1. Select the Metric **CPU Usage (millicores)**  and set the sample to **Max**.
+    In the following screenshot, the node only uses 12% of the max CPU and has been running for 16 days.
 
-    :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/cpu-usage-at-max.png" alt-text="Screenshot of the CPU usage, which is set to Max and is located on the right side of the time options.":::
+    :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/node-container-insights.png" alt-text="Screenshot of the Nodes under the Monitoring selection." lightbox="media/identify-high-cpu-consuming-containers-aks/node-container-insights.png":::
 
-In the following example, a container named **myapp-container** inside of the **ultrapewpew2** pod has been up for 36 days. For the last six hours, **myapp-container** has been driving roughly two cores (1834 millicores, 1.8 cores to be exact) of Max CPU usage.
+1. Once you locate the nodes with high CPU usage, select the nodes to find pods on them and their CPU usage.
 
-:::image type="content" source="media/identify-high-cpu-consuming-containers-aks/containers-example.png" alt-text="Screenshot of the CPU usage output.":::
+    :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/containers-in-node-insights.png" alt-text="Screenshot of the insights option for pods under the Monitoring selection." lightbox="media/identify-high-cpu-consuming-containers-aks/containers-in-node-insights.png":::
 
-## Run simple commands on the node
+    Once you get the list of pods with high CPU usage, you can map it to the applications that cause the spike in CPU usage.
 
-A customer may run a simple command because this type of interaction is not available from the Azure portal outside of using one of the az run-commands, which is a slower and less desirable experience for this kind of interaction.
+### Kubectl commands
 
-Simple commands can be run on a node through Secure Shell (SSH) to help identify any high CPU consuming containers.
+> [!NOTE]
+> This method can only be used to diagnose high CPU usage at the current time.
 
-1. Access the afflicted node with SSH. Depending on the version of the cluster, run either `docker stats` or `crictl stats`, depending on whether or not you have **ContainerD**. ContainerD is a container runtime that executes containers and [manages container images on a node](/azure/aks/cluster-configuration#container-runtime-configuration).
+1. Use the `kubectl top node` command to get the CPU usage of all nodes.
 
-   1. If you don't have **ContainerD**, run this command:
+    :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/identify-top-node-cpu.png" alt-text="Screenshot of running the kubectl top node command.":::
 
-      `docker stats --no-stream --format "table {{.ID}}\t{{.CPUPerc}}" | sort -t " " --key=2 -h -r | head`.
+1. Get the list of pods running on the node and their CPU usage by running the following command. Replace the `node_name` with the actual node name.
 
-   1. If you have **ContainerD**, run this command:
+    ```bash
+    kubectl get pods --all-namespaces -o wide | grep <node_name> | awk '{print $1" "$2}' | xargs -n2 kubectl top pods --no-headers --namespace | sort -t ' ' --key 2 --numeric --reverse
+   ```
 
-      `crictl stats -o "table {{.ID\t{{.CPUPerc}}" | sort -t " " --key=2 -h -r | head`.
+    :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/pods-on-node-kubectl.png" alt-text="Screenshot of top pods on a node." lightbox="media/identify-high-cpu-consuming-containers-aks/pods-on-node-kubectl.png":::
 
-1. To identify the hosting pod of the container, run either `docker inspect` or `crictl inspect`, depending on whether or not you have **ContainerD**:
+1. Check the requests and limits for each pod on the node with the `Kubectl describe node <node_name>` command.
 
-   1. If you don't have **ContainerD**, run this command:
+    :::image type="content" source="media/identify-high-cpu-consuming-containers-aks/describe-node-kubectl.png" alt-text="Screenshot of kubectl describe node.":::
 
-      `docker inspect containerid –format "{{json .Config.Hostname}}"`.
+    After you identify the pods that use excessive CPU, you can identify the applications running on the pods.
 
-   1. If you have **ContainerD**, run this command:
+## Best practices to resolve high CPU usage
 
-      `crictl inspect --output go-template --template "{{.info.runtimeSpec.hostname}}" YOUR_CONTAINER_ID`.
+- [Set appropriate limits for containers](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)
 
-## Additional information
+    Kubernetes allows specifying requests and limits on the resources for containers. Resource requests and limits represent the minimum and maximum number of resources a container can use. We recommend you set appropriate requests and limits to choose the appropriate Kubernetes [Quality of Service (QoS)](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/) class for each pod.  
+
+- [Enable Horizontal Pod Autoscaler (HPA)](/azure/aks/concepts-scale)
+
+    Setting appropriate limits along with enabling HPA can help in resolving high CPU usage.
+
+- [Select higher SKU VMs](https://azure.microsoft.com/pricing/details/virtual-machines/series/)
+
+    To handle high CPU workloads, use higher SKU VMs. To do this, create a new node pool, cordon off the nodes to make them unschedulable, and drain the existing node pool.
+
+- [Isolate system and user workloads](/azure/aks/use-system-pools)
+
+    We recommend that you create a separate node pool (other than the agent pool) to run your workloads. This can prevent overloading the system node pool and provide better performance.
+
+## References
 
 - [Container insights overview](/azure/azure-monitor/containers/container-insights-overview)
 - [Monitor your Kubernetes cluster performance with Container insights](/azure/azure-monitor/containers/container-insights-analyze)
 - [How to manage the Container insights agent](/azure/azure-monitor/containers/container-insights-manage-agent)
-
-### External links (Kubernetes)
-
 - [Resource Limits](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)
 - [Resource Quotas](https://kubernetes.io/docs/concepts/policy/resource-quotas/)
 - [Limit Ranges](https://kubernetes.io/docs/concepts/policy/limit-range/)
+- [Quality of Service](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/)
+
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

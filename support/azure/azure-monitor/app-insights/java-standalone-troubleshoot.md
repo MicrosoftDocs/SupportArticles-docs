@@ -2,11 +2,11 @@
 title: Troubleshoot Azure Monitor Application Insights for Java
 description: This article presents troubleshooting information for the Java agent for Azure Monitor Application Insights.
 ms.topic: conceptual
-ms.date: 2/13/2023
+ms.date: 3/3/2023
 ms.author: v-dele
 author: DennisLee-DennisLee
 editor: v-jsitser
-ms.reviewer: aaronmax, jeanbisutti, trstalna, ashisunnam
+ms.reviewer: aaronmax, jeanbisutti, trstalna, toddfous, heya
 ms.service: azure-monitor
 ms.subservice: application-insights
 ms.devlang: java
@@ -48,6 +48,8 @@ If the connectivity issue is caused by the Application Insights Java agent, cons
 - If you use the `-Djsse.enableSNIExtension=false` option, try to run the agent without that option. From Application Insights Java version 3.4.5, if you specify `-Djsse.enableSNIExtension=false`, the following error entry appears in the logs:
 
   > WARN  c.m.applicationinsights.agent - System property -Djsse.enableSNIExtension=false is detected. If you have connection issues with Application Insights, please remove this.
+
+- If none of the previous options are helpful, you can use [troubleshooting tools](https://github.com/microsoft/ApplicationInsights-Java/wiki/Diagnose-connection-to-the-Application-Insights-backend-(3.x)#additional-tests).
 
 ## Java virtual machine (JVM) fails to start
 
@@ -218,6 +220,16 @@ In this case, the server side is the Application Insights ingestion endpoint or 
 If you're using Java 9 or later, check to make sure the JVM has the `jdk.crypto.cryptoki` module included in the *jmods* folder. Also, if you're building a custom Java runtime using `jlink`, be sure to include the same module.
 
 Otherwise, these cipher suites should already be part of modern Java 8+ distributions. We recommend that you check where you installed your Java distribution from, and investigate why the security providers in that Java distribution's *java.security* configuration file differ from standard Java distributions.
+
+## Slow startup time in Application Insights and Java 8
+
+There's a known issue in Java 8 that's related to the jar file signature verification of Java agents. This issue can increase the startup time in Application Insights. To fix this issue, you can apply one of the following options:
+
+- If your application is based on Spring Boot, [runtime attach the Application Insights Java agent](/azure/azure-monitor/app/java-spring-boot#enabling-programmatically).
+
+- Use Java version 11 or a later version.
+
+Alternatively, you can try the following experimental feature: [Startup time improvement for a limited number of CPU cores](https://github.com/microsoft/ApplicationInsights-Java/wiki/Start-up-time-improvement-with-a-limited-number-of-CPU-cores-(experimental)). If you experience any issues while using this feature, send us feedback.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 

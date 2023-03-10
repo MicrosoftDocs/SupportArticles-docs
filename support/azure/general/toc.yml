@@ -103,6 +103,8 @@
     href: error-accountencryptionkeyunavailable.md
   - name: Batch node creation delays when restarting or reimaging
     href: batch-node-creation-delay-restart-reimage.md
+  - name: Batch node is stuck in Unusable state
+    href: azure-batch-node-unusable-state.md
   - name: Batch pool creation failure
     href: azure-batch-pool-creation-failure.md
   - name: Batch pool deletion failure

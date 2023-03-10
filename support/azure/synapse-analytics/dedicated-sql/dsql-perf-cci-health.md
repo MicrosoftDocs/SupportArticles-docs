@@ -129,7 +129,7 @@ FROM calc_excess
 -- CROSS APPLY dbo.fnMs_GenerateIndexMaintenanceScript(object_id, partition_number) AS script
 WHERE -- set your own threshold(s) for the following; 0 is the ideal, but usually not practical
   calc_excess.[excess_size_in_mb] > 300
-  OR calc_excess.excess_rowgroup_pct > 0.1
+  OR calc_excess.excess_pct > 0.1
   OR calc_excess.OPEN_rowgroup_size_in_mb > 100
 ORDER BY calc_excess.[excess_size_in_mb] DESC;
 ```
@@ -138,7 +138,7 @@ ORDER BY calc_excess.[excess_size_in_mb] DESC;
 
 Performing maintenance on a table/partition may result in one of the following scenarios:
 
-- `excess_rowgroup_pct` or `excess_size_in_mb` is larger than it was before maintenance.
+- `excess_pct` or `excess_size_in_mb` is larger than it was before maintenance.
 - The maintenance statement fails with insufficient memory.
 
 ### Typical causes

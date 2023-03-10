@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot high Lsass.exe CPU usage
 description: Solves the high Lsass.exe CPU usage issue on Active Directory Domain Controllers.
-ms.date: 09/08/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

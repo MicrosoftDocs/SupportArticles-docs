@@ -12,8 +12,6 @@
       href: ./identity/detect-and-recover-from-usn-rollback.md
     - name: Event 2089 if you don't back up a domain controller
       href: ./identity/ntds-replication-event-2089-backup-latency-interval.md
-    - name: Event ID 1587 after you restore domain controller
-      href: ./identity/restoring-domain-controller-cause-inconsistencies.md
     - name: How to remove orphaned domains
       href: ./identity/remove-orphaned-domains.md
     - name: How to restore deleted user accounts and their groups
@@ -1566,6 +1564,8 @@
       href: ./networking/dns-namespace-design.md
     - name: DNS queries to some domains are failed
       href: ./networking/dns-name-queries-not-success.md
+    - name: DNS record registration behavior when the DHCP server manages dynamic DNS updates
+      href: ./networking/dns-registration-behavior-when-dhcp-server-manages-dynamic-dns-updates.md
     - name: DNS records don't show in DNS zones
       href: ./networking/dns-records-not-present.md
     - name: DNS registers duplicate SRV records for a DC

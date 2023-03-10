@@ -5671,6 +5671,11 @@
       "source_path": "support/windows-server/system-management-components/windows-server-2003-service-pack-1-support-tools.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/windows-server-2003-service-pack-1-support-tools",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/identity/restoring-domain-controller-cause-inconsistencies.md",
+      "redirect_url": "/troubleshoot/windows-server/identity/active-directory-overview",
+      "redirect_document_id": false
     }, 
     {
       "source_path": "support/sql/replication/configure-troubleshoot-subscriptionstreamsof-distribution-agent.md",
@@ -5680,6 +5685,21 @@
     {
       "source_path": "support/sql/database-engine/install/windows/error-install-sql-server-2005-sp4.md",
       "redirect_url": "/troubleshoot/sql/database-engine/install/windows/user-data-log-directory-invalid",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/invalid-service-principal-profile-credentials-or-client-secret.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-code-serviceprincipalvalidationclienterror",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/error-aadsts7000215-invalid-client-secret-provided.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-code-serviceprincipalvalidationclienterror",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/database-engine/performance/troubleshoot-availability-group-database-reverting-state.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/troubleshoot-availability-group-database-reverting-state",
       "redirect_document_id": true
     }
 ]
