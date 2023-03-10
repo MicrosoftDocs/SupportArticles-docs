@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot .NET Framework targeting errors
-description: This article provides a resolution for MSBuild errors that might occur because of reference issues and also about how you to resolve those errors.
+description: This article provides resolutions for MSBuild errors that might occur because of reference issues.
 ms.custom: sap:Project/Build System
-ms.date: 03/09/2023
+ms.date: 03/10/2023
 ms.topic: troubleshooting
 f1_keywords:
 - vs.FrameworkTargetingErrors
@@ -16,7 +16,7 @@ ms.reviewer: ghogen
 
 _Applies to:_&nbsp;Visual Studio
 
-This topic describes MSBuild errors that might occur because of reference issues and how you can resolve those errors.
+This topic describes [MSBuild](/visualstudio/msbuild/msbuild) errors that might occur because of reference issues and how you can resolve those errors.
 
 ## Reference a project or assembly that targets a different version of .NET
 
@@ -42,7 +42,12 @@ To work around application settings in .NET Framework applications,
 1. Open **Solution Explorer**.
 1. Select **Show All Files**, and then edit the _app.config_ file in the XML editor of Visual Studio.
 1. Change the version in the settings to match the appropriate version of .NET. For example, you can change the version setting from 4.0.0.0 to 2.0.0.0.
-1. Similarly, for an application that has added resources, open **Solution Explorer**, select **Show All Files**, expand **My Project** (Visual Basic) or **Properties** (C#), and then edit the _Resources.resx_ file in the XML editor of Visual Studio.
+
+Similarly, for an application that has added resources,
+
+1. Open **Solution Explorer**.
+1. Select **Show All Files**.
+1. Expand **My Project** (Visual Basic) or **Properties** (C#), and then edit the _Resources.resx_ file in the XML editor of Visual Studio.
 1. Change the version setting from 4.0.0.0 to 2.0.0.0.
 
 ### Update resources
@@ -68,7 +73,7 @@ Then, replace them with the simple form:
 
 ## See also
 
-- [How to: Target a version of the .NET Framework](/visualstudio/ide/visual-studio-multi-targeting-overview?view=vs-2022&preserve-view=true)
+- [How to: Target a version of the .NET Framework](/visualstudio/ide/visual-studio-multi-targeting-overview)
 - [.NET Framework client profile](/dotnet/framework/deployment/client-profile)
-- [Framework targeting overview](/visualstudio/ide/visual-studio-multi-targeting-overview?view=vs-2022&preserve-view=true)
-- [Multitargeting](/visualstudio/msbuild/msbuild-multitargeting-overview?view=vs-2022&preserve-view=true)
+- [Framework targeting overview](/visualstudio/ide/visual-studio-multi-targeting-overview)
+- [Multitargeting](/visualstudio/msbuild/msbuild-multitargeting-overview)
