@@ -1,6 +1,6 @@
 ---
 title: Stream migration tool returns Service not available
-description: Describes an issue in which you receive the Service is not available error when you start the Stream migration tool.
+description: Describes an issue in which you receive a Service is not available error message when you start the Stream migration tool.
 author: helenclu
 ms.author: luche
 ms.reviewer: prbalusu, salarson
@@ -18,7 +18,7 @@ appliesto:
 ms.date: 3/10/2023
 ---
 
-# Error "Service is not available" when you use the Stream migration tool
+# "Service is not available" error when you use the Stream migration tool
 
 ## Symptoms
 
@@ -30,15 +30,15 @@ This error message indicates that the Stream connector isn't successfully connec
 
 ## Cause
 
-This error occurs if your tenant blocks connection to the required endpoint or there's a network connection problem.
+This error occurs if your tenant blocks the connection to the required endpoint or if a network connection problem occurs.
 
 ## Resolution
 
-To fix the issue, follow these steps:
+To fix the error, follow these steps:
 
-1. Make sure that the following URLs are included in your tenant's [allowlist](https://security.microsoft.com/tenantAllowBlockList):
+1. Make sure that the following URLs are included in your tenant [allow list](https://security.microsoft.com/tenantAllowBlockList):
 
    - [https://api.mover.io](https://api.mover.io)
    - [https://api.microsoftstream.com/](https://api.microsoftstream.com/)
 
-2. If the issue persists, [check your network connection status](https://support.microsoft.com/windows/check-your-network-connection-status-efb4fb41-f751-567a-f60f-aac9114659a5).  
+2. If the issue persists, [check your network connection status](https://support.microsoft.com/windows/check-your-network-connection-status-efb4fb41-f751-567a-f60f-aac9114659a5).
