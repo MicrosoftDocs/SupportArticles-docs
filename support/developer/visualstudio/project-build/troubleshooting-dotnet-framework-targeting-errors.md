@@ -52,11 +52,11 @@ Similarly, for an application that has added resources,
 
 ### Update resources
 
- If your application has resources such as icons or bitmaps or settings such as data connection strings, you can also resolve the error by removing all the items on the **Settings** page of the **Project Designer** and then re-adding the required settings.
+ If your application has resources such as icons or bitmaps or settings such as data connection strings, you can also resolve the error by removing all the items on the **Settings** page of the **Project Designer** and then readding the required settings.
 
-## You re-target a project to a different version of .NET and references aren't resolved
+## You retarget a project to a different version of .NET and references aren't resolved
 
- If you re-target a project to a different version of .NET, your references may not resolve properly in some cases. Explicit fully qualified references to assemblies often cause this issue, but you can resolve it by removing the references that don't resolve and then adding them back to the project. As an alternative, you can edit the project file to replace the references. First, remove references of the following form:
+ If you retarget a project to a different version of .NET, your references may not resolve properly in some cases. Explicit fully qualified references to assemblies often cause this issue, but you can resolve it by removing the references that don't resolve and then adding them back to the project. As an alternative, you can edit the project file to replace the references. First, remove references of the following form:
 
 ```xml
 <Reference Include="System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
