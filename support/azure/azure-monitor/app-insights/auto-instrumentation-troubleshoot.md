@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Application Insights auto-instrumentation
-description: Troubleshoot auto-instrumentation in Application Insights.
+description: Helps troubleshoot problems with auto-instrumentation in Application Insights.
 ms.topic: conceptual
 ms.service: azure-monitor
 ms.subservice: application-insights
@@ -36,9 +36,9 @@ See the .NET or .NET Core documentation to determine if your version is supporte
 
 Auto-instrumentation fails if it detects the following libraries:
 
-- System.Diagnostics.DiagnosticSource
-- Microsoft.AspNet.TelemetryCorrelation
-- Microsoft.ApplicationInsights
+- `System.Diagnostics.DiagnosticSource`
+- `Microsoft.AspNet.TelemetryCorrelation`
+- `Microsoft.ApplicationInsights`
 
 These libraries must be removed for auto-instrumentation to succeed.
 

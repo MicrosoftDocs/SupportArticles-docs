@@ -12,7 +12,6 @@ ms.devlang: csharp
 ms.custom: devx-track-csharp
 #Customer intent: As an Application Insights user, I want to know how to troubleshoot issues when I can't see data in Application Insights for .NET or .NET Core so that I can use it effectively.
 ---
-
 # Troubleshoot no data: Application Insights for .NET and .NET Core
 
 This article provides troubleshooting information to help resolve issues when data is missing or doesn't appear when you're using Application Insights for .NET and .NET Core.
@@ -68,8 +67,7 @@ See [Troubleshooting Status Monitor](/azure/azure-monitor/app/status-monitor-v2-
 
 If you have an ASP.NET application hosted in Azure App Service or in IIS on a virtual machine, your application could fail to connect to the Snapshot Debugger service because of a missing SSL security protocol.
 
-[The Snapshot Debugger endpoint requires TLS version 1.2](/azure/azure-monitor/snapshot-debugger/snapshot-debugger-upgrade). The set of SSL security protocols is one of the quirks enabled by the `<httpRuntime>` element's `targetFramework` attribute value in the `<system.web>` section of the *web.config* file.
-If the target framework is 4.5.2 or lower, TLS 1.2 isn't included by default.
+[The Snapshot Debugger endpoint requires TLS version 1.2](/azure/azure-monitor/snapshot-debugger/snapshot-debugger-upgrade). The set of SSL security protocols is one of the quirks enabled by the `<httpRuntime>` element's `targetFramework` attribute value in the `<system.web>` section of the *web.config* file. If the target framework is 4.5.2 or lower, TLS 1.2 isn't included by default.
 
 > [!NOTE]
 > The `<httpRuntime>` element's `targetFramework` attribute value is independent of the target framework used when you build your application.
@@ -188,7 +186,7 @@ The Microsoft sign-in that you last used on your default browser doesn't have ac
 
 | Cause | Solution |
 | ----- | -------- |
-| You have more than one Microsoft account&mdash;perhaps a work and a personal Microsoft account. If that's the case, the sign-in that you last used on your default browser was for a different account than the one that has access to [add Application Insights to the project](/azure/azure-monitor/app/asp-net). | Select your name in the upper-right corner of the browser window and sign out. Then sign in with the account that has access. Search for and select **Application Insights** and select your application. |
+| You have more than one Microsoft account&mdash;perhaps a work and a personal Microsoft account. If that's the case, the sign-in that you last used on your default browser was for a different account than the one that has access to [add Application Insights to the project](/azure/azure-monitor/app/asp-net). | Select your name in the upper right corner of the browser window and sign out. Then sign in with the account that has access. Search for and select **Application Insights** and select your application. |
 | Someone else added Application Insights to the project and they forgot to give you [access to the resource group](/azure/azure-monitor/app/resources-roles-access-control) in which it was created. | If they used an organizational account, they can add you to the team. Or they can grant you individual access to the resource group. |
 
 ## "Asset not found" on opening Application Insights from Visual Studio
@@ -228,7 +226,7 @@ Example scenario:
 
     :::image type="content" source="./media/asp-net-troubleshoot-no-data/output-window.png" alt-text="Screenshot that shows an application running in debug mode in Visual Studio.":::
 * In the Application Insights portal, select **Overview** > [Search](/azure/azure-monitor/app/diagnostic-search). Data usually appears here first.
-* Select the **Refresh** button. The pane refreshes itself periodically, but you can also do it manually. The refresh interval is longer for larger time ranges.
+* Select **Refresh**. The pane refreshes itself periodically, but you can also do it manually. The refresh interval is longer for larger time ranges.
 * Verify that the [connection strings](/azure/azure-monitor/app/sdk-connection-string) match. On the main pane for your app in the Application Insights portal, in the **Essentials** dropdown list, look at **Connection string**. Then, in your project in Visual Studio, open *ApplicationInsights.config* and find the `<ConnectionString>` element. Check whether the two strings are equal. If the strings don't match, take one of the following actions:
 
   | Environment | Action |
@@ -269,7 +267,7 @@ Performance data like CPU and the I/O rate is available for the following enviro
 
 ## No (server) data since I published the app to my server
 
-* Check that you copied all the `Microsoft.ApplicationInsights` DLLs to the server, together with *Microsoft.Diagnostics.Instrumentation.Extensions.Intercept.dll*.
+* Check that you copied all the `Microsoft.ApplicationInsights` DLLs to the server, together with `Microsoft.Diagnostics.Instrumentation.Extensions.Intercept.dll`.
 * In your firewall, you might have to [open some TCP ports](/azure/azure-monitor/app/ip-addresses).
 * If you have to use a proxy to send out of your corporate network, set the [\<defaultProxy>](/previous-versions/dotnet/netframework-1.1/aa903360(v=vs.71)) element in *web.config*.
 
@@ -332,7 +330,7 @@ Follow these instructions to capture troubleshooting logs for your framework.
 
    The latest version of `Microsoft.ApplicationInsights.AspNetCore` is 2.14.0, and it refers to `Microsoft.ApplicationInsights` version 2.14.0. For this reason, the version of `Microsoft.ApplicationInsights.AspNetCore` to be installed should be 2.14.0.
 
-1. Modify the `ConfigureServices` method in your **Startup.cs** class:
+1. Modify the `ConfigureServices` method in your *Startup.cs* class:
 
     ```csharp
     services.AddSingleton<ITelemetryModule, FileDiagnosticsTelemetryModule>();
