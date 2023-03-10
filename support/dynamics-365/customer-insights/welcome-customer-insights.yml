@@ -37,6 +37,14 @@ landingContent:
             url: data-ingestion/power-query-data-source-refresh-issues-dataflows.md
 
   # Card
+  - title: Insights
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Segments return no members
+            url: insights/segment-no-results.md
+
+  # Card
   - title: Documentation and training
     linkLists:
       - linkListType: reference
