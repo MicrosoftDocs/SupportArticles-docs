@@ -99,7 +99,7 @@ If none of the previous steps help you successfully install or upgrade Visual St
 
 ## Network layout or offline installations
 
-To resolve issues with a [network installation](create-a-network-installation-of-visual-studio.md), see [Error Codes](/visualstudio/install/create-a-network-installation-of-visual-studio#error-codes) or [Troubleshoot network-related errors when you install or use Visual Studio](troubleshoot-network-related-errors.md).
+To resolve issues with a [network installation](/visualstudio/install/create-a-network-installation-of-visual-studio), see [Error Codes](/visualstudio/install/create-a-network-installation-of-visual-studio#error-codes) or [Troubleshoot network-related errors when you install or use Visual Studio](troubleshoot-network-related-errors.md).
 
 ## Administrator Updates
 
