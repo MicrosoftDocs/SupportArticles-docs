@@ -20,6 +20,8 @@
   href: ./troubleshooting-code-coverage.md
 - name: Troubleshoot issues with IntelliSense code snippets
   href: ./troubleshooting-snippets.md
+- name: Troubleshoot specific errors in ClickOnce deployments
+  href: ./troubleshoot-clickonce-deployments.md
 - name: Visual Studio 2012 crashes with StarDict-3
   href: ./crash-with-stardict-3.md
 - name: Unrecoverable process error
