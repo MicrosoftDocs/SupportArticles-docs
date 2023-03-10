@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot email archive and deletion issues with MRM
+title: Resolve email archive and deletion issues when using MRM
 description: Explores some common issues that prevent messaging records management (MRM) from correctly deleting or archiving email messages in Exchange Online. This article also provides steps to identify the root cause and resolve the issues.
 author: helenclu
 ms.author: luche
@@ -18,14 +18,14 @@ search.appverid: MET150
 ms.date: 3/7/2023
 ---
 
-# Resolve email archive and deletion issues by using MRM
+# Resolve email archive and deletion issues when using MRM
 
 This article explores some common issues that prevent messaging records management (MRM) from correctly deleting or archiving email messages in Exchange Online. It also provides steps to identify the root cause and resolve the issues.
 
 > [!NOTE]
 >
 > - These troubleshooting steps also apply to Exchange hybrid deployments in which the primary mailbox is hosted on-premises and the archive mailbox is in Exchange Online. In such deployments, perform these steps by using the on-premises Exchange Management Shell.
-> - In Exchange Online, the Managed Folder Assistant (MFA) is set to process mailboxes at least one time every seven days. Although MFA usually processes mailboxes every day, the process can take up to seven days to finish. Instead of waiting for the propcess to run, you can force it by running the `Start-ManagedFolderAssistant <mailbox ID>` cmdlet.
+> - In Exchange Online, the Managed Folder Assistant (MFA) is set to process mailboxes at least one time every seven days. Although MFA usually processes mailboxes every day, the process can take up to seven days to finish. Instead of waiting for the process to run, you can force it by running the `Start-ManagedFolderAssistant <mailbox ID>` cmdlet.
 > - MRM doesn't process mailboxes that are smaller than 10 MB.
 
 ## Common causes
@@ -114,7 +114,7 @@ You can use MFCMAPI to check the PR_ROAMING_XMLSTREAM property by following thes
 
 You can also use MFCMAPI to check whether personal archive or retention tags are correctly applied to folders. To do this, use similar steps that are mentioned above, select the affected folder, and check its properties for archive tags or retention tags. You can do this for individual email messages, too.
  
-If you're dealing with a default archive policy that applies to the entire mailbox, you won't see any archive policy properties, such as:
+If you're dealing with a Default Archive policy that applies to the entire mailbox, you won't see any archive policy properties, such as:
 
 - PR_ARCHIVE_TAG
 - PR_ARCHIVE_PERIOD
@@ -140,7 +140,7 @@ To gather information about the oldest items and policies that are applied, run 
   Get-MailboxFolderStatistics -Identity  <primary mailbox ID> -Archive -IncludeOldestAndNewestItems | Export-CSV -NoTypeInformation -Path .\archivefolderstats.csv
   ```
 
-In the command output, look for the item that have the earliest received date in any given folder. Use the following guidance:
+In the command output, look for the item that has the earliest received date in any given folder. Use the following guidance:
 
 - Check the **OldestItemReceivedDate** of all folders that are located under **Top of Information Store**, including **Inbox**, **Sent Items**, **Junk Email**, and any of their user-created subfolders. Exclude **Deleted Items**, **Contacts**, **Calendar** (recurring meetings only), and **Tasks** (recurring tasks only). Then, compare the **OldestItemReceivedDate** value to the **Retention Age** value that's specified in the non-working policy.
 
@@ -179,20 +179,20 @@ Review the log to determine whether any errors occurred when the MFA processed t
 > [!NOTE]
 > If the log contains "resource unhealthy" error messages, this means that the mailbox processing is throttled. Because of the size of the mailbox and the number of items that it contains, MRM is processing the mailbox very slowly. Unfortunately, throttling is unavoidable when you work with large mailboxes. 
 
-If you don't see any logs, and you receive an error message that says, "no logs were found," this means that MRM processed the mailbox without any errors.
+If you don't see any logs, and you receive an error message that says "no logs were found", this means that MRM processed the mailbox without any errors.
 
 You should also check the following additional properties that can indicate whether MFA processed the contents of the mailbox:
 
-- ElcLastRunUpdatedItemCount: The number of individual items that were tagged or untagged by MFA in its last run
-- ElcLastRunTaggedWithArchiveItemCount: The number of items that MFA updated with an archive tag in its last run
-- ElcLastRunTaggedWithExpiryItemCount: The number of items that MFA updated to have an expiry (delete) tag on its last run
-- ElcLastRunDeletedFromRootItemCount: The number of items from the *Deleted Items* folder that expired and were automatically moved to the *Recoverable Items* folder.
+- ElcLastRunUpdatedItemCount: The number of individual items that were tagged or untagged by MFA on its last run
+- ElcLastRunTaggedWithArchiveItemCount: The number of items that MFA updated with an archive tag on its last run
+- ElcLastRunTaggedWithExpiryItemCount: The number of items that MFA updated with an expiry (delete) tag on its last run
+- ElcLastRunDeletedFromRootItemCount: The number of items from the *Deleted Items* folder that expired and were automatically moved to the *Recoverable Items* folder
 - ElcLastRunDeletedFromDumpsterItemCount: The number of items that MFA deleted from the *Recoverable Items* folder on its last run
 - ElcLastRunArchivedFromRootItemCount: The number of items that were moved from **Inbox** or **Top of Information Store** of the primary mailbox to **Inbox** or **Top of Information Store** of the archive mailbox
 - ElcLastRunArchivedFromDumpsterItemCount: The number of items that were moved from the *Recoverable Items* folder of the primary mailbox to the *Recoverable Items* folder of the archive mailbox
 - ElcLastSuccessTimestamp: The last time that MFA processed the mailbox without any errors (In the case of MRM throttling, these errors may be temporary. This means that items will continue to be moved or deleted, but at a slower rate than usual.)
 
-To retrieve these properties, run the following PowerShell commands. These commands parse the XML and return the Email Life Cycle-related properties that begin with "Elc."
+To retrieve these properties, run the following PowerShell commands. These commands parse the XML and return the Email Life Cycle-related properties that begin with "Elc".
 
 ```powershell
 $logProps = Export-MailboxDiagnosticLogs <mailboxID> -ExtendedProperties
