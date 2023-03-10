@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot boot errors in Azure Linux virtual machines
-description: This article helps link you to articles to troubleshoot boot errors in Azure Linux virtual machines.
+description: This article helps troubleshoot boot errors in Azure Linux virtual machines.
 services: virtual-machines
 documentationCenter: ''
 author: divargas-msft
@@ -26,7 +26,7 @@ This article consolidates the most common Linux operating system boot errors you
 
 * To troubleshoot a Linux VM that lands into the dracut emergency shell, see [Azure Linux virtual machine fails to boot and enters dracut emergency shell](linux-no-boot-dracut.md).
 
-* To recover a Linux VM that fails to boot due to "VFAT file system disabled," see [Azure Linux virtual machine fails to boot after VFAT file system type is disabled](vfat-disabled-boot-issues.md).
+* To recover a Linux VM that fails to boot due to VFAT file system disabled, see [Azure Linux virtual machine fails to boot after VFAT file system type is disabled](vfat-disabled-boot-issues.md).
 
 * To troubleshoot a Linux VM that's unable to boot due to file system corruption issues, see [Troubleshoot Linux virtual machine boot issues due to filesystem errors](linux-recovery-cannot-start-file-system-errors.md).
 
@@ -38,7 +38,7 @@ This article consolidates the most common Linux operating system boot errors you
 
 * To troubleshoot a Linux VM that fails to boot due to Hyper-V driver issues, see [Troubleshoot Linux virtual machine boot and network issues due to Hyper-V driver-associated errors](linux-hyperv-issue.md).
 
-* To recover a Linux VM that fails to start due to "root file system full issues," see [Troubleshoot Azure Linux virtual machine boot issues due to full OS disk](linux-fulldisk-boot-error.md).
+* To recover a Linux VM that fails to start due to root file system full issues, see [Troubleshoot Azure Linux virtual machine boot issues due to full OS disk](linux-fulldisk-boot-error.md).
 
 ## Tools to recover Linux VM from no boot scenarios
 
