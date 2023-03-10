@@ -1,7 +1,7 @@
 ---
 title: Wireless network connectivity issues troubleshooting
 description: Learn how to troubleshoot Wi-Fi connections. Troubleshooting Wi-Fi connections requires understanding the basic flow of the Wi-Fi autoconnect state machine.
-ms.date: 02/14/2023
+ms.date: 03/10/2023
 manager: dcscontentpm
 ms.prod: windows-client
 author: aczechowski
@@ -42,7 +42,7 @@ Wireless ETW is incredibly verbose and calls out many innocuous errors (rather f
 It's important to understand the different Wi-Fi components involved, their expected behaviors, and how the problem scenario deviates from those expected behaviors.
 The intention of this troubleshooter is to show how to find a starting point in the verbosity of wireless_dbg ETW and home in on the responsible components that are causing the connection problem.
 
-### Known Issues and fixes
+### Known issues and fixes
 
 | OS version | Fixed in |
 | --- | --- |
@@ -62,7 +62,7 @@ Make sure that you install the latest Windows updates, cumulative updates, and r
 - [Windows Server 2012](https://support.microsoft.com/help/4009471)
 - [Windows 7 SP1 and Windows Server 2008 R2 SP1](https://support.microsoft.com/help/4009469)
 
-## Data Collection
+## Data collection
 
 1. Network Capture with ETW. Enter the following command at an elevated command prompt:
 
@@ -335,4 +335,5 @@ Copy and paste all the lines below and save them into a text file named *wifi.ta
 
 In the following example, the **View** settings are configured to **Show Only Filtered Lines**.
 
-:::image type="content" source="media/wireless-network-connectivity-issues-troubleshooting/text-analysis-tool.png" alt-text="Screenshot of an TAT filter example." border="false":::
+:::image type="content" source="media/wireless-network-connectivity-issues-troubleshooting/text-analysis-tool.png" alt-text="Screenshot of an TAT filter example." border="false" lightbox="media/wireless-network-connectivity-issues-troubleshooting/text-analysis-tool.png":::
+
