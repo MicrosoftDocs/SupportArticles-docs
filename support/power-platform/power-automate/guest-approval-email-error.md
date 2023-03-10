@@ -1,21 +1,21 @@
 ---
-title: Error when interacting with the Approval Adaptive Card email for Guest users 
-description: Describes workarounds for a commong error encountered by gues users with Approvals.
+title: Error when guest users interact with the Approval Adaptive Card email
+description: Provides a workaround for a common error that guest users receive when working with approvals.
 ms.reviewer: mansong, hamenon
-ms.date: 12/16/2022
+ms.date: 03/10/2023
 ms.subservice: power-automate-flows
 ---
 
-# Error when interacting with the Approval Adaptive Card email for Guest users 
+# Error when guest users approve or reject a request in the Approval Adaptive Card email
 
-This article provides a workaround to an issue where guest users cannot approve or reject an approval request directly  from the approval card received in the email. 
- 
-## Symptoms 
+This article provides a workaround for an issue where guest users can't approve or reject an approval request directly from the approval card received in the email.
 
-When a guest user receive a mail to approve or reject an approval request, clicking on it results in an error: 
+## Symptoms
 
->The remote endpoint returned an error HTTP 403. Please try again later. 
+When a guest user receives an email to approve or reject an approval request, responding to the request results in this error message:
 
-## Workaround 
+> The remote endpoint returned an error HTTP 403. Please try again later.
 
-Go to the [Power Automate portal](https://make.powerautomate.com) to complete the action. 
+## Workaround
+
+To work around this issue, go to the [Power Automate portal](https://make.powerautomate.com) to complete the action.

@@ -51,6 +51,8 @@
           href: flow-management-errors-recommendations.md
         - name: Flow Runtime errors and recommendations
           href: flow-runtime-errors-recommendations.md
+        - name: "The remote endpoint returned an error HTTP 403" approval email error
+          href: guest-approval-email-error.md
         - name: How to use Flow to copy items between two data sources
           href: how-to-copy-items-between-two-sharepoint-lists-via-flow.md
         - name: How to use Power Automate's JavaScript Software Developer Kit
@@ -71,8 +73,6 @@
           href: flow-approval-cds-provisioning-errors.md
         - name: Power Automate Approval Email delivery information
           href: power-automate-approval-email-information.md
-        - name: Guest user Approval email errors
-          href: guest-approval-email-error.md
         - name: Recommendations for conditional access and multi-factor authentication
           href: conditional-access-and-multi-factor-authentication-in-flow.md
         - name: Send an email with an embedded image
