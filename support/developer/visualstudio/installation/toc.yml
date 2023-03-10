@@ -78,5 +78,5 @@
   href: ./packages-fail-local-administrator-not-rights.md
 - name: Invalid entries passed to switch
   href: ./invalid-entries-passed-switch.md
-- name: Network-related errors when you install or use Visual Studio
+- name: Network or proxy errors
   href: ./troubleshoot-network-related-errors.md
