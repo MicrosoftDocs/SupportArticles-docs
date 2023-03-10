@@ -1,4 +1,4 @@
-- name: Troubleshoot Visual Studio installation and upgrades
+- name: Troubleshoot installation and upgrade issues
   href: ./troubleshoot-installation-issues.md
 - name: Running Parallels on Mac may cause error 1606
   href: ./error-1606-psf-folder.md
