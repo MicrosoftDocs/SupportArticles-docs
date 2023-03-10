@@ -20,7 +20,7 @@ _Original KB number:_ &nbsp; 4013567
 
 Use one of the following methods to disable or enable Internet Explorer.
 
-If you remove Internet Explorer by using DISM, the *iexplore.exe* entry point is removed from the file system, but its rendering engine remains on the system. Therefore, you should continue to install security updates that apply to Internet Explorer even after you disable it, as applicable.
+If you remove Internet Explorer by using DISM, the *iexplore.exe* entry point is removed from the file system, but its rendering engine, some folders, and registry keys remain on the system. Therefore, you should continue to install security updates that apply to Internet Explorer even after you disable it, as applicable.
 
 To restore the program on your computer, we recommend that you use the same method that you used to disable it (Control Panel or DISM).
 
