@@ -1,36 +1,33 @@
 ---
-title: Troubleshoot startup issues for Power Apps
+title: Troubleshoot startup or sign-in issues for Power Apps
 description: Provides resolutions for the common configuration issues that prevent Power Apps from starting.
-author: wimcoor
+author: amchern
+ms.author: amchern
+ms.reviewer: tapanm, mkaur
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 01/31/2022
-ms.author: namarwah
+ms.date: 03/06/2023
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
-contributors:
-  - wimcoor
-  - tapanm-msft
 ---
 
-# Troubleshooting startup issues for Power Apps
+# Troubleshooting startup or sign-in issues for Power Apps
 
-This article helps fix common configuration problems that prevent [Power Apps](https://make.powerapps.com) from starting.
+This article helps you resolve some of the common issues that may occur when starting up or signing in to [Power Apps](https://make.powerapps.com).
 
 ## Common errors
 
-- When you receive the following error message related to cookie settings:
+The following are some common errors that may appear when you start up or sign in to Power Apps.
+
+- Error message related to cookie settings.
 
     > Hmmm... Something went wrong.  
     > thirdPartyCookiesBlocked  
-    > Please enable third party-cookies and site data in your browser settings. If you are using Chrome's Incognito mode, you can uncheck the 'Block third-party cookies' option on the Incognito langing page.  
+    > Please enable third party-cookies and site data in your browser settings. If you are using Chrome's Incognito mode, you can uncheck the 'Block third-party cookies' option on the Incognito landing page.  
     > Try again
 
-    **Resolution**: To solve this issue, see [Enable third-party cookies and local data](#enable-storage-of-third-party-cookies-and-local-data-in-your-browser-or-app).
-
-- When you sign in to Power Apps - especially using the *InPrivate* or *incognito* experience, you receive the following error:
+- "Sign in required" message when signing in to Power Apps, especially in InPrivate or incognito mode.
 
     > Sign in required  
     > Please select sign in to continue.  
@@ -41,15 +38,11 @@ This article helps fix common configuration problems that prevent [Power Apps](h
     > Correlation ID: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  
     > Timestamp: xxxx-xx-xx xx:xx:xxZ
 
-    **Resolution**: To solve this issue, see [Enable third-party cookies and local data](#enable-storage-of-third-party-cookies-and-local-data-in-your-browser-or-app).
+- "Hmmm … We couldn't sign you in" message.
 
-- When you receive a "Hmmm … We couldn't sign you in" error message and identifier that resembles the following image:
+    :::image type="content" source="media/troubleshooting-startup-issues/we-could-not-sign-you-in-error.png" alt-text="Screenshot that shows a We couldn't sign you in error message.":::
 
-    :::image type="content" source="media/troubleshooting-startup-issues/we-could-not-sign-you-in-error.png" alt-text="We couldn't sign you in (User Intervention Needed Navigate To A a d Denied) error message.":::
-
-    **Resolution**: To solve this issue, see [Resolutions for common errors](#resolutions-for-common-errors) for different error variations and resolutions.
-
-- When you try to create an app from a SharePoint list, you receive the following "abnormal termination" error message:
+- "WebAuthoring abnormal termination" message.
 
     > WebAuthoring abnormal termination.
     >
@@ -65,33 +58,41 @@ This article helps fix common configuration problems that prevent [Power Apps](h
     > errorNumber: 0  
     > errorMessage: Script error
 
-To resolve the issues listed above, see [Resolutions for common errors](#resolutions-for-common-errors) and try one of the listed resolutions.
+- UserInterventionNeeded_CookiesBlocked
+- UserInterventionNeeded_StorageBlocked
+- UserInterventionNeeded_NavigateToAadTimeout
+- UserInterventionNeeded_NavigateToAadDenied
+- UserInterventionNeeded_StorageLost
+- AadError
 
-## Resolutions for common errors
+## Resolution
 
-| Error | Microsoft Edge | Google Chrome | Safari (iOS) |
-| --| -- | -- | -- |
-| <ul> <li>Sign in required </li> </ul><ul> <li>UserInterventionNeeded_CookiesBlocked </li> </ul><ul> <li>UserInterventionNeeded_StorageBlocked</li> </ul> | [Enable third-party cookies and local data](#instructions-for-microsoft-edge) | [Enable third-party cookies and local data](#instructions-for-google-chrome) | [Enable third-party cookies and local data](#instructions-for-safari-ios)|
-| <ul> <li> UserInterventionNeeded_NavigateToAadTimeout </li> </ul> | Possible network problem | Possible network problem | Possible network problem |
-| <ul> <li> UserInterventionNeeded_NavigateToAadDenied </li> <li> UserInterventionNeeded_StorageLost </li> </ul> | Not applicable | Not applicable | Not applicable |
-| <ul> <li> AadError </li> </ul> | [Azure Active Directory Errors](#azure-active-directory-errors) | [Azure Active Directory Errors](#azure-active-directory-errors) | [Azure Active Directory Errors](#azure-active-directory-errors) |
+Try the following steps to resolve the issue:
+
+1. [Enable third-party cookies and local data in your browser or app](#enable-storage-of-third-party-cookies-and-local-data-in-your-browser-or-app).
+2. Cached data can sometimes prevent you from signing in. [Clear your browser's cache](#clear-your-browser-cache) and cookies and try again.
+3. Try signing in with a different browser. For a list of supported browsers, see [system requirements](/power-apps/limits-and-config#supported-browsers-for-running-power-apps).
+4. Check your network connection to make sure it's stable.
+5. If you're getting Azure Active Directory (Azure AD) errors, they're usually related to user authentication and authorization. The error page might contain additional information that can help diagnose and fix the problem. To resolve Azure AD errors, you might need assistance from your IT department.
 
 ## Enable storage of third-party cookies and local data in your browser or app
 
-Power Apps stores some data such as user identity and preferences locally leveraging your browser's capabilities. Problems occur if the browser blocks storage of such local data, or third-party cookies set by Power Apps.
+Power Apps stores some data locally, such as user identity and preferences, leveraging your browser's capabilities. Problems occur if the browser blocks the storage of such local data, or third-party cookies set by Power Apps.
 
-Most browsers allow settings to reflect the changes immediately. You may also need to close all the browser windows and reopen instead.
+Most browsers allow settings to reflect the changes immediately. You may also need to close all the browser windows and reopen them instead.
 
-To enable this setting for the Power Apps and Dynamics 365 mobile apps for iOS you need to work through the iOS settings linked to the app rather than through the browser settings for iOS.
+To enable this setting for the Power Apps and Dynamics 365 mobile apps for iOS, you need to work through the iOS settings linked to the app rather than through the browser settings for iOS.
 
-### Instructions for Microsoft Edge
+These instructions are shown on the following tabs.
+
+### [Microsoft Edge](#tab/microsoft-edge)
 
 - Option 1: Enable storage of third-party cookies and local data for all sites
 
     1. Select **Settings** > **Cookies and site permissions**.
-    1. Expand **Cookies and site data**.
-    1. Ensure the setting **Block third-party cookies** is disabled.
-    1. If present, remove the following sites from the site-specific cookie configuration under **Block**, and **Clear on exit**:
+    1. Expand **Cookies and data stored**.
+    1. Ensure the **Block third-party cookies** setting is disabled.
+    1. If present, remove the following sites from the site-specific cookie configuration under **Block** and **Clear on exit**:
         - `https://create.powerapps.com`
         - `https://*.create.powerapps.com`
         - `https://make.*.powerapps.com`
@@ -101,27 +102,27 @@ To enable this setting for the Power Apps and Dynamics 365 mobile apps for iOS y
         - `https://apps.powerapps.com`
         - (Only for sovereign clouds) [US Government version URLs](/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls).
 
-- Option 2: Create exceptions to allow storage of third-party cookies and local data for Power Apps and associated services
+- Option 2: Create exceptions to allow the storage of third-party cookies and local data for Power Apps and associated services
 
     > [!NOTE]
-    > The following steps require your Edge browser version to be **87 or above**.
+    > The following steps require your Edge browser version to be 87 or above.
 
     1. Select **Settings** > **Cookies and site permissions**.
-    1. Expand **Cookies and site data**.
+    1. Expand **Cookies and data stored**.
     1. Select **Add** under **Allow** and add:
         - `[*.]powerapps.com`
     1. Select **Clear browsing data on close**.
-    1. Ensure **Cookies and other site data** is disabled. If you want to keep it enabled, select **Add** instead, and add:
+    1. Ensure **Cookies and other site data** is disabled. If you want to keep it enabled, select **Add** instead, and then add:
         - `[*.]powerapps.com`
 
-### Instructions for Google Chrome
+### [Google Chrome](#tab/google-chrome)
 
 - Option 1: Enable storage of third-party cookies and local data for all sites
 
     1. Select **Settings** > **Privacy and security**.
     1. Expand **Cookies and other site data**.
     1. Make sure that **Block third-party cookies** or **Block all cookies** isn't selected.
-    1. If present, remove the following sites from the site-specific cookie configuration under **Sites that can always use cookies**, and **Always clear cookies when windows are closed**:
+    1. If present, remove the following sites from the site-specific cookie configuration under **Sites that can always use cookies** and **Always clear cookies when windows are closed**:
         - `https://create.powerapps.com`
         - `https://*.create.powerapps.com`
         - `https://make.*.powerapps.com`
@@ -135,33 +136,37 @@ To enable this setting for the Power Apps and Dynamics 365 mobile apps for iOS y
 
     1. Select **Settings** > **Privacy and security**.
     1. Expand **Cookies and other site data**.
-    1. Use **Add** for **Sites that can always use cookies** and add:
+    1. Go to **Sites that can always use cookies**, select **Add**, and then add:
         - `[*.]powerapps.com`
-    1. Ensure that you check the **Including third-party cookies on this site** option when adding the site.
+    1. Make sure you select the **Including third-party cookies on this site** option when adding the site.
 
-### Instructions for Safari (iOS)
+### [Safari (iOS)](#tab/safari-ios)
 
 1. In Safari app, select **Safari** > **Preferences** > **Privacy**.
 1. Ensure **Block all cookies** isn't selected.
 1. Ensure **Prevent cross-site tracking** isn't selected.
 
-### Instructions for Dynamics 365 for phones or Dynamics 365 for tablets app on iOS
+### [iOS Settings](#tab/ios-settings)
 
-1. On iOS, select **Settings**.
-1. Scroll down to **Dynamics 365**.
-1. Toggle on **Allow Cross-Website Tracking**.
+- Instructions for Dynamics 365 for phones or Dynamics 365 for tablets app on iOS
 
-### Instructions for Power Apps app on iOS
+  1. On iOS, select **Settings**.
+  1. Scroll down to **Dynamics 365**.
+  1. Toggle on **Allow Cross-Website Tracking**.
 
-1. On iOS, select **Settings**.
-1. Scroll down to **Power Apps**.
-1. Toggle on **Allow Cross-Website Tracking**.
+- Instructions for Power Apps app on iOS
 
-### Instructions for Microsoft Edge on iOS
+  1. On iOS, select **Settings**.
+  1. Scroll down to **Power Apps**.
+  1. Toggle on **Allow Cross-Website Tracking**.
 
-1. On iOS, select **Settings**.
-1. Scroll down to **Edge**.
-1. Toggle on **Allow Cross-Website Tracking**.
+- Instructions for Microsoft Edge on iOS
+
+  1. On iOS, select **Settings**.
+  1. Scroll down to **Edge**.
+  1. Toggle on **Allow Cross-Website Tracking**.
+
+---
 
 ## Clear your browser cache
 
@@ -171,15 +176,6 @@ The browser cache is stored on your device's hard drive. When you visit a websit
 - [Google Chrome](https://support.google.com/accounts/answer/32050?hl=en&co=GENIE.Platform%3DDesktop)
 - [Safari on Mac](https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/16.0/mac/11.0)
 
-## Azure Active Directory Errors
+## Next steps
 
-Azure Active Directory (Azure AD) is the technology on which the Power Apps relies for user authentication and authorization.
-
-The error page that you see might contain additional information that can help diagnose and fix the problem.
-
-To resolve Azure AD errors, you might need assistance from your IT department.
-
-### See also
-
-- [Common issues and resolutions](common-issues-and-resolutions.md)
-- [Power Apps Support](https://powerapps.microsoft.com/support/)
+If your issue isn't listed in this article, you can [search for more support resources](https://powerapps.microsoft.com/support) or contact [Microsoft support](https://admin.powerplatform.microsoft.com/support). For more information, see [Get Help + Support](/power-platform/admin/get-help-support).
