@@ -571,6 +571,8 @@
           href: ../public-folders/public-folder-migration-fails.md
         - name: Public folder permissions for Exchange Server
           href: ../public-folders/public-folder-permissions-for-exchange-server.md
+        - name: Public folder users can't manage subfolders
+          href: ../../ExchangeOnline/public-folders/public-folder-users-cannot-manage-subfolders.md?context=%2fexchange%2ftroubleshoot%2fcontext%2fserver-context
         - name: Troubleshoot public folder replication issues
           href: ../public-folders/troubleshoot-public-folder-replication.md
     - name: Setup
