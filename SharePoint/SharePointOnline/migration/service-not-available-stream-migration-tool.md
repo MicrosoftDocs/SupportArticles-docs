@@ -38,7 +38,7 @@ To fix the error, follow these steps:
 
 1. Make sure that the following URLs are included in your tenant [allow list](https://security.microsoft.com/tenantAllowBlockList):
 
-   - [https://api.mover.io](https://api.mover.io)
-   - [https://api.microsoftstream.com/](https://api.microsoftstream.com/)
+   - `https://api.mover.io`
+   - `https://api.microsoftstream.com/`
 
 2. If the issue persists, [check your network connection status](https://support.microsoft.com/windows/check-your-network-connection-status-efb4fb41-f751-567a-f60f-aac9114659a5).
