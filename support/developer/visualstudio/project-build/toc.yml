@@ -8,3 +8,5 @@
   href: ./troubleshooting-dotnet-framework-targeting-errors.md
 - name: Troubleshoot project templates and item templates
   href: ./how-to-troubleshoot-templates.md
+- name: Troubleshoot Resource Editor errors
+  href: ./troubleshoot-resource-editor-errors.md

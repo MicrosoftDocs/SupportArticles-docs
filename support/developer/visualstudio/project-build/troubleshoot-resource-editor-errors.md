@@ -1,24 +1,16 @@
 ---
 title: Troubleshoot Resource Editor errors
 description: Learn more about errors that can occur when you use the Resource Editor and how to resolve them.
-ms.date: 01/31/2023
+ms.date: 03/11/2023
 ms.topic: troubleshooting
+ms.custom: sap:Project/Build System
 f1_keywords:
 - msvse_settingsdesigner.err.formatvalue
 - msvse_resedit.err.nameblank
 - msvse_resedit.err.duplicatename
-helpviewer_keywords:
-- Resource Designer
-- Resource Editor
-- resources [Visual Studio]
-- Resources page in Project Designer
-- application resources [Visual Studio]
-author: TerryGLee
-ms.author: tglee
-manager: jmartens
-ms.technology: vs-ide-general
-ms.workload:
-- multiple
+author: padmajayaraman
+ms.author: v-jayaramanp
+ms.reviewer: tglee
 ---
 # Troubleshoot errors in the Resource Editor
 
@@ -51,7 +43,7 @@ This error occurs when you have a value for a resource that's yet unnamed. Here'
 Here are more support resources that you might find useful:
 
 - Ask a question or find an answer on the [Microsoft Q&A](/answers/tags/176/vs) page for Visual Studio.
-- Report product issues to the engineering team via the [Report a problem](how-to-report-a-problem-with-visual-studio.md) tool that appears both in the Visual Studio Installer and in the Visual Studio IDE.
+- Report product issues to the engineering team using the [Report a problem](how-to-report-a-problem-with-visual-studio.md) tool that appears both in the Visual Studio Installer and in the Visual Studio IDE.
 - Track product issues and engineering team responses in the [Visual Studio Developer Community](https://aka.ms/feedback/suggest?space=8).
 
 ## See also
