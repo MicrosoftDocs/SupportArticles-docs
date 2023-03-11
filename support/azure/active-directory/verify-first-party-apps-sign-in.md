@@ -1,7 +1,7 @@
 ---
 title: Verify first-party Microsoft applications in sign-in reports
 description: Describes how to verify first-party Microsoft applications in sign-in reports
-ms.date: 12/22/2022
+ms.date: 03/10/2023
 ms.reviewer: bernaw
 ms.service: active-directory
 ms.subservice: compliance
@@ -150,6 +150,7 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Universal Store Native Client|268761a2-03f3-40df-8a8b-c3db24145b6b|
 |Vortex [wsfed enabled]|5572c4c0-d078-44ce-b81c-6cbf8d3ed39e|
 |Windows Azure Active Directory|00000002-0000-0000-c000-000000000000|
+|Windows Azure Security Resource Provider|8edd93e1-2103-40b4-bd70-6e34e586362d|
 |Windows Azure Service Management API|797f4846-ba00-4fd7-ba43-dac1f8f63013|
 |WindowsDefenderATP Portal|a3b79187-70b2-4139-83f9-6016c58cd27b|
 |Windows Search|26a7ee05-5602-4d76-a7ba-eae8b7b67941|
