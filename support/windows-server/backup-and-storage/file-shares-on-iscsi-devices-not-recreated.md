@@ -89,9 +89,9 @@ Use one of the following methods to make the Server service dependent on the iSC
 > You do not have to modify the registry when you use this method. Therefore, this method is the preferred way to set the service dependency.
 
 1. Click **Start**, click **Run**, type cmd, and then press ENTER.
-2. Type sc config LanManServer depend= Samss/Srv/MSiSCSI, and then press ENTER.
+2. Type sc config LanManServer depend= Samss/Srv2/MSiSCSI, and then press ENTER.
 
-    If you have administrative access to the server, you can run this command from a network computer. Type the following command, and then press ENTER: sc \\\\**computer_name**  config LanManServer depend= Samss/Srv/MSiSCSI  
+    If you have administrative access to the server, you can run this command from a network computer. Type the following command, and then press ENTER: sc \\\\**computer_name**  config LanManServer depend= Samss/Srv2/MSiSCSI  
 
 #### Method 2: Use Registry Editor
 
@@ -123,7 +123,7 @@ Microsoft provides programming examples for illustration only, without warranty 
 To script the whole operation that is described in the "Resolution" section, create a batch file that contains the following text:  
 
 ```console
-sc config LanManServer depend= Samss/Srv/MSiSCSI  
+sc config LanManServer depend= Samss/Srv2/MSiSCSI  
 iscsicli BindPersistentVolumes
 ```
 
