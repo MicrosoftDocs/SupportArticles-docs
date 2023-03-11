@@ -14,7 +14,7 @@ ms.reviewer: tglee
 
  _Applies to:_&nbsp;Visual Studio
 
-If a template fails to load in the development environment, there are two ways to resolve the problem.
+If a template fails to load in the development environment, there are several ways to resolve the problem.
 
 ## Validate the vstemplate file
 
@@ -41,9 +41,9 @@ If the _vstemplate_ file in a template doesn't adhere to the Visual Studio templ
 1. Select the files included in your template, right-click, and select **Send to** > **Compressed (zipped) folder**.
    The files that you selected are compressed into a _.zip_ file.
 
-1. Place the new _.zip_ file in the same directory as the old *.zip* file.
+1. Place the new _.zip_ file in the same directory as the old _.zip_ file.
 
-1. Delete the extracted template files and the old template *.zip* file.
+1. Delete the extracted template files and the old template _.zip_ file.
 
 ## Enable diagnostic logging
 
@@ -52,6 +52,6 @@ You can enable diagnostic logging for template discovery by following the steps 
 ## See also
 
 - [Troubleshoot template discovery (extensibility)](/visualstudio/extensibility/troubleshooting-template-discovery)
-- [Customize templates](../ide/customizing-project-and-item-templates.md)
-- [Create project and item templates](../ide/creating-project-and-item-templates.md)
-- [Template schema reference](../extensibility/visual-studio-template-schema-reference.md)
+- [Customize templates](/visualstudio/ide/customizing-project-and-item-templates)
+- [Create project and item templates](/visualstudio/ide/creating-project-and-item-templates)
+- [Template schema reference](/visualstudio/extensibility/visual-studio-template-schema-reference)
