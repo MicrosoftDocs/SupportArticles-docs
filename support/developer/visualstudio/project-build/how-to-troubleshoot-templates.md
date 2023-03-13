@@ -2,7 +2,7 @@
 title: Troubleshoot project templates and item templates
 description: Learn how to troubleshoot templates when they fail to load in the development environment.
 ms.custom: sap:Project/Build System
-ms.date: 03/10/2023
+ms.date: 03/13/2023
 ms.topic: troubleshooting
 helpviewer_keywords:
 - templates [Visual Studio], troubleshooting
@@ -31,7 +31,7 @@ If the _vstemplate_ file in a template doesn't adhere to the Visual Studio templ
 1. Select the _vstemplate_ file for the template, and select **Open**.
 
 1. Verify that the XML of the _vstemplate_ file adheres to the template schema.
-   For more information on the _vstemplate_ schema, see the [Template schema reference](../extensibility/visual-studio-template-schema-reference.md) section.
+   For more information on the _vstemplate_ schema, see the [Template schema reference](/visualstudio/extensibility/visual-studio-template-schema-reference) section.
 
     > [!NOTE]
     > To get IntelliSense support while authoring the _vstemplate_ file, add a `xmlns` attribute to the `VSTemplate` element, and assign it a value of `http://schemas.microsoft.com/developer/vstemplate/2005`.
@@ -47,7 +47,7 @@ If the _vstemplate_ file in a template doesn't adhere to the Visual Studio templ
 
 ## Enable diagnostic logging
 
-You can enable diagnostic logging for template discovery by following the steps in the[Troubleshoot template discovery (extensibility)](../extensibility/troubleshooting-template-discovery.md) section.
+You can enable diagnostic logging for template discovery by following the steps in the [Troubleshoot template discovery (extensibility)](/visualstudio/extensibility/troubleshooting-template-discovery) section.
 
 ## See also
 

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Resource Editor errors
 description: Learn more about errors that can occur when you use the Resource Editor and how to resolve them.
-ms.date: 03/11/2023
+ms.date: 03/13/2023
 ms.topic: troubleshooting
 ms.custom: sap:Project/Build System
 f1_keywords:
@@ -14,7 +14,7 @@ ms.reviewer: tglee
 ---
 # Troubleshoot errors in the Resource Editor
 
- [!INCLUDE [Visual Studio](~/includes/applies-to-version/vs-windows-only.md)]
+ _Applies to:_&nbsp;Visual Studio
 
 When you're working with resource files for your application by using the Resource Editor in Visual Studio, you might run in to errors. Here are some of the typical error messages that can appear, along with instructions on how to resolve the errors.
 
@@ -48,5 +48,5 @@ Here are more support resources that you might find useful:
 
 ## See also
 
-- [Manage application resources (.NET)](managing-application-resources-dotnet.md)
+- [Manage application resources (.NET)](/visualstudio/ide/managing-application-resources-dotnet)
 - [Managing app resources (Visual Studio for Mac)](/visualstudio/mac/managing-app-resources)
