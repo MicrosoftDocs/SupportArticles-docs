@@ -39,7 +39,7 @@
               href: create-and-use-apps/no-navigation-when-selecting-button.md
     - name: Dataverse
       items:
-        - name: Web API Client errors
+        - name: Web API client errors
           items:
             - name: Web API client errors
               href: dataverse/web-api-client-errors/web-api-client-errors.md
