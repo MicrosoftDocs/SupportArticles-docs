@@ -1,40 +1,32 @@
 ---
-title: Diagnosing task failures | Microsoft Docs
+title: Diagnosing task failures
 description: Learn how to diagnose MSBuild task failures by identifying the failing task, tool name, and other information.
-ms.custom: SEO-VS-2020
-ms.date: 07/26/2022
+ms.custom: sap:Project/Build System
+ms.date: 03/13/2023
 ms.topic: troubleshooting
 f1_keywords:
 - MSBuild.ToolTask.ToolCommandFailed
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-author: ghogen
-ms.author: ghogen
-manager: jmartens
-ms.technology: msbuild
-ms.workload:
-- multiple
+author: padmajayaraman
+ms.author: v-jayaramanp
+ms.reviewer: jmartens
 ---
 # Diagnose MSBuild task failures
 
+ _Applies to:_&nbsp;Visual Studio
 
-
-`MSB6006` is emitted when a <xref:Microsoft.Build.Utilities.ToolTask> derived class runs a tool process that returns a nonzero exit code if the task did not log a more specific error.
+The `MSB6006` error occurs when a <xref:Microsoft.Build.Utilities.ToolTask> derived class runs a tool process that returns a non-zero exit code if the task hasn't logged a more specific error.
 
 ## Identify the failing task
 
-When you encounter a task error, the first step is to identify the task that is failing.
+When you see a task error, the first step is to identify the task that is failing.
 
 The text of the error specifies the tool name (either a friendly name provided by the task's implementation of <xref:Microsoft.Build.Utilities.ToolTask.ToolName> or the name of the executable) and the numeric exit code. For example, in `error MSB6006: "custom tool" exited with code 1.` the tool name is `custom tool` and the exit code is `1`.
 
-**To find the failed MSBuild task:**
+To find the failed MSBuild task:
 
-+ **In the command-line builds**:  If the build was configured to include a summary (the default), the summary will look like this:
++ **In the command-line builds**: If the build was configured to include a summary (the default), the summary will look like this:
 
-  ```text
+  ```output
   Build FAILED.
 
   "S:\MSB6006_demo\MSB6006_demo.csproj" (default target) (1) ->
@@ -48,9 +40,9 @@ The text of the error specifies the tool name (either a friendly name provided b
 
 ## Find more failure information
 
-This error is emitted when the task did not log a specific error. The failure to log an error is often because the task is not configured to understand the error format emitted by the tool it calls.
+This error occurs when the task didn't log a specific error. The failure to log an error is often because the task isn't configured to understand the error format emitted by the tool it calls.
 
-Well-behaved tools generally emit some contextual or error information to their standard output or error stream, and tasks capture and log this information by default. Look in the log entries before the error occurred for additional information. Rerunning the build with a higher log level may be required to preserve this information. Hopefully, the additional context or errors identified in logging reveal the root cause of the problem. If not, you may have to narrow down the potential causes by examining the properties and items that are inputs to the failing task.
+By default, well-scripted tools generally emit some contextual or error information to their standard output or error stream, and tasks capture and log this information. For additional information, look in the log entries before the error occurred. you might have to re-run the build with a higher log level to preserve this information. The additional context or errors identified in logging reveal the root cause of the problem. If not, you may have to narrow down the potential causes by examining the properties and items that are inputs to the failing task.
 
 > [!NOTE]
 > MSBuild recognizes a specific diagnostic output format. The details of this format are documented at [MSBuild and Visual Studio format for diagnostic messages](msbuild-diagnostic-format-for-tasks.md).

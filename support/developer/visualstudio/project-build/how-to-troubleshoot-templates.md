@@ -12,7 +12,7 @@ ms.reviewer: tglee
 ---
 # How to: Troubleshoot project and item templates
 
- _Applies to:_&nbsp;Visual Studio
+_Applies to:_&nbsp;Visual Studio
 
 If a template fails to load in the development environment, there are several ways to resolve the problem.
 
