@@ -38,7 +38,7 @@ Use either of the following methods to identify nodes and containers with high C
 
 - In a console, use the Kubernetes command-line tool (kubectl).
 
-#### [Browser](#tab/browser)
+### [Browser](#tab/browser)
 
 [Container Insights](/azure/azure-monitor/containers/container-insights-overview) is a feature within AKS. It's designed to monitor the performance of container workloads. You can use Container insights to identify nodes, containers, or pods that drive high CPU usage.
 
@@ -68,7 +68,7 @@ To identify nodes, containers, or pods that drive high CPU usage, follow these s
 
     Once you get the list of pods with high CPU usage, you can map it to the applications that cause the spike in CPU usage.
 
-#### [Command line](#tab/command-line)
+### [Command Line](#tab/command-line)
 
 > [!NOTE]
 > This method can only be used to diagnose high CPU usage at the current time.
