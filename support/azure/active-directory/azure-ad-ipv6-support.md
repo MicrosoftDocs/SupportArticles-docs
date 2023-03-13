@@ -274,20 +274,31 @@ $startDate = (Get-Date).AddDays(-($agoDays)).ToString('yyyy-MM-dd')  # Get filt
 $pathForExport = "./"  # The path to the local filesystem for export of the CSV file. 
 
 Connect-MgGraph -Scopes "AuditLog.Read.All" -TenantId $tId 
-# Get both interactive and non-interactive IPv6 sign-ins .
+
+# Get both interactive and non-interactive IPv6 sign-ins.
 $signInsInteractive = Get-MgAuditLogSignIn -Filter "contains(IPAddress, ':')" -All
 $signInsNonInteractive = Get-MgAuditLogSignIn -Filter "contains(IPAddress, ':')" -All 
 $columnList = @{  # Enumerate the list of properties to be exported to the CSV files.
     Property = "createdDateTime","CorrelationId", "userPrincipalName", "userId",
       "UserDisplayName", "AppDisplayName", "AppId", "IPAddress", "isInteractive",
       "ResourceDisplayName", "ResourceId"
-} # Summarize IPv6 & App Display Name count
-$signInsInteractive | Group-Object IPaddress, AppDisplayName | Select-Object @{Name='IPaddress';Expression={$_.Group[0].IPaddress}}, 
-    @{Name ='AppDisplayName';Expression={$_.Group[0].AppDisplayName}}, Count | Sort-Object -Property Count –Descending | Export-Csv -Path ($pathForExport + "Summary_Interactive_IPv6_$tId.csv") -NoTypeInformation
-$signInsNonInteractive | Group-Object IPaddress, AppDisplayName | Select-Object @{Name='IPaddress';Expression={$_.Group[0].IPaddress}}, 
-    @{Name ='AppDisplayName';Expression={$_.Group[0].AppDisplayName}}, Count | Sort-Object -Property Count –Descendin | Export-Csv -Path ($pathForExport + "Summary_NonInteractive_IPv6_$tId.csv") -NoTypeInformation #Detailed IPv6 Sign-ins
-#$signInsInteractive  | Select-Object @columnList | Export-Csv -Path ($pathForExport + "Detailed_Interactive_IPv6_$tId.csv") -NoTypeInformation
-#$signInsNonInteractive  | Select-Object @columnList | Export-Csv -Path ($pathForExport + "Detailed_NonInteractive_IPv6_$tId.csv") -NoTypeInformation
+}
+
+# Summarize IPv6 & app display name count.
+$signInsInteractive |
+    Group-Object IPaddress, AppDisplayName |
+    Select-Object @{Name = 'IPaddress'; Expression = {$_.Group[0].IPaddress}},
+        @{Name = 'AppDisplayName'; Expression = {$_.Group[0].AppDisplayName}},
+        Count |
+    Sort-Object -Property Count –Descending |
+    Export-Csv -Path ($pathForExport + "Summary_Interactive_IPv6_$tId.csv") -NoTypeInformation
+$signInsNonInteractive |
+    Group-Object IPaddress, AppDisplayName |
+    Select-Object @{Name = 'IPaddress'; Expression = {$_.Group[0].IPaddress}},
+        @{Name = 'AppDisplayName'; Expression = {$_.Group[0].AppDisplayName}},
+        Count |
+    Sort-Object -Property Count –Descending |
+    Export-Csv -Path ($pathForExport + "Summary_NonInteractive_IPv6_$tId.csv") -NoTypeInformation # Detailed IPv6 sign-ins
 ```
 
 ## Next steps
