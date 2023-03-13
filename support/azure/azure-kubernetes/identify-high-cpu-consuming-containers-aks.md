@@ -14,11 +14,11 @@ High CPU usage is a symptom of one or more applications or processes that requir
 
 When a node in an [Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes) cluster experiences high CPU usage, the applications running on it can experience degradation in performance and reliability. Applications or processes also become unstable, which may lead to issues beyond slow responses.
 
-This article helps you identify the nodes and containers that consume high CPU and troubleshoot high CPU usage.
+This article helps you identify the nodes and containers that consume high CPU and provides best practices to resolve high CPU usage.
 
 ## Symptoms
 
-The following table outlines the common symptoms of high CPU usage.
+The following table outlines the common symptoms of high CPU usage:
 
 |Symptom | Description |
 |---|---|
@@ -38,7 +38,7 @@ Use either of the following methods to identify nodes and containers with high C
 
 - In a console, use the Kubernetes command-line tool (kubectl).
 
-### [Browser](#tab/browser)
+#### [Browser](#tab/browser)
 
 [Container Insights](/azure/azure-monitor/containers/container-insights-overview) is a feature within AKS. It's designed to monitor the performance of container workloads. You can use Container insights to identify nodes, containers, or pods that drive high CPU usage.
 
@@ -68,7 +68,7 @@ To identify nodes, containers, or pods that drive high CPU usage, follow these s
 
     Once you get the list of pods with high CPU usage, you can map it to the applications that cause the spike in CPU usage.
 
-### [Command Line](#tab/command-line)
+#### [Command line](#tab/command-line)
 
 > [!NOTE]
 > This method can only be used to diagnose high CPU usage at the current time.
