@@ -4356,7 +4356,7 @@
     },
     {
       "source_path": "support/power-platform/power-apps/dataverse-web-api/web-api-client-errors.md",
-      "redirect_url": "/troubleshoot/power-platform/power-apps/dataverse/web-api-client-errors/web-api-client-errors",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/dataverse/web-api-client-errors",
       "redirect_document_id": true
     }
   ]
