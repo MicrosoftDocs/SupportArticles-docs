@@ -51,6 +51,8 @@
           href: flow-management-errors-recommendations.md
         - name: Flow Runtime errors and recommendations
           href: flow-runtime-errors-recommendations.md
+        - name: '"The remote endpoint returned an error HTTP 403" approval email error'
+          href: guest-approval-email-error.md
         - name: How to use Flow to copy items between two data sources
           href: how-to-copy-items-between-two-sharepoint-lists-via-flow.md
         - name: How to use Power Automate's JavaScript Software Developer Kit
@@ -129,6 +131,8 @@
           href: double-click-drag-drop-are-not-working.md
         - name: Errors when running attended or unattended desktop flows
           href: troubleshoot-errors-running-attended-or-unattended-desktop-flows.md
+        - name: Failed license check on a desktop flow run
+          href: desktop-flow-run-time-license-check.md
         - name: Find which machine is failing within a cluster
           href: find-which-machine-is-failing-within-a-cluster.md
         - name: Failed to get UI element

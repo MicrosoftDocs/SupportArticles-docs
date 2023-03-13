@@ -15,7 +15,7 @@ ms.technology: windows-server-performance
 ---
 # Windows registry information for advanced users
 
-This article describes the Windows registry and provides information about how to edit and back up it.
+This article describes the Windows registry and provides information about how to edit and back it up.
 
 _Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 256986
