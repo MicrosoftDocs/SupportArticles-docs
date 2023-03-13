@@ -67,7 +67,7 @@ This error may occur because you've manually edited the deployment and applicati
 
 ClickOnce uses the Deployment Provider URL to receive updates for the application. Verify that the location that the URL is pointing to is correct.
 
-#### Error: Can't start the application
+#### Error: Cannot start the application
 
 This error message usually indicates that there's a problem installing this application into the ClickOnce store. Either the application has an error or the store is corrupted. The log file might tell you where the error occurred.
 

@@ -10,7 +10,7 @@ ms.reviewer: meghaanand
 
 _Applies to:_&nbsp;Visual Studio
 
-You might encounter network or proxy related errors when you install, update, or use Visual Studio behind a firewall, a proxy server, or on a client machine that doesn't have access to the internet. This article introduces resolutions for some common scenarios of these issues.
+You might encounter network or proxy related errors when you install, update, or use Visual Studio behind a firewall, a proxy server, or on a client machine that doesn't have access to the internet. This article provides resolutions for some common scenarios of these issues.
 
 ## Error "Proxy authorization required"
 
@@ -130,6 +130,6 @@ More support options:
 
 ## See also
 
-- [Troubleshoot network layout or offline installation issues](/visualstudio/install/troubleshooting-installation-issues#network-layout-or-offline-installations)
+- [Troubleshoot network layout or offline installation issues](troubleshoot-installation-issues.md#network-layout-or-offline-installations)
 - [Install and use Visual Studio behind a firewall or proxy server](/visualstudio/install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server)
 - [Visual Studio administrator guide](/visualstudio/install/visual-studio-administrator-guide)
