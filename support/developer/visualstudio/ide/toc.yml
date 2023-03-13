@@ -12,8 +12,6 @@
   href: ./release-management-client-crash.md
 - name: Screen readers can't read tool windows
   href: ./screen-readers-not-read-tool-windows.md
-- name: Troubleshoot broken references
-  href: ./troubleshooting-broken-references.md
 - name: Visual Studio 2012 crashes with StarDict-3
   href: ./crash-with-stardict-3.md
 - name: Help Viewer 2.0 crashes

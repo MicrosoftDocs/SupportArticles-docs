@@ -1,11 +1,7 @@
 ---
 title: Troubleshoot .NET Framework targeting errors
 description: This article provides resolutions for MSBuild errors that might occur because of reference issues.
-ms.date: 03/10/2023
-ms.topic: troubleshooting
-f1_keywords:
-- vs.FrameworkTargetingErrors
-- MSBuild.ResolveAssemblyReference.FailedToResolveReferenceBecausePrimaryAssemblyInExclusionList
+ms.date: 03/13/2023
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: ghogen
@@ -36,13 +32,13 @@ To resolve the error, make sure that your application targets a .NET version tha
 
 ### Update references in app.config
 
-To work around application settings in .NET Framework applications,
+To work around application settings in .NET Framework applications, follow these steps:
 
 1. Open **Solution Explorer**.
 1. Select **Show All Files**, and then edit the _app.config_ file in the XML editor of Visual Studio.
 1. Change the version in the settings to match the appropriate version of .NET. For example, you can change the version setting from 4.0.0.0 to 2.0.0.0.
 
-Similarly, for an application that has added resources,
+Similarly, for an application that has added resources, follow these steps:
 
 1. Open **Solution Explorer**.
 1. Select **Show All Files**.
@@ -51,11 +47,11 @@ Similarly, for an application that has added resources,
 
 ### Update resources
 
- If your application has resources such as icons or bitmaps or settings such as data connection strings, you can also resolve the error by removing all the items on the **Settings** page of the **Project Designer** and then readding the required settings.
+ If your application has resources such as icons or bitmaps or settings such as data connection strings, you can also resolve the error by removing all the items on the **Settings** page of the **Project Designer** and then re-adding the required settings.
 
-## You retarget a project to a different version of .NET and references aren't resolved
+## You re-target a project to a different version of .NET and references aren't resolved
 
- If you retarget a project to a different version of .NET, your references may not resolve properly in some cases. Explicit fully qualified references to assemblies often cause this issue, but you can resolve it by removing the references that don't resolve and then adding them back to the project. As an alternative, you can edit the project file to replace the references. First, remove references of the following form:
+ If you re-target a project to a different version of .NET, your references may not resolve properly in some cases. Explicit fully qualified references to assemblies often cause this issue, but you can resolve it by removing the references that don't resolve and then adding them back to the project. As an alternative, you can edit the project file to replace the references. First, remove references of the following form:
 
 ```xml
 <Reference Include="System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />

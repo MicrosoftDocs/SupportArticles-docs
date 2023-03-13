@@ -2,11 +2,6 @@
 title: Troubleshoot Resource Editor errors
 description: Learn how to resolve errors that can occur when you use the Resource Editor. 
 ms.date: 03/13/2023
-ms.topic: troubleshooting
-f1_keywords:
-- msvse_settingsdesigner.err.formatvalue
-- msvse_resedit.err.nameblank
-- msvse_resedit.err.duplicatename
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: tglee
@@ -22,9 +17,7 @@ When you're working with resource files for your application by using the Resour
 This error occurs when you have a duplicate name for a resource in your resource list. Follow these steps to fix the issue.
 
 1. In **Solution Explorer**, right-click the project node, and then select **Properties**.
-
 1. In the **Search properties** dialog, select **Resources**.
-
 1. Delete the duplicate resource item or rename it.
 
 ## Issue: The resource name cannot be empty
@@ -32,9 +25,7 @@ This error occurs when you have a duplicate name for a resource in your resource
 This error occurs when you have a value for a resource that's yet unnamed. Follow these steps to fix the issue.
 
 1. In **Solution Explorer**, right-click the project node, and then select **Properties**.
-
 1. In the **Search properties** dialog, select **Resources**.
-
 1. Make sure to provide a name for each resource item.
 
 ## Support options

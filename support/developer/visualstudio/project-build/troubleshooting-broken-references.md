@@ -2,13 +2,6 @@
 title: Troubleshoot broken references
 description: Learn how to troubleshoot broken references that might be caused by something other than your application's inability to find the referred component.
 ms.date: 03/10/2023
-ms.topic: troubleshooting
-helpviewer_keywords:
-- C# projects, references
-- Visual Basic projects, references
-- troubleshooting references
-- referencing files from projects
-- referencing components, troubleshooting
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: tglee
@@ -20,13 +13,9 @@ _Applies to:_&nbsp;Visual Studio
 If your application attempts to use a broken reference, an exception error is generated. The main reason is the inability to find the referenced component for the error, but there are several scenarios in which a reference is considered broken and they are:
 
 - Referenced path is incorrect or incomplete.
-
 - Referenced file was deleted.
-
 - Referenced file was renamed.
-
 - Network connection or authentication has failed.
-
 - Referenced COM component isn't installed on the computer.
 
 The next few sections provide resolutions to these scenarios.
@@ -40,12 +29,10 @@ If projects are shared on different computers, some references might not be foun
 
 When you open a project, Visual Studio looks in the directories on the reference path to try and find these component files. If you open the project on a computer that stores the component in a different directory, such as _D:\MyComponents_, the reference will not be found and an error appears in the **Task List**.
 
-To fix this problem, follow these steps:
+To fix this problem, use the following methods:
 
-1. Delete the broken reference and then replace it by using the **Add Reference** dialog box.
-1. Use the **Reference Path** item in the project's property pages.
-1. Modify the folders in the list to point to the correct locations.
-   The **Reference Path** property is persisted for each user on each computer. Therefore, modifying your reference path doesn't affect other users of the project.
+- Delete the broken reference and then replace it by using the **Add Reference** dialog box.
+- Use the **Reference Path** item in the project's property pages. Modify the folders in the list to point to the correct locations. The **Reference Path** property is persisted for each user on each computer. Therefore, modifying your reference path doesn't affect other users of the project.
 
 > [!TIP]
 > Project-to-project references don't have these broken reference problems. For this reason, use Project-to-project references instead of file references, if you can.
@@ -55,23 +42,19 @@ To fix this problem, follow these steps:
 To fix a broken project reference, correct the reference path by following these steps:
 
 1. In **Solution Explorer**, right-click your project node, and then select **Properties**.
-
    The **Project Designer** appears.
-
 1. If you're using Visual Basic, select the **References** page, and then select **Reference Paths** .
-1. In the **Reference Paths** dialog box, type the path of the folder that contains the item you want to reference in the **Folder** field.
-1. Select **Add Folder**.
-
+   1. In the **Reference Paths** dialog box, type the path of the folder that contains the item you want to reference in the **Folder** field.
+   1. Select **Add Folder**.
 1. If you're using C#, select the **Reference Paths** page.
-1. In the **Folder** field, type the path of the folder that contains the item you want to reference.
-1. Select **Add Folder**.
+    1. In the **Folder** field, type the path of the folder that contains the item you want to reference.
+    1. Select **Add Folder**.
 
 ## Referenced file was deleted
 
 Here are two options to fix a broken project reference for a deleted file that no longer exists on your drive:
 
 - Delete the reference.
-
 - If the reference exists in another location on your computer, read it from that location.
 
 ## Referenced file was renamed
@@ -79,7 +62,6 @@ Here are two options to fix a broken project reference for a deleted file that n
 Here are two options to fix a broken reference for a file that was renamed:
 
 - Delete the reference and then add a reference to the renamed file.
-
 - If the reference exists in another location on your computer, read it from that location.
 
 ## Network connection or authentication has failed

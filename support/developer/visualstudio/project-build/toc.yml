@@ -10,3 +10,7 @@
   href: ./how-to-troubleshoot-templates.md
 - name: Troubleshoot Resource Editor errors
   href: ./troubleshoot-resource-editor-errors.md
+- name: Troubleshoot broken references
+  href: ./troubleshooting-broken-references.md
+- name: Diagnose task failures
+  href: ./diagnosing-task-failures.md
