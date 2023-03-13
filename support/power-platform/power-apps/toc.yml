@@ -42,7 +42,7 @@
         - name: Web API Client errors
           items:
             - name: Web API client errors
-              href: web-api-client-errors/web-api-client-errors.md
+              href: dataverse/web-api-client-errors/web-api-client-errors.md
     - name: Isolate and troubleshoot common issues
       items:
         - name: Common issues and resolutions
