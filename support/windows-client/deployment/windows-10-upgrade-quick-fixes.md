@@ -1,7 +1,7 @@
 ---
 title: Windows 10 upgrade quick fixes
 description: Learn how to quickly resolve many problems, which may come up during a Windows 10 upgrade.
-ms.date: 08/19/2022
+ms.date: 03/13/2023
 manager: dcscontentpm
 ms.author: aaroncz
 ms.custom: sap:setup, csstroubleshoot
@@ -14,14 +14,14 @@ audience: itpro
 localization_priority: medium
 ---
 
-# Quick fixes
+# Windows 10 upgrade quick fixes
 
 _Applies to:_ &nbsp; Windows 10
 
 > [!NOTE]
 > This is a 100 level topic (basic).
 >
-> See [Resolve Windows 10 upgrade errors](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors) for a full list of topics in this article.
+> For IT professionals, check more information in [Resolve Windows 10 upgrade errors](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors) for a full list of topics in this article.
 
 The following list of fixes can resolve many Windows upgrade problems. You should try these steps before contacting Microsoft support, or attempting a more advanced analysis of a Windows upgrade failure. Also review information at [Windows 10 help](https://support.microsoft.com/products/windows?os=windows-10).
 
@@ -204,13 +204,13 @@ In **File Explorer**, select **Computer** or **This PC** on the left, then look 
 
 The amount of space available on the system drive will be displayed under the drive. See the following example:
 
-:::image type="content" source="media/windows-10-upgrade-quick-fixes/system-drive-space-available.png" alt-text="Screenshot of the system drive with the amount of available space." border="false":::
+:::image type="content" source="media/windows-10-upgrade-quick-fixes/system-drive-space-available.png" alt-text="Screenshot of the system drive with the amount of available space.":::
 
 In the previous example, there's 703 GB of available free space on the system drive (C:).
 
 To free up more space on the system drive, begin by running Disk Cleanup. You can access Disk Cleanup by right-clicking the hard drive icon and then clicking Properties. See the following example:
 
-:::image type="content" source="media/windows-10-upgrade-quick-fixes/disk-cleanup-option.png" alt-text="Screenshot of the system drive properties with the disk cleanup option on the general tab." border="false":::
+:::image type="content" source="media/windows-10-upgrade-quick-fixes/disk-cleanup-option.png" alt-text="Screenshot of the system drive properties with the disk cleanup option on the general tab.":::
 
 For instructions to run Disk Cleanup and other suggestions to free up hard drive space, see [Tips to free up drive space on your PC](https://support.microsoft.com/help/17421/windows-free-up-drive-space).
 
