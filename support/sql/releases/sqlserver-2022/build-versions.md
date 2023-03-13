@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2022 build versions (KB5023451)
 description: This article lists cumulative update and GDR builds for SQL Server 2022.
-ms.date: 2/16/2023
+ms.date: 03/15/2023
 ms.custom: KB5023451
 appliesto:
 - SQL Server 2022
