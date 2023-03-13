@@ -91,7 +91,7 @@
         href: database-engine/availability-groups/troubleshooting-intermittent-connection-timeouts-availability-groups.md
       - name: Troubleshooting log send queuing in an Always On availability group
         href: database-engine/availability-groups/troubleshooting-log-send-queuing-in-alwayson-availability-group.md
-      - name: Troubleshooting on Always On issues
+      - name: Troubleshooting Always On issues
         href: database-engine/availability-groups/troubleshooting-alwayson-issues.md
       - name: Troubleshooting recovery queueing in an Availability Group
         href: database-engine/availability-groups/troubleshooting-recovery-queuing-in-alwayson-availability-group.md
