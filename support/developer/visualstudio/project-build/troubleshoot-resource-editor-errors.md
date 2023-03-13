@@ -3,7 +3,6 @@ title: Troubleshoot Resource Editor errors
 description: Learn how to resolve errors that can occur when you use the Resource Editor. 
 ms.date: 03/13/2023
 ms.topic: troubleshooting
-ms.custom: sap:Project/Build System
 f1_keywords:
 - msvse_settingsdesigner.err.formatvalue
 - msvse_resedit.err.nameblank

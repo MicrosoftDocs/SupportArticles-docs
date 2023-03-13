@@ -1,7 +1,6 @@
 ---
 title: Troubleshoot broken references
 description: Learn how to troubleshoot broken references that might be caused by something other than your application's inability to find the referred component.
-ms.custom: sap:Integrated development environment (IDE)
 ms.date: 03/10/2023
 ms.topic: troubleshooting
 helpviewer_keywords:

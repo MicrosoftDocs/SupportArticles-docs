@@ -1,7 +1,6 @@
 ---
 title: Troubleshoot .NET Framework targeting errors
 description: This article provides resolutions for MSBuild errors that might occur because of reference issues.
-ms.custom: sap:Project/Build System
 ms.date: 03/10/2023
 ms.topic: troubleshooting
 f1_keywords:

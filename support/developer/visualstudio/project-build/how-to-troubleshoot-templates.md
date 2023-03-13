@@ -1,7 +1,6 @@
 ---
 title: Troubleshoot project templates and item templates
 description: Learn how to troubleshoot templates when they fail to load in the development environment.
-ms.custom: sap:Project/Build System
 ms.date: 03/13/2023
 ms.topic: troubleshooting
 helpviewer_keywords:
