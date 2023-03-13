@@ -91,9 +91,11 @@ To identify nodes, containers, or pods that drive high CPU usage, follow these s
 
     After you identify the pods that use excessive CPU, you can identify the applications running on the pods.
 
+---
+
 ### Step 2: Review best practices to avoid high CPU usage
 
-Review the following table to learn how to implement best practices for avoiding high CPU usage.
+Review the following table to learn how to implement best practices for avoiding high CPU usage:
 
 | Best practice | Description |
 |---|---|
