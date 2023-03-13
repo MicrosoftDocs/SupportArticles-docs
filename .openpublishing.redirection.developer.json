@@ -4353,6 +4353,11 @@
       "source_path": "support/developer/visualstudio/installation/uninstall-third-party-app.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/installation/secondary-installer-third-party-app",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-apps/dataverse-web-api/web-api-client-errors.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/dataverse/web-api-client-errors/web-api-client-errors",
+      "redirect_document_id": true
     }
   ]
 }
