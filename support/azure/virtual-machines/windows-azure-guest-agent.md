@@ -354,6 +354,18 @@ If it's set to 0, then 64 bits .Net application are considered as 32 bits applic
 
 The solution is to set Enable64Bit key to 1 - and reboot the VM.
 
+### Firewall log ending on md-ssd-*.blob.storage.azure.net
+
+You may notice unknown traffic coming from managed disk called md-ssd-*.blob.storage.azure.net. This traffic is triggered by WindowsAzureGuestAgent extension
+
+**Analysis**
+
+This is observed when VM accessing its managed storage account (which updates VM agent status file). This disk stored in this storage account is managed by our backend and customer has no visibility to it.
+
+
+**Solution**
+
+We recommend unblocking access to the storage blob url by adding Azure firewall application rule with destination type FQDN “*.blob.storage.azure.net” and protocol Https:443.
 
 
 <br/>
