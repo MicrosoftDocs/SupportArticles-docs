@@ -38,6 +38,7 @@
             - name: No response with back button
               href: create-and-use-apps/no-navigation-when-selecting-button.md
     - name: Dataverse
+      items:
         - name: Web API Client errors
           items:
             - name: Web API client errors
