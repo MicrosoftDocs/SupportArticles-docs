@@ -254,7 +254,7 @@ When multiple requests of a similar nature are running concurrently, the amount 
 
 #### Memory Leaks
 
-A less common scenario is where the code in the plug-in is leaking memory. This can occur when the plug-in isn't written as stateless, which is another best practice: [Develop IPlugin implementations as stateless](/power-apps/developer/data-platform/best-practices/business-logic/develop-iplugin-implementations-stateless.md). When the plug-in isn't stateless and there's an attempt to continually add data to a stateful property like an array. The amount of data grows to the point where it uses all the available memory.
+A less common scenario is where the code in the plug-in is leaking memory. This can occur when the plug-in isn't written as stateless, which is another best practice: [Develop IPlugin implementations as stateless](/power-apps/developer/data-platform/best-practices/business-logic/develop-iplugin-implementations-stateless). When the plug-in isn't stateless and there's an attempt to continually add data to a stateful property like an array. The amount of data grows to the point where it uses all the available memory.
 
 ## Transaction errors
 
