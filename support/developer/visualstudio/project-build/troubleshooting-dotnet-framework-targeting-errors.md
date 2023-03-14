@@ -21,7 +21,7 @@ This topic describes [MSBuild](/visualstudio/msbuild/msbuild) errors that might 
 You can create applications that reference projects or assemblies that target different versions of .NET. For example, you can create an application that targets .NET 6 but references an assembly that targets .NET Core 3.1. However, you can't set a reference in a project that targets an earlier version of.NET to a project or assembly that targets .NET 6. Here's an example of the error you might see in this case:
 
 ```output
- error NU1201: Project ClassLibrary-NET6 is not compatible with netcoreapp3.1 (.NETCoreApp,Version=v3.1). Project ClassLibrary-NET6 supports: net6.0 (.NETCoreApp,Version=v6.0)
+error NU1201: Project ClassLibrary-NET6 is not compatible with netcoreapp3.1 (.NETCoreApp,Version=v3.1). Project ClassLibrary-NET6 supports: net6.0 (.NETCoreApp,Version=v6.0)
 2>Done building project "ClassLibrary-NET31.csproj" -- FAILED.
 ```
 
