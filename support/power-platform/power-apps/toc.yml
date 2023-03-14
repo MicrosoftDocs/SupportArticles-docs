@@ -37,10 +37,10 @@
               href: create-and-use-apps/cookies-pop-up-blocker-error.md
             - name: No response with back button
               href: create-and-use-apps/no-navigation-when-selecting-button.md
-    - name: Dataverse Web API
+    - name: Dataverse
       items:
         - name: Web API client errors
-          href: dataverse-web-api/web-api-client-errors.md
+          href: dataverse/web-api-client-errors.md
     - name: Isolate and troubleshoot common issues
       items:
         - name: Common issues and resolutions
