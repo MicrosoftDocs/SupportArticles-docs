@@ -10,9 +10,10 @@ author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: tglee
 ---
+
 # Troubleshoot errors in the Resource Editor
 
- _Applies to:_&nbsp;Visual Studio
+_Applies to:_&nbsp;Visual Studio
 
 When you're working with resource files for your application by using the Resource Editor in Visual Studio, you might run into errors. Here are some of the typical error messages that can appear, along with instructions on how to resolve the errors.
 
