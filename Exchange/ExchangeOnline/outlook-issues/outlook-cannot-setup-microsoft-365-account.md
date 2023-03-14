@@ -43,9 +43,9 @@ If the user views their Outlook account information in **File** \> **Office Acco
 
 ## Cause
 
-Autodiscover can use either local or cloud options to set up the user's account on an Outlook client or create a profile for the user. In your scenario, cloud Autodiscover is automatically disabled because the **Allow the use of connected experiences in Office** policy setting is disabled. Also, because all the local Autodiscover options are disabled, your policy settings disable both the local and cloud Autodiscover options. If both the local and cloud Autodiscover options are unavailable, Outlook has no way to retrieve the user's account settings.
+Autodiscover must use either local or cloud options to set up the user's account on an Outlook client or create a profile for the user.
 
-The following table lists the local and cloud Autodiscover options in the **Disable AutoDiscover** Group Policy settings.
+The following table lists the local and cloud Autodiscover options.
 
 | Local Autodiscover options | Cloud Autodiscover options |
 |-|-|
@@ -55,6 +55,8 @@ The following table lists the local and cloud Autodiscover options in the **Disa
 | Autodiscover domain query | |
 | HTTP redirect method | |
 | SRV record query in DNS | |
+
+In your scenario, if you only disable local Autodiscover options in the **Disable AutoDiscover** Group Policy, you expect the cloud Autodiscover options to be available. However, the **Allow the use of connected experiences in Office** policy setting blocks access to the web-based cloud Autodiscover options. This effectively disables all Autodiscover options, preventing Outlook from retrieving the email account settings and displaying errors.
 
 ## Resolution
 
