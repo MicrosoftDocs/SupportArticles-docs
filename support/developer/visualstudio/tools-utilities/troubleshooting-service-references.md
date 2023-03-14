@@ -17,14 +17,14 @@ _Applies to:_&nbsp;Visual Studio
 
 This article lists solutions to common issues that may occur when you're working with references to [Windows Communication Foundation (WCF) or WCF Data Services in Visual Studio](/visualstudio/data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio).
 
-If you want to update or remove a service reference, see [Add, update, or remove a WCF data service reference](/visualstudio/vsto/how-to-add-update-or-remove-a-wcf-data-service-reference).
+If you want to update or remove a service reference, see [Add, update, or remove a WCF data service reference](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference).
 
 ## Error when no service address is provided
 
 When you select the **Go** button with no address, you may see an error message that says "Please enter the address for a service." To resolve this issue, identify the service's address and enter it.
 
 - If it's a service in your solution, you can use the **Discover** button to find and select it, and then try the **Go** button again.
-- If it's a service hosted somewhere on the internet, add it by following the instructions at [Add a WCF service reference](/visualstudio/vsto/how-to-add-update-or-remove-a-wcf-data-service-reference#add-a-wcf-service-reference).
+- If it's a service hosted somewhere on the internet, add it by following the instructions at [Add a WCF service reference](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference#add-a-wcf-service-reference).
 
 ## Error returning data from a service
 
