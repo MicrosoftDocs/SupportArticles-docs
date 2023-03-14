@@ -286,7 +286,7 @@ There are a wide variety of reasons that a SQL timeout error may occur.
 
 ### Blocking
 
-The most common cause for a SQL Timeout error is that the operation is waiting for resources that are being blocked by another SQL transaction. The error is the result of the system protecting the integrity of the data and from long running requests that impact performance for users.
+The most common cause for a SQL Timeout error is that the operation is waiting for resources that are being blocked by another SQL transaction. The error is the result of Dataverse protecting the integrity of the data and from long running requests that impact performance for users.
 
 Blocking may be due to other concurrent operations. Your code may work fine in isolation in a test environment and still be susceptible to conditions that only occur when multiple users are initiating the logic in your plug-in.
 
@@ -390,6 +390,21 @@ Error Code: `-2147220989`<br />
 Error Message: `You cannot start a transaction with a different isolation level than is already set on the current transaction`
 
 Plug-ins are intended to support business logic. Modifying any part of the data schema within synchronous plug-in isn't supported. These operations frequently take longer and may cause cached metadata used by applications to become out of sync. However, these operations can be performed in a plug-in step registered to run asynchronously.
+
+## Known Issue: Activity.RegardingObjectId name value not set with plug-in
+
+The most common symptom of this issue is that the **Regarding** field in an activity record shows `(No Name)` rather than the primary name attribute value.
+
+Within a plug-in, you can set lookup attributes with an [EntityReference](xref:Microsoft.Xrm.Sdk.EntityReference) value. The [EntityReference.Name Property](xref:Microsoft.Xrm.Sdk.EntityReference.Name) isn't required. Typically you don't need to include it when setting a lookup attribute value because Dataverse will set it. You should set values like this during the **PreOperation** stage of the event pipeline. More information: [Event execution pipeline](/power-apps/developer/data-platform/event-framework#event-execution-pipeline)
+
+The exception to this rule is when setting the [ActivityPointer.RegardingObjectId](/power-apps/developer/data-platform/reference/entities/activitypointer#BKMK_RegardingObjectId) lookup. All the entity types that are derived from `ActivityPointer` inherit this lookup. By default these include [Appointment](/power-apps/developer/data-platform/reference/entities/appointment), [Chat](/power-apps/developer/data-platform/reference/entities/chat), [Email](/power-apps/developer/data-platform/reference/entities/email), [Fax](/power-apps/developer/data-platform/reference/entities/fax), [Letter](/power-apps/developer/data-platform/reference/entities/letter), [PhoneCall](/power-apps/developer/data-platform/reference/entities/phonecall), [RecurringAppointmentMaster](/power-apps/developer/data-platform/reference/entities/recurringappointmentmaster), and any custom tables that were created as activity types. More information: [Activity tables](/power-apps/developer/data-platform/entity-metadata#activity-tables)
+
+If you set this value in the **PreOperation** stage, the name value isn't added by Dataverse. The value will null and the formatted value that should contain this value isn't present when you retrieve the record.
+
+There are two ways to work around this issue:
+
+1. You can set the [EntityReference.Name Property](xref:Microsoft.Xrm.Sdk.EntityReference.Name) value with the correct primary name field value prior to setting the value of the lookup attribute.
+1. You can set the lookup value in the **PreValidation** stage rather than **PreOperation** stage.
 
 ### See also
 
