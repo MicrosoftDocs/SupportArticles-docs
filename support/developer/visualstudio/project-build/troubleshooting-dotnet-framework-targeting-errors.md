@@ -1,7 +1,10 @@
 ---
 title: Troubleshoot .NET Framework targeting errors
 description: This article provides resolutions for MSBuild errors that might occur because of reference issues.
-ms.date: 03/13/2023
+ms.date: 10/07/2022
+f1_keywords:
+- vs.FrameworkTargetingErrors
+- MSBuild.ResolveAssemblyReference.FailedToResolveReferenceBecausePrimaryAssemblyInExclusionList
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: ghogen

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot broken references
 description: Learn how to troubleshoot broken references that might be caused by something other than your application's inability to find the referred component.
-ms.date: 03/10/2023
+ms.date: 07/01/2022
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: tglee
@@ -10,9 +10,9 @@ ms.reviewer: tglee
 
 _Applies to:_&nbsp;Visual Studio
 
-If your application attempts to use a broken reference, an exception error is generated. The main reason is the inability to find the referenced component for the error, but there are several scenarios in which a reference is considered broken and they are:
+If your application attempts to use a broken reference, an exception error is generated. The main reason for the error is the inability to find the referenced component, but there are several scenarios in which a reference is considered broken and they are:
 
-- Referenced path is incorrect or incomplete.
+- Project's reference path is incorrect or incomplete.
 - Referenced file was deleted.
 - Referenced file was renamed.
 - Network connection or authentication has failed.
@@ -23,13 +23,13 @@ The next few sections provide resolutions to these scenarios.
 > [!NOTE]
 > Files in assemblies are referenced with absolute paths in the project file. Therefore, users who work in a multi-developer environment might find that they're missing a referenced assembly in their local environment. To avoid these errors, it's better to add project-to-project references. For more information, see [Assemblies in .NET](/dotnet/standard/assembly/).
 
-## Referenced path is incorrect or incomplete
+## Reference path is incorrect or incomplete
 
 If projects are shared on different computers, some references might not be found when a component is located in a different directory. References are stored under the name of the component file (for example, _MyComponent_). When you add a reference to a project, the folder location of the component file (for example, _C:\MyComponents_) is appended to the **ReferencePath** project property.
 
 When you open a project, Visual Studio looks in the directories on the reference path to try and find these component files. If you open the project on a computer that stores the component in a different directory, such as _D:\MyComponents_, the reference will not be found and an error appears in the **Task List**.
 
-To fix this problem, use the following methods:
+To fix this problem, use one of the following methods:
 
 - Delete the broken reference and then replace it by using the **Add Reference** dialog box.
 - Use the **Reference Path** item in the project's property pages. Modify the folders in the list to point to the correct locations. The **Reference Path** property is persisted for each user on each computer. Therefore, modifying your reference path doesn't affect other users of the project.

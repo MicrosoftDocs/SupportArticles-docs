@@ -1,17 +1,17 @@
 ---
 title: Troubleshoot project templates and item templates
 description: Learn how to troubleshoot templates when they fail to load in the development environment.
-ms.date: 03/13/2023
+ms.date: 01/02/2018
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: tglee
 ---
 
-# How to: Troubleshoot project and item templates
+# Troubleshoot project and item templates
 
 _Applies to:_&nbsp;Visual Studio
 
-If a template fails to load in the development environment, there are several ways to resolve the problem.
+If a template fails to load in the development environment, there are several ways to locate the problem.
 
 ## Validate the vstemplate file
 
