@@ -21,7 +21,7 @@ _Applies to:_ &nbsp; Windows 10
 > [!NOTE]
 > This is a 400 level topic (advanced).
 >
-> For IT professionals, check more information in [Resolve Windows 10 upgrade errors](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors) for a full list of topics in this article.
+> For IT professionals, check more information in [Resolve Windows 10 upgrade errors](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors).
 
 If the upgrade process isn't successful, Windows Setup will return two codes:
 

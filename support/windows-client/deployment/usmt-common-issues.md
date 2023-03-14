@@ -1,5 +1,5 @@
 ---
-title: USMT common issues
+title: User State Migration Tool (USMT) common issues
 description: Describes the resolutions for the common issues that you might see when you run the User State Migration Tool (USMT) 10.0 tools.
 ms.reviewer: frankroj
 manager: dcscontentpm
@@ -14,9 +14,9 @@ audience: itpro
 localization_priority: medium
 ---
 
-# USMT common issues
+# User State Migration Tool (USMT) common issues
 
-The following sections discuss common issues that you might see when you run the User State Migration Tool (USMT) 10.0 tools. USMT produces log files that describe in further detail any errors that occurred during the migration process. These logs can be used to troubleshoot migration failures.
+The following sections discuss common issues that you might see when you run the USMT 10.0 tools. USMT produces log files that describe in further detail any errors that occurred during the migration process. These logs can be used to troubleshoot migration failures.
 
 ## General guidelines for identifying migration problems
 
