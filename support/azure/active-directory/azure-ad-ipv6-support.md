@@ -3,7 +3,7 @@ title: IPv6 support in Azure Active Directory (Azure AD)
 description: Learn about Internet Protocol version 6 (IPv6) support in Azure Active Directory (Azure AD). Review what your organization needs to do to accommodate IPv6.
 ms.service: active-directory
 ms.subservice: aad-general
-ms.date: 02/24/2023
+ms.date: 03/13/2023
 ms.author: v-dele
 author: DennisLee-DennisLee
 ms.reviewer: lhuangnorth, gautama, amycolannino, joflore, mariourrutia
@@ -28,7 +28,7 @@ The following features will also support IPv6 addresses:
 
 ## When will IPv6 be supported in Azure AD?
 
-We'll begin introducing IPv6 support to Azure AD in late March 2023.
+We'll begin introducing IPv6 support to Azure AD starting April 3, 2023.
 
 We know that IPv6 support is a significant change for some organizations. We're publishing this information now so that customers can make plans to ensure readiness.
 
@@ -67,7 +67,7 @@ By default, both IPv6 and IPv4 traffic is supported on Windows and most other op
 
 ## Test Azure AD authentication over IPv6
 
-You can test Azure AD authentication over IPv6 before we enable it worldwide in late March 2023. This procedure helps validate IPv6 range configurations. The recommended approach is to use a [Name Resolution Policy Table (NRPT)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn593632(v=ws.11)) rule pushed to your Azure AD-joined Windows devices. In Windows Server, NRPT lets you implement a global or local policy that overrides DNS resolution paths. With this feature, you can redirect DNS for various fully qualified domain names (FQDNs) to special DNS servers that are configured to have IPv6 DNS entries for Azure AD sign-in. It's simple to enable and disable NRPT rules by using a PowerShell script. You can use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) to push this feature to clients.
+You can test Azure AD authentication over IPv6 before we enable it worldwide by using the following procedures. These procedures help validate IPv6 range configurations. The recommended approach is to use a [Name Resolution Policy Table (NRPT)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn593632(v=ws.11)) rule pushed to your Azure AD-joined Windows devices. In Windows Server, NRPT lets you implement a global or local policy that overrides DNS resolution paths. With this feature, you can redirect DNS for various fully qualified domain names (FQDNs) to special DNS servers that are configured to have IPv6 DNS entries for Azure AD sign-in. It's simple to enable and disable NRPT rules by using a PowerShell script. You can use [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) to push this feature to clients.
 
 > [!NOTE]
 > - Microsoft is providing these instructions for testing purposes only. You must remove the following configurations by May 2023 to ensure that your clients are using production DNS servers. The DNS servers in the following procedures may be decommissioned after May 2023.
@@ -274,20 +274,31 @@ $startDate = (Get-Date).AddDays(-($agoDays)).ToString('yyyy-MM-dd')  # Get filt
 $pathForExport = "./"  # The path to the local filesystem for export of the CSV file. 
 
 Connect-MgGraph -Scopes "AuditLog.Read.All" -TenantId $tId 
-# Get both interactive and non-interactive IPv6 sign-ins .
+
+# Get both interactive and non-interactive IPv6 sign-ins.
 $signInsInteractive = Get-MgAuditLogSignIn -Filter "contains(IPAddress, ':')" -All
 $signInsNonInteractive = Get-MgAuditLogSignIn -Filter "contains(IPAddress, ':')" -All 
 $columnList = @{  # Enumerate the list of properties to be exported to the CSV files.
     Property = "createdDateTime","CorrelationId", "userPrincipalName", "userId",
       "UserDisplayName", "AppDisplayName", "AppId", "IPAddress", "isInteractive",
       "ResourceDisplayName", "ResourceId"
-} # Summarize IPv6 & App Display Name count
-$signInsInteractive | Group-Object IPaddress, AppDisplayName | Select-Object @{Name='IPaddress';Expression={$_.Group[0].IPaddress}}, 
-    @{Name ='AppDisplayName';Expression={$_.Group[0].AppDisplayName}}, Count | Sort-Object -Property Count –Descending | Export-Csv -Path ($pathForExport + "Summary_Interactive_IPv6_$tId.csv") -NoTypeInformation
-$signInsNonInteractive | Group-Object IPaddress, AppDisplayName | Select-Object @{Name='IPaddress';Expression={$_.Group[0].IPaddress}}, 
-    @{Name ='AppDisplayName';Expression={$_.Group[0].AppDisplayName}}, Count | Sort-Object -Property Count –Descendin | Export-Csv -Path ($pathForExport + "Summary_NonInteractive_IPv6_$tId.csv") -NoTypeInformation #Detailed IPv6 Sign-ins
-#$signInsInteractive  | Select-Object @columnList | Export-Csv -Path ($pathForExport + "Detailed_Interactive_IPv6_$tId.csv") -NoTypeInformation
-#$signInsNonInteractive  | Select-Object @columnList | Export-Csv -Path ($pathForExport + "Detailed_NonInteractive_IPv6_$tId.csv") -NoTypeInformation
+}
+
+# Summarize IPv6 & app display name count.
+$signInsInteractive |
+    Group-Object IPaddress, AppDisplayName |
+    Select-Object @{Name = 'IPaddress'; Expression = {$_.Group[0].IPaddress}},
+        @{Name = 'AppDisplayName'; Expression = {$_.Group[0].AppDisplayName}},
+        Count |
+    Sort-Object -Property Count –Descending |
+    Export-Csv -Path ($pathForExport + "Summary_Interactive_IPv6_$tId.csv") -NoTypeInformation
+$signInsNonInteractive |
+    Group-Object IPaddress, AppDisplayName |
+    Select-Object @{Name = 'IPaddress'; Expression = {$_.Group[0].IPaddress}},
+        @{Name = 'AppDisplayName'; Expression = {$_.Group[0].AppDisplayName}},
+        Count |
+    Sort-Object -Property Count –Descending |
+    Export-Csv -Path ($pathForExport + "Summary_NonInteractive_IPv6_$tId.csv") -NoTypeInformation # Detailed IPv6 sign-ins
 ```
 
 ## Next steps
