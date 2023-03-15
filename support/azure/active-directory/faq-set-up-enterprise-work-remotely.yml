@@ -27,7 +27,7 @@ sections:
       - question: |
           What guidance is available to set up Microsoft Teams from an Azure AD perspective to work with my existing on-premises deployment?
         answer: |
-          Your first step should be to consider your needs. For example, do you want to sync users from on-premises to Azure AD, or do you want only to start a new cloud solution? You can learn more about deployments [here](http://azuredummies.com/2020/03/17/how-microsoft-can-help-working-from-home-responding-to-corona-crisis-ms-teams/).
+          Microsoft Teams leverages identities stored in Azure Active Directory. You can integrate Azure Active Directory with on-premises AD environments. For more information, see [Microsoft 365 integration with on-premises environments](/microsoft-365/enterprise/microsoft-365-integration?view=o365-worldwide) 
 
       - question: |
           I work in education, and I have no existing on-premises infrastructure. How can I use Microsoft Teams for educational purposes, such as online teaching?
