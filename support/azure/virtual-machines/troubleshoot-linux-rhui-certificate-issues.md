@@ -587,6 +587,32 @@ The following steps apply if the OS version is *earlier than the latest version 
    sudo dnf repolist all
    ```
 
+#### [RHEL 8.x_ - RHEL-HA (E4S)](#tab/rhel8-rhel-ha-e4s)
+
+1. Download the EUS repository configuration file by running the [wget](https://www.gnu.org/software/wget/) command:
+
+   ```bash
+   sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel8-ha.config
+   ```
+
+2. Install the `rhui-azure-rhel8-ha` package by running the [dnf](https://www.linuxfordevices.com/tutorials/centos/dnf-command) installation command:
+
+   ```bash
+   sudo dnf --config=rhui-microsoft-azure-rhel8-ha.config install rhui-azure-rhel8-ha
+   ```
+
+3. Lock the `releasever` variable:
+
+   ```bash
+   sudo echo $(. /etc/os-release && echo $VERSION_ID) > /etc/yum/vars/releasever
+   ```
+
+4. Verify that the corresponding repositories are available and show no errors by running the `dnf repolist` command:
+
+   ```bash
+   sudo dnf repolist all
+   ```
+
 ---
 
 ## Cause 4: SSL CA certificate is missing
@@ -640,6 +666,47 @@ You might receive an error message that resembles the following output when you 
       ```bash
       sudo update-ca-trust
       ```
+
+---
+
+## Cause 5: Verification error: CA certificate key too weak (RHEL8 or 9)
+
+This issue happens when the systems tries to connect to a server which contains a certificate signed using RSA with 2048 bits, while the system is using the `FUTURE` policy mode, which prohibits that algorithm. The following error will be shown on `/var/log/messages` or `/var/log/dnf.log`:
+
+```output
+2023-03-13T19:07:55+0000 DEBUG error: Curl error (60): SSL peer certificate or SSH remote key was not OK for https://rhui4-1.microsoft.com/pulp/repos/content/dist/rhel9/rhui/9/x86_64/supplementary/os/repodata/repomd.xml [SSL certificate problem: CA certificate key too weak] (https://rhui4-1.microsoft.com/pulp/repos/content/dist/rhel9/rhui/9/x86_64/supplementary/os/repodata/repomd.xml).
+```
+
+```output
+ - Curl error (58): Problem with the local SSL certificate for https://rhui-2.microsoft.com/pulp/repos/content/e4s/rhel8/rhui/8.4/x86_64/sap/os/repodata/repomd.xml [could not load PEM client certificate, OpenSSL error error:140AB18F:SSL routines:SSL_CTX_use_certificate:ee key too small, (no key found, wrong pass phrase, or wrong file format?)]
+```
+
+The default system policy setting is `DEFAULT`. In this scenario, the default setting was changed from `DEFAULT` to `FUTURE` or to `CUSTOM`. The `FUTURE` policy will disable some algorithms like SHA-1, the RSA and Diffie-Hellman with 2048 bits for example, and the `CUSTOM` policy might also disable it. The following command can be used to identify the current policy setting mode:
+
+```bash
+# update-crypto-policies --show
+DEFAULT:FUTURE
+```
+
+### Solution 5: Update the system Policy back to "DEFAULT"
+
+1. Change the setting system policy back to `DEFAULT`
+
+```bash
+sudo update-crypto-policies --set DEFAULT
+```
+
+2. Verify the change.
+
+```bash
+sudo update-crypto-policies --show
+```
+3. Test the`dnf`utility.
+
+```bash
+sudo dnf install <package-name>
+```
+For more information about crypto policy, see [Strong crypto defaults in RHEL 8 and deprecation of weak crypto algorithms](https://access.redhat.com/articles/3642912).
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 
