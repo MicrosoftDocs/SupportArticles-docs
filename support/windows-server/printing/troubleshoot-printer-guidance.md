@@ -18,7 +18,7 @@ ms.technology: windows-server-printing
 This article is designed to get you started on troubleshooting issues encountered when using printers.
 
 > [!div class=""nextstepaction""]
-> <a href=""https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806275" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common Print related issues.
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806275" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common Print related issues.
 
 ## Troubleshooting checklist
 
