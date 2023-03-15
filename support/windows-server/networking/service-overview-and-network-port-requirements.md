@@ -627,15 +627,13 @@ System service name: **Spooler**
 |Application protocol|Protocol|Ports|
 |---|---|---|
 |RPC|TCP|135|
-|Randomly allocated high TCP ports¹|TCP|**random port number between 1024 - 65535**²<br/>**random port number between 49152 - 65535**|
+|Randomly allocated high TCP ports¹|TCP|**random port number between 49152 - 65535**|
 |NetBIOS Datagram Service|UDP|138|
 |NetBIOS Name Resolution|UDP|137|
 |NetBIOS Session Service|TCP|139|
 |SMB|TCP|445|
   
 ¹ For more information about how to customize this port, see Remote Procedure Calls and DCOM in the [References](#references) section.
-
-² It's the range in Windows versions that are earlier than Windows Server 2008, and Windows Vista.
   
 > [!NOTE]
 > The Print Spooler service uses RPC over named pipes. This service has the same firewall requirements as the File and Printer Sharing feature.
