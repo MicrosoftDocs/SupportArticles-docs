@@ -3,7 +3,7 @@ title: IPv6 support in Azure Active Directory (Azure AD)
 description: Learn about Internet Protocol version 6 (IPv6) support in Azure Active Directory (Azure AD). Review what your organization needs to do to accommodate IPv6.
 ms.service: active-directory
 ms.subservice: aad-general
-ms.date: 03/13/2023
+ms.date: 03/14/2023
 ms.author: v-dele
 author: DennisLee-DennisLee
 ms.reviewer: lhuangnorth, gautama, amycolannino, joflore, mariourrutia
@@ -278,11 +278,6 @@ Connect-MgGraph -Scopes "AuditLog.Read.All" -TenantId $tId 
 # Get both interactive and non-interactive IPv6 sign-ins.
 $signInsInteractive = Get-MgAuditLogSignIn -Filter "contains(IPAddress, ':')" -All
 $signInsNonInteractive = Get-MgAuditLogSignIn -Filter "contains(IPAddress, ':')" -All 
-$columnList = @{  # Enumerate the list of properties to be exported to the CSV files.
-    Property = "createdDateTime","CorrelationId", "userPrincipalName", "userId",
-      "UserDisplayName", "AppDisplayName", "AppId", "IPAddress", "isInteractive",
-      "ResourceDisplayName", "ResourceId"
-}
 
 # Summarize IPv6 & app display name count.
 $signInsInteractive |
@@ -298,7 +293,7 @@ $signInsNonInteractive |
         @{Name = 'AppDisplayName'; Expression = {$_.Group[0].AppDisplayName}},
         Count |
     Sort-Object -Property Count –Descending |
-    Export-Csv -Path ($pathForExport + "Summary_NonInteractive_IPv6_$tId.csv") -NoTypeInformation # Detailed IPv6 sign-ins
+    Export-Csv -Path ($pathForExport + "Summary_NonInteractive_IPv6_$tId.csv") -NoTypeInformation
 ```
 
 ## Next steps
