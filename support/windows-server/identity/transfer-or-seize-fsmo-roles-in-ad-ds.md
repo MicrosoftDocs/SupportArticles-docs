@@ -1,7 +1,7 @@
 ---
-title: Transfer or seize FSMO roles
-description: Describes how you can use the Ntdsutil.exe utility to move or to seize Flexible Single Master Operations (FSMO) roles.
-ms.date: 3/24/2022
+title: Transfer or seize Operation Master roles
+description: Describes how you can use the Ntdsutil.exe utility to move or to seize Operation Master roles, formerly known as Flexible Single Master Operations (FSMO) roles.
+ms.date: 03/15/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -13,16 +13,16 @@ ms.reviewer: kaushika, herbertm
 ms.custom: sap:active-directory-fsmo, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
-# Transfer or seize FSMO roles in Active Directory Domain Services
+# Transfer or seize Operation Master roles in Active Directory Domain Services
 
-This article describes when and how to transfer or seize Flexible Single Master Operations (FSMO) roles.
+This article describes when and how to transfer or seize Operation Master roles, formerly known as Flexible Single Master Operations (FSMO) roles.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server Standard 2016, Windows Server Essentials 2016, Windows Server Datacenter 2016  
+_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server Standard 2016, Windows Server Essentials 2016, Windows Server Datacenter 2016, Windows Server 2012 R2, Windows Server 2012  
 _Original KB number:_ &nbsp; 255504
 
 ## More information
 
-Within an Active Directory Domain Services (AD DS) forest, there are specific tasks that must be performed by only one domain controller (DC). The DCs that are assigned to perform these unique operations are known as FSMO role holders. The following table lists the FSMO roles, and their placement in Active Directory.
+Within an Active Directory Domain Services (AD DS) forest, there are specific tasks that must be performed by only one domain controller (DC). The DCs that are assigned to perform these unique operations are known as Operation Master role holders. The following table lists the Operation Master roles, and their placement in Active Directory.
 
 |Role|Scope|Naming context (Active Directory partition)|
 |---|---|---|
@@ -32,14 +32,14 @@ Within an Active Directory Domain Services (AD DS) forest, there are specific ta
 |RID master|Domain-wide|DC=\<domain>|
 |Infrastructure master|Domain-wide|DC=\<domain>|
   
-For more information about the FSMO role holders and recommendations for placing the roles, see [FSMO placement and optimization on Active Directory domain controllers](https://support.microsoft.com/help/223346).
+For more information about the Operation Master role holders and recommendations for placing the roles, see [FSMO placement and optimization on Active Directory domain controllers](fsmo-placement-and-optimization-on-ad-dcs.md).
 
 > [!NOTE]
-> Active Directory Application partitions that include DNS application partitions have FSMO role links. If a DNS application partition defines an owner for the infrastructure master role, you cannot use Ntdsutil, DCPromo, or other tools to remove that application partition. For more information, see [DCPROMO demotion fails if unable to contact the DNS infrastructure master](https://support.microsoft.com/help/2694933).
+> Active Directory Application partitions that include DNS application partitions have Operation Master role links. If a DNS application partition defines an owner for the infrastructure master role, you cannot use Ntdsutil, DCPromo, or other tools to remove that application partition. For more information, see [DCPROMO demotion fails if unable to contact the DNS infrastructure master](dcpromo-demotion-fails.md).
 
 When a DC that has been acting as a role holder starts to run (for example, after a failure or a shutdown), it does not immediately resume behaving as the role holder. The DC waits until it receives inbound replication for its naming context (for example, the Schema master role owner waits to receive inbound replication of the Schema partition).
 
-The information that the DCs pass as part of Active Directory replication includes the identities of the current FSMO role holders. When the newly started DC receives the inbound replication information, it verifies whether it is still the role holder. If it is, it resumes typical operations. If the replicated information indicates that another DC is acting as the role holder, the newly started DC relinquishes its role ownership. This behavior reduces the chance that the domain or forest will have duplicate FSMO role holders.
+The information that the DCs pass as part of Active Directory replication includes the identities of the current Operation Master role holders. When the newly started DC receives the inbound replication information, it verifies whether it is still the role holder. If it is, it resumes typical operations. If the replicated information indicates that another DC is acting as the role holder, the newly started DC relinquishes its role ownership. This behavior reduces the chance that the domain or forest will have duplicate Operation Master role holders.
 
 > [!IMPORTANT]
 > AD FS operations fail if they require a role holder and if the newly started role holder is, in fact, the role holder and it does not receive inbound replication.  
@@ -47,39 +47,39 @@ The information that the DCs pass as part of Active Directory replication includ
 
 ## Determine when to transfer or seize roles
 
-Under typical conditions, all five roles must be assigned to "live" DCs in the forest. When you create an Active Directory forest, the Active Directory Installation Wizard (Dcpromo.exe) assigns all five FSMO roles to the first DC that it creates in the forest root domain. When you create a child or tree domain, Dcpromo.exe assigns the three domain-wide roles to the first DC in the domain.
+Under typical conditions, all five roles must be assigned to "live" DCs in the forest. When you create an Active Directory forest, the Active Directory Installation Wizard (Dcpromo.exe) assigns all five Operation Master roles to the first DC that it creates in the forest root domain. When you create a child or tree domain, the creation mechanism assigns the three domain-wide roles to the first DC in the domain.
 
-DCs continue to own FSMO roles until they are reassigned by using one of the following methods:
+DCs continue to own Operation Master roles until they are reassigned by using one of the following methods:
 
 - An administrator reassigns the role by using a GUI administrative tool.
 - An administrator reassigns the role by using the `ntdsutil /roles` command.
 - An administrator gracefully demotes a role-holding DC by using the Active Directory Installation Wizard. This wizard reassigns any locally held roles to an existing DC in the forest.
-- An administrator demotes a role-holding DC by using the `dcpromo /forceremoval` command.
+- An administrator demotes a role-holding DC by using the `Uninstall-ADDSDomainController -ForceRemoval` or `dcpromo /forceremoval` command.
 - The DC shuts down and restarts. When the DC restarts, it receives inbound replication information that indicates that another DC is the role holder. In this case, the newly started DC relinquishes the role (as described previously).
 
-If an FSMO role holder experiences a failure or is otherwise taken out of service before its roles are transferred, you must seize and transfer all roles to an appropriate and healthy DC.
+If an Operation Master role holder experiences a failure or is otherwise taken out of service before its roles are transferred, you must seize and transfer all roles to an appropriate and healthy DC.
 
-We recommend that you transfer FSMO roles in the following scenarios:
+We recommend that you transfer Operation Master roles in the following scenarios:
 
 - The current role holder is operational and can be accessed on the network by the new FSMO owner.
-- You are gracefully demoting a DC that currently owns FSMO roles that you want to assign to a specific DC in your Active Directory forest.
-- The DC that currently owns FSMO roles is being taken offline for scheduled maintenance, and you have to assign specific FSMO roles to live DCs. You may have to transfer roles to perform operations that affect the FSMO owner. This is especially true for the PDC Emulator role. This is a less important issue for the RID master role, the Domain naming master role, and the Schema master roles.
+- You are gracefully demoting a DC that currently owns Operation Master roles that you want to assign to a specific DC in your Active Directory forest.
+- The DC that currently owns Operation Master roles is being taken offline for scheduled maintenance, and you have to assign specific Operation Master roles to live DCs. You may have to transfer roles to perform operations that affect the FSMO owner. This is especially true for the PDC Emulator role. This is a less important issue for the RID master role, the Domain naming master role, and the Schema master roles.
 
-We recommend that you seize FSMO roles in the following scenarios:
+We recommend that you seize Operation Master roles in the following scenarios:
 
 - The current role holder is experiencing an operational error that prevents an FSMO-dependent operation from completing successfully, and you cannot transfer the role.
-- You use the `dcpromo /forceremoval` command to force-demote a DC that owns an FSMO role.
+- You use the `Uninstall-ADDSDomainController -ForceRemoval` or `dcpromo /forceremoval` command to force-demote a DC that owns an Operation Master role.
 
   > [!IMPORTANT]
-  > The `dcpromo /forceremoval` command leaves FSMO roles in an invalid state until they are reassigned by an administrator.
+  > The force-demote command can leave Operation Master roles in an invalid state until they are reassigned by an administrator.
 
 - The operating system on the computer that originally owned a specific role no longer exists or has been reinstalled.
 
 > [!NOTE]
 >
 > - We recommend that you only seize all roles when the previous role holder is not returning to the domain.
-> - If FSMO roles have to be seized in forest recovery scenarios, see step 5 in [Perform initial recovery](/windows-server/identity/ad-ds/manage/ad-forest-recovery-perform-initial-recovery) under the [Restore the first writeable domain controller in each domain](/windows-server/identity/ad-ds/manage/ad-forest-recovery-perform-initial-recovery#restore-the-first-writeable-domain-controller-in-each-domain) section.
-> - After a role transfer or seizure, the new role holder does not act immediately. Instead, the new role holder behaves like a restarted role holder and waits for its copy of the naming context for the role (such as the domain partition) to complete a successful inbound replication cycle. This replication requirement helps make sure that the new role holder is as up to date as possible before it takes action. It also limits the window of opportunity for errors. This window includes only changes that the previous role holder did not finish replicating to the other DCs before it went offline. For a list of the naming context for each FSMO role, see the table at [More information](#more-information) section.
+> - If Operation Master roles have to be seized in forest recovery scenarios, see step 5 in [Perform initial recovery](/windows-server/identity/ad-ds/manage/ad-forest-recovery-perform-initial-recovery) under the [Restore the first writeable domain controller in each domain](/windows-server/identity/ad-ds/manage/ad-forest-recovery-perform-initial-recovery#restore-the-first-writeable-domain-controller-in-each-domain) section.
+> - After a role transfer or seizure, the new role holder does not act immediately. Instead, the new role holder behaves like a restarted role holder and waits for its copy of the naming context for the role (such as the domain partition) to complete a successful inbound replication cycle. This replication requirement helps make sure that the new role holder is as up to date as possible before it takes action. It also limits the window of opportunity for errors. This window includes only changes that the previous role holder did not finish replicating to the other DCs before it went offline. For a list of the naming context for each Operation Master role, see the table at [More information](#more-information) section.
 
 ## Identify a new role holder
 
@@ -88,7 +88,7 @@ The best candidate for the new role holder is a DC that meets the following crit
 - It resides in the same domain as the previous role holder.
 - It has the most recent replicated writable copy of the role partition.
 
-For example, assume that you have to transfer the Schema master role. The Schema master role is part of the schema partition of the forest (cn=Schema,cn=Configuration,dc=\<forest root domain>). The best candidate for a new role holder is a DC that also resides in the forest root domain, and in the same Active Directory site as the current role holder.
+For example, assume that you have to transfer the Schema master role. The Schema master role is part of the schema partition of the forest (CN=Schema,CN=Configuration,DC=\<forest root domain>). The best candidate for a new role holder is a DC that also resides in the forest root domain, and in the same Active Directory site as the current role holder.
 
 > [!CAUTION]
 > Do not put the Infrastructure master role on the same DC as the global catalog server. If the Infrastructure master runs on a global catalog server, it stops updating object information because it does not contain any references to objects that it does not hold. This is because a global catalog server holds a partial replica of every object in the forest.
@@ -107,21 +107,24 @@ For more information, see:
 - [AD Forest Recovery - Seizing an operations master role](/windows-server/identity/ad-ds/manage/ad-forest-recovery-seizing-operations-master-role)
 - [Planning Operations Master Role Placement](/windows-server/identity/ad-ds/plan/planning-operations-master-role-placement)
 
-## Seize or transfer FSMO roles
+## Seize or transfer Operation Master roles
 
 You can use Windows PowerShell or Ntdsutil to seize or transfer roles. For information and examples of how to use PowerShell for these tasks, see [Move-ADDirectoryServerOperationMasterRole](/powershell/module/activedirectory/move-addirectoryserveroperationmasterrole).
 
 > [!IMPORTANT]
-> If you have to seize the RID master role, consider using the [Move-ADDirectoryServerOperationMasterRole](/powershell/module/activedirectory/move-addirectoryserveroperationmasterrole) cmdlet instead of the Ntdsutil.exe utility.
+> To avoid the risk of duplicate SIDs in the domain, Rid Master seizures increment the next available RID in the pool when you seize the RID master role. This behavior can cause your forest to consume available ranges for RID values significantly (also known as RID burn). So seize the Rid Master only when you are positive the current Rid Master cannot be brought back into service.
 >
-> To avoid the risk of duplicate SIDs in the domain, Ntdsutil increments the next available RID in the pool by 10,000 when you seize the RID master role. This behavior can cause your forest to completely consume its available ranges for RID values (also known as RID burn). In contrast, if you use the PowerShell cmdlet to seize the RID master role, the next available RID is not affected.
+> If you have to seize the RID master role, consider the following details:
+>
+> - [Move-ADDirectoryServerOperationMasterRole](/powershell/module/activedirectory/move-addirectoryserveroperationmasterrole) cmdlet increases the next Rid pool by 30000 from what it finds in Active Directory.
+> - When you use the *Ntdsutil.exe* utility using the "roles" category commands, it increases the next Rid pool by 10000.
 
-To seize or transfer the FSMO roles by using the Ntdsutil utility, follow these steps:
+To seize or transfer the Operation Master roles by using the Ntdsutil utility, follow these steps:
 
-1. Sign in to a member computer that has the AD RSAT tools installed, or a DC that is located in the forest where FSMO roles are being transferred.
+1. Sign in to a member computer that has the AD RSAT tools installed, or a DC that is located in the forest where Operation Master roles are being transferred.
     > [!NOTE]
     >
-    > - We recommend that you log on to the DC to which you are assigning FSMO roles.
+    > - We recommend that you log on to the DC to which you are assigning Operation Master roles.
     > - The signed-in user should be a member of the Enterprise Administrators group to transfer Schema master or Domain naming master roles, or a member of the Domain Administrators group of the domain where the PDC emulator, RID master and the Infrastructure master roles are being transferred.
 
 2. Select **Start** > **Run**, type _ntdsutil_ in the **Open** box, and then select **OK**.
@@ -132,7 +135,7 @@ To seize or transfer the FSMO roles by using the Ntdsutil utility, follow these 
 4. Type _connections_, and then press Enter.
 5. Type *connect to server \<servername>*, and then press Enter.
     > [!NOTE]
-    > In this command, \<servername> is the name of the DC that you want to assign the FSMO role to.
+    > In this command, \<servername> is the name of the DC that you want to assign the Operation Master role to.
 
 6. At the **server connections** prompt, type _q_, and then press Enter.
 7. Do one of the following:
@@ -174,7 +177,7 @@ If it is possible, and if you are able to transfer the roles instead of seizing 
 
 ## Considerations when reintegrating replication islands
 
-When part of a domain or forest cannot communicate with the rest of the domain or forest for an extended time, the isolated sections of domain or forest are known as replication islands. DCs in one island cannot replicate with the DCs in other islands. Over multiple replication cycles, the replication islands fall out of sync. If each island has its own FSMO role holders, you may have problems when you restore communication between the islands.
+When part of a domain or forest cannot communicate with the rest of the domain or forest for an extended time, the isolated sections of domain or forest are known as replication islands. DCs in one island cannot replicate with the DCs in other islands. Over multiple replication cycles, the replication islands fall out of sync. If each island has its own Operation Master role holders, you may have problems when you restore communication between the islands.
 
 > [!IMPORTANT]
 > In most cases, you can take advantage of the initial replication requirement (as described in this article) to weed out duplicate role holders. A restarted role holder should relinquish the role if it detects a duplicate role-holder.  
