@@ -112,7 +112,7 @@ For more information, see:
 You can use Windows PowerShell or Ntdsutil to seize or transfer roles. For information and examples of how to use PowerShell for these tasks, see [Move-ADDirectoryServerOperationMasterRole](/powershell/module/activedirectory/move-addirectoryserveroperationmasterrole).
 
 > [!IMPORTANT]
-> To avoid the risk of duplicate SIDs in the domain, Rid Master seizures increment the next available RID in the pool when you seize the RID master role. This behavior can cause your forest to consume available ranges for RID values significantly (also known as RID burn). So seize the Rid Master only when you are positive the current Rid Master cannot be brought back into service.
+> To avoid the risk of duplicate SIDs in the domain, Rid Master seizures increment the next available RID in the pool when you seize the RID master role. This behavior can cause your forest to consume available ranges for RID values significantly (also known as RID burn). So seize the Rid Master only when you're positive that the current Rid Master can't be brought back into service.
 >
 > If you have to seize the RID master role, consider the following details:
 >
