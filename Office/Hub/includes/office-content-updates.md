@@ -2,6 +2,14 @@
 
 
 
+## Week of March 06, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 3/6/2023 | [Heavy Excel workloads run slowly in multi-session environments](/office/troubleshoot/excel/heavy-excel-workloads-run-slowly-multisession) | added |
+
+
 ## Week of February 27, 2023
 
 

@@ -2,6 +2,15 @@
 
 
 
+## Week of March 06, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 3/9/2023 | [Resolve Microsoft Purview Message Encryption issues](/microsoft-365/troubleshoot/office-message-encryption/fix-message-encryption-issue-microsoft-purview) | added |
+| 3/9/2023 | [Resolve email archive and deletion issues when using MRM](/microsoft-365/troubleshoot/retention/troubleshoot-mrm-email-archive-deletion) | added |
+
+
 ## Week of February 20, 2023
 
 
@@ -19,25 +28,3 @@
 | 2/15/2023 | [Identify errors in Microsoft 365 retention and retention label policies](/microsoft-365/troubleshoot/retention/identify-errors-in-retention-and-retention-label-policies) | added |
 | 2/15/2023 | [Resolve errors in Microsoft 365 retention and retention label policies](/microsoft-365/troubleshoot/retention/resolve-errors-in-retention-and-retention-label-policies) | added |
 | 2/15/2023 | [Troubleshooting common eDiscovery issues](/microsoft-365/troubleshoot/ediscovery/resolve-ediscovery-issues) | modified |
-
-
-## Week of January 30, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 1/31/2023 | [Troubleshooting common eDiscovery issues](/microsoft-365/troubleshoot/ediscovery/resolve-ediscovery-issues) | modified |
-| 1/31/2023 | [Auto-apply retention label doesn't apply to messages](/microsoft-365/troubleshoot/retention/auto-apply-retention-label-not-apply-messages) | added |
-| 2/1/2023 | [Troubleshooting common eDiscovery issues](/microsoft-365/troubleshoot/ediscovery/resolve-ediscovery-issues) | modified |
-| 2/2/2023 | [Microsoft Support and Recovery Assistant Enterprise version](/microsoft-365/troubleshoot/administration/sara-command-line-version) | modified |
-
-
-## Week of January 23, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 1/23/2023 | [Install Microsoft Support and Recovery Assistant from a network share or internet location](/microsoft-365/troubleshoot/installation/install-sara-from-network-share) | modified |
-| 1/23/2023 | [Outlook scan with Microsoft Support and Recovery Assistant](/microsoft-365/troubleshoot/administration/assistant-outlook-scan) | modified |
-| 1/23/2023 | [Reset Office activation with Microsoft Support and Recovery Assistant](/microsoft-365/troubleshoot/administration/assistant-reset-office-activation) | modified |
-| 1/23/2023 | [Microsoft Support and Recovery Assistant Enterprise version](/microsoft-365/troubleshoot/administration/sara-command-line-version) | modified |
