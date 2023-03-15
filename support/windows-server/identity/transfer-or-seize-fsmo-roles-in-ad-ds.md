@@ -116,8 +116,8 @@ You can use Windows PowerShell or Ntdsutil to seize or transfer roles. For infor
 >
 > If you have to seize the RID master role, consider the following details:
 >
-> - [Move-ADDirectoryServerOperationMasterRole](/powershell/module/activedirectory/move-addirectoryserveroperationmasterrole) cmdlet increases the next Rid pool by 30000 from what it finds in Active Directory.
-> - When you use the *Ntdsutil.exe* utility using the "roles" category commands, it increases the next Rid pool by 10000.
+> - The [Move-ADDirectoryServerOperationMasterRole](/powershell/module/activedirectory/move-addirectoryserveroperationmasterrole) cmdlet increases the next Rid pool by 30000 from what it finds in Active Directory.
+> - When you use the *Ntdsutil.exe* utility with the `roles` category commands, it increases the next Rid pool by 10000.
 
 To seize or transfer the Operation Master roles by using the Ntdsutil utility, follow these steps:
 
