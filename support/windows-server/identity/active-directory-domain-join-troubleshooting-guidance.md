@@ -37,6 +37,20 @@ This guide provides you with the fundamental concepts used when troubleshooting 
 
    For more information, see [KB5020276—Netjoin: Domain join hardening changes](https://support.microsoft.com/topic/kb5020276-netjoin-domain-join-hardening-changes-2b65a0f3-1f4c-42ef-ac0f-1caaf421baf8).
 
+### Port Requirements
+
+The following table lists the ports that is required to be open between the client computer and the DC.
+
+|Port|Protocol|Application protocol|System service name|
+|---|---|---|---|
+|53|TCP|DNS|DNS Server|
+|53|UDP|DNS|DNS Server|
+|389|UDP|DC Locator|LSASS|
+|389|TCP|LDAP Server|LSASS|
+|88|TCP|Kerberos|Kerberos Key Distribution Server|
+|135|TCP|RPC|RPC Endpoint Mapper|
+|1024-65535|TCP|RPC|RPC Endpoint Mapper for DSCrackNames, SAMR and Netlogon calls between Client and Domain Controller|
+
 ## Common issues and solutions
 
 ### Error code 0x569
@@ -187,17 +201,216 @@ To resolve this error, follow these steps:
 
 ### Error code 0x40
 
-> Cannot join a host into domain.
+The following error messages occurred when you try to join the computer to the `contoso.com` domain:
+
+> The specified network name is no longer available
+
+![Error message](media/active-directory-domain-join-troubleshooting-guidance/domain-join-error-message.png)  
 
 Here's an example from the *netsetup.log* file:
 
 ```output
-mm/dd/yyyy hh:mm:ss:ms NetUseAdd to \\<DC name>.<domain>.<tld>\IPC$ returned 64
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: status of connecting to dc '\\<DC name>.<domain>.<tld>': 0x40
+mm/dd/yyyy hh:mm:ss:ms NetpValidateName: checking to see if 'contoso.com' is valid as type 3 name
+mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid [ Exists ] for 'contoso.com' returned 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpValidateName: name 'contoso.com' is valid for type 3
+mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: trying to find DC in domain 'contoso.com', flags: 0x40001010
+mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: failed to find a DC having account 'CLIENT1$': 0x525, last error is 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: status of verifying DNS A record name resolution for 'DCA.contoso.com': 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: found DC '\\<dc_name>.contoso.com' in the specified domain
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpDsGetDcName returned: 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpDisableIDNEncoding: using FQDN contoso.com from dcinfo
+mm/dd/yyyy hh:mm:ss:ms NetpDisableIDNEncoding: DnsDisableIdnEncoding(UNTILREBOOT) on 'contoso.com' succeeded
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpDisableIDNEncoding returned: 0x0
+mm/dd/yyyy hh:mm:ss:ms NetUseAdd to \\<dc_name>.contoso.com\IPC$ returned 64
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: status of connecting to dc '\\<dc_name>.contoso.com': 0x40
 mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: Function exits with status of: 0x40
+mm/dd/yyyy hh:mm:ss:ms NetpResetIDNEncoding: DnsDisableIdnEncoding(RESETALL) on 'contoso.com' returned 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpResetIDNEncoding on 'contoso.com': 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x40
 ```
 
-The issue is related to Server Message Block (SMB). A firewall device between the client and the DC intercepted the Key Distribution Center (KDC) request packet and altered some data in it. As a result, the DC cannot process the request properly.
+Error 0x40 is logged when the client computer lacks network connectivity on TCP Port 88 between the client machine and the DC.
+
+To resolve this issue, run the following command to test the connection:
+
+```PowerShell
+Test-NetConnection <IP Address> of Domain Controller> -Port 88
+```
+
+For example:
+
+```PowerShell
+Test-NetConnection 192.168.2.100 -Port 88
+```
+
+Expected Output:
+
+![Command output](media/active-directory-domain-join-troubleshooting-guidance/test-netconnection-output-88.png)  
+
+It indicates the Kerberos Port TCP 88 is open between the client and the DC.
+
+### Error code 0x54b
+
+![Error code 0x54b error message](media/active-directory-domain-join-troubleshooting-guidance/error-0x54b-message.png)  
+
+> [!NOTE]
+> This information is intended for a network administrator. If you are not your network's administrator, notify the administrator that you received this information, which has been recorded in the file C:\WINDOWS\debug\dcdiag.txt.
+
+The following error message occurred when DNS was queried for the service location (SRV) resource record used to locate an Active Directory Domain Controller (AD DC) for domain "contoso.com":
+
+> This operation returned because the timeout period expired.
+> Error code 0x000005B4 ERROR_TIMEOUT
+
+The query was for the SRV record for `_ldap._tcp.dc._msdcs.contoso.com`.
+
+The DNS servers used by this computer for name resolution are not responding. This computer is configured to use DNS servers with the following IP addresses:
+
+192.168.2.100
+
+Verify that this computer is connected to the network, that these are the correct DNS server IP addresses, and that at least one of the DNS servers is running.
+
+Here's an example from the *netsetup.log* file:
+
+```output
+mm/dd/yyyy hh:mm:ss:ms NetpValidateName: checking to see if 'contoso.com' is valid as type 3 name
+mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid for contoso.com returned 0x54b, last error is 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid [ Exists ] for 'contoso.com' returned 0x54b
+```
+
+To resolve the 0x54b error, use these steps:
+
+- Check the network connectivity between client and Domain controller.
+- Verify if Preferred DNS Server is the correct DNS Server.
+- Run `nltest /dsgetdc` (DC Discovery) to verify if you can discover a DC.
+  
+  For example:
+
+  ```console
+  nltest /dsgetdc:contoso.com /force
+  ```
+
+  Expected Output:
+
+  ![picture 4](media/active-directory-domain-join-troubleshooting-guidance/nltest-output.png)  
+
+- Run `DCDiag /v` on the closest domain controller and verify if SRV records are registered. For example: `_ldap._tcp.dc._msdcs.contoso.com`.
+
+### Error code 0x0000232A
+
+![Error code 0x0000232A error message](media/active-directory-domain-join-troubleshooting-guidance/error-0x0000232a-message.png)  
+
+> [!NOTE]
+> This information is intended for a network administrator. If you are not your network's administrator, notify the administrator that you received this information, which has been recorded in the file C:\WINDOWS\debug\dcdiag.txt.
+
+The domain name "contoso" may be a NetBIOS domain name. If this is the case, verify that the domain name is properly registered with WINS.
+
+If you are certain that the name is not a NetBIOS domain name, the following information can help you troubleshoot your DNS configuration.
+
+The following error occurred when DNS was queried for the service location (SRV) resource record used to locate an Active Directory Domain Controller (AD DC) for domain "contoso":
+
+> DNS server failure.
+>
+> Error code 0x0000232A RCODE_SERVER_FAILURE
+
+The query was for the SRV record for `_ldap._tcp.dc._msdcs.contoso`.
+
+Common causes of this error include the following:
+
+- The DNS servers used by this computer contain incorrect root hints. This computer is configured to use DNS servers with the following IP addresses:
+  
+  192.168.2.100
+
+- One or more of the following zones contains incorrect delegation:
+  
+  contoso (the root zone)
+
+Here's an example from the *netsetup.log* file:
+
+```output
+mm/dd/yyyy hh:mm:ss:ms NetpValidateName: checking to see if 'contoso' is valid as type 3 name
+mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid for contoso returned 0x54b, last error is 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid [ Exists ] for 'contoso' returned 0x54b
+```
+
+Error 0x0000232A is logged when the client computer lacks Netbios name resolution to the domain.
+
+When you type the domain name, make sure you type the DNS Domain Name, rather than the NetBIOS name. For example, if the DNS name of the domain is contoso.com, make sure you enter that name instead of just contoso.
+
+### Error code 0x3a
+
+The following error occurred attempting to join the domain "contoso.com":
+
+> The specified server cannot perform the requested operation.
+
+![Error code 0x3a error message](media/active-directory-domain-join-troubleshooting-guidance/error-0x3a-message.png)
+
+Here's an example from the *netsetup.log* file:
+
+```output
+mm/dd/yyyy hh:mm:ss:ms NetpLdapBind: ldap_bind failed on DCA.contoso.com: 81: Server Down
+mm/dd/yyyy hh:mm:ss:ms NetpJoinCreatePackagePart: status:0x3a.
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: Function exits with status of: 0x3a
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: status of disconnecting from '\\<dc_name>.contoso.com': 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpResetIDNEncoding: DnsDisableIdnEncoding(RESETALL) on 'contoso.com' returned 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpResetIDNEncoding on 'contoso.com': 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x3a
+```
+
+Error 0x3a is logged when the client machine lacks network connectivity on TCP Port 389 between the client machine and the domain controller.
+
+Use the following command to test the connection:
+
+```PowerShell
+Test-NetConnection <IP Address> of Domain Controller> -Port 389
+```
+
+For example:
+
+```PowerShell
+Test-NetConnection 192.168.2.100 -Port 389
+```
+
+Expected Output:
+
+![Test-NetConnection output](media/active-directory-domain-join-troubleshooting-guidance/test-netconnection-output-389.png)
+
+It indicates the LDAP Port TCP 389 is open between the client and the DC.
+
+### Error code 0x216d
+
+The following error occurred attempting to join the domain "contoso.com ":
+
+Your computer could not be joined to the domain. You have exceeded the maximum number of computer accounts you are allowed to create in this domain. Contact your system administrator to have this limit reset or increased.
+
+![Error code 0x216d error message](media/active-directory-domain-join-troubleshooting-guidance/error-0x216d-message.png)
+
+```output
+mm/dd/yyyy hh:mm:ss:ms NetpMapGetLdapExtendedError: Parsed [0x216d] from server extended error string: 0000216D: SvcErr: DSID-031A124C, problem 5003 (WILL_NOT_PERFORM), data 0
+mm/dd/yyyy hh:mm:ss:ms NetpModifyComputerObjectInDs: ldap_add_s failed: 0x35 0x216d
+mm/dd/yyyy hh:mm:ss:ms NetpCreateComputerObjectInDs: NetpModifyComputerObjectInDs failed: 0x216d
+mm/dd/yyyy hh:mm:ss:ms NetpProvisionComputerAccount: LDAP creation failed: 0x216d
+mm/dd/yyyy hh:mm:ss:ms NetpProvisionComputerAccount: Retrying downlevel per options
+mm/dd/yyyy hh:mm:ss:ms NetpManageMachineAccountWithSid: NetUserAdd on 'DCA.contoso.com' for 'CLIENT1$' failed: 0x216d
+mm/dd/yyyy hh:mm:ss:ms NetpProvisionComputerAccount: retry status of creating account: 0x216d
+mm/dd/yyyy hh:mm:ss:ms ldap_unbind status: 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpJoinCreatePackagePart: status:0x216d.
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: Function exits with status of: 0x216d
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: status of disconnecting from '\\DCA.contoso.com': 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpResetIDNEncoding: DnsDisableIdnEncoding(RESETALL) on 'contoso.com' returned 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpResetIDNEncoding on 'contoso.com': 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x216d
+```
+
+Error 0x216d is logged in one of these conditions:
+
+- The user account that is trying to join the machine to the domain has exceeded the limit of 10 machines to the domain.
+- There is a GPO restriction to block authenticated users from joining machine to the domain.
+
+Verify the user account is a member of the group mentioned in the **Add Workstations to domain** policy of the **Default Domain Controller Policy** GPO or the **Winning** GPO.
+
+The GPO setting locates at: Computer Configuration -> Policies -> Windows Settings -> Security Settings -> Local Policies User Rights Assignment -> Add workstations to domain.
+
+To verify the default limit to the number of workstations a user can join to domain, see [Default limit to number of workstations a user can join to the domain](/troubleshoot/windows-server/identity/default-workstation-numbers-join-domain).
 
 ### Other errors that occur when you join Windows-based computers to a domain
 
