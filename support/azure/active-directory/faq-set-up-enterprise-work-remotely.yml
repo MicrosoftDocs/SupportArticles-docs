@@ -27,7 +27,7 @@ sections:
       - question: |
           What guidance is available to set up Microsoft Teams from an Azure AD perspective to work with my existing on-premises deployment?
         answer: |
-          Microsoft Teams leverages identities stored in Azure Active Directory. You can integrate Azure Active Directory with on-premises AD environments. For more information, see [Microsoft 365 integration with on-premises environments](/microsoft-365/enterprise/microsoft-365-integration?view=o365-worldwide) 
+          Microsoft Teams uses identities stored in Azure Active Directory. You can integrate Azure Active Directory with on-premises AD environments. For more information, see [Microsoft 365 integration with on-premises environments](/microsoft-365/enterprise/microsoft-365-integration?view=o365-worldwide) 
 
       - question: |
           I work in education, and I have no existing on-premises infrastructure. How can I use Microsoft Teams for educational purposes, such as online teaching?
@@ -41,9 +41,9 @@ sections:
       - question: |
           My administrators also work from home. How can I enable them to access our internal servers remotely and in a secure manner?
         answer: |
-          The answer depends on your current deployment. If you already have a VPN solution, you can integrate it by using our multi-factor authentication (MFA) solution to add an additional layer of security.
+          The answer depends on your current deployment. If you already have a VPN solution, you can integrate it by using our multi-factor authentication (MFA) solution to add an another layer of security.
 
-          If you don't have a VPN solution yet, you can proceed with the deployment, and use a Windows gateway to allow remote access by having MFA as an additional layer of security.
+          If you don't have a VPN solution yet, you can proceed with the deployment, and use a Windows gateway to allow remote access by having MFA as an another layer of security.
 
       - question: |
           Can you provide technical details to help me enable MFA to allow remote access to my internal servers if I'm using a third-party VPN solution or a Microsoft Windows gateway?
