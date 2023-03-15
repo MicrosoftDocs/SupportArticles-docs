@@ -79,7 +79,7 @@ Unless otherwise noted, these steps apply to both workgroup computer and DC case
 
 1. Change the local policy of the computer to add your remote desktop users to the **Allow logon through Remote Desktop Services** local policy object. To do this, follow these steps:
 
-    1. Open Local Security Policy.
+    1. Open Local Group Policy.
     2. Navigate to **Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment**.
     3. Double-click **Allow log on through Remote Desktop Services**, and then select **Add User or Group**.
     4. Type **Remote Desktop Users** (or the user names of each user account that you want to add, separated by semicolons), and then select **OK** two times.
