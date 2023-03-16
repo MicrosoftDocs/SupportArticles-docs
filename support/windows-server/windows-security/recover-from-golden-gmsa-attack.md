@@ -1,7 +1,7 @@
 ---
 title: How to recover from a Golden gMSA attack
-description: Describes how to repair compromised gMSAs after a Golden gMSA attack
-ms.date: 2/8/2023
+description: Describes how to repair compromised gMSAs after a Golden gMSA attack.
+ms.date: 03/16/2023
 author: v-tappelgate
 ms.author: v-tappelgate
 manager: dcscontentpm
@@ -37,6 +37,11 @@ The `msds-ManagedPasswordID` attribute is present only on a writable copy of the
 
 To protect additional domains of your forest after one domain has been exposed, you have to replace all the gMSAs in the exposed domain before the attacker can use the information. Usually, you don't know the details of what was exposed. Therefore, we suggest that you apply the resolution to all domains of the forest.
 
+Please also note that as proactive measure, auditing can be used to track exposure of the KDS Root Object. A SACL with successful reads can be placed on the Master Root Keys container allowing audit successful reads on msKds-ProvRootKey, determining the objects exposure landscape regarding a Golden gMSA attack.
+
+> [!NOTE]
+> Auditing only helps to detect an online attack on the KDS Root Key data.
+
 ## Resolution
 
 To resolve this problem, use one of the following approaches, depending on your situation. Both approaches involve creating a new KDS root key object and restarting **Microsoft Key Distribution Service** on all the domain controllers of the domain.
@@ -44,6 +49,8 @@ To resolve this problem, use one of the following approaches, depending on your 
 ### Case 1: You have reliable information about what information was exposed and when
 
 If you know that the exposure occurred before a certain date, and this date is earlier than the oldest gMSA password that you have, you can resolve the problem without re-creating the gMSAs.
+
+This works as with the procedure below, the gMSA password rolled after the exposure, and we switch to a new KDS Root Key Object that is not known by the attacker.
 
 > [!NOTE]  
 > You do not have to manually repair gMSAs that were created after the Active Directory Domain Services (AD DS) database exposure ended. The attacker does not know the details of these accounts, and the passwords for these accounts will regenerate based on the new KDS root key object.
@@ -74,7 +81,7 @@ In the domain that holds the gMSAs that you want to repair, follow these steps:
 1. Reconnect the restored domain controller and bring it online.  
    Now the authoritative restore and all the other changes, including the restored gMSAs, replicate. This action rolls the passwords of the restored gMSAs, creating new passwords that are based on the new KDS root key object.
 
-### Case 2: You don't know details of the KDS root key object exposure, and you can’t wait for passwords to roll
+### Case 2: You don't know details of the KDS root key object exposure, and you can't wait for passwords to roll
 
 If you don't know what information was exposed or when it was exposed, such an exposure might be part of a complete exposure of your Active Directory forest. This can create a situation in which the attacker can run offline attacks on all passwords. In this case, consider running a Forest Recovery, or resetting all account passwords. Recovering the gMSAs to a clean state is part of this activity.
 
@@ -85,17 +92,29 @@ During the following process, you have to create a new KDS root key object. Then
 
 Follow these steps:
 
-1. Disable all the existing gMSA accounts. To do this, for each account, set the `userAccountControl` attribute to **4098** (this value combines **workstation type** and **disabled**).
+1. Disable all the existing gMSA accounts, and mark them as accounts to be removed. To do this, for each account, set the `userAccountControl` attribute to **4098** (this value combines **WORKSTATION_TRUST_ACCOUNT** and **ACCOUNTDISABLE (disabled)** flags.
+
+   You may use a PowerShell script like this to set the accounts:
+
+   ```powershell
+    $Domain = (Get-ADDomain).DistinguishedName
+    $DomainGMSAs = (Get-ADObject -Searchbase "$Domain" -LdapFilter 'objectclass=msDS-GroupManagedServiceAccount').DistinguishedName
+    ForEach ($GMSA In $DomainGMSAs)
+    {
+        Set-ADObject "$GMSA" -Add @{ adminDescription='cleanup-gsma' } -Replace @{ userAccountControl=4098 }
+    }
+    ```
+
 1. Use a single domain controller to follow these steps:
-   1. Follow the steps in [Create the Key Distribution Services KDS Root Key](/windows-server/security/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key) to create a new KDS root key object.
+   1. Follow the steps in [Create the Key Distribution Services KDS Root Key](/windows-server/security/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key) to create a new KDS Root Key object.
    1. Restart **Microsoft Key Distribution Service**. After it restarts, the service picks up the new object.
    1. Edit the existing gMSAs to remove the service principle names (SPNs) and DNS host names.
    1. Create new gMSAs to replace the existing gMSAs.
-1. Check the new gMSAs to make sure that they use the new KDS root key object. To do this, follow these steps:
-   1. Note the `CN` (GUID) value of the KDS root key object.
-   1. Check the `msds-ManagedPasswordID` value of the first gMSA that you created. The value of this attribute is binary data that includes the GUID of the matching KDS root key object.  
+1. Check the new gMSAs to make sure that they use the new KDS Root Key object. To do this, follow these steps:
+   1. Note the `CN` (GUID) value of the KDS Root Key object.
+   1. Check the `msds-ManagedPasswordID` value of the first gMSA that you created. The value of this attribute is binary data that includes the GUID of the matching KDS Root Key object.  
 
-      For example, assume that the KDS root key object has the following `CN`.  
+      For example, assume that the KDS Root Key object has the following `CN`.  
 
       :::image type="content" source="media/recover-from-golden-gmsa-attack/kds-root-key-cn.png" alt-text="Screenshot of the value of the CN attribute of a KDS root key object.":::  
 
@@ -108,7 +127,17 @@ Follow these steps:
       If the first gMSA that you created uses the new KDS root key, all subsequent gMSAs also use the new key.
 
 1. Update the appropriate services to use the new gMSAs.
-1. Delete the old gMSAs that used the old KDS root key object.
+1. Delete the old gMSAs that used the old KDS Root Key object.
+
+    ```powershell
+    $Domain = (Get-ADDomain).DistinguishedName
+    $DomainGMSAs = (Get-ADObject -Searchbase "$Domain" -LdapFilter '(&(objectClass=msDS-GroupManagedServiceAccount)(adminDescription=cleanup-gsma))').DistinguishedName
+    ForEach ($GMSA In $DomainGMSAs)
+    {
+        Remove-ADObject "$GMSA" -Confirm:$False
+    }
+    ```
+
 1. Delete the old KDS root key object.
 
 ## References
