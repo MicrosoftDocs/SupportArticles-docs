@@ -773,7 +773,7 @@
     href: releases/download-and-install-latest-updates.md
   - name: Naming schema and Fix areas for SQL updates
     href: releases/naming-schema-and-fix-area.md
-  - name: New MU Servicing Model
+  - name: Microsoft Update Detection logic
     href: releases/new-mu-servicing-model.md
   - name: Servicing model
     href: releases/servicing-models-sql-server.md
