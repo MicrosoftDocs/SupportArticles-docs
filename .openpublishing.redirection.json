@@ -5701,6 +5701,21 @@
       "source_path": "support/sql/database-engine/performance/troubleshoot-availability-group-database-reverting-state.md",
       "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/troubleshoot-availability-group-database-reverting-state",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-engine/install/windows/naming-schema-and-fix-area.md",
+      "redirect_url": "/troubleshoot/sql/releases/naming-schema-and-fix-area",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-engine/install/windows/new-mu-servicing-model.md",
+      "redirect_url": "/troubleshoot/sql/releases/new-mu-servicing-model",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/general/servicing-models-sql-server.md",
+      "redirect_url": "/troubleshoot/sql/releases/servicing-models-sql-server",
+      "redirect_document_id": true
     }
 ]
 }
