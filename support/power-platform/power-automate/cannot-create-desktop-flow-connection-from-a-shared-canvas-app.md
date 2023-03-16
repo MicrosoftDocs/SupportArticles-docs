@@ -55,4 +55,4 @@ The workaround for this issue is to create a connection from connection page & r
 - Re-open the shared app, the previously created connection is auto-selected :
 
 ![select connection](media/cannot-create-desktop-flow-connection-from-a-shared-canvas-app/5-TSG-select-connection.png)
-- Click on `Allow`: you know have access to the running canvas app
+- Click on `Allow` : you now have access to the running canvas app
