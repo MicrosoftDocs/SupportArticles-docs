@@ -4,8 +4,8 @@ description: Provides a workaround for the flawed scenario where a canvas app em
 ms.reviewer: 
 ms.author: cvassallo
 author: V-Camille
-ms.date: 15/03/2023
-ms.subservice: power-automate-desktop-flows, power-apps-canvas
+ms.date: 03/15/2023
+ms.subservice: power-automate-desktop-flows
 ---
 # Can't create desktop flows connection from a shared canvas app
 
