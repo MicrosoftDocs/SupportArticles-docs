@@ -37,19 +37,19 @@ For more information about the Operation Master role holders and recommendations
 > [!NOTE]
 > Active Directory Application partitions that include DNS application partitions have Operation Master role links. If a DNS application partition defines an owner for the infrastructure master role, you cannot use Ntdsutil, DCPromo, or other tools to remove that application partition. For more information, see [DCPROMO demotion fails if unable to contact the DNS infrastructure master](dcpromo-demotion-fails.md).
 
-When a DC that has been acting as a role holder starts to run (for example, after a failure or a shutdown), it does not immediately resume behaving as the role holder. The DC waits until it receives inbound replication for its naming context (for example, the Schema master role owner waits to receive inbound replication of the Schema partition).
+When a DC that has been acting as a role holder starts to run (for example, after a failure or a shutdown), it doesn't immediately resume behaving as the role holder. The DC waits until it receives inbound replication for its naming context (for example, the Schema master role owner waits to receive inbound replication of the Schema partition).
 
-The information that the DCs pass as part of Active Directory replication includes the identities of the current Operation Master role holders. When the newly started DC receives the inbound replication information, it verifies whether it is still the role holder. If it is, it resumes typical operations. If the replicated information indicates that another DC is acting as the role holder, the newly started DC relinquishes its role ownership. This behavior reduces the chance that the domain or forest will have duplicate Operation Master role holders.
+The information that the DCs pass as part of Active Directory replication includes the identities of the current Operation Master role holders. When the newly started DC receives the inbound replication information, it verifies whether it's still the role holder. If it is, it resumes typical operations. If the replicated information indicates that another DC is acting as the role holder, the newly started DC relinquishes its role ownership. This behavior reduces the chance that the domain or forest will have duplicate Operation Master role holders.
 
 > [!IMPORTANT]
-> AD FS operations fail if they require a role holder and if the newly started role holder is, in fact, the role holder and it does not receive inbound replication.  
+> AD FS operations fail if they require a role holder and if the newly started role holder is, in fact, the role holder and it doesn't receive inbound replication.  
 > The resulting behavior resembles what would happen if the role holder was offline.
 
 ## Determine when to transfer or seize roles
 
-Under typical conditions, all five roles must be assigned to "live" DCs in the forest. When you create an Active Directory forest, the Active Directory Installation Wizard (Dcpromo.exe) assigns all five Operation Master roles to the first DC that it creates in the forest root domain. When you create a child or tree domain, the creation mechanism assigns the three domain-wide roles to the first DC in the domain.
+Under typical conditions, all five roles must be assigned to "live" DCs in the forest. When you create an Active Directory forest, the Active Directory Installation Wizard (_Dcpromo.exe_) assigns all five Operation Master roles to the first DC that it creates in the forest root domain. When you create a child or tree domain, the creation mechanism assigns the three domain-wide roles to the first DC in the domain.
 
-DCs continue to own Operation Master roles until they are reassigned by using one of the following methods:
+DCs continue to own Operation Master roles until they're reassigned by using one of the following methods:
 
 - An administrator reassigns the role by using a GUI administrative tool.
 - An administrator reassigns the role by using the `ntdsutil /roles` command.
@@ -62,24 +62,24 @@ If an Operation Master role holder experiences a failure or is otherwise taken o
 We recommend that you transfer Operation Master roles in the following scenarios:
 
 - The current role holder is operational and can be accessed on the network by the new FSMO owner.
-- You are gracefully demoting a DC that currently owns Operation Master roles that you want to assign to a specific DC in your Active Directory forest.
+- You're gracefully demoting a DC that currently owns Operation Master roles that you want to assign to a specific DC in your Active Directory forest.
 - The DC that currently owns Operation Master roles is being taken offline for scheduled maintenance, and you have to assign specific Operation Master roles to live DCs. You may have to transfer roles to perform operations that affect the FSMO owner. This is especially true for the PDC Emulator role. This is a less important issue for the RID master role, the Domain naming master role, and the Schema master roles.
 
 We recommend that you seize Operation Master roles in the following scenarios:
 
-- The current role holder is experiencing an operational error that prevents an FSMO-dependent operation from completing successfully, and you cannot transfer the role.
+- The current role holder is experiencing an operational error that prevents an FSMO-dependent operation from completing successfully, and you can't transfer the role.
 - You use the `Uninstall-ADDSDomainController -ForceRemoval` or `dcpromo /forceremoval` command to force-demote a DC that owns an Operation Master role.
 
   > [!IMPORTANT]
-  > The force-demote command can leave Operation Master roles in an invalid state until they are reassigned by an administrator.
+  > The `force-demote` command can leave Operation Master roles in an invalid state until they're reassigned by an administrator.
 
 - The operating system on the computer that originally owned a specific role no longer exists or has been reinstalled.
 
 > [!NOTE]
 >
-> - We recommend that you only seize all roles when the previous role holder is not returning to the domain.
+> - We recommend that you only seize all roles when the previous role holder isn't returning to the domain.
 > - If Operation Master roles have to be seized in forest recovery scenarios, see step 5 in [Perform initial recovery](/windows-server/identity/ad-ds/manage/ad-forest-recovery-perform-initial-recovery) under the [Restore the first writeable domain controller in each domain](/windows-server/identity/ad-ds/manage/ad-forest-recovery-perform-initial-recovery#restore-the-first-writeable-domain-controller-in-each-domain) section.
-> - After a role transfer or seizure, the new role holder does not act immediately. Instead, the new role holder behaves like a restarted role holder and waits for its copy of the naming context for the role (such as the domain partition) to complete a successful inbound replication cycle. This replication requirement helps make sure that the new role holder is as up to date as possible before it takes action. It also limits the window of opportunity for errors. This window includes only changes that the previous role holder did not finish replicating to the other DCs before it went offline. For a list of the naming context for each Operation Master role, see the table at [More information](#more-information) section.
+> - After a role transfer or seizure, the new role holder doesn't act immediately. Instead, the new role holder behaves like a restarted role holder and waits for its copy of the naming context for the role (such as the domain partition) to complete a successful inbound replication cycle. This replication requirement helps make sure that the new role holder is as up to date as possible before it takes action. It also limits the window of opportunity for errors. This window includes only changes that the previous role holder did not finish replicating to the other DCs before it went offline. For a list of the naming context for each Operation Master role, see the table at the [More information](#more-information) section.
 
 ## Identify a new role holder
 
@@ -91,16 +91,16 @@ The best candidate for the new role holder is a DC that meets the following crit
 For example, assume that you have to transfer the Schema master role. The Schema master role is part of the schema partition of the forest (CN=Schema,CN=Configuration,DC=\<forest root domain>). The best candidate for a new role holder is a DC that also resides in the forest root domain, and in the same Active Directory site as the current role holder.
 
 > [!CAUTION]
-> Do not put the Infrastructure master role on the same DC as the global catalog server. If the Infrastructure master runs on a global catalog server, it stops updating object information because it does not contain any references to objects that it does not hold. This is because a global catalog server holds a partial replica of every object in the forest.
+> Don't put the Infrastructure master role on the same DC as the global catalog server. If the Infrastructure master runs on a global catalog server, it stops updating object information because it does not contain any references to objects that it doesn't hold. This is because a global catalog server holds a partial replica of every object in the forest.
 >
 > To test whether a DC is also a global catalog server follow these steps:
 >
 > 1. Select **Start** > **Programs** > **Administrative Tools** > **Active Directory Sites and Services**.
-> 2. In the navigation pane, double-click **Sites**   and then locate the appropriate site or select **Default-first-site-name** if no other sites are available.
+> 2. In the navigation pane, double-click **Sites** and then locate the appropriate site or select **Default-first-site-name** if no other sites are available.
 > 3. Open the Servers folder, and then select the DC.
 > 4. In the DC's folder, double-click **NTDS Settings**.
 > 5. On the **Action** menu, select **Properties**.
-> 6. On the **General** tab, view the **Global Catalog** check box to see whether it is selected.
+> 6. On the **General** tab, view the **Global Catalog** check box to see whether it's selected.
 
 For more information, see:
 
@@ -112,12 +112,12 @@ For more information, see:
 You can use Windows PowerShell or Ntdsutil to seize or transfer roles. For information and examples of how to use PowerShell for these tasks, see [Move-ADDirectoryServerOperationMasterRole](/powershell/module/activedirectory/move-addirectoryserveroperationmasterrole).
 
 > [!IMPORTANT]
-> To avoid the risk of duplicate SIDs in the domain, Rid Master seizures increment the next available RID in the pool when you seize the RID master role. This behavior can cause your forest to consume available ranges for RID values significantly (also known as RID burn). So seize the Rid Master only when you're positive that the current Rid Master can't be brought back into service.
+> To avoid the risk of duplicate SIDs in the domain, Rid Master seizures increment the next available RID in the pool when you seize the RID master role. This behavior can cause your forest to consume available ranges of RID values significantly (also known as RID burn). So seize the Rid Master only when you're sure that the current Rid Master can't be brought back into service.
 >
 > If you have to seize the RID master role, consider the following details:
 >
-> - The [Move-ADDirectoryServerOperationMasterRole](/powershell/module/activedirectory/move-addirectoryserveroperationmasterrole) cmdlet increases the next Rid pool by 30000 from what it finds in Active Directory.
-> - When you use the *Ntdsutil.exe* utility with the `roles` category commands, it increases the next Rid pool by 10000.
+> - The [Move-ADDirectoryServerOperationMasterRole](/powershell/module/activedirectory/move-addirectoryserveroperationmasterrole) cmdlet increases the next Rid pool by 30,000 from what it finds in Active Directory.
+> - When you use the *Ntdsutil.exe* utility with the `roles` category commands, it increases the next Rid pool by 10,000.
 
 To seize or transfer the Operation Master roles by using the Ntdsutil utility, follow these steps:
 
@@ -138,7 +138,7 @@ To seize or transfer the Operation Master roles by using the Ntdsutil utility, f
     > In this command, \<servername> is the name of the DC that you want to assign the Operation Master role to.
 
 6. At the **server connections** prompt, type _q_, and then press Enter.
-7. Do one of the following:
+7. Do one of the following actions:
    - To transfer the role: Type *transfer \<role>*, and then press Enter.
       > [!NOTE]
       > In this command, \<role> is the role that you want to transfer.
@@ -155,14 +155,14 @@ To seize or transfer the Operation Master roles by using the Ntdsutil utility, f
 
 ## Considerations when repairing or removing previous role holders
 
-If it is possible, and if you are able to transfer the roles instead of seizing them, fix the previous role holder. If you cannot fix the previous role holder, or if you seized the roles, remove the previous role holder from the domain.
+If it's possible, and if you're able to transfer the roles instead of seizing them, fix the previous role holder. If you can't fix the previous role holder, or if you seized the roles, remove the previous role holder from the domain.
 
 > [!IMPORTANT]
 > If you plan to use the repaired computer as a DC, we recommend that you rebuild the computer into a DC from scratch instead of restoring the DC from a backup. The restoration process rebuilds the DC as a role holder again.
 
-- To return the repaired computer to the forest as a DC
+- To return the repaired computer to the forest as a DC:
 
-  1. Do one of the following:
+  1. Do one of the following actions:
      - Format the hard disk of the former role holder, and then reinstall Windows on the computer.
      - Forcibly demote the former role holder to a member server.
 
@@ -170,14 +170,14 @@ If it is possible, and if you are able to transfer the roles instead of seizing 
 
   3. After you clean up the metadata, you can repromote the computer to a DC, and transfer a role back to it.
 
-- To remove the computer from the forest after seizing its roles
+- To remove the computer from the forest after seizing its roles:
 
   1. Remove the computer from the domain.
   2. On another DC in the forest, use Ntdsutil to remove the metadata for the former role holder. For more information, see [To clean up server metadata by using Ntdsutil](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup#to-clean-up-server-metadata-by-using-ntdsutil).
 
 ## Considerations when reintegrating replication islands
 
-When part of a domain or forest cannot communicate with the rest of the domain or forest for an extended time, the isolated sections of domain or forest are known as replication islands. DCs in one island cannot replicate with the DCs in other islands. Over multiple replication cycles, the replication islands fall out of sync. If each island has its own Operation Master role holders, you may have problems when you restore communication between the islands.
+When part of a domain or forest can't communicate with the rest of the domain or forest for an extended time, the isolated sections of domain or forest are known as replication islands. DCs in one island can't replicate with the DCs in other islands. Over multiple replication cycles, the replication islands fall out of sync. If each island has its own Operation Master role holders, you may have problems when you restore communication between the islands.
 
 > [!IMPORTANT]
 > In most cases, you can take advantage of the initial replication requirement (as described in this article) to weed out duplicate role holders. A restarted role holder should relinquish the role if it detects a duplicate role-holder.  
@@ -193,7 +193,7 @@ The following table identifies the FMSO roles that can cause problems if a fores
 |PDC emulator|No|
 |Infrastructure master|No|
   
-This issue does not affect the PDC Emulator master or the Infrastructure master. These role holders do not persist operational data. Additionally, the Infrastructure master does not make changes often. Therefore, if multiple islands have these role holders, you can reintegrate the islands without causing long-term issues.
+This issue doesn't affect the PDC Emulator master or the Infrastructure master. These role holders don't persist operational data. Additionally, the Infrastructure master doesn't make changes often. Therefore, if multiple islands have these role holders, you can reintegrate the islands without causing long-term issues.
 
 The Schema master, the Domain naming master, and the RID master can create objects and persist changes in Active Directory. Each island that has one of these role holders could have duplicate and conflicting schema objects, domains, or RID pools by the time that you restore replication. Before you reintegrate islands, determine which role holders to keep. Remove any duplicate Schema masters, Domain Naming masters, and RID masters by following the repair, removal, and cleanup procedures that are mentioned in this article.
 
