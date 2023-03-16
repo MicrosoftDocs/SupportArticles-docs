@@ -18,7 +18,7 @@ _Applies to:_ &nbsp; Power Automate for desktop, Power Apps canvas
 
 Joni has been shared a Power Apps canvas app from Alex (the app embeds a desktop flows connection). It appears in her apps list : 
 
-![image](https://user-images.githubusercontent.com/127093735/225571908-23a74444-c87b-4395-a5fb-7da1ccc7ecae.png)
+![list apps](media/cannot-create-desktop-flow-connection-from-a-shared-canvas-app/1-TSG-list-app.png)
 
 >***Side note :** whether the app was shared to Joni as user or co-owner makes no difference in this scenario*
 
@@ -28,11 +28,11 @@ When Joni runs the app :
 <br>
 - She is asked to provide her own desktop flows connection (as she has none already created in this environment) : 
 
-![image](https://user-images.githubusercontent.com/127093735/225574320-fce0a5d6-411a-43eb-a2d9-92eab6c371f9.png)
+![provide desktop flows connection](media/cannot-create-desktop-flow-connection-from-a-shared-canvas-app/2-TSG-provide-connection.png)
 
 - To do so, she clicks on sign in to create the new connection, the following form appears :
 
-![image](https://user-images.githubusercontent.com/127093735/225596681-acf17894-350c-46ef-b87a-ced3eac14535.png)
+![broken desktop flows connection creation form](media/cannot-create-desktop-flow-connection-from-a-shared-canvas-app/3-TSG-faulty-form.png)
 
 - On this form : <br><br>
    - The `Machine or machine group` field is malfunctioning as it should provide a list of user-available machines / machine groups.
@@ -50,9 +50,9 @@ The workaround for this issue is to create a connection from connection page & r
 - Select `Desktop flows`
 - Create your connection (the `Machine or machine group` field is functional and provides a list of user-available devices) :
  
-![image](https://user-images.githubusercontent.com/127093735/225597302-91d8b749-266d-4664-84aa-5c363515c9e3.png)
+![healthy desktop flows connection creation form](media/cannot-create-desktop-flow-connection-from-a-shared-canvas-app/4-TSG-healthy-form.png)
 
 - Re-open the shared app, the previously created connection is auto-selected :
 
-![image](https://user-images.githubusercontent.com/127093735/225595289-bb7a3625-560f-4c7e-810b-13574652b0ed.png)
+![select connection](media/cannot-create-desktop-flow-connection-from-a-shared-canvas-app/5-TSG-select-connection.png)
 - Click on `Allow`: you know have access to the running canvas app
