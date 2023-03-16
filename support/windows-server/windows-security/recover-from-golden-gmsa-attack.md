@@ -37,7 +37,7 @@ The `msds-ManagedPasswordID` attribute is present only on a writable copy of the
 
 To protect additional domains of your forest after one domain has been exposed, you have to replace all the gMSAs in the exposed domain before the attacker can use the information. Usually, you don't know the details of what was exposed. Therefore, we suggest that you apply the resolution to all domains of the forest.
 
-Also note that as proactive measure, auditing can be used to track exposure of the KDS Root Object. A system access control list (SACL) with successful reads can be placed on the Master Root Keys container allowing audit successful reads on msKds-ProvRootKey, determining the objects exposure landscape regarding a Golden gMSA attack.
+Also note that as proactive measure, auditing can be used to track exposure of the KDS Root Key object. A system access control list (SACL) with successful reads can be placed on the Master Root Keys container allowing audit successful reads on the `msKds-ProvRootKey` attribute, determining the objects exposure landscape regarding a Golden gMSA attack.
 
 > [!NOTE]
 > Auditing only helps to detect an online attack on the KDS Root Key data.
@@ -127,7 +127,7 @@ Follow these steps:
       If the first gMSA that you created uses the new KDS root key, all subsequent gMSAs also use the new key.
 
 1. Update the appropriate services to use the new gMSAs.
-1. Delete the old gMSAs that used the old KDS Root Key object.
+1. Delete the old gMSAs that used the old KDS Root Key object by using the following cmdlet:
 
     ```powershell
     $Domain = (Get-ADDomain).DistinguishedName
