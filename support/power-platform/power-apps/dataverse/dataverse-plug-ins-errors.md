@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Dataverse plug-ins
-description: Fixes the errors that can occur due to plug-in execution.
-ms.date: 03/14/2023
+description: Contains information about errors that can occur during plug-in execution, or Dataverse errors that are related to plug-ins, and how to avoid or fix them.
+ms.date: 03/16/2023
 author: JimDaly
 ms.author: jdaly
 ms.reviewer: jdaly
@@ -16,7 +16,7 @@ contributors:
 ---
 # Troubleshoot Dataverse plug-ins
 
-This article contains information about errors that can occur due to plug-in execution and how to fix them.
+This article contains information about errors that can occur during plug-in execution, or Dataverse errors that are related to plug-ins, and how to avoid or fix them.
 
 ## Error "Sandbox Worker process crashed"
 
@@ -34,7 +34,7 @@ This error simply means that the worker process running your plug-in code crashe
 
 As mentioned in [Handle exceptions in plug-ins](/power-apps/developer/data-platform/handle-exceptions), when you write a plug-in, you should try to anticipate which operations may fail and wrap them in a try-catch block. When any errors occur, you should use the <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> to gracefully terminate the operation with an error meaningful to the user.
 
-A common scenario for this exception is when using the [HttpClient.SendAsync](xref:System.Net.Http.HttpClient.SendAsync%2A) or [HttpClient.GetAsync](xref:System.Net.Http.HttpClient.GetAsync%2A) methods that are asynchronous operations that returns a [Task](xref:System.Threading.Tasks.Task). To work in a plug-in where code needs to be synchronous, people may use the [Task&lt;TResult&gt;.Result Property](xref:System.Threading.Tasks.Task%601.Result). When an error occurs, `Result` returns an [AggregateException](xref:System.AggregateException). An `AggregateException` consolidates multiple failures into a single exception, which can be difficult to handle. A better design is to use [Task&lt;TResult&gt;.GetAwaiter()](xref:System.Threading.Tasks.Task.GetAwaiter).[GetResult()](xref:System.Runtime.CompilerServices.TaskAwaiter.GetResult) because it propagates the results as the specific error that caused the failure.
+A common scenario for this exception is when using the [HttpClient.SendAsync](xref:System.Net.Http.HttpClient.SendAsync%2A) or [HttpClient.GetAsync](xref:System.Net.Http.HttpClient.GetAsync%2A) methods. These [HttpClient](xref:System.Net.Http.HttpClient) methods are asynchronous operations that returns a [Task](xref:System.Threading.Tasks.Task). To work in a plug-in where code needs to be synchronous, people may use the [Task&lt;TResult&gt;.Result Property](xref:System.Threading.Tasks.Task%601.Result). When an error occurs, `Result` returns an [AggregateException](xref:System.AggregateException). An `AggregateException` consolidates multiple failures into a single exception, which can be difficult to handle. A better design is to use [Task&lt;TResult&gt;.GetAwaiter()](xref:System.Threading.Tasks.Task.GetAwaiter).[GetResult()](xref:System.Runtime.CompilerServices.TaskAwaiter.GetResult) because it propagates the results as the specific error that caused the failure.
 
 The following example shows the correct way to manage the exception and an outbound call using the [HttpClient.GetAsync](xref:System.Net.Http.HttpClient.GetAsync%2A) method. This plug-in attempts to get the response text for a Uri set in the unsecure config for a step registered for it.
 
@@ -182,7 +182,7 @@ namespace ErrorRepro
 }
 ```
 
-When the plug-in code above is used in a synchronous plug-in, the following error is returned with the Web API when the request is configured to [include additional details with errors](/power-apps/developer/data-platform/webapi/compose-http-requests-handle-errors#include-additional-details-with-errors).
+In a synchronous plug-in step, the plug-in code above returns the following error in the Web API when the request is configured to [include additional details with errors](/power-apps/developer/data-platform/webapi/compose-http-requests-handle-errors#include-additional-details-with-errors).
 
 ```json
 {
@@ -284,7 +284,11 @@ While this pattern may work for a client application, within the execution of a 
 
 ### Cause
 
-There are a wide variety of reasons why a SQL timeout error may occur.
+There are a wide variety of reasons why a SQL timeout error may occur. Three of them are described below:
+
+- [Blocking](#blocking)
+- [Cascade operations](#cascade-operations)
+- [Indexes on new tables](#indexes-on-new-tables)
 
 #### Blocking
 
