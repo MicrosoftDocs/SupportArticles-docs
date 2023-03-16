@@ -25,10 +25,10 @@ This article contains information about errors that can occur due to plug-in exe
 
 This error simply means that the worker process running your plug-in code crashed. Your plug-in may be the reason for the crash, but it could also be another plug-in running concurrently for your organization. Because the process crashed, we can't extract any more specific information about why it crashed. But after examining data from the crash dumps after the fact, we found that this error usually occurs due to one of the four reasons:
 
-- [Unhandled exception in plug-in](#unhandled-exception-in-plug-in)
-- [Stack Overflow error in plug-in](#stack-overflow-error-in-plug-in)
+- [Unhandled exception in the plug-in](#unhandled-exception-in-the-plug-in)
+- [Stack Overflow error in the plug-in](#stack-overflow-error-in-the-plug-in)
 - [Using threads to queue work with no try/catch in thread delegate](#using-threads-to-queue-work-with-no-trycatch-in-thread-delegate)
-- [Worker process reaches memory limit](#worker-process-reaches-memory-limit)
+- [Worker process reaches the memory limit](#worker-process-reaches-the-memory-limit)
 
 ### Unhandled exception in the plug-in
 
