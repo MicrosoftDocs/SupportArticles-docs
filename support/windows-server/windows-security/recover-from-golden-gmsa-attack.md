@@ -50,7 +50,7 @@ To resolve this problem, use one of the following approaches, depending on your 
 
 If you know that the exposure occurred before a certain date, and this date is earlier than the oldest gMSA password that you have, you can resolve the problem without re-creating the gMSAs.
 
-This works as with the procedure below, the gMSA password rolled after the exposure, and we switch to a new KDS Root Key object that is not known by the attacker.
+This works as with the procedure below, the gMSA password rolled after the exposure, and we switch to a new KDS Root Key object that isn't known by the attacker.
 
 > [!NOTE]  
 > You do not have to manually repair gMSAs that were created after the Active Directory Domain Services (AD DS) database exposure ended. The attacker does not know the details of these accounts, and the passwords for these accounts will regenerate based on the new KDS Root Key object.
