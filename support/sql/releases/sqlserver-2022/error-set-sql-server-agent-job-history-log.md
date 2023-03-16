@@ -13,7 +13,7 @@ appliesto:
 
 ## Symptoms
 
-Assume that the SQL Server Agent is enabled within a SQL Server instance on Linux installation. When attempting to set or change the maximum number of rows for the job history log and the maximum number of job history rows per job, the following error may occur:
+Assume that the Microsoft SQL Server Agent is enabled within a SQL Server instance on a Linux installation. When you try to set or change the maximum number of rows for the job history log and the maximum number of job history rows per job, the following error may occur:
 
 >Msg 0, Level 11, State 0, Line \<LineNumber> </br>A severe error occurred on the current command. The results, if any, should be discarded.
 
@@ -24,7 +24,7 @@ Two new SQL Server Agent properties, `sqlagent.jobhistorymaxrows` and `sqlagent.
 Example: </br>`sudo /opt/mssql/bin/mssql-conf set sqlagent.jobhistorymaxrows 1000` </br>`sudo /opt/mssql/bin/mssql-conf set sqlagent.jobhistorymaxrowsperjob 100`
 
 > [!NOTE]
-> The two properties can't be configured using SQL Server Management Studio (SSMS).
+> The two properties can't be configured by using SQL Server Management Studio (SSMS).
 
 This problem is fixed in the following cumulative update for SQL Server:
 
