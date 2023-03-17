@@ -27,7 +27,7 @@ For a description of a Golden gMSA attack, see the following Semperis article:
 
    > [Introducing the Golden GMSA Attack](https://www.semperis.com/blog/golden-gmsa-attack/)
 
-The description in that article is accurate. The approach to resolving the problem is to replace the Microsoft Key Distribution Service (kdssvc.dll, also known as KDS) root key object and all gMSAs that use the compromised KDS Root Key object.
+The description in the above article is accurate. The approach for resolving the problem is to replace the Microsoft Key Distribution Service (kdssvc.dll, also known as KDS) root key object and all gMSAs that use the compromised KDS Root Key object.
 
 ## More information
 
@@ -37,7 +37,7 @@ The `msds-ManagedPasswordID` attribute is present only on a writable copy of the
 
 To protect additional domains of your forest after one domain has been exposed, you have to replace all the gMSAs in the exposed domain before the attacker can use the information. Usually, you don't know the details of what was exposed. Therefore, we suggest that you apply the resolution to all domains of the forest.
 
-Also note that as proactive measure, auditing can be used to track exposure of the KDS Root Key object. A system access control list (SACL) with successful reads can be placed on the Master Root Keys container allowing audit successful reads on the `msKds-ProvRootKey` attribute, determining the objects exposure landscape regarding a Golden gMSA attack.
+Also note that as a proactive measure, auditing can be used to track the exposure of the KDS Root Key object. A system access control list (SACL) with successful reads can be placed on the Master Root Keys container allowing audit successful reads on the `msKds-ProvRootKey` attribute, determining the object's exposure landscape regarding a Golden gMSA attack.
 
 > [!NOTE]
 > Auditing only helps to detect an online attack on the KDS Root Key data.
@@ -81,7 +81,7 @@ In the domain that holds the gMSAs that you want to repair, follow these steps:
 1. Reconnect the restored domain controller and bring it online.  
    Now the authoritative restore and all the other changes, including the restored gMSAs, replicate. This action rolls the passwords of the restored gMSAs, creating new passwords that are based on the new KDS Root Key object.
 
-### Case 2: You don't know details of the KDS Root Key object exposure, and you can't wait for passwords to roll
+### Case 2: You don't know the details of the KDS Root Key object exposure, and you can't wait for passwords to roll
 
 If you don't know what information was exposed or when it was exposed, such an exposure might be part of a complete exposure of your Active Directory forest. This can create a situation in which the attacker can run offline attacks on all passwords. In this case, consider running a Forest Recovery, or resetting all account passwords. Recovering the gMSAs to a clean state is part of this activity.
 
