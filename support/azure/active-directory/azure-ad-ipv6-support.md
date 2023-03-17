@@ -52,7 +52,7 @@ Named locations are shared between many features, such as Conditional Access, Id
 
 #### Cloud proxies and VPNs
 
-When a cloud proxy is in place, a policy that requires a [hybrid Azure AD joined or complaint device](howto-conditional-access-policy-compliant-device.md#create-a-conditional-access-policy) can be easier to manage. Keeping a list of IP addresses used by your cloud hosted proxy or VPN solution up to date can be nearly impossible.
+When a cloud proxy is in place, a policy that requires a [hybrid Azure AD joined or complaint device](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device#create-a-conditional-access-policy) can be easier to manage. Keeping a list of IP addresses used by your cloud hosted proxy or VPN solution up to date can be nearly impossible.
 
 ### Azure AD per-user multifactor authentication
 
