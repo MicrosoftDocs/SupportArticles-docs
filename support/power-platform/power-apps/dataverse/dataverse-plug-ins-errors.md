@@ -32,9 +32,9 @@ This error simply means that the worker process running your plug-in code crashe
 
 ### Unhandled exception in the plug-in
 
-As mentioned in [Handle exceptions in plug-ins](/power-apps/developer/data-platform/handle-exceptions), when you write a plug-in, you should try to anticipate which operations may fail and wrap them in a try-catch block. When any errors occur, you should use the <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> to gracefully terminate the operation with an error meaningful to the user.
+As mentioned in [Handle exceptions in plug-ins](/power-apps/developer/data-platform/handle-exceptions), when you write a plug-in, you should try to anticipate which operations may fail and wrap them in a try-catch block. When any errors occur, you should use the <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> class to gracefully terminate the operation with an error meaningful to the user.
 
-A common scenario for this exception is when using the [HttpClient.SendAsync](xref:System.Net.Http.HttpClient.SendAsync%2A) or [HttpClient.GetAsync](xref:System.Net.Http.HttpClient.GetAsync%2A) method. These [HttpClient](xref:System.Net.Http.HttpClient) methods are asynchronous operations that return a [Task](xref:System.Threading.Tasks.Task). To work in a plug-in where code needs to be synchronous, people may use the [Task&lt;TResult&gt;.Result Property](xref:System.Threading.Tasks.Task%601.Result). When an error occurs, `Result` returns an [AggregateException](xref:System.AggregateException). An `AggregateException` consolidates multiple failures into a single exception, which can be difficult to handle. A better design is to use [Task&lt;TResult&gt;.GetAwaiter()](xref:System.Threading.Tasks.Task.GetAwaiter).[GetResult()](xref:System.Runtime.CompilerServices.TaskAwaiter.GetResult) because it propagates the results as the specific error that caused the failure.
+A common scenario for this exception is when using the [HttpClient.SendAsync](xref:System.Net.Http.HttpClient.SendAsync%2A) or [HttpClient.GetAsync](xref:System.Net.Http.HttpClient.GetAsync%2A) method. These [HttpClient](xref:System.Net.Http.HttpClient) methods are asynchronous operations that return a [Task](xref:System.Threading.Tasks.Task). To work in a plug-in where code needs to be synchronous, people may use the [Task&lt;TResult&gt;.Result](xref:System.Threading.Tasks.Task%601.Result) property. When an error occurs, `Result` returns an [AggregateException](xref:System.AggregateException). An `AggregateException` consolidates multiple failures into a single exception, which can be difficult to handle. A better design is to use [Task&lt;TResult&gt;.GetAwaiter()](xref:System.Threading.Tasks.Task.GetAwaiter).[GetResult()](xref:System.Runtime.CompilerServices.TaskAwaiter.GetResult) because it propagates the results as the specific error that caused the failure.
 
 The following example shows the correct way to manage the exception and an outbound call using the [HttpClient.GetAsync](xref:System.Net.Http.HttpClient.GetAsync%2A) method. This plug-in attempts to get the response text for a Uri set in the unsecure config for a step registered for it.
 
@@ -280,7 +280,7 @@ While this pattern may work for a client application, within the execution of a 
 ## Error "Sql error: Execution Timeout Expired"
 
 > Error Code: -2147204783  
-> Error Message: Sql error: 'Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+> Error Message: Sql error: 'Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.'
 
 ### Cause
 
