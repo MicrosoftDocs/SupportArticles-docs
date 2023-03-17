@@ -35,7 +35,7 @@ In a successful attack on a gMSA, the attacker obtains all the important attribu
 
 The `msds-ManagedPasswordID` attribute is present only on a writable copy of the domain. Therefore, if a domain controller's database is exposed, only the domain that the domain controller hosts is open to the Golden gMSA attack. However, if the attacker can authenticate to a domain controller of a different domain in the forest, the attacker might have sufficient permissions to get the contents of `msds-ManagedPasswordID`. The attacker could then use this information to craft an attack against gMSAs in additional domains.
 
-To protect additional domains of your forest after one domain has been exposed, you have to replace all the gMSAs in the exposed domain before the attacker can use the information. Usually, you don't know the details of what was exposed. Therefore, it is suggested to apply the resolution to all domains of the forest.
+To protect additional domains of your forest after one domain has been exposed, you have to replace all the gMSAs in the exposed domain before the attacker can use the information. Usually, you don't know the details of what was exposed. Therefore, it's suggested to apply the resolution to all domains of the forest.
 
 Also note that as a proactive measure, auditing can be used to track the exposure of the KDS Root Key object. A system access control list (SACL) with successful reads can be placed on the Master Root Keys container, which allows auditing of successful reads on the `msKds-ProvRootKey` attribute. This action determines the object's exposure landscape regarding a Golden gMSA attack.
 
@@ -48,7 +48,7 @@ To resolve this problem, use one of the following approaches, depending on your 
 
 ### Case 1: You have reliable information about what information was exposed and when
 
-If you know that the exposure occurred before a certain date, and this date is earlier than the oldest gMSA password that you have, you can resolve the problem without re-creating the gMSAs as the procedure below.
+If you know that the exposure occurred before a certain date, and this date is earlier than the oldest gMSA password that you have, you can resolve the problem without re-creating the gMSAs, as shown in the procedure below.
 
 The gMSA password was rolled after the exposure, and a new KDS Root Key object is created that isn't known by the attacker.
 
