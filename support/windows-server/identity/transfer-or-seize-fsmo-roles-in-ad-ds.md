@@ -35,7 +35,7 @@ Within an Active Directory Domain Services (AD DS) forest, there are specific ta
 For more information about the Operation Master role holders and recommendations for placing the roles, see [FSMO placement and optimization on Active Directory domain controllers](fsmo-placement-and-optimization-on-ad-dcs.md).
 
 > [!NOTE]
-> Active Directory Application partitions that include DNS application partitions have Operation Master role links. If a DNS application partition defines an owner for the infrastructure master(IM) role, you can't use Ntdsutil, DCPromo, or other tools to remove that application partition. For more information, see [DCPROMO demotion fails if unable to contact the DNS infrastructure master](dcpromo-demotion-fails.md).
+> Active Directory Application partitions that include DNS application partitions have Operation Master role links. If a DNS application partition defines an owner for the infrastructure master (IM) role, you can't use Ntdsutil, DCPromo, or other tools to remove that application partition. For more information, see [DCPROMO demotion fails if unable to contact the DNS infrastructure master](dcpromo-demotion-fails.md).
 
 When a DC that has been acting as a role holder starts to run (for example, after a failure or a shutdown), it doesn't immediately resume behaving as the role holder. The DC waits until it receives inbound replication for its naming context (for example, the Schema master role owner waits to receive inbound replication of the Schema partition).
 
