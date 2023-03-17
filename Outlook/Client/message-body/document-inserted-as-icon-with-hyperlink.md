@@ -15,6 +15,7 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
   - Outlook for Microsoft 365
+  - Exchange Server 2013
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
@@ -38,10 +39,6 @@ To work around this issue, change the format of the email message to Rich Text o
 2. Select **Plain Text** or **Rich Text**.
 3. Select the **Message** tab in the ribbon and then select **Attach File**.
 4. Attach the file the way you normally do.
-
-## Status
-
-Microsoft is researching this problem and will post more information in this article when the information becomes available.
 
 ## More information
 
