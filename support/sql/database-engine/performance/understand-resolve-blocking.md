@@ -339,7 +339,7 @@ In this scenario, an actively running query has acquired locks, and the locks ar
 
 **Resolution**:
 
-The solution to this blocking problem is to look for ways to optimize the query. This class of blocking problem may be a performance problem and requires you to treat it as such. For information on troubleshooting a specific slow-running query, see [How to troubleshoot slow-running queries on SQL Server](/troubleshoot/sql/performance/troubleshoot-slow-running-queries). For more information, see [Monitor and Tune for Performance](/sql/relational-databases/performance/monitor-and-tune-for-performance).
+The solution to this blocking problem is to look for ways to optimize the query. This class of blocking problem may be a performance problem and requires you to treat it as such. For information on troubleshooting a specific slow-running query, see [How to troubleshoot slow-running queries on SQL Server](/troubleshoot/sql/database-engine/performance/troubleshoot-slow-running-queries). For more information, see [Monitor and Tune for Performance](/sql/relational-databases/performance/monitor-and-tune-for-performance).
 
 Reports built-in to SSMS from the [Query Store](/sql/relational-databases/performance/best-practice-with-the-query-store) (introduced in SQL Server 2016) are also a highly recommended and valuable tool for identifying the most costly queries and suboptimal execution plans.
 
@@ -510,7 +510,7 @@ KILL 99
 ## See also
 
 * [Monitoring performance by using the Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store)
-* [Resolve blocking problems that are caused by lock escalation in SQL Server](resolve-blocking-problems-caused-lock-escalation.md)
+* [Resolve blocking problems that are caused by lock escalation in SQL Server](../performance/resolve-blocking-problems-caused-lock-escalation.md)
 * [Transaction Locking and Row Versioning Guide](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)
 * [SET TRANSACTION ISOLATION LEVEL](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)
 * [Quickstart: Extended events in SQL Server](/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server)

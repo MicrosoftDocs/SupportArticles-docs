@@ -348,4 +348,4 @@ Follow these steps to [compare execution plans](/sql/relational-databases/perfor
 
 This section is included here as a reference in case your issue isn't a long-running CPU driving query. You can use it to troubleshoot queries that are long due to waits.
 
-[!INCLUDE [collect query data and logical reads](../includes/performance/diagnose-waits-or-bottlenecks.md)]
+[!INCLUDE [collect query data and logical reads](../../includes/performance/diagnose-waits-or-bottlenecks.md)]

@@ -52,7 +52,7 @@ Use one of the following tools to check whether the SQL Server process is actual
     }
     ```
 
-If `% User Time` is consistently greater than 90 percent, the SQL Server process is causing high CPU usage. However, if `% Privileged time` is consistently greater than 90 percent, your antivirus software, other drivers, or another OS component on the computer is contributing to high CPU usage. You should work with your system administrator to analyze the root cause of this behavior.
+If `% User Time` is consistently greater than 90 percent (% User Time is the sum of processor time on each processor, its maximum value is 100% * (no of CPUs)), the SQL Server process is causing high CPU usage. However, if `% Privileged time` is consistently greater than 90 percent, your antivirus software, other drivers, or another OS component on the computer is contributing to high CPU usage. You should work with your system administrator to analyze the root cause of this behavior.
 
 ## Step 2: Identify queries contributing to CPU usage
 
@@ -73,7 +73,7 @@ FROM sys.dm_exec_requests WAITFOR DELAY '00:00:05'SELECT CONVERT(DECIMAL(5,
 FROM sys.dm_exec_requests
 ```
 
-[!INCLUDE [identify-cpu-bound-queries](../includes/performance/identify-cpu-bound-queries.md)]
+[!INCLUDE [identify-cpu-bound-queries](../../includes/performance/identify-cpu-bound-queries.md)]
 
 ## Step 3: Update statistics
 
@@ -92,15 +92,15 @@ If SQL Server is still using excessive CPU capacity, go to the next step.
 
 ## Step 4: Add missing indexes
 
-[!INCLUDE [add-missing-indexes](../includes/performance/add-missing-indexes.md)]
+[!INCLUDE [add-missing-indexes](../../includes/performance/add-missing-indexes.md)]
 
 ## Step 5: Investigate and resolve parameter-sensitive issues
 
-[!INCLUDE [parameter-sniffing-issues](../includes/performance/parameter-sniffing-issues.md)]
+[!INCLUDE [parameter-sniffing-issues](../../includes/performance/parameter-sniffing-issues.md)]
 
 ## Step 6: Investigate and resolve SARGability issues
 
-[!INCLUDE [no-sargability-issue](../includes/performance/no-sargability-issue.md)]
+[!INCLUDE [no-sargability-issue](../../includes/performance/no-sargability-issue.md)]
 
 ## Step 7: Disable heavy tracing
 

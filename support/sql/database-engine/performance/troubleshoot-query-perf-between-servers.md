@@ -55,12 +55,11 @@ If multiple queries run slower on one server than the other, the most probable c
 
 To collect elapsed time and CPU time of the query on both servers, use one of the following methods that best fits your situation:
 
-[!INCLUDE [collect query data and logical reads](../includes/performance/collect-cpu-time-elapsed-time-logical-reads.md)]
+[!INCLUDE [collect query data and logical reads](../../includes/performance/collect-cpu-time-elapsed-time-logical-reads.md)]
 
 Compare the elapsed time and CPU time of the query to determine the issue type for both servers.
 
-
-[!INCLUDE [establish runner or waiter perf type](../includes/performance/establish-runner-waiter-perf-type.md)]
+[!INCLUDE [establish runner or waiter perf type](../../includes/performance/establish-runner-waiter-perf-type.md)]
 
 
 ## Step 3: Compare data from both servers, figure out the scenario, and troubleshoot the issue
@@ -157,12 +156,12 @@ This issue may be caused by:
 
 Check the following questions and determine whether the comparison between the two servers is valid.
 
-[!INCLUDE [diagnose environment differences](../includes/performance/diagnose-environment-differences.md)]
+[!INCLUDE [diagnose environment differences](../../includes/performance/diagnose-environment-differences.md)]
 
 ## Diagnose waits or bottlenecks
 
-[!INCLUDE [diagnose waits](../includes/performance/diagnose-waits-or-bottlenecks.md)]
+[!INCLUDE [diagnose waits](../../includes/performance/diagnose-waits-or-bottlenecks.md)]
 
 ## Diagnose query plan differences
 
-[!INCLUDE [diagnose query plan differences](../includes/performance/diagnose-query-plan-differences.md)]
+[!INCLUDE [diagnose query plan differences](../../includes/performance/diagnose-query-plan-differences.md)]
