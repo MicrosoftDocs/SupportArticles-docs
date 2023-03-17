@@ -27,7 +27,7 @@ sections:
       - question: |
           What guidance is available to set up Microsoft Teams from an Azure AD perspective to work with my existing on-premises deployment?
         answer: |
-          Your first step should be to consider your needs. For example, do you want to sync users from on-premises to Azure AD, or do you want only to start a new cloud solution? You can learn more about deployments [here](http://azuredummies.com/2020/03/17/how-microsoft-can-help-working-from-home-responding-to-corona-crisis-ms-teams/).
+          Microsoft Teams uses identities stored in Azure Active Directory. You can integrate Azure Active Directory with on-premises AD environments. For more information, see [Microsoft 365 integration with on-premises environments](/microsoft-365/enterprise/microsoft-365-integration?view=o365-worldwide) 
 
       - question: |
           I work in education, and I have no existing on-premises infrastructure. How can I use Microsoft Teams for educational purposes, such as online teaching?
@@ -41,9 +41,9 @@ sections:
       - question: |
           My administrators also work from home. How can I enable them to access our internal servers remotely and in a secure manner?
         answer: |
-          The answer depends on your current deployment. If you already have a VPN solution, you can integrate it by using our multi-factor authentication (MFA) solution to add an additional layer of security.
+          The answer depends on your current deployment. If you already have a VPN solution, you can integrate it by using our multi-factor authentication (MFA) solution to add another layer of security.
 
-          If you don't have a VPN solution yet, you can proceed with the deployment, and use a Windows gateway to allow remote access by having MFA as an additional layer of security.
+          If you don't have a VPN solution yet, you can proceed with the deployment, and use a Windows gateway to allow remote access by having MFA as an extra layer of security.
 
       - question: |
           Can you provide technical details to help me enable MFA to allow remote access to my internal servers if I'm using a third-party VPN solution or a Microsoft Windows gateway?
@@ -97,7 +97,7 @@ sections:
           [Configure AD FS to Send Password Expiry Claims](/windows-server/identity/ad-fs/operations/configure-ad-fs-to-send-password-expiry-claims)
 
       - question: |
-          I have a cloud-only deployment, and I have to add Azure MFA as an additional layer of security. Is there a free license for this?
+          I have a cloud-only deployment, and I have to add Azure MFA as an extra layer of security. Is there a free license for this?
         answer: |
           Yes. Azure AD Free or standalone Office 365 licenses use security defaults to require MFA for users and administrators.
 
@@ -114,9 +114,9 @@ sections:
           You can connect three kinds of devices to Azure AD: Azure AD Registered, Azure AD Joined, or Hybrid Azure AD joined, depending on your infrastructure. For more information, go to [Getting devices in Azure AD](/azure/active-directory/devices/overview#getting-devices-in-azure-ad).
 
       - question: |
-          Is an additional license required to connect my device to Azure AD?
+          Is an extra license required to connect my device to Azure AD?
         answer: |
-          No. An additional license is not required. Because the Azure AD Free license is enabled by default together with the Office 365 license, users can connect devices to Azure AD.
+          No. An extra license is not required. Because the Azure AD Free license is enabled by default together with the Office 365 license, users can connect devices to Azure AD.
 
       - question: |
           While working remotely, why can't I access Office 365 services after I reset my password from my Azure AD-joined device?
