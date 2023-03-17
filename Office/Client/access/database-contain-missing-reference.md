@@ -1,8 +1,8 @@
 ---
 title: Database contains a missing or broken reference
 description: Fixes an issue in which the procedure contains a VBA function and your database contains a reference to a missing object library or a missing type library.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

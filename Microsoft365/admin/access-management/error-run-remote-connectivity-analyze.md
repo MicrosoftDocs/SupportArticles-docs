@@ -1,7 +1,7 @@
 ---
 title: Error when you run Remote Connectivity Analyzer
 description: Describes an issue in which you can't use the Remote Connectivity Analyzer tool to test connectivity to Microsoft 365. Provides a resolution.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
-ms.author: v-maqiu
+ms.author: luche
 ms.reviewer: nical, smcgrath, bradh, jason
 appliesto: 
   - Microsoft 365

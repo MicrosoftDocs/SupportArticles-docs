@@ -1,8 +1,8 @@
 ---
 title: Can't recover inactive mailboxes with additional shards
 description: Provides a fix for an issue in which you can't recover inactive mailboxes that have additional shards.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

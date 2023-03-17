@@ -1,8 +1,8 @@
 ---
 title: Large items are skipped during public folder migration
 description: Fixes an issue in which large items are skipped during a public folder migration and you receive the Failed to recopy large item error in the migration report.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

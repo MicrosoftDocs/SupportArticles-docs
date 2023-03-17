@@ -1,14 +1,14 @@
 ---
 title: You cannot remove a domain that has subdomains
 description: Describes an issue in which you receive the Domain has associated subdomains or You cannot remove a domain that has subdomains error. Provides a resolution.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-maqiu
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - User and Domain Management

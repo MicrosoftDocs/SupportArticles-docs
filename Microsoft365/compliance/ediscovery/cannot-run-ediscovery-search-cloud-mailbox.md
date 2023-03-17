@@ -1,8 +1,8 @@
 ---
 title: Can't run In-Place eDiscovery search for Exchange Online mailbox in Exchange Server 2019 or 2016 by using EAC
 description: When run In-Place eDiscovery search for Exchange Online mailbox in the on-premises server, it fails and you may receive an error message.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

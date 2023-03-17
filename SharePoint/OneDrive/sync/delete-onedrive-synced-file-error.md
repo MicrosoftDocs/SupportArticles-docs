@@ -1,8 +1,8 @@
 ---
 title: Invalid reparse points when deleting OneDrive-synced files locally
 description: Fixes an issue in which you can't delete a OneDrive-synced file locally because of invalid reparse points.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

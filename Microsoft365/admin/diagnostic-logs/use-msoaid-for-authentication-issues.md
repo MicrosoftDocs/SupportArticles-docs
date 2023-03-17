@@ -1,7 +1,7 @@
 ---
 title: Use MSOAID for authentication issues
 description: Describes how to download and use the Microsoft Office Authentication/Identity Diagnostic tool to collect logs for authentication issues.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -12,7 +12,7 @@ ms.reviewer: thdesilv
 ms.custom: 
 - CSSTroubleshoot
 - CI 165888
-ms.author: v-maqiu
+ms.author: luche
 appliesto: 
   - Microsoft 365
 ms.date: 8/29/2022

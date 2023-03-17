@@ -1,14 +1,14 @@
 ---
 title: The user name or password is incorrect when you use connect-MSOLService
 description: Fixes an issue in which you receive an error when you use connect-MSOLService to connect to Microsoft 365.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-maqiu
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Cloud Services (Web roles/Worker roles)

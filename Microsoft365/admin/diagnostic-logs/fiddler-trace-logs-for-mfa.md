@@ -1,8 +1,8 @@
 ---
 title: How to use Fiddler trace logs for MFA in Microsoft 365 and Azure AD
 description: Describes how to use the Fiddler tool to trace multifactor authentication (MFA) scenarios in Microsoft 365.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

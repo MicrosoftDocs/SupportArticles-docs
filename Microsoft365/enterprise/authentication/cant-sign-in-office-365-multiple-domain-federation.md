@@ -1,7 +1,7 @@
 ---
 title: AADSTS50107 when trying to sign in to Microsoft 365 with multiple domain federations
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: CSSTroubleshoot

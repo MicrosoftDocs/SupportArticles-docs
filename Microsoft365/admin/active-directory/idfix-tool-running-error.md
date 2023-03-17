@@ -1,12 +1,12 @@
 ---
 title: Error when you run the IdFix tool
 description: Describes how to resolve an error that occurs when you run the IdFix DirSync Error Remediation Tool in your on-premises AD DS environment.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-maqiu
+ms.author: luche
 ms.reviewer: v-chblod
 ms.custom: CSSTroubleshoot
 search.appverid: 

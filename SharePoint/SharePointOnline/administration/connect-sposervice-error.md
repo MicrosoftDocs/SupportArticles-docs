@@ -1,8 +1,8 @@
 ---
 title: Can't connect to SharePoint Online
 description: Fixes an issue in which you receive a "Could not connect to SharePoint Online" error message when you use the Connect-SPOService cmdlet in SharePoint Online Management Shell.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,12 +1,12 @@
 ---
 title: Set up AD FS for Microsoft 365 for Single Sign-On
 description: This article includes a step-by-step video that explains how to configure AD FS to work together with Microsoft 365 for Single Sign-On solution.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-maqiu
+ms.author: luche
 ms.reviewer: abizerh, willfid, rkiran
 ms.custom: CSSTroubleshoot
 search.appverid: 

@@ -1,8 +1,8 @@
 ---
 title: Can't sync a shortcut folder with OneDrive
 description: Fixes an issue in which you can use the OneDrive sync app to sync a shared folder that's set as a shortcut.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

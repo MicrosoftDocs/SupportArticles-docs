@@ -1,12 +1,12 @@
 ---
 title: There was a problem accessing the site error from AD FS
 description: Describes an issue in which a federated user receives an error message from Active Directory Federation Services (AD FS) when the user tries to sign in to a Microsoft cloud service such as Microsoft 365, Azure, or Microsoft Intune.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-maqiu
+ms.author: luche
 ms.reviewer: v-jocomf
 ms.custom: CSSTroubleshoot
 search.appverid: 

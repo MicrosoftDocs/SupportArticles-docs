@@ -1,14 +1,14 @@
 ---
 title: Issues that affect DLP policy tips
 description: Fixes some issues that occur if DLP policy tips don't work as expected.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-maqiu
+ms.author: luche
 ms.reviewer: chgary, lindabr, sathyana
 ms.custom: 
   - CSSTroubleshoot

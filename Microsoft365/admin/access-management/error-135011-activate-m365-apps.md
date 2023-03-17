@@ -1,7 +1,7 @@
 ---
 title: Your organization has disabled this device when trying to activate Microsoft 365 Apps
-ms.author: v-maqiu
-author: MaryQiu1987
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 9/4/2020
 audience: Admin

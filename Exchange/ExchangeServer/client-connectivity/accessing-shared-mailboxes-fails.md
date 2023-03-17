@@ -1,8 +1,8 @@
 ---
 title: Unable to access shared mailboxes through POP/IMAP
 description: Fixes a problem in which users can't access shared mailboxes through POP/IMAP when they use an account that isn't mail-enabled but has permissions to the shared mailboxes.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,13 +1,13 @@
 ---
 title: Sorry, but we're having trouble signing you in
 description: Discusses an error message that users receive when they try to sign in to a Microsoft cloud service such as Microsoft 365, Azure, or Microsoft Intune from a sign-in webpage whose URL starts with https://login.microsoftonline.com/login.srf.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
-ms.author: v-maqiu
+ms.author: luche
 search.appverid: 
   - MET150
 appliesto: 

@@ -1,11 +1,11 @@
 ---
 title: Listing some issues for Microsoft 365 Administration
 description: This article lists Microsoft 365 Administration-related issues.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: landing-page
-ms.author: v-maqiu
+ms.author: luche
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot

@@ -1,8 +1,8 @@
 ---
 title: Can't edit a database when data macro is added
 description: Provides a workaround for an issue in which you can't edit a database in Office Access 2007 if the database was saved in Access 2010.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

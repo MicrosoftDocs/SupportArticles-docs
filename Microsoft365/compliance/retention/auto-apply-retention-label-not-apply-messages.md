@@ -1,8 +1,8 @@
 ---
 title: Auto-apply retention label doesn't apply to messages 
 description: Fixes an issue in which an auto-apply retention label that you have configured doesn't apply to items in a mailbox.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
