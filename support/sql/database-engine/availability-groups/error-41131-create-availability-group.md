@@ -76,4 +76,4 @@ Make sure that these permissions exist on each SQL Server computer that could ho
 > [!NOTE]
 > The Resource Host Monitor Service process (RHS.exe) that hosts SQL Resource.dll can be run only under a System account.
 
-For more information, see [Troubleshooting automatic failover problems in SQL Server Always On environments](/troubleshoot/sql/availability-groups/troubleshooting-automatic-failover-problems).
+For more information, see [Troubleshooting automatic failover problems in SQL Server Always On environments](../availability-groups/troubleshooting-automatic-failover-problems.md).
