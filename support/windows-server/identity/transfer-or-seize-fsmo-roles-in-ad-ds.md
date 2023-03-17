@@ -107,7 +107,7 @@ For example, assume that you have to transfer the Schema master role. The Schema
 >
 > 1. Select **Start** > **Programs** > **Administrative Tools** > **Active Directory Sites and Services**.
 > 2. In the navigation pane, double-click **Sites** and then locate the appropriate site or select **Default-first-site-name** if no other sites are available.
-> 3. Open the Servers folder, and then select the DC.
+> 3. Open the **Servers** folder, and then select the DC.
 > 4. In the DC's folder, double-click **NTDS Settings**.
 > 5. On the **Action** menu, select **Properties**.
 > 6. On the **General** tab, view the **Global Catalog** check box to see whether it's selected.
