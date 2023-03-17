@@ -61,13 +61,13 @@ If an Operation Master role holder experiences a failure or is otherwise taken o
 
 We recommend that you transfer Operation Master roles in the following scenarios:
 
-- The current role holder is operational and can be accessed on the network by the new FSMO owner.
+- The current role holder is operational and can be accessed on the network by the new Operation Master owner.
 - You're gracefully demoting a DC that currently owns Operation Master roles that you want to assign to a specific DC in your Active Directory forest.
 - The DC that currently owns Operation Master roles is being taken offline for scheduled maintenance, and you have to assign specific Operation Master roles to live DCs. You may have to transfer roles to perform operations that affect the FSMO owner. This is especially true for the PDC Emulator role. This is a less important issue for the RID master role, the Domain naming master role, and the Schema master roles.
 
 We recommend that you seize Operation Master roles in the following scenarios:
 
-- The current role holder is experiencing an operational error that prevents an FSMO-dependent operation from completing successfully, and you can't transfer the role.
+- The current role holder is experiencing an operational error that prevents an Operation Master-dependent operation from completing successfully, and you can't transfer the role.
 - You use the `Uninstall-ADDSDomainController -ForceRemoval` or `dcpromo /forceremoval` command to force-demote a DC that owns an Operation Master role.
 
   > [!IMPORTANT]
@@ -91,9 +91,19 @@ The best candidate for the new role holder is a DC that meets the following crit
 For example, assume that you have to transfer the Schema master role. The Schema master role is part of the schema partition of the forest (CN=Schema,CN=Configuration,DC=\<forest root domain>). The best candidate for a new role holder is a DC that also resides in the forest root domain, and in the same Active Directory site as the current role holder.
 
 > [!CAUTION]
+> The Infrastructure Master (IM) role isn't needed anymore if the following conditions are true:
+>
+> - All domain controllers in the domain are Global Catalogs (GCs). In this case, the GCs get updates that remove cross-domain references.
+> - When the AD Recycle Bin is enabled the forest. In this case each DC is responsible to update its references.
+>
+> We recommend you still define a proper owner of the IM to avoid errors and warnings from monitoring tools.
+>
+> If you still need the IM role:  
 > Don't put the Infrastructure master role on the same DC as the global catalog server. If the Infrastructure master runs on a global catalog server, it stops updating object information because it does not contain any references to objects that it doesn't hold. This is because a global catalog server holds a partial replica of every object in the forest.
 >
-> To test whether a DC is also a global catalog server follow these steps:
+> To test whether a DC is also a global catalog server, follow these steps:
+>  
+> ### [Active Directory Sites and Services](#tab/active-directory-sites-and-services)
 >
 > 1. Select **Start** > **Programs** > **Administrative Tools** > **Active Directory Sites and Services**.
 > 2. In the navigation pane, double-click **Sites** and then locate the appropriate site or select **Default-first-site-name** if no other sites are available.
@@ -101,6 +111,17 @@ For example, assume that you have to transfer the Schema master role. The Schema
 > 4. In the DC's folder, double-click **NTDS Settings**.
 > 5. On the **Action** menu, select **Properties**.
 > 6. On the **General** tab, view the **Global Catalog** check box to see whether it's selected.
+>
+> ### [PowerShell](#tab/powershell)
+>
+> 1. Start PowerShell.
+> 2. Type the following cmdlet, and adjust `DC_NAME` with your actual DC name:
+>
+>    ```powershell
+>    (Get-ADDomainController -Filter { Name -Eq 'DC_NAME' }).IsGlobalCatalog
+>    ```
+>
+> 3. The output will be `True` of `False`.
 
 For more information, see:
 
@@ -183,7 +204,7 @@ When part of a domain or forest can't communicate with the rest of the domain or
 > In most cases, you can take advantage of the initial replication requirement (as described in this article) to weed out duplicate role holders. A restarted role holder should relinquish the role if it detects a duplicate role-holder.  
 > You may encounter circumstances that this behavior does not resolve. In such cases, the information in this section may be helpful.
 
-The following table identifies the FMSO roles that can cause problems if a forest or domain has multiple role-holders for that role:
+The following table identifies the Operation Master roles that can cause problems if a forest or domain has multiple role-holders for that role:
 
 |Role|Potential conflicts between multiple role-holders?|
 |---|---|
