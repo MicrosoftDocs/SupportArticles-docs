@@ -1,8 +1,8 @@
 ---
 title: Changes to a data loss prevention policy don't take effect in Outlook 2013 in Microsoft 365
 description: Describes an issue in which policy tips aren't displayed correctly and messages aren't appropriately blocked by the policy. Provides a workaround.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

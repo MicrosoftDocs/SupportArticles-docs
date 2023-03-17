@@ -1,8 +1,8 @@
 ---
 title: Archive mailbox issues for a mailbox that's migrated to or from Microsoft 365
 description: Describes archive mailbox issues for a mailbox that's migrated to or from Microsoft 365. Provides a resolution.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

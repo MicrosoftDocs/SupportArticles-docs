@@ -1,8 +1,8 @@
 ---
 title: Unable to add a new record programmatically
 description: Fixes an issue in which you receive an error message if you try to add a new record to a table by using the NotInList event of the combo box on a form.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

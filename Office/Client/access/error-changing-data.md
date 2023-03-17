@@ -1,8 +1,8 @@
 ---
 title: Errors when you change or delete data in tables
 description: Fixes an issue in which you can't update the data in tables that are linked to an Excel workbook in Access.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Access ADODB code errors when you use the adBigInt data type
 description: The value you entered isn't valid, Too few parameters and Not enough memory resources are available errors when using ADODB code that refers to the adBigInt data type in Access.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
-ms.author: v-maqiu
+ms.author: luche
 appliesto: 
   - Access for Microsoft 365
   - Access 2019

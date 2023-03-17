@@ -1,8 +1,8 @@
 ---
 title: Reset AutoNumber value in Access
 description: Provides step-by-step methods to reset an AutoNumber field value in Access. This includes reseting an AutoNumber field in a single table or in a table with referenced tables.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

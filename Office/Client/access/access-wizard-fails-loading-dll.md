@@ -1,8 +1,8 @@
 ---
 title: Error in loading DLL when using Access wizard
 description: Fixes an issue in which you can't use an Access wizard, such as the Import Text wizard or the Import Spreadsheet wizard.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

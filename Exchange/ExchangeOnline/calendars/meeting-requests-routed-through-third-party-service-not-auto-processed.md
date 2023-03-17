@@ -1,8 +1,8 @@
 ---
 title: Room mailbox can't automatically accept or decline meeting requests
 description: Meeting requests that are routed through a third-party mail service by using mail flow connectors aren't automatically processed by a room mailbox. 
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

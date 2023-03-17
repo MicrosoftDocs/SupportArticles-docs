@@ -1,8 +1,8 @@
 ---
 title: Description of Desktop Setup Tool logging errors
 description: Describes errors that you may experience when you use Microsoft 365 Desktop Setup to install Microsoft 365 updates. Describes underlying conditions that trigger these errors.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

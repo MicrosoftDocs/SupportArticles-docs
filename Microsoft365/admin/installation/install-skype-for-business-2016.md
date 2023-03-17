@@ -1,7 +1,7 @@
 ---
 title: Install of Skype for Business 2016 installs Microsoft 365 Apps for enterprise
 description: Explains that when you install Skype for Business 2016 from the Microsoft 365 portal, all the Microsoft 365 Apps for enterprise applications are installed, not just Skype. A workaround is provided.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: v-maqiu
+ms.author: luche
 appliesto: 
   - Microsoft 365 Apps for enterprise
   - Skype for Business 2016

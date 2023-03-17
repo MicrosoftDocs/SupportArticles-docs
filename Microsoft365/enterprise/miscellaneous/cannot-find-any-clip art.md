@@ -1,11 +1,11 @@
 ---
 title: Can't find clip art when you open Office Online
 description: Describes the problem when you can't find clip art in OneNote Online to insert.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-maqiu
+ms.author: luche
 ms.custom: CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 

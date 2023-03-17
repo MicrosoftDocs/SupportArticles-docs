@@ -1,8 +1,8 @@
 ---
 title: Can't view items in an Exchange Online archive mailbox by using Microsoft Outlook Web App
 description: Describes an issue in which users can't access an online archive mailbox by using Outlook Web App.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

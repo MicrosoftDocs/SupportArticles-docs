@@ -1,8 +1,8 @@
 ---
 title: Create a custom function to display images
 description: Describes how to manage and store images when you have lots of images or when the images are very large.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

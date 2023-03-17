@@ -1,8 +1,8 @@
 ---
 title: User isn't found when using @mentions
 description: Fixes an issue in which user information doesn't resolve when you @mention a user.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

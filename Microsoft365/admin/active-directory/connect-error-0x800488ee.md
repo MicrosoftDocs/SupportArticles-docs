@@ -1,7 +1,7 @@
 ---
 title: Unable to connect to Microsoft 365, Azure, or Intune
 description: Describes an issue in which you receive an error message that contains a 0x800488EE error code after your admin account is disabled for Multi-Factor Authentication.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
-ms.author: v-maqiu
+ms.author: luche
 appliesto: 
   - Cloud Services (Web roles/Worker roles)
   - Azure Active Directory

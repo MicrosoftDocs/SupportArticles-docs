@@ -1,8 +1,8 @@
 ---
 title: Unable to open an Access database
 description: Fixes a problem that occurs when you use the DAO library to convert a database that you created in Access 97 or an earlier version by using the CompactDatabase method.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

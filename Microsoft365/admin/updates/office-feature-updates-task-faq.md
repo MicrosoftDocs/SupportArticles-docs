@@ -1,12 +1,12 @@
 ---
 title: Office Feature Updates task description and FAQ
 description: Describes Office Feature Updates task
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-maqiu
+ms.author: luche
 ms.custom: CSSTroubleshoot
 search.appverid: 
   - MET150

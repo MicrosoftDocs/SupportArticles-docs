@@ -1,8 +1,8 @@
 ---
 title: Outlook for Mac users can't access on-premises public folders 
 description: Fixes an issue in which Outlook for Mac users receive an error message that indicates Outlook isn't connected to the network when they access Exchange Server 2013 public folders in a hybrid deployment.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

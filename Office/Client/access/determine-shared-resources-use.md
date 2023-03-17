@@ -1,8 +1,8 @@
 ---
 title: Determine who is using the shared resources
 description: Discusses how to use the OS utilities to determine who is using the shared resources on your computer when an Access database is opened in exclusive mode.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

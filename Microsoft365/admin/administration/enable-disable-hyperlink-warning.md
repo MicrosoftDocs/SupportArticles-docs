@@ -1,12 +1,12 @@
 ---
 title: Enable or disable hyperlink warning messages in Office programs
 description: Describes how to enable or to disable hyperlink warning messages in Microsoft Office programs.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-maqiu
+ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: johnlan, of12sstr
 search.appverid: 

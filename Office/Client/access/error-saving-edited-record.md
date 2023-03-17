@@ -1,8 +1,8 @@
 ---
 title: Can't edit a record in a form that's based on a multi-table view
 description: Workarounds a problem that may occur in a multi-user environment when more than one user tries to access the same record at the same time in a multi-table view.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

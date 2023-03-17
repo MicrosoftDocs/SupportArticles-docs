@@ -1,7 +1,7 @@
 ---
 title: We can't start this app when installing an Office add-in
 description: Describes an issue that installing an Office Add-in from the Office Store fails with error.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: v-maqiu
+ms.author: luche
 appliesto: 
   - Microsoft 365 Apps
   - Office LTSC 2021

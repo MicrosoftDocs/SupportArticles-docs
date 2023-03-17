@@ -1,8 +1,8 @@
 ---
 title: Microsoft 365 ownerless group policy
 description: Answers questions that you might have about an ownerless group and its policy.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Fix pending state issue with Directory synchronization for Microsoft 365, Azure, or Intune
 description: Provides resolution to the pending state issue with directory synchronization for Microsoft 365, Azure, or Intune
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
-ms.author: v-maqiu
+ms.author: luche
 ms.reviewer: ericta, andypunt, v-lanac
 appliesto: 
   - Azure Active Directory

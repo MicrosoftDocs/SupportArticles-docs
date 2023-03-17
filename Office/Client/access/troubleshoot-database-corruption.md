@@ -1,8 +1,8 @@
 ---
 title: How to troubleshoot database corruption
 description: Provides a list of reference to Microsoft Knowledge Base articles that may help you to resolve corruption in a database.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

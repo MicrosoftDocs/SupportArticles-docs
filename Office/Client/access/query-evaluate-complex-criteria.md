@@ -1,8 +1,8 @@
 ---
 title: Create a query to evaluate complex criteria
 description: Describes how to create a query that has parameters to evaluate complex criteria in Access.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

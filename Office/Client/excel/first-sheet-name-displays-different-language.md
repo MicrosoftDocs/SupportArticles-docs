@@ -1,8 +1,8 @@
 ---
 title: The first sheet name is in a language different from the Office display language
 description: The name of the first sheet in an Excel workbook that you create through right-clicking in a folder may be in a language that's different from the Office display language.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Unable to run a query with the UniqueValues property
 description: Workaround an issue in which you can't run a query that has the UniqueValues query property set to Yes.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

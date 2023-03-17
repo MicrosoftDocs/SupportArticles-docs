@@ -1,8 +1,8 @@
 ---
 title: Incorrect SourcePFPrimaryMailboxGuid causes failed public folder migration
 description: Fixes an issue in which you get an EndpointNotFoundTransientException error when you run a public folder migration batch job.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

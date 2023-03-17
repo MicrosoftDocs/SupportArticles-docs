@@ -1,8 +1,8 @@
 ---
 title: No result when running a query from different sources
 description: Workaround an issue in which a query may not return any data when you run the query in an Access database that joins linked SQL Server tables from different sources or databases.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

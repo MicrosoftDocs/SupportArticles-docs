@@ -1,8 +1,8 @@
 ---
 title: FirstDay property is set incorrectly
 description: Fixes an issue in which the FirstDay property is not correctly set when you use the numeric constants.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

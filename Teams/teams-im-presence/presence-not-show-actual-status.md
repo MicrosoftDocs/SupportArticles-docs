@@ -1,8 +1,8 @@
 ---
 title: Your actual presence status isn't displayed in Teams
 description: Fixes an issue in which your actual presence status isn't displayed in Teams.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

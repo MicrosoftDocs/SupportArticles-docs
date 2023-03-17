@@ -1,8 +1,8 @@
 ---
 title: Description of Access lock files (laccdb and ldb)
 description: Describes automatic creation and deletion, required permissions, contents, and usage for lock files (laccdb and ldb).
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: How to block OneDrive use from within Microsoft 365 Apps for enterprise and Office 2016 applications
 description: Describes how to prevent your Office 2016 users from accessing and using OneDrive. This method involves configuring Group Policy settings.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
-ms.author: v-maqiu
+ms.author: luche
 appliesto: 
   - Microsoft 365 Apps for enterprise
   - Office 2016

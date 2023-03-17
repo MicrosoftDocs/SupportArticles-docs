@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot common PST import issues
 description: Identify and resolve some common issues when using the Import service to import PST files into Microsoft 365.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

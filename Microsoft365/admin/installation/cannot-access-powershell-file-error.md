@@ -1,8 +1,8 @@
 ---
 title: Can't access PowerShell.exe when installing Microsoft 365 apps
 description: Provides a workaround for an issue that prevents you from installing Microsoft 365 apps because PowerShell is blocked.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

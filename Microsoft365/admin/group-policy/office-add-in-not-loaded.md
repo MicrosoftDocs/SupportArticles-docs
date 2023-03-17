@@ -1,12 +1,12 @@
 ---
 title: No Add-ins loaded due to group policy settings
 description: Microsoft Outlook 2013 and Outlook 2016 include group policy settings that control how add-ins are managed. An administrator may use these settings to enable or disable specific add-ins. Additionally, these can be configured to allow a user to control the use of a specific add-in. This article provides details on configuring the Block all unmanaged add-ins and List of managed add-ins group policy settings.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-maqiu
+ms.author: luche
 ms.reviewer: gregmans
 ms.custom: CSSTroubleshoot
 search.appverid: 

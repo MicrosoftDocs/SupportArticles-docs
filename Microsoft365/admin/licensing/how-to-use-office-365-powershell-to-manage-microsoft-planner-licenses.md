@@ -1,14 +1,14 @@
 ---
 title: How to use Microsoft 365 PowerShell to manage Microsoft Planner licenses
 description: Describes how to use Microsoft 365 PowerShell to manage Microsoft Planner licenses.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-maqiu
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft 365 Planner

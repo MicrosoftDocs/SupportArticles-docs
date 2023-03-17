@@ -1,14 +1,14 @@
 ---
 title: Deleted app passwords for Multi-Factor Authentication continue to work
 description: Discusses that app passwords that are used for Azure Multi-Factor Authentication and that have been deleted continue to work. Provides a resolution.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-maqiu
+ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Cloud Services (Web roles/Worker roles)
