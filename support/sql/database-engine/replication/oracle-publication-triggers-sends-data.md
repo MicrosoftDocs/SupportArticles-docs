@@ -148,4 +148,4 @@ where table_name = 'my_table' and owner = 'my_owner'
 
 ## Third-party disclaimer
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]

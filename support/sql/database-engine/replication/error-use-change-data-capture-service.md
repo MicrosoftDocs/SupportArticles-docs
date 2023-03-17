@@ -58,4 +58,4 @@ SELECT * FROM xdbcdc_trace
 
 For more information about the updates that are described in the [Resolution](#resolution) section, see [My Oracle Support](https://support.oracle.com/portal/).
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
