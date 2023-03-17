@@ -35,7 +35,7 @@ Within an Active Directory Domain Services (AD DS) forest, there are specific ta
 For more information about the Operation Master role holders and recommendations for placing the roles, see [FSMO placement and optimization on Active Directory domain controllers](fsmo-placement-and-optimization-on-ad-dcs.md).
 
 > [!NOTE]
-> Active Directory Application partitions that include DNS application partitions have Operation Master role links. If a DNS application partition defines an owner for the infrastructure master role, you cannot use Ntdsutil, DCPromo, or other tools to remove that application partition. For more information, see [DCPROMO demotion fails if unable to contact the DNS infrastructure master](dcpromo-demotion-fails.md).
+> Active Directory Application partitions that include DNS application partitions have Operation Master role links. If a DNS application partition defines an owner for the infrastructure master(IM) role, you can't use Ntdsutil, DCPromo, or other tools to remove that application partition. For more information, see [DCPROMO demotion fails if unable to contact the DNS infrastructure master](dcpromo-demotion-fails.md).
 
 When a DC that has been acting as a role holder starts to run (for example, after a failure or a shutdown), it doesn't immediately resume behaving as the role holder. The DC waits until it receives inbound replication for its naming context (for example, the Schema master role owner waits to receive inbound replication of the Schema partition).
 
@@ -91,15 +91,15 @@ The best candidate for the new role holder is a DC that meets the following crit
 For example, assume that you have to transfer the Schema master role. The Schema master role is part of the schema partition of the forest (CN=Schema,CN=Configuration,DC=\<forest root domain>). The best candidate for a new role holder is a DC that also resides in the forest root domain, and in the same Active Directory site as the current role holder.
 
 > [!CAUTION]
-> The Infrastructure Master (IM) role isn't needed anymore if the following conditions are true:
+> The infrastructure master role isn't needed anymore if the following conditions are true:
 >
 > - All domain controllers in the domain are Global Catalogs (GCs). In this case, the GCs get updates that remove cross-domain references.
-> - When the AD Recycle Bin is enabled the forest. In this case each DC is responsible to update its references.
+> - The AD Recycle Bin is enabled in the forest. In this case, each DC is responsible for updating its references.
 >
 > We recommend you still define a proper owner of the IM to avoid errors and warnings from monitoring tools.
 >
-> If you still need the IM role:  
-> Don't put the Infrastructure master role on the same DC as the global catalog server. If the Infrastructure master runs on a global catalog server, it stops updating object information because it does not contain any references to objects that it doesn't hold. This is because a global catalog server holds a partial replica of every object in the forest.
+> If you still need the infrastructure master role:  
+> Don't put the infrastructure master role on the same DC as the global catalog server. If the infrastructure master runs on a global catalog server, it stops updating object information because it does not contain any references to objects that it doesn't hold. This is because a global catalog server holds a partial replica of every object in the forest.
 >
 > To test whether a DC is also a global catalog server, follow these steps:
 >  
@@ -121,7 +121,7 @@ For example, assume that you have to transfer the Schema master role. The Schema
 >    (Get-ADDomainController -Filter { Name -Eq 'DC_NAME' }).IsGlobalCatalog
 >    ```
 >
-> 3. The output will be `True` of `False`.
+> 3. The output will be `True` or `False`.
 
 For more information, see:
 
@@ -146,7 +146,7 @@ To seize or transfer the Operation Master roles by using the Ntdsutil utility, f
     > [!NOTE]
     >
     > - We recommend that you log on to the DC to which you are assigning Operation Master roles.
-    > - The signed-in user should be a member of the Enterprise Administrators group to transfer Schema master or Domain naming master roles, or a member of the Domain Administrators group of the domain where the PDC emulator, RID master and the Infrastructure master roles are being transferred.
+    > - The signed-in user should be a member of the Enterprise Administrators group to transfer Schema master or Domain naming master roles, or a member of the Domain Administrators group of the domain where the PDC emulator, RID master and the infrastructure master roles are being transferred.
 
 2. Select **Start** > **Run**, type _ntdsutil_ in the **Open** box, and then select **OK**.
 3. Type _roles_, and then press Enter.
@@ -214,7 +214,7 @@ The following table identifies the Operation Master roles that can cause problem
 |PDC emulator|No|
 |Infrastructure master|No|
   
-This issue doesn't affect the PDC Emulator master or the Infrastructure master. These role holders don't persist operational data. Additionally, the Infrastructure master doesn't make changes often. Therefore, if multiple islands have these role holders, you can reintegrate the islands without causing long-term issues.
+This issue doesn't affect the PDC Emulator master or the infrastructure master. These role holders don't persist operational data. Additionally, the Infrastructure master doesn't make changes often. Therefore, if multiple islands have these role holders, you can reintegrate the islands without causing long-term issues.
 
 The Schema master, the Domain naming master, and the RID master can create objects and persist changes in Active Directory. Each island that has one of these role holders could have duplicate and conflicting schema objects, domains, or RID pools by the time that you restore replication. Before you reintegrate islands, determine which role holders to keep. Remove any duplicate Schema masters, Domain Naming masters, and RID masters by following the repair, removal, and cleanup procedures that are mentioned in this article.
 
