@@ -1,8 +1,8 @@
 ---
 title: Parts of Online Services Sign-in Assistant to be disabled error when signing in cloud service
 description: Discusses a scenario in which you experience authentication issues in Microsoft 365, Azure, or Microsoft Intune and you receive an error that states there was a problem that caused parts of the Microsoft Online Services Sign-in Assistant to be disabled. A resolution is provided.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

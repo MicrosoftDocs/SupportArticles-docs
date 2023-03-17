@@ -1,12 +1,12 @@
 ---
 title: Set language and region settings for Microsoft 365
 description: Describes how to set language and region settings for Microsoft 365 by using Microsoft 365 PowerShell.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-maqiu
+ms.author: luche
 ms.custom: CSSTroubleshoot
 search.appverid: 
   - MET150

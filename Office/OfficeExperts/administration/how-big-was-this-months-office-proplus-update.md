@@ -1,8 +1,8 @@
 ---
 title: How to check the size of this month's Office ProPlus update
 description: This article explains how to find the size of a package by using Process Monitor.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

@@ -1,8 +1,8 @@
 ---
 title: Common Dialog API usage in an Access database
 description: Discusses how to use the Common Dialog API in an Access database to replace the Common Dialog functionality.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

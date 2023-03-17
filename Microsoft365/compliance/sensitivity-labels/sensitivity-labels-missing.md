@@ -1,8 +1,8 @@
 ---
 title: Sensitivity labels are missing
 description: Sensitivity labels are missing or the Sensitivity button is not available when you try to apply the sensitivity labels.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

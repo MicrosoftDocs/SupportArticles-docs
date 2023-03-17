@@ -1,7 +1,7 @@
 ---
 title: Microsoft 365 or Office 2013 installation process stops at the 10% - Configuring stage
 description: Resolves an issue in which the Microsoft 365 or Office 2013 installation process stops at the 10% - Configuring stage.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
-ms.author: v-maqiu
+ms.author: luche
 ms.reviewer: mmaxey, tomol, doakm, trevormc, bobbied, swebster, andyfel
 appliesto: 
   - Office 2013

@@ -1,8 +1,8 @@
 ---
 title: Data collected by Access Baseline diagnostic
 description: Describes details about the data that is collected by the Microsoft Office Access Baseline diagnostic.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

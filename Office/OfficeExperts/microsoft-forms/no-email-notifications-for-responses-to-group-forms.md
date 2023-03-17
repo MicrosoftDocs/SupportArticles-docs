@@ -1,7 +1,7 @@
 ---
 title: No email notifications for responses to Group Forms
 description: Describes the steps to edit group to receive email notifications.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.custom: sap:office-experts, CSSTroubleshoot, CI 125260
 ms.topic: troubleshooting
-ms.author: v-maqiu
+ms.author: luche
 ms.reviwer: zakirh
 appliesto: 
   - Microsoft Forms

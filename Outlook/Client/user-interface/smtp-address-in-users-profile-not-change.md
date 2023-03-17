@@ -38,10 +38,10 @@ However, if the user's primary SMTP email address is changed to `alias@subdomain
 
 ## Cause
 
-This issue is by design. The email address that's stamped in the root folder is determined at the time of profile creation and should reflect the primary SMTP address that's stamped on the user. The email address is strictly cosmetic and cannot be changed when the user's primary SMTP email address changes.
+This behavior is by design. The email address that's stamped in the root folder is determined at the time of profile creation and should reflect the primary SMTP address that's stamped on the user. The email address is strictly cosmetic and can't be changed when the user's primary SMTP email address changes.
 
 ## Workaround
 
-To work around this issue, delete and then re-create the profile for the user.
+To work around this behavior, re-create the profile for the user.
 
 Learn how to [Create an Outlook profile](https://support.microsoft.com/office/create-an-outlook-profile-f544c1ba-3352-4b3b-be0b-8d42a540459d) and set up an email account in Outlook.

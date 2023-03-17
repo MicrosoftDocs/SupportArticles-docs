@@ -1,7 +1,7 @@
 ---
 title: Enable Microsoft 365 Apps for enterprise ULS logging for random issues
 description: Describes how to collect Office diagnostic logs for Office support professionals to troubleshoot Office issues.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
-ms.author: v-maqiu
+ms.author: luche
 appliesto: 
   - Microsoft 365 Apps for enterprise
 ms.date: 3/31/2022

@@ -1,7 +1,7 @@
 ---
 title: Can't Verify Subscription or No Subscription Found in Office Mobile
 description: Discusses the Can't Verify Subscription or No Subscription Found error message that you receive when you try to use Office Mobile on an iPhone. Provides a resolution.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: v-maqiu
+ms.author: luche
 appliesto: 
   - Office Mobile for iPhone
 ms.date: 3/31/2022

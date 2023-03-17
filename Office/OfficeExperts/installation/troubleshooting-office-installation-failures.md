@@ -1,8 +1,8 @@
 ---
 title: Troubleshooting Office installation errors
 description: Describes techniques on how to determine and fix Microsoft Office installation failures.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

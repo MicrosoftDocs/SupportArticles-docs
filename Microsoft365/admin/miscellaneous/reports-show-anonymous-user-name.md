@@ -1,7 +1,7 @@
 ---
 title: Microsoft 365 reports show anonymous instead of actual user names
 description: Describes an issue in which Microsoft 365 reports show anonymous usernames instead of the actual user names.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
-ms.author: v-maqiu
+ms.author: luche
 appliesto: 
   - Microsoft 365
 ms.date: 3/31/2022

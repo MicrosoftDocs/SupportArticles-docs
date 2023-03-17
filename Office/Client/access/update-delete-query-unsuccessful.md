@@ -1,8 +1,8 @@
 ---
 title: Unable to update or delete data in a linked table
 description: Workaround an issue in which you may receive errors if you update or to delete an Access table by using an update or delete query that reads data from a linked-text file.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

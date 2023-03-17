@@ -1,8 +1,8 @@
 ---
 title: RopFastTransferSourceCopyTo operation fails on messages
 description: The RopFastTransferSourceCopyTo operation fails on messages that have a large HTML message body because the input document is too complex.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

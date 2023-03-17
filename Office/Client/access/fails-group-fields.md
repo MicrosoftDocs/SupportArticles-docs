@@ -1,8 +1,8 @@
 ---
 title: Can't run a query in a database
 description: Fixes an issue in which you receive an error message when you run a query in an Access database that uses an aggregate function.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

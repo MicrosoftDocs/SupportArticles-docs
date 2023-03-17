@@ -1,8 +1,8 @@
 ---
 title: Product IDs that are supported by the Office Deployment Tool for Click-to-Run
 description: Describes Product IDs that are supported by the Office Deployment Tool for Click-to-Run。
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 ms.date: 10/4/2021
 manager: dcscontentpm
 localization_priority: Normal

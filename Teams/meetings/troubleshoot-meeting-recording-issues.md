@@ -1,8 +1,8 @@
 ---
 title: Issues with meeting recordings
 description: Provides guides to troubleshoot meeting recording issues. For example, the meeting recording button is missing, or the meeting recording link isn't included or visible in a chat.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Activate Office 2010 KMS host through phone activation
 description: Describes how to activate the Office 2010 KMS host through telephone when you are in a disconnected environment.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

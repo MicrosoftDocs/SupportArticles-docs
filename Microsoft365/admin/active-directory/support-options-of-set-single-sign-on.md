@@ -1,7 +1,7 @@
 ---
 title: Support options for setting up single sign-on for Microsoft 365
 description: Lists support options that are available to help you set up single sign-on (SSO) in Microsoft 365.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
-ms.author: v-maqiu
+ms.author: luche
 ms.reviewer: willfid
 appliesto: 
   - Office Products

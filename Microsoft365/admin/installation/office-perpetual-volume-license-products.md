@@ -1,12 +1,12 @@
 ---
 title: Office LTSC 2021 and Office 2019 perpetual volume license products available as Click-to-Run
 description: Describes the supported installation way of Office LTSC 2021 and Office 2019.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-maqiu
+ms.author: luche
 ms.reviewer: v-katva, thdevine, Jenl, joselr, meerak
 ms.custom: CSSTroubleshoot
 search.appverid: 

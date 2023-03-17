@@ -1,7 +1,7 @@
 ---
 title: Web sites lose SSL certificate bindings
 description: Web sites lose SSL certificate bindings when the certificate doesn't have a unique Friendly name field on servers that are running Office Online Server.
-author: MaryQiu1987
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: v-maqiu
+ms.author: luche
 ms.reviewer: mgraham
 appliesto: 
   - Office Web Apps Server 2013

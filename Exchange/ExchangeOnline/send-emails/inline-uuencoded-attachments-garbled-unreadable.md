@@ -1,8 +1,8 @@
 ---
 title: Inline UUEncoded attachments from a UNIX-based application are garbled or unreadable
 description: Fixes an issue in which an inline UUEncoded attachment of an email message from a UNIX-based application is garbled or is unreadable.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

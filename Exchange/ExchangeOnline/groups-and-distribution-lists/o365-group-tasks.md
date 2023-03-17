@@ -1,8 +1,8 @@
 ---
 title: Common tasks to manage Microsoft 365 groups
 description: Describes common tasks about how to manage Microsoft 365 groups. For example, groups and teams, group delegation, group email management, and some other tasks.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Can't verify domain error when you try to verify a domain in Microsoft 365
 description: Describes a scenario in which you can't verify a domain in Microsoft 365 if the domain exists in another Microsoft cloud service or was federated with Exchange Online. Provides a resolution.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

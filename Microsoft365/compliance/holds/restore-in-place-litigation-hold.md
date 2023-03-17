@@ -1,8 +1,8 @@
 ---
 title: How to restore In-Place Hold and Litigation Hold settings in an Exchange hybrid deployment
 description: Describes how to restore In-Place Hold and Litigation Hold settings in an Exchange hybrid deployment.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

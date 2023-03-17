@@ -1,7 +1,7 @@
 ---
 title: Install Microsoft 365 apps
-ms.author: v-maqiu
-author: MaryQiu1987
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting

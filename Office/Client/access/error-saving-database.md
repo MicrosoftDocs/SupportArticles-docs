@@ -1,8 +1,8 @@
 ---
 title: Unable to save a database as an accde or mde file
 description: There is an error in the VBA code that prevents you from compiling a database or project or there is a reference.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

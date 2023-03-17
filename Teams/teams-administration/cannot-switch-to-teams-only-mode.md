@@ -1,8 +1,8 @@
 ---
 title: Unable to switch a tenant to Teams Only mode
 description: Fixes an issue in which you can't switch a tenant to Teams Only mode if the lyncdiscover DNS record doesn't point to Microsoft 365 or isn't present at all.
-author: MaryQiu1987
-ms.author: v-maqiu
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
