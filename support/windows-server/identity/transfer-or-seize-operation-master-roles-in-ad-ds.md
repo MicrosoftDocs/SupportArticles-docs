@@ -103,7 +103,7 @@ For example, assume that you have to transfer the Schema master role. The Schema
 >
 > To test whether a DC is also a global catalog server, follow these steps:
 >  
-> ### [Active Directory Sites and Services](#tab/active-directory-sites-and-services)
+> Using **Active Directory Sites and Services**
 >
 > 1. Select **Start** > **Programs** > **Administrative Tools** > **Active Directory Sites and Services**.
 > 2. In the navigation pane, double-click **Sites** and then locate the appropriate site or select **Default-first-site-name** if no other sites are available.
@@ -112,7 +112,7 @@ For example, assume that you have to transfer the Schema master role. The Schema
 > 5. On the **Action** menu, select **Properties**.
 > 6. On the **General** tab, view the **Global Catalog** check box to see whether it's selected.
 >
-> ### [PowerShell](#tab/powershell)
+> Using PowerShell
 >
 > 1. Start PowerShell.
 > 2. Type the following cmdlet, and adjust `DC_NAME` with your actual DC name:
