@@ -63,7 +63,7 @@ We recommend that you transfer Operation Master roles in the following scenarios
 
 - The current role holder is operational and can be accessed on the network by the new Operation Master owner.
 - You're gracefully demoting a DC that currently owns Operation Master roles that you want to assign to a specific DC in your Active Directory forest.
-- The DC that currently owns Operation Master roles is being taken offline for scheduled maintenance, and you have to assign specific Operation Master roles to live DCs. You may have to transfer roles to perform operations that affect the FSMO owner. This is especially true for the PDC Emulator role. This is a less important issue for the RID master role, the Domain naming master role, and the Schema master roles.
+- The DC that currently owns Operation Master roles is being taken offline for scheduled maintenance, and you have to assign specific Operation Master roles to live DCs. You may have to transfer roles to perform operations that affect the Operation Master owner. This is especially true for the PDC Emulator role. This is a less important issue for the RID master role, the Domain naming master role, and the Schema master roles.
 
 We recommend that you seize Operation Master roles in the following scenarios:
 
