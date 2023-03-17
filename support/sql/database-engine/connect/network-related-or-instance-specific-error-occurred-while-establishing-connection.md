@@ -96,7 +96,7 @@ We recommend that you gather the information listed in this section using one of
 
 ### Option 1: Use the SQL Check tool to gather the required information
 
-If you can sign in locally to the SQL Server computer and have administrator access, use  SQLCheck from the [Microsoft SQL Networking GitHub repository](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki). This tool provides most of the information required for troubleshooting in one file. Review the tool's home page for more information on using the tool and the information it gathers.  You can also check the recommended [prerequisites](resolve-connectivity-errors-checklist.md) and checklist page.
+If you can sign in locally to the SQL Server computer and have administrator access, use  SQLCheck from the [Microsoft SQL Networking GitHub repository](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki). This tool provides most of the information required for troubleshooting in one file. Review the tool's home page for more information on using the tool and the information it gathers.  You can also check the recommended [prerequisites](../connect/resolve-connectivity-errors-checklist.md) and checklist page.
 
 ### Option 2: Collect the data individually using the following procedures
 
@@ -292,9 +292,9 @@ If your SQL instance is a named instance, it may be configured to use either dyn
 
 - Method 2: Check the connection by using the PortQryUI tool.
 
-    Use the PortQryUI tool with your named instance and observe the resulting output. You may see a message that the UDP port 1434 is filtered. This message indicates that the port is blocked on the network. For instructions on how to use the tool, see [Using the PortQryUI Tool with SQL Server](using-portqrytool-sqlserver.md).
+    Use the PortQryUI tool with your named instance and observe the resulting output. You may see a message that the UDP port 1434 is filtered. This message indicates that the port is blocked on the network. For instructions on how to use the tool, see [Using the PortQryUI Tool with SQL Server](../connect/using-portqrytool-sqlserver.md).
 
-    Determine whether the SQL Server instance is listening on dynamic or static ports. Then use the following method that is relevant to your scenario. If you aren't sure, see [How to check if SQL Server is listening on a dynamic port or static port](static-or-dynamic-port-config.md).
+    Determine whether the SQL Server instance is listening on dynamic or static ports. Then use the following method that is relevant to your scenario. If you aren't sure, see [How to check if SQL Server is listening on a dynamic port or static port](../connect/static-or-dynamic-port-config.md).
 
     - Scenario 1: Dynamic ports. In this case, ensure that the SQL Server Browser service is started and UDP port 1434 isn't blocked on the firewall between the client and the server. If you can't do either of these things, you should switch your SQL Server instance to a static port and use the procedure documented in [Configure a Server to Listen on a Specific TCP Port](/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port).
 
@@ -417,7 +417,7 @@ Once you can connect by using TCP on the same computer, it's time to try to conn
 
 ## See also
 
-- [Troubleshoot connectivity issues in SQL Server](resolve-connectivity-errors-overview.md)
+- [Troubleshoot connectivity issues in SQL Server](../connect/resolve-connectivity-errors-overview.md)
 
 - [0200 Consistent Network Issue](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0200-Consistent-Network-Issue)
 
