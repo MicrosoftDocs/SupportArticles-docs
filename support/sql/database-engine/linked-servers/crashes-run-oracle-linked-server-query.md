@@ -67,7 +67,7 @@ In this scenario, the SQL Server service crashes, and no results are returned fo
     0x05cd21e0 
     ```
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
 ## Cause
 
