@@ -3,7 +3,7 @@ title: IPv6 support in Azure Active Directory (Azure AD)
 description: Learn about Internet Protocol version 6 (IPv6) support in Azure Active Directory (Azure AD). Review what your organization needs to do to accommodate IPv6.
 ms.service: active-directory
 ms.subservice: aad-general
-ms.date: 03/14/2023
+ms.date: 03/17/2023
 ms.author: v-dele
 author: DennisLee-DennisLee
 ms.reviewer: lhuangnorth, gautama, amycolannino, joflore, mariourrutia
@@ -36,15 +36,23 @@ We know that IPv6 support is a significant change for some organizations. We're 
 
 If you have public IPv6 addresses representing your network, take the actions that are described in the following sections as soon as possible.
 
-> For example:  
->
-> Some organizations have a Conditional Access policy that blocks access to specific applications from outside a trusted named location that represents their public network addresses. This named location contains the IPv4 addresses that are owned by the customer, but it might not include the public IPv6 addresses that represent the customer network.
->
-> **If customers don't update their named locations with these IPv6 addresses, their users will be blocked.**
+**If customers don't update their named locations with these IPv6 addresses, their users will be blocked.**
+
+:::image type="content" source="media/azure-ad-ipv6-support/cant-sign-in-blocked-location-condition.png" alt-text="Screenshot showing a user sign in blocked because of their network location.":::
+
+### Actions to take
+
+- [Test Azure AD authentication over IPv6](#test-azure-ad-authentication-over-ipv6)
+- [Find IPv6 addresses in Sign-in logs](#find-ipv6-addresses-in-sign-in-logs)
+- [Create or update named locations, to include identified IPv6 addresses](/azure/active-directory/conditional-access/location-condition#ip-address-ranges)
 
 ### Named locations
 
 Named locations are shared between many features, such as Conditional Access, Identity Protection, and B2C. Customers should partner with their network administrators and internet service providers (ISPs) to identify their public-facing IPv6 addresses. Customers should then use this list to [create or update named locations, to include their identified IPv6 addresses](/azure/active-directory/conditional-access/location-condition#ip-address-ranges).
+
+#### Cloud proxies and VPNs
+
+When a cloud proxy is in place, a policy that requires a [hybrid Azure AD joined or complaint device](howto-conditional-access-policy-compliant-device.md#create-a-conditional-access-policy) can be easier to manage. Keeping a list of IP addresses used by your cloud hosted proxy or VPN solution up to date can be nearly impossible.
 
 ### Azure AD per-user multifactor authentication
 
