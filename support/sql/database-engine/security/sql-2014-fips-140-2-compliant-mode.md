@@ -117,4 +117,4 @@ For more information about the FIPS 140-2 standard, see the following NIST publi
 
 [Security Requirements For Cryptographic Modules](https://csrc.nist.gov/publications/fips/fips140-2/fips1402.pdf)
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]

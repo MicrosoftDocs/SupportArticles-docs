@@ -124,4 +124,4 @@ No. It means that SQL Server 2008 can be configured to run in FIPS 140-2-complia
 
 ## Third-party disclaimer
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
