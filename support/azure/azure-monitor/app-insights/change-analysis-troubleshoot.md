@@ -7,7 +7,7 @@ ms.author: v-weizhu
 ms.reviewer: cawa, aaronmax, hannahhunter, v-dele, v-jsitser
 ms.service: azure-monitor
 ms.subservice: change-analysis
-#Customer intent: As an Azure Monitor Change Analysis user, I want to know how to troubleshoot common resource provider problems so I can use the service effectively.  
+#Customer intent: As an Azure Monitor Change Analysis user, I want to know how to troubleshoot common resource provider problems so I can use the service effectively.
 ---
 # Troubleshoot Azure Monitor's Change Analysis
 
@@ -17,11 +17,11 @@ This article provides troubleshooting information for Azure Monitor's Change Ana
 
 If you're viewing the **Change history** tab after its first integration with Azure Monitor's Change Analysis, you'll see it automatically registering the `Microsoft.ChangeAnalysis` resource provider. The resource may fail and incur the following error messages:
 
-* [You don't have enough permissions to register Microsoft.ChangeAnalysis resource provider](#not-enought-permission-to-register).
+* [You don't have enough permissions to register Microsoft.ChangeAnalysis resource provider](#not-enough-permission-to-register).
 * [Failed to register Microsoft.ChangeAnalysis resource provider](#failed-to-register).
 * [This is taking longer than expected](#taking-longer-than-expected).
 
-### <a id="not-enought-permission-to-register"></a> "You don't have enough permissions to register Microsoft.ChangeAnalysis resource provider" error message
+### <a id="not-enough-permission-to-register"></a> "You don't have enough permissions to register Microsoft.ChangeAnalysis resource provider" error message
 
 You're receiving this error message because your role in the current subscription isn't associated with the `Microsoft.Support/register/action` scope. For example, you aren't the owner of your subscription and instead received shared access permissions through a coworker (for example, view access to a resource group).
 
@@ -44,7 +44,7 @@ To resolve the issue, contact the owner of your subscription to register the `Mi
 This error message is likely a temporary internet connectivity issue since:
 
 * The UI sent the resource provider a registration request.
-* You've resolved your [permissions issue](#not-enought-permission-to-register).
+* You've resolved your [permissions issue](#not-enough-permission-to-register).
 
 Try refreshing the page and checking your internet connection. If the error persists, [submit an Azure support ticket](https://azure.microsoft.com/support/).
 
@@ -59,9 +59,9 @@ To resolve this issue, follow these steps:
 
 Changes should show up within a few hours of the app restart. If your changes still don't show after six hours, [submit an Azure support ticket](https://azure.microsoft.com/support/).
 
-## Resolve the "Azure Lighthouse subscription is not supported" error message
+## <a id="azure-lighthouse-subscription-not-supported"></a>Azure Lighthouse subscription is not supported
 
-### "Failed to query Microsoft.ChangeAnalysis resource provider" error message
+### "Unauthorized to get changes" error message
 
 Often, this error message includes the following text:
 
@@ -71,7 +71,7 @@ Azure Lighthouse allows for cross-tenant resource administration. However, cross
 
 If this is a blocking issue for you, [submit an Azure support ticket](https://azure.microsoft.com/support/) to describe how you're trying to use Change Analysis.
 
-## Resolve the "An error occurred while getting changes. Please refresh this page or come back later to view changes" error message
+## <a id="error-getting-changes"></a>Resolve the "An error occurred while getting changes. Please refresh this page or come back later to view changes" error message
 
 When changes can't be loaded, Azure Monitor's Change Analysis service presents this general error message. Here are a few known causes:
 
@@ -80,13 +80,13 @@ When changes can't be loaded, Azure Monitor's Change Analysis service presents t
 
 Refreshing the page after a few minutes usually fixes this issue. If the error persists, [submit an Azure support ticket](https://azure.microsoft.com/support/).
 
-## Resolve the "Only partial data loaded" error message
+## <a id="partial-data-loaded"></a>Resolve the "Only partial data loaded" error message
 
 This error message may occur in the Azure portal when loading change data via the Change Analysis home page. Typically, the Change Analysis service calculates and returns all change data. However, in a network failure or a temporary outage of service, you may receive an error message indicating only partial data was loaded.
 
 To load all change data, try waiting a few minutes and refreshing the page. If you're still only receiving partial data, [submit an Azure support ticket](https://azure.microsoft.com/support/).
 
-## Resolve the "You don't have enough permissions to view some changes. Contact your Azure subscription administrator" error message
+## <a id="not-enough-permission-to-view-some-changes"></a>Resolve the "You don't have enough permissions to view some changes. Contact your Azure subscription administrator" error message
 
 This general unauthorized error message occurs when the current user doesn't have sufficient permissions to view the change. At a minimum, the following permissions are required for these corresponding actions:
 
