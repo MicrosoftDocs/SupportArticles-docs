@@ -57,7 +57,7 @@ The following table lists the local and cloud Autodiscover options.
 | HTTP redirect method | |
 | SRV record query in DNS | |
 
-In your scenario, after you disable the local Autodiscover options in the **Disable AutoDiscover** Group Policy policy settings, you expect that the cloud Autodiscover options will be available. However, because you also disable the **Allow the use of connected experiences in Office** policy setting, access is blocked to the web-based cloud Autodiscover options. This combination of settings effectively disables all Autodiscover options and prevents Outlook from retrieving the email account settings. It also generates the error messages that are described in the “Symptoms” section.
+In your scenario, after you disable the local Autodiscover options in the **Disable AutoDiscover** Group Policy policy settings, you expect that the cloud Autodiscover options will be available. However, because you also disable the **Allow the use of connected experiences in Office** policy setting, access is blocked to the web-based cloud Autodiscover options. This combination of settings effectively disables all Autodiscover options and prevents Outlook from retrieving the email account settings. It also generates the error messages that are described in the [Symptoms](#symptoms) section.
 
 ## Resolution
 
