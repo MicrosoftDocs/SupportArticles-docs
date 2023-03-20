@@ -125,7 +125,7 @@ For information about how to define the MIME type in IIS 7, see [Add a MIME Type
 
 Set the extension to **.vsto** and the MIME type to **application/x-ms-vsto**.
 
-## See also
+## References
 
 - [Troubleshoot ClickOnce deployments](/visualstudio/deployment/troubleshooting-clickonce-deployments)
 - [Deploy an Office solution](/visualstudio/vsto/deploying-an-office-solution)

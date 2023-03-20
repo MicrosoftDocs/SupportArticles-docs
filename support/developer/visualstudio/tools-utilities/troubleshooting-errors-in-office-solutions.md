@@ -268,7 +268,7 @@ If you use **Edit** and **Continue** to make changes to code in a document-level
 
 Whether you select **Yes** or **No** in the dialog box, Visual Studio terminates the Excel or Word process and stops the debugger. To stop debugging the project without displaying this dialog box, exit Excel or Word directly rather than stopping the debugger in Visual Studio.
 
-## See also
+## References
 
 - [Troubleshoot Office solutions](/visualstudio/vsto/troubleshooting-office-solutions)
 - [Troubleshoot Office solution security](./troubleshooting-office-solution-security.md)

@@ -92,6 +92,6 @@ To resolve this issue, right-click the Docker for Windows icon in the System Tra
 
 For any other issues you encounter, see  [Microsoft/DockerTools](https://github.com/microsoft/dockertools/issues) issues.
 
-## See also
+## References
 
 - [Container Tools error messages](/visualstudio/containers/container-tools-error-messages)

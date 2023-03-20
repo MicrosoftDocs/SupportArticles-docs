@@ -55,7 +55,7 @@ Not all service providers are alike. The service provider that Visual Studio pas
 
 If a tool window hosts a user control or any other control container, the container will be sited by the Windows component model and won't have access to any Visual Studio services. You can call <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> to get a VSPackage service provider from within a control container.
 
-## See also
+## References
 
 - [List of available services](/visualstudio/extensibility/internals/list-of-available-services)
 - [Use and provide services](/visualstudio/extensibility/using-and-providing-services)

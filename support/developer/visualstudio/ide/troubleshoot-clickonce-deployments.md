@@ -135,7 +135,7 @@ The following table shows some common error messages that a client-computer user
 | Shortcuts cannot be activated over the network. | Shortcuts to a ClickOnce application can only be started on the local hard disk. They cannot be started by opening a URL that points to a shortcut file on a remote server. |
 | The application is too large to run online in partial trust. Contact the application vendor or your system administrator for assistance. | An application that runs in partial trust can't be larger than half of the size of the online application quota, which by default is 250 MB. |
 
-## See also
+## References
 
 - [ClickOnce security and deployment](/visualstudio/deployment/clickonce-security-and-deployment)
 - [Troubleshoot ClickOnce deployments](/visualstudio/deployment/troubleshooting-clickonce-deployments)

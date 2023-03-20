@@ -39,6 +39,6 @@ If the location of the deployment manifest has been assigned to the restricted s
 
  To manage the effect of IEESC and Internet Explorer 7 and higher, identify websites and universal naming convention (UNC) paths that you trust and add them to one of the trusted security zones (Local intranet or Trusted sites).For information about how to manage zones, see [Configure ClickOnce trusted publishers](/previous-versions/dotnet/articles/ms996418(v=msdn.10)).
 
-## See also
+## References
 
 - [Secure Office solutions](/visualstudio/vsto/securing-office-solutions)

@@ -241,7 +241,7 @@ Snapshot Debugging and Application Insights depend on an ICorProfiler, which loa
 - Start the Slot site. We recommend visiting the site to warm it up again.
 - Swap the Slot with production.
 
-## See also
+## References
 
 - [Debugging in Visual Studio](/visualstudio/debugger)
 - [Debug live ASP.NET apps using the Snapshot Debugger](/visualstudio/debugger/debug-live-azure-applications)

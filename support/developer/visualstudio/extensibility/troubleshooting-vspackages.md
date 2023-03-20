@@ -93,6 +93,6 @@ To troubleshoot this issue, try one or more of the following steps:
 
    Make sure that the InprocServer32 entry has the correct path of the VSPackage DLL.
 
-## See also
+## References
 
 - [VSPackages](/visualstudio/extensibility/internals/vspackages)

@@ -46,6 +46,6 @@ You can find assistance with other errors and warnings in the following resource
 - [Work with Visual C++ code](/visualstudio/ide/class-designer/working-with-visual-cpp-code) includes troubleshooting information about displaying C++ in a class diagram.
 - [Visual Studio Class Designer forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsclassdesigner) provides a forum for questions about **Class Designer**.
 
-## See also
+## References
 
 - [Design and view classes and types](/visualstudio/ide/class-designer/designing-and-viewing-classes-and-types)

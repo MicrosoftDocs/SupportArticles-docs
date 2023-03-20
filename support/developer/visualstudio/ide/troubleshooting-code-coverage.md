@@ -173,6 +173,6 @@ The code coverage tool works by inserting instrumentation into an assembly just 
 
 None.
 
-## See also
+## References
 
 - [Use code coverage to determine how much code is being tested](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested)

@@ -92,7 +92,7 @@ The `myTraceSource` can now be used for tracing, as it has the appropriate liste
 
 When tracing from a brokered service that serves a remote client, an activity is automatically assigned to the <xref:System.Threading.ExecutionContext> that your code runs within that allows the svclog to be stitched together with the client's svclog in order to see a holistic view using the [Service Trace Viewer](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe#using-the-service-trace-viewer-tool).
 
-## See also
+## References
 
 - [Using and Providing Brokered Services](/visualstudio/extensibility/use-and-provide-brokered-services)
 - [How to: Get a Brokered Service](/visualstudio/extensibility/how-to-consume-brokered-service)
