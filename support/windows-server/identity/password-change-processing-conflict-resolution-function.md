@@ -1,6 +1,6 @@
 ---
 title: Password change processing and conflict resolution functionality in Windows
-description: Describes a new registry value that can be used by the administrator to control when the PDC is contacted, which can help reduce communication costs between sites.
+description: Describes a new registry value that can be used by the administrator to control when the PDC is contacted, which can help reduce communication costs between sites and reduce load on the PDC.
 ms.date: 03/20/2023
 author: Deland-Han
 ms.author: delhan
@@ -15,7 +15,7 @@ ms.technology: windows-server-active-directory
 ---
 # Password change processing and conflict resolution functionality in Windows
 
-This article describes a new registry value that can be used by the administrator to control when the PDC is contacted, which can help reduce communication costs between sites.
+This article describes a new registry value that can be used by the administrator to control when the PDC is contacted, which can help reduce communication costs between sites and reduce load on the PDC.
 
 > [!IMPORTANT]
 > This article contains information about modifying the registry. Before you modify the registry, make sure to back it up and make sure that you understand how to restore the registry if a problem occurs. For information about how to back up, restore, and edit the registry, see [Windows registry information for advanced users](/troubleshoot/windows-server/performance/windows-registry-advanced-users).
@@ -27,7 +27,7 @@ _Original KB number:_ &nbsp; 225511
 
 By default, when a user password is reset or changed, or a domain controller receives a client authentication request using an incorrect password, the Windows domain controller acting as the primary domain controller (PDC) Flexible Single Master Operation (FSMO) role owner for the Windows domain is contacted. This article describes a new registry value that can be used by the administrator to control when the PDC is contacted, which can help reduce communication costs between sites and reduce load on the PDC.
 
-This is communication to the PDC is not done for computer accounts. Computers will retry the authentication with the N-1 password when authentication fails. Along the same line, they would try the N-1 password when decrypting a Kerberos service ticket they receive.
+This communication to the PDC isn't done for computer accounts. Computers will retry the authentication with the N-1 password when the authentication fails. Along the same line, they would try the N-1 password when decrypting a Kerberos service ticket they receive.
 
 ## More information
 
@@ -47,7 +47,7 @@ The following registry value can be modified to control Password Notification an
 
 ### Password change notification
 
-A Windows writable domain controller receives the user password change or reset request, the password change is made locally, then sent immediately to the PDC FSMO role owner using the Netlogon service in the form of a Remote Procedure Call (RPC). The password change is then replicated to partners using the Active Directory replication process, by both the PDC and the DC servicing the password change. If a Windows Read-Only domain controller (RODC) receives the password change request, it proxies the request to its hub DC, which when acts as if it is the first DC to receive the request.
+A Windows writable domain controller receives the user password change or reset request, the password change is made locally, then sent immediately to the PDC FSMO role owner using the Netlogon service in the form of a Remote Procedure Call (RPC). The password change is then replicated to partners using the Active Directory replication process, by both the PDC and the domain controller (DC) servicing the password change. If a Windows Read-Only domain controller (RODC) receives the password change request, it proxies the request to its hub DC, which acts as if it's the first DC to receive the request.
 
 If the AvoidPdcOnWan value is set to TRUE and the PDC FSMO is located at another site, the password change isn't sent immediately to the PDC. However, it's updated with the change through normal Active Directory replication. If the PDC FSMO is at the same site, the AvoidPdcOnWan value isn't used and the password change is immediately communicated to the PDC.
 
@@ -55,15 +55,15 @@ An updated password may not be sent to the PDC emulator even if AvoidPdcOnWan is
 
 ### Password conflict resolution
 
-By default, Windows domain controllers query the PDC FSMO role owner if a user is attempting to authenticate using a password that is incorrect according to its local database. If the password sent by the client is user to be correct on the PDC, the client is allowed access and the domain controller replicates the password change.
+By default, Windows domain controllers query the PDC FSMO role owner if a user is attempting to authenticate using a password that is incorrect according to its local database. If the password sent by the user is found to be correct on the PDC, the client is allowed access and the domain controller replicates the password change.
 
 The AvoidPdcOnWan value can be used by administrators to control when Active Directory domain controllers attempt to use the PDC FSMO role owner to resolve password conflicts. The PDC completes the logon and the authentication is successful towards the authenticating user.
 
-If the AvoidPdcOnWan value is set to TRUE and the PDC FSMO role owner is located at another site, the domain controller doesn't try to authenticate a client against password information stored on the PDC FSMO. Note, however, that this results in denying access to the user. This may cause productivity impact, as many users are not going to try the previous password to authenticate. In some scenarios they may not know this previous password.
+If the AvoidPdcOnWan value is set to TRUE and the PDC FSMO role owner is located at another site, the domain controller doesn't try to authenticate a client against password information stored on the PDC FSMO. Note, however, that this results in denying access to the user. This may cause productivity impact, as many users are not going to try the previous password to authenticate. In some scenarios, they may not know this previous password.
 
-An incorrect password may not be tried at the PDC emulator even if AvoidPdcOnWan is FALSE or not set, if there are Problems sending the request to the PDC, for example a Network outage. There's no error logged in this Case. The logon attempt is denied in this case.
+An incorrect password may not be tried at the PDC emulator even if AvoidPdcOnWan is FALSE or not set, if there are problems sending the request to the PDC, for example a Network outage. There's no error logged in this Case. The logon attempt is denied in this case.
 
-The scenario is different when a Read-Only DC is involved. If an authentication request on the RODC fails with bad password and it sends it to the hub DC, and in turn the hub sends it to the PDC. If it succeeds on the PDC, the user authentication succeeds. If the RODC is allowed to cache the user password, it would request the user password to be replicated from its hub DC. But the hub DC also still has the old password only. The RODC only gets the new password with the normal replication cycle. It will continue to need the hub or PDC until the new password is replicated.
+The scenario is different when a RODC is involved. If an authentication request on the RODC fails with bad password and it sends it to the hub DC, and in turn the hub sends it to the PDC. If it succeeds on the PDC, the user authentication succeeds. If the RODC is allowed to cache the user password, it would request the user password to be replicated from its hub DC. But the hub DC also still has the old password only. The RODC only gets the new password with the normal replication cycle. It will continue to need the hub or PDC until the new password is replicated.
 
 ### Password replication handling
 
@@ -71,4 +71,4 @@ The user password is set on both two DCs when the writable DC forwards the passw
 
 If these two changes arrive at a DC, the normal AD conflict resolution is performed. The attributes AD version will be the same, but the time-stamp of the PDC will be a bit older and the initial DCs version should win.
 
-It is actually not making a difference as the data payload is identical, as both DCs have written the same new password value.
+It makes no difference as the data payload is identical because both DCs have written the same new password value.
