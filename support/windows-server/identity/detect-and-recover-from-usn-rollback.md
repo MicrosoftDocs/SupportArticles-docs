@@ -27,7 +27,7 @@ _Original KB number:_ &nbsp; 875495
 
 This article describes a silent Active Directory replication failure that is caused by an update sequence number (USN) rollback. A USN rollback occurs when an older version of an Active Directory database is incorrectly restored or pasted into place.
 
-When a USN rollback occurs, modifications to objects and attributes that occur on one domain controller do not replicate to other domain controllers in the forest. Because replication partners believe that they have an up-to-date copy of the Active Directory database, monitoring and troubleshooting tools such as Repadmin.exe do not report any replication errors.
+When a USN rollback occurs, modifications to objects and attributes that occur on one domain controller do not replicate to other domain controllers in the forest. Because replication partners believe that they have an up-to-date copy of the Active Directory database, monitoring and troubleshooting tools such as Repadmin.exe don't report any replication errors.
 
 Domain Controllers log Directory Services Event 2095 in the Directory Services event log when they detect a USN rollback. The text of the event message directs administrators to this article to learn about recovery options.
 
@@ -129,15 +129,15 @@ Microsoft does not support any other process that takes a snapshot of the elemen
 
 ## The effects of a USN rollback
 
-When USN rollbacks occur, modifications to objects and attributes are not inbound replicated by destination domain controllers that have previously seen the USN.
+When USN rollbacks occur, modifications to objects and attributes aren't inbound replicated by destination domain controllers that have previously seen the USN.
 
-Because these destination domain controllers believe they are up to date, no replication errors are reported in Directory Service event logs or by monitoring and diagnostic tools.
+Because these destination domain controllers believe they're up to date, no replication errors are reported in Directory Service event logs or by monitoring and diagnostic tools.
 
-USN rollback may affect the replication of any object or attribute in any partition. The most frequently observed side effect is that user accounts and computer accounts that are created on the rollback domain controller do not exist on one or more replication partners. Or, the password updates that originated on the rollback domain controller do not exist on replication partners.
+USN rollback may affect the replication of any object or attribute in any partition. The most frequently observed side effect is that user accounts and computer accounts that are created on the rollback domain controller do not exist on one or more replication partners. Or, the password updates that originated on the rollback domain controller don't exist on replication partners.
 
 The following steps show the sequence of events that may cause a USN rollback. A USN rollback occurs when the domain controller system state is rolled back in time using an unsupported system state restoration.
 
-1. An administrator promotes three domain controllers in a domain. (In this example, the domain controllers are DC1, DC2, and DC2, and the domain is Contoso.com.) DC1 and DC2 are direct replication partners. DC2 and DC3 are also direct replication partners. DC1 and DC3 are not direct replication partners but receive originating updates transitively through DC2.
+1. An administrator promotes three domain controllers in a domain. (In this example, the domain controllers are DC1, DC2, and DC2, and the domain is Contoso.com.) DC1 and DC2 are direct replication partners. DC2 and DC3 are also direct replication partners. DC1 and DC3 aren't direct replication partners but receive originating updates transitively through DC2.
 
 2. An administrator creates 10 user accounts that correspond to USNs 1 through 10 on DC1. All these accounts replicate to DC2 and DC3.
 
@@ -152,9 +152,9 @@ The following steps show the sequence of events that may cause a USN rollback. A
 
 5. DC1 experiences a hardware failure or a software failure. The administrator uses a disk imaging utility to copy the operating system image that was created in step 3 into place. DC1 now starts with an Active Directory database that has knowledge of USNs 1 through 10.
 
-    Because the operating system image was copied into place, and a supported method of restoring the system state was not used, DC1 continues to use the same invocation ID that created the initial copy of the database and all changes up to USN 50. DC2 and DC3 also maintain the same invocation ID for DC1 well as an *up-to-date vector* of USN 50 for DC1. (An up-to-date vector is the current status of the latest originating updates to occur on all domain controllers for a given directory partition.)
+    Because the operating system image was copied into place, and a supported method of restoring the system state wasn't used, DC1 continues to use the same invocation ID that created the initial copy of the database and all changes up to USN 50. DC2 and DC3 also maintain the same invocation ID for DC1 well as an *up-to-date vector* of USN 50 for DC1. (An up-to-date vector is the current status of the latest originating updates to occur on all domain controllers for a given directory partition.)
 
-    Unless an administrator intervenes, DC2 and DC3 do not inbound replicate the changes that correspond to local USN 11 through 50 that originate from DC1. Also, according to the invocation ID that DC2 uses, DC1 already has knowledge of the changes that correspond to USN 11 to 50. Therefore, DC2 does not send those changes. Because the changes in step 4 do not exist on DC1, logon requests fail with an "access denied" error. This error occurs either because passwords do not match or because the account does not exist when the newer accounts randomly authenticate with DC1.
+    Unless an administrator intervenes, DC2 and DC3 don't inbound replicate the changes that correspond to local USN 11 through 50 that originate from DC1. Also, according to the invocation ID that DC2 uses, DC1 already has knowledge of the changes that correspond to USN 11 to 50. Therefore, DC2 doesn't send those changes. Because the changes in step 4 do not exist on DC1, logon requests fail with an "access denied" error. This error occurs either because passwords do not match or because the account does not exist when the newer accounts randomly authenticate with DC1.
 
 6. Administrators who monitor replication health in the forest note the following situations:
 
@@ -167,7 +167,7 @@ The following steps show the sequence of events that may cause a USN rollback. A
         > [!NOTE]
         > In this example, the different object count applies to user accounts, computer accounts, and security groups. The different object metadata represents the different user account passwords.
 
-   - User authentication requests for the 10 user accounts that were created in step 2 occasionally generate an "access denied" or "incorrect password" error. This error may occur because a password mismatch exists between these user accounts on DC1 and the accounts on DC2 and DC3. The user accounts that experience this problem correspond to the user accounts that were created in step 4. The user accounts and password resets in step 4 did not replicate to other domain controllers in the domain.
+   - User authentication requests for the 10 user accounts that were created in step 2 occasionally generate an "access denied" or "incorrect password" error. This error may occur because a password mismatch exists between these user accounts on DC1 and the accounts on DC2 and DC3. The user accounts that experience this problem correspond to the user accounts that were created in step 4. The user accounts and password resets in step 4 didn't replicate to other domain controllers in the domain.
 
 7. DC2 and DC3 start to inbound-replicate originating updates that correspond to USN numbers that are greater than 50 from DC1. This replication proceeds normally without administrative intervention because the previously recorded up-to-dateness vector threshold, USN 50, has been exceeded. (USN 50 was the up-to-dateness vector USN recorded for DC1 on DC2 and DC3 before DC1 was taken offline and restored.) However, the new changes that corresponded to USNs 11 through 50 on the originating DC1 after the unsupported restore will never replicate to DC2, DC3, or their transitive replication partners.
 
@@ -188,16 +188,16 @@ The size of the USN hole may represent hundreds, thousands, or even tens of thou
 
 Because a USN rollback is difficult to detect, a Windows Server 2003 SP1 or later version domain controller logs event 2095 when a source domain controller sends a previously acknowledged USN number to a destination domain controller without a corresponding change in the invocation ID.
 
-To prevent unique originating updates to Active Directory from being created on the incorrectly restored domain controller, the Net Logon service is paused. When the Net Logon service is paused, user and computer accounts cannot change the password on a domain controller that will not outbound-replicate such changes. Similarly, Active Directory administration tools will favor a healthy domain controller when they make updates to objects in Active Directory.
+To prevent unique originating updates to Active Directory from being created on the incorrectly restored domain controller, the Net Logon service is paused. When the Net Logon service is paused, user and computer accounts can't change the password on a domain controller that will not outbound-replicate such changes. Similarly, Active Directory administration tools will favor a healthy domain controller when they make updates to objects in Active Directory.
 
 On a domain controller, event messages that resemble the following are recorded if the following conditions are true:
 
 - A source domain controller sends a previously acknowledged USN number to a destination domain controller.
 - There is no corresponding change in the invocation ID.
 
-These events may be captured in the Directory Service event log. However, they may be overwritten before they are observed by an administrator.
+These events may be captured in the Directory Service event log. However, they may be overwritten before they're observed by an administrator.
 
-You may suspect that a USN rollback has occurred. However, you do not see the correlating events in the Directory Service event log.
+You may suspect that a USN rollback has occurred. However, you don't see the correlating events in the Directory Service event log.
 In this scenario, check for the Dsa Not Writable registry entry. This entry provides forensic evidence that a USN rollback has occurred.
 
 - Registry subkey: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NTDS\Parameters`
