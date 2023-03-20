@@ -1,7 +1,7 @@
 ---
 title: Transfer or seize Operation Master roles
 description: Describes how you can use the Ntdsutil.exe utility to move or to seize Operation Master roles, formerly known as Flexible Single Master Operations (FSMO) roles.
-ms.date: 03/15/2023
+ms.date: 03/20/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -112,7 +112,7 @@ For example, assume that you have to transfer the Schema master role. The Schema
 > 5. On the **Action** menu, select **Properties**.
 > 6. On the **General** tab, view the **Global Catalog** check box to see whether it's selected.
 >
-> Using PowerShell:
+> Using **Windows PowerShell**:
 >
 > 1. Start PowerShell.
 > 2. Type the following cmdlet, and adjust `DC_NAME` with your actual DC name:
@@ -130,7 +130,7 @@ For more information, see:
 
 ## Seize or transfer Operation Master roles
 
-You can use Windows PowerShell or Ntdsutil to seize or transfer roles. For information and examples of how to use PowerShell for these tasks, see [Move-ADDirectoryServerOperationMasterRole](/powershell/module/activedirectory/move-addirectoryserveroperationmasterrole).
+You can use **Windows PowerShell** or Ntdsutil to seize or transfer roles. For information and examples of how to use PowerShell for these tasks, see [Move-ADDirectoryServerOperationMasterRole](/powershell/module/activedirectory/move-addirectoryserveroperationmasterrole).
 
 > [!IMPORTANT]
 > To avoid the risk of duplicate SIDs in the domain, Rid Master seizures increment the next available RID in the pool when you seize the RID master role. This behavior can cause your forest to consume available ranges of RID values significantly (also known as RID burn). So seize the Rid Master only when you're sure that the current Rid Master can't be brought back into service.
