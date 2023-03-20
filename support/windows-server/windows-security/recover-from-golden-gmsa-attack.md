@@ -1,7 +1,7 @@
 ---
 title: How to recover from a Golden gMSA attack
 description: Describes how to repair compromised gMSAs after a Golden gMSA attack.
-ms.date: 03/16/2023
+ms.date: 03/20/2023
 author: v-tappelgate
 ms.author: v-tappelgate
 manager: dcscontentpm
