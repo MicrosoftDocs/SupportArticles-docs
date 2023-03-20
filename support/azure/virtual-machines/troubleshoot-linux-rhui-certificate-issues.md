@@ -5,7 +5,7 @@ author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas-msft
 editor: v-jsitser
-ms.date: 2/9/2023
+ms.date: 3/15/2023
 ms.service: virtual-machines
 ms.subservice: redhat
 ---
@@ -64,9 +64,9 @@ If the RHUI certificate was removed from the VM by mistake, the following error 
 
 ```output
 # yum install <package-name>
- Red Hat Enterprise Linux X for x86_64 - XXXX  0.0  B/s |   0  B     00:00  
- Errors during downloading metadata for repository 'rhel-X-for-x86_64-XXXX-eus-rhui-rpms':  
- \- **Curl error (58): Problem with the local SSL certificate** for https\://rhui-3.microsoft.com/pulp/repos/content/eus/rhel8/rhui/X.X/x86_64/XXXXX/os/repodata/repomd.xml [could not load PEM client certificate, OpenSSL error error:02001002:system library:fopen:No such file or directory, (no key found, wrong pass phrase, or wrong file format?)]
+Red Hat Enterprise Linux X for x86_64 - XXXX  0.0  B/s |   0  B     00:00  
+Errors during downloading metadata for repository 'rhel-X-for-x86_64-XXXX-eus-rhui-rpms':  
+  - Curl error (58): Problem with the local SSL certificate for https://rhui-3.microsoft.com/pulp/repos/content/eus/rhel8/rhui/X.X/x86_64/XXXXX/os/repodata/repomd.xml [could not load PEM client certificate, OpenSSL error error:02001002:system library:fopen:No such file or directory, (no key found, wrong pass phrase, or wrong file format?)]
 ```
 
 ### Solution 2: Reinstall the EUS, non-EUS, or SAP RHUI package
@@ -82,7 +82,7 @@ All the commands in the following steps should be run by using root privileges o
    rhui-azure-rhelX-<>-X.X-XXX.noarch
    ```
 
-   For more information about EUS or non-EUS RHUI packages, see the linked sections of the following articles.
+   For more information about Extended Update Support (EUS) or non-EUS RHUI packages, see the linked sections of the following articles.
 
    | Package type | Link |
    |---|---|
@@ -126,8 +126,8 @@ When you try to install or update a package, you receive the following error mes
 ```output
 # yum install <package-name>  
 Red Hat Enterprise Linux X for x86_64 - XXXX  0.0  B/s |   0  B     00:00  
- Errors during downloading metadata for repository 'rhel-X-for-x86_64-XXXX-XXX-rhui-rpms':  
-- **Curl error (58): Problem with the local SSL certificate** for https\://rhui-3.microsoft.com/pulp/repos/content/eus/rhel8/rhui/X.X/x86_64/XXXXX/os/repodata/repomd.xml [could not load PEM client certificate, OpenSSL error error:02001002:system library:fopen:No such file or directory, (no key found, wrong pass phrase, or wrong file format?)]
+Errors during downloading metadata for repository 'rhel-X-for-x86_64-XXXX-XXX-rhui-rpms':  
+  - Curl error (58): Problem with the local SSL certificate for https://rhui-3.microsoft.com/pulp/repos/content/eus/rhel8/rhui/X.X/x86_64/XXXXX/os/repodata/repomd.xml [could not load PEM client certificate, OpenSSL error error:02001002:system library:fopen:No such file or directory, (no key found, wrong pass phrase, or wrong file format?)]
 ```
 
 ### Solution 3: Install the EUS, non-EUS, or SAP/E4S RHUI package
@@ -166,7 +166,7 @@ All the following commands should be run by using root privileges or by specifyi
    sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel8-eus.config
    ```
 
-2. Install the `rhui-azure-rhel8-eus` package by running the [dnf](https://www.linuxfordevices.com/tutorials/centos/dnf-command) installation command:
+2. Install the `rhui-azure-rhel8-eus` package by running the [dnf](https://dnf.readthedocs.io/en/latest/command_ref.html) installation command:
 
    ```bash
    sudo dnf --config=rhui-microsoft-azure-rhel8-eus.config install rhui-azure-rhel8-eus
@@ -587,6 +587,32 @@ The following steps apply if the OS version is *earlier than the latest version 
    sudo dnf repolist all
    ```
 
+#### [RHEL 8._x_ - RHEL-HA (E4S)](#tab/rhel8-rhel-ha-e4s)
+
+1. Download the EUS repository configuration file by running the [wget](https://www.gnu.org/software/wget/) command:
+
+   ```bash
+   sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel8-ha.config
+   ```
+
+2. Install the `rhui-azure-rhel8-ha` package by running the [dnf](https://dnf.readthedocs.io/en/latest/command_ref.html) installation command:
+
+   ```bash
+   sudo dnf --config=rhui-microsoft-azure-rhel8-ha.config install rhui-azure-rhel8-ha
+   ```
+
+3. Lock the `releasever` variable:
+
+   ```bash
+   sudo echo $(. /etc/os-release && echo $VERSION_ID) > /etc/yum/vars/releasever
+   ```
+
+4. Verify that the corresponding repositories are available and show no errors by running the `dnf repolist` command:
+
+   ```bash
+   sudo dnf repolist all
+   ```
+
 ---
 
 ## Cause 4: SSL CA certificate is missing
@@ -597,10 +623,10 @@ You might receive an error message that resembles the following output when you 
 
 ```output
 # yum repolist  
- Loaded plugins: langpacks, product-id, search-disabled-repos  
- rhui-rhel-X-server-dotnet-rhui FAILED  
- https\://rhui-3.microsoft.com/pulp/repos//content/dist/rhel/rhui/server/X/XServer/x86_64/dotnet/1/os/repodata/70b2edf9a115dffa42d4dd66ba77e77bc3cad45d1143ed02df72ea58c92b59b5-primary.sqlite.bz2: [Errno 14] **curl#77 - "Problem with the SSL CA cert (path? access rights?)"**  
- Trying other mirror.
+Loaded plugins: langpacks, product-id, search-disabled-repos  
+rhui-rhel-X-server-dotnet-rhui FAILED  
+https://rhui-3.microsoft.com/pulp/repos//content/dist/rhel/rhui/server/X/XServer/x86_64/dotnet/1/os/repodata/70b2edf9a115dffa42d4dd66ba77e77bc3cad45d1143ed02df72ea58c92b59b5-primary.sqlite.bz2: [Errno 14] curl#77 - "Problem with the SSL CA cert (path? access rights?)"
+Trying other mirror.
 ```
 
 ### Solution 4: Update or reinstall the CA certificates package
@@ -640,6 +666,51 @@ You might receive an error message that resembles the following output when you 
       ```bash
       sudo update-ca-trust
       ```
+
+---
+
+## Cause 5: Verification error in RHEL version 8 or 9 ("CA certificate key too weak")
+
+The system tries to connect to a server that contains a certificate that's signed by using 2048-bit RSA keys. However, the system has a `FUTURE` policy setting that prohibits that cryptographic algorithm. The following error messages are shown in the */var/log/messages* or */var/log/dnf.log* file:
+
+```output
+2023-03-13T19:07:55+0000 DEBUG error: Curl error (60): SSL peer certificate or SSH remote key was not OK for https://rhui4-1.microsoft.com/pulp/repos/content/dist/rhel9/rhui/9/x86_64/supplementary/os/repodata/repomd.xml [SSL certificate problem: CA certificate key too weak] (https://rhui4-1.microsoft.com/pulp/repos/content/dist/rhel9/rhui/9/x86_64/supplementary/os/repodata/repomd.xml).
+```
+
+```output
+ - Curl error (58): Problem with the local SSL certificate for https://rhui-2.microsoft.com/pulp/repos/content/e4s/rhel8/rhui/8.4/x86_64/sap/os/repodata/repomd.xml [could not load PEM client certificate, OpenSSL error error:140AB18F:SSL routines:SSL_CTX_use_certificate:ee key too small, (no key found, wrong pass phrase, or wrong file format?)]
+```
+
+The default system policy setting is `DEFAULT`. In this scenario, the default setting was changed from `DEFAULT` to `FUTURE` or `CUSTOM`. The `FUTURE` policy disables some algorithms that use 2048 bits, such as SHA-1, RSA, and Diffie-Hellman. The `CUSTOM` policy might also disable these algorithms. To identify the current policy setting mode, run the following [update-crypto-policies](https://www.systutorials.com/docs/linux/man/8-update-crypto-policies/) command:
+
+```bash
+# update-crypto-policies --show
+DEFAULT:FUTURE
+```
+
+### Solution 5: Revert to the default cryptographic system policy
+
+Revert the cryptography to the `DEFAULT` system policy setting by following these steps:
+
+1. Change the system policy setting back to `DEFAULT` by running the `update-crypto-policies` command:
+
+   ```bash
+   sudo update-crypto-policies --set DEFAULT
+   ```
+
+2. Verify that the policy change went through by running the `update-crypto-policies` command again:
+
+   ```bash
+   sudo update-crypto-policies --show
+   ```
+
+3. Test to make sure that the error is fixed by running the `dnf install` command:
+
+   ```bash
+   sudo dnf install <package-name>
+   ```
+
+For more information about cryptographic policy, see [Strong crypto defaults in RHEL 8 and deprecation of weak crypto algorithms](https://access.redhat.com/articles/3642912).
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 

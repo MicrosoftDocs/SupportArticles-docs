@@ -2,7 +2,7 @@
 title: Error AADSTS50011 the redirect URI not match the redirect URIs configured for the application
 description: Describes error AADSTS50011 that occurs when you sign in to an OIDC-based SSO application in Azure Active Directory.
 author: aricrowe57
-ms.date: 03/11/2022
+ms.date: 03/16/2023
 ms.reviewer: arcrowe
 ms.service: active-directory
 ms.subservice: app-mgmt
@@ -44,7 +44,7 @@ To fix the issue, follow these steps:
 
 The following video shows how to fix the redirect URI mismatch error in Azure AD:
 
-> [!VIDEO <https://www.youtube.com/embed/a_abaB7494s>]
+> [!VIDEO https://www.youtube.com/embed/a_abaB7494s]
 
 ## More information
 

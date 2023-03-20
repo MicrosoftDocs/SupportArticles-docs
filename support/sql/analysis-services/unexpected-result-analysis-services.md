@@ -3,7 +3,6 @@ title: Unexpected result from Analysis Services
 description: This article provides a workaround for the problem wherein you get an unexpected result from Analysis Services when Dimension DefaultMember is not All and a Report Filter is applied in Excel.
 ms.date: 07/22/2020
 ms.custom: sap:Analysis Services
-ms.prod: sql
 ---
 # Unexpected result from Analysis Services when Dimension DefaultMember is not All and a Report Filter is applied in Excel
 

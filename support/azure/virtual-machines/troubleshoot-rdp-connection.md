@@ -4,10 +4,10 @@ description: Troubleshoot issues when you cannot connect to your Windows virtual
 keywords: Remote desktop error,remote desktop connection error,cannot connect to VM,remote desktop troubleshooting
 services: virtual-machines
 ms.subservice: vm-cannot-connect
-documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: top-support-issue,azure-service-management,azure-resource-manager
+ms.custom: devx-track-azurepowershell
 ms.service: virtual-machines
 ms.collection: windows
 ms.workload: infrastructure-services

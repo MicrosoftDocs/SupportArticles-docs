@@ -78,7 +78,7 @@ You want to force the non-authoritative synchronization of sysvol replication on
 4. Force Active Directory replication throughout the domain and validate its success on all DCs.
 5. Start the DFSR service on the domain controller that was set as authoritative in Step 2.
 6. You'll see Event ID 4114 in the DFSR event log indicating sysvol replication is no longer being replicated.
-7. On the same DN from Step 1, set **msDFSR-Enabled=TRUE**.
+7. On the same DN from Step 2, set **msDFSR-Enabled=TRUE**.
 8. Force Active Directory replication throughout the domain and validate its success on all DCs.
 9. Run the following command from an elevated command prompt on the same server that you set as authoritative:
 
