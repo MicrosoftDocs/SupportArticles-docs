@@ -218,13 +218,13 @@ There are three approaches to recover from a USN rollback.
 
     3. On a healthy domain controller, clean up the metadata of the demoted domain controller. For more information, see [Clean up Active Directory Domain Controller server metadata](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup).
 
-    4. If the incorrectly restored domain controller hosts operations master roles, transfer these roles to a healthy domain controller. For more information, see [Transfer or seize FSMO roles in Active Directory Domain Services](/troubleshoot/windows-server/identity/transfer-or-seize-fsmo-roles-in-ad-ds).
+    4. If the incorrectly restored domain controller hosts operations master roles, transfer these roles to a healthy domain controller. For more information, see [Transfer or seize Operation Master roles in Active Directory Domain Services](transfer-or-seize-operation-master-roles-in-ad-ds.md).
 
     5. Restart the demoted server.
     6. If you are required to, install Active Directory on the stand-alone server again.
     7. If the domain controller was previously a global catalog, configure the domain controller to be a global catalog. For more information, see [How to create or move a global catalog](https://support.microsoft.com/help/313994).
 
-    8. If the domain controller previously hosted operations master roles, transfer the operations master roles back to the domain controller. For more information, see [Transfer or seize FSMO roles in Active Directory Domain Services](/troubleshoot/windows-server/identity/transfer-or-seize-fsmo-roles-in-ad-ds).
+    8. If the domain controller previously hosted operations master roles, transfer the operations master roles back to the domain controller. For more information, see [Transfer or seize Operation Master roles in Active Directory Domain Services](transfer-or-seize-operation-master-roles-in-ad-ds.md).
 
 - Restore the system state of a good backup.
 
