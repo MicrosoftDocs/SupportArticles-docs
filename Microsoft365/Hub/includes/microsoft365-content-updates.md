@@ -2,6 +2,14 @@
 
 
 
+## Week of March 13, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 3/16/2023 | Turn off file transfers in the Office app | removed |
+
+
 ## Week of March 06, 2023
 
 
