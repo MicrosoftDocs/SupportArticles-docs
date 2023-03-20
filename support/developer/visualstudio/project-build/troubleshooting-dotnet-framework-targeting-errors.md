@@ -69,7 +69,7 @@ Then, replace them with the simple form:
 > [!NOTE]
 > After you close and reopen your project, you should also rebuild it to ensure that all references resolve correctly.
 
-## See also
+## References
 
 - [How to: Target a version of the .NET Framework](/visualstudio/ide/visual-studio-multi-targeting-overview)
 - [.NET Framework client profile](/dotnet/framework/deployment/client-profile)

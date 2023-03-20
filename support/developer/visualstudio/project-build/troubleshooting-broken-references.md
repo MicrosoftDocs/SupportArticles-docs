@@ -72,7 +72,7 @@ There can be many possible causes for inaccessible files. For example, there mig
 
 If a user adds a reference to a COM component and a second user tries to run the code on a computer that doesn't have this component installed, the second user receives a broken reference error. Installing the component on the second computer corrects the error. For more information about how to use references to COM components in your projects, see [COM interoperability in .NET Framework applications](/dotnet/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications).
 
-## See also
+## References
 
 - [References Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)
 - [What is the .NET Project Designer?](/visualstudio/ide/reference/project-properties-reference)

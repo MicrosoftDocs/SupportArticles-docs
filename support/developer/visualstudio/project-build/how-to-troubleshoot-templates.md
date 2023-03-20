@@ -39,7 +39,7 @@ If the _vstemplate_ file in a template doesn't adhere to the Visual Studio templ
 
 You can enable diagnostic logging for template discovery by following the steps in the [Troubleshoot template discovery (extensibility)](/visualstudio/extensibility/troubleshooting-template-discovery) section.
 
-## See also
+## References
 
 - [Troubleshoot template discovery (extensibility)](/visualstudio/extensibility/troubleshooting-template-discovery)
 - [Customize templates](/visualstudio/ide/customizing-project-and-item-templates)

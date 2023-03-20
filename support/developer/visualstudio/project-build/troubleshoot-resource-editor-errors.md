@@ -41,7 +41,7 @@ Here are more support resources that you might find useful:
 - Report product issues to the engineering team using the [Report a problem](/visualstudio/ide/how-to-report-a-problem-with-visual-studio) tool that appears both in the Visual Studio Installer and in the Visual Studio IDE.
 - Track product issues and engineering team responses in the [Visual Studio Developer Community](https://aka.ms/feedback/suggest?space=8).
 
-## See also
+## References
 
 - [Manage application resources (.NET)](/visualstudio/ide/managing-application-resources-dotnet)
 - [Managing app resources (Visual Studio for Mac)](/visualstudio/mac/managing-app-resources)
