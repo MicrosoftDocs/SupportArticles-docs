@@ -11,6 +11,7 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - CI 171593
+  - CI 173647
 ms.reviewer: mohammed.hussian, vijayde, aruiz, meerak
 appliesto: 
   - Exchange Online
@@ -27,25 +28,25 @@ Consider the following scenario:
 
 - You migrate a user's mailbox from on-premises Microsoft Exchange Server to Exchange Online.
 
-- You disable all local Autodiscover options in the **Disable AutoDiscover** Group Policy settings.
+- You disable all local Autodiscover options in the **Disable AutoDiscover** Group Policy policy settings.
 
 - You disable the **Allow the use of connected experiences in Office** policy setting.
 
-In this scenario, when the user tries to set up a Microsoft 365 email account on a Microsoft Outlook client, or create a new Outlook profile, they receive one of the following error messages:
+In this scenario, when users try to set up a Microsoft 365 email account on a Microsoft Outlook client, or create a new Outlook profile, they receive one of the following error messages:
 
-- > Something went wrong and Outlook couldn't set up your account. Please try again. If the problem continues, contact your email administrator.
+> Something went wrong and Outlook couldn't set up your account. Please try again. If the problem continues, contact your email administrator.
 
-- > We're sorry, we couldn't set up your account automatically.
+> We're sorry, we couldn't set up your account automatically.
 
-If the user views their Outlook account information in **File** \> **Office Account** \> **Connected Services**, they might receive the following error message:
+If the users view their Outlook account information in **File** \> **Office Account** \> **Connected Services**, they might receive the following error message:
 
-- > Office is currently offline.
+> Office is currently offline.
 
 ## Cause
 
-Autodiscover can use either local or cloud options to set up the user's account on an Outlook client or create a profile for the user. In your scenario, cloud Autodiscover is automatically disabled because the **Allow the use of connected experiences in Office** policy setting is disabled. Also, because all the local Autodiscover options are disabled, your policy settings disable both the local and cloud Autodiscover options. If both the local and cloud Autodiscover options are unavailable, Outlook has no way to retrieve the user's account settings.
+Autodiscover must use either local or cloud options to set up the user accounts on an Outlook client or create user profiles.
 
-The following table lists the local and cloud Autodiscover options in the **Disable AutoDiscover** Group Policy settings.
+The following table lists the local and cloud Autodiscover options.
 
 | Local Autodiscover options | Cloud Autodiscover options |
 |-|-|
@@ -55,6 +56,8 @@ The following table lists the local and cloud Autodiscover options in the **Disa
 | Autodiscover domain query | |
 | HTTP redirect method | |
 | SRV record query in DNS | |
+
+In your scenario, after you disable the local Autodiscover options in the **Disable AutoDiscover** Group Policy policy settings, you expect that the cloud Autodiscover options will be available. However, because you also disable the **Allow the use of connected experiences in Office** policy setting, access is blocked to the web-based cloud Autodiscover options. This combination of settings effectively disables all Autodiscover options and prevents Outlook from retrieving the email account settings. It also generates the error messages that are described in the [Symptoms](#symptoms) section.
 
 ## Resolution
 
