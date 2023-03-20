@@ -5713,6 +5713,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/windows-server/identity/transfer-or-seize-fsmo-roles-in-ad-ds.md",
+      "redirect_url": "/troubleshoot/windows-server/identity/transfer-or-seize-operation-master-roles-in-ad-ds",
+      "redirect_document_id": true
+    }, 
+    {
       "source_path": "support/sql/general/servicing-models-sql-server.md",
       "redirect_url": "/troubleshoot/sql/releases/servicing-models-sql-server",
       "redirect_document_id": true
