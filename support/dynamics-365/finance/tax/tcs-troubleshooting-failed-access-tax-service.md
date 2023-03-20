@@ -8,7 +8,7 @@ ms.date: 10/31/2022
 
 # optional metadata
 
-ms.search.form: TaxIntegrationTaxServiceParameters
+ms.search.form: TaxIntegrationTaxServiceParameters_lookupFeatureSetupName
 audience: Application User
 # ms.devlang: 
 ms.reviewer: kfend
