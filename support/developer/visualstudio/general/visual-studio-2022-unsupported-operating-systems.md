@@ -44,13 +44,13 @@ When installing or using Visual Studio 2022 on Windows 7 or Windows Server 2008 
 - Visual Studio Terminal doesn't work and isn't supported on Windows 7 and Windows Server 2008 R2.
 - .NET 4.8.1 isn't supported, and will not install.
 
-## Windows 8, Windows 8.1
+## Windows 8 and Windows 8.1
 
 Visual Studio 2022 doesn't install on Windows 8 or Windows 8.1.
 
-Windows Server 2012, and Windows Server 2012 R2
+## Windows Server 2012 and Windows Server 2012 R2
 
-When installing or using Visual Studio 2022 on Windows Server 2012, or Windows Server 2012 R2, you may experience the following issues.
+When installing or using Visual Studio 2022 on Windows Server 2012 or Windows Server 2012 R2, you may experience the following issues.
 
 - SQL development against a LocalDB, web development tools, and code maps aren't available. To work around this issue, install SQL Server Express 2016. For more information on installation, see [SQL Server Express LocalDB](/sql/database-engine/configure-windows/sql-server-express-localdb).
 - .NET 4.8.1 isn't supported, and will not install.
