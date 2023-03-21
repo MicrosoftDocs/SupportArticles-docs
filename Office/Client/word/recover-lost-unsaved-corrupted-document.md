@@ -20,7 +20,7 @@ appliesto:
   - Word 2016
   - Word 2013
   - Word 2010
-ms.date: 8/12/2021
+ms.date: 3/21/2023
 ---
 
 # How to recover unsaved Word documents
@@ -35,10 +35,11 @@ You can try to recover an unsaved Word document by:
 - [Searching for temporary files](#tempfiles)
 
 If you're looking for information about how to recover other recent Office files, see the following articles:
+
 - [Recover your Office files](https://support.office.com/article/recover-your-office-files-dc901de2-acae-47f2-9175-fb5a91e9b3c8)
 - [Find lost files after the upgrade to Windows 10](https://support.microsoft.com/help/12386)
 
-If you can’t open the document, or the content in the document is damaged, see [How to troubleshoot damaged documents in Word](./damaged-documents-in-word.md).
+If you can't open the document, or the content in the document is damaged, see [How to troubleshoot damaged documents in Word](./damaged-documents-in-word.md).
 
 **To find a lost document:**
 
@@ -58,10 +59,10 @@ Word backup file names have a ".wbk" extension. If you have the "backup copy" op
 To check whether this option is on, select **File** > **Options** > **Advanced**, scroll down to the **Save** section, and then select **Always create backup copy**.
 
 If you have a Microsoft 365 subscription, check these two folder locations for a backup file:
-- C:\Users\<UserName>\AppData\Roaming\Microsoft\Word
-- C:\Users\<UserName>\AppData\Local\Microsoft\Office\UnsavedFiles
+- C:\Users\\<UserName\>\AppData\Roaming\Microsoft\Word
+- C:\Users\\<UserName\>\AppData\Local\Microsoft\Office\UnsavedFiles
     
-**Note:** In these paths, replace <_UserName_> with your username.
+**Note:** In these paths, replace \<UserName\> with your username.
 
 To find the backup copy of the file, select **Start**, enter *.wbk* in the **Search** box, and then press Enter. If you find any files that have the name "Backup of" followed by the name of the missing file, double-click the file name to open it.
 
@@ -108,10 +109,10 @@ Word searches for AutoRecover files every time it starts. Therefore, you can try
 ### <a id="autorecover">Searching for AutoRecover files</a>
 
 If you have a Microsoft 365 subscription, check the following folder locations for backup files:
-- C:\Users\<UserName>\AppData\Roaming\Microsoft\Word
-- C:\Users\<UserName>\AppData\Local\Microsoft\Office\UnsavedFiles
+- C:\Users\\<UserName\>\AppData\Roaming\Microsoft\Word
+- C:\Users\\<UserName\>\AppData\Local\Microsoft\Office\UnsavedFiles
     
-**Note:** In these paths, replace <_UserName_> with your username.
+**Note:** In these paths, replace \<UserName\> with your username.
 
 If you don’t find the missing file in these locations, open Word, and select **File** > **Info** > **Manage Document** > **Recover Unsaved Documents**.
 
