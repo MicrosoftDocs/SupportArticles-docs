@@ -1,7 +1,7 @@
 ---
 title: View and transfer FSMO roles
 description: Describes how to view and transfer FSMO roles.
-ms.date: 9/24/2021
+ms.date: 03/21/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -17,12 +17,12 @@ ms.technology: windows-server-active-directory
 
 This article describes how to view and transfer FSMO roles.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012  
 _Original KB number:_ &nbsp; 324801
 
 ## Summary
 
-This article describes how to transfer Flexible Single Master Operations (FSMO) roles (also known as *operations master* roles) by using the Active Directory snap-in tools in Microsoft Management Console (MMC) in Windows Server 2003.
+This article describes how to transfer Flexible Single Master Operations (FSMO) roles (also known as *operations master* roles) by using the Active Directory snap-in tools in Microsoft Management Console (MMC).
 
 ### FSMO Roles
 
@@ -31,6 +31,12 @@ In a forest, there are at least five FSMO roles that are assigned to one or more
 - Schema Master: The schema master domain controller controls all updates and modifications to the schema. To update the schema of a forest, you must have access to the schema master. There can be only one schema master in the whole forest.
 - Domain naming master: The domain naming master domain controller controls the addition or removal of domains in the forest. There can be only one domain naming master in the whole forest.
 - Infrastructure Master: The infrastructure is responsible for updating references from objects in its domain to objects in other domains. At any one time, there can be only one domain controller acting as the infrastructure master in each domain.
+    > [!NOTE]
+    > the Infrastructure Master (IM) role should always be set to a valid domain controller to avoid errors being reported. IM role is often not needed anymore as it has no work to do. Please refer to the articles linked below about details. In summary the scenarios are:
+    >
+    > - All Domain Controllers in the domain are Global Catalogs.
+    > - The forest is configured to use the Recycle Bin.
+
 - Relative ID (RID) Master: The RID master is responsible for processing RID pool requests from all domain controllers in a particular domain. At any one time, there can be only one domain controller acting as the RID master in the domain.
 - PDC Emulator: The PDC emulator is a domain controller that advertises itself as the primary domain controller (PDC) to workstations, member servers, and domain controllers that are running earlier versions of Windows. For example, if the domain contains computers that are not running Microsoft Windows XP Professional or Microsoft Windows 2000 client software, or if it contains Microsoft Windows NT backup domain controllers, the PDC emulator master acts as a Windows NT PDC. It is also the Domain Master Browser, and it handles password discrepancies. At any one time, there can be only one domain controller acting as the PDC emulator master in each domain in the forest.  
 
@@ -96,3 +102,20 @@ Use the Active Directory Schema Master snap-in to transfer the schema master rol
 4. In the console tree, right-click **Active Directory Users and Computers**, point to All Tasks, and then click Operations Master.
 5. Click the appropriate tab for the role that you want to transfer (RID, PDC, or Infrastructure), and then click Change.
 6. Click OK to confirm that you want to transfer the role, and then click Close.
+
+## References
+
+For more information, see:
+
+- [Active Directory FSMO roles in Windows](/troubleshoot/windows-server/identity/fsmo-roles)
+- [FSMO placement and optimization on Active Directory domain controllers](https://support.microsoft.com/help/223346)
+- [Flexible Single Master Operation Transfer and Seizure Process](https://support.microsoft.com/help/223787)
+- [HOW TO: Use Ntdsutil to find and clean up duplicate security identifiers in Windows Server](https://support.microsoft.com/help/816099)
+- [Troubleshoot DNS Event ID 4013: The DNS server was unable to load AD integrated DNS zones](https://support.microsoft.com/help/2001093)
+- [DCPROMO demotion fails if unable to contact the DNS infrastructure master](https://support.microsoft.com/help/2694933)
+- [FSMO Roles](/openspecs/windows_protocols/ms-adts/2aae4593-66fa-4d89-a921-1625b19af5b7)
+- [Perform initial recovery](/windows-server/identity/ad-ds/manage/ad-forest-recovery-perform-initial-recovery)
+- [AD Forest Recovery - Seizing an operations master role](/windows-server/identity/ad-ds/manage/ad-forest-recovery-seizing-operations-master-role)
+- [To clean up server metadata by using Ntdsutil](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup#to-clean-up-server-metadata-by-using-ntdsutil)
+- [Planning Operations Master Role Placement](/windows-server/identity/ad-ds/plan/planning-operations-master-role-placement)
+- [Move-ADDirectoryServerOperationMasterRole](/powershell/module/activedirectory/move-addirectoryserveroperationmasterrole)
