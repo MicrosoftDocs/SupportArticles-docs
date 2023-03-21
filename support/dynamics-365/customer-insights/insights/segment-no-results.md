@@ -4,7 +4,7 @@ description: Learn how to find out why a segment has no members in Dynamics 365 
 author: ashwini-puranik
 ms.author: aspuranik
 ms.reviewer: mhart
-ms.date: 03/08/2023
+ms.date: 03/21/2023
 ---
 
 # Segments return no or zero members
@@ -30,7 +30,7 @@ Contradictory AND conditions or rules on same attribute always generate empty se
 
 Review all the rules and conditions for broken logic. Consider more complex contradictions across multiple attributes too, which requires more knowledge of the dataset. For example, Status = 1 AND StatusDescription = Inactive, while a status value of 1 always means it's active.
 
-The set operations of 'Union', 'Intersect' and 'Except' that are used to combine two rules are applied on the CustomerId returned by each rule. So depending on the expected outcome, please check if the CustomerId is part (or not) of the result of each rule evaluation. 
+The set operations Union, Intersect, and Except that are used to combine two rules are applied on the CustomerId returned by each rule. So depending on the expected outcome, verify if the CustomerId is part (or not) of the result of each rule evaluation.
 
 ### Break down complexity
 
@@ -38,7 +38,6 @@ When working with complex segments with multiple conditions or rules, reduce com
 
 - Start from the complete segment and remove conditions and rules one by one. Run the segment after each change until it returns members.
 - Build a new segment from scratch and add conditions and rules one by one from the segment that is yielding no members. Run the segment after each step of adding condition/rule, until no members are returned anymore.
-
 
 ### Missing data for the attribute/s used in Segment Rule or Condition
 
@@ -62,7 +61,7 @@ If the value of the attribute used in a segment rule or condition is missing for
     > [!NOTE]
     > All entities, especially source entities from an Azure Data Lake Storage data source, won't be available with this connector. It's also recommended to use on tables with less than 1 million rows.
 
-  - Export data to Azure in a [Azure Blob Storage](/dynamics365/customer-insights/export-azure-blob-storage), [Azure Data Lake Storage](/dynamics365/customer-insights/export-azure-data-lake-storage-gen2), or [Azure Synapse Analytics](/dynamics365/customer-insights/export-azure-synapse-analytics), which can help with further investigations using Synapse Analytics, Power BI, or any other data exploration tool.
+  - Export data to Azure in a [Azure Blob Storage](/dynamics365/customer-insights/export-azure-blob-storage), [Azure Data Lake Storage](/dynamics365/customer-insights/export-azure-data-lake-storage-gen2), or [Azure Synapse Analytics](/dynamics365/customer-insights/export-azure-synapse-analytics). Exports can help with further investigations using Synapse Analytics, Power BI, or any other data exploration tool.
 
   - For Power Query data sources, create a new data source or separate reference query in the existing data source with the filtering condition for the missing attribute. Once refreshed, check if the new table contains any data.
 
@@ -72,7 +71,7 @@ If the relationship between the table used for segmentation and the unified cust
 
 - Check if the intended [relationship path](/dynamics365/customer-insights/relationships#relationship-paths) is used as several paths could be technically valid between your source table (with filter condition on attribute) and the *Customer* table. If there are several tables involved, inspect each relationship and validate if they're configured correctly with the right attributes.
 
-- The attribute value evaluation is case-sensitive. For example, two tables are related through a common attribute *MembershipType*. If the attribute value is *GOLD* in one table and *gold* in the other table, it will not yield successful join and return no results. That's also true for GUIDs, which is easy to miss.
+- The attribute value evaluation is case-sensitive. For example, two tables are related through a common attribute *MembershipType*. If the attribute value is *GOLD* in one table and *gold* in the other table, it will not yield successful join and return no results. The same logic applies to GUIDs, which is easy to miss.
 
 - Verify the data types of the attributes align across tables.
 
@@ -86,4 +85,4 @@ If the profile table (in this example *Contact*) is [deduplicated](/dynamics365/
 
 :::image type="content" source="../media/data-example-segment-no-result.png" alt-text="Sample data for relationship diagram.":::
 
-In this example, contact C1 (with Gold membership) and C2 (with Silver membership) have been unified with C2 being the winner. Hence when a segment is created to identify 'Gold' members, 'First Person' will not be the part of the segment because the relationship path is evaluated only with C2.
+In this example, contact C1 (with Gold membership) and C2 (with Silver membership) have been unified with C2 being the winner. Hence when a segment is created to identify 'Gold' members, 'First Person' won't be the part of the segment because the relationship path is evaluated only with C2.
