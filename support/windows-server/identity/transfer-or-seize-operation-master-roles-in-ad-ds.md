@@ -1,7 +1,7 @@
 ---
 title: Transfer or seize Operation Master roles
 description: Describes how you can use the Ntdsutil.exe utility to move or to seize Operation Master roles, formerly known as Flexible Single Master Operations (FSMO) roles.
-ms.date: 03/20/2023
+ms.date: 03/21/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes when and how to transfer or seize Operation Master roles, formerly known as Flexible Single Master Operations (FSMO) roles.
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server Standard 2016, Windows Server Essentials 2016, Windows Server Datacenter 2016, Windows Server 2012 R2, Windows Server 2012  
+_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012  
 _Original KB number:_ &nbsp; 255504
 
 ## More information
@@ -100,6 +100,8 @@ For example, assume that you have to transfer the Schema master role. The Schema
 >
 > If you still need the infrastructure master role:  
 > Don't put the infrastructure master role on the same DC as the global catalog server. If the infrastructure master runs on a global catalog server, it stops updating object information because it does not contain any references to objects that it doesn't hold. This is because a global catalog server holds a partial replica of every object in the forest.
+>
+> The infrastructure master role isn't in use anymore once you enable Active Directory Recycle Bin. AD Recycle Bin changes the approach to handling object referrals that are being removed.
 >
 > To test whether a DC is also a global catalog server, follow these steps:
 >  
@@ -226,6 +228,7 @@ For more information, see:
 - [FSMO placement and optimization on Active Directory domain controllers](https://support.microsoft.com/help/223346)
 - [Flexible Single Master Operation Transfer and Seizure Process](https://support.microsoft.com/help/223787)
 - [HOW TO: Use Ntdsutil to find and clean up duplicate security identifiers in Windows Server](https://support.microsoft.com/help/816099)
+- [Phantoms, tombstones, and the infrastructure master](phantoms-tombstones-infrastructure-master.md)
 - [Troubleshoot DNS Event ID 4013: The DNS server was unable to load AD integrated DNS zones](https://support.microsoft.com/help/2001093)
 - [DCPROMO demotion fails if unable to contact the DNS infrastructure master](https://support.microsoft.com/help/2694933)
 - [FSMO Roles](/openspecs/windows_protocols/ms-adts/2aae4593-66fa-4d89-a921-1625b19af5b7)
