@@ -57,6 +57,7 @@ To work around the issue, use one of the following methods as required:
     ```powershell
     Invoke-AzSqlInstanceFailover -ResourceGroupName "<ResourceGroupName>" -Name "<ManagedInstanceName>" -ReadableSecondary
     ```
+
     This cmdlet fails over the readable secondary replica of the Managed Instance named `<ManagedInstanceName>`.
 
 - SQL Server, Azure SQL Database, and Azure SQL Managed Instance
@@ -101,3 +102,4 @@ To work around the issue, use one of the following methods as required:
         CREATE STATISTICS <PermanentStatistics> ON <TableName>(<ColumnName>)
         GO
         ```
+
