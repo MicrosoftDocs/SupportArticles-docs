@@ -12,8 +12,20 @@
   href: ./release-management-client-crash.md
 - name: Screen readers can't read tool windows
   href: ./screen-readers-not-read-tool-windows.md
+- name: Troubleshoot Class Designer errors
+  href: ./troubleshoot-class-designer-errors.md
+- name: Troubleshoot Docker client errors on Windows
+  href: ./troubleshooting-docker-errors.md
+- name: Troubleshoot issues with code coverage
+  href: ./troubleshooting-code-coverage.md
+- name: Troubleshoot issues with IntelliSense code snippets
+  href: ./troubleshooting-snippets.md
+- name: Troubleshoot specific errors in ClickOnce deployments
+  href: ./troubleshoot-clickonce-deployments.md
 - name: Visual Studio 2012 crashes with StarDict-3
   href: ./crash-with-stardict-3.md
+- name: Unrecoverable process error
+  href: ./visual-studio-unrecoverable-process-error.md
 - name: Help Viewer 2.0 crashes
   href: ./help-viewer-2-crashes.md
 - name: Application unresponsive due to low system memory
