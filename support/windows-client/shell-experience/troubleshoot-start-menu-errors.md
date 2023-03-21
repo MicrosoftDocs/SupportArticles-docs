@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Start menu errors
 description: Learn how to troubleshoot common Start menu errors in Windows 10. For example, learn to troubleshoot errors related to deployment, crashes, and performance.
-ms.date: 01/19/2023
+ms.date: 03/10/2023
 ms.prod: windows-client
 ms.author: lizlong
 author: lizgt2000
@@ -123,7 +123,7 @@ To narrow down the problem further, it's good to note:
   - Citrix
   - Other
   
-## Check Event logs that record Start Issues:
+## Check Event logs that record Start issues:
 
 - System Event log
 - Application Event log
