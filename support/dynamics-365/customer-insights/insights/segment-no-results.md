@@ -30,12 +30,15 @@ Contradictory AND conditions or rules on same attribute always generate empty se
 
 Review all the rules and conditions for broken logic. Consider more complex contradictions across multiple attributes too, which requires more knowledge of the dataset. For example, Status = 1 AND StatusDescription = Inactive, while a status value of 1 always means it's active.
 
+The set operations of 'Union', 'Intersect' and 'Except' that are used to combine two rules are applied on the CustomerId returned by each rule. So depending on the expected outcome, please check if the CustomerId is part (or not) of the result of each rule evaluation. 
+
 ### Break down complexity
 
 When working with complex segments with multiple conditions or rules, reduce complexity and isolate the condition or rule responsible for the issue.
 
-- Rebuild the segment from scratch. Add conditions and rules one by one. Run the segment after each step, until no members are returned anymore.
 - Start from the complete segment and remove conditions and rules one by one. Run the segment after each change until it returns members.
+- Build a new segment from scratch and add conditions and rules one by one from the segment that is yielding no members. Run the segment after each step of adding condition/rule, until no members are returned anymore.
+
 
 ### Missing data for the attribute/s used in Segment Rule or Condition
 
@@ -65,7 +68,7 @@ If the value of the attribute used in a segment rule or condition is missing for
 
 ### Issues with relationships between tables
 
-If the relationship between the table used for segmentation and the unified customer table doesn't work, the segment returns no members.
+If the relationship between the table used for segmentation and the unified customer table doesn't work due to the reasons stated below, the segment returns no members.
 
 - Check if the intended [relationship path](/dynamics365/customer-insights/relationships#relationship-paths) is used as several paths could be technically valid between your source table (with filter condition on attribute) and the *Customer* table. If there are several tables involved, inspect each relationship and validate if they're configured correctly with the right attributes.
 
