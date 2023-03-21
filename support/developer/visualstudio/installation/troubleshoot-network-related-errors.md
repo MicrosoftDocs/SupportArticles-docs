@@ -79,22 +79,34 @@ Visual Studio uses Transport Layer Security (TLS) 1.2 protocol to connect to net
 
 To resolve this issue, enable connections for the following URLs:
 
-- `https://management.core.windows.net`
-- `https://app.vssps.visualstudio.com`
-- `https://login.microsoftonline.com`
-- `https://login.live.com`
-- `https://go.microsoft.com`
-- `https://graph.windows.net`
-- `https://app.vsspsext.visualstudio.com`
-- `*.azurewebsites.net` (for Azure connections)
-- `*.visualstudio.microsoft.com`
-- `cdn.vsassets.io` (hosts content delivery network, or CDN, content)
-- `*.gallerycdn.vsassets.io` (hosts Azure DevOps Services extensions)
-- `static2.sharepointonline.com` (hosts resources that Visual Studio uses in the Office UI Fabric kit, such as fonts)
-- `*.nuget.org` (for NuGet connections)
+- https:&#47;&#47;management.core.windows.net
+
+- https:&#47;&#47;app.vssps.visualstudio.com
+
+- https:&#47;&#47;login.microsoftonline.com
+
+- https:&#47;&#47;login.live.com
+
+- https:&#47;&#47;go.microsoft.com
+
+- https:&#47;&#47;graph.windows.net
+
+- https:&#47;&#47;app.vsspsext.visualstudio.com
+
+- &#42;.azurewebsites.net (for Azure connections)
+
+- &#42;.visualstudio.microsoft.com
+
+- cdn.vsassets.io (hosts content delivery network, or CDN, content)
+
+- &#42;.gallerycdn.vsassets.io (hosts Azure DevOps Services extensions)
+
+- static2.sharepointonline.com (hosts resources that Visual Studio uses in the Office UI Fabric kit, such as fonts)
+
+- &#42;.nuget.org (for NuGet connections)
 
   > [!NOTE]
-  > Privately owned NuGet server URLs may not be included in this list. You can check for the NuGet servers that you are using in _%APPData%\Nuget\NuGet.Config_.
+  > Privately owned NuGet server URLs may not be included in this list. You can check for the NuGet servers that you are using in %APPData%\Nuget\NuGet.Config.
 
 ## Error "Failed to parse ID from parent process"
 
