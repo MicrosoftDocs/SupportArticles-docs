@@ -1,7 +1,7 @@
 ---
 title: Collect data using Network Monitor
 description: Learn how to run Network Monitor to collect data for troubleshooting TCP/IP connectivity.
-ms.date: 08/22/2022
+ms.date: 03/10/2023
 ms.prod: windows-client
 ms.topic: troubleshooting
 author: dansimp
@@ -41,7 +41,7 @@ When the driver gets hooked to the network interface card (NIC) during installat
 
 3. Reproduce the issue, and you'll see that Network Monitor grabs the packets on the wire.
 
-    :::image type="content" source="media/collect-data-using-network-monitor/network-monitor-frame-summary.png" alt-text="Screenshot of the Frame summary of network packets." border="false":::
+    :::image type="content" source="media/collect-data-using-network-monitor/network-monitor-frame-summary.png" alt-text="Screenshot of the Frame summary of network packets.":::
 
 4. Select **Stop**, and go to **File** > **Save as** to save the results. By default, the file will be saved as a `.cap` file.
 
