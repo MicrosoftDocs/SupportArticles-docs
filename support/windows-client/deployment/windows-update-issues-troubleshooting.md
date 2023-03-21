@@ -1,7 +1,7 @@
 ---
 title: Windows Update issues troubleshooting
 description: Learn about troubleshooting Windows Update, issues related to HTTP/Proxy, and why some features are offered and others aren't.
-ms.date: 02/01/2023
+ms.date: 03/14/2023
 ms.prod: windows-client
 author: aczechowski
 ms.author: aaroncz
@@ -14,7 +14,7 @@ ms.reviewer: dougeby
 audience: itpro
 localization_priority: medium
 ---
-# Windows Update troubleshooting
+# Windows Update issues troubleshooting
 
 _Applies to:_ &nbsp; Windows 10
 

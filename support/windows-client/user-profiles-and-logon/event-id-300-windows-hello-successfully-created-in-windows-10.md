@@ -27,7 +27,7 @@ Log: Event Viewer > Applications and Service Logs\\Microsoft\\Windows\\User Devi
 ID: 300  
 Source: Microsoft Azure Device Registration Service  
 Version: 10 or 11  
-Message: The NGC key was successfully registered. Key ID: {4476694e-8e3b-4ef8-8487-be21f95e6f07}. UPN:test@contoso.com. Attestation: ATT\_SOFT. Client request ID: . Server request ID: db2da6bd-3d70-4b9b-b26b-444f669902da.</br>Server response: {"kid":"4476694e-8e3b-4ef8-8487-be21f95e6f07","upn":"test@contoso.com"}
+Message: The NGC key was successfully registered. Key ID: {\<Key ID\>}. UPN:test@contoso.com. Attestation: ATT\_SOFT. Client request ID: . Server request ID: \<Server Request ID\>.</br>Server response: {"kid":"4476694e-8e3b-4ef8-8487-be21f95e6f07","upn":"test@contoso.com"}
 
 ## Resolution
 
