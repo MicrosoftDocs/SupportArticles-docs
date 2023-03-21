@@ -344,6 +344,8 @@
       href: ./deployment/updates-automatically-downloaded.md
     - name: Windows Update blocked because of drive reassignment
       href: ./deployment/drive-reassignment-block-update.md
+    - name: Windows Update common errors and mitigation
+      href: ./deployment/common-windows-update-errors.md
     - name: Windows Update hangs
       href: ./deployment/windows-update-hangs-updates-uninstalled.md
     - name: Windows Update issues troubleshooting
