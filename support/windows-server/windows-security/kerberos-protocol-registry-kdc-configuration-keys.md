@@ -1,7 +1,7 @@
 ---
 title: Registry entries about Kerberos protocol and Key Distribution Center (KDC)
 description: Lists the registry entries in Windows Server that can be used for Kerberos protocol testing and troubleshooting Kerberos authentication issues.
-ms.date: 11/8/2022
+ms.date: 03/21/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This article describes registry entries about Kerberos version 5 authentication protocol and Key Distribution Center (KDC) configuration.
 
-_Applies to:_ &nbsp; Windows 10, version 2004, Windows 7 Service Pack 1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 11, Windows 10, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 _Original KB number:_ &nbsp; 837361
 
 ## Summary
@@ -140,40 +140,6 @@ The registry entries that are listed in this section must be added to the follow
 
     This value is the number of KDC referrals that a client pursues before the client gives up.
 
-- Entry: KerbDebugLevel
-
-  - Type: REG_DWORD
-  - Default Value: 0xFFFFFFFF
-
-    This value is a list of flags that indicate the type and the level of logging that is requested. This kind of logging can be collected on the component level of Kerberos by bitwise or by one or more of the macros that are described in the following table. Some of the below output requires checked version of kerberos.dll (for example the DEB_TRACE_SPN_CACHE). If this level of troubleshooting is required, contact microsoft support for assistance.
-
-    |Macro Name|Value|Note|
-    |---|---|---|
-    |DEB_ERROR|0x00000001|It's the default InfoLevel for checked builds. It produces error messages across components.|
-    |DEB_WARN|0x00000002|This macro generates warning messages across components. In some cases, these messages can be ignored.|
-    |DEB_TRACE|0x00000004|This macro enables general tracing events.|
-    |DEB_TRACE_API|0x00000008|This macro enables user API tracing events that are logged on entry and on exit to an externally exported function that is implemented through SSPI.|
-    |DEB_TRACE_CRED|0x00000010|This macro enables credentials tracing.|
-    |DEB_TRACE_CTXT|0x00000020|This macro enables context tracing.|
-    |DEB_TRACE_LSESS|0x00000040|This macro enables logon session tracing.|
-    |DEB_TRACE_TCACHE|0x00000080|Not implemented|
-    |DEB_TRACE_LOGON|0x00000100|This macro enables logon tracing such as in `LsaApLogonUserEx2()`.|
-    |DEB_TRACE_KDC|0x00000200|This macro enables tracing before and after calls to `KerbMakeKdcCall()`.|
-    |DEB_TRACE_CTXT2|0x00000400|This macro enables extra context tracing.|
-    |DEB_TRACE_TIME|0x00000800|This macro enables the time skew tracing that is found in Timesync.cxx.|
-    |DEB_TRACE_USER|0x00001000|This macro enables user API tracing that is used together with DEB_TRACE_API and that is found mostly in Userapi.cxx.|
-    |DEB_TRACE_LEAKS|0x00002000| |
-    |DEB_TRACE_SOCK|0x00004000|This macro enables Winsock-related events.|
-    |DEB_TRACE_SPN_CACHE|0x00008000|This macro enables events that are related to SPN cache hits and misses.|
-    |DEB_S4U_ERROR|0x00010000|Not implemented|
-    |DEB_TRACE_S4U|0x00020000| |
-    |DEB_TRACE_BND_CACHE|0x00040000| |
-    |DEB_TRACE_LOOPBACK|0x00080000| |
-    |DEB_TRACE_TKT_RENEWAL|0x00100000| |
-    |DEB_TRACE_U2U|0x00200000| |
-    |DEB_TRACE_LOCKS|0x01000000| |
-    |DEB_USE_LOG_FILE|0x02000000|Not implemented|
-
 - Entry: MaxTokenSize
 
   - Type: REG_DWORD
@@ -293,17 +259,8 @@ The registry entries that are listed in this section must be added to the follow
   - Default Value: 2
   - Possible values:
 
-    - 1 (decimal) or 0x1 (hexadecimal): Audit SPN unknown errors.
-    - 2 (decimal) or 0x2 (hexadecimal): Log PKINIT errors. (PKINIT is an Internet Engineering Task Force (IETF) Internet draft for _Public Key Cryptography for Initial Authentication in Kerberos_.)
-    - 4 (decimal) or 0x4 (hexadecimal): Log all KDC errors.
+    - 1 (decimal) or 0x1 (hexadecimal): Audit SPN unknown errors in Security event log event 4769 failure audit.
+    - 2 (decimal) or 0x2 (hexadecimal): Log PKINIT errors. This logs to System Eventlog KDC warning event 21 (enabled by default). PKINIT is an Internet Engineering Task Force (IETF) Internet draft for _Public Key Cryptography for Initial Authentication in Kerberos_.
+    - 4 (decimal) or 0x4 (hexadecimal): Log all KDC errors. This logs to System Eventlog KDC event 24 (example for U2U required problems).
     - 8 (decimal) or 0x8 (hexadecimal): Log KDC warning event 25 in the system log when user asking for S4U2Self ticket doesn't have sufficient access to target user.
-    - 16 (decimal) or 0x10 (hexadecimal): Log audit events on encryption type (ETYPE) and bad options errors. This value indicates what information the KDC will write to event logs and to audits.
-
-- Entry: KdcDebugLevel
-
-  - Type: REG_DWORD
-  - Default Value: 1 for checked build, 0 for free build
-
-    This value indicates whether debug logging is on (1) or off (0).
-
-    If the value is set to **0x10000000** (hexadecimal) or **268435456** (decimal), specific file or line information will be returned in the **`edata`** field of **KERB_ERRORS** as **PKERB_EXT_ERROR** errors during a KDC processing failure.
+    - 16 (decimal) or 0x10 (hexadecimal): Log audit events on encryption type (ETYPE) and bad options errors. This value indicates what information the KDC will write to event logs and to audits in Security event log event 4769 failure audit.
