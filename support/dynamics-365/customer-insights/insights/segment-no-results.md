@@ -14,7 +14,7 @@ This article provides functional guidance to find out why a segment returns with
 ## Prerequisites
 
 - Segment refresh status is successful.
-- Last refresh date is within one day.
+- The segment refreshes regularly.
 
 ## Symptoms
 
