@@ -15,20 +15,20 @@ _Applies to:_ &nbsp; Power Automate for desktop, Power Apps canvas
 
 ## Symptoms
 
-Mira has been shared a Power Apps canvas app from Jefferson (the app embeds a desktop flows connection). The following screenshot shows what appears in Mira's apps list:
+User 1 has been shared a Power Apps canvas app from User 2 (the app embeds a desktop flows connection). The following screenshot shows what appears in User 1's apps list:
 
 :::image type="content" source="media/cannot-create-desktop-flow-connection-from-a-shared-canvas-app/app-list.png" alt-text="Screenshot shows that the shared app is shown in the app list in Power Apps.":::
 
 > [!NOTE]
-> Whether the app was shared with Mira as a user or co-owner makes no difference in this scenario.
+> Whether the app was shared with User 1 as a user or co-owner makes no difference in this scenario.
 
-When Mira runs the app:
+When User 1 runs the app:
 
-- Mira is asked to provide her own desktop flows connection because Mira has none already created connection in this environment.
+- User 1 is asked to provide her own desktop flows connection because User 1 has none already created connection in this environment.
 
   :::image type="content" source="media/cannot-create-desktop-flow-connection-from-a-shared-canvas-app/provide-connection.png" alt-text="Screenshot that shows the dialog box asks to provide your own desktop flows connection.":::
 
-- To do so, Mira selects **Sign in** to create the new connection. The following form appears:
+- To do so, User 1 selects **Sign in** to create the new connection. The following form appears:
 
   :::image type="content" source="media/cannot-create-desktop-flow-connection-from-a-shared-canvas-app/create-connection.png" alt-text="The broken desktop flows connection creation form.":::
 
@@ -44,7 +44,7 @@ The workaround for this issue is to create a connection from the **Connections**
 1. Close the shared app.
 2. Open the **Connections** page.
 3. Select **New connection** > **Desktop flows**.
-4. Create your connection. The **Machine or machine group** field is functional and provides a list of user-available devices.
+4. Create a connection. The **Machine or machine group** field is functional and provides a list of user-available devices.
 
    :::image type="content" source="media/cannot-create-desktop-flow-connection-from-a-shared-canvas-app/correct-connection-creation-form.png" alt-text="Screenshot that shows the correct desktop flows connection creation form.":::
 
@@ -54,4 +54,4 @@ The workaround for this issue is to create a connection from the **Connections**
 
 6. Select **Allow**.
 
-You now have access to the running canvas app.
+User 1 now have access to the running canvas app.
