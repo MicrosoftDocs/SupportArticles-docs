@@ -95,22 +95,22 @@ To use the script to examine the generated log file, run the following PowerShel
 Get-AutopilotDiagnostics -CABFile <pathToOutputCabFile>
 ```
 
-## Identifying unexpected reboots 
+## Identify unexpected reboots
 
-Reboots are supported on the Enrollment Status Page in during device setup phase (not supported during Account setup phase). Reboots during device ESP must be managed by Intune (i.e in the package created, you should specify the return codes to perform a reboot by Intune). There are some policies that conflict with ESP and we have made note of the ones we are aware of here for reference. For unexpected reboots you can use the rebootURI CSP to detect what is triggering a reboot. An even should also be logged in event viewer like the following: 
+Reboots are supported on the ESP during the device setup phase (not supported during the account setup phase). Reboots during the device ESP must be managed by Intune. For example, in the created package, you should specify the return codes to perform a reboot by Intune. There are some policies that conflict with the ESP and Microsoft is aware of them. For unexpected reboots, you can use the reboot-URI CSP to detect what is triggering a reboot. In Event Viewer, an event is logged as follows:
 
-event
-              channel="MDM_DIAGNOSTICS_ADMIN_CHANNEL"
-              level="win:Informational"
-              message="$(string.EnterpriseDiagnostics.RebootRequiredURI)"
-              symbol="RebootRequiredURI"
-              template="OneString"
-              value="2800"
-              
+```output
+channel="MDM_DIAGNOSTICS_ADMIN_CHANNEL"
+level="win:Informational"
+message="$(string.EnterpriseDiagnostics.RebootRequiredURI)"
+symbol="RebootRequiredURI"
+template="OneString"
+value="2800"
+```
 
-A sample event in client logs indicating which URI triggers a coalesced reboot: 
-"[ETW [2022-08-02T13:28:10.3350735Z] [Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider] [Informational] - The following URI has triggered a reboot: (./Device/Vendor/MSFT/Policy/Config/Update/ManagePreviewBuilds)"
+The following sample event indicates which URI triggers a coalesced reboot:
 
+`"[ETW [2022-08-02T13:28:10.3350735Z] [Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider] [Informational] - The following URI has triggered a reboot: (./Device/Vendor/MSFT/Policy/Config/Update/ManagePreviewBuilds)"`
 
 ## Check the registry for app deployment failures during ESP
 
