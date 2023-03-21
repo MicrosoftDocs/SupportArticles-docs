@@ -4,3 +4,11 @@
   href: ./build-errors-delete-debug-configuration.md
 - name: Building a Windows 10 driver fails
   href: ./building-windows-10-driver-fails.md
+- name: Troubleshoot .NET Framework targeting errors
+  href: ./troubleshooting-dotnet-framework-targeting-errors.md
+- name: Troubleshoot project templates and item templates
+  href: ./how-to-troubleshoot-templates.md
+- name: Troubleshoot Resource Editor errors
+  href: ./troubleshoot-resource-editor-errors.md
+- name: Troubleshoot broken references
+  href: ./troubleshooting-broken-references.md
