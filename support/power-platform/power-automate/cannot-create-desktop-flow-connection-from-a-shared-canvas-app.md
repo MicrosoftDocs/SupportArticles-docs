@@ -54,4 +54,4 @@ The workaround for this issue is to create a connection from the **Connections**
 
 6. Select **Allow**.
 
-User 1 now have access to the running canvas app.
+User 1 now has access to the running canvas app.
