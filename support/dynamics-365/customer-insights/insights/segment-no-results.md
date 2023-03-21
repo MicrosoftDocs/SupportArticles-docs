@@ -1,15 +1,15 @@
 ---
 title: Segments return no members
-description: Learn how to identify the root cause when a segment has no members in Dynamics 365 Customer Insights.
+description: Learn how to find out why a segment has no members in Dynamics 365 Customer Insights.
 author: ashwini-puranik
 ms.author: aspuranik
 ms.reviewer: mhart
 ms.date: 03/08/2023
 ---
 
-# Segments return no members
+# Segments return no or zero members
 
-This article provides functional guidance to identify the root cause when a segment returns with no members. Use this troubleshooting guide when you expect the segment to return members but it doesn't.
+This article provides functional guidance to find out why a segment returns with no members. Use this troubleshooting guide when you expect the segment to return members but it doesn't.
 
 ## Prerequisites
 
