@@ -36,8 +36,8 @@ You can try to recover an unsaved Word document by:
 
 If you're looking for information about how to recover other recent Office files, see the following articles:
 
-- [Recover your Office files](https://support.office.com/article/recover-your-office-files-dc901de2-acae-47f2-9175-fb5a91e9b3c8)
-- [Find lost files after the upgrade to Windows 10](https://support.microsoft.com/help/12386)
+- [Recover your Microsoft 365 files](https://support.microsoft.com/office/recover-your-microsoft-365-files-dc901de2-acae-47f2-9175-fb5a91e9b3c8)
+- [Find lost files after the upgrade to Windows 10 or 11](https://support.microsoft.com/windows/find-lost-files-after-the-upgrade-to-windows-10-or-11-10af49aa-b372-b067-a334-2314401297a9)
 
 If you can't open the document, or the content in the document is damaged, see [How to troubleshoot damaged documents in Word](./damaged-documents-in-word.md).
 
@@ -56,7 +56,7 @@ If the search results don't contain the file, go to the next method.
 
 Word backup file names have a ".wbk" extension. If you have the "backup copy" option selected in Word, there might be a backup copy of the file.
 
-To check whether this option is on, select **File** > **Options** > **Advanced**, scroll down to the **Save** section, and then select **Always create backup copy**.
+To check whether this option is on, select  **File** > **Options** > **Advanced**, scroll down to the  **Save** section, and then select  **Always create backup copy**.
 
 If you have a Microsoft 365 subscription, check these two folder locations for a backup file:
 - C:\Users\\<UserName\>\AppData\Roaming\Microsoft\Word
