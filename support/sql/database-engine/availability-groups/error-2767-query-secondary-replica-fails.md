@@ -102,4 +102,3 @@ To work around the issue, use one of the following methods as required:
         CREATE STATISTICS <PermanentStatistics> ON <TableName>(<ColumnName>)
         GO
         ```
-
