@@ -259,8 +259,8 @@ The registry entries that are listed in this section must be added to the follow
   - Default Value: 2
   - Possible values:
 
-    - 1 (decimal) or 0x1 (hexadecimal): Audit SPN unknown errors in Security event log event 4769 failure audit.
-    - 2 (decimal) or 0x2 (hexadecimal): Log PKINIT errors. This logs to System Eventlog KDC warning event 21 (enabled by default). PKINIT is an Internet Engineering Task Force (IETF) Internet draft for _Public Key Cryptography for Initial Authentication in Kerberos_.
-    - 4 (decimal) or 0x4 (hexadecimal): Log all KDC errors. This logs to System Eventlog KDC event 24 (example for U2U required problems).
-    - 8 (decimal) or 0x8 (hexadecimal): Log KDC warning event 25 in the system log when user asking for S4U2Self ticket doesn't have sufficient access to target user.
-    - 16 (decimal) or 0x10 (hexadecimal): Log audit events on encryption type (ETYPE) and bad options errors. This value indicates what information the KDC will write to event logs and to audits in Security event log event 4769 failure audit.
+    - 1 (decimal) or 0x1 (hexadecimal): Audit SPN unknown errors in the security event log. Event ID 4769 with a failure audit is logged.
+    - 2 (decimal) or 0x2 (hexadecimal): Log PKINIT errors. This logs KDC warning event ID 21 (enabled by default) to the system event log. PKINIT is an Internet Engineering Task Force (IETF) Internet draft for _Public Key Cryptography for Initial Authentication in Kerberos_.
+    - 4 (decimal) or 0x4 (hexadecimal): Log all KDC errors. This logs KDC event ID 24 (example for U2U required problems) to the system event log .
+    - 8 (decimal) or 0x8 (hexadecimal): Log KDC warning event ID 25 in the system log when user asking for S4U2Self ticket doesn't have sufficient access to target user.
+    - 16 (decimal) or 0x10 (hexadecimal): Log audit events on encryption type (ETYPE) and bad options errors. This value indicates what information the KDC will write to event logs and to audits in the security event log. Event ID 4769 with a failure audit is logged.
