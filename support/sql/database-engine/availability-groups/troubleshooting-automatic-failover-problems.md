@@ -303,3 +303,4 @@ ODBC Error: [42000] [Microsoft][SQL Server Native Client 11.0][SQL Server]Login 
 **Resolution**
 
 Review [Case 2: Insufficient NT Authority\SYSTEM account permissions](#case-2-insufficient-nt-authoritysystem-account-permissions).
+
