@@ -6,6 +6,7 @@ ms.custom: sap:Database Engine
 ms.reviewer: jeffwil
 ms.prod: sql 
 ---
+
 # Updates to the Microsoft Update detection logic for SQL Server servicing
 
 _Applies to:_ &nbsp; SQL Server 2019, SQL Server 2017, SQL Server 2016
