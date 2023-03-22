@@ -30,7 +30,6 @@ These errors occur if both the following conditions are true:
 
 The error occurs because of a change in the default behavior of the client drivers. Older versions of client drivers are designed to assume that data encryption is **OFF** by default. The new drivers assume this setting to be **ON** by default. Because data encryption is set to **ON**, the driver tries to validate the server's certificate and fails.
 
-
 ### Solutions
 
 - **Solution 1:** Use Microsoft OLE DB Driver for SQL Server 18.x. You can download the driver from [Release notes for the Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/release-notes-for-oledb-driver-for-sql-server).
