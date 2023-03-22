@@ -137,3 +137,4 @@ The following table lists typical causes and resolutions for timeout expired err
 ## See also
 
 - [Troubleshoot connectivity issues in SQL Server](../connect/resolve-connectivity-errors-overview.md)
+
