@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how to view and transfer FSMO roles.
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012  
+_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012  
 _Original KB number:_ &nbsp; 324801
 
 ## Summary
@@ -32,7 +32,7 @@ In a forest, there are at least five FSMO roles that are assigned to one or more
 - Domain naming master: The domain naming master domain controller controls the addition or removal of domains in the forest. There can be only one domain naming master in the whole forest.
 - Infrastructure Master: The infrastructure is responsible for updating references from objects in its domain to objects in other domains. At any one time, there can be only one domain controller acting as the infrastructure master in each domain.
     > [!NOTE]
-    > the Infrastructure Master (IM) role should always be set to a valid domain controller to avoid errors being reported. IM role is often not needed anymore as it has no work to do. Refer to the articles linked below about details. In summary, the scenarios are:
+    > The Infrastructure Master (IM) role should always be set to a valid domain controller to avoid errors being reported. The IM role isn't often needed anymore as it has no work to do. Refer to the articles linked below about details. In summary, the scenarios are:
     >
     > - All domain controllers in the domain are Global Catalogs.
     > - The forest is configured to use the Recycle Bin.
@@ -110,12 +110,12 @@ For more information, see:
 - [Active Directory FSMO roles in Windows](/troubleshoot/windows-server/identity/fsmo-roles)
 - [FSMO placement and optimization on Active Directory domain controllers](https://support.microsoft.com/help/223346)
 - [Flexible Single Master Operation Transfer and Seizure Process](https://support.microsoft.com/help/223787)
-- [HOW TO: Use Ntdsutil to find and clean up duplicate security identifiers in Windows Server](https://support.microsoft.com/help/816099)
-- [Troubleshoot DNS Event ID 4013: The DNS server was unable to load AD integrated DNS zones](https://support.microsoft.com/help/2001093)
+- [HOW TO: Use Ntdsutil to find and clean up duplicate security identifiers](https://support.microsoft.com/help/816099)
+- [Troubleshoot DNS Event ID 4013 (The DNS server was unable to load AD integrated DNS zones)](https://support.microsoft.com/help/2001093)
 - [DCPROMO demotion fails if unable to contact the DNS infrastructure master](https://support.microsoft.com/help/2694933)
 - [FSMO Roles](/openspecs/windows_protocols/ms-adts/2aae4593-66fa-4d89-a921-1625b19af5b7)
 - [Perform initial recovery](/windows-server/identity/ad-ds/manage/ad-forest-recovery-perform-initial-recovery)
 - [AD Forest Recovery - Seizing an operations master role](/windows-server/identity/ad-ds/manage/ad-forest-recovery-seizing-operations-master-role)
-- [To clean up server metadata by using Ntdsutil](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup#to-clean-up-server-metadata-by-using-ntdsutil)
+- [Clean up Active Directory Domain Controller server metadata](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup#to-clean-up-server-metadata-by-using-ntdsutil)
 - [Planning Operations Master Role Placement](/windows-server/identity/ad-ds/plan/planning-operations-master-role-placement)
 - [Move-ADDirectoryServerOperationMasterRole](/powershell/module/activedirectory/move-addirectoryserveroperationmasterrole)
