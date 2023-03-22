@@ -262,6 +262,6 @@ The registry entries that are listed in this section must be added to the follow
 
     - 1 (decimal) or 0x1 (hexadecimal): Audit unknown SPN errors in the security event log. Event ID 4769 is logged with a failed audit.
     - 2 (decimal) or 0x2 (hexadecimal): Log PKINIT errors. This logs a KDC warning event ID 21 (enabled by default) to the system event log. PKINIT is an Internet Engineering Task Force (IETF) Internet draft for _Public Key Cryptography for Initial Authentication in Kerberos_.
-    - 4 (decimal) or 0x4 (hexadecimal): Log all KDC errors. This logs KDC event ID 24 (example of U2U required problems) to the system event log.
+    - 4 (decimal) or 0x4 (hexadecimal): Log all KDC errors. This logs a KDC event ID 24 (example of U2U required problems) to the system event log.
     - 8 (decimal) or 0x8 (hexadecimal): Log a KDC warning event ID 25 in the system log when the user who asks for the S4U2Self ticket doesn't have sufficient access to the target user.
     - 16 (decimal) or 0x10 (hexadecimal): Log audit events on encryption type (ETYPE) and bad options errors. This value indicates what information the KDC will write to event logs and to audits in the security event log. Event ID 4769 is logged with a failed audit.
