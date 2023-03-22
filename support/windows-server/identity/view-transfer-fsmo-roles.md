@@ -36,6 +36,7 @@ In a forest, there are at least five FSMO roles that are assigned to one or more
     >
     > - All domain controllers in the domain are Global Catalogs.
     > - The forest is configured to use the Recycle Bin.
+    > 
     > The IM role should still always be set to a valid domain controller to avoid errors being reported in monitoring systems.
 - Relative ID (RID) Master: The RID master is responsible for processing RID pool requests from all domain controllers in a particular domain. At any one time, there can be only one domain controller acting as the RID master in the domain.
 - PDC Emulator: The PDC emulator is a domain controller that advertises itself as the primary domain controller (PDC) to workstations, member servers, and domain controllers that are running earlier versions of Windows. For example, if the domain contains computers that are not running Microsoft Windows XP Professional or Microsoft Windows 2000 client software, or if it contains Microsoft Windows NT backup domain controllers, the PDC emulator master acts as a Windows NT PDC. It is also the Domain Master Browser, and it handles password discrepancies. At any one time, there can be only one domain controller acting as the PDC emulator master in each domain in the forest.  
