@@ -96,12 +96,12 @@ For example, assume that you have to transfer the Schema master role. The Schema
 > - All domain controllers in the domain are Global Catalogs (GCs). In this case, the GCs get updates that remove cross-domain references.
 > - The AD Recycle Bin is enabled in the forest. In this case, each DC is responsible for updating its references.
 >
-> We recommend you still define a proper owner of the IM to avoid errors and warnings from monitoring tools.
+> We recommend you still define a proper owner of the infrastructure master to avoid errors and warnings from monitoring tools.
 >
 > If you still need the infrastructure master role:  
 > Don't put the infrastructure master role on the same DC as the global catalog server. If the infrastructure master runs on a global catalog server, it stops updating object information because it does not contain any references to objects that it doesn't hold. This is because a global catalog server holds a partial replica of every object in the forest.
 >
-> The infrastructure master role isn't in use anymore once you enable Active Directory Recycle Bin. AD Recycle Bin changes the approach to handling object referrals that are being removed.
+> The infrastructure master role isn't used anymore once you enable Active Directory Recycle Bin. AD Recycle Bin changes the approach to handling object referrals that are being removed.
 >
 > To test whether a DC is also a global catalog server, follow these steps:
 >  
