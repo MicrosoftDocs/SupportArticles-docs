@@ -28,7 +28,7 @@ Assume that you have Microsoft 365 client applications and the **RoamingSettings
 
 ## Cause
 
-Microsoft 365 no longer supports the **RoamingSettingsDisabled** registry key:
+Microsoft 365 doesn't support Roaming Settings for MRU:
 
 - HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\Common\Roaming\RoamingSettingsDisabled
 - HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Roaming\RoamingSettingsDisabled
