@@ -21,7 +21,7 @@ If you're viewing the **Change history** tab after its first integration with Az
 * [Failed to register Microsoft.ChangeAnalysis resource provider](#failed-to-register).
 * [This is taking longer than expected](#taking-longer-than-expected).
 
-### <a id="not-enough-permission-to-register"></a> "You don't have enough permissions to register Microsoft.ChangeAnalysis resource provider" error message
+### <a id="not-enough-permission-to-register"></a>You don't have enough permissions to register Microsoft.ChangeAnalysis resource provider
 
 You're receiving this error message because your role in the current subscription isn't associated with the `Microsoft.Support/register/action` scope. For example, you aren't the owner of your subscription and instead received shared access permissions through a coworker (for example, view access to a resource group).
 
@@ -39,7 +39,7 @@ To resolve the issue, contact the owner of your subscription to register the `Mi
     Register-AzResourceProvider -ProviderNamespace "Microsoft.ChangeAnalysis"
     ```
 
-### <a id="failed-to-register"></a>"Failed to register Microsoft.ChangeAnalysis resource provider" error message
+### <a id="failed-to-register"></a>Failed to register Microsoft.ChangeAnalysis resource provider
 
 This error message is likely a temporary internet connectivity issue since:
 
@@ -48,7 +48,7 @@ This error message is likely a temporary internet connectivity issue since:
 
 Try refreshing the page and checking your internet connection. If the error persists, [submit an Azure support ticket](https://azure.microsoft.com/support/).
 
-### <a id="taking-longer-than-expected"></a>"This is taking longer than expected" error message
+### <a id="taking-longer-than-expected"></a>This is taking longer than expected
 
 You receive this error message when the registration takes longer than two minutes. While unusual, it doesn't mean something went wrong.
 
@@ -61,7 +61,7 @@ Changes should show up within a few hours of the app restart. If your changes st
 
 ## <a id="azure-lighthouse-subscription-not-supported"></a>Azure Lighthouse subscription is not supported
 
-### "Unauthorized to get changes" error message
+### Unauthorized to get changes
 
 Often, this error message includes the following text:
 
@@ -71,7 +71,7 @@ Azure Lighthouse allows for cross-tenant resource administration. However, cross
 
 If this is a blocking issue for you, [submit an Azure support ticket](https://azure.microsoft.com/support/) to describe how you're trying to use Change Analysis.
 
-## <a id="error-getting-changes"></a>Resolve the "An error occurred while getting changes. Please refresh this page or come back later to view changes" error message
+## <a id="error-getting-changes"></a>An error occurred while getting changes. Please refresh this page or come back later to view changes
 
 When changes can't be loaded, Azure Monitor's Change Analysis service presents this general error message. Here are a few known causes:
 
@@ -80,20 +80,20 @@ When changes can't be loaded, Azure Monitor's Change Analysis service presents t
 
 Refreshing the page after a few minutes usually fixes this issue. If the error persists, [submit an Azure support ticket](https://azure.microsoft.com/support/).
 
-## <a id="partial-data-loaded"></a>Resolve the "Only partial data loaded" error message
+## <a id="partial-data-loaded"></a>Only partial data loaded
 
 This error message may occur in the Azure portal when loading change data via the Change Analysis home page. Typically, the Change Analysis service calculates and returns all change data. However, in a network failure or a temporary outage of service, you may receive an error message indicating only partial data was loaded.
 
 To load all change data, try waiting a few minutes and refreshing the page. If you're still only receiving partial data, [submit an Azure support ticket](https://azure.microsoft.com/support/).
 
-## <a id="not-enough-permission-to-view-some-changes"></a>Resolve the "You don't have enough permissions to view some changes. Contact your Azure subscription administrator" error message
+## <a id="not-enough-permission-to-view-some-changes"></a>You don't have enough permissions to view some changes. Contact your Azure subscription administrator
 
 This general unauthorized error message occurs when the current user doesn't have sufficient permissions to view the change. At a minimum, the following permissions are required for these corresponding actions:
 
 * To view infrastructure changes returned by Azure Resource Graph and Azure Resource Manager, reader access is required.
 * For web app in-guest file changes and configuration changes, a contributor role is required.
 
-## Resolve the "Cannot see in-guest changes for newly enabled Web App" error message
+## Cannot see in-guest changes for newly enabled Web App
 
 You may not immediately see web app in-guest file changes and configuration changes. Prepare for brief downtime and restart your web app. After that, you should be able to view changes within 30 minutes. If not, [submit an Azure support ticket](https://azure.microsoft.com/support/).
 
