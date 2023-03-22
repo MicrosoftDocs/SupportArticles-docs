@@ -32,9 +32,9 @@ In a forest, there are at least five FSMO roles that are assigned to one or more
 - Domain naming master: The domain naming master domain controller controls the addition or removal of domains in the forest. There can be only one domain naming master in the whole forest.
 - Infrastructure Master: The infrastructure is responsible for updating references from objects in its domain to objects in other domains. At any one time, there can be only one domain controller acting as the infrastructure master in each domain.
     > [!NOTE]
-    > the Infrastructure Master (IM) role should always be set to a valid domain controller to avoid errors being reported. IM role is often not needed anymore as it has no work to do. Please refer to the articles linked below about details. In summary the scenarios are:
+    > the Infrastructure Master (IM) role should always be set to a valid domain controller to avoid errors being reported. IM role is often not needed anymore as it has no work to do. Refer to the articles linked below about details. In summary, the scenarios are:
     >
-    > - All Domain Controllers in the domain are Global Catalogs.
+    > - All domain controllers in the domain are Global Catalogs.
     > - The forest is configured to use the Recycle Bin.
 
 - Relative ID (RID) Master: The RID master is responsible for processing RID pool requests from all domain controllers in a particular domain. At any one time, there can be only one domain controller acting as the RID master in the domain.
