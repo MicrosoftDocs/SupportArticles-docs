@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article describes how to view and transfer FSMO roles.
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012  
+_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012  
 _Original KB number:_ &nbsp; 324801
 
 ## Summary
@@ -116,6 +116,6 @@ For more information, see:
 - [FSMO Roles](/openspecs/windows_protocols/ms-adts/2aae4593-66fa-4d89-a921-1625b19af5b7)
 - [Perform initial recovery](/windows-server/identity/ad-ds/manage/ad-forest-recovery-perform-initial-recovery)
 - [AD Forest Recovery - Seizing an operations master role](/windows-server/identity/ad-ds/manage/ad-forest-recovery-seizing-operations-master-role)
-- [Clean up Active Directory Domain Controller server metadata](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup#to-clean-up-server-metadata-by-using-ntdsutil)
+- [Clean up server metadata using the command line](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup#clean-up-server-metadata-using-the-command-line)
 - [Planning Operations Master Role Placement](/windows-server/identity/ad-ds/plan/planning-operations-master-role-placement)
 - [Move-ADDirectoryServerOperationMasterRole](/powershell/module/activedirectory/move-addirectoryserveroperationmasterrole)
