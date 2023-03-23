@@ -5578,6 +5578,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/sql/install/error-install-sql-server-2005-sp4.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/error-install-sql-server-2005-sp4",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/sql/install/naming-schema-and-fix-area.md",
       "redirect_url": "/troubleshoot/sql/database-engine/install/windows/naming-schema-and-fix-area",
       "redirect_document_id": true
@@ -5720,11 +5725,6 @@
     {
       "source_path": "support/sql/general/servicing-models-sql-server.md",
       "redirect_url": "/troubleshoot/sql/releases/servicing-models-sql-server",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "support/sql/install/error-install-sql-server-2005-sp4.md",
-      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/user-data-log-directory-invalid",
       "redirect_document_id": true
     }
 ]
