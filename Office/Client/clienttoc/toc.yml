@@ -535,8 +535,6 @@
           href: ../excel/get-latest-excel-viewer.md
         - name: Hyperlink to mht file fails to load
           href: ../excel/hyperlink-to-mht-file-fails-to-load.md
-        - name: Incorrect icon shows when inserting an object
-          href: ../excel/inserted-object-icon-incorrect.md
         - name: Inquire COM add-in options don't respond
           href: ../excel/inquire-com-add-in-not-respond.md
         - name: INTERCEPT statistical functions
@@ -651,8 +649,6 @@
           href: ../excel/team-explorer-export-fails.md
         - name: Use a worksheet function in a VB macro
           href: ../excel/worksheet-function-in-vb-macro.md
-        - name: Use cell references and defined names in criteria
-          href: ../excel/use-cell-references-defined-names.md
         - name: Use defined names to update a chart range
           href: ../excel/defined-names-to-update-chart-range.md
         - name: Use left, right, mid, and len functions in VB
