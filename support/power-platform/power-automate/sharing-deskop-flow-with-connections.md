@@ -1,8 +1,9 @@
 ---
 title: Sharing a desktop flow with connections to other co-owners
 description: Desktop flows containing connections used by cloud connectors can be shared as every other desktop flow. For the time being though, such a flow, if modified by multiple owners, may result in erroneous behavior.
+ms.author: pefelesk
 ms.reviewer: pefelesk
-ms.date: 9/21/2022
+ms.date: 03/23/2023
 ms.subservice: power-automate-desktop-flows
 ---
 
