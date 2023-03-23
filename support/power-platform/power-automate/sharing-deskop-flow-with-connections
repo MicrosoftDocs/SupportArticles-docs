@@ -14,18 +14,17 @@ For the time being though, such a flow, if modified by multiple owners, may resu
 
 ## Example:
 
-- Co-Owner A creates a desktop flow that utilizes SharePoint connector actions (thus a working SharePoint connection they own).
-- Co-Owner A shares the desktop flow with Co-Owner B.
-- Co-Owner B tries to execute the desktop flow and receives an error since they do not have access to the SharePoint connection in it.
-- Co-Owner B modifies the SharePoint action to use a connection they own and saves the flow.
-- Co-Owner B can now execute the flow successfully but Co-Owner A is now receiving an error since  they do not own the SharePoint connection in use.
+- Co-owner A creates a desktop flow that utilizes SharePoint connector actions (resulting in a working SharePoint connection co-owner A owns).
+- Co-owner A shares the desktop flow with co-owner B.
+- Co-owner B tries to execute the desktop flow and receives an error since they do not have access to the SharePoint connection that the flow references.
+- Co-owner B modifies the SharePoint action to use a connection that co-owner B owns, and saves the flow.
+- Co-owner B can now execute the flow successfully. However, co-owner A is now receiving an error since they do not own the SharePoint connection in use (owned by co-owner B).
  
 
-Even if connections are left unchanged, if Co-Owner B saves the flow, if for example they add a desktop flow action, the flow will be saved with an erroneous state, resulting in failed execution for and every Co-Owner of the said desktop flow.
-
+When this happens, the desktop flow will be saved in an erroneous state even if the connection is left unchanged. In the above scenario for example, co-owner B saving the flow with added desktop flow action will result in a failed execution for every co-owner of the desktop flow.
  
 
 ## Proposed approach:
 
-If you wish to provide co-owner access during sharing to desktop flows, It is suggested to create copies of those flows, dedicated to the co-owners that will be working on them.
+Create copies of desktop flows dedicated to every co-owner who will work on them. In the above scenario for example, create two copies of the desktop flow. Copy of desktop flow for co-owner A uses SharePoint connection owned by co-owner A. And copy of desktop flow for co-owner B uses SharePoint connection owned by co-owner B. 
 
