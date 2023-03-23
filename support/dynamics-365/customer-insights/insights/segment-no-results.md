@@ -9,7 +9,7 @@ ms.date: 03/21/2023
 
 # Segments return no or zero members
 
-This article provides functional guidance to find out why a segment returns with no members. Use this troubleshooting guide when you expect the segment to return members but it doesn't.
+This article provides functional guidance to find out why a [segment](/dynamics365/customer-insights/segments) returns with no members. Use this troubleshooting guide when you expect the segment to return members but it doesn't.
 
 ## Prerequisites
 
