@@ -27,7 +27,7 @@ When installing a Cumulative Update or a Service Pack for a SQL Server instance,
 
 When The problem occurs, the SQL Server Setup log file *Summary.txt* has messages similar to one of the following:
 
- ```console
+```console
   Detailed results:
 
       Feature:                       Database Engine Services
@@ -45,7 +45,7 @@ When The problem occurs, the SQL Server Setup log file *Summary.txt* has message
       Error description:             The User Data directory in the registry is not valid. Verify DefaultData key under the instance hive points to a valid directory.
 
       Error help link:               http://go.microsoft.com/fwlink?LinkId=20476&ProdName=Microsoft+SQL+Server&EvtSrc=setup.rll&EvtID=50000&ProdVer=11.0.7001.0&EvtType=0xD8FB5EBA%400x97A656BB%401306%4067&EvtType=0xD8FB5EBA%400x97A656BB%401306%4067
-  ```
+```
 
  ```console
   Detailed results:
