@@ -3,7 +3,7 @@ title: IPv6 support in Azure Active Directory (Azure AD)
 description: Learn about Internet Protocol version 6 (IPv6) support in Azure Active Directory (Azure AD). Review what your organization needs to do to accommodate IPv6.
 ms.service: active-directory
 ms.subservice: aad-general
-ms.date: 03/17/2023
+ms.date: 03/23/2023
 ms.author: v-dele
 author: DennisLee-DennisLee
 ms.reviewer: lhuangnorth, gautama, amycolannino, joflore, mariourrutia
@@ -49,6 +49,13 @@ If you have public IPv6 addresses representing your network, take the actions th
 ### Named locations
 
 Named locations are shared between many features, such as Conditional Access, Identity Protection, and B2C. Customers should partner with their network administrators and internet service providers (ISPs) to identify their public-facing IPv6 addresses. Customers should then use this list to [create or update named locations, to include their identified IPv6 addresses](/azure/active-directory/conditional-access/location-condition#ip-address-ranges).
+
+### Conditional Access
+
+When configuring Conditional Access policies, organizations can choose to include or exclude locations as a condition. These named locations may include public IPv4 or IPv6 addresses, country or region, or unknown areas that don't map to specific countries or regions.
+
+- If you add IPv6 ranges to an existing named location, used in existing Conditional Access policies, no changes are required.
+- If you create new named locations for your organization's IPv6 ranges, you must update relevant Conditional Access policies with these new locations.
 
 #### Cloud proxies and VPNs
 
