@@ -97,7 +97,7 @@ Get-AutopilotDiagnostics -CABFile <pathToOutputCabFile>
 
 ## Identify unexpected reboots
 
-Reboots are supported on the ESP during the device setup phase (not supported during the account setup phase). Reboots during the device ESP process must be managed by Intune. For example, in the created package, you should specify the return codes to perform a reboot by Intune. There are some policies that conflict with the ESP and Microsoft is aware of them. For unexpected reboots, you can use the reboot-URI CSP to detect what is triggering a reboot. In Event Viewer, an event is logged as follows:
+Reboots are supported on the ESP during the device setup phase (not supported during the account setup phase). Reboots during the device ESP process must be managed by Intune. For example, in the created package, you should specify the return codes to perform a reboot by Intune. There are some policies that conflict with the ESP and Microsoft is aware of them. For unexpected reboots, you can use the reboot-URI CSP to detect what triggers a reboot. In Event Viewer, an event is logged as follows:
 
 ```output
 channel="MDM_DIAGNOSTICS_ADMIN_CHANNEL"
