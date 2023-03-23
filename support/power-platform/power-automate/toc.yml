@@ -167,6 +167,8 @@
           href: reset-ui-flow-service-when-bad-state.md
         - name: Recorder not recording applications
           href: recorder-not-recording-applications.md
+        - name: Sharing a desktop flow with connections to other co-owners
+          href: sharing-deskop-flow-with-connections.md
         - name: Some actions appear to be missing or aren't visible
           href: actions-not-available.md
         - name: Tips on working with SQL queries
