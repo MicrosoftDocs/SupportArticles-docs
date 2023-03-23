@@ -50,7 +50,7 @@ If you have public IPv6 addresses representing your network, take the actions th
 
 Named locations are shared between many features, such as Conditional Access, Identity Protection, and B2C. Customers should partner with their network administrators and internet service providers (ISPs) to identify their public-facing IPv6 addresses. Customers should then use this list to [create or update named locations, to include their identified IPv6 addresses](/azure/active-directory/conditional-access/location-condition#ip-address-ranges).
 
-### Conditional Access
+#### Conditional Access
 
 When configuring Conditional Access policies, organizations can choose to include or exclude locations as a condition. These named locations may include public IPv4 or IPv6 addresses, country or region, or unknown areas that don't map to specific countries or regions.
 
