@@ -15,15 +15,15 @@ _Original KB number:_ &nbsp; 2565113
 
 ## Symptoms
 
-When installing a Cumulative Update or a Service Pack for a SQL Server instance, the setup process may fail with one of the following error messages
+When installing a Cumulative Update or a Service Pack for a SQL Server instance, the setup process may fail with one of the following error messages:
 
- > The User Data directory in the registry is not valid. Verify DefaultData key under the instance hive   points to a valid directory.
-  >
-  > Error code: 0x851A0043
+> The User Data directory in the registry is not valid. Verify DefaultData key under the instance hive   points to a valid directory.
+>
+> Error code: 0x851A0043
 
- > The User Log directory in the registry is not valid. Verify DefaultLog key under the instance hive  points to a valid directory.
-  >
-  > Error code: 0x851A0044
+> The User Log directory in the registry is not valid. Verify DefaultLog key under the instance hive  points to a valid directory.
+>
+> Error code: 0x851A0044
 
 When The problem occurs, the SQL Server Setup log file *Summary.txt* has messages similar to one of the following:
 
