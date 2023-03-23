@@ -75,7 +75,7 @@ If the relationship between the table used for segmentation and the unified cust
 
 - Verify that the data types of the attributes align across tables.
 
-- The [deduplication process identifies a "winner" record during data unification](/dynamics365/customer-insights/review-unification#verify-output-tables-from-data-unification). Measures and segments created where the deduplicated profile source table in the relationship path, may use the "winner" record, leading to unexpected results.
+- The [deduplication process identifies a "winner" record during data unification](/dynamics365/customer-insights/review-unification#verify-output-tables-from-data-unification). Measures and segments created with the deduplicated profile source table in the relationship path may use the "winner" record, leading to unexpected results.
 
 Segment and measure evaluation happens by joining tables on the attributes defined in the relationships. For example, `MembershipMaster` has a relationship with the *Contact* table, with `MembershipId` and `MembershipType` attributes. The *Contact* table has a relationship with the *Customer* table, containing unified customer profiles over the attributes `ContactId` and `ContactId (Source1_Contact)`. For details about the table relationship, see the screenshot below:
 
