@@ -30,8 +30,7 @@ If the _vstemplate_ file in a template doesn't adhere to the Visual Studio templ
     > To get IntelliSense support while authoring the _vstemplate_ file, add a `xmlns` attribute to the `VSTemplate` element, and assign it a value of `http://schemas.microsoft.com/developer/vstemplate/2005`.
 
 1. Save and close the _vstemplate_ file.
-1. Select the files included in your template, right-click, and select **Send to** > **Compressed (zipped) folder**.
-   The files that you selected are compressed into a _.zip_ file.
+1. Select the files included in your template, right-click, and select **Send to** > **Compressed (zipped) folder**. The files that you selected are compressed into a _.zip_ file.
 1. Place the new _.zip_ file in the same directory as the old _.zip_ file.
 1. Delete the extracted template files and the old template _.zip_ file.
 

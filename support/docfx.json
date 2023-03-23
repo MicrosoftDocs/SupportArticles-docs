@@ -548,17 +548,51 @@
       },
       "search.app": {
         "power-platform/power-apps/**/*.md": [
-          "PowerApps"
+          "PowerApps",
+          "powerapps-docs",
+          "dataverse-docs"
         ],
         "power-platform/power-automate/*.md": [
-          "Flow"
+          "Flow",
+          "powerautomate-docs"
         ],
         "power-platform/ai-builder/*.md": [
           "PowerApps",
-          "Flow"
+          "Flow",
+          "powerapps-docs",
+          "powerautomate-docs"
+        ],
+        "dynamics-365/customer-insights/**/**.*": [
+          "customerinsights-docs"
+        ],
+        "dynamics-365/customer-service/**/**.*": [
+          "D365CE",
+          "D365CS",
+          "customerservice-docs",
+          "customerserviceinsights-docs"
+        ],
+        "dynamics-365/finance/**/**.*": [
+          "FinanceAndOperations",
+          "financeandoperations-docs"
+        ],
+        "dynamics-365/fraud-protection/**/**.*": [
+          "Capaedac-fraudprotection",
+          "fraudprotection-docs"
+        ],
+        "dynamics-365/marketing/**/**.*": [
+          "D365CE",
+          "D365Mktg",
+          "marketing-docs"
+        ],
+        "dynamics-365/sales/**/**.*": [
+          "D365CE",
+          "D365Sales",
+          "sales-docs"
         ],
         "dynamics-365/supply-chain/**/**.*": [
-          "SCM"
+          "SCM",
+          "supplychainmanagement-docs",
+          "supplychaincenter-docs"
         ]
       }
     },

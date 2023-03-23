@@ -33,9 +33,7 @@ For this issue, you may see a message **No symbols are loaded**.
 Use the [Modules window](/visualstudio/debugger/how-to-use-the-modules-window) to find out the symbol loading status for your module, and which modules the debugger is treating as user code, or [My Code](/visualstudio/debugger/just-my-code).
 
 - The **Symbol Status** column indicates whether symbols loaded correctly for the module.
-
 - The **User code** column indicates whether the module you're trying to debug is classified as My Code. If it's showing incorrectly as My Code, you probably have a release build deployed to the server. Release binaries are optimized and are never considered as My Code, so either disable Just My Code or deploy a debug build to the server.
-
 - If the **User code** setting is correct, but symbols aren't loaded, verify that the debugger is using the correct symbol files. The debugger only loads symbols (.pdb files) that exactly match the .pdb files created when an app was built (that is, the original .pdb files or copies). For remote Windows debugging, by default PDB files are read on the Visual Studio machine and not from the server. (However, msvsmon has a command line argument to enable falling back to remote .pdb files.)
 
 For more information, see [Troubleshoot breakpoints](./troubleshooting-breakpoints.md).
@@ -49,11 +47,8 @@ You may need to install the correct version of ASP.NET or ASP.NET Core on either
 Some scenarios require you to manually attach to the correct process. If you're using [Attach to Process](/visualstudio/debugger/attach-to-running-processes-with-the-visual-studio-debugger) for your scenario, and don't see the process you're expecting:
 
 - If the search process filter was previously set, check if you need to clear it.
-
 - Select **Show processes for all users** to show processes running under other user accounts.
-
 - For slow connections, you might want to disable the **Automatic refresh**.
-
 - If they're changed from defaults, the **Connection type** and **Attach to** fields may limit which processes appear in the list.
 
 ## You aren't attaching to the correct process
