@@ -2,6 +2,7 @@
 title: Troubleshooting documentation
 description: This article lists Knowledge Base (KB) and other Support articles for SQL Server.
 ms.topic: article
+ms.prod: sql
 ms.date: 11/23/2021
 ---
 # SQL Server troubleshooting

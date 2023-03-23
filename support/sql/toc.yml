@@ -87,9 +87,11 @@
         href: database-engine/availability-groups/troubleshooting-automatic-failover-problems.md
       - name: Troubleshoot availability group database in reverting state
         href: database-engine/availability-groups/troubleshoot-availability-group-database-reverting-state.md
+      - name: Troubleshooting intermittent connection timeouts between availability group replicas
+        href: database-engine/availability-groups/troubleshooting-intermittent-connection-timeouts-availability-groups.md
       - name: Troubleshooting log send queuing in an Always On availability group
         href: database-engine/availability-groups/troubleshooting-log-send-queuing-in-alwayson-availability-group.md
-      - name: Troubleshooting on Always On issues
+      - name: Troubleshooting Always On issues
         href: database-engine/availability-groups/troubleshooting-alwayson-issues.md
       - name: Troubleshooting recovery queueing in an Availability Group
         href: database-engine/availability-groups/troubleshooting-recovery-queuing-in-alwayson-availability-group.md
@@ -281,8 +283,6 @@
         href: database-engine/general/sql-server-azure-sql-database-improvements.md
       - name: Policy for untested .NET Framework assemblies
         href: database-engine/general/policy-untested-net-framework-assemblies.md
-      - name: Servicing model
-        href: general/servicing-models-sql-server.md
   - name: Installation, Patching, Upgrade, Uninstall
     items:
     - name: .Net Framework requirements for SQL Server
@@ -309,10 +309,6 @@
       href: database-engine/install/windows/installation-fails-if-remove-user-right.md
     - name: Invalid User Directory message when installing CU or SP
       href: database-engine/install/windows/error-install-sql-server-2005-sp4.md
-    - name: New MU Servicing Model
-      href: database-engine/install/windows/new-mu-servicing-model.md
-    - name: Naming schema and Fix areas for SQL updates
-      href: database-engine/install/windows/naming-schema-and-fix-area.md
     - name: Permission error when you use a volume mount point
       href: database-engine/install/windows/permission-error-use-volume-mount-point.md
     - name: Remove a partial installation of SQL server
@@ -775,6 +771,12 @@
     href: releases/faq-acronyms.md
   - name: Latest updates and version history
     href: releases/download-and-install-latest-updates.md
+  - name: Microsoft Update Detection logic
+    href: releases/new-mu-servicing-model.md
+  - name: Naming schema and Fix areas for SQL updates
+    href: releases/naming-schema-and-fix-area.md
+  - name: Servicing model
+    href: releases/servicing-models-sql-server.md
   - name: Version and edition of SQL Server engine
     href: releases/find-my-sql-version.md
   - name: Version and edition of SQL components
@@ -783,6 +785,12 @@
     items:
     - name: SQL Server 2022 build versions
       href: releases/sqlserver-2022/build-versions.md
+    - name: Cumulative Update 2
+      items:
+      - name: Cumulative Update 2 (KB5023127)
+        href: releases/sqlserver-2022/cumulativeupdate2.md
+      - name: 'FIX: Error when setting the SQL Server Agent job history log'
+        href: releases/sqlserver-2022/error-set-sql-server-agent-job-history-log.md
     - name: Cumulative Update 1
       items:
       - name: Cumulative Update 1 (KB5022375)

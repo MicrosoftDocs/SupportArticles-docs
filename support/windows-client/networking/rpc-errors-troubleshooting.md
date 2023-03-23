@@ -1,7 +1,7 @@
 ---
 title: RPC error troubleshooting guidance
 description: Learn how to troubleshoot Remote Procedure Call (RPC) errors that occur during computer-to-computer communication. Such communication can involve Windows Management Instrumentation (WMI), SQL Server, Active Directory operations, or remote connections.
-ms.date: 12/30/2022
+ms.date: 03/10/2023
 ms.prod: windows-client
 ms.topic: troubleshooting
 author: v-tappelgate
@@ -188,11 +188,11 @@ In the filtered data, look for the **EPM** entry in the **Protocol** column.
 
 Look for a response from EPM (on the server) that includes a dynamic port number. If the dynamic port number is present, note it for future reference.
 
-:::image type="content" source="media/rpc-errors-troubleshooting/dynamic-port-number.png" alt-text="Screenshot of Network Monitor that shows dynamic port highlighted." border="false":::
+:::image type="content" source="media/rpc-errors-troubleshooting/dynamic-port-number.png" alt-text="Screenshot of Network Monitor that shows dynamic port highlighted.":::
 
 Refilter the trace data for the dynamic port number and the server IP address. For example, use a filter string such as **tcp.port==\<_dynamic-port-allocated_> and ipv4.address==\<_server-ip_>**. In this filter string, \<_dynamic-port-allocated_> represents the dynamic port number and \<_server-ip_> represents the IP address of the server.
 
-:::image type="content" source="media/rpc-errors-troubleshooting/filtered-trace.png" alt-text="Screenshot of Network Monitor that has a filter applied." border="false":::
+:::image type="content" source="media/rpc-errors-troubleshooting/filtered-trace.png" alt-text="Screenshot of Network Monitor that has a filter applied.":::
 
 In the filtered data, look for evidence that the client connected successfully to the dynamic port, or look for any network issues that might have occurred.
 
@@ -200,7 +200,7 @@ In the filtered data, look for evidence that the client connected successfully t
 
 The most common cause of "RPC server unavailable" errors is that the client can't connect to the dynamic port that was allocated. The client-side trace would then show TCP SYN retransmits for the dynamic port.
 
-:::image type="content" source="media/rpc-errors-troubleshooting/tcp-syn-retransmit.png" alt-text="Screenshot of Network Monitor that shows TCP SYN retransmits." border="false":::
+:::image type="content" source="media/rpc-errors-troubleshooting/tcp-syn-retransmit.png" alt-text="Screenshot of Network Monitor that shows TCP SYN retransmits.":::
 
 This behavior indicates that one of the following conditions is blocking communication:
 

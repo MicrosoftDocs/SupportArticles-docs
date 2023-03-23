@@ -1,7 +1,7 @@
 ---
 title: Windows 10 upgrade error codes
 description: Understand the error codes that may come up if something goes wrong during the Windows 10 upgrade process.
-ms.date: 10/19/2022
+ms.date: 03/13/2023
 manager: dcscontentpm
 ms.author: aaroncz
 ms.prod: windows-client
@@ -14,14 +14,14 @@ ms.reviewer: dougeby
 audience: itpro
 localization_priority: medium
 ---
-# Upgrade error codes
+# Windows 10 upgrade error codes
 
 _Applies to:_ &nbsp; Windows 10
 
 > [!NOTE]
 > This is a 400 level topic (advanced).
 >
-> See [Resolve Windows 10 upgrade errors](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors) for a full list of topics in this article.
+> For IT professionals, check more information in [Resolve Windows 10 upgrade errors](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors).
 
 If the upgrade process isn't successful, Windows Setup will return two codes:
 

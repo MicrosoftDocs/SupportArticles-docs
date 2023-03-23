@@ -148,12 +148,12 @@
       href: ./identity/find-servers-holding-fsmo-role.md
     - name: FSMO roles
       href: ./identity/fsmo-roles.md
-    - name: How to transfer or seize FSMO roles
-      href: ./identity/transfer-or-seize-fsmo-roles-in-ad-ds.md
+    - name: How to transfer or seize Operation Master roles
+      href: ./identity/transfer-or-seize-operation-master-roles-in-ad-ds.md
     - name: How to view and transfer FSMO roles
       href: ./identity/view-transfer-fsmo-roles.md
-    - name: Password change and conflict resolution function
-      href: ./identity/password-change-conflict-resolution-function.md
+    - name: Password change processing and conflict resolution function
+      href: ./identity/password-change-processing-conflict-resolution-function.md
     - name: Process of transferring and seizing FSMO roles
       href: ./identity/fsmo-transfer-seizure-process.md
   - name: Active Directory Lightweight Directory Services (AD LDS) and Active Directory Application Mode (ADAM)
