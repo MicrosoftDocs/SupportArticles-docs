@@ -35,7 +35,7 @@ When User 1 runs the app:
 - On this form:
 
   - The **Machine or machine group** field is malfunctioning as it should provide a list of user-available machines or machine groups.
-  - Instead, the field shows as a free text input. It expected a **machine group id**, which isn't transcribed on the UI.
+  - Instead, the field shows as a free text input. It expects a **machine group id**, which isn't transcribed on the UI.
 
 ## Resolution
 
@@ -54,4 +54,4 @@ The workaround for this issue is to create a connection from the **Connections**
 
 6. Select **Allow**.
 
-User 1 now have access to the running canvas app.
+User 1 now has access to the running canvas app.

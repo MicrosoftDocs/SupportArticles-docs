@@ -57,11 +57,8 @@ To troubleshoot this issue, try one or more of the following steps:
      Good starting points for debugging are the constructor and the initialization method. You can also set breakpoints in the area you want to evaluate, such as a menu command. To enable breakpoints, you must run under the debugger.
 
     1. On the **Project** menu, select **Properties**.
-
     1. On the **Property Pages** dialog box, select the **Debug** tab.
-
     1. In the **Command line arguments** box, enter the root suffix of the development environment that your VSPackage targets. For example, to select the experimental build, enter: _/RootSuffix Exp_.
-
     1. On the **Debug** menu, select **Start Debugging** or press F5.
 
         > [!NOTE]
