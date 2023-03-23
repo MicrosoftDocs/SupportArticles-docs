@@ -95,6 +95,23 @@ To use the script to examine the generated log file, run the following PowerShel
 Get-AutopilotDiagnostics -CABFile <pathToOutputCabFile>
 ```
 
+## Identify unexpected reboots
+
+Reboots are supported on the ESP during the device setup phase (not supported during the account setup phase). Reboots during the device ESP process must be managed by Intune. For example, in the created package, you should specify the return codes to perform a reboot by Intune. There are some policies that conflict with the ESP and Microsoft is aware of them. For unexpected reboots, you can use the reboot-URI CSP to detect what triggers a reboot. In Event Viewer, an event is logged as follows:
+
+```output
+channel="MDM_DIAGNOSTICS_ADMIN_CHANNEL"
+level="win:Informational"
+message="$(string.EnterpriseDiagnostics.RebootRequiredURI)"
+symbol="RebootRequiredURI"
+template="OneString"
+value="2800"
+```
+
+The following sample event indicates which URI triggers a coalesced reboot:
+
+`"[ETW [2022-08-02T13:28:10.3350735Z] [Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider] [Informational] - The following URI has triggered a reboot: (./Device/Vendor/MSFT/Policy/Config/Update/ManagePreviewBuilds)"`
+
 ## Check the registry for app deployment failures during ESP
 
 App deployment failures can cause ESP to time out. These failures can occur because of incorrect app configuration, network connectivity issues or device-specific issues.
