@@ -9,7 +9,7 @@ ms.date: 03/21/2023
 
 # Segments return no or zero members
 
-This article provides a resolution for an issue where a [segment](dynamics365/customer-insights/segments) doesn't return any members as expected.
+This article provides a resolution for an issue where a [segment](/dynamics365/customer-insights/segments) doesn't return any members as expected.
 
 ## Prerequisites
 
@@ -48,7 +48,7 @@ If the value of the attribute used in a segment rule or condition is missing for
   > [!NOTE]
   > The summary isn't available for system-generated tables and optional for the tables imported from your own Azure Data Lake Storage.
 
-- Check if the source records aren't [rejected for being corrupt](dynamics365/customer-insights/data-sources-manage#corrupt-data-sources).
+- Check if the source records aren't [rejected for being corrupt](/dynamics365/customer-insights/data-sources-manage#corrupt-data-sources).
 
 - Check if a specific value exists in the table for a given attribute. Create a measure for that table, filtered on the attribute value. Use the **Count** option to see how many records contain the value of the filtering condition. Use the **First** option on the primary key or foreign key to find a reference record.
 
