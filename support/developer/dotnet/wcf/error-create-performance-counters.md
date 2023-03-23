@@ -53,7 +53,7 @@ When your application is running the .NET Framework 4.6 or later versions, you c
 - Make sure that the user who hosts the service is either an administrator or a member of the Performance Monitor Users Windows user group.
 
 > [!NOTE]
-> The user who needs these permissions is hosting the WCF service. For example, in self-host scenarios, it is the user who is running the service. If the service is hosted through IIS, it is the [ApplicationPoolIdentity](http://www.iis.net/learn/manage/configuring-security/application-pool-identities)  user that has to be added to the user group.
+> The user who needs these permissions is hosting the WCF service. For example, in self-host scenarios, it is the user who is running the service. If the service is hosted through IIS, it is the [ApplicationPoolIdentity](https://www.iis.net/learn/manage/configuring-security/application-pool-identities)  user that has to be added to the user group.
 
 When the `appSetting` is enabled and the user who hosts the service is not an administrator or in the user group that is described previously, WCF will ignore this setting, and emit the following warning in the *svclog* file:
 
