@@ -1,0 +1,31 @@
+---
+title: Sharing a desktop flow with connections to other co-owners
+description: Desktop flows containing connections used by cloud connectors can be shared as every other desktop flow. For the time being though, such a flow, if modified by multiple owners, may result in erroneous behavior.
+ms.reviewer: pefelesk
+ms.date: 9/21/2022
+ms.subservice: power-automate-desktop-flows
+---
+
+# Sharing a desktop flow with connections to other co-owners
+
+Desktop flows containing connections used by cloud connectors can be shared as every other desktop flow.
+
+For the time being though, such a flow, if modified by multiple owners, may result in erroneous behavior.
+
+## Example:
+
+- Co-Owner A creates a desktop flow that utilizes SharePoint connector actions (thus a working SharePoint connection they own).
+- Co-Owner A shares the desktop flow with Co-Owner B.
+- Co-Owner B tries to execute the desktop flow and receives an error since they do not have access to the SharePoint connection in it.
+- Co-Owner B modifies the SharePoint action to use a connection they own and saves the flow.
+- Co-Owner B can now execute the flow successfully but Co-Owner A is now receiving an error since  they do not own the SharePoint connection in use.
+ 
+
+Even if connections are left unchanged, if Co-Owner B saves the flow, if for example they add a desktop flow action, the flow will be saved with an erroneous state, resulting in failed execution for and every Co-Owner of the said desktop flow.
+
+ 
+
+## Proposed approach:
+
+If you wish to provide co-owner access during sharing to desktop flows, It is suggested to create copies of those flows, dedicated to the co-owners that will be working on them.
+
