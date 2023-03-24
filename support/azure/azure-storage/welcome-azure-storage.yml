@@ -1,0 +1,80 @@
+### YamlMime:Landing
+
+title: Troubleshoot common issues with Azure Storage
+summary: These articles explain how to determine, diagnose, and fix various issues that you might encounter when you use Azure Storage. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+
+metadata:
+  title: Troubleshoot common issues with Azure Storage
+  description: Documentation for troubleshooting common issues with Azure Storage. # Required; article description that is displayed in search results. < 160 chars.
+  services: azure
+  ms.service: storage #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  ms.date: 03/24/2023
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Azure Storage Documentation
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Azure Storage documentation
+            url: /azure/storage/
+
+# Card
+  - title: Blob storage
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Embedded application error when install Azure backup agent
+            url: ./general/unable-to-execute-the-embedded-application-error-backup-agent.md
+          - text: Invalid blob or block content, or invalid block list
+            url: ./general/invalid-blob-or-block-content-or-invalid-block-list.md
+          - text: Optimize CreateFile function
+            url: ./general/optimize-createfile-function.md
+          - text: Request body is too large error when write to file
+            url: ./general/request-body-large.md
+          - text: Troubleshoot high CPU or disk usage issues
+            url: ./general/diagnose-high-cpu-disk-perfinsights.md
+
+# Card
+  - title: AzCopy
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Access denied when executing Azure Batch jobs
+            url: ./access-denied-execute-azure-batch-job.md
+
+# Card
+  - title: Azure Monitor metrics and logs with Storage accounts
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: How to troubleshoot Azure Information Protection policy issues
+            url: ./troubleshoot-aip-issues.md
+
+# Card
+  - title: Storage Analytic metrics and logs (classic monitoring)
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Microsoft Azure Service Fabric Logs
+            url: ./fabric-logs.md
+
+# Card
+  - title: Storage Explorer
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Tips for finding Microsoft troubleshooting content
+            url: ./search-tips-find-troubleshooting-content.md
+          - text: Use Secure File Exchange to exchange files
+            url: ./secure-file-exchange-transfer-files.md
+          - text: Domains used by Microsoft support agents
+            url: ./email-domains-support-agent.md
+                                                                                 
+
