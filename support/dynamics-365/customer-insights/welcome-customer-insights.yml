@@ -9,7 +9,7 @@ metadata:
   ms.prod: dynamics-365
   author: m-hartmann
   ms.author: mhart
-  ms.date: 01/23/2023
+  ms.date: 03/23/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -35,6 +35,14 @@ landingContent:
         links:
           - text: Troubleshoot Power Query data source refresh issues
             url: data-ingestion/power-query-data-source-refresh-issues-dataflows.md
+
+  # Card
+  - title: Insights
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Segments return no members
+            url: insights/segment-no-results.md
 
   # Card
   - title: Documentation and training
