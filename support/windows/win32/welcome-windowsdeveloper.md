@@ -1,7 +1,9 @@
 ---
 title: Troubleshooting documentation
 description: This article lists Knowledge Base (KB) and other Support articles for Windows application developer.
-ms.topic: article
+ms.topic: landing-page
+schema: Landing
+page_type: landing
 ms.date: 07/08/2020
 ---
 # Windows application developer troubleshooting

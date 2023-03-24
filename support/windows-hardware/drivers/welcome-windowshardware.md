@@ -1,7 +1,9 @@
 ---
 title: Troubleshooting documentation
 description: This article lists Knowledge Base (KB) and other Support articles for Windows hardware developer.
-ms.topic: article
+ms.topic: landing-page
+schema: Landing
+page_type: landing
 ms.date: 09/07/2020
 ---
 # Windows hardware developer troubleshooting

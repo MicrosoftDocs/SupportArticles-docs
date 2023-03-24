@@ -1,7 +1,9 @@
 ---
 title: Welcome Support articles browsers
 description: This article lists Knowledge Base (KB) and other Support articles for Microsoft Edge and Internet Explorer.
-ms.topic: article
+ms.topic: landing-page
+schema: Landing
+page_type: landing
 ms.date: 02/13/2020
 ---
 # Microsoft Edge and Internet Explorer troubleshooting
