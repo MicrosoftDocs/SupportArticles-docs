@@ -35,7 +35,7 @@ productDirectory:
   - title: BizTalk Server
     imageSrc: "media/hub-landing/biztalk.svg"
     summary: Troubleshooting articles for BizTalk Server
-    url: developer/biztalk/welcome-biztalk-server.md
+    url: developer/biztalk/welcome-biztalk-server.yml
       
   - title: .NET
     imageSrc: "media/hub-landing/logo_NET.svg"

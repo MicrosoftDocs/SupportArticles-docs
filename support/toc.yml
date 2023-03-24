@@ -19,7 +19,7 @@
 - name: System Center
   href: system-center/index.yml
 - name: Welcome
-  href: developer/biztalk/welcome-biztalk-server.md
+  href: developer/biztalk/welcome-biztalk-server.yml
 - name: Welcome
   href: developer/browsers/welcome-browsers.md
 - name: Welcome

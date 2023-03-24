@@ -12,3 +12,13 @@ metadata:
   ms.date: 03/24/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Accelerators
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: 999 acknowledgments for HIPAA 5010 
+            url: ./accelerators/999-acknowledgments-hipaa-5010.md
