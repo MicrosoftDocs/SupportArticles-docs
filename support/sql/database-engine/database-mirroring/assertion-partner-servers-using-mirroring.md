@@ -56,3 +56,4 @@ The BCP/Bulk Insert scenario is a common scenario that remains unfixed for SQL S
 ## See also
 
 [Assertion when you execute Bulk Insert or BCP](assertion-execute-bulk-insert-bcp.md)
+

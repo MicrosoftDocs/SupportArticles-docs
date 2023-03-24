@@ -32,6 +32,7 @@ When you log on to a computer for the first time and try to encrypt data, the op
 ## Workaround
 
 To work around this issue, perform the following:
+
 1. Use the built-in account to install SQL Server.
 1. Change the account that is used for the services to an Active Directory service account.
 
