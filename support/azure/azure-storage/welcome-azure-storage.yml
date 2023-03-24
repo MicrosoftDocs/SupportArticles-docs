@@ -24,30 +24,13 @@ landingContent:
         links:
           - text: Azure Storage documentation
             url: /azure/storage/
-
-# Card
-  - title: Blob storage
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Embedded application error when install Azure backup agent
-            url: ./general/unable-to-execute-the-embedded-application-error-backup-agent.md
-          - text: Invalid blob or block content, or invalid block list
-            url: ./general/invalid-blob-or-block-content-or-invalid-block-list.md
-          - text: Optimize CreateFile function
-            url: ./general/optimize-createfile-function.md
-          - text: Request body is too large error when write to file
-            url: ./general/request-body-large.md
-          - text: Troubleshoot high CPU or disk usage issues
-            url: ./general/diagnose-high-cpu-disk-perfinsights.md
-
 # Card
   - title: AzCopy
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Access denied when executing Azure Batch jobs
-            url: ./access-denied-execute-azure-batch-job.md
+          - text: Troubleshoot high CPU or disk usage issues
+            url: /azure/general/diagnose-high-cpu-disk-perfinsights.md
 
 # Card
   - title: Azure Monitor metrics and logs with Storage accounts
@@ -58,23 +41,35 @@ landingContent:
             url: ./troubleshoot-aip-issues.md
 
 # Card
+  - title: Blob storage
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Embedded application error when install Azure backup agent
+            url: /azure/general/unable-to-execute-the-embedded-application-error-backup-agent.md
+          - text: Invalid blob or block content, or invalid block list
+            url: /azure/general/invalid-blob-or-block-content-or-invalid-block-list.md
+          - text: Optimize CreateFile function
+            url: /azure/general/optimize-createfile-function.md
+          - text: Request body is too large error when write to file
+            url: /azure/general/request-body-large.md
+          - text: Troubleshoot high CPU or disk usage issues
+            url: /azure/general/diagnose-high-cpu-disk-perfinsights.md
+
+# Card
   - title: Storage Analytic metrics and logs (classic monitoring)
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Microsoft Azure Service Fabric Logs
-            url: ./fabric-logs.md
+          - text: Troubleshoot high CPU or disk usage issues
+            url: /azure/general/diagnose-high-cpu-disk-perfinsights.md
 
 # Card
   - title: Storage Explorer
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Tips for finding Microsoft troubleshooting content
-            url: ./search-tips-find-troubleshooting-content.md
-          - text: Use Secure File Exchange to exchange files
-            url: ./secure-file-exchange-transfer-files.md
-          - text: Domains used by Microsoft support agents
-            url: ./email-domains-support-agent.md
+          - text: Troubleshoot high CPU or disk usage issues
+            url: /azure/general/diagnose-high-cpu-disk-perfinsights.md
                                                                                  
 

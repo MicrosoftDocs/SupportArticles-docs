@@ -2,35 +2,31 @@
   href: welcome-azure-storage.yml
 - name: AzCopy
   items:
-  - name: Troubleshooting overview
-    href: apim-troubleshooting-series.md
+
 
 
 - name: Azure Monitor metrics and logs with Storage accounts
   items:
-  - name: Kernel Soft Reboot error c0000034
-    href: azure-stack-hci-kernel-soft-reboot-error-c0000034.md
+
 
 - name: Blob storage
   items:
   - name: Embedded application error when install Azure backup agent
-    href: unable-to-execute-the-embedded-application-error-backup-agent.md
+    href: /azure/general/unable-to-execute-the-embedded-application-error-backup-agent.md
   - name: Invalid blob or block content, or invalid block list
-    href: invalid-blob-or-block-content-or-invalid-block-list.md
+    href: /azure/general/invalid-blob-or-block-content-or-invalid-block-list.md
   - name: Request body is too large error when write to file
-    href: request-body-large.md
+    href: /azure/general/request-body-large.md
   - name: Optimize CreateFile function
-    href: optimize-createfile-function.md
+    href: /azure/general/optimize-createfile-function.md
   - name: Troubleshoot high CPU or disk usage issues
-    href: diagnose-high-cpu-disk-perfinsights.md
+    href: /azure/general/diagnose-high-cpu-disk-perfinsights.md
 
 - name: Storage Analytic metrics and logs (classic monitoring)
   items:
-  - name: Azure Stack Edge support package and device logs
-    href: azure-stack-edge-support-package-device-logs.md
+
 
 - name: Storage Explorer
   items:
-  - name: Apply out-of-band updates
-    href: apply-out-of-band-updates-to-cps.md
+
 
