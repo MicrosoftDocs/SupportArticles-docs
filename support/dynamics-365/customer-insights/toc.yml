@@ -15,3 +15,7 @@
           href: exports/error-date-fields-power-bi-connector.md
         - name: Troubleshoot segment not eligible for export
           href: exports/ineligible-segments-b-to-b.md
+    - name: Insights
+      items:
+        - name: Segments return no members
+          href: insights/segment-no-results.md
