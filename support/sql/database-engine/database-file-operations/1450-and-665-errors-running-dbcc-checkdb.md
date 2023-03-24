@@ -8,6 +8,7 @@ ms.reviewer: jopilov
 ms.custom: sap:Administration and Management
 ms.prod: sql
 ---
+
 # OS errors 665 and 1450 are reported for SQL Server files
 
 This article helps you resolve the problem where OS errors 1450 and 665 are reported for database files while executing `DBCC CHECKDB`, creating a Database Snapshot, or file growth.
