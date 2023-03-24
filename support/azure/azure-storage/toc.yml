@@ -12,15 +12,15 @@
 - name: Blob storage
   items:
   - name: Embedded application error when install Azure backup agent
-    href: /azure/general/unable-to-execute-the-embedded-application-error-backup-agent.md
+    href: ../general/unable-to-execute-the-embedded-application-error-backup-agent.md
   - name: Invalid blob or block content, or invalid block list
-    href: /azure/general/invalid-blob-or-block-content-or-invalid-block-list.md
+    href: ../general/invalid-blob-or-block-content-or-invalid-block-list.md
   - name: Request body is too large error when write to file
-    href: /azure/general/request-body-large.md
+    href: ../general/request-body-large.md
   - name: Optimize CreateFile function
-    href: /azure/general/optimize-createfile-function.md
+    href: ../general/optimize-createfile-function.md
   - name: Troubleshoot high CPU or disk usage issues
-    href: /azure/general/diagnose-high-cpu-disk-perfinsights.md
+    href: ../general/diagnose-high-cpu-disk-perfinsights.md
 
 - name: Storage Analytic metrics and logs (classic monitoring)
   items:

@@ -37,8 +37,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: How to troubleshoot Azure Information Protection policy issues
-            url: ./troubleshoot-aip-issues.md
+          - text: Troubleshoot high CPU or disk usage issues
+            url: ../general/diagnose-high-cpu-disk-perfinsights.md
 
 # Card
   - title: Blob storage
@@ -46,15 +46,15 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Embedded application error when install Azure backup agent
-            url: /azure/general/unable-to-execute-the-embedded-application-error-backup-agent.md
+            url: ../general/unable-to-execute-the-embedded-application-error-backup-agent.md
           - text: Invalid blob or block content, or invalid block list
-            url: /azure/general/invalid-blob-or-block-content-or-invalid-block-list.md
+            url: ../general/invalid-blob-or-block-content-or-invalid-block-list.md
           - text: Optimize CreateFile function
-            url: /azure/general/optimize-createfile-function.md
+            url: ../general/optimize-createfile-function.md
           - text: Request body is too large error when write to file
-            url: /azure/general/request-body-large.md
+            url: ../general/request-body-large.md
           - text: Troubleshoot high CPU or disk usage issues
-            url: /azure/general/diagnose-high-cpu-disk-perfinsights.md
+            url: ../general/diagnose-high-cpu-disk-perfinsights.md
 
 # Card
   - title: Storage Analytic metrics and logs (classic monitoring)
@@ -62,7 +62,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot high CPU or disk usage issues
-            url: /azure/general/diagnose-high-cpu-disk-perfinsights.md
+            url: ../general/diagnose-high-cpu-disk-perfinsights.md
 
 # Card
   - title: Storage Explorer
@@ -70,6 +70,5 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot high CPU or disk usage issues
-            url: /azure/general/diagnose-high-cpu-disk-perfinsights.md
-                                                                                 
+            url: ../general/diagnose-high-cpu-disk-perfinsights.md      
 
