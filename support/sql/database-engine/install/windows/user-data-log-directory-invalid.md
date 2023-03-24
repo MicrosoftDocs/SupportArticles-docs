@@ -16,40 +16,40 @@ _Original KB number:_ &nbsp; 2565113
 
 ## Symptoms
 
-When installing a Cumulative Update or a Service Pack for a SQL Server instance, the setup process may fail with one of the following error messages
+When installing a Cumulative Update or a Service Pack for a SQL Server instance, the setup process may fail with one of the following error messages:
 
- > The User Data directory in the registry is not valid. Verify DefaultData key under the instance hive   points to a valid directory.
-  >
-  > Error code: 0x851A0043
+> The User Data directory in the registry is not valid. Verify DefaultData key under the instance hive   points to a valid directory.
+>
+> Error code: 0x851A0043
 
- > The User Log directory in the registry is not valid. Verify DefaultLog key under the instance hive  points to a valid directory.
-  >
-  > Error code: 0x851A0044
+> The User Log directory in the registry is not valid. Verify DefaultLog key under the instance hive  points to a valid directory.
+>
+> Error code: 0x851A0044
 
 When The problem occurs, the SQL Server Setup log file *Summary.txt* has messages similar to one of the following:
 
- ```console
-  Detailed results:
+```console
+Detailed results:
 
-      Feature:                       Database Engine Services
+  Feature:                       Database Engine Services
 
-      Status:                        Failed: see logs for details
+  Status:                        Failed: see logs for details
 
-      Reason for failure:            An error occurred during the setup process of the feature.
+  Reason for failure:            An error occurred during the setup process of the feature.
 
-      Next Step:                     Use the following information to resolve the error, and then try the setup process again.
+  Next Step:                     Use the following information to resolve the error, and then try the setup process again.
 
-      Component name:                SQL Server Database Engine Services Instance Features
+  Component name:                SQL Server Database Engine Services Instance Features
 
-      Component error code:          0x851A0043
+  Component error code:          0x851A0043
 
-      Error description:             The User Data directory in the registry is not valid. Verify DefaultData key under the instance hive points to a valid directory.
+  Error description:             The User Data directory in the registry is not valid. Verify DefaultData key under the instance hive points to a valid directory.
 
-      Error help link:               http://go.microsoft.com/fwlink?LinkId=20476&ProdName=Microsoft+SQL+Server&EvtSrc=setup.rll&EvtID=50000&ProdVer=11.0.7001.0&EvtType=0xD8FB5EBA%400x97A656BB%401306%4067&EvtType=0xD8FB5EBA%400x97A656BB%401306%4067
-  ```
+  Error help link:               http://go.microsoft.com/fwlink?LinkId=20476&ProdName=Microsoft+SQL+Server&EvtSrc=setup.rll&EvtID=50000&ProdVer=11.0.7001.0&EvtType=0xD8FB5EBA%400x97A656BB%401306%4067&EvtType=0xD8FB5EBA%400x97A656BB%401306%4067
+```
 
- ```console
-  Detailed results:
+```console
+Detailed results:
 
   Feature:                       Database Engine Services
 
@@ -66,7 +66,7 @@ When The problem occurs, the SQL Server Setup log file *Summary.txt* has message
   Error description:             The User Log directory in the registry is not valid. Verify DefaultLog key under the instance hive points to a valid directory.
 
   Error help link:               http://go.microsoft.com/fwlink?LinkId=20476&ProdName=Microsoft+SQL+Server&EvtSrc=setup.rll&EvtID=50000&ProdVer=11.0.7001.0&EvtType=0xD8FB5EBA%400x97A656BB%401306%4068&EvtType=0xD8FB5EBA%400x97A656BB%401306%4068
-  ```
+```
 
 ## Cause
 

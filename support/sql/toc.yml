@@ -308,7 +308,7 @@
     - name: Installation fails when you remove user rights
       href: database-engine/install/windows/installation-fails-if-remove-user-right.md
     - name: Invalid User Directory message when installing CU or SP
-      href: database-engine/install/windows/error-install-sql-server-2005-sp4.md
+      href: database-engine/install/windows/user-data-log-directory-invalid.md
     - name: Permission error when you use a volume mount point
       href: database-engine/install/windows/permission-error-use-volume-mount-point.md
     - name: Remove a partial installation of SQL server
