@@ -2,6 +2,17 @@
 
 
 
+## Week of March 20, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 3/22/2023 | [How to recover unsaved Word documents](/office/troubleshoot/word/recover-lost-unsaved-corrupted-document) | modified |
+| 3/23/2023 | Incorrect icon shows when inserting an object in Excel 2019 | removed |
+| 3/23/2023 | Can’t edit certain cells in a protected worksheet using Excel for Mac | removed |
+| 3/23/2023 | How to use cell references and defined names in criteria in Excel | removed |
+
+
 ## Week of March 06, 2023
 
 
@@ -17,11 +28,3 @@
 |------|------------|--------|
 | 3/1/2023 | Troubleshooting why Word won't print | removed |
 | 3/1/2023 | How to troubleshoot printing failures in Word for O365 on Windows 10 | removed |
-
-
-## Week of February 13, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 2/16/2023 | [No email notifications for responses to Group Forms](/office/troubleshoot/microsoft-forms/no-email-notifications-for-responses-to-group-forms) | modified |
