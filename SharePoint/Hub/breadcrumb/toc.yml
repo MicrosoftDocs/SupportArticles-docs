@@ -1,3 +1,7 @@
-- name: SharePoint 
+- name: Learn
   tocHref: /
-  topicHref: /sharepoint/support/index
+  topicHref: /
+  items:
+  - name: SharePoint
+    tocHref: /sharepoint/troubleshoot/
+    topicHref: /sharepoint/troubleshoot/index
