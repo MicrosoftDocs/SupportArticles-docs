@@ -37,7 +37,7 @@ You can try to recover an unsaved Word document by:
 If you're looking for information about how to recover other recent Office files, see the following articles:
 
 - [Recover your Microsoft 365 files](https://support.microsoft.com/office/recover-your-microsoft-365-files-dc901de2-acae-47f2-9175-fb5a91e9b3c8)
-- [Recover files in Office for Mac](https://support.microsoft.com/en-us/office/recover-files-in-office-for-mac-6c6425b1-6559-4bbf-8f80-4f038402ff02)
+- [Recover files in Office for Mac](https://support.microsoft.com/office/recover-files-in-office-for-mac-6c6425b1-6559-4bbf-8f80-4f038402ff02)
 - [Find lost files after the upgrade to Windows 10 or 11](https://support.microsoft.com/windows/find-lost-files-after-the-upgrade-to-windows-10-or-11-10af49aa-b372-b067-a334-2314401297a9)
 
 If you can't open the document, or the content in the document is damaged, see [How to troubleshoot damaged documents in Word](./damaged-documents-in-word.md).
@@ -118,7 +118,7 @@ Word takes different actions to protect your changes in Word documents:
 - If Word opens a document from SharePoint or OneDrive, the program uses AutoSave to save changes to the “cloud” document. We recommend that you leave the AutoSave feature set to **On**.
     :::image type="content" source="media/recover-lost-document\autosave-on.png" alt-text="Image shows the AutoSave option in the On position.":::
 
-- If Word opens a document from your local disk or network shared folder, Word uses AutoRecover to save changes to an AutoRecover file. We recommend that you leave the AutoRecover feature set to **On**, and set the AutoRecover save interval to 5 minutes or less.
+- If Word opens a document from your local disk or network shared folder, Word uses AutoRecover to save changes to an AutoRecover file. We recommend that you leave the AutoRecover feature set to **On**, and set the AutoRecover save interval to five minutes or less.
 
     :::image type="content" source="media/recover-lost-document/word-options.png" alt-text="Screenshot shows the Save Documents section of Word options, with Autorecover set to every five minutes.":::
 
