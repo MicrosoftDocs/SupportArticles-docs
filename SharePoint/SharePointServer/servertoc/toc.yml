@@ -1,5 +1,5 @@
 - name: SharePoint Server Troubleshooting
-  href: ../sharepoint-server-welcome.md
+  href: ../sharepoint-server-welcome.yml
   items:
   - name: SharePoint troubleshooting content updates
     href: ../sharepoint-troubleshooting-content-updates.md

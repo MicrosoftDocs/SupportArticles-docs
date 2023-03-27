@@ -1,5 +1,5 @@
 - name: Outlook for Mac Troubleshooting
-  href: ../outlook-mac-welcome.md
+  href: ../outlook-mac-welcome.yml
   items:
     - name: Account
       items:

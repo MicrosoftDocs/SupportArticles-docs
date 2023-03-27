@@ -1,5 +1,5 @@
 - name: Viva Connections troubleshooting
-  href: viva-connections-welcome.md
+  href: viva-connections-welcome.yml
   items:
     - name: Can't find app in Teams mobile
       href: cant-find-app-in-teams-mobile.md

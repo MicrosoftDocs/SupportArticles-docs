@@ -1,5 +1,5 @@
 - name: Exchange hybrid deployment troubleshooting
-  href: ../exchange-hybrid-welcome.md
+  href: ../exchange-hybrid-welcome.yml
   items:
     - name: Administration
       items:

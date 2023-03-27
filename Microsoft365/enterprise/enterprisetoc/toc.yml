@@ -1,5 +1,5 @@
 - name: Microsoft 365 Enterprise Troubleshooting
-  href: ../o365-enterprise-welcome.md
+  href: ../o365-enterprise-welcome.yml
   items:
   - name: Administration
     items:
