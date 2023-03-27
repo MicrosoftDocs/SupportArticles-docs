@@ -48,6 +48,4 @@ The document collaboration experience provides **View only** support for the fol
 - PDF files
 - picture files
 
-For more information about the document collaboration experience in Outlook Web App for Microsoft 365, see [Document collaboration made easy](https://www.microsoft.com/en-us/microsoft-365/blog/2014/07/02/document-collaboration-made-easy/).
-
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
