@@ -1,6 +1,6 @@
 ---
 title: Can't connect remotely using TCP/IP
-description: This article provides resolutions for the problem where you are not be able to connect remotely to SQL Server using TCP/IP protocol.
+description: This article provides resolutions for the problem where users are not able to connect remotely to SQL Server using TCP/IP protocol.
 ms.date: 03/27/2023
 ms.custom: sap:Connection issues
 ms.technology: sql-engine-connectionissues

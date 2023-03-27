@@ -6,7 +6,7 @@ ms.custom: sap:Connection issues
 ms.reviewer: kayokon, masank
 ms.technology: sql-engine-connectionissues
 ---
-# The certificate received from the remote server was issued by an untrusted certificate authority error when you connect to SQL Server
+# "The certificate received from the remote server was issued by an untrusted certificate authority" error when you connect to SQL Server
 
 This article helps you resolve the problem that occurs when you try to make an encrypted connection to SQL Server.
 
@@ -41,16 +41,16 @@ This error occurs when you try to make an encrypted connection to SQL Server usi
 
 |Scenario|Server-side encryption|Client-side encryption  |Certificate type |Certificate issuing authority present in Trusted Root Certification Authorities store |
 |---|---|---|---|---|
-|1|Yes|No|You provision a certificate from a non-trusted source (the certificate issuing authority is not listed as a trusted authority in Trusted Root Certification Authorities on the client machine) |No|
+|1|Yes|No|You provision a certificate from a non-trusted source (the certificate issuing authority is not listed as a trusted authority in Trusted Root Certification Authorities on the client machine) |No|
 |2|Off|Yes|SQL Server self-generated certificate |Self-signed certificates do not show up in this store. |
   
-When establishing encrypted connections to SQL Server, Secure Channel (Schannel) creates the list of trusted certificate authorities by searching the Trusted Root Certification Authorities store on the local computer. During the TLS handshake, the server sends its public key certificate to the client. The issuer of a public key certificate is known as a Certificate Authority (CA). The client has to ensure that the certificate authority is one that the client trusts. This is achieved by knowing the public key of trusted CAs in advance. When Schannel detects a certificate that was issued by an untrusted certification authority, such as in the above two cases, you get the error message listed in the [Symptoms](#symptoms) section.
+When establishing encrypted connections to SQL Server, Secure Channel (Schannel) creates the list of trusted certificate authorities by searching the Trusted Root Certification Authorities store on the local computer. During the TLS handshake, the server sends its public key certificate to the client. The issuer of a public key certificate is known as a Certificate Authority (CA). The client has to ensure that the certificate authority is one that the client trusts. This is achieved by knowing the public key of trusted CAs in advance. When Schannel detects a certificate that was issued by an untrusted certification authority, such as in the previous two cases, you get the error message listed in the [Symptoms](#symptoms) section.
 
 ## Resolution
 
 If you intentionally use either a certificate from a non-trusted authority or a self-signed certificate to encrypt connections to SQL Server, you can use one of the following options:
 
-For Scenario 1: Add the certificate authority to the Trusted Root Certification Authorities store on the client computer initiating encrypted connection. To do this, complete the [Export the server certificate](#export-the-server-certificate) and [Install the root certificate authority (CA) on the client machine](#install-the-root-certificate-authority-ca-on-the-client-machine) procedures listed below in that sequence.
+For Scenario 1: Add the certificate authority to the Trusted Root Certification Authorities store on the client computer initiating encrypted connection. To do this, complete the [Export the server certificate](#export-the-server-certificate) and [Install the root certificate authority (CA) on the client machine](#install-the-root-certificate-authority-ca-on-the-client-machine) procedures listed in the next few sections in that sequence.
 
 #### Export the server certificate
 
