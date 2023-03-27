@@ -16,6 +16,13 @@ metadata:
 landingContent:
 
  # Card
+  - title: Documentation
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Internet Explorer 11 desktop app retirement FAQ
+            url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549
+
   - title: Administration
     linkLists:
       - linkListType: how-to-guide
