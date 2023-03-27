@@ -77,9 +77,8 @@ Make sure that you're authenticated to Microsoft 365. To do so, sign in to the S
 
 ## More information
 
-This article doesn't apply to Microsoft 365 Video or Microsoft Stream scenarios. For more information about Microsoft 365 Video, go to [Introducing Microsoft 365 Video](https://www.microsoft.com/en-us/microsoft-365/blog/2014/11/18/introducing-office-365-video/).
+This article doesn't apply to Microsoft 365 Video or Microsoft Stream scenarios.
 
-> [!NOTE]
-> Microsoft 365 Video will be replaced by Microsoft Stream. To learn more about the new enterprise video service that adds intelligence to video collaboration, go to https://stream.microsoft.com. 
+**Note**: Microsoft 365 Video will be replaced by Microsoft Stream. To learn about the new enterprise video service that adds intelligence to video collaboration, go to https://stream.microsoft.com.
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
