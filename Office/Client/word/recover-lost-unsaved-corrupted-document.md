@@ -52,7 +52,7 @@ If you have a Microsoft 365 subscription, check the following folder locations f
     
 **Note:** In these paths, replace \<UserName\> with your username.
 
-If you don’t find the missing file in these locations, open Word, and select **File** > **Info** > **Manage Document** > **Recover Unsaved Documents**.
+If you don't find the missing file in these locations, open Word, and select **File** > **Info** > **Manage Document** > **Recover Unsaved Documents**.
 
 :::image type="content" source="media/recover-lost-document/manage-document.png" alt-text="Screenshot shows the Manage Document option, with Recover Unsaved Documents selected.":::
 
@@ -61,8 +61,8 @@ If you still haven’t found the file, try manually searching for AutoRecover fi
 If you find any files that have the .asd extension, follow these steps:
 
 1. Open Word, and then go to **File** > **Open** > **Browse**.
-1. In the **files of type** list to the right of **File name**, select **All Files**.
-1. Right-click the backup file that you found, and then select **Open**.
+1. In the **files of type** list to the right of  **File name**, select  **All Files**.
+1. Right-click the backup file that you found, and then select  **Open**.
  
 If there are no .asd files, go to the next method.
 
@@ -79,7 +79,7 @@ If the search results don't contain the file, go to the next method.
 
 Word backup file names have a ".wbk" extension. If you have the "backup copy" option selected in Word, there might be a backup copy of the file.
 
-To check whether this option is on, select  **File** > **Options** > **Advanced**, scroll down to the  **Save** section, and then select  **Always create backup copy**.
+To check whether this option is on, select  **File** > **Options** > **Advanced**, scroll down to the  **Save**  section, and then select  **Always create backup copy**.
 
 If you have a Microsoft 365 subscription, check these two folder locations for a backup file:
 - C:\Users\\<UserName\>\AppData\Roaming\Microsoft\Word
@@ -126,7 +126,7 @@ Word takes different actions to protect your changes in Word documents:
 
 Word searches for AutoRecover files every time it starts. Therefore, you can try using the AutoRecover feature by closing and reopening Word. If Word finds any automatically recovered file, the **Document Recovery** task pane opens, and the missing document should be listed as "document name [Original]" or as "document name [Recovered]." If this occurs, double-click the file name in the **Document Recovery** pane, select **File** > **Save as**, and then save the document as a .docx file. To manually change the extension to .docx, right-click the file, and select **Rename**.
 
-**Note** In Microsoft 365 Subscription, when Word starts, it searches for AutoRecover files. If any recovered files are found, Word opens them by having a Message Bar. Select **Save** to save the recovered file as a .docx file. If there are many recovered files, Word usually opens the last-changed files, and puts the remaining files into the **Document Recovery** task pane.
+**Note:** In Microsoft 365 Subscription, when Word starts, it searches for AutoRecover files. If any recovered files are found, Word opens them by having a Message Bar. Select **Save** to save the recovered file as a .docx file. If there are many recovered files, Word usually opens the last-changed files, and puts the remaining files into the **Document Recovery** task pane.
     :::image type="content" source="media/recover-lost-document/recovered-unsaved-file.png" alt-text="Screenshot shows a header that reads, Recovered Unsaved File. This is a recovered file that is temporarily stored on your computer. There is a Save button next to it." border="false":::
 
 ### <a id="tempfiles">Searching for temporary files</a>
