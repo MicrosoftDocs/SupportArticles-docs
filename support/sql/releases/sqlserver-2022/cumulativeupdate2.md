@@ -70,7 +70,7 @@ The following update is available from the Microsoft Download Center:
 
 The following update is available from the Microsoft Update Catalog:
 
-- :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2022 CU1 now](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/updt/2023/03/sqlserver2022-kb5023127-x64_8773dc0f893badbbd32531e2e8cc7889ffcb7f54.exe)
+- :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2022 CU2 now](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/updt/2023/03/sqlserver2022-kb5023127-x64_8773dc0f893badbbd32531e2e8cc7889ffcb7f54.exe)
 
 > [!NOTE]
 >
