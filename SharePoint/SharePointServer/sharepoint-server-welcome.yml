@@ -22,7 +22,7 @@ landingContent:
         links:
           - text: Troubleshooting common SPMT issues and errors
             url: /sharepointmigration/troubleshooting-common-spmt-issues
-          - text: "Server Error in '/' Application. Access to the path is denied" when you log on to Windows SharePoint Services 2.0
+          - text: '"Server Error in / Application. Access to the path is denied" when you log on to Windows SharePoint Services 2.0'
             url: /security/access-to-the-path-is-denied-during-logon.md
           - text: How to uninstall Groove
             url: https://support.microsoft.com/help/907504

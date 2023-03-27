@@ -74,6 +74,6 @@ landingContent:
           - text: 554 5.4.14 Hop count exceeded
             url: ./mailflow/hop-count-exceeded-possible-mail-loop.md
           - text: Apps for Outlook 2013 can't activate in email
-            url: ./outlook/troubleshoot/user-interface/apps-for-outlook-2013-do-not-activate-as-expected
+            url: /outlook/troubleshoot/user-interface/apps-for-outlook-2013-do-not-activate-as-expected
           - text: Assertion Failed when editing a transport rule
             url: ./mailflow/cannot-edit-transport-rule.md

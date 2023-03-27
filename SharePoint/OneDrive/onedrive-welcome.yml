@@ -20,7 +20,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: "There is a problem with your account, please try again later" when you open Office documents from OneDrive for Business or SharePoint Online
+          - text: '"There is a problem with your account, please try again later" when you open Office documents from OneDrive for Business or SharePoint Online'
             url: ../SharePointOnline/Security/problem-with-your-account.md
           - text: OneDrive for Business sync returns the error "We can't connect to the specified SharePoint site"
             url: ./sync/enable-co-authoring-for-onedrive-synced-file.md
