@@ -216,13 +216,13 @@ mm/dd/yyyy hh:mm:ss:ms NetpValidateName: name '<domain_name>' is valid for type 
 mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: trying to find DC in domain '<domain_name>', flags: 0x40001010
 mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: failed to find a DC having account 'CLIENT1$': 0x525, last error is 0x0
 mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: status of verifying DNS A record name resolution for 'DCA.<domain_name>': 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: found DC '\\<dc_name>.<domain_name>' in the specified domain
+mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: found DC '\\<dc_fqdn>' in the specified domain
 mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpDsGetDcName returned: 0x0
 mm/dd/yyyy hh:mm:ss:ms NetpDisableIDNEncoding: using FQDN <domain_name> from dcinfo
 mm/dd/yyyy hh:mm:ss:ms NetpDisableIDNEncoding: DnsDisableIdnEncoding(UNTILREBOOT) on '<domain_name>' succeeded
 mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpDisableIDNEncoding returned: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetUseAdd to \\<dc_name>.<domain_name>\IPC$ returned 64
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: status of connecting to dc '\\<dc_name>.<domain_name>': 0x40
+mm/dd/yyyy hh:mm:ss:ms NetUseAdd to \\<dc_fqdn>\IPC$ returned 64
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: status of connecting to dc '\\<dc_fqdn>': 0x40
 mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: Function exits with status of: 0x40
 mm/dd/yyyy hh:mm:ss:ms NetpResetIDNEncoding: DnsDisableIdnEncoding(RESETALL) on '<domain_name>' returned 0x0
 mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpResetIDNEncoding on '<domain_name>': 0x0
