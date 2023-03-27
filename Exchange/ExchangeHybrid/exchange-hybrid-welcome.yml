@@ -60,7 +60,7 @@ landingContent:
           - text: Dynamic distribution group members don't receive emails
             url: ./groups-and-distribution-lists/dynamic-distribution-group-members-not-receive-emails.md
 
-  - title: Hybrid Configuration Wizard Errors
+  - title: Hybrid Configuration Errors
     linkLists:
       - linkListType: how-to-guide
         links:
