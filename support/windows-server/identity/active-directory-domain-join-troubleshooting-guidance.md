@@ -201,7 +201,7 @@ To resolve this error, follow these steps:
 
 ### Error code 0x40
 
-The following error messages occurred when you try to join the computer to the `contoso.com` domain:
+The following error messages occurred when you try to join the computer to the domain:
 
 > The specified network name is no longer available
 
@@ -210,28 +210,26 @@ The following error messages occurred when you try to join the computer to the `
 Here's an example from the *netsetup.log* file:
 
 ```output
-mm/dd/yyyy hh:mm:ss:ms NetpValidateName: checking to see if 'contoso.com' is valid as type 3 name
-mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid [ Exists ] for 'contoso.com' returned 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpValidateName: name 'contoso.com' is valid for type 3
-mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: trying to find DC in domain 'contoso.com', flags: 0x40001010
+mm/dd/yyyy hh:mm:ss:ms NetpValidateName: checking to see if '<domain_name>' is valid as type 3 name
+mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid [ Exists ] for '<domain_name>' returned 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpValidateName: name '<domain_name>' is valid for type 3
+mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: trying to find DC in domain '<domain_name>', flags: 0x40001010
 mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: failed to find a DC having account 'CLIENT1$': 0x525, last error is 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: status of verifying DNS A record name resolution for 'DCA.contoso.com': 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: found DC '\\<dc_name>.contoso.com' in the specified domain
+mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: status of verifying DNS A record name resolution for 'DCA.<domain_name>': 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: found DC '\\<dc_name>.<domain_name>' in the specified domain
 mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpDsGetDcName returned: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpDisableIDNEncoding: using FQDN contoso.com from dcinfo
-mm/dd/yyyy hh:mm:ss:ms NetpDisableIDNEncoding: DnsDisableIdnEncoding(UNTILREBOOT) on 'contoso.com' succeeded
+mm/dd/yyyy hh:mm:ss:ms NetpDisableIDNEncoding: using FQDN <domain_name> from dcinfo
+mm/dd/yyyy hh:mm:ss:ms NetpDisableIDNEncoding: DnsDisableIdnEncoding(UNTILREBOOT) on '<domain_name>' succeeded
 mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpDisableIDNEncoding returned: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetUseAdd to \\<dc_name>.contoso.com\IPC$ returned 64
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: status of connecting to dc '\\<dc_name>.contoso.com': 0x40
+mm/dd/yyyy hh:mm:ss:ms NetUseAdd to \\<dc_name>.<domain_name>\IPC$ returned 64
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: status of connecting to dc '\\<dc_name>.<domain_name>': 0x40
 mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: Function exits with status of: 0x40
-mm/dd/yyyy hh:mm:ss:ms NetpResetIDNEncoding: DnsDisableIdnEncoding(RESETALL) on 'contoso.com' returned 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpResetIDNEncoding on 'contoso.com': 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpResetIDNEncoding: DnsDisableIdnEncoding(RESETALL) on '<domain_name>' returned 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpResetIDNEncoding on '<domain_name>': 0x0
 mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x40
 ```
 
-Error 0x40 is logged when the client computer lacks network connectivity on TCP Port 88 between the client machine and the DC.
-
-To resolve this issue, run the following command to test the connection:
+This error is logged when the client computer lacks network connectivity on TCP Port 88 between the client machine and the DC. To troubleshoot this issue, you can run the following command to test the connection:
 
 ```PowerShell
 Test-NetConnection <IP Address> of Domain Controller> -Port 88
@@ -247,34 +245,35 @@ Expected Output:
 
 ![Command output](media/active-directory-domain-join-troubleshooting-guidance/test-netconnection-output-88.png)  
 
-It indicates the Kerberos Port TCP 88 is open between the client and the DC.
+The output indicates the Kerberos Port TCP 88 is open between the client and the DC.
 
 ### Error code 0x54b
 
 ![Error code 0x54b error message](media/active-directory-domain-join-troubleshooting-guidance/error-0x54b-message.png)  
 
-> [!NOTE]
-> This information is intended for a network administrator. If you are not your network's administrator, notify the administrator that you received this information, which has been recorded in the file C:\WINDOWS\debug\dcdiag.txt.
+Here is an example of the error message:
 
-The following error message occurred when DNS was queried for the service location (SRV) resource record used to locate an Active Directory Domain Controller (AD DC) for domain "contoso.com":
-
-> This operation returned because the timeout period expired.
-> Error code 0x000005B4 ERROR_TIMEOUT
-
-The query was for the SRV record for `_ldap._tcp.dc._msdcs.contoso.com`.
-
-The DNS servers used by this computer for name resolution are not responding. This computer is configured to use DNS servers with the following IP addresses:
-
-192.168.2.100
-
-Verify that this computer is connected to the network, that these are the correct DNS server IP addresses, and that at least one of the DNS servers is running.
+> Note: This information is intended for a network administrator.  If you are not your network's administrator, notify the administrator that you received this information, which has been recorded in the file C:\WINDOWS\debug\dcdiag.txt.
+>
+> The following error occurred when DNS was queried for the service location (SRV) resource record used to locate an Active Directory Domain Controller (AD DC) for domain "<domain_name>":
+>
+> The error was: "This operation returned because the timeout period expired."
+> (error code 0x000005B4 ERROR_TIMEOUT)
+>
+> The query was for the SRV record for <srv_record>
+>
+> The DNS servers used by this computer for name resolution are not responding. This computer is configured to use DNS servers with the following IP addresses:
+>
+> <ip_address>
+>
+> Verify that this computer is connected to the network, that these are the correct DNS server IP addresses, and that at least one of the DNS servers is running.
 
 Here's an example from the *netsetup.log* file:
 
 ```output
-mm/dd/yyyy hh:mm:ss:ms NetpValidateName: checking to see if 'contoso.com' is valid as type 3 name
-mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid for contoso.com returned 0x54b, last error is 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid [ Exists ] for 'contoso.com' returned 0x54b
+mm/dd/yyyy hh:mm:ss:ms NetpValidateName: checking to see if '<domain_name>' is valid as type 3 name
+mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid for <domain_name> returned 0x54b, last error is 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid [ Exists ] for '<domain_name>' returned 0x54b
 ```
 
 To resolve the 0x54b error, use these steps:
@@ -286,59 +285,60 @@ To resolve the 0x54b error, use these steps:
   For example:
 
   ```console
-  nltest /dsgetdc:contoso.com /force
+  nltest /dsgetdc:<domain_name> /force
   ```
 
   Expected Output:
 
-  ![picture 4](media/active-directory-domain-join-troubleshooting-guidance/nltest-output.png)  
+  ![nltest command output](media/active-directory-domain-join-troubleshooting-guidance/nltest-output.png)  
 
-- Run `DCDiag /v` on the closest domain controller and verify if SRV records are registered. For example: `_ldap._tcp.dc._msdcs.contoso.com`.
+- Run `DCDiag /v` on the closest domain controller and verify if SRV records are registered. For example: `_ldap._tcp.dc._msdcs.<domain_name>.com`.
 
 ### Error code 0x0000232A
 
+Error 0x0000232A is logged when the client computer lacks NetBIOS name resolution to the domain.
+
 ![Error code 0x0000232A error message](media/active-directory-domain-join-troubleshooting-guidance/error-0x0000232a-message.png)  
 
-> [!NOTE]
-> This information is intended for a network administrator. If you are not your network's administrator, notify the administrator that you received this information, which has been recorded in the file C:\WINDOWS\debug\dcdiag.txt.
+Here is an example of the error message:
 
-The domain name "contoso" may be a NetBIOS domain name. If this is the case, verify that the domain name is properly registered with WINS.
-
-If you are certain that the name is not a NetBIOS domain name, the following information can help you troubleshoot your DNS configuration.
-
-The following error occurred when DNS was queried for the service location (SRV) resource record used to locate an Active Directory Domain Controller (AD DC) for domain "contoso":
-
-> DNS server failure.
+> Note: This information is intended for a network administrator.  If you are not your network's administrator, notify the administrator that you received this information, which has been recorded in the file C:\WINDOWS\debug\dcdiag.txt.
 >
-> Error code 0x0000232A RCODE_SERVER_FAILURE
-
-The query was for the SRV record for `_ldap._tcp.dc._msdcs.contoso`.
-
-Common causes of this error include the following:
-
-- The DNS servers used by this computer contain incorrect root hints. This computer is configured to use DNS servers with the following IP addresses:
-  
-  192.168.2.100
-
-- One or more of the following zones contains incorrect delegation:
-  
-  contoso (the root zone)
+> The domain name "\<NetBIOS_name\>" might be a NetBIOS domain name.  If this is the case, verify that the domain name is properly registered with WINS.
+>
+> If you are certain that the name is not a NetBIOS domain name, then the following information can help you troubleshoot your DNS configuration.
+>
+> The following error occurred when DNS was queried for the service location (SRV) resource record used to locate an Active Directory Domain Controller (AD DC) for domain "\<NetBIOS_name\>":
+>
+> The error was: "DNS server failure."
+> (error code 0x0000232A RCODE_SERVER_FAILURE)
+>
+> The query was for the SRV record for _ldap._tcp.dc._msdcs.\<NetBIOS_name\>
+>
+> Common causes of this error include the following:
+>
+> - The DNS servers used by this computer contain incorrect root hints. This computer is configured to use DNS servers with the following IP addresses:
+>
+> \<ip_address\>
+>
+> - One or more of the following zones contains incorrect delegation:
+>
+> \<NetBIOS_name\>
+> . (the root zone)
 
 Here's an example from the *netsetup.log* file:
 
 ```output
-mm/dd/yyyy hh:mm:ss:ms NetpValidateName: checking to see if 'contoso' is valid as type 3 name
-mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid for contoso returned 0x54b, last error is 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid [ Exists ] for 'contoso' returned 0x54b
+mm/dd/yyyy hh:mm:ss:ms NetpValidateName: checking to see if '<NetBIOS_name>' is valid as type 3 name
+mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid for <NetBIOS_name> returned 0x54b, last error is 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid [ Exists ] for '<NetBIOS_name>' returned 0x54b
 ```
-
-Error 0x0000232A is logged when the client computer lacks Netbios name resolution to the domain.
 
 When you type the domain name, make sure you type the DNS Domain Name, rather than the NetBIOS name. For example, if the DNS name of the domain is contoso.com, make sure you enter that name instead of just contoso.
 
 ### Error code 0x3a
 
-The following error occurred attempting to join the domain "contoso.com":
+The following error occurred attempting to join the domain:
 
 > The specified server cannot perform the requested operation.
 
@@ -347,27 +347,25 @@ The following error occurred attempting to join the domain "contoso.com":
 Here's an example from the *netsetup.log* file:
 
 ```output
-mm/dd/yyyy hh:mm:ss:ms NetpLdapBind: ldap_bind failed on DCA.contoso.com: 81: Server Down
+mm/dd/yyyy hh:mm:ss:ms NetpLdapBind: ldap_bind failed on <dc_fqdn>: 81: Server Down
 mm/dd/yyyy hh:mm:ss:ms NetpJoinCreatePackagePart: status:0x3a.
 mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: Function exits with status of: 0x3a
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: status of disconnecting from '\\<dc_name>.contoso.com': 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpResetIDNEncoding: DnsDisableIdnEncoding(RESETALL) on 'contoso.com' returned 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpResetIDNEncoding on 'contoso.com': 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: status of disconnecting from '\\<dc_fqdn>': 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpResetIDNEncoding: DnsDisableIdnEncoding(RESETALL) on '<domain_name>' returned 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpResetIDNEncoding on '<domain_name>': 0x0
 mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x3a
 ```
 
-Error 0x3a is logged when the client machine lacks network connectivity on TCP Port 389 between the client machine and the domain controller.
-
-Use the following command to test the connection:
+Error 0x3a is logged when the client computer lacks network connectivity on TCP Port 389 between the client computer and the DC. To troubleshoot this issue, use the following command to test the connection:
 
 ```PowerShell
-Test-NetConnection <IP Address> of Domain Controller> -Port 389
+Test-NetConnection <IP_address_of_the_DC> -Port 389
 ```
 
 For example:
 
 ```PowerShell
-Test-NetConnection 192.168.2.100 -Port 389
+Test-NetConnection <IP_address_of_the_DC> -Port 389
 ```
 
 Expected Output:
@@ -378,7 +376,7 @@ It indicates the LDAP Port TCP 389 is open between the client and the DC.
 
 ### Error code 0x216d
 
-The following error occurred attempting to join the domain "contoso.com ":
+The following error occurred attempting to join the domain:
 
 Your computer could not be joined to the domain. You have exceeded the maximum number of computer accounts you are allowed to create in this domain. Contact your system administrator to have this limit reset or increased.
 
@@ -390,14 +388,14 @@ mm/dd/yyyy hh:mm:ss:ms NetpModifyComputerObjectInDs: ldap_add_s failed: 0x35 0x2
 mm/dd/yyyy hh:mm:ss:ms NetpCreateComputerObjectInDs: NetpModifyComputerObjectInDs failed: 0x216d
 mm/dd/yyyy hh:mm:ss:ms NetpProvisionComputerAccount: LDAP creation failed: 0x216d
 mm/dd/yyyy hh:mm:ss:ms NetpProvisionComputerAccount: Retrying downlevel per options
-mm/dd/yyyy hh:mm:ss:ms NetpManageMachineAccountWithSid: NetUserAdd on 'DCA.contoso.com' for 'CLIENT1$' failed: 0x216d
+mm/dd/yyyy hh:mm:ss:ms NetpManageMachineAccountWithSid: NetUserAdd on '<dc_fqdn>' for 'CLIENT1$' failed: 0x216d
 mm/dd/yyyy hh:mm:ss:ms NetpProvisionComputerAccount: retry status of creating account: 0x216d
 mm/dd/yyyy hh:mm:ss:ms ldap_unbind status: 0x0
 mm/dd/yyyy hh:mm:ss:ms NetpJoinCreatePackagePart: status:0x216d.
 mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: Function exits with status of: 0x216d
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: status of disconnecting from '\\DCA.contoso.com': 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpResetIDNEncoding: DnsDisableIdnEncoding(RESETALL) on 'contoso.com' returned 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpResetIDNEncoding on 'contoso.com': 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: status of disconnecting from '\\<dc_fqdn>': 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpResetIDNEncoding: DnsDisableIdnEncoding(RESETALL) on '<domain_name>' returned 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpResetIDNEncoding on '<domain_name>': 0x0
 mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x216d
 ```
 
