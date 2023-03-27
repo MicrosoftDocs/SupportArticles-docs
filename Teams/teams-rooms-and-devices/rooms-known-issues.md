@@ -57,6 +57,7 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 | --- | --- | --- |
 | Laser pointer and drawing tools in PowerPoint Live don't display for in-room participants | In-room meeting participants in a Teams meeting who are using Teams Rooms on Android devices aren't able to see the following features during a PowerPoint Live presentation: Laser pointer, pen, highlighter, and eraser. | Join the meeting on your personal device to see the laser pointer and drawing tools in PowerPoint Live. |
 | Teams Admin Settings unavailable on Teams Rooms on Android devices with Teams Rooms Basic license. | The **Teams Admin Settings** option under **Device Settings** is unavailable on devices that have the Teams Rooms Basic license for Teams Rooms on Android CY22 U3 app (version 1449/1.0.96.2022120503). | Admins can either assign a Teams Rooms Pro license to the same device or downgrade the device to use Teams Rooms on Android CCY22 U2B app (version: 1449/1.0.96.2022090606) instead. |
+| Changes made to the configuration profile in the Teams admin center may not sync with the device. | When settings are changed, such as **Release room if no one checks in** in the configuration profile for a device by using the Teams Admin Center, the changes do not always sync with the user's device. | Change the setting on devices from **Teams Admin Settings** option under **Device Settings**. | 
 
 ### Issues with Teams phones
 
