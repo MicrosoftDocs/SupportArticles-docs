@@ -1,6 +1,6 @@
 ---
 title: Repair a Linux VM automatically with the help of ALAR
-description: This article describes how to autorepair a non bootable VM with the  Azure Linux Auto Repair scripts (ALAR).
+description: This article describes how to autorepair a non-bootable VM with the  Azure Linux Auto Repair scripts (ALAR).
 services: virtual-machines-linux
 documentationcenter: ''
 author: malachma
@@ -22,7 +22,7 @@ ms.author: malachma
 
 The next time that you have to run a repair on your Azure Linux virtual machine (VM), you can automate the job by putting the Azure Linux Auto Repair (ALAR) scripts to work for you. You no longer have to run the job manually. These scripts simplify the recovery process and enable even inexperienced users to recover their Linux VM easily.
 
-ALAR does utilize the VM repair extension, which is described in [Repair a Linux VM by using the Azure Virtual Machine repair commands](./repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
+ALAR utilizes the VM repair extension that's described in [Repair a Linux VM by using the Azure Virtual Machine repair commands](./repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
 
 ALAR covers the following repair scenarios:
 
@@ -38,9 +38,9 @@ ALAR covers the following repair scenarios:
 
 ### fstab
 
-This action does strip off any lines in the `/etc/fstab` file, which aren't needed to boot a system. It makes a copy of the original file first. So after the start of the OS the administrator is able to edit the fstab again and correct any errors which didn’t allow a reboot of the system before.
+This action does strip off any lines in the */etc/fstab* file, which aren't needed to boot a system. It makes a copy of the original file first. So after the start of the OS the administrator is able to edit the fstab again and correct any errors which didn’t allow a reboot of the system before.
 
-For more information about issues with a malformed '/etc/fstab file', see [Troubleshoot Linux VM starting issues because fstab errors](./linux-virtual-machine-cannot-start-fstab-errors.md).
+For more information about issues with a malformed */etc/fstab* file, see [Troubleshoot Linux VM starting issues because fstab errors](./linux-virtual-machine-cannot-start-fstab-errors.md).
 
 ### kernel
 
@@ -50,8 +50,9 @@ For more information about messages that might be logged on the serial console f
 
 ### initrd
 
-This action can be used to fix either a corrupt initrd/initramfs or if it got incorrectly created.
-To get it created correct the modules `hv_vmbus`, `hv_netvsc`, `hv_storvsc` are added to the image.
+This action can be used to fix an initrd/initramfs which is either corrupted or incorrectly created.
+
+To get the initrd/initramfs created correctly, add the modules `hv_vmbus`, `hv_netvsc`, and `hv_storvsc` to the image.
 
 Initrd-related startup problems can appear as the following logged symptoms.
 
@@ -70,10 +71,12 @@ This action corrects an incorrect or malformed serial console configuration for 
 - No operating system related information is written to the serial console.
 
 ### grubfix
-This action is reinstalling GRUB and regenerates the grub.cfg file
+
+This action can be used to reinstall GRUB and regenerate the *grub.cfg* file.
 
 ### efifix
-This action is reinstalling the required software to boot from a GEN2 VM. The grub.cfg is regenerated as well.
+
+This action can be used to reinstall the required software to boot from a GEN2 VM and regenerate the *grub.cfg* file.
 
 ## How to use ALAR
 
@@ -91,7 +94,7 @@ az vm repair run --verbose -g centos7 -n cent7 --run-id linux-alar2 --parameters
 az vm repair restore --verbose -g centos7 -n cent7
  ```
 
-These steps create a repair task. In the next step, you'll use the `initrd` script to fix an initrd-related startup problem. In the last step, you run the restore operation.
+These steps create a repair task. In the next step, you'll use the `initrd` script to fix an initrd-related startup problem. In the last step, run the restore operation.
 
   [!NOTE]
 > You can pass over either a single recover-operation or multiple operations. For multiple operations, delineate them by using commas without spaces:
@@ -107,6 +110,6 @@ Classic VMs aren't supported.
 
 If you experience a bug or want to request an enhancement to the script base of ALAR, post a comment on [GitHub](https://github.com/Azure/ALAR/issues).
 
-At [GitHub](https://github.com/Azure/ALAR), you also find the latest information about the ALAR tool.
+You can also find the latest information about the ALAR tool on [GitHub](https://github.com/Azure/ALAR).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
