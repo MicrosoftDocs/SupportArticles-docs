@@ -54,3 +54,4 @@ For more information, see [Service Permissions](/sql/database-engine/configure-w
 ## Resolution
 
 To resolve the issue, grant the missing permissions to the SQL Service domain account by using the **User Rights Assignment** pane in the [Local Security Policy](/windows/security/threat-protection/security-policy-settings/how-to-configure-security-policy-settings) MMC snap-in.
+
