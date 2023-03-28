@@ -76,7 +76,7 @@ This action can be used to reinstall GRUB and regenerate the *grub.cfg* file.
 
 ### efifix
 
-This action can be used to reinstall the required software to boot from a GEN2 VM and regenerate the *grub.cfg* file.
+This action can be used to reinstall the required software to boot from a GEN2 VM. The *grub.cfg* file is also regenerated.
 
 ## How to use ALAR
 
