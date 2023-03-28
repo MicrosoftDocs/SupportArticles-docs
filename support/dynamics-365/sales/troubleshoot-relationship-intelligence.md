@@ -11,7 +11,7 @@ ms.subservice: d365-sales-sales
 
 This article helps you troubleshoot and resolve issues related to Relationship Intelligence.
 
-## Issue: You notice that the no insights from Exchange data, even though you've [enabled "Relationship Intelligence"](https://learn.microsoft.com/en-us/dynamics365/sales/enable-ri) and [consented](https://learn.microsoft.com/en-us/dynamics365/sales/provide-consent-office365) to the use of Exchange data.
+## Issue: You notice that the no insights from Exchange data, even though you've [enabled "Relationship Intelligence"](/dynamics365/sales/enable-ri) and [consented](/dynamics365/sales/provide-consent-office365) to the use of Exchange data.
 
 ### Cause
 
