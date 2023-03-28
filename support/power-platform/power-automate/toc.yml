@@ -115,6 +115,8 @@
           href: cannot-connect-access-database-engine-ole-db.md
         - name: Can't access the elements of a Java application
           href: cannot-access-java-application-elements.md
+        - name: Can't execute a shared desktop flow after changing the connection
+          href: sharing-deskop-flow-with-connections.md
         - name: Communication error when launching Power Automate for desktop
           href: communication-error-console.md
         - name: Desktop flows don't show in console if license expired or unassigned
@@ -167,8 +169,6 @@
           href: reset-ui-flow-service-when-bad-state.md
         - name: Recorder not recording applications
           href: recorder-not-recording-applications.md
-        - name: Sharing a desktop flow with connections to other co-owners
-          href: sharing-deskop-flow-with-connections.md
         - name: Some actions appear to be missing or aren't visible
           href: actions-not-available.md
         - name: Tips on working with SQL queries
