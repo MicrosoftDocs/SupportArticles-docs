@@ -94,7 +94,7 @@
         "**/*.md": "itpro"
       },
       "author": {
-        "**/*.md": "ramakoni1",
+        "**/*.md": "ChristySu",
         "azure/**/*.md": "genlin",
         "azure/devops/**/*.md": "HaiyingYu",
         "azure/synapse-analytics/**/*.md": "HaiyingYu",
@@ -122,7 +122,7 @@
         "dynamics/gp/*.md": "David-Pack"
       },
       "ms.author": {
-        "**/*.md": "ramakoni",
+        "**/*.md": "christys",
         "azure/**/*.md": "genli",
         "azure/devops/**/*.md": "haiyingyu",
         "azure/synapse-analytics/**/*.md": "haiyingyu",
