@@ -31,14 +31,14 @@ ALAR covers the following repair scenarios:
     missing disk
 - Damaged initrd or missing initrd line in the /boot/grub/grub.cfg
 - Last installed kernel isn't bootable
-- Serial console and GRUB serial are incorrectly configured or is missing
+- Serial console and GRUB serial are incorrectly configured or are missing
 - GRUB/EFI installation or configuration damaged
 
 ## The ALAR actions
 
 ### fstab
 
-This action does strip off any lines in the */etc/fstab* file, which aren't needed to boot a system. It makes a copy of the original file first. So after the start of the OS the administrator is able to edit the fstab again and correct any errors which didn’t allow a reboot of the system before.
+This action strips off any lines in the */etc/fstab* file that aren't needed to boot a system. It makes a copy of the original file first, so after the OS starts, the administrator can edit the fstab again and correct any errors that didn't allow a reboot of the system before.
 
 For more information about issues with a malformed */etc/fstab* file, see [Troubleshoot Linux VM starting issues because fstab errors](./linux-virtual-machine-cannot-start-fstab-errors.md).
 
@@ -50,9 +50,9 @@ For more information about messages that might be logged on the serial console f
 
 ### initrd
 
-This action can be used to fix an initrd/initramfs which is either corrupted or incorrectly created.
+This action can be used to fix an initrd or initramfs that is either corrupted or incorrectly created.
 
-To get the initrd/initramfs created correctly, add the modules `hv_vmbus`, `hv_netvsc`, and `hv_storvsc` to the image.
+To get the initrd or initramfs created correctly, add the modules `hv_vmbus`, `hv_netvsc`, and `hv_storvsc` to the image.
 
 Initrd-related startup problems can appear as the following logged symptoms.
 
@@ -76,7 +76,7 @@ This action can be used to reinstall GRUB and regenerate the *grub.cfg* file.
 
 ### efifix
 
-This action can be used to reinstall the required software to boot from a GEN2 VM, and regenerate the *grub.cfg* file.
+This action can be used to reinstall the required software to boot from a GEN2 VM and regenerate the *grub.cfg* file.
 
 ## How to use ALAR
 
