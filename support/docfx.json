@@ -94,7 +94,7 @@
         "**/*.md": "itpro"
       },
       "author": {
-        "**/*.md": "ramakoni1",
+        "**/*.md": "ChristySu",
         "azure/**/*.md": "genlin",
         "azure/devops/**/*.md": "HaiyingYu",
         "azure/synapse-analytics/**/*.md": "HaiyingYu",
@@ -122,7 +122,7 @@
         "dynamics/gp/*.md": "David-Pack"
       },
       "ms.author": {
-        "**/*.md": "ramakoni",
+        "**/*.md": "christys",
         "azure/**/*.md": "genli",
         "azure/devops/**/*.md": "haiyingyu",
         "azure/synapse-analytics/**/*.md": "haiyingyu",
@@ -162,7 +162,6 @@
         "developer/webapps/aspnetcore/**/*.md": "aspnet-core",
         "developer/webapps/iis/**/*.md": "iis",
         "sql/admin/**/*.md": "sql",
-        "sql/analysis-services/**/*.md": "sql",
         "sql/analytics-platform-system/**/*.md": "sql",
         "sql/availability-groups/**/*.md": "sql",
         "sql/connect/**/*.md": "sql",
@@ -186,7 +185,6 @@
         "sql/security/**/*.md": "sql",
         "sql/ssms/**/*.md": "sql",
         "sql/tools/**/*.md": "sql",
-        "sql/analysis-services/**/*.md": "",
         "developer/host-integration-server/**/*.md": "host-integration-server",
         "developer/visualstudio/**/*.md": "visual-studio-family",
         "developer/visualstudio/cpp/**/*.md": "visual-cpp",
