@@ -28,11 +28,7 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
 1. Create a new Rescue VM:
 
-<<<<<<< HEAD
-    - Operating system: Windows Server 2016 Datacenter or newer versions of Windows Server Datacenter
-=======
     - Operating system: Latest Windows Server Datacenter (The minimum version: Windows Server 2016 Datacenter)
->>>>>>> bc65945cec985e62c570bb7a519b7cea8f85757e
 
     - Size: Select a series that supports nested virtualization. For example: [Dv3](/azure/virtual-machines/dv3-dsv3-series) or [Dv4](/azure/virtual-machines/dv4-dsv4-series).
 
