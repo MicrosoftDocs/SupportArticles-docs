@@ -56,7 +56,7 @@ For SQL Server 2008 and SQL Server 2008 R2 editions, please refer to the followi
 
   In summary, SQL Server 2008 and SQL Server 2008 R2 editions support up to 8 nodes on Windows Server 2003 and 16 nodes on Windows Server 2008 and later versions-specific details as related to Always On installations.
 
-SQL Server 2012, SQL Server 2014 and SQL Server 2016
+SQL Server 2012, SQL Server 2014, and SQL Server 2016
 
 Refer to the following MSDN articles for each of the versions:
 
