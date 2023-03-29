@@ -49,28 +49,19 @@ Check the **update history** for the following updates, or check the version of 
 
 This error occurs if you are trying to establish an insecure RDP connection, and the insecure RDP connection is blocked by an **Encryption Oracle Remediation** policy setting on the server or client. This setting defines how to build an RDP session by using CredSSP, and whether an insecure RDP is allowed.
 
-The following tables summarize the behavior of RDP connection based on the CredSSP policy settings and the CredSSP update status:
+The following table summarizes the behavior of RDP connection based on the CredSSP update status and CredSSP policy setting (**AllowEncryptionOracle** value):
 
-**- Client has CredSSP update installed with policy settings**
-
-|-|Force updated clients|Mitigated| Vulnerable |
-|---|---|---|---|
-|Server doesn't has CredSSP update installed| Block  |  Block<sup> **1** </sup>  |  Allow |
-|Server has CredSSP update installed|Allow   |Allow   | Allow  |
-
-**- Server (Azure VM) has CredSSP update installed with policy settings**
-
-|-|Force updated clients | Mitigated  | Vulnerable |
-|---|---|---|---|
-| Client doesn't has CredSSP update installed | Block <sup> **2** </sup> |  Allow |  Allow |
-| Client has CredSSP update installed|Allow  |Allow   | Allow  |
+|Server CredSSP update status|Client CredSSP update status|Force updated clients (0)|Mitigated (1)| Vulnerable (2)|
+|---|---|---|---|---|
+|&#x2611;|&#x2612;| Block  |  Allow<sup> **1** </sup>  |  Allow |
+|&#x2612;|&#x2611;| Block<sup> **2** </sup>  |  Block |  Allow |
+|&#x2611;|&#x2611;|Allow   |Allow   | Allow  |
 
 **Examples**
 
-<sup> **1** </sup> The client has the CredSSP update installed, and **Encryption Oracle Remediation** is set to **Mitigated** on the client side. This client will cannot connect to a server that does not have the CredSSP update installed.
+<sup> **1** </sup> The server has the CredSSP update installed, and **Encryption Oracle Remediation** is set to **Mitigated** on the server side. The server will accpect the RDP connection from clients that do not have the CredSSP update installed.
 
-<sup> **2** </sup> The server has the CredSSP update installed, and **Encryption Oracle Remediation** is set to **Force updated clients** on the server side. The server will block any RDP connection from clients that do not have the CredSSP update installed.
-
+<sup> **2** </sup> The client has the CredSSP update installed, and **Encryption Oracle Remediation** is set to **Force updated clients** on the client side. This client will cannot connect to a server that does not have the CredSSP update installed.
 ## Resolution
 
 To resolve the issue, install CredSSP updates for both client and server so that RDP can be established in a secure manner. For more information, see [CVE-2018-0886 | CredSSP Remote Code Execution Vulnerability](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2018-0886).
