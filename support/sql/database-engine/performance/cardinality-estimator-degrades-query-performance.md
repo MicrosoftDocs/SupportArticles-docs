@@ -60,6 +60,3 @@ You can enable this trace flag globally, at the session level, or at the query l
 
 > [!NOTE]
 > Using trace flags incorrectly can degrade your workload performance. For more information, see [Hints (Transact-SQL) - Query](/sql/t-sql/queries/hints-transact-sql-query).
-
-
-
