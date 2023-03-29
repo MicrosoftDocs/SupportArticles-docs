@@ -185,7 +185,7 @@ If a secondary replica is hosted far from the primary replica, log send queueing
 
     For more information about how to set the **TCP Congestion Windows Restart** property to **False**, see [Set-NetTCPSetting (NetTCPIP)](/powershell/module/nettcpip/set-nettcpsetting?view=windowsserver2022-ps&preserve-view=true).
 
-    Also see [Monitor performance for Always On availability groups](/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups&tabs=new-limits) for information about the synchronization process. This article also shows you how to calculate some of the key metrics, and provides links to some of the common performance troubleshooting scenarios.
+    Also see [Monitor performance for Always On availability groups](/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups?tabs=new-limits) for information about the synchronization process. This article also shows you how to calculate some of the key metrics, and provides links to some of the common performance troubleshooting scenarios.
 
 - **Use ping to get a latency sample**
 
