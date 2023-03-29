@@ -63,7 +63,7 @@ To identify that this issue is caused by the WMI namespace for the cluster, foll
 
 1. Log on as the account that is administrator on the cluster and is running SQL Server Setup.
 2. Run the command at an administrative command prompt: `wbemtest`
-3. On the **Windows Management Instrumentation Tester** window, click **Connect...**.
+3. On the **Windows Management Instrumentation Tester** window, select **Connect...**.
 4. Type *root\MSCluster* in **Namespace**, and then click the **Connect** button. In this situation, you may receive an error message that resembles the following:
 
    > Number: 0x8004100e  
