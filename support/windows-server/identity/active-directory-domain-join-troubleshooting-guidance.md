@@ -276,7 +276,7 @@ mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid for <domain_name> returned 0x5
 mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid [ Exists ] for '<domain_name>' returned 0x54b
 ```
 
-To resolve the 0x54b error, use these steps:
+To resolve the 0x54b error, follow these steps:
 
 - Check the network connectivity between the client and the Domain controller.
 - Verify if the Preferred DNS Server is the correct DNS Server.
@@ -372,7 +372,7 @@ Expected Output:
 
 ![Test-NetConnection output](media/active-directory-domain-join-troubleshooting-guidance/test-netconnection-output-389.png)
 
-It indicates the LDAP Port TCP 389 is open between the client and the DC.
+It indicates that the LDAP Port TCP 389 is open between the client and the DC.
 
 ### Error code 0x216d
 
