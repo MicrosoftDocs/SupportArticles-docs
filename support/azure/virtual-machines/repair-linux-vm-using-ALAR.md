@@ -108,7 +108,7 @@ Classic VMs aren't supported.
 
 ## Next steps
 
-If you experience a bug or want to request an enhancement to the script base of ALAR, post a comment on [GitHub](https://github.com/Azure/ALAR/issues).
+If you experience a bug or want to request an enhancement to the ALAR tool, post a comment on [GitHub](https://github.com/Azure/ALAR/issues).
 
 You can also find the latest information about the ALAR tool on [GitHub](https://github.com/Azure/ALAR).
 
