@@ -21,7 +21,7 @@ Consider the following scenario:
 
 - You try to install SQL Server service packs or cumulative updates on the server that contains this instance.
 
-In this situation, the installation operation fails early in the process. Specifically, the operation fails when the Setup program checks the `Cluster_IsOnlineIfClustered` rule. Additionally, a message that resembles the following is logged in the *Detail.txt* file:
+In this situation, the installation operation fails early in the process. Specifically, the operation fails when the Setup program checks the `Cluster_IsOnlineIfClustered` rule. Additionally, a message that resembles the following one is logged in the *Detail.txt* file:
 
 ```console
 <Time Stamp> Slp: Init rule target object: Microsoft.SqlServer.Configuration.Cluster.Rules.ClusterServiceFacet
@@ -64,7 +64,7 @@ To identify that this issue is caused by the WMI namespace for the cluster, foll
 1. Log on as the account that is administrator on the cluster and is running SQL Server Setup.
 2. Run the command at an administrative command prompt: `wbemtest`
 3. On the **Windows Management Instrumentation Tester** window, select **Connect...**.
-4. Type *root\MSCluster* in **Namespace**, and then click the **Connect** button. In this situation, you may receive an error message that resembles the following:
+4. Type *root\MSCluster* in **Namespace**, and then click the **Connect** button. In this situation, you may receive an error message that resembles the following one:
 
    > Number: 0x8004100e  
    Facility: WMI  
@@ -77,7 +77,7 @@ To identify that this issue is caused by the WMI namespace for the cluster, foll
     select name from <MSCluster_Cluster>
     ```
 
-If the issue is not caused by an invalid MSCluster namespace, the expected result is that the cluster network name is returned.
+If the issue isn't caused by an invalid MSCluster namespace, the expected result is that the cluster network name is returned.
 
 ## Applies to
 
