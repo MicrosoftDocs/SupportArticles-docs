@@ -205,7 +205,7 @@ The following error messages occur when you try to join the computer to the doma
 
 > The specified network name is no longer available
 
-:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/domain-join-error-message.png" alt-text="Error message of error code 0x40.":::
+:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/domain-join-error-message.png" alt-text="Screenshot of the dialog box showing the error message for error code 0x40.":::
 
 Here's an example from the *netsetup.log* file:
 
@@ -243,13 +243,13 @@ Test-NetConnection <IP_address_of_the_DC> -Port 88
 
 Expected Output:
 
-:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/test-netconnection-output-88.png" alt-text="Test-NetConnection command for TCP port 88 output.":::
+:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/test-netconnection-output-88.png" alt-text="Screenshot that shows the Test-NetConnection command for TCP port 88 output.":::
 
 The output indicates that the Kerberos Port TCP 88 is open between the client and the DC.
 
 ### Error code 0x54b
 
-:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/error-0x54b-message.png" alt-text="Error message of error code 0x54b.":::
+:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/error-0x54b-message.png" alt-text="Screenshot of the dialog box showing the error message for error code 0x54b.":::
 
 Here's an example of the error message:
 
@@ -290,7 +290,7 @@ To resolve the 0x54b error, follow these steps:
 
   Expected Output:
 
-  :::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/nltest-output.png" alt-text="nltest command output.":::
+  :::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/nltest-output.png" alt-text="Screenshot that shows the nltest command output.":::
 
 - Run `DCDiag /v` on the closest domain controller and verify if SRV records are registered. For example: `_ldap._tcp.dc._msdcs.<domain_name>.com`.
 
@@ -298,7 +298,7 @@ To resolve the 0x54b error, follow these steps:
 
 Error 0x0000232A is logged when the client computer lacks NetBIOS name resolution to the domain.
 
-:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/error-0x0000232a-message.png" alt-text="Error message of error code 0x0000232A.":::
+:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/error-0x0000232a-message.png" alt-text="Screenshot of the dialog box showing the error message for error code 0x0000232A.":::
 
 Here's an example of the error message:
 
@@ -342,7 +342,7 @@ The following error occurred when attempting to join the domain:
 
 > The specified server cannot perform the requested operation.
 
-:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/error-0x3a-message.png" alt-text="Error message of error code 0x3a.":::
+:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/error-0x3a-message.png" alt-text="Screenshot of the dialog box showing the error message for error code 0x3a.":::
 
 Here's an example from the *netsetup.log* file:
 
@@ -370,7 +370,7 @@ Test-NetConnection <IP_address_of_the_DC> -Port 389
 
 Expected Output:
 
-:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/test-netconnection-output-389.png" alt-text="Test-NetConnection command for TCP port 389 output.":::
+:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/test-netconnection-output-389.png" alt-text="Screenshot that shows the Test-NetConnection command for TCP port 389 output.":::
 
 It indicates that the LDAP Port TCP 389 is open between the client and the DC.
 
@@ -380,7 +380,7 @@ The following error occurred when attempting to join the domain:
 
 > Your computer could not be joined to the domain. You have exceeded the maximum number of computer accounts you are allowed to create in this domain. Contact your system administrator to have this limit reset or increased.
 
-:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/error-0x216d-message.png" alt-text="Error message of error code 0x216d.":::
+:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/error-0x216d-message.png" alt-text="Screenshot of the dialog box showing the error message for error code 0x216d.":::
 
 ```output
 mm/dd/yyyy hh:mm:ss:ms NetpMapGetLdapExtendedError: Parsed [0x216d] from server extended error string: 0000216D: SvcErr: DSID-031A124C, problem 5003 (WILL_NOT_PERFORM), data 0
