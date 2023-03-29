@@ -1,5 +1,5 @@
 ---
-title: Failed state and does not come online
+title: Failed state and doesn't come online
 description: This article provides a resolution for the problem that occurs if resource-specific registry keys are missing.
 ms.date: 10/30/2020
 ms.custom: sap:Failover Clusters
@@ -16,12 +16,12 @@ _Original KB number:_ &nbsp; 883732
 
 When you try to bring a SQL Server cluster resource online for a virtual instance of Microsoft SQL Server, you may notice the following behavior:
 
-- The SQL Server cluster resource goes to a "failed" state and does not come online.
+- The SQL Server cluster resource goes to a "failed" state and doesn't come online.
 - You receive a combination of the following error messages on the computer that owns the SQL Server cluster resource.
 
   - Error message 1
 
-    An event that is similar to the following is in the system event log:  
+    An event that is similar to the following one is in the system event log:  
 
     > Date: 08/05/2004  
     Time: 1:11:19 AM  
@@ -36,7 +36,7 @@ When you try to bring a SQL Server cluster resource online for a virtual instanc
 
   - Error message 2
 
-    An error message that is similar to the following is in the Cluster log file:
+    An error message that is similar to the following one is in the Cluster log file:
 
     > 00000644.00000944::2003/11/30-18:11:30.360 SQL Server \<SQLServer>: [sqsrvres] Unable to read the 'VirtualServerName' property. Error: d.  
     00000644.00000944::2003/11/30-18:11:30.360 SQL Server \<SQLServer>: [sqsrvres] OnlineThread: Error d bringing resource online.
@@ -57,7 +57,7 @@ When you try to bring a SQL Server cluster resource online for a virtual instanc
 
 ## Cause
 
-The resource-specific registry keys that correspond to the SQL Server cluster resource that you are trying to bring online are missing. This problem also occurs if the values that correspond to the resource-specific registry keys are not correct.
+The resource-specific registry keys that correspond to the SQL Server cluster resource that you're trying to bring online are missing. This problem also occurs if the values that correspond to the resource-specific registry keys aren't correct.
 
 ## Resolution
 
@@ -101,7 +101,7 @@ To resolve this problem, you must manually re-create the resource-specific regis
 
 4. Quit Registry Editor.After you create the resource-specific registry keys, you can bring the SQL Server cluster resource online successfully.
 
-   If you notice that a SQL Server Agent cluster resource cannot be brought online, you must create the same set of resource-specific keys that correspond to the SQL Server Agent cluster resource.
+   If you notice that a SQL Server Agent cluster resource can't be brought online, you must create the same set of resource-specific keys that correspond to the SQL Server Agent cluster resource.
 
 ## More information
 
