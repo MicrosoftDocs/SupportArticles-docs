@@ -92,7 +92,7 @@ The domain join graphical user interface (GUI) can call the `NetJoinDomain` API 
   
 In another scenario, the 0x534 error code is logged when you attempt to change the password for a machine account. However, the account can't be found on the targeted DC, likely because the account was not created or due to replication latency or a replication failure.
 
-The 0x534 error code is commonly logged as a transient error when domain join searches the target domain. The search determines whether a matching computer account was pre-created or the join operation needs to dynamically create a computer account on the target domain. Check the bit flags in the join options and whether the type of join being performed is relying on a pre-created or newly created computer account.
+The 0x534 error code is commonly logged as a transient error when domain join searches the target domain. The search determines whether a matching computer account was pre-created or the join operation needs to dynamically create a computer account on the target domain. Check the bit flags in the join options to see if the type of join being performed is relying on a pre-created or newly created computer account.
 
 ### Error code 0x6BF or 0xC002001C
 
