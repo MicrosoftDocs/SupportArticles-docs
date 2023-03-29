@@ -229,7 +229,7 @@ mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpResetIDNEncoding on '<domain_name
 mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x40
 ```
 
-This error is logged when the client computer lacks network connectivity on TCP Port 88 between the client machine and the DC. To troubleshoot this issue, you can run the following command to test the connection:
+This error is logged when the client computer lacks network connectivity on TCP port 88 between the client machine and the DC. To troubleshoot this issue, you can run the following command to test the connection:
 
 ```PowerShell
 Test-NetConnection <IP Address> of Domain Controller> -Port 88
@@ -243,7 +243,7 @@ Test-NetConnection <IP_address_of_the_DC> -Port 88
 
 Expected Output:
 
-:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/test-netconnection-output-88.png" alt-text="Test-NetConnection command output.":::
+:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/test-netconnection-output-88.png" alt-text="Test-NetConnection command for TCP port 88 output.":::
 
 The output indicates that the Kerberos Port TCP 88 is open between the client and the DC.
 
@@ -356,7 +356,7 @@ mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpResetIDNEncoding on '<domain_name
 mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x3a
 ```
 
-Error 0x3a is logged when the client computer lacks network connectivity on TCP Port 389 between the client computer and the DC. To troubleshoot this issue, use the following command to test the connection:
+Error 0x3a is logged when the client computer lacks network connectivity on TCP port 389 between the client computer and the DC. To troubleshoot this issue, use the following command to test the connection:
 
 ```PowerShell
 Test-NetConnection <IP_address_of_the_DC> -Port 389
@@ -370,7 +370,7 @@ Test-NetConnection <IP_address_of_the_DC> -Port 389
 
 Expected Output:
 
-:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/test-netconnection-output-389.png" alt-text="Test-NetConnection command output.":::
+:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/test-netconnection-output-389.png" alt-text="Test-NetConnection command for TCP port 389 output.":::
 
 It indicates that the LDAP Port TCP 389 is open between the client and the DC.
 
