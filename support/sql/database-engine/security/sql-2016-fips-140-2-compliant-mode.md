@@ -49,28 +49,21 @@ No. SQL Server 2016 and later can be FIPS 140-2 compliant because it can be conf
 
 ### Operating system requirements
 
-You must install SQL Server 2016 and later on a host that's running one of the following operating systems:
-
-- Windows Server 2012
-- Windows Server 2012 R2
-- Windows Server 2016
-- Windows 8
-- Windows 8.1
-- Windows 10
+You must install SQL Server 2016 and later on a host that's running one of the following [Windows clients and servers](/windows/security/threat-protection/fips-140-validation#modules-used-by-windows-clients).
 
 ### Windows system administration requirements
 
 The FIPS mode must be set before SQL Server 2016 and later is started. SQL Server reads the setting at startup. To set the FIPS mode, follow these steps:
 
 1. Log on to Windows as a Windows system administrator.
-2. Click **Start**.
-3. Click **Control Panel**.
-4. Click **Administrative Tools**. (You may have to switch to large Icons for the next step.)
-5. Click **Local Security Policy**. The **Local Security Settings** window appears.
-6. In the navigation pane, click **Local Policies**, and then click **Security Options**.
-7. In the pane on the right, double-click **System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing**.
-8. In the dialog box that appears, click **Enabled**, and then click **Apply**.
-9. Click **OK**.
+2. Select **Start**.
+3. Select **Control Panel**.
+4. Select **Administrative Tools**. (You may have to switch to large Icons for the next step.)
+5. Select **Local Security Policy**. The **Local Security Settings** window appears.
+6. In the navigation pane, Select **Local Policies**, and then Select **Security Options**.
+7. In the pane on the right, double-Select **System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing**.
+8. In the dialog box that appears, Select **Enabled**, and then Select **Apply**.
+9. Select **OK**.
 10. Close the **Local Security Settings** window.
 
 ### SQL Server administrator requirement
