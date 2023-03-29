@@ -317,7 +317,6 @@
         "azure/virtual-machines/*.md": "virtual-machines",
         "azure/cloud-services/*.md": "cloud-services",
         "azure/synapse-analytics/**/*.md": "synapse-analytics",
-        "power-platform/admin/*.md": "power-platform",
         "power-platform/power-apps/**/**.*": "powerapps",
         "power-platform/power-automate/*.md": "power-automate",
         "dynamics-365/customer-insights/**/**.*": "customer-insights",
