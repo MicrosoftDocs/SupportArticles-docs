@@ -15,7 +15,7 @@ ms.technology: windows-server-active-directory
 ---
 # Active Directory domain join troubleshooting guidance
 
-This guide provides you with the fundamental concepts used when troubleshooting Active Directory domain join issues.
+This guide provides the fundamental concepts used when troubleshooting Active Directory domain join issues.
 
 ## Troubleshooting checklist
 
@@ -30,7 +30,7 @@ This guide provides you with the fundamental concepts used when troubleshooting 
 
 - *Netsetup.log*: The *Netsetup.log* file is a valuable resource when you troubleshoot a domain join issue. The *netsetup.log* file is located at *C:\\Windows\\Debug\\netsetup.log*.
 - Network trace: During an AD domain join, multiple types of traffic occur between the client and some DNS servers and then between the client and some DCs. If you see an error in any of the above traffic, follow the corresponding troubleshooting steps of that protocol or component to narrow it down. For more information, see [Using Netsh to Manage Traces](/windows/win32/ndf/using-netsh-to-manage-traces).
-- Domain join hardening changes: Windows updates released on and after October 11, 2022, contain additional protections introduced by [CVE-2022-38042](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-38042). These protections intentionally prevent domain join operations from reusing an existing computer account in the target domain unless one of the following conditions:
+- Domain join hardening changes: Windows updates released on and after October 11, 2022, contain additional protections introduced by [CVE-2022-38042](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-38042). These protections intentionally prevent domain join operations from reusing an existing computer account in the target domain unless one of the following conditions exist:
 
   - The user attempting the operation is the creator of the existing account.
   - The computer was created by a member of domain administrators.
@@ -39,7 +39,7 @@ This guide provides you with the fundamental concepts used when troubleshooting 
 
 ### Port Requirements
 
-The following table lists the ports that is required to be open between the client computer and the DC.
+The following table lists the ports required to be open between the client computer and the DC.
 
 |Port|Protocol|Application protocol|System service name|
 |---|---|---|---|
@@ -71,7 +71,7 @@ Error 0x569 is logged when the domain join user lacks the **Access this computer
 
 - Verify that the user account performing the domain join operation (or the security group that owns the member of the domain join user) has been granted the **Access this computer from the network** right in the default domain controllers policy.
 - The default domain controllers policy is linked to the OU that hosts the DC computer account that's servicing the domain join operation.
-- The DC servicing the domain join operation successfully applies the policy, specifically the user rights settings defined in the default domain controllers policy.
+- The DC servicing the domain join operation applies the policy successfully, specifically the user rights settings defined in the default domain controllers policy.
 
 ### Error code 0x534
 
@@ -92,7 +92,7 @@ The domain join graphical user interface (GUI) can call the `NetJoinDomain` API 
   
 In another scenario, the 0x534 error code is logged when you attempt to change the password for a machine account. However, the account can't be found on the targeted DC, likely because the account was not created or due to replication latency or a replication failure.
 
-The 0x534 error code is commonly logged as a transient error when domain join searches the target domain. The searching determines whether a matching computer account was pre-created or whether the join operation needs to dynamically create a computer account on the target domain. Check the bit flags in the join options and whether the type of join being performed is relying on a pre-created or newly created computer account.
+The 0x534 error code is commonly logged as a transient error when domain join searches the target domain. The search determines whether a matching computer account was pre-created or the join operation needs to dynamically create a computer account on the target domain. Check the bit flags in the join options and whether the type of join being performed is relying on a pre-created or newly created computer account.
 
 ### Error code 0x6BF or 0xC002001C
 
