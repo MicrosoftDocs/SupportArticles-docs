@@ -39,10 +39,10 @@ For more information about the bugs that are fixed and enhancements that are inc
 |-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|----------------------|----------|
 | <a id="2279666">[2279666](#2279666)</a> | Fixes a failure in SQL Server Analysis Services (SSAS) that you encounter after you rename partitions to the same name in a multidimensional model. | Analysis Services | Analysis Services | Windows |
 | <a id="2255710">[2255710](#2255710)</a> | Fixes security vulnerabilities [CVE-2015-6420](https://nvd.nist.gov/vuln/detail/CVE-2015-6420) and [CVE-2017-15708](https://nvd.nist.gov/vuln/detail/CVE-2017-15708). | Integration Services | Integration Services | Windows |
-| <a id="2290374">[2290374](#2290374)</a> | [FIX: Scalar UDF Inlining issues in SQL Server 2022 and 2019 (KB4538581)](https://support.microsoft.com/help/4538581) | SQL Server Engine | Query Execution | All |
 | <a id="2168305">[2168305](#2168305)</a> | Fixes a memory leak issue that you encounter when configuring SQL Server logging shipping, which is standby or read-only mode, for the In-memory OLTP database. </br></br>**Note** You need to turn on the trace flag 9953 during startup to avoid the issue. | SQL Server Engine | In-Memory OLTP | All |
-| <a id="2251138">[2251138](#2251138)</a> | Updates the error message that is returned in the SqlBackendNotSupported exception when you run CREATE EXTERNAL TABLE by using Synapse serverless external data source to the following one: </br></br>Azure Synapse Serverless SQL Pool is not a supported data source. | SQL Server Engine| PolyBase | All |
+| <a id="2251138">[2251138](#2251138)</a> | Updates the error message that is returned in the `SqlBackendNotSupported` exception when you run `CREATE EXTERNAL TABLE` by using Synapse serverless external data source to the following one: </br></br>Azure Synapse Serverless SQL Pool is not a supported data source. | SQL Server Engine| PolyBase | All |
 | <a id="2270253">[2270253](#2270253)</a> | Fixes a failure where the `DateTime` field can't be pushed down to some PolyBase generic ODBC external data sources such as Denodo when you query an external table by using a filter clause for a `DateTime` field. | SQL Server Engine | PolyBase | All |
+| <a id="2290374">[2290374](#2290374)</a> | [FIX: Scalar UDF Inlining issues in SQL Server 2022 and 2019 (KB4538581)](https://support.microsoft.com/help/4538581) | SQL Server Engine | Query Execution | All |
 | <a id="2273502">[2273502](#2273502)</a> | Fixes an issue where the change tracking auto cleanup process generates dumps under some rare conditions when the parent table name that the system tries to access isn't available during run time, and then the process runs into an access violation. | SQL Server Engine | Replication | All |
 | <a id="2214981">[2214981](#2214981)</a> | Fixes an issue that you encounter where the `mssql-conf` commands give incorrect errors even if they succeed on Linux. | SQL Server Engine | SQL Agent | Linux |
 | <a id="2283663">[2283663](#2283663)</a> | Adds a new feature that helps parallelize the version cleaner that will help clean up the stale versions faster on databases that have the persistent version store. | SQL Server Engine | Storage Management | All |
@@ -66,15 +66,7 @@ The following update is available from the Microsoft Download Center:
 <details>
 <summary><b>How to obtain or download this cumulative update package for Windows from Microsoft Update Catalog</b></summary>
 
-The following update is available from the Microsoft Update Catalog:
-
-- :::image type="icon" source="../media/download-icon.png" border="false"::: Download the cumulative update package for SQL Server 2022 CU3 now
-
-> [!NOTE]
->
-> - [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=sql%20server%202022) contains this SQL Server 2022 CU and previously released SQL Server 2022 CU releases.
-> - This CU is also available through Windows Server Update Services (WSUS).
-> - We recommend that you always install the latest cumulative update that is available.
+This cumulative update package is not yet available on [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=sql%20server%202022). This article will be updated after the package is made available on this channel.
 
 </details>
 
@@ -315,13 +307,13 @@ SQL Server 2022 Database Services Core Shared
 
 SQL Server 2022 sql_extensibility
 
-|           File name           |   File version  | File size |   Date  |  Time | Platform |
-|:-----------------------------:|:---------------:|:---------:|:-------:|:-----:|:--------:|
-| Commonlauncher.dll            | 2022.160.4025.1 | 100304    | ####### | 19:44 | x64      |
-| Exthost.exe                   | 2022.160.4025.1 | 247712    | ####### | 19:44 | x64      |
-| Launchpad.exe                 | 2022.160.4025.1 | 1361856   | ####### | 19:44 | x64      |
-| Sql_extensibility_keyfile.dll | 2022.160.4025.1 | 137104    | ####### | 19:44 | x64      |
-| Sqlsatellite.dll              | 2022.160.4025.1 | 1165264   | ####### | 19:44 | x64      |
+|           File name           |   File version  | File size |    Date   |  Time | Platform |
+|:-----------------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
+| Commonlauncher.dll            | 2022.160.4025.1 | 100304    | 13-Mar-23 | 19:44 | x64      |
+| Exthost.exe                   | 2022.160.4025.1 | 247712    | 13-Mar-23 | 19:44 | x64      |
+| Launchpad.exe                 | 2022.160.4025.1 | 1361856   | 13-Mar-23 | 19:44 | x64      |
+| Sql_extensibility_keyfile.dll | 2022.160.4025.1 | 137104    | 13-Mar-23 | 19:44 | x64      |
+| Sqlsatellite.dll              | 2022.160.4025.1 | 1165264   | 13-Mar-23 | 19:44 | x64      |
 
 SQL Server 2022 Full-Text Engine
 
