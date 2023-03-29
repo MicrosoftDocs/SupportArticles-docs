@@ -201,7 +201,7 @@ To resolve this error, follow these steps:
 
 ### Error code 0x40
 
-The following error messages occurred when you try to join the computer to the domain:
+The following error messages occur when you try to join the computer to the domain:
 
 > The specified network name is no longer available
 
@@ -245,13 +245,13 @@ Expected Output:
 
 ![Command output](media/active-directory-domain-join-troubleshooting-guidance/test-netconnection-output-88.png)  
 
-The output indicates the Kerberos Port TCP 88 is open between the client and the DC.
+The output indicates that the Kerberos Port TCP 88 is open between the client and the DC.
 
 ### Error code 0x54b
 
 ![Error code 0x54b error message](media/active-directory-domain-join-troubleshooting-guidance/error-0x54b-message.png)  
 
-Here is an example of the error message:
+Here's an example of the error message:
 
 > Note: This information is intended for a network administrator.  If you are not your network's administrator, notify the administrator that you received this information, which has been recorded in the file C:\WINDOWS\debug\dcdiag.txt.
 >
@@ -278,8 +278,8 @@ mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid [ Exists ] for '<domain_name>'
 
 To resolve the 0x54b error, use these steps:
 
-- Check the network connectivity between client and Domain controller.
-- Verify if Preferred DNS Server is the correct DNS Server.
+- Check the network connectivity between the client and the Domain controller.
+- Verify if the Preferred DNS Server is the correct DNS Server.
 - Run `nltest /dsgetdc` (DC Discovery) to verify if you can discover a DC.
   
   For example:
@@ -300,7 +300,7 @@ Error 0x0000232A is logged when the client computer lacks NetBIOS name resolutio
 
 ![Error code 0x0000232A error message](media/active-directory-domain-join-troubleshooting-guidance/error-0x0000232a-message.png)  
 
-Here is an example of the error message:
+Here's an example of the error message:
 
 > Note: This information is intended for a network administrator.  If you are not your network's administrator, notify the administrator that you received this information, which has been recorded in the file C:\WINDOWS\debug\dcdiag.txt.
 >
@@ -334,11 +334,11 @@ mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid for <NetBIOS_name> returned 0x
 mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid [ Exists ] for '<NetBIOS_name>' returned 0x54b
 ```
 
-When you type the domain name, make sure you type the DNS Domain Name, rather than the NetBIOS name. For example, if the DNS name of the domain is contoso.com, make sure you enter that name instead of just contoso.
+When you enter the domain name, make sure you enter the DNS Domain Name rather than the NetBIOS name. For example, if the DNS name of the domain is contoso.com, make sure you enter that name instead of just contoso.
 
 ### Error code 0x3a
 
-The following error occurred attempting to join the domain:
+The following error occurred when attempting to join the domain:
 
 > The specified server cannot perform the requested operation.
 
@@ -376,9 +376,9 @@ It indicates the LDAP Port TCP 389 is open between the client and the DC.
 
 ### Error code 0x216d
 
-The following error occurred attempting to join the domain:
+The following error occurred when attempting to join the domain:
 
-Your computer could not be joined to the domain. You have exceeded the maximum number of computer accounts you are allowed to create in this domain. Contact your system administrator to have this limit reset or increased.
+> Your computer could not be joined to the domain. You have exceeded the maximum number of computer accounts you are allowed to create in this domain. Contact your system administrator to have this limit reset or increased.
 
 ![Error code 0x216d error message](media/active-directory-domain-join-troubleshooting-guidance/error-0x216d-message.png)
 
@@ -401,14 +401,14 @@ mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x216d
 
 Error 0x216d is logged in one of these conditions:
 
-- The user account that is trying to join the machine to the domain has exceeded the limit of 10 machines to the domain.
-- There is a GPO restriction to block authenticated users from joining machine to the domain.
+- The user account trying to join the machine to the domain has exceeded the limit of 10 machines joined to the domain.
+- There is a GPO restriction to block authenticated users from joining a machine to the domain.
 
-Verify the user account is a member of the group mentioned in the **Add Workstations to domain** policy of the **Default Domain Controller Policy** GPO or the **Winning** GPO.
+Verify that the user account is a member of the group mentioned in the **Add Workstations to domain** policy of the **Default Domain Controller Policy** GPO or the **Winning** GPO.
 
-The GPO setting locates at: Computer Configuration -> Policies -> Windows Settings -> Security Settings -> Local Policies User Rights Assignment -> Add workstations to domain.
+The GPO setting is located at **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Local Policies User Rights Assignment** > **Add workstations to domain**.
 
-To verify the default limit to the number of workstations a user can join to domain, see [Default limit to number of workstations a user can join to the domain](/troubleshoot/windows-server/identity/default-workstation-numbers-join-domain).
+To verify the default limit to the number of workstations a user can join to the domain, see [Default limit to number of workstations a user can join to the domain](/troubleshoot/windows-server/identity/default-workstation-numbers-join-domain).
 
 ### Other errors that occur when you join Windows-based computers to a domain
 
