@@ -53,14 +53,14 @@ The following tables summarize the behavior of RDP connection based on the CredS
 
 **- Client has CredSSP update installed with policy settings**
 
-| |Force updated clients|Mitigated| Vulnerable |
+|-|Force updated clients|Mitigated| Vulnerable |
 |---|---|---|---|
 |Server doesn't has CredSSP update installed| Block  |  Block<sup> **1** </sup>  |  Allow |
 |Server has CredSSP update installed|Allow   |Allow   | Allow  |
 
 **- Server (Azure VM) has CredSSP update installed with policy settings**
 
-||Force updated clients | Mitigated  | Vulnerable |
+|-|Force updated clients | Mitigated  | Vulnerable |
 |---|---|---|---|
 | Client doesn't has CredSSP update installed | Block <sup> **2** </sup> |  Allow |  Allow |
 | Client has CredSSP update installed|Allow  |Allow   | Allow  |
