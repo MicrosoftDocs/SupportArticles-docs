@@ -27,4 +27,4 @@ This issue could occur due to one of two reasons:
 To solve this issue:
 
 - Ensure that your organization has a valid Microsoft 365 mailbox. Exchange data can't be collected if you have a dedicated Microsoft Exchange Server. For more information about the underlying issue and resolution, see [REST API is not yet supported for this mailbox error for request to a mailbox](/exchange/troubleshoot/user-and-shared-mailboxes/rest-api-is-not-yet-supported-for-this-mailbox-error).
-- Ensure that your organization isn't encrypting Microsoft 365 data with its own encryption keys. Exchange data can't be collected if your data is encrypted. For more information, see [Set up Customer Key](/microsoft-365/compliance/customer-key-set-up?view=o365-worldwide).
+- Ensure that your organization isn't encrypting Microsoft 365 data with its own encryption keys. Exchange data can't be collected if your data is encrypted. For more information, see [Set up Customer Key](/microsoft-365/compliance/customer-key-set-up).
