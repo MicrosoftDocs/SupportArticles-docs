@@ -66,7 +66,7 @@ The resource-specific registry keys that correspond to the SQL Server cluster re
 
 To resolve this problem, you must manually re-create the resource-specific registry keys that correspond to the SQL Server cluster resource. To do this, follow these steps:
 
-1. Click **Start**, click **Run**, type Regedit , and then click **OK**.
+1. Select **Start** > **Run**, type *Regedit*, and then select **OK**.
 2. In Registry Editor, locate and select the registry key: `HKEY_LOCAL_MACHINE\Cluster\Resources\<GUID>\Parameters`.
 
 3. Create the following registry values in the **Parameters** registry key:
