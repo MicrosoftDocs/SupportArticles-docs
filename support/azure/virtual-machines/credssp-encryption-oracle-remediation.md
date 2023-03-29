@@ -1,7 +1,7 @@
 ---
 title: Error CredSSP encryption oracle remediation when you try to RDP to a Windows VM in Azure
 description: Fixes an issue that you receive a CredSSP encryption oracle remediation error when you try to RDP to a Windows VM in Azure.
-ms.date: 07/21/2020
+ms.date: 03/29/2023
 ms.reviewer: 
 ms.service: virtual-machines
 ms.subservice: vm-cannot-connect
@@ -72,7 +72,7 @@ To resolve the issue, install CredSSP updates for both client and server so that
 ### How to install this update by using Azure Serial console
 
 1. Sign in to the [Azure portal](https://portal.azure.com), select **Virtual Machine**, and then select the VM.
-2. Scroll down to the **Support + Troubleshooting** section, and then click **Serial console (Preview)**. The serial console requires Special Administrative Console (SAC) to be enabled within the Windows VM. If you do not see **SAC>** in the console (as shown in the following screenshot), go to the "[How to install this update by using Remote PowerShell](#how-to-install-this-update-by-using-remote-powershell)" section in this article.
+2. Scroll down to the **Help** section, and then click **Serial console**. The serial console requires Special Administrative Console (SAC) to be enabled within the Windows VM. If you do not see **SAC>** in the console (as shown in the following screenshot), go to the "[How to install this update by using Remote PowerShell](#how-to-install-this-update-by-using-remote-powershell)" section in this article.
 
     :::image type="content" source="media/credssp-encryption-oracle-remediation/connected-sac.svg" alt-text="Screenshot of connected SAC." border="false":::
   
