@@ -1,5 +1,5 @@
 - name: Office Experts
-  href: ../office-experts-welcome.md
+  href: ../office-experts-welcome.yml
   items:
   - name: Activation
     items:
@@ -99,7 +99,7 @@
       href: ../powerpivot/powerpivot-workbook-checked-out.md
     - name: PowerPivot data model not refresh
       href: ../powerpivot/powerpivot-data-model-does-not-refresh.md
-    - name: PowerPivot not work with .atomsvc files
+    - name: PowerPivot doesn't work with .atomsvc files
       href: ../powerpivot/powerpivot-does-not-work-with-atomsvc-files.md
     - name: Third-party PowerPivot data refresh tools not supported
       href: ../powerpivot/third-party-powerpivot-data-refresh-tools-are-not-supported.md
