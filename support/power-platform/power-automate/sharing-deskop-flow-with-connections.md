@@ -1,8 +1,9 @@
 ---
 title: Can't execute a shared desktop flow after changing the connection
 description: Provides a resolution for the issue that a co-owner receives an error when executing a shared desktop flow if the ownership of the connection is changed.
-ms.author: pefelesk
-ms.reviewer: pefelesk
+author: quseleba
+ms.author: quseleba
+ms.reviewer: pefelesk, quseleba, kvivek, tapanm
 ms.date: 03/23/2023
 ms.subservice: power-automate-desktop-flows
 ---
