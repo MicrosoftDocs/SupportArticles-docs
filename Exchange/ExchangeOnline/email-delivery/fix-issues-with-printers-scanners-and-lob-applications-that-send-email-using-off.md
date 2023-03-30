@@ -105,7 +105,6 @@ The following list describes the available configuration options:
 To learn more, see [New opt-in endpoint available for SMTP AUTH clients still needing legacy TLS](https://techcommunity.microsoft.com/t5/exchange-team-blog/new-opt-in-endpoint-available-for-smtp-auth-clients-still/ba-p/2659652)
 
 For more information about TLS, see [How Exchange Online uses TLS to secure email connections](/microsoft-365/compliance/exchange-online-uses-tls-to-secure-email-connections).
-For detailed technical information about how Exchange Online uses TLS with cipher suite ordering, see [Enhancing mail flow security for Exchange Online](https://www.microsoft.com/microsoft-365/blog/2015/06/29/enhancing-mail-flow-security-for-exchange-online/).
 
 ### I receive an authentication error when my device tries to send email
 
