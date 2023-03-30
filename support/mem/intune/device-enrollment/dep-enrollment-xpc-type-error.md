@@ -16,7 +16,7 @@ When you turn on an Apple ADE device that's assigned an Intune enrollment profil
 
 > mobileassetd[83] \<Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR Connection invalid <error: 0x1a49aebc0> { count = 1, transaction: 0, voucher = 0x0, contents = 'XPCErrorDescription' => \<string: 0x1a49aee18> { length = 18, contents = 'Connection invalid' } }  
 > iPhone mobileassetd[83] \<Notice>: Client connection invalid (Connection invalid); terminating connection  
-> iPhone com.apple.accessibility.AccessibilityUIServer(MobileAsset) [288] \<Notice>: [MobileAssetError:29] Unable to copy asset information from <https://mesu.apple.com/assets/> for asset type com.apple.MobileAsset.VoiceServices.CombinedVocalizerVoices  
+> iPhone com.apple.accessibility.AccessibilityUIServer(MobileAsset) [288] \<Notice>: [MobileAssetError:29] Unable to copy asset information from <`https://mesu.apple.com/assets/`> for asset type com.apple.MobileAsset.VoiceServices.CombinedVocalizerVoices  
 > iPhone mobileassetd[83] \<Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR Connection invalid \<error: 0x1a49aebc0> { count = 1, transaction: 0, voucher = 0x0, contents = 'XPCErrorDescription' => \<string: 0x1a49aee18> { length = 18, contents = 'Connection invalid' }
 
 ## Cause
