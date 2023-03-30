@@ -60,9 +60,9 @@ The FIPS mode must be set before SQL Server 2016 or a later version is started. 
 3. Select **Control Panel**.
 4. Select **Administrative Tools**. (You may have to switch to large Icons for the next step.)
 5. Select **Local Security Policy**. The **Local Security Settings** window appears.
-6. In the navigation pane, Select **Local Policies**, and then Select **Security Options**.
-7. In the pane on the right, double-Select **System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing**.
-8. In the dialog box that appears, Select **Enabled**, and then Select **Apply**.
+6. In the navigation pane, select **Local Policies** > **Security Options**.
+7. In the pane on the right, double-click **System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing**.
+8. In the dialog box that appears, select **Enabled** > **Apply**.
 9. Select **OK**.
 10. Close the **Local Security Settings** window.
 
