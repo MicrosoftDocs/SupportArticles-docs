@@ -1,5 +1,5 @@
 - name: OneDrive for Business Troubleshooting
-  href: ../onedrive-welcome.md
+  href: ../onedrive-welcome.yml
   items:
   - name: Administration
     items:

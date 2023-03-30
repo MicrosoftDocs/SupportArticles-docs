@@ -1,5 +1,5 @@
 - name: SharePoint hybrid deployment troubleshooting
-  href: ../sharepoint-hybrid-welcome.md
+  href: ../sharepoint-hybrid-welcome.yml
   items:
   - name: InfoPath
     items:
