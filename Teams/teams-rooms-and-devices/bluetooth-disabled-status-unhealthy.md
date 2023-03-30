@@ -28,7 +28,7 @@ When Bluetooth is disabled on the Teams Rooms device at the operating system (OS
 
 This issue occurs if Bluetooth is disabled in the Teams Rooms device OS in Windows settings.
 
-If Bluetooth needs to be disabled, it's recommended to disable Bluetooth in the Teams Rooms app instead to avoid this issue.
+If Bluetooth needs to be disabled, it's recommended to disable it within the Teams Rooms app instead to avoid this event to be triggered.
 
 ## Resolution
 
