@@ -41,10 +41,11 @@ From [Linux distributions endorsed on Azure](/azure/virtual-machines/linux/endor
 - CoreOS
 - Debian
 - Flatcar Container Linux by Kinvolk
+- Mariner
+- OpenSUSE
 - Oracle Linux Server
 - Red Hat Enterprise Linux (RHEL)
 - SUSE Linux Enterprise Server (SLES)
-- OpenSUSE
 - Ubuntu
 
 ## Supported regions
