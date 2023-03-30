@@ -1,0 +1,64 @@
+### YamlMime:Landing
+
+title: Microsoft 365 Enterprise troubleshooting
+summary: This library of articles provides guidance to troubleshoot and fix errors that you may experience when using Microsoft 365 Enterprise. For a complete list of articles, browse the navigation pane on the left, or use the search box above the pane to filter by keywords and find help with a specific issue.
+metadata:
+  title: Microsoft 365 Enterprise troubleshooting
+  description: Documentation for troubleshooting common issues with Microsoft 365 Enterprise.
+  ms.service: microsoft-365-enterprise
+  ms.topic: landing-page
+  author: helenclu
+  ms.author: luche
+  ms.date: 03/27/2023
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Administration
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: COM and .NET errors after Office architecture migration
+            url: ./administration/com-net-errors-after-migration.md
+          - text: Can't insert scriptable ActiveX controls
+            url: ./administration/insert-scriptable-activex-control.md
+
+  - title: Enterprise version of Microsoft Support and Recovery Assistant
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: 'Scenario: Outlook Scan'
+            url: ./administration/assistant-outlook-scan.md
+          - text: 'Scenario: Office Uninstall'
+            url: ./administration/assistant-office-uninstall.md
+          - text: 'Scenario: Office Activation'
+            url: ./administration/assistant-office-activation.md
+
+  - title: Authentication
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: '"Invalid provider specified" with using Office 2016'
+            url: ./authentication/invalid-provider-specified-error.md
+          - text: Can't sign in Microsoft 365 from multiple federated domains
+            url: ./authentication//cant-sign-in-office-365-multiple-domain-federation.md
+
+  - title: Miscellaneous
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't find or insert any clip art
+            url: ./miscellaneous/cannot-find-any-clip art.md
+
+  - title: Project Online
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't access newly purchased project online with license
+            url: ./project-online/cant-access-newly-purchased-project-online.md
+          - text: Can't connect to Project Online OData from SSIS
+            url: ./project-online/cant-connect-project-online-odata-from-ssis.md
+          - text: Can't save a project to Project Web App
+            url: ./project-online/cant-save-project-client-to-web-app.md

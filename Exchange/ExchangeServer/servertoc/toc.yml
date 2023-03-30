@@ -1,5 +1,5 @@
 - name: Exchange Server Troubleshooting
-  href: ../exchange-server-welcome.md
+  href: ../exchange-server-welcome.yml
   items:
     - name: Administration
       items:

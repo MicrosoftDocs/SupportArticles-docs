@@ -1,5 +1,5 @@
 - name: Viva Learning troubleshooting
-  href: viva-learning-welcome.md
+  href: viva-learning-welcome.yml
   items:
     - name: Learning management systems
       items:
