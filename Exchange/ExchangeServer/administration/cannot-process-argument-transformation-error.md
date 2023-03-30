@@ -19,4 +19,4 @@ ms.date: 3/29/2023
 ---
 # "Cannot process argument transformation" error for cmdlets in Exchange Server 2013 with CU11
 
-To fix this error, install the [latest cumulative update for Exchange Server 2013](/exchange/new-features/build-numbers-and-release-dates?view=exchserver-2019#exchange-server-2013).
+To fix this error, install the [latest cumulative update for Exchange Server 2013](/exchange/new-features/build-numbers-and-release-dates?view=exchserver-2019#exchange-server-2013&preserve-view=true).
