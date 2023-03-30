@@ -1,0 +1,140 @@
+---
+title: Remove duplicate Management pack aliases
+description: This article describes the procedure to remove duplicate management pack aliases before upgrading to System Center Operations Manager 2019 UR4.
+ms.date: 03/30/2023
+ms.prod-support-area-path: 
+---
+# Remove duplicate Management pack aliases
+
+This article describes the procedure to remove duplicate management pack aliases before upgrading to System Center Operations Manager 2019 UR4.
+
+## Prerequisites
+
+Ensure to remove all duplicate management pack aliases before you upgrade to System Center Operations Manager 2019 UR4. 
+
+## Detect duplicate management pack aliases
+
+To detect management packs with duplicate management pack aliases, do the following:
+
+Either launch PowerShell ISE on a Management Server or run the T-SQL against System Center Operations Manager Operations Database.
+
+**PowerShell Script**
+
+```powershell
+############################################
+#Identify MPs imported with duplicate Aliases
+Import-Module OperationsManager
+$mps = Get-SCOMManagementPack
+foreach ($mp in $mps)
+{
+  	$hashTable = @{}
+ 	 foreach ($ref in $mp.References)
+  	{
+   	 try {$hashTable.Add($ref.Key, $ref.Value)}
+    	catch
+    	{
+     	 $MPName = $mp.Name
+     	 $MPDisplayName = $mp.DisplayName
+     	 $MPVersion = $mp.Version
+        "MP contains duplicate aliases: Name=($MPName) DiplayName=($MPDisplayName) Version=($MPVersion)"
+    	}
+  	}
+}
+############################################ 
+```
+
+**T-SQL**
+
+```tsql
+-- LIST ALL MPs that have a duplicate Alias reference
+declare
+       @mpFriendlyName nvarchar(255),
+       @mpName nvarchar(255),
+       @mpId uniqueidentifier,
+       @mpXml as xml
+
+create table #badMPTable (
+       mpId uniqueidentifier,
+       mpName nvarchar(255),
+       mpFriendlyName nvarchar(255)
+)
+
+declare mp_cursor cursor local forward_only read_only for
+       select 
+              MPFriendlyName,
+              MPName,
+              ManagementPackId,
+              convert(xml, MPXML)
+       from ManagementPack
+
+open mp_cursor
+fetch next from mp_cursor
+into @mpFriendlyName, @mpName, @mpId, @mpXml
+
+while @@FETCH_STATUS = 0 begin
+       select
+       n.value('@Alias','nvarchar(255)') as mpRef
+       into #tempRefs
+       from @mpXml.nodes('/ManagementPack/Manifest/References/Reference') as a(n)
+
+       if exists(
+              select count(*)
+              from #tempRefs
+              group by mpRef
+              having count(*) > 1
+       ) begin
+              insert into #badMPTable (
+                     mpId,
+                     mpName,
+                     mpFriendlyName
+              ) values (
+                     @mpId,
+                     @mpName,
+                     @mpFriendlyName
+              )
+       end
+
+       drop table #tempRefs
+
+       fetch next from mp_cursor
+       into @mpFriendlyName, @mpName, @mpId, @mpXml
+end
+
+close mp_cursor  
+deallocate mp_cursor 
+select * from #badMPTable 
+drop table #badMPTable 
+--End
+```
+
+### Scenario 1
+
+If the output of the PowerShell or T-SQL script returns no value, then there are no duplicate management pack aliases. Proceed with UR4 upgrade.
+
+### Scenario 2
+
+If the output returns 1 or more rows, then do the following:
+
+1. If the management pack is unsealed
+      1. Export the management pack from the console.
+      1. Open the management pack XML using a text editor.
+      1. Identify the duplicate alias.
+      1. Rename one of the aliases under **Reference** and all other places where the alias is used in the XML body.
+      In this example, we have 2 aliases which will be considered as duplicates in SCOM 2019 UR4. 
+         :::image type="content" source="./media/remove-duplicate-management-pack-aliases/aliases-example-inline.png" alt-text="Screenshot showing the aliases example." lightbox="./media/remove-duplicate-management-pack-aliases/aliases-example-expanded.png":::
+      In order to detect where the aliases are used, search the XML with **AliasName**. In this case, it is **BADALIAS**. Note the places where the reference is used.
+
+      Rename one of those aliases to a unique name under **Reference** and replace all the occurrences of the old name with the new name as detected in the above step.
+      
+      1. Once the duplicate aliases are renamed, re-import the management pack to System Center Operations Manager.
+
+2.	If the management pack is sealed         
+      1. Open the sealed management pack as per the tool of preference.
+      1. Identify the duplicate alias.
+      1. Rename one of the aliases under **Reference** and all other places where the alias is used in the XML body.
+      1. Rebuild the management pack and re-import in System Center Operations Manager.
+      1. The same steps can be done by editing the XML - [Sealing the management pack](/system-center/scsm/seal-mp) and [reimporting the management pack](/system-center/scom/manage-mp-import-remove-delete).
+
+Once the mitigation is done on all the management packs, rerun the PowerShell script or the T-SQL script to ensure it returns no output.
+
+Follow the above steps for each management pack returned as output.
