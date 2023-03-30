@@ -9,7 +9,7 @@ ms.subservice: d365-sales-sales
 ---
 # Troubleshooting issues with relationship intelligence
 
-This article helps you troubleshoot and resolve the issue where insights can’t be generated using the Exchange data when you use relationship intelligence in Dynamics 365 Sales.
+This article helps you troubleshoot and resolve the issue where insights can’t be generated using Exchange data when you use [relationship intelligence](/dynamics365/sales/ri-overview) in Dynamics 365 Sales.
 
 ## Symptoms
 
