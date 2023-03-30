@@ -2,11 +2,17 @@
   href: welcome-azure-storage.yml
 - name: AzCopy
   items:
-
-
+  - name: Troubleshoot AzCopy issues
+    href: storage-use-azcopy-troubleshoot.md
 
 - name: Azure Monitor metrics and logs with Storage accounts
   items:
+  - name: Troubleshoot availability issues
+    href: troubleshoot-storage-availability.md
+  - name: Troubleshoot client application errors
+    href: troubleshoot-storage-client-application-errors
+  - name: Troubleshoot performance issues
+    href: troubleshoot-storage-performance.md
 
 
 - name: Blob storage
@@ -23,10 +29,16 @@
     href: ../general/diagnose-high-cpu-disk-perfinsights.md
 
 - name: Storage Analytic metrics and logs (classic monitoring)
-  items:
+  items: 
+  - name: Monitor, diagnose, and troubleshoot
+    href: storage-monitoring-diagnosing-troubleshooting.md
+  - name: Troubleshoot latency issues
+    href: troubleshoot-latency-storage-analytics-logs.md
 
 
 - name: Storage Explorer
-  items:
+  items: 
+  - name: Troubleshoot Storage Explorer
+    href: storage-explorer-troubleshooting.md
 
 
