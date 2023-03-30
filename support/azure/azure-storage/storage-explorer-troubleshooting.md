@@ -72,7 +72,7 @@ For more information on how to attach to resources, see [Attach to an individual
 
 There are several Azure built-in roles that can provide the permissions needed to use Storage Explorer. Some of those roles are:
 
-- [Owner](/role-based-access-control/built-in-roles#owner): Manage everything, including access to resources.
+- [Owner](/azure/role-based-access-control/built-in-roles#owner): Manage everything, including access to resources.
 - [Contributor](/azure/role-based-access-control/built-in-roles#contributor): Manage everything, excluding access to resources.
 - [Reader](/azure/role-based-access-control/built-in-roles#reader): Read and list resources.
 - [Storage Account Contributor](/azure/role-based-access-control/built-in-roles#storage-account-contributor): Full management of storage accounts.
@@ -214,7 +214,7 @@ macOS Keychain can sometimes enter a state that causes issues for the Storage Ex
 1. Select the **login** keychain.
 1. Select the **padlock** to lock the keychain. After the process is finished, the **padlock** appears locked. It might take a few seconds, depending on what apps you have open.
 
-    ![Screenshot that shows the padlock.](./media/storage-explorer-troubleshooting/unlockingkeychain.png)
+    :::image type="content" source="media/storage-explorer-troubleshooting/unlockingkeychain.png" alt-text="Screenshot that shows the padlock.":::
 
 1. Open Storage Explorer.
 1. You're prompted with a message like "Service hub wants to access the Keychain." Type your Mac admin account password and select **Always Allow**. Or select **Allow** if **Always Allow** isn't available.
@@ -668,4 +668,4 @@ If none of these solutions work for you, use one of the following methods:
 - [Create a support ticket](https://aka.ms/storageexplorer/servicerequest).
 - [Open an issue on GitHub](https://github.com/Microsoft/AzureStorageExplorer/issues) by selecting the **Report issue to GitHub** button in the lower-left corner.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

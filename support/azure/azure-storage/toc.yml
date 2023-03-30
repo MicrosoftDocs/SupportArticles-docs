@@ -10,7 +10,7 @@
   - name: Troubleshoot availability issues
     href: troubleshoot-storage-availability.md
   - name: Troubleshoot client application errors
-    href: troubleshoot-storage-client-application-errors
+    href: troubleshoot-storage-client-application-errors.md
   - name: Troubleshoot performance issues
     href: troubleshoot-storage-performance.md
 

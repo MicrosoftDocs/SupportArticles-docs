@@ -76,8 +76,8 @@ The most common cause of this error is a client disconnecting before a timeout e
 
 ## See also
 
-- [Troubleshoot client application errors](../common/troubleshoot-storage-client-application-errors.md?toc=/azure/storage/blobs/toc.json)
-- [Troubleshoot performance issues](../common/troubleshoot-storage-performance.md?toc=/azure/storage/blobs/toc.json)
+- [Troubleshoot client application errors](/azure/storage/common/troubleshoot-storage-client-application-errors?toc=/azure/storage/blobs/toc.json)
+- [Troubleshoot performance issues](/azure/storage/common/troubleshoot-storage-performance?toc=/azure/storage/blobs/toc.json)
 - [Monitor, diagnose, and troubleshoot your Azure Storage](/training/modules/monitor-diagnose-and-troubleshoot-azure-storage/)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

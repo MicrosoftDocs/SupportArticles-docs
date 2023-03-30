@@ -526,7 +526,7 @@ Log entries:
 | 07b26a5d-... |`Operation completed successfully.` |
 | 07b26a5d-... |`Starting synchronous request to https://domemaildist.blob.core.windows.net/azuremmblobcontainer`. |
 | 07b26a5d-... |`StringToSign = DELETE............x-ms-client-request-id:07b26a5d-....x-ms-date:Tue, 03 Jun 2014 10:33:12    GMT.x-ms-version:2014-02-14./domemaildist/azuremmblobcontainer.restype:container.` |
-| 07b26a5d-... |`W`aiting for response.` |
+| 07b26a5d-... |`Waiting for response.` |
 | 07b26a5d-... |`Response received. Status code = 202, Request ID = 6ab2a4cf-..., Content-MD5 = , ETag = .` |
 | 07b26a5d-... |`Response headers were processed successfully, proceeding with the rest of the operation.` |
 | 07b26a5d-... |`Downloading response body.` |
@@ -808,7 +808,7 @@ You can also use the Application Insights feature for Azure DevOps as part of yo
 - Make sure your web service is available and responsive. Whether your app is a web site or a device app that uses a web service, it can test your URL every few minutes from locations around the world, and let you know if there's a problem.
 - Quickly diagnose any performance issues or exceptions in your web service. Find out if CPU or other resources are being stretched, get stack traces from exceptions, and easily search through log traces. If the app's performance drops below acceptable limits, Microsoft can send you an email. You can monitor both .NET and Java web services.
 
-You can find more information at [What is Application Insights](../../azure-monitor/app/app-insights-overview.md).
+You can find more information at [What is Application Insights](/azure/azure-monitor/app/app-insights-overview).
 
 ## Next steps
 
@@ -821,4 +821,4 @@ For more information about analytics in Azure Storage, see these resources:
 - [Storage analytics logs](/azure/storage/common/storage-analytics-logging)
 - [Storage analytics log format](/rest/api/storageservices/storage-analytics-log-format)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
