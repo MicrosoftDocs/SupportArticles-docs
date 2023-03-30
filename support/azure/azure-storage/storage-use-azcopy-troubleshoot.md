@@ -16,11 +16,11 @@ This article describes common issues that you might encounter while using AzCopy
 
 You can determine whether a job succeeds by looking at the exit code.
 
-If the exit code is `0-success`, then the job completed successfully.
+If the exit code is `0-success`, the job completed successfully.
 
-If the exit code is `1-error`, then examine the log file. Once you understand the exact error message, then it becomes much easier to search for the right key words and figure out the solution. To learn more, see  [Find errors and resume jobs by using log and plan files in AzCopy](/azure/storage/common/storage-use-azcopy-configure).
+If the exit code is `1-error`, examine the log file. Once you understand the exact error message, it becomes much easier to search for the right key words and figure out the solution. To learn more, see  [Find errors and resume jobs by using log and plan files in AzCopy](/azure/storage/common/storage-use-azcopy-configure).
 
-If the exit code is `2-panic`, then check the log file exists. If the file doesn't exist, file a bug or reach out to support.
+If the exit code is `2-panic`, check the log file exists. If the file doesn't exist, file a bug or reach out to support.
 
 If the exit code is any other non-zero exit code, it may be an exit code from the system. For example, `OOMKilled`.  Check your operating system documentation for special exit codes.
 
@@ -56,7 +56,7 @@ If you're using access control lists (ACLs), verify that your identity appears i
 
 To learn more about ACLs and ACL entries, see [Access control lists (ACLs) in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control).
 
-To learn about how to incorporate Azure roles together with ACLs, and how system evaluates them to make authorization decisions, see [Access control model in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control-model).
+To learn more about how to incorporate Azure roles together with ACLs, and how system evaluates them to make authorization decisions, see [Access control model in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control-model).
 
 ### Firewall and private endpoint issues
 
@@ -80,7 +80,7 @@ A [Private Link](/azure/private-link/private-link-overview) is at the virtual ne
 
 ## Proxy-related errors
 
-If you encounter TCP errors such as `dial tcp: lookup proxy.x.x: no such host`, it means that your environment isn't configured to use the correct proxy, or you're using an advanced proxy that AzCopy doesn't recognize.
+If you encounter TCP errors such as "dial tcp: lookup proxy.x.x: no such host", it means that your environment isn't configured to use the correct proxy, or you're using an advanced proxy that AzCopy doesn't recognize.
 
 You need to update the proxy settings to reflect the correct configurations. See [Configure proxy settings](/azure/storage/common/storage-ref-azcopy-configuration-settings?toc=/azure/storage/blobs/toc.json#configure-proxy-settings).
 
@@ -125,7 +125,7 @@ If your device is among the list of supported platforms, then you might be able 
 
 If your device isn't among the list of supported platforms, contact your administrator for help.
 
-## Server busy status, network errors, or timeouts
+## Server busy, network errors, or timeouts
 
 If you see a large number of failed requests with the "503 Server Busy" status, your requests are being throttled by the storage service. If you're seeing network errors or timeouts, you might be attempting to push through too much data across your infrastructure and that infrastructure is having difficulty handling it. In all cases, the workaround is similar.
 
@@ -147,7 +147,7 @@ If you're copying data between accounts by using AzCopy, the quality and reliabi
 
 ## Known temporary issues
 
-There's a service issue impacting AzCopy 10.11 and later versions that are using the [PutBlobFromURL API](/rest/api/storageservices/put-blob-from-url) to copy blobs smaller than the given block size (whose default size is 8 mebibytes (MiB)). If the user has any firewall (VNet/IP/PL/SE Policy) on the source account, the `PutBlobFromURL` API might mistakenly return the message `409 Copy source blob has been modified`. The workaround is to use AzCopy 10.10:
+There's a service issue impacting AzCopy 10.11 and later versions that are using the [PutBlobFromURL API](/rest/api/storageservices/put-blob-from-url) to copy blobs smaller than the given block size (whose default size is 8 mebibytes (MiB)). If the user has any firewall (VNet/IP/PL/SE Policy) on the source account, the `PutBlobFromURL` API might mistakenly return the message "409 Copy source blob has been modified". The workaround is to use AzCopy 10.10:
 
 - [azcopy_darwin_amd64_10.10.0.zip](https://azcopyvnext.azureedge.net/release20210415/azcopy_darwin_amd64_10.10.0.zip)
 - [azcopy_linux_amd64_10.10.0.tar.gz](https://azcopyvnext.azureedge.net/release20210415/azcopy_linux_amd64_10.10.0.tar.gz)

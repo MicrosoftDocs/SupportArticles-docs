@@ -11,7 +11,7 @@ ms.subservice: common
 
 # Troubleshoot performance in Azure Storage accounts
 
-This article helps you investigate unexpected changes in behavior (such as slower than usual response times). These changes in behavior can often be identified by monitoring storage metrics in Azure Monitor. For general information about using metrics and logs in Azure Monitor, see
+This article helps you investigate unexpected changes in behavior (such as slower than usual response times). These changes in behavior can often be identified by monitoring storage metrics in Azure Monitor. For general information about using metrics and logs in Azure Monitor, see the following articles:
 
 - [Monitoring Azure Blob Storage](/azure/storage/blobs/monitor-blob-storage)
 - [Monitoring Azure Files](/azure/storage/files/storage-files-monitoring)
@@ -20,7 +20,7 @@ This article helps you investigate unexpected changes in behavior (such as slowe
 
 ## Monitoring performance
 
-To monitor the performance of the storage services, you can use the following metrics.
+To monitor the performance of the storage services, you can use the following metrics:
 
 - The **SuccessE2ELatency** and **SuccessServerLatency** metrics show the average time the storage service or API operation type is taking to process requests. **SuccessE2ELatency** is a measure of end-to-end latency that includes the time taken to read the request and send the response in addition to the time taken to process the request (therefore includes network latency once the request reaches the storage service); **SuccessServerLatency** is a measure of just the processing time and therefore excludes any network latency related to communicating with the client.
 
@@ -49,7 +49,7 @@ In some cases, you might find that **SuccessE2ELatency** is higher than the **Su
 
 Possible reasons for the client responding slowly include having a limited number of available connections or threads, or being low on resources such as CPU, memory or network bandwidth. You may be able to resolve the issue by modifying the client code to be more efficient (for example by using asynchronous calls to the storage service), or by using a larger Virtual Machine (with more cores and more memory).
 
-For the table and queue services, the Nagle algorithm can also cause high **SuccessE2ELatency** as compared to **SuccessServerLatency**. For more information, see the post [Nagle's Algorithm is Not Friendly towards Small Requests](/archive/blogs/windowsazurestorage/nagles-algorithm-is-not-friendly-towards-small-requests). You can disable the Nagle algorithm in code by using the `ServicePointManager` class in the `System.Net` namespace. You should do this before you make any calls to the table or queue services in your application since this doesn't affect connections that are already open. The following example comes from the `Application_Start` method in a worker role.
+For the table and queue services, the Nagle algorithm can also cause high **SuccessE2ELatency** as compared to **SuccessServerLatency**. For more information, see the post [Nagle's Algorithm is Not Friendly towards Small Requests](/archive/blogs/windowsazurestorage/nagles-algorithm-is-not-friendly-towards-small-requests). You can disable the Nagle algorithm in code by using the `ServicePointManager` class in the `System.Net` namespace. You should do this before you make any calls to the table or queue services in your application since this doesn't affect connections that are already open. The following example comes from the `Application_Start` method in a worker role:
 
 ```csharp
 var connectionString = Constants.connectionString;

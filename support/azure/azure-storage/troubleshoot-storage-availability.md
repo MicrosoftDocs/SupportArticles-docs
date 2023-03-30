@@ -11,7 +11,7 @@ ms.subservice: common
 
 # Troubleshoot availability issues in Azure Storage accounts
 
-This article helps you investigate changes in the availability (such as number of failed requests). These changes in availability can often be identified by monitoring storage metrics in Azure Monitor. For general information about using metrics and logs in Azure Monitor, see
+This article helps you investigate changes in the availability (such as number of failed requests). These changes in availability can often be identified by monitoring storage metrics in Azure Monitor. For general information about using metrics and logs in Azure Monitor, see the following articles:
 
 - [Monitoring Azure Blob Storage](/azure/storage/blobs/monitor-blob-storage)
 - [Monitoring Azure Files](/azure/storage/files/storage-files-monitoring)
@@ -22,7 +22,7 @@ This article helps you investigate changes in the availability (such as number o
 
 You should monitor the availability of the storage services in your storage account by monitoring the value of the **Availability** metric. The **Availability** metric contains a percentage value and is calculated by taking the total billable requests value and dividing it by the number of applicable requests, including those requests that produced unexpected errors.
 
-Any value less than 100% indicates that some storage requests are failing. You can see why they're failing by examining the **ResponseType** dimension for error types such as **ServerTimeoutError**. You should expect to see **Availability** fall temporarily below 100% for reasons such as transient server timeouts while the service moves partitions to better load-balance request; the retry logic in your client application should handle such intermittent conditions. 
+Any value less than 100% indicates that some storage requests are failing. You can see why they're failing by examining the **ResponseType** dimension for error types such as **ServerTimeoutError**. You should expect to see **Availability** fall temporarily below 100% for reasons such as transient server timeouts while the service moves partitions to better load-balance request; the retry logic in your client application should handle such intermittent conditions.
 
 You can use features in Azure Monitor to alert you if **Availability** for a service falls below a threshold that you specify.
 
