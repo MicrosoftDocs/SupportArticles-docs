@@ -85,7 +85,7 @@ Here's an example of what SQL Server reports to the error log: If you stop the m
 2023-02-15 07:11:03.100 '<replicaname>' Always On Availability Groups connection with primary database terminated for secondary database '<databasename>' on the availability replica '<replicaname>' with [<replicaid>]. This is an informational message only. No user action is required.
 ```
 
-In this example, the primary replica didn't detect any connection time-out because it could still communicate with the secondary, and it reported message 35267 for each availability group database (in this example, there's only one database, '<databasename>'):
+In this example, the primary replica didn't detect any connection time-out because it could still communicate with the secondary, and it reported message 35267 for each availability group database (in this example, there's only one database, `<databasename>`):
 
 ```output
 2023-02-15 07:10:55.500 '<replicaname>' Always On Availability Groups connection with secondary database terminated for primary database '<databasename>' on the availability replica '<replicaname>' with Replica ID: {<replicaid>}. This is an informational message only. No user action is required.
