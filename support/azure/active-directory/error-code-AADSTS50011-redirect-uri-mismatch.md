@@ -4,7 +4,7 @@ description: Describes error AADSTS50011 that occurs when you sign in to an OIDC
 author: aricrowe57
 ms.date: 03/31/2023
 ms.reviewer: arcrowe
-ms.author: aricrowe57,genli
+ms.author: aricrowe57;genli
 ms.service: active-directory
 ms.subservice: app-mgmt
 ---
@@ -52,7 +52,6 @@ To fix the issue, follow these steps to add redirect URI in Azure AD app registr
 
 >[!Note]
 >If the redirect URI sent from the application is the desired one, you should update your application code or configuration.
-
 
 The following video shows how to fix the redirect URI mismatch error in Azure AD:
 
