@@ -39,7 +39,7 @@ If you encountered an issue when updating, try deleting the Visual Studio Instal
 
 1. Close the Visual Studio Installer.
 1. Delete the Visual Studio Installer folder. Typically, the folder path is _C:\Program Files (x86)\Microsoft Visual Studio\Installer_.
-1. Run the Visual Studio Installer bootstrapper. You might find the bootstrapper in your _Downloads_ folder with a file name _VisualStudioSetup.exe_ (Visual Studio 2022) or _vs_\<edition>*.exe_ (Visual Studio 2019 and previous versions). Or, you can download the bootstrapper from the download pages for [Visual Studio 2022](https://visualstudio.microsoft.com/downloads) or [Visual Studio 2019 and previous versions](https://visualstudio.microsoft.com/vs/older-downloads). Then, run the executable to reset your installation metadata.
+1. Run the Visual Studio Installer bootstrapper. You might find the bootstrapper in your _Downloads_ folder with a file name _VisualStudioSetup.exe_ (Visual Studio 2022) or _vs_\<edition>*.exe (Visual Studio 2019 and previous versions). Or, you can download the bootstrapper from the download pages for [Visual Studio 2022](https://visualstudio.microsoft.com/downloads) or [Visual Studio 2019 and previous versions](https://visualstudio.microsoft.com/vs/older-downloads). Then, run the executable to reset your installation metadata.
 1. Try to install or update Visual Studio again. If the Visual Studio Installer continues to fail, [report a problem to support](#5-report-the-problem-to-support).
 
 #### 5. Report the problem to support
@@ -50,7 +50,9 @@ In some situations, such as when there are corrupted files, issues might require
 
     1. Collect your setup logs. See [How to get the Visual Studio installation logs](#collect-installation-logs-for-microsoft-support) for details.
     1. Open the Visual Studio Installer, and then choose **Report a problem** to open the Visual Studio Feedback tool.
-    ![Screenshot showing the Provide feedback button in the Visual Studio Installer.](media/troubleshoot-installation-issues/vs-installer-report-problem.png)
+
+    :::image type="content" source="media/troubleshoot-installation-issues/vs-installer-report-problem.png" alt-text="Screenshot showing the Provide feedback button in the Visual Studio Installer":::
+
     1. Give your problem report a title, and provide the relevant details. The most recent setup log for the Visual Studio Installer is automatically added to the **Additional attachments** section of your problem report.
     1. Choose **Submit**.
 
@@ -90,7 +92,7 @@ To roll back with the Visual Studio Installer, follow these steps:
 1. Select **More**.
 1. Select **Rollback to previous version**.
 
-    :::image type="content" source="media/troubleshoot-installation-issues/rollback-from-previous-version.png" alt-text="Screenshot of the Rollback to previous version option.":::
+    :::image type="content" source="media/troubleshoot-installation-issues/rollback-from-previous-version.png" alt-text="Screenshot of the Rollback to previous version option." lightbox="media/troubleshoot-installation-issues/rollback-from-previous-version.png":::
 1. Select **OK** to confirm.
 
 #### 8. Contact our live chat
