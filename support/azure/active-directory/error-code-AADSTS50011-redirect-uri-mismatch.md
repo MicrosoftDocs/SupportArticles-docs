@@ -26,7 +26,7 @@ When a user accesses the application for authentication, the application redirec
 - The redirect URI sent from the application.
 - The redirect URI values in the registered application in Azure AD.
 
-If the redirect URI that the application sent doesn't match any of the redirect URIs in Azure AD, the error AADSTS50011 will be returned. If the values match, Azure AD send user to the redirect URI.
+If the redirect URI that the application sent doesn't match any of the redirect URIs in Azure AD, the error AADSTS50011 will be returned. If the values match, Azure AD sends user to the redirect URI.
 
 ## Resolution
 
