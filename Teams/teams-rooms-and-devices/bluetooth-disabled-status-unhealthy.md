@@ -20,7 +20,7 @@ ms.custom: CI174031
 
 ## Symptoms
 
-In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **Bluetooth disabled** signal of a Microsoft Teams Rooms device is shown as **Unhealthy**, and the incident severity value is shown as **Warning**. Additionally, users might experience the following issue:
+In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **Bluetooth disabled** status of a Microsoft Teams Rooms device is shown as **Unhealthy**, and the incident severity value is shown as **Warning**. Additionally, users might experience the following issue:
 
 When Bluetooth is disabled on the Teams Rooms device at the operating system (OS) level, the proximity feature that facilitates the discovery and addition of nearby Teams Rooms to a meeting might be affected.
 
