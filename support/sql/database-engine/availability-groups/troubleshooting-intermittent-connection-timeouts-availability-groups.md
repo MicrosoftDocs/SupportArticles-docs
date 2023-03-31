@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting intermittent connection time-outs between availability group replicas
 description: This article helps you diagnose intermittent connection time-outs that are reported between availability group replicas. 
-ms.date: 03/17/2023
+ms.date: 03/31/2023
 ms.custom: sap:Availability Groups
 ms.prod: sql
 author: padmajayaraman
@@ -198,7 +198,7 @@ To check for non-yielding events that might cause replica connection time-outs, 
 
 ### Analyze the results
 
-When a connection time-out is reported, note the timestamp of the time-out event that's shown in the SQL Server error log. For the replicas in the following example, `SQL19AGN1` was reporting the replica connection time-outs. Therefore, a SQL Agent job was created on `SQL19AGN2`, the partner replica. Then, a connection time-out was reported in the SQL19AGN1 error log at 07:24:31.
+When a connection time-out is reported, note the timestamp of the time-out event that's shown in the SQL Server error log. For the replicas in the following example, `SQL19AGN1` was reporting the replica connection time-outs. Therefore, a SQL Agent job was created on `SQL19AGN2`, the partner replica. Then, a connection time-out was reported in the `SQL19AGN1` error log at 07:24:31.
 
 :::image type="content" source="media/troubleshooting-intermittent-connection-timeouts-availability-groups/analyze-event-timestamp-timeout-small.png" alt-text="Screenshot that shows the connection time-out reported in the SQL19AGN1 error log." lightbox="media/troubleshooting-intermittent-connection-timeouts-availability-groups/analyze-event-timestamp-timeout-big.png":::
 
