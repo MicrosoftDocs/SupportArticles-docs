@@ -125,8 +125,6 @@
           href: ../hybrid-configuration-wizard-errors/hcw8008-not-have-client-access-server-role-installed.md
         - name: Client Access servers were not properly cleared
           href: ../hybrid-configuration-wizard-errors/hcw8014-client-access-servers-not-properly-cleared.md
-        - name: Connecting to the remote server failed error
-          href: ../hybrid-configuration-wizard-errors/the-user-name-or-password-is-incorrect-error.md
         - name: Could not create SSL/TLS secure channel error
           href: ../hybrid-configuration-wizard-errors/request-was-aborted-could-not-create-ssl-tls-secure-channel.md
         - name: DataStrings.InvalidSmtpDomainName(domain) error
