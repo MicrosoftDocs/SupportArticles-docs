@@ -9,7 +9,7 @@ ms.subservice: app-mgmt
 ---
 # Error AADSTS50011: The redirect URI specified in the request does not match
 
-This article describes a problem in which an `AADSTS50011` error message is returned when you try to sign in to an application that uses OpenID Connect (OIDC)-based single sign-on (SSO) with Azure Active Directory (Azure AD).
+This article describes a problem in which an `AADSTS50011` error message is returned when you try to sign in to an application that uses OpenID Connect (OIDC)-based authentication with Azure Active Directory (Azure AD).
 
 ## Symptoms
 
@@ -50,7 +50,7 @@ To fix the issue, follow these steps to add redirect URI in Azure AD app registr
 1. Save the changes and wait three to five minutes for the changes to take effect, and then send the log-in request again. You should now be able to sign in to the application.
 
 >[!Note]
->If the redirect URI sent from the application is the desired one, you should update your application code or configuration.
+>If the redirect URI sent from the application is not the desired one, you should update your application code or configuration.
 
 The following video shows how to fix the redirect URI mismatch error in Azure AD:
 
