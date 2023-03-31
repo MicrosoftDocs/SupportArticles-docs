@@ -47,63 +47,63 @@ foreach ($mp in $mps)
 
 ```tsql
 -- LIST ALL MPs that have a duplicate Alias reference
-declare
-       @mpFriendlyName nvarchar(255),
-       @mpName nvarchar(255),
-       @mpId uniqueidentifier,
-       @mpXml as xml
+DECLARE @mpFriendlyName NVARCHAR(255),
+        @mpName         NVARCHAR(255),
+        @mpId           UNIQUEIDENTIFIER,
+        @mpXml          AS XML
 
-create table #badMPTable (
-       mpId uniqueidentifier,
-       mpName nvarchar(255),
-       mpFriendlyName nvarchar(255)
-)
+CREATE TABLE #badmptable
+  (
+     mpid           UNIQUEIDENTIFIER,
+     mpname         NVARCHAR(255),
+     mpfriendlyname NVARCHAR(255)
+  )
 
-declare mp_cursor cursor local forward_only read_only for
-       select 
-              MPFriendlyName,
-              MPName,
-              ManagementPackId,
-              convert(xml, MPXML)
-       from ManagementPack
+DECLARE mp_cursor CURSOR local forward_only read_only FOR
+  SELECT mpfriendlyname,
+         mpname,
+         managementpackid,
+         CONVERT(XML, mpxml)
+  FROM   managementpack
 
-open mp_cursor
-fetch next from mp_cursor
-into @mpFriendlyName, @mpName, @mpId, @mpXml
+OPEN mp_cursor
 
-while @@FETCH_STATUS = 0 begin
-       select
-       n.value('@Alias','nvarchar(255)') as mpRef
-       into #tempRefs
-       from @mpXml.nodes('/ManagementPack/Manifest/References/Reference') as a(n)
+FETCH next FROM mp_cursor INTO @mpFriendlyName, @mpName, @mpId, @mpXml
 
-       if exists(
-              select count(*)
-              from #tempRefs
-              group by mpRef
-              having count(*) > 1
-       ) begin
-              insert into #badMPTable (
-                     mpId,
-                     mpName,
-                     mpFriendlyName
-              ) values (
-                     @mpId,
-                     @mpName,
-                     @mpFriendlyName
-              )
-       end
+WHILE @@FETCH_STATUS = 0
+  BEGIN
+      SELECT n.value('@Alias', 'nvarchar(255)') AS mpRef
+      INTO   #temprefs
+      FROM   @mpXml.nodes('/ManagementPack/Manifest/References/Reference') AS a(
+             n)
 
-       drop table #tempRefs
+      IF EXISTS (SELECT Count(*)
+                 FROM   #temprefs
+                 GROUP  BY mpref
+                 HAVING Count(*) > 1)
+        BEGIN
+            INSERT INTO #badmptable
+                        (mpid,
+                         mpname,
+                         mpfriendlyname)
+            VALUES      ( @mpId,
+                          @mpName,
+                          @mpFriendlyName )
+        END
 
-       fetch next from mp_cursor
-       into @mpFriendlyName, @mpName, @mpId, @mpXml
-end
+      DROP TABLE #temprefs
 
-close mp_cursor  
-deallocate mp_cursor 
-select * from #badMPTable 
-drop table #badMPTable 
+      FETCH next FROM mp_cursor INTO @mpFriendlyName, @mpName, @mpId, @mpXml
+  END
+
+CLOSE mp_cursor
+
+DEALLOCATE mp_cursor
+
+SELECT *
+FROM   #badmptable
+
+DROP TABLE #badmptable
 --End
 ```
 
