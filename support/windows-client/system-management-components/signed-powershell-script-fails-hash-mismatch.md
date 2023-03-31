@@ -7,7 +7,7 @@ ms.author: v-sidong
 author: mrmilanmm
 ms.prod: windows-client
 ms.technology: windows-client-system-management-components
-ms.custom: 'Fix', csstroubleshoot, devx-track-azurepowershell
+ms.custom: Fix, csstroubleshoot, devx-track-azurepowershell
 audience: itpro
 localization_priority: medium
 ---
