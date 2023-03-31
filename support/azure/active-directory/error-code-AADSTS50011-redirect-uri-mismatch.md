@@ -32,7 +32,7 @@ If the redirect URI that the application sent doesn't match any of the redirect 
 
 To fix the issue, follow these steps to add redirect URI in Azure AD app registration.
 
-1. Copy the application ID from the error message. This is the ID of your application that has been registered on Azure AD.
+1. Copy the application ID from the error message. This is the ID of your application that has been registered in Azure AD.
     ![The screenshot about the application ID in AADSTS50011 error message](media\error-code-AADSTS50011-redirect-uri-mismatch\aadsts50011-error-appid.png)
 
 1. Go to the [Azure portal](https://portal.azure.com). Make sure that you sign in to the portal by using an account that has permissions to update Azure AD Application registration.
