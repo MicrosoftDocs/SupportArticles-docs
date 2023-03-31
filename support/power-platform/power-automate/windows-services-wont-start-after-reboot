@@ -1,0 +1,26 @@
+---
+title: Power Automate service won't start automatically after reboot
+description: Provides a resolution for the issue that some actions aren't visible in Power Automate for desktop.
+ms.reviewer: guco
+ms.date: 3/31/2022
+ms.subservice: power-automate-desktop-flows
+---
+# Power Automate service won't start automatically after reboot
+
+This article provides a resolution to the problem where the Power Automate service or other related services do not start automatically after a reboot.
+
+_Applies to:_ &nbsp; Power Automate  
+
+## Symptoms
+
+When a machine restarts, the Power Automate service, Power Automate agent launcher service, Power Automate updater service, or Power Automate log shipper service does not start automatically.
+
+## Cause
+
+This can be caused by Windows updates which may slow down the starting of services on your computer. By default, Windows limits service start time to 30 seconds, and it's possible for the services to take longer to start after an update. You can confirm that starting your service timed out by opening the Event Viewer, then looking in Windows Logs > System. In there, you can do a CTRL-F to look for the name of the service as seen in Task Manager that didn't start automatically (for example: "UIFlowService", or "UIFlowAgentLauncherService").
+
+## Resolution
+
+To resolve this problem, you can start the service manually using the Services plug-in. Go to the start menu and type Services to open the plug-in. Find the "Power Automate Service" or whichever service is not started, right click and hit start.
+
+After doing this, the product should work as expected and subsequent reboots should not reproduce the issue.
