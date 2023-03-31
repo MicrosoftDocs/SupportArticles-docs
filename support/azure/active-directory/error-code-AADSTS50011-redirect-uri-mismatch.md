@@ -44,7 +44,7 @@ To fix the issue, follow these steps to add redirect URI in Azure AD app registr
     - If this app is owned by an organization (Azure AD tenant), use `https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/Authentication/appId/<AppGUID>`.
     - If this app is owned by your personal Microsoft (MSA) account, use `https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/Authentication/appId/<AppGUID>/isMSAApp/true`.
 
-1. On the app registration page, select **Authentication**. In the **Platform configurations** section, select **Add URI** to add the Redirect URI that is displayed in the error message.
+1. On the app registration page, select **Authentication**. In the **Platform configurations** section, select **Add URI** to add the Redirect URI that is displayed in the error message to Azure AD.
 
     ![The screenshot about redirect URI in the AADSTS50011 error message](media\error-code-AADSTS50011-redirect-uri-mismatch\aadsts50011-error-redirecturi.png)
 
