@@ -19,30 +19,36 @@ You receive the following error message when you try to sign in to an applicatio
 
 ## Cause
 
-This authentication error occurs if the redirect URI (reply URL) configured in the application (code) and the Azure AD app registration are not matched.
+This error occurs if the redirect URI (reply URL) configured in the **application (code)** and the **Azure AD app registration** do not match.
 
-When the user tries to sign in to the application by using OIDC or OAuth2 protocol, the login server (Azure AD) has to know where to send the authorization code or access token that proves that the user has been successfully authenticated. The application notifies Azure AD by sending the `redirect URI` together with the login request. However, the protocol specifications require that the `redirect URI` that the application sends must also be registered on the application itself.
+When a user accesses the application for authentication, the application redirects the user to Azure AD with pre-defined redirect URI. Once the user is authorized successfully, Azure AD verifies the following values:
+
+- The redirect URI sent from the application.
+- The redirect URI values in the registered application in Azure AD.
+
+If the values do not match, the error AADSTS50011 will be returned.
 
 ## Resolution
 
-To fix the issue, follow these steps to add redirect URI in Azure AD app registration:
+To fix the issue, follow these steps to add redirect URI in Azure AD app registration.
 
-1. Copy the application GUID from the error message. This is your application ID registered on Azure AD.
+1. Copy the application ID from the error message. This is the ID of your application registered on Azure AD.
 
-    ![The screenshot about the application GUID in AADSTS50011 error message](media\error-code-AADSTS50011-redirect-uri-mismatch\aadsts50011-error-appid.png)
+    ![The screenshot about the application ID in AADSTS50011 error message](media\error-code-AADSTS50011-redirect-uri-mismatch\aadsts50011-error-appid.png)
 
-1. Go to the Azure portal, Make sure that you sign in to the portal by using an administrator account for that organization, or an account that owns the application.
-1. Negative to **Azure Active Directory**, select **App registrations**, locate the application registration by using the application ID, and then open the application registration page.
+1. Go to the [Azure portal](https:/portal.azure.com). Make sure that you sign in to the portal by using an administrator account for that organization, or an account that has permissions to update Azure AD Application registration.
+1. Negative to **Azure Active Directory**, select **App registrations**, locate the application registration by using the application ID, and then open the app registration page.
+
     You can also open the page directly by using the following links:
 
-    - If this app is owned by an organization (Azure AD tenant), use `https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/Authentication/appId/<GUID>`.
-    - If this app is owned by your personal Microsoft (MSA) account, use `https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/Authentication/appId/<GUID>/isMSAApp/true`.
+    - If this app is owned by an organization (Azure AD tenant), use `https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/Authentication/appId/<AppGUID>`.
+    - If this app is owned by your personal Microsoft (MSA) account, use `https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/Authentication/appId/<AppGUID>/isMSAApp/true`.
 
-1. On the app registration page, select **Authentication**. In the **Platform configurations** section, add the Redirect URLs that was displayed in the error message:
+1. On the app registration page, select **Authentication**. In the **Platform configurations** section, select **Add URI** to add the Redirect URI that was displayed in the error message.
 
     ![The screenshot about redirect URI in the AADSTS50011 error message](media\error-code-AADSTS50011-redirect-uri-mismatch\aadsts50011-error-redirecturi.png)
 
-1. Wait three to five minutes for the changes to take effect, and then send the log-in request again. You should now be able to sign in to the application.
+1. Save the changes and wait three to five minutes for the changes to take effect, and then send the log-in request again. You should now be able to sign in to the application.
 
 >[!Note]
 >The redirect URI is also known as the reply URL. These values depend on which protocol is used. OIDC and OAuth2 protocols refer to this value as a redirect URI.
