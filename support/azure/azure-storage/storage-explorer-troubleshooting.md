@@ -210,7 +210,7 @@ If you continue to have issues after you do a reset, try these steps:
 macOS Keychain can sometimes enter a state that causes issues for the Storage Explorer authentication library. To get Keychain out of this state, follow these steps:
 
 1. Close Storage Explorer.
-1. Open Keychain by selecting **Command+Spacebar**, type *keychain*, and select **Enter**.
+1. Open Keychain by selecting <kbd>Command</kbd> + <kbd>Spacebar</kbd>, type *keychain*, and select <kbd>Enter</kbd>.
 1. Select the **login** keychain.
 1. Select the **padlock** to lock the keychain. After the process is finished, the **padlock** appears locked. It might take a few seconds, depending on what apps you have open.
 
@@ -637,7 +637,7 @@ For some issues, you'll need to provide logs of the network calls made by Storag
 1. Select **Trust Root Certificate** and then select **Yes** in the next dialog box.
 1. Start Storage Explorer.
 1. Go to **Settings** (the **gear** symbol on the left) > **Application** > **Proxy**.
-1. Change the proxy source dropdown to be **Use system proxy (preview)**. 
+1. Change the proxy source dropdown to be **Use system proxy (preview)**.
 1. Restart Storage Explorer.
 1. You should start seeing network calls from a `storageexplorer:` process show up in Fiddler.
 
@@ -667,5 +667,7 @@ If none of these solutions work for you, use one of the following methods:
 
 - [Create a support ticket](https://aka.ms/storageexplorer/servicerequest).
 - [Open an issue on GitHub](https://github.com/Microsoft/AzureStorageExplorer/issues) by selecting the **Report issue to GitHub** button in the lower-left corner.
+
+    :::image type="content" source="media/storage-explorer-troubleshooting/feedback-button.png" alt-text="Screenshot that shows the feedback button.":::
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
