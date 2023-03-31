@@ -23,8 +23,8 @@ This error occurs if the redirect URI (reply URL) configured in the application 
 
 When a user accesses the application for authentication, the application redirects the user to Azure AD with predefined redirect URI. Once the user is authorized successfully, Azure AD verifies the following values:
 
-- The redirect URI sent from the application.
-- The redirect URI values in the registered application in Azure AD.
+- The redirect URI sent from the application
+- The redirect URI values in the registered application in Azure AD
 
 If the redirect URI that the application sent doesn't match any of the redirect URIs in Azure AD, the error AADSTS50011 will be returned. If the values match, Azure AD sends user to the redirect URI.
 
