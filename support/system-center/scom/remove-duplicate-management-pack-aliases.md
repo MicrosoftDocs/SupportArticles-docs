@@ -45,7 +45,7 @@ foreach ($mp in $mps)
 
 **T-SQL**
 
-```tsql
+```sql
 -- LIST ALL MPs that have a duplicate Alias reference
 DECLARE @mpFriendlyName NVARCHAR(255),
         @mpName         NVARCHAR(255),
