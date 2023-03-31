@@ -16,7 +16,7 @@ This article describes a problem in which an `AADSTS50011` error message is retu
 
 You receive the following error message when you try to sign in to an application that uses OIDC or OAuth2 authentication protocols with Azure AD:
 
->Error AADSTS50011 - The redirect URI \<Redirect URI\> specified in the request does not match the redirect URIs configured for the application \<GUID\>. Make sure the redirect URI sent in the request matches one added to your application in the Azure portal. Navigate to https://aka.ms/redirectUriMismatchError to learn more about how to fix this.
+>Error AADSTS50011 - The redirect URI \<Redirect URI\> specified in the request does not match the redirect URIs configured for the application \<AppGUID\>. Make sure the redirect URI sent in the request matches one added to your application in the Azure portal. Navigate to https://aka.ms/redirectUriMismatchError to learn more about how to fix this.
 
 ## Cause
 
