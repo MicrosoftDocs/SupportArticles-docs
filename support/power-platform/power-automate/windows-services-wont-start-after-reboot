@@ -21,6 +21,6 @@ This can be caused by Windows updates which may slow down the starting of servic
 
 ## Resolution
 
-To resolve this problem, you can start the service manually using the Services plug-in. Go to the start menu and type Services to open the plug-in. Find the "Power Automate Service" or whichever service is not started, right click and hit start.
+To resolve this problem, you can start the service manually using the Services snap-in. Go to the start menu and type Services to open the snap-in. Find the "Power Automate service" or whichever service is not started, right click and hit start.
 
 After doing this, the product should work as expected and subsequent reboots should not reproduce the issue.
