@@ -235,12 +235,6 @@ This error is logged when the client computer lacks network connectivity on TCP 
 Test-NetConnection <IP Address of Domain Controller> -Port 88
 ```
 
-For example:
-
-```PowerShell
-Test-NetConnection <IP_address_of_the_DC> -Port 88
-```
-
 Expected Output:
 
 :::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/test-netconnection-output-88.png" alt-text="Screenshot that shows the Test-NetConnection command for TCP port 88 output.":::
@@ -357,12 +351,6 @@ mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x3a
 ```
 
 Error 0x3a is logged when the client computer lacks network connectivity on TCP port 389 between the client computer and the DC. To troubleshoot this issue, use the following command to test the connection:
-
-```PowerShell
-Test-NetConnection <IP_address_of_the_DC> -Port 389
-```
-
-For example:
 
 ```PowerShell
 Test-NetConnection <IP_address_of_the_DC> -Port 389
