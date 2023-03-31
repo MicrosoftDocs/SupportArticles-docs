@@ -1,5 +1,5 @@
 ---
-title: Error AADSTS50011 the redirect URI not match the redirect URIs configured for the application
+title: Error AADSTS50011 the redirect URI does not match the redirect URIs configured for the application
 description: Describes error AADSTS50011 that occurs when you sign in to an OIDC-based SSO application in Azure Active Directory.
 author: aricrowe57
 ms.date: 03/31/2023
@@ -20,9 +20,9 @@ You receive the following error message when you try to sign in to an applicatio
 
 ## Cause
 
-This error occurs if the redirect URI (reply URL) configured in the **application (code)** and the **Azure AD app registration** do not match.
+This error occurs if the redirect URI (reply URL) configured in the **application (code)** and the **Azure AD app registration** don't match.
 
-When a user accesses the application for authentication, the application redirects the user to Azure AD with pre-defined redirect URI. Once the user is authorized successfully, Azure AD verifies the following values:
+When a user accesses the application for authentication, the application redirects the user to Azure AD with predefined redirect URI. Once the user is authorized successfully, Azure AD verifies the following values:
 
 - The redirect URI sent from the application.
 - The redirect URI values in the registered application in Azure AD.
@@ -36,7 +36,7 @@ To fix the issue, follow these steps to add redirect URI in Azure AD app registr
 1. Copy the application ID from the error message. This is the ID of your application that has been registered on Azure AD.
     ![The screenshot about the application ID in AADSTS50011 error message](media\error-code-AADSTS50011-redirect-uri-mismatch\aadsts50011-error-appid.png)
 
-1. Go to the [Azure portal](https://portal.azure.com). Make sure that you sign in to the portal by using an administrator account for that organization, or an account that has permissions to update Azure AD Application registration.
+1. Go to the [Azure portal](https://portal.azure.com). Make sure that you sign in to the portal by using an account that has permissions to update Azure AD Application registration.
 1. Negative to **Azure Active Directory**, select **App registrations**, locate the application registration by using the application ID, and then open the app registration page.
 
     You can also open the page directly by using the following links:
