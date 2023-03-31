@@ -1,6 +1,6 @@
 ---
 title: Power Automate service won't start automatically after reboot
-description: Provides a resolution for the issue that some actions aren't visible in Power Automate for desktop.
+description: Provides a resolution if Power Automate windows services won't start automatically after a reboot
 ms.reviewer: guco
 ms.date: 3/31/2022
 ms.subservice: power-automate-desktop-flows
