@@ -6,6 +6,7 @@ ms.topic: how-to
 ms.reviewer: maheshallu, piw
 ms.author: v-weizhu
 ms.service: cloud-services
+ms.custom: devx-track-azurepowershell
 author: JerryZhangMS
 ---
 # Retrieve Azure Cloud Service (extended support) detail via PowerShell
