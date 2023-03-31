@@ -2,7 +2,7 @@
 title: Error AADSTS50011 the redirect URI not match the redirect URIs configured for the application
 description: Describes error AADSTS50011 that occurs when you sign in to an OIDC-based SSO application in Azure Active Directory.
 author: aricrowe57
-ms.date: 03/16/2023
+ms.date: 03/31/2023
 ms.reviewer: arcrowe
 ms.service: active-directory
 ms.subservice: app-mgmt
@@ -19,23 +19,28 @@ You receive the following error message when you try to sign in to an applicatio
 
 ## Cause
 
-This error occurs if the `redirect URI` that the application sent doesn't match any of the redirect URIs that are registered on the application itself.
+This authentication error occurs if the redirect URI (reply URL) configured in the application (code) and the Azure AD app registration are not matched.
 
-When the user tries to sign in to the application by using OIDC or OAuth2 SSO, the login server (Azure AD) has to know where to send the authorization code or access token that proves that the user has been successfully authenticated. The application notifies Azure AD by sending the `redirect URI` together with the login request. However, the protocol specifications require that the `redirect URI` that the application sends must also be registered on the application itself.
+When the user tries to sign in to the application by using OIDC or OAuth2 protocol, the login server (Azure AD) has to know where to send the authorization code or access token that proves that the user has been successfully authenticated. The application notifies Azure AD by sending the `redirect URI` together with the login request. However, the protocol specifications require that the `redirect URI` that the application sends must also be registered on the application itself.
 
 ## Resolution
 
-To fix the issue, follow these steps:
+To fix the issue, follow these steps to add redirect URI in Azure AD app registration:
 
-1. Copy the \<GUID\> value from the error message. This is your application (client) ID.
+1. Copy the application GUID from the error message. This is your application ID registered on Azure AD.
 
-1. Go to the **Authentication** blade of your application in the Azure portal. You can open the page directly by inserting your application ID as the GUID value in one of the following links:
-    - If this app is owned by an organization (Azure AD tenant), use `https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/Authentication/appId/<GUID>`. Make sure that you sign in to the portal by using an administrator account for that organization, or an account that owns the application.
-    - If this app is owned by your personal Microsoft (MSA) account, use `https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/Authentication/appId/<GUID>/isMSAApp/true`. Make sure that you sign in to the portal by using your personal Microsoft account.
+    ![The screenshot about the application GUID in AADSTS50011 error message](media\error-code-AADSTS50011-redirect-uri-mismatch\aadsts50011-error-appid.png)
 
-1. Copy the \<redirect URI\> value from the error message.
+1. Go to the Azure portal, Make sure that you sign in to the portal by using an administrator account for that organization, or an account that owns the application.
+1. Negative to **Azure Active Directory**, select **App registrations**, locate the application registration by using the application ID, and then open the application registration page.
+    You can also open the page directly by using the following links:
 
-1. Add the redirect URI to the appropriate platform configuration. This might be the web, single page app, or some public/native client platform. Make sure to save the input after the redirect URI is added.
+    - If this app is owned by an organization (Azure AD tenant), use `https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/Authentication/appId/<GUID>`.
+    - If this app is owned by your personal Microsoft (MSA) account, use `https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/Authentication/appId/<GUID>/isMSAApp/true`.
+
+1. On the app registration page, select **Authentication**. In the **Platform configurations** section, add the Redirect URLs that was displayed in the error message:
+
+    ![The screenshot about redirect URI in the AADSTS50011 error message](media\error-code-AADSTS50011-redirect-uri-mismatch\aadsts50011-error-redirecturi.png)
 
 1. Wait three to five minutes for the changes to take effect, and then send the log-in request again. You should now be able to sign in to the application.
 
