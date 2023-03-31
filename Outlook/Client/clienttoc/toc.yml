@@ -707,8 +707,6 @@
           href: ../user-interface/default-office-addin-icon-displayed-outlook-ribbon.md
         - name: Default folder is missing
           href: ../user-interface/default-folder-is-missing.md
-        - name: Delegates page is not available error if setting a delegate
-          href: ../user-interface/the-delegates-page-is-not-available-error-when-setting-delegate.md
         - name: Deleted recipients still appear
           href: ../user-interface/deleted-recipients-still-appear.md
         - name: Emails don't show in Cached mode Inbox after synchronized
