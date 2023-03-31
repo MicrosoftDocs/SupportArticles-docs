@@ -232,7 +232,7 @@ mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x40
 This error is logged when the client computer lacks network connectivity on TCP port 88 between the client machine and the DC. To troubleshoot this issue, you can run the following command to test the connection:
 
 ```PowerShell
-Test-NetConnection <IP Address of Domain Controller> -Port 88
+Test-NetConnection <IP_address_of_the_DC> -Port 88
 ```
 
 Expected Output:
