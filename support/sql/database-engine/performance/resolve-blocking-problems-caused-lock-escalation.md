@@ -1,6 +1,6 @@
 ---
 title: Resolve blocking problem caused by lock escalation
-description: This article describes how to determine whether lock escalation is causing blocking and how to resolve the problem.
+description: This article describes how to determine if lock escalation is causing blocking and how to resolve the problem.
 ms.date: 4/7/2021
 ms.custom: sap:Performance
 ms.reviewer: BARTD

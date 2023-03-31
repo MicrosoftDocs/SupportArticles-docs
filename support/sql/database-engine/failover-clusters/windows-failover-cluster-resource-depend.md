@@ -82,7 +82,7 @@ The default dependency tree for SQL Server has the following implications:
 
 ## More information
 
-For information about how to add dependencies to a SQL Server resource:
+For information about how to add dependencies to a SQL Server resource, see:
 
 - [How to add dependencies in SQL Server 2008](/previous-versions/sql/sql-server-2008/ms177447(v=sql.100))
 - [How to add dependencies in SQL Server 2008 R2](/previous-versions/sql/sql-server-2008-r2/ms177447(v=sql.105))
