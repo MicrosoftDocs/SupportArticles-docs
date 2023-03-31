@@ -4,7 +4,6 @@ description: Describes error AADSTS50011 that occurs when you sign in to an OIDC
 author: aricrowe57
 ms.date: 03/31/2023
 ms.reviewer: arcrowe
-ms.author: aricrowe57
 ms.service: active-directory
 ms.subservice: app-mgmt
 ---
@@ -20,14 +19,14 @@ You receive the following error message when you try to sign in to an applicatio
 
 ## Cause
 
-This error occurs if the redirect URI (reply URL) configured in the **application (code)** and the **Azure AD app registration** don't match.
+This error occurs if the redirect URI (reply URL) configured in the application (code) and the Azure AD app registration don't match.
 
 When a user accesses the application for authentication, the application redirects the user to Azure AD with predefined redirect URI. Once the user is authorized successfully, Azure AD verifies the following values:
 
 - The redirect URI sent from the application.
 - The redirect URI values in the registered application in Azure AD.
 
-If the redirect URI that the application sent doesn't match any of the redirect URIs in Azure AD, the error AADSTS50011 will be returned.
+If the redirect URI that the application sent doesn't match any of the redirect URIs in Azure AD, the error AADSTS50011 will be returned. If the values match, Azure AD send user to the redirect URI.
 
 ## Resolution
 
