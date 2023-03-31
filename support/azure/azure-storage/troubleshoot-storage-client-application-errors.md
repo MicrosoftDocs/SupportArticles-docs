@@ -22,11 +22,11 @@ Users of your application may notify you of errors reported by the client applic
 
 The following resources are useful for understanding storage-related status and error codes:
 
-- [Common REST API Error Codes](/rest/api/storageservices/Common-REST-API-Error-Codes)
-- [Blob Service Error Codes](/rest/api/storageservices/Blob-Service-Error-Codes)
-- [Queue Service Error Codes](/rest/api/storageservices/Queue-Service-Error-Codes)
-- [Table Service Error Codes](/rest/api/storageservices/Table-Service-Error-Codes)
-- [File Service Error Codes](/rest/api/storageservices/File-Service-Error-Codes)
+- [Common REST API error codes](/rest/api/storageservices/Common-REST-API-Error-Codes)
+- [Blob Service error codes](/rest/api/storageservices/Blob-Service-Error-Codes)
+- [Queue Service error codes](/rest/api/storageservices/Queue-Service-Error-Codes)
+- [Table Service error codes](/rest/api/storageservices/Table-Service-Error-Codes)
+- [File Service error codes](/rest/api/storageservices/File-Service-Error-Codes)
 
 ## The client is receiving HTTP 403 (Forbidden) messages
 
@@ -64,13 +64,13 @@ If you're using the Storage Client Library to generate SAS tokens, then it's eas
 
 If the client application receives an HTTP 404 (Not found) message from the server, this implies that the object the client was attempting to use (such as an entity, table, blob, container, or queue) doesn't exist in the storage service. There are a number of possible reasons for this, such as:
 
-- The client or another process previously deleted the object
+- The client or another process previously deleted the object.
 
-- A Shared Access Signature (SAS) authorization issue
+- A Shared Access Signature (SAS) authorization issue.
 
-- Client-side JavaScript code doesn't have permission to access the object
+- Client-side JavaScript code doesn't have permission to access the object.
 
-- Network failure
+- Network failure.
 
 ### The client or another process previously deleted the object
 

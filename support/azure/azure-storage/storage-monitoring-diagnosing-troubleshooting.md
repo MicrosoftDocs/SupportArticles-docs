@@ -39,7 +39,7 @@ To manage such applications successfully you should monitor them proactively and
 
 ### <a name="how-this-guide-is-organized"></a>How this guide is organized
 
-The [Monitoring your storage service](# monitoring-your-storage-service) section describes how to monitor the health and performance of your Azure Storage services using Azure Storage Analytics Metrics (Storage Metrics).
+The [Monitoring your storage service](#monitoring-your-storage-service) section describes how to monitor the health and performance of your Azure Storage services using Azure Storage Analytics Metrics (Storage Metrics).
 
 The [Diagnosing storage issues](#diagnosing-storage-issues) section describes how to diagnose issues using Azure Storage Analytics Logging (Storage Logging). It also describes how to enable client-side logging using the facilities in one of the client libraries such as the Storage Client Library for .NET or the Azure SDK for Java.
 
@@ -96,7 +96,7 @@ To estimate the size of various storage objects such as blobs, see the blog post
 
 You should monitor the availability of the storage services in your storage account by monitoring the value in the `Availability` column in the hourly or minute metrics tables — `$MetricsHourPrimaryTransactionsBlob`, `$MetricsHourPrimaryTransactionsTable`, `$MetricsHourPrimaryTransactionsQueue`, `$MetricsMinutePrimaryTransactionsBlob`, `$MetricsMinutePrimaryTransactionsTable`, `$MetricsMinutePrimaryTransactionsQueue`, `$MetricsCapacityBlob`. The `Availability` column contains a percentage value that indicates the availability of the service or the API operation represented by the row (the `RowKey` shows if the row contains metrics for the service as a whole or for a specific API operation).
 
-Any value less than 100% indicates that some storage requests are failing. You can see why they're failing by examining the other columns in the metrics data that show the numbers of requests with different error types such as `ServerTimeoutError`. You should expect to see `Availability` fall temporarily below 100% for reasons such as transient server timeouts while the service moves partitions to better load-balance request; the retry logic in your client application should handle such intermittent conditions. The article [Storage Analytics Logged Operations and Status Messages](/rest/api/storageservices/Storage-Analytics-Logged-Operations-and-Status-Messages) lists the transaction types that Storage Metrics includes in its `Availability` calculation.
+Any value less than 100% indicates that some storage requests are failing. You can see why they're failing by examining the other columns in the metrics data that show the numbers of requests with different error types such as ServerTimeoutError. You should expect to see `Availability` fall temporarily below 100% for reasons such as transient server timeouts while the service moves partitions to better load-balance request; the retry logic in your client application should handle such intermittent conditions. The article [Storage Analytics Logged Operations and Status Messages](/rest/api/storageservices/Storage-Analytics-Logged-Operations-and-Status-Messages) lists the transaction types that Storage Metrics includes in its `Availability` calculation.
 
 In the [Azure portal](https://portal.azure.com), you can add alert rules to notify you if `Availability` for a service falls below a threshold that you specify.
 
@@ -148,18 +148,18 @@ The [Troubleshooting guidance](#troubleshooting-guidance) section later in this 
 
 ### <a name="diagnosing-errors"></a>Diagnosing errors
 
-Users of your application may notify you of errors reported by the client application. Storage Metrics also records counts of different error types from your storage services such as `NetworkError`, `ClientTimeoutError`, or `AuthorizationError`. While Storage Metrics only records counts of different error types, you can obtain more detail about individual requests by examining server-side, client-side, and network logs. Typically, the HTTP status code returned by the storage service will give an indication of why the request failed.
+Users of your application may notify you of errors reported by the client application. Storage Metrics also records counts of different error types from your storage services such as NetworkError, ClientTimeoutError, or AuthorizationError. While Storage Metrics only records counts of different error types, you can obtain more detail about individual requests by examining server-side, client-side, and network logs. Typically, the HTTP status code returned by the storage service will give an indication of why the request failed.
 
 > [!NOTE]
 > Remember that you should expect to see some intermittent errors: for example, errors due to transient network conditions, or application errors.
 
 The following resources are useful for understanding storage-related status and error codes:
 
-- [Common REST API Error Codes](/rest/api/storageservices/Common-REST-API-Error-Codes)
-- [Blob Service Error Codes](/rest/api/storageservices/Blob-Service-Error-Codes)
-- [Queue Service Error Codes](/rest/api/storageservices/Queue-Service-Error-Codes)
-- [Table Service Error Codes](/rest/api/storageservices/Table-Service-Error-Codes)
-- [File Service Error Codes](/rest/api/storageservices/File-Service-Error-Codes)
+- [Common REST API error codes](/rest/api/storageservices/Common-REST-API-Error-Codes)
+- [Blob Service error codes](/rest/api/storageservices/Blob-Service-Error-Codes)
+- [Queue Service error codes](/rest/api/storageservices/Queue-Service-Error-Codes)
+- [Table Service error codes](/rest/api/storageservices/Table-Service-Error-Codes)
+- [File Service error codes](/rest/api/storageservices/File-Service-Error-Codes)
 
 ### <a name="storage-emulator-issues"></a>Storage emulator issues
 
@@ -433,9 +433,9 @@ If you are seeing spikes in the value of **PercentThrottlingError** that coincid
 > [!NOTE]
 > You may also see spikes in the value of **PercentThrottlingError** that do not coincide with periods of high activity for the application. The most likely cause here is the storage service moving partitions to improve load balancing.
 
-#### <a name="permanent-increase-in-PercentThrottlingError"></a>Permanent increase in PercentThrottlingError error
+#### <a name="permanent-increase-in-PercentThrottlingError"></a>Permanent increase in PercentThrottlingError
 
-If you are seeing a consistently high value for `PercentThrottlingError` following a permanent increase in your transaction volumes, or when you are performing your initial load tests on your application, then you need to evaluate how your application is using storage partitions and whether it is approaching the scalability targets for a storage account. For example, if you are seeing throttling errors on a queue (which counts as a single partition), then you should consider using additional queues to spread the transactions across multiple partitions. If you are seeing throttling errors on a table, you need to consider using a different partitioning scheme to spread your transactions across multiple partitions by using a wider range of partition key values. One common cause of this issue is the prepend/append anti-pattern where you select the date as the partition key and then all data on a particular day is written to one partition: under load, this can result in a write bottleneck. Either consider a different partitioning design or evaluate whether using blob storage might be a better solution. Also check whether throttling is occurring as a result of spikes in your traffic and investigate ways of smoothing your pattern of requests.
+If you are seeing a consistently high value for **PercentThrottlingError** following a permanent increase in your transaction volumes, or when you are performing your initial load tests on your application, then you need to evaluate how your application is using storage partitions and whether it is approaching the scalability targets for a storage account. For example, if you are seeing throttling errors on a queue (which counts as a single partition), then you should consider using additional queues to spread the transactions across multiple partitions. If you are seeing throttling errors on a table, you need to consider using a different partitioning scheme to spread your transactions across multiple partitions by using a wider range of partition key values. One common cause of this issue is the prepend/append anti-pattern where you select the date as the partition key and then all data on a particular day is written to one partition: under load, this can result in a write bottleneck. Either consider a different partitioning design or evaluate whether using blob storage might be a better solution. Also check whether throttling is occurring as a result of spikes in your traffic and investigate ways of smoothing your pattern of requests.
 
 If you distribute your transactions across multiple partitions, you must still be aware of the scalability limits set for the storage account. For example, if you used ten queues each processing the maximum of 2,000 1KB messages per second, you will be at the overall limit of 20,000 messages per second for the storage account. If you need to process more than 20,000 entities per second, you should consider using multiple storage accounts. You should also bear in mind that the size of your requests and entities has an impact on when the storage service throttles your clients: if you have larger requests and entities, you may be throttled sooner.
 
@@ -469,15 +469,15 @@ If your client application is throwing HTTP 403 (Forbidden) errors, a likely cau
 
 | Source | Verbosity | Verbosity | Client request ID | Operation text |
 | --- | --- | --- | --- | --- |
-| `Microsoft.Azure.Storage` |Information |3 |85d077ab-… |Starting operation with location Primary per location mode PrimaryOnly. |
-| `Microsoft.Azure.Storage` |Information |3 |85d077ab -… |Starting synchronous request to `https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests#Synchronous_request` |
-| `Microsoft.Azure.Storage` |Information |3 |85d077ab -… |Waiting for response. |
-| `Microsoft.Azure.Storage` |Warning |2 |85d077ab -… |Exception thrown while waiting for response: The remote server returned an error: (403) Forbidden. |
-| `Microsoft.Azure.Storage` |Information |3 |85d077ab -… |Response received. Status code = 403, Request ID = 9d67c64a-64ed-4b0d-9515-3b14bbcdc63d, Content-MD5 = , ETag = . |
-| `Microsoft.Azure.Storage` |Warning |2 |85d077ab -… |Exception thrown during the operation: The remote server returned an error: (403) Forbidden.. |
-| `Microsoft.Azure.Storage` |Information |3 |85d077ab -… |Checking if the operation should be retried. Retry count = 0, HTTP status code = 403, Exception = The remote server returned an error: (403) Forbidden.. |
-| `Microsoft.Azure.Storage` |Information |3 |85d077ab -… |The next location has been set to Primary, based on the location mode. |
-| `Microsoft.Azure.Storage` |Error |1 |85d077ab -… |Retry policy did not allow for a retry. Failing with The remote server returned an error: (403) Forbidden. |
+| `Microsoft.Azure.Storage` |Information |3 |85d077ab-… |`Starting operation with location Primary per location mode PrimaryOnly.` |
+| `Microsoft.Azure.Storage` |Information |3 |85d077ab -… |`Starting synchronous request to https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests#Synchronous_request.` |
+| `Microsoft.Azure.Storage` |Information |3 |85d077ab -… |`Waiting for response.` |
+| `Microsoft.Azure.Storage` |Warning |2 |85d077ab -… |`Exception thrown while waiting for response: The remote server returned an error: (403) Forbidden.` |
+| `Microsoft.Azure.Storage` |Information |3 |85d077ab -… |`Response received. Status code = 403, Request ID = 9d67c64a-64ed-4b0d-9515-3b14bbcdc63d, Content-MD5 = , ETag = .` |
+| `Microsoft.Azure.Storage` |Warning |2 |85d077ab -… |`Exception thrown during the operation: The remote server returned an error: (403) Forbidden..` |
+| `Microsoft.Azure.Storage` |Information |3 |85d077ab -… |`Checking if the operation should be retried. Retry count = 0, HTTP status code = 403, Exception = The remote server returned an error: (403) Forbidden..` |
+| `Microsoft.Azure.Storage` |Information |3 |85d077ab -… |`The next location has been set to Primary, based on the location mode.` |
+| `Microsoft.Azure.Storage` |Error |1 |85d077ab -… |`Retry policy did not allow for a retry. Failing with The remote server returned an error: (403) Forbidden.` |
 
 In this scenario, you should investigate why the SAS token is expiring before the client sends the token to the server:
 
@@ -517,7 +517,7 @@ Log entries:
 
 | Request ID | Operation text |
 | --- | --- |
-| 07b26a5d-... |`Starting synchronous request to <https://domemaildist.blob.core.windows.net/azuremmblobcontainer>.` |
+| 07b26a5d-... |`Starting synchronous request to https://domemaildist.blob.core.windows.net/azuremmblobcontainer.` |
 | 07b26a5d-... |`StringToSign = HEAD............x-ms-client-request-id:07b26a5d-....x-ms-date:Tue, 03 Jun 2014 10:33:11 GMT.x-ms-version:2014-02-14./domemaildist/azuremmblobcontainer.restype:container.` |
 | 07b26a5d-... |`Waiting for response.` |
 | 07b26a5d-... |`Response received. Status code = 200, Request ID = eeead849-...Content-MD5 = , ETag =    &quot;0x8D14D2DC63D059B&quot;.` |
@@ -675,7 +675,7 @@ It's important to note that these operations have completed successfully and the
 - ResourceAlreadyExists (Conflict 409), for example from a `CreateIfNotExist` operation where the resource already exists.
 - ConditionNotMet (Not Modified 304), for example from a conditional operation such as when a client sends an `ETag` value and an HTTP `If-None-Match` header to request an image only if it has been updated since the last operation.
 
-You can find a list of common REST API error codes that the storage services return on the page [Common REST API Error Codes](/rest/api/storageservices/Common-REST-API-Error-Codes).
+You can find a list of common REST API error codes that the storage services return on the page [Common REST API error codes](/rest/api/storageservices/Common-REST-API-Error-Codes).
 
 ### <a name="capacity-metrics-show-an-unexpected-increase"></a>Capacity metrics show an unexpected increase in storage capacity usage
 
@@ -776,7 +776,7 @@ The following procedure shows you how to capture detailed packet information for
 
 5. Select **Start**. Wireshark will now capture all the packets send to or from the table service endpoint as you use your client application on your local machine.
 6. When you have finished, select **Capture** > **Stop** on the main menu.
-7. To save the captured data in a Wireshark Capture File, select **File** > **Save** on the main menu.
+7. To save the captured data in a Wireshark Capture file, select **File** > **Save** on the main menu.
 
 WireShark will highlight any errors that exist in the **packetlist** window. You can also use the **Expert Info** window (select **Analyze** > **Expert Info**) to view a summary of errors and warnings.
 
