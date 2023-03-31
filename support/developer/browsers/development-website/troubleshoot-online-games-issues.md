@@ -27,11 +27,11 @@ When playing online games from websites like Facebook, Yahoo, MSN, and other web
 - Games may freeze during play
 
 > [!NOTE]
-> If you are having issues with Internet Explorer functionality other than just games, see [Tips for solving problems when Internet Explorer crashes or stops working](https://support.microsoft.com/help/4026254/internet-explorer-has-stopped-working).
+> If you're having issues with Internet Explorer functionality other than just games, see [Tips for solving problems when Internet Explorer crashes or stops working](https://support.microsoft.com/help/4026254/internet-explorer-has-stopped-working).
 
 ## More information
 
-The most common cause is a missing or outdated add-on that's needed to play the game. Online games may be based on Silverlight, Flash, or Java and require Internet Explorer add-ons to function. Ensuring that you have the latest updates for Windows, Internet Explorer and any Internet Explorer add-ons can help resolve many issues.
+The most common cause is a missing or outdated add-on that's needed to play the game. Online games may be based on Silverlight, Flash, or Java and require Internet Explorer add-ons to function. Ensuring that you have the latest updates for Windows, Internet Explorer, and any Internet Explorer add-ons can help resolve many issues.
 
 ### Internet Explorer
 
@@ -51,21 +51,23 @@ For games that use Silverlight, make sure you're using the latest version of Sil
 
 For games that require Java add-ons, issues can be resolved by updating the add-ons to the latest version. The following troubleshooting steps may help to resolve the issue:
 
-- Make sure you have the latest version of [Java](http://www.java.com/) installed
-- In some cases, it may be necessary to uninstall Java from your installed programs list and then reinstall the latest version
-- For help with Java issues, visit the [Java Help Center](https://www.java.com/en/download/help) website
+- Make sure you have the latest version of [Java](http://www.java.com/) installed.
+- In some cases, it may be necessary to uninstall Java from your installed programs list and then reinstall the latest version.
+- For help with Java issues, visit the [Java Help Center](https://www.java.com/en/download/help) website.
 
 ### Adobe Flash
 
 For games that require Adobe Flash add-ons, make sure you're using the latest version of Adobe Flash.
 
-Adobe Flash is no longer supported by Adobe. For more information, see [We have retired Flash](https://www.adobe.com/products/flashplayer/end-of-life-alternative.html).
+> [!NOTE]
+> Adobe Flash is no longer supported by Adobe. For more information, see [We have retired Flash](https://www.adobe.com/products/flashplayer/end-of-life-alternative.html).
 
 ### Adobe Shockwave Player
 
 For games that require Adobe Shockwave Player add-ons, make sure you're using the latest version of Adobe Shockwave player.
 
-Adobe Shockwave is no longer supported by Adobe. For more information, see [End of Life for Adobe Shockwave](https://helpx.adobe.com/shockwave/shockwave-end-of-life-faq.html).
+> [!NOTE]
+> Adobe Shockwave is no longer supported by Adobe. For more information, see [End of Life for Adobe Shockwave](https://helpx.adobe.com/shockwave/shockwave-end-of-life-faq.html).
 
 ### Make sure the add-ons are installed and enabled
 
@@ -77,4 +79,4 @@ To make sure that the necessary add-ons are enabled in Internet Explorer, follow
 1. Look for the add-ons in the displayed list and make sure the **Status** is listed as **Enabled**.
 
 > [!NOTE]
-> When checking to see if the add-on is installed you can also verify the version of the add-on.
+> When checking to see if the add-on is installed, you can also verify the version of the add-on.
