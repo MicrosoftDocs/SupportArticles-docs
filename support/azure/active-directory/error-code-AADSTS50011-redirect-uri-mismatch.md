@@ -4,7 +4,7 @@ description: Describes error AADSTS50011 that occurs when you sign in to an OIDC
 author: aricrowe57
 ms.date: 03/31/2023
 ms.reviewer: arcrowe
-ms.author: aricrowe57;genli
+ms.author: aricrowe57
 ms.service: active-directory
 ms.subservice: app-mgmt
 ---
