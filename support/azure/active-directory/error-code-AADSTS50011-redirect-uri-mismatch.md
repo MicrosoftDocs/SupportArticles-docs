@@ -33,8 +33,7 @@ If the values do not match, the error AADSTS50011 will be returned.
 
 To fix the issue, follow these steps to add redirect URI in Azure AD app registration.
 
-1. Copy the application ID from the error message. This is the ID of your application registered on Azure AD.
-
+1. Copy the application ID from the error message. This is the ID of your application that has been registered on Azure AD.
     ![The screenshot about the application ID in AADSTS50011 error message](media\error-code-AADSTS50011-redirect-uri-mismatch\aadsts50011-error-appid.png)
 
 1. Go to the [Azure portal](https://portal.azure.com). Make sure that you sign in to the portal by using an administrator account for that organization, or an account that has permissions to update Azure AD Application registration.
@@ -45,14 +44,14 @@ To fix the issue, follow these steps to add redirect URI in Azure AD app registr
     - If this app is owned by an organization (Azure AD tenant), use `https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/Authentication/appId/<AppGUID>`.
     - If this app is owned by your personal Microsoft (MSA) account, use `https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/Authentication/appId/<AppGUID>/isMSAApp/true`.
 
-1. On the app registration page, select **Authentication**. In the **Platform configurations** section, select **Add URI** to add the Redirect URI that was displayed in the error message.
+1. On the app registration page, select **Authentication**. In the **Platform configurations** section, select **Add URI** to add the Redirect URI that is displayed in the error message.
 
     ![The screenshot about redirect URI in the AADSTS50011 error message](media\error-code-AADSTS50011-redirect-uri-mismatch\aadsts50011-error-redirecturi.png)
 
 1. Save the changes and wait three to five minutes for the changes to take effect, and then send the log-in request again. You should now be able to sign in to the application.
 
 >[!Note]
->The redirect URI is also known as the reply URL. These values depend on which protocol is used. OIDC and OAuth2 protocols refer to this value as a redirect URI.
+>If the redirect URI sent from the application is the desired one, you should update your application code or configuration.
 
 The following video shows how to fix the redirect URI mismatch error in Azure AD:
 
