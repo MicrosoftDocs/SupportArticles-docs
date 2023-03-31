@@ -7,6 +7,7 @@ ms.author: v-dele
 ms.reviewer: "tovascon,anhorta"
 ms.service: active-directory
 ms.subservice: domain-services
+ms.custom: devx-track-azurecli
 keywords:
 #Customer intent: As an Azure Active Directory Global Administrator or User Administrator, I want create and delete users so that I can manage the current user list and let users access Azure services.
 ---

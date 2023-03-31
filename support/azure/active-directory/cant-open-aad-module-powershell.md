@@ -5,6 +5,7 @@ ms.date: 06/22/2020
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: domain-services
+ms.custom: devx-track-azurepowershell
 ---
 # You can't open the Azure Active Directory Module for Windows PowerShell
 
