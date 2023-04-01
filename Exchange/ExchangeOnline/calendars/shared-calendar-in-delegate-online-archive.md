@@ -32,7 +32,7 @@ ms.date: 03/31/2023
 
 Consider the following scenario:
 
-- User A and User B both have mailboxes in Exchange Online.
+- User A and User B both have mailboxes in Microsoft Exchange Online.
 
 - You grant User A delegate access to User B's mailbox.
 
