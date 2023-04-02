@@ -2,6 +2,15 @@
 
 
 
+## Week of March 27, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 3/27/2023 | [How to recover unsaved Word documents](/office/troubleshoot/word/recover-lost-unsaved-corrupted-document) | modified |
+| 3/29/2023 | Listing some issues for Office Experts | removed |
+
+
 ## Week of March 20, 2023
 
 
