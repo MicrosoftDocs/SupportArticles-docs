@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting snapshot debugging of Azure apps
 description: Understand troubleshooting and known issues for snapshot debugging in Visual Studio. Load ICorProfiler without causing downtime on your production site.
-ms.date: 04/24/2019
+ms.date: 04/03/2023
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: mikejo
@@ -114,9 +114,9 @@ Take these steps:
 
 ## Issue: Snappoint isn't turned on
 
-If you see a warning icon ![Snappoint warning icon](./media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-snappoint-warning-icon.png "Snappoint warning icon") with your snappoint instead of the regular snappoint icon, then the snappoint isn't turned on.
+If you see a warning icon :::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-snappoint-warning-icon.png" alt-text="Snappoint warning icon."::: with your snappoint instead of the regular snappoint icon, then the snappoint isn't turned on.
 
-![Snappoint does not turn on](./media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-dont-turn-on.png "Snappoint does not turn on")
+:::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-dont-turn-on.png" alt-text="Snappoint does not turn on.":::
 
 Take these steps:
 
@@ -126,7 +126,7 @@ Take these steps:
 
 If you see the following window, symbols didn't load.
 
-![Symbols do not load](./media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-symbols-wont-load.png "Symbols do not load")
+:::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-symbols-wont-load.png" alt-text="Symbols do not load.":::
 
 Take these steps:
 
@@ -134,7 +134,7 @@ Take these steps:
 
    The symbols, or .pdb files, available in your project must match your App Service deployment. Most deployments (deployment through Visual Studio, CI/CD with Azure Pipelines or Kudu, etc.) publish your symbol files along to your App Service. Setting the symbol cache directory enables Visual Studio to use these symbols.
 
-   ![Symbol settings](./media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-symbol-settings.png "Symbol settings")
+   :::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-symbol-settings.png" alt-text="Symbol settings.":::
 
 - Alternatively, if your organization uses a symbol server or drops symbols in a different path, use the symbol settings to load the correct symbols for your deployment.
 
@@ -155,7 +155,7 @@ Take these steps:
 
 ## Issue: I only see Throttled Snapshots in the Diagnostic Tools
 
-![Throttled snappoint](./media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-throttled-snapshots.png "Throttled snappoint")
+ :::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-throttled-snapshots.png" alt-text="Throttled snappoint":::
 
 Take these steps:
 
@@ -165,11 +165,11 @@ Take these steps:
 
 Visual Studio 2019 requires a newer version of the Snapshot Debugger site extension on your Azure App Service. This version isn't compatible with the older version of the Snapshot Debugger site extension used by Visual Studio 2017. You'll get the following error if you try to attach the Snapshot Debugger in Visual Studio 2019 to an Azure App Service that has been previously debugged by the Snapshot Debugger in Visual Studio 2017:
 
-![Incompatible Snapshot Debugger site extension Visual Studio 2019](./media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-incompatible-vs2019.png "Incompatible Snapshot Debugger site extension Visual Studio 2019")
+:::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-incompatible-vs2019.png" alt-text="Incompatible Snapshot Debugger site extension Visual Studio 2019.":::
 
 Conversely, if you use Visual Studio 2017 to attach the Snapshot Debugger to an Azure App Service that has been previously debugged by the Snapshot Debugger in Visual Studio 2019, you'll get the following error:
 
-![Incompatible Snapshot Debugger site extension Visual Studio 2017](./media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-incompatible-vs2017.png "Incompatible Snapshot Debugger site extension Visual Studio 2017")
+:::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-incompatible-vs2017.png" alt-text="Incompatible Snapshot Debugger site extension Visual Studio 2017.":::
 
 To fix this, delete the following App settings in the Azure portal and attach the Snapshot Debugger again:
 

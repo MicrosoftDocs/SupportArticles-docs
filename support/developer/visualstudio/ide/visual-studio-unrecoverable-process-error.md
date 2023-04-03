@@ -1,7 +1,7 @@
 ---
 title: A process has encountered an unrecoverable error
 description: Learn about the processes that might encounter unrecoverable errors during the normal operations of Visual Studio.
-ms.date: 10/14/2021
+ms.date: 04/03/2023
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: tglee
@@ -22,24 +22,24 @@ If you see the message, save your work, and then close and restart Visual Studio
 
 Following is a list of out-of-proc processes used by Visual Studio. This list is inclusive of processes that launch in specific workflows or scenarios, and so in most cases they aren't all running at the same time.
 
-- Microsoft.Alm.Shared.Remoting.RemoteContainer.dll
-- Microsoft.CodeAnalysis.LiveUnitTesting.EntryPoint
-- MSBuild.exe
-- PerfWatson2.exe
-- ScriptedSandbox64.exe
-- ServiceHub.Host.CLR.x86.exe
-- ServiceHub.Host.Node.x86.exe
-- ServiceHub.IdentityHost.exe
-- ServiceHub.RoslynCodeAnalysisService.exe
-- ServiceHub.RoslynCodeAnalysisService32.exe
-- ServiceHub.SettingsHost.exe
-- ServiceHub.VSDetouredHost.exe
-- VBCSCompiler.exe
-- VsHub.exe
-- vstest.discoveryengine.x86.exe
-- WaAppAgent.exe
-- WindowsAzureGuestAgent.exe
-- WindowsAzureTelemetryService.exe
+-*Microsoft.Alm.Shared.Remoting.RemoteContainer.dll*
+- *Microsoft.CodeAnalysis.LiveUnitTesting.EntryPoint*
+- *MSBuild.exe*
+- *PerfWatson2.exe*
+- *ScriptedSandbox64.exe*
+- *ServiceHub.Host.CLR.x86.exe*
+- *ServiceHub.Host.Node.x86.exe*
+- *ServiceHub.IdentityHost.exe*
+- *ServiceHub.RoslynCodeAnalysisService.exe*
+- *ServiceHub.RoslynCodeAnalysisService32.exe*
+- *ServiceHub.SettingsHost.exe*
+- *ServiceHub.VSDetouredHost.exe*
+- *VBCSCompiler.exe*
+- *VsHub.exe*
+- *vstest.discoveryengine.x86.exe*
+- *WaAppAgent.exe*
+- *WindowsAzureGuestAgent.exe*
+- *WindowsAzureTelemetryService.exe*
 
 If any of these processes terminates unexpectedly, some functionalities within Visual Studio stop working. For some processes, the loss of functionality may be insignificant. For others, the stability of Visual Studio is affected and an error message is displayed.
 

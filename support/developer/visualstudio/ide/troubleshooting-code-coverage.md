@@ -16,7 +16,7 @@ The code coverage analysis tool in Visual Studio collects data for native and ma
 
 If you choose an **Analyze Code Coverage** command on the **Test** menu, and if the build and tests run successfully, then you should see a list of results in the **Code Coverage** window. You might have to expand the items to see the detail.
 
-![Code coverage results with coloring](media/troubleshooting-code-coverage/codecoverage1.png)
+:::image type="content" source="media/troubleshooting-code-coverage/codecoverage1.png" alt-text="Code coverage results with coloring.":::
 
 For more information, see [Use code coverage to determine how much code is being tested](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested).
 
@@ -134,6 +134,7 @@ There are two possible types of faults:
 - **XML error**
 
   Open the _.runsettings_ file in the Visual Studio XML editor. Look for error indications.
+
 - **Regular expression error**
 
   Each string in the file is a regular expression. Review each one for errors, and in particular look for:
