@@ -47,7 +47,7 @@ To fix the issue, follow these steps to add redirect URI in Azure AD app registr
 
     ![The screenshot about redirect URI in the AADSTS50011 error message](media\error-code-AADSTS50011-redirect-uri-mismatch\aadsts50011-error-redirecturi.png)
 
-1. Save the changes and wait three to five minutes for the changes to take effect, and then send the log-in request again. You should now be able to sign in to the application. If you do not see the Azure AD login page, try clearing the password cache from your browser or using InPrivate browsing.
+1. Save the changes and wait three to five minutes for the changes to take effect, and then send the log-in request again. You should now be able to sign in to the application. If you don't see the Azure AD login page, try clearing the password cache from your browser or using InPrivate browsing.
 
 >[!Note]
 >If the redirect URI sent from the application is not the desired one, you should update your application code or configuration.
