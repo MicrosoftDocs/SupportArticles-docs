@@ -30,15 +30,15 @@ When you review the SQL Server error logs of those replicas, you might observe m
 **Error log from the primary replica**
 
 ```output
-2023-02-15 07:10:55.500 '<replicaname>' Always On availability groups connection with secondary database terminated for primary database '<databasename>' on the availability replica '<replicaname>' with Replica ID: {<replicaid>}. This is an informational message only. No user action is required.
+2023-02-15 07:10:55.500 'spid43s' Always On availability groups connection with secondary database terminated for primary database 'agdb' on the availability replica 'SQL19AGN2' with Replica ID: {<replicaid>}. This is an informational message only. No user action is required.
 ```
 
 **Error log from the secondary replica**
 
 ```output
-2023-02-15 07:11:03.100 '<replicaname>' A connection time-out has occurred on a previously established connection to availability replica '<replicaname>' with id ['<replicaid>']. Either a networking or a firewall issue exists or the availability replica has transitioned to the resolving role.
+2023-02-15 07:11:03.100 'spid31s' A connection time-out has occurred on a previously established connection to availability replica 'SQL19AGN1' with id ['<replicaid>']. Either a networking or a firewall issue exists or the availability replica has transitioned to the resolving role.
 
-2023-02-15 07:11:03.100 '<replicaname>' Always On Availability Groups connection with primary database terminated for secondary database '<databasename>' on the availability replica '<replicaname>' with Replica ID: {<replicaid>}. This is an informational message only. No user action is required.
+2023-02-15 07:11:03.100 'spid31s' Always On Availability Groups connection with primary database terminated for secondary database 'agdb' on the availability replica 'SQL19AGN1' with Replica ID: {<replicaid>}. This is an informational message only. No user action is required.
 ```
 
 ### Intermittent connection problems can affect a secondary replica's failover readiness
@@ -80,15 +80,15 @@ Message 35267 Always On Availability Groups connection with primary/secondary da
 Here's an example of what SQL Server reports to the error log: If you stop the mirroring endpoint on the primary replica, the secondary replica detects a connection time-out, and messages 35206 and 35267 are reported in the secondary replica error log:
 
 ```output
-2023-02-15 07:11:03.100 '<replicaname>' A connection timeout has occurred on a previously established connection to availability replica '<replicaname>' with [<replicaid>]. Either a networking or a firewall issue exists or the availability replica has transitioned to the resolving role.
+2023-02-15 07:11:03.100 'spid31s' A connection timeout has occurred on a previously established connection to availability replica 'SQL19AGN1' with [<replicaid>]. Either a networking or a firewall issue exists or the availability replica has transitioned to the resolving role.
 
-2023-02-15 07:11:03.100 '<replicaname>' Always On Availability Groups connection with primary database terminated for secondary database '<databasename>' on the availability replica '<replicaname>' with [<replicaid>]. This is an informational message only. No user action is required.
+2023-02-15 07:11:03.100 'spid31s' Always On Availability Groups connection with primary database terminated for secondary database 'agdb' on the availability replica 'SQL19AGN1' with [<replicaid>]. This is an informational message only. No user action is required.
 ```
 
 In this example, the primary replica didn't detect any connection time-out because it could still communicate with the secondary, and it reported message 35267 for each availability group database (in this example, there's only one database, `<databasename>`):
 
 ```output
-2023-02-15 07:10:55.500 '<replicaname>' Always On Availability Groups connection with secondary database terminated for primary database '<databasename>' on the availability replica '<replicaname>' with Replica ID: {<replicaid>}. This is an informational message only. No user action is required.
+2023-02-15 07:10:55.500 'spid43s' Always On Availability Groups connection with secondary database terminated for primary database 'agdb' on the availability replica 'SQL19AGN2' with Replica ID: {<replicaid>}. This is an informational message only. No user action is required.
 ```
 
 ## Causes of replica connection time-outs
@@ -140,7 +140,7 @@ By querying the secondary replica, the Always On DMVs reports on only the second
 
 :::image type="content" source="media/troubleshooting-intermittent-connection-timeouts-availability-groups/query-secondary-replica-small.png" alt-text="Screenshot that shows sustained disconnected state because the mirroring endpoint on the secondary replica was stopped." lightbox="media/troubleshooting-intermittent-connection-timeouts-availability-groups/query-secondary-replica-big.png":::
 
-## Review the AlwaysOn extended event session
+## Review the Always On extended event session
 
 1. Connect to each replica by using SQL Server Management Studio (SSMS) Object Explorer, and open the `AlwaysOn_health` extended event files.
 
