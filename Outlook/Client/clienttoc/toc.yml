@@ -139,6 +139,8 @@
           href: ../calendaring/send-update-missing-copy-meeting.md
         - name: Share a calendar or open a shared calendar
           href: ../calendaring/how-to-open-shared-calendar.md          
+        - name: Shared calendar in delegate's Online Archive
+          href: /exchange/troubleshoot/calendars/shared-calendar-in-delegate-online-archive?context=/outlook/troubleshoot/context/client-context
         - name: Specific users can't receive meeting requests
           href: ../calendaring/specific-users-not-receive-meeting-requests.md
         - name: The Delegate feature in mixed versions of Outlook
