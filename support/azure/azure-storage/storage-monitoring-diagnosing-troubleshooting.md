@@ -110,7 +110,7 @@ To monitor the performance of the storage services, you can use the following me
 - The values in the `TotalIngress` and `TotalEgress` columns show the total amount of data, in bytes, coming in to and going out of your storage service or through a specific API operation type.
 - The values in the `TotalRequests` column show the total number of requests that the storage service of API operation is receiving. `TotalRequests` is the total number of requests that the storage service receives.
 
-Typically, you will monitor for unexpected changes in any of these values as an indicator that you have an issue that requires investigation.
+Typically, you will monitor for unexpected changes in any of these values, as this indicates you have an issue that requires investigation.
 
 In the [Azure portal](https://portal.azure.com), you can add alert rules to notify you if any of the performance metrics for this service fall below or exceed a threshold that you specify.
 
@@ -120,27 +120,27 @@ The [Troubleshooting guidance](#troubleshooting-guidance) section of this guide 
 
 There are a number of ways that you might become aware of a problem or issue in your application, including:
 
-- A major failure that causes the application to crash or to stop working.
-- Significant changes from baseline values in the metrics you are monitoring as described in the previous section [Monitoring your storage service](#monitoring-your-storage-service).
+- A major failure that causes the application to crash or stop working.
+- Significant changes from baseline values in the metrics you're monitoring as described in the previous section [Monitoring your storage service](#monitoring-your-storage-service).
 - Reports from users of your application that some particular operation didn't complete as expected or that some feature is not working.
 - Errors generated within your application that appear in log files or through some other notification method.
 
 Typically, issues related to Azure storage services fall into one of four broad categories:
 
-- Your application has a performance issue, either reported by your users, or revealed by changes in the performance metrics.
+- Your application has a performance issue, either reported by your users or revealed by changes in the performance metrics.
 - There is a problem with the Azure Storage infrastructure in one or more regions.
-- Your application is encountering an error, either reported by your users, or revealed by an increase in one of the error count metrics you monitor.
-- During development and test, you may be using the local storage emulator; you may encounter some issues that relate specifically to usage of the storage emulator.
+- Your application is encountering an error, either reported by your users or revealed by an increase in one of the error count metrics you monitor.
+- During development and testing, you may be using the local storage emulator; you may encounter some issues that relate specifically to the usage of the storage emulator.
 
 The following sections outline the steps you should follow to diagnose and troubleshoot issues in each of these four categories. The [Troubleshooting guidance](#troubleshooting-guidance) section later in this guide provides more detail for some common issues you may encounter.
 
 ### <a name="service-health-issues"></a>Service health issues
 
-Service health issues are typically outside of your control. The [Azure portal](https://portal.azure.com) provides information about any ongoing issues with Azure services including storage services. If you opted for Read-Access Geo-Redundant Storage when you created your storage account, then if your data becomes unavailable in the primary location, your application can switch temporarily to the read-only copy in the secondary location. To read from the secondary, your application must be able to switch between using the primary and secondary storage locations, and be able to work in a reduced functionality mode with read-only data. The Azure Storage Client libraries allow you to define a retry policy that can read from secondary storage in case a read from primary storage fails. Your application also needs to be aware that the data in the secondary location is eventually consistent. For more information, see the blog post [Azure Storage Redundancy Options and Read Access Geo Redundant Storage](https://blogs.msdn.microsoft.com/windowsazurestorage/2013/12/11/windows-azure-storage-redundancy-options-and-read-access-geo-redundant-storage/).
+Service health issues are typically outside of your control. The [Azure portal](https://portal.azure.com) provides information about any ongoing issues with Azure services, including storage services. If you opted for Read-Access Geo-Redundant Storage when you created your storage account, then if your data becomes unavailable in the primary location, your application can switch temporarily to the read-only copy in the secondary location. To read from the secondary, your application must be able to switch between using the primary and secondary storage locations and be able to work in a reduced functionality mode with read-only data. The Azure Storage Client libraries allow you to define a retry policy that can read from secondary storage in case a read from primary storage fails. Your application also needs to be aware that the data in the secondary location is eventually consistent. For more information, see the blog post [Azure Storage Redundancy Options and Read Access Geo Redundant Storage](https://blogs.msdn.microsoft.com/windowsazurestorage/2013/12/11/windows-azure-storage-redundancy-options-and-read-access-geo-redundant-storage/).
 
 ### <a name="performance-issues"></a>Performance issues
 
-The performance of an application can be subjective, especially from a user perspective. Therefore, it is important to have baseline metrics available to help you identify where there might be a performance issue. Many factors might affect the performance of an Azure storage service from the client application perspective. These factors might operate in the storage service, in the client, or in the network infrastructure; therefore it is important to have a strategy for identifying the origin of the performance issue.
+The performance of an application can be subjective, especially from a user perspective. Therefore, it is important to have baseline metrics available to help you identify where there might be a performance issue. Many factors might affect the performance of an Azure storage service from the client application perspective. These factors might operate in the storage service, the client, or the network infrastructure; therefore, it is important to have a strategy for identifying the origin of the performance issue.
 
 After you have identified the likely location of the cause of the performance issue from the metrics, you can then use the log files to find detailed information to diagnose and troubleshoot the problem further.
 
@@ -148,10 +148,10 @@ The [Troubleshooting guidance](#troubleshooting-guidance) section later in this 
 
 ### <a name="diagnosing-errors"></a>Diagnosing errors
 
-Users of your application may notify you of errors reported by the client application. Storage Metrics also records counts of different error types from your storage services such as NetworkError, ClientTimeoutError, or AuthorizationError. While Storage Metrics only records counts of different error types, you can obtain more detail about individual requests by examining server-side, client-side, and network logs. Typically, the HTTP status code returned by the storage service will give an indication of why the request failed.
+Users of your application may notify you of errors reported by the client application. Storage Metrics also records counts of different error types from your storage services, such as NetworkError, ClientTimeoutError, or AuthorizationError. While Storage Metrics only records counts of different error types, you can obtain more detail about individual requests by examining server-side, client-side, and network logs. Typically, the HTTP status code returned by the storage service will give an indication of why the request failed.
 
 > [!NOTE]
-> Remember that you should expect to see some intermittent errors: for example, errors due to transient network conditions, or application errors.
+> Remember that you should expect to see some intermittent errors: for example, errors due to transient network conditions or application errors.
 
 The following resources are useful for understanding storage-related status and error codes:
 
@@ -163,7 +163,7 @@ The following resources are useful for understanding storage-related status and 
 
 ### <a name="storage-emulator-issues"></a>Storage emulator issues
 
-The Azure SDK includes a storage emulator you can run on a development workstation. This emulator simulates most of the behavior of the Azure storage services and is useful during development and test, enabling you to run applications that use Azure storage services without the need for an Azure subscription and an Azure storage account.
+The Azure SDK includes a storage emulator you can run on a development workstation. This emulator simulates most of the behavior of the Azure storage services and is useful during development and testing, enabling you to run applications that use Azure storage services without the need for an Azure subscription and an Azure storage account.
 
 The [Troubleshooting guidance](#troubleshooting-guidance) section of this guide describes some common issues encountered using the storage emulator.
 
@@ -188,11 +188,11 @@ In many cases, the log data from Storage Logging and the Storage Client Library 
 
 ## <a name="end-to-end-tracing"></a>End-to-end tracing
 
-End-to-end tracing using a variety of log files is a useful technique for investigating potential issues. You can use the date/time information from your metrics data as an indication of where to start looking in the log files for the detailed information that will help you troubleshoot the issue.
+End-to-end tracing using a variety of log files is a useful technique for investigating potential issues. You can use the date/time information from your metrics data to indicate where to start looking in the log files for detailed information that will help you troubleshoot the issue.
 
 ### <a name="correlating-log-data"></a>Correlating log data
 
-When viewing logs from client applications, network traces, and server-side storage logging it is critical to be able to correlate requests across the different log files. The log files include a number of different fields that are useful as correlation identifiers. The client request ID is the most useful field to use to correlate entries in the different logs. However sometimes, it can be useful to use either the server request ID or timestamps. The following sections provide more details about these options.
+When viewing logs from client applications, network traces, and server-side storage logging, it is critical to be able to correlate requests across the different log files. The log files include a number of different fields that are useful as correlation identifiers. The client request ID is the most useful field to use to correlate entries in the different logs. However, sometimes, it can be useful to use either the server request ID or timestamps. The following sections provide more details about these options.
 
 ### <a name="client-request-id"></a>Client request ID
 
@@ -202,13 +202,13 @@ The Storage Client Library automatically generates a unique client request ID fo
 - In the server-side Storage Logging log, the client request ID appears in the Client request ID column.
 
 > [!NOTE]
-> It is possible for multiple requests to share the same client request ID because the client can assign this value (although the Storage Client Library assigns a new value automatically). When the client retries, all attempts share the same client request ID. In the case of a batch sent from the client, the batch has a single client request ID.
+> It's possible for multiple requests to share the same client request ID because the client can assign this value (although the Storage Client Library assigns a new value automatically). When the client retries, all attempts share the same client request ID. In the case of a batch sent from the client, the batch has a single client request ID.
 
 ### <a name="server-request-id"></a>Server request ID
 
 The storage service automatically generates server request IDs.
 
-- In the server-side Storage Logging log, the server request ID appears the `Request ID header` column.
+- In the server-side Storage Logging log, the server request ID appears in the `Request ID header` column.
 - In a network trace such as one captured by Fiddler, the server request ID appears in response messages as the `x-ms-request-id` HTTP header value.
 - In the client-side log that the Storage Client Library creates, the server request ID appears in the `Operation Text` column for the log entry showing details of the server response.
 
@@ -246,7 +246,7 @@ using (HttpPipeline.CreateClientRequestIdScope(clientRequestID))
 
 If the Storage Client Library throws a `StorageException` in the client, the `RequestInformation` property contains a `RequestResult` object that includes a `ServiceRequestID` property. You can also access a `RequestResult` object from an `OperationContext` instance.
 
-The code sample below demonstrates how to set a custom `ClientRequestId` value by attaching an `OperationContext` object the request to the storage service. It also shows how to retrieve the `ServerRequestId` value from the response message.
+The code sample below demonstrates how to set a custom `ClientRequestId` value by attaching an `OperationContext` object to the request to the storage service. It also shows how to retrieve the `ServerRequestId` value from the response message.
 
 ```csharp
 //Parse the connection string for the storage account.
@@ -322,7 +322,7 @@ Does your issue relate to the availability of one of the storage services?
 
 ---
 
-[Your issue arises from using the storage emulator for development or test](#your-issue-arises-from-using-the-storage-emulator)
+[Your issue arises from using the storage emulator for development or testing](#your-issue-arises-from-using-the-storage-emulator)
 
 ---
 [You are encountering problems installing the Azure SDK for .NET](#you-are-encountering-problems-installing-the-Windows-Azure-SDK)
@@ -338,16 +338,16 @@ The illustration below from the [Azure portal](https://portal.azure.com) monitor
 
 :::image type="content" source="media/storage-monitoring-diagnosing-troubleshooting/high-e2e-latency.png" alt-text="Illustration from the Azure portal that shows an example where the AverageE2ELatency is significantly higher than the AverageServerLatency.":::
 
-The storage service only calculates the metric **AverageE2ELatency** for successful requests and, unlike **AverageServerLatency**, includes the time the client takes to send the data and receive acknowledgment from the storage service. Therefore, a difference between **AverageE2ELatency** and **AverageServerLatency** could be either due to the client application being slow to respond, or due to conditions on the network.
+The storage service only calculates the metric **AverageE2ELatency** for successful requests and, unlike **AverageServerLatency**, includes the time the client takes to send the data and receive acknowledgment from the storage service. Therefore, a difference between **AverageE2ELatency** and **AverageServerLatency** could be either due to the client application being slow to respond or due to conditions on the network.
 
 > [!NOTE]
 > You can also view **E2ELatency** and **ServerLatency** for individual storage operations in the Storage Logging log data.
 
 #### Investigating client performance issues
 
-Possible reasons for the client responding slowly include having a limited number of available connections or threads, or being low on resources such as CPU, memory or network bandwidth. You may be able to resolve the issue by modifying the client code to be more efficient (for example by using asynchronous calls to the storage service), or by using a larger Virtual Machine (with more cores and more memory).
+Possible reasons for the client responding slowly include having a limited number of available connections or threads or being low on resources such as CPU, memory, or network bandwidth. You may be able to resolve the issue by modifying the client code to be more efficient (for example, by using asynchronous calls to the storage service) or by using a larger Virtual Machine (with more cores and more memory).
 
-For the table and queue services, the Nagle algorithm can also cause high **AverageE2ELatency** as compared to **AverageServerLatency**. For more information, see [Nagle's Algorithm is Not Friendly towards Small Requests](/archive/blogs/windowsazurestorage/nagles-algorithm-is-not-friendly-towards-small-requests). You can disable the Nagle algorithm in code by using the `ServicePointManager` class in the `System.Net` namespace. You should do this before you make any calls to the table or queue services in your application since this doesn't affect connections that are already open. The following example comes from the `Application_Start` method in a worker role.
+For the table and queue services, the Nagle algorithm can also cause high **AverageE2ELatency** compared to **AverageServerLatency**. For more information, see [Nagle's Algorithm is Not Friendly towards Small Requests](/archive/blogs/windowsazurestorage/nagles-algorithm-is-not-friendly-towards-small-requests). You can disable the Nagle algorithm in code by using the `ServicePointManager` class in the `System.Net` namespace. You should do this before you make any calls to the table or queue services in your application since this doesn't affect connections that are already open. The following example comes from the `Application_Start` method in a worker role.
 
 #### [.NET v12 SDK](#tab/dotnet)
 
@@ -370,11 +370,11 @@ queueServicePoint.UseNagleAlgorithm = false;
 
 ---
 
-You should check the client-side logs to see how many requests your client application is submitting, and check for general .NET related performance bottlenecks in your client such as CPU, .NET garbage collection, network utilization, or memory. As a starting point for troubleshooting .NET client applications, see [Debugging, Tracing, and Profiling](/dotnet/framework/debug-trace-profile/).
+You should check the client-side logs to see how many requests your client application is submitting and check for general .NET-related performance bottlenecks in your client, such as CPU, .NET garbage collection, network utilization, or memory. As a starting point for troubleshooting .NET client applications, see [Debugging, Tracing, and Profiling](/dotnet/framework/debug-trace-profile/).
 
 #### Investigating network latency issues
 
-Typically, high end-to-end latency caused by the network is due to transient conditions. You can investigate both transient and persistent network issues such as dropped packets by using tools such as Wireshark.
+Typically, high end-to-end latency caused by the network is due to transient conditions. You can investigate both transient and persistent network issues, such as dropped packets, by using tools like Wireshark.
 
 For more information about using Wireshark to troubleshoot network issues, see [Appendix 2: Using Wireshark to capture network traffic](#appendix-2).
 
@@ -384,7 +384,7 @@ In this scenario, the most likely cause is a delay in the storage requests reach
 
 One possible reason for the client delaying sending requests is that there are a limited number of available connections or threads.
 
-Also check whether the client is performing multiple retries, and investigate the reason if it is. To determine whether the client is performing multiple retries, you can:
+Also, check whether the client is performing multiple retries, and investigate the reason if it is. To determine whether the client is performing multiple retries, you can:
 
 - Examine the Storage Analytics logs. If multiple retries are happening, you will see multiple operations with the same client request ID but with different server request IDs.
 - Examine the client logs. Verbose logging will indicate that a retry has occurred.
@@ -396,7 +396,7 @@ For more information about using Wireshark to troubleshoot network issues, see [
 
 ### <a name="metrics-show-high-AverageServerLatency"></a>Metrics show high AverageServerLatency
 
-In the case of high **AverageServerLatency** for blob download requests, you should use the Storage Logging logs to see if there are repeated requests for the same blob (or set of blobs). For blob upload requests, you should investigate what block size the client is using (for example, blocks less than 64 K in size can result in overheads unless the reads are also in less than 64 K chunks), and if multiple clients are uploading blocks to the same blob in parallel. You should also check the per-minute metrics for spikes in the number of requests that result in exceeding the per second scalability targets: also see [Metrics show an increase in PercentTimeoutError](#metrics-show-an-increase-in-PercentTimeoutError).
+In the case of high **AverageServerLatency** for blob download requests, you should use the Storage Logging logs to see if there are repeated requests for the same blob (or set of blobs). For blob upload requests, you should investigate what block size the client is using (for example, blocks less than 64 K in size can result in overheads unless the reads are also in less than 64 K chunks) and if multiple clients are uploading blocks to the same blob in parallel. You should also check the per-minute metrics for spikes in the number of requests that result in exceeding the per-second scalability targets. For more information, see [Metrics show an increase in PercentTimeoutError](#metrics-show-an-increase-in-PercentTimeoutError).
 
 If you are seeing high **AverageServerLatency** for blob download requests when there are repeated requests the same blob or set of blobs, then you should consider caching these blobs using Azure Cache or the Azure Content Delivery Network (CDN). For upload requests, you can improve the throughput by using a larger block size. For queries to tables, it is also possible to implement client-side caching on clients that perform the same query operations and where the data doesn't change frequently.
 
