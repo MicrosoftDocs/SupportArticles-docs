@@ -55,15 +55,15 @@ If you want to access blob containers, Azure Data Lake Storage Gen2 containers o
 
 1. Open the **Connect** dialog box.
 1. Select the resource type you want to connect to.
-1. Select **Sign in using Azure Active Directory (Azure AD)** and select **Next**.
-1. Select the user account and tenant associated with the resource you're attaching to. Select **Next**.
-1. Type the URL to the resource, and type a unique display name for the connection. Select **Next** and then select **Connect**.
+1. Select **Sign in using Azure Active Directory (Azure AD)** and then select **Next**.
+1. Select the user account and tenant associated with the resource you're attaching to, and then select **Next**.
+1. Type the URL to the resource and then type a unique display name for the connection. Select **Next** and then select **Connect**.
 
-For other resource types, currently there isn’t an Azure RBAC-related solution. As a workaround, you can request a shared access signature URL and then attach to your resource:
+For other resource types, currently, there isn’t an Azure RBAC-related solution. As a workaround, you can request a shared access signature URL and then attach it to your resource:
 
 1. Open the **Connect** dialog box.
 1. Select the resource type you want to connect to.
-1. Select **Shared access signature (SAS)** and select **Next**.
+1. Select **Shared access signature (SAS)** and then select **Next**.
 1. Type the shared access signature URL you received and enter a unique display name for the connection. Select **Next** and then select **Connect**.
 
 For more information on how to attach to resources, see [Attach to an individual resource](/azure/vs-azure-tools-storage-manage-with-storage-explorer#attach-to-an-individual-resource).
@@ -106,7 +106,7 @@ This issue might also occur if there are multiple certificates (root and interme
 
 ### Find SSL certificates
 
-If you don't have a copy of the self-signed certificates, talk to your IT admin for help.
+If you don't have a copy of the self-signed certificates, ask your IT admin for help.
 
 Follow these steps to find them:
 
@@ -126,7 +126,7 @@ Follow these steps to find them:
 
 1. Look for self-signed certificates. If the subject `("s:")` and issuer `("i:")` are the same, the certificate is most likely self-signed.
 
-1. When you find the self-signed certificates, for each one, copy and paste everything from, and including, `-----BEGIN CERTIFICATE-----` to `-----END CERTIFICATE-----` into a new .cer file.
+1. When you find the self-signed certificates, for each one, copy and paste everything from, and including `-----BEGIN CERTIFICATE-----` to `-----END CERTIFICATE-----` into a new .cer file.
 
 1. Open Storage Explorer and go to **Edit** > **SSL Certificates** > **Import Certificates**. Then use the file picker to find, select, and open the .cer files you created.
 
@@ -158,7 +158,7 @@ If you have conditional access policies that need to be satisfied for your accou
 
 ### Browser complains about HTTP redirect or insecure connection during sign-in
 
-When Storage Explorer performs sign-in in your web browser, a redirect to `localhost` is done at the end of the sign-in process. Browsers sometimes raise a warning or error that the redirect is being performed with HTTP instead of HTTPS. Some browsers might also try to force the redirect to be performed with HTTPS. If either of these issues happen, depending on your browser, you have options:
+When Storage Explorer performs sign-in in your web browser, a redirect to `localhost` is done at the end of the sign-in process. Browsers sometimes raise a warning or error that the redirect is being performed with HTTP instead of HTTPS. Some browsers might also try to force the redirect to be performed with HTTPS. If either of these issues happens, depending on your browser, you have options:
 
 - Ignore the warning.
 - Add an exception for `localhost`.
@@ -172,7 +172,7 @@ Sometimes you may see an error message that says a token can't be acquired becau
 
 ### Authentication library failed to start properly
 
-If on startup you see an error message that says Storage Explorer's authentication library failed to start properly, make sure your installation environment meets all [prerequisites](/azure/vs-azure-tools-storage-manage-with-storage-explorer#prerequisites). Not meeting prerequisites is the most likely cause of this error message.
+If, on startup, you see an error message that says Storage Explorer's authentication library failed to start properly, make sure your installation environment meets all [prerequisites](/azure/vs-azure-tools-storage-manage-with-storage-explorer#prerequisites). Not meeting prerequisites is the most likely cause of this error message.
 
 If you believe that your installation environment meets all prerequisites, [open an issue on GitHub](https://github.com/Microsoft/AzureStorageExplorer/issues/new). When you open your issue, make sure to include:
 
