@@ -2,6 +2,18 @@
 
 
 
+## Week of March 27, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 3/29/2023 | Troubleshoot issues for Exchange hybrid deployments | removed |
+| 3/29/2023 | Listing some issues for Exchange Server | removed |
+| 3/30/2023 | ["Cannot process argument transformation" error for cmdlets in Exchange Server 2013 with CU11](/exchange/troubleshoot/administration/cannot-process-argument-transformation-error) | modified |
+| 3/30/2023 | [Version error when you install Exchange Server in RecoverServer mode](/exchange/troubleshoot/setup/version-error-in-recover-server-mode-install) | added |
+| 3/30/2023 | [Error when you try to view queue messages in Queue Viewer](/exchange/troubleshoot/setup/queue-viewer-error-when-viewing-messages) | added |
+
+
 ## Week of March 20, 2023
 
 
