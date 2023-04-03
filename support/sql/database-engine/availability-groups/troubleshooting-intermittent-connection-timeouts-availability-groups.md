@@ -36,7 +36,7 @@ When you review the SQL Server error logs of those replicas, you might observe m
 **Error log from the secondary replica**
 
 ```output
-2023-02-15 07:11:03.100 spid31s A connection time-out has occurred on a previously established connection to availability replica 'SQL19AGN1' with id ['<replicaid>']. Either a networking or a firewall issue exists or the availability replica has transitioned to the resolving role.
+2023-02-15 07:11:03.100 spid31s A connection time-out has occurred on a previously established connection to availability replica 'SQL19AGN1' with id [<replicaid>]. Either a networking or a firewall issue exists or the availability replica has transitioned to the resolving role.
 
 2023-02-15 07:11:03.100 spid31s Always On Availability Groups connection with primary database terminated for secondary database 'agdb' on the availability replica 'SQL19AGN1' with Replica ID: {<replicaid>}. This is an informational message only. No user action is required.
 ```
