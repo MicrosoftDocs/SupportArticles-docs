@@ -1,12 +1,12 @@
 ---
 title: Troubleshoot brokered services
 description: Learn how to troubleshoot several common problems that can occur when you try to get a brokered service in the Visual Studio SDK.
-ms.date: 02/18/2022
+ms.date: 04/03/2023
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: andarno
 ---
-# How to: Troubleshoot brokered services
+# Troubleshoot brokered services
 
 _Applies to:_&nbsp;Visual Studio 2019 and later versions
 

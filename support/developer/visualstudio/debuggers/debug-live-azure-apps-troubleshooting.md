@@ -120,7 +120,10 @@ If you see a warning icon :::image type="content" source="media/debug-live-azure
 
 Take these steps:
 
-1. Make sure you use the same version of source code to build and deploy your app. Make sure you're loading the correct symbols for your deployment. To do this, view the **Modules** window while Snapshot Debugging and verify the Symbol File column shows a .pdb file loaded for the module you're debugging. The Snapshot Debugger will try to automatically download and use symbols for your deployment.
+1. Make sure you use the same version of source code to build and deploy your app.
+1. Make sure you're loading the correct symbols for your deployment.
+1. To do this, view the **Modules** window while Snapshot Debugging and verify the Symbol File column shows a .pdb file loaded for the module you're debugging. 
+   The Snapshot Debugger will try to automatically download and use symbols for your deployment.
 
 ## Issue: Symbols don't load when I open a Snapshot
 
@@ -183,14 +186,14 @@ Take these steps:
 The "Azure resource" and "Storage account" entries use resource names as keys so actions such as migrating a resource to different subscriptions can cause problems.
 To clear out the list, follow these steps:
 
-1. Run these commands in Developer Command Prompt for VS (with admin privileges)
+1. Run these commands in Developer Command Prompt for VS (with admin privileges).
 
    ```cmd
    vsregedit remove local HKCU SnapshotDebugger AzureResourcesMRU
    vsregedit remove local HKCU SnapshotDebugger StorageAccountsMRU
    ```
 
-1. Delete any _.suo_ files associated with the web app
+1. Delete any _.suo_ files associated with the web app.
 
 ## Issue: I'm having problems Snapshot Debugging and I need to enable more logging
 
@@ -234,12 +237,12 @@ You can find Instrumentation logs in the following locations:
 
 Snapshot Debugging and Application Insights depend on an ICorProfiler, which loads into the site process and causes file locking issues during upgrade. We recommend this process to ensure there's no down-time to your production site.
 
-- Create a [Deployment Slot](/azure/app-service/web-sites-staged-publishing) within your App Service and deploy your site to the Slot.
-- Swap the Slot with production from Cloud Explorer in Visual Studio or from the Azure portal.
-- Stop the Slot site. It takes a few seconds to kill off the site _w3wp.exe_ process from all instances.
-- Upgrade the Slot site extension from the Kudu site or the Azure portal (**App Service Blade > Development Tools > Extensions > Update**).
-- Start the Slot site. We recommend visiting the site to warm it up again.
-- Swap the Slot with production.
+1. Create a [Deployment Slot](/azure/app-service/web-sites-staged-publishing) within your App Service and deploy your site to the Slot.
+1. Swap the Slot with production from Cloud Explorer in Visual Studio or from the Azure portal.
+1. Stop the Slot site. It takes a few seconds to kill off the site _w3wp.exe_ process from all instances.
+1. Upgrade the Slot site extension from the Kudu site or the Azure portal (**App Service Blade > Development Tools > Extensions > Update**).
+1. Start the Slot site. We recommend visiting the site to warm it up again.
+1. Swap the Slot with production.
 
 ## References
 
