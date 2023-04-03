@@ -54,7 +54,7 @@
       - name: Increase networking limits
         href: /azure/azure-portal/supportability/networking-quota-requests?context=/troubleshoot/azure/virtual-machines/context/context
 
-- name: Troubleshoot Cannot connect to my VM
+- name: Cannot connect to my VM
   items:
   - name: Linux
     items:
@@ -145,14 +145,14 @@
   - name: Application access issues
     href: troubleshoot-app-connection.md
 
-- name: Troubleshoot VM password reset
+- name: VM Password Reset
   items:
   - name: Windows
     href: reset-local-password-without-agent.md
   - name: Linux
     href: reset-password.md
 
-- name: Troubleshoot VM is not booting
+- name: VM is not booting
   items:
     - name: Linux
       items:
@@ -293,7 +293,7 @@
           - name: Azure VM cannot RDP - working on features
             href: azure-vm-cannot-rdp-working-features.md
 
-- name: Troubleshoot VM performance
+- name: VM Performance
   items:
   - name: Performance diagnostics (PerfInsights)
     items:
@@ -326,26 +326,26 @@
     - name: Poor performance on Windows Server 2012 R2
       href: poor-performance-emulated-storage-stack.md
 
-- name: Troubleshoot VM allocation failures
+- name: VM Allocation Failures
   items:
   - name: Allocation failures
     href: allocation-failure.md
   - name: Classic allocation failures
     href: allocation-failure-classic.md
 
-- name: Understanding planned maintenance
+- name: VM Planned Maintenance
   items:
   - name: Overview
     href: /azure/virtual-machines/maintenance-notifications?context=/troubleshoot/azure/virtual-machines/context/context
 
-- name: Troubleshoot VM unexpected restarts
+- name: VM Restarts
   items:
     - name: Understand a system reboot
       href: understand-vm-reboot.md
     - name: Unexpected reboots of VMs with attached VHDs
       href: unexpected-reboots-attached-vhds.md
 
-- name: Troubleshoot VM deployment failures
+- name: VM Deployment Failures
   items:
   - name: VM deployment issues
     href: welcome-deployment-troubleshooting.yml
@@ -376,7 +376,7 @@
     - name: Upgrade to SLES 15 SP1
       href: linux-upgrade-suse-15sp1.md
 
-- name: Troubleshoot cannot start or stop VM
+- name: VM Cannot Start or Stop VM
   items:
   - name: Understanding VM lifecycle and states
     href: /azure/virtual-machines/states-billing?context=/troubleshoot/azure/virtual-machines/context/context
@@ -401,7 +401,7 @@
       - name: Restarting, shutting down, or stopping services
         href: boot-error-troubleshoot-windows.md
 
-- name: Troubleshoot VM extensions
+- name: VM Agent and Extensions
   items:
   - name: Azure cloud-init support for Linux VMs
     href: cloud-init-support-linux-vms.md
@@ -436,7 +436,7 @@
   - name: Troubleshoot Linux VM agent
     href: linux-azure-guest-agent.md
 
-- name: Troubleshoot disk management
+- name: Disk Management
   items:
   - name: Overview
     href: /azure/virtual-machines/managed-disks-overview?context=/troubleshoot/azure/virtual-machines/context/context
@@ -455,14 +455,14 @@
   - name: VHD is not supported when you create a VM in Azure
     href: vhd-not-supported-vm-azure.md
 
-- name: Troubleshoot Windows activation
+- name: Windows Activation
   items:
   - name: Windows activation problems
     href: troubleshoot-activation-problems.md
   - name: Activation problem with forced tunneling
     href: custom-routes-enable-kms-activation.md
 
-- name: Troubleshoot Azure disk encryption
+- name: Azure Disk Encryption
   items:
   - name: Windows
     items:
@@ -481,15 +481,15 @@
     - name: FAQ
       href: /azure/virtual-machines/linux/disk-encryption-faq?context=/troubleshoot/azure/virtual-machines/context/context
 
-- name: Troubleshoot Azure Compute Gallery
+- name: Azure Compute Gallery
   items:
-  - name: Troubleshoot Azure Compute Gallery - Windows/Linux
+  - name: Windows/Linux Troubleshooting
     href: /azure/virtual-machines/troubleshooting-shared-images?context=/troubleshoot/azure/virtual-machines/context/context
 
-- name: Troubleshoot Azure Backup
+- name: Azure Backup
   href: /azure/backup/backup-azure-vms-troubleshoot?context=/troubleshoot/azure/virtual-machines/context/context
 
-- name: Troubleshoot On-demand Capacity Reservation issues
+- name: On-demand Capacity Reservation issues
   items:
   - name: Can't deploy Virtual Machines or Virtual Machine Scale Sets (Uniform) with Capacity Reservation
     href: capacity-reservation-cant-deploy-vm-vmss.md
@@ -502,10 +502,10 @@
   - name: A Capacity Reservation is in a "Failed" provisioning state
     href: capacity-reservation-failed-provisioning-state.md
 
-- name: Troubleshoot Azure Virtual Desktop
+- name: Azure Virtual Desktop
   href: how-to-videos-windows-virtual-desktop.md
 
-- name: Help with Linux administration
+- name: Linux administration
   items:
   - name: Configure multiple NICs
     href: linux-vm-multiple-virtual-network-interfaces-configuration.md
@@ -514,7 +514,7 @@
   - name: Maximum RAM memory of Linux VM
     href: max-linux-ram-limited-64-gb.md
 
-- name: Help with Linux repositories
+- name: Linux repositories
   items:
   - name: SUSE
     items:
