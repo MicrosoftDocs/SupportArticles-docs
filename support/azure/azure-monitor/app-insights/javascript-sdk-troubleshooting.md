@@ -260,6 +260,22 @@ The following table explains certain issues that involve [source map support for
 | Required Azure role-based access control (Azure RBAC) settings on your blob container | Any user on the portal who uses this feature must be assigned at least a [Storage Blob Data Reader](/azure/role-based-access-control/built-in-roles#storage-blob-data-reader) role for your blob container. You must assign this role to anyone who wants to use the source maps through this feature. Depending on how the container was created, this role might not have been automatically assigned to you or your team. |
 | Source map not found | To fix this issue, take the following actions: <ol> <li>Verify that the corresponding source map is uploaded to the correct blob container.</li> <li>Verify that the source map file gets its name from the JavaScript file that it maps to, and that it has a *.map* file name extension. For example, */static/js/main.4e2ca5fa.chunk.js* searches for the blob that's named *main.4e2ca5fa.chunk.js.map*.</li> <li>Check your browser's console to learn whether it's logging any errors. Include this output in any support ticket.</li> </ol> |
 
+## Fix the "Click Event rows with no parentId value" warning
+
+ When using the [Click Analytics auto collection plug-in](/azure/azure-monitor/app/javascript-feature-extensions) in Azure application insights, a telemetry warning may appear in the insights workbook indicating that some Click Event rows lack a parentId value.
+
+### Cause
+
+This can occur if the `parentid` is not specified in the parent html element, which causes the event to be triggered on all html elements.
+
+### Solution
+
+To fix this issue, add the `data-parentid` or `data-<customPrefix>-parentid` to the parent html element.Here is an example of the HTML code:
+
+```html
+<div data-heart-id="demo Header" data-heart-parentid="demo.Header" data-heart-parent-group="demo.Header.Group">
+```
+
 ## Next steps
 
 - [Get more help by filing an issue on GitHub][github-issue]
