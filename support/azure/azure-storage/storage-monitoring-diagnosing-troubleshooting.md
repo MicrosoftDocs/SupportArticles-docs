@@ -13,7 +13,7 @@ ms.custom: monitoring, devx-track-csharp
 
 # Monitor, diagnose, and troubleshoot Microsoft Azure Storage (classic)
 
-This guide shows you how to use features such as Azure Storage Analytics, client-side logging in the Azure Storage Client Library, and other third-party tools to identify, diagnose, and troubleshoot Azure Storage related issues.
+This guide shows you how to use features such as Azure Storage Analytics, client-side logging in the Azure Storage Client Library, and other third-party tools to identify, diagnose, and troubleshoot Azure Storage-related issues.
 
 :::image type="content" source="media/storage-monitoring-diagnosing-troubleshooting/overview.png" alt-text="Diagram that shows the flow of information between client applications and Azure storage services.":::
 
@@ -24,7 +24,7 @@ This guide is intended to be read primarily by developers of online services tha
 - To provide you with actionable guidance for resolving problems related to Azure Storage.
 
 > [!NOTE]
-> This article is based on using Storage Analytics metrics and logs as referred to as *Classic metrics and logs*. We recommend that you use Azure Storage metrics and logs in Azure Monitor instead of Storage Analytics logs. To learn more, see any of the following articles:
+> This article is based on using Storage Analytics metrics and logs referred to as *Classic metrics and logs*. We recommend that you use Azure Storage metrics and logs in Azure Monitor instead of Storage Analytics logs. To learn more, see any of the following articles:
 >
 > - [Monitoring Azure Blob Storage](/azure/storage/blobs/monitor-blob-storage)
 > - [Monitoring Azure Files](/azure/storage/files/storage-files-monitoring)
@@ -33,38 +33,38 @@ This guide is intended to be read primarily by developers of online services tha
 
 ## Overview
 
-Diagnosing and troubleshooting issues in a distributed application hosted in a cloud environment can be more complex than in traditional environments. Applications can be deployed in a PaaS or IaaS infrastructure, on premises, on a mobile device, or in some combination of these environments. Typically, your application's network traffic may traverse public and private networks and your application may use multiple storage technologies such as Microsoft Azure Storage Tables, Blobs, Queues, or Files in addition to other data stores such as relational and document databases.
+Diagnosing and troubleshooting issues in a distributed application hosted in a cloud environment can be more complex than in traditional environments. Applications can be deployed in a PaaS or IaaS infrastructure, on-premises, on a mobile device, or in some combination of these environments. Typically, your application's network traffic may traverse public and private networks, and your application may use multiple storage technologies such as Microsoft Azure Storage Tables, Blobs, Queues, or Files in addition to other data stores such as relational and document databases.
 
-To manage such applications successfully you should monitor them proactively and understand how to diagnose and troubleshoot all aspects of them and their dependent technologies. As a user of Azure Storage services, you should continuously monitor the Storage services your application uses for any unexpected changes in behavior (such as slower than usual response times), and use logging to collect more detailed data and to analyze a problem in depth. The diagnostics information you obtain from both monitoring and logging will help you to determine the root cause of the issue your application encountered. Then you can troubleshoot the issue and determine the appropriate steps you can take to remediate it. Azure Storage is a core Azure service, and forms an important part of the majority of solutions that customers deploy to the Azure infrastructure. Azure Storage includes capabilities to simplify monitoring, diagnosing, and troubleshooting storage issues in your cloud-based applications.
+To manage such applications successfully, you should monitor them proactively and understand how to diagnose and troubleshoot all aspects of them and their dependent technologies. As a user of Azure Storage services, you should continuously monitor the Storage services your application uses for any unexpected changes in behavior (such as slower-than-usual response times) and use logging to collect more detailed data and to analyze a problem in depth. The diagnostics information you obtain from both monitoring and logging will help you to determine the root cause of the issue your application encountered. Then you can troubleshoot the issue and determine the appropriate steps you can take to remediate it. Azure Storage is a core Azure service and forms an important part of the majority of solutions that customers deploy to the Azure infrastructure. Azure Storage includes capabilities to simplify monitoring, diagnosing, and troubleshooting storage issues in your cloud-based applications.
 
 ### <a name="how-this-guide-is-organized"></a>How this guide is organized
 
 The [Monitoring your storage service](#monitoring-your-storage-service) section describes how to monitor the health and performance of your Azure Storage services using Azure Storage Analytics Metrics (Storage Metrics).
 
-The [Diagnosing storage issues](#diagnosing-storage-issues) section describes how to diagnose issues using Azure Storage Analytics Logging (Storage Logging). It also describes how to enable client-side logging using the facilities in one of the client libraries such as the Storage Client Library for .NET or the Azure SDK for Java.
+The [Diagnosing storage issues](#diagnosing-storage-issues) section describes how to diagnose issues using Azure Storage Analytics Logging (Storage Logging). It also describes how to enable client-side logging using the facilities in one of the client libraries, such as the Storage Client Library for .NET or the Azure SDK for Java.
 
 The [End-to-end tracing](#end-to-end-tracing) section describes how you can correlate the information contained in various log files and metrics data.
 
 The [Troubleshooting guidance](#troubleshooting-guidance) section provides troubleshooting guidance for some of the common storage-related issues you might encounter.
 
-The [Appendices](#appendices) section includes information about using other tools such as Wireshark and Netmon for analyzing network packet data, and Fiddler for analyzing HTTP/HTTPS messages.
+The [Appendices](#appendices) section includes information about using other tools, such as Wireshark and Netmon, for analyzing network packet data and Fiddler for analyzing HTTP/HTTPS messages.
 
 ## <a name="monitoring-your-storage-service"></a>Monitoring your storage service
 
-If you are familiar with Windows performance monitoring, you can think of Storage Metrics as being an Azure Storage equivalent of Windows Performance Monitor counters. In Storage Metrics, you will find a comprehensive set of metrics (counters in Windows Performance Monitor terminology) such as service availability, total number of requests to service, or percentage of successful requests to service. For a full list of the available metrics, see [Storage Analytics Metrics Table Schema](/rest/api/storageservices/Storage-Analytics-Metrics-Table-Schema). You can specify whether you want the storage service to collect and aggregate metrics every hour or every minute. For more information about how to enable metrics and monitor your storage accounts, see [Enabling storage metrics and viewing metrics data](/azure/storage/blobs/monitor-blob-storage).
+If you are familiar with Windows performance monitoring, you can think of Storage Metrics as being an Azure Storage equivalent of Windows Performance Monitor counters. In Storage Metrics, you will find a comprehensive set of metrics (counters in Windows Performance Monitor terminology), such as service availability, the total number of requests to service, or the percentage of successful requests to service. For a full list of the available metrics, see [Storage Analytics Metrics Table Schema](/rest/api/storageservices/Storage-Analytics-Metrics-Table-Schema). You can specify whether you want the storage service to collect and aggregate metrics every hour or every minute. For more information about how to enable metrics and monitor your storage accounts, see [Enabling storage metrics and viewing metrics data](/azure/storage/blobs/monitor-blob-storage).
 
 You can choose which hourly metrics you want to display in the [Azure portal](https://portal.azure.com) and configure rules that notify administrators by email whenever an hourly metric exceeds a particular threshold. For more information, see [Receive Alert Notifications](/azure/azure-monitor/alerts/alerts-overview).
 
 We recommend you review [Azure Monitor for Storage](/azure/storage/common/storage-insights-overview?toc=/azure/azure-monitor/toc.json) (preview). It's a feature of Azure Monitor that offers comprehensive monitoring of your Azure Storage accounts by delivering a unified view of your Azure Storage services performance, capacity, and availability. It doesn't require you to enable or configure anything, and you can immediately view these metrics from the pre-defined interactive charts and other visualizations included.
 
-The storage service collects metrics using a best effort, but may not record every storage operation.
+The storage service tries its best to collect metrics but may not record every storage operation.
 
 In the Azure portal, you can view metrics such as availability, total requests, and average latency numbers for a storage account. A notification rule has also been set up to alert an administrator if availability drops below a certain level. From viewing this data, one possible area for investigation is the table service success percentage being below 100% (for more information, see the [Metrics show low PercentSuccess or analytics log entries have operations with transaction status of ClientOtherErrors]( #metrics-show-low-percent-success) section).
 
 You should continuously monitor your Azure applications to ensure they're healthy and performing as expected by:
 
-- Establishing some baseline metrics for application that will enable you to compare current data and identify any significant changes in the behavior of Azure storage and your application. The values of your baseline metrics will, in many cases, be application specific and you should establish them when you are performance testing your application.
-- Recording minute metrics and using them to monitor actively for unexpected errors and anomalies such as spikes in error counts or request rates.
+- Establishing some baseline metrics for the application that will enable you to compare current data and identify any significant changes in the behavior of Azure storage and your application. The values of your baseline metrics will, in many cases, be application specific, and you should establish them when you are performance testing your application.
+- Recording minute metrics and using them to monitor actively for unexpected errors and anomalies, such as spikes in error counts or request rates.
 - Recording hourly metrics and using them to monitor average values such as average error counts and request rates.
 - Investigating potential issues using diagnostics tools as discussed later in the [Diagnosing storage issues](#diagnosing-storage-issues) section.
 
@@ -88,7 +88,7 @@ The [Azure portal](https://portal.azure.com) can also provide notifications of i
 Storage Metrics only stores capacity metrics for the blob service because blobs typically account for the largest proportion of stored data (at the time of writing, it is not possible to use Storage Metrics to monitor the capacity of your tables and queues). You can find this data in the `$MetricsCapacityBlob` table if you have enabled monitoring for the Blob service. Storage Metrics records this data once per day, and you can use the value of the `RowKey`  to determine whether the row contains an entity that relates to user data (value `data`) or analytics data (value `analytics`). Each stored entity contains information about the amount of storage used (`Capacity` measured in bytes) and the current number of containers (`ContainerCount`) and blobs (`ObjectCount`) in use in the storage account. For more information about the capacity metrics stored in the `$MetricsCapacityBlob` table, see [Storage Analytics Metrics Table Schema](/rest/api/storageservices/Storage-Analytics-Metrics-Table-Schema).
 
 > [!NOTE]
-> You should monitor these values for an early warning that you are approaching the capacity limits of your storage account. In the Azure portal, you can add alert rules to notify you if aggregate storage use exceeds or falls below thresholds that you specify.
+> You should monitor these values for an early warning that you are approaching the capacity limits of your storage account. In the Azure portal, you can add alert rules to notify you if aggregate storage use exceeds or falls below the thresholds that you specify.
 
 To estimate the size of various storage objects such as blobs, see the blog post [Understanding Azure Storage Billing – Bandwidth, Transactions, and Capacity](/archive/blogs/patrick_butler_monterde/azure-storage-understanding-windows-azure-storage-billing-bandwidth-transactions-and-capacity).
 
@@ -96,7 +96,7 @@ To estimate the size of various storage objects such as blobs, see the blog post
 
 You should monitor the availability of the storage services in your storage account by monitoring the value in the `Availability` column in the hourly or minute metrics tables — `$MetricsHourPrimaryTransactionsBlob`, `$MetricsHourPrimaryTransactionsTable`, `$MetricsHourPrimaryTransactionsQueue`, `$MetricsMinutePrimaryTransactionsBlob`, `$MetricsMinutePrimaryTransactionsTable`, `$MetricsMinutePrimaryTransactionsQueue`, `$MetricsCapacityBlob`. The `Availability` column contains a percentage value that indicates the availability of the service or the API operation represented by the row (the `RowKey` shows if the row contains metrics for the service as a whole or for a specific API operation).
 
-Any value less than 100% indicates that some storage requests are failing. You can see why they're failing by examining the other columns in the metrics data that show the numbers of requests with different error types such as ServerTimeoutError. You should expect to see `Availability` fall temporarily below 100% for reasons such as transient server timeouts while the service moves partitions to better load-balance request; the retry logic in your client application should handle such intermittent conditions. The article [Storage Analytics Logged Operations and Status Messages](/rest/api/storageservices/Storage-Analytics-Logged-Operations-and-Status-Messages) lists the transaction types that Storage Metrics includes in its `Availability` calculation.
+Any value less than 100% indicates that some storage requests are failing. You can see why they're failing by examining the other columns in the metrics data that show the numbers of requests with different error types, such as ServerTimeoutError. You should expect to see `Availability` fall temporarily below 100% for reasons such as transient server timeouts while the service moves partitions to better load-balance requests; the retry logic in your client application should handle such intermittent conditions. The article [Storage Analytics Logged Operations and Status Messages](/rest/api/storageservices/Storage-Analytics-Logged-Operations-and-Status-Messages) lists the transaction types that Storage Metrics includes in its `Availability` calculation.
 
 In the [Azure portal](https://portal.azure.com), you can add alert rules to notify you if `Availability` for a service falls below a threshold that you specify.
 
