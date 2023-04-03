@@ -28,7 +28,7 @@ The following features will also support IPv6 addresses:
 
 ## When will IPv6 be supported in Azure AD?
 
-We'll begin introducing IPv6 support to Azure AD starting April 3, 2023.
+We'll begin introducing IPv6 support to Azure AD in April 2023.
 
 We know that IPv6 support is a significant change for some organizations. We're publishing this information now so that customers can make plans to ensure readiness.
 
@@ -88,8 +88,11 @@ You can test Azure AD authentication over IPv6 before we enable it worldwide by 
 > - Microsoft is providing these instructions for testing purposes only. You must remove the following configurations by May 2023 to ensure that your clients are using production DNS servers. The DNS servers in the following procedures may be decommissioned after May 2023.
 > 
 > - We recommend using the [Resolve-DnsName](/powershell/module/dnsclient/resolve-dnsname) cmdlet to validate NRPT rules. If you use the [nslookup](/windows-server/administration/windows-commands/nslookup) command, the result may be different given the differences that exist between these tools.
+>
+> - Make sure you have open network connectivity on TCP and UDP port 53 between your client devices and the DNS servers used for the NRPT rule.
 
-### Configure a client NRPT rule manually
+
+### Configure a client NRPT rule manually - public cloud
 
 1. Open a PowerShell console as an administrator (right-click the PowerShell icon and select **Run As Administrator**).
 1. Add an NRPT rule by running the following commands:
@@ -144,6 +147,29 @@ You can test Azure AD authentication over IPv6 before we enable it worldwide by 
     } | Remove-DnsClientNrptRule -Force
     ```
 
+### Configure a client NRPT rule manually - US Gov cloud
+
+1. Similar to the script above for public cloud, the script below will create an NRPT rule for the US Gov login endpoint `login.microsfotonline.us`.
+1. Open a PowerShell console as an administrator (right-click the PowerShell icon and select **Run As Administrator**).
+1. Add an NRPT rule by running the following commands:
+
+    ```powershell
+    $DnsServers = (
+        "ns1-35.azure-dns.com.",
+        "ns2-35.azure-dns.net.",
+        "ns3-35.azure-dns.org.",
+        "ns4-35.azure-dns.info."
+    )
+    $DnsServerIPs = $DnsServers | Foreach-Object {
+        (Resolve-DnsName $_).IPAddress | Select-Object -Unique
+    }
+    $params = @{
+        Namespace = "login.microsoftonline.us"
+        NameServers = $DnsServerIPs
+        DisplayName = "AZURE-AD-NRPT-USGOV"
+    }
+    Add-DnsClientNrptRule @params
+    ```
 ### Deploy NRPT rule with Intune
 
 To deploy the NRPT rule to multiple machines by using Intune, create a Win32 app and assign it to one or more devices. 
