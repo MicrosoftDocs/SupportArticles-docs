@@ -262,7 +262,7 @@ The following table explains certain issues that involve [source map support for
 
 ## Fix the "Click Event rows with no parentId value" warning
 
-The web application is configured with Azure application insights with [Click Analytics auto collection plug-in](/azure/azure-monitor/app/javascript-feature-extensions). A telemetry warning may appear in the application insights workbook indicating that some Click Event rows lack a parentId value.
+When you use Azure application insights and [Click Analytics auto collection plug-in](/azure/azure-monitor/app/javascript-feature-extensions) in the application, a telemetry warning may appear in the application insights workbook indicating that some Click Event rows lack a parentId value.
 
 ### Cause
 
@@ -275,7 +275,6 @@ To fix this issue, add the `data-parentid` or `data-<customPrefix>-parentid` to 
 ```html
 <div data-heart-id="demo Header" data-heart-parentid="demo.Header" data-heart-parent-group="demo.Header.Group">
 ```
-
 ## Next steps
 
 - [Get more help by filing an issue on GitHub][github-issue]
