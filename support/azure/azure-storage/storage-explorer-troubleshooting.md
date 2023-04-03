@@ -492,7 +492,7 @@ snap connect storage-explorer:password-manager-service :password-manager-service
 ### .tar.gz file
 
 > [!NOTE]
-> Storage Explorer as provided in the *.tar.gz* download is supported for Ubuntu only. Storage Explorer might work on RHEL, but it is not officially supported.
+> Storage Explorer, as provided in the *.tar.gz* download, is supported for Ubuntu only. Storage Explorer might work on RHEL, but it is not officially supported.
 
 You can also download the application as a *.tar.gz* file, but you'll have to install dependencies manually.
 
@@ -520,7 +520,7 @@ Many libraries needed by Storage Explorer may be missing in RHEL environments. I
 ## [SUSE Linux Enterprise Server](#tab/linux-sles)
 
 > [!NOTE]
-> Storage Explorer has not been tested for SLES. You may try using Storage Explorer on your system, but we can’t guarantee that Storage Explorer will work as expected.
+> Storage Explorer hasn't been tested for SLES. You may try using Storage Explorer on your system, but we can’t guarantee that Storage Explorer will work as expected.
 
 ### Snap
 
@@ -637,7 +637,7 @@ For some issues, you'll need to provide logs of the network calls made by Storag
 1. Select **Trust Root Certificate** and then select **Yes** in the next dialog box.
 1. Start Storage Explorer.
 1. Go to **Settings** (the **gear** symbol on the left) > **Application** > **Proxy**.
-1. Change the proxy source dropdown to be **Use system proxy (preview)**.
+1. Change the proxy source dropdown to **Use system proxy (preview)**.
 1. Restart Storage Explorer.
 1. You should start seeing network calls from a `storageexplorer:` process show up in Fiddler.
 
@@ -657,7 +657,7 @@ For some issues, you'll need to provide logs of the network calls made by Storag
 1. Select <kbd>Ctrl</kbd> + <kbd>F</kbd>.
 1. In the dialog box that appears, make sure the following options are set: **Search** = **Requests and responses** and **Examine** = **Headers and bodies**.
 1. Search for any passwords you used while you collected the Fiddler trace and any entries that are highlighted. Right-click and select **Remove** > **Selected sessions**.
-1. If you definitely entered passwords into your browser while you collected the trace but you don't find any entries when you use <kbd>Ctrl</kbd> + <kbd>F</kbd>, you don't want to change your passwords, or if the passwords you used are used for other accounts, skip sending us the .saz file.
+1. If you definitely entered passwords into your browser while you collected the trace, but you don't find any entries when you use <kbd>Ctrl</kbd> + <kbd>F</kbd>, you don't want to change your passwords, or if the passwords you used are used for other accounts, skip sending us the .saz file.
 1. Save the trace again with a new name.
 1. Optional: Delete the original trace.
 
