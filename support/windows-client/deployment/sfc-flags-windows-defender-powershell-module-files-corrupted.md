@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:servicing, csstroubleshoot
+ms.custom: Fix, csstroubleshoot, devx-track-azurepowershell
 ms.technology: windows-client-deployment
 ---
 # System File Checker (SFC) incorrectly flags Windows Defender PowerShell module files as corrupted
