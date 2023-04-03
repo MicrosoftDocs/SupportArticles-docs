@@ -279,7 +279,7 @@ Storage Explorer only supports basic authentication with proxy servers. Other au
 
 The **Application** > **Proxy** > **Proxy configuration** setting determines which source Storage Explorer gets the proxy configuration from.
 
-If you select **Use environment variables**, make sure to set the `HTTPS_PROXY` or `HTTP_PROXY` environment variables. Environment variables are case sensitive, so be sure to set the correct variables. If these variables are undefined or invalid, Storage Explorer won't use a proxy. Restart Storage Explorer after you modify any environment variables.
+If you select **Use environment variables**, make sure to set the `HTTPS_PROXY` or `HTTP_PROXY` environment variables. Environment variables are case-sensitive, so be sure to set the correct variables. If these variables are undefined or invalid, Storage Explorer won't use a proxy. Restart Storage Explorer after you modify any environment variables.
 
 If you select **Use app proxy settings**, make sure the in-app proxy settings are correct.
 
@@ -290,7 +290,7 @@ If you're still experiencing issues, try these troubleshooting methods:
 1. If you can connect to the internet without using your proxy, verify that Storage Explorer works without proxy settings enabled. If Storage Explorer connects successfully, there might be an issue with your proxy server. Work with your admin to identify the problems.
 1. Verify that other applications that use the proxy server work as expected.
 1. Verify that you can connect to the portal for the Azure environment you're trying to use.
-1. Verify that you can receive responses from your service endpoints. Enter one of your endpoint URLs into your browser. If you can connect, you should receive an `InvalidQueryParameterValue` or similar XML response.
+1. Verify that you can receive responses from your service endpoints. Enter one of your endpoint URLs into your browser. If you can connect, you should receive an `InvalidQueryParameterValue` or a similar XML response.
 1. Check whether someone else using Storage Explorer with the same proxy server can connect. If they can, you might have to contact your proxy server admin.
 
 ### Tools for diagnosing issues
@@ -332,11 +332,11 @@ If your proxy settings are correct, you might have to contact your proxy server 
 
 If you're connected to Azure through a proxy, verify that your proxy settings are correct.
 
-If the owner of a subscription or account has granted you access to a resource, verify that you have read or list permissions for that resource.
+If the owner of a subscription or account has granted you access to a resource, verify that you have read or listed permissions for that resource.
 
 ## Connection string doesn't have complete configuration settings
 
-If you receive this error message, it's possible that you don't have the necessary permissions to obtain the keys for your storage account. To confirm, go to the portal and locate your storage account. Right-click the node for your storage account and select **Open in Portal**. Then, go to the **Access Keys** pane. If you don't have permissions to view keys, you'll see a "You don't have access" message. To work around this issue, you can obtain either an account name and key or an account shared access signature and use it to attach the storage account.
+If you receive this error message, it's possible that you don't have the necessary permissions to obtain the keys to your storage account. To confirm, go to the portal and locate your storage account. Right-click the node for your storage account and select **Open in Portal**. Then, go to the **Access Keys** pane. If you don't have permissions to view keys, you'll see a "You don't have access" message. To work around this issue, you can obtain either an account name and key or an account shared access signature and use it to attach the storage account.
 
 If you do see the account keys, file an issue in GitHub so that we can help you resolve the issue.
 
