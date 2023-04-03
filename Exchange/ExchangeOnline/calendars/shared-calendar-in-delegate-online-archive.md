@@ -21,7 +21,7 @@ appliesto:
   - Outlook 2016
   - Outlook 2013
   - Outlook for Mac
-  - Outlook for Mac for Microsoft 365.
+  - Outlook for Mac for Microsoft 365
 search.appverid: MET150
 ms.date: 03/31/2023
 ---
