@@ -266,7 +266,7 @@ The web application is configured with Azure application insights with [Click An
 
 ### Cause
 
-This can occur if the `parentid` is not specified in the parent html element, which causes the event to be triggered on all html elements.
+This can occur if the `parentid` is not specified in the parent html element, which causes the event to be triggered on all of its parent elements.
 
 ### Solution
 
