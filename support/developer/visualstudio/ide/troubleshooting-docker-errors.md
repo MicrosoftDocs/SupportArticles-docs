@@ -72,13 +72,14 @@ By default, Docker stores images in the *%ProgramData%/Docker/* folder, which is
  1. Select **Docker Engine**.
  1. In the editing pane, add the `graph` property setting with the value of your desired location for Docker images:
 
-    ```json
+     ```json
         "graph": "D:\\mypath\\images"
-    ```
+     ```
 
-    :::image type="content" source="media/troubleshooting-docker-errors/docker-daemon-settings.png" alt-text="Screenshot of Docker File Sharing." lightbox="media/troubleshooting-docker-errors/docker-daemon-settings.png":::
+      :::image type="content" source="media/troubleshooting-docker-errors/docker-daemon-settings.png" alt-text="Screenshot of Docker File Sharing." lightbox="media/troubleshooting-docker-errors/docker-daemon-settings.png":::
 
- 1. Select **Apply & Restart**. These steps modify the configuration file at *%ProgramData%\docker\config\daemon.json*. Previously built images aren't moved.
+ 1. Select **Apply & Restart**.
+    These steps modify the configuration file at *%ProgramData%\docker\config\daemon.json*. Previously built images aren't moved.
 
 ## Container type mismatch
 
