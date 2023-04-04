@@ -1,7 +1,7 @@
 ---
 title: A process has encountered an unrecoverable error
 description: Learn about the processes that might encounter unrecoverable errors during the normal operations of Visual Studio.
-ms.date: 04/03/2023
+ms.date: 10/14/2021
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: tglee

@@ -20,7 +20,7 @@ File sharing only needs to be managed if you're using Hyper-V with Docker. If yo
 1. Right-click **Docker for Windows** in the notification area, and then select **Settings**.
 1. Select **Resources** > **File Sharing** and share the folder that needs to be accessed. Sharing your entire system drive is possible but not recommended.
 
-  :::image type="content" source="media/troubleshooting-docker-errors/docker-settings-image.png" alt-text="Screenshot of shared drives." lightbox="media/troubleshooting-docker-errors/docker-settings-image.png":::
+    :::image type="content" source="media/troubleshooting-docker-errors/docker-settings-image.png" alt-text="Screenshot of shared drives." lightbox="media/troubleshooting-docker-errors/docker-settings-image.png":::
 
 > [!TIP]
 > Visual Studio prompts you when **Shared Drives** aren't configured.
@@ -43,7 +43,7 @@ When using Docker for macOS, you might encounter an error referencing the folder
 
 ## Docker users group
 
-You might encounter the following errors in Visual Studio when working with containers:
+You might encounter the following error in Visual Studio when working with containers:
 
 > The current user must be in the 'docker-users' group to use Docker Desktop.
 > Add yourself to the 'docker-users' group and then log out of Windows.
@@ -66,7 +66,7 @@ In PowerShell, use the [Add-LocalGroupMember](/powershell/module/microsoft.power
 
 ## Low disk space
 
-By default, Docker stores images in the *%ProgramData%/Docker/* folder, which is typically on the system drive, _C:\ProgramData\Docker_. To prevent images from taking up valuable space on the system drive, you can change the image folder location. To do so:
+By default, Docker stores images in the *%ProgramData%/Docker/* folder, which is typically on the system drive, `*C:\ProgramData\Docker\*`. To prevent images from taking up valuable space on the system drive, you can change the image folder location. To do so:
 
  1. Right-click on the Docker icon on the task bar and select **Settings**.
  1. Select **Docker Engine**.

@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting snapshot debugging of Azure apps
 description: Understand troubleshooting and known issues for snapshot debugging in Visual Studio. Load ICorProfiler without causing downtime on your production site.
-ms.date: 04/03/2023
+ms.date: 04/24/2019
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: mikejo
@@ -72,10 +72,10 @@ The 404 - Not Found error indicates that the website couldn't be found on the se
 
 Take these steps:
 
-- Verify that you have a website deployed and running on the App Service resource that you're attaching to.
-- Verify that the site is available at _https://\<resource\>.azurewebsites.net_
-- Verify that your properly running custom web application doesn't return a status code of 404 when accessed at _https://\<resource\>.azurewebsites.net_.
-- If this error continues to persist, use one of the feedback channels described in the beginning of this article.
+1. Verify that you have a website deployed and running on the App Service resource that you're attaching to.
+1. Verify that the site is available at _https://\<resource\>.azurewebsites.net_
+1. Verify that your properly running custom web application doesn't return a status code of 404 when accessed at _https://\<resource\>.azurewebsites.net_.
+1. If this error continues to persist, use one of the feedback channels described in the beginning of this article.
 
 ### (406) Not Acceptable
 
@@ -83,9 +83,9 @@ The 406 - Not Acceptable error indicates the server is unable to respond to the 
 
 Take these steps:
 
-- Verify that your site is available at _https://\<resource\>.azurewebsites.net_.
-- Verify that your site hasn't been migrated to new instances. Snapshot Debugger uses the notion of ARRAffinity for routing requests to specific instances that can produce this error intermittently.
-- If this error continues to persist, use one of the feedback channels described in the beginning of this article.
+1. Verify that your site is available at _https://\<resource\>.azurewebsites.net_.
+1. Verify that your site hasn't been migrated to new instances. Snapshot Debugger uses the notion of ARRAffinity for routing requests to specific instances that can produce this error intermittently.
+1. If this error continues to persist, use one of the feedback channels described in the beginning of this article.
 
 ### (409) Conflict
 
@@ -114,9 +114,9 @@ Take these steps:
 
 ## Issue: Snappoint isn't turned on
 
-If you see a warning icon :::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-snappoint-warning-icon.png" alt-text="Snappoint warning icon."::: with your snappoint instead of the regular snappoint icon, then the snappoint isn't turned on.
+If you see a warning icon :::image type="icon" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-snappoint-warning-icon.png"::: with your snappoint instead of the regular snappoint icon, then the snappoint isn't turned on.
 
-:::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-dont-turn-on.png" alt-text="Snappoint doesn't turn on.":::
+:::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-dont-turn-on.png" alt-text="Screenshot to show that Snappoint doesn't turn on.":::
 
 Take these steps:
 
@@ -129,7 +129,7 @@ Take these steps:
 
 If you see the following window, symbols didn't load.
 
-:::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-symbols-wont-load.png" alt-text="Symbols do not load.":::
+:::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-symbols-wont-load.png" alt-text="Screenshot to show that symbols don't load.":::
 
 Take these steps:
 
@@ -139,7 +139,7 @@ Take these steps:
 
    The symbols, or *.pdb* files, available in your project must match your App Service deployment. Most deployments (deployment through Visual Studio, CI/CD with Azure Pipelines or Kudu, etc.) publish your symbol files along to your App Service. Setting the symbol cache directory enables Visual Studio to use these symbols.
 
-   :::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-symbol-settings.png" alt-text="Symbol settings.":::
+   :::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-symbol-settings.png" alt-text="Screenshot that shows settings for symbols.":::
 
 1. Alternatively, if your organization uses a symbol server or drops symbols in a different path, use the symbol settings to load the correct symbols for your deployment.
 
@@ -160,7 +160,7 @@ Take these steps:
 
 ## Issue: I only see Throttled Snapshots in the Diagnostic Tools
 
- :::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-throttled-snapshots.png" alt-text="Throttled snappoint":::
+ :::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-throttled-snapshots.png" alt-text="Screenshot that shows Throttled snappoint.":::
 
 Take these steps:
 
@@ -188,7 +188,7 @@ Take these steps:
 The "Azure resource" and "Storage account" entries use resource names as keys so actions such as migrating a resource to different subscriptions can cause problems.
 To clear out the list, follow these steps:
 
-1. Run these commands in Developer Command Prompt for VS (with admin privileges).
+1. Run these commands in Developer command prompt for VS (with admin privileges).
 
    ```cmd
    vsregedit remove local HKCU SnapshotDebugger AzureResourcesMRU
