@@ -699,24 +699,24 @@ For those features that the storage emulator doesn't support, use the Azure stor
 
 You are testing your application that uses the Storage Client Library against the local storage emulator, and method calls such as `CreateIfNotExists` fail with the error message "The value for one of the HTTP headers is not in the correct format." This indicates that the version of the storage emulator you're using doesn't support the version of the storage client library you're using. The Storage Client Library adds the header `x-ms-version` to all the requests it makes. If the storage emulator doesn't recognize the value in the `x-ms-version` header, it rejects the request.
 
-You can use the Storage Library Client logs to see the value of the `x-ms-version header` it is sending. You can also see the value of the `x-ms-version header` if you use Fiddler to trace the requests from your client application.
+You can use the Storage Library Client logs to see the value of the `x-ms-version header` it's sending. You can also see the value of the `x-ms-version header` if you use Fiddler to trace the requests from your client application.
 
-This scenario typically occurs if you install and use the latest version of the Storage Client Library without updating the storage emulator. You should either install the latest version of the storage emulator, or use cloud storage instead of the emulator for development and test.
+This scenario typically occurs if you install and use the latest version of the Storage Client Library without updating the storage emulator. You should either install the latest version of the storage emulator or use cloud storage instead of the emulator for development and testing.
 
 #### <a name="storage-emulator-requires-administrative-privileges"></a>Running the storage emulator requires administrative privileges
 
-You are prompted for administrator credentials when you run the storage emulator. This only occurs when you are initializing the storage emulator for the first time. After you have initialized the storage emulator, you do not need administrative privileges to run it again.
+You're prompted for administrator credentials when you run the storage emulator. This only occurs when you're initializing the storage emulator for the first time. After you have initialized the storage emulator, you don't need administrative privileges to run it again.
 
 For more information, see [Use the Azure Storage Emulator for Development and Testing](/azure/storage/common/storage-use-emulator). You can also initialize the storage emulator in Visual Studio, which will also require administrative privileges.
 
 ### <a name="you-are-encountering-problems-installing-the-Windows-Azure-SDK"></a>You are encountering problems installing the Azure SDK for .NET
 
-When you try to install the SDK, it fails trying to install the storage emulator on your local machine. The installation log contains one of the following messages:
+When you try to install the SDK, it fails while trying to install the storage emulator on your local machine. The installation log contains one of the following messages:
 
 - CAQuietExec: Error: Unable to access SQL instance
 - CAQuietExec: Error: Unable to create database
 
-The cause is an issue with existing LocalDB installation. By default, the storage emulator uses LocalDB to persist data when it simulates the Azure storage services. You can reset your LocalDB instance by running the following commands in a command-prompt window before trying to install the SDK.
+The cause is an issue with the existing LocalDB installation. By default, the storage emulator uses LocalDB to persist data when it simulates the Azure storage services. You can reset your LocalDB instance by running the following commands in a command-prompt window before trying to install the SDK.
 
 ```console
 sqllocaldb stop v11.0
@@ -729,11 +729,11 @@ The `delete` command removes any old database files from previous installations 
 
 ### <a name="you-have-a-different-issue-with-a-storage-service"></a>You have a different issue with a storage service
 
-If the previous troubleshooting sections do not include the issue you are having with a storage service, you should adopt the following approach to diagnosing and troubleshooting your issue.
+If the previous troubleshooting sections don't include the issue you're having with a storage service, you should adopt the following approach to diagnosing and troubleshooting your issue.
 
-- Check your metrics to see if there is any change from your expected base-line behavior. From the metrics, you may be able to determine whether the issue is transient or permanent, and which storage operations the issue is affecting.
+- Check your metrics to see if there's any change from your expected base-line behavior. From the metrics, you may be able to determine whether the issue is transient or permanent and which storage operations the issue is affecting.
 - You can use the metrics information to help you search your server-side log data for more detailed information about any errors that are occurring. This information may help you troubleshoot and resolve the issue.
-- If the information in the server-side logs is not sufficient to troubleshoot the issue successfully, you can use the Storage Client Library client-side logs to investigate the behavior of your client application, and tools such as Fiddler, Wireshark to investigate your network.
+- If the information in the server-side logs isn't sufficient to troubleshoot the issue successfully, you can use the Storage Client Library client-side logs to investigate the behavior of your client application and tools such as Fiddler and Wireshark to investigate your network.
 
 For more information about using Fiddler, see [Appendix 1: Using Fiddler to capture HTTP and HTTPS traffic](#appendix-1).
 
@@ -741,21 +741,21 @@ For more information about using Wireshark, see [Appendix 2: Using Wireshark to 
 
 ## <a name="appendices"></a>Appendices
 
-The appendices describe several tools that you may find useful when you are diagnosing and troubleshooting issues with Azure Storage (and other services). These tools are not part of Azure Storage and some are third-party products. As such, the tools discussed in these appendices are not covered by any support agreement you may have with Microsoft Azure or Azure Storage, and therefore as part of your evaluation process you should examine the licensing and support options available from the providers of these tools.
+The appendices describe several tools that you may find useful when you're diagnosing and troubleshooting issues with Azure Storage (and other services). These tools aren't part of Azure Storage, and some are third-party products. As such, the tools discussed in these appendices aren't covered by any support agreement you may have with Microsoft Azure or Azure Storage, and therefore as part of your evaluation process, you should examine the licensing and support options available from the providers of these tools.
 
 ### <a name="appendix-1"></a>Appendix 1: Using Fiddler to capture HTTP and HTTPS traffic
 
-[Fiddler](https://www.telerik.com/fiddler) is a useful tool for analyzing the HTTP and HTTPS traffic between your client application and the Azure storage service you are using.
+[Fiddler](https://www.telerik.com/fiddler) is a useful tool for analyzing the HTTP and HTTPS traffic between your client application and the Azure storage service you're using.
 
 > [!NOTE]
-> Fiddler can decode HTTPS traffic. You should read the Fiddler documentation carefully to understand how it does this, and to understand the security implications.
+> Fiddler can decode HTTPS traffic. You should read the Fiddler documentation carefully to understand how it does this and its security implications.
 
 This appendix provides a brief walkthrough of how to configure Fiddler to capture traffic between the local machine where you have installed Fiddler and the Azure storage services.
 
 After you have launched Fiddler, it will begin capturing HTTP and HTTPS traffic on your local machine. The following are some useful commands for controlling Fiddler:
 
 - Stop and start capturing traffic. On the main menu, go to **File** and then select **Capture Traffic** to toggle capturing on and off.
-- Save captured traffic data. On the main menu, go to **File**, select **Save**, and then select **All Sessions**. This enables you to save the traffic in a Session Archive file. You can reload a Session Archive later for analysis, or send it if requested to Microsoft support.
+- Save captured traffic data. On the main menu, go to **File**, select **Save**, and then select **All Sessions**. This enables you to save the traffic in a Session Archive file. You can reload a Session Archive later for analysis or send it if requested to Microsoft support.
 
 To limit the amount of traffic that Fiddler captures, you can use filters that you configure in the **Filters** tab. The following screenshot shows a filter that captures only traffic sent to the `contosoemaildist.table.core.windows.net` storage endpoint:
 
@@ -774,7 +774,7 @@ The following procedure shows you how to capture detailed packet information for
 
     :::image type="content" source="media/storage-monitoring-diagnosing-troubleshooting/wireshark-screenshot-1.png" alt-text="Screenshot that shows how to add a filter to the Capture Filter textbox.":::
 
-5. Select **Start**. Wireshark will now capture all the packets send to or from the table service endpoint as you use your client application on your local machine.
+5. Select **Start**. Wireshark will now capture all the packets sent to or from the table service endpoint as you use your client application on your local machine.
 6. When you have finished, select **Capture** > **Stop** on the main menu.
 7. To save the captured data in a Wireshark Capture file, select **File** > **Save** on the main menu.
 
@@ -791,21 +791,21 @@ You can also choose to view the TCP data as the application layer sees it by rig
 
 ### <a name="appendix-4"></a>Appendix 4: Using Excel to view metrics and log data
 
-Many tools enable you to download the Storage Metrics data from Azure table storage in a delimited format that makes it easy to load the data into Excel for viewing and analysis. Storage Logging data from Azure Blob Storage is already in a delimited format that you can load into Excel. However, you will need to add appropriate column headings based in the information at [Storage Analytics Log Format](/rest/api/storageservices/Storage-Analytics-Log-Format) and [Storage Analytics Metrics Table Schema](/rest/api/storageservices/Storage-Analytics-Metrics-Table-Schema).
+Many tools enable you to download the Storage Metrics data from Azure table storage in a delimited format that makes it easy to load the data into Excel for viewing and analysis. Storage Logging data from Azure Blob Storage is already in a delimited format that you can load into Excel. However, you'll need to add appropriate column headings based on the information at [Storage Analytics Log Format](/rest/api/storageservices/Storage-Analytics-Log-Format) and [Storage Analytics Metrics Table Schema](/rest/api/storageservices/Storage-Analytics-Metrics-Table-Schema).
 
 To import your Storage Logging data into Excel after you download it from blob storage:
 
 - On the **Data** menu, select **From Text**.
 - Browse to the log file you want to view and select **Import**.
-- On step 1 of the **Text Import Wizard**, select **Delimited**.
+- In step 1 of the **Text Import Wizard**, select **Delimited**.
 
-On step 1 of the **Text Import Wizard**, select **Semicolon** as the only delimiter and choose double-quote as the **Text qualifier**. Then select **Finish** and choose where to place the data in your workbook.
+In step 1 of the **Text Import Wizard**, select **Semicolon** as the only delimiter and choose double-quote as the **Text qualifier**. Then select **Finish** and choose where to place the data in your workbook.
 
 ### <a name="appendix-5"></a>Appendix 5: Monitoring with Application Insights for Azure DevOps
 
 You can also use the Application Insights feature for Azure DevOps as part of your performance and availability monitoring. This tool can:
 
-- Make sure your web service is available and responsive. Whether your app is a web site or a device app that uses a web service, it can test your URL every few minutes from locations around the world, and let you know if there's a problem.
+- Make sure your web service is available and responsive. Whether your app is a web site or a device app that uses a web service, it can test your URL every few minutes from locations worldwide and let you know if there's a problem.
 - Quickly diagnose any performance issues or exceptions in your web service. Find out if CPU or other resources are being stretched, get stack traces from exceptions, and easily search through log traces. If the app's performance drops below acceptable limits, Microsoft can send you an email. You can monitor both .NET and Java web services.
 
 You can find more information at [What is Application Insights](/azure/azure-monitor/app/app-insights-overview).
