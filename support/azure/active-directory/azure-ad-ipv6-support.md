@@ -148,7 +148,7 @@ You can test Azure AD authentication over IPv6 before we enable it worldwide by 
 
 ### Configure a client NRPT rule manually - US Gov cloud
 
-Similar to the script for public cloud, the following script creates an NRPT rule for the US Gov login endpoint `login.microsfotonline.us`.
+Similar to the script for public cloud, the following script creates an NRPT rule for the US Gov sign-in endpoint `login.microsfotonline.us`.
 
 1. Open a PowerShell console as an administrator by right-clicking the PowerShell icon and selecting **Run As Administrator**.
 1. Add an NRPT rule by running the following commands:
