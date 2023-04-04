@@ -116,13 +116,13 @@ Take these steps:
 
 If you see a warning icon :::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-snappoint-warning-icon.png" alt-text="Snappoint warning icon."::: with your snappoint instead of the regular snappoint icon, then the snappoint isn't turned on.
 
-:::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-dont-turn-on.png" alt-text="Snappoint does not turn on.":::
+:::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-dont-turn-on.png" alt-text="Snappoint doesn't turn on.":::
 
 Take these steps:
 
 1. Make sure you use the same version of source code to build and deploy your app.
 1. Make sure you're loading the correct symbols for your deployment.
-1. To do this, view the **Modules** window while Snapshot Debugging and verify the Symbol File column shows a .pdb file loaded for the module you're debugging. 
+1. To do this, view the **Modules** window while Snapshot Debugging and verify the Symbol File column shows a *.pdb* file loaded for the module you're debugging.
    The Snapshot Debugger will try to automatically download and use symbols for your deployment.
 
 ## Issue: Symbols don't load when I open a Snapshot
@@ -133,13 +133,15 @@ If you see the following window, symbols didn't load.
 
 Take these steps:
 
-- Select **Change Symbol Settings…** on the page. In the **Debugging > Symbol** settings, add a symbol cache directory. Restart snapshot debugging after the symbol path has been set.
+1. Select **Change Symbol Settings…** on the page.
+1. In the **Debugging > Symbol** settings, add a symbol cache directory.
+1. Restart snapshot debugging after the symbol path has been set.
 
-   The symbols, or .pdb files, available in your project must match your App Service deployment. Most deployments (deployment through Visual Studio, CI/CD with Azure Pipelines or Kudu, etc.) publish your symbol files along to your App Service. Setting the symbol cache directory enables Visual Studio to use these symbols.
+   The symbols, or *.pdb* files, available in your project must match your App Service deployment. Most deployments (deployment through Visual Studio, CI/CD with Azure Pipelines or Kudu, etc.) publish your symbol files along to your App Service. Setting the symbol cache directory enables Visual Studio to use these symbols.
 
    :::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-symbol-settings.png" alt-text="Symbol settings.":::
 
-- Alternatively, if your organization uses a symbol server or drops symbols in a different path, use the symbol settings to load the correct symbols for your deployment.
+1. Alternatively, if your organization uses a symbol server or drops symbols in a different path, use the symbol settings to load the correct symbols for your deployment.
 
 ## Issue: I can't see the "Attach Snapshot Debugger" option in the Cloud Explorer
 
