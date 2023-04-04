@@ -12,7 +12,7 @@ appliesto:
 
 # KB5024396 - Cumulative Update 3 for SQL Server 2022
 
-_Release Date:_ &nbsp; April 03, 2023  
+_Release Date:_ &nbsp; April 13, 2023  
 _Version:_ &nbsp; 16.0.4025.1
 
 ## Summary
@@ -24,7 +24,7 @@ This article describes Cumulative Update package 3 (CU3) for Microsoft SQL Serve
 
 ## Known issues in this update
 
-After you install SQL Server 2022 CU2, external data sources using generic ODBC connector will no longer work. When you try to query external tables that were created before installing CU2, you receive the following error message:
+After you install SQL Server 2022 CU2, external data sources using generic ODBC connector may no longer work. When you try to query external tables that were created before installing CU2, you receive the following error message:
 
 > Msg 7320, Level 16, State 110, Line 68  
 > Cannot execute the query "Remote Query" against OLE DB provider "MSOLEDBSQL" for linked server "(null)". Object reference not set to an instance of an object.
