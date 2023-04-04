@@ -1,6 +1,6 @@
 ---
 title: Fix site user ID mismatch issues in SharePoint or OneDrive
-description: Describes issues that are caused by site user ID mismatch and how to fix the issues by running the Site User Mismatch Diagnostic.  
+description: Describes common issues that are caused by site user ID mismatch and how to use the Site User Mismatch Diagnostic to fix these issues.  
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -35,7 +35,7 @@ When users in your organization try to access a OneDrive or SharePoint site by u
 
 These issues usually occur when an account is deleted from the Microsoft 365 admin center and then a new account is created with the same user principal name (UPN) but with a different ID value. When the users try to access a SharePoint site or their OneDrive, their new ID doesn't match the old ID that's added to the site permission list. Therefore, they can no longer access the site.
 
-These issues may also occur during directory synchronization between an Active Directory organizational unit (OU) and SharePoint. If users have already logged into SharePoint and are later moved to a different OU, they may experience the issues when the OU is synchronized with SharePoint.
+These issues may also occur during directory synchronization between an Active Directory organizational unit (OU) and SharePoint. If users have already logged into SharePoint and are later moved to a different OU, they may experience the issues when the OU synchronizes with SharePoint.
 
 ## Resolution
 
@@ -53,7 +53,7 @@ Select Run Tests below, which will populate the diagnostic in the Microsoft 365 
 
 ### Common scenarios
 
-Here are additional details when you use the Site User Mismatch Diagnostic to fix some common scenarios.
+Here are more details when you use the Site User Mismatch Diagnostic to fix some common scenarios.
 
 #### User ID mismatch for a SharePoint site
 
