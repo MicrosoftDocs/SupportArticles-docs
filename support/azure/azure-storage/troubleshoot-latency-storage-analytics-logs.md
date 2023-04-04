@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot latency using Storage Analytics logs
-description: Identifies and troubleshoots latency issues using Azure Storage Analytic logs, and optimizes the client application.
+description: Identifies and troubleshoots latency issues using Azure Storage Analytics logs and optimizes the client application.
 author: AmandaAZ
 ms.author: v-weizhu
 ms.date: 03/29/2023
@@ -11,11 +11,11 @@ ms.reviewer: v-miegge, kartup
 
 # Troubleshoot latency using Storage Analytics logs
 
-Diagnosing and troubleshooting is a key skill for building and supporting client applications with Azure Storage.
+Diagnosing and troubleshooting are key skills for building and supporting client applications with Azure Storage.
 
 Because of the distributed nature of an Azure application, diagnosing and troubleshooting both errors and performance issues may be more complex than in traditional environments.
 
-The following steps demonstrate how to identify and troubleshoot latency issues using Azure Storage Analytic logs, and optimize the client application.
+The following steps demonstrate how to identify and troubleshoot latency issues using Azure Storage Analytics logs and optimize the client application.
 
 ## <a id="recommended-steps"></a>Recommended steps
 
@@ -87,7 +87,7 @@ The following steps demonstrate how to identify and troubleshoot latency issues 
 
         Example: 8453 – 391 = 8062 ms
 
-   The following table provides information about the high latency OperationType and RequestStatus results:
+   The following table provides information about the high-latency OperationType and RequestStatus results:
 
    | Blob Type |RequestStatus=<br>Success|RequestStatus=<br>(SAS)NetworkError|Recommendation|
    |---|---|---|---|
