@@ -283,6 +283,8 @@
       href: ../sharing-and-permissions/error-when-external-user-accepts-an-invitation-by-using-another-account.md
     - name: External users can't find users in people picker
       href: ../sharing-and-permissions/people-picker-fails-finding-users.md
+    - name: Fix site user ID mismatch issues in SharePoint or OneDrive
+      href: ../sharing-and-permissions/fix-site-user-id-mismatch.md
     - name: Issue after accepting a resource invite
       href: ../sharing-and-permissions/unable-to-complete-request.md
     - name: Issue when external users click links to shared resource
@@ -330,9 +332,7 @@
     - name: Error when trying to change site logo on O365 group SharePoint site
       href: ../sites/error-when-changing-o365-site-logo.md
     - name: Error when trying to delete a SharePoint site
-      href: ../sites/compliance-policy-blocking-site-deletion.md
-    - name: Fix site user ID mismatch issues in SharePoint or OneDrive
-      href: ../sites/fix-site-user-id-mismatch.md
+      href: ../sites/compliance-policy-blocking-site-deletion.md    
     - name: Issue when activating Announcement Tiles feature
       href: ../Sites/announcement-tiles-not-supported.md
     - name: Issue when creating an online site
