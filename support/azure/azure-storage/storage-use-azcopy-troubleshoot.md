@@ -10,7 +10,7 @@ ms.reviewer: normesta
 ---
 # Troubleshoot problems with AzCopy v10
 
-This article describes common issues that you might encounter while using AzCopy, helps you to identify the causes of those issues, and then suggests ways to resolve them.
+This article describes common issues you might encounter while using AzCopy, helps you identify the causes of those issues, and then suggests ways to resolve them.
 
 ## Identifying problems
 
@@ -18,21 +18,21 @@ You can determine whether a job succeeds by looking at the exit code.
 
 If the exit code is `0-success`, the job completed successfully.
 
-If the exit code is `1-error`, examine the log file. Once you understand the exact error message, it becomes much easier to search for the right key words and figure out the solution. To learn more, see  [Find errors and resume jobs by using log and plan files in AzCopy](/azure/storage/common/storage-use-azcopy-configure).
+If the exit code is `1-error`, examine the log file. Once you understand the exact error message, it becomes much easier to search for the right keywords and figure out the solution. To learn more, see  [Find errors and resume jobs by using log and plan files in AzCopy](/azure/storage/common/storage-use-azcopy-configure).
 
-If the exit code is `2-panic`, check the log file exists. If the file doesn't exist, file a bug or reach out to support.
+If the exit code is `2-panic`, check that the log file exists. If the file doesn't exist, file a bug or reach out to support.
 
 If the exit code is any other non-zero exit code, it may be an exit code from the system. For example, `OOMKilled`.  Check your operating system documentation for special exit codes.
 
 ## 403 errors
 
-It's common to encounter 403 errors. Sometimes they're benign and don't result in failed transfer. For example, in AzCopy logs, you might see that a `HEAD` request received 403 errors. Those errors appear when AzCopy checks whether a resource is public. In most cases, you can ignore those instances.
+It's common to encounter 403 errors. Sometimes they're benign and don't result in a failed transfer. For example, in AzCopy logs, you might see that a `HEAD` request received 403 errors. Those errors appear when AzCopy checks whether a resource is public. In most cases, you can ignore those instances.
 
-In some cases 403 errors can result in a failed transfer. If this happens, other attempts to transfer files will likely fail until you resolve the issue. 403 errors can occur as a result of authentication and authorization issues. They can also occur when requests are blocked due to the storage account firewall configuration.
+In some cases, 403 errors can result in a failed transfer. If this happens, other attempts to transfer files will likely fail until you resolve the issue. 403 errors can occur as a result of authentication and authorization issues. They can also occur when requests are blocked due to the storage account firewall configuration.
 
 ### Authentication/Authorization issues
 
-403 errors that prevent data transfer occur because of issues with SAS tokens, role based access control (Azure RBAC) roles, and access control list (ACL) configurations.
+403 errors that prevent data transfer occur because of issues with SAS tokens, role-based access control (Azure RBAC) roles, and access control list (ACL) configurations.
 
 #### SAS tokens
 
@@ -46,17 +46,17 @@ If you're using a shared access signature (SAS) token, verify the following:
 
 #### Azure RBAC
 
-If you're using Azure RBAC roles via the `azcopy login` command, verify that you have the appropriate Azure roles assigned to your identity (For example: the Storage Blob Data Contributor role).
+If you're using Azure RBAC roles via the `azcopy login` command, verify that you have the appropriate Azure roles assigned to your identity (for example, the Storage Blob Data Contributor role).
 
 To learn more about Azure roles, see [Assign an Azure role for access to blob data](/azure/storage/blobs/assign-azure-role-data-access).
 
 #### ACLs
 
-If you're using access control lists (ACLs), verify that your identity appears in an ACL entry for each file or directory that you intend to access. Also, make sure that each ACL entry reflects the appropriate permission level.
+If you're using access control lists (ACLs), verify that your identity appears in an ACL entry for each file or directory you intend to access. Also, make sure that each ACL entry reflects the appropriate permission level.
 
 To learn more about ACLs and ACL entries, see [Access control lists (ACLs) in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control).
 
-To learn more about how to incorporate Azure roles together with ACLs, and how system evaluates them to make authorization decisions, see [Access control model in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control-model).
+To learn more about how to incorporate Azure roles together with ACLs and how the system evaluates them to make authorization decisions, see [Access control model in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control-model).
 
 ### Firewall and private endpoint issues
 
@@ -76,11 +76,11 @@ In case your VM doesn't or can't have a public IP address, consider using a priv
 
 #### Use a Private Link
 
-A [Private Link](/azure/private-link/private-link-overview) is at the virtual network (VNet)/subnet level. If you want AzCopy requests to go through a Private Link, then AzCopy must make those requests from a VM running in that VNet/subnet.  For example, if you configure a Private Link in VNet1/Subnet1 but the VM on which AzCopy runs is in VNet1/Subnet2, AzCopy requests won't use the Private Link and they're expected to fail.
+[Private Link](/azure/private-link/private-link-overview) is at the virtual network (VNet)/subnet level. If you want AzCopy requests to go through Private Link, then AzCopy must make those requests from a VM running in that VNet/subnet. For example, if you configure Private Link in VNet1/Subnet1 but the VM on which AzCopy runs is in VNet1/Subnet2, AzCopy requests won't use Private Link, and they're expected to fail.
 
 ## Proxy-related errors
 
-If you encounter TCP errors such as "dial tcp: lookup proxy.x.x: no such host", it means that your environment isn't configured to use the correct proxy, or you're using an advanced proxy that AzCopy doesn't recognize.
+If you encounter TCP errors such as "dial tcp: lookup proxy.x.x: no such host," it means that your environment isn't configured to use the correct proxy or you're using an advanced proxy AzCopy doesn't recognize.
 
 You need to update the proxy settings to reflect the correct configurations. See [Configure proxy settings](/azure/storage/common/storage-ref-azcopy-configuration-settings?toc=/azure/storage/blobs/toc.json#configure-proxy-settings).
 
@@ -99,7 +99,7 @@ Here are the endpoints that AzCopy needs to use:
 
 This error is often related to the use of a proxy, which is using a Secure Sockets Layer (SSL) certificate that isn't trusted by the operating system. Verify your settings and make sure that the certificate is trusted at the operating system level.
 
-We recommend adding the certificate to your machine's root certificate store as that's where the trusted authorities are kept.
+We recommend adding the certificate to your machine's root certificate store, as that's where the trusted authorities are kept.
 
 ## Unrecognized parameters
 
@@ -107,7 +107,7 @@ If you receive an error message stating that your parameters aren't recognized, 
 
 Also, make sure to utilize built-in help messages by using the `-h` switch with any command (For example: `azcopy copy -h`). See [Get command help](/azure/storage/common/storage-use-azcopy-v10?toc=/azure/storage/blobs/toc.json#get-command-help). To view the same information online, see [azcopy copy](/azure/storage/common/storage-ref-azcopy-copy?toc=/azure/storage/blobs/toc.json).
 
-To help you understand commands, we provide an education tool located in [AZCOPY COMMAND GUIDE](https://azcopyvnextrelease.z22.web.core.windows.net/). This tool demonstrates the most popular AzCopy commands along with the most popular command flags. Our examples are [here](/azure/storage/common/storage-use-azcopy-v10?toc=/azure/storage/blobs/toc.json#transfer-data). If you have any question, try searching through existing [GitHub issues](https://github.com/Azure/azure-storage-azcopy/issues) first to see if it was answered already.
+To help you understand commands, we provide an education tool located in [AZCOPY COMMAND GUIDE](https://azcopyvnextrelease.z22.web.core.windows.net/). This tool demonstrates the most popular AzCopy commands along with the most popular command flags. Our examples are [here](/azure/storage/common/storage-use-azcopy-v10?toc=/azure/storage/blobs/toc.json#transfer-data). If you have a question, try searching through existing [GitHub issues](https://github.com/Azure/azure-storage-azcopy/issues) first to see if it was answered already.
 
 ## Conditional access policy error
 
@@ -123,17 +123,17 @@ This error means that your administrator has configured a conditional access pol
 
 If your device is among the list of supported platforms, then you might be able to use Storage Explorer, which integrates AzCopy for all data transfers (it passes tokens to AzCopy via the secret store) but provides a login workflow that supports passing device information. AzCopy itself also supports managed identities and service principals, which could be used as an alternative.
 
-If your device isn't among the list of supported platforms, contact your administrator for help.
+If your device isn't on the list of supported platforms, contact your administrator for help.
 
 ## Server busy, network errors, or timeouts
 
-If you see a large number of failed requests with the "503 Server Busy" status, your requests are being throttled by the storage service. If you're seeing network errors or timeouts, you might be attempting to push through too much data across your infrastructure and that infrastructure is having difficulty handling it. In all cases, the workaround is similar.
+If you see a large number of failed requests with the "503 Server Busy" status, your requests are being throttled by the storage service. If you're seeing network errors or timeouts, you might be attempting to push through too much data across your infrastructure, and that infrastructure is having difficulty handling it. In all cases, the workaround is similar.
 
-If you see a large file failing over and over again due to certain chunks failing each time, try to limit the concurrent network connections or throughput limit depending on your specific case. We suggest that you first lower the performance drastically at first, observe whether it solved the initial problem, then ramp up performance again until an overall balance is achieved.
+If you see a large file repeatedly failing due to certain chunks failing each time, try to limit the concurrent network connections or throughput limit depending on your specific case. We suggest you lower the performance drastically at first, observe whether it solved the initial problem, then ramp up the performance again until an overall balance is achieved.
 
 For more information, see [Optimize the performance of AzCopy with Azure Storage](/azure/storage/common/storage-use-azcopy-optimize)
 
-If you're copying data between accounts by using AzCopy, the quality and reliability of the network from where you run AzCopy might impact the overall performance. Event though data transfers from server to server, AzCopy does initiate calls for each file to copy between service endpoints.
+If you're copying data between accounts by using AzCopy, the quality and reliability of the network from where you run AzCopy, might impact the overall performance. Even though data transfers from server to server, AzCopy does initiate calls for each file to copy between service endpoints.
 
 ## Known constraints with AzCopy
 
@@ -141,13 +141,13 @@ If you're copying data between accounts by using AzCopy, the quality and reliabi
 
 - Asynchronous service-side copy isn't supported. AzCopy performs synchronous copy only. In other words, by the time the job finishes, the data has been moved.
 
-- When copying to an Azure File share, if you forgot to specify the flag `--preserve-smb-permissions`, and you don't  want to transfer the data again, consider using Robocopy to bring over the permissions.
+- When copying to an Azure File share, if you forgot to specify the flag `--preserve-smb-permissions` and don't want to transfer the data again, consider using Robocopy to bring over the permissions.
 
 - Azure Functions has a different endpoint for MSI authentication, which AzCopy doesn't yet support.
 
 ## Known temporary issues
 
-There's a service issue impacting AzCopy 10.11 and later versions that are using the [PutBlobFromURL API](/rest/api/storageservices/put-blob-from-url) to copy blobs smaller than the given block size (whose default size is 8 mebibytes (MiB)). If the user has any firewall (VNet/IP/PL/SE Policy) on the source account, the `PutBlobFromURL` API might mistakenly return the message "409 Copy source blob has been modified". The workaround is to use AzCopy 10.10:
+There's a service issue impacting AzCopy 10.11 and later versions that are using the [PutBlobFromURL API](/rest/api/storageservices/put-blob-from-url) to copy blobs smaller than the given block size (whose default size is eight mebibytes (MiB)). If the user has any firewall (VNet/IP/PL/SE Policy) on the source account, the `PutBlobFromURL` API might mistakenly return the message "409 Copy source blob has been modified". The workaround is to use AzCopy 10.10:
 
 - [azcopy_darwin_amd64_10.10.0.zip](https://azcopyvnext.azureedge.net/release20210415/azcopy_darwin_amd64_10.10.0.zip)
 - [azcopy_linux_amd64_10.10.0.tar.gz](https://azcopyvnext.azureedge.net/release20210415/azcopy_linux_amd64_10.10.0.tar.gz)
