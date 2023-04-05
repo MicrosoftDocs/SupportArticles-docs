@@ -53,11 +53,11 @@ The Windows Cluster log is the most comprehensive log for identifying the type o
 
 1. Run the following cmdlet in an elevated PowerShell window, with 'sql19agn1' as the SQL Server name:
 
-```PowerShell
-`get-clusterlog -Node sql19agn1 -UseLocalTime`
-```
+   ```PowerShell
+      `get-clusterlog -Node sql19agn1 -UseLocalTime`
+   ```
 
-:::image type="content" source="media/troubleshooting-availability-group-failover/cluster-log-node-powershell.png" alt-text="Screenshot that shows PowerShell window with sql19agn1 as the SQL Server name." lightbox="media/troubleshooting-availability-group-failover/cluster-log-node-powershell.png":::
+    :::image type="content" source="media/troubleshooting-availability-group-failover/cluster-log-node-powershell.png" alt-text="Screenshot that shows PowerShell window with sql19agn1 as the SQL Server name." lightbox="media/troubleshooting-availability-group-failover/cluster-log-node-powershell.png":::
 
 > [!NOTE]
 > By default, the log file is created in *%WINDIR%\cluster\reports*.
@@ -293,17 +293,17 @@ Follow these steps to check for non-yielding scheduler events:
 
 1. Filter the results. Right-click an event under the name column and select **Filter by this Value**.
 
-:::image type="content" source="media/troubleshooting-availability-group-failover/filter-by-this-value.png" alt-text="Screenshot which shows how to check non-yielding scheduler events." lightbox="media/troubleshooting-availability-group-failover/filter-by-this-value.png":::
+    :::image type="content" source="media/troubleshooting-availability-group-failover/filter-by-this-value.png" alt-text="Screenshot which shows how to check non-yielding scheduler events." lightbox="media/troubleshooting-availability-group-failover/filter-by-this-value.png":::
 
 1. Define a filter to sort rows where name contains yield as shown in the following screenshot. This returns all types of non-yielding events that might have been recorded in the `system_health` logs.
 
-:::image type="content" source="media/troubleshooting-availability-group-failover/filter-values-for-non-yielding-events.png" alt-text="Screenshot that shows how to sort rows where name contains yield.":::
+    :::image type="content" source="media/troubleshooting-availability-group-failover/filter-values-for-non-yielding-events.png" alt-text="Screenshot that shows how to sort rows where name contains yield.":::
 
 1. Compare the timestamps to see if there were non-yielding events at the time of the health check time-out. Here's the health check time-out reported in the cluster log.
 
-```output
-0000211c.00002594::2021/02/24-21:50:02.452 ERR [RES] SQL Server Availability Group: [hadrag] Failure detected, diagnostics heartbeat is lost 0000211c.00002594::2021/02/24-21:50:02.452 ERR [RES] SQL Server Availability Group < SQL19AGN1>: [hadrag] Availability Group is not healthy with given HealthCheckTimeout and FailureConditionLevel 0000211c.00002594::2021/02/24-21:50:02.452 ERR [RES] SQL Server Availability Group < SQL19AGN1: [hadrag] Resource Alive result 0.
-```
+    ```output
+    0000211c.00002594::2021/02/24-21:50:02.452 ERR [RES] SQL Server Availability Group: [hadrag] Failure detected, diagnostics heartbeat is lost 0000211c.00002594::2021/02/24-21:50:02.452 ERR [RES] SQL Server Availability Group < SQL19AGN1>: [hadrag] Availability Group is not healthy with given HealthCheckTimeout and FailureConditionLevel 0000211c.00002594::2021/02/24-21:50:02.452 ERR [RES] SQL Server Availability Group < SQL19AGN1: [hadrag] Resource Alive result 0.
+    ```
 
 You can observe that there were non-yielding events that occurred at the time of the health check timeout.
 
@@ -393,4 +393,3 @@ To identify the Always On specific health issue, follow these steps:
    Notice the 'totalDumprequests=186' data indicates there have been too many dump diagnostic events generated on this SQL Server. This is the reason the system component reported an error state. When Always On health monitoring receives this error state, it will trigger an availability group health event. You can also confirm that no write access violations or orphan spinlocks have been detected from the data provided in the system component data.
 
    If it's necessary, open a SQL Server support incident for further assistance in finding root cause for these internal SQL Server health problems.
-
