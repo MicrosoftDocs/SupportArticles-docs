@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Microsoft Word
-ms.date: 3/31/2022
+ms.date: 4/5/2023
 ---
 
 # How to merge Word documents
@@ -20,7 +20,7 @@ ms.date: 3/31/2022
 If you have to combine separate Microsoft Word documents, you can copy and paste them together if they're short, or merge them if they're long.
 
 > [!NOTE]
-> The following method applies to both Word 2010 and Word 2007. The format might not stay the same when you merge documents.
+> The format might not stay the same when you merge documents.
 
 1. Select the **Insert** tab.
 
