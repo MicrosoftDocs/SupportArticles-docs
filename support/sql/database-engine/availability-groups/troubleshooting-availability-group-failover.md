@@ -17,7 +17,7 @@ This article provides troubleshooting steps to help you determine why your avail
 
 Always On implements robust health monitoring through different mechanisms to ensure the health of the SQL Server instance hosting the primary replica, the underlying Cluster, and the system health. When a health condition is detected by Windows Cluster or Always On, there is a temporary interruption to your production workload.
 
-When a health condition is detected the following sequence of events usually occur. Going forward in this troubleshooter, whenever a health event is mentioned, it is in reference to these events.
+When a health condition is detected the following sequence of events usually occur. Hereafter in this troubleshooter, whenever a health event is mentioned, it is in reference to the following events.
 
 - Availability group replicas and databases transition from primary role to resolving role.
 
@@ -33,7 +33,7 @@ If successful, the availability group replicas and databases transition to the p
 
 ### Applications fail to access the availability group database(s)
 
-When a health condition is detected, the availability group replica and databases transition to the Resolving role and the availability group databases are taken offline. Once the replica comes online in the primary role (on the original replica server or the failover partner replica server), the replica and databases again transition to online. While the replica and databases are resolving and are offline, applications that attempting to access those availability group databases will fail with error 983 `Unable to access availability database...`. This error is also recorded in the SQL Server error log if SQL Server is configured to record failed login attempts.
+When a health condition is detected, the availability group replica and databases transition to the Resolving role and the availability group databases are taken offline. Once the replica comes online in the primary role (on the original replica server or the failover partner replica server), the replica and databases again transition to online. While the replica and databases are resolving and are offline, applications that attempting to access those availability group databases fail with error 983 `Unable to access availability database...`. This error is also recorded in the SQL Server error log if SQL Server is configured to record failed login attempts.
 
 ```output
 2023-03-10 11:43:38.070 Logon Error: 983, Severity: 14, State: 1.
@@ -103,7 +103,7 @@ Match the event you find in the cluster log of the primary replica to one of the
 
 ### Cluster health event
 
-Microsoft Windows cluster monitors the health of the member servers in the cluster. If a health issue is detected, a cluster member server may be removed from the cluster and the cluster resources, including the availability group role hosted on that removed cluster member server will be moved to the availability group failover partner replica if configured for automatic failover. Here is an example of a cluster health event in the cluster log. You can search for `Lost quorum` or `Cluster service has terminated`, which might be present during the availability group role change or failover:
+Microsoft Windows cluster monitors the health of the member servers in the cluster. If a health issue is detected, a cluster member server may be removed from the cluster and the cluster resources, including the availability group role hosted on that removed cluster member server will be moved to the availability group failover partner replica if configured for automatic failover. Here's an example of a cluster health event in the cluster log. You can search for `Lost quorum` or `Cluster service has terminated`, which might be present during the availability group role change or failover:
 
 ```output
 00000fe4.00001628::2022/12/15-14:26:02.654 WARN [QUORUM] Node 1: Lost quorum (1)
@@ -149,13 +149,13 @@ You can search the cluster log for evidence of a connection failure to the node.
 
 #### Resolve a cluster health event
 
-Ensure Cluster health monitoring is appropriate for the host environment. For more information on SQL Server AlwaysOn availability groups hosted in Microsoft Azure, see [Windows Server Failover Cluster overview - SQL Server on Azure VMs](/azure/azure-sql/virtual-machines/windows/hadr-windows-server-failover-cluster-overview?view=azuresql).
+Ensure Cluster health monitoring is appropriate for the host environment. For more information on SQL Server AlwaysOn availability groups hosted in Microsoft Azure, see [Windows Server Failover Cluster overview - SQL Server on Azure VMs](/azure/azure-sql/virtual-machines/windows/hadr-windows-server-failover-cluster-overview?view=azuresql&preserve-view=true).
 
 If it's necessary, consider opening a support incident with Microsoft Windows High Availability support.
 
 ### Always On health event: The SQL Server service is down
 
-Always On health monitoring can detect if the SQL Server service hosting the availability group primary replica is no longer running. Here is a sample of the cluster log report with availability group role 'ag' has indicated failure because `QueryServiceStatusEx` returned a process ID `0`.
+Always On health monitoring can detect if the SQL Server service hosting the availability group primary replica is no longer running. Here's a sample of the cluster log report with availability group role 'ag' has indicated failure because `QueryServiceStatusEx` returned a process ID `0`.
 
 ```output
 00001898.0000185c::2023/02/27-13:27:41.121 ERR [RES] SQL Server Availability Group <ag>: [hadrag] QueryServiceStatusEx returned a process id 0
@@ -183,7 +183,7 @@ The Windows system event log would show the following message:
 Information 3/10/2023 9:41:06 AM Service Control Manager 7036 None The SQL Server (MSSQLSERVER) service entered the stopped state.
 ```
 
-The Windows system event log will report the following error if SQL Server shuts down unexpectedly:
+The Windows system event log shows the following error if SQL Server shuts down unexpectedly:
 
 ```output
 Error 3/10/2023 8:37:46 AM Service Control Manager 7034 None The SQL Server (MSSQLSERVER) service terminated unexpectedly. It has done this 1 time(s).
@@ -195,7 +195,7 @@ If a SQL Server internal health issue led to SQL Server terminating unexpectedly
 
 ### Always On health event: Lease time-out
 
-Always On uses a "lease" mechanism to monitor health of the computer where SQL Server is installed. The default lease time-out is 20 seconds. Here is a sample output of an Always On lease time-out from the cluster log. You can search these strings to locate a lease time=out in the cluster log:
+Always On uses a "lease" mechanism to monitor health of the computer where SQL Server is installed. The default lease time-out is 20 seconds. Here's a sample output of an Always On lease time-out from the cluster log. You can search these strings to locate a lease time=out in the cluster log:
 
 ```output
 00001a0c.00001c5c::2023/01/04-15:36:54.762 ERR [RES] SQL Server Availability Group : [hadrag] Availability Group lease is no longer valid 
@@ -229,7 +229,7 @@ To resolve this issue, the dump diagnostic must be investigated for root cause. 
 
 A lease time-out indicates a performance issue that affects the entire system, including SQL Server. To diagnose the system issue, Always On health diagnostics reports performance monitor data in the cluster log with the lease time-out event. The performance data spans approximately 50 seconds leading up to the lease time-out event, reporting on CPU utilization, free memory, and disk latency.
 
-Here is an example of the performance data reported with a lease time-out in the cluster log. In this sample output, high overall CPU utilization is detected that may be tied to the lease timeout:
+Here's an example of the performance data reported with a lease time-out in the cluster log. In this sample output, high overall CPU utilization is detected that may be tied to the lease timeout:
 
 ```output
 00000f90.000015c0::2020/08/07-14:16:41.378 WARN [RES] SQL Server Availability Group: [hadrag] Lease timeout detected, logging perf counter data collected so far
@@ -257,7 +257,7 @@ When an availability group replica transitions into the Primary role, Always On 
 
 For more information on health check time-out, see the [Health check timeout operation](/sql/database-engine/availability-groups/windows/availability-group-lease-healthcheck-timeout) section in [Mechanics and guidelines of lease, cluster, and health check timeouts for Always On availability groups](/sql/database-engine/availability-groups/windows/availability-group-lease-healthcheck-timeout).
 
-Here is an Always On health check time-out reported in the cluster log:
+Here's an Always On health check time-out reported in the cluster log:
 
 ```output
 0000211c.00002d70::2021/02/24-02:50:01.890 WARN [RES] SQL Server Availability Group: [hadrag] Failed to retrieve data column. Return code -1
@@ -275,7 +275,7 @@ Here is an Always On health check time-out reported in the cluster log:
 
 #### Diagnose and resolve Always On health check time-out event
 
-The following section helps you review the SQL Server logs for 'bread crumb' events that you might find which correlate when the Always On health check time-out is detected and reported. The logs reviewed includes the cluster log (where the health check time-out is confirmed), the system_health extended event logs, the SQL Server error logs (both found in the SQL Server *\LOG* folder), and the Windows system event log. Use these and other logs to look for correlating events that might help you scope the cause of the health check time-out.
+The following section helps you review the SQL Server logs for 'bread crumb' events that you might find which correlate when the Always On health check time-out is detected and reported. The logs reviewed include the cluster log (where the health check time-out is confirmed), the system_health extended event logs, the SQL Server error logs (both found in the SQL Server *\LOG* folder), and the Windows system event log. Use these and other logs to look for correlating events that might help you scope the cause of the health check time-out.
 
 ### Check for non-yielding scheduler events
 
@@ -299,13 +299,13 @@ Follow these steps to check for non-yielding scheduler events:
 
 1. Filter the results. Right-click an event under the name column and select **Filter by this Value**.
 
-:::image type="content" source="media/troubleshooting-availability-group-failover/filter-by-this-value.png" alt-text="Screenshot which shows the how to check non-yielding scheduler events." lightbox="media/troubleshooting-availability-group-failover/filter-by-this-value.png":::
+:::image type="content" source="media/troubleshooting-availability-group-failover/filter-by-this-value.png" alt-text="Screenshot which shows how to check non-yielding scheduler events." lightbox="media/troubleshooting-availability-group-failover/filter-by-this-value.png":::
 
 1. Define the filter to filter rows where name contains yield as shown in the following screenshot. This returns all types of non-yielding events that might have been recorded in the `system_health` logs.
 
 :::image type="content" source="media/troubleshooting-availability-group-failover/filter-values-for-non-yielding-events.png" alt-text="Screenshot that shows how to define filter rows where name contains yield.":::
 
-1. Compare the timestamps to see if there were non-yielding events at the time of the health check time-out. Here is the health check time-out reported in the cluster log.
+1. Compare the timestamps to see if there were non-yielding events at the time of the health check time-out. Here's the health check time-out reported in the cluster log.
 
 ```output
 0000211c.00002594::2021/02/24-21:50:02.452 ERR [RES] SQL Server Availability Group: [hadrag] Failure detected, diagnostics heartbeat is lost 0000211c.00002594::2021/02/24-21:50:02.452 ERR [RES] SQL Server Availability Group < SQL19AGN1>: [hadrag] Availability Group is not healthy with given HealthCheckTimeout and FailureConditionLevel 0000211c.00002594::2021/02/24-21:50:02.452 ERR [RES] SQL Server Availability Group < SQL19AGN1: [hadrag] Resource Alive result 0.
@@ -319,7 +319,7 @@ If non-yielding events are detected when a health check timeout is reported, che
 
 ### Check the SQL Server error log
 
-Check the SQL Server error log for correlating events at the same time as the health check timeout. These events may provide 'bread crumbs' that lead to further steps to scope and find the root cause for the health check timeouts.
+Check the SQL Server error log for correlating events at the same time as the health check timeout. These events may provide 'bread crumbs' that leads to further steps to scope and find the root cause for the health check timeouts.
 
 For example, here we find that a health check timeout in the cluster log:
 
@@ -345,7 +345,7 @@ Review the system event log for possible system clues that could be related to t
 
 Always On monitors different types of SQL Server health. While hosting an availability group primary replica, SQL Server continuously runs `sp_server_diagnostics`, which reports on SQL Server health using different components. When any health problems are detected, `sp_server_diagnostics` will report an 'error' state for that particular component and send that result set back to the monitoring AlwaysOn health detection. If an error state is reported, the availability group role shows the failed state and possible failover, if the availability group is configured to do so.
 
-Here is an example from the cluster log of a SQL Server health issue reported by `sp_server_diagnostics`, triggering the failure of the availability group - `sp_server_diagnostics` result from SQL Server reports an error state in the system component to Always On health monitoring and the availability group `contoso-ag` is transitioned to a failed state.
+Here's an example from the cluster log of a SQL Server health issue reported by `sp_server_diagnostics`, triggering the failure of the availability group - `sp_server_diagnostics` result from SQL Server reports an error state in the system component to Always On health monitoring and the availability group `contoso-ag` is transitioned to a failed state.
 
 > [!NOTE]
 > A SQL Server health issue generates a similar report to that of health check timeout, both health events report `Availability Group is not healthy with given HealthCheckTimeout and FailureConditionLevel`. The differentiator for a SQL Server health event reports that SQL Server component changed from 'warning' to 'error'.
@@ -388,9 +388,9 @@ You will see a new tabbed window in SSMS with the extended events as shown in th
 
 :::image type="content" source="media/troubleshooting-availability-group-failover/system-component-event-health-monitoring.png" alt-text="Screenshot that shows SMS with the extended events." lightbox="media/troubleshooting-availability-group-failover/system-component-event-health-monitoring.png":::
 
-1. Locate the `component_health_result` that reported the 'state_desc' error while checking your availability group health event. Here is an example of a system component event that reported error back to Always On health monitoring:
+1. Locate the `component_health_result` that reported the 'state_desc' error while checking your availability group health event. Here's an example of a system component event that reported error back to Always On health monitoring:
 
-1. Double-click the 'data' in the lower pane, which will open the detailed component data in a new SSMS window pane for review. Here is what the system component data looks like:
+1. Double-click the 'data' in the lower pane, which will open the detailed component data in a new SSMS window pane for review. Here's what the system component data looks like:
 
 Notice the 'totalDumprequests=186' data indicates there have been too many dump diagnostic events generated on this SQL Server. This is the reason the system component reported an error state. When Always On health monitoring receives this error state, it will trigger an availability group health event. You can also confirm that no write access violations or orphan spinlocks have been detected from the data provided in the system component data.
 
