@@ -93,6 +93,8 @@
         href: database-engine/availability-groups/troubleshooting-log-send-queuing-in-alwayson-availability-group.md
       - name: Troubleshoot Always On issues
         href: database-engine/availability-groups/troubleshooting-alwayson-issues.md
+      - name: Troubleshoot Always On Availability Group Failover
+        href: database-engine/availability-groups/troubleshooting-availability-group-failover.md
       - name: Troubleshoot recovery queueing in an availability group
         href: database-engine/availability-groups/troubleshooting-recovery-queuing-in-alwayson-availability-group.md
   - name: Always On Failover Cluster Instance (FCI)

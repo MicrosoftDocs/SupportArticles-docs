@@ -17,7 +17,7 @@ This article provides troubleshooting steps to help you determine why your avail
 
 Always On implements robust health monitoring through different mechanisms to ensure the health of the SQL Server instance hosting the primary replica, the underlying Cluster, and the system health. The production workload is momentarily interrupted when a Windows Cluster or Always On health problem is identified.
 
-When a health condition is detected. the following sequence of events usually occur. Hereafter in this troubleshooter, whenever a health event is mentioned, it is in reference to the following events.
+When a health condition is detected, the following sequence of events usually occur. Hereafter in this troubleshooter, whenever a health event is mentioned, it is in reference to the following events.
 
 - Availability group replicas and databases transition from primary role to resolving role.
 
@@ -53,14 +53,14 @@ The Windows Cluster log is the most comprehensive log for identifying the type o
 
 1. Run the following cmdlet in an elevated PowerShell window, with 'sql19agn1' as the SQL Server name:
 
-   ```PowerShell
+    ```PowerShell
       `get-clusterlog -Node sql19agn1 -UseLocalTime`
-   ```
+    ```
 
     :::image type="content" source="media/troubleshooting-availability-group-failover/cluster-log-node-powershell.png" alt-text="Screenshot that shows PowerShell window with sql19agn1 as the SQL Server name." lightbox="media/troubleshooting-availability-group-failover/cluster-log-node-powershell.png":::
 
-> [!NOTE]
-> By default, the log file is created in *%WINDIR%\cluster\reports*.
+    > [!NOTE]
+    > By default, the log file is created in *%WINDIR%\cluster\reports*.
 
 ### Identify Always On health trends
 
@@ -169,7 +169,7 @@ Always On health monitoring can detect if the SQL Server service hosting the ava
 
 ### Diagnose and resolve SQL Service shutdown event
 
-Check the Windows system event log and SQL Server error log for a unexpected SQL Server shutdown.
+Check the Windows system event log and SQL Server error log for an unexpected SQL Server shutdown.
 
 If SQL Server was shut down by a system shutdown or an administrative shutdown, you would see the following message in the SQL Server error log:
 
@@ -185,7 +185,7 @@ The Windows system event log shows the following error if SQL Server shuts down 
 
 Check the end of SQL Server error log for clues. If the error log ends abruptly, it means that it was shut down by force. For instance, the SQL Server error report wouldn't reveal any information about any internal problems that might have caused the process to shut down if SQL Server was terminated using Task Manager.
 
-If a SQL Server internal health issue led to SQL Server terminating unexpectedly, there may be clues of a possible fatal exception (including generating a possible dump diagnostic file) at the end of the SQL error log. Review the clues and take the necessary action. If there is a dump diagnostic, consider opening a case with Microsoft SQL Server support and provide the SQL Server error logs and dump diagnostic file for further investigation.
+If a SQL Server internal health issue led to SQL Server terminating unexpectedly, there may be clues of a possible fatal exception (including generating a possible dump diagnostic file) at the end of the SQL error log. Review the clues and take the necessary action. If there's a dump diagnostic, consider opening a case with Microsoft SQL Server support and provide the SQL Server error logs and dump diagnostic file for further investigation.
 
 ### Always On health event: Lease time-out
 
@@ -205,7 +205,7 @@ For more information on lease time-out, see the [Lease Mechanism](/sql/database-
 
 There are two main types of problems that can trigger a lease time-out:
 
-- SQL Server dump diagnostic: When SQL Server detects certain internal health events, like an access violation, an assertion, or scheduler deadlock, it generates a dump diagnostic file *.mdmp* in the SQL Server *\LOG* folder.
+- SQL Server dump diagnostic: When SQL Server detects certain internal health events, like an access violation, an assertion, or scheduler deadlock, it generates a dump diagnostic file (*.mdmp*) in the SQL Server *\LOG* folder.
 
 - A system wide performance issue: A lease time-out doesn't necessarily indicate a SQL Server health issue but instead a system wide health issue that can also affect the health of the SQL Server.
 
@@ -339,10 +339,10 @@ Review the system event log for possible system clues that could be related to t
 
 Always On monitors different types of SQL Server health events. While hosting an availability group primary replica, SQL Server continuously runs `sp_server_diagnostics`, which reports on SQL Server health using different components. When any health problems are detected, `sp_server_diagnostics`  reports an error for that particular component and it sends the result back to the monitoring Always On health detection. When an error is reported, the availability group role shows the failed state and possible failover if the availability group is configured to do so.
 
-Here's an example from the cluster log of a SQL Server health issue reported by `sp_server_diagnostics`, triggering the failure of the availability group `sp_server_diagnostics` result from SQL Server reports an error in the system component to Always On health monitoring and the availability group `contoso-ag` is transitioned to a failed state.
+Here's an example from the cluster log of a SQL Server health issue reported by `sp_server_diagnostics`. SQL Server reports an error in the system component to Always On health monitoring and the availability group `contoso-ag` is transitioned to a failed state.
 
 > [!NOTE]
-> A SQL Server health issue generates a similar report to that of health check timeout. Both health events report `Availability Group is not healthy with given HealthCheckTimeout and FailureConditionLevel`. The differentiator for a SQL Server health event reports that SQL Server component changed from 'warning' to 'error'. Here's an example:
+> A SQL Server health issue generates a similar report to that of health check timeout. Both health events report `Availability Group is not healthy with given HealthCheckTimeout and FailureConditionLevel`. The differentiator for a SQL Server health event reports that SQL Server component changed from 'warning' to 'error'.
 
 ```output
 00001334.000003d8::2019/06/20-19:05:52.330 INFO [RES] SQL Server Availability Group: [hadrag] SQL Server component 'system' health state has been changed from 'warning' to 'error' at 2019-06-20 15:05:52.330
@@ -364,7 +364,7 @@ Here's an example from the cluster log of a SQL Server health issue reported by 
 
 The type of health issue reported by SQL Server health should lead the root cause analysis.
 
-By default, when you deploy an availability group, the `FAILURE_CONDITION_LEVEL` is set as three, which activates monitoring of certain SQL Server health profiles, but not all. At the default level, Always On will trigger a health event when SQL Server produces too many dump diagnostics, a write access violation, or an orphaned spinlock. Setting the availability group up to level four or five will expand the types of SQL Server health being monitored. For more information on the SQL Server health AlwaysOn monitors, see [Configure a flexible automatic failover policy for an availability group - SQL Server Always On](/sql/database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy).
+By default, when you deploy an availability group, the `FAILURE_CONDITION_LEVEL` is set as three, which activates monitoring of certain SQL Server health profiles, but not all. At the default level, Always On will trigger a health event when SQL Server produces too many dump diagnostics, a write- access violation, or an orphaned spinlock. Setting the availability group up to level four or five will expand the types of SQL Server health being monitored. For more information on the SQL Server health AlwaysOn monitors, see [Configure a flexible automatic failover policy for an availability group - SQL Server Always On](/sql/database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy).
 
 To identify the Always On specific health issue, follow these steps:
 
@@ -378,7 +378,7 @@ To identify the Always On specific health issue, follow these steps:
 
    :::image type="content" source="media/troubleshooting-availability-group-failover/match-servername-instance.png" alt-text="Screenshot that shows how to select files whose names match a certain name." lightbox="media/troubleshooting-availability-group-failover/match-servername-instance.png":::
 
-   You will see a new tabbed window in SSMS with the extended events as shown in the following screenshot.
+   You'll see a new tabbed window in SSMS with the extended events as shown in the following screenshot.
 
    :::image type="content" source="media/troubleshooting-availability-group-failover/system-component-event-health-monitoring.png" alt-text="Screenshot that shows SMS with the extended events." lightbox="media/troubleshooting-availability-group-failover/system-component-event-health-monitoring.png":::
 
