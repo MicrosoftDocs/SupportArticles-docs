@@ -339,7 +339,7 @@ Review the system event log for possible system clues that could be related to t
 
 Always On monitors different types of SQL Server health events. While hosting an availability group primary replica, SQL Server continuously runs `sp_server_diagnostics`, which reports on SQL Server health using different components. When any health problems are detected, `sp_server_diagnostics`  reports an error for that particular component and it sends the result back to the monitoring Always On health detection. When an error is reported, the availability group role shows the failed state and possible failover if the availability group is configured to do so.
 
-Here's an example from the cluster log of a SQL Server health issue reported by `sp_server_diagnostics`. SQL Server reports an error in the system component to Always On health monitoring and the availability group `contoso-ag` is transitioned to a failed state.
+Here's an example from the cluster log of a SQL Server health issue reported by sp_server_diagnostics. SQL Server reports an 'error' state in the system component to Always On health monitoring, and the availability group 'contoso-ag' is transitioned to a failed state
 
 > [!NOTE]
 > A SQL Server health issue generates a similar report to that of health check timeout. Both health events report `Availability Group is not healthy with given HealthCheckTimeout and FailureConditionLevel`. The differentiator for a SQL Server health event reports that SQL Server component changed from 'warning' to 'error'.
