@@ -457,10 +457,12 @@
 
 - name: Troubleshoot Windows activation
   items:
-  - name: Windows activation problems
+  - name: Troubleshoot Windows activation problems
     href: troubleshoot-activation-problems.md
-  - name: Activation problem with forced tunneling
+  - name: Activation fails in forced tunneling scenario
     href: custom-routes-enable-kms-activation.md
+  - name: Windows activation - Two new KMS endpoints
+    href: windows-activation-stopped-working.md
 
 - name: Troubleshoot Azure disk encryption
   items:
