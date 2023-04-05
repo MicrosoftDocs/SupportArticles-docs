@@ -30,6 +30,18 @@ Verify that the following policies are assigned to the affected users:
 
 - A Teams Meeting policy that permits the Outlook add-in to be installed. For more information, see [Meeting policy settings](/microsoftteams/meeting-policies-in-teams-general#outlook-add-in).
 
+## Diagnosing issues with Teams Meeting Add-in in Outlook
+
+If you’re an administrator, you can use the following diagnostic tool to validate that a user has the correct policies to enable the Teams Outlook add-in. 
+
+1. Select **Run Tests** below to populate the diagnostic in the Microsoft 365 admin center.
+
+   > [!div class="nextstepaction"]
+   > [Run Tests: Teams Add-in Missing in Outlook](https://aka.ms/TeamsAdd-InDiag)
+
+2. In the Run diagnostic pane, enter the email of the user who is having issues enabling the Teams Outlook Add-in in the **Username or Email** field, and then select **Run Tests**.
+3. The tests will return the best next steps to address any tenant or policy configurations to validate that the user is properly configured to enable the Teams Outlook add-in.
+
 ## Use Microsoft Support and Recovery Assistant
 
 If the policies are assigned correctly, but you're still unable to install the add-in, or if you're not an administrator, download and run Microsoft Support and Recovery Assistant by selecting the button below. The Assistant is the recommended solution to perform automated troubleshooting steps and make the required fixes.
