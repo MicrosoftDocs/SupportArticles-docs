@@ -4,7 +4,7 @@ description: Identifies and troubleshoots errors with client applications that c
 author: AmandaAZ
 ms.author: v-weizhu
 ms.reviewer: normesta
-ms.date: 03/29/2023
+ms.date: 04/06/2023
 ms.service: storage
 ms.subservice: common
 ---
@@ -76,7 +76,7 @@ If the client application receives an HTTP 404 (Not found) message from the serv
 
 In scenarios where the client is attempting to read, update, or delete data in a storage service, it's easy to identify in the storage resource logs a previous operation that deleted the object in question from the storage service. Often, the log data shows that another user or process deleted the object. The Azure Monitor logs (server-side) show when a client deleted an object.
 
-In the scenario where a client is attempting to insert an object, it may not be immediately obvious why this results in an HTTP 404 (Not found) response given that the client is creating a new object. However, if the client is creating a blob, it must be able to find the blob container. If the client is creating a message, it must be able to find a queue. And if the client is adding a row, it must be able to find the table.
+In the scenario where a client is attempting to insert an object, it may not be immediately obvious why this results in an HTTP 404 (Not found) response, given that the client is creating a new object. However, if the client is creating a blob, it must be able to find the blob container. If the client is creating a message, it must be able to find a queue. And if the client is adding a row, it must be able to find the table.
 
 You can use the client-side log from the Storage Client Library to better understand when the client sends specific requests to the storage service.
 
