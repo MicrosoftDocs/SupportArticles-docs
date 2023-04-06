@@ -3,7 +3,7 @@ title: Monitor and troubleshoot Azure Storage (classic logs & metrics)
 description: Introduces how to use features like storage analytics, client-side logging, and other third-party tools to identify, diagnose, and troubleshoot Azure Storage-related issues.
 author: AmandaAZ
 ms.service: storage
-ms.date: 03/27/2023
+ms.date: 04/06/2023
 ms.author: v-weizhu
 ms.reviewer: fryu, normesta
 ms.subservice: common
@@ -19,7 +19,7 @@ This guide shows you how to use features such as Azure Storage Analytics, client
 
 This guide is intended to be read primarily by developers of online services that use Azure Storage Services and IT Pros responsible for managing such online services. The goals of this guide are:
 
-- To h you maintain the health and performance of your Azure Storage accounts.
+- To help you maintain the health and performance of your Azure Storage accounts.
 - To provide you with the necessary processes and tools to help you decide whether an issue or problem in an application relates to Azure Storage.
 - To provide you with actionable guidance for resolving problems related to Azure Storage.
 
@@ -35,7 +35,7 @@ This guide is intended to be read primarily by developers of online services tha
 
 Diagnosing and troubleshooting issues in a distributed application hosted in a cloud environment can be more complex than in traditional environments. Applications can be deployed in a PaaS or IaaS infrastructure, on-premises, on a mobile device, or in some combination of these environments. Typically, your application's network traffic may traverse public and private networks, and your application may use multiple storage technologies such as Microsoft Azure Storage Tables, Blobs, Queues, or Files in addition to other data stores such as relational and document databases.
 
-To manage such applications successfully, you should monitor them proactively and understand how to diagnose and troubleshoot all aspects of them and their dependent technologies. As a user of Azure Storage services, you should continuously monitor the Storage services your application uses for any unexpected changes in behavior (such as slower-than-usual response times) and use logging to collect more detailed data and to analyze a problem in depth. The diagnostics information you obtain from both monitoring and logging will help you to determine the root cause of the issue your application encountered. Then you can troubleshoot the issue and determine the appropriate steps you can take to remediate it. Azure Storage is a core Azure service and forms an important part of the majority of solutions that customers deploy to the Azure infrastructure. Azure Storage includes capabilities to simplify monitoring, diagnosing, and troubleshooting storage issues in your cloud-based applications.
+To manage such applications successfully, you should monitor them proactively and understand how to diagnose and troubleshoot all aspects of them and their dependent technologies. As a user of Azure Storage services, you should continuously monitor the Storage services your application uses for any unexpected changes in behavior (such as slower-than-usual response times) and use logging to collect more detailed data and to analyze a problem in depth. The diagnostics information you obtain from monitoring and logging will help you determine the root cause of the issue your application encountered. Then you can troubleshoot the issue and determine the appropriate steps to remediate it. Azure Storage is a core Azure service and forms an important part of the majority of solutions that customers deploy to the Azure infrastructure. Azure Storage includes capabilities to simplify monitoring, diagnosing, and troubleshooting storage issues in your cloud-based applications.
 
 ### <a name="how-this-guide-is-organized"></a>How this guide is organized
 
@@ -63,7 +63,7 @@ In the Azure portal, you can view metrics such as availability, total requests, 
 
 You should continuously monitor your Azure applications to ensure they're healthy and performing as expected by:
 
-- Establishing some baseline metrics for the application that will enable you to compare current data and identify any significant changes in the behavior of Azure storage and your application. The values of your baseline metrics will, in many cases, be application specific, and you should establish them when you are performance testing your application.
+- Establishing some baseline metrics for the application that will enable you to compare current data and identify any significant changes in the behavior of Azure storage and your application. The values of your baseline metrics will, in many cases, be application specific, and you should establish them when you're performance testing your application.
 - Recording minute metrics and using them to monitor actively for unexpected errors and anomalies, such as spikes in error counts or request rates.
 - Recording hourly metrics and using them to monitor average values such as average error counts and request rates.
 - Investigating potential issues using diagnostics tools as discussed later in the [Diagnosing storage issues](#diagnosing-storage-issues) section.
@@ -76,7 +76,7 @@ The remainder of this section describes what metrics you should monitor and why.
 
 ### <a name="monitoring-service-health"></a>Monitoring service health
 
-You can use the [Azure portal](https://portal.azure.com) to view the health of the Storage service (and other Azure services) in all the Azure regions around the world. Monitoring enables you to see immediately if an issue outside of your control is affecting the Storage service in the region you use for your application.
+You can use the [Azure portal](https://portal.azure.com) to view the health of the Storage service (and other Azure services) in all the Azure regions around the world. Monitoring enables you to see immediately if an issue outside your control is affecting the Storage service in the region you use for your application.
 
 The [Azure portal](https://portal.azure.com) can also provide notifications of incidents that affect the various Azure services.
 
@@ -85,10 +85,10 @@ The [Azure portal](https://portal.azure.com) can also provide notifications of i
 
 ### <a name="monitoring-capacity"></a>Monitoring capacity
 
-Storage Metrics only stores capacity metrics for the blob service because blobs typically account for the largest proportion of stored data (at the time of writing, it is not possible to use Storage Metrics to monitor the capacity of your tables and queues). You can find this data in the `$MetricsCapacityBlob` table if you have enabled monitoring for the Blob service. Storage Metrics records this data once per day, and you can use the value of the `RowKey`  to determine whether the row contains an entity that relates to user data (value `data`) or analytics data (value `analytics`). Each stored entity contains information about the amount of storage used (`Capacity` measured in bytes) and the current number of containers (`ContainerCount`) and blobs (`ObjectCount`) in use in the storage account. For more information about the capacity metrics stored in the `$MetricsCapacityBlob` table, see [Storage Analytics Metrics Table Schema](/rest/api/storageservices/Storage-Analytics-Metrics-Table-Schema).
+Storage Metrics only stores capacity metrics for the blob service because blobs typically account for the largest proportion of stored data (at the time of writing, it's not possible to use Storage Metrics to monitor the capacity of your tables and queues). You can find this data in the `$MetricsCapacityBlob` table if you have enabled monitoring for the Blob service. Storage Metrics records this data once per day, and you can use the value of the `RowKey`  to determine whether the row contains an entity that relates to user data (value `data`) or analytics data (value `analytics`). Each stored entity contains information about the amount of storage used (`Capacity` measured in bytes) and the current number of containers (`ContainerCount`) and blobs (`ObjectCount`) in use in the storage account. For more information about the capacity metrics stored in the `$MetricsCapacityBlob` table, see [Storage Analytics Metrics Table Schema](/rest/api/storageservices/Storage-Analytics-Metrics-Table-Schema).
 
 > [!NOTE]
-> You should monitor these values for an early warning that you are approaching the capacity limits of your storage account. In the Azure portal, you can add alert rules to notify you if aggregate storage use exceeds or falls below the thresholds that you specify.
+> You should monitor these values for an early warning that you're approaching the capacity limits of your storage account. In the Azure portal, you can add alert rules to notify you if aggregate storage use exceeds or falls below the thresholds that you specify.
 
 To estimate the size of various storage objects such as blobs, see the blog post [Understanding Azure Storage Billing – Bandwidth, Transactions, and Capacity](/archive/blogs/patrick_butler_monterde/azure-storage-understanding-windows-azure-storage-billing-bandwidth-transactions-and-capacity).
 
@@ -108,11 +108,11 @@ To monitor the performance of the storage services, you can use the following me
 
 - The values in the `AverageE2ELatency` and `AverageServerLatency` columns show the average time the storage service or API operation type is taking to process requests. `AverageE2ELatency` is a measure of end-to-end latency that includes the time taken to read the request and send the response in addition to the time taken to process the request (therefore includes network latency once the request reaches the storage service); `AverageServerLatency` is a measure of just the processing time and therefore excludes any network latency related to communicating with the client. See the [Metrics show high AverageE2ELatency and low AverageServerLatency](#metrics-show-high-AverageE2ELatency-and-low-AverageServerLatency) section later in this guide for a discussion of why there might be a significant difference between these two values.
 - The values in the `TotalIngress` and `TotalEgress` columns show the total amount of data, in bytes, coming in to and going out of your storage service or through a specific API operation type.
-- The values in the `TotalRequests` column show the total number of requests that the storage service of API operation is receiving. `TotalRequests` is the total number of requests that the storage service receives.
+- The values in the `TotalRequests` column show the total number of requests the storage service of API operation is receiving. `TotalRequests` is the total number of requests the storage service receives.
 
 Typically, you will monitor for unexpected changes in any of these values, as this indicates you have an issue that requires investigation.
 
-In the [Azure portal](https://portal.azure.com), you can add alert rules to notify you if any of the performance metrics for this service fall below or exceed a threshold that you specify.
+In the [Azure portal](https://portal.azure.com), you can add alert rules to notify you if any performance metrics for this service fall below or exceed a threshold that you specify.
 
 The [Troubleshooting guidance](#troubleshooting-guidance) section of this guide describes some common storage service issues related to performance.
 
@@ -140,7 +140,7 @@ Service health issues are typically outside of your control. The [Azure portal](
 
 ### <a name="performance-issues"></a>Performance issues
 
-The performance of an application can be subjective, especially from a user perspective. Therefore, it is important to have baseline metrics available to help you identify where there might be a performance issue. Many factors might affect the performance of an Azure storage service from the client application perspective. These factors might operate in the storage service, the client, or the network infrastructure; therefore, it is important to have a strategy for identifying the origin of the performance issue.
+The performance of an application can be subjective, especially from a user perspective. Therefore, it is important to have baseline metrics available to help you identify where there might be a performance issue. Many factors might affect the performance of an Azure storage service from the client application perspective. These factors might operate in the storage service, the client, or the network infrastructure; therefore, it's important to have a strategy for identifying the origin of the performance issue.
 
 After you have identified the likely location of the cause of the performance issue from the metrics, you can then use the log files to find detailed information to diagnose and troubleshoot the problem further.
 
@@ -188,7 +188,7 @@ In many cases, the log data from Storage Logging and the Storage Client Library 
 
 ## <a name="end-to-end-tracing"></a>End-to-end tracing
 
-End-to-end tracing using a variety of log files is a useful technique for investigating potential issues. You can use the date/time information from your metrics data to indicate where to start looking in the log files for detailed information that will help you troubleshoot the issue.
+End-to-end tracing using a variety of log files is a useful technique for investigating potential issues. You can use the date/time information from your metrics data to indicate where to start looking in the log files for detailed information to help you troubleshoot the issue.
 
 ### <a name="correlating-log-data"></a>Correlating log data
 
@@ -398,7 +398,7 @@ For more information about using Wireshark to troubleshoot network issues, see [
 
 In the case of high **AverageServerLatency** for blob download requests, you should use the Storage Logging logs to see if there are repeated requests for the same blob (or set of blobs). For blob upload requests, you should investigate what block size the client is using (for example, blocks less than 64 K in size can result in overheads unless the reads are also in less than 64 K chunks) and if multiple clients are uploading blocks to the same blob in parallel. You should also check the per-minute metrics for spikes in the number of requests that result in exceeding the per-second scalability targets. For more information, see [Metrics show an increase in PercentTimeoutError](#metrics-show-an-increase-in-PercentTimeoutError).
 
-If you are seeing high **AverageServerLatency** for blob download requests when there are repeated requests for the same blob or set of blobs, then you should consider caching these blobs using Azure Cache or the Azure Content Delivery Network (CDN). For upload requests, you can improve the throughput by using a larger block size. For queries to tables, it is also possible to implement client-side caching on clients that perform the same query operations and where the data doesn't change frequently.
+If you see high **AverageServerLatency** for blob download requests when there are repeated requests for the same blob or set of blobs, then consider caching these blobs using Azure Cache or the Azure Content Delivery Network (CDN). For upload requests, you can improve the throughput by using a larger block size. For queries to tables, it's also possible to implement client-side caching on clients that perform the same query operations and where the data doesn't change frequently.
 
 High **AverageServerLatency** values can also be a symptom of poorly designed tables or queries that result in scan operations or that follow the append/prepend anti-pattern. For more information, see [Metrics show an increase in PercentThrottlingError](#metrics-show-an-increase-in-PercentThrottlingError).
 
@@ -407,10 +407,10 @@ High **AverageServerLatency** values can also be a symptom of poorly designed ta
 
 ### <a name="you-are-experiencing-unexpected-delays-in-message-delivery"></a>You are experiencing unexpected delays in message delivery on a queue
 
-If you are experiencing a delay between the time an application adds a message to a queue and the time it becomes available to read from the queue, then you should take the following steps to diagnose the issue:
+If you're experiencing a delay between the time an application adds a message to a queue and the time it becomes available to read from the queue, then take the following steps to diagnose the issue:
 
-- Verify that the application is successfully adding the messages to the queue. Check that the application is not retrying the `AddMessage` method several times before succeeding. The Storage Client Library logs will show any repeated retries of storage operations.
-- Verify there is no clock skew between the worker role that adds the message to the queue and the worker role that reads the message from the queue that makes it appear as if there is a delay in processing.
+- Verify that the application is successfully adding the messages to the queue. Check that the application isn't retrying the `AddMessage` method several times before succeeding. The Storage Client Library logs will show any repeated retries of storage operations.
+- Verify there is no clock skew between the worker role that adds the message to the queue and the worker role that reads the message from the queue. A clock skew makes it appear as if there's a delay in processing.
 - Check if the worker role that reads the messages from the queue is failing. If a queue client calls the `GetMessage` method but fails to respond with an acknowledgment, the message will remain invisible on the queue until the `invisibilityTimeout` period expires. At this point, the message becomes available for processing again.
 - Check if the queue length is growing over time. This can occur if you don't have sufficient workers available to process all of the messages that other workers are placing in the queue. Also, check the metrics to see if delete requests are failing and the dequeue count on messages, which might indicate repeated failed attempts to delete the message.
 - Examine the Storage Logging logs for any queue operations that have higher than expected **E2ELatency** and **ServerLatency** values over a longer period of time than usual.
@@ -435,9 +435,9 @@ If you're seeing spikes in the value of **PercentThrottlingError** that coincide
 
 #### <a name="permanent-increase-in-PercentThrottlingError"></a>Permanent increase in PercentThrottlingError
 
-If you are seeing a consistently high value for **PercentThrottlingError** following a permanent increase in your transaction volumes or when you are performing your initial load tests on your application, then you need to evaluate how your application is using storage partitions and whether it is approaching the scalability targets for a storage account. For example, if you are seeing throttling errors on a queue (which counts as a single partition), then you should consider using additional queues to spread the transactions across multiple partitions. If you are seeing throttling errors on a table, you need to consider using a different partitioning scheme to spread your transactions across multiple partitions by using a wider range of partition key values. One common cause of this issue is the prepend/append anti-pattern where you select the date as the partition key, and then all data on a particular day is written to one partition: under load, this can result in a write bottleneck. Either consider a different partitioning design or evaluate whether using blob storage might be a better solution. Also, check whether throttling is occurring as a result of spikes in your traffic and investigate ways of smoothing your pattern of requests.
+If you're seeing a consistently high value for **PercentThrottlingError** following a permanent increase in your transaction volumes or when you're performing your initial load tests on your application, then you need to evaluate how your application is using storage partitions and whether it's approaching the scalability targets for a storage account. For example, if you're seeing throttling errors on a queue (which counts as a single partition), then consider using additional queues to spread the transactions across multiple partitions. If you're seeing throttling errors on a table, you need to consider using a different partitioning scheme to spread your transactions across multiple partitions by using a wider range of partition key values. One common cause of this issue is the prepend/append anti-pattern where you select the date as the partition key, and then all data on a particular day is written to one partition: under load, this can result in a write bottleneck. Either consider a different partitioning design or evaluate whether using blob storage might be a better solution. Also, check whether throttling is occurring as a result of spikes in your traffic and investigate ways of smoothing your pattern of requests.
 
-If you distribute your transactions across multiple partitions, you must still be aware of the scalability limits set for the storage account. For example, if you used ten queues, each processing the maximum of 2,000 1KB messages per second, you will be at the overall limit of 20,000 messages per second for the storage account. If you need to process more than 20,000 entities per second, you should consider using multiple storage accounts. You should also bear in mind that the size of your requests and entities has an impact on when the storage service throttles your clients. If you have larger requests and entities, you may be throttled sooner.
+If you distribute your transactions across multiple partitions, you must still be aware of the scalability limits set for the storage account. For example, if you used ten queues, each processing the maximum of 2,000 1KB messages per second, you will be at the overall limit of 20,000 messages per second for the storage account. If you need to process more than 20,000 entities per second, consider using multiple storage accounts. You should also bear in mind that the size of your requests and entities has an impact on when the storage service throttles your clients. If you have larger requests and entities, you may be throttled sooner.
 
 Inefficient query design can also cause you to hit the scalability limits for table partitions. For example, a query with a filter that only selects one percent of the entities in a partition but that scans all the entities in a partition will need to access each entity. Every entity read will count towards the total number of transactions in that partition; therefore, you can easily reach the scalability targets.
 
@@ -455,7 +455,7 @@ The **PercentTimeoutError** metric is an aggregation of the following metrics: *
 
 The server timeouts are caused by an error on the server. The client timeouts happen because an operation on the server has exceeded the timeout specified by the client; for example, a client using the Storage Client Library can set a timeout for an operation by using the `ServerTimeout` property of the `QueueRequestOptions` class.
 
-Server timeouts indicate a problem with the storage service that requires further investigation. You can use metrics to see if you are hitting the scalability limits for the service and to identify any spikes in traffic that might be causing this problem. If the problem is intermittent, it may be due to load-balancing activity in the service. If the problem is persistent and isn't caused by your application hitting the scalability limits of the service, you should raise a support issue. For client timeouts, you must decide if the timeout is set to an appropriate value in the client and either change the timeout value set in the client or investigate how you can improve the performance of the operations in the storage service, for example, by optimizing your table queries or reducing the size of your messages.
+Server timeouts indicate a problem with the storage service that requires further investigation. You can use metrics to see if you're hitting the scalability limits for the service and to identify any spikes in traffic that might be causing this problem. If the problem is intermittent, it may be due to load-balancing activity in the service. If the problem is persistent and isn't caused by your application hitting the scalability limits of the service, you should raise a support issue. For client timeouts, you must decide if the timeout is set to an appropriate value in the client and either change the timeout value set in the client or investigate how you can improve the performance of the operations in the storage service, for example, by optimizing your table queries or reducing the size of your messages.
 
 ### <a name="metrics-show-an-increase-in-PercentNetworkError"></a>Metrics show an increase in PercentNetworkError
 
@@ -465,7 +465,7 @@ The most common cause of this error is a client disconnecting before a timeout e
 
 ### <a name="the-client-is-receiving-403-messages"></a>The client is receiving HTTP 403 (Forbidden) messages
 
-If your client application is throwing HTTP 403 (Forbidden) errors, a likely cause is that the client is using an expired Shared Access Signature (SAS) when it sends a storage request (although other possible causes include clock skew, invalid keys, and empty headers). If an expired SAS key is the cause, you will not see any entries in the server-side Storage Logging log data. The following table shows a sample from the client-side log generated by the Storage Client Library that illustrates this issue occurring:
+If your client application is throwing HTTP 403 (Forbidden) errors, a likely cause is that the client is using an expired Shared Access Signature (SAS) when it sends a storage request (although other possible causes include clock skew, invalid keys, and empty headers). If an expired SAS key is the cause, you won't see any entries in the server-side Storage Logging log data. The following table shows a sample from the client-side log generated by the Storage Client Library that illustrates this issue occurring:
 
 | Source | Verbosity | Verbosity | Client request ID | Operation text |
 | --- | --- | --- | --- | --- |
@@ -481,12 +481,12 @@ If your client application is throwing HTTP 403 (Forbidden) errors, a likely cau
 
 In this scenario, you should investigate why the SAS token is expiring before the client sends the token to the server:
 
-- Typically, you should not set a start time when you create a SAS for a client to use immediately. If there are small clock differences between the host generating the SAS using the current time and the storage service, then it's possible for the storage service to receive a SAS that's not yet valid.
-- Don't set a very short expiry time on a SAS. Again, small clock differences between the host generating the SAS and the storage service can lead to a SAS apparently expiring earlier than anticipated.
+- Typically, you shouldn't set a start time when you create a SAS for a client to use immediately. If there are small clock differences between the host generating the SAS using the current time and the storage service, then it's possible for the storage service to receive a SAS that's not yet valid.
+- Don't set a very short expiry time on a SAS. Again, small clock differences between the host generating the SAS and the storage service can lead to a SAS seemingly expiring earlier than anticipated.
 - Does the version parameter in the SAS key (for example, `sv`=2015-04-05) match the version of the Storage Client Library you are using? We recommend that you always use the latest version of the [Storage Client Library](https://www.nuget.org/packages/WindowsAzure.Storage/).
 - If you regenerate your storage access keys, any existing SAS tokens may be invalidated. This issue may arise if you generate SAS tokens with a long expiry time for client applications to cache.
 
-If you are using the Storage Client Library to generate SAS tokens, then it is easy to build a valid token. However, if you are using the Storage REST API and constructing the SAS tokens by hand, see [Delegating Access with a Shared Access Signature](/rest/api/storageservices/delegate-access-with-shared-access-signature).
+If you're using the Storage Client Library to generate SAS tokens, then it's easy to build a valid token. However, if you're using the Storage REST API and constructing the SAS tokens by hand, see [Delegating Access with a Shared Access Signature](/rest/api/storageservices/delegate-access-with-shared-access-signature).
 
 ### <a name="the-client-is-receiving-404-messages"></a>The client is receiving HTTP 404 (Not found) messages
 
@@ -642,7 +642,7 @@ client.SetServiceProperties(sp);
 
 In some circumstances, lost network packets can lead to the storage service returning HTTP 404 messages to the client. For example, when your client application is deleting an entity from the table service, you see the client throw a storage exception reporting an "HTTP 404 (Not Found)" status message from the table service. When you investigate the table in the table storage service, you see that the service did delete the entity as requested.
 
-The exception details in the client include the request ID (7e84f12d…) assigned by the table service for the request: you can use this information to locate the request details in the server-side storage logs by searching in the `request-id-header` column in the log file. You could also use the metrics to identify when failures such as this occur and then search the log files based on the time the metrics recorded this error. This log entry shows that the delete failed with an "HTTP (404) Client Other Error" status message. The same log entry also includes the request ID generated by the client in the `client-request-id` column (813ea74f…).
+The exception details in the client include the request ID (7e84f12d…) assigned by the table service for the request. You can use this information to locate the request details in the server-side storage logs by searching in the `request-id-header` column in the log file. You could also use the metrics to identify when failures such as this occur and then search the log files based on the time the metrics recorded this error. This log entry shows that the delete failed with an "HTTP (404) Client Other Error" status message. The same log entry also includes the request ID generated by the client in the `client-request-id` column (813ea74f…).
 
 The server-side log also includes another entry with the same `client-request-id` value (813ea74f…) for a successful delete operation for the same entity and from the same client. This successful delete operation took place very shortly before the failed delete request.
 
@@ -661,7 +661,7 @@ The following table shows an extract from the server-side log for two client ope
 | 05:10:13.8987407 |`GetContainerProperties` |404 |mmcont |bc881924-… |
 | 05:10:14.2147723 |`CreateContainer` |409 |mmcont |bc881924-… |
 
-The code in the client application deletes and then immediately recreates a blob container using the same name: the `CreateIfNotExists` method (Client request ID bc881924-…) eventually fails with the HTTP 409 (Conflict) error. When a client deletes blob containers, tables, or queues, there is a brief period before the name becomes available again.
+The code in the client application deletes and then immediately recreates a blob container using the same name: the `CreateIfNotExists` method (Client request ID bc881924-…) eventually fails with the HTTP 409 (Conflict) error. When a client deletes blob containers, tables, or queues, there's a brief period before the name becomes available again.
 
 The client application should use unique container names whenever it creates new containers if the delete/recreate pattern is common.
 
@@ -731,7 +731,7 @@ The `delete` command removes any old database files from previous installations 
 
 If the previous troubleshooting sections don't include the issue you're having with a storage service, you should adopt the following approach to diagnosing and troubleshooting your issue.
 
-- Check your metrics to see if there's any change from your expected base-line behavior. From the metrics, you may be able to determine whether the issue is transient or permanent and which storage operations the issue is affecting.
+- Check your metrics to see if there's any change from your expected baseline behavior. From the metrics, you may be able to determine whether the issue is transient or permanent and which storage operations the issue is affecting.
 - You can use the metrics information to help you search your server-side log data for more detailed information about any errors that are occurring. This information may help you troubleshoot and resolve the issue.
 - If the information in the server-side logs isn't sufficient to troubleshoot the issue successfully, you can use the Storage Client Library client-side logs to investigate the behavior of your client application and tools such as Fiddler and Wireshark to investigate your network.
 
@@ -741,7 +741,7 @@ For more information about using Wireshark, see [Appendix 2: Using Wireshark to 
 
 ## <a name="appendices"></a>Appendices
 
-The appendices describe several tools that you may find useful when you're diagnosing and troubleshooting issues with Azure Storage (and other services). These tools aren't part of Azure Storage, and some are third-party products. As such, the tools discussed in these appendices aren't covered by any support agreement you may have with Microsoft Azure or Azure Storage, and therefore as part of your evaluation process, you should examine the licensing and support options available from the providers of these tools.
+The appendices describe several tools that you may find useful when you're diagnosing and troubleshooting issues with Azure Storage (and other services). These tools aren't part of Azure Storage, and some are third-party products. As such, the tools discussed in these appendices aren't covered by any support agreement you may have with Microsoft Azure or Azure Storage. Therefore, as part of your evaluation process, you should examine the licensing and support options available from the providers of these tools.
 
 ### <a name="appendix-1"></a>Appendix 1: Using Fiddler to capture HTTP and HTTPS traffic
 
