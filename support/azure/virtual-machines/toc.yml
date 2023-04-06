@@ -145,7 +145,7 @@
   - name: Application access issues
     href: troubleshoot-app-connection.md
 
-- name: VM Password Reset
+- name: VM password reset
   items:
   - name: Windows
     href: reset-local-password-without-agent.md
@@ -293,7 +293,7 @@
           - name: Azure VM cannot RDP - working on features
             href: azure-vm-cannot-rdp-working-features.md
 
-- name: VM Performance
+- name: VM performance
   items:
   - name: Performance diagnostics (PerfInsights)
     items:
@@ -326,26 +326,26 @@
     - name: Poor performance on Windows Server 2012 R2
       href: poor-performance-emulated-storage-stack.md
 
-- name: VM Allocation Failures
+- name: VM allocation failures
   items:
   - name: Allocation failures
     href: allocation-failure.md
   - name: Classic allocation failures
     href: allocation-failure-classic.md
 
-- name: VM Planned Maintenance
+- name: VM planned maintenance
   items:
   - name: Overview
     href: /azure/virtual-machines/maintenance-notifications?context=/troubleshoot/azure/virtual-machines/context/context
 
-- name: VM Restarts
+- name: VM restarts
   items:
     - name: Understand a system reboot
       href: understand-vm-reboot.md
     - name: Unexpected reboots of VMs with attached VHDs
       href: unexpected-reboots-attached-vhds.md
 
-- name: VM Deployment Failures
+- name: VM deployment failures
   items:
   - name: VM deployment issues
     href: welcome-deployment-troubleshooting.yml
@@ -376,7 +376,7 @@
     - name: Upgrade to SLES 15 SP1
       href: linux-upgrade-suse-15sp1.md
 
-- name: VM Cannot Start or Stop VM
+- name: VM cannot start or stop VM
   items:
   - name: Understanding VM lifecycle and states
     href: /azure/virtual-machines/states-billing?context=/troubleshoot/azure/virtual-machines/context/context
@@ -401,7 +401,7 @@
       - name: Restarting, shutting down, or stopping services
         href: boot-error-troubleshoot-windows.md
 
-- name: VM Agent and Extensions
+- name: VM agent and extensions
   items:
   - name: Azure cloud-init support for Linux VMs
     href: cloud-init-support-linux-vms.md
@@ -436,7 +436,7 @@
   - name: Troubleshoot Linux VM agent
     href: linux-azure-guest-agent.md
 
-- name: Disk Management
+- name: Disk management
   items:
   - name: Overview
     href: /azure/virtual-machines/managed-disks-overview?context=/troubleshoot/azure/virtual-machines/context/context
@@ -455,14 +455,14 @@
   - name: VHD is not supported when you create a VM in Azure
     href: vhd-not-supported-vm-azure.md
 
-- name: Windows Activation
+- name: Windows activation
   items:
   - name: Windows activation problems
     href: troubleshoot-activation-problems.md
   - name: Activation problem with forced tunneling
     href: custom-routes-enable-kms-activation.md
 
-- name: Azure Disk Encryption
+- name: Azure disk encryption
   items:
   - name: Windows
     items:
@@ -483,7 +483,7 @@
 
 - name: Azure Compute Gallery
   items:
-  - name: Windows/Linux Troubleshooting
+  - name: Windows/Linux troubleshooting
     href: /azure/virtual-machines/troubleshooting-shared-images?context=/troubleshoot/azure/virtual-machines/context/context
 
 - name: Azure Backup
