@@ -24,6 +24,9 @@ In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.micros
 
 When Bluetooth is disabled on the Teams Rooms device at the operating system (OS) level, the proximity feature that facilitates the discovery and addition of nearby Teams Rooms to a meeting might be affected.
 
+> [!NOTE]  
+> Incidents that are classified as **Warning** don't affect the health status that's reported for a device.
+
 ## Cause
 
 This issue occurs if Bluetooth is turned off in Windows settings on the Teams Rooms device.
