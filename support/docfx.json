@@ -106,7 +106,6 @@
         "windows-server/**/*.md": "Deland-Han",
         "mem/**/*.md": "helenclu",
         "system-center/**/*.md": "helenclu",
-        "dynamics-365/**/*.md": "David-Pack",
         "dynamics-365/customer-insights/**/*.md": "m-hartmann",
         "dynamics-365/supply-chain/costing/*.md": "JennySong-SH",
         "dynamics-365/supply-chain/inventory/*.md": "sherry-zheng",
@@ -117,9 +116,7 @@
         "dynamics-365/supply-chain/rebates/*.md": "sherry-zheng",
         "dynamics-365/supply-chain/sales/*.md": "Henrikan",
         "dynamics-365/supply-chain/transportation/*.md": "Weijiesa",
-        "dynamics-365/supply-chain/warehousing/*.md": "Mirzaab",
-        "power-platform/**/*.md": "David-Pack",
-        "dynamics/gp/*.md": "David-Pack"
+        "dynamics-365/supply-chain/warehousing/*.md": "Mirzaab"
       },
       "ms.author": {
         "**/*.md": "christys",
@@ -134,7 +131,6 @@
         "windows-server/**/*.md": "delhan",
         "mem/**/*.md": "luche",
         "system-center/**/*.md": "luche",
-        "dynamics-365/**/*.md": "davidpac",
         "dynamics-365/customer-insights/**/*.md": "mhart",
         "dynamics-365/supply-chain/costing/*.md": "yanansong",
         "dynamics-365/supply-chain/inventory/*.md": "chuzheng",
@@ -145,9 +141,7 @@
         "dynamics-365/supply-chain/rebates/*.md": "chuzheng",
         "dynamics-365/supply-chain/sales/*.md": "henrikan",
         "dynamics-365/supply-chain/transportation/*.md": "weijiesa",
-        "dynamics-365/supply-chain/warehousing/*.md": "mirzaab",
-        "power-platform/**/*.md": "davidpac",
-        "dynamics/gp/*.md": "davidpac"
+        "dynamics-365/supply-chain/warehousing/*.md": "mirzaab"
       },
       "ms.localizationpriority": {
         "**/*.md": "medium"
