@@ -29,7 +29,7 @@ When users in your organization try to access a OneDrive or SharePoint site by u
 
 - An "Access denied" error message
 - An inconsistent user experience
-- A new OneDrive site with a suffix appended to the end of the expected URL. The suffix can be a number, or a GUID. For example, `https://contoso-my.sharepoint.com/personal/UserA_Contoso_com`**`1`**.
+- A new OneDrive site with a suffix appended to the end of the expected URL. The suffix can be a number, or a GUID. For example, `https://contoso-my.sharepoint.com/personal/UserA_Contoso_com1`.
 
 ## Cause
 
@@ -63,9 +63,12 @@ To fix the issue, besides running the diagnostic, administrators can also [manua
 
 #### Access denied issue for a OneDrive site
 
-The diagnostic reconnects the user profile to the OneDrive site.
+The diagnostic reconnects the owner to the OneDrive site.
 
-**Note:** When fixing the issue, administrators must avoid taking any manual actions, such as updating the owners of the OneDrive site or editing the user profile properties that are associated with OneDrive.
+> [!NOTE]
+>
+> - When fixing the issue, administrators must avoid taking any manual actions, such as updating the owners of the OneDrive site or editing the user profile properties that are associated with OneDrive.
+> - Make sure that the user account matches the site URL. Administrators are prohibited from connecting sites that may have been previously owned by another user account.
 
 #### A user is directed to a new OneDrive site with a suffix appended to the end of the expected URL
 
@@ -74,7 +77,7 @@ To fix the issue, administrators must run the diagnostic with the following inpu
 - The affected user account, such as UserA@contoso.com
 - The original site URL, such as `https://contoso-my.sharepoint.com/personal/UserA_Contoso_com`
 
-The diagnostic verifies whether the user can be assigned ownership of the original site. If the verification is successful, it'll offer to reconnect the user to their original site and recycle the current new active site such as `https://contoso-my.sharepoint.com/personal/UserA_Contoso_com`**`1`**. If the new site needs to be recovered, administrators can [Restore the deleted OneDrive](/sharepoint/restore-deleted-onedrive).
+The diagnostic verifies whether the user can be assigned ownership of the original site. If the verification is successful, it'll offer to reconnect the user to their original site and recycle the current new active site such as `https://contoso-my.sharepoint.com/personal/UserA_Contoso_com1`. If the new site needs to be recovered, administrators can [Restore the deleted OneDrive](/sharepoint/restore-deleted-onedrive).
 
 ## More information
 
