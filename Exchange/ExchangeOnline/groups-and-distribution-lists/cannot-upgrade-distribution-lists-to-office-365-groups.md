@@ -36,7 +36,7 @@ The following conditions prevent a distribution list from being upgraded:
 * Has only members but no owner
 * Has one or more members that are something other than a user mailbox, shared mailbox, team mailbox, or mail user (that is, the **RecipientTypeDetails** value of any member of the distribution list is not UserMailbox, SharedMailbox, TeamMailbox, or MailUser) 
 * Is configured to be a forwarding address for a shared mailbox
-* Is part of sender restriction in another distribution list
+* Is part of a sender restriction in another distribution list
 * Has an alias that contains special characters
 * Is a mail-enabled security group 
 * Is a dynamic distribution group 
