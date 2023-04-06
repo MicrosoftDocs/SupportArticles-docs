@@ -2,20 +2,12 @@
 
 
 
-## Week of December 12, 2022
+## Week of March 27, 2023
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 12/13/2022 | [The Outlook AutoComplete list](/outlook/troubleshoot/contacts/information-about-the-outlook-autocomplete-list) | modified |
-| 12/13/2022 | [Shareable links overview and troubleshooting](/outlook/troubleshoot/email-management/shareable-links-functionality-in-outlook) | modified |
-| 12/15/2022 | [Configure rooms and workspaces for Room Finder](/outlook/troubleshoot/calendaring/configure-room-finder-rooms-workspaces) | modified |
-
-
-## Week of December 05, 2022
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 12/8/2022 | [Folder names or locations are incorrect in Outlook](/outlook/troubleshoot/user-interface/incorrect-folder-names) | modified |
-| 12/8/2022 | [Outlook performance issues in a Cached Exchange Mode .ost or .pst file](/outlook/troubleshoot/performance/performance-issues-if-too-many-items-or-folders) | modified |
+| 3/28/2023 | [New Outlook for Mac shows private event details in a shared calendar](/outlook/troubleshoot/calendars/shared-calendar-shows-private-event-details) | added |
+| 3/29/2023 | Listing some issues for Outlook for Mac | removed |
+| 3/29/2023 | Listing some issues for Outlook for iOS and Android | removed |
+| 3/30/2023 | [Share your calendar or open a shared calendar](/outlook/troubleshoot/calendaring/how-to-open-shared-calendar) | modified |

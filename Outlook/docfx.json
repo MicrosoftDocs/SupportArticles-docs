@@ -109,7 +109,10 @@
       "hideEdit": true,
       "uhfHeaderId": "MSDocsHeader-Outlook.yml",
       "titleSuffix": "Outlook",
-      "searchScope": ["Outlook Support"] 
+      "searchScope": ["Outlook Support"] ,
+      "contributors_to_exclude": [ 
+        "beccarobins"
+      ]
     },
     "fileMetadata": {
       "ms.prod": {
