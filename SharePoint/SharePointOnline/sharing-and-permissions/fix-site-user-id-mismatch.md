@@ -45,6 +45,7 @@ To fix these issues, run the Site User Mismatch Diagnostic by using a Microsoft 
 >
 > - Microsoft 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with user access.
 > - This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+> - When fixing the issues for OneDrive sites, administrators must make sure that the user account matches the site URL. Administrators are prohibited from connecting OneDrive sites that may have been previously owned by another user account.
   
 Select Run Tests below, which will populate the diagnostic in the Microsoft 365 admin center. The diagnostic performs a large range of verifications for internal users or guests who try to access SharePoint and OneDrive sites.
 
@@ -66,9 +67,7 @@ To fix the issue, besides running the diagnostic, administrators can also [manua
 The diagnostic reconnects the owner to the OneDrive site.
 
 > [!NOTE]
->
-> - When fixing the issue, administrators must avoid taking any manual actions, such as updating the owners of the OneDrive site or editing the user profile properties that are associated with OneDrive.
-> - Make sure that the user account matches the site URL. Administrators are prohibited from connecting sites that may have been previously owned by another user account.
+> When fixing the issue, administrators must avoid taking any manual actions, such as updating the owners of the OneDrive site or editing the user profile properties that are associated with OneDrive.
 
 #### A user is directed to a new OneDrive site with a suffix appended to the end of the expected URL
 
