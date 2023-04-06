@@ -76,7 +76,10 @@
       "titleSuffix": "Office",
       "uhfHeaderId": "MSDocsHeader-M365-IT",
       "hideEdit": true,
-      "searchScope": ["Office Support"] 
+      "searchScope": ["Office Support"],
+      "contributors_to_exclude": [ 
+        "beccarobins"
+      ]
     },
     "fileMetadata": {
       "ms.prod": {

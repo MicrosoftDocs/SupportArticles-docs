@@ -42,7 +42,10 @@
       "hideEdit": true,
       "uhfHeaderId": "MSDocsHeader-MicrosoftTeams.yml",
       "titleSuffix": "Microsoft Teams",
-      "searchScope": ["Teams Support"] 
+      "searchScope": ["Teams Support"],
+      "contributors_to_exclude": [ 
+        "beccarobins"
+      ]
     },
     "fileMetadata": {
       "ms.service": {
