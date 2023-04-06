@@ -4,7 +4,7 @@ description: Identifies and troubleshoots performance issues in Azure Storage ac
 author: AmandaAZ
 ms.author: v-weizhu
 ms.reviewer: normesta
-ms.date: 03/29/2023
+ms.date: 04/06/2023
 ms.service: storage
 ms.subservice: common
 ---
@@ -22,7 +22,7 @@ This article helps you investigate unexpected changes in behavior (such as slowe
 
 To monitor the performance of the storage services, you can use the following metrics:
 
-- The **SuccessE2ELatency** and **SuccessServerLatency** metrics show the average time the storage service or API operation type is taking to process requests. **SuccessE2ELatency** is a measure of end-to-end latency that includes the time taken to read the request and send the response in addition to the time taken to process the request (therefore includes network latency once the request reaches the storage service); **SuccessServerLatency** is a measure of just the processing time and therefore excludes any network latency related to communicating with the client.
+- The **SuccessE2ELatency** and **SuccessServerLatency** metrics show the average time the storage service or API operation type is taking to process requests. **SuccessE2ELatency** is a measure of end-to-end latency that includes the time taken to read the request and send the response in addition to the time taken to process the request (therefore, it includes network latency once the request reaches the storage service). **SuccessServerLatency** is a measure of just the processing time and therefore excludes any network latency related to communicating with the client.
 
 - The **Egress** and **Ingress** metrics show the total amount of data, in bytes, coming in to and going out of your storage service or through a specific API operation type.
 
@@ -47,7 +47,7 @@ In some cases, you might find that **SuccessE2ELatency** is higher than the **Su
 
 ### Investigating client performance issues
 
-Possible reasons for the client responding slowly include having limited available connections or threads, or being low on resources such as CPU, memory, or network bandwidth. You may be able to resolve the issue by modifying the client code to be more efficient (for example, by using asynchronous calls to the storage service) or by using a larger Virtual Machine (with more cores and more memory).
+Possible reasons for the client responding slowly include having limited available connections or threads or being low on resources such as CPU, memory, or network bandwidth. You may be able to resolve the issue by modifying the client code to be more efficient (for example, by using asynchronous calls to the storage service) or by using a larger Virtual Machine with more cores and more memory.
 
 For the table and queue services, the Nagle algorithm can also cause high **SuccessE2ELatency** compared to **SuccessServerLatency**. For more information, see the post [Nagle's Algorithm is Not Friendly towards Small Requests](/archive/blogs/windowsazurestorage/nagles-algorithm-is-not-friendly-towards-small-requests). You can disable the Nagle algorithm in code by using the `ServicePointManager` class in the `System.Net` namespace. You should do this before you make any calls to the table or queue services in your application since this doesn't affect connections that are already open. The following example comes from the `Application_Start` method in a worker role:
 
@@ -84,7 +84,7 @@ If there are no issues in the client, you should investigate potential network i
 
 In the case of high **SuccessServerLatency** for blob download requests, you should use the Storage logs to see if there are repeated requests for the same blob (or set of blobs). For blob upload requests, you should investigate what block size the client is using (for example, blocks less than 64 K in size can result in overheads unless the reads are also in less than 64 K chunks) and if multiple clients are uploading blocks to the same blob in parallel. You should also check the per-minute metrics for spikes in the number of requests that result in exceeding the per-second scalability targets.
 
-If you're seeing high **SuccessServerLatency** for blob download requests when there are repeated requests for the same blob or set of blobs, then you should consider caching these blobs using Azure Cache or the Azure Content Delivery Network (CDN). For upload requests, you can improve the throughput by using a larger block size. For queries to tables, it's also possible to implement client-side caching on clients that perform the same query operations and where the data doesn't change frequently.
+If you see high **SuccessServerLatency** for blob download requests when there are repeated requests for the same blob or set of blobs, consider caching these blobs using Azure Cache or the Azure Content Delivery Network (CDN). For upload requests, you can improve the throughput by using a larger block size. For queries to tables, it's also possible to implement client-side caching on clients that perform the same query operations and where the data doesn't change frequently.
 
 High **SuccessServerLatency** values can also be a symptom of poorly designed tables or queries that result in scan operations or that follow the append/prepend anti-pattern.
 
@@ -93,11 +93,11 @@ High **SuccessServerLatency** values can also be a symptom of poorly designed ta
 
 ## You're experiencing unexpected delays in message delivery on a queue
 
-If you're experiencing a delay between the time an application adds a message to a queue and the time it becomes available to read from the queue, then you should take the following steps to diagnose the issue:
+If you're experiencing a delay between the time an application adds a message to a queue and the time it becomes available to read from the queue, then take the following steps to diagnose the issue:
 
 - Verify that the application is successfully adding the messages to the queue. Check that the application is not retrying the `AddMessage` method several times before succeeding.
 
-- Verify there's no clock skew between the worker role that adds the message to the queue and the worker role that reads the message from the queue that makes it appear as if there's a delay in processing.
+- Verify there is no clock skew between the worker role that adds the message to the queue and the worker role that reads the message from the queue. A clock skew makes it appear as if there is a delay in processing.
 
 - Check if the worker role that reads the messages from the queue is failing. If a queue client calls the `GetMessage` method but fails to respond with an acknowledgment, the message will remain invisible on the queue until the `invisibilityTimeout` period expires. At this point, the message becomes available for processing again.
 
