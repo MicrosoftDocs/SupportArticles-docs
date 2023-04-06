@@ -124,7 +124,10 @@
       "hideEdit": true,
       "uhfHeaderId": "MSDocsHeader-M365-IT",
       "searchScope": "SharePoint Support",
-      "titleSuffix": "SharePoint"
+      "titleSuffix": "SharePoint",
+      "contributors_to_exclude": [ 
+        "beccarobins"
+      ]
     },
     "fileMetadata": {
       "ms.prod": {
