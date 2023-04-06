@@ -20,4 +20,4 @@ This article provides the mitigation steps for the agent-related error codes tha
 |AgentNotReachable|The agent running the desktop flow is not reachable.|</br>- Ensure that there are no other users connecting to the machine while there are automations running.</br>- Verify that the machine has sufficient compute and memory resources.</br>- Check if the machine has restarted during the execution.|
 |UnresponsiveAgent|The agent running the desktop flow is not responsive.|Verify that the machine has sufficient compute and memory resources.|
 |AgentHasNotStarted|Power Automate was able to create a session to run the desktop flow but wasn’t able to start the agent inside the session.|Verify that the machine has sufficient compute and memory resources.|
-|GatewayTimeout|This is a general technical error code.|Contact [Power Automate support](https://powerautomate.microsoft.com/support/).
+|GatewayTimeout|This is a general technical error code.|Contact [Power Automate support](https://powerautomate.microsoft.com/support/).|
