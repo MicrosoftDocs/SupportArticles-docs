@@ -51,7 +51,7 @@ In some situations, such as when there are corrupted files, issues might require
     1. Collect your setup logs. See [How to get the Visual Studio installation logs](#collect-installation-logs-for-microsoft-support) for details.
     1. Open the Visual Studio Installer, and then choose **Report a problem** to open the Visual Studio Feedback tool.
 
-    :::image type="content" source="media/troubleshoot-installation-issues/vs-installer-report-problem.png" alt-text="Screenshot showing the Provide feedback button in the Visual Studio Installer" lightbox="media/troubleshoot-installation-issues/vs-installer-report-problem.png":::
+        :::image type="content" source="media/troubleshoot-installation-issues/vs-installer-report-problem.png" alt-text="Screenshot showing the Provide feedback button in the Visual Studio Installer." lightbox="media/troubleshoot-installation-issues/vs-installer-report-problem.png":::
 
     1. Give your problem report a title, and provide the relevant details. The most recent setup log for the Visual Studio Installer is automatically added to the **Additional attachments** section of your problem report.
     1. Choose **Submit**.
@@ -75,7 +75,7 @@ As a last resort, you can remove all Visual Studio installation files and produc
 
 > [!IMPORTANT]
 > **Before** you try to roll back, learn more about the [rollback feature in Visual Studio](https://aka.ms/vs/rollback).
->
+> 
 > Rollback may be disabled or your rollback attempt may be undone if you're in an organization that has security compliance or software updating requirements. Contact your IT Administrator for further details.
 
 If none of the previous steps helped you successfully upgrade Visual Studio, you can try to roll back to your previously installed version. Since Visual Studio 2022 version 17.4, you can roll back to your previously installed version if:
