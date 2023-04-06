@@ -72,10 +72,10 @@ The 404 - Not Found error indicates that the website couldn't be found on the se
 
 Take these steps:
 
-1. Verify that you have a website deployed and running on the App Service resource that you're attaching to.
-1. Verify that the site is available at _https://\<resource\>.azurewebsites.net_
-1. Verify that your properly running custom web application doesn't return a status code of 404 when accessed at _https://\<resource\>.azurewebsites.net_.
-1. If this error continues to persist, use one of the feedback channels described in the beginning of this article.
+- Verify that you have a website deployed and running on the App Service resource that you're attaching to.
+- Verify that the site is available at _https://\<resource\>.azurewebsites.net_
+- Verify that your properly running custom web application doesn't return a status code of 404 when accessed at _https://\<resource\>.azurewebsites.net_.
+- If this error continues to persist, use one of the feedback channels described in the beginning of this article.
 
 ### (406) Not Acceptable
 
@@ -83,9 +83,9 @@ The 406 - Not Acceptable error indicates the server is unable to respond to the 
 
 Take these steps:
 
-1. Verify that your site is available at _https://\<resource\>.azurewebsites.net_.
-1. Verify that your site hasn't been migrated to new instances. Snapshot Debugger uses the notion of ARRAffinity for routing requests to specific instances that can produce this error intermittently.
-1. If this error continues to persist, use one of the feedback channels described in the beginning of this article.
+- Verify that your site is available at _https://\<resource\>.azurewebsites.net_.
+- Verify that your site hasn't been migrated to new instances. Snapshot Debugger uses the notion of ARRAffinity for routing requests to specific instances that can produce this error intermittently.
+- If this error continues to persist, use one of the feedback channels described in the beginning of this article.
 
 ### (409) Conflict
 
@@ -120,10 +120,10 @@ If you see a warning icon :::image type="icon" source="media/debug-live-azure-ap
 
 Take these steps:
 
-1. Make sure you use the same version of source code to build and deploy your app.
-1. Make sure you're loading the correct symbols for your deployment.
-1. To do this, view the **Modules** window while Snapshot Debugging and verify the Symbol File column shows a *.pdb* file loaded for the module you're debugging.
-   The Snapshot Debugger will try to automatically download and use symbols for your deployment.
+- Make sure you use the same version of source code to build and deploy your app.
+- Make sure you're loading the correct symbols for your deployment.
+- To do this, view the **Modules** window while Snapshot Debugging and verify the Symbol File column shows a *.pdb* file loaded for the module you're debugging.
+    - The Snapshot Debugger will try to automatically download and use symbols for your deployment.
 
 ## Issue: Symbols don't load when I open a Snapshot
 
@@ -133,15 +133,15 @@ If you see the following window, symbols didn't load.
 
 Take these steps:
 
-1. Select **Change Symbol Settings…** on the page.
-1. In the **Debugging > Symbol** settings, add a symbol cache directory.
-1. Restart snapshot debugging after the symbol path has been set.
+- Select **Change Symbol Settings…** on the page.
+- In the **Debugging > Symbol** settings, add a symbol cache directory.
+- Restart snapshot debugging after the symbol path has been set.
 
    The symbols, or *.pdb* files, available in your project must match your App Service deployment. Most deployments (deployment through Visual Studio, CI/CD with Azure Pipelines or Kudu, etc.) publish your symbol files along to your App Service. Setting the symbol cache directory enables Visual Studio to use these symbols.
 
    :::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-symbol-settings.png" alt-text="Screenshot that shows settings for symbols.":::
 
-1. Alternatively, if your organization uses a symbol server or drops symbols in a different path, use the symbol settings to load the correct symbols for your deployment.
+- Alternatively, if your organization uses a symbol server or drops symbols in a different path, use the symbol settings to load the correct symbols for your deployment.
 
 ## Issue: I can't see the "Attach Snapshot Debugger" option in the Cloud Explorer
 
@@ -170,11 +170,11 @@ Take these steps:
 
 Visual Studio 2019 requires a newer version of the Snapshot Debugger site extension on your Azure App Service. This version isn't compatible with the older version of the Snapshot Debugger site extension used by Visual Studio 2017. You'll get the following error if you try to attach the Snapshot Debugger in Visual Studio 2019 to an Azure App Service that has been previously debugged by the Snapshot Debugger in Visual Studio 2017:
 
-:::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-incompatible-vs2019.png" alt-text="Incompatible Snapshot Debugger site extension Visual Studio 2019.":::
+:::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-incompatible-vs2019.png" alt-text="Screenshot of incompatible Snapshot Debugger site extension Visual Studio 2019.":::
 
 Conversely, if you use Visual Studio 2017 to attach the Snapshot Debugger to an Azure App Service that has been previously debugged by the Snapshot Debugger in Visual Studio 2019, you'll get the following error:
 
-:::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-incompatible-vs2017.png" alt-text="Incompatible Snapshot Debugger site extension Visual Studio 2017.":::
+:::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-incompatible-vs2017.png" alt-text="Screenshot of incompatible Snapshot Debugger site extension Visual Studio 2017.":::
 
 To fix this, delete the following App settings in the Azure portal and attach the Snapshot Debugger again:
 
