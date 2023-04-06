@@ -165,6 +165,8 @@
           href: module-action-wasnt-found-error.md
         - name: Power Automate for desktop console doesn't show any flows
           href: console-not-show-desktop-flows.md
+        - name: Power Automate service doesn't start automatically after restarting
+          href: windows-services-not-start-after-restart.md
         - name: Restart UI flows to recover from a bad state
           href: reset-ui-flow-service-when-bad-state.md
         - name: Recorder not recording applications
