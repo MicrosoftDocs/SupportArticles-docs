@@ -17,37 +17,35 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# Unable to upgrade distribution lists to Microsoft 365 groups
+# Can't upgrade distribution lists to Microsoft 365 groups
 
 _Original KB number:_ &nbsp; 4481100
 
 ## Symptoms
 
-You can't upgrade your distribution lists (which are also known as distribution groups) to Microsoft 365 groups.
+You can't upgrade your distribution lists (also known as distribution groups) to Microsoft 365 groups.
 
 ## Cause
 
-You can only upgrade cloud-managed, simple, non-nested distribution lists. 
+You can upgrade only cloud-managed, simple, non-nested distribution lists to groups in Microsoft 365 Groups.  
 
-Distribution lists below can't be upgraded:  
-* Nested distribution lists. It either has child groups or is a member of another group. 
-* On-premises managed distribution list. 
-* Has more than 100 owners. 
-* Has only members but no owner. 
-* One or more members are something other than a user mailbox, shared mailbox, team mailbox, or mail user. In other words, the RecipientTypeDetails   value of any member of the distribution list is not UserMailbox, SharedMailbox, TeamMailbox, or MailUser. 
-* Configured to be a forwarding address for a shared mailbox. 
-* Part of Sender Restriction in another distribution list. 
-* Has an alias that contains special characters. 
-* Mail-enabled security groups 
-* Dynamic distribution groups. 
-* Distribution lists that were converted to RoomLists. 
+The following conditions prevent a distribution list from being upgraded:  
+* Is nested (has child groups or is a member of another group)
+* Is an on-premises, managed distribution list
+* Has more than 100 owners
+* Has only members but no owner
+* Has one or more members that are something other than a user mailbox, shared mailbox, team mailbox, or mail user (that is, the **RecipientTypeDetails** value of any member of the distribution list is not UserMailbox, SharedMailbox, TeamMailbox, or MailUser) 
+* Is configured to be a forwarding address for a shared mailbox
+* Is part of Sender Restriction in another distribution list
+* Has an alias that contains special characters
+* Is a mail-enabled security group 
+* Is a dynamic distribution group 
+* Was converted to a room list
 
-The issue can also occur if a custom email address policy is applied to the tenant for the Microsoft 365 groups. 
+This issue can also occur if a custom email address policy is applied to the tenant for the Microsoft 365 groups. 
 
 ## Resolution
 
-Please note the upgrade will fail if any of the above conditions are true.
+If the affected distribution lists don't meet any of the conditions that are mentioned in the "Cause" section, you can resolve the custom email address policy issue by removing the policy. Then, try again to upgrade the distribution lists to Microsoft 365 groups. For more information about how to remove an email address policy, see [Remove an email address policy](/exchange/remove-an-email-address-policy-exchange-2013-help).
 
-To resolve the custom email address policy issue, you have to remove the email address policy for the distribution groups. Then, try again to upgrade the distribution lists to Microsoft 365 groups. For more information about how to remove the email address policy, see [Remove an email address policy](/exchange/remove-an-email-address-policy-exchange-2013-help).
-
-For more information about how to upgrade distribution lists, see [Overview of Microsoft 365 Groups for administrators - Microsoft 365 admin | Microsoft Learn](/microsoft-365/admin/create-groups/office-365-groups?view=o365-worldwide&preserve-view=true).
+For more information about how to upgrade distribution lists, see [Overview of Microsoft 365 Groups for administrators](/microsoft-365/admin/create-groups/office-365-groups?view=o365-worldwide&preserve-view=true).
