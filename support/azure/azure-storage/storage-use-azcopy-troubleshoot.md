@@ -18,11 +18,11 @@ You can determine whether a job succeeds by looking at the exit code.
 
 If the exit code is `0-success`, the job completed successfully.
 
-If the exit code is `1-error`, examine the log file. Once you understand the exact error message, it becomes much easier to search for the right keywords and figure out the solution. To learn more, see  [Find errors and resume jobs by using log and plan files in AzCopy](/azure/storage/common/storage-use-azcopy-configure).
+If the exit code is `1-error`, examine the log file. Once you understand the exact error message, it becomes much easier to search for the right keywords and figure out the solution. To learn more, see [Find errors and resume jobs by using log and plan files in AzCopy](/azure/storage/common/storage-use-azcopy-configure).
 
 If the exit code is `2-panic`, check that the log file exists. If the file doesn't exist, file a bug or reach out to support.
 
-If the exit code is any other non-zero exit code, it may be an exit code from the system. For example, `OOMKilled`.  Check your operating system documentation for special exit codes.
+If the exit code is any other non-zero exit code, it may be an exit code from the system. For example, `OOMKilled`. Check your operating system documentation for special exit codes.
 
 ## 403 errors
 
@@ -74,7 +74,7 @@ If you're copying data between storage accounts, make sure that the machine that
 
 In case your VM doesn't or can't have a public IP address, consider using a private endpoint. See [Use private endpoints for Azure Storage](/azure/storage/common/storage-private-endpoints).
 
-#### Use a Private Link
+#### Use Private Link
 
 [Private Link](/azure/private-link/private-link-overview) is at the virtual network (VNet)/subnet level. If you want AzCopy requests to go through Private Link, then AzCopy must make those requests from a VM running in that VNet/subnet. For example, if you configure Private Link in VNet1/Subnet1 but the VM on which AzCopy runs is in VNet1/Subnet2, AzCopy requests won't use Private Link, and they're expected to fail.
 
@@ -127,7 +127,7 @@ If your device isn't on the list of supported platforms, contact your administra
 
 ## Server busy, network errors, or timeouts
 
-If you see a large number of failed requests with the "503 Server Busy" status, your requests are being throttled by the storage service. If you're seeing network errors or timeouts, you might be attempting to push through too much data across your infrastructure, and that infrastructure is having difficulty handling it. In all cases, the workaround is similar.
+If you see a large number of failed requests with the "503 Server Busy" status, your requests are being throttled by the storage service. If you see network errors or timeouts, you might be attempting to push through too much data across your infrastructure, and that infrastructure is having difficulty handling it. In all cases, the workaround is similar.
 
 If you see a large file repeatedly failing due to certain chunks failing each time, try to limit the concurrent network connections or throughput limit depending on your specific case. We suggest you lower the performance drastically at first, observe whether it solved the initial problem, then ramp up the performance again until an overall balance is achieved.
 
