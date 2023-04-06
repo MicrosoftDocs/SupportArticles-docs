@@ -7,7 +7,7 @@ ms.author: johndund
 ms.date: 3/31/2023
 ms.subservice: power-automate-desktop-flows
 ---
-# Power Automate service won't start automatically after reboot
+# Power Automate service won't start automatically after restarting
 
 This article provides a resolution for the issue where the Power Automate service or other related services don't automatically start after you restart a computer.
 
