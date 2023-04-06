@@ -1,14 +1,15 @@
 - name: Welcome
   href: welcome-azure-storage.yml
+
 - name: Data migration
-- items:
+  items:
   - name: AzCopy
     items:
     - name: Troubleshoot AzCopy issues
       href: storage-use-azcopy-troubleshoot.md
 
 - name: Blob Storage and Azure Data Lake Store Gen2
-- items:
+  items:
   - name: Embedded application error when install Azure backup agent
     href: ../general/unable-to-execute-the-embedded-application-error-backup-agent.md
   - name: Invalid blob or block content, or invalid block list
@@ -21,13 +22,13 @@
     href: ../general/diagnose-high-cpu-disk-perfinsights.md
 
 - name: Files
-- items:
+  items:
 
 - name: FileSync
-- items:
+  items:
 
 - name: Monitoring, metrics and logs
-- items:
+  items:
   - name: Azure Monitor metrics and logs with Storage accounts
     items:
     - name: Troubleshoot availability issues
@@ -49,6 +50,7 @@
     href: storage-explorer-troubleshooting.md
 
 - name: Table and Queues
-- items: 
+  items:
+
 
 
