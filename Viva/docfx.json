@@ -42,7 +42,10 @@
       "titleSuffix": "Viva",
       "hideEdit": true,
       "uhfHeaderId": "MSDocsHeader-M365-IT",
-      "searchScope": ["Viva Support"] 
+      "searchScope": ["Viva Support"],
+      "contributors_to_exclude": [ 
+        "beccarobins"
+      ]
     },
     "fileMetadata": {
       "ms.service": {
