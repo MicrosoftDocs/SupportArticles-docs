@@ -19,7 +19,7 @@ This guide shows you how to use features such as Azure Storage Analytics, client
 
 This guide is intended to be read primarily by developers of online services that use Azure Storage Services and IT Pros responsible for managing such online services. The goals of this guide are:
 
-- To help you maintain the health and performance of your Azure Storage accounts.
+- To h you maintain the health and performance of your Azure Storage accounts.
 - To provide you with the necessary processes and tools to help you decide whether an issue or problem in an application relates to Azure Storage.
 - To provide you with actionable guidance for resolving problems related to Azure Storage.
 
