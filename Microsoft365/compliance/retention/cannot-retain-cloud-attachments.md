@@ -1,6 +1,6 @@
 ---
 title: Can't retain cloud attachments
-description: Provides a table to identify which sharing mechanisms are cloud attachments in Outlook and Teams and which are not for retention.
+description: Provides a table to identify which sharing mechanisms are cloud attachments in Outlook and Teams for retention and which aren't.
 author: v-charloz
 ms.author: v-chazhang
 manager: dcscontentpm
@@ -21,7 +21,7 @@ ms.date: 3/31/2022
 
 [!include[Purview banner](../../../includes/purview-rebrand.md)]
 
-Microsoft Purview provides tools that admins can use to retain cloud attachments that users share through Teams and Outlook. If you've configured cloud attachments to be retained, but you can't find them by using eDiscovery, it might be that the items were not actually cloud attachments but separate copies, standard URL links, or other sharing mechanisms. Use the following table to identify which sharing mechanisms are cloud attachments in Outlook and Teams.
+Microsoft Purview provides tools that admins can use to retain cloud attachments that users share through Teams and Outlook. If you've configured cloud attachments to be retained, but you can't find them by using eDiscovery, it might be that the items weren't actually cloud attachments but separate copies, standard URL links, or other sharing mechanisms. Use the following table to identify which sharing mechanisms are cloud attachments in Outlook and Teams.
 
 For information about how to retain cloud attachments that are shared in Outlook and Teams, and known limitations for this scenario, refer to the retention label condition for cloud attachments in [Automatically apply a retention label to retain or delete content](/microsoft-365/compliance/apply-retention-labels-automatically).
 
