@@ -57,14 +57,14 @@ If you want to access blob containers, Azure Data Lake Storage Gen2 containers o
 1. Select the resource type you want to connect to.
 1. Select **Sign in using Azure Active Directory (Azure AD)** > **Next**.
 1. Select the user account and tenant associated with the resource you're attaching to, and then select **Next**.
-1. Type the URL to the resource and then type a unique display name for the connection. Select **Next** and then select **Connect**.
+1. Type the URL to the resource and then type a unique display name for the connection. Select **Next** > **Connect**.
 
 Currently, there isn't an Azure RBAC-related solution for other resource types. As a workaround, you can request a shared access signature URL and then attach it to your resource:
 
 1. Open the **Connect** dialog box.
 1. Select the resource type you want to connect to.
 1. Select **Shared access signature (SAS)** > **Next**.
-1. Type the shared access signature URL you received and enter a unique display name for the connection. Select **Next** and then select **Connect**.
+1. Type the shared access signature URL you received and enter a unique display name for the connection. Select **Next** > **Connect**.
 
 For more information on how to attach to resources, see [Attach to an individual resource](/azure/vs-azure-tools-storage-manage-with-storage-explorer#attach-to-an-individual-resource).
 
@@ -563,7 +563,7 @@ Many libraries needed by Storage Explorer may be missing in SLES environments. I
 
 For Storage Explorer 1.7.0 or earlier versions, you might have to patch the version of .NET Core used by Storage Explorer:
 
-1. Go to the [StreamJsonRpc](https://www.nuget.org/packages/StreamJsonRpc/1.5.43) page and download version 1.5.43. from the **Download package** link on the right side.
+1. Go to the [NuGet](https://www.nuget.org/packages/StreamJsonRpc/1.5.43) page and download version 1.5.43 of StreamJsonRpc from the **Download package** link on the right side.
 1. After you download the package, change its file extension from .nupkg to .zip.
 1. Unzip the package.
 1. Open the *streamjsonrpc.1.5.43/lib/netstandard1.1/* folder.
