@@ -1,3 +1,7 @@
-- name: Exchange 
+- name: Learn
   tocHref: /
-  topicHref: /exchange/troubleshoot/index
+  topicHref: /
+  items:
+  - name: Exchange
+    tocHref: /exchange/troubleshoot/
+    topicHref: /exchange/troubleshoot/index
