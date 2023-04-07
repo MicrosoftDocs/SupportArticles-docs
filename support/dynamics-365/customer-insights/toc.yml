@@ -13,6 +13,8 @@
           href: exports/environment-not-showing-in-power-bi.md
         - name: Errors on date fields when loading Customer Insights entities in Power BI Desktop
           href: exports/error-date-fields-power-bi-connector.md
+        - name: Exports fail with error stating that the following name already exists
+          href: exports/export-fails-name-already-exists.md
         - name: Troubleshoot segment not eligible for export
           href: exports/ineligible-segments-b-to-b.md
     - name: Insights
