@@ -66,7 +66,7 @@ In PowerShell, use the [Add-LocalGroupMember](/powershell/module/microsoft.power
 
 ## Low disk space
 
-By default, Docker stores images in the *%ProgramData%/Docker/* folder, which is typically on the system drive, *C:\ProgramData\Docker\\*. To prevent images from taking up valuable space on the system drive, you can change the image folder location. To do so:
+By default, Docker stores images in the *%ProgramData%/Docker/* folder, which is typically on the system drive, _C:\ProgramData\Docker\\_. To prevent images from taking up valuable space on the system drive, you can change the image folder location. To do so:
 
  1. Right-click on the Docker icon on the task bar and select **Settings**.
  1. Select **Docker Engine**.

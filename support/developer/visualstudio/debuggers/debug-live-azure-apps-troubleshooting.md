@@ -239,12 +239,12 @@ You can find Instrumentation logs in the following locations:
 
 Snapshot Debugging and Application Insights depend on an ICorProfiler, which loads into the site process and causes file locking issues during upgrade. We recommend this process to ensure there's no down-time to your production site.
 
-1. Create a [Deployment Slot](/azure/app-service/web-sites-staged-publishing) within your App Service and deploy your site to the Slot.
-1. Swap the Slot with production from Cloud Explorer in Visual Studio or from the Azure portal.
-1. Stop the Slot site. It takes a few seconds to kill off the site _w3wp.exe_ process from all instances.
-1. Upgrade the Slot site extension from the Kudu site or the Azure portal (**App Service Blade > Development Tools > Extensions > Update**).
-1. Start the Slot site. We recommend visiting the site to warm it up again.
-1. Swap the Slot with production.
+- Create a [Deployment Slot](/azure/app-service/web-sites-staged-publishing) within your App Service and deploy your site to the Slot.
+- Swap the Slot with production from Cloud Explorer in Visual Studio or from the Azure portal.
+- Stop the Slot site. It takes a few seconds to kill off the site _w3wp.exe_ process from all instances.
+- Upgrade the Slot site extension from the Kudu site or the Azure portal (**App Service Blade > Development Tools > Extensions > Update**).
+- Start the Slot site. We recommend visiting the site to warm it up again.
+- Swap the Slot with production.
 
 ## References
 
