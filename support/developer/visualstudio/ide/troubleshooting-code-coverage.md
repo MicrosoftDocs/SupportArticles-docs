@@ -16,7 +16,7 @@ The code coverage analysis tool in Visual Studio collects data for native and ma
 
 If you choose an **Analyze Code Coverage** command on the **Test** menu, and if the build and tests run successfully, then you should see a list of results in the **Code Coverage** window. You might have to expand the items to see the detail.
 
-:::image type="content" source="media/troubleshooting-code-coverage/codecoverage.png" alt-text="Screenshot that shows code coverage results with coloring.":::
+:::image type="content" source="media/troubleshooting-code-coverage/code-coverage.png" alt-text="Screenshot that shows code coverage results with coloring.":::
 
 For more information, see [Use code coverage to determine how much code is being tested](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested).
 
