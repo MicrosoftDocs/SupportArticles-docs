@@ -1,7 +1,7 @@
 ---
 title: Third-party storage solutions support policy
 description: Explains the Microsoft third-party storage software solutions support policy that works in conjunction with Microsoft server products.
-ms.date: 9/24/2021
+ms.date: 04/07/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 841696
 
 ## Introduction
 
-If you are using third-party storage solutions that run in conjunction with Microsoft server products such as Microsoft Exchange Server and Microsoft SQL Server, you may find occasions where you require support for the configuration. You can contact Microsoft Product Support Services (PSS) if you require help, although depending on your configuration, PSS may provide support directly, or may instruct you to contact the storage vendor if you require help.
+If you're using third-party storage solutions that run in conjunction with Microsoft server products such as Microsoft Exchange Server and Microsoft SQL Server, you may find occasions where you require support for the configuration. You can contact Microsoft Product Support Services (PSS) if you require help, although depending on your configuration, PSS may provide support directly, or may instruct you to contact the storage vendor if you require help.
 
 ## More information
 
@@ -32,7 +32,7 @@ Exchange, SQL Server, and other Microsoft software products that run on Windows 
 
 ### Third-party software that is running on Designed for Windows targets
 
-Many storage vendors offer software solutions for backup, replication, mirroring, and snapshots that are for use with their storage products. Some Microsoft customers have used these products. They are frequently well integrated as part of an overall hardware solution. If you run these third-party products on a Windows system that is attached to a storage target device (such as SCSI, Fibre Channel, or iSCSI) that qualifies under the Designed for Windows Logo program, you do not void the basic support for the device. However, if a problem exists with the program or the hardware product directly, you must contact the product manufacturer or vendor for support. If it is appropriate, Microsoft may work in conjunction with the third-party vendor to resolve the issue after you make initial contact with the third-party vendor or manufacturer.
+Many storage vendors offer software solutions for backup, replication, mirroring, and snapshots that are for use with their storage products. Some Microsoft customers have used these products. They're frequently well integrated as part of an overall hardware solution. If you run these third-party products on a Windows system that is attached to a storage target device (such as SCSI, Fibre Channel, or iSCSI) that qualifies under the Designed for Windows Logo program, you don't void the basic support for the device. However, if a problem exists with the program or the hardware product directly, you must contact the product manufacturer or vendor for support. If it's appropriate, Microsoft may work in conjunction with the third-party vendor to resolve the issue after you make initial contact with the third-party vendor or manufacturer.
 
 > [!NOTE]
 > For third-party software programs that install drivers, this policy applies only if all the included drivers are signed. This includes filter drivers, system drivers, and others.
@@ -42,7 +42,7 @@ When you use a third-party program on qualified hardware such as block mode devi
 > [!NOTE]
 > For third-party software programs that install drivers, this policy only applies if all the included drivers are signed. This includes filter drivers, system drivers, and others.
 
-Microsoft will not offer direct support for third-party software that is used on qualified hardware, just as Microsoft does not offer direct support for other third-party independent programs that run on Windows. If you call Microsoft for support for third-party software that is used in conjunction with qualified hardware, and PSS determines that there is a problem with the third-party software product, PSS will refer you to the software vendor.
+Microsoft won't offer direct support for third-party software that is used on qualified hardware, just as Microsoft doesn't offer direct support for other third-party independent programs that run on Windows. If you call Microsoft for support for third-party software that is used in conjunction with qualified hardware, and PSS determines that there's a problem with the third-party software product, PSS will refer you to the software vendor.
 
 ### The role of Volume Shadow Copy Service
 
@@ -52,16 +52,12 @@ Because VSS is an API that is licensed and built upon by these third parties, Mi
 
 When designed and implemented correctly, VSS-enabled products help make sure that synchronization occurs between the server program, the backup program, and the Windows storage subsystem. VSS-enabled products help make sure that pending writes are held while the backup is created. VSS-enabled products help make sure that system state information is accurately captured. This is especially true when backing up Exchange, SQL Server, the Microsoft Cluster Service (MSCS), and the Active Directory directory service.
 
-For additional information about VSS, visit the following Microsoft [Web site](https://www.microsoft.com/windowsserversystem/storage/technologies/vss/default.mspx).
-
 ### Role of the Microsoft Certified for Windows program
 
 The Microsoft Certified for Windows program is a logo program for Windows Server software programs. This is a third-party testing process that is conducted by VeriTest for Windows 2000 Server and Windows Server 2003 logos.
 
-For more information about the Certified for Windows program, visit the following [Web site](https://www.microsoft.com/windowsserver2003/partners/isvs/cfwfaq.mspx).
-
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, regarding the performance or reliability of these products.  
- Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.  
+ Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft doesn't guarantee the accuracy of this third-party contact information.  
 
 ## References
 
