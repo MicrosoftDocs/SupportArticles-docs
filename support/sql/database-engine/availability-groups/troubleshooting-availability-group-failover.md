@@ -9,15 +9,15 @@ ms.author: v-jayaramanp
 ms.reviewer: cmathews
 ---
 
-# Troubleshoot Always On Availability Group Failover
+# Troubleshoot Always On availability group failover
 
 This article provides troubleshooting steps to help you determine why your availability group failed over.
 
 ## Symptoms and effects of Always On health issue or failover
 
-Always On implements robust health monitoring through different mechanisms to ensure the health of the SQL Server instance hosting the primary replica, the underlying Cluster, and the system health. The production workload is momentarily interrupted when a Windows Cluster or Always On health problem is identified.
+Always On implements robust health monitoring through different mechanisms to ensure the health of the Microsoft SQL Server instance that hosts the primary replica, the underlying cluster, and the system health. The production workload is momentarily interrupted when a Windows cluster or Always On health problem is identified.
 
-When a health condition is detected, the following sequence of events usually occur. Hereafter in this troubleshooter, whenever a health event is mentioned, it is in reference to the following events.
+When a health condition is detected, the following sequence of events usually occurs. Throughout this troubleshooter, health events are mentioned in reference to the following events:
 
 - Availability group replicas and databases transition from primary role to resolving role.
 
@@ -25,13 +25,13 @@ When a health condition is detected, the following sequence of events usually oc
 
 - Windows Cluster marks the availability group clustered resource as failed.
 
-- Windows Cluster attempts to bring the availability group role back online (on original or automatic failover partner replica).
+- Windows Cluster tries to bring the availability group role back online (on original or automatic failover partner replica).
 
 - Availability group online is successful if it's detected to be healthy by Always On and Windows Cluster health monitoring.
 
 If successful, the availability group replicas and databases transition to the primary role and the availability group databases come online and are accessible by your application.
 
-### Applications fail to access the availability group database(s)
+### Applications can't access the availability group databases
 
 When a health condition is detected, the availability group replica and databases transition to the Resolving role and the availability group databases are taken offline. Once the replica comes online in the primary role (on the original replica server or the failover partner replica server), the replica and databases again transition to online. While the replica and databases are resolving and are offline, applications attempting to access those availability group databases fail with error 983 `Unable to access availability database...`. This error is also recorded in the SQL Server error log if SQL Server is configured to record failed login attempts.
 
