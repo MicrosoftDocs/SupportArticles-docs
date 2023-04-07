@@ -47,7 +47,7 @@ The [End-to-end tracing](#end-to-end-tracing) section describes how you can corr
 
 The [Troubleshooting guidance](#troubleshooting-guidance) section provides troubleshooting guidance for some of the common storage-related issues you might encounter.
 
-The [Appendices](#appendices) section includes information about using other tools, such as Wireshark and Netmon, for analyzing network packet data and Fiddler for analyzing HTTP/HTTPS messages.
+The [Appendices](#appendices) section includes information about using other tools, such as Wireshark and Netmon for analyzing network packet data, and Fiddler for analyzing HTTP/HTTPS messages.
 
 ## <a name="monitoring-your-storage-service"></a>Monitoring your storage service
 
