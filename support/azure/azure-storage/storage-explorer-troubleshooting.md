@@ -336,7 +336,7 @@ If the owner of a subscription or account has granted you access to a resource, 
 
 ## Connection string doesn't have complete configuration settings
 
-If you receive this error message, it's possible that you don't have the necessary permissions to obtain the keys to your storage account. To confirm, go to the portal and locate your storage account. Right-click the node for your storage account and select **Open in Portal**. Then, go to the **Access Keys** pane. If you don't have permission to view keys, you'll see a "You don't have access" message. To work around this issue, you can obtain either an account name and key or an account shared access signature and use it to attach the storage account.
+If you receive this error message, it's possible that you don't have the necessary permissions to obtain the keys for your storage account. To confirm, go to the portal and locate your storage account. Right-click the node for your storage account and select **Open in Portal**. Then, go to the **Access Keys** pane. If you don't have permission to view keys, you'll see a "You don't have access" message. To work around this issue, you can obtain either an account name and key or an account shared access signature and use it to attach the storage account.
 
 If you do see the account keys, file an issue in GitHub so we can help you resolve the issue.
 
