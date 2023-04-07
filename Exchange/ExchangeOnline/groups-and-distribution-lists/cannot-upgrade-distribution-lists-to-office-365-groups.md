@@ -1,6 +1,6 @@
 ---
-title: Cannot upgrade distribution lists to Microsoft 365 groups
-description: If a custom email address policy is applied to the tenant for your distribution lists, the distribution lists can't be upgraded to Microsoft 365 groups.
+title: Can't upgrade distribution lists to Microsoft 365 groups
+description: Provides a resolution if you're unable to upgrade a distribution list to a Microsoft 365 group.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -35,7 +35,7 @@ The following conditions prevent a distribution list from being upgraded:
 * Is an on-premises, managed distribution list
 * Has more than 100 owners
 * Has only members but no owner
-* Has one or more members whose **RecipientTypeDetails** value is not UserMailbox, SharedMailbox, TeamMailbox, or MailUser
+* Has one or more members whose **RecipientTypeDetails** value isn't **UserMailbox**, **SharedMailbox**, **TeamMailbox**, or **MailUser**
 * Is configured to be a forwarding address for a shared mailbox
 * Is part of a sender restriction in another distribution list
 * Has an alias that contains special characters
