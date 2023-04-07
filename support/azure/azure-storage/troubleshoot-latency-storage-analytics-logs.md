@@ -74,7 +74,7 @@ The following steps demonstrate how to identify and troubleshoot latency issues 
 
    - `Operation-type` = `GetBlob`
    - `request-status` = `SASNetworkError`
-   - `End-to-End-Latency-In-Ms` = 8453
+   - `End-to-End-Latency-In-Ms` = 8,453
    - `Server-Latency-In-Ms` = 391
 
    `End-to-End Latency` is calculated using the following equation:
@@ -85,7 +85,7 @@ The following steps demonstrate how to identify and troubleshoot latency issues 
 
    - `Client Latency` = `End-to-End Latency` – `Server-Latency`
 
-        Example: 8453 – 391 = 8062 ms
+        Example: 8,453 – 391 = 8,062 ms
 
    The following table provides information about the high-latency OperationType and RequestStatus results:
 
