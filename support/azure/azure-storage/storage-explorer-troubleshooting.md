@@ -55,7 +55,7 @@ If you want to access blob containers, Azure Data Lake Storage Gen2 containers o
 
 1. Open the **Connect** dialog box.
 1. Select the resource type you want to connect to.
-1. Select **Sign in using Azure Active Directory (Azure AD)** and then select **Next**.
+1. Select **Sign in using Azure Active Directory (Azure AD)** > **Next**.
 1. Select the user account and tenant associated with the resource you're attaching to, and then select **Next**.
 1. Type the URL to the resource and then type a unique display name for the connection. Select **Next** and then select **Connect**.
 
@@ -63,7 +63,7 @@ Currently, there isn't an Azure RBAC-related solution for other resource types. 
 
 1. Open the **Connect** dialog box.
 1. Select the resource type you want to connect to.
-1. Select **Shared access signature (SAS)** and then select **Next**.
+1. Select **Shared access signature (SAS)** > **Next**.
 1. Type the shared access signature URL you received and enter a unique display name for the connection. Select **Next** and then select **Connect**.
 
 For more information on how to attach to resources, see [Attach to an individual resource](/azure/vs-azure-tools-storage-manage-with-storage-explorer#attach-to-an-individual-resource).
@@ -463,19 +463,19 @@ Storage Explorer requires the [.NET 6 runtime](/dotnet/core/install/linux) to be
 
 Many libraries needed by Storage Explorer come preinstalled with Canonical's standard installations of Ubuntu. Custom environments might be missing some of these libraries. If you have issues launching Storage Explorer, make sure the following packages are installed on your system:
 
-- iproute2
-- libasound2
-- libatm1
-- libgconf-2-4
-- libnspr4
-- libnss3
-- libpulse0
-- libsecret-1-0
-- libx11-xcb1
-- libxss1
-- libxtables11
-- libxtst6
-- xdg-utils
+- `iproute2`
+- `libasound2`
+- `libatm1`
+- `libgconf-2-4`
+- `libnspr4`
+- `libnss3`
+- `libpulse0`
+- `libsecret-1-0`
+- `libx11-xcb1`
+- `libxss1`
+- `libxtables11`
+- `libxtst6`
+- `xdg-utils`
 
 ## [Red Hat Enterprise Linux](#tab/linux-rhel)
 
@@ -503,19 +503,19 @@ Storage Explorer requires the [.NET 6 runtime](/dotnet/core/install/linux) to be
 
 Many libraries needed by Storage Explorer may be missing in RHEL environments. If you have issues launching Storage Explorer, make sure the following packages (or their RHEL equivalents) are installed on your system:
 
-- iproute2
-- libasound2
-- libatm1
-- libgconf-2-4
-- libnspr4
-- libnss3
-- libpulse0
-- libsecret-1-0
-- libx11-xcb1
-- libxss1
-- libxtables11
-- libxtst6
-- xdg-utils
+- `iproute2`
+- `libasound2`
+- `libatm1`
+- `libgconf-2-4`
+- `libnspr4`
+- `libnss3`
+- `libpulse0`
+- `libsecret-1-0`
+- `libx11-xcb1`
+- `libxss1`
+- `libxtables11`
+- `libxtst6`
+- `xdg-utils`
 
 ## [SUSE Linux Enterprise Server](#tab/linux-sles)
 
@@ -543,19 +543,19 @@ Storage Explorer requires the [.NET 6 runtime](/dotnet/core/install/linux) to be
 
 Many libraries needed by Storage Explorer may be missing in SLES environments. If you have issues launching Storage Explorer, make sure the following packages (or their SLES equivalents) are installed on your system:
 
-- iproute2
-- libasound2
-- libatm1
-- libgconf-2-4
-- libnspr4
-- libnss3
-- libpulse0
-- libsecret-1-0
-- libx11-xcb1
-- libxss1
-- libxtables11
-- libxtst6
-- xdg-utils
+- `iproute2`
+- `libasound2`
+- `libatm1`
+- `libgconf-2-4`
+- `libnspr4`
+- `libnss3`
+- `libpulse0`
+- `libsecret-1-0`
+- `libx11-xcb1`
+- `libxss1`
+- `libxtables11`
+- `libxtst6`
+- `xdg-utils`
 
 ---
 
@@ -563,7 +563,7 @@ Many libraries needed by Storage Explorer may be missing in SLES environments. I
 
 For Storage Explorer 1.7.0 or earlier versions, you might have to patch the version of .NET Core used by Storage Explorer:
 
-1. Download version 1.5.43 of StreamJsonRpc [from NuGet](https://www.nuget.org/packages/StreamJsonRpc/1.5.43).1. Look for the **Download package** link on the right side of the page.
+1. Go to the [StreamJsonRpc](https://www.nuget.org/packages/StreamJsonRpc/1.5.43) page and download version 1.5.43. from the **Download package** link on the right side.
 1. After you download the package, change its file extension from .nupkg to .zip.
 1. Unzip the package.
 1. Open the *streamjsonrpc.1.5.43/lib/netstandard1.1/* folder.
@@ -572,7 +572,7 @@ For Storage Explorer 1.7.0 or earlier versions, you might have to patch the vers
    - *StorageExplorer/resources/app/ServiceHub/Services/Microsoft.Developer.IdentityService/*
    - *StorageExplorer/resources/app/ServiceHub/Hosts/ServiceHub.Host.Core.CLR.x64/*
 
-## Open In Explorer button in the Azure portal doesn't work
+## "Open In Explorer" button in the Azure portal doesn't work
 
 If the **Open In Explorer** button in the Azure portal doesn't work, make sure you're using a compatible browser. The following browsers were tested for compatibility:
 
@@ -671,3 +671,4 @@ If none of these solutions work for you, use one of the following methods:
     :::image type="content" source="media/storage-explorer-troubleshooting/feedback-button.png" alt-text="Screenshot that shows the feedback button.":::
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+
