@@ -1,6 +1,6 @@
 ---
 title: OneDrive sync error FSLogix_unsupported_environment on VMs
-description: The OneDrive sync client can't sync on virtual machines using FSLogix versions older than FSLogix 2009 hotfix 1.
+description: The OneDrive sync client can't sync on virtual machines that use FSLogix versions earlier than FSLogix 2009 hotfix 1.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -18,21 +18,21 @@ search.appverid:
   - SPO160
 ms.date: 4/7/2023
 ---
-# OneDrive sync error FSLogix_unsupported_environment on virtual machines
+# "FSLogix_unsupported_environment" and OneDrive sync error on virtual machines
 
 ## Symptoms
 
-On virtual machines that are configured with FSLogix, the OneDrive sync client can't sync and returns the following error messages:
+On virtual machines that are configured by using FSLogix, the OneDrive sync client can't sync, and you receive the following error messages:
 
 > OneDrive can't sync  
 > Contact your system administrator for help.  
 > Error code: FSLogix_unsupported_environment
 
-In addition, the OneDrive sync client closes after the error is dismissed.
+Additionally, the OneDrive sync client closes after you close the error message window.
 
 ## Cause
 
-This issue occurs because the OneDrive sync client is blocked on virtual machines using FSLogix versions older than FSLogix 2009 hotfix 1, which are no longer supported by Microsoft.
+This issue occurs because the OneDrive sync client is blocked on virtual machines that use FSLogix versions that are earlier than FSLogix 2009 hotfix 1. These earlier versions are no longer supported by Microsoft.
 
 ## Resolution
 
@@ -40,7 +40,7 @@ To fix the issue, [download and install the latest version of FSLogix](https://a
 
 ## More information
 
-Administrators can use one of the following methods to check the version of FSLogix on virtual machines running in their environment.
+Administrators can use one of the following methods to check the version of FSLogix on virtual machines that are running in their environment.
 
 ### Check the version of FSLogix on multiple virtual machines
 
@@ -50,7 +50,7 @@ Use the [FSLogix Version Validation](https://aka.ms/FSLVersionScript) script.
 
 ### Check the version of FSLogix on one virtual machine
 
-- Use the FSLogix FRX command-line utility:
+- Use the FSLogix FRX command-line tool:
 
   ```console
   C:\Program Files\FSLogix\Apps\frx.exe version
@@ -62,7 +62,7 @@ Use the [FSLogix Version Validation](https://aka.ms/FSLVersionScript) script.
   (Get-ItemProperty -Path HKLM:\SOFTWARE\FSLogix\Apps).InstallVersion
   ```
 
-- Run the following PowerShell commands to get the version of Microsoft FSLogix Apps installed on the system:
+- Run the following PowerShell commands to get the version of Microsoft FSLogix Apps that's installed on the system:
 
   ```powershell
   $uninstallPath = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall"
