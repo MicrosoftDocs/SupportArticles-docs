@@ -35,7 +35,7 @@ The following conditions prevent a distribution list from being upgraded:
 * Is an on-premises, managed distribution list
 * Has more than 100 owners
 * Has only members but no owner
-* Has one or more members whose **RecipientTypeDetails** value is not UserMailbox, SharedMailbox, TeamMailbox, or MailUser
+* Has one or more members whose **RecipientTypeDetails** value is not **UserMailbox**, **SharedMailbox**, **TeamMailbox**, or **MailUser**
 * Is configured to be a forwarding address for a shared mailbox
 * Is part of a sender restriction in another distribution list
 * Has an alias that contains special characters
