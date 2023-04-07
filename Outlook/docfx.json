@@ -109,12 +109,15 @@
       "hideEdit": true,
       "uhfHeaderId": "MSDocsHeader-Outlook.yml",
       "titleSuffix": "Outlook",
-      "searchScope": ["Outlook Support"] ,
+      "searchScope": ["Outlook Support"],
       "contributors_to_exclude": [ 
         "beccarobins"
       ]
     },
     "fileMetadata": {
+      "ms.service": {
+        "**/*.md": "outlook"
+      },
       "ms.subservice": {
         "Mac/account/**/*.md": "account",
         "Mobile/add-ins/**/*.md": "add-ins",
@@ -149,50 +152,9 @@
         "Mac/send-receive-emails/**/*.md": "send-receive-emails",
         "Mac/sign-in/**/*.md": "sign-in",
         "Client/synchronization/**/*.md": "synchronization",
-        "Client/user-interface/**/*.md": "user-interface"
-      },
-      "ms.service": {
-        "Mac/account/**/*.md": "outlook",
-        "Mobile/add-ins/**/*.md": "outlook",
-        "Mac/attachments/**/*.md": "outlook",
-        "Client/authentication/**/*.md": "outlook",
-        "Mac/authentication/**/*.md": "outlook",
-        "Client/calendaring/**/*.md": "outlook",
-        "Mac/calendars/**/*.md": "outlook",
-        "Mac/categories/**/*.md": "outlook",
-        "Client/connectivity/**/*.md": "outlook",
-        "Mac/connectivity/**/*.md": "outlook",
-        "Client/contacts/**/*.md": "outlook",
-        "Client/data-files/**/*.md": "outlook",
-        "Mac/delegation/**/*.md": "outlook",
-        "Client/deployment/**/*.md": "outlook",
-        "Client/development/**/*.md": "outlook",
-        "Mac/diagnostic-logging/**/*.md": "outlook",
-        "Client/email-management/**/*.md": "outlook",
-        "Mac/email-messages/**/*.md": "outlook",
-        "Mobile/exchange-activesync/**/*.md": "outlook",
-        "Mobile/exchange-connectivity/**/*.md": "outlook",
-        "Mac/files-and-folders/**/*.md": "outlook",
-        "Mac/import-and-export/**/*.md": "outlook",
-        "Client/Installation/**/*.md": "outlook",
-        "Mac/installation/**/*.md": "outlook",
-        "Client/junk-email/**/*.md": "outlook",
-        "Client/message-body/**/*.md": "outlook",
-        "Client/performance/**/*.md": "outlook",
-        "Client/profiles-and-accounts/**/*.md": "outlook",
-        "Mac/search/**/*.md": "outlook",
-        "Client/security/**/*.md": "outlook",
-        "Mac/send-receive-emails/**/*.md": "outlook",
-        "Mac/sign-in/**/*.md": "outlook",
-        "Client/synchronization/**/*.md": "outlook",
-        "Client/user-interface/**/*.md": "outlook"
-      },
-      "ms.prod": {
-        "**/*.md": "outlook"
-      },
-      "ms.technology": {
+        "Client/user-interface/**/*.md": "user-interface",
         "OutlookExperts/outlook-for-mac/**/*.md": "outlook-for-mac"
-      }      
+      }          
     },
     "template": [],
     "dest": "OfficeDocs-Support-Outlook",
