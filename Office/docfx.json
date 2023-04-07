@@ -79,6 +79,9 @@
       "searchScope": ["Office Support"] 
     },
     "fileMetadata": {
+      "ms.service": {
+        "**/*.md": "office-perpetual-itpro"     
+      },
       "ms.subservice": {
         "Client/access/**/*.md": "access",
         "Client/activation/**/*.md": "activation",
@@ -107,11 +110,6 @@
         "Client/visio/**/*.md": "visio",
         "Client/word/**/*.md": "word",
         "OfficeExperts/word/**/*.md": "word"
-      },
-      "ms.prod": {
-        "**/*.md": "office-perpetual-itpro"     
-      },
-      "ms.technology": {
       }
     },
     "template": [],
