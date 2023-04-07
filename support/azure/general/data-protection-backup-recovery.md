@@ -6,6 +6,7 @@ ms.service: storage
 ms.author: v-weizhu
 author: AmandaAZ
 ms.reviewer: jiajwu, azurestocic
+ms.topic: how-to
 ---
 # Best practice of Azure Storage data protection, backup and recovery
 
