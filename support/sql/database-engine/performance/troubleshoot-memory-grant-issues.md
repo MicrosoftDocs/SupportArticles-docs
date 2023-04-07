@@ -305,16 +305,16 @@ session_id wait_type               wait_time   granted_query_memory text
 There are multiple Extended events that expose memory grant information and enable you to capture this information via a trace. 
 
 - **sqlserver.additional_memory_grant** - Occurs when a query tries to get more memory grant during execution. Failure to get this additional memory grant may cause the query slowdown.
-**sqlserver.query_memory_grant_blocking** - Occurs when a query is blocking other queries while waiting for memory grant
-**sqlserver.query_memory_grant_info_sampling** - Occurs at the end of the randomly sampled queries providing memory grant information.(It can be used, e.g., for telemetry)
-**sqlserver.query_memory_grant_resource_semaphores** - Occurs at every 5 minute intervals for each resource governor resource pool
-**sqlserver.query_memory_grant_usage** - Occurs at the end of query processing for queries with memory grant over 5MB to let users know about memory grant inaccuracies
-**sqlserver.query_memory_grants** - Occurs at every 5 minute intervals for each query with memory grant
+- **sqlserver.query_memory_grant_blocking** - Occurs when a query is blocking other queries while waiting for memory grant
+- **sqlserver.query_memory_grant_info_sampling** - Occurs at the end of the randomly sampled queries providing memory grant information.(It can be used, e.g., for telemetry)
+- **sqlserver.query_memory_grant_resource_semaphores** - Occurs at every 5 minute intervals for each resource governor resource pool
+- **sqlserver.query_memory_grant_usage** - Occurs at the end of query processing for queries with memory grant over 5MB to let users know about memory grant inaccuracies
+- **sqlserver.query_memory_grants** - Occurs at every 5 minute intervals for each query with memory grant
 
 #### Memory grant feedback extended events
 
-**sqlserver.memory_grant_feedback_loop_disabled** - Occurs when memory grant feedback loop is disabled
-**sqlserver.memory_grant_updated_by_feedback** -  Occurs when memory grant is updated by feedback
+- **sqlserver.memory_grant_feedback_loop_disabled** - Occurs when memory grant feedback loop is disabled
+- **sqlserver.memory_grant_updated_by_feedback** -  Occurs when memory grant is updated by feedback
 
 #### Query execution warnings that relate to memory grants
 
