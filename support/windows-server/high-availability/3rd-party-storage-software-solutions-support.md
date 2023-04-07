@@ -1,7 +1,7 @@
 ---
 title: Third-party storage solutions support policy
 description: Explains the Microsoft third-party storage software solutions support policy that works in conjunction with Microsoft server products.
-ms.date: 9/24/2021
+ms.date: 04/07/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -52,13 +52,9 @@ Because VSS is an API that is licensed and built upon by these third parties, Mi
 
 When designed and implemented correctly, VSS-enabled products help make sure that synchronization occurs between the server program, the backup program, and the Windows storage subsystem. VSS-enabled products help make sure that pending writes are held while the backup is created. VSS-enabled products help make sure that system state information is accurately captured. This is especially true when backing up Exchange, SQL Server, the Microsoft Cluster Service (MSCS), and the Active Directory directory service.
 
-For additional information about VSS, visit the following Microsoft [Web site](https://www.microsoft.com/windowsserversystem/storage/technologies/vss/default.mspx).
-
 ### Role of the Microsoft Certified for Windows program
 
 The Microsoft Certified for Windows program is a logo program for Windows Server software programs. This is a third-party testing process that is conducted by VeriTest for Windows 2000 Server and Windows Server 2003 logos.
-
-For more information about the Certified for Windows program, visit the following [Web site](https://www.microsoft.com/windowsserver2003/partners/isvs/cfwfaq.mspx).
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, regarding the performance or reliability of these products.  
  Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.  

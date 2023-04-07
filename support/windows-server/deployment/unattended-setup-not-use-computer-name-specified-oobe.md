@@ -1,7 +1,7 @@
 ---
 title: Unattended Setup does not Use Computer Name Specified by User during OOBE to Join the Domain
 description: Provides a resolution for the issue that unattended setup does not use Computer Name Specified by User during OOBE to Join the Domain
-ms.date: 9/24/2021
+ms.date: 04/07/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -48,9 +48,6 @@ A workaround is as follows:
 ## More information
 
 This issue is resolved in Windows 7 since a random computer name is used and users are no longer prompted to enter the computer name during the OOBE phase.
-
-Sample script: Join a Computer to a Domain
- [https://www.microsoft.com/technet/scriptcenter/scripts/ad/computer/cptrvb06.mspx?mfr=true](https://www.microsoft.com/technet/scriptcenter/scripts/ad/computer/cptrvb06.mspx?mfr=true) 
 
 ## Disclaimer
 

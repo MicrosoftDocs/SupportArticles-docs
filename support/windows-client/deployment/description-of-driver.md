@@ -1,7 +1,7 @@
 ---
 title: A description of the driver
 description: Describes the device driver requirements for x64-based versions of Windows.
-ms.date: 09/21/2020
+ms.date: 04/07/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -49,8 +49,3 @@ If you experience problems when you try to install a 64-bit driver that is not i
 ### Technical support for Windows x64 editions
 
 Your hardware manufacturer provides technical support and assistance for Microsoft Windows x64 editions. Your hardware manufacturer provides support because a Windows x64 edition was included with your hardware. Your hardware manufacturer might have customized the Windows x64 edition installation with unique components. Unique components might include specific device drivers or might include optional settings to maximize the performance of the hardware. Microsoft will provide reasonable-effort assistance if you need technical help with your Windows x64 edition. However, you might have to contact your manufacturer directly. Your manufacturer is best qualified to support the software that your manufacturer installed on the hardware.
-
-For product information about Microsoft Windows XP Professional x64 Edition, visit the following Microsoft Web site:  
-[https://www.microsoft.com/windowsxp/64bit/default.mspx](https://www.microsoft.com/windowsxp/64bit/default.mspx)  
-For product information about Microsoft Windows Server 2003 x64 editions, visit the following Microsoft Web site:  
-[https://www.microsoft.com/windowsserver2003/64bit/x64/editions.mspx](https://www.microsoft.com/windowsserver2003/64bit/x64/editions.mspx)
