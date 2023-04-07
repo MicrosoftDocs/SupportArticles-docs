@@ -27,7 +27,7 @@ You can't upgrade your distribution lists (also known as distribution groups) to
 
 ## Cause
 
-You can upgrade only cloud-managed, simple, non-nested distribution lists to Microsoft 365 Groups.  
+You can upgrade only cloud-managed, simple, non-nested distribution lists to Microsoft 365 groups.  
 
 The following conditions prevent a distribution list from being upgraded:  
 
