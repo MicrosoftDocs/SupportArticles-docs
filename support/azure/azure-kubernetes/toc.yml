@@ -44,6 +44,8 @@
     items:
     - name: Upgrade fails because of NSG rules
       href: upgrade-fails-because-of-nsg-rules.md
+    - name: NodePoolMcVersionIncompatible error
+      href: nodepoolmcversionincompatible-error.md
     - name: PodDrainFailure error
       href: error-code-poddrainfailure.md
     - name: PublicIPCountLimitReached error
