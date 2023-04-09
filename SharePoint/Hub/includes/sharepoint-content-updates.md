@@ -2,6 +2,14 @@
 
 
 
+## Week of April 03, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/7/2023 | [OneDrive sync error FSLogix_unsupported_environment on VMs](/sharepoint/troubleshoot/sync/fslogix-unsupported-environment-sync-error-vm) | added |
+
+
 ## Week of March 27, 2023
 
 
