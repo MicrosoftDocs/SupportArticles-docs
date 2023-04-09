@@ -3,12 +3,9 @@ title: Monitor and troubleshoot Azure Storage (classic logs & metrics)
 description: Introduces how to use features like storage analytics, client-side logging, and other third-party tools to identify, diagnose, and troubleshoot Azure Storage-related issues.
 author: AmandaAZ
 ms.service: storage
-ms.date: 04/06/2023
+ms.date: 04/10/2023
 ms.author: v-weizhu
-ms.reviewer: fryu, normesta
-ms.subservice: common
-ms.devlang: csharp
-ms.custom: monitoring, devx-track-csharp
+ms.reviewer: fryu, normesta, azurestocic, jarrettr
 ---
 
 # Monitor, diagnose, and troubleshoot Microsoft Azure Storage (classic)
@@ -473,7 +470,7 @@ If your client application is throwing HTTP 403 (Forbidden) errors, a likely cau
 | `Microsoft.Azure.Storage` |Information |3 |85d077ab -… |`Starting synchronous request to https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests#Synchronous_request.` |
 | `Microsoft.Azure.Storage` |Information |3 |85d077ab -… |`Waiting for response.` |
 | `Microsoft.Azure.Storage` |Warning |2 |85d077ab -… |`Exception thrown while waiting for response: The remote server returned an error: (403) Forbidden.` |
-| `Microsoft.Azure.Storage` |Information |3 |85d077ab -… |`Response received. Status code = 403, Request ID = 9d67c64a-64ed-4b0d-9515-3b14bbcdc63d, Content-MD5 = , ETag = .` |
+| `Microsoft.Azure.Storage` |Information |3 |85d077ab -… |`Response received. Status code = 403, Request ID = <Request ID>, Content-MD5 = , ETag = .` |
 | `Microsoft.Azure.Storage` |Warning |2 |85d077ab -… |`Exception thrown during the operation: The remote server returned an error: (403) Forbidden..` |
 | `Microsoft.Azure.Storage` |Information |3 |85d077ab -… |`Checking if the operation should be retried. Retry count = 0, HTTP status code = 403, Exception = The remote server returned an error: (403) Forbidden..` |
 | `Microsoft.Azure.Storage` |Information |3 |85d077ab -… |`The next location has been set to Primary, based on the location mode.` |
@@ -574,8 +571,8 @@ The following table shows a sample server-side log message from the Storage Logg
 | Service type       | Blob                         |
 | Request URL         | `https://domemaildist.blob.core.windows.net/azureimblobcontainer/blobCreatedViaSAS.txt` |
 | &nbsp;                 |   ?sv=2014-02-14&sr=c&si=mypolicy&sig=XXXXX&;api-version=2014-02-14 |
-| Request ID header  | a1f348d5-8032-4912-93ef-b393e5252a3b |
-| Client request ID  | 2d064953-8436-4ee0-aa0c-65cb874f7929 |
+| Request ID header  | \<Request ID header> |
+| Client request ID  | \<Client request ID> |
 
 Investigate why your client application is attempting to perform an operation for which it hasn't been granted permissions.
 
@@ -638,7 +635,7 @@ client.SetServiceProperties(sp);
 
 ---
 
-#### <a name="network-failure"></a>Network Failure
+#### <a name="network-failure"></a>Network failure
 
 In some circumstances, lost network packets can lead to the storage service returning HTTP 404 messages to the client. For example, when your client application is deleting an entity from the table service, you see the client throw a storage exception reporting an "HTTP 404 (Not Found)" status message from the table service. When you investigate the table in the table storage service, you see that the service did delete the entity as requested.
 

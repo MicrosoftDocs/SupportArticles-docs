@@ -4,8 +4,9 @@ description: Provides debugging techniques for Azure Storage Explorer.
 services: storage
 author: AmandaAZ
 ms.service: storage
-ms.date: 04/06/2023
+ms.date: 04/10/2023
 ms.author: v-weizhu
+ms.reviewer: azurestocic, jarrettr
 ---
 
 # Azure Storage Explorer troubleshooting guide
@@ -158,11 +159,11 @@ If you have conditional access policies that need to be satisfied for your accou
 
 ### Browser complains about HTTP redirect or insecure connection during sign-in
 
-When Storage Explorer performs sign-in in your web browser, a redirect to `localhost` is done at the end of the sign-in process. Browsers sometimes raise a warning or error that the redirect is being performed with HTTP instead of HTTPS. Some browsers might also try to force the redirect to be performed with HTTPS. If either of these issues happens, depending on your browser, you have options:
+When Storage Explorer performs sign-in in your web browser, a redirect to localhost is done at the end of the sign-in process. Browsers sometimes raise a warning or error that the redirect is being performed with HTTP instead of HTTPS. Some browsers might also try to force the redirect to be performed with HTTPS. If either of these issues happens, depending on your browser, you have options:
 
 - Ignore the warning.
-- Add an exception for `localhost`.
-- Disable force HTTPS, either globally or just for `localhost`.
+- Add an exception for localhost.
+- Disable force HTTPS, either globally or just for localhost.
 
 If you can't do any of those options, you can also [change where sign-in happens](/azure/storage/common/storage-explorer-sign-in#changing-where-sign-in-happens) to integrated sign-in to avoid using your browser altogether.
 
@@ -310,7 +311,7 @@ If your networking tool doesn't appear to be logging Storage Explorer traffic, t
 <Error>
     <Code>InvalidQueryParameterValue</Code>
     <Message>Value for one of the query parameters specified in the request URI is invalid.
-        RequestId:57d9d9e5-0001-0008-0143-b28062000000 Time:2017-04-10T21:42:17.3863214Z</Message>
+        RequestId:<RequestId> Time:2017-04-10T21:42:17.3863214Z</Message>
     <QueryParameterName>comp</QueryParameterName>
     <QueryParameterValue/>
     <Reason/>
@@ -379,7 +380,7 @@ After removing connection names, you must clear their corrupted data. Then you c
 
 ## [macOS](#tab/macOS)
 
-1. Open Spotlight by selecting **Command+Space** and search for **Keychain access**.
+1. Open Spotlight by selecting <kbd>Command</kbd> + <kbd>Space</kbd> and search for **Keychain access**.
 1. Look for entries that have the `<connection_type_key>/<corrupted_connection_name>` key. An example is `StorageExplorer_CustomConnections_Accounts_v1/account1`.
 1. Delete and add back these connections.
 
@@ -428,7 +429,7 @@ If you accidentally attached by using an invalid shared access signature URL and
 1. On the **Application** tab, select **Local Storage** > **file://** on the left side.
 1. Find the key associated with the service type of the shared access signature URI. For example, if the bad shared access signature URI is for a blob container, look for the key named `StorageExplorer_AddStorageServiceSAS_v1_blob`.
 1. The value of the key should be a JSON array. Find the object associated with the bad URI, and delete it.
-1. Select <kbd> Ctrl</kbd> +<kbd> R</kbd>  to reload Storage Explorer.
+1. Select <kbd>Ctrl</kbd> +<kbd>R</kbd> to reload Storage Explorer.
 
 ## Storage Explorer dependencies
 
@@ -587,7 +588,7 @@ When you report an issue to GitHub, you might be asked to gather certain logs to
 
 ### Storage Explorer logs
 
-Storage Explorer logs various things to its own application logs. You can easily get to these logs by selecting **Help** > **Open Logs Directory**. By default, Storage Explorer logs at a low level of verbosity. To change the verbosity level, go to **Settings** (the **gear** symbol on the left) > **Application** > **Logging** > **Log Level**. You can then set the log level as needed. For troubleshooting, the `debug` log level is recommended.
+Storage Explorer logs various things to its own application logs. You can easily get to these logs by selecting **Help** > **Open Logs Directory**. By default, Storage Explorer logs at a low level of verbosity. To change the verbosity level, go to **Settings** (the **gear** symbol on the left) > **Application** > **Logging** > **Log Level**. You can then set the log level as needed. For troubleshooting, the debug log level is recommended.
 
 Logs are split into folders for each session of Storage Explorer that you run. For whatever log files you need to share, place them in a zip archive, with files from different sessions in different folders.
 

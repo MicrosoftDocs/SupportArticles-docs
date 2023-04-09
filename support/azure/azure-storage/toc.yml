@@ -21,12 +21,6 @@
   - name: Troubleshoot high CPU or disk usage issues
     href: ../general/diagnose-high-cpu-disk-perfinsights.md
 
-- name: Files
-  items:
-
-- name: FileSync
-  items:
-
 - name: Monitoring, metrics and logs
   items:
   - name: Azure Monitor metrics and logs with Storage accounts
@@ -48,9 +42,6 @@
   items: 
   - name: Troubleshoot Storage Explorer
     href: storage-explorer-troubleshooting.md
-
-- name: Table and Queues
-  items:
 
 
 

@@ -4,9 +4,9 @@ description: Provides workarounds to common issues with AzCopy v10.
 author: AmandaAZ
 ms.service: storage
 ms.subservice: common
-ms.date: 04/03/2023
+ms.date: 04/10/2023
 ms.author: v-weizhu
-ms.reviewer: normesta
+ms.reviewer: normesta, azurestocic, jarrettr
 ---
 # Troubleshoot problems with AzCopy v10
 
@@ -90,10 +90,10 @@ Here are the endpoints that AzCopy needs to use:
 
 | Log in endpoints | Azure Storage endpoints |
 |---|---|
-| `login.microsoftonline.com (global Azure)` | `(blob | file | dfs).core.windows.net (global Azure)` |
-| `login.chinacloudapi.cn (Azure China)` | `(blob | file | dfs).core.chinacloudapi.cn (Azure China)` |
-| `login.microsoftonline.de (Azure Germany)` | `(blob | file | dfs).core.cloudapi.de (Azure Germany)` |
-| `login.microsoftonline.us (Azure US Government)` | `(blob | file | dfs).core.usgovcloudapi.net (Azure US Government)` |
+| `login.microsoftonline.com` (global Azure) | `(blob | file | dfs).core.windows.net` (global Azure) |
+| `login.chinacloudapi.cn` (Azure China) | `(blob | file | dfs).core.chinacloudapi.cn` (Azure China) |
+| `login.microsoftonline.de` (Azure Germany) | `(blob | file | dfs).core.cloudapi.de` (Azure Germany) |
+| `login.microsoftonline.us` (Azure US Government) | `(blob | file | dfs).core.usgovcloudapi.net` (Azure US Government) |
 
 ## x509: certificate signed by unknown authority
 

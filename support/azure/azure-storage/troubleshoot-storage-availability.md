@@ -3,10 +3,9 @@ title: Troubleshoot availability issues in Azure Storage accounts
 description: Identifies and troubleshoots availability issues in Azure Storage accounts.
 author: AmandaAZ
 ms.author: v-weizhu
-ms.date: 04/06/2023
-ms.reviewer: normesta
+ms.date: 04/10/2023
+ms.reviewer: normesta, azurestocic, jarrettr
 ms.service: storage
-ms.subservice: common
 ---
 
 # Troubleshoot availability issues in Azure Storage accounts
@@ -48,7 +47,7 @@ If you're seeing spikes in throttling errors that coincide with periods of high 
 
 If you're seeing a consistently high value for throttling errors following a permanent increase in your transaction volumes or when you're performing your initial load tests on your application, then you need to evaluate how your application is using storage partitions and whether it's approaching the scalability targets for a storage account. For example, if you're seeing throttling errors on a queue (which counts as a single partition), then you consider using additional queues to spread the transactions across multiple partitions. If you're seeing throttling errors on a table, consider using a different partitioning scheme to spread your transactions across multiple partitions by using a wider range of partition key values. One common cause of this issue is the prepend/append anti-pattern, where you select the date as the partition key, and then all data on a particular day is written to one partition (under load, this can result in a write bottleneck). Consider a different partitioning design or evaluate whether using blob storage might be a better solution. Also, check whether throttling is occurring due to spikes in your traffic and investigate ways of smoothing your pattern of requests.
 
-If you distribute your transactions across multiple partitions, you must still be aware of the scalability limits set for the storage account. For example, if you used 10 queues, each processing the maximum of 2,000 messages per second, you'll be at the overall limit of 20,000 messages per second for the storage account. If you need to process more than 20,000 entities per second, consider using multiple storage accounts. You should also bear in mind that the size of your requests and entities impacts when the storage service throttles your clients. If you have larger requests and entities, you may be throttled sooner.
+If you distribute your transactions across multiple partitions, you must still be aware of the scalability limits set for the storage account. For example, if you used 10 queues, each processing the maximum of 2,000 1KB messages per second, you'll be at the overall limit of 20,000 messages per second for the storage account. If you need to process more than 20,000 entities per second, consider using multiple storage accounts. You should also bear in mind that the size of your requests and entities impacts when the storage service throttles your clients. If you have larger requests and entities, you may be throttled sooner.
 
 Inefficient query design can also cause you to hit the scalability limits for table partitions. For example, a query with a filter that only selects one percent of the entities in a partition but that scans all the entities in a partition will need to access each entity. Every entity read will count toward the total number of transactions in that partition. Therefore, you can easily reach the scalability targets.
 
