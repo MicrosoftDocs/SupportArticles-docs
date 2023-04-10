@@ -6,11 +6,11 @@ ms.prod-support-area-path:
 ---
 # Remove duplicate Management pack aliases
 
-This article describes the procedure to remove duplicate management pack aliases before upgrading to System Center Operations Manager 2019 UR4.
+With System Center Operations Manager 2019 UR4 and 2022 RTM, System Center Operations Manager management pack reference aliases are case-sensitive and will create only unique aliases. As a result, System Center Operations Manager update rollup upgrades or version upgrades will fail in an environment where duplicate management pack reference aliases are already present.
 
-## Prerequisites
+This article helps remove the duplicate management pack reference aliases (if present) so that System Center Operations Manager update rollup upgrades or version upgrades complete successfully.
 
-Ensure to remove all duplicate management pack aliases before you upgrade to System Center Operations Manager 2019 UR4. 
+Ensure to remove all duplicate management pack aliases before you upgrade to System Center Operations Manager 2019 UR4.
 
 ## Detect duplicate management pack aliases
 
