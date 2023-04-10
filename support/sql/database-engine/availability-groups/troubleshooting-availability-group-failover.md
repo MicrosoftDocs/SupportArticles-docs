@@ -27,7 +27,7 @@ When a health condition is detected, the following sequence of events usually oc
 
 - Windows Cluster tries to bring the availability group role back online (on original or automatic failover partner replica).
 
-- Availability group components run online successfully if it's detected to be healthy by AlwaysOn and Windows Cluster health monitoring.
+- Availability group role comes online successfully if it's detected to be healthy by AlwaysOn and Windows Cluster health monitoring.
 
 If successful, the availability group replicas and databases transition to the Primary role and the availability group databases come online and are accessible by your application.
 
@@ -308,7 +308,7 @@ To check for non-yielding scheduler events, follow these steps:
 
     :::image type="content" source="media/troubleshooting-availability-group-failover/filter-by-this-value.png" alt-text="Screenshot that shows how to check non-yielding scheduler events.":::
 
-1. Define a filter to sort rows in which the **name** column contains "yield," as shown in the following screenshot. This returns all kinds of non-yielding events that might have been recorded in the `system_health` logs.
+1. Define a filter to sort rows in which the **name** column contains "yield" as shown in the following screenshot. This returns all kinds of non-yielding events that might have been recorded in the `system_health` logs.
 
     :::image type="content" source="media/troubleshooting-availability-group-failover/filter-values-for-non-yielding-events.png" alt-text="Screenshot that shows how to sort rows where name contains yield.":::
 
@@ -352,10 +352,10 @@ Review the system event log for possible system clues that could be related to t
 
 AlwaysOn monitors different kinds of SQL Server health events. While it hosts an availability group primary replica, SQL Server continuously runs `sp_server_diagnostics` that reports on SQL Server health by using different components. When any health problems are detected, `sp_server_diagnostics` reports an error for that particular component, and then sends the results back to the AlwaysOn health detection process. When an error is reported, the Availability Group role shows the failed state and possible failover if the availability group is configured to do this.
 
-Here's an example of a SQL Server health issue as reported by sp_server_diagnostics in the cluster log. SQL Server reports an "error" state in the system component to AlwaysOn health monitoring, and the "contoso-ag" availability group is transitioned to a failed state.
+Here's an example of a SQL Server health issue as reported by `sp_server_diagnostics` in the cluster log. SQL Server reports an "error" state in the system component to AlwaysOn health monitoring, and the "contoso-ag" availability group is transitioned to a failed state.
 
 > [!NOTE]
-> A SQL Server health issue generates a similar report to that of health check time-out. Both health events report `Availability Group is not healthy with given HealthCheckTimeout and FailureConditionLevel`. The differentiator for a SQL Server health event reports that the SQL Server component changed from "warning" to "error."
+> A SQL Server health issue generates a similar report to that of health check time-out. Both health events report `Availability Group is not healthy with given HealthCheckTimeout and FailureConditionLevel`. The state of the SQL Server component changed from "warning" to "error".
 
 ```output
 00001334.000003d8::2019/06/20-19:05:52.330 INFO [RES] SQL Server Availability Group: [hadrag] SQL Server component 'system' health state has been changed from 'warning' to 'error' at 2019-06-20 15:05:52.330
@@ -395,11 +395,11 @@ To identify the AlwaysOn specific health issue, follow these steps:
 
    You'll see a new tabbed window in SSMS that includes the extended events, as shown in the following screenshot.
 
-1. Locate the `component_health_result` that reported the 'state_desc' error while checking your availability group health event. Here's an example of a system component event that reported error back to AlwaysOn health monitoring:
+1. To investigate a SQL Server health issue, locate the `component_health_result` whose `state_desc` is `error`. Here is an example of a system component event that reported error back to AlwaysOn health monitoring:
 
    :::image type="content" source="media/troubleshooting-availability-group-failover/system-component-event-health-monitoring.png" alt-text="Screenshot of system component event that reported error.":::
 
-1. Double-click **data** in the lower pane. This opens the detailed component data in a new SSMS window pane for review. Here's what the system component data looks like.
+1. Double-click the **data** column in the lower pane, which will open the detailed component data in a new SSMS window pane for review. Here's what the system component data looks like:
 
    :::image type="content" source="media/troubleshooting-availability-group-failover/detailed-component-data-ssms-window.png" alt-text="Screenshot of detailed component data.":::
 
