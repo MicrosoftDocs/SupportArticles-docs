@@ -20,7 +20,7 @@ File sharing only needs to be managed if you're using Hyper-V with Docker. If yo
 1. Right-click **Docker for Windows** in the notification area, and then select **Settings**.
 1. Select **Resources** > **File Sharing** and share the folder that needs to be accessed. Sharing your entire system drive is possible but not recommended.
 
-    ![Shared drives](media/troubleshooting-docker-errors/docker-settings-image.png)
+    :::image type="content" source="media/troubleshooting-docker-errors/docker-settings-image.png" alt-text="Screenshot of shared drives." lightbox="media/troubleshooting-docker-errors/docker-settings-image.png":::
 
 > [!TIP]
 > Visual Studio prompts you when **Shared Drives** aren't configured.
@@ -39,7 +39,7 @@ which will refresh the network-related components on your host machine.
 
 ## Mounts denied
 
-When using Docker for macOS, you might encounter an error referencing the folder _/usr/local/share/dotnet/sdk/NuGetFallbackFolder_. Add the folder to the File Sharing tab in Docker.
+When using Docker for macOS, you might encounter an error referencing the folder _/usr/local/share/dotnet/sdk/NuGetFallbackFolder_. Add the folder to the **File Sharing** tab in Docker.
 
 ## Docker users group
 
@@ -66,31 +66,32 @@ In PowerShell, use the [Add-LocalGroupMember](/powershell/module/microsoft.power
 
 ## Low disk space
 
-By default, Docker stores images in the *%ProgramData%/Docker/* folder, which is typically on the system drive, *C:\ProgramData\Docker\*. To prevent images from taking up valuable space on the system drive, you can change the image folder location. To do so:
+By default, Docker stores images in the *%ProgramData%/Docker/* folder, which is typically on the system drive, _C:\ProgramData\Docker\\_. To prevent images from taking up valuable space on the system drive, you can change the image folder location. To do so:
 
  1. Right-click on the Docker icon on the task bar and select **Settings**.
  1. Select **Docker Engine**.
  1. In the editing pane, add the `graph` property setting with the value of your desired location for Docker images:
 
-```json
-    "graph": "D:\\mypath\\images"
-```
+      ```json
+         "graph": "D:\\mypath\\images"
+      ```
 
-  ![Screenshot of Docker File Sharing](media/troubleshooting-docker-errors/docker-daemon-settings.png)
+       :::image type="content" source="media/troubleshooting-docker-errors/docker-daemon-settings.png" alt-text="Screenshot of Docker File Sharing." lightbox="media/troubleshooting-docker-errors/docker-daemon-settings.png":::
 
-Select **Apply & Restart**. These steps modify the configuration file at *%ProgramData%\docker\config\daemon.json*. Previously built images aren't moved.
+ 1. Select **Apply & Restart**.
+    These steps modify the configuration file at *%ProgramData%\docker\config\daemon.json*. Previously built images aren't moved.
 
 ## Container type mismatch
 
 When adding Docker support to a project, you choose either a Windows or a Linux container. If the Docker Server host isn't configured to run the same container type as the project target, you see an error similar to:
 
-  ![Screenshot of Docker Host and Project Mismatch](media/troubleshooting-docker-errors/docker-host-config-change-linux-to-windows.png)
+:::image type="content" source="media/troubleshooting-docker-errors/docker-host-config-change-linux-to-windows.png" alt-text="Screenshot of Docker Host and Project Mismatch.":::
 
 To resolve this issue, right-click the Docker for Windows icon in the System Tray and select **Switch to Windows containers...** or **Switch to Linux containers...**.
 
 ## Other issues
 
-For any other issues you encounter, see  [Microsoft/DockerTools](https://github.com/microsoft/dockertools/issues) issues.
+For any other issues you encounter, see [Microsoft/DockerTools](https://github.com/microsoft/dockertools/issues) issues.
 
 ## References
 
