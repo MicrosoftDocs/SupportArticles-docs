@@ -49,16 +49,16 @@ To verify the sticky bit setting by using Azure CLI, follow these steps:
 
     :::image type="content" source="media/adls-gen2-sticky-bit-403-access-denied/cloud-shell-button.png" alt-text="Screenshot of the Cloud Shell button in the Azure portal":::
 
-1. Use the following command to get the ACL and sticky bit setting of a folder in a specified container:
+1. Use the following command to get the ACL and sticky bit setting of of the *container/folder* directory:
 
     ```azurecli
-    az storage fs access show -p {folder name} -f {container name} --account-name {storage account name} --auth-mode login
+    az storage fs access show -p folder -f container --account-name account --auth-mode login
     ```
 
     To check the ACL and sticky bit setting of the root directory, which is the container level ACL and sticky bit setting, use the following command:
 
     ```azurecli
-    az storage fs access show -p / -f {container name} --account-name {storage account name} --auth-mode login
+    az storage fs access show -p / -f container --account-name account --auth-mode login
     ```
 
     Here's a sample output:
@@ -116,10 +116,10 @@ Here's an example of disabling/enabling the sticky bit setting with Azure CLI.
 
     :::image type="content" source="media/adls-gen2-sticky-bit-403-access-denied/cloud-shell-button.png" alt-text="Screenshot of the Cloud Shell button in the Azure portal":::
 
-1.To set the ACL and sticky bit setting of a folder in a specified container to the specified permissions (for example "rwxrwxrwx") and to enable the sticky bit, use the following command:
+1.To set the ACL and sticky bit setting of the *container/folder* directory to the "rwxrwxrwt" permissions and to enable the sticky bit, use the following command:
 
     ```azurecli
-    az storage fs access set --permissions {permission notation} -p {folder name} -f {container name} --account-name {storage account name} --auth-mode login
+    az storage fs access set --permissions rwxrwxrwt -p folder -f container --account-name account --auth-mode login
     ```
 
     To modify the setting of the root directory, which is the container level ACL and sticky bit setting, use the following command:
