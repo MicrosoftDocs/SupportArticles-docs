@@ -114,27 +114,32 @@ Take these steps:
 
 ## Issue: Snappoint isn't turned on
 
-If you see a warning icon ![Snappoint warning icon](./media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-snappoint-warning-icon.png "Snappoint warning icon") with your snappoint instead of the regular snappoint icon, then the snappoint isn't turned on.
+If you see a warning icon :::image type="icon" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-snappoint-warning-icon.png"::: with your snappoint instead of the regular snappoint icon, then the snappoint isn't turned on.
 
-![Snappoint does not turn on](./media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-dont-turn-on.png "Snappoint does not turn on")
+:::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-dont-turn-on.png" alt-text="Screenshot to show that Snappoint doesn't turn on.":::
 
 Take these steps:
 
-1. Make sure you use the same version of source code to build and deploy your app. Make sure you're loading the correct symbols for your deployment. To do this, view the **Modules** window while Snapshot Debugging and verify the Symbol File column shows a .pdb file loaded for the module you're debugging. The Snapshot Debugger will try to automatically download and use symbols for your deployment.
+- Make sure you use the same version of source code to build and deploy your app.
+- Make sure you're loading the correct symbols for your deployment.
+- To do this, view the **Modules** window while Snapshot Debugging and verify the Symbol File column shows a *.pdb* file loaded for the module you're debugging.
+    - The Snapshot Debugger will try to automatically download and use symbols for your deployment.
 
 ## Issue: Symbols don't load when I open a Snapshot
 
 If you see the following window, symbols didn't load.
 
-![Symbols do not load](./media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-symbols-wont-load.png "Symbols do not load")
+:::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-symbols-wont-load.png" alt-text="Screenshot to show that symbols don't load.":::
 
 Take these steps:
 
-- Select **Change Symbol Settings…** on the page. In the **Debugging > Symbol** settings, add a symbol cache directory. Restart snapshot debugging after the symbol path has been set.
+- Select **Change Symbol Settings…** on the page.
+- In the **Debugging > Symbol** settings, add a symbol cache directory.
+- Restart snapshot debugging after the symbol path has been set.
 
-   The symbols, or .pdb files, available in your project must match your App Service deployment. Most deployments (deployment through Visual Studio, CI/CD with Azure Pipelines or Kudu, etc.) publish your symbol files along to your App Service. Setting the symbol cache directory enables Visual Studio to use these symbols.
+   The symbols, or *.pdb* files, available in your project must match your App Service deployment. Most deployments (deployment through Visual Studio, CI/CD with Azure Pipelines or Kudu, etc.) publish your symbol files along to your App Service. Setting the symbol cache directory enables Visual Studio to use these symbols.
 
-   ![Symbol settings](./media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-symbol-settings.png "Symbol settings")
+   :::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-symbol-settings.png" alt-text="Screenshot that shows settings for symbols.":::
 
 - Alternatively, if your organization uses a symbol server or drops symbols in a different path, use the symbol settings to load the correct symbols for your deployment.
 
@@ -155,7 +160,7 @@ Take these steps:
 
 ## Issue: I only see Throttled Snapshots in the Diagnostic Tools
 
-![Throttled snappoint](./media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-throttled-snapshots.png "Throttled snappoint")
+ :::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-throttled-snapshots.png" alt-text="Screenshot that shows Throttled snappoint.":::
 
 Take these steps:
 
@@ -165,11 +170,11 @@ Take these steps:
 
 Visual Studio 2019 requires a newer version of the Snapshot Debugger site extension on your Azure App Service. This version isn't compatible with the older version of the Snapshot Debugger site extension used by Visual Studio 2017. You'll get the following error if you try to attach the Snapshot Debugger in Visual Studio 2019 to an Azure App Service that has been previously debugged by the Snapshot Debugger in Visual Studio 2017:
 
-![Incompatible Snapshot Debugger site extension Visual Studio 2019](./media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-incompatible-vs2019.png "Incompatible Snapshot Debugger site extension Visual Studio 2019")
+:::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-incompatible-vs2019.png" alt-text="Screenshot of incompatible Snapshot Debugger site extension Visual Studio 2019.":::
 
 Conversely, if you use Visual Studio 2017 to attach the Snapshot Debugger to an Azure App Service that has been previously debugged by the Snapshot Debugger in Visual Studio 2019, you'll get the following error:
 
-![Incompatible Snapshot Debugger site extension Visual Studio 2017](./media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-incompatible-vs2017.png "Incompatible Snapshot Debugger site extension Visual Studio 2017")
+:::image type="content" source="media/debug-live-azure-apps-troubleshooting/snapshot-troubleshooting-incompatible-vs2017.png" alt-text="Screenshot of incompatible Snapshot Debugger site extension Visual Studio 2017.":::
 
 To fix this, delete the following App settings in the Azure portal and attach the Snapshot Debugger again:
 
@@ -183,14 +188,14 @@ Take these steps:
 The "Azure resource" and "Storage account" entries use resource names as keys so actions such as migrating a resource to different subscriptions can cause problems.
 To clear out the list, follow these steps:
 
-1. Run these commands in Developer Command Prompt for VS (with admin privileges)
+1. Run these commands in Developer command prompt for VS (with admin privileges).
 
    ```cmd
    vsregedit remove local HKCU SnapshotDebugger AzureResourcesMRU
    vsregedit remove local HKCU SnapshotDebugger StorageAccountsMRU
    ```
 
-1. Delete any _.suo_ files associated with the web app
+1. Delete any _.suo_ files associated with the web app.
 
 ## Issue: I'm having problems Snapshot Debugging and I need to enable more logging
 
