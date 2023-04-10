@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot AlwaysOn Availability Groups failover
 description: This article provides troubleshooting steps to help you determine why your availability group failed over. 
-ms.date: 04/04/2023
+ms.date: 04/10/2023
 ms.custom: sap:Availability Groups
 ms.prod: sql
 author: padmajayaraman
@@ -54,10 +54,10 @@ The Windows Cluster log is the most comprehensive log to use to identify the kin
 1. Run the following cmdlet in an elevated PowerShell window by using 'sql19agn1' as the SQL Server-based server name:
 
     ```PowerShell
-      `get-clusterlog -Node sql19agn1 -UseLocalTime`
+      get-clusterlog -Node sql19agn1 -UseLocalTime
     ```
 
-    :::image type="content" source="media/troubleshooting-availability-group-failover/cluster-log-node-powershell.png" alt-text="Screenshot that shows PowerShell window with sql19agn1 as the SQL Server name." lightbox="media/troubleshooting-availability-group-failover/cluster-log-node-powershell.png":::
+    :::image type="content" source="media/troubleshooting-availability-group-failover/cluster-log-node-powershell.png" alt-text="Screenshot that shows PowerShell window with sql19agn1 as the SQL Server name.":::
 
     > [!NOTE]  
     > By default, the log file is created in *%WINDIR%\cluster\reports*.
@@ -306,7 +306,7 @@ To check for non-yielding scheduler events, follow these steps:
 
 1. Filter the results. Right-click an event under the **name** column, and select **Filter by this Value**.
 
-    :::image type="content" source="media/troubleshooting-availability-group-failover/filter-by-this-value.png" alt-text="Screenshot that shows how to check non-yielding scheduler events." lightbox="media/troubleshooting-availability-group-failover/filter-by-this-value.png":::
+    :::image type="content" source="media/troubleshooting-availability-group-failover/filter-by-this-value.png" alt-text="Screenshot that shows how to check non-yielding scheduler events.":::
 
 1. Define a filter to sort rows in which the **name** column contains "yield," as shown in the following screenshot. This returns all kinds of non-yielding events that might have been recorded in the `system_health` logs.
 
@@ -320,7 +320,7 @@ To check for non-yielding scheduler events, follow these steps:
 
 You can see that there were non-yielding events that occurred at the time of the health check time-out.
 
-:::image type="content" source="media/troubleshooting-availability-group-failover/non-yielding-events-health-time-checkout.png" alt-text="Screenshot that shows non-yielding events that occurred during health check time-out." lightbox="media/troubleshooting-availability-group-failover/non-yielding-events-health-time-checkout.png":::
+:::image type="content" source="media/troubleshooting-availability-group-failover/non-yielding-events-health-time-checkout.png" alt-text="Screenshot that shows non-yielding events that occurred during health check time-out.":::
 
 If non-yielding events are detected, check the cause of the non-yielding event. Consider contacting the SQL Server support team to investigate the non-yielding events.
 
