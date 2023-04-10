@@ -41,10 +41,6 @@
           href: ../calendars/cannot-open-a-shared-calendar-in-outlook-2016.md
         - name: User with Free/Busy permission can't open another calendar
           href: ../calendars/cannot-open-another-calendar-with-freebusy-permission.md
-    - name: Categories
-      items:
-        - name: Category colors are changed in Outlook 2016 for Mac
-          href: ../categories/outlook-mac-category-colors-changed.md
     - name: Connectivity
       items:
         - name: How to suppress Microsoft 365 AutoDiscover redirect warning

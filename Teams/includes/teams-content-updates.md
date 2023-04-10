@@ -2,6 +2,14 @@
 
 
 
+## Week of April 03, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/7/2023 | [The Bluetooth disabled status of a Teams Rooms device is Unhealthy](/microsoftteams/troubleshoot/teams-rooms-and-devices/bluetooth-disabled-status-unhealthy) | added |
+
+
 ## Week of March 27, 2023
 
 
