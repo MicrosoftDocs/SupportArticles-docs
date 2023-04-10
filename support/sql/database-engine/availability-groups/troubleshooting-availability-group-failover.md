@@ -27,7 +27,7 @@ When a health condition is detected, the following sequence of events usually oc
 
 - Windows Cluster tries to bring the availability group role back online (on original or automatic failover partner replica).
 
-- Availability group online is successful if it's detected to be healthy by AlwaysOn and Windows Cluster health monitoring.
+- Availability group components run online successfully if it's detected to be healthy by AlwaysOn and Windows Cluster health monitoring.
 
 If successful, the availability group replicas and databases transition to the Primary role and the availability group databases come online and are accessible by your application.
 
@@ -257,7 +257,7 @@ You should also capture counters that report the same system resource usage, inc
 
 When an availability group replica transitions into the Primary role, AlwaysOn health monitoring establishes a local ODBC connection to the SQL Server instance. While AlwaysOn is connected and monitoring, if SQL Server doesn't respond over the ODBC connection within the period that's set for the availability group's health check time-out (default is 30 seconds), then a health check time-out event is triggered. In this situation, the availability group transitions from the Primary role to the Resolving role and initiates failover, if it's configured to do this.
 
-For more information about health check time-outs, see the ["Health check timeout operation"](/sql/database-engine/availability-groups/windows/availability-group-lease-healthcheck-timeout?view=sql-server-ver16#health-check-timeout-operation) section in [Mechanics and guidelines of lease, cluster, and health check timeouts for AlwaysOn availability groups](/sql/database-engine/availability-groups/windows/availability-group-lease-healthcheck-timeout).
+For more information about health check time-outs, see the ["Health check timeout operation"](/sql/database-engine/availability-groups/windows/availability-group-lease-healthcheck-timeout?view=sql-server-ver16&preserve-view=true#health-check-timeout-operation) section in [Mechanics and guidelines of lease, cluster, and health check timeouts for AlwaysOn availability groups](/sql/database-engine/availability-groups/windows/availability-group-lease-healthcheck-timeout).
 
 Here's an AlwaysOn health check time-out as reported in the cluster log:
 
@@ -385,7 +385,7 @@ To identify the AlwaysOn specific health issue, follow these steps:
 
 1. In SSMS, go to **File** > **Open**, and then select **Merge Extended Event Files**.
 
-1. Select **Add**. 
+1. Select **Add**.
 
 1. In the **File Open** dialog box, navigate to the files in the SQL Server *\LOG* directory.
 
@@ -401,7 +401,7 @@ To identify the AlwaysOn specific health issue, follow these steps:
 
    :::image type="content" source="media/troubleshooting-availability-group-failover/system-component-event-health-monitoring.png" alt-text="Screenshot of system component event that reported error.":::
 
-1. Double-click the "data" in the lower pane. This opens the detailed component data in a new SSMS window pane for review. Here's what the system component data looks like.
+1. Double-click **data** in the lower pane. This opens the detailed component data in a new SSMS window pane for review. Here's what the system component data looks like.
 
    :::image type="content" source="media/troubleshooting-availability-group-failover/detailed-component-data-ssms-window.png" alt-text="Screenshot of detailed component data.":::
 
