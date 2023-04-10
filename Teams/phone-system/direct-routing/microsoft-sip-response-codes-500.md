@@ -1,5 +1,5 @@
 ---
-title: Microsoft and SIP response codes
+title: Microsoft and SIP response code 500 and 503
 description: A combination of Microsoft and SIP response codes can help identify the cause of call failures and provide detailed descriptions of errors and actions that you can take.
 ms.date: 3/27/2023
 author: helenclu
@@ -17,7 +17,7 @@ ms.custom: CI166247,CSSTroubleshoot
 ms.reviewer: rishire
 ---
 
-# Microsoft and SIP response codes
+# SIP response codes 500 and 503
 
 This article lists combinations of Microsoft and SIP response codes, the corresponding error messages, and actions that you can take.
 
