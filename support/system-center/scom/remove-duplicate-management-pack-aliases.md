@@ -116,11 +116,11 @@ If the output of the PowerShell or T-SQL script returns no value, then there are
 If the output returns one or more rows, then do the following:
 
 1. If the management pack is unsealed
-      a. Export the management pack from the console.
-      b. Open the management pack XML using a text editor.
-      c. Identify the duplicate alias.
-      d. Rename one of the aliases under **Reference** and all other places where the alias is used in the XML body.
-      In this example, we have two aliases, which will be considered as duplicates in System Center Operations Manager 2019 UR4.
+      1. Export the management pack from the console.
+      1. Open the management pack XML using a text editor.
+      1. Identify the duplicate alias.
+      1. Rename one of the aliases under **Reference** and all other places where the alias is used in the XML body.
+      In this example, we have two aliases, which will be considered as duplicates in System Center Operations Manager 2019 UR4. 
 
          :::image type="content" source="./media/remove-duplicate-management-pack-aliases/aliases-example-inline.png" alt-text="Screenshot showing the aliases example." lightbox="./media/remove-duplicate-management-pack-aliases/aliases-example-expanded.png":::
 
@@ -128,14 +128,14 @@ If the output returns one or more rows, then do the following:
 
       Rename one of those aliases to a unique name under **Reference** and replace all the occurrences of the old name with the new name as detected in the above step.
       
-      e. Once the duplicate aliases are renamed, reimport the management pack to System Center Operations Manager.
+      1. Once the duplicate aliases are renamed, reimport the management pack to System Center Operations Manager.
 
 2.	If the management pack is sealed
-      a. Open the sealed management pack as per the tool of preference.
-      b. Identify the duplicate alias.
-      c. Rename one of the aliases under **Reference** and all other places where the alias is used in the XML body.
-      d. Rebuild the management pack and reimport in System Center Operations Manager.
-      e. The same steps can be done by editing the XML - [Sealing the management pack](/system-center/scsm/seal-mp) and [reimporting the management pack](/system-center/scom/manage-mp-import-remove-delete).
+      1. Open the sealed management pack as per the tool of preference.
+      1. Identify the duplicate alias.
+      1. Rename one of the aliases under **Reference** and all other places where the alias is used in the XML body.
+      1. Rebuild the management pack and reimport in System Center Operations Manager.
+      1. The same steps can be done by editing the XML - [Sealing the management pack](/system-center/scsm/seal-mp) and [reimporting the management pack](/system-center/scom/manage-mp-import-remove-delete).
 
 Once the mitigation is done on all the management packs, rerun the PowerShell script or the T-SQL script to ensure it returns no output.
 
