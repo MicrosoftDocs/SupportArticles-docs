@@ -41,7 +41,7 @@ When a health condition is detected, the availability group replica and database
 2023-03-10 11:43:38.070 Logon Unable to access availability database '<databasename>' because the database replica is not in the PRIMARY or SECONDARY role. Connections to an availability database is permitted only when the database replica is in the PRIMARY or SECONDARY role. Try the operation again later.
 ```
 
-The period during which the availability group is in the Resolving role before is comes back online in the Primary role typically last only a few seconds or even less than a second.
+The period during which the availability group is in the Resolving role before it comes back online in the Primary role typically last only a few seconds or even less than a second.
 
 ## Identify and diagnose AlwaysOn availability group health events or failover
 
