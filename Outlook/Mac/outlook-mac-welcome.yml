@@ -48,13 +48,6 @@ landingContent:
           - text: Can't move a meeting between calendars
             url: ./calendars/cannot-move-meetings-between-calendars.md
 
-  - title: Categories
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Category colors are changed in Outlook 2016 for Mac
-            url: ./categories/outlook-mac-category-colors-changed.md
-
   - title: Connectivity
     linkLists:
       - linkListType: how-to-guide
