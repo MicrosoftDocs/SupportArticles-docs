@@ -33,8 +33,6 @@ landingContent:
             url: getting-errors-null-fields.md
           - text: Manage orphaned flows without valid owner
             url: manage-orphan-flow-when-owner-leaves-org.md
-          - text: Send email with embedded image
-            url: how-to-send-email-with-embedded-image.md
           - text: Troubleshoot common errors with creating and assigning flow approvals
             url: common-errors-creating-and-assigning-flow-approvals.md
             
