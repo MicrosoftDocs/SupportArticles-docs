@@ -332,7 +332,6 @@ The following query plan generating extended events contain **granted_memory_kb*
 - **sqlserver.query_post_execution_showplan**
 - **sqlserver.query_pre_execution_showplan**
 
-
 #### Column Store Index building
 
 One of the areas that is covered via Xevents is the execution memory used during column store building. This is a list of events available:
@@ -659,6 +658,10 @@ SQL Server 2017 introduced the memory grant feedback feature. It allows the quer
 1. Memory grant feedback on-disk persistence using the Query Store and  percentile grant in SQL Server 2022
 
 For more information, see [Memory grant feedback](/sql/relational-databases/performance/intelligent-query-processing-feedback#memory-grant-feedback). The memory grant feature may reduce the size of the memory grants for queries at execution time and thus reduce the problems stemming from large grant requests. With this feature in place especially on SQL Server 2019 and later versions, where row mode adaptive processing is available, you may not even notice any memory issues coming from query execution. However, if you have this feature in place (on by default) and you still see large QE memory consumption, apply the steps discussed previous to rewrite queries.
+
+### Increase SQL Server or OS memory
+
+After you've taken the steps to reduce unnecessary memory grants for your queries, if you still experience related low memory issues, then the workload likely requires more memory. Therefore, consider increasing the memory for SQL Server using the `max server memory` setting if there's sufficient physical memory on the system to do so. Follow the recommendations on leaving about 25% of the memory for OS and other needs, see [Server memory configuration options](/sql/database-engine/configure-windows/server-memory-server-configuration-options#recommendations). If no sufficient memory is available on the system, then consider adding physical RAM, or if it's a  virtual machine increase the dedicated RAM for your VM.
 
 ## Memory grant internals
 
