@@ -395,8 +395,6 @@ To identify the AlwaysOn specific health issue, follow these steps:
 
    You'll see a new tabbed window in SSMS that includes the extended events, as shown in the following screenshot.
 
-   :::image type="content" source="media/troubleshooting-availability-group-failover/system-component-event-health-monitoring.png" alt-text="Screenshot that shows SMS with the extended events." lightbox="media/troubleshooting-availability-group-failover/system-component-event-health-monitoring.png":::
-
 1. Locate the `component_health_result` that reported the 'state_desc' error while checking your availability group health event. Here's an example of a system component event that reported error back to AlwaysOn health monitoring:
 
    :::image type="content" source="media/troubleshooting-availability-group-failover/system-component-event-health-monitoring.png" alt-text="Screenshot of system component event that reported error.":::
