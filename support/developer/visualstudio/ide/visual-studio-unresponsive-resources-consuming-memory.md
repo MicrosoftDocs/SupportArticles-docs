@@ -62,7 +62,7 @@ This problem might result in instability of the programs such as Visual Studio.
 
     :::image type="content" source="media/visual-studio-unresponsive-resources-consuming-memory/system-properties-virtual-memory.png" alt-text="Virtual Memory window and settings.":::
 
-- If you've configured the paging file size such that the system manages it and you still see the errors about low memory, check in File Explorer whether the system drive has sufficient disk space. Use the Windows+E keys to open the **File Explorer** window on your computer.
+- If you have configured the paging file size such that the system manages it and you still see the errors about low memory, check in File Explorer whether the system drive has sufficient disk space. Use the Windows+E keys to open the **File Explorer** window on your computer.
 
 - If you want to customize paging file location, uncheck the **Automatically manage paging file size for all drives** checkbox, and then follow one of these options:
 
