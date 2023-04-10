@@ -175,8 +175,6 @@
           href: ../hybrid-configuration-wizard-errors/new-hybrid-configuration-wizard-crashes-with-0xe0434352.md
         - name: No Federation trust is configured for this organization error
           href: ../hybrid-configuration-wizard-errors/no-federation-trust-is-configured-for-this-organization-error.md
-        - name: Nullable object must have a value
-          href: ../hybrid-configuration-wizard-errors/nullable-object-must-have-value-error.md
         - name: Object reference not set to an instance of an object error
           href: ../hybrid-configuration-wizard-errors/object-reference-not-set-to-an-instance-of-an-object-error.md
         - name: Proof of domain ownership has failed error
