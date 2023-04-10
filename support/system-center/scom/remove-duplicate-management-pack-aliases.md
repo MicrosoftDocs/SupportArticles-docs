@@ -119,15 +119,13 @@ If the output returns one or more rows, then do the following:
       1. Export the management pack from the console.<br/>
       1. Open the management pack XML using a text editor.<br/>
       1. Identify the duplicate alias.<br/>
-      1. Rename one of the aliases under **Reference** and all other places where the alias is used in the XML body.<br/>
+      1. Rename one of the aliases under **Reference** and all other places where the alias is used in the XML body.<br/>In this example, we have two aliases, which will be considered as duplicates in System Center Operations Manager 2019 UR4. 
 
-        In this example, we have two aliases, which will be considered as duplicates in System Center Operations Manager 2019 UR4. 
+            :::image type="content" source="./media/remove-duplicate-management-pack-aliases/aliases-example-inline.png" alt-text="Screenshot showing the aliases example." lightbox="./media/remove-duplicate-management-pack-aliases/aliases-example-expanded.png":::
 
-         :::image type="content" source="./media/remove-duplicate-management-pack-aliases/aliases-example-inline.png" alt-text="Screenshot showing the aliases example." lightbox="./media/remove-duplicate-management-pack-aliases/aliases-example-expanded.png":::
+            In order to detect where the aliases are used, search the XML with **AliasName**. In this case, it's **BADALIAS**. Note the places where the reference is used.
 
-        In order to detect where the aliases are used, search the XML with **AliasName**. In this case, it's **BADALIAS**. Note the places where the reference is used.
-
-        Rename one of those aliases to a unique name under **Reference** and replace all the occurrences of the old name with the new name as detected in the above step.<br/>
+            Rename one of those aliases to a unique name under **Reference** and replace all the occurrences of the old name with the new name as detected in the above step.<br/>
       1. Once the duplicate aliases are renamed, reimport the management pack to System Center Operations Manager.<br/>
 
 2.	If the management pack is sealed
