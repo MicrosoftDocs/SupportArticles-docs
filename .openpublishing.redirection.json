@@ -16,6 +16,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/power-platform/power-automate/how-to-send-email-with-embedded-image.md",
+      "redirect_url": "/power-automate/desktop-flows/how-to/add-images-email-messages",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/power-platform/ai-builder/aibuilder-form-processing-is-not-extracting-tables-that-span-across-multiple-pages.md",
       "redirect_url": "/ai-builder/create-form-processing-model#multipage-tables",
       "redirect_document_id": false

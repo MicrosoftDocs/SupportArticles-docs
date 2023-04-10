@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:data-corruption-and-disk-errors, csstroubleshoot
+ms.custom: Fix, csstroubleshoot, devx-track-azurepowershell
 ms.technology: windows-server-backup-and-storage
 ---
 # How to set the Partmgr Attributes registry value by using PowerShell
