@@ -116,7 +116,7 @@ Here's an example of disabling/enabling the sticky bit setting with Azure CLI.
 
     :::image type="content" source="media/adls-gen2-sticky-bit-403-access-denied/cloud-shell-button.png" alt-text="Screenshot of the Cloud Shell button in the Azure portal":::
 
-1.To set the ACL and sticky bit setting of the *container/folder* directory to the "rwxrwxrwt" permissions and to enable the sticky bit, use the following command:
+1. To set the ACL and sticky bit setting of the *container/folder* directory to the "rwxrwxrwt" permissions and to enable the sticky bit, use the following command:
 
     ```azurecli
     az storage fs access set --permissions rwxrwxrwt -p folder -f container --account-name account --auth-mode login
