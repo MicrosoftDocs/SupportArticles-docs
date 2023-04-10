@@ -1,20 +1,18 @@
 ---
-title: Troubleshoot slow performance or low memory issues caused by memory grants in SQL Server
+title: Troubleshoot slow performance or low memory issues caused by memory grants
 description: Provides troubleshooting steps to identify and reduce memory grant memory consumption in SQL Server.
 author: pijocoder
 ms.author: jopilov
 ms.reviewer: pijocoder
 ms.date: 03/27/2023
-ms.prod: sql
-ms.topic: troubleshooting
 ms.custom: sap:Performance
 ---
 
 # Troubleshoot slow performance or low memory issues caused by memory grants in SQL Server
 
-## What are Memory Grants?
+## What are memory grants?
 
-Memory grants, also referred to as Query Execution (QE) Reservations, Query Execution Memory, Workspace memory and Memory Reservations, describes the usage of memory at query execution time. SQL Server allocates this memory during query execution for one or more of the following purposes:
+Memory grants, also referred to as Query Execution (QE) Reservations, Query Execution Memory, Workspace Memory, and Memory Reservations, describe the usage of memory at query execution time. SQL Server allocates this memory during query execution for one or more of the following purposes:
 
 - Sort operations
 - Hash operations
@@ -33,58 +31,60 @@ FROM sys.messages
 ORDER BY  message_id
 ```
 
-This query selects a row set of over 300,000 rows and sorts it. The sort operation induces a memory grant request. If you run this query in SSMS, you can view its query plan. When you select the left-most SELECT operator of the query plan, you can view the Memory grant information for the query (press F4 to show Properties):
+This query selects a row set of over 300,000 rows and sorts it. The sort operation induces a memory grant request. If you run this query in SSMS, you can view its query plan. When you select the left-most SELECT operator of the query plan, you can view the memory grant information for the query (press **F4** to show **Properties**):
 
-:::image type="content" source="media/troubleshoot-memory-grants/simple-memory-grant-query-example.png" alt-text="query with memory grant and query plan":::
+:::image type="content" source="media/troubleshoot-memory-grants/simple-memory-grant-query-example.png" alt-text="Screenshot of query with memory grant and query plan.":::
 
-Also, if you right-click in the white space in the query plan, you can choose `Show Execution Plan XML...` and can locate an XML element that shows the same memory grant information.
+Also, if you right-click in the white space in the query plan, you can choose **Show Execution Plan XML...** and can locate an XML element that shows the same memory grant information.
 
 ```xml
  <MemoryGrantInfo SerialRequiredMemory="512" SerialDesiredMemory="41232" RequiredMemory="5248" DesiredMemory="46016" RequestedMemory="46016" GrantWaitTime="0" GrantedMemory="46016" MaxUsedMemory="45816" MaxQueryMemory="277688" LastRequestedMemory="0" IsMemoryGrantFeedbackAdjusted="No: First Execution" />
 ```
 
-Several terms need explanation here. A query may desire a certain amount of execution memory (DesiredMemory) and would commonly request that amount (RequestedMemory). At run time, SQL Server grants all or part of the requested memory depending on availability (GrantedMemory). In the end, the query may use more or less of the initially requested memory (MaxUsedMemory). If the query optimizer has overestimated the amount of memory needed, it would use less than the requested size. But that memory is wasted as it could have been used by another request. If on the other hand the optimizer has underestimated the size of memory needed, then at execution time, the excess rows may be spilled to disk to get the work done. In other words, instead of allocating more memory than the size requested initially, SQL Server would push the extra rows over to disk and use it as a temporary workspace. For more information, see Workfiles and Worktables in [Memory Grant Considerations](/sql/relational-databases/memory-management-architecture-guide#memory-grant-considerations)
+Several terms need explanation here. A query may desire a certain amount of execution memory (DesiredMemory) and would commonly request that amount (RequestedMemory). At runtime, SQL Server grants all or part of the requested memory depending on availability (GrantedMemory). In the end, the query may use more or less of the initially requested memory (MaxUsedMemory). If the query optimizer has overestimated the amount of memory needed, it would use less than the requested size. But that memory is wasted as it could have been used by another request. On the other hand, if the optimizer has underestimated the size of memory needed, the excess rows may be spilled to disk to get the work done at execution time. In other words, instead of allocating more memory than the size requested initially, SQL Server would push the extra rows over to disk and use it as a temporary workspace. For more information, see Workfiles and Worktables in [Memory Grant Considerations](/sql/relational-databases/memory-management-architecture-guide#memory-grant-considerations).
 
 ### Terminology
 
 Let's review the different terms that you may encounter referring to this memory consumer. Again, all these describe concepts that relate to the same memory allocations.
 
-- Query Execution Memory (QE Memory):  This term is used to highlight the fact that sort/hash memory is used during the execution of a query and is commonly the largest consumer of memory during execution.
+- **Query Execution Memory (QE Memory):**  This term is used to highlight the fact that sort or hash memory is used during the execution of a query and is commonly the largest consumer of memory during execution.
 
-- Query Execution (QE) Reservations or Memory Reservations: When a query needs memory for sort or hash operations, it makes a reservation request for memory. That reservation request is calculated at compile time based on estimated cardinality. Then later, when the query executes, SQL Server grants that request partially or fully depending on memory availability. In the end, the query may use a percentage of the granted memory. There's a memory clerk (accountant of memory) named 'MEMORYCLERK_SQLQERESERVATIONS' that keeps track of these memory allocations (check out DBCC MEMORYSTATUS or `sys.dm_os_memory_clerks`).
+- **Query Execution (QE) Reservations or Memory Reservations:** When a query needs memory for sort or hash operations, it makes a reservation request for memory. That reservation request is calculated at compile time based on estimated cardinality. Then later, when the query executes, SQL Server grants that request partially or fully depending on memory availability. In the end, the query may use a percentage of the granted memory. There's a memory clerk (accountant of memory) named 'MEMORYCLERK_SQLQERESERVATIONS' that keeps track of these memory allocations (check out [DBCC MEMORYSTATUS](dbcc-memorystatus-monitor-memory-usage.md) or `sys.dm_os_memory_clerks`).
 
-- Memory Grants: When SQL Server grants the requested memory to an executing query, it's said that a memory grant has occurred. There are a few performance counters that use the term "grant". These counters, `Memory Grants Outstanding` and `Memory Grants Pending`, display the count of memory grants satisfied or waiting. They don't account for the memory grant size. That is, one query alone could have consumed say 4 GB of memory to perform a sort, but that isn't reflected in either of these counters.
+- **Memory Grants:** When SQL Server grants the requested memory to an executing query, it's said that a memory grant has occurred. There are a few performance counters that use the term "grant". These counters, `Memory Grants Outstanding` and `Memory Grants Pending`, display the count of memory grants satisfied or waiting. They don't account for the memory grant size. That is, one query alone could have consumed say 4 GB of memory to perform a sort, but that isn't reflected in either of these counters.
 
-- Workspace Memory is another term that describes the same memory. Often you may see this term in the Perfmon counter `Granted Workspace Memory (KB)` which reflects the overall amount of memory currently used for sort, hash, bulk copy, and index creation operations, expressed in KB. The `Maximum Workspace Memory (KB)`, another counter, accounts for the maximum amount of workspace memory available for any requests that may need to do such hash, sort, bulk copy, and index creation operations. The term Workspace Memory is encountered infrequently outside of these two counters.
+- **Workspace Memory** is another term that describes the same memory. Often, you may see this term in the Perfmon counter `Granted Workspace Memory (KB)` which reflects the overall amount of memory currently used for sort, hash, bulk copy, and index creation operations, expressed in KB. The `Maximum Workspace Memory (KB)`, another counter, accounts for the maximum amount of workspace memory available for any requests that may need to do such hash, sort, bulk copy, and index creation operations. The term Workspace Memory is encountered infrequently outside of these two counters.
 
 ## Performance impact of large QE memory utilization
 
-In most cases, when a thread requests memory inside SQL Server to get anything done and the memory isn't available, the request fails with an out of memory error. However, there are a couple of exception scenarios where the thread doesn't fail, but waits until memory does become available. One of those scenarios is memory grants and the other is query compilation memory.  SQL Server uses a thread synchronization object called a [semaphore](/windows/win32/sync/semaphore-objects) to keep track of how much memory has been granted for query execution. If SQL Server runs out of the predefined workspace/QE memory, then instead of failing the query with an out-of-memory error, it causes the query to wait. Given that workspace memory is allowed to take a significant percentage of overall SQL Server memory (up to 90%), waiting on memory in this space has serious performance implications. A large number of concurrent queries have requested execution memory and together they've exhausted the QE memory pool, or a few concurrent queries have each requested very large grants. Either way, the resulting performance issues may have the following symptoms:
+In most cases, when a thread requests memory inside SQL Server to get anything done and the memory isn't available, the request fails with an out of memory error. However, there are a couple of exception scenarios where the thread doesn't fail, but waits until memory does become available. One of those scenarios is memory grants and the other is query compilation memory. SQL Server uses a thread synchronization object called a [semaphore](/windows/win32/sync/semaphore-objects) to keep track of how much memory has been granted for query execution. If SQL Server runs out of the predefined workspace or QE memory, instead of failing the query with an out-of-memory error, it causes the query to wait. Given that workspace memory is allowed to take a significant percentage of overall SQL Server memory (up to 90%), waiting on memory in this space has serious performance implications. A large number of concurrent queries have requested execution memory and together they've exhausted the QE memory pool, or a few concurrent queries have each requested very large grants. Either way, the resulting performance issues may have the following symptoms:
 
 - Data and index pages from buffer cache have likely been flushed out to make space for the large memory grant requests. This means that page reads coming from query requests have to be satisfied from disk - a significantly slower operation.
-- Requests for other memory allocations may fail with out of memory errors because the resource is tied up with sort, hash or index building operations.
+- Requests for other memory allocations may fail with out of memory errors because the resource is tied up with sort, hash, or index building operations.
 - Requests that need execution memory are waiting for the resource to become available and are taking a long time to complete. In other words, to the end user, these queries are slow.
 
 Therefore, if you observe waits on query execution memory in Perfmon, dynamic management views (DMVs), or DBCC MEMORYSTATUS, you must act to resolve this issue, particularly if the issue occurs frequently. (see [What can a developer do about Sort and Hash operations](#what-can-a-developer-do-about-sort-and-hash-operations)).
 
 ## How to identify waits for query execution memory
 
-There are multiple ways to determine waits for QE reservations. Pick the ones that serve you best to see the larger picture at the server level. Some of these tools may not be available to you (for example Perfmon isn't available in Azure SQL Database). Once you identify the issue, you must drill down at the individual query level to see which queries need tuning or rewrites.
+There are multiple ways to determine waits for QE reservations. Pick the ones that serve you best to see the larger picture at the server level. Some of these tools may not be available to you (for example, Perfmon isn't available in Azure SQL Database). Once you identify the issue, you must drill down at the individual query level to see which queries need tuning or rewrites.
 
 - At server level using aggregate memory usage statistics
+
   - [sys.dm_exec_query_resource_semaphores](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql) DMV
   - Performance monitor counters ([SQL Server Memory Manager object](/sql/relational-databases/performance-monitor/sql-server-memory-manager-object))
-  - DBCC MEMORYSTATUS
+  - [DBCC MEMORYSTATUS](dbcc-memorystatus-monitor-memory-usage.md)
   - [sys.dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql) DMV
   - [Extended Events (Xevents)](/sql/relational-databases/extended-events/extended-events)
 
 - At individual query level
+
   - [sys.dm_exec_query_memory_grants](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql) - currently executing queries
   - [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) - currently executing queries
   - [sys.dm_exec_query_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql) - historical statistics on queries
   - [sys.query_store_runtime_stats](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql) - historical statistics on queries with QDS
 
-Next, you can find information about each of these methods
+Next, you can find information about each of these methods.
 
 ### Resource semaphore DMV `sys.dm_exec_query_resource_semaphores`
 
@@ -117,11 +117,11 @@ pool_id total_memory_kb available_memory_kb granted_memory_kb used_memory_kb gra
 
 ### Performance Monitor counters
 
-Similar information is available via Performance Monitor counters, where you can observe the currently granted requests (`Memory Grants Outstanding`), the waiting grant requests (`Memory Grants Pending`), and the amount of memory used by memory grants (`Granted Workspace Memory (KB)`). In the following picture the outstanding grants is 18, the pending grants is 2, and the granted workspace memory is 828,288 KB. The `Memory Grants Pending` Perfmon counter with a nonzero value indicates that memory has been exhausted.
+Similar information is available via Performance Monitor counters, where you can observe the currently granted requests (`Memory Grants Outstanding`), the waiting grant requests (`Memory Grants Pending`), and the amount of memory used by memory grants (`Granted Workspace Memory (KB)`). In the following picture, the outstanding grants are 18, the pending grants is 2, and the granted workspace memory is 828,288 KB. The `Memory Grants Pending` Perfmon counter with a nonzero value indicates that memory has been exhausted.
 
-:::image type="content" source="media/troubleshoot-memory-grants/memory-grants-performance-monitor.png" alt-text="memory grants waiting and satisfied":::
+:::image type="content" source="media/troubleshoot-memory-grants/memory-grants-performance-monitor.png" alt-text="Screenshot of memory grants waiting and satisfied.":::
 
-For more information, see ([SQL Server Memory Manager object](/sql/relational-databases/performance-monitor/sql-server-memory-manager-object))
+For more information, see ([SQL Server Memory Manager object](/sql/relational-databases/performance-monitor/sql-server-memory-manager-object)).
 
 - **SQLServer, Memory Manager:  Maximum Workspace Memory (KB)**
 - **SQLServer, Memory Manager:  Memory Grants Outstanding**
@@ -130,9 +130,9 @@ For more information, see ([SQL Server Memory Manager object](/sql/relational-da
 
 ### DBCC MEMORYSTATUS
 
-Another place where you can see details on query reservation memory is DBCC MEMORYSTATUS ([Query Memory Objects section](dbcc-memorystatus-monitor-memory-usage.md#query-memory-objects)). You can look at the Query Memory Objects (default) output for user queries. If you have enabled Resource Governor with a resource pool named 'PoolAdmin' for example, then you can look at both `Query Memory Objects (default)` and `Query Memory Objects (PoolAdmin)`.
+Another place where you can see details on query reservation memory is DBCC MEMORYSTATUS ([Query Memory Objects section](dbcc-memorystatus-monitor-memory-usage.md#query-memory-objects)). You can look at the Query Memory Objects (default) output for user queries. If you have enabled Resource Governor with a resource pool named 'PoolAdmin' for example, you can look at both `Query Memory Objects (default)` and `Query Memory Objects (PoolAdmin)`.
 
-Here's a sample output from a system where 18 requests have been granted query execution memory and 2 requests are waiting for memory. The Available counter is 0, which indicates there's no more workspace memory available. This fact explains the two waiting requests. The 'Wait Time' shows the elapsed time, in milliseconds, since a request was put in the wait queue. For more information on these counters, see [Query memory objects](dbcc-memorystatus-monitor-memory-usage.md#query-memory-objects) section in DBCC MEMORYSTATUS informational article.
+Here's a sample output from a system where 18 requests have been granted query execution memory and 2 requests are waiting for memory. The available counter is zero, which indicates there's no more workspace memory available. This fact explains the two waiting requests. The 'Wait Time' shows the elapsed time, in milliseconds, since a request was put in the wait queue. For more information on these counters, see [Query memory objects](dbcc-memorystatus-monitor-memory-usage.md#query-memory-objects) section in DBCC MEMORYSTATUS informational article.
 
 ```output
 Query Memory Objects (default)                                           Value
@@ -183,7 +183,7 @@ FROM sys.dm_os_memory_clerks
 WHERE type = 'MEMORYCLERK_SQLQERESERVATIONS'
 ```
 
-Here's a sample output
+Here's a sample output:
 
 ```output
 type                                            memory_node_id pages_kb
@@ -200,7 +200,7 @@ There are two kinds of queries that you may find when looking at the individual 
 
 To view individual requests, and the memory size they've requested and have been granted, you can query the `sys.dm_exec_query_memory_grants` dynamic management view. This DMV shows information about currently executing queries, not historical information.
 
-The following statement gets data from the DMV and also fetches the query text and the query plan as a result. 
+The following statement gets data from the DMV and also fetches the query text and the query plan as a result:
 
 ```sql
 SELECT 
@@ -254,11 +254,11 @@ session_id requested_memory_kb  granted_memory_kb    used_memory_kb       queue_
 
 ### Identify specific queries with `sys.dm_exec_requests`
 
-There's a [wait type](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql#WaitTypes) in SQL Server that indicates a query is waiting for a memory grant – `RESOURCE_SEMAPHORE`. You may observe this wait type in `sys.dm_exec_requests` for individual requests. This latter DMV is the best starting point to identify which queries are victims of insufficient grant memory. You can also observe the `RESOURCE_SEMAPHORE` wait in `sys.dm_os_wait_stats` as aggregated data points at the SQL Server level. This wait type shows up when a query memory request can't be granted due to other concurrent queries having used up the memory. High count of waiting requests and long wait times indicate excessive number of concurrent queries using execution memory, or large memory request sizes. 
+There's a [wait type](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql#WaitTypes) in SQL Server that indicates a query is waiting for a memory grant - `RESOURCE_SEMAPHORE`. You may observe this wait type in `sys.dm_exec_requests` for individual requests. This latter DMV is the best starting point to identify which queries are victims of insufficient grant memory. You can also observe the `RESOURCE_SEMAPHORE` wait in `sys.dm_os_wait_stats` as aggregated data points at the SQL Server level. This wait type shows up when a query memory request can't be granted due to other concurrent queries having used up the memory. High count of waiting requests and long wait times indicate excessive number of concurrent queries using execution memory, or large memory request sizes.
 
-It's worth noting that waiting for memory grants isn't infinite. After an excessive wait (over 20 minutes), SQL Server times the query out and raises error [8645](/sql/relational-databases/errors-events/mssqlserver-8645-database-engine-error), "A time out occurred while waiting for memory resources to execute the query. Rerun the query." You may see the timeout value set at the server level by looking at the **timeout_sec** in `sys.dm_exec_query_memory_grants`. The timeout value may vary slightly between SQL Server versions.
+It's worth noting that waiting for memory grants isn't infinite. After an excessive wait (over 20 minutes), SQL Server times the query out and raises error [8645](/sql/relational-databases/errors-events/mssqlserver-8645-database-engine-error), "A timeout occurred while waiting for memory resources to execute the query. Rerun the query." You may see the timeout value set at the server level by looking at the **timeout_sec** in `sys.dm_exec_query_memory_grants`. The timeout value may vary slightly between SQL Server versions.
 
-With the use of `sys.dm_exec_requests`, you can see which queries have been granted memory and the size of that grant. Also you can identify which queries are currently waiting for a memory grant by looking for the `RESOURCE_SEMAPHORE` wait type. Here's a query that shows you both the granted and the waiting requests:
+With the use of `sys.dm_exec_requests`, you can see which queries have been granted memory and the size of that grant. Also, you can identify which queries are currently waiting for a memory grant by looking for the `RESOURCE_SEMAPHORE` wait type. Here's a query that shows you both the granted and the waiting requests:
 
 ```sql
 SELECT session_id, wait_type, wait_time, granted_query_memory, text
@@ -268,7 +268,7 @@ WHERE granted_query_memory > 0
        OR wait_type = 'RESOURCE_SEMAPHORE'
 ```
 
-A sample output shows two requests have been granted memory and two dozen others are waiting for grants. The **granted_query_memory** column  reports the size in 8-KB pages. For example, a value of 34709 means 34709 * 8 KB =  277,672 KB of memory granted.
+A sample output shows two requests have been granted memory and two dozen others are waiting for grants. The **granted_query_memory** column reports the size in 8-KB pages. For example, a value of 34,709 means 34,709 * 8 KB =  277,672 KB of memory granted.
 
 ```output
 session_id wait_type               wait_time   granted_query_memory text
@@ -302,30 +302,30 @@ session_id wait_type               wait_time   granted_query_memory text
 
 ### Identify memory grants using Extended Events (XEvents)
 
-There are multiple Extended events that expose memory grant information and enable you to capture this information via a trace. 
+There are multiple extended events that expose memory grant information and enable you to capture this information via a trace:
 
-- **sqlserver.additional_memory_grant** - Occurs when a query tries to get more memory grant during execution. Failure to get this additional memory grant may cause the query slowdown.
-- **sqlserver.query_memory_grant_blocking** - Occurs when a query is blocking other queries while waiting for memory grant
-- **sqlserver.query_memory_grant_info_sampling** - Occurs at the end of the randomly sampled queries providing memory grant information.(It can be used, e.g., for telemetry)
-- **sqlserver.query_memory_grant_resource_semaphores** - Occurs at every 5 minute intervals for each resource governor resource pool
-- **sqlserver.query_memory_grant_usage** - Occurs at the end of query processing for queries with memory grant over 5MB to let users know about memory grant inaccuracies
-- **sqlserver.query_memory_grants** - Occurs at every 5 minute intervals for each query with memory grant
+- **sqlserver.additional_memory_grant** Occurs when a query tries to get more memory grant during execution. Failure to get this additional memory grant may cause the query slowdown.
+- **sqlserver.query_memory_grant_blocking** Occurs when a query is blocking other queries while waiting for memory grant.
+- **sqlserver.query_memory_grant_info_sampling** Occurs at the end of the randomly sampled queries providing memory grant information.(It can be used, for example, for telemetry)
+- **sqlserver.query_memory_grant_resource_semaphores** Occurs at every 5-minute intervals for each resource governor resource pool.
+- **sqlserver.query_memory_grant_usage** Occurs at the end of query processing for queries with memory grant over 5 MB to let users know about memory grant inaccuracies.
+- **sqlserver.query_memory_grants** Occurs at every 5-minute intervals for each query with memory grant.
 
 #### Memory grant feedback extended events
 
-- **sqlserver.memory_grant_feedback_loop_disabled** - Occurs when memory grant feedback loop is disabled
-- **sqlserver.memory_grant_updated_by_feedback** -  Occurs when memory grant is updated by feedback
+- **sqlserver.memory_grant_feedback_loop_disabled** Occurs when memory grant feedback loop is disabled.
+- **sqlserver.memory_grant_updated_by_feedback**  Occurs when memory grant is updated by feedback.
 
 #### Query execution warnings that relate to memory grants
 
-- **sqlserver.execution_warning**  - Occurs when a T-SQL statement or stored procedure waits more than one second for a memory grant or when the initial attempt to get memory fails. Use this event in combination with events that identify waits to troubleshoot contention issues that impact performance
-- **sqlserver.hash_spill_details** - Occurs at the end of hash processing if there is insufficient memory to process the build input of a hash join. Use this event together with any of the query_pre_execution_showplan or query_post_execution_showplan events to determine which operation in the generated plan is causing the hash spill.
-- **sqlserver.hash_warning** - Occurs when there is insufficient memory to process the build input of a hash join. This results in either a hash recursion when the build input is partitioned, or a hash bailout when the partitioning of the build input exceeds the maximum recursion level. Use this event together with any of the query_pre_execution_showplan or query_post_execution_showplan events to determine which operation in the generated plan is causing the hash warning.
-- **sqlserver.sort_warning** - Occurs when the sort operation on an executing query does not fit into memory. This event is not generated for sort operations caused by index creation, only for sort operations in a query. (For example, an Order By in a Select statement.) Use this event to identify queries that perform slowly because of the sort operation, particularly when the warning_type = 2, indicating multiple passes over the data were required to sort
+- **sqlserver.execution_warning** Occurs when a T-SQL statement or stored procedure waits more than one second for a memory grant or when the initial attempt to get memory fails. Use this event in combination with events that identify waits to troubleshoot contention issues that impact performance.
+- **sqlserver.hash_spill_details** Occurs at the end of hash processing if there's insufficient memory to process the build input of a hash join. Use this event together with any of the `query_pre_execution_showplan` or `query_post_execution_showplan` events to determine which operation in the generated plan is causing the hash spill.
+- **sqlserver.hash_warning** Occurs when there's insufficient memory to process the build input of a hash join. This results in either a hash recursion when the build input is partitioned, or a hash bailout when the partitioning of the build input exceeds the maximum recursion level. Use this event together with any of the `query_pre_execution_showplan` or `query_post_execution_showplan` events to determine which operation in the generated plan is causing the hash warning.
+- **sqlserver.sort_warning** Occurs when the sort operation on an executing query doesn't fit into memory. This event isn't generated for sort operations caused by index creation, only for sort operations in a query. (For example, an `Order By` in a `Select` statement.) Use this event to identify queries that perform slowly because of the sort operation, particularly when the warning_type = 2, indicating multiple passes over the data were required to sort.
 
 #### Plan generating events that contain memory grant information
 
-The following query plan generating extended events contain **granted_memory_kb** and **ideal_memory_kb** fields by default.
+The following query plan generating extended events contain **granted_memory_kb** and **ideal_memory_kb** fields by default:
 
 - **sqlserver.query_plan_profile**
 - **sqlserver.query_post_execution_plan_profile**
@@ -337,14 +337,14 @@ The following query plan generating extended events contain **granted_memory_kb*
 
 One of the areas that is covered via Xevents is the execution memory used during column store building. This is a list of events available:
 
-- **sqlserver.column_store_index_build_low_memory**  - Storage Engine detected a low memory condition and the rowgroup size was reduced. There are several columns of interest here `
-- **sqlserver.column_store_index_build_memory_trace** - Trace memory usage during index build.
-- **sqlserver.column_store_index_build_memory_usage_scale_down** - Storage Engine scaled down.
-- **sqlserver.column_store_index_memory_estimation** - Shows the memory estimation result during columnstore rowgroup build.
+- **sqlserver.column_store_index_build_low_memory** Storage Engine detected a low memory condition and the rowgroup size was reduced. There are several columns of interest here.
+- **sqlserver.column_store_index_build_memory_trace** Trace memory usage during index build.
+- **sqlserver.column_store_index_build_memory_usage_scale_down** Storage Engine scaled down.
+- **sqlserver.column_store_index_memory_estimation** Shows the memory estimation result during columnstore rowgroup build.
 
 ### Identify specific queries with `sys.dm_exec_query_stats`
 
-If the memory grant issue isn't happening at this moment but you would like to identify the offending queries, you can look at historical query data via `sys.dm_exec_query_stats`. The lifetime of the data is tied to the query plan of each query. When a plan is removed from plan cache, the corresponding rows are eliminated from this view. In other words, the DMV keeps statistics in memory that aren't preserved after a SQL Server restart or after memory pressure caused plan cache release. With this caveat out of the way, you can find the information here valuable, particularly for aggregate query statistics. Someone may have recently reported seeing large memory grants from  queries but when you look at the server workload you may discover the problem is gone. In this situation `sys.dm_exec_query_stats` can provide insights. Here's a sample query that can help you find the top 20 statements that consumed largest amounts of execution memory. This output displays individual statements even if their query structure is the same. For example, `SELECT Name FROM t1 JOIN t2 ON t1.Id = t2.Id WHERE t1.Id = 5` is a separate row from `SELECT Name FROM t1 JOIN t2 ON t1.Id = t2.Id WHERE t1.Id = 100` - only the filter predicate value varies. The query gets the top 20 statements with maximum grant size greater than 5 MB.
+If the memory grant issue isn't happening at this moment but you would like to identify the offending queries, you can look at historical query data via `sys.dm_exec_query_stats`. The lifetime of the data is tied to the query plan of each query. When a plan is removed from plan cache, the corresponding rows are eliminated from this view. In other words, the DMV keeps statistics in memory that aren't preserved after a SQL Server restart or after memory pressure caused plan cache release. With this caveat out of the way, you can find the information here valuable, particularly for aggregate query statistics. Someone may have recently reported seeing large memory grants from queries but when you look at the server workload, you may discover the problem is gone. In this situation, `sys.dm_exec_query_stats` can provide insights. Here's a sample query that can help you find the top 20 statements that consumed largest amounts of execution memory. This output displays individual statements even if their query structure is the same. For example, `SELECT Name FROM t1 JOIN t2 ON t1.Id = t2.Id WHERE t1.Id = 5` is a separate row from `SELECT Name FROM t1 JOIN t2 ON t1.Id = t2.Id WHERE t1.Id = 100` (only the filter predicate value varies). The query gets the top 20 statements with maximum grant size greater than 5 MB.
 
 ```sql
 SELECT TOP 20
@@ -368,7 +368,7 @@ WHERE max_grant_kb > 5120 -- greater than 5 MB
 ORDER BY max_grant_kb DESC
 ```
 
-Even more powerful insight can be gained by looking at the queries aggregated by query_hash. This example, illustrates how to find the average, maximum, minimum grant sizes for a query statement across all of its instances since the query plan was first cached.
+Even more powerful insight can be gained by looking at the queries aggregated by `query_hash`. This example illustrates how to find the average, maximum, and minimum grant sizes for a query statement across all of its instances since the query plan was first cached.
 
 ```sql
 SELECT TOP 20
@@ -395,9 +395,9 @@ ORDER BY SUM(max_grant_kb) DESC
 OPTION (MAX_GRANT_PERCENT = 5)
 ```
 
-The Sample_Statement_Text column shows an example of the query structure that matches the query hash, but it should be read without regard to specific values in the statement. For example, if a statement contains `WHERE Id = 5`, you may read it in its more generic form: `WHERE Id = @any_value`.
+The `Sample_Statement_Text` column shows an example of the query structure that matches the query hash, but it should be read without regard to specific values in the statement. For example, if a statement contains `WHERE Id = 5`, you may read it in its more generic form: `WHERE Id = @any_value`.
 
-Here's an abbreviated sample output of the query with only selected columns shown.
+Here's an abbreviated sample output of the query with only selected columns shown:
 
 ```output
 sample_statement_text                      max_grant_mb  avg_grant_mb  max_grant_used_mb avg_grant_used_mb avg_ideal_grant_mb total_grant_all_executions_mb execution_count 
@@ -418,9 +418,9 @@ INSERT INTO #tmp (CounterDateTime, Counte  5.39          1.08          1.64     
 
 ### Identify specific queries using Query Store (QDS) with `sys.query_store_runtime_stats`
 
-If you have Query Store enabled, you can take advantage of its persisted historical statistics. Contratry to data from `sys.dm_exec_query_stats`, these statistics survive a SQL Server restart or memory pressure because they're stored in a database. QDS also has size limits and retention policy. For more information, see the *Set the optimal Query Store Capture Mode* and *Keep the most relevant data in Query Store* sections in [Best practices for managing the Query Store](/sql/relational-databases/performance/manage-the-query-store). 
+If you have Query Store enabled, you can take advantage of its persisted historical statistics. Contrary to data from `sys.dm_exec_query_stats`, these statistics survive a SQL Server restart or memory pressure because they're stored in a database. QDS also has size limits and retention policy. For more information, see the [Set the optimal Query Store Capture Mode](/sql/relational-databases/performance/manage-the-query-store&tabs=ssms#set-the-optimal-query-store-capture-mode) and [Keep the most relevant data in Query Store](/sql/relational-databases/performance/manage-the-query-store&tabs=ssms#keep-the-most-relevant-data-in-query-store) sections in [Best practices for managing the Query Store](/sql/relational-databases/performance/manage-the-query-store).
 
-First, you can identify if your databases have Query Store enabled using this query
+First, identify if your databases have Query Store enabled using this query:
 
 ```sql
 SELECT name, is_query_store_on 
@@ -428,7 +428,7 @@ FROM sys.databases
 WHERE is_query_store_on = 1
 ```
 
-Then you can run the following diagnostic query in the context of a specific database that you would want to investigate. The principles here are the same as with `sys.dm_exec_query_stats`; you see aggregate statistics for the statements. However, one difference is that with QDS you're looking at only queries in the scope of this database, not the entire SQL Server. So you may need to know the database in which a particular memory grant request executed. Or else run this diagnostic query in multiple databases until you find the sizable memory grants.
+Then, run the following diagnostic query in the context of a specific database that you would want to investigate. The principles here are the same as `sys.dm_exec_query_stats`; you see aggregate statistics for the statements. However, one difference is that with QDS, you're looking at only queries in the scope of this database, not the entire SQL Server. So you may need to know the database in which a particular memory grant request executed. Or else run this diagnostic query in multiple databases until you find the sizable memory grants.
 
 ```sql
 SELECT 
@@ -452,7 +452,7 @@ ORDER BY SUM(avg_query_max_used_memory) DESC
 OPTION (MAX_GRANT_PERCENT = 5)
 ```
 
-Here's an abbreviated sample output
+Here's an abbreviated sample output:
 
 ```output
 sample_sql_text                           avg_mem_grant_used_mb  min_mem_grant_used_mb  max_mem_grant_used_mb  stdev_mem_grant_used_mb  last_mem_grant_used_mb  count_query_executions
@@ -471,10 +471,10 @@ SELECT q.*  ,rts.avg_query_max_used_memo  6.65                   6.00           
 
 ### A custom diagnostic query
 
- Here's a query that combines data from multiple views, including the three listed previously. It provides a more thorough view of the sessions and their grants via `sys.dm_exec_requests` and `sys.dm_exec_query_memory_grants`, in addition to the server-level statistics provided by `sys.dm_exec_query_resource_semaphores`.
+Here's a query that combines data from multiple views, including the three listed previously. It provides a more thorough view of the sessions and their grants via `sys.dm_exec_requests` and `sys.dm_exec_query_memory_grants`, in addition to the server-level statistics provided by `sys.dm_exec_query_resource_semaphores`.
 
 > [!NOTE]
-> This query would return two rows per session due to the use of `sys.dm_exec_query_resource_semaphores`: one row for the regular resource semaphore and another row for the small-query resource semaphore
+> This query would return two rows per session due to the use of `sys.dm_exec_query_resource_semaphores`: one row for the regular resource semaphore and another row for the small-query resource semaphore.
 
 ```sql
 SELECT    CONVERT (varchar(30), GETDATE(), 121) as runtime
@@ -559,7 +559,8 @@ FROM     sys.dm_exec_requests r
 OPTION (MAXDOP 1, LOOP JOIN )
 ```
 
-Notice that the LOOP JOIN hint is used in this diagnostic query to avoid a memory grant by the query itself. Also no ORDER BY clause is used. If the diagnostic query ends up waiting for a grant itself, then its purpose of diagnosing memory grants would be defeated. The LOOP join hint could potentially cause the diagnostic query to be slower, but in this case it's more important to get the diagnostic results.
+> [!NOTE]
+> The LOOP JOIN hint is used in this diagnostic query to avoid a memory grant by the query itself. Also no `ORDER BY` clause is used. If the diagnostic query ends up waiting for a grant itself, its purpose of diagnosing memory grants would be defeated. The LOOP join hint could potentially cause the diagnostic query to be slower, but in this case it's more important to get the diagnostic results.
 
 Here's an abbreviated sample output from this diagnostic query with only selected columns.
 
@@ -572,8 +573,7 @@ Here's an abbreviated sample output from this diagnostic query with only selecte
 |86        |1310129  |RESOURCE_SEMAPHORE|40                 |NULL              |0                  |NULL              |1               |
 |86        |1310129  |RESOURCE_SEMAPHORE|40                 |NULL              |0                  |NULL              |2               |
 
-
-The sample output clearly illustrates how a query submitted by session_id = 60 successfully got the 9-MB memory grant it requested, but only 7 MB were required to successfully start query execution. In the end, the query used only 1 MB of the 9 MB it received from the server. The output also shows that sessions 75 and 86 are waiting for memory grants, thus the `RESOURCE_SEMAPHORE` wait_type. Their wait time has been over 1300 seconds (21 minutes) and their granted_memory_mb is NULL.
+The sample output clearly illustrates how a query submitted by session_id = 60 successfully got the 9-MB memory grant it requested, but only 7 MB were required to successfully start query execution. In the end, the query used only 1 MB of the 9 MB it received from the server. The output also shows that sessions 75 and 86 are waiting for memory grants, thus the `RESOURCE_SEMAPHORE` wait_type. Their wait time has been over 1,300 seconds (21 minutes) and their `granted_memory_mb` is NULL.
 
 This diagnostic query is a sample; feel free to modify it in any way that fits your needs. A version of this query is also used in diagnostic tools that Microsoft SQL Server support uses.
 
@@ -583,11 +583,11 @@ There are diagnostic tools that Microsoft SQL Server technical support uses to c
 
 If you run SQL LogScout with *LightPerf*, *GeneralPerf*, or *DetailedPerf* scenario, the tool collects the necessary logs. You can then manually examine the YourServer_PerfStats.out and look for `-- dm_exec_query_resource_semaphores --` and `-- dm_exec_query_memory_grants --` outputs. Or, instead of manual examination, you can use [SQL Nexus](https://github.com/microsoft/sqlnexus) to import the output coming from SQL LogScout or PSSDIAG into a SQL Server database. SQL Nexus creates two tables `tbl_dm_exec_query_resource_semaphores` and `tbl_dm_exec_query_memory_grants`, which contain the information needed to diagnose memory grants. SQL LogScout and PSSDIAG also collect Perfmon logs in the form of *.BLG files, which can be used to review the performance counters described in [Performance Monitor counters](#performance-monitor-counters) section.
 
-## Why are Memory Grants important to a developer or DBA
+## Why are memory grants important to a developer or DBA
 
-Based on Microsoft support experience, memory grant issues tend to be some of the most common memory-related problems. Applications often execute seemingly simple queries that may end up causing performance issues on the SQL Server due to huge sort or hash operations. Such queries not only end up consuming much SQL Server memory, but also cause other queries to wait for memory to become available – thus the performance bottleneck.
+Based on Microsoft support experience, memory grant issues tend to be some of the most common memory-related problems. Applications often execute seemingly simple queries that may end up causing performance issues on the SQL Server due to huge sort or hash operations. Such queries not only end up consuming much SQL Server memory, but also cause other queries to wait for memory to become available - thus the performance bottleneck.
 
-Using the tools outlined here (DMVs, Perfmon counters and actual query plan), you can identify which queries are large-grant consumers. Then you can tune or rewrite these queries to resolve or reduces the workspace memory usage.
+Using the tools outlined here (DMVs, Perfmon counters, and actual query plan), you can identify which queries are large-grant consumers. Then you can tune or rewrite these queries to resolve or reduces the workspace memory usage.
 
 ## What can a developer do about Sort and Hash operations
 
@@ -603,7 +603,7 @@ The first step is to become aware what operations in a query may lead to memory 
 
 - [GROUP BY (T-SQL)](/sql/t-sql/queries/select-group-by-transact-sql) may introduce a sort operator in a query plan prior to grouping if an underlying index isn't present that orders the grouped columns.
 
-- [DISTINCT (T-SQL)](/sql/t-sql/queries/select-transact-sql) behaves similarly to GROUP BY. To identify distinct rows, the intermediate results are ordered and then duplicates removed. The optimizer uses a Sort operator prior to this operator if the data isn't already sorted due to an ordered index seek or scan.
+- [DISTINCT (T-SQL)](/sql/t-sql/queries/select-transact-sql) behaves similarly to `GROUP BY`. To identify distinct rows, the intermediate results are ordered and then duplicates removed. The optimizer uses a Sort operator prior to this operator if the data isn't already sorted due to an ordered index seek or scan.
 
 - [Merge Join](/sql/relational-databases/performance/joins#merge) operator, when selected by the query optimizer, requires that both joined inputs are sorted. SQL Server may trigger a sort if a clustered index isn't available on the join column in one of the tables.
 
@@ -611,25 +611,25 @@ The first step is to become aware what operations in a query may lead to memory 
 
 This list isn't exhaustive, but includes most commonly encountered reasons for Hash operations. [Analyze the query plan](/sql/relational-databases/performance/analyze-an-actual-execution-plan) to identify the Hash match operations.
 
-- [JOIN (T-SQL)](/sql/relational-databases/performance/joins) – when joining tables, SQL Server has a choice between three physical operators - Nested Loop, Merge Join, Hash Join. If SQL Server ends up choosing a [Hash Join](/sql/relational-databases/performance/joins#hash), it needs QE memory for intermediate results to be stored and processed. Typically, lack of good indexes may lead to this most resource-expensive join operator – Hash Join. [Examine the query plan](/sql/relational-databases/performance/analyze-an-actual-execution-plan) to identify Hash Match (see [Logical and Physical operators reference](/sql/relational-databases/showplan-logical-and-physical-operators-reference)).
+- [JOIN (T-SQL)](/sql/relational-databases/performance/joins) - when joining tables, SQL Server has a choice between three physical operators - Nested Loop, Merge Join, Hash Join. If SQL Server ends up choosing a [Hash Join](/sql/relational-databases/performance/joins#hash), it needs QE memory for intermediate results to be stored and processed. Typically, lack of good indexes may lead to this most resource-expensive join operator - Hash Join. [Examine the query plan](/sql/relational-databases/performance/analyze-an-actual-execution-plan) to identify Hash Match (see [Logical and Physical operators reference](/sql/relational-databases/showplan-logical-and-physical-operators-reference)).
 
-- [DISTINCT (T-SQL)](/sql/t-sql/queries/select-transact-sql) – a Hash Aggregate operator could be used to eliminate duplicates in a rowset. Look for a Hash Match (Aggregate) in the query plan (see [Logical and Physical operators reference](/sql/relational-databases/showplan-logical-and-physical-operators-reference)).
+- [DISTINCT (T-SQL)](/sql/t-sql/queries/select-transact-sql) - a Hash Aggregate operator could be used to eliminate duplicates in a rowset. Look for a Hash Match (Aggregate) in the query plan (see [Logical and Physical operators reference](/sql/relational-databases/showplan-logical-and-physical-operators-reference)).
 
-- [UNION (T-SQL)](/sql/t-sql/language-elements/set-operators-union-transact-sql) – similar to DISTINCT, a Hash Aggregate could be used to remove the duplicates for this operator.
+- [UNION (T-SQL)](/sql/t-sql/language-elements/set-operators-union-transact-sql) - similar to DISTINCT, a Hash Aggregate could be used to remove the duplicates for this operator.
 
-- [SUM/AVG/MAX/MIN (T-SQL)](/sql/t-sql/functions/aggregate-functions-transact-sql)– any aggregate operation could potentially be performed as a Hash Aggregate.  Look for a Hash Match (Aggregate) in the query plan (see [Logical and Physical operators reference](/sql/relational-databases/showplan-logical-and-physical-operators-reference)).
+- [SUM/AVG/MAX/MIN (T-SQL)](/sql/t-sql/functions/aggregate-functions-transact-sql)- any aggregate operation could potentially be performed as a Hash Aggregate.  Look for a Hash Match (Aggregate) in the query plan (see [Logical and Physical operators reference](/sql/relational-databases/showplan-logical-and-physical-operators-reference)).
 
 Knowing these common reasons can help you eliminate, as much as possible, the large memory grant requests coming to SQL Server.
 
 ### Ways to reduce sort and hash operations or the grant size
 
 - Keep [statistics](/sql/relational-databases/statistics/statistics) up to date. This fundamental step, which improves performance for queries on many levels, ensures that the query optimizer has the most accurate information when selecting query plans. SQL Server determines what size to request for its memory grant based on statistics. Out of date statistics can cause overestimation or underestimation of the grant request and thus lead to an unnecessarily high grant request or to spilling results to disk, respectively. Ensure that [auto-update statistics](/sql/t-sql/statements/alter-database-transact-sql-set-options#auto_update_statistics) is enabled in your databases and/or keep statics updated with [UPDATE STATISTICS](/sql/t-sql/statements/update-statistics-transact-sql) or [sp_updatestats](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql).
-- Reduce the number of rows coming from tables. If you use a more restrictive WHERE filter or a JOIN and reduce the number of rows, then a subsequent sort in the query plan gets to order or aggregate a smaller result set. A smaller intermediate result set requires less working set memory. This is a general rule that developers can follow not only for saving working set memory but to also reduce CPU and I/O. This step isn't always possible and if well-written and resource-efficient queries are already in place, this guideline has been met.
-- Create indexes on join columns to aid merge joins. The intermediate operations in a query plan are affected by the indexes on the underlying table. For example, if a table has no index on a join column, and a Merge join is found to be the most cost-efficient join operator, then all the rows from that table have to be sorted before the join is performed. If instead an index exists on the column, a sort operation can be eliminated.
-- Create indexes to help avoid hash operations- commonly, basic query tuning starts with checking if your queries have appropriate indexes to help them reduce reads, minimize or eliminate large sorts or hash operations where possible. Hash Joins are commonly selected to process large, unsorted, nonindexed inputs. Creating indexes may change this optimizer strategy and speed up data retrieval. For assistance in creating indexes, see [Database Engine Tuning Advisor](/sql/relational-databases/performance/database-engine-tuning-advisor) and [Tune nonclustered indexes with missing index suggestions](/sql/relational-databases/indexes/tune-nonclustered-missing-index-suggestions)
+- Reduce the number of rows coming from tables. If you use a more restrictive WHERE filter or a JOIN and reduce the number of rows, a subsequent sort in the query plan gets to order or aggregate a smaller result set. A smaller intermediate result set requires less working set memory. This is a general rule that developers can follow not only for saving working set memory but to also reduce CPU and I/O. This step isn't always possible and if well-written and resource-efficient queries are already in place, this guideline has been met.
+- Create indexes on join columns to aid merge joins. The intermediate operations in a query plan are affected by the indexes on the underlying table. For example, if a table has no index on a join column, and a merge join is found to be the most cost-efficient join operator, all the rows from that table have to be sorted before the join is performed. If instead an index exists on the column, a sort operation can be eliminated.
+- Create indexes to help avoid hash operations. Commonly, basic query tuning starts with checking if your queries have appropriate indexes to help them reduce reads, minimize or eliminate large sorts or hash operations where possible. Hash joins are commonly selected to process large, unsorted, and nonindexed inputs. Creating indexes may change this optimizer strategy and speed up data retrieval. For assistance in creating indexes, see [Database Engine Tuning Advisor](/sql/relational-databases/performance/database-engine-tuning-advisor) and [Tune nonclustered indexes with missing index suggestions](/sql/relational-databases/indexes/tune-nonclustered-missing-index-suggestions).
 - Use Columnstore indexes where appropriate for aggregation queries that use GROUP BY. Analytics queries that deal with very large rowsets and typically perform group by aggregations may need large memory chunks to get work done. If an index isn't available that provides ordered results, a sort is automatically introduced in query plan. A sort on a very large result may lead to an expensive memory grant.
 - Remove the ORDER BY if you don't need it. In cases where results are streamed to an application that sorts the results in its own way or allows the user to modify the order of the data viewed, you don't need to perform a sort on the SQL Server side. Just stream the data out to the application in the order the server produces it and let the end user sort it on their own. Reporting applications like Power BI or Reporting Services are examples of such applications that allow end users to sort their data.
-- Consider, albeit cautiously, the use of a [LOOP JOIN](/sql/t-sql/queries/hints-transact-sql-query#-loop--merge--hash--join) hint when joins exist in a T-SQL query. This technique may avoid hash or merge joins that use memory grants. However, this option is only suggested as a last resort because forcing a join might lead to a significantly slower query. Stress test your workload to ensure this is an option. In some cases, a nested loop join may not even be an option. In this case SQL Server may fail with error MSSQLSERVER_8622 - `Query processor could not produce a query plan because of the hints defined in this query`.
+- Consider, albeit cautiously, the use of a [LOOP JOIN](/sql/t-sql/queries/hints-transact-sql-query#-loop--merge--hash--join) hint when joins exist in a T-SQL query. This technique may avoid hash or merge joins that use memory grants. However, this option is only suggested as a last resort because forcing a join might lead to a significantly slower query. Stress test your workload to ensure this is an option. In some cases, a nested loop join may not even be an option. In this case, SQL Server may fail with error MSSQLSERVER_8622 - `Query processor could not produce a query plan because of the hints defined in this query`.
 
 ### Memory grant query hint
 
@@ -642,7 +642,7 @@ ORDER BY Column1
 OPTION (MIN_GRANT_PERCENT = 3, MAX_GRANT_PERCENT = 5 )
 ```
 
-It's recommended that you use conservative values here especially in the cases where you expect many instances of your query to be executed concurrently. Ensure that you stress test your workload to match your production environment and determine what values to use. 
+We recommend that you use conservative values here especially in the cases where you expect many instances of your query to be executed concurrently. Ensure that you stress test your workload to match your production environment and determine what values to use.
 
 For more information, see [MAX_GRANT_PERCENT and MIN_GRANT_PERCENT](/sql/t-sql/queries/hints-transact-sql-query#max_grant_percent--numeric_value)
 
@@ -650,54 +650,55 @@ For more information, see [MAX_GRANT_PERCENT and MIN_GRANT_PERCENT](/sql/t-sql/q
 
 QE Memory is the memory that Resource Governor actually limits, when the [MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT](/sql/relational-databases/resource-governor/resource-governor-resource-pool#min_memory_percent-and-max_memory_percent) settings are used. Once you identify queries that cause large memory grants, you can limit the memory used by sessions or applications.  It's worth mentioning that the `default` workload group allows a query to take up to 25% of memory that can be granted on a SQL Server instance. For more information, see [Resource Governor Resource Pools](/sql/relational-databases/resource-governor/resource-governor-resource-pool) and [CREATE WORKLOAD GROUP](/sql/t-sql/statements/create-workload-group-transact-sql)
 
-### Adaptive query processing and Memory grant feedback
+### Adaptive query processing and memory grant feedback
 
-SQL Server 2017 introduced the Memory grant feedback feature. It allows the query execution engine to adjust the grant given to the query based on prior history. The goal is to reduce the size of the grant when possible or increase it when more memory is needed. This feature has been released in three waves: 
+SQL Server 2017 introduced the memory grant feedback feature. It allows the query execution engine to adjust the grant given to the query based on prior history. The goal is to reduce the size of the grant when possible or increase it when more memory is needed. This feature has been released in three waves:
 
 1. Batch mode memory grant feedback in SQL Server 2017
 1. Row mode memory grant feedback in SQL Server 2019
 1. Memory grant feedback on-disk persistence using the Query Store and  percentile grant in SQL Server 2022
 
-For more information, see [Memory grant feedback](/sql/relational-databases/performance/intelligent-query-processing-feedback#memory-grant-feedback). The Memory grant feature may reduce the size of the memory grants for queries at execution time and thus reduce the problems stemming from large grant requests. With this feature in place especially on SQL Server 2019 and later, where row mode adaptive processing is available, you may not even notice any memory issues coming from query execution. However, if you have this feature in place (on by default) and you still see large QE memory consumption, apply the steps discussed previous to rewrite queries.
+For more information, see [Memory grant feedback](/sql/relational-databases/performance/intelligent-query-processing-feedback#memory-grant-feedback). The memory grant feature may reduce the size of the memory grants for queries at execution time and thus reduce the problems stemming from large grant requests. With this feature in place especially on SQL Server 2019 and later versions, where row mode adaptive processing is available, you may not even notice any memory issues coming from query execution. However, if you have this feature in place (on by default) and you still see large QE memory consumption, apply the steps discussed previous to rewrite queries.
 
-## Memory Grant Internals
+## Memory grant internals
 
-To learn more about some internals on query execution memory, refer to [Understanding SQL server memory grant](https://techcommunity.microsoft.com/t5/sql-server-blog/understanding-sql-server-memory-grant/ba-p/383595) blog post
+To learn more about some internals on query execution memory, see [Understanding SQL server memory grant](https://techcommunity.microsoft.com/t5/sql-server-blog/understanding-sql-server-memory-grant/ba-p/383595) blog post.
 
 ## How to create a performance scenario with heavy memory grant usage
 
 Finally, the following example illustrates how to simulate large consumption of query execution memory and to introduce queries waiting on `RESOURCE_SEMAPHORE`. You can do this to learn how to use the diagnostic tools and techniques described in this article.
 
 > [!WARNING]
-> Do not use this on a production system. This simulation is provided to aid you in understanding the concept and to help you learn it better.
+> Don't use this on a production system. This simulation is provided to help you understand the concept and to help you learn it better.
 
 1. On a test server, install [RML Utilities](../../tools/replay-markup-language-utility.md) and SQL Server.
-1. Use a client application like SQL Server Management Studio to lower the `max server memory` setting of your SQL Server to 1.5 GB
+
+1. Use a client application like SQL Server Management Studio to lower the `max server memory` setting of your SQL Server to 1500 MB:
 
    ```sql
    EXEC sp_configure 'max server memory', 1500
    RECONFIGURE
    ```
 
-1. Open a Command Prompt and change directory to the RML utilities folder
+1. Open a Command Prompt and change directory to the RML utilities folder:
 
-   ```Command Prompt
+   ```cmd
    cd C:\Program Files\Microsoft Corporation\RMLUtils   
    ```
 
-1. Use the **ostress.exe** to spawn multiple simultaneous requests against your test SQL Server. This example uses 30 simultaneous sessions, but you can change that value
+1. Use the **ostress.exe** to spawn multiple simultaneous requests against your test SQL Server. This example uses 30 simultaneous sessions, but you can change that value:
 
-   ```Command Prompt
+   ```cmd
    ostress.exe -E -S. -Q"select * from sys.messages order by message_id option (maxdop 1)" -n30
    ```
 
 1. Use the diagnostic tools described previously to identify the memory grant issues
 
-## Summary of ways to deal with Large memory grants
+## Summary of ways to deal with large memory grants
 
 - Rewrite queries
 - Update statistics and keep them updated regularly
 - Create appropriate indexes for the query(s) identified. Indexes may reduce the large number of rows processed, thus change the JOIN algorithms, and reduces the size of grants or completely eliminate them.
-- Use OPTION (min_grant_percent = XX, max_grant_percent = XX) hint
-- Use Resource Governor
-- SQL Server 2017 and 2019 use Adaptive query processing allowing for Memory Grant feedback mechanism to adjust memory grant size dynamically at run-time. This feature may prevent memory grant issues in the first place
+- Use OPTION ([min_grant_percent = XX](/sql/t-sql/queries/hints-transact-sql-query#min_grant_percent--numeric_value), [max_grant_percent = XX](/sql/t-sql/queries/hints-transact-sql-query#max_grant_percent--numeric_value)) hint
+- Use [Resource Governor](/sql/relational-databases/resource-governor/resource-governor)
+- SQL Server 2017 and 2019 use adaptive query processing allowing for memory grant feedback mechanism to adjust memory grant size dynamically at runtime. This feature may prevent memory grant issues in the first place.
