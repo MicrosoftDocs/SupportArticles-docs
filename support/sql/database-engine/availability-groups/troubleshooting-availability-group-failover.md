@@ -185,7 +185,7 @@ The Windows system event log shows the following error entry if SQL Server shuts
 
 Check the end of the SQL Server error log for clues. If the error log ends abruptly, this means that it was shut down by force. For instance, if SQL Server was terminated by using Task Manager, the SQL Server error report wouldn't reveal any information about any internal problems that might have caused the process to shut down.
 
-If a SQL Server internal health issue caused SQL Server to terminate unexpectedly, there might be clues of a possible fatal exception (including a dump file diagnostic being generated) at the end of the SQL error log. Review the clues and take the any necessary action. If you find a dump file, consider opening contacting Microsoft SQL Server support, and provide the SQL Server error log and dump file content for further investigation.
+If a SQL Server internal health issue caused SQL Server to terminate unexpectedly, there might be clues of a possible fatal exception (including a dump file diagnostic being generated) at the end of the SQL error log. Review the clues and take the necessary action. If you find a dump file, consider opening contacting Microsoft SQL Server support, and provide the SQL Server error log and dump file content for further investigation.
 
 ### AlwaysOn health event: Lease time-out
 
@@ -281,7 +281,7 @@ The following section helps you to review the SQL Server logs for "bread crumb" 
 
 ### Check for non-yielding scheduler events
 
-The AlwaysOn health check time-out is frequently caused by "non-yielding" events in SQL Server. When SQL Server detects that a thread hasn't yielded on a scheduler, it will report that a non-yielding scheduler event has occurred. If you see other tasks on the same scheduler that are not receiving CPU time, this is the primary sign of a non-yielding scheduler. This behavior can cause a delayed execution of those tasks and "starve" workloads that are assigned to a certain scheduler of CPU time.
+The AlwaysOn health check time-out is frequently caused by "non-yielding" events in SQL Server. When SQL Server detects that a thread hasn't yielded on a scheduler, it will report that a non-yielding scheduler event has occurred. If you see other tasks on the same scheduler that aren't receiving CPU time, this is the primary sign of a non-yielding scheduler. This behavior can cause a delayed execution of those tasks and "starve" workloads that are assigned to a certain scheduler of CPU time.
 
 To check for non-yielding scheduler events, follow these steps:
 
@@ -377,7 +377,7 @@ Here's an example of a SQL Server health issue as reported by `sp_server_diagnos
 
 The kind of health issue that's reported by SQL Server health should dictate the direction of the root cause analysis.
 
-By default, when you deploy an availability group, the `FAILURE_CONDITION_LEVEL` is set as three. This activates monitoring of some, but not all, SQL Server health profiles. At the default level, AlwaysOn triggers a health event when SQL Server produces too many dump files, a write-access violation, or an orphaned spinlock. Setting the availability group up to level four or five will expand the kinds of SQL Server health issues that are monitored. For more information about the SQL Server health AlwaysOn monitors, see [Configure a flexible automatic failover policy for an availability group - SQL Server Always On](/sql/database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy).
+By default, when you deploy an availability group, the `FAILURE_CONDITION_LEVEL` is set as three. This activates monitoring of some, but not all, SQL Server health profiles. At the default level, AlwaysOn triggers a health event when SQL Server produces too many dump files, a write-access violation, or an orphaned spinlock. Setting the availability group up to level four or five will expand the types of SQL Server health issues that are monitored. For more information about the SQL Server health AlwaysOn monitors, see [Configure a flexible automatic failover policy for an availability group - SQL Server Always On](/sql/database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy).
 
 To identify the AlwaysOn specific health issue, follow these steps:
 
@@ -395,11 +395,11 @@ To identify the AlwaysOn specific health issue, follow these steps:
 
    You'll see a new tabbed window in SSMS that includes the extended events, as shown in the following screenshot.
 
-1. To investigate a SQL Server health issue, locate the `component_health_result` whose `state_desc` is `error`. Here is an example of a system component event that reported error back to AlwaysOn health monitoring:
+1. To investigate a SQL Server health issue, locate the `component_health_result` whose `state_desc` is `error`. Here's an example of a system component event that reported error back to AlwaysOn health monitoring:
 
    :::image type="content" source="media/troubleshooting-availability-group-failover/system-component-event-health-monitoring.png" alt-text="Screenshot of system component event that reported error.":::
 
-1. Double-click the **data** column in the lower pane, which will open the detailed component data in a new SSMS window pane for review. Here's what the system component data looks like:
+1. Double-click the **data** column in the lower pane, which opens the detailed component data in a new SSMS window pane for review. Here's what the system component data looks like:
 
    :::image type="content" source="media/troubleshooting-availability-group-failover/detailed-component-data-ssms-window.png" alt-text="Screenshot of detailed component data.":::
 
