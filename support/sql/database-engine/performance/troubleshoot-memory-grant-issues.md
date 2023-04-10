@@ -418,7 +418,7 @@ INSERT INTO #tmp (CounterDateTime, Counte  5.39          1.08          1.64     
 
 ### Identify specific queries using Query Store (QDS) with `sys.query_store_runtime_stats`
 
-If you have Query Store enabled, you can take advantage of its persisted historical statistics. Contrary to data from `sys.dm_exec_query_stats`, these statistics survive a SQL Server restart or memory pressure because they're stored in a database. QDS also has size limits and retention policy. For more information, see the [Set the optimal Query Store Capture Mode](/sql/relational-databases/performance/manage-the-query-store&tabs=ssms#set-the-optimal-query-store-capture-mode) and [Keep the most relevant data in Query Store](/sql/relational-databases/performance/manage-the-query-store&tabs=ssms#keep-the-most-relevant-data-in-query-store) sections in [Best practices for managing the Query Store](/sql/relational-databases/performance/manage-the-query-store).
+If you have Query Store enabled, you can take advantage of its persisted historical statistics. Contrary to data from `sys.dm_exec_query_stats`, these statistics survive a SQL Server restart or memory pressure because they're stored in a database. QDS also has size limits and retention policy. For more information, see the [Set the optimal Query Store Capture Mode](/sql/relational-databases/performance/manage-the-query-store#set-the-optimal-query-store-capture-mode) and [Keep the most relevant data in Query Store](/sql/relational-databases/performance/manage-the-query-store#keep-the-most-relevant-data-in-query-store) sections in [Best practices for managing the Query Store](/sql/relational-databases/performance/manage-the-query-store).
 
 First, identify if your databases have Query Store enabled using this query:
 
