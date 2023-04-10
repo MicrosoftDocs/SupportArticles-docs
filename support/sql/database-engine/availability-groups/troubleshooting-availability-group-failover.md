@@ -318,9 +318,9 @@ To check for non-yielding scheduler events, follow these steps:
     0000211c.00002594::2021/02/24-21:50:02.452 ERR [RES] SQL Server Availability Group: [hadrag] Failure detected, diagnostics heartbeat is lost 0000211c.00002594::2021/02/24-21:50:02.452 ERR [RES] SQL Server Availability Group < SQL19AGN1>: [hadrag] Availability Group is not healthy with given HealthCheckTimeout and FailureConditionLevel 0000211c.00002594::2021/02/24-21:50:02.452 ERR [RES] SQL Server Availability Group < SQL19AGN1: [hadrag] Resource Alive result 0.
     ```
 
-You can see that there were non-yielding events that occurred at the time of the health check time-out.
+    You can see that there were non-yielding events that occurred at the time of the health check time-out.
 
-:::image type="content" source="media/troubleshooting-availability-group-failover/non-yielding-events-health-time-checkout.png" alt-text="Screenshot that shows non-yielding events that occurred during health check time-out.":::
+    :::image type="content" source="media/troubleshooting-availability-group-failover/non-yielding-events-health-time-checkout.png" alt-text="Screenshot that shows non-yielding events that occurred during health check time-out.":::
 
 If non-yielding events are detected, check the cause of the non-yielding event. Consider contacting the SQL Server support team to investigate the non-yielding events.
 
