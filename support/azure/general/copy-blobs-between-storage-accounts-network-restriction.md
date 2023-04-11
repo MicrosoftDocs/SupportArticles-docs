@@ -29,7 +29,7 @@ azcopy copy 'https://<source-storage-account-name>.blob.core.windows.net/<contai
 > [!NOTE]
 > If you provides authorization credentials to the storage service by using Azure Active Directory (Azure AD), the shared access signature (SAS) token can be omitted from the destination URL. But for the source URL, a SAS token must be appended.
 
-For more information, see [Copy blobs between Azure storage accounts with AzCopy v10] (/azure/storage/common/storage-use-azcopy-blobs-copy).
+For more information, see [Copy blobs between Azure storage accounts with AzCopy v10](/azure/storage/common/storage-use-azcopy-blobs-copy).
 
 ## Supported scenarios for copying blobs between storage accounts with network restriction
 
@@ -41,7 +41,7 @@ When network access is limited via the firewall allowlist, you can copy blobs wi
 
 In this scenario, the client's public IP address or virtual network (VNET) must be added to the firewall allowlist in both source and destination storage account.
 
-The following image shows the process of coping blobs between storage accounts in this scenario:
+The following image shows the process of copying blobs between storage accounts in this scenario:
 
 :::image type="content" source="media/copy-blobs-between-storage-accounts-network-restriction/firewall-with-vnet-in-allowlist.png" alt-text="Image that shows the process of coping blobs between storage accounts in scenario 1.":::
 
@@ -49,7 +49,7 @@ The following image shows the process of coping blobs between storage accounts i
 
 In this scenario, the firewall allowlist isn't needed.
 
-The following image shows the process of coping blobs between storage accounts in this scenario:
+The following image shows the process of copying blobs between storage accounts in this scenario:
 
 :::image type="content" source="media/copy-blobs-between-storage-accounts-network-restriction/firewall-enabled-with-no-rule.png" alt-text="Image that shows the process of coping blobs between storage accounts in scenario 2.":::
 
