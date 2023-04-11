@@ -1,15 +1,15 @@
 ---
-title: Troubleshoot issue with missing required variables and actions during agent tranfers from Power Virtual Agents bots
+title: Issue with missing required variables and actions during agent tranfers from Power Virtual Agents bots
 description: Provides a resolution for missing required variables and actions during agent tranfers from Power Virtual Agents bots in Omnichannel for Customer Service.
 author: lalexms
 ms.author: laalexan
 ms.topic: troubleshooting
-ms.date: 03/08/2023
+ms.date: 04/11/2023
 ---
 
-# Troubleshoot issue with missing required variables and actions during agent tranfers from Power Virtual Agents bots
+# Missing required variables and actions during agent tranfers from Power Virtual Agents bots
 
-This article helps you troubleshoot an error message that occurs when you're configuring the handoff between Power Virtual Agents bot and the Omnichannel voice workstream.
+This article provides a solution for an error that occurs when you're configuring the handoff between Power Virtual Agents bot and the Omnichannel voice workstream.
 
 ## Symptom
 
