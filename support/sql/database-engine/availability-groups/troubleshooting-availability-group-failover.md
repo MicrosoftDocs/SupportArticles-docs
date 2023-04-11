@@ -244,7 +244,7 @@ Server The lease between availability group 'ag' and the Windows Server Failover
 
 To resolve this issue, the dump file diagnostic must be investigated for the root cause. Consider contacting Microsoft SQL Server support to provide the SQL Server error log and dump file content for further investigation.
 
-#### High CPU usage or other system performance issue
+**2. High CPU usage or other system performance issue**
 
 A lease time-out indicates a performance issue that affects the entire system, including SQL Server. To diagnose the system issue, Always On health diagnostics reports performance monitor data in the cluster log and includes the lease time-out event. The performance data spans approximately 50 seconds leading up to the lease time-out event, reporting on CPU utilization, free memory, and disk latency.
 
