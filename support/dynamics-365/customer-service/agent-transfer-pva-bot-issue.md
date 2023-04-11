@@ -1,10 +1,10 @@
 ---
-title: Issue with missing required variables and actions during agent tranfers from Power Virtual Agents bots
-description: Provides a resolution for missing required variables and actions during agent tranfers from Power Virtual Agents bots in Omnichannel for Customer Service.
-author: lalexms
-ms.author: laalexan
+title: Missing required variables and actions during agent tranfers from Power Virtual Agents bots
+description: Provides a solution for missing required variables and actions during agent tranfers from Power Virtual Agents bots in Omnichannel for Customer Service.
+ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
+ms.subservice: d365-customer-service
 ---
 
 # Missing required variables and actions during agent tranfers from Power Virtual Agents bots
