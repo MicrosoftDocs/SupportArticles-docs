@@ -39,7 +39,7 @@ There are common errors that indicate low memory in SQL Server. Examples of erro
 
 ## Cause
 
-Many factors can cause insufficient memory. Such factors include operating system settings, physical memory availability, components that use memory inside SQL Server, and memory limits on the current workload. In most cases, the query that fails with an out-of-memory error isn't the cause of this error. Overall, the causes can be grouped into three categories:
+Many factors can cause insufficient memory. Such factors include operating system settings, physical memory availability, components that use memory inside SQL Server, and memory limits on the current workload. In most cases, the query that fails with an out of memory error isn't the cause of this error. Overall, the causes can be grouped into three categories:
 
 ### Cause 1: External or OS memory pressure
 
@@ -55,14 +55,14 @@ For a detailed explanation of these and troubleshooting steps, refer to [MSSQLSE
 
 ### Cause 2: Internal memory pressure, not coming from SQL Server
 
-Internal memory pressure refers to low memory availability caused by factors inside the SQL Server process. Some components that may run inside the SQL Server process are "external" to the SQL Server engine. Examples include OLE DB providers (DLLs) like linked servers, SQLCLR procedures or functions, extended procedures (XPs), and OLE Automation (`sp_OA*`). Others include anti-virus or other security programs that inject DLLs inside a process for monitoring purposes. An issue or poor design in any of these components could lead to large memory consumption. For example, consider a linked server caching 20 million rows of data that come from an external source into SQL Server memory. As far as SQL Server is concerned, no memory clerk will report high memory usage, but memory consumed inside the SQL Server process will be high. This memory growth from a linked server DLL, for example, would cause SQL Server to start cutting its memory usage (see above) and will create low-memory conditions for components inside SQL Server, causing out of memory errors. For more detailed diagnostics and solutions on the issue, see [Internal memory pressure, not coming from SQL Server](#internal-memory-pressure-not-coming-from-sql-server).
+Internal memory pressure refers to low memory availability caused by factors inside the SQL Server process. Some components that may run inside the SQL Server process are "external" to the SQL Server engine. Examples include OLE DB providers (DLLs) like linked servers, SQLCLR procedures or functions, extended procedures (XPs), and OLE Automation (`sp_OA*`). Others include anti-virus or other security programs that inject DLLs inside a process for monitoring purposes. An issue or poor design in any of these components could lead to large memory consumption. For example, consider a linked server caching 20 million rows of data from an external source into SQL Server memory. As far as SQL Server is concerned, no memory clerk will report high memory usage, but memory consumed inside the SQL Server process will be high. This memory growth from a linked server DLL, for example, would cause SQL Server to start cutting its memory usage (see above) and will create low memory conditions for components inside SQL Server, causing out of memory errors. For more detailed diagnostics and solutions on the issue, see [Internal memory pressure, not coming from SQL Server](#internal-memory-pressure-not-coming-from-sql-server).
 
 > [!NOTE]
 > A few Microsoft DLLs used in the SQL Server process space (for example, [MSOLEDBSQL](/sql/connect/oledb/oledb-driver-for-sql-server), [SQL Native Client](/sql/relational-databases/native-client/sql-server-native-client)) are able to interface with SQL Server memory infrastructure for reporting and allocation. You can run `select * from sys.dm_os_memory_clerks where type='MEMORYCLERK_HOST'` to get a list of them and track that memory consumption for some of their allocations.
 
-### Cause 3: Internal memory pressure, coming from SQL Server component(s)
+### Cause 3: Internal memory pressure coming from SQL Server component(s)
   
-Internal memory pressure coming from components inside SQL Server engine can also lead to out of memory errors. There are hundreds of components, tracked via [memory clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql) that allocate memory in SQL Server. You must identify which memory clerk(s) are responsible for the largest memory allocations to resolve this issue. For example, if you find that the `OBJECTSTORE_LOCK_MANAGER` memory clerk is showing a large memory allocation, you need to understand why the Lock Manager is consuming so much memory. You may find there are queries that acquire many locks. You can optimize these queries by using indexes, shortening any transactions that hold locks for a long time, or checking if lock escalation is disabled. Each memory clerk or component has a unique way of accessing and using memory. For more information, see [memory clerk types](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql) and their descriptions. For more detailed diagnostics and solutions on the issue, see [Internal memory usage by SQL Server engine](#internal-memory-usage-by-sql-server-engine).
+Internal memory pressure coming from components inside the SQL Server engine can also lead to out of memory errors. There are hundreds of components tracked via [memory clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql) that allocate memory in SQL Server. You must identify which memory clerk(s) are responsible for the largest memory allocations to resolve this issue. For example, if you find that the `OBJECTSTORE_LOCK_MANAGER` memory clerk is showing a large memory allocation, you need to understand why the Lock Manager is consuming so much memory. You may find there are queries that acquire many locks. You can optimize these queries by using indexes, shortening any transactions that hold locks for a long time, or checking if lock escalation is disabled. Each memory clerk or component has a unique way of accessing and using memory. For more information, see [memory clerk types](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql) and their descriptions. For more detailed diagnostics and solutions on the issue, see [Internal memory usage by SQL Server engine](#internal-memory-usage-by-sql-server-engine).
 
 ## Visual representation of the memory pressure types
 
@@ -109,7 +109,7 @@ The following sections describe more detailed steps for each scenario (external 
 
 ## Troubleshooting methodology
 
-If an out-of-memory error occasionally appears or for a brief period, there may be a short-lived memory issue that resolves itself. You may not need to take action in those cases. However, if the error occurs multiple times on multiple connections and persists for periods of seconds or longer, follow the diagnostics and solutions in following sections to troubleshoot memory errors further.
+If an out of memory error occasionally appears or for a brief period, there may be a short-lived memory issue that resolves itself. You may not need to take action in those cases. However, if the error occurs multiple times on multiple connections and persists for periods of seconds or longer, follow the diagnostics and solutions in following sections to troubleshoot memory errors further.
 
 ### External memory pressure
 
@@ -145,7 +145,7 @@ To diagnose low memory conditions on the system outside of the SQL Server proces
 - Review the System Event log and look for memory-related errors (for example, low virtual memory).
 - Review the Application Event log for application-related memory issues.
 
-  Here's an example of PowerShell script to query the System and Application Event logs for the keyword "memory". Feel free to use other strings like "resource" for your search:
+  Here's an example of a PowerShell script to query the System and Application Event logs for the keyword "memory." Feel free to use other strings like "resource" for your search:
   
   ```PowerShell
   Get-EventLog System -ComputerName "$env:COMPUTERNAME" -Message "*memory*"
@@ -169,21 +169,21 @@ To diagnose internal memory pressure caused by modules (DLLs) inside SQL Server,
    tasklist /M /FI "IMAGENAME eq sqlservr.exe"
   ```
 
-- You could also use the following query to examine loaded modules (DLLs) and see if something isn't expected to be there.
+- You could also use the following query to examine loaded modules (DLLs) and see if anything unexpected is there.
 
   ```sql
   SELECT * FROM sys.dm_os_loaded_modules
   ```
 
-- If you suspect that a Linked Server module is causing significant memory consumption, you can configure it to run out of process by disabling the **Allow inprocess** option. See [Create Linked Servers](/sql/relational-databases/linked-servers/create-linked-servers-sql-server-database-engine) for more information. Not all linked server OLE DB providers may run out of process. For more information, contact the product manufacturer.
+- If you suspect a Linked Server module is causing significant memory consumption, you can configure it to run out of process by disabling the **Allow inprocess** option. See [Create Linked Servers](/sql/relational-databases/linked-servers/create-linked-servers-sql-server-database-engine) for more information. Not all linked server OLE DB providers may run out of process. For more information, contact the product manufacturer.
 
 - In the rare case where OLE automation objects (`sp_OA*`) are used, you may configure the object to run in a process outside SQL Server by specifying a context value of **4** (Local (.exe) OLE server only). For more information, see [sp_OACreate](/sql/relational-databases/system-stored-procedures/sp-oacreate-transact-sql).
 
 ### Internal memory usage by SQL Server engine
 
-To diagnose internal memory pressure coming from components inside SQL Server engine, use the following methods:
+To diagnose internal memory pressure coming from components inside the SQL Server engine, use the following methods:
 
-- Start collecting Performance Monitor counters for SQL Server: **SQL Server:Buffer Manager**, **SQL Server: Memory Manager**.  
+- Start collecting Performance Monitor counters for SQL Server: **SQL Server:Buffer Manager** and **SQL Server: Memory Manager**.  
 
 - Query the SQL Server memory clerks DMV multiple times to see where the highest consumption of memory occurs inside the engine:
 
@@ -205,7 +205,7 @@ To diagnose internal memory pressure coming from components inside SQL Server en
   - If a large number of ad-hoc query plans are cached, the `CACHESTORE_SQLCP` memory clerk would use large amounts of memory. Identify non-parameterized queries whose query plans can't be reused and parameterize them by converting to stored procedures, using `sp_executesql`, or by using FORCED parameterization. If you have enabled [trace flag 174](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf174), you may disable it to see if this resolves the problem.
   - If the object plan cache store `CACHESTORE_OBJCP` is consuming too much memory, identify which stored procedures, functions, or triggers are using large amounts of memory and possibly redesign the application. Commonly, this may happen due to large amounts of databases or schemas with hundreds of procedures in each.
   - If the `OBJECTSTORE_LOCK_MANAGER` memory clerk shows large memory allocations, identify queries that apply many locks and optimize them by using indexes. Shorten transactions that cause locks not to be released for long periods in certain isolation levels or check if lock escalation is disabled.
-  - If you observe very large TokenAndPermUserStore (`select type, name, pages_kb from sys.dm_os_memory_clerks where name = 'TokenAndPermUserStore'`), you can use [trace flag 4618](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf4618) to limit the sizeof the cache.
+  - If you observe very large TokenAndPermUserStore (`select type, name, pages_kb from sys.dm_os_memory_clerks where name = 'TokenAndPermUserStore'`), you can use [trace flag 4618](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf4618) to limit the size of the cache.
   - If you observe memory issues with In-Memory OLTP coming from the `MEMORYCLERK_XTP` memory clerk, you can refer to [Monitor and Troubleshoot Memory Usage for In-Memory OLTP](/sql/relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage) and [Memory-optimized tempdb metadata (HkTempDB) out of memory errors](../performance/memory-optimized-tempdb-out-of-memory.md).
 
 ## Quick relief that may make memory available
@@ -254,4 +254,4 @@ If you're using Resource Governor, we recommend that you check the resource pool
 
 ### Add more RAM on the physical or virtual server
 
-If the problem continues, you'll need to investigate further and possibly increase server resources (RAM).
+If the problem continues, you need to investigate further and possibly increase server resources (RAM).
