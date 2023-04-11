@@ -109,19 +109,12 @@ Here's an example of a cluster health event in the cluster log. To find it, you 
 
 ```output
 00000fe4.00001628::2022/12/15-14:26:02.654 WARN [QUORUM] Node 1: Lost quorum (1)
-
 00000fe4.00001628::2022/12/15-14:26:02.654 WARN [QUORUM] Node 1: goingAway: 0, core.IsServiceShutdown: 0
-
 00000fe4.00001628::2022/12/15-14:26:02.654 WARN lost quorum (status = 5925)
-
 00000fe4.00001628::2022/12/15-14:26:02.654 INFO [NETFT] Cluster Service preterminate succeeded.
-
 00000fe4.00001628::2022/12/15-14:26:02.654 WARN lost quorum (status = 5925), executing OnStop
-
 00000fe4.00001628::2022/12/15-14:26:02.654 INFO [DM]: Shutting down, so unloading the cluster database.
-
 00000fe4.00001628::2022/12/15-14:26:02.654 INFO [DM] Shutting down, so unloading the cluster database (waitForLock: false).
-
 000019cc.000019d0::2022/12/15-14:26:02.654 WARN [RHS] Cluster service has terminated. Cluster.Service.Running.Event got signaled.
 ```
 
@@ -129,7 +122,6 @@ Another way to identify this event is to search the Windows system event log:
 
 ```output
 Critical SQL19AGN1.CSSSQL 1135 Microsoft-Windows-FailoverClusterin Node Mgr NT AUTHORITY\SYSTEM Cluster node 'SQL19AGN2' was removed from the active failover cluster membership. The Cluster service on this node may have stopped. This could also be due to the node having lost communication with other active nodes in the failover cluster. Run the Validate a Configuration wizard to check your network configuration. If the condition persists, check for hardware or software errors related to the network adapters on this node. Also check for failures in any other network components to which the node is connected such as hubs, switches, or bridges.
-
 Critical SQL19AGN1.CSSSQL 1177 Microsoft-Windows-FailoverClusterin Quorum Manager NT AUTHORITY\SYSTEM The Cluster service is shutting down because quorum was lost. This could be due to the loss of network connectivity between some or all nodes in the cluster, or a failover of the witness disk. Run the Validate a Configuration wizard to check your network configuration. If the condition persists, check for hardware or software errors related to the network adapter. Also check for failures in any other network components to which the node is connected such as hubs, switches, or bridges.
 ```
 
@@ -139,11 +131,8 @@ The errors in the Windows event log (Events 1135 and 1177) suggest that network 
 
 ```output
 00000fe4.00001edc::2022/12/14-22:44:36.870 INFO [NODE] Node 1: New join with n3: stage: 'Attempt Initial Connection' status (10060) reason: 'Failed to connect to remote endpoint 20.1.19.103:~3343~'
-
 00000fe4.00001620::2022/12/15-14:26:02.050 INFO [IM] got event: Remote endpoint 10.1.19.102:~3343~ unreachable from 10.1.19.101:~3343~
-
 00000fe4.00001620::2022/12/15-14:26:02.050 WARN [NDP] All routes for route (virtual) local fe80::38b9:a16d:77b2:d2d:~0~ to remote fe80::9087:71d9:495b:27bd:~0~ are down
-
 00000fe4.0000179c::2022/12/15-14:26:02.053 WARN [NODE] Node 1: Connection to Node 2 is broken. Reason GracefulClose(1226)' because of 'channel to remote endpoint fe80::9087:71d9:495b:27bd%14:~3343~ is closed'
 ```
 
