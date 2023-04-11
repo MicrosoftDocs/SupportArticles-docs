@@ -53,49 +53,49 @@ The period during which the availability group is in the Resolving role before i
 
    1. Run the following cmdlet in an elevated PowerShell window by using 'sql19agn1' as the SQL Server-based server name:
 
-    ```PowerShell
-      get-clusterlog -Node sql19agn1 -UseLocalTime
-    ```
+     ```PowerShell
+        get-clusterlog -Node sql19agn1 -UseLocalTime
+     ```
 
-    :::image type="content" source="media/troubleshooting-availability-group-failover/cluster-log-node-powershell.png" alt-text="Screenshot that shows PowerShell window with sql19agn1 as the SQL Server name.":::
+     :::image type="content" source="media/troubleshooting-availability-group-failover/cluster-log-node-powershell.png" alt-text="Screenshot that shows PowerShell window with sql19agn1 as the SQL Server name.":::
 
     > [!NOTE]  
     > By default, the log file is created in *%WINDIR%\cluster\reports*.
 
 2. Identify Always On health trends
 
-You might investigate a single Always On health event, or there might be a recent or ongoing trend of health problems that are intermittently interrupting production. The following questions can help you to narrow down and correlate recent changes in your production environment that might be related to these health problems:
+   You might investigate a single Always On health event, or there might be a recent or ongoing trend of health problems that are intermittently interrupting production. The following questions can help you to narrow down and correlate recent changes in your production environment that might be related to these health problems:
 
-- When did the Always On or cluster health events trend begin?
-- Do the health events occur on a certain day?
-- Do the health events occur at a certain time of day?
-- Do the health events occur on a certain day or week of the month?
+   - When did the Always On or cluster health events trend begin?
+   - Do the health events occur on a certain day?
+   - Do the health events occur at a certain time of day?
+   - Do the health events occur on a certain day or week of the month?
 
-If you detect a trend, check the scheduled maintenance on the system (the host system in a virtual environment), ETL batches, and other jobs that might correlate with these health events. If the system is a virtual machine, investigate the host system for changes that were possibly introduced at the time of the outages.
+   If you detect a trend, check the scheduled maintenance on the system (the host system in a virtual environment), ETL batches, and other jobs that might correlate with these health events. If the system is a virtual machine, investigate the host system for changes that were possibly introduced at the time of the outages.
 
-Consider busy ad-hoc production workloads that might correlate to the time of the health issues (for example, when users first log on to the system, or after users return from lunch).
+   Consider busy ad-hoc production workloads that might correlate to the time of the health issues (for example, when users first log on to the system, or after users return from lunch).
 
-> [!NOTE]  
-> This is a good time to consider a plan to collect performance data throughout the week and month. To better understand when the system is busiest, you can measure Windows performance monitor counters such as `Processor Information::% Processor Time`, `Memory::Available MBytes`, and `MSSQLServer:SQL Statistics::Batch Requests/sec`.
+   > [!NOTE]  
+   > This is a good time to consider a plan to collect performance data throughout the week and month. To better understand when the system is busiest, you can measure Windows performance monitor counters such as `Processor Information::% Processor Time`, `Memory::Available MBytes`, and `MSSQLServer:SQL Statistics::Batch Requests/sec`.
 
 3. Find the health event in the cluster log
 
-Always On uses several health monitoring mechanisms to monitor availability group health. In addition to a Windows Cluster health event (in which Windows Cluster detects a health issue among the cluster nodes), Always On has four different kinds of health checks:
+   Always On uses several health monitoring mechanisms to monitor availability group health. In addition to a Windows Cluster health event (in which Windows Cluster detects a health issue among the cluster nodes), Always On has four different kinds of health checks:
 
-- The SQL Server service isn't running
-- A SQL Server lease time-out
-- A SQL Server health check time-out
-- A SQL Server internal health issue
+   - The SQL Server service isn't running
+   - A SQL Server lease time-out
+   - A SQL Server health check time-out
+   - A SQL Server internal health issue
 
-You can locate any of these Always On specific health events by searching the cluster log for the string, `[hadrag] Resource Alive result 0`. This string is saved in the cluster log when any of these events are detected. For example:
+   You can locate any of these Always On specific health events by searching the cluster log for the string, `[hadrag] Resource Alive result 0`. This string is saved in the cluster log when any of these events are detected. For example:
 
-```output
-00001334.00002ef4::2019/06/24-18:24:36.153 ERR [RES] SQL Server Availability Group : [hadrag] Resource Alive result 0.
-```
+   ```output
+   00001334.00002ef4::2019/06/24-18:24:36.153 ERR [RES] SQL Server Availability Group : [hadrag] Resource Alive result 0.
+   ```
 
-You can use a tool to find all the health events in the cluster log so that you can generate a summary report of Always On health problems. This can be useful to identify chronological trends and determine whether a particular kind of Always On health condition is recurring. The following screenshot shows how to use a text editor (NotePad++, in this case) to find all the lines in the cluster log that contain the `[hadrag] Resource Alive result 0` string:
+   You can use a tool to find all the health events in the cluster log so that you can generate a summary report of Always On health problems. This can be useful to identify chronological trends and determine whether a particular kind of Always On health condition is recurring. The following screenshot shows how to use a text editor (NotePad++, in this case) to find all the lines in the cluster log that contain the `[hadrag] Resource Alive result 0` string:
 
-:::image type="content" source="media/troubleshooting-availability-group-failover/locate-health-events-in-notepad.png" alt-text="Screenshot that shows tool to locate all the health events in the cluster log." lightbox="media/troubleshooting-availability-group-failover/locate-health-events-in-notepad.png":::
+   :::image type="content" source="media/troubleshooting-availability-group-failover/locate-health-events-in-notepad.png" alt-text="Screenshot that shows tool to locate all the health events in the cluster log." lightbox="media/troubleshooting-availability-group-failover/locate-health-events-in-notepad.png":::
 
 ## Determine the kind of health issue that triggered the failover
 
@@ -105,7 +105,7 @@ To determine the kind of health issues that you find in the cluster log of the p
 
 Microsoft Windows Cluster monitors the health of the member servers in the cluster. If a health problem is detected, a cluster member server might be removed from the cluster. Also, the cluster resources (including the availability group role that's hosted on the removed cluster member server) will be moved to the availability group failover partner replica if it's configured for automatic failover.
 
-#### Cluster health event symptoms
+#### Symptoms of Cluster health events
 
 Here's an example of a cluster health event in the cluster log. To find it, you can search for `Lost quorum` or `Cluster service has terminated` because either might be present during the availability group role change or failover.
 
