@@ -1,26 +1,16 @@
 - name: Skype for Business Online Troubleshooting
   href: ../skype-online-welcome.yml
-  items:
-  - name: Attachments
-    items:
-    - name: Can't send or receive files from Lync
-      href: ../online-attachments/cant-send-receive-files-attachments.md
+  items:  
   - name: Conferencing
-    items:
-    - name: "\"Share your desktop\" displays black screen"
-      href: ../online-conferencing/sharing-display-black-screen.md
+    items:    
     - name: Audio/video connections fail in Lync Mobile 2013
       href: ../online-conferencing/audio-or-video-connections-fail.md
     - name: Audio/video not started in a conference
-      href: ../online-conferencing/audio-or-video-not-start.md
-    - name: Can't share presentations from Lync
-      href: ../online-conferencing/cant-share-presentations.md
+      href: ../online-conferencing/audio-or-video-not-start.md    
     - name: Error when dial out from PSTN Conferencing meeting
       href: ../online-conferencing/dial-out-to-telephone-from-pstn-meeting.md
     - name: Meeting organizer not prompted for leader PIN
-      href: ../online-conferencing/meeting-organizer-not-prompted-for-leader-pin.md
-    - name: Poor audio or video quality
-      href: ../online-conferencing/poor-audio-video-quality.md
+      href: ../online-conferencing/meeting-organizer-not-prompted-for-leader-pin.md    
     - name: PSTN callers can't join dial-in conference call
       href: ../online-conferencing/pstn-callers-cant-join-dial-in-call.md
     - name: Sharing can't connect in a conference
@@ -37,16 +27,6 @@
       href: ../online-configuration/admins-cant-use-set-csuser.md
     - name: Calls to call queues not redirected to agents
       href: ../online-configuration/call-queues-not-redirect-to-agents.md
-    - name: DNS configuration issues
-      href: ../online-configuration/dns-configuration-issue.md
-    - name: Issue when Microsoft 365 administrator disables a user
-      href: ../online-configuration/license-validation-error.md
-    - name: How to set up external communication
-      href: ../online-configuration/set-up-external-communication.md
-    - name: msRTCSIP-PrimaryUserAddress or SIP address not unique
-      href: ../online-configuration/msrtcsip-primaryuseraddress-proxyaddaddress.md
-    - name: Outlook email address doesn't match sign-in address
-      href: ../online-configuration/problem-connecting-to-outlook.md
     - name: SharePoint Skill search isn't supported
       href: ../online-configuration/sharepoint-skill-search-not-supported.md
   - name: Contacts
@@ -54,19 +34,13 @@
     - name: Can't communicate with external contacts
       href: ../online-contacts/cant-communicate-with-external-contact.md
     - name: Can't upload photo from Lync 2013
-      href: ../online-contacts/cant-upload-photo-to-sfb-online.md
-    - name: Contacts are offline or aren't searchable
-      href: ../online-contacts/contacts-offline-not-searchable.md
+      href: ../online-contacts/cant-upload-photo-to-sfb-online.md    
     - name: Issue when a user adds a contact group in Lync
       href: ../online-contacts/cannot-add-contact-group.md
     - name: Lync contact list is empty or read-only
       href: ../online-contacts/lync-contact-list-is-empty-or-read-only.md
     - name: Maximum Followers Reached
-      href: ../online-contacts/maximum-followers-reached.md
-    - name: Outlook Skype for Business Contacts folder not synced
-      href: ../online-contacts/outlook-contacts-folder-not-sync.md
-    - name: Telephone number not visible in contact card
-      href: ../online-contacts/telephone-number-not-visible.md
+      href: ../online-contacts/maximum-followers-reached.md    
     - name: Unable to modify contact lists
       href: ../online-contacts/cannot-modify-contact-lists.md
     - name: User contact photos not correct in Lync
@@ -77,8 +51,6 @@
       href: ../online-exchange-integration/um-enabled-mailbox-migration-fails.md
   - name: IM and Presence
     items:
-    - name: Can't communicate with external contacts
-      href: ../online-im-presence/cannot-communicate-with-external-contacts.md
     - name: Can't IM to external contacts from OWA
       href: ../online-im-presence/cant-send-im-to-external-contacts.md
     - name: Conversations not synced with mailbox
@@ -101,18 +73,10 @@
       href: ../online-meetings/cannot-create-meeting-delegate.md
     - name: Can't join online meetings from Lync Mobile
       href: ../online-meetings/users-cant-join-online-meeting.md
-    - name: Can't join online meetings
-      href: ../online-meetings/cannot-join-online-meetings.md
     - name: Incorrect special characters in meeting invitations
       href: ../online-meetings/special-characters-not-display-correctly.md
-    - name: Invitations not sent from Outlook
-      href: ../online-meetings/invitations-are-not-sent.md
     - name: Issues when use Outlook Web App in Microsoft 365
-      href: ../online-meetings/schedule-online-meetings-from-owa.md
-    - name: Issues when you schedule a meeting
-      href: ../online-meetings/error-when-you-schedule-meeting.md
-    - name: Troubleshoot recording online meetings
-      href: ../online-meetings/troubleshoot-recording-online-meetings.md
+      href: ../online-meetings/schedule-online-meetings-from-owa.md    
     - name: URL for online meetings not uses custom domain
       href: ../online-meetings/url-for-meetings-not-use-custom-domain.md
     - name: Users removed from a meeting
@@ -139,8 +103,6 @@
       href: ../online-phone-system/add-normalization-rules-change-japanese-dial-plans.md
     - name: Call transfer fails
       href: ../online-phone-system/call-transfer-fails.md
-    - name: Calls to international phone number fail
-      href: ../online-phone-system/calls-to-international-phone-number-fail.md
     - name: Can't add a new derived SBC
       href: ../online-phone-system/add-new-derived-sbc-direct-routing.md
     - name: Can't locate city name for PSTN caller
@@ -183,16 +145,8 @@
       href: ../online-sign-in/cant-sign-in-to-lync-not-support-sni.md
     - name: Can't sign-in with this version of Lync in Lync Mobile 2013
       href: ../online-sign-in/cannot-sign-in-lync-mobile-2013.md
-    - name: Considerations when changing sign-in address
-      href: ../online-sign-in/change-office-365-sign-in-address.md
-    - name: Issue when click "Skype" in Office Online
-      href: ../online-sign-in/couldnt-sign-you-in-when-click-skype.md
-    - name: Issue when Lync fails to connect to Exchange
-      href: ../online-sign-in/conversation-history-user-presence-unavailable.md
     - name: Issue when run New-CsOnlineSession cmdlet
       href: ../online-sign-in/error-in-xml-document-new-csonlinesession.md
-    - name: Issue when signing in Skype for Business Online
-      href: ../online-sign-in/cant-sign-into-sfb-online.md
     - name: Issue when signing in to a German Microsoft 365 environment
       href: ../online-sign-in/issue-sign-in-german-environment.md
     - name: Issue when signing in to Lync 2010 mobile client
@@ -203,14 +157,10 @@
       href: ../online-sign-in/cannot-sign-in-to-lync.md
     - name: Sign-in errors when settings are incorrect
       href: ../online-sign-in/sfb-online-sign-in-error.md
-    - name: Troubleshoot admin sign-in issues
-      href: ../online-sign-in/troubleshoot-sign-in-issues-for-admins.md
     - name: Troubleshoot issues related to Skype for Business sign-in
       href: ../online-sign-in/troubleshoot-issues-related-skype-for-business-sign-in.md
     - name: Troubleshoot Lync for Mac sign in issues
       href: ../online-sign-in/sign-in-issues-lync-for-mac.md
-    - name: Troubleshoot user sign-in issues
-      href: ../online-sign-in/troubleshoot-sign-in-issues-for-users.md
   - name: Subscription
     items:
     - name: Your subscription has expired
