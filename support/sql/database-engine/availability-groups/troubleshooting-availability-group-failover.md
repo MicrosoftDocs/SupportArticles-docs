@@ -45,7 +45,7 @@ The period during which the availability group is in the Resolving role before i
 
 ## Identify and diagnose Always On availability group health events or failover
 
-1. Review the cluster log
+### 1. Review the cluster log
 
    The Windows Cluster log is the most comprehensive log to use to identify the kind of Always On or cluster health event and also the detected health condition that caused the event. To generate and open the cluster log, follow these steps:
 
@@ -62,7 +62,7 @@ The period during which the availability group is in the Resolving role before i
     > [!NOTE]  
     > By default, the log file is created in *%WINDIR%\cluster\reports*.
 
-2. Identify Always On health trends
+### 2. Identify Always On health trends
 
    You might investigate a single Always On health event, or there might be a recent or ongoing trend of health problems that are intermittently interrupting production. The following questions can help you to narrow down and correlate recent changes in your production environment that might be related to these health problems:
 
@@ -78,7 +78,7 @@ The period during which the availability group is in the Resolving role before i
    > [!NOTE]  
    > This is a good time to consider a plan to collect performance data throughout the week and month. To better understand when the system is busiest, you can measure Windows performance monitor counters such as `Processor Information::% Processor Time`, `Memory::Available MBytes`, and `MSSQLServer:SQL Statistics::Batch Requests/sec`.
 
-3. Find the health event in the cluster log
+### 3. Find the health event in the cluster log
 
    Always On uses several health monitoring mechanisms to monitor availability group health. In addition to a Windows Cluster health event (in which Windows Cluster detects a health issue among the cluster nodes), Always On has four different kinds of health checks:
 
@@ -161,7 +161,7 @@ If it's necessary, consider contacting Microsoft Windows High Availability suppo
 
 Always On health monitoring can detect whether the SQL Server service that hosts the availability group primary replica is no longer running.
 
-#### Symptoms of SQL Service shutdown events
+#### Symptoms of SQL Server service shutdown
 
 Here's a sample of the cluster log report for the availability group role 'ag' that indicates a failure because `QueryServiceStatusEx` returned a process ID `0`:
 
@@ -195,7 +195,7 @@ Check the end of the SQL Server error log for clues. If the error log ends abrup
 
 If a SQL Server internal health issue caused SQL Server to terminate unexpectedly, there might be clues of a possible fatal exception (including a dump file diagnostic being generated) at the end of the SQL error log. Review the clues and take the necessary action. If you find a dump file, consider opening contacting Microsoft SQL Server support, and provide the SQL Server error log and dump file content for further investigation.
 
-### Always On health event: Lease time-out
+### Lease time-out: an Always On health event 
 
 Always On uses a "lease" mechanism to monitor the health of the computer on which SQL Server is installed. The default lease time-out is 20 seconds.
 
@@ -221,12 +221,27 @@ There are two main issues that can trigger a lease time-out:
 
 - A system wide performance issue: A lease time-out doesn't necessarily indicate a SQL Server health issue. Instead, it could indicate a system-wide health issue that also affects the health of the SQL Server-based server. For more detailed troubleshooting steps, see [MSSQLSERVER_19407](/sql/relational-databases/errors-events/mssqlserver-19407-database-engine-error).
 
-#### SQL Server dump file diagnostic
+**1. SQL Server dump file diagnostic**
 
 SQL Server might detect an internal health issue such as an access violation, assertion, or deadlocked schedulers. In this situation, the program generates a mini dump file (*.mdmp*) in the SQL Server *\LOG* folder of the SQL Server process for diagnosis. The SQL Server process is frozen for several seconds while the mini dump file is written to disk. During this time, all threads within the SQL Server process are in a frozen state. This includes the lease thread that's monitored by Always On health monitoring. Therefore, Always On might detect a lease time-out.
 
 ```output
-2014-11-02 21:21:10.59 Server **Dump thread - spid = 0, EC = 0x0000000000000000 2014-11-02 21:21:10.59 Server ***Stack Dump being sent to C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\LOG\SQLDump0001.txt 2014-11-02 21:21:10.59 Server * ******************************************************************************* 2014-11-02 21:21:10.59 Server * 2014-11-02 21:21:10.59 Server * BEGIN STACK DUMP: 2014-11-02 21:21:10.59 Server * 11/02/14 21:21:10 spid 1920 2014-11-02 21:21:10.59 Server * 2014-11-02 21:21:10.59 Server * Deadlocked Schedulers 2014-11-02 21:21:10.59 Server * 2014-11-02 21:21:10.59 Server * ******************************************************************************* 2014-11-02 21:21:10.59 Server * ------------------------------------------------------------------------------- 2014-11-02 21:21:10.59 Server * Short Stack Dump 2014-11-02 21:21:10.76 Server Stack Signature for the dump is 0x00000000000002BA 2014-11-02 21:21:19.56 Server Error: 19407, Severity: 16, State: 1. 2014-11-02 21:21:19.56 Server The lease between availability group 'ag' and the Windows Server Failover Cluster has expired. A connectivity issue occurred between the instance of SQL Server and the Windows Server Failover Cluster. To determine whether the availability group is failing over correctly, check the corresponding availability group resource in the Windows Server Failover Cluster.
+Server      **Dump thread - spid = 0, EC = 0x0000000000000000
+Server      ***Stack Dump being sent to C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\LOG\SQLDump0001.txt
+Server      * *******************************************************************************
+Server      *
+Server      * BEGIN STACK DUMP:
+Server      *   11/02/14 21:21:10 spid 1920
+Server      *
+Server      * Deadlocked Schedulers
+Server      *
+Server      * *******************************************************************************
+Server      * -------------------------------------------------------------------------------
+Server      * Short Stack Dump
+Server      Stack Signature for the dump is 0x00000000000002BA
+Server Error: 19407, Severity: 16, State: 1.
+Server The lease between availability group 'ag' and the Windows Server Failover Cluster has expired. A connectivity issue occurred between the instance of SQL Server and the Windows Server Failover Cluster. To determine whether the availability group is failing over correctly, check the corresponding availability group resource in the Windows Server Failover Cluster.
+
 ```
 
 To resolve this issue, the dump file diagnostic must be investigated for the root cause. Consider contacting Microsoft SQL Server support to provide the SQL Server error log and dump file content for further investigation.
@@ -265,7 +280,7 @@ You should also capture counters that report the same system resource usage, inc
    - `Logical Disk::Avg. Disk Write Queue Length`
    - `MSSQLServer:SQL Statistics::Batch Requests/sec`
 
-### Always On health event: health check time-out
+### Health check time-out: an Always On health event 
 
 When an availability group replica transitions into the Primary role, Always On health monitoring establishes a local ODBC connection to the SQL Server instance. While Always On is connected and monitoring, if SQL Server doesn't respond over the ODBC connection within the period that's set for the availability group's health check time-out (default is 30 seconds), then a health check time-out event is triggered. In this situation, the availability group transitions from the Primary role to the Resolving role and initiates failover, if it's configured to do this.
 
@@ -291,7 +306,7 @@ Here's an Always On health check time-out as reported in the cluster log:
 
 The following section helps you to review the SQL Server logs for "bread crumb" events that you might find and that correlate to Always On health check time-outs that are detected and reported. The logs that are reviewed here include the cluster log (where the health check time-out is confirmed), the `system_health` extended event logs and SQL Server error logs (both found in the SQL Server *\LOG* folder), and the Windows system event log. Use these and other logs to look for correlating events that might help you scope the cause of the health check time-out.
 
-#### Check for non-yielding scheduler events
+**1. Check for non-yielding scheduler events**
 
 The Always On health check time-out is frequently caused by "non-yielding" events in SQL Server. When SQL Server detects that a thread hasn't yielded on a scheduler, it will report that a non-yielding scheduler event has occurred. If you see other tasks on the same scheduler that aren't receiving CPU time, this is the primary sign of a non-yielding scheduler. This behavior can cause a delayed execution of those tasks and "starve" workloads that are assigned to a certain scheduler of CPU time.
 
@@ -360,7 +375,7 @@ Review the system event log for possible system clues that could be related to t
 02/23/2021,08:50:16 PM,Warning,SQL19AGN1.CSSSQL.local.local,153,Disk,N/A,N/A,"The IO operation at logical block address 0x11f0c3680 for Disk 6 (PDO name: \Device\00000046) was retried."
 ```
 
-### Always On health event: SQL Server health
+### SQL Server health: an Always On health event
 
 Always On monitors different kinds of SQL Server health events. While it hosts an availability group primary replica, SQL Server continuously runs `sp_server_diagnostics` that reports on SQL Server health by using different components. When any health problems are detected, `sp_server_diagnostics` reports an error for that particular component, and then sends the results back to the Always On health detection process. When an error is reported, the Availability Group role shows the failed state and possible failover if the availability group is configured to do this.
 
