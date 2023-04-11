@@ -7,7 +7,7 @@ ms.date: 04/11/2023
 ms.subservice: d365-customer-service
 ---
 
-# Agent isn't receiving chat in Omnichannel for Customer Service
+# Agent doesn't receive chat in Omnichannel for Customer Service
 
 This article provides a solution to an issue where an agent isn't receiving a chat in Omnichannel for Customer Service.
 
