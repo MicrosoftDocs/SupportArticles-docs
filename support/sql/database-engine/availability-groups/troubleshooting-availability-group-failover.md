@@ -157,7 +157,7 @@ Make sure that cluster health monitoring is appropriate for the host environment
 
 If it's necessary, consider contacting Microsoft Windows High Availability support to open a support incident.
 
-### Always On health event: The SQL Server service is down
+### SQL Server service is down: an Always On health event
 
 Always On health monitoring can detect whether the SQL Server service that hosts the availability group primary replica is no longer running.
 
