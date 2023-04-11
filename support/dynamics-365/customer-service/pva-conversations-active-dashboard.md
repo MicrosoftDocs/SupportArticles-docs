@@ -6,19 +6,20 @@ ms.topic: troubleshooting
 ms.date: 04/11/2023
 ms.subservice: d365-customer-service
 ---
+
 # Power Virtual Agents bot conversations appear as active on dashboard after customer has ended chat
 
 This article provides a solution to an issue where Power Virtual Agents bot conversations appear as active on the Omnichannel for Customer Service dashboard after a customer ends a chat.
 
-### Symptom
+## Symptom
 
 After a conversation has ended, the Power Virtual Agents bot conversations are still showing as active on the dashboard.
 
-### Cause
+## Cause
 
 Conversations for Power Virtual Agents bot can't be ended in Omnichannel for Customer Service, and therefore will be seen as active on the supervisor dashboard even after they've been closed.
 
-### Resolution 
+## Resolution 
 
 You can configure a context variable that will explicitly end the bot conversation in Omnichannel for Customer Service after customers close the chat window. In Power Virtual Agents, create a standalone topic for CloseOmnichannelConversation context variable with the variable property set to global. Invoke the topic in another topic that you've configured for the bot.
 
