@@ -1,0 +1,63 @@
+---
+title: Copy blobs between storage accounts with network restriction
+description: Introduces how to copy blobs between storage accounts with AzCopy and how to implement this when network restrictions are set for the storage accounts.
+ms.date: 04/11/2023
+ms.topic: how-to
+ms.service: storage
+ms.author: v-weizhu
+author: AmandaAZ
+ms.reviewer: jiajwu, azurestocic
+---
+# Copy blobs between Azure storage accounts with network restriction
+
+This article introduces how to copy blobs between storage accounts by using the AzCopy command-line utility and how to implement the copy operation when network restrictions are configured for the storage accounts.
+
+## Background
+
+Copying blob files between two storage accounts is a common requirement for many Azure users. There are several reasons for this, such as data backup, storage account migration, or meeting business requirements. Azure Storage supports directly copying blobs from one storage account to another, which can be implemented by using the AzCopy command-line utility. Users don't need to download files to local disks or buffers and then upload them again.
+
+Copying blobs between two storage accounts by using AzCopy doesn't rely on network bandwidth of your local computer. This method can take advantage of the performance of storage accounts and Azure virtual network to achieve better throughput than downloading and uploading files. If both storage accounts are in the same region, bandwidth cost is free of charge.
+
+## Copy blobs between storage accounts by using AzCopy
+
+To copy blobs between storage accounts directly, use the following command:
+
+```azcopy
+azcopy copy 'https://<source-storage-account-name>.blob.core.windows.net/<container-name>/<blob-path><SAS-token>' 'https://<destination-storage-account-name>.blob.core.windows.net/<container-name>/<blob-path>'
+```
+
+> [!NOTE]
+> If you provides authorization credentials to the storage service by using Azure Active Directory (Azure AD), the shared access signature (SAS) token can be omitted from the destination URL. But for the source URL, a SAS token must be appended.
+
+For more information, see [Copy blobs between Azure storage accounts with AzCopy v10] (/azure/storage/common/storage-use-azcopy-blobs-copy).
+
+## Supported scenarios for copying blobs between storage accounts with network restriction
+
+For security or compliance reasons, many users must limit network access to destination and source storage accounts. If the network access is limited via the firewall allowlist, it's not supported to copy blobs between storage accounts by using AzCopy. This is because requests are sent from the source storage account backend through dynamic private IP addresses.
+
+When network access is limited via the firewall allowlist, you can copy blobs with AzCopy under the following two supported scenarios:
+
+### Scenario 1: The client uses public endpoint to access storage accounts
+
+In this scenario, the client's public IP address or virtual network (VNET) must be added to the firewall allowlist in both source and destination storage account.
+
+The following image shows the process of coping blobs between storage accounts in this scenario:
+
+:::image type="content" source="media/copy-blobs-between-storage-accounts-network-restriction/firewall-with-vnet-in-allowlist.png" alt-text="Image that shows the process of coping blobs between storage accounts in scenario 1.":::
+
+### Scenario 2: The client's VNET has private links configured and it uses private endpoint to access storage accounts
+
+In this scenario, the firewall allowlist isn't needed.
+
+The following image shows the process of coping blobs between storage accounts in this scenario:
+
+:::image type="content" source="media/copy-blobs-between-storage-accounts-network-restriction/firewall-enabled-with-no-rule.png" alt-text="Image that shows the process of coping blobs between storage accounts in scenario 2.":::
+
+Here's the full process of this mechanism for the two scenarios:
+
+1. The client sent a PutBlockfromURL request to the destination storage.
+2. After getting the requests, the destination storage tries to get blocks from the given URL that's the source storage. However, since the destination storage hasn't been allowed by the source firewall, it will get a "403 Forbidden" error.
+3. After getting 403, the destination storage sent another GetBlob request on behalf of the client. If the client has access to the source storage, the destination will be able to get the blocks from the source with the response code 206 and return a success to the client.
+4. The client sent PutBlockList to the destination storage to commit the blocks and finish the process after receiving success from request.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
