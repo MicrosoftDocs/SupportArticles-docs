@@ -47,36 +47,34 @@ The period during which the availability group is in the Resolving role before i
 
 ### 1. Review the cluster log
 
-   The Windows Cluster log is the most comprehensive log to use to identify the kind of Always On or cluster health event and also the detected health condition that caused the event. To generate and open the cluster log, follow these steps:
+The Windows Cluster log is the most comprehensive log to use to identify the kind of Always On or cluster health event and also the detected health condition that caused the event. To generate and open the cluster log, follow these steps:
 
-   1. Use Windows PowerShell to generate the Windows Cluster log on the cluster node that hosts the primary replica at the time of the health event.
+Use Windows PowerShell to generate the Windows Cluster log on the cluster node that hosts the primary replica at the time of the health event. For example, run the following cmdlet in an elevated PowerShell window by using 'sql19agn1' as the SQL Server-based server name:
 
-   1. Run the following cmdlet in an elevated PowerShell window by using 'sql19agn1' as the SQL Server-based server name:
+```powershell
+get-clusterlog -Node sql19agn1 -UseLocalTime     
+```
 
-     ```PowerShell
-        get-clusterlog -Node sql19agn1 -UseLocalTime
-     ```
+:::image type="content" source="media/troubleshooting-availability-group-failover/cluster-log-node-powershell.png" alt-text="Screenshot that shows PowerShell window with sql19agn1 as the SQL Server name.":::
 
-     :::image type="content" source="media/troubleshooting-availability-group-failover/cluster-log-node-powershell.png" alt-text="Screenshot that shows PowerShell window with sql19agn1 as the SQL Server name.":::
-
-    > [!NOTE]  
-    > By default, the log file is created in *%WINDIR%\cluster\reports*.
+> [!NOTE]  
+> By default, the log file is created in *%WINDIR%\cluster\reports*.
 
 ### 2. Identify Always On health trends
 
-   You might investigate a single Always On health event, or there might be a recent or ongoing trend of health problems that are intermittently interrupting production. The following questions can help you to narrow down and correlate recent changes in your production environment that might be related to these health problems:
+You might investigate a single Always On health event, or there might be a recent or ongoing trend of health problems that are intermittently interrupting production. The following questions can help you to narrow down and correlate recent changes in your production environment that might be related to these health problems:
 
-   - When did the Always On or cluster health events trend begin?
-   - Do the health events occur on a certain day?
-   - Do the health events occur at a certain time of day?
-   - Do the health events occur on a certain day or week of the month?
+- When did the Always On or cluster health events trend begin?
+- Do the health events occur on a certain day?
+- Do the health events occur at a certain time of day?
+- Do the health events occur on a certain day or week of the month?
 
-   If you detect a trend, check the scheduled maintenance on the system (the host system in a virtual environment), ETL batches, and other jobs that might correlate with these health events. If the system is a virtual machine, investigate the host system for changes that were possibly introduced at the time of the outages.
+If you detect a trend, check the scheduled maintenance on the system (the host system in a virtual environment), ETL batches, and other jobs that might correlate with these health events. If the system is a virtual machine, investigate the host system for changes that were possibly introduced at the time of the outages.
 
-   Consider busy ad-hoc production workloads that might correlate to the time of the health issues (for example, when users first log on to the system, or after users return from lunch).
+Consider busy ad-hoc production workloads that might correlate to the time of the health issues (for example, when users first log on to the system, or after users return from lunch).
 
-   > [!NOTE]  
-   > This is a good time to consider a plan to collect performance data throughout the week and month. To better understand when the system is busiest, you can measure Windows performance monitor counters such as `Processor Information::% Processor Time`, `Memory::Available MBytes`, and `MSSQLServer:SQL Statistics::Batch Requests/sec`.
+> [!NOTE]  
+> This is a good time to consider a plan to collect performance data throughout the week and month. To better understand when the system is busiest, you can measure Windows performance monitor counters such as `Processor Information::% Processor Time`, `Memory::Available MBytes`, and `MSSQLServer:SQL Statistics::Batch Requests/sec`.
 
 ### 3. Find the health event in the cluster log
 
