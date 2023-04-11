@@ -93,7 +93,7 @@ Consider busy ad-hoc production workloads that might correlate to the time of th
 
    You can use a tool to find all the health events in the cluster log so that you can generate a summary report of Always On health problems. This can be useful to identify chronological trends and determine whether a particular kind of Always On health condition is recurring. The following screenshot shows how to use a text editor (NotePad++, in this case) to find all the lines in the cluster log that contain the `[hadrag] Resource Alive result 0` string:
 
-   :::image type="content" source="media/troubleshooting-availability-group-failover/locate-health-events-in-notepad.png" alt-text="Screenshot that shows tool to locate all the health events in the cluster log." lightbox="media/troubleshooting-availability-group-failover/locate-health-events-in-notepad.png":::
+   :::image type="content" source="media/troubleshooting-availability-group-failover/locate-health-events-in-notepad-small.png" alt-text="Screenshot that shows tool to locate all the health events in the cluster log." lightbox="media/troubleshooting-availability-group-failover/locate-health-events-in-notepad-big.png":::
 
 ## Determine the kind of health issue that triggered the failover
 
@@ -199,7 +199,7 @@ Always On uses a "lease" mechanism to monitor the health of the computer on whic
 
 #### Symptoms of Always On lease time-out events
 
-Here's a sample output of an Always On lease time-out from the cluster log. You can search these strings to locate a lease time=out in the cluster log.
+Here's a sample output of an Always On lease time-out from the cluster log. You can search these strings to locate a lease time-out in the cluster log.
 
 ```output
 00001a0c.00001c5c::2023/01/04-15:36:54.762 ERR [RES] SQL Server Availability Group : [hadrag] Availability Group lease is no longer valid 
@@ -404,7 +404,7 @@ Here's an example of a SQL Server health issue as reported by `sp_server_diagnos
 
 The kind of health issue that's reported by SQL Server health should dictate the direction of the root cause analysis.
 
-By default, when you deploy an availability group, the `FAILURE_CONDITION_LEVEL` is set as three. This activates monitoring of some, but not all, SQL Server health profiles. At the default level, Always On triggers a health event when SQL Server produces too many dump files, a write-access violation, or an orphaned spinlock. Setting the availability group up to level four or five will expand the types of SQL Server health issues that are monitored. For more information about the SQL Server health Always On monitors, see [Configure a flexible automatic failover policy for an availability group - SQL Server Always On](/sql/database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy).
+By default, when you deploy an availability group, the `FAILURE_CONDITION_LEVEL` is set as three. This activates monitoring of some, but not all SQL Server health profiles. At the default level, Always On triggers a health event when SQL Server produces too many dump files, a write-access violation, or an orphaned spinlock. Setting the availability group up to level four or five will expand the types of SQL Server health issues that are monitored. For more information about the SQL Server health Always On monitors, see [Configure a flexible automatic failover policy for an availability group - SQL Server Always On](/sql/database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy).
 
 To identify the Always On specific health issue, follow these steps:
 
@@ -418,13 +418,13 @@ To identify the Always On specific health issue, follow these steps:
 
 1. Press **Control**, select the files whose names match `<servername>_<instance>_SQLDIAG_xxx.xel`, select **Open**, and then select **OK**.
 
-   :::image type="content" source="media/troubleshooting-availability-group-failover/match-servername-instance.png" alt-text="Screenshot that shows how to select files whose names match a certain name." lightbox="media/troubleshooting-availability-group-failover/match-servername-instance.png":::
+   :::image type="content" source="media/troubleshooting-availability-group-failover/match-servername-instance-small.png" alt-text="Screenshot that shows how to select files whose names match a certain name." lightbox="media/troubleshooting-availability-group-failover/match-servername-instance-big.png":::
 
    You'll see a new tabbed window in SSMS that includes the extended events, as shown in the following screenshot.
 
 1. To investigate a SQL Server health issue, locate the `component_health_result` whose "state_desc" value is "error." Here's an example of a system component event that reported an error back to Always On health monitoring:
 
-   :::image type="content" source="media/troubleshooting-availability-group-failover/system-component-event-health-monitoring.png" alt-text="Screenshot of system component event that reported error.":::
+   :::image type="content" source="media/troubleshooting-availability-group-failover/system-component-event-health-monitoring-small.png" alt-text="Screenshot of system component event that reported error." lightbox="media/troubleshooting-availability-group-failover/system-component-event-health-monitoring-big.png":::
 
 1. Double-click the **data** column in the lower pane. This opens the detailed component data in a new SSMS window pane for review. Here's what the system component data looks like:
 
