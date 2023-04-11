@@ -9,6 +9,8 @@ ms.subservice: d365-customer-service
 
 # Case creation fails when mail is sent from queue address to same queue address on which automatic record creation rule is configured
 
+This article provides a solution to an issue where case creation fails due to mail being sent from a queue address to the same queue address on which an automatic record creation rule is configured.
+
 ## Symptom
 
 When configuring an automatic record creation rule for a queue in the web client, in the rule, set the customer value as null (Channel properties). Then, if you try to send mail from sender as queue mail address to recipient as queue mail address, the case creation fails with the following error message: "Case is missing customer".
