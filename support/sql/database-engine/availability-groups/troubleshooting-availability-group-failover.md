@@ -351,7 +351,7 @@ To check for non-yielding scheduler events, follow these steps:
 
 If non-yielding events are detected, check the cause of the non-yielding event. Consider contacting the SQL Server support team to investigate the non-yielding events.
 
-#### Check the SQL Server error log
+**2. Check the SQL Server error log**
 
 Check the SQL Server error log for correlating events at the time of the health check time-out. These events might provide "bread crumbs" that suggest further steps to scope the root cause of the health check time-outs.
 
