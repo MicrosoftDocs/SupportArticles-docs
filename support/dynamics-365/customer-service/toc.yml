@@ -4,7 +4,7 @@
     - name: Issues with chats in Omnichannel for Customer Service
       items:
         - name: Power Virtual Agents bot conversations appear as active on dashboard after customer ends chat
-          href: pva-conversations-active-dashboard.md
+          href: pva-conversations-active-dashboard.md 
         - name: Chat widget icon doesn't load on portal
           href: chat-widget-icon-does-not-load-portal.md
         - name: Chat isn't initiated when starting a new chat from portal
@@ -17,4 +17,11 @@
           href: agent-does-not-receive-chat.md
         - name: Conversation is stuck in a wrap-up state
           href: conversation-stuck-wrap-up-state.md
+   - name: Issues with Power Virtual Agents
+      items:
+        - name: Missing required variables and actions during agent tranfers from Power Virtual Agents bots
+          href: agent-transfer-pva-bot-issue.md
+        - name: Power Virtual Agents bot conversations appear as active on dashboard after customer ends chat
+          href: pva-conversations-active-dashboard.md
+   - name: Issues with converting email to a case
    
