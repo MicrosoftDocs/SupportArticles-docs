@@ -10,13 +10,13 @@ ms.reviewer: mikejo
 
 _Applies to:_&nbsp;Visual Studio
 
-The code coverage analysis tool in Visual Studio collects data for native and managed assemblies (_.dll_ or _.exe_ files). However, in some cases, the **Code Coverage Results** window displays an error similar to "Empty results generated: ...."  This article helps you troubleshoot and resolve the various reasons why you may be encountering empty results.
+The code coverage analysis tool in Visual Studio collects data for native and managed assemblies (_.dll_ or _.exe_ files). However, in some cases, the **Code Coverage Results** window displays an error similar to "Empty results generated: ....". This article helps you troubleshoot and resolve the various reasons why you may be encountering empty results.
 
 ## What you should see?
 
 If you choose an **Analyze Code Coverage** command on the **Test** menu, and if the build and tests run successfully, then you should see a list of results in the **Code Coverage** window. You might have to expand the items to see the detail.
 
-![Code coverage results with coloring](media/troubleshooting-code-coverage/codecoverage1.png)
+:::image type="content" source="media/troubleshooting-code-coverage/code-coverage.png" alt-text="Screenshot that shows code coverage results with coloring.":::
 
 For more information, see [Use code coverage to determine how much code is being tested](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested).
 
@@ -38,14 +38,14 @@ Code coverage analysis is done while tests are running. It only includes assembl
 
 **Resolution**
 
-In Test Explorer, choose **Run All** to verify that the tests run successfully. Fix any failures before using **Analyze Code Coverage**.
+In Test Explorer, select **Run All** to verify that the tests run successfully. Fix any failures before using **Analyze Code Coverage**.
 
 ### You're looking at a previous result
 
 When you modify and rerun your tests, a previous code coverage result can still be visible, including the code coloring from that old run. Follow these steps to solve the issue:
 
 1. Run **Analyze Code Coverage**.
-2. Make sure that you've selected the most recent result set in the **Code Coverage Results** window.
+2. Make sure that you have selected the most recent result set in the **Code Coverage Results** window.
 
 ### .pdb (symbol) files are unavailable
 
@@ -134,6 +134,7 @@ There are two possible types of faults:
 - **XML error**
 
   Open the _.runsettings_ file in the Visual Studio XML editor. Look for error indications.
+
 - **Regular expression error**
 
   Each string in the file is a regular expression. Review each one for errors, and in particular look for:
