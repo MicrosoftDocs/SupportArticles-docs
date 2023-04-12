@@ -756,7 +756,7 @@ After you have launched Fiddler, it will begin capturing HTTP and HTTPS traffic 
 
 To limit the amount of traffic that Fiddler captures, you can use filters that you configure in the **Filters** tab. The following screenshot shows a filter that captures only traffic sent to the `contosoemaildist.table.core.windows.net` storage endpoint:
 
-:::image type="content" source="media/storage-monitoring-diagnosing-troubleshooting/fiddler-screenshot.png" alt-text="Screenshot that shows a filter that captures only traffic sent to the contosoemaildist.table.core.windows.net storage endpoint.":::
+:::image type="content" source="media/storage-monitoring-diagnosing-troubleshooting/fiddler-filters.png" alt-text="Screenshot that shows a filter that captures only traffic sent to the contosoemaildist.table.core.windows.net storage endpoint.":::
 
 ### <a name="appendix-2"></a>Appendix 2: Using Wireshark to capture network traffic
 
