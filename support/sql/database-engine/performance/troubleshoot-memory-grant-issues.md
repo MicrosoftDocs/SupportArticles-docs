@@ -417,7 +417,7 @@ INSERT INTO #tmp (CounterDateTime, Counte  5.39          1.08          1.64     
 
 ### Identify specific queries using Query Store (QDS) with `sys.query_store_runtime_stats`
 
-If you have Query Store enabled, you can take advantage of its persisted historical statistics. Contrary to data from `sys.dm_exec_query_stats`, these statistics survive a SQL Server restart or memory pressure because they're stored in a database. QDS also has size limits and retention policy. For more information, see the [Set the optimal Query Store Capture Mode](/sql/relational-databases/performance/manage-the-query-store#set-the-optimal-query-store-capture-mode) and [Keep the most relevant data in Query Store](/sql/relational-databases/performance/manage-the-query-store#keep-the-most-relevant-data-in-query-store) sections in [Best practices for managing the Query Store](/sql/relational-databases/performance/manage-the-query-store).
+If you have Query Store enabled, you can take advantage of its persisted historical statistics. Contrary to data from `sys.dm_exec_query_stats`, these statistics survive a SQL Server restart or memory pressure because they're stored in a database. QDS also has size limits and a retention policy. For more information, see the [Set the optimal Query Store Capture Mode](/sql/relational-databases/performance/manage-the-query-store#set-the-optimal-query-store-capture-mode) and [Keep the most relevant data in Query Store](/sql/relational-databases/performance/manage-the-query-store#keep-the-most-relevant-data-in-query-store) sections in [Best practices for managing the Query Store](/sql/relational-databases/performance/manage-the-query-store).
 
 First, identify if your databases have Query Store enabled using this query:
 
@@ -427,7 +427,7 @@ FROM sys.databases
 WHERE is_query_store_on = 1
 ```
 
-Then, run the following diagnostic query in the context of a specific database that you would want to investigate. The principles here are the same as `sys.dm_exec_query_stats`; you see aggregate statistics for the statements. However, one difference is that with QDS, you're looking at only queries in the scope of this database, not the entire SQL Server. So you may need to know the database in which a particular memory grant request executed. Or else run this diagnostic query in multiple databases until you find the sizable memory grants.
+Then, run the following diagnostic query in the context of a specific database you want to investigate. The principles here are the same as `sys.dm_exec_query_stats`; you see aggregate statistics for the statements. However, one difference is that with QDS, you're looking at only queries in the scope of this database, not the entire SQL Server. So you may need to know the database in which a particular memory grant request executed. Otherwise, run this diagnostic query in multiple databases until you find the sizable memory grants.
 
 ```sql
 SELECT 
@@ -473,7 +473,7 @@ SELECT q.*  ,rts.avg_query_max_used_memo  6.65                   6.00           
 Here's a query that combines data from multiple views, including the three listed previously. It provides a more thorough view of the sessions and their grants via `sys.dm_exec_requests` and `sys.dm_exec_query_memory_grants`, in addition to the server-level statistics provided by `sys.dm_exec_query_resource_semaphores`.
 
 > [!NOTE]
-> This query would return two rows per session due to the use of `sys.dm_exec_query_resource_semaphores`: one row for the regular resource semaphore and another row for the small-query resource semaphore.
+> This query would return two rows per session due to the use of `sys.dm_exec_query_resource_semaphores` (one row for the regular resource semaphore and another for the small-query resource semaphore).
 
 ```sql
 SELECT    CONVERT (varchar(30), GETDATE(), 121) as runtime
@@ -559,7 +559,7 @@ OPTION (MAXDOP 1, LOOP JOIN )
 ```
 
 > [!NOTE]
-> The LOOP JOIN hint is used in this diagnostic query to avoid a memory grant by the query itself. Also no `ORDER BY` clause is used. If the diagnostic query ends up waiting for a grant itself, its purpose of diagnosing memory grants would be defeated. The LOOP join hint could potentially cause the diagnostic query to be slower, but in this case it's more important to get the diagnostic results.
+> The LOOP JOIN hint is used in this diagnostic query to avoid a memory grant by the query itself, and no `ORDER BY` clause is used. If the diagnostic query ends up waiting for a grant itself, its purpose of diagnosing memory grants would be defeated. The LOOP join hint could potentially cause the diagnostic query to be slower, but in this case, it's more important to get the diagnostic results.
 
 Here's an abbreviated sample output from this diagnostic query with only selected columns.
 
@@ -572,29 +572,29 @@ Here's an abbreviated sample output from this diagnostic query with only selecte
 |86        |1310129  |RESOURCE_SEMAPHORE|40                 |NULL              |0                  |NULL              |1               |
 |86        |1310129  |RESOURCE_SEMAPHORE|40                 |NULL              |0                  |NULL              |2               |
 
-The sample output clearly illustrates how a query submitted by session_id = 60 successfully got the 9-MB memory grant it requested, but only 7 MB were required to successfully start query execution. In the end, the query used only 1 MB of the 9 MB it received from the server. The output also shows that sessions 75 and 86 are waiting for memory grants, thus the `RESOURCE_SEMAPHORE` wait_type. Their wait time has been over 1,300 seconds (21 minutes) and their `granted_memory_mb` is NULL.
+The sample output clearly illustrates how a query submitted by session_id = 60 successfully got the 9-MB memory grant it requested, but only 7 MB were required to successfully start query execution. In the end, the query used only 1 MB of the 9 MB it received from the server. The output also shows that sessions 75 and 86 are waiting for memory grants, thus the `RESOURCE_SEMAPHORE` wait_type. Their wait time has been over 1,300 seconds (21 minutes), and their `granted_memory_mb` is NULL.
 
-This diagnostic query is a sample; feel free to modify it in any way that fits your needs. A version of this query is also used in diagnostic tools that Microsoft SQL Server support uses.
+This diagnostic query is a sample, so feel free to modify it in any way that fits your needs. A version of this query is also used in diagnostic tools that Microsoft SQL Server support uses.
 
 ## Diagnostic tools
 
 There are diagnostic tools that Microsoft SQL Server technical support uses to collect logs and more efficiently troubleshoot issues. [SQL LogScout](https://github.com/microsoft/sql_logscout) and [Pssdiag Configuration Manager](https://github.com/microsoft/diagmanager) (together with [SQLDiag](/sql/tools/sqldiag-utility)) collect outputs of the previously described DMVs and Performance monitor counters that can help you diagnose memory grant issues.
 
-If you run SQL LogScout with *LightPerf*, *GeneralPerf*, or *DetailedPerf* scenario, the tool collects the necessary logs. You can then manually examine the YourServer_PerfStats.out and look for `-- dm_exec_query_resource_semaphores --` and `-- dm_exec_query_memory_grants --` outputs. Or, instead of manual examination, you can use [SQL Nexus](https://github.com/microsoft/sqlnexus) to import the output coming from SQL LogScout or PSSDIAG into a SQL Server database. SQL Nexus creates two tables `tbl_dm_exec_query_resource_semaphores` and `tbl_dm_exec_query_memory_grants`, which contain the information needed to diagnose memory grants. SQL LogScout and PSSDIAG also collect Perfmon logs in the form of *.BLG files, which can be used to review the performance counters described in [Performance Monitor counters](#performance-monitor-counters) section.
+If you run SQL LogScout with *LightPerf*, *GeneralPerf*, or *DetailedPerf* scenarios, the tool collects the necessary logs. You can then manually examine the YourServer_PerfStats.out and look for `-- dm_exec_query_resource_semaphores --` and `-- dm_exec_query_memory_grants --` outputs. Or, instead of manual examination, you can use [SQL Nexus](https://github.com/microsoft/sqlnexus) to import the output coming from SQL LogScout or PSSDIAG into a SQL Server database. SQL Nexus creates two tables, `tbl_dm_exec_query_resource_semaphores` and `tbl_dm_exec_query_memory_grants`, which contain the information needed to diagnose memory grants. SQL LogScout and PSSDIAG also collect Perfmon logs in the form of *.BLG files, which can be used to review the performance counters described in the [Performance Monitor counters](#performance-monitor-counters) section.
 
 ## Why are memory grants important to a developer or DBA
 
-Based on Microsoft support experience, memory grant issues tend to be some of the most common memory-related problems. Applications often execute seemingly simple queries that may end up causing performance issues on the SQL Server due to huge sort or hash operations. Such queries not only end up consuming much SQL Server memory, but also cause other queries to wait for memory to become available - thus the performance bottleneck.
+Based on Microsoft support experience, memory grant issues tend to be some of the most common memory-related problems. Applications often execute seemingly simple queries that may end up causing performance issues on the SQL Server due to huge sort or hash operations. Such queries not only consume a lot of SQL Server memory but also cause other queries to wait for memory to become available, thus the performance bottleneck.
 
-Using the tools outlined here (DMVs, Perfmon counters, and actual query plan), you can identify which queries are large-grant consumers. Then you can tune or rewrite these queries to resolve or reduces the workspace memory usage.
+Using the tools outlined here (DMVs, Perfmon counters, and actual query plans), you can identify which queries are large-grant consumers. Then you can tune or rewrite these queries to resolve or reduce the workspace memory usage.
 
 ## What can a developer do about Sort and Hash operations
 
-Once you identify specific queries that are consuming large amount of query reservation memory, you can take steps to reduce the memory grants by redesigning these queries.
+Once you identify specific queries that consume a large amount of query reservation memory, you can take steps to reduce the memory grants by redesigning these queries.
 
 ### What causes sort and hash operations in queries
 
-The first step is to become aware what operations in a query may lead to memory grants.
+The first step is to become aware of what operations in a query may lead to memory grants.
 
 **Reasons why a query would use a SORT operator:**
 
