@@ -11,6 +11,8 @@
           href: new-chat-not-initiated-portal.md
         - name: Chat widget doesn't load on the portal
           href: chat-widget-not-loading.md
+        - name: Conversation widget blank when changing browser tabs
+          href: conversation-widget-blank.md
         - name: Error occurs when trying to create a chat widget or social channel
           href: error-create-chat-widget-social-channel.md
         - name: Agent doesn't receive chat
@@ -18,27 +20,41 @@
         - name: Conversation is stuck in a wrap-up state
           href: conversation-stuck-wrap-up-state.md
    - name: Issues with converting email to a case
-      items: 
+     items: 
         - name: Case creation fails because of queue address isssue
           href: case-creation-queue-address-issue.md
         - name: Incoming email isn't converted to a case
           href: incoming-email-not-coverted-case.md
         - name: Troubleshoot common email error messages
           href: common-email-error-messages.md
-    - name: Issues with Power Virtual Agents
-      items:
+   - name: Issues with dashboards in Omnichannel for Customer Service
+     items: 
+        - name: Agent dashboard doesn't load or displays error in Omnichannel for Customer Service
+          href: agent-dashboard-auth-error.md
+        - name: Communication panel does not load in Omnichannel for Customer Service
+          href: communication-panel-load-issue.md
+        - name: Dashboards don't appear in Omnichannel for Customer Service
+          href: dashboard-not-appearing-omnichannel.md
+        - name: Error in communication panel
+        - href: error-communication-panel.md
+        - name: Agent dashboard displays authentication error after provisioning Omnichannel for Customer Service
+          href: agent-dashboard-error-omnichannel-provision.md    
+   - name: Issues with Power Virtual Agents
+     items:
         - name: Missing required variables and actions during agent tranfers from Power Virtual Agents bots
           href: agent-transfer-pva-bot-issue.md
         - name: Power Virtual Agents bot conversations appear as active on dashboard after customer ends chat
           href: pva-conversations-active-dashboard.md
-    - name: Issues with search providers
-      items:  
+   - name: Issues with search providers
+     items:  
         - name: Data isn't updated on Insights tab for integrated search providers (preview)
           href: data-not-updated-integrated-search-providers.md
-    - name: Solution Health Hub
-      items:
+   - name: Solution Health Hub
+     items:
         - name: Troubleshoot issues using Solution Health Hub
-          href: troubleshoot-cs-oc-solution-health.md
-       
-
+          href: troubleshoot-cs-oc-solution-health.md  
+   - name: Social data sync
+     items:
+        - name: Troubleshoot sync issue with social data in Omnichannel for Customer Service
+          href: social-data-sync.md
    
