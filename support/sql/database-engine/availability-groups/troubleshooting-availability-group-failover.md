@@ -130,7 +130,7 @@ Another way to identify this event is to search the Windows system event log:
 ```output
 Critical SQL19AGN1.CSSSQL 1135 Microsoft-Windows-FailoverClusterin Node Mgr NT AUTHORITY\SYSTEM Cluster node 'SQL19AGN2' was removed from the active failover cluster membership. The Cluster service on this node may have stopped. This could also be due to the node having lost communication with other active nodes in the failover cluster. Run the Validate a Configuration wizard to check your network configuration. If the condition persists, check for hardware or software errors related to the network adapters on this node. Also check for failures in any other network components to which the node is connected such as hubs, switches, or bridges.
 
-Critical SQL19AGN1.CSSSQL 1177 Microsoft-Windows-FailoverClusterin Quorum Manager NT AUTHORITY\SYSTEM The Cluster service is shutting down because quorum was lost. This could be due to the loss of network connectivity between some or all nodes in the cluster, or a failover of the witness disk. Run the Validate a Configuration wizard to check your network configuration. If the condition persists, check for hardware or software errors related to the network adapter. Also check for failures in any other network components to which the node is connected such as hubs, switches, or bridges.
+Critical SQL19AGN1.CSSSQL 1177 Microsoft-Windows-FailoverClusterin Quorum Manager NT AUTHORITY\SYSTEM The Cluster service is shutting down because quorum was lost. This could be due to the loss of network connectivity between some or all nodes in the cluster, or a failover of the witness disk. Run the **Validate a Configuration** wizard to check your network configuration. If the condition persists, check for hardware or software errors related to the network adapter. Also check for failures in any other network components to which the node is connected such as hubs, switches, or bridges.
 ```
 
 #### Diagnose a cluster health event
@@ -193,7 +193,7 @@ Check the end of the SQL Server error log for clues. If the error log ends abrup
 
 If a SQL Server internal health issue caused SQL Server to terminate unexpectedly, there might be clues of a possible fatal exception (including a dump file diagnostic being generated) at the end of the SQL error log. Review the clues and take the necessary action. If you find a dump file, consider opening contacting Microsoft SQL Server support, and provide the SQL Server error log and dump file content for further investigation.
 
-### Lease time-out: an Always On health event 
+### Lease time-out: an Always On health event
 
 Always On uses a "lease" mechanism to monitor the health of the computer on which SQL Server is installed. The default lease time-out is 20 seconds.
 
@@ -239,7 +239,6 @@ Server      * Short Stack Dump
 Server      Stack Signature for the dump is 0x00000000000002BA
 Server Error: 19407, Severity: 16, State: 1.
 Server The lease between availability group 'ag' and the Windows Server Failover Cluster has expired. A connectivity issue occurred between the instance of SQL Server and the Windows Server Failover Cluster. To determine whether the availability group is failing over correctly, check the corresponding availability group resource in the Windows Server Failover Cluster.
-
 ```
 
 To resolve this issue, the dump file diagnostic must be investigated for the root cause. Consider contacting Microsoft SQL Server support to provide the SQL Server error log and dump file content for further investigation.
@@ -278,7 +277,7 @@ You should also capture counters that report the same system resource usage, inc
    - `Logical Disk::Avg. Disk Write Queue Length`
    - `MSSQLServer:SQL Statistics::Batch Requests/sec`
 
-### Health check time-out: an Always On health event 
+### Health check time-out: an Always On health event
 
 When an availability group replica transitions into the Primary role, Always On health monitoring establishes a local ODBC connection to the SQL Server instance. While Always On is connected and monitoring, if SQL Server doesn't respond over the ODBC connection within the period that's set for the availability group's health check time-out (default is 30 seconds), then a health check time-out event is triggered. In this situation, the availability group transitions from the Primary role to the Resolving role and initiates failover, if it's configured to do this.
 
