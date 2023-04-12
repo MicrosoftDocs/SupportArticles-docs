@@ -43,11 +43,12 @@ To fix these issues, run the Site User Mismatch Diagnostic by using a Microsoft 
 
 > [!NOTE]
 >
-> - Microsoft 365 admin users have access to diagnostics that can be run within the tenant to verify possible issues with user access.
+> - Microsoft 365 administrator can run diagnostics within the tenant to identify possible issues with user access.
 > - This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
 > - When fixing the issues for OneDrive sites, administrators must make sure that the user account matches the site URL. Administrators are prohibited from connecting OneDrive sites that may have been previously owned by another user account.
-  
-Select Run Tests below, which will populate the diagnostic in the Microsoft 365 admin center. The diagnostic performs a large range of verifications for internal users or guests who try to access SharePoint and OneDrive sites.
+> - If the diagnostic has successfully resolved an issue related to a OneDrive site, it may take approximately 24 hours for the changes to take effect. This includes updating the OneDrive tile to point to the correct site and recycling any additional OneDrive sites.
+
+Select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 admin center. The diagnostic performs a large range of verifications for internal users and guests who try to access SharePoint and OneDrive sites.
 
 > [!div class="nextstepaction"]
 > [Run Tests: Site User ID Mismatch](https://aka.ms/PillarSiteUserIDMismatch)
