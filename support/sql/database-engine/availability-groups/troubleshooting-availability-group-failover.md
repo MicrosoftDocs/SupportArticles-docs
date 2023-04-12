@@ -109,19 +109,12 @@ Here's an example of a cluster health event in the cluster log. To find it, you 
 
 ```output
 00000fe4.00001628::2022/12/15-14:26:02.654 WARN [QUORUM] Node 1: Lost quorum (1)
-
 00000fe4.00001628::2022/12/15-14:26:02.654 WARN [QUORUM] Node 1: goingAway: 0, core.IsServiceShutdown: 0
-
 00000fe4.00001628::2022/12/15-14:26:02.654 WARN lost quorum (status = 5925)
-
 00000fe4.00001628::2022/12/15-14:26:02.654 INFO [NETFT] Cluster Service preterminate succeeded.
-
 00000fe4.00001628::2022/12/15-14:26:02.654 WARN lost quorum (status = 5925), executing OnStop
-
 00000fe4.00001628::2022/12/15-14:26:02.654 INFO [DM]: Shutting down, so unloading the cluster database.
-
 00000fe4.00001628::2022/12/15-14:26:02.654 INFO [DM] Shutting down, so unloading the cluster database (waitForLock: false).
-
 000019cc.000019d0::2022/12/15-14:26:02.654 WARN [RHS] Cluster service has terminated. Cluster.Service.Running.Event got signaled.
 ```
 
@@ -129,8 +122,7 @@ Another way to identify this event is to search the Windows system event log:
 
 ```output
 Critical SQL19AGN1.CSSSQL 1135 Microsoft-Windows-FailoverClusterin Node Mgr NT AUTHORITY\SYSTEM Cluster node 'SQL19AGN2' was removed from the active failover cluster membership. The Cluster service on this node may have stopped. This could also be due to the node having lost communication with other active nodes in the failover cluster. Run the Validate a Configuration wizard to check your network configuration. If the condition persists, check for hardware or software errors related to the network adapters on this node. Also check for failures in any other network components to which the node is connected such as hubs, switches, or bridges.
-
-Critical SQL19AGN1.CSSSQL 1177 Microsoft-Windows-FailoverClusterin Quorum Manager NT AUTHORITY\SYSTEM The Cluster service is shutting down because quorum was lost. This could be due to the loss of network connectivity between some or all nodes in the cluster, or a failover of the witness disk. Run the **Validate a Configuration** wizard to check your network configuration. If the condition persists, check for hardware or software errors related to the network adapter. Also check for failures in any other network components to which the node is connected such as hubs, switches, or bridges.
+Critical SQL19AGN1.CSSSQL 1177 Microsoft-Windows-FailoverClusterin Quorum Manager NT AUTHORITY\SYSTEM The Cluster service is shutting down because quorum was lost. This could be due to the loss of network connectivity between some or all nodes in the cluster, or a failover of the witness disk. Run the Validate a Configuration wizard to check your network configuration. If the condition persists, check for hardware or software errors related to the network adapter. Also check for failures in any other network components to which the node is connected such as hubs, switches, or bridges.
 ```
 
 #### Diagnose a cluster health event
@@ -139,11 +131,8 @@ The errors in the Windows event log (Events 1135 and 1177) suggest that network 
 
 ```output
 00000fe4.00001edc::2022/12/14-22:44:36.870 INFO [NODE] Node 1: New join with n3: stage: 'Attempt Initial Connection' status (10060) reason: 'Failed to connect to remote endpoint 20.1.19.103:~3343~'
-
 00000fe4.00001620::2022/12/15-14:26:02.050 INFO [IM] got event: Remote endpoint 10.1.19.102:~3343~ unreachable from 10.1.19.101:~3343~
-
 00000fe4.00001620::2022/12/15-14:26:02.050 WARN [NDP] All routes for route (virtual) local fe80::38b9:a16d:77b2:d2d:~0~ to remote fe80::9087:71d9:495b:27bd:~0~ are down
-
 00000fe4.0000179c::2022/12/15-14:26:02.053 WARN [NODE] Node 1: Connection to Node 2 is broken. Reason GracefulClose(1226)' because of 'channel to remote endpoint fe80::9087:71d9:495b:27bd%14:~3343~ is closed'
 ```
 
@@ -165,11 +154,8 @@ Here's a sample of the cluster log report for the availability group role 'ag' t
 
 ```output
 00001898.0000185c::2023/02/27-13:27:41.121 ERR [RES] SQL Server Availability Group <ag>: [hadrag] QueryServiceStatusEx returned a process id 0
-
 00001898.0000185c::2023/02/27-13:27:41.121 ERR [RES] SQL Server Availability Group <ag>: [hadrag] SQL server service is not alive
-
 00001898.0000185c::2023/02/27-13:27:41.121 ERR [RES] SQL Server Availability Group <ag>: [hadrag] Resource Alive result 0.
-
 00001898.0000185c::2023/02/27-13:27:41.121 WARN [RHS] Resource ag IsAlive has indicated failure.
 ```
 
@@ -224,21 +210,23 @@ There are two main issues that can trigger a lease time-out:
 SQL Server might detect an internal health issue such as an access violation, assertion, or deadlocked schedulers. In this situation, the program generates a mini dump file (*.mdmp*) in the SQL Server *\LOG* folder of the SQL Server process for diagnosis. The SQL Server process is frozen for several seconds while the mini dump file is written to disk. During this time, all threads within the SQL Server process are in a frozen state. This includes the lease thread that's monitored by Always On health monitoring. Therefore, Always On might detect a lease time-out.
 
 ```output
-Server      **Dump thread - spid = 0, EC = 0x0000000000000000
-Server      ***Stack Dump being sent to C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\LOG\SQLDump0001.txt
-Server      * *******************************************************************************
-Server      *
-Server      * BEGIN STACK DUMP:
-Server      *   11/02/14 21:21:10 spid 1920
-Server      *
-Server      * Deadlocked Schedulers
-Server      *
-Server      * *******************************************************************************
-Server      * -------------------------------------------------------------------------------
-Server      * Short Stack Dump
-Server      Stack Signature for the dump is 0x00000000000002BA
-Server Error: 19407, Severity: 16, State: 1.
-Server The lease between availability group 'ag' and the Windows Server Failover Cluster has expired. A connectivity issue occurred between the instance of SQL Server and the Windows Server Failover Cluster. To determine whether the availability group is failing over correctly, check the corresponding availability group resource in the Windows Server Failover Cluster.
+**Dump thread - spid = 0, EC = 0x0000000000000000
+***Stack Dump being sent to C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\LOG\SQLDump0001.txt
+* *******************************************************************************
+*
+* BEGIN STACK DUMP:
+*   11/02/14 21:21:10 spid 1920
+*
+* Deadlocked Schedulers
+*
+* *******************************************************************************
+* -------------------------------------------------------------------------------
+* Short Stack Dump
+Stack Signature for the dump is 0x00000000000002BA
+
+Error: 19407, Severity: 16, State: 1.
+The lease between availability group 'ag' and the Windows Server Failover Cluster has expired. A connectivity issue occurred between the instance of SQL Server and the Windows Server Failover Cluster. To determine whether the availability group is failing over correctly, check the corresponding availability group resource in the Windows Server Failover Cluster.
+
 ```
 
 To resolve this issue, the dump file diagnostic must be investigated for the root cause. Consider contacting Microsoft SQL Server support to provide the SQL Server error log and dump file content for further investigation.
@@ -251,17 +239,11 @@ Here's an example of the reported performance data that shows a lease time-out i
 
 ```output
 00000f90.000015c0::2020/08/07-14:16:41.378 WARN [RES] SQL Server Availability Group: [hadrag] Lease timeout detected, logging perf counter data collected so far
-
 00000f90.000015c0::2020/08/07-14:16:41.382 WARN [RES] SQL Server Availability Group: [hadrag] Date/Time, Processor time(%), Available memory(bytes), Avg disk read(secs), Avg disk write(secs)
-
 00000f90.000015c0::2020/08/07-14:16:41.431 WARN [RES] SQL Server Availability Group: [hadrag] 8/7/2020 14:15:20.0, 83.266073, 31700828160.000000, 0.018094, 0.015752
-
 00000f90.000015c0::2020/08/07-14:16:41.431 WARN [RES] SQL Server Availability Group: [hadrag] 8/7/2020 14:15:30.0, 93.653224, 31697063936.000000, 0.038590, 0.026897
-
 00000f90.000015c0::2020/08/07-14:16:41.431 WARN [RES] SQL Server Availability Group: [hadrag] 8/7/2020 14:15:40.0, 94.270691, 31696265216.000000, 0.166000, 0.038962
-
 00000f90.000015c0::2020/08/07-14:16:41.434 WARN [RES] SQL Server Availability Group: [hadrag] 8/7/2020 14:15:50.0, 90.272016, 31695409152.000000, 0.215141, 0.106084
-
 00000f90.000015c0::2020/08/07-14:16:41.434 WARN [RES] SQL Server Availability Group: [hadrag] 8/7/2020 14:16:1.0, 99.991336, 31695892480.000000, 0.046983, 0.035440
 ```
 
@@ -287,15 +269,10 @@ Here's an Always On health check time-out as reported in the cluster log:
 
 ```output
 0000211c.00002d70::2021/02/24-02:50:01.890 WARN [RES] SQL Server Availability Group: [hadrag] Failed to retrieve data column. Return code -1
-
 0000211c.00002594::2021/02/24-02:50:02.452 ERR [RES] SQL Server Availability Group: [hadrag] Failure detected, diagnostics heartbeat is lost
-
 0000211c.00002594::2021/02/24-02:50:02.452 ERR [RES] SQL Server Availability Group <AG>: [hadrag] Availability Group is not healthy with given HealthCheckTimeout and FailureConditionLevel
-
 0000211c.00002594::2021/02/24-02:50:02.452 ERR [RES] SQL Server Availability Group <AG>: [hadrag] Resource Alive result 0.
-
 0000211c.00002594::2021/02/24-02:50:02.453 WARN [RHS] Resource AG IsAlive has indicated failure.
-
 00001278.00002ed8::2021/02/24-02:50:02.453 INFO [RCM] HandleMonitorReply: FAILURENOTIFICATION for 'AG', gen(0) result 1/0.
 ```
 
@@ -355,7 +332,9 @@ Check the SQL Server error log for correlating events at the time of the health 
 For example, the following log entry shows that a health check time-out occurred in the cluster log:
 
 ```output
-0000211c.00002594::2021/02/24-02:50:02.452 ERR [RES] SQL Server Availability Group: [hadrag] Failure detected, diagnostics heartbeat is lost 0000211c.00002594::2021/02/24-02:50:02.452 ERR [RES] SQL Server Availability Group <SQL19AGN1>: [hadrag] Availability Group is not healthy with given HealthCheckTimeout and FailureConditionLevel 0000211c.00002594::2021/02/24-02:50:02.452 ERR [RES] SQL Server Availability Group <SQL19AGN1>: [hadrag] Resource Alive result 0.
+0000211c.00002594::2021/02/24-02:50:02.452 ERR [RES] SQL Server Availability Group: [hadrag] Failure detected, diagnostics heartbeat is lost 
+0000211c.00002594::2021/02/24-02:50:02.452 ERR [RES] SQL Server Availability Group <SQL19AGN1>: [hadrag] Availability Group is not healthy with given HealthCheckTimeout and FailureConditionLevel 
+0000211c.00002594::2021/02/24-02:50:02.452 ERR [RES] SQL Server Availability Group <SQL19AGN1>: [hadrag] Resource Alive result 0.
 ```
 
 In the SQL Server error log, within seconds of the health check time-out, SQL Server reports that it detected severe I/O latency:
@@ -367,8 +346,7 @@ In the SQL Server error log, within seconds of the health check time-out, SQL Se
 Review the system event log for possible system clues that could be related to the health check time-out event. When you review the Windows system event log, you might find an I/O issue that's reported at the same time for the same health check time-out:
 
 ```output
-02/23/2021,08:50:16 PM,Warning,SQL19AGN1.CSSSQL.local.local,129,pvscsi,N/A,N/A,"Reset to device, \Device\RaidPort3, was issued. "
-
+02/23/2021,08:50:16 PM,Warning,SQL19AGN1.CSSSQL.local.local,129,pvscsi,N/A,N/A,"Reset to device, \Device\RaidPort3, was issued."
 02/23/2021,08:50:16 PM,Warning,SQL19AGN1.CSSSQL.local.local,153,Disk,N/A,N/A,"The IO operation at logical block address 0x11f0c3680 for Disk 6 (PDO name: \Device\00000046) was retried."
 ```
 
@@ -384,19 +362,13 @@ Here's an example of a SQL Server health issue as reported by `sp_server_diagnos
 > A SQL Server health issue generates a similar report to that of health check time-out. Both health events report `Availability Group is not healthy with given HealthCheckTimeout and FailureConditionLevel`. The distinction for a SQL Server health event is that it reports that the SQL Server component changed from "warning" to "error."
 
 ```output
-00001334.000003d8::2019/06/20-19:05:52.330 INFO [RES] SQL Server Availability Group: [hadrag] SQL Server component 'system' health state has been changed from 'warning' to 'error' at 2019-06-20 15:05:52.330
-
-00001334.00001640::2019/06/20-19:05:53.203 ERR [RES] SQL Server Availability Group: [hadrag] Failure detected, the state of system component is error
-
-00001334.00001640::2019/06/20-19:05:53.203 ERR [RES] SQL Server Availability Group <contoso-ag>: [hadrag] Availability Group is not healthy with given HealthCheckTimeout and FailureConditionLevel
-
-00001334.00001640::2019/06/20-19:05:53.203 ERR [RES] SQL Server Availability Group <contoso-ag>: [hadrag] Resource Alive result 0.
-
-00001334.00001640::2019/06/20-19:05:53.203 ERR [RES] SQL Server Availability Group: [hadrag] Failure detected, the state of system component is error
-
-00001334.00001640::2019/06/20-19:05:53.203 WARN [RHS] Resource contoso-ag IsAlive has indicated failure.
-
-00000a54.00001300::2019/06/20-19:05:53.204 INFO [RCM] HandleMonitorReply: FAILURENOTIFICATION for 'contoso-ag', gen(0) result 1/0.
+INFO [RES] SQL Server Availability Group: [hadrag] SQL Server component 'system' health state has been changed from 'warning' to 'error' at 2019-06-20 15:05:52.330
+ERR [RES] SQL Server Availability Group: [hadrag] Failure detected, the state of system component is error
+ERR [RES] SQL Server Availability Group <contoso-ag>: [hadrag] Availability Group is not healthy with given HealthCheckTimeout and FailureConditionLevel
+ERR [RES] SQL Server Availability Group <contoso-ag>: [hadrag] Resource Alive result 0.
+ERR [RES] SQL Server Availability Group: [hadrag] Failure detected, the state of system component is error
+WARN [RHS] Resource contoso-ag IsAlive has indicated failure.
+INFO [RCM] HandleMonitorReply: FAILURENOTIFICATION for 'contoso-ag', gen(0) result 1/0.
 ```
 
 #### Diagnose and resolve SQL Server internal events
