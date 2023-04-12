@@ -75,7 +75,7 @@ There are multiple ways to determine waits for QE reservations. Pick the ones th
   - Performance monitor counters ([SQL Server Memory Manager object](/sql/relational-databases/performance-monitor/sql-server-memory-manager-object))
   - [DBCC MEMORYSTATUS](dbcc-memorystatus-monitor-memory-usage.md)
   - The [sys.dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql) DMV
-  - [Extended Events (Xevents)](/sql/relational-databases/extended-events/extended-events)
+  - [Extended Events (XEvents)](/sql/relational-databases/extended-events/extended-events)
 
 - At the individual query level
 
