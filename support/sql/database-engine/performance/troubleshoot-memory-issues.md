@@ -18,24 +18,24 @@ SQL Server uses a complex [memory architecture](/sql/relational-databases/memory
 
 There are common errors that indicate low memory in SQL Server. Examples of errors include:
 
-- [701](/sql/relational-databases/errors-events/mssqlserver-701-database-engine-error) - failure to allocate sufficient memory to run a query
-- [802](/sql/relational-databases/errors-events/mssqlserver-802-database-engine-error) - failure to get memory to allocate pages in the buffer pool (data or index pages)
-- [1204](/sql/relational-databases/errors-events/mssqlserver-1204-database-engine-error) - failure to allocate memory for locks
-- 6322 - failure to allocate memory for XML parser
-- 6513 - failure to initialize CLR due to memory pressure
-- 6533 - AppDomain unloaded due to out of memory
-- 8318 - failure to load SQL performance counters due to insufficient memory
-- 8356 or 8359 - ETW or SQL trace fail to run due to low memory
-- 8556 - failure to load MSDTC due to insufficient memory
-- [8645](/sql/relational-databases/errors-events/mssqlserver-8645-database-engine-error) - failure to execute a query due to no memory for memory grants (sorting and hashing) (For more information, see [How to troubleshoot SQL Server error 8645](https://support.microsoft.com/topic/how-to-troubleshoot-sql-server-error-8645-a1bbec30-e71e-08f7-bc35-0e3bc34bed76) )
-- 8902 - failure to allocate memory during DBCC execution
-- 9695 or 9696 - failure to allocate memory for Service Broker operations
-- 17131 or [17132](/sql/relational-databases/errors-events/mssqlserver-17132-database-engine-error) - Server startup failure due to insufficient memory
-- [17890](/sql/relational-databases/errors-events/mssqlserver-17890-database-engine-error) - failure to allocate memory due to SQL memory being paged out by the OS
-- 22986 or 22987 - Change data capture failures due to insufficient memory
-- 25601 - Xevent engine is out of memory
-- 26053 - SQL network interfaces fail to initialize due to insufficient memory
-- 30085, 30086, 30094 - SQL full-text operations fail due to insufficient memory
+- [701](/sql/relational-databases/errors-events/mssqlserver-701-database-engine-error): Failure to allocate sufficient memory to run a query.
+- [802](/sql/relational-databases/errors-events/mssqlserver-802-database-engine-error): Failure to get memory to allocate pages in the buffer pool (data or index pages).
+- [1204](/sql/relational-databases/errors-events/mssqlserver-1204-database-engine-error): Failure to allocate memory for locks.
+- 6322: Failure to allocate memory for XML parser.
+- 6513:Failure to initialize CLR due to memory pressure.
+- 6533: AppDomain unloaded due to out of memory.
+- 8318: Failure to load SQL performance counters due to insufficient memory.
+- 8356 or 8359: ETW or SQL trace fails to run due to low memory.
+- 8556: Failure to load MSDTC due to insufficient memory.
+- [8645](/sql/relational-databases/errors-events/mssqlserver-8645-database-engine-error): Failure to execute a query due to no memory for memory grants (sorting and hashing) For more information, see [How to troubleshoot SQL Server error 8645](https://support.microsoft.com/topic/how-to-troubleshoot-sql-server-error-8645-a1bbec30-e71e-08f7-bc35-0e3bc34bed76). 
+- 8902: Failure to allocate memory during DBCC execution.
+- 9695 or 9696: Failure to allocate memory for Service Broker operations.
+- 17131 or [17132](/sql/relational-databases/errors-events/mssqlserver-17132-database-engine-error): Server startup failure due to insufficient memory.
+- [17890](/sql/relational-databases/errors-events/mssqlserver-17890-database-engine-error): Failure to allocate memory due to SQL memory being paged out by the OS.
+- 22986 or 22987: Change data capture failures due to insufficient memory.
+- 25601: Xevent engine is out of memory.
+- 26053: SQL network interfaces fail to initialize due to insufficient memory.
+- 30085, 30086, 30094: SQL full-text operations fail due to insufficient memory.
 
 ## Cause
 
@@ -202,10 +202,10 @@ To diagnose internal memory pressure coming from components inside the SQL Serve
 - If you identify a clear offender among the memory clerks, focus on addressing the specifics of memory consumption for that component. Here are several examples:
 
   - If the memory clerk `MEMORYCLERK_SQLQERESERVATIONS` is consuming memory, identify queries that are using huge memory grants and optimize them via indexes, rewrite them (remove `ORDER by`, for example), or apply memory grant query hints (see [min_grant_percent and max_grant_percent hints](https://support.microsoft.com/topic/kb3107401-new-query-memory-grant-options-are-available-min-grant-percent-and-max-grant-percent-in-sql-server-2012-74c4c363-5f65-faa2-5cba-68cc1d689cd5) ). You can also [create a resource governor pool](/sql/relational-databases/resource-governor/create-a-resource-pool) to control the usage of memory grant memory. For detailed information on memory grants, see [Troubleshoot slow performance or low memory issues caused by memory grants in SQL Server](troubleshoot-memory-issues.md).
-  - If a large number of ad-hoc query plans are cached, the `CACHESTORE_SQLCP` memory clerk would use large amounts of memory. Identify non-parameterized queries whose query plans can't be reused and parameterize them by converting to stored procedures, using `sp_executesql`, or by using FORCED parameterization. If you have enabled [trace flag 174](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf174), you may disable it to see if this resolves the problem.
+  - If a large number of ad-hoc query plans are cached, the `CACHESTORE_SQLCP` memory clerk would use large amounts of memory. Identify non-parameterized queries whose query plans can't be reused and parameterize them by converting to stored procedures, using `sp_executesql`, or by using `FORCED` parameterization. If you have enabled [trace flag 174](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf174), you may disable it to see if this resolves the problem.
   - If the object plan cache store `CACHESTORE_OBJCP` is consuming too much memory, identify which stored procedures, functions, or triggers are using large amounts of memory and possibly redesign the application. Commonly, this may happen due to large amounts of databases or schemas with hundreds of procedures in each.
   - If the `OBJECTSTORE_LOCK_MANAGER` memory clerk shows large memory allocations, identify queries that apply many locks and optimize them by using indexes. Shorten transactions that cause locks not to be released for long periods in certain isolation levels or check if lock escalation is disabled.
-  - If you observe very large TokenAndPermUserStore (`select type, name, pages_kb from sys.dm_os_memory_clerks where name = 'TokenAndPermUserStore'`), you can use [trace flag 4618](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf4618) to limit the size of the cache.
+  - If you observe very large `TokenAndPermUserStore` (`select type, name, pages_kb from sys.dm_os_memory_clerks where name = 'TokenAndPermUserStore'`), you can use [trace flag 4618](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf4618) to limit the size of the cache.
   - If you observe memory issues with In-Memory OLTP coming from the `MEMORYCLERK_XTP` memory clerk, you can refer to [Monitor and Troubleshoot Memory Usage for In-Memory OLTP](/sql/relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage) and [Memory-optimized tempdb metadata (HkTempDB) out of memory errors](../performance/memory-optimized-tempdb-out-of-memory.md).
 
 ## Quick relief that may make memory available
