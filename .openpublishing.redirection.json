@@ -23,7 +23,7 @@
   {
       "source_path": "support/power-platform/admin/welcome-admin.md",
       "redirect_url": "/troubleshoot/power-platform",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/power-platform/ai-builder/aibuilder-form-processing-is-not-extracting-tables-that-span-across-multiple-pages.md",
