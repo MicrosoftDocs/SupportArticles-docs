@@ -115,6 +115,8 @@
               href: errors-updating-case.md
             - name: Case entity fields for modifiedon and modifiedby are updated for resolved cases
               href: entity-case-field-updates.md
+            - name: Unable to delete a managed solution consisting of an SLA-enabled entity
+              href: unable-delete-sla-enabled-entity-managed-solution.md
   - name: Solution Health Hub
      items:
         - name: Troubleshoot issues using Solution Health Hub
