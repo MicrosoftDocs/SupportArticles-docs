@@ -623,12 +623,12 @@ Knowing these common reasons can help you eliminate, as much as possible, the la
 ### Ways to reduce sort and hash operations or the grant size
 
 - Keep [statistics](/sql/relational-databases/statistics/statistics) up to date. This fundamental step, which improves performance for queries on many levels, ensures that the query optimizer has the most accurate information when selecting query plans. SQL Server determines what size to request for its memory grant based on statistics. Out-of-date statistics can cause overestimation or underestimation of the grant request and thus lead to an unnecessarily high grant request or to spilling results to disk, respectively. Ensure that [auto-update statistics](/sql/t-sql/statements/alter-database-transact-sql-set-options#auto_update_statistics) is enabled in your databases and/or keep statics updated with [UPDATE STATISTICS](/sql/t-sql/statements/update-statistics-transact-sql) or [sp_updatestats](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql).
-- Reduce the number of rows coming from tables. If you use a more restrictive WHERE filter or a JOIN and reduce the number of rows, a subsequent sort in the query plan gets to order or aggregate a smaller result set. A smaller intermediate result set requires less working set memory. This is a general rule that developers can follow not only for saving working set memory but to also reduce CPU and I/O. This step isn't always possible and if well-written and resource-efficient queries are already in place, this guideline has been met.
-- Create indexes on join columns to aid merge joins. The intermediate operations in a query plan are affected by the indexes on the underlying table. For example, if a table has no index on a join column, and a merge join is found to be the most cost-efficient join operator, all the rows from that table have to be sorted before the join is performed. If instead an index exists on the column, a sort operation can be eliminated.
-- Create indexes to help avoid hash operations. Commonly, basic query tuning starts with checking if your queries have appropriate indexes to help them reduce reads, minimize or eliminate large sorts or hash operations where possible. Hash joins are commonly selected to process large, unsorted, and nonindexed inputs. Creating indexes may change this optimizer strategy and speed up data retrieval. For assistance in creating indexes, see [Database Engine Tuning Advisor](/sql/relational-databases/performance/database-engine-tuning-advisor) and [Tune nonclustered indexes with missing index suggestions](/sql/relational-databases/indexes/tune-nonclustered-missing-index-suggestions).
-- Use Columnstore indexes where appropriate for aggregation queries that use GROUP BY. Analytics queries that deal with very large rowsets and typically perform group by aggregations may need large memory chunks to get work done. If an index isn't available that provides ordered results, a sort is automatically introduced in query plan. A sort on a very large result may lead to an expensive memory grant.
-- Remove the ORDER BY if you don't need it. In cases where results are streamed to an application that sorts the results in its own way or allows the user to modify the order of the data viewed, you don't need to perform a sort on the SQL Server side. Just stream the data out to the application in the order the server produces it and let the end user sort it on their own. Reporting applications like Power BI or Reporting Services are examples of such applications that allow end users to sort their data.
-- Consider, albeit cautiously, the use of a [LOOP JOIN](/sql/t-sql/queries/hints-transact-sql-query#-loop--merge--hash--join) hint when joins exist in a T-SQL query. This technique may avoid hash or merge joins that use memory grants. However, this option is only suggested as a last resort because forcing a join might lead to a significantly slower query. Stress test your workload to ensure this is an option. In some cases, a nested loop join may not even be an option. In this case, SQL Server may fail with error MSSQLSERVER_8622 - `Query processor could not produce a query plan because of the hints defined in this query`.
+- Reduce the number of rows coming from tables. If you use a more restrictive WHERE filter or a JOIN and reduce the number of rows, a subsequent sort in the query plan gets to order or aggregate a smaller result set. A smaller intermediate result set requires less working set memory. This is a general rule that developers can follow not only for saving working set memory but also to reduce CPU and I/O. This step isn't always possible, and if well-written and resource-efficient queries are already in place, this guideline has been met.
+- Create indexes on join columns to aid merge joins. The intermediate operations in a query plan are affected by the indexes on the underlying table. For example, if a table has no index on a join column, and a merge join is found to be the most cost-efficient join operator, all the rows from that table have to be sorted before the join is performed. If, instead, an index exists on the column, a sort operation can be eliminated.
+- Create indexes to help avoid hash operations. Commonly, basic query tuning starts with checking if your queries have appropriate indexes to help them reduce reads and minimize or eliminate large sorts or hash operations where possible. Hash joins are commonly selected to process large, unsorted, and nonindexed inputs. Creating indexes may change this optimizer strategy and speed up data retrieval. For assistance in creating indexes, see [Database Engine Tuning Advisor](/sql/relational-databases/performance/database-engine-tuning-advisor) and [Tune nonclustered indexes with missing index suggestions](/sql/relational-databases/indexes/tune-nonclustered-missing-index-suggestions).
+- Use `Columnstore` indexes where appropriate for aggregation queries that use `GROUP BY`. Analytics queries that deal with very large rowsets and typically perform "group by" aggregations may need large memory chunks to get work done. If an index isn't available that provides ordered results, a sort is automatically introduced in the query plan. A sort of a very large result may lead to an expensive memory grant.
+- Remove the `ORDER BY` if you don't need it. In cases where results are streamed to an application that sorts the results in its own way or allows the user to modify the order of the data viewed, you don't need to perform a sort on the SQL Server side. Just stream the data out to the application in the order the server produces it and let the end user sort it on their own. Reporting applications like Power BI or Reporting Services are examples of such applications that allow end users to sort their data.
+- Consider, albeit cautiously, the use of a [LOOP JOIN](/sql/t-sql/queries/hints-transact-sql-query#-loop--merge--hash--join) hint when joins exist in a T-SQL query. This technique may avoid hash or merge joins that use memory grants. However, this option is only suggested as a last resort because forcing a join might lead to a significantly slower query. Stress test your workload to ensure this is an option. In some cases, a nested loop join may not even be an option. In this case, SQL Server may fail with error MSSQLSERVER_8622, "Query processor could not produce a query plan because of the hints defined in this query."
 
 ### Memory grant query hint
 
@@ -641,13 +641,13 @@ ORDER BY Column1
 OPTION (MIN_GRANT_PERCENT = 3, MAX_GRANT_PERCENT = 5 )
 ```
 
-We recommend that you use conservative values here especially in the cases where you expect many instances of your query to be executed concurrently. Ensure that you stress test your workload to match your production environment and determine what values to use.
+We recommend that you use conservative values here, especially in the cases where you expect many instances of your query to be executed concurrently. Ensure you stress test your workload to match your production environment and determine what values to use.
 
-For more information, see [MAX_GRANT_PERCENT and MIN_GRANT_PERCENT](/sql/t-sql/queries/hints-transact-sql-query#max_grant_percent--numeric_value)
+For more information, see [MAX_GRANT_PERCENT and MIN_GRANT_PERCENT](/sql/t-sql/queries/hints-transact-sql-query#max_grant_percent--numeric_value).
 
 ### Resource Governor
 
-QE Memory is the memory that Resource Governor actually limits, when the [MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT](/sql/relational-databases/resource-governor/resource-governor-resource-pool#min_memory_percent-and-max_memory_percent) settings are used. Once you identify queries that cause large memory grants, you can limit the memory used by sessions or applications.  It's worth mentioning that the `default` workload group allows a query to take up to 25% of memory that can be granted on a SQL Server instance. For more information, see [Resource Governor Resource Pools](/sql/relational-databases/resource-governor/resource-governor-resource-pool) and [CREATE WORKLOAD GROUP](/sql/t-sql/statements/create-workload-group-transact-sql)
+QE Memory is the memory that Resource Governor actually limits when the [MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT](/sql/relational-databases/resource-governor/resource-governor-resource-pool#min_memory_percent-and-max_memory_percent) settings are used. Once you identify queries that cause large memory grants, you can limit the memory used by sessions or applications. It's worth mentioning that the `default` workload group allows a query to take up to 25% of memory that can be granted on a SQL Server instance. For more information, see [Resource Governor Resource Pools](/sql/relational-databases/resource-governor/resource-governor-resource-pool) and [CREATE WORKLOAD GROUP](/sql/t-sql/statements/create-workload-group-transact-sql).
 
 ### Adaptive query processing and memory grant feedback
 
@@ -657,15 +657,15 @@ SQL Server 2017 introduced the memory grant feedback feature. It allows the quer
 1. Row mode memory grant feedback in SQL Server 2019
 1. Memory grant feedback on-disk persistence using the Query Store and  percentile grant in SQL Server 2022
 
-For more information, see [Memory grant feedback](/sql/relational-databases/performance/intelligent-query-processing-feedback#memory-grant-feedback). The memory grant feature may reduce the size of the memory grants for queries at execution time and thus reduce the problems stemming from large grant requests. With this feature in place especially on SQL Server 2019 and later versions, where row mode adaptive processing is available, you may not even notice any memory issues coming from query execution. However, if you have this feature in place (on by default) and you still see large QE memory consumption, apply the steps discussed previous to rewrite queries.
+For more information, see [Memory grant feedback](/sql/relational-databases/performance/intelligent-query-processing-feedback#memory-grant-feedback). The memory grant feature may reduce the size of the memory grants for queries at execution time and thus reduce the problems stemming from large grant requests. With this feature in place, especially on SQL Server 2019 and later versions, where row mode adaptive processing is available, you may not even notice any memory issues coming from query execution. However, if you have this feature in place (on by default) and still see large QE memory consumption, apply the steps discussed previously to rewrite queries.
 
 ### Increase SQL Server or OS memory
 
-After you've taken the steps to reduce unnecessary memory grants for your queries, if you still experience related low memory issues, then the workload likely requires more memory. Therefore, consider increasing the memory for SQL Server using the `max server memory` setting if there's sufficient physical memory on the system to do so. Follow the recommendations on leaving about 25% of the memory for OS and other needs, see [Server memory configuration options](/sql/database-engine/configure-windows/server-memory-server-configuration-options#recommendations). If no sufficient memory is available on the system, then consider adding physical RAM, or if it's a  virtual machine increase the dedicated RAM for your VM.
+After you've taken the steps to reduce unnecessary memory grants for your queries, if you still experience related low memory issues, the workload likely requires more memory. Therefore, consider increasing the memory for SQL Server using the `max server memory` setting if there's sufficient physical memory on the system to do so. Follow the recommendations on leaving about 25% of the memory for the OS and other needs. For more information, see [Server memory configuration options](/sql/database-engine/configure-windows/server-memory-server-configuration-options#recommendations). If no sufficient memory is available on the system, then consider adding physical RAM, or if it's a virtual machine increase the dedicated RAM for your VM.
 
 ## Memory grant internals
 
-To learn more about some internals on query execution memory, see [Understanding SQL server memory grant](https://techcommunity.microsoft.com/t5/sql-server-blog/understanding-sql-server-memory-grant/ba-p/383595) blog post.
+To learn more about some internals on query execution memory, see the [Understanding SQL server memory grant](https://techcommunity.microsoft.com/t5/sql-server-blog/understanding-sql-server-memory-grant/ba-p/383595) blog post.
 
 ## How to create a performance scenario with heavy memory grant usage
 
@@ -683,13 +683,13 @@ Finally, the following example illustrates how to simulate large consumption of 
    RECONFIGURE
    ```
 
-1. Open a Command Prompt and change directory to the RML utilities folder:
+1. Open a Command Prompt and change the directory to the RML utilities folder:
 
    ```cmd
    cd C:\Program Files\Microsoft Corporation\RMLUtils   
    ```
 
-1. Use the **ostress.exe** to spawn multiple simultaneous requests against your test SQL Server. This example uses 30 simultaneous sessions, but you can change that value:
+1. Use **ostress.exe** to spawn multiple simultaneous requests against your test SQL Server. This example uses 30 simultaneous sessions, but you can change that value:
 
    ```cmd
    ostress.exe -E -S. -Q"select * from sys.messages order by message_id option (maxdop 1)" -n30
@@ -699,9 +699,9 @@ Finally, the following example illustrates how to simulate large consumption of 
 
 ## Summary of ways to deal with large memory grants
 
-- Rewrite queries
-- Update statistics and keep them updated regularly
-- Create appropriate indexes for the query(s) identified. Indexes may reduce the large number of rows processed, thus change the JOIN algorithms, and reduces the size of grants or completely eliminate them.
-- Use OPTION ([min_grant_percent = XX](/sql/t-sql/queries/hints-transact-sql-query#min_grant_percent--numeric_value), [max_grant_percent = XX](/sql/t-sql/queries/hints-transact-sql-query#max_grant_percent--numeric_value)) hint
-- Use [Resource Governor](/sql/relational-databases/resource-governor/resource-governor)
-- SQL Server 2017 and 2019 use adaptive query processing allowing for memory grant feedback mechanism to adjust memory grant size dynamically at runtime. This feature may prevent memory grant issues in the first place.
+- Rewrite queries.
+- Update statistics and keep them updated regularly.
+- Create appropriate indexes for the query or queries identified. Indexes may reduce the large number of rows processed, thus changing the JOIN algorithms and reducing the size of grants or completely eliminating them.
+- Use the OPTION ([min_grant_percent = XX](/sql/t-sql/queries/hints-transact-sql-query#min_grant_percent--numeric_value), [max_grant_percent = XX](/sql/t-sql/queries/hints-transact-sql-query#max_grant_percent--numeric_value)) hint.
+- Use [Resource Governor](/sql/relational-databases/resource-governor/resource-governor).
+- SQL Server 2017 and 2019 use adaptive query processing, allowing the memory grant feedback mechanism to adjust memory grant size dynamically at runtime. This feature may prevent memory grant issues in the first place.
