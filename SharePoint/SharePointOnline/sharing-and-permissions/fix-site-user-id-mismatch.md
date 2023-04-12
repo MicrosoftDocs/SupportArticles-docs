@@ -81,4 +81,4 @@ The diagnostic verifies whether the user can be assigned ownership of the origin
 
 ## More information
 
-For more information about access issues in SharePoint and OneDrive, see ["Access Denied" or "You need permission to access this site" errors in SharePoint Online and OneDrive for Business](/sharepoint/troubleshoot/administration/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business).
+For more information about access issues in SharePoint and OneDrive, see ["Access Denied" or "You need permission" errors in SharePoint Online and OneDrive](../administration/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business.md).
