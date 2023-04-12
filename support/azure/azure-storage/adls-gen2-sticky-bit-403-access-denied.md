@@ -96,7 +96,7 @@ To verify the sticky bit setting by using Azure CLI, follow these steps:
 To disable/enable the sticky bit setting, set permissions to expected values.
 
 The Azure account used to modify this setting must have the Storage Blob Data Owner role on the target ADLS Gen2 storage account.
-There are many possible ways to modify this setting. Here are the supported SDKs:
+There are many possible ways to modify the sticky bit setting. Here are the supported SDKs:
 
 |SDK| Supported version | More information|
 |---|---|---|
@@ -106,7 +106,7 @@ There are many possible ways to modify this setting. Here are the supported SDKs
 | .NET SDK| Not supported yet|[Use .NET to manage ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-acl-dotnet)|
 | Java SDK| 12.11.0 and later versions|[Use Java to manage ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-acl-java)|
 | Python SDK| 12.8.0 and later versions|[Use Python to manage ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-acl-python)|
-| JavaScript SDK| Not supported yet|[Use JavaScript SDK in Node.js to manage ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-acl-javascript)|
+| JavaScript SDK| 12.11.0-beta.1 and later versions|[Use JavaScript SDK in Node.js to manage ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-acl-javascript)|
 | HDFS CLI| 3.3.3 and later versions|[Using the HDFS CLI with Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-use-hdfs-data-lake-storage#change-the-permissions-of-files) and [Apache Hadoop 3.3.3 – HDFS Permissions Guide](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html)|
 
 Here's an example of disabling/enabling the sticky bit setting with Azure CLI.
