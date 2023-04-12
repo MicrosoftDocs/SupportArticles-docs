@@ -22,7 +22,7 @@ This article provides a solution for when provisioning fails due to expired Team
 
 The user is either logged in as a System Administrator on a child business unit instead of the root business unit, or they don't have read privileges for system roles.
 
-### Resolution
+## Resolution
 
 - Check the permissions for the user, and change the business unit of the system user to root business unit.
 - Ensure that the user is assigned at least one security role, preferably Omnichannel Administrator, other than the System Administrator role.
