@@ -13,7 +13,7 @@ ms.prod: sql
 This article helps you resolve problems that occur during automatic failover in Microsoft SQL Server.
 
 _Original product version:_ &nbsp; SQL Server  
-_Original KB number:_ &nbsp; 2833707
+_Original KB number:_ &nbsp; 2833707  
 
 ## Summary  
 

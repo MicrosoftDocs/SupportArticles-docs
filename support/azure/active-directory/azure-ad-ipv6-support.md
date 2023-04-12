@@ -3,7 +3,7 @@ title: IPv6 support in Azure Active Directory (Azure AD)
 description: Learn about Internet Protocol version 6 (IPv6) support in Azure Active Directory (Azure AD). Review what your organization needs to do to accommodate IPv6.
 ms.service: active-directory
 ms.subservice: aad-general
-ms.date: 03/14/2023
+ms.date: 4/4/2023
 ms.author: v-dele
 author: DennisLee-DennisLee
 ms.reviewer: lhuangnorth, gautama, amycolannino, joflore, mariourrutia
@@ -28,7 +28,7 @@ The following features will also support IPv6 addresses:
 
 ## When will IPv6 be supported in Azure AD?
 
-We'll begin introducing IPv6 support to Azure AD starting April 3, 2023.
+We'll begin introducing IPv6 support to Azure AD in April 2023.
 
 We know that IPv6 support is a significant change for some organizations. We're publishing this information now so that customers can make plans to ensure readiness.
 
@@ -36,15 +36,30 @@ We know that IPv6 support is a significant change for some organizations. We're 
 
 If you have public IPv6 addresses representing your network, take the actions that are described in the following sections as soon as possible.
 
-> For example:  
->
-> Some organizations have a Conditional Access policy that blocks access to specific applications from outside a trusted named location that represents their public network addresses. This named location contains the IPv4 addresses that are owned by the customer, but it might not include the public IPv6 addresses that represent the customer network.
->
-> **If customers don't update their named locations with these IPv6 addresses, their users will be blocked.**
+**If customers don't update their named locations with these IPv6 addresses, their users will be blocked.**
+
+:::image type="content" source="media/azure-ad-ipv6-support/cant-sign-in-blocked-location-condition.png" alt-text="Screenshot showing a user sign in blocked because of their network location.":::
+
+### Actions to take
+
+- [Test Azure AD authentication over IPv6](#test-azure-ad-authentication-over-ipv6)
+- [Find IPv6 addresses in Sign-in logs](#find-ipv6-addresses-in-sign-in-logs)
+- [Create or update named locations, to include identified IPv6 addresses](/azure/active-directory/conditional-access/location-condition#ip-address-ranges)
 
 ### Named locations
 
 Named locations are shared between many features, such as Conditional Access, Identity Protection, and B2C. Customers should partner with their network administrators and internet service providers (ISPs) to identify their public-facing IPv6 addresses. Customers should then use this list to [create or update named locations, to include their identified IPv6 addresses](/azure/active-directory/conditional-access/location-condition#ip-address-ranges).
+
+#### Conditional Access
+
+When configuring Conditional Access policies, organizations can choose to include or exclude locations as a condition. These named locations may include public IPv4 or IPv6 addresses, country or region, or unknown areas that don't map to specific countries or regions.
+
+- If you add IPv6 ranges to an existing named location, used in existing Conditional Access policies, no changes are required.
+- If you create new named locations for your organization's IPv6 ranges, you must update relevant Conditional Access policies with these new locations.
+
+#### Cloud proxies and VPNs
+
+When a cloud proxy is in place, a policy that requires a [hybrid Azure AD joined or complaint device](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device#create-a-conditional-access-policy) can be easier to manage. Keeping a list of IP addresses used by your cloud hosted proxy or VPN solution up to date can be nearly impossible.
 
 ### Azure AD per-user multifactor authentication
 
@@ -73,8 +88,10 @@ You can test Azure AD authentication over IPv6 before we enable it worldwide by 
 > - Microsoft is providing these instructions for testing purposes only. You must remove the following configurations by May 2023 to ensure that your clients are using production DNS servers. The DNS servers in the following procedures may be decommissioned after May 2023.
 > 
 > - We recommend using the [Resolve-DnsName](/powershell/module/dnsclient/resolve-dnsname) cmdlet to validate NRPT rules. If you use the [nslookup](/windows-server/administration/windows-commands/nslookup) command, the result may be different given the differences that exist between these tools.
+>
+> - Make sure that you have open network connectivity on TCP and UDP port 53 between your client devices and the DNS servers that are used for the NRPT rule.
 
-### Configure a client NRPT rule manually
+### Configure a client NRPT rule manually - public cloud
 
 1. Open a PowerShell console as an administrator (right-click the PowerShell icon and select **Run As Administrator**).
 1. Add an NRPT rule by running the following commands:
@@ -127,6 +144,31 @@ You can test Azure AD authentication over IPv6 before we enable it worldwide by 
     Get-DnsClientNrptRule | Where-Object {
         $_.DisplayName -match "AZURE-AD-NRPT" -or $_.Namespace -match "login.microsoftonline.com"
     } | Remove-DnsClientNrptRule -Force
+    ```
+
+### Configure a client NRPT rule manually - US Gov cloud
+
+Similar to the script for public cloud, the following script creates an NRPT rule for the US Gov sign-in endpoint `login.microsfotonline.us`.
+
+1. Open a PowerShell console as an administrator by right-clicking the PowerShell icon and selecting **Run As Administrator**.
+1. Add an NRPT rule by running the following commands:
+
+    ```powershell
+    $DnsServers = (
+        "ns1-35.azure-dns.com.",
+        "ns2-35.azure-dns.net.",
+        "ns3-35.azure-dns.org.",
+        "ns4-35.azure-dns.info."
+    )
+    $DnsServerIPs = $DnsServers | Foreach-Object {
+        (Resolve-DnsName $_).IPAddress | Select-Object -Unique
+    }
+    $params = @{
+        Namespace = "login.microsoftonline.us"
+        NameServers = $DnsServerIPs
+        DisplayName = "AZURE-AD-NRPT-USGOV"
+    }
+    Add-DnsClientNrptRule @params
     ```
 
 ### Deploy NRPT rule with Intune

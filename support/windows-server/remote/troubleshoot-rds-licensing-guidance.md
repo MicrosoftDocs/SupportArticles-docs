@@ -23,7 +23,7 @@ The listed resources in this article can help you resolve Remote Desktop Service
 
 ### Grace period
 
-The 120-day licensing grace period value is decremented to 0 (zero) as soon as a license server is configured. For more information, see the following articles:
+There is a licensing grace period of 120 Days during which no license server is required. Once the grace period ends, clients must have a valid RDS CAL issued by a license server before they can log on to an RD Session Host server. For more information, see the following articles:
 
 - [License your RDS deployment with client access licenses (CALs)](/windows-server/remote/remote-desktop-services/rds-client-access-license)
 - [Troubleshooting specific RDP error messages to a Windows VM in Azure](/azure/virtual-machines/troubleshooting/troubleshoot-specific-rdp-errors)
@@ -41,7 +41,7 @@ $obj = gwmi -namespace "Root/CIMV2/TerminalServices" Win32_TerminalServiceSettin
 $obj.GetGracePeriodDays()
 ```
 
-**Reset grace period**: The grace period can be reset to 0. However, we don't recommended this approach. Instead, you must implement a license server together with a license pack.
+**Reset grace period**: The grace period can be reset to 120 Days. However, we don't recommended this approach. Instead, you must implement a license server together with a license pack.
 
 ### Verify the license servers and current licensing mode that's configured on the Remote Desktop Session Host (RDSH) server
 

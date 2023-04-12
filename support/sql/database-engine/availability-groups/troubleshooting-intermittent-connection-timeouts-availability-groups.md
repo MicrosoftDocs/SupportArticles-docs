@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting intermittent connection time-outs between availability group replicas
 description: This article helps you diagnose intermittent connection time-outs that are reported between availability group replicas. 
-ms.date: 03/07/2023
+ms.date: 04/04/2023
 ms.custom: sap:Availability Groups
 ms.prod: sql
 author: padmajayaraman
@@ -19,10 +19,6 @@ This article helps you diagnose intermittent connection time-outs that are repor
 
 Read-only workloads that query secondary replicas might query stale data. If intermittent replica connection time-outs occur, changes to data on the primary replica database aren't yet reflected in the secondary database when you query the same data. For more information, see the [Data latency on secondary replica](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups) section.
 
-### "Automatic failover" secondary replica might not be failover ready
-
-If you configure the availability group for automatic failover, and the synchronous commit failover partner is intermittently disconnected from the primary, automatic failover might be unsuccessful.
-
 ### Diagnostics report availability group not synchronized
 
 The Always On dashboard in SQL Server Management Studio might report an unhealthy availability group that has replicas to be in a **Not Synchronizing** state. You might also observe the Always On dashboard report replicas to be in the **Not synchronizing** state.
@@ -34,18 +30,20 @@ When you review the SQL Server error logs of those replicas, you might observe m
 **Error log from the primary replica**
 
 ```output
-2023-02-15 07:10:55.500 spid43s Always On availability groups connection with secondary database terminated for primary database 'agdb' on the availability replica 'SQL19AGN2' with Replica ID: {85682e51-07e1-4b9a-9d66-d7ca5e9164ad}. This is an informational message only. No user action is required.
+2023-02-15 07:10:55.500 spid43s Always On availability groups connection with secondary database terminated for primary database 'agdb' on the availability replica 'SQL19AGN2' with Replica ID: {<replicaid>}. This is an informational message only. No user action is required.
 ```
 
 **Error log from the secondary replica**
 
 ```output
-2023-02-15 07:11:03.100 spid31s A connection time-out has occurred on a previously established connection to availability replica 'SQL19AGN1' with id [17116239-4815-4B9B-8097-26F68DED0653]. Either a networking or a firewall issue exists or the availability replica has transitioned to the resolving role.
+2023-02-15 07:11:03.100 spid31s A connection time-out has occurred on a previously established connection to availability replica 'SQL19AGN1' with id [<replicaid>]. Either a networking or a firewall issue exists or the availability replica has transitioned to the resolving role.
 
-2023-02-15 07:11:03.100 spid31s Always On Availability Groups connection with primary database terminated for secondary database 'agdb' on the availability replica 'SQL19AGN1' with Replica ID: {17116239-4815-4b9b-8097-26f68ded0653}. This is an informational message only. No user action is required.
+2023-02-15 07:11:03.100 spid31s Always On Availability Groups connection with primary database terminated for secondary database 'agdb' on the availability replica 'SQL19AGN1' with Replica ID: {<replicaid>}. This is an informational message only. No user action is required.
 ```
 
 ### Intermittent connection problems can affect a secondary replica's failover readiness
+
+If you configure the availability group for automatic failover, and the synchronous commit failover partner is intermittently disconnected from the primary, automatic failover might be unsuccessful.
 
 You can query `sys.dm_hadr_database_replia_cluster_states` to determine whether the availability group database is failover-ready at that moment. Here's an example of the results if the mirroring endpoint was stopped on the secondary replica:
 
@@ -79,18 +77,18 @@ The partner replica might not detect a time-out. If it does, it might report mes
 Message 35267 Always On Availability Groups connection with primary/secondary database terminated for primary/secondary database '<databasename>' on the availability replica '<replicaname>' with Replica ID: {<replicaid>}. This is an informational message only. No user action is required.
 ```
 
-Here's an example of what SQL Server reports to the error log: If you stop the mirroring endpoint on the primary replica, the secondary replica detects a connection time-out, and messages 35206 and 36267 are reported in the secondary replica error log:
+Here's an example of what SQL Server reports to the error log: If you stop the mirroring endpoint on the primary replica, the secondary replica detects a connection time-out, and messages 35206 and 35267 are reported in the secondary replica error log:
 
 ```output
-2023-02-15 07:11:03.100 spid31s A connection timeout has occurred on a previously established connection to availability replica 'SQL19AGN1' with id [17116239-4815-4B9B-8097-26F68DED0653]. Either a networking or a firewall issue exists or the availability replica has transitioned to the resolving role.
+2023-02-15 07:11:03.100 spid31s A connection timeout has occurred on a previously established connection to availability replica 'SQL19AGN1' with id [<replicaid>]. Either a networking or a firewall issue exists or the availability replica has transitioned to the resolving role.
 
-2023-02-15 07:11:03.100 spid31s Always On Availability Groups connection with primary database terminated for secondary database 'agdb' on the availability replica 'SQL19AGN1' with Replica ID: {17116239-4815-4b9b-8097-26f68ded0653}. This is an informational message only. No user action is required.
+2023-02-15 07:11:03.100 spid31s Always On Availability Groups connection with primary database terminated for secondary database 'agdb' on the availability replica 'SQL19AGN1' with Replica ID:[<replicaid>]. This is an informational message only. No user action is required.
 ```
 
 In this example, the primary replica didn't detect any connection time-out because it could still communicate with the secondary, and it reported message 35267 for each availability group database (in this example, there's only one database, 'agdb'):
 
 ```output
-2023-02-15 07:10:55.500 spid43s Always On Availability Groups connection with secondary database terminated for primary database 'agdb' on the availability replica 'SQL19AGN2' with Replica ID: {85682e51-07e1-4b9a-9d66-d7ca5e9164ad}. This is an informational message only. No user action is required.
+2023-02-15 07:10:55.500 spid43s Always On Availability Groups connection with secondary database terminated for primary database 'agdb' on the availability replica 'SQL19AGN2' with Replica ID: {<replicaid>}. This is an informational message only. No user action is required.
 ```
 
 ## Causes of replica connection time-outs
@@ -99,11 +97,9 @@ In this example, the primary replica didn't detect any connection time-out becau
 
 SQL Server might be busy for any of several reasons, and doesn't service the mirroring endpoint connection within the availability group `SESSION_TIMEOUT` period. This causes the connection time-out. Some of these reasons are:
 
-- SQL Server experiences 100 percent CPU utilization. This means that SQL Server or some other application is driving CPU for several seconds at a time.
+- SQL Server experiences 100 percent CPU utilization. This means that SQL Server or some other application is driving CPU for seconds at a time.
 
-- SQL Server experiences non-yielding scheduler events.
-
-- SQL Server threads are responsible for yielding the scheduler (CPU) to other threads to complete their work if a thread doesn't yield in a timely fashion.
+- SQL Server experiences non-yielding scheduler events. SQL Server threads are responsible for yielding the scheduler (CPU) to other threads to complete their work if a thread doesn't yield in a timely fashion.
 
 - SQL Server experiences worker thread exhaustion, out-of-memory problems, or application problems that affect its ability to service the mirroring endpoint connection.
 
@@ -128,7 +124,7 @@ The `AlwaysOn_health` extended event session was enhanced to include the `ucs_co
 
 ### Query Always On Distributed Management Views (DMVs)
 
-You can also query for more information about the replica's connected state. This query reports only the connected state and any errors that are associated with the connection time-out at the time that the issues occur. If the connection issues are intermittent, the query might not capture the disconnected state easily.
+You can query Always On DMVs for more information about the replica's connected state. This query reports only the connected state and any errors that are associated with the connection time-out at the time that the issues occur. If the connection issues are intermittent, the query might not capture the disconnected state easily.
 
 ```sql
 SELECT ar.replica_server_name, ars.role_desc, ars.connected_state_desc,
@@ -144,7 +140,7 @@ By querying the secondary replica, the Always On DMVs reports on only the second
 
 :::image type="content" source="media/troubleshooting-intermittent-connection-timeouts-availability-groups/query-secondary-replica-small.png" alt-text="Screenshot that shows sustained disconnected state because the mirroring endpoint on the secondary replica was stopped." lightbox="media/troubleshooting-intermittent-connection-timeouts-availability-groups/query-secondary-replica-big.png":::
 
-## Review the AlwaysOn extended event session
+## Review the Always On extended event session
 
 1. Connect to each replica by using SQL Server Management Studio (SSMS) Object Explorer, and open the `AlwaysOn_health` extended event files.
 
@@ -164,7 +160,7 @@ By querying the secondary replica, the Always On DMVs reports on only the second
 
     :::image type="content" source="media/troubleshooting-intermittent-connection-timeouts-availability-groups/always-on-health-data-secondary-replica-small.png" alt-text="Screenshot that shows the AlwaysOn_health data from the secondary replica." lightbox="media/troubleshooting-intermittent-connection-timeouts-availability-groups/always-on-health-data-secondary-replica-big.png":::
 
-### Investigate SQL Server application ability to service replica connection
+### Check to see if non-yielding events are causing connection time-outs
 
 One of the most common reasons that an availability replica can't service the partner replica connection is a non-yielding scheduler. For more information about non-yielding schedulers, see [Troubleshooting SQL Server Scheduling and Yielding](https://techcommunity.microsoft.com/t5/sql-server-support-blog/troubleshooting-sql-server-scheduling-and-yielding/ba-p/319148).
 
@@ -176,7 +172,7 @@ To check for non-yielding events that might cause replica connection time-outs, 
 
 1. Schedule this job on the server that doesn't report the connection time-out. That is, if Server A replica reports the replica connection time-out in its error log, set up the SQL Agent job on the partner replica, Server B. Alternatively, if you are seeing connection time-outs on both replicas, create the job on both replicas.
 
-1. Run the following batch file to create a job that runs `sp_server_diagnostics` every five seconds, appends the output to a text file, and then starts the job:
+1. Run the following batch file to create a job that runs `sp_server_diagnostics` every five seconds, appends the output to a text file, and then starts the job. The command in the following example, `sp_server_diagnostics 5` executes every five seconds. So, there is no need to schedule this job to run every five seconds, just start the job and it will run until stopped, every five seconds:
 
     ```vb
     USE [msdb]
@@ -202,7 +198,7 @@ To check for non-yielding events that might cause replica connection time-outs, 
 
 ### Analyze the results
 
-When a connection time-out is reported, note the timestamp of the time-out event that's shown in the SQL Server error log. For the replicas in the following example, `SQL19AGN1` was reporting the replica connection time-outs. Therefore, a SQL Agent job was created on `SQL19AGN2`, the partner replica. Then, a connection time-out was reported in the SQL19AGN1 error log at 07:24:31.
+When a connection time-out is reported, note the timestamp of the time-out event that's shown in the SQL Server error log. For the replicas in the following example, `SQL19AGN1` was reporting the replica connection time-outs. Therefore, a SQL Agent job was created on `SQL19AGN2`, the partner replica. Then, a connection time-out was reported in the `SQL19AGN1` error log at 07:24:31.
 
 :::image type="content" source="media/troubleshooting-intermittent-connection-timeouts-availability-groups/analyze-event-timestamp-timeout-small.png" alt-text="Screenshot that shows the connection time-out reported in the SQL19AGN1 error log." lightbox="media/troubleshooting-intermittent-connection-timeouts-availability-groups/analyze-event-timestamp-timeout-big.png":::
 

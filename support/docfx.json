@@ -94,7 +94,7 @@
         "**/*.md": "itpro"
       },
       "author": {
-        "**/*.md": "ramakoni1",
+        "**/*.md": "ChristySu",
         "azure/**/*.md": "genlin",
         "azure/devops/**/*.md": "HaiyingYu",
         "azure/synapse-analytics/**/*.md": "HaiyingYu",
@@ -106,7 +106,6 @@
         "windows-server/**/*.md": "Deland-Han",
         "mem/**/*.md": "helenclu",
         "system-center/**/*.md": "helenclu",
-        "dynamics-365/**/*.md": "David-Pack",
         "dynamics-365/customer-insights/**/*.md": "m-hartmann",
         "dynamics-365/supply-chain/costing/*.md": "JennySong-SH",
         "dynamics-365/supply-chain/inventory/*.md": "sherry-zheng",
@@ -117,12 +116,10 @@
         "dynamics-365/supply-chain/rebates/*.md": "sherry-zheng",
         "dynamics-365/supply-chain/sales/*.md": "Henrikan",
         "dynamics-365/supply-chain/transportation/*.md": "Weijiesa",
-        "dynamics-365/supply-chain/warehousing/*.md": "Mirzaab",
-        "power-platform/**/*.md": "David-Pack",
-        "dynamics/gp/*.md": "David-Pack"
+        "dynamics-365/supply-chain/warehousing/*.md": "Mirzaab"
       },
       "ms.author": {
-        "**/*.md": "ramakoni",
+        "**/*.md": "christys",
         "azure/**/*.md": "genli",
         "azure/devops/**/*.md": "haiyingyu",
         "azure/synapse-analytics/**/*.md": "haiyingyu",
@@ -134,7 +131,6 @@
         "windows-server/**/*.md": "delhan",
         "mem/**/*.md": "luche",
         "system-center/**/*.md": "luche",
-        "dynamics-365/**/*.md": "davidpac",
         "dynamics-365/customer-insights/**/*.md": "mhart",
         "dynamics-365/supply-chain/costing/*.md": "yanansong",
         "dynamics-365/supply-chain/inventory/*.md": "chuzheng",
@@ -145,9 +141,7 @@
         "dynamics-365/supply-chain/rebates/*.md": "chuzheng",
         "dynamics-365/supply-chain/sales/*.md": "henrikan",
         "dynamics-365/supply-chain/transportation/*.md": "weijiesa",
-        "dynamics-365/supply-chain/warehousing/*.md": "mirzaab",
-        "power-platform/**/*.md": "davidpac",
-        "dynamics/gp/*.md": "davidpac"
+        "dynamics-365/supply-chain/warehousing/*.md": "mirzaab"
       },
       "ms.localizationpriority": {
         "**/*.md": "medium"
@@ -162,7 +156,6 @@
         "developer/webapps/aspnetcore/**/*.md": "aspnet-core",
         "developer/webapps/iis/**/*.md": "iis",
         "sql/admin/**/*.md": "sql",
-        "sql/analysis-services/**/*.md": "sql",
         "sql/analytics-platform-system/**/*.md": "sql",
         "sql/availability-groups/**/*.md": "sql",
         "sql/connect/**/*.md": "sql",
@@ -186,7 +179,6 @@
         "sql/security/**/*.md": "sql",
         "sql/ssms/**/*.md": "sql",
         "sql/tools/**/*.md": "sql",
-        "sql/analysis-services/**/*.md": "",
         "developer/host-integration-server/**/*.md": "host-integration-server",
         "developer/visualstudio/**/*.md": "visual-studio-family",
         "developer/visualstudio/cpp/**/*.md": "visual-cpp",
@@ -319,7 +311,6 @@
         "azure/virtual-machines/*.md": "virtual-machines",
         "azure/cloud-services/*.md": "cloud-services",
         "azure/synapse-analytics/**/*.md": "synapse-analytics",
-        "power-platform/admin/*.md": "power-platform",
         "power-platform/power-apps/**/**.*": "powerapps",
         "power-platform/power-automate/*.md": "power-automate",
         "dynamics-365/customer-insights/**/**.*": "customer-insights",
@@ -548,17 +539,51 @@
       },
       "search.app": {
         "power-platform/power-apps/**/*.md": [
-          "PowerApps"
+          "PowerApps",
+          "powerapps-docs",
+          "dataverse-docs"
         ],
         "power-platform/power-automate/*.md": [
-          "Flow"
+          "Flow",
+          "powerautomate-docs"
         ],
         "power-platform/ai-builder/*.md": [
           "PowerApps",
-          "Flow"
+          "Flow",
+          "powerapps-docs",
+          "powerautomate-docs"
+        ],
+        "dynamics-365/customer-insights/**/**.*": [
+          "customerinsights-docs"
+        ],
+        "dynamics-365/customer-service/**/**.*": [
+          "D365CE",
+          "D365CS",
+          "customerservice-docs",
+          "customerserviceinsights-docs"
+        ],
+        "dynamics-365/finance/**/**.*": [
+          "FinanceAndOperations",
+          "financeandoperations-docs"
+        ],
+        "dynamics-365/fraud-protection/**/**.*": [
+          "Capaedac-fraudprotection",
+          "fraudprotection-docs"
+        ],
+        "dynamics-365/marketing/**/**.*": [
+          "D365CE",
+          "D365Mktg",
+          "marketing-docs"
+        ],
+        "dynamics-365/sales/**/**.*": [
+          "D365CE",
+          "D365Sales",
+          "sales-docs"
         ],
         "dynamics-365/supply-chain/**/**.*": [
-          "SCM"
+          "SCM",
+          "supplychainmanagement-docs",
+          "supplychaincenter-docs"
         ]
       }
     },

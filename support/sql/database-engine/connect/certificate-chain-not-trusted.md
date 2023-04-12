@@ -30,14 +30,13 @@ These errors occur if both the following conditions are true:
 
 The error occurs because of a change in the default behavior of the client drivers. Older versions of client drivers are designed to assume that data encryption is **OFF** by default. The new drivers assume this setting to be **ON** by default. Because data encryption is set to **ON**, the driver tries to validate the server's certificate and fails.
 
-
 ### Solutions
 
 - **Solution 1:** Use Microsoft OLE DB Driver for SQL Server 18.x. You can download the driver from [Release notes for the Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/release-notes-for-oledb-driver-for-sql-server).
 
 - **Solution 2:** If the application connection string property already specifies a value of **Yes** or **Mandatory** for the **Encrypt/Use Encryption for Data setting**, change the value to **No** or **Optional**. For example, **Use Encryption for Data=Optional**. If the connection string doesn't specify any value for **Encrypt/Use Encryption for Data**, add **Use Encryption for Data=Optional** to the connection string. For more information, see [Encryption and certificate validation](/sql/connect/oledb/features/encryption-and-certificate-validation).
 
-- **Solution 3:** Add `;Trust Server Certificate=true` to the connection string. This will force the client to trust the certificate without validation.
+- **Solution 3:** Add `;TrustServerCertificate=true` to the connection string. This will force the client to trust the certificate without validation.
 
 - > [!NOTE]
     > Currently, MSOLEDBSQL19 prevents the creation of linked servers without encryption and a trusted certificate (a self-signed certificate is insufficient). If linked servers are required, use the existing supported version of MSOLEDBSQL.

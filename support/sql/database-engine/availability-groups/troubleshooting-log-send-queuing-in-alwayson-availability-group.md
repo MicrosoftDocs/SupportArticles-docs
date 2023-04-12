@@ -25,7 +25,7 @@ If the primary replica is lost in a sudden disaster, and you fail over to the se
 
 ### Growing log send queue causes growing transaction log file growth
 
-For a database that's defined in an availability group, Microsoft SQL Server must retain at the primary replica all transactions in the transaction log that haven't yet been delivered to the secondary replicas. The log send queue represents the quantity of logged changes at the primary replica that can’t be truncated during normal log truncation events (for example, during a database log backup). A large and growing log send queue can exhaust free space on the drive that hosts the database log file or can exceed the configured maximum transaction log file size. For more information, see [Error 9002 when transaction log is large](error-9002-transaction-log-large.md).
+For a database that's defined in an availability group, Microsoft SQL Server must retain at the primary replica all transactions in the transaction log that haven't yet been delivered to the secondary replicas. The log send queue represents the quantity of logged changes at the primary replica that can't be truncated during normal log truncation events (for example, during a database log backup). A large and growing log send queue can exhaust free space on the drive that hosts the database log file or can exceed the configured maximum transaction log file size. For more information, see [Error 9002 when transaction log is large](error-9002-transaction-log-large.md).
 
 ### Various diagnostic features report availability group log send queueing
 
@@ -185,7 +185,7 @@ If a secondary replica is hosted far from the primary replica, log send queueing
 
     For more information about how to set the **TCP Congestion Windows Restart** property to **False**, see [Set-NetTCPSetting (NetTCPIP)](/powershell/module/nettcpip/set-nettcpsetting?view=windowsserver2022-ps&preserve-view=true).
 
-    Also see [Monitor performance for Always On availability groups](/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups&tabs=new-limits) for information about the synchronization process. This article also shows you how to calculate some of the key metrics, and provides links to some of the common performance troubleshooting scenarios.
+    Also see [Monitor performance for Always On availability groups](/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups) for information about the synchronization process. This article also shows you how to calculate some of the key metrics, and provides links to some of the common performance troubleshooting scenarios.
 
 - **Use ping to get a latency sample**
 

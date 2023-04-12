@@ -218,3 +218,4 @@ Follow these steps to troubleshoot these issues:
 1. For Resource Monitor issues, you may not necessarily be concerned with this issue in some cases. For more information, see [Resource Monitor enters a non-yielding condition on a server running SQL Server](../performance/resource-monitor-nonyielding-condition.md).
 
 1. If these resources don't help, locate the memory dump created in the \LOG subdirectory and open a support ticket with Microsoft CSS by uploading the memory dump for analysis.
+

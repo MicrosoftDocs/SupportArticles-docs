@@ -24,7 +24,17 @@ This article describes Cumulative Update package 2 (CU2) for Microsoft SQL Serve
 
 ## Known issues in this update
 
-There are no known issues in this cumulative update.
+After you install SQL Server 2022 CU2, external data sources using generic ODBC connector may no longer work. When you try to query external tables that were created before installing CU2, you receive the following error message:
+
+> Msg 7320, Level 16, State 110, Line 68  
+> Cannot execute the query "Remote Query" against OLE DB provider "MSOLEDBSQL" for linked server "(null)". Object reference not set to an instance of an object.
+
+If you try to create a new external table, you receive the following error message:
+
+> Msg 110813, Level 16, State 1, Line 64  
+> Object reference not set to an instance of an object.
+
+To work around this issue, you can uninstall SQL Server 2022 CU2 or add the Driver keyword to the `CONNECTION_OPTIONS` argument. For more information, see [Generic ODBC external data sources may not work after installing Cumulative Update](https://techcommunity.microsoft.com/t5/sql-server-support-blog/generic-odbc-external-data-sources-may-not-work-after-installing/ba-p/3783873).
 
 ## Improvements and fixes included in this update
 
@@ -68,7 +78,15 @@ The following update is available from the Microsoft Download Center:
 <details>
 <summary><b>How to obtain or download this cumulative update package for Windows from Microsoft Update Catalog</b></summary>
 
-This cumulative update package is not yet available on [Microsoft Update Catalog](https://www.catalog.update.microsoft.com). This article will be updated after the package is made available on this channel.
+The following update is available from the Microsoft Update Catalog:
+
+- :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2022 CU2 now](https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/updt/2023/03/sqlserver2022-kb5023127-x64_8773dc0f893badbbd32531e2e8cc7889ffcb7f54.exe)
+
+> [!NOTE]
+>
+> - [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=sql%20server%202022) contains this SQL Server 2022 CU and previously released SQL Server 2022 CU releases.
+> - This CU is also available through Windows Server Update Services (WSUS).
+> - We recommend that you always install the latest cumulative update that is available.
 
 </details>
 
