@@ -33,7 +33,7 @@ ORDER BY  message_id
 
 This query selects a rowset of over 300,000 rows and sorts it. The sort operation induces a memory grant request. If you run this query in SSMS, you can view its query plan. When you select the left-most `SELECT` operator of the query plan, you can view the memory grant information for the query (press <kbd>F4</kbd> to show **Properties**):
 
-:::image type="content" source="media/troubleshoot-memory-grants/simple-memory-grant-query-example.png" alt-text="Screenshot of a query with a memory grant and query plan.":::
+:::image type="content" source="media/troubleshoot-memory-grants/simple-memory-grant-query-example.png" alt-text="Screenshot of a query with a memory grant and query plan." lightbox="media/troubleshoot-memory-grants/simple-memory-grant-query-example.png":::
 
 Also, if you right-click in the white space in the query plan, you can choose **Show Execution Plan XML...** and locate an XML element that shows the same memory grant information.
 
@@ -71,10 +71,10 @@ There are multiple ways to determine waits for QE reservations. Pick the ones th
 
 - At the server level, using aggregate memory usage statistics
 
-  - [sys.dm_exec_query_resource_semaphores](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql) DMV
+  - The [sys.dm_exec_query_resource_semaphores](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql) DMV
   - Performance monitor counters ([SQL Server Memory Manager object](/sql/relational-databases/performance-monitor/sql-server-memory-manager-object))
   - [DBCC MEMORYSTATUS](dbcc-memorystatus-monitor-memory-usage.md)
-  - [sys.dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql) DMV
+  - The [sys.dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql) DMV
   - [Extended Events (Xevents)](/sql/relational-databases/extended-events/extended-events)
 
 - At the individual query level
@@ -86,7 +86,7 @@ There are multiple ways to determine waits for QE reservations. Pick the ones th
 
 Next, you can find information about each of these methods.
 
-### Resource semaphore DMV `sys.dm_exec_query_resource_semaphores`
+### Resource semaphore DMV sys.dm_exec_query_resource_semaphores
 
 This DMV breaks down the query reservation memory by resource pool (internal, default, and user-created) and `resource_semaphore` (regular and small query requests). A useful query may be:
 
@@ -173,7 +173,7 @@ SM Committed                                                             0
 Pages Allocated                                                          824640
 ```
 
-### Memory clerks DMV `sys.dm_os_memory_clerks`
+### Memory clerks DMV sys.dm_os_memory_clerks
 
 If you need more of a tabular result set, different from the section-based `DBCC MEMORYSTATUS`, the same memory clerk information is present in [sys.dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql). Look for the `MEMORYCLERK_SQLQERESERVATIONS` memory clerk.
 
@@ -196,7 +196,7 @@ MEMORYCLERK_SQLQERESERVATIONS                   64             0
 
 There are two kinds of queries that you may find when looking at the individual request level. The queries that are consuming a large amount of query execution memory and those that are waiting for workspace memory. The latter group may consist of requests with modest needs for memory grants, and if so, you may focus your attention elsewhere. But they could also be the culprits if they're requesting huge memory sizes. Focus on them if you find that to be the case. It may be common to find that one particular query is the offender, but many instances of it are spawned. Those instances that get the memory grants are causing other instances of the same query to wait for the grant. Regardless of specific circumstances, ultimately, you must identify the queries and the size of the requested execution memory.
 
-### Identify specific queries with `sys.dm_exec_query_memory_grants`
+### Identify specific queries with sys.dm_exec_query_memory_grants
 
 To view individual requests and the memory size they've requested and have been granted, you can query the `sys.dm_exec_query_memory_grants` dynamic management view. This DMV shows information about currently executing queries, not historical information.
 
@@ -252,7 +252,7 @@ session_id requested_memory_kb  granted_memory_kb    used_memory_kb       queue_
 63         41232                41232                40848                NULL     NULL        NULL                 NULL              2      
 ```
 
-### Identify specific queries with `sys.dm_exec_requests`
+### Identify specific queries with sys.dm_exec_requests
 
 There's a [wait type](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql#WaitTypes) in SQL Server that indicates a query is waiting for memory grant `RESOURCE_SEMAPHORE`. You may observe this wait type in `sys.dm_exec_requests` for individual requests. This latter DMV is the best starting point to identify which queries are victims of insufficient grant memory. You can also observe the `RESOURCE_SEMAPHORE` wait in `sys.dm_os_wait_stats` as aggregated data points at the SQL Server level. This wait type shows up when a query memory request can't be granted due to other concurrent queries having used up the memory. A high count of waiting requests and long wait times indicate an excessive number of concurrent queries using execution memory or large memory request sizes.
 
@@ -341,7 +341,7 @@ One of the areas covered via Xevents is the execution memory used during column 
 - **sqlserver.column_store_index_build_memory_usage_scale_down**: Storage Engine scaled down.
 - **sqlserver.column_store_index_memory_estimation**: Shows the memory estimation result during the columnstore rowgroup build.
 
-### Identify specific queries with `sys.dm_exec_query_stats`
+### Identify specific queries with sys.dm_exec_query_stats
 
 If the memory grant issue isn't happening at this moment, but you would like to identify the offending queries, you can look at historical query data via `sys.dm_exec_query_stats`. The lifetime of the data is tied to the query plan of each query. When a plan is removed from the plan cache, the corresponding rows are eliminated from this view. In other words, the DMV keeps statistics in memory that aren't preserved after a SQL Server restart or after memory pressure causes a plan cache release. That being said, you can find the information here valuable, particularly for aggregate query statistics. Someone may have recently reported seeing large memory grants from queries, but when you look at the server workload, you may discover the problem is gone. In this situation, `sys.dm_exec_query_stats` can provide insights. Here's a sample query that can help you find the top 20 statements that consumed the largest amounts of execution memory. This output displays individual statements even if their query structure is the same. For example, `SELECT Name FROM t1 JOIN t2 ON t1.Id = t2.Id WHERE t1.Id = 5` is a separate row from `SELECT Name FROM t1 JOIN t2 ON t1.Id = t2.Id WHERE t1.Id = 100` (only the filter predicate value varies). The query gets the top 20 statements with a maximum grant size greater than 5 MB.
 
@@ -415,7 +415,7 @@ insert into #tmpCounterDateTime (CounterD  5.72          2.86          1.98     
 INSERT INTO #tmp (CounterDateTime, Counte  5.39          1.08          1.64              0.33              1.08               6.47                          6               
 ```
 
-### Identify specific queries using Query Store (QDS) with `sys.query_store_runtime_stats`
+### Identify specific queries using Query Store (QDS) with sys.query_store_runtime_stats
 
 If you have Query Store enabled, you can take advantage of its persisted historical statistics. Contrary to data from `sys.dm_exec_query_stats`, these statistics survive a SQL Server restart or memory pressure because they're stored in a database. QDS also has size limits and a retention policy. For more information, see the [Set the optimal Query Store Capture Mode](/sql/relational-databases/performance/manage-the-query-store#set-the-optimal-query-store-capture-mode) and [Keep the most relevant data in Query Store](/sql/relational-databases/performance/manage-the-query-store#keep-the-most-relevant-data-in-query-store) sections in [Best practices for managing the Query Store](/sql/relational-databases/performance/manage-the-query-store).
 
@@ -559,7 +559,7 @@ OPTION (MAXDOP 1, LOOP JOIN )
 ```
 
 > [!NOTE]
-> The LOOP JOIN hint is used in this diagnostic query to avoid a memory grant by the query itself, and no `ORDER BY` clause is used. If the diagnostic query ends up waiting for a grant itself, its purpose of diagnosing memory grants would be defeated. The LOOP join hint could potentially cause the diagnostic query to be slower, but in this case, it's more important to get the diagnostic results.
+> The `LOOP JOIN` hint is used in this diagnostic query to avoid a memory grant by the query itself, and no `ORDER BY` clause is used. If the diagnostic query ends up waiting for a grant itself, its purpose of diagnosing memory grants would be defeated. The LOOP join hint could potentially cause the diagnostic query to be slower, but in this case, it's more important to get the diagnostic results.
 
 Here's an abbreviated sample output from this diagnostic query with only selected columns.
 
@@ -580,7 +580,7 @@ This diagnostic query is a sample, so feel free to modify it in any way that fit
 
 There are diagnostic tools that Microsoft SQL Server technical support uses to collect logs and more efficiently troubleshoot issues. [SQL LogScout](https://github.com/microsoft/sql_logscout) and [Pssdiag Configuration Manager](https://github.com/microsoft/diagmanager) (together with [SQLDiag](/sql/tools/sqldiag-utility)) collect outputs of the previously described DMVs and Performance monitor counters that can help you diagnose memory grant issues.
 
-If you run SQL LogScout with *LightPerf*, *GeneralPerf*, or *DetailedPerf* scenarios, the tool collects the necessary logs. You can then manually examine the YourServer_PerfStats.out and look for `-- dm_exec_query_resource_semaphores --` and `-- dm_exec_query_memory_grants --` outputs. Or, instead of manual examination, you can use [SQL Nexus](https://github.com/microsoft/sqlnexus) to import the output coming from SQL LogScout or PSSDIAG into a SQL Server database. SQL Nexus creates two tables, `tbl_dm_exec_query_resource_semaphores` and `tbl_dm_exec_query_memory_grants`, which contain the information needed to diagnose memory grants. SQL LogScout and PSSDIAG also collect Perfmon logs in the form of *.BLG files, which can be used to review the performance counters described in the [Performance Monitor counters](#performance-monitor-counters) section.
+If you run SQL LogScout with *LightPerf*, *GeneralPerf*, or *DetailedPerf* scenarios, the tool collects the necessary logs. You can then manually examine the YourServer_PerfStats.out and look for `-- dm_exec_query_resource_semaphores --` and `-- dm_exec_query_memory_grants --` outputs. Or, instead of manual examination, you can use [SQL Nexus](https://github.com/microsoft/sqlnexus) to import the output coming from SQL LogScout or PSSDIAG into a SQL Server database. SQL Nexus creates two tables, `tbl_dm_exec_query_resource_semaphores` and `tbl_dm_exec_query_memory_grants`, which contain the information needed to diagnose memory grants. SQL LogScout and PSSDIAG also collect Perfmon logs in the form of *.BLG files*, which can be used to review the performance counters described in the [Performance Monitor counters](#performance-monitor-counters) section.
 
 ## Why are memory grants important to a developer or DBA
 
