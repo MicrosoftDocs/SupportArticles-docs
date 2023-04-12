@@ -59,12 +59,61 @@
      items:  
         - name: Data isn't updated on Insights tab for integrated search providers (preview)
           href: data-not-updated-integrated-search-providers.md
-   
-   - name: Signin issues with Customer Service
+   - name: Issues with signing in to Customer Service
      items:
-        - name: Signin issues with Customer Service
+        - name: Errors when signing in to Customer Service
         - href: omnichannel-signin-errors.md
-   - name: Solution Health Hub
+   - name: Issues with SLAs
+     items:
+        - name: Issues with SLA creation
+          items:
+            - name: Primary entity isn't available while creating SLAs
+              href: create-slas-primary-entity 
+        - name: Issues with SLA migration
+          items:
+            - name: Standard SLAs aren't showing up in the migration tool
+              href: standard-slas-migration-tool.md
+            - name: Unable to use the SLA migration tool to migrate a large number of SLAs
+              href: migration-tool-issue-slas.md 
+        - name: Issues with SLA time calculation
+          items:
+            - name: Warning and failure duration times are incorrect for SLA
+              href: warning-failure-times-incorrect-sla.md
+            - name: Errors on custom time calculation for SLA
+              href: errors-sla-time-calculation.md
+        - name: Issues with SLA timer
+          items:
+            - name: 
+              href: 
+            - name: 
+              href: 
+            - name: 
+              href:    
+        - name: Issues with solution import, export, and upgrade
+          items:
+            - name: 
+              href: 
+            - name: 
+              href: 
+            - name: 
+              href:
+        - name: Issues with entitlements
+          items:
+            - name: 
+              href: 
+            - name: 
+              href: 
+            - name: 
+              href:
+        - name: Other SLA issues
+          items:
+            - name: 
+              href: 
+            - name: 
+              href: 
+            - name: 
+              href:
+  - name: Solution Health Hub
      items:
         - name: Troubleshoot issues using Solution Health Hub
           href: troubleshoot-cs-oc-solution-health.md  
