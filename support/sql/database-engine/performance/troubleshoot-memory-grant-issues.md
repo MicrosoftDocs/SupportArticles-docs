@@ -49,7 +49,7 @@ Let's review the different terms you may encounter regarding this memory consume
 
 - **Query Execution Memory (QE Memory):**  This term is used to highlight the fact that sort or hash memory is used during the execution of a query and is commonly the largest consumer of memory during execution.
 
-- **Query Execution (QE) Reservations or Memory Reservations:** When a query needs memory for sort or hash operations, it makes a reservation request for memory. That reservation request is calculated at compile time based on estimated cardinality. Later, when the query executes, SQL Server grants that request partially or fully depending on memory availability. In the end, the query may use a percentage of the granted memory. There's a memory clerk (accountant of memory) named 'MEMORYCLERK_SQLQERESERVATIONS' that keeps track of these memory allocations (check out [DBCC MEMORYSTATUS](dbcc-memorystatus-monitor-memory-usage.md) or `sys.dm_os_memory_clerks`).
+- **Query Execution (QE) Reservations or Memory Reservations:** When a query needs memory for sort or hash operations, it makes a reservation request for memory. That reservation request is calculated at compile time based on estimated cardinality. Later, when the query executes, SQL Server grants that request partially or fully depending on memory availability. In the end, the query may use a percentage of the granted memory. There's a memory clerk (accountant of memory) named 'MEMORYCLERK_SQLQERESERVATIONS' that keeps track of these memory allocations (check out [DBCC MEMORYSTATUS](dbcc-memorystatus-monitor-memory-usage.md) or [sys.dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql)).
 
 - **Memory Grants:** When SQL Server grants the requested memory to an executing query, it's said that a memory grant has occurred. There are a few performance counters that use the term "grant." These counters, `Memory Grants Outstanding` and `Memory Grants Pending`, display the count of memory grants satisfied or waiting. They don't account for the memory grant size. One query alone could have consumed, for example, 4 GB of memory to perform a sort, but that isn't reflected in either of these counters.
 
@@ -63,13 +63,13 @@ In most cases, when a thread requests memory inside SQL Server to get something 
 - Requests for other memory allocations may fail with out of memory errors because the resource is tied up with sort, hash, or index-building operations.
 - Requests that need execution memory are waiting for the resource to become available and are taking a long time to complete. In other words, to the end user, these queries are slow.
 
-Therefore, if you observe waits on query execution memory in Perfmon, dynamic management views (DMVs), or `DBCC MEMORYSTATUS`, you must act to resolve this issue, particularly if the issue occurs frequently. For more information, see [What can a developer do about Sort and Hash operations?](#what-can-a-developer-do-about-sort-and-hash-operations)
+Therefore, if you observe waits on query execution memory in Perfmon, dynamic management views (DMVs), or `DBCC MEMORYSTATUS`, you must act to resolve this issue, particularly if the issue occurs frequently. For more information, see [What can a developer do about sort and hash operations](#what-can-a-developer-do-about-sort-and-hash-operations).
 
 ## How to identify waits for query execution memory
 
 There are multiple ways to determine waits for QE reservations. Pick the ones that serve you best to see the larger picture at the server level. Some of these tools may not be available to you (for example, Perfmon isn't available in Azure SQL Database). Once you identify the issue, you must drill down at the individual query level to see which queries need tuning or rewrites.
 
-- At the server level, using aggregate memory usage statistics
+- At the server level, use aggregate memory usage statistics
 
   - The [sys.dm_exec_query_resource_semaphores](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql) DMV
   - Performance monitor counters ([SQL Server Memory Manager object](/sql/relational-databases/performance-monitor/sql-server-memory-manager-object))
@@ -102,7 +102,7 @@ SELECT
 FROM sys.dm_exec_query_resource_semaphores rs
 ```
 
-The following sample output shows that around 900 MB of query execution memory is used by 22 requests, and 3 more are waiting. This takes place in the default pool (pool_id = 2) and the regular query semaphore (resource_semaphore_id = 0).
+The following sample output shows that around 900 MB of query execution memory is used by 22 requests, and 3 more are waiting. This takes place in the default pool (`pool_id` = 2) and the regular query semaphore (`resource_semaphore_id` = 0).
 
 ```output
 pool_id total_memory_kb available_memory_kb granted_memory_kb used_memory_kb grantee_count waiter_count resource_semaphore_id
@@ -132,7 +132,7 @@ For more information, see [SQL Server Memory Manager object](/sql/relational-dat
 
 Another place where you can see details on query reservation memory is `DBCC MEMORYSTATUS` ([Query Memory Objects section](dbcc-memorystatus-monitor-memory-usage.md#query-memory-objects)). You can look at the `Query Memory Objects (default)` output for user queries. If you have enabled Resource Governor with a resource pool named *PoolAdmin*, for example, you can look at both `Query Memory Objects (default)` and `Query Memory Objects (PoolAdmin)`.
 
-Here's a sample output from a system where 18 requests have been granted query execution memory, and 2 requests are waiting for memory. The available counter is zero, which indicates there's no more workspace memory available. This fact explains the two waiting requests. The `Wait Time` shows the elapsed time in milliseconds since a request was put in the wait queue. For more information on these counters, see the [Query memory objects](dbcc-memorystatus-monitor-memory-usage.md#query-memory-objects) section in the DBCC MEMORYSTATUS informational article.
+Here's a sample output from a system where 18 requests have been granted query execution memory, and 2 requests are waiting for memory. The available counter is zero, which indicates there's no more workspace memory available. This fact explains the two waiting requests. The `Wait Time` shows the elapsed time in milliseconds since a request was put in the wait queue. For more information on these counters, see [Query memory objects](dbcc-memorystatus-monitor-memory-usage.md#query-memory-objects).
 
 ```output
 Query Memory Objects (default)                                           Value
@@ -220,7 +220,7 @@ FROM sys.dm_exec_query_memory_grants
   CROSS APPLY sys.dm_exec_query_plan(plan_handle)
 ```
 
-Here's an abbreviated sample output of the query during active QE memory consumption. Most queries have their memory granted, as shown by **granted_memory_kb** and **used_memory_kb** being non-NULL numeric values. The queries that didn't get their request granted are waiting for execution memory, and the **granted_memory_kb** = NULL. Also, they're placed in a wait queue with a queue_id = 6. Their wait_time_ms indicates about 37 seconds of waiting. Session 72 is next in line to get a grant as indicated by wait_order = 1, while session 74 comes after it with wait_order = 2.
+Here's an abbreviated sample output of the query during active QE memory consumption. Most queries have their memory granted, as shown by `granted_memory_kb` and `used_memory_kb` being non-NULL numeric values. The queries that didn't get their request granted are waiting for execution memory, and the `granted_memory_kb` = `NULL`. Also, they're placed in a wait queue with a `queue_id` = 6. Their `wait_time_ms` indicates about 37 seconds of waiting. Session 72 is next in line to get a grant as indicated by `wait_order` = 1, while session 74 comes after it with `wait_order` = 2.
 
 ```output
 session_id requested_memory_kb  granted_memory_kb    used_memory_kb       queue_id wait_order  wait_time_ms         is_next_candidate pool_id
@@ -254,7 +254,7 @@ session_id requested_memory_kb  granted_memory_kb    used_memory_kb       queue_
 
 ### Identify specific queries with sys.dm_exec_requests
 
-There's a [wait type](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql#WaitTypes) in SQL Server that indicates a query is waiting for memory grant `RESOURCE_SEMAPHORE`. You may observe this wait type in `sys.dm_exec_requests` for individual requests. This latter DMV is the best starting point to identify which queries are victims of insufficient grant memory. You can also observe the `RESOURCE_SEMAPHORE` wait in `sys.dm_os_wait_stats` as aggregated data points at the SQL Server level. This wait type shows up when a query memory request can't be granted due to other concurrent queries having used up the memory. A high count of waiting requests and long wait times indicate an excessive number of concurrent queries using execution memory or large memory request sizes.
+There's a [wait type](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql#WaitTypes) in SQL Server that indicates a query is waiting for memory grant `RESOURCE_SEMAPHORE`. You may observe this wait type in `sys.dm_exec_requests` for individual requests. This latter DMV is the best starting point to identify which queries are victims of insufficient grant memory. You can also observe the `RESOURCE_SEMAPHORE` wait in [sys.dm_os_wait_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql) as aggregated data points at the SQL Server level. This wait type shows up when a query memory request can't be granted due to other concurrent queries having used up the memory. A high count of waiting requests and long wait times indicate an excessive number of concurrent queries using execution memory or large memory request sizes.
 
 > [!NOTE]
 > The wait time for memory grants is finite. After an excessive wait (for example, over 20 minutes), SQL Server times the query out and raises error [8645](/sql/relational-databases/errors-events/mssqlserver-8645-database-engine-error), "A timeout occurred while waiting for memory resources to execute the query. Rerun the query." You may see the timeout value set at the server level by looking at `timeout_sec` in `sys.dm_exec_query_memory_grants`. The timeout value may vary slightly between SQL Server versions.
@@ -322,7 +322,7 @@ There are multiple extended events that provide memory grant information and ena
 - **sqlserver.execution_warning**: Occurs when a T-SQL statement or stored procedure waits more than one second for a memory grant or when the initial attempt to get memory fails. Use this event in combination with events that identify waits to troubleshoot contention issues that impact performance.
 - **sqlserver.hash_spill_details**: Occurs at the end of hash processing if there's insufficient memory to process the build input of a hash join. Use this event together with any of the `query_pre_execution_showplan` or `query_post_execution_showplan` events to determine which operation in the generated plan is causing the hash spill.
 - **sqlserver.hash_warning**: Occurs when there's insufficient memory to process the build input of a hash join. This results in either a hash recursion when the build input is partitioned or a hash bailout when the partitioning of the build input exceeds the maximum recursion level. Use this event together with any of the `query_pre_execution_showplan` or `query_post_execution_showplan` events to determine which operation in the generated plan is causing the hash warning.
-- **sqlserver.sort_warning**: Occurs when the sort operation on an executing query doesn't fit into memory. This event isn't generated for sort operations caused by index creation, only for sort operations in a query. (For example, an `Order By` in a `Select` statement.) Use this event to identify queries that perform slowly because of the sort operation, particularly when the warning_type = 2, indicating multiple passes over the data were required to sort.
+- **sqlserver.sort_warning**: Occurs when the sort operation on an executing query doesn't fit into memory. This event isn't generated for sort operations caused by index creation, only for sort operations in a query. (For example, an `Order By` in a `Select` statement.) Use this event to identify queries that perform slowly because of the sort operation, particularly when the `warning_type` = 2, indicating multiple passes over the data were required to sort.
 
 #### Plan generating events that contain memory grant information
 
@@ -335,7 +335,7 @@ The following query plan generating extended events contain **granted_memory_kb*
 
 #### Column Store Index building
 
-One of the areas covered via Xevents is the execution memory used during column store building. This is a list of events available:
+One of the areas covered via XEvents is the execution memory used during column store building. This is a list of events available:
 
 - **sqlserver.column_store_index_build_low_memory**: Storage Engine detected a low memory condition, and the rowgroup size was reduced. There are several columns of interest here.
 - **sqlserver.column_store_index_build_memory_trace**: Trace memory usage during the index build.
@@ -420,54 +420,56 @@ INSERT INTO #tmp (CounterDateTime, Counte  5.39          1.08          1.64     
 
 If you have Query Store enabled, you can take advantage of its persisted historical statistics. Contrary to data from `sys.dm_exec_query_stats`, these statistics survive a SQL Server restart or memory pressure because they're stored in a database. QDS also has size limits and a retention policy. For more information, see the [Set the optimal Query Store Capture Mode](/sql/relational-databases/performance/manage-the-query-store#set-the-optimal-query-store-capture-mode) and [Keep the most relevant data in Query Store](/sql/relational-databases/performance/manage-the-query-store#keep-the-most-relevant-data-in-query-store) sections in [Best practices for managing the Query Store](/sql/relational-databases/performance/manage-the-query-store).
 
-First, identify if your databases have Query Store enabled using this query:
+1. Identify if your databases have Query Store enabled using this query:
 
-```sql
-SELECT name, is_query_store_on 
-FROM sys.databases
-WHERE is_query_store_on = 1
-```
+   ```sql
+   SELECT name, is_query_store_on 
+   FROM sys.databases
+   WHERE is_query_store_on = 1
+   ```
 
-Then, run the following diagnostic query in the context of a specific database you want to investigate. The principles here are the same as `sys.dm_exec_query_stats`; you see aggregate statistics for the statements. However, one difference is that with QDS, you're looking at only queries in the scope of this database, not the entire SQL Server. So you may need to know the database in which a particular memory grant request was executed. Otherwise, run this diagnostic query in multiple databases until you find the sizable memory grants.
+1. Run the following diagnostic query in the context of a specific database you want to investigate:
 
-```sql
-SELECT 
-  MAX(qtxt.query_sql_text) AS sample_sql_text
-  ,CONVERT(DECIMAL(10,2), SUM(rts.avg_query_max_used_memory) / 128) AS avg_mem_grant_used_mb
-  ,CONVERT(DECIMAL(10,2), SUM(rts.min_query_max_used_memory) / 128) AS min_mem_grant_used_mb
-  ,CONVERT(DECIMAL(10,2), SUM(rts.max_query_max_used_memory) / 128) AS max_mem_grant_used_mb
-  ,CONVERT(DECIMAL(10,2), SUM(rts.stdev_query_max_used_memory) / 128) AS stdev_mem_grant_used_mb
-  ,CONVERT(DECIMAL(10,2), SUM(rts.last_query_max_used_memory) / 128) AS last_mem_grant_used_mb
-  ,SUM(count_executions) AS count_query_executions
-FROM sys.query_store_runtime_stats rts
-JOIN sys.query_store_plan p
-  ON p.plan_id = rts.plan_id
-JOIN sys.query_store_query q
-  ON p.query_id = q.query_id
-LEFT OUTER JOIN sys.query_store_query_text qtxt
-  ON q.query_text_id = qtxt.query_text_id
-GROUP BY q.query_hash
-HAVING SUM(rts.avg_query_max_used_memory) /128 > 5 -- greater than 5 MB
-ORDER BY SUM(avg_query_max_used_memory) DESC
-OPTION (MAX_GRANT_PERCENT = 5)
-```
+   ```sql
+   SELECT
+      MAX(qtxt.query_sql_text) AS sample_sql_text
+      ,CONVERT(DECIMAL(10,2), SUM(rts.avg_query_max_used_memory) / 128) AS avg_mem_grant_used_mb
+      ,CONVERT(DECIMAL(10,2), SUM(rts.min_query_max_used_memory) / 128) AS min_mem_grant_used_mb
+      ,CONVERT(DECIMAL(10,2), SUM(rts.max_query_max_used_memory) / 128) AS max_mem_grant_used_mb
+      ,CONVERT(DECIMAL(10,2), SUM(rts.stdev_query_max_used_memory) / 128) AS stdev_mem_grant_used_mb
+      ,CONVERT(DECIMAL(10,2), SUM(rts.last_query_max_used_memory) / 128) AS last_mem_grant_used_mb
+      ,SUM(count_executions) AS count_query_executions
+   FROM sys.query_store_runtime_stats rts
+   JOIN sys.query_store_plan p
+     ON p.plan_id = rts.plan_id
+   JOIN sys.query_store_query q
+     ON p.query_id = q.query_id
+   LEFT OUTER JOIN sys.query_store_query_text qtxt
+     ON q.query_text_id = qtxt.query_text_id
+   GROUP BY q.query_hash
+   HAVING SUM(rts.avg_query_max_used_memory) /128 > 5 -- greater than 5 MB
+   ORDER BY SUM(avg_query_max_used_memory) DESC
+   OPTION (MAX_GRANT_PERCENT = 5)
+   ```
 
-Here's an abbreviated sample output:
+   The principles here are the same as `sys.dm_exec_query_stats`; you see aggregate statistics for the statements. However, one difference is that with QDS, you're looking at only queries in the scope of this database, not the entire SQL Server. So you may need to know the database in which a particular memory grant request was executed. Otherwise, run this diagnostic query in multiple databases until you find the sizable memory grants.
 
-```output
-sample_sql_text                           avg_mem_grant_used_mb  min_mem_grant_used_mb  max_mem_grant_used_mb  stdev_mem_grant_used_mb  last_mem_grant_used_mb  count_query_executions
------------------------------------------ ---------------------- ---------------------- ---------------------- ------------------------ ----------------------- ----------------------
-SELECT   qtxt.query_sql_text  ,CONVERT(D  550.16                 550.00                 550.00                 0.00                     550.00                  1
-SELECT   qtxt.query_sql_text  ,rts.avg_q  61.00                  36.00                  65.00                  10.87                    51.00                   14
-SELECT   qtxt.query_sql_text  ,q.*  ,rts  25.46                  25.00                  25.00                  0.00                     25.00                   2
-insert into #tmpStats select 5 'Database  13.69                  13.00                  13.00                  0.03                     13.00                   16
-SELECT   q.*  ,rts                        11.93                 11.00                  12.00                  0.23                     12.00                   2
-SELECT *  ,rts.avg_query_max_used_memory  9.70                   9.00                   9.00                   0.00                     9.00                    1
-SELECT   qtxt.query_sql_text  ,rts.avg_q  9.32                   9.00                   9.00                   0.00                     9.00                    1
-select db_id() dbid, db_name() dbname, *  7.33                   7.00                   7.00                   0.00                     7.00                    9
-SELECT q.*  ,rts.avg_query_max_used_memo  6.65                   6.00                   6.00                   0.00                     6.00                    1
-(@_msparam_0 nvarchar(4000),@_msparam_1   5.17                   4.00                   5.00                   0.68                     4.00                    2
-```
+   Here's an abbreviated sample output:
+
+   ```output
+   sample_sql_text                           avg_mem_grant_used_mb  min_mem_grant_used_mb  max_mem_grant_used_mb  stdev_mem_grant_used_mb  last_mem_grant_used_mb  count_query_executions
+   ----------------------------------------- ---------------------- ---------------------- ---------------------- ------------------------ ----------------------- ----------------------
+   SELECT   qtxt.query_sql_text  ,CONVERT(D  550.16                 550.00                 550.00                 0.00                     550.00                  1
+   SELECT   qtxt.query_sql_text  ,rts.avg_q  61.00                  36.00                  65.00                  10.87                    51.00                   14
+   SELECT   qtxt.query_sql_text  ,q.*  ,rts  25.46                  25.00                  25.00                  0.00                     25.00                   2
+   insert into #tmpStats select 5 'Database  13.69                  13.00                  13.00                  0.03                     13.00                   16
+   SELECT   q.*  ,rts                        11.93                 11.00                  12.00                  0.23                     12.00                   2
+   SELECT *  ,rts.avg_query_max_used_memory  9.70                   9.00                   9.00                   0.00                     9.00                    1
+   SELECT   qtxt.query_sql_text  ,rts.avg_q  9.32                   9.00                   9.00                   0.00                     9.00                    1
+   select db_id() dbid, db_name() dbname, *  7.33                   7.00                   7.00                   0.00                     7.00                    9
+   SELECT q.*  ,rts.avg_query_max_used_memo  6.65                   6.00                   6.00                   0.00                     6.00                    1
+   (@_msparam_0 nvarchar(4000),@_msparam_1   5.17                   4.00                   5.00                   0.68                     4.00                    2
+   ```
 
 ### A custom diagnostic query
 
@@ -573,7 +575,7 @@ Here's an abbreviated sample output from this diagnostic query with only selecte
 |86        |1310129  |RESOURCE_SEMAPHORE|40                 |NULL              |0                  |NULL              |1               |
 |86        |1310129  |RESOURCE_SEMAPHORE|40                 |NULL              |0                  |NULL              |2               |
 
-The sample output clearly illustrates how a query submitted by session_id = 60 successfully got the 9-MB memory grant it requested, but only 7 MB were required to successfully start query execution. In the end, the query used only 1 MB of the 9 MB it received from the server. The output also shows that sessions 75 and 86 are waiting for memory grants, thus the `RESOURCE_SEMAPHORE` wait_type. Their wait time has been over 1,300 seconds (21 minutes), and their `granted_memory_mb` is `NULL`.
+The sample output clearly illustrates how a query submitted by `session_id` = 60 successfully got the 9-MB memory grant it requested, but only 7 MB were required to successfully start query execution. In the end, the query used only 1 MB of the 9 MB it received from the server. The output also shows that sessions 75 and 86 are waiting for memory grants, thus the `RESOURCE_SEMAPHORE` `wait_type`. Their wait time has been over 1,300 seconds (21 minutes), and their `granted_memory_mb` is `NULL`.
 
 This diagnostic query is a sample, so feel free to modify it in any way that fits your needs. A version of this query is also used in diagnostic tools that Microsoft SQL Server support uses.
 
@@ -589,7 +591,7 @@ Based on Microsoft support experience, memory grant issues tend to be some of th
 
 Using the tools outlined here (DMVs, Perfmon counters, and actual query plans), you can identify which queries are large-grant consumers. Then you can tune or rewrite these queries to resolve or reduce the workspace memory usage.
 
-## What can a developer do about Sort and Hash operations
+## What can a developer do about sort and hash operations
 
 Once you identify specific queries that consume a large amount of query reservation memory, you can take steps to reduce the memory grants by redesigning these queries.
 
