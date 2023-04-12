@@ -671,5 +671,7 @@ If none of these solutions work for you, use one of the following methods:
 
     :::image type="content" source="media/storage-explorer-troubleshooting/feedback-button.png" alt-text="Screenshot that shows the feedback button.":::
 
+[!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
+
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
 

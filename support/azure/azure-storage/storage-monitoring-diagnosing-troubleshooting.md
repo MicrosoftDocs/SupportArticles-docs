@@ -82,7 +82,7 @@ The [Azure portal](https://portal.azure.com) can also provide notifications of i
 
 ### <a name="monitoring-capacity"></a>Monitoring capacity
 
-Storage Metrics only stores capacity metrics for the blob service because blobs typically account for the largest proportion of stored data (at the time of writing, it's not possible to use Storage Metrics to monitor the capacity of your tables and queues). You can find this data in the `$MetricsCapacityBlob` table if you have enabled monitoring for the Blob service. Storage Metrics records this data once per day, and you can use the value of the `RowKey`  to determine whether the row contains an entity that relates to user data (value `data`) or analytics data (value `analytics`). Each stored entity contains information about the amount of storage used (`Capacity` measured in bytes) and the current number of containers (`ContainerCount`) and blobs (`ObjectCount`) in use in the storage account. For more information about the capacity metrics stored in the `$MetricsCapacityBlob` table, see [Storage Analytics Metrics Table Schema](/rest/api/storageservices/Storage-Analytics-Metrics-Table-Schema).
+Storage Metrics only stores capacity metrics for the blob service because blobs typically account for the largest proportion of stored data (at the time of writing, it's not possible to use Storage Metrics to monitor the capacity of your tables and queues). You can find this data in the `$MetricsCapacityBlob` table if you have enabled monitoring for the Blob service. Storage Metrics records this data once per day, and you can use the value of the `RowKey` to determine whether the row contains an entity that relates to user data (value `data`) or analytics data (value `analytics`). Each stored entity contains information about the amount of storage used (`Capacity` measured in bytes) and the current number of containers (`ContainerCount`) and blobs (`ObjectCount`) in use in the storage account. For more information about the capacity metrics stored in the `$MetricsCapacityBlob` table, see [Storage Analytics Metrics Table Schema](/rest/api/storageservices/Storage-Analytics-Metrics-Table-Schema).
 
 > [!NOTE]
 > You should monitor these values for an early warning that you're approaching the capacity limits of your storage account. In the Azure portal, you can add alert rules to notify you if aggregate storage use exceeds or falls below the thresholds that you specify.
@@ -769,7 +769,7 @@ The following procedure shows you how to capture detailed packet information for
 3. Select **Capture Options**.
 4. Add a filter to the **Capture Filter** textbox. For example, `host contosoemaildist.table.core.windows.net` will configure Wireshark to capture only packets sent to or from the table service endpoint in the *contosoemaildist* storage account. Check out the [complete list of Capture Filters](https://wiki.wireshark.org/CaptureFilters).
 
-    :::image type="content" source="media/storage-monitoring-diagnosing-troubleshooting/wireshark-screenshot-1.png" alt-text="Screenshot that shows how to add a filter to the Capture Filter textbox.":::
+    :::image type="content" source="media/storage-monitoring-diagnosing-troubleshooting/interface-list.png" alt-text="Screenshot that shows how to add a filter to the Capture Filter textbox.":::
 
 5. Select **Start**. Wireshark will now capture all the packets sent to or from the table service endpoint as you use your client application on your local machine.
 6. When you have finished, select **Capture** > **Stop** on the main menu.
@@ -777,11 +777,11 @@ The following procedure shows you how to capture detailed packet information for
 
 WireShark will highlight any errors that exist in the **packetlist** window. You can also use the **Expert Info** window (select **Analyze** > **Expert Info**) to view a summary of errors and warnings.
 
-:::image type="content" source="media/storage-monitoring-diagnosing-troubleshooting/wireshark-screenshot-2.png" alt-text="Screenshot that shows the Expert Info window where you can view a summary of errors and warnings.":::
+:::image type="content" source="media/storage-monitoring-diagnosing-troubleshooting/wireshark-expert-information.png" alt-text="Screenshot that shows the Expert Info window where you can view a summary of errors and warnings.":::
 
 You can also choose to view the TCP data as the application layer sees it by right-clicking on the TCP data and selecting **Follow TCP Stream**. This is useful if you captured your dump without a capture filter. For more information, see [Following TCP Streams](https://www.wireshark.org/docs/wsug_html_chunked/ChAdvFollowTCPSection.html).
 
-:::image type="content" source="media/storage-monitoring-diagnosing-troubleshooting/wireshark-screenshot-3.png" alt-text="Screenshot that shows how to view the TCP data as the application layer sees it.":::
+:::image type="content" source="media/storage-monitoring-diagnosing-troubleshooting/follow-tcp-stream.png" alt-text="Screenshot that shows how to view the TCP data as the application layer sees it.":::
 
 > [!NOTE]
 > For more information about using Wireshark, see the [Wireshark Users Guide](https://www.wireshark.org/docs/wsug_html_chunked).
@@ -817,6 +817,8 @@ For more information about analytics in Azure Storage, see these resources:
 - [Storage analytics metrics table schema](/rest/api/storageservices/storage-analytics-metrics-table-schema)
 - [Storage analytics logs](/azure/storage/common/storage-analytics-logging)
 - [Storage analytics log format](/rest/api/storageservices/storage-analytics-log-format)
+
+[!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
 
