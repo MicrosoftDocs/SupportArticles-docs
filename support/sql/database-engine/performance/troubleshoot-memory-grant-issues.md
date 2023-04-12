@@ -304,24 +304,24 @@ session_id wait_type               wait_time   granted_query_memory text
 
 There are multiple extended events that provide memory grant information and enable you to capture this information via a trace:
 
-- **sqlserver.additional_memory_grant** Occurs when a query tries to get more memory grant during execution. Failure to get this additional memory grant may cause the query slowdown.
-- **sqlserver.query_memory_grant_blocking** Occurs when a query is blocking other queries while waiting for a memory grant.
-- **sqlserver.query_memory_grant_info_sampling** Occurs at the end of the randomly sampled queries providing memory grant information (it can be used, for example, for telemetry).
-- **sqlserver.query_memory_grant_resource_semaphores** Occurs at five-minute intervals for each resource governor resource pool.
-- **sqlserver.query_memory_grant_usage** Occurs at the end of query processing for queries with memory grants over 5 MB to let users know about memory grant inaccuracies.
-- **sqlserver.query_memory_grants** Occurs at five-minute intervals for each query with a memory grant.
+- **sqlserver.additional_memory_grant**: Occurs when a query tries to get more memory grant during execution. Failure to get this additional memory grant may cause the query slowdown.
+- **sqlserver.query_memory_grant_blocking**: Occurs when a query is blocking other queries while waiting for a memory grant.
+- **sqlserver.query_memory_grant_info_sampling**: Occurs at the end of the randomly sampled queries providing memory grant information (it can be used, for example, for telemetry).
+- **sqlserver.query_memory_grant_resource_semaphores**: Occurs at five-minute intervals for each resource governor resource pool.
+- **sqlserver.query_memory_grant_usage**: Occurs at the end of query processing for queries with memory grants over 5 MB to let users know about memory grant inaccuracies.
+- **sqlserver.query_memory_grants**: Occurs at five-minute intervals for each query with a memory grant.
 
 #### Memory grant feedback extended events
 
-- **sqlserver.memory_grant_feedback_loop_disabled** Occurs when memory grant feedback loop is disabled.
-- **sqlserver.memory_grant_updated_by_feedback**  Occurs when memory grant is updated by feedback.
+- **sqlserver.memory_grant_feedback_loop_disabled**: Occurs when memory grant feedback loop is disabled.
+- **sqlserver.memory_grant_updated_by_feedback**: Occurs when memory grant is updated by feedback.
 
 #### Query execution warnings that relate to memory grants
 
-- **sqlserver.execution_warning** Occurs when a T-SQL statement or stored procedure waits more than one second for a memory grant or when the initial attempt to get memory fails. Use this event in combination with events that identify waits to troubleshoot contention issues that impact performance.
-- **sqlserver.hash_spill_details** Occurs at the end of hash processing if there's insufficient memory to process the build input of a hash join. Use this event together with any of the `query_pre_execution_showplan` or `query_post_execution_showplan` events to determine which operation in the generated plan is causing the hash spill.
-- **sqlserver.hash_warning** Occurs when there's insufficient memory to process the build input of a hash join. This results in either a hash recursion when the build input is partitioned or a hash bailout when the partitioning of the build input exceeds the maximum recursion level. Use this event together with any of the `query_pre_execution_showplan` or `query_post_execution_showplan` events to determine which operation in the generated plan is causing the hash warning.
-- **sqlserver.sort_warning** Occurs when the sort operation on an executing query doesn't fit into memory. This event isn't generated for sort operations caused by index creation, only for sort operations in a query. (For example, an `Order By` in a `Select` statement.) Use this event to identify queries that perform slowly because of the sort operation, particularly when the warning_type = 2, indicating multiple passes over the data were required to sort.
+- **sqlserver.execution_warning**: Occurs when a T-SQL statement or stored procedure waits more than one second for a memory grant or when the initial attempt to get memory fails. Use this event in combination with events that identify waits to troubleshoot contention issues that impact performance.
+- **sqlserver.hash_spill_details**: Occurs at the end of hash processing if there's insufficient memory to process the build input of a hash join. Use this event together with any of the `query_pre_execution_showplan` or `query_post_execution_showplan` events to determine which operation in the generated plan is causing the hash spill.
+- **sqlserver.hash_warning**: Occurs when there's insufficient memory to process the build input of a hash join. This results in either a hash recursion when the build input is partitioned or a hash bailout when the partitioning of the build input exceeds the maximum recursion level. Use this event together with any of the `query_pre_execution_showplan` or `query_post_execution_showplan` events to determine which operation in the generated plan is causing the hash warning.
+- **sqlserver.sort_warning**: Occurs when the sort operation on an executing query doesn't fit into memory. This event isn't generated for sort operations caused by index creation, only for sort operations in a query. (For example, an `Order By` in a `Select` statement.) Use this event to identify queries that perform slowly because of the sort operation, particularly when the warning_type = 2, indicating multiple passes over the data were required to sort.
 
 #### Plan generating events that contain memory grant information
 
@@ -334,16 +334,16 @@ The following query plan generating extended events contain **granted_memory_kb*
 
 #### Column Store Index building
 
-One of the areas that's covered via Xevents is the execution memory used during column store building. This is a list of events available:
+One of the areas covered via Xevents is the execution memory used during column store building. This is a list of events available:
 
-- **sqlserver.column_store_index_build_low_memory** Storage Engine detected a low memory condition, and the rowgroup size was reduced. There are several columns of interest here.
-- **sqlserver.column_store_index_build_memory_trace** Trace memory usage during the index build.
-- **sqlserver.column_store_index_build_memory_usage_scale_down** Storage Engine scaled down.
-- **sqlserver.column_store_index_memory_estimation** Shows the memory estimation result during the columnstore rowgroup build.
+- **sqlserver.column_store_index_build_low_memory**: Storage Engine detected a low memory condition, and the rowgroup size was reduced. There are several columns of interest here.
+- **sqlserver.column_store_index_build_memory_trace**: Trace memory usage during the index build.
+- **sqlserver.column_store_index_build_memory_usage_scale_down**: Storage Engine scaled down.
+- **sqlserver.column_store_index_memory_estimation**: Shows the memory estimation result during the columnstore rowgroup build.
 
 ### Identify specific queries with `sys.dm_exec_query_stats`
 
-If the memory grant issue isn't happening at this moment, but you would like to identify the offending queries, you can look at historical query data via `sys.dm_exec_query_stats`. The lifetime of the data is tied to the query plan of each query. When a plan is removed from the plan cache, the corresponding rows are eliminated from this view. In other words, the DMV keeps statistics in memory that aren't preserved after a SQL Server restart or after memory pressure caused a plan cache release. That being said, you can find the information here valuable, particularly for aggregate query statistics. Someone may have recently reported seeing large memory grants from queries, but when you look at the server workload, you may discover the problem is gone. In this situation, `sys.dm_exec_query_stats` can provide insights. Here's a sample query that can help you find the top 20 statements that consumed the largest amounts of execution memory. This output displays individual statements even if their query structure is the same. For example, `SELECT Name FROM t1 JOIN t2 ON t1.Id = t2.Id WHERE t1.Id = 5` is a separate row from `SELECT Name FROM t1 JOIN t2 ON t1.Id = t2.Id WHERE t1.Id = 100` (only the filter predicate value varies). The query gets the top 20 statements with a maximum grant size greater than 5 MB.
+If the memory grant issue isn't happening at this moment, but you would like to identify the offending queries, you can look at historical query data via `sys.dm_exec_query_stats`. The lifetime of the data is tied to the query plan of each query. When a plan is removed from the plan cache, the corresponding rows are eliminated from this view. In other words, the DMV keeps statistics in memory that aren't preserved after a SQL Server restart or after memory pressure causes a plan cache release. That being said, you can find the information here valuable, particularly for aggregate query statistics. Someone may have recently reported seeing large memory grants from queries, but when you look at the server workload, you may discover the problem is gone. In this situation, `sys.dm_exec_query_stats` can provide insights. Here's a sample query that can help you find the top 20 statements that consumed the largest amounts of execution memory. This output displays individual statements even if their query structure is the same. For example, `SELECT Name FROM t1 JOIN t2 ON t1.Id = t2.Id WHERE t1.Id = 5` is a separate row from `SELECT Name FROM t1 JOIN t2 ON t1.Id = t2.Id WHERE t1.Id = 100` (only the filter predicate value varies). The query gets the top 20 statements with a maximum grant size greater than 5 MB.
 
 ```sql
 SELECT TOP 20
@@ -427,7 +427,7 @@ FROM sys.databases
 WHERE is_query_store_on = 1
 ```
 
-Then, run the following diagnostic query in the context of a specific database you want to investigate. The principles here are the same as `sys.dm_exec_query_stats`; you see aggregate statistics for the statements. However, one difference is that with QDS, you're looking at only queries in the scope of this database, not the entire SQL Server. So you may need to know the database in which a particular memory grant request executed. Otherwise, run this diagnostic query in multiple databases until you find the sizable memory grants.
+Then, run the following diagnostic query in the context of a specific database you want to investigate. The principles here are the same as `sys.dm_exec_query_stats`; you see aggregate statistics for the statements. However, one difference is that with QDS, you're looking at only queries in the scope of this database, not the entire SQL Server. So you may need to know the database in which a particular memory grant request was executed. Otherwise, run this diagnostic query in multiple databases until you find the sizable memory grants.
 
 ```sql
 SELECT 
