@@ -1,13 +1,6 @@
 - name: Welcome
   href: welcome-azure-storage.yml
 
-- name: Data migration
-  items:
-  - name: AzCopy
-    items:
-    - name: Troubleshoot AzCopy issues
-      href: storage-use-azcopy-troubleshoot.md
-
 - name: Blob Storage and Azure Data Lake Store Gen2
   items:
   - name: Embedded application error when install Azure backup agent
@@ -20,6 +13,13 @@
     href: ../general/optimize-createfile-function.md
   - name: Troubleshoot high CPU or disk usage issues
     href: ../general/diagnose-high-cpu-disk-perfinsights.md
+
+- name: Data migration
+  items:
+  - name: AzCopy
+    items:
+    - name: Troubleshoot AzCopy issues
+      href: storage-use-azcopy-troubleshoot.md
 
 - name: Monitoring, metrics and logs
   items:
