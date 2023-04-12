@@ -83,36 +83,38 @@
               href: errors-sla-time-calculation.md
         - name: Issues with SLA timer
           items:
-            - name: 
-              href: 
-            - name: 
-              href: 
-            - name: 
-              href:    
+            - name: SLA KPI instance doesn't reach Nearing Non-compliance or Non-compliant state, and the instance timer continues to run
+              href: sla-kpi-instance-compliance-timer.md
+            - name: Warning message appears on slakpiinstances
+              href: warning-slakpiinstances.md
+            - name: SLA timer doesn't pause when its state is changed from InProgress to OnHold on a holiday
+              href: sla-timer-pause-state-changed.md
+            - name: OnHold Time attribute isn't populated for Case for Unified Interface SLA
+              href: onhold-time-not-populated.md
         - name: Issues with solution import, export, and upgrade
           items:
-            - name: 
-              href: 
-            - name: 
-              href: 
-            - name: 
-              href:
+            - name: Unable to import solution with active SLAs and SLAs are deactivated when a solution is imported
+              href: import-solution-active-slas.md
+            - name: Changes to SLAItem through an upgrade solution don't appear even after a successful upgrade
+              href: slaitem-changes-missing-upgrade.md
         - name: Issues with entitlements
           items:
-            - name: 
-              href: 
-            - name: 
-              href: 
-            - name: 
-              href:
+            - name: Unable to create entitlements because Allocation Type dropdown doesn't show any options
+              href: allocation-type-missing-options.md
         - name: Other SLA issues
           items:
-            - name: 
-              href: 
-            - name: 
-              href: 
-            - name: 
-              href:
+            - name: SLA KPI instance status shows as canceled
+              href: sla-kpi-instance-shows-canceled.md
+            - name: Success, warning, and failure actions are being run multiple times in web client
+              href: actions-run-multiple-times-client.md
+            - name: Deletion of SLAs or SLA Items shows error messages in Unified Interface during solution upgrade or manual deletion
+              href: sla-deletion-error-messages.md
+            - name: SLA KPI instance isn't created on the entity
+              href: sla-kpi-instance-not-created-entity.md
+            - name: Errors occur while updating a case
+              href: errors-updating-case.md
+            - name: Case entity fields for modifiedon and modifiedby are updated for resolved cases
+              href: entity-case-field-updates.md
   - name: Solution Health Hub
      items:
         - name: Troubleshoot issues using Solution Health Hub
