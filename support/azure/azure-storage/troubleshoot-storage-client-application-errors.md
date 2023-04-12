@@ -4,11 +4,11 @@ description: Identifies and troubleshoots errors with client applications that c
 author: AmandaAZ
 ms.author: v-weizhu
 ms.reviewer: normesta, azurestocic, jarrettr
-ms.date: 04/10/2023
+ms.date: 04/12/2023
 ms.service: storage
 ---
 
-# Troubleshoot client application errors in Azure Storage accounts
+# Troubleshoot client application errors in Azure storage accounts
 
 This article helps you investigate client application errors by using metrics, [client side logs](/rest/api/storageservices/Client-side-Logging-with-the-.NET-Storage-Client-Library), and resource logs in Azure Monitor.
 
@@ -201,7 +201,7 @@ The client application should use unique container names whenever it creates new
 
 A **ResponseType** dimension equal to a value of **Success** captures the percent of operations that were successful based on their HTTP Status Code. Operations with status codes of 2XX count as successful, whereas operations with status codes in 3XX, 4XX, and 5XX ranges are counted as unsuccessful and lower the Success metric value. In storage resource logs, these operations are recorded with a transaction status of **ClientOtherError**.
 
-It's important to note that these operations have completed successfully and therefore don't affect other metrics, such as availability. Some examples of operations that execute successfully but that can result in unsuccessful HTTP status codes include:
+These operations have completed successfully and therefore don't affect other metrics, such as availability. Some examples of operations that execute successfully but that can result in unsuccessful HTTP status codes include:
 
 - **ResourceNotFound** (Not Found 404), for example, from a GET request to a blob that doesn't exist.
 - **ResourceAlreadyExists** (Conflict 409), for example, from a `CreateIfNotExist` operation where the resource already exists.
@@ -215,8 +215,8 @@ You can find a list of common REST API error codes that the storage services ret
 - [Monitoring Azure Files](/azure/storage/files/storage-files-monitoring)
 - [Monitoring Azure Queue Storage](/azure/storage/queues/monitor-queue-storage)
 - [Monitoring Azure Table storage](/azure/storage/tables/monitor-table-storage)
-- [Troubleshoot performance issues](/azure/storage/common/troubleshoot-storage-performance?toc=/azure/storage/blobs/toc.json)
-- [Troubleshoot availability issues](/azure/storage/common/troubleshoot-storage-availability?toc=/azure/storage/blobs/toc.json)
+- [Troubleshoot performance issues](troubleshoot-storage-performance.md)
+- [Troubleshoot availability issues](troubleshoot-storage-availability.md)
 - [Monitor, diagnose, and troubleshoot your Azure Storage](/training/modules/monitor-diagnose-and-troubleshoot-azure-storage/)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

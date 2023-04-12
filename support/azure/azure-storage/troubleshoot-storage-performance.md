@@ -1,14 +1,14 @@
 ---
-title: Troubleshoot performance issues in Azure Storage accounts
-description: Identifies and troubleshoots performance issues in Azure Storage accounts.
+title: Troubleshoot performance issues in Azure storage accounts
+description: Identifies and troubleshoots performance issues in Azure storage accounts.
 author: AmandaAZ
 ms.author: v-weizhu
 ms.reviewer: normesta, azurestocic, jarrettr
-ms.date: 04/10/2023
+ms.date: 04/12/2023
 ms.service: storage
 ---
 
-# Troubleshoot performance in Azure Storage accounts
+# Troubleshoot performance in Azure storage accounts
 
 This article helps you investigate unexpected changes in behavior (such as slower-than-usual response times). These changes in behavior can often be identified by monitoring storage metrics in Azure Monitor. For general information about using metrics and logs in Azure Monitor, see the following articles:
 
@@ -106,8 +106,8 @@ If you're experiencing a delay between the time an application adds a message to
 
 ## See also
 
-- [Troubleshoot client application errors](/azure/storage/common/troubleshoot-storage-client-application-errors?toc=/azure/storage/blobs/toc.json)
-- [Troubleshoot availability issues](/azure/storage/common/troubleshoot-storage-availability?toc=/azure/storage/blobs/toc.json)
+- [Troubleshoot client application errors](troubleshoot-storage-client-application-errors.md)
+- [Troubleshoot availability issues](troubleshoot-storage-availability.md)
 - [Monitor, diagnose, and troubleshoot your Azure Storage](/training/modules/monitor-diagnose-and-troubleshoot-azure-storage/)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

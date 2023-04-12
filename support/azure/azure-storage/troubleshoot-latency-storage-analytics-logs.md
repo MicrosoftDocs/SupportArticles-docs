@@ -3,7 +3,7 @@ title: Troubleshoot latency using Storage Analytics logs
 description: Identifies and troubleshoots latency issues using Azure Storage Analytics logs and optimizes the client application.
 author: AmandaAZ
 ms.author: v-weizhu
-ms.date: 04/10/2023
+ms.date: 04/12/2023
 ms.service: storage
 ms.reviewer: v-miegge, kartup, azurestocic, jarrettr
 ---
@@ -156,5 +156,7 @@ Recommendation:
 
 - Investigate the code in your client to understand why and when the client disconnects from the storage service.
 - Use Wireshark, Microsoft Message Analyzer, or Tcping to investigate network connectivity issues from the client.
+
+[!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

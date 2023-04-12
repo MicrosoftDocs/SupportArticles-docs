@@ -4,7 +4,7 @@ description: Provides debugging techniques for Azure Storage Explorer.
 services: storage
 author: AmandaAZ
 ms.service: storage
-ms.date: 04/10/2023
+ms.date: 04/12/2023
 ms.author: v-weizhu
 ms.reviewer: azurestocic, jarrettr
 ---

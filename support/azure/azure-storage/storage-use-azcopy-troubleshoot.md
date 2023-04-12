@@ -4,7 +4,7 @@ description: Provides workarounds to common issues with AzCopy v10.
 author: AmandaAZ
 ms.service: storage
 ms.subservice: common
-ms.date: 04/10/2023
+ms.date: 04/12/2023
 ms.author: v-weizhu
 ms.reviewer: normesta, azurestocic, jarrettr
 ---
@@ -131,7 +131,7 @@ If you see a large number of failed requests with the "503 Server Busy" status, 
 
 If you see a large file repeatedly failing due to certain chunks failing each time, try to limit the concurrent network connections or throughput limit depending on your specific case. We suggest you lower the performance drastically at first, observe whether it solved the initial problem, then ramp up the performance again until an overall balance is achieved.
 
-For more information, see [Optimize the performance of AzCopy with Azure Storage](/azure/storage/common/storage-use-azcopy-optimize)
+For more information, see [Optimize the performance of AzCopy with Azure Storage](/azure/storage/common/storage-use-azcopy-optimize).
 
 If you're copying data between accounts by using AzCopy, the quality and reliability of the network from where you run AzCopy, might impact the overall performance. Even though data transfers from server to server, AzCopy does initiate calls for each file to copy between service endpoints.
 

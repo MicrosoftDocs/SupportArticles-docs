@@ -3,12 +3,12 @@ title: Troubleshoot availability issues in Azure Storage accounts
 description: Identifies and troubleshoots availability issues in Azure Storage accounts.
 author: AmandaAZ
 ms.author: v-weizhu
-ms.date: 04/10/2023
+ms.date: 04/12/2023
 ms.reviewer: normesta, azurestocic, jarrettr
 ms.service: storage
 ---
 
-# Troubleshoot availability issues in Azure Storage accounts
+# Troubleshoot availability issues in Azure storage accounts
 
 This article helps you investigate changes in availability (such as the number of failed requests). These changes in availability can often be identified by monitoring storage metrics in Azure Monitor. For general information about using metrics and logs in Azure Monitor, see the following articles:
 
@@ -71,12 +71,12 @@ Server timeouts indicate a problem with the storage service that requires furthe
 
 Network errors occur when the **ResponseType** dimension is equal to **NetworkError**. These occur when a storage service detects a network error when the client makes a storage request.
 
-The most common cause of this error is a client disconnecting before a timeout expires in the storage service. Investigate the code in your client to understand why and when the client disconnects from the storage service. You can also use third-party network analysis tools to investigate network connectivity issues from the client. 
+The most common cause of this error is a client disconnecting before a timeout expires in the storage service. Investigate the code in your client to understand why and when the client disconnects from the storage service. You can also use third-party network analysis tools to investigate network connectivity issues from the client.
 
 ## See also
 
-- [Troubleshoot client application errors](/azure/storage/common/troubleshoot-storage-client-application-errors?toc=/azure/storage/blobs/toc.json)
-- [Troubleshoot performance issues](/azure/storage/common/troubleshoot-storage-performance?toc=/azure/storage/blobs/toc.json)
+- [Troubleshoot client application errors](troubleshoot-storage-client-application-errors.md)
+- [Troubleshoot performance issues](troubleshoot-storage-performance.md)
 - [Monitor, diagnose, and troubleshoot your Azure Storage](/training/modules/monitor-diagnose-and-troubleshoot-azure-storage/)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

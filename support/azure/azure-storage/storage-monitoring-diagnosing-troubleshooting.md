@@ -3,7 +3,7 @@ title: Monitor and troubleshoot Azure Storage (classic logs & metrics)
 description: Introduces how to use features like storage analytics, client-side logging, and other third-party tools to identify, diagnose, and troubleshoot Azure Storage-related issues.
 author: AmandaAZ
 ms.service: storage
-ms.date: 04/10/2023
+ms.date: 04/12/2023
 ms.author: v-weizhu
 ms.reviewer: fryu, normesta, azurestocic, jarrettr
 ---
@@ -178,7 +178,7 @@ The Storage Client Library for .NET enables you to collect client-side log data 
 You can capture the traffic between the client and server to provide detailed information about the data the client and server are exchanging and the underlying network conditions. Useful network logging tools include:
 
 - [Fiddler](https://www.telerik.com/fiddler) is a free web debugging proxy that enables you to examine the headers and payload data of HTTP and HTTPS request and response messages. For more information, see [Appendix 1: Using Fiddler to capture HTTP and HTTPS traffic](#appendix-1).
-- [Microsoft Network Monitor (Netmon)](https://download.cnet.com/s/network-monitor/) and [Wireshark](https://www.wireshark.org/) are free network protocol analyzers that enable you to view detailed packet information for a wide range of network protocols. For more information about Wireshark, see "[Appendix 2: Using Wireshark to capture network traffic](#appendix-2)".
+- [Microsoft Network Monitor (Netmon)](https://download.cnet.com/s/network-monitor/) and [Wireshark](https://www.wireshark.org/) are free network protocol analyzers that enable you to view detailed packet information for a wide range of network protocols. For more information about Wireshark, see [Appendix 2: Using Wireshark to capture network traffic](#appendix-2).
 - If you want to perform a basic connectivity test to check that your client machine can connect to the Azure storage service over the network, you cannot do this using the standard ping tool on the client. However, you can use the [tcping tool](https://www.elifulkerson.com/projects/tcping.php) to check connectivity.
 
 In many cases, the log data from Storage Logging and the Storage Client Library will be sufficient to diagnose an issue, but in some scenarios, you may need the more detailed information that these network logging tools can provide. For example, using Fiddler to view HTTP and HTTPS messages enables you to view header and payload data sent to and from the storage services, which would enable you to examine how a client application retries storage operations. Protocol analyzers such as Wireshark operate at the packet level enabling you to view TCP data, which would enable you to troubleshoot lost packets and connectivity issues.
@@ -292,40 +292,40 @@ This section will help you with the diagnosis and troubleshooting of some of the
 ---
 Does your issue relate to the performance of one of the storage services?
 
-- [Metrics show high AverageE2ELatency and low AverageServerLatency](#metrics-show-high-AverageE2ELatency-and-low-AverageServerLatency)
-- [Metrics show low AverageE2ELatency and low AverageServerLatency but the client is experiencing high latency](#metrics-show-low-AverageE2ELatency-and-low-AverageServerLatency)
-- [Metrics show high AverageServerLatency](#metrics-show-high-AverageServerLatency)
-- [You are experiencing unexpected delays in message delivery on a queue](#you-are-experiencing-unexpected-delays-in-message-delivery)
+- [Metrics show high AverageE2ELatency and low AverageServerLatency](#metrics-show-high-AverageE2ELatency-and-low-AverageServerLatency).
+- [Metrics show low AverageE2ELatency and low AverageServerLatency but the client is experiencing high latency](#metrics-show-low-AverageE2ELatency-and-low-AverageServerLatency).
+- [Metrics show high AverageServerLatency](#metrics-show-high-AverageServerLatency).
+- [You are experiencing unexpected delays in message delivery on a queue](#you-are-experiencing-unexpected-delays-in-message-delivery).
 
 ---
 Does your issue relate to the availability of one of the storage services?
 
-- [Metrics show an increase in PercentThrottlingError](#metrics-show-an-increase-in-PercentThrottlingError)
-- [Metrics show an increase in PercentTimeoutError](#metrics-show-an-increase-in-PercentTimeoutError)
-- [Metrics show an increase in PercentNetworkError](#metrics-show-an-increase-in-PercentNetworkError)
+- [Metrics show an increase in PercentThrottlingError](#metrics-show-an-increase-in-PercentThrottlingError).
+- [Metrics show an increase in PercentTimeoutError](#metrics-show-an-increase-in-PercentTimeoutError).
+- [Metrics show an increase in PercentNetworkError](#metrics-show-an-increase-in-PercentNetworkError).
 
 ---
  Is your client application receiving an HTTP 4XX (such as 404) response from a storage service?
 
-- [The client is receiving HTTP 403 (Forbidden) messages](#the-client-is-receiving-403-messages)
-- [The client is receiving HTTP 404 (Not found) messages](#the-client-is-receiving-404-messages)
-- [The client is receiving HTTP 409 (Conflict) messages](#the-client-is-receiving-409-messages)
+- [The client is receiving HTTP 403 (Forbidden) messages](#the-client-is-receiving-403-messages).
+- [The client is receiving HTTP 404 (Not found) messages](#the-client-is-receiving-404-messages).
+- [The client is receiving HTTP 409 (Conflict) messages](#the-client-is-receiving-409-messages).
 
 ---
-[Metrics show low PercentSuccess or analytics log entries have operations with transaction status of ClientOtherErrors](#metrics-show-low-percent-success)
+[Metrics show low PercentSuccess or analytics log entries have operations with transaction status of ClientOtherErrors](#metrics-show-low-percent-success).
 
 ---
-[Capacity metrics show an unexpected increase in storage capacity usage](#capacity-metrics-show-an-unexpected-increase)
+[Capacity metrics show an unexpected increase in storage capacity usage](#capacity-metrics-show-an-unexpected-increase).
 
 ---
 
-[Your issue arises from using the storage emulator for development or testing](#your-issue-arises-from-using-the-storage-emulator)
+[Your issue arises from using the storage emulator for development or testing](#your-issue-arises-from-using-the-storage-emulator).
 
 ---
-[You are encountering problems installing the Azure SDK for .NET](#you-are-encountering-problems-installing-the-Windows-Azure-SDK)
+[You are encountering problems installing the Azure SDK for .NET](#you-are-encountering-problems-installing-the-Windows-Azure-SDK).
 
 ---
-[You have a different issue with a storage service](#you-have-a-different-issue-with-a-storage-service)
+[You have a different issue with a storage service](#you-have-a-different-issue-with-a-storage-service).
 
 ---
 
@@ -466,15 +466,15 @@ If your client application is throwing HTTP 403 (Forbidden) errors, a likely cau
 
 | Source | Verbosity | Verbosity | Client request ID | Operation text |
 | --- | --- | --- | --- | --- |
-| `Microsoft.Azure.Storage` |Information |3 |85d077ab-… |`Starting operation with location Primary per location mode PrimaryOnly.` |
-| `Microsoft.Azure.Storage` |Information |3 |85d077ab -… |`Starting synchronous request to https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests#Synchronous_request.` |
-| `Microsoft.Azure.Storage` |Information |3 |85d077ab -… |`Waiting for response.` |
-| `Microsoft.Azure.Storage` |Warning |2 |85d077ab -… |`Exception thrown while waiting for response: The remote server returned an error: (403) Forbidden.` |
-| `Microsoft.Azure.Storage` |Information |3 |85d077ab -… |`Response received. Status code = 403, Request ID = <Request ID>, Content-MD5 = , ETag = .` |
-| `Microsoft.Azure.Storage` |Warning |2 |85d077ab -… |`Exception thrown during the operation: The remote server returned an error: (403) Forbidden..` |
-| `Microsoft.Azure.Storage` |Information |3 |85d077ab -… |`Checking if the operation should be retried. Retry count = 0, HTTP status code = 403, Exception = The remote server returned an error: (403) Forbidden..` |
-| `Microsoft.Azure.Storage` |Information |3 |85d077ab -… |`The next location has been set to Primary, based on the location mode.` |
-| `Microsoft.Azure.Storage` |Error |1 |85d077ab -… |`Retry policy did not allow for a retry. Failing with The remote server returned an error: (403) Forbidden.` |
+| Microsoft.Azure.Storage |Information |3 |85d077ab-… |`Starting operation with location Primary per location mode PrimaryOnly.` |
+| Microsoft.Azure.Storage |Information |3 |85d077ab -… |`Starting synchronous request to https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests#Synchronous_request.` |
+| Microsoft.Azure.Storage |Information |3 |85d077ab -… |`Waiting for response.` |
+| Microsoft.Azure.Storage |Warning |2 |85d077ab -… |`Exception thrown while waiting for response: The remote server returned an error: (403) Forbidden.` |
+| Microsoft.Azure.Storage |Information |3 |85d077ab -… |`Response received. Status code = 403, Request ID = <Request ID>, Content-MD5 = , ETag = .` |
+| Microsoft.Azure.Storage |Warning |2 |85d077ab -… |`Exception thrown during the operation: The remote server returned an error: (403) Forbidden..` |
+| Microsoft.Azure.Storage |Information |3 |85d077ab -… |`Checking if the operation should be retried. Retry count = 0, HTTP status code = 403, Exception = The remote server returned an error: (403) Forbidden..` |
+| Microsoft.Azure.Storage |Information |3 |85d077ab -… |`The next location has been set to Primary, based on the location mode.` |
+| Microsoft.Azure.Storage |Error |1 |85d077ab -… |`Retry policy did not allow for a retry. Failing with The remote server returned an error: (403) Forbidden.` |
 
 In this scenario, you should investigate why the SAS token is expiring before the client sends the token to the server:
 
