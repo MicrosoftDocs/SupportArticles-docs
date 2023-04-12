@@ -45,10 +45,25 @@
           href: agent-transfer-pva-bot-issue.md
         - name: Power Virtual Agents bot conversations appear as active on dashboard after customer ends chat
           href: pva-conversations-active-dashboard.md
+   - name: Issues with provisioning Omnichannel for Customer Service
+     items: 
+        - name: Agent dashboard displays authentication error after provisioning Omnichannel for Customer Service
+          href: agent-dashboard-error-omnichannel-provision.md 
+        - name: Instance unavailable to select on the provisioning application
+          href: instance-unavailable-provision-omnichannel.md
+        - name: Omnichannel provisioning fails due to expired Teams service principal
+          href: omnichannel-provision-fail-expired-principal.md
+        - name: Omnichannel provisioning fails due to expired license
+          href: provision-fails-expired-license.md    
    - name: Issues with search providers
      items:  
         - name: Data isn't updated on Insights tab for integrated search providers (preview)
           href: data-not-updated-integrated-search-providers.md
+   
+   - name: Signin issues with Customer Service
+     items:
+        - name: Signin issues with Customer Service
+        - href: omnichannel-signin-errors.md
    - name: Solution Health Hub
      items:
         - name: Troubleshoot issues using Solution Health Hub
