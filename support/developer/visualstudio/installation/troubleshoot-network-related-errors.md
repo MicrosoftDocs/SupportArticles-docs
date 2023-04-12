@@ -77,7 +77,7 @@ Visual Studio uses Transport Layer Security (TLS) 1.2 protocol to connect to net
 
 ### Resolution
 
-Enable connections by adding [these domain URLs](install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md#urls-to-add-to-an-allowlist) to an allowlist.
+Enable connections by adding [these domain URLs](/visualstudio/install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server#urls-to-add-to-an-allowlist) to an allowlist.
 
 ## Error "Failed to parse ID from parent process"
 
