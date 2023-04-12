@@ -5,7 +5,7 @@ services: virtual-machines
 ms.collection: linux
 ms.service: virtual-machines
 ms.subservice: vm-extensions-not-operating
-author: axelg
+author: axelgMS
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
