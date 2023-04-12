@@ -1,7 +1,7 @@
 ---
 title: Azure Storage data protection, backup and recovery
 description: This article discusses data backup and protection options and recovery scenarios about Azure Storage.
-ms.date: 04/04/2023
+ms.date: 04/12/2023
 ms.service: storage
 ms.author: v-weizhu
 author: AmandaAZ
@@ -50,10 +50,18 @@ Refers to [Recover deleted storage accounts from the Azure portal](#recover-dele
     Recovery procedures:
 
     1. Go to the affected blob from the Azure portal.
-    2. Select "..." for the blob that you would like to recover.
-    3. Select **view previous versions**.
-    4. Select the version that is required to restore from.
-    5. Select **make current version**.
+
+        :::image type="content" source="media/data-protection-backup-recovery/select-affected-blob.png" alt-text="Screenshot that shows the affected blob.":::
+
+    1. Select "..." for the blob that you would like to recover.
+    1. Select **View versions**.
+
+        :::image type="content" source="media/data-protection-backup-recovery/view-previous-version.png" alt-text="Screenshot that shows the 'View versions' option.":::
+
+    1. Select the version that is required to restore from.
+    1. Select **Make current version**.
+
+        :::image type="content" source="media/data-protection-backup-recovery/make-current-version.png" alt-text="Screenshot that shows the 'Make current version' option.":::
 
 - Recover blobs via blob soft delete.
 
@@ -70,10 +78,18 @@ Refers to [Recover deleted storage accounts from the Azure portal](#recover-dele
     Recovery procedures:
 
     1. Go to the affected blob from the Azure portal.
-    2. Select "..." for the blob that you would like to recover.
-    3. Select **view snapshots**.
-    4. Select the snapshot that is required to restore from.
-    5. Select **promote snapshot**.
+
+    :::image type="content" source="media/data-protection-backup-recovery/select-affected-blob.png" alt-text="Screenshot that shows the affected blob.":::
+
+    1. Select "..." for the blob that you would like to recover.
+    1. Select **View snapshots**.
+
+        :::image type="content" source="media/data-protection-backup-recovery/view-snapshots.png" alt-text="Screenshot that shows the 'View snapshots' option.":::
+
+    1. Select the snapshot that is required to restore from.
+    1. Select **Promote**.
+
+        :::image type="content" source="media/data-protection-backup-recovery/promote.png" alt-text="Screenshot that shows the 'Promote' option.":::
 
 ### Data protection options
 
@@ -167,7 +183,7 @@ Benefits and limitations:
     Benefits and limitations:
 
     1. Data can be restored from the second storage account if the primary account is compromised in any way.
-    2. Azcopy and Azure Data Factory are supported.
+    2. AzCopy and Azure Data Factory are supported.
     3. However, object replication isn't supported.
 
 ## Best practice for Azure RBAC
@@ -180,7 +196,7 @@ Another best practice to avoid accidental account deletion is to limit the numbe
 - Assign roles to groups, not users.
 - Assign roles using the unique role ID instead of the role name.
 
-## Nonsupported storage recovery
+## Non-supported storage recovery
 
 Microsoft doesn't support the following storage recovery scenarios:
 
@@ -276,10 +292,16 @@ There are two ways for end users to recover a deleted storage account from the A
 To recover a deleted storage account from within another storage account, follow these steps:
 
 1. Navigate to the list of your storage account in the Azure portal.
-2. Select the **Restore** button to open the **Restore deleted account** pane.
-3. Select the subscription for the account that you want to recover from the **Subscription** drop-down list.
-4. From the drop-down list, select the account to recover. If the storage account that you want to recover isn't in the dropdown, then it can't be recovered.
-5. Select the **Restore** button to recover the account. The portal displays a notification that the recovery is in progress.
+1. Select the **Restore** button to open the **Restore deleted account** pane.
+
+    :::image type="content" source="media/data-protection-backup-recovery/restore-button.png" alt-text="Screenshot that shows the 'Restore' button.":::
+
+1. Select the subscription for the account that you want to recover from the **Subscription** drop-down list.
+
+    :::image type="content" source="media/data-protection-backup-recovery/restore-button.png" alt-text="Screenshot that shows how to select the subscription.":::
+
+1. From the drop-down list, select the account to recover. If the storage account that you want to recover isn't in the drop-down list, then it can't be recovered.
+1. Select the **Restore** button to recover the account. The portal displays a notification that the recovery is in progress.
 
 For more information, see [Recover a deleted account from the Azure portal](/azure/storage/common/storage-account-recover#recover-a-deleted-account-from-the-azure-portal).
 
