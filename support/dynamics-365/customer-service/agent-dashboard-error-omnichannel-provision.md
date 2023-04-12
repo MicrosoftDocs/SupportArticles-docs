@@ -7,13 +7,13 @@ ms.date: 04/11/2023
 ms.subservice: d365-customer-service
 ---
 
-## After Omnichannel for Customer Service is provisioned, the agent dashboard displays an authentication error.
+# After Omnichannel for Customer Service is provisioned, the agent dashboard displays an authentication error.
 
-This articles provides a solution for when the agent dashboard displays an authentication error after you provision Omnichannel for Customer Service
+This article provides a solution for when the agent dashboard displays an authentication error after you provision Omnichannel for Customer Service
 
 ## Symptom
 
-The following error message is displayed on the agent dashboard after I provision Omnichannel for Customer Service:
+The following error message is displayed on the agent dashboard after provisioning Omnichannel for Customer Service:
 
 **Something went wrong while authenticating—please try again. If this continues, have your administrator contact Microsoft Support with the client session ID.**
 
