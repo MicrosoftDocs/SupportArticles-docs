@@ -102,7 +102,7 @@ SELECT
 FROM sys.dm_exec_query_resource_semaphores rs
 ```
 
-The following sample output shows that around 900 MB of query execution memory is used by 22 requests, and three more are waiting. This takes place in the default pool (pool_id = 2) and the regular query semaphore (resource_semaphore_id = 0).
+The following sample output shows that around 900 MB of query execution memory is used by 22 requests, and 3 more are waiting. This takes place in the default pool (pool_id = 2) and the regular query semaphore (resource_semaphore_id = 0).
 
 ```output
 pool_id total_memory_kb available_memory_kb granted_memory_kb used_memory_kb grantee_count waiter_count resource_semaphore_id
@@ -117,11 +117,11 @@ pool_id total_memory_kb available_memory_kb granted_memory_kb used_memory_kb gra
 
 ### Performance Monitor counters
 
-Similar information is available via Performance Monitor counters, where you can observe the currently granted requests (`Memory Grants Outstanding`), the waiting grant requests (`Memory Grants Pending`), and the amount of memory used by memory grants (`Granted Workspace Memory (KB)`). In the following picture, the outstanding grants are 18, the pending grants are two, and the granted workspace memory is 828,288 KB. The `Memory Grants Pending` Perfmon counter with a nonzero value indicates that memory has been exhausted.
+Similar information is available via Performance Monitor counters, where you can observe the currently granted requests (`Memory Grants Outstanding`), the waiting grant requests (`Memory Grants Pending`), and the amount of memory used by memory grants (`Granted Workspace Memory (KB)`). In the following picture, the outstanding grants are 18, the pending grants are 2, and the granted workspace memory is 828,288 KB. The `Memory Grants Pending` Perfmon counter with a nonzero value indicates that memory has been exhausted.
 
 :::image type="content" source="media/troubleshoot-memory-grants/memory-grants-performance-monitor.png" alt-text="Screenshot of memory grants waiting and satisfied.":::
 
-For more information, see ([SQL Server Memory Manager object](/sql/relational-databases/performance-monitor/sql-server-memory-manager-object)).
+For more information, see [SQL Server Memory Manager object](/sql/relational-databases/performance-monitor/sql-server-memory-manager-object).
 
 - **SQLServer, Memory Manager:  Maximum Workspace Memory (KB)**
 - **SQLServer, Memory Manager:  Memory Grants Outstanding**
@@ -130,9 +130,9 @@ For more information, see ([SQL Server Memory Manager object](/sql/relational-da
 
 ### DBCC MEMORYSTATUS
 
-Another place where you can see details on query reservation memory is `DBCC MEMORYSTATUS` ([Query Memory Objects section](dbcc-memorystatus-monitor-memory-usage.md#query-memory-objects)). You can look at the Query Memory Objects (default) output for user queries. If you have enabled Resource Governor with a resource pool named *PoolAdmin*, for example, you can look at both `Query Memory Objects (default)` and `Query Memory Objects (PoolAdmin)`.
+Another place where you can see details on query reservation memory is `DBCC MEMORYSTATUS` ([Query Memory Objects section](dbcc-memorystatus-monitor-memory-usage.md#query-memory-objects)). You can look at the `Query Memory Objects (default)` output for user queries. If you have enabled Resource Governor with a resource pool named *PoolAdmin*, for example, you can look at both `Query Memory Objects (default)` and `Query Memory Objects (PoolAdmin)`.
 
-Here's a sample output from a system where 18 requests have been granted query execution memory, and 2 requests are waiting for memory. The available counter is zero, which indicates there's no more workspace memory available. This fact explains the two waiting requests. The 'Wait Time' shows the elapsed time in milliseconds since a request was put in the wait queue. For more information on these counters, see the [Query memory objects](dbcc-memorystatus-monitor-memory-usage.md#query-memory-objects) section in the DBCC MEMORYSTATUS informational article.
+Here's a sample output from a system where 18 requests have been granted query execution memory, and 2 requests are waiting for memory. The available counter is zero, which indicates there's no more workspace memory available. This fact explains the two waiting requests. The `Wait Time` shows the elapsed time in milliseconds since a request was put in the wait queue. For more information on these counters, see the [Query memory objects](dbcc-memorystatus-monitor-memory-usage.md#query-memory-objects) section in the DBCC MEMORYSTATUS informational article.
 
 ```output
 Query Memory Objects (default)                                           Value
@@ -160,7 +160,7 @@ Current Max                                                              5133
 Future Max                                                               5133
 ```
 
-DBCC MEMORYSTATUS also displays information about the memory clerk that keeps track of query execution memory. The following output shows that the pages allocated for query execution (QE) reservations exceed 800 MB.
+`DBCC MEMORYSTATUS` also displays information about the memory clerk that keeps track of query execution memory. The following output shows that the pages allocated for query execution (QE) reservations exceed 800 MB.
 
 ```output
 MEMORYCLERK_SQLQERESERVATIONS (node 0)                                   KB
@@ -256,7 +256,7 @@ session_id requested_memory_kb  granted_memory_kb    used_memory_kb       queue_
 
 There's a [wait type](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql#WaitTypes) in SQL Server that indicates a query is waiting for memory grant `RESOURCE_SEMAPHORE`. You may observe this wait type in `sys.dm_exec_requests` for individual requests. This latter DMV is the best starting point to identify which queries are victims of insufficient grant memory. You can also observe the `RESOURCE_SEMAPHORE` wait in `sys.dm_os_wait_stats` as aggregated data points at the SQL Server level. This wait type shows up when a query memory request can't be granted due to other concurrent queries having used up the memory. A high count of waiting requests and long wait times indicate an excessive number of concurrent queries using execution memory or large memory request sizes.
 
-Note that the wait time for memory grants is finite. After an excessive wait (for example, over 20 minutes), SQL Server times the query out and raises error [8645](/sql/relational-databases/errors-events/mssqlserver-8645-database-engine-error), "A timeout occurred while waiting for memory resources to execute the query. Rerun the query." You may see the timeout value set at the server level by looking at the **timeout_sec** in `sys.dm_exec_query_memory_grants`. The timeout value may vary slightly between SQL Server versions.
+Note that the wait time for memory grants is finite. After an excessive wait (for example, over 20 minutes), SQL Server times the query out and raises error [8645](/sql/relational-databases/errors-events/mssqlserver-8645-database-engine-error), "A timeout occurred while waiting for memory resources to execute the query. Rerun the query." You may see the timeout value set at the server level by looking at `timeout_sec` in `sys.dm_exec_query_memory_grants`. The timeout value may vary slightly between SQL Server versions.
 
 With the use of `sys.dm_exec_requests`, you can see which queries have been granted memory and the size of that grant. Also, you can identify which queries are currently waiting for a memory grant by looking for the `RESOURCE_SEMAPHORE` wait type. Here's a query that shows you both the granted and the waiting requests:
 
@@ -268,7 +268,7 @@ WHERE granted_query_memory > 0
        OR wait_type = 'RESOURCE_SEMAPHORE'
 ```
 
-A sample output shows two requests have been granted memory, and two dozen others are waiting for grants. The **granted_query_memory** column reports the size in 8-KB pages. For example, a value of 34,709 means 34,709 * 8 KB = 277,672 KB of memory granted.
+A sample output shows two requests have been granted memory, and two dozen others are waiting for grants. The `granted_query_memory` column reports the size in 8-KB pages. For example, a value of 34,709 means 34,709 * 8 KB = 277,672 KB of memory granted.
 
 ```output
 session_id wait_type               wait_time   granted_query_memory text
@@ -559,7 +559,7 @@ OPTION (MAXDOP 1, LOOP JOIN )
 ```
 
 > [!NOTE]
-> The `LOOP JOIN` hint is used in this diagnostic query to avoid a memory grant by the query itself, and no `ORDER BY` clause is used. If the diagnostic query ends up waiting for a grant itself, its purpose of diagnosing memory grants would be defeated. The LOOP join hint could potentially cause the diagnostic query to be slower, but in this case, it's more important to get the diagnostic results.
+> The `LOOP JOIN` hint is used in this diagnostic query to avoid a memory grant by the query itself, and no `ORDER BY` clause is used. If the diagnostic query ends up waiting for a grant itself, its purpose of diagnosing memory grants would be defeated. The `LOOP JOIN` hint could potentially cause the diagnostic query to be slower, but in this case, it's more important to get the diagnostic results.
 
 Here's an abbreviated sample output from this diagnostic query with only selected columns.
 
@@ -572,7 +572,7 @@ Here's an abbreviated sample output from this diagnostic query with only selecte
 |86        |1310129  |RESOURCE_SEMAPHORE|40                 |NULL              |0                  |NULL              |1               |
 |86        |1310129  |RESOURCE_SEMAPHORE|40                 |NULL              |0                  |NULL              |2               |
 
-The sample output clearly illustrates how a query submitted by session_id = 60 successfully got the 9-MB memory grant it requested, but only 7 MB were required to successfully start query execution. In the end, the query used only 1 MB of the 9 MB it received from the server. The output also shows that sessions 75 and 86 are waiting for memory grants, thus the `RESOURCE_SEMAPHORE` wait_type. Their wait time has been over 1,300 seconds (21 minutes), and their `granted_memory_mb` is NULL.
+The sample output clearly illustrates how a query submitted by session_id = 60 successfully got the 9-MB memory grant it requested, but only 7 MB were required to successfully start query execution. In the end, the query used only 1 MB of the 9 MB it received from the server. The output also shows that sessions 75 and 86 are waiting for memory grants, thus the `RESOURCE_SEMAPHORE` wait_type. Their wait time has been over 1,300 seconds (21 minutes), and their `granted_memory_mb` is `NULL`.
 
 This diagnostic query is a sample, so feel free to modify it in any way that fits your needs. A version of this query is also used in diagnostic tools that Microsoft SQL Server support uses.
 
@@ -580,7 +580,7 @@ This diagnostic query is a sample, so feel free to modify it in any way that fit
 
 There are diagnostic tools that Microsoft SQL Server technical support uses to collect logs and more efficiently troubleshoot issues. [SQL LogScout](https://github.com/microsoft/sql_logscout) and [Pssdiag Configuration Manager](https://github.com/microsoft/diagmanager) (together with [SQLDiag](/sql/tools/sqldiag-utility)) collect outputs of the previously described DMVs and Performance monitor counters that can help you diagnose memory grant issues.
 
-If you run SQL LogScout with *LightPerf*, *GeneralPerf*, or *DetailedPerf* scenarios, the tool collects the necessary logs. You can then manually examine the YourServer_PerfStats.out and look for `-- dm_exec_query_resource_semaphores --` and `-- dm_exec_query_memory_grants --` outputs. Or, instead of manual examination, you can use [SQL Nexus](https://github.com/microsoft/sqlnexus) to import the output coming from SQL LogScout or PSSDIAG into a SQL Server database. SQL Nexus creates two tables, `tbl_dm_exec_query_resource_semaphores` and `tbl_dm_exec_query_memory_grants`, which contain the information needed to diagnose memory grants. SQL LogScout and PSSDIAG also collect Perfmon logs in the form of *.BLG files*, which can be used to review the performance counters described in the [Performance Monitor counters](#performance-monitor-counters) section.
+If you run SQL LogScout with *LightPerf*, *GeneralPerf*, or *DetailedPerf* scenarios, the tool collects the necessary logs. You can then manually examine the YourServer_PerfStats.out and look for `-- dm_exec_query_resource_semaphores --` and `-- dm_exec_query_memory_grants --` outputs. Or, instead of manual examination, you can use [SQL Nexus](https://github.com/microsoft/sqlnexus) to import the output coming from SQL LogScout or PSSDIAG into a SQL Server database. SQL Nexus creates two tables, `tbl_dm_exec_query_resource_semaphores` and `tbl_dm_exec_query_memory_grants`, which contain the information needed to diagnose memory grants. SQL LogScout and PSSDIAG also collect Perfmon logs in the form of *.BLG* files, which can be used to review the performance counters described in the [Performance Monitor counters](#performance-monitor-counters) section.
 
 ## Why are memory grants important to a developer or DBA
 
@@ -676,7 +676,7 @@ Finally, the following example illustrates how to simulate large consumption of 
 
 1. On a test server, install [RML Utilities](../../tools/replay-markup-language-utility.md) and SQL Server.
 
-1. Use a client application like SQL Server Management Studio to lower the `max server memory` setting of your SQL Server to 1500 MB:
+1. Use a client application like SQL Server Management Studio to lower the max server memory setting of your SQL Server to 1,500 MB:
 
    ```sql
    EXEC sp_configure 'max server memory', 1500
@@ -689,7 +689,7 @@ Finally, the following example illustrates how to simulate large consumption of 
    cd C:\Program Files\Microsoft Corporation\RMLUtils   
    ```
 
-1. Use **ostress.exe** to spawn multiple simultaneous requests against your test SQL Server. This example uses 30 simultaneous sessions, but you can change that value:
+1. Use *ostress.exe* to spawn multiple simultaneous requests against your test SQL Server. This example uses 30 simultaneous sessions, but you can change that value:
 
    ```cmd
    ostress.exe -E -S. -Q"select * from sys.messages order by message_id option (maxdop 1)" -n30
