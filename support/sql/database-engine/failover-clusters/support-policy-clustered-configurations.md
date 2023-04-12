@@ -21,9 +21,11 @@ This article describes the Microsoft support policy for SQL Server failover clus
 - Windows Server 2008 Datacenter Edition
 - Windows Server 2008 R2 Enterprise Edition
 - Windows Server 2008 R2 Datacenter Edition
-- Window Server 2012
+- Windows Server 2012
 - Windows Server 2012 R2
 - Windows Server 2016 Standard and Datacenter Editions
+- Windows Server 2019 Standard and Datacenter Editions
+- Windows Server 2022 Standard and Datacenter Editions
 
 > [!NOTE]
 > Windows Server 2012 and Windows Server 2012 R2 should review the KB [Microsoft support policy for Windows server failover clusters](/troubleshoot/windows-server/high-availability/microsoft-support-policy-failover-clusters).
