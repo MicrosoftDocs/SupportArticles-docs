@@ -17,11 +17,28 @@
           href: agent-does-not-receive-chat.md
         - name: Conversation is stuck in a wrap-up state
           href: conversation-stuck-wrap-up-state.md
-   - name: Issues with Power Virtual Agents
+   - name: Issues with converting email to a case
+      items: 
+        - name: Case creation fails because of queue address isssue
+          href: case-creation-queue-address-issue.md
+        - name: Incoming email isn't converted to a case
+          href: incoming-email-not-coverted-case.md
+        - name: Troubleshoot common email error messages
+          href: common-email-error-messages.md
+    - name: Issues with Power Virtual Agents
       items:
         - name: Missing required variables and actions during agent tranfers from Power Virtual Agents bots
           href: agent-transfer-pva-bot-issue.md
         - name: Power Virtual Agents bot conversations appear as active on dashboard after customer ends chat
           href: pva-conversations-active-dashboard.md
-   - name: Issues with converting email to a case
+    - name: Issues with search providers
+      items:  
+        - name: Data isn't updated on Insights tab for integrated search providers (preview)
+          href: data-not-updated-integrated-search-providers.md
+    - name: Solution Health Hub
+      items:
+        - name: Troubleshoot issues using Solution Health Hub
+          href: troubleshoot-cs-oc-solution-health.md
+       
+
    
