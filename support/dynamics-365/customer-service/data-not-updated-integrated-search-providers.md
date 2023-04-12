@@ -20,19 +20,19 @@ ms.date: 03/08/2023
 >
 
 
-This article helps you troubleshoot issues with integrated search providers in Customer Service.
+# Data isn't updated on the Insights tab for integrated search providers
 
-## Data isn't updated on the Insights tab for integrated search providers
+This article provides a solution for when data isn't updated on the Insights tab for integrated search providers in Customer Service.
 
-### Symptom
+## Symptom
 
 Data isn't updated on the Insights tab even after the scheduled refresh interval time.
 
-### Cause
+## Cause
 
 There are a number of potential causes for this issue.
 
-### Resolution
+## Resolution
 
 Perform the following troubleshooting steps to diagnose and fix the issue:
 
