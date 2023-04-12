@@ -1,25 +1,25 @@
 ---
-title: Troubleshoot sync issues with social data in Omnichannel for Customer Service
+title: Sync issue with social data in Omnichannel for Customer Service
 description: Provides a resolution for the social profile entity being blocked and data not syncing in Omnichannel for Customer Service.
-author: lalexms
-ms.author: laalexan
+ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 03/08/2023
+ms.date: 04/11/2023
+ms.subservice: d365-customer-service
 ---
 
-# Troubleshoot sync issues with social data in Omnichannel for Customer Service
+# Sync issue with social data in Omnichannel for Customer Service
 
-This article helps you troubleshoot and resolve an issue with social data not syncing and prevents record identification for return users in the Omnichannel for Customer Service environment.
+This article provides a solution for an issue with social data not syncing and prevents record identification for return users in the Omnichannel for Customer Service environment.
 
-### Symptom
+## Symptom
 
 The data flush for the **Social Profile** entity is blocked. Customer information, including social profiles and contact details, aren't syncing properly in the environment. Data for returning customers isn't available.
 
-### Cause
+## Cause
 
 The setting for preventing social data in Dynamics 365 is turned on.
 
-### Resolution
+## Resolution
 Ensure that the toggle for preventing social data in Dynamics is turned off. More information: [Manage feature settings](/power-platform/admin/settings-features)
 
 1. Open Power Platform admin center, and then navigate to **Environments** > [select an environment] > **Settings** > **Product** > **Features**.
