@@ -7,7 +7,6 @@ ms.date: 04/11/2023
 ms.subservice: d365-customer-service
 ---
 
-
 # SLA KPI instance doesn't reach Nearing Non-compliance or Non-compliant state, and the SLA KPI instance timer continues to run
 
 ## Symptom
@@ -23,3 +22,12 @@ If the user is missing any of the required licenses, then the flow runs that are
 Additionally, the current owner of the flow must have the required permissions with read and write access for **SLAKPIInstance**.
 
 If a user who is the current owner of the flow needs to be removed from the organization, you should first change the owner of the flow to another user. This new user must also have all the required permissions. Once a new owner is added, you can remove the previous owner. This will ensure that the flow runs continue to be executed without issues.
+
+## Resolution
+
+To change the owner of any flow, perform the following steps:
+
+1. In https://powerautomate.microsoft.com, navigate to **My flows > Cloud flows**.
+1. Search for the failed flow with the error.
+1. Select **Edit**. A new flyout menu is displayed, where you can set a new owner.
+1. In the **Owner** field, remove the current owner and add the new owner. Ensure that the new owner has all required flow licenses.
