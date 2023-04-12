@@ -19,16 +19,16 @@
           href: agent-does-not-receive-chat.md
         - name: Conversation is stuck in a wrap-up state
           href: conversation-stuck-wrap-up-state.md
-   - name: Issues with converting email to a case
-     items: 
+    - name: Issues with converting email to a case
+      items: 
         - name: Case creation fails because of queue address isssue
           href: case-creation-queue-address-issue.md
         - name: Incoming email isn't converted to a case
           href: incoming-email-not-coverted-case.md
         - name: Troubleshoot common email error messages
           href: common-email-error-messages.md
-   - name: Issues with dashboards in Omnichannel for Customer Service
-     items: 
+    - name: Issues with dashboards in Omnichannel for Customer Service
+      items: 
         - name: Agent dashboard doesn't load or displays error in Omnichannel for Customer Service
           href: agent-dashboard-auth-error.md
         - name: Communication panel does not load in Omnichannel for Customer Service
@@ -39,14 +39,14 @@
         - href: error-communication-panel.md
         - name: Agent dashboard displays authentication error after provisioning Omnichannel for Customer Service
           href: agent-dashboard-error-omnichannel-provision.md    
-   - name: Issues with Power Virtual Agents
-     items:
+    - name: Issues with Power Virtual Agents
+      items:
         - name: Missing required variables and actions during agent tranfers from Power Virtual Agents bots
           href: agent-transfer-pva-bot-issue.md
         - name: Power Virtual Agents bot conversations appear as active on dashboard after customer ends chat
           href: pva-conversations-active-dashboard.md
-   - name: Issues with provisioning Omnichannel for Customer Service
-     items: 
+    - name: Issues with provisioning Omnichannel for Customer Service
+      items: 
         - name: Agent dashboard displays authentication error after provisioning Omnichannel for Customer Service
           href: agent-dashboard-error-omnichannel-provision.md 
         - name: Instance unavailable to select on the provisioning application
@@ -55,16 +55,16 @@
           href: omnichannel-provision-fail-expired-principal.md
         - name: Omnichannel provisioning fails due to expired license
           href: provision-fails-expired-license.md    
-   - name: Issues with search providers
-     items:  
+    - name: Issues with search providers
+      items:  
         - name: Data isn't updated on Insights tab for integrated search providers (preview)
           href: data-not-updated-integrated-search-providers.md
-   - name: Issues with signing in to Customer Service
-     items:
+    - name: Issues with signing in to Customer Service
+      items:
         - name: Errors when signing in to Customer Service
         - href: omnichannel-signin-errors.md
-   - name: Issues with SLAs
-     items:
+    - name: Issues with SLAs
+      items:
         - name: Issues with SLA creation
           items:
             - name: Primary entity isn't available while creating SLAs
@@ -117,12 +117,12 @@
               href: entity-case-field-updates.md
             - name: Unable to delete a managed solution consisting of an SLA-enabled entity
               href: unable-delete-sla-enabled-entity-managed-solution.md
-  - name: Solution Health Hub
-     items:
+    - name: Solution Health Hub
+      items:
         - name: Troubleshoot issues using Solution Health Hub
           href: troubleshoot-cs-oc-solution-health.md  
-   - name: Social data sync
-     items:
+    - name: Social data sync
+      items:
         - name: Troubleshoot sync issue with social data in Omnichannel for Customer Service
           href: social-data-sync.md
    
