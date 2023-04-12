@@ -223,7 +223,6 @@ SQL Server might detect an internal health issue such as an access violation, as
 * -------------------------------------------------------------------------------
 * Short Stack Dump
 Stack Signature for the dump is 0x00000000000002BA
-
 Error: 19407, Severity: 16, State: 1.
 The lease between availability group 'ag' and the Windows Server Failover Cluster has expired. A connectivity issue occurred between the instance of SQL Server and the Windows Server Failover Cluster. To determine whether the availability group is failing over correctly, check the corresponding availability group resource in the Windows Server Failover Cluster.
 
