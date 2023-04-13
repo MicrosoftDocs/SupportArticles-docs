@@ -1,6 +1,6 @@
 ---
-title: Azure Batch task fails without stdout or stderr logs
-description: Explains the cause for Azure Batch tasks failure without stdout or stderr logs and provides some suggestions.
+title: Azure Batch task fails without stdout or stderr
+description: Explains the cause for Azure Batch tasks failure without stdout or stderr and provides some suggestions.
 ms.date: 04/13/2023
 author: AmandaAZ
 ms.author: v-weizhu
@@ -8,16 +8,16 @@ ms.reviewer: biny
 ms.service: batch
 ---
 
-# Azure Batch task fails without stdout or stderr logs
+# Azure Batch task fails without stdout or stderr
 
-This article provides the cause and some suggestions for Azure Batch tasks failure without stdout or stderr logs.
+This article provides the cause and some suggestions for Azure Batch tasks failure without stdout or stderr.
 
 ## Symptoms
 
-Batch tasks fail with an exit code. But there are no standard output (stdout) and standard error (stderr) logs.
+Batch tasks fail with an exit code. But there are no standard output (stdout) and standard error (stderr).
 
 > [!NOTE]
-> Azure Batch automatically captures and writes stdout and stderr logs into the stdout.txt or stderr.txt file for the task in the task directory.
+> Azure Batch automatically captures and writes stdout and stderr for the task into the stdout.txt or stderr.txt file in the task directory.
 
 ## Cause  
 
