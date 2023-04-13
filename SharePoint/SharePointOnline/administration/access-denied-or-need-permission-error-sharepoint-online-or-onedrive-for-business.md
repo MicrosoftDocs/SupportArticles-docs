@@ -43,7 +43,7 @@ These errors can occur for various reasons, such as:
 
 - Permissions for the affected user aren't configured correctly.
 - The account that's used to access the shared link is different from the account to which the sharing invitation was sent.
-- [Site user ID mismatch](../sharing-and-permissions/fix-site-user-id-mismatch.md). This usually occurs if an account is deleted from the Microsoft 365 admin center and then a new account is created by using the user principal name (UPN) that was used by the deleted account, but the new account has a different ID value. It also occurs during directory synchronization between an Active Directory organizational unit (OU) and SharePoint if users have already logged in to SharePoint and are later moved to a different OU.
+- [Site user ID mismatch](../sharing-and-permissions/fix-site-user-id-mismatch.md). The ID mismatch usually occurs if an account is deleted from the Microsoft 365 admin center and then a new account is created by using the user principal name (UPN) that was used by the deleted account, but the new account has a different ID value. It also occurs during directory synchronization between an Active Directory organizational unit (OU) and SharePoint if users have already logged in to SharePoint and are later moved to a different OU.
 
 ## Resolution option 1: Run the Check User Access diagnostic
 
@@ -79,9 +79,11 @@ To fix the access issues manually, follow the steps for the relevant scenario.
 
 ### A user can't access their own OneDrive site
 
-This issue is usually caused by a site user ID mismatch. For more information, see [Fix site user ID mismatch in SharePoint or OneDrive](../sharing-and-permissions/fix-site-user-id-mismatch.md).
+This issue is usually caused by a site user ID mismatch. 
 
-In this situation, check whether a new UPN exists. If it does, [delete the new UPN](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user), and then [restore the original UPN](/azure/active-directory/fundamentals/active-directory-users-restore).
+To fix the ID mismatch issue, check whether a new UPN exists. If it does, [delete the new UPN](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user), and then [restore the original UPN](/azure/active-directory/fundamentals/active-directory-users-restore).
+
+If you're not comfortable with using this procedure, see [Fix site user ID mismatch in SharePoint or OneDrive](../sharing-and-permissions/fix-site-user-id-mismatch.md) for an automated solution to fix the issue. 
 
 ### A user can't access a shared link
 
