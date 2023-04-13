@@ -269,6 +269,7 @@
         "power-platform/power-apps/**/**.*": "powerapps",
         "power-platform/power-automate/*.md": "power-automate",
         "dynamics-365/fraud-protection/*.md": "dynamics-365-fraud-protection",
+        "dynamics-365/customer-service/*.md": "dynamics-365-customerservice",
         "dynamics-365/marketing/*.md": "dynamics-365-marketing",
         "dynamics-365/sales/*.md": "dynamics-365-sales",
         "dynamics-365/finance/**/**.*": "dynamics-365-finance",
