@@ -283,7 +283,7 @@
       href: ../sharing-and-permissions/error-when-external-user-accepts-an-invitation-by-using-another-account.md
     - name: External users can't find users in people picker
       href: ../sharing-and-permissions/people-picker-fails-finding-users.md
-    - name: Fix site user ID mismatch issues in SharePoint or OneDrive
+    - name: Fix site user ID mismatch in SharePoint or OneDrive
       href: ../sharing-and-permissions/fix-site-user-id-mismatch.md
     - name: Issue after accepting a resource invite
       href: ../sharing-and-permissions/unable-to-complete-request.md
