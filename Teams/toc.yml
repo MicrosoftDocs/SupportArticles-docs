@@ -190,7 +190,33 @@
       - name: Issues with SBC connectivity
         href: ./phone-system/direct-routing/sip-options-tls-certificate-issues.md
       - name: Microsoft and SIP response codes
-        href: ./phone-system/direct-routing/microsoft-sip-response-codes.md
+        items:
+        - name: Microsoft and SIP response codes
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes.md
+        - name: SIP response code 403
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-403.md
+        - name: SIP response code 404
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-404.md
+        - name: SIP response code 408
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-408.md
+        - name: SIP response code 410
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-410.md
+        - name: SIP response code 412
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-412.md
+        - name: SIP response code 480
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-480.md
+        - name: SIP response code 484
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-484.md
+        - name: SIP response code 486
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-486.md
+        - name: SIP response code 488
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-488.md
+        - name: SIP response code 500
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-500.md
+        - name: SIP response code 503
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-503.md
+        - name: SIP response code 504
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-504.md
   - name: Provisioning
     items:
     - name: Can't create a team 

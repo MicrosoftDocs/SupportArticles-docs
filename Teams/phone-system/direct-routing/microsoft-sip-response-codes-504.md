@@ -1,6 +1,6 @@
 ---
-title: Microsoft and SIP response code 504
-description: A combination of Microsoft and SIP response code 504 can help identify the cause of call failures and provide detailed descriptions of errors and actions that you can take.
+title: SIP 504 and Microsoft response codes
+description: Lists combinations of Microsoft response code and SIP 504 error, and provides actions that you can take to resolve the error codes.
 ms.date: 3/27/2023
 author: helenclu
 ms.author: luche
@@ -13,13 +13,15 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI166247,CSSTroubleshoot
-ms.reviewer: rishire
+ms.custom: 
+  - CI173631
+  - CSSTroubleshoot
+ms.reviewer: teddygyabaah
 ---
 
 # SIP response code 504
 
-This article lists combinations of Microsoft and SIP response codes, the corresponding error messages, and actions that you can take.
+This article lists combinations of SIP 504 and Microsoft response codes, the corresponding error messages, and actions that you can take.
 
 ## 549002 504 Unable to deliver INVITE: TlsTransport is not connected, State=Disconnected
 
@@ -36,7 +38,7 @@ This article lists combinations of Microsoft and SIP response codes, the corresp
 - SIP response code: **504**
 - Error message: **Unable to deliver INVITE: Invalid Request/Response line**
 - Suggested actions:  
-  Make sure that requests and responses include SIP version "SIP/2.0" in the Request-URI, Via Header, and other relevant headers. For more information, see [Direct Routing - SIP protocol](/microsoftteams/direct-routing-protocols-sip)
+  Make sure that requests and responses include SIP version "SIP/2.0" in the Request-URI, Via Header, and other relevant headers. For more information, see [Direct Routing - SIP protocol](/microsoftteams/direct-routing-protocols-sip).
 
 ## 569002 504 Unable to deliver INVITE: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
 
@@ -55,15 +57,6 @@ This article lists combinations of Microsoft and SIP response codes, the corresp
 - Suggested actions:  
   - Check if the SBC is functional.
   - Check if the SBC is reachable through the specific IP and port. Also check your firewall settings to make sure that connection to SBC isn't blocked.
-
-## 569002 504 Unable to deliver INVITE: TlsTransport is not connected, State=Disconnected
-
-- Microsoft response code: **569002**
-- SIP response code: **504**
-- Error message: **Unable to deliver INVITE: TlsTransport is not connected, State=Disconnected**
-- Suggested actions:  
-  - Check if the SBC is functional.
-  - Check if the SBC is reachable through the specific IP and port. Also check your firewall settings to make sure that connection to SBC isn't blocked
 
 ## 569002 504 Unable to deliver INVITE: outgoing TLS negotiation failed; HRESULT=0x80096004
 
@@ -113,7 +106,7 @@ This article lists combinations of Microsoft and SIP response codes, the corresp
 - SIP response code: **504**
 - Error message: **Unable to deliver INVITE: outgoing TLS negotiation failed; HRESULT=0x80090326**
 - Suggested actions:  
-  Verify that the SBC certificate is signed by a trusted certificate authority (CA) and hasn't expired. For more information, see [TLS connection issues](/microsoftteams/troubleshoot/phone-system/direct-routing/sip-options-tls-certificate-issues#tls-connection-issues).
+  Verify that the SBC certificate is signed by a trusted certificate authority (CA) and hasn't expired. For more information, see [TLS connection issues](./sip-options-tls-certificate-issues#tls-connection-issues).
 
 ## 569008 504 Unable to deliver INVITE: Outgoing TLS negotiation failed. Remote certificate expired; HRESULT=0x80090328 SEC_E_CERT_EXPIRED
 
@@ -124,3 +117,13 @@ This article lists combinations of Microsoft and SIP response codes, the corresp
   Renew the SBC certificate.
 
   **Note:** When you renew the SBC certificate, you must remove the TLS connections that were established from the SBC to Microsoft with the old certificate and re-establish them with the new certificate. Doing so will ensure that certificate expiration warnings aren't triggered in the Microsoft Teams admin center. To remove the old TLS connections, restart the SBC during a time frame that has low traffic such as a maintenance window. If you can't restart the SBC, contact the vendor for instructions to force the closure of all old TLS connections.
+
+## 569009 504 Unable to deliver INVITE: outgoing TLS negotiation failed; HRESULT=0x80090325 SEC_E_UNTRUSTED_ROOT
+
+- Microsoft response code: **569009**
+- SIP response code: **504**
+- Error message: **Unable to deliver INVITE: outgoing TLS negotiation failed; HRESULT=0x80090325 SEC_E_UNTRUSTED_ROOT**
+- Suggested actions:  
+  Request a certificate that's signed by one of the public root certification authorities that are listed in [Public trusted certificate for the SBC](/microsoftteams/direct-routing-plan#public-trusted-certificate-for-the-sbc).
+
+  If you have multiple TLS profiles, check that you're using a profile that has the correct certificate when you connect to the Direct Routing interface. If you have multiple TLS profiles on the SBC, make sure that you select a profile that's signed by using a certificate that's trusted by Direct Routing.

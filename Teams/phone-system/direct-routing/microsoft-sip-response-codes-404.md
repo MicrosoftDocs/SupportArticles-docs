@@ -1,6 +1,6 @@
 ---
-title: Microsoft and SIP response code 404
-description: A combination of Microsoft and SIP response code 404 can help identify the cause of call failures and provide detailed descriptions of errors and actions that you can take.
+title: SIP 404 and Microsoft response codes
+description: Lists combinations of Microsoft response code and SIP 404 error, and provides actions that you can take to resolve the error codes.
 ms.date: 3/27/2023
 author: helenclu
 ms.author: luche
@@ -13,13 +13,15 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI166247,CSSTroubleshoot
-ms.reviewer: rishire
+ms.custom: 
+  - CI173631
+  - CSSTroubleshoot
+ms.reviewer: teddygyabaah
 ---
 
-# SIP response codes 404
+# SIP response code 404
 
-This article lists combinations of Microsoft and SIP response codes, the corresponding error messages, and actions that you can take.
+This article lists combinations of SIP 404 and Microsoft response codes, the corresponding error messages, and actions that you can take.
 
 ## 10202 404 Replacement call was not found
 
@@ -27,7 +29,7 @@ This article lists combinations of Microsoft and SIP response codes, the corresp
 - SIP response code: **404**
 - Error message: **Replacement call was not found**
 - Suggested actions:  
-  Check whether your SBC is configured to try a replacement call after an initial failure. (Lu: It's not very clear what the user should check in the worksheet, is this understanding correct?)
+  In call merge and consultative transfer scenarios, the SBC may retry the call if the first call attempt fails. Check whether your SBC is configured to try a replacement call after an initial failure.
 
 ## 511404 404 Getting user info by number from RuntimeAPI failed
 

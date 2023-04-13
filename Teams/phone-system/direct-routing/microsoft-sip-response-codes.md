@@ -13,8 +13,11 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI166247,CSSTroubleshoot
-ms.reviewer: rishire
+ms.custom: 
+  - CI166247
+  - CI173631
+  - CSSTroubleshoot
+ms.reviewer: rishire, teddygyabaah
 ---
 
 # Microsoft and SIP response codes
@@ -30,68 +33,15 @@ These response codes are reported in the [Microsoft Teams admin center](/microso
 
 ## Direct Routing error codes
 
-- [403 Forbidden]
-- [404 Not Found]
-- [408 Request Timeout]
-- [410 Gone]
-- []
-
-This section lists combinations of Microsoft and SIP response codes, the corresponding error messages, a detailed description, and actions that you can take.
-
-### 560403 403 Forbidden; Call rejected
-
-- Microsoft response code: **560403**
-- SIP response code: **403**
-- Error message: **Forbidden; Call rejected**
-- Description:  
-  When a Teams user makes an outbound call, the Direct Routing interface sends an SIP INVITE message to the SBC. The SBC responds by sending a "403" SIP response.
-- Suggested actions:  
-  Check the logs on the SBC to investigate why the call was rejected.
-
-### 510559 403 Get Outbound routing - No viable path (Forbidden)
-
-- Microsoft response code: **510559**
-- SIP response code: **403**
-- Error message: **Get Outbound routing - No viable path (Forbidden)**
-- Description:  
-  When a Teams user makes an outbound call, the Teams PSTN selector module checks for valid voice routes for the called number. This error is generated if there's no match. Additionally, the downstream customer SBC never receives an SIP INVITE.
-- Suggested actions:  
-  Make sure that the dialed number in Teams matches a corresponding number pattern in a voice route for the given user. In some cases, this error occurs because an incorrect number is dialed, or the customer's own internal policy prevents calls to specific countries or number patterns.
-
-### 560503 503 Service unavailable. SBC undergoing maintenance or temporarily overloaded
-
-- Microsoft response code: **560503**
-- SIP response code: **503**
-- Error message: **Service unavailable. SBC undergoing maintenance or temporarily overloaded.**
-- Description:  
-  For an outbound call, the SBC returns a "503" SIP response for different reasons, including but not limited to:
-  - The number of concurrent sessions has temporarily exceeded the licensing or capacity threshold on the SBC.
-  - No circuit or channel is available to handle the call.  
-- Suggested actions:  
-  - Check the logs on the SBC to investigate why it returns the "503" SIP response.
-  - Make sure that the SBC is correctly licensed to handle the number of concurrent sessions.
-  - Determine whether the "503" error is related to a specific destination country or calling corridor.
-
-### 560484 484 Invalid number format. SBC rejected the call
-
-- Microsoft response code: **560484**
-- SIP response code: **484**
-- Error message: **Invalid number format. SBC rejected the call.**
-- Description:  
-  The SBC returns a "484" SIP response to the Teams service because the called number that's in the **TO** header is invalid.
-- Suggested actions:  
-  Review the tenant's call records that contain *CallEndSubReason = 560484*. Look for trends in the called numbers, including the called numbers distribution by country. You can identify patterns that suggest that you should either establish additional normalization rules for extension-based dialing or follow up about user education.  
-
-  In some cases, these failures can be ignored because the user is dialing an invalid number. In other cases, the SBC could cause these failures because of a missing configuration in a call transfer scenario (CallType = ByotOutUserForwarding).
-
-### 569009 504 Unable to deliver INVITE: outgoing TLS negotiation failed; HRESULT=0x80090325 SEC_E_UNTRUSTED_ROOT
-
-- Microsoft response code: **569009**
-- SIP response code: **504**
-- Error message: **Unable to deliver INVITE: outgoing TLS negotiation failed; HRESULT=0x80090325 SEC_E_UNTRUSTED_ROOT**
-- Description:  
-  A "504" SIP response indicates that the Microsoft Teams Direct Routing interface tried to connect to your SBC, but the SBC didn't respond in time. This error might occur if the certificate that's presented by the SBC isn't signed by a trusted root certification authority.
-- Suggested actions:  
-  Request a certificate that's signed by one of the public root certification authorities that are listed in [Public trusted certificate for the SBC](/microsoftteams/direct-routing-plan#public-trusted-certificate-for-the-sbc).
-
-  If you have multiple TLS profiles, check that you're using a profile that has the correct certificate when you connect to the Direct Routing interface. If you have multiple TLS profiles on the SBC, make sure that you select a profile that's signed by using a certificate that's trusted by Direct Routing.
+- [403 Forbidden](./microsoft-sip-response-codes-403.md)
+- [404 Not Found](./microsoft-sip-response-codes-404.md)
+- [408 Request Timeout](./microsoft-sip-response-codes-408.md)
+- [410 Gone](./microsoft-sip-response-codes-410.md)
+- [412 Conditional Request Failed](./microsoft-sip-response-codes-412.md)
+- [480 Temporarily Unavailable](./microsoft-sip-response-codes-480.md)
+- [484 Address Incomplete](./microsoft-sip-response-codes-484.md)
+- [486 Busy Here](./microsoft-sip-response-codes-486.md)
+- [488 Not Acceptable Here](./microsoft-sip-response-codes-488.md)
+- [500 Server Internal Error](./microsoft-sip-response-codes-500.md)
+- [503 Service Unavailable](./microsoft-sip-response-codes-503.md)
+- [504 Server Time-out](./microsoft-sip-response-codes-504.md)

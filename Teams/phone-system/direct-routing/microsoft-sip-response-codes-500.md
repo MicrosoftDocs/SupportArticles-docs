@@ -1,6 +1,6 @@
 ---
-title: Microsoft and SIP response code 500 and 503
-description: A combination of Microsoft and SIP response codes can help identify the cause of call failures and provide detailed descriptions of errors and actions that you can take.
+title: SIP 500 and Microsoft response codes
+description: Lists combinations of Microsoft response code and SIP 500 error, and provides actions that you can take to resolve the error codes.
 ms.date: 3/27/2023
 author: helenclu
 ms.author: luche
@@ -13,13 +13,15 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI166247,CSSTroubleshoot
-ms.reviewer: rishire
+ms.custom: 
+  - CI173631
+  - CSSTroubleshoot
+ms.reviewer: teddygyabaah
 ---
 
-# SIP response codes 500 and 503
+# SIP response code 500
 
-This article lists combinations of Microsoft and SIP response codes, the corresponding error messages, and actions that you can take.
+This article lists combinations of SIP 500 and Microsoft response codes, the corresponding error messages, and actions that you can take.
 
 ## 510482 500 Loop detected
 
@@ -43,13 +45,4 @@ This article lists combinations of Microsoft and SIP response codes, the corresp
 - SIP response code: **500**
 - Error message: **Get Outbound routing - failed getting direct routing gateways for emergency user**
 - Suggested actions:  
-  Review your [emergency call routing policies](/microsoftteams/manage-emergency-call-routing-policies) and fix any misconfiguration.
-
-## 10320 503 Bot is unreachable or unable to answer before timeout
-
-- Microsoft response code: 10320
-- SIP response code: 503
-- Error message: **Bot is unreachable or unable to answer before timeout**
-- Suggested actions:  
-  - If the bot is provided by Microsoft, such as the built-in call recording, [contact Microsoft Support](https://support.microsoft.com/contactus).
-  - If the bot is your own bot or from a third-party provider, work with the bot provider to verify that the bot is set up correctly.
+  Review the [emergency call routing policies](/microsoftteams/manage-emergency-call-routing-policies) and fix any misconfiguration.

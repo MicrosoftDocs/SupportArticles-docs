@@ -1,0 +1,34 @@
+---
+title: SIP 484 and Microsoft response codes
+description: Lists combinations of Microsoft response code and SIP 484 error, and provides actions that you can take to resolve the error codes.
+ms.date: 3/27/2023
+author: helenclu
+ms.author: luche
+manager: dcscontentpm
+audience: Admin
+ms.topic: troubleshooting
+localization_priority: Normal
+search.appverid: 
+  - SPO160
+  - MET150
+appliesto: 
+  - Microsoft Teams
+ms.custom: 
+  - CI173631
+  - CSSTroubleshoot
+ms.reviewer: teddygyabaah
+---
+
+# SIP response code 484
+
+This article lists combinations of SIP 484 and Microsoft response codes, the corresponding error messages, and actions that you can take.
+
+## 560484 484 Invalid number format. SBC rejected the call
+
+- Microsoft response code: **560484**
+- SIP response code: **484**
+- Error message: **Invalid number format. SBC rejected the call.**
+- Suggested actions:  
+  Review the tenant's call records that contain *CallEndSubReason = 560484*. Look for trends in the called numbers, including the called numbers distribution by country. You can identify patterns that suggest that you should either establish additional normalization rules for extension-based dialing or follow up about user education.  
+
+  In some cases, these failures can be ignored because the user is dialing an invalid number. In other cases, the SBC could cause these failures because of a missing configuration in a call transfer scenario (CallType = ByotOutUserForwarding).

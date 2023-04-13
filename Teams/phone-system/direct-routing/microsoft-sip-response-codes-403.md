@@ -1,6 +1,6 @@
 ---
-title: Microsoft and SIP 403 response code
-description: A combination of Microsoft and SIP response code 403 can help identify the cause of call failures and provide detailed descriptions of errors and actions that you can take.
+title: SIP 403 and Microsoft response codes
+description: Lists combinations of Microsoft response code and SIP 403 error, and provides actions that you can take to resolve the error codes.
 ms.date: 3/27/2023
 author: helenclu
 ms.author: luche
@@ -13,13 +13,15 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI166247,CSSTroubleshoot
-ms.reviewer: rishire
+ms.custom: 
+  - CI173631
+  - CSSTroubleshoot
+ms.reviewer: teddygyabaah
 ---
 
 # SIP response code 403
 
-This article lists combinations of Microsoft and SIP response codes, the corresponding error messages, and actions that you can take.
+This article lists combinations of SIP 403 and Microsoft response codes, the corresponding error messages, and actions that you can take.
 
 ## 10199 403 Call rejected as private calling is disabled for the callee
 
@@ -43,8 +45,8 @@ This article lists combinations of Microsoft and SIP response codes, the corresp
 - SIP response code: **403**
 - Error message: **Participant call leg has been cancelled because an invite to a required recorder failed**
 - Suggested actions:  
-  - Verify that [compliance recording](/microsoftteams/teams-recording-policy) is set up correctly, including provisioning of the recorder bot.
-  - Work with the compliance recording partner who provides the recorder service to check why the bot can't be invited.
+  1. Verify that [compliance recording](/microsoftteams/teams-recording-policy) is set up correctly, including provisioning of the recorder bot.
+  1. Work with the compliance recording partner who provides the recorder service to check why the bot can't be invited.
   
 ## 510532 403 Get Inbound Direct routing - RuntimeApi trunk config not found for customer
 
@@ -68,7 +70,7 @@ This article lists combinations of Microsoft and SIP response codes, the corresp
 - SIP response code: **403**
 - Error message: **Get Inbound Direct routing - blocked calling number for customer**
 - Suggested actions:  
-  In the Microsoft Teams admin center, check the tenant-level settings for blocked caller numbers. (Lu: Where? According to https://learn.microsoft.com/en-us/microsoftteams/block-inbound-calls, it's done via PS, not the portal)
+  Check the [inbound call blocking settings](/microsoftteams/block-inbound-calls) for blocked caller numbers.
 
 ## 510560 403 User is not Enterprise Voice enabled
 
@@ -92,7 +94,7 @@ This article lists combinations of Microsoft and SIP response codes, the corresp
 - SIP response code: **403**
 - Error message: **User is not allowed to make outbound PSTN Calls**
 - Suggested actions:  
-  Verify that the affected user is assigned a Phone System license and is correctly [enabled for Direct Routing](/microsoftteams/direct-routing-enable-users). (Lu: Can we add reference to https://learn.microsoft.com/en-us/microsoftteams/troubleshoot/phone-system/direct-routing/issues-with-outbound-calls?)
+  Verify that the affected user is assigned a Phone System license and is correctly [enabled for Direct Routing](/microsoftteams/direct-routing-enable-users). For more information about issues with outbound calls, see [Issues that affect outbound direct routing calls](/microsoftteams/troubleshoot/phone-system/direct-routing/issues-with-outbound-calls).
 
 ## 510563 403 User is only allowed to make domestic calls. This is an international call
 
@@ -102,22 +104,18 @@ This article lists combinations of Microsoft and SIP response codes, the corresp
 - Suggested actions:  
   Verify if the user is limited to making only domestic calls.
 
-### 560403 403 Forbidden; Call rejected
+## 560403 403 Forbidden; Call rejected
 
 - Microsoft response code: **560403**
 - SIP response code: **403**
 - Error message: **Forbidden; Call rejected**
-- Description:  
-  When a Teams user makes an outbound call, the Direct Routing interface sends an SIP INVITE message to the SBC. The SBC responds by sending a "403" SIP response.
 - Suggested actions:  
   Check the logs on the SBC to investigate why the call was rejected.
 
-### 510559 403 Get Outbound routing - No viable path (Forbidden)
+## 510559 403 Get Outbound routing - No viable path (Forbidden)
 
 - Microsoft response code: **510559**
 - SIP response code: **403**
 - Error message: **Get Outbound routing - No viable path (Forbidden)**
-- Description:  
-  When a Teams user makes an outbound call, the Teams PSTN selector module checks for valid voice routes for the called number. This error is generated if there's no match. Additionally, the downstream customer SBC never receives an SIP INVITE.
 - Suggested actions:  
   Make sure that the dialed number in Teams matches a corresponding number pattern in a voice route for the given user. In some cases, this error occurs because an incorrect number is dialed, or the customer's own internal policy prevents calls to specific countries or number patterns.
