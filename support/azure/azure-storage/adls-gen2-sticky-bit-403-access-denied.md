@@ -1,6 +1,6 @@
 ---
 title: The sticky bit causes a 403 Access Denied authorization error
-description: Helps you understand the sticky bit and describes how to check this setting when you configured it in Azure Data Lake Storage (ADLS) Gen2 and get the 403 Access Denied authorization error.
+description: Helps you understand the sticky bit and describes how to check this setting when you configure it in Azure Data Lake Storage (ADLS) Gen2 and get the 403 Access Denied authorization error.
 ms.date: 04/10/2022
 ms.service: storage
 ms.author: v-weizhu
@@ -22,7 +22,7 @@ The sticky bit is an advanced feature that isn't necessary in the ACL setting of
 Consider the following scenario:
 
 - An ADLS Gen2 storage account has a container called *container* and a folder path called *folder/child-folder*.
-- You're using ACL as an authorization method.
+- You use ACL as an authorization method.
 - In the ACL setting of the ADLS Gen2 storage account, you're configured with Execute (X) permission on the root directory and *folder* and with Write and Execute (WX) permission on *child-folder*.
 - The sticky bit is enabled on *child-folder*.
 - You try to create or upload a new file, for example, *test.txt*, into the ADLS Gen2 Storage Account folder path *container/folder/child-folder/*.
@@ -65,23 +65,23 @@ To verify the sticky bit setting by using Azure CLI, follow these steps:
 
     :::image type="content" source="media/adls-gen2-sticky-bit-403-access-denied/az-storage-fs-access-show-command-output.png" alt-text="Screenshot of the command output example.":::
 
-    In the response JSON body, focus on `permissions`. It normally contains 9 or 10 bits with an extra "+" signal. For more information about these letters, see [Users and identities](/azure/storage/blobs/data-lake-storage-access-control#users-and-identities).
+    In the response JSON body, focus on `permissions`. It normally contains 9 or 10 bits with an extra "+" symbol. For more information about these letters, see [Users and identities](/azure/storage/blobs/data-lake-storage-access-control#users-and-identities).
 
     The previous example indicates that all user permissions are enabled, and the sticky bit is enabled. For more information about how to read this permission notation, see [Notation of traditional Unix permissions]( https://en.wikipedia.org/wiki/File-system_permissions#Notation_of_traditional_Unix_permissions).
 
     The ninth letter has four possible values: "-", "x", "t", and "T". If the value of this letter is "t" or "T", it means that the sticky bit is enabled. The "t" is "x" with the sticky bit enabled, and "T" is "-" with the sticky bit enabled.
 
-    "rwxrwxrwt" can be explained into:
+    "rwxrwxrwt" can be explained by the following:
 
     - r,w, and x permissions are enabled for the Owner.
-    - r,w,x permissions are enabled for the Owning group.
-    - r,w,x permissions are enabled for Other users, and the sticky bit is enabled.
+    - r,w, and x permissions are enabled for the Owning group.
+    - r,w, and x permissions are enabled for Other users, and the sticky bit is enabled.
 
     To understand it better, here's another example for "rwxr-xr-T":
 
-    - r,w,x permissions are enabled for Owner.
-    - r and x permissions are enabled for Owning group.
-    - Only r permission is enabled for Other users and the sticky bit is enabled.
+    - r,w, and x permissions are enabled for the Owner.
+    - r and x permissions are enabled for the Owning group.
+    - Only r permission is enabled for Other users, and the sticky bit is enabled.
 
     According to [Short forms for permissions](/azure/storage/blobs/data-lake-storage-access-control#short-forms-for-permissions), short form permission is calculated for every group of three letters ("r" as 4, "w" as 2, and "x "as 1). So, "rw-rwx--x" will be equal to 4+2+0, 4+2+1, 0+0+1, 671. Based on this calculation rule, you only need to add the fourth letter at the beginning. If the sticky bit is enabled, set it as 1. If the sticky bit is disabled, set it as 0.
 
