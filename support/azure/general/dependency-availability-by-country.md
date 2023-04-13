@@ -10,12 +10,12 @@ ms.reviewer: tiffanyyu
 
 # Azure dependency availability by primary country/region
 
-Many product features have Azure dependencies that might not be available in all primary countries/regions. This includes, but is not limited to, the following list:
+Many product features have Azure dependencies that might not be available in all primary countries/regions. This includes, but isn't limited to, the following list:
 
 - Insider risk management
 - Microsoft Threat Protection (MTP)
 - Microsoft Purview Information Protection
-  - Auto-labeling for sensitivity labels
+- Autolabeling for sensitivity labels
 - Communication compliance
 - Attack simulation
 - Microsoft Application Protection and Governance (MAPG)
