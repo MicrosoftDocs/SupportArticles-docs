@@ -36,7 +36,7 @@ To fix the issue, follow these steps to add redirect URI in Azure AD app registr
     ![The screenshot about the application ID in AADSTS50011 error message](media\error-code-AADSTS50011-redirect-uri-mismatch\aadsts50011-error-appid.png)
 
 1. Go to the [Azure portal](https://portal.azure.com). Make sure that you sign in to the portal by using an account that has permissions to update Azure AD Application registration.
-1. Negative to **Azure Active Directory**, select **App registrations**, locate the application registration by using the application ID, and then open the app registration page.
+1. Navigate to **Azure Active Directory**, select **App registrations**, locate the application registration by using the application ID, and then open the app registration page.
 
     You can also open the page directly by using the following links:
 
