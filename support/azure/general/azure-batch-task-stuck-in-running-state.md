@@ -33,9 +33,9 @@ In most cases, this issue occurs due to application issues.
 
 1. Batch automatically captures and writes stdout and stderr for the task into the stdout.txt and stderr.txt file in the task directory. If there's no stderr or stdout when the task is stuck and you have identified there's no application issue, contact Microsoft support.
 
-    If you need Microsoft support, perform the following actions:
+    When you contact Microsoft support, perform the following actions:
 
-    - Collect the Batch node agent files.
+    - Collect the [Batch node agent log files](/azure/batch/batch-pool-node-error-checking#node-agent-log-files).
     - Upload log files for a node via the Azure portal, Batch Explorer, or an [API](/rest/api/batchservice/compute-node/upload-batch-service-logs).
     - Keep the Batch node that runs the struck task if you can.  
 
