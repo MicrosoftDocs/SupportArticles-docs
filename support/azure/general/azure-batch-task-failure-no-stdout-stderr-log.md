@@ -33,6 +33,6 @@ If it's hard to identify the cause based on the exit code, perform more debuggin
 
 1. Use the Azure portal to download a Remote Desktop Protocol (RDP) file for Windows nodes, or obtain Secure Shell (SSH) connection information for Linux nodes.
 
-1. Manually run the command or script that's used to run the failed stak for debugging.  
+1. Manually run the command or script that's used to run the failed task for debugging.  
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
