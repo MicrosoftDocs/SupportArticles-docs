@@ -10,13 +10,14 @@ ms.date: 03/08/2023
 # Data isn't updated on the Insights tab for integrated search providers (preview)
 
 > [!IMPORTANT]
-> [!INCLUDE[cc-preview-feature](../includes/cc-preview-feature.md)]
 >
-> [!INCLUDE[cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
+> [!INCLUDE [cc-preview-feature](~/../dynamics-365-customer-engagement-pr/ce/includes/cc-preview-feature.md)]
 >
-> [!INCLUDE[cc-preview-features-expect-changes](../includes/cc-preview-features-expect-changes.md)]
+> [!INCLUDE [cc-preview-features-definition](~/../dynamics-365-customer-engagement-pr/ce/includes/cc-preview-features-definition.md)]
 >
-> [!INCLUDE[cc-preview-features-no-ms-support](../includes/cc-preview-features-no-ms-support.md)]
+> [!INCLUDE [cc-preview-features-expect-changes](~/../dynamics-365-customer-engagement-pr/ce/includes/cc-preview-features-expect-changes.md)]
+>
+> [!INCLUDE [cc-preview-features-no-ms-support](~/../dynamics-365-customer-engagement-pr/ce/includes/cc-preview-features-no-ms-support.md)]
 >
 
 

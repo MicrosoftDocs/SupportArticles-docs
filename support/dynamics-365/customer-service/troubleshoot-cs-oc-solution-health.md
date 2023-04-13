@@ -9,7 +9,7 @@ ms.subservice: d365-customer-service
 
 # Troubleshoot issues in Customer Service and Omnichannel for Customer Service using Solution Health Hub
 
-[!INCLUDE[cc-use-with-omnichannel](../includes/cc-use-with-omnichannel.md)]
+[!INCLUDE [cc-use-with-omnichannel](~/../dynamics-365-customer-engagement-pr/ce/includes/cc-use-with-omnichannel.md)]
 
 ## Introduction
 
@@ -149,4 +149,5 @@ When you run the analysis job, the following out-of-the-box rules are run. These
 [Frequently asked questions](faqs.md)  
 
 
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+[!INCLUDE [footer-include](~/../dynamics-365-customer-engagement-pr/ce/includes/footer-banner.md)]
+
