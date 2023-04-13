@@ -1,5 +1,5 @@
 ---
-title: Sticky bit causes 403 Access Denied authorization error
+title: The sticky bit causes a 403 Access Denied authorization error
 description: Helps you understand the sticky bit and describes how to check this setting when you configured it in Azure Data Lake Storage (ADLS) Gen2 and get the 403 Access Denied authorization error.
 ms.date: 04/10/2022
 ms.service: storage
@@ -9,11 +9,11 @@ ms.reviewer: jiajwu, azurestocic
 ---
 # 403 Access Denied authorization error when the sticky bit is enabled in ADLS Gen2
 
-This article helps you understand sticky bit and provides information about how to check this setting when you configure it in Azure Data Lake Storage (ADLS) Gen2 and get issues.
+This article helps you understand the sticky bit and provides information about how to check this setting when you configure it in Azure Data Lake Storage (ADLS) Gen2 and get issues.
 
-## What is sticky bit in ADLS Gen2?
+## What is the sticky bit in ADLS Gen2?
 
-ADLS Gen2 users often need to manage permissions for different users, and one way to do this is by using an access control list (ACL). ACL is a POSIX-like access control system with a specific setting called sticky bit that can cause authorization failures. For more information about the permission control mode and sticky bit, see [Access control lists (ACLs) in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control).
+ADLS Gen2 users often need to manage permissions for different users, and one way to do this is by using an access control list (ACL). ACL is a POSIX-like access control system with a specific setting called the sticky bit that can cause authorization failures. For more information about the permission control mode and the sticky bit, see [Access control lists (ACLs) in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control).
 
 The sticky bit is an advanced feature that isn't necessary in the ACL setting of the ADLS Gen2 storage account. Instead, you can use the [mask feature](/azure/storage/blobs/data-lake-storage-access-control#the-mask) to limit the maximum permissions for named users, named groups, and the owning group. This works similarly to the sticky bit and is easily configured in the Azure portal.
 
@@ -55,7 +55,7 @@ To verify the sticky bit setting by using Azure CLI, follow these steps:
     az storage fs access show -p folder -f container --account-name account --auth-mode login
     ```
 
-    To check the ACL and sticky bit setting of the root directory, which is the container level ACL and sticky bit setting, use the following command:
+    To check the ACL and the sticky bit setting of the root directory, which is the container level ACL and the sticky bit setting, use the following command:
 
     ```azurecli
     az storage fs access show -p / -f container --account-name account --auth-mode login
@@ -81,9 +81,9 @@ To verify the sticky bit setting by using Azure CLI, follow these steps:
 
     - r,w,x permissions are enabled for Owner.
     - r and x permissions are enabled for Owning group.
-    - Only r permission is enabled for Other users and sticky bit is enabled.
+    - Only r permission is enabled for Other users and the sticky bit is enabled.
 
-    According to [Short forms for permissions](/azure/storage/blobs/data-lake-storage-access-control#short-forms-for-permissions), short form permission is calculated for every group of three letters ("r" as 4, "w" as 2, and "x "as 1). So, "rw-rwx--x" will be equal to 4+2+0, 4+2+1, 0+0+1, 671. Based on this calculation rule, you only need to add the fourth letter at the beginning. If sticky bit is enabled, set it as 1. If sticky bit is disabled, set it as 0.
+    According to [Short forms for permissions](/azure/storage/blobs/data-lake-storage-access-control#short-forms-for-permissions), short form permission is calculated for every group of three letters ("r" as 4, "w" as 2, and "x "as 1). So, "rw-rwx--x" will be equal to 4+2+0, 4+2+1, 0+0+1, 671. Based on this calculation rule, you only need to add the fourth letter at the beginning. If the sticky bit is enabled, set it as 1. If the sticky bit is disabled, set it as 0.
 
     Here are some examples:
 
@@ -116,13 +116,13 @@ Here's an example of disabling/enabling the sticky bit setting with Azure CLI.
 
     :::image type="content" source="media/adls-gen2-sticky-bit-403-access-denied/cloud-shell-button.png" alt-text="Screenshot of the Cloud Shell button in the Azure portal.":::
 
-1. To set the ACL and sticky bit setting of the *container/folder* directory to the "rwxrwxrwt" permissions and to enable the sticky bit, use the following command:
+1. To set the ACL and the sticky bit setting of the *container/folder* directory to the "rwxrwxrwt" permissions and to enable the sticky bit, use the following command:
 
     ```azurecli
     az storage fs access set --permissions rwxrwxrwt -p folder -f container --account-name account --auth-mode login
     ```
 
-    To modify the setting of the root directory, which is the container level ACL and sticky bit setting, use the following command:
+    To modify the setting of the root directory, which is the container level ACL and the sticky bit setting, use the following command:
 
     ```azurecli
     az storage fs access set --permissions rwxrwxrwt -p / -f container --account-name account --auth-mode login
