@@ -5,7 +5,7 @@ author: helenclu
 ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
-ms.date: 4/4/2023
+ms.date: 4/13/2023
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
@@ -66,8 +66,6 @@ The Site User Mismatch diagnostic can fix the following common issues that can o
 When a new user account is created, a new OneDrive site is assigned to it. When a user account is deleted, the OneDrive site assigned to the account is not deleted right away. So if a new user account is created with the UPN of a deleted account, then the new OneDrive site assigned to the new account has the same URL as the old OneDrive site with an added suffix. This suffix is either a number or a GUID. 
 
 If you want the new user account to use the same OneDrive site that was assigned to the old account, the diagnostic will check whether the user can be assigned ownership of the original site. After successfully verifying the user's permissions, the diagnostic will offer to reconnect the user to their original site and recycle the new active site that has the suffix such as `https://contoso-my.sharepoint.com/personal/UserA_Contoso_com1`.
-
-<Is this a different scenario? Should it be in its own sub-section?>
 
 If you have a need to access content in the new OneDrive site at a later time, you can [restore the deleted OneDrive](/sharepoint/restore-deleted-onedrive).
 
