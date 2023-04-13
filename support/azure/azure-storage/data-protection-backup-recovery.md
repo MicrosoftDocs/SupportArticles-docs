@@ -21,11 +21,11 @@ Azure Storage data protection refers to strategies for:
 
 This section introduces available data backup and protection options and Azure RBAC choices to avoid accidental account deletion. For more information, see [data backup and protection options](/azure/storage/blobs/data-protection-overview#overview-of-data-protection-options) and [best practices for Azure RBAC](/azure/role-based-access-control/best-practices).
 
-### Data recovery options
+### Data backup options
 
 The following sections inrtoduce data recovery scenarios and possible recovery options:
 
-- [Scenario 1: Storage account recovery](#scenario-1-storage-account-protection)
+- [Scenario 1: Storage account recovery](#scenario-1-storage-account-recovery)
 - [Scenario 2: Blob container recovery](#scenario-2-blob-container-recovery)
 - [Scenario 3: Blob file recovery](#scenario-3-blob-file-recovery)
 
