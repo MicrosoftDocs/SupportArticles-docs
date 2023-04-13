@@ -1,6 +1,6 @@
 ---
 title: Azure Batch task fails without stdout or stderr logs
-description: Provides a troubleshooting method to an Azure Batch task failure. 
+description: Explains the cause for Azure Batch tasks failure without stdout or stderr logs and provides some suggestions.
 ms.date: 04/13/2023
 author: AmandaAZ
 ms.author: v-weizhu
@@ -10,11 +10,11 @@ ms.service: batch
 
 # Azure Batch task fails without stdout or stderr logs
 
-This article provides a troubleshooting method to an issue where Azure Batch tasks fail without stdout or stderr logs.
+This article provides the cause and some suggestions for Azure Batch tasks failure without stdout or stderr logs.
 
 ## Symptoms
 
-Sometimes tasks fail with an exit code. But there are no standard output (stdout) and standard error (stderr) logs.
+Batch tasks fail with an exit code. But there are no standard output (stdout) and standard error (stderr) logs.
 
 > [!NOTE]
 > Azure Batch automatically captures and writes stdout and stderr logs into the stdout.txt or stderr.txt file for the task in the task directory.
@@ -23,16 +23,16 @@ Sometimes tasks fail with an exit code. But there are no standard output (stdout
 
 When a task executes a process, the Batch service populates the task's exit code property with the return code of the process. If the process returns a nonzero exit code, the Batch service marks the task as failed.
 
-The Batch service doesn't determine a task's exit code. The process itself, or the operating system on which the process executed, determines the exit code.  
+The Batch service doesn't determine a task's exit code. The process itself, or the operating system on which the process executed, determines the exit code.
 
-## Troubleshooting
+## Recommended steps
 
-Try to determine the cause based on the exit code.  
+Try to determine the cause based on the exit code.
 
-If it's hard to identify the cause just based on the exit code, perform more debugging by the following steps:
+If it's hard to identify the cause based on the exit code, perform more debugging by the following steps:
 
 1. Use the Azure portal to download a Remote Desktop Protocol (RDP) file for Windows nodes, or obtain Secure Shell (SSH) connection information for Linux nodes.
 
-1. Manually run the task command or script for debugging.  
+1. Manually run the command or script that's used to run the failed stak for debugging.  
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
