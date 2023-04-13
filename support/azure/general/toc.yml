@@ -111,6 +111,8 @@
     href: azure-batch-pool-deletion-failure.md
   - name: Batch pool resizing failure
     href: azure-batch-pool-resizing-failure.md
+  - name: Task fails without stdout or stderr logs
+    href: azure-batch-task-failure-no-stdout-stderr-log.md.md
   - name: Use managed identities in a Batch account or a Batch pool
     href: use-managed-identities-azure-batch-account-pool.md
 
