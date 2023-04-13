@@ -106,7 +106,7 @@ This article lists combinations of SIP 504 and Microsoft response codes, the cor
 - SIP response code: **504**
 - Error message: **Unable to deliver INVITE: outgoing TLS negotiation failed; HRESULT=0x80090326**
 - Suggested actions:  
-  Verify that the SBC certificate is signed by a trusted certificate authority (CA) and hasn't expired. For more information, see [TLS connection issues](./sip-options-tls-certificate-issues#tls-connection-issues.md).
+  Verify that the SBC certificate is signed by a trusted certificate authority (CA) and hasn't expired. For more information, see [TLS connection issues](./sip-options-tls-certificate-issues.md#tls-connection-issues).
 
 ## 569008 504 Unable to deliver INVITE: Outgoing TLS negotiation failed. Remote certificate expired; HRESULT=0x80090328 SEC_E_CERT_EXPIRED
 
