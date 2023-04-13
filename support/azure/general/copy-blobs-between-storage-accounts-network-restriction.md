@@ -1,7 +1,7 @@
 ---
 title: Copy blobs between storage accounts with network restriction
 description: Introduces how to copy blobs between storage accounts with AzCopy and how to implement this when network restrictions are set for the storage accounts.
-ms.date: 04/11/2023
+ms.date: 04/13/2023
 ms.topic: how-to
 ms.service: storage
 ms.author: v-weizhu
@@ -23,11 +23,8 @@ Copying blobs between two storage accounts by using AzCopy doesn't rely on netwo
 To copy blobs between storage accounts directly, use the following command:
 
 ```azcopy
-azcopy copy 'https://<source-storage-account-name>.blob.core.windows.net/<container-name>/<blob-path><SAS-token>' 'https://<destination-storage-account-name>.blob.core.windows.net/<container-name>/<blob-path>'
+azcopy copy 'https://<source-storage-account-name>.blob.core.windows.net/<container-name>/<blob-path>' 'https://<destination-storage-account-name>.blob.core.windows.net/<container-name>/<blob-path>'
 ```
-
-> [!NOTE]
-> If you provides authorization credentials to the storage service by using Azure Active Directory (Azure AD), the shared access signature (SAS) token can be omitted from the destination URL. But for the source URL, a SAS token must be appended.
 
 For more information, see [Copy blobs between Azure storage accounts with AzCopy v10](/azure/storage/common/storage-use-azcopy-blobs-copy).
 
