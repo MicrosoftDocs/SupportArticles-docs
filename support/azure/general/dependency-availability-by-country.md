@@ -36,11 +36,12 @@ Primary countries/regions that have Azure dependencies availability as of April 
 - Germany
 - India
 - Japan
-- Norway*
-- South Africa*
+- Norway
+- South Africa
 - South Korea
+- Sweden*
 - Switzerland
-- United Arab Emirates*
+- United Arab Emirates
 - United Kingdom
 - United States of America
 
@@ -50,7 +51,5 @@ Countries/regions that are planned to get Azure dependencies availability soon:
 
 - Qatar
 - Singapore
-- Sweden
-
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
