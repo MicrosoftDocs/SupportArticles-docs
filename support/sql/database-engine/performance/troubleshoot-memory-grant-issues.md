@@ -115,7 +115,7 @@ pool_id total_memory_kb available_memory_kb granted_memory_kb used_memory_kb gra
 (4 rows affected)
 ```
 
-### <a name="performancemonitorcounters">[Performance Monitor counters](#tab/performance-monitor-counters)</a>
+### <a name="performancemonitorcounters"></a>[Performance Monitor counters](#tab/performance-monitor-counters)
 
 Similar information is available via Performance Monitor counters, where you can observe the currently granted requests (`Memory Grants Outstanding`), the waiting grant requests (`Memory Grants Pending`), and the amount of memory used by memory grants (`Granted Workspace Memory (KB)`). In the following picture, the outstanding grants are 18, the pending grants are 2, and the granted workspace memory is 828,288 KB. The `Memory Grants Pending` Perfmon counter with a nonzero value indicates that memory has been exhausted.
 
