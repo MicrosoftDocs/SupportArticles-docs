@@ -72,7 +72,7 @@ There are multiple ways to determine waits for QE reservations. Pick the ones th
 - At the server level, use aggregate memory usage statistics
 
   - The [sys.dm_exec_query_resource_semaphores](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql) DMV
-  - Performance monitor counters ([SQL Server Memory Manager object](/sql/relational-databases/performance-monitor/sql-server-memory-manager-object))
+  - Performance Monitor counters ([SQL Server Memory Manager object](/sql/relational-databases/performance-monitor/sql-server-memory-manager-object))
   - [DBCC MEMORYSTATUS](dbcc-memorystatus-monitor-memory-usage.md)
   - The [sys.dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql) DMV
   - [Extended Events (XEvents)](/sql/relational-databases/extended-events/extended-events)
@@ -583,7 +583,7 @@ This diagnostic query is a sample, so feel free to modify it in any way that fit
 
 ## Diagnostic tools
 
-There are diagnostic tools that Microsoft SQL Server technical support uses to collect logs and more efficiently troubleshoot issues. [SQL LogScout](https://github.com/microsoft/sql_logscout) and [Pssdiag Configuration Manager](https://github.com/microsoft/diagmanager) (together with [SQLDiag](/sql/tools/sqldiag-utility)) collect outputs of the previously described DMVs and Performance monitor counters that can help you diagnose memory grant issues.
+There are diagnostic tools that Microsoft SQL Server technical support uses to collect logs and more efficiently troubleshoot issues. [SQL LogScout](https://github.com/microsoft/sql_logscout) and [Pssdiag Configuration Manager](https://github.com/microsoft/diagmanager) (together with [SQLDiag](/sql/tools/sqldiag-utility)) collect outputs of the previously described DMVs and Performance Monitor counters that can help you diagnose memory grant issues.
 
 If you run SQL LogScout with *LightPerf*, *GeneralPerf*, or *DetailedPerf* scenarios, the tool collects the necessary logs. You can then manually examine the YourServer_PerfStats.out and look for `-- dm_exec_query_resource_semaphores --` and `-- dm_exec_query_memory_grants --` outputs. Or, instead of manual examination, you can use [SQL Nexus](https://github.com/microsoft/sqlnexus) to import the output coming from SQL LogScout or PSSDIAG into a SQL Server database. SQL Nexus creates two tables, `tbl_dm_exec_query_resource_semaphores` and `tbl_dm_exec_query_memory_grants`, which contain the information needed to diagnose memory grants. SQL LogScout and PSSDIAG also collect Perfmon logs in the form of *.BLG* files, which can be used to review the performance counters described in the [Performance Monitor counters](#performance-monitor-counters) section.
 
@@ -700,7 +700,7 @@ Finally, the following example illustrates how to simulate large consumption of 
    ostress.exe -E -S. -Q"select * from sys.messages order by message_id option (maxdop 1)" -n30
    ```
 
-1. Use the diagnostic tools described previously to identify the memory grant issues
+1. Use the diagnostic tools described previously to identify the memory grant issues.
 
 ## Summary of ways to deal with large memory grants
 
@@ -710,4 +710,4 @@ Finally, the following example illustrates how to simulate large consumption of 
 - Use the `OPTION` ([min_grant_percent = XX](/sql/t-sql/queries/hints-transact-sql-query#min_grant_percent--numeric_value), [max_grant_percent = XX](/sql/t-sql/queries/hints-transact-sql-query#max_grant_percent--numeric_value)) hint.
 - Use [Resource Governor](/sql/relational-databases/resource-governor/resource-governor).
 - SQL Server 2017 and 2019 use adaptive query processing, allowing the memory grant feedback mechanism to adjust memory grant size dynamically at runtime. This feature may prevent memory grant issues in the first place.
-- Increase SQL Server or OS memory
+- Increase SQL Server or OS memory.
