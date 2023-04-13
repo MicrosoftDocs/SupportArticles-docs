@@ -64,6 +64,7 @@ There are currently diagnostics covering various areas within SharePoint and One
 | **Check User Access**| Validates that the internal/external user has access to the site and checks for known issues that can prevent access. | [Run Tests: Check User Access](https://aka.ms/PillarCheckUserAccess) |[Permission errors when accessing SharePoint or OneDrive](/sharepoint/troubleshoot/administration/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business) |
 | **OneDrive Site Access**| Validates that the user's OneDrive site exists, and there are no known issues accessing the site. | [Run Tests: OneDrive Site Access](https://aka.ms/PillarOneDriveAccess) |
 | **Locked Site**| Validates that the user's OneDrive or SharePoint site exists, and there are no known issues accessing the site due to lock or archived state. | [Run Tests: Locked Site](https://aka.ms/PillarLockedSite) | [SharePoint or OneDrive read-only error messages](/sharepoint/troubleshoot/sites/site-is-read-only)
+| **Site User ID Mismatch**| Detects a ID mismatch for a user on a OneDrive or SharePoint site and offers to fix the issue. | [Run Tests: Site User Id Mismatch](https://aka.ms/PillarSiteUserIDMismatch) | [Fix site user ID mismatch in SharePoint or OneDrive](/sharing-and-permissions/fix-site-user-id-mismatch)
 
 > [!NOTE]
 > If a diagnostic detects an issue, and you've implemented a fix based on the results, consider rerunning the diagnostic to ensure the issue is completely resolved. 
