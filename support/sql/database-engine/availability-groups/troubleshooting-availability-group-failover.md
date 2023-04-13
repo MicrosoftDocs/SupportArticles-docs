@@ -29,7 +29,7 @@ When a health condition is detected, the following sequence of events usually oc
 
 - The availability group role comes online successfully if it's detected to be healthy by Always On and Windows Cluster health monitoring.
 
-If successful, the availability group replicas and databases transition to the Primary role and the availability group databases come online and are accessible by your application.
+If successful, the availability group replicas and databases transition to the primary role and the availability group databases come online and are accessible by your application.
 
 ### Applications can't access the availability group databases
 
@@ -41,26 +41,11 @@ Logon Error: 983, Severity: 14, State: 1.
 Logon Unable to access availability database '<databasename>' because the database replica is not in the PRIMARY or SECONDARY role. Connections to an availability database is permitted only when the database replica is in the PRIMARY or SECONDARY role. Try the operation again later.
 ```
 
-The period during which the availability group is in the Resolving role before it comes back online in the Primary role typically last only a few seconds or even less than a second.
+The period during which the availability group is in the Resolving role before it comes back online in the primary role typically last only a few seconds or even less than a second.
 
 ## Identify and diagnose Always On availability group health events or failover
 
-### 1. Review the cluster log
-
-The Windows Cluster log is the most comprehensive log to use to identify the kind of Always On or cluster health event and also the detected health condition that caused the event. To generate and open the cluster log, follow these steps:
-
-Use Windows PowerShell to generate the Windows Cluster log on the cluster node that hosts the primary replica at the time of the health event. For example, run the following cmdlet in an elevated PowerShell window by using 'sql19agn1' as the SQL Server-based server name:
-
-```powershell
-get-clusterlog -Node sql19agn1 -UseLocalTime     
-```
-
-:::image type="content" source="media/troubleshooting-availability-group-failover/cluster-log-node-powershell.png" alt-text="Screenshot that shows PowerShell window with sql19agn1 as the SQL Server name.":::
-
-> [!NOTE]  
-> By default, the log file is created in *%WINDIR%\cluster\reports*.
-
-### 2. Identify Always On health trends
+### 1. Identify Always On health trends
 
 You might investigate a single Always On health event, or there might be a recent or ongoing trend of health problems that are intermittently interrupting production. The following questions can help you to narrow down and correlate recent changes in your production environment that might be related to these health problems:
 
@@ -75,6 +60,21 @@ Consider busy ad-hoc production workloads that might correlate to the time of th
 
 > [!NOTE]  
 > This is a good time to consider a plan to collect performance data throughout the week and month. To better understand when the system is busiest, you can measure Windows performance monitor counters such as `Processor Information::% Processor Time`, `Memory::Available MBytes`, and `MSSQLServer:SQL Statistics::Batch Requests/sec`.
+
+### 2. Review the cluster log
+
+The Windows Cluster log is the most comprehensive log to use to identify the kind of Always On or cluster health event and also the detected health condition that caused the event. To generate and open the cluster log, follow these steps:
+
+Use Windows PowerShell to generate the Windows Cluster log on the cluster node that hosts the primary replica at the time of the health event. For example, run the following cmdlet in an elevated PowerShell window by using 'sql19agn1' as the SQL Server-based server name:
+
+```powershell
+get-clusterlog -Node sql19agn1 -UseLocalTime     
+```
+
+:::image type="content" source="media/troubleshooting-availability-group-failover/cluster-log-node-powershell.png" alt-text="Screenshot that shows PowerShell window with sql19agn1 as the SQL Server name.":::
+
+> [!NOTE]  
+> By default, the log file is created in *%WINDIR%\cluster\reports*.
 
 ### 3. Find the health event in the cluster log
 
@@ -234,7 +234,7 @@ To resolve this issue, the dump file diagnostic must be investigated for the roo
 
 A lease time-out indicates a performance issue that affects the entire system, including SQL Server. To diagnose the system issue, Always On health diagnostics reports performance monitor data in the cluster log and includes the lease time-out event. The performance data spans approximately 50 seconds leading up to the lease time-out event, reporting on CPU utilization, free memory, and disk latency.
 
-Here's an example of the reported performance data that shows a lease time-out in the cluster log. In this sample output, high overall CPU utilization that might be related to the lease time-out is detected.
+Here's an example of the reported performance data that shows a lease time-out in the cluster log. In this sample output, high overall CPU utilization that might be related to the lease time-out.
 
 ```output
 00000f90.000015c0::2020/08/07-14:16:41.378 WARN [RES] SQL Server Availability Group: [hadrag] Lease timeout detected, logging perf counter data collected so far
@@ -260,7 +260,7 @@ You should also capture counters that report the same system resource usage, inc
 
 ### Health check time-out: an Always On health event
 
-When an availability group replica transitions into the Primary role, Always On health monitoring establishes a local ODBC connection to the SQL Server instance. While Always On is connected and monitoring, if SQL Server doesn't respond over the ODBC connection within the period that's set for the availability group's health check time-out (default is 30 seconds), then a health check time-out event is triggered. In this situation, the availability group transitions from the Primary role to the Resolving role and initiates failover, if it's configured to do this.
+When an availability group replica transitions into the primary role, Always On health monitoring establishes a local ODBC connection to the SQL Server instance. While Always On is connected and monitoring, if SQL Server doesn't respond over the ODBC connection within the period that's set for the availability group's health check time-out (default is 30 seconds), then a health check time-out event is triggered. In this situation, the availability group transitions from the primary role to the Resolving role and initiates failover, if it's configured to do this.
 
 For more information about health check time-outs, see the ["Health check timeout operation"](/sql/database-engine/availability-groups/windows/availability-group-lease-healthcheck-timeout?view=sql-server-ver16&preserve-view=true#health-check-timeout-operation) section in [Mechanics and guidelines of lease, cluster, and health check timeouts for Always On availability groups](/sql/database-engine/availability-groups/windows/availability-group-lease-healthcheck-timeout).
 
@@ -370,7 +370,7 @@ WARN [RHS] Resource contoso-ag IsAlive has indicated failure.
 INFO [RCM] HandleMonitorReply: FAILURENOTIFICATION for 'contoso-ag', gen(0) result 1/0.
 ```
 
-#### Diagnose and resolve SQL Server internal events
+#### Diagnose and resolve SQL Server health events
 
 The kind of health issue that's reported by SQL Server health should dictate the direction of the root cause analysis.
 
