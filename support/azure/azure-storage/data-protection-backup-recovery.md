@@ -1,11 +1,11 @@
 ---
 title: Azure Storage data protection, backup and recovery
 description: This article discusses data backup and protection options and recovery scenarios about Azure Storage.
-ms.date: 04/12/2023
+ms.date: 04/13/2023
 ms.service: storage
 ms.author: v-weizhu
 author: AmandaAZ
-ms.reviewer: jiajwu, azurestocic
+ms.reviewer: jiajwu, ryanchen, azurestocic
 ms.topic: how-to
 ---
 # Best practice of Azure Storage data protection, backup and recovery
@@ -16,14 +16,20 @@ The article provides you with options of protecting Azure Storage data from bein
 
 Azure Storage data protection refers to strategies for:
 
-- Protecting the storage account and data within it from being deleted or modified
+- Protecting the storage account and data within it from being deleted or modified.
 - Restoring data after it has been deleted or modified.
 
 This section introduces available data backup and protection options and Azure RBAC choices to avoid accidental account deletion. For more information, see [data backup and protection options](/azure/storage/blobs/data-protection-overview#overview-of-data-protection-options) and [best practices for Azure RBAC](/azure/role-based-access-control/best-practices).
 
-### Data backup options
+### Data recovery options
 
-This section describes some possible recovery options after the data protection options have been enabled.
+The following sections inrtoduce data recovery scenarios and possible recovery options:
+
+- [Scenario 1: Storage account recovery](#scenario-1-storage-account-protection)
+- [Scenario 2: Blob container recovery](#scenario-2-blob-container-recovery)
+- [Scenario 3: Blob file recovery](#scenario-3-blob-file-recovery)
+
+You can recover data after [data protection options](#data-protection-options) are enabled.
 
 #### Scenario 1: Storage account recovery
 
@@ -33,7 +39,12 @@ Refers to [Recover deleted storage accounts from the Azure portal](#recover-dele
 
 - Recover the soft-deleted container and its contents.
 
-    Requirements for recovery: Container soft delete is enabled, and the container soft delete retention period hasn't yet expired.  For more information, see [Enable and manage soft delete for containers](/azure/storage/blobs/soft-delete-container-enable).
+    Requirements for recovery:
+
+  - Container soft delete is enabled.
+  - The container soft delete retention period hasn't yet expired.
+  
+    For more information, see [Enable and manage soft delete for containers](/azure/storage/blobs/soft-delete-container-enable).
 
 - Recovery from a second storage account.
 
@@ -43,7 +54,12 @@ Refers to [Recover deleted storage accounts from the Azure portal](#recover-dele
 
 - Recover blobs to previous versions via blob versioning.
 
-    Requirements for recovery: Blob versioning is enabled, and the blob has one or more previous versions. For more information, see [Enable and manage blob versioning](/azure/storage/blobs/versioning-enable).
+    Requirements for recovery:
+
+  - Blob versioning is enabled.
+  - The blob has one or more previous versions.
+
+    For more information, see [Enable and manage blob versioning](/azure/storage/blobs/versioning-enable).
 
     This option is currently not supported for Azure Data Lake Storage (ADLS) workloads.
 
@@ -65,21 +81,32 @@ Refers to [Recover deleted storage accounts from the Azure portal](#recover-dele
 
 - Recover blobs via blob soft delete.
 
-    Requirements for recovery: Blob soft delete is enabled, and the soft delete retention interval hasn't expired. For more information, see [Manage and restore soft-deleted blobs](/azure/storage/blobs/soft-delete-blob-manage).
+    Requirements for recovery:
+
+  - Blob soft delete is enabled.
+  - The soft delete retention interval hasn't expired.
+
+    For more information, see [Manage and restore soft-deleted blobs](/azure/storage/blobs/soft-delete-blob-manage).
 
 - Recover a set of block blobs via point-in-time.
 
-    Requirements for recovery: Point-in-time restore is enabled the restore point is within the retention interval. The storage account hasn't been compromised or corrupted. For more information, see [Perform a point-in-time restore on block blob data](/azure/storage/blobs/point-in-time-restore-manage).
+    Requirements for recovery:
+
+  - Point-in-time restore is enabled.
+  - The restore point is within the retention interval.
+  - The storage account hasn't been compromised or corrupted.
+
+    For more information, see [Perform a point-in-time restore on block blob data](/azure/storage/blobs/point-in-time-restore-manage).
 
 - Recover blobs via snapshots.
 
-    Requirements for recovery: the blob has one or more snapshots. For more information, see [Create and manage a blob snapshot in .NET](/azure/storage/blobs/snapshots-manage-dotnet).
+    Requirements for recovery: The blob has one or more snapshots. For more information, see [Create and manage a blob snapshot in .NET](/azure/storage/blobs/snapshots-manage-dotnet).
 
     Recovery procedures:
 
     1. Go to the affected blob from the Azure portal.
 
-    :::image type="content" source="media/data-protection-backup-recovery/select-affected-blob.png" alt-text="Screenshot that shows the affected blob." lightbox="media/data-protection-backup-recovery/select-affected-blob.png":::
+        :::image type="content" source="media/data-protection-backup-recovery/select-affected-blob.png" alt-text="Screenshot that shows the affected blob." lightbox="media/data-protection-backup-recovery/select-affected-blob.png":::
 
     1. Select "..." for the blob that you would like to recover.
     1. Select **View snapshots**.
@@ -93,7 +120,11 @@ Refers to [Recover deleted storage accounts from the Azure portal](#recover-dele
 
 ### Data protection options
 
-This section lists some recommended data protection options for storage accounts, containers and blob files.
+The following sections introduce data protection scenarios and recommended protection options:
+
+- [Scenario 1: Storage account protection](#scenario-1-storage-account-protection)
+- [Scenario 2: Blob container protection](#scenario-2-blob-container-protection)
+- [Scenario 3: Blob file protection](#scenario-3-blob-file-protection)
 
 #### Scenario 1: Storage account protection
 
@@ -111,9 +142,9 @@ Benefits and limitations:
 
     Benefits and limitations:
 
-    1. Protect a container and its blobs from all deletes and overwrites.
-    2. When a legal hold or a locked time-based retention policy is in effect, the storage account is also protected from deletion. Containers for which no immutability policy has been set aren't protected from deletion.
-    3. It supports ADLS Gen 2 in Preview.
+  - Protect a container and its blobs from all deletes and overwrites.
+  - When a legal hold or a locked time-based retention policy is in effect, the storage account is also protected from deletion. Containers for which no immutability policy has been set aren't protected from deletion.
+  - It supports ADLS Gen 2 in Preview.
 
     For more information about immutability policies on a container, see [Store business-critical blob data with immutable storage](/azure/storage/blobs/immutable-storage-overview).
 
@@ -121,9 +152,9 @@ Benefits and limitations:
 
     Benefits and limitations:
 
-    1. A deleted container and its contents may be restored within the retention period. And the best practice of minimum retention interval should be of seven days.
-    2. Only container-level operation like Delete container, can be restored. Container soft delete doesn't enable you to restore an individual blob in the container if that blob is deleted.
-    3. It supports ADLS Gen 2.
+  - A deleted container and its contents may be restored within the retention period. And the best practice of minimum retention interval should be of seven days.
+  - Only container-level operation like Delete container, can be restored. Container soft delete doesn't enable you to restore an individual blob in the container if that blob is deleted.
+  - It supports ADLS Gen 2.
 
     For more information on container soft delete, see[Soft delete for containers](/azure/storage/blobs/soft-delete-container-overview).
 
@@ -133,10 +164,10 @@ Benefits and limitations:
 
     Benefits and limitations:
 
-    1. Protects a blob version from being deleted and its metadata from being overwritten. An overwrite operation creates a new version.
-    2. If at least one container has version-level immutability enabled, the storage account is also protected from deletion.  
-    3. Container deletion fails if at least one blob exists in the container.
-    4. It's *not* available for ADLS Gen2.
+  - Protects a blob version from being deleted and its metadata from being overwritten. An overwrite operation creates a new version.
+  - If at least one container has version-level immutability enabled, the storage account is also protected from deletion.  
+  - Container deletion fails if at least one blob exists in the container.
+  - It's *not* available for ADLS Gen2.
 
     For more information on immutability policies on a blob version, see [Store business-critical blob data with immutable storage](/azure/storage/blobs/immutable-storage-overview).
 
@@ -144,8 +175,8 @@ Benefits and limitations:
 
     Benefits:
 
-    1. A deleted blob or blob version may be restored within the retention period. And the best practice of minimum retention interval should be of seven days.
-    2. It supports ADLS Gen 2.
+  - A deleted blob or blob version may be restored within the retention period. And the best practice of minimum retention interval should be of seven days.
+  - It supports ADLS Gen 2.
 
     For more information on blob soft delete, see [Soft delete for blobs](/azure/storage/blobs/soft-delete-blob-overview).
 
@@ -153,8 +184,8 @@ Benefits and limitations:
 
     Benefits and limitations:
 
-    1. A blob may be restored from a snapshot if the blob is overwritten. However, if the blob is deleted, snapshots are also deleted.
-    2. It supports ADLS Gen 2 in preview.
+  - A blob may be restored from a snapshot if the blob is overwritten. However, if the blob is deleted, snapshots are also deleted.
+  - It supports ADLS Gen 2 in preview.
 
     For more information on blob snapshot, see [Blob snapshots](/azure/storage/blobs/snapshots-overview).
 
@@ -162,8 +193,8 @@ Benefits and limitations:
 
     Benefits and limitations:
 
-    1. Every blob write operation creates a new version. The current version of a blob may be restored from a previous version if the current version is deleted or overwritten.
-    2. It's not available for ADLS Gen2.  
+  - Every blob write operation creates a new version. The current version of a blob may be restored from a previous version if the current version is deleted or overwritten.
+  - It's not available for ADLS Gen2.  
 
     For more information on blob versioning, see [Blob versioning](/azure/storage/blobs/versioning-overview).
 
@@ -171,10 +202,10 @@ Benefits and limitations:
 
     Benefits and limitations:
 
-    1. A set of block blobs may be reverted to their state at a specific point in the past.
-    2. Only operations performed on block blobs are reverted.  
-    3. Any operations performed on containers, page blobs, or append blobs aren't reverted.
-    4. It's not available for ADLS Gen2.
+  - A set of block blobs may be reverted to their state at a specific point in the past.
+  - Only operations performed on block blobs are reverted.  
+  - Any operations performed on containers, page blobs, or append blobs aren't reverted.
+  - It's not available for ADLS Gen2.
 
     For more information on point-in-time restore, see [Point-in-time restore for block blobs](/azure/storage/blobs/point-in-time-restore-overview).
 
@@ -182,19 +213,23 @@ Benefits and limitations:
 
     Benefits and limitations:
 
-    1. Data can be restored from the second storage account if the primary account is compromised in any way.
-    2. AzCopy and Azure Data Factory are supported.
-    3. However, object replication isn't supported.
+  - Data can be restored from the second storage account if the primary account is compromised in any way.
+  - AzCopy and Azure Data Factory are supported.
+  - Object replication isn't supported.
 
 ## Best practice for Azure RBAC
 
-Another best practice to avoid accidental account deletion is to limit the number of users who have permissions to delete an account via role-based access control (Azure RBAC). For more information, see [Best practices for Azure RBAC](/azure/role-based-access-control/best-practices).
+Another best practice to avoid accidental account deletion is to limit the number of users who have permissions to delete an account via role-based access control (Azure RBAC).
+
+Here are some recommended methods:
 
 - Only grant the access users needed.
 - Limit the number of subscription owners.
 - Use Azure AD Privileged Identity Management.
 - Assign roles to groups, not users.
 - Assign roles using the unique role ID instead of the role name.
+
+For more information, see [Best practices for Azure RBAC](/azure/role-based-access-control/best-practices).
 
 ## Non-supported storage recovery
 
@@ -206,7 +241,15 @@ Microsoft doesn't support the following storage recovery scenarios:
 
 ## Supported storage recovery
 
-This section describes several scenarios where storage recovery is possible with prerequisites.
+This section describes several supported storage recovery scenarios when some prerequisites are met:
+
+- [Scenario 1: Storage account recovery (ARM storage account recovery)](#scenario-1-storage-account-recovery-arm-storage-account-recovery)
+- [Scenarios 2: Classic storage account recovery](#scenarios-2-classic-storage-account-recovery)
+- [Scenarios 3: Container recovery](#scenarios-3-container-recovery)
+- [Scenario 4: ADLS Gen 2 data and file system recovery](#scenario-4-adls-gen-2-data-and-file-system-recovery)
+- [Scenario 5: Table recovery](#scenario-5-table-recovery)
+- [Scenario 6: Disk recovery](#scenario-6-disk-recovery)
+
 Microsoft is providing the best effort attempts to recover the data but *without* guarantees on how much data could be restored.
 
 ### Scenario 1: Storage account recovery (ARM storage account recovery)
@@ -298,7 +341,7 @@ To recover a deleted storage account from within another storage account, follow
 
 1. Select the subscription for the account that you want to recover from the **Subscription** drop-down list.
 
-    :::image type="content" source="media/data-protection-backup-recovery/restore-button.png" alt-text="Screenshot that shows how to select the subscription." lightbox="media/data-protection-backup-recovery/restore-button.png":::
+    :::image type="content" source="media/data-protection-backup-recovery/subscription-drop-down-list.png" alt-text="Screenshot that shows how to select the subscription." lightbox="media/data-protection-backup-recovery/subscription-drop-down-list.png":::
 
 1. From the drop-down list, select the account to recover. If the storage account that you want to recover isn't in the drop-down list, then it can't be recovered.
 1. Select the **Restore** button to recover the account. The portal displays a notification that the recovery is in progress.
@@ -319,7 +362,7 @@ For more information, see [Recover a deleted account from the Azure portal](/azu
 
     The following screenshot shows an example of the **Problem description** tab being filled out:
 
-    :::image type="content" source="media/data-protection-backup-recovery/set-fields-under-problem-description-tab.png" alt-text="Screenshot that shows an example of the Problem description tab being filled out." lightbox="media/data-protection-backup-recovery/set-fields-under-problem-description-tab.png":::
+    :::image type="content" source="media/data-protection-backup-recovery/set-fields-under-problem-description-tab.png" alt-text="Screenshot that shows an example of the Problem description tab being filled out.":::
 
 1. Navigate to the **Recommended solution** tab, and select **Customer-Controlled Storage Account Recovery**.
 
@@ -327,7 +370,7 @@ For more information, see [Recover a deleted account from the Azure portal](/azu
 
 1. From the drop-down list, select the account to recover. If the storage account that you want to recover isn't in the drop-down list, then it can't be recovered.
 
-    :::image type="content" source="media/data-protection-backup-recovery/deleted-storage-accounts-list.png" alt-text="Screenshot of the deleted storage accounts list in last 14 days." lightbox="media/data-protection-backup-recovery/deleted-storage-accounts-list.png":::
+    :::image type="content" source="media/data-protection-backup-recovery/deleted-storage-accounts-list.png" alt-text="Screenshot of the deleted storage accounts list in last 14 days.":::
 
 1. Select **Recover** to restore the account. The portal displays a notification that the recovery is in progress.
 
