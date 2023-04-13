@@ -4,7 +4,6 @@ description: Provides a resolution for the social profile entity being blocked a
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Sync issue with social data in Omnichannel for Customer Service

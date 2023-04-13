@@ -4,7 +4,6 @@ description: Provides a solution to an authentication error that displays on age
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # After Omnichannel for Customer Service is provisioned, the agent dashboard displays an authentication error.

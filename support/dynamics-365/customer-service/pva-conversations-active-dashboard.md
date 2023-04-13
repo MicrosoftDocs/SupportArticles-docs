@@ -4,7 +4,6 @@ description: Provides a solution for when Power Virtual Agents bot conversations
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Power Virtual Agents bot conversations appear as active on dashboard after customer has ended chat

@@ -4,7 +4,6 @@ description: Provides a solution for when SLA timer doesn't pause when its state
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # SLA timer doesn't pause when its state is changed from InProgress to OnHold on a holiday

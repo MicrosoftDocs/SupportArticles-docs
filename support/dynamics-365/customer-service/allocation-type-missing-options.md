@@ -4,7 +4,6 @@ description: Provides a solution for when you can't create entitlements because 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Unable to create entitlements because Allocation Type dropdown doesn't show any options

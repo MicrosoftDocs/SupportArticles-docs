@@ -4,7 +4,6 @@ description: Provides a solution for when a warning message appears on slakpiins
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Warning message appears on slakpiinstances

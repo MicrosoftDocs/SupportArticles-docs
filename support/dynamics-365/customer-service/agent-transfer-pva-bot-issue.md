@@ -4,7 +4,6 @@ description: Provides a solution for missing required variables and actions duri
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Missing required variables and actions during agent tranfers from Power Virtual Agents bots

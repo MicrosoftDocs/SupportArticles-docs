@@ -4,7 +4,6 @@ description: Provides a solution for when the communication panel doesn't load i
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Communication panel doesn't load in Omnichannel for Customer Service app

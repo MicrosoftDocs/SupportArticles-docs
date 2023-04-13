@@ -4,7 +4,6 @@ description: Provides a solution for SLA migration tool isn't able to migrate a 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Unable to use the SLA migration tool to migrate a large number of SLAs

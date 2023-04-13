@@ -4,7 +4,6 @@ description: Provides a solution for the inability to import a solution with act
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Unable to import solution with active SLAs and SLAs are deactivated when a solution is imported

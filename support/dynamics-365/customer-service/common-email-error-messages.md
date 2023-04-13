@@ -4,7 +4,6 @@ description: Provides solutions to common email error messages in Dynamics 365 C
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Troubleshoot common email error messages 

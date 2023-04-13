@@ -4,7 +4,6 @@ description: Provides a solution for when the agent dashboard doesn't load or di
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Agent dashboard doesn't load or displays an authorization error

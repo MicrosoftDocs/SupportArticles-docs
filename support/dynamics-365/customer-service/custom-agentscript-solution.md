@@ -4,7 +4,6 @@ description: Provides a resolution for a known issue related to deploying an Age
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Issue deploying custom Agentscript solution in Omnichannel for Customer Service

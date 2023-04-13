@@ -4,7 +4,6 @@ description: Provides a solution to issue where an agent doesn't receive a chat 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Agent doesn't receive chat in Omnichannel for Customer Service

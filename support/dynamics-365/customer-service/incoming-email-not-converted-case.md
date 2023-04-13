@@ -4,7 +4,6 @@ description: Provides a solution to an issue where incoming email isn't converte
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Incoming email isn't converted to a case

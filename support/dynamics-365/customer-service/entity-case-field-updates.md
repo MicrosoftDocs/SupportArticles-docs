@@ -4,7 +4,6 @@ description: Provides a solution for when when case entity fields for modifiedon
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # modifiedon and modifiedby fields on the case entity get updated

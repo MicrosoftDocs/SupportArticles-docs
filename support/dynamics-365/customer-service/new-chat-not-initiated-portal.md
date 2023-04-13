@@ -4,7 +4,6 @@ description: Provides a solution for when chats aren't initiated when starting a
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Chat isn't initiated when starting a new chat from portal

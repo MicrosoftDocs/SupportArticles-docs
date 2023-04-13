@@ -4,7 +4,6 @@ description: Provides a solution for when the primary entity isn't available whi
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 Primary entity isn't available while creating SLAs

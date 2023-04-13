@@ -4,7 +4,6 @@ description: Provides a solution to error when you sign in to the communication 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 

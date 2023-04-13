@@ -4,7 +4,6 @@ description: Provides a solution for when there are SLA custom time calculation 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Errors on custom time calculation for SLA

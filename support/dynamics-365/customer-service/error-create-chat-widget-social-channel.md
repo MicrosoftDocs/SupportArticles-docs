@@ -4,7 +4,6 @@ description: Provides a solution to an error that occurs when trying to create a
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Error occurs when trying to create a chat widget or social channel

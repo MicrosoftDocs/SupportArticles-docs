@@ -4,7 +4,6 @@ description: Provides a solution for when changes to an SLAItem through an upgra
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Changes to SLAItem through an upgrade solution don't appear even after a successful upgrade

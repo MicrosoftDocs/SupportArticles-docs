@@ -4,7 +4,6 @@ description: Provides a solution for when the deletion of SLAs or SLA Items show
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Deletion of SLAs or SLA Items show error messages in Unified Interface during solution upgrade or manual deletion

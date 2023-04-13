@@ -4,7 +4,6 @@ description: Provides a solution for the inability to delete a managed solution 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Unable to delete a managed solution consisting of an SLA-enabled entity

@@ -4,7 +4,6 @@ description: Provides solution to an issue where case creation fails when mail i
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Case creation fails when mail is sent from queue address to same queue address on which automatic record creation rule is configured

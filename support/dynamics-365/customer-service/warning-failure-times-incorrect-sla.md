@@ -4,7 +4,6 @@ description: Provides a solution for warning and failure duration times are inco
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Warning and failure duration times are incorrect for SLA

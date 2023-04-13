@@ -4,7 +4,6 @@ description: Provides a solution for when provisioning fails due to expired lice
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Provisioning fails due to expired license

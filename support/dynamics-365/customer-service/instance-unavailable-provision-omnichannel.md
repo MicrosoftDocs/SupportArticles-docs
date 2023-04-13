@@ -4,7 +4,6 @@ description: Provides a solution for an issue where an instance is unavailable t
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Instance unavailable to select on the provisioning application <a name="provision"></a>

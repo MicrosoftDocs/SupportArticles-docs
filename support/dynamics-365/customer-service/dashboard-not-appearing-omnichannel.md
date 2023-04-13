@@ -4,7 +4,6 @@ description: Provides a solution to an issue where dashboards don't appear in Dy
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Dashboards don't appear in Omnichannel for Customer Service active dashboards view

@@ -4,7 +4,6 @@ description: Provides solutions to an issue when the chat widget doesn't load on
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Chat widget doesn't load on the portal

@@ -4,7 +4,6 @@ description: Provides a solution to issue when a conversation is stuck in a wrap
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Conversation is stuck in wrap-up state

@@ -4,7 +4,6 @@ description: Provides a solution for when the SLA KPI instance status shows as c
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # SLA KPI instance status shows as canceled

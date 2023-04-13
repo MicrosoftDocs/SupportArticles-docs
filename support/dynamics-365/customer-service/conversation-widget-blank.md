@@ -4,7 +4,6 @@ description: Provides a solution for when the conversation widget becomes blank 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Conversation widget becomes blank when changing browser tabs

@@ -4,7 +4,6 @@ description: Provides a solution for when standard SLAs aren't available in the 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Standard SLAs aren't showing up in the migration tool

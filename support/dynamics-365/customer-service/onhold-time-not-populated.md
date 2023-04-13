@@ -4,7 +4,6 @@ description: Provides a solution for when the OnHold Time attribute isn't popula
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # OnHold Time attribute isn't populated for Case for Unified Interface SLA

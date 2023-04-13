@@ -4,7 +4,6 @@ description: Provides a solution for errors that occur on the SLA form when upda
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 04/11/2023
-ms.subservice: d365-customer-service
 ---
 
 # Errors occur while updating a case
