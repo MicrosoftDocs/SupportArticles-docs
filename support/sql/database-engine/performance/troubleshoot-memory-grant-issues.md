@@ -115,7 +115,7 @@ pool_id total_memory_kb available_memory_kb granted_memory_kb used_memory_kb gra
 (4 rows affected)
 ```
 
-### [Performance Monitor counters](#tab/performance-monitor-counters)
+### <a name="performancemonitorcounters">Performance Monitor counters</a>(#tab/performance-monitor-counters)
 
 Similar information is available via Performance Monitor counters, where you can observe the currently granted requests (`Memory Grants Outstanding`), the waiting grant requests (`Memory Grants Pending`), and the amount of memory used by memory grants (`Granted Workspace Memory (KB)`). In the following picture, the outstanding grants are 18, the pending grants are 2, and the granted workspace memory is 828,288 KB. The `Memory Grants Pending` Perfmon counter with a nonzero value indicates that memory has been exhausted.
 
@@ -587,7 +587,7 @@ This diagnostic query is a sample, so feel free to modify it in any way that fit
 
 There are diagnostic tools that Microsoft SQL Server technical support uses to collect logs and more efficiently troubleshoot issues. [SQL LogScout](https://github.com/microsoft/sql_logscout) and [Pssdiag Configuration Manager](https://github.com/microsoft/diagmanager) (together with [SQLDiag](/sql/tools/sqldiag-utility)) collect outputs of the previously described DMVs and Performance Monitor counters that can help you diagnose memory grant issues.
 
-If you run SQL LogScout with *LightPerf*, *GeneralPerf*, or *DetailedPerf* scenarios, the tool collects the necessary logs. You can then manually examine the YourServer_PerfStats.out and look for `-- dm_exec_query_resource_semaphores --` and `-- dm_exec_query_memory_grants --` outputs. Or, instead of manual examination, you can use [SQL Nexus](https://github.com/microsoft/sqlnexus) to import the output coming from SQL LogScout or PSSDIAG into a SQL Server database. SQL Nexus creates two tables, `tbl_dm_exec_query_resource_semaphores` and `tbl_dm_exec_query_memory_grants`, which contain the information needed to diagnose memory grants. SQL LogScout and PSSDIAG also collect Perfmon logs in the form of *.BLG* files, which can be used to review the performance counters described in the [Performance Monitor counters](#performance-monitor-counterstabperformance-monitor-counters) section.
+If you run SQL LogScout with *LightPerf*, *GeneralPerf*, or *DetailedPerf* scenarios, the tool collects the necessary logs. You can then manually examine the YourServer_PerfStats.out and look for `-- dm_exec_query_resource_semaphores --` and `-- dm_exec_query_memory_grants --` outputs. Or, instead of manual examination, you can use [SQL Nexus](https://github.com/microsoft/sqlnexus) to import the output coming from SQL LogScout or PSSDIAG into a SQL Server database. SQL Nexus creates two tables, `tbl_dm_exec_query_resource_semaphores` and `tbl_dm_exec_query_memory_grants`, which contain the information needed to diagnose memory grants. SQL LogScout and PSSDIAG also collect Perfmon logs in the form of *.BLG* files, which can be used to review the performance counters described in the [Performance Monitor counters](#performancemonitorcounters) section.
 
 ## Why are memory grants important to a developer or DBA
 
