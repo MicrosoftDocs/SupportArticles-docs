@@ -20,14 +20,30 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Voicemail messages aren't delivered
+            url: ./hybrid-phone-system/voicemails-not-delivered.md
+          - text: Telephone contact number isn't updated
+            url: ./hybrid-phone-system/phone-contact-number-not-updated.md
           - text: Incoming call fails in Cloud Connector Edition
             url: ./hybrid-phone-system/incoming-call-fails-cloud-connector.md
-
+  # Card
+  - title: Exchange integration
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Repeatedly prompted for Exchange credentials
+            url: ./hybrid-exchange-integration/repeatedly-prompted-for-credentials.md
+          - text: The AllowAdalForNonLyncIndependentOfLync setting
+            url: ./hybrid-exchange-integration/allowadalfornonlyncindependentoflync-setting.md
  # Card
   - title: Move to Skype for Business Online
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: '"HostedMigration fault: Error =(506)"'
+            url: ./hybrid-move-sfb-online/hostedmigration-fault-error-506.md
+          - text: '"Move-CsUser: HostedMigration fault"'
+            url: ./hybrid-move-sfb-online/move-csuser--hostedmigration-fault.md
           - text: Skype for Business 2016 isn't installed in Microsoft 365
             url: ./hybrid-move-sfb-online/sfb-is-not-installed-office-365.md
  # Card
