@@ -242,10 +242,12 @@ Windows LAPS couldn't update the password of the local managed user account on t
     3. Select the *LSASS.exe* process on the left pane.
     4. Select **View** > **Show Lower Pane**.
     5. Select **View** > **Lower Pane View** > **DLLs**.
-    :::image type="content" source="media/windows-laps-troubleshooting-guidance/process-explorer-dlls.png" alt-text="Screenshot of the Process Explorer with loaded dlls or modules.":::
+
+        :::image type="content" source="media/windows-laps-troubleshooting-guidance/process-explorer-dlls.png" alt-text="Screenshot of the Process Explorer with loaded dlls or modules." lightbox="media/windows-laps-troubleshooting-guidance/process-explorer-dlls.png":::
+
 4. The lower pane would be visible with loaded DLLs or modules. Identify if there are any third party modules using the Company Name field (any modules other than Microsoft).
 
-Review the DLL list to identify if the name of the third party DLL (module) has some key words like "security" or "password" or "policies". Uninstall or stop the application or service that might be using this DLL.
+    Review the DLL list to identify if the name of the third party DLL (module) has some key words like "security" or "password" or "policies". Uninstall or stop the application or service that might be using this DLL.
 
 ### Machine joined to Azure AD
 
@@ -457,12 +459,20 @@ This issue can also occur if you move the machine to a different organizational 
 
 1. Open *LDP.exe*.
 2. Select **Connection** > **Connect** and configure as follows:
+
     :::image type="content" source="media/windows-laps-troubleshooting-guidance/ldp-connection-connect.png" alt-text="Screenshot of the LDP tool with the Connect window opened.":::
+
 3. Select **Connection** > **Bind**, configure as follows and select **OK**.
+
     :::image type="content" source="media/windows-laps-troubleshooting-guidance/ldp-connection-bind.png" alt-text="Screenshot of the LDP tool with the Bind window opened.":::
+
 4. Select **View** > **Tree**. Drop down on the base DN and select the domain where your client machine is located.
+
     :::image type="content" source="media/windows-laps-troubleshooting-guidance/ldp-view-tree.png" alt-text="Screenshot of the LDP tool with the Tree View window opened.":::
+
 5. Browse the domain tree to identify the OU where you have the client machines located. Right click the OU, select **Security descriptor** > **Edit**.
+
     :::image type="content" source="media/windows-laps-troubleshooting-guidance/ldp-security-descriptor-edit.png" alt-text="Screenshot of the LDP tool with the domain tree on the left pane.":::
+
 6. Sort the **Trustee** column and find below user rights for NT AUTHORITY\SELF permissions for the `msLAPS-Password` attribute.
     :::image type="content" source="media/windows-laps-troubleshooting-guidance/ldp-trustee.png" alt-text="Screenshot of the LDP tool with the Security descriptor window opened and sorted by the Trustee column.":::
