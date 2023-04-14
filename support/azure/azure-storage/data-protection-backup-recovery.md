@@ -1,6 +1,6 @@
 ---
-title: Azure Storage data protection, backup and recovery
-description: This article discusses data backup and protection options and recovery scenarios about Azure Storage.
+title: Azure Storage data protection, backup, and recovery
+description: This article discusses data backup and protection options and recovery scenarios for Azure Storage.
 ms.date: 04/14/2023
 ms.service: storage
 ms.author: v-weizhu
@@ -8,18 +8,18 @@ author: AmandaAZ
 ms.reviewer: jiajwu, ryanchen, azurestocic
 ms.topic: how-to
 ---
-# Best practice of Azure Storage data protection, backup and recovery
+# Best practices for Azure Storage data protection, backup, and recovery
 
-The article provides you with options of protecting Azure Storage data from being accidentally deleted, data backup, self-serve recovery scenarios, and Microsoft-assist recovery possibilities.
+The article provides options for protecting Azure Storage data from being accidentally deleted. It also addresses data backup, self-serve recovery scenarios, and Microsoft-assist recovery possibilities.
 
-## Data protection, backup and recovery options
+## Data protection, backup, and recovery options
 
 Azure Storage data protection refers to strategies for:
 
 - Protecting the storage account and data within it from being deleted or modified.
 - Restoring data after it has been deleted or modified.
 
-This section introduces available data protection, backup and recovery options. For more information, see [data backup and protection options](/azure/storage/blobs/data-protection-overview#overview-of-data-protection-options).
+This section introduces available data protection, backup, and recovery options. For more information, see [data backup and protection options](/azure/storage/blobs/data-protection-overview#overview-of-data-protection-options).
 
 ### Data protection and backup options
 
@@ -31,7 +31,7 @@ The following sections introduce data protection scenarios and recommended prote
 
 #### Scenario 1: Storage account protection
 
-Enable Azure Resource Manager (ARM) lock to lock all of your storage accounts and prevent deletion of the storage account. For more information about ARM lock, see [Apply an Azure Resource Manager lock to a storage account](/azure/storage/common/lock-account-resource).
+Enable Azure Resource Manager (ARM) lock to lock all your storage accounts and prevent the deletion of the storage account. For more information about ARM lock, see [Apply an Azure Resource Manager lock to a storage account](/azure/storage/common/lock-account-resource).
 
 Benefits and limitations:
 
@@ -55,15 +55,15 @@ Benefits and limitations:
 
     Benefits and limitations:
 
-  - A deleted container and its contents may be restored within the retention period. And the best practice of minimum retention interval should be of seven days.
-  - Only container-level operation like Delete container, can be restored. Container soft delete doesn't enable you to restore an individual blob in the container if that blob is deleted.
+  - A deleted container and its contents may be restored within the retention period. The best practice for a minimum retention interval is seven days.
+  - Only container-level operations, like Delete container, can be restored. Container soft delete doesn't enable you to restore an individual blob in the container if that blob is deleted.
   - It supports ADLS Gen 2.
 
     For more information on container soft delete, see [Soft delete for containers](/azure/storage/blobs/soft-delete-container-overview).
 
 #### Scenario 3: Blob file protection
 
-- Enable immutability policies on a blob version to prevent a blob version from being deleted for an interval that you control.
+- Enable immutability policies on a blob version to prevent a blob version from being deleted for an interval you control.
 
     Benefits and limitations:
 
@@ -78,7 +78,7 @@ Benefits and limitations:
 
     Benefits:
 
-  - A deleted blob or blob version may be restored within the retention period. And the best practice of minimum retention interval should be of seven days.
+  - A deleted blob or blob version may be restored within the retention period. The best practice for a minimum retention interval is seven days.
   - It supports ADLS Gen 2.
 
     For more information on blob soft delete, see [Soft delete for blobs](/azure/storage/blobs/soft-delete-blob-overview).
@@ -90,7 +90,7 @@ Benefits and limitations:
   - A blob may be restored from a snapshot if the blob is overwritten. However, if the blob is deleted, snapshots are also deleted.
   - It supports ADLS Gen 2 in preview.
 
-    For more information on blob snapshot, see [Blob snapshots](/azure/storage/blobs/snapshots-overview).
+    For more information on blob snapshots, see [Blob snapshots](/azure/storage/blobs/snapshots-overview).
 
 - Enable blob versioning to automatically save the state of a blob in a previous version when it's overwritten.
 
