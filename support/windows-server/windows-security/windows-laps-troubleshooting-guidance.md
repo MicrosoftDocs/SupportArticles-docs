@@ -360,7 +360,7 @@ Windows LAPS can be configured for a post authentication action using a **Post-a
 ### Resolution
 
 1. Identify if there's any application blocking a shutdown of the machine.
-2. Identify if you have necessary privileges ("Debug Programs") to shut down the machine.
+2. Identify if you have necessary privileges ("Debug programs") to shut down the machine.
 
 ## Event ID 10056
 
