@@ -1,7 +1,7 @@
 ---
 title: Azure Storage data protection, backup and recovery
 description: This article discusses data backup and protection options and recovery scenarios about Azure Storage.
-ms.date: 04/13/2023
+ms.date: 04/14/2023
 ms.service: storage
 ms.author: v-weizhu
 author: AmandaAZ
@@ -12,16 +12,115 @@ ms.topic: how-to
 
 The article provides you with options of protecting Azure Storage data from being accidentally deleted, data backup, self-serve recovery scenarios, and Microsoft-assist recovery possibilities.
 
-## Data backup and protection
+## Data protection, backup and recovery options
 
 Azure Storage data protection refers to strategies for:
 
 - Protecting the storage account and data within it from being deleted or modified.
 - Restoring data after it has been deleted or modified.
 
-This section introduces available data backup and protection options and Azure RBAC choices to avoid accidental account deletion. For more information, see [data backup and protection options](/azure/storage/blobs/data-protection-overview#overview-of-data-protection-options) and [best practices for Azure RBAC](/azure/role-based-access-control/best-practices).
+This section introduces available data protection, backup and recovery options. For more information, see [data backup and protection options](/azure/storage/blobs/data-protection-overview#overview-of-data-protection-options).
 
-### Data backup options
+### Data protection and backup options
+
+The following sections introduce data protection scenarios and recommended protection options:
+
+- [Scenario 1: Storage account protection](#scenario-1-storage-account-protection)
+- [Scenario 2: Blob container protection](#scenario-2-blob-container-protection)
+- [Scenario 3: Blob file protection](#scenario-3-blob-file-protection)
+
+#### Scenario 1: Storage account protection
+
+Enable Azure Resource Manager (ARM) lock to lock all of your storage accounts and prevent deletion of the storage account. For more information about ARM lock, see [Apply an Azure Resource Manager lock to a storage account](/azure/storage/common/lock-account-resource).
+
+Benefits and limitations:
+
+- Protect the storage account against deletion or configuration changes.
+- Doesn't protect containers or blobs in the account from being deleted or overwritten.
+- It supports ADLS Gen 2.
+
+#### Scenario 2: Blob container protection
+
+- Enable immutability policies on a container to protect business critical documents, such as to meet legal or regulatory compliance requirements.
+
+    Benefits and limitations:
+
+  - Protect a container and its blobs from all deletes and overwrites.
+  - When a legal hold or a locked time-based retention policy is in effect, the storage account is also protected from deletion. Containers for which no immutability policy has been set aren't protected from deletion.
+  - It supports ADLS Gen 2 in Preview.
+
+    For more information about immutability policies on a container, see [Store business-critical blob data with immutable storage](/azure/storage/blobs/immutable-storage-overview).
+
+- Enable container soft-delete to restore a deleted container within a specified interval.
+
+    Benefits and limitations:
+
+  - A deleted container and its contents may be restored within the retention period. And the best practice of minimum retention interval should be of seven days.
+  - Only container-level operation like Delete container, can be restored. Container soft delete doesn't enable you to restore an individual blob in the container if that blob is deleted.
+  - It supports ADLS Gen 2.
+
+    For more information on container soft delete, see [Soft delete for containers](/azure/storage/blobs/soft-delete-container-overview).
+
+#### Scenario 3: Blob file protection
+
+- Enable immutability policies on a blob version to prevent a blob version from being deleted for an interval that you control.
+
+    Benefits and limitations:
+
+  - Protects a blob version from being deleted and its metadata from being overwritten. An overwrite operation creates a new version.
+  - If at least one container has version-level immutability enabled, the storage account is also protected from deletion.  
+  - Container deletion fails if at least one blob exists in the container.
+  - It's *not* available for ADLS Gen2.
+
+    For more information on immutability policies on a blob version, see [Store business-critical blob data with immutable storage](/azure/storage/blobs/immutable-storage-overview).
+
+- Enable blob soft delete to restore a deleted blob or blob version within a specified interval.
+
+    Benefits:
+
+  - A deleted blob or blob version may be restored within the retention period. And the best practice of minimum retention interval should be of seven days.
+  - It supports ADLS Gen 2.
+
+    For more information on blob soft delete, see [Soft delete for blobs](/azure/storage/blobs/soft-delete-blob-overview).
+
+- Enable blob snapshot to manually save the state of a blob at a given point in time.
+
+    Benefits and limitations:
+
+  - A blob may be restored from a snapshot if the blob is overwritten. However, if the blob is deleted, snapshots are also deleted.
+  - It supports ADLS Gen 2 in preview.
+
+    For more information on blob snapshot, see [Blob snapshots](/azure/storage/blobs/snapshots-overview).
+
+- Enable blob versioning to automatically save the state of a blob in a previous version when it's overwritten.
+
+    Benefits and limitations:
+
+  - Every blob write operation creates a new version. The current version of a blob may be restored from a previous version if the current version is deleted or overwritten.
+  - It's not available for ADLS Gen2.  
+
+    For more information on blob versioning, see [Blob versioning](/azure/storage/blobs/versioning-overview).
+
+- Enable Point-in-time restore to restore a set of block blobs to a previous point in time.
+
+    Benefits and limitations:
+
+  - A set of block blobs may be reverted to their state at a specific point in the past.
+  - Only operations performed on block blobs are reverted.  
+  - Any operations performed on containers, page blobs, or append blobs aren't reverted.
+  - It's not available for ADLS Gen2.
+
+    For more information on point-in-time restore, see [Point-in-time restore for block blobs](/azure/storage/blobs/point-in-time-restore-overview).
+
+- Copy data to a second account via Azure Storage object replication or tools like AzCopy or Azure Data Factory.
+
+    Benefits and limitations:
+
+  - Data can be restored from the second storage account if the primary account is compromised in any way.
+  - AzCopy and Azure Data Factory are supported.
+  - Object replication isn't supported.
+
+### Data recovery options
 
 The following sections inrtoduce data recovery scenarios and possible recovery options:
 
@@ -29,7 +128,7 @@ The following sections inrtoduce data recovery scenarios and possible recovery o
 - [Scenario 2: Blob container recovery](#scenario-2-blob-container-recovery)
 - [Scenario 3: Blob file recovery](#scenario-3-blob-file-recovery)
 
-You can recover data after [data protection options](#data-protection-options) are enabled.
+You can recover data after [data protection and backup options](#data-protection-and-backup-options) are enabled.
 
 #### Scenario 1: Storage account recovery
 
@@ -117,105 +216,6 @@ Refers to [Recover deleted storage accounts from the Azure portal](#recover-dele
     1. Select **Promote**.
 
         :::image type="content" source="media/data-protection-backup-recovery/promote.png" alt-text="Screenshot that shows the 'Promote' option." lightbox="media/data-protection-backup-recovery/promote.png":::
-
-### Data protection options
-
-The following sections introduce data protection scenarios and recommended protection options:
-
-- [Scenario 1: Storage account protection](#scenario-1-storage-account-protection)
-- [Scenario 2: Blob container protection](#scenario-2-blob-container-protection)
-- [Scenario 3: Blob file protection](#scenario-3-blob-file-protection)
-
-#### Scenario 1: Storage account protection
-
-Enable Azure Resource Manager (ARM) lock to lock all of your storage accounts and prevent deletion of the storage account. For more information about ARM lock, see [Apply an Azure Resource Manager lock to a storage account](/azure/storage/common/lock-account-resource).
-
-Benefits and limitations:
-
-- Protect the storage account against deletion or configuration changes.
-- Doesn't protect containers or blobs in the account from being deleted or overwritten.
-- It supports ADLS Gen 2.
-
-#### Scenario 2: Blob container protection
-
-- Enable immutability policies on a container to protect business critical documents, such as to meet legal or regulatory compliance requirements.
-
-    Benefits and limitations:
-
-  - Protect a container and its blobs from all deletes and overwrites.
-  - When a legal hold or a locked time-based retention policy is in effect, the storage account is also protected from deletion. Containers for which no immutability policy has been set aren't protected from deletion.
-  - It supports ADLS Gen 2 in Preview.
-
-    For more information about immutability policies on a container, see [Store business-critical blob data with immutable storage](/azure/storage/blobs/immutable-storage-overview).
-
-- Enable container soft-delete to restore a deleted container within a specified interval.
-
-    Benefits and limitations:
-
-  - A deleted container and its contents may be restored within the retention period. And the best practice of minimum retention interval should be of seven days.
-  - Only container-level operation like Delete container, can be restored. Container soft delete doesn't enable you to restore an individual blob in the container if that blob is deleted.
-  - It supports ADLS Gen 2.
-
-    For more information on container soft delete, see[Soft delete for containers](/azure/storage/blobs/soft-delete-container-overview).
-
-#### Scenario 3: Blob file protection
-
-- Enable immutability policies on a blob version to prevent a blob version from being deleted for an interval that you control.
-
-    Benefits and limitations:
-
-  - Protects a blob version from being deleted and its metadata from being overwritten. An overwrite operation creates a new version.
-  - If at least one container has version-level immutability enabled, the storage account is also protected from deletion.  
-  - Container deletion fails if at least one blob exists in the container.
-  - It's *not* available for ADLS Gen2.
-
-    For more information on immutability policies on a blob version, see [Store business-critical blob data with immutable storage](/azure/storage/blobs/immutable-storage-overview).
-
-- Enable blob soft delete to restore a deleted blob or blob version within a specified interval.
-
-    Benefits:
-
-  - A deleted blob or blob version may be restored within the retention period. And the best practice of minimum retention interval should be of seven days.
-  - It supports ADLS Gen 2.
-
-    For more information on blob soft delete, see [Soft delete for blobs](/azure/storage/blobs/soft-delete-blob-overview).
-
-- Enable blob snapshot to manually save the state of a blob at a given point in time.
-
-    Benefits and limitations:
-
-  - A blob may be restored from a snapshot if the blob is overwritten. However, if the blob is deleted, snapshots are also deleted.
-  - It supports ADLS Gen 2 in preview.
-
-    For more information on blob snapshot, see [Blob snapshots](/azure/storage/blobs/snapshots-overview).
-
-- Enable blob versioning to automatically save the state of a blob in a previous version when it's overwritten.
-
-    Benefits and limitations:
-
-  - Every blob write operation creates a new version. The current version of a blob may be restored from a previous version if the current version is deleted or overwritten.
-  - It's not available for ADLS Gen2.  
-
-    For more information on blob versioning, see [Blob versioning](/azure/storage/blobs/versioning-overview).
-
-- Enable Point-in-time restore to restore a set of block blobs to a previous point in time.
-
-    Benefits and limitations:
-
-  - A set of block blobs may be reverted to their state at a specific point in the past.
-  - Only operations performed on block blobs are reverted.  
-  - Any operations performed on containers, page blobs, or append blobs aren't reverted.
-  - It's not available for ADLS Gen2.
-
-    For more information on point-in-time restore, see [Point-in-time restore for block blobs](/azure/storage/blobs/point-in-time-restore-overview).
-
-- Copy data to a second account via Azure Storage object replication or tools like AzCopy or Azure Data Factory.
-
-    Benefits and limitations:
-
-  - Data can be restored from the second storage account if the primary account is compromised in any way.
-  - AzCopy and Azure Data Factory are supported.
-  - Object replication isn't supported.
 
 ## Best practice for Azure RBAC
 
