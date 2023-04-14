@@ -1,7 +1,7 @@
 ---
 title: Copy blobs between storage accounts with network restriction
 description: Introduces how to copy blobs between storage accounts with AzCopy and how to implement this when network restrictions are set for the storage accounts.
-ms.date: 04/13/2023
+ms.date: 04/14/2023
 ms.topic: how-to
 ms.service: storage
 ms.author: v-weizhu
@@ -20,11 +20,21 @@ Copying blobs between two storage accounts by using AzCopy doesn't rely on netwo
 
 ## Copy blobs between storage accounts by using AzCopy
 
-To copy blobs between storage accounts directly, use the following command:
+- If you provide authorization credentials by using Azure Active Directory (Azure AD), use the following command:
 
-```azcopy
-azcopy copy 'https://<source-storage-account-name>.blob.core.windows.net/<container-name>/<blob-path>' 'https://<destination-storage-account-name>.blob.core.windows.net/<container-name>/<blob-path>'
-```
+    ```azcopy
+    azcopy copy 'https://<source-storage-account-name>.blob.core.windows.net/<container-name>/<blob-path>' 'https://<destination-storage-account-name>.blob.core.windows.net/<container-name>/<blob-path>'
+    ```
+
+    In this scenario, you need to make sure your Azure AD identity has the proper role assignments for both source and destination accounts.
+
+- If you use a Shared Access Signature (SAS) token, use the following command:
+
+    ```azcopy
+    azcopy copy 'https://<source-storage-account-name>.blob.core.windows.net/<container-name>/<blob-path><SAS-token>' 'https://<destination-storage-account-name>.blob.core.windows.net/<container-name>/<blob-path><SAS-token>'
+    ```
+
+    In this scenaio, you need to append a SAS token to both source or destination URL that use in your AzCopy commands.
 
 For more information, see [Copy blobs between Azure storage accounts with AzCopy v10](/azure/storage/common/storage-use-azcopy-blobs-copy).
 
