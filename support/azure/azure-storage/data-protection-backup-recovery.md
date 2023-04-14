@@ -41,13 +41,13 @@ Benefits and limitations:
 
 #### Scenario 2: Blob container protection
 
-- Enable immutability policies on a container to protect business critical documents, such as to meet legal or regulatory compliance requirements.
+- Enable immutability policies on a container to protect business-critical documents, such as to meet legal or regulatory compliance requirements.
 
     Benefits and limitations:
 
   - Protect a container and its blobs from all deletes and overwrites.
   - When a legal hold or a locked time-based retention policy is in effect, the storage account is also protected from deletion. Containers for which no immutability policy has been set aren't protected from deletion.
-  - It supports ADLS Gen 2 in Preview.
+  - It supports ADLS Gen 2 in preview.
 
     For more information about immutability policies on a container, see [Store business-critical blob data with immutable storage](/azure/storage/blobs/immutable-storage-overview).
 
@@ -207,12 +207,12 @@ Refers to [Recover deleted storage accounts from the Azure portal](#recover-dele
 
         :::image type="content" source="media/data-protection-backup-recovery/select-affected-blob.png" alt-text="Screenshot that shows the affected blob." lightbox="media/data-protection-backup-recovery/select-affected-blob.png":::
 
-    1. Select "..." for the blob that you would like to recover.
+    1. Select "..." for the blob you want to recover.
     1. Select **View snapshots**.
 
         :::image type="content" source="media/data-protection-backup-recovery/view-snapshots.png" alt-text="Screenshot that shows the 'View snapshots' option." lightbox="media/data-protection-backup-recovery/view-snapshots.png":::
 
-    1. Select the snapshot that is required to restore from.
+    1. Select the snapshot that's required to restore from.
     1. Select **Promote**.
 
         :::image type="content" source="media/data-protection-backup-recovery/promote.png" alt-text="Screenshot that shows the 'Promote' option." lightbox="media/data-protection-backup-recovery/promote.png":::
@@ -250,7 +250,7 @@ This section describes several supported storage recovery scenarios when some pr
 - [Scenario 5: Table recovery](#scenario-5-table-recovery)
 - [Scenario 6: Disk recovery](#scenario-6-disk-recovery)
 
-Microsoft is making every effort to recover the data, but cannot guarantee the amount of data that can be restored.
+Microsoft is making every effort to recover the data but cannot guarantee the amount of data that can be restored.
 
 ### Scenario 1: Storage account recovery (ARM storage account recovery)
 
@@ -285,7 +285,7 @@ Suggestions:
 
 Prerequisites:
 
-- The storage account replication was set to GRS, GZRS, RAGZRS or RA-GRS prior to "container" deletion. Storage accounts with LRS aren't supported to recover a deleted container.
+- The storage account replication was set to GRS, GZRS, RAGZRS, or RA-GRS prior to "container" deletion. Storage accounts with LRS aren't supported to recover a deleted container.
 
 Suggestions:
 
