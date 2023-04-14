@@ -168,7 +168,7 @@ Refers to [Recover deleted storage accounts from the Azure portal](#recover-dele
 
         :::image type="content" source="media/data-protection-backup-recovery/select-affected-blob.png" alt-text="Screenshot that shows the affected blob."  lightbox="media/data-protection-backup-recovery/select-affected-blob.png":::
 
-    1. Select "..." for the blob you want to recover.
+    1. Select "**...**" for the blob you want to recover.
     1. Select **View versions**.
 
         :::image type="content" source="media/data-protection-backup-recovery/view-previous-version.png" alt-text="Screenshot that shows the 'View versions' option." lightbox="media/data-protection-backup-recovery/view-previous-version.png":::
