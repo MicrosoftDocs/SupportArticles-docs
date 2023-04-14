@@ -15,7 +15,9 @@ ms.technology: windows-server-security
 ---
 # Windows LAPS troubleshooting guidance
 
-Windows Local Administrator Password Solution (Windows LAPS) is a Windows feature that automatically manages and backs up the password of a local administrator account on your Azure Active Directory-joined or Windows Server Active Directory-joined devices. You also can use Windows LAPS to automatically manage and back up the Directory Services Repair Mode (DSRM) account password on your Windows Server Active Directory domain controllers. An authorized administrator can retrieve the DSRM password and use it. For more information, see [What is Windows LAPS?](/windows-server/identity/laps/laps-overview)
+This guide provides the fundamental concepts used when troubleshooting Windows Local Administrator Password Solution (Windows LAPS) issues.
+
+Windows LAPS is a Windows feature that automatically manages and backs up the password of a local administrator account on your Azure Active Directory-joined or Windows Server Active Directory-joined devices. You also can use Windows LAPS to automatically manage and back up the Directory Services Repair Mode (DSRM) account password on your Windows Server Active Directory domain controllers. An authorized administrator can retrieve the DSRM password and use it. For more information, see [What is Windows LAPS?](/windows-server/identity/laps/laps-overview)
 
 > [!NOTE]
 >
@@ -80,7 +82,7 @@ By default, Windows LAPS encrypts the password of the managed account on the cli
     > [!NOTE]
     > We don't recommend to disable the password encryption which is stored on the domain controller.
 
-### Event ID 10011
+## Event ID 10011
 
 ```output
 LAPS failed when querying Active Directory for the current computer state
@@ -94,7 +96,7 @@ If you are in an environment where you have connectivity only to a writable doma
 
 For more information, see [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements).
 
-### Event ID 10012
+## Event ID 10012
 
 ```output
 The Active Directory schema has not been updated with the necessary LAPS attributes
