@@ -455,7 +455,7 @@ This issue can also occur if you move the machine to a different organizational 
 
 2. Verify if the computer account has the Self Permission on the OU where the machine account exists.
 
-### Logon to a domain controller with a domain administrators privilege
+### Logon to a domain controller with a domain administrator privilege
 
 1. Open *LDP.exe*.
 2. Select **Connection** > **Connect** and configure as follows:
