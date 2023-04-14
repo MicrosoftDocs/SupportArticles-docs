@@ -10,7 +10,7 @@ ms.topic: how-to
 ---
 # Best practices for Azure Storage data protection, backup, and recovery
 
-The article provides options for protecting Azure Storage data from being accidentally deleted. It also addresses data backup, self-serve recovery scenarios, and Microsoft-assist recovery possibilities.
+The article provides Azure Storage data protection and backup options, self-serve recovery scenarios, and Microsoft-assist recovery possibilities.
 
 ## Data protection, backup, and recovery options
 
@@ -326,11 +326,11 @@ Suggestions:
 
 There are two ways for end users to recover a deleted storage account from the Azure portal:
 
-- [Recover the deleted account from an existing storage account](#recovery-of-a-deleted-storage-account-from-another-storage-account).
+- [Recover the deleted account from an existing storage account](#recover-a-deleted-storage-account-from-another-storage-account).
 
-- [Recover the account via a support ticket](#recovery-of-storage-accounts-via-a-support-ticket).
+- [Recover the account via a support ticket](#recover-storage-accounts-via-a-support-ticket).
 
-### Recovery of a deleted storage account from another storage account
+### Recover a deleted storage account from another storage account
 
 To recover a deleted storage account from within another storage account, follow these steps:
 
@@ -348,7 +348,7 @@ To recover a deleted storage account from within another storage account, follow
 
 For more information, see [Recover a deleted account from the Azure portal](/azure/storage/common/storage-account-recover#recover-a-deleted-account-from-the-azure-portal).
 
-### Recovery of storage accounts via a support ticket
+### Recover storage accounts via a support ticket
 
 1. In the Azure portal, navigate to **Help + support**.
 1. Select **Create a support request**.
