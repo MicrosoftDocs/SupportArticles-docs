@@ -1,31 +1,29 @@
 ---
-title: Agent dashboard doesn't load or displays authorization error
-description: Provides a solution for when the agent dashboard doesn't load or displays an authorization error in Dynamics 365 Omnichannel for Customer Service.
-ms.reviewer: 
-ms.topic: troubleshooting
+title: Agent dashboard doesn't load or shows an authorization error
+description: Provides a resolution for the issue where the agent dashboard doesn't load or displays an authorization error in Dynamics 365 Omnichannel for Customer Service.
+ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---
-
 # Agent dashboard doesn't load or displays an authorization error
 
-This article provides a solution for when the agent dashboard in Omnichannel for Customer Service isn't loading or displays an authorization error.
+This article provides a resolution for the issue where the agent dashboard in Omnichannel for Customer Service isn't loading or displays an authorization error.
 
-## Symptom
+## Symptoms
 
-The agent dashboard won't load or gives an authorization error.
+The agent dashboard won't load or shows an authorization error.
 
 ## Cause
 
-The issue might happen due to the following reasons:
+The issue might occur due to the following reasons:
 
-- Azure Active Directory consent is not available for Omnichannel for Customer Service app.
-- Agent doesn't the Omnichannel agent role privileges.
-- Agent is not assigned to any queue.
+- Azure Active Directory (AAD) consent isn't available for the Omnichannel for Customer Service app.
+- Agent doesn't have the **Omnichannel Agent** role privileges.
+- Agent isn't assigned to any queue.
 
 ## Resolution
 
-Perform the following steps:
+To resolve this issue, take the following steps:
 
-- Contact your administrator to verify that Azure Active Directory consent is given to the Omnichannel for Customer Service application on your tenant. Go to [Authorize access](https://go.microsoft.com/fwlink/p/?linkid=2070932) to get access. To learn more, see [Provide data access consent](omnichannel-provision-license.md#provide-data-access-consent).
-- Ensure the agent account has the role **Omnichannel Agent**. For more information about the relevant roles, see [Understand roles and their privileges](add-users-assign-roles.md#understand-roles-and-their-privileges). 
-- Ensure the agent account is assigned to at least one queue in the Omnichannel Administration app. To learn more, see [Manage users in Omnichannel for Customer Service](users-user-profiles.md).
+1. Contact your administrator to verify that AAD consent is given to the Omnichannel for Customer Service app on your tenant. Go to [Authorize access](https://go.microsoft.com/fwlink/p/?linkid=2070932) to get access. To learn more, see [Provide data access consent](/dynamics365/customer-service/omnichannel-provision-license#provide-data-access-consent).
+2. Ensure the agent account has the **Omnichannel Agent** role. For more information about the relevant roles, see [Understand roles and their privileges](/dynamics365/customer-service/add-users-assign-roles#understand-roles-and-their-privileges).
+3. Ensure the agent account is assigned to at least one queue in the Omnichannel Administration app. To learn more, see [Manage users in Omnichannel for Customer Service](/dynamics365/customer-service/users-user-profiles).

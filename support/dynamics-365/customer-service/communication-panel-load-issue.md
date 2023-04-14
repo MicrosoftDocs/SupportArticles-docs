@@ -1,16 +1,16 @@
 ---
 title: Communication panel doesn't load in Omnichannel for Customer Service
-description: Provides a solution for when the communication panel doesn't load in Dynamics 365 Omnichannel for Customer Service.
-ms.reviewer: 
-ms.topic: troubleshooting
+description: Provides a resolution for the issue where the communication panel doesn't load in Dynamics 365 Omnichannel for Customer Service.
+ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---
+# Communication panel doesn't load in Omnichannel for Customer Service
 
-# Communication panel doesn't load in Omnichannel for Customer Service app
+This article provides a resolution for the issue where the communication panel doesn't load in the Omnichannel for Customer Service app.
 
-## Symptom
+## Symptoms
 
-The communication panel doesn't load in Omnichannel for Customer Service app.
+The communication panel doesn't load in the Omnichannel for Customer Service app.
 
 ## Cause
 
@@ -21,18 +21,20 @@ The panel doesn't load when:
 
 ## Resolution
 
+To solve this issue,
+
 - Create a Channel Integration Framework record with the following values. 
 
    | Field | value |
    |-------------------------------------------|--------------------------------------------------|
-   | Name | Omnichannel |
-   | Label | Omnichannel |
-   | Channel URL | \<Chat control cdn url>?uci=true&env=`<env>`&ocBaseUrl=\<oc endpoint\>&ucilib=\<crm org url\>/webresources/Widget/msdyn_ciLibrary.js |
-   | Enable Outbound Communication | No |
-   | Channel Order | 0 |
-   | API Version | 1.0 |
-   | Select Unified Interface Apps for the Channel | Omnichannel for Customer Service |
-   | Select the Roles for the Channel | <li>Omnichannel administrator</li>  <li>Omnichannel agent</li> <li>Omnichannel supervisor</li> |
+   | **Name** | Omnichannel |
+   | **Label** | Omnichannel |
+   | **Channel URL** | \<Chat control cdn url>?uci=true&env=`<env>`&ocBaseUrl=\<oc endpoint\>&ucilib=\<crm org url\>/webresources/Widget/msdyn_ciLibrary.js |
+   | **Enable Outbound Communication** | No |
+   | **Channel Order** | 0 |
+   | **API Version** | 1.0 |
+   | **Select Unified Interface Apps for the Channel** | Omnichannel for Customer Service |
+   | **Select the Roles for the Channel** | <li>Omnichannel administrator</li> <li>Omnichannel agent</li> <li>Omnichannel supervisor</li> |
 
    To learn how to create a record, see [Configure a channel provider for your Dynamics 365 organization](/dynamics365/customer-engagement/developer/channel-integration-framework/configure-channel-provider-channel-integration-framework).
 

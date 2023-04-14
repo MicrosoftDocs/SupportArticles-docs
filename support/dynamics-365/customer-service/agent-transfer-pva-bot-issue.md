@@ -1,20 +1,18 @@
 ---
-title: Missing required variables and actions during agent tranfers from Power Virtual Agents bots
-description: Provides a solution for missing required variables and actions during agent tranfers from Power Virtual Agents bots in Omnichannel for Customer Service.
-ms.reviewer: 
-ms.topic: troubleshooting
+title: Missing variables and actions during agent transfers from Power Virtual Agents bots
+description: Provides a resolution for the missing required variables and actions during agent transfers from Power Virtual Agents bots in Omnichannel for Customer Service.
+ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---
+# Missing required variables and actions during agent transfers from Power Virtual Agents bots
 
-# Missing required variables and actions during agent tranfers from Power Virtual Agents bots
+This article provides a resolution for the error that occurs when you're configuring the handoff between a Power Virtual Agents bot and the Omnichannel voice workstream.
 
-This article provides a solution for an error that occurs when you're configuring the handoff between Power Virtual Agents bot and the Omnichannel voice workstream.
+## Symptoms
 
-## Symptom
+An error message similar to the following message is displayed on the Power Virtual Agents dashboard when you're configuring the handoff between a Power Virtual Agents bot and the Omnichannel voice workstream:
 
-An error message similar to the following message is displayed on the Power Virtual Agents dashboard when you're configuring the handoff between Power Virtual Agents bot and the Omnichannel voice workstream:
-
-"Your bot doesn't have access to all the required variables and actions. Ask your admin about installing the Omnichannel package or follow this step-by-step walkthrough".
+> Your bot doesn't have access to all the required variables and actions. Ask your admin about installing the Omnichannel package or follow this step-by-step walkthrough.
 
 ## Cause
 
@@ -22,9 +20,8 @@ The configuration is missing extentions that allow the bot to access the variabl
 
 ## Resolution
 
-Ensure that the following extensions are installed. These extensions provide out-of-the-box actions or variables in the Power Virtual Agents authoring canvas that make the authoring experience easier for the bot author.
+Ensure that the following extentions are installed. These extensions provide out-of-the-box actions or variables in the Power Virtual Agents authoring canvas that make the authoring experience easier for the bot author.
 
-   - [Power Virtual Agents telephony extension](https://appsource.microsoft.com/product/dynamics-365/mscrm.mspva_telephony_extension)
-   - [Omnichannel Power Virtual Agent extension](https://appsource.microsoft.com/product/dynamics-365/mscrm.omnichannelpvaextension)
-   - [Omnichannel Voice Power Virtual Agent extension](https://appsource.microsoft.com/product/dynamics-365/mscrm.omnichannelvoicepvaextension)
-
+- [Power Virtual Agents telephony extension](https://appsource.microsoft.com/product/dynamics-365/mscrm.mspva_telephony_extension)
+- [Omnichannel Power Virtual Agent extension](https://appsource.microsoft.com/product/dynamics-365/mscrm.omnichannelpvaextension)
+- [Omnichannel Voice Power Virtual Agent extension](https://appsource.microsoft.com/product/dynamics-365/mscrm.omnichannelvoicepvaextension)
