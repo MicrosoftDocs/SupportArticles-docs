@@ -28,7 +28,7 @@ Here's an example of a query that uses execution memory and its query plan showi
 ```sql
 SELECT * 
 FROM sys.messages
-ORDER BY  message_id
+ORDER BY message_id
 ```
 
 This query selects a rowset of over 300,000 rows and sorts it. The sort operation induces a memory grant request. If you run this query in SSMS, you can view its query plan. When you select the left-most `SELECT` operator of the query plan, you can view the memory grant information for the query (press <kbd>F4</kbd> to show **Properties**):
@@ -75,7 +75,7 @@ There are multiple ways to determine waits for QE reservations. Pick the ones th
   - [Performance Monitor counters](#performance-monitor-counters) For more information, see [SQL Server Memory Manager object](/sql/relational-databases/performance-monitor/sql-server-memory-manager-object).
   - [DBCC MEMORYSTATUS](#dbcc-memorystatus) For more information, see [DBCC MEMORYSTATUS](dbcc-memorystatus-monitor-memory-usage.md).
   - [Memory clerks DMV sys.dm_os_memory_clerks](#memory-clerks-dmv-sysdm_os_memory_clerks) For more information, see [sys.dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql).
-  - [Identify memory grants using Extended Events (XEvents)](#identify-memory-grants-using-extended-events-xevents) For more information, see[Extended Events (XEvents)](/sql/relational-databases/extended-events/extended-events).
+  - [Identify memory grants using Extended Events (XEvents)](#identify-memory-grants-using-extended-events-xevents) For more information, see [Extended Events (XEvents)](/sql/relational-databases/extended-events/extended-events).
 
 - At the individual query level, use the following methods:
 
