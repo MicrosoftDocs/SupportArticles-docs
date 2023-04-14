@@ -197,27 +197,32 @@ To manually fix corruption errors that the System Update Readiness tool detects 
 5. Rerun the System Update Readiness tool.
 
 If you're a technical professional, see [How to fix errors found in the CheckSUR.log](/troubleshoot/windows-client/deployment/errors-in-checksur-log) for another option on fixing errors in the _CheckSUR.log_.
-__Preparation Before Opening a Support Case with Microsoft.__
-If the troubleshooting information in this article did not resolve your issue and you wish to open a commercial support case with Microsoft to diagnose the problem, please follow the steps below to collect the necessary data to begin the diagnosis of the issue.
- 
-__Data collection Steps__
-You will use a PowerShell script named TSSv2 to collect the diagnostic data.
- 
-__Prerequisites__
-1. TSSv2 must be run by accounts with administrator privileges on the local system, and EULA must be accepted (once EULA is accepted, TSSv2 won't prompt again).
-1. You must set the PowerShell execution policy to allow the script to execute
- 
-__Steps to run TSSv2__
-1. Download the TSS tool from [https://aka.ms/GetTSSv](https://aka.ms/GetTSSv2) 
-1.  Extract the contents of the download to c:\TSSv2
-1.  Click Start, type PowerShell, chose to run as Administrator. __Note__: Do no use PowerShell ISE
-1.  Run the following two commands.:
-1. “Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass”
-1. “.\TSSv2.ps1 -Collectlog DND_SetupReport
-1.  Enter A for "Yes to All" for the execution policy change
-1.  When the data collection is complete TSSv2 will save results to C:\MS_DATA
-1.  After a support case is created you can upload the data to the secure file share
- **Note**:
-- Depending on the device it can take some time for TSSv2 to complete.
-- If you have downloaded this tool previously it is recommended to download the latest version.  It does not auto update when run
+
+## Data collection
+
+Before contacting Microsoft support, you can gather information about your issue.
+
+### Prerequisites
+
+Refer [this page](/windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2#prerequisites) for prerequisites for the toolset to run properly.
+
+### Gather key information before contacting Microsoft support
+
+1. Download [TSSv2](https://aka.ms/getTSSv2) and extract it in the *C:\\tss_tool* folder.
+2. Open the *C:\\tss_tool* folder at an elevated PowerShell command prompt.  
+Note: Do no use PowerShell ISE
+
+3.  Run the following two commands.:
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```  
+```powershell
+.\TSSv2.ps1 -Collectlog DND_SetupReport
+```
+
+4. Enter *A* for "Yes to All" for the execution policy change
+
+**Note**:
+- The traces are stored in a compressed file in the *C:\\MSDATA* folder. After a support case is created, this file can be uploaded to the secure workspace for analysis.
+- If you have downloaded this tool previously it is recommended to download the latest version. It does not auto update when run.
 
