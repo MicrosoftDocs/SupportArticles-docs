@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot remote session disconnected using non-persistent VDI with per-user licensing
+title: Remote session disconnected using non-persistent VDI with per-user licensing
 description: Troubleshooting the "Remote Desktop License Servers unavailable" error when trying to connect to a remote session using non-persistent VDI.
 ms.date: 04/14/2023
 author: Heidilohr
