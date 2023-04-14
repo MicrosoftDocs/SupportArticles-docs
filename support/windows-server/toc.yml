@@ -3041,6 +3041,7 @@
     - name: Enabling smart card logon
       href: ./windows-security/enabling-smart-card-logon-third-party-certification-authorities.md
   - name: Windows LAPS
+    items:
     - name: 'Troubleshooting guidance: Windows LAPS'
       href: ./windows-security/windows-laps-troubleshooting-guidance.md
 - name: Windows Server End of Support (EoS) FAQ
