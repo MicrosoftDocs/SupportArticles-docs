@@ -326,9 +326,9 @@ Suggestions:
 
 There are two ways for end users to recover a deleted storage account from the Azure portal:
 
-- [Recover the deleted account from an existing storage account](#recovery-deleted-storage-account-from-another-storage-account).
+- [Recover the deleted account from an existing storage account](#recovery-of-a-deleted-storage-account-from-another-storage-account).
 
-- [Recover the account via a support ticket](#recovery-storage-accounts-via-a-support-ticket).
+- [Recover the account via a support ticket](#recovery-of-storage-accounts-via-a-support-ticket).
 
 ### Recovery of a deleted storage account from another storage account
 
