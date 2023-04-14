@@ -38,15 +38,15 @@ Copying blobs between two storage accounts by using AzCopy doesn't rely on netwo
 
 For more information, see [Copy blobs between Azure storage accounts with AzCopy v10](/azure/storage/common/storage-use-azcopy-blobs-copy).
 
-## Supported scenarios for copying blobs between storage accounts with network restriction
+## Copy blobs between storage accounts with access restriction
 
-For security or compliance reasons, many users must limit network access to destination and source storage accounts. If the network access is limited via the firewall allowlist, it's not supported to copy blobs between storage accounts by using AzCopy. This is because requests are sent from the source storage account backend through dynamic private IP addresses.
+If you need to restrict access to both source and destination storage account via the storage firewall, you may need more configurations for copying blobs between storage accounts by using AzCopy. This is because the copy request between two storage accounts uses private IP addresses and the IP addresses are dynamic.
 
-When network access is limited via the firewall allowlist, you can copy blobs with AzCopy under the following two supported scenarios:
+Here are two supported scenarios:
 
 ### Scenario 1: The client uses public endpoint to access storage accounts
 
-In this scenario, the client's public IP address or virtual network (VNET) must be added to the firewall allowlist in both source and destination storage account.
+In this scenario, you must add the client's public IP address or virtual network (VNET) to the firewall allowlist in both source and destination storage account.
 
 The following image shows the process of copying blobs between storage accounts in this scenario:
 
