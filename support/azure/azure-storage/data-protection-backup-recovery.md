@@ -122,7 +122,7 @@ Benefits and limitations:
 
 ### Data recovery options
 
-The following sections inrtoduce data recovery scenarios and possible recovery options:
+The following sections introduce data recovery scenarios and possible recovery options:
 
 - [Scenario 1: Storage account recovery](#scenario-1-storage-account-recovery)
 - [Scenario 2: Blob container recovery](#scenario-2-blob-container-recovery)
@@ -168,12 +168,12 @@ Refers to [Recover deleted storage accounts from the Azure portal](#recover-dele
 
         :::image type="content" source="media/data-protection-backup-recovery/select-affected-blob.png" alt-text="Screenshot that shows the affected blob."  lightbox="media/data-protection-backup-recovery/select-affected-blob.png":::
 
-    1. Select "..." for the blob that you would like to recover.
+    1. Select "..." for the blob you want to recover.
     1. Select **View versions**.
 
         :::image type="content" source="media/data-protection-backup-recovery/view-previous-version.png" alt-text="Screenshot that shows the 'View versions' option." lightbox="media/data-protection-backup-recovery/view-previous-version.png":::
 
-    1. Select the version that is required to restore from.
+    1. Select the version that's required to restore from.
     1. Select **Make current version**.
 
         :::image type="content" source="media/data-protection-backup-recovery/make-current-version.png" alt-text="Screenshot that shows the 'Make current version' option." lightbox="media/data-protection-backup-recovery/make-current-version.png":::
