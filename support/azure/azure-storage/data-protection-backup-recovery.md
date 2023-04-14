@@ -223,7 +223,7 @@ Another best practice to avoid accidental account deletion is to limit the numbe
 
 Here are some recommended methods:
 
-- Only grant the access users needed.
+- Only grant the access users need.
 - Limit the number of subscription owners.
 - Use Azure AD Privileged Identity Management.
 - Assign roles to groups, not users.
@@ -237,7 +237,7 @@ Microsoft doesn't support the following storage recovery scenarios:
 
 - Azure Storage Queue recovery isn't supported.
 - Azure Storage Table entries recovery isn't supported, while deleted table recovery is supported. For more information, see [Supported Storage Recovery](#supported-storage-recovery).
-- Azure Blob files recovery without enabling blob file protection isn't supported but deleted container recovery is supported. For more information, see [Supported Storage Recovery](#supported-storage-recovery).
+- Azure Blob files recovery without enabling blob file protection isn't supported, but deleted container recovery is supported. For more information, see [Supported Storage Recovery](#supported-storage-recovery).
 
 ## Supported storage recovery
 
@@ -250,7 +250,7 @@ This section describes several supported storage recovery scenarios when some pr
 - [Scenario 5: Table recovery](#scenario-5-table-recovery)
 - [Scenario 6: Disk recovery](#scenario-6-disk-recovery)
 
-Microsoft is providing the best effort attempts to recover the data but *without* guarantees on how much data could be restored.
+Microsoft is making every effort to recover the data, but cannot guarantee the amount of data that can be restored.
 
 ### Scenario 1: Storage account recovery (ARM storage account recovery)
 
@@ -259,9 +259,9 @@ Prerequisites:
 - The storage account was deleted within the past 14 days.
 - The storage account was created with the Azure Resource Manager deployment model.
 - A new storage account with the same name hasn't been created since the original account was deleted.
-- The user who is recovering the storage account must be assigned an Azure RBAC role that provides the **Microsoft.Storage/storageAccounts/write** permissions. For information about built-in Azure RBAC roles that provide this permission, see [Azure built-in roles](/azure/role-based-access-control/built-in-roles).
-- Make sure the resource group that deleted storage account exists. If the resource group was deleted, you must recreate it manually.  
-- [For specific cases only] If the deleted storage account used customer-managed keys with Azure Key Vault and key vault has also been deleted, you must restore the key vault before you restore the storage account. For more information, see [Azure Key Vault recovery overview](/azure/key-vault/general/key-vault-recovery).
+- The user recovering the storage account must be assigned an Azure RBAC role that provides the **Microsoft.Storage/storageAccounts/write** permissions. For information about built-in Azure RBAC roles that provide this permission, see [Azure built-in roles](/azure/role-based-access-control/built-in-roles).
+- Make sure the resource group that deleted the storage account exists. If the resource group was deleted, you must recreate it manually.  
+- [For specific cases only] If the deleted storage account used customer-managed keys with Azure Key Vault and the key vault has also been deleted, you must restore the key vault before you restore the storage account. For more information, see [Azure Key Vault recovery overview](/azure/key-vault/general/key-vault-recovery).
 
 Suggestions:
 
