@@ -306,7 +306,7 @@ Suggestions:
 
 Prerequisites:
 
-- The whole table is deleted by using "DELETE Table" operation without table entry data modified.
+- The whole table is deleted using the "DELETE Table" operation without modifying the table entry data. 
 
 Suggestions:
 
@@ -330,7 +330,7 @@ There are two ways for end users to recover a deleted storage account from the A
 
 - [Recover the account via a support ticket](#recovery-storage-accounts-via-a-support-ticket).
 
-### Recovery deleted storage account from another storage account
+### Recovery of a deleted storage account from another storage account
 
 To recover a deleted storage account from within another storage account, follow these steps:
 
@@ -339,25 +339,25 @@ To recover a deleted storage account from within another storage account, follow
 
     :::image type="content" source="media/data-protection-backup-recovery/restore-button.png" alt-text="Screenshot that shows the 'Restore' button." lightbox="media/data-protection-backup-recovery/restore-button.png":::
 
-1. Select the subscription for the account that you want to recover from the **Subscription** drop-down list.
+1. Select the subscription for the account you want to recover from the **Subscription** drop-down list.
 
     :::image type="content" source="media/data-protection-backup-recovery/subscription-drop-down-list.png" alt-text="Screenshot that shows how to select the subscription." lightbox="media/data-protection-backup-recovery/subscription-drop-down-list.png":::
 
-1. From the drop-down list, select the account to recover. If the storage account that you want to recover isn't in the drop-down list, then it can't be recovered.
+1. From the drop-down list, select the account to recover. If the storage account you want to recover isn't in the drop-down list, it can't be recovered.
 1. Select the **Restore** button to recover the account. The portal displays a notification that the recovery is in progress.
 
 For more information, see [Recover a deleted account from the Azure portal](/azure/storage/common/storage-account-recover#recover-a-deleted-account-from-the-azure-portal).
 
-### Recovery storage accounts via a support ticket
+### Recovery of storage accounts via a support ticket
 
 1. In the Azure portal, navigate to **Help + support**.
 1. Select **Create a support request**.
-1. On the **Problem description** tab, in the **Issue type** filed, select **Technical**.
+1. On the **Problem description** tab, in the **Issue type** field, select **Technical**.
 1. In the **Subscription** field, select the subscription that contained the deleted storage account.
 1. In the **Service** field, select **Storage Account Management**.
 1. In the **Resource** field, select any storage account resource. The deleted storage account doesn't appear in the list.
 1. Add a brief summary of the issue.
-1. In the **Problem type** filed, select **Deletion and Recovery**.
+1. In the **Problem type** field, select **Deletion and Recovery**.
 1. In the **Problem subtype** field, select **Recover deleted storage account**.
 
     The following screenshot shows an example of the **Problem description** tab being filled out:
@@ -368,9 +368,9 @@ For more information, see [Recover a deleted account from the Azure portal](/azu
 
     :::image type="content" source="media/data-protection-backup-recovery/customer-controlled-storage-account-recovery.png" alt-text="Screenshot of the Customer-Controlled Storage Account Recovery button.":::
 
-1. From the drop-down list, select the account to recover. If the storage account that you want to recover isn't in the drop-down list, then it can't be recovered.
+1. From the drop-down list, select the account to recover. If the storage account you want to recover isn't in the drop-down list, it can't be recovered.
 
-    :::image type="content" source="media/data-protection-backup-recovery/deleted-storage-accounts-list.png" alt-text="Screenshot of the deleted storage accounts list in last 14 days.":::
+    :::image type="content" source="media/data-protection-backup-recovery/deleted-storage-accounts-list.png" alt-text="Screenshot of the deleted storage accounts list for the last 14 days.":::
 
 1. Select **Recover** to restore the account. The portal displays a notification that the recovery is in progress.
 
