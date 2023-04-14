@@ -26,7 +26,7 @@ When a user accesses the application for authentication, the application redirec
 - The redirect URI sent from the application
 - The redirect URI values in the registered application in Azure AD
 
-If the redirect URI that the application sent doesn't match any of the redirect URIs in Azure AD, error AADSTS50011 will be returned. If the values match, Azure AD sends the user to the redirect URI.
+If the redirect URI the application sent doesn't match any of the redirect URIs in Azure AD, error AADSTS50011 will be returned. If the values match, Azure AD sends the user to the redirect URI.
 
 ## Resolution
 
@@ -43,7 +43,7 @@ To fix the issue, follow these steps to add a redirect URI in Azure AD app regis
     - If this app is owned by an organization (Azure AD tenant), use `https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/Authentication/appId/<AppGUID>`.
     - If this app is owned by your personal Microsoft (MSA) account, use `https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/Authentication/appId/<AppGUID>/isMSAApp/true`.
 
-1. On the app registration page, select **Authentication**. In the **Platform configurations** section, select **Add URI** to add the Redirect URI displayed in the error message to Azure AD.
+1. On the app registration page, select **Authentication**. In the **Platform configurations** section, select **Add URI** to add the redirect URI displayed in the error message to Azure AD.
 
     ![The screenshot about redirect URI in the AADSTS50011 error message](media\error-code-AADSTS50011-redirect-uri-mismatch\aadsts50011-error-redirecturi.png)
 
