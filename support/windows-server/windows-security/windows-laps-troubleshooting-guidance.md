@@ -243,7 +243,7 @@ Windows LAPS couldn't update the password of the local managed user account on t
     4. Select **View** > **Show Lower Pane**.
     5. Select **View** > **Lower Pane View** > **DLLs**.
 
-        :::image type="content" source="media/windows-laps-troubleshooting-guidance/process-explorer-dlls.png" alt-text="Screenshot of the Process Explorer with loaded dlls or modules." lightbox="media/windows-laps-troubleshooting-guidance/process-explorer-dlls.png":::
+        :::image type="content" source="media/windows-laps-troubleshooting-guidance/process-explorer-dlls-thumbnail.png" alt-text="Screenshot of the Process Explorer with loaded dlls or modules." lightbox="media/windows-laps-troubleshooting-guidance/process-explorer-dlls.png":::
 
 4. The lower pane would be visible with loaded DLLs or modules. Identify if there are any third party modules using the Company Name field (any modules other than Microsoft).
 
