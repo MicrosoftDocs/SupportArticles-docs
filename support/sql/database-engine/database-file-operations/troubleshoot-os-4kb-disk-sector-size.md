@@ -111,7 +111,7 @@ Consider _one_ of the following solutions:
   
     1. Navigate to `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\stornvme\Parameters\Device`.
     1. On the **Edit** menu, point to **New**, and then select **Multi-String value**. Name it `ForcedPhysicalSectorSizeInBytes`.
-    1. Modify the new value, type in `* 4095`. Click **OK** and close the Registry editor.
+    1. Modify the new value, type in `* 4095`. Select **OK** and close the Registry editor.
   
     <a id="commandpromptadmin"></a>**Command Prompt as Administrator**
 

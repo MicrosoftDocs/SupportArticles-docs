@@ -103,7 +103,7 @@ You can use the Microsoft Crash Dump File Checker (DumpChk) tool to verify that 
 For more information on how to use *Dumpchk.exe* to check your dump files, see the following articles:
 
 - [Using DumpChk](/windows-hardware/drivers/debugger/dumpchk)
-- [Download DumpChk](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
+- [Download DumpChk](https://developer.microsoft.com/windows/downloads/windows-sdk)
 
 ### Pagefile settings
 
@@ -135,7 +135,7 @@ You can use the tools such as Windows Software Development Kit (SDK) and symbols
 
 1. Verify that the computer is set up to generate a complete memory dump file when a crash occurs. For more information, see [Method 1: Memory dump](windows-based-computer-freeze-troubleshooting.md#method-1-memory-dump).
 2. Locate the *memory.dmp* file in your Windows directory on the computer that is crashing, and copy that file to another computer.
-3. On the other computer, download the [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk).
+3. On the other computer, download the [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-sdk).
 4. Start the install and choose **Debugging Tools for Windows**. The WinDbg tool is installed.
 5. Go to the **File** menu and select **Symbol File Path** to open the WinDbg tool and set the symbol path.
 
