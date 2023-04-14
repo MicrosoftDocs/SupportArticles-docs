@@ -1,5 +1,5 @@
 ---
-title: Copy blobs between storage accounts with network restriction
+title: Use AzCopy to copy blobs between storage accounts with access restriction
 description: Introduces how to copy blobs between storage accounts with AzCopy and how to implement this when network restrictions are set for the storage accounts.
 ms.date: 04/14/2023
 ms.topic: how-to
@@ -8,7 +8,7 @@ ms.author: v-weizhu
 author: AmandaAZ
 ms.reviewer: jiajwu, azurestocic
 ---
-# Copy blobs between Azure storage accounts with network restriction
+# Use AzCopy to copy blobs between Azure storage accounts with network restriction
 
 This article introduces how to copy blobs between storage accounts by using the AzCopy command-line utility and how to implement the copy operation when network restrictions are configured for the storage accounts.
 
@@ -18,7 +18,7 @@ Copying blob files between two storage accounts is a common requirement for many
 
 Copying blobs between two storage accounts by using AzCopy doesn't rely on network bandwidth of your local computer. This method can take advantage of the performance of storage accounts and Azure virtual network to achieve better throughput than downloading and uploading files. If both storage accounts are in the same region, bandwidth cost is free of charge.
 
-## Copy blobs between storage accounts by using AzCopy
+## AzCopy commands for copying blobs between storage accounts
 
 - If you provide authorization credentials by using Azure Active Directory (Azure AD), use the following command:
 
