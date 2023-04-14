@@ -125,7 +125,7 @@ If you use the legacy LAPS emulation, extend the schema with the `Update-AdmPwdA
 Due to the replication latency, the schema attributes haven't been replicated to the local domain controller. You can use the LDP or ADSIEDIT snap-in to identify if the Windows LAPS schema attributes have been replicated. Force Active Directory replication of the schema partition with the schema master by using the following command:
 
 ```console
-repadmin /replicate DC2.contoso.com  PDC.contoso.com  CN=Schema,CN=Configuration,DC=contoso,dc=com /force
+repadmin /replicate DC2.contoso.com PDC.contoso.com CN=Schema,CN=Configuration,DC=contoso,dc=com /force
 ```
 
 > [!NOTE]
@@ -184,7 +184,7 @@ Windows LAPS couldn't update the password of the local managed user account on t
 ### Resolution
 
 - Identify if there's a resource issue like a memory leak or out of memory issue. Reboot the machine to verify if you observe a similar error.
-- A third party application or filter driver that is managing the same managed user don't let Windows LAPS to manage the password.
+- A third-party application or filter driver that is managing the same managed user don't let Windows LAPS to manage the password.
 
 ## Event ID 10025
 
@@ -236,7 +236,7 @@ Windows LAPS couldn't update the password of the local managed user account on t
     > [!NOTE]
     > Your password policies configured in Active Directory, local GPO or security settings should match the Windows LAPS password settings or should contain lower settings to that of Windows LAPS "Password Settings" configuration.
 
-3. Verify if you have any third party password filter that might be blocking setting the password.
+3. Verify if you have any third-party password filter that might be blocking setting the password.
     1. Download [Process Explorer](/sysinternals/downloads/process-explorer).
     2. Extract and run Process Explorer as an Administrator.
     3. Select the *LSASS.exe* process on the left pane.
@@ -245,16 +245,16 @@ Windows LAPS couldn't update the password of the local managed user account on t
 
         :::image type="content" source="media/windows-laps-troubleshooting-guidance/process-explorer-dlls-thumbnail.png" alt-text="Screenshot of the Process Explorer with loaded dlls or modules." lightbox="media/windows-laps-troubleshooting-guidance/process-explorer-dlls.png":::
 
-4. The lower pane would be visible with loaded DLLs or modules. Identify if there are any third party modules using the Company Name field (any modules other than Microsoft).
+4. The lower pane would be visible with loaded DLLs or modules. Identify if there are any third-party modules using the Company Name field (any modules other than Microsoft).
 
-    Review the DLL list to identify if the name of the third party DLL (module) has some key words like "security" or "password" or "policies". Uninstall or stop the application or service that might be using this DLL.
+    Review the DLL list to identify if the name of the third-party DLL (module) has some key words like "security" or "password" or "policies". Uninstall or stop the application or service that might be using this DLL.
 
 ### Machine joined to Azure AD
 
-Azure AD or hybrid joined devices can be managed using mobile device management (MDM) (Intune) or local GPOs or any similar third party software.
+Azure AD or hybrid joined devices can be managed using mobile device management (MDM) (Intune) or local GPOs or any similar third-party software.
 
 1. Verify the password policy on the machine by running the 'net accounts` command in a command prompt. Validate if any of the password policies doesn't meet the criteria of Windows LAPS configured password policy like the password complexity, password length or password age.
-2. Identify if the conflicting policy is applying via Intune or local GPO or a similar third party software like Intune to manage the password policies on the machine.
+2. Identify if the conflicting policy is applying via Intune or local GPO or a similar third-party software like Intune to manage the password policies on the machine.
 
 ## Event ID 10028
 
@@ -311,7 +311,7 @@ The encryption principal is configured via a setting "Configure authorized passw
 Correct the Intune or GPO configuration. This setting accepts two values:
 
 - SID of a domain group or user
-- Group name in \<Domain Name\>\\\<Group Name\> or \<Domain Name\>\\\<User Name\> or \<User Name\>@\<domain\>.com
+- Group name in \<Domain Name\>\\\<Group Name\> or \<Domain Name\>\\\<User Name\> or \<User Name\>@\<Domain Name\>
 
 > [!NOTE]
 > Verify any trailing spaces at the beginning or the end of the setting.
@@ -322,7 +322,7 @@ Correct the Intune or GPO configuration. This setting accepts two values:
 The configured encryption principal name could not be mapped to a known account. This must be corrected before the configured account's password can be managed.
 ```
 
-The encryption principal is configured via a setting "Configure authorized password decryptors" using GPO or MDM (Intune). The setting accepts an SID or a domain group name in either \<Domain Name\>\\\<Group Name\> or \<Domain Name\>\\\<User Name\> or \<User Name\>@\<domain\>.com. The error occurs when the Windows LAPS client couldn't resolve the SID to a name or a name to an SID.
+The encryption principal is configured via a setting "Configure authorized password decryptors" using GPO or MDM (Intune). The setting accepts an SID or a domain group name in either \<Domain Name\>\\\<Group Name\> or \<Domain Name\>\\\<User Name\> or \<User Name\>@\<Domain Name\>. The error occurs when the Windows LAPS client couldn't resolve the SID to a name or a name to an SID.
 
 ### Resolution
 
