@@ -4,7 +4,7 @@ description: Provides troubleshooting steps to identify and reduce memory grant 
 author: pijocoder
 ms.author: jopilov
 ms.reviewer: pijocoder
-ms.date: 03/27/2023
+ms.date: 04/14/2023
 ms.custom: sap:Performance
 ---
 
