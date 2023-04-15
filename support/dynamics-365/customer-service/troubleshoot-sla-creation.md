@@ -22,7 +22,7 @@ SLA isn't enabled for the entity and an active KPI wasn't created.
 
 ### Resolution
 
-Enable SLA for the entity and create an active KPI. More information: [Enable entities for service level agreements](/dynamics365/customer-service/enable-entities-service-level-agreements.md#enable-entities-for-service-level-agreements)
+Enable SLA for the entity and create an active KPI. More information: [Enable entities for service level agreements](/dynamics365/customer-service/enable-entities-service-level-agreements#enable-entities-for-service-level-agreements)
 
 ## Issue 2 - Standard SLAs aren't showing up in the migration tool
 
@@ -262,7 +262,8 @@ In such scenarios, we recommend that you don't define the **Applicable when** an
 When updates are made to the target record, the attributes present in the **Applicable when** condition of the SLA item are modified in the applied SLA.
 
 Consider a scenario in which you've created an SLA in the web client with an SLA item that has the following **Applicable when** and **Success condition**, and is set as the default.
-> ![Scenario for troubleshooting SLAs.](media/troubleshoot-sla.png "Scenario for troubleshooting SLAs")
+
+![Scenario for troubleshooting SLAs.](media/troubleshoot-sla-creation/troubleshoot-sla.png "Scenario for troubleshooting SLAs")
 
 1. Create a case with case type set as question. The SLA timer starts.
 
@@ -344,7 +345,7 @@ SLA KPI instances aren't created because of one of the following reasons:
 
 ### Resolution 
 
-- SLA isn't applied: Verify if SLA is being applied correctly on the entity. More information: [Apply SLAs](apply-slas.md#apply-slas)
+- SLA isn't applied: Verify if SLA is being applied correctly on the entity. More information: [Apply SLAs](/dynamics365/customer-service/apply-slas)
 
 - No SLA Item is applicable: Verify whether the entity satisfies the Applicable when condition for at least one of the SLA items of the applied SLA.
 

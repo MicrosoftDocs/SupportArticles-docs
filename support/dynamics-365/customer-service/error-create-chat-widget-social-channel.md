@@ -23,4 +23,4 @@ These errors occur because though the solutions are already installed in your en
 
 ## Resolution
 
-To provision the solutions, perform the steps outlined in [Provision Omnichannel for Customer Service](omnichannel-provision-license.md).
+To provision the solutions, perform the steps outlined in [Provision Omnichannel for Customer Service](/dynamics365/customer-service/omnichannel-provision-license).

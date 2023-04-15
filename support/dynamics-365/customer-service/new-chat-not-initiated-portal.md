@@ -28,6 +28,6 @@ The issue might be caused by one of the following scenarios:
 
 As an administrator, make sure of the following details:
 
-- Check that agents have been added to the queues. For information on adding agents to queues, see [Create queues in Omnichannel admin center](queues-omnichannel.md#create-a-queue-for-unified-routing)
+- Check that agents have been added to the queues. For information on adding agents to queues, see [Create queues in Omnichannel admin center](/dynamics365/customer-service/queues-omnichannel?tabs=customerserviceadmincenter#create-a-queue-for-unified-routing).
 
-- For the associated workstream, check that the **Allowed Presence** option has values in the **Work distribution** area. More information: [Configure work distribution](create-workstreams.md#configure-work-distribution)
+- For the associated workstream, check that the **Allowed Presence** option has values in the **Work distribution** area. More information: [Configure work distribution](/dynamics365/customer-service/create-workstreams#configure-work-distribution).

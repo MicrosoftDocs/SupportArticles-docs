@@ -10,7 +10,7 @@
         - name: Chat isn't initiated when starting a new chat from portal
           href: new-chat-not-initiated-portal.md
         - name: Chat widget doesn't load on the portal
-          href: chat-widget-not-loading.md
+          href: chat-widget-not-loading-portal.md
         - name: Conversation widget blank when changing browser tabs
           href: conversation-widget-blank.md
         - name: Error occurs when trying to create a chat widget or social channel
@@ -24,7 +24,7 @@
         - name: Case creation fails because of queue address isssue
           href: case-creation-queue-address-issue.md
         - name: Incoming email isn't converted to a case
-          href: incoming-email-not-coverted-case.md
+          href: incoming-email-not-converted-case.md
         - name: Troubleshoot common email error messages
           href: common-email-error-messages.md
     - name: Issues with dashboards in Omnichannel for Customer Service
@@ -36,7 +36,7 @@
         - name: Dashboards don't appear in Omnichannel for Customer Service
           href: dashboard-not-appearing-omnichannel.md
         - name: Error in communication panel
-        - href: error-communication-panel.md
+          href: error-communication-panel.md
         - name: Agent dashboard displays authentication error after provisioning Omnichannel for Customer Service
           href: agent-dashboard-error-omnichannel-provision.md    
     - name: Issues with Power Virtual Agents
@@ -62,13 +62,13 @@
     - name: Issues with signing in to Customer Service
       items:
         - name: Errors when signing in to Customer Service
-        - href: omnichannel-signin-errors.md
+          href: omnichannel-signin-errors.md
     - name: Issues with SLAs
       items:
         - name: Issues with SLA creation
           items:
             - name: Primary entity isn't available while creating SLAs
-              href: create-slas-primary-entity 
+              href: create-slas-primary-entity.md 
         - name: Issues with SLA migration
           items:
             - name: Standard SLAs aren't showing up in the migration tool

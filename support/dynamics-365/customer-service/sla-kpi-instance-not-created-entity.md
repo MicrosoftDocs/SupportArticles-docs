@@ -26,9 +26,9 @@ SLA KPI instances aren't created because of one of the following reasons:
 
 - Dependencies are disabled.
 
-## Resolution 
+## Resolution
 
-- SLA isn't applied: Verify if SLA is being applied correctly on the entity. More information: [Apply SLAs](apply-slas.md#apply-slas)
+- SLA isn't applied: Verify if SLA is being applied correctly on the entity. More information: [Apply SLAs](/dynamics365/customer-service/apply-slas).
 
 - No SLA Item is applicable: Verify whether the entity satisfies the Applicable when condition for at least one of the SLA items of the applied SLA.
 

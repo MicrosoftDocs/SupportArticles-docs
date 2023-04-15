@@ -18,4 +18,4 @@ The browser version is outdated.
 
 ## Resolution
 
-Upgrade your browser version as per the system requirements of Dynamics 365 Channel Integration Framework version 2.0. To learn more, see [System requirements](channel-integration-framework/v2/system-requirements-channel-integration-framework-v2.md).
+Upgrade your browser version as per the system requirements of Dynamics 365 Channel Integration Framework version 2.0. To learn more, see [System requirements](/dynamics365/customer-service/channel-integration-framework/v2/system-requirements-channel-integration-framework-v2).

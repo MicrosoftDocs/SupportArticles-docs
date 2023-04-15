@@ -20,9 +20,6 @@ ms.date: 03/08/2023
 > [!INCLUDE [cc-preview-features-no-ms-support](~/../dynamics-365-customer-engagement-pr/ce/includes/cc-preview-features-no-ms-support.md)]
 >
 
-
-# Data isn't updated on the Insights tab for integrated search providers
-
 This article provides a solution for when data isn't updated on the Insights tab for integrated search providers in Customer Service.
 
 ## Symptom
