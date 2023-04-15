@@ -21,6 +21,6 @@ The issue occurs when you receive the chats in Customer Service Hub app.
 To resolve this issue, you must remove the Customer Service Hub app from the channel provider configuration in the Channel Integration Framework app.
 
 1. Sign in to Dynamics 365 Channel Integration Framework.
-2. Select the record that is related to omnichannel.
+2. Select the record that's related to omnichannel.
 3. Remove **Customer Service Hub** from the **Select Unified Interface Apps for the Channel** section.
 4. Select **Save** to save the record.
