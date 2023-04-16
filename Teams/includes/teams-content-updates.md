@@ -2,6 +2,13 @@
 
 
 
+## Week of April 10, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+
+
 ## Week of April 03, 2023
 
 
@@ -16,11 +23,3 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 3/29/2023 | [Self-help diagnostics for Teams administrators](/microsoftteams/troubleshoot/teams-administration/admin-self-help-diagnostics) | modified |
-
-
-## Week of March 06, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 3/8/2023 | [External participants (users) are blocked from joining a Teams meeting](/microsoftteams/troubleshoot/meetings/external-participants-join-meeting-blocked) | modified |
