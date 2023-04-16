@@ -43,78 +43,78 @@ Benefits and limitations:
 
 - Enable immutability policies on a container to protect business-critical documents, such as to meet legal or regulatory compliance requirements.
 
-    Benefits and limitations:
+  Benefits and limitations:
 
   - Protect a container and its blobs from all deletes and overwrites.
   - When a legal hold or a locked time-based retention policy is in effect, the storage account is also protected from deletion. Containers for which no immutability policy has been set aren't protected from deletion.
   - It supports ADLS Gen 2 in preview.
 
-    For more information about immutability policies on a container, see [Store business-critical blob data with immutable storage](/azure/storage/blobs/immutable-storage-overview).
+  For more information about immutability policies on a container, see [Store business-critical blob data with immutable storage](/azure/storage/blobs/immutable-storage-overview).
 
 - Enable container soft-delete to restore a deleted container within a specified interval.
 
-    Benefits and limitations:
+  Benefits and limitations:
 
   - A deleted container and its contents may be restored within the retention period. The best practice for a minimum retention interval is seven days.
   - Only container-level operations, like Delete container, can be restored. Container soft delete doesn't enable you to restore an individual blob in the container if that blob is deleted.
   - It supports ADLS Gen 2.
 
-    For more information on container soft delete, see [Soft delete for containers](/azure/storage/blobs/soft-delete-container-overview).
+  For more information on container soft delete, see [Soft delete for containers](/azure/storage/blobs/soft-delete-container-overview).
 
 #### Scenario 3: Blob file protection
 
 - Enable immutability policies on a blob version to prevent a blob version from being deleted for an interval you control.
 
-    Benefits and limitations:
+  Benefits and limitations:
 
   - Protects a blob version from being deleted and its metadata from being overwritten. An overwrite operation creates a new version.
   - If at least one container has version-level immutability enabled, the storage account is also protected from deletion.  
   - Container deletion fails if at least one blob exists in the container.
   - It's *not* available for ADLS Gen2.
 
-    For more information on immutability policies on a blob version, see [Store business-critical blob data with immutable storage](/azure/storage/blobs/immutable-storage-overview).
+  For more information on immutability policies on a blob version, see [Store business-critical blob data with immutable storage](/azure/storage/blobs/immutable-storage-overview).
 
 - Enable blob soft delete to restore a deleted blob or blob version within a specified interval.
 
-    Benefits:
+  Benefits:
 
   - A deleted blob or blob version may be restored within the retention period. The best practice for a minimum retention interval is seven days.
   - It supports ADLS Gen 2.
 
-    For more information on blob soft delete, see [Soft delete for blobs](/azure/storage/blobs/soft-delete-blob-overview).
+  For more information on blob soft delete, see [Soft delete for blobs](/azure/storage/blobs/soft-delete-blob-overview).
 
 - Enable blob snapshot to manually save the state of a blob at a given point in time.
 
-    Benefits and limitations:
+  Benefits and limitations:
 
   - A blob may be restored from a snapshot if the blob is overwritten. However, if the blob is deleted, snapshots are also deleted.
   - It supports ADLS Gen 2 in preview.
 
-    For more information on blob snapshots, see [Blob snapshots](/azure/storage/blobs/snapshots-overview).
+  For more information on blob snapshots, see [Blob snapshots](/azure/storage/blobs/snapshots-overview).
 
 - Enable blob versioning to automatically save the state of a blob in a previous version when it's overwritten.
 
-    Benefits and limitations:
+  Benefits and limitations:
 
   - Every blob write operation creates a new version. The current version of a blob may be restored from a previous version if the current version is deleted or overwritten.
   - It's not available for ADLS Gen2.  
 
-    For more information on blob versioning, see [Blob versioning](/azure/storage/blobs/versioning-overview).
+  For more information on blob versioning, see [Blob versioning](/azure/storage/blobs/versioning-overview).
 
 - Enable Point-in-time restore to restore a set of block blobs to a previous point in time.
 
-    Benefits and limitations:
+  Benefits and limitations:
 
   - A set of block blobs may be reverted to their state at a specific point in the past.
   - Only operations performed on block blobs are reverted.  
   - Any operations performed on containers, page blobs, or append blobs aren't reverted.
   - It's not available for ADLS Gen2.
 
-    For more information on point-in-time restore, see [Point-in-time restore for block blobs](/azure/storage/blobs/point-in-time-restore-overview).
+  For more information on point-in-time restore, see [Point-in-time restore for block blobs](/azure/storage/blobs/point-in-time-restore-overview).
 
 - Copy data to a second account via Azure Storage object replication or tools like AzCopy or Azure Data Factory.
 
-    Benefits and limitations:
+  Benefits and limitations:
 
   - Data can be restored from the second storage account if the primary account is compromised in any way.
   - AzCopy and Azure Data Factory are supported.
@@ -138,84 +138,84 @@ Refers to [Recover deleted storage accounts from the Azure portal](#recover-dele
 
 - Recover the soft-deleted container and its contents.
 
-    Requirements for recovery:
+  Requirements for recovery:
 
   - Container soft delete is enabled.
   - The container soft delete retention period hasn't yet expired.
   
-    For more information, see [Enable and manage soft delete for containers](/azure/storage/blobs/soft-delete-container-enable).
+  For more information, see [Enable and manage soft delete for containers](/azure/storage/blobs/soft-delete-container-enable).
 
 - Recovery from a second storage account.
 
-    Requirements for recovery: All container and blob operations have been replicated to a second storage account.
+  Requirements for recovery: All container and blob operations have been replicated to a second storage account.
 
 #### Scenario 3: Blob file recovery
 
 - Recover blobs to previous versions via blob versioning.
 
-    Requirements for recovery:
+  Requirements for recovery:
 
   - Blob versioning is enabled.
   - The blob has one or more previous versions.
 
-    For more information, see [Enable and manage blob versioning](/azure/storage/blobs/versioning-enable).
+  For more information, see [Enable and manage blob versioning](/azure/storage/blobs/versioning-enable).
 
-    This option is currently not supported for Azure Data Lake Storage (ADLS) workloads.
+  This option is currently not supported for Azure Data Lake Storage (ADLS) workloads.
 
-    Recovery procedures:
+  Recovery procedures:
 
-    1. Go to the affected blob from the Azure portal.
+  1. Go to the affected blob from the Azure portal.
 
-        :::image type="content" source="media/data-protection-backup-recovery/select-affected-blob.png" alt-text="Screenshot that shows the affected blob."  lightbox="media/data-protection-backup-recovery/select-affected-blob.png":::
+      :::image type="content" source="media/data-protection-backup-recovery/select-affected-blob.png" alt-text="Screenshot that shows the affected blob."  lightbox="media/data-protection-backup-recovery/select-affected-blob.png":::
 
-    1. Select "**...**" for the blob you want to recover.
-    1. Select **View versions**.
+  1. Select "**...**" for the blob you want to recover.
+  1. Select **View versions**.
 
-        :::image type="content" source="media/data-protection-backup-recovery/view-previous-version.png" alt-text="Screenshot that shows the 'View versions' option." lightbox="media/data-protection-backup-recovery/view-previous-version.png":::
+      :::image type="content" source="media/data-protection-backup-recovery/view-previous-version.png" alt-text="Screenshot that shows the 'View versions' option." lightbox="media/data-protection-backup-recovery/view-previous-version.png":::
 
-    1. Select the version that's required to restore from.
-    1. Select **Make current version**.
+  1. Select the version that's required to restore from.
+  1. Select **Make current version**.
 
-        :::image type="content" source="media/data-protection-backup-recovery/make-current-version.png" alt-text="Screenshot that shows the 'Make current version' option." lightbox="media/data-protection-backup-recovery/make-current-version.png":::
+      :::image type="content" source="media/data-protection-backup-recovery/make-current-version.png" alt-text="Screenshot that shows the 'Make current version' option." lightbox="media/data-protection-backup-recovery/make-current-version.png":::
 
 - Recover blobs via blob soft delete.
 
-    Requirements for recovery:
+  Requirements for recovery:
 
   - Blob soft delete is enabled.
   - The soft delete retention interval hasn't expired.
 
-    For more information, see [Manage and restore soft-deleted blobs](/azure/storage/blobs/soft-delete-blob-manage).
+  For more information, see [Manage and restore soft-deleted blobs](/azure/storage/blobs/soft-delete-blob-manage).
 
 - Recover a set of block blobs via point-in-time.
 
-    Requirements for recovery:
+  Requirements for recovery:
 
   - Point-in-time restore is enabled.
   - The restore point is within the retention interval.
   - The storage account hasn't been compromised or corrupted.
 
-    For more information, see [Perform a point-in-time restore on block blob data](/azure/storage/blobs/point-in-time-restore-manage).
+  For more information, see [Perform a point-in-time restore on block blob data](/azure/storage/blobs/point-in-time-restore-manage).
 
 - Recover blobs via snapshots.
 
-    Requirements for recovery: The blob has one or more snapshots. For more information, see [Create and manage a blob snapshot in .NET](/azure/storage/blobs/snapshots-manage-dotnet).
+  Requirements for recovery: The blob has one or more snapshots. For more information, see [Create and manage a blob snapshot in .NET](/azure/storage/blobs/snapshots-manage-dotnet).
 
-    Recovery procedures:
+  Recovery procedures:
 
-    1. Go to the affected blob from the Azure portal.
+  1. Go to the affected blob from the Azure portal.
 
-        :::image type="content" source="media/data-protection-backup-recovery/select-affected-blob.png" alt-text="Screenshot that shows the affected blob." lightbox="media/data-protection-backup-recovery/select-affected-blob.png":::
+      :::image type="content" source="media/data-protection-backup-recovery/select-affected-blob.png" alt-text="Screenshot that shows the affected blob." lightbox="media/data-protection-backup-recovery/select-affected-blob.png":::
 
-    1. Select "..." for the blob you want to recover.
-    1. Select **View snapshots**.
+  1. Select "..." for the blob you want to recover.
+  1. Select **View snapshots**.
 
-        :::image type="content" source="media/data-protection-backup-recovery/view-snapshots.png" alt-text="Screenshot that shows the 'View snapshots' option." lightbox="media/data-protection-backup-recovery/view-snapshots.png":::
+      :::image type="content" source="media/data-protection-backup-recovery/view-snapshots.png" alt-text="Screenshot that shows the 'View snapshots' option." lightbox="media/data-protection-backup-recovery/view-snapshots.png":::
 
-    1. Select the snapshot that's required to restore from.
-    1. Select **Promote**.
+  1. Select the snapshot that's required to restore from.
+  1. Select **Promote**.
 
-        :::image type="content" source="media/data-protection-backup-recovery/promote.png" alt-text="Screenshot that shows the 'Promote' option." lightbox="media/data-protection-backup-recovery/promote.png":::
+      :::image type="content" source="media/data-protection-backup-recovery/promote.png" alt-text="Screenshot that shows the 'Promote' option." lightbox="media/data-protection-backup-recovery/promote.png":::
 
 ## Best practice for Azure RBAC
 
@@ -285,7 +285,7 @@ Suggestions:
 
 Prerequisites:
 
-- The storage account replication was set to GRS, GZRS, RAGZRS, or RA-GRS prior to "container" deletion. Storage accounts with LRS aren't supported to recover a deleted container.
+- The storage account replication was set to geo-redundant storage (GRS), geo-zone-redundant storage (GZRS), read-access geo-zone-redundant storage (RAGZRS), or read-access geo-redundant storage (RA-GRS) prior to "container" deletion. Storage accounts with LRS aren't supported to recover a deleted container.
 
 Suggestions:
 
