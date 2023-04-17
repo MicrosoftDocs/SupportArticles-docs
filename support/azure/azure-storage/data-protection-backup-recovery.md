@@ -1,7 +1,7 @@
 ---
 title: Azure Storage data protection, backup, and recovery
 description: This article discusses data backup and protection options and recovery scenarios for Azure Storage.
-ms.date: 04/14/2023
+ms.date: 04/17/2023
 ms.service: storage
 ms.author: v-weizhu
 author: AmandaAZ
@@ -35,9 +35,9 @@ Enable Azure Resource Manager (ARM) lock to lock all your storage accounts and p
 
 Benefits and limitations:
 
-- Protect the storage account against deletion or configuration changes.
+- Protects the storage account against deletion or configuration changes.
 - Doesn't protect containers or blobs in the account from being deleted or overwritten.
-- It supports ADLS Gen 2.
+- It supports Azure Data Lake Storage (ADLS) Gen 2.
 
 #### Scenario 2: Blob container protection
 
@@ -45,7 +45,7 @@ Benefits and limitations:
 
   Benefits and limitations:
 
-  - Protect a container and its blobs from all deletes and overwrites.
+  - Protects a container and its blobs from all deletes and overwrites.
   - When a legal hold or a locked time-based retention policy is in effect, the storage account is also protected from deletion. Containers for which no immutability policy has been set aren't protected from deletion.
   - It supports ADLS Gen 2 in preview.
 
@@ -56,7 +56,7 @@ Benefits and limitations:
   Benefits and limitations:
 
   - A deleted container and its contents may be restored within the retention period. The best practice for a minimum retention interval is seven days.
-  - Only container-level operations, like Delete container, can be restored. Container soft delete doesn't enable you to restore an individual blob in the container if that blob is deleted.
+  - Only container-level operations, like "Delete container", can be restored. Container soft delete doesn't enable you to restore an individual blob in the container if that blob is deleted.
   - It supports ADLS Gen 2.
 
   For more information on container soft delete, see [Soft delete for containers](/azure/storage/blobs/soft-delete-container-overview).
@@ -160,7 +160,7 @@ Refers to [Recover deleted storage accounts from the Azure portal](#recover-dele
 
   For more information, see [Enable and manage blob versioning](/azure/storage/blobs/versioning-enable).
 
-  This option is currently not supported for Azure Data Lake Storage (ADLS) workloads.
+  This option is currently not supported for ADLS workloads.
 
   Recovery procedures:
 
@@ -316,7 +316,7 @@ Suggestions:
 
 Prerequisites:
 
-- The prerequisites of Disk Recovery vary depending on a few factors. For instance, is soft delete enabled? Or does the recovery disk refer to managed disk or unmanaged disk?
+- The prerequisites of disk recovery vary depending on a few factors. For instance, is soft delete enabled? Or does the recovery disk refer to managed disk or unmanaged disk?
 
 Suggestions:
 
