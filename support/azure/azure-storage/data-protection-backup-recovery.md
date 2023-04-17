@@ -166,9 +166,9 @@ Refers to [Recover deleted storage accounts from the Azure portal](#recover-dele
 
   1. Go to the affected blob from the Azure portal.
 
-      :::image type="content" source="media/data-protection-backup-recovery/select-affected-blob.png" alt-text="Screenshot that shows the affected blob."  lightbox="media/data-protection-backup-recovery/select-affected-blob.png":::
+      :::image type="content" source="media/data-protection-backup-recovery/select-affected-blob.png" alt-text="Screenshot that shows the affected blob." lightbox="media/data-protection-backup-recovery/select-affected-blob.png":::
 
-  1. Select "**...**" for the blob you want to recover.
+  1. Select the ellipses (...) for the blob you want to recover.
   1. Select **View versions**.
 
       :::image type="content" source="media/data-protection-backup-recovery/view-previous-version.png" alt-text="Screenshot that shows the 'View versions' option." lightbox="media/data-protection-backup-recovery/view-previous-version.png":::
@@ -207,7 +207,7 @@ Refers to [Recover deleted storage accounts from the Azure portal](#recover-dele
 
       :::image type="content" source="media/data-protection-backup-recovery/select-affected-blob.png" alt-text="Screenshot that shows the affected blob." lightbox="media/data-protection-backup-recovery/select-affected-blob.png":::
 
-  1. Select "..." for the blob you want to recover.
+  1. Select the ellipses (...) for the blob you want to recover.
   1. Select **View snapshots**.
 
       :::image type="content" source="media/data-protection-backup-recovery/view-snapshots.png" alt-text="Screenshot that shows the 'View snapshots' option." lightbox="media/data-protection-backup-recovery/view-snapshots.png":::
@@ -244,8 +244,8 @@ Microsoft doesn't support the following storage recovery scenarios:
 This section describes several supported storage recovery scenarios when some prerequisites are met:
 
 - [Scenario 1: Storage account recovery (ARM storage account recovery)](#scenario-1-storage-account-recovery-arm-storage-account-recovery)
-- [Scenarios 2: Classic storage account recovery](#scenarios-2-classic-storage-account-recovery)
-- [Scenarios 3: Container recovery](#scenarios-3-container-recovery)
+- [Scenario 2: Classic storage account recovery](#scenario-2-classic-storage-account-recovery)
+- [Scenario 3: Container recovery](#scenario-3-container-recovery)
 - [Scenario 4: ADLS Gen 2 data and file system recovery](#scenario-4-adls-gen-2-data-and-file-system-recovery)
 - [Scenario 5: Table recovery](#scenario-5-table-recovery)
 - [Scenario 6: Disk recovery](#scenario-6-disk-recovery)
@@ -270,7 +270,7 @@ Suggestions:
 
 For more information, see [Recover deleted storage accounts from Azure portal](#recover-deleted-storage-accounts-from-the-azure-portal).
 
-### Scenarios 2: Classic storage account recovery
+### Scenario 2: Classic storage account recovery
 
 Prerequisites:
 
@@ -281,7 +281,7 @@ Suggestions:
 
 - Seek help from support engineers to evaluate the situation.
 
-### Scenarios 3: Container recovery
+### Scenario 3: Container recovery
 
 Prerequisites:
 
