@@ -1,3 +1,9 @@
+---
+title: Regarding DPAPI Backup Keys on Active Directory Domain Controllers
+description: Regarding DPAPI Backup Keys on Active Directory Domain Controllers
+ms.prod
+---
+
 # Regarding DPAPI Backup Keys on Active Directory Domain Controllers
 
 In the Active Directory database, there exists a set of objects known as DPAPI Backup Keys. These objects include:
