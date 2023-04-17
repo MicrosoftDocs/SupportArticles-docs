@@ -6,6 +6,7 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
+ms.custom: devx-track-azurepowershell
 ms.service: virtual-machines
 ms.subservice: vm-cannot-connect
 ms.collection: windows

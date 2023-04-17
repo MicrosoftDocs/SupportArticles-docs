@@ -10,12 +10,12 @@ ms.reviewer: tiffanyyu
 
 # Azure dependency availability by primary country/region
 
-Many product features have Azure dependencies that might not be available in all primary countries/regions. This includes, but is not limited to, the following list:
+Many product features have Azure dependencies that might not be available in all primary countries/regions. This includes, but isn't limited to, the following list:
 
 - Insider risk management
 - Microsoft Threat Protection (MTP)
 - Microsoft Purview Information Protection
-  - Auto-labeling for sensitivity labels
+- Autolabeling for sensitivity labels
 - Communication compliance
 - Attack simulation
 - Microsoft Application Protection and Governance (MAPG)
@@ -36,11 +36,12 @@ Primary countries/regions that have Azure dependencies availability as of April 
 - Germany
 - India
 - Japan
-- Norway*
-- South Africa*
+- Norway
+- South Africa
 - South Korea
+- Sweden*
 - Switzerland
-- United Arab Emirates*
+- United Arab Emirates
 - United Kingdom
 - United States of America
 
@@ -50,7 +51,5 @@ Countries/regions that are planned to get Azure dependencies availability soon:
 
 - Qatar
 - Singapore
-- Sweden
-
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
