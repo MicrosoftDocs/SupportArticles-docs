@@ -6,7 +6,7 @@ ms.reviewer: adoyle, adoyle
 ---
 # Antivirus exclusions that relate to Operations Manager 2012, 2012 R2, and 2016
 
-This article shows antivirus exclusions that relate to System Center 2012 Operations Manager, System Center 2012 R2 Operations Manager, and System Center 2016 Operations Manager. For later versions of Operations Manager, see [Configuring antivirus exclusions for agent and components](/system-center/scom/plan-security-antivirus).
+This article shows antivirus exclusions that relate to System Center 2012 Operations Manager, System Center 2012 R2 Operations Manager, and System Center 2016 Operations Manager. For later versions of Operations Manager, see [Antivirus exclusions (Operations Manager 2019, 2022, and later)](/system-center/scom/plan-security-antivirus).
 
 _Original product version:_ &nbsp; Microsoft System Center 2012 Operations Manager, System Center 2012 R2 Operations Manager, System Center 2016 Operations Manager  
 _Original KB number:_ &nbsp; 975931
