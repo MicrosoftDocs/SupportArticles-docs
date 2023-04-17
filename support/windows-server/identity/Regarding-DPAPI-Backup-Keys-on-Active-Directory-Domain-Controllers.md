@@ -1,7 +1,6 @@
 ---
 title: Regarding DPAPI Backup Keys on Active Directory Domain Controllers
 description: Regarding DPAPI Backup Keys on Active Directory Domain Controllers
-ms.prod
 ---
 
 # Regarding DPAPI Backup Keys on Active Directory Domain Controllers
