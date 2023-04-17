@@ -17,7 +17,7 @@ This article discusses text rendering issues that may occur when the text displa
 
 ## Symptoms
 
-Consider a scenario when you change the text, a `TextBlock` control (including derived classes) that's a child of a viewBox might leave remaining text on the screen.
+Consider a scenario when you change the text, a TextBlock control (including derived classes) that's a child of a viewBox might leave remaining text on the screen.
 
 ## Cause
 
