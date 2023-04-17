@@ -1,7 +1,7 @@
 ---
 title: Azure Batch task fails without stdout or stderr
 description: Explains the cause for Azure Batch tasks failure without stdout or stderr and provides some suggestions.
-ms.date: 04/13/2023
+ms.date: 04/17/2023
 author: AmandaAZ
 ms.author: v-weizhu
 ms.reviewer: biny
@@ -27,7 +27,7 @@ The Batch service doesn't determine a task's exit code. The process itself, or t
 
 ## Recommended steps
 
-Try to determine the cause based on the exit code.
+Try to determine why the process fails based on the exit code.
 
 If it's hard to identify the cause based on the exit code, perform more debugging by the following steps:
 
