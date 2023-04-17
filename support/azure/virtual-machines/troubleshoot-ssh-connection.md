@@ -29,7 +29,7 @@ After each troubleshooting step, try reconnecting to the VM.
 3. Verify the [network security group](/azure/virtual-network/network-security-groups-overview) rules permit SSH traffic and role assignment.
    * Ensure that a [Network Security Group rule](#check-security-rules) exists to permit SSH traffic (by default, TCP port 22).
    * You cannot use port redirection / mapping without using an Azure load balancer.
-   * If you are using [Azure AD login](/azure/active-directory/devices/howto-vm-sign-in-azure-ad-linux) for VMs, the **Virtual Machine Administrator Login** or **Virtual Machine User Login role** must be assigned to the users. Otherwise, the "Permission denied (publickey)" error is returned. 
+   * If you are using Azure Active Directory (Azure AD) to manage SSH logins, the **Virtual Machine Administrator Login** or **Virtual Machine User Login role** must be assigned to the user on the resource group that contains the VM and its associated resources. Otherwise, the "Permission denied (publickey)" error is returned. For more information, see [Configure role assignments for the VM that uses Azure AD login](/azure/active-directory/devices/howto-vm-sign-in-azure-ad-linux#configure-role-assignments-for-the-vm).
 4. Check the [VM resource health](/azure/service-health/resource-health-overview).
    * Ensure that the VM reports as being healthy.
    * If you have [boot diagnostics enabled](boot-diagnostics.md), verify the VM is not reporting boot errors in the logs.
