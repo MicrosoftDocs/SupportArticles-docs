@@ -196,7 +196,7 @@ The device (Azure AD joined or hybrid joined) that is configured with Windows LA
 
 ### Resolution
 
-1. Verify if you can connect successfully to the [registration endpoint](https://enterpriseregistration.windows.net). If you open Microsoft Edge or Google Chrome and connect to the [registration endpoint](https://enterpriseregistration.windows.net), you get a message "Endpoint not found". This message means you're able to connect to the Enterprise Registration Endpoint.
+1. Verify if you can connect successfully to the registration endpoint (`https://enterpriseregistration.windows.net`). If you open Microsoft Edge or Google Chrome and connect to the registration endpoint (`https://enterpriseregistration.windows.net`), you get a message "Endpoint not found". This message means you're able to connect to the Enterprise Registration Endpoint.
 2. If you're using a proxy server, then validate or verify that your proxy is configured under the system context. You can open an elevated command prompt and run the `netsh winhttp show proxy` command to display the proxy.
 
 ## Event ID 10026
@@ -413,7 +413,7 @@ The event would also contain an HTTP error. The error is originating from connec
 
 ### Resolution
 
-1. Verify if you can successfully connect to Azure AD [registration endpoint](https://enterpriseregistration.windows.net).
+1. Verify if you can successfully connect to Azure AD registration endpoint (`https://enterpriseregistration.windows.net`).
 2. Verify if you have enabled Windows LAPS feature in your Azure tenant.
 3. Verify if the machine isn't deleted or disabled in your Azure tenant.
 4. Open a command prompt and run the `dsregcmd /status` command to review below sections for any errors:
