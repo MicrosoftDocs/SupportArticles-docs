@@ -1,3 +1,7 @@
-- name: Office 
+- name: Learn
   tocHref: /
-  topicHref: /office/troubleshoot/index
+  topicHref: /
+  items:
+  - name: Microsoft 365 apps
+    tocHref: /office/troubleshoot/
+    topicHref: /office/troubleshoot/index

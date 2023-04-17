@@ -1,6 +1,6 @@
 ---
 title: Can't retain cloud attachments
-description: Provides a table to identify which sharing mechanisms are cloud attachments in Outlook and Teams and which are not for retention.
+description: Provides a table to identify which sharing mechanisms are cloud attachments in Outlook and Teams for retention and which aren't.
 author: v-charloz
 ms.author: v-chazhang
 manager: dcscontentpm
@@ -21,7 +21,7 @@ ms.date: 3/31/2022
 
 [!include[Purview banner](../../../includes/purview-rebrand.md)]
 
-Microsoft Purview provides tools that admins can use to retain cloud attachments that users share through Teams and Outlook. If you've configured cloud attachments to be retained, but you can't find them by using eDiscovery, it might be that the items were not actually cloud attachments but separate copies, standard URL links, or other sharing mechanisms. Use the following table to identify which sharing mechanisms are cloud attachments in Outlook and Teams.
+Microsoft Purview provides tools that admins can use to retain cloud attachments that users share through Teams and Outlook. If you've configured cloud attachments to be retained, but you can't find them by using eDiscovery, it might be that the items weren't actually cloud attachments but separate copies, standard URL links, or other sharing mechanisms. Use the following table to identify which sharing mechanisms are cloud attachments in Outlook and Teams.
 
 For information about how to retain cloud attachments that are shared in Outlook and Teams, and known limitations for this scenario, refer to the retention label condition for cloud attachments in [Automatically apply a retention label to retain or delete content](/microsoft-365/compliance/apply-retention-labels-automatically).
 
@@ -31,7 +31,7 @@ For information about how to retain cloud attachments that are shared in Outlook
 |:------------------- |:---------------:|
 |<u>Cloud attachments</u>: A display on an Outlook client that resembles a regular attachment, but is actually a reference to a stored file.<br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/stored-file.png" alt-text="Screenshot of a regular attachment, it's a reference to a stored file."::: |Yes        |
 |<u>Attached copy</u>: A separate copy of the original file. <br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/attached-copy.png" alt-text="Screenshot of a separate copy of the original file.":::    |No        |
-|<u>URLs</u>: An HTTP reference that's added to the email subject or body, or to the meeting text body, that provides the address of a file that's stored online.<br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/http-reference.png" alt-text="Screenshot of an HTTP reference added into the email subject or body, or meeting text body.":::      |No        |
+|<u>URLs</u>: An HTTP reference that's added to the email subject or body, or to the meeting text body, that provides the address of a file that's stored online.<br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/http-reference.png" alt-text="Screenshot of an HTTP reference added into the email subject or body, or meeting text body.":::      |Yes        |
 |<u>Embedded Images</u>: Images that are pasted into the email body.<br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/embedded-images.png" alt-text="Screenshot of image pasted into the email body.":::     |No        |
 
 ### Cloud attachments in Teams
@@ -41,7 +41,7 @@ For information about how to retain cloud attachments that are shared in Outlook
 |A file that's shared from OneDrive or uploaded from the computer.<br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/file-shared-from-onedrive.png" alt-text="Screenshot of file shared from OneDrive or uploaded from computer.":::       | Yes        |
 |URL links to files, documents, or images that are pasted into the chat or a channel and are then resolved as chiclet graphics.<br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/url-links-to files-with-chiclet.png" alt-text="Screenshot of URL links to files, documents, or images with chiclet that are pasted into the chat or a channel and then resolve as chiclet graphics.":::       | Yes      |
 |Audio and video files that are pasted directly into the message as links and are then resolved as chiclet graphics.<br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/audio-video-file.png" alt-text="Screenshot of audio and video files pasted directly into the message as links.":::      | Yes      |
-|URL links to files, documents, or images that don't resolve as chiclet graphics, and the URL links remain as text-only links in the message. <br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/url-links-to files-without-chiclet.png" alt-text="Screenshot of URL links remain as text-only links in the message.":::     | No      |
+|URL links to files, documents, or images that don't resolve as chiclet graphics, and the URL links remain as text-only links in the message. <br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/url-links-to files-without-chiclet.png" alt-text="Screenshot of URL links remain as text-only links in the message.":::     | Yes      |
 |Images that are pasted directly into a chat.<br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/image-pasted-into-chat.png" alt-text="Screenshot of images pasted directly into a chat.":::     | No      |
 |Reactions to messages.<br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/reaction-to-message.png" alt-text="Screenshot of Reactions to messages.":::     | No      |
 |Emojis that are shared in a chat.<br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/emojis-shared-on-chat.png" alt-text="Screenshot of Emojis shared in a chat.":::     | No      |

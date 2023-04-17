@@ -1,5 +1,5 @@
 - name: OneDrive for Business Troubleshooting
-  href: ../onedrive-welcome.md
+  href: ../onedrive-welcome.yml
   items:
   - name: Administration
     items:
@@ -37,6 +37,8 @@
     items:
     - name: Credential prompts after resting mouse pointer over a user name
       href: ../../SharePointOnline/sharing-and-permissions/rest-mouse-pointer-on-user-name.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+    - name: Fix site user ID mismatch in SharePoint or OneDrive
+      href: ../../SharePointOnline/sharing-and-permissions/fix-site-user-id-mismatch.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Restore OneDrive Sharing settings in O365 admin center
       href: ../sharing-and-permissions/restore-onedrive-share-settings-office365.md
     - name: '"This item might not exist" error'
@@ -46,7 +48,7 @@
     - name: Check OneDrive site eligibility for increased storage
       href: ../storage/check-storage-increase-eligibility.md
   - name: Sites
-    items:
+    items:  
     - name: Top navigation bar displays either Sites or Newsfeed instead of OneDrive
       href: ../../SharePointOnline/sites/office-365-top-navigation-bar-displays-either-sites-or-newsfeed.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Troubleshooting guide stops at provisioning stage
@@ -89,8 +91,10 @@
       href: ../sync/sign-into-onedrive-error-0x8004e4d0.md
     - name: Sign into OneDrive sync app error AADSTS50020
       href: ../sync/sign-into-onedrive-sync-app-error.md
-    - name: Sync error “Sorry, OneDrive can't add your folder right now” 
+    - name: Sync error "Sorry, OneDrive can't add your folder right now" 
       href: ../sync/cant-add-folder-right-now.md
+    - name: Sync error FSLogix_unsupported_environment on virtual machines
+      href: ../sync/fslogix-unsupported-environment-sync-error-vm.md
     - name: Troubleshoot sync issues
       href: ../sync/troubleshoot-sync-issues.md
     - name: Upload blocked error in OneDrive

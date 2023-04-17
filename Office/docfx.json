@@ -76,39 +76,42 @@
       "titleSuffix": "Office",
       "uhfHeaderId": "MSDocsHeader-M365-IT",
       "hideEdit": true,
-      "searchScope": ["Office Support"] 
+      "searchScope": ["Office Support"],
+      "contributors_to_exclude": [ 
+        "beccarobins"
+      ]
     },
     "fileMetadata": {
-      "ms.prod": {
+      "ms.service": {
         "**/*.md": "office-perpetual-itpro"     
       },
-      "ms.technology": {
+      "ms.subservice": {
         "Client/access/**/*.md": "access",
         "Client/activation/**/*.md": "activation",
-        "Client/excel/**/*.md": "excel",
-        "Client/infopath/**/*.md": "infopath",
-        "Client/installation/**/*.md": "installation",
-        "Client/office-for-mac/**/*.md": "office-for-mac",
-        "Client/office-suite-issues/**/*.md": "office-suites-issues",
-        "Client/onenote/**/*.md": "onenote",
-        "Client/performance/**/*.md": "performance",
-        "Client/planner/**/*.md": "planner",
-        "Client/powerpoint/**/*.md": "powerpoint",
-        "Client/project/**/*.md": "project",
-        "Client/publisher/**/*.md": "publisher",
-        "Client/settings/**/*.md": "settings",
-        "Client/third-party-add-ins/**/*.md": "third-party-add-ins",
-        "Client/visio/**/*.md": "visio",
-        "Client/word/**/*.md": "word",
         "OfficeExperts/activation/**/*.md": "activation",
         "OfficeExperts/administration/**/*.md": "administration",
         "OfficeExperts/authentication/**/*.md": "authentication",
         "OfficeExperts/diagnostic-logs/**/*.md": "diagnostic-logging",
+        "Client/excel/**/*.md": "excel",
         "OfficeExperts/excel/**/*.md": "excel",
+        "Client/infopath/**/*.md": "infopath",
+        "Client/installation/**/*.md": "installation",
         "OfficeExperts/installation/**/*.md": "installation",
+        "Client/office-for-mac/**/*.md": "office-for-mac",
         "OfficeExperts/microsoft-forms/**/*.md": "office-forms",
+        "Client/office-suite-issues/**/*.md": "office-suites-issues",
+        "Client/onenote/**/*.md": "onenote",
+        "Client/performance/**/*.md": "performance",
+        "Client/planner/**/*.md": "planner",
         "OfficeExperts/powerpivot/**/*.md": "power-pivot",
+        "Client/powerpoint/**/*.md": "powerpoint",
+        "Client/project/**/*.md": "project",
+        "Client/publisher/**/*.md": "publisher",
+        "Client/settings/**/*.md": "settings",
         "OfficeExperts/sway/**/*.md": "sway",
+        "Client/third-party-add-ins/**/*.md": "third-party-add-ins",
+        "Client/visio/**/*.md": "visio",
+        "Client/word/**/*.md": "word",
         "OfficeExperts/word/**/*.md": "word"
       }
     },

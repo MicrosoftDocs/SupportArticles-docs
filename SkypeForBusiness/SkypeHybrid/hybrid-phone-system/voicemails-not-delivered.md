@@ -65,6 +65,7 @@ Make sure that there are no [Exchange Web Access Policies](/exchange/client-deve
 A recent change (made in October 2018) requires one additional step when you configure Exchange on-premises support. The email item class is stripped when it's delivered through SMTP. To prevent this behavior from occurring, you must set up the connector correctly. The Skype for Business and Teams client shows voicemails only if the class is correct. For voicemail messages to show in the Teams client, the message class must be IPM.Note.Microsoft.Voicemail.UM.
 
 > [!NOTE]
+>
 > - Teams users with on-premises Exchange mailboxes can use voicemail with Teams and receive voicemail messages in Outlook, but voicemail messages aren't available 
 to view or play within the Teams client.
 > - Voicemail messages protected with Rights Management Services won't be viewable in Teams, will be viewable in Outlook, but can only be played using the Outlook Web client (OWA), and transcriptions can only be read in either Outlook or OWA. 
@@ -81,6 +82,10 @@ To access the **Voice Mail** folder, open MFCMAPI, open the user's Outlook mailb
 > [!NOTE]
 > Third-party spam, or antivirus filtering solutions can also modify voicemail headers that will result in voicemails not being available in the voicemail folder. 
 
-[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
+**Third-party information disclaimer**
 
-[!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
+The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+
+**Third-party contact disclaimer**
+
+Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.

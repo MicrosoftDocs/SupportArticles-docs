@@ -1,5 +1,5 @@
 - name: Outlook for iOS and Android Troubleshooting
-  href: ../outlook-mobile-welcome.md
+  href: ../outlook-mobile-welcome.yml
   items:
   - name: Add-ins
     items:

@@ -7,7 +7,7 @@
     items:
     - name: '"Access denied" error for PIM-managed accounts in SharePoint or OneDrive admin center'
       href: ../administration/access-denied-to-pim-user-accounts.md
-    - name: '"Access Denied" and "You need permission to access this site" errors'
+    - name: '"Access Denied" or permission errors'
       href: ../administration/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business.md
     - name: '"API access" does not appear in the Modern admin center'
       href: ../administration/api-access-does-not-appear.md
@@ -283,6 +283,8 @@
       href: ../sharing-and-permissions/error-when-external-user-accepts-an-invitation-by-using-another-account.md
     - name: External users can't find users in people picker
       href: ../sharing-and-permissions/people-picker-fails-finding-users.md
+    - name: Fix site user ID mismatch in SharePoint or OneDrive
+      href: ../sharing-and-permissions/fix-site-user-id-mismatch.md
     - name: Issue after accepting a resource invite
       href: ../sharing-and-permissions/unable-to-complete-request.md
     - name: Issue when external users click links to shared resource
@@ -330,7 +332,7 @@
     - name: Error when trying to change site logo on O365 group SharePoint site
       href: ../sites/error-when-changing-o365-site-logo.md
     - name: Error when trying to delete a SharePoint site
-      href: ../sites/compliance-policy-blocking-site-deletion.md
+      href: ../sites/compliance-policy-blocking-site-deletion.md    
     - name: Issue when activating Announcement Tiles feature
       href: ../Sites/announcement-tiles-not-supported.md
     - name: Issue when creating an online site

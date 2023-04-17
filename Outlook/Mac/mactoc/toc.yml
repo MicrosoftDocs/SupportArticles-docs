@@ -1,5 +1,5 @@
 - name: Outlook for Mac Troubleshooting
-  href: ../outlook-mac-welcome.md
+  href: ../outlook-mac-welcome.yml
   items:
     - name: Account
       items:
@@ -33,14 +33,14 @@
           href: /outlook/troubleshoot/calendaring/configure-room-finder-rooms-workspaces?context=/outlook/troubleshoot/context/mac-context
         - name: Create and book a workspace in Outlook
           href: /exchange/troubleshoot/outlook-issues/create-book-workspace-outlook?context=/outlook/troubleshoot/context/mac-context
+        - name: Shared calendar in delegate's Online Archive
+          href: /exchange/troubleshoot/calendars/shared-calendar-in-delegate-online-archive?context=/outlook/troubleshoot/context/mac-context
+        - name: Shared calendar shows private event details 
+          href: ../calendars/shared-calendar-shows-private-event-details.md
         - name: The Open Shared Calendar option is unavailable
           href: ../calendars/cannot-open-a-shared-calendar-in-outlook-2016.md
         - name: User with Free/Busy permission can't open another calendar
           href: ../calendars/cannot-open-another-calendar-with-freebusy-permission.md
-    - name: Categories
-      items:
-        - name: Category colors are changed in Outlook 2016 for Mac
-          href: ../categories/outlook-mac-category-colors-changed.md
     - name: Connectivity
       items:
         - name: How to suppress Microsoft 365 AutoDiscover redirect warning

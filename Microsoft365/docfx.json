@@ -110,7 +110,10 @@
       "hideEdit": true,
       "searchScope": "Office 365 Support",
       "uhfHeaderId": "MSDocsHeader-M365-IT",
-      "titleSuffix": "Office 365"
+      "titleSuffix": "Office 365",
+      "contributors_to_exclude": [ 
+        "beccarobins"
+      ]
     },
     "fileMetadata": {
       "ms.service": {

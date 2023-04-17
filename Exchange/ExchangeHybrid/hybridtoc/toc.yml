@@ -1,5 +1,5 @@
 - name: Exchange hybrid deployment troubleshooting
-  href: ../exchange-hybrid-welcome.md
+  href: ../exchange-hybrid-welcome.yml
   items:
     - name: Administration
       items:
@@ -125,8 +125,6 @@
           href: ../hybrid-configuration-wizard-errors/hcw8008-not-have-client-access-server-role-installed.md
         - name: Client Access servers were not properly cleared
           href: ../hybrid-configuration-wizard-errors/hcw8014-client-access-servers-not-properly-cleared.md
-        - name: Connecting to the remote server failed error
-          href: ../hybrid-configuration-wizard-errors/the-user-name-or-password-is-incorrect-error.md
         - name: Could not create SSL/TLS secure channel error
           href: ../hybrid-configuration-wizard-errors/request-was-aborted-could-not-create-ssl-tls-secure-channel.md
         - name: DataStrings.InvalidSmtpDomainName(domain) error
@@ -177,8 +175,6 @@
           href: ../hybrid-configuration-wizard-errors/new-hybrid-configuration-wizard-crashes-with-0xe0434352.md
         - name: No Federation trust is configured for this organization error
           href: ../hybrid-configuration-wizard-errors/no-federation-trust-is-configured-for-this-organization-error.md
-        - name: Nullable object must have a value
-          href: ../hybrid-configuration-wizard-errors/nullable-object-must-have-value-error.md
         - name: Object reference not set to an instance of an object error
           href: ../hybrid-configuration-wizard-errors/object-reference-not-set-to-an-instance-of-an-object-error.md
         - name: Proof of domain ownership has failed error

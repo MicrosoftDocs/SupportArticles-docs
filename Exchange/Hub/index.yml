@@ -62,11 +62,11 @@ productDirectory:
     - title: Exchange
       imageSrc: /media/logos/logo_Exchange.svg
       links:
-        - url: ../ExchangeServer/exchange-server-welcome.md
+        - url: ../ExchangeServer/exchange-server-welcome.yml
           text: Exchange Server
         - url: ../ExchangeOnline/exchange-online-welcome.yml
           text: Exchange Online
-        - url: ../ExchangeHybrid/exchange-hybrid-welcome.md
+        - url: ../ExchangeHybrid/exchange-hybrid-welcome.yml
           text: Exchange Hybrid
     # Card
     - title: Skype for Business

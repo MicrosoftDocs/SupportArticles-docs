@@ -35,7 +35,7 @@ Consider the following scenarios:
 
 When you try to move users from Skype for Business Online to Skype for Business on-premises in either of these scenarios, you receive the following error message:
 
-```adoc
+```output
 Exception: Microsoft.Rtc.Management.AD.MoveUserException: HostedMigration fault: Error=(506), Description=(The user could move be moved because there appears to be a problem with this user account. Please verify the attribute settings on the account and then try again.)
 ```
 
