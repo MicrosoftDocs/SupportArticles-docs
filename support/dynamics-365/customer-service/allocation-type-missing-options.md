@@ -10,7 +10,7 @@ This article provides a resolution for the issue where you can't create entitlem
 
 ## Symptoms
 
-You can't create entitlement forms from either the Customer Service Hub or the Customer Service admin center app because of lack of data in the entitlement's entity type mappings with the `EntitlementEntityAllocationTypeMappingBase` table.
+You can't create entitlement forms from either the Customer Service Hub or the Customer Service admin center app because of a lack of data in the entitlement's entity type mappings with the `EntitlementEntityAllocationTypeMappingBase` table.
 
 ## Cause 1
 
@@ -20,12 +20,12 @@ The **Allocation Type** field doesn't exist in the entitlement entity with the *
 
 To resolve this issue, add the **Allocation Type** field by taking the following steps:
 
-1. In either of the apps, go to **Advanced Settings** > **Customizations** > **Customize the System** > **Expand Entitlement Entity** > **Fields** > **Check Allocation Type** field options.
+1. In either of the apps, go to **Advanced Settings** > **Customizations** > **Customize the System** > **Expand Entitlement Entity** > **Fields** > **Check Allocation Type**.
 1. Add the **Allocation Type** field.
 
 ## Cause 2
 
-The entitlement's entity allocation type mapping records aren't present in the `EntitlementEntityAllocationTypeMappingBase` table when the **Entity Type** field from the entitlement entity has more than one option other than case. **Entity Type** is a type of option set field in the Entitlement table that has **Case** as the default option. If **Case** is the only option available for **Entity Type**, then the Entitlement table automatically loads **Allocation Type** values for the **Case** option. In a case where more than one option is set for the **Entity Type** field, you'll need to select the **Entity Type** option so that the Entitlement table will load **Allocation Type** values based on that **Entity Type** selection.
+The entitlement's entity allocation type mapping records aren't present in the `EntitlementEntityAllocationTypeMappingBase` table when the **Entity Type** field from the entitlement entity has more than one option other than **Case**. **Entity Type** is a type of option set field in the Entitlement table that has **Case** as the default option. If **Case** is the only option available for **Entity Type**, then the Entitlement table automatically loads **Allocation Type** values for the **Case** option. In a case where more than one option is set for the **Entity Type** field, you'll need to select the **Entity Type** option so that the Entitlement table will load **Allocation Type** values based on that **Entity Type** selection.
 
 ### Resolution
 
@@ -43,6 +43,6 @@ To resolve this issue, you can add the entitlement's entity allocation type mapp
   - **Entitlemententityallocationtypemappingid**: New GUID.
   - **Statecode**: Provides a state code that explains the status.
   - **Statuscode**: Provides the reason code that explains the status.
-  - **Allocationtype**: Provides type of entitlement terms.
+  - **Allocationtype**: Provides the type of entitlement terms.
   - **Entitytype**: The entity type for which the entitlement applies.
   - **OwnerId**: Owner Id.

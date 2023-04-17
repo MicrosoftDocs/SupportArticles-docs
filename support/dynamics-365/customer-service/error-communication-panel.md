@@ -1,24 +1,20 @@
 ---
-title: Error in communication panel
-description: Provides a solution to error when you sign in to the communication panel in Unified Service Desk client application.
-ms.reviewer: 
-ms.topic: troubleshooting
+title: An error occurred in the Communication panel
+description: Provides a resolution for the error that occurs when you sign in to the communication panel in Unified Service Desk client application.
+ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---
+# "An error occurred in the communication panel" error in Unified Service Desk
 
+This article provides a resolution for an error that occurs in the communication panel after you sign in to the Unified Service Desk client application.
 
-# An error occurred in the communication panel
-
-This article provides a solution for an error that occurs in the communication panel after you sign in to the Unified Service Desk client application.
-
-## Symptom
+## Symptoms
 
 After you sign in to the Unified Service Desk client application, you see the following error message:
 
-**An error occurred in the Communication panel. Restart Unified Service Desk and try again. (Error Code - AAD_ID_MISMATCH - Azure ADID mismatched with logged-in user id)**
+> An error occurred in the Communication panel. Restart Unified Service Desk and try again. (Error Code - AAD_ID_MISMATCH - Azure ADID mismatched with logged-in user id)
 
-   > [!div class=mx-imgBorder]
-   > ![Unified Service Desk application error.](media/usd-communication-panel-error.png "Unified Service Desk application error")
+:::image type="content" source="media/error-communication-panel/communication-panel-error.png" alt-text="The screenshot shows the details of the error that occurs when you sign in to Unified Service Desk.":::
 
 ## Cause
 
@@ -26,4 +22,4 @@ When signing in to Unified Service Desk, you must enter the Customer Service app
 
 ## Resolution
 
-If you use **Chrome process** to host applications, go to `C:\Users\<USER_NAME>\AppData\Roaming\Microsoft\USD` and delete the **CEF** folder. Now, sign in to Unified Service Desk client application and try again.
+If you use **Chrome process** to host applications, go to `C:\Users\<USER_NAME>\AppData\Roaming\Microsoft\USD` and delete the CEF folder. Now, sign in to Unified Service Desk client application and try again.

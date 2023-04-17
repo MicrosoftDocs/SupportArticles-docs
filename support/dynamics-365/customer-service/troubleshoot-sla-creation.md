@@ -196,6 +196,7 @@ Unable to create entitlement forms from either the Customer Service Hub or the C
 ### Scenario 1
 
 ### Cause
+
 The **Allocation Type** field doesn't exist in the entitlement entity with **Case** option.
 
 ### Resolution
@@ -208,7 +209,7 @@ Add the **Allocation Type** field by performing the following steps:
 
 ### Cause
 
-The entitlement's entity allocation type mapping records aren't present in the EntitlementEntityAllocationTypeMappingBase table when the **Entity Type** field from the entitlement entity has more than one option other than case.
+The entitlement's entity allocation type mapping records aren't present in the EntitlementEntityAllocationTypeMappingBase table when the **Entity Type** field from the entitlement entity has more than one option other than **Case**.
 
 ### Resolution
 

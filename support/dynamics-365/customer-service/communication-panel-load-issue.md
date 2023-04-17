@@ -25,7 +25,7 @@ To solve this issue,
 
 - Create a Channel Integration Framework record with the following values. 
 
-   | Field | value |
+   | Field | Value |
    |-------------------------------------------|--------------------------------------------------|
    | **Name** | Omnichannel |
    | **Label** | Omnichannel |

@@ -1,18 +1,16 @@
 ---
-title: Conversation stuck in wrap-up state
-description: Provides a solution to issue when a conversation is stuck in a wrap-up state in Dynamics 365 Omnichannel for Customer Service.
-ms.reviewer: 
-ms.topic: troubleshooting
+title: Conversation stuck in the Wrap-up state
+description: Provides a resolution for the issue where a conversation is stuck in the Wrap-up state in Dynamics 365 Omnichannel for Customer Service.
+ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---
+# Conversation is stuck in the Wrap-up state
 
-# Conversation is stuck in wrap-up state
+This article provides a resolution for the issue where a conversation is stuck in the **Wrap-up** state in Omnichannel for Customer Service.
 
-This article provides a solution to an issue when a conversation is stuck in a wrap-up state in Omnichannel for Customer Service.
+## Symptoms
 
-## Issue
-
-As an agent or a supervisor, you see that some conversations are stuck in the wrap-up state in your Omnichannel Agent Dashboard or Omnichannel Ongoing Conversations Dashboard.
+As an agent or a supervisor, you see some conversations are stuck in the **Wrap-up** state in your Omnichannel Agent Dashboard or Omnichannel Ongoing Conversations Dashboard.
 
 ## Cause
 
@@ -20,4 +18,4 @@ The primary agent assigned to the conversation may not have closed it in the ses
 
 ## Resolution
 
-When conversations are ended by the agent or customer, they transition to the wrap-up state. In order to close the conversation, the primary agent assigned to the conversation needs to close the conversation in the session panel. To learn more about closing sessions, see [Manage sessions in Omnichannel for Customer Service](/dynamics365/customer-service/oc-manage-sessions). To learn more about the wrap-up conversation state, see [Understand conversation states in Omnichannel for Customer Service](/dynamics365/customer-service/oc-conversation-state#wrap-up).
+When conversations are ended by the agent or customer, they transition to the **Wrap-up** state. In order to close the conversation, the primary agent assigned to the conversation needs to close the conversation in the session panel. To learn more about closing sessions, see [Manage sessions in Omnichannel for Customer Service](/dynamics365/customer-service/oc-manage-sessions). To learn more about the **Wrap-up** conversation state, see [Understand conversation states in Omnichannel for Customer Service](/dynamics365/customer-service/oc-conversation-state#wrap-up).

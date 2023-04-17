@@ -1,76 +1,74 @@
 ---
 title: Troubleshoot common email error messages
-description: Provides solutions to common email error messages in Dynamics 365 Customer Service.
-ms.reviewer: 
-ms.topic: troubleshooting
+description: Provides resolutions for the common email error messages in Dynamics 365 Customer Service.
+ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---
-
 # Troubleshoot common email error messages 
 
-This article provides solutions to common email error messages.
+This article provides resolutions for the common email error messages.
 
 ## Scenario
+
 **Sample**: Configuration on Automatic Record Creation and Update Rule
-- **Create contact for unknown sender** box should be checked.
+
+- The **Create contact for unknown sender** option should be selected.
 - Set condition criteria to **Any incoming email**.
 - Add action to create case, select **View properties** and set the case fields as per business use case.
 
 ## Error 1
 
-In the Customer field of the Case Details section, **Senders Account (Email)** is set as below value.
+In the **Customer** field of the **CASE DETAILS** section, the value of **Senders Account (Email)** is set as below.
 
-![Email case scenario.](media/email-case-scenario.png "Email case scenario")
+:::image type="content" source="media/common-email-error-messages/email-case-scenario.png" alt-text="The screenshot shows how the value of Senders Account (Email) is set in the Customer field.":::
 
-This results in the following error in system jobs:
+This setting results in the following error in system jobs:
 
-![Error email case.](media/error-email-case.png "Error email case")
+:::image type="content" source="media/common-email-error-messages/case-missing-customer-error.png" alt-text="The screenshot shows the details of the error that states the case is missing customer.":::
 
-## Resolution 1
+## Resolution for Error 1
 
-To resolve this issue, keep the Customer field blank or set it to **{Sender(Email)}**. This allows the system to automatically create contact for the unknown sender and link it to the case.
+To resolve this issue, keep the **Customer** field blank or set it to **{Sender(Email)}**. This allows the system to automatically create contact for the unknown sender and link it to the case.
 
 ## Error 2
 
-The Customer field is set as **{Senders Account(Email)}** and Contact field as **{Sender(Email)}**.
+The **Customer** field is set as **{Senders Account(Email)}** and the **Contact** field is set as **{Sender(Email)}**.
 
-![Error email case contact.](media/error-email-case-contact.png "Error email case contact")
+:::image type="content" source="media/common-email-error-messages/customer-contact-values.png" alt-text="The screenshot shows the values set for the Customer and Contact fields.":::
 
-This results in the following error in system jobs:
+This setting results in the following error in system jobs:
 
-![Case email error.](media/case-email-error.png "Case email error")
+:::image type="content" source="media/common-email-error-messages/error-has-occured.png" alt-text="The screenshot shows the details of the error that occurs due to the value set for the Customer field.":::
 
-## Resolution 2
+## Resolution for Error 2
 
-To resolve this issue, keep the Customer field blank or set it to **{Sender(Email)}**. This allows the system to automatically create contact for the unknown sender and link it to the case.
+To resolve this issue, keep the **Customer** field blank or set it to **{Sender(Email)}**. This allows the system to automatically create contact for the unknown sender and link it to the case.
 
 ## Error 3
 
-The Customer field and Contact field are set as **{Sender(Email)}**.
+The **Customer** field and **Contact** field are set as **{Sender(Email)}**.
 
-![Case email scenario.](media/case-email-scenario.png "Case email scenario")
+:::image type="content" source="media/common-email-error-messages/customer-value-set-case-details.png" alt-text="The screenshot shows the value set for the Customer and Contact fields.":::
 
-This results in the following error in system jobs:
+This setting results in the following error in system jobs:
 
-![Error in system jobs.](media/error-system-jobs.png "Error in system jobs")
+:::image type="content" source="media/common-email-error-messages/specified-contact-not-belong-contact-error.png" alt-text="The screenshot shows the details of the error that states the specified contact doesn't belong to the contact that was specified in the Customer field.":::
 
-## Resolution 3
+## Resolution for Error 3
 
-To resolve this issue, leave contact field blank and set Customer field either to blank or to **{Sender(Email)}**.
+To resolve this issue, leave **Contact** field blank and set **Customer** field either to blank or to **{Sender(Email)}**.
 
 ## Validation steps
 
-You must validate the configuration and validation steps given in the following table to understand the main cause of the issue, and resolve it:
+You must validate the configuration and validation steps given in the following table to understand the main cause of the issue and resolve it.
 
 |Option in Automatic Record Creation and Update Rule in Service Management  |If selected as  |Validation steps  |Outcome  |
 |---------|---------|---------|---------|
-|Create a case if a valid entitlement exists for the customer     |  Yes     |  Validate that an active entitlement exists for the customer. Valid active entitlement is evaluated as below:  </br> - If the sender of the email is a contact with a parent account, then Dynamics 365 Customer Service creates a case if the contact’s parent account has a valid entitlement, and the contact is listed in the Contacts section of the entitlement </br> OR </br> - If the Contacts section is empty (which means that the entitlement is applicable to all contacts for the customer) |   A case is created      |
-|Create a case from an email sent by unknown senders     |   Yes       |        For any incoming email from an unknown sender |     - A case is created </br>  - A contact is also created for the unknown sender|
-|     |   Yes      |    For an incoming email with email address of inactive account or contact     |   - A case is created </br> - An inactive account or contact is activated|
-|     |   No      |     For an incoming email with email address of active account or contact   |  A case is created       |
-|    |     No    |      For an incoming email sent by record type other than account or contact   |    No case is created     |
-|  |   No      |     For an incoming email with email address of inactive account or contact    |  No case is created           |
-|Create a case for activities associated with a resolved case     |    Yes     |   For an incoming email related to a resolved case      |    A case is created     |
-|   |    Yes      |   For an incoming email related to an active case         |   No case is created      |
-|  |         |         |         |
- 
+|Create a case if a valid entitlement exists for the customer     |  Yes     |  Validate that an active entitlement exists for the customer. Valid active entitlement is evaluated as below:  </br> - If the sender of the email is a contact with a parent account, then Dynamics 365 Customer Service creates a case if the contact's parent account has a valid entitlement, and the contact is listed in the **Contacts** section of the entitlement </br> Or, </br> - If the **Contacts** section is empty (which means that the entitlement is applicable to all contacts for the customer) |   A case is created.      |
+|Create a case from an email sent by unknown senders     |   Yes       |        For any incoming email from an unknown sender |     - A case is created. </br>  - A contact is also created for the unknown sender.|
+|     |   Yes      |    For an incoming email with email address of inactive account or contact     |   - A case is created. </br> - An inactive account or contact is activated.|
+|     |   No      |     For an incoming email with email address of active account or contact   |  A case is created.       |
+|    |     No    |      For an incoming email sent by record type other than account or contact   |    No case is created.     |
+|  |   No      |     For an incoming email with email address of inactive account or contact    |  No case is created.           |
+|Create a case for activities associated with a resolved case     |    Yes     |   For an incoming email related to a resolved case      |    A case is created.     |
+|   |    Yes      |   For an incoming email related to an active case         |   No case is created.      |
