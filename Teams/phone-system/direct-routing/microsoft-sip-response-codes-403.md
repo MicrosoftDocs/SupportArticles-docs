@@ -85,7 +85,7 @@ This article provides troubleshooting information for various combinations of SI
 - Microsoft response code: **510562**
 - SIP response code: **403**
 - Suggested actions:  
-  Verify that the affected user is assigned a Phone System license and is correctly [enabled for Direct Routing](/microsoftteams/direct-routing-enable-users). For more information about issues with outbound calls, see [Issues that affect outbound direct routing calls](/microsoftteams/troubleshoot/phone-system/direct-routing/issues-with-outbound-calls).
+  Verify that the affected user is assigned a Phone System license and is correctly [enabled for Direct Routing](/microsoftteams/direct-routing-enable-users). For more information about issues with outbound calls, see [Issues that affect outbound Direct Routing calls](/microsoftteams/troubleshoot/phone-system/direct-routing/issues-with-outbound-calls).
 
 ## 510563 403 User is only allowed to make domestic calls. This is an international call
 
@@ -106,4 +106,4 @@ This article provides troubleshooting information for various combinations of SI
 - Microsoft response code: **510559**
 - SIP response code: **403**
 - Suggested actions:  
-  Make sure that the dialed number in Teams matches a corresponding number pattern in a voice route for the given user. In some cases, this error occurs because an incorrect number is dialed, or the customer's own internal policy prevents calls to specific countries or number patterns.
+  Make sure that the dialed number in Teams matches a corresponding number pattern in a voice route for the given user. In some cases, this error occurs because an incorrect number is dialed, or the customer's own internal policy prevents calls to specific countries/regions or number patterns.
