@@ -1,6 +1,6 @@
 ---
 title: Access Denied error when accessing a shared folder
-description: Describes access issues when users try to access a shared folder in a SharePoint or OneDrive site that has Limited-access user permission lockdown mode enabled.   
+description: Describes issues that occur when users try to access a shared folder on a SharePoint or OneDrive site that has Limited-access user permission lockdown mode enabled.   
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -21,11 +21,18 @@ appliesto:
 ms.reviewer: prbalusu, salarson
 ---
 
-# Access Denied error when trying to access a shared folder
+# "Access Denied" error when trying to access a shared folder
 
 ## Symptoms
 
-The **Limited-access user permission lockdown mode** site collection feature is activated in your SharePoint or OneDrive site. You share a specific folder with another user. In this situation, when the user tries to access the shared folder, they receive one of the following error messages:
+Consider the following scenario:
+
+- You have a SharePoint or OneDrive site.
+- The site has the **Limited-access user permission lockdown mode** site collection feature activated. 
+- You share a specific folder with another user.
+- The other user tries to access the shared folder.
+
+In this scanario, the other user receives one of the following error messages:
 
 - Access Denied
 - You need permission to access this resource
@@ -36,10 +43,10 @@ When you share a folder with a user who can't access the parent folder or site, 
 
 ## Workaround
 
-To work around this issue, use one of the following options as appropriate for your situation:
+To work around this issue, use one of the following options, as appropriate for your situation:
 
 - Share individual files but not folders.
 - Share a whole site collection or subsite.
 - If your site doesn't require **Limited-access user permission lockdown mode**, [disable this site collection feature](https://support.microsoft.com/office/enable-or-disable-site-collection-features-a2f2a5c2-093d-4897-8b7f-37f86d83df04).
 
-  **Note:** Other features such as publishing may require this feature to work correctly.
+  **Note:** Other features, such as publishing, might require this feature to work correctly.
