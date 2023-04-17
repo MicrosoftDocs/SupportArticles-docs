@@ -80,7 +80,7 @@ sections:
       - question: |
           Why does my availability test continue to run after it is paused or disabled?
         answer: |
-          Depending on how close the deadline for the scheduled execution of the next iteration is, availability tests may not be stopped in time before they perform the next iteration. In the same way, when you create, disable, or manipulate new tests, there is a delay. If it's not an expected behavior, run additional tests per location. 	
+          It is an expected behavior. Depending on how close the deadline for the scheduled execution of the next iteration is, availability tests may not be stopped in time before they perform the next iteration. In the same way, when you create, disable, or manipulate new tests, there is a delay.
 
 
 additionalContent: |

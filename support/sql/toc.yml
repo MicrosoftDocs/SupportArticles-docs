@@ -93,6 +93,8 @@
         href: database-engine/availability-groups/troubleshooting-log-send-queuing-in-alwayson-availability-group.md
       - name: Troubleshoot Always On issues
         href: database-engine/availability-groups/troubleshooting-alwayson-issues.md
+      - name: Troubleshoot Always On Availability Group failover
+        href: database-engine/availability-groups/troubleshooting-availability-group-failover.md
       - name: Troubleshoot recovery queueing in an availability group
         href: database-engine/availability-groups/troubleshooting-recovery-queuing-in-alwayson-availability-group.md
   - name: Always On Failover Cluster Instance (FCI)
@@ -517,6 +519,8 @@
        href: database-engine/performance/troubleshoot-query-timeouts.md
      - name: Troubleshoot out of memory issues in SQL Server
        href: database-engine/performance/troubleshoot-memory-issues.md
+     - name: Troubleshoot memory grant issues in SQL Server
+       href: database-engine/performance/troubleshoot-memory-grant-issues.md
      - name: Updates and configuration options for high-performance workloads (SQL Server 2014 and 2012)
        href: database-engine/performance/recommended-updates-configuration-options.md
      - name: Updates and configuration options for high-performance workloads (SQL Server 2017 and 2016)
@@ -785,6 +789,10 @@
     items:
     - name: SQL Server 2022 build versions
       href: releases/sqlserver-2022/build-versions.md
+    - name: Cumulative Update 3
+      items:
+      - name: Cumulative Update 3 (KB5024396)
+        href: releases/sqlserver-2022/cumulativeupdate3.md
     - name: Cumulative Update 2
       items:
       - name: Cumulative Update 2 (KB5023127)
