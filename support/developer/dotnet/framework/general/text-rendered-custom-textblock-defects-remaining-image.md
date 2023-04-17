@@ -1,5 +1,5 @@
 ---
-title: Text rendering issues on a TextBlock that's a child of a Viewbox
+title: Text rendering issues on a TextBlock that's a child of a viewBox
 description: This article helps to troubleshoot a problem where the text displayed on a custom text block may not render correctly.
 ms.date: 04/17/2023
 ms.custom: sap:Tools and utilities
@@ -9,7 +9,7 @@ ms.author: v-jayaramanp
 ms.reviewer: mihayash
 ---
 
-# Text rendering issues on a TextBlock that's a child of a Viewbox
+# Text rendering issues on a TextBlock that's a child of a viewBox
 
 _Applies to:_ &nbsp;&nbsp;.NET Framework 4.0 or later
 
