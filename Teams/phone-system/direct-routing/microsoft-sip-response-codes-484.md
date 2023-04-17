@@ -21,13 +21,12 @@ ms.reviewer: teddygyabaah
 
 # SIP response code 484
 
-This article lists combinations of SIP 484 and Microsoft response codes, the corresponding error messages, and actions that you can take.
+This article provides troubleshooting information for various combinations of SIP 484 and Microsoft response codes.
 
 ## 560484 484 Invalid number format. SBC rejected the call
 
 - Microsoft response code: **560484**
 - SIP response code: **484**
-- Error message: **Invalid number format. SBC rejected the call.**
 - Suggested actions:  
   Review the tenant's call records that contain *CallEndSubReason = 560484*. Look for trends in the called numbers, including the called numbers distribution by country. You can identify patterns that suggest that you should either establish additional normalization rules for extension-based dialing or follow up about user education.  
 

@@ -21,13 +21,12 @@ ms.reviewer: teddygyabaah
 
 # SIP response code 404
 
-This article lists combinations of SIP 404 and Microsoft response codes, the corresponding error messages, and actions that you can take.
+This article provides troubleshooting information for various combinations of SIP 404 and Microsoft response codes.
 
 ## 10202 404 Replacement call was not found
 
 - Microsoft response code: **10202**
 - SIP response code: **404**
-- Error message: **Replacement call was not found**
 - Suggested actions:  
   In call merge and consultative transfer scenarios, the SBC may retry the call if the first call attempt fails. Check whether your SBC is configured to try a replacement call after an initial failure.
 
@@ -35,6 +34,5 @@ This article lists combinations of SIP 404 and Microsoft response codes, the cor
 
 - Microsoft response code: **511404**
 - SIP response code: **404**
-- Error message: **Getting user info by number from RuntimeAPI failed**
 - Suggested actions:  
   This error indicates that the user can't be found during the reverse number lookup. To fix the error, make sure that the callee number format of your Session Border Controller (SBC) and/or PSTN trunk provider matches the format that's assigned to the user or resource account. Usually, Microsoft expects calls to be in E.164 normalized format, including country code, network destination code and subscriber number. For more information about the format and example, see [Direct Routing - SIP protocol](/microsoftteams/direct-routing-protocols-sip).

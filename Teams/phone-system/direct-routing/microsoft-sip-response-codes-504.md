@@ -21,13 +21,12 @@ ms.reviewer: teddygyabaah
 
 # SIP response code 504
 
-This article lists combinations of SIP 504 and Microsoft response codes, the corresponding error messages, and actions that you can take.
+This article provides troubleshooting information for various combinations of SIP 504 and Microsoft response codes.
 
 ## 549002 504 Unable to deliver INVITE: TlsTransport is not connected, State=Disconnected
 
 - Microsoft response code: **549002**
 - SIP response code: **504**
-- Error message: **Unable to deliver INVITE: TlsTransport is not connected, State=Disconnected**
 - Suggested actions:  
   - Check if the Session Border Controller (SBC) is functional.
   - Check if the SBC is reachable through the specific IP and port. Also check your firewall settings to make sure that connection to SBC isn't blocked.
@@ -36,7 +35,6 @@ This article lists combinations of SIP 504 and Microsoft response codes, the cor
 
 - Microsoft response code: **549002**
 - SIP response code: **504**
-- Error message: **Unable to deliver INVITE: Invalid Request/Response line**
 - Suggested actions:  
   Make sure that requests and responses include SIP version "SIP/2.0" in the Request-URI, Via Header, and other relevant headers. For more information, see [Direct Routing - SIP protocol](/microsoftteams/direct-routing-protocols-sip).
 
@@ -44,7 +42,6 @@ This article lists combinations of SIP 504 and Microsoft response codes, the cor
 
 - Microsoft response code: **569002**
 - SIP response code: **504**
-- Error message: **Unable to deliver INVITE: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond**
 - Suggested actions:  
   - Check if the SBC is functional.
   - Check if the SBC is reachable through the specific IP and port. Also check your firewall settings to make sure that connection to SBC isn't blocked.
@@ -53,7 +50,6 @@ This article lists combinations of SIP 504 and Microsoft response codes, the cor
 
 - Microsoft response code: **569002**
 - SIP response code: **504**
-- Error message: **Unable to deliver INVITE: No connection could be made because the target machine actively refused it**
 - Suggested actions:  
   - Check if the SBC is functional.
   - Check if the SBC is reachable through the specific IP and port. Also check your firewall settings to make sure that connection to SBC isn't blocked.
@@ -62,7 +58,6 @@ This article lists combinations of SIP 504 and Microsoft response codes, the cor
 
 - Microsoft response code: **569002**
 - SIP response code: **504**
-- Error message: **Unable to deliver INVITE: outgoing TLS negotiation failed; HRESULT=0x80096004**
 - Suggested actions:  
   - Check if the SBC is functional.
   - Check if the SBC is reachable through the specific IP and port. Also check your firewall settings to make sure that connection to SBC isn't blocked.
@@ -71,7 +66,6 @@ This article lists combinations of SIP 504 and Microsoft response codes, the cor
 
 - Microsoft response code: **569002**
 - SIP response code: **504**
-- Error message: **Unable to deliver INVITE: outgoing TLS negotiation failed; Wrong target principal name configured. HRESULT=0x80090322 CERT_E_WRONG_USAGE**
 - Suggested actions:  
   Request a certificate that's signed by one of the public root certification authorities that are listed in [Public trusted certificate for the SBC](/microsoftteams/direct-routing-plan#public-trusted-certificate-for-the-sbc).
 
@@ -79,7 +73,6 @@ This article lists combinations of SIP 504 and Microsoft response codes, the cor
 
 - Microsoft response code: **569002**
 - SIP response code: **504**
-- Error message: **Unable to deliver INVITE: TLS decryption failed; HRESULT=590615**
 - Suggested actions:  
   This error indicates that the TLS context, which is responsible for encrypting and decrypting SIP signaling messages, has expired and can no longer be used for secure communication. Work with the SBC vendor to troubleshoot the TLS context expiration issue.
 
@@ -87,7 +80,6 @@ This article lists combinations of SIP 504 and Microsoft response codes, the cor
 
 - Microsoft response code: **569002**
 - SIP response code: **504**
-- Error message: **Unable to deliver ACK: outgoing TLS negotiation failed; Wrong target principal name configured. HRESULT=0x80090322 CERT_E_WRONG_USAGE**
 - Suggested actions:  
   Request a certificate that's signed by one of the public root certification authorities that are listed in [Public trusted certificate for the SBC](/microsoftteams/direct-routing-plan#public-trusted-certificate-for-the-sbc).
 
@@ -95,7 +87,6 @@ This article lists combinations of SIP 504 and Microsoft response codes, the cor
 
 - Microsoft response code: **569002**
 - SIP response code: **504**
-- Error message: **Unable to deliver ACK: No connection could be made because the target machine actively refused it.**
 - Suggested actions:  
   - Check if the SBC is functional.
   - Check if the SBC is reachable through the specific IP and port. Also check your firewall settings to make sure that connection to SBC isn't blocked.
@@ -104,7 +95,6 @@ This article lists combinations of SIP 504 and Microsoft response codes, the cor
 
 - Microsoft response code: **569003**
 - SIP response code: **504**
-- Error message: **Unable to deliver INVITE: outgoing TLS negotiation failed; HRESULT=0x80090326**
 - Suggested actions:  
   Verify that the SBC certificate is signed by a trusted certificate authority (CA) and hasn't expired. For more information, see [TLS connection issues](./sip-options-tls-certificate-issues.md#tls-connection-issues).
 
@@ -112,7 +102,6 @@ This article lists combinations of SIP 504 and Microsoft response codes, the cor
 
 - Microsoft response code: **569008**
 - SIP response code: **504**
-- Error message: **Unable to deliver INVITE: Outgoing TLS negotiation failed. Remote certificate expired; HRESULT=0x80090328 SEC_E_CERT_EXPIRED**
 - Suggested actions:  
   Renew the SBC certificate.
 
@@ -122,7 +111,6 @@ This article lists combinations of SIP 504 and Microsoft response codes, the cor
 
 - Microsoft response code: **569009**
 - SIP response code: **504**
-- Error message: **Unable to deliver INVITE: outgoing TLS negotiation failed; HRESULT=0x80090325 SEC_E_UNTRUSTED_ROOT**
 - Suggested actions:  
   Request a certificate that's signed by one of the public root certification authorities that are listed in [Public trusted certificate for the SBC](/microsoftteams/direct-routing-plan#public-trusted-certificate-for-the-sbc).
 

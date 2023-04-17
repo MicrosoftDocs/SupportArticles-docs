@@ -21,12 +21,11 @@ ms.reviewer: teddygyabaah
 
 # SIP response code 412
 
-This article lists combinations of SIP 412 and Microsoft response codes, the corresponding error messages, and actions that you can take.
+This article provides troubleshooting information for various combinations of SIP 412 and Microsoft response codes.
 
 ## 510412 412 Get Flighting - wrong callee MRI
 
 - Microsoft response code: **510412**
 - SIP response code: **412**
-- Error message: **Get Flighting - wrong callee MRI**
 - Suggested actions:  
   Correct the malformed callee number in the inbound call to fix the number parsing error. This will enable the creation of a correct Messaging Resource Identifier (MRI) that's required for further processing of the call.

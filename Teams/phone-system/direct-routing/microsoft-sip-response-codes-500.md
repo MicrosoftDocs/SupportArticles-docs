@@ -21,13 +21,12 @@ ms.reviewer: teddygyabaah
 
 # SIP response code 500
 
-This article lists combinations of SIP 500 and Microsoft response codes, the corresponding error messages, and actions that you can take.
+This article provides troubleshooting information for various combinations of SIP 500 and Microsoft response codes.
 
 ## 510482 500 Loop detected
 
 - Microsoft response code: **510482**
 - SIP response code: **500**
-- Error message: **Loop detected**
 - Suggested actions:  
   Make sure that there is no infinite call forwarding.
 
@@ -35,7 +34,6 @@ This article lists combinations of SIP 500 and Microsoft response codes, the cor
 
 - Microsoft response code: **510544**
 - SIP response code: **500**
-- Error message: **Get Outbound Direct routing - no trunk config found**
 - Suggested actions:  
   Verify the trunk (gateway) configuration for the specific tenant and ensure that it's set up correctly. For more information about call routing configuration, see [Configure call routing for Direct Routing](/microsoftteams/direct-routing-voice-routing).
 
@@ -43,6 +41,5 @@ This article lists combinations of SIP 500 and Microsoft response codes, the cor
 
 - Microsoft response code: **510544**
 - SIP response code: **500**
-- Error message: **Get Outbound routing - failed getting direct routing gateways for emergency user**
 - Suggested actions:  
   Review the [emergency call routing policies](/microsoftteams/manage-emergency-call-routing-policies) and fix any misconfiguration.

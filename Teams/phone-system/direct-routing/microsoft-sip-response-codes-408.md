@@ -21,13 +21,12 @@ ms.reviewer: teddygyabaah
 
 # SIP response code 408
 
-This article lists combinations of SIP 408 and Microsoft response codes, the corresponding error messages, and actions that you can take.
+This article provides troubleshooting information for various combinations of SIP 408 and Microsoft response codes.
 
 ## 1106 408 An acknowledgement was not received for the call acceptance in the allotted time
 
 - Microsoft response code: **1106**
 - SIP response code: **408**
-- Error message: **An acknowledgement was not received for the call acceptance in the allotted time**
 - Suggested actions:  
   This error indicates that the callee answered the call, but the SBC didn't acknowledge the SIP 200 OK (answer message) from Microsoft. Work with your SBC vendor to verify that the SIP stack and the underlying TCP/TLS connections are correctly established with [Microsoft connection points](/microsoftteams/direct-routing-plan#sip-signaling-fqdns).
 
@@ -35,7 +34,6 @@ This article lists combinations of SIP 408 and Microsoft response codes, the cor
 
 - Microsoft response code: **500001**
 - SIP response code: **408**
-- Error message: **Gateway (SBC) failover timer expired**
 - Suggested actions:  
   Investigate why the SBC didn't send a response to the invitation within the configured time-out value as defined by [FailoverTimeSeconds](/powershell/module/skype/set-csonlinepstngateway?view=skype-ps&preserve-view=true). The default value is 10 seconds.
 
@@ -45,7 +43,6 @@ This article lists combinations of SIP 408 and Microsoft response codes, the cor
 
 - Microsoft response code: **560408**
 - SIP response code: **408**
-- Error message: **SBC indicated that the user did not respond (request timeout)**
 - Suggested actions:  
   Review the tenant's call records with *CallEndSubReason = 560408*. Look for trends in the called numbers, or a distribution of the failures by destination country. Patterns can be identified that would suggest a problem that affects a downstream component.
 
@@ -53,6 +50,5 @@ This article lists combinations of SIP 408 and Microsoft response codes, the cor
 
 - Microsoft response code: **0**
 - SIP response code: **408**
-- Error message: **Establishment timeout**
 - Suggested actions:  
   This code indicates a client error. Check the network connection between the client and the Teams service.

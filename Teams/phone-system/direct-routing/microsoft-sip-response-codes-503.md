@@ -21,13 +21,12 @@ ms.reviewer: teddygyabaah
 
 # SIP response code 503
 
-This article lists combinations of SIP 503 and Microsoft response codes, the corresponding error messages, and actions that you can take.
+This article provides troubleshooting information for various combinations of SIP 503 and Microsoft response codes.
 
 ## 10320 503 Bot is unreachable or unable to answer before timeout
 
 - Microsoft response code: 10320
 - SIP response code: 503
-- Error message: **Bot is unreachable or unable to answer before timeout**
 - Suggested actions:  
   - If the bot is provided by Microsoft, such as the built-in call recording, [contact Microsoft Support](https://support.microsoft.com/contactus).
   - If the bot is your own bot or from a third-party provider, work with the bot provider to verify that the bot is set up correctly.
@@ -36,7 +35,6 @@ This article lists combinations of SIP 503 and Microsoft response codes, the cor
 
 - Microsoft response code: **560503**
 - SIP response code: **503**
-- Error message: **Service unavailable. SBC undergoing maintenance or temporarily overloaded.**
 - Suggested actions:  
   - Check the logs on the SBC to investigate why it returns the "503" SIP response.
   - Make sure that the SBC is correctly licensed to handle the number of concurrent sessions.

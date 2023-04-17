@@ -21,13 +21,12 @@ ms.reviewer: teddygyabaah
 
 # SIP response code 486
 
-This article lists combinations of SIP 486 and Microsoft response codes, the corresponding error messages, and actions that you can take.
+This article provides troubleshooting information for various combinations of SIP 486 and Microsoft response codes.
 
 ## 10321 486 Bot rejects the incoming call because it is busy
 
 - Microsoft response code: **10321**
 - SIP response code: **486**
-- Error message: **Bot rejects the incoming call because it is busy**
 - Suggested actions:  
   The impact of this error depends on the specific bot and the expectations for the given scenario. If this error is unexpected:
 
