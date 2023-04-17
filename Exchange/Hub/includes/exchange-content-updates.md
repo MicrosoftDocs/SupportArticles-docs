@@ -2,6 +2,14 @@
 
 
 
+## Week of April 10, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/10/2023 | Nullable object must have a value | removed |
+
+
 ## Week of April 03, 2023
 
 
@@ -28,14 +36,3 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 3/20/2023 | [Outlook can't set up a Microsoft 365 account](/exchange/troubleshoot/outlook-issues/outlook-cannot-setup-microsoft-365-account) | modified |
-
-
-## Week of March 06, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 3/7/2023 | [Outlook doesn't connect when using Modern authentication](/exchange/troubleshoot/administration/outlook-does-not-connect-with-modern-authentication) | added |
-| 3/7/2023 | [Inconsistent performance when working with contacts](/exchange/troubleshoot/groups-and-distribution-lists/inconsistent-performance-with-contacts) | added |
-| 3/7/2023 | [Outlook can't set up a Microsoft 365 account](/exchange/troubleshoot/outlook-issues/outlook-cannot-setup-microsoft-365-account) | added |
-| 3/11/2023 | [Public folder users can't rename, move, or delete subfolders](/exchange/troubleshoot/public-folders/public-folder-users-cannot-manage-subfolders) | added |

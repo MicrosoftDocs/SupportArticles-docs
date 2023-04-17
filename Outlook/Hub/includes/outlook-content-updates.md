@@ -2,6 +2,15 @@
 
 
 
+## Week of April 10, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/10/2023 | Document inserted as icon with hyperlink in message | removed |
+| 4/10/2023 | Category colors are changed after you migrate from Outlook for Mac 2011 to Outlook 2016 for Mac | removed |
+
+
 ## Week of March 27, 2023
 
 
