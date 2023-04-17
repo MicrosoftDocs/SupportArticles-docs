@@ -1,3 +1,4 @@
+<title>Regarding DPAPI Backup Keys on Active Directory Domain Controllers</title>
 # Regarding DPAPI Backup Keys on Active Directory Domain Controllers
 
 In the Active Directory database, there exists a set of objects known as DPAPI Backup Keys. These objects include:
@@ -6,9 +7,9 @@ BCKUPKEY_P Secret
 
 BCKUPKEY_PREFERRED Secret
 
-BCKUPKEY_<guid1>
+BCKUPKEY_guid1
   
-BCKUPKEY_<guid2>
+BCKUPKEY_guid2
   
 
 These objects are of the schema class “secret” and they exist in the "CN=System,DC=contoso,DC=com” container in the Domain partition.
