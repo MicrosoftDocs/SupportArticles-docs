@@ -13,15 +13,15 @@ ms.reviewer: mihayash
 
 _Applies to:_ &nbsp;&nbsp;.NET Framework 4.0 or later
 
-This article discusses text rendering issues that may occur when the text displayed in a TextBlock (that's a child of a Viewbox) is modified.
+This article discusses text rendering issues that may occur when the text displayed in a TextBlock (that's a child of a viewBox) is modified.
 
 ## Symptoms
 
-Consider a scenario when you change the text, a `TextBlock` control (including derived classes) that's a child of a Viewbox might leave remaining text on the screen.
+Consider a scenario when you change the text, a `TextBlock` control (including derived classes) that's a child of a viewBox might leave remaining text on the screen.
 
 ## Cause
 
-The transform that the Viewbox applies to the TextBlock can cause rounding errors when calculating the dirty rectangle whenever the text changes. Portions of the previous text may be left on screen if the dirty rectangle is not large enough to completely erase the previous text.
+The transform that the viewBox applies to the TextBlock can cause rounding errors when calculating the dirty rectangle whenever the text changes. Portions of the previous text may be left on screen if the dirty rectangle isn't large enough to completely erase the previous text.
 
 ## Resolution
 
@@ -29,4 +29,4 @@ You can fix the problem by using one of the following methods:
 
 - Set the Background property to Transparent.
 - Set the UseLayoutRounding property to True.
-- Do not host a TextBlock in a Viewbox.
+- Don't host a TextBlock in a Viewbox.
