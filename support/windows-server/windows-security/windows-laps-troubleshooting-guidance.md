@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, jsimmons, sandeo, mimanans, sdabbiru, deverett
+ms.reviewer: kaushika, jsimmons, sandeo, mimanans, sdabbiru, deverett, raviks
 ms.custom: sap:windows-laps, csstroubleshoot
 ms.technology: windows-server-security
 ---
@@ -360,7 +360,7 @@ Windows LAPS can be configured for a post authentication action using a **Post-a
 ### Resolution
 
 1. Identify if there's any application blocking a shutdown of the machine.
-2. Identify if you have necessary privileges ("Debug programs") to shut down the machine.
+2. Identify if you have necessary privileges to shut down the machine.
 
 ## Event ID 10056
 
@@ -384,7 +384,7 @@ Windows LAPS client uses Lightweight Directory Access Protocol (LDAP) modify ope
 ## Event ID 10057
 
 ```output
-LAPS was unable to bind over LDAP to the domain controller with an Error Code:
+LAPS was unable to bind over LDAP to the domain controller with an <Error Code>:
 ```
 
 Windows LAPS during scheduled background processing needs to connect to a domain controller. This processing is done using the machine context. This error appears if there's any Active Directory authentication issue between the client machine and the domain controller.
