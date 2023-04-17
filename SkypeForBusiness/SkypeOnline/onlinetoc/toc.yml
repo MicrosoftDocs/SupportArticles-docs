@@ -5,8 +5,6 @@
     items:    
     - name: Audio/video connections fail in Lync Mobile 2013
       href: ../online-conferencing/audio-or-video-connections-fail.md
-    - name: Audio/video not started in a conference
-      href: ../online-conferencing/audio-or-video-not-start.md    
     - name: Error when dial out from PSTN Conferencing meeting
       href: ../online-conferencing/dial-out-to-telephone-from-pstn-meeting.md
     - name: Meeting organizer not prompted for leader PIN
@@ -23,8 +21,6 @@
     items:
     - name: "\"Set Your Location\" field is unavailable"
       href: ../online-configuration/cant-set-location-in-lync.md
-    - name: Admins can't use "Set-CsUser" in Remote PowerShell
-      href: ../online-configuration/admins-cant-use-set-csuser.md
     - name: Calls to call queues not redirected to agents
       href: ../online-configuration/call-queues-not-redirect-to-agents.md
     - name: SharePoint Skill search isn't supported
@@ -39,12 +35,8 @@
       href: ../online-contacts/cannot-add-contact-group.md
     - name: Lync contact list is empty or read-only
       href: ../online-contacts/lync-contact-list-is-empty-or-read-only.md
-    - name: Maximum Followers Reached
-      href: ../online-contacts/maximum-followers-reached.md    
     - name: Unable to modify contact lists
       href: ../online-contacts/cannot-modify-contact-lists.md
-    - name: User contact photos not correct in Lync
-      href: ../online-contacts/user-contact-photos-not-correct.md
   - name: Exchange Integration
     items:
     - name: UM-enabled mailbox migration fails
@@ -63,14 +55,8 @@
       href: ../online-im-presence/only-first-im-received-when-locked.md
     - name: Presence is unavailable in Microsoft 365
       href: ../online-im-presence/sfb-presence-unavailable.md
-  - name: Install/Uninstall
-    items:
-    - name: Clean uninstallation of Lync for Mac 2011
-      href: ../online-install-or-uninstall/uninstall-lync-for-mac-2011.md
   - name: Meetings
     items:
-    - name: Can't create meetings on behalf of delegate
-      href: ../online-meetings/cannot-create-meeting-delegate.md
     - name: Can't join online meetings from Lync Mobile
       href: ../online-meetings/users-cant-join-online-meeting.md
     - name: Incorrect special characters in meeting invitations
@@ -103,8 +89,6 @@
       href: ../online-phone-system/add-normalization-rules-change-japanese-dial-plans.md
     - name: Call transfer fails
       href: ../online-phone-system/call-transfer-fails.md
-    - name: Can't add a new derived SBC
-      href: ../online-phone-system/add-new-derived-sbc-direct-routing.md
     - name: Can't locate city name for PSTN caller
       href: ../online-phone-system/cant-locate-city-name.md
     - name: Can't manage voice mail or customize a greeting
@@ -139,8 +123,6 @@
       href: ../online-sign-in/cannot-sign-in-pic-is-enabled.md
     - name: Can't sign in by using a full redelegation domain
       href: ../online-sign-in/cannot-sign-in-using-full-redelegation-domain.md
-    - name: Can't sign in by using Lync Mobile 2013
-      href: ../online-sign-in/cant-sign-in-to-sfb-online.md
     - name: Can't sign in on devices that don't support SNI
       href: ../online-sign-in/cant-sign-in-to-lync-not-support-sni.md
     - name: Can't sign-in with this version of Lync in Lync Mobile 2013
@@ -149,8 +131,6 @@
       href: ../online-sign-in/error-in-xml-document-new-csonlinesession.md
     - name: Issue when signing in to a German Microsoft 365 environment
       href: ../online-sign-in/issue-sign-in-german-environment.md
-    - name: Issue when signing in to Lync 2010 mobile client
-      href: ../online-sign-in/sign-in-lync-2010-mobile.md
     - name: Lync can't connect to Skype for Business Online
       href: ../online-sign-in/lync-cant-connect-to-sfb-online.md
     - name: Sign-in address was not found
