@@ -1,6 +1,6 @@
 ---
 title: CoInitializeEx fails after calling HtmlHelp on the same thread
-description: Provides a workaround for an issue where CoInitializeEx function fails after calling HtmlHelp function on the same thread beforehand.
+description: Provides a workaround for an issue where the CoInitializeEx function fails after calling the HtmlHelp function on the same thread.
 ms.date: 04/17/2023
 ms.reviewer: hihayak
 author: hihayak
@@ -8,20 +8,20 @@ ms.author: v-sidong
 ms.custom: sap:Component development
 ms.technology: windows-dev-apps-component-dev
 ---
-# CoInitializeEx function fails after calling HtmlHelp function on the same thread
+# CoInitializeEx function fails after calling the HtmlHelp function on the same thread
 
-This article discusses an issue where [CoInitializeEx function](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) fails after calling `HtmlHelp` function on the same thread beforehand.
+This article discusses an issue where the [CoInitializeEx function](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) fails after calling the `HtmlHelp` function on the same thread.
 
-_Applies to:_ &nbsp; All Supported OS
+_Applies to:_ &nbsp; All supported OS
 
 ## Symptoms
 
-If an application calls `HtmlHelp` function before calling `CoInitializeEx` function with the `COINIT_MULTITHREADED` value specified, the `CoInitializeEx` function can return `RPC_E_CHANGED_MODE (0x80010106)`. As a result, the application may crash, hang, or exhibit unexpected behaviors.
+If an application calls `HtmlHelp` before calling `CoInitializeEx` with the specified `COINIT_MULTITHREADED` value, the `CoInitializeEx` function can return `RPC_E_CHANGED_MODE (0x80010106)`. As a result, the application may crash, hang, or exhibit unexpected behavior.
 
 ## Cause
 
-If a thread that calls `HtmlHelp` hasn't been initialized with `CoInitialize` or `CoInitializeEx` functions, the `HtmlHelp` function initializes the thread as apartment-threaded with `COINIT_APARTMENTTHREADED`.
+If a thread that calls `HtmlHelp` hasn't been initialized with the `CoInitialize` or `CoInitializeEx` function, the `HtmlHelp` function initializes the thread as apartment-threaded by using `COINIT_APARTMENTTHREADED`.
 
 ## Workaround
 
-To work around the issue and avoid the conflict of COM initialization on a single thread, create a new thread and call `HtmlHelp` function on that thread.
+To work around the issue and avoid the conflict of COM initialization on a single thread, create a new thread and call the `HtmlHelp` function on that thread.
