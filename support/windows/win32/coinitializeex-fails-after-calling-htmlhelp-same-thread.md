@@ -20,7 +20,7 @@ If an application calls `HtmlHelp` function before calling `CoInitializeEx` func
 
 ## Cause
 
-If a thread that calls `HtmlHelp` has not been initialized with `CoInitialize` or `CoInitializeEx` functions, the `HtmlHelp` function initializes the thread as apartment-threaded with `COINIT_APARTMENTTHREADED`.
+If a thread that calls `HtmlHelp` hasn't been initialized with `CoInitialize` or `CoInitializeEx` functions, the `HtmlHelp` function initializes the thread as apartment-threaded with `COINIT_APARTMENTTHREADED`.
 
 ## Workaround
 
