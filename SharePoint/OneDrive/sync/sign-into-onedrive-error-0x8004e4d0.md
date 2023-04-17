@@ -33,15 +33,8 @@ This issue most frequently occurs if a user account is deleted in the Microsoft 
 A second scenario involves directory synchronization with an Active Directory organizational unit (OU). This issue might occur if a user has already signed in to SharePoint, and then is moved to a different OU and resynced with SharePoint.
 
 ## Resolution  
+This issue is usually caused by a site user ID mismatch. 
 
-To fix this issue, [delete the newly created user](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user) and [restore the original user](/azure/active-directory/fundamentals/active-directory-users-restore).
+To fix the issue, check whether a new UPN exists. If it does, [delete the new UPN](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user), and then [restore the original UPN](/azure/active-directory/fundamentals/active-directory-users-restore).
 
-> [!NOTE]
-> If you can't determine whether there is a site user ID mismatch, run the [Check User Access Diagnostic](/sharepoint/troubleshoot/administration/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business#resolution-option-1-run-the-check-user-access-diagnostic) to verify.
-
-If you can't restore the original user and the issue persists, follow these steps to create a support request:
-
-1. As an administrator, select [OneDrive Site User ID Mismatch](https://aka.ms/PillarOneDriveIDMismatch) to populate a help query in the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339).
-2. At the bottom of the pane, select **Contact Support** > **New Service Request**.  
-3. Leave the description blank.
-4. After the ticket is opened, gather the UPN and OneDrive URL that have the issue, and provide them to the support agent.
+If you're not comfortable with using this procedure, see [Fix site user ID mismatch in SharePoint or OneDrive](../sharing-and-permissions/fix-site-user-id-mismatch.md) for an automated solution to fix the issue. 
