@@ -14,7 +14,9 @@ This article provides a resolution for an issue where a [segment](/dynamics365/c
 ## Prerequisites
 
 - The segment refresh status is successful.
-- The segment refreshes regularly.
+- The segment is newly created or edited, or data import rules or unification rules have changed
+
+If the segment was previously successful and had members but is not showing zero members, please open a support ticket.
 
 ## Symptoms
 
