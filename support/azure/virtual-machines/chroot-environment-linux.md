@@ -22,7 +22,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
 ## Ubuntu 16.x && Ubuntu 18.x && Ubuntu 20.04
 
-1. Stop or de-allocate the affected VM.
+1. Stop or deallocate the affected VM.
 1. Create a rescue VM of the same generation, same OS version, in same resource group and location using managed disk.
 1. Use the Azure portal to take a snapshot of the affected virtual machine's OS disk.
 1. Create a disk out of the snapshot of the OS disk, and attach it to the Rescue VM.
@@ -32,11 +32,11 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
       `sudo su -`
 
-   1. Find the disk using `dmesg` (the method you use to discover your new disk may vary). The following example uses **dmesg** to filter on **SCSI** disks:
+   1. Find the disk using `dmesg` (the method you use to discover your new disk may vary). The following example uses `dmesg` to filter on **SCSI** disks:
 
       `dmesg | grep SCSI`
 
-      Your output will be similar to the following example. In this example, we want the **sdc** disk:
+      Your output is similar to the following example. In this example, we want the `/dev/sdc` disk:
 
       ```output
       [    0.294784] SCSI subsystem initialized
@@ -88,7 +88,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
 ## RHEL/Centos/Oracle 6.x && Oracle 8.x && RHEL/Centos 7.x with RAW Partitions
 
-1. Stop or de-allocate the affected VM.
+1. Stop or deallocate the affected VM.
 1. Create a Rescue VM image of the same OS version, in same resource group (RSG) and location using managed disk.
 1. Use the Azure portal to take a snapshot of the affected virtual machine's OS disk.
 1. Create a disk out of the snapshot of the OS disk, and attach it to the Rescue VM.
@@ -98,11 +98,11 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
       `sudo su -`
 
-   1. Find the disk using `dmesg` (the method you use to discover your new disk may vary). The following example uses **dmesg** to filter on **SCSI** disks:
+   1. Find the disk using `dmesg` (the method you use to discover your new disk may vary). The following example uses `dmesg` to filter on **SCSI** disks:
 
       `dmesg | grep SCSI`
 
-      Your output will be similar to the following example. In this example, we want the **sdc** disk:
+      Your output is similar to the following example. In this example, we want the `/dev/sdc` disk:
 
       ```output
       [    0.294784] SCSI subsystem initialized
@@ -157,7 +157,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
    > [!NOTE]
    > If your original VM includes Logical Volume Manager (LVM) on the OS Disk, create the Rescue VM using the image with Raw Partitions on the OS Disk
 
-1. Stop or de-allocate the affected VM.
+1. Stop or deallocate the affected VM.
 1. Create a Rescue VM image of the same OS version, in same resource group (RSG) and location using managed disk.
 1. Use the Azure portal to take a snapshot of the affected virtual machine's OS disk.
 1. Create a disk out of the snapshot of the OS disk, and attach it to the Rescue VM.
@@ -167,11 +167,11 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
       `sudo su -`
 
-   1. Find the disk using `dmesg` (the method you use to discover your new disk may vary). The following example uses **dmesg** to filter on **SCSI** disks:
+   1. Find the disk using `dmesg` (the method you use to discover your new disk may vary). The following example uses `dmesg` to filter on **SCSI** disks:
 
       `dmesg | grep SCSI`
 
-      Your output will be similar to the following example. In this example, we want the **sdc** disk:
+      Your output is similar to the following example. In this example, we want the `/dev/sdc` disk:
 
       ```output
       [    0.294784] SCSI subsystem initialized
@@ -189,7 +189,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       lvscan
       ```
 
-   1. Use the `lsblk` command to retrieve the lvm names:
+   1. Use the `lsblk` command to retrieve the `LVM` names:
 
       ```bash
       lsblk
@@ -278,7 +278,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 ### Using the same LVM image
 
 > [!NOTE]
-> It is possible that you need to deploy the rescue VM using the same LVM image, if that's the case you would need to get around that by modifying some aspects of the rescue VM LVM.
+> It is possible that you need to deploy the rescue VM using the same `LVM` image, if that's the case you would need to get around that by modifying some aspects of the rescue VM with `LVM`.
 
 The following commands are to be executed on the recovery/rescue VM, temporarily create for the recovery operation.
 
@@ -306,7 +306,7 @@ The following commands are to be executed on the recovery/rescue VM, temporarily
    ```
 
 2. Attach the disk you want to rescue as a data drive
-3. Check the disks again. Note that it will not show you the lvm structures right away.
+3. Check the disks again. Note that isn't showing you the `LVM` structures right away.
 
    ```bash
    sudo lsblk -f
@@ -334,7 +334,7 @@ The following commands are to be executed on the recovery/rescue VM, temporarily
    └─sdc4            LVM2_member       pdSI2Q-ZEzV-oT6P-R2JG-ZW3h-cmnf-iRN6pU
    ```
 
-4. lvm commands will complain about duplicated PV.
+4. `LVM` commands complain about duplicated physical volume(PV).
 
    ```bash
    sudo pvs
@@ -352,7 +352,7 @@ The following commands are to be executed on the recovery/rescue VM, temporarily
 
 5. Use the vmimportclone command to import the rootvg from the data drive using another name.
 
-   This will also change the UUID of the PV and will activate it.
+   This command changes the UUID of the PV and and also activates it.
 
    ```bash
    sudo vgimportclone -n rescuemevg /dev/sdc4
@@ -451,7 +451,7 @@ The following commands are to be executed on the recovery/rescue VM, temporarily
 
 9. Mount the FS coming from the data drive.
 
-  When using xfs, specify the `-o nouuid` option to avoid conflicts with the UUIDs and mount the needed filesystems to perform a chroot. Keep in mind that option is not available in ext4 file system, then you will need to remove it from the commands in such scenario:
+  When using xfs, specify the `-o nouuid` option to avoid conflicts with the UUIDs and mount the needed filesystems to perform a chroot. Keep in mind that option isn't available in `ext4` file systems, then you need to remove it from the commands in such scenario:
 
    ```bash
    sudo mkdir /rescue
@@ -549,9 +549,9 @@ The following commands are to be executed on the recovery/rescue VM, temporarily
       └─rescuemevg-rootlv xfs               d8dc4d62-ada5-4952-a0d9-1bce6cb6f809   /
       ```
 
-13. Rename the VG to keep it consistent.
+13. Rename the Volume Group (`VG`) to keep it consistent.
 
-    Renaming the vg will keep you from facing issues when regenerating initrd and booting the disk again on the original VM
+    Renaming the `VG` keeps you from facing issues when regenerating initrd and booting the disk again on the original VM
 
     ```bash
     sudo vgrename rescuemevg rootvg
@@ -595,7 +595,7 @@ The following commands are to be executed on the recovery/rescue VM, temporarily
       └─rootvg-rootlv xfs               d8dc4d62-ada5-4952-a0d9-1bce6cb6f809   /
       ```
 
-15. Proceed with the required activities to rescue the OS, this may include regenerating initramfs or the grub configuration
+15. Proceed with the required activities to rescue the OS, these activities may include regenerating initramfs or the GRUB configuration
 16. Exit the chroot environment
 
       ```bash
@@ -624,7 +624,7 @@ The following commands are to be executed on the recovery/rescue VM, temporarily
 
 ## Oracle 7.x
 
-1. Stop or de-allocate the affected VM.
+1. Stop or deallocate the affected VM.
 1. Create a Rescue VM image of the same OS version, in same resource group (RSG) and location using managed disk.
 1. Use the Azure portal to take a snapshot of the affected virtual machine's OS disk.
 1. Create a disk out of the snapshot of the OS disk, and attach it to the Rescue VM.
@@ -634,11 +634,11 @@ The following commands are to be executed on the recovery/rescue VM, temporarily
 
       `sudo su -`
 
-   1. Find the disk using `dmesg` (the method you use to discover your new disk may vary). The following example uses **dmesg** to filter on **SCSI** disks:
+   1. Find the disk using `dmesg` (the method you use to discover your new disk may vary). The following example uses `dmesg` to filter on **SCSI** disks:
 
       `dmesg | grep SCSI`
 
-      Your output will be similar to the following example. In this example, we want the **sdc** disk:
+      Your output is similar to the following example. In this example, we want the `/dev/sdc` disk:
 
       ```console
       [    0.294784] SCSI subsystem initialized
@@ -691,7 +691,7 @@ The following commands are to be executed on the recovery/rescue VM, temporarily
 
 ## SUSE-SLES 12 SP4, SUSE-SLES 12 SP4 For SAP && ## SUSE-SLES 15 SP1, SUSE-SLES 15 SP1 For SAP
 
-1. Stop or de-allocate the affected VM.
+1. Stop or deallocate the affected VM.
 1. Create a Rescue VM image of the same OS version, in same resource group (RSG) and location using managed disk.
 1. Use the Azure portal to take a snapshot of the affected virtual machine's OS disk.
 1. Create a disk out of the snapshot of the OS disk, and attach it to the Rescue VM.
@@ -701,11 +701,11 @@ The following commands are to be executed on the recovery/rescue VM, temporarily
 
       `sudo su -`
 
-   1. Find the disk using `dmesg` (the method you use to discover your new disk may vary). The following example uses **dmesg** to filter on **SCSI** disks:
+   1. Find the disk using `dmesg` (the method you use to discover your new disk may vary). The following example uses `dmesg` to filter on **SCSI** disks:
 
       `dmesg | grep SCSI`
 
-      Your output will be similar to the following example. In this example, we want the **sdc** disk:
+      Your output is similar to the following example. In this example, we want the `/dev/sdc` disk:
 
       ```output
       [    0.294784] SCSI subsystem initialized
