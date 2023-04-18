@@ -1,23 +1,21 @@
 ---
 title: Errors on custom time calculation for SLA
-description: Provides a solution for when there are SLA custom time calculation errors in Dynamics 365 Customer Service.
-ms.reviewer: 
-ms.topic: troubleshooting
+description: Provides a resolution for the SLA custom time calculation errors in Dynamics 365 Customer Service.
+ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---
+# Errors occur when setting up or using custom time calculation for SLA
 
-# Errors on custom time calculation for SLA
+This article provides a resolution for the service-level agreement (SLA) custom time calculation errors that occur in Dynamics 365 Customer Service.
 
-This article provides a solution for when there are SLA custom time calculation errors in Dynamics 365 Customer Service.
+## Symptoms
 
-## Symptom
-
-Errors received on configuring custom time calculation for SLA and during its usage.
+You receive errors when you configure or use custom time calculation for SLA.
 
 ## Cause
 
-Custom time calculation isn't configured correctly.
+This errors occur because the custom time calculation isn't configured correctly.
 
 ## Resolution
 
-Set up custom time calculation and troubleshoot issues. For information on setting up custom time calculation, go to: [Enable custom time calculation of SLA KPIs](/dynamics365/customer-service/enable-sla-custom-time-calculation#enable-custom-time-calculation-of-sla-kpis). For information on troubleshooting issues, go to: [Error codes for custom time calculation](/dynamics365/customer-service/enable-sla-custom-time-calculation#error-codes-for-custom-time-calculation).
+For more information about setting up custom time calculation, see [Enable custom time calculation of SLA KPIs](/dynamics365/customer-service/enable-sla-custom-time-calculation#enable-custom-time-calculation-of-sla-kpis). For more information about troubleshooting issues, see [Error codes for custom time calculation](/dynamics365/customer-service/enable-sla-custom-time-calculation#error-codes-for-custom-time-calculation).

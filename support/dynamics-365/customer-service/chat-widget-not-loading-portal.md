@@ -12,7 +12,7 @@ This article provides a few resolutions for the issue where the chat widget does
 
 The chat widget doesn't load on the portal.
 
-:::image type="content" source="media/chat-widget-not-loading-portal/chat-portal.png" alt-text="The screenshot shows the chat widget shown on the portal.":::
+:::image type="content" source="media/chat-widget-not-loading-portal/chat-portal.png" alt-text="Screenshot that shows the chat widget shown on the portal.":::
 
 ## Cause
 
@@ -24,7 +24,7 @@ The **Location** option for the chat widget might be configured incorrectly.
 
 Delete the location in **Widget location**, and then recreate it.
 
-To delete and add **Widget location** for the chat widget, do the following steps:
+To delete and add **Widget location** for the chat widget, follow these steps:
 
 1. Sign in to the **Omnichannel Administration** app.
 2. Go to **Administration** > **Chat**.
@@ -50,7 +50,7 @@ To delete and add **Widget location** for the chat widget, do the following step
 
 Alternatively, try removing the chat widget location.
 
-:::image type="content" source="media/chat-widget-not-loading-portal/chat-portal-location.png" alt-text="Remove the chat widget location.":::
+:::image type="content" source="media/chat-widget-not-loading-portal/chat-portal-location.png" alt-text="Screenshot that shows how to remove the chat widget location.":::
 
 ## Resolution 3: Clear portal cache
 
@@ -58,7 +58,7 @@ Clear the portal cache by taking the following steps:
 
 1. Go to your portal and sign in as a portal administrator.
 
-   :::image type="content" source="media/chat-widget-not-loading-portal/chat-portal-sign-in-admin.png" alt-text="Sign in to the Portal as an administrator.":::
+   :::image type="content" source="media/chat-widget-not-loading-portal/chat-portal-sign-in-admin.png" alt-text="Screenshot that shows how to sign in to the portal as an administrator.":::
 
 2. Add the following text to the end of your portal URL:
 
@@ -70,7 +70,7 @@ Clear the portal cache by taking the following steps:
 
 3. Select **Clear cache**.
 
-    :::image type="content" source="media/chat-widget-not-loading-portal/chat-portal-clear-cache.png" alt-text="Clear the cache by selecting Clear cache.":::
+    :::image type="content" source="media/chat-widget-not-loading-portal/chat-portal-clear-cache.png" alt-text="Screenshot that shows how to clear the cache by selecting Clear cache.":::
 
 4. Reload the portal.
 
@@ -83,11 +83,11 @@ To sync portal configurations, take the following steps:
 1. Go to [Power Apps](https://make.powerapps.com).
 2. Find and select your portal, and then choose **Edit**.
 
-    :::image type="content" source="media/chat-widget-not-loading-portal/chat-portal-edit.png" alt-text="Edit the portal in Power Apps.":::
+    :::image type="content" source="media/chat-widget-not-loading-portal/chat-portal-edit.png" alt-text="Screenshot that shows how to edit the portal in Power Apps.":::
 
 3. Select **Sync Configuration**.
 
-    :::image type="content" source="media/chat-widget-not-loading-portal/chat-portal-sync-configuration.png" alt-text="Select Sync Configuration to sync portal configurations.":::
+    :::image type="content" source="media/chat-widget-not-loading-portal/chat-portal-sync-configuration.png" alt-text="Screenshot that shows how to select Sync Configuration to sync portal configurations.":::
 
 ## Resolution 5: Restart portal
 
@@ -96,7 +96,7 @@ Restart the portal by taking the following steps:
 1. Go to [Power Apps](https://make.powerapps.com).
 2. Select your portal, and then under **Advanced options**, choose **Settings** > **Administration**. 
 
-    :::image type="content" source="media/chat-widget-not-loading-portal/chat-portal-administration.png" alt-text="The screenshot shows the Advanced options settings in the portal.":::
+    :::image type="content" source="media/chat-widget-not-loading-portal/chat-portal-administration.png" alt-text="Screenshot that shows the Advanced options settings in the portal.":::
 
 3. Select **Restart**.
 

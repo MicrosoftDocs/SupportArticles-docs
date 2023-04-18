@@ -21,7 +21,7 @@ The panel doesn't load when:
 
 ## Resolution
 
-To solve this issue,
+To solve this issue:
 
 - Create a Channel Integration Framework record with the following values. 
 
@@ -38,7 +38,7 @@ To solve this issue,
 
    To learn how to create a record, see [Configure a channel provider for your Dynamics 365 organization](/dynamics365/customer-engagement/developer/channel-integration-framework/configure-channel-provider-channel-integration-framework).
 
-- To sync the configurations, remove the channel and roles, add them again and save the record.
+- To sync the configurations, remove the channel and roles, add them again, and save the record.
 
    1. Sign in to the Dynamics 365 apps.
    2. Select the dropdown button on Dynamics 365 and select **Channel Integration Framework**.

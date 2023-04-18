@@ -1,31 +1,29 @@
 ---
 title: Instance unavailable to select on the provisioning application
-description: Provides a solution for an issue where an instance is unavailable to select when provisioning Omnichannel for Customer Service..
-ms.reviewer: 
-ms.topic: troubleshooting
+description: Provides a resolution for the issue where you don't see all the instances in the Organization selector when provisioning Omnichannel for Customer Service.
+ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---
+# Instance isn't available to select on the provisioning application
 
-# Instance unavailable to select on the provisioning application <a name="provision"></a>
+This article provides a resolution for the issue where not all the instances are shown in the **Organization** selector when you provision Omnichannel for Customer Service.
 
-### Symptom
+## Symptoms
 
-Cannot see all the instances from the Organization selector.
+You can't see all the instances from the **Organization** selector when provisioning Omnichannel for Customer Service.
 
-### Cause
+## Cause
 
-For security, reliability, and performance reasons, Omnichannel for Customer Service is separated by geographical locations known as "regions". The provisioning webpage only displays instances in the same region, so you might experience issues where you don’t see all the instances from the Organization selector if you have instances in more than one region and you provision Omnichannel for Customer Service without selecting the correct region.
+For security, reliability, and performance reasons, Omnichannel for Customer Service is separated by geographical locations known as "regions". The provisioning webpage only displays instances in the same region, so you might experience issues where you don't see all the instances from the **Organization** selector if you have instances in more than one region and you provision Omnichannel for Customer Service without selecting the correct region.
 
-### Resolution
+## Resolution
 
-Go to the Power Platform admin center (https://admin.powerplatform.microsoft.com/). Expand Resources, and select Dynamics 365. Select the region in the upper-right corner and select a new region from the dropdown list.
+Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/). Expand **Resources**, and select **Dynamics 365**. Select the region in the upper-right corner and select a new region from the dropdown list.
 
-   > [!div class=mx-imgBorder]
-   > ![Power Platform admin center change region.](media/oc-region-menu.png "Power Platform admin center change region")
+:::image type="content" source="media/instance-unavailable-provision-omnichannel/oc-region-menu.png" alt-text="Screenshot that shows how to change region in Power Platform admin center.":::
 
 The portal will reload when you change the region. After it has finished reloading, go to **Applications** > **Omnichannel for Customer Service**, and then do the provisioning steps.
 
 The provisioning application you're directed to is associated with the region you chose, and all instances located in that region are displayed as options for provisioning.
 
-   > [!div class=mx-imgBorder]
-   > ![Manage Omnichannel environments.](media/oc-region-provision.png "Manage Omnichannel environments")
+:::image type="content" source="media/instance-unavailable-provision-omnichannel/oc-region-provision.png" alt-text="Screenshot that shows the Manage Omnichannel environments page.":::

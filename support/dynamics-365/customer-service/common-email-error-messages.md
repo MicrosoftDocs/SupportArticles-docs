@@ -1,12 +1,12 @@
 ---
 title: Troubleshoot common email error messages
-description: Provides resolutions for the common email error messages in Dynamics 365 Customer Service.
+description: Provides resolutions for common email error messages in Dynamics 365 Customer Service.
 ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---
 # Troubleshoot common email error messages 
 
-This article provides resolutions for the common email error messages.
+This article provides resolutions for common email error messages in Dynamics 365 Customer Service.
 
 ## Scenario
 
@@ -14,53 +14,53 @@ This article provides resolutions for the common email error messages.
 
 - The **Create contact for unknown sender** option should be selected.
 - Set condition criteria to **Any incoming email**.
-- Add action to create case, select **View properties** and set the case fields as per business use case.
+- Add action to create a case, select **View properties**, and set the case fields per business use case.
 
 ## Error 1
 
-In the **Customer** field of the **CASE DETAILS** section, the value of **Senders Account (Email)** is set as below.
+In the **Customer** field of the **CASE DETAILS** section, the value of **Senders Account (Email)** is set as shown below.
 
-:::image type="content" source="media/common-email-error-messages/email-case-scenario.png" alt-text="The screenshot shows how the value of Senders Account (Email) is set in the Customer field.":::
+:::image type="content" source="media/common-email-error-messages/email-case-scenario.png" alt-text="Screenshot that shows how the value of Senders Account (Email) is set in the Customer field.":::
 
 This setting results in the following error in system jobs:
 
-:::image type="content" source="media/common-email-error-messages/case-missing-customer-error.png" alt-text="The screenshot shows the details of the error that states the case is missing customer.":::
+:::image type="content" source="media/common-email-error-messages/case-missing-customer-error.png" alt-text="Screenshot that shows the details of the error that states the case is missing customer.":::
 
 ## Resolution for Error 1
 
-To resolve this issue, keep the **Customer** field blank or set it to **{Sender(Email)}**. This allows the system to automatically create contact for the unknown sender and link it to the case.
+To resolve this issue, keep the **Customer** field blank or set it to **{Sender(Email)}**. This allows the system to automatically create a contact for the unknown sender and link it to the case.
 
 ## Error 2
 
-The **Customer** field is set as **{Senders Account(Email)}** and the **Contact** field is set as **{Sender(Email)}**.
+The **Customer** field is set as **{Senders Account(Email)}**, and the **Contact** field is set as **{Sender(Email)}**.
 
-:::image type="content" source="media/common-email-error-messages/customer-contact-values.png" alt-text="The screenshot shows the values set for the Customer and Contact fields.":::
+:::image type="content" source="media/common-email-error-messages/customer-contact-values.png" alt-text="Screenshot that shows the values set for the Customer and Contact fields.":::
 
 This setting results in the following error in system jobs:
 
-:::image type="content" source="media/common-email-error-messages/error-has-occured.png" alt-text="The screenshot shows the details of the error that occurs due to the value set for the Customer field.":::
+:::image type="content" source="media/common-email-error-messages/error-has-occured.png" alt-text="Screenshot that shows the details of the error that occurs due to the value set for the Customer field.":::
 
 ## Resolution for Error 2
 
-To resolve this issue, keep the **Customer** field blank or set it to **{Sender(Email)}**. This allows the system to automatically create contact for the unknown sender and link it to the case.
+To resolve this issue, keep the **Customer** field blank or set it to **{Sender(Email)}**. This allows the system to automatically create a contact for the unknown sender and link it to the case.
 
 ## Error 3
 
-The **Customer** field and **Contact** field are set as **{Sender(Email)}**.
+The **Customer** and **Contact** fields are set as **{Sender(Email)}**.
 
-:::image type="content" source="media/common-email-error-messages/customer-value-set-case-details.png" alt-text="The screenshot shows the value set for the Customer and Contact fields.":::
+:::image type="content" source="media/common-email-error-messages/customer-value-set-case-details.png" alt-text="Screenshot that shows the value set for the Customer and Contact fields.":::
 
 This setting results in the following error in system jobs:
 
-:::image type="content" source="media/common-email-error-messages/specified-contact-not-belong-contact-error.png" alt-text="The screenshot shows the details of the error that states the specified contact doesn't belong to the contact that was specified in the Customer field.":::
+:::image type="content" source="media/common-email-error-messages/specified-contact-not-belong-contact-error.png" alt-text="Screenshot that shows the details of the error that states the specified contact doesn't belong to the contact that was specified in the Customer field.":::
 
 ## Resolution for Error 3
 
-To resolve this issue, leave **Contact** field blank and set **Customer** field either to blank or to **{Sender(Email)}**.
+To resolve this issue, leave the **Contact** field blank and set the **Customer** field either to blank or to **{Sender(Email)}**.
 
 ## Validation steps
 
-You must validate the configuration and validation steps given in the following table to understand the main cause of the issue and resolve it.
+You must validate the configuration and validation steps provided in the following table to understand the main cause of the issue and resolve it.
 
 |Option in Automatic Record Creation and Update Rule in Service Management  |If selected as  |Validation steps  |Outcome  |
 |---------|---------|---------|---------|

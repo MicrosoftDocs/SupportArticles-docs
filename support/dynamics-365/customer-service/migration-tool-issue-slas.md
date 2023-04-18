@@ -1,21 +1,19 @@
 ---
-title: Unable to use the SLA migration tool to migrate a large number of SLAs
-description: Provides a solution for SLA migration tool isn't able to migrate a large number of SLAs in Dynamics 365 Customer Service.
-ms.reviewer: 
-ms.topic: troubleshooting
+title: Can't use the SLA migration tool to migrate many SLAs
+description: Provides a resolution for the issue where the SLA migration tool isn't able to migrate a large number of SLAs in Dynamics 365 Customer Service.
+ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---
+# Can't use the SLA migration tool to migrate a large number of SLAs
 
-# Unable to use the SLA migration tool to migrate a large number of SLAs
+## Symptoms
 
-## Symptom
-
-Errors appear during the premigration checkup in the migration tool.
+Errors occur during the premigration checkup in the migration tool in Dynamics 365 Customer Service.
 
 ## Cause
 
-If the number of SLAs being migrated is more than 1,000, SLAs may not pass through the premigration checkup, which processes all legacy SLAs.
+If the number of service-level agreements (SLAs) being migrated is more than 1,000, SLAs may not pass through the premigration checkup, which processes all legacy SLAs.
 
 ## Resolution
 
-Skip the premigration checkup by using the following flag: use &flags=FCB.SkipPreMigrationCheckUp=true in the URL, when you select **Miscellaneous** > **ARC and SLA migration** in the Customer Service admin center site map. Perform batch migration.
+When you select **Miscellaneous** > **ARC and SLA migration** in the Customer Service admin center site map, you can use the `&flags=FCB.SkipPreMigrationCheckUp=true` flag in the URL to skip the premigration checkup.

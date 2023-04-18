@@ -6,16 +6,16 @@ ms.date: 04/11/2023
 ---
 # Can't deploy a custom Agentscript solution in Omnichannel for Customer Service
 
-This article provides a resolution for the issue where you can't deploy a custom solution with the Agentscript solution in Omnichannel for Customer Service.
+This article provides a resolution for the issue where you can't deploy a custom solution with the `Agentscript` solution in Omnichannel for Customer Service.
 
 ## Symptoms
 
-When you try to deploy a custom solution, it fails on account of a dependency on the Agentscript solution, which is part of Omnichannel for Customer Service.
+When you try to deploy a custom solution, it fails on account of a dependency on the `Agentscript` solution, which is part of Omnichannel for Customer Service.
 
 ## Cause
 
-The Agentscript solution has been deprecated and was not present in the target environment. It has been replaced by the msdyn_Agentscripts solution.
+The `Agentscript` solution has been deprecated and wasn't present in the target environment. It has been replaced by the `msdyn_Agentscripts` solution.
 
 ## Resolution
 
-It's recommended that you remove all references of the Agentscript solution from the custom solution, and then reimport the solution.
+It's recommended that you remove all references to the Agentscript solution from the custom solution and then reimport the solution.
