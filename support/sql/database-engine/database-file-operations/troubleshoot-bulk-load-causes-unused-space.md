@@ -5,7 +5,7 @@ ms.date: 03/03/2023
 ms.custom: sap:Administration and Management
 ms.reviewer: jopilov
 author: padmajayaraman
-ms author: v-jayaramanp
+ms.author: v-jayaramanp
 ms.prod: sql
 ---
 
