@@ -1,7 +1,7 @@
 ---
 title: Use AzCopy to copy blobs between storage accounts with access restriction
 description: Introduces how to copy blobs between storage accounts with AzCopy and how to implement this when network restrictions are set for the storage accounts.
-ms.date: 04/17/2023
+ms.date: 04/18/2023
 ms.topic: how-to
 ms.service: storage
 ms.author: v-weizhu
@@ -64,7 +64,7 @@ Here's the full process of this mechanism for the two scenarios:
 
 1. The client sent a PutBlockfromURL request to the destination storage.
 2. After getting the requests, the destination storage tries to get blocks from the given source URL. However, since the destination storage hasn't been allowed by the source firewall, it will get a "403 Forbidden" error.
-3. After getting the 403 error, the destination storage sent another GetBlob request on behalf of the client. If the client has access to the source storage, the destination will be able to get the blocks from the source with the response code 206 and return a success to the client.
-4. The client sent PutBlockList to the destination storage to commit the blocks and finish the process after receiving success from request.
+3. After getting the 403 error, the destination storage sent another GetBlob request on behalf of the client. If the client has access to the source storage, the destination will be able to get the blocks from the source with the response code 206 and return a success response code to the client.
+4. The client sent PutBlockList to the destination storage to commit the blocks and finish the process after a receiving success response code from the request.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
