@@ -106,4 +106,4 @@ This article provides troubleshooting information for various combinations of th
 - Microsoft response code: **510559**
 - SIP response code: **403**
 - Suggested actions:  
-  - Make sure that the dialed number in Teams matches a corresponding number pattern in a voice route for the given user. In some cases, this error occurs because an incorrect number is dialed, or the customer's own internal policy prevents calls to specific countries, regions, or number patterns.
+  - Make sure that the dialed number in Teams matches a corresponding number pattern in a voice route for the given user. In some cases, this error occurs because an incorrect number is dialed, or the customer's own internal policy prevents calls to specific countries/regions, or number patterns.

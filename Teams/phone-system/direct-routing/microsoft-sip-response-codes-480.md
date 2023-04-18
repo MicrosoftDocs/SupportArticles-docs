@@ -43,4 +43,4 @@ This article provides troubleshooting information for various combinations of th
 - Microsoft response code: **10191**
 - SIP response code: **480**
 - Suggested actions:  
-  - In the calling policy that's assigned to the affected user, check whether [voicemail is available for routing inbound calls](/MicrosoftTeams/teams-calling-policy#voicemail-is-available-for-routing-inbound-calls) setting. If the setting is set to **Not enabled**, set it to **Enabled** or **User controlled**.
+  - In the calling policy that's assigned to the affected user, check the [Voicemail is available for routing inbound calls](/MicrosoftTeams/teams-calling-policy#voicemail-is-available-for-routing-inbound-calls) setting. If the setting is set to **Not enabled**, set it to **Enabled** or **User controlled**.

@@ -74,14 +74,14 @@ This article provides troubleshooting information for various combinations of th
 - Microsoft response code: **569002**
 - SIP response code: **504**
 - Suggested actions:  
-  - The TLS context is responsible for encrypting and decrypting SIP signaling messages. This error code indicates that the TLS context is expired and can no longer be used for secure communication. Work with the SBC vendor to troubleshoot the TLS context expiration issue.
+  - The TLS context is responsible for encrypting and decrypting SIP signaling messages. This error indicates that the TLS context is expired and can no longer be used for secure communication. Work with the SBC vendor to troubleshoot the TLS context expiration issue.
 
 ## 569002 504 Unable to deliver ACK: outgoing TLS negotiation failed; Wrong target principal name configured. HRESULT=0x80090322 CERT_E_WRONG_USAGE
 
 - Microsoft response code: **569002**
 - SIP response code: **504**
 - Suggested actions:  
-  - Request a certificate that's signed by one of the public root certification authorities that are listed in a [public trusted certificate for the SBC](/microsoftteams/direct-routing-plan#public-trusted-certificate-for-the-sbc).
+  - Request a certificate that's signed by one of the public root certification authorities that are listed in [public trusted certificate for the SBC](/microsoftteams/direct-routing-plan#public-trusted-certificate-for-the-sbc).
 
 ## 569002 504 Unable to deliver ACK: No connection could be made because the target machine actively refused it
 
@@ -112,6 +112,6 @@ This article provides troubleshooting information for various combinations of th
 - Microsoft response code: **569009**
 - SIP response code: **504**
 - Suggested actions:  
-  - Request a certificate that's signed by one of the public root certification authorities that are listed in a [public trusted certificate for the SBC](/microsoftteams/direct-routing-plan#public-trusted-certificate-for-the-sbc).
+  - Request a certificate that's signed by one of the public root certification authorities that are listed in [public trusted certificate for the SBC](/microsoftteams/direct-routing-plan#public-trusted-certificate-for-the-sbc).
 
   If you have multiple TLS profiles, check that you're using a profile that has the correct certificate when you connect to the Direct Routing interface. If you have multiple TLS profiles on the SBC, make sure that you select a profile that's signed by using a certificate that's trusted by Direct Routing.
