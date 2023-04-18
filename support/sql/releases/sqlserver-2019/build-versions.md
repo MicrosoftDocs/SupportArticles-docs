@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2019 build versions (KB4518398)
 description: This article lists cumulative update and GDR builds for SQL Server 2019.
-ms.date: 10/12/2022
+ms.date: 04/13/2022
 ms.custom: KB4518398
 appliesto:
 - SQL Server 2019
@@ -16,16 +16,17 @@ This article lists the Microsoft SQL Server 2019 builds that were released after
 
 | CU Name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
 |---------------|--------------------------|----------------------------------------|---------------------------------|----------------------------------------------|-----------------------|--------------------|
-| CU19 (Latest) | 15.0.4298.1| 2019.150.4298.1| 15.0.35.35| 2018.150.35.35 | [KB5023049](https://support.microsoft.com/help/5023049) | February 16, 2023 |
+| CU20 (Latest) | 15.0.4312.2 | 2019.150.4312.2 | 15.0.35.39 | 2018.150.35.39 | [KB5024276](https://support.microsoft.com/help/5024276) | April 13, 2023 |
+| CU19 | 15.0.4298.1| 2019.150.4298.1| 15.0.35.35| 2018.150.35.35 | [KB5023049](https://support.microsoft.com/help/5023049) | February 16, 2023 |
 | CU18 | 15.0.4261.1| 2019.150.4261.1| 15.0.35.33| 2018.150.35.33 | [KB5017593](https://support.microsoft.com/help/5017593) | September 28, 2022 |
-| CU17| 15.0.4249.2| 2019.150.4249.2| 15.0.35.33| 2018.150.35.33 | [KB5016394](https://support.microsoft.com/help/5016394) | August 11, 2022|
-| CU16| 15.0.4223.1| 2019.150.4223.1| 15.0.35.23| 2018.150.35.23 | [KB5011644](https://support.microsoft.com/help/5011644) | April 18, 2022 |
-| CU15| 15.0.4198.2| 2019.150.4198.2| 15.0.35.22| 2018.150.35.22 | [KB5008996](https://support.microsoft.com/help/5008996) | January 27, 2022 |
-| CU14| 15.0.4188.2| 2019.150.4188.2| 15.0.35.19| 2018.150.35.19 | [KB5007182](https://support.microsoft.com/help/5007182) | November 22, 2021|
-| CU13| 15.0.4178.1| 2019.150.4178.1| 15.0.35.15| 2018.150.35.15 | [KB5005679](https://support.microsoft.com/help/5005679) | October 05, 2021 |
-| CU12| 15.0.4153.1| 2019.150.4153.1| 15.0.35.15| 2018.150.35.15 | [KB5004524](https://support.microsoft.com/help/5004524) | August 04, 2021|
-| CU11| 15.0.4138.2| 2019.150.4138.2| 15.0.35.9 | 2018.150.35.9| [KB5003249](https://support.microsoft.com/help/5003249) | June 10, 2021|
-| CU10| 15.0.4123.1| 2019.150.4123.1| 15.0.35.0 | 2018.150.35.0| [KB5001090](https://support.microsoft.com/help/5001090) | April 06, 2021 |
+| CU17 | 15.0.4249.2| 2019.150.4249.2| 15.0.35.33| 2018.150.35.33 | [KB5016394](https://support.microsoft.com/help/5016394) | August 11, 2022|
+| CU16 | 15.0.4223.1| 2019.150.4223.1| 15.0.35.23| 2018.150.35.23 | [KB5011644](https://support.microsoft.com/help/5011644) | April 18, 2022 |
+| CU15 | 15.0.4198.2| 2019.150.4198.2| 15.0.35.22| 2018.150.35.22 | [KB5008996](https://support.microsoft.com/help/5008996) | January 27, 2022 |
+| CU14 | 15.0.4188.2| 2019.150.4188.2| 15.0.35.19| 2018.150.35.19 | [KB5007182](https://support.microsoft.com/help/5007182) | November 22, 2021|
+| CU13 | 15.0.4178.1| 2019.150.4178.1| 15.0.35.15| 2018.150.35.15 | [KB5005679](https://support.microsoft.com/help/5005679) | October 05, 2021 |
+| CU12 | 15.0.4153.1| 2019.150.4153.1| 15.0.35.15| 2018.150.35.15 | [KB5004524](https://support.microsoft.com/help/5004524) | August 04, 2021|
+| CU11 | 15.0.4138.2| 2019.150.4138.2| 15.0.35.9 | 2018.150.35.9| [KB5003249](https://support.microsoft.com/help/5003249) | June 10, 2021|
+| CU10 | 15.0.4123.1| 2019.150.4123.1| 15.0.35.0 | 2018.150.35.0| [KB5001090](https://support.microsoft.com/help/5001090) | April 06, 2021 |
 | CU9 | 15.0.4102.2| 2019.150.4102.2| 15.0.34.29| 2018.150.34.29 | [KB5000642](https://support.microsoft.com/help/5000642) | February 11, 2021|
 | CU8 | 15.0.4073.23 | 2019.150.4073.23 | 15.0.34.27| 2018.150.34.27 | [KB4577194](https://support.microsoft.com/help/4577194) | October 01, 2020 |
 | CU7 (Removed) | 15.0.4063.15 | 2019.150.4063.15 | 15.0.34.22| 2018.150.34.22 | [KB4570012](https://support.microsoft.com/help/4570012) | September 02, 2020 |
