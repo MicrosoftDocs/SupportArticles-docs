@@ -74,8 +74,6 @@ productDirectory:
       links:
         - url: /skypeforbusiness/troubleshoot/skype-server-welcome
           text: Skype for Business Server
-        - url: /skypeforbusiness/troubleshoot/skype-online-welcome
-          text: Skype for Business Online
         - url: /skypeforbusiness/troubleshoot/skype-hybrid-welcome
           text: Skype for Business Hybrid
         - url: /skypeforbusiness/troubleshoot/skype-experts-welcome
