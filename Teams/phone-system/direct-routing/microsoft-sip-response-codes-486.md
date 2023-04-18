@@ -1,6 +1,6 @@
 ---
 title: SIP 486 and Microsoft response codes
-description: Lists combinations of Microsoft response code and the SIP 484 error, and provides actions to resolve the error codes.
+description: Lists combinations of Microsoft response code and the SIP 486 error, and provides actions to resolve the error codes.
 ms.date: 3/27/2023
 author: helenclu
 ms.author: luche
