@@ -26,14 +26,13 @@ Users in your organization can't sign in to Microsoft OneDrive, and they receive
 
 ## Cause  
 
-This error might be caused by a permissions issue that affects the OneDrive site that's being synchronized.  
+This issue is usually caused by a site user ID mismatch. 
 
 This issue most frequently occurs if a user account is deleted in the Microsoft 365 admin center or in Active Directory (in directory synchronization scenarios), and the account is then re-created by using the same user principal name (UPN) but a different ID value. When the user tries to access a site collection or OneDrive, the user has an incorrect ID.
 
 A second scenario involves directory synchronization with an Active Directory organizational unit (OU). This issue might occur if a user has already signed in to SharePoint, and then is moved to a different OU and resynced with SharePoint.
 
 ## Resolution  
-This issue is usually caused by a site user ID mismatch. 
 
 To fix the issue, check whether a new UPN exists. If it does, [delete the new UPN](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user), and then [restore the original UPN](/azure/active-directory/fundamentals/active-directory-users-restore).
 
