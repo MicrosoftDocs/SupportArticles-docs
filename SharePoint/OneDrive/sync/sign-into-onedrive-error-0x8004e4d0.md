@@ -36,4 +36,4 @@ A second scenario involves directory synchronization with an Active Directory or
 
 To fix the issue, check whether a new UPN exists. If it does, [delete the new UPN](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user), and then [restore the original UPN](/azure/active-directory/fundamentals/active-directory-users-restore).
 
-If you're not comfortable with using this procedure, see [Fix site user ID mismatch in SharePoint or OneDrive](../sharing-and-permissions/fix-site-user-id-mismatch.md) for an automated solution to fix the issue. 
+If you're not comfortable with using this procedure, see [Fix site user ID mismatch in SharePoint or OneDrive](/sharepoint/troubleshoot/sharing-and-permissions/fix-site-user-id-mismatch) for an automated solution to fix the issue. 
