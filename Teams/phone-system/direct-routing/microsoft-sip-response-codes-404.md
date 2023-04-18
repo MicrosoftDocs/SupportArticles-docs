@@ -1,6 +1,6 @@
 ---
 title: SIP 404 and Microsoft response codes
-description: Lists combinations of Microsoft response codes and the SIP 403 error, and provides actions to resolve the errors.
+description: Lists combinations of Microsoft response codes and the SIP 404 error, and provides actions to resolve the errors.
 ms.date: 3/27/2023
 author: helenclu
 ms.author: luche
