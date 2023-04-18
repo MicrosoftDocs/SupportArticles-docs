@@ -35,4 +35,10 @@ To avoid this issue, [hide the **Shared with** column](https://support.microsoft
 
 This is a known issue. The **Shared with** column may display any accounts with whom the document was previously shared before automatic updating of this column was disabled. However, the contents of the column will not be automatically added to nor cleaned up in future versions of the software.
 
+The SharedWith and SharedWithDetails column do not accurately reflect the permissions and people who have access to an item. As such, the column has been hidden by default in OneDrive and SharePoint for 3+ years. With an upcoming change, we will no longer update the SharedWith fields during sharing operations. The data within the column will move to being considered customer content and will not be updated or changed by Microsoft. 
+
+We'll be gradually rolling this out to customers in early June, and the roll out will be completed by the end of July.
+In a future update, we will stop provisioning this column entirely.
+
+
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
