@@ -78,7 +78,7 @@ However, the root cause of the problem is that Error 1934 occurs because of an i
 
 ## Verify the error message
 
-- Check whether the error message in the Database Mail log is same message (**The Transaction not longer valid**).
+- Check whether the error message in the Database Mail log is the same message (**The Transaction not longer valid**).
 
 - Gather a profiler trace by having Statement-level events, Errors and Warnings, and Broker events enabled.
 

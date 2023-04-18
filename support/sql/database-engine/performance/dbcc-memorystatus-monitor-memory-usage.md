@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 907877
 
 This article discusses the output of the `DBCC MEMORYSTATUS` command. This command is frequently used to troubleshoot Microsoft SQL Server memory consumption issues.
 
-This article describes the elements of the output for Memory Manager, for the summary of memory usage, for the aggregate memory information, for the buffer distribution information, for the buffer pool information, and for the procedure cache information. It also describes the output about global memory objects, about query memory objects, about optimization, and about memory brokers.
+This article describes the elements of the output for Memory Manager, the summary of memory usage, the aggregate memory information, the buffer distribution information, the buffer pool information, and the procedure cache information. It also describes the output about global memory objects, about query memory objects, about optimization, and about memory brokers.
 
 ## Introduction
 

@@ -23,6 +23,8 @@ landingContent:
             url: exports/environment-not-showing-in-power-bi.md
           - text: Errors on date fields when loading Customer Insights entities in Power BI Desktop
             url: exports/error-date-fields-power-bi-connector.md
+          - text: Exports fail with error stating that the following name already exists
+            url: exports/export-fails-name-already-exists.md
           - text: Troubleshoot controls from Customer Card Add-in
             url: exports/controls-customer-card-add-in.md
           - text: Troubleshoot segment not eligible for export
