@@ -19,11 +19,11 @@ If you run it again, the task execution is completed successfully and quickly. O
 
 ## Cause
 
-Since the task is being executed and there is no error, it's an application issue in most cases. Azure Batch doesn't have more detailed logs to monitor the process running in the task to protect customer privacy.
+Since the task is being executed and there is no error, it's an application issue in most cases.
 
 ## Recommended steps
 
-1. When the task is running, capture more detailed application logs and output them to stdout to understand where the task is stuck.  
+1. Azure Batch doesn't monitor the application running by the task, so there are no detailed application logs. To understand where the task is stuck, add more detailed application logs and output them to stdout when the task is running. 
 
 1. Compare the logs of a normal task and the stuck task to find the gap.  
 
