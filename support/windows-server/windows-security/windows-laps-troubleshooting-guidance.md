@@ -21,9 +21,9 @@ Windows LAPS is a Windows feature that automatically manages and backs up the pa
 
 > [!NOTE]
 >
-> - This article is for Windows LAPS (the new feature) and doesn't target the legacy LAPS or the older version of LAPS.
-> - This article lists only some of the top possible root causes. Other causes may also exist and remain undiscovered.
-> - The following list contains the most common Event IDs and might not contain all Windows LAPS events.
+> - This article is for Windows LAPS (the new feature), not for the legacy LAPS or the older version of LAPS.
+> - This article lists only some of the top possible root causes. Other causes may also exist but remain undiscovered.
+> - The following list contains the most common event IDs and might not include all Windows LAPS events.
 
 ## Troubleshooting Windows LAPS using Windows events
 
@@ -43,7 +43,7 @@ Windows LAPS has two scenarios:
 
     Client machines are configured to store the password in Azure AD.
 
-The following table lists the Event IDs that are logged in different scenarios:
+The following table lists the event IDs that are logged in different scenarios:
 
 |Event ID  |Scenario  |
 |---------|---------|
@@ -78,9 +78,9 @@ By default, Windows LAPS encrypts the password for the managed account on the cl
 ### Resolution
 
 1. Raise the domain functional level if needed.
-2. Disable the Group Policy "Enable password encryption" focused to the client machines.
+2. Disable the **Enable password encryption** Group Policy for client machines.
     > [!NOTE]
-    > We don't recommend to disable the password encryption stored on the domain controller.
+    > We don't recommend you to disable the password encryption stored on the domain controller.
 
 ## Event ID 10011
 
@@ -88,7 +88,7 @@ By default, Windows LAPS encrypts the password for the managed account on the cl
 LAPS failed when querying Active Directory for the current computer state
 ```
 
-Windows LAPS periodically (every hour) queries Active Directory for the computer state, and the client machine uses the Netlogon service to discover a domain controller.
+Windows LAPS periodically (every hour) queries Active Directory for the computer state, and the client machine uses the Netlogon service to discover a domain controller on it.
 
 ### Resolution
 
@@ -102,14 +102,14 @@ For more information, see [Service overview and network port requirements for Wi
 The Active Directory schema has not been updated with the necessary LAPS attributes
 ```
 
-Introducing Windows LAPS, you need to extend the schema with Windows LAPS attributes. Or, if you're using Windows LAPS in legacy LAPS emulation mode, you need to extend the schema with the legacy LAPS attributes. This issue occurs for one of the following reasons:
+To introduce Windows LAPS, you need to extend the schema with Windows LAPS attributes. Or, if you're using Windows LAPS in legacy LAPS emulation mode, you need to extend the schema with the legacy LAPS attributes. This issue occurs for one of the following reasons:
 
 - Root cause 1
 
     The schema hasn't been extended with the new Windows LAPS attributes.
 - Root cause 2
 
-    Transient Active Directory replication between the local domain controller (DC) and the primary domain controller (PDC).
+    A transient Active Directory replication exists between the local domain controller (DC) and the primary domain controller (PDC).
 - Root cause 3
 
     Active Directory replication issues on the local domain controller.
@@ -118,7 +118,7 @@ Introducing Windows LAPS, you need to extend the schema with Windows LAPS attrib
 
 Run the `Update-LapsADSchema` PowerShell cmdlet to update the Active Directory schema by using Schema Admin privileges.
 
-If you're using the legacy LAPS emulation, extend the schema with the `Update-AdmPwdADSchema` PowerShell cmdlet (this requires installing the legacy LAPS product first).
+If you're using the legacy LAPS emulation, extend the schema with the `Update-AdmPwdADSchema` PowerShell cmdlet (this action requires installing the legacy LAPS product first).
 
 ### Resolution to root cause 2
 
@@ -145,7 +145,7 @@ For more information, see [Troubleshooting Active Directory Replication Problems
 LAPS failed to find the currently configured local administrator account
 ```
 
-Windows LAPS reads the local administrator's name from Group Policy or the Intune setting **Name of administrator account to manage**. If this setting isn't configured, it will look for the local account with a security identifier (SID) ending with 500 (administrator). If Windows LAPS can't find the account, then Event ID 10013 is logged.
+Windows LAPS reads the local administrator's name from Group Policy or the Intune setting **Name of administrator account to manage**. If this setting isn't configured, it will look for the local account with a security identifier (SID) ending with 500 (administrator). If Windows LAPS can't find the account, Event ID 10013 is logged.
 
 In the current version of Windows LAPS, there's no feature for creating the managed user by using Windows LAPS.
 
@@ -170,7 +170,7 @@ This is a status event at the end of a Windows LAPS processing cycle. This event
 
 1. Open an elevated PowerShell command prompt and run the `Invoke-lapsPolicyProcessing` cmdlet.
 2. Open Event Viewer and go to **Applications and Services Logs** > **Microsoft** > **Windows** > **LAPS** > **Operational**.
-3. Filter for the latest processing of events starting from Event ID 10003 to Event ID 10005.
+3. Filter for the latest processing of events starting from Event ID 10003 through Event ID 10005.
 4. Fix any errors prior to Event ID 10017.
 
 ## Event ID 10019
@@ -179,7 +179,7 @@ This is a status event at the end of a Windows LAPS processing cycle. This event
 LAPS failed to update the local admin account with the new password
 ```
 
-Windows LAPS can't update the password for the locally managed user account on the local machine. Windows LAPS finds the managed user, but has issues changing the password.
+Windows LAPS can't update the password for the locally managed user account on the local machine. Windows LAPS finds the managed user, but has problem changing the password.
 
 ### Resolution
 
@@ -197,7 +197,7 @@ The device (Azure AD joined or hybrid joined) that's configured with Windows LAP
 ### Resolution
 
 1. Verify that you can connect successfully to the registration endpoint (`https://enterpriseregistration.windows.net`). If you open Microsoft Edge or Google Chrome and connect to the registration endpoint (`https://enterpriseregistration.windows.net`), you get a message "Endpoint not found". This message means you can connect to the Enterprise Registration Endpoint.
-2. If you're using a proxy server, then validate or verify that your proxy is configured under the system context. You can open an elevated command prompt and run the `netsh winhttp show proxy` command to display the proxy.
+2. If you're using a proxy server, verify that your proxy is configured under the system context. You can open an elevated command prompt and run the `netsh winhttp show proxy` command to display the proxy.
 
 ## Event ID 10026
 
@@ -226,7 +226,7 @@ This issue occurs if there's an issue with the device's Primary Refresh Token (P
 LAPS was unable to create an acceptable new password. Please verify that the LAPS password length and complexity policy is compatible with the domain and local password policy settings
 ```
 
-Windows LAPS can't update the password for the locally managed user account on the local machine. Windows LAPS finds the managed user, but has issues changing the password.
+Windows LAPS can't update the password for the locally managed user account on the local machine. Windows LAPS finds the managed user, but has problem changing the password.
 
 ### Resolution
 
@@ -236,16 +236,16 @@ Windows LAPS can't update the password for the locally managed user account on t
     > [!NOTE]
     > Your password policies configured in Active Directory, local GPO, or security settings should match the Windows LAPS password settings, or should contain lower settings to that of the Windows LAPS **Password Settings** configuration.
 
-3. Verify if you have any third-party password filters that might be blocking setting the password.
+3. Check if you have any third-party password filters that might be blocking setting the password.
     1. Download [Process Explorer](/sysinternals/downloads/process-explorer).
-    2. Extract and run Process Explorer as an Administrator.
+    2. Extract and run Process Explorer as an administrator.
     3. Select the *LSASS.exe* process on the left pane.
     4. Select **View** > **Show Lower Pane**.
     5. Select **View** > **Lower Pane View** > **DLLs**.
 
         :::image type="content" source="media/windows-laps-troubleshooting-guidance/process-explorer-dlls-thumbnail.png" alt-text="Screenshot of the Process Explorer with loaded dlls or modules." lightbox="media/windows-laps-troubleshooting-guidance/process-explorer-dlls.png":::
 
-4. The lower pane will display the loaded DLLs or modules. Identify if there are any third-party modules by using the **Company Name** field (any modules other than Microsoft).
+4. The lower pane displays the loaded DLLs or modules. Identify if there are any third-party modules by using the **Company Name** field (any modules other than Microsoft).
 
     Review the DLL list to identify if the name of the third-party DLL (module) has some keywords like "security", "password", or "policies". Uninstall or stop the application or service that might be using this DLL.
 
@@ -262,7 +262,7 @@ Azure AD or hybrid-joined devices can be managed by using mobile device manageme
 LAPS failed to update Azure Active Directory with the new password
 ```
 
-Windows LAPS client machine periodically updates passwords. This event appears if the client machine configured with Windows LAPS can't update the password to Azure AD.
+The Windows LAPS client machine periodically updates passwords. This event appears if the client machine configured with Windows LAPS can't update the password to Azure AD.
 
 ### Resolution
 
@@ -283,7 +283,7 @@ Windows LAPS client machine periodically updates passwords. This event appears i
 LAPS was unable to authenticate to Azure using the device identity
 ```
 
-There might be issues related to Azure AD authentication by using device PRT.
+There might be issues related to Azure AD authentication using device PRT.
 
 ### Resolution
 
@@ -314,7 +314,7 @@ Correct the Intune or GPO configuration. This setting accepts two values:
 - Group name in \<Domain Name\>\\\<Group Name\>, \<Domain Name\>\\\<User Name\>, or \<User Name\>@\<Domain Name\>
 
 > [!NOTE]
-> Verify any trailing spaces at the beginning or the end of the setting.
+> Verify that there's no trailing space at the beginning or the end of the setting.
 
 ## Event ID 10035
 
@@ -322,7 +322,7 @@ Correct the Intune or GPO configuration. This setting accepts two values:
 The configured encryption principal name could not be mapped to a known account. This must be corrected before the configured account's password can be managed.
 ```
 
-The encryption principal is configured via the **Configure authorized password decryptors**  setting by using GPO or MDM (Intune). The setting accepts an SID or a domain group name in either \<Domain Name\>\\\<Group Name\>, \<Domain Name\>\\\<User Name\>, or \<User Name\>@\<Domain Name\>. The error occurs when the Windows LAPS client can't resolve an SID to a name or a name to an SID.
+The encryption principal is configured via the **Configure authorized password decryptors** setting by using GPO or MDM (Intune). The setting accepts an SID or a domain group name in either \<Domain Name\>\\\<Group Name\>, \<Domain Name\>\\\<User Name\>, or \<User Name\>@\<Domain Name\>. The error occurs when the Windows LAPS client can't resolve an SID to a name or a name to an SID.
 
 ### Resolution
 
@@ -332,7 +332,7 @@ The encryption principal is configured via the **Configure authorized password d
     1. Download [PsGetSid](/sysinternals/downloads/psgetsid).
     2. Extract the downloaded file and open an elevated command prompt on the client machine where you're experiencing the issue.
     3. Run the `psgetsid -accepteula <SID> or <Name>` command. Use the SID or name mentioned in Event ID 10035.
-4. Verify if there are any Active Directory replication errors in the forest.
+4. Check if there are any Active Directory replication errors in the forest.
 
 For more information, see [Troubleshooting Active Directory Replication Problems](/windows-server/identity/ad-ds/manage/troubleshoot/troubleshooting-active-directory-replication-problems).
 
@@ -342,7 +342,7 @@ For more information, see [Troubleshooting Active Directory Replication Problems
 The currently pending post-authentication reset timer has been retried the maximum allowed number attempts and will no longer be scheduled
 ```
 
-The post-authentication retry is the amount of retry operations to reset the password with the appropriate directory (Azure AD or Active Directory). If this exceeds a maximum of 100 on a boot, this event is triggered.
+The post-authentication retry is the number of retry operations to reset the password with the appropriate directory (Azure AD or Active Directory). If this number exceeds a maximum of 100 on a boot, this event is triggered.
 
 ### Resolution
 
@@ -387,7 +387,7 @@ Windows LAPS client uses Lightweight Directory Access Protocol (LDAP) modify ope
 LAPS was unable to bind over LDAP to the domain controller with an <Error Code>:
 ```
 
-Windows LAPS during scheduled background processing needs to connect to a domain controller. This processing is done using the machine context. This error appears if there's any Active Directory authentication issue between the client machine and the domain controller.
+Windows LAPS, during a scheduled background processing, needs to connect to a domain controller. This processing is done using the machine context. This error appears if there's any Active Directory authentication issue between the client machine and the domain controller.
 
 ### Resolution
 
@@ -431,7 +431,7 @@ The event also contains an HTTP error. The error is originating from connecting,
 LAPS received an LDAP_INSUFFICIENT_RIGHTS error trying to update the password using the legacy LAPS password attribute. You should update the permissions on this computer's container using the Update-AdmPwdComputerSelfPermission cmdlet, for example:
 ```
 
-This occur occurs because the Windows LAPS client machine needs to write passwords for the managed user.
+This error occurs because the Windows LAPS client machine needs to write passwords for the managed user.
 
 This issue can also occur if you move the machine to a different organizational unit (OU), and the destination OU doesn't have the Self Permissions to the computer.
 
@@ -458,7 +458,7 @@ This issue can also occur if you move the machine to a different organizational 
 ### Logon to a domain controller with a domain administrator privilege
 
 1. Open *LDP.exe*.
-2. Select **Connection** > **Connect** and configure them as follows:
+2. Select **Connection** > **Connect** and configure the server and port as follows:
 
     :::image type="content" source="media/windows-laps-troubleshooting-guidance/ldp-connection-connect.png" alt-text="Screenshot of the LDP tool with the Connect window opened.":::
 
@@ -466,7 +466,7 @@ This issue can also occur if you move the machine to a different organizational 
 
     :::image type="content" source="media/windows-laps-troubleshooting-guidance/ldp-connection-bind.png" alt-text="Screenshot of the LDP tool with the Bind window opened.":::
 
-4. Select **View** > **Tree**. Select the domain where your client machine is located from the drop-down of the base DN.
+4. Select **View** > **Tree**. From the drop-down of the base DN, select the domain where your client machine is located.
 
     :::image type="content" source="media/windows-laps-troubleshooting-guidance/ldp-view-tree.png" alt-text="Screenshot of the LDP tool with the Tree View window opened.":::
 
