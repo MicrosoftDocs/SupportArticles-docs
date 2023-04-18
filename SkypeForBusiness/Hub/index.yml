@@ -73,11 +73,10 @@ productDirectory:
       imageSrc: /media/logos/logo_Skype_for_Business.svg
       links:
         - url: ../SkypeServer/skype-server-welcome.yml
-          text: Skype for Business Online
+          text: Skype for Business Server
         - url: ../SkypeHybrid/skype-hybrid-welcome.yml
           text: Skype for Business Hybrid
         - url: ../SkypeExperts/skype-experts-welcome.yml
-          text: From the Skype for Business Experts
     # Card
     - title: Microsoft Outlook
       imageSrc: /media/logos/logo-outlook.svg
