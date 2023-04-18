@@ -11,7 +11,7 @@ ms.collection: linux
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
-ms.date: 02/01/2023
+ms.date: 04/18/2023
 ms.author: genli
 
 ---
@@ -38,7 +38,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
       Your output will be similar to the following example. In this example, we want the **sdc** disk:
 
-      ```console
+      ```output
       [    0.294784] SCSI subsystem initialized
       [    0.573458] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
       [    7.110271] sd 2:0:0:0: [sda] Attached SCSI disk
@@ -48,7 +48,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
    1. Use the following commands to access the chroot environment:
 
-      ```console
+      ```bash
       mkdir /rescue
       mount /dev/sdc1 /rescue
       mount /dev/sdc15 /rescue/boot/efi
@@ -65,7 +65,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
    1. Use the following commands to exit the chroot environment:
 
-      ```console
+      ```bash
       exit
 
       umount /rescue/proc/
@@ -104,7 +104,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
       Your output will be similar to the following example. In this example, we want the **sdc** disk:
 
-      ```console
+      ```output
       [    0.294784] SCSI subsystem initialized
       [    0.573458] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
       [    7.110271] sd 2:0:0:0: [sda] Attached SCSI disk
@@ -114,7 +114,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
    1. Use the following commands to access the chroot environment:
 
-      ```console
+      ```bash
       mkdir /rescue
       mount -o nouuid /dev/sdc2 /rescue
       mount -o nouuid /dev/sdc1 /rescue/boot/
@@ -131,7 +131,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
    1. Use the following commands to exit the chroot environment:
 
-      ```console
+      ```bash
       exit
 
       umount /rescue/proc/
@@ -173,7 +173,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
       Your output will be similar to the following example. In this example, we want the **sdc** disk:
 
-      ```console
+      ```output
       [    0.294784] SCSI subsystem initialized
       [    0.573458] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
       [    7.110271] sd 2:0:0:0: [sda] Attached SCSI disk
@@ -183,7 +183,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
    1. Use the following command to activate the logical volume group:
 
-      ```console
+      ```bash
       vgscan --mknodes
       vgchange -ay
       lvscan
@@ -191,8 +191,11 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
    1. Use the `lsblk` command to retrieve the lvm names:
 
-      ```console
-      [user@myvm ~]$ lsblk
+      ```bash
+      lsblk
+      ```
+
+      ```output
       NAME              MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
       sda                 8:0    0   64G  0 disk
       ├─sda1              8:1    0  500M  0 part /boot
@@ -214,7 +217,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
    1. Use the following commands to prepare the chroot dir.
 
-      ```console
+      ```bash
       mkdir /rescue
       mount /dev/mapper/rootvg-rootlv /rescue
       mount /dev/mapper/rootvg-varlv /rescue/var
@@ -225,13 +228,14 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       mount /dev/sdc2 /rescue/boot/
       mount /dev/sdc1 /rescue/boot/efi
       ```
-        The `/rescue/boot/` and `/rescue/boot/efi` partitions may not always be located on `/dev/sdc2` or `/dev/sdc1`. If you encounter an error while trying to mount these partitions, check the `/rescue/etc/fstab` file to determine the correct devices for the `/boot` and `/boot/efi` partitions from the broken OS disk. Then, run the `blkid` command and compare the UUID from the `/rescue/etc/fstab` file with the output of `blkid` to determine the correct device for mounting the `/rescue/boot/` and `/rescue/boot/efi` in the repair VM. 
+
+        The `/rescue/boot/` and `/rescue/boot/efi` partitions may not always be located on `/dev/sdc2` or `/dev/sdc1`. If you encounter an error while trying to mount these partitions, check the `/rescue/etc/fstab` file to determine the correct devices for the `/boot` and `/boot/efi` partitions from the broken OS disk. Then, run the `blkid` command and compare the UUID from the `/rescue/etc/fstab` file with the output of `blkid` to determine the correct device for mounting the `/rescue/boot/` and `/rescue/boot/efi` in the repair VM.
         
          The `mount /dev/mapper/rootvg-optlv /rescue/opt` command may fail if the rootvg-optlv volume group is absent. If that's the case, you can bypass this command.
 
    1. Access the chroot environment:
-   
-      ```console
+
+      ```bash
       mount -t proc /proc /rescue/proc
       mount -t sysfs /sys /rescue/sys
       mount -o bind /dev /rescue/dev
@@ -244,7 +248,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
    1. Use the following commands to exit the chroot environment:
 
-      ```console
+      ```bash
       exit
 
       umount /rescue/proc/
@@ -274,12 +278,17 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 ### Using the same LVM image
 
 > [!NOTE]
-> It is possible that you need to deploy the rescue VM using the same lvm image, if that's the case you would need to get around that by modifying some aspects of the rescue VM LVM.
+> It is possible that you need to deploy the rescue VM using the same LVM image, if that's the case you would need to get around that by modifying some aspects of the rescue VM LVM.
+
+The following commands are to be executed on the recovery/rescue VM, temporarily create for the recovery operation.
 
 1. Check the status of the disks prior attaching the disk you want to rescue.
 
-   ```console
-   # lsblk -f
+   ```bash
+   sudo lsblk -f
+   ```
+
+   ```output
    NAME              FSTYPE      LABEL UUID                                   MOUNTPOINT
    sda
    ├─sda1            vfat              93DA-8C20                              /boot/efi
@@ -299,8 +308,11 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 2. Attach the disk you want to rescue as a data drive
 3. Check the disks again. Note that it will not show you the lvm structures right away.
 
-   ```console
-   # lsblk -f
+   ```bash
+   sudo lsblk -f
+   ```
+
+   ```output
    NAME              FSTYPE      LABEL UUID                                   MOUNTPOINT
    sda
    ├─sda1            vfat              93DA-8C20                              /boot/efi
@@ -320,13 +332,15 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
    ├─sdc2            xfs               d5da486e-fdfe-4ad8-bc01-aa72b91fd47d
    ├─sdc3
    └─sdc4            LVM2_member       pdSI2Q-ZEzV-oT6P-R2JG-ZW3h-cmnf-iRN6pU
-
    ```
 
 4. lvm commands will complain about duplicated PV.
 
-   ```console
-   # pvs
+   ```bash
+   sudo pvs
+   ```
+
+   ```output
    WARNING: Not using lvmetad because duplicate PVs were found.
    WARNING: Use multipath or vgimportclone to resolve duplicate PVs?
    WARNING: After duplicates are resolved, run "pvscan --cache" to enable lvmetad.
@@ -340,19 +354,30 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
    This will also change the UUID of the PV and will activate it.
 
-   ```console
-   # vgimportclone -n rescuemevg /dev/sdc4
+   ```bash
+   sudo vgimportclone -n rescuemevg /dev/sdc4
+   ```
+
+   ```output
    WARNING: Not using device /dev/sdc4 for PV pdSI2Q-ZEzV-oT6P-R2JG-ZW3h-cmnf-iRN6pU.
    WARNING: PV pdSI2Q-ZEzV-oT6P-R2JG-ZW3h-cmnf-iRN6pU prefers device /dev/sda4 because device is used by LV.
+   ```
 
-   # vgchange -a y rescuemevg 
+   ```bash
+   sudo vgchange -a y rescuemevg 
+   ```
+   
+   ```output
    6 logical volume(s) in volume group "rescuemevg" now active
    ```
 
 6. Verify the name change
 
-   ```console
-   # lsblk -f
+   ```bash
+   sudo lsblk -f
+   ```
+
+   ```output
    NAME                  FSTYPE      LABEL UUID                                   MOUNTPOINT
    sda
    ├─sda1                vfat              93DA-8C20                              /boot/efi
@@ -382,15 +407,21 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
 7. Rename the rootvg of the rescue VM
 
-   ```console
-   # vgrename rootvg oldvg
+   ```bash
+   sudo vgrename rootvg oldvg
+   ```
+
+   ```output
    Volume group "rootvg" successfully renamed to "oldvg"
    ```
 
 8. Check the disks
 
-   ```console
-   # lsblk -f
+   ```bash
+   sudo lsblk -f
+   ```
+
+   ```output
    NAME                  FSTYPE      LABEL UUID                                   MOUNTPOINT
    sda
    ├─sda1                vfat              93DA-8C20                              /boot/efi
@@ -420,31 +451,35 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
 9. Mount the FS coming from the data drive.
 
-   When using xfs, specify the `-o nouuid` option to avoid conflicts with the UUIDs and mount the needed filesystems to perform a chroot:
+  When using xfs, specify the `-o nouuid` option to avoid conflicts with the UUIDs and mount the needed filesystems to perform a chroot. Keep in mind that option is not available in ext4 file system, then you will need to remove it from the commands in such scenario:
 
-   ```console
-   mkdir /rescue
-   mount -o nouuid /dev/mapper/rescuemevg-rootlv /rescue
-   mount -o nouuid  /dev/mapper/rescuemevg-homelv /rescue/home
-   mount -o nouuid  /dev/mapper/rescuemevg-optlv /rescue/opt 
-   mount -o nouuid  /dev/mapper/rescuemevg-tmplv /rescue/tmp 
-   mount -o nouuid  /dev/mapper/rescuemevg-usrlv /rescue/usr 
-   mount -o nouuid  /dev/mapper/rescuemevg-varlv /rescue/var 
-   mount -o nouuid  /dev/sdc2 /rescue/boot
-   mount /dev/sdc1 /rescue/boot/efi
-   
-   mount -t proc /proc /rescue/proc 
-   mount -t sysfs /sys /rescue/sys
-   mount -o bind /dev /rescue/dev 
-   mount -o bind /dev/pts /rescue/dev/pts
-   mount -o bind /run /rescue/run
+   ```bash
+   sudo mkdir /rescue
+   sudo mount -o nouuid /dev/mapper/rescuemevg-rootlv /rescue
+   sudo mount -o nouuid  /dev/mapper/rescuemevg-homelv /rescue/home
+   sudo mount -o nouuid  /dev/mapper/rescuemevg-optlv /rescue/opt 
+   sudo mount -o nouuid  /dev/mapper/rescuemevg-tmplv /rescue/tmp 
+   sudo mount -o nouuid  /dev/mapper/rescuemevg-usrlv /rescue/usr 
+   sudo mount -o nouuid  /dev/mapper/rescuemevg-varlv /rescue/var 
+   sudo mount -o nouuid  /dev/sdc2 /rescue/boot
+   sudo mount /dev/sdc1 /rescue/boot/efi
+    
+   sudo mount -t proc /proc /rescue/proc 
+   sudo mount -t sysfs /sys /rescue/sys
+   sudo mount -o bind /dev /rescue/dev 
+   sudo mount -o bind /dev/pts /rescue/dev/pts
+   sudo mount -o bind /run /rescue/run
    ```
+
      The `/rescue/boot/` and `/rescue/boot/efi` partitions may not always be located on `/dev/sdc2` or `/dev/sdc1`. If you encounter an error while trying to mount these partitions, check the `/rescue/etc/fstab` file to determine the correct devices for the `/boot` and `/boot/efi` partitions from the broken OS disk. Then, run the `blkid` command and compare the UUID from the `/rescue/etc/fstab` file with the output of `blkid` to determine the correct device for mounting the `/rescue/boot/` and `/rescue/boot/efi` in the repair VM. Duplicate UUIDs may appear in the output. In this scenario, mount the partition that matches the device letter from step 5. In the example of this section, the correct partition you should mount is `/dev/sdc'. The `dev/sda` represents the operating system currently in use and should be ignored.
-     
+
 10. Verify the mounts
 
-    ```console
-    # lsblk -f
+    ```bash
+    sudo lsblk -f
+    ```
+
+    ```output
     NAME                  FSTYPE      LABEL UUID                                   MOUNTPOINT
     sda
     ├─sda1                vfat              93DA-8C20                              /boot/efi
@@ -474,16 +509,19 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
 11. Use chroot
 
-    ```console
-    chroot /rescue/
+    ```bash
+    sudo chroot /rescue/
     ```
 
-12. Verify tge mounts "inside" the chroot environment.
+12. Verify the mounts "inside" the chroot environment.
 
     Notice that now rescuemevg-rootlv is the one mounted on /
 
-      ```console
-      # lsblk -f
+      ```bash
+      sudo lsblk -f
+      ```
+
+      ```output
       NAME                  FSTYPE      LABEL UUID                                   MOUNTPOINT
       sda
       ├─sda1                vfat              93DA-8C20
@@ -515,15 +553,21 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
     Renaming the vg will keep you from facing issues when regenerating initrd and booting the disk again on the original VM
 
-    ```console
-    # vgrename rescuemevg rootvg
+    ```bash
+    sudo vgrename rescuemevg rootvg
+    ```
+
+    ```output
     Volume group "rescuemevg" successfully renamed to "rootvg"
     ```
 
 14. Verify the change
 
-      ```console
-      # lsblk -f
+      ```bash
+      sudo lsblk -f
+      ```
+
+      ```output
       NAME              FSTYPE      LABEL UUID                                   MOUNTPOINT
       sda
       ├─sda1            vfat              93DA-8C20
@@ -554,13 +598,13 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 15. Proceed with the required activities to rescue the OS, this may include regenerating initramfs or the grub configuration
 16. Exit the chroot environment
 
-      ```console
-      exit
+      ```bash
+      sudo exit
       ```
 
 17. Unmount and detach the data disk from the rescue VM and perform a disk swap with the original VM
 
-      ```console
+      ```bash
       umount /rescue/run/
       umount /rescue/dev/pts/
       umount /rescue/dev/ 
@@ -606,7 +650,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
    1. Use the following commands to access the chroot environment:
 
-      ```console
+      ```bash
       mkdir /rescue
       mount -o nouuid /dev/sdc2 /rescue
       mount -o nouuid /dev/sdc1 /rescue/boot/
@@ -624,7 +668,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
    1. Use the following commands to exit the chroot environment:
 
-      ```console
+      ```bash
       exit
 
       umount /rescue/proc/
@@ -663,7 +707,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
       Your output will be similar to the following example. In this example, we want the **sdc** disk:
 
-      ```console
+      ```output
       [    0.294784] SCSI subsystem initialized
       [    0.573458] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
       [    7.110271] sd 2:0:0:0: [sda] Attached SCSI disk
@@ -673,7 +717,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
    1. Use the following commands to access the chroot environment:
 
-      ```console
+      ```bash
       mkdir /rescue
       mount -o nouuid /dev/sdc4 /rescue
       mount -o nouuid /dev/sdc3 /rescue/boot/
@@ -691,7 +735,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
    1. Use the following commands to exit the chroot environment:
 
-      ```console
+      ```bash
       exit
 
       umount /rescue/proc/
