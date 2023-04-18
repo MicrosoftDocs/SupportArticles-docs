@@ -1,6 +1,6 @@
 ---
 title: SIP 480 and Microsoft response codes
-description: Lists combinations of Microsoft response code and SIP 480 error, and provides actions that you can take to resolve the error codes.
+description: Lists combinations of Microsoft response code and SIP 480 error, and provides actions to resolve the errors.
 ms.date: 3/27/2023
 author: helenclu
 ms.author: luche
