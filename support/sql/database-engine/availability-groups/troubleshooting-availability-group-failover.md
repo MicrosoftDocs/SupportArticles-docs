@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Always On Availability Groups failover
 description: This article provides troubleshooting steps to help you determine why your availability group failed over. 
-ms.date: 04/11/2023
+ms.date: 04/17/2023
 ms.custom: sap:Availability Groups
 ms.prod: sql
 author: padmajayaraman
@@ -398,7 +398,7 @@ To identify the Always On specific health issue, follow these steps:
 
 1. Double-click the **data** column in the lower pane. This opens the detailed component data in a new SSMS window pane for review. Here's what the system component data looks like:
 
-   :::image type="content" source="media/troubleshooting-availability-group-failover/detailed-component-data-ssms-window.png" alt-text="Screenshot of detailed component data.":::
+   :::image type="content" source="media/troubleshooting-availability-group-failover/detailed-component-data-ssms-window-small.png" alt-text="Screenshot of detailed component data." lightbox="media/troubleshooting-availability-group-failover/detailed-component-data-ssms-window-big.png":::
 
    Notice that the 'totalDumprequests=186' data indicates there have been too many dump file diagnostic events generated on this SQL Server. This is the reason that the system component reported an error state. When Always On health monitoring receives this error state, it triggers an availability group health event. You can also verify that no write access violations or orphan spinlocks have been detected from the data provided in the system component data.
 
