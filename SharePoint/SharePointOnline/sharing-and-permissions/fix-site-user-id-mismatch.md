@@ -44,7 +44,7 @@ To fix these issues, run the Site User Mismatch diagnostic by using a Microsoft 
 > [!NOTE]
 >
 > - This diagnostic isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
-> - Before admins run the diagnostic to fix the issues for OneDrive sites, they must make sure that both the Display Name and the UPN of the new user account match those of the old account. Administrators are prohibited from connecting OneDrive sites that might have been owned previously by another user account. 
+> - Before admins run the diagnostic to fix the issues for OneDrive sites, they must make sure that both the UserName of the new user account matches the old account. Administrators are prohibited from connecting OneDrive sites that might have been owned previously by another user account. 
 > - If the diagnostic has successfully resolved an issue that's related to a OneDrive site, the changes might take approximately 24 hours to take effect. This period includes updating the OneDrive tile to point to the correct site and recycling any additional OneDrive sites.
 
 Select the following **Run Tests** button, which populates the diagnostic in the Microsoft 365 admin center. The diagnostic performs a large range of verifications for internal users and guests who try to access SharePoint and OneDrive sites. 
