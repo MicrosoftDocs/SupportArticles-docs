@@ -90,12 +90,12 @@ The following process occurs when the Lync 2013 desktop client tries to locate t
     `http://LyncdiscoverInternal.contoso.com` and `https://LyncdiscoverInternal.contoso.com` 
 
     > [!NOTE]
-    > "LyncdiscoverInternal.contoso.com" is resolved to the FQDN or IP address of the Internal Lync Web Service.
+    > `LyncdiscoverInternal.contoso.com` is resolved to the FQDN or IP address of the Internal Lync Web Service.
 
-    http://Lyncdiscover.contoso.com and https://Lyncdiscover.contoso.com 
+    `http://Lyncdiscover.contoso.com` and `https://Lyncdiscover.contoso.com` 
 
     > [!NOTE]
-    > "Lyncdiscover.contoso.com" is resolved to the FQDN or IP address of the external interface of the Reverse Proxy.    
+    > `Lyncdiscover.contoso.com` is resolved to the FQDN or IP address of the external interface of the Reverse Proxy.    
 2. The Lync 2013 desktop client receives a response that contains the secure internal and external URLs of the Autodiscover Service from Web Services.    
 3. The Lync 2013 desktop client tries to contact the Autodiscover Service by using an HTTPS connection. If the SIP domain name of the user does not match the domain name in the Subject Name or Common Name property on the certificate that is assigned to Lync Web Service, the Trust Model dialog box is displayed.    
  
@@ -103,8 +103,8 @@ The following process occurs when the Lync 2013 desktop client tries to locate t
 
 The Lync client makes https requests to the Exchange CAS interface as part of its post-sign-in process. These requests include access to the Exchange Autodiscover service through URLs that include the FQDN of the Exchange CAS interface. For example:
 
-- https://\<smtpdomain>/autodiscover/autodiscover.xml     
-- https://autodiscover.\<smtpdomain>/autodiscover/autodiscover.xml    
+- `https://<smtpdomain>/autodiscover/autodiscover.xml`     
+- `https://autodiscover.<smtpdomain>/autodiscover/autodiscover.xml`    
  
 If the FQDN of the SMTP domain does not match the FQDN of the SIP domain that the Lync client is signed in to, the Scenario 2 issue occurs.
 
