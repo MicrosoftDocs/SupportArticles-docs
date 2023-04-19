@@ -46,4 +46,4 @@ Refer [Introduction to TroubleShootingScript toolset (TSSv2)](introduction-to-tr
 > [!NOTE]
 >
 > - The traces are stored in a compressed file in the *C:\\MSDATA* folder. After a support case is created, this file can be uploaded to the secure workspace for analysis.
-> - If you've downloaded this tool previously, we recommend to download the latest version. It doesn't update automatically when running -Collectlog DND_SetupReport
+> - If you've downloaded this tool previously, we recommend to download the latest version. It doesn't update automatically when running `-Collectlog DND_SetupReport`.
