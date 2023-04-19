@@ -47,7 +47,7 @@ Not sure which Microsoft 365 plan your organization uses? Go to [http://portal.m
 
 The following procedure shows you how to create and manage resource mailboxes:
 
-Before you begin, sign in to the [Exchange admin center](http://outlook.office365.com/ecp/) (EAC) at using your Microsoft 365 tenant administrator credentials. As a Microsoft 365 Small Business admin, you need to access EAC by using the direct URL. The Microsoft 365 Small Business Microsoft Online Portal does not have an option to access EAC.
+Before you begin, sign in to the [Exchange admin center](https://admin.exchange.microsoft.com/) (EAC) at using your Microsoft 365 tenant administrator credentials. As a Microsoft 365 Small Business admin, you need to access EAC by using the direct URL. The Microsoft 365 Small Business Microsoft Online Portal does not have an option to access EAC.
 
 1. In the EAC, navigate to **Recipients > Resources**.
 2. To create a room mailbox, select **New+** > **Room mailbox**. To create an equipment mailbox, select **New+** > **Equipment mailbox**.
