@@ -167,29 +167,23 @@ When you export search results from eDiscovery (Standard) or Content search in t
 
 2. Restart the export.
 
-## Error/issue: "Internal server error (500) occurred"
+Error "Request Failed with status Code 500" or "500 internal server error"
 
-When you run an eDiscovery search, if the search continually fails and returns an error message that resembles "Internal server error (500) occurred," you might have to rerun the search on specific mailbox locations only.
+When performing an eDiscovery export, if you receive errors such as "Request Failed with status Code 500" or "500 internal server error", try the following:
 
-> (500) Internal Server Error.
+Make sure you have the necessary permissions to perform the eDiscovery action. Do the following:
 
-:::image type="content" source="media/resolve-ediscovery-issues/internal-server-error-500.png" alt-text="Screenshot of Internal server error (500).":::
+Make sure you're assigned the Export role. This role is assigned automatically to the eDiscovery Manager role group. If you’re a member of the Organization Management role group, go to Compliance portal and select Permissions to add yourself to the eDiscovery Manager role group. You also can check your permissions by selecting Premium under eDiscovery in the Compliance portal where Your Permissions are shown on the far-right side.
 
-### Resolution
+For more information on eDiscovery permissions, see Assign eDiscovery permissions in the Microsoft Purview compliance portal.
 
-1. Break the search into smaller searches, and run the search again. Try using a smaller date range or limit the number of locations that are searched.
+If you received an error when you try to download the export, confirm you're downloading the export you created. You might need to contact the admin who created the export to complete the download. Check security filters and the storage location.
 
-2. Connect to [Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell), and then run the following command:
+Break the search into smaller searches by using a smaller date range or limiting the number of locations searched and run the search again.
 
-   ```powershell Set-CaseHoldPolicy <policyname> -RetryDistribution
-   Get-ComplianceSearch <searchname> | FL
-   ```
+Note: In Content Search and eDiscovery(Standard), the maximum exportable data from a single search is 2TB. If your export exceeds 2TB, reduce the amount of data to be exported and try again.
 
-3. Examine the output for results and errors.
-
-4. Examine the Trace.log file in the same folder that you exported the search results to.
-
-5. Contact Microsoft Support.
+For other eDiscovery scenarios, see Troubleshooting common eDiscovery issues or Troubleshoot eDiscovery hold errors.
 
 ## Error/issue: Holds don't sync
 
