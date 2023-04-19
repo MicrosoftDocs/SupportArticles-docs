@@ -77,6 +77,16 @@
               href: social-data-sync.md                
     - name: Service Level Agreements (SLAs)
       items:
+        - name: Entitlements
+          items:
+            - name: Unable to create entitlements because Allocation Type dropdown doesn't show any options
+              href: allocation-type-missing-options.md
+        - name: Import, export, or upgrade SLA
+          items:
+            - name: Changes to SLAItem through an upgrade solution don't appear even after a successful upgrade
+              href: slaitem-changes-missing-upgrade.md
+            - name: Unable to import solution with active SLAs and SLAs are deactivated when a solution is imported
+              href: import-solution-active-slas.md
         - name: SLA creation
           items:
             - name: Primary entity isn't available while creating SLAs
@@ -105,16 +115,6 @@
               href: sla-timer-pause-state-changed.md
             - name: Warning message appears on slakpiinstances
               href: warning-slakpiinstances.md
-        - name: Import, export, or upgrade SLA
-          items:
-            - name: Changes to SLAItem through an upgrade solution don't appear even after a successful upgrade
-              href: slaitem-changes-missing-upgrade.md
-            - name: Unable to import solution with active SLAs and SLAs are deactivated when a solution is imported
-              href: import-solution-active-slas.md
-        - name: Entitlements
-          items:
-            - name: Unable to create entitlements because Allocation Type dropdown doesn't show any options
-              href: allocation-type-missing-options.md
         - name: Other SLA issues
           items:
             - name: Case entity fields for modifiedon and modifiedby are updated for resolved cases
