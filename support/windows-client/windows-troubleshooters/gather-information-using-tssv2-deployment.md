@@ -1,6 +1,6 @@
 ---
-title: Gather information by using TSSv2 for device and driver issues
-description: Introduces how to gather information by using the TroubleShootingScript Version 2 (TSSv2) toolset for device and driver issues.
+title: Gather information by using TSSv2 for Deployment-related issues
+description: Introduces how to gather information by using the TroubleShootingScript Version 2 (TSSv2) toolset for Deployment-related issues.
 ms.date: 04/19/2023
 author: v-lianna
 ms.author: v-lianna
@@ -13,9 +13,9 @@ ms.reviewer: kaushika, warrenw
 ms.custom: sap:windows-troubleshooters, csstroubleshoot
 ms.technology: windows-client-troubleshooter
 ---
-# Gather information by using TSSv2 for device and driver issues
+# Gather information by using TSSv2 for Deployment-related issues
 
-This article introduces how to gather information by using the TroubleShootingScript Version 2 (TSSv2) toolset for device and driver issues.
+This article introduces how to gather information by using the TroubleShootingScript Version 2 (TSSv2) toolset for Deployment-related issues.
 
 ## Data collection
 
