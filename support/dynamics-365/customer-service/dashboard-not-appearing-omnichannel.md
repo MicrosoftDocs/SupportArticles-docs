@@ -23,7 +23,7 @@ To add the dashboards using app designer, follow these steps:
 1. Go to `https://<orgURL>.dynamics.com/apps`.
 2. Select the ellipsis (**...**) button in the **Omnichannel for Customer Service** app tile.
 
-    :::image type="content" source="media/dashboard-not-appearing-omnichannel/omnichannel-sign-in.png" alt-text="The screenshot shows how to sign in to Omnichannel for Customer Service.":::
+    :::image type="content" source="media/dashboard-not-appearing-omnichannel/omnichannel-sign-in.png" alt-text="Screenshot that shows how to sign in to Omnichannel for Customer Service.":::
 
 3. Select **OPEN IN APP DESIGNER**. The App Designer opens in a new tab.
 4. Select **Dashboards** in the canvas area. The **Components** pane in the right side shows the list of **Classic Dashboards** and **Interactive Dashboards**.
@@ -33,6 +33,6 @@ To add the dashboards using app designer, follow these steps:
     - Tier 1 Dashboard
     - Tier 2 Dashboard
 
-    :::image type="content" source="media/dashboard-not-appearing-omnichannel/omnichannel-app-designer-add-dashboard.png" alt-text="The screenshot shows how to add dashboards in the app designer canvas area.":::
+    :::image type="content" source="media/dashboard-not-appearing-omnichannel/omnichannel-app-designer-add-dashboard.png" alt-text="Screenshot that shows how to add dashboards in the app designer canvas area.":::
 
 6. Select **Save** and then select **Publish**.

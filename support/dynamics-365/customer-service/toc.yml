@@ -1,25 +1,11 @@
 - name: Dynamics 365 Customer Service
   href: welcome-customer-service.yml
   items:
-    - name: Issues with chats in Omnichannel for Customer Service
+    - name: Customer Service Analytics or Customer Service Insights?
       items:
-        - name: Power Virtual Agents bot conversations appear as active on dashboard after customer ends chat
-          href: pva-conversations-active-dashboard.md 
-        - name: Chat widget icon doesn't load on portal
-          href: chat-widget-icon-does-not-load-portal.md
-        - name: Chat isn't initiated when starting a new chat from portal
-          href: new-chat-not-initiated-portal.md
-        - name: Chat widget doesn't load on the portal
-          href: chat-widget-not-loading-portal.md
-        - name: Conversation widget blank when changing browser tabs
-          href: conversation-widget-blank.md
-        - name: Error occurs when trying to create a chat widget or social channel
-          href: error-create-chat-widget-social-channel.md
-        - name: Agent doesn't receive chat
-          href: agent-does-not-receive-chat.md
-        - name: Conversation is stuck in a wrap-up state
-          href: conversation-stuck-wrap-up-state.md
-    - name: Issues with converting email to a case
+        - name: Troubleshoot issues using Solution Health Hub
+          href: troubleshoot-cs-oc-solution-health.md  
+    - name: Email
       items: 
         - name: Case creation fails because of queue address isssue
           href: case-creation-queue-address-issue.md
@@ -27,102 +13,119 @@
           href: incoming-email-not-converted-case.md
         - name: Troubleshoot common email error messages
           href: common-email-error-messages.md
-    - name: Issues with dashboards in Omnichannel for Customer Service
-      items: 
-        - name: Agent dashboard doesn't load or displays error in Omnichannel for Customer Service
-          href: agent-dashboard-auth-error.md
-        - name: Communication panel does not load in Omnichannel for Customer Service
-          href: communication-panel-load-issue.md
-        - name: Dashboards don't appear in Omnichannel for Customer Service
-          href: dashboard-not-appearing-omnichannel.md
-        - name: Error in communication panel
-          href: error-communication-panel.md
-        - name: Agent dashboard displays authentication error after provisioning Omnichannel for Customer Service
-          href: agent-dashboard-error-omnichannel-provision.md    
-    - name: Issues with Power Virtual Agents
-      items:
-        - name: Missing required variables and actions during agent tranfers from Power Virtual Agents bots
-          href: agent-transfer-pva-bot-issue.md
-        - name: Power Virtual Agents bot conversations appear as active on dashboard after customer ends chat
-          href: pva-conversations-active-dashboard.md
-    - name: Issues with provisioning Omnichannel for Customer Service
-      items: 
-        - name: Agent dashboard displays authentication error after provisioning Omnichannel for Customer Service
-          href: agent-dashboard-error-omnichannel-provision.md 
-        - name: Instance unavailable to select on the provisioning application
-          href: instance-unavailable-provision-omnichannel.md
-        - name: Omnichannel provisioning fails due to expired Teams service principal
-          href: omnichannel-provision-fail-expired-principal.md
-        - name: Omnichannel provisioning fails due to expired license
-          href: provision-fails-expired-license.md    
-    - name: Issues with search providers
+    - name: Knowledge Management
       items:  
         - name: Data isn't updated on Insights tab for integrated search providers (preview)
           href: data-not-updated-integrated-search-providers.md
-    - name: Issues with signing in to Customer Service
+    - name: Live chat channel
       items:
-        - name: Errors when signing in to Customer Service
-          href: omnichannel-signin-errors.md
-    - name: Issues with SLAs
+        - name: Agent doesn't receive chat
+          href: agent-does-not-receive-chat.md
+        - name: Chat isn't initiated when starting a new chat from portal
+          href: new-chat-not-initiated-portal.md
+        - name: Error occurs when trying to create a chat widget or social channel
+          href: error-create-chat-widget-social-channel.md
+    - name: Live chat channel or Conversation control?
       items:
-        - name: Issues with SLA creation
+        - name: Conversation is stuck in a wrap-up state
+          href: conversation-stuck-wrap-up-state.md
+    - name: Live Chat Widget (LCW)
+      items:
+        - name: Chat widget icon doesn't load on portal
+          href: chat-widget-icon-does-not-load-portal.md
+        - name: Chat widget doesn't load on the portal
+          href: chat-widget-not-loading-portal.md
+    - name: Live Chat Widget (LCW) or Converation control?
+      items:
+        - name: Conversation widget blank when changing browser tabs
+          href: conversation-widget-blank.md      
+    - name: Omnichannel for Customer Service
+      items:
+        - name: Agent Scripts and Macros
+          items:
+            - name: Can't deploy a custom Agentscript solution
+              href: custom-agentscript-solution.md
+        - name: Licensing, provisioning, and installation
+          items:
+            - name: Instance unavailable to select on the provisioning application
+              href: instance-unavailable-provision-omnichannel.md
+            - name: Omnichannel provisioning fails due to expired Teams service principal
+              href: omnichannel-provision-fail-expired-principal.md
+            - name: Omnichannel provisioning fails due to expired license
+              href: provision-fails-expired-license.md
+        - name: Omnichannel dashboards
+          items:
+            - name: Agent dashboard displays authentication error after provisioning Omnichannel for Customer Service
+              href: agent-dashboard-error-omnichannel-provision.md
+            - name: Agent dashboard doesn't load or displays error in Omnichannel for Customer Service
+              href: agent-dashboard-auth-error.md
+            - name: Communication panel does not load in Omnichannel for Customer Service
+              href: communication-panel-load-issue.md
+            - name: Dashboards don't appear in Omnichannel for Customer Service
+              href: dashboard-not-appearing-omnichannel.md
+            - name: Error in communication panel
+              href: error-communication-panel.md
+        - name: Power Virtual Agents (PVA)
+          items:
+            - name: Missing required variables and actions during agent tranfers from Power Virtual Agents bots
+              href: agent-transfer-pva-bot-issue.md
+            - name: Power Virtual Agents bot conversations appear as active on dashboard after customer ends chat
+              href: pva-conversations-active-dashboard.md            
+        - name: Social channels
+          items:
+            - name: Troubleshoot sync issue with social data in Omnichannel for Customer Service
+              href: social-data-sync.md                
+    - name: Service Level Agreements (SLAs)
+      items:
+        - name: SLA creation
           items:
             - name: Primary entity isn't available while creating SLAs
               href: create-slas-primary-entity.md 
-        - name: Issues with SLA migration
+        - name: SLA migration
           items:
             - name: Standard SLAs aren't showing up in the migration tool
               href: standard-slas-migration-tool.md
             - name: Unable to use the SLA migration tool to migrate a large number of SLAs
               href: migration-tool-issue-slas.md 
-        - name: Issues with SLA time calculation
+        - name: SLA time calculation
           items:
-            - name: Warning and failure duration times are incorrect for SLA
-              href: warning-failure-times-incorrect-sla.md
             - name: Errors on custom time calculation for SLA
               href: errors-sla-time-calculation.md
-        - name: Issues with SLA timer
+            - name: Warning and failure duration times are incorrect for SLA
+              href: warning-failure-times-incorrect-sla.md
+        - name: SLA timer
           items:
-            - name: SLA KPI instance doesn't reach Nearing Non-compliance or Non-compliant state, and the instance timer continues to run
-              href: sla-kpi-instance-compliance-timer.md
-            - name: Warning message appears on slakpiinstances
-              href: warning-slakpiinstances.md
-            - name: SLA timer doesn't pause when its state is changed from InProgress to OnHold on a holiday
-              href: sla-timer-pause-state-changed.md
+            - name: Deletion of SLAs or SLA Items shows error messages in Unified Interface during solution upgrade or manual deletion
+              href: sla-deletion-error-messages.md
             - name: OnHold Time attribute isn't populated for Case for Unified Interface SLA
               href: onhold-time-not-populated.md
-        - name: Issues with solution import, export, and upgrade
+            - name: SLA KPI instance doesn't reach Nearing Non-compliance or Non-compliant state, and the instance timer continues to run
+              href: sla-kpi-instance-compliance-timer.md
+            - name: SLA timer doesn't pause when its state is changed from InProgress to OnHold on a holiday
+              href: sla-timer-pause-state-changed.md
+            - name: Warning message appears on slakpiinstances
+              href: warning-slakpiinstances.md
+        - name: Import, export, or upgrade SLA
           items:
-            - name: Unable to import solution with active SLAs and SLAs are deactivated when a solution is imported
-              href: import-solution-active-slas.md
             - name: Changes to SLAItem through an upgrade solution don't appear even after a successful upgrade
               href: slaitem-changes-missing-upgrade.md
-        - name: Issues with entitlements
+            - name: Unable to import solution with active SLAs and SLAs are deactivated when a solution is imported
+              href: import-solution-active-slas.md
+        - name: Entitlements
           items:
             - name: Unable to create entitlements because Allocation Type dropdown doesn't show any options
               href: allocation-type-missing-options.md
         - name: Other SLA issues
           items:
+            - name: Case entity fields for modifiedon and modifiedby are updated for resolved cases
+              href: entity-case-field-updates.md
+            - name: Errors occur while updating a case
+              href: errors-updating-case.md
             - name: SLA KPI instance status shows as canceled
               href: sla-kpi-instance-shows-canceled.md
             - name: Success, warning, and failure actions are being run multiple times in web client
               href: actions-run-multiple-times-client.md
-            - name: Deletion of SLAs or SLA Items shows error messages in Unified Interface during solution upgrade or manual deletion
-              href: sla-deletion-error-messages.md
             - name: SLA KPI instance isn't created on the entity
               href: sla-kpi-instance-not-created-entity.md
-            - name: Errors occur while updating a case
-              href: errors-updating-case.md
-            - name: Case entity fields for modifiedon and modifiedby are updated for resolved cases
-              href: entity-case-field-updates.md
             - name: Unable to delete a managed solution consisting of an SLA-enabled entity
               href: unable-delete-sla-enabled-entity-managed-solution.md
-    - name: Solution Health Hub
-      items:
-        - name: Troubleshoot issues using Solution Health Hub
-          href: troubleshoot-cs-oc-solution-health.md  
-    - name: Social data sync
-      items:
-        - name: Troubleshoot sync issue with social data in Omnichannel for Customer Service
-          href: social-data-sync.md
-   

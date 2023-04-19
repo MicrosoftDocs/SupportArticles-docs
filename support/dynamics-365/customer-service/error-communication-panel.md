@@ -14,7 +14,7 @@ After you sign in to the Unified Service Desk client application, you see the fo
 
 > An error occurred in the Communication panel. Restart Unified Service Desk and try again. (Error Code - AAD_ID_MISMATCH - Azure ADID mismatched with logged-in user id)
 
-:::image type="content" source="media/error-communication-panel/communication-panel-error.png" alt-text="The screenshot shows the details of the error that occurs when you sign in to Unified Service Desk.":::
+:::image type="content" source="media/error-communication-panel/communication-panel-error.png" alt-text="Screenshot that shows the details of the error that occurs when you sign in to Unified Service Desk.":::
 
 ## Cause
 
