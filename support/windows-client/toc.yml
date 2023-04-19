@@ -1294,5 +1294,13 @@
     href: ./windows-troubleshooters/windows-troubleshooters-overview.md
   - name: Active and retired Windows 10 troubleshooters
     href: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md
-  - name: Introduction to TroubleShootingScript toolset (TSSv2)
-    href: ./windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md
+  - name: TroubleShootingScript toolset (TSSv2)
+    items:
+    - name: Introduction to TroubleShootingScript toolset (TSSv2)
+      href: ./windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md
+    - name: Gather information by using TSSv2 for device and driver issues
+      href: ./windows-troubleshooters/gather-information-using-tssv2-device-driver.md
+    - name: Gather information by using TSSv2 for Active Directory replication issues
+      href: ./windows-troubleshooters/gather-information-using-tssv2-ad-replication.md
+    - name: Gather information by using TSSv2 for Group Policy issues
+      href: ./windows-troubleshooters/gather-information-using-tssv2-group-policy.md
