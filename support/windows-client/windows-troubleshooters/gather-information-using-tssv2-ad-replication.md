@@ -17,15 +17,13 @@ ms.technology: windows-client-troubleshooter
 
 This article introduces how to gather information by using the TroubleShootingScript Version 2 (TSSv2) toolset for Active Directory replication issues.
 
-## Data collection
-
 Before contacting Microsoft support, you can gather information about your issue.
 
-### Prerequisites
+## Prerequisites
 
 Refer [Introduction to TroubleShootingScript toolset (TSSv2)](introduction-to-troubleshootingscript-toolset-tssv2.md#prerequisites) for prerequisites for the toolset to run properly.
 
-### Gather key information before contacting Microsoft support
+## Gather key information before contacting Microsoft support
 
 1. Download [TSSv2](https://aka.ms/getTSSv2) and extract it in the *C:\\tss_tool* folder.
 2. Open the *C:\\tss_tool* folder from an elevated PowerShell command prompt.  
