@@ -1298,9 +1298,9 @@
     items:
     - name: Introduction to TroubleShootingScript toolset (TSSv2)
       href: ./windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md
-    - name: Gather information by using TSSv2 for Active Directory replication issues
+    - name: Gather information for Active Directory replication issues
       href: ./windows-troubleshooters/gather-information-using-tssv2-ad-replication.md
-    - name: Gather information by using TSSv2 for Deployment-related issues
+    - name: Gather information for Deployment-related issues
       href: ./windows-troubleshooters/gather-information-using-tssv2-deployment.md
-    - name: Gather information by using TSSv2 for Group Policy issues
+    - name: Gather information for Group Policy issues
       href: ./windows-troubleshooters/gather-information-using-tssv2-group-policy.md
