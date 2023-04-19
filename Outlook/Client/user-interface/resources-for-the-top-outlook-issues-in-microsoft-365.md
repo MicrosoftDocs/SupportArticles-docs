@@ -36,7 +36,7 @@ You will find resources on the following topics:
 
 The following resources can be used to help you configure Outlook to connect with your Microsoft 365 mailbox and to help resolve problems when you cannot connect to your mailbox:
 
-- [Connect email accounts in Outlook on the web (Microsoft 365)](http://help.outlook.com/140/ms.exch.ecp.useoutlookanywhere.aspx)
+- [Connect email accounts in Outlook on the web (Microsoft 365)](https://help.outlook.com/140/ms.exch.ecp.useoutlookanywhere.aspx)
 - [Outlook can't set up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Microsoft 365](/exchange/troubleshoot/outlook-issues/cannot-set-up-profile-autodiscover)
 
 ## How to use Outlook features
