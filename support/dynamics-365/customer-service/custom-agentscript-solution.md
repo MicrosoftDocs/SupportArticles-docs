@@ -18,4 +18,4 @@ The `Agentscript` solution has been deprecated and wasn't present in the target 
 
 ## Resolution
 
-It's recommended that you remove all references to the Agentscript solution from the custom solution and then reimport the solution.
+It's recommended that you remove all references to the `Agentscript` solution from the custom solution and then reimport the solution.

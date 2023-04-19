@@ -1,23 +1,21 @@
 ---
-title: OnHold Time attribute isn't populated for Case for Unified Interface SLA
-description: Provides a solution for when the OnHold Time attribute isn't populated for Case for Unified Interface SLA in Dynamics 365 Customer Service.
-ms.reviewer: 
-ms.topic: troubleshooting
+title: OnHold Time isn't populated for a case for Unified Interface SLA
+description: Provides a resolution for the issue where the OnHold Time attribute isn't populated for a case for the Unified Interface SLA in Dynamics 365 Customer Service.
+ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---
+# OnHold Time attribute isn't populated for a case for the Unified Interface SLA
 
-# OnHold Time attribute isn't populated for Case for Unified Interface SLA
+This article provides a resolution for the issue where the `OnHold Time` attribute isn't populated for a case for the Unified Interface SLA in Customer Service.
 
-This article provides a solution for when the OnHold Time attribute isn't populated for Case for Unified Interface SLA in Customer Service.
+## Symptoms
 
-## Symptom
-
-The **onholdtime** attribute to track the onHold duration for case at a case entity level doesn't get populated.
+The `onholdtime` attribute to track the `onHold` duration for a case at a case entity level doesn't get populated.
 
 ## Cause
 
-In the Legacy SLA, the **onholdtime** attribute tracks the on-hold duration for the case at the case entity level. In the Unified Interface SLA, **Elapsed time** tracks the on-hold duration at the KPI instance level, since one case can have multiple KPIs with different pause conditions, and each SLA KPI instance might have a different calendar associated with it.
+In the legacy SLA, the `onholdtime` attribute tracks the on-hold duration for a case at the case entity level. In the Unified Interface SLA, `Elapsed time` tracks the on-hold duration at the KPI instance level, since one case can have multiple KPIs with different pause conditions, and each SLA KPI instance might have a different calendar associated with it.
 
 ## Resolution
 
-For Unified Interface SLAs, use the elapsedtime attribute to track onHold Duration at SLA KPI instance level.
+For the Unified Interface SLAs, use the `elapsedtime` attribute to track the `onHold` duration at the SLA KPI instance level.

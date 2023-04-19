@@ -10,7 +10,7 @@ This article provides a resolution for an error that occurs when you try to crea
 
 ## Symptoms
 
-Omnichannel solutions are installed in your environment when you receive a new trial organization. However, when you try to create a chat widget, Facebook page, or social channel in the Omnichannel Administration app, one of the error messages similar to the following messsages might be displayed:
+Omnichannel solutions are installed in your environment when you receive a new trial organization. However, when you try to create a chat widget, Facebook page, or social channel in the Omnichannel Administration app, one of the error messages similar to the following messages might be displayed:
 
 > An error occurred in the PreLiveChatConfigCreatePlugin plug-in.
 
@@ -18,8 +18,8 @@ Omnichannel solutions are installed in your environment when you receive a new t
 
 ## Cause
 
-These errors occur because though the solutions are already installed in your environment, they need to be activated before you can start using them.
+The solutions for these errors are already installed in your environment, but they must be activated before you can use them.
 
 ## Resolution
 
-To resolve this issue, take the steps provided in [Provision Omnichannel for Customer Service](/dynamics365/customer-service/omnichannel-provision-license).
+To resolve this issue, follow the steps provided in [Provision Omnichannel for Customer Service](/dynamics365/customer-service/omnichannel-provision-license).

@@ -10,21 +10,20 @@ This article provides a resolution for the issue where a chat isn't initiated wh
 
 ## Symptoms
 
-A message stating with "Sorry, we're not able to serve you at the moment" is shown when you start a chat on the portal.
+A message that states "Sorry, we're not able to serve you at the moment" is shown when you start a chat on the portal.
+
+:::image type="content" source="media/new-chat-not-initiated-portal/chat-widget-not-able-serve.png" alt-text="Screenshot that shows the details of the message.":::
 
 ## Cause
 
-The issue might be caused by one of the following scenarios:
+The issue might occur in the following scenarios:
 
 - Agents aren't configured in the queue.
-- Allowed Presence is not updated in the work stream: The default work streams that are shipped out-of-the-box don't have **Allowed Presence** values in the workstream.
-
-![Sorry, we are not able to serve you at this moment message on portal chat widget.](media/chat-widget-not-able-serve.png "Sorry, we are not able to serve you at this moment")
+- The **Allowed Presence** option isn't updated in the work stream: The default work streams that are shipped out-of-the-box don't have **Allowed Presence** values in the workstream.
 
 ## Resolution
 
-As an administrator, make sure of the following details:
+As an administrator, you need to:
 
-- Check that agents have been added to the queues. For information on adding agents to queues, see [Create queues in Omnichannel admin center](/dynamics365/customer-service/queues-omnichannel?tabs=customerserviceadmincenter#create-a-queue-for-unified-routing).
-
-- For the associated workstream, check that the **Allowed Presence** option has values in the **Work distribution** area. More information: [Configure work distribution](/dynamics365/customer-service/create-workstreams#configure-work-distribution).
+- Check that agents have been added to the queues. For information about adding agents to queues, see [Create queues in Omnichannel admin center](/dynamics365/customer-service/queues-omnichannel?tabs=customerserviceadmincenter#create-a-queue-for-unified-routing).
+- For the associated workstream, check that the **Allowed Presence** option has values in the **Work distribution** area. For more information, see [Configure work distribution](/dynamics365/customer-service/create-workstreams#configure-work-distribution).
