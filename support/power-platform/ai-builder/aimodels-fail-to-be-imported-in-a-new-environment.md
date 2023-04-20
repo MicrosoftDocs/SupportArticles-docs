@@ -34,8 +34,8 @@ Here's a sequence of actions you can try to resolve the issue.
 
 If this doesn't resolve, you can try to update to a new version of the model:
 
-1. run a new training in the 'source' environment
-1. export the model to a new version of the solution
-1. import the new solution version into the 'target' environment
+1. run a new training in the 'source' environment, and publish the model when trainnig is complete.
+1. export the model to a new version of the solution.
+1. import the new solution version into the 'target' environment.
 
 If the problem persists (no new model gets fixed by this sequence), contact the support team.
