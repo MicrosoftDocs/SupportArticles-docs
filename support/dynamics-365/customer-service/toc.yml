@@ -13,6 +13,10 @@
           href: incoming-email-not-converted-case.md
         - name: Troubleshoot common email error messages
           href: common-email-error-messages.md
+    - name: Entitlements
+      items:
+        - name: Unable to create entitlements because Allocation Type dropdown doesn't show any options
+          href: allocation-type-missing-options.md
     - name: Knowledge Management
       items:  
         - name: Data isn't updated on Insights tab for integrated search providers (preview)
@@ -77,10 +81,6 @@
               href: social-data-sync.md                
     - name: Service Level Agreements (SLAs)
       items:
-        - name: Entitlements
-          items:
-            - name: Unable to create entitlements because Allocation Type dropdown doesn't show any options
-              href: allocation-type-missing-options.md
         - name: Import, export, or upgrade SLA
           items:
             - name: Changes to SLAItem through an upgrade solution don't appear even after a successful upgrade
