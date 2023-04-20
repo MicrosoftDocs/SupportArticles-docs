@@ -12,7 +12,7 @@ ms.technology: windows-dev-apps-component-dev
 
 This article discusses an issue where the [CoInitializeEx function](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) fails after calling the `HtmlHelp` function on the same thread.
 
-_Applies to:_ &nbsp; All supported OS
+_Applies to:_ &nbsp; All supported operating system
 
 ## Symptoms
 
