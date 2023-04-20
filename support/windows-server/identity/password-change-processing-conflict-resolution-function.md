@@ -154,7 +154,7 @@ The user may experience temporary authentication failures until the updated cred
 
 Here's an example error:
 
-An error code c0000225 maps to STATUS_NOT_FOUND. This error is an expected error when the user was freshly created on the local Domain Controller, and the password of the user was set within the replication latency with the PDC.
+An error code c0000225 maps to STATUS_NOT_FOUND. This error is an expected error when the user was freshly created on the local domain controller, and the password of the user was set within the replication latency with the PDC.
 
 You may also see network or RPC related errors in Event ID 3038. For example, when a firewall blocks the communication between the BDC and PDC, you may receive this event.
 
