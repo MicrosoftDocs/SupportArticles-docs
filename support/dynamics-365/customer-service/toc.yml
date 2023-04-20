@@ -17,34 +17,34 @@
       items:  
         - name: Data isn't updated on Insights tab for integrated search providers (preview)
           href: data-not-updated-integrated-search-providers.md
-    - name: Live chat channel
-      items:
-        - name: Agent doesn't receive chat
-          href: agent-does-not-receive-chat.md
-        - name: Chat isn't initiated when starting a new chat from portal
-          href: new-chat-not-initiated-portal.md
-        - name: Error occurs when trying to create a chat widget or social channel
-          href: error-create-chat-widget-social-channel.md
-    - name: Live chat channel or Conversation control?
-      items:
-        - name: Conversation is stuck in a wrap-up state
-          href: conversation-stuck-wrap-up-state.md
-    - name: Live Chat Widget (LCW)
-      items:
-        - name: Chat widget icon doesn't load on portal
-          href: chat-widget-icon-does-not-load-portal.md
-        - name: Chat widget doesn't load on the portal
-          href: chat-widget-not-loading-portal.md
-    - name: Live Chat Widget (LCW) or Converation control?
-      items:
-        - name: Conversation widget blank when changing browser tabs
-          href: conversation-widget-blank.md      
     - name: Omnichannel for Customer Service
       items:
         - name: Agent Scripts and Macros
           items:
             - name: Can't deploy a custom Agentscript solution
               href: custom-agentscript-solution.md
+        - name: Live chat channel
+          items:
+            - name: Agent doesn't receive chat
+              href: agent-does-not-receive-chat.md
+            - name: Chat isn't initiated when starting a new chat from portal
+              href: new-chat-not-initiated-portal.md
+            - name: Error occurs when trying to create a chat widget or social channel
+              href: error-create-chat-widget-social-channel.md  
+        - name: Live Chat Widget (LCW)
+          items:
+            - name: Chat widget icon doesn't load on portal
+              href: chat-widget-icon-does-not-load-portal.md
+            - name: Chat widget doesn't load on the portal
+              href: chat-widget-not-loading-portal.md
+        - name: Live chat channel or Conversation control?
+          items:
+            - name: Conversation is stuck in a wrap-up state
+              href: conversation-stuck-wrap-up-state.md
+        - name: Live Chat Widget (LCW) or Converation control?
+          items:
+            - name: Conversation widget blank when changing browser tabs
+              href: conversation-widget-blank.md                      
         - name: Licensing, provisioning, and installation
           items:
             - name: Instance unavailable to select on the provisioning application
