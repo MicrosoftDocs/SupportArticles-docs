@@ -55,4 +55,4 @@ Approval emails may come from any of the following IPs:
 - 40.73.102.218
 - 139.217.96.195
 
-All approval emails will be sent with a sender address of `flow-noreply@oe.21vianet.com` .
+All approval emails will be sent with a sender address of `flow-noreply@oe.21vianet.com`.
