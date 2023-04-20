@@ -4,7 +4,7 @@ description: Provides resolutions for common email error messages in Dynamics 36
 ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---
-# Troubleshoot common email error messages 
+# Troubleshoot common email error messages
 
 This article provides resolutions for common email error messages in Dynamics 365 Customer Service.
 

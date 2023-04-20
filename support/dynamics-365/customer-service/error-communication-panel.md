@@ -18,7 +18,7 @@ After you sign in to the Unified Service Desk client application, you see the fo
 
 ## Cause
 
-When signing in to Unified Service Desk, you must enter the Customer Service app credentials to sign in, and then again, you're shown a dialog to enter credentials to connect to Dataverse server. If you enter different credentials, this issue occurs. 
+When signing in to Unified Service Desk, you must enter the Customer Service app credentials to sign in, and then again, you're shown a dialog to enter credentials to connect to Dataverse server. If you enter different credentials, this issue occurs.
 
 ## Resolution
 

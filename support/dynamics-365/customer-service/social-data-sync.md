@@ -19,6 +19,7 @@ The data flush for the **Social Profile** entity is blocked. Customer informatio
 The setting for preventing social data in Dynamics 365 is turned on.
 
 ## Resolution
+
 Ensure that the toggle for preventing social data in Dynamics is turned off. More information: [Manage feature settings](/power-platform/admin/settings-features)
 
 1. Open Power Platform admin center, and then navigate to **Environments** > [select an environment] > **Settings** > **Product** > **Features**.
@@ -27,4 +28,3 @@ Ensure that the toggle for preventing social data in Dynamics is turned off. Mor
 
     > [!div class="mx-imgBorder"]
     > ![Prevent social data in Dynamics setting in Power Platform admin center.](media/social-data-setting.png "Prevent social data in Dynamics")
- 

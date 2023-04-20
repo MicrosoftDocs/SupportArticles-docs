@@ -43,7 +43,7 @@ To delete and add **Widget location** for the chat widget, follow these steps:
 9. Select **Save** to save the record.
 10. Go to the website and check whether the chat widget loads.
 
-> [!Note]
+> [!NOTE]
 > The chat widget requires session storage and local storage to be functional in your browser. Make sure you have cookies enabled in your browser so these services can work properly.
 
 ## Resolution 2: Remove location
@@ -64,7 +64,7 @@ Clear the portal cache by taking the following steps:
 
       /_services/about
 
-    For example: 
+    For example:
 
       `https://contoso.powerappsportals.com/_services/about`
 
@@ -74,11 +74,11 @@ Clear the portal cache by taking the following steps:
 
 4. Reload the portal.
 
-   Also, make sure that your web browser allows third-party cookies. 
+   Also, make sure that your web browser allows third-party cookies.
 
 ## Resolution 4: Sync portal configurations
 
-To sync portal configurations, take the following steps: 
+To sync portal configurations, take the following steps:
 
 1. Go to [Power Apps](https://make.powerapps.com).
 2. Find and select your portal, and then choose **Edit**.
@@ -94,7 +94,7 @@ To sync portal configurations, take the following steps:
 Restart the portal by taking the following steps:
 
 1. Go to [Power Apps](https://make.powerapps.com).
-2. Select your portal, and then under **Advanced options**, choose **Settings** > **Administration**. 
+2. Select your portal, and then under **Advanced options**, choose **Settings** > **Administration**.
 
     :::image type="content" source="media/chat-widget-not-loading-portal/chat-portal-administration.png" alt-text="Screenshot that shows the Advanced options settings in the portal.":::
 

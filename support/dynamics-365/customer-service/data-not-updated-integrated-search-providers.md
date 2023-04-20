@@ -41,4 +41,3 @@ Take the following troubleshooting steps to diagnose and fix the issue:
 If the issue persists, contact [Microsoft Support](https://support.microsoft.com/) to raise a ticket.
 
 For more information about managing a search provider, see [Manage integrated search providers (preview)](/dynamics365/customer-service/add-search-provider#manage-integrated-search-providers-preview).
-  

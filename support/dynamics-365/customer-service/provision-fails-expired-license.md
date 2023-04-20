@@ -51,11 +51,11 @@ To avoid the provisioning failure, you must remove the Microsoft Teams service p
 1. Select **Yes** on the **User Control** dialog to allow the application to make changes.
 1. Type the `Install-Module AzureAD` command in the PowerShell window, and press **Enter**. This command installs the PowerShell commands for interacting with Azure Active Directory.
 
-   :::image type="content" source="media/provision-fails-expired-license/install-module-azuread.png" alt-text="Screenshot that shows how to execute the Install-Module AzureAD command.":::
+   :::image type="content" source="media/provision-fails-expired-license/install-module-azuread.png" alt-text="Screenshot that shows how to execute the Install-Module AzureAD command." border="false":::
 
 1. PowerShell prompts whether to trust the repository. Type **Y** for yes and press **Enter**.
 
-   :::image type="content" source="media/provision-fails-expired-license/trust-repository-command.png" alt-text="Screenshot that shows how to trust the repository using command.":::
+   :::image type="content" source="media/provision-fails-expired-license/trust-repository-command.png" alt-text="Screenshot that shows how to trust the repository using command." border="false":::
 
 1. Type the `Connect-AzureAD` command in the PowerShell window, and press **Enter**.
 
