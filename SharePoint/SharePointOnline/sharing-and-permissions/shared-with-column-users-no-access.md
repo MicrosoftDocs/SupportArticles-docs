@@ -12,7 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
-ms.date: 3/31/2022
+ms.date: 4/19/2023
 ---
 
 # "Shared With" displays users without document access in SharePoint Online
@@ -35,9 +35,9 @@ To avoid this problem, [hide the **Shared with** column](https://support.microso
 
 ## More information
 
-This is a known issue. The **Shared with** column might continue to display accounts with whom the document was previously shared before automatic updating of this column was disabled. However, the contents of the column will not be automatically increased or cleaned up in future versions of the software.
+This is a known issue. The **Shared with** column might continue to display accounts with whom the document was previously shared before automatic updating of this column was disabled. However, the contents of the column won't be automatically increased or cleaned up in future versions of the software.
 
-The **SharedWith** and **SharedWithDetails** columns do not accurately reflect the permissions and people who have access to an item. Therefore, the column has been hidden by default in OneDrive and SharePoint for more than three years. Starting in the near future, we will no longer update the **SharedWith** fields during sharing operations. After that change is made, the column data will be considered to be customer content. and it will not be updated or changed by Microsoft. 
+The **SharedWith** and **SharedWithDetails** columns don't accurately reflect the permissions and people who have access to an item. Therefore, the column has been hidden by default in OneDrive and SharePoint for more than three years. Starting in the near future, we will no longer update the **SharedWith** fields during sharing operations. After that change is made, the column data will be considered to be customer content, and it won't be updated or changed by Microsoft. 
 
 We'll gradually roll out this change to customers starting in early June. The rollout will be finished by the end of July, 2023.
 In a future update, we will stop provisioning this column entirely.
