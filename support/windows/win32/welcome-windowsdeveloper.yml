@@ -22,6 +22,8 @@ landingContent:
         links:
           - text: An application fails to create a COM+ component
             url: client-application-error-create-com-plus-component.md
+          - text: CoInitializeEx fails after calling HtmlHelp on the same thread
+            url: coinitializeex-fails-after-calling-htmlhelp-same-thread.md
           - text: COM+ supports automatic collection of process dump file
             url: com-supports-collect-dump-file.md 
           - text: Descriptions and workings of OLE threading models
