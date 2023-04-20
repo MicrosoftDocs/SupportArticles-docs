@@ -75,7 +75,7 @@ It makes no difference as the data payload is identical because both DCs have wr
 
 ### Logging in the Directory Services event log
 
-Windows Server 2022 has added events to track the activity of interactions with the PDC emulator regarding password update notification.
+Windows Server 2022 has added events to track the activity of interactions with the PDC emulator regarding password update notifications.
 
 #### Event ID 3035
 
