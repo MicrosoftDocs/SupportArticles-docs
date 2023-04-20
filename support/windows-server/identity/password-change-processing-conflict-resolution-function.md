@@ -73,11 +73,11 @@ If these two changes arrive at a DC, the normal AD conflict resolution is perfor
 
 It makes no difference as the data payload is identical because both DCs have written the same new password value.
 
-## Logging in the Directory Services event log
+### Logging in the Directory Services event log
 
 Windows Server 2022 has added events to track the activity of interactions with the PDC emulator regarding password update notification.
 
-### Event ID 3035
+#### Event ID 3035
 
 Event ID 3035 is logged on the PDC at logging level four of the category "27 PDC Password Update Notifications" in the following registry entry:
 
@@ -97,7 +97,7 @@ The user may experience temporary authentication failures until the updated cred
  User RID:  <Rid>
 ```
 
-### Event ID 3036
+#### Event ID 3036
 
 Event ID 3036 is logged if there's an error when updating the PDC with the updates in a call from a Backup Domain Controller (BDC):
 
@@ -116,7 +116,7 @@ The user may experience temporary authentication failures until the updated cred
  Error:     <Error Code>
 ```
 
-### Event ID 3037
+#### Event ID 3037
 
 Event ID 3037 is logged on the BDC at logging level four of the category "27 PDC Password Update Notifications" in the following registry entry:
 
@@ -134,7 +134,7 @@ Active Directory Domain Services successfully sent a password update notificatio
  User RID:  <Rid>
 ```
 
-### Event ID 3038
+#### Event ID 3038
 
 Event ID 3038 is logged if there's an error when updating the PDC with the updates in a call from a BDC:
 
@@ -158,6 +158,6 @@ An error code c0000225 maps to STATUS_NOT_FOUND. This error is an expected error
 
 You may also see network or RPC related errors in Event ID 3038. For example, when a firewall blocks the communication between the BDC and PDC, you may receive this event.
 
-## References
+#### References
 
 [How to configure Active Directory and LDS diagnostic event logging](configure-ad-and-lds-event-logging.md)
