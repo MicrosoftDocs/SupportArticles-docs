@@ -1,24 +1,21 @@
 ---
 title: SLA KPI instance status shows as canceled
-description: Provides a solution for when the SLA KPI instance status shows as canceled in Dynamics 365 Customer Service.
-ms.reviewer: 
-ms.topic: troubleshooting
+description: Provides a resolution for the issue that occurs when you define the Applicable when and Success condition on the same attribute.
+ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---
-
 # SLA KPI instance status shows as canceled
 
-This article provides a solution for when an SLA KPI instance status shows as canceled.
+This article provides a resolution for the issue when a service-level agreements (SLA) KPI instance status shows as canceled.
 
-## Symptom
+## Symptoms
 
-When you update the target record so that **Applicable when** condition is no more applicable, the SLA KPI status moves from one of the existing states of **In progress**, **Succeeded**, **Nearing non compliance**, or **Expired** to the **Canceled** state. The SLA KPI instance is canceled on the second evaluation because the **Applicable when** condition is no longer met. Consider the following scenario in which you create an SLA with the following conditions and set it as the default SLA.
+When you update the target record so that the **Applicable when** condition is no more applicable, the SLA KPI status moves from one of the existing states of **In progress**, **Succeeded**, **Nearing non compliance**, or **Expired** to the **Canceled** state. The SLA KPI instance is canceled on the second evaluation because the **Applicable when** condition is no longer met. Consider the following scenario in which you create an SLA with the following conditions and set it as the default SLA.
 
-- **Applicable when:** Case status equals active
-- **Success condition:** Case status equals resolved
+- **Applicable when**: Case status equals active
+- **Success condition**: Case status equals resolved
 
 1. Create a case. The case status is set to **Active** by default, the SLA is applied, and the SLA timer starts.
-
 2. Resolve the case. The case status is set to **Resolved**, and the SLA is reevaluated for the **Applicable when** condition. The SLA KPI instance status will be set to **Canceled**.
 
 ## Cause
@@ -30,4 +27,4 @@ When you define the **Applicable when** and **Success condition** on the same at
 
 ## Resolution
 
-In such scenarios, we recommend that you don't define the **Applicable when** and **Success condition** on the same attribute.
+In such scenarios, it's recommended that you don't define the **Applicable when** and **Success condition** on the same attribute.
