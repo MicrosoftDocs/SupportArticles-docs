@@ -1,7 +1,7 @@
 ---
 title: Password change processing and conflict resolution functionality in Windows
-description: Describes a new registry value that can be used by the administrator to control when the PDC is contacted, which can help reduce communication costs between sites and reduce load on the PDC.
-ms.date: 03/22/2023
+description: Describes a registry value that can be used by the administrator to control when the PDC is contacted, which can help reduce communication costs between sites and reduce load on the PDC.
+ms.date: 04/20/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -9,13 +9,13 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, herbertm
 ms.custom: sap:active-directory-fsmo, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Password change processing and conflict resolution functionality in Windows
 
-This article describes a new registry value that can be used by the administrator to control when the PDC is contacted, which can help reduce communication costs between sites and reduce load on the PDC.
+This article describes a registry value that can be used by the administrator to control when the PDC is contacted, which can help reduce communication costs between sites and reduce load on the PDC.
 
 > [!IMPORTANT]
 > This article contains information about modifying the registry. Before you modify the registry, make sure to back it up and make sure that you understand how to restore the registry if a problem occurs. For information about how to back up, restore, and edit the registry, see [Windows registry information for advanced users](/troubleshoot/windows-server/performance/windows-registry-advanced-users).
@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 225511
 
 ## Summary
 
-By default, when a user password is reset or changed, or a domain controller receives a client authentication request using an incorrect password, the Windows domain controller acting as the primary domain controller (PDC) Flexible Single Master Operation (FSMO) role owner for the Windows domain is contacted. This article describes a new registry value that can be used by the administrator to control when the PDC is contacted, which can help reduce communication costs between sites and reduce load on the PDC.
+By default, when a user password is reset or changed, or a domain controller receives a client authentication request using an incorrect password, the Windows domain controller acting as the primary domain controller (PDC) Flexible Single Master Operation (FSMO) role owner for the Windows domain is contacted. This article describes a registry value that can be used by the administrator to control when the PDC is contacted, which can help reduce communication costs between sites and reduce load on the PDC.
 
 This communication to the PDC isn't done for computer accounts. Computers will retry the authentication with the most recent previous password when the authentication fails. Along the same line, the computers would try the most recent previous password when decrypting a Kerberos service ticket they receive.
 
@@ -72,3 +72,92 @@ When the writable DC forwards the password change to the PDC, the user password 
 If these two changes arrive at a DC, the normal AD conflict resolution is performed. The AD version of attributes will be the same, but the time-stamp of the PDC will be a bit older, and the password of the initial DC will be used.
 
 It makes no difference as the data payload is identical because both DCs have written the same new password value.
+
+## Logging in the Directory Services event log
+
+Windows Server 2022 has added events to track the activity of interactions with the PDC emulator regarding password update notification.
+
+### Event ID 3035
+
+Event ID 3035 is logged on the PDC at logging level four of the category "27 PDC Password Update Notifications" in the following registry entry:
+
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics`
+
+```output
+Log Name:      Directory Service
+Source:        Microsoft-Windows-ActiveDirectory_DomainService
+Event ID:      3035
+Task Category: PDC Password Updates
+Level:         Informational
+Description:
+Active Directory Domain Services successfully processed a password update notification sent from a Backup Domain Controller (BDC).
+The user may experience temporary authentication failures until the updated credentials are successfully replicated to the PDC via normal replication schedules.
+ BDC:      <Computer Name>
+ User:      <User Name>
+ User RID:  <Rid>
+```
+
+### Event ID 3036
+
+Event ID 3036 is logged if there's an error when updating the PDC with the updates in a call from a Backup Domain Controller (BDC):
+
+```output
+Log Name:      Directory Service
+Source:        Microsoft-Windows-ActiveDirectory_DomainService
+Event ID:      3036
+Task Category: PDC Password Updates
+Level:         Warning
+Description:
+Active Directory Domain Services failed to process a password update notification sent from a Backup Domain Controller (BDC).
+The user may experience temporary authentication failures until the updated credentials are successfully replicated to the PDC via normal replication schedules.
+ BDC:      <Computer Name>
+ User:      <User Name>
+ User RID:  <Rid>
+ Error:     <Error Code>
+```
+
+### Event ID 3037
+
+Event ID 3037 is logged on the BDC at logging level four of the category "27 PDC Password Update Notifications" in the following registry entry:
+
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics`
+
+```output
+Log Name:      Directory Service
+Source:        Microsoft-Windows-ActiveDirectory_DomainService
+Event ID:      3037
+Task Category: PDC Password Updates
+Level:         Informational
+Description:
+Active Directory Domain Services successfully sent a password update notification to the Primary Domain Controller (PDC).
+ User:      <User Name>
+ User RID:  <Rid>
+```
+
+### Event ID 3038
+
+Event ID 3038 is logged if there's an error when updating the PDC with the updates in a call from a BDC:
+
+```output
+Log Name:      Directory Service
+Source:        Microsoft-Windows-ActiveDirectory_DomainService
+Event ID:      3038
+Task Category: PDC Password Updates
+Level:         Warning
+Description:
+Active Directory Domain Services failed to send a password update notification to the Primary Domain Controller (PDC).
+The user may experience temporary authentication failures until the updated credentials are successfully replicated to the PDC via normal replication schedules.
+ User:      <User Name>
+ User RID:  <Rid>
+ Error:     <Error Code>
+```
+
+Here's an example error:
+
+An error code c0000225 maps to STATUS_NOT_FOUND. This error is an expected error when the user was freshly created on the local Domain Controller, and the password of the user was set within the replication latency with the PDC.
+
+You may also see network or RPC related errors in Event ID 3038. For example, when a firewall blocks the communication between the BDC and PDC, you may receive this event.
+
+## References
+
+[How to configure Active Directory and LDS diagnostic event logging](configure-ad-and-lds-event-logging.md)
