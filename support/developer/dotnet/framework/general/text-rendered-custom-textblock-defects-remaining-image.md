@@ -17,7 +17,7 @@ This article discusses a text rendering problem that occurs when the text that's
 
 ## Symptoms
 
-When you change the text in a TextBlock control (including derived classes) that's a child of a Viewbox, some of the original characters remain on the screen.
+Consider a scenario when you change the text, a TextBlock control (including derived classes) that's a child of a Viewbox might leave artifacts on the screen.
 
 ## Cause
 
