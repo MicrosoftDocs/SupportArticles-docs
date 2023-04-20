@@ -30,7 +30,7 @@ You see any of the following issues when you check the presence status for a use
 
   > [!NOTE]
   > - Outlook currently shows **Status unknown** for federated (external) Teams contacts.
-  > - Outlook Win32 currently do not show 'Out of office' related presence status icons.
+  > - In the 32-bit version of Outlook, the presence status icons related to "Out of Office" aren't currently displayed.
 
 ## Resolution
 
