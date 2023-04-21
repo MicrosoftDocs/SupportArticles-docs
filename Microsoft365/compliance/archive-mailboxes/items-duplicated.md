@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 _Original KB number:_&nbsp;2783045
 
-[!include[Purview banner](../../../includes/purview-rebrand.md)]
-
 ## Problem
 
 In Microsoft 365, users may experience one or both of the following symptoms:

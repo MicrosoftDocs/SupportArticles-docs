@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 _Original KB number:_&nbsp;4486848
 
-[!include[Purview banner](../../../includes/purview-rebrand.md)]
-
 ## Symptoms
 
 Microsoft 365 Online archives allow for additional storage of users' email messages. However, in some scenarios, the **ArchiveStatus** property may be set to "None" even though you enabled an active archive for a user's mailbox in Microsoft 365.
