@@ -1,7 +1,7 @@
 ---
 title: Gather information by using TSSv2 for Group Policy issues
 description: Introduces how to gather information by using the TroubleShootingScript Version 2 (TSSv2) toolset for Group Policy issues.
-ms.date: 04/19/2023
+ms.date: 04/21/2023
 author: v-lianna
 ms.author: v-lianna
 manager: dcscontentpm
@@ -21,7 +21,7 @@ Before contacting Microsoft support, you can gather information about your issue
 
 ## Prerequisites
 
-Refer [Introduction to TroubleShootingScript toolset (TSSv2)](introduction-to-troubleshootingscript-toolset-tssv2.md#prerequisites) for prerequisites for the toolset to run properly.
+Refer to [Introduction to TroubleShootingScript toolset (TSSv2)](introduction-to-troubleshootingscript-toolset-tssv2.md#prerequisites) for prerequisites for the toolset to run properly.
 
 ## Gather key information before contacting Microsoft support
 
@@ -44,4 +44,4 @@ Refer [Introduction to TroubleShootingScript toolset (TSSv2)](introduction-to-tr
 > [!NOTE]
 >
 > - The traces are stored in a compressed file in the *C:\\MSDATA* folder. After a support case is created, this file can be uploaded to the secure workspace for analysis.
-> - If you've downloaded this tool previously, we recommend to download the latest version. It doesn't update automatically when running.
+> - If you've downloaded this tool previously, we recommend downloading the latest version. It doesn't automatically update when running.
