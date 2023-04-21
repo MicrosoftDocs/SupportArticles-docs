@@ -21,7 +21,7 @@ search.appverid:
   - MOE150
   - MET150
 siblings_only: true
-ms.date: 2/15/2023
+ms.date: 4/21/2023
 ---
 # Resolve common eDiscovery issues
 
@@ -167,23 +167,21 @@ When you export search results from eDiscovery (Standard) or Content search in t
 
 2. Restart the export.
 
-Error "Request Failed with status Code 500" or "500 internal server error"
+## Error: "Request Failed with status Code 500" or "500 internal server error"
 
-When performing an eDiscovery export, if you receive errors such as "Request Failed with status Code 500" or "500 internal server error", try the following:
+When you perform an eDiscovery export, you receive one of the following error messages:
 
-Make sure you have the necessary permissions to perform the eDiscovery action. Do the following:
+- Request Failed with status Code 500
+- 500 internal server error
 
-Make sure you're assigned the Export role. This role is assigned automatically to the eDiscovery Manager role group. If you’re a member of the Organization Management role group, go to Compliance portal and select Permissions to add yourself to the eDiscovery Manager role group. You also can check your permissions by selecting Premium under eDiscovery in the Compliance portal where Your Permissions are shown on the far-right side.
+### Resolution
 
-For more information on eDiscovery permissions, see Assign eDiscovery permissions in the Microsoft Purview compliance portal.
+1. Make sure that you're assigned the **Export** role. This role is assigned automatically to the **eDiscovery Manager** role group. If you're a member of the **Organization Management** role group, on the **Permissions** page in the Microsoft Purview compliance portal, add yourself to the **eDiscovery Manager** role group. You can also view your permissions on the eDiscovery (Premium) overview page in the compliance portal. For more information about eDiscovery permissions, see [Assign eDiscovery permissions in the Microsoft Purview compliance portal](/microsoft-365/compliance/ediscovery-assign-permissions?view=o365-worldwide&preserve-view=true).
+1. If you received an error when you try to download the export, verify that you're downloading the export you created. You might need to contact the admin who created the export to complete the download.
+1. Check security filters and the storage location.
+1. Break the search into smaller searches by using a smaller date range or limiting the number of locations searched, and run the search again.
 
-If you received an error when you try to download the export, confirm you're downloading the export you created. You might need to contact the admin who created the export to complete the download. Check security filters and the storage location.
-
-Break the search into smaller searches by using a smaller date range or limiting the number of locations searched and run the search again.
-
-Note: In Content Search and eDiscovery(Standard), the maximum exportable data from a single search is 2TB. If your export exceeds 2TB, reduce the amount of data to be exported and try again.
-
-For other eDiscovery scenarios, see Troubleshooting common eDiscovery issues or Troubleshoot eDiscovery hold errors.
+   **Note:** In Content Search and eDiscovery(Standard), the maximum exportable data for a single search is 2 TB. If your export exceeds 2 TB, reduce the amount of data to be exported and try again.
 
 ## Error/issue: Holds don't sync
 
