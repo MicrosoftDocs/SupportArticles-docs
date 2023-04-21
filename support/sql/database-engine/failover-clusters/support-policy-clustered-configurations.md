@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 327518
 
 ## Summary
 
-This article describes the Microsoft support policy for SQL Server failover clustering. Microsoft Customer Support Services (CSS) supports SQL Server failover clustering that is based on the failover clustering features of the Windows Failover Cluster Service in the following products:
+This article describes the Microsoft support policy for SQL Server failover clustering. Microsoft supports SQL Server failover clustering that is based on the failover clustering features of the Windows Failover Cluster Service in the following products:
 
 - Windows Server 2012
 - Windows Server 2012 R2
