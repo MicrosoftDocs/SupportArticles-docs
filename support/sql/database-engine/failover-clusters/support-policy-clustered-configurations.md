@@ -36,7 +36,7 @@ Only the Server Cluster solutions can be used together with SQL Server for high 
 
 #### Cluster solutions other than Windows Failover Clustering
 
-If you cluster SQL Server with any clustering product other than Microsoft Server Clustering, your primary support contact is the third-party cluster solution provider for any support issues that are related to SQL Server. SQL Server was developed and tested by using Microsoft Server Clustering. Third-party clustering solution providers that support SQL Server installations should be your primary contact for any installation issues, performance issues, or cluster behavior issues. CSS provides commercially reasonable support for third-party cluster installations in same manner that we do for a stand-alone version of SQL Server.
+SQL Server was developed and tested using Microsoft Server Clustering. If you cluster it with any other clustering product, your primary contact for installation, performance, or cluster behavior issues should be the third-party cluster solution provider. Microsoft provides commercially reasonable support for third-party cluster installations as it does for stand-alone SQL Server.
 
 ## Information of SQL Server 2012 and later versions
 
