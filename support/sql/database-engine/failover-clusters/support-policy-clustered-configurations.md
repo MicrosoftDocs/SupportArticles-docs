@@ -30,7 +30,6 @@ Windows Server provides the following types of clustering services:
 
 - [Failover Clustering](/windows-server/failover-clustering/failover-clustering-overview)
 - [Network Load Balancing](/windows-server/networking/technologies/network-load-balancing)
-- Compute Cluster Server
 
 Only the Server Cluster solutions can be used together with SQL Server for high availability if a node is lost or if a problem exists with an instance of SQL Server. Network Load Balancing may be used in some cases together with stand-alone read-only SQL Server installations. SQL Server Failover Cluster Instances each require a unique group. This requirement is true on cluster disk resources that use drive letters that are unique to the cluster and to each SQL Server Failover Cluster Instance. Each Failover Cluster Instance of SQL Server must also have at least one unique IP address. Depending on the version that is installed, multiple unique IP addresses may be possible. Additionally, each Failover Cluster Instance must have both virtual server and instance names that are unique to the domain to which the cluster belongs.
 
