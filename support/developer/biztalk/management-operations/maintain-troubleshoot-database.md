@@ -49,7 +49,7 @@ exec sp_dboption 'BizTalkMsgBoxDB', 'auto update statistics', 'off'
 
 ## You must set the Max Degree of Parallelism property correctly
 
-On the computer that is running SQL Server and hosting the `BizTalkMsgBoxDb` database, set the Max Degree of Parallelism `run_value` and `config_value` properties to a value of **1**. To determine the Max Degree of Parallelism setting, execute the following stored procedure against the Master database in SQL Server:
+On the computer that is running SQL Server and hosting the `BizTalkMsgBoxDb` database, set the Max Degree of Parallelism `run_value` and `config_value` properties to a value of **1**. In later SQL versions it is also possible to specify this setting per database instead of per SQL instance. To determine the Max Degree of Parallelism setting, execute the following stored procedure against the Master database in SQL Server:
 
 ```sql
 exec sp_configure 'max degree of parallelism'
