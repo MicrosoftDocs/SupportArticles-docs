@@ -21,7 +21,7 @@ Before contacting Microsoft support, you can gather information about your issue
 
 ## Prerequisites
 
-Refer [Introduction to TroubleShootingScript toolset (TSSv2)](introduction-to-troubleshootingscript-toolset-tssv2.md#prerequisites) for prerequisites for the toolset to run properly.
+Refer to [Introduction to TroubleShootingScript toolset (TSSv2)](introduction-to-troubleshootingscript-toolset-tssv2.md#prerequisites) for prerequisites for the toolset to run properly.
 
 ## Gather key information before contacting Microsoft support
 
@@ -44,4 +44,4 @@ Refer [Introduction to TroubleShootingScript toolset (TSSv2)](introduction-to-tr
 > [!NOTE]
 >
 > - The traces are stored in a compressed file in the *C:\\MSDATA* folder. After a support case is created, this file can be uploaded to the secure workspace for analysis.
-> - If you've downloaded this tool previously, we recommend to download the latest version. It doesn't update automatically when running `-Start -Scenario ADS_General -noProcmon -noPSR -noVideo`.
+> - If you've downloaded this tool previously, we recommend downloading the latest version. It doesn't automatically update when running `-Start -Scenario ADS_General -noProcmon -noPSR -noVideo`.
