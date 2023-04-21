@@ -1,7 +1,7 @@
 ---
 title: Gather information by using TSSv2 for Active Directory replication issues
 description: Introduces how to gather information by using the TroubleShootingScript Version 2 (TSSv2) toolset for Active Directory replication issues.
-ms.date: 04/19/2023
+ms.date: 04/21/2023
 author: v-lianna
 ms.author: v-lianna
 manager: dcscontentpm
