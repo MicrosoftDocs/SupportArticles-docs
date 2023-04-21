@@ -90,6 +90,7 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Microsoft Authentication Broker|29d9ed98-a469-4536-ade2-f981bc1d605e|
 |Microsoft Azure CLI|04b07795-8ddb-461a-bbee-02f9e1bf7b46|
 |Microsoft Azure PowerShell|1950a258-227b-4e31-a9cf-717495945fc2|
+|MicrosoftAzureActiveAuthn|0000001a-0000-0000-c000-000000000000|
 |Microsoft Bing Search|cf36b471-5b44-428c-9ce7-313bf84528de|
 |Microsoft Bing Search for Microsoft Edge|2d7f3606-b07d-41d1-b9d2-0d0c9296a6e8|
 |Microsoft Bing Default Search Engine|1786c5ed-9644-47b2-8aa0-7201292175b6|

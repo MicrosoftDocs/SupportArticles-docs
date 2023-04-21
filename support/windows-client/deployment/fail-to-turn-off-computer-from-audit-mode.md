@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
-# Erroe after you turn off a Windows 10-based computer from Audit mode: Your account has been disabled
+# Error after you turn off a Windows 10-based computer from Audit mode: Your account has been disabled
 
 This article helps fix an error (our account has been disabled) that occurs after you turn off a Windows 10-based computer from Audit mode.
 

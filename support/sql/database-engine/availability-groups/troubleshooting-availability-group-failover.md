@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Always On Availability Groups failover
 description: This article provides troubleshooting steps to help you determine why your availability group failed over. 
-ms.date: 04/11/2023
+ms.date: 04/17/2023
 ms.custom: sap:Availability Groups
 ms.prod: sql
 author: padmajayaraman
@@ -130,10 +130,10 @@ Critical SQL19AGN1.CSSSQL 1177 Microsoft-Windows-FailoverClusterin Quorum Manage
 The errors in the Windows event log (Events 1135 and 1177) suggest that network connectivity is a cause of the event. This is the most common reason that a cluster health issue is detected. The following example shows that other cluster member servers couldn't communicate with this server that hosts the availability group primary replica, and that this problem triggered the removal of the cluster node from the cluster:
 
 ```output
-00000fe4.00001edc::2022/12/14-22:44:36.870 INFO [NODE] Node 1: New join with n3: stage: 'Attempt Initial Connection' status (10060) reason: 'Failed to connect to remote endpoint 20.1.19.103:~3343~'
-00000fe4.00001620::2022/12/15-14:26:02.050 INFO [IM] got event: Remote endpoint 10.1.19.102:~3343~ unreachable from 10.1.19.101:~3343~
-00000fe4.00001620::2022/12/15-14:26:02.050 WARN [NDP] All routes for route (virtual) local fe80::38b9:a16d:77b2:d2d:~0~ to remote fe80::9087:71d9:495b:27bd:~0~ are down
-00000fe4.0000179c::2022/12/15-14:26:02.053 WARN [NODE] Node 1: Connection to Node 2 is broken. Reason GracefulClose(1226)' because of 'channel to remote endpoint fe80::9087:71d9:495b:27bd%14:~3343~ is closed'
+00000fe4.00001edc::2022/12/14-22:44:36.870 INFO [NODE] Node 1: New join with n3: stage: 'Attempt Initial Connection' status (10060) reason: 'Failed to connect to remote endpoint <endpoint address>'
+00000fe4.00001620::2022/12/15-14:26:02.050 INFO [IM] got event: Remote endpoint <endpoint address> unreachable from <endpoint address>
+00000fe4.00001620::2022/12/15-14:26:02.050 WARN [NDP] All routes for route (virtual) local <local address> to remote <remote address> are down
+00000fe4.0000179c::2022/12/15-14:26:02.053 WARN [NODE] Node 1: Connection to Node 2 is broken. Reason GracefulClose(1226)' because of 'channel to remote endpoint <endpoint address> is closed'
 ```
 
 You can search the cluster log for evidence of a connection failure to the node. From the location in the cluster log where you found `Lost quorum`, search backwards for strings such as `Failed to connect to remote endpoint`, `unreachable`, and `is broken`.  
@@ -144,7 +144,7 @@ Make sure that cluster health monitoring is appropriate for the host environment
 
 If it's necessary, consider contacting Microsoft Windows High Availability support to open a support incident.
 
-### SQL Server service is down: an Always On health event
+### SQL Server service is down: An Always On health event
 
 Always On health monitoring can detect whether the SQL Server service that hosts the availability group primary replica is no longer running.
 
@@ -179,7 +179,7 @@ Check the end of the SQL Server error log for clues. If the error log ends abrup
 
 If a SQL Server internal health issue caused SQL Server to terminate unexpectedly, there might be clues of a possible fatal exception (including a dump file diagnostic being generated) at the end of the SQL error log. Review the clues and take the necessary action. If you find a dump file, consider opening contacting Microsoft SQL Server support, and provide the SQL Server error log and dump file content for further investigation.
 
-### Lease time-out: an Always On health event
+### Lease time-out: An Always On health event
 
 Always On uses a "lease" mechanism to monitor the health of the computer on which SQL Server is installed. The default lease time-out is 20 seconds.
 
@@ -258,7 +258,7 @@ You should also capture counters that report the same system resource usage, inc
    - `Logical Disk::Avg. Disk Write Queue Length`
    - `MSSQLServer:SQL Statistics::Batch Requests/sec`
 
-### Health check time-out: an Always On health event
+### Health check time-out: An Always On health event
 
 When an availability group replica transitions into the primary role, Always On health monitoring establishes a local ODBC connection to the SQL Server instance. While Always On is connected and monitoring, if SQL Server doesn't respond over the ODBC connection within the period that's set for the availability group's health check time-out (default is 30 seconds), then a health check time-out event is triggered. In this situation, the availability group transitions from the primary role to the Resolving role and initiates failover, if it's configured to do this.
 
@@ -302,13 +302,13 @@ To check for non-yielding scheduler events, follow these steps:
 
 1. Press and hold **Control**, and then select the files whose names begin with `system_health_xxx.xel`.
 
-1. Select **Open**, and then select **OK**.
+1. Select **Open** > **OK**.
 
 1. Filter the results. Right-click an event under the **name** column, and select **Filter by this Value**.
 
     :::image type="content" source="media/troubleshooting-availability-group-failover/filter-by-this-value.png" alt-text="Screenshot that shows how to check non-yielding scheduler events.":::
 
-1. Define a filter to sort rows in which the values in the **name** column contains "yield," as shown in the following screenshot. This returns all kinds of non-yielding events that might have been recorded in the `system_health` logs.
+1. Define a filter to sort rows in which the values in the **name** column contains `yield`, as shown in the following screenshot. This returns all kinds of non-yielding events that might have been recorded in the `system_health` logs.
 
     :::image type="content" source="media/troubleshooting-availability-group-failover/filter-values-for-non-yielding-events.png" alt-text="Screenshot that shows how to sort rows where name contains yield.":::
 
@@ -345,11 +345,11 @@ In the SQL Server error log, within seconds of the health check time-out, SQL Se
 Review the system event log for possible system clues that could be related to the health check time-out event. When you review the Windows system event log, you might find an I/O issue that's reported at the same time for the same health check time-out:
 
 ```output
-02/23/2021,08:50:16 PM,Warning,SQL19AGN1.CSSSQL.local.local,129,pvscsi,N/A,N/A,"Reset to device, \Device\RaidPort3, was issued."
-02/23/2021,08:50:16 PM,Warning,SQL19AGN1.CSSSQL.local.local,153,Disk,N/A,N/A,"The IO operation at logical block address 0x11f0c3680 for Disk 6 (PDO name: \Device\00000046) was retried."
+02/23/2021,08:50:16 PM,Warning,SQL19AGN1.CSSSQL.local.local,<...>,"Reset to device, \Device\<device ID>, was issued."
+02/23/2021,08:50:16 PM,Warning,SQL19AGN1.CSSSQL.local.local,<...>,"The IO operation at logical block address <block address> for Disk 6 (PDO name: \Device\<device ID>) was retried."
 ```
 
-### SQL Server health: an Always On health event
+### SQL Server health: An Always On health event
 
 Always On monitors different kinds of SQL Server health events. While it hosts an availability group primary replica, SQL Server continuously runs `sp_server_diagnostics` that reports on SQL Server health by using different components. When any health problems are detected, `sp_server_diagnostics` reports an error for that particular component, and then sends the results back to the Always On health detection process. When an error is reported, the Availability Group role shows the failed state and possible failover if the availability group is configured to do this.
 
@@ -386,19 +386,19 @@ To identify the Always On specific health issue, follow these steps:
 
 1. In the **File Open** dialog box, navigate to the files in the SQL Server *\LOG* directory.
 
-1. Press **Control**, select the files whose names match `<servername>_<instance>_SQLDIAG_xxx.xel`, select **Open**, and then select **OK**.
+1. Press **Control**, select the files whose names match `<servername>_<instance>_SQLDIAG_xxx.xel`, and then select **Open** > **OK**.
 
    :::image type="content" source="media/troubleshooting-availability-group-failover/match-servername-instance-small.png" alt-text="Screenshot that shows how to select files whose names match a certain name." lightbox="media/troubleshooting-availability-group-failover/match-servername-instance-big.png":::
 
    You'll see a new tabbed window in SSMS that includes the extended events, as shown in the following screenshot.
 
-1. To investigate a SQL Server health issue, locate the `component_health_result` whose "state_desc" value is "error." Here's an example of a system component event that reported an error back to Always On health monitoring:
+1. To investigate a SQL Server health issue, locate the `component_health_result` whose `state_desc` value is `error`. Here's an example of a system component event that reported an error back to Always On health monitoring:
 
    :::image type="content" source="media/troubleshooting-availability-group-failover/system-component-event-health-monitoring-small.png" alt-text="Screenshot of system component event that reported error." lightbox="media/troubleshooting-availability-group-failover/system-component-event-health-monitoring-big.png":::
 
 1. Double-click the **data** column in the lower pane. This opens the detailed component data in a new SSMS window pane for review. Here's what the system component data looks like:
 
-   :::image type="content" source="media/troubleshooting-availability-group-failover/detailed-component-data-ssms-window.png" alt-text="Screenshot of detailed component data.":::
+   :::image type="content" source="media/troubleshooting-availability-group-failover/detailed-component-data-ssms-window-small.png" alt-text="Screenshot of detailed component data." lightbox="media/troubleshooting-availability-group-failover/detailed-component-data-ssms-window-big.png":::
 
    Notice that the 'totalDumprequests=186' data indicates there have been too many dump file diagnostic events generated on this SQL Server. This is the reason that the system component reported an error state. When Always On health monitoring receives this error state, it triggers an availability group health event. You can also verify that no write access violations or orphan spinlocks have been detected from the data provided in the system component data.
 
