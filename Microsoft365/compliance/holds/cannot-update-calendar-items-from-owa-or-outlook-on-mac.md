@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 _Original KB number:_ &nbsp; 4459263
 
-[!include[Purview banner](../../../includes/purview-rebrand.md)]
-
 ## Symptoms
 
 Consider the following scenario:
