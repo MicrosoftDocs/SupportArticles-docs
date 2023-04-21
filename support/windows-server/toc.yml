@@ -3052,7 +3052,7 @@
       href: ../windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for Active Directory replication issues
       href: ../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md?context=/troubleshoot/windows-server/context/context
-    - name: Gather information for Deployment-related issues
+    - name: Gather information for deployment-related issues
       href: ../windows-client/windows-troubleshooters/gather-information-using-tssv2-deployment.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for Group Policy issues
       href: ../windows-client/windows-troubleshooters/gather-information-using-tssv2-group-policy.md?context=/troubleshoot/windows-server/context/context
