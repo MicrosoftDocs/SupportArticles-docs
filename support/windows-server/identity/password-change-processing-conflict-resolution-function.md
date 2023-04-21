@@ -112,7 +112,7 @@ Active Directory Domain Services failed to process a password update notificatio
 The user may experience temporary authentication failures until the updated credentials are successfully replicated to the PDC via normal replication schedules.
  BDC:      <Computer Name>
  User:      <User Name>
- User RID:  <Rid>
+ User RID:  <RID>
  Error:     <Error Code>
 ```
 
@@ -148,7 +148,7 @@ Description:
 Active Directory Domain Services failed to send a password update notification to the Primary Domain Controller (PDC).
 The user may experience temporary authentication failures until the updated credentials are successfully replicated to the PDC via normal replication schedules.
  User:      <User Name>
- User RID:  <Rid>
+ User RID:  <RID>
  Error:     <Error Code>
 ```
 
