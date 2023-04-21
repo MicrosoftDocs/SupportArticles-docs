@@ -1,6 +1,6 @@
 ---
-title: Remote session disconnected using non-persistent VDI with per-user licensing
-description: Troubleshooting the "Remote Desktop License Servers unavailable" error when trying to connect to a remote session using non-persistent VDI.
+title: The first connection to a non-persistent VDI session fails when using per-user Remote Desktop licensing
+description: Troubleshooting the "Remote Desktop License Servers unavailable" error when trying to connect to a remote session using non-persistent VDI and per-user Remote Desktop licensing.
 ms.date: 04/14/2023
 author: Heidilohr
 ms.author: helohr
@@ -12,35 +12,46 @@ localization_priority: medium
 ms.technology: windows-server-rds
 ---
 
-# Remote session disconnected when using non-persistent VDI with per-user licensing
+# The first connection to a non-persistent VDI session fails when using per-user Remote Desktop licensing
 
-If you're running a non-persistent Remote Desktop Services (RDS) Virtual Desktop Infrastructure (VDI) with per-user licensing, you may see an error message appear the first time you try to connect to a virtual machine (VM). This error message says **The remote session was disconnected because there are no Remote Desktop License Servers available to provide a license**, and it can appear even if you do already have a license. This article will explain why this error happens, as well as steps you can take to mitigate it.
+If you're running a Virtual Desktop Infrastructure (VDI) environment with non-persistent virtual machines (VMs) that connect to a Remote Desktop license server with per-user licensing, you may see an error message appear the first time a user tries to connect. The error message is **The remote session disconnected because there are no Remote Desktop License Servers available**. This article will explain why this error happens, as well as steps you can take to mitigate it.
 
-To understand why this happens, let's first look at the difference between *persistent VDI* and *non-persistent VDI*.
+Let's first look at the difference between *persistent VDI* and *non-persistent VDI*:
 
-- *Persistent VDI* is when changes made to a virtual machine persist after you shut down or restart your VM. Persistent VDI behaves like a physical machine.
+- *Persistent VDI* is when changes made to a virtual machine are kept after you shut down or restart your VM. Persistent VDI behaves like a physical machine.
 
 - *Non-persistent VDI* is when the VM doesn't keep the changes you make to it after you shut down or restart it. Instead, every time you end your session, the VM reverts to its original state and loses any changes. VMs on non-persistent VDI typically use a shared custom image.
 
 ## Symptoms
+A user sees the error message **The remote session disconnected because there are no Remote Desktop License Servers available**. This issue happens when a user is the first one to connect to a virtual machine after it is powered on and the following is true:
 
-This issue appears when you're running a non-persistent VDI deployment Windows virtual machines (VMs) that are licensed with a Remote Desktop Services licensing server. This issue usually happens when you're using per-user licensing mode and your VMs haven't connected to the licensing server within the 120 day grace period after creation.
+- The Windows VM has the *Remote Desktop Session Host* (RDSH) role installed.
+- The Remote Desktop licensing server the VM uses is configured in *per-user* mode.
+- The [120 day grace licensing period](/windows-server/remote/remote-desktop-services/rds-client-access-license) has expired. No license server is required during this time.
+- The VM has never connected to the Remote Desktop licensing server specified.
 
-When the VM first connects, the VM queries the licensing server for the X509 certificate. Usually, this process takes several seconds. However, the issue happens when the connection suddenly stops. After the disconnection, an error message that says **The remote session disconnected because there are no Remote Desktop License Servers available** appears.
+While this technically can happen with both persistent and non-persistent VDI, it is most likely with non-persistent VDI as the VMs for persistent VDI will have connected to the Remote Desktop licensing server during the grace period.
+
+This is applicable to third-party VDI providers. A Microsoft Remote Desktop Services deployment does not natively have the option of non-persistent VMs.
 
 ## Cause
 
-In a persistent VM, the user or admin could get an X509 certificate and permanently solve the problem. However, for non-persistent VMs, the VM is reset every time it's deactivated.
+When first user connects, the VM will query the Remote Desktop licensing server for an X509 certificate. This process can take several seconds, during which connections will fail with the error message **The remote session disconnected because there are no Remote Desktop License Servers available**. Once the VM has received the X509 certificate, subsequent connections will succeed. This is by design.
 
-Basically, because non-persistent VMs can't save changes between sessions, every time a user connects, it's like they're connecting to the licensing server for the first time.
+With non-persistent VMs, depending on how the VM is serviced, this issue may happen each time it is powered on as its state has been reset and so it queries the Remote Desktop licensing server for an X509 certificate.
 
 ## Resolution
 
-In order for the non-persistent VMs to connect, they must have the X509 certificate. However, since the VMs themselves don't persist between sessions, you must patch the correct certificate directly into the custom image all the non-persistent VMs are based on.
+For users to connect to the non-persistent VMs without the error, the VM must have received an X509 certificate.
 
-There are two ways you can patch the custom image:
+Non-persistent VMs are provisioned based on a custom image where multiple VMs will all be based on the same image. Servicing of non-persistent VMs, such as installing Windows Updates, isn't done on the non-persistent VMs as the changes would be lost when the VM is restarted. Instead, servicing happens to the custom image. 
 
-- The first method is to add the correct certificate by turning it on, downloading the certificate, then shutting it down. The one drawback to this method is that now the custom image itself is subject to the 120 day grace period for RDS licenses. As a result, the issue will reappear after the grace period expires.
-- The second method is to build a new custom image with the correct certificate every 120 days. You can make a new image manually or with an automated tool, such as Microsoft Development Toolkit.
+Typically, servicing happens in one of two ways. The following table lists the differences between each approach in this scenario:
 
-Microsoft doesn't support non-persistent RDS deployments. If you need more information about how to patch your custom image, contact your third-party virtualization provider.
+| Servicing method | Result |
+|--|--|
+| Start with the existing custom image, install any updates, and make the same custom image available to be used by the non-persistent VMs. | The error won't happen while the custom image is within the grace period, however once the grace period has expired, the error will occur.<br /><br />Alternatively, you could create a script to simulate the first connection to obtain an X509 certificate. |
+| Create a new custom image each time using an automated process with a tool like [Microsoft Deployment Toolkit](windows/deployment/deploy-windows-mdt/get-started-with-the-microsoft-deployment-toolkit). | If this is done frequently, the custom image will be within the grace period, so the error won't occur. You still need to license your deployment correctly. |
+
+> [!NOTE]
+> You should contact your VDI provider for recommendations as to the most suitable way to service your deployment.
