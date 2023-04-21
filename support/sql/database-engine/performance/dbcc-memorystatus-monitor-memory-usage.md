@@ -299,18 +299,49 @@ You can obtain detailed information about buffer pool buffers for database pages
 The next section lists details about the buffer pool plus additional information.
 
 ```console
-Buffer Counts             Buffers
------------------------------- --------------------
-Committed                 1064
-Target                    17551
-Hashed                    345
-Stolen Potential          121857
-External Reservation      645
-Min Free                  64
-Visible                   17551
-Available Paging File     451997
+Buffer Pool                                     Pages
+---------------------------------------------------
+Database                                        5404
+Simulated                                       0
+Target                                          16384000
+Dirty                                           298
+In IO                                           0
+Latched                                         0
+IO error                                        125
+In Internal Pool                                0
+Page Life Expectancy                            3965
 
-(8 row(s) affected)
+Buffer Pool Current Clock Status Count          Count
+-------------------------------------------------------
+Never Used                                        0
+Stolen or Free                                    0
+Above Cutoff (HOT)                                0
+Not on LRU                                        0
+Single Use                                        0
+Long IO Queue                                     0
+In IO                                             0
+In Allocation                                     0
+Preemptive                                        0
+Skip Pool                                         0
+Moved to L2                                       0
+Evicted                                           0
+Evicted Mapped                                    0
+
+Buffer Pool Previous Clock Status Count          Count
+-------------------------------------------------------
+Never Used                                        0
+Stolen or Free                                    0
+Above Cutoff (HOT)                                0
+Not on LRU                                        0
+Single Use                                        0
+Long IO Queue                                     0
+In IO                                             0
+In Allocation                                     0
+Preemptive                                        0
+Skip Pool                                         0
+Moved to L2                                       0
+Evicted                                           0
+Evicted Mapped                                    0
 ```
 
 The elements in this section are the following:
