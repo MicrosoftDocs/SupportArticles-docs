@@ -236,7 +236,7 @@ Latched                0
 ```
 
 ```output
-Buffer Poll                         Pages
+Buffer Pool                         Pages
 ----------------------------------------------
 Database                            5404
 Simulated                           0
@@ -299,19 +299,19 @@ You can obtain detailed information about buffer pool buffers for database pages
 The next section lists details about the buffer pool plus additional information.
 
 ```console
-Buffer Pool                                     Pages
----------------------------------------------------
-Database                                        5404
-Simulated                                       0
-Target                                          16384000
-Dirty                                           298
-In IO                                           0
-Latched                                         0
-IO error                                        125
-In Internal Pool                                0
-Page Life Expectancy                            3965
+Buffer Pool                                        Pages
+--------------------------------------------------------
+Database                                          5404
+Simulated                                         0
+Target                                            16384000
+Dirty                                             298
+In IO                                             0
+Latched                                           0
+IO error                                          125
+In Internal Pool                                  0
+Page Life Expectancy                              3965
 
-Buffer Pool Current Clock Status Count          Count
+Buffer Pool Current Clock Status                  Count
 -------------------------------------------------------
 Never Used                                        0
 Stolen or Free                                    0
@@ -327,7 +327,7 @@ Moved to L2                                       0
 Evicted                                           0
 Evicted Mapped                                    0
 
-Buffer Pool Previous Clock Status Count          Count
+Buffer Pool Previous Clock Status                 Count
 -------------------------------------------------------
 Never Used                                        0
 Stolen or Free                                    0
