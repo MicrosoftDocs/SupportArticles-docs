@@ -50,6 +50,7 @@ The following registry value can be modified to control Password Change Notifica
 A Windows writable domain controller receives the user password change or reset request. The password change is made locally, and then sent immediately to the PDC FSMO role owner using the Netlogon service as a Remote Procedure Call (RPC). The password change is then replicated to partners using the Active Directory replication process by both the PDC and the domain controller (DC) servicing the password change. If a Windows Read-Only domain controller (RODC) receives the password change request, it works like an authentication proxy forwarding the request to its hub DC, which acts as if it's the first DC to receive the request.
 
 If the AvoidPdcOnWan value is set to TRUE and the PDC FSMO is located at another site, the password change isn't sent immediately to the PDC. However, it's updated with the change through normal Active Directory replication. If the PDC FSMO is at the same site, the AvoidPdcOnWan value isn't used, and the password change is immediately communicated to the PDC.
+
 An updated password may not be sent to the PDC emulator even if AvoidPdcOnWan is FALSE or not set, if there are problems sending the request to the PDC, for example a Network outage. There's no error logged in this case. The update is then distributed using normal AD replication.
 
 ### Password conflict resolution
