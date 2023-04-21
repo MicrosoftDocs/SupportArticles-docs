@@ -21,7 +21,7 @@ The issue is caused by an increase in the *pause* instruction delay for Intel Sk
 
 ## Cause
 
-In the most recent Skylake microarchitecture, Intel increased the Pause Latency value to up to 140 cycles. In earlier-generation microarchitecture, the Pause Latency value is about 10 cycles. According to Intel, this change was made to improve resource sharing. For more information about the change and its effects, see section 8.4.7 of the following Intel PDF document: [Intel 64 and IA-32 Architectures Optimization Reference Manual](https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-optimization-manual.pdf).
+In the most recent Skylake microarchitecture, Intel increased the Pause Latency value to up to 140 cycles. In earlier-generation microarchitecture, the Pause Latency value is about 10 cycles. According to Intel, this change was made to improve resource sharing. For more information about the change and its effects, see section 2.6.4 of the following Intel PDF document: [Intel 64 and IA-32 Architectures Optimization Reference Manual](https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-optimization-manual.pdf).
 
 ## Resolution
 
