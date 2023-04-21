@@ -1,7 +1,7 @@
 ---
 title: Windows LAPS troubleshooting guidance
 description: Provides troubleshooting guidance for Windows LAPS using Windows events.
-ms.date: 04/19/2023
+ms.date: 04/21/2023
 author: v-lianna
 ms.author: v-lianna
 manager: dcscontentpm
@@ -94,7 +94,7 @@ Windows LAPS periodically (every hour) queries Active Directory for the computer
 
 If you're in an environment where you have connectivity only to a writable domain controller, open the network ports between the client machine and the domain controller.
 
-For more information, see [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements).
+For more information, see [Service overview and network port requirements for Windows](../networking/service-overview-and-network-port-requirements.md).
 
 ## Event ID 10012
 
@@ -377,7 +377,7 @@ Windows LAPS client uses Lightweight Directory Access Protocol (LDAP) modify ope
     ```
 
     If you get error 1355 (domain controller for the domain cannot be found), it means you need to troubleshoot the writable DC discovery issue.
-2. If you're in an environment where you have connectivity only to a writable domain controller, open the network ports between the client machine and the domain controller. For more information, see [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements).
+2. If you're in an environment where you have connectivity only to a writable domain controller, open the network ports between the client machine and the domain controller. For more information, see [Service overview and network port requirements for Windows](../networking/service-overview-and-network-port-requirements.md).
 
 ## Event ID 10057
 
