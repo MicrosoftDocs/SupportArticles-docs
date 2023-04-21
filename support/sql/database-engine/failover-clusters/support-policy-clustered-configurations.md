@@ -58,7 +58,7 @@ The use of mounted drives isn't supported on a cluster that includes a Microsoft
 
 ## Cluster Shared Volumes (CSV)
 
-Use Cluster Shared Volumes for SQL Server in a Failover Cluster prior to SQL Server 2014 isn't supported.
+Microsoft SQL Server 2012 and earlier versions don't support the use of CSV for SQL Server in a failover cluster.
 
 To use CSV with SQL Server 2014 or later versions, check the following resources:
 
