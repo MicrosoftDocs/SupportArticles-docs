@@ -1,7 +1,7 @@
 ---
 title: The first connection to a non-persistent VDI session fails when using per-user Remote Desktop licensing
 description: Troubleshooting the "Remote Desktop License Servers unavailable" error when trying to connect to a remote session using non-persistent VDI and per-user Remote Desktop licensing.
-ms.date: 04/14/2023
+ms.date: 04/21/2023
 author: Heidilohr
 ms.author: helohr
 manager: femila
@@ -32,13 +32,13 @@ A user sees the error message **The remote session disconnected because there ar
 
 While this technically can happen with both persistent and non-persistent VDI, it is most likely with non-persistent VDI as the VMs for persistent VDI will have connected to the Remote Desktop licensing server during the grace period.
 
-This is applicable to third-party VDI providers. A Microsoft Remote Desktop Services deployment does not natively have the option of non-persistent VMs.
+This is applicable to third-party VDI providers. A Microsoft Remote Desktop Services deployment doesn't natively have the option of non-persistent VMs.
 
 ## Cause
 
-When first user connects, the VM will query the Remote Desktop licensing server for an X509 certificate. This process can take several seconds, during which connections will fail with the error message **The remote session disconnected because there are no Remote Desktop License Servers available**. Once the VM has received the X509 certificate, subsequent connections will succeed. This is by design.
+When first user connects, the VM will query the Remote Desktop licensing server for an X509 certificate. This process can take several seconds, during which connections will fail and display the error message **The remote session disconnected because there are no Remote Desktop License Servers available**. Once the VM has received the X509 certificate, subsequent connections will succeed. This error happens by design.
 
-With non-persistent VMs, depending on how the VM is serviced, this issue may happen each time it is powered on as its state has been reset and so it queries the Remote Desktop licensing server for an X509 certificate.
+With non-persistent VMs, depending on how the VM is serviced, this issue may happen each time it is powered on as its state has been reset, so it queries the Remote Desktop licensing server for an X509 certificate.
 
 ## Resolution
 
