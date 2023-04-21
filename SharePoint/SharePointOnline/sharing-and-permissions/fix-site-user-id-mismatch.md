@@ -39,7 +39,7 @@ These issues might also occur during directory synchronization between an Active
 
 ## Resolution
 
-To fix these issues, run the Site User Mismatch diagnostic by using a Microsoft 365 administrator account. 
+To fix these issues, run the Site User Mismatch diagnostic by using a Microsoft 365 administrator account (Global Admin or SharePoint Admin). 
 
 > [!NOTE]
 >
