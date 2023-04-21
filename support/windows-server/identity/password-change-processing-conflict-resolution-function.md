@@ -56,6 +56,7 @@ An updated password may not be sent to the PDC emulator even if AvoidPdcOnWan is
 ### Password conflict resolution
 
 By default, Windows domain controllers query the PDC FSMO role owner if a user is attempting to authenticate using a password that is incorrect according to its local database. If the password sent from the client by the user is correct on the PDC, the client is allowed access, and the domain controller replicates the password change.
+
 The AvoidPdcOnWan value can be used by administrators to control when Active Directory domain controllers attempt to use the PDC FSMO role owner to resolve password conflicts. The PDC completes the logon, and the authentication is successful for the authenticating user.
 
 If the AvoidPdcOnWan value is set to TRUE and the PDC FSMO role owner is located at another site, the domain controller doesn't try to authenticate a client against password information stored on the PDC FSMO. Note, however, that this results in denying access to the user. This may cause a productivity impact, as many users aren't going to try the previous password to authenticate. In some scenarios, they may not know the previous password.
