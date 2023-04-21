@@ -17,9 +17,7 @@ ms.date: 3/31/2022
 
 # Messages aren't moved to archive mailboxes after you create a retention policy in Exchange Online
 
-[!include[Purview banner](../../../includes/purview-rebrand.md)]
-
-## Problem 
+## Problem
 
 In Microsoft Exchange Online for Microsoft 365, you use the New-RetentionPolicy Windows PowerShell cmdlet to create a retention policy that moves email messages from a user's' mailbox to the user's archive mailbox. For example, you create a retention policy by using the following series of PowerShell cmdlets.
 

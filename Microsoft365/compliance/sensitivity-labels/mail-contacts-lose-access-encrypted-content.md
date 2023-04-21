@@ -19,8 +19,6 @@ search.appverid: MET150
 
 # Mail contacts in groups have intermittent access to encrypted content
 
-[!include[Purview banner](../../../includes/purview-rebrand.md)]
-
 ## Symptoms
 
 Consider the following scenario:  

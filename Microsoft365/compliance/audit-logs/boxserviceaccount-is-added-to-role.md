@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # BOXServiceAccount is added to a role in Microsoft 365 alerts
 
-[!include[Purview banner](../../../includes/purview-rebrand.md)]
-
 ## Problem
 
 You receive Microsoft 365 security alerts (configured in the Security Compliance Center) that state that the BOXServiceAccount is added to a role.
