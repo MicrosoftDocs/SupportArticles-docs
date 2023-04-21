@@ -105,6 +105,7 @@ A new build of the Assistant is released monthly. The following table provides t
 
 |Release date|Version of the Assistant|
 |--------|--------|
+|April 21, 2023|17.01.0040.005|
 |January 26, 2023|17.00.9663.002|
 |October 20, 2022|17.00.9167.015|
 |September 20, 2022|17.00.9001.010|
