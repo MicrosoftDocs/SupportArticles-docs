@@ -71,7 +71,7 @@ ObjectCompare.Compare(listviewX.SubItems[ColumnToSort].Text,listviewY.SubItems[C
 
     listviewitem = new ListViewItem("Olivia");
     listviewitem.SubItems.Add("Johnson");
-    this.listView1.Items.Add(`listview`item);
+    this.listView1.Items.Add(listviewitem);
 
     // Create some column headers for the data.
     columnheader = new ColumnHeader();
