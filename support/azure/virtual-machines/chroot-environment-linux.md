@@ -79,7 +79,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       ```
 
       > [!NOTE]
-      > If you receive the error "unable to unmount /rescue", add the the `-l` option to the `umount` command.
+      > If you receive the error message "unable to unmount /rescue," add the `-l` option to the `umount` command.
       >
       > For example: `umount -l /rescue`
 
@@ -89,7 +89,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 ## RHEL/Centos/Oracle 6.x && Oracle 8.x && RHEL/Centos 7.x with RAW Partitions
 
 1. Stop or deallocate the affected VM.
-1. Create a rescue VM image of the same OS version, in same resource group (RSG) and location using managed disk.
+1. Create a rescue VM image of the same OS version in the same resource group (RSG) and location using a managed disk.
 1. Use the Azure portal to take a snapshot of the affected virtual machine's OS disk.
 1. Create a disk out of the snapshot of the OS disk, and attach it to the rescue VM.
 1. Once the disk has been created, troubleshoot the chroot environment in the rescue VM.
@@ -145,7 +145,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       ```
 
       > [!NOTE]
-      > If you receive the error `unable to unmount /rescue`, add the `-l` option to the `umount` command.
+      > If you receive the error message "unable to unmount /rescue," add the `-l` option to the `umount` command.
       >
       > For example: `umount -l /rescue`
 
@@ -158,7 +158,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 > If your original VM includes Logical Volume Manager (LVM) on the OS Disk, create the rescue VM by using the image with Raw Partitions on the OS Disk.
 
 1. Stop or deallocate the affected VM.
-1. Create a rescue VM image of the same OS version, in same resource group (RSG) and location using managed disk.
+1. Create a rescue VM image of the same OS version in the same resource group (RSG) and location using a managed disk.
 1. Use the Azure portal to take a snapshot of the affected virtual machine's OS disk.
 1. Create a disk out of the snapshot of the OS disk, and attach it to the rescue VM.
 1. Once the disk has been created, troubleshoot the chroot environment in the rescue VM.
@@ -229,7 +229,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       mount /dev/sdc1 /rescue/boot/efi
       ```
 
-      The */rescue/boot/* and */rescue/boot/efi* partitions may not always be located on */dev/sdc2* or */dev/sdc1*. If you encounter an error while trying to mount these partitions, check the */rescue/etc/fstab* file to determine the correct devices for the */boot* and */boot/efi* partitions from the broken OS disk. Then, run the `blkid` command and compare the UUID from the */rescue/etc/fstab* file with the output of the `blkid` command to determine the correct device for mounting the */rescue/boot/* and */rescue/boot/efi* in the repair VM.
+      The */rescue/boot/* and */rescue/boot/efi* partitions may not always be located on */dev/sdc2* or */dev/sdc1*. If you encounter an error while trying to mount these partitions, check the */rescue/etc/fstab* file to determine the correct devices for the */boot* and */boot/efi* partitions from the broken OS disk. Then, run the `blkid` command and compare the Universal Unique Identifier (UUID) from the */rescue/etc/fstab* file with the output of the `blkid` command to determine the correct device for mounting */rescue/boot/* and */rescue/boot/efi* in the repair VM.
 
       The `mount /dev/mapper/rootvg-optlv /rescue/opt` command may fail if the *rootvg-optlv* volume group doesn't exist. In this case, you can bypass this command.
 
@@ -268,7 +268,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       ```
 
       > [!NOTE]
-      > If you receive the error `unable to unmount /rescue`, add the `-l` option to the `umount` command.
+      > If you receive the error message "unable to unmount /rescue," add the `-l` option to the `umount` command.
       >
       > For example: `umount -l /rescue`
 
@@ -278,11 +278,11 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 ### Using the same LVM image
 
 > [!NOTE]
-> If you need to deploy the rescue VM by using the same LVM image, you would need to modify some aspects of the rescue VM with LVM.
+> If you need to deploy the rescue VM by using the same LVM image, you need to modify some aspects of the rescue VM with LVM.
 
-The following commands are to be executed on the recovery/rescue VM, temporarily create for the recovery operation.
+The following commands are to be executed on the recovery/rescue VM that's temporarily created for the recovery operation.
 
-1. Use the following command to check the status of the disks prior attaching the disk you want to rescue.
+1. Use the following command to check the status of the disks prior to attaching the disk you want to rescue.
 
    ```bash
    sudo lsblk -f
