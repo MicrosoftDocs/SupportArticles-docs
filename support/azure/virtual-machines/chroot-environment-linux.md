@@ -340,7 +340,7 @@ The following commands are to be executed on the recovery/rescue VM that's tempo
    ```bash
    sudo pvs
    ```
-   The output shows warnings about duplicated physical volume (PVs):
+   The output shows warnings about duplicated physical volumes (PVs):
    
    ```output
    WARNING: Not using lvmetad because duplicate PVs were found.
@@ -354,7 +354,7 @@ The following commands are to be executed on the recovery/rescue VM that's tempo
 
 5. Use the `vmimportclone` command to import the *rootvg* from the data drive by using another name.
 
-   This command changes the Universally Unique IDentifier (UUID) of the PV and and also activates it.
+   This command changes the UUID of the PV and and also activates it.
 
    ```bash
    sudo vgimportclone -n rescuemevg /dev/sdc4
@@ -453,7 +453,7 @@ The following commands are to be executed on the recovery/rescue VM that's tempo
 
 9. Mount the file system that comes from the data drive.
 
-   When using `xfs`, specify the `-o nouuid` option to avoid conflicts with the UUIDs and mount the needed filesystems to perform a chroot. This option isn't available in `ext4` file systems, so you need to remove it from the commands in such scenario:
+   When using `xfs`, specify the `-o nouuid` option to avoid conflicts with the UUIDs and mount the needed file systems to perform a chroot. This option isn't available in `ext4` file systems, so you need to remove it from the commands in such a scenario:
 
    ```bash
    sudo mkdir /rescue
@@ -473,7 +473,7 @@ The following commands are to be executed on the recovery/rescue VM that's tempo
    sudo mount -o bind /run /rescue/run
    ```
 
-   The */rescue/boot/* and */rescue/boot/efi* partitions may not always be located on */dev/sdc2* or */dev/sdc1*. If you encounter an error while trying to mount these partitions, check the */rescue/etc/fstab* file to determine the correct devices for the */boot* and */boot/efi* partitions from the broken OS disk. Then, run the `blkid` command and compare the UUID from the */rescue/etc/fstab* file with the output of the `blkid` command to determine the correct device for mounting the */rescue/boot/* and */rescue/boot/efi* in the repair VM. Duplicated UUIDs may appear in the output. In this scenario, mount the partition that matches the device letter from step 5. In the example of this section, the correct partition you should mount is */dev/sdc*. The *dev/sda* represents the operating system currently in use and should be ignored.
+   The */rescue/boot/* and */rescue/boot/efi* partitions may not always be located on */dev/sdc2* or */dev/sdc1*. If you encounter an error while trying to mount these partitions, check the */rescue/etc/fstab* file to determine the correct devices for the */boot* and */boot/efi* partitions from the broken OS disk. Then, run the `blkid` command and compare the UUID from the */rescue/etc/fstab* file with the output of the `blkid` command to determine the correct device for mounting */rescue/boot/* and */rescue/boot/efi* in the repair VM. Duplicated UUIDs may appear in the output. In this scenario, mount the partition that matches the device letter from step 5. In the example of this section, the correct partition you should mount is */dev/sdc*. The *dev/sda* represents the operating system currently in use and should be ignored.
 
 10. Verify the mounts by using the following command:
 
@@ -550,7 +550,7 @@ The following commands are to be executed on the recovery/rescue VM that's tempo
       ```
       Now, *rescuemevg-rootlv* is the one mounted on */*.
 
-13. Rename the Volume Group (VG) to keep it consistent by using the following command. Renaming the VG keeps you from facing issues when regenerating initrd and booting the disk again on the original VM.
+13. Rename the Volume Group (VG) to keep it consistent by using the following command. Renaming the VG keeps you from facing issues when regenerating the initrd and booting the disk again on the original VM.
 
     ```bash
     sudo vgrename rescuemevg rootvg
