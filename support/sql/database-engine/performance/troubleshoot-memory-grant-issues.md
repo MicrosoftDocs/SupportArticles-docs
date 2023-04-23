@@ -205,6 +205,8 @@ There are multiple extended events that provide memory grant information and ena
 
 ##### Memory grant feedback extended events
 
+For information on query processing feedback features, see [Memory grant feedback](/sql/relational-databases/performance/intelligent-query-processing-feedback#memory-grant-feedback).
+
 - **sqlserver.memory_grant_feedback_loop_disabled**: Occurs when memory grant feedback loop is disabled.
 - **sqlserver.memory_grant_updated_by_feedback**: Occurs when memory grant is updated by feedback.
 
