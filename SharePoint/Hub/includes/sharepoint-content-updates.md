@@ -2,6 +2,16 @@
 
 
 
+## Week of April 17, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/18/2023 | [Access Denied error when accessing a shared folder](/sharepoint/troubleshoot/sharing-and-permissions/access-denied-shared-folder) | added |
+| 4/18/2023 | [Error 0x8004e4d0 when signing in to OneDrive](/sharepoint/troubleshoot/sync/sign-into-onedrive-error-0x8004e4d0) | modified |
+| 4/20/2023 | [Shared With column displays users who no longer have access to a document](/sharepoint/troubleshoot/sharing-and-permissions/shared-with-column-users-no-access) | modified |
+
+
 ## Week of April 10, 2023
 
 
