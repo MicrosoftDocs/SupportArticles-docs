@@ -618,10 +618,10 @@ The following commands are to be executed on the recovery/rescue VM that's tempo
 ## Oracle 7.x
 
 1. Stop or deallocate the affected VM.
-1. Create a Rescue VM image of the same OS version, in same resource group (RSG) and location using managed disk.
+1. Create a rescue VM image of the same OS version, in the same resource group (RSG) and location using a managed disk.
 1. Use the Azure portal to take a snapshot of the affected virtual machine's OS disk.
-1. Create a disk out of the snapshot of the OS disk, and attach it to the Rescue VM.
-1. Once the disk has been created, troubleshoot the chroot environment in the Rescue VM.
+1. Create a disk out of the snapshot of the OS disk, and attach it to the rescue VM.
+1. Once the disk has been created, troubleshoot the chroot environment in the rescue VM.
 
    1. Access your VM as the root user by using the following command:
 
@@ -683,10 +683,10 @@ The following commands are to be executed on the recovery/rescue VM that's tempo
 ## SUSE-SLES 12 SP4, SUSE-SLES 12 SP4 For SAP && ## SUSE-SLES 15 SP1, SUSE-SLES 15 SP1 For SAP
 
 1. Stop or deallocate the affected VM.
-1. Create a Rescue VM image of the same OS version, in same resource group (RSG) and location using managed disk.
+1. Create a rescue VM image of the same OS version, in the same resource group (RSG) and location using a managed disk.
 1. Use the Azure portal to take a snapshot of the affected virtual machine's OS disk.
-1. Create a disk out of the snapshot of the OS disk, and attach it to the Rescue VM.
-1. Once the disk has been created, troubleshoot the chroot environment in the Rescue VM.
+1. Create a disk out of the snapshot of the OS disk, and attach it to the rescue VM.
+1. Once the disk has been created, troubleshoot the chroot environment in the rescue VM.
 
    1. Access your VM as the root user using the following command:
 
