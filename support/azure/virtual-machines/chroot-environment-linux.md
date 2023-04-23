@@ -681,7 +681,7 @@ The following commands are to be executed on the recovery/rescue VM that's tempo
       ```
 
       > [!NOTE]
-      > If you receive the error `unable to unmount /rescue`, add the `-l` option to the `umount` command.
+      > If you receive the error message "unable to unmount /rescue," add the `-l` option to the `umount` command.
       >
       > For example: `umount -l /rescue`
 
@@ -748,7 +748,7 @@ The following commands are to be executed on the recovery/rescue VM that's tempo
       ```
 
       > [!NOTE]
-      > If you receive the error `unable to unmount /rescue`, add the `-l` option to the `umount` command.
+      > If you receive the error message "unable to unmount /rescue," add the `-l` option to the `umount` command.
       >
       > For example: `umount -l /rescue`
 
