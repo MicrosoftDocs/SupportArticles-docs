@@ -81,7 +81,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       > [!NOTE]
       > If you receive the error message "unable to unmount /rescue," add the `-l` option to the `umount` command.
       >
-      > For example: `umount -l /rescue`
+      > For example: `umount -l /rescue`.
 
 1. Detach the disk from the rescue VM and perform a disk swap with the original VM.
 1. Start the original VM and check its connectivity.
