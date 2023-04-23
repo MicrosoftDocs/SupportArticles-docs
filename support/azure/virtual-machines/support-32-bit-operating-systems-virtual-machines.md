@@ -21,8 +21,8 @@ ms.author: genli
 Microsoft Azure now allows users to bring in their 32-bit Windows Operating systems over to Azure. Only Specialized VHDs are supported and Generalized images won't work in Azure. As some of these operating systems have already reached their end of life supportability agreement, Microsoft might not offer additional support for them. Support is also not offered for Linux-based, or Berkeley Software Distribution (BSD)-based operating systems that run on a Microsoft Azure virtual machine (VM).
 
 > [!NOTE]
-> - Azure platform has a memory address space limitation imposed on VMs running 32-bit operating systems where only 1GB of memory might be made available to the VM (*especially on client SKUs like Win7 or Win10*), and the rest of the memory for the VM will show as reserved within the guest VM. This is a known issue and we currently do not have an ETA for a fix. We recommend moving to 64-bit OS versions.
-> - Linux and Windows VM Guest Agent doesn't support 32-bit operating systems. VM Extensions such as Azure Backup extension and Azure Monitor Agent don't work on 32-bit operating systems because they require the VM Guest Agent.
+> - Azure platform has a memory address space limitation imposed on VMs running 32-bit operating systems where only 1GB of memory might be made available to the VM (*especially on client SKUs like Win7 or Win10*), and the rest of the memory for the VM will show as reserved within the guest VM. This is a known issue and we currently do not have an ETA for a fix. We recommend moving to 64-bit operating system versions.
+> - Linux and Windows VM Guest Agent doesn't support 32-bit operating systems. VM extensions such as Azure Backup extension and Azure Monitor Agent don't work on 32-bit operating systems because they require the VM Guest Agent.
 
 ## More information
 
