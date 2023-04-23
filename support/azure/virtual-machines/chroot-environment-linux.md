@@ -79,9 +79,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       ```
 
       > [!NOTE]
-      > If you receive the error message "unable to unmount /rescue," add the `-l` option to the `umount` command.
-      >
-      > For example: `umount -l /rescue`.
+      > If you receive the error message "unable to unmount /rescue," add the `-l` option to the `umount` command, for example, `umount -l /rescue`.
 
 1. Detach the disk from the rescue VM and perform a disk swap with the original VM.
 1. Start the original VM and check its connectivity.
@@ -145,9 +143,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       ```
 
       > [!NOTE]
-      > If you receive the error message "unable to unmount /rescue," add the `-l` option to the `umount` command.
-      >
-      > For example: `umount -l /rescue`.
+      > If you receive the error message "unable to unmount /rescue," add the `-l` option to the `umount` command, for example, `umount -l /rescue`.
 
 1. Detach the disk from the rescue VM and perform a disk swap with the original VM.
 1. Start the original VM and check its connectivity.
@@ -215,7 +211,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
         └─rootvg-rootlv 253:5    0    2G  0 lvm
       ```
 
-   1. Use the following commands to prepare the chroot dir.
+   1. Use the following commands to prepare the chroot dir:
 
       ```bash
       mkdir /rescue
@@ -268,9 +264,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       ```
 
       > [!NOTE]
-      > If you receive the error message "unable to unmount /rescue," add the `-l` option to the `umount` command.
-      >
-      > For example: `umount -l /rescue`.
+      > If you receive the error message "unable to unmount /rescue," add the `-l` option to the `umount` command, for example, `umount -l /rescue`.
 
 1. Detach the disk from the rescue VM and perform a disk swap with the original VM.
 1. Start the original VM and check its connectivity.
@@ -282,7 +276,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
 The following commands are to be executed on the recovery/rescue VM that's temporarily created for the recovery operation.
 
-1. Use the following command to check the status of the disks prior to attaching the disk you want to rescue.
+1. Use the following command to check the status of the disks prior to attaching the disk you want to rescue:
 
    ```bash
    sudo lsblk -f
@@ -340,7 +334,7 @@ The following commands are to be executed on the recovery/rescue VM that's tempo
    ```bash
    sudo pvs
    ```
-   The output shows warnings about duplicated physical volumes (PVs):
+   This output shows warnings about duplicated physical volumes (PVs):
    
    ```output
    WARNING: Not using lvmetad because duplicate PVs were found.
@@ -354,7 +348,7 @@ The following commands are to be executed on the recovery/rescue VM that's tempo
 
 5. Use the `vmimportclone` command to import the *rootvg* from the data drive by using another name.
 
-   This command changes the UUID of the PV and and also activates it.
+   This command changes the UUID of the PV and and also activates it:
 
    ```bash
    sudo vgimportclone -n rescuemevg /dev/sdc4
@@ -681,9 +675,7 @@ The following commands are to be executed on the recovery/rescue VM that's tempo
       ```
 
       > [!NOTE]
-      > If you receive the error message "unable to unmount /rescue," add the `-l` option to the `umount` command.
-      >
-      > For example: `umount -l /rescue`.
+      > If you receive the error message "unable to unmount /rescue," add the `-l` option to the `umount` command, for example, `umount -l /rescue`.
 
 1. Detach the disk from the rescue VM and perform a disk swap with the original VM.
 1. Start the original VM and check its connectivity.
@@ -748,9 +740,7 @@ The following commands are to be executed on the recovery/rescue VM that's tempo
       ```
 
       > [!NOTE]
-      > If you receive the error message "unable to unmount /rescue," add the `-l` option to the `umount` command.
-      >
-      > For example: `umount -l /rescue`.
+      > If you receive the error message "unable to unmount /rescue," add the `-l` option to the `umount` command, for example, `umount -l /rescue`.
 
 1. Detach the disk from the rescue VM and perform a disk swap with the original VM.
 1. Start the original VM and check its connectivity.
