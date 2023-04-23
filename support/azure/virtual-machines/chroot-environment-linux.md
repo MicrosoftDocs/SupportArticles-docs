@@ -1,6 +1,6 @@
 ---
-title: How to troubleshoot the chroot environment in a Linux Rescue VM
-description: This article describes how to troubleshoot the chroot environment in the Rescue virtual machine (VM) in Linux.
+title: How to troubleshoot the chroot environment in a Linux rescue VM
+description: This article describes how to troubleshoot the chroot environment in the rescue virtual machine (VM) in Linux.
 services: virtual-machines
 documentationcenter: ''
 author: genlin
@@ -16,9 +16,9 @@ ms.author: genli
 
 ---
 
-# Chroot environment in a Linux Rescue VM
+# Chroot environment in a Linux rescue VM
 
-This article describes how to troubleshoot the chroot environment in the Rescue virtual machine (VM) in Linux.
+This article describes how to troubleshoot the chroot environment in the rescue virtual machine (VM) in Linux.
 
 ## Ubuntu 16.x && Ubuntu 18.x && Ubuntu 20.04
 
@@ -151,7 +151,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 ## RHEL/Centos 7.x & 8.X with LVM
 
 > [!NOTE]
-> If your original VM includes Logical Volume Manager (LVM) on the OS Disk, create the rescue VM by using the image with Raw Partitions on the OS Disk.
+> If your original VM includes Logical Volume Manager (LVM) on the OS Disk, create the rescue VM by using the image with raw partitions on the OS Disk.
 
 1. Stop or deallocate the affected VM.
 1. Create a rescue VM image of the same OS version in the same resource group (RSG) and location using a managed disk.
