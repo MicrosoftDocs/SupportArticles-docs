@@ -115,4 +115,4 @@ Regardless of the support relationship between Microsoft and the vendor that is 
 
 ## Data collection
 
-If you need assistance from Microsoft support to resolve the issue, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-deployment.md).
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-deployment.md).
