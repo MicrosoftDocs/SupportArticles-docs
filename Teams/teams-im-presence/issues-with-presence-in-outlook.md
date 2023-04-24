@@ -28,10 +28,6 @@ You see any of the following issues when you check the presence status for a use
 - The displayed presence is incorrect.
 - The presence status is **Status unknown**.
 
-  > [!NOTE]
-  > - Outlook currently shows **Status unknown** for federated (external) Teams contacts.
-  > - In the 32-bit version of Outlook, the presence status icons related to "Out of Office" aren't currently displayed.
-
 ## Resolution
 
 ### Use the Microsoft Support and Recovery Assistant
@@ -121,3 +117,8 @@ If these steps don't resolve the issue, an administrator should create a support
 - The desktop and web logs from both the user and the contact. For information about how to collect logs, see [Use log files in troubleshooting Microsoft Teams](/microsoftteams/log-files).
 
   - For presence issues that affect contacts who are internal to your organization, provide the output from running Microsoft Support and Recovery Assistant.
+
+## Known issues
+
+- Outlook currently shows **Status unknown** for federated (external) Teams contacts.
+- In the 32-bit version of Outlook, the presence status icons related to "Out of Office" aren't currently displayed.
