@@ -1,7 +1,7 @@
 ---
 title: Fix Windows Update errors via DISM or System Update Readiness tool
 description: Use the System Update Readiness Tool or the DISM tool to fix problems that prevent Windows Update from installing successfully.
-ms.date: 12/30/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -228,3 +228,6 @@ Refer [Introduction to TroubleShootingScript toolset (TSSv2)](../../windows-clie
 > - The traces are stored in a compressed file in the *C:\\MSDATA* folder. After a support case is created, this file can be uploaded to the secure workspace for analysis.
 > - If you've downloaded this tool previously, we recommend to download the latest version. It doesn't update automatically when running.
 
+## Data collection
+
+If you need assistance from Microsoft support to resolve the issue, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-deployment.md).

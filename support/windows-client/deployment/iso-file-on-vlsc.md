@@ -1,7 +1,7 @@
 ---
 title: Download and burn an ISO file from Volume Licensing Service Center (VLSC)
 description: Describes how to download an ISO file from the Microsoft Volume Licensing Service Center (VLSC).
-ms.date: 09/22/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -61,3 +61,7 @@ From the VLSC, you can download software included in your contract. On the secti
 - [Create installation media for Windows](https://support.microsoft.com/help/15088/windows-10-create-installation-media)
 
 - [Volume Licensing Service Center](/licensing/#74)
+
+## Data collection
+
+If you need assistance from Microsoft support to resolve the issue, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).

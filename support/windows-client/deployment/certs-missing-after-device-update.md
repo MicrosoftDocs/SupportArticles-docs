@@ -1,7 +1,7 @@
 ---
 title: Certificates are missing after you update a device to a newer version of Windows 10
 description: Works around an issue in which a device loses its system and user certificates after an update.
-ms.date: 03/30/2021
+ms.date: 04/28/2023
 author: v-tappelgate
 ms.author: v-tappelgate
 manager: dcscontentpm
@@ -109,3 +109,7 @@ To add the latest LCU to the update source, follow these steps:
 - [Add-WindowsPackage](/powershell/module/dism/add-windowspackage)
 - [Modify a Windows image using DISM](/windows-hardware/manufacture/desktop/mount-and-modify-a-windows-image-using-dism)
 - [Oscdimg Command-Line Options](/windows-hardware/manufacture/desktop/oscdimg-command-line-options)
+
+## Data collection
+
+If you need assistance from Microsoft support to resolve the issue, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).

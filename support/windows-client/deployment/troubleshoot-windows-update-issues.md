@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting Windows Update issues
 description: Learn how to troubleshoot scenarios related to Windows Updates
-ms.date: 05/13/2022
+ms.date: 04/28/2023
 author: v-tappelgate
 ms.author: v-tappelgate
 manager: dcscontentpm
@@ -132,3 +132,7 @@ To troubleshoot this issue, follow these steps:
 - [Log files created by Windows Update](/windows/deployment/update/windows-update-logs)
 - [Windows Update troubleshooting](/windows/deployment/update/windows-update-troubleshooting)
 - [Windows Update common errors and mitigation](/windows/deployment/update/windows-update-errors)
+
+## Data collection
+
+If you need assistance from Microsoft support to resolve the issue, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).

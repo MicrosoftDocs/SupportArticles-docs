@@ -1,7 +1,7 @@
 ---
 title: Automate regional and language settings
 description: Describes how to automate regional and language settings.
-ms.date: 09/08/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -118,3 +118,7 @@ This article describes the Regional and Language Settings options in Windows Vis
 
 Guide to Windows Vista Multilingual User Interface  
  [https://technet.microsoft.com/library/cc721887(WS.10).aspx](https://technet.microsoft.com/library/cc721887%28ws.10%29.aspx)
+
+## Data collection
+
+If you need assistance from Microsoft support to resolve the issue, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).

@@ -1,7 +1,7 @@
 ---
 title: Windows 10 upgrade quick fixes
 description: Learn how to quickly resolve many problems, which may come up during a Windows 10 upgrade.
-ms.date: 03/13/2023
+ms.date: 04/28/2023
 manager: dcscontentpm
 ms.author: aaroncz
 ms.custom: sap:setup, csstroubleshoot
@@ -237,3 +237,7 @@ If you downloaded the *SetupDiag.exe* program to your computer, then copied it t
 - [Windows 10 Specifications](https://www.microsoft.com/windows/Windows-10-specifications)
 - [Windows 10 IT pro forums](https://social.technet.microsoft.com/Forums/en-US/home?category=Windows10ITPro)
 - [Fix Windows Update errors by using the DISM or System Update Readiness tool](../../windows-server/deployment/fix-windows-update-errors.md)
+
+## Data collection
+
+If you need assistance from Microsoft support to resolve the issue, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).

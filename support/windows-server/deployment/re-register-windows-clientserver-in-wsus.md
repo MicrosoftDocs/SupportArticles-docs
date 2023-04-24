@@ -1,7 +1,7 @@
 ---
 title: Re-register Windows client/server in WSUS
 description: Provides the steps to re-register a Windows client/server in WSUS.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -38,3 +38,7 @@ To re-register a Windows client/server in WSUS, review the following instruction
 3. In rare cases, you may need to run `wuauclt.exe /resetauthorization /detectnow` command on the Windows client/server that have a registration issue in WSUS.
 
 [!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]
+
+## Data collection
+
+If you need assistance from Microsoft support to resolve the issue, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-deployment.md).

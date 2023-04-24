@@ -1,7 +1,7 @@
 ---
 title: Unattended Setup doesn't Use Computer Name Specified by User during OOBE to Join the Domain
 description: Provides a resolution for the issue that unattended setup doesn't use Computer Name Specified by User during OOBE to Join the Domain
-ms.date: 04/07/2023
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -50,3 +50,7 @@ This issue is resolved in Windows 7 since a random computer name is used and use
 ## Disclaimer
 
 Microsoft corporation and/or its respective suppliers make no representations about the suitability, reliability, or accuracy of the information and related graphics contained herein. All such information and related graphics are provided "as is" without warranty of any kind. Microsoft and/or its respective suppliers hereby disclaim all warranties and conditions with regard to this information and related graphics, including all implied warranties and conditions of merchantability, fitness for a particular purpose, workmanlike effort, title, and non-infringement. You specifically agree that in no event shall microsoft and/or its suppliers be liable for any direct, indirect, punitive, incidental, special, consequential damages or any damages whatsoever including, without limitation, damages for loss of use, data or profits, arising out of or in any way connected with the use of or inability to use the information and related graphics contained herein, whether based on contract, tort, negligence, strict liability or otherwise, even if microsoft or any of its suppliers has been advised of the possibility of damages.
+
+## Data collection
+
+If you need assistance from Microsoft support to resolve the issue, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-deployment.md).

@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting Windows Server update
 description: Introduces general guidance for troubleshooting scenarios related to Windows Server update.
-ms.date: 04/24/2023
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -202,3 +202,7 @@ The traces will be stored in a zip file in the *C:\\MS_DATA\\* folder, which can
 - [Windows Server Update Services best practices](../../mem/configmgr/windows-server-update-services-best-practices.md)
 - [WSUS client computers restart without any notification](../../mem/configmgr/wsus-client-computers-restart-automatically.md)
 - [WSUS client takes too long to finish an update scan](../../mem/configmgr/wsus-client-long-time-finish-update-scan.md)
+
+## Data collection
+
+If you need assistance from Microsoft support to resolve the issue, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-deployment.md).

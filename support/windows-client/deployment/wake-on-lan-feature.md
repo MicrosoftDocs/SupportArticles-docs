@@ -1,7 +1,7 @@
 ---
 title: Wake on LAN behavior
 description: Describes the different behaviors of the Wake on LAN (WOL) technology in Windows 7 and Windows 10.
-ms.date: 09/08/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -55,3 +55,7 @@ For more information, see:
 
 - [System Power Actions](/windows-hardware/drivers/kernel/system-power-actions)
 - [System Power States](/windows/win32/power/system-power-states)
+
+## Data collection
+
+If you need assistance from Microsoft support to resolve the issue, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).

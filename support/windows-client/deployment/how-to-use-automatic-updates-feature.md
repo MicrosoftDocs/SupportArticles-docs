@@ -1,7 +1,7 @@
 ---
 title: How to schedule automatic updates in Windows
 description: Explains how to use the Automatic Updates feature in Windows Server 2003, in Windows XP, and in Windows 2000.
-ms.date: 09/14/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -99,3 +99,7 @@ For additional information about how to use Automatic Updates, view the followin
 
 For more information about Software Update Services, visit the following Microsoft Web site:  
 [What's new in Windows 10 deployment](/windows/deployment/deploy-whats-new)
+
+## Data collection
+
+If you need assistance from Microsoft support to resolve the issue, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).

@@ -1,7 +1,7 @@
 ---
 title: Can't install updates or programs
 description: Discusses that you cannot install some updates or programs in Windows, and you receive an error message. Provides a resolution.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -245,3 +245,7 @@ To clear the temporary file and restart the hotfix installation or the service p
 ## Method 6: Perform an in-place upgrade
 
 If all these methods do not resolve your problem, you may have to perform an in-place upgrade.
+
+## Data collection
+
+If you need assistance from Microsoft support to resolve the issue, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-deployment.md).

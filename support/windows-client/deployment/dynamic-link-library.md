@@ -1,7 +1,7 @@
 ---
 title: Dynamic link library (DLL)
 description: Describes what a DLL is and the various issues that occur when you use a DLL.
-ms.date: 04/11/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -358,3 +358,7 @@ The following list describes some of the features of assemblies compared to the 
 - [Run-Time Dynamic Linking](/windows/win32/dlls/run-time-dynamic-linking)
 
 - [Thread Local Storage](/windows/win32/procthread/thread-local-storage)
+
+## Data collection
+
+If you need assistance from Microsoft support to resolve the issue, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).

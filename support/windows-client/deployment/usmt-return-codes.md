@@ -6,7 +6,7 @@ manager: dcscontentpm
 ms.author: delhan
 ms.prod: windows-client
 author: Deland-Han
-ms.date: 03/14/2023
+ms.date: 04/28/2023
 ms.topic: troubleshooting
 ms.technology: windows-client-deployment
 ms.custom: sap:usmt, csstroubleshoot
@@ -339,3 +339,7 @@ The following information lists each return code by numeric value, along with th
 [User State Migration Tool (USMT) troubleshooting](/windows/deployment/usmt/usmt-troubleshooting)
 
 [USMT log files](/windows/deployment/usmt/usmt-log-files)
+
+## Data collection
+
+If you need assistance from Microsoft support to resolve the issue, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).

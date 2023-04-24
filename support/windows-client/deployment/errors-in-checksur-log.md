@@ -1,7 +1,7 @@
 ---
 title: Fix errors found in CheckSUR.log
 description: Describes how to fix errors that are logged by the System Update Readiness tool (CheckSUR) but remain unresolved.
-ms.date: 10/10/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -100,3 +100,7 @@ The following commands take ownership of this folder, grant Full Control of the 
 takeown /f C:\Windows\winsxs\ x86_microsoft-windows-ie-adminkitmostfiles_31bf3856ad364e35_6.0.6000.16386_none_abfb5fd109dad8b8
 icacls C:\Windows\winsxs\x86_microsoft-windows-ie-adminkitmostfiles_31bf3856ad364e35_6.0.6000.16386_none_abfb5fd109dad8b8 /grant Administrators:F copy C:\Temp\admparse.dll c:\Windows\winsxs\x86_microsoft-windows-ieadminkitmostfiles_31bf3856ad364e35_6.0.6000.16386_none_abfb5fd109dad8b8\admparse.dll
 ```
+
+## Data collection
+
+If you need assistance from Microsoft support to resolve the issue, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).

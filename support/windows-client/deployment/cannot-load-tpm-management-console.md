@@ -1,7 +1,7 @@
 ---
 title: Running TPM Management console fails
 description: Provides solutions to fix an error that occurs when you try to run the TPM Management console in Windows 10.
-ms.date: 09/08/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -52,3 +52,7 @@ Microsoft is researching this problem and will post more information in this art
 
 For more information, see the following Windows Dev Center article:
 [SetPhysicalPresenceRequest method of the Win32_Tpm class](https://msdn.microsoft.com/library/windows/desktop/aa376478%28v=vs.85%29.aspx)
+
+## Data collection
+
+If you need assistance from Microsoft support to resolve the issue, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).

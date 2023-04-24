@@ -1,7 +1,7 @@
 ---
 title: The specified database is not a valid VAMT database error message
 description: Describes an issue in which you cannot create a database by using VAMT 3.0. Additionally, you receive an error message, and events are logged in the VAMT log. This issue occurs on a computer that is running Windows 8 or Windows Server 2012.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -38,3 +38,7 @@ To download SSMSE, go to the following Microsoft website:
 
 For more information about SQL Server permissions, go to the following Microsoft website:  
 [Security and Protection (Database Engine)](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)
+
+## Data collection
+
+If you need assistance from Microsoft support to resolve the issue, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-deployment.md).

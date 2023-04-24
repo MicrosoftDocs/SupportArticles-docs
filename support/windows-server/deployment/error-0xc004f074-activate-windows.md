@@ -1,7 +1,7 @@
 ---
 title: Error 0xC004F074 when you activate Windows
 description: Helps fix the error 0xC004F074 that occurs when you activate Windows.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -90,3 +90,7 @@ Run the `w32tm /resync` command to resync the time on the client.
 ## References
 
 [Resolve Windows activation error codes](/windows-server/get-started/activation-error-codes)
+
+## Data collection
+
+If you need assistance from Microsoft support to resolve the issue, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-deployment.md).

@@ -1,7 +1,7 @@
 ---
 title: Common Windows Update errors
 description: Describes some common issues you might experience with Windows Update and steps to resolve them.
-ms.date: 08/19/2022
+ms.date: 04/28/2023
 ms.prod: windows-client
 author: aczechowski
 ms.author: aaroncz
@@ -214,3 +214,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 | Message | Description | Mitigation |
 |---------|-------------|------------|
 | WU_E_PT_HTTP_STATUS_SERVICE_UNAVAILABLE; Same as HTTP status 503 - the service is temporarily overloaded. | Unable to connect to the configured update source. | Network troubleshooting needed to resolve the connectivity issue. Check with your network and proxy teams to confirm that the device can the update source without the proxy requiring user authentication. |
+
+## Data collection
+
+If you need assistance from Microsoft support to resolve the issue, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).

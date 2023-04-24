@@ -1,7 +1,7 @@
 ---
 title: Chinese IME dictionaries shows "not ready yet" in Windows Server 2022
 description: Provides a workaround to fix the issue that occurs in Windows Server 2022 when you enable Chinese keyboard layouts.
-ms.date: 03/09/2022
+ms.date: 04/28/2023
 author: sevend2
 ms.author: v-sidong
 manager: dcscontentpm
@@ -69,3 +69,7 @@ To work around the issue, use one of the following methods as an administrator:
 - [Add languages to Windows images](/windows-hardware/manufacture/desktop/add-language-packs-to-windows)
 
 - [Adding or removing Features on Demand](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities#adding-or-removing-features-on-demand)
+
+## Data collection
+
+If you need assistance from Microsoft support to resolve the issue, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-deployment.md).

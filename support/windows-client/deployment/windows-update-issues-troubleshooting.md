@@ -1,7 +1,7 @@
 ---
 title: Windows Update issues troubleshooting
 description: Learn about troubleshooting Windows Update, issues related to HTTP/Proxy, and why some features are offered and others aren't.
-ms.date: 03/14/2023
+ms.date: 04/28/2023
 ms.prod: windows-client
 author: aczechowski
 ms.author: aaroncz
@@ -282,3 +282,7 @@ Users might receive the following errors from Windows Update. These errors are t
 |WU_E_PT_LOAD_SHEDDING | 0x8024402d | The server is shedding load. |
 
 In these cases, users that programmatically call into the Windows Update Agent API to [retrieve the result](/windows/win32/api/wuapi/nf-wuapi-isearchresult-get_resultcode) of a search operation would get [orcFailed](/windows/win32/api/wuapi/ne-wuapi-operationresultcode) or [orcSucceededWithErrors](/windows/win32/api/wuapi/ne-wuapi-operationresultcode). Retrying the operation later is expected to succeed.
+
+## Data collection
+
+If you need assistance from Microsoft support to resolve the issue, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).

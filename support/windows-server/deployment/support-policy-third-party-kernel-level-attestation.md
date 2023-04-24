@@ -1,7 +1,7 @@
 ---
 title: Support policy for third-party, kernel-level software
 description: Describes the support that Microsoft Support provides for Microsoft software products, when you run that product together with attestation-signed kernel-level drivers and any associated physical devices or applications.
-ms.date: 12/15/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -112,3 +112,7 @@ Regardless of the support relationship between Microsoft and the vendor that is 
     If the text in that row includes **Windows Hardware Driver Attested Verification**, the driver was attestation-signed.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+
+## Data collection
+
+If you need assistance from Microsoft support to resolve the issue, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-deployment.md).

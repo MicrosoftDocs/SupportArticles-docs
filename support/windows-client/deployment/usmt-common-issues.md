@@ -5,7 +5,7 @@ ms.reviewer: frankroj
 manager: dcscontentpm
 ms.author: delhan
 ms.prod: windows-client
-ms.date: 03/13/2023
+ms.date: 04/28/2023
 author: Deland-Han
 ms.topic: troubleshooting
 ms.technology: windows-client-deployment
@@ -303,3 +303,7 @@ You should also reboot the machine.
 [Return codes](usmt-return-codes.md)
 
 [UsmtUtils syntax](/windows/deployment/usmt/usmt-utilities)
+
+## Data collection
+
+If you need assistance from Microsoft support to resolve the issue, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).

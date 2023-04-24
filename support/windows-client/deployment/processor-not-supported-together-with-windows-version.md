@@ -1,7 +1,7 @@
 ---
 title: The processor is not supported together with the Windows version error
 description: Discusses issues in which you receive the processor is not supported together with the Windows version that you are currently using error or the 80240037 error code when you scan or download Windows updates.
-ms.date: 12/26/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -55,3 +55,7 @@ Since these errors occur when Windows detects an incompatible processor, ensure 
 - [Lifecycle support policy FAQ -Windows products](/lifecycle/faq/windows#%2Fhelp%2F18581%2Flifecycle-support-policy-faq-windows-products%23b4)
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+
+## Data collection
+
+If you need assistance from Microsoft support to resolve the issue, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).
