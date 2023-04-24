@@ -2,6 +2,8 @@
 title: Tools used for Troubleshooting
 description: This article lists the tools used for troubleshooting scenarios.  
 ms.date: 04/21/2023
+author: padmajayaraman
+ms.author: v-jayaramanp
 ms.custom: sap:Pipelines
 ms.service: azure-devops
 ms.subservice: ts-pipelines
@@ -27,6 +29,6 @@ To capture an F12 trace, follow the steps in [Capture a browser trace for troubl
 1. Press **F12** to stop the traffic capture, and then press **CTRL+X** to clear any traffic log.
 
 > [!IMPORTANT]
-> Configure Fiddler to capture and decrypt HTTPS traffic. To do this, select **Tools > Options > HTTPS**. Select both checkboxes on this tab (Capture HTTPS CONNECTs and Decrypt HTTPS traffic), and then select **YES** to all prompts. For more information, see [Configure Fiddler Classic to Decrypt HTTPS Traffic](https://docs.telerik.com/fiddler/configure-fiddler/tasks/decrypthttps).
+> Configure Fiddler to capture and decrypt HTTPS traffic. To do this, select **Tools > Options > HTTPS**. Select both checkboxes on this tab (**Capture HTTPS CONNECTs** and **Decrypt HTTPS traffic**), and then select **YES** to all prompts. For more information, see [Configure Fiddler Classic to Decrypt HTTPS Traffic](https://docs.telerik.com/fiddler/configure-fiddler/tasks/decrypthttps).
 
 [!INCLUDE [third-party-disclaimer](../../includes/third-party-disclaimer.md)]
