@@ -82,7 +82,7 @@ If you receive this message, we recommend that you verify the locations that fai
 
 ## Error: File not found
 
-When you run an eDiscovery search that includes SharePoint Online and OneDrive for Business locations, you might receive a "File Not Found" error message eben though the file is located on the site. This message will be posted in the export warnings and errors.csv file or skipped items.csv file. This might occur if the file can't be found on the site or if the index is out of date. Here's the text of an actual error message (with emphasis added):
+When you run an eDiscovery search that includes SharePoint Online and OneDrive for Business locations, you might receive a "File Not Found" error message even though the file is located on the site. This message will be posted in the export warnings and errors.csv file or skipped items.csv file. This might occur if the file can't be found on the site or if the index is out of date. Here's the text of an actual error message (with emphasis added):
 
 > 28.06.2019 10:02:19_FailedToExportItem_Failed to download content. Additional diagnostic info : Microsoft.Office.Compliance.EDiscovery.ExportWorker.Exceptions.ContentDownloadTemporaryFailure: Failed to download from content 6ea52149-xyxy-xyxy-b5bb-82ca6a3ec9be of type Document. Correlation Id: 3bd84722-xyxy-xyxy-b61b-08d6fba9ec32. ServerErrorCode: -2147024894 ---> Microsoft.SharePoint.Client.ServerException: ***File Not Found***. at Microsoft.SharePoint.Client.ClientRequest.ProcessResponseStream(Stream responseStream) at Microsoft.SharePoint.Client.ClientRequest.ProcessResponse()
 --- End of inner exception stack trace ---
@@ -105,7 +105,7 @@ Open the SPO location, and verify that this file is, indeed, not there. The sugg
 
 ## Error: This search result was not downloaded
 
-*Full error message:* "This search result was not downloaded as it is a folder or other artifact that can't be downloaded by itself, any items inside the folder or library will be downloaded."
+**Full error message:** "This search result was not downloaded as it is a folder or other artifact that can't be downloaded by itself, any items inside the folder or library will be downloaded."
 
 You might experience this error when you run an eDiscovery search that includes SharePoint Online and OneDrive for Business locations. This message means that we were going to try to export the item that's reported in the index, but the item turned out to be a folder. Therefore, we did not export it. As mentioned in the error message, we don't export folders, but we do export their contents.
 
