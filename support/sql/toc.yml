@@ -793,8 +793,6 @@
       items:
       - name: Cumulative Update 4 (KB5026717)
         href: releases/sqlserver-2022/cumulativeupdate4.md
-      - name: 'Improvement: Update automatic tuning to avoid missing slower query execution plans'
-        href: releases/sqlserver-2022/update-automatic-tuning.md
     - name: Cumulative Update 3
       items:
       - name: Cumulative Update 3 (KB5024396)
