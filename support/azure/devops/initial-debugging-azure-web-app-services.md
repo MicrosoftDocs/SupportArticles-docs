@@ -39,11 +39,11 @@ You can use this article as a reference for initial debugging of issues related 
 
   Review the following articles for firewall, proxy, and permissions (applicable for all platforms). These articles provide references for Microsoft hosted and self-hosted agent scenarios.
 
-  - [Communication with Azure Pipelines](/azure/devops/pipelines/agents/agents&tabs=browser#communication-with-azure-pipelines)
+  - [Communication with Azure Pipelines](/azure/devops/pipelines/agents/agents#communication-with-azure-pipelines)
 
   - [Agent Authentication and Authorization](https://github.com/Microsoft/azure-pipelines-agent/blob/master/docs/design/auth.md)
 
-  - [Run a self-hosted agent behind a web proxy](/azure/devops/pipelines/agents/proxy&tabs=windows)
+  - [Run a self-hosted agent behind a web proxy](/azure/devops/pipelines/agents/proxy)
 
   - [IPs and URLs that need to be unblocked in the firewall](/azure/devops/pipelines/agents/v2-windows#im-running-a-firewall-and-my-code-is-in-azure-repos-what-urls-does-the-agent-need-to-communicate-with)
 
@@ -90,9 +90,9 @@ You can use this article as a reference for initial debugging of issues related 
 
   - [PHP to Web App](/azure/devops/pipelines/ecosystems/php-webapp)  
 
-  - [Java to Web App](/azure/devops/pipelines/ecosystems/java-webapp&tabs=java-tomcat)  
+  - [Java to Web App](/azure/devops/pipelines/ecosystems/java-webapp)  
 
-  - [JavaScript and Node.js to Web App](/azure/devops/pipelines/ecosystems/javascript&tabs=code)  
+  - [JavaScript and Node.js to Web App](/azure/devops/pipelines/ecosystems/javascript)  
 
 ## Recommended documents
 
@@ -102,10 +102,10 @@ You can use this article as a reference for initial debugging of issues related 
 
 - [Azure Web Apps for Container task Troubleshooting](/azure/devops/pipelines/tasks/deploy/azure-rm-web-app-containers#troubleshooting)  
 
-- [Deploy to Linux Web App](/azure/devops/pipelines/targets/webapp-linux&tabs=dotnet-core%2cyaml)  
+- [Deploy to Linux Web App](/azure/devops/pipelines/targets/webapp-linux)  
 
-- [Deploy to Windows Web App](/azure/devops/pipelines/targets/webapp&tabs=yaml)  
+- [Deploy to Windows Web App](/azure/devops/pipelines/targets/webapp)  
 
-- [Deploy to Web App for Containers](/azure/devops/pipelines/targets/webapp-on-container-linux&tabs=dotnet-core%2cyaml)  
+- [Deploy to Web App for Containers](/azure/devops/pipelines/targets/webapp-on-container-linux)  
 
 - For service-impacting issues, see [Azure DevOps Services Status](https://status.dev.azure.com/)  
