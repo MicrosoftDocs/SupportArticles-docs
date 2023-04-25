@@ -1,6 +1,6 @@
 ---
-title: Troubleshooting scenarios for editing or updating service connections 
-description: This article explains about common problems while editing or updating azure RM service connections.
+title: Troubleshooting tips for issues while editing or updating service connections 
+description: This article provides tips for issues that you might encounter while editing or updating azure RM service connections.
 ms.date: 04/24/2023
 author: padmajayaraman
 ms.author: v-jayaramanp
@@ -8,7 +8,7 @@ ms.custom: sap:Pipelines
 ms.service: azure-devops
 ---
 
-# Troubleshooting scenarios for editing or updating service connections
+# Troubleshooting tips for issues while editing or updating service connections
 
 ## Azure RM Service connection not listed for a task
 
