@@ -51,7 +51,7 @@ To resolve this issue, follow these steps:
 
 ## Subscription loading issues
 
-This section provides steps to troubleshoot two scenarios which might occur when the s
+This section provides steps to troubleshoot two scenarios which might occur when the subscription loads.
 
 ### Scenario 1: "You don't appear to have an active Azure subscription"
 
