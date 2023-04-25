@@ -27,8 +27,21 @@ Use this approach when you have to connect to an Azure account by using credenti
 
 ## Common connection issues
 
-Use the list below to navigate to the appropriate article page for detailed troubleshooting steps for your scenario:
+Use the list below to navigate to the appropriate article or section for detailed troubleshooting steps for your scenario:
 
+**Troubleshooting subscription related problems**
+
+- [Loading subscriptions window shows spinning wheel when trying to create a service connection](troubleshoot-subscription-related-scenarios.md#loading-subscriptions-window-shows-spinning-wheel-when-trying-to-create-a-service-connection)
+
+- [Subscription isn't listed when creating a service connection](troubleshoot-subscription-related-scenarios.md#scenario-3-subscription-isnt-listed-when-creating-a-service-connection)
+
+- [There is no active Azure subscription](troubleshoot-subscription-related-scenarios.md)
+
+**Troubleshooting service connection related problems**
+
+[Failed to get Azure DevOps Service access token, cache value is invalid](troubleshoot-azure-rm-failed-access-token.md)
+
+"Failed to set Azure permission" error when trying to save a service connection
 
 
 
