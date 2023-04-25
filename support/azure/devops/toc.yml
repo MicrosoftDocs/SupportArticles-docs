@@ -40,11 +40,13 @@
     href: azure-web-app-task-deployments.md
     items:
     - name: Capture logs for further debugging with the tasks
-      href: Capture logs for further debugging with the tasks
+      href: logs-capture-further-debugging-tasks.md
     - name: Initial debugging for Azure Web App and services related issues
       href: initial-debugging-azure-web-app-services.md
     - name: Issues with the service connection in the task
       href: issues-service-connection-task.md
+    - name: Resource doesn't exist error with services deployment
+      href: resource-not-exist-error-services-deployment.md
 
 - name: Repos
   items:
