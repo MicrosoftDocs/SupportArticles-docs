@@ -31,7 +31,7 @@ In addition to having Application Insights Profiler enabled, you should also mak
 
 ## Keep checking back
 
-If you met all the requirements listed above, keep checking back for insights. In the meantime, our service will continue to analyze your profiles and will provide insights as soon as it detects any issues in your code (after you enable the Application Insights Profiler, it may take a few hours for you to generate profiles and for our service to analyze them).
+If you met all the requirements listed above, keep checking back for insights. In the meantime, the service continues to analyze your profiles and provide insights as soon as it detects any issues in your code. After you enable the Application Insights Profiler, it may take a few hours for you to generate profiles and for the service to analyze them.
 ## Contact us for help
 
 If you have questions or need help, [create a support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot)
