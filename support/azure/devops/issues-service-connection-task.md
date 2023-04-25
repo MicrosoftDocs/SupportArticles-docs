@@ -37,7 +37,7 @@ When you use the Azure RM (Resource Manager) service connection to connect while
 
 - **Unable to select a subscription even if I'm the Admin and Owner of it. I also can't create a new service connection**.
 
-  Check the role of the user for **App Registration**. Update the role of the user for **App Registration** manually and retry [Creating a new Service Connection](/azure/devops/pipelines/library/service-endpoints&tabs=yaml). This issue often happens if you had an existing service connection and the service principal associated with it was expired. While trying to renew it, the App Registration may have lost the proper role, which might cause conflicts when you try to use it.  
+  Check the role of the user for **App Registration**. Update the role of the user for **App Registration** manually and retry [Creating a new Service Connection](/azure/devops/pipelines/library/service-endpoints). This issue often happens if you had an existing service connection and the service principal associated with it was expired. While trying to renew it, the App Registration may have lost the proper role, which might cause conflicts when you try to use it.  
 
 - **How do I create a service connection that can manage all my subscriptions?**
 
@@ -57,17 +57,17 @@ When you use the Azure RM (Resource Manager) service connection to connect while
 
 - **Failed to authorize the service connection resource for the pipeline**
 
-  Make sure the right service connection is selected in the pipeline and the necessary [pipeline permissions](/azure/devops/pipelines/library/service-endpointstabs=yaml#pipeline-permissions) are granted to access this service connection.  
+  Make sure the right service connection is selected in the pipeline and the necessary [pipeline permissions](/azure/devops/pipelines/library/service-endpoints#pipeline-permissions) are granted to access this service connection.  
 
 - **I'm unable to see my Azure subscriptions while creating a service connection even after having the necessary permissions**
 
   If you're using some part of Azure DevOps that interacts with Azure and it appears to not be working, we recommend logging out and logging back in from an incognito or inPrivate browser. This will generate a new, valid token that Azure DevOps can use to authenticate the request to Azure, which will query the subscriptions and generate the service connection.
   
-- **You can also explore [Service connection APIs](/rest/api/azure/devops/serviceendpoint/endpoints?view=azure-devops-rest-7.1) to get, create, and update them.**
+- **You can also explore [Service connection APIs](/rest/api/azure/devops/serviceendpoint/endpoints) to get, create, and update them.**
 
 ## Recommended documents
 
-- [Service connections](/azure/devops/pipelines/library/service-endpoints&tabs=yaml#use-a-service-connection)
+- [Service connections](/azure/devops/pipelines/library/service-endpoints#use-a-service-connection)
 
 - [Azure Resource Manager service connection](/azure/devops/pipelines/library/connect-to-azure)
 
