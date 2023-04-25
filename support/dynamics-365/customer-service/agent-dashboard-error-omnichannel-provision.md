@@ -1,6 +1,6 @@
 ---
 title: Agent dashboard shows authentication error after provisioning Omnichannel for Customer Service
-description: Provides a resolution for the authentication error that occurs on the agent dashboard after provisioning Dynamics 365 Omnichannel for Customer Service.
+description: Provides a resolution for the authentication error that occurs on the agent dashboard after provisioning Omnichannel for Customer Service.
 ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---

@@ -6,7 +6,7 @@ ms.date: 04/11/2023
 ---
 # Can't import solution with active SLAs and SLAs are deactivated when a solution is imported
 
-This article provides a resolution for the issue where you're unable to import a solution with active service-level agreements (SLAs), and SLAs are deactivated when a solution is imported in Customer Service.
+This article provides a resolution for the issue where you're unable to import a solution with active service-level agreements (SLAs), and SLAs are deactivated when a solution is imported in Dynamics 365 Customer Service.
 
 ## Symptoms
 

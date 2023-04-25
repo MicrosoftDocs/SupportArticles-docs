@@ -1,6 +1,6 @@
 ---
 title: Chat widget icon doesn't load on the portal
-description: Provides a resolution for the issue where the chat widget icon doesn't load on the portal in Dynamics 365 Omnichannel for Customer Service.
+description: Provides a resolution for the issue where the chat widget icon doesn't load on the portal in Omnichannel for Customer Service.
 ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---
@@ -8,7 +8,7 @@ ms.date: 04/11/2023
 
 ## Symptoms
 
-The chat widget icon you configured doesn't load on the portal in Dynamics 365 Omnichannel for Customer Service. The chat widget icon URL that was configured as default doesn't load.
+The chat widget icon you configured doesn't load on the portal in Omnichannel for Customer Service. The chat widget icon URL that was configured as default doesn't load.
 
 ## Resolution
 

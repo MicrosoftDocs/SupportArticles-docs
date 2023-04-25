@@ -6,7 +6,7 @@ ms.date: 04/11/2023
 ---
 # SLA KPI instance doesn't reach Nearing Non-compliance or Non-compliant state and the SLA KPI instance timer continues to run
 
-This article provides a resolution for the issue where the service-level agreements (SLA) KPI instance doesn't reach **Nearing Non-compliance** or **Non-compliant** state, and the SLA KPI instance timer continues to run in Customer Service.
+This article provides a resolution for the issue where the service-level agreements (SLA) KPI instance doesn't reach **Nearing Non-compliance** or **Non-compliant** state, and the SLA KPI instance timer continues to run in Dynamics 365  Customer Service.
 
 ## Symptoms
 

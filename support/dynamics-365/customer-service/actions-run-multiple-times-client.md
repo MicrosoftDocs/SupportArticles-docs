@@ -6,7 +6,7 @@ ms.date: 04/11/2023
 ---
 # Success, warning, and failure actions are being run multiple times in the web client
 
-This article provides a resolution for the issue that the success, warning, failure, or other actions you configured will be run multiple times in the web client if the **Applicable When** attribute is updated.
+This article provides a resolution for the issue that the success, warning, failure, or other actions you configured will be run multiple times in the web client if the **Applicable When** attribute is updated in Dynamics 365 Customer Service.
 
 ## Symptoms
 

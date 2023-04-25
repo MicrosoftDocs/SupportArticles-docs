@@ -6,7 +6,7 @@ ms.date: 04/11/2023
 ---
 # "Case is missing customer" error occurs when the case creation fails
 
-This article provides a workaround for the issue where the case creation fails due to mail being sent from a queue address to the same queue address on which an automatic record creation rule is configured.
+This article provides a workaround for the issue where the case creation fails due to mail being sent from a queue address to the same queue address on which an automatic record creation rule is configured in Dynamics 365 Customer Service.
 
 ## Symptoms
 

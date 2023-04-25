@@ -1,12 +1,12 @@
 ---
 title: Omnichannel provisioning fails due to an expired Teams service principal
-description: Provides a resolution for the issue where provisioning fails due to an expired Teams service principal in Dynamics 365 Omnichannel for Customer Service.
+description: Provides a resolution for the issue where provisioning fails due to an expired Teams service principal in Omnichannel for Customer Service.
 ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---
 # Omnichannel provisioning fails due to an expired Teams service principal
 
-This article provides a resolution for the issue where an error occurs when you provision Dynamics 365 Omnichannel for Customer Service.
+This article provides a resolution for the issue where an error occurs when you provision Omnichannel for Customer Service.
 
 ## Symptoms
 

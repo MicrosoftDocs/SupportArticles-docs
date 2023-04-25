@@ -6,7 +6,7 @@ ms.date: 04/11/2023
 ---
 # A warning message appears on SLA KPI instances
 
-This article provides a resolution for the warning message that occurs on the service-level agreements (SLA) KPI instances in Customer Service.
+This article provides a resolution for the warning message that occurs on the service-level agreements (SLA) KPI instances in Dynamics 365 Customer Service.
 
 ## Symptoms
 

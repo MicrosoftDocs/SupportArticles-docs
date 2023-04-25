@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot issues in Customer Service and Omnichannel for Customer Service with Solution Health Hub
-description: Provides more information about how to troubleshoot issues in Customer Service and Omnichannel for Customer Service using the Solution Health Hub.
+description: Provides more information about how to troubleshoot issues in Dynamics 365 Customer Service and Omnichannel for Customer Service using the Solution Health Hub.
 ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---
@@ -10,7 +10,7 @@ ms.date: 04/11/2023
 
 ## Introduction
 
-You can use Solution Health Hub to get a better picture of the state of your Power Platform environment and detect any issues it might have. Solution Health Hub runs rules within an instance to validate the environment's configuration, which might change over time through natural system operations. The rules are specific to Customer Service and Omnichannel for Customer Service. You can run the rules on demand when you run into an issue. Some rules are automatically triggered when Customer Service or Omnichannel for Customer Service is installed or updated. You can regularly run the rule sets to monitor the health of your environment.
+You can use Solution Health Hub to get a better picture of the state of your Power Platform environment and detect any issues it might have. Solution Health Hub runs rules within an instance to validate the environment's configuration, which might change over time through natural system operations. The rules are specific to Dynamics 365 Customer Service and Omnichannel for Customer Service. You can run the rules on demand when you run into an issue. Some rules are automatically triggered when Customer Service or Omnichannel for Customer Service is installed or updated. You can regularly run the rule sets to monitor the health of your environment.
 
 Some of the issues that the Solution Health Hub app helps detect are as follows:
 

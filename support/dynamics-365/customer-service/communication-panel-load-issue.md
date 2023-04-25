@@ -1,6 +1,6 @@
 ---
 title: Communication panel doesn't load in Omnichannel for Customer Service
-description: Provides a resolution for the issue where the communication panel doesn't load in Dynamics 365 Omnichannel for Customer Service.
+description: Provides a resolution for the issue where the communication panel doesn't load in Omnichannel for Customer Service.
 ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---

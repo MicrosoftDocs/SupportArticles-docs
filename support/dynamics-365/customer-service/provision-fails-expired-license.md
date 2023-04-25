@@ -1,6 +1,6 @@
 ---
 title: Provisioning fails due to expired license
-description: Provides a resolution for the issue where you can't provision Dynamics 365 Omnichannel for Customer Service because of a license issue.
+description: Provides a resolution for the issue where you can't provision Omnichannel for Customer Service because of a license issue.
 ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---

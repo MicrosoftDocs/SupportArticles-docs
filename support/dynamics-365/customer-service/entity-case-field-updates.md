@@ -6,7 +6,7 @@ ms.date: 04/11/2023
 ---
 # modifiedon and modifiedby fields in the case entity get updated
 
-This article provides a resolution for the issue where case entity fields for **modifiedon** and **modifiedby** are inadvertently updated for resolved cases.
+This article provides a resolution for the issue where case entity fields for **modifiedon** and **modifiedby** are inadvertently updated for resolved cases in Dynamics 365 Customer Service.
 
 ## Symptoms
 

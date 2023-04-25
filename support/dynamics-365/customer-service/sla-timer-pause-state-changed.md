@@ -1,12 +1,12 @@
 ---
 title: SLA timer doesn't pause when its state is changed from InProgress to OnHold on a holiday
-description: Provides more information for a by design behavior that the SLA timer doesn't pause when its state is changed from InProgress to OnHold on a holiday in Customer Service.
+description: Provides more information for a by design behavior that the SLA timer doesn't pause when its state is changed from InProgress to OnHold on a holiday in Dynamics 365 Customer Service.
 ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---
 # SLA timer doesn't pause when its state is changed from InProgress to OnHold on a holiday
 
-This article provides more information about how the SLA **Warning** and **Failure** time is calculated if your organization defines business hours while scheduling working days and holidays.
+This article provides more information about how the SLA **Warning** and **Failure** time is calculated if your organization defines business hours while scheduling working days and holidays in Dynamics 365 Customer Service.
 
 ## Symptoms
 

@@ -6,9 +6,11 @@ ms.date: 04/11/2023
 ---
 # Standard SLAs aren't showing up in the migration tool
 
+This article provides a resolution for the issue where you can't find the standard service-level agreements (SLAs) in the migration tool in Dynamics 365 Customer Service.
+
 ## Symptoms
 
-The migration tool doesn't show the standard service-level agreements (SLAs) for migration.
+The migration tool doesn't show the standard SLAs for migration in Dynamics 365 Customer Service.
 
 ## Cause
 

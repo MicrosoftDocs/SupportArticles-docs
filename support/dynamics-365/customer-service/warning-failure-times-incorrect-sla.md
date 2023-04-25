@@ -1,12 +1,12 @@
 ---
 title: Warning and failure duration times are wrong for SLA
-description: Provides a resolution for the issue where the SLA warning and failure duration times are incorrect in Dynamics 365 Omnichannel for Customer Service.
+description: Provides a resolution for the issue where the SLA warning and failure duration times are incorrect in Omnichannel for Customer Service.
 ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---
 # Warning and failure duration times are incorrect for SLA
 
-This article provides a resolution for the issue where the warning and failure duration times don't consider the daylight saving time for the service-level agreement (SLA) in Dynamics 365 Omnichannel for Customer Service.
+This article provides a resolution for the issue where the warning and failure duration times don't consider the daylight saving time for the service-level agreement (SLA) in Omnichannel for Customer Service.
 
 ## Symptoms
 

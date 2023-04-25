@@ -1,12 +1,12 @@
 ---
 title: Error occurs when creating a chat widget or social channel
-description: Provides a resolution for an error that occurs when trying to create a chat widget or social channel in Dynamics 365 Omnichannel for Customer Service.
+description: Provides a resolution for an error that occurs when trying to create a chat widget or social channel in Omnichannel for Customer Service.
 ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---
 # "An error occurred in the plug-in" when creating a chat widget or social channel
 
-This article provides a resolution for an error that occurs when you try to create a chat widget or social channel in Dynamics 365 Omnichannel for Customer Service.
+This article provides a resolution for an error that occurs when you try to create a chat widget or social channel in Omnichannel for Customer Service.
 
 ## Symptoms
 

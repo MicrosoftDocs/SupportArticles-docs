@@ -1,6 +1,6 @@
 ---
 title: Agent doesn't receive a chat
-description: Provides a resolution for the issue where an agent doesn't receive a chat in Dynamics 365 Omnichannel for Customer Service.
+description: Provides a resolution for the issue where an agent doesn't receive a chat in Omnichannel for Customer Service.
 ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---

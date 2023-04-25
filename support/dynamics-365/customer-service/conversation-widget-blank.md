@@ -6,6 +6,8 @@ ms.date: 04/11/2023
 ---
 # The conversation widget becomes blank when changing browser tabs
 
+This article provides a resolution for the issue where the conversation widget becomes blank when you switch browser tabs in Dynamics 365 Customer Service.
+
 ## Symptoms
 
 The conversation widget becomes blank in Dynamics 365 Customer Service when you switch between browser tabs in Google Chrome or Chromium-based Microsoft Edge.

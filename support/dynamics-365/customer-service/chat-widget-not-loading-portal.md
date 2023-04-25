@@ -1,6 +1,6 @@
 ---
 title: Chat widget doesn't load on the portal
-description: Provides resolutions for the issue where the chat widget doesn't load on the portal in Dynamics 365 Omnichannel for Customer Service.
+description: Provides resolutions for the issue where the chat widget doesn't load on the portal in Omnichannel for Customer Service.
 ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---
