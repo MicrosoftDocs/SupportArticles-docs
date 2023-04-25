@@ -10,7 +10,7 @@ ms.service: azure-devops
 
 # Troubleshooting subscription related scenarios while creating service connections
 
-This article helps to resolve problems that you might encounter while creating an  subscription-based service connection.
+This article helps to resolve problems that you might encounter while creating an subscription-based service connection.
 
 ## Loading subscriptions window shows spinning wheel when trying to create a service connection
 

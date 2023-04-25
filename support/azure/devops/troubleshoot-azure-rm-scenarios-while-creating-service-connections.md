@@ -65,7 +65,7 @@ Make sure that the newly created SPN (App) has the Contributor and Reader permis
 
 1. Make sure that you set the `includeFailed=true` parameter so that all service endpoints are captured. This should provide more information and show whether an issue affects the service connection (for example, in the `isReady` field).
 
-1. [Try to delete the connections by using the REST API directly](/rest/api/azure/devops/serviceendpoint/endpoints/delete?view=azure-devops-rest-6.0&tabs=HTTP). Although the UI makes similar calls, it's always worth checking whether calling the API directly will create a different result.
+1. [Try to delete the connections by using the REST API directly](/rest/api/azure/devops/serviceendpoint/endpoints/delete?view=azure-devops-rest-6.0&tabs=HTTP&preserve-view=true). Although the UI makes similar calls, it's always worth checking whether calling the API directly will create a different result.
 
 1. If you use the API from the previous step by using the default parameters, and this still doesn't work, you can set the `deep` value to `false`. This setting causes the program to skip any checks and attempts that are part of the usual process to delete the underlying SPN.
 
