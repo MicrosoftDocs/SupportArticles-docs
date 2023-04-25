@@ -18,16 +18,16 @@ search.appverid:
 - MET150
 - MOP150
 ms.assetid: 51daa6b9-2e35-49c4-a0c9-df85bf8533c3
-description: Admins can learn about SMTP errors and non-delivery reports (also known as NDRs or bounce messages) that are generated in Exchange Online.
+description: Admins can learn about SMTP errors and non-delivery reports (also known as NDRs or Bounce Messages) that are generated in Exchange Online.
 ---
 
 # Email non-delivery reports and SMTP errors in Exchange Online
 
-When there's a problem delivering an email message that you sent, Microsoft 365 or Office 365 will generate an error code and often will send an email to let you know. The email you receive is a delivery status notification, also known as a DSN or bounce message. The most common type is called a non-delivery report (NDR) and they tell you that a message wasn't delivered. Non-delivery can be caused by something as simple as a typo in an email address. NDRs include an error code that indicates why your email wasn't delivered, solutions to help you get your email delivered, a link to more help on the web, and technical details for administrators. Find out [What's included in an NDR?](#whats-included-in-an-ndr).
+When there's a problem delivering an email message that you sent, Microsoft 365 or Office 365 will generate an error code and often will send an email to let you know. The email you receive is a delivery status notification, also known as a DSN or Bounce Message. The most common type is called a non-delivery report (NDR) and they tell you that a message wasn't delivered. Non-delivery can be caused by something as simple as a typo in an email address. NDRs include an error code that indicates why your email wasn't delivered, solutions to help you get your email delivered, a link to more help on the web, and technical details for administrators. Find out [What's included in an NDR?](#whats-included-in-an-ndr).
 
 ## Find my error code and get help delivering my email
 
-The following table contains the error codes (also known as enhanced status codes) for the most common bounce messages and errors that you might encounter in Exchange Online.
+The following table contains the error codes (also known as enhanced status codes) for the most common Bounce Messages and errors that you might encounter in Exchange Online.
 
 |Error code|Description|Possible cause|Additional information|
 |---|---|---|---|
@@ -85,7 +85,7 @@ The following table contains the error codes (also known as enhanced status code
 |5.7.506|`Access Denied, Bad HELO`|Your server is attempting to introduce itself (HELO according to RFC 821) as the server it's trying to connect to, rather than its own fully qualified domain name.|This isn't allowed, and it's characteristic of typical spambot behavior.|
 |5.7.507|`Access denied, rejected by recipient`|The IP that you're attempting to send from has been blocked by the recipient's organization.|Contact the recipient to resolve this issue.|
 |5.7.508|`Access denied, [$SenderIPAddress] has exceeded permitted limits within $range range`|The sender's IPv6 range has attempted to send too many messages in too short a time period.|Not applicable|
-|5.7.509|`Access denied, sending domain [$SenderDomain] does not pass DMARC verification and has a DMARC policy of reject. For more information, go to http://`|The sender's domain in the **5322.From** address doesn't pass DMARC.|To troubleshoot the DMARC failure issue, see: <ul><li>[Why would DMARC fail?](#why-would-dmarc-fail)</li><li>[How do I fix this error?](#how-do-i-fix-this-error)</li><li>[How can I see the message headers?](#how-can-i-see-the-message-headers)</li><li>[Header information](#header-information)</li>|
+|5.7.509|`Access denied, sending domain [$SenderDomain] does not pass DMARC verification and has a DMARC policy of reject.` |The sender's domain in the **5322.From** address doesn't pass DMARC.|For information on why this error occurred, see [Why would DMARC fail?](#why-would-dmarc-fail)<br/><br/> A user too receives this Bounce Message because it failed DMARC and the DMARC policy is set to reject all failures. The user then should contact their email administrator for additional help.|
 |5.7.510|`Access denied, [contoso.com] does not accept email over IPv6`|The sender is attempting to transmit a message to the recipient over IPv6, but the recipient doesn't accept email messages over IPv6.|Not applicable|
 |5.7.511|`Access denied, banned sender`|The IP that you're attempting to send from has been banned.|To delist the address, email delist@microsoft.com and provide the full NDR code and IP address. <br/><br/> For more information, see [Use the delist portal to remove yourself from the blocked senders list](/microsoft-365/security/office-365-security/use-the-delist-portal-to-remove-yourself-from-the-office-365-blocked-senders-lis).|
 |5.7.512|`Access denied, message must be RFC 5322 section 3.6.2 compliant`|Message was sent without a valid "From" email address.|Office 365 only. Each message must contain a valid email address in the "From" header field. Proper formatting of this address includes angle brackets around the email address, for example, \<security@contoso.com\>. Without an address with this format, Microsoft 365 or Office 365 will reject the message.|
