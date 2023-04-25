@@ -18,7 +18,7 @@ ms.date:     04/21/2023
 This article provides troubleshooting steps and information for using Azure Application Insights Code Optimizations.
 ## Make sure your app is connected to an Application Insights resource
 
-[Create an Application Insights resource](/azure/azure-monitor/app/create-workspace-resource) and make sure it's connected to the right app
+[Create an Application Insights resource](/azure/azure-monitor/app/create-workspace-resource) and make sure it's connected to the right app.
 ## Make sure you have Application Insights Profiler enabled
 
 [Enable Application Insights Profiler](/azure/azure-monitor/profiler/profiler-overview)
