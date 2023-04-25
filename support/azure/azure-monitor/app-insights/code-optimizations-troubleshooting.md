@@ -25,7 +25,7 @@ This article provides troubleshooting steps and information for using Azure Appl
 ## Make sure Application Insights Profiler is collecting profiles
 
 In addition to having Application Insights Profiler enabled, you should also make sure profiles are getting uploaded. Navigate to Application Insights Profiler from the Performance page in your Application Insights resource. If nothing shows up under "Recent profiling sessions", visit this page to troubleshoot: [Troubleshoot Application Insights Profiler](/troubleshoot/azure/azure-monitor/app-insights/profiler-troubleshooting).
-![User's image](image3.png)
+:::image type="content" source="image3.png" alt-text="User's image":::
 
 ![User's image](media/profiler-troubleshooting/image.png)
 
