@@ -1,8 +1,8 @@
 ---
 title: Power Automate approval email information
 description: Describes the information about Power Automate approval emails.
-ms.reviewer: sranjan, hamenon
-ms.date: 04/20/2023
+ms.reviewer: mansong, hamenon
+ms.date: 04/25/2023
 ms.subservice: power-automate-flows
 ---
 # Power Automate approval email delivery information
