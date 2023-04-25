@@ -25,5 +25,5 @@ If the *customizations.xml* file has the SLAs and you select the **Overwrite Cus
 
 To resolve this issue,
 
-- If you want to explicitly import a solution with SLAs defined, you must deactivate the SLAs and then proceed with the import. The SLAs can then be re-activated.
-- If you want to import other customizations in the solution, the SLAs don't need to be re-imported. You can remove them from the *customizations.xml* file.
+- If you want to explicitly import a solution with SLAs defined, you must deactivate the SLAs and then proceed with the import. The SLAs can then be reactivated.
+- If you want to import other customizations in the solution, the SLAs don't need to be reimported. You can remove them from the *customizations.xml* file.

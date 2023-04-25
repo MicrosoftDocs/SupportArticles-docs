@@ -23,7 +23,7 @@ Use this example to understand the issue:
 3. Export *Field solution* as a managed solution.
 4. Import *Field solution* into a new org named *Org2*.
 
-Next: 
+Next:
 
 1. Create another solution in *Org1* and name it *Delta Field solution*.
 2. Associate the entity *Field work* with *Delta Field solution*. Enable SLA on the entity.

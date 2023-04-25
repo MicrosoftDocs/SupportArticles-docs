@@ -16,11 +16,11 @@ An error message similar to the following message is displayed on the Power Virt
 
 ## Cause
 
-The configuration is missing extentions that allow the bot to access the variables and actions it needs to complete the transfers.
+The configuration is missing extensions that allow the bot to access the variables and actions it needs to complete the transfers.
 
 ## Resolution
 
-Ensure that the following extentions are installed. These extensions provide out-of-the-box actions or variables in the Power Virtual Agents authoring canvas that make the authoring experience easier for the bot author.
+Ensure that the following extensions are installed. These extensions provide out-of-the-box actions or variables in the Power Virtual Agents authoring canvas that make the authoring experience easier for the bot author.
 
 - [Power Virtual Agents telephony extension](https://appsource.microsoft.com/product/dynamics-365/mscrm.mspva_telephony_extension)
 - [Omnichannel Power Virtual Agent extension](https://appsource.microsoft.com/product/dynamics-365/mscrm.omnichannelpvaextension)

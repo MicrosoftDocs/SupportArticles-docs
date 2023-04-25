@@ -7,19 +7,19 @@
           href: troubleshoot-cs-oc-solution-health.md  
     - name: Email
       items: 
-        - name: Case creation fails because of queue address isssue
+        - name: '"Case is missing customer" error'
           href: case-creation-queue-address-issue.md
         - name: Incoming email isn't converted to a case
           href: incoming-email-not-converted-case.md
-        - name: Troubleshoot common email error messages
+        - name: Troubleshoot common email errors
           href: common-email-error-messages.md
     - name: Entitlements
       items:
-        - name: Unable to create entitlements because Allocation Type dropdown doesn't show any options
+        - name: Can't create entitlements due to Allocation Type missing options
           href: allocation-type-missing-options.md
     - name: Knowledge Management
       items:  
-        - name: Data isn't updated on Insights tab for integrated search providers (preview)
+        - name: Data isn't updated on Insights for integrated search providers (preview)
           href: data-not-updated-integrated-search-providers.md
     - name: Omnichannel for Customer Service
       items:
@@ -33,7 +33,7 @@
               href: agent-does-not-receive-chat.md
             - name: Chat isn't initiated when starting a new chat from portal
               href: new-chat-not-initiated-portal.md
-            - name: Error occurs when trying to create a chat widget or social channel
+            - name: Error when creating a chat widget or social channel
               href: error-create-chat-widget-social-channel.md  
         - name: Live Chat Widget (LCW)
           items:
@@ -51,7 +51,7 @@
               href: conversation-widget-blank.md                      
         - name: Licensing, provisioning, and installation
           items:
-            - name: Instance unavailable to select on the provisioning application
+            - name: Instance unavailable to select on the provisioning app
               href: instance-unavailable-provision-omnichannel.md
             - name: Omnichannel provisioning fails due to expired Teams service principal
               href: omnichannel-provision-fail-expired-principal.md
@@ -59,73 +59,73 @@
               href: provision-fails-expired-license.md
         - name: Omnichannel dashboards
           items:
-            - name: Agent dashboard displays authentication error after provisioning Omnichannel for Customer Service
+            - name: Agent dashboard shows authentication error after provisioning
               href: agent-dashboard-error-omnichannel-provision.md
-            - name: Agent dashboard doesn't load or displays error in Omnichannel for Customer Service
+            - name: Agent dashboard doesn't load or displays error
               href: agent-dashboard-auth-error.md
-            - name: Communication panel does not load in Omnichannel for Customer Service
+            - name: Communication panel doesn't load
               href: communication-panel-load-issue.md
-            - name: Dashboards don't appear in Omnichannel for Customer Service
+            - name: Dashboards don't appear
               href: dashboard-not-appearing-omnichannel.md
             - name: Error in communication panel
               href: error-communication-panel.md
         - name: Power Virtual Agents (PVA)
           items:
-            - name: Missing required variables and actions during agent tranfers from Power Virtual Agents bots
+            - name: Missing variables and actions when agent transfers from PVA bots
               href: agent-transfer-pva-bot-issue.md
-            - name: Power Virtual Agents bot conversations appear as active on dashboard after customer ends chat
+            - name: PVA bot conversations are active after chat ends
               href: pva-conversations-active-dashboard.md            
         - name: Social channels
           items:
-            - name: Troubleshoot sync issue with social data in Omnichannel for Customer Service
+            - name: Troubleshoot sync issue with social data
               href: social-data-sync.md                
     - name: Service Level Agreements (SLAs)
       items:
         - name: Import, export, or upgrade SLA
           items:
-            - name: Changes to SLAItem through an upgrade solution don't appear even after a successful upgrade
+            - name: Changes to SLAItem via upgrade solution don't appear
               href: slaitem-changes-missing-upgrade.md
-            - name: Unable to import solution with active SLAs and SLAs are deactivated when a solution is imported
+            - name: Can't import solution with active SLAs and SLAs are deactivated when imported
               href: import-solution-active-slas.md
         - name: SLA creation
           items:
-            - name: Primary entity isn't available while creating SLAs
+            - name: Primary entity isn't available when creating SLAs
               href: create-slas-primary-entity.md 
         - name: SLA migration
           items:
-            - name: Standard SLAs aren't showing up in the migration tool
+            - name: Standard SLAs not showing in migration tool
               href: standard-slas-migration-tool.md
-            - name: Unable to use the SLA migration tool to migrate a large number of SLAs
+            - name: Can't migrate a large number of SLAs
               href: migration-tool-issue-slas.md 
         - name: SLA time calculation
           items:
             - name: Errors on custom time calculation for SLA
               href: errors-sla-time-calculation.md
-            - name: Warning and failure duration times are incorrect for SLA
+            - name: Warning and failure duration times are wrong for SLA
               href: warning-failure-times-incorrect-sla.md
         - name: SLA timer
           items:
-            - name: Deletion of SLAs or SLA Items shows error messages in Unified Interface during solution upgrade or manual deletion
+            - name: Can't delete SLAs or SLA Items in upgrade or manual deletion
               href: sla-deletion-error-messages.md
-            - name: OnHold Time attribute isn't populated for Case for Unified Interface SLA
+            - name: OnHold Time isn't populated for Case for Unified Interface SLA
               href: onhold-time-not-populated.md
-            - name: SLA KPI instance doesn't reach Nearing Non-compliance or Non-compliant state, and the instance timer continues to run
+            - name: SLA KPI instance isn't Nearing Non-compliance or Non-compliant and timer runs
               href: sla-kpi-instance-compliance-timer.md
-            - name: SLA timer doesn't pause when its state is changed from InProgress to OnHold on a holiday
+            - name: SLA timer doesn't pause when state is changed to OnHold on a holiday
               href: sla-timer-pause-state-changed.md
-            - name: Warning message appears on slakpiinstances
+            - name: Warning shows on slakpiinstances
               href: warning-slakpiinstances.md
         - name: Other SLA issues
           items:
-            - name: Case entity fields for modifiedon and modifiedby are updated for resolved cases
+            - name: Entity fields for modifiedon and modifiedby are updated for resolved cases
               href: entity-case-field-updates.md
-            - name: Errors occur while updating a case
+            - name: Errors occur when updating a case
               href: errors-updating-case.md
             - name: SLA KPI instance status shows as canceled
               href: sla-kpi-instance-shows-canceled.md
-            - name: Success, warning, and failure actions are being run multiple times in web client
+            - name: Success, warning, and failure actions run many times in web client
               href: actions-run-multiple-times-client.md
-            - name: SLA KPI instance isn't created on the entity
+            - name: SLA KPI instance isn't created on entity
               href: sla-kpi-instance-not-created-entity.md
-            - name: Unable to delete a managed solution consisting of an SLA-enabled entity
+            - name: Can't delete managed solution consisting of SLA-enabled entity
               href: unable-delete-sla-enabled-entity-managed-solution.md

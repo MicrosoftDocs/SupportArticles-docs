@@ -16,7 +16,7 @@ Once triggered, the SLA timer continues to run even when its state is changed fr
 
 If a holiday is configured, the status of the case is updated to **OnHold** to pause the case's SLA. However, the pause functionality associated with the **OnHold** status doesn't appear to function correctly. Therefore, the timer continues to run even on a holiday when it should be paused.
 
-So, it includes the holiday hours, non-working hours, and pause time (only business hours) while projecting the SLA warning or failure time.
+So, it includes the holiday hours, nonworking hours, and pause time (only business hours) while projecting the SLA warning or failure time.
 
 ## More information
 
@@ -24,7 +24,7 @@ The functionality is by design. Your organization defines business hours while s
 
 See the following scenarios to understand how the SLA **Warning** and **Failure** time is calculated:
 
-- Create a case during non-working hours. Pause and resume the case before working hours start. Hold time between **Pause** and **Resume** won't be considered.
-- Create a case during non-working hours. Pause and resume the case during working hours. Hold time will be considered and the **Warning** and **Failure** time will be extended based on hold time.
-- Create a case during working hours. Pause the case during working hours. Resume the case during non-working hours. Hold time won't be considered for the **Warning** and **Failure** time.
-- Create a case during working hours. Pause the case during non-working hours and resume it during working hours. The **Warning** time and **Failure** time will be recalculated.
+- Create a case during nonworking hours. Pause and resume the case before working hours start. Hold time between **Pause** and **Resume** won't be considered.
+- Create a case during nonworking hours. Pause and resume the case during working hours. Hold time will be considered and the **Warning** and **Failure** time will be extended based on hold time.
+- Create a case during working hours. Pause the case during working hours. Resume the case during nonworking hours. Hold time won't be considered for the **Warning** and **Failure** time.
+- Create a case during working hours. Pause the case during nonworking hours and resume it during working hours. The **Warning** time and **Failure** time will be recalculated.

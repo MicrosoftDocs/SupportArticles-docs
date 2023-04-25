@@ -38,7 +38,7 @@ To delete and add **Widget location** for the chat widget, follow these steps:
    | Field | Value |
    |---------------------------|-----------------------------------------|
    | **Title** | Type the title of record.|
-   | **Value** | The website domain where the chat widget must be displayed. The domain format should not include the protocol (http or https). For example, the website is `https://contoso.microsoftcrmportals.com`. Now, the value is `contoso.microsoftcrmportals.com`.|
+   | **Value** | The website domain where the chat widget must be displayed. The domain format shouldn't include the protocol (http or https). For example, the website is `https://contoso.microsoftcrmportals.com`. Now, the value is `contoso.microsoftcrmportals.com`.|
 
 9. Select **Save** to save the record.
 10. Go to the website and check whether the chat widget loads.

@@ -35,7 +35,7 @@ You can first manually delete all the SLA-related entity records and SLA KPI ins
 1. Select **Result**. The SLA KPI instances will be listed.
 1. Select the required SLA KPI instances, and then select **Delete SLAKPIInstances**. This will also nullify the SLA KPI instances on the related records.
 
-Even after deleting the reference records, if the error message "SLAItem delete operation encountered some errors. The process is part of a managed solution and cannot be individually deleted. Uninstall the parent solution to remove the process. See log for more details" shows, then apply the solution upgrade with the SLA deleted from the upgrade solution.
+Even after deleting the reference records, if the error message "SLAItem delete operation encountered some errors. The process is part of a managed solution and can't be individually deleted. Uninstall the parent solution to remove the process. See log for more details" shows, then apply the solution upgrade with the SLA deleted from the upgrade solution.
 
 ## Resolution 3
 
