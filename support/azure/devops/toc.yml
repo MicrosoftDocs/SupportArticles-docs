@@ -36,6 +36,15 @@
     href: access-denied-error-when-connect-source-control.md
   - name: Release Management component doesn't work
     href: other-release-management-component-no-work.md
+  - name: Azure web app task and deployments
+    href: azure-web-app-task-deployments.md
+    items:
+    - name: Capture logs for further debugging with the tasks
+      href: Capture logs for further debugging with the tasks
+    - name: Initial debugging for Azure Web App and services related issues
+      href: initial-debugging-azure-web-app-services.md
+    - name: Issues with the service connection in the task
+      href: issues-service-connection-task.md
 
 - name: Repos
   items:
