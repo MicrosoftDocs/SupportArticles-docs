@@ -12,7 +12,7 @@ ms.subservice: ts-pipelines
 
 To capture debug logs for deeper investigation with the tasks, follow these steps:
 
-1. Enable debug logs by setting [system.debug](/azure/devops/pipelines/build/variables&tabs=yaml#systemdebug) to **True** in the pipeline.
+1. Enable debug logs by setting [system.debug](/azure/devops/pipelines/build/variables#systemdebug) to **True** in the pipeline.
 
 1. If possible, enable verbose logging from the Azure service side.
 
