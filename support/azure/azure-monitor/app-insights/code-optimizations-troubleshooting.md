@@ -12,6 +12,15 @@ ms.service:  # Add the ms.service or ms.prod value
 ms.topic:    # Add the ms.topic value
 ms.date:     04/21/2023
 ---
+title: Troubleshoot Code Optimizations 
+description: This article provides troubleshooting steps and information for using Azure Application Insights Code Optimizations 
+author: rkahng 
+ms.author: ryankahng 
+ms.service: azure-monitor
+ms.subservice: optimization-insights
+ms.topic: troubleshooting
+ms.date: 04/21/2023
+---
 
 # Troubleshoot Code Optimizations
 
