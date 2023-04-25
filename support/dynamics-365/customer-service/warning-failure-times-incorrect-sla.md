@@ -1,23 +1,21 @@
 ---
-title: Warning and failure duration times are incorrect for SLA
-description: Provides a solution for warning and failure duration times are incorrect for the SLA in Dynamics 365 Omnichannel for Customer Service.
-ms.reviewer: 
-ms.topic: troubleshooting
+title: Warning and failure duration times are wrong for SLA
+description: Provides a resolution for the issue where the SLA warning and failure duration times are incorrect in Dynamics 365 Omnichannel for Customer Service.
+ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---
-
 # Warning and failure duration times are incorrect for SLA
 
-This article provides a solution for when SLA warning and failure duration times are incorrect.
+This article provides a resolution for the issue where the warning and failure duration times don't consider the daylight saving time for the service-level agreement (SLA) in Dynamics 365 Omnichannel for Customer Service.
 
-## Symptom
+## Symptoms
 
-Some SLAs don't take into account daylight saving time for warning and failure duration.
+Some SLAs don't take into account daylight saving time for the warning and failure duration.
 
 ## Cause
 
-If your SLA was created in the web client that is now deprecated, the business schedule calendar doesn't support daylight saving time.
+If your SLA was created in the web client that's now deprecated, the business schedule calendar doesn't support daylight saving time.
 
 ## Resolution
 
-To use the daylight saving time functionality and many other new features, migrate your SLAs created in the web client to Unified Interface. More information: [Migrate automatic record creation rules and service-level agreements](/dynamics365/customer-service/migrate-automatic-record-creation-and-sla-agreements)
+To use the daylight saving time functionality and many other new features, migrate your SLAs created in the web client to Unified Interface. For more information, see [Migrate automatic record creation rules and service-level agreements](/dynamics365/customer-service/migrate-automatic-record-creation-and-sla-agreements).

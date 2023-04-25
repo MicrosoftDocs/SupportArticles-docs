@@ -1,6 +1,6 @@
 ---
-title: SLA migration tool can't migrate many SLAs
-description: Provides a resolution for the issue where the SLA migration tool isn't able to migrate a large number of SLAs in Dynamics 365 Customer Service.
+title: SLA migration tool can't migrate a large number of SLAs
+description: Provides a resolution for the issue where the SLA migration tool can't migrate a large number of SLAs in Dynamics 365 Customer Service.
 ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---

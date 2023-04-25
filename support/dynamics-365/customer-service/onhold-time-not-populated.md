@@ -4,7 +4,7 @@ description: Provides a resolution for the issue where the OnHold Time attribute
 ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---
-# OnHold Time attribute isn't populated for a case for the Unified Interface SLA
+# The OnHold Time attribute isn't populated for a case for the Unified Interface SLA
 
 This article provides a resolution for the issue where the `OnHold Time` attribute isn't populated for a case for the Unified Interface SLA in Customer Service.
 
@@ -14,7 +14,7 @@ The `onholdtime` attribute to track the `onHold` duration for a case at a case e
 
 ## Cause
 
-In the legacy SLA, the `onholdtime` attribute tracks the on-hold duration for a case at the case entity level. In the Unified Interface SLA, `Elapsed time` tracks the on-hold duration at the KPI instance level, since one case can have multiple KPIs with different pause conditions, and each SLA KPI instance might have a different calendar associated with it.
+In the legacy SLA, the `onholdtime` attribute tracks the on-hold duration for a case at the case entity level. In the Unified Interface SLA, `Elapsed time` tracks the on-hold duration at the KPI instance level since one case can have multiple KPIs with different pause conditions, and each SLA KPI instance might have a different calendar associated with it.
 
 ## Resolution
 

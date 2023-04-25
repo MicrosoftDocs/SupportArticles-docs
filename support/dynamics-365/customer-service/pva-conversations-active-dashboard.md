@@ -1,10 +1,10 @@
 ---
-title: Power Virtual Agents bot conversations are active after a chat is ended
+title: Power Virtual Agents bot conversations are active after a chat has ended
 description: Provides a resolution for the issue where Power Virtual Agents bot conversations remain active on the Omnichannel for Customer Service dashboard after a user ends a chat.
 ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---
-# Power Virtual Agents bot conversations appear as active on dashboard after a user ends a chat
+# Power Virtual Agents bot conversations appear as active on the dashboard after a user ends a chat
 
 This article provides a resolution for the issue where Power Virtual Agents bot conversations are shown as active on the Omnichannel for Customer Service dashboard even though a user has ended a chat.
 
@@ -14,11 +14,11 @@ After a conversation has ended, the Power Virtual Agents bot conversations are s
 
 ## Cause
 
-Conversations for Power Virtual Agents bot can't be ended in Omnichannel for Customer Service, and therefore will be seen as active on the supervisor dashboard even after they've been closed.
+Conversations for Power Virtual Agents bot can't be ended in Omnichannel for Customer Service. Therefore, they will be seen as active on the supervisor dashboard even after they've been closed.
 
 ## Resolution
 
-You can configure a context variable that will explicitly end the bot conversation in Omnichannel for Customer Service after users close the chat window. In Power Virtual Agents, create a standalone topic for `CloseOmnichannelConversation` context variable with the variable property set to `global`. Invoke the topic in another topic that you've configured for the bot.
+You can configure a context variable that will explicitly end the bot conversation in Omnichannel for Customer Service after users close the chat window. In Power Virtual Agents, create a standalone topic for the `CloseOmnichannelConversation` context variable with the variable property set to `global`. Invoke the topic in another topic that you've configured for the bot.
 
 Though the conversation will be closed in Omnichannel for Customer Service, it won't be closed in Power Virtual Agents and appear in the **Escalation rate drivers** KPI in the **Power Virtual Agents Analytics** dashboard.
 
@@ -35,8 +35,8 @@ To configure ending a bot conversation, take the following steps:
    3. In the **Enter a value to respond** box, select the **Expression** tab, and then enter *bool(true)* to build the expression, and select **OK**.
    4. Save the changes, and then exit Power Automate.
 
-4. In the topic that you were editing, select **Call an action** again, and then in the list, select the flow that you created.
-5. In **Add node**, select **End the conversation**, and then select **Transfer to agent**.
+4. In the topic you were editing, select **Call an action** again, and then in the list, select the flow you created.
+5. In **Add node**, select **End the conversation** > **Transfer to agent**.
 
    :::image type="content" source="media/pva-conversations-active-dashboard/end-bot-conversation.png" alt-text="Screenshot that shows how to configure an end-conversation topic.":::
 

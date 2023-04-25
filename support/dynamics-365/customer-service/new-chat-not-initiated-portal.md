@@ -1,16 +1,16 @@
 ---
-title: Chat isn't initiated when starting a new chat from portal
+title: Chat isn't initiated when starting a new chat from the portal
 description: Provides a resolution for the issue where chats aren't initiated when starting a new chat from the portal in Omnichannel for Customer Service.
 ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---
-# Chat isn't initiated when starting a new chat from portal
+# Chat isn't initiated when starting a new chat from the portal
 
 This article provides a resolution for the issue where a chat isn't initiated when starting a new chat from the portal in Omnichannel for Customer Service.
 
 ## Symptoms
 
-A message that states "Sorry, we're not able to serve you at the moment" is shown when you start a chat on the portal.
+A message that states, "Sorry, we're not able to serve you at the moment," is shown when you start a chat on the portal.
 
 :::image type="content" source="media/new-chat-not-initiated-portal/chat-widget-not-able-serve.png" alt-text="Screenshot that shows the details of the message.":::
 
@@ -19,7 +19,7 @@ A message that states "Sorry, we're not able to serve you at the moment" is show
 The issue might occur in the following scenarios:
 
 - Agents aren't configured in the queue.
-- The **Allowed Presence** option isn't updated in the work stream: The default work streams that are shipped out-of-the-box don't have **Allowed Presence** values in the workstream.
+- The **Allowed Presence** option isn't updated in the workstream: The default workstreams shipped out-of-the-box don't have **Allowed Presence** values.
 
 ## Resolution
 

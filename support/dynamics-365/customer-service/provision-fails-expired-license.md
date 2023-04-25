@@ -8,7 +8,7 @@ ms.date: 04/11/2023
 
 This article provides a resolution for the issue where provisioning Omnichannel for Customer Service fails due to an expired license.
 
-## Symtoms
+## Symptoms
 
 You can't provision Omnichannel for Customer Service with an expired Microsoft 365 license.
 
