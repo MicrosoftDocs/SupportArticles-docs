@@ -219,7 +219,7 @@ Although the **Original message headers** are omitted from this example due to t
 ## Why would DMARC fail?
 
 1. **Missing or incorrect DMARC/DNS records:** Alignment issues, missing SPF, and policy issues.
-1. **Missing DKIM or DKIM records:** Missing DKIM DNS record (public key) or the Message isn't signed at the time of sending (private key).
+1. **Missing DKIM or DKIM records:** Missing DKIM DNS record (public key) or the Message isn't DKIM signed at the time of sending (private key).
 1. **Forwarding emails:** Forwarding can break SPF/DKIM, which fails DMARC.
 
 ### How do I fix this error?
