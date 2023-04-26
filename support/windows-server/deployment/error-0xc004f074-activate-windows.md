@@ -22,10 +22,10 @@ _Original KB number:_ &nbsp; 974998
 
 When you try to activate Windows, you may get error 0xC004F074 and one of the following error messages:
 
--	> 0xC004F074 with description "The Key Management Server (KMS) is unavailable" 
--	> Error: 0xC004F074 The Software Licensing Service reported that the product could not be activated. No Key Management Service (KMS) could be contacted. Please see the Application Event Log for additional information. 
+- > 0xC004F074 with description "The Key Management Server (KMS) is unavailable" 
+- > Error: 0xC004F074 The Software Licensing Service reported that the product could not be activated. No Key Management Service (KMS) could be contacted. Please see the Application Event Log for additional information. 
 
-## Key Management Server (KMS) is unavailable
+## The Key Management Server (KMS) is unavailable
 
 When trying to activate Windows 7 or Microsoft Windows Server 2008 R2 KMS client machines, you may get this error message:
 
@@ -74,8 +74,8 @@ Info:
 
 This error can occur because one of the following reasons:
 
--	A support version mismatch between the KMS client and the KMS host machine
--	A time difference between the KMS client and KMS host machine
+- A support version mismatch between the KMS client and the KMS host machine
+- A time difference between the KMS client and KMS host machine
 
 ### Support version mismatch between KMS client and KMS host machine
 
@@ -99,9 +99,9 @@ When you try to activate Windows by using the `Slmgr /ato` command, you receive 
 
 This error occurs because one of the following reasons:
 
--	The Software Protection Platform Service (sppsvc service)  on the KMS host has stopped running.
--	There are networking issues between the KMS client and the KMS host server. For example, TCP 1688 traffic is blocked between the KMS client and the KMS host server.
--	There is incorrect or old KMS host server record in Domain Name System (DNS).
+- The Software Protection Platform Service (sppsvc service)  on the KMS host has stopped running.
+- There are networking issues between the KMS client and the KMS host server. For example, TCP 1688 traffic is blocked between the KMS client and the KMS host server.
+- There is incorrect or old KMS host server record in Domain Name System (DNS).
 
 ### Sppsvc service on the KMS host has stopped running
 
@@ -133,7 +133,7 @@ Verify the KMS DNS record in the DNS which is pointing to an incorrect or old KM
 1. Open DNS management console.
 2. Select the *_tcp* folder under your domain name folder, and search for *_VLMCS* SRV record.
 3. Verify if the correct KMS host server name is present in the *_VLMCS* SRV record.
-4.Verify if the host record of the KMS host server by going to the domain name folder and verify the Host A record. Change the IP address to point to the new KMS server host if it is incorrect.
+4. Verify if the host record of the KMS host server by going to the domain name folder and verify the Host A record. Change the IP address to point to the new KMS server host if it is incorrect.
 
 ## References
 
