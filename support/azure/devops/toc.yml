@@ -36,6 +36,10 @@
     href: access-denied-error-when-connect-source-control.md
   - name: Release Management component doesn't work
     href: other-release-management-component-no-work.md
+  - Introduction to Azure RM service connection
+    href: overview-of-azure-resource-manager-service-connections.md
+  - 
+    href: create-an-azure-rm-service-connection.md
 
 - name: Repos
   items:

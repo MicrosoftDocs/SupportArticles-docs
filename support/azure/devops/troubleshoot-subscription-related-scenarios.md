@@ -16,11 +16,11 @@ This article helps to resolve problems that you might encounter while creating a
 
 ### Symptoms
 
-When users try to create an Azure RM automatic subscription-based service connection, the Loading subscriptions message window stops responding and continually shows a busy status (spinning wheel).
+When users try to create an Azure RM automatic subscription-based service connection, the **Loading subscriptions** message window stops responding and continually shows a busy status (spinning wheel).
 
 :::image type="content" source="media/troubleshooting-subscription-related-scenarios/new-azure-service-connection.png" alt-text="Screenshot that shows the spinning wheel when you try to create a service connection.":::
 
-Debugging steps
+### Debugging steps
 
 > [!NOTE]
 > We query for all the subscriptions against the logged-in Azure DevOps user who is trying to create a service connection.
@@ -29,7 +29,7 @@ Debugging steps
 
 Check the behavior on the billing page (**Organization settings > Billing > change billing**).
 
-This issue occurs if an AAD refresh token expires.
+This problem occurs if an AAD refresh token expires.
 
 ### Cause
 
@@ -49,17 +49,13 @@ To resolve this issue, follow these steps:
 
 :::image type="content" source="media/troubleshooting-subscription-related-scenarios/vs-profile-dropdown-list.png" alt-text="Screenshot that shows the list of available VS profiles.":::
 
-## Subscription loading issues
-
-This section provides steps to troubleshoot two scenarios which might occur when the subscription loads.
-
-### Scenario 1: "You don't appear to have an active Azure subscription"
+## "You don't appear to have an active Azure subscription" error
 
 When users try to create a new Azure RM automatic subscription-based service connection, they receive a "You don't appear to have an active Azure subscription" error message.
 
 :::image type="content" source="media/troubleshooting-subscription-related-scenarios/subscription-new-azure-service-connection.png" alt-text="Screenshot that shows the error message.":::
 
-**Debugging steps**
+### Debugging steps
 
 Check the behavior on the billing page (**Organization settings > Billing > Change billing**).
 
@@ -81,11 +77,11 @@ To resolve this issue, use one of the following methods.
 1. Try to create a service connection, and then check whether the subscription loads.
 1. If these steps don't resolve the issue, then the user data shape has to be cleaned up. Contact the Azure DevOps team to open a Support Request. Capture an `F12/Fiddler` trace while you reproduce the issue from the service connection page and billing page, and include the trace in the Support Request.
 
-### Scenario 2: Subscription isn't listed when creating a service connection
+## Subscription isn't listed when creating a service connection
 
 Users try to create a new Azure RM automatic subscription-based service connection, but the service connection isn't listed.
 
-#### Resolution
+### Resolution
 
 Limitation: A maximum of 50 Azure subscriptions are listed.
 
@@ -97,7 +93,7 @@ If the subscription isn't listed when you create a service connection, follow th
 
 1. Add the Azure AD user to the Azure DevOps organization to have the Stakeholder access level, and then add it to the **Project Collection Administrators group (for billing)**. Or, make sure that the user has sufficient permissions in the Team Project to create service connections.
 
-1. Log in to Azure DevOps by using the new user credentials, and then set up a billing. You'll see only one Azure subscription in the list.
+1. Log in to Azure DevOps by using the new user credentials, and then set up a billing. You will see only one Azure subscription in the list.
 
 ## See also
 

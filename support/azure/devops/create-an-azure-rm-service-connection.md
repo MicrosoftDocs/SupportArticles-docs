@@ -12,7 +12,7 @@ ms.service: azure-devops
 
 To create an Azure RM service connection, navigate to the project settings in the Azure DevOps project:
 
-https://dev.azure.com/ <org name>/<project name>/_settings/adminservices > New service connection > Azure Resource Manager > Service principal (automatic)
+https://dev.azure.com/ \<org name>/<project name\>/_settings/adminservices > New service connection > Azure Resource Manager > Service principal (automatic)
 
 ## What happens when you save to your new Azure RM service connection?
 

@@ -29,7 +29,7 @@ Use this approach when you have to connect to an Azure account by using credenti
 
 Use the list below to navigate to the appropriate article or section for detailed troubleshooting steps for your scenario:
 
-**Troubleshooting subscription related problems**
+### Troubleshooting tips for problems related to subscription
 
 - [Loading subscriptions window shows spinning wheel when trying to create a service connection](troubleshoot-subscription-related-scenarios.md#loading-subscriptions-window-shows-spinning-wheel-when-trying-to-create-a-service-connection)
 
@@ -37,7 +37,7 @@ Use the list below to navigate to the appropriate article or section for detaile
 
 - [There is no active Azure subscription](troubleshoot-subscription-related-scenarios.md)
 
-**Troubleshooting tips for problems while creating service connections**
+### Troubleshooting tips for problems while creating service connections
 
 - [Failed to get Azure DevOps Service access token, cache value is invalid](troubleshoot-azure-rm-failed-access-token.md)
 
@@ -45,7 +45,7 @@ Use the list below to navigate to the appropriate article or section for detaile
 
 - [Error when verifying the manual Azure RM service connection](troubleshoot-azure-rm-scenarios-while-creating-service-connections.md#error-when-verifying-the-manual-azure-rm-service-connection)
 
-**Troubleshooting tips for problems while editing or updating service connections**
+### Troubleshooting tips for problems while editing or updating service connections
 
 - [Azure RM Service connection not listed for a task](troubleshoot-azure-rm-scenarios-while-editing-updating-service-connections.md#azure-rm-service-connection-not-listed-for-a-task)
 
@@ -71,13 +71,7 @@ To capture an F12 trace, follow the steps in [Capture a browser trace for troubl
 1. Press **F12** to stop the traffic capture, and then press **CTRL+X** to clear any traffic log.
 
 > [!IMPORTANT]
-> Configure Fiddler to capture and decrypt HTTPS traffic. To do this, select **Tools > Options > HTTPS**. Select both checkboxes on this tab (**Capture HTTPS CONNECTs** and **Decrypt HTTPS traffic**), and then select **YES** to all prompts. For more information, see [Configure Fiddler Classic to Decrypt HTTPS Traffic](https://docs.telerik.com/fiddler/configure-fiddler/tasks/decrypthttps).
-
-## Various connectivity issues
-
-
-
-
+> Configure Fiddler to capture and decrypt HTTPS traffic. To do this, select **Tools > Options > HTTPS**. Select both checkboxes on this tab (**Capture HTTPS CONNECTs** and **Decrypt HTTPS traffic**), and then select **YES** to all prompts. For more information, see [Configure Fiddler Classic to Decrypt HTTPS Traffic](https://docs.telerik.com/fiddler/configure-fiddler/tasks/decrypthttps&preserve-view=true).
 
 [!INCLUDE [third-party-disclaimer](../../includes/third-party-disclaimer.md)]
 

@@ -61,7 +61,7 @@ Make sure that the newly created SPN (App) has the Contributor and Reader permis
 
 1. Check whether the connection is automated or manual.
 
-1. [Get the details for the endpoints by using the REST API](/rest/api/azure/devops/serviceendpoint/endpoints/get?view=azure-devops-rest-6.0&tabs=HTTP).
+1. [Get the details for the endpoints by using the REST API](/rest/api/azure/devops/serviceendpoint/endpoints/get?view=azure-devops-rest-6.0&tabs=HTTP&preserve-view=true).
 
 1. Make sure that you set the `includeFailed=true` parameter so that all service endpoints are captured. This should provide more information and show whether an issue affects the service connection (for example, in the `isReady` field).
 
