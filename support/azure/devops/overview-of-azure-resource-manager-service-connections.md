@@ -1,5 +1,5 @@
 ---
-title: Introduction to Azure RM service connection
+title: Troubleshoot connection issues in Azure Resource Manager service connection
 description: Provides an overview of Azure RM service connection, types of connection modes, and lists the tools used to troubleshoot various scenarios.
 ms.date: 04/25/2023
 ms.custom: sap:Pipelines
@@ -33,7 +33,7 @@ Use the list below to navigate to the appropriate article or section for detaile
 
 - [Loading subscriptions window shows spinning wheel when trying to create a service connection](troubleshoot-subscription-related-scenarios.md#loading-subscriptions-window-shows-spinning-wheel-when-trying-to-create-a-service-connection)
 
-- [Subscription isn't listed when creating a service connection](troubleshoot-subscription-related-scenarios.md#scenario-3-subscription-isnt-listed-when-creating-a-service-connection)
+- [Subscription isn't listed when creating a service connection](troubleshoot-subscription-related-scenarios.md#subscription-isnt-listed-when-creating-a-service-connection)
 
 - [There is no active Azure subscription](troubleshoot-subscription-related-scenarios.md)
 

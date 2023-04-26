@@ -40,7 +40,7 @@
     href: overview-of-azure-resource-manager-service-connections.md
   - name: Create an Azure RM service connection
     href: create-an-azure-rm-service-connection.md
-  - name: "Failed to get Azure DevOps Service access token" error
+  - name: Failed to get Azure DevOps Service access token
     href: troubleshoot-azure-rm-failed-access-token.md
   - name: Troubleshooting tips for issues while creating service connections
     href: troubleshoot-azure-rm-scenarios-while-creating-service-connections.md
