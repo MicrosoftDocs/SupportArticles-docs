@@ -2,6 +2,8 @@
 title: Troubleshoot connection issues in Azure Resource Manager service connection
 description: Provides an overview of Azure RM service connection, types of connection modes, and lists the tools used to troubleshoot various scenarios.
 ms.date: 04/25/2023
+author: padmajayaraman
+ms.author: v-jayaramanp
 ms.custom: sap:Pipelines
 ms.service: azure-devops
 ms.subservice: ts-pipelines
