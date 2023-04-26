@@ -25,7 +25,7 @@ To capture debug logs for deeper investigation with the tasks, follow these step
 
 ## See related
 
-- [Capture logs for further debugging with the tasks](logs-capture-further-debugging-tasks.md)
 - [Failure scenarios related to Azure web app tasks](failure-scenarios-related-azure-web-app-tasks.md)
 - [Initial debugging for Azure Web App and services related issues](initial-debugging-azure-web-app-services.md)
+- [Issues with the service connection in the task](issues-service-connection-task.md)
 - [Resource doesn't exist error with services deployment](resource-not-exist-error-services-deployment.md)
