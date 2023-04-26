@@ -111,7 +111,7 @@ If any errors are displayed in the Windows Update Troubleshooter, use the Micros
 
 ### Repair system files
 
-This fix is also described in detail at [answers.microsoft.com](https://answers.microsoft.com/EN-US/windows/forum/windows_10-update/system-file-check-sfc-scan-and-repair-system-files/bc609315-da1f-4775-812c-695b60477a93).
+This fix is also described in detail at [answers.microsoft.com](https://answers.microsoft.com/EN-US/windows/forum/all/sfc-scannow/bc609315-da1f-4775-812c-695b60477a93).
 
 To check and repair system files:
 

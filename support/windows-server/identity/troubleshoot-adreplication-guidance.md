@@ -106,36 +106,7 @@ This problem can be related to connectivity, DNS, or authentication issues. If t
 
 ## Data collection
 
-Before contacting Microsoft support, you can gather information about your issue.
-
-### Prerequisites
-
-1. TSSv2 must be run by accounts with administrator privileges on the local system, and EULA must be accepted (once EULA is accepted, TSSv2 won't prompt again).
-2. We recommend the local machine `RemoteSigned` PowerShell execution policy.
-
-> [!NOTE]
-> If the current PowerShell execution policy doesn't allow running TSSv2, take the following actions:
->
-> - Set the `RemoteSigned` execution policy for the process level by running the cmdlet `PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`.
-> - To verify if the change takes effect, run the cmdlet `PS C:\> Get-ExecutionPolicy -List`.
-> - Because the process level permissions only apply to the current PowerShell session, once the given PowerShell window in which TSSv2 runs is closed, the assigned permission for the process level will also go back to the previously configured state.
-
-### Gather key information before contacting Microsoft support
-
-1. Download [TSSv2](https://aka.ms/getTSSv2) on all nodes and unzip it in the *C:\\tss_tool* folder.
-2. Open the *C:\\tss_tool* folder from an elevated PowerShell command prompt.
-3. Run the SDP tool to collect the logs from the source and destination nodes.
-4. Unzip the file and run the following cmdlet on both nodes:
-
-    ```PowerShell
-    TSSv2.ps1 -SDP HyperV -SkipSDPList skipBPA,skipTS
-    ```
-
-Collect all logs. Zip and upload the collection on the workspace.
-
-## Data collection
-
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).
 
 ## Reference
 

@@ -176,7 +176,7 @@ You can configure the default local user profile to become a mandatory profile. 
 
 ## Still need help
 
-If this article does not answer your question, [ask a question](https://answers.microsoft.com/windows/forum) and pose it to other community members at Microsoft Community.
+If this article does not answer your question, [ask a question](https://answers.microsoft.com) and pose it to other community members at Microsoft Community.
 
 ## Resources
 
