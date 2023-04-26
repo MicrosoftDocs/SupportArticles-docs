@@ -4,7 +4,6 @@ description: Provides resolutions for some errors related to Azure web app tasks
 ms.date: 04/24/2023
 ms.custom: sap:Pipelines
 ms.reviewer: 
-ms.topic: article
 ms.service: azure-devops
 ms.subservice: ts-pipelines
 ---
@@ -71,3 +70,10 @@ ms.subservice: ts-pipelines
       package: '$(OutputUnzippedPath)'
       enableXmlTransform: true
     ```
+
+## See related
+
+- [Capture logs for further debugging with the tasks](logs-capture-further-debugging-tasks.md)
+- [Initial debugging for Azure Web App and services related issues](initial-debugging-azure-web-app-services.md)
+- [Issues with the service connection in the task](issues-service-connection-task)
+- [Resource doesn't exist error with services deployment](resource-not-exist-error-services-deployment.md)
