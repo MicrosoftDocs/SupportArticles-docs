@@ -72,7 +72,7 @@ When you use the Azure RM (Resource Manager) service connection to connect while
 - [Azure Resource Manager service connection using automated security](/azure/devops/pipelines/library/connect-to-azure)
 - For service-impacting issues, see [Azure DevOps Services Status](https://status.dev.azure.com/)
 
-# See related
+## See related
 
 - [Capture logs for further debugging with the tasks](logs-capture-further-debugging-tasks.md)
 - [Failure scenarios related to Azure web app tasks](failure-scenarios-related-azure-web-app-tasks.md)
