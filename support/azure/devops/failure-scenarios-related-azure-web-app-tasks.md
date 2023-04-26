@@ -15,11 +15,11 @@ ms.subservice: ts-pipelines
 
 ## Errors and resolutions
 
-- **Error 1: FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory"
+- **Error 1: FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory**
 
   **Resolution**:
 
-  This error may occur due to failure to unzip and zip a large package for the deployment as Microsoft hosted agents have limited resources. In the logs, you will see the steps where it is failing. Preferably, use the [Azure Web App V1 task](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureWebAppV1) for App Services deployment. For more complicated scenarios like XML transformation, see [Azure RM Web Deployment V4 task](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureRmWebAppDeploymentV4).
+  This error may occur due to failure to unzip and zip a large package for the deployment as Microsoft hosted agents have limited resources. In the logs, you see the steps where it is failing. Preferably, use the [Azure Web App V1 task](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureWebAppV1) for App Services deployment. For more complicated scenarios like XML transformation, see [Azure RM Web Deployment V4 task](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureRmWebAppDeploymentV4).
 
 - **Error 2: Encountered a retriable error:ECONNRESET. Message: read ECONNRESET.**
 
@@ -47,13 +47,13 @@ ms.subservice: ts-pipelines
   
   Try setting **WEBSITE_RUN_FROM_PACKAGE** app setting to **1** on the App Services side.
 
-- **Error 4: EMFILE: too many open files using zip deploy / Error: Package deployment using ZIP Deploy faile**
+- **Error 4: EMFILE: too many open files using zip deploy / Error: Package deployment using ZIP Deploy failed**
   
   **Possible workarounds:**
 
   - Use the [Azure Web App V1 task](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureWebAppV1).
 
-  - Use the the following Extract Files task to extract the zip into a folder path, and then provide the folder path into the App Service Deploy task. This will prevent the App Service task from unzipping the package and hence prevent EMFILE errors.
+  - Use the following Extract Files task to extract the zip into a folder path, and then provide the folder path into the App Service Deploy task. This prevent the App Service task from unzipping the package and hence prevent EMFILE errors.
 
     ```yml
     steps:
