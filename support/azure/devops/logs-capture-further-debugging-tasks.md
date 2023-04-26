@@ -4,7 +4,6 @@ description: This article describes steps to capture debug logs for deeper inves
 ms.date: 04/24/2023
 ms.custom: sap:Pipelines
 ms.reviewer: 
-ms.topic: article
 ms.service: azure-devops
 ms.subservice: ts-pipelines
 ---
@@ -23,3 +22,10 @@ To capture debug logs for deeper investigation with the tasks, follow these step
 1. If you're using the Microsoft hosted agent, check the [runner-images](https://github.com/actions/runner-images) documentation for any recent updates related to the Azure module that might have broken the pipeline.
 
 1. Check the [Azure DevOps status history](https://status.dev.azure.com/_history) and the [Azure status history](https://status.azure.com/status/history/) to find out whether there are any outages.
+
+## See related
+
+- [Capture logs for further debugging with the tasks](logs-capture-further-debugging-tasks.md)
+- [Failure scenarios related to Azure web app tasks](failure-scenarios-related-azure-web-app-tasks.md)
+- [Initial debugging for Azure Web App and services related issues](initial-debugging-azure-web-app-services.md)
+- [Resource doesn't exist error with services deployment](resource-not-exist-error-services-deployment.md)
