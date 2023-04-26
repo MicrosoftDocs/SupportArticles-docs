@@ -53,5 +53,5 @@ For information about how to retain cloud attachments that are shared in Outlook
 |Sharing mechanism  |Is it a cloud attachment?|
 |:------------------- |:---------------:|
 |Upload a file from a device. It will be stored it in a SharePoint or OneDrive location.<br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/upload-file-from-device.png" alt-text="Screenshot of file uploaded from a device.":::       | Yes        |
-|Attach a file that's stored in a SharePoint or OneDrive location.<br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/attach-files-from-sp-odb.png" alt-text="Screenshot of sharing a file from a SharePoint or OneDrive location.":::       | Yes      |
+|Attach a file that's stored in a SharePoint or OneDrive location.<br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/attach-file-from-sp-odb.png" alt-text="Screenshot of sharing a file from a SharePoint or OneDrive location.":::       | Yes      |
 |Include a hyperlink in the message body to a file that's stored in a SharePoint or OneDrive location<br><br> Example:<br> :::image type="content" source="media/cannot-retain-cloud-attachments/hyperlink-to-file-on-sp-odb.png" alt-text="Screenshot of sharing a link to file that's stored on SharePoint or OneDrive.":::      | Yes      |
