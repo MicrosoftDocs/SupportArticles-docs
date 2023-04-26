@@ -4,7 +4,6 @@ description: Provides solutions for issues related to the service connection in 
 ms.date: 04/24/2023
 ms.custom: sap:Pipelines
 ms.reviewer: 
-ms.topic: article
 ms.service: azure-devops
 ms.subservice: ts-pipelines
 ---
@@ -68,11 +67,14 @@ When you use the Azure RM (Resource Manager) service connection to connect while
 ## Recommended documents
 
 - [Service connections](/azure/devops/pipelines/library/service-endpoints#use-a-service-connection)
-
 - [Azure Resource Manager service connection](/azure/devops/pipelines/library/connect-to-azure)
-
 - [Troubleshoot Azure Resource Manager service connections](/azure/devops/pipelines/release/azure-rm-endpoint)
-
 - [Azure Resource Manager service connection using automated security](/azure/devops/pipelines/library/connect-to-azure)
-
 - For service-impacting issues, see [Azure DevOps Services Status](https://status.dev.azure.com/)
+
+# See related
+
+- [Capture logs for further debugging with the tasks](logs-capture-further-debugging-tasks.md)
+- [Failure scenarios related to Azure web app tasks](failure-scenarios-related-azure-web-app-tasks)
+- [Initial debugging for Azure Web App and services related issues](initial-debugging-azure-web-app-services.md)
+- [Resource doesn't exist error with services deployment](resource-not-exist-error-services-deployment.md)
