@@ -53,7 +53,7 @@ In the API response, check the `isReady` status. If the value is `false`, this i
 
 1. Check whether the SPN (App) still exists. (It was likely deleted.)
 
-1. If this is an automated service connection, create a new service connection. If this is a manual service connection, follow the steps in the ["Create an Azure Resource Manager service connection with an existing service principal"](/azure/devops/pipelines/library/connect-to-azure?view=azure-devops) section of [Connect to Microsoft Azure](/azure/devops/pipelines/library/connect-to-azure?view=azure-devops&viewFallbackFrom=azure-devopshttps&preserve-view=true) to update the service connection by using the new SPN (App) details.
+1. If this is an automated service connection, create a new service connection. If this is a manual service connection, follow the steps in the ["Create an Azure Resource Manager service connection with an existing service principal"](/azure/devops/pipelines/library/connect-to-azure?view=azure-devops&preserve-view=true) section of [Connect to Microsoft Azure](/azure/devops/pipelines/library/connect-to-azure?view=azure-devops&viewFallbackFrom=azure-devopshttps&preserve-view=true) to update the service connection by using the new SPN (App) details.
 
 ## User is not able to delete an existing Azure RM service connection
 
