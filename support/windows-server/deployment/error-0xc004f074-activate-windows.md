@@ -134,11 +134,11 @@ Verify the KMS DNS record in the DNS pointing to an incorrect or old KMS server 
 2. Select the *_tcp* folder under your domain name folder, and search for the *_VLMCS* SRV record.
 3. Check if the correct KMS host server name is present in the *_VLMCS* SRV record.
   
-  :::image type="content" source="media/error-0xc004f074-activate-windows/dns-manager-tcp-vlmcs.png" alt-text="Screenshot of the DNS Manager with the _tcp folder selected under a domain name folder.":::
+    :::image type="content" source="media/error-0xc004f074-activate-windows/dns-manager-tcp-vlmcs.png" alt-text="Screenshot of the DNS Manager with the _tcp folder selected under a domain name folder.":::
 
 4. Verify the host record of the KMS host server by going to the domain name folder and verifying the Host A record. Change the IP address to point to the new KMS server host if it's incorrect.
   
-  :::image type="content" source="media/error-0xc004f074-activate-windows/dns-manager-kms.png" alt-text="Screenshot of the DNS Manager with the KMS folder selected.":::
+    :::image type="content" source="media/error-0xc004f074-activate-windows/dns-manager-kms.png" alt-text="Screenshot of the DNS Manager with the KMS folder selected.":::
 
 ## References
 
