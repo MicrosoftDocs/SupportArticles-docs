@@ -39,7 +39,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| ERROR_FAIL_REBOOT_REQUIRED | The requested operation failed. Restart the system to roll back changes made. | Ensure that you don't have any policies that control the start behavior for the Windows Module Installer. This service should be managed by the operating system. |
+| ERROR_FAIL_REBOOT_REQUIRED | The requested operation failed. Restart the system to roll back changes made. | Ensure that you don't have any policies that control the start behavior for the Windows Installer Service. This service should be managed by the operating system. The Windows Installer service's default startup type is manual.|
 
 ## 0x80200053
 
@@ -214,3 +214,4 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 | Message | Description | Mitigation |
 |---------|-------------|------------|
 | WU_E_PT_HTTP_STATUS_SERVICE_UNAVAILABLE; Same as HTTP status 503 - the service is temporarily overloaded. | Unable to connect to the configured update source. | Network troubleshooting needed to resolve the connectivity issue. Check with your network and proxy teams to confirm that the device can the update source without the proxy requiring user authentication. |
+
