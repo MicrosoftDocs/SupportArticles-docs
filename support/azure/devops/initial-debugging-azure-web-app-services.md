@@ -4,7 +4,6 @@ description: This article describes some initial debugging of issues related to 
 ms.date: 04/24/2023
 ms.custom: sap:Pipelines
 ms.reviewer: 
-ms.topic: article
 ms.service: azure-devops
 ms.subservice: ts-pipelines
 ---
@@ -108,4 +107,11 @@ You can use this article as a reference for initial debugging of issues related 
 
 - [Deploy to Web App for Containers](/azure/devops/pipelines/targets/webapp-on-container-linux)  
 
-- For service-impacting issues, see [Azure DevOps Services Status](https://status.dev.azure.com/)  
+- For service-impacting issues, see [Azure DevOps Services Status](https://status.dev.azure.com/)
+
+# See related
+
+- [Capture logs for further debugging with the tasks](logs-capture-further-debugging-tasks.md)
+- [Initial debugging for Azure Web App and services related issues](initial-debugging-azure-web-app-services.md)
+- [Issues with the service connection in the task](issues-service-connection-task)
+- [Resource doesn't exist error with services deployment](resource-not-exist-error-services-deployment.md)
