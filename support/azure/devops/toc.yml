@@ -36,13 +36,13 @@
     href: access-denied-error-when-connect-source-control.md
   - name: Release Management component doesn't work
     href: other-release-management-component-no-work.md
-  - Introduction to Azure RM service connection
+  - name: Introduction to Azure RM service connection
     href: overview-of-azure-resource-manager-service-connections.md
-  - Create an Azure RM service connection
+  - name: Create an Azure RM service connection
     href: create-an-azure-rm-service-connection.md
-  - "Failed to get Azure DevOps Service access token" error
+  - name: "Failed to get Azure DevOps Service access token" error
     href: troubleshoot-azure-rm-failed-access-token.md
-  - Troubleshooting tips for issues while creating service connections
+  - name: Troubleshooting tips for issues while creating service connections
     href: troubleshoot-azure-rm-scenarios-while-creating-service-connections.md
   - name: Troubleshooting tips for issues while editing or updating service connections
     href: troubleshoot-azure-rm-scenarios-while-editing-updating-service-connections.md
