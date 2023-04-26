@@ -35,7 +35,7 @@ items:
       href: app-insights/missing-cpu-total-committed-memory-metrics.md
     - name: Troubleshoot Application Insights Profiler
       href: app-insights/profiler-troubleshooting.md
-    - name: Troubleshoot Code Optimizations
+    - name: Troubleshoot Code Optimizations (Preview)
       href: ./app-insights/code-optimizations-troubleshooting.md
     - name: Troubleshoot Azure Application Insights availability monitoring
       href: app-insights/troubleshoot-availability.md

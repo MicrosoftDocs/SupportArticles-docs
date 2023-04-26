@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Code Optimizations 
+title: Troubleshoot Code Optimizations (Preview)
 description: This article provides troubleshooting steps and information for using Azure Application Insights Code Optimizations 
 author: rkahng 
 ms.author: ryankahng 
@@ -9,7 +9,7 @@ ms.topic: troubleshooting
 ms.date: 04/25/2023
 ---
 
-# Troubleshoot Code Optimizations
+# Troubleshoot Code Optimizations (Preview)
 
 This article provides troubleshooting steps and information for using Azure Application Insights Code Optimizations.
 ## Make sure your app is connected to an Application Insights resource
