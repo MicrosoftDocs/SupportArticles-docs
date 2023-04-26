@@ -16,7 +16,7 @@ ms.service: azure-devops
 
 When a user tries to load the Azure service connection in a pipeline task such as Azure App service deploy or Azure App service manage, the service connection doesn't appear in the list. However, when the user checks the **Service Connection** tab under **Project Settings**, the service connection is available.
 
-**Debugging steps**
+### Debugging steps
 
 1. From within your project, go to **Project settings > Service connections**.
 
@@ -38,7 +38,7 @@ When a user tries to load the Azure service connection in a pipeline task such a
     {"result":[],"statusCode":400,"errorMessage":"Failed to obtain the Json Web Token(JWT) using service principal client ID. Exception message: AADSTS700016: Application with identifier 'xxxxxxf9-xxxx-xxxx-xxxx-c05xxxxxxxxx' was not found in the directory 'Microsoft'. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. You may have sent your authentication request to the wrong tenant.\r\nTrace ID: xxxxxx31-xxxx-xxxx-xxxx-32bxxxxxxxxx\r\nCorrelation ID: xxxxxx49-xxxx-xxxx-xxxx-725xxxxxxxxx\r\nTimestamp: 2022-05-19 09:11:35Z"}
     ```
 
-    For more information, see [Get the API response of GET endpoints](/rest/api/azure/devops/serviceendpoint/endpoints/get?view=azure-devops-rest-6.0&tabs=HTTP).
+    For more information, see [Get the API response of GET endpoints](/rest/api/azure/devops/serviceendpoint/endpoints/get?view=azure-devops-rest-6.0&tabs=HTTP&preserve-view=true).
 
 In the API response, check the `isReady` status. If the value is `false`, this indicates that the service connection is in a bad state.
 
@@ -53,7 +53,7 @@ In the API response, check the `isReady` status. If the value is `false`, this i
 
 1. Check whether the SPN (App) still exists. (It was likely deleted.)
 
-1. If this is an automated service connection, create a new service connection. If this is a manual service connection, follow the steps in the ["Create an Azure Resource Manager service connection with an existing service principal"](/azure/devops/pipelines/library/connect-to-azure?view=azure-devops) section of [Connect to Microsoft Azure](/azure/devops/pipelines/library/connect-to-azure?view=azure-devops&viewFallbackFrom=azure-devopshttps) to update the service connection by using the new SPN (App) details.
+1. If this is an automated service connection, create a new service connection. If this is a manual service connection, follow the steps in the ["Create an Azure Resource Manager service connection with an existing service principal"](/azure/devops/pipelines/library/connect-to-azure?view=azure-devops) section of [Connect to Microsoft Azure](/azure/devops/pipelines/library/connect-to-azure?view=azure-devops&viewFallbackFrom=azure-devopshttps&preserve-view=true) to update the service connection by using the new SPN (App) details.
 
 ## User is not able to delete an existing Azure RM service connection
 
@@ -69,9 +69,9 @@ If the **Delete** button doesn't remove the service connection, follow these ste
 ### Resolution
 
 1. Check whether the connection is automated or manual.
-1. [Get the details for the endpoints by using the REST API.](/rest/api/azure/devops/serviceendpoint/endpoints/get-service-endpoints?view=azure-devops-rest-6.0&tabs=HTTP)
+1. [Get the details for the endpoints by using the REST API.](/rest/api/azure/devops/serviceendpoint/endpoints/get-service-endpoints?view=azure-devops-rest-6.0&tabs=HTTP&preserve-view=true)
 1. Make sure that you set the `includeFailed=true` parameter so that all service endpoints are captured. This should provide more information and show whether an issue affects the service connection (for example, in the `isReady` field).
-1. [Try to delete the connections by using the REST API directly](/rest/api/azure/devops/serviceendpoint/endpoints/delete?view=azure-devops-rest-6.0&tabs=HTTP). Although the UI makes similar calls, it's always worth checking whether calling the API directly will create a different result.
+1. [Try to delete the connections by using the REST API directly](/rest/api/azure/devops/serviceendpoint/endpoints/delete?view=azure-devops-rest-6.0&tabs=HTTP&preserve-view=true). Although the UI makes similar calls, it's always worth checking whether calling the API directly will create a different result.
 1. If you use the API from the previous step by using the default parameters, and this still doesn't work, you can set the `deep` value to `false`. This setting causes the program to skip any checks and attempts that are part of the usual process to delete the underlying SPN.
 
 > [!NOTE]
