@@ -1,7 +1,7 @@
 ---
 title: Hotfixes for DFS technologies
 description: Lists the currently available hotfixes for Distributed File System (DFS) technologies in Windows Server 2012 and Windows Server 2012 R2.
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -115,3 +115,7 @@ You can get the latest fixes for these DFS components by installing the followin
 - [KB 968429: List of currently available hotfixes for Distributed File System (DFS) technologies in Windows Server 2008 and in Windows Server 2008 R2](https://support.microsoft.com/help/968429)
 - [KB 2473205: List of currently available hotfixes for the File Services technologies in Windows Server 2008 and in Windows Server 2008 R2](https://support.microsoft.com/help/2473205)
 - [KB 2899011: List of currently available hotfixes for the File Services technologies in Windows Server 2012 and in Windows Server 2012 R2](https://support.microsoft.com/help/2899011)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).

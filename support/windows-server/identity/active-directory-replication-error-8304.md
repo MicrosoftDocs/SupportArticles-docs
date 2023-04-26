@@ -1,7 +1,7 @@
 ---
 title: Active Directory replication error 8304
 description: Provides a resolution for troubleshooting AD Replication error 8304, which is The maximum size on an object has been exceeded.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: v-lianna
 ms.author: delhan
 manager: dcscontentpm
@@ -219,3 +219,7 @@ DFS version 1 namespaces use a single AD object per namespace, and all the DFS l
 For more information, see [How DFS Works](/previous-versions/windows/it-pro/windows-server-2003/cc782417(v=ws.10)).
 
 In Windows Server 2008, DFS introduces version 2 namespaces where each DFS link is a separate AD object.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).

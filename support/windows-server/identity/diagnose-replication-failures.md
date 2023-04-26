@@ -1,7 +1,7 @@
 ---
 title: Diagnose AD replication failures
 description: Describes how to diagnose Active Directory replication failures.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -78,3 +78,7 @@ You can create a Microsoft Excel spreadsheet for domain controllers by using the
    8. Repeat step 6 for the **Last Failure Time** column, but use the value **does not equal**, and then type the value **0**.
 
 5. To fix any replication failures that appear under **Last Failure Status**, see [How to troubleshoot common Active Directory replication errors](https://support.microsoft.com/help/3108513/how-to-troubleshoot-common-active-directory-replication-errors).
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).

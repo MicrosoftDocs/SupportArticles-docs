@@ -1,7 +1,7 @@
 ---
 title: Jet database errors and recovery steps
 description: Introduces Jet database error messages and troubleshooting steps.
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -287,3 +287,7 @@ For more information, see the following Microsoft article:
 ### What is a lost IO / Lost Flush
 
 When an application writes data to a disk, the disk indicates the written operation success. However, when the application tries to read the data that it just wrote, the data does not exist. This issue is called as lost I/O, or lost flush.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).

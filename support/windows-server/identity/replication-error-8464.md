@@ -1,7 +1,7 @@
 ---
 title: Active Directory replication error 8464
 description: Describes the symptoms, cause, and resolution for resolving issues in which Active Directory replication fails and returns error 8464.
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -296,3 +296,7 @@ In this scenario, the follow processes occur:
    1. Replication is completed correctly from all partners, because the destination domain controller and sources all have the same attributes for the PAS.
 
         :::image type="content" source="./media/replication-error-8464/replication-completed-from-all-partners.png" alt-text="Replication is completed from all partners.":::
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).

@@ -1,7 +1,7 @@
 ---
 title: Duplicate Active Directory replication connections are created
 description: Provides a solution to an issue where duplicate Active Directory replication connections are created for one or more domain controllers across one or more sites.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -61,3 +61,7 @@ To resolve this issue, open ports in the site to allow the ISTG to connect to th
 ## More information
 
 For more information about this issue, see [How Active Directory replication topology works](/previous-versions/windows/it-pro/windows-server-2003/cc755994(v=ws.10)). Particularly focus on the [KCC and topology generation](/previous-versions/windows/it-pro/windows-server-2003/cc755994(v=ws.10)#kcc-and-topology-generation) section and the "Excluded nonresponding servers" subtopic.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).

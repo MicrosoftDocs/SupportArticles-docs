@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting Active Directory replication
 description: Introduces general guidance for troubleshooting scenarios related to Active Directory replication.
-ms.date: 8/22/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -137,3 +137,7 @@ Collect all logs. Zip and upload the collection on the workspace.
 
 - [Troubleshoot common Active Directory replication errors](/troubleshoot/windows-server/identity/common-active-directory-replication-errors)
 - [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](/previous-versions/windows/it-pro/windows-server-2003/cc811551%28v=ws.10%29)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).

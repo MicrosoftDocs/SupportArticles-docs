@@ -1,7 +1,7 @@
 ---
 title: Active Directory replication error 1256
 description: Describes how to Active Directory replication error 1256.
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -146,3 +146,7 @@ The following articles contain the troubleshooting procedures for errors typical
 | 1908| [Troubleshooting Active Directory operations that fail with error 1908: Could not find the domain controller for this domain](https://support.microsoft.com/help/2712026)|
 | 8524| [Active Directory Replication Error 8524: The DSA operation is unable to proceed because of a DNS lookup failure](/troubleshoot/windows-server/identity/replication-error-8524)|
 | 8453| [Active Directory replication error 8453: Replication access was denied](/troubleshoot/windows-server/identity/replication-error-8453)|
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).

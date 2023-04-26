@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot common AD replication errors
 description: Contains troubleshooting information to help you fix Active Directory replication errors.
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -74,3 +74,7 @@ To troubleshoot specific event IDs, refer to the following table:
 - [Troubleshooting Active Directory Replication Problems](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc949120(v=ws.10))
 
 - [Diagnose Active Directory replication failures](/troubleshoot/windows-server/identity/diagnose-replication-failures)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).

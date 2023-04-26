@@ -1,7 +1,7 @@
 ---
 title: Deleting Active Directory objects that have many links causes replication failures
 description: Discusses an issue in which deleting Active Directory objects that have many links causes replication failures. Provides a workaround.
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -145,3 +145,7 @@ For more information, see the following articles:
 
 - [Introduction to credential roaming](https://social.technet.microsoft.com/wiki/contents/articles/11483.credential-roaming.aspx)
 - [Introduction to Read-Only DCs](https://technet.microsoft.com/library/dd734758%28v=ws.10%29.aspx)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).

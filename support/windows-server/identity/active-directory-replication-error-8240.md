@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot AD Replication error 8240 There is no such object on the server
 description: Describes symptoms, cause, and resolution for AD operations that fail with Win32 error 8240 (There is no such object on the server).
-ms.date: 12/16/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -147,3 +147,7 @@ For the error that indicates that GC isn't available, we may generally follow th
 For more information, click the following article numbers to view the articles in the Microsoft Knowledge Base:
 
 [910204](https://support.microsoft.com/help/910204) Troubleshooting problems with promoting a domain controller to a global catalog server
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).

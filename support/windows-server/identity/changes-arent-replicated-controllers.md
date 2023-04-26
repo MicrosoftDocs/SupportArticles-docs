@@ -1,7 +1,7 @@
 ---
 title: Changes aren't replicated to destination domain controllers
 description: Describes an issue that occurs in a Windows Server 2003 environment, where changes that are made to security groups or distribution groups aren‘t replicated to destination domain controllers when you use link value replication. Resolution is provided.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -98,3 +98,7 @@ To resolve this issue, follow these steps:
 > Disabling strict replication consistency functionality in the registry of Windows Server 2008-based or Windows Server 2003-based destination domain controllers does not resume replication. You must not set the value of the Strict Replication Consistency registry entry to 0 to unblock replication of directory partitions.
 >
 > Do not force replication of directory partitions on source domain controllers by using the repadmin /sync command or an equivalent command together with the /force switch.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).

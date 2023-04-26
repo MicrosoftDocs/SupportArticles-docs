@@ -1,7 +1,7 @@
 ---
 title: How to get and use the Active Directory Replication Status Tool
 description: Describes how to get and use the Active Directory Replication Status Tool.
-ms.date: 12/9/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -76,3 +76,7 @@ The current version of ADREPLSTATUS as of this posting is 2.2.20717.1 (as report
 > The time that's needed to provide a solution depends on the team's workload as well as problem complexity and cause. Code defects in the ADREPLSTATUS tool can typically be resolved relatively quickly. Tool failures due to external causes may take longer, unless a workaround can be found.
 >
 > The ADREPLSTATUS team can't fix Active Directory replication errors that are identified by the ADREPLSTATUS tool. Contact your support provider to fix the issue. You may also submit and research replication errors at [this TechNet Windows Server forum](https://social.technet.microsoft.com/Forums/en-US/home?forum=winserverDS).
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).

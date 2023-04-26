@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting AD Replication error 8477
 description: Describes an issue where AD operations fail with error 8477 (The replication request has been posted; waiting for reply).
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -237,3 +237,7 @@ In cases such as these, the 8477 state may appear as a transient issue and shoul
 ## More information
 
 [How the Active Directory Replication Model Works](https://technet.microsoft.com/library/cc772726%28v=WS.10%29.aspx)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).

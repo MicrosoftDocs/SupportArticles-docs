@@ -1,7 +1,7 @@
 ---
 title: Fail to edit a group policy
 description: Fixes an issue that triggers an error when the central store contains the .admx files from Windows 10.
-ms.date: 12/9/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -117,3 +117,7 @@ In the Windows 10 LocationProviderADM.admx, the \<supportedOn> line appears as f
 ```
 
 This error occurs when you click the **Policy**  node under **Computer Configuration** or **User Configuration**.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for gp issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-group-policy.md).

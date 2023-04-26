@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot replication error 1722
 description: Fixes error 1722 of Active Directory replication in Windows Server 2008 R2 and earlier versions.
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -392,3 +392,7 @@ Crank up NTDS Diagnostic logging
 - [Extended error information detection locations](/windows/win32/rpc/extended-error-information-detection-locations)
 - [Enabling Extended error information](/windows/win32/rpc/enabling-extended-error-information)
 - [Network Connectivity](/previous-versions/windows/it-pro/windows-2000-server/cc961803(v=technet.10))
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).

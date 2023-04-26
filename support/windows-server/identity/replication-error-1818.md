@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting AD Replication error 1818
 description: Describes an issue where AD operations fail with error 1818 (The remote procedure call was cancelled (RPC_S_CALL_CANCELLED)).
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -240,3 +240,7 @@ Some specific root causes for Active Directory logging `1818 \ 0x71a \ RPC_S_CAL
 ## More information
 
 [Active Directory changes do not replicate](/troubleshoot/windows-server/identity/active-directory-changes-not-replicate)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).
