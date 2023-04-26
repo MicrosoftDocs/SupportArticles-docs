@@ -36,12 +36,25 @@
     href: access-denied-error-when-connect-source-control.md
   - name: Release Management component doesn't work
     href: other-release-management-component-no-work.md
-  - name: Introduction to Azure RM service connection
+  - name: Azure Resource Manager service connection
     href: overview-of-azure-resource-manager-service-connections.md
-  - name: Create an Azure RM service connection
-    href: create-an-azure-rm-service-connection.md
-  - name: Failed to get Azure DevOps Service access token
-    href: troubleshoot-azure-rm-failed-access-token.md
+    - name: Create and save an Azure RM service connection
+      href: create-an-azure-rm-service-connection.md
+    - name: Tools used for troubleshooting Azure RM service connection scenarios
+      href: tools-used-to-troubleshoot-scenarios-azure-rm-service-connection.md
+    - name: Service connection creation issues
+       - name: Troubleshoot subscription related scenarios while creating service connections
+         href: troubleshoot-subscription-related-scenarios.md
+       - name: Troubleshooting scenarios while creating service connections
+         href: troubleshoot-azure-rm-scenarios-while-creating-service-connections.md
+       - name: Troubleshoot issues while saving service connections
+         href: troubleshoot-issues-while-saving-service-connections.md
+       - name: Troubleshoot issues while deleting service connections
+         href: troubleshoot-issues-while-deleting-service-connection.md
+      
+    - name: Troubleshooting tips for problems while saving automatic Azure RM service connection
+      href: troubleshoot-issue-while-saving-automatic-service-connection.md
+
   - name: Troubleshooting tips for issues while creating service connections
     href: troubleshoot-azure-rm-scenarios-while-creating-service-connections.md
   - name: Troubleshooting tips for issues while editing or updating service connections

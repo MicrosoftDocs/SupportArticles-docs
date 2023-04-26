@@ -17,7 +17,7 @@ There are various causes for connectivity issues in Azure Resource Manager servi
 
 An Azure Resource Manager service connection is used to connect to a Microsoft Azure subscription or Azure resources by using Service Principal Authentication (SPA) or an Azure-Managed Service Identity.
 
-The connection dialog box offers two main connection modes.
+The **Connections** dialog box offers two main connection modes.
 
 - **Automated subscription detection**: In this mode, Azure Pipelines queries Azure for all the subscriptions and instances to which you have access. These subscriptions use the credentials that you currently use to sign in to Azure Pipelines (including Microsoft accounts and School or Work accounts).
 
@@ -29,7 +29,7 @@ Use this approach when you have to connect to an Azure account by using credenti
 
 ## Common connection issues
 
-Use the list below to navigate to the appropriate article or section for detailed troubleshooting steps for your scenario:
+Use the following list to navigate to the appropriate article or section for detailed troubleshooting steps for your scenario:
 
 ### Troubleshooting tips for problems related to subscription
 
@@ -53,29 +53,7 @@ Use the list below to navigate to the appropriate article or section for detaile
 
 - [User is not able to delete an existing Azure RM service connection](troubleshoot-azure-rm-scenarios-while-editing-updating-service-connections.md#user-is-not-able-to-delete-an-existing-azure-rm-service-connection)
 
-## Tools used for troubleshooting
 
-Many of the troubleshooting scenarios that are discussed in these topics involve the F12 developer tools in your web browser and the Fiddler debugging tool. The following sections discuss these tools.
-
-### F12 developer tools
-
-To capture an F12 trace, follow the steps in [Capture a browser trace for troubleshooting](/azure/azure-portal/capture-browser-trace).
-
-> [!NOTE]
-> We recommend that you try to capture a minimum of events in an F12 trace. Start capturing the trace just before the step that is causing the issue instead of starting the trace as soon as you log in to the Azure DevOps portal.
-
-### Fiddler trace
-
-1. Install the [Fiddler](https://docs.telerik.com/fiddler/configure-fiddler/tasks/decrypthttps) tool.
-
-1. Run Fiddler.
-
-1. Press **F12** to stop the traffic capture, and then press **CTRL+X** to clear any traffic log.
-
-> [!IMPORTANT]
-> Configure Fiddler to capture and decrypt HTTPS traffic. To do this, select **Tools > Options > HTTPS**. Select both checkboxes on this tab (**Capture HTTPS CONNECTs** and **Decrypt HTTPS traffic**), and then select **YES** to all prompts. For more information, see [Configure Fiddler Classic to Decrypt HTTPS Traffic](https://docs.telerik.com/fiddler/configure-fiddler/tasks/decrypthttps&preserve-view=true).
-
-[!INCLUDE [third-party-disclaimer](../../includes/third-party-disclaimer.md)]
 
 ## See also
 

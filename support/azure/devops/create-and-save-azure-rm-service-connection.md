@@ -12,9 +12,9 @@ ms.service: azure-devops
 
 To create an Azure RM service connection, navigate to the project settings in the Azure DevOps project:
 
-https://dev.azure.com/ \<org name>/<project name\>/_settings/adminservices > New service connection > Azure Resource Manager > Service principal (automatic)
+https://dev.azure.com/ <OrgName>/<Project-Name>/_settings/adminservices -> **New service connection -> Azure Resource Manager -> Service principal (automatic)**
 
-## What happens when you save to your new Azure RM service connection?
+## Save the Azure RM service connection
 
 After you save the Azure RM service connection, the connection takes the following actions:
 
@@ -46,7 +46,7 @@ For more information, see [Create a new application secret](/azure/active-direct
 
 Provide this SPN Contributor role or similar RBAC permissions on the subscription. You can even provide the Reader role at the subscription level. However, make sure that you provide Contributor access on the resource and resource group that these roles would update or deploy.
 
-To get the subscription details and create an ARM service connection by using the manual Azure RM service principal option, see [Create an Azure Resource Manager service connection with an existing service principal](/azure/devops/pipelines/library/connect-to-azure?view=azure-devops&preserve-view=true).
+To get the subscription details and create an ARM service connection by using the manual **Azure RM service principal** option, see [Create an Azure Resource Manager service connection with an existing service principal](/azure/devops/pipelines/library/connect-to-azure?view=azure-devops&preserve-view=true).
 
 Subscription details include the following information:
 
