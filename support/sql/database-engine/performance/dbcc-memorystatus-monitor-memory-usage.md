@@ -22,7 +22,7 @@ This article describes the elements of the output for Memory Manager, the summar
 
 ## Introduction
 
-The `DBCC MEMORYSTATUS` command provides a snapshot of the current memory status of SQL Server. You can use the output from this command to troubleshoot memory consumption issues in SQL Server or to troubleshoot specific out of memory errors. (Many out of memory errors automatically print this output in the error log.) Microsoft Customer Support Services may also request that you run this command during a specific support incident if you're experiencing an error that may be associated with a low-memory condition.
+The `DBCC MEMORYSTATUS` command provides a snapshot of the current memory status of SQL Server. You can use the output from this command to troubleshoot memory consumption issues in SQL Server or to troubleshoot specific out of memory errors. (Many out of memory errors automatically print this output in the error log.) You may run this command and provide the output when you contact Microsoft Support for an error that may be associated with a low-memory condition.
 
 > [!NOTE]
 > Performance Monitor (PerfMon) and Task Manager don't account for memory correctly if Address Windowing Extentions (AWE) support is enabled.
