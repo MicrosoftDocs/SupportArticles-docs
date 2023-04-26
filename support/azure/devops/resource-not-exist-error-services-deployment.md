@@ -4,7 +4,6 @@ description: Provides a solution for an error where resource doesn't exist error
 ms.date: 04/24/2023
 ms.custom: sap:Pipelines
 ms.reviewer: 
-ms.topic: article
 ms.service: azure-devops
 ms.subservice: ts-pipelines
 ---
@@ -34,3 +33,10 @@ This error may occur for one of the following reasons:
 ## Solution
 
 To solve this error, add a delay to the pipeline before using the Azure task. If the error wasn't resolved, create a support ticket for the respective Azure services team.
+
+## See related
+
+- [Capture logs for further debugging with the tasks](logs-capture-further-debugging-tasks.md)
+- [Failure scenarios related to Azure web app tasks](failure-scenarios-related-azure-web-app-tasks.md)
+- [Initial debugging for Azure Web App and services related issues](initial-debugging-azure-web-app-services.md)
+- [Issues with the service connection in the task](issues-service-connection-task.md)
