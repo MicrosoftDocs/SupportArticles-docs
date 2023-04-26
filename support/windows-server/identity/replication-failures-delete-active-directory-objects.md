@@ -139,13 +139,13 @@ For more information, see the following articles:
 
 To work around this issue, set the value of **Links process batch size** lower than 10,000. This decreases the potential for an object access collision to occur. By doing this, you make the replication process of large object deletion more reliable. Also, it now takes a longer time to complete the whole transaction. This also helps you avoid version store depletion.
 
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).
+
 ## References
 
 For more information, see the following articles:
 
 - [Introduction to credential roaming](https://social.technet.microsoft.com/wiki/contents/articles/11483.credential-roaming.aspx)
 - [Introduction to Read-Only DCs](https://technet.microsoft.com/library/dd734758%28v=ws.10%29.aspx)
-
-## Data collection
-
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).

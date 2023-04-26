@@ -234,10 +234,10 @@ Modification of the schema through the use of LDIFDE or customized binaries incl
 
 In cases such as these, the 8477 state may appear as a transient issue and should be expected to self-resolve once the higher priority schema updates are successfully replicated and all other replication catches up on backlogged changes within the directory.
 
-## More information
-
-[How the Active Directory Replication Model Works](https://technet.microsoft.com/library/cc772726%28v=WS.10%29.aspx)
-
 ## Data collection
 
 If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).
+
+## More information
+
+[How the Active Directory Replication Model Works](https://technet.microsoft.com/library/cc772726%28v=WS.10%29.aspx)

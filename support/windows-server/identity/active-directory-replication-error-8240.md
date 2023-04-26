@@ -142,12 +142,12 @@ For the error that indicates that GC isn't available, we may generally follow th
 
 3. Check whether you can connect to the GC over TCP 3268 through ldp.exe.
 
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).
+
 ## More information
 
 For more information, click the following article numbers to view the articles in the Microsoft Knowledge Base:
 
 [910204](https://support.microsoft.com/help/910204) Troubleshooting problems with promoting a domain controller to a global catalog server
-
-## Data collection
-
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).

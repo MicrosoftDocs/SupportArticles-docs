@@ -385,6 +385,10 @@ Crank up NTDS Diagnostic logging
 1 = basic, 2 and 3 add continually verbose info and 5 logs extended info.
 ```
 
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).
+
 ## References
 
 - [RPC Return Values](/windows/win32/rpc/rpc-return-values)
@@ -392,7 +396,3 @@ Crank up NTDS Diagnostic logging
 - [Extended error information detection locations](/windows/win32/rpc/extended-error-information-detection-locations)
 - [Enabling Extended error information](/windows/win32/rpc/enabling-extended-error-information)
 - [Network Connectivity](/previous-versions/windows/it-pro/windows-2000-server/cc961803(v=technet.10))
-
-## Data collection
-
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).

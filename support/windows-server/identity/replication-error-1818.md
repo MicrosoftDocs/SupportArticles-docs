@@ -237,10 +237,10 @@ Some specific root causes for Active Directory logging `1818 \ 0x71a \ RPC_S_CAL
 
     9. After you've verified that the bindings are set correctly for all services and protocols, click OK. This initializes the rebinding of the services. When this is complete, you're prompted to restart the computer. Click Yes.
 
-## More information
-
-[Active Directory changes do not replicate](/troubleshoot/windows-server/identity/active-directory-changes-not-replicate)
-
 ## Data collection
 
 If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).
+
+## More information
+
+[Active Directory changes do not replicate](/troubleshoot/windows-server/identity/active-directory-changes-not-replicate)

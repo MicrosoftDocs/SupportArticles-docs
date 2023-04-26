@@ -53,8 +53,8 @@ The following lists the default Group Policy snap-in DLLs that you can re-regist
 
 When you focus on the local GPO with the MMC Group Policy Editor snap-in, it is normal that some policy areas that you would normally see when editing an Active Directory-based GPO are not present. This is expected behavior because the local GPO only supports a subset of the features in an Active Directory-based GPO. However, sometimes even when focused on Active Directory-based GPOs, some policy areas that should be present are missing. In that case, the most likely cause is missing registrations for the MMC snap-in DLLs that implement that functionality, and by re-registering the missing DLL and restarting the Group Policy Editor, the problem can be resolved.
 
-[!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]
-
 ## Data collection
 
 If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for gp issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-group-policy.md).
+
+[!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]

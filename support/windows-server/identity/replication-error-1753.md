@@ -331,6 +331,10 @@ Summary:
 - Example 1 failed because of an invalid host to IP mapping (in the HOST file in this case). It caused the destination DC to resolve to a "source" DC that didn't have the AD service running (or even installed for that matter). So the replication SPN wasn't yet registered, and the source DC returned error 1753.
 - In the second case, an invalid host to IP mapping (again in the HOST file) caused the destination DC to connect to a DC that had registered the {E351...} replication SPN. But that source had a different hostname and security identity than the intended source DC, so the attempts failed with error **-2146893022: The target principal name is incorrect**.
 
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).
+
 ### Related Content
 
 - [Service overview and network port requirements for the Windows Server system](https://support.microsoft.com/kb/832017/)
@@ -346,7 +350,3 @@ Summary:
 - [How the client establishes a connection](https://msdn.microsoft.com/library/aa373937%28v=VS.85%29.aspx)
 - [224196](https://support.microsoft.com/help/224196)  Restricting Active Directory replication traffic and client RPC traffic to a specific port
 - [SPN for a target DC in AD DS](https://msdn.microsoft.com/library/dd207688%28PROT.13%29.aspx)
-
-## Data collection
-
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).

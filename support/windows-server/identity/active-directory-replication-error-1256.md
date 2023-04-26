@@ -132,6 +132,10 @@ In order to determine the actual win32 error to troubleshoot,  use one of the fo
     | London| LONCONTOSODC| DC=EMEA,DC=Contoso,DC=com| London| LONEMEADC| 11| 6/10/2010 17:35| 6/10/2010 14:54| 1256 |
     | London| LONCONTOSODC| DC=apac,DC=Contoso,DC=com| London| LONEMEADC| 11| 6/10/2010 17:35| 6/10/2010 14:50| 1256 |
 
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).
+
 ## More information
 
 The following articles contain the troubleshooting procedures for errors typically logged with win32 error 1256:
@@ -146,7 +150,3 @@ The following articles contain the troubleshooting procedures for errors typical
 | 1908| [Troubleshooting Active Directory operations that fail with error 1908: Could not find the domain controller for this domain](https://support.microsoft.com/help/2712026)|
 | 8524| [Active Directory Replication Error 8524: The DSA operation is unable to proceed because of a DNS lookup failure](/troubleshoot/windows-server/identity/replication-error-8524)|
 | 8453| [Active Directory replication error 8453: Replication access was denied](/troubleshoot/windows-server/identity/replication-error-8453)|
-
-## Data collection
-
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).

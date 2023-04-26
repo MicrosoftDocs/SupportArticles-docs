@@ -280,10 +280,10 @@ Basically, the cause and resolution for replication error 8614 apply equally to 
 
     Therefore, try to determine the cause and where the fault is before you take preventive action.
 
-## References
-
-[Fixing Replication Lingering Object Problems (Event IDs 1388, 1988, 2042)](/previous-versions/windows/it-pro/windows-server-2003/cc738018(v=ws.10))
-
 ## Data collection
 
 If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).
+
+## References
+
+[Fixing Replication Lingering Object Problems (Event IDs 1388, 1988, 2042)](/previous-versions/windows/it-pro/windows-server-2003/cc738018(v=ws.10))

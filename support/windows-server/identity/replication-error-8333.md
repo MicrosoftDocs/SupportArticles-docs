@@ -224,6 +224,10 @@ Multiple third-party products have been found to cause this issue including:
     1. Anti-Virus software  
     2. Directory Synchronization
 
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).
+
 ## More information
 
 Lingering Objects:  
@@ -233,7 +237,3 @@ Lingering Objects:
 Database Corruption:  
 
 [Event ID 1539—Database integrity](https://technet.microsoft.com/library/dd941847%28v=ws.10%29.aspx)
-
-## Data collection
-
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).

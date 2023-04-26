@@ -67,6 +67,10 @@ To troubleshoot specific event IDs, refer to the following table:
 |Event ID 2087|DNS lookup failure caused replication to fail| [4469661](https://support.microsoft.com/help/4469661) |
 |Event ID 2088|DNS lookup failure occurred with replication success| [Event ID 2088: DNS lookup failure occurred with replication success](/windows-server/identity/ad-ds/manage/component-updates/event-id-2088--dns-lookup-failure-occurred-with-replication-success) |
   
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).
+
 ## References
 
 - [Troubleshooting Active Directory Replication Problems](/previous-versions/windows/it-pro/windows-2000-server/bb727057(v=technet.10))
@@ -74,7 +78,3 @@ To troubleshoot specific event IDs, refer to the following table:
 - [Troubleshooting Active Directory Replication Problems](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc949120(v=ws.10))
 
 - [Diagnose Active Directory replication failures](/troubleshoot/windows-server/identity/diagnose-replication-failures)
-
-## Data collection
-
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for adreplica issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).
