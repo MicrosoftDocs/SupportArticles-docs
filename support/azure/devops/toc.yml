@@ -47,6 +47,8 @@
       href: issues-service-connection-task.md
     - name: Resource doesn't exist error with services deployment
       href: resource-not-exist-error-services-deployment.md
+    - name: Failure scenarios related to Azure web app tasks
+      href: failure-scenarios-related-azure-web-app-tasks.md
 
 - name: Repos
   items:
