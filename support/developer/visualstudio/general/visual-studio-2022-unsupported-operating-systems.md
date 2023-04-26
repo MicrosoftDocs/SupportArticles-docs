@@ -37,7 +37,7 @@ Running Visual Studio 2022 Community, Professional, or Enterprise editions in Wi
 
 ## Windows 7 and Windows Server 2008 R2
 
-Visual Studio 2022 version 17.7 and higher does not install on Windows 7 and Windows Server 2008 R2. To continue using 17.6 LTSC in this unsupported configuration, see [Long-Term Servicing Channel Support](visualstudio/productinfo/vs-servicing#long-term-servicing-channel-ltsc-support).
+Visual Studio 2022 version 17.7 and higher does not install on Windows 7 and Windows Server 2008 R2. To continue using 17.6 LTSC in this unsupported configuration, see [Long-Term Servicing Channel Support](/visualstudio/productinfo/vs-servicing#long-term-servicing-channel-ltsc-support).
 
 When installing or using Visual Studio 2022 version 17.6 or earlier on Windows 7 or Windows Server 2008 R2, you may experience the following issues.
 
@@ -52,7 +52,7 @@ Visual Studio 2022 doesn't install on Windows 8 and Windows Server 2012.
 
 ## Windows 8.1 and Windows Server 2012 R2
 
-Visual Studio 2022 version 17.7 and higher does not install on Windows 8.1 and Windows Server 2012 R2. To continue using 17.6 LTSC in this unsupported configuration, see [Long-Term Servicing Channel Support](visualstudio/productinfo/vs-servicing#long-term-servicing-channel-ltsc-support).
+Visual Studio 2022 version 17.7 and higher does not install on Windows 8.1 and Windows Server 2012 R2. To continue using 17.6 LTSC in this unsupported configuration, see [Long-Term Servicing Channel Support](/visualstudio/productinfo/vs-servicing#long-term-servicing-channel-ltsc-support).
 
 When installing or using Visual Studio 2022 version 17.6 or earlier on Windows 8.1 and Windows Server 2012 R2, you may experience the following issues.
 
