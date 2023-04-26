@@ -86,32 +86,23 @@ You can use this article as a reference for initial debugging of issues related 
   See the following tutorials about deploying apps of various languages to an Azure Web App:  
 
   - [Python to Web App](/azure/devops/pipelines/ecosystems/python-webapp)  
-
   - [PHP to Web App](/azure/devops/pipelines/ecosystems/php-webapp)  
-
   - [Java to Web App](/azure/devops/pipelines/ecosystems/java-webapp)  
-
   - [JavaScript and Node.js to Web App](/azure/devops/pipelines/ecosystems/javascript)  
 
 ## Recommended documents
 
 - [App Service Deploy task Troubleshooting](/azure/devops/pipelines/tasks/deploy/azure-rm-web-app-deployment#troubleshooting)  
-
 - [Azure Web App task Troubleshooting](/azure/devops/pipelines/tasks/deploy/azure-rm-web-app#troubleshooting)  
-
 - [Azure Web Apps for Container task Troubleshooting](/azure/devops/pipelines/tasks/deploy/azure-rm-web-app-containers#troubleshooting)  
-
 - [Deploy to Linux Web App](/azure/devops/pipelines/targets/webapp-linux)  
-
 - [Deploy to Windows Web App](/azure/devops/pipelines/targets/webapp)  
-
 - [Deploy to Web App for Containers](/azure/devops/pipelines/targets/webapp-on-container-linux)  
-
 - For service-impacting issues, see [Azure DevOps Services Status](https://status.dev.azure.com/)
 
 # See related
 
 - [Capture logs for further debugging with the tasks](logs-capture-further-debugging-tasks.md)
-- [Initial debugging for Azure Web App and services related issues](initial-debugging-azure-web-app-services.md)
-- [Issues with the service connection in the task](issues-service-connection-task)
+- [Failure scenarios related to Azure web app tasks](failure-scenarios-related-azure-web-app-tasks.md)
+- [Issues with the service connection in the task](issues-service-connection-task.md)
 - [Resource doesn't exist error with services deployment](resource-not-exist-error-services-deployment.md)
