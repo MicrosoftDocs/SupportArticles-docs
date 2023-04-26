@@ -61,12 +61,11 @@ When users try to delete an Azure RM service connection, they experience one of 
 
 :::image type="content" source="media/troubleshoot-azure-rm-scenarios-while-editing-updating-service-connections/delete-service-connection.png" alt-text="Screenshot that shows an error while deleting an existing service connection.":::
 
-Resolution
+### Resolution
+
 If users experience these errors, they should still be able to delete the connection by selecting the **Delete** button. However, they must manually delete or edit the service principal by using the Active Directory app in the Azure portal.
 
 If the **Delete** button doesn't remove the service connection, follow these steps:
-
-### Resolution
 
 1. Check whether the connection is automated or manual.
 1. [Get the details for the endpoints by using the REST API.](/rest/api/azure/devops/serviceendpoint/endpoints/get-service-endpoints?view=azure-devops-rest-6.0&tabs=HTTP&preserve-view=true)

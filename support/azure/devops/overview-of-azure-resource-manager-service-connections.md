@@ -25,13 +25,13 @@ If you don't see the subscription that you want to use, sign out of Azure Pipeli
 
 - **Manual subscription pipeline**: In this mode, you must specify the service principal that you want to use to connect to Azure. The service principal specifies the resources and the access levels that are available over the connection.
 
-Use this approach when you have to connect to an Azure account by using credentials that differ from the credentials that you currently use to sign in to Azure Pipelines. This is a useful method to maximize security and limit access. Service principals are valid for two years.
+Use this approach when you have to connect to an Azure account by using credentials that differ from the credentials that you currently use to sign in to Azure Pipelines. This is an useful method to maximize security and limit access. Service principals are valid for two years.
 
 ## Common connection issues
 
-Use the following list to navigate to the appropriate article or section for detailed troubleshooting steps for your scenario:
+Use the following list to navigate to the appropriate article or section for detailed troubleshooting steps:
 
-### Troubleshooting tips for problems related to subscription
+**Subscription related connection issues**
 
 - [Loading subscriptions window shows spinning wheel when trying to create a service connection](troubleshoot-subscription-related-scenarios.md#loading-subscriptions-window-shows-spinning-wheel-when-trying-to-create-a-service-connection)
 
@@ -39,21 +39,14 @@ Use the following list to navigate to the appropriate article or section for det
 
 - [There is no active Azure subscription](troubleshoot-subscription-related-scenarios.md)
 
-### Troubleshooting tips for problems while creating service connections
-
-- [Failed to get Azure DevOps Service access token, cache value is invalid](troubleshoot-azure-rm-failed-access-token.md)
 
 - ["Failed to set Azure permission" error when trying to save a service connection](troubleshoot-azure-rm-scenarios-while-creating-service-connections.md#failed-to-set-azure-permission-error-when-trying-to-save-a-service-connection)
 
 - [Error when verifying the manual Azure RM service connection](troubleshoot-azure-rm-scenarios-while-creating-service-connections.md#error-when-verifying-the-manual-azure-rm-service-connection)
 
-### Troubleshooting tips for problems while editing or updating service connections
-
 - [Azure RM Service connection not listed for a task](troubleshoot-azure-rm-scenarios-while-editing-updating-service-connections.md#azure-rm-service-connection-not-listed-for-a-task)
 
 - [User is not able to delete an existing Azure RM service connection](troubleshoot-azure-rm-scenarios-while-editing-updating-service-connections.md#user-is-not-able-to-delete-an-existing-azure-rm-service-connection)
-
-
 
 ## See also
 

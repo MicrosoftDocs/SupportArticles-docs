@@ -8,18 +8,18 @@ ms.custom: sap:Pipelines
 ms.service: azure-devops
 ---
 
-## Tools used for troubleshooting Azure RM service connection scenarios
+# Tools used for troubleshooting Azure RM service connection scenarios
 
 Many of the troubleshooting scenarios that are discussed in these topics involve the F12 developer tools in your web browser and the Fiddler debugging tool. The following sections discuss these tools.
 
-### F12 developer tools
+## F12 developer tools
 
 To capture an F12 trace, follow the steps in [Capture a browser trace for troubleshooting](/azure/azure-portal/capture-browser-trace).
 
 > [!NOTE]
 > We recommend that you try to capture a minimum of events in an F12 trace. Start capturing the trace just before the step that's causing the issue instead of starting the trace as soon as you log in to the Azure DevOps portal.
 
-### Fiddler trace
+## Fiddler trace
 
 1. Install the [Fiddler](https://docs.telerik.com/fiddler/configure-fiddler/tasks/decrypthttps) tool.
 

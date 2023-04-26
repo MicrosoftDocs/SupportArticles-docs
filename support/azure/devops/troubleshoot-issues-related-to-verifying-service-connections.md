@@ -8,7 +8,7 @@ ms.custom: sap:Pipelines
 ms.service: azure-devops
 ---
 
-# Troubleshoot issues related to verifying Azure RM service connections
+# Troubleshoot issues related to verifying Azure Resource Manager service connections
 
 ## Troubleshoot the "Failed to get Azure DevOps Service access token" error
 

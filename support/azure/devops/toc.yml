@@ -48,6 +48,8 @@
       items:
       - name: Troubleshoot subscription related scenarios while creating service connections
         href: troubleshoot-subscription-related-scenarios.md
+      - name: Troubleshoot issues related to verifying Azure Resource Manager service connections
+        href: troubleshoot-issues-related-to-verifying-service-connections.md
     - name: Service connection update issues
       items:
       - name: Troubleshoot issues while saving service connections
