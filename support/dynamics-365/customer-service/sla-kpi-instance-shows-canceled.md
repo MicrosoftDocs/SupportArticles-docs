@@ -15,13 +15,8 @@ When you update the target record so that the **Applicable when** condition is n
 - **Applicable when**: The case status equals active
 - **Success condition**: The case status equals resolved
 
-<<<<<<< HEAD
-1. Create a case. The case status is set to **Active** by default, the SLA is applied, and the SLA timer starts.
-2. Resolve the case. The case status is set to **Resolved**, and the SLA is reevaluated for the **Applicable when** condition. The SLA KPI instance status is set to **Canceled**.
-=======
 1. Create a case. The case status is set to **Active** by default, the SLA is applied and the SLA timer starts.
 2. Resolve the case. The case status is set to **Resolved** and the SLA is reevaluated for the **Applicable when** condition. The SLA KPI instance status will be set to **Canceled**.
->>>>>>> 62537e0f3 (minor changes)
 
 ## Cause
 
