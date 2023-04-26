@@ -34,7 +34,7 @@ This article describes some of the data that you can obtain from the output of t
 > [!IMPORTANT]
 > The `DBCC MEMORYSTATUS` command is intended to be a diagnostic tool for Microsoft Customer Support Services. The format of the output and the level of detail that is provided are subject to change between service packs and product releases. The functionality that the `DBCC MEMORYSTATUS` command provides may be replaced by a different mechanism in later product versions. Therefore, in later product versions, this command may no longer function. No additional warnings will be made before this command is changed or removed. Therefore, applications that use this command may break without warning.
 
-The output of the `DBCC MEMORYSTATUS` command has changed from earlier releases of SQL Server. The output now contains several sections that were unavailable in earlier product versions.
+The output of the `DBCC MEMORYSTATUS` command has changed from earlier releases of SQL Server. Now, it contains several sections that were unavailable in earlier product versions.
 
 ## Process/System Counts
 
@@ -209,8 +209,8 @@ SUM(virtual_memory_committed_kb) AS [VM Committed],
 SUM(awe_allocated_kb) AS [AWE Allocated],
 SUM(shared_memory_reserved_kb) AS [SM Reserved],
 SUM(shared_memory_committed_kb) AS [SM Committed],
-SUM(multi_pages_kb) AS [MultiPage Allocator],          /*Applies to: SQL Server 2008 (10.0.x) through SQL Server 2008 R2 (10.50.x).*/
-SUM(single_pages_kb) AS [SinlgePage Allocator],        /*Applies to: SQL Server 2008 (10.0.x) through SQL Server 2008 R2 (10.50.x).*/
+-- SUM(multi_pages_kb) AS [MultiPage Allocator],          /*Applies to: SQL Server 2008 (10.0.x) through SQL Server 2008 R2 (10.50.x).*/
+-- SUM(single_pages_kb) AS [SinlgePage Allocator],        /*Applies to: SQL Server 2008 (10.0.x) through SQL Server 2008 R2 (10.50.x).*/
 SUM(pages_kb) AS [Page Allocated]                      /*Applies to: SQL Server 2012 (11.x) and later.*/
 FROM
 sys.dm_os_memory_clerks
@@ -573,7 +573,7 @@ This behavior lets only a few memory-intensive compilations occur at the same ti
 
 ## Memory brokers
 
-The next three sections show information about memory brokers that control cached memory, stolen memory, and reserved memory. Information that these sections provide can only be used for internal diagnostics. Therefore, this information isn't detailed here.
+The following tables show information about memory brokers that control cached memory, stolen memory, and reserved memory. Information that these sections provide can only be used for internal diagnostics. Therefore, this information isn't detailed here.
 
 ```output
 MEMORYBROKER_FOR_CACHE (internal)       Value
