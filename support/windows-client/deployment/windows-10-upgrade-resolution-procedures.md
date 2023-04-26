@@ -180,6 +180,10 @@ Also see the following sequential list of modern setup (mosetup) error codes wit
 | 0XC1900404 | MOSETUP_E_UA_BOX_NOT_FOUND | The installation executable was not found. |
 | 0XC1900405 | MOSETUP_E_UA_BOX_CRASHED | The installation process terminated unexpectedly. |
 
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).
+
 ## More information
 
 - [Windows 10 FAQ for IT professionals](/windows/deployment/planning/windows-10-enterprise-faq-itpro)
@@ -189,7 +193,3 @@ Also see the following sequential list of modern setup (mosetup) error codes wit
 - [Fix Windows Update errors by using the DISM or System Update Readiness tool](../../windows-server/deployment/fix-windows-update-errors.md)
 - [Windows 7 to Windows 10 upgrade error (0x800707E7 - 0x3000D)](https://answers.microsoft.com/EN-US/windows/forum/all/win-7-to-win-10-upgrade-error-0x800707e7-0x3000d/1273bc1e-8a04-44d4-a6b2-808c9feeb020))
 - [Windows 10 upgrade error: User profile suffix mismatch, 0x800707E7 - 0x3000D](https://answers.microsoft.com/EN-US/windows/forum/windows_10-windows_install/win-10-upgrade-error-user-profile-suffix-mismatch/0f006733-2af5-4b42-a2d4-863fad05273d?page=3)
-
-## Data collection
-
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).

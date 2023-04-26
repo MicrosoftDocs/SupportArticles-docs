@@ -294,6 +294,10 @@ UsmtUtils.exe /rd <storedir>
 
 You should also reboot the machine.
 
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).
+
 ## Related articles
 
 [User State Migration Tool (USMT) troubleshooting](/windows/deployment/usmt/usmt-troubleshooting)
@@ -303,7 +307,3 @@ You should also reboot the machine.
 [Return codes](usmt-return-codes.md)
 
 [UsmtUtils syntax](/windows/deployment/usmt/usmt-utilities)
-
-## Data collection
-
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).

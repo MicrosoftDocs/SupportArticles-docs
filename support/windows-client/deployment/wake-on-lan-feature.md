@@ -49,13 +49,13 @@ To disable the S4 state in Windows 10, follow these steps.
 3. Clear the **Turn on fast startup (recommended)** check box.
 4. Select **Save Settings**.
 
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).
+
 ## References
 
 For more information, see:
 
 - [System Power Actions](/windows-hardware/drivers/kernel/system-power-actions)
 - [System Power States](/windows/win32/power/system-power-states)
-
-## Data collection
-
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).

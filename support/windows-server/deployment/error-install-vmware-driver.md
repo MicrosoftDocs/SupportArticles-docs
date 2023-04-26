@@ -66,8 +66,8 @@ If this doesn't temporarily fix the problem, verify that the latest version of V
 6. Verify that the Telnet Service logon setting is set correctly.
 7. Restart the server.
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
-
 ## Data collection
 
 If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-deployment.md).
+
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

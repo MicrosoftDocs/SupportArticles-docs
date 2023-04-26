@@ -94,6 +94,10 @@ When performing an operating system upgrade, Windows Setup uses phases described
     OOBE = Out of box experience.  
     WIM = Windows image (Microsoft)
 
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).
+
 ## More information
 
 - [Windows 10 FAQ for IT professionals](/windows/deployment/planning/windows-10-enterprise-faq-itpro)
@@ -101,7 +105,3 @@ When performing an operating system upgrade, Windows Setup uses phases described
 - [Windows 10 Specifications](https://www.microsoft.com/windows/windows-10-specifications)
 - [Windows 10 IT pro forums](https://social.technet.microsoft.com/Forums/en-US/home?category=Windows10ITPro)
 - [Fix Windows Update errors by using the DISM or System Update Readiness tool](../../windows-server/deployment/fix-windows-update-errors.md)
-
-## Data collection
-
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).

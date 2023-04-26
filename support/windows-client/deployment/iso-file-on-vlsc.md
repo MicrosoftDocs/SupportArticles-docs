@@ -56,12 +56,12 @@ From the VLSC, you can download software included in your contract. On the secti
 8. When the download is completed, copy the ISO file to a CD or DVD using a software burning program.
 9. This CD or DVD can then be used to install the ISO software.
 
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).
+
 ## References
 
 - [Create installation media for Windows](https://support.microsoft.com/help/15088/windows-10-create-installation-media)
 
 - [Volume Licensing Service Center](/licensing/#74)
-
-## Data collection
-
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).

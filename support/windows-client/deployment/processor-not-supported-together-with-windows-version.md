@@ -54,8 +54,8 @@ Since these errors occur when Windows detects an incompatible processor, ensure 
 - [Windows Server support and installation instructions for the AMD EPYC 7000 Series server processors](/troubleshoot/windows-server/deployment/windows-server-support-installation-for-amd-role-family-processor)
 - [Lifecycle support policy FAQ -Windows products](/lifecycle/faq/windows#%2Fhelp%2F18581%2Flifecycle-support-policy-faq-windows-products%23b4)
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
-
 ## Data collection
 
 If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).
+
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

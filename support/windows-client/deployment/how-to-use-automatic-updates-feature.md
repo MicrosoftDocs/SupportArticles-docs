@@ -89,6 +89,10 @@ If you're logged on as an administrator, when you receive this message, you can 
 > [!IMPORTANT]
 > You may have to restart your computer to complete the update installation.
 
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).
+
 ## References
 
 For additional information about how to use Automatic Updates, view the following articles:
@@ -99,7 +103,3 @@ For additional information about how to use Automatic Updates, view the followin
 
 For more information about Software Update Services, visit the following Microsoft Web site:  
 [What's new in Windows 10 deployment](/windows/deployment/deploy-whats-new)
-
-## Data collection
-
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).

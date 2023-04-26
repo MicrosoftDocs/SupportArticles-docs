@@ -127,12 +127,12 @@ To troubleshoot this issue, follow these steps:
 
    A device that isn't successfully enrolled might receive different updates according to its feature update deferral period. A device that's successfully enrolled is represented by an Azure AD device resource. That resource documents an update management enrollment for feature updates, and has no Azure AD device registration errors.
 
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).
+
 ## References
 
 - [Log files created by Windows Update](/windows/deployment/update/windows-update-logs)
 - [Windows Update troubleshooting](/windows/deployment/update/windows-update-troubleshooting)
 - [Windows Update common errors and mitigation](/windows/deployment/update/windows-update-errors)
-
-## Data collection
-
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).

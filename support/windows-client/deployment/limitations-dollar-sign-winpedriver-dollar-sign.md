@@ -317,6 +317,10 @@ WinRE is typically going to be static on the hard drive, either auto-installed d
 
 If your requirement is to create a WinPE environment that loads out of box drivers prior to running setup.exe, follow the guidelines described in this document in order to end up with the driver you want in the resulting installed operating system. Writing scripts which leverage Drvload.exe launched by startnet.cmd to load specific drivers located in the \$WinPeDriver$ folder on a USB flash drive is the most flexible method available. This method allows you to load a driver during the WinPE phase that carries over into the installed operating system. In addition, it allows for maintaining of a central repository for drivers that will allow for flexibility to update these drivers (so as to maintain the latest drivers in your driver store).
 
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).
+
 ## References and Links
 
 - [Add Device Drivers during Windows Setup](/previous-versions/windows/it-pro/windows-vista/cc766485(v=ws.10))
@@ -353,7 +357,3 @@ If your requirement is to create a WinPE environment that loads out of box drive
 
 > [!NOTE]
 > You will need an account to be able to download files from the OEM site.
-
-## Data collection
-
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).

@@ -334,12 +334,12 @@ The following information lists each return code by numeric value, along with th
 | **Out of disk space while writing the store** | Data transfer has begun, and there was an error during migration-store creation or during the apply phase. Review the ScanState log or LoadState log for details. |
 | **Out of temporary disk space on the local system** | Data transfer has begun, and there was an error during migration-store creation or during the apply phase. Review the ScanState log or LoadState log for details. |
 
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).
+
 ## Related articles
 
 [User State Migration Tool (USMT) troubleshooting](/windows/deployment/usmt/usmt-troubleshooting)
 
 [USMT log files](/windows/deployment/usmt/usmt-log-files)
-
-## Data collection
-
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).

@@ -145,6 +145,10 @@ The following tables provide the corresponding phase and operation for values of
 
 For example: An extend code of 0x4000D, represents a problem during phase 4 (0x4) with data migration (000D).
 
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).
+
 ## More information
 
 - [Windows 10 FAQ for IT professionals](/windows/deployment/planning/windows-10-enterprise-faq-itpro)  
@@ -152,7 +156,3 @@ For example: An extend code of 0x4000D, represents a problem during phase 4 (0x4
 - [Windows 10 Specifications](https://www.microsoft.com/windows/windows-10-specifications)  
 - [Microsoft Windows Q & A](/answers/products/windows)  
 - [Fix Windows Update errors by using the DISM or System Update Readiness tool](../../windows-server/deployment/fix-windows-update-errors.md)
-
-## Data collection
-
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).

@@ -61,8 +61,8 @@ If it still doesn't resolve the issue, you can verify that the latest version of
 5. Any earlier versions of VMware Tools should be removed.
 6. Install the latest version of VMware Tools and then perform a restart after you verify that the setting for the Telnet Server service logon setting is set correctly.
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
-
 ## Data collection
 
 If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-deployment.md).
+
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
