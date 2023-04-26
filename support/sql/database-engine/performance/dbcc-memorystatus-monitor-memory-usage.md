@@ -147,8 +147,6 @@ SM Reserved                     0
 SM Commited                     0
 Pages Allocated                 5416
 
-(7 row(s) affected)
-
 MEMORYCLERK_SQLGENERAL (node 1) KB
 ---------------------------------------------------------------- --------------------
 VM Reserved                     0
@@ -159,8 +157,6 @@ SM Commited                     0
 SinglePage Allocator            136
 MultiPage Allocator             0
 
-(7 row(s) affected)
-
 MEMORYCLERK_SQLGENERAL (Total)  KB
 ---------------------------------------------------------------- --------------------
 VM Reserved                     0
@@ -170,8 +166,6 @@ SM Reserved                     0
 SM Commited                     0
 SinglePage Allocator            728
 MultiPage Allocator             2160
-
-(7 row(s) affected)
 ```
 
 > [!NOTE]
@@ -189,8 +183,6 @@ SM Reserved                        0
 SM Commited                        0
 SinglePage Allocator               768
 MultiPage Allocator                2160
-
-(7 row(s) affected)
 ```
 
 Other information in these sections is about shared memory:
@@ -231,8 +223,6 @@ Database (clean)       1353
 Database (dirty)       38
 I/O                    0
 Latched                0
-
-(7 row(s) affected)
 ```
 
 ```output
@@ -365,8 +355,6 @@ Procedure Cache         Value
 TotalProcs              4
 TotalPages              25
 InUsePages              0
-
-(3 row(s) affected)
 ```
 
 The elements in this section are the following:
