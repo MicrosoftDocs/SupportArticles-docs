@@ -1,12 +1,16 @@
 ---
-title: Warning message occurs on SLA KPI instances
-description: Provides a resolution for the issue where a warning message occurs on SLA KPI instances in Dynamics 365 Customer Service.
+title: Warning occurs on SLA KPI instances
+description: Provides a resolution for the issue where a warning message occurs on the SLA KPI instances in Dynamics 365 Customer Service.
 ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---
-# A warning message appears on SLA KPI instances
+# A warning message appears on the SLA KPI instances
 
+<<<<<<< HEAD
 This article provides a resolution for the warning message that occurs on the service-level agreements (SLA) KPI instances in Dynamics 365 Customer Service.
+=======
+This article provides a resolution for the warning message that occurs on the service-level agreement (SLA) KPI instances in Dynamics 365 Customer Service.
+>>>>>>> 62537e0f3 (minor changes)
 
 ## Symptoms
 
@@ -22,9 +26,9 @@ The SLAInstanceMonitoringWarningAndExpiryFlow isn't enabled.
 
 ## Resolution
 
-If none of the Unified Interface SLAs are activated, then you must activate one of the SLAs to activate the SLAInstanceMonitoringWarningAndExpiryFlow. The flow must only be turned off and on by a user who has the SLA KPI privileges at a global level for prvReadSLAKPIInstance and prvWriteSLAKPIInstance.
+If none of the Unified Interface SLAs are activated, you must activate one to activate the SLAInstanceMonitoringWarningAndExpiryFlow. The flow must only be turned off and on by a user with the SLA KPI privileges at a global level for prvReadSLAKPIInstance and prvWriteSLAKPIInstance.
 
-However, if all the SLAs are active but the flow is still deactivated, take the following steps:
+However, if all the SLAs are active, but the flow is still deactivated, take the following steps:
 
 1. In [Power Automate](https://powerautomate.microsoft.com), navigate to **My flows** > **Cloud flows**.
 2. In **Cloud flows**, select **SLAInstanceMonitoringWarningAndExpiryFlow**.

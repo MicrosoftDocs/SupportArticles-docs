@@ -1,12 +1,20 @@
 ---
 title: SLA timer doesn't pause when its state is changed from InProgress to OnHold on a holiday
+<<<<<<< HEAD
 description: Provides more information for a by design behavior that the SLA timer doesn't pause when its state is changed from InProgress to OnHold on a holiday in Dynamics 365 Customer Service.
+=======
+description: Provides more information for a by-design behavior where the SLA timer doesn't pause when its state is changed from InProgress to OnHold on a holiday in Customer Service.
+>>>>>>> 62537e0f3 (minor changes)
 ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---
 # SLA timer doesn't pause when its state is changed from InProgress to OnHold on a holiday
 
+<<<<<<< HEAD
 This article provides more information about how the SLA **Warning** and **Failure** time is calculated if your organization defines business hours while scheduling working days and holidays in Dynamics 365 Customer Service.
+=======
+This article provides more information about how the service-level agreement (SLA) **Warning** and **Failure** time is calculated if your organization defines business hours while scheduling working days and holidays.
+>>>>>>> 62537e0f3 (minor changes)
 
 ## Symptoms
 
@@ -20,11 +28,18 @@ So, it includes the holiday hours, nonworking hours, and pause time (only busine
 
 ## More information
 
-The functionality is by design. Your organization defines business hours while scheduling working days and holidays. The SLA **Warning** time and **Failure** time adhere to those settings are calculated based on the defined hours.
+The functionality is by design. Your organization defines business hours while scheduling working days and holidays. The SLA **Warning** time and **Failure** time adhere to those settings and are calculated based on the defined hours.
 
 See the following scenarios to understand how the SLA **Warning** and **Failure** time is calculated:
 
+<<<<<<< HEAD
 - Create a case during nonworking hours. Pause and resume the case before working hours start. Hold time between **Pause** and **Resume** won't be considered.
 - Create a case during nonworking hours. Pause and resume the case during working hours. Hold time will be considered and the **Warning** and **Failure** time will be extended based on hold time.
 - Create a case during working hours. Pause the case during working hours. Resume the case during nonworking hours. Hold time won't be considered for the **Warning** and **Failure** time.
 - Create a case during working hours. Pause the case during nonworking hours and resume it during working hours. The **Warning** time and **Failure** time will be recalculated.
+=======
+- Create a case during non-working hours. Pause and resume the case before working hours start. Hold time between **Pause** and **Resume** won't be considered.
+- Create a case during non-working hours. Pause and resume the case during working hours. Hold time will be considered, and the **Warning** and **Failure** time will be extended based on hold time.
+- Create a case during working hours. Pause the case during working hours. Resume the case during non-working hours. Hold time won't be considered for the **Warning** and **Failure** time.
+- Create a case during working hours. Pause the case during non-working hours and resume it during working hours. The **Warning** time and **Failure** time will be recalculated.
+>>>>>>> 62537e0f3 (minor changes)

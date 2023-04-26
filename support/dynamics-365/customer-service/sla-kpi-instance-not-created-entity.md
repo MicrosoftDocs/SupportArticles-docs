@@ -4,9 +4,13 @@ description: Provides a resolution for the issue where an SLA KPI instance isn't
 ms.reviewer: laalexan
 ms.date: 04/11/2023
 ---
-# SLA KPI instance isn't created on the entity
+# An SLA KPI instance isn't created on the entity
 
+<<<<<<< HEAD
 This article provides a resolution for the issue where a service-level agreements (SLA) KPI instance isn't created on the entity in Dynamics 365 Customer Service.
+=======
+This article provides a resolution for the issue where a service-level agreement (SLA) KPI instance isn't created on the entity in Customer Service.
+>>>>>>> 62537e0f3 (minor changes)
 
 ## Symptoms
 
@@ -25,7 +29,7 @@ SLA KPI instances aren't created because of one of the following reasons:
 
 To solve this issue, use one of the following resolutions:
 
-- If SLA isn't applied, verify if SLA is being applied correctly on the entity. For more information, see [Apply SLAs](/dynamics365/customer-service/apply-slas).
-- If no SLA item is applicable, verify whether the entity satisfies the **Applicable when** condition for at least one of the SLA items of the applied SLA.
-- If the **SLA KPI Applicable From** is empty, verify whether the **Applicable From** date field of KPI is filled for that entity.
-- If dependencies are disabled, in the SLA form, activate notifications about any out of the box component, if any.
+- If SLA isn't applied, verify that the SLA is being applied correctly on the entity. For more information, see [Apply SLAs](/dynamics365/customer-service/apply-slas).
+- If no SLA item is applicable, verify that the entity satisfies the **Applicable when** condition for at least one of the SLA items of the applied SLA.
+- If the **SLA KPI Applicable From** is empty, verify that the **Applicable From** date field of the KPI is filled for that entity.
+- If dependencies are disabled, in the SLA form, activate notifications about any out-of-the-box component, if any.
