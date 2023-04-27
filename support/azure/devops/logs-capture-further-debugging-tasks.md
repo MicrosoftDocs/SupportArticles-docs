@@ -1,7 +1,7 @@
 ---
 title: Capture logs for further debugging of the tasks
 description: This article describes steps to capture debug logs for a deeper investigation of the tasks.
-ms.date: 04/24/2023
+ms.date: 04/27/2023
 ms.custom: sap:Pipelines
 ms.reviewer: 
 ms.service: azure-devops
