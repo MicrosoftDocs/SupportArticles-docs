@@ -16,7 +16,7 @@ additionalContent:
           url: customer-insights/welcome-customer-insights.yml
         - title: Dynamics 365 Customer Service
           summary: Troubleshooting articles for Dynamics 365 Customer Service
-          url: customer-insights/welcome-customer-service.yml
+          url: customer-service/welcome-customer-service.yml
         - title: Dynamics 365 Finance
           summary: Troubleshooting articles for Dynamics 365 Finance
           url: finance/welcome-finance.yml
