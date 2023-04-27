@@ -21,6 +21,6 @@ As a first step, we recommend you walk through the documentation for the followi
 - [Azure Key Vault](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureKeyVaultV2)
 - [Azure SQL deployment](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/SqlServerDacpacDeployment)
 
-Also, refer to the *readme.doc* in the GitHub repo and [Microsoft doc](/azure/devops/pipelines/overview-azure) for details about the usage of these tasks.
+Also, refer to the *readme.doc* in the GitHub repo and this [Deploy to Azure](/azure/devops/pipelines/overview-azure) article for details about the usage of these tasks.
 
 Refer to the next steps if the task configuration looks fine.
