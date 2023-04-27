@@ -71,6 +71,7 @@ Choose one of the following options:
 
 Remove the previously installed, orphaned Hybrid Agent application. To do this, follow these steps:
 
+Step1:
 1. Get the application GUID of the previous Hybrid Agent application. You can find this GUID by searching the HCW log for the following entry:
 
    `10386 [Client=UX, Thread=<ID>] Previous Connector Application Name found: <application GUID>`
@@ -109,25 +110,23 @@ Remove the previously installed, orphaned Hybrid Agent application. To do this, 
 
       When you're prompted for credentials, enter your Microsoft 365 or Office 365 Global Administrator credentials.
 
-Continue to set up the Hybrid Agent. To do this, follow these steps:
-
-1. Check the status of the Hybrid Agent by using the [Get-HybridAgent](/exchange/hybrid-deployment/hybrid-agent#hybrid-agent-powershell-module) cmdlet:
-
-   ```powershell
-   Get-HybridAgent -Credential (Get-Credential)
-   ```
-
-   Or, if you have MFA enabled, run:
-
-   ```powershell
-   Get-HybridAgent -UserPrincipalName <tenant admin UPN>
-   ```
-
-   If you're prompted for credentials, enter your Microsoft 365 or Office 365 Global Administrator credentials.
-
-   Make sure that the Hybrid Agent is active before you continue the setup process. If the Hybrid Agent is inactive, see [Troubleshooting Hybrid Migration Endpoints in Classic and Modern Hybrid](https://techcommunity.microsoft.com/t5/exchange-team-blog/troubleshooting-hybrid-migration-endpoints-in-classic-and-modern/ba-p/953006) and [Determine if the Hybrid Agent is installed and running.](https://techcommunity.microsoft.com/t5/exchange-team-blog/modern-hcw-hybrid-agent-troubleshooting-like-a-pro/ba-p/1558725)
-
-2. Rerun the HCW to continue the [Hybrid Agent setup](/exchange/hybrid-deployment/hybrid-agent#installation-steps).
-
+  3. Re-run HCW in classic mode to unregister the application proxy service in azure AD 
+  4. Ensure that in the control panel (add or remove programs/uninstall a program) the ‘Microsoft Hybrid service’ is not present, check that article for more information https://learn.microsoft.com/en-us/exchange/hybrid-deployment/hybrid-agent#additional-information
+  5. If you still find Microsoft Hybrid service present there rerun step 2 again to remove the Hybrid Agent application
+  6. Re-run HCW in modern mode
    > [!NOTE]
    > When you're prompted to choose a hybrid topology, select **Exchange Modern Hybrid Topology**.
+
+
+Step 2: If step 1 doesn’t work follow the below steps,
+
+  1. Remove the hybrid app using below command. For more information, see [Remove-AzureADApplicationProxyApplication](/powershell/module/azuread/remove-azureadapplicationproxyapplication). 
+   ```powershell
+   Remove-AzureADApplicationProxyApplication -ObjectId 0d7b0f02-3f63-414d-8d20-4b8bd0291e42(replace with your appid) -RemoveADApplication $true
+   ```
+  2. If not you might try scanning all the apps then remove the hybrid app using Remove-AzureADApplicationProxyApplication command
+    ```powershell
+    Get-AzureADServicePrincipal | where {$_.Tags -Contains "WindowsAzureActiveDirectoryOnPremApp"} | fl AppId, DisplayName
+    ```
+ 
+Step 3: If step 2 doesn’t work, please raise a support case with microsoft.
