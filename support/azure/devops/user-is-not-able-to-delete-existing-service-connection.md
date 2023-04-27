@@ -1,6 +1,6 @@
 ---
-title: Troubleshooting tips for problems while deleting Azure RM service connection
-description: This article explains about the problems that might occur when users are unable to delete the Azure RM service connection.
+title: Fail to delete an existing Azure RM service connection 
+description: This article provides workaround for issues that you might encounter when you cannot deleted an existing service connection. 
 ms.date: 04/24/2023
 author: padmajayaraman
 ms.author: v-jayaramanp

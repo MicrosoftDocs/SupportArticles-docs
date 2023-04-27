@@ -8,15 +8,13 @@ ms.custom: sap:Pipelines
 ms.service: azure-devops
 ---
 
-# Troubleshooting tips for issues while editing or updating service connections
+# Azure RM Service connection not listed for a task
 
-## Azure RM Service connection not listed for a task
-
-### Symptoms
+## Symptoms
 
 When a user tries to load the Azure service connection in a pipeline task such as Azure App service deploy or Azure App service manage, the service connection doesn't appear in the list. However, when the user checks the **Service Connection** tab under **Project Settings**, the service connection is available.
 
-### Debugging steps
+## Debugging steps
 
 1. From within your project, go to **Project settings > Service connections**.
 
@@ -42,7 +40,7 @@ When a user tries to load the Azure service connection in a pipeline task such a
 
 In the API response, check the `isReady` status. If the value is `false`, this indicates that the service connection is in a bad state.
 
-### Resolution
+## Resolution
 
 1. Open **Project settings > Service connections**, and then select the faulty service connection.
 
@@ -54,25 +52,3 @@ In the API response, check the `isReady` status. If the value is `false`, this i
 1. Check whether the SPN (App) still exists. (It was likely deleted.)
 
 1. If this is an automated service connection, create a new service connection. If this is a manual service connection, follow the steps in the ["Create an Azure Resource Manager service connection with an existing service principal"](/azure/devops/pipelines/library/connect-to-azure?view=azure-devops&preserve-view=true) section of [Connect to Microsoft Azure](/azure/devops/pipelines/library/connect-to-azure?view=azure-devops&viewFallbackFrom=azure-devopshttps&preserve-view=true) to update the service connection by using the new SPN (App) details.
-
-## User is not able to delete an existing Azure RM service connection
-
-When users try to delete an Azure RM service connection, they experience one of several issues. For example, they receive a "Failed to remove Azure permission 'RoldAssignmentId'... Failed to remove the service principal from Azure Active Directory" error message. Or, the connection isn't removed from the list of service connections even though no error is reported.
-
-:::image type="content" source="media/troubleshoot-azure-rm-scenarios-while-editing-updating-service-connections/delete-service-connection.png" alt-text="Screenshot that shows an error while deleting an existing service connection.":::
-
-### Resolution
-
-If users experience these errors, they should still be able to delete the connection by selecting the **Delete** button. However, they must manually delete or edit the service principal by using the Active Directory app in the Azure portal.
-
-If the **Delete** button doesn't remove the service connection, follow these steps:
-
-1. Check whether the connection is automated or manual.
-1. [Get the details for the endpoints by using the REST API.](/rest/api/azure/devops/serviceendpoint/endpoints/get-service-endpoints?view=azure-devops-rest-6.0&tabs=HTTP&preserve-view=true)
-1. Make sure that you set the `includeFailed=true` parameter so that all service endpoints are captured. This should provide more information and show whether an issue affects the service connection (for example, in the `isReady` field).
-1. [Try to delete the connections by using the REST API directly](/rest/api/azure/devops/serviceendpoint/endpoints/delete?view=azure-devops-rest-6.0&tabs=HTTP&preserve-view=true). Although the UI makes similar calls, it's always worth checking whether calling the API directly will create a different result.
-1. If you use the API from the previous step by using the default parameters, and this still doesn't work, you can set the `deep` value to `false`. This setting causes the program to skip any checks and attempts that are part of the usual process to delete the underlying SPN.
-
-> [!NOTE]
-> The user must manually delete or edit the service principal by using the Active Directory app in the Azure portal.
-

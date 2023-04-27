@@ -49,6 +49,29 @@ To resolve this issue, follow these steps:
 
 :::image type="content" source="media/troubleshooting-subscription-related-scenarios/vs-profile-dropdown-list.png" alt-text="Screenshot that shows the list of available VS profiles.":::
 
+## "Failed to set Azure permission" error when trying to save a service connection
+
+### Symptoms
+
+When users create a service connection and try to save it by selecting the **Save** button, they receive the following error message:
+
+```output
+Failed to set Azure permission 'RoleAssignmentId: xxxxxx26-xxxx-xxxx-xxxx-8f0xxxxxxx' for the service principal 'xxxxxx06-xxxx-xxxx-xxxx-6fbxxxxxxxxx' on subscription ID 'xxxxxxb6-xxxx-xxxx-xxxx-23xxxxxxxxx': error code: Forbidden, inner error code: AuthorizationFailed, inner error message The client 'kxxxxt@micrxxxxoft.com' with object id 'xxxxxx74-xxxx-xxxx-xxxx-477xxxxxxxxx' does not have authorization to perform action 'Microsoft.Authorization/roleAssignments/write' over scope '/subscriptions/xxxxxxb6-xxxx-xxxx-xxxx-234xxxxxxxxx' or the scope is invalid. If access was recently granted, please refresh your credentials. Ensure that the user has 'Owner' or 'User Access Administrator' permissions on the Subscription.
+```
+
+### Debugging steps
+
+1. Capture an F12 or Fiddler trace.
+1. In a GET call (similar to https://devopsdevil.visualstudio.com/xxxxfa-xxxx-xxxx-xxxx-76dxxxxxxxxx/_apis/serviceendpoint/endpoints/xxxxxxxbb-xxxx-xxxx-xxxx-df4xxxxxxxxx), the following response is returned:
+
+```output
+ {"data":{"environment":"AzureCloud","scopeLevel":"Subscription","subscriptionId":"xxxxxxb6-xxxx-xxxx-xxxx-234xxxxxxxxx","subscriptionName":"SIxxxxA","resourceGroupName":"","mlWorkspaceName":"","mlWorkspaceLocation":"","managementGroupId":"","managementGroupName":"","oboAuthorization":"","creationMode":"Automatic","azureSpnRoleAssignmentId":"","azureSpnPermissions":"[{"roleAssignmentId":"xxxxxx26-xxxx-xxxx-xxxx-8f0xxxxxxxxx","resourceProvider":"Microsoft.RoleAssignment","provisioned":false}]","spnObjectId":"xxxxxx06-xxxx-xxxx-xxxx-6fbxxxxxxxxx","appObjectId":"xxxxxx01-xxxx-xxxx-xxxx-36axxxxxxxxx","resourceId":""},"id":"xxxxxxbb-xxxx-xxxx-xxxx-df4xxxxxxxxx","name":"Sixxxxda-subscription","type":"azurerm","url":https://management.azure.com/,"createdBy":{"displayName":<name>,"url":https://spsprodwus21.vssps.visualstudio.com/xxxxxx52-xxxx-xxxx-xxxx-b65xxxxxxxxx/_apis/Identities/xxxxxx71-xxxx-xxxx-xxxx-6b2xxxxxxxxx,"_links":{"avatar":{"href":https://devopsdevil.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.N2RmZxxxxxxxNi03MWUzLWJlNzItZWYzMTA5YzRjZTA3} },"id":"xxxxxx71-xxxx-xxxx-xxxxx-6b2xxxxxxxxx","uniqueName":kxxt@mixxxxxxft.com,"imageUrl":https://devopsdevil.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.N2RmZWEyNDctxxxxxi03MWUzLWJxxxxxxxxxMTA5YzRjZTA3,"descriptor":"aad.N2RmxxxxxxxxxxxxMWUzLWJlNzItZWYzMTA5YzRjZTA3" },"description":"","authorization":{"parameters":{"tenantid":"xxxxxxxbf-xxxx-xxxx-xxxx-2d7xxxxxxxxx","serviceprincipalid":"xxxxxx5d-xxxx-xxxx-xxxx-dfaxxxxxxxxx","authenticationType":"spnKey","serviceprincipalkey":null},"scheme":"ServicePrincipal"},"isShared":false,"isReady":false,"operationStatus":{"state":"Failed","statusMessage":" Failed to set Azure permission 'RoleAssignmentId: xxxxxx26-xxxx-xxxx-xxxx-8f0fxxxxxxxxx' for the service principal 'xxxxxx06-xxxx-xxxx-xxxx-6fbxxxxxxxxxx' on subscription ID 'xxxxxxxb6-xxxx-xxxx-xxxx-234xxxxxxxxx': error code: Forbidden, inner error code: AuthorizationFailed, inner error message The client 'kxxxxxt@micxxxxxoft.com' with object id 'xxxxxx74-xxxx-xxxx-xxxx-477xxxxxxxxx' does not have authorization to perform action 'Microsoft.Authorization/roleAssignments/write' over scope '/subscriptions/xxxxxxxb6-xxxx-xxxx-xxxx-234xxxxxxxxx' or the scope is invalid. If access was recently granted, please refresh your credentials. Ensure that the user has 'Owner' or 'User Access Administrator' permissions on the Subscription."},"owner":"Library","serviceEndpointProjectReferences":[{"projectReference":{"id":"xxxxxxfa-xxxx-xxxx-xxxx-76dxxxxxxxxx","name":"IIS"},"name":"Sxxxxxxxda-subscription","description":""}]}
+```
+
+### Resolution
+
+Check the user permission on the subscription. Make sure that the user has the Owner or User Access Administrator permission on the Subscription.
+
 ## "You don't appear to have an active Azure subscription" error
 
 When users try to create a new Azure RM automatic subscription-based service connection, they receive a "You don't appear to have an active Azure subscription" error message.
@@ -92,38 +115,3 @@ A maximum of 50 Azure subscriptions are listed. If the subscription isn't listed
 1. Add the Azure AD user to the Azure DevOps organization to have the Stakeholder access level, and then add it to the **Project Collection Administrators group (for billing)**. Or, make sure that the user has sufficient permissions in the Team Project to create service connections.
 
 1. Log in to Azure DevOps by using the new user credentials, and then set up a billing. You will see only one Azure subscription in the list.
-
-## Create Azure RM service principal (manual)
-
-Per company policy and security protocols, some Azure DevOps admins don't have permissions to manage Azure subscriptions. To create service principal names (SPNs), these admins can use the manual Azure RM service principal option.
-
-To create SPNs, users who have permissions for Azure subscriptions and Azure Active Directory (Azure AD) can follow these steps:
-
-1. Sign in to the [Azure portal](https://ms.portal.azure.com/#home).
-
-1. Select **Azure Active Directory > App registrations**.
-
-1. Select your application on the list, and then select **Client secrets > New client secret**.
-
-1. Provide a description and duration for the application secret (password-based authentication), and then select **Add**.
-
-For more information, see [Create a new application secret](/azure/active-directory/develop/howto-create-service-principal-portal).
-
-Provide this SPN Contributor role or similar RBAC permissions on the subscription. You can even provide the Reader role at the subscription level. However, make sure that you provide Contributor access on the resource and resource group that these roles would update or deploy.
-
-To get the subscription details and create an ARM service connection by using the manual **Azure RM service principal** option, see [Create an Azure Resource Manager service connection with an existing service principal](/azure/devops/pipelines/library/connect-to-azure?view=azure-devops&preserve-view=true).
-
-Subscription details include the following information:
-
-- Subscription ID
-- Subscription Name
-- Service principal ID (client ID)
-- Service principal key (the value of the secret that you created in step 3)
-- Tenant ID (Directory ID)**
-
-To get this information, download and run this [PowerShell script](https://github.com/microsoft/azure-pipelines-extensions/blob/master/TaskModules/powershell/Azure/SPNCreation.ps1) in an Azure PowerShell window. When you are prompted, enter your subscription name, password, role (optional), and the cloud type, such as Azure Cloud (default), Azure Stack, or Azure Government Cloud.
-
-## See also
-
-[Subscription isn't listed when creating a service connection](/azure/devops/pipelines/release/azure-rm-endpoint?view=azure-devops&preserve-view=true)
-

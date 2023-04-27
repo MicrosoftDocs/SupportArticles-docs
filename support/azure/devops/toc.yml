@@ -38,24 +38,18 @@
     href: other-release-management-component-no-work.md
   - name: Azure Resource Manager service connections
     items:
-    - name: Overview of the Azure Resource Manager service connection
+    - name: Troubleshoot Azure Resource Manager service connection issues
       href: overview-of-azure-resource-manager-service-connections.md
-    - name: Create and save an Azure RM service connection
-      href: create-and-save-azure-rm-service-connection.md
-    - name: Tools used for troubleshooting Azure RM service connection scenarios
-      href: tools-used-to-troubleshoot-scenarios-azure-rm-service-connection.md
     - name: Service connection creation issues
       items:
-      - name: Troubleshooting tips for problems while creating Azure RM service connection
-        href: troubleshoot-issues-while-creating-service-connections.md
-      - name: Troubleshoot subscription related scenarios while creating service connections
+      - name: Subscription loading issues
         href: troubleshoot-subscription-related-scenarios.md
-      - name: Troubleshoot issues related to verifying Azure Resource Manager service connections
-        href: troubleshoot-issues-related-to-verifying-service-connections.md
-    - name: Service connection update issues
-      items:
-      - name: Troubleshoot issues while deleting service connections
-        href: troubleshoot-issues-while-deleting-service-connection.md
+      - name: Azure RM Service connection not listed for a task
+        href: azure-rm-service-connection-not-listed-for-a-task.md
+      - name: Fail to verify the service connection
+        href: fail-to-verify-service-connection.md
+      - name: Fail to delete an existing Azure RM service connection
+        href: user-is-not-able-to-delete-existing-service-connection.md
 
 - name: Repos
   items:
