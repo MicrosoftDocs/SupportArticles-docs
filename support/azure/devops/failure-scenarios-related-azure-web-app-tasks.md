@@ -22,7 +22,7 @@ ms.subservice: ts-pipelines
 
 - **Error 2: "Encountered a retriable error:ECONNRESET. Message: read ECONNRESET"**
 
-- Resolution:
+  **Resolution**:
 
   - If you're using the Microsoft-hosted agent and App Services in an ASE environment, make sure you have opened the [IP addresses](https://www.microsoft.com/download/details.aspx?id=56519) for the Microsoft-hosted agent geography. See [Allowed IP addresses and domain URLs](/azure/devops/organizations/security/allow-list-ip-url) for IP address ranges of incoming connections.
 
