@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting TCP/IP communication
 description: Introduces general guidance for troubleshooting scenarios related to TCP/IP communication.
-ms.date: 03/16/2022
+ms.date: 5/10/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -14,6 +14,9 @@ ms.custom: sap:tcpip-communication, csstroubleshoot
 ms.technology: networking
 ---
 # TCP/IP communication troubleshooting guidance
+
+> [!div class="nextstepaction"]
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806409" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common Active Directory replication issues.
 
 This article is designed to help you troubleshoot TCP/IP communication issues.
 

@@ -1,7 +1,7 @@
 ---
 title: TGS requests for krbtgt account fail
 description: Describes an issue that causes S4U Kerberos authentication to fail for a user in a trusted forest. Occurs when selective authentication is enabled on the forest trust and when an application calls LsalogonUser by using a Kerberos S4U client request.
-ms.date: 09/10/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

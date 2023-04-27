@@ -1,7 +1,7 @@
 ---
 title: Not Boot In Normal Mode
 description: Provides some information about Windows does not boot in Normal Mode due to a driver issue.
-ms.date: 10/09/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

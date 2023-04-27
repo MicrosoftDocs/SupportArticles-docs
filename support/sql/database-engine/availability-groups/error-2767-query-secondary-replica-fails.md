@@ -1,7 +1,7 @@
 ---
 title: Error 2767 when query against the secondary replica fails
 description: Works around an issue that a query on the secondary replica fails with error 2767 - Could not locate statistics when offloading read-only workloads to a secondary replica.
-ms.date: 
+ms.date: 12/29/2022
 ms.reviewer: 
 ms.prod: sql 
 ---
@@ -25,7 +25,7 @@ When offloading read-only workloads to a secondary replica of an Always On avail
 
 ## Cause
 
-This issue occurs because an active transaction prevents the log record of cache invalidation from accessing and refreshing the statistics on the secondary replica.
+This issue occurs because an active transaction prevents the cache invalidation log record from accessing and refreshing the statistics on the secondary replica.
 
 ## Workaround
 
@@ -57,6 +57,7 @@ To work around the issue, use one of the following methods as required:
     ```powershell
     Invoke-AzSqlInstanceFailover -ResourceGroupName "<ResourceGroupName>" -Name "<ManagedInstanceName>" -ReadableSecondary
     ```
+
     This cmdlet fails over the readable secondary replica of the Managed Instance named `<ManagedInstanceName>`.
 
 - SQL Server, Azure SQL Database, and Azure SQL Managed Instance

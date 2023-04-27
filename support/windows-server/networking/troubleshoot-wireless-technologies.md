@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting wireless technology issues
 description: Learn how to troubleshoot scenarios related to wireless technologies
-ms.date: 5/13/2022
+ms.date: 5/14/2022
 author: v-tappelgate
 ms.author: v-tappelgate
 manager: dcscontentpm
@@ -16,6 +16,9 @@ keywords: wireless connection, dropped connection, wireless authentication
 ---
 
 # Wireless technology troubleshooting guidance
+
+> [!div class="nextstepaction"]
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806441" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common Wireless technology issues.
 
 Wireless connections involve many different Windows components, as well as third-party devices and software. For example, Microsoft doesn't make access points or switches. Because wireless connectivity isn't an end-to-end Microsoft solution, you have to identify where the problem is, and in many cases another vendor has to fix it.
 

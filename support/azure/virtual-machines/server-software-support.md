@@ -1,7 +1,7 @@
 ---
 title: Microsoft server software support for Microsoft Azure Virtual Machines
 description: Discusses the support policy for Microsoft server software in a Microsoft Azure Virtual Machine environment.
-ms.date: 07/21/2020
+ms.date: 04/03/2023
 ms.reviewer: drewm, coreysa
 ms.service: virtual-machines
 ms.subservice: vm-support-statements
@@ -22,7 +22,7 @@ All Microsoft, software that's installed in the Azure virtual machine environmen
 
 In some cases, specific versions of Microsoft server software are required for support. These versions are noted in this article, and the supported versions may be updated as required.
 
-Microsoft does not support an upgrade of the operating system of a Microsoft Azure Virtual Machine. (For more information, see KB [4014997](https://support.microsoft.com/help/4014997).) Instead, you should create a new Azure virtual machine that is running the supported version of the operating system that is required and then migrate the workload. Instructions for how to migrate Windows Server roles and features are available in the following TechNet topic: [Install, use, and remove Windows Server migration tools](https://technet.microsoft.com/library/jj134202).
+Microsoft does not support an in-place upgrade of certain versions of the operating system in a Microsoft Azure Virtual Machine. (For more information, see KB [4014997](https://support.microsoft.com/help/4014997).) Instead, you should create a new Azure virtual machine that is running the supported version of the operating system that is required and then migrate the workload. Instructions for how to migrate Windows Server roles and features are available in the following TechNet topic: [Install, use, and remove Windows Server migration tools](https://technet.microsoft.com/library/jj134202).
 
 ## Supported software
 
@@ -106,9 +106,9 @@ Team Foundation Server 2012 and later versions are supported.
 
 ## Windows Server
 
-Windows Server 2016 Standard is not available in the Azure Marketplace.
+Standard editions of Windows Server 2016 and Windows Server 2019 aren't available in Azure Marketplace. To use them, [upload an image](/azure/virtual-machines/windows/prepare-for-upload-vhd-image).
 
-Windows Server 2003 and later versions are supported for deployment in Microsoft Azure.  Click [here](https://support.microsoft.com/help/3206074) to see more information about running Windows Server 2003 on Azure.
+Windows Server 2003 and later versions are supported for deployment in Microsoft Azure. Click [here](https://support.microsoft.com/help/3206074) to see more information about running Windows Server 2003 on Azure.
 
 For versions that are earlier than Windows Server 2008 R2, there is no Azure Marketplace support, and customers must provide their own images. The ability to deploy an operating system on Microsoft Azure is independent of the support status of the operating system. Microsoft does not support operating systems that are past their [End of Support date](https://support.microsoft.com/lifecycle/search) without a Custom Support Agreement (CSA). For example, Windows Server 2003/2003 R2 is no longer supported without a CSA.
 

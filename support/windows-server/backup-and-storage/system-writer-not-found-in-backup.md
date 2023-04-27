@@ -1,7 +1,7 @@
 ---
 title: System state backup fails
 description: Provides a solution to an issue where you fail to perform a system state backup by using Windows Server Backup.
-ms.date: 10/13/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

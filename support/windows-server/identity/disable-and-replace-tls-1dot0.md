@@ -1,7 +1,7 @@
 ---
 title: Disable and replace TLS 1.0 in ADFS
 description: Provides guidance and considerations for disabling and replacing TLS 1.0 in ADFS.
-ms.date: 10/12/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -227,7 +227,7 @@ For example, this is true when you access Autodiscover. In this scenario, Outloo
 
 `xmlRequest` sent:
 
-> GET https://autodiscover-s.outlook.com/Autodiscover/Autodiscover.xml HTTP/1.1  
+> GET `https://autodiscover-s.outlook.com/Autodiscover/Autodiscover.xml` HTTP/1.1  
 Host: autodiscover-s.outlook.com  
 User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0  
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8  
@@ -325,6 +325,6 @@ Workarounds:
 
 - [Payment Card Industry (PCI) Data Security Standard (DSS)](/microsoft-365/compliance/offering-pci-dss)
 
-- [Error While Configuring WAP–”The Underlying Connection Was Closed”–Part 2](/archive/blogs/keithab/error-while-configuring-wapthe-underlying-connection-was-closedpart-2)  
+- [Error While Configuring WAP–"The Underlying Connection Was Closed"–Part 2](/archive/blogs/keithab/error-while-configuring-wapthe-underlying-connection-was-closedpart-2)  
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

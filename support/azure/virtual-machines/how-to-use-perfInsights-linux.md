@@ -196,7 +196,7 @@ The following categories of rules are currently supported:
     | Debian                     | 8, 9, 10, 11 [`*`]                                    |
     | SLES                       | 12 SP4 [`*`], 12 SP5 [`*`], 15 [`*`], 15 SP1 [`*`], 15 SP2 [`*`], 15 SP4 [`*`]                                      |
     | AlmaLinux                  | 8.4, 8.5                                               |
-    |                            |                                                   |
+    | CBL-Mariner                | 2.0                                                   |
 
 >[!Note]
 >[`*`] Please refer to [Known issues](#known-issues) section
@@ -206,13 +206,13 @@ The following categories of rules are currently supported:
 
 ### Known issues
 
-- RHEL 8 does not have Python installed by default. To run PerfInsights Linux, you must first install Python 2.7 or Python 3.x
+- RHEL 8 does not have Python installed by default. To run PerfInsights Linux, you must first install Python 3.6 or a later version.
 
-- Guest Agent information collection may fail on CentOS 6.x
+- Guest Agent information collection may fail on CentOS 6.x.
 
-- PCI devices information is not collected on Debian based distributions
+- PCI devices information is not collected on Debian based distributions.
 
-- LVM information is partially collected on some distributions
+- LVM information is partially collected on some distributions.
 
 ### How do I run PerfInsights
 

@@ -1,7 +1,7 @@
 ---
 title: Shadow a Terminal Server session
 description: Describes how to shadow a Terminal Server session without a prompt for approval.
-ms.date: 10/09/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

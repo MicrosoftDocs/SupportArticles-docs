@@ -3,7 +3,6 @@ title: Error when you process a database or a cube
 description: This article provides a resolution for the problem where you receive error messages when you try to process a database or a cube in SQL Server Analysis Services.
 ms.date: 09/22/2020
 ms.custom: sap:Analysis Services
-ms.prod: sql
 ---
 # Error messages when you try to process a database or a cube
 

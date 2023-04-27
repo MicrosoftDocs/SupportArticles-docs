@@ -73,7 +73,7 @@ According to IANA standards, the output should look like this:
 If you see a different **Start Port**, the problem may be that the firewall isn't configured correctly to allow traffic through these ports. You can change the configuration on the firewall or run the following command to set the high range ports back to their default values:
 
 ```console
-netsh int ipv4 set dynamicport tcp start=49152 num=16383
+netsh int ipv4 set dynamicport tcp start=49152 num=16384
 ```
 
 You can also configure the RPC dynamic port range through the registry. For more information, see [How to configure RPC dynamic port allocation to work with firewalls](https://support.microsoft.com/help/154596).

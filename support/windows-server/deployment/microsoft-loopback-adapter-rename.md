@@ -1,7 +1,7 @@
 ---
 title: Installing the Microsoft Loopback Adapter in Windows
 description: Fixes an issue where you can't find the Microsoft Loopback Adapter.
-ms.date: 09/07/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

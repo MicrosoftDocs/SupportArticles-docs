@@ -1,7 +1,7 @@
 ---
 title: Verify first-party Microsoft applications in sign-in reports
 description: Describes how to verify first-party Microsoft applications in sign-in reports
-ms.date: 12/22/2022
+ms.date: 03/10/2023
 ms.reviewer: bernaw
 ms.service: active-directory
 ms.subservice: compliance
@@ -90,6 +90,7 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Microsoft Authentication Broker|29d9ed98-a469-4536-ade2-f981bc1d605e|
 |Microsoft Azure CLI|04b07795-8ddb-461a-bbee-02f9e1bf7b46|
 |Microsoft Azure PowerShell|1950a258-227b-4e31-a9cf-717495945fc2|
+|MicrosoftAzureActiveAuthn|0000001a-0000-0000-c000-000000000000|
 |Microsoft Bing Search|cf36b471-5b44-428c-9ce7-313bf84528de|
 |Microsoft Bing Search for Microsoft Edge|2d7f3606-b07d-41d1-b9d2-0d0c9296a6e8|
 |Microsoft Bing Default Search Engine|1786c5ed-9644-47b2-8aa0-7201292175b6|
@@ -150,6 +151,7 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Universal Store Native Client|268761a2-03f3-40df-8a8b-c3db24145b6b|
 |Vortex [wsfed enabled]|5572c4c0-d078-44ce-b81c-6cbf8d3ed39e|
 |Windows Azure Active Directory|00000002-0000-0000-c000-000000000000|
+|Windows Azure Security Resource Provider|8edd93e1-2103-40b4-bd70-6e34e586362d|
 |Windows Azure Service Management API|797f4846-ba00-4fd7-ba43-dac1f8f63013|
 |WindowsDefenderATP Portal|a3b79187-70b2-4139-83f9-6016c58cd27b|
 |Windows Search|26a7ee05-5602-4d76-a7ba-eae8b7b67941|

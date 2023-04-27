@@ -1,7 +1,7 @@
 ---
 title: How to use the EventCombMT utility to search event logs for account lockouts
 description: Describes how to use the EventCombMT utility (EventCombmt.exe) to search the event logs of multiple computers for account lockouts.
-ms.date: 12/07/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

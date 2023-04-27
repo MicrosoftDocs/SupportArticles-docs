@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting DirectAccess
 description: Introduces general guidance for troubleshooting scenarios related to DirectAccess.
-ms.date: 03/16/2022
+ms.date: 5/10/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -14,6 +14,9 @@ ms.custom: sap:directaccess, csstroubleshoot
 ms.technology: networking
 ---
 # DirectAccess troubleshooting guidance
+
+> [!div class="nextstepaction"]
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806260" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common DirectAccess issues.
 
 This guide provides troubleshooting information for DirectAccess in the Windows operating systems. It's designed to help you identify and resolve problems that are related to DirectAccess.
 

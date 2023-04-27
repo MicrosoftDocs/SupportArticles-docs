@@ -2,11 +2,11 @@
 title: Troubleshoot Azure Monitor Application Insights for Java
 description: This article presents troubleshooting information for the Java agent for Azure Monitor Application Insights.
 ms.topic: conceptual
-ms.date: 6/22/2022
+ms.date: 3/10/2023
 ms.author: v-dele
 author: DennisLee-DennisLee
 editor: v-jsitser
-ms.reviewer: aaronmax
+ms.reviewer: aaronmax, jeanbisutti, trstalna, toddfous, heya
 ms.service: azure-monitor
 ms.subservice: application-insights
 ms.devlang: java
@@ -20,7 +20,7 @@ This article provides troubleshooting information to resolve common issues that 
 
 ## Check the self-diagnostic log file
 
-By default, Application Insights Java 3.x produces a log file named *applicationinsights.log* in the same directory
+By default, Application Insights Java 3._x_ produces a log file named *applicationinsights.log* in the same directory
 that holds the *applicationinsights-agent-3.2.11.jar* file.
 
 This log file is the first place to check for hints about any issues you might be experiencing.
@@ -28,16 +28,40 @@ This log file is the first place to check for hints about any issues you might b
 If there's still no log file generated, check to make sure that your Java application has write permission to the directory that holds the
 *applicationinsights-agent-3.2.11.jar* file.
 
-If there's still no log file generated, check the `stdout` log from your Java application for errors. Application Insights Java 3.x
-should log any errors that would prevent it from logging to its normal location to the `stdout` log.
+If there's still no log file that's generated, check the `stdout` log from your Java application for errors. Application Insights Java 3._x_
+should log any errors that would prevent it from logging to its normal location in the `stdout` log.
+
+## Troubleshoot connectivity issues
+
+Application Insights SDKs and agents send telemetry to be ingested as REST calls at our ingestion endpoints. To test connectivity from your web server or application host computer to the ingestion service endpoints, use raw REST clients from PowerShell or run [curl commands](https://curl.se/). See [Troubleshoot missing application telemetry in Azure Monitor Application Insights](investigate-missing-telemetry.md).
+
+If the connectivity issue is caused by the Application Insights Java agent, consider the following options:
+
+- [Verify the connection string for the Application Insights configuration](/azure/azure-monitor/app/java-standalone-config#connection-string).
+
+- Use Application Insights Java version 3.4.6 or a later version to verify that the Java keystore contains a required certificate. To do this, [enable the self-diagnostics feature](/azure/azure-monitor/app/java-standalone-config#self-diagnostics) at the `TRACE` level. In the Application Insights logs, do you see the following entry?
+
+  > TRACE c.m.applicationinsights.agent - Application Insights root certificate in the Java keystore: false
+
+  If you see this entry, refer to [Import SSL certificates](#import-ssl-certificates) to import a root certificate in the Java keystore.
+
+- If you use the `-Djsse.enableSNIExtension=false` option, try to run the agent without that option. From Application Insights Java version 3.4.5, if you specify `-Djsse.enableSNIExtension=false`, the following error entry appears in the logs:
+
+  > WARN  c.m.applicationinsights.agent - System property -Djsse.enableSNIExtension=false is detected. If you have connection issues with Application Insights, please remove this.
+
+- If none of the previous options are helpful, you can use [troubleshooting tools](https://github.com/microsoft/ApplicationInsights-Java/wiki/Diagnose-connection-to-the-Application-Insights-backend-(3.x)#additional-tests).
 
 ## Java virtual machine (JVM) fails to start
 
 If the Java virtual machine (JVM) fails to start, it might return an "Error opening zip file or JAR manifest missing" message. That error means that the agent jar file might have been corrupted during file transfer. Try redownloading the agent jar file.
 
-## Upgrade from the Application Insights Java 2.x SDK
+## Tomcat Java apps take several minutes to start
 
-If you're already using the Application Insights Java 2.x SDK in your application, you can keep using it. The Application Insights Java 3.x agent will detect, capture, and correlate any custom telemetry you're sending through the 2.x SDK. It will also prevent duplicate telemetry by suppressing any auto-collection performed by the 2.x SDK. For more information, see [Upgrade from the Java 2.x SDK](/azure/azure-monitor/app/java-standalone-upgrade-from-2x).
+If you [enabled Application Insights to monitor your Tomcat application](/azure/azure-monitor/app/java-standalone-arguments#tomcat-8-linux), there might be a several-minute delay in the time that it takes to start the application. This delay is caused because Tomcat tries to scan the Application Insights jar files during application startup. To speed up the application start time, you can exclude the Application Insights jar files from the list of scanned files. Scanning these jar files isn't necessary.
+
+## Upgrade from the Application Insights Java 2._x_ SDK
+
+If you're already using the Application Insights Java 2._x_ SDK in your application, you can keep using it. The Application Insights Java 3._x_ agent will detect, capture, and correlate any custom telemetry you're sending through the 2._x_ SDK. It will also prevent duplicate telemetry by suppressing any auto-collection performed by the 2._x_ SDK. For more information, see [Upgrade from the Java 2._x_ SDK](/azure/azure-monitor/app/java-standalone-upgrade-from-2x).
 
 ## Upgrade from Application Insights Java 3.0 preview
 
@@ -196,6 +220,16 @@ In this case, the server side is the Application Insights ingestion endpoint or 
 If you're using Java 9 or later, check to make sure the JVM has the `jdk.crypto.cryptoki` module included in the *jmods* folder. Also, if you're building a custom Java runtime using `jlink`, be sure to include the same module.
 
 Otherwise, these cipher suites should already be part of modern Java 8+ distributions. We recommend that you check where you installed your Java distribution from, and investigate why the security providers in that Java distribution's *java.security* configuration file differ from standard Java distributions.
+
+## Slow startup time in Application Insights and Java 8
+
+There's a known issue in Java 8 that's related to the jar file signature verification of Java agents. This issue can increase the startup time in Application Insights. To fix this issue, you can apply one of the following options:
+
+- If your application is based on Spring Boot, [runtime attach the Application Insights Java agent](/azure/azure-monitor/app/java-spring-boot#enabling-programmatically).
+
+- Use Java version 11 or a later version.
+
+Alternatively, you can try the following experimental feature: [Startup time improvement for a limited number of CPU cores](https://github.com/microsoft/ApplicationInsights-Java/wiki/Start-up-time-improvement-with-a-limited-number-of-CPU-cores-(experimental)). If you experience any issues while using this feature, send us feedback.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 

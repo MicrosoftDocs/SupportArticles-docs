@@ -8,6 +8,7 @@ ms.reviewer: jopilov
 ms.custom: sap:Administration and Management
 ms.prod: sql
 ---
+
 # OS errors 665 and 1450 are reported for SQL Server files
 
 This article helps you resolve the problem where OS errors 1450 and 665 are reported for database files while executing `DBCC CHECKDB`, creating a Database Snapshot, or file growth.
@@ -55,7 +56,7 @@ In rare cases, you may observe a non-yielding scheduler issue reported in the SQ
 
 ## Cause
 
-This problem occurs if a large number of `ATTRIBUTE_LIST_ENTRY` instances are needed to maintain a heavily fragmented file in NFTS. If the space is next to a cluster that's already tracked by the file system, then the attributes are compressed into a single entry. However, if the space is fragmented, it has to be tracked with multiple attributes. Thus, heavy file fragmentation can lead to attribute exhaustion and the resulting 665 error. This behavior is explained in the following KB article: [A heavily fragmented file in an NTFS volume may not grow beyond a certain size](https://support.microsoft.com/help/967351).
+This problem occurs if a large number of `ATTRIBUTE_LIST_ENTRY` instances are needed to maintain a heavily fragmented file in NTFS. If the space is next to a cluster that's already tracked by the file system, then the attributes are compressed into a single entry. However, if the space is fragmented, it has to be tracked with multiple attributes. Thus, heavy file fragmentation can lead to attribute exhaustion and the resulting 665 error. This behavior is explained in the following KB article: [A heavily fragmented file in an NTFS volume may not grow beyond a certain size](https://support.microsoft.com/help/967351).
 
 Both regular and sparse files created by SQL Server or other applications can get fragmented to these levels when large amounts of data modifications happen for the life of these snapshot files.
 

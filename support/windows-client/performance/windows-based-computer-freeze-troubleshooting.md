@@ -1,7 +1,7 @@
 ---
 title: Windows-based computer freeze troubleshooting
 description: Learn how to troubleshoot computer freeze issues on Windows-based computers and servers. Also, you can learn how to diagnose, identify, and fix these issues.
-ms.date: 08/24/2022
+ms.date: 03/10/2023
 ms.prod: windows-client
 ms.technology: windows-client-performance
 ms.topic: troubleshooting
@@ -90,7 +90,7 @@ If the computer is no longer frozen and now is running in a good state, use the 
 
 1. Make sure that the computer is set up to get a complete memory dump file.
 
-    1. Go to **Run** and enter *Sysdm.cpl*, and then press enter.
+    1. Go to **Run** and enter *Sysdm.cpl*, and then press Enter.
     2. In **System Properties**, on the **Advanced** tab, select **Performance** > **Settings** > **Advanced**. Select **Change** to check or change the virtual memory.
     3. Go back to **System Properties** > **Advanced** > **Settings** in **Startup and Recovery**.
     4. In the **Write Debugging Information** section, select **Complete Memory Dump**.
@@ -128,7 +128,7 @@ If the computer is no longer frozen and now is running in a good state, use the 
 Use the Dump Check Utility (*Dumpchk.exe*) to read a memory dump file. It can also verify that the file was created correctly and isn't corrupted or invalid.
 
 - [Using DumpChk](/windows-hardware/drivers/debugger/dumpchk)
-- [Download DumpChk](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
+- [Download DumpChk](https://developer.microsoft.com/windows/downloads/windows-sdk)
 
 Learn how to use *Dumpchk.exe* to check your dump files:
 

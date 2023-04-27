@@ -6,6 +6,7 @@ author: AmandaAZ
 ms.author: v-weizhu
 ms.reviewer: hilarywang, azurevmlnxcic, azurevmcptcic
 ms.service: virtual-machine-scale-sets
+ms.subservice: troubleshoot-compute-health
 ---
 # Azure Virtual Machine Scale Set instances aren't repaired even when the automatic repairs policy is enabled
 

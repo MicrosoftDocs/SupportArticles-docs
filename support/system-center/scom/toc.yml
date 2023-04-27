@@ -98,6 +98,8 @@
     href: exchange-2010-management-pack-guidance.md
   - name: Regular expression support
     href: regular-expression-support.md
+  - name: Remove duplicate Management pack aliases
+    href: remove-duplicate-management-pack-aliases.md
 - name: Monitor log files
   items:
   - name: Monitor text and CSV log files

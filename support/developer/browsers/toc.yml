@@ -1,5 +1,5 @@
 - name: Welcome
-  href: welcome-browsers.md
+  href: welcome-browsers.yml
 
 - name: Administration
   items:

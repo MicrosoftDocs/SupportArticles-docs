@@ -344,8 +344,12 @@
       href: ./deployment/updates-automatically-downloaded.md
     - name: Windows Update blocked because of drive reassignment
       href: ./deployment/drive-reassignment-block-update.md
+    - name: Windows Update common errors and mitigation
+      href: ./deployment/common-windows-update-errors.md
     - name: Windows Update hangs
       href: ./deployment/windows-update-hangs-updates-uninstalled.md
+    - name: Windows Update issues troubleshooting
+      href: ./deployment/windows-update-issues-troubleshooting.md
   - name: Setup
     items:
     - name: Windows 10 upgrade resolution procedures
@@ -362,6 +366,10 @@
       href: ./deployment/cant-enter-uefi-firmware-setup.md
     - name: Can't turn off a computer from Audit mode
       href: ./deployment/fail-to-turn-off-computer-from-audit-mode.md
+    - name: Windows 10 upgrade issues troubleshooting
+      href: ./deployment/windows-10-upgrade-issues-troubleshooting.md
+    - name: Windows 10 upgrade error codes
+      href: ./deployment/windows-10-upgrade-error-codes.md
     - name: Computer screen goes black during setup
       href: ./deployment/computer-screen-black-during-installation.md
     - name: Customize default local user profile
@@ -422,6 +430,8 @@
     items:
     - name: USMT common issues
       href: ./deployment/usmt-common-issues.md
+    - name: USMT return codes
+      href: ./deployment/usmt-return-codes.md
 - name: Group Policy
   items:
   - name: Group Policy
@@ -936,6 +946,8 @@
       href: ./shell-experience/cannot-set-timezone-automatically.md
     - name: Changes to calendar date in BIOS are not reflected in Windows
       href: ./shell-experience/changes-calendar-date-in-bios-not-reflected.md
+    - name: Daylight saving time help and support
+      href: ./system-management-components/daylight-saving-time-help-support.md
   - name: File Associations
     items:
     - name: Can't associate a program with an extension
@@ -1000,13 +1012,13 @@
     items:
     - name: Windows Search 4.0 and Multilingual User Interface Pack
       href: ./shell-experience/windows-search-4-multilingual-user-interface-pack.md
-  - name: KIOSK-MODE
+  - name: Kiosk mode
     items:
     - name: Kiosk mode issues troubleshooting
       href: ./shell-experience/kiosk-mode-issues-troubleshooting.md
-  - name: START-MENU
+  - name: Start menu
     items:
-    - name: Troubleshoot Start menu errors
+    - name: 'Troubleshooting guidance: Start menu'
       href: ./shell-experience/troubleshoot-start-menu-errors.md
 - name: System Management Components
   items:
@@ -1016,10 +1028,6 @@
     items:
     - name: Delete saved logs from Event Viewer
       href: ./system-management-components/delete-saved-log-from-event-viewer.md
-  - name: Help and Support
-    items:
-    - name: Daylight saving time help and support
-      href: ./system-management-components/daylight-saving-time-help-support.md
   - name: Microsoft Management Console (MMC)
     items:
     - name: Error when you launch VAMT 3.0
@@ -1048,8 +1056,14 @@
       href: ./system-management-components/task-scheduler-task-only-runs-in-background.md
     - name: Use the at command to schedule tasks
       href: ./system-management-components/use-at-command-to-schedule-tasks.md
+  - name: WER
+    items:
+    - name: Windows Error Reporting and Windows diagnostics enablement guidance
+      href: ./system-management-components/windows-error-reporting-diagnostics-enablement-guidance.md
   - name: WinRM
     items:
+    - name: Can't establish a PowerShell remote session using WinRM
+      href: ./system-management-components/can-not-establish-ps-remote-session-winrm-aad-only-joined-machines.md    
     - name: Errors when you run WinRM commands
       href: ./system-management-components/errors-when-you-run-winrm-commands.md
     - name: How to configure WINRM for HTTPS
@@ -1280,5 +1294,13 @@
     href: ./windows-troubleshooters/windows-troubleshooters-overview.md
   - name: Active and retired Windows 10 troubleshooters
     href: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md
-  - name: Introduction to TroubleShootingScript toolset (TSSv2)
-    href: ./windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md
+  - name: TroubleShootingScript toolset (TSSv2)
+    items:
+    - name: Introduction to TroubleShootingScript toolset (TSSv2)
+      href: ./windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md
+    - name: Gather information for Active Directory replication issues
+      href: ./windows-troubleshooters/gather-information-using-tssv2-ad-replication.md
+    - name: Gather information for deployment-related issues
+      href: ./windows-troubleshooters/gather-information-using-tssv2-deployment.md
+    - name: Gather information for Group Policy issues
+      href: ./windows-troubleshooters/gather-information-using-tssv2-group-policy.md

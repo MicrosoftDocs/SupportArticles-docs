@@ -12,6 +12,7 @@ metadata:
    description: Find the documentation you need to troubleshoot issues and apply workarounds for the following commercial products from Microsoft.
    ms.topic: hub-page  
    ms.service: troubleshoot
+   ms.date: 02/06/2020
 
 
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -29,12 +30,12 @@ productDirectory:
   - title: Microsoft Edge and Internet Explorer
     imageSrc: "media/hub-landing/Edge.jpg"
     summary: Troubleshooting articles for Microsoft Edge and Internet Explorer
-    url: developer/browsers/welcome-browsers.md
+    url: developer/browsers/welcome-browsers.yml
       
   - title: BizTalk Server
     imageSrc: "media/hub-landing/biztalk.svg"
     summary: Troubleshooting articles for BizTalk Server
-    url: developer/biztalk/welcome-biztalk-server.md
+    url: developer/biztalk/welcome-biztalk-server.yml
       
   - title: .NET
     imageSrc: "media/hub-landing/logo_NET.svg"
@@ -49,17 +50,17 @@ productDirectory:
   - title: Host Integration Server
     imageSrc: "media/hub-landing/his.jpeg"
     summary: Troubleshooting articles for Host Integration Server
-    url: developer/host-integration-server/welcome-host-integration-server.md
+    url: developer/host-integration-server/welcome-host-integration-server.yml
       
   - title: Web Apps
     imageSrc: "media/hub-landing/app-service-web.svg"
     summary: Troubleshooting articles for Web Apps
-    url: developer/webapps/welcome-webapps.md
+    url: developer/webapps/welcome-webapps.yml
 
   - title: SQL Server 
     imageSrc: "media/hub-landing/sql-database-blue.svg"
     summary: Troubleshooting articles for SQL Server
-    url: sql/welcome-sql-server.md
+    url: sql/welcome-sql-server.yml
 
   - title: Endpoint management
     imageSrc: "media/hub-landing/microsoft.png"

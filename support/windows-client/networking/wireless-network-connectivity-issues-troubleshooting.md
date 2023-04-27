@@ -1,7 +1,7 @@
 ---
 title: Wireless network connectivity issues troubleshooting
 description: Learn how to troubleshoot Wi-Fi connections. Troubleshooting Wi-Fi connections requires understanding the basic flow of the Wi-Fi autoconnect state machine.
-ms.date: 08/23/2022
+ms.date: 03/10/2023
 manager: dcscontentpm
 ms.prod: windows-client
 author: aczechowski
@@ -14,6 +14,9 @@ audience: itpro
 localization_priority: medium
 ---
 # Advanced troubleshooting wireless network connectivity
+
+> [!div class="nextstepaction"]
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806441" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common Wireless technology issues.
 
 > [!NOTE]
 > Home users: This article is intended for use by support agents and IT professionals. If you're looking for more general information about Wi-Fi problems in Windows 10, check out this [Windows 10 Wi-Fi fix article](https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c).
@@ -39,7 +42,7 @@ Wireless ETW is incredibly verbose and calls out many innocuous errors (rather f
 It's important to understand the different Wi-Fi components involved, their expected behaviors, and how the problem scenario deviates from those expected behaviors.
 The intention of this troubleshooter is to show how to find a starting point in the verbosity of wireless_dbg ETW and home in on the responsible components that are causing the connection problem.
 
-### Known Issues and fixes
+### Known issues and fixes
 
 | OS version | Fixed in |
 | --- | --- |
@@ -59,7 +62,7 @@ Make sure that you install the latest Windows updates, cumulative updates, and r
 - [Windows Server 2012](https://support.microsoft.com/help/4009471)
 - [Windows 7 SP1 and Windows Server 2008 R2 SP1](https://support.microsoft.com/help/4009469)
 
-## Data Collection
+## Data collection
 
 1. Network Capture with ETW. Enter the following command at an elevated command prompt:
 
@@ -332,4 +335,5 @@ Copy and paste all the lines below and save them into a text file named *wifi.ta
 
 In the following example, the **View** settings are configured to **Show Only Filtered Lines**.
 
-:::image type="content" source="media/wireless-network-connectivity-issues-troubleshooting/text-analysis-tool.png" alt-text="Screenshot of an TAT filter example." border="false":::
+:::image type="content" source="media/wireless-network-connectivity-issues-troubleshooting/text-analysis-tool.png" alt-text="Screenshot of an TAT filter example." border="false" lightbox="media/wireless-network-connectivity-issues-troubleshooting/text-analysis-tool.png":::
+

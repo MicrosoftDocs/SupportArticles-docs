@@ -207,7 +207,7 @@ Follow these steps to troubleshoot these issues:
       * ********************************************
       ```
 
-1. If you locate one of these errors, identify which version (Cumulative Update) of SQL Server you are on, and see if there are any fixed issues in Cumulative updates shipped after your current CU. For the SQL Server fixes, see [Latest updates available for currently supported versions of SQL Server](/troubleshoot/sql/general/determine-version-edition-update-level#latest-updates-available-for-currently-supported-versions-of-sql-server). For a detailed fix list, you can download this [Excel file](https://download.microsoft.com/download/d/3/e/d3e28f3d-6a4f-47ce-aaa5-9d74c5590ed6/SQLServerBuilds.xlsx).
+1. If you locate one of these errors, identify which version (Cumulative Update) of SQL Server you are on, and see if there are any fixed issues in Cumulative updates shipped after your current CU. For the SQL Server fixes, see [Latest updates available for currently supported versions of SQL Server](/troubleshoot/sql/general/determine-version-edition-update-level#latest-updates-available-for-currently-supported-versions-of-sql-server). For a detailed fix list, you can download this [Excel file](https://aka.ms/sqlserverbuilds).
 
 1. Use [Troubleshooting SQL Server Scheduling and Yielding](https://techcommunity.microsoft.com/t5/sql-server-support-blog/troubleshooting-sql-server-scheduling-and-yielding/ba-p/319148) for more ideas.
 
@@ -218,3 +218,4 @@ Follow these steps to troubleshoot these issues:
 1. For Resource Monitor issues, you may not necessarily be concerned with this issue in some cases. For more information, see [Resource Monitor enters a non-yielding condition on a server running SQL Server](../performance/resource-monitor-nonyielding-condition.md).
 
 1. If these resources don't help, locate the memory dump created in the \LOG subdirectory and open a support ticket with Microsoft CSS by uploading the memory dump for analysis.
+

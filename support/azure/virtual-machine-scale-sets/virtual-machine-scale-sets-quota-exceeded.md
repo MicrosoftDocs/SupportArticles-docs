@@ -8,6 +8,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.service: virtual-machine-scale-sets
+ms.subservice: troubleshoot-scaling-errors
 ---
 
 # QuotaExceeded error when scaling virtual machine scale sets
@@ -30,7 +31,7 @@ Additional Required: 56,
 
 ## Cause
 
-The virtual machine scale set does not have enough quota available in the target Azure location or subscription.
+The virtual machine scale set doesn't have enough quota available in the target Azure location or subscription.
 The Azure resources that are available to each virtual machine scale set, such as the total VM cores, are limited by subscription and by both the region and SKU family being used. For more information, see [Virtual Machine Limits- Azure Resource Manager](/azure/azure-resource-manager/management/azure-subscription-service-limits#virtual-machines-limits---azure-resource-manager).
 
 ## Resolution

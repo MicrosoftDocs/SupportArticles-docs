@@ -1,7 +1,7 @@
 ---
 title: Windows boot issues troubleshooting
 description: Learn to troubleshoot when Windows can't boot. This article includes advanced troubleshooting techniques intended for use by support agents and IT professionals.
-ms.date: 08/24/2022
+ms.date: 02/08/2023
 ms.prod: windows-client
 ms.technology: windows-client-performance
 author: aczechowski
@@ -185,13 +185,10 @@ If the problem persists, you may want to restore the system state backup to an a
 If the system gets stuck during the kernel phase, you experience multiple symptoms or receive multiple error messages. These error messages include, but aren't limited to, the following examples:
 
 - A Stop error appears after the splash screen (Windows Logo screen).
-
-- Specific error code is displayed. For example, `0x00000C2` , `0x0000007B` , or `inaccessible boot device`.
+- Specific error code is displayed. For example, `0x00000C2`, `0x0000007B`, or `inaccessible boot device`.
   - [Advanced troubleshooting for Stop error 7B or Inaccessible_Boot_Device](./stop-error-7b-or-inaccessible-boot-device-troubleshooting.md)
   - [Advanced troubleshooting for Event ID 41 "The system has rebooted without cleanly shutting down first"](/windows/client-management/troubleshoot-event-id-41-restart)
-
 - The screen is stuck at the "spinning wheel" (rolling dots) "system busy" icon.
-
 - A black screen appears after the splash screen.
 
 To troubleshoot these problems, try the following recovery boot options one at a time.
@@ -203,7 +200,6 @@ On the **Advanced Boot Options** screen, try to start the computer in **Safe Mod
 1. Use one of the following methods to open Event Viewer:
 
     - Go to the **Start** menu, select **Administrative Tools**, and then select **Event Viewer**.
-
     - Start the Event Viewer snap-in in Microsoft Management Console (MMC).
 
 2. In the console tree, expand Event Viewer, and then select the log that you want to view. For example, choose **System log** or **Application log**.

@@ -241,7 +241,7 @@
           href: appointments-do-not-sync-to-exchange-for-some-users.md
         - name: Appointments, contacts, and tasks can't be synchronized
           href: error-when-you-test-enable-a-mailbox.md
-        - name: Attachments aren't tracked after Office 365 ATP is enabled
+        - name: Attachments aren't tracked after Microsoft Defender for Office 365 is enabled
           href: attachments-not-tracked-to-dynamics-365-after-office-365-atp-is-enabled.md
         - name: Business unit is disabled when using App for Outlook
           href: error-use-dynamics-365-app-outlook.md
@@ -489,3 +489,5 @@
           href: troubleshoot-unified-interface-issues.md
         - name: Troubleshoot views
           href: troubleshoot-table-views-issues.md
+        - name: Troubleshoot relationship intelligence
+          href: troubleshoot-relationship-intelligence.md

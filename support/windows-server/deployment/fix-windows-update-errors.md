@@ -1,7 +1,7 @@
 ---
 title: Fix Windows Update errors via DISM or System Update Readiness tool
 description: Use the System Update Readiness Tool or the DISM tool to fix problems that prevent Windows Update from installing successfully.
-ms.date: 12/26/2022
+ms.date: 12/30/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -197,3 +197,34 @@ To manually fix corruption errors that the System Update Readiness tool detects 
 5. Rerun the System Update Readiness tool.
 
 If you're a technical professional, see [How to fix errors found in the CheckSUR.log](/troubleshoot/windows-client/deployment/errors-in-checksur-log) for another option on fixing errors in the _CheckSUR.log_.
+
+## Data collection
+
+Before contacting Microsoft support, you can gather information about your issue.
+
+### Prerequisites
+
+Refer [Introduction to TroubleShootingScript toolset (TSSv2)](../../windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md#prerequisites) for prerequisites for the toolset to run properly.
+
+### Gather key information before contacting Microsoft support
+
+1. Download [TSSv2](https://aka.ms/getTSSv2) and extract it in the *C:\\tss_tool* folder.
+2. Open the *C:\\tss_tool* folder from an elevated PowerShell command prompt.  
+    > [!NOTE]
+    > Don't use the Windows PowerShell Integrated Scripting Environment (ISE).
+3.  Run the following cmdlets:
+
+    ```powershell
+    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+    ```  
+    ```powershell
+    .\TSSv2.ps1 -Collectlog DND_SetupReport
+    ```
+
+4. Enter *A* for "Yes to All" for the execution policy change.
+
+> [!NOTE]
+>
+> - The traces are stored in a compressed file in the *C:\\MSDATA* folder. After a support case is created, this file can be uploaded to the secure workspace for analysis.
+> - If you've downloaded this tool previously, we recommend to download the latest version. It doesn't update automatically when running.
+

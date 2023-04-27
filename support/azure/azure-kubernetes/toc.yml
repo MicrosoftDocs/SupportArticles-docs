@@ -9,6 +9,8 @@
     href: error-code-invalidparameter.md
   - name: InvalidResourceReference error
     href: error-code-invalidresourcereference.md
+  - name: Known issues - Custom kubelet configuration on Windows
+    href: known-issues-custom-kubelet-configuration.md
   - name: K8SAPIServerConnFailVMExtensionError error (51)
     href: error-code-k8sapiserverconnfailvmextensionerror.md
   - name: K8SAPIServerDNSLookupFailVMExtensionError error (52)
@@ -40,11 +42,12 @@
 
 - name: Troubleshoot upgrade operations
   items:
-
   - name: Troubleshoot Azure Kubernetes Service (AKS) upgrade errors
     items:
     - name: Upgrade fails because of NSG rules
       href: upgrade-fails-because-of-nsg-rules.md
+    - name: NodePoolMcVersionIncompatible error
+      href: nodepoolmcversionincompatible-error.md
     - name: PodDrainFailure error
       href: error-code-poddrainfailure.md
     - name: PublicIPCountLimitReached error
@@ -53,9 +56,13 @@
       href: error-code-quotaexceeded.md   
     - name: SubnetIsFull upgrade error
       href: error-code-subnetisfull-upgrade.md   
+    - name: Unable to get log analytics workspace info error
+      href: aks-upgrade-scale-fail-log-analytics-workspace-missing.md
   - name: Kubernetes 1.16 upgrades fail
     href: upgrades-to-kubernetes-fail-using-node-labels.md  
-          
+  - name: Upgrade issues with Gen2 VMs on Windows AKS cluster
+    href: nodepools-not-upgraded-to-gen2-during-node-image-upgrade.md
+
 - name: Troubleshoot delete operations
   items:
   - name: CannotDeleteLoadBalancerWithPrivateLinkService error
@@ -156,7 +163,7 @@
 
 - name: Troubleshoot AKS cluster performance issues
   items:
-  - name: Identify high CPU consuming containers
+  - name: Identify nodes and containers consuming high CPU
     href: identify-high-cpu-consuming-containers-aks.md
   - name: Identify memory saturation in AKS clusters
     href: identify-memory-saturation-aks.md
@@ -188,8 +195,6 @@
     href: aks-common-issues-faq.yml
   - name: 429 Too Many Requests errors
     href: 429-too-many-requests-errors.md
-  - name: '"AADSTS7000215: Invalid client secret is provided" error'
-    href: error-aadsts7000215-invalid-client-secret-provided.md
   - name: Argument list too long
     href: application-fails-argument-list-too-long.md
   - name: Azure AD Pod Identity NMI returns 500 Internal Server Error
@@ -204,8 +209,6 @@
     href: cluster-provisioning-status-changed-ready-failed.md
   - name: Cluster upgrading and scaling errors
     href: upgrading-or-scaling-does-not-succeed.md
-  - name: "error:invalid_client AADSTS7000215: Invalid client secret is provided"
-    href: invalid-service-principal-profile-credentials-or-client-secret.md
   - name: '"Error from server: error dialing backend: dial tcp" messages'
     href: error-from-server-error-dialing-backend-dial-tcp.md
   - name: Errors using features that require virtual machine scale sets
@@ -230,10 +233,10 @@
     href: tcp-timeouts-dial-tcp-nodeip-10250-io-timeout.md
   - name: TCP times out when kubectl or other third-party tools connect
     href: tcp-timeouts-kubetctl-third-party-tools-connect-api-server.md
-  - name: The credentials in ServicePrincipalProfile were invalid
-    href: invalid-service-principal-profile-credentials-or-client-secret.md
   - name: '"tls: client offered only unsupported versions" messages'
     href: tls-client-offered-unsupported-versions.md
+  - name: Troubleshoot common Mariner AKS Container Host (MACH) issues
+    href: troubleshoot-common-mariner-aks.md
 
 - name: Extensions and add-ons
   items:

@@ -6,10 +6,14 @@ metadata:
   ms.topic: hub-page
   services: service
   ms.prod: dynamics-365
+  ms.date: 04/01/2021
 
 additionalContent:
   sections:
     - items:
+        - title: Dynamics 365 Customer Insights
+          summary: Troubleshooting articles for Dynamics 365 Customer Insights
+          url: customer-insights/welcome-customer-insights.yml
         - title: Dynamics 365 Finance
           summary: Troubleshooting articles for Dynamics 365 Finance
           url: finance/welcome-finance.yml

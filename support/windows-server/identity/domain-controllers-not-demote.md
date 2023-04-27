@@ -1,7 +1,7 @@
 ---
 title: Domain controllers don't demote
 description: Fixes the problem where domain controllers may not demote gracefully when you use the Active Directory Installation Wizard (Dcpromo.exe) to force demotion if a required dependency or operation fails in Windows Server 2003 or in Windows 2000 Server.
-ms.date: 10/21/2020
+ms.date: 9/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -178,6 +178,6 @@ The following are items that you must address, if applicable, after forcibly dem
 3. Verify that FRS member objects (FRS and DFS) are removed, and remove them if they are present.
 4. If the demoted computer is a member of any security groups, remove it from those groups.
 5. Remove any DFS references to the demoted server, such as links or root replicas.
-6. A surviving domain controller must seize any operations master roles, also known as flexible single master operations or FSMO, that were previously held by the forcibly demoted domain controller. For more information, see [Transfer or seize FSMO roles in Active Directory Domain Services](/troubleshoot/windows-server/identity/transfer-or-seize-fsmo-roles-in-ad-ds).
+6. A surviving domain controller must seize any operations master roles, also known as flexible single master operations or FSMO, that were previously held by the forcibly demoted domain controller. For more information, see [Transfer or seize Operation Master roles in Active Directory Domain Services](transfer-or-seize-operation-master-roles-in-ad-ds.md).
 7. If the domain controller that you are demoting is a DNS server or global catalog server, you must create a new GC or DNS server to satisfy load balancing, fault tolerance, and configuration settings in the forest.
 8. When you use the remove selected server command in NTDSUTIL, the NTDSDSA object, the parent object for incoming connections to the domain controller that you forcibly demoted is removed. The command does not remove the parent server objects that appear in the Sites and Services snap-in. Use the Active Directory Sites and Services MMC snap-in to remove the server object if the domain controller will not be promoted into the forest with the same computer name.

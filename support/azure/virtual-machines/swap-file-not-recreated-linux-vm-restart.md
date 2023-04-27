@@ -1,5 +1,5 @@
 ---
-title: Swap file is not re-created after a Linux VM restarts
+title: Swap file isn't re-created after a Linux VM restarts
 description: Describes how to resolve the problem that prevents a swap file from being re-created after a restart of a Linux virtual machine.
 ms.date: 12/09/2021
 ms.service: virtual-machines
@@ -9,7 +9,7 @@ ms.author: srijangupta
 author: srijang
 ms.reviewer: danis
 ---
-# Swap file is not re-created after a Linux VM restarts
+# Swap file isn't  re-created after a Linux VM restarts
 
 This article provides a resolution to an issue in which the swap file can't be re-created after a restart of a Linux virtual machine.
 
@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 4577868
 
 ## Symptoms
 
-On Linux virtual machines (VMs) that are provisioned by [cloud-init](/azure/virtual-machines/linux/using-cloud-init) and that have the [Microsoft Azure Linux Agent (waagent)](/azure/virtual-machines/linux/using-cloud-init#what-is-the-difference-between-cloud-init-and-the-linux-agent-wala) installed, you may discover that the swap file is not re-created after a restart.
+On Linux virtual machines (VMs) that are provisioned by [cloud-init](/azure/virtual-machines/linux/using-cloud-init) and that have the [Microsoft Azure Linux Agent (waagent)](/azure/virtual-machines/linux/using-cloud-init#what-is-the-difference-between-cloud-init-and-the-linux-agent-wala) installed, you may discover that the swap file isn't re-created after a restart.
 
 ## Cause
 
@@ -48,7 +48,7 @@ To resolve this problem, follow these steps:
 1. Restart the Azure Linux Agent. See [How to update the Azure Linux Agent on a VM](/azure/virtual-machines/extensions/update-linux-agent) for information about the restart commands for different Linux distributions.
 1. Make sure that the VM is configured to create a swap file by using cloud-init:
   
-    1. Add the following script to `/var/lib/cloud/scripts/per-boot`.
+    1. Create a script `/var/lib/cloud/scripts/per-boot/create_swapfile.sh` with the following commands:
 
         ```bash
         #!/bin/sh
@@ -114,7 +114,7 @@ mounts:
   - ["ephemeral0.2", "none", "swap", "sw,nofail,x-systemd.requires=cloud-init.service,x-systemd.device-timeout=2", "0", "0"]
 ```
 
-The mount is created with the `nofail` option to ensure that the boot will continue even if the mount is not completed successfully.
+The mount is created with the `nofail` option to ensure that the boot will continue even if the mount isn't completed successfully.
 
 Before deploying this image, you need to create a resource group with the [az group create](/cli/azure/group) command. An Azure resource group is a logical container into which Azure resources are deployed and managed. The following example creates a resource group named _myResourceGroup_ in the _eastus_ location.
 
@@ -155,7 +155,7 @@ Filename                Type        Size    Used    Priority
 ```
 
 > [!NOTE]
-> If you have an existing Azure image that has a swap partition configured and you want to change the swap partition configuration for new images, you should remove the existing swap partition. Please see 'Customize Images to provision by cloud-init' document for more details.
+> If you have an existing Azure image that has a swap partition configured and you want to change the swap partition configuration for new images, you should remove the existing swap partition. For more information, see [Customize Images to provision by cloud-init](/azure/virtual-machines/linux/tutorial-automate-vm-deployment).
 
 ## Next steps
 

@@ -4,7 +4,6 @@ description: This article provides resolutions where you might not be able to co
 ms.date: 07/22/2020
 ms.custom: sap:Analysis Services
 ms.reviewer: karang
-ms.prod: sql
 ---
 # Cannot connect to a named instance of a clustered analysis service
 

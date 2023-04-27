@@ -2,7 +2,7 @@
 title: Failed to get element or window or element or window wasn't found error
 description: Provides a resolution to solve the error message that you receive when a UI automation action fails in Power Automate.
 ms.reviewer: pefelesk
-ms.date: 9/21/2022
+ms.date: 02/01/2023
 ms.subservice: power-automate-desktop-flows
 ---
 # UI automation action fails with "Failed to get element/window" or "Element/Window wasn't found" error
@@ -70,3 +70,7 @@ Both the application and Power Automate for desktop should run with the same pri
 Power Automate for desktop doesn't run elevated by default. Hence, uncheck the **Run this program as an administrator** checkbox in the **Compatibility** section of the application's **Properties** window.
 
 Another option is to set Power Automate for desktop to run as admin as well.
+
+## More information
+
+To solve the other error messages that you may receive when a UI automation action fails, see [Error occurs when a desktop flow action fails to get a UI element](failed-get-ui-element.md).
