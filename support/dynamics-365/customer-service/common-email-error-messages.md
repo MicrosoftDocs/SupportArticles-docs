@@ -10,7 +10,7 @@ This article provides resolutions for common email error messages in Dynamics 36
 
 ## Scenario
 
-**Sample**: Configuration on Automatic Record Creation and Update Rule
+Sample: Configuration on **Automatic Record Creation and Update Rule**
 
 - The **Create contact for unknown sender** option should be selected.
 - Set condition criteria to **Any incoming email**.

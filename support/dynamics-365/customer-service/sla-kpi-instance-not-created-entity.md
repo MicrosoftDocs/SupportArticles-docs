@@ -8,7 +8,6 @@ ms.date: 04/11/2023
 
 This article provides a resolution for the issue where a service-level agreement (SLA) KPI instance isn't created on the entity in Dynamics 365 Customer Service.
 
-
 ## Symptoms
 
 An SLA KPI instance isn't created on the entity on which the SLA is enabled.

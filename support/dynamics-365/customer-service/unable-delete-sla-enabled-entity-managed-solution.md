@@ -36,7 +36,7 @@ Now, if you try to delete *Delta Field solution* from Org2, you can't delete it 
 
 To delete a managed solution with an SLA-enabled entity, you need to first delete the previously imported managed solution that created the entity entry. This action ensures that the entity entry is deleted. Then, you can create the entity again or reimport the managed solution.
 
-To delete *Delta Field solution* in *Org2*, delete *Field solution* first. 
+To delete *Delta Field solution* in *Org2*, delete *Field solution* first.
 
 *Field solution* can be deleted because the entity associated with it —*Field work*— doesn't have SLA enabled. Deleting *Field solution* ensures that both the SLA configuration and the entity are deleted.
 

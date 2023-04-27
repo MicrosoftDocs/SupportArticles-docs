@@ -49,7 +49,7 @@ To avoid the provisioning failure, you must remove the Microsoft Teams service p
    :::image type="content" source="media/provision-fails-expired-license/run-powershell-as-admin.png" alt-text="Screenshot that shows how to run Windows PowerShell as an administrator.":::
 
 1. Select **Yes** on the **User Control** dialog to allow the application to make changes.
-1. Type the `Install-Module AzureAD` command in the PowerShell window, and press **Enter**. This command installs the PowerShell commands for interacting with Azure Active Directory.
+1. Type the `Install-Module AzureAD` command in the PowerShell window, and press **Enter**. This command installs the PowerShell commands for interacting with Azure AD.
 
    :::image type="content" source="media/provision-fails-expired-license/install-module-azuread.png" alt-text="Screenshot that shows how to execute the Install-Module AzureAD command." border="false":::
 
@@ -59,10 +59,10 @@ To avoid the provisioning failure, you must remove the Microsoft Teams service p
 
 1. Type the `Connect-AzureAD` command in the PowerShell window, and press **Enter**.
 
-   This establishes a connection with the tenant's Azure Active Directory, so you can manage it using PowerShell.
+   This establishes a connection with the tenant's Azure AD, so you can manage it using PowerShell.
 
 1. Sign in to your organization as a tenant admin.
-1. Run the `Remove-AzureADServicePrincipal -ObjectID <ObjectID>` command in the PowerShell window twice, one each for Microsoft Teams and Skype Teams Calling API Service. Replace `<ObjectID>` with the object ID you had stored earlier. This command deletes the expired Teams service and Skype Teams Calling API Service from Azure Active Directory.
+1. Run the `Remove-AzureADServicePrincipal -ObjectID <ObjectID>` command in the PowerShell window twice, one each for Microsoft Teams and Skype Teams Calling API Service. Replace `<ObjectID>` with the object ID you had stored earlier. This command deletes the expired Teams service and Skype Teams Calling API Service from Azure AD.
 
    > [!NOTE]
    > Right-click the PowerShell window to paste the Object ID.

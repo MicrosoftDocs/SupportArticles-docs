@@ -6,7 +6,7 @@ ms.date: 04/11/2023
 ---
 # Warning and failure duration times are incorrect for the SLA
 
-This article provides a resolution for the issue where the warning and failure duration times don't consider the daylight saving time for the service-level agreement (SLA) in Omnichannel for Customer Service.
+This article provides a resolution for the issue where the warning and failure duration times don't consider daylight saving time for the service-level agreement (SLA) in Omnichannel for Customer Service.
 
 ## Symptoms
 

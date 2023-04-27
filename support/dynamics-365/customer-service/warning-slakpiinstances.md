@@ -18,11 +18,11 @@ The *workflow ID* varies from system to system.
 
 ## Cause
 
-The SLAInstanceMonitoringWarningAndExpiryFlow isn't enabled.
+The **SLAInstanceMonitoringWarningAndExpiryFlow** isn't enabled.
 
 ## Resolution
 
-If none of the Unified Interface SLAs are activated, you must activate one to activate the SLAInstanceMonitoringWarningAndExpiryFlow. The flow must only be turned off and on by a user with the SLA KPI privileges at a global level for prvReadSLAKPIInstance and prvWriteSLAKPIInstance.
+If none of the Unified Interface SLAs are activated, you must activate one to activate the **SLAInstanceMonitoringWarningAndExpiryFlow**. The flow must only be turned off and on by a user with the SLA KPI privileges at a global level for `prvReadSLAKPIInstance` and `prvWriteSLAKPIInstance`.
 
 However, if all the SLAs are active, but the flow is still deactivated, take the following steps:
 

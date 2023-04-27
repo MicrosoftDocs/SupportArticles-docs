@@ -26,4 +26,3 @@ To resolve this issue:
 
 - Check the permissions for the user, and change the business unit of the system user to the root business unit.
 - Ensure that the user is assigned at least one security role (preferably Omnichannel Administrator) other than the System Administrator role.
-

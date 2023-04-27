@@ -23,7 +23,7 @@ The panel doesn't load when:
 
 To solve this issue:
 
-- Create a Channel Integration Framework record with the following values. 
+- Create a Channel Integration Framework record with the following values.
 
    | Field | Value |
    |-------------------------------------------|--------------------------------------------------|

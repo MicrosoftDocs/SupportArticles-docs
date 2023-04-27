@@ -38,7 +38,7 @@ To delete and add **Widget location** for the chat widget, follow these steps:
    | Field | Value |
    |---------------------------|-----------------------------------------|
    | **Title** | Type the title of record.|
-   | **Value** | The website domain where the chat widget must be displayed. The domain format shouldn't include the protocol (http or https). For example, the website is `https://contoso.microsoftcrmportals.com`. Now, the value is `contoso.microsoftcrmportals.com`.|
+   | **Value** | The website domain where the chat widget must be displayed. The domain format shouldn't include the protocol (`http` or `https`). For example, the website is `https://contoso.microsoftcrmportals.com`. Now, the value is `contoso.microsoftcrmportals.com`.|
 
 9. Select **Save** to save the record.
 10. Go to the website and check whether the chat widget loads.
@@ -81,7 +81,7 @@ Clear the portal cache by taking the following steps:
 To sync portal configurations, take the following steps:
 
 1. Go to [Power Apps](https://make.powerapps.com).
-2. Find and select your portal, and then choose **Edit**.
+2. Find and select your portal, and then select **Edit**.
 
     :::image type="content" source="media/chat-widget-not-loading-portal/chat-portal-edit.png" alt-text="Screenshot that shows how to edit the portal in Power Apps.":::
 
@@ -94,7 +94,7 @@ To sync portal configurations, take the following steps:
 Restart the portal by taking the following steps:
 
 1. Go to [Power Apps](https://make.powerapps.com).
-2. Select your portal, and then under **Advanced options**, choose **Settings** > **Administration**.
+2. Select your portal, and then under **Advanced options**, select **Settings** > **Administration**.
 
     :::image type="content" source="media/chat-widget-not-loading-portal/chat-portal-administration.png" alt-text="Screenshot that shows the Advanced options settings in the portal.":::
 
