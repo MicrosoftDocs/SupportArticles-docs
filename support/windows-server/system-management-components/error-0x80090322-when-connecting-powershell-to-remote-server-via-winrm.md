@@ -21,7 +21,7 @@ Assume that you try start a PowerShell session with a remote server. When you ru
 
 ## Cause
 
-By default, PowerShell uses HTTP Service principal name (SPN) in the format HTTP/\<FQDN\> to connect to the remote server. This issue occurs when the SPN is already registered to another service account in the forest or manually registered to a web service running on the computer.
+By default, PowerShell uses HTTP Service principal name (SPN) in the format `HTTP/<FQDN>` to connect to the remote server. This issue occurs when the SPN is already registered to another service account in the forest or manually registered to a web service running on the computer.
 
 ## Resolution
 
@@ -65,7 +65,7 @@ Enter-PSSession -Computername mem1.contoso.com -SessionOption (New-PSSessionOpti
 
 Configure WinRM client to use Web Services-Management \(WSMAN\) SPN instead of HTTP SPN. To do this, create the following registry value:
 
-Key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WSMAN\Client  
+Key: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WSMAN\Client`  
 Value name: spn_prefix  
 Value type: REG_SZ (string)  
 Value data: WSMAN
