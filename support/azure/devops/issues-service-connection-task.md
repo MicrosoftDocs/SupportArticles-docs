@@ -46,13 +46,13 @@ When you use the Azure RM (Resource Manager) service connection to connect while
 
   Check your [Azure AD permissions](/azure/active-directory/develop/howto-create-service-principal-portal#check-azure-ad-permissions) and [assign the appropriate roles](/azure/active-directory/fundamentals/active-directory-users-assign-role-azure-portal).  
 
-- **Can I use an Azure RM service connection of managed service identity (MSI) type on Microsoft Hosted agents?**
+- **Can I use an Azure RM service connection of managed service identity (MSI) type on Microsoft-hosted agents?**
 
   No. If you're using an Azure RM service connection of managed service identity (MSI) type, you're required to use a self-hosted agent. For more information, see [Create an Azure Resource Manager service connection to a VM with a managed service identity](/azure/devops/pipelines/library/connect-to-azure#create-an-azure-resource-manager-service-connection-to-a-vm-with-a-managed-service-identity).  
 
 - **I'm unable to create a service connection.**
 
-  Make sure that you have the appropriate [user roles/access](/azure/role-based-access-control/rbac-and-directory-admin-roles) assigned.  
+  Make sure you have the appropriate [user roles/access](/azure/role-based-access-control/rbac-and-directory-admin-roles) assigned.  
 
 - **Failed to authorize the service connection resource for the pipeline.**
 
