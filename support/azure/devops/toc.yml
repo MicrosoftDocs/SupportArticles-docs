@@ -46,14 +46,14 @@
       href: tools-used-to-troubleshoot-scenarios-azure-rm-service-connection.md
     - name: Service connection creation issues
       items:
+      - name: Troubleshooting tips for problems while creating Azure RM service connection
+        href: troubleshoot-issues-while-creating-service-connections.md
       - name: Troubleshoot subscription related scenarios while creating service connections
         href: troubleshoot-subscription-related-scenarios.md
       - name: Troubleshoot issues related to verifying Azure Resource Manager service connections
         href: troubleshoot-issues-related-to-verifying-service-connections.md
     - name: Service connection update issues
       items:
-      - name: Troubleshoot issues while saving service connections
-        href: troubleshoot-issues-while-saving-service-connections.md
       - name: Troubleshoot issues while deleting service connections
         href: troubleshoot-issues-while-deleting-service-connection.md
 

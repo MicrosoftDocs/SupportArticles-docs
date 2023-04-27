@@ -1,6 +1,6 @@
 ---
-title: Troubleshooting tips for problems while saving Azure RM  service connection
-description: This article explains about the problems that might occur when users try to save the Azure RM service connection.
+title: Troubleshooting tips for problems while creating Azure RM  service connection
+description: This article explains about the problems that might occur when users try to create an Azure RM service connection.
 ms.date: 04/24/2023
 author: padmajayaraman
 ms.author: v-jayaramanp
@@ -8,7 +8,7 @@ ms.custom: sap:Pipelines
 ms.service: azure-devops
 ---
 
-# Troubleshooting problems while saving Azure RM service connections
+# Troubleshooting problems while creating Azure RM service connections
 
 ## "Failed to set Azure permission" error when trying to save a service connection
 
