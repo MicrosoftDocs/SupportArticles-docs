@@ -1,7 +1,7 @@
 ---
 title: The first connection to a non-persistent VDI session fails when using per-user Remote Desktop licensing
 description: Troubleshooting the "Remote Desktop License Servers unavailable" error when trying to connect to a remote session using non-persistent VDI and per-user Remote Desktop licensing.
-ms.date: 04/21/2023
+ms.date: 04/27/2023
 author: Heidilohr
 ms.author: helohr
 manager: femila
@@ -52,7 +52,7 @@ Typically, servicing happens in one of two ways. The following table lists the d
 | Servicing method | Result |
 |--|--|
 | Start with the existing custom image, install any updates, and make the same custom image available to be used by the non-persistent VMs. | The error doesn't happen while the custom image is within the grace period. However, once the grace period expires, the error occurs again.<br /><br />Alternatively, you could create a script to simulate the first connection to obtain an X509 certificate. |
-| Create a new custom image each time using an automated process with a tool like [Microsoft Deployment Toolkit](/windows/deployment/deploy-windows-mdt/get-started-with-the-microsoft-deployment-toolkit). | If this is done frequently, the custom image will be within the grace period, so the error won't occur. You still need to license your deployment correctly. |
+| Create a new custom image each time using an automated process with a tool like [Microsoft Deployment Toolkit](/windows/deployment/deploy-windows-mdt/get-started-with-the-microsoft-deployment-toolkit). | If you use this method frequently, the custom image is within the grace period, so the error doesn't occur. You still need to license your deployment correctly. |
 
 > [!NOTE]
 > You should contact your VDI provider for recommendations as to the most suitable way to service your deployment.
