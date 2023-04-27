@@ -22,7 +22,7 @@ It's important to read the output of each command for additional clues. We recom
 - Internet access from the VM.
 - The [Python](https://www.python.org/downloads/) language interpreter.
 - The Client URL ([curl](https://curl.se/download.html)) tool.
-- The [Zypper](https://opensuse.github.io/openSUSE-docs-revamped-temp/zypper/) package manager.
+- The [Zypper](https://documentation.suse.com/smart/systems-management/html/concept-zypper/index.html) package manager.
 - The [OpenSSL](https://www.openssl.org/source/) toolkit.
 - The [SUSEConnect](https://github.com/SUSE/connect) tool.
 - The [registercloudguest](https://github.com/SUSE-Enceladus/cloud-regionsrv-client/blob/master/man/man1/registercloudguest.1) tool.
