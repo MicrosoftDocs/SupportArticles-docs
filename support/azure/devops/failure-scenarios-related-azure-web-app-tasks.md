@@ -24,8 +24,6 @@ ms.subservice: ts-pipelines
 
 - Resolution:
 
-  There are mainly two resolutions for different reasons:
-
   - If you're using the Microsoft-hosted agent and App Services in an ASE environment, make sure you have opened the [IP addresses](https://www.microsoft.com/download/details.aspx?id=56519) for the Microsoft-hosted agent geography. See [Allowed IP addresses and domain URLs](/azure/devops/organizations/security/allow-list-ip-url) for IP address ranges of incoming connections.
 
   - If you're using a self-hosted agent, apart from unblocking the IP range for the self-hosted agent, the problem could be due to a flaky network issue. Consider creating a support ticket with the Azure Web App or Azure Networking team for troubleshooting in this area.
