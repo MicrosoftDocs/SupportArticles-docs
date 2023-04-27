@@ -31,7 +31,7 @@ Use this approach when you have to connect to an Azure account by using credenti
 
 To create an Azure RM service connection, navigate to the project settings in the Azure DevOps project:
 
-https://dev.azure.com/ <OrgName>/<Project-Name>/_settings/adminservices -> **New service connection -> Azure Resource Manager -> Service principal (automatic)**
+https://dev.azure.com/ /<OrgName><Project-Name>/_settings/adminservices -> **New service connection -> Azure Resource Manager -> Service principal (automatic)**
 
 ### Save an Azure RM service connection
 
@@ -69,8 +69,6 @@ To capture an F12 trace, follow the steps in [Capture a browser trace for troubl
 > [!IMPORTANT]
 > Configure Fiddler to capture and decrypt HTTPS traffic. To do this, select **Tools > Options > HTTPS**. Select both checkboxes on this tab (**Capture HTTPS CONNECTs** and **Decrypt HTTPS traffic**), and then select **YES** to all prompts. For more information, see [Configure Fiddler Classic to Decrypt HTTPS Traffic](https://docs.telerik.com/fiddler/configure-fiddler/tasks/decrypthttps&preserve-view=true).
 
-[!INCLUDE [third-party-disclaimer](../../includes/third-party-disclaimer.md)]
-
 ## Common service connection issues
 
 Use the following list to navigate to the appropriate article or section for detailed troubleshooting steps:
@@ -103,3 +101,5 @@ Use the following list to navigate to the appropriate article or section for det
 
 ["Azure Resource Manager service connection"](/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml&preserve-view=true) section of [Manage service connections](/azure/devops/pipelines/library/service-endpoints?view=azure-devops&preserve-view=true&tabs=yaml)
 [Troubleshoot ARM service connections](/azure/devops/pipelines/release/azure-rm-endpoint?view=azure-devops&preserve-view=true)
+
+[!INCLUDE [third-party-disclaimer](../../includes/third-party-disclaimer.md)]
