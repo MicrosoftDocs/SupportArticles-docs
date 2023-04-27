@@ -9,6 +9,8 @@
     href: error-code-invalidparameter.md
   - name: InvalidResourceReference error
     href: error-code-invalidresourcereference.md
+  - name: Known issues - Custom kubelet configuration on Windows
+    href: known-issues-custom-kubelet-configuration.md
   - name: K8SAPIServerConnFailVMExtensionError error (51)
     href: error-code-k8sapiserverconnfailvmextensionerror.md
   - name: K8SAPIServerDNSLookupFailVMExtensionError error (52)
