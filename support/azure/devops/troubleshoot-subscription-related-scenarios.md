@@ -1,7 +1,7 @@
 ---
-title: Troubleshooting subscription related scenarios  while creating service connections
-description: This article explains about common problems when creating subscription related service connections.
-ms.date: 04/26/2023
+title: Troubleshooting problems related to subscription based service connections
+description: This article explains about common problems when creating subscription based service connections.
+ms.date: 04/27/2023
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.custom: sap:Pipelines

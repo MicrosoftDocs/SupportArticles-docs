@@ -59,6 +59,8 @@ After users provide the details to create a manual Azure RM service connection, 
 Failed to query service connection API: 'https://management.azure.com/subscriptions/xxxxxx08-xxxx-xxxx-xxxx-eadxxxxxxxxx?api-version=2016-06-01 '. Status Code: 'Forbidden', Response from server: '{"error":{"code":"AuthorizationFailed","message":"The client 'xxxxxxaf-xxxx-xxxx-xxxx-6bexxxxxxxxx' with object id 'xxxxxxaf-xxxx-xxxx-xxxx-6bexxxxxxxxx' does not have authorization to perform action 'Microsoft.Resources/subscriptions/read' over scope '/subscriptions/xxxxxx08-xxxx-48ec-xxxx-eadxxxxxxxxx' or the scope is invalid. If access was recently granted, please refresh your credentials."}}'
 ```
 
+:::image type="content" source="media/fail-to-verify-service-connection/new-service-connection-errormessage.png" alt-text="Screenshot that shows the creation of new service connection.":::
+
 ### Debugging steps
 
 1. Capture F12/Fiddler trace, while reproducing the issue.
@@ -72,19 +74,6 @@ You will see the following response for the POST call in the trace:
 ### Resolution
 
 Make sure that the newly created SPN (App) has the Contributor and Reader permissions on the subscription.
-
-1. Check whether the connection is automated or manual.
-
-1. [Get the details for the endpoints by using the REST API](/rest/api/azure/devops/serviceendpoint/endpoints/get?view=azure-devops-rest-6.0&tabs=HTTP&preserve-view=true).
-
-1. Make sure that you set the `includeFailed=true` parameter so that all service endpoints are captured. This should provide more information and show whether an issue affects the service connection (for example, in the `isReady` field).
-
-1. [Try to delete the connections by using the REST API directly](/rest/api/azure/devops/serviceendpoint/endpoints/delete?view=azure-devops-rest-6.0&tabs=HTTP&preserve-view=true). Although the UI makes similar calls, it's always worth checking whether calling the API directly will create a different result.
-
-1. If you use the API from the previous step by using the default parameters, and this still doesn't work, you can set the `deep` value to `false`. This setting causes the program to skip any checks and attempts that are part of the usual process to delete the underlying SPN.
-
-> [!NOTE]
-> The user must manually delete or edit the service principal by using the Active Directory app in the Azure portal.
 
 ## Create Azure RM service principal (manual)
 

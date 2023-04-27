@@ -11,7 +11,7 @@ ms.subservice: ts-pipelines
 
 # Troubleshoot connection issues in Azure Resource Manager service connection
 
-There are various causes for connectivity issues in Azure Resource Manager service connection. This article series helps you troubleshoot various service connection problems and describes the tools and methods you can use for troubleshooting.
+There are various causes for connectivity issues in Azure Resource Manager (RM) service connection. This article series helps you troubleshoot various service connection problems and describes the tools and methods you can use for troubleshooting.
 
 ## Introduction to Azure RM service connection
 
@@ -29,9 +29,27 @@ Use this approach when you have to connect to an Azure account by using credenti
 
 ## Create an Azure RM service connection
 
-To create an Azure RM service connection, navigate to the project settings in the Azure DevOps project:
+To create an Azure RM service connection,
 
-https://dev.azure.com/ /<OrgName><Project-Name>/_settings/adminservices -> **New service connection -> Azure Resource Manager -> Service principal (automatic)**
+1. Log in to https://dev.azure.com.
+
+1. In the Azure DevOps project, navigate to the **Project Settings > Service Connections**.
+
+1. Select **Create service connection**.
+
+1. In the **New service connection** dialog box, select **Azure Resource Manager**.
+
+1. Click **Next**.
+
+1. Select **Service principal (automatic)** authentication method.
+
+1. Click **Next**.
+
+1. Provide a name for the new connection in **Service connection name** text box.
+
+1. Select **Save**.
+
+type / \<OrgName><Project-Name\>_settings/adminservices.
 
 ### Save an Azure RM service connection
 
@@ -56,7 +74,7 @@ Many of the troubleshooting scenarios that are discussed in these topics involve
 To capture an F12 trace, follow the steps in [Capture a browser trace for troubleshooting](/azure/azure-portal/capture-browser-trace).
 
 > [!NOTE]
-> We recommend that you try to capture a minimum of events in an F12 trace. Start capturing the trace just before the step that's causing the issue instead of starting the trace as soon as you log in to the Azure DevOps portal.
+> We recommend that you try to capture a minimum set of events in an F12 trace. Start capturing the trace just before the step that's causing the issue instead of starting the trace as soon as you log in to the Azure DevOps portal.
 
 ### Fiddler trace
 
@@ -77,7 +95,7 @@ Use the following list to navigate to the appropriate article or section for det
 
 - [Loading subscriptions window shows spinning wheel when trying to create a service connection](troubleshoot-subscription-related-scenarios.md#loading-subscriptions-window-shows-spinning-wheel-when-trying-to-create-a-service-connection)
 
-- [Subscription isn't listed when creating a service connection](troubleshoot-subscription-related-scenarios.md#subscription-isnt-listed-when-creating-a-service-connection)
+- [Subscription isn't listed when creating a service connection](troubleshoot-subscription-related-scenarios.md#subscription-is-not-listed-when-creating-a-service-connection)
 
 - [There is no active Azure subscription](troubleshoot-subscription-related-scenarios.md#you-dont-appear-to-have-an-active-azure-subscription-error)
 
