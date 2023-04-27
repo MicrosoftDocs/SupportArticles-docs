@@ -78,6 +78,10 @@ This action can be used to reinstall GRUB and regenerate the *grub.cfg* file.
 
 This action can be used to reinstall the required software to boot from a GEN2 VM. The *grub.cfg* file is also regenerated.
 
+### auditd
+
+Use this action when the auditd configuration is causing the VM to shut down immediately on startup.  This will alter the auditd configuration, replacing any HALT directives in the `/etc/audit/auditd.conf` file. Also in LVM environments, if the volume containing the audit logs is full, and free space is available in the volume group, the logical volume will be extended by 10% of the current size.  If not LVM or no space is available, only the configuration file will be changed.
+
 ## How to use ALAR
 
 The ALAR scripts use the repair extension `run` command and its `--run-id` option. The script-id for the automated recovery is: **linux-alar2**. For example:
