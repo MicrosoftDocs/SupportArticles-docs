@@ -14,13 +14,13 @@ ms.subservice: ts-pipelines
 
 ## Errors and resolutions
 
-- Error 1: "FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory"
+- **Error 1: "FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory"**
 
-- Resolution:
+  **Resolution**:
 
   This error may occur due to a failure to unzip and zip a large package for the deployment, as Microsoft-hosted agents have limited resources. In the logs, you see the steps where it is failing. Preferably, use the [Azure Web App V1 task](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureWebAppV1) for App Services deployment. For more complicated scenarios like XML transformation, see [Azure RM Web Deployment V4 task](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureRmWebAppDeploymentV4).
 
-- Error 2: "Encountered a retriable error:ECONNRESET. Message: read ECONNRESET"
+- **Error 2: "Encountered a retriable error:ECONNRESET. Message: read ECONNRESET"**
 
 - Resolution:
 
@@ -28,7 +28,7 @@ ms.subservice: ts-pipelines
 
   - If you're using a self-hosted agent, apart from unblocking the IP range for the self-hosted agent, the problem could be due to a flaky network issue. Consider creating a support ticket with the Azure Web App or Azure Networking team for troubleshooting in this area.
 
-- Error 3:
+- **Error 3**:
 
   The task calls a zipDeploy Kudu API for deployment. The following error generally comes in response to that API. The API does some operations when called.
 
@@ -40,13 +40,13 @@ ms.subservice: ts-pipelines
   [debug]task result: Failed
   ```
 
-- Resolution:
+  **Resolution**:
   
   Try setting the **WEBSITE_RUN_FROM_PACKAGE** app setting to **1** on the App Services side.
 
-- Error 4: "EMFILE: too many open files using zip deploy / Error: Package deployment using ZIP Deploy failed"
+- **Error 4: "EMFILE: too many open files using zip deploy / Error: Package deployment using ZIP Deploy failed"**
   
-  -  Possible workarounds:
+  **Possible workarounds**:
 
   - Use the [Azure Web App V1 task](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureWebAppV1).
 
