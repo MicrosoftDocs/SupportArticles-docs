@@ -140,6 +140,8 @@
     href: ./framework/general/system-dotnet-wcf-diagnostics.md
   - name: TableLayoutPanel is displayed with large spaces
     href: ./framework/general/nested-tablelayoutpanel-large-empty-spaces.md
+  - name: Text rendering issues on a TextBlock that's a child of a Viewbox
+    href: ./framework/general/text-rendered-custom-textblock-defects-remaining-image.md
   - name: Text is lost when you render an XPS DocumentPage
     href: ./framework/general/far-eastern-fonts-text-lost-on-images-xps.md
   - name: Time-out occurs when an application calls the Poll method
