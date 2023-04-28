@@ -1,8 +1,8 @@
 ---
 title: Power Automate approval email information
 description: Describes the information about Power Automate approval emails.
-ms.reviewer: sranjan, hamenon
-ms.date: 12/16/2022
+ms.reviewer: mansong, hamenon
+ms.date: 04/25/2023
 ms.subservice: power-automate-flows
 ---
 # Power Automate approval email delivery information
@@ -55,4 +55,4 @@ Approval emails may come from any of the following IPs:
 - 40.73.102.218
 - 139.217.96.195
 
-All approval emails will be sent with a sender address of `maccount@microsoft.com` or `flow-noreply@microsoft.com`.
+All approval emails will be sent with a sender address of `flow-noreply@oe.21vianet.com`.
