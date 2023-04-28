@@ -102,7 +102,7 @@ You can use this article as a reference for the initial debugging of issues rela
 
 ## See related
 
-- [Capture logs for further debugging of the tasks](logs-capture-further-debugging-tasks.md)
+- [Tasks documentation and logs to capture for further debugging](tasks-documentation-logs-capture-further-debugging.md)
 - [Failure scenarios related to Azure Web App tasks](failure-scenarios-related-azure-web-app-tasks.md)
 - [Issues with the service connection in the task](issues-service-connection-task.md)
 - [Resource doesn't exist error with services deployment](resource-not-exist-error-services-deployment.md)
