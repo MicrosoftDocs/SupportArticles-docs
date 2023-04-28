@@ -5,13 +5,17 @@ author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
 ms.date: 05/11/2023
+ms.reviewer: kaushika
 ms.prod: windows-server
 ms.technology: windows-server-system-management-components
-ms.custom: sap:winrm, csstroubleshoot
+ms.custom: sap:winrm, csstroubleshoot, ikb2lmc
 ---
 # Error 0x80090322 when you connect PowerShell to remote server via WinRM
 
 This article introduces how to solve the 0x80090322 error when you connect PowerShell to a remote server via \(Windows Remote Management\) WinRM.
+
+_Applies to:_ Supported versions of Windows Server and Windows Client
+_Original KB number:_ 4549715
 
 ## Symptoms
 
