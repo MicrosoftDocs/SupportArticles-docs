@@ -11,7 +11,7 @@ ms.subservice: ts-pipelines
 
 This guided troubleshooter can help you with issues related to the usage of the following tasks in Azure Pipelines.
 
-As a first step, we recommend you walk through the documentation for the following task and ensure that all the parameters are correctly defined in the task used in the pipeline.
+As a first step, we recommend you walk through the documentation for the following tasks and ensure that all the parameters are correctly defined in the tasks used in the pipelines.
 
 - [Azure RM Web App deployment V4](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureRmWebAppDeploymentV4)
 - [Azure Web App V1](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureWebAppV1): Preferably use this task for App Services deployment. For more complicated scenarios like XML transformation, use [Azure RM Web App deployment V4](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureRmWebAppDeploymentV4).
