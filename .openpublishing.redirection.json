@@ -36,6 +36,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/dynamics/gp/a-report-displays-an-incorrect-eeo-class.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/power-platform/ai-builder/aibuilder-form-processing-is-not-extracting-tables-that-span-across-multiple-pages.md",
       "redirect_url": "/ai-builder/create-form-processing-model#multipage-tables",
       "redirect_document_id": false
