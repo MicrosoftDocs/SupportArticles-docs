@@ -22,7 +22,7 @@ To create the TSS logs on the SQL Server instance, download [TSS](https://aka.ms
 
 Select **Save As** to save the zipped binaries to a folder.
 
-From the elevated command line, change the directory to the TSS folder where files were saved/extracted and run 'TSS SDP:SQLBase' and respond to the prompts:
+From the elevated command line, change the directory to the TSS folder where files were saved/extracted and run `TSS SDP:SQLBase` and respond to the prompts:
 
 :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/command-prompt-tss.png" alt-text="Screenshot of the elevated command prompt changing the directory to the TSS folder." lightbox="media/use-agdiag-diagnose-availability-group-health-events/command-prompt-tss.png":::
 
