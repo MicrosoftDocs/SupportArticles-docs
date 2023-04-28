@@ -24,7 +24,7 @@ Select **Save As** to save the zipped binaries to a folder.
 
 From elevated command line, change directory to TSS folder where files were saved/extracted and run 'TSS SDP:SQLBase' and respond to the prompts:
 
-:::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/command-prompt-tss.png" alt-text="Screenshot of elevated command prompt changing directory to tss folder." lightbox="media/use-agdiag-diagnose-availability-group-health-events/command-prompt-tss.png":::
+:::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/command-prompt-tss.png" alt-text="Screenshot of elevated command prompt changing directory to TSS folder." lightbox="media/use-agdiag-diagnose-availability-group-health-events/command-prompt-tss.png":::
 
 Once the TSS SQLBase cab file has been created, extract the cab into a folder.
 
@@ -37,7 +37,7 @@ To download AGDiag, follow these steps:
 1. Open [Release AGDiag Windows Release October 2021 (signed) · microsoft/agdiag · GitHub](https://github.com/microsoft/agdiag/releases/tag/Win2.0.0.23)
 1. Select the **agdiag.zip** link to download the tool.
 
-  :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/agdiag-zip-download.png" alt-text="Screenshot of selecting the agdiag.zip link to download the tool." lightbox="media/use-agdiag-diagnose-availability-group-health-events/agdiag-zip-download.png":::
+   :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/agdiag-zip-download.png" alt-text="Screenshot of selecting the agdiag.zip link to download the tool." lightbox="media/use-agdiag-diagnose-availability-group-health-events/agdiag-zip-download.png":::
 
 ## Launch AGDiag and feed it the unzipped TSS logs
 
@@ -45,9 +45,9 @@ Once the tool is downloaded, following these steps to launch AGDiag and feed it 
 
 1. Extract the zip and double-click the *agdiag.exe* to launch AGDiag.
 
-  A dialog appears like the following one:
+   A dialog appears like the following one:
   
-  :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/agdiag-select-log-folder.png" alt-text="Screenshot of running the AGDiag tool." lightbox="media/use-agdiag-diagnose-availability-group-health-events/agdiag-select-log-folder.png":::
+   :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/agdiag-select-log-folder.png" alt-text="Screenshot of running the AGDiag tool." lightbox="media/use-agdiag-diagnose-availability-group-health-events/agdiag-select-log-folder.png":::
 
 1. Select **Select Log Folder**, drill into the folder that you extracted the TSS SQL Base CAB files into, and then select **OK**.
 
