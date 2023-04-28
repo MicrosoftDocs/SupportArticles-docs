@@ -11,9 +11,13 @@ ms.custom: sap:user-logon-fails, csstroubleshoot
 ---
 # "Your credential could not be verified" error when logging on to Window by using WHFB
 
+This article introduces how to fix the error "Your credential could not be verified" that occurs when you try to log on Windows by using using Windows Hello for Business (WHFB).
+
+_Applies to:_ Windows 10, Windows 11
+
 ## Symptom
 
-When you try to sign in to a Windows 10 or Windows 11 device by using Windows Hello for Business (WHFB) Certificate or Key Trust, it failed with one of the following error message:
+When you try to sign in to a Windows 10 or Windows 11 device by using WHFB Certificate or Key Trust, it failed with one of the following error message:
 
 > Your Credential could not be verified
 
