@@ -9,9 +9,7 @@ ms.subservice: ts-pipelines
 ---
 # Tasks documentation and logs to capture for further debugging
 
-## Azure Web App tasks and deployments
-
-This article can help you with issues related to the usage of the following tasks in Azure Pipelines.
+## Tasks documentation
 
 As a first step, we recommend you walk through the documentation for the following tasks and ensure that all the parameters are correctly defined in the tasks used in the pipelines.
 
