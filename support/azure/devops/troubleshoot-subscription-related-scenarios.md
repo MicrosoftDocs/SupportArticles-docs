@@ -70,7 +70,7 @@ Failed to set Azure permission 'RoleAssignmentId: xxxxxx26-xxxx-xxxx-xxxx-8f0xxx
 
 ### Resolution
 
-Check the user permission on the subscription. Make sure that the user has the Owner or User Access Administrator permission on the Subscription.
+Check the user permission on the subscription. Make sure that the user has the **Owner** or **User Access Administrator** permission on the Subscription.
 
 ## "You don't appear to have an active Azure subscription" error
 

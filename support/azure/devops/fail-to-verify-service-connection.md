@@ -18,7 +18,7 @@ When users try to verify the automatic Azure RM service connection, they receive
 
 > Failed to get Azure DevOps Service access token, cache value is invalid.
 
-:::image type="content" source="media/troubleshoot-azure-rm-failed-access-token/edit-service-connection-azurerm.png" alt-text="Screenshot that shows verification of the automatic Azure RM connection.":::
+:::image type="content" source="media/fail-to-verify-service-connection/edit-service-connection-azurerm.png" alt-text="Screenshot that shows verification of the automatic Azure RM connection.":::
 
 ### Debugging steps
 
@@ -45,7 +45,7 @@ When you run a service connection update call from the UI, the body of the `PUT`
 1. In the request body, remove the **accesstoken: null** (or **accesstoken:''**) property under the authorization header.
 1. Copy the request body, and make a service connection update `PATCH REST` call by using Postman (or any other `REST` tool) by running the following command.
 
-`PUT https://dev.azure.com/{organization}/_apis/serviceendpoint/endpoints/{endpointId}?api-version=6.0-preview.4`
+   `PUT https://dev.azure.com/{organization}/_apis/serviceendpoint/endpoints/{endpointId}?api-version=6.0-preview.4`
 
 For more information, see [Endpoints - Update Service Endpoint](/rest/api/azure/devops/serviceendpoint/endpoints/update-service-endpoint?view=azure-devops-rest-6.0&tabs=HTTP&preserve-view=true).
 
@@ -63,7 +63,7 @@ Failed to query service connection API: 'https://management.azure.com/subscripti
 
 ### Debugging steps
 
-1. Capture F12/Fiddler trace, while reproducing the issue.
+Capture F12/Fiddler trace, while reproducing the issue.
 
 You will see the following response for the POST call in the trace:
 

@@ -46,8 +46,8 @@ In the API response, check the `isReady` status. If the value is `false`, this i
 
 1. Select **Manage Service Principle**.
 
-> [!NOTE]
-> This command redirects the connection to the Azure portal and displays the SPN (App) that was created as part of service connection creation.
+   > [!NOTE]
+   > This command redirects the connection to the Azure portal and displays the SPN (App) that was created as part of service connection creation.
 
 1. Check whether the SPN (App) still exists. (It was likely deleted.)
 

@@ -40,15 +40,14 @@
     href: overview-of-azure-resource-manager-service-connections.md
   - name: Service connection creation issues
     items:
-    - name: Subscription loading issues
-      href: troubleshoot-subscription-related-scenarios.md
     - name: Azure RM Service connection not listed for a task
       href: azure-rm-service-connection-not-listed-for-a-task.md
     - name: Fail to verify the service connection
       href: fail-to-verify-service-connection.md
     - name: Fail to delete an existing Azure RM service connection
       href: user-is-not-able-to-delete-existing-service-connection.md
-
+    - name: Subscription loading issues
+      href: troubleshoot-subscription-related-scenarios.md
 - name: Repos
   items:
   - name: Git clone or Git push fails to an Azure DevOps repository
