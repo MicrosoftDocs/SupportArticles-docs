@@ -16,40 +16,40 @@ AGDiag is an application that automates the manual analysis in the above article
 
 ## Use TSS to generate logs for AGDiag to analyze
 
-To diagnose an availability group health event, use TSS to collect logs on the SQL Server instance that was in the primary role at the time of the event.
+To diagnose an availability group health event, use the TSS to collect logs on the SQL Server instance that was in the primary role at the time of the event.
 
 To create the TSS logs on the SQL Server instance, download [TSS](https://aka.ms/getTSS) to the availability group primary replica at the time of the health issue:
 
 Select **Save As** to save the zipped binaries to a folder.
 
-From elevated command line, change directory to TSS folder where files were saved/extracted and run 'TSS SDP:SQLBase' and respond to the prompts:
+From the elevated command line, change the directory to the TSS folder where files were saved/extracted and run 'TSS SDP:SQLBase' and respond to the prompts:
 
-:::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/command-prompt-tss.png" alt-text="Screenshot of elevated command prompt changing directory to TSS folder." lightbox="media/use-agdiag-diagnose-availability-group-health-events/command-prompt-tss.png":::
+:::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/command-prompt-tss.png" alt-text="Screenshot of the elevated command prompt changing the directory to the TSS folder." lightbox="media/use-agdiag-diagnose-availability-group-health-events/command-prompt-tss.png":::
 
 Once the TSS SQLBase cab file has been created, extract the cab into a folder.
 
 :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/extract-tss-sqlbase-cab.png" alt-text="Screenshot of extracting the SQLBase cab file to a folder." lightbox="media/use-agdiag-diagnose-availability-group-health-events/extract-tss-sqlbase-cab.png":::
 
-## Download AGDiag tool
+## Download the AGDiag tool
 
 To download AGDiag, follow these steps:
 
-1. Open [Release AGDiag Windows Release October 2021 (signed) · microsoft/agdiag · GitHub](https://github.com/microsoft/agdiag/releases/tag/Win2.0.0.23)
+1. Open [Release AGDiag Windows Release October 2021 (signed) · microsoft/agdiag · GitHub](https://github.com/microsoft/agdiag/releases/tag/Win2.0.0.23).
 1. Select the **agdiag.zip** link to download the tool.
 
    :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/agdiag-zip-download.png" alt-text="Screenshot of selecting the agdiag.zip link to download the tool." lightbox="media/use-agdiag-diagnose-availability-group-health-events/agdiag-zip-download.png":::
 
 ## Launch AGDiag and feed it the unzipped TSS logs
 
-Once the tool is downloaded, following these steps to launch AGDiag and feed it the unzipped TSS logs:
+Once the tool is downloaded, follow these steps to launch AGDiag and feed it the unzipped TSS logs:
 
-1. Extract the zip and double-click the *agdiag.exe* to launch AGDiag.
+1. Extract the zip and double-click *agdiag.exe* to launch AGDiag.
 
    A dialog appears like the following one:
   
    :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/agdiag-select-log-folder.png" alt-text="Screenshot of running the AGDiag tool." lightbox="media/use-agdiag-diagnose-availability-group-health-events/agdiag-select-log-folder.png":::
 
-1. Select **Select Log Folder**, drill into the folder that you extracted the TSS SQL Base CAB files into, and then select **OK**.
+1. Select **Select Log Folder**, drill into the folder you extracted the TSS SQL Base CAB files into, and then select **OK**.
 
 ## Interpret the AGDiag report
 
@@ -63,7 +63,7 @@ AGDiag reports on the logs analyzed in the initialize section:
 
 :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/agdiag-report.png" alt-text="Screenshot of the AGDiag reports on the logs." lightbox="media/use-agdiag-diagnose-availability-group-health-events/agdiag-report.png":::
 
-Summary report lists the availability group health events from the cluster log:
+The summary report lists the availability group health events from the cluster log:
 
 :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/availability-group-health-event-summary-report.png" alt-text="Screenshot of availability group health events." lightbox="media/use-agdiag-diagnose-availability-group-health-events/availability-group-health-event-summary-report.png":::
 
