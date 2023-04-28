@@ -21,13 +21,11 @@ appliesto:
 ms.date: 4/27/2023
 ---
 
-# Microsoft 365 Apps activation error "Another account from your organization is already signed in on this computer"
+# Microsoft 365 apps activation error "Another account from your organization is already signed in on this computer"
 
-When you try to activate Microsoft 365 apps, you receive the following error message:
+When you try to activate Microsoft 365 apps, you receive the following error message even though no other account is in use:
 
 > Sorry, another account from your organization is already signed in on this computer
-
-You receive this message even though no other account is in use.
 
 **Note:** This error is expected if you're already signed in by using another Microsoft 365 account from the same tenant.
 
