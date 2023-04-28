@@ -221,6 +221,15 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
     Next links (the property on a query result that enables a gallery or grid to automatically page in the next set of results of a query) are not yet supported for [action-based connectors](/power-apps/maker/canvas-apps/connections-list) in Power Apps. This means that when you use an action-based connector, it will retrieve data up to the delegable limit and then stop. To get paging behaviors by using a gallery or grid and an action-based connection, use a Power Automate flow.
 
+1. **Explicit Column Selection ("ECS") and columns that disappear.**
+
+    With the Preview feature Explicit Column Selection ("ECS") turned on, columns may not be retrieved from the data source if the data is first retrieved into collection.  As some tables may have many columns, ECS automatically computes which columns are necessary to retrieve based on their usage in controls (e.g., galleries and forms).  This also generally works for collections.  However, occaisionally the column lineage is lost as data moves through collections and variables and Power Apps may lose track of the column it should retrieve.  Force Power Apps to 'remember' the column by using a "ShowColumns" function.  For example:
+    
+    ```powerapps-dot
+    ClearCollect(MyColTable, ShowColumns(Filter(BankAccounts, AcountNo = 32), "Col1", "Col2", Col3"));
+    ```
+ Where "Col1", "Col2", Col3" are columns you expect to be retrieved from the data source (e.g, 'Account').
+
 ## Power Apps for Windows
 
 1. **Power Apps mobile app for Windows platform doesn't support Dropbox connector.** (December 15, 2020)
