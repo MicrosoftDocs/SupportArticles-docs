@@ -34,7 +34,7 @@ Once the TSS SQLBase cab file has been created, extract the cab into a folder.
 
 To download AGDiag, follow these steps:
 
-1. Open [Release AGDiag Windows Release October 2021 (signed) · microsoft/agdiag · GitHub](https://github.com/microsoft/agdiag/releases/tag/Win2.0.0.23).
+1. Open [Release AGDiag Windows Release October 2021 (signed)](https://github.com/microsoft/agdiag/releases/tag/Win2.0.0.23).
 1. Select the **agdiag.zip** link to download the tool.
 
    :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/agdiag-zip-download.png" alt-text="Screenshot of selecting the agdiag.zip link to download the tool." lightbox="media/use-agdiag-diagnose-availability-group-health-events/agdiag-zip-download.png":::
