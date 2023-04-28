@@ -73,4 +73,4 @@ There is a detailed report for each health event detected, which includes log fi
 
 ## Known issues with AGDiag
 
-For the latest information on documented issues and possible solutions, see [Known Issues with AGDiag · microsoft/agdiag Wiki · GitHub](https://github.com/microsoft/agdiag/wiki/Known-Issues-with-AGDiag).
+For the latest information on documented issues and possible solutions, see [Known Issues with AGDiag](https://github.com/microsoft/agdiag/wiki/Known-Issues-with-AGDiag).
