@@ -30,7 +30,7 @@ Verify that the following policies are assigned to the affected users:
 
 - A Teams Meeting policy that permits the Outlook add-in to be installed. For more information, see [Meeting policy settings](/microsoftteams/meeting-policies-in-teams-general#outlook-add-in).
 
-## Use the Teams Missing in Outlook add-in diagnostic
+## Use the Teams Add-in Missing in Outlook diagnostic
 
 If you're an administrator, you can use the following diagnostic tool to validate that a user has the correct policies to enable the Teams Outlook add-in. 
 
