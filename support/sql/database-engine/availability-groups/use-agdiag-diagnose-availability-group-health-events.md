@@ -24,7 +24,11 @@ Select **Save As** to save the zipped binaries to a folder.
 
 From elevated command line, change directory to TSS folder where files were saved/extracted and run 'TSS SDP:SQLBase' and respond to the prompts:
 
+:::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/command-prompt-tss.png" alt-text="Screenshot of elevated command prompt changing directory to tss folder." lightbox="media/use-agdiag-diagnose-availability-group-health-events/command-prompt-tss.png":::
+
 Once the TSS SQLBase cab file has been created, extract the cab into a folder.
+
+:::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/extract-tss-sqlbase-cab.png" alt-text="Screenshot of extracting the SQLBase cab file to a folder." lightbox="media/use-agdiag-diagnose-availability-group-health-events/extract-tss-sqlbase-cab.png":::
 
 ## Download AGDiag tool
 
@@ -33,11 +37,19 @@ To download AGDiag, follow these steps:
 1. Open [Release AGDiag Windows Release October 2021 (signed) · microsoft/agdiag · GitHub](https://github.com/microsoft/agdiag/releases/tag/Win2.0.0.23)
 1. Select the **agdiag.zip** link to download the tool.
 
+  :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/agdiag-zip-download.png" alt-text="Screenshot of selecting the agdiag.zip link to download the tool." lightbox="media/use-agdiag-diagnose-availability-group-health-events/agdiag-zip-download.png":::
+
 ## Launch AGDiag and feed it the unzipped TSS logs
 
-Once the tool is downloaded, extract the zip and double-click the *agdiag.exe* to launch AGDiag.
+Once the tool is downloaded, following these steps to launch AGDiag and feed it the unzipped TSS logs:
 
-A dialog appears like the following one. Select **Select Log Folder** and drill into the folder that you extracted the TSS SQL Base CAB files into. Click OK.
+1. Extract the zip and double-click the *agdiag.exe* to launch AGDiag.
+
+  A dialog appears like the following one:
+  
+  :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/agdiag-select-log-folder.png" alt-text="Screenshot of running the AGDiag tool." lightbox="media/use-agdiag-diagnose-availability-group-health-events/agdiag-select-log-folder.png":::
+
+1. Select **Select Log Folder**, drill into the folder that you extracted the TSS SQL Base CAB files into, and then select **OK**.
 
 ## Interpret the AGDiag report
 
@@ -45,11 +57,19 @@ The AGDiag report should be launched in the default system browser. The followin
 
 The following AGDiag Splash Screen describes AGDiag capabilities and version information:
 
-AGDiag reports on the logs Analyzed in the Initialize Section:
+:::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/agdiag-splash-screen.png" alt-text="Screenshot of running the AGDiag tool." lightbox="media/use-agdiag-diagnose-availability-group-health-events/agdiag-splash-screen.png":::
+
+AGDiag reports on the logs analyzed in the initialize section:
+
+:::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/agdiag-report.png" alt-text="Screenshot of the AGDiag reports on the logs." lightbox="media/use-agdiag-diagnose-availability-group-health-events/agdiag-report.png":::
 
 Summary report lists the availability group health events from the cluster log:
 
+:::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/availability-group-health-event-summary-report.png" alt-text="Screenshot of availibility group health events." lightbox="media/use-agdiag-diagnose-availability-group-health-events/availability-group-health-event-summary-report.png":::
+
 There is a detailed report for each health event detected, which includes log findings that correlate to the health event, diagnosis, and recommendations:
+
+:::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/alwayson-health-event.png" alt-text="Screenshot of AlwaysOn health events." lightbox="media/use-agdiag-diagnose-availability-group-health-events/alwayson-health-event.png":::
 
 ## Known issues with AGDiag
 
