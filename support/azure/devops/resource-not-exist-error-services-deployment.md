@@ -36,7 +36,7 @@ To solve this error, add a delay to the pipeline before using the Azure task. If
 
 ## See related
 
-- [Capture logs for further debugging of the tasks](logs-capture-further-debugging-tasks.md)
+- [Tasks documentation and logs to capture for further debugging](tasks-documentation-logs-capture-further-debugging.md)
 - [Failure scenarios related to Azure web app tasks](failure-scenarios-related-azure-web-app-tasks.md)
 - [Initial debugging for issues related to Azure Web App and services](initial-debugging-azure-web-app-services.md)
 - [Issues with the service connection in the task](issues-service-connection-task.md)
