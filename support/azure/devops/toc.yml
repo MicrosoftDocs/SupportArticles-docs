@@ -38,7 +38,7 @@
     href: other-release-management-component-no-work.md
   - name: Troubleshoot Azure Resource Manager service connection issues
     href: overview-of-azure-resource-manager-service-connections.md
-    - name: Azure Resource Manager service connections
+    - name: Service connection creation issues
       items:
       - name: Subscription loading issues
         href: troubleshoot-subscription-related-scenarios.md
