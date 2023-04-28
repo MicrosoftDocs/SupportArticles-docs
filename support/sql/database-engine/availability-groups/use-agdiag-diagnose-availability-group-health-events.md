@@ -65,7 +65,7 @@ AGDiag reports on the logs analyzed in the initialize section:
 
 Summary report lists the availability group health events from the cluster log:
 
-:::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/availability-group-health-event-summary-report.png" alt-text="Screenshot of availibility group health events." lightbox="media/use-agdiag-diagnose-availability-group-health-events/availability-group-health-event-summary-report.png":::
+:::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/availability-group-health-event-summary-report.png" alt-text="Screenshot of availability group health events." lightbox="media/use-agdiag-diagnose-availability-group-health-events/availability-group-health-event-summary-report.png":::
 
 There is a detailed report for each health event detected, which includes log findings that correlate to the health event, diagnosis, and recommendations:
 
