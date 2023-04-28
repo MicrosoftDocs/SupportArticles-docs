@@ -85,7 +85,7 @@ The following table contains the error codes (also known as enhanced status code
 |5.7.506|`Access Denied, Bad HELO`|Your server is attempting to introduce itself (HELO according to RFC 821) as the server it's trying to connect to, rather than its own fully qualified domain name.|This isn't allowed, and it's characteristic of typical spambot behavior.|
 |5.7.507|`Access denied, rejected by recipient`|The IP that you're attempting to send from has been blocked by the recipient's organization.|Contact the recipient to resolve this issue.|
 |5.7.508|`Access denied, [$SenderIPAddress] has exceeded permitted limits within $range range`|The sender's IPv6 range has attempted to send too many messages in too short a time period.|Not applicable|
-|5.7.509|`Access denied, sending domain [$SenderDomain] does not pass DMARC verification and has a DMARC policy of reject. For information on why this error occurred, see https://review.learn.microsoft.com/en-us/exchange/troubleshoot/email-delivery/ndr/non-delivery-reports-in-exchange-online?branch=pr-en-us-4481#why-would-dmarc-fail` |The sender's domain in the **5322.From** address doesn't pass DMARC.|For information on why this error occurred, see [Why would DMARC fail?](#why-would-dmarc-fail)<br/><br/> A user too receives this Bounce Message because it failed DMARC and the DMARC policy is set to reject all failures. The user then should contact their email administrator for additional help.|
+|5.7.509|`Access denied, sending domain [$SenderDomain] does not pass DMARC verification and has a DMARC policy of reject.` |The sender's domain in the **5322.From** address doesn't pass DMARC.|For information on why this error occurred, see [Why does DMARC fail?](#why-would-dmarc-fail).<br/><br/> A user too receives this Bounce Message because it failed DMARC and the DMARC policy is set to reject all failures. The user then should contact their email administrator for additional help.|
 |5.7.510|`Access denied, [contoso.com] does not accept email over IPv6`|The sender is attempting to transmit a message to the recipient over IPv6, but the recipient doesn't accept email messages over IPv6.|Not applicable|
 |5.7.511|`Access denied, banned sender`|The IP that you're attempting to send from has been banned.|To delist the address, email delist@microsoft.com and provide the full NDR code and IP address. <br/><br/> For more information, see [Use the delist portal to remove yourself from the blocked senders list](/microsoft-365/security/office-365-security/use-the-delist-portal-to-remove-yourself-from-the-office-365-blocked-senders-lis).|
 |5.7.512|`Access denied, message must be RFC 5322 section 3.6.2 compliant`|Message was sent without a valid "From" email address.|Office 365 only. Each message must contain a valid email address in the "From" header field. Proper formatting of this address includes angle brackets around the email address, for example, \<security@contoso.com\>. Without an address with this format, Microsoft 365 or Office 365 will reject the message.|
@@ -216,7 +216,7 @@ Although the **Original message headers** are omitted from this example due to t
 
 - [Troubleshoot Microsoft 365 mail flow](/exchange/mail-flow-best-practices/troubleshoot-mail-flow)
 
-## Why would DMARC fail?
+## Why does DMARC fail?
 
 1. **Missing or incorrect DMARC/DNS records:** Alignment issues, missing SPF, and policy issues.
 1. **Missing DKIM or DKIM records:** Missing DKIM DNS record (public key) or the Message isn't DKIM signed at the time of sending (private key).
