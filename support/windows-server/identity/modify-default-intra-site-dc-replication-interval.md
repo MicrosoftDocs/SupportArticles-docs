@@ -1,7 +1,7 @@
 ---
 title: Modify the default intra-site DC replication interval
 description: Describes how to modify the default intra-site domain controller replication interval.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -41,3 +41,7 @@ Value: REG_DWORD
 
 > [!NOTE]
 > A setting also applies to Active Directory Application Mode (ADAM) and Active Directory Lightweight Directory Services (AD LDS). For ADAM and for AD LDS, the registry key is in the ADAM instance "Parameters" registry key.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).

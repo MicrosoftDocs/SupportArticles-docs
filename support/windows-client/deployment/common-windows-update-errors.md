@@ -238,3 +238,8 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 | Message | Description | Mitigation |
 |---------|-------------|------------|
 |Failed to install cumulative updates|Windows Server 2016 Std failed to install cumulative packages by using the .msu package. No error is returned. When installing the packages with dism.exe, it returned the error 0x800706be.|The last cumulative update failed to install and was corrupted. To resolve this issue, navigate to the registry key for the corrupted update package. Change the “current state” value to 000020 hex (32 dec) - resolved, or 000040 hex (64 dec) - staged, or 000070 hex (112 dec) - installed.|
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).
+
