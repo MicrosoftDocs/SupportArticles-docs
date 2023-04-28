@@ -214,3 +214,27 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 | Message | Description | Mitigation |
 |---------|-------------|------------|
 | WU_E_PT_HTTP_STATUS_SERVICE_UNAVAILABLE; Same as HTTP status 503 - the service is temporarily overloaded. | Unable to connect to the configured update source. | Network troubleshooting needed to resolve the connectivity issue. Check with your network and proxy teams to confirm that the device can the update source without the proxy requiring user authentication. |
+
+## 0x80070490
+
+| Message | Description | Mitigation |
+|---------|-------------|------------|
+|ERROR_NOT_FOUND|This error occurs during driver installation as part of the update.|This issue occurs because details such as the architecture for a driver that's being updated are missing in the registry. Manually add the missing inf file **Arch** value in the Driver operations registry by following these steps:<br/>1. Open *regedit* and navigate to `HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\ComponentBasedServicing\DriverOperations\0\2(SequenceID)`<br/>2. Review the **Identity** value to determine the value that is missing.<br/>3. Manually add the missing value referring to the information in the **Identity** value. For example, Name: Arch; Type: REG_SZ (String Value); Data: amd64.<br/>4. Proceed with installing the failing update.|
+
+## 0x800f0922
+
+| Message | Description | Mitigation |
+|---------|-------------|------------|
+|CBS_E_INSTALLERS_FAILED|The July cumulative update failed to be installed on Windows Server 2016|In the CBS.log, you may find that updates sometimes roll back when License and Product key tokens fail to be updated. This issue can be resolved by adding write permissions for the "User" and "Network Service" accounts to the _C:\\Windows\\System32\\spp\\_ folder.|
+
+## 0x80070bc9
+
+| Message | Description | Mitigation |
+|---------|-------------|------------|
+|ERROR_FAIL_REBOOT_REQUIRED|The TrustedInstaller service startup type is set to "Manual" by Group Policy (GPO), which prevented it from starting to complete pending operations.|The TrustedInstaller service changes the startup type from Manual to Automatic when it encounters an update that has to process a transaction after a restart. When the value is set back to Manual before the restart, the transaction cannot be applied. This transaction will be pending and block all other update installations.<br/>To fix this issue, change the TrustedInstaller policy to **Automatic** and restart the computer. If it doesn't work, start the computer to WinRE to revert the pending actions. For example, `dism /Image:C:\ /Cleanup-Image /RevertPendingActions`. If it doesn't work either, start the computer to WinRE, rename *\WinSxS\Pending.xml*, and remove the PendingXMLIdentifier from COMPONENTS Hive.|
+
+## 0x800706be
+
+| Message | Description | Mitigation |
+|---------|-------------|------------|
+|Failed to install cumulative updates|Windows Server 2016 Std failed to install cumulative packages by using the .msu package. No error is returned. When installing the packages with dism.exe, it returned the error 0x800706be.|The last cumulative update failed to install and was corrupted. To resolve this issue, navigate to the registry key for the corrupted update package. Change the “current state” value to 000020 hex (32 dec) - resolved, or 000040 hex (64 dec) - staged, or 000070 hex (112 dec) - installed.|
