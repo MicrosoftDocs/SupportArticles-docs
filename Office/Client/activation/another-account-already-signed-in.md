@@ -89,18 +89,6 @@ For manual steps or more information, see [Reset Microsoft 365 Apps for enterpri
 </details>
 
 <details>
-<summary><b>Sign out of Office and sign back in</b></summary>
-
-1. Open an Office app, such as Word.
-1. Select your name and profile picture or icon at the top.
-1. Select **Sign out**.
-1. Select **Sign in**.
-1. Make sure you are signed in with your **Work or School** account, not your personal Microsoft account.
-1. Try activating Microsoft 365 again.
-
-</details>
-
-<details>
 <summary><b>Disconnect Work or School credentials</b></summary>
 
 1. From Start, select **Settings** (the gear icon) > **Accounts** > **Access work or school**.
