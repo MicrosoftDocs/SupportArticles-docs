@@ -37,9 +37,9 @@ If this error occurs when only one account is used, follow the steps that are ap
   1. Sign out of all Microsoft 365 apps, and then sign in again.
   1. If the issue still occurs, modify the OneAuth account store on the device:
 
-     1. Navigate to the `%localappdata%\Microsoft\OneAuth\accounts` folder. You’ll see one \<GUID\> file, or multiple files that have different GUIDs if there are multiple accounts.
-     1. Open the files by using Notepad, examine the **account_hints** value, and identify the files that aren’t associated with the account that you want to use to sign in.
-     1. In each file that’s identified in step b, locate the **association_status** entry, change the association status of `com.microsoft.Office` to **disassociated**, and then save the file.  For example, change  
+     1. Navigate to the `%localappdata%\Microsoft\OneAuth\accounts` folder. You'll see one \<GUID\> file, or multiple files that have different GUIDs if there are multiple accounts.
+     1. Open the files by using Notepad, examine the **account_hints** value, and identify the files that aren't associated with the account that you want to use to sign in.
+     1. In each file that's identified in step b, locate the **association_status** entry, change the association status of `com.microsoft.Office` to **disassociated**, and then save the file.  For example, change  
      *"association_status": "{\\"**com.microsoft.Office**\\":\\"**associated**\\",\\"com.microsoft.Outlook\\":\\"associated\\"}"*  
      to  
      *"association_status": "{\\"**com.microsoft.Office**\\":\\"**disassociated**\\",\\"com.microsoft.Outlook\\":\\"associated\\"}"*.
@@ -52,7 +52,7 @@ If this error occurs when only one account is used, follow the steps that are ap
 
 ## Additional troubleshooting methods
 
-**Note** Some of these troubleshooting methods can only be performed by a Microsoft 365 admin. If you aren’t an admin, see [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b).
+**Note:** Some of these troubleshooting methods can be performed only by a Microsoft 365 admin. If you aren't an admin, see [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b).
 
 <details>
 <summary><b>Update Windows</b></summary>
@@ -104,7 +104,7 @@ For manual steps or more information, see [Reset Microsoft 365 Apps for enterpri
 <summary><b>Disconnect Work or School credentials</b></summary>
 
 1. From Start, select **Settings** (the gear icon) > **Accounts** > **Access work or school**.
-1. If the account you use to sign in to office.com is listed there, but it isn’t the account you use to sign in to Windows, select it, and then select **Disconnect**.
+1. If the account you use to sign in to office.com is listed there, but it isn't the account you use to sign in to Windows, select it, and then select **Disconnect**.
 1. Restart the device and try to activate Microsoft 365 again.
 
 </details>
@@ -129,7 +129,7 @@ Some antivirus, proxy, or firewall software might block the following plug-in pr
 
 Temporarily disable your antivirus software. Contact your system administrator to find out if you are behind a proxy or firewall that is blocking this process. If so, you will also need to temporarily disable your proxy or firewall connection. If you connect through a Virtual Private Network (VPN), you might need to temporarily disable your VPN also.
 
-If the process isn’t blocked, but you still can’t activate Microsoft 365, delete your BrokerPlugin data and then reinstall it using the following steps:
+If the process isn't blocked, but you still can't activate Microsoft 365, delete your BrokerPlugin data and then reinstall it using the following steps:
 
 1. Open File Explorer, and put the following location in the address bar:
 `%LOCALAPPDATA%\Packages\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\AC\TokenBroker\Accounts`
