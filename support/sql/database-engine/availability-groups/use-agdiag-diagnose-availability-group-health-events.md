@@ -1,7 +1,7 @@
 ---
 title: Use AGDiag to diagnose availability group health events
 description: This article describes how to use AGDiag to diagnose availability group health events.
-ms.date: 04/17/2023
+ms.date: 04/28/2023
 ms.custom: sap:Availability Groups
 ms.prod: sql
 author: sevend2
@@ -57,7 +57,7 @@ The AGDiag report should be launched in the default system browser. The followin
 
 The following AGDiag Splash Screen describes AGDiag capabilities and version information:
 
-:::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/agdiag-splash-screen.png" alt-text="Screenshot of running the AGDiag tool." lightbox="media/use-agdiag-diagnose-availability-group-health-events/agdiag-splash-screen.png":::
+:::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/agdiag-splash-screen.png" alt-text="Screenshot of the AGDiag Splash Screen." lightbox="media/use-agdiag-diagnose-availability-group-health-events/agdiag-splash-screen.png":::
 
 AGDiag reports on the logs analyzed in the initialize section:
 
