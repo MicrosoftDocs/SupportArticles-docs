@@ -1,6 +1,6 @@
 ---
-title: Sorry, another account from your organization is already signed in on this computer
-description: Troubleshooting steps for Microsoft 365 Apps activation error Sorry, another account from your organization is already signed in on this computer
+title: Another account from your organization is already signed in on this computer
+description: Troubleshooting steps for Microsoft 365 apps activation error Sorry, another account from your organization is already signed in on this computer.
 author: helenclu
 ms.reviewer: vikkarti
 ms.author: luche
@@ -13,34 +13,57 @@ ms.custom:
   - CI 157596
   - CI 159181
   - CI 159479
+  - CI 175165
 search.appverid: 
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 3/31/2022
+ms.date: 4/27/2023
 ---
 
-# Microsoft 365 Apps activation error: “Sorry, another account from your organization is already signed in on this computer”
+# Microsoft 365 Apps activation error "Another account from your organization is already signed in on this computer"
 
-When trying to activate Microsoft 365 apps, you might encounter the error:
+When you try to activate Microsoft 365 apps, you receive the following error message:
 
 > Sorry, another account from your organization is already signed in on this computer
 
-If this occurs on a Mac, see [Can't sign in to an Office 2016 for Mac app](/microsoft-365/troubleshoot/sign-in/sign-in-to-office-2016-for-mac-fail).
+You receive this message even though no other account is in use.
 
-For Windows devices, try the following troubleshooting methods to solve the problem.
+**Note:** This error is expected if you're already signed in by using another Microsoft 365 account from the same tenant.
 
-**Note** Some of these troubleshooting methods can only be performed by a Microsoft 365 admin. If you aren’t an admin, see [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b)
-<br/><br/>
+If this error occurs when only one account is used, follow the steps that are appropriate for your device:
+
+- For Mac devices, follow the steps in [Can't sign in to an Office 2016 for Mac app](/microsoft-365/troubleshoot/sign-in/sign-in-to-office-2016-for-mac-fail).
+- For Windows devices, follow these steps:
+
+  1. Sign out of all Microsoft 365 apps, and then sign in again.
+  1. If the issue still occurs, modify the OneAuth account store on the device:
+
+     1. Navigate to the `%localappdata%\Microsoft\OneAuth\accounts` folder. You’ll see one \<GUID\> file, or multiple files that have different GUIDs if there are multiple accounts.
+     1. Open the files by using Notepad, examine the **account_hints** value, and identify the files that aren’t associated with the account that you want to use to sign in.
+     1. In each file that’s identified in step b, locate the **association_status** entry, change the association status of `com.microsoft.Office` to **disassociated**, and then save the file.  For example, change  
+     *"association_status": "{\\"**com.microsoft.Office**\\":\\"**associated**\\",\\"com.microsoft.Outlook\\":\\"associated\\"}"*  
+     to  
+     *"association_status": "{\\"**com.microsoft.Office**\\":\\"**disassociated**\\",\\"com.microsoft.Outlook\\":\\"associated\\"}"*.
+     1. Try to sign in again.
+  1. If the issue persists, sign out of all Microsoft 365 apps, remove all folders in the following locations, and then sign in again:
+
+     - `%localappdata%/Microsoft/OneAuth`
+     - `%localappdata%/Microsoft/IdentityCache`
+  1. If the issue persists, try the [additional troubleshooting methods](#additional-troubleshooting-methods).
+
+## Additional troubleshooting methods
+
+**Note** Some of these troubleshooting methods can only be performed by a Microsoft 365 admin. If you aren’t an admin, see [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b).
 
 <details>
 <summary><b>Update Windows</b></summary>
 
-1.	From Start, type check for updates, and select **Check for updates** from the search results.
-1.	Select **Check for updates**.
-1.	Download and install available updates.
-1.	Restart the device and try to activate Microsoft 365 again.
-<br/><br/>
+1. From Start, type check for updates, and select **Check for updates** from the search results.
+1. Select **Check for updates**.
+1. Download and install available updates.
+1. Restart the device and try to activate Microsoft 365 again.
+
 </details>
 
 <details>
@@ -48,14 +71,14 @@ For Windows devices, try the following troubleshooting methods to solve the prob
 
 It is recommended that Microsoft 365 be configured to install updates automatically. To check for updates, open an Office app (such as Word), select **File**, and then select **Account**.
 Select **Update options**, and then select **Update now**.
-<br/><br/>
+
 </details>
 
 <details>
 <summary><b>Run the Microsoft Support and Recovery Assistant (SaRA) Sign in troubleshooter</b></summary>
 
 Run [the SaRA Office sign in issue troubleshooter](https://aka.ms/SaRA-OfficeSignInScenario).
-<br/><br/>
+
 </details>
 
 <details>
@@ -64,39 +87,39 @@ Run [the SaRA Office sign in issue troubleshooter](https://aka.ms/SaRA-OfficeSig
 Run the [Microsoft Support and Recovery Assistant (SaRA) to reset the Microsoft 365 activation state](https://aka.ms/SaRA-OfficeActivation-Reset).
 
 For manual steps or more information, see [Reset Microsoft 365 Apps for enterprise activation state](/office/troubleshoot/activation/reset-office-365-proplus-activation-state).
-<br/><br/>
+
 </details>
 
 <details>
 <summary><b>Sign out of Office and sign back in</b></summary>
 
-1.	Open an Office app, such as Word.
-1.	Select your name and profile picture or icon at the top.
-1.	Select **Sign out**.
-1.	Select **Sign in**.
-1.	Make sure you are signed in with your **Work or School** account, not your personal Microsoft account.
-1.	Try activating Microsoft 365 again.
-<br/><br/>
+1. Open an Office app, such as Word.
+1. Select your name and profile picture or icon at the top.
+1. Select **Sign out**.
+1. Select **Sign in**.
+1. Make sure you are signed in with your **Work or School** account, not your personal Microsoft account.
+1. Try activating Microsoft 365 again.
+
 </details>
 
 <details>
 <summary><b>Disconnect Work or School credentials</b></summary>
 
-1.	From Start, select **Settings** (the gear icon) > **Accounts** > **Access work or school**.
-1.	If the account you use to sign in to office.com is listed there, but it isn’t the account you use to sign in to Windows, select it, and then select **Disconnect**.
-1.	Restart the device and try to activate Microsoft 365 again.
-<br/><br/>
+1. From Start, select **Settings** (the gear icon) > **Accounts** > **Access work or school**.
+1. If the account you use to sign in to office.com is listed there, but it isn’t the account you use to sign in to Windows, select it, and then select **Disconnect**.
+1. Restart the device and try to activate Microsoft 365 again.
+
 </details>
 
 <details>
 <summary><b>Make sure user licenses are assigned</b></summary>
 
-1.	In the [Microsoft 365 Admin Center](https://admin.microsoft.com/), go to the **Users** > [Active users](https://go.microsoft.com/fwlink/p/?linkid=834822) page.
-1.	Select the row of the user that you want to assign a license to.
-1.	In the right pane, select **Licenses and Apps**.
-1.	Expand the **Licenses** section, select the boxes for the licenses that you want to assign, then select **Save changes**.
-1.	If the license is already assigned, uncheck it, select **Save changes**, then check it again and select **Save changes** again.
-<br/><br/>
+1. In the [Microsoft 365 Admin Center](https://admin.microsoft.com/), go to the **Users** > [Active users](https://go.microsoft.com/fwlink/p/?linkid=834822) page.
+1. Select the row of the user that you want to assign a license to.
+1. In the right pane, select **Licenses and Apps**.
+1. Expand the **Licenses** section, select the boxes for the licenses that you want to assign, then select **Save changes**.
+1. If the license is already assigned, uncheck it, select **Save changes**, then check it again and select **Save changes** again.
+
 </details>
 
 <details>
@@ -110,18 +133,18 @@ Temporarily disable your antivirus software. Contact your system administrator t
 
 If the process isn’t blocked, but you still can’t activate Microsoft 365, delete your BrokerPlugin data and then reinstall it using the following steps:
 
-1.	Open File Explorer, and put the following location in the address bar:
+1. Open File Explorer, and put the following location in the address bar:
 `%LOCALAPPDATA%\Packages\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\AC\TokenBroker\Accounts`
-1.	Press CTRL + A to select all.
-1.	Right-click in the selected files and choose **Delete**.
-1.	Put the following location in the File Explorer address bar:
+1. Press CTRL + A to select all.
+1. Right-click in the selected files and choose **Delete**.
+1. Put the following location in the File Explorer address bar:
 `%LOCALAPPDATA%\Packages\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy\AC\TokenBroker\Accounts`
-1.	Select all files and delete them.
-1.	Restart the device.
-1.	Download and run [the SaRA package for sign in issues](https://aka.ms/SaRA-OfficeSignInScenario).
+1. Select all files and delete them.
+1. Restart the device.
+1. Download and run [the SaRA package for sign in issues](https://aka.ms/SaRA-OfficeSignInScenario).
 
 For manual troubleshooting for step 7, or for more information, see [Fix authentication issues in Office applications when you try to connect to a Microsoft 365 service](/microsoft-365/troubleshoot/authentication/automatic-authentication-fails).
-<br/><br/>
+
 </details>
 
 <details>
@@ -130,7 +153,7 @@ For manual troubleshooting for step 7, or for more information, see [Fix authent
 For instructions to do so, see [Add an email account to Outlook](https://support.office.com/article/add-an-email-account-to-outlook-e9da47c4-9b89-4b49-b945-a204aeea6726).
 
 When prompted, select **Allow my organization to manage my device**. When the process is completed, restart the device and try activating Microsoft 365 again. You can remove the second email account from Outlook afterward.
-<br/><br/>
+
 </details>
 
 <details>
@@ -138,19 +161,19 @@ When prompted, select **Allow my organization to manage my device**. When the pr
 
 A Microsoft 365 admin can try the following steps to solve the problem.
 
-1.	Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com).
-1.	Navigate to **Azure Active Directory Admin Center** > **Azure Active Directory** > **Devices**.
-1.	Check the disabled device list for the device, select it, and choose **Enable**.
-<br/><br/>
+1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com).
+1. Navigate to **Azure Active Directory Admin Center** > **Azure Active Directory** > **Devices**.
+1. Check the disabled device list for the device, select it, and choose **Enable**.
+
 </details>
 
 <details>
 <summary><b>Create a new Windows user account</b></summary>
 
-1.	Perform a clean boot of Windows. For instructions, see [How to perform a clean boot in Windows](https://support.microsoft.com/topic/how-to-perform-a-clean-boot-in-windows-da2f9573-6eec-00ad-2f8a-a97a1807f3dd).
-1.	Create a new user account, and then make that account an administrator. For instructions, see [Create a local user or administrator account in Windows]( https://support.microsoft.com/windows/create-a-local-user-or-administrator-account-in-windows-20de74e0-ac7f-3502-a866-32915af2a34d#WindowsVersion=Windows_10).
-1.	Sign in to Windows with the new account.
-1.	Download and install Office.
-1.	Try to activate Microsoft 365 again.
-<br/><br/>
+1. Perform a clean boot of Windows. For instructions, see [How to perform a clean boot in Windows](https://support.microsoft.com/topic/how-to-perform-a-clean-boot-in-windows-da2f9573-6eec-00ad-2f8a-a97a1807f3dd).
+1. Create a new user account, and then make that account an administrator. For instructions, see [Create a local user or administrator account in Windows]( https://support.microsoft.com/windows/create-a-local-user-or-administrator-account-in-windows-20de74e0-ac7f-3502-a866-32915af2a34d#WindowsVersion=Windows_10).
+1. Sign in to Windows with the new account.
+1. Download and install Office.
+1. Try to activate Microsoft 365 again.
+
 </details>
