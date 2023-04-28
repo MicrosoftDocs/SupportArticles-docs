@@ -1,7 +1,7 @@
 ---
 title: Error 0xC004F074 when you activate Windows
 description: Helps fix the error 0xC004F074 that occurs when you activate Windows.
-ms.date: 04/26/2023
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -17,7 +17,7 @@ ms.technology: windows-server-deployment
 
 This article helps fix the error 0xC004F074 that occurs when you activate Windows.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Supported versions of Windows Server and Windows Client  
 _Original KB number:_ &nbsp; 974998
 
 When you try to activate Windows, you may get error 0xC004F074 and one of the following error messages:
