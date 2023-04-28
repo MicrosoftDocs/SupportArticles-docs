@@ -21,6 +21,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/dynamics-365/fraud-protection/welcome-fraud-protection.yml",
+      "redirect_url": "/troubleshoot/dynamics-365/",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/dynamics-365/fraud-protection/mobile-device-fingerprinting.md",
       "redirect_url": "/dynamics365/fraud-protection/",
       "redirect_document_id": false
