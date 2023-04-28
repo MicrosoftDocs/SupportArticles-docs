@@ -16,7 +16,7 @@ This article lists the Microsoft SQL Server 2022 builds that were released after
 
 | CU Name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
 |---------------|--------------------------|----------------------------------------|---------------------------------|----------------------------------------------|-----------------------|--------------------|
-| CU4 | 16.0.4035.1 |  |  |  | [KB5026717](cumulativeupdate4.md) | May 11, 2023|
+| CU4 | 16.0.4035.3 | 2022.160.4035.3 | 16.0.43.211 | 2022.160.43.211 | [KB5026717](cumulativeupdate4.md) | May 11, 2023|
 | CU3 | 16.0.4025.1 | 2022.160.4025.1 | 16.0.43.211 | 2022.160.43.211 | [KB5024396](cumulativeupdate3.md) | April 13, 2023|
 | CU2 | 16.0.4015.1 | 2022.160.4015.1 | 16.0.43.208 | 2022.160.43.208 | [KB5023127](cumulativeupdate2.md) | March 15, 2023|
 | CU1 | 16.0.4003.1 | 2022.160.4003.1| 16.0.43.208 | 2022.160.43.208 | [KB5022375](cumulativeupdate1.md) | February 16, 2023|
