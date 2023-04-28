@@ -37,10 +37,9 @@
   - name: Release Management component doesn't work
     href: other-release-management-component-no-work.md
   - name: Azure Web App tasks and deployments
-    href: azure-web-app-task-deployments.md
     items:
-    - name: Capture logs for further debugging of the tasks
-      href: logs-capture-further-debugging-tasks.md
+    - name: Tasks documentation and logs to capture for further debugging
+      href: tasks-documentation-logs-capture-further-debugging.md
     - name: Initial debugging for issues related to Azure Web App and services
       href: initial-debugging-azure-web-app-services.md
     - name: Issues with the service connection in the task
