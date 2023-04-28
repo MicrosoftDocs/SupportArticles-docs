@@ -71,7 +71,7 @@ ms.subservice: ts-pipelines
 
 ## See related
 
-- [Capture logs for further debugging with the tasks](logs-capture-further-debugging-tasks.md)
-- [Initial debugging for Azure Web App and services related issues](initial-debugging-azure-web-app-services.md)
+- [Capture logs for further debugging of the tasks](logs-capture-further-debugging-tasks.md)
+- [Initial debugging for issues related to Azure Web App and services](initial-debugging-azure-web-app-services.md)
 - [Issues with the service connection in the task](issues-service-connection-task.md)
 - [Resource doesn't exist error with services deployment](resource-not-exist-error-services-deployment.md)
