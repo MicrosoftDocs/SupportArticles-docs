@@ -20,7 +20,12 @@
       "redirect_url": "/power-automate/desktop-flows/how-to/add-images-email-messages",
       "redirect_document_id": false
     },
-  {
+    {
+      "source_path": "support/dynamics-365/fraud-protection/mobile-device-fingerprinting.md",
+      "redirect_url": "/dynamics365/fraud-protection/",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/power-platform/admin/welcome-admin.md",
       "redirect_url": "/troubleshoot/power-platform",
       "redirect_document_id": false
