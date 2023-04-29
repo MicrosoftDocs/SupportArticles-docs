@@ -1,7 +1,7 @@
 ---
 title: Applying Group Policy troubleshooting guidance
 description: Provides guidance to troubleshoot Group Policy.
-ms.date: 02/16/2023
+ms.date: 04/28/2023
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
@@ -396,3 +396,7 @@ Before you complete your support request, we recommend that you use the Windows 
    ```console
    reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Diagnostics" /v GPSvcDebugLevel /t REG_DWORD /d "0x00000000" /f
    ```
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-group-policy.md).
