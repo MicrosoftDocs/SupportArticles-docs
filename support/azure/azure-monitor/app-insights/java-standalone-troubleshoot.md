@@ -53,7 +53,12 @@ If the Application Insights Java agent causes the connectivity issue, consider t
 
 ## Java virtual machine (JVM) fails to start
 
-If the Java virtual machine (JVM) doesn't start, it might return an "Error opening zip file or JAR manifest missing" message. That error means that the agent JAR file might have been corrupted during file transfer. Try redownloading the agent JAR file.
+If the Java virtual machine (JVM) doesn't start, it might return an "Error opening zip file or JAR manifest missing" message. To troubleshoot this problem, see the following table.
+
+| Problem | Action |
+|--|--|
+| The Java archive (JAR) file for the agent isn't found. | Make sure that you specify a valid agent JAR path in the `-javaagent` JVM argument. |
+| The agent JAR file might have been corrupted during file transfer. | Try to download the agent JAR file again. |
 
 ## Tomcat Java apps take several minutes to start
 
@@ -231,7 +236,7 @@ Otherwise, these cipher suites should already be part of modern Java 8+ distribu
 ## Slow startup time in Application Insights and Java 8
 Java 8 has a known issue that's related to the JAR file signature verification of Java agents. This issue can increase the startup time in Application Insights. To fix this issue, you can apply one of the following options:
 
-- If your application is based on Spring Boot, [programmatically attach the Application Insights Java agent to the Java virtual machine (JVM)](/azure/azure-monitor/app/java-spring-boot#enabling-programmatically).
+- If your application is based on Spring Boot, [programmatically attach the Application Insights Java agent to the JVM](/azure/azure-monitor/app/java-spring-boot#enabling-programmatically).
 
 - Use Java version 11 or a later version.
 
