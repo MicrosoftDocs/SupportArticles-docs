@@ -209,25 +209,16 @@ instance:
 
 When you configure your antivirus software settings, make sure that you exclude the following files or directories (as applicable) from virus scanning. This improves the performance of the files and helps make sure that the files are not locked when the SQL Server service must use them. However, if these files become infected, your antivirus software cannot detect the infection.
 
-The directory that holds Analysis Services data
+- The directory that holds Analysis Services data
 
-**Note** The directory that holds all Analysis Services data is specified by the DataDir property of the instance of Analysis
-Services. By default, the path of this directory for a default Analysis Service instance is C:\\Program Files\\Microsoft SQL
-Server\\MSASXX.MSSQLSERVER \\OLAP\\Data. The default data path of the Analysis Services named instance is C:\\Program Files\\Microsoft SQL
-Server\\MSASXX.\<instance name\>\\OLAP\\Data.
+The directory that holds all Analysis Services data is specified by the DataDir property of the instance of Analysis Services. By default, the path of this directory for a default Analysis Service instance is C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER \\OLAP\\Data. The default data path of the Analysis Services named instance is C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<instance name\>\\OLAP\\Data.
 
-**Note** For Analysis Services 2012 and later versions, temporary files during processing are specified by the TempDir property of the
-instance of Analysis Services. By default, this property is empty. When this property is empty, the default directory is used. By
-default, the Temp path for a default Analysis Service instance is C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER
-\\OLAP\\Temp. The default Temp path of the Analysis Services named instance is C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<instance name\>\\OLAP\\Temp.
+For Analysis Services 2012 and later versions, temporary files during processing are specified by the TempDir property of the instance of Analysis Services. By default, this property is empty. When this property is empty, the default directory is used. By default, the Temp path for a default Analysis Service instance is C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER\\OLAP\\Temp. The default Temp path of the Analysis Services named instance is C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<instancename\>\\OLAP\\Temp.
 
--
+- Analysis Services backup files
 
- Analysis Services backup files
+ By default, in Analysis Services 2012 and later versions, the backup file location is the location that is specified by the BackupDir property. By default, the Backup path for default Analysis Service instance is C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER \\OLAP\\Backup. The default Backup path of the Analysis Services named instance is C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<instance name\>\\OLAP\\Backup. You can change this directory in the properties of the instance of Analysis Services. Any backup command can point to a different location. Or, the backup files can be copied elsewhere.
 
-> **Note** By default, in Analysis Services 2012 and later versions, the backup file location is the location that is specified by the BackupDir property. By default, the Backup path for default Analysis Service instance is C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER \\OLAP\\Backup. The default Backup path of the Analysis Services named instance is C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<instance name\>\\OLAP\\Backup. You can change this directory in the properties of the instance of Analysis Services. Any backup command can point to a different location. Or, the backup files can be copied elsewhere.
-
--
 - The directory that holds Analysis Services log files
 
  By default, in Analysis Services 2012 and later versions, the log file location is the location that is specified by the LogDir property. By default, the Log path for a default Analysis Service instance is C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER \\OLAP\\Log. The default data path of the Analysis Services named instance is C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<instance name\>\\OLAP\\log.
@@ -246,14 +237,13 @@ When you create the partitions, these locations are defined in theStorage locati
 
 PolyBase Engine service (%ProgramFiles%\\Microsoft SQL Server\\\<Instance_ID\>.\<Instance Name\>\\MSSQL\\Binn\\Polybase\\mpdwsvc.exe)
 
-> [!NOTE]  
-> PolyBase Data Movement service (DMS) and Engine services use same executable with different command line parameters.
+PolyBase Data Movement service (DMS) and Engine services use same executable with different command line parameters.
 
 **Directories and file name extensions to exclude from virus scanning**
 
 When you configure your antivirus software settings, make sure that you exclude the following files or directories (as applicable) from virus scanning. This improves the performance of the files and helps make sure that the files are not locked when the Polybase service must use them. However, if these files become infected, your antivirus software cannot detect the infection.
 
-PolyBase log files (%ProgramFiles%\\Microsoft SQL Server\\\<Instance_ID\>.\<Instance Name\>\\MSSQL\\Log\\Polybase\\)
+PolyBase log files (%ProgramFiles%\\Microsoft SQL Server\\\<Instance_ID\>.\<InstanceName\>\\MSSQL\\Log\\Polybase\\)
 
 ## Configure antivirus software to work with Reporting Services
 
@@ -273,12 +263,9 @@ SQL Server topics:
 [[Securing SQL Server](/sql/relational-databases/security/securing-sql-server)
 
 For general recommendations from Microsoft for scanning on Enterprise
-systems, see the following article:
- [822158](https://support.microsoft.com/help/822158) Virus scanning recommendations for Enterprise computers that are running currently supported versions of Windows
+systems, see the following article: [822158](https://support.microsoft.com/help/822158) Virus scanning recommendations for Enterprise computers that are running currently supported versions of Windows
 
-For more information on performance issues that can occur when third party modules are loaded into SQL Server review
-
-[Performance and consistency issues when modules or driver are loaded](/troubleshoot/sql/database-engine/performance/performance-consistency-issues-filter-drivers-modules)
+For more information on performance issues that can occur when third party modules are loaded into SQL Server review [Performance and consistency issues when modules or driver are loaded](/troubleshoot/sql/database-engine/performance/performance-consistency-issues-filter-drivers-modules)
 
 
 ## Configure a Firewall with SQL Server products
