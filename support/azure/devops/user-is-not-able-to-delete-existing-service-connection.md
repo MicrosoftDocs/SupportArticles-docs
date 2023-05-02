@@ -1,6 +1,6 @@
 ---
 title: Fail to delete an existing Azure RM service connection 
-description: This article provides workaround for issues that you might encounter when you cannot deleted an existing service connection. 
+description: This article provides workaround for issues that you might encounter when you can't delete an existing service connection. 
 ms.date: 04/24/2023
 author: padmajayaraman
 ms.author: v-jayaramanp
@@ -8,11 +8,11 @@ ms.custom: sap:Pipelines
 ms.service: azure-devops
 ---
 
-# User is not able to delete an existing Azure RM service connection
+# User isn't able to delete an existing Azure RM service connection
 
 ## Symptoms
 
-When users try to delete an Azure RM service connection, they experience one of several issues. For example, they receive a "Failed to remove Azure permission 'RoldAssignmentId'... Failed to remove the service principal from Azure Active Directory" error message. Or the connection is not being removed from the list of service connections - although there is no error.
+When users try to delete an Azure RM service connection, they experience one of several issues. For example, they receive a "Failed to remove Azure permission 'RoldAssignmentId'... Failed to remove the service principal from Azure Active Directory" error message. Or the connection isn't being removed from the list of service connections - although there is no error.
 
 :::image type="content" source="media/user-is-not-able-to-delete-existing-service-connection/delete-service-connection.png" alt-text="Screenshot that shows an error while deleting an existing service connection.":::
 
