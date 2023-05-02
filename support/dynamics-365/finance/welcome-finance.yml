@@ -15,13 +15,96 @@ metadata:
 
 landingContent:
 # Card
+  - title: Accounts payable
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Invoice automation exception processing
+            url: /dynamics365/finance/accounts-payable/vendor-invoice-automation.md#exception-processing
+# Card
+  - title: budgeting
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Position budgeting troubleshooting
+            url: /dynamics365/finance/budgeting/position-budgeting-set-up-issues.md
+ 
+# Card
+  - title: Cash and bank management
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot cash flow forecasting setup
+            url: /dynamics365/finance/cash-bank-management/cash-flow-forecasting-tsg.md
+          - text: Resolve issues with transactions that can't be settled
+            url: /dynamics365/finance/cash-bank-management/settlement-overview.md#resolve-issues-with-transactions-that-cant-be-settled
+
+# Card
   - title: General ledger
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot issues with the General ledger adjustments page
             url: general-ledger/ledger-adjustments-troubleshoot.md
+          - text: Journal posting failure because of imbalance
+            url: /dynamics365/finance/general-ledger/posting-fail-imbalance.md
+          - text: Why can't I reverse this transaction?
+            url: /dynamics365/finance/general-ledger/cant-reverse-transctns.md
+          - text: Change the accounting or reporting currency 
+            url: /dynamics365/finance/general-ledger/add-change-acctg-rprtg-crrncy.md
+          - text: Reverse settings on journals and lines 
+            url: /dynamics365/finance/general-ledger/rvrs-settgs-on-jrnls-lines.md
+          - text: Year-end close missing opening balances
+            url: /dynamics365/finance/general-ledger/yec-mssng-open-blnces.md
+          - text: How do I set up balancing financial dimensions? 
+            url: /dynamics365/finance/general-ledger/set-up-balance-dimensions.md
+          - text: Open financial journal templates in Office 
+            url: /dynamics365/finance/general-ledger/open-fincl-jrnls-in-office.md
+          - text: Default financial dimensions on financial journals
+            url: /dynamics365/finance/general-ledger/dimension-default-values.md
+          - text: General journal posting performance
+            url: /dynamics365/finance/general-ledger/posting-performance.md
+# Card
+  - title: Finance insights
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot Finance insights setup issues
+            url: /dynamics365/finance/finance-insights/finance-insights-troubleshooting-faq.md
 
+# Card
+  - title: Financial reporting
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshooting issues opening Report Designer
+            url: /dynamics365/finance/general-ledger/financial-reporting-getting-started.md#troubleshooting-issues-opening-report-designer
+          - text: Troubleshoot report designer issues with Event viewer
+            url: /dynamics365/finance/general-ledger/financial-reporting-getting-started.md#troubleshoot-report-designer-issues-with-event-viewer
+          - text: Troubleshoot issues connecting to Financial reporting
+            url: /dynamics365/finance/general-ledger/financial-reporting-getting-started.md#troubleshoot-issues-connecting-to-financial-reporting
+          - text: Troubleshoot the Office integration
+            url: /dynamics365/fin-ops-core/dev-itpro/office-integration/office-integration-troubleshooting.md?context=/dynamics365/context/finance
+
+  # Card
+  - title: Tax
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Error 400 or 401 when setting Dataverse virtual table visibility
+            url: tax/cannot-set-dataverse-virtual-table-visibility.md
+          - text: Field value is incorrect in TaxTrans
+            url: tax/sales-tax-troubleshooting-field-value-taxtrans-incorrect.md
+          - text: Tax amount is incorrect after calculation
+            url: tax/apac-ind-gst-troubleshooting-tax-amount-wrong-after-calculation.md
+          - text: Tax configuration errors
+            url: tax/apac-ind-gst-troubleshooting-tax-configuration-errors.md
+          - text: Tax isn't calculated on tax documents
+            url: tax/apac-ind-gst-troubleshooting-tax-not-calculated.md
+          - text: Troubleshoot issues with tax engine (GTE)
+            url: tax/troubleshoot-tax-engine-gte-issues.md
+          - text: Voucher isn't generated on the Voucher transactions page
+            url: tax/sales-tax-troubleshooting-voucher-not-generated.md
   # Card
   - title: Tax
     linkLists:
