@@ -31,7 +31,17 @@ When you try to activate Microsoft 365 apps, you receive the following error mes
 
 If this error occurs when only one account is used, follow the steps that are appropriate for your device:
 
-- For Mac devices, follow the steps in [Can't sign in to an Office 2016 for Mac app](/microsoft-365/troubleshoot/sign-in/sign-in-to-office-2016-for-mac-fail).
+- For Mac devices, follow these steps:
+
+  1. Close all Microsoft 365 apps.
+  1. Open Terminal, and then run the following command:
+  
+     ```bash
+     defaults write com.microsoft.Word ResetOneAuthCreds -bool YES
+     ```
+     
+  1. Open the Microsoft Word app and continue with the activation steps.
+  1. If the issue persists, try the steps in [Can't sign in to an Office 2016 for Mac app](/microsoft-365/troubleshoot/sign-in/sign-in-to-office-2016-for-mac-fail).
 - For Windows devices, follow these steps:
 
   1. Sign out of all Microsoft 365 apps, and then sign in again.
