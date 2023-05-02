@@ -24,13 +24,15 @@ When scanning the server with a security software, Visual Studio 2010 Shell may 
 
 ## Cause
 
-When installing SQL Server 2014 or SQL Server 2012, SSMS requires Visual Studio 2010 Shell (Isolated) and SSDT requires Visual Studio 2010 Shell (Integrated).
+When installing SQL Server 2014 or SQL Server 2012, SSMS requires Visual Studio 2010 Shell (Isolated) and SSDT requires Visual Studio 2010 Shell (Integrated). SQL Server Management Studio (SSMS) ships with SQL Server Database Engine in those versions.
 
 According to [Microsoft lifecycle policy of Visual Studio 2010](/lifecycle/products/visual-studio-2010), the support ended on July 14, 2020. However, if Visual Studio 2010 Shell (Isolated) or Shell (Integrated) is installed with SQL Server 2014 or SQL Server 2012, Visual Studio 2010 Shell will be supported until the end of support for [SQL Server 2014](/lifecycle/products/sql-server-2014) (07/09/2024) or for [SQL Server 2012](/lifecycle/products/microsoft-sql-server-2012) (07/12/2022).
 
+Starting with SQL Server 2016, SSMS and SSDT no longer ship with SQL Server bits but can be download as separate applications. These later versions don’t have the dependency on Visual Studio 2010 Shell component. Therefore, you can download and use a more update versions of SSMS or SSDT. For more information on these tool changes, see [SQL Client Tools update for SQL Server 2016](https://cloudblogs.microsoft.com/sqlserver/2016/03/25/sql-client-tools-update-for-sql-server-2016/)
+
 ## Workaround
 
-Here's how to fix this issue:
+To avoid dependence on VS Shell 2010 component, you can uninstall and download the latest SSMS or SSDT version. Here's how to accomplish this
 
 1. Use the SQL Server installation wizard to [Uninstall the installed version of SSMS](/troubleshoot/sql/ssms/uninstall-management-studio) or SSDT.
 
