@@ -105,25 +105,6 @@ landingContent:
             url: tax/troubleshoot-tax-engine-gte-issues.md
           - text: Voucher isn't generated on the Voucher transactions page
             url: tax/sales-tax-troubleshooting-voucher-not-generated.md
-  # Card
-  - title: Tax
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Error 400 or 401 when setting Dataverse virtual table visibility
-            url: tax/cannot-set-dataverse-virtual-table-visibility.md
-          - text: Field value is incorrect in TaxTrans
-            url: tax/sales-tax-troubleshooting-field-value-taxtrans-incorrect.md
-          - text: Tax amount is incorrect after calculation
-            url: tax/apac-ind-gst-troubleshooting-tax-amount-wrong-after-calculation.md
-          - text: Tax configuration errors
-            url: tax/apac-ind-gst-troubleshooting-tax-configuration-errors.md
-          - text: Tax isn't calculated on tax documents
-            url: tax/apac-ind-gst-troubleshooting-tax-not-calculated.md
-          - text: Troubleshoot issues with tax engine (GTE)
-            url: tax/troubleshoot-tax-engine-gte-issues.md
-          - text: Voucher isn't generated on the Voucher transactions page
-            url: tax/sales-tax-troubleshooting-voucher-not-generated.md
 
 # Card
   - title: Documentation and training
