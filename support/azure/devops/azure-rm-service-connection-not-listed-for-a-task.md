@@ -38,7 +38,7 @@ When a user tries to load the Azure service connection in a pipeline task such a
 
     For more information, see [Get the API response of GET endpoints](/rest/api/azure/devops/serviceendpoint/endpoints/get?view=azure-devops-rest-6.0&tabs=HTTP&preserve-view=true).
 
-In the API response, check the `isReady` status. If the value is `false`, this indicates that the service connection is in a bad state.
+    In the API response, check the `isReady` status. If the value is `false`, this indicates that the service connection is in a bad state.
 
 ## Resolution
 
