@@ -2,6 +2,15 @@
 
 
 
+## Week of April 24, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/24/2023 | [External participants (users) are blocked from joining a Teams meeting](/microsoftteams/troubleshoot/meetings/external-participants-join-meeting-blocked) | modified |
+| 4/28/2023 | [Resolve issues with Teams Meeting add-in for Outlook](/microsoftteams/troubleshoot/meetings/resolve-teams-meeting-add-in-issues) | modified |
+
+
 ## Week of April 17, 2023
 
 
