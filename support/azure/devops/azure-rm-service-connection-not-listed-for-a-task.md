@@ -20,14 +20,14 @@ When a user tries to load the Azure service connection in a pipeline task such a
 
 1. Go to the service connection and edit it.
 
-1. Press **F12**, and open the network trace window. If possible, select the **Disable cache** option in the panel.
+1. Press **F12**, and open the network trace window. If possible, select the **Disable cache** option in the panel under **Network** tab.
 
-1. Select the **Verify** button.
+1. Select the **verify** button.
 
    You receive the following error message:
 
     ```output
-    Failed to obtain the Json Web Token(JWT) using service principal client ID. Exception message: AADSTS700016: Application with identifier 'xxxxxxf9-xxxx-xxxx-xxxx-c05xxxxxxxxx' was not found in the directory 'Microsoft'. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. You may have sent your authentication request to the wrong tenant. Trace ID: xxxxxx2c-xxxx-xxxx-xxxx-e04xxxxxxxxx Correlation ID: xxxxxx72-xxxx-xxxx-xxxx-244xxxxxxxxxx Timestamp: 2022-05-19 09:08:53Z
+    Failed to obtain the Json Web Token(JWT) using service principal client ID. Exception message: AADSTS700016: **Application with identifier 'xxxxxxf9-xxxx-xxxx-xxxx-c05xxxxxxxxx' was not found in the directory 'Microsoft'. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant**. You may have sent your authentication request to the wrong tenant. Trace ID: xxxxxx2c-xxxx-xxxx-xxxx-e04xxxxxxxxx Correlation ID: xxxxxx72-xxxx-xxxx-xxxx-244xxxxxxxxxx Timestamp: 2022-05-19 09:08:53
     ```
 
     You will see the following response for the POST call in the trace:

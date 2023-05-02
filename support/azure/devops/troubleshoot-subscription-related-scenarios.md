@@ -27,7 +27,7 @@ When users try to create an Azure RM automatic subscription-based service connec
 
 :::image type="content" source="media/troubleshooting-subscription-related-scenarios/change-billing-subscription.png" alt-text="Screenshot that shows how to check the behavior on the billing page.":::
 
-Check the behavior on the billing page (**Organization settings > Billing > change billing**).
+Check the behavior on the billing page (**Org settings > Billing > Change billing**).
 
 This problem occurs if an AAD refresh token expires.
 
@@ -80,7 +80,7 @@ When users try to create a new Azure RM automatic subscription-based service con
 
 ### Debugging steps
 
-Check the behavior on the billing page (**Organization settings > Billing > Change billing**).
+Check the behavior on the billing page (**Org settings > Billing > Change billing**).
 
 ### Resolution
 

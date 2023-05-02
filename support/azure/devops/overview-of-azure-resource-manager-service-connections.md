@@ -33,25 +33,25 @@ The **Connections** dialog box offers two main connection modes.
 
 To create an Azure RM service connection,
 
-1. Log in to https://dev.azure.com.
+1. Log in to [https://dev.azure.com](https://dev.azure.com/ContentIdea/).
 
-1. In the Azure DevOps project, navigate to the **Project Settings > Service Connections**.
+1. In the Azure DevOps project, navigate to the **Project Settings > Service Connections.**
 
-1. Select **Create service connection**.
+1. Select **New service connection**.
 
-1. In the **New service connection** dialog box, select **Azure Resource Manager**.
-
-1. Click **Next**.
-
-1. Select **Service principal (automatic)** authentication method.
+1. In the New service connection dialog box, select **Azure Resource Manager**.
 
 1. Click **Next**.
 
-1. Provide a name for the new connection in **Service connection name** text box.
+1. Select **Service principal (automatic) authentication** method.
+
+1. Click **Next**.
+
+1. Select the Subscription under which the resource is available.
+
+1. Provide a name for the new connection in **Service connection** name text box.
 
 1. Select **Save**.
-
-type / \<OrgName><Project-Name\>_settings/adminservices.
 
 ### Save an Azure RM service connection
 
@@ -88,6 +88,8 @@ To capture an F12 trace, follow the steps in [Capture a browser trace for troubl
 
 > [!IMPORTANT]
 > Configure Fiddler to capture and decrypt HTTPS traffic. To do this, select **Tools > Options > HTTPS**. Select both checkboxes on this tab (**Capture HTTPS CONNECTs** and **Decrypt HTTPS traffic**), and then select **YES** to all prompts. For more information, see [Configure Fiddler Classic to Decrypt HTTPS Traffic](https://docs.telerik.com/fiddler/configure-fiddler/tasks/decrypthttps&preserve-view=true).
+
+[Third Party Disclaimer](../../includes/third-party-disclaimer.md)
 
 ## Common service connection issues
 

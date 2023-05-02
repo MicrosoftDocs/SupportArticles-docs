@@ -36,16 +36,16 @@ When you run a service connection update call from the UI, the body of the `PUT`
 
 1. Go to the **Service Connection** page, and then select the affected service connection.
 1. Select **Edit**.
-1. Press **F12**, and then open the network trace window. If possible, select the **disable cache** option in the panel.
+1. Press **F12**, and then open the network trace window. If possible, select the **Disable cache** option in the panel under the **Network** tab.
 1. Update the description.
 1. Select the **Save** button.
 1. If you are prompted for authorization, enter the required credentials.
-1. In network trace, you can now see the PUT call to update the service connection that failed.
-1. Open the PUT call details, and copy the request body by selecting **Payload > View source > Copy the content**.
+   In network trace, you can now see the PUT call to update the service connection that failed.
+1. Open the PUT call details, and copy the **Request Payload** by selecting **Payload > view source > Select the content and copy the content**.
 1. In the request body, remove the **accesstoken: null** (or **accesstoken:''**) property under the authorization header.
-1. Copy the request body, and make a service connection update `PATCH REST` call by using Postman (or any other `REST` tool) by running the following command.
+1. Copy the updated **Request payload**, and make a service connection update PATCH API call by using Postman (or any other REST tool) by running the following API.
 
-   `PUT https://dev.azure.com/{organization}/_apis/serviceendpoint/endpoints/{endpointId}?api-version=6.0-preview.4`
+   `PATCH - https://dev.azure.com/{organization}/_apis/serviceendpoint/endpoints/{endpointId}?api-version=6.0-preview.4`
 
 For more information, see [Endpoints - Update Service Endpoint](/rest/api/azure/devops/serviceendpoint/endpoints/update-service-endpoint?view=azure-devops-rest-6.0&tabs=HTTP&preserve-view=true).
 

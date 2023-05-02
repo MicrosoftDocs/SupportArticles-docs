@@ -12,9 +12,9 @@ ms.service: azure-devops
 
 ## Symptoms
 
-When users try to delete an Azure RM service connection, they experience one of several issues. For example, they receive a "Failed to remove Azure permission 'RoldAssignmentId'... Failed to remove the service principal from Azure Active Directory" error message. Or, the connection isn't removed from the list of service connections even though no error is reported.
+When users try to delete an Azure RM service connection, they experience one of several issues. For example, they receive a "Failed to remove Azure permission 'RoldAssignmentId'... Failed to remove the service principal from Azure Active Directory" error message. Or the connection is not being removed from the list of service connections - although there is no error.
 
-:::image type="content" source="media/troubleshoot-azure-rm-scenarios-while-editing-updating-service-connections/delete-service-connection.png" alt-text="Screenshot that shows an error while deleting an existing service connection.":::
+:::image type="content" source="media/user-is-not-able-to-delete-existing-service-connection/delete-service-connection.png" alt-text="Screenshot that shows an error while deleting an existing service connection.":::
 
 ## Resolution
 
@@ -29,4 +29,4 @@ If the **Delete** button doesn't remove the service connection, follow these ste
 1. If you use the API from the previous step by using the default parameters, and this still doesn't work, you can set the `deep` value to `false`. This setting causes the program to skip any checks and attempts that are part of the usual process to delete the underlying SPN.
 
 > [!NOTE]
-> The user must manually delete or edit the service principal by using the Active Directory app in the Azure portal.
+> The user must manually delete or edit the service principal by using the Active Directory App in the Azure portal.
