@@ -111,7 +111,7 @@ Use the following list to navigate to the appropriate article or section for det
 
 - [Azure RM Service connection not listed for a task](azure-rm-service-connection-not-listed-for-a-task.md#azure-rm-service-connection-not-listed-for-a-task)
 
-- [User is not able to delete an existing Azure RM service connection](user-is-not-able-to-delete-existing-service-connection.md#user-is-not-able-to-delete-an-existing-azure-rm-service-connection)
+- [User is not able to delete an existing Azure RM service connection](user-is-not-able-to-delete-existing-service-connection.md#user-isnt-able-to-delete-an-existing-azure-rm-service-connection)
 
 - ["Failed to get Azure DevOps Service access token" error](fail-to-verify-service-connection.md)
 
