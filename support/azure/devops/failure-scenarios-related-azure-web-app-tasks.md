@@ -3,7 +3,7 @@ title: Failure scenarios related to Azure Web App tasks
 description: Provides resolutions for some errors related to Azure Web App tasks.
 ms.date: 04/27/2023
 ms.custom: sap:Pipelines
-ms.reviewer: 
+ms.reviewer: dmittal, cathmill
 ms.service: azure-devops
 ---
 # Failure scenarios related to Azure Web App tasks
@@ -17,7 +17,7 @@ ms.service: azure-devops
 
 **Resolution**:
 
-This error may occur due to a failure to unzip and zip a large package for the deployment, as Microsoft-hosted agents have limited resources. In the logs, you see the steps where it is failing. Preferably, use the [Azure Web App V1 task](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureWebAppV1) for App Services deployment. For more complicated scenarios like XML transformation, see [Azure RM Web Deployment V4 task](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureRmWebAppDeploymentV4).
+This error may occur due to a failure to unzip and zip a large package for the deployment, as Microsoft-hosted agents have limited resources. In the logs, you see the steps where it's failing. Preferably, use the [Azure Web App V1 task](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureWebAppV1) for App Services deployment. For more complicated scenarios like XML transformation, see [Azure RM Web Deployment V4 task](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureRmWebAppDeploymentV4).
 
 #### Error 2: "Encountered a retriable error:ECONNRESET. Message: read ECONNRESET"
 

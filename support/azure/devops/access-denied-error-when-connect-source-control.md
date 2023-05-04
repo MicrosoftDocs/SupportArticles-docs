@@ -8,7 +8,7 @@ ms.topic: article
 ms.service: azure-devops
 ms.subservice: ts-pipelines
 ---
-# "Access denied" error message for a different user when you connect to Source Control or build components in Team Foundation Server
+# 'Access denied' error message for a different user when you connect to Source Control or build components in Team Foundation Server
 
 This article shows an access denied problem that occurs when you connect to Source Control or build components in Team Foundation Server.
 
@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 3014137
 
 ## Symptoms
 
-When you connect to Source Control or build components in Team Foundation Server, you may receive an unexpected "Access denied" error message. However, the "Access denied" is not related to the account that is connected, but someone different.
+When you connect to Source Control or build components in Team Foundation Server, you may receive an unexpected **Access denied** error message. However, the **Access denied** is not related to the account that is connected, but someone different.
 
 Assume that you use `domain\UserA` to log on the Team Foundation Server. When you build components, you may receive one of the following error messages:
 

@@ -3,7 +3,7 @@ title: Troubleshoot common issues related to Azure Web App and services
 description: This article lists some common issues related to Azure Web App service deployments from Azure DevOps Services and provides steps to resolve or debug these issues.
 ms.date: 04/27/2023
 ms.custom: sap:Pipelines
-ms.reviewer: 
+ms.reviewer: dmittal, cathmill
 ms.service: azure-devops
 ---
 # Azure Web App and services related issues
@@ -100,7 +100,7 @@ See the following tutorials about deploying apps of various languages to Azure W
 
 ## See related
 
-- [Troubleshoot Azure web app tasks and deployment issues](troubleshoot-azure-web-apps-tasks-deployments.md)
+- [Troubleshoot Azure Web App tasks and deployment issues](troubleshoot-azure-web-apps-tasks-deployments.md)
 - [Failure scenarios related to Azure Web App tasks](failure-scenarios-related-azure-web-app-tasks.md)
 - [Issues with the service connection in the task](issues-service-connection-task.md)
 - [Resource doesn't exist error with services deployment](resource-not-exist-error-services-deployment.md)

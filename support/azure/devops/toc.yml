@@ -36,7 +36,7 @@
     href: access-denied-error-when-connect-source-control.md
   - name: Azure Web App tasks and deployments
     items:
-    - name: Troubleshoot Azure web apps tasks and deployments
+    - name: Troubleshoot Azure Web App tasks and deployments
       href: troubleshoot-azure-web-apps-tasks-deployments.md
     - name: Azure Web App and services related issues
       href: azure-web-app-services-related-issues.md

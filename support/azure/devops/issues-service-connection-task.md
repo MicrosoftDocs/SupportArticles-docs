@@ -3,12 +3,12 @@ title: Issues with the service connection in the task
 description: Provides solutions for issues related to the service connection in the task.
 ms.date: 04/27/2023
 ms.custom: sap:Pipelines
-ms.reviewer: 
+ms.reviewer: dmittal, cathmill
 ms.service: azure-devops
 ---
 # Issues with the service connection in the task
 
-When you use the Azure RM (Resource Manager) service connection to connect while working with Azure services deployment, most issues are related to Azure RM service connections. They can be reviewed from the debug logs of the task.
+This article provides troubleshooting steps and solutions for common issues you may encounter with Azure Resource Manager (ARM) service connections when working with Azure services deployment.
 
 ## Common issues and solutions
 
@@ -17,15 +17,21 @@ When you use the Azure RM (Resource Manager) service connection to connect while
 
 #### Unable to renew the client secret for a service connection created through the automatic method
 
-To generate a client secret for a service connection created via the "automatic" method, navigate to the service connection in the Azure DevOps Services UI, and select **edit** > **verify**. This will generate a new client secret for the service principal backing the service connection. For more information, see [Service principal's token expired](/azure/devops/pipelines/release/azure-rm-endpoint#service-principals-token-expired).
+To generate a client secret for a service connection created via the "automatic" method, follow these steps:
 
-When performing the operation, ensure you have the proper permission on the Azure subscription and AAD (Azure Active Directory), as it will update the secret for the app registered for the service principal. For more information, see [Troubleshoot ARM service connections](/azure/devops/pipelines/release/azure-rm-endpoint#what-happens-when-you-create-a-resource-manager-service-connection) and [Create an Azure Resource Manager service connection using automated security](/azure/devops/pipelines/library/connect-to-azure#create-an-azure-resource-manager-service-connection-using-automated-security).
+1. Go to **Project settings** > **Service connections**, and then select the service connection you want to modify.
+1. Select **Edit** in the upper-right corner, and the select **Verify**.
+1. Select **Save**.
+
+This generates a new client secret for the service principal backing the service connection. For more information, see [Service principal's token expired](/azure/devops/pipelines/release/azure-rm-endpoint#service-principals-token-expired).
+
+When performing the operation, ensure you have the proper permission on the Azure subscription and AAD (Azure Active Directory), as it updates the secret for the app registered for the service principal. For more information, see [Troubleshoot ARM service connections](/azure/devops/pipelines/release/azure-rm-endpoint#what-happens-when-you-create-a-resource-manager-service-connection) and [Create an Azure Resource Manager service connection using automated security](/azure/devops/pipelines/library/connect-to-azure#create-an-azure-resource-manager-service-connection-using-automated-security).
 
 #### How to create the service principal to be used in Azure DevOps without the permission on the Azure subscription and AAD?
 
 You can use a service principal created manually by a user who has permission on the Azure subscription and AAD and then add the service principal details manually in Azure DevOps. For more information, see [Create an Azure Resource Manager service connection with an existing service principal](/azure/devops/pipelines/library/connect-to-azure#create-an-azure-resource-manager-service-connection-with-an-existing-service-principal).
 
-#### The pipeline tasks are failing with an error like: "AuthorizationFailed : The client '\<ClientName\>' with object id '\<ObjectId\>' does not have authorization to perform action '\<ActionName\>' over scope …."
+#### The pipeline tasks are failing with an error like: "AuthorizationFailed: The client '\<ClientName\>' with object id '\<ObjectId\>' does not have authorization to perform action '\<ActionName\>' over scope …"
 
 Make sure the service principal used with the task has the proper permission on the Azure resource and scope mentioned in the error message. The client and object ID in the error message are related to the service principal.
 
@@ -59,7 +65,7 @@ Make sure the right service connection is selected in the pipeline and the neces
 
 #### Unable to see the Azure subscriptions while creating a service connection, even after having the necessary permissions
 
-If you're using some part of Azure DevOps that interacts with Azure and it appears not to be working, we recommend logging out and logging back in from an incognito or inPrivate browser. This will generate a new, valid token Azure DevOps can use to authenticate the request to Azure, which will query the subscriptions and generate the service connection.
+If you're using some part of Azure DevOps that interacts with Azure and it appears not to be working, we recommend logging out and logging back in from an incognito or inPrivate browser. This generates a new, valid token Azure DevOps can use to authenticate the request to Azure, which will query the subscriptions and generate the service connection.
   
 You can also explore [Service connection APIs](/rest/api/azure/devops/serviceendpoint/endpoints) to get, create, and update them.
 
@@ -72,7 +78,7 @@ You can also explore [Service connection APIs](/rest/api/azure/devops/serviceend
 
 ## See related
 
-- [Troubleshoot Azure web app tasks and deployment issues](troubleshoot-azure-web-apps-tasks-deployments.md)
-- [Failure scenarios related to Azure web app tasks](failure-scenarios-related-azure-web-app-tasks.md)
+- [Troubleshoot Azure Web App tasks and deployment issues](troubleshoot-azure-web-apps-tasks-deployments.md)
+- [Failure scenarios related to Azure Web App tasks](failure-scenarios-related-azure-web-app-tasks.md)
 - [Azure Web App and services related issues](azure-web-app-services-related-issues.md)
 - [Resource doesn't exist error with services deployment](resource-not-exist-error-services-deployment.md)

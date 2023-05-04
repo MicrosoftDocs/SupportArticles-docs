@@ -3,7 +3,7 @@ title: Resource doesn't exist error with services deployment
 description: Provides a solution for a Resource doesn't exist error with services deployment.
 ms.date: 04/27/2023
 ms.custom: sap:Pipelines
-ms.reviewer: 
+ms.reviewer: dmittal, cathmill
 ms.service: azure-devops
 ---
 # Resource doesn't exist error with services deployment
@@ -35,7 +35,7 @@ To solve this error, add a delay to the pipeline before using the Azure task. If
 
 ## See related
 
-- [Troubleshoot Azure web app tasks and deployment issues](troubleshoot-azure-web-apps-tasks-deployments.md)
-- [Failure scenarios related to Azure web app tasks](failure-scenarios-related-azure-web-app-tasks.md)
+- [Troubleshoot Azure Web App tasks and deployment issues](troubleshoot-azure-web-apps-tasks-deployments.md)
+- [Failure scenarios related to Azure Web App tasks](failure-scenarios-related-azure-web-app-tasks.md)
 - [Azure Web App and services related issues](azure-web-app-services-related-issues.md)
 - [Issues with the service connection in the task](issues-service-connection-task.md)

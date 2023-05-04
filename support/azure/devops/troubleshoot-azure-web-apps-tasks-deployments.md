@@ -1,12 +1,12 @@
 ---
-title: Troubleshoot Azure web app tasks and deployment issues
+title: Troubleshoot Azure Web App tasks and deployment issues
 description: This article provides the documentation for tasks and describes steps to capture debug logs for a deeper investigation of the tasks.
 ms.date: 04/27/2023
 ms.custom: sap:Pipelines
-ms.reviewer: 
+ms.reviewer: dmittal, cathmill
 ms.service: azure-devops
 ---
-# Troubleshoot Azure web app tasks and deployment issues
+# Troubleshoot Azure Web App tasks and deployment issues
 
 ## Tasks documentation
 
@@ -42,7 +42,7 @@ Follow these steps to further investigate issues with tasks:
 
 ## See related
 
-- [Failure scenarios related to Azure web app tasks](failure-scenarios-related-azure-web-app-tasks.md)
+- [Failure scenarios related to Azure Web App tasks](failure-scenarios-related-azure-web-app-tasks.md)
 - [Azure Web App and services related issues](azure-web-app-services-related-issues.md)
 - [Issues with the service connection in the task](issues-service-connection-task.md)
 - [Resource doesn't exist error with services deployment](resource-not-exist-error-services-deployment.md)
