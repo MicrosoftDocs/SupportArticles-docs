@@ -2578,7 +2578,7 @@
       href: ./user-profiles-and-logon/folder-redirection-settings-not-applied.md
   - name: User Logon fails
     items:
-    - name: '"Your credential could not be verified" error when logging on to Windows by using WHFB'
+    - name: "Your credential could not be verified" when logging on to Windows with WHFB
       href: ./user-profiles-and-logon/your-credential-could-not-be-verified-error-when-logging-on-to-windows-by-using-whfb.md
     - name: Cached domain logon information
       href: ./user-profiles-and-logon/cached-domain-logon-information.md
