@@ -76,7 +76,7 @@ ObjectCompare.Compare(listviewX.SubItems[ColumnToSort].Text,listviewY.SubItems[C
     // Create some column headers for the data.
     columnheader = new ColumnHeader();
     columnheader.Text = "First Name";
-    this.`listView`1.Columns.Add(columnheader);
+    this.listView1.Columns.Add(columnheader);
 
     columnheader = new ColumnHeader();
     columnheader.Text = "Last Name";
