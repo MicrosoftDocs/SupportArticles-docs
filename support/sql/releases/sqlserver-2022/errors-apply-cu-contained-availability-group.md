@@ -19,7 +19,7 @@ Consider the following scenario:
 - You have an instance of SQL Server 2022 that has a contained availability group deployed.
 - You create server-level objects (logins and jobs) in the context of the contained availability group.
 
-In this scenario, the following errors occur after you install a cumulative update on this instance of SQL Server.
+In this scenario, one of the following errors occurs after you install a cumulative update on this instance of SQL Server.
 
 ### Error 1
 
