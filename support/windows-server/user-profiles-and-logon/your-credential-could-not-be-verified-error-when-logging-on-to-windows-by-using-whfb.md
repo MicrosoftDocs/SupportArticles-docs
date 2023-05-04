@@ -1,5 +1,5 @@
 ---
-title: Your credential could not be verified error when logging on to Windows with Windows Hellow for Business
+title: Your credential could not be verified error when logging on to Windows with Windows Hello for Business
 description: Introduces how to troubleshoot the Your credential could not be verified error that occurs when you try to log on to Windows 10 or Windows 11.
 author: Deland-Han
 ms.author: delhan
