@@ -22,7 +22,7 @@ _Original KB number:_ 4549715
 
 Let's say you're attempting to start a PowerShell session with a remote server. When you run the `Enter-PSSession -Computername <FQDN>` command, you receive the following error:
 
-> "Enter-PSSession : Connecting to remote server \<FQDN\> failed with the following error message : WinRM cannot process the request. The following error with error code 0x80090322 occurred while using Kerberos authentication: An unknown security error occurred."
+> Enter-PSSession : Connecting to remote server \<FQDN\> failed with the following error message : WinRM cannot process the request. The following error with error code 0x80090322 occurred while using Kerberos authentication: An unknown security error occurred.
 
 ## Cause
 
@@ -30,7 +30,7 @@ By default, PowerShell uses an HTTP service principal name (SPN) in the format `
 
 ## Resolution
 
-First, we need to identify the SPN. Run the command `setspn -q http/<FQDN>` to identify if this SPN is registered to a Service account.
+First, we need to identify the SPN. Run the command `setspn -q http/<FQDN>` to identify if this SPN is registered to a service account.
 
 Then, use one of these options to resolve this issue:
 
