@@ -5,73 +5,72 @@ ms.date: 04/27/2023
 ms.custom: sap:Pipelines
 ms.reviewer: 
 ms.service: azure-devops
-ms.subservice: ts-pipelines
 ---
 # Failure scenarios related to Azure Web App tasks
 
 > [!NOTE]
-> The best way to start debugging these errors is to gather debug logs for the pipeline and the logs from the Azure Web App side (Kudu logs). 
+> The best way to start debugging these errors is to gather [debug logs](troubleshoot-azure-web-apps-tasks-deployments.md#debug-logs-and-tips-for-further-debugging) for the pipeline and the logs from the Azure Web App side (Kudu logs).
 
 ## Errors and resolutions
 
-- **Error 1: "FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory"**
+#### Error 1: "FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory"
 
-  **Resolution**:
+**Resolution**:
 
-  This error may occur due to a failure to unzip and zip a large package for the deployment, as Microsoft-hosted agents have limited resources. In the logs, you see the steps where it is failing. Preferably, use the [Azure Web App V1 task](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureWebAppV1) for App Services deployment. For more complicated scenarios like XML transformation, see [Azure RM Web Deployment V4 task](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureRmWebAppDeploymentV4).
+This error may occur due to a failure to unzip and zip a large package for the deployment, as Microsoft-hosted agents have limited resources. In the logs, you see the steps where it is failing. Preferably, use the [Azure Web App V1 task](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureWebAppV1) for App Services deployment. For more complicated scenarios like XML transformation, see [Azure RM Web Deployment V4 task](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureRmWebAppDeploymentV4).
 
-- **Error 2: "Encountered a retriable error:ECONNRESET. Message: read ECONNRESET"**
+#### Error 2: "Encountered a retriable error:ECONNRESET. Message: read ECONNRESET"
 
-  **Resolution**:
+**Resolution**:
 
-  - If you're using the Microsoft-hosted agent and App Services in an ASE environment, make sure you have opened the [IP addresses](https://www.microsoft.com/download/details.aspx?id=56519) for the Microsoft-hosted agent geography. See [Allowed IP addresses and domain URLs](/azure/devops/organizations/security/allow-list-ip-url) for IP address ranges of incoming connections.
+- If you're using the Microsoft-hosted agent and App Services in an ASE environment, make sure you have opened the [IP addresses](https://www.microsoft.com/download/details.aspx?id=56519) for the Microsoft-hosted agent geography. See [Allowed IP addresses and domain URLs](/azure/devops/organizations/security/allow-list-ip-url) for IP address ranges of incoming connections.
 
-  - If you're using a self-hosted agent, apart from unblocking the IP range for the self-hosted agent, the problem could be due to a flaky network issue. Consider creating a support ticket with the Azure Web App or Azure Networking team for troubleshooting in this area.
+- If you're using a self-hosted agent, apart from unblocking the IP range for the self-hosted agent, the problem could be due to a flaky network issue. Consider creating a support ticket with the Azure Web App or Azure Networking team for troubleshooting in this area.
 
-- **Error 3**:
+#### Error 3: "Failed to deploy web package to App Service"
 
-  The task calls a zipDeploy Kudu API for deployment. The following error generally comes in response to that API. The API does some operations when called.
+The task calls a zipDeploy Kudu API for deployment. The following error generally comes in response to that API. The API does some operations when called.
 
-  ```output
-  [error]Failed to deploy web package to App Service.
-  [debug]Processed: ##vso[task.issue type=error;]Failed to deploy web package to App Service.
-  [debug]Deployment Failed with Error: Error: Package deployment using ZIP Deploy failed. 
-  Refer logs for more details.
-  [debug]task result: Failed
-  ```
+```output
+[error]Failed to deploy web package to App Service.
+[debug]Processed: ##vso[task.issue type=error;]Failed to deploy web package to App Service.
+[debug]Deployment Failed with Error: Error: Package deployment using ZIP Deploy failed. 
+Refer logs for more details.
+[debug]task result: Failed
+```
 
-  **Resolution**:
+**Resolution**:
   
-  Try setting the **WEBSITE_RUN_FROM_PACKAGE** app setting to **1** on the App Services side.
+Try setting the **WEBSITE_RUN_FROM_PACKAGE** app setting to **1** on the App Services side.
 
-- **Error 4: "EMFILE: too many open files using zip deploy / Error: Package deployment using ZIP Deploy failed"**
+#### Error 4: "EMFILE: too many open files using zip deploy / Error: Package deployment using ZIP Deploy failed"
   
-  **Possible workarounds**:
+**Possible workarounds**:
 
-  - Use the [Azure Web App V1 task](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureWebAppV1).
+- Use the [Azure Web App V1 task](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureWebAppV1).
 
-  - Use the following Extract Files task to extract the zip into a folder path, and then provide the folder path into the App Service Deploy task. This prevents the App Service task from unzipping the package, preventing EMFILE errors.
+- Use the following Extract Files task to extract the zip into a folder path, and then provide the folder path into the App Service Deploy task. This prevents the App Service task from unzipping the package, preventing EMFILE errors.
 
-    ```yml
-    steps:
-    - task: ExtractFiles@1
-      displayName: 'Extract files '
-      inputs:
-      archiveFilePatterns: '$(InputPackageZipPath)'
-      destinationFolder: '$(OutputUnzippedPath)'
+```yml
+steps:
+- task: ExtractFiles@1
+  displayName: 'Extract files '
+  inputs:
+  archiveFilePatterns: '$(InputPackageZipPath)'
+  destinationFolder: '$(OutputUnzippedPath)'
 
-    - task: AzureRmWebAppDeployment@4
-      displayName: 'Azure App Service Deploy'
-      inputs:
-      azureSubscription: 'Subscription'
-      WebAppName: 'app-name'
-      package: '$(OutputUnzippedPath)'
-      enableXmlTransform: true
-    ```
+- task: AzureRmWebAppDeployment@4
+  displayName: 'Azure App Service Deploy'
+  inputs:
+  azureSubscription: 'Subscription'
+  WebAppName: 'app-name'
+  package: '$(OutputUnzippedPath)'
+  enableXmlTransform: true
+```
 
 ## See related
 
-- [Tasks documentation and logs to capture for further debugging](tasks-documentation-logs-capture-further-debugging.md)
-- [Initial debugging for issues related to Azure Web App and services](initial-debugging-azure-web-app-services.md)
+- [Troubleshoot Azure web app tasks and deployment issues](troubleshoot-azure-web-apps-tasks-deployments.md)
+- [Azure Web App and services related issues](azure-web-app-services-related-issues.md)
 - [Issues with the service connection in the task](issues-service-connection-task.md)
 - [Resource doesn't exist error with services deployment](resource-not-exist-error-services-deployment.md)

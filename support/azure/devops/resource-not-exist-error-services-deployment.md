@@ -5,13 +5,12 @@ ms.date: 04/27/2023
 ms.custom: sap:Pipelines
 ms.reviewer: 
 ms.service: azure-devops
-ms.subservice: ts-pipelines
 ---
 # Resource doesn't exist error with services deployment
 
 ## Symptoms
 
-Your tasks may cause the error "Error: Resource 'xxxxxxxx' doesn't exist. Resource should exist before deployment" in the following scenarios:
+The following scenarios may cause your app deployment to fail with the error `Error: Resource 'xxxxxxxx' doesn't exist. Resource should exist before deployment`:
 
 - The resource was created as part of the same pipeline.
 
@@ -36,7 +35,7 @@ To solve this error, add a delay to the pipeline before using the Azure task. If
 
 ## See related
 
-- [Tasks documentation and logs to capture for further debugging](tasks-documentation-logs-capture-further-debugging.md)
+- [Troubleshoot Azure web app tasks and deployment issues](troubleshoot-azure-web-apps-tasks-deployments.md)
 - [Failure scenarios related to Azure web app tasks](failure-scenarios-related-azure-web-app-tasks.md)
-- [Initial debugging for issues related to Azure Web App and services](initial-debugging-azure-web-app-services.md)
+- [Azure Web App and services related issues](azure-web-app-services-related-issues.md)
 - [Issues with the service connection in the task](issues-service-connection-task.md)

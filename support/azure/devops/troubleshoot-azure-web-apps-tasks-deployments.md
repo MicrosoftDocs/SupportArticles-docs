@@ -1,17 +1,16 @@
 ---
-title: Tasks documentation and logs to capture for further debugging
+title: Troubleshoot Azure web app tasks and deployment issues
 description: This article provides the documentation for tasks and describes steps to capture debug logs for a deeper investigation of the tasks.
 ms.date: 04/27/2023
 ms.custom: sap:Pipelines
 ms.reviewer: 
 ms.service: azure-devops
-ms.subservice: ts-pipelines
 ---
-# Tasks documentation and logs to capture for further debugging
+# Troubleshoot Azure web app tasks and deployment issues
 
 ## Tasks documentation
 
-As a first step, we recommend you walk through the documentation for the following tasks and ensure that all the parameters are correctly defined in the tasks used in the pipelines.
+As a first step, we recommend you review the documentation for the following tasks and ensure that all the parameters are correctly defined in the tasks used in the pipelines.
 
 - [Azure RM Web App deployment V4](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureRmWebAppDeploymentV4)
 - [Azure Web App V1](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureWebAppV1): Preferably use this task for App Services deployment. For more complicated scenarios like XML transformation, use [Azure RM Web App deployment V4](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureRmWebAppDeploymentV4).
@@ -23,11 +22,11 @@ As a first step, we recommend you walk through the documentation for the followi
 
 Also, refer to the *readme.doc* in the GitHub repo and this [Deploy to Azure](/azure/devops/pipelines/overview-azure) article for details about the usage of these tasks.
 
-Refer to the next steps if the task configuration looks fine.
+If the task configuration looks fine, refer to the next steps for capturing debug logs.
 
-## Capture logs for further debugging of the tasks
+## Debug logs and tips for further debugging
 
-To capture debug logs for a deeper investigation of the tasks, follow these steps:
+Follow these steps to further investigate issues with tasks:
 
 1. Enable debug logs by setting [system.debug](/azure/devops/pipelines/build/variables#systemdebug) to **True** in the pipeline.
 
@@ -44,6 +43,6 @@ To capture debug logs for a deeper investigation of the tasks, follow these step
 ## See related
 
 - [Failure scenarios related to Azure web app tasks](failure-scenarios-related-azure-web-app-tasks.md)
-- [Initial debugging for Azure Web App and services related issues](initial-debugging-azure-web-app-services.md)
+- [Azure Web App and services related issues](azure-web-app-services-related-issues.md)
 - [Issues with the service connection in the task](issues-service-connection-task.md)
 - [Resource doesn't exist error with services deployment](resource-not-exist-error-services-deployment.md)
