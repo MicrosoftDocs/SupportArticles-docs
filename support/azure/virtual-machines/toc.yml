@@ -401,6 +401,11 @@
       - name: Restarting, shutting down, or stopping services
         href: boot-error-troubleshoot-windows.md
 
+- name: VM health
+  items:
+  - name: Inaccurate VM availability reported during restart
+    href: inaccurate-vm-availability-during-vm-restart.md
+
 - name: VM agent and extensions
   items:
   - name: Azure cloud-init support for Linux VMs
