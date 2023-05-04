@@ -1,7 +1,7 @@
 ---
 title: Active Directory Replication fails with Win32 error 1753
 description: Describes an issue where AD operations fail with Win32 error 1753 (There are no more endpoints available from the endpoint mapper).
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -330,6 +330,10 @@ Summary:
 
 - Example 1 failed because of an invalid host to IP mapping (in the HOST file in this case). It caused the destination DC to resolve to a "source" DC that didn't have the AD service running (or even installed for that matter). So the replication SPN wasn't yet registered, and the source DC returned error 1753.
 - In the second case, an invalid host to IP mapping (again in the HOST file) caused the destination DC to connect to a DC that had registered the {E351...} replication SPN. But that source had a different hostname and security identity than the intended source DC, so the attempts failed with error **-2146893022: The target principal name is incorrect**.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).
 
 ### Related Content
 

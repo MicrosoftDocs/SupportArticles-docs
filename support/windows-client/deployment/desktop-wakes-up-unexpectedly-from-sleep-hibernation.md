@@ -1,7 +1,7 @@
 ---
 title: Desktop wakes up unexpectedly from sleep or hibernation
 description: Document findings based on OEM support case, where customer observed unexpected wake behavior. Provide information on how to track down the source of wake events, and related information.
-ms.date: 09/14/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -66,3 +66,7 @@ Any application can schedule a regular maintenance task to run automatically, as
 - [MaintenanceTrigger Class](/uwp/api/Windows.ApplicationModel.Background.MaintenanceTrigger)  
 
 The first application to make use of the Regular Maintenance task scheduling feature is Windows Update. The .NET Framework NGEN v4.0 utility has also been observed to cause the regular maintenance event to be scheduled.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).
