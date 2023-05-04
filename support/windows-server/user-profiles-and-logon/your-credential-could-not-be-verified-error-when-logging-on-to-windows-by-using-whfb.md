@@ -1,6 +1,6 @@
 ---
-title: Your credential could not be verified error when logging on to Windows with WHFB
-description: Introduces how to troubleshoot the Your credential could not be verified error that occurs when you try to log on to Windows 10 or Windows 11.
+title: Your credentials could not be verified error when logging on to Windows with WHFB
+description: Introduces how to troubleshoot the Your credentials could not be verified error that occurs when you try to log on to Windows 10 or Windows 11.
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
@@ -10,9 +10,9 @@ msreviewer: kaushika
 ms.technology: windows-server-user-profiles
 ms.custom: sap:user-logon-fails, csstroubleshoot, ikb2lmc
 ---
-# "Your credential could not be verified" error when logging on to Windows with Windows Hello for Business
+# "Your credentials could not be verified" error when logging on to Windows with Windows Hello for Business
 
-This article introduces how to fix the error "Your credential could not be verified" that occurs when you try to log on to Windows with Windows Hello for Business (WHFB).
+This article introduces how to fix the error "Your credentials could not be verified" that occurs when you try to log on to Windows with Windows Hello for Business (WHFB).
 
 _Applies to:_ Windows 10, Windows 11
 
@@ -22,7 +22,7 @@ _Original KB number:_ 4519735
 
 When you try to sign in to a Windows 10 or Windows 11 device by using a WHFB certificate or key trust, it fails with one of the following error messages:
 
-> Your credential could not be verified
+> Your credentials could not be verified
 
 > Something went wrong and your PIN isn't available (status: 0xc00000bb, substatus:0x0). Click to set up your PIN again.
 
