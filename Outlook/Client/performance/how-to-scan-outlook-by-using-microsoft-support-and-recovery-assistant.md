@@ -1,6 +1,6 @@
 ---
 title: Scan Outlook by using Microsoft Support and Recovery Assistant
-description: Detect and resolve known Outlook issues and create a detailed Outlook configuration report by using the Microsoft Support and Recovery Assistant (SaRA).
+description: Detect and resolve known Outlook issues and create a detailed Outlook configuration report by using Microsoft Support and Recovery Assistant (SaRA).
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 4098558
 
 ## Overview
 
-Microsoft Support and Recovery Assistant uses advanced diagnostics to report known problems and details about your Microsoft Outlook configuration. Reported problems are linked to public-facing documentation (usually a Microsoft Knowledge Base article) for possible fixes. If you're a Support professional, you can review customer reports that're generated in HTML format.
+Microsoft Support and Recovery Assistant use advanced diagnostics to report known problems and details about your Microsoft Outlook configuration. Reported problems are linked to public-facing documentation (usually a Microsoft Knowledge Base article) for possible fixes. If you're a Support professional, you can review customer reports that are generated in HTML format.
 
 The scenario in the Assistant that is described in this article replaces the Outlook scanning functionality that was originally provided by the Office Configuration Analyzer Tool (OffCAT).
 
@@ -80,7 +80,7 @@ The Assistant can resolve issues in many programs. To scan Outlook for known iss
 
    :::image type="content" source="media/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant/scan-begins.png" alt-text="Scan automatically begins." border="false":::
 
-    You see the following error message if your account is in Microsoft 365 and SaRA cannot validate your credentials.
+    You see the following error message if your account is in Microsoft 365 and the Assistant can't validate your credentials.
 
    :::image type="content" source="media/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant/error-message.png" alt-text="Error message details." border="false":::
 
@@ -91,7 +91,7 @@ The Assistant can resolve issues in many programs. To scan Outlook for known iss
 
    :::image type="content" source="media/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant/sign-in-using-non-office-account.png" alt-text="Sign in account example." border="false":::
 
-   Any non-Microsoft 365 account will not be authenticated through the Microsoft 365 service. In this case, SaRA gives you an option to continue. Select the **Next** button to continue.
+   No non-Microsoft 365 account will be authenticated through the Microsoft 365 service. In this case, the Assistant provides the **Next** button to continue.
 
    The scan is complete when you see **We're done collecting your Outlook configuration details**.
 
@@ -107,11 +107,11 @@ Your scan report includes these separate tabs:
 
 ### Issues found
 
-On the **Issues found** tab, you will see a list of configuration issues that are detected during the scan.
+On the **Issues found** tab, you'll see a list of configuration issues that are detected during the scan.
 
 :::image type="content" source="media/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant/issues-found-tab.png" alt-text="List of configuration issues." border="false":::
 
-Select an issue to expand it for a more detailed description. There is also a link to an article that contains steps for resolving the issue.
+Select an issue to expand it for a more detailed description. There's also a link to an article that contains steps to resolve the issue.
 
 ### Detailed view
 
@@ -143,9 +143,9 @@ The information in the **Configuration Summary** tab is a snapshot of the config
 
 To increase the viewing area for the scan results, select **View results in my browser**. This view displays the whole scan report, including all three tabs, in your default browser.
 
-:::image type="content" source="media/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant/whole-scan-report.png" alt-text="Whole scan report and the three tab." border="false":::
+:::image type="content" source="media/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant/whole-scan-report.png" alt-text="Whole scan report and the three tabs." border="false":::
 
-**Note**: The **Detailed View** in your browser contains a search feature that is not found when you view this information in the Assistant.
+**Note**: The **Detailed View** in your browser contains a search feature that isn't found when you view this information in the Assistant.
 
 :::image type="content" source="media/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant/search-feature-in-detailed-view.png" alt-text="Search feature in Detailed View tab." border="false":::
 
@@ -157,6 +157,6 @@ After you review your scan results, select **Next**. On this screen, select **Se
 
 **Note**:  The scan file is ConfigurationDetails_<CorrelationId>.html. It's located in the ***%localappdata%\saralogs\UploadLogs*** folder, for example, *C:\users\\\<username>\AppData\Local\saralogs\UploadLogs*.
 
-If you need to share your log files with a Support professional, select **See all logs** to open the folder that contains all the logs that're created by the Assistant. Then copy the files and share them.
+If you need to share your log files with a Support professional, select **See all logs** to open the folder that contains all the logs that are created by the Assistant. Then copy the files and share them.
 
 :::image type="content" source="media/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant/example-of-selecting-see-all-logs.png" alt-text="Example of See all logs." border="false":::
