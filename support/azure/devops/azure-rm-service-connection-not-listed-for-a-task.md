@@ -58,5 +58,5 @@ When you try to load the Azure service connection in a pipeline task such as Azu
 
 [Troubleshoot Azure Resource Manager (ARM) service connection issues](overview-of-azure-resource-manager-service-connections.md)
 
-
+[Error when verifying the manual Azure RM service connection](create-azure-rm-service-principal-manual.md)
 

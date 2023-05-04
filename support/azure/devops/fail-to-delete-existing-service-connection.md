@@ -30,3 +30,11 @@ If the **Delete** button doesn't remove the service connection, follow these ste
 1. If you use the API from the previous step by using the default parameters, and this still doesn't work, you can set the `deep` value to `false`. This setting causes the program to skip any checks and attempts that are part of the usual process to delete the underlying SPN.
 
 You must manually delete or edit the service principal by using the Active Directory App in the Azure portal.
+
+## See related
+
+[ARM service connection not listed for a task](azure-rm-service-connection-not-listed-for-a-task.md)
+
+[Troubleshoot service connections for ARM service principal (manual)](create-azure-rm-service-principal-manual.md)
+
+["Failed to get Azure DevOps Service access token" error](failed-to-get-azure-devops-service-access-token.md)

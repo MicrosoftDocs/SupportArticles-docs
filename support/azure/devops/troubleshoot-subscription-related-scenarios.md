@@ -116,3 +116,9 @@ A maximum of 50 Azure subscriptions are listed. If the subscription isn't listed
 1. Add the Azure AD user to the Azure DevOps organization to have the Stakeholder access level, and then add it to the **Project Collection Administrators group (for billing)**. Or, make sure that you have sufficient permissions in the Team Project to create service connections.
 
 1. Log in to Azure DevOps by using the new user credentials, and then set up a billing. You will see only one Azure subscription in the list.
+
+## See related
+
+[Create an Azure RM service connection](overview-of-azure-resource-manager-service-connections.md)
+
+[Common service connection issues](overview-of-azure-resource-manager-service-connections.md)
