@@ -124,7 +124,7 @@ If the OS error embedded in 17053 is 112, `There is not enough space on the disk
 
 ### Resolve issue with error OS error 665 and 1450
 
-If you're running into OS errors 665 and 1450, then you can follow one of these methods to resolve. For a lot more details, on these and other steps, review [OS errors 665 and 1450 are reported for SQL Server files](/sql/database-engine/database-file-operations/1450-and-665-errors-running-dbcc-checkdb)
+If you're running into OS errors 665 and 1450, then you can follow one of these methods to resolve. For a lot more details, on these and other steps, review [OS errors 665 and 1450 are reported for SQL Server files](1450-and-665-errors-running-dbcc-checkdb.md) 
 
 1. Place the database files on a Resilient File System (ReFS) volume
 1. Defragment the volume where the database files reside. Be sure your defragmentation utility is transactional
@@ -135,7 +135,7 @@ If you're running into OS errors 665 and 1450, then you can follow one of these 
 1. Reduce the lifetime of DBCC CHECK commands using the performance enhancements and thus avoid the 665 errors
 1. Execute DBCC CHECKDB at a time when there's little activity on the database server
 1. To execute DBCC CHECKDB, you can consider setting up an Availability Group or Log Shipping/Standby server. Or use a second server where you can run the DBCC CHECKDB commands
-1. For bulk copy and backup scenarios details, see the article [OS errors 665 and 1450 are reported for SQL Server files](/sql/database-engine/database-file-operations/1450-and-665-errors-running-dbcc-checkdb).
+1. For bulk copy and backup scenarios details, see the article [OS errors 665 and 1450 are reported for SQL Server files](1450-and-665-errors-running-dbcc-checkdb.md).
 
 ## More information
 
