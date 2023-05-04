@@ -36,18 +36,22 @@
     href: access-denied-error-when-connect-source-control.md
   - name: Release Management component doesn't work
     href: other-release-management-component-no-work.md
-  - name: Troubleshoot Azure Resource Manager service connection issues
-    href: overview-of-azure-resource-manager-service-connections.md
-  - name: Service connection creation issues
-    items:
-    - name: Azure RM Service connection not listed for a task
-      href: azure-rm-service-connection-not-listed-for-a-task.md
-    - name: Fail to verify the service connection
-      href: fail-to-verify-service-connection.md
-    - name: Fail to delete an existing Azure RM service connection
-      href: user-is-not-able-to-delete-existing-service-connection.md
-    - name: Subscription loading issues
+
+  - name: Azure Resource Manager service connection
+    items: 
+    - name: ARM service connection and trace tools
+      href: overview-of-azure-resource-manager-service-connections.md
+    - name: Subscription issues
       href: troubleshoot-subscription-related-scenarios.md
+    - name: ARM service principal (manual)
+      href: create-azure-rm-service-principal-manual.md
+    - name: Error verifying automatic ARM service connection
+      href: failed-to-get-azure-devops-service-access-token.md
+    - name: ARM service connection not listed for task
+      href: azure-rm-service-connection-not-listed-for-a-task.md
+    - name: Fail to delete existing ARM service connection
+      href: fail-to-delete-existing-service-connection.md
+
 - name: Repos
   items:
   - name: Git clone or Git push fails to an Azure DevOps repository

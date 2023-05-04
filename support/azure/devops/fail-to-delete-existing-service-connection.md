@@ -4,21 +4,22 @@ description: This article provides workaround for issues that you might encounte
 ms.date: 04/24/2023
 author: padmajayaraman
 ms.author: v-jayaramanp
+ms.reviewer: cathmill, kirthishkt
 ms.custom: sap:Pipelines
 ms.service: azure-devops
 ---
 
-# User isn't able to delete an existing Azure RM service connection
+# Fail to delete existing ARM service connection
 
 ## Symptoms
 
-When users try to delete an Azure RM service connection, they experience one of several issues. For example, they receive a "Failed to remove Azure permission 'RoldAssignmentId'... Failed to remove the service principal from Azure Active Directory" error message. Or the connection isn't being removed from the list of service connections - although there is no error.
+When you try to delete an Azure RM service connection, you might experience one of several issues. For example, you may receive a "Failed to remove Azure permission 'RoldAssignmentId'... Failed to remove the service principal from Azure Active Directory" error message. Or the connection isn't being removed from the list of service connections, although there is no error.
 
-:::image type="content" source="media/user-is-not-able-to-delete-existing-service-connection/delete-service-connection.png" alt-text="Screenshot that shows an error while deleting an existing service connection.":::
+:::image type="content" source="media/fail-to-delete-existing-service-connection/delete-service-connection.png" alt-text="Screenshot that shows an error while deleting an existing service connection.":::
 
 ## Resolution
 
-If users experience these errors, they should still be able to delete the connection by selecting the **Delete** button. However, they must manually delete or edit the service principal by using the Active Directory app in the Azure portal.
+If you experience these errors, you should still be able to delete the connection by selecting the **Delete** button. However, you must manually delete or edit the service principal by using the Active Directory app in the Azure portal.
 
 If the **Delete** button doesn't remove the service connection, follow these steps:
 
@@ -28,5 +29,4 @@ If the **Delete** button doesn't remove the service connection, follow these ste
 1. [Try to delete the connections by using the REST API directly](/rest/api/azure/devops/serviceendpoint/endpoints/delete?view=azure-devops-rest-6.0&tabs=HTTP&preserve-view=true). Although the UI makes similar calls, it's always worth checking whether calling the API directly will create a different result.
 1. If you use the API from the previous step by using the default parameters, and this still doesn't work, you can set the `deep` value to `false`. This setting causes the program to skip any checks and attempts that are part of the usual process to delete the underlying SPN.
 
-> [!NOTE]
-> The user must manually delete or edit the service principal by using the Active Directory App in the Azure portal.
+You must manually delete or edit the service principal by using the Active Directory App in the Azure portal.

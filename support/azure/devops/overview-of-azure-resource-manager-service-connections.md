@@ -1,17 +1,18 @@
 ---
-title: Troubleshoot connection issues in Azure Resource Manager service connection
-description: Provides an overview of Azure RM service connection, types of connection modes, and lists the tools used to troubleshoot various scenarios.
+title: Troubleshoot Azure Resource Manager (ARM) service connection issues
+description: Provides an overview of ARM service connection, types of connection modes, and lists the tools used to troubleshoot various scenarios.
 ms.date: 04/25/2023
 author: padmajayaraman
 ms.author: v-jayaramanp
+ms.reviewer: cathmill, kirthishkt
 ms.custom: sap:Pipelines
 ms.service: azure-devops
 ms.subservice: ts-pipelines
 ---
 
-# Troubleshoot connection issues in Azure Resource Manager service connection
+# Troubleshoot Azure Resource Manager (ARM) service connection issues
 
-There are various causes for connectivity issues in Azure Resource Manager (RM) service connection. This article series helps you troubleshoot various service connection problems and describes the tools and methods you can use for troubleshooting.
+This article series helps you troubleshoot various Azure Resource Manager (ARM) service connection problems and describes the tools and methods you can use for troubleshooting.
 
 ## Introduction to Azure RM service connection
 
@@ -20,11 +21,13 @@ An Azure Resource Manager service connection is used to connect to a Microsoft A
 The **Connections** dialog box offers two main connection modes.
 
 - **Automated subscription detection**
+  
   In this mode, Azure Pipelines queries Azure for all the subscriptions and instances to which you have access. These subscriptions use the credentials that you currently use to sign in to Azure Pipelines (including Microsoft accounts and School or Work accounts).
 
   If you don't see the subscription that you want to use, sign out of Azure Pipelines, and then sign in again by using the appropriate account credentials.
 
 - **Manual subscription pipeline**
+  
   In this mode, you must specify the service principal that you want to use to connect to Azure. The service principal specifies the resources and the access levels that are available over the connection.
 
   Use this approach when you have to connect to an Azure account by using credentials that differ from the credentials that you currently use to sign in to Azure Pipelines. This is an useful method to maximize security and limit access. Service principals are valid for two years.
@@ -33,7 +36,7 @@ The **Connections** dialog box offers two main connection modes.
 
 To create an Azure RM service connection,
 
-1. Log in to [https://dev.azure.com](https://dev.azure.com/ContentIdea/).
+1. Sign in to your organization (https://dev.azure.com/{yourorganization}) and select your project.
 
 1. In the Azure DevOps project, navigate to the **Project Settings > Service Connections.**
 
@@ -69,7 +72,7 @@ For more information, see [What happens when you create an Azure RM service conn
 
 ## Tools used for troubleshooting Azure RM service connection scenarios
 
-Many of the troubleshooting scenarios that are discussed in these topics involve the F12 developer tools in your web browser and the Fiddler debugging tool. The following sections discusses these tools.
+Many of the troubleshooting scenarios that are discussed in these topics involve the use of F12 developer tools in your web browser and the Fiddler debugging tool to capture additional information. These traces can provide important details to help diagnose and troubleshoot the issue. The following sections discusses these tools.
 
 ### F12 developer tools
 

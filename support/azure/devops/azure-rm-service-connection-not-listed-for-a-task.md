@@ -1,18 +1,19 @@
 ---
-title: Troubleshooting tips for issues while editing or updating service connections 
-description: This article provides tips for issues that you might encounter while editing or updating azure RM service connections.
+title: ARM service connection not listed for a task 
+description: This article provides tips for an issue that you might encounter when a service connection is not listed for a task.
 ms.date: 04/24/2023
 author: padmajayaraman
 ms.author: v-jayaramanp
+ms.reviewer: cathmill, kirthishkt
 ms.custom: sap:Pipelines
 ms.service: azure-devops
 ---
 
-# Azure RM Service connection not listed for a task
+# ARM service connection not listed for task
 
 ## Symptoms
 
-When a user tries to load the Azure service connection in a pipeline task such as Azure App service deploy or Azure App service manage, the service connection doesn't appear in the list. However, when the user checks the **Service Connection** tab under **Project Settings**, the service connection is available.
+When you try to load the Azure service connection in a pipeline task such as Azure App service deploy or Azure App service manage, the service connection doesn't appear in the list. However, when you check the **Service Connection** tab under **Project Settings**, the service connection is available.
 
 ## Debugging steps
 
@@ -20,7 +21,7 @@ When a user tries to load the Azure service connection in a pipeline task such a
 
 1. Go to the service connection and edit it.
 
-1. Press **F12**, and open the network trace window. If possible, select the **Disable cache** option in the panel under **Network** tab.
+1. Press **F12**, and open the network trace window. If possible, select the **Disable cache** option in the panel under the **Network** tab.
 
 1. Select the **verify** button.
 
@@ -44,11 +45,18 @@ When a user tries to load the Azure service connection in a pipeline task such a
 
 1. Open **Project settings > Service connections**, and then select the faulty service connection.
 
-1. Select **Manage Service Principle**.
+1. Select **Manage Service Principal**.
 
    > [!NOTE]
    > This command redirects the connection to the Azure portal and displays the SPN (App) that was created as part of service connection creation.
 
 1. Check whether the SPN (App) still exists. (It was likely deleted.)
 
-1. If this is an automated service connection, create a new service connection. If this is a manual service connection, follow the steps in the ["Create an Azure Resource Manager service connection with an existing service principal"](/azure/devops/pipelines/library/connect-to-azure?view=azure-devops&preserve-view=true) section of [Connect to Microsoft Azure](/azure/devops/pipelines/library/connect-to-azure?view=azure-devops&viewFallbackFrom=azure-devopshttps&preserve-view=true) to update the service connection by using the new SPN (App) details.
+1. If this is an automated service connection, create a new service connection. If this is a manual service connection, follow the steps in the [Connect to Microsoft Azure](/azure/devops/pipelines/library/connect-to-azure#create-an-azure-resource-manager-service-connection-with-an-existing-service-principal) to update the service connection by using the new SPN (App) details.
+
+## See related
+
+[Troubleshoot Azure Resource Manager (ARM) service connection issues](overview-of-azure-resource-manager-service-connections.md)
+
+
+
