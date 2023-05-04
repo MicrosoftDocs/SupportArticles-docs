@@ -80,7 +80,7 @@ This action can be used to reinstall the required software to boot from a GEN2 V
 
 ### auditd
 
-Use this action when the auditd configuration is causing the VM to shut down immediately on startup.  This will alter the auditd configuration, replacing any HALT directives in the `/etc/audit/auditd.conf` file. Also in LVM environments, if the volume containing the audit logs is full, and free space is available in the volume group, the logical volume will be extended by 10% of the current size.  If not LVM or no space is available, only the configuration file will be changed.
+If your VM shuts down immediately upon startup due to the audit daemon configuration, use this action. This action will modify the audit daemon configuration by replacing any `halt` directives in the */etc/audit/auditd.conf* file. In an Logical Volume Manager (LVM) environment, if the logical volume that contains the audit logs is full and there is available space in the volume group, the logical volume will also be extended by 10% of the current size. However, if you're not using an LVM environment or there is no available space, only the configuration file will be updated.
 
 ## How to use ALAR
 
