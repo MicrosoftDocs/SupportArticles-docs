@@ -1,6 +1,6 @@
 ---
 title: Errors after you apply a cumulative update to a contained availability group
-description: Fixes errors that occur after you apply a cumulative update to an instance of SQL Server that has a contained availability group.
+description: Fixes the errors that occur after you apply a cumulative update to an instance of SQL Server that has a contained availability group.
 ms.date: 05/11/2023
 ms.custom: KB5027331
 author: MonicaChenc
@@ -10,7 +10,7 @@ appliesto:
 - SQL Server 2022 on Windows
 - SQL Server 2022 on Linux
 ---
-# FIX: Errors after you apply a cumulative update to an instance of SQL Server that has a contained availability group
+# FIX: Errors occur after you apply a cumulative update to an instance of SQL Server that has a contained availability group
 
 ## Symptoms
 
@@ -19,9 +19,9 @@ Consider the following scenario:
 - You have an instance of SQL Server 2022 that has a contained availability group deployed.
 - You create server-level objects (logins and jobs) in the context of the contained availability group.
 
-In this scenario, the following issues occur after you install cumulative updates on this instance of SQL Server:
+In this scenario, the following errors occur after you install a cumulative update on this instance of SQL Server.
 
-### Issue one
+### Error 1
 
 The SQL Server Agent job fails with the following error message:
 
@@ -34,21 +34,21 @@ You see the SQL Server Agent error log records error messages that resemble the 
 
 At this stage, the `syssubsystems` table is missing from the `msdb` database of the contained availability group and exists in the instance-level `msdb` database. To fix these errors and allow the jobs to run successfully, you can manually copy the instance-level `syssubsystems` table to the `msdb` database of the contained availability group by connecting to the listener and creating the table and the rows in the table.
 
-### Issue two
+### Error 2
 
 After you create a contained availability group, you see the following error message every five seconds:
 
 > The activated proc '[dbo].[sp_syspolicy_events_reader]' running on queue '\<AGName>_AG_SYNC_CONTAINED_msdb.dbo.syspolicy_event_queue' output the following:&nbsp;&nbsp;'Cannot execute as the database principal because the principal "##MS_PolicyEventProcessingLogin##" does not exist, this type of principal cannot be impersonated, or you do not have permission.'
 
-### Issue three
+### Error 3
 
-After Database Mail stops working, you try to run the `sysmail` stored procedure will report an error message that resembles the following message:
+After Database Mail stops working, trying to run the `sysmail` stored procedure will report an error message that resembles the following message:
 
 > The object '[dbo].[sp_syspolicy_events_reader]' does not exist in database 'master' or is invalid for this operation.
 
 ## More information
 
-Microsoft is currently investigating these issues. This article will be updated as we find more information or guidance. Until then, you can take the following necessary precautions before you install cumulative updates to an installation that has a contained availability group:
+Microsoft is currently investigating these issues. This article will be updated as we find more information or guidance. Until then, you can take the following necessary precautions before you install a cumulative update to an installation that has a contained availability group:
 
 - Script the server-level objects and SQL Server Agent objects.
 - Drop the contained availability group.
