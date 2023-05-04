@@ -5,6 +5,16 @@ items:
   items:
   - name: Application Insights telemetry
     items:
+    - name: OpenTelemetry troubleshooting
+      items:
+      - name: .NET
+        href: app-insights/opentelemetry-troubleshooting-dotnet.md
+      - name: Java
+        href: app-insights/opentelemetry-troubleshooting-java.md
+      - name: Node.js
+        href: app-insights/opentelemetry-troubleshooting-nodejs.md
+      - name: Python
+        href: app-insights/opentelemetry-troubleshooting-python.md
     - name: JavaScript SDK troubleshooting
       href: app-insights/javascript-sdk-troubleshooting.md
     - name: Troubleshoot missing telemetry in Application Insights
