@@ -39,7 +39,7 @@ Validate if you still need the SPN registration on a service account. Remove the
 
 ### Option 2
 
-Set up a dedicated SPN for WinRM by specifying the port number. To do this, run these commands to register the SPN:
+Set up a dedicated SPN for WinRM by specifying the port number. Run these commands to register the SPN:
 
 ```console
 Setspn -s HTTP/servername:5985 <servername>
@@ -67,7 +67,7 @@ Enter-PSSession -Computername mem1.contoso.com -SessionOption (New-PSSessionOpti
 
 ### Option 3
 
-Configure the WinRM client to use a Web Services-Management (WSMAN) SPN instead of an HTTP SPN. To do this, create the following registry value:
+Configure the WinRM client to use a Web Services-Management (WSMAN) SPN instead of an HTTP SPN by creating the following registry value:
 
 Key: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WSMAN\Client`  
 Value name: spn_prefix  
@@ -83,7 +83,7 @@ The Kerberos request would look like the following example after making the regi
 
 > Client.contoso.com	DC1.contoso.com	KerberosV5	KerberosV5:TGS Request Realm: CONTOSO.COM Sname: WSMAN/mem1.contoso.com
 
-You can also use the `reg add` command to do this:
+You can also use the `reg add` command:
 
 ```console
 reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WSMAN\Client /v spn_prefix /t REG_SZ /d "HOST" /f
