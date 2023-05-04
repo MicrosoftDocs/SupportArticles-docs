@@ -1,6 +1,6 @@
 ---
 title: Fail to delete an existing Azure RM service connection 
-description: This article provides workaround for issues that you might encounter when you can't delete an existing service connection. 
+description: This article provides workaround for issues that you might encounter when you can't delete an existing ARM service connection. 
 ms.date: 04/24/2023
 author: padmajayaraman
 ms.author: v-jayaramanp

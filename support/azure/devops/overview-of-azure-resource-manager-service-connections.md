@@ -106,21 +106,19 @@ Use the following list to navigate to the appropriate article or section for det
 
 - [There is no active Azure subscription](troubleshoot-subscription-related-scenarios.md#you-dont-appear-to-have-an-active-azure-subscription-error)
 
-- ["Failed to set Azure permission" error when trying to save a service connection](troubleshoot-subscription-related-scenarios.md#failed-to-set-azure-permission-error-when-trying-to-save-a-service-connection)
+- ["Failed to set Azure permission" error when trying to save a service connection](troubleshoot-subscription-related-scenarios.md#failed-to-set-azure-permission-error-when-saving-a-service-connection)
 
 **Service connection creation issues**
 
-- [Error when verifying the manual Azure RM service connection](fail-to-verify-service-connection.md#error-when-verifying-the-manual-azure-rm-service-connection)
+- [Azure RM Service connection not listed for a task](azure-rm-service-connection-not-listed-for-a-task.md)
 
-- [Azure RM Service connection not listed for a task](azure-rm-service-connection-not-listed-for-a-task.md#azure-rm-service-connection-not-listed-for-a-task)
+- [User is not able to delete an existing Azure RM service connection](fail-to-delete-existing-service-connection.md)
 
-- [User is not able to delete an existing Azure RM service connection](user-is-not-able-to-delete-existing-service-connection.md#user-isnt-able-to-delete-an-existing-azure-rm-service-connection)
+- ["Failed to get Azure DevOps Service access token" error](failed-to-get-azure-devops-service-access-token.md)
 
-- ["Failed to get Azure DevOps Service access token" error](fail-to-verify-service-connection.md)
+- [Error when verifying the manual Azure RM serice connection](create-azure-rm-service-principal-manual.md#error-when-verifying-the-manual-azure-rm-service-connection)
 
-- [Fail to verify the service connection](fail-to-verify-service-connection.md)
-
-- [Create Azure RM service principal (manual)](fail-to-verify-service-connection.md#create-azure-rm-service-principal-manual)
+- [Create Azure RM service principal (manual)](create-azure-rm-service-principal-manual.md#create-azure-rm-service-principal-manual)
 
 ## See also
 
