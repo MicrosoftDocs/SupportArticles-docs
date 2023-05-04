@@ -34,7 +34,7 @@ Starting with SQL Server 2016, SSMS and SSDT no longer ship with SQL Server bits
 
 To avoid dependence on Visual Studio 2010 Shell component, you can uninstall and download the latest SSMS or SSDT version. Here's how to accomplish this goal:
 
-1. Use the SQL Server installation wizard to [Uninstall the installed version of SSMS](../ssms/uninstall-management-studio.md) or SSDT.
+1. Use the SQL Server installation wizard to [uninstall the installed version of SSMS](../ssms/uninstall-management-studio.md) or SSDT.
 
 1. Download and install the latest version of [SSMS](/sql/ssms/download-sql-server-management-studio-ssms) or [SSDT](/sql/ssdt/download-sql-server-data-tools-ssdt).
 
