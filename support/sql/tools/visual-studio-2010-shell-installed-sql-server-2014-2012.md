@@ -1,9 +1,9 @@
 ---
 title: Visual Studio 2010 Shell is installed with SQL Server 2014 and 2012 
 description: This article provides a workaround for the Visual Studio 2010 Shell end-of-support warning that occurs when you scan the server with a security software.
-ms.date: 05/02/2023
+ms.date: 05/04/2023
 ms.custom: sap:Tools
-ms.reviewer: suresh.kandoth, pijocoder
+ms.reviewer: suresh.kandoth, jopilov
 author: HaiyingYu
 ms.author: haiyingyu
 ---
@@ -16,9 +16,9 @@ _Applies to:_ &nbsp; SQL Server 2014, SQL Server 2012
 
 After you install SQL Server 2014 or SQL Server 2012 with SQL Server Management Studio (SSMS) or SQL Server Data Tools (SSDT), the following programs are installed and listed as installed programs:
 
-- Microsoft Visual Studio 2010 Shell (Isolated)  
+- Microsoft Visual Studio 2010 Shell (Isolated)
 
-- Microsoft Visual Studio 2010 Shell (Integrated)  
+- Microsoft Visual Studio 2010 Shell (Integrated)
 
 When you scan the server with a security software, Visual Studio 2010 Shell may be flagged as an end-of-support (EOS) or obsolete software.
 
@@ -32,9 +32,9 @@ Starting with SQL Server 2016, SSMS and SSDT no longer ship with SQL Server bits
 
 ## Workaround
 
-To avoid dependence on VS Shell 2010 component, you can uninstall and download the latest SSMS or SSDT version. Here's how to accomplish this goal:
+To avoid dependence on Visual Studio 2010 Shell component, you can uninstall and download the latest SSMS or SSDT version. Here's how to accomplish this goal:
 
-1. Use the SQL Server installation wizard to [Uninstall the installed version of SSMS](/troubleshoot/sql/ssms/uninstall-management-studio) or SSDT.
+1. Use the SQL Server installation wizard to [Uninstall the installed version of SSMS](/../ssms/uninstall-management-studio.md) or SSDT.
 
 1. Download and install the latest version of [SSMS](/sql/ssms/download-sql-server-management-studio-ssms) or [SSDT](/sql/ssdt/download-sql-server-data-tools-ssdt).
 
