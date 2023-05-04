@@ -36,7 +36,7 @@ The **Connections** dialog box offers two main connection modes.
 
 To create an Azure RM service connection,
 
-1. Sign in to your organization (<https://dev.azure.com\<yourorganization\>>) and select your project.
+1. Sign in to your organization (<https://dev.azure.com\<yourorganization\>) and select your project.
 
 1. In the Azure DevOps project, navigate to the **Project Settings > Service Connections.**
 
