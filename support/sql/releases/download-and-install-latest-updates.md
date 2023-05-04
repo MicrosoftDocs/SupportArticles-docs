@@ -148,6 +148,7 @@ Each of the following links provides information for all of the applicable produ
 |14.0.2000.63|None| GDR| [4057122](https://support.microsoft.com/help/4057122)|January 03, 2018|
 |14.0.3008.27|None| CU2| [4052574](https://support.microsoft.com/help/4052574)|November 28, 2017|
 |14.0.3006.16|None| CU1| [4038634](https://support.microsoft.com/help/4038634)|October 24, 2017|
+|14.0.1000.169|None| RTM|NA|September 29, 2017|
 
 ### SQL Server 2016
 
@@ -223,6 +224,7 @@ Each of the following links provides information for all of the applicable produ
 |13.0.1722.0|RTM|GDR|[3194716](https://support.microsoft.com/help/3194716)|November 8, 2016|
 |13.0.2164.0|RTM| CU2| [3182270](https://support.microsoft.com/help/3182270)|September 22, 2016|
 |13.0.2149.0|RTM| CU1| [3164674](https://support.microsoft.com/help/3164674)|July 25, 2016|
+|13.0.1601.5|None| RTM|NA|June 1, 2016|
 
 ### SQL Server 2014
 
