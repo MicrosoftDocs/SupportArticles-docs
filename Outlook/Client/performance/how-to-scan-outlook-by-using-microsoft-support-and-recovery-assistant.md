@@ -155,7 +155,7 @@ After you review your scan results, select **Next**. On this screen, select **Se
 
 :::image type="content" source="media/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant/sara-outlook-diag-logs-screen.png" alt-text="Screenshot of the Outlook diagnostic logs" border="false":::
 
-**Note**:  The scan file is ConfigurationDetails_<CorrelationId>.html. It's located in the ***%localappdata%\saralogs\UploadLogs*** folder, for example, *C:\users\\\<username>\AppData\Local\saralogs\UploadLogs*.
+**Note**:  The scan file is ConfigurationDetails_{CorrelationId}.html. It's located in the ***%localappdata%\saralogs\UploadLogs*** folder, for example, *C:\users\\\<username>\AppData\Local\saralogs\UploadLogs*.
 
 If you need to share your log files with a Support professional, select **See all logs** to open the folder that contains all the logs that are created by the Assistant. Then copy the files and share them.
 
