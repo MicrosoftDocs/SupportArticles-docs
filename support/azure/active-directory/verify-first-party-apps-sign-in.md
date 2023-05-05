@@ -163,7 +163,7 @@ The following table lists some, but not all, first-party Microsoft applications.
 
 ## Application IDs of Microsoft tenant owned applications
 
-The following table lists some, but not all, Microsoft Tenant (Tenant Id: 72f988bf-86f1-41af-91ab-2d7cd011db47) owned applications.
+The following table lists some, but not all, Microsoft tenant (tenant ID: 72f988bf-86f1-41af-91ab-2d7cd011db47) owned applications.
 
 |Application Name|Application IDs|
 |--|--|
