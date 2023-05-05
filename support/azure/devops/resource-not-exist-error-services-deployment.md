@@ -4,6 +4,8 @@ description: Provides a solution for a Resource doesn't exist error with service
 ms.date: 04/27/2023
 ms.custom: sap:Pipelines
 ms.reviewer: dmittal, cathmill
+ms.author: v-sidong
+author: sevend2
 ms.service: azure-devops
 ---
 # Resource doesn't exist error with services deployment

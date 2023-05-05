@@ -4,6 +4,8 @@ description: Provides solutions for issues related to the service connection in 
 ms.date: 04/27/2023
 ms.custom: sap:Pipelines
 ms.reviewer: dmittal, cathmill
+ms.author: v-sidong
+author: sevend2
 ms.service: azure-devops
 ---
 # Issues with the service connection in the task

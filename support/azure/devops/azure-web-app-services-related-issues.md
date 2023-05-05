@@ -4,6 +4,8 @@ description: This article lists some common issues related to Azure Web App serv
 ms.date: 04/27/2023
 ms.custom: sap:Pipelines
 ms.reviewer: dmittal, cathmill
+ms.author: v-sidong
+author: sevend2
 ms.service: azure-devops
 ---
 # Azure Web App and services related issues

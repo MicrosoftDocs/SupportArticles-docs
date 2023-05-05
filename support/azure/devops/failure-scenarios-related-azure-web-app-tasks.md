@@ -4,6 +4,8 @@ description: Provides resolutions for some errors related to Azure Web App tasks
 ms.date: 04/27/2023
 ms.custom: sap:Pipelines
 ms.reviewer: dmittal, cathmill
+ms.author: v-sidong
+author: sevend2
 ms.service: azure-devops
 ---
 # Failure scenarios related to Azure Web App tasks
@@ -54,7 +56,7 @@ Try setting the **WEBSITE_RUN_FROM_PACKAGE** app setting to **1** on the App Ser
   ```yml
   steps:
   - task: ExtractFiles@1
-    displayName: 'Extract files '
+    displayName: 'Extract files'
     inputs:
     archiveFilePatterns: '$(InputPackageZipPath)'
     destinationFolder: '$(OutputUnzippedPath)'

@@ -4,6 +4,8 @@ description: This article provides the documentation for tasks and describes ste
 ms.date: 04/27/2023
 ms.custom: sap:Pipelines
 ms.reviewer: dmittal, cathmill
+ms.author: v-sidong
+author: sevend2
 ms.service: azure-devops
 ---
 # Troubleshoot Azure Web App tasks and deployment issues
