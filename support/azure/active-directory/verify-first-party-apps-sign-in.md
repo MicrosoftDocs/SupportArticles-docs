@@ -1,7 +1,7 @@
 ---
 title: Verify first-party Microsoft applications in sign-in reports
-description: Describes how to verify first-party Microsoft applications in sign-in reports
-ms.date: 03/10/2023
+description: Describes how to verify first-party Microsoft applications in sign-in reports.
+ms.date: 05/05/2023
 ms.reviewer: bernaw
 ms.service: active-directory
 ms.subservice: compliance
@@ -161,9 +161,9 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Yammer Web|c1c74fed-04c9-4704-80dc-9f79a2e515cb|
 |Yammer Web Embed|e1ef36fd-b883-4dbf-97f0-9ece4b576fc6|
 
-## Application IDs of Microsoft tenant owned applications
+## Application IDs of Microsoft tenant-owned applications
 
-The following table lists some, but not all, Microsoft tenant (tenant ID: 72f988bf-86f1-41af-91ab-2d7cd011db47) owned applications.
+The following table lists some, but not all, Microsoft tenant-owned applications (tenant ID: 72f988bf-86f1-41af-91ab-2d7cd011db47).
 
 |Application Name|Application IDs|
 |--|--|
