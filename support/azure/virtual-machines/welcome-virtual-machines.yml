@@ -11,7 +11,7 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 08/26/2021
+  ms.date: 03/31/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -171,6 +171,10 @@ landingContent:
             url: /azure/virtual-machines/extensions/troubleshoot
           - text:  Installing the extension in your VM
             url: /azure/virtual-machines/extensions/diagnostics-windows
+          - text:  Multiple certificates on IaaS VM that uses extensions
+            url: ./multiple-certificates-iaas-vm-extensions.md
+          - text:  Troubleshoot extension certificate issues on Windows VM
+            url: ./troubleshoot-extension-certificates-issues-windows-vm.md
           - text:  Custom Script Extension for Windows
             url: /azure/virtual-machines/extensions/custom-script-windows#tips-and-tricks
 
