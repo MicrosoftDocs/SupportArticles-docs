@@ -28,7 +28,7 @@ In addition, you receive the following errors by using the DISM tool to list the
 
 - Error 0x800f0805 in an output text file
 
-    > Error: 0x800f0805
+    > Error: 0x800f0805  
       The specific package is not valid Windows package.
 
 - Error 0x800f0805 in the DISM log file
