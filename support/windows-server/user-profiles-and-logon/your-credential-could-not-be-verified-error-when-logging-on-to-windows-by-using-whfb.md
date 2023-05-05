@@ -4,9 +4,9 @@ description: Introduces how to troubleshoot the Your credentials could not be ve
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
-ms.date: 05/04/2023
+ms.date: 05/05/2023
 ms.prod: windows-server
-msreviewer: kaushika
+ms.reviewer: kaushika
 ms.technology: windows-server-user-profiles
 ms.custom: sap:user-logon-fails, csstroubleshoot, ikb2lmc
 ---
@@ -14,8 +14,7 @@ ms.custom: sap:user-logon-fails, csstroubleshoot, ikb2lmc
 
 This article introduces how to fix the error "Your credentials could not be verified" that occurs when you try to log on to Windows with Windows Hello for Business (WHFB).
 
-_Applies to:_ Windows 10, Windows 11
-
+_Applies to:_ Windows 10, Windows 11  
 _Original KB number:_ 4519735
 
 ## Symptom
