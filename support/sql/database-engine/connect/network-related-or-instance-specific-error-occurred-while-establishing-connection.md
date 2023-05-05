@@ -399,6 +399,9 @@ Once you can connect by using TCP on the same computer, it's time to try to conn
 
 ## See also
 
+- [Network Protocols and Network Libraries](/sql/sql-server/install/network-protocols-and-network-libraries)
+- [Client Network Configuration](/sql/database-engine/configure-windows/client-network-configuration)
+- [Configure Client Protocols](/sql/database-engine/configure-windows/configure-client-protocols)
 - [Troubleshoot connectivity issues in SQL Server](../connect/resolve-connectivity-errors-overview.md)
 - [0200 Consistent Network Issue](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0200-Consistent-Network-Issue)
 - [Connect to an Always On availability group listener](/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover)
