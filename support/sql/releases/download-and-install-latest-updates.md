@@ -315,16 +315,21 @@ Each of the following links provides information for all of the applicable produ
 |---|---|---|---|---|
 |11.0.7512.11|SP4| GDR Security Update| [5021123](https://support.microsoft.com/help/5021123)|February 14, 2023|
 |11.0.7507.2|SP4| GDR Security Update| [4583465](https://support.microsoft.com/help/4583465)|January 12, 2021|
+|11.0.7493.4|SP4| GDR Security Update| [4532098](https://support.microsoft.com/help/4532098)|February 11, 2020|
+|11.0.7462.6|SP4| GDR Security Update| [4057116](https://support.microsoft.com/help/4057116)|January 16, 2018|
+|11.0.6614.2|SP3| QFE Security Update| [4057121](https://support.microsoft.com/help/4057121)|January 16, 2018|
 |11.0.6260.1|SP3| GDR Security Update| [4057115](https://support.microsoft.com/help/4057115)|January 16, 2018|
 |11.0.7001.0|SP4| RTW/PCU4| [4018073](https://support.microsoft.com/help/4018073)|October 2, 2017|
 |11.0.6607.3|SP3|CU10| [4025925](https://support.microsoft.com/help/4025925)|August 8, 2017|
-|11.0.6251.0|SP3| GDR Security Update| [4019092](https://support.microsoft.com/help/4019092)|August 8, 2017|
+|11.0.6251.0|SP3| QFE Security Update| [4019092](https://support.microsoft.com/help/4019092)|August 8, 2017|
 |11.0.6598.0|SP3|CU9| [4016762](https://support.microsoft.com/help/4016762)|May 15, 2017|
 |11.0.6594.0|SP3|CU8| [4013104](https://support.microsoft.com/help/4013104)|March 20, 2017|
 |11.0.6579.0|SP3|CU7| [3205051](https://support.microsoft.com/help/3205051)|January 17, 2017|
 |11.0.6567.0|SP3|CU6| [3194992](https://support.microsoft.com/help/3194992)|November 17, 2016|
 |11.0.6248.0|SP3|MS16-136 GDR Security Update| [3194721](https://support.microsoft.com/help/3194721)|November 8, 2016|
+|11.0.6567.0|SP3|MS16-136 QFE Security Update| [3194724](https://support.microsoft.com/help/3194724)|November 8, 2016|
 |11.0.5388.0|SP2|MS16-136 GDR Security Update| [3194719](https://support.microsoft.com/help/3194719)|November 8, 2016|
+|11.0.5676.0|SP3|MS16-136 QFE Security Update| [3194725](https://support.microsoft.com/help/3194725)|November 8, 2016|
 |11.0.6544.0|SP3|CU5| [3180915](https://support.microsoft.com/help/3180915)|September 19, 2016|
 |11.0.6540.0|SP3|CU4| [3165264](https://support.microsoft.com/help/3165264)|July 18, 2016|
 |11.0.6537.0|SP3|CU3| [3152635](https://support.microsoft.com/help/3152635)|May 16, 2016|
@@ -386,7 +391,6 @@ Each of the following links provides information for all of the applicable produ
 |---|---|---|---|---|
 |10.50.6785.2|SP3| GDR Security Update| [5021112](https://support.microsoft.com/help/5021112)|February 14, 2023|
 |10.50.6560.00|SP3| GDR Security Update| [4057113](https://support.microsoft.com/help/4057113)|January 6, 2018|
-|10.50.6542.00|SP3| | [3146034](https://support.microsoft.com/help/3146034)|Mars 3, 2016|
 |10.50.6529.00|SP3| MS15-058: QFE Security Update| [3045314](https://support.microsoft.com/help/3045314)|July 14, 2015|
 |10.50.6220.00|SP3| MS15-058: QFE Security Update| [3045316](https://support.microsoft.com/help/3045316)|July 14, 2015|
 |10.50.6000.34|SP3| RTW/PCU3| [2979597](https://support.microsoft.com/help/2979597)|September 26, 2014|
@@ -397,7 +401,7 @@ Each of the following links provides information for all of the applicable produ
 |10.50.4302.00|SP2|CU11| [2926028](https://support.microsoft.com/help/2926028)|February 18, 2014|
 |10.50.4297.00|SP2|CU10| [2908087](https://support.microsoft.com/help/2908087)|December 17, 2013|
 |10.50.4295.00|SP2|CU9| [2887606](https://support.microsoft.com/help/2887606)|October 28, 2013|
-|10.50.4286.00|SP2|CU7| [2844090](https://support.microsoft.com/help/2844090)|June 17, 2013|
+|10.50.4285.00|SP2|CU7| [2844090](https://support.microsoft.com/help/2844090)|June 17, 2013|
 |10.50.4279.00|SP2|CU6| [2830140](https://support.microsoft.com/help/2830140)|April 15, 2013|
 |10.50.4276.00|SP2|CU5| [2797460](https://support.microsoft.com/help/2797460)|February 18, 2013|
 |10.50.4270.00|SP2|CU4| [2777358](https://support.microsoft.com/help/2777358)|December 17, 2012|
