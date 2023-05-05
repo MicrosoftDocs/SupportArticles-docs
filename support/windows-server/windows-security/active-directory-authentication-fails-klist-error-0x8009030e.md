@@ -14,6 +14,9 @@ ms.reviewer: kaushika
 
 Active Directory authentication issues occur and you receive 0x8009030e when running the `klist tgt` command. This article introduces how to fix the issues.
 
+_Applies to:_ Supported versions of Windows Server  
+_Original KB number:_ 4619950
+
 ## Active Directory authentication issues
 
 You encounter one or more of the following issues:
