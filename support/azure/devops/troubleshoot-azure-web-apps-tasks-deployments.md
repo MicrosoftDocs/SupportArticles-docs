@@ -42,7 +42,7 @@ Follow these steps to further investigate issues with tasks:
 
 ## See related
 
-- [Failure scenarios related to Azure Web App tasks](failure-scenarios-related-azure-web-app-tasks.md)
 - [Azure Web App and services related issues](azure-web-app-services-related-issues.md)
 - [Issues with the service connection in the task](issues-service-connection-task.md)
 - [Resource doesn't exist error with services deployment](resource-not-exist-error-services-deployment.md)
+- [Failure scenarios related to Azure Web App tasks](failure-scenarios-related-azure-web-app-tasks.md)

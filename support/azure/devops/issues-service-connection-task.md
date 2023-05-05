@@ -71,14 +71,14 @@ You can also explore [Service connection APIs](/rest/api/azure/devops/serviceend
 
 ## Recommended documents
 
-- [Service connections](/azure/devops/pipelines/library/service-endpoints#use-a-service-connection)
+- [Use a service connection](/azure/devops/pipelines/library/service-endpoints#use-a-service-connection)
 - [Azure Resource Manager service connection](/azure/devops/pipelines/library/connect-to-azure)
 - [Troubleshoot Azure Resource Manager service connections](/azure/devops/pipelines/release/azure-rm-endpoint)
-- [Azure Resource Manager service connection using automated security](/azure/devops/pipelines/library/connect-to-azure)
+- [Azure Resource Manager service connection using automated security](/azure/devops/pipelines/library/connect-to-azure#create-an-azure-resource-manager-service-connection-using-automated-security)
 
 ## See related
 
 - [Troubleshoot Azure Web App tasks and deployment issues](troubleshoot-azure-web-apps-tasks-deployments.md)
-- [Failure scenarios related to Azure Web App tasks](failure-scenarios-related-azure-web-app-tasks.md)
 - [Azure Web App and services related issues](azure-web-app-services-related-issues.md)
 - [Resource doesn't exist error with services deployment](resource-not-exist-error-services-deployment.md)
+- [Failure scenarios related to Azure Web App tasks](failure-scenarios-related-azure-web-app-tasks.md)

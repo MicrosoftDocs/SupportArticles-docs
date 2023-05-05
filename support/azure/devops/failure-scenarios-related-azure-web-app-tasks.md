@@ -51,22 +51,22 @@ Try setting the **WEBSITE_RUN_FROM_PACKAGE** app setting to **1** on the App Ser
 
 - Use the following Extract Files task to extract the zip into a folder path, and then provide the folder path into the App Service Deploy task. This prevents the App Service task from unzipping the package, preventing EMFILE errors.
 
-```yml
-steps:
-- task: ExtractFiles@1
-  displayName: 'Extract files '
-  inputs:
-  archiveFilePatterns: '$(InputPackageZipPath)'
-  destinationFolder: '$(OutputUnzippedPath)'
-
-- task: AzureRmWebAppDeployment@4
-  displayName: 'Azure App Service Deploy'
-  inputs:
-  azureSubscription: 'Subscription'
-  WebAppName: 'app-name'
-  package: '$(OutputUnzippedPath)'
-  enableXmlTransform: true
-```
+  ```yml
+  steps:
+  - task: ExtractFiles@1
+    displayName: 'Extract files '
+    inputs:
+    archiveFilePatterns: '$(InputPackageZipPath)'
+    destinationFolder: '$(OutputUnzippedPath)'
+    
+  - task: AzureRmWebAppDeployment@4
+    displayName: 'Azure App Service Deploy'
+    inputs:
+    azureSubscription: 'Subscription'
+    WebAppName: 'app-name'
+    package: '$(OutputUnzippedPath)'
+    enableXmlTransform: true
+  ```
 
 ## See related
 

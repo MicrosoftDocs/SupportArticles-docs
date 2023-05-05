@@ -52,13 +52,13 @@ Review the following articles for firewall, proxy, and permissions (applicable f
 > [!NOTE]
 > There might also be other scenarios when issues with the Azure service connection impact the deployment.
 
-- Verify the validity of the service principal used and that it's present in the app registration. For more information, see [Use Role-Based Access Control to manage access to your Azure subscription resources](/azure/role-based-access-control/role-assignments-portal).
+- Verify the validity of the service principal used and that it's present in the app registration. For more information, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 
-- Refer to the [troubleshooting doc for Azure RM service principal](/azure/devops/pipelines/release/azure-rm-endpoint).  
+- See [Troubleshoot ARM service connections](/azure/devops/pipelines/release/azure-rm-endpoint).  
 
 #### SSL error in the App Service or Web App deploy task
 
-To use a certificate in App Service, it must be signed by a trusted certificate authority. See [SSL errors](/azure/devops/pipelines/tasks/deploy/azure-rm-web-app-deployment#ssl-error) to resolve this error.  
+To use a certificate in App Service, it must be signed by a trusted certificate authority. See [SSL error](/azure/devops/pipelines/tasks/deploy/azure-rm-web-app-deployment#ssl-error) to resolve this error.  
 
 #### Web Deploy error in the App Service deploy task
 
@@ -78,29 +78,28 @@ This might be because the *web.config* file isn't present in your app. To add a 
 
 #### Failed to deploy a Function App using the AzureRmWebAppDeployment task
 
-Consider using the [Azure Functions v1 task](/azure/devops/pipelines/tasks/reference/azure-function-app-v1).
+Consider using the [AzureFunctionApp@1 - Azure Functions v1 task](/azure/devops/pipelines/tasks/reference/azure-function-app-v1).
 
 #### Guidance on deploying an app to Azure Web App
 
 See the following tutorials about deploying apps of various languages to Azure Web App:  
 
-- [Python to Web App](/azure/devops/pipelines/ecosystems/python-webapp)  
-- [PHP to Web App](/azure/devops/pipelines/ecosystems/php-webapp)  
-- [Java to Web App](/azure/devops/pipelines/ecosystems/java-webapp)  
-- [JavaScript and Node.js to Web App](/azure/devops/pipelines/ecosystems/javascript)  
+- [Use CI/CD to deploy a Python web app to Azure App Service on Linux](/azure/devops/pipelines/ecosystems/python-webapp)  
+- [Build and test PHP apps](/azure/devops/pipelines/ecosystems/php)
+- [Build & deploy to Java web app](/azure/devops/pipelines/ecosystems/java-webapp)  
+- [Quickstart - Use Azure Pipelines to build and publish a Node.js package](/azure/devops/pipelines/ecosystems/javascript)  
 
 ## Recommended documents
 
 - [App Service Deploy task Troubleshooting](/azure/devops/pipelines/tasks/deploy/azure-rm-web-app-deployment#troubleshooting)  
-- [Azure Web App task Troubleshooting](/azure/devops/pipelines/tasks/deploy/azure-rm-web-app#troubleshooting)  
-- [Azure Web Apps for Container task Troubleshooting](/azure/devops/pipelines/tasks/deploy/azure-rm-web-app-containers#troubleshooting)  
-- [Deploy to Linux Web App](/azure/devops/pipelines/targets/webapp-linux)  
-- [Deploy to Windows Web App](/azure/devops/pipelines/targets/webapp)  
-- [Deploy to Web App for Containers](/azure/devops/pipelines/targets/webapp-on-container-linux)
+- [AzureWebApp@1 - Azure Web App v1 task](/azure/devops/pipelines/tasks/reference/azure-web-app-v1#troubleshooting)  
+- [AzureWebAppContainer@1 - Azure Web App for Containers v1 task](/azure/devops/pipelines/tasks/reference/azure-web-app-container-v1#troubleshooting)  
+- [Deploy to App Service using Azure Pipelines](/azure/app-service/deploy-azure-pipelines)  
+- [Deploy to Azure Web App for Containers](/azure/devops/pipelines/targets/webapp-on-container-linux)
 
 ## See related
 
 - [Troubleshoot Azure Web App tasks and deployment issues](troubleshoot-azure-web-apps-tasks-deployments.md)
-- [Failure scenarios related to Azure Web App tasks](failure-scenarios-related-azure-web-app-tasks.md)
 - [Issues with the service connection in the task](issues-service-connection-task.md)
 - [Resource doesn't exist error with services deployment](resource-not-exist-error-services-deployment.md)
+- [Failure scenarios related to Azure Web App tasks](failure-scenarios-related-azure-web-app-tasks.md)
