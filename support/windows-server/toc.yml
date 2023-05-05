@@ -2920,6 +2920,8 @@
       href: ./windows-security/rpc-endpoint-mapper-prevents-users-added-to-trust-forest.md
   - name: Kerberos authentication
     items:
+    - name: Active Directory authentication fails with klist error 0x8009030e
+      href: ./windows-security/active-directory-authentication-fails-klist-error-0x8009030e.md
     - name: 'Troubleshooting guidance: Kerberos authentication'
       href: ./windows-security/kerberos-authentication-troubleshooting-guidance.md
     - name: Authentication failure on NTLM and Kerberos servers
