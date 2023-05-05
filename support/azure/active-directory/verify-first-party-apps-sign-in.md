@@ -161,6 +161,15 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Yammer Web|c1c74fed-04c9-4704-80dc-9f79a2e515cb|
 |Yammer Web Embed|e1ef36fd-b883-4dbf-97f0-9ece4b576fc6|
 
+## Application IDs of Microsoft tenant-owned applications
+
+The following table lists some, but not all, Microsoft tenant-owned applications (tenant ID: 72f988bf-86f1-41af-91ab-2d7cd011db47).
+
+|Application Name|Application IDs|
+|--|--|
+|Graph Explorer|de8bc8b5-d9f9-48b1-a8ad-b748da725064|
+|Microsoft Graph Command Line Tools|14d82eec-204b-4c2f-b7e8-296a70dab67e|
+
 ## More information
 
 For more information, see [Sign-in activity reports in the Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-sign-ins#sign-ins-report).
