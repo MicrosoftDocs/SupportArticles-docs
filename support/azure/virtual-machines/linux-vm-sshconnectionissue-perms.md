@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot SSH connection issues in Linux VM due to permission and ownership issues 
-description: Resolves an issue in which SSH fails because the /var/empty/sshd file is not owned by the root directory and is not group or world-writable.
+description: Resolves an issue in which SSH fails because the /var/empty/sshd file isn't owned by the root directory and isn't group or world-writable.
 ms.date: 05/04/2023
 author: saimsh-msft
 ms.reviewer: vilibert, saimsh-msft
@@ -10,11 +10,11 @@ ms.collection: linux
 ---
 # Troubleshoot SSH connection issues in Linux VM due to permission and ownership issues 
 
-This article provides a solution to an issue in which SSH service fails because the /var/empty/sshd file is not owned by the root directory and is not group or world-writable.
+This article provides a solution to an issue in which SSH service fails because the /var/empty/sshd file isn't owned by the root directory and isn't group or world-writable.
 
 ## Symptoms
 
-You cannot connect a Linux virtual machine (VM) by using a secure shell (SSH) connection due to permission and ownership issues. When this problem occurs, you may receive the following error message about the /var/empty/sshd file, depending on your Linux distribution.
+You can't connect a Linux virtual machine (VM) by using a secure shell (SSH) connection due to permission and ownership issues. When this problem occurs, you may receive the following error message about the /var/empty/sshd file, depending on your Linux distribution.
 
 **SuSE**
 
@@ -33,7 +33,7 @@ This problem may occur if the /var/empty/sshd file is not owned by the root dire
 
 ## Resolution
 
-There are 2 ways to resolve the issue:
+There are two ways to resolve the issue:
 * Repair the VM online
     * [Serial Console](#serial-console)
     * [Run Command Extension](#run-command-extension)
@@ -56,7 +56,7 @@ systemctl restart sshd
 ```
 ### Run Command Extension
 
-This method relies on the Azure Linux agent (WAagent). It is required that the VM has the agent installed and service running. 
+This method relies on the Azure Linux agent (WAagent). It's required that the VM has the agent installed and service running. 
 
 Open the **Properties** window of the VM in the Azure portal to check the agent status. If the agent is enabled and has "Ready" status, follow these steps to change the permission:
 
@@ -81,14 +81,14 @@ If you can connect to the VM by using the SSH connection, and you want to analyz
 
 ### Repair the VM offline
 
-If the VM serial console access is not available and the Waagent is not ready, an alternative solution is to repair the vm offline. There are two ways to take an offline approach:
+If the VM serial console access isn't available and the Waagent is not ready, an alternative solution is to repair the vm offline. There are two ways to take an offline approach:
 
 #### Use Azure Linux Auto Repair (ALAR)
 
-Azure Linux Auto Repair (ALAR) scripts is a part of VM repair extension described in [Repair a Linux VM by using the Azure Virtual Machine repair commands](./repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
+Azure Linux Auto Repair (ALAR) scripts are a part of VM repair extension described in [Repair a Linux VM by using the Azure Virtual Machine repair commands](./repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
 Implement the following steps to automate the manual offline process:
 
-1. Use the [az vm repair create](/cli/azure/vm/repair#az-vm-repair-create) command to create a repair VM. The repair VM will have a copy of the OS disk for the problematic VM attached.
+1. Use the [az vm repair create](/cli/azure/vm/repair#az-vm-repair-create) command to create a repair VM. The repair VM has a copy of the OS disk for the problematic VM attached.
 ```azurecli-interactive
 az vm repair create --verbose -g centos7 -n cent7 --repair-username rescue --repair-password 'password!234' --copy-disk-name  repairdiskcopy
  ```
@@ -109,7 +109,7 @@ az vm repair restore --verbose -g centos7 -n cent7
 
 #### Use Manual Method
 
-If both serial console and ALAR approach is not possible or fails , the repair has to be performed manually. Follow the steps here to manually attach the OS disk to a recovery VM and swap the OS disk back to the original VM:
+If both serial console and ALAR approach isn't possible or fails, the repair has to be performed manually. Follow the steps here to manually attach the OS disk to a recovery VM and swap the OS disk back to the original VM:
 * [Attach the OS disk to a recovery VM using the Azure portal](./troubleshoot-recovery-disks-portal-linux.md)
 * [Attach the OS disk to a recovery VM using Azure CLI](./troubleshoot-recovery-disks-linux.md)
 
