@@ -46,15 +46,6 @@ After Database Mail stops working, trying to run the `sysmail` stored procedure 
 
 > The object '[dbo].[sp_syspolicy_events_reader]' does not exist in database 'master' or is invalid for this operation.
 
-## More information
-
-Microsoft is currently investigating these issues. This article will be updated as we find more information or guidance. Until then, you can take the following necessary precautions before you install a cumulative update to an installation that has a contained availability group:
-
-- Script the server-level objects and SQL Server Agent objects.
-- Drop the contained availability group.
-- Apply the cumulative update.
-- Recreate the contained availability group.
-
 ## Resolution
 
 This problem is fixed in the following cumulative update for SQL Server:
@@ -68,6 +59,13 @@ Each new cumulative update for SQL Server contains all the hotfixes and security
 [Latest cumulative update for SQL Server 2022](build-versions.md)
 
 ## Status
+
+Microsoft is currently investigating these issues. This article will be updated as we find more information or guidance. Until then, you can take the following necessary precautions before you install a cumulative update to an installation that has a contained availability group:
+
+- Script the server-level objects and SQL Server Agent objects.
+- Drop the contained availability group.
+- Apply the cumulative update.
+- Recreate the contained availability group.
 
 Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.
 
