@@ -401,8 +401,8 @@ Each of the following links provides information for all of the applicable produ
 |10.50.4302.00|SP2|CU11| [2926028](https://support.microsoft.com/help/2926028)|February 18, 2014|
 |10.50.4297.00|SP2|CU10| [2908087](https://support.microsoft.com/help/2908087)|December 17, 2013|
 |10.50.4295.00|SP2|CU9| [2887606](https://support.microsoft.com/help/2887606)|October 28, 2013|
-|10.50.4285.00|SP2|CU7| [2844090](https://support.microsoft.com/help/2844090)|June 17, 2013|
-|10.50.4279.00|SP2|CU6| [2830140](https://support.microsoft.com/help/2830140)|April 15, 2013|
+|10.50.4286.0|SP2|CU7| [2844090](https://support.microsoft.com/help/2844090)|June 17, 2013|
+|10.50.4279.0|SP2|CU6| [2830140](https://support.microsoft.com/help/2830140)|April 15, 2013|
 |10.50.4276.00|SP2|CU5| [2797460](https://support.microsoft.com/help/2797460)|February 18, 2013|
 |10.50.4270.00|SP2|CU4| [2777358](https://support.microsoft.com/help/2777358)|December 17, 2012|
 |10.50.4266.00|SP2|CU3| [2754552](https://support.microsoft.com/help/2754552)|October 15, 2012|
