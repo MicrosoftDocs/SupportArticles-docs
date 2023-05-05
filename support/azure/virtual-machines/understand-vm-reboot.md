@@ -102,7 +102,7 @@ Because some host server faults can be specific to that server, a repeated VM re
 
 If the host server cannot reboot for any reason, the Azure platform initiates an auto-recovery action to take the faulty host server out of rotation for further investigation.
 
-All VMs on that host are automatically relocated to a different, healthy host server. This process is usually complete within 15 minutes. To learn more about the auto-recovery process, see [Auto-recovery of VMs](https://azure.microsoft.com/blog/service-healing-auto-recovery-of-virtual-machines).
+All VMs on that host are automatically relocated to a different, healthy host server. This process is usually complete within 15 minutes but time to recover may vary due to number of variables such as host memory size, based on which methods of recovery are attempted. To learn more about the auto-recovery process, see [Auto-recovery of VMs](https://azure.microsoft.com/blog/service-healing-auto-recovery-of-virtual-machines).
 
 ### Unplanned maintenance
 
