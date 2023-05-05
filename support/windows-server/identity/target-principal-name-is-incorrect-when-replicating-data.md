@@ -1,7 +1,7 @@
 ---
 title: Error (Target Principal Name is incorrect) when manually replicating data between domain controllers
 description: Provides a solution to an error that occurs when you manually replicate data between domain controllers.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -105,3 +105,7 @@ When this problem occurs, numerous errors may be reported in the event logs. The
   Source: MRxSmb  
   Description: The redirector was unable to initialize security context or query context attributes.
   ```
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot replication error 8606
 description: Provides a resolution to an issue where Active Directory replication fails with error 8606.
-ms.date: 11/18/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -318,3 +318,7 @@ Say that you create an object in a USN bubble in such a way that it does not out
 Active Directory domain controllers support multi-master replication where any domain controller (that holds a writable partition) can originate a create, change, or delete of an object or attribute (value). Knowledge of object / attribute deletes are persisted by the originating domain controller and any domain controller that has incoming replicated knowledge of an originating delete for TSL number of days. (See Microsoft Knowledge Base articles [216996](https://support.microsoft.com/help/216993) and [910205](https://support.microsoft.com/help/910205))
 
 Active Directory requires end-to-end replication from all partition holders to transitively replicate all originating deletes for all directory partitions to all partition holders. Failure to inbound-replicate a directory partition in a rolling TSL number of days results in lingering objects. A lingering object is an object that was intentionally deleted by at least one domain controller but that incorrectly exists on destination domain controllers that did not inbound-replicate the transient knowledge of all unique deletions.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).

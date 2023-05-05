@@ -5,10 +5,16 @@
   items:
   - name: Basic troubleshooting
     href: troubleshoot-aks-cluster-creation-issues.md
+  - name: CniDownloadTimeoutVMExtensionError error (41)
+    href: error-code-cnidownloadtimeoutvmextensionerror.md
+  - name: ERR_VHD_FILE_NOT_FOUND error (124)
+    href: error-code-vhdfilenotfound.md
   - name: InvalidParameter error
     href: error-code-invalidparameter.md
   - name: InvalidResourceReference error
     href: error-code-invalidresourcereference.md
+  - name: Known issues - Custom kubelet configuration on Windows
+    href: known-issues-custom-kubelet-configuration.md
   - name: K8SAPIServerConnFailVMExtensionError error (51)
     href: error-code-k8sapiserverconnfailvmextensionerror.md
   - name: K8SAPIServerDNSLookupFailVMExtensionError error (52)
@@ -44,6 +50,8 @@
     items:
     - name: Upgrade fails because of NSG rules
       href: upgrade-fails-because-of-nsg-rules.md
+    - name: NodePoolMcVersionIncompatible error
+      href: nodepoolmcversionincompatible-error.md
     - name: PodDrainFailure error
       href: error-code-poddrainfailure.md
     - name: PublicIPCountLimitReached error

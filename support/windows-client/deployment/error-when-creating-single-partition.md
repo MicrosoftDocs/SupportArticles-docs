@@ -1,7 +1,7 @@
 ---
 title: Error when creating a single partition
 description: Provides a solution to an error that occurs when you install Windows to a drive greater than 2.2 TB.
-ms.date: 10/22/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -74,3 +74,7 @@ For details on Windows support for large drives, see the following articles:
 - [Configure UEFI/GPT-Based Hard Drive Partitions](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824839(v=win.10))
 
 - [Using GPT Drives](/previous-versions/windows/hardware/design/dn653580(v=vs.85))
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../windows-troubleshooters/gather-information-using-tssv2-deployment.md).

@@ -80,7 +80,7 @@ For more information, see the [Instance-level public IP address](https://azure.m
 
    ## [PowerShell](#tab/powershell)
 
-   For each role instance, run the [Get-AzureRole](/powershell/module/servicemanagement/azure.service/get-azurerole) PowerShell cmdlet. This cmdlet is based on the `Azure.Service` module. By using the IP address configuration in the previous step, we can see the difference between the instance details of each role instance.
+   For each role instance, run the [Get-AzureRole](/powershell/module/servicemanagement/azure/get-azurerole) PowerShell cmdlet. This cmdlet is based on the `Azure.Service` module. By using the IP address configuration in the previous step, we can see the difference between the instance details of each role instance.
 
    1. View the details of the `WebRole2` role, whose public IP name doesn't have a domain name label:
 

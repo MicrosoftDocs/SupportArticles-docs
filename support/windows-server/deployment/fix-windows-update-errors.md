@@ -1,7 +1,7 @@
 ---
 title: Fix Windows Update errors via DISM or System Update Readiness tool
 description: Use the System Update Readiness Tool or the DISM tool to fix problems that prevent Windows Update from installing successfully.
-ms.date: 12/30/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -197,3 +197,7 @@ To manually fix corruption errors that the System Update Readiness tool detects 
 5. Rerun the System Update Readiness tool.
 
 If you're a technical professional, see [How to fix errors found in the CheckSUR.log](/troubleshoot/windows-client/deployment/errors-in-checksur-log) for another option on fixing errors in the _CheckSUR.log_.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-deployment.md).

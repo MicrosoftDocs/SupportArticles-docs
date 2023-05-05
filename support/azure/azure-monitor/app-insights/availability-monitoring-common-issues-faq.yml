@@ -75,7 +75,13 @@ sections:
       - question: |
           Can I run a test by using client certificates?
         answer: |
-          No. This scenario isn't currently supported. 		  
+          No. This scenario isn't currently supported. 	
+          
+      - question: |
+          Why does my availability test continue to run after it is paused or disabled?
+        answer: |
+          It is an expected behavior. Depending on how close the deadline for the scheduled execution of the next iteration is, availability tests may not be stopped in time before they perform the next iteration. In the same way, when you create, disable, or manipulate new tests, there is a delay.
+
 
 additionalContent: |
 
