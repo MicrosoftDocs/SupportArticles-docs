@@ -89,9 +89,22 @@ This error usually means that the client can't find the SQL Server instance. Thi
 > - [Connect to an Always On availability group listener](/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover)
 > - [Always On Failover Cluster Instances (SQL Server)](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server)
 
+### Windows error 233: No process is on the other end of the pipe
+
+The complete message is:
+
+> A connection was successfully established with the server, but then an error occurred during the login process. (provider: Shared Memory Provider, error: 0 - No process is on the other end of the pipe.) (Microsoft SQL Server, Error: 233)
+
+This message means that SQL Server isn't listening on the Shared Memory port, or at least, this is what it indicates if you receive the same error while using Named Pipes.
+
+Before you troubleshoot this issue:
+
+- Use SQL Server Configuration Manager to verify the server network configurations.
+- Check the errorlog file to determine what SQL Server is currently listening on.
+
 ## Gather information for troubleshooting the error
 
-We recommend that you gather the information listed in this section using one of the options below before proceeding with the actual steps to troubleshoot the error.
+We recommend that you gather the information listed in this section using one of the following options before proceeding with the actual steps to troubleshoot the error.
 
 ### Option 1: Use the SQL Check tool to gather the required information
 
@@ -140,12 +153,10 @@ In most cases, you connect to the Database Engine on another computer by using t
 
 ## Step 1：Verify that the instance is running
 
-### Option 1: Using the output file from the SQLCheck tool
+### Option 1: Use the output file from the SQLCheck tool
 
 1. Search the output from SQLCheck file for "SQL Server Information".
-
 1. In the section titled "Services of Interest", find your SQL Server instance under **Name** and **Instance** (for named instances) columns and check its status by using **Started** column. If the value is **True**, the services are started. Otherwise the service is currently not running.  
-
 1. If the service isn't running, [start the service](/sql/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services) by using either SQL Server management studio, SQL Server Configuration manager, [PowerShell](/powershell/module/sqlserver/start-sqlinstance), or Services applet.
 
 ### Option 2: Use SQL Server Configuration Manager
@@ -176,7 +187,7 @@ Get-ChildItem -Path "c:\program files\microsoft sql server\mssql*" -Recurse -Inc
 > [!NOTE]
 > This step is required only for troubleshooting connectivity issues with named instances.
 
-### Option 1: Using the output file from SQLCheck tool
+### Option 1: Use the output file from SQLCheck tool
 
 1. Search the output from SQLCheck file for "SQL Server Information".
 1. In the section titled "Services of Interest", search for SQLBrowser in the **Name** column and check its status using the **Started** column. If the value is True, the service is started. Otherwise, the service is currently not running, and you need to start it. For more information, see [Start, stop, pause, resume, restart SQL Server services](/sql/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services).
@@ -209,7 +220,7 @@ Aliases are often used in client environments when you connect to SQL Server wit
 > [!NOTE]
 > The following options only apply to the applications that use [SQL Server Native Client](/sql/relational-databases/native-client/SQL-server-native-client) to connect to SQL Server.
 
-### Option 1: Using the output file from the SQLCheck tool
+### Option 1: Use the output file from the SQLCheck tool
 
 1. In the SQLCheck output file, search for the string SQL Aliases. (This string will be inside the **Client Security and Driver Information** section of the file)
 1. Review the entries in the table. If there's none present, there are no aliases on the computer. If there's an entry, review the information to ensure the server name and port number are set to the correct values.
@@ -225,7 +236,7 @@ Alias Name   Protocol   Server Name     Port   32-bit
 prodsql      TCP        prod_sqlserver  1430      
 ```
 
-The above indicates that `prodsql` is an alias for a SQL Server called `prod_sqlserver` that is running on port 1430.
+The output indicates that `prodsql` is an alias for a SQL Server called `prod_sqlserver` that is running on port 1430.
 
 ### Option 2: Check aliases in SQL Server Configuration Manager
 
@@ -290,7 +301,7 @@ If your SQL instance is a named instance, it may be configured to use either dyn
 
 In some installations of SQL Server, connections to the Database Engine from another computer aren't enabled unless an administrator manually enables them. You can use one of the following options to check and enable the necessary protocols to allow remote connections to SQL Server Database Engine.
 
-### Option 1: Using the output file from SQLCheck tool
+### Option 1: Use the output file from SQLCheck tool
 
 1. Search the SQLCheck output file for "Details for SQL Server instance" section and locate the information section for your SQL Server instance.
 1. In the section, find the values listed in the following table to determine if the SQL Server protocols are enabled:
