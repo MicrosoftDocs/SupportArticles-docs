@@ -1216,6 +1216,8 @@
       href: ./group-policy/group-policy-error-7016-1091-1202.md
     - name: Group policy with WMI filters can be denied or cause slow logon/boot
       href: ./group-policy/group-policy-wmi-filters-denied-slow-logon-boot.md
+    - name: Network disconnection after configuring the LLTDIO and RSPNDR GPOs
+      href: ./group-policy/network-disconnection-after-configuring-lltdio-rspndr-gpos.md
     - name: Netlogon event ID 5719 or Group Policy event 1129
       href: ./group-policy/netlogon-event-id-5719-or-group-policy-event-1129.md
     - name: Password policy changes aren't applied
