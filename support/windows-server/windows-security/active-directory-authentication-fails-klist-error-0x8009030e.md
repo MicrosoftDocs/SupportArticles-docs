@@ -18,7 +18,7 @@ Active Directory authentication issues occur and you receive 0x8009030e when run
 
 You encounter one or more of the following issues:
 
-- You receive the following error message when you try to sign into an Remote Desktop Service \(RDS\) Server:
+- You receive the following error message when you try to sign into a Remote Desktop Service \(RDS\) Server:
 
   > Windows needs your current credentials  
   > Please lock this computer, then unlock it using your most recent password or smart card
@@ -46,19 +46,19 @@ You encounter one or more of the following issues:
 
 This issue occurs because the user account is a member of the **Protected Users** security group, so the following protections are applied:
 
-- Credential delegation (CredSSP) does not cache the user's plain text credentials even when the **Allow delegating default credentials** group policy setting is enabled.
+- Credential delegation (CredSSP) doesn't cache the user's plain text credentials even when the **Allow delegating default credentials** group policy setting is enabled.
 
-- Beginning with Windows 8.1 and Windows Server 2012 R2, Windows Digest will not cache the user's plain text credentials even when Windows Digest is enabled.
+- Beginning with Windows 8.1 and Windows Server 2012 R2, Windows Digest doesn't cache the user's plain text credentials even when Windows Digest is enabled.
 
-- Windows New Technology LAN Manager \(NTLM\) will not cache the user's plain text credentials or NT one-way function (NTOWF).
+- Windows New Technology LAN Manager \(NTLM\) doesn't cache the user's plain text credentials or NT one-way function (NTOWF).
 
 - Kerberos no longer creates Data Encryption Standard \(DES\) or Rivest Cipher 4 \(RC4\) keys. Also, it will not cache the user's plain text credentials or long-term keys after the initial Ticket Granting Ticket \(TGT\) is acquired.
 
-- A cached verifier is not created at sign-in or unlock, so offline sign-in is no longer supported.
+- A cached verifier isn't created at sign-in or unlocks, so offline sign-in is no longer supported.
 
 ## Resolution
 
-Remove the impacted user accounts from the **Protoected Users** groups in Active Directory. Follow these steps:
+Remove the impacted user accounts from the **Protected Users** groups in Active Directory. Follow these steps:
 
 1. Open **Active Directory Users and Computers**.
 2. Go to **Users** container.
