@@ -17,9 +17,9 @@ When you try to enroll a certificate on a Windows Server, it fails with the erro
 _Applies to:_ Supported versions of Windows Server  
 _Original KB number:_ 4042719, 4516764, 5021150  
 
-## Symptoms
+## How to identify the issue
 
-When you troubleshoot this issue, you may see one or more of the following symptoms.
+When you encounter this issue, you may see one or more of the following symptoms.
 
 > [!NOTE]
 > When the issue occurs, if we add the user account that is used to request the certificate to the local administrators group on the CA, the enrollment succeeds for a user-based template. However, enrollment against a machine based template still returns the same error.
@@ -34,9 +34,9 @@ You receive error messages that resemble the following during certificate enroll
 
 ### Network capture
 
-In network trace, you can find LDAP queries to the configuration partition in Active Directory was successful, and the templates available are revealed in the trace.
+In network trace, you can find Lightweight Directory Access Protocol (LDAP) queries to the configuration partition in Active Directory was successful, and the templates available are revealed in the trace.
 
-Then, the requesting server try to do RPC to the CA and get the response ACCESS DENIED.
+Then, the requesting server try to do remote procedure call (RPC) to the certificate authority (CA) and get the response "ACCESS DENIED".
 
 For example:
 
@@ -50,7 +50,7 @@ Additionally, you can find MSRPC bind attempt and error:
 
 ### Event log
 
-If auditing is enabled, a DCOM error can be observed on the CA server detailing an **ANONYMOUS LOGON** attempt:
+If auditing is enabled, a Distributed Component Object Model (DCOM) error can be observed on the CA server detailing an **ANONYMOUS LOGON** attempt:
 
 > Log Name: System  
 > Source: Microsoft-Windows-DistributedCOM  
@@ -67,7 +67,7 @@ If auditing is enabled, a DCOM error can be observed on the CA server detailing 
 
 ### Other symptom and logs
 
-- The call should be made with **dce_c_authn_level_pkt_integrity** RPC Integrity level that enforces Kerberos/NTLM as an authentication mechanism. This behavior is enforced by default starting 6B.22 [KB5004442—Manage changes for Windows DCOM Server Security Feature Bypass (CVE-2021-26414)](https://support.microsoft.com/topic/kb5004442-manage-changes-for-windows-dcom-server-security-feature-bypass-cve-2021-26414-f1400b52-c141-43d2-941e-37ed901c769c).
+- The call should be made with **dce_c_authn_level_pkt_integrity** RPC Integrity level that enforces Kerberos or New Technology LAN Manager (NTLM) as an authentication mechanism. This behavior is enforced by default starting 6B.22 [KB5004442—Manage changes for Windows DCOM Server Security Feature Bypass (CVE-2021-26414)](https://support.microsoft.com/topic/kb5004442-manage-changes-for-windows-dcom-server-security-feature-bypass-cve-2021-26414-f1400b52-c141-43d2-941e-37ed901c769c).
 - When the client sends a KRB_AP_REQ request, it's rejected by the server side.
 - On the server side, the kerberos.etl displays the following entries:
 
@@ -78,7 +78,7 @@ If auditing is enabled, a DCOM error can be observed on the CA server detailing 
   > [2] 02B4.11CC::\<date and time\> [KERBEROS] ctxtapi_cxx5078 SpAcceptLsaModeContext() - SpAcceptLsaModeContext returned 0xc000015b, Context 0000000000000000, Pid 0x0  
   > [2] 02B4.11CC::\<date and time\> [KERBEROS] ctxtapi_cxx5079 SpAcceptLsaModeContext() - SpAcceptLsaModeContext (0000000000000000) returned 0xc000015b
 
-- The server try to procure an access token for the user who presented the TGS and fails with 0xc000015b - "STATUS_LOGON_TYPE_NOT_GRANTED".
+- The server try to procure an access token for the user who presented the ticket granting service (TGS) and fails with 0xc000015b - "STATUS_LOGON_TYPE_NOT_GRANTED".
 
 ## Cause
 
@@ -92,6 +92,6 @@ Because the user account that is used for certificate enrollment fails authentic
 
 ## Resolution
 
-To resolve this issue, add the approach user groups to the group policy. For example:
+To resolve this issue, add the appropriate user groups to the group policy. For example:
 
 :::image type="content" source="media/error-0x800706ba-certificate-enrollment/properties-of-access-this-computer-from-the-network.png" alt-text="The properties window of the 'Access this computer from the network' group policy.":::
