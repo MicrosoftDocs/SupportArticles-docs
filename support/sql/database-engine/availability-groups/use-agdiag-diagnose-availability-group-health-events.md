@@ -14,21 +14,23 @@ To diagnose Always On availability group health issues that trigger availability
 
 AGDiag is an application that automates the manual analysis in the above article. It analyzes the cluster log and correlates and reports pertinent events from the other logs (SQL Server error logs, Windows event logs, and so on). It generates a summary report of Windows Cluster and Always On health events and then provides more detailed analysis results for each health event detected. It automates much of the work described in the article above when the proper logs are provided from the availability group primary replica at the time of the health event.
 
-## Use TSS to generate logs for AGDiag to analyze
+## Use TSS to generate logs for AGDiag to diagnose
 
 To diagnose an availability group health event, use the TSS to collect logs on the SQL Server instance that was in the primary role at the time of the event.
 
-To create the TSS logs on the SQL Server instance, download [TSS](https://aka.ms/getTSS) to the availability group primary replica at the time of the health issue:
+Follow these steps to accomplish this goal:
 
-Select **Save As** to save the zipped binaries to a folder.
+1. Download the toolset ([TSSv2.zip](https://aka.ms/getTSS)) as a zip file. For more information, see [Introduction to TroubleShootingScript toolset (TSSv2)](../../../windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md).
 
-From the elevated command line, change the directory to the TSS folder where files were saved/extracted and run `TSS SDP:SQLBase` and respond to the prompts:
+1. Save and extract the zip file to a folder on the SQL Server instance that hosted the availability group primary replica when the failover started or the availability group was resolving.
 
-:::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/command-prompt-tss.png" alt-text="Screenshot of the elevated command prompt changing the directory to the TSS folder." lightbox="media/use-agdiag-diagnose-availability-group-health-events/command-prompt-tss.png":::
+1. Open an elevated command prompt, change the directory to the TSS folder where the zip file *TSSv2.zip* was saved and extracted, run `TSS SDP:SQLBase`, and respond to the prompts.
 
-Once the TSS SQLBase cab file has been created, extract the cab into a folder.
+   :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/command-prompt-tss.png" alt-text="Screenshot of the elevated command prompt changing the directory to the TSS folder." lightbox="media/use-agdiag-diagnose-availability-group-health-events/command-prompt-tss.png":::
 
-:::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/extract-tss-sqlbase-cab.png" alt-text="Screenshot of extracting the SQLBase cab file to a folder." lightbox="media/use-agdiag-diagnose-availability-group-health-events/extract-tss-sqlbase-cab.png":::
+1. Once the TSS SQLBase cab file has been created, extract the cab into a folder.
+
+   :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/extract-tss-sqlbase-cab.png" alt-text="Screenshot of extracting the SQLBase cab file to a folder." lightbox="media/use-agdiag-diagnose-availability-group-health-events/extract-tss-sqlbase-cab.png":::
 
 ## Download the AGDiag tool
 
@@ -67,7 +69,7 @@ The summary report lists the availability group health events from the cluster l
 
 :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/availability-group-health-event-summary-report.png" alt-text="Screenshot of availability group health events." lightbox="media/use-agdiag-diagnose-availability-group-health-events/availability-group-health-event-summary-report.png":::
 
-There is a detailed report for each health event detected, which includes log findings that correlate to the health event, diagnosis, and recommendations:
+There's a detailed report for each health event detected, which includes log findings that correlate to the health event, diagnosis, and recommendations:
 
 :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/alwayson-health-event.png" alt-text="Screenshot of AlwaysOn health events." lightbox="media/use-agdiag-diagnose-availability-group-health-events/alwayson-health-event.png":::
 
