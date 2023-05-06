@@ -2326,6 +2326,8 @@
       href: ./remote/cannot-connect-rds-no-license-server.md
     - name: '"Licenses are not available for this Remote Desktop" error in Licensing Diagnosis'
       href: ./remote/rdsh-administrator-on-get-error-licensing-diagnosis.md
+    - name: Remote session disconnected when using non-persistent VDI with per-user licensing
+      href: ./remote/remote-desktop-services-per-user-licensing.md
     - name: Configure RDP listener certificates
       href: ./remote/remote-desktop-listener-certificate-configurations.md
     - name: Deactivate or reactivate a license server
@@ -2550,6 +2552,8 @@
       href: ./system-management-components/scheduled-tasks-reference-incorrect-user-profile.md
   - name: WinRM
     items:
+    - name: Error 0x80090322 when connecting PowerShell to remote server via WinRM
+      href: ./system-management-components/error-0x80090322-when-connecting-powershell-to-remote-server-via-winrm.md
     - name: WinRM service not start
       href: ./system-management-components/winrm-service-not-start-uninstall-winrm-2.md
   - name: WMI
@@ -2578,6 +2582,8 @@
       href: ./user-profiles-and-logon/folder-redirection-settings-not-applied.md
   - name: User Logon fails
     items:
+    - name: '"Your credentials could not be verified" when logging on to Windows with WHFB'
+      href: ./user-profiles-and-logon/your-credential-could-not-be-verified-error-when-logging-on-to-windows-by-using-whfb.md
     - name: Cached domain logon information
       href: ./user-profiles-and-logon/cached-domain-logon-information.md
     - name: Can't log off from a computer
