@@ -20,7 +20,57 @@
     - name: Knowledge Management
       items:  
         - name: Data isn't updated on Insights for integrated search providers (preview)
-          href: data-not-updated-integrated-search-providers.md
+          href: data-not-updated-integrated-search-providers.md                
+    - name: Service Level Agreements (SLAs)
+      items:
+        - name: Import, export, or upgrade SLA
+          items:
+            - name: Changes to SLAItem via upgrade solution don't appear
+              href: slaitem-changes-missing-upgrade.md
+            - name: Can't import solution with active SLAs and SLAs are deactivated when imported
+              href: import-solution-active-slas.md
+        - name: SLA creation
+          items:
+            - name: Primary entity isn't available when creating SLAs
+              href: create-slas-primary-entity.md 
+        - name: SLA migration
+          items:
+            - name: Standard SLAs not showing in migration tool
+              href: standard-slas-migration-tool.md
+            - name: Can't migrate a large number of SLAs
+              href: migration-tool-issue-slas.md 
+        - name: SLA time calculation
+          items:
+            - name: Errors on custom time calculation for SLA
+              href: errors-sla-time-calculation.md
+            - name: Warning and failure duration times are wrong for SLA
+              href: warning-failure-times-incorrect-sla.md
+        - name: SLA timer
+          items:
+            - name: Can't delete SLAs or SLA Items in upgrade or manual deletion
+              href: sla-deletion-error-messages.md
+            - name: OnHold Time isn't populated for Case for Unified Interface SLA
+              href: onhold-time-not-populated.md
+            - name: SLA KPI instance isn't Nearing Non-compliance or Non-compliant and timer runs
+              href: sla-kpi-instance-compliance-timer.md
+            - name: SLA timer doesn't pause when state is changed to OnHold on a holiday
+              href: sla-timer-pause-state-changed.md
+            - name: Warning shows on slakpiinstances
+              href: warning-slakpiinstances.md
+        - name: Other SLA issues
+          items:
+            - name: Entity fields for modifiedon and modifiedby are updated for resolved cases
+              href: entity-case-field-updates.md
+            - name: Errors occur when updating a case
+              href: errors-updating-case.md
+            - name: SLA KPI instance status shows as canceled
+              href: sla-kpi-instance-shows-canceled.md
+            - name: Success, warning, and failure actions run many times in web client
+              href: actions-run-multiple-times-client.md
+            - name: SLA KPI instance isn't created on entity
+              href: sla-kpi-instance-not-created-entity.md
+            - name: Can't delete managed solution consisting of SLA-enabled entity
+              href: unable-delete-sla-enabled-entity-managed-solution.md
     - name: Omnichannel for Customer Service
       items:
         - name: Agent Scripts and Macros
@@ -78,54 +128,4 @@
         - name: Social channels
           items:
             - name: Troubleshoot sync issue with social data
-              href: social-data-sync.md                
-    - name: Service Level Agreements (SLAs)
-      items:
-        - name: Import, export, or upgrade SLA
-          items:
-            - name: Changes to SLAItem via upgrade solution don't appear
-              href: slaitem-changes-missing-upgrade.md
-            - name: Can't import solution with active SLAs and SLAs are deactivated when imported
-              href: import-solution-active-slas.md
-        - name: SLA creation
-          items:
-            - name: Primary entity isn't available when creating SLAs
-              href: create-slas-primary-entity.md 
-        - name: SLA migration
-          items:
-            - name: Standard SLAs not showing in migration tool
-              href: standard-slas-migration-tool.md
-            - name: Can't migrate a large number of SLAs
-              href: migration-tool-issue-slas.md 
-        - name: SLA time calculation
-          items:
-            - name: Errors on custom time calculation for SLA
-              href: errors-sla-time-calculation.md
-            - name: Warning and failure duration times are wrong for SLA
-              href: warning-failure-times-incorrect-sla.md
-        - name: SLA timer
-          items:
-            - name: Can't delete SLAs or SLA Items in upgrade or manual deletion
-              href: sla-deletion-error-messages.md
-            - name: OnHold Time isn't populated for Case for Unified Interface SLA
-              href: onhold-time-not-populated.md
-            - name: SLA KPI instance isn't Nearing Non-compliance or Non-compliant and timer runs
-              href: sla-kpi-instance-compliance-timer.md
-            - name: SLA timer doesn't pause when state is changed to OnHold on a holiday
-              href: sla-timer-pause-state-changed.md
-            - name: Warning shows on slakpiinstances
-              href: warning-slakpiinstances.md
-        - name: Other SLA issues
-          items:
-            - name: Entity fields for modifiedon and modifiedby are updated for resolved cases
-              href: entity-case-field-updates.md
-            - name: Errors occur when updating a case
-              href: errors-updating-case.md
-            - name: SLA KPI instance status shows as canceled
-              href: sla-kpi-instance-shows-canceled.md
-            - name: Success, warning, and failure actions run many times in web client
-              href: actions-run-multiple-times-client.md
-            - name: SLA KPI instance isn't created on entity
-              href: sla-kpi-instance-not-created-entity.md
-            - name: Can't delete managed solution consisting of SLA-enabled entity
-              href: unable-delete-sla-enabled-entity-managed-solution.md
+              href: social-data-sync.md
