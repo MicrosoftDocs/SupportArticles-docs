@@ -1,7 +1,7 @@
 ---
-title: Stop error or blue screen error troubleshooting
+title: Stop error, bug check or blue screen error troubleshooting
 description: Learn advanced options for troubleshooting stop errors, also known as blue screen errors or bug check errors.
-ms.date: 08/23/2022
+ms.date: 05/06/2023
 ms.prod: windows-client
 ms.technology: windows-client-performance
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ ms.author: aaroncz
 manager: dcscontentpm
 ms.collection: highpri
 ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
-ms.reviewer: dougeby
+ms.reviewer: kaushika
 audience: itpro
 localization_priority: medium
 ---
@@ -21,19 +21,13 @@ localization_priority: medium
 > [!NOTE]
 > If you're not a support agent or IT professional, you'll find more helpful information about stop error ("blue screen") messages in [Troubleshoot blue screen errors](https://support.microsoft.com/sbs/windows/troubleshoot-blue-screen-errors-5c62726c-6489-52da-a372-3f73142c14ad).
 
-_Applies to:_ &nbsp; Windows 10
+_Applies to:_ &nbsp; Supported versions of Windows Server and Windows Client
 
 ## What causes stop errors?
 
-A stop error is displayed as a blue screen that contains the name of the faulty driver, such as any of the following example drivers:
+When Windows encounters a condition that compromises safe system operation, the system stops. Examples include something failing that would potentially compromise security or something failing that could lead to corruption of the operating system (OS) and/or user data. When the machine stops in order to prevent the operating system from moving forward in these conditions, it is called a bug check (or bugcheck). It is also commonly referred to as a system crash, a kernel error, blue screen, blue screen of death (BSOD), or a stop error. On preview releases of Windows, the screen color can be green, leading to the green screen of death (GSOD).
 
-- *atikmpag.sys*
-- *igdkmd64.sys*
-- *nvlddmkm.sys*
-
-There's no simple explanation for the cause of stop errors (also known as blue screen errors or bug check errors). Many different factors can be involved. However, various studies indicate that stop errors usually aren't caused by Microsoft Windows components. Instead, these errors are related to malfunctioning hardware drivers or drivers that are installed by third-party software. These drivers include video cards, wireless network cards, security programs, and so on.
-
-Our analysis of the root causes of crashes indicates that:
+There's no simple explanation for the cause of stop errors. Many different factors can be involved. Our analysis of the root causes of crashes indicates that:
 
 - 70% are caused by third-party driver code.
 - 10% are caused by hardware issues.
@@ -41,7 +35,7 @@ Our analysis of the root causes of crashes indicates that:
 - 15% have unknown causes, because the memory is too corrupted to analyze.
 
 > [!NOTE]
-> The root cause of stop errors is never a user-mode process. While a user-mode process (such as Notepad or Slack) may trigger a stop error, it is merely exposing the underlying bug which is always in a driver, hardware, or the OS.
+> The root cause of stop errors is rarely a user-mode process. While a user-mode process (such as Notepad or Slack) may trigger a stop error, it is usually exposing the underlying issue in a driver, hardware, or the operating system.
 
 ## General troubleshooting steps
 
