@@ -5,6 +5,10 @@
   items:
   - name: Basic troubleshooting
     href: troubleshoot-aks-cluster-creation-issues.md
+  - name: CniDownloadTimeoutVMExtensionError error (41)
+    href: error-code-cnidownloadtimeoutvmextensionerror.md
+  - name: ERR_VHD_FILE_NOT_FOUND error (124)
+    href: error-code-vhdfilenotfound.md
   - name: InvalidParameter error
     href: error-code-invalidparameter.md
   - name: InvalidResourceReference error

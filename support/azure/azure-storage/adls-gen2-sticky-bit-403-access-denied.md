@@ -101,9 +101,9 @@ There are many possible ways to modify the sticky bit setting. Here are the supp
 |SDK| Supported version | More information|
 |---|---|---|
 | REST API| 2019-12-12 and later API versions|[Path](/rest/api/storageservices/datalakestoragegen2/path/update)|
-| Az PowerShell module|  Not supported yet|[Use PowerShell to manage ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-acl-powershell#set-an-acl)|
+| Az PowerShell module| 5.6.0 and later versions|[Use PowerShell to manage ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-acl-powershell#set-an-acl)|
 |Azure CLI| 2.38.0 and later versions|[Use Azure CLI to manage ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-acl-cli#update-an-acl)|
-| .NET SDK| Not supported yet|[Use .NET to manage ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-acl-dotnet)|
+| .NET SDK| 12.14.0 and later versions|[Use .NET to manage ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-acl-dotnet)|
 | Java SDK| 12.11.0 and later versions|[Use Java to manage ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-acl-java)|
 | Python SDK| 12.8.0 and later versions|[Use Python to manage ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-acl-python)|
 | JavaScript SDK| 12.11.0-beta.1 and later versions|[Use JavaScript SDK in Node.js to manage ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-acl-javascript)|

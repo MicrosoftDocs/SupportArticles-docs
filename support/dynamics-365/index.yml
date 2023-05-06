@@ -20,9 +20,6 @@ additionalContent:
         - title: Dynamics 365 Finance
           summary: Troubleshooting articles for Dynamics 365 Finance
           url: finance/welcome-finance.yml
-        - title: Dynamics 365 Fraud Protection
-          summary: Troubleshooting articles for Dynamics 365 Fraud Protection
-          url: fraud-protection/welcome-fraud-protection.yml
         - title: Dynamics 365 Marketing
           summary: Troubleshooting articles for Dynamics 365 Marketing
           url: marketing/welcome-marketing.yml
