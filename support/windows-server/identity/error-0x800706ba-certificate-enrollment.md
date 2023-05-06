@@ -1,13 +1,14 @@
 ---
 title: Error 0x800706ba during certificate enrollment
-description: 
+description: Introduces the steps to solve the error 0x800706ba "The RPC Server is unavailable" during the certificate enrollment.
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
-ms.date: 
+ms.date: 05/08/2023
+ms.reviewer: kaushika
 ms.prod: windows-server
 ms.technology: windows-server-active-directory
-ms.custom: sap:active-directory-certificate-services, csstroubleshoot
+ms.custom: sap:active-directory-certificate-services, csstroubleshoot, ikb2lmc
 ---
 # Error 0x800706ba "The RPC Server is unavailable" when you enroll a certificate
 
@@ -79,3 +80,18 @@ Server side's Kerberos.etl displays the following -
 [2] 02B4.11CC::10/27/22-17:17:58.2956808 [KERBEROS] ctxtapi_cxx5079 SpAcceptLsaModeContext() - SpAcceptLsaModeContext (0000000000000000) returned 0xc000015b
 5. The server attempts to procure an access token for the user who presented the TGS and fails with 0xc000015b - 'STATUS_LOGON_TYPE_NOT_GRANTED'
 
+## Cause
+
+This issue occurs because the group policy "Access this computer from the network" is set and the user account used to enroll the certificate is not added.
+
+The group policy locates at: Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment
+
+By default, the policy is populated by the groups: Administrators, Backup Operators, Everyone, Users.
+
+Because the user account that is used for certificate enrollment fails authentication by using Kerberos, the authentication mechanism is downgraded to anonymous logon. The logon fails on the DCOM level.
+
+## Resolution
+
+To resolve this issue, add the approach user groups to the group policy. For example:
+
+:::image type="content" source="media/error-0x800706ba-certificate-enrollment/properties-of-access-this-computer-from-the-network.png" alt-text="The properties window of the "Access this computer from the network" group policy.":::
