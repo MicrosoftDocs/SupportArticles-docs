@@ -28,7 +28,7 @@ When you install SQL Server 2014 or SQL Server 2012, you find that SSMS requires
 
 According to [Microsoft lifecycle policy of Visual Studio 2010](/lifecycle/products/visual-studio-2010), the support ended on July 14, 2020. However, if Visual Studio 2010 Shell (Isolated) or Shell (Integrated) is installed with SQL Server 2014 or SQL Server 2012, Visual Studio 2010 Shell will be supported until the end of support for [SQL Server 2014](/lifecycle/products/sql-server-2014) (July 09, 2024) or for [SQL Server 2012](/lifecycle/products/microsoft-sql-server-2012) (July 12, 2022).
 
-Starting with SQL Server 2016, SSMS and SSDT no longer ship with SQL Server bits but can be downloaded as separate applications. These later versions don’t have the dependency on Visual Studio 2010 Shell component. Therefore, you can download and use more up-to-date versions of SSMS or SSDT. For more information on these tool changes, see [SQL Client Tools update for SQL Server 2016](https://cloudblogs.microsoft.com/sqlserver/2016/03/25/sql-client-tools-update-for-sql-server-2016/)
+Starting with SQL Server 2016, SSMS and SSDT no longer ship with SQL Server bits but can be downloaded as separate applications. These later versions don't have the dependency on Visual Studio 2010 Shell component. Therefore, you can download and use more up-to-date versions of SSMS or SSDT. For more information on these tool changes, see [SQL Client Tools update for SQL Server 2016](https://cloudblogs.microsoft.com/sqlserver/2016/03/25/sql-client-tools-update-for-sql-server-2016/).
 
 ## Workaround
 
