@@ -1,7 +1,7 @@
 ---
 title: Configure Distributed Transaction Coordinator (DTC) to work through a firewall
 description: Describes how to configure DTC to work through firewalls.
-ms.date: 9/24/2021
+ms.date: 05/06/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -17,14 +17,14 @@ ms.technology: windows-server-application-compatibility
 
 This article describes how to configure Microsoft Distributed Transaction Coordinator (DTC) to work through firewalls.
 
-_Applies to:_ &nbsp; Windows Server 2022, 2019, 2016, 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows Server 2022  
 _Original KB number:_ &nbsp; 250367
 
 ## More information
 
 You can configure DTC to communicate through firewalls, including network address translation firewalls.
 
-DTC uses Remote Procedure Call (RPC) dynamic port allocation. By default, RPC dynamic port allocation randomly selects port numbers in the 49152-65535 range. By modifying the registry, you can control which ports RPC dynamically allocates for incoming communication. You can then configure your firewall to confine incoming external communication to only those ports and port 135 (the RPC Endpoint Mapper port). It is recommended to use the default 135,49152-65535 range in firewalls to avoid port exhaustion and only change to fewer ports if firewalls cannot filter on computer or IPs.  
+DTC uses Remote Procedure Call (RPC) dynamic port allocation. By default, RPC dynamic port allocation randomly selects port numbers in the 49152-65535 range. By modifying the registry, you can control which ports RPC dynamically allocates for incoming communication. You can then configure your firewall to confine incoming external communication to only those ports and port 135 (the RPC Endpoint Mapper port). It is recommended to use the default 135, 49152-65535 range in firewalls to avoid port exhaustion and only change to fewer ports if firewalls cannot filter on computer or IPs.  
 
 You must provide one incoming dynamic port for DTC. It is recommend to use a fixed port for each DTC instance. You can have one local DTC instance and multiple clustered DTC instances. You may need to provide more incoming dynamic ports for other subsystems that rely on RPC so it is .
 
@@ -33,7 +33,7 @@ The registry keys and values described in this article don't appear in the regis
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Window](https://support.microsoft.com/help/322756).
 
-Follow these steps on computers involved in DTC transcations to set fixed port for DTC. The firewall must be open in both directions for the fixed port and port 135. 
+Follow these steps on computers involved in DTC transactions to set fixed port for DTC. The firewall must be open in both directions for the fixed port and port 135.
 
 1. To start Registry Editor, select **Start**, select **Run**, type *regedt32*, and then select **OK**.
 2. In Registry Editor, select **HKEY_LOCAL_MACHINE** in the **Local Machine** window.
@@ -43,14 +43,14 @@ Follow these steps on computers involved in DTC transcations to set fixed port f
 6. Right-click and choose **Modify** on the new value.
 7. In the **Value Editor** dialog box, select **Decimal** and then put your fixed port number, e g 40001, in the **Value data** field, and then select **OK**.
 
-To configure fixed port for clustered DTC instances you need to find the cluster resource GUID and add the ServerTcpPort under this location. Use different port number for each DTC instance. E g if your DTC resource guid is 012345678-9abc-def0-1234-56789abcdef0, then it would be in this path:
-`HKEY_LOCAL_MACHINE\Cluster\Resources\012345678-9abc-def0-1234-56789abcdef0\MSDTCPRIVATE\MSDTC`
-Repeat the same for additional DTC clustered resources. 
+To configure fixed port for clustered DTC instances, you need to find the cluster resource GUID and add the **ServerTcpPort** value under this location. Use different port number for each DTC instance. For example, if your DTC resource GUID is 012345678-9abc-def0-1234-56789abcdef0, then it would be in this path: `HKEY_LOCAL_MACHINE\Cluster\Resources\012345678-9abc-def0-1234-56789abcdef0\MSDTCPRIVATE\MSDTC`. Repeat the steps for additional DTC clustered resources.
 
-Alternative reg add commands which can be used in admin cmd scripts to do same as above (adjust to your specific cluster guid if clustered DTC instance is used):
+Alternative, you can use the `reg add` commands in scripts with administrator privileges to do this operation. Adjust the following example to your specific cluster GUID if clustered DTC instance is used:
+
+```console
 reg add HKLM\SOFTWARE\Microsoft\MSDTC /v ServerTcpPort /t REG_DWORD /d 40001 /f 
 reg add HKLM\Cluster\Resources\012345678-9abc-def0-1234-56789abcdef0\MSDTCPRIVATE\MSDTC /v ServerTcpPort /t REG_DWORD /d 40002 /f
-
+```
 
 Follow these steps on computers involved in DTC transactions where firewalls prevent full communication to control RPC dynamic port allocation. The firewall must be open in both directions for the specified ports and port 135:
 
@@ -70,7 +70,7 @@ Follow these steps on computers involved in DTC transactions where firewalls pre
 
    Each string value you type specifies either a single port or an inclusive range of ports. For example, to open port 40000, specify **40000** without the quotation marks. To open ports 40000 to 42000 inclusive, specify **40000-42000** without the quotation marks. You can specify multiple ports or ports ranges by specifying one port or port range per line. All ports must be in the range of 1024 to 65535. If any port is outside this range or if any string is invalid, RPC will treat the entire configuration as invalid.
 
-   Microsoft recommends that you open up ports from 20000 and up, as lower ports may often be in use by other applications, and that you open a minimum of 1000 ports to avoid port exhaustion. On high load systems you may need more ports. The default range of 1024-5000 was moved in Windows 2008 and above to 49152-65535 range to avoid port exhaustion. 
+   Microsoft recommends that you open up ports from 20000 and up, as lower ports may often be in use by other applications, and that you open a minimum of 1000 ports to avoid port exhaustion. On high load systems you may need more ports. The default range of 1024-5000 was moved in Windows 2008 and above to 49152-65535 range to avoid port exhaustion.
 
 10. Follow steps 6 through 9 to add another key for Internet, by using these values:
 
