@@ -24,9 +24,9 @@ Besides, you see one or more of the following symptoms:
 
 ### Error messages
 
-![picture 1](media/error-0x800706ba-certificate-enrollment/4d750ee77ec6e0bc3cb062a2cb488deafc4d1e5fd524b8a8e72469c63fe0fd6c.png)  
+:::image type="content" source="media/error-0x800706ba-certificate-enrollment/progress-window-of-certificate-enrollment.png" alt-text="The progress window of certificate enrollment.":::
 
-![picture 2](media/error-0x800706ba-certificate-enrollment/fb00b24e1902d40c5f6dd195ee9b3c35ecf2ac28e7338b3a11276d1b1ff09b2c.png)  
+:::image type="content" source="media/error-0x800706ba-certificate-enrollment/error-message-during-certificate-enrollment.png" alt-text="Error message during certificate enrollment.":::
 
 ### Network capture
 
