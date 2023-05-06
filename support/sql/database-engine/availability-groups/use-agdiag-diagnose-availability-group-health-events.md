@@ -28,7 +28,7 @@ Follow these steps to accomplish this goal:
 
    :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/command-prompt-tss.png" alt-text="Screenshot of the elevated command prompt changing the directory to the TSS folder." lightbox="media/use-agdiag-diagnose-availability-group-health-events/command-prompt-tss.png":::
 
-1. Once the TSS SQLBase cab file has been created, extract the cab into a folder.
+1. Once the TSS SQLBase cab file has been created, extract the cab file into a folder.
 
    :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/extract-tss-sqlbase-cab.png" alt-text="Screenshot of extracting the SQLBase cab file to a folder." lightbox="media/use-agdiag-diagnose-availability-group-health-events/extract-tss-sqlbase-cab.png":::
 
@@ -37,7 +37,7 @@ Follow these steps to accomplish this goal:
 To download AGDiag, follow these steps:
 
 1. Open [Release AGDiag Windows Release October 2021 (signed)](https://github.com/microsoft/agdiag/releases/tag/Win2.0.0.23).
-1. Select the **agdiag.zip** link to download the tool.
+1. Select the *agdiag.zip* link to download the tool.
 
    :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/agdiag-zip-download.png" alt-text="Screenshot of selecting the agdiag.zip link to download the tool." lightbox="media/use-agdiag-diagnose-availability-group-health-events/agdiag-zip-download.png":::
 
