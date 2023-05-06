@@ -94,4 +94,4 @@ Because the user account that is used for certificate enrollment fails authentic
 
 To resolve this issue, add the approach user groups to the group policy. For example:
 
-:::image type="content" source="media/error-0x800706ba-certificate-enrollment/properties-of-access-this-computer-from-the-network.png" alt-text="The properties window of the "Access this computer from the network" group policy.":::
+:::image type="content" source="media/error-0x800706ba-certificate-enrollment/properties-of-access-this-computer-from-the-network.png" alt-text="The properties window of the 'Access this computer from the network' group policy.":::
