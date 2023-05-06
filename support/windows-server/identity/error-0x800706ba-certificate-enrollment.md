@@ -17,7 +17,7 @@ When you try to enroll a certificate on a Windows Server, it fails with the erro
 _Applies to:_ Supported versions of Windows Server  
 _Original KB number:_ 4042719, 4516764, 5021150  
 
-## Issue Symptoms
+## Symptoms
 
 When you troubleshoot this issue, you may see one or more of the following symptoms.
 
@@ -28,9 +28,9 @@ When you troubleshoot this issue, you may see one or more of the following sympt
 
 You receive error messages that resemble the following during certificate enrollment.
 
-:::image type="content" source="media/error-0x800706ba-certificate-enrollment/progress-window-of-certificate-enrollment.png" alt-text="The progress window of certificate enrollment.":::
+:::image type="content" source="media/error-0x800706ba-certificate-enrollment/progress-window-of-certificate-enrollment.png" alt-text="The progress window of certificate enrollment." border=true:::
 
-:::image type="content" source="media/error-0x800706ba-certificate-enrollment/error-message-during-certificate-enrollment.png" alt-text="Error message during certificate enrollment.":::
+:::image type="content" source="media/error-0x800706ba-certificate-enrollment/error-message-during-certificate-enrollment.png" alt-text="Error message during certificate enrollment." border=true:::
 
 ### Network capture
 
