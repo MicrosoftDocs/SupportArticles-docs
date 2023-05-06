@@ -27,7 +27,7 @@ The SQL Server Agent job fails with the following error message:
 
 > Unable to start execution of step 2 (reason: JobOwner \<JobOwner> doesn't have permissions to use proxy <#> for subsystem SSIS).&nbsp;&nbsp;The step failed.
 
-You see the SQL Server Agent error log records error messages that resemble the following messages:
+You see the SQL Server Agent error log records error messages that resemble the following ones:
 
 > \<Timestamp> - ! [298] SQLServer Error: 208, Invalid object name 'syssubsystems'. [SQLSTATE 42S02]  
 > \<Timestamp> - ! [517] SQL error number 208, severity 16
@@ -42,7 +42,7 @@ After you create a contained availability group, you see the following error mes
 
 ### Error 3
 
-After Database Mail stops working, trying to run the `sysmail` stored procedure will report an error message that resembles the following message:
+After Database Mail stops working, trying to run the `sysmail` stored procedure will report an error message that resembles the following one:
 
 > The object '[dbo].[sp_syspolicy_events_reader]' does not exist in database 'master' or is invalid for this operation.
 
