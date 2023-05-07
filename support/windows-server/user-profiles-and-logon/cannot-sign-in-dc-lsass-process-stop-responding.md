@@ -53,7 +53,7 @@ You may also find errors in the event trace log (ETL) or the memory dump analysi
 
 ## The Password Settings Container is moved or missing
 
-In Windows Server 2012 and later versions, the authentication process makes a function call to determine fine-grained password policies, and it looks for the Password Settings Container. If it isn't present under `cn=system,dc=<domain>,dc=<com>` in the Active Directory domain naming context, or it is in an incorrect location, the sign-in fails.
+In Windows Server 2012 and later versions, the authentication process makes a function call to determine fine-grained password policies, and it looks for the Password Settings Container. If it isn't present under *cn=system,dc=\<domain\>,dc=\<com\>* in the Active Directory domain naming context, or it is in an incorrect location, the sign-in fails.
 
 > [!NOTE]
 > The Password Settings Container is a default system container that should always be present. This container is created as a part of Adprep for Windows Server 2008 and later versions domain controllers to support [fine-grained password policies](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770394(v=ws.10)).
@@ -75,7 +75,7 @@ If the Password Settings Container is in the incorrect location, follow these st
 If the Password Settings Container doesn't exist, follow these steps:
 
 1. Sign in to the Infrastructure master as a domain admin.
-2. Create a `.txt` file with the following text:
+2. Create a .txt file with the following text:
 
     ```output
     dn: CN=ActiveDirectoryUpdate,CN=DomainUpdates,CN=System,DC=contoso,dc=com
