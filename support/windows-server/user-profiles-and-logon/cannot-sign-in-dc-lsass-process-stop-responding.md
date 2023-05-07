@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, herbertm
 ms.custom: sap:user-logon-fails, csstroubleshoot, ikb2lmc
 ms.technology: windows-server-user-profiles
 ---
