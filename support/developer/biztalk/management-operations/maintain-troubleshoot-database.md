@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 952555
 
 ## Summary
 
-Microsoft BizTalk Server databases and the health of the databases are important for a successful BizTalk Server messaging environment. This article discusses important things to consider when you work with BizTalk Server databases. These considerations include the following:
+The health of the Microsoft BizTalk Server databases is important for a successful BizTalk Server messaging environment. This article discusses important things to consider when you work with BizTalk Server databases. These considerations include the following:
 
 - You must disable the `auto update statistics` and `auto create statistics` SQL Server options.
 - You must set the `max degree of parallelism` (MAXDOP) option correctly.
@@ -42,7 +42,7 @@ EXEC sp_dboption 'BizTalkMsgBoxDB', 'auto create statistics'
 EXEC sp_dboption 'BizTalkMsgBoxDB', 'auto update statistics'
 ```
 
-You should set the current setting to `OFF`. If this setting is set to `ON`, turn it OFF by executing the following stored procedures in SQL Server:
+You should set the current setting to `OFF`. If this setting is set to `ON`, turn it off by executing the following stored procedures in SQL Server:
 
 ```sql
 EXEC sp_dboption 'BizTalkMsgBoxDB', 'auto create statistics', 'off'
@@ -51,7 +51,7 @@ EXEC sp_dboption 'BizTalkMsgBoxDB', 'auto update statistics', 'off'
 
 ## You must set the Max Degree of Parallelism property correctly
 
-On the computer that is running SQL Server and hosting the `BizTalkMsgBoxDb` database, set the max degree of parallelism `run_value` and `config_value` properties to a value of **1**. In later SQL versions it is also possible to specify this setting per database instead of per SQL instance. To determine the Max Degree of Parallelism setting, execute the following stored procedure against the Master database in SQL Server:
+On the computer that is running SQL Server and hosting the `BizTalkMsgBoxDb` database, set the max degree of parallelism `run_value` and `config_value` properties to a value of **1**. In later SQL versions, it's also possible to specify this setting per database instead of per SQL instance. To determine the Max Degree of Parallelism setting, execute the following stored procedure against the Master database in SQL Server:
 
 ```sql
 EXEC sp_configure 'max degree of parallelism'
@@ -108,7 +108,7 @@ Databases can become large for various reasons. These reasons may include the fo
 
 Make sure that you know what is expected in your environment to determine whether a data issue is occurring.
 
-By default, tracking is enabled on the default host. BizTalk requires that the Allow Host Tracking option be checked on a single host. When tracking is enabled, the Tracking Data Decode Service (TDDS) moves the tracking event data from the `BizTalkMsgBoxDb` database to the `BizTalkDTADb` database. If the tracking host is stopped, TDDS does not move the data to the `BizTalkDTADb` database and the `TrackingData_x_x` tables in the `BizTalkMsgBoxDb` database will grow.
+By default, tracking is enabled on the default host. BizTalk requires that the Allow Host Tracking option be checked on a single host. When tracking is enabled, the Tracking Data Decode Service (TDDS) moves the tracking event data from the `BizTalkMsgBoxDb` database to the `BizTalkDTADb` database. If the tracking host is stopped, TDDS doesn't move the data to the `BizTalkDTADb` database and the `TrackingData_x_x` tables in the `BizTalkMsgBoxDb` database will grow.
 
 It's recommended that you dedicate one host to tracking. To allow for TDDS to maintain new tracking events in high-volume scenarios, create multiple instances of a single tracking host. No more than one tracking host should exist.
 
@@ -122,7 +122,7 @@ The Backup BizTalk Server SQL Server Agent job is the only supported method to b
 
 The `MessageBox_Message_ManageRefCountLog_BizTalkMsgBoxDb` SQL Server Agent job runs infinitely. Therefore, the SQL Server Agent job history never displays a successful completion. If a failure occurs, the job restarts within one minute and continues to run infinitely. Therefore, you can safely ignore the failure. Additionally, the job history can be cleared. You should only be concerned if the job history reports that this job constantly fails and restarts.
 
-The `MessageBox_Message_Cleanup_BizTalkMsgBoxDb` SQL Server Agent job is the only BizTalk Server job that shouldn't be enabled because it is started by the `MessageBox_Message_ManageRefCountLog_BizTalkMsgBoxDb` SQL Server Agent job.
+The `MessageBox_Message_Cleanup_BizTalkMsgBoxDb` SQL Server Agent job is the only BizTalk Server job that shouldn't be enabled because it's started by the `MessageBox_Message_ManageRefCountLog_BizTalkMsgBoxDb` SQL Server Agent job.
 
 The DTA Purge and Archive SQL Server Agent job helps maintain the `BizTalkDTADb` database by purging and archiving tracked messages. This job reads every row in the table and compares the time stamp to determine whether the record should be removed.
 
@@ -157,9 +157,9 @@ BizTalk Server makes hundreds of short, quick transactions to SQL Server within 
 
 Start SQL Server Agent on the SQL Server. When the SQL Server Agent is stopped, the built-in BizTalk SQL Server Agent jobs that are responsible for database maintenance cannot run. This behavior causes database growth, and this growth may cause performance issues.
 
-Put the SQL Server LDF and MDF files on separate drives. When the LDF and MDF files for the `BizTalkMsgBoxDb` and BizTalkDTADb databases are on the same drive, disk contention can occur.
+Put the SQL Server LDF and MDF files on separate drives. When the LDF and MDF files for the `BizTalkMsgBoxDb` and `BizTalkDTADb` databases are on the same drive, disk contention can occur.
 
-If you do not benefit from message body tracking, don't enable this feature. However, it's a good idea to enable message body tracking while you develop and troubleshoot a solution. If you do this, make sure that you disable message body tracking when you are finished. When message body tracking is enabled, the BizTalk Server databases grow. If there is a business need that requires enabling message body tracking, confirm that the `TrackedMessages_Copy_BizTalkMsgBoxDb` and DTA Purge and Archive SQL Server Agent jobs are running successfully.
+If you don't benefit from message body tracking, don't enable this feature. However, it's a good idea to enable message body tracking while you develop and troubleshoot a solution. If you do this, make sure that you disable message body tracking when you are finished. When message body tracking is enabled, the BizTalk Server databases grow. If there is a business need that requires enabling message body tracking, confirm that the `TrackedMessages_Copy_BizTalkMsgBoxDb` and DTA Purge and Archive SQL Server Agent jobs are running successfully.
 
 Typically, smaller transaction logs cause better performance. To keep the transaction logs smaller, configure the Backup BizTalk Server SQL Server Agent job to run more frequently.
 
