@@ -1,20 +1,11 @@
 ---
 title: Data isn't updated on the Insights tab for integrated search providers
-description: Provides a resolution for the issue where data isn't updated on the Insights tab for integrated search providers (preview) in Dynamics 365 Customer Service.
-ms.reviewer: laalexan
-ms.date: 03/08/2023
+description: Provides a resolution for the issue where data isn't updated on the Insights tab for integrated search providers in Dynamics 365 Customer Service.
+ms.author: ravimanne
+ms.reviewer: sdas
+ms.date: 05/08/2023
 ---
-# Data isn't updated on the Insights tab for integrated search providers (preview)
-
-> [!IMPORTANT]
->
-> [!INCLUDE [cc-preview-feature](~/../dynamics-365-customer-engagement-pr/ce/includes/cc-preview-feature.md)]
->
-> [!INCLUDE [cc-preview-features-definition](~/../dynamics-365-customer-engagement-pr/ce/includes/cc-preview-features-definition.md)]
->
-> [!INCLUDE [cc-preview-features-expect-changes](~/../dynamics-365-customer-engagement-pr/ce/includes/cc-preview-features-expect-changes.md)]
->
-> [!INCLUDE [cc-preview-features-no-ms-support](~/../dynamics-365-customer-engagement-pr/ce/includes/cc-preview-features-no-ms-support.md)]
+# Data isn't updated on the Insights tab for integrated search providers
 
 This article provides a resolution for the issue where data isn't updated on the **Insights** tab for integrated search providers in Dynamics 365 Customer Service.
 
@@ -38,4 +29,4 @@ Take the following troubleshooting steps to diagnose and fix the issue:
 
 If the issue persists, contact [Microsoft Support](https://support.microsoft.com/) to raise a ticket.
 
-For more information about managing a search provider, see [Manage integrated search providers (preview)](/dynamics365/customer-service/add-search-provider#manage-integrated-search-providers-preview).
+For more information about managing a search provider, see [Manage integrated search providers](/dynamics365/customer-service/add-search-provider#manage-integrated-search-providers).
