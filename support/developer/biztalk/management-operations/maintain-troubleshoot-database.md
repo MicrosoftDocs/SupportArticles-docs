@@ -42,7 +42,7 @@ EXEC sp_dboption 'BizTalkMsgBoxDB', 'auto create statistics'
 EXEC sp_dboption 'BizTalkMsgBoxDB', 'auto update statistics'
 ```
 
-You should set the current setting to `OFF`. If this setting is set to `ON`, turn it off by executing the following stored procedures in SQL Server:
+You should set the current setting to `off`. If this setting is set to `on`, turn it off by executing the following stored procedures in SQL Server:
 
 ```sql
 EXEC sp_dboption 'BizTalkMsgBoxDB', 'auto create statistics', 'off'
