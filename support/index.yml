@@ -63,7 +63,7 @@ productDirectory:
     url: sql/welcome-sql-server.yml
 
   - title: Surface
-    imageSrc: "media/hub-landing/sql-database-blue.svg"
+    imageSrc: "media/hub-landing/windows-logo.png"
     summary: Troubleshooting articles for Surface Hub and Surface devices
     url: devices/index.yml
 

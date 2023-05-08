@@ -3,8 +3,8 @@
   items:
   - name: Surface devices
     items:
-    - name:
-      href:
+    - name: aaa
+      href: link
   - name: Surface Hub
     items:
     - name: Surface Hub troubleshooting
