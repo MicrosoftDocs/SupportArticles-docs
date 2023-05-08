@@ -119,6 +119,4 @@ A maximum of 50 Azure subscriptions are listed. If the subscription isn't listed
 
 ## See related
 
-[Create an Azure RM service connection](overview-of-azure-resource-manager-service-connections.md)
-
 [Common service connection issues](overview-of-azure-resource-manager-service-connections.md)
