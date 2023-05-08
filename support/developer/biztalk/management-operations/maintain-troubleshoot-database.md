@@ -191,13 +191,13 @@ Additionally, you can use the BHM tool output to determine which tables are the 
 
 |Table|Description|
 |---|---|
-|`HostName` `Q_Suspended`|This table contains a reference to messages in the Spool table that are associated with suspended instances for the particular host. This table is in the `BizTalkMsgBoxDb` database.|
-|`HostName Q`|This table contains a reference to messages in the Spool table that are associated with the particular host and aren't suspended. This table is in the `BizTalkMsgBoxDb` database.|
+|HostName `Q_Suspended`|This table contains a reference to messages in the Spool table that are associated with suspended instances for the particular host. This table is in the `BizTalkMsgBoxDb` database.|
+|HostName `Q`|This table contains a reference to messages in the `Spool` table that are associated with the particular host and aren't suspended. This table is in the `BizTalkMsgBoxDb` database.|
 |`Spool`<br/><br/>`Parts`<br/><br/>`Fragments`|These tables store actual message data in the `BizTalkMsgBoxDb` database.|
 |`Instances`|This table stores all instances and their current status in the `BizTalkMsgBoxDb` database.|
 |`TrackingData_0_ _x_`|These four tables store the Business Activity Monitoring (BAM) tracked events in the `BizTalkMsgBoxDb` database for TDDS to move the events to the `BAMPrimaryImport` database.|
 |`TrackingData_1_ _x_`|These four tables store the tracked events in the `BizTalkMsgBoxDb` database for TDDS to move the events to the `BizTalkDTADB` database.|
-|`Tracking_Fragments` **x** <br/>`Tracking_Parts` **x** <br/>`Tracking_Spool` **x**|Two of each of these tables is in the `BizTalkMsgBoxDb` and `BizTalkDTADb` databases. One is online, and the other is offline.<br/><br/>In BizTalk Server 2004 SP2 and in later versions, the `TrackedMessages_Copy_BizTalkMsgBoxDb` SQL Server Agent job moves tracked message bodies directly to these tables in the `BizTalkDTADb` database.<br/><br/>In BizTalk Server 2004 Service Pack 1 (SP1) and in earlier versions of BizTalk Server 2004, the `TrackedMessages_Copy_BizTalkMsgBoxDb` SQL Server Agent job copies tracked message bodies into these tables in the `BizTalkMsgBoxDb` database. The `TrackingSpool_Cleanup_BizTalkMsgBoxDb` SQL Server Agent job purges the offline tables and makes the tables online while the job also takes the online tables offline.|
+|`Tracking_Fragments x` <br/>`Tracking_Parts x` <br/>`Tracking_Spool x`|Two of each of these tables is in the `BizTalkMsgBoxDb` and `BizTalkDTADb` databases. One is online, and the other is offline.<br/><br/>In BizTalk Server 2004 SP2 and in later versions, the `TrackedMessages_Copy_BizTalkMsgBoxDb` SQL Server Agent job moves tracked message bodies directly to these tables in the `BizTalkDTADb` database.<br/><br/>In BizTalk Server 2004 Service Pack 1 (SP1) and in earlier versions of BizTalk Server 2004, the `TrackedMessages_Copy_BizTalkMsgBoxDb` SQL Server Agent job copies tracked message bodies into these tables in the `BizTalkMsgBoxDb` database. The `TrackingSpool_Cleanup_BizTalkMsgBoxDb` SQL Server Agent job purges the offline tables and makes the tables online while the job also takes the online tables offline.|
 |`dta_ServiceInstances`|This table stores tracked events for service instances in the `BizTalkDTADb` database. If this table is large, the `BizTalkDTADb` database is probably large.|
 |`dta_DebugTrace`|This table stores the Orchestration debugger events in the BizTalkDTADb database.|
 |`dta_MessageInOutEvents`|This table stores tracked event messages in the `BizTalkDTADb` database. These tracked event messages include message context information.|
@@ -275,7 +275,7 @@ Additionally, use the PSSDiag utility to collect data on the `Lock:Deadlock` eve
 
 The `BizTalkMsgBoxDB` database is a high-volume and high-transaction Online Transaction Processing (OLTP) database. Some deadlocking is expected, and this deadlocking is handled internally by the BizTalk Server engine. When this behavior occurs, no errors are listed in the error logs. When you investigate a deadlock scenario, the deadlock that you are investigating in the output must be correlated with a deadlock error in the event logs.
 
-The `dequeue` command and some SQL Server Agent jobs are expected to deadlock. Typically, these jobs are selected as deadlock victims. These jobs will appear in a deadlock trace. However, no errors are listed in the event logs. Therefore, this deadlocking is expected, and you can safely ignore the deadlocking with these jobs.
+The dequeue command and some SQL Server Agent jobs are expected to deadlock. Typically, these jobs are selected as deadlock victims. These jobs will appear in a deadlock trace. However, no errors are listed in the event logs. Therefore, this deadlocking is expected, and you can safely ignore the deadlocking with these jobs.
 
 If frequent deadlocks appear in a deadlock trace and if a correlating error is listed in the event logs, you may want the deadlock.
 
@@ -287,7 +287,7 @@ To troubleshoot a locking and blocking issue in SQL Server, use the PSSDiag for 
 
 In SQL Server 2005 and later versions, you can specify the **blocked process threshold** setting to determine which SPID or SPIDs are blocking longer than the threshold that you specify.
 
-For more information about the **blocked process threshold** setting, visit the following MSDN website: [blocked process threshold Server Configuration Option](/sql/database-engine/configure-windows/blocked-process-threshold-server-configuration-option).
+For more information about the **blocked process threshold** setting, see [blocked process threshold Server Configuration Option](/sql/database-engine/configure-windows/blocked-process-threshold-server-configuration-option).
 
 > [!NOTE]
 > When you experience a locking or blocking issue in SQL Server, it is recommended that you contact Microsoft Customer Support Services. Microsoft Customer Support Services can help you configure the correct PSSDiag utility options.
@@ -317,22 +317,22 @@ To delete all data from the `BizTalkDTADb` database, use the BizTalk Health Moni
 - Method 1:
 
   1. Back up all BizTalk Server databases.
-  2. Execute the `dtasp_PurgeAllCompletedTrackingData` stored procedure. For more information about the `dtasp_PurgeAllCompletedTrackingData` stored procedure, see [How to Manually Purge Data from the BizTalk Tracking Database](/biztalk/core/how-to-manually-purge-data-from-the-biztalk-tracking-database).
+  1. Execute the `dtasp_PurgeAllCompletedTrackingData` stored procedure. For more information about the `dtasp_PurgeAllCompletedTrackingData` stored procedure, see [How to Manually Purge Data from the BizTalk Tracking Database](/biztalk/core/how-to-manually-purge-data-from-the-biztalk-tracking-database).
 
      > [!NOTE]
      > This action deletes all completed messages.
 
 - Method 2:
   1. Back up all BizTalk databases.
-  2. Execute the `dtasp_CleanHMData` stored procedure. Use this option only if the `BizTalkDTADb` database contains many incomplete instances that must be removed.
+  1. Execute the `dtasp_CleanHMData` stored procedure. Use this option only if the `BizTalkDTADb` database contains many incomplete instances that must be removed.
 
      To do this, follow these steps:
 
      1. Stop all BizTalk hosts, services, and custom isolated adapters. If you use HTTP or the SOAP adapter, restart the IIS services.
 
-     2. Execute the `dtasp_CleanHMData` stored procedure on the `BizTalkDTADb` database.
+     1. Execute the `dtasp_CleanHMData` stored procedure on the `BizTalkDTADb` database.
 
-     3. Restart all hosts and BizTalk Server services.
+     1. Restart all hosts and BizTalk Server services.
 
 ## BizTalk Server 2004-only steps
 
