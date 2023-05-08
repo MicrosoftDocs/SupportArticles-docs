@@ -1,7 +1,7 @@
 ---
-title: Stop error, bug check or blue screen error troubleshooting
+title: Stop error, bug check, or blue screen error troubleshooting
 description: Learn advanced options for troubleshooting stop errors, also known as blue screen errors or bug check errors.
-ms.date: 05/06/2023
+ms.date: 05/08/2023
 ms.prod: windows-client
 ms.technology: windows-client-performance
 ms.topic: troubleshooting
@@ -25,7 +25,7 @@ _Applies to:_ &nbsp; Supported versions of Windows Server and Windows Client
 
 ## What causes stop errors?
 
-When Windows encounters a condition that compromises safe system operation, the system stops. Examples include something failing that would potentially compromise security or something failing that could lead to corruption of the operating system (OS) and/or user data. When the machine stops in order to prevent the operating system from moving forward in these conditions, it is called a bug check (or bugcheck). It is also commonly referred to as a system crash, a kernel error, blue screen, blue screen of death (BSOD), or a stop error. On preview releases of Windows, the screen color can be green, leading to the green screen of death (GSOD).
+When Windows encounters a condition that compromises safe system operation, the system stops. Examples include something failing that could compromise security or something failing that could lead to corruption of the operating system (OS) and/or user data. When the machine stops in order to prevent the operating system from moving forward in these conditions, it is called a bug check (or bugcheck). It is also commonly referred to as a system crash, a kernel error, a blue screen, a blue screen of death (BSOD), or a stop error. On preview releases of Windows, the screen color can be green, leading to the green screen of death (GSOD).
 
 There's no simple explanation for the cause of stop errors. Many different factors can be involved. Our analysis of the root causes of crashes indicates that:
 
@@ -35,7 +35,7 @@ There's no simple explanation for the cause of stop errors. Many different facto
 - 15% have unknown causes, because the memory is too corrupted to analyze.
 
 > [!NOTE]
-> The root cause of stop errors is rarely a user-mode process. While a user-mode process (such as Notepad or Slack) may trigger a stop error, it is usually exposing the underlying issue in a driver, hardware, or the operating system.
+> The root cause of stop errors is rarely a user-mode process. While a user-mode process (such as Notepad or Slack) may trigger a stop error, it's usually exposing the underlying issue in a driver, hardware, or operating system.
 
 ## General troubleshooting steps
 
