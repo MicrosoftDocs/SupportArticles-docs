@@ -1,7 +1,7 @@
 ---
 title: Can't sign in to a domain controller and the LSASS process stops responding
 description: Helps to fix the issue in which you can't sign in to a domain controller, and the Local Security Authority Subsystem Service (LSASS) process stops responding.
-ms.date: 05/06/2023
+ms.date: 05/08/2023
 author: v-lianna
 ms.author: v-lianna
 manager: dcscontentpm
@@ -30,7 +30,7 @@ You can't sign in to a domain controller after reboot, and you experience the fo
 
 When this issue occurs, the system event log may contain one or more of the following events:
 
-|Event Log  |Event Source  |ID  |Message Text  |
+|Event log  |Event source  |ID  |Message text  |
 |---------|---------|---------|---------|
 |System     |LsaSrv         |5000         |The security package NTLM generated an exception. The exception information is the data.<br/>OR<br/>The security package MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 generated an exception. The exception information is the data.<br/><br/>The extended error is E0010014|
 |System     |LsaSrv         |6038         |Microsoft Windows Server has detected that NTLM authentication is presently being used between clients and this server. This event occurs once per boot of the server on the first time a client uses NTLM with this server.         |
