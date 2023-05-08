@@ -104,7 +104,7 @@ Use the following list to navigate to the appropriate article or section for det
 
 - [Subscription isn't listed when creating a service connection](troubleshoot-subscription-related-scenarios.md#subscription-is-not-listed-when-creating-a-service-connection)
 
-- [There is no active Azure subscription](troubleshoot-subscription-related-scenarios.md#you-dont-appear-to-have-an-active-azure-subscription-error)
+- ["You don't appear to have an active Azure subscription" error](troubleshoot-subscription-related-scenarios.md#you-dont-appear-to-have-an-active-azure-subscription-error)
 
 - ["Failed to set Azure permission" error when trying to save a service connection](troubleshoot-subscription-related-scenarios.md#failed-to-set-azure-permission-error-when-saving-a-service-connection)
 
