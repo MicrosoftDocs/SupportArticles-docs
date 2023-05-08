@@ -69,7 +69,5 @@ Make sure that the newly created SPN (App) has the Contributor and Reader permis
 
 ## See related
 
-[Subscription isn't listed when creating a service connection](/azure/devops/pipelines/release/azure-rm-endpoint?view=azure-devops&preserve-view=true)
-
 [Troubleshoot Azure Resource Manager (ARM) service connection issues](overview-of-azure-resource-manager-service-connections.md)
 
