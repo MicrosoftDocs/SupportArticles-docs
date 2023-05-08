@@ -1,7 +1,7 @@
 ---
 title: Network disconnection after configuring the LLTDIO and RSPNDR group policy objects
 description: Helps resolve the issue in which the network disconnects after configuring the LLTDIO and RSPNDR group policy objects.
-ms.date: 05/05/2023
+ms.date: 05/08/2023
 author: v-lianna
 ms.author: v-lianna
 manager: dcscontentpm
@@ -31,10 +31,10 @@ This is a design limitation. The LLTDIO and RSPNDR-related policies are changed 
 
 ## Modify and remove related policy settings
 
-To resolve this issue, follow these steps:
+To resolve this issue, use one of the following two methods:
 
-1. In the Local Group Policy Editor, go to **Computer Configuration** > **Administrative Templates** > **System** > **Group Policy**, double-click the policy setting **Configure registry policy processing**, and uncheck the option **Process even if the Group Policy objects have not changed**.
-2. Go to **Computer Configuration** > **Administrative Templates** > **Network** > **Link-Layer Topology Discovery**, and set the state of the following policy settings to **Not configured**:
+- In the Local Group Policy Editor, go to **Computer Configuration** > **Administrative Templates** > **System** > **Group Policy**, double-click the policy setting **Configure registry policy processing**, and uncheck the option **Process even if the Group Policy objects have not changed**.
+- Go to **Computer Configuration** > **Administrative Templates** > **Network** > **Link-Layer Topology Discovery**, and set the state of the following policy settings to **Not configured**:
 
     - **Turn on Mapper I/O (LLTDIO) driver**
     - **Turn on Responder (RSPNDR) driver**
