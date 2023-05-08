@@ -14,12 +14,12 @@ ms.custom: sap:Security Issues
 
 This article contains general guidelines to help you decide on what antivirus software to run on computers that are running SQL Server in your environment.
 
-We strongly recommend that you individually assess the security risk for each computer that is running SQL Server in your environment and that you select the tools that are appropriate for the security risk level of each computer that is running SQL Server.
+We strongly recommend that you individually assess the security risk for each computer that is running SQL Server in your environment. Based on the assessment, you must select the tools that are appropriate for the security risk level of each computer that is running SQL Server.
 
 Additionally, we recommend that before you roll out any virus-protection software, you test the entire system under a full load to measure any changes in stability and performance.
 
 Virus protection software requires some system resources to execute. You must perform testing before and after you install your antivirus
-software to determine whether there is any performance effect on the computer that is running SQL Server.
+software to determine whether there's any performance effect on the computer that is running SQL Server.
 
 ## Security risk factors
 
@@ -36,22 +36,22 @@ Any server is at some risk of infection. The highest-risk servers
 generally meet one or more of the following criteria:
 
 - The servers are open to public Internet.
-- The servers have open ports to servers that are not behind a firewall.
+- The servers have open ports to servers that aren't behind a firewall.
 - The servers read or execute files from other servers.
 - The servers run HTTP servers, such as Internet Information Services (IIS) or Apache
 - The servers host file shares.
 - The servers use Database Mail to handle incoming or outgoing email messages.
 
-Servers that do not meet the criteria for a high-risk server are
+Servers that don't meet the criteria for a high-risk server are
 generally at a lower risk, although not always.
 
 ## Anti-Virus software types
 
 - Active virus scanning: This kind of scanning checks incoming and outgoing files for viruses.
 
-- Virus sweep software: Virus sweep software scans existing files for file infection. It detects files after they are infected by a virus. This kind of scanning may cause the following SQL Server database recovery and SQL Server full-text catalog file issues:
+- Virus sweep software: Virus sweep software scans existing files for file infection. It detects files after they're infected by a virus. This kind of scanning may cause the following SQL Server database recovery and SQL Server full-text catalog file issues:
 
-  - If the virus sweep has opened a database file and still has it open when SQL Server tries to open the database (such as when SQL Server starts or opens a database that AutoClose has closed), the database to which the file belongs might be marked as suspect. SQL Server database files typically have the .mdf, .ldf, or .ndf file name extensions.
+  - If the virus sweep has opened a database file and still has it open when SQL Server tries to open the database (such as when SQL Server starts or opens a database that Auto-Close has closed), the database to which the file belongs might be marked as suspect. SQL Server database files typically have the .mdf, .ldf, or .ndf file name extensions.
 
   - If the virus sweep software has a SQL Server full-text catalog file open when Full-text Search tries to access the file, you may have problems with the full text catalog.
 
@@ -74,12 +74,12 @@ For more information, see [Configure and validate exclusions for Windows Defende
 - SQLServr.exe (SQL Server Database Engine)
 - SQLAgent.exe (SQL Server Agent)
 - ReportingServicesService.exe (SQL Server Reporting Services)
-- MSMDSrv.exe  (SQL Server Analysis Services) 
+- MSMDSrv.exe  (SQL Server Analysis Services)
 - sqlbrowser.exe (SQL Server Browser service)
 - MsDtsSrvr.exe (SQL Server Integration Services)
 - %ProgramFiles%\\Microsoft SQL Server\\1xx\\Shared\\SQLDumper.exe (SQLDumper utility)
 
-For an updated list of services and file paths reference [Services installed by SQL Server](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Service_Details)
+For an updated list of services and file paths, reference [Services installed by SQL Server](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Service_Details)
 
 Applications that are installed on SQL Server computer can load modules into the SQL Server process (sqlservr.exe). The applications can do this to run specific business logic or enhanced functionality, or for intrusion monitoring and protection. To detect if an unknown module or a module from a third-party software was loaded into the process memory space, check the output of the `sys.dm_os_loaded_modules` Dynamic Management View(DMV).
 
@@ -89,9 +89,9 @@ In some cases applications or drivers may be used to detour SQL Server or Window
 
 This section applies to SQL Server installations running on Windows Systems, both stand-alone and Failover cluster instances (FCI).
 
-## Directories and file name extensions to exclude from virus scanning
+### Directories and file name extensions to exclude from virus scanning
 
-When you configure your antivirus software settings, make sure that you exclude the following files or directories (as applicable) from virus scanning. This improves the performance and ensures that the files are not locked when the SQL Server service must use them. However, if these files become infected, your antivirus software cannot detect the infection. For more information about the default file locations for SQL Server, see [File Locations for Default and Named Instances of SQL Server](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server).
+When you configure your antivirus software settings, make sure that you exclude the following files or directories (as applicable) from virus scanning. This improves the performance and ensures that the files aren't locked when the SQL Server service must use them. However, if these files become infected, your antivirus software can't detect the infection. For more information about the default file locations for SQL Server, see [File Locations for Default and Named Instances of SQL Server](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server).
 
 - SQL Server data files
   These files usually have one of the following file name extensions:
@@ -112,8 +112,8 @@ When you configure your antivirus software settings, make sure that you exclude 
 
   These files usually have the .trc file name extension. These files can be generated either when you configure [SQL tracing manually](/sql/relational-databases/sql-trace/create-a-trace-transact-sql) or when you enable [C2 auditing](/sql/database-engine/configure-windows/c2-audit-mode-server-configuration-option) for the server.
 
--  SQL audit files
- These files have the .sqlaudit file name extension. For more information, review [SQL Server Audit (Database Engine)](/sql/relational-databases/security/auditing/sql-server-audit-database-engine)
+- SQL audit files
+ These files have the `.sqlaudit` file name extension. For more information, review [SQL Server Audit (Database Engine)](/sql/relational-databases/security/auditing/sql-server-audit-database-engine)
 
 - SQL query files
 
@@ -140,8 +140,8 @@ When you configure your antivirus software settings, make sure that you exclude 
 - In-memory OLTP files
 
   - Native procedure and in-memory table definition-related files
-    - Present in a xtp sub-folder under the DATA directory for instance
-    - File formats include the following:
+    - Present in an xtp subfolder under the DATA directory for instance
+    - File formats include the following types:
 
       - xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.c
       - xtp\_\<t/p\>\_\<dbid\>\_\<objid\>.dll
@@ -156,33 +156,37 @@ When you configure your antivirus software settings, make sure that you exclude 
 
 - DBCC CHECKDB files
 
-  - Files will be of the format: <*Database_data_filename.extension*\>\_MSSQL_DBCC\<*database_id_of_snapshot*\>
+  - Files use the following format: <*Database_data_filename.extension*\>\_MSSQL_DBCC\<*database_id_of_snapshot*\>
   - These are temporary files
   - For more information, review [Internal database snapshot](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql#how-dbcc-checkdb-creates-an-internal-snapshot-database-beginning-with-sql-server-2014)
 
 - Replication
 
-  - Replicationexecutables and server-side COM objects.
-    - x86 default location:\<*drive*\>:\\Program Files (x86)\\Microsoft SQL Server\\\<*nnn*\>\\COM\\
-    - x64 default location: \<*drive*\>:\\Program Files\\Microsoft SQL Server\\\<*nnn*\>\\COM\\
+  - Replication executables and server-side COM objects.
+
+    |default location     | Process/Executable file                                                   |
+    |-------              |---------                                                                  |
+    |x86 default location |\<*drive*\>:\\Program Files (x86)\\Microsoft SQL Server\\\<*nnn*\>\\COM\\  |
+    |x64 default location |\<*drive*\>:\\Program Files\\Microsoft SQL Server\\\<*nnn*\>\\COM\\        |
 
     The *\<nnn\>* place holder is for version-specific information. To specify the correct value, check your installation or search for "Replication and server-side COM objects" in the Specifying File Paths table in [File Locations for Default and Named Instances of SQL Server](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server). For example, the full path for SQL Server 2022 would be\<*drive*\>:\\Program Files\\Microsoft SQL Server\\160\\COM\\.
 
-- Starting with SQL Server 2017 CU22 (including SQL 2019 RTM and later versions), if using Transactional Replication and the Distribution Agent is utilizing OLEDB streaming profile or you are using -UseOledbStreaming parameter, the Distribution Agent creates temporary files (\*.lob) in the AppData folder of the account running the distribution agent where the job is being invoked. For prior versions of SQL the default COM folder (already listed) is used.
+- Starting with SQL Server 2017 CU22 (including SQL 2019 RTM and later versions), if using Transactional Replication and the Distribution Agent is utilizing OLEDB streaming profile or you're using -UseOledbStreaming parameter, the Distribution Agent creates temporary files (\*.lob) in the AppData folder of the account running the distribution agent where the job is being invoked. For prior versions of SQL Server, the default COM folder (already listed) is used.
+
   - c:\\Users\\\<*DistributionAgentAccount\>*\\AppData\\Temp\\*.lob
 
   For more information, please review our troubleshooting document ["The distribution agent failed to create temporary files" error message](/troubleshoot/sql/database-engine/replication/error-run-distribution-agent)
 
 - Files in Replication Snapshot folder
 
-  The default path for the snapshot files is \\Microsoft SQL Server\\MSSQLxx.MSSQLSERVER\\**MSSQL\\ReplData.**These files typically have file name extensions of.sch, .idx, .bcp, .pre, .cft, .dri, .trg or .prc.
+  The default path for the snapshot files is \\Microsoft SQL Server\\MSSQLxx.MSSQLSERVER\\**MSSQL\\ReplData.** These files typically have file name extensions such as `.sch`, `.idx`, `.bcp`, `.pre`, `.cft`, `.dri`, `.trg` or `.prc`.
 
 ### Considerations for Failover Cluster instances (Always On FCI)
 
 You can run antivirus software on a SQL Server cluster. However, you must make sure that the antivirus software is a cluster-aware version.
 Contact your antivirus vendor about cluster-aware versions and interoperability.
 
-If you are running antivirus software on a cluster, make sure that you also exclude these locations from virus scanning:
+If you're running antivirus software on a cluster, make sure that you also exclude these locations from virus scanning:
 
 - Q:\\ (Quorum drive)
 - C:\\Windows\\
@@ -190,42 +194,72 @@ If you are running antivirus software on a cluster, make sure that you also excl
 
 If you back up the database to a disk or if you back up the transaction log to a disk, you can exclude the backup files from the virus scanning.
 
-For more information about additional antivirus considerations on a
-cluster, see the following article:
+For information about more antivirus considerations on a cluster, see the following article:
 
 [Antivirus software cause problems with Cluster Services - Windows Server](/troubleshoot/windows-server/high-availability/not-cluster-aware-antivirus-software-cause-issue)
 
-## Configure antivirus software to work with Analysis Services
+## Configure antivirus software to work with Analysis Services (SSAS)
 
-**Processes to exclude from virus scanning**
+The following Analysis services directories and processes can be excluded from anti-virus scanning
 
-For default instance:%ProgramFiles%\\Microsoft SQLServer\\*\<MSASXX\>.MSSQLSERVER* \\OLAP\\Bin\\MSMDSrv.exeFor named
-instance:
+### SSAS processes to exclude from virus scanning
+
+|SSAS Instance         | Process/Executable file                                                                |
+|-------               |---------                                                                               |
+|Default SSAS instance |%ProgramFiles%\\Microsoft SQLServer\\*\<MSASXX\>.MSSQLSERVER* \\OLAP\\Bin\\MSMDSrv.exe  |
+|Named SSAS instance   |%ProgramFiles%\\Microsoft SQL Server\\*MSASXX\>.Instance Name\>*\\OLAP\\Bin\\MSMDSrv.exe|
+
+The XX is the build ID. For example, a default Analysis Services 2016 instance binary installation location by default is `C:\Program Files\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\bin.`
+
+### SSAS directories and file name extensions to exclude from virus scanning
+
+When you configure your antivirus software settings, make sure that you exclude the following SSAS files or directories (as applicable) from virus scanning. This improves the performance of the files and helps make sure that the files aren't locked when the SQL Server service must use them. However, if these files become infected, your antivirus software can't detect the infection.
+
+#### Data directory for Analysis Services
+
+The directory that holds all Analysis Services data files is specified in the `DataDir` property of the instance of Analysis Services. By default, the path of this directory is:
 
 
-%ProgramFiles%\\Microsoft SQL Server\\*MSASXX\>.Instance Name\>*\\OLAP\\Bin\\MSMDSrv.exeThe XX is the build ID. For example, a default Analysis Services 2016 instance binary installation location by default is C:\\Program Files\\Microsoft SQL Server\\MSAS13.MSSQLSERVER\\OLAP\\bin.
+|SSAS instance      | Default data directory                                                           |
+|---------          |---------                                                                         |
+|Default instance   |    C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER \\OLAP\\Data      |
+|Named instance     |    C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<instance name\>\\OLAP\\Data |
 
-**Directories and file name extensions to exclude from virus scanning**
 
-When you configure your antivirus software settings, make sure that you exclude the following files or directories (as applicable) from virus scanning. This improves the performance of the files and helps make sure that the files are not locked when the SQL Server service must use them. However, if these files become infected, your antivirus software cannot detect the infection.
+#### Temporary files for Analysis Services
 
-- The directory that holds Analysis Services data
+For Analysis Services 2012 and later versions, temporary files during processing are specified by the `TempDir` property of the instance of Analysis Services. By default, this property is empty. When this property is empty, the default directory is used. By default, the Temp path is
 
-The directory that holds all Analysis Services data is specified by the DataDir property of the instance of Analysis Services. By default, the path of this directory for a default Analysis Service instance is C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER \\OLAP\\Data. The default data path of the Analysis Services named instance is C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<instance name\>\\OLAP\\Data.
+|SSAS instance      | Temporary files directory                                                       |
+|---------          |---------                                                                        |
+|Default instance   |    C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER\\OLAP\\Temp      |
+|Named instance     |    C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<instancename\>\\OLAP\\Temp |
 
-For Analysis Services 2012 and later versions, temporary files during processing are specified by the TempDir property of the instance of Analysis Services. By default, this property is empty. When this property is empty, the default directory is used. By default, the Temp path for a default Analysis Service instance is C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER\\OLAP\\Temp. The default Temp path of the Analysis Services named instance is C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<instancename\>\\OLAP\\Temp.
+#### Backup files for Analysis Services
 
-- Analysis Services backup files
+ In Analysis Services 2012 and later versions, the backup file location is the location that is specified by the `BackupDir` property. By default, the Backup path for Analysis Service instance is located:
 
- By default, in Analysis Services 2012 and later versions, the backup file location is the location that is specified by the BackupDir property. By default, the Backup path for default Analysis Service instance is C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER \\OLAP\\Backup. The default Backup path of the Analysis Services named instance is C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<instance name\>\\OLAP\\Backup. You can change this directory in the properties of the instance of Analysis Services. Any backup command can point to a different location. Or, the backup files can be copied elsewhere.
+|SSAS instance      | Backup files directory                                                          |
+|---------          |---------                                                                           |
+|Default instance   |    C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER \\OLAP\\Backup      |
+|Named instance     |    C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<instance name\>\\OLAP\\Backup |
+
+
+ You can change this directory in the properties of the instance of Analysis Services. Any backup command can point to a different location also. Or, the backup files can be copied elsewhere for restore.
 
 - The directory that holds Analysis Services log files
 
- By default, in Analysis Services 2012 and later versions, the log file location is the location that is specified by the LogDir property. By default, the Log path for a default Analysis Service instance is C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER \\OLAP\\Log. The default data path of the Analysis Services named instance is C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<instance name\>\\OLAP\\log.
+ By default, in Analysis Services 2012 and later versions, the log file location is the location that is specified by the `LogDir` property. By default, the Log path for is located:
 
-- Directories for any Analysis Services 2012 and later-version partitions that are not stored in the default data directories.
+|SSAS instance      | Log files directory                                                             |
+|---------          |---------                                                                        |
+|Default instance   |    C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER \\OLAP\\Log      |
+|Named instance     |    C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<instance name\>\\OLAP\\log |
 
-When you create the partitions, these locations are defined in theStorage locationsection of theProcessing and Storage Locationspage of the Partition Wizard.
+
+#### Directories for partitions not stored in the default data directories for Analysis Services 2012 and later-version
+
+When you create the partitions, these locations are defined in the Storage location section of the Processing and Storage Locations page of the Partition Wizard. Be sure to exclude those from scanning. 
 
 ## Configure antivirus software to work with SQL Server Integration services (SSIS)
 
@@ -233,49 +267,50 @@ When you create the partitions, these locations are defined in theStorage locati
 
 ## Configure antivirus software to work with Polybase
 
-**Processes to exclude from virus scanning**
+The following processes and directories for the Polybase services are to be excluded from anti-virus scanning.
 
-PolyBase Engine service (%ProgramFiles%\\Microsoft SQL Server\\\<Instance_ID\>.\<Instance Name\>\\MSSQL\\Binn\\Polybase\\mpdwsvc.exe)
+### Polybase processes to exclude from virus scanning
+
+|Service                 | Process/Executable file                                                                                     |
+|---------               |---------                                                                                                    |
+|PolyBase Engine service | %ProgramFiles%\\Microsoft SQL Server\\\<Instance_ID\>.\<Instance Name\>\\MSSQL\\Binn\\Polybase\\mpdwsvc.exe |
+
 
 PolyBase Data Movement service (DMS) and Engine services use same executable with different command line parameters.
 
-**Directories and file name extensions to exclude from virus scanning**
+### Plolybase directories and file name extensions to exclude from virus scanning
 
-When you configure your antivirus software settings, make sure that you exclude the following files or directories (as applicable) from virus scanning. This improves the performance of the files and helps make sure that the files are not locked when the Polybase service must use them. However, if these files become infected, your antivirus software cannot detect the infection.
+When you configure your antivirus software settings, make sure that you exclude the following files or directories (as applicable) from virus scanning. This improves the performance of the files and helps make sure that the files aren't locked when the Polybase service must use them. However, if these files become infected, your antivirus software can't detect the infection.
 
 PolyBase log files (%ProgramFiles%\\Microsoft SQL Server\\\<Instance_ID\>.\<InstanceName\>\\MSSQL\\Log\\Polybase\\)
 
 ## Configure antivirus software to work with Reporting Services
 
-**Processes to exclude from virus scanning**
+### SSRS processes to exclude from virus scanning
 
-%ProgramFiles%\\Microsoft SQL Server\\*\<Instance_ID\>*.*\<Instance Name\>*\\Reporting Services\\ReportServer\\Bin\\ReportingServicesService.exe
+|Service            | Process/Executable file                                                                                                                         |
+|---------          |---------                                                                                                                                        |
+|Reporting Services | %ProgramFiles%\\Microsoft SQL Server\\*\<Instance_ID\>*.*\<Instance Name\>*\\Reporting Services\\ReportServer\\Bin\\ReportingServicesService.exe|
 
-**Directories and file name extensions to exclude from virus scanning**
 
-\<?\>
+### SSRS directories and file name extensions to exclude from virus scanning
 
-**References**
-
-To find general information about SQL Server security, see the following
-SQL Server topics:
-
-[[Securing SQL Server](/sql/relational-databases/security/securing-sql-server)
-
-For general recommendations from Microsoft for scanning on Enterprise
-systems, see the following article: [822158](https://support.microsoft.com/help/822158) Virus scanning recommendations for Enterprise computers that are running currently supported versions of Windows
-
-For more information on performance issues that can occur when third party modules are loaded into SQL Server review [Performance and consistency issues when modules or driver are loaded](/troubleshoot/sql/database-engine/performance/performance-consistency-issues-filter-drivers-modules)
-
+?????
 
 ## Configure a Firewall with SQL Server products
 
 The following table contains information about how to use a firewall with SQL Server.
 
 | Product | Information about Firewall configuration |
-| --- | --- |
+| ---                        | ---                                                                                                                                            |
 | SQL Server Database Engine | [Configure the Windows Firewall to allow SQL Server access](/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access) |
-| Analysis Services (SSAS) | [Configure the Windows Firewall to Allow Analysis Services Access](/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access) |
-| Integration Services (SSIS) | [Configure the Windows Firewall to allow SQL Server access with Integration Services](/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access#ports-used-by-integration-services) |
-| Polybase | [Which ports should I allow through my firewall for PolyBase?](/sql/relational-databases/polybase/polybase-faq#which-ports-should-i-allow-through-my-firewall-for-polybase) |
-| Reporting services (SSRS) | [Configure a Firewall for Report Server Access](/sql/reporting-services/report-server/configure-a-firewall-for-report-server-access) |
+| Analysis Services (SSAS) | [Configure the Windows Firewall to Allow Analysis Services Access](/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)                                                                                                             |
+| Integration Services (SSIS) | [Configure the Windows Firewall to allow SQL Server access with Integration Services](/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access#ports-used-by-integration-services)                                                                                 |
+| Polybase | [Which ports should I allow through my firewall for PolyBase?](/sql/relational-databases/polybase/polybase-faq#which-ports-should-i-allow-through-my-firewall-for-polybase)                                                                                                     |
+| Reporting services (SSRS) | [Configure a Firewall for Report Server Access](/sql/reporting-services/report-server/configure-a-firewall-for-report-server-access)            |
+
+## More information
+
+- For more information on performance issues caused by third party modules and drivers to SQL Server, [Performance and consistency issues when modules or driver are loaded](/troubleshoot/sql/database-engine/performance/performance-consistency-issues-filter-drivers-modules)
+- To find general information about SQL Server security, see [Securing SQL Server](/sql/relational-databases/security/securing-sql-server)
+- For general recommendations from Microsoft for scanning on Enterprise systems, see  [822158 Virus scanning recommendations for Enterprise computers that are running currently supported versions of Windows](https://support.microsoft.com/help/822158)
