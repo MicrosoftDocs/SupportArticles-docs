@@ -1,6 +1,6 @@
 ---
-title: Issues with the service connection in the task
-description: Provides solutions for issues related to the service connection in the task.
+title: Issues with the service connection in Azure Web App tasks
+description: Provides solutions for issues related to the service connection in Azure Web App tasks.
 ms.date: 04/27/2023
 ms.custom: sap:Pipelines
 ms.reviewer: dmittal, cathmill
@@ -8,7 +8,7 @@ ms.author: v-sidong
 author: sevend2
 ms.service: azure-devops
 ---
-# Issues with the service connection in the task
+# Issues with the service connection in Azure Web App tasks
 
 This article provides troubleshooting steps and solutions for common issues you may encounter with Azure Resource Manager (ARM) service connections when working with Azure services deployment.
 
@@ -41,15 +41,15 @@ Make sure the service principal used with the task has the proper permission on 
 
 Make sure you're using a subscription with a resource group you're authorized to deploy to. To push a release, ensure you have the appropriate [user roles/access](/azure/role-based-access-control/rbac-and-directory-admin-roles) for the subscription.  
 
-#### Unable to select a subscription even if as the Admin and Owner of it
+#### Unable to create or select a subscription even as the Admin and Owner of it
 
-Check the role of the user for **App Registration**. Update the role of the user for **App Registration** manually and retry [creating a new service connection](/azure/devops/pipelines/library/service-endpoints). This issue often happens if you have an existing service connection and the service principal associated with it has expired. While trying to renew it, the App Registration may have lost the proper role, which might cause conflicts when you try to use it.  
+Check the role of the user for **App Registration**. Update the role of the user for **App Registration** manually and retry [creating a new service connection](/azure/devops/pipelines/library/service-endpoints#create-a-service-connection). This issue often happens if you have an existing service connection and the service principal associated with it has expired. While trying to renew it, the App Registration may have lost the proper role, which might cause conflicts when you try to use it.  
 
 #### How to create a service connection that can manage all the subscriptions?
 
 At this time, service connections can only be scoped to a single Azure subscription. Management-Group scoped service connections can be created, but most tasks don't support using them yet.
 
-#### Unable to authenticate the service principal in my CI/CD pipeline
+#### Unable to authenticate the service principal in CI/CD pipelines
 
 Check your [Azure AD permissions](/azure/active-directory/develop/howto-create-service-principal-portal#check-azure-ad-permissions) and [assign the appropriate roles](/azure/active-directory/fundamentals/active-directory-users-assign-role-azure-portal).  
 

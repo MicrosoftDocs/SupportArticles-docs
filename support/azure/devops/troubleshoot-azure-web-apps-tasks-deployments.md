@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Azure Web App tasks and deployment issues
-description: This article provides the documentation for tasks and describes steps to capture debug logs for a deeper investigation of the tasks.
+description: This article provides the documentation for Azure Web App tasks and describes steps to capture debug logs for a deeper investigation of the tasks.
 ms.date: 04/27/2023
 ms.custom: sap:Pipelines
 ms.reviewer: dmittal, cathmill
@@ -10,6 +10,8 @@ ms.service: azure-devops
 ---
 # Troubleshoot Azure Web App tasks and deployment issues
 
+This article helps you troubleshoot various issues related to Azure Web App tasks and deployments.
+
 ## Tasks documentation
 
 As a first step, we recommend you review the documentation for the following tasks and ensure that all the parameters are correctly defined in the tasks used in the pipelines.
@@ -18,7 +20,7 @@ As a first step, we recommend you review the documentation for the following tas
 - [Azure Web App V1](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureWebAppV1): Preferably use this task for App Services deployment. For more complicated scenarios like XML transformation, use [Azure RM Web App deployment V4](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureRmWebAppDeploymentV4).
 - [Azure Function App](/azure/devops/pipelines/tasks/reference/azure-function-app-v1): Consider using this task for Function App deployments.
 - [Azure File Copy](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureFileCopyV5)
-- [Azure PowerShell](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzurePowerShellV5)
+- [Azure PowerShell](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzurePowerShellV5) ([AzurePowerShell@5 - Azure PowerShell v5 task](/azure/devops/pipelines/tasks/reference/azure-powershell-v5))
 - [Azure Key Vault](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureKeyVaultV2)
 - [Azure SQL deployment](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/SqlServerDacpacDeployment)
 
@@ -28,7 +30,7 @@ If the task configuration looks fine, refer to the next steps for capturing debu
 
 ## Debug logs and tips for further debugging
 
-Follow these steps to further investigate issues with tasks:
+Debug logs provide important details to help diagnose and troubleshoot issues related to Azure Web App tasks and deployments. Follow these steps to collect logs and further investigate these issues:
 
 1. Enable debug logs by setting [system.debug](/azure/devops/pipelines/build/variables#systemdebug) to **True** in the pipeline.
 

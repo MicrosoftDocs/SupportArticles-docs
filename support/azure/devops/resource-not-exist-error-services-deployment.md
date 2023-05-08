@@ -1,6 +1,6 @@
 ---
-title: Resource doesn't exist error with services deployment
-description: Provides a solution for a Resource doesn't exist error with services deployment.
+title: Resource doesn't exist error with Azure Web App deployment
+description: Provides a solution for a Resource doesn't exist error with Azure Web App deployment.
 ms.date: 04/27/2023
 ms.custom: sap:Pipelines
 ms.reviewer: dmittal, cathmill
@@ -8,11 +8,11 @@ ms.author: v-sidong
 author: sevend2
 ms.service: azure-devops
 ---
-# Resource doesn't exist error with services deployment
+# Resource doesn't exist error with Azure Web App deployment
 
 ## Symptoms
 
-The following scenarios may cause your app deployment to fail with the error `Error: Resource 'xxxxxxxx' doesn't exist. Resource should exist before deployment`:
+The following scenarios may cause your Azure Web App deployment to fail with the error `Error: Resource 'xxxxxxxx' doesn't exist. Resource should exist before deployment`:
 
 - The resource was created as part of the same pipeline.
 

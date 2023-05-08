@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot common issues related to Azure Web App and services
+title: Troubleshoot common issues related to Azure Web App service deployments
 description: This article lists some common issues related to Azure Web App service deployments from Azure DevOps Services and provides steps to resolve or debug these issues.
 ms.date: 04/27/2023
 ms.custom: sap:Pipelines
@@ -8,7 +8,7 @@ ms.author: v-sidong
 author: sevend2
 ms.service: azure-devops
 ---
-# Azure Web App and services related issues
+# Azure Web App service deployments related issues
 
 This article lists some common issues related to Azure Web App service deployments from Azure DevOps Services and provides steps to resolve or debug these issues.
 
@@ -68,7 +68,7 @@ If you're using Web Deploy to deploy your app, in some error scenarios, Web Depl
 
 #### Error "ERROR_FILE_IN_USE" while trying to deploy .NET apps to Web App on Windows
 
-To resolve this error, ensure the **Rename locked files** and **Take App offline** options are enabled in the task. For zero downtime, use slot swap.  
+To resolve this error, ensure the **Rename locked files** and **Take App offline** options are enabled in the task. For zero downtime, use [slot swap](/azure/app-service/deploy-staging-slots#add-a-slot).  
 
 #### Web App deployment on Windows is successful, but the app isn't working
 

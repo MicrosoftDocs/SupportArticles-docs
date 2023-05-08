@@ -11,7 +11,7 @@ ms.service: azure-devops
 # Failure scenarios related to Azure Web App tasks
 
 > [!NOTE]
-> The best way to start debugging these errors is to gather [debug logs](troubleshoot-azure-web-apps-tasks-deployments.md#debug-logs-and-tips-for-further-debugging) for the pipeline and the logs from the Azure Web App side (Kudu logs).
+> The best way to start debugging these errors is to gather [debug logs](troubleshoot-azure-web-apps-tasks-deployments.md#debug-logs-and-tips-for-further-debugging) for the pipeline and the [Kudu logs](/azure/app-service/resources-kudu) and use the [**Diagnose and solve problems**](/azure/app-service/overview-diagnostics) feature from the Azure Web App side.
 
 ## Errors and resolutions
 
@@ -31,7 +31,7 @@ This error may occur due to a failure to unzip and zip a large package for the d
 
 #### Error 3: "Failed to deploy web package to App Service"
 
-The task calls a zipDeploy Kudu API for deployment. The following error generally comes in response to that API. The API does some operations when called.
+The task calls a zipDeploy Kudu API for deployment. The following error generally comes in response to some operations performed by the API.
 
 ```output
 [error]Failed to deploy web package to App Service.
@@ -45,7 +45,7 @@ Refer logs for more details.
   
 Try setting the **WEBSITE_RUN_FROM_PACKAGE** app setting to **1** on the App Services side.
 
-#### Error 4: "EMFILE: too many open files using zip deploy / Error: Package deployment using ZIP Deploy failed"
+#### Error 4: "EMFILE: too many open files using zip deploy" or "Error: Package deployment using ZIP Deploy failed"
   
 **Possible workarounds**:
 
@@ -72,7 +72,7 @@ Try setting the **WEBSITE_RUN_FROM_PACKAGE** app setting to **1** on the App Ser
 
 ## See related
 
-- [Troubleshoot Azure web app tasks and deployment issues](troubleshoot-azure-web-apps-tasks-deployments.md)
+- [Troubleshoot Azure Web app tasks and deployment issues](troubleshoot-azure-web-apps-tasks-deployments.md)
 - [Azure Web App and services related issues](azure-web-app-services-related-issues.md)
 - [Issues with the service connection in the task](issues-service-connection-task.md)
 - [Resource doesn't exist error with services deployment](resource-not-exist-error-services-deployment.md)
