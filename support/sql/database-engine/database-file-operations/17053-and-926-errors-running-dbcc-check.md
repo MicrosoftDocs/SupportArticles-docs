@@ -8,14 +8,14 @@ ms.custom: sap:Administration and Management
 ---
 # Error 17053 and 926 may be logged in the error log after you run a DBCC command in SQL Server
 
-This article introduces [Error 17053](/sql/relational-databases/errors-events/mssqlserver-17053-database-engine-error) and [Error 926](/sql/relational-databases/errors-events/mssqlserver-926-database-engine-error) that may be reported when you run a DBCC command in SQL Server, and provides troubleshooting steps of the underlying OS error 112, 665 or 1450.
+This article introduces [Error 17053](/sql/relational-databases/errors-events/mssqlserver-17053-database-engine-error) and [Error 926](/sql/relational-databases/errors-events/mssqlserver-926-database-engine-error) that may be reported when you run a `DBCC` command in SQL Server, and provides troubleshooting steps of the underlying operating system (OS) error 112, 665 or 1450.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 926070
 
 ## Symptoms
 
-You run one of the following DBCC commands in Microsoft SQL Server:
+You run one of the following `DBCC` commands in Microsoft SQL Server:
 
 - `DBCC CHECKDB`
 - `DBCC CHECKALLOC`
@@ -23,13 +23,13 @@ You run one of the following DBCC commands in Microsoft SQL Server:
 - `DBCC CHECKCATALOG`
 - `DBCC CHECKFILEGROUP`
 
-The command may fail and you may get `Error: 17053` and other error messages in the client application output and the SQL Server error log.
+The command may fail and you may get Error 17053, 926 and other error messages in the client application output and the SQL Server error log.
 
 ## Errors
 
 Error 926 indicates that the database is marked as suspect. This error message actually refers to the internal snapshot and not to the actual database. The status of the database is online, and the database is functional.
 
-Error 17053 is a SQL Server error that is used to disclose the underlying operating system (OS) error. It contains the name of the NTFS file system alternate streams that are used for the internal snapshot. The error message indicates the real reason for the problem.
+Error 17053 is a SQL Server error that is used to disclose the underlying OS error. It contains the name of the NTFS file system alternate streams that are used for the internal snapshot. The error message indicates the real reason for the problem.
 
 The following sections shows the detailed error messages you may get. For more clarifications of these error messages, see [More information](#more-information) section.
 
@@ -130,7 +130,7 @@ Writes to the internal database snapshot may fail due to insufficient disk space
 Use one or more of these alternatives to resolve this issue:
 
 - Free disk space on the drive where the database resides so that `DBCC CHECKDB` can create a database snapshot.
-- Run `DBCC CHECKDB` [WITH TABLOCK ](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql#tablock) to prevent the creation of an internal snapshot.
+- Run `DBCC CHECKDB` [WITH TABLOCK](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql#tablock) to prevent the creation of an internal snapshot.
 - Use a replication technology such as Availability Groups, Log Shipping, Backup/Restore or SQL Server Replication and create a copy of the database on another server. Then run `DBCC CHECKDB` command on that server.
 
 ## Resolution of OS error 665 or 1450
