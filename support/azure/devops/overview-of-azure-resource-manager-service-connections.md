@@ -108,17 +108,23 @@ Use the following list to navigate to the appropriate article or section for det
 
 - ["Failed to set Azure permission" error when trying to save a service connection](troubleshoot-subscription-related-scenarios.md#failed-to-set-azure-permission-error-when-saving-a-service-connection)
 
-**Service connection creation issues**
+**Issues when creating, editing, or updating Service connections**
 
-- [Azure RM Service connection not listed for a task](azure-rm-service-connection-not-listed-for-a-task.md)
+- [Create Azure RM service principal (manual)](create-azure-rm-service-principal-manual.md#create-azure-rm-service-principal-manual)
 
-- [User is not able to delete an existing Azure RM service connection](fail-to-delete-existing-service-connection.md)
+- [Error when verifying the manual Azure RM service connection](create-azure-rm-service-principal-manual.md#error-when-verifying-the-manual-azure-rm-service-connection)
 
 - ["Failed to get Azure DevOps Service access token" error](failed-to-get-azure-devops-service-access-token.md)
 
-- [Error when verifying the manual Azure RM serice connection](create-azure-rm-service-principal-manual.md#error-when-verifying-the-manual-azure-rm-service-connection)
+- [Azure RM Service connection not listed for a task](azure-rm-service-connection-not-listed-for-a-task.md)
 
-- [Create Azure RM service principal (manual)](create-azure-rm-service-principal-manual.md#create-azure-rm-service-principal-manual)
+- [Unable to delete an existing Azure RM service connection](fail-to-delete-existing-service-connection.md)
+
+
+
+
+
+
 
 ## See also
 
