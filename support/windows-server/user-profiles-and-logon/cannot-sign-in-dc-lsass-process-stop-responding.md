@@ -1,6 +1,6 @@
 ---
 title: Can't sign in to a domain controller and the LSASS process stops responding
-description: Helps to fix the issue in which you can't sign in to a domain controller and the Local Security Authority Subsystem Service (LSASS) process stops responding.
+description: Helps to fix the issue in which you can't sign in to a domain controller, and the Local Security Authority Subsystem Service (LSASS) process stops responding.
 ms.date: 05/06/2023
 author: v-lianna
 ms.author: v-lianna
@@ -13,17 +13,17 @@ ms.reviewer: kaushika, herbertm
 ms.custom: sap:user-logon-fails, csstroubleshoot, ikb2lmc
 ms.technology: windows-server-user-profiles
 ---
-# Can't sign in to a domain controller and the LSASS process stops responding
+# Can't sign in to a domain controller, and the LSASS process stops responding
 
-This article helps to fix the issue in which you can't sign in to a domain controller and the Local Security Authority Subsystem Service (LSASS) process stops responding.
+This article helps fix the issue in which you can't sign in to a domain controller, and the Local Security Authority Subsystem Service (LSASS) process stops responding.
 
 _Applies to:_ &nbsp; Windows Server  
 _Original KB number:_ &nbsp; 3144809
 
 You can't sign in to a domain controller after reboot, and you experience the following scenarios:
 
-- You can type the username and password in the sign-in screen, but when you press Enter, nothing happens.
-- The sign-in doesn't proceed with no errors.
+- You can type the username and password in the sign-in screen, but when you press <kbd>Enter</kbd>, nothing happens.
+- The sign-in doesn't proceed without errors.
 - If you disconnect the network interface card (NIC), you can sign in with cached credentials.
 - The LSASS process stops responding or has stopped responding recently.
 - Many services can't start due to a sign-in failure.
@@ -32,7 +32,7 @@ When this issue occurs, the system event log may contain one or more of the foll
 
 |Event Log  |Event Source  |ID  |Message Text  |
 |---------|---------|---------|---------|
-|System     |LsaSrv         |5000         |The security package NTLM generated an exception. The exception information is the data.<br/>OR<br/>The security package MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 generated an exception. The exception information is the data.<br/><br/>The extended error is E0010014|
+|System     |LsaSrv         |5000         |- The security package NTLM generated an exception. The exception information is the data.<br/><br/>- The security package MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 generated an exception. The exception information is the data.<br/><br/>The extended error is E0010014|
 |System     |LsaSrv         |6038         |Microsoft Windows Server has detected that NTLM authentication is presently being used between clients and this server. This event occurs once per boot of the server on the first time a client uses NTLM with this server.         |
 |System     |Application Popup         |26         |Application popup: lsass.exe - Application Error : The exception unknown software exception (0xe0010004) occurred in the application at location 0x90cf8b9c.         |
 |System     |User32         |1074         |The process wininit.exe has initiated the restart of computer \<DC\> on behalf of user for the following reason:<br/><br/>No title for this reason could be found.<br/><br/>Reason Code: 0x50006<br/><br/>Shutdown Type: restart<br/><br/>Comment: The system process 'C:\Windows\system32\lsass.exe' terminated unexpectedly with status code -536805372. The system will now shut down and restart.|
@@ -53,10 +53,10 @@ You may also find errors in the event trace log (ETL) or the memory dump analysi
 
 ## The Password Settings Container is moved or missing
 
-In Windows Server 2012 and later versions, the authentication process makes a function call to determine fine-grained password policies, and it looks for the Password Settings Container. If it isn't present under *cn=system,dc=\<domain\>,dc=\<com\>* in the Active Directory domain naming context, or it is in an incorrect location, the sign-in fails.
+In Windows Server 2012 and later versions, the authentication process makes a function call to determine fine-grained password policies, and it looks for the Password Settings Container. If it isn't present under *cn=system,dc=\<domain\>,dc=\<com\>* in the Active Directory domain naming context, or it's in an incorrect location, the sign-in fails.
 
 > [!NOTE]
-> The Password Settings Container is a default system container that should always be present. This container is created as a part of Adprep for Windows Server 2008 and later versions domain controllers to support [fine-grained password policies](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770394(v=ws.10)).
+> The Password Settings Container is a default system container that should always be present. This container is created as part of Adprep for Windows Server 2008 and later versions' domain controllers to support [fine-grained password policies](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770394(v=ws.10)).
 
 ## Move the container to the correct location or rerun Adprep
 
