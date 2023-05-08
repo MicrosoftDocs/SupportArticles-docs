@@ -51,7 +51,7 @@ EXEC sp_dboption 'BizTalkMsgBoxDB', 'auto update statistics', 'off'
 
 ## You must set the Max Degree of Parallelism property correctly
 
-On the computer that is running SQL Server and hosting the `BizTalkMsgBoxDb` database, set the max degree of parallelism `run_value` and `config_value` properties to a value of **1**. In later SQL versions, it's also possible to specify this setting per database instead of per SQL instance. To determine the Max Degree of Parallelism setting, execute the following stored procedure against the Master database in SQL Server:
+On the computer that is running SQL Server and hosting the `BizTalkMsgBoxDb` database, set the max degree of parallelism `run_value` and `config_value` properties to a value of **1**. In later SQL versions, it's also possible to specify this setting per database instead of per SQL instance. To determine the `max degree of parallelism` setting, execute the following stored procedure against the Master database in SQL Server:
 
 ```sql
 EXEC sp_configure 'max degree of parallelism'
@@ -82,7 +82,7 @@ We have seen that when the `BizTalkMsgBoxDb` database is larger, performance pro
 
 An environment that uses a powerful SQL Server at the back end and many long-running orchestrations may have a `BizTalkMsgBoxDb` database that is larger than 5 GB. A high-volume environment that uses no long-running orchestrations should have a `BizTalkMsgBoxDb` database that is much smaller than 5 GB.
 
-The BizTalkDTADb database does not have a set size. However, if performance decreases, the database is probably too large. For some customers 20 GB may be considered too large, while 200 GB might work fine with a highly strong SQL server running on multiple CPUs, lots of memory, and a fast network and storage. When you have large BizTalk Server databases, you may experience the following issues:
+The `BizTalkDTADb` database does not have a set size. However, if performance decreases, the database is probably too large. For some customers 20 GB may be considered too large, while 200 GB might work fine with a highly strong SQL server running on multiple CPUs, lots of memory, and a fast network and storage. When you have large BizTalk Server databases, you may experience the following issues:
 
 - The `BizTalkMsgBoxDb` database continues to grow. However, both the log file and the data size remain large.
 
@@ -112,7 +112,7 @@ By default, tracking is enabled on the default host. BizTalk requires that the A
 
 It's recommended that you dedicate one host to tracking. To allow for TDDS to maintain new tracking events in high-volume scenarios, create multiple instances of a single tracking host. No more than one tracking host should exist.
 
-There can be too many rows in a table. There is no set number of rows that are too many. Additionally, this number of rows varies by what kind of data is stored in the table. For example, a `dta_DebugTrace` table that has more than 1 million rows probably has too many rows. A **HostNameQ_Suspended** table that has more than 200,000 rows probably has too many rows.
+There can be too many rows in a table. There is no set number of rows that are too many. Additionally, this number of rows varies by what kind of data is stored in the table. For example, a `dta_DebugTrace` table that has more than 1 million rows probably has too many rows. A `HostNameQ_Suspended` table that has more than 200,000 rows probably has too many rows.
 
 ## Use the correct BizTalk SQL Server Agent jobs
 
@@ -132,7 +132,7 @@ All BizTalk SQL Server Agent jobs except the `MessageBox_Message_ManageRefCountL
 
 Service instances can be suspended (resumable) or suspended (not resumable). These service instances may be Messaging, Orchestration, or Port.
 
-These service instances can make the `BizTalkMsgBoxDb` database grow unnecessarily and can be terminated. You can use the Group Hub to query, resume or terminate messages. You can also use *Terminate.vbs* script or BizTalk Health Monitor (BHM) tool to query, purge and maintain BizTalk databases. In some situations, there can be orphaned or zombie messages left in the system. The BHM tool can help to correct these situations.
+These service instances can make the `BizTalkMsgBoxDb` database grow unnecessarily and can be terminated. You can use the Group Hub to query, resume or terminate messages. You can also use *Terminate.vbs* script or BizTalk Health Monitor (BHM) tool to query, purge, and maintain BizTalk databases. In some situations, there can be orphaned or zombie messages left in the system. The BHM tool can help to correct these situations.
 
 For more information about the *Terminate.vbs* script, see [Removing Suspended Service Instances](/biztalk/core/technical-reference/removing-suspended-service-instances).
 
@@ -157,7 +157,7 @@ BizTalk Server makes hundreds of short, quick transactions to SQL Server within 
 
 Start SQL Server Agent on the SQL Server. When the SQL Server Agent is stopped, the built-in BizTalk SQL Server Agent jobs that are responsible for database maintenance cannot run. This behavior causes database growth, and this growth may cause performance issues.
 
-Put the SQL Server LDF and MDF files on separate drives. When the LDF and MDF files for the `BizTalkMsgBoxDb` and `BizTalkDTADb` databases are on the same drive, disk contention can occur.
+Put the SQL Server Log Database File (LDF) and Main Database File (MDF) files on separate drives. When the LDF and MDF files for the `BizTalkMsgBoxDb` and `BizTalkDTADb` databases are on the same drive, disk contention can occur.
 
 If you don't benefit from message body tracking, don't enable this feature. However, it's a good idea to enable message body tracking while you develop and troubleshoot a solution. If you do this, make sure that you disable message body tracking when you are finished. When message body tracking is enabled, the BizTalk Server databases grow. If there is a business need that requires enabling message body tracking, confirm that the `TrackedMessages_Copy_BizTalkMsgBoxDb` and DTA Purge and Archive SQL Server Agent jobs are running successfully.
 
