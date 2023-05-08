@@ -25,7 +25,7 @@ _Applies to:_ &nbsp; Supported versions of Windows Server and Windows Client
 
 ## What causes stop errors?
 
-When Windows encounters a condition that compromises safe system operation, the system stops. Examples include something failing that could compromise security or something failing that could lead to corruption of the operating system (OS) and/or user data. When the machine stops in order to prevent the operating system from moving forward in these conditions, it is called a bug check (or bugcheck). It is also commonly referred to as a system crash, a kernel error, a blue screen, a blue screen of death (BSOD), or a stop error. On preview releases of Windows, the screen color can be green, leading to the green screen of death (GSOD).
+When Windows encounters a condition that compromises safe system operation, the system stops. Examples include something failing that could compromise security or lead to corruption of the operating system (OS) and/or user data. When the machine stops in order to prevent the operating system from moving forward in these conditions, it is called a bug check (or bugcheck). It is also commonly referred to as a system crash, a kernel error, a blue screen, a blue screen of death (BSOD), or a stop error. On preview releases of Windows, the screen color can be green, leading to the green screen of death (GSOD).
 
 There's no simple explanation for the cause of stop errors. Many different factors can be involved. Our analysis of the root causes of crashes indicates that:
 
