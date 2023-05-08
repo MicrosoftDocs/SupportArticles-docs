@@ -1,0 +1,11 @@
+- name: Surface
+  href: index.yml
+  items:
+  - name: Surface devices
+    items:
+    - name:
+      href:
+  - name: Surface Hub
+    items:
+    - name: Surface Hub troubleshooting
+      href: /surface-hub/troubleshoot-surface-hub
