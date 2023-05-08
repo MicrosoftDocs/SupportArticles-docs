@@ -33,9 +33,9 @@ The health of the Microsoft BizTalk Server databases is important for a successf
 
 This article describes how to maintain BizTalk Server databases and how to troubleshoot BizTalk Server database issues.
 
-## You must disable the `auto update statistics` and `auto create statistics` options
+## You must disable the auto create statistics and auto update statistics options
 
-You must keep the `auto update statistics` and `auto create statistics` options disabled on the `BizTalkMsgBoxDb` database. To determine whether these settings are disabled, execute the following stored procedures in SQL Server:
+You must keep the `auto create statistics` and `auto update statistics` options disabled on the `BizTalkMsgBoxDb` database. To determine whether these settings are disabled, execute the following stored procedures in SQL Server:
 
 ```sql
 EXEC sp_dboption 'BizTalkMsgBoxDB', 'auto create statistics'
@@ -82,7 +82,7 @@ We have seen that when the `BizTalkMsgBoxDb` database is larger, performance pro
 
 An environment that uses a powerful SQL Server at the back end and many long-running orchestrations may have a `BizTalkMsgBoxDb` database that is larger than 5 GB. A high-volume environment that uses no long-running orchestrations should have a `BizTalkMsgBoxDb` database that is much smaller than 5 GB.
 
-The `BizTalkDTADb` database does not have a set size. However, if performance decreases, the database is probably too large. For some customers 20 GB may be considered too large, while 200 GB might work fine with a highly strong SQL server running on multiple CPUs, lots of memory, and a fast network and storage. When you have large BizTalk Server databases, you may experience the following issues:
+The `BizTalkDTADb` database does not have a set size. However, if performance decreases, the database is probably too large. For some customers 20 GB may be considered too large, while for others that with 200 GB might work fine with a highly strong SQL server running on multiple CPUs, lots of memory, and a fast network and storage. When you have large BizTalk Server databases, you may experience the following issues:
 
 - The `BizTalkMsgBoxDb` database continues to grow. However, both the log file and the data size remain large.
 
