@@ -15,7 +15,7 @@ This article provides troubleshooting steps and solutions for common issues you 
 ## Common issues and solutions
 
 > [!NOTE]
-> For more common issues and solutions, see [Troubleshoot ARM service connections](/azure/devops/pipelines/release/azure-rm-endpoint).
+> For more common issues and solutions, see [Troubleshoot ARM service connections](/azure/devops/pipelines/release/azure-rm-endpoint). You can also explore [Service connection APIs](/rest/api/azure/devops/serviceendpoint/endpoints) to get, create, and update [Endpoints](/rest/api/azure/devops/serviceendpoint/endpoints).
 
 #### Unable to renew the client secret for a service connection created through the automatic method
 
@@ -68,8 +68,6 @@ Make sure the right service connection is selected in the pipeline and the neces
 #### Unable to see the Azure subscriptions while creating a service connection, even after having the necessary permissions
 
 If you're using some part of Azure DevOps that interacts with Azure and it appears not to be working, we recommend logging out and logging back in from an incognito or inPrivate browser. This generates a new, valid token Azure DevOps can use to authenticate the request to Azure, which will query the subscriptions and generate the service connection.
-  
-You can also explore [Service connection APIs](/rest/api/azure/devops/serviceendpoint/endpoints) to get, create, and update them.
 
 ## Recommended documents
 
