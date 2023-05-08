@@ -46,3 +46,11 @@ When you run a service connection update call from the UI, the body of the `PUT`
    `PATCH - https://dev.azure.com/{organization}/_apis/serviceendpoint/endpoints/{endpointId}?api-version=6.0-preview.4`
 
 For more information, see [Endpoints - Update Service Endpoint](/rest/api/azure/devops/serviceendpoint/endpoints/update-service-endpoint?view=azure-devops-rest-6.0&tabs=HTTP&preserve-view=true).
+
+## See related
+
+[ARM service connection not listed for a task](azure-rm-service-connection-not-listed-for-a-task.md)
+
+[Fail to delete existing ARM service connection](fail-to-delete-existing-service-connection.md)
+
+[Troubleshoot common service connection issues](overview-of-azure-resource-manager-service-connections.md)
