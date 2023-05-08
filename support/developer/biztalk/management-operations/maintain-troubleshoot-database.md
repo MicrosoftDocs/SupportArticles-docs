@@ -329,7 +329,6 @@ To delete all data from the `BizTalkDTADb` database, use the BizTalk Health Moni
      To do this, follow these steps:
 
      1. Stop all BizTalk hosts, services, and custom isolated adapters. If you use HTTP or the SOAP adapter, restart the IIS services.
-
      1. Execute the `dtasp_CleanHMData` stored procedure on the `BizTalkDTADb` database.
 
      1. Restart all hosts and BizTalk Server services.
