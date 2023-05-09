@@ -1216,6 +1216,8 @@
       href: ./group-policy/group-policy-error-7016-1091-1202.md
     - name: Group policy with WMI filters can be denied or cause slow logon/boot
       href: ./group-policy/group-policy-wmi-filters-denied-slow-logon-boot.md
+    - name: Network disconnection after configuring the LLTDIO and RSPNDR GPOs
+      href: ./group-policy/network-disconnection-after-configuring-lltdio-rspndr-gpos.md
     - name: Netlogon event ID 5719 or Group Policy event 1129
       href: ./group-policy/netlogon-event-id-5719-or-group-policy-event-1129.md
     - name: Password policy changes aren't applied
@@ -1348,6 +1350,8 @@
       href: ./high-availability/cluster-validation-failure-error-80070005.md
     - name: Creating failover cluster fails with error 0xc000005e
       href: ./high-availability/creating-failover-cluster-fails-error-0xc0000055.md
+    - name: Error 0x80090327 when adding a node to a cluster
+      href: ./high-availability/error-0x80090327-adding-node-to-cluster.md
     - name: Error message event ID 1289 is logged when you try to create a cluster
       href: ./high-availability/error-event-id-1289-create-cluster.md
     - name: Implications of using /forcequorum switch
@@ -2326,6 +2330,8 @@
       href: ./remote/cannot-connect-rds-no-license-server.md
     - name: '"Licenses are not available for this Remote Desktop" error in Licensing Diagnosis'
       href: ./remote/rdsh-administrator-on-get-error-licensing-diagnosis.md
+    - name: Remote session disconnected when using non-persistent VDI with per-user licensing
+      href: ./remote/remote-desktop-services-per-user-licensing.md
     - name: Configure RDP listener certificates
       href: ./remote/remote-desktop-listener-certificate-configurations.md
     - name: Deactivate or reactivate a license server
@@ -2528,6 +2534,8 @@
       href: ./system-management-components/powershell-console-characters-garbled-for-cjk-languages.md
   - name: Server Manager
     items:
+    - name: Error 0x800f0805 when Server Manager and DISM fail to list the available features
+      href: ./system-management-components/error-0x800f0805-server-manager-dism-fail-list-available-features.md
     - name: error code 0x800706BE
       href: ./system-management-components/unable-view-roles-features-error-code-0x800706BE.md
     - name: Error when you select Roles in Server Manager
@@ -2550,6 +2558,8 @@
       href: ./system-management-components/scheduled-tasks-reference-incorrect-user-profile.md
   - name: WinRM
     items:
+    - name: Error 0x80090322 when connecting PowerShell to remote server via WinRM
+      href: ./system-management-components/error-0x80090322-when-connecting-powershell-to-remote-server-via-winrm.md
     - name: WinRM service not start
       href: ./system-management-components/winrm-service-not-start-uninstall-winrm-2.md
   - name: WMI
@@ -2578,10 +2588,14 @@
       href: ./user-profiles-and-logon/folder-redirection-settings-not-applied.md
   - name: User Logon fails
     items:
+    - name: '"Your credentials could not be verified" when logging on to Windows with WHFB'
+      href: ./user-profiles-and-logon/your-credential-could-not-be-verified-error-when-logging-on-to-windows-by-using-whfb.md
     - name: Cached domain logon information
       href: ./user-profiles-and-logon/cached-domain-logon-information.md
     - name: Can't log off from a computer
       href: ./user-profiles-and-logon/windows-log-off-errors-events.md
+    - name: Can't sign in to a DC and the LSASS process stops responding
+      href: ./user-profiles-and-logon/cannot-sign-in-dc-lsass-process-stop-responding.md
     - name: Error 1384 when you log on to a domain
       href: ./user-profiles-and-logon/security-content-accumated-many-security-ids.md
     - name: 'Error: The RPC server is unavailable'
@@ -3040,11 +3054,23 @@
     items:
     - name: Enabling smart card logon
       href: ./windows-security/enabling-smart-card-logon-third-party-certification-authorities.md
+  - name: Windows LAPS
+    items:
+    - name: 'Troubleshooting guidance: Windows LAPS'
+      href: ./windows-security/windows-laps-troubleshooting-guidance.md
 - name: Windows Server End of Support (EoS) FAQ
   items:
   - name: End of support for Windows Server 2008 and Windows Server 2008 R2
     href: ./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.yml
 - name: Windows Troubleshooters
   items:
-  - name: Introduction to TroubleShootingScript toolset (TSSv2)
-    href: ../windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md?context=/troubleshoot/windows-server/context/context
+  - name: TroubleShootingScript toolset (TSSv2)
+    items:
+    - name: Introduction to TroubleShootingScript toolset (TSSv2)
+      href: ../windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md?context=/troubleshoot/windows-server/context/context
+    - name: Gather information for Active Directory replication issues
+      href: ../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md?context=/troubleshoot/windows-server/context/context
+    - name: Gather information for deployment-related issues
+      href: ../windows-client/windows-troubleshooters/gather-information-using-tssv2-deployment.md?context=/troubleshoot/windows-server/context/context
+    - name: Gather information for Group Policy issues
+      href: ../windows-client/windows-troubleshooters/gather-information-using-tssv2-group-policy.md?context=/troubleshoot/windows-server/context/context
