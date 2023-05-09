@@ -12,7 +12,7 @@ ms.custom: sap:Security Issues
 # Configure Anti-Virus software to work with SQL Server
 
 
-This article contains general guidelines to help you decide on what antivirus software to run on computers that are running SQL Server in your environment.
+This article contains general guidelines to help you properly configure antivirus software to run on computers that are running SQL Server in your environment.
 
 We strongly recommend that you individually assess the security risk for each computer that is running SQL Server in your environment. Based on the assessment, you must select the tools that are appropriate for the security risk level of each computer that is running SQL Server.
 
@@ -70,7 +70,7 @@ For more information, see [Configure and validate exclusions for Windows Defende
 
 
 ## SQL Server processes to exclude from virus scanning
-
+When you configure your antivirus software settings, make sure that you exclude the following processes (as applicable) from virus scanning.
 - SQLServr.exe (SQL Server Database Engine)
 - SQLAgent.exe (SQL Server Agent)
 - ReportingServicesService.exe (SQL Server Reporting Services)
