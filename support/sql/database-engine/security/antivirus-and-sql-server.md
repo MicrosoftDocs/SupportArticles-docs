@@ -73,10 +73,7 @@ For more information, see [Configure and validate exclusions for Windows Defende
 
 - SQLServr.exe (SQL Server Database Engine)
 - SQLAgent.exe (SQL Server Agent)
-- ReportingServicesService.exe (SQL Server Reporting Services)
-- MSMDSrv.exe  (SQL Server Analysis Services)
 - sqlbrowser.exe (SQL Server Browser service)
-- MsDtsSrvr.exe (SQL Server Integration Services)
 - %ProgramFiles%\\Microsoft SQL Server\\1xx\\Shared\\SQLDumper.exe (SQLDumper utility)
 
 For an updated list of services and file paths, reference [Services installed by SQL Server](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Service_Details)
