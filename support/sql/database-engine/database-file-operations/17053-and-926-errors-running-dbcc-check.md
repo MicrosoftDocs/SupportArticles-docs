@@ -127,10 +127,16 @@ Writes to the internal database snapshot may fail due to insufficient disk space
 
 ## Resolution
 
-To resolve OS error 112, use one or more of these alternatives:
+Use the resolution section that corresponds to one of the issues you may have countered:
+
+### OS error 112 
+
+To resolve OS error 112 that's raised inside SQL Server error 17053, use one or more of these alternatives:
 
 - Free disk space on the drive where the database resides so that `DBCC CHECKDB` can create a database snapshot.
 - Run `DBCC CHECKDB` [WITH TABLOCK](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql#tablock) to prevent the creation of an internal snapshot.
 - Use a replication technology such as Availability Groups, Log Shipping, Backup/Restore or SQL Server Replication and create a copy of the database on another server. Then run `DBCC CHECKDB` command on that server.
 
-To resolve OS error 665 or 1450, try one or more of the alternatives provided in [OS errors 665 and 1450 are reported for SQL Server files](1450-and-665-errors-running-dbcc-checkdb.md#resolution).
+### OS error 665 and 1450
+
+To resolve OS error 665 or 1450 raised inside error 17053, use one or more of the solutions provided in [OS errors 665 and 1450 are reported for SQL Server files](1450-and-665-errors-running-dbcc-checkdb.md#resolution).
