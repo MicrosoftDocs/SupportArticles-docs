@@ -1,7 +1,8 @@
 ---
 title: Missing variables and actions during agent transfers from Power Virtual Agents bots
 description: Provides a resolution for the missing required variables and actions during agent transfers from Power Virtual Agents bots in Omnichannel for Customer Service.
-ms.reviewer: laalexan
+ms.reviewer: nenellim
+ms.author: yangao
 ms.date: 04/11/2023
 ---
 # Missing required variables and actions during agent transfers from Power Virtual Agents bots
