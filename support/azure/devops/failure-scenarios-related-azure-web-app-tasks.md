@@ -11,7 +11,7 @@ ms.service: azure-devops
 # Failure scenarios related to Azure Web App tasks
 
 > [!NOTE]
-> The best way to start debugging these errors is to gather [debug logs](troubleshoot-azure-web-apps-tasks-deployments.md#debug-logs-and-tips-for-further-debugging) for the pipeline and the [Kudu logs](/azure/app-service/resources-kudu) and use the [**Diagnose and solve problems**](/azure/app-service/overview-diagnostics) feature from the Azure Web App side.
+> The best way to start debugging errors related to Azure Web App tasks is to gather [debug logs](troubleshoot-azure-web-apps-tasks-deployments.md#debug-logs-and-tips-for-further-debugging) for pipelines and collect the logs by using [Kudu service](/azure/app-service/resources-kudu) and the [**Diagnose and solve problems**](/azure/app-service/overview-diagnostics) feature.
 
 ## Errors and resolutions
 
@@ -45,7 +45,7 @@ Refer logs for more details.
   
 Try setting the **WEBSITE_RUN_FROM_PACKAGE** app setting to **1** on the App Services side.
 
-#### Error 4: "EMFILE: too many open files using zip deploy" or "Error: Package deployment using ZIP Deploy failed"
+#### Error 4: "EMFILE: too many open files" or "Error: Package deployment using ZIP Deploy failed"
   
 **Possible workarounds**:
 
