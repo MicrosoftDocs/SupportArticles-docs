@@ -17,7 +17,7 @@ When you try to enroll a certificate on a Windows Server, it fails with the erro
 _Applies to:_ Supported versions of Windows Server  
 _Original KB number:_ 4042719, 4516764, 5021150  
 
-## How to identify the issue
+## Identify the issue
 
 When you encounter this issue, you may see one or more of the following symptoms.
 
