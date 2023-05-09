@@ -1,11 +1,11 @@
 ### YamlMime:Hub
-title: Microsoft Azure troubleshooting documentation
-summary: Troubleshooting articles for Azure
+title: Microsoft Entra troubleshooting documentation.
+summary: Troubleshooting articles for Microsoft Entra
 
 metadata:
    ms.topic: hub-page
    services: service
-   ms.service: azure-common-issues-support
+   ms.service: active-directory
    ms.author: genlin
    ms.date: 05/09/2023
 
