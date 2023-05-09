@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Azure Resource Manager (ARM) service connection issues
 description: Provides an overview of ARM service connection, types of connection modes, and lists the tools used to troubleshoot various scenarios.
-ms.date: 04/25/2023
+ms.date: 05/09/2023
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: cathmill, kirthishkt
@@ -92,8 +92,6 @@ To capture an F12 trace, follow the steps in [Capture a browser trace for troubl
 > [!IMPORTANT]
 > Configure Fiddler to capture and decrypt HTTPS traffic. To do this, select **Tools > Options > HTTPS**. Select both checkboxes on this tab (**Capture HTTPS CONNECTs** and **Decrypt HTTPS traffic**), and then select **YES** to all prompts. For more information, see [Configure Fiddler Classic to Decrypt HTTPS Traffic](https://docs.telerik.com/fiddler/configure-fiddler/tasks/decrypthttps&preserve-view=true).
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
-
 ## Common service connection issues
 
 Use the following list to navigate to the appropriate article or section for detailed troubleshooting steps:
@@ -119,12 +117,6 @@ Use the following list to navigate to the appropriate article or section for det
 - [Azure RM Service connection not listed for a task](azure-rm-service-connection-not-listed-for-a-task.md)
 
 - [Unable to delete an existing Azure RM service connection](fail-to-delete-existing-service-connection.md)
-
-
-
-
-
-
 
 ## See also
 

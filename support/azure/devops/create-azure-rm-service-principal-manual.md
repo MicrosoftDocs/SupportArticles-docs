@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot service connections for ARM service principal (manual)
 description: This article explains about how to create service principals by using the Azure RM service principal (manual) option and also troubleshoot an error that occurs while verifying manual Azure RM service connection.
-ms.date: 04/24/2023
+ms.date: 05/09/2023
 author: padmajayaraman
 ms.author: v-jayaramanp
 ms.reviewer: cathmill, kirthishkt
