@@ -1350,6 +1350,8 @@
       href: ./high-availability/cluster-validation-failure-error-80070005.md
     - name: Creating failover cluster fails with error 0xc000005e
       href: ./high-availability/creating-failover-cluster-fails-error-0xc0000055.md
+    - name: Error 0x80090327 when adding a node to a cluster
+      href: ./high-availability/error-0x80090327-adding-node-to-cluster.md
     - name: Error message event ID 1289 is logged when you try to create a cluster
       href: ./high-availability/error-event-id-1289-create-cluster.md
     - name: Implications of using /forcequorum switch
