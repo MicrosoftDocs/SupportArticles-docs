@@ -1,7 +1,7 @@
 - name: Dynamics 365 Customer Service
   href: welcome-customer-service.yml
   items:
-    - name: Customer Service Analytics or Customer Service Insights?
+    - name: Customer Service Insights
       items:
         - name: Troubleshoot issues using Solution Health Hub
           href: troubleshoot-cs-oc-solution-health.md  
@@ -35,10 +35,10 @@
               href: create-slas-primary-entity.md 
         - name: SLA migration
           items:
-            - name: Standard SLAs not showing in migration tool
-              href: standard-slas-migration-tool.md
             - name: Can't migrate a large number of SLAs
               href: migration-tool-issue-slas.md 
+            - name: Standard SLAs not showing in migration tool
+              href: standard-slas-migration-tool.md
         - name: SLA time calculation
           items:
             - name: Errors on custom time calculation for SLA
@@ -59,6 +59,8 @@
               href: warning-slakpiinstances.md
         - name: Other SLA issues
           items:
+            - name: Can't delete managed solution consisting of SLA-enabled entity
+              href: unable-delete-sla-enabled-entity-managed-solution.md
             - name: Entity fields for modifiedon and modifiedby are updated for resolved cases
               href: entity-case-field-updates.md
             - name: Errors occur when updating a case
@@ -69,14 +71,18 @@
               href: actions-run-multiple-times-client.md
             - name: SLA KPI instance isn't created on entity
               href: sla-kpi-instance-not-created-entity.md
-            - name: Can't delete managed solution consisting of SLA-enabled entity
-              href: unable-delete-sla-enabled-entity-managed-solution.md
     - name: Omnichannel for Customer Service
       items:
         - name: Agent Scripts and Macros
           items:
             - name: Can't deploy a custom Agentscript solution
               href: custom-agentscript-solution.md
+        - name: Conversation control
+          items:
+            - name: Conversation is stuck in a wrap-up state
+              href: conversation-stuck-wrap-up-state.md
+            - name: Conversation widget blank when changing browser tabs
+              href: conversation-widget-blank.md  
         - name: Live chat channel
           items:
             - name: Agent doesn't receive chat
@@ -90,15 +96,7 @@
             - name: Chat widget icon doesn't load on portal
               href: chat-widget-icon-does-not-load-portal.md
             - name: Chat widget doesn't load on the portal
-              href: chat-widget-not-loading-portal.md
-        - name: Live chat channel or Conversation control?
-          items:
-            - name: Conversation is stuck in a wrap-up state
-              href: conversation-stuck-wrap-up-state.md
-        - name: Live Chat Widget (LCW) or Converation control?
-          items:
-            - name: Conversation widget blank when changing browser tabs
-              href: conversation-widget-blank.md                      
+              href: chat-widget-not-loading-portal.md                    
         - name: Licensing, provisioning, and installation
           items:
             - name: Instance unavailable to select on the provisioning app
