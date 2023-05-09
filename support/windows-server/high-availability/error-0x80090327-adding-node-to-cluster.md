@@ -1,7 +1,7 @@
 ---
 title: Error 0x80090327 when adding a node to a cluster
 description: Provides a solution to fix error 0x80090327 that occurs when you add a node to a cluster.
-ms.date: 05/05/2023
+ms.date: 05/09/2023
 author: v-lianna
 ms.author: v-lianna
 manager: dcscontentpm
