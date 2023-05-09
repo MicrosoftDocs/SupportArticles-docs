@@ -12,7 +12,7 @@ ms.custom: sap:Security Issues
 # Configure Anti-Virus software to work with SQL Server
 
 
-This article contains general guidelines to help you decide on what antivirus software to run on computers that are running SQL Server in your environment.
+This article contains general guidelines to help you properly configure antivirus software to run on computers that are running SQL Server in your environment.
 
 We strongly recommend that you individually assess the security risk for each computer that is running SQL Server in your environment. Based on the assessment, you must select the tools that are appropriate for the security risk level of each computer that is running SQL Server.
 
@@ -55,21 +55,15 @@ generally at a lower risk, although not always.
 
   - If the virus sweep software has a SQL Server full-text catalog file open when Full-text Search tries to access the file, you may have problems with the full text catalog.
 
-- Vulnerability scanning software: The Microsoft Security Compliance Toolkit includes a set of tools that enables enterprise security
- administrators to download, analyze, test, edit, and store Microsoft-recommended security configuration baselines for Windows and other Microsoft products and compare them against other security configurations. To download it, go to [Microsoft Security
- Compliance Toolkit 1.0](https://www.microsoft.com/en-us/download/details.aspx?id=55319)
+- Vulnerability scanning software: The Microsoft Security Compliance Toolkit includes a set of tools that enables enterprise security administrators to download, analyze, test, edit, and store Microsoft-recommended security configuration baselines for Windows and other Microsoft products and compare them against other security configurations. To download it, go to [Microsoft Security Compliance Toolkit 1.0](https://www.microsoft.com/en-us/download/details.aspx?id=55319)
 
- Additionally, Microsoft released the Microsoft [Windows Malicious Software Removal Tool](https://www.microsoft.com/en-us/download/details.aspx?id=9905) to help remove specific, prevalent malicious software from computers. For more information about the Microsoft Windows Malicious Software Removal Tool, see the following article in the Microsoft Knowledge Base:
-
- [890830](https://support.microsoft.com/en-us/topic/remove-specific-prevalent-malware-with-windows-malicious-software-removal-tool-kb890830-ba51b71f-39cd-cdec-73eb-61979b0661e0) Remove specific prevalent malware with Windows Malicious Software Removal Tool
-
-> [!NOTE]  
-> Windows Server 2016 and later versions automatically enables Windows Defender. Make sure that Windows Defender is configured to exclude **Filestream **files. Failure to do this can result in decreased performance for backup and restore operations.
-
-For more information, see [Configure and validate exclusions for Windows Defender Antivirus scans](/windows/security/threat-protection/windows-defender-antivirus/configure-exclusions-windows-defender-antivirus).
-
+- Microsoft also released the Microsoft [Windows Malicious Software Removal Tool](https://www.microsoft.com/en-us/download/details.aspx?id=9905) to help remove specific, prevalent malicious software from computers. For more information about the Microsoft Windows Malicious Software Removal Tool, see the following article in the Microsoft Knowledge Base: [890830 Remove specific prevalent malware with Windows Malicious Software Removal Tool](https://support.microsoft.com/en-us/topic/remove-specific-prevalent-malware-with-windows-malicious-software-removal-tool-kb890830-ba51b71f-39cd-cdec-73eb-61979b0661e0) 
+  > [!NOTE]  
+  > Windows Server 2016 and later versions automatically enables Windows Defender. Make sure that Windows Defender is configured to exclude **Filestream **files. Failure to do this can result in decreased performance for backup and restore operations. For more information, see [Configure and validate exclusions for Windows Defender Antivirus scans](/windows/security/threat-protection/windows-defender-antivirus/configure-exclusions-windows-defender-antivirus).
 
 ## SQL Server processes to exclude from virus scanning
+
+When you configure your antivirus software settings, make sure that you exclude the following processes from virus scanning.
 
 - SQLServr.exe (SQL Server Database Engine)
 - SQLAgent.exe (SQL Server Agent)
@@ -292,7 +286,7 @@ The following processes and directories for the Polybase services are to be excl
 |Service                 | Process/Executable file                                                                                     |
 |---------               |---------                                                                                                    |
 |PolyBase Engine service | %ProgramFiles%\\Microsoft SQL Server\\\<Instance_ID\>.\<Instance Name\>\\MSSQL\\Binn\\Polybase\\mpdwsvc.exe |
-
+|PolyBase Data Movement (DMS) and Engine services | %ProgramFiles%\\Microsoft SQL Server\\\<Instance_ID\>.\<Instance Name\>\\MSSQL\\Binn\\Polybase\\mpdwsvc.exe |
 
 PolyBase Data Movement service (DMS) and Engine services use same executable with different command line parameters.
 
