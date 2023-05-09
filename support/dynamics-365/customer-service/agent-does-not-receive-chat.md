@@ -1,7 +1,8 @@
 ---
 title: Agent doesn't receive a chat
 description: Provides a resolution for the issue where an agent doesn't receive a chat in Omnichannel for Customer Service.
-ms.reviewer: laalexan
+ms.reviewer: nenellim
+ms.author: vamullap
 ms.date: 04/11/2023
 ---
 # An agent doesn't receive a chat in Omnichannel for Customer Service
