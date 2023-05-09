@@ -125,25 +125,12 @@ In SQL Server, `DBCC` commands use internal read-only database snapshots. For mo
 
 Writes to the internal database snapshot may fail due to insufficient disk space. Other issues such as OS error 665 can also lead to similar problems and render the internal database snapshot in a suspect state.
 
-## Resolution of OS error 112
+## Resolution
 
-Use one or more of these alternatives to resolve this issue:
+To resolve OS error 112, use one or more of these alternatives:
 
 - Free disk space on the drive where the database resides so that `DBCC CHECKDB` can create a database snapshot.
 - Run `DBCC CHECKDB` [WITH TABLOCK](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql#tablock) to prevent the creation of an internal snapshot.
 - Use a replication technology such as Availability Groups, Log Shipping, Backup/Restore or SQL Server Replication and create a copy of the database on another server. Then run `DBCC CHECKDB` command on that server.
 
-## Resolution of OS error 665 or 1450
-
-The following are summarized possible approaches to resolve this issue. For more detailed steps, see [OS errors 665 and 1450 are reported for SQL Server files](1450-and-665-errors-running-dbcc-checkdb.md).
-
-- Place the database files on a Resilient File System (ReFS) volume.
-- Defragment the volume where the database files reside. Be sure your defragmentation utility is transactional.
-- Make a copy of the file; copy may allow better space acquisition because the bytes might be tightly packed together in the process. Copying the file (or moving it to a different volume) may reduce attribute usage and may prevent the OS error 665. Copy one or more of the database files to another.drive. Then, you may leave the file on the new volume or copy it back to the original volume.
-- Format the NTFS volume by using the `/L` option to obtain a large FRS. This choice may mitigate this problem.
-- Break up a large database into smaller files. For example, if you have one 8-TB data file, you can break it up into eight 1-TB data files.
-- Adjust the auto growth increment database setting to acquire sizes conducive to production performance and packing of NTFS attributes.
-- Reduce the lifetime of `DBCC CHECK` commands using the performance enhancements and thus avoid the 665 errors.
-- Execute `DBCC CHECKDB` at a time when there's little activity on the database server.
-- To execute `DBCC CHECKDB`, consider setting up an Availability Group or Log Shipping/Standby server. Or use a second server where you can run the `DBCC CHECKDB` commands.
-- For bulk copy and backup scenarios details, see [OS errors 665 and 1450 are reported for SQL Server files](1450-and-665-errors-running-dbcc-checkdb.md).
+To resolve OS error 665 or 1450, try one or more of the alternatives provided in [OS errors 665 and 1450 are reported for SQL Server files](1450-and-665-errors-running-dbcc-checkdb.md#resolution).
