@@ -17,22 +17,22 @@ _Applies to:_ &nbsp; Power Automate <br><br>
 
 You just created a new cloud flow with a desktop flow card in attended mode :
 
-![cloud-flow-with-attended-desktop-flow-card](media/cloud-flow-suspended-missing-attended-RPA-permission/cloud-flow-canvas.png)<br><br>
+![Cloud flow with an attended desktop flow card](media/cloud-flow-suspended-missing-attended-RPA-permission/cloud-flow-canvas.png)<br><br>
 
 ... after save time you see that the cloud flow can't be triggered (the `Run` button on the top panel is also deactivated) and has the status `Suspended` :
 
-![cloud-flow-suspended](media/cloud-flow-suspended-missing-attended-RPA-permission/cloud-flow-suspended.png)<br><br><br>
+![cloud flow page in suspended status](media/cloud-flow-suspended-missing-attended-RPA-permission/cloud-flow-suspended.png)<br><br><br>
 
 
 ## Cause
 
 If you click on the `Flow checker` button, a specfic message informs you that the user owning this cloud flow needs the attended RPA capability : 
 
-![flow-checker](media/cloud-flow-suspended-missing-attended-RPA-permission/flow-checker.png) <br>
+![Flow checker with missing attended RPA capability](media/cloud-flow-suspended-missing-attended-RPA-permission/flow-checker.png) <br>
 
 You can double check your user capabilities by clicking on `Settings` (the gear icon on top right) >> `View my Licenses` : 
 
-![view-my-licenses](media/cloud-flow-suspended-missing-attended-RPA-permission/view-my-licenses.png) <br><br><br>
+![View my licenses panel](media/cloud-flow-suspended-missing-attended-RPA-permission/view-my-licenses.png) <br><br><br>
 
 
 ## Resolution
@@ -42,7 +42,7 @@ There are 3 solutions to solve this licensing issue :
 - Start a trial as offered in the flow checker message
 - Assign a "Per flow plan" to the cloud flow by clicked on `Details` > `Edit` : 
 
-![assign-per-flow-plan](media/cloud-flow-suspended-missing-attended-RPA-permission/assign-per-flow-plan.png) 
+![Cloud flow detail< - Assign per flow plan setup](media/cloud-flow-suspended-missing-attended-RPA-permission/assign-per-flow-plan.png) 
 
 
 > If no Per flow plan is available on the environment, you need to contact your admin to get one allocated.
