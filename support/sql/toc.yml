@@ -337,6 +337,8 @@
       href: database-engine/install/windows/update-or-slipstream-installation.md
     - name: Upgrade failures on Windows Server 2012
       href: database-engine/install/windows/error-upgrade-cluster-node.md
+    - name: Visual C++ Redistributable installed with SQL Server is flagged as end of life or obsolete
+      href: database-engine/install/windows/visual-c-redistributable-installed-sql-server-flagged-end-of-life-obsolete.md
     - name: Wait on the Database Engine recovery handle failed
       items:
       - name: Troubleshoot upgrade script failures when applying an update
