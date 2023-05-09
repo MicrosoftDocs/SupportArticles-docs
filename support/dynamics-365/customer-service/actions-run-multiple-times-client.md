@@ -1,7 +1,8 @@
 ---
 title: Success, warning, and failure actions run multiple times in web client
 description: Provides a resolution for the issue where the success, warning, and failure actions are being run multiple times in the web client in Dynamics 365 Customer Service.
-ms.reviewer: laalexan
+ms.reviewer: sdas
+ms.author: ravimanne
 ms.date: 04/11/2023
 ---
 # Success, warning, and failure actions are being run multiple times in the web client
