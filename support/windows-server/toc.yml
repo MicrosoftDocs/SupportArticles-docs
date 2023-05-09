@@ -2590,6 +2590,8 @@
       href: ./user-profiles-and-logon/cached-domain-logon-information.md
     - name: Can't log off from a computer
       href: ./user-profiles-and-logon/windows-log-off-errors-events.md
+    - name: Can't sign in to a DC and the LSASS process stops responding
+      href: ./user-profiles-and-logon/cannot-sign-in-dc-lsass-process-stop-responding.md
     - name: Error 1384 when you log on to a domain
       href: ./user-profiles-and-logon/security-content-accumated-many-security-ids.md
     - name: 'Error: The RPC server is unavailable'
