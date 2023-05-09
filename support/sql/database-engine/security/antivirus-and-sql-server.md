@@ -160,7 +160,7 @@ These files usually have the .trc file name extension. These files can be genera
 - Typically use the `.mdmp` file name extension.
 - System generated files are saved in the LOG folder for that instance
 
-- In-memory OLTP files
+#### In-memory OLTP files
 
   - Native procedure and in-memory table definition-related files
     - Present in an xtp subfolder under the DATA directory for instance
@@ -232,7 +232,7 @@ The following Analysis services directories and processes can be excluded from a
 |Default SSAS instance |%ProgramFiles%\\Microsoft SQLServer\\*\<MSASXX\>.MSSQLSERVER* \\OLAP\\Bin\\MSMDSrv.exe  |
 |Named SSAS instance   |%ProgramFiles%\\Microsoft SQL Server\\*MSASXX\>.Instance Name\>*\\OLAP\\Bin\\MSMDSrv.exe|
 
-The XX is the build ID. For example, a default Analysis Services 2016 instance binary installation location by default is `C:\Program Files\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\bin.`
+The XX is the build ID. For example, a default Analysis Services 2016 instance binary installation location by default is C:\Program Files\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\bin.
 
 ### SSAS directories and file name extensions to exclude from virus scanning
 
