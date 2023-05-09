@@ -299,7 +299,7 @@ The following processes and directories for the Polybase services are to be excl
 
 PolyBase Data Movement service (DMS) and Engine services use same executable with different command line parameters.
 
-### Plolybase directories and file name extensions to exclude from virus scanning
+### Polybase directories and file name extensions to exclude from virus scanning
 
 When you configure your antivirus software settings, make sure that you exclude the following files or directories (as applicable) from virus scanning. This improves the performance of the files and helps make sure that the files aren't locked when the Polybase service must use them. However, if these files become infected, your antivirus software can't detect the infection.
 
@@ -314,43 +314,40 @@ The executables to exclude have evolved across different versions of SSRS. The f
 |SSRS version            | Process/Executable file                                                                                                                         |
 |---------          |---------                                                                                                                                        |
 |SSRS 2014 | %ProgramFiles%\\Microsoft SQL Server\\*\<Instance_ID\>*.*\<Instance Name\>*\\Reporting Services\\ReportServer\\Bin\\ReportingServicesService.exe|
-|SSRS 2016 | %ProgramFiles%\Microsoft SQL Server\<Instance_ID>.<Instance Name>\Reporting Services\ReportServer\Bin\ReportingServicesService.exe </br> %ProgramFiles%\Microsoft SQL Server\<Instance_ID>.<Instance Name>\Reporting Services\RSWebApp\Microsoft.ReportingServices.Portal.WebHost.exe                |
-|SSRS 2017 and later version| %ProgramFiles%\Microsoft SQL Server Reporting Services\SSRS\Management\RSManagement.exe </br>  %ProgramFiles%\Microsoft SQL Server Reporting Services\SSRS\Portal\RSPortal.exe </br>  %ProgramFiles%\Microsoft SQL Server Reporting Services\SSRS\ReportServer\bin\ReportingServicesService.exe  </br> %ProgramFiles%\Microsoft SQL Server Reporting Services\SSRS\RSHostingService\RSHostingService.exe |
+|SSRS 2016 | %ProgramFiles%\Microsoft SQL Server\\<Instance_ID>.<Instance Name>\\Reporting Services\\ReportServer\\Bin\ReportingServicesService.exe </br> %ProgramFiles%\Microsoft SQL Server\\<Instance_ID>.<Instance Name>\\Reporting Services\\RSWebApp\Microsoft.ReportingServices.Portal.WebHost.exe                |
+|SSRS 2017 and later version| %ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS\Management\\RSManagement.exe </br>  %ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS\\Portal\\RSPortal.exe </br>  %ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS\\ReportServer\\bin\\ReportingServicesService.exe  </br> %ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS\\RSHostingService\\RSHostingService.exe |
 
 
 ### SSRS directories to exclude from virus scanning
 
 |SSRS version   | Directories to exclude                                                               |
 |---------      |---------                                                                             |
-|SSRS 2014      | %ProgramFiles%\Microsoft SQL Server\<Instance_ID>.<Instance Name>\Reporting Services |
-|SSRS 2016      | %ProgramFiles%\Microsoft SQL Server\<Instance_ID>.<Instance Name>\Reporting Services |
-|SSRS 2017 and later version|%ProgramFiles%\Microsoft SQL Server Reporting Services\SSRS </br> %ProgramFiles%\Microsoft SQL Server Reporting Services\Shared Tools |
+|SSRS 2014      | %ProgramFiles%\Microsoft SQL Server\\<Instance_ID>.<Instance Name>\\Reporting Services |
+|SSRS 2016      | %ProgramFiles%\Microsoft SQL Server\\<Instance_ID>.<Instance Name>\\Reporting Services |
+|SSRS 2017 and later version|%ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS </br> %ProgramFiles%\\Microsoft SQL Server Reporting Services\\Shared Tools |
 
 
 ## Power BI Report Server
 
 For Power BI Report Server the following exclusions can be made:
 
-### Power BI Report Server directories to exclude from virus scanning
-
-- %ProgramFiles%\Microsoft Power BI Report Server\PBIRS
-- %ProgramFiles%\Microsoft Power BI Report Server\Shared Tools
-
 ### Power BI Report Server processes to exclude from virus scanning
 
-- %ProgramFiles%\Microsoft Power BI Report Server\PBIRS\ASEngine\msmdsrv.exe
-- %ProgramFiles%\Microsoft Power BI Report Server\PBIRS\Management\RSManagement.exe
-- %ProgramFiles%\Microsoft Power BI Report Server\PBIRS\Office\RSOffice.exe
-- %ProgramFiles%\Microsoft Power BI Report Server\PBIRS\Portal\RSPortal.exe
-- %ProgramFiles%\Microsoft Power BI Report Server\PBIRS\PowerBI\Microsoft.Mashup.Container.exe
-- %ProgramFiles%\Microsoft Power BI Report Server\PBIRS\PowerBI\Microsoft.Mashup.Container.NetFX40.exe
-- %ProgramFiles%\Microsoft Power BI Report Server\PBIRS\PowerBI\Microsoft.Mashup.Container.NetFX45.exe
-- %ProgramFiles%\Microsoft Power BI Report Server\PBIRS\PowerBI\RSPowerBI.exe
-- %ProgramFiles%\Microsoft Power BI Report Server\PBIRS\ReportServer\bin\ReportingServicesService.exe
-- %ProgramFiles%\Microsoft Power BI Report Server\PBIRS\RSHostingService\RSHostingService.exe
+- %ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\ASEngine\\msmdsrv.exe
+- %ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\Management\\RSManagement.exe
+- %ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\Office\\RSOffice.exe
+- %ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\Portal\\RSPortal.exe
+- %ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\PowerBI\\Microsoft.Mashup.Container.exe
+- %ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\PowerBI\\Microsoft.Mashup.Container.NetFX40.exe
+- %ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\PowerBI\\Microsoft.Mashup.Container.NetFX45.exe
+- %ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\PowerBI\\RSPowerBI.exe
+- %ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\ReportServer\\bin\\ReportingServicesService.exe
+- %ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS\\RSHostingService\\RSHostingService.exe
 
+### Power BI Report Server directories to exclude from virus scanning
 
-
+- %ProgramFiles%\\Microsoft Power BI Report Server\\PBIRS
+- %ProgramFiles%\\Microsoft Power BI Report Server\\Shared Tools
 
 ## Configure a Firewall with SQL Server products
 
