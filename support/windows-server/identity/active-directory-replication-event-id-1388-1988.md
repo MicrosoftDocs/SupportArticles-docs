@@ -1,7 +1,7 @@
 ---
 title: Active Directory replication Event ID 1388 or 1988 - A lingering object is detected
 description: Helps you troubleshoot Active Directory Replication Event ID 1388 and 1988.
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -263,3 +263,7 @@ Membership in **Enterprise Admins**, or equivalent, is the minimum required to c
     |\<Path>\\\<FileName>|The path and name of the import file that you created in step 1, for example, C:\\ldifde.txt.|
 
     For information about using Ldifde, see [LDIFDE](/previous-versions/orphan-topics/ws.10/cc755456(v=ws.10)).
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-ad-replication.md).
