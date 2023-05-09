@@ -4,7 +4,7 @@ description: Provides a resolution for the issue where a cloud flow is suspended
 ms.reviewer: 
 ms.author: cvassallo
 author: V-Camille
-ms.date: 05/09/2023
+ms.date: 09/05/2023
 ms.subservice: power-automate-desktop-flows
 ---
 # Cloud flow suspended - Missing attended RPA capability
