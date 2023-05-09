@@ -230,7 +230,7 @@ The following Analysis services directories and processes can be excluded from a
 |SSAS Instance         | Process/Executable file                                                                |
 |-------               |---------                                                                               |
 |Default SSAS instance |%ProgramFiles%\\Microsoft SQLServer\\*\<MSASXX\>.MSSQLSERVER* \\OLAP\\Bin\\MSMDSrv.exe  |
-|Named SSAS instance   |%ProgramFiles%\\Microsoft SQL Server\\*MSASXX\>.Instance Name\>*\\OLAP\\Bin\\MSMDSrv.exe|
+|Named SSAS instance   |%ProgramFiles%\\Microsoft SQL Server\\*MSASXX\>.InstanceName\>*\\OLAP\\Bin\\MSMDSrv.exe|
 
 The XX is the build ID. For example, a default Analysis Services 2016 instance binary installation location by default is C:\Program Files\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\bin.
 
@@ -246,7 +246,7 @@ The directory that holds all Analysis Services data files is specified in the `D
 |SSAS instance      | Default data directory                                                           |
 |---------          |---------                                                                         |
 |Default instance   |    C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER \\OLAP\\Data      |
-|Named instance     |    C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<instance name\>\\OLAP\\Data |
+|Named instance     |    C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<InstanceName\>\\OLAP\\Data |
 
 
 #### Temporary files for Analysis Services
@@ -256,7 +256,7 @@ For Analysis Services 2012 and later versions, temporary files during processing
 |SSAS instance      | Temporary files directory                                                       |
 |---------          |---------                                                                        |
 |Default instance   |    C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER\\OLAP\\Temp      |
-|Named instance     |    C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<instancename\>\\OLAP\\Temp |
+|Named instance     |    C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<InstanceName\>\\OLAP\\Temp |
 
 #### Backup files for Analysis Services
 
@@ -265,7 +265,7 @@ For Analysis Services 2012 and later versions, temporary files during processing
 |SSAS instance      | Backup files directory (default)                                                   |
 |---------          |---------                                                                           |
 |Default instance   |    C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER \\OLAP\\Backup      |
-|Named instance     |    C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<instance name\>\\OLAP\\Backup |
+|Named instance     |    C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<InstanceName\>\\OLAP\\Backup |
 
  You can change this directory in the properties of the instance of Analysis Services. Any backup command can point to a different location also. Or, the backup files can be copied elsewhere for restore.
 
@@ -276,7 +276,7 @@ For Analysis Services 2012 and later versions, temporary files during processing
 |SSAS instance      | Log files directory                                                             |
 |---------          |---------                                                                        |
 |Default instance   |    C:\\Program Files\\Microsoft SQL Server\\MSASXX.MSSQLSERVER \\OLAP\\Log      |
-|Named instance     |    C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<instance name\>\\OLAP\\log |
+|Named instance     |    C:\\Program Files\\Microsoft SQL Server\\MSASXX.\<InstanceName\>\\OLAP\\log |
 
 #### Directories for partitions not stored in the default data directories for Analysis Services 2012 and later-version
 
@@ -314,7 +314,7 @@ The executables to exclude have evolved across different versions of SSRS. The f
 |SSRS version            | Process/Executable file                                                                                                                         |
 |---------          |---------                                                                                                                                        |
 |SSRS 2014 | %ProgramFiles%\\Microsoft SQL Server\\*\<Instance_ID\>*.*\<Instance Name\>*\\Reporting Services\\ReportServer\\Bin\\ReportingServicesService.exe|
-|SSRS 2016 | %ProgramFiles%\Microsoft SQL Server\\<Instance_ID>.<Instance Name>\\Reporting Services\\ReportServer\\Bin\ReportingServicesService.exe </br> %ProgramFiles%\Microsoft SQL Server\\<Instance_ID>.<Instance Name>\\Reporting Services\\RSWebApp\Microsoft.ReportingServices.Portal.WebHost.exe                |
+|SSRS 2016 | %ProgramFiles%\Microsoft SQL Server\\*\<Instance_ID\>*.*\<Instance Name\>*\\Reporting Services\\ReportServer\\Bin\ReportingServicesService.exe </br> %ProgramFiles%\Microsoft SQL Server\\*\<Instance_ID\>*.*\<Instance Name\>*\\Reporting Services\\RSWebApp\Microsoft.ReportingServices.Portal.WebHost.exe                |
 |SSRS 2017 and later version| %ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS\Management\\RSManagement.exe </br>  %ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS\\Portal\\RSPortal.exe </br>  %ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS\\ReportServer\\bin\\ReportingServicesService.exe  </br> %ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS\\RSHostingService\\RSHostingService.exe |
 
 
@@ -322,8 +322,8 @@ The executables to exclude have evolved across different versions of SSRS. The f
 
 |SSRS version   | Directories to exclude                                                               |
 |---------      |---------                                                                             |
-|SSRS 2014      | %ProgramFiles%\Microsoft SQL Server\\<Instance_ID>.<Instance Name>\\Reporting Services |
-|SSRS 2016      | %ProgramFiles%\Microsoft SQL Server\\<Instance_ID>.<Instance Name>\\Reporting Services |
+|SSRS 2014      | %ProgramFiles%\Microsoft SQL Server\\*\<Instance_ID\>*.*\<Instance Name\>*\\Reporting Services |
+|SSRS 2016      | %ProgramFiles%\Microsoft SQL Server\\*\<Instance_ID\>*.*\<Instance Name\>*\\Reporting Services |
 |SSRS 2017 and later version|%ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS </br> %ProgramFiles%\\Microsoft SQL Server Reporting Services\\Shared Tools |
 
 
