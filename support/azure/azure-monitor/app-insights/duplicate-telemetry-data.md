@@ -1,0 +1,15 @@
+---
+title: Receive duplicate telemetry data from Application Insights JavaScript SDK
+description: Provides a solution to an issue where you receive duplicate telemetry data from Application Insights JavaScript SDK.
+ms.date: 05/10/2023
+ms.service: azure-monitor
+ms.subservice: application-insights
+ms.reviewer: toddfous, v-kainawroth
+author: AmandaAZ
+ms.author: v-weizhu
+---
+# Receive duplicate telemetry data from Application Insights JavaScript SDK
+
+If the SDK reports correlation recursively, enable the configuration setting of `excludeRequestFromAutoTrackingPatterns` to exclude the duplicate data. This scenario can occur when you use connection strings. The syntax for the configuration setting is `excludeRequestFromAutoTrackingPatterns: [<endpointUrl>]`.
+
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
