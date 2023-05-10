@@ -72,7 +72,7 @@ To resolve this error, ensure the **Rename locked files** and **Take App offline
 
 #### Web App deployment on Windows is successful, but the app isn't working
 
-This might be because the *web.config* file isn't present in your app. To add a *web.config* file, follow [these steps](/azure/devops/pipelines/tasks/deploy/azure-rm-web-app#web-app-deployment-on-windows-is-successful-but-the-app-is-not-working).  
+This issue may occur because the *web.config* file isn't present in your app. To add a *web.config* file, follow [these steps](/azure/devops/pipelines/tasks/deploy/azure-rm-web-app#web-app-deployment-on-windows-is-successful-but-the-app-is-not-working).  
 
 #### Web App deployment on App Service Environment (ASE) isn't working
 
