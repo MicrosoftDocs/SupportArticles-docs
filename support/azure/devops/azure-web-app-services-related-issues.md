@@ -35,7 +35,7 @@ Web packages created using the MSBuild task (with default arguments) have a nest
 
 These issues may occur when there's insufficient capacity on your App Service Plan. To resolve these issues, you can scale up the App Service instance to increase available CPU, RAM, and disk space or try with a different App Service plan. Also, check the [Kudu logs](/azure/app-service/resources-kudu) from the Azure Web Apps side.
 
-#### Errors related to the network not being reachable during deployment, for example, "Could not connect to the remote computer ('<AppName>.scm.azurewebsites.net')"
+#### Errors related to the network not being reachable during deployment, for example, "Could not connect to the remote computer ('\<AppName\>.scm.azurewebsites.net')"
 
 Review the following articles for firewall, proxy, and permissions (applicable for all platforms). These articles provide references for Microsoft-hosted and self-hosted agent scenarios.
 
