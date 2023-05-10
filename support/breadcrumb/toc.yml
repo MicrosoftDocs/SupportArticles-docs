@@ -104,7 +104,7 @@
       items:
       - name: Microsoft Entra
         tocHref: /troubleshoot/azure/microsoft-entra/
-        topicHref: /troubleshoot/azure/microsoft-entra/
+        topicHref: /troubleshoot/azure/microsoft-entra/welcome-microsoft-entra
         items:
           - name: Azure Active Directory
             tocHref: /troubleshoot/azure/microsoft-entra/active-directory
