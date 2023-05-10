@@ -16,7 +16,7 @@ items:
       - name: Python
         href: app-insights/opentelemetry-troubleshooting-python.md
     - name: JavaScript SDK troubleshooting
-      href: app-insights/javascript-sdk-troubleshooting.md
+      href: https://learn.microsoft.com/troubleshoot/azure/azure-monitor/app-insights/javascript-sdk-troubleshooting
       items:
       - name: Duplicate telemetry data
         href: app-insights/duplicate-telemetry-data.md
