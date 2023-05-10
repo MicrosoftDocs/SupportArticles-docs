@@ -82,7 +82,7 @@ If auditing is enabled, a Distributed Component Object Model (DCOM) error can be
 
 ## Cause
 
-This issue occurs because the group policy "Access this computer from the network" is set, and the user account used to enroll the certificate isn't added.
+This issue occurs because the group policy **Access this computer from the network** is set, and the user account used to enroll the certificate isn't added.
 
 The group policy locates at: *Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment*
 
