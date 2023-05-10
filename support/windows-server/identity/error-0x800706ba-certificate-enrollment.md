@@ -52,18 +52,20 @@ Additionally, you can find the Microsoft Remote Procedure Call (MSRPC) bind atte
 
 If auditing is enabled, a Distributed Component Object Model (DCOM) error can be observed on the CA server detailing an **ANONYMOUS LOGON** attempt:
 
-> Log Name: System  
-> Source: Microsoft-Windows-DistributedCOM  
-> Date: \<date\>  
-> Event ID: 10027  
-> Task Category: None  
-> Level: Warning  
-> Keywords: Classic  
-> User: ANONYMOUS LOGON  
-> Computer: \<CA FQDN\>
->
-> Description:  
-> The machine wide limit settings do not grant Remote Activation permission for COM Server applications to the user NT AUTHORITY\ANONYMOUS LOGON SID (S-1-5-7) from address \<IP address\> running in the application container Unavailable SID (Unavailable). This security permission can be modified using the Component Services administrative tool.
+```output
+Log Name: System  
+Source: Microsoft-Windows-DistributedCOM  
+Date: \<date\>  
+Event ID: 10027  
+Task Category: None  
+Level: Warning  
+Keywords: Classic  
+User: ANONYMOUS LOGON  
+Computer: \<CA FQDN\>
+
+Description:  
+The machine wide limit settings do not grant Remote Activation permission for COM Server applications to the user NT AUTHORITY\ANONYMOUS LOGON SID (S-1-5-7) from address \<IP address\> running in the application container Unavailable SID (Unavailable). This security permission can be modified using the Component Services administrative tool.
+```
 
 ### Other symptoms and logs
 
@@ -71,13 +73,14 @@ If auditing is enabled, a Distributed Component Object Model (DCOM) error can be
 - When the client sends a KRB_AP_REQ request, it's rejected by the server side.
 - On the server side, the *kerberos.etl* displays the following entries:
 
-  > [0] 02B4.11CC::\<date and time\> [KERBEROS] krbtoken_cxx3567 KerbCreateTokenFromTicketEx() - KerbCreateTokenFromTicket for \<user account\>, (null)  
-  > [0] 02B4.11CC::\<date and time\> [KERBEROS] krbtoken_cxx3595 **KerbCreateTokenFromTicketEx() - Failed to create token: 0xc000015b**  
-  > [2] 02B4.11CC::\<date and time\> [KERBEROS] logonapi_cxx9910 LsaApLogonTerminated() - LsaApLogonTerminated called: 0x0:0xf4eb9b0  
-  > [2] 02B4.11CC::\<date and time\> [KERBEROS] ctxtapi_cxx4235 SpAcceptLsaModeContext() - Failed to create token from ticket: 0xc000015b  
-  > [2] 02B4.11CC::\<date and time\> [KERBEROS] ctxtapi_cxx5078 SpAcceptLsaModeContext() - SpAcceptLsaModeContext returned 0xc000015b, Context 0000000000000000, Pid 0x0  
-  > [2] 02B4.11CC::\<date and time\> [KERBEROS] ctxtapi_cxx5079 SpAcceptLsaModeContext() - SpAcceptLsaModeContext (0000000000000000) returned 0xc000015b
-
+  ```output
+  [0] 02B4.11CC::\<date and time\> [KERBEROS] krbtoken_cxx3567 KerbCreateTokenFromTicketEx() - KerbCreateTokenFromTicket for \<user account\>, (null)  
+  [0] 02B4.11CC::\<date and time\> [KERBEROS] krbtoken_cxx3595 **KerbCreateTokenFromTicketEx() - Failed to create token: 0xc000015b**  
+  [2] 02B4.11CC::\<date and time\> [KERBEROS] logonapi_cxx9910 LsaApLogonTerminated() - LsaApLogonTerminated called: 0x0:0xf4eb9b0  
+  [2] 02B4.11CC::\<date and time\> [KERBEROS] ctxtapi_cxx4235 SpAcceptLsaModeContext() - Failed to create token from ticket: 0xc000015b  
+  [2] 02B4.11CC::\<date and time\> [KERBEROS] ctxtapi_cxx5078 SpAcceptLsaModeContext() - SpAcceptLsaModeContext returned 0xc000015b, Context 0000000000000000, Pid 0x0  
+  [2] 02B4.11CC::\<date and time\> [KERBEROS] ctxtapi_cxx5079 SpAcceptLsaModeContext() - SpAcceptLsaModeContext (0000000000000000) returned 0xc000015b
+  ```
 - The server tries to procure an access token for the user who presented the Kerberos Ticket Granting Service (TGS) and fails with error 0xc000015b, "STATUS_LOGON_TYPE_NOT_GRANTED."
 
 ## Cause
