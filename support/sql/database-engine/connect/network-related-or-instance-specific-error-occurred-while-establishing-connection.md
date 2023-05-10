@@ -95,12 +95,7 @@ The complete message is:
 
 > A connection was successfully established with the server, but then an error occurred during the login process. (provider: Shared Memory Provider, error: 0 - No process is on the other end of the pipe.) (Microsoft SQL Server, Error: 233)
 
-This message means that SQL Server isn't listening on the Shared Memory port, or at least, this is what it indicates if you receive the same error while using Named Pipes.
-
-Before you troubleshoot this issue:
-
-- Use SQL Server Configuration Manager to verify the server network configurations.
-- Check the errorlog file to determine what SQL Server is currently listening on.
+This message means that SQL Server isn't listening on the Shared Memory or Named Pipes protocol.
 
 ## Gather information for troubleshooting the error
 
