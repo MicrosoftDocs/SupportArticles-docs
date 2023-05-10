@@ -1,7 +1,7 @@
 ---
 title: Issues with the service connection in Azure Web App tasks
 description: Provides solutions for issues related to the service connection in Azure Web App tasks.
-ms.date: 04/27/2023
+ms.date: 05/10/2023
 ms.custom: sap:Pipelines
 ms.reviewer: dmittal, cathmill
 ms.author: v-sidong
