@@ -23,18 +23,18 @@ When you install Microsoft SQL Server on a computer and the SQL Server setup pro
 
 The security software produces alerts for the following reason:
 
-According to the lifecycle policy, [support for Visual Studio components that belong to version 2010](/lifecycle/products/visual-studio-2010) ended in the year 2020. This policy is applicable for standalone installation of these components.
+According to the lifecycle policy, [support for Visual Studio components that belong to version 2010](/lifecycle/products/visual-studio-2010) ended in the year 2020. This policy is applicable for the standalone installation of these components.
 
 ## Resolution
 
-If the Microsoft Visual C++ Redistributable is installed as part of SQL Server, it will continue to be supported until [SQL Server lifecycle](/sql/sql-server/end-of-support/sql-server-end-of-support-overview).
+If the Microsoft Visual C++ Redistributable is installed as part of SQL Server, it will continue to be supported until the end of the [SQL Server lifecycle](/sql/sql-server/end-of-support/sql-server-end-of-support-overview).
 
-You can ignore these alerts for Microsoft Visual C++ Redistributable when it's packaged as part of SQL Server.
+You can ignore these alerts for Microsoft Visual C++ Redistributable when packaged as part of SQL Server.
 
 > [!NOTE]
-> There may be third party products, such as security scanners that flag the Redistributable as expired. If the Microsoft Visual C++ Redistributable is installed by a Microsoft product that is still in support, the Redistributable is in support per the Microsoft component policy for that product. For more information, see [Microsoft Visual C++ Redistributable](/visualstudio/productinfo/vs-servicing#microsoft-visual-c-redistributable).
+> There may be third-party products, such as security scanners, that flag the Redistributable as expired. If the Microsoft Visual C++ Redistributable is installed by a Microsoft product that's still in support, the Redistributable is in support per the Microsoft component policy for that product. For more information, see [Microsoft Visual C++ Redistributable](/visualstudio/productinfo/vs-servicing#microsoft-visual-c-redistributable).
 
-Don't uninstall any component that SQL Server installs as part of the standard setup and patching process. If you remove Microsoft Visual C++ Redistributable, SQL Server components and features might encounter unexpected behavior and results. For example, programs within SQL Server might rely on specific behavior of [C runtime functions](/cpp/c-runtime-library/reference/crt-alphabetical-function-reference). You might also notice that these components get reinstalled when you perform patching of the SQL Server instances.
+Don't uninstall any component that SQL Server installs as part of the standard setup and patching process. If you remove Microsoft Visual C++ Redistributable, SQL Server components and features might encounter unexpected behavior and results. For example, programs within SQL Server might rely on the specific behavior of [C runtime functions](/cpp/c-runtime-library/reference/crt-alphabetical-function-reference). You might also notice that these components get reinstalled when you perform patching of the SQL Server instances.
 
 ## More information
 
@@ -44,6 +44,6 @@ If the Visual C++ Redistributable is installed by a product that's still in supp
 
 The Redistributable lifecycle policy is stated in [Microsoft Visual C++ Redistributable](/visualstudio/releases/2019/servicing-vs2019#microsoft-visual-c-redistributable).  
 
-There are a few specific instances where we continue to support the Microsoft Visual C++ Redistributable beyond the underlying Visual Studio product lifecycle for security fixes only, and only in the context and timeframe of the Microsoft product(s) that depend on it. One such instance is when the Microsoft Visual C++ Redistributable is distributed in other Microsoft products, such as SQL Server, Windows Server, or Microsoft Office.
+There are a few specific instances where we continue to support the Microsoft Visual C++ Redistributable beyond the underlying Visual Studio product lifecycle for security fixes only and only in the context and timeframe of the Microsoft product(s) that depend on it. One such instance is when the Microsoft Visual C++ Redistributable is distributed in other Microsoft products, such as SQL Server, Windows Server, or Microsoft Office.
 
 SQL Server 2017 and later versions install Microsoft Visual C++ 2015 or higher. Per [Microsoft Visual C++ Redistributable latest supported downloads](/cpp/windows/latest-supported-vc-redist), Visual Studio versions since Visual Studio 2015 share the same Redistributable files. For example, any apps built by the Visual Studio 2015, 2017, 2019, or 2022 toolsets can use the latest Microsoft Visual C++ Redistributable.
