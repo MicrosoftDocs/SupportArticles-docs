@@ -2,8 +2,8 @@
 title: SubnetWithExternalResourcesCannotBeUsedByOtherResources
 description: Provides solutions to an error that occurs when you create, upgrade or scale a Microsoft Azure Kubernetes Service cluster.
 ms.date: 05/10/2023
-author: axelg
-ms.author: axelg
+author: axelgMS
+ms.author: axelgMS
 ms.reviewer: chiragpa, eddie
 ms.service: azure-kubernetes-service
 ---
@@ -17,7 +17,7 @@ You receive following error message while trying to perform a Create or Update o
 
 > Code: SubnetWithExternalResourcesCannotBeUsedByOtherResources
 
-> Sample error message: Message="Subnet /subscriptions/<subid>/resourceGroups/<resource group name>/providers/<provider and resource name> referenced by /subscriptions/<subid>/resourceGroups/<resource group name>/providers/<provider and resource name> cannot be used because it contains external resources. The external resources in this subnet are (<service name>, /subscriptions/<subid>/resourceGroups/<resource group name>/providers/<provider and resource name> ). You need to delete these external resources before deploying into this subnet."
+> Sample error message: Message="Subnet /subscriptions/*\<subscription-id-guid>*/resourceGroups/*\<ResourceGroup-name>*/providers/*\<provider-and-resource-name>* referenced by /subscriptions/*\<subscription-id-guid>*/resourceGroups/*\<ResourceGroup-name>*/providers/*\<provider-and-resource-name>* cannot be used because it contains external resources. The external resources in this subnet are (*\<service-name>*, /subscriptions/*\<subscription-id-guid>*/resourceGroups/*\<ResourceGroup-name>*/providers/*\<provider-and-resource-name>* ). You need to delete these external resources before deploying into this subnet."
 
   
 ## Cause 
