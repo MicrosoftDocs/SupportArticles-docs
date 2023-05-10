@@ -34,7 +34,7 @@ You receive error messages that resemble the following during certificate enroll
 
 ### Network capture
 
-In network trace, you can find Lightweight Directory Access Protocol (LDAP) queries to the configuration partition in Active Directory was successful, and the templates available are revealed in the trace.
+The network trace shows the successful Lightweight Directory Access Protocol (LDAP) queries to the configuration partition in Active Directory; the templates available are revealed in the trace.
 
 Then, the requesting server tries to do a remote procedure call (RPC) to the CA and gets the response "ACCESS DENIED."
 
@@ -69,7 +69,7 @@ If auditing is enabled, a Distributed Component Object Model (DCOM) error can be
 
 - The call should be made with **dce_c_authn_level_pkt_integrity** RPC Integrity level that enforces Kerberos or New Technology LAN Manager (NTLM) as an authentication mechanism. This behavior is enforced by default starting 6B.22 [KB5004442—Manage changes for Windows DCOM Server Security Feature Bypass (CVE-2021-26414)](https://support.microsoft.com/topic/kb5004442-manage-changes-for-windows-dcom-server-security-feature-bypass-cve-2021-26414-f1400b52-c141-43d2-941e-37ed901c769c).
 - When the client sends a KRB_AP_REQ request, it's rejected by the server side.
-- On the server side, the kerberos.etl displays the following entries:
+- On the server side, the *kerberos.etl* displays the following entries:
 
   > [0] 02B4.11CC::\<date and time\> [KERBEROS] krbtoken_cxx3567 KerbCreateTokenFromTicketEx() - KerbCreateTokenFromTicket for \<user account\>, (null)  
   > [0] 02B4.11CC::\<date and time\> [KERBEROS] krbtoken_cxx3595 **KerbCreateTokenFromTicketEx() - Failed to create token: 0xc000015b**  
@@ -84,7 +84,7 @@ If auditing is enabled, a Distributed Component Object Model (DCOM) error can be
 
 This issue occurs because the group policy "Access this computer from the network" is set, and the user account used to enroll the certificate isn't added.
 
-The group policy locates at: Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment
+The group policy locates at: *Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\User Rights Assignment*
 
 By default, the policy is populated by the groups: Administrators, Backup Operators, Everyone, and Users.
 
