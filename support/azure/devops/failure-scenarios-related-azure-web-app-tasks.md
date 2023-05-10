@@ -51,7 +51,7 @@ Try setting the **WEBSITE_RUN_FROM_PACKAGE** app setting to **1** on the App Ser
 
 - Use the [Azure Web App V1 task](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureWebAppV1).
 
-- Use the following Extract Files task to extract the zip into a folder path, and then provide the folder path into the App Service Deploy task. This prevents the App Service task from unzipping the package, preventing EMFILE errors.
+- Use the following Extract Files task to extract the zip file into a folder path, and then provide the folder path into the App Service Deploy task. This step prevents the App Service task from unzipping the package, preventing EMFILE errors.
 
   ```yml
   steps:

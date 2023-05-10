@@ -25,9 +25,9 @@ To generate a client secret for a service connection created via the "automatic"
 1. Select **Edit** in the upper-right corner, and the select **Verify**.
 1. Select **Save**.
 
-This generates a new client secret for the service principal backing the service connection. For more information, see [Service principal's token expired](/azure/devops/pipelines/release/azure-rm-endpoint#service-principals-token-expired).
+This method generates a new client secret for the service principal backing the service connection. For more information, see [Service principal's token expired](/azure/devops/pipelines/release/azure-rm-endpoint#service-principals-token-expired).
 
-When performing the operation, ensure you have the proper permission on the Azure subscription and AAD (Azure Active Directory), as it updates the secret for the app registered for the service principal. For more information, see [Troubleshoot ARM service connections](/azure/devops/pipelines/release/azure-rm-endpoint#what-happens-when-you-create-a-resource-manager-service-connection) and [Create an Azure Resource Manager service connection using automated security](/azure/devops/pipelines/library/connect-to-azure#create-an-azure-resource-manager-service-connection-using-automated-security).
+When performing the operation, ensure you have the proper permission on the Azure subscription and Microsoft Azure Active Directory (AAD), as it updates the secret for the app registered for the service principal. For more information, see [Troubleshoot ARM service connections](/azure/devops/pipelines/release/azure-rm-endpoint#what-happens-when-you-create-a-resource-manager-service-connection) and [Create an Azure Resource Manager service connection using automated security](/azure/devops/pipelines/library/connect-to-azure#create-an-azure-resource-manager-service-connection-using-automated-security).
 
 #### How to create the service principal to be used in Azure DevOps without the permission on the Azure subscription and AAD?
 
@@ -67,7 +67,7 @@ Make sure the right service connection is selected in the pipeline and the neces
 
 #### Unable to see the Azure subscriptions while creating a service connection, even after having the necessary permissions
 
-If you're using some part of Azure DevOps that interacts with Azure and it appears not to be working, we recommend logging out and logging back in from an incognito or inPrivate browser. This generates a new, valid token Azure DevOps can use to authenticate the request to Azure, which will query the subscriptions and generate the service connection.
+If you're using some part of Azure DevOps that interacts with Azure and it appears not to be working, we recommend that you sign out and sign back in from an incognito or inPrivate browser. This method generates a new, valid token Azure DevOps can use to authenticate the request to Azure, which will query the subscriptions and generate the service connection.
 
 ## Recommended documents
 
