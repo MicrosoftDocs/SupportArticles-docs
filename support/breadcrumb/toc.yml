@@ -106,7 +106,7 @@
         tocHref: /troubleshoot/azure/microsoft-entra/
         topicHref: /troubleshoot/azure/microsoft-entra/index
       - name: Azure Active Directory
-        tocHref: /troubleshoot/azure/microsoft-entra/active-directory
+        tocHref: /troubleshoot/azure/microsoft-entra/active-directory/
         topicHref: /troubleshoot/azure/active-directory/welcome-azure-ad
       - name: Cloud Services
         tocHref: /troubleshoot/azure/cloud-services/
