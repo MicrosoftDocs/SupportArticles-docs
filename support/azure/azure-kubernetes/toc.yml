@@ -43,6 +43,8 @@
     href: error-code-vmextensionprovisioningtimeout.md
   - name: ZonalAllocationFailed or AllocationFailed error
     href: error-code-zonalallocationfailed-allocationfailed.md
+  - name: Subnet with external resources cannot be used by other resources error
+    href: SubnetWithExternalResourcesCannotBeUsedByOtherResources.md
 
 - name: Troubleshoot upgrade operations
   items:
