@@ -118,22 +118,18 @@
         "SkypeExperts/**/*.md": "skype-for-business-itpro"
       },
       "ms.technology": {
-        "SkypeExperts/performance-issues/**/*.md": "performance",
-        "SkypeExperts/quality-of-service/**/*.md": "quality-of-service",
-        "SkypeServer/server-conferencing/**/*.md": "conferencing",
-        "SkypeServer/server-configuration/**/*.md": "configuration",
-        "SkypeServer/server-contacts/**/*.md": "contacts",
-        "SkypeServer/server-exchange-integration/**/*.md": "exchange-integration",
-        "SkypeServer/server-im-presence/**/*.md": "im-presence",
-        "SkypeServer/server-install-or-uninstall/**/*.md": "install-or-uninstall",
-        "SkypeServer/server-meetings/**/*.md": "meetings",
-        "SkypeServer/server-mobile-devices/**/*.md": "mobile-devices",
-        "SkypeServer/server-phone-system/**/*.md": "phone-system",
-        "SkypeServer/server-sign-in/**/*.md": "sign-in"
       },
       "ms.service": {
         "SkypeOnline/**/*.md": "skype-for-business-online",
-        "SkypeHybrid/**/*.md": "skype-for-business-online"     
+        "SkypeHybrid/**/*.md": "skype-for-business-online"     ,
+        "SkypeServer/server-mobile-devices/**/*.md": "skype-for-business-server",
+        "SkypeServer/server-conferencing/**/*.md": "skype-for-business-server",
+        "SkypeServer/server-im-presence/**/*.md": "skype-for-business-server",
+        "SkypeExperts/quality-of-service/**/*.md": "skype-for-business-server",
+        "SkypeServer/server-exchange-integration/**/*.md": "skype-for-business-server",
+        "SkypeServer/server-meetings/**/*.md": "skype-for-business-server",
+        "SkypeServer/server-contacts/**/*.md": "skype-for-business-server",
+        "SkypeServer/server-phone-system/**/*.md": "skype-for-business-server"
       },
       "ms.subservice": {
         "SkypeHybrid/hybrid-conferencing/**/*.md": "conferencing",
@@ -154,7 +150,15 @@
         "SkypeOnline/online-meetings/**/*.md": "meetings",
         "SkypeOnline/online-phone-system/**/*.md": "phone-system",
         "SkypeOnline/online-sign-in/**/*.md": "sign-in",
-        "SkypeOnline/online-subscription/**/*.md": "subscription"
+        "SkypeOnline/online-subscription/**/*.md": "subscription",
+        "SkypeServer/server-mobile-devices/**/*.md": "mobile-devices",
+        "SkypeServer/server-conferencing/**/*.md": "conferencing",
+        "SkypeServer/server-im-presence/**/*.md": "im-presence",
+        "SkypeExperts/quality-of-service/**/*.md": "quality-of-service",
+        "SkypeServer/server-exchange-integration/**/*.md": "exchange-integration",
+        "SkypeServer/server-meetings/**/*.md": "meetings",
+        "SkypeServer/server-contacts/**/*.md": "contacts",
+        "SkypeServer/server-phone-system/**/*.md": "phone-system"
       }      
     },
     "template": [],
