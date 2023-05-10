@@ -5,6 +5,7 @@ ms.date: 02/17/2020
 ms.custom: sap:Database Design and Development
 ms.prod: sql
 ---
+
 # SQL Server and Azure SQL Database improvements in handling some data types and uncommon operations
 
 This article introduces how persisted structures in your SQL Server database can be validated as part of the upgrade compatibility level, and how any affected structures can be rebuilt after you upgrade the compatibility level.
@@ -36,14 +37,14 @@ Starting in SQL Server 2016, both SQL Server and Azure SQL Database include impr
   - Float/integer to/from datetime/smalldatetime
   - Real/float to/from numeric/money/smallmoney
   - Float to real
-- Some cases of **DATEPART**/**DATEDIFF** and **DEGREES**
-- **CONVERT**that uses a **NULL** style
+- Some cases of `DATEPART`/`DATEDIFF` and `DEGREES`
+- `CONVERT` that uses a `NULL` style
 
-To use these improvements to expression evaluation in your application, change the compatibility level of your databases to 130 (for SQL Server 2016) or 140 (for SQL Server 2017 and Azure SQL Database). For more information about all the changes and some examples that show the changes, see the **Appendix A** section.
+To use these improvements to expression evaluation in your application, change the compatibility level of your databases to 130 (for SQL Server 2016) or 140 (for SQL Server 2017 and Azure SQL Database). For more information about all the changes and some examples that show the changes, see the [Appendix A](#appendix-a-changes-in-compatibility-level-130) section.
 
 The following structures in the database may persist the results of an expression:
 
-- Table data subject to **CHECK** constraints
+- Table data subject to `CHECK` constraints
 - Persisted computed columns
 - Indexes that use computed columns in the key or included columns
 - Filtered indexes
@@ -62,7 +63,7 @@ If you have affected structures, and you don't rebuild them after changing the c
 > [!NOTE]
 > Trace Flag 139 in SQL Server
 >
-> The global trace flag 139 is introduced in SQL Server 2016 CU3 and Service Pack (SP) 1 to force correct conversion semantics in the scope of DBCC check commands like **DBCC CHECKDB**,**DBCC CHECKTABLE** and **DBCC CHECKCONSTRAINTS** when you analyze the improved precision and conversion logic introduced with compatibility level 130 on a database that has an earlier compatibility level.
+> The global trace flag 139 is introduced in SQL Server 2016 CU3 and Service Pack (SP) 1 to force correct conversion semantics in the scope of DBCC check commands like **DBCC CHECKDB**, **DBCC CHECKTABLE**, and **DBCC CHECKCONSTRAINTS** when you analyze the improved precision and conversion logic introduced with compatibility level 130 on a database that has an earlier compatibility level.
 
 > [!WARNING]
 > Trace flag 139 isn't meant to be enabled continuously in a production environment, and should be used for the sole purpose of performing the database validation checks described in this article. Therefore, it should be disabled by using **dbcc traceoff (139, -1)** in the same session, after the validation checks are completed.

@@ -10,7 +10,7 @@ ms.prod: sql
 ---
 # Execution of SQL Server CLR fails with TypeInitializationException
 
-This article helps you work around the problem where the execution of SQL Server CLR objects fails and returns a System.TypeInitializationException exception.
+This article helps you work around the problem where the execution of SQL Server CLR objects fails and returns a **System.TypeInitializationException** exception.
 
 _Applies to:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 4576575
@@ -55,7 +55,7 @@ For more information, including how to obtain the patch, see [.NET Framework rep
 ## Workaround
 
 > [!WARNING]
-> This workaround may make a computer or a network more vulnerable to attack by malicious users or by malicious software such as viruses. We do not recommend this workaround but are providing this information so that you can implement this workaround at your own discretion. Use this workaround at your own risk.
+> This workaround may make a computer or a network more vulnerable to attack by malicious users or by malicious software such as viruses. We don't recommend this workaround but are providing this information so that you can implement this workaround at your own discretion. Use this workaround at your own risk.
 
 For applications that deserialize untrusted XML data into an instance of either `DataSet` or `DataTable` objects, we recommend that you use an alternative method to access the data. For applications that read only trusted XML data, you can try one of the following workarounds.
 
@@ -65,7 +65,7 @@ For applications that deserialize untrusted XML data into an instance of either 
 > [!WARNING]
 > These workarounds remove type restrictions for deserializing XML into instances of `DataSet` and `DataTable` objects. This may open a security hole if the application reads untrusted input.
 
-- Workaround 1: Call AppContext.SetSwitch
+### Workaround 1: Call AppContext.SetSwitch
 
     Change the start of the SQL CLR object code to set the **Switch.System.Data.AllowArbitraryDataSetTypeInstantiation** switch to **true**. You have to do this for every applicable SQL CLR object. See the following example.
 
@@ -73,12 +73,12 @@ For applications that deserialize untrusted XML data into an instance of either 
 
     For more information, see [DataSet and DataTable security guidance](/dotnet/framework/data/adonet/dataset-datatable-dataview/security-guidance).
 
-- Workaround 2: Create or change the _Sqlservr.exe.config_ file for each applicable instance
+### Workaround 2: Create or change the _Sqlservr.exe.config_ file for each applicable instance
 
     This workaround applies only to the instance itself.
 
     > [!IMPORTANT]
-    > We cannot guarantee that this change will not be overwritten by SQL Server updates or instance upgrades. We recommend that you determine whether the change persists after an instance update or upgrade.
+    > We can't guarantee that this change will not be overwritten by SQL Server updates or instance upgrades. We recommend that you determine whether the change persists after an instance update or upgrade.
 
     1. Locate the _Sqlservr.exe.config_ file in the [File Locations for Default and Named Instances of SQL Server](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server):
 
@@ -96,7 +96,7 @@ For applications that deserialize untrusted XML data into an instance of either 
 
        :::image type="content" source="media/execution-clr-fails-typeInitializationexception/config.png" alt-text="Screenshot shows an example of SQL Server 2016 instance.":::
 
-- Workaround 3: Create the System.Drawing assembly
+### Workaround 3: Create the System.Drawing assembly
 
     Manually create the **System.Drawing** assembly in SQL Server from the DLL file in the **Global Assembly Cache (GAC)**, and then re-create assemblies that use either DataSet.ReadXML or DataTable.ReadXML. For example:
 
@@ -104,12 +104,12 @@ For applications that deserialize untrusted XML data into an instance of either 
     CREATE ASSEMBLY [Drawing] FROM 'C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Drawing\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll' WITH PERMISSION_SET = UNSAFE GO
     ```
 
-- Workaround 4: Create a registry subkey
+### Workaround 4: Create a registry subkey
 
     > [!IMPORTANT]
     > Follow the steps in this workaround carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
-    This workaround will affect all .NET applications on the server. Therefore, you should use this method only as a last resort if you cannot use the other workarounds.
+    This workaround will affect all .NET applications on the server. Therefore, you should use this method only as a last resort if you can't use the other workarounds.
 
     1. Open Registry Editor.
 
@@ -131,4 +131,4 @@ For applications that deserialize untrusted XML data into an instance of either 
 
 ## More information
 
-This problem is caused by the action of a recent .NET Framework security update to correct the .NET Framework XML content markup validation. SQL Server CLR objects that do not read XML into instances of either `DataSet` or `DataTable` objects will not be affected.
+This problem is caused by the action of a recent .NET Framework security update to correct the .NET Framework XML content markup validation. SQL Server CLR objects that don't read XML into instances of either `DataSet` or `DataTable` objects will not be affected.
