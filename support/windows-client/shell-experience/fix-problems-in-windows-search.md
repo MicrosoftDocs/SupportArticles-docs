@@ -93,7 +93,7 @@ If Windows 11, Windows 10 May 2019 Update, or a later update is installed, use W
 > [!IMPORTANT]
 > You must have administrator permissions to run this script.
 
-1. Download the *ResetWindowsSearchBox.ps1* script from the [Reset Windows Search PowerShell script](https://www.microsoft.com/download/100295), and save the file to a local folder.
+1. Download the *ResetWindowsSearchBox.ps1* script from the [Reset Windows Search PowerShell script](https://www.microsoft.com/download/details.aspx?id=100295), and save the file to a local folder.
 
 2. Right-click the file that you saved and select **Run with PowerShell**.
 3. If you're asked the following question, select **Yes**.

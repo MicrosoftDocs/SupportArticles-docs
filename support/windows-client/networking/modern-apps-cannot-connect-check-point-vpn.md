@@ -1,7 +1,7 @@
 ---
 title: Modern Apps can't connect when you use a Check Point VPN connection
 description: Discusses that Modern Apps can't connect to the Internet after you connect to the corporate network by using Check Point VPN software. Provides a workaround.
-ms.date: 09/14/2020
+ms.date: 05/10/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -57,10 +57,6 @@ foreach ($subkey in (gci "HKLM:\SYSTEM\CurrentControlSet\Control\Class\{4D36E972
     }
 }
 ```
-
-> [!NOTE]
-> This script is also documented at the following Check Point website:
-[Microsoft Store (Windows 8) application fails to communicate via VPN tunnel](https://supportcenter.checkpoint.com/supportcenter/portal?eventsubmit_dogoviewsolutiondetails=&solutionid=sk92881&js_peid=p-114a7ba5fd7-10001&partition=general&product=endpoint)
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
 

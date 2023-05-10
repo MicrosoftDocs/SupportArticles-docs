@@ -205,7 +205,7 @@ Here are examples of such error messages:
 > [!NOTE]
 > You need to be a user of the local Administrators group to perform the below activities.
 
-1. Install [Microsoft Network Monitor](https://www.microsoft.com/download/4865) on the client machine (`Client1.contoso.com`).
+1. Install [Microsoft Network Monitor](https://www.microsoft.com/download/details.aspx?id=4865) on the client machine (`Client1.contoso.com`).
 2. Run the following command in an elevated command prompt window (*cmd.exe*):
 
     ```console
