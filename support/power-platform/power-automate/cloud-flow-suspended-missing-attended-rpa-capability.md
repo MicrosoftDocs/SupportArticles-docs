@@ -1,5 +1,5 @@
 ---
-title: Cloud flow suspended because owner is missing attended RPA capability
+title: Cloud flow suspended due to missing the attended RPA capability
 description: Provides a resolution for the issue where a cloud flow is suspended because its owner is missing the attended RPA capability.
 ms.reviewer: 
 ms.author: cvassallo
@@ -7,44 +7,42 @@ author: V-Camille
 ms.date: 5/9/2023
 ms.subservice: power-automate-desktop-flows
 ---
-# Cloud flow suspended - Missing attended RPA capability
+# A cloud flow is suspended because the owner is missing the attended RPA capability
 
-This article provides a resolution for the issue where a cloud flow is suspended because its owner is missing the attended RPA capability.
+This article provides a resolution for the issue where a cloud flow is suspended because its owner is missing the attended robotic process automation (RPA) capability.
 
-_Applies to:_ &nbsp; Power Automate <br><br>
+_Applies to:_ &nbsp; Power Automate
 
 ## Symptoms
 
-You just created a new cloud flow with a desktop flow card in attended mode :
+Consider the following scenario:
 
-![Cloud flow with an attended desktop flow card](media/cloud-flow-suspended-missing-attended-RPA-permission/cloud-flow-canvas.png)<br><br>
+- You create a cloud flow with a desktop flow card in **Attended** mode.
 
-... after save time you see that the cloud flow can't be triggered (the `Run` button on the top panel is also deactivated) and has the status `Suspended` :
+  :::image type="content" source="media/cloud-flow-suspended-missing-attended-rpa-permission/cloud-flow-canvas.png" alt-text="Screenshot that shows a cloud flow is created with an attended desktop flow card.":::
 
-![cloud flow page in suspended status](media/cloud-flow-suspended-missing-attended-RPA-permission/cloud-flow-suspended.png)<br><br><br>
+- After you save the cloud flow, the cloud flow can't be triggered, and the status is **Suspended**. The **Run** button on the top panel is also deactivated.
 
+  :::image type="content" source="media/cloud-flow-suspended-missing-attended-rpa-permission/cloud-flow-suspended.png" alt-text="Screenshot that shows the cloud flow is in the Suspended status.":::
 
 ## Cause
 
-If you click on the `Flow checker` button, a specfic message informs you that the user owning this cloud flow needs the attended RPA capability : 
+If you select the **Flow checker** button, a specific message informs you that the user owning this cloud flow needs the attended RPA capability.
 
-![Flow checker with missing attended RPA capability](media/cloud-flow-suspended-missing-attended-RPA-permission/flow-checker.png) <br>
+:::image type="content" source="media/cloud-flow-suspended-missing-attended-rpa-permission/flow-checker.png" alt-text="Screenshot that shows the error details in the flow checker message.":::
 
-You can double check your user capabilities by clicking on `Settings` (the gear icon on top right) >> `View my Licenses` : 
+You can double-check your user capabilities by selecting **Settings** (the gear icon on the top right) > **View my Licenses**. 
 
-![View my licenses panel](media/cloud-flow-suspended-missing-attended-RPA-permission/view-my-licenses.png) <br><br><br>
-
+:::image type="content" source="media/cloud-flow-suspended-missing-attended-rpa-permission/view-my-licenses.png" alt-text="Screenshot that shows the View my licenses panel.":::
 
 ## Resolution
 
-There are 3 solutions to solve this licensing issue : 
-- The user owning the cloud flow needs to get assigned a "Per user plan with attended RPA" license as described in the flow checker message. To do so, the flow checker offers 2 options : send a license request to the admin or buy your own license.
-- Start a trial as offered in the flow checker message
-- Assign a "Per flow plan" to the cloud flow by clicked on `Details` > `Edit` : 
+There are two solutions to solve this licensing issue:
 
-![Cloud flow detail< - Assign per flow plan setup](media/cloud-flow-suspended-missing-attended-RPA-permission/assign-per-flow-plan.png) 
+- The cloud flow's owner needs a "per-user plan with attended RPA" license as described in the flow checker message. To do so, the flow checker offers three options: start a free 90-day trial, send a license request to the admin, or buy your own license.
+- Assign a "Per-flow" plan to the cloud flow by selecting **Details** > **Edit**. 
 
+  :::image type="content" source="media/cloud-flow-suspended-missing-attended-rpa-permission/assign-per-flow-plan.png" alt-text="Screenshot that shows how to assign a Per-flow plan in the Details settings.":::
 
-> If no Per flow plan is available on the environment, you need to contact your admin to get one allocated.
-
-<br><br>
+  > [!NOTE]
+  > If no "Per-flow" plan is available in the environment, contact your admin to get one allocated.
