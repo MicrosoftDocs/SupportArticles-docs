@@ -63,7 +63,7 @@ If auditing is enabled, a Distributed Component Object Model (DCOM) error can be
 > Computer: \<CA FQDN\>
 >
 > Description:  
-> The machine-wide limit settings do not grant Remote Activation permission for COM Server applications to the user NT AUTHORITY\ANONYMOUS LOGON SID (S-1-5-7) from address \<IP address\> running in the application container Unavailable SID (Unavailable). This security permission can be modified using the Component Services administrative tool.
+> The machine wide limit settings do not grant Remote Activation permission for COM Server applications to the user NT AUTHORITY\ANONYMOUS LOGON SID (S-1-5-7) from address \<IP address\> running in the application container Unavailable SID (Unavailable). This security permission can be modified using the Component Services administrative tool.
 
 ### Other symptoms and logs
 
