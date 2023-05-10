@@ -15,7 +15,7 @@ This article provides troubleshooting steps and solutions for common issues you 
 ## Common issues and solutions
 
 > [!NOTE]
-> For more common issues and solutions, see [Troubleshoot ARM service connections](/azure/devops/pipelines/release/azure-rm-endpoint). You can also explore [Service connection APIs](/rest/api/azure/devops/serviceendpoint/endpoints) to get, create, and update [Endpoints](/rest/api/azure/devops/serviceendpoint/endpoints).
+> For more common issues and solutions, see [Troubleshoot ARM service connections](/azure/devops/pipelines/release/azure-rm-endpoint). You can also explore [Service connection APIs](/rest/api/azure/devops/serviceendpoint/endpoints) to get, create, and update endpoints.
 
 #### Unable to renew the client secret for a service connection created through the automatic method
 
