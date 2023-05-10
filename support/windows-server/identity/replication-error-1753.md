@@ -1,7 +1,7 @@
 ---
 title: Active Directory Replication fails with Win32 error 1753
 description: Describes an issue where AD operations fail with Win32 error 1753 (There are no more endpoints available from the endpoint mapper).
-ms.date: 04/28/2023
+ms.date: 05/10/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -240,7 +240,7 @@ Active Directory and other applications also register services that receive dyna
 
 Verify that the RPC Server application of interest has registered itself with the RPC endpoint mapper on the RPC Server (the source DC in the case of AD replication).
 
-There are many ways to accomplish this task. One is to install and run [PORTQRY](https://www.microsoft.com/download/details.aspx?familyid=89811747-C74B-4638-A2D5-AC828BDC6983&displaylang=en) from an admin privileged command prompt on the console of the source DC:
+There are many ways to accomplish this task. One is to install and run [PORTQRY](https://www.microsoft.com/download/details.aspx?id=17148) from an admin privileged command prompt on the console of the source DC:
 
 ```console
 c:\>portquery -n \<source DC> -e 135 >file.txt
