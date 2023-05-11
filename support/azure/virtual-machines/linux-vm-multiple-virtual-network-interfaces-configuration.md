@@ -230,7 +230,7 @@ sudo ip rule show
     sudo systemctl start NetworkManager-dispatcher.service
     ```
 
-3. In RHEL/CentOS 8.x, the `NM_CONTROLLED` setting should be set to `yes` in each network configuration file (`/etc/sysconfig/network-scripts/ifcfg-eth#`). That's the default setting, make sure it's not set to no in your specific configuration file, to avoid issues. Also, make sure that a corresponding network configuration file is created for each network interface. The following is the sample configuration for network configuration files:
+3. In RHEL/CentOS 8.x, the `NM_CONTROLLED` setting should be set to **yes** in each network configuration file (`/etc/sysconfig/network-scripts/ifcfg-eth#`). That's the default setting. Make sure `NM_CONTROLLED` it's not set to **no** in your specific configuration file, to avoid issues. Also, make sure that a corresponding network configuration file is created per each network interface. The following is the sample configuration for network configuration files:
 
     - */etc/sysconfig/network-scripts/ifcfg-eth0*:
 
