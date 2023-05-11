@@ -352,11 +352,14 @@ If you need help to analyze the BHM data or the PSSDiag output, contact Microsof
 
 ## Applies to
 
-- BizTalk Server Branch 2010
-- BizTalk Server Developer 2010
-- BizTalk Server Enterprise 2010
-- BizTalk Server Standard 2010
-- BizTalk Server 2009 Enterprise
-- BizTalk Server 2009 Developer
-- BizTalk Server 2009 Standard
-- BizTalk Server 2009 Branch
+- BizTalk Server 2009
+
+- BizTalk Server 2010
+
+- BizTalk Server 2013
+
+- BizTalk Server 2013 R2
+
+- BizTalk Server 2016
+
+- BizTalk Server 2020
