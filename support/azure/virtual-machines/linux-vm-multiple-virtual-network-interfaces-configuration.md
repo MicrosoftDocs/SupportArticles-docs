@@ -647,7 +647,7 @@ sudo ip rule show
     POST_UP_SCRIPT="compat:suse:/etc/sysconfig/network/scripts/ifup-route.eth1"
     ```
 
-    If the `/etc/sysconfig/network/ifcfg-eth1` file  doesn't exist, create it using the contents from `/etc/sysconfig/network/ifcfg-eth0`. To do this, run the following command:
+    If the `/etc/sysconfig/network/ifcfg-eth1` file  doesn't exist, create it using the contents from `/etc/sysconfig/network/ifcfg-eth0`. Make sure the `POST_UP_SCRIPT` is adjusted to use the corresponding script. To do this, execute the following command:
 
     ```bash
     sudo cat /etc/sysconfig/network/ifcfg-eth0 > /etc/sysconfig/network/ifcfg-eth1
