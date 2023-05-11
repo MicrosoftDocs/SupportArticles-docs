@@ -377,6 +377,8 @@ sudo ip rule show
     sudo echo "200 eth0-rt" >> /etc/iproute2/rt_tables
     sudo echo "201 eth1-rt" >> /etc/iproute2/rt_tables
     ```
+    
+    If more network interfaces are attached to the VM, add extra routing tables (`202 eth2-rt`, `203 eth3-rt`, and so on).
 
 2. If Cloud-Init automation is set (the default in the Azure Ubuntu images), make sure that the network CI automation is disabled so that the `/etc/netplan/50-cloud-init.yaml` file doesn't get overwritten every time that the system is restarted.
 
@@ -545,6 +547,8 @@ sudo ip rule show
     sudo echo "200 eth0-rt" >> /etc/iproute2/rt_tables
     sudo echo "201 eth1-rt" >> /etc/iproute2/rt_tables
     ```
+    
+    If more network interfaces are attached to the VM, add extra routing tables (`202 eth2-rt`, `203 eth3-rt`, and so on).
 
 2. Create the scripts that have the routes and rules for each network interface in the `/etc/sysconfig/network/scripts/` directory use any text editor. In the following commands `vi` is being used as an example:
 
@@ -675,6 +679,8 @@ sudo ip rule show
     sudo echo "200 eth0-rt" >> /etc/iproute2/rt_tables
     sudo echo "201 eth1-rt" >> /etc/iproute2/rt_tables
     ```
+    
+    If more network interfaces are attached to the VM, add extra routing tables (`202 eth2-rt`, `203 eth3-rt`, and so on).
 
 2. Create or modify the `/etc/network/interfaces.d/50-cloud-init` configuration file with any text editor. Use the the following configuration:
 
