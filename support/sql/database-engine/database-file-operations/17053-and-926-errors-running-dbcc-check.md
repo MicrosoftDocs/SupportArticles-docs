@@ -1,6 +1,6 @@
 ---
 title: Errors 17053 and 926 when you run a DBCC CHECK command
-description: Error 17053, Error 926 and underlying OS error 112, 665 or 1450 that may be reported when you run a DBCC command in SQL Server.
+description: Error 17053, error 926 and underlying OS error 112, 665 or 1450 that may be reported when you run a DBCC command in SQL Server.
 ms.reviewer: sureshka, pijocoder
 ms.date: 05/10/2023
 ms.prod: sql
@@ -123,7 +123,7 @@ If the internal database snapshot runs into 1450 or 665 errors, here's a typical
 
 In SQL Server, `DBCC` commands use internal read-only database snapshots. For more information, see [How DBCC CHECKDB creates an internal snapshot database beginning with SQL Server 2014](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql#how-dbcc-checkdb-creates-an-internal-snapshot-database-beginning-with-sql-server-2014). These database snapshots are created on the same drive where the corresponding database data files are located. Database snapshots grow in proportion to data changes in the database where `DBCC` commands run. If transactional activity continues in the user database, the internal database snapshots created by `DBCC` commands may continue to grow and may encounter disk space issues. See [Disk Space Requirements for Database Snapshots](/sql/relational-databases/databases/database-snapshots-sql-server#DiskSpace). Because the database snapshot files and the actual data files reside on the same disk drive, both sets of files compete for disk space. In this case, application transactions or user transactions are given preference. The internal database snapshot used by `DBCC` is marked as suspect. Therefore, the `DBCC` commands produce errors and can't complete.
 
-Writes to the internal database snapshot may fail due to insufficient disk space. Other issues, such as OS error 665, can also lead to similar problems and render the internal database snapshot in a suspect state.
+Writes to the internal database snapshot may fail due to insufficient disk space. Other issues, such as OS error 665, can also lead to similar problems and render the internal database snapshot to a suspect state.
 
 ## Resolution
 
