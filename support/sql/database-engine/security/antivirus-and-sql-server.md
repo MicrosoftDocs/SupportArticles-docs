@@ -63,7 +63,7 @@ generally at a lower risk, although not always.
 
 ## SQL Server processes to exclude from virus scanning
 
-When you configure your antivirus software settings, make sure that you exclude the following processes from virus scanning.
+When you configure your antivirus software settings, make sure that you exclude the following processes (as applicable) from virus scanning.
 
 - SQLServr.exe (SQL Server Database Engine)
 - SQLAgent.exe (SQL Server Agent)
