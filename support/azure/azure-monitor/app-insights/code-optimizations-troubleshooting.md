@@ -26,8 +26,7 @@ This article provides troubleshooting steps and information for using Azure Appl
 In addition to enabling Application Insights Profiler, you should also make sure profiles are uploaded：
 
 1. Go to the [Azure portal](https://portal.azure.com), and then navigate to your Application Insights resource.
-1. On the **Investigate** section, and then select **Performance**.
-1. Select **Profiler** from the **Performance** page.
+1. On the **Investigate** section, select **Performance**, and then select **Profiler**.
     
     :::image type="content" source="./media/code-optimizations-troubleshooting/performance-page.png" alt-text="Screenshot that shows how to navigate to the app insights profiler.":::
 1. Check the **Recent profiling sessions**. If you don't see any profiling sessions, visit this page for troubleshooting: [Troubleshoot Application Insights Profiler](/troubleshoot/azure/azure-monitor/app-insights/profiler-troubleshooting).
