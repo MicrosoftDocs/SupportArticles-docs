@@ -524,7 +524,7 @@ sudo ip rule show
     ```
 
     > [!IMPORTANT]
-    > If you use any of the previous configuration file samples as a reference, make sure the MAC address value is replaced according. You can get the corresponding NIC MAC address from the `ip a | grep ether | awk '{print $2}'` command output.
+    > If you use any of the previous configuration file samples as a reference, make sure the MAC address value is replaced accordingly. You can get the corresponding NIC MAC address from the `ip a | grep ether | awk '{print $2}'` command output.
 
 4. Apply the changes by running the following command:
 
