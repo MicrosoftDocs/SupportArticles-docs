@@ -1,6 +1,6 @@
 ---
 title: Errors 17053 and 926 when you run a DBCC CHECK command
-description: Error 17053, error 926 and underlying OS error 112, 665 or 1450 that may be reported when you run a DBCC command in SQL Server.
+description: Error 17053, error 926, and underlying OS errors 112, 665, or 1450 may be reported when you run a DBCC command in SQL Server.
 ms.reviewer: sureshka, pijocoder
 ms.date: 05/10/2023
 ms.prod: sql
