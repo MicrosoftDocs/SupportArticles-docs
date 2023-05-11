@@ -109,7 +109,7 @@
         - name: Azure Active Directory
           tocHref: /troubleshoot/azure/active-directory/
           topicHref: /troubleshoot/azure/active-directory/welcome-azure-ad
-      - name: Cloud Services(Test)
+      - name: Cloud Services
         tocHref: /troubleshoot/azure/cloud-services/
         topicHref: /troubleshoot/azure/cloud-services/welcome-cloud-services
       - name: DevOps Services
