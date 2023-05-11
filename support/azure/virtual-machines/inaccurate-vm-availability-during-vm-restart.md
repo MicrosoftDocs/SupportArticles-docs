@@ -1,6 +1,6 @@
 ---
-title: VM availability metric might be inaccurate during VM restarts
-description: Understand why the VM availability metric might be reported inaccurately during virtual machine restarts in Azure.
+title: VM availability might be inaccurate during VM restarts
+description: Understand why VM availability might be reported inaccurately during virtual machine restarts in Azure.
 ms.date: 5/12/2023
 author: DennisLee-DennisLee
 ms.author: v-dele
@@ -9,11 +9,11 @@ ms.reviewer: macla, azurevmcptcic
 ms.service: virtual-machines
 ms.subservice: vm-health
 ---
-# VM availability metric might be inaccurate during VM restarts
+# VM availability might be inaccurate during VM restarts
 
-This article discusses how the VM availability metric might be reported inaccurately during a virtual machine (VM) restart that's issued by an authorized user or caused by a Guest OS crash. The inaccurate VM availability status might be published to the following Microsoft Azure resources:
+This article discusses how VM availability might be reported inaccurately during a virtual machine (VM) restart that's issued by an authorized user or caused by a Guest OS crash. The inaccurate VM availability status might be published to the following Microsoft Azure resources:
 
-- Azure Monitor
+- Azure Monitor Metrics
 - Azure Resource Graph
 - Azure Resource Health
 
