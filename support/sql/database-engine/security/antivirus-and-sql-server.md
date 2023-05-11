@@ -49,39 +49,30 @@ generally at a lower risk, although not always.
 
 - Active virus scanning: This kind of scanning checks incoming and outgoing files for viruses.
 
-- Virus sweep software: Virus sweep software scans existing files for file infection. It detects files after they're infected by a virus. This kind of scanning may cause the following SQL Server database recovery and SQL Server full-text catalog file issues:
+- Virus sweep software: Virus sweep software scans existing files for file infection. It detects issues after files are infected by a virus. This kind of scanning may cause the following SQL Server database recovery and SQL Server full-text catalog file issues:
 
-  - If the virus sweep has opened a database file and still has it open when SQL Server tries to open the database (such as when SQL Server starts or opens a database that Auto-Close has closed), the database to which the file belongs might be marked as suspect. SQL Server database files typically have the .mdf, .ldf, or .ndf file name extensions.
+  - If the virus sweep has opened a database file when SQL Server tries to open the database, the database to which the file belongs might be marked as suspect. SQL Server opens a database when it starts, or when a database with Auto-Close enabled was closed and is accessed again. SQL Server database files typically have the .mdf, .ldf, or .ndf file name extensions.
 
   - If the virus sweep software has a SQL Server full-text catalog file open when Full-text Search tries to access the file, you may have problems with the full text catalog.
 
-- Vulnerability scanning software: The Microsoft Security Compliance Toolkit includes a set of tools that enables enterprise security
- administrators to download, analyze, test, edit, and store Microsoft-recommended security configuration baselines for Windows and other Microsoft products and compare them against other security configurations. To download it, go to [Microsoft Security
- Compliance Toolkit 1.0](https://www.microsoft.com/en-us/download/details.aspx?id=55319)
+- Vulnerability scanning software: The Microsoft Security Compliance Toolkit includes a set of tools that enable enterprise  administrators do a wide range of security tasks. These tasks include download, analyze, test, edit, and store Microsoft-recommended security configuration baselines for Windows and other Microsoft products and compare them against other security configurations. To download it, go to [Microsoft Security Compliance Toolkit 1.0](https://www.microsoft.com/en-us/download/details.aspx?id=55319)
 
- Additionally, Microsoft released the Microsoft [Windows Malicious Software Removal Tool](https://www.microsoft.com/en-us/download/details.aspx?id=9905) to help remove specific, prevalent malicious software from computers. For more information about the Microsoft Windows Malicious Software Removal Tool, see the following article in the Microsoft Knowledge Base:
-
- [890830](https://support.microsoft.com/en-us/topic/remove-specific-prevalent-malware-with-windows-malicious-software-removal-tool-kb890830-ba51b71f-39cd-cdec-73eb-61979b0661e0) Remove specific prevalent malware with Windows Malicious Software Removal Tool
-
-> [!NOTE]  
-> Windows Server 2016 and later versions automatically enables Windows Defender. Make sure that Windows Defender is configured to exclude **Filestream **files. Failure to do this can result in decreased performance for backup and restore operations.
-
-For more information, see [Configure and validate exclusions for Windows Defender Antivirus scans](/windows/security/threat-protection/windows-defender-antivirus/configure-exclusions-windows-defender-antivirus).
-
+- Microsoft also released the Microsoft [Windows Malicious Software Removal Tool](https://www.microsoft.com/en-us/download/details.aspx?id=9905) to help remove specific, prevalent malicious software from computers. For more information about the Microsoft Windows Malicious Software Removal Tool, see the following article in the Microsoft Knowledge Base: [890830 Remove specific prevalent malware with Windows Malicious Software Removal Tool](https://support.microsoft.com/en-us/topic/remove-specific-prevalent-malware-with-windows-malicious-software-removal-tool-kb890830-ba51b71f-39cd-cdec-73eb-61979b0661e0) 
+  > [!NOTE]  
+  > Windows Server 2016 and later versions automatically enables Windows Defender. Make sure that Windows Defender is configured to exclude **Filestream **files. Failure to do this can result in decreased performance for backup and restore operations. For more information, see [Configure and validate exclusions for Windows Defender Antivirus scans](/windows/security/threat-protection/windows-defender-antivirus/configure-exclusions-windows-defender-antivirus).
 
 ## SQL Server processes to exclude from virus scanning
+
 When you configure your antivirus software settings, make sure that you exclude the following processes (as applicable) from virus scanning.
+
 - SQLServr.exe (SQL Server Database Engine)
 - SQLAgent.exe (SQL Server Agent)
-- ReportingServicesService.exe (SQL Server Reporting Services)
-- MSMDSrv.exe  (SQL Server Analysis Services)
 - sqlbrowser.exe (SQL Server Browser service)
-- MsDtsSrvr.exe (SQL Server Integration Services)
 - %ProgramFiles%\\Microsoft SQL Server\\1xx\\Shared\\SQLDumper.exe (SQLDumper utility)
 
 For an updated list of services and file paths, reference [Services installed by SQL Server](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Service_Details)
 
-Applications that are installed on SQL Server computer can load modules into the SQL Server process (sqlservr.exe). The applications can do this to run specific business logic or enhanced functionality, or for intrusion monitoring and protection. To detect if an unknown module or a module from a third-party software was loaded into the process memory space, check the output of the `sys.dm_os_loaded_modules` Dynamic Management View(DMV).
+Applications that are installed on a SQL Server computer can load modules into the SQL Server process (sqlservr.exe). The applications use this functionality to run business logic, or for intrusion monitoring and protection. To detect if an unknown module or a module from a third-party software was loaded into the process memory space, check the output of the `sys.dm_os_loaded_modules` Dynamic Management View(DMV).
 
 In some cases applications or drivers may be used to detour SQL Server or Windows code to provide malware protection or monitoring services. However, such applications or drivers if not designed correctly may cause a wide variety of issues to products like SQL Server. For information about third-party detours or similar techniques in SQL Server, review [Detours or similar techniques may cause unexpected behaviors with SQL Server](../../general/issue-detours-similar-techniques.md).
 
@@ -91,7 +82,7 @@ This section applies to SQL Server installations running on Windows Systems, bot
 
 ### Directories and file name extensions to exclude from virus scanning
 
-When you configure your antivirus software settings, make sure that you exclude the following files or directories (as applicable) from virus scanning. This improves the performance and ensures that the files aren't locked when the SQL Server service must use them. However, if these files become infected, your antivirus software can't detect the infection. For more information about the default file locations for SQL Server, see [File Locations for Default and Named Instances of SQL Server](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server).
+When you configure your antivirus software settings, make sure that you exclude the following files or directories (as applicable) from virus scanning. Exclusion may improve SQL Server performance and ensures that the files aren't locked when the SQL Server service must use them. However, if these files become infected, your antivirus software can't detect the infection. For more information about the default file locations for SQL Server, see [File Locations for Default and Named Instances of SQL Server](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server).
 
 #### SQL Server data files
   These files usually have one of the following file name extensions:
@@ -236,7 +227,7 @@ The XX is the build ID. For example, a default Analysis Services 2016 instance b
 
 ### SSAS directories and file name extensions to exclude from virus scanning
 
-When you configure your antivirus software settings, make sure that you exclude the following SSAS files or directories (as applicable) from virus scanning. This improves the performance of the files and helps make sure that the files aren't locked when the SQL Server service must use them. However, if these files become infected, your antivirus software can't detect the infection.
+When you configure your antivirus software settings, make sure that you exclude the following SSAS files or directories (as applicable) from virus scanning. Excluding the files improves SSAS performance and helps make sure that the files aren't locked when the SQL Server service must use them. However, if these files become infected, your antivirus software can't detect the infection.
 
 #### Data directory for Analysis Services
 
@@ -295,7 +286,7 @@ The following processes and directories for the Polybase services are to be excl
 |Service                 | Process/Executable file                                                                                     |
 |---------               |---------                                                                                                    |
 |PolyBase Engine service | %ProgramFiles%\\Microsoft SQL Server\\\<Instance_ID\>.\<Instance Name\>\\MSSQL\\Binn\\Polybase\\mpdwsvc.exe |
-
+|PolyBase Data Movement (DMS) and Engine services | %ProgramFiles%\\Microsoft SQL Server\\\<Instance_ID\>.\<Instance Name\>\\MSSQL\\Binn\\Polybase\\mpdwsvc.exe |
 
 PolyBase Data Movement service (DMS) and Engine services use same executable with different command line parameters.
 
@@ -303,7 +294,9 @@ PolyBase Data Movement service (DMS) and Engine services use same executable wit
 
 When you configure your antivirus software settings, make sure that you exclude the following files or directories (as applicable) from virus scanning. This improves the performance of the files and helps make sure that the files aren't locked when the Polybase service must use them. However, if these files become infected, your antivirus software can't detect the infection.
 
-PolyBase log files (%ProgramFiles%\\Microsoft SQL Server\\\<Instance_ID\>.\<InstanceName\>\\MSSQL\\Log\\Polybase\\)
+|Description          | Directories to exclude                                                                       |
+|---------            |---------                                                                                     |
+|PolyBase log files   |%ProgramFiles%\\Microsoft SQL Server\\\<Instance_ID\>.\<InstanceName\>\\MSSQL\\Log\\Polybase\\|
 
 ## Configure antivirus software to work with Reporting Services
 
