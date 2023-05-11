@@ -1,6 +1,0 @@
-- name: Welcome
-  href: welcome-azure-ad.yml
-  items:
-    - name: Error AADSTS75011 - authentication method mismatch
-      href: error-code-AADSTS75011-auth-method-mismatch.md
-   

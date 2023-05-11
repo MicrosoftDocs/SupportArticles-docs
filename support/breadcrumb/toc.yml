@@ -106,7 +106,7 @@
         tocHref: /troubleshoot/azure/microsoft-entra/
         topicHref: /troubleshoot/azure/microsoft-entra/welcome-microsoft-entra
         items:
-        - name: Azure Active Directory(new)
+        - name: Azure Active Directory
           tocHref: /troubleshoot/azure/active-directory/
           topicHref: /troubleshoot/azure/active-directory/welcome-azure-ad
       - name: Cloud Services(Test)

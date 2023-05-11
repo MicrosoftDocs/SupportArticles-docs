@@ -4,7 +4,7 @@
   - name: Azure Active Directory
     href: active-directory/welcome-azure-ad.yml
   - name: Microsoft Entra
-    href: microsoft-entra/index.yml
+    href: microsoft-entra/welcome-microsoft-entra.yml
   - name: Azure Active Directory
     href: microsoft-entra/active-directory/welcome-azure-ad.yml
   - name: Azure Kubernetes Services
