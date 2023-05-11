@@ -27,7 +27,7 @@ Consider the following scenario:
 
 ## Cause
 
-If you select the **Flow checker** button, a specific message informs you that the user owning this cloud flow needs the attended RPA capability.
+This issue occurs when the cloud flow's owner doesn't have a per-user plan with attended RPA capability. You can confirm if this is the case by selecting the **Flow checker** button to view the error message details.
 
 :::image type="content" source="media/cloud-flow-suspended-missing-attended-rpa-permission/flow-checker.png" alt-text="Screenshot that shows the error details in the flow checker message.":::
 
@@ -39,7 +39,7 @@ You can double-check your user capabilities by selecting **Settings** (the gear 
 
 There are two solutions to solve this licensing issue:
 
-- The cloud flow's owner needs a "per-user plan with attended RPA" license as described in the flow checker message. To do so, the flow checker offers three options: start a free 90-day trial, send a license request to the admin, or buy your own license.
+- The cloud flow's owner needs a [per user with attended RPA license](/power-platform/admin/power-automate-licensing/types) as described in the flow checker message. To do so, the flow checker offers three options: start a free 90-day trial, send a license request to the admin, or buy your own license.
 - Assign a "Per-flow" plan to the cloud flow by selecting **Details** > **Edit**. 
 
   :::image type="content" source="media/cloud-flow-suspended-missing-attended-rpa-permission/assign-per-flow-plan.png" alt-text="Screenshot that shows how to assign a Per-flow plan in the Details settings.":::
