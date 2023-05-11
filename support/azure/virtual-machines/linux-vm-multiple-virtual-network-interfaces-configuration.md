@@ -313,7 +313,7 @@ sudo ip rule show
           sudo vi /etc/sysconfig/network-scripts/rule-eth1
           ```
 
-      2. Add the following contents to the rule file (adjust the IP address accordingly, and make sure that you specify the IPv4 address in the command):
+      2. Add the following contents to the rule file (adjust the IP address accordingly, make sure that you specify the IPv4 address in the command, and preserve the 32 bits value):
 
           **2 NICs in the same subnet:**
 
@@ -409,7 +409,7 @@ sudo ip rule show
        table: <routingTableID>
     ```
 
-    Replace the subnet, MAC Address and IP address for each network interface (eth0 and eth1) accordingly.
+    Replace the subnet, MAC Address and IP address information for each network interface (eth0 and eth1) accordingly. Make sure the 32 bits value is preserved in the `routing-policy` block.
 
     Here's the sample configuration file that uses the given sample details:
 
@@ -590,7 +590,7 @@ sudo ip rule show
         /sbin/ip rule add to 10.0.2.5/32 table eth1-rt
         ```
 
-    Adjust the Network and IP address information accordingly. If there are more than two NICs, make sure that the corresponding IP rules and IP routes are included for each one.
+    Adjust the Network and IP address information accordingly, and preserve the 32 bits value where used. If there are more than two NICs, make sure that the corresponding IP rules and IP routes are included for each one.
   
 3. Provide execution permissions to both scripts:
 
@@ -725,6 +725,8 @@ sudo ip rule show
     up /usr/sbin/ip rule add from 10.0.2.5/32 table eth1-rt
     up /usr/sbin/ip rule add to 10.0.2.5/32 table eth1-rt
     ```
+    
+    Adjust the Network and IP address information accordingly, and preserve the 32 bits value where used. If there are more than two NICs, make sure that the corresponding IP rules and IP routes are included for each one.
 
 3. Activate the new configuration using the following command:
 
