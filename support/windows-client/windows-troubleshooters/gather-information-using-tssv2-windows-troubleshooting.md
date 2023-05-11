@@ -51,4 +51,4 @@ Then, run the cmdlets that are listed in the following table according to your i
 |<a id="wmi-without-high-cpu"></a>WMI issues (without high CPU usage)     |`.\TSSv2.ps1 -Scenario UEX_WMI`         |
 |<a id="remote-desktop-client-connection"></a>Remote Desktop Client connection issues     |`.\TSSV2 -CollectLog -UEX_Basic -UEX_RDS -UEX_WinRM -UEX_WMI`         |
 |<a id="winrm"></a>WinRM issues     |`.\TSSv2.ps1 -scenario UEX_WinRM`         |
-|<a id="powershell"></a>PowerShell issues     |`.\TSSv2.ps1 -Collectlog NET_PowerShell`<br>.`\TSSv2.ps1  -scenario UEX_PowerShell`|
+|<a id="powershell">[PowerShell issues](#powershell)</a>     |`.\TSSv2.ps1 -Collectlog NET_PowerShell`<br>.`\TSSv2.ps1  -scenario UEX_PowerShell`|
