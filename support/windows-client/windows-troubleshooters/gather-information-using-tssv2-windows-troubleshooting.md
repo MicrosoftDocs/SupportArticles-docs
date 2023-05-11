@@ -54,4 +54,5 @@ Then, run the cmdlets that are listed in the following table according to your i
 |WinRM issues     |.\TSSv2.ps1 -scenario UEX_WinRM         |
 |PowerShell issues     |```powershell
 .\TSSv2.ps1 -Collectlog NET_PowerShell
-```<br>.\TSSv2.ps1  -scenario UEX_PowerShell|
+```
+<br>.\TSSv2.ps1  -scenario UEX_PowerShell|
