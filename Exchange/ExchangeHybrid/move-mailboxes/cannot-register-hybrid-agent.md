@@ -18,7 +18,7 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2013
 search.appverid: MET150
-ms.date: 01/10/2023
+ms.date: 5/11/2023
 ---
 
 # Can't register a Hybrid Agent in Exchange Server
@@ -71,7 +71,6 @@ Choose one of the following options:
 
 Remove the previously installed, orphaned Hybrid Agent application. To do this, follow these steps:
 
-Step1:
 1. Get the application GUID of the previous Hybrid Agent application. You can find this GUID by searching the HCW log for the following entry:
 
    `10386 [Client=UX, Thread=<ID>] Previous Connector Application Name found: <application GUID>`
@@ -80,23 +79,23 @@ Step1:
 
    `10386 [Client=UX, Thread=20] Previous Connector Application Name found: 8fc44b37-bf0d-45bf-8254-d4d033d93a6e`
 
-2. Remove the previous Hybrid Agent application. To do this, follow these steps:
+1. Remove the previous Hybrid Agent application. To do this, follow these steps:
 
    1. Load the [HybridManagement PowerShell module](/exchange/hybrid-deployment/hybrid-agent#installation-prerequisites):
 
       1. Install the [Microsoft PackageManagement PowerShell module](https://www.powershellgallery.com/packages/PackageManagement).
 
-      2. Install the [Microsoft Azure PowerShell module](/powershell/azure/servicemanagement/install-azure-ps#step-2-install-azure-powershell).
+      1. Install the [Microsoft Azure PowerShell module](/powershell/azure/servicemanagement/install-azure-ps#step-2-install-azure-powershell).
 
-      3. Download the latest version of the Microsoft [HybridManagement.psm1](https://aka.ms/hybridconnectivity) PowerShell module to a server in your Exchange organization.
+      1. Download the latest version of the Microsoft [HybridManagement.psm1](https://aka.ms/hybridconnectivity) PowerShell module to a server in your Exchange organization.
 
-      4. In the folder that contains the HybridManagement module, run the following PowerShell command as an administrator:
+      1. In the folder that contains the HybridManagement module, run the following PowerShell command as an administrator:
 
          ```powershell
          Import-Module .\HybridManagement.psm1
          ```
 
-   2. Pass the application GUID that you found in step 1 to the [Remove-HybridApplication](/exchange/hybrid-deployment/hybrid-agent#hybrid-agent-powershell-module) cmdlet:
+   1. Pass the application GUID that you found in step 1 to the [Remove-HybridApplication](/exchange/hybrid-deployment/hybrid-agent#hybrid-agent-powershell-module) cmdlet:
 
       ```powershell
       Remove-HybridApplication -AppId <application GUID> -Credential (Get-Credential)
@@ -109,24 +108,25 @@ Step1:
       ```
 
       When you're prompted for credentials, enter your Microsoft 365 or Office 365 Global Administrator credentials.
-
-  3. Re-run HCW in classic mode to unregister the application proxy service in azure AD 
-  4. Ensure that in the control panel (add or remove programs/uninstall a program) the ‘Microsoft Hybrid service’ is not present, check that article for more information https://learn.microsoft.com/en-us/exchange/hybrid-deployment/hybrid-agent#additional-information
-  5. If you still find Microsoft Hybrid service present there rerun step 2 again to remove the Hybrid Agent application
-  6. Re-run HCW in modern mode
+1. Re-run the HCW in classic mode to unregister the Application Proxy service in Azure AD.
+1. Go to **Programs and Features** in Control Panel, verify that **Microsoft Hybrid Service** isn't [installed](/exchange/hybrid-deployment/hybrid-agent#additional-information). If it is, re-run step 2 to remove the Hybrid Agent application.
+1. Re-run the HCW in modern mode.
+  
    > [!NOTE]
    > When you're prompted to choose a hybrid topology, select **Exchange Modern Hybrid Topology**.
 
+If the Hybrid Agent application isn't successfully removed, use one of the following options:
 
-Step 2: If step 1 doesn’t work follow the below steps,
+- Run the following [Remove-AzureADApplicationProxyApplication](/powershell/module/azuread/remove-azureadapplicationproxyapplication) command:
 
-  1. Remove the hybrid app using below command. For more information, see [Remove-AzureADApplicationProxyApplication](/powershell/module/azuread/remove-azureadapplicationproxyapplication). 
    ```powershell
-   Remove-AzureADApplicationProxyApplication -ObjectId 0d7b0f02-3f63-414d-8d20-4b8bd0291e42(replace with your appid) -RemoveADApplication $true
+   Remove-AzureADApplicationProxyApplication -ObjectId <application GUID> -RemoveADApplication $true
    ```
-  2. If not you might try scanning all the apps then remove the hybrid app using Remove-AzureADApplicationProxyApplication command
-    ```powershell
-    Get-AzureADServicePrincipal | where {$_.Tags -Contains "WindowsAzureActiveDirectoryOnPremApp"} | fl AppId, DisplayName
-    ```
  
-Step 3: If step 2 doesn’t work, please raise a support case with microsoft.
+- Run the following command to get the application GUID, and then run the `Remove-AzureADApplicationProxyApplication` command to remove the application: 
+  
+  ```powershell
+  Get-AzureADServicePrincipal | where {$_.Tags -Contains "WindowsAzureActiveDirectoryOnPremApp"} | fl AppId, DisplayName
+  ```
+ 
+If you still can't remove the Hybrid Agent application, [contact Microsoft Support](https://support.microsoft.com/contactus). 
