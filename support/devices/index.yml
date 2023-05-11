@@ -20,8 +20,10 @@ landingContent:
     linkLists:      
       - linkListType: how-to-guide
         links:
-          - text: Surface devices troubleshooting 
-            url: index
+          - text: Surface Device with a 1-TB drive configuration shows two drives
+            url: surface-device-1tb-drive-configuration-shows-two-drives.md
+          - text: PXE boot fails on a Surface Laptop
+            url: pxe-boot-fails-on-surface-laptop.md
   - title: Surface Hub
     linkLists:      
       - linkListType: how-to-guide
