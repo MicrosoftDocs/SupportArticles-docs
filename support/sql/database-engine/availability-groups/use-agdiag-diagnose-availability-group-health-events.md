@@ -61,18 +61,22 @@ The following AGDiag Splash Screen describes AGDiag capabilities and version inf
 
 :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/agdiag-splash-screen.png" alt-text="Screenshot of the AGDiag Splash Screen." lightbox="media/use-agdiag-diagnose-availability-group-health-events/agdiag-splash-screen.png":::
 
-AGDiag reports on the logs analyzed in the initialize section:
+AGDiag reports on the logs analyzed in the initialize section. Select the triangles (highlighted in red boxes in the following image) to expand more detailed information.
 
 :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/agdiag-report.png" alt-text="Screenshot of the AGDiag reports on the logs." lightbox="media/use-agdiag-diagnose-availability-group-health-events/agdiag-report.png":::
 
-The summary report lists the availability group health events from the cluster log:
+The summary report lists the availability group health events from the cluster log. Select the numerical link (highlighted in red box in the following image) to jump to a specific health event's detailed report.
 
 :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/availability-group-health-event-summary-report.png" alt-text="Screenshot of availability group health events." lightbox="media/use-agdiag-diagnose-availability-group-health-events/availability-group-health-event-summary-report.png":::
 
-There's a detailed report for each health event detected, which includes log findings that correlate to the health event, diagnosis, and recommendations:
+There's a detailed report for each health event detected, which includes log findings that correlate to the health event, diagnosis, and recommendations. Select the triangles (highlighted in red boxes in the following image) to expand more detailed information.
 
 :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/alwayson-health-event.png" alt-text="Screenshot of AlwaysOn health events." lightbox="media/use-agdiag-diagnose-availability-group-health-events/alwayson-health-event.png":::
 
 ## Known issues with AGDiag
 
 For the latest information on documented issues and possible solutions, see [Known Issues with AGDiag](https://github.com/microsoft/agdiag/wiki/Known-Issues-with-AGDiag).
+
+## See related
+
+[Troubleshoot Always On Availability Groups failover](troubleshooting-availability-group-failover.md)

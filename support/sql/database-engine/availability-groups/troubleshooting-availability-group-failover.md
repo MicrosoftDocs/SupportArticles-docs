@@ -403,3 +403,7 @@ To identify the Always On specific health issue, follow these steps:
    Notice that the 'totalDumprequests=186' data indicates there have been too many dump file diagnostic events generated on this SQL Server. This is the reason that the system component reported an error state. When Always On health monitoring receives this error state, it triggers an availability group health event. You can also verify that no write access violations or orphan spinlocks have been detected from the data provided in the system component data.
 
    If it's necessary, contact SQL Server support to open a support incident for further assistance in finding the root cause for these internal SQL Server health problems.
+
+## See related
+
+[Use AGDiag to diagnose availability group health events](use-agdiag-diagnose-availability-group-health-events.md)
