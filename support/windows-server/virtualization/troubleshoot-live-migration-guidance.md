@@ -38,7 +38,8 @@ This article is designed to get you started on troubleshooting issues encountere
     Open **Create symbolic links** and check whether the following user accounts are listed:  
     - Administrators  
     - NT VIRTUAL MACHINE\Virtual Machines  
-    - Log on as a service  
+    
+    Open **Log on as a service** and check whether the following user accounts are listed:  
     - NT SERVICE\ALL SERVICES  
     - NT VIRTUAL MACHINE\Virtual Machines
 
