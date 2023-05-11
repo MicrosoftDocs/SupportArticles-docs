@@ -1216,6 +1216,8 @@
       href: ./group-policy/group-policy-error-7016-1091-1202.md
     - name: Group policy with WMI filters can be denied or cause slow logon/boot
       href: ./group-policy/group-policy-wmi-filters-denied-slow-logon-boot.md
+    - name: Network disconnection after configuring the LLTDIO and RSPNDR GPOs
+      href: ./group-policy/network-disconnection-after-configuring-lltdio-rspndr-gpos.md
     - name: Netlogon event ID 5719 or Group Policy event 1129
       href: ./group-policy/netlogon-event-id-5719-or-group-policy-event-1129.md
     - name: Password policy changes aren't applied
@@ -1348,6 +1350,8 @@
       href: ./high-availability/cluster-validation-failure-error-80070005.md
     - name: Creating failover cluster fails with error 0xc000005e
       href: ./high-availability/creating-failover-cluster-fails-error-0xc0000055.md
+    - name: Error 0x80090327 when adding a node to a cluster
+      href: ./high-availability/error-0x80090327-adding-node-to-cluster.md
     - name: Error message event ID 1289 is logged when you try to create a cluster
       href: ./high-availability/error-event-id-1289-create-cluster.md
     - name: Implications of using /forcequorum switch
@@ -2530,6 +2534,8 @@
       href: ./system-management-components/powershell-console-characters-garbled-for-cjk-languages.md
   - name: Server Manager
     items:
+    - name: Error 0x800f0805 when Server Manager and DISM fail to list the available features
+      href: ./system-management-components/error-0x800f0805-server-manager-dism-fail-list-available-features.md
     - name: error code 0x800706BE
       href: ./system-management-components/unable-view-roles-features-error-code-0x800706BE.md
     - name: Error when you select Roles in Server Manager
@@ -2588,6 +2594,8 @@
       href: ./user-profiles-and-logon/cached-domain-logon-information.md
     - name: Can't log off from a computer
       href: ./user-profiles-and-logon/windows-log-off-errors-events.md
+    - name: Can't sign in to a DC and the LSASS process stops responding
+      href: ./user-profiles-and-logon/cannot-sign-in-dc-lsass-process-stop-responding.md
     - name: Error 1384 when you log on to a domain
       href: ./user-profiles-and-logon/security-content-accumated-many-security-ids.md
     - name: 'Error: The RPC server is unavailable'
@@ -2924,6 +2932,8 @@
       href: ./windows-security/rpc-endpoint-mapper-prevents-users-added-to-trust-forest.md
   - name: Kerberos authentication
     items:
+    - name: Active Directory authentication fails with klist error 0x8009030e
+      href: ./windows-security/active-directory-authentication-fails-klist-error-0x8009030e.md
     - name: 'Troubleshooting guidance: Kerberos authentication'
       href: ./windows-security/kerberos-authentication-troubleshooting-guidance.md
     - name: Authentication failure on NTLM and Kerberos servers
