@@ -15,3 +15,9 @@
     items:
     - name: Surface Hub troubleshooting
       href: /surface-hub/troubleshoot-surface-hub
+    - name: Collect Surface Hub log files
+      href: /surface-hub/collect-surface-hub-log-files
+    - name: Third-Party Stand policy and waiver
+      href: /surface-hub/surface-hub-third-party-stand-policy-waiver
+    - name: Surface Hub can't download updates from Windows Update
+      href: /surface-hub/surface-hub-cannot-download-updates-from-windows-update
