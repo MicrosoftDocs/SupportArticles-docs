@@ -26,7 +26,7 @@ Refer to [Introduction to TroubleShootingScript toolset (TSSv2)](introduction-to
 ## Gather key information before contacting Microsoft support
 
 1. Download [TSSv2](https://aka.ms/getTSSv2) and extract it in the *C:\\tss_tool* folder. If you've downloaded this tool previously, we recommend downloading the latest version. It doesn't automatically update when running.
-2. Open the *C:\\tss_tool* folder from an elevated PowerShell [command prompt](#powershell).
+2. Open the *C:\\tss_tool* folder from an elevated PowerShell command prompt.
     > [!NOTE]
     > Don't use the Windows PowerShell Integrated Scripting Environment (ISE).
 3. Run the following cmdlet:
@@ -47,8 +47,7 @@ Then, run the cmdlets that are listed in the following table according to your i
 |<a id="printing"></a>Printing issues     |`.\TSSv2.ps1 -start -UEX_Print -Procmon -netsh -PSR`         |
 |<a id="remote-desktop-disconnection"></a>Remote Desktop disconnection issues     |`.\TSSv2.ps1 -CollectLog UEX_EventLog`<br>`.\TSSv2.ps1 -Start -Scenario UEX_General`|
 |<a id="remote-desktop-disconnection-configuration"></a>Remote Desktop connection configuration issues     |`.\TSSv2.ps1 -Start -Scenario UEX_ServerManager -UEX_WMI -UEX_RDS -UEX_ServerManager -UEX_WinRM`         |
-|<a id="wmi-with-high-cpu"></a>WMI issues (with high CPU usage)     |`.\TSSv2.ps1 -Scenario UEX_WMIHighCPU`         |
-|<a id="wmi-without-high-cpu"></a>WMI issues (without high CPU usage)     |`.\TSSv2.ps1 -Scenario UEX_WMI`         |
+|<a id="wmi"></a>WMI issues     |`.\TSSv2.ps1 -Scenario UEX_WMIHighCPU` (with high CPU usage)<br>`.\TSSv2.ps1 -Scenario UEX_WMI` (without high CPU usage)         |
 |<a id="remote-desktop-client-connection"></a>Remote Desktop Client connection issues     |`.\TSSV2 -CollectLog -UEX_Basic -UEX_RDS -UEX_WinRM -UEX_WMI`         |
 |<a id="winrm"></a>WinRM issues     |`.\TSSv2.ps1 -scenario UEX_WinRM`         |
-|<a id="powershell">[PowerShell issues](#powershell)</a>     |`.\TSSv2.ps1 -Collectlog NET_PowerShell`<br>.`\TSSv2.ps1  -scenario UEX_PowerShell`|
+|<a id="powershell"></a>PowerShell issues     |`.\TSSv2.ps1 -Collectlog NET_PowerShell`<br>.`\TSSv2.ps1  -scenario UEX_PowerShell`|
