@@ -133,6 +133,8 @@
           href: sessioncreationtimeout-error-code.md
         - name: Double-click, drag and drop aren't working
           href: double-click-drag-drop-are-not-working.md
+        - name: Errors when running desktop flows including Excel actions
+          href: troubleshoot-excel-errors.md
         - name: Errors when running attended or unattended desktop flows
           href: troubleshoot-errors-running-attended-or-unattended-desktop-flows.md
         - name: Failed license check on a desktop flow run
