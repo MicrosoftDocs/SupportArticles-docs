@@ -27,11 +27,11 @@ For details, see the following screenshots:
 
 **VM with 2 NICs in the same subnet:**
 
-:::image type="content" source="media/linux-vm-multiple-virtual-network-interfaces-configuration/vm-two-nics-same-subnet.png" alt-text="Diagram that shows networking configuration of the sample scenario.":::
+:::image type="content" source="media/linux-vm-multiple-virtual-network-interfaces-configuration/vm-two-nics-same-subnet.png" alt-text="Diagram that shows networking configuration of a VM with 2 NICs in the same subnet.":::
 
 **VM with 2 NICs in different subnets:**
 
-:::image type="content" source="media/linux-vm-multiple-virtual-network-interfaces-configuration/vm-two-nics-different-subnet.png" alt-text="Diagram that shows networking configuration of the sample scenario.":::
+:::image type="content" source="media/linux-vm-multiple-virtual-network-interfaces-configuration/vm-two-nics-different-subnet.png" alt-text="Diagram that shows networking configuration of a VM with 2 NICs in different subnets.":::
 
 In any of the scenarios, the connectivity can be tested from any VM in the same VNET.
 
