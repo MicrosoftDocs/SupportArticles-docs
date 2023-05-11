@@ -144,6 +144,7 @@ As outlined in Supported container hosts, not all host operating systems support
 |Windows Server 2016 or 2019 Standard or Datacenter|Windows Server containers and Hyper-V containers with isolation|Windows Server containers and Hyper-V containers with isolation|Windows Server containers and Hyper-V containers with isolation|Not supported|
 |Windows 10 Professional or Enterprise|Hyper-V containers with isolation and Windows Server containers for dev/test|Hyper-V containers with isolation and Windows Server containers for dev/test|Hyper-V containers with isolation and Windows Server containers for dev/test|Not supported|
 |Windows IoT Core|Not supported|Not supported|Not supported|Windows Server containers|
+
 If you plan to use container hosts that run different versions and releases of Windows, you will also need to consider the versions and releases of the container images. Some container features aren't backward compatible, so some newer container base images may not run on container hosts with old Operation System (OS) versions. See [Windows Container Version Compatibility](/virtualization/windowscontainers/deploy-containers/version-compatibility) for more information.
 
 ## Support for container workloads
@@ -157,7 +158,7 @@ For support of Microsoft applications like IIS, SQL and .NET running in containe
 
 Avoid copying .DLLs from the container host to the Windows Server Core base image as it may cause the application to misbehave.
 
-Microsoft provides some component .DLLs in redistributable package form. For example, the Windows Server Core container base image doesn't include the VB runtime .DLLs. To get the .DLLs, download the redistributable package [Service Pack 6 for Visual Basic 6.0: Run-Time Redistribution Pack (vbrun60sp6.exe)](https://www.microsoft.com/en-us/download/details.aspx?id=24417) from official Microsoft Download Center and install it in the container image using a Dockerfile.
+Microsoft provides some component .DLLs in redistributable package form. For example, the Windows Server Core container base image doesn't include the VB runtime .DLLs. To get the .DLLs, download the redistributable package [Service Pack 6 for Visual Basic 6.0: Run-Time Redistribution Pack (vbrun60sp6.exe)](https://www.microsoft.com/download/details.aspx?id=24417) from official Microsoft Download Center and install it in the container image using a Dockerfile.
 
 There is not a “single source of truth” in terms of which .DLLs are offered in a redistributable form or not.
 
