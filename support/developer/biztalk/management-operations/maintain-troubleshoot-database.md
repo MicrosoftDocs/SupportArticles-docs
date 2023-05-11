@@ -54,14 +54,22 @@ EXEC sp_dboption 'BizTalkMsgBoxDB', 'auto update statistics', 'off'
 On the computer that is running SQL Server and hosting the `BizTalkMsgBoxDb` database, set the max degree of parallelism `run_value` and `config_value` properties to a value of **1**. In later SQL versions, it's also possible to specify this setting per database instead of per SQL instance. For more information, see [Set MAXDOP](/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql). To determine the `max degree of parallelism` setting, execute the following stored procedure against the Master database in SQL Server:
 
 ```sql
+EXEC sp_configure 'show advanced options', 1;
+GO
 EXEC sp_configure 'max degree of parallelism'
 ```
 
 If the `run_value` and `config_value` properties aren't set to a value of **1**, execute the following stored procedure in SQL Server to set them to **1**:
 
 ```sql
-EXEC sp_configure 'max degree of parallelism', '1'
-reconfigure with override
+EXEC sp_configure 'show advanced options', 1;
+GO
+RECONFIGURE WITH OVERRIDE;
+GO
+EXEC sp_configure 'max degree of parallelism', 1;
+GO
+RECONFIGURE WITH OVERRIDE;
+GO
 ```
 
 ## Determine when you can rebuild BizTalk Server indexes
