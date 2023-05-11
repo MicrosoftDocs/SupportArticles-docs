@@ -1,11 +1,10 @@
 ---
 title: Maintain and troubleshoot databases
 description: This article provides detailed information about how to maintain and troubleshoot BizTalk Server databases.
-ms.date: 05/08/2023
+ms.date: 05/11/2023
 ms.custom: sap:Management and Operations
 author: padmajayaraman
 ms.author: v-jayaramanp
-ms.reviewer: mandia
 ms.topic: how-to
 ---
 # Maintain and troubleshoot BizTalk Server databases
