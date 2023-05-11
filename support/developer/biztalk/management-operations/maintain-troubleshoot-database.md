@@ -139,9 +139,9 @@ All BizTalk SQL Server Agent jobs except the `MessageBox_Message_ManageRefCountL
 
 Service instances can be suspended (resumable) or suspended (not resumable). These service instances may be Messaging, Orchestration, or Port.
 
-These service instances can make the `BizTalkMsgBoxDb` database grow unnecessarily and can be terminated. You can use the Group Hub to query, resume or terminate messages. You can also use *Terminate.vbs* script or BizTalk Health Monitor (BHM) tool to query, purge, and maintain BizTalk databases. In some situations, there can be orphaned or zombie messages left in the system. The BHM tool can help to correct these situations.
+These service instances can make the `BizTalkMsgBoxDb` database grow unnecessarily and can be terminated. You can use the Group Hub to query, resume or terminate messages. You can also use _Terminate.vbs_ script or BizTalk Health Monitor (BHM) tool to query, purge, and maintain BizTalk databases. In some situations, there can be orphaned or zombie messages left in the system. The BHM tool can help to correct these situations.
 
-For more information about the *Terminate.vbs* script, see [Removing Suspended Service Instances](/biztalk/core/technical-reference/removing-suspended-service-instances).
+For more information about the _Terminate.vbs_ script, see [Removing Suspended Service Instances](/biztalk/core/technical-reference/removing-suspended-service-instances).
 
 Caching instances don't appear in the **Group Hub** page, and you can't suspend or terminate them. This restriction is a common cause of table growth. To prevent new zombie messages for the cache service instances in BizTalk Server 2006, install the hotfix in Microsoft Knowledge Base article 936536. This issue is fixed in BizTalk Server 2006 R2 and later versions.
 
@@ -198,13 +198,13 @@ Additionally, you can use the BHM tool output to determine which tables are the 
 
 |Table|Description|
 |---|---|
-|`HostName Q_Suspended`|This table contains a reference to messages in the `Spool` table that are associated with suspended instances for the particular host. This table is in the `BizTalkMsgBoxDb` database.|
-|`HostName Q`|This table contains a reference to messages in the `Spool` table that are associated with the particular host and aren't suspended. This table is in the `BizTalkMsgBoxDb` database.|
+|\<HostName\>Q_Suspended table|This table contains a reference to messages in the `Spool` table that are associated with suspended instances for the particular host. This table is in the `BizTalkMsgBoxDb` database.|
+|\<HostName\>Q table|This table contains a reference to messages in the `Spool` table that are associated with the particular host and aren't suspended. This table is in the `BizTalkMsgBoxDb` database.|
 |`Spool`<br/><br/>`Parts`<br/><br/>`Fragments`|These tables store actual message data in the `BizTalkMsgBoxDb` database.|
 |`Instances`|This table stores all instances and their current status in the `BizTalkMsgBoxDb` database.|
-|`TrackingData_0_ _x_`|These four tables store the Business Activity Monitoring (BAM) tracked events in the `BizTalkMsgBoxDb` database for TDDS to move the events to the `BAMPrimaryImport` database.|
-|`TrackingData_1_ _x_`|These four tables store the tracked events in the `BizTalkMsgBoxDb` database for TDDS to move the events to the `BizTalkDTADB` database.|
-|`Tracking_Fragments x` <br/>`Tracking_Parts x` <br/>`Tracking_Spool x`|Two of each of these tables is in the `BizTalkMsgBoxDb` and `BizTalkDTADb` databases. One is online, and the other is offline.<br/><br/>In BizTalk Server 2004 SP2 and in later versions, the `TrackedMessages_Copy_BizTalkMsgBoxDb` SQL Server Agent job moves tracked message bodies directly to these tables in the `BizTalkDTADb` database.<br/><br/>In BizTalk Server 2004 Service Pack 1 (SP1) and in earlier versions of BizTalk Server 2004, the `TrackedMessages_Copy_BizTalkMsgBoxDb` SQL Server Agent job copies tracked message bodies into these tables in the `BizTalkMsgBoxDb` database. The `TrackingSpool_Cleanup_BizTalkMsgBoxDb` SQL Server Agent job purges the offline tables and makes the tables online while the job also takes the online tables offline.|
+|`TrackingData_0_x`|These four tables store the Business Activity Monitoring (BAM) tracked events in the `BizTalkMsgBoxDb` database for TDDS to move the events to the `BAMPrimaryImport` database.|
+|`TrackingData_1_x`|These four tables store the tracked events in the `BizTalkMsgBoxDb` database for TDDS to move the events to the `BizTalkDTADB` database.|
+|`Tracking_Fragmentsx` <br/>`Tracking_Partsx` <br/>`Tracking_Spoolx`|Two of each of these tables is in the `BizTalkMsgBoxDb` and `BizTalkDTADb` databases. One is online, and the other is offline.<br/><br/>In BizTalk Server 2004 SP2 and in later versions, the `TrackedMessages_Copy_BizTalkMsgBoxDb` SQL Server Agent job moves tracked message bodies directly to these tables in the `BizTalkDTADb` database.<br/><br/>In BizTalk Server 2004 Service Pack 1 (SP1) and in earlier versions of BizTalk Server 2004, the `TrackedMessages_Copy_BizTalkMsgBoxDb` SQL Server Agent job copies tracked message bodies into these tables in the `BizTalkMsgBoxDb` database. The `TrackingSpool_Cleanup_BizTalkMsgBoxDb` SQL Server Agent job purges the offline tables and makes the tables online while the job also takes the online tables offline.|
 |`dta_ServiceInstances`|This table stores tracked events for service instances in the `BizTalkDTADb` database. If this table is large, the `BizTalkDTADb` database is probably large.|
 |`dta_DebugTrace`|This table stores the Orchestration debugger events in the BizTalkDTADb database.|
 |`dta_MessageInOutEvents`|This table stores tracked event messages in the `BizTalkDTADb` database. These tracked event messages include message context information.|
@@ -212,15 +212,15 @@ Additionally, you can use the BHM tool output to determine which tables are the 
   
 Consider the following scenarios.
 
-- **HostNameQ_Suspended tables**
+- **\<HostName\>Q_Suspended tables**
 
-  If the `HostNameQ_Suspended` tables have many records, the tables could be valid suspended instances that appear in **Group Hub** or in HAT. These instances can be terminated. If these instances don't appear in **Group Hub** or in HAT, the instances are probably caching instances or orphaned routing failure reports. When suspended instances are terminated, the items in this table and their associated rows in the `Spool` and `Instances` tables are cleaned up.
+  If the \<HostName\>Q_Suspended tables have many records, the tables could be valid suspended instances that appear in **Group Hub** or in HAT. These instances can be terminated. If these instances don't appear in **Group Hub** or in HAT, the instances are probably caching instances or orphaned routing failure reports. When suspended instances are terminated, the items in this table and their associated rows in the `Spool` and `Instances` tables are cleaned up.
 
   In this scenario, handle the suspended instances by resuming them or terminating them. The BHM tool can also be used.
 
-- **HostNameQ tables**
+- **\<HostName\>Q tables**
 
-  If the `HostNameQ` tables have many records, the following kinds of instances may exist:
+  If the \<HostName\>Q tables have many records, the following kinds of instances may exist:
 
   - Ready-to-run instances
   - Active instances
