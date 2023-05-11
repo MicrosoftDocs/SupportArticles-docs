@@ -550,7 +550,7 @@ sudo ip rule show
     
     If more network interfaces are attached to the VM, add extra routing tables (`202 eth2-rt`, `203 eth3-rt`, and so on).
 
-2. Create the scripts that have the routes and rules for each network interface in the `/etc/sysconfig/network/scripts/` directory use any text editor. In the following commands `vi` is being used as an example:
+2. Create the scripts that have the routes and rules for each network interface in the `/etc/sysconfig/network/scripts/` directory using any text editor. In the following commands `vi` is being used as an example:
 
     - */etc/sysconfig/network/scripts/ifup-route.eth0*
 
