@@ -129,7 +129,7 @@ Writes to the internal database snapshot may fail due to insufficient disk space
 
 Use the resolution section that corresponds to one of the issues you may have countered:
 
-### OS error 112 
+### OS error 112
 
 To resolve OS error 112 that's raised inside SQL Server error 17053, use one or more of these alternatives:
 
