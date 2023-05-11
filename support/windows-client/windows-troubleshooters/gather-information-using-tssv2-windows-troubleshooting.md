@@ -26,7 +26,7 @@ Refer to [Introduction to TroubleShootingScript toolset (TSSv2)](introduction-to
 ## Gather key information before contacting Microsoft support
 
 1. Download [TSSv2](https://aka.ms/getTSSv2) and extract it in the *C:\\tss_tool* folder. If you've downloaded this tool previously, we recommend downloading the latest version. It doesn't automatically update when running.
-2. Open the *C:\\tss_tool* folder from an elevated PowerShell command prompt.
+2. Open the *C:\\tss_tool* folder from an elevated PowerShell [command prompt]((#powershell)).
     > [!NOTE]
     > Don't use the Windows PowerShell Integrated Scripting Environment (ISE).
 3. Run the following cmdlet:
