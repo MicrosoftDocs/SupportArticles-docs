@@ -98,7 +98,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
     sudo echo "201 eth1-rt" >> /etc/iproute2/rt_tables
     ```
 
-    If more network interfaces are attached to the VM, add extra routing tables (202 eth2-rt, 203, eth3-rt, and so on).
+    If more network interfaces are attached to the VM, add extra routing tables (`202 eth2-rt`, `203 eth3-rt`, and so on).
 
 2. Make sure that a configuration file exists for each network interface in the `/etc/sysconfig/network-scripts/` directory. You can create new network interface configuration files based on the `ifcfg-eth0` configuration file (by modifying the `DEVICE` line and removing the `DHCP_HOSTNAME` and `HWADDR` lines from the new file). To do this, run the following commands:
 
