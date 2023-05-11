@@ -29,7 +29,7 @@ Refer to [Introduction to TroubleShootingScript toolset (TSSv2)](introduction-to
 2. Open the *C:\\tss_tool* folder from an elevated PowerShell command prompt.
     > [!NOTE]
     > Don't use the Windows PowerShell Integrated Scripting Environment (ISE).
-3. Run the following cmdlet and enter A for "Yes to All" for the execution policy change.
+3. Run the following cmdlet and enter _A_ for "Yes to All" for the execution policy change.
 
     ```powershell
     Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
