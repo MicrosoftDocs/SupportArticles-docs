@@ -48,3 +48,7 @@ To resolve this issue, right-click the new print queue in the Printers and Faxes
 
 - Check whether the problem is fixed. If the problem is fixed, you're finished with this section. If the problem isn't fixed, you can [contact support](https://support.microsoft.com/contactus/).
 - We would appreciate your feedback. To provide feedback or to report any issues with this solution, leave a comment by sending us an [email](mailto:fixit4me@microsoft.com?subject=kb) message.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#printing).

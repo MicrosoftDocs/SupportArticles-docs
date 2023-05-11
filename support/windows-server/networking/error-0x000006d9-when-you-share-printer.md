@@ -122,3 +122,7 @@ Security Options: None
 Edge Traversal: None  
 Modifying User: SYSTEM  
 Modifying Application: C:\Windows\System32\svchost.exe
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#printing).

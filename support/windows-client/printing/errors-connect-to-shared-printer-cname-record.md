@@ -53,3 +53,7 @@ reg add hklm\system\currentcontrolset\services\lanmanserver\parameters /v Option
 
 > [!NOTE]
 >  For third-party DNS providers, you may have to use QWord instead of DWord . Therefore, you should use QWord instead of DWord for these commands.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#printing).

@@ -110,3 +110,7 @@ WMIPerfClass is the module that handles creating these classes when the WMI clie
 These performance classes are stored in a cache that's invalidated after 15 to 20 minutes. ‎As soon as the cache is invalidated, the performance classes must be created again if a client requests them.
 
 Creating the performance classes means that the WMIPerfClass.dll module will have to be loaded inside a WmiPrvSE.exe process and the related code executed.  
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#wmi).

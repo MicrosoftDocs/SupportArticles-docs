@@ -60,3 +60,7 @@ If your print server is using self-signed certificates, the following steps can 
 11. A security warning will appear that you are adding a certificate from a source that cannot be validated.  Click **Yes** to trust this SSL certificate.
 12. Close Internet Explorer.
 13. The printer can now be installed.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#printing).

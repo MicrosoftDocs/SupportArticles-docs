@@ -60,3 +60,7 @@ Raise the memory quota of the WMI Provider service by carrying out the following
 
 > [!Note]
 > Windows XP and Windows Server 2003 have a memory quota per host of 128 MB with a limit of 512 MB.  Windows Vista and Windows Server 2008 have a memory quota per host of 512 MB that is not the imposed limit as with XP and 2003 and can increase this number higher.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#wmi).

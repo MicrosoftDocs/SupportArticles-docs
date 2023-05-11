@@ -80,3 +80,7 @@ Here is more information on these scenarios:
   - Configure RDS licensing server on all RDS Host Servers in each domain/forest. You can do it through RDS host configuration snap-in or through a group policy.
 
   - Add administrators group of each domain/forest in the local administrators of RDS licensing server. This way, you'll not get a prompt to enter your credentials when you'll open RDS host configuration snap-ins in trusted domains/forests.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#terminal-server-licensing).

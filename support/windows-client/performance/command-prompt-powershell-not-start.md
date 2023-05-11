@@ -49,3 +49,7 @@ To resolve this issue, restart the computer. You may have to restart two or thre
 ## Reference
 
 For more information about what is blocked in Windows 10 S, see [Planning a Windows 10 in S mode deployment](/windows-hardware/manufacture/desktop/windows-10-s-planning#what-is-blocked-in-windows-10-s).
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#powershell).

@@ -67,3 +67,7 @@ To work around the 11-port RFC default for LPR ports, follow these steps:
 ## More information
 
 By default, the key isn't present. This limits the number of LPR ports to 11. Setting the registry value to 1 will make the LPD use any port whose number is greater than 1024 to transmit the jobs.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#printing).

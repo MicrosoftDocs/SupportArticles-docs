@@ -64,3 +64,7 @@ Don't use FQDN: 192.168.0.10 `CNAME.CONTOSO.COM`
 ## More information
 
 The issue that is described in the [Symptoms](#symptoms) section may occur if the non-Microsoft DNS solution provides `QRecord` responses of type ALL.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#printing).

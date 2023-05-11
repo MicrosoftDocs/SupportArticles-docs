@@ -59,3 +59,7 @@ In addition, the .inf file must have an entry that lists only the HWID of the pr
 ```
 
 You must contact the printer manufacturer for an updated driver that has an updated .inf file. After you obtain and store the correct file, the Add Printer Wizard can preselect the driver that is associated with the printer's HWID.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#printing).

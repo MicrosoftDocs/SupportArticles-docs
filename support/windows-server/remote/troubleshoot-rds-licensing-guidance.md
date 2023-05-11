@@ -197,3 +197,7 @@ The traces will be stored in a zip file in the *C:\\MSDATA* folder, which can be
 - [Troubleshooting Remote Desktop Licensing Issues](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/hh553162%28v=ws.10%29)
 - [Remote Desktop Licensing Demystified](https://social.technet.microsoft.com/wiki/contents/articles/21180.remote-desktop-licensing-demystified.aspx)
 - [RDS and TS CAL Interoperability Matrix](https://social.technet.microsoft.com/wiki/contents/articles/14988.rds-and-ts-cal-interoperability-matrix.aspx)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#terminal-server-licensing).

@@ -122,3 +122,7 @@ The traces will be stored in a zip file in the *C:\\MSDATA* folder, which can be
 - [Remote Desktop client disconnects and can't reconnect to the same session](/windows-server/remote/remote-desktop-services/troubleshoot/rdp-client-disconnects-cannot-reconnect-same-session)
 - [Poor performance or application problems during remote desktop connection](/windows-server/remote/remote-desktop-services/troubleshoot/poor-performance-or-application-problems)
 - [User can't authenticate or must authenticate twice](/windows-server/remote/remote-desktop-services/troubleshoot/cannot-authenticate-or-must-authenticate-twice)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#remote-desktop-session-connectivity).

@@ -96,3 +96,7 @@ Configure the Point and Print Restrictions policy to Disabled.
 
 2307161 The Point and Print User configuration policy is ignored by Windows 7, Windows Server 2008 R2, and Service Pack 2 release of Windows Vista, Windows Server 2008.  
 [https://support.microsoft.com/help/2307161](https://support.microsoft.com/help/2307161)  
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#printing).

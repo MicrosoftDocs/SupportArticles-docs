@@ -57,3 +57,7 @@ For more information, see:
 
 - [IWbemServices::ExecQuery method](/windows/win32/api/wbemcli/nf-wbemcli-iwbemservices-execquery)
 - [IEnumWbemClassObject::Next method](/windows/win32/api/wbemcli/nf-wbemcli-ienumwbemclassobject-next)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#wmi).

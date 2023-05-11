@@ -47,3 +47,7 @@ To work around this issue, follow these steps:
 6. Click **Close**  to save the changes.
 
 This change in the image settings adds the pHYs chunk to the PNG image and enables it to print correctly.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#printing).

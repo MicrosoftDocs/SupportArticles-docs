@@ -59,3 +59,7 @@ Store a trusted credential in **Credential Manager**. To do this, follow these s
 ## More Information
 
 This behavior is different in earlier Windows versions. In those versions, you are prompted for credentials if the connection fails because of an unknown user name or a bad password.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#printing).

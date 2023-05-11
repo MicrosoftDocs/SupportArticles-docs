@@ -119,3 +119,7 @@ For more information about the PowerShell scripts that are encoded differently, 
 |**Windows 11**|Affected with HASH mismatch issue|Affected with HASH mismatch issue|n/a (Set-AuthenticodeSignature fails with UnknownError)|NOT affected with HASH mismatch issue|
 |**Windows Server 2019**|Affected with HASH mismatch issue|Affected with HASH mismatch issue|n/a (Set-AuthenticodeSignature fails with UnknownError)|NOT affected with HASH mismatch issue|
 |**Windows Server 2022**|Affected with HASH mismatch issue|Affected with HASH mismatch issue|n/a (Set-AuthenticodeSignature fails with UnknownError)|NOT affected with HASH mismatch issue|
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#powershell).

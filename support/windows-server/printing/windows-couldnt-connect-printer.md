@@ -51,3 +51,7 @@ To work around this issue, use the following command to add a registry key on th
 ## More information
 
 Load-balancing printers by using a Network Load Balancing (NLB) technology or the Domain Name System (DNS) round robin feature isn't supported. The workaround that is mentioned in this article is only for the scenario where one print server that is running Windows Server 2008 R2 is accessed by an alias (CNAME) resource record that refers to only that one server.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#printing).

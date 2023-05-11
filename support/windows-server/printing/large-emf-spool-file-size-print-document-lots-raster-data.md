@@ -63,3 +63,7 @@ Microsoft has confirmed that this is a problem in the Microsoft products that ar
 4. Click to select the **Keep printed documents** check box.
 5. Print an Adobe .pdf document that contains many groups of raster data.
 6. Check the size of the EMF spool file.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#printing).

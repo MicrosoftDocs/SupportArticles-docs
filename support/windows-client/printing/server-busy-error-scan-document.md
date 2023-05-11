@@ -45,3 +45,7 @@ If you are a developer, see the following information:
 
 When you call the AfxOleInit(); function, the *m_nTimeout*  parameter is set to a default value of 8 seconds. To disable the time-out of the OLE call, you must add the following line after you call the AfxOleInit(); function:
 >AfxOleGetMessageFilter()->EnableNotRespondingDialog(FALSE);  
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#printing).

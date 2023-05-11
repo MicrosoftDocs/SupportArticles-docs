@@ -57,3 +57,7 @@ To clear and reset the print spooler, follow these steps:
 5. In the search box on the taskbar, search for services, and then select **Services** in the list of results.
 6. Select the **Standards** tab, and the double-click **Print Spooler** in the list of services.
 7. Select **Start**, select **Automatic** in the **Startup Type** box, and then select **OK**.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#printing).

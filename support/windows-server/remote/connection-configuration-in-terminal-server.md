@@ -142,3 +142,7 @@ This allows all of the above plus permission to:
 - Shadow (ICA Clients only).
 - Reset sessions.
 - Delete sessionsAlong with Guest, User, and Full permissions, there's a more granular set of permissions called Special Access that is used to grant each of the above individually.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#remote-desktop-disconnection-configuration).

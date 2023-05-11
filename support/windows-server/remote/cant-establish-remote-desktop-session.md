@@ -82,3 +82,7 @@ Use these steps only if you can't do local sign-in to the affected server.
     Change it's data to the value you noted in step 6. If you want RDP to listen on all LAN adapters enter value of 0.
 
 [!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#remote-desktop-session).

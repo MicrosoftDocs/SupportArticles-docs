@@ -104,3 +104,7 @@ This script checks whether the subkey exists. If the subkey doesn't exist, the s
 The following image shows how this listing appears in a list of providers.
 
 :::image type="content" source="media/configure-standalone-wmi-providers/wmi-provider-listing.png" alt-text="Provider listing that shows the standalone hosting information.":::
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#wmi).

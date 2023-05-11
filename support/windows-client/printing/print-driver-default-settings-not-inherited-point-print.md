@@ -53,3 +53,7 @@ To fix this issue, set the printer settings manually on the client following the
 Microsoft has confirmed that this is an issue in the Microsoft products that are listed in the "Applies to" section.
 
 This issue has been fixed in Windows 10, version 1803 and Windows Server, version 1803.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#printing).

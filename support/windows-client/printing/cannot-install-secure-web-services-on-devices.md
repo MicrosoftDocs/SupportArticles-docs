@@ -67,3 +67,7 @@ Method 2: From Print Management console using "Add a TCP/IP or Web Services Prin
 ## More information
 
 [Web Services on Devices (WSD) Roadmap](https://msdn.microsoft.com/library/bb756908.aspx)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#printing).

@@ -61,3 +61,7 @@ To fix this issue, use a filter that resembles the following example.
 ```console
 Select BuildNumber from Win32_OperatingSystem WHERE BuildNumber >= 10000 AND BuildNumber LIKE "%[123456789][0123456789][0123456789][0123456789][0123456789]%" OR BuildNumber >= 9200 AND BuildNumber LIKE "%[123456789][0123456789][0123456789][0123456789]%"
 ```
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#wmi).

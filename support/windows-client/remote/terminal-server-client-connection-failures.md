@@ -44,3 +44,7 @@ All the steps are documented in these articles, based on the server operating sy
 Additionally, we have more symptoms documented in the following Microsoft TechNet article:  
 
 [Troubleshooting General Remote Desktop Error messages](https://technet.microsoft.com/library/cc780927%28ws.10%29.aspx)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#remote-desktop-client-connection).

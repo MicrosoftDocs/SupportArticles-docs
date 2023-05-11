@@ -60,3 +60,7 @@ This issue may occur if there is a large internal table in the Remote Desktop Li
 
     Range is from minimum 256 to maximum 2048.
 4. Quit Registry Editor.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#terminal-server-licensing).

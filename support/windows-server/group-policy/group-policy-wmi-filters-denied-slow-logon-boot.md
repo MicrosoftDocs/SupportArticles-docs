@@ -68,3 +68,7 @@ Per-Vista = None
 Vista onwards = 30 seconds (hardcoded)
 
 In one of the cases, it was informed that removing customized security filtering from the GPO (that has WMI filter configured) resolved the issue, however, it has not been tested or verified.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#wmi).

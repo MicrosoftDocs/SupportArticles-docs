@@ -49,3 +49,7 @@ These are the two possible scenarios:
 - The cumulative memory usage in the arbitrator buffer reaches the 256-MB threshold.
 
     WMI service will start the cleanup process that cancels queries, enumerations, or ESS tasks/requests that hold memory in Winmgmt. When this cleanup occurs, an event ID 5858 is logged in the WMI-Activity/Operational log with the possible cause "Throttling Idle/stack Tasks in hitting Max Memory quota."
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#wmi).

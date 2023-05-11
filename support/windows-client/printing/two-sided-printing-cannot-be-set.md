@@ -62,3 +62,7 @@ Microsoft has confirmed that this is a problem in the Microsoft products that ar
 ## More information
 
 To learn more about how to print more detail, see [How to print](https://windows.microsoft.com/windows-8/how-to-print) in Windows 8.1.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#printing).

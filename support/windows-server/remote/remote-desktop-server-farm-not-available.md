@@ -120,3 +120,7 @@ To work around this issue, follow these steps:
     ```
 
 3. Run this script on all the RDS servers. The script picks up the static IP from the network adapter, generates an NAT64'd IPv6 address, and assigns the address to the network adapter.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Windows troubleshooting](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md#remote-desktop-session).
