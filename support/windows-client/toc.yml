@@ -1304,3 +1304,5 @@
       href: ./windows-troubleshooters/gather-information-using-tssv2-deployment.md
     - name: Gather information for Group Policy issues
       href: ./windows-troubleshooters/gather-information-using-tssv2-group-policy.md
+    - name: Gather information for Windows troubleshooting
+      href: ./windows-troubleshooters/gather-information-using-tssv2-windows-troubleshooting.md
