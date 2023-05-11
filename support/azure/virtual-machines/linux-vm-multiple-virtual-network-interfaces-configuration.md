@@ -749,8 +749,9 @@ sudo ip route show
 sudo ip rule show
 ```
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > If you still don't have connectivity to the second NIC, restart the VM by using the `sudo reboot` command, repeat the previous step to verify that the routes and rules are loaded, and test connectivity one more time.
+
 ---
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
