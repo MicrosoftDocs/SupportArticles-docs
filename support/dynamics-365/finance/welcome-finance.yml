@@ -70,8 +70,6 @@ landingContent:
             url: /dynamics365/finance/general-ledger/add-change-acctg-rprtg-crrncy
           - text: Default financial dimensions on financial journals
             url: /dynamics365/finance/general-ledger/dimension-default-values
-          - text: General journal posting performance
-            url: /dynamics365/finance/general-ledger/posting-performance
           - text: How do I set up balancing financial dimensions? 
             url: /dynamics365/finance/general-ledger/set-up-balance-dimensions
           - text: Journal posting failure due to imbalance
