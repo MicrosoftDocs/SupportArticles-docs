@@ -53,11 +53,9 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
         :::image type="content" source="media/troubleshoot-vm-by-use-nested-virtualization/set-security-type.png" alt-text="Screenshot of the 'Click here to swap to the trusted launch version' prompt.":::
 
-        To use the Trusted security type, select the **Click here to swap to the Trusted launch version** hyperlink to choose a compatible image. Then, you won't see the previous prompt.
+        To use the Trusted security type, select the **Click here to swap to the Trusted launch version** hyperlink to choose a compatible image. Then, you won't see the prompt. If you change the Trusted security type to Standard, the prompt also will disappear.
 
         :::image type="content" source="media/troubleshoot-vm-by-use-nested-virtualization/select-gen2-image.png" alt-text="Screenshot that shows the Gen 1 image is already changed to a Gen 2 image.":::
-
-        If you change the Trusted security type to Standard, the prompt also will disappear.
 
 2. After the Rescue VM is created, remote desktop to the Rescue VM.
 
