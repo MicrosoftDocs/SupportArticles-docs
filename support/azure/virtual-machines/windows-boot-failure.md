@@ -38,6 +38,8 @@ This issue occurs for one of the following reasons:
 To fix the issue, stop (de-allocate) and start the VM then recheck to see if issue persists. If the issue persists, follow these steps:
 
 ## Verify if the Windows partition is marked as active
+> [!NOTE]
+> This mitigation applies only for Generation 1 VMs. Generation 2 VMs (using UEFI) does not use an active partition.
 
 1. Delete the virtual machine (VM). Make sure that you select the **Keep the disks** option when you do this.
 2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
@@ -115,9 +117,16 @@ To fix the issue, stop (de-allocate) and start the VM then recheck to see if iss
 
 2. Run the following command line as an administrator, and then record the identifier of Windows Boot Loader (not Windows Boot Manager). The identifier is a 32-character code and it looks like this: xxxxxxxx-xxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. You will use this identifier in the next step.
 
+  a. For Generation 1 VM:
+
     ```console
     bcdedit /store <Boot partition>:\boot\bcd /enum
     ```  
+ b. For Generation 2 VM:
+ 
+  ```console
+     bcdedit /store <Volume Letter of EFI System Partition>:EFI\Microsoft\boot\bcd /enum /v
+   ``` 
 
 3. Repair the Boot Configuration data by running the following command lines. You must replace these placeholders by the actual values:
 
@@ -128,21 +137,41 @@ To fix the issue, stop (de-allocate) and start the VM then recheck to see if iss
     - \<Boot partition> is the partition that contains a hidden system folder named "Boot."
     - \<Identifier> is the identifier of Windows Boot Loader you found in the previous step.
 
+  a. For Generation 1 VM:
+
     ```console
     bcdedit /store <Boot partition>:\boot\bcd /set {bootmgr} device partition=<boot partition>:
-
     bcdedit /store <Boot partition>:\boot\bcd /set {bootmgr} integrityservices enable
-
     bcdedit /store <Boot partition>:\boot\bcd /set {<Identifier>} device partition=<Windows partition>:
-
     bcdedit /store <Boot partition>:\boot\bcd /set {<Identifier>} integrityservices enable
-
     bcdedit /store <Boot partition>:\boot\bcd /set {<identifier>} recoveryenabled Off
-
     bcdedit /store <Boot partition>:\boot\bcd /set {<identifier>} osdevice partition=<Windows partition>:
-
     bcdedit /store <Boot partition>:\boot\bcd /set {<identifier>} bootstatuspolicy IgnoreAllFailures
     ```
+
+   >[!NOTE]
+   >In case the VHD has a single partition and both the BCD Folder and Windows Folder are in the same volume, and if the above setup didn't work, then try replacing the partition values with ***boot***.
+
+      ```console
+      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {bootmgr} device boot
+      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {bootmgr} integrityservices enable
+      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {<IDENTIFIER>} device boot
+      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {<IDENTIFIER>} integrityservices enable
+      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {<IDENTIFIER>} recoveryenabled Off
+      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {<IDENTIFIER>} osdevice boot
+      bcdedit /store <BCD FOLDER - DRIVE LETTER>:\boot\bcd /set {<IDENTIFIER>} bootstatuspolicy IgnoreAllFailures
+      ```
+   b. For Generation 2 VM:
+
+     ```console
+     bcdedit /store <Volume Letter of EFI System Partition>:EFI\Microsoft\boot\bcd /set {bootmgr} device partition=<Volume Letter of EFI System Partition>:
+     bcdedit /store <Volume Letter of EFI System Partition>:EFI\Microsoft\boot\bcd /set {bootmgr} integrityservices enable
+     bcdedit /store <Volume Letter of EFI System Partition>:EFI\Microsoft\boot\bcd /set {<IDENTIFIER>} device partition=<WINDOWS FOLDER - DRIVE LETTER>:
+     bcdedit /store <Volume Letter of EFI System Partition>:EFI\Microsoft\boot\bcd /set {<IDENTIFIER>} integrityservices enable
+     bcdedit /store <Volume Letter of EFI System Partition>:EFI\Microsoft\boot\bcd /set {<IDENTIFIER>} recoveryenabled Off
+     bcdedit /store <Volume Letter of EFI System Partition>:EFI\Microsoft\boot\bcd /set {<IDENTIFIER>} osdevice partition=<WINDOWS FOLDER - DRIVE LETTER>:
+     bcdedit /store <Volume Letter of EFI System Partition>:EFI\Microsoft\boot\bcd /set {<IDENTIFIER>} bootstatuspolicy IgnoreAllFailures
+     ```
 
 4. Detach the repaired OS disk from the troubleshooting VM. Then, create a new VM from the OS disk.
 
