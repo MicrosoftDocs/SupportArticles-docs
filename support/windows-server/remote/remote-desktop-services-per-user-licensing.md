@@ -4,7 +4,7 @@ description: Troubleshooting the "Remote Desktop License Servers unavailable" er
 ms.date: 05/12/2023
 author: Heidilohr
 ms.author: helohr
-manager:  dcscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.prod: windows-server
 ms.topic: troubleshooting
