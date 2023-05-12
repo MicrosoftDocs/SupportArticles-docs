@@ -40,7 +40,7 @@ Now, suppose you want to rotate the table so that you can see the data in the fo
 
 The query that you would use to rotate the table is in the next section of this article.
 
-## Sample Query to Rotate the Table
+## Sample query to rotate the table
 
 Here is the query that you would use to rotate the table:
 
@@ -58,7 +58,7 @@ FROM QTRSALES Q
 GROUP BY YEAR
 ```
 
-## Query for Large Tables
+## Query for large tables
 
 For large tables, this query will be faster:
 
@@ -69,7 +69,7 @@ SUM(CASE quarter WHEN 2 THEN amount ELSE 0 END) as Q2,
 SUM(CASE quarter WHEN 3 THEN amount ELSE 0 END) as Q3,
 SUM(CASE quarter WHEN 4 THEN amount ELSE 0 END) as Q4
 FROM qtrsales q
-GROUP BY year
+GROUP BY YEAR
 ```
 
 ## Reference
