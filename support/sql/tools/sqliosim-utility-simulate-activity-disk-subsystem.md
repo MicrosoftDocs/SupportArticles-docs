@@ -1,8 +1,8 @@
 ---
 title: SQLIOSim utility simulates disk subsystem activity
 description: This article describes how to use the SQLIOSim utility to perform stress tests on disk subsystems to simulate SQL Server activity.
-ms.author: rdorr, bobward
-ms.reviewer: pijocoder
+ms.author: rdorr
+ms.reviewer: bobward, pijocoder
 ms.date: 05/12/2023
 ms.prod: sql
 ms.topic: how-to
@@ -45,6 +45,17 @@ The \Binn folder contains two executable files, SQLIOSim.com and SQLIOSim.exe. B
 ## How to use SQLIOSim
 
 
+```console
+SQLIOSIM.EXE -cfg "D:\Temp\SQLIOSIM\SQLIOSIM_Configs\sqliosim.default.cfg.ini" -d 600 -dir d:\temp\sqliosim -log d:\temp\sqliosim\simlog.xml -size 32768
+
+SQLIOSIM.EXE -cfg "D:\Temp\SQLIOSIM\SQLIOSIM_Configs\sqliosim.hwcache.cfg.ini" -d 600 -dir d:\temp\sqliosim -log d:\temp\sqliosim\simlog.xml -size 32768
+   
+SQLIOSIM.EXE -cfg "D:\Temp\SQLIOSIM\SQLIOSIM_Configs\sqliosim.nothrottle.cfg.ini" -d 600 -dir d:\temp\sqliosim -log d:\temp\sqliosim\simlog.xml -size 32768
+
+SQLIOSIM.EXE -cfg "D:\Temp\SQLIOSIM\SQLIOSIM_Configs\sqliosim.sparse.cfg.ini" -d 600 -dir d:\temp\sqliosim -log d:\temp\sqliosim\simlog.xml -size 32768
+
+SQLIOSIM.EXE -cfg " D:\Temp\SQLIOSIM\SQLIOSIM_Configs\sqliosim.seqwrites.cfg.ini" -d 600 -dir d:\temp\sqliosim -log d:\temp\sqliosim\simlog.xml -size 32768
+```
 
 ## SQLIOSim.com command-line parameters
 
@@ -61,21 +72,23 @@ SQLIOSim.com accepts a limited number of command-line parameters to control basi
 
 ## SQLIOSim configuration file
 
-Sample configuration files for various tests can be downloaded from SQL Server support team's github repo [here](https://github.com/microsoft/mssql-support/tree/master/sqliosim).
+Sample configuration files for various tests can be downloaded from SQL Server support team's [Github repo](https://github.com/microsoft/mssql-support/tree/master/sqliosim).
 
-You do not have to use a configuration file. If you do not use a configuration file, all parameters take default values except the data file location and the log file location. You must use one of the following methods to specify the data file location and the log file location:
+You don't have to use a configuration file. If you don't use a configuration file, all parameters take default values except the data file location and the log file location. You must use one of the following methods to specify the data file location and the log file location:
 
 - Use the command-line parameters in the SQLIOSim.com file.
 - Use the **Files and Configuration** dialog box after you run the SQLIOSim.exe file.
-- Use the File**x** section of the configuration file.
+- Use the File**N** section of the configuration file.
 
-> [!NOTE]  
->  
-> - If the name of the parameter indicates that the parameter is a ratio or a percentage, the value of the parameter is expressed as the percentage or the ratio, divided by 0.01. For example, the value of the `CacheHitRatio` parameter is **10 percent**. This value is expressed as 1000 because 10, divided by 0.01, equals 1000. The maximum value of a percentage parameter is **10000**.
-> - If the parameter type is numeric, and you assign a non-numeric value to the parameter, the SQLIOSim utility sets the parameter to **0**.
-> - If the parameter type is `Boolean`, the valid values that you can assign to the parameter are true and false . Additionally, the values are case sensitive. The SQLIOSim utility ignores any invalid values.
-> - If a pair of parameters indicates a minimum value and a maximum value, the minimum value must not be larger than the maximum value. For example, the value of the `MinIOChainLength` parameter must not be larger than the value of the `MaxIOChainLength` parameter.
-> - If the parameter indicates a number of pages, the SQLIOSim utility checks the value that you assign to the parameter against the file that the SQLIOSim utility processes. The SQLIOSim utility performs this check to make sure that the number of pages does not exceed the file size.
+### Caveats on parameter values
+
+- If the name of the parameter indicates that the parameter is a ratio or a percentage, the value of the parameter is expressed as the percentage or the ratio, divided by 0.01. For example, the value of the `CacheHitRatio` parameter is **10 percent**. This value is expressed as 1000 because 10, divided by 0.01, equals 1000. The maximum value of a percentage parameter is **10000**.
+- If the parameter type is numeric, and you assign a non-numeric value to the parameter, the SQLIOSim utility sets the parameter to **0**.
+- If the parameter type is `Boolean`, the valid values that you can assign to the parameter are true and false . Additionally, the values are case sensitive. The SQLIOSim utility ignores any invalid values.
+- If a pair of parameters indicates a minimum value and a maximum value, the minimum value must not be larger than the maximum value. For example, the value of the `MinIOChainLength` parameter must not be larger than the value of the `MaxIOChainLength` parameter.
+- If the parameter indicates a number of pages, the SQLIOSim utility checks the value that you assign to the parameter against the file that the SQLIOSim utility processes. The SQLIOSim utility performs this check to make sure that the number of pages does not exceed the file size.
+
+### Configuration file sections
 
 There are several sections in the configuration file.
 
@@ -128,7 +141,7 @@ The SQLIOSim utility is designed to allow for multiple file testings. The File *
 | _Sparse_ | false | Indicates whether the Sparse attribute should be set on the files | For existing files, the SQLIOSim utility does not clear the Sparse attribute when you set the _Sparse_ parameter to false.<br /><br />SQL Server 2005 uses sparse files to support snapshot databases and the secondary DBCC streams.<br /><br />We recommend that you enable both the sparse file and the streams, and then perform a test pass.<br /><br />**NOTE** If you set Sparse = true for the file settings, do not specify NoBuffering = false in the config section. If you use these two conflicting combinations, you may receive an error that resembles the following from the tool:<br /><br />Error:-=====Error: 0x80070467<br />Error Text: While accessing the hard disk, a disk operation failed even after retries.<br />Description: Buffer validation failed on `C:\SQLIOSim.mdx Page: 28097` |
 | _LogFile_ | false | Indicates whether a file contains user or transaction log data | You should define at least one-log file. |
 
-## RandomUser section
+### RandomUser section
 
 The SQLIOSim utility takes the values that you specify in the RandomUser section to simulate a SQL Server worker that is performing random query operations, such as Online Transaction Processing (OLTP) I/O patterns.
 
@@ -200,12 +213,11 @@ In addition to the default Sqliosim.cfg.ini file, the package provides the follo
 
 | Sample file | Description | Parameters that differ from the default configuration file |
 | --- | --- | --- |
-| Sqliosim.hwcache.cfg.ini | Minimize reads<br /><br />Files are made small to keep them fully in memory<br /><br />No sequential reads | For the AuditUser section and for the ReadAheadUser section:<br /><br />_CacheHitRatio=10000_<br />_UserCount=0_ |
-| Sqliosim.nothrottle.cfg.ini | Remove I/O throttling<br /><br />Minimize the time to wait to increase I/O volume | _TargetIODuration=1000000_<br />_AuditDelay=10_<br />_RADelay=10_ |
-| Sqliosim.seqwrites.cfg.ini | Minimize reads<br /><br />Files are made small to keep them fully in memory<br /><br />Files are made non-shrinkable<br /><br />No sequential reads<br /><br />No random access<br /><br />Bulk update in large chunks without delays | _Shrinkable=FALSE_<br /><br />For the AuditUser section, for the ReadAheadUser section, and for the RandomUser section:<br /><br />_CacheHitRatio=10000_<br />_ForceReadAhead=FALSE_<br />_BuffersBUMin=600_<br />_BuffersBUMax=1000_<br />_BUDelay=1_<br />_UserCount=0_ |
-| Sqliosim.sparse.cfg.ini | Use only 32 MB of memory<br /><br />Make target I/O duration large enough to enable many outstanding I/O requests<br /><br />Disable scatter/gather APIs to issue separate I/O requests for every 8-KB page<br /><br />Create a 1-GB non-shrinkable file<br /><br />Create a 1-GB non-shrinkable secondary sparse stream in the file | _MaxMemoryMB=32_<br />_TestCycles=3_<br />_TestCycleDuration=600_<br />_TargetIODuration=10000_<br />_UseScatterGather=FALSE_<br /><br />[File1]<br />_FileName=sqliosim.mdx_<br />_InitialSize=1000 MaxSize=1000_<br />_Increment=10_<br />_Shrinkable=FALSE_<br />_LogFile=FALSE_<br />_Sparse=FALSE_<br /><br />[File2]<br />_FileName=sqliosim.ldx_<br />_InitialSize=50_<br />_MaxSize=50_<br />_Increment=0_<br />_Shrinkable=FALSE_<br />_LogFile=TRUE_<br />_Sparse=FALSE_<br /><br />[File3]<br />_FileName=sqliosim.mdx:replica_<br />_InitialSize=1000_<br />_MaxSize=1000_<br />_Increment=10_<br />_Shrinkable=FALSE_<br />_LogFile=FALSE_<br />_Sparse=TRUE_ |
-
-
+| [sqliosim.default.cfg.ini](https://github.com/microsoft/mssql-support/blob/master/sqliosim/sqliosim.cfg.windows/sqliosim.default.cfg.ini) |  |  |
+| [sqliosim.hwcache.cfg.ini](https://github.com/microsoft/mssql-support/blob/master/sqliosim/sqliosim.cfg.windows/sqliosim.hwcache.cfg.ini) | Minimize reads<br /><br />Files are made small to keep them fully in memory<br /><br />No sequential reads | For the AuditUser section and for the ReadAheadUser section:<br /><br />_CacheHitRatio=10000_<br />_UserCount=0_ |
+| [sqliosim.nothrottle.cfg.ini](https://github.com/microsoft/mssql-support/blob/master/sqliosim/sqliosim.cfg.windows/sqliosim.nothrottle.cfg.ini) | Remove I/O throttling<br /><br />Minimize the time to wait to increase I/O volume | _TargetIODuration=1000000_<br />_AuditDelay=10_<br />_RADelay=10_ |
+| [sqliosim.seqwrites.cfg.ini](https://github.com/microsoft/mssql-support/blob/master/sqliosim/sqliosim.cfg.windows/sqliosim.seqwrites.cfg.ini) | Minimize reads<br /><br />Files are made small to keep them fully in memory<br /><br />Files are made non-shrinkable<br /><br />No sequential reads<br /><br />No random access<br /><br />Bulk update in large chunks without delays | _Shrinkable=FALSE_<br /><br />For the AuditUser section, for the ReadAheadUser section, and for the RandomUser section:<br /><br />_CacheHitRatio=10000_<br />_ForceReadAhead=FALSE_<br />_BuffersBUMin=600_<br />_BuffersBUMax=1000_<br />_BUDelay=1_<br />_UserCount=0_ |
+| [sqliosim.sparse.cfg.ini](https://github.com/microsoft/mssql-support/blob/master/sqliosim/sqliosim.cfg.windows/sqliosim.sparse.cfg.ini) | Use only 32 MB of memory<br /><br />Make target I/O duration large enough to enable many outstanding I/O requests<br /><br />Disable scatter/gather APIs to issue separate I/O requests for every 8-KB page<br /><br />Create a 1-GB non-shrinkable file<br /><br />Create a 1-GB non-shrinkable secondary sparse stream in the file | _MaxMemoryMB=32_<br />_TestCycles=3_<br />_TestCycleDuration=600_<br />_TargetIODuration=10000_<br />_UseScatterGather=FALSE_<br /><br />[File1]<br />_FileName=sqliosim.mdx_<br />_InitialSize=1000 MaxSize=1000_<br />_Increment=10_<br />_Shrinkable=FALSE_<br />_LogFile=FALSE_<br />_Sparse=FALSE_<br /><br />[File2]<br />_FileName=sqliosim.ldx_<br />_InitialSize=50_<br />_MaxSize=50_<br />_Increment=0_<br />_Shrinkable=FALSE_<br />_LogFile=TRUE_<br />_Sparse=FALSE_<br /><br />[File3]<br />_FileName=sqliosim.mdx:replica_<br />_InitialSize=1000_<br />_MaxSize=1000_<br />_Increment=10_<br />_Shrinkable=FALSE_<br />_LogFile=FALSE_<br />_Sparse=TRUE_ |
 
 ## File creation
 
@@ -234,7 +246,7 @@ The SQLIOSim.log.xml error log contains details about the execution. These detai
 
 ## Multiple copies
 
-The SQLIOSim utility accommodates multiple-file-level testing and multiple-user-level testing. The SQLIOSim utility does not require multiple invocations. However, the SQLIOStress utility requires multiple invocations. You can run multiple copies of the SQLIOSim utility if the following conditions are true:
+The SQLIOSim utility accommodates multiple-file-level testing and multiple-user-level testing. The SQLIOSim utility does not require multiple invocations. You can run multiple copies of the SQLIOSim utility if the following conditions are true:
 
 - All copies reference unique testing files per instance of the utility.
 - The `MaxMemoryMB` parameter of each instance provides for a non-overlapping memory region that is sufficient for each instance.
