@@ -573,27 +573,27 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
         sudo vi /etc/sysconfig/network/scripts/ifup-route.eth1
         ```
 
-      - 2 NICs in the same subnet:
+        2 NICs in the same subnet:
 
-            ```bash
-            #!/bin/bash
+        ```bash
+        #!/bin/bash
 
-            /sbin/ip route add 10.0.1.0/24 dev eth1 table eth1-rt
-            /sbin/ip route add default via 10.0.1.1 dev eth1 table eth1-rt
-            /sbin/ip rule add from 10.0.1.5/32 table eth1-rt
-            /sbin/ip rule add to 10.0.1.5/32 table eth1-rt
-            ```
+        /sbin/ip route add 10.0.1.0/24 dev eth1 table eth1-rt
+        /sbin/ip route add default via 10.0.1.1 dev eth1 table eth1-rt
+        /sbin/ip rule add from 10.0.1.5/32 table eth1-rt
+        /sbin/ip rule add to 10.0.1.5/32 table eth1-rt
+        ```
 
-      - 2 NICs in different subnet, but in the same VNET:
+        2 NICs in different subnet, but in the same VNET:
 
-            ```bash
-            #!/bin/bash
+        ```bash
+        #!/bin/bash
 
-            /sbin/ip route add 10.0.2.0/24 dev eth1 table eth1-rt
-            /sbin/ip route add default via 10.0.2.1 dev eth1 table eth1-rt
-            /sbin/ip rule add from 10.0.2.5/32 table eth1-rt
-            /sbin/ip rule add to 10.0.2.5/32 table eth1-rt
-            ```
+        /sbin/ip route add 10.0.2.0/24 dev eth1 table eth1-rt
+        /sbin/ip route add default via 10.0.2.1 dev eth1 table eth1-rt
+        /sbin/ip rule add from 10.0.2.5/32 table eth1-rt
+        /sbin/ip rule add to 10.0.2.5/32 table eth1-rt
+        ```
 
     Adjust the network and IP address information accordingly, and preserve the 32-bit value. If there are more than two NICs, make sure that the corresponding IP rules and IP routes are included for each one.
   
@@ -638,7 +638,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
     sudo cat /etc/sysconfig/network/ifcfg-eth1
     ```
 
-    ```Configuration
+    ```output
     STARTMODE="hotplug"
     BOOTPROTO="dhcp"
     DHCLIENT_SET_DEFAULT_ROUTE="yes"
