@@ -198,8 +198,8 @@ Additionally, you can use the BHM tool output to determine which tables are the 
 
 |Table|Description|
 |---|---|
-|\<HostName\>Q_Suspended table|This table contains a reference to messages in the `Spool` table that are associated with suspended instances for the particular host. This table is in the `BizTalkMsgBoxDb` database.|
-|\<HostName\>Q table|This table contains a reference to messages in the `Spool` table that are associated with the particular host and aren't suspended. This table is in the `BizTalkMsgBoxDb` database.|
+|`<HostName>Q_Suspended` table|This table contains a reference to messages in the `Spool` table that are associated with suspended instances for the particular host. This table is in the `BizTalkMsgBoxDb` database.|
+|`<HostName>Q` table|This table contains a reference to messages in the `Spool` table that are associated with the particular host and aren't suspended. This table is in the `BizTalkMsgBoxDb` database.|
 |`Spool`<br/><br/>`Parts`<br/><br/>`Fragments`|These tables store actual message data in the `BizTalkMsgBoxDb` database.|
 |`Instances`|This table stores all instances and their current status in the `BizTalkMsgBoxDb` database.|
 |`TrackingData_0_x`|These four tables store the Business Activity Monitoring (BAM) tracked events in the `BizTalkMsgBoxDb` database for TDDS to move the events to the `BAMPrimaryImport` database.|
@@ -212,15 +212,15 @@ Additionally, you can use the BHM tool output to determine which tables are the 
   
 Consider the following scenarios.
 
-- **\<HostName\>Q_Suspended tables**
+- **`<HostName>Q_Suspended` tables**
 
-  If the \<HostName\>Q_Suspended tables have many records, the tables could be valid suspended instances that appear in **Group Hub** or in HAT. These instances can be terminated. If these instances don't appear in **Group Hub** or in HAT, the instances are probably caching instances or orphaned routing failure reports. When suspended instances are terminated, the items in this table and their associated rows in the `Spool` and `Instances` tables are cleaned up.
+  If the `<HostName>Q_Suspended` tables have many records, the tables could be valid suspended instances that appear in **Group Hub** or in HAT. These instances can be terminated. If these instances don't appear in **Group Hub** or in HAT, the instances are probably caching instances or orphaned routing failure reports. When suspended instances are terminated, the items in this table and their associated rows in the `Spool` and `Instances` tables are cleaned up.
 
   In this scenario, handle the suspended instances by resuming them or terminating them. The BHM tool can also be used.
 
-- **\<HostName\>Q tables**
+- **`<HostName>Q` tables**
 
-  If the \<HostName\>Q tables have many records, the following kinds of instances may exist:
+  If the `<HostName>Q` tables have many records, the following kinds of instances may exist:
 
   - Ready-to-run instances
   - Active instances
@@ -352,13 +352,8 @@ If you need help to analyze the BHM data or the PSSDiag output, contact Microsof
 ## Applies to
 
 - BizTalk Server 2009
-
 - BizTalk Server 2010
-
 - BizTalk Server 2013
-
 - BizTalk Server 2013 R2
-
 - BizTalk Server 2016
-
 - BizTalk Server 2020
