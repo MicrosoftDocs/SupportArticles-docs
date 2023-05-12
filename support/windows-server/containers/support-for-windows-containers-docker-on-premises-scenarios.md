@@ -200,13 +200,13 @@ _ContainerD_ is an open-source industry-standard container runtime that is suppo
 
 ## Supported Container Orchestrators
 
-Several container orchestrators support Windows Server containers. Please address any issues or questions with the vendor before engaging Microsoft support.
+Several container orchestrators support Windows Server containers. Address any issues or questions with the vendor before engaging Microsoft support.
 
 _Azure Kubernetes Service on Azure Stack HCI (AKS-HCI) or Windows Server_ is an on-premises implementation of Azure’s flag ship container service, which automates running containerized applications at scale. AKS makes it quicker to get started hosting Linux and Windows containers in your datacenter.
 
-Microsoft will provide end-to-end support for Azure Kubernetes Service on Azure Stack HCI or Windows Server, including a single node without high availability.
+Microsoft provides end-to-end support for Azure Kubernetes Service on Azure Stack HCI or Windows Server, including a single node without high availability.
 
-Microsoft will not provide support for the following.
+Microsoft won't provide support for the following.
 
 - Custom application code
 - Any non-in-box system services or drivers in the container or container host
@@ -216,21 +216,21 @@ For more information on support policies, see [Support policies for AKS hybrid -
 
 _Azure Kubernetes Service Edge Essentials (AKS EE)_ is an on-premises Kubernetes implementation of Azure Kubernetes Service (AKS) that automates running containerized applications at scale. AKS Edge Essentials includes a Microsoft-supported Kubernetes platform that includes a lightweight Kubernetes distribution with a small footprint and simple installation experience, making it easy for you to deploy Kubernetes on PC-class or "light" edge hardware.
 
-Microsoft will provide end-to-end support for Azure Kubernetes Service Edge Essentials except for the following.
+Microsoft provides end-to-end support for Azure Kubernetes Service Edge Essentials except for the following.
 
 - Custom application code
 - Any non-in-box system services or drivers in the container or container host
-- Container base images not supported by Microsoft like; Nginx or versions or base images that are not listed in the supported add-ons list
+- Container base images not supported by Microsoft like; Nginx or versions or base images that aren't listed in the supported add-ons list
 
 For more information on support policies, see [Support policies for AKS hybrid - AKS hybrid | Microsoft Learn](/azure/aks/hybrid/support-policies).
 
-_Azure Kubernetes Service (AKS)_ is Azure’s flag ship container service; customers can create Windows Server based node pools within an AKS cluster to run their Windows containers. This is a fully supported service; Any issues or questions should be opened using the [Help + Support in the Azure Portal](/azure/azure-portal/supportability/how-to-create-azure-support-request).
+_Azure Kubernetes Service (AKS)_ is Azure’s flag ship container service; customers can create Windows Server based node pools within an AKS cluster to run their Windows containers. This is a fully supported service; Any issues or questions should be opened using the [Help + Support in the Azure portal](/azure/azure-portal/supportability/how-to-create-azure-support-request).
 
-_Kubernetes_ is an open-source project that supports Windows Server containers on Windows Server 2019 and higher starting with Kubernetes 1.14. For more information, see [Intro to Windows support in Kubernetes](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#windows-containers-in-kubernetes) and [Support Functionality and Limitations](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#supported-functionality-and-limitations). For further guidance, see [Kubernetes on Windows](/virtualization/windowscontainers/kubernetes/getting-started-kubernetes-windows).
+_Kubernetes_ is an open-source project that supports Windows Server containers on Windows Server 2019 and higher starting with Kubernetes 1.14. For more information, see [Intro to Windows support in Kubernetes](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#windows-containers-in-kubernetes) and [Support Functionality and Limitations](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#supported-functionality-and-limitations). For more information, see [Kubernetes on Windows](/virtualization/windowscontainers/kubernetes/getting-started-kubernetes-windows).
 
 For any issues and questions related to Kubernetes, see [Reporting Issues and Feature Requests](https://kubernetes.io/docs/setup/production-environment/windows/intro-windows-in-kubernetes/#reporting-issues-and-feature-requests).
 
-Microsoft only provides support for Windows nodes participating in a on-premises Kubernetes cluster.
+Microsoft only provides support for Windows nodes participating in an on-premises Kubernetes cluster.
 
 Microsoft doesn't provide support for the following items:
 
@@ -239,11 +239,11 @@ Microsoft doesn't provide support for the following items:
 - Linux containers
 - Kubernetes plug-ins
 
-Any question or issue related to non-supported items should be addressed to relevant GitHub communities.
+Any question or issue related to nonsupported items should be addressed to relevant GitHub communities.
 
-_Azure Service Fabric_ is fully supported and all issues or questions should be directed to Azure support using the [Help + Support in the Azure Portal](/azure/azure-portal/supportability/how-to-create-azure-support-request). For more information see [Introducing Service Fabric cluster resource manager](/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) and [Service Fabric and containers](/azure/service-fabric/service-fabric-containers-overview).
+_Azure Service Fabric_ is fully supported and all issues or questions should be directed to Azure support using the [Help + Support in the Azure portal](/azure/azure-portal/supportability/how-to-create-azure-support-request). For more information, see [Introducing Service Fabric cluster resource manager](/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) and [Service Fabric and containers](/azure/service-fabric/service-fabric-containers-overview).
 
-_Docker swarm_ is a feature of the Mirantis Container Runtime that creates, manages, and runs Windows Server containers in a mixed node environment of Linux and Windows hosts. Docker swarm is fully supported by Mirantis. Mirantis support will advise customers on whether Microsoft support should be engaged regarding issues or questions related to Windows Server. For more information about using Docker swarm with Windows Server containers, see [Getting started with swarm mode](/virtualization/windowscontainers/manage-containers/swarm-mode) and [Swarm mode overview](https://docs.docker.com/engine/swarm/) on Mirantis website.
+_Docker swarm_ is a feature of the Mirantis Container Runtime that creates, manages, and runs Windows Server containers in a mixed node environment of Linux and Windows hosts. Docker swarm is fully supported by Mirantis. Mirantis support advises customers on whether Microsoft support should be engaged regarding issues or questions related to Windows Server. For more information about using Docker swarm with Windows Server containers, see [Getting started with swarm mode](/virtualization/windowscontainers/manage-containers/swarm-mode) and [Swarm mode overview](https://docs.docker.com/engine/swarm/) on Mirantis website.
 
 _Moby_ is an open-source project intended for engineers, integrators and enthusiasts looking to modify, hack, fix, experiment, invent, and build systems based on containers. For more information, see the [Moby project](https://github.com/moby/moby) on GitHub.
 
