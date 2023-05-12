@@ -119,7 +119,7 @@ By default, tracking is enabled on the default host. BizTalk requires that the A
 
 It's recommended that you dedicate one host to tracking. To allow for TDDS to maintain new tracking events in high-volume scenarios, create multiple instances of a single tracking host. No more than one tracking host should exist.
 
-There can be too many rows in a table. There is no set number of rows that are too many. Additionally, this number of rows varies by what kind of data is stored in the table. For example, a `dta_DebugTrace` table that has more than 1 million rows probably has too many rows. A `HostNameQ_Suspended` table that has more than 200,000 rows probably has too many rows.
+There can be too many rows in a table. There is no set number of rows that are too many. Additionally, this number of rows varies by what kind of data is stored in the table. For example, a `dta_DebugTrace` table that has more than 1 million rows probably has too many rows. A `<HostName>Q_Suspended` table that has more than 200,000 rows probably has too many rows.
 
 ## Use the correct BizTalk SQL Server Agent jobs
 
