@@ -117,12 +117,12 @@ To fix the issue, stop (de-allocate) and start the VM then recheck to see if iss
 
 2. Run the following command line as an administrator, and then record the identifier of Windows Boot Loader (not Windows Boot Manager). The identifier is a 32-character code and it looks like this: xxxxxxxx-xxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. You will use this identifier in the next step.
 
-  a. For Generation 1 VM:
+   a. For Generation 1 VM:
 
     ```console
-    bcdedit /store <Boot partition>:\boot\bcd /enum
+     bcdedit /store <Boot partition>:\boot\bcd /enum
     ```  
- b. For Generation 2 VM:
+   b. For Generation 2 VM:
  
   ```console
      bcdedit /store <Volume Letter of EFI System Partition>:EFI\Microsoft\boot\bcd /enum /v
@@ -137,17 +137,17 @@ To fix the issue, stop (de-allocate) and start the VM then recheck to see if iss
     - \<Boot partition> is the partition that contains a hidden system folder named "Boot."
     - \<Identifier> is the identifier of Windows Boot Loader you found in the previous step.
 
-  a. For Generation 1 VM:
+   a. For Generation 1 VM:
 
-    ```console
-    bcdedit /store <Boot partition>:\boot\bcd /set {bootmgr} device partition=<boot partition>:
-    bcdedit /store <Boot partition>:\boot\bcd /set {bootmgr} integrityservices enable
-    bcdedit /store <Boot partition>:\boot\bcd /set {<Identifier>} device partition=<Windows partition>:
-    bcdedit /store <Boot partition>:\boot\bcd /set {<Identifier>} integrityservices enable
-    bcdedit /store <Boot partition>:\boot\bcd /set {<identifier>} recoveryenabled Off
-    bcdedit /store <Boot partition>:\boot\bcd /set {<identifier>} osdevice partition=<Windows partition>:
-    bcdedit /store <Boot partition>:\boot\bcd /set {<identifier>} bootstatuspolicy IgnoreAllFailures
-    ```
+     ```console
+     bcdedit /store <Boot partition>:\boot\bcd /set {bootmgr} device partition=<boot partition>:
+     bcdedit /store <Boot partition>:\boot\bcd /set {bootmgr} integrityservices enable
+     bcdedit /store <Boot partition>:\boot\bcd /set {<Identifier>} device partition=<Windows partition>:
+     bcdedit /store <Boot partition>:\boot\bcd /set {<Identifier>} integrityservices enable
+     bcdedit /store <Boot partition>:\boot\bcd /set {<identifier>} recoveryenabled Off
+     bcdedit /store <Boot partition>:\boot\bcd /set {<identifier>} osdevice partition=<Windows partition>:
+     bcdedit /store <Boot partition>:\boot\bcd /set {<identifier>} bootstatuspolicy IgnoreAllFailures
+     ```
 
    >[!NOTE]
    >In case the VHD has a single partition and both the BCD Folder and Windows Folder are in the same volume, and if the above setup didn't work, then try replacing the partition values with ***boot***.
