@@ -20,13 +20,13 @@ _Original KB number:_ &nbsp; 322884
 
 ## More information
 
-The .NET Framework assembly `System.Runtime.InteropServices` provides a robust environment for invoking assemblies from unmanaged code. However, there are several technical discordances between the internal implementations of CLR and SQL Server:
+The .NET Framework assembly `System.Runtime.InteropServices` provides a robust environment for invoking assemblies from unmanaged code. However, there are several technical discordances between the internal implementations of CLR and SQL Server.
 
 ## Threading
 
 To increase performance, the CLR implements Thread Local Storage.
 
-Additionally, CLR uses only thread-based scheduling and does not support Fiber-mode scheduling. However, SQL Server can use Fiber-mode scheduling. To configure this property, run the `sp_configure` stored procedure by using the lightweight pooling option. For more information about this topic, review [lightweight pooling Server Configuration Option](/sql/database-engine/configure-windows/lightweight-pooling-server-configuration-option).
+Additionally, CLR uses only thread-based scheduling and does not support Fiber-mode scheduling. However, SQL Server can use Fiber-mode scheduling. To configure this property, run the `sp_configure` stored procedure by using the lightweight pooling option. For more information about this topic, see [lightweight pooling Server Configuration Option](/sql/database-engine/configure-windows/lightweight-pooling-server-configuration-option).
 
 ## Memory
 
@@ -38,4 +38,4 @@ This section specifically addresses the use of OLE Automation in SQL Server and 
 
 As part of this design, the COM Callable wrapper for an assembly must use an external mechanism of mapping a ClassID to a member of a managed class. Because of this explicit mapping, there is no ability from an unmanaged perspective to establish a root list of available interfaces.
 
-The extended stored procedure `sp_oaCreate` uses the `IUnknown::QueryInterface` interface to determine the object's support for a particular interface. The interoperability between CLR and unmanaged code relies on the IDispatch interface for implementing interfaces. Because there is no equivalent to a `QueryInterface` method to a CLR-based assembly, you cannot create an instance of the object.
+The extended stored procedure `sp_oaCreate` uses the `IUnknown::QueryInterface` interface to determine the object's support for a particular interface. The interoperability between CLR and unmanaged code relies on the IDispatch interface for implementing interfaces. Because there is no equivalent to a `QueryInterface` method in a CLR-based assembly, you cannot create an instance of the object.
