@@ -27,7 +27,7 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
 1. Create a new Rescue VM:
 
-    - Operating system: Windows Server 2016 Datacenter or newer versions of Windows Server Datacenter
+    - Operating system: Windows Server 2016 Datacenter or newer versions of Windows Server Datacenter.
 
     - Size: Select a series that supports nested virtualization. For example: [Dv3](/azure/virtual-machines/dv3-dsv3-series) or [Dv4](/azure/virtual-machines/dv4-dsv4-series).
 
@@ -35,19 +35,29 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
     - Select the same storage type as the faulty VM (Standard or Premium).
 
-    - Select a Generation 1 image instead of a Generation 2 image because Generation 2 isn't compatible for Hyper-V.
+    - Image: Select a Generation 1 image because a Generation 2 image isn't compatible for Hyper-V.
 
-        If you select a Generation 2 image, when you add server roles on the Rescue VM, you will receive the following error message:
+        If you select a Generation 2 image, when you add server roles on the Rescue VM, you'll receive the following error message:
 
-        "Hyper-V cannot be installed because virtualization support is not enabled in the BIOS."
+        > Hyper-V cannot be installed because virtualization support is not enabled in the BIOS.
 
         :::image type="content" source="media/troubleshoot-vm-by-use-nested-virtualization/hyper-v-cannot-be-installed-error.png" alt-text="Screenshot of the 'Hyper-V cannot be installed' error message.":::
 
-        After selecting Generation 1, you need to set the **Secutiry type**. You have two options: Standard and Trusted. If you select Trusted, you will be prompted with the **Click here to swap to the trusted launch version** hyperlink. If you select Standard, you won't see the prompt.
+    - Security type: Select Standard or Trusted.
+
+        If you select **Trusted launch virtual machines**, the following prompt is shown:
+
+        > This image is not compatible with the selected security type. To keep Trusted launch virtual machines, select a compatible image. Otherwise, change your security type back to Standard.
+        >
+        > There is a Trusted launch version of this image available which has higher feature compatibility. Click here to swap to the Trusted launch version.
 
         :::image type="content" source="media/troubleshoot-vm-by-use-nested-virtualization/set-security-type.png" alt-text="Screenshot of the 'Click here to swap to the trusted launch version' prompt.":::
 
-        Once you select that hyperlink to re-select an image that's compatabile with the Trusted security type, you will be ready to deploy the VM.
+        To use the Trusted security type, select the **Click here to swap to the Trusted launch version** hyperlink to choose a compatible image. Then, you won't see the previous prompt.
+
+        :::image type="content" source="media/troubleshoot-vm-by-use-nested-virtualization/select-gen2-image.png" alt-text="Screenshot that shows the Gen 1 image is already changed to a Gen 2 image.":::
+
+        If you change the Trusted security type to Standard, the prompt also will disappear.
 
 2. After the Rescue VM is created, remote desktop to the Rescue VM.
 
