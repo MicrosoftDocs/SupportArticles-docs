@@ -297,7 +297,7 @@ In SQL Server 2005 and later versions, you can specify the **blocked process thr
 For more information about the **blocked process threshold** setting, see [blocked process threshold Server Configuration Option](/sql/database-engine/configure-windows/blocked-process-threshold-server-configuration-option).
 
 > [!NOTE]
-> When you experience a locking or blocking issue in SQL Server, it is recommended that you contact Microsoft Customer Support Services. Microsoft Customer Support Services can help you configure the correct PSSDiag utility options.
+> When you experience a locking or blocking issue in SQL Server, it's recommended that you contact Microsoft Customer Support Services. Microsoft Customer Support Services can help you configure the correct PSSDiag utility options.
 
 ## Step 5: Install the Latest BizTalk Server Service Pack and Cumulative Update
 
