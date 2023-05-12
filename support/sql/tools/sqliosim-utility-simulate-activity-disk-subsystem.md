@@ -17,11 +17,11 @@ _Original KB number:_ &nbsp; 231619
 
 ## Introduction
 
-This article describes the SQLIOSim tool. You can use SQLIOSim to perform reliability and integrity tests on disk subsystems that may be utilized by SQL Server. These SQLIOSim tests simulate read, write, checkpoint, backup, sort, and read-ahead activities that Microsoft SQL Server does. The primary goal of the tests is to ensure a reliability of the underlying I/O subsystem before your SQL Server starts using it.
+This article describes the SQLIOSim tool. You can use SQLIOSim to perform reliability and integrity tests on disk subsystems that may be utilized by SQL Server. These SQLIOSim tests simulate read, write, checkpoint, backup, sort, and read-ahead activities that Microsoft SQL Server does. The primary goal of the tests is to ensure a reliability of the underlying I/O subsystem before your SQL Server starts using it. SQLIOSim doesn't interact with SQL Server and doesn't even require SQL Server to be running. In fact in most cases, you would use SQLIOSim when SQL Server isn't running to avoid competition for I/O throughput. Be very careful not to point to or use the actual SQL Server database files in your SQLIOSim test because you can overwrite them.
 
 If you must do performance benchmark tests and would like to determine the I/O capacity of the storage system, you should use the [Diskspd](https://www.microsoft.com/?ref=aka) tool instead.
 
-In the past, SQLIOSim was shipped as a separate download package. Starting with SQL Server 2008, SQLIOSim is included with the SQL Server product installation. When you install SQL Server, you can find the SQLIOSim tool in the `\BINN` folder of your SQL Server installation. It is recommended that you use this updated versions of the tool to simulate the IO activity on the disk subsystem.
+In the past, SQLIOSim was shipped as a separate download package. Starting with SQL Server 2008, SQLIOSim is included with the SQL Server product installation. When you install SQL Server, you can find the SQLIOSim tool in the `\Binn` folder of your SQL Server installation. It is recommended that you use this updated versions of the tool to simulate the IO activity on the disk subsystem.
 
 The SQLIOSim utility replaces the SQLIOStress utility. The SQLIOStress utility was formerly known as the SQL70IOStress utility.
 
@@ -44,6 +44,9 @@ The \Binn folder contains two executable files, SQLIOSim.com and SQLIOSim.exe. B
 
 ## How to use SQLIOSim
 
+
+> [!WARNING]  
+> Do not specify the actual SQL Server database files for testing. The SQLIOSim utility will overwrite the data with random test patterns, and your actual SQL Server data will be lost.
 
 ```console
 SQLIOSIM.EXE -cfg "D:\Temp\SQLIOSIM\SQLIOSIM_Configs\sqliosim.default.cfg.ini" -d 600 -dir d:\temp\sqliosim -log d:\temp\sqliosim\simlog.xml -size 32768
